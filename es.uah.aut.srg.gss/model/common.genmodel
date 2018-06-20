@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2018 UAH Space Research Group.&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;Contributors:&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.gss/src" modelPluginID="es.uah.aut.srg.gss" modelName="Common"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>common.ecore</foreignModel>
+  <genPackages prefix="common" basePackage="es.uah.aut.srg.gss" disposableProviderFactory="true"
+      ecorePackage="common.ecore#/">
+    <genClasses ecoreClass="common.ecore#//GSSModelFile">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference common.ecore#//GSSModelFile/element"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference common.ecore#//GSSModelFile/imports"/>
+    </genClasses>
+    <genClasses ecoreClass="common.ecore#//GSSModelFileImport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute common.ecore#//GSSModelFileImport/importURI"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="common.ecore#//GSSModelElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute common.ecore#//GSSModelElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute common.ecore#//GSSModelElement/uri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute common.ecore#//GSSModelElement/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute common.ecore#//GSSModelElement/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="common.ecore#//GSSModelObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute common.ecore#//GSSModelObject/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute common.ecore#//GSSModelObject/description"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
