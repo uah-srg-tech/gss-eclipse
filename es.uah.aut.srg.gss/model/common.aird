@@ -3,6 +3,9 @@
   <viewpoint:DAnalysis xmi:id="_l4gWwHMBEeii1aLCkfu5Yg" selectedViews="_l6ALkHMBEeii1aLCkfu5Yg" version="11.1.0.201608251200">
     <semanticResources>common.ecore</semanticResources>
     <semanticResources>common.genmodel</semanticResources>
+    <semanticResources>iface.ecore</semanticResources>
+    <semanticResources>iface.genmodel</semanticResources>
+    <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_l6ALkHMBEeii1aLCkfu5Yg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_l6XX8HMBEeii1aLCkfu5Yg" name="common" representation="_l6X_AHMBEeii1aLCkfu5Yg">

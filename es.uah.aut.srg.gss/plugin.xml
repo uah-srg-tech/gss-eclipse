@@ -14,4 +14,12 @@
             genModel="model/common.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated iface -->
+      <package
+            uri="http://srg.aut.uah.es/gss/iface"
+            class="es.uah.aut.srg.gss.iface.ifacePackage"
+            genModel="model/iface.genmodel"/>
+   </extension>
+
 </plugin>

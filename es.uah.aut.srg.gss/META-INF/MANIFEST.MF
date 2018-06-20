@@ -10,7 +10,11 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: es.uah.aut.srg.gss.common,
  es.uah.aut.srg.gss.common.impl,
  es.uah.aut.srg.gss.common.util,
- es.uah.aut.srg.gss.util
+ es.uah.aut.srg.gss.util,
+ es.uah.aut.srg.gss.iface,
+ es.uah.aut.srg.gss.iface.impl,
+ es.uah.aut.srg.gss.iface.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ es.uah.aut.srg.gss;visibility:=reexport
 Bundle-ActivationPolicy: lazy
