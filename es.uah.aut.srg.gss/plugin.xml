@@ -22,4 +22,12 @@
             genModel="model/iface.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tm_tc_format -->
+      <package
+            uri="http://srg.aut.uah.es/gss/tm_tc_format"
+            class="es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage"
+            genModel="model/tm_tc_format.genmodel"/>
+   </extension>
+
 </plugin>

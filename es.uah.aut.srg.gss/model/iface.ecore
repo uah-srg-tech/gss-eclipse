@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="iface" nsURI="http://srg.aut.uah.es/gss/iface" nsPrefix="gss">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfacePortConfig" eSuperTypes="common.ecore#//GSSModelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" lowerBound="1" eType="#//GSSIfacePort"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfacePort" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceSpWPort" eSuperTypes="#//GSSIfacePort">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSIfaceSpWPortType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="link" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="writingPort" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="readingPort" lowerBound="1"
+        upperBound="2" eType="#//GSSIfaceReadingPort" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceUartPort" eSuperTypes="#//GSSIfacePort">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baudRate" lowerBound="1"
+        eType="#//GSSIfaceUartPortBaudRate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parity" lowerBound="1"
+        eType="#//GSSIfaceUartPortParity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataBits" lowerBound="1"
+        eType="#//GSSIfaceUartPortDataBits"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopBits" lowerBound="1"
+        eType="#//GSSIfaceUartPortStopBits"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputQueueSize" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputQueueSize" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uartProtocol" lowerBound="1"
+        eType="#//GSSIfaceUartProtocol" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceSpWTCPort" eSuperTypes="#//GSSIfacePort">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spwPortRef" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceDummyPort" eSuperTypes="#//GSSIfacePort"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceReadingPort">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="port" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSIfaceSpWPortType">
+    <eLiterals name="usb"/>
+    <eLiterals name="mk2" value="1" literal="mk2"/>
+    <eLiterals name="pci" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSIfaceUartPortBaudRate">
+    <eLiterals name="_38400" literal="38400"/>
+    <eLiterals name="_115200" value="1" literal="115200"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSIfaceUartPortParity">
+    <eLiterals name="NO" literal="NO"/>
+    <eLiterals name="ODD" value="1" literal="ODD"/>
+    <eLiterals name="EVEN" value="2" literal="EVEN"/>
+    <eLiterals name="MARK" value="3" literal="MARK"/>
+    <eLiterals name="SPACE" value="4" literal="SPACE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSIfaceUartPortDataBits">
+    <eLiterals name="_5" literal="5"/>
+    <eLiterals name="_6" value="1" literal="6"/>
+    <eLiterals name="_7" value="2" literal="7"/>
+    <eLiterals name="_8" value="3" literal="8"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSIfaceUartPortStopBits">
+    <eLiterals name="_1" literal="1"/>
+    <eLiterals name="_2" value="1" literal="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceUartProtocol">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" lowerBound="1" eType="#//GSSIfaceUartProtocolUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="power" lowerBound="1" eType="#//GSSIfaceUartProtocolPower"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constSize" lowerBound="1"
+        eType="#//GSSIfaceConstSize" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sizeFieldOffset" lowerBound="1"
+        eType="#//GSSIfaceSizeFieldOffset" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sizeFieldTrim" lowerBound="1"
+        eType="#//GSSIfaceSizeFieldTrim" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="syncPattern" eType="#//GSSIfaceSyncPattern"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSIfaceUartProtocolUnit">
+    <eLiterals name="bytes"/>
+    <eLiterals name="bits" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSIfaceUartProtocolPower">
+    <eLiterals name="no" literal="no"/>
+    <eLiterals name="_2" value="1" literal="2"/>
+    <eLiterals name="_2_with_0" value="2" literal="2_with_0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceConstSize">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bytes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bits" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceSizeFieldOffset">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bytes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bits" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceSizeFieldTrim">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bytes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bits" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceSyncPattern">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hexValue" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

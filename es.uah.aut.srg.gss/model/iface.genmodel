@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2018 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.gss/src" modelPluginID="es.uah.aut.srg.gss" modelName="Iface"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="common.genmodel#//common"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>iface.ecore</foreignModel>
+  <genPackages prefix="iface" basePackage="es.uah.aut.srg.gss" disposableProviderFactory="true"
+      ecorePackage="iface.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iface.ecore#//GSSIfaceSpWPortType">
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceSpWPortType/usb"/>
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceSpWPortType/mk2"/>
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceSpWPortType/pci"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iface.ecore#//GSSIfaceUartPortBaudRate">
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartPortBaudRate/_38400"/>
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartPortBaudRate/_115200"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iface.ecore#//GSSIfaceUartPortParity">
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartPortParity/NO"/>
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartPortParity/ODD"/>
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartPortParity/EVEN"/>
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartPortParity/MARK"/>
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartPortParity/SPACE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iface.ecore#//GSSIfaceUartPortDataBits">
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartPortDataBits/_5"/>
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartPortDataBits/_6"/>
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartPortDataBits/_7"/>
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartPortDataBits/_8"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iface.ecore#//GSSIfaceUartPortStopBits">
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartPortStopBits/_1"/>
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartPortStopBits/_2"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iface.ecore#//GSSIfaceUartProtocolUnit">
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartProtocolUnit/bytes"/>
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartProtocolUnit/bits"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iface.ecore#//GSSIfaceUartProtocolPower">
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartProtocolPower/no"/>
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartProtocolPower/_2"/>
+      <genEnumLiterals ecoreEnumLiteral="iface.ecore#//GSSIfaceUartProtocolPower/_2_with_0"/>
+    </genEnums>
+    <genClasses ecoreClass="iface.ecore#//GSSIfacePortConfig">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iface.ecore#//GSSIfacePortConfig/port"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="iface.ecore#//GSSIfacePort"/>
+    <genClasses ecoreClass="iface.ecore#//GSSIfaceSpWPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceSpWPort/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceSpWPort/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceSpWPort/writingPort"/>
+    </genClasses>
+    <genClasses ecoreClass="iface.ecore#//GSSIfaceUartPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceUartPort/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceUartPort/baudRate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceUartPort/parity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceUartPort/dataBits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceUartPort/stopBits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceUartPort/inputQueueSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceUartPort/outputQueueSize"/>
+    </genClasses>
+    <genClasses ecoreClass="iface.ecore#//GSSIfaceSpWTCPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceSpWTCPort/spwPortRef"/>
+    </genClasses>
+    <genClasses ecoreClass="iface.ecore#//GSSIfaceDummyPort"/>
+    <genClasses ecoreClass="iface.ecore#//GSSIfaceReadingPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceReadingPort/port"/>
+    </genClasses>
+    <genClasses ecoreClass="iface.ecore#//GSSIfaceUartProtocol">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceUartProtocol/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceUartProtocol/power"/>
+    </genClasses>
+    <genClasses ecoreClass="iface.ecore#//GSSIfaceConstSize">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceConstSize/bytes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceConstSize/bits"/>
+    </genClasses>
+    <genClasses ecoreClass="iface.ecore#//GSSIfaceSizeFieldOffset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceSizeFieldOffset/bytes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceSizeFieldOffset/bits"/>
+    </genClasses>
+    <genClasses ecoreClass="iface.ecore#//GSSIfaceSizeFieldTrim">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceSizeFieldTrim/bytes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iface.ecore#//GSSIfaceSizeFieldTrim/bits"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
