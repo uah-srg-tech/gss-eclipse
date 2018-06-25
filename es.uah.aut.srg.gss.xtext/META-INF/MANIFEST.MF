@@ -6,3 +6,4 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: es.uah.aut.srg.gss;visibility:=reexport,
  org.eclipse.xtext
+Export-Package: es.uah.aut.srg.gss.xtext
