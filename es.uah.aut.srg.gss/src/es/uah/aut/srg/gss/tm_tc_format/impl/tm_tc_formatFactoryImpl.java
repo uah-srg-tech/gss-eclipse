@@ -67,22 +67,22 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 		switch (eClass.getClassifierID()) {
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT: return createGSSTmTcFormatTmTCFormat();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD: return createGSSTmTcFormatCSField();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FORMULA_FIELD: return createGSSTmTcFormatCSFormulaField();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD: return createGSSTmTcFormatVSField();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VR_FIELD_SIZE: return createGSSTmTcFormatVRFieldSize();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD: return createGSSTmTcFormatFDICField();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD: return createGSSTmTcFormatAField();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD: return createGSSTmTcFormatAIField();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_SIZE: return createGSSTmTcFormatSize();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_GLOBAL_OFFSET: return createGSSTmTcFormatGlobalOffset();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FORMULA_FIELD: return createGSSTmTcFormatCSFormulaField();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FORMULA: return createGSSTmTcFormatFormula();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD: return createGSSTmTcFormatVSField();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CONST_SIZE: return createGSSTmTcFormatConstSize();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VARIABLE_SIZE: return createGSSTmTcFormatVariableSize();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_MAX_SIZE: return createGSSTmTcFormatMaxSize();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VR_FIELD_SIZE: return createGSSTmTcFormatVRFieldSize();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD: return createGSSTmTcFormatFDICField();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FLOATING_OFFSET: return createGSSTmTcFormatFloatingOffset();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_SORTED_FIELDS_TO_CHECK: return createGSSTmTcFormatSortedFieldsToCheck();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FIELD_TO_CHECK: return createGSSTmTcFormatFieldToCheck();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD: return createGSSTmTcFormatAField();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_ARRAY_DIMENSION: return createGSSTmTcFormatArrayDimension();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD: return createGSSTmTcFormatAIField();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_ARRAY_REF: return createGSSTmTcFormatArrayRef();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_LOCAL_OFFSET: return createGSSTmTcFormatLocalOffset();
 			default:

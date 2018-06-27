@@ -86,6 +86,30 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 				return createGSSTmTcFormatCSFieldAdapter();
 			}
 			@Override
+			public Adapter caseGSSTmTcFormatCSFormulaField(GSSTmTcFormatCSFormulaField object) {
+				return createGSSTmTcFormatCSFormulaFieldAdapter();
+			}
+			@Override
+			public Adapter caseGSSTmTcFormatVSField(GSSTmTcFormatVSField object) {
+				return createGSSTmTcFormatVSFieldAdapter();
+			}
+			@Override
+			public Adapter caseGSSTmTcFormatVRFieldSize(GSSTmTcFormatVRFieldSize object) {
+				return createGSSTmTcFormatVRFieldSizeAdapter();
+			}
+			@Override
+			public Adapter caseGSSTmTcFormatFDICField(GSSTmTcFormatFDICField object) {
+				return createGSSTmTcFormatFDICFieldAdapter();
+			}
+			@Override
+			public Adapter caseGSSTmTcFormatAField(GSSTmTcFormatAField object) {
+				return createGSSTmTcFormatAFieldAdapter();
+			}
+			@Override
+			public Adapter caseGSSTmTcFormatAIField(GSSTmTcFormatAIField object) {
+				return createGSSTmTcFormatAIFieldAdapter();
+			}
+			@Override
 			public Adapter caseGSSTmTcFormatSize(GSSTmTcFormatSize object) {
 				return createGSSTmTcFormatSizeAdapter();
 			}
@@ -94,16 +118,8 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 				return createGSSTmTcFormatGlobalOffsetAdapter();
 			}
 			@Override
-			public Adapter caseGSSTmTcFormatCSFormulaField(GSSTmTcFormatCSFormulaField object) {
-				return createGSSTmTcFormatCSFormulaFieldAdapter();
-			}
-			@Override
 			public Adapter caseGSSTmTcFormatFormula(GSSTmTcFormatFormula object) {
 				return createGSSTmTcFormatFormulaAdapter();
-			}
-			@Override
-			public Adapter caseGSSTmTcFormatVSField(GSSTmTcFormatVSField object) {
-				return createGSSTmTcFormatVSFieldAdapter();
 			}
 			@Override
 			public Adapter caseGSSTmTcFormatConstSize(GSSTmTcFormatConstSize object) {
@@ -118,14 +134,6 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 				return createGSSTmTcFormatMaxSizeAdapter();
 			}
 			@Override
-			public Adapter caseGSSTmTcFormatVRFieldSize(GSSTmTcFormatVRFieldSize object) {
-				return createGSSTmTcFormatVRFieldSizeAdapter();
-			}
-			@Override
-			public Adapter caseGSSTmTcFormatFDICField(GSSTmTcFormatFDICField object) {
-				return createGSSTmTcFormatFDICFieldAdapter();
-			}
-			@Override
 			public Adapter caseGSSTmTcFormatFloatingOffset(GSSTmTcFormatFloatingOffset object) {
 				return createGSSTmTcFormatFloatingOffsetAdapter();
 			}
@@ -138,16 +146,8 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 				return createGSSTmTcFormatFieldToCheckAdapter();
 			}
 			@Override
-			public Adapter caseGSSTmTcFormatAField(GSSTmTcFormatAField object) {
-				return createGSSTmTcFormatAFieldAdapter();
-			}
-			@Override
 			public Adapter caseGSSTmTcFormatArrayDimension(GSSTmTcFormatArrayDimension object) {
 				return createGSSTmTcFormatArrayDimensionAdapter();
-			}
-			@Override
-			public Adapter caseGSSTmTcFormatAIField(GSSTmTcFormatAIField object) {
-				return createGSSTmTcFormatAIFieldAdapter();
 			}
 			@Override
 			public Adapter caseGSSTmTcFormatArrayRef(GSSTmTcFormatArrayRef object) {

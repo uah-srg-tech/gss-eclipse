@@ -28,6 +28,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getFirstBit <em>First Bit</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getSize <em>Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getLocalOffset <em>Local Offset</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getArrayRef <em>Array Ref</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAIField()
@@ -124,7 +127,7 @@ public interface GSSTmTcFormatAIField extends EObject {
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAIField_Description()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	String getDescription();
@@ -225,5 +228,83 @@ public interface GSSTmTcFormatAIField extends EObject {
 	 * @generated
 	 */
 	void setFirstBit(GSSTmTcFormatSFieldFirstBit value);
+
+	/**
+	 * Returns the value of the '<em><b>Size</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Size</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Size</em>' containment reference.
+	 * @see #setSize(GSSTmTcFormatSize)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAIField_Size()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GSSTmTcFormatSize getSize();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getSize <em>Size</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Size</em>' containment reference.
+	 * @see #getSize()
+	 * @generated
+	 */
+	void setSize(GSSTmTcFormatSize value);
+
+	/**
+	 * Returns the value of the '<em><b>Local Offset</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Local Offset</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Local Offset</em>' containment reference.
+	 * @see #setLocalOffset(GSSTmTcFormatLocalOffset)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAIField_LocalOffset()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GSSTmTcFormatLocalOffset getLocalOffset();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getLocalOffset <em>Local Offset</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Local Offset</em>' containment reference.
+	 * @see #getLocalOffset()
+	 * @generated
+	 */
+	void setLocalOffset(GSSTmTcFormatLocalOffset value);
+
+	/**
+	 * Returns the value of the '<em><b>Array Ref</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Array Ref</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Array Ref</em>' containment reference.
+	 * @see #setArrayRef(GSSTmTcFormatArrayRef)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAIField_ArrayRef()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GSSTmTcFormatArrayRef getArrayRef();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getArrayRef <em>Array Ref</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Array Ref</em>' containment reference.
+	 * @see #getArrayRef()
+	 * @generated
+	 */
+	void setArrayRef(GSSTmTcFormatArrayRef value);
 
 } // GSSTmTcFormatAIField

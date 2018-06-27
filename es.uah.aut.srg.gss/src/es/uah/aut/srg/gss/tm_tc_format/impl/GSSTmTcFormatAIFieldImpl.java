@@ -11,15 +11,20 @@
 package es.uah.aut.srg.gss.tm_tc_format.impl;
 
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatArrayRef;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldByteOrder;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldType;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatLocalOffset;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSFieldFirstBit;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSize;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -38,6 +43,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl#getFirstBit <em>First Bit</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl#getSize <em>Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl#getLocalOffset <em>Local Offset</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl#getArrayRef <em>Array Ref</em>}</li>
  * </ul>
  *
  * @generated
@@ -182,6 +190,36 @@ public class GSSTmTcFormatAIFieldImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected GSSTmTcFormatSFieldFirstBit firstBit = FIRST_BIT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getSize() <em>Size</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected GSSTmTcFormatSize size;
+
+	/**
+	 * The cached value of the '{@link #getLocalOffset() <em>Local Offset</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalOffset()
+	 * @generated
+	 * @ordered
+	 */
+	protected GSSTmTcFormatLocalOffset localOffset;
+
+	/**
+	 * The cached value of the '{@link #getArrayRef() <em>Array Ref</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArrayRef()
+	 * @generated
+	 * @ordered
+	 */
+	protected GSSTmTcFormatArrayRef arrayRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -354,6 +392,153 @@ public class GSSTmTcFormatAIFieldImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GSSTmTcFormatSize getSize() {
+		return size;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSize(GSSTmTcFormatSize newSize, NotificationChain msgs) {
+		GSSTmTcFormatSize oldSize = size;
+		size = newSize;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__SIZE, oldSize, newSize);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSize(GSSTmTcFormatSize newSize) {
+		if (newSize != size) {
+			NotificationChain msgs = null;
+			if (size != null)
+				msgs = ((InternalEObject)size).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__SIZE, null, msgs);
+			if (newSize != null)
+				msgs = ((InternalEObject)newSize).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__SIZE, null, msgs);
+			msgs = basicSetSize(newSize, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__SIZE, newSize, newSize));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTmTcFormatLocalOffset getLocalOffset() {
+		return localOffset;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLocalOffset(GSSTmTcFormatLocalOffset newLocalOffset, NotificationChain msgs) {
+		GSSTmTcFormatLocalOffset oldLocalOffset = localOffset;
+		localOffset = newLocalOffset;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET, oldLocalOffset, newLocalOffset);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLocalOffset(GSSTmTcFormatLocalOffset newLocalOffset) {
+		if (newLocalOffset != localOffset) {
+			NotificationChain msgs = null;
+			if (localOffset != null)
+				msgs = ((InternalEObject)localOffset).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET, null, msgs);
+			if (newLocalOffset != null)
+				msgs = ((InternalEObject)newLocalOffset).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET, null, msgs);
+			msgs = basicSetLocalOffset(newLocalOffset, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET, newLocalOffset, newLocalOffset));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTmTcFormatArrayRef getArrayRef() {
+		return arrayRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetArrayRef(GSSTmTcFormatArrayRef newArrayRef, NotificationChain msgs) {
+		GSSTmTcFormatArrayRef oldArrayRef = arrayRef;
+		arrayRef = newArrayRef;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF, oldArrayRef, newArrayRef);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setArrayRef(GSSTmTcFormatArrayRef newArrayRef) {
+		if (newArrayRef != arrayRef) {
+			NotificationChain msgs = null;
+			if (arrayRef != null)
+				msgs = ((InternalEObject)arrayRef).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF, null, msgs);
+			if (newArrayRef != null)
+				msgs = ((InternalEObject)newArrayRef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF, null, msgs);
+			msgs = basicSetArrayRef(newArrayRef, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF, newArrayRef, newArrayRef));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__SIZE:
+				return basicSetSize(null, msgs);
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET:
+				return basicSetLocalOffset(null, msgs);
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
+				return basicSetArrayRef(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -371,6 +556,12 @@ public class GSSTmTcFormatAIFieldImpl extends MinimalEObjectImpl.Container imple
 				return getByteOrder();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__FIRST_BIT:
 				return getFirstBit();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__SIZE:
+				return getSize();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET:
+				return getLocalOffset();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
+				return getArrayRef();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -403,6 +594,15 @@ public class GSSTmTcFormatAIFieldImpl extends MinimalEObjectImpl.Container imple
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__FIRST_BIT:
 				setFirstBit((GSSTmTcFormatSFieldFirstBit)newValue);
+				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__SIZE:
+				setSize((GSSTmTcFormatSize)newValue);
+				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET:
+				setLocalOffset((GSSTmTcFormatLocalOffset)newValue);
+				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
+				setArrayRef((GSSTmTcFormatArrayRef)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -437,6 +637,15 @@ public class GSSTmTcFormatAIFieldImpl extends MinimalEObjectImpl.Container imple
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__FIRST_BIT:
 				setFirstBit(FIRST_BIT_EDEFAULT);
 				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__SIZE:
+				setSize((GSSTmTcFormatSize)null);
+				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET:
+				setLocalOffset((GSSTmTcFormatLocalOffset)null);
+				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
+				setArrayRef((GSSTmTcFormatArrayRef)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -463,6 +672,12 @@ public class GSSTmTcFormatAIFieldImpl extends MinimalEObjectImpl.Container imple
 				return byteOrder != BYTE_ORDER_EDEFAULT;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__FIRST_BIT:
 				return firstBit != FIRST_BIT_EDEFAULT;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__SIZE:
+				return size != null;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET:
+				return localOffset != null;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
+				return arrayRef != null;
 		}
 		return super.eIsSet(featureID);
 	}

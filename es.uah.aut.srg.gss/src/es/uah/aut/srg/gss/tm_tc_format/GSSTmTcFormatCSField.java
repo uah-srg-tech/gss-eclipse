@@ -28,6 +28,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getFirstBit <em>First Bit</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getSize <em>Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getGlobalOffset <em>Global Offset</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatCSField()
@@ -124,7 +126,7 @@ public interface GSSTmTcFormatCSField extends EObject {
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatCSField_Description()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	String getDescription();
@@ -225,5 +227,57 @@ public interface GSSTmTcFormatCSField extends EObject {
 	 * @generated
 	 */
 	void setFirstBit(GSSTmTcFormatSFieldFirstBit value);
+
+	/**
+	 * Returns the value of the '<em><b>Size</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Size</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Size</em>' containment reference.
+	 * @see #setSize(GSSTmTcFormatSize)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatCSField_Size()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GSSTmTcFormatSize getSize();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getSize <em>Size</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Size</em>' containment reference.
+	 * @see #getSize()
+	 * @generated
+	 */
+	void setSize(GSSTmTcFormatSize value);
+
+	/**
+	 * Returns the value of the '<em><b>Global Offset</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Global Offset</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Global Offset</em>' containment reference.
+	 * @see #setGlobalOffset(GSSTmTcFormatGlobalOffset)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatCSField_GlobalOffset()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GSSTmTcFormatGlobalOffset getGlobalOffset();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getGlobalOffset <em>Global Offset</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Global Offset</em>' containment reference.
+	 * @see #getGlobalOffset()
+	 * @generated
+	 */
+	void setGlobalOffset(GSSTmTcFormatGlobalOffset value);
 
 } // GSSTmTcFormatCSField

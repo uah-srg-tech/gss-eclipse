@@ -28,6 +28,10 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getFirstBit <em>First Bit</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getConstSize <em>Const Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getGlobalOffset <em>Global Offset</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getMaxSize <em>Max Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getVariableSize <em>Variable Size</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVSField()
@@ -124,7 +128,7 @@ public interface GSSTmTcFormatVSField extends EObject {
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVSField_Description()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	String getDescription();
@@ -225,5 +229,109 @@ public interface GSSTmTcFormatVSField extends EObject {
 	 * @generated
 	 */
 	void setFirstBit(GSSTmTcFormatSFieldFirstBit value);
+
+	/**
+	 * Returns the value of the '<em><b>Const Size</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Const Size</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Const Size</em>' containment reference.
+	 * @see #setConstSize(GSSTmTcFormatConstSize)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVSField_ConstSize()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GSSTmTcFormatConstSize getConstSize();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getConstSize <em>Const Size</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Const Size</em>' containment reference.
+	 * @see #getConstSize()
+	 * @generated
+	 */
+	void setConstSize(GSSTmTcFormatConstSize value);
+
+	/**
+	 * Returns the value of the '<em><b>Global Offset</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Global Offset</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Global Offset</em>' containment reference.
+	 * @see #setGlobalOffset(GSSTmTcFormatGlobalOffset)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVSField_GlobalOffset()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GSSTmTcFormatGlobalOffset getGlobalOffset();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getGlobalOffset <em>Global Offset</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Global Offset</em>' containment reference.
+	 * @see #getGlobalOffset()
+	 * @generated
+	 */
+	void setGlobalOffset(GSSTmTcFormatGlobalOffset value);
+
+	/**
+	 * Returns the value of the '<em><b>Max Size</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Max Size</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Max Size</em>' containment reference.
+	 * @see #setMaxSize(GSSTmTcFormatMaxSize)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVSField_MaxSize()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GSSTmTcFormatMaxSize getMaxSize();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getMaxSize <em>Max Size</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Max Size</em>' containment reference.
+	 * @see #getMaxSize()
+	 * @generated
+	 */
+	void setMaxSize(GSSTmTcFormatMaxSize value);
+
+	/**
+	 * Returns the value of the '<em><b>Variable Size</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Variable Size</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Variable Size</em>' containment reference.
+	 * @see #setVariableSize(GSSTmTcFormatVariableSize)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVSField_VariableSize()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GSSTmTcFormatVariableSize getVariableSize();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getVariableSize <em>Variable Size</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Variable Size</em>' containment reference.
+	 * @see #getVariableSize()
+	 * @generated
+	 */
+	void setVariableSize(GSSTmTcFormatVariableSize value);
 
 } // GSSTmTcFormatVSField

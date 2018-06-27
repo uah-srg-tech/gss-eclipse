@@ -99,7 +99,7 @@ public interface GSSTmTcFormatVariableSize extends EObject {
 	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatPower
 	 * @see #setPower(GSSTmTcFormatPower)
 	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVariableSize_Power()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	GSSTmTcFormatPower getPower();

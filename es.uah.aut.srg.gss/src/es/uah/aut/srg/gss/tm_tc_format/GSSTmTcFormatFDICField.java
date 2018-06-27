@@ -28,6 +28,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField#getCheckType <em>Check Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField#getFirstBit <em>First Bit</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField#getSize <em>Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField#getFloatingOffset <em>Floating Offset</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField#getSortedFieldsToCheck <em>Sorted Fields To Check</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatFDICField()
@@ -124,7 +127,7 @@ public interface GSSTmTcFormatFDICField extends EObject {
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatFDICField_Description()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	String getDescription();
@@ -225,5 +228,83 @@ public interface GSSTmTcFormatFDICField extends EObject {
 	 * @generated
 	 */
 	void setFirstBit(GSSTmTcFormatSFieldFirstBit value);
+
+	/**
+	 * Returns the value of the '<em><b>Size</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Size</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Size</em>' containment reference.
+	 * @see #setSize(GSSTmTcFormatSize)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatFDICField_Size()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GSSTmTcFormatSize getSize();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField#getSize <em>Size</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Size</em>' containment reference.
+	 * @see #getSize()
+	 * @generated
+	 */
+	void setSize(GSSTmTcFormatSize value);
+
+	/**
+	 * Returns the value of the '<em><b>Floating Offset</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Floating Offset</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Floating Offset</em>' containment reference.
+	 * @see #setFloatingOffset(GSSTmTcFormatFloatingOffset)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatFDICField_FloatingOffset()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GSSTmTcFormatFloatingOffset getFloatingOffset();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField#getFloatingOffset <em>Floating Offset</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Floating Offset</em>' containment reference.
+	 * @see #getFloatingOffset()
+	 * @generated
+	 */
+	void setFloatingOffset(GSSTmTcFormatFloatingOffset value);
+
+	/**
+	 * Returns the value of the '<em><b>Sorted Fields To Check</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sorted Fields To Check</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sorted Fields To Check</em>' containment reference.
+	 * @see #setSortedFieldsToCheck(GSSTmTcFormatSortedFieldsToCheck)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatFDICField_SortedFieldsToCheck()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GSSTmTcFormatSortedFieldsToCheck getSortedFieldsToCheck();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField#getSortedFieldsToCheck <em>Sorted Fields To Check</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Sorted Fields To Check</em>' containment reference.
+	 * @see #getSortedFieldsToCheck()
+	 * @generated
+	 */
+	void setSortedFieldsToCheck(GSSTmTcFormatSortedFieldsToCheck value);
 
 } // GSSTmTcFormatFDICField

@@ -13,13 +13,18 @@ package es.uah.aut.srg.gss.tm_tc_format.impl;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldByteOrder;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFloatingOffset;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSFieldFirstBit;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSize;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSortedFieldsToCheck;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -38,6 +43,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFDICFieldImpl#getCheckType <em>Check Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFDICFieldImpl#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFDICFieldImpl#getFirstBit <em>First Bit</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFDICFieldImpl#getSize <em>Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFDICFieldImpl#getFloatingOffset <em>Floating Offset</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFDICFieldImpl#getSortedFieldsToCheck <em>Sorted Fields To Check</em>}</li>
  * </ul>
  *
  * @generated
@@ -182,6 +190,36 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 	 * @ordered
 	 */
 	protected GSSTmTcFormatSFieldFirstBit firstBit = FIRST_BIT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getSize() <em>Size</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected GSSTmTcFormatSize size;
+
+	/**
+	 * The cached value of the '{@link #getFloatingOffset() <em>Floating Offset</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFloatingOffset()
+	 * @generated
+	 * @ordered
+	 */
+	protected GSSTmTcFormatFloatingOffset floatingOffset;
+
+	/**
+	 * The cached value of the '{@link #getSortedFieldsToCheck() <em>Sorted Fields To Check</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSortedFieldsToCheck()
+	 * @generated
+	 * @ordered
+	 */
+	protected GSSTmTcFormatSortedFieldsToCheck sortedFieldsToCheck;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -354,6 +392,153 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GSSTmTcFormatSize getSize() {
+		return size;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSize(GSSTmTcFormatSize newSize, NotificationChain msgs) {
+		GSSTmTcFormatSize oldSize = size;
+		size = newSize;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SIZE, oldSize, newSize);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSize(GSSTmTcFormatSize newSize) {
+		if (newSize != size) {
+			NotificationChain msgs = null;
+			if (size != null)
+				msgs = ((InternalEObject)size).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SIZE, null, msgs);
+			if (newSize != null)
+				msgs = ((InternalEObject)newSize).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SIZE, null, msgs);
+			msgs = basicSetSize(newSize, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SIZE, newSize, newSize));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTmTcFormatFloatingOffset getFloatingOffset() {
+		return floatingOffset;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFloatingOffset(GSSTmTcFormatFloatingOffset newFloatingOffset, NotificationChain msgs) {
+		GSSTmTcFormatFloatingOffset oldFloatingOffset = floatingOffset;
+		floatingOffset = newFloatingOffset;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FLOATING_OFFSET, oldFloatingOffset, newFloatingOffset);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFloatingOffset(GSSTmTcFormatFloatingOffset newFloatingOffset) {
+		if (newFloatingOffset != floatingOffset) {
+			NotificationChain msgs = null;
+			if (floatingOffset != null)
+				msgs = ((InternalEObject)floatingOffset).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FLOATING_OFFSET, null, msgs);
+			if (newFloatingOffset != null)
+				msgs = ((InternalEObject)newFloatingOffset).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FLOATING_OFFSET, null, msgs);
+			msgs = basicSetFloatingOffset(newFloatingOffset, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FLOATING_OFFSET, newFloatingOffset, newFloatingOffset));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTmTcFormatSortedFieldsToCheck getSortedFieldsToCheck() {
+		return sortedFieldsToCheck;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSortedFieldsToCheck(GSSTmTcFormatSortedFieldsToCheck newSortedFieldsToCheck, NotificationChain msgs) {
+		GSSTmTcFormatSortedFieldsToCheck oldSortedFieldsToCheck = sortedFieldsToCheck;
+		sortedFieldsToCheck = newSortedFieldsToCheck;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SORTED_FIELDS_TO_CHECK, oldSortedFieldsToCheck, newSortedFieldsToCheck);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSortedFieldsToCheck(GSSTmTcFormatSortedFieldsToCheck newSortedFieldsToCheck) {
+		if (newSortedFieldsToCheck != sortedFieldsToCheck) {
+			NotificationChain msgs = null;
+			if (sortedFieldsToCheck != null)
+				msgs = ((InternalEObject)sortedFieldsToCheck).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SORTED_FIELDS_TO_CHECK, null, msgs);
+			if (newSortedFieldsToCheck != null)
+				msgs = ((InternalEObject)newSortedFieldsToCheck).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SORTED_FIELDS_TO_CHECK, null, msgs);
+			msgs = basicSetSortedFieldsToCheck(newSortedFieldsToCheck, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SORTED_FIELDS_TO_CHECK, newSortedFieldsToCheck, newSortedFieldsToCheck));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SIZE:
+				return basicSetSize(null, msgs);
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FLOATING_OFFSET:
+				return basicSetFloatingOffset(null, msgs);
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SORTED_FIELDS_TO_CHECK:
+				return basicSetSortedFieldsToCheck(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -371,6 +556,12 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 				return getByteOrder();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FIRST_BIT:
 				return getFirstBit();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SIZE:
+				return getSize();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FLOATING_OFFSET:
+				return getFloatingOffset();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SORTED_FIELDS_TO_CHECK:
+				return getSortedFieldsToCheck();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -403,6 +594,15 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FIRST_BIT:
 				setFirstBit((GSSTmTcFormatSFieldFirstBit)newValue);
+				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SIZE:
+				setSize((GSSTmTcFormatSize)newValue);
+				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FLOATING_OFFSET:
+				setFloatingOffset((GSSTmTcFormatFloatingOffset)newValue);
+				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SORTED_FIELDS_TO_CHECK:
+				setSortedFieldsToCheck((GSSTmTcFormatSortedFieldsToCheck)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -437,6 +637,15 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FIRST_BIT:
 				setFirstBit(FIRST_BIT_EDEFAULT);
 				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SIZE:
+				setSize((GSSTmTcFormatSize)null);
+				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FLOATING_OFFSET:
+				setFloatingOffset((GSSTmTcFormatFloatingOffset)null);
+				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SORTED_FIELDS_TO_CHECK:
+				setSortedFieldsToCheck((GSSTmTcFormatSortedFieldsToCheck)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -463,6 +672,12 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 				return byteOrder != BYTE_ORDER_EDEFAULT;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FIRST_BIT:
 				return firstBit != FIRST_BIT_EDEFAULT;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SIZE:
+				return size != null;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FLOATING_OFFSET:
+				return floatingOffset != null;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SORTED_FIELDS_TO_CHECK:
+				return sortedFieldsToCheck != null;
 		}
 		return super.eIsSet(featureID);
 	}

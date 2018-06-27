@@ -13,13 +13,17 @@ package es.uah.aut.srg.gss.tm_tc_format.impl;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldByteOrder;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldType;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatGlobalOffset;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSFieldFirstBit;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSize;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -38,6 +42,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatCSFieldImpl#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatCSFieldImpl#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatCSFieldImpl#getFirstBit <em>First Bit</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatCSFieldImpl#getSize <em>Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatCSFieldImpl#getGlobalOffset <em>Global Offset</em>}</li>
  * </ul>
  *
  * @generated
@@ -182,6 +188,26 @@ public class GSSTmTcFormatCSFieldImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected GSSTmTcFormatSFieldFirstBit firstBit = FIRST_BIT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getSize() <em>Size</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected GSSTmTcFormatSize size;
+
+	/**
+	 * The cached value of the '{@link #getGlobalOffset() <em>Global Offset</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGlobalOffset()
+	 * @generated
+	 * @ordered
+	 */
+	protected GSSTmTcFormatGlobalOffset globalOffset;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -354,6 +380,108 @@ public class GSSTmTcFormatCSFieldImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GSSTmTcFormatSize getSize() {
+		return size;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSize(GSSTmTcFormatSize newSize, NotificationChain msgs) {
+		GSSTmTcFormatSize oldSize = size;
+		size = newSize;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__SIZE, oldSize, newSize);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSize(GSSTmTcFormatSize newSize) {
+		if (newSize != size) {
+			NotificationChain msgs = null;
+			if (size != null)
+				msgs = ((InternalEObject)size).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__SIZE, null, msgs);
+			if (newSize != null)
+				msgs = ((InternalEObject)newSize).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__SIZE, null, msgs);
+			msgs = basicSetSize(newSize, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__SIZE, newSize, newSize));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTmTcFormatGlobalOffset getGlobalOffset() {
+		return globalOffset;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetGlobalOffset(GSSTmTcFormatGlobalOffset newGlobalOffset, NotificationChain msgs) {
+		GSSTmTcFormatGlobalOffset oldGlobalOffset = globalOffset;
+		globalOffset = newGlobalOffset;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__GLOBAL_OFFSET, oldGlobalOffset, newGlobalOffset);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGlobalOffset(GSSTmTcFormatGlobalOffset newGlobalOffset) {
+		if (newGlobalOffset != globalOffset) {
+			NotificationChain msgs = null;
+			if (globalOffset != null)
+				msgs = ((InternalEObject)globalOffset).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__GLOBAL_OFFSET, null, msgs);
+			if (newGlobalOffset != null)
+				msgs = ((InternalEObject)newGlobalOffset).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__GLOBAL_OFFSET, null, msgs);
+			msgs = basicSetGlobalOffset(newGlobalOffset, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__GLOBAL_OFFSET, newGlobalOffset, newGlobalOffset));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__SIZE:
+				return basicSetSize(null, msgs);
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__GLOBAL_OFFSET:
+				return basicSetGlobalOffset(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -371,6 +499,10 @@ public class GSSTmTcFormatCSFieldImpl extends MinimalEObjectImpl.Container imple
 				return getByteOrder();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__FIRST_BIT:
 				return getFirstBit();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__SIZE:
+				return getSize();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__GLOBAL_OFFSET:
+				return getGlobalOffset();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -403,6 +535,12 @@ public class GSSTmTcFormatCSFieldImpl extends MinimalEObjectImpl.Container imple
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__FIRST_BIT:
 				setFirstBit((GSSTmTcFormatSFieldFirstBit)newValue);
+				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__SIZE:
+				setSize((GSSTmTcFormatSize)newValue);
+				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__GLOBAL_OFFSET:
+				setGlobalOffset((GSSTmTcFormatGlobalOffset)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -437,6 +575,12 @@ public class GSSTmTcFormatCSFieldImpl extends MinimalEObjectImpl.Container imple
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__FIRST_BIT:
 				setFirstBit(FIRST_BIT_EDEFAULT);
 				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__SIZE:
+				setSize((GSSTmTcFormatSize)null);
+				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__GLOBAL_OFFSET:
+				setGlobalOffset((GSSTmTcFormatGlobalOffset)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -463,6 +607,10 @@ public class GSSTmTcFormatCSFieldImpl extends MinimalEObjectImpl.Container imple
 				return byteOrder != BYTE_ORDER_EDEFAULT;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__FIRST_BIT:
 				return firstBit != FIRST_BIT_EDEFAULT;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__SIZE:
+				return size != null;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD__GLOBAL_OFFSET:
+				return globalOffset != null;
 		}
 		return super.eIsSet(featureID);
 	}

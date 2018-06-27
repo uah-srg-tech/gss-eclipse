@@ -89,6 +89,42 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FORMULA_FIELD: {
+				GSSTmTcFormatCSFormulaField gssTmTcFormatCSFormulaField = (GSSTmTcFormatCSFormulaField)theEObject;
+				T result = caseGSSTmTcFormatCSFormulaField(gssTmTcFormatCSFormulaField);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD: {
+				GSSTmTcFormatVSField gssTmTcFormatVSField = (GSSTmTcFormatVSField)theEObject;
+				T result = caseGSSTmTcFormatVSField(gssTmTcFormatVSField);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VR_FIELD_SIZE: {
+				GSSTmTcFormatVRFieldSize gssTmTcFormatVRFieldSize = (GSSTmTcFormatVRFieldSize)theEObject;
+				T result = caseGSSTmTcFormatVRFieldSize(gssTmTcFormatVRFieldSize);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD: {
+				GSSTmTcFormatFDICField gssTmTcFormatFDICField = (GSSTmTcFormatFDICField)theEObject;
+				T result = caseGSSTmTcFormatFDICField(gssTmTcFormatFDICField);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD: {
+				GSSTmTcFormatAField gssTmTcFormatAField = (GSSTmTcFormatAField)theEObject;
+				T result = caseGSSTmTcFormatAField(gssTmTcFormatAField);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD: {
+				GSSTmTcFormatAIField gssTmTcFormatAIField = (GSSTmTcFormatAIField)theEObject;
+				T result = caseGSSTmTcFormatAIField(gssTmTcFormatAIField);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_SIZE: {
 				GSSTmTcFormatSize gssTmTcFormatSize = (GSSTmTcFormatSize)theEObject;
 				T result = caseGSSTmTcFormatSize(gssTmTcFormatSize);
@@ -101,21 +137,9 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FORMULA_FIELD: {
-				GSSTmTcFormatCSFormulaField gssTmTcFormatCSFormulaField = (GSSTmTcFormatCSFormulaField)theEObject;
-				T result = caseGSSTmTcFormatCSFormulaField(gssTmTcFormatCSFormulaField);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FORMULA: {
 				GSSTmTcFormatFormula gssTmTcFormatFormula = (GSSTmTcFormatFormula)theEObject;
 				T result = caseGSSTmTcFormatFormula(gssTmTcFormatFormula);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD: {
-				GSSTmTcFormatVSField gssTmTcFormatVSField = (GSSTmTcFormatVSField)theEObject;
-				T result = caseGSSTmTcFormatVSField(gssTmTcFormatVSField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -137,18 +161,6 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VR_FIELD_SIZE: {
-				GSSTmTcFormatVRFieldSize gssTmTcFormatVRFieldSize = (GSSTmTcFormatVRFieldSize)theEObject;
-				T result = caseGSSTmTcFormatVRFieldSize(gssTmTcFormatVRFieldSize);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD: {
-				GSSTmTcFormatFDICField gssTmTcFormatFDICField = (GSSTmTcFormatFDICField)theEObject;
-				T result = caseGSSTmTcFormatFDICField(gssTmTcFormatFDICField);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FLOATING_OFFSET: {
 				GSSTmTcFormatFloatingOffset gssTmTcFormatFloatingOffset = (GSSTmTcFormatFloatingOffset)theEObject;
 				T result = caseGSSTmTcFormatFloatingOffset(gssTmTcFormatFloatingOffset);
@@ -167,21 +179,9 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD: {
-				GSSTmTcFormatAField gssTmTcFormatAField = (GSSTmTcFormatAField)theEObject;
-				T result = caseGSSTmTcFormatAField(gssTmTcFormatAField);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_ARRAY_DIMENSION: {
 				GSSTmTcFormatArrayDimension gssTmTcFormatArrayDimension = (GSSTmTcFormatArrayDimension)theEObject;
 				T result = caseGSSTmTcFormatArrayDimension(gssTmTcFormatArrayDimension);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD: {
-				GSSTmTcFormatAIField gssTmTcFormatAIField = (GSSTmTcFormatAIField)theEObject;
-				T result = caseGSSTmTcFormatAIField(gssTmTcFormatAIField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
