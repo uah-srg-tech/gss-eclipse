@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2018 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.gss/src" modelPluginID="es.uah.aut.srg.gss" modelName="Export"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="common.genmodel#//common"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>export.ecore</foreignModel>
+  <genPackages prefix="export" basePackage="es.uah.aut.srg.gss" disposableProviderFactory="true"
+      ecorePackage="export.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="export.ecore#//GSSExportUnit">
+      <genEnumLiterals ecoreEnumLiteral="export.ecore#//GSSExportUnit/bits"/>
+      <genEnumLiterals ecoreEnumLiteral="export.ecore#//GSSExportUnit/bytes"/>
+    </genEnums>
+    <genClasses ecoreClass="export.ecore#//GSSExportExport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportExport/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportExport/to"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference export.ecore#//GSSExportExport/Sizes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference export.ecore#//GSSExportExport/settings"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference export.ecore#//GSSExportExport/activateDICs"/>
+    </genClasses>
+    <genClasses ecoreClass="export.ecore#//GSSExportSizes">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference export.ecore#//GSSExportSizes/sizeFromFileLength"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference export.ecore#//GSSExportSizes/sizeFromFileLine"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference export.ecore#//GSSExportSizes/sizeInBits"/>
+    </genClasses>
+    <genClasses ecoreClass="export.ecore#//GSSExportSizeFromFileLength">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSizeFromFileLength/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSizeFromFileLength/fromFile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSizeFromFileLength/addSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSizeFromFileLength/unit"/>
+    </genClasses>
+    <genClasses ecoreClass="export.ecore#//GSSExportSizeFromFileLine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSizeFromFileLine/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSizeFromFileLine/fromFile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSizeFromFileLine/line"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSizeFromFileLine/addSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSizeFromFileLine/unit"/>
+    </genClasses>
+    <genClasses ecoreClass="export.ecore#//GSSExportSizeInBits">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSizeInBits/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSizeInBits/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSizeInBits/addSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSizeInBits/unit"/>
+    </genClasses>
+    <genClasses ecoreClass="export.ecore#//GSSExportSettings">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference export.ecore#//GSSExportSettings/settingFromConst"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference export.ecore#//GSSExportSettings/settingFromSize"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference export.ecore#//GSSExportSettings/settingFromFile"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference export.ecore#//GSSExportSettings/settingFromField"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference export.ecore#//GSSExportSettings/settingAIFromConst"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference export.ecore#//GSSExportSettings/settingAIFromFile"/>
+    </genClasses>
+    <genClasses ecoreClass="export.ecore#//GSSExportSettingFromConst">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingFromConst/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingFromConst/toFieldRef"/>
+    </genClasses>
+    <genClasses ecoreClass="export.ecore#//GSSExportSettingFromSize">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingFromSize/sizeRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingFromSize/toFieldRef"/>
+    </genClasses>
+    <genClasses ecoreClass="export.ecore#//GSSExportSettingFromFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingFromFile/file"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingFromFile/toFieldRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingFromFile/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingFromFile/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingFromFile/line"/>
+    </genClasses>
+    <genClasses ecoreClass="export.ecore#//GSSExportSettingFromField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingFromField/fieldRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingFromField/toFieldRef"/>
+    </genClasses>
+    <genClasses ecoreClass="export.ecore#//GSSExportSettingAIFromFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingAIFromFile/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingAIFromFile/toFieldRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingAIFromFile/toArrayIndex"/>
+    </genClasses>
+    <genClasses ecoreClass="export.ecore#//GSSExportSettingAIFromConst">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingAIFromConst/file"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingAIFromConst/toFieldRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingAIFromConst/toArrayIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingAIFromConst/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingAIFromConst/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportSettingAIFromConst/line"/>
+    </genClasses>
+    <genClasses ecoreClass="export.ecore#//GSSExportActivateDICs">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference export.ecore#//GSSExportActivateDICs/DIC"/>
+    </genClasses>
+    <genClasses ecoreClass="export.ecore#//GSSExportDIC">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportDIC/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute export.ecore#//GSSExportDIC/DICRef"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
