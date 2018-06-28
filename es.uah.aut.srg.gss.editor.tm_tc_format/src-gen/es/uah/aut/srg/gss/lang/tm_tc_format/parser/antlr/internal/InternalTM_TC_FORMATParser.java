@@ -7189,7 +7189,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSTmTcFormatSortedFieldsToCheck"
-    // InternalTM_TC_FORMAT.g:3282:1: ruleGSSTmTcFormatSortedFieldsToCheck returns [EObject current=null] : ( () otherlv_1= 'GSSTmTcFormatSortedFieldsToCheck' otherlv_2= '{' ( (lv_fieldToCheck_3_0= ruleGSSTmTcFormatFieldToCheck ) )* otherlv_4= '}' otherlv_5= ';' ) ;
+    // InternalTM_TC_FORMAT.g:3282:1: ruleGSSTmTcFormatSortedFieldsToCheck returns [EObject current=null] : ( () otherlv_1= 'GSSTmTcFormatSortedFieldsToCheck' otherlv_2= '{' ( (lv_fieldToCheck_3_0= ruleGSSTmTcFormatFieldToCheck ) )+ otherlv_4= '}' otherlv_5= ';' ) ;
     public final EObject ruleGSSTmTcFormatSortedFieldsToCheck() throws RecognitionException {
         EObject current = null;
 
@@ -7204,11 +7204,11 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTM_TC_FORMAT.g:3288:2: ( ( () otherlv_1= 'GSSTmTcFormatSortedFieldsToCheck' otherlv_2= '{' ( (lv_fieldToCheck_3_0= ruleGSSTmTcFormatFieldToCheck ) )* otherlv_4= '}' otherlv_5= ';' ) )
-            // InternalTM_TC_FORMAT.g:3289:2: ( () otherlv_1= 'GSSTmTcFormatSortedFieldsToCheck' otherlv_2= '{' ( (lv_fieldToCheck_3_0= ruleGSSTmTcFormatFieldToCheck ) )* otherlv_4= '}' otherlv_5= ';' )
+            // InternalTM_TC_FORMAT.g:3288:2: ( ( () otherlv_1= 'GSSTmTcFormatSortedFieldsToCheck' otherlv_2= '{' ( (lv_fieldToCheck_3_0= ruleGSSTmTcFormatFieldToCheck ) )+ otherlv_4= '}' otherlv_5= ';' ) )
+            // InternalTM_TC_FORMAT.g:3289:2: ( () otherlv_1= 'GSSTmTcFormatSortedFieldsToCheck' otherlv_2= '{' ( (lv_fieldToCheck_3_0= ruleGSSTmTcFormatFieldToCheck ) )+ otherlv_4= '}' otherlv_5= ';' )
             {
-            // InternalTM_TC_FORMAT.g:3289:2: ( () otherlv_1= 'GSSTmTcFormatSortedFieldsToCheck' otherlv_2= '{' ( (lv_fieldToCheck_3_0= ruleGSSTmTcFormatFieldToCheck ) )* otherlv_4= '}' otherlv_5= ';' )
-            // InternalTM_TC_FORMAT.g:3290:3: () otherlv_1= 'GSSTmTcFormatSortedFieldsToCheck' otherlv_2= '{' ( (lv_fieldToCheck_3_0= ruleGSSTmTcFormatFieldToCheck ) )* otherlv_4= '}' otherlv_5= ';'
+            // InternalTM_TC_FORMAT.g:3289:2: ( () otherlv_1= 'GSSTmTcFormatSortedFieldsToCheck' otherlv_2= '{' ( (lv_fieldToCheck_3_0= ruleGSSTmTcFormatFieldToCheck ) )+ otherlv_4= '}' otherlv_5= ';' )
+            // InternalTM_TC_FORMAT.g:3290:3: () otherlv_1= 'GSSTmTcFormatSortedFieldsToCheck' otherlv_2= '{' ( (lv_fieldToCheck_3_0= ruleGSSTmTcFormatFieldToCheck ) )+ otherlv_4= '}' otherlv_5= ';'
             {
             // InternalTM_TC_FORMAT.g:3290:3: ()
             // InternalTM_TC_FORMAT.g:3291:4: 
@@ -7240,7 +7240,8 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSTmTcFormatSortedFieldsToCheckAccess().getLeftCurlyBracketKeyword_2());
               		
             }
-            // InternalTM_TC_FORMAT.g:3308:3: ( (lv_fieldToCheck_3_0= ruleGSSTmTcFormatFieldToCheck ) )*
+            // InternalTM_TC_FORMAT.g:3308:3: ( (lv_fieldToCheck_3_0= ruleGSSTmTcFormatFieldToCheck ) )+
+            int cnt11=0;
             loop11:
             do {
                 int alt11=2;
@@ -7263,7 +7264,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
             	      					newCompositeNode(grammarAccess.getGSSTmTcFormatSortedFieldsToCheckAccess().getFieldToCheckGSSTmTcFormatFieldToCheckParserRuleCall_3_0());
             	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_49);
+            	    pushFollow(FollowSets000.FOLLOW_50);
             	    lv_fieldToCheck_3_0=ruleGSSTmTcFormatFieldToCheck();
 
             	    state._fsp--;
@@ -7289,8 +7290,13 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop11;
+            	    if ( cnt11 >= 1 ) break loop11;
+            	    if (state.backtracking>0) {state.failed=true; return current;}
+                        EarlyExitException eee =
+                            new EarlyExitException(11, input);
+                        throw eee;
                 }
+                cnt11++;
             } while (true);
 
             otherlv_4=(Token)match(input,22,FollowSets000.FOLLOW_5); if (state.failed) return current;
@@ -7624,7 +7630,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_50); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_51); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSTmTcFormatArrayDimensionAccess().getSemicolonKeyword_5());
@@ -8168,7 +8174,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
             // InternalTM_TC_FORMAT.g:3679:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             // InternalTM_TC_FORMAT.g:3680:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_51); if (state.failed) return current;
+            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_52); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_ID_0);
@@ -8201,7 +8207,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_51); if (state.failed) return current;
+            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_52); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_ID_2);
@@ -8343,7 +8349,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalTM_TC_FORMAT.g:3721:4: this_INT_0= RULE_INT
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_51); if (state.failed) return current;
+                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_52); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current.merge(this_INT_0);
@@ -8391,7 +8397,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_51); if (state.failed) return current;
+                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_52); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					current.merge(this_ID_2);
@@ -8468,7 +8474,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
             	        case 1 :
             	            // InternalTM_TC_FORMAT.g:3755:5: this_INT_4= RULE_INT
             	            {
-            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_51); if (state.failed) return current;
+            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_52); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              					current.merge(this_INT_4);
@@ -8516,7 +8522,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
 
             	            }
 
-            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_51); if (state.failed) return current;
+            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_52); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              						current.merge(this_ID_6);
@@ -8635,7 +8641,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_52);
+            pushFollow(FollowSets000.FOLLOW_53);
             this_QualifiedName_0=ruleQualifiedName();
 
             state._fsp--;
@@ -8662,7 +8668,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_53);
+            pushFollow(FollowSets000.FOLLOW_54);
             this_Version_2=ruleVersion();
 
             state._fsp--;
@@ -8799,7 +8805,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
                         case 1 :
                             // InternalTM_TC_FORMAT.g:3853:5: kw= '-'
                             {
-                            kw=(Token)match(input,59,FollowSets000.FOLLOW_54); if (state.failed) return current;
+                            kw=(Token)match(input,59,FollowSets000.FOLLOW_55); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               					current.merge(kw);
@@ -8941,7 +8947,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalTM_TC_FORMAT.g:3895:4: kw= '-'
                     {
-                    kw=(Token)match(input,59,FollowSets000.FOLLOW_54); if (state.failed) return current;
+                    kw=(Token)match(input,59,FollowSets000.FOLLOW_55); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current.merge(kw);
@@ -8957,7 +8963,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
             // InternalTM_TC_FORMAT.g:3901:3: (this_INT_1= RULE_INT kw= '.' this_INT_3= RULE_INT )
             // InternalTM_TC_FORMAT.g:3902:4: this_INT_1= RULE_INT kw= '.' this_INT_3= RULE_INT
             {
-            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_55); if (state.failed) return current;
+            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_56); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               				current.merge(this_INT_1);
@@ -8968,14 +8974,14 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
               				newLeafNode(this_INT_1, grammarAccess.getREALAccess().getINTTerminalRuleCall_1_0());
               			
             }
-            kw=(Token)match(input,56,FollowSets000.FOLLOW_54); if (state.failed) return current;
+            kw=(Token)match(input,56,FollowSets000.FOLLOW_55); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               				current.merge(kw);
               				newLeafNode(kw, grammarAccess.getREALAccess().getFullStopKeyword_1_1());
               			
             }
-            this_INT_3=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_56); if (state.failed) return current;
+            this_INT_3=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_57); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               				current.merge(this_INT_3);
@@ -9018,7 +9024,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
                         case 1 :
                             // InternalTM_TC_FORMAT.g:3929:5: kw= '-'
                             {
-                            kw=(Token)match(input,59,FollowSets000.FOLLOW_54); if (state.failed) return current;
+                            kw=(Token)match(input,59,FollowSets000.FOLLOW_55); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               					current.merge(kw);
@@ -10372,7 +10378,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
 
         }
 
-        otherlv_23=(Token)match(input,13,FollowSets000.FOLLOW_57); if (state.failed) return ;
+        otherlv_23=(Token)match(input,13,FollowSets000.FOLLOW_58); if (state.failed) return ;
 
         }
 
@@ -10434,7 +10440,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getCSFieldGSSTmTcFormatCSFieldParserRuleCall_3_4_1_0_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_57);
+        	    pushFollow(FollowSets000.FOLLOW_58);
         	    lv_CSField_24_0=ruleGSSTmTcFormatCSField();
 
         	    state._fsp--;
@@ -10462,7 +10468,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getCSFormulaFieldGSSTmTcFormatCSFormulaFieldParserRuleCall_3_4_1_1_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_57);
+        	    pushFollow(FollowSets000.FOLLOW_58);
         	    lv_CSFormulaField_25_0=ruleGSSTmTcFormatCSFormulaField();
 
         	    state._fsp--;
@@ -10490,7 +10496,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getVSFieldGSSTmTcFormatVSFieldParserRuleCall_3_4_1_2_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_57);
+        	    pushFollow(FollowSets000.FOLLOW_58);
         	    lv_VSField_26_0=ruleGSSTmTcFormatVSField();
 
         	    state._fsp--;
@@ -10518,7 +10524,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getFDICFieldGSSTmTcFormatFDICFieldParserRuleCall_3_4_1_3_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_57);
+        	    pushFollow(FollowSets000.FOLLOW_58);
         	    lv_FDICField_27_0=ruleGSSTmTcFormatFDICField();
 
         	    state._fsp--;
@@ -10546,7 +10552,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getVRFieldSizeGSSTmTcFormatVRFieldSizeParserRuleCall_3_4_1_4_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_57);
+        	    pushFollow(FollowSets000.FOLLOW_58);
         	    lv_VRFieldSize_28_0=ruleGSSTmTcFormatVRFieldSize();
 
         	    state._fsp--;
@@ -10574,7 +10580,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getAFieldGSSTmTcFormatAFieldParserRuleCall_3_4_1_5_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_57);
+        	    pushFollow(FollowSets000.FOLLOW_58);
         	    lv_AField_29_0=ruleGSSTmTcFormatAField();
 
         	    state._fsp--;
@@ -10602,7 +10608,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getAIFieldGSSTmTcFormatAIFieldParserRuleCall_3_4_1_6_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_57);
+        	    pushFollow(FollowSets000.FOLLOW_58);
         	    lv_AIField_30_0=ruleGSSTmTcFormatAIField();
 
         	    state._fsp--;
@@ -10765,15 +10771,16 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000006000000000L,0x000000000000F000L});
         public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0001000000400000L});
         public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000000L,0x0000000000030000L});
-        public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0008000000400000L});
-        public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0020000000000000L});
-        public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0100000000000002L});
-        public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0200000000000000L});
-        public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0400000000000000L});
-        public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0100000000000000L});
-        public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x1000000000000002L});
-        public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0000000EE0800002L});
+        public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0008000000000000L});
+        public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0008000000400000L});
+        public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0020000000000000L});
+        public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0100000000000002L});
+        public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0200000000000000L});
+        public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0400000000000000L});
+        public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0100000000000000L});
+        public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x1000000000000002L});
+        public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000000EE0800002L});
     }
 
 

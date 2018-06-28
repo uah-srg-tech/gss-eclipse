@@ -1287,12 +1287,12 @@ public class InternalIFACELexer extends Lexer {
         try {
             int _type = RULE_HEXADECIMAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalIFACE.g:6973:18: ( '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
-            // InternalIFACE.g:6973:20: '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+            // InternalIFACE.g:6070:18: ( '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
+            // InternalIFACE.g:6070:20: '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
             {
             match("0x"); 
 
-            // InternalIFACE.g:6973:25: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+            // InternalIFACE.g:6070:25: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
             int cnt1=0;
             loop1:
             do {
@@ -1346,10 +1346,10 @@ public class InternalIFACELexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalIFACE.g:6975:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalIFACE.g:6975:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalIFACE.g:6072:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalIFACE.g:6072:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalIFACE.g:6975:11: ( '^' )?
+            // InternalIFACE.g:6072:11: ( '^' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -1358,7 +1358,7 @@ public class InternalIFACELexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalIFACE.g:6975:11: '^'
+                    // InternalIFACE.g:6072:11: '^'
                     {
                     match('^'); 
 
@@ -1376,7 +1376,7 @@ public class InternalIFACELexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalIFACE.g:6975:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalIFACE.g:6072:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -1425,10 +1425,10 @@ public class InternalIFACELexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalIFACE.g:6977:10: ( ( '0' .. '9' )+ )
-            // InternalIFACE.g:6977:12: ( '0' .. '9' )+
+            // InternalIFACE.g:6074:10: ( ( '0' .. '9' )+ )
+            // InternalIFACE.g:6074:12: ( '0' .. '9' )+
             {
-            // InternalIFACE.g:6977:12: ( '0' .. '9' )+
+            // InternalIFACE.g:6074:12: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -1442,7 +1442,7 @@ public class InternalIFACELexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalIFACE.g:6977:13: '0' .. '9'
+            	    // InternalIFACE.g:6074:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1474,10 +1474,10 @@ public class InternalIFACELexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalIFACE.g:6979:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalIFACE.g:6979:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalIFACE.g:6076:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalIFACE.g:6076:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalIFACE.g:6979:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalIFACE.g:6076:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1495,10 +1495,10 @@ public class InternalIFACELexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // InternalIFACE.g:6979:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalIFACE.g:6076:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalIFACE.g:6979:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalIFACE.g:6076:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1514,7 +1514,7 @@ public class InternalIFACELexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalIFACE.g:6979:21: '\\\\' .
+                    	    // InternalIFACE.g:6076:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1522,7 +1522,7 @@ public class InternalIFACELexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalIFACE.g:6979:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalIFACE.g:6076:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1547,10 +1547,10 @@ public class InternalIFACELexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:6979:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalIFACE.g:6076:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalIFACE.g:6979:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalIFACE.g:6076:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -1566,7 +1566,7 @@ public class InternalIFACELexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // InternalIFACE.g:6979:54: '\\\\' .
+                    	    // InternalIFACE.g:6076:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1574,7 +1574,7 @@ public class InternalIFACELexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalIFACE.g:6979:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalIFACE.g:6076:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1617,12 +1617,12 @@ public class InternalIFACELexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalIFACE.g:6981:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalIFACE.g:6981:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalIFACE.g:6078:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalIFACE.g:6078:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalIFACE.g:6981:24: ( options {greedy=false; } : . )*
+            // InternalIFACE.g:6078:24: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -1647,7 +1647,7 @@ public class InternalIFACELexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalIFACE.g:6981:52: .
+            	    // InternalIFACE.g:6078:52: .
             	    {
             	    matchAny(); 
 
@@ -1677,12 +1677,12 @@ public class InternalIFACELexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalIFACE.g:6983:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalIFACE.g:6983:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalIFACE.g:6080:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalIFACE.g:6080:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalIFACE.g:6983:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalIFACE.g:6080:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -1695,7 +1695,7 @@ public class InternalIFACELexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // InternalIFACE.g:6983:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalIFACE.g:6080:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1715,7 +1715,7 @@ public class InternalIFACELexer extends Lexer {
                 }
             } while (true);
 
-            // InternalIFACE.g:6983:40: ( ( '\\r' )? '\\n' )?
+            // InternalIFACE.g:6080:40: ( ( '\\r' )? '\\n' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1724,9 +1724,9 @@ public class InternalIFACELexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // InternalIFACE.g:6983:41: ( '\\r' )? '\\n'
+                    // InternalIFACE.g:6080:41: ( '\\r' )? '\\n'
                     {
-                    // InternalIFACE.g:6983:41: ( '\\r' )?
+                    // InternalIFACE.g:6080:41: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -1735,7 +1735,7 @@ public class InternalIFACELexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // InternalIFACE.g:6983:41: '\\r'
+                            // InternalIFACE.g:6080:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1767,10 +1767,10 @@ public class InternalIFACELexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalIFACE.g:6985:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalIFACE.g:6985:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalIFACE.g:6082:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalIFACE.g:6082:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalIFACE.g:6985:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalIFACE.g:6082:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt12=0;
             loop12:
             do {
@@ -1824,8 +1824,8 @@ public class InternalIFACELexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalIFACE.g:6987:16: ( . )
-            // InternalIFACE.g:6987:18: .
+            // InternalIFACE.g:6084:16: ( . )
+            // InternalIFACE.g:6084:18: .
             {
             matchAny(); 
 

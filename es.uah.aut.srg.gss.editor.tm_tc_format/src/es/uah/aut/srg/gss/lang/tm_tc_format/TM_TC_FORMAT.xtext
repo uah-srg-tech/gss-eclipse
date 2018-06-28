@@ -216,7 +216,7 @@ GSSTmTcFormatFloatingOffset returns GSSTmTcFormatFloatingOffset:
 GSSTmTcFormatSortedFieldsToCheck returns GSSTmTcFormatSortedFieldsToCheck:
 	{GSSTmTcFormatSortedFieldsToCheck}
 	'GSSTmTcFormatSortedFieldsToCheck' '{'
-		(fieldToCheck+=GSSTmTcFormatFieldToCheck)* 
+		(fieldToCheck+=GSSTmTcFormatFieldToCheck)+
 	'}' ';'
 ;
 

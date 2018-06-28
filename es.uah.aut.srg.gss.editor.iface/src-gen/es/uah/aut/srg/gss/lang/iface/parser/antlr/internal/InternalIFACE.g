@@ -319,34 +319,6 @@ ruleGSSIfacePortConfig returns [EObject current=null]
 						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3());
 					}
 				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 2)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 2);
-					}
-								({true}?=>((
-									{
-										newCompositeNode(grammarAccess.getGSSIfacePortConfigAccess().getPortGSSIfacePortParserRuleCall_3_2_0());
-									}
-									lv_port_12_0=ruleGSSIfacePort
-									{
-										if ($current==null) {
-											$current = createModelElementForParent(grammarAccess.getGSSIfacePortConfigRule());
-										}
-										set(
-											$current,
-											"port",
-											lv_port_12_0,
-											"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePort");
-										afterParserOrEnumRuleCall();
-									}
-								)
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3());
-					}
-				)
 			)
 					)+
 					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3())}?
@@ -356,13 +328,32 @@ ruleGSSIfacePortConfig returns [EObject current=null]
 				  getUnorderedGroupHelper().leave(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3());
 				}
 		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfacePortConfigAccess().getPortGSSIfacePortParserRuleCall_4_0());
+				}
+				lv_port_12_0=ruleGSSIfacePort
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfacePortConfigRule());
+					}
+					set(
+						$current,
+						"port",
+						lv_port_12_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePort");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 		otherlv_13='}'
 		{
-			newLeafNode(otherlv_13, grammarAccess.getGSSIfacePortConfigAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_13, grammarAccess.getGSSIfacePortConfigAccess().getRightCurlyBracketKeyword_5());
 		}
 		otherlv_14=';'
 		{
-			newLeafNode(otherlv_14, grammarAccess.getGSSIfacePortConfigAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_14, grammarAccess.getGSSIfacePortConfigAccess().getSemicolonKeyword_6());
 		}
 	)
 ;
@@ -437,26 +428,16 @@ ruleGSSIfacePort returns [EObject current=null]
 ;
 
 // Entry rule entryRuleGSSIfaceSpWPort
-entryRuleGSSIfaceSpWPort returns [EObject current=null]@init {
-	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2()
-	);
-}:
+entryRuleGSSIfaceSpWPort returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getGSSIfaceSpWPortRule()); }
 	iv_ruleGSSIfaceSpWPort=ruleGSSIfaceSpWPort
 	{ $current=$iv_ruleGSSIfaceSpWPort.current; }
 	EOF;
-finally {
-	myUnorderedGroupState.restore();
-}
 
 // Rule GSSIfaceSpWPort
 ruleGSSIfaceSpWPort returns [EObject current=null]
 @init {
 	enterRule();
-	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2()
-	);
 }
 @after {
 	leaveRule();
@@ -470,188 +451,128 @@ ruleGSSIfaceSpWPort returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceSpWPortAccess().getLeftCurlyBracketKeyword_1());
 		}
+		otherlv_2='type'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSpWPortAccess().getTypeKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_3());
+		}
 		(
 			(
-				{ 
-				  getUnorderedGroupHelper().enter(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2());
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceSpWPortAccess().getTypeGSSIfaceSpWPortTypeEnumRuleCall_4_0());
 				}
-				(
-					(
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2(), 0)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2(), 0);
+				lv_type_4_0=ruleGSSIfaceSpWPortType
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceSpWPortRule());
 					}
-								({true}?=>(otherlv_3='type'
-								{
-									newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSpWPortAccess().getTypeKeyword_2_0_0());
-								}
-								otherlv_4=':='
-								{
-									newLeafNode(otherlv_4, grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_2_0_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceSpWPortAccess().getTypeGSSIfaceSpWPortTypeEnumRuleCall_2_0_2_0());
-										}
-										lv_type_5_0=ruleGSSIfaceSpWPortType
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceSpWPortRule());
-											}
-											set(
-												$current,
-												"type",
-												lv_type_5_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceSpWPortType");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_6=';'
-								{
-									newLeafNode(otherlv_6, grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_2_0_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2(), 1)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2(), 1);
-					}
-								({true}?=>(otherlv_7='link'
-								{
-									newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSpWPortAccess().getLinkKeyword_2_1_0());
-								}
-								otherlv_8=':='
-								{
-									newLeafNode(otherlv_8, grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_2_1_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceSpWPortAccess().getLinkINTEGERParserRuleCall_2_1_2_0());
-										}
-										lv_link_9_0=ruleINTEGER
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceSpWPortRule());
-											}
-											set(
-												$current,
-												"link",
-												lv_link_9_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_10=';'
-								{
-									newLeafNode(otherlv_10, grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_2_1_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2(), 2)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2(), 2);
-					}
-								({true}?=>(otherlv_11='writingPort'
-								{
-									newLeafNode(otherlv_11, grammarAccess.getGSSIfaceSpWPortAccess().getWritingPortKeyword_2_2_0());
-								}
-								otherlv_12=':='
-								{
-									newLeafNode(otherlv_12, grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_2_2_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceSpWPortAccess().getWritingPortINTEGERParserRuleCall_2_2_2_0());
-										}
-										lv_writingPort_13_0=ruleINTEGER
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceSpWPortRule());
-											}
-											set(
-												$current,
-												"writingPort",
-												lv_writingPort_13_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_14=';'
-								{
-									newLeafNode(otherlv_14, grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_2_2_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2(), 3)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2(), 3);
-					}
-								({true}?=>((
-									{
-										newCompositeNode(grammarAccess.getGSSIfaceSpWPortAccess().getReadingPortGSSIfaceReadingPortParserRuleCall_2_3_0());
-									}
-									lv_readingPort_15_0=ruleGSSIfaceReadingPort
-									{
-										if ($current==null) {
-											$current = createModelElementForParent(grammarAccess.getGSSIfaceSpWPortRule());
-										}
-										add(
-											$current,
-											"readingPort",
-											lv_readingPort_15_0,
-											"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceReadingPort");
-										afterParserOrEnumRuleCall();
-									}
-								)
-								))+
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2());
-					}
-				)
-			)
-					)+
-					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2())}?
-				)
-			)
-				{ 
-				  getUnorderedGroupHelper().leave(grammarAccess.getGSSIfaceSpWPortAccess().getUnorderedGroup_2());
+					set(
+						$current,
+						"type",
+						lv_type_4_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceSpWPortType");
+					afterParserOrEnumRuleCall();
 				}
+			)
 		)
-		otherlv_16='}'
+		otherlv_5=';'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getGSSIfaceSpWPortAccess().getRightCurlyBracketKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_5());
 		}
-		otherlv_17=';'
+		otherlv_6='link'
 		{
-			newLeafNode(otherlv_17, grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_4());
+			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceSpWPortAccess().getLinkKeyword_6());
+		}
+		otherlv_7=':='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceSpWPortAccess().getLinkINTEGERParserRuleCall_8_0());
+				}
+				lv_link_8_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceSpWPortRule());
+					}
+					set(
+						$current,
+						"link",
+						lv_link_8_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9=';'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_9());
+		}
+		otherlv_10='writingPort'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getGSSIfaceSpWPortAccess().getWritingPortKeyword_10());
+		}
+		otherlv_11=':='
+		{
+			newLeafNode(otherlv_11, grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_11());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceSpWPortAccess().getWritingPortINTEGERParserRuleCall_12_0());
+				}
+				lv_writingPort_12_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceSpWPortRule());
+					}
+					set(
+						$current,
+						"writingPort",
+						lv_writingPort_12_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_13=';'
+		{
+			newLeafNode(otherlv_13, grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_13());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceSpWPortAccess().getReadingPortGSSIfaceReadingPortParserRuleCall_14_0());
+				}
+				lv_readingPort_14_0=ruleGSSIfaceReadingPort
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceSpWPortRule());
+					}
+					add(
+						$current,
+						"readingPort",
+						lv_readingPort_14_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceReadingPort");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)+
+		otherlv_15='}'
+		{
+			newLeafNode(otherlv_15, grammarAccess.getGSSIfaceSpWPortAccess().getRightCurlyBracketKeyword_15());
+		}
+		otherlv_16=';'
+		{
+			newLeafNode(otherlv_16, grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_16());
 		}
 	)
 ;
-finally {
-	myUnorderedGroupState.restore();
-}
 
 // Entry rule entryRuleGSSIfaceReadingPort
 entryRuleGSSIfaceReadingPort returns [EObject current=null]:
@@ -677,71 +598,59 @@ ruleGSSIfaceReadingPort returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceReadingPortAccess().getLeftCurlyBracketKeyword_1());
 		}
+		otherlv_2='port'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceReadingPortAccess().getPortKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceReadingPortAccess().getColonEqualsSignKeyword_3());
+		}
 		(
-			otherlv_2='port'
-			{
-				newLeafNode(otherlv_2, grammarAccess.getGSSIfaceReadingPortAccess().getPortKeyword_2_0());
-			}
-			otherlv_3=':='
-			{
-				newLeafNode(otherlv_3, grammarAccess.getGSSIfaceReadingPortAccess().getColonEqualsSignKeyword_2_1());
-			}
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSIfaceReadingPortAccess().getPortINTEGERParserRuleCall_2_2_0());
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceReadingPortAccess().getPortINTEGERParserRuleCall_4_0());
+				}
+				lv_port_4_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceReadingPortRule());
 					}
-					lv_port_4_0=ruleINTEGER
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSIfaceReadingPortRule());
-						}
-						set(
-							$current,
-							"port",
-							lv_port_4_0,
-							"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"port",
+						lv_port_4_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
 			)
-			otherlv_5=';'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getGSSIfaceReadingPortAccess().getSemicolonKeyword_2_3());
-			}
 		)
+		otherlv_5=';'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceReadingPortAccess().getSemicolonKeyword_5());
+		}
 		otherlv_6='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceReadingPortAccess().getRightCurlyBracketKeyword_3());
+			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceReadingPortAccess().getRightCurlyBracketKeyword_6());
 		}
 		otherlv_7=';'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceReadingPortAccess().getSemicolonKeyword_4());
+			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceReadingPortAccess().getSemicolonKeyword_7());
 		}
 	)
 ;
 
 // Entry rule entryRuleGSSIfaceUartPort
-entryRuleGSSIfaceUartPort returns [EObject current=null]@init {
-	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2()
-	);
-}:
+entryRuleGSSIfaceUartPort returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getGSSIfaceUartPortRule()); }
 	iv_ruleGSSIfaceUartPort=ruleGSSIfaceUartPort
 	{ $current=$iv_ruleGSSIfaceUartPort.current; }
 	EOF;
-finally {
-	myUnorderedGroupState.restore();
-}
 
 // Rule GSSIfaceUartPort
 ruleGSSIfaceUartPort returns [EObject current=null]
 @init {
 	enterRule();
-	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2()
-	);
 }
 @after {
 	leaveRule();
@@ -755,378 +664,264 @@ ruleGSSIfaceUartPort returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceUartPortAccess().getLeftCurlyBracketKeyword_1());
 		}
+		otherlv_2='number'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceUartPortAccess().getNumberKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_3());
+		}
 		(
 			(
-				{ 
-				  getUnorderedGroupHelper().enter(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2());
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getNumberINTEGERParserRuleCall_4_0());
 				}
-				(
-					(
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 0)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 0);
+				lv_number_4_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
 					}
-								({true}?=>(otherlv_3='number'
-								{
-									newLeafNode(otherlv_3, grammarAccess.getGSSIfaceUartPortAccess().getNumberKeyword_2_0_0());
-								}
-								otherlv_4=':='
-								{
-									newLeafNode(otherlv_4, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_2_0_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getNumberINTEGERParserRuleCall_2_0_2_0());
-										}
-										lv_number_5_0=ruleINTEGER
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
-											}
-											set(
-												$current,
-												"number",
-												lv_number_5_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_6=';'
-								{
-									newLeafNode(otherlv_6, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_2_0_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 1)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 1);
-					}
-								({true}?=>(otherlv_7='baudRate'
-								{
-									newLeafNode(otherlv_7, grammarAccess.getGSSIfaceUartPortAccess().getBaudRateKeyword_2_1_0());
-								}
-								otherlv_8=':='
-								{
-									newLeafNode(otherlv_8, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_2_1_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getBaudRateGSSIfaceUartPortBaudRateEnumRuleCall_2_1_2_0());
-										}
-										lv_baudRate_9_0=ruleGSSIfaceUartPortBaudRate
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
-											}
-											set(
-												$current,
-												"baudRate",
-												lv_baudRate_9_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartPortBaudRate");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_10=';'
-								{
-									newLeafNode(otherlv_10, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_2_1_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 2)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 2);
-					}
-								({true}?=>(otherlv_11='parity'
-								{
-									newLeafNode(otherlv_11, grammarAccess.getGSSIfaceUartPortAccess().getParityKeyword_2_2_0());
-								}
-								otherlv_12=':='
-								{
-									newLeafNode(otherlv_12, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_2_2_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getParityGSSIfaceUartPortParityEnumRuleCall_2_2_2_0());
-										}
-										lv_parity_13_0=ruleGSSIfaceUartPortParity
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
-											}
-											set(
-												$current,
-												"parity",
-												lv_parity_13_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartPortParity");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_14=';'
-								{
-									newLeafNode(otherlv_14, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_2_2_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 3)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 3);
-					}
-								({true}?=>(otherlv_15='dataBits'
-								{
-									newLeafNode(otherlv_15, grammarAccess.getGSSIfaceUartPortAccess().getDataBitsKeyword_2_3_0());
-								}
-								otherlv_16=':='
-								{
-									newLeafNode(otherlv_16, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_2_3_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getDataBitsGSSIfaceUartPortDataBitsEnumRuleCall_2_3_2_0());
-										}
-										lv_dataBits_17_0=ruleGSSIfaceUartPortDataBits
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
-											}
-											set(
-												$current,
-												"dataBits",
-												lv_dataBits_17_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartPortDataBits");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_18=';'
-								{
-									newLeafNode(otherlv_18, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_2_3_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 4)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 4);
-					}
-								({true}?=>(otherlv_19='stopBits'
-								{
-									newLeafNode(otherlv_19, grammarAccess.getGSSIfaceUartPortAccess().getStopBitsKeyword_2_4_0());
-								}
-								otherlv_20=':='
-								{
-									newLeafNode(otherlv_20, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_2_4_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getStopBitsGSSIfaceUartPortStopBitsEnumRuleCall_2_4_2_0());
-										}
-										lv_stopBits_21_0=ruleGSSIfaceUartPortStopBits
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
-											}
-											set(
-												$current,
-												"stopBits",
-												lv_stopBits_21_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartPortStopBits");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_22=';'
-								{
-									newLeafNode(otherlv_22, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_2_4_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 5)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 5);
-					}
-								({true}?=>(otherlv_23='inputQueueSize'
-								{
-									newLeafNode(otherlv_23, grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeKeyword_2_5_0());
-								}
-								otherlv_24=':='
-								{
-									newLeafNode(otherlv_24, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_2_5_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeINTEGERParserRuleCall_2_5_2_0());
-										}
-										lv_inputQueueSize_25_0=ruleINTEGER
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
-											}
-											set(
-												$current,
-												"inputQueueSize",
-												lv_inputQueueSize_25_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_26=';'
-								{
-									newLeafNode(otherlv_26, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_2_5_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 6)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 6);
-					}
-								({true}?=>(otherlv_27='outputQueueSize'
-								{
-									newLeafNode(otherlv_27, grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeKeyword_2_6_0());
-								}
-								otherlv_28=':='
-								{
-									newLeafNode(otherlv_28, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_2_6_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeINTEGERParserRuleCall_2_6_2_0());
-										}
-										lv_outputQueueSize_29_0=ruleINTEGER
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
-											}
-											set(
-												$current,
-												"outputQueueSize",
-												lv_outputQueueSize_29_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_30=';'
-								{
-									newLeafNode(otherlv_30, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_2_6_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 7)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2(), 7);
-					}
-								({true}?=>((
-									{
-										newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_2_7_0());
-									}
-									lv_uartProtocol_31_0=ruleGSSIfaceUartProtocol
-									{
-										if ($current==null) {
-											$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
-										}
-										set(
-											$current,
-											"uartProtocol",
-											lv_uartProtocol_31_0,
-											"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocol");
-										afterParserOrEnumRuleCall();
-									}
-								)
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2());
-					}
-				)
-			)
-					)+
-					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2())}?
-				)
-			)
-				{ 
-				  getUnorderedGroupHelper().leave(grammarAccess.getGSSIfaceUartPortAccess().getUnorderedGroup_2());
+					set(
+						$current,
+						"number",
+						lv_number_4_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+					afterParserOrEnumRuleCall();
 				}
+			)
 		)
-		otherlv_32='}'
+		otherlv_5=';'
 		{
-			newLeafNode(otherlv_32, grammarAccess.getGSSIfaceUartPortAccess().getRightCurlyBracketKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_5());
 		}
-		otherlv_33=';'
+		otherlv_6='baudRate'
 		{
-			newLeafNode(otherlv_33, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_4());
+			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceUartPortAccess().getBaudRateKeyword_6());
+		}
+		otherlv_7=':='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getBaudRateGSSIfaceUartPortBaudRateEnumRuleCall_8_0());
+				}
+				lv_baudRate_8_0=ruleGSSIfaceUartPortBaudRate
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
+					}
+					set(
+						$current,
+						"baudRate",
+						lv_baudRate_8_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartPortBaudRate");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9=';'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_9());
+		}
+		otherlv_10='parity'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getGSSIfaceUartPortAccess().getParityKeyword_10());
+		}
+		otherlv_11=':='
+		{
+			newLeafNode(otherlv_11, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_11());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getParityGSSIfaceUartPortParityEnumRuleCall_12_0());
+				}
+				lv_parity_12_0=ruleGSSIfaceUartPortParity
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
+					}
+					set(
+						$current,
+						"parity",
+						lv_parity_12_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartPortParity");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_13=';'
+		{
+			newLeafNode(otherlv_13, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_13());
+		}
+		otherlv_14='dataBits'
+		{
+			newLeafNode(otherlv_14, grammarAccess.getGSSIfaceUartPortAccess().getDataBitsKeyword_14());
+		}
+		otherlv_15=':='
+		{
+			newLeafNode(otherlv_15, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_15());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getDataBitsGSSIfaceUartPortDataBitsEnumRuleCall_16_0());
+				}
+				lv_dataBits_16_0=ruleGSSIfaceUartPortDataBits
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
+					}
+					set(
+						$current,
+						"dataBits",
+						lv_dataBits_16_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartPortDataBits");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_17=';'
+		{
+			newLeafNode(otherlv_17, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_17());
+		}
+		otherlv_18='stopBits'
+		{
+			newLeafNode(otherlv_18, grammarAccess.getGSSIfaceUartPortAccess().getStopBitsKeyword_18());
+		}
+		otherlv_19=':='
+		{
+			newLeafNode(otherlv_19, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_19());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getStopBitsGSSIfaceUartPortStopBitsEnumRuleCall_20_0());
+				}
+				lv_stopBits_20_0=ruleGSSIfaceUartPortStopBits
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
+					}
+					set(
+						$current,
+						"stopBits",
+						lv_stopBits_20_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartPortStopBits");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_21=';'
+		{
+			newLeafNode(otherlv_21, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_21());
+		}
+		otherlv_22='inputQueueSize'
+		{
+			newLeafNode(otherlv_22, grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeKeyword_22());
+		}
+		otherlv_23=':='
+		{
+			newLeafNode(otherlv_23, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_23());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeINTEGERParserRuleCall_24_0());
+				}
+				lv_inputQueueSize_24_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
+					}
+					set(
+						$current,
+						"inputQueueSize",
+						lv_inputQueueSize_24_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_25=';'
+		{
+			newLeafNode(otherlv_25, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_25());
+		}
+		otherlv_26='outputQueueSize'
+		{
+			newLeafNode(otherlv_26, grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeKeyword_26());
+		}
+		otherlv_27=':='
+		{
+			newLeafNode(otherlv_27, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_27());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeINTEGERParserRuleCall_28_0());
+				}
+				lv_outputQueueSize_28_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
+					}
+					set(
+						$current,
+						"outputQueueSize",
+						lv_outputQueueSize_28_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_29=';'
+		{
+			newLeafNode(otherlv_29, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_29());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_30_0());
+				}
+				lv_uartProtocol_30_0=ruleGSSIfaceUartProtocol
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
+					}
+					set(
+						$current,
+						"uartProtocol",
+						lv_uartProtocol_30_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocol");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_31='}'
+		{
+			newLeafNode(otherlv_31, grammarAccess.getGSSIfaceUartPortAccess().getRightCurlyBracketKeyword_31());
+		}
+		otherlv_32=';'
+		{
+			newLeafNode(otherlv_32, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_32());
 		}
 	)
 ;
-finally {
-	myUnorderedGroupState.restore();
-}
 
 // Entry rule entryRuleGSSIfaceUartProtocol
-entryRuleGSSIfaceUartProtocol returns [EObject current=null]@init {
-	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2()
-	);
-}:
+entryRuleGSSIfaceUartProtocol returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getGSSIfaceUartProtocolRule()); }
 	iv_ruleGSSIfaceUartProtocol=ruleGSSIfaceUartProtocol
 	{ $current=$iv_ruleGSSIfaceUartProtocol.current; }
 	EOF;
-finally {
-	myUnorderedGroupState.restore();
-}
 
 // Rule GSSIfaceUartProtocol
 ruleGSSIfaceUartProtocol returns [EObject current=null]
 @init {
 	enterRule();
-	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2()
-	);
 }
 @after {
 	leaveRule();
@@ -1140,252 +935,166 @@ ruleGSSIfaceUartProtocol returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceUartProtocolAccess().getLeftCurlyBracketKeyword_1());
 		}
+		otherlv_2='unit'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceUartProtocolAccess().getUnitKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceUartProtocolAccess().getColonEqualsSignKeyword_3());
+		}
 		(
 			(
-				{ 
-				  getUnorderedGroupHelper().enter(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2());
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getUnitGSSIfaceUartProtocolUnitEnumRuleCall_4_0());
 				}
-				(
-					(
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2(), 0)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2(), 0);
+				lv_unit_4_0=ruleGSSIfaceUartProtocolUnit
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
 					}
-								({true}?=>(otherlv_3='unit'
-								{
-									newLeafNode(otherlv_3, grammarAccess.getGSSIfaceUartProtocolAccess().getUnitKeyword_2_0_0());
-								}
-								otherlv_4=':='
-								{
-									newLeafNode(otherlv_4, grammarAccess.getGSSIfaceUartProtocolAccess().getColonEqualsSignKeyword_2_0_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getUnitGSSIfaceUartProtocolUnitEnumRuleCall_2_0_2_0());
-										}
-										lv_unit_5_0=ruleGSSIfaceUartProtocolUnit
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
-											}
-											set(
-												$current,
-												"unit",
-												lv_unit_5_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocolUnit");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_6=';'
-								{
-									newLeafNode(otherlv_6, grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_2_0_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2(), 1)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2(), 1);
-					}
-								({true}?=>(otherlv_7='power'
-								{
-									newLeafNode(otherlv_7, grammarAccess.getGSSIfaceUartProtocolAccess().getPowerKeyword_2_1_0());
-								}
-								otherlv_8=':='
-								{
-									newLeafNode(otherlv_8, grammarAccess.getGSSIfaceUartProtocolAccess().getColonEqualsSignKeyword_2_1_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getPowerGSSIfaceUartProtocolPowerEnumRuleCall_2_1_2_0());
-										}
-										lv_power_9_0=ruleGSSIfaceUartProtocolPower
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
-											}
-											set(
-												$current,
-												"power",
-												lv_power_9_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocolPower");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_10=';'
-								{
-									newLeafNode(otherlv_10, grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_2_1_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2(), 2)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2(), 2);
-					}
-								({true}?=>((
-									{
-										newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getConstSizeGSSIfaceConstSizeParserRuleCall_2_2_0());
-									}
-									lv_constSize_11_0=ruleGSSIfaceConstSize
-									{
-										if ($current==null) {
-											$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
-										}
-										set(
-											$current,
-											"constSize",
-											lv_constSize_11_0,
-											"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceConstSize");
-										afterParserOrEnumRuleCall();
-									}
-								)
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2(), 3)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2(), 3);
-					}
-								({true}?=>((
-									{
-										newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getSizeFieldOffsetGSSIfaceSizeFieldOffsetParserRuleCall_2_3_0());
-									}
-									lv_sizeFieldOffset_12_0=ruleGSSIfaceSizeFieldOffset
-									{
-										if ($current==null) {
-											$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
-										}
-										set(
-											$current,
-											"sizeFieldOffset",
-											lv_sizeFieldOffset_12_0,
-											"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceSizeFieldOffset");
-										afterParserOrEnumRuleCall();
-									}
-								)
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2(), 4)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2(), 4);
-					}
-								({true}?=>((
-									{
-										newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getSizeFieldTrimGSSIfaceSizeFieldTrimParserRuleCall_2_4_0());
-									}
-									lv_sizeFieldTrim_13_0=ruleGSSIfaceSizeFieldTrim
-									{
-										if ($current==null) {
-											$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
-										}
-										set(
-											$current,
-											"sizeFieldTrim",
-											lv_sizeFieldTrim_13_0,
-											"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceSizeFieldTrim");
-										afterParserOrEnumRuleCall();
-									}
-								)
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2(), 5)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2(), 5);
-					}
-								({true}?=>((
-									{
-										newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getSyncPatternGSSIfaceSyncPatternParserRuleCall_2_5_0());
-									}
-									lv_syncPattern_14_0=ruleGSSIfaceSyncPattern
-									{
-										if ($current==null) {
-											$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
-										}
-										set(
-											$current,
-											"syncPattern",
-											lv_syncPattern_14_0,
-											"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceSyncPattern");
-										afterParserOrEnumRuleCall();
-									}
-								)
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2());
-					}
-				)
-			)
-					)+
-					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2())}?
-				)
-			)
-				{ 
-				  getUnorderedGroupHelper().leave(grammarAccess.getGSSIfaceUartProtocolAccess().getUnorderedGroup_2());
+					set(
+						$current,
+						"unit",
+						lv_unit_4_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocolUnit");
+					afterParserOrEnumRuleCall();
 				}
+			)
 		)
-		otherlv_15='}'
+		otherlv_5=';'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getGSSIfaceUartProtocolAccess().getRightCurlyBracketKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_5());
 		}
-		otherlv_16=';'
+		otherlv_6='power'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_4());
+			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceUartProtocolAccess().getPowerKeyword_6());
+		}
+		otherlv_7=':='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceUartProtocolAccess().getColonEqualsSignKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getPowerGSSIfaceUartProtocolPowerEnumRuleCall_8_0());
+				}
+				lv_power_8_0=ruleGSSIfaceUartProtocolPower
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+					}
+					set(
+						$current,
+						"power",
+						lv_power_8_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocolPower");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9=';'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_9());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getConstSizeGSSIfaceConstSizeParserRuleCall_10_0());
+				}
+				lv_constSize_10_0=ruleGSSIfaceConstSize
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+					}
+					set(
+						$current,
+						"constSize",
+						lv_constSize_10_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceConstSize");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getSizeFieldOffsetGSSIfaceSizeFieldOffsetParserRuleCall_11_0());
+				}
+				lv_sizeFieldOffset_11_0=ruleGSSIfaceSizeFieldOffset
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+					}
+					set(
+						$current,
+						"sizeFieldOffset",
+						lv_sizeFieldOffset_11_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceSizeFieldOffset");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getSizeFieldTrimGSSIfaceSizeFieldTrimParserRuleCall_12_0());
+				}
+				lv_sizeFieldTrim_12_0=ruleGSSIfaceSizeFieldTrim
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+					}
+					set(
+						$current,
+						"sizeFieldTrim",
+						lv_sizeFieldTrim_12_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceSizeFieldTrim");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getSyncPatternGSSIfaceSyncPatternParserRuleCall_13_0());
+				}
+				lv_syncPattern_13_0=ruleGSSIfaceSyncPattern
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+					}
+					set(
+						$current,
+						"syncPattern",
+						lv_syncPattern_13_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceSyncPattern");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_14='}'
+		{
+			newLeafNode(otherlv_14, grammarAccess.getGSSIfaceUartProtocolAccess().getRightCurlyBracketKeyword_14());
+		}
+		otherlv_15=';'
+		{
+			newLeafNode(otherlv_15, grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_15());
 		}
 	)
 ;
-finally {
-	myUnorderedGroupState.restore();
-}
 
 // Entry rule entryRuleGSSIfaceConstSize
-entryRuleGSSIfaceConstSize returns [EObject current=null]@init {
-	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSIfaceConstSizeAccess().getUnorderedGroup_2()
-	);
-}:
+entryRuleGSSIfaceConstSize returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getGSSIfaceConstSizeRule()); }
 	iv_ruleGSSIfaceConstSize=ruleGSSIfaceConstSize
 	{ $current=$iv_ruleGSSIfaceConstSize.current; }
 	EOF;
-finally {
-	myUnorderedGroupState.restore();
-}
 
 // Rule GSSIfaceConstSize
 ruleGSSIfaceConstSize returns [EObject current=null]
 @init {
 	enterRule();
-	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSIfaceConstSizeAccess().getUnorderedGroup_2()
-	);
 }
 @after {
 	leaveRule();
@@ -1399,140 +1108,90 @@ ruleGSSIfaceConstSize returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceConstSizeAccess().getLeftCurlyBracketKeyword_1());
 		}
+		otherlv_2='bytes'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceConstSizeAccess().getBytesKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceConstSizeAccess().getColonEqualsSignKeyword_3());
+		}
 		(
 			(
-				{ 
-				  getUnorderedGroupHelper().enter(grammarAccess.getGSSIfaceConstSizeAccess().getUnorderedGroup_2());
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceConstSizeAccess().getBytesINTEGERParserRuleCall_4_0());
 				}
-				(
-					(
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceConstSizeAccess().getUnorderedGroup_2(), 0)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceConstSizeAccess().getUnorderedGroup_2(), 0);
+				lv_bytes_4_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceConstSizeRule());
 					}
-								({true}?=>(otherlv_3='bytes'
-								{
-									newLeafNode(otherlv_3, grammarAccess.getGSSIfaceConstSizeAccess().getBytesKeyword_2_0_0());
-								}
-								otherlv_4=':='
-								{
-									newLeafNode(otherlv_4, grammarAccess.getGSSIfaceConstSizeAccess().getColonEqualsSignKeyword_2_0_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceConstSizeAccess().getBytesINTEGERParserRuleCall_2_0_2_0());
-										}
-										lv_bytes_5_0=ruleINTEGER
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceConstSizeRule());
-											}
-											set(
-												$current,
-												"bytes",
-												lv_bytes_5_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_6=';'
-								{
-									newLeafNode(otherlv_6, grammarAccess.getGSSIfaceConstSizeAccess().getSemicolonKeyword_2_0_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceConstSizeAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceConstSizeAccess().getUnorderedGroup_2(), 1)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceConstSizeAccess().getUnorderedGroup_2(), 1);
-					}
-								({true}?=>(otherlv_7='bits'
-								{
-									newLeafNode(otherlv_7, grammarAccess.getGSSIfaceConstSizeAccess().getBitsKeyword_2_1_0());
-								}
-								otherlv_8=':='
-								{
-									newLeafNode(otherlv_8, grammarAccess.getGSSIfaceConstSizeAccess().getColonEqualsSignKeyword_2_1_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceConstSizeAccess().getBitsINTEGERParserRuleCall_2_1_2_0());
-										}
-										lv_bits_9_0=ruleINTEGER
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceConstSizeRule());
-											}
-											set(
-												$current,
-												"bits",
-												lv_bits_9_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_10=';'
-								{
-									newLeafNode(otherlv_10, grammarAccess.getGSSIfaceConstSizeAccess().getSemicolonKeyword_2_1_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceConstSizeAccess().getUnorderedGroup_2());
-					}
-				)
-			)
-					)+
-					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSIfaceConstSizeAccess().getUnorderedGroup_2())}?
-				)
-			)
-				{ 
-				  getUnorderedGroupHelper().leave(grammarAccess.getGSSIfaceConstSizeAccess().getUnorderedGroup_2());
+					set(
+						$current,
+						"bytes",
+						lv_bytes_4_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+					afterParserOrEnumRuleCall();
 				}
+			)
 		)
-		otherlv_11='}'
+		otherlv_5=';'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getGSSIfaceConstSizeAccess().getRightCurlyBracketKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceConstSizeAccess().getSemicolonKeyword_5());
 		}
-		otherlv_12=';'
+		otherlv_6='bits'
 		{
-			newLeafNode(otherlv_12, grammarAccess.getGSSIfaceConstSizeAccess().getSemicolonKeyword_4());
+			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceConstSizeAccess().getBitsKeyword_6());
+		}
+		otherlv_7=':='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceConstSizeAccess().getColonEqualsSignKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceConstSizeAccess().getBitsINTEGERParserRuleCall_8_0());
+				}
+				lv_bits_8_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceConstSizeRule());
+					}
+					set(
+						$current,
+						"bits",
+						lv_bits_8_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9=';'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getGSSIfaceConstSizeAccess().getSemicolonKeyword_9());
+		}
+		otherlv_10='}'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getGSSIfaceConstSizeAccess().getRightCurlyBracketKeyword_10());
+		}
+		otherlv_11=';'
+		{
+			newLeafNode(otherlv_11, grammarAccess.getGSSIfaceConstSizeAccess().getSemicolonKeyword_11());
 		}
 	)
 ;
-finally {
-	myUnorderedGroupState.restore();
-}
 
 // Entry rule entryRuleGSSIfaceSizeFieldOffset
-entryRuleGSSIfaceSizeFieldOffset returns [EObject current=null]@init {
-	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getUnorderedGroup_2()
-	);
-}:
+entryRuleGSSIfaceSizeFieldOffset returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getGSSIfaceSizeFieldOffsetRule()); }
 	iv_ruleGSSIfaceSizeFieldOffset=ruleGSSIfaceSizeFieldOffset
 	{ $current=$iv_ruleGSSIfaceSizeFieldOffset.current; }
 	EOF;
-finally {
-	myUnorderedGroupState.restore();
-}
 
 // Rule GSSIfaceSizeFieldOffset
 ruleGSSIfaceSizeFieldOffset returns [EObject current=null]
 @init {
 	enterRule();
-	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getUnorderedGroup_2()
-	);
 }
 @after {
 	leaveRule();
@@ -1546,140 +1205,90 @@ ruleGSSIfaceSizeFieldOffset returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getLeftCurlyBracketKeyword_1());
 		}
+		otherlv_2='bytes'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBytesKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getColonEqualsSignKeyword_3());
+		}
 		(
 			(
-				{ 
-				  getUnorderedGroupHelper().enter(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getUnorderedGroup_2());
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBytesINTEGERParserRuleCall_4_0());
 				}
-				(
-					(
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getUnorderedGroup_2(), 0)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getUnorderedGroup_2(), 0);
+				lv_bytes_4_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceSizeFieldOffsetRule());
 					}
-								({true}?=>(otherlv_3='bytes'
-								{
-									newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBytesKeyword_2_0_0());
-								}
-								otherlv_4=':='
-								{
-									newLeafNode(otherlv_4, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getColonEqualsSignKeyword_2_0_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBytesINTEGERParserRuleCall_2_0_2_0());
-										}
-										lv_bytes_5_0=ruleINTEGER
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceSizeFieldOffsetRule());
-											}
-											set(
-												$current,
-												"bytes",
-												lv_bytes_5_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_6=';'
-								{
-									newLeafNode(otherlv_6, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSemicolonKeyword_2_0_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getUnorderedGroup_2(), 1)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getUnorderedGroup_2(), 1);
-					}
-								({true}?=>(otherlv_7='bits'
-								{
-									newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBitsKeyword_2_1_0());
-								}
-								otherlv_8=':='
-								{
-									newLeafNode(otherlv_8, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getColonEqualsSignKeyword_2_1_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBitsINTEGERParserRuleCall_2_1_2_0());
-										}
-										lv_bits_9_0=ruleINTEGER
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceSizeFieldOffsetRule());
-											}
-											set(
-												$current,
-												"bits",
-												lv_bits_9_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_10=';'
-								{
-									newLeafNode(otherlv_10, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSemicolonKeyword_2_1_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getUnorderedGroup_2());
-					}
-				)
-			)
-					)+
-					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getUnorderedGroup_2())}?
-				)
-			)
-				{ 
-				  getUnorderedGroupHelper().leave(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getUnorderedGroup_2());
+					set(
+						$current,
+						"bytes",
+						lv_bytes_4_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+					afterParserOrEnumRuleCall();
 				}
+			)
 		)
-		otherlv_11='}'
+		otherlv_5=';'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getRightCurlyBracketKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSemicolonKeyword_5());
 		}
-		otherlv_12=';'
+		otherlv_6='bits'
 		{
-			newLeafNode(otherlv_12, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSemicolonKeyword_4());
+			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBitsKeyword_6());
+		}
+		otherlv_7=':='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getColonEqualsSignKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBitsINTEGERParserRuleCall_8_0());
+				}
+				lv_bits_8_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceSizeFieldOffsetRule());
+					}
+					set(
+						$current,
+						"bits",
+						lv_bits_8_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9=';'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSemicolonKeyword_9());
+		}
+		otherlv_10='}'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getRightCurlyBracketKeyword_10());
+		}
+		otherlv_11=';'
+		{
+			newLeafNode(otherlv_11, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSemicolonKeyword_11());
 		}
 	)
 ;
-finally {
-	myUnorderedGroupState.restore();
-}
 
 // Entry rule entryRuleGSSIfaceSizeFieldTrim
-entryRuleGSSIfaceSizeFieldTrim returns [EObject current=null]@init {
-	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSIfaceSizeFieldTrimAccess().getUnorderedGroup_2()
-	);
-}:
+entryRuleGSSIfaceSizeFieldTrim returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getGSSIfaceSizeFieldTrimRule()); }
 	iv_ruleGSSIfaceSizeFieldTrim=ruleGSSIfaceSizeFieldTrim
 	{ $current=$iv_ruleGSSIfaceSizeFieldTrim.current; }
 	EOF;
-finally {
-	myUnorderedGroupState.restore();
-}
 
 // Rule GSSIfaceSizeFieldTrim
 ruleGSSIfaceSizeFieldTrim returns [EObject current=null]
 @init {
 	enterRule();
-	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSIfaceSizeFieldTrimAccess().getUnorderedGroup_2()
-	);
 }
 @after {
 	leaveRule();
@@ -1693,118 +1302,78 @@ ruleGSSIfaceSizeFieldTrim returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getLeftCurlyBracketKeyword_1());
 		}
+		otherlv_2='bytes'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBytesKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getColonEqualsSignKeyword_3());
+		}
 		(
 			(
-				{ 
-				  getUnorderedGroupHelper().enter(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getUnorderedGroup_2());
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBytesINTEGERParserRuleCall_4_0());
 				}
-				(
-					(
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getUnorderedGroup_2(), 0)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getUnorderedGroup_2(), 0);
+				lv_bytes_4_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceSizeFieldTrimRule());
 					}
-								({true}?=>(otherlv_3='bytes'
-								{
-									newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBytesKeyword_2_0_0());
-								}
-								otherlv_4=':='
-								{
-									newLeafNode(otherlv_4, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getColonEqualsSignKeyword_2_0_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBytesINTEGERParserRuleCall_2_0_2_0());
-										}
-										lv_bytes_5_0=ruleINTEGER
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceSizeFieldTrimRule());
-											}
-											set(
-												$current,
-												"bytes",
-												lv_bytes_5_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_6=';'
-								{
-									newLeafNode(otherlv_6, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSemicolonKeyword_2_0_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getUnorderedGroup_2());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getUnorderedGroup_2(), 1)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getUnorderedGroup_2(), 1);
-					}
-								({true}?=>(otherlv_7='bits'
-								{
-									newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBitsKeyword_2_1_0());
-								}
-								otherlv_8=':='
-								{
-									newLeafNode(otherlv_8, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getColonEqualsSignKeyword_2_1_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBitsINTEGERParserRuleCall_2_1_2_0());
-										}
-										lv_bits_9_0=ruleINTEGER
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSIfaceSizeFieldTrimRule());
-											}
-											set(
-												$current,
-												"bits",
-												lv_bits_9_0,
-												"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_10=';'
-								{
-									newLeafNode(otherlv_10, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSemicolonKeyword_2_1_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getUnorderedGroup_2());
-					}
-				)
-			)
-					)+
-					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getUnorderedGroup_2())}?
-				)
-			)
-				{ 
-				  getUnorderedGroupHelper().leave(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getUnorderedGroup_2());
+					set(
+						$current,
+						"bytes",
+						lv_bytes_4_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+					afterParserOrEnumRuleCall();
 				}
+			)
 		)
-		otherlv_11='}'
+		otherlv_5=';'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getRightCurlyBracketKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSemicolonKeyword_5());
 		}
-		otherlv_12=';'
+		otherlv_6='bits'
 		{
-			newLeafNode(otherlv_12, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSemicolonKeyword_4());
+			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBitsKeyword_6());
+		}
+		otherlv_7=':='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getColonEqualsSignKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBitsINTEGERParserRuleCall_8_0());
+				}
+				lv_bits_8_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceSizeFieldTrimRule());
+					}
+					set(
+						$current,
+						"bits",
+						lv_bits_8_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9=';'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSemicolonKeyword_9());
+		}
+		otherlv_10='}'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getRightCurlyBracketKeyword_10());
+		}
+		otherlv_11=';'
+		{
+			newLeafNode(otherlv_11, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSemicolonKeyword_11());
 		}
 	)
 ;
-finally {
-	myUnorderedGroupState.restore();
-}
 
 // Entry rule entryRuleGSSIfaceSyncPattern
 entryRuleGSSIfaceSyncPattern returns [EObject current=null]:
@@ -1830,45 +1399,43 @@ ruleGSSIfaceSyncPattern returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceSyncPatternAccess().getLeftCurlyBracketKeyword_1());
 		}
+		otherlv_2='hexValue'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSyncPatternAccess().getHexValueKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSyncPatternAccess().getColonEqualsSignKeyword_3());
+		}
 		(
-			otherlv_2='hexValue'
-			{
-				newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSyncPatternAccess().getHexValueKeyword_2_0());
-			}
-			otherlv_3=':='
-			{
-				newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSyncPatternAccess().getColonEqualsSignKeyword_2_1());
-			}
 			(
-				(
-					lv_hexValue_4_0=RULE_HEXADECIMAL
-					{
-						newLeafNode(lv_hexValue_4_0, grammarAccess.getGSSIfaceSyncPatternAccess().getHexValueHEXADECIMALTerminalRuleCall_2_2_0());
+				lv_hexValue_4_0=RULE_HEXADECIMAL
+				{
+					newLeafNode(lv_hexValue_4_0, grammarAccess.getGSSIfaceSyncPatternAccess().getHexValueHEXADECIMALTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getGSSIfaceSyncPatternRule());
 					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getGSSIfaceSyncPatternRule());
-						}
-						setWithLastConsumed(
-							$current,
-							"hexValue",
-							lv_hexValue_4_0,
-							"es.uah.aut.srg.gss.lang.iface.IFACE.HEXADECIMAL");
-					}
-				)
+					setWithLastConsumed(
+						$current,
+						"hexValue",
+						lv_hexValue_4_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.HEXADECIMAL");
+				}
 			)
-			otherlv_5=';'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getGSSIfaceSyncPatternAccess().getSemicolonKeyword_2_3());
-			}
 		)
+		otherlv_5=';'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceSyncPatternAccess().getSemicolonKeyword_5());
+		}
 		otherlv_6='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceSyncPatternAccess().getRightCurlyBracketKeyword_3());
+			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceSyncPatternAccess().getRightCurlyBracketKeyword_6());
 		}
 		otherlv_7=';'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSyncPatternAccess().getSemicolonKeyword_4());
+			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSyncPatternAccess().getSemicolonKeyword_7());
 		}
 	)
 ;
@@ -1897,46 +1464,44 @@ ruleGSSIfaceSpWTCPort returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceSpWTCPortAccess().getLeftCurlyBracketKeyword_1());
 		}
+		otherlv_2='spwPortRef'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSpWTCPortAccess().getSpwPortRefKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSpWTCPortAccess().getColonEqualsSignKeyword_3());
+		}
 		(
-			otherlv_2='spwPortRef'
-			{
-				newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSpWTCPortAccess().getSpwPortRefKeyword_2_0());
-			}
-			otherlv_3=':='
-			{
-				newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSpWTCPortAccess().getColonEqualsSignKeyword_2_1());
-			}
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSIfaceSpWTCPortAccess().getSpwPortRefINTEGERParserRuleCall_2_2_0());
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceSpWTCPortAccess().getSpwPortRefINTEGERParserRuleCall_4_0());
+				}
+				lv_spwPortRef_4_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceSpWTCPortRule());
 					}
-					lv_spwPortRef_4_0=ruleINTEGER
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSIfaceSpWTCPortRule());
-						}
-						set(
-							$current,
-							"spwPortRef",
-							lv_spwPortRef_4_0,
-							"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"spwPortRef",
+						lv_spwPortRef_4_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
 			)
-			otherlv_5=';'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getGSSIfaceSpWTCPortAccess().getSemicolonKeyword_2_3());
-			}
 		)
+		otherlv_5=';'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceSpWTCPortAccess().getSemicolonKeyword_5());
+		}
 		otherlv_6='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceSpWTCPortAccess().getRightCurlyBracketKeyword_3());
+			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceSpWTCPortAccess().getRightCurlyBracketKeyword_6());
 		}
 		otherlv_7=';'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSpWTCPortAccess().getSemicolonKeyword_4());
+			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSpWTCPortAccess().getSemicolonKeyword_7());
 		}
 	)
 ;

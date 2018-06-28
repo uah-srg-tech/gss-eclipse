@@ -19,9 +19,9 @@ GSSExportExport returns GSSExportExport:
 	name = ID
 	 '{'
 		(('uri' ':=' uri=QualifiedName ';')
-		& ('version' ':=' version=Version ';')
-		& ('from' ':=' from=ID ';')
-		& ('to' ':=' to=ID ';'))
+		& ('version' ':=' version=Version ';'))
+		'from' ':=' from=ID ';'
+		'to' ':=' to=ID ';'
 		(Sizes=GSSExportSizes)? 
 		settings=GSSExportSettings
 		(activateDICs=GSSExportActivateDICs)?
@@ -31,10 +31,9 @@ GSSExportExport returns GSSExportExport:
 GSSExportSizes returns GSSExportSizes:
 	{GSSExportSizes}
 	'GSSExportSizes' '{'
-		((sizeFromFileLength+=GSSExportSizeFromFileLength)*
-			| (sizeFromFileLine+=GSSExportSizeFromFileLine)*
-			| (sizeInBits+=GSSExportSizeInBits)*
-		)
+		((sizeFromFileLength+=GSSExportSizeFromFileLength) |
+			(sizeFromFileLine+=GSSExportSizeFromFileLine) |
+			(sizeInBits+=GSSExportSizeInBits))+
 	'}' ';'
 ;
 
@@ -133,7 +132,7 @@ GSSExportSettingAIFromFile returns GSSExportSettingAIFromFile:
 GSSExportActivateDICs returns GSSExportActivateDICs:
 	{GSSExportActivateDICs}
 	'GSSExportActivateDICs' '{'
-		(DIC+=GSSExportDIC)*
+		(DIC+=GSSExportDIC)+
 	'}' ';'
 ;
 
@@ -146,7 +145,6 @@ GSSExportDIC returns GSSExportDIC:
 
 EString returns ecore::EString:
 	STRING | ID;
-
 
 QualifiedName returns ecore::EString:
 	ID ('.' ID)*;

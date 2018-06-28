@@ -109,40 +109,40 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cVersionAssignment_3_1_2 = (Assignment)cGroup_3_1.eContents().get(2);
 		private final RuleCall cVersionVersionParserRuleCall_3_1_2_0 = (RuleCall)cVersionAssignment_3_1_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3_1_3 = (Keyword)cGroup_3_1.eContents().get(3);
-		private final Group cGroup_3_2 = (Group)cUnorderedGroup_3.eContents().get(2);
-		private final Keyword cFromKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_2_1 = (Keyword)cGroup_3_2.eContents().get(1);
-		private final Assignment cFromAssignment_3_2_2 = (Assignment)cGroup_3_2.eContents().get(2);
-		private final RuleCall cFromIDTerminalRuleCall_3_2_2_0 = (RuleCall)cFromAssignment_3_2_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_2_3 = (Keyword)cGroup_3_2.eContents().get(3);
-		private final Group cGroup_3_3 = (Group)cUnorderedGroup_3.eContents().get(3);
-		private final Keyword cToKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_3_1 = (Keyword)cGroup_3_3.eContents().get(1);
-		private final Assignment cToAssignment_3_3_2 = (Assignment)cGroup_3_3.eContents().get(2);
-		private final RuleCall cToIDTerminalRuleCall_3_3_2_0 = (RuleCall)cToAssignment_3_3_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_3_3 = (Keyword)cGroup_3_3.eContents().get(3);
-		private final Assignment cSizesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cSizesGSSExportSizesParserRuleCall_4_0 = (RuleCall)cSizesAssignment_4.eContents().get(0);
-		private final Assignment cSettingsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cSettingsGSSExportSettingsParserRuleCall_5_0 = (RuleCall)cSettingsAssignment_5.eContents().get(0);
-		private final Assignment cActivateDICsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cActivateDICsGSSExportActivateDICsParserRuleCall_6_0 = (RuleCall)cActivateDICsAssignment_6.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cFromKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cColonEqualsSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cFromAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cFromIDTerminalRuleCall_6_0 = (RuleCall)cFromAssignment_6.eContents().get(0);
+		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cToKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cColonEqualsSignKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cToAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cToIDTerminalRuleCall_10_0 = (RuleCall)cToAssignment_10.eContents().get(0);
+		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cSizesAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cSizesGSSExportSizesParserRuleCall_12_0 = (RuleCall)cSizesAssignment_12.eContents().get(0);
+		private final Assignment cSettingsAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final RuleCall cSettingsGSSExportSettingsParserRuleCall_13_0 = (RuleCall)cSettingsAssignment_13.eContents().get(0);
+		private final Assignment cActivateDICsAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cActivateDICsGSSExportActivateDICsParserRuleCall_14_0 = (RuleCall)cActivateDICsAssignment_14.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Keyword cSemicolonKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
 		//GSSExportExport:
 		//	'GSSExportExport'
 		//	name=ID
-		//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'from' ':=' from=ID ';' & 'to' ':='
-		//	to=ID ';') Sizes=GSSExportSizes?
+		//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';')
+		//	'from' ':=' from=ID ';'
+		//	'to' ':=' to=ID ';'
+		//	Sizes=GSSExportSizes?
 		//	settings=GSSExportSettings
 		//	activateDICs=GSSExportActivateDICs?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSExportExport' name=ID '{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'from' ':='
-		//from=ID ';' & 'to' ':=' to=ID ';') Sizes=GSSExportSizes? settings=GSSExportSettings
-		//activateDICs=GSSExportActivateDICs? '}' ';'
+		//'GSSExportExport' name=ID '{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') 'from' ':='
+		//from=ID ';' 'to' ':=' to=ID ';' Sizes=GSSExportSizes? settings=GSSExportSettings activateDICs=GSSExportActivateDICs?
+		//'}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSExportExport'
@@ -157,7 +157,7 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'from' ':=' from=ID ';' & 'to' ':=' to=ID ';')
+		//('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';')
 		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
 		
 		//'uri' ':=' uri=QualifiedName ';'
@@ -196,65 +196,59 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_3_1_3() { return cSemicolonKeyword_3_1_3; }
 		
-		//'from' ':=' from=ID ';'
-		public Group getGroup_3_2() { return cGroup_3_2; }
-		
 		//'from'
-		public Keyword getFromKeyword_3_2_0() { return cFromKeyword_3_2_0; }
+		public Keyword getFromKeyword_4() { return cFromKeyword_4; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_3_2_1() { return cColonEqualsSignKeyword_3_2_1; }
+		public Keyword getColonEqualsSignKeyword_5() { return cColonEqualsSignKeyword_5; }
 		
 		//from=ID
-		public Assignment getFromAssignment_3_2_2() { return cFromAssignment_3_2_2; }
+		public Assignment getFromAssignment_6() { return cFromAssignment_6; }
 		
 		//ID
-		public RuleCall getFromIDTerminalRuleCall_3_2_2_0() { return cFromIDTerminalRuleCall_3_2_2_0; }
+		public RuleCall getFromIDTerminalRuleCall_6_0() { return cFromIDTerminalRuleCall_6_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_3_2_3() { return cSemicolonKeyword_3_2_3; }
-		
-		//'to' ':=' to=ID ';'
-		public Group getGroup_3_3() { return cGroup_3_3; }
+		public Keyword getSemicolonKeyword_7() { return cSemicolonKeyword_7; }
 		
 		//'to'
-		public Keyword getToKeyword_3_3_0() { return cToKeyword_3_3_0; }
+		public Keyword getToKeyword_8() { return cToKeyword_8; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_3_3_1() { return cColonEqualsSignKeyword_3_3_1; }
+		public Keyword getColonEqualsSignKeyword_9() { return cColonEqualsSignKeyword_9; }
 		
 		//to=ID
-		public Assignment getToAssignment_3_3_2() { return cToAssignment_3_3_2; }
+		public Assignment getToAssignment_10() { return cToAssignment_10; }
 		
 		//ID
-		public RuleCall getToIDTerminalRuleCall_3_3_2_0() { return cToIDTerminalRuleCall_3_3_2_0; }
+		public RuleCall getToIDTerminalRuleCall_10_0() { return cToIDTerminalRuleCall_10_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_3_3_3() { return cSemicolonKeyword_3_3_3; }
+		public Keyword getSemicolonKeyword_11() { return cSemicolonKeyword_11; }
 		
 		//Sizes=GSSExportSizes?
-		public Assignment getSizesAssignment_4() { return cSizesAssignment_4; }
+		public Assignment getSizesAssignment_12() { return cSizesAssignment_12; }
 		
 		//GSSExportSizes
-		public RuleCall getSizesGSSExportSizesParserRuleCall_4_0() { return cSizesGSSExportSizesParserRuleCall_4_0; }
+		public RuleCall getSizesGSSExportSizesParserRuleCall_12_0() { return cSizesGSSExportSizesParserRuleCall_12_0; }
 		
 		//settings=GSSExportSettings
-		public Assignment getSettingsAssignment_5() { return cSettingsAssignment_5; }
+		public Assignment getSettingsAssignment_13() { return cSettingsAssignment_13; }
 		
 		//GSSExportSettings
-		public RuleCall getSettingsGSSExportSettingsParserRuleCall_5_0() { return cSettingsGSSExportSettingsParserRuleCall_5_0; }
+		public RuleCall getSettingsGSSExportSettingsParserRuleCall_13_0() { return cSettingsGSSExportSettingsParserRuleCall_13_0; }
 		
 		//activateDICs=GSSExportActivateDICs?
-		public Assignment getActivateDICsAssignment_6() { return cActivateDICsAssignment_6; }
+		public Assignment getActivateDICsAssignment_14() { return cActivateDICsAssignment_14; }
 		
 		//GSSExportActivateDICs
-		public RuleCall getActivateDICsGSSExportActivateDICsParserRuleCall_6_0() { return cActivateDICsGSSExportActivateDICsParserRuleCall_6_0; }
+		public RuleCall getActivateDICsGSSExportActivateDICsParserRuleCall_14_0() { return cActivateDICsGSSExportActivateDICsParserRuleCall_14_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_8() { return cSemicolonKeyword_8; }
+		public Keyword getSemicolonKeyword_16() { return cSemicolonKeyword_16; }
 	}
 	public class GSSExportSizesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSizes");
@@ -274,14 +268,13 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//GSSExportSizes:
 		//	{GSSExportSizes}
-		//	'GSSExportSizes' '{' (sizeFromFileLength+=GSSExportSizeFromFileLength*
-		//	| sizeFromFileLine+=GSSExportSizeFromFileLine*
-		//	| sizeInBits+=GSSExportSizeInBits*)
+		//	'GSSExportSizes' '{' (sizeFromFileLength+=GSSExportSizeFromFileLength | sizeFromFileLine+=GSSExportSizeFromFileLine |
+		//	sizeInBits+=GSSExportSizeInBits)+
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{GSSExportSizes} 'GSSExportSizes' '{' (sizeFromFileLength+=GSSExportSizeFromFileLength* |
-		//sizeFromFileLine+=GSSExportSizeFromFileLine* | sizeInBits+=GSSExportSizeInBits*) '}' ';'
+		//{GSSExportSizes} 'GSSExportSizes' '{' (sizeFromFileLength+=GSSExportSizeFromFileLength |
+		//sizeFromFileLine+=GSSExportSizeFromFileLine | sizeInBits+=GSSExportSizeInBits)+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//{GSSExportSizes}
@@ -293,23 +286,23 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//(sizeFromFileLength+=GSSExportSizeFromFileLength* | sizeFromFileLine+=GSSExportSizeFromFileLine* |
-		//sizeInBits+=GSSExportSizeInBits*)
+		//(sizeFromFileLength+=GSSExportSizeFromFileLength | sizeFromFileLine+=GSSExportSizeFromFileLine |
+		//sizeInBits+=GSSExportSizeInBits)+
 		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 		
-		//sizeFromFileLength+=GSSExportSizeFromFileLength*
+		//sizeFromFileLength+=GSSExportSizeFromFileLength
 		public Assignment getSizeFromFileLengthAssignment_3_0() { return cSizeFromFileLengthAssignment_3_0; }
 		
 		//GSSExportSizeFromFileLength
 		public RuleCall getSizeFromFileLengthGSSExportSizeFromFileLengthParserRuleCall_3_0_0() { return cSizeFromFileLengthGSSExportSizeFromFileLengthParserRuleCall_3_0_0; }
 		
-		//sizeFromFileLine+=GSSExportSizeFromFileLine*
+		//sizeFromFileLine+=GSSExportSizeFromFileLine
 		public Assignment getSizeFromFileLineAssignment_3_1() { return cSizeFromFileLineAssignment_3_1; }
 		
 		//GSSExportSizeFromFileLine
 		public RuleCall getSizeFromFileLineGSSExportSizeFromFileLineParserRuleCall_3_1_0() { return cSizeFromFileLineGSSExportSizeFromFileLineParserRuleCall_3_1_0; }
 		
-		//sizeInBits+=GSSExportSizeInBits*
+		//sizeInBits+=GSSExportSizeInBits
 		public Assignment getSizeInBitsAssignment_3_2() { return cSizeInBitsAssignment_3_2; }
 		
 		//GSSExportSizeInBits
@@ -1395,11 +1388,11 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSExportActivateDICs:
 		//	{GSSExportActivateDICs}
 		//	'GSSExportActivateDICs' '{'
-		//	DIC+=GSSExportDIC*
+		//	DIC+=GSSExportDIC+
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{GSSExportActivateDICs} 'GSSExportActivateDICs' '{' DIC+=GSSExportDIC* '}' ';'
+		//{GSSExportActivateDICs} 'GSSExportActivateDICs' '{' DIC+=GSSExportDIC+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//{GSSExportActivateDICs}
@@ -1411,7 +1404,7 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//DIC+=GSSExportDIC*
+		//DIC+=GSSExportDIC+
 		public Assignment getDICAssignment_3() { return cDICAssignment_3; }
 		
 		//GSSExportDIC
@@ -1852,8 +1845,10 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSExportExport:
 	//	'GSSExportExport'
 	//	name=ID
-	//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'from' ':=' from=ID ';' & 'to' ':='
-	//	to=ID ';') Sizes=GSSExportSizes?
+	//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';')
+	//	'from' ':=' from=ID ';'
+	//	'to' ':=' to=ID ';'
+	//	Sizes=GSSExportSizes?
 	//	settings=GSSExportSettings
 	//	activateDICs=GSSExportActivateDICs?
 	//	'}' ';';
@@ -1867,9 +1862,8 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSExportSizes:
 	//	{GSSExportSizes}
-	//	'GSSExportSizes' '{' (sizeFromFileLength+=GSSExportSizeFromFileLength*
-	//	| sizeFromFileLine+=GSSExportSizeFromFileLine*
-	//	| sizeInBits+=GSSExportSizeInBits*)
+	//	'GSSExportSizes' '{' (sizeFromFileLength+=GSSExportSizeFromFileLength | sizeFromFileLine+=GSSExportSizeFromFileLine |
+	//	sizeInBits+=GSSExportSizeInBits)+
 	//	'}' ';';
 	public GSSExportSizesElements getGSSExportSizesAccess() {
 		return pGSSExportSizes;
@@ -2027,7 +2021,7 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSExportActivateDICs:
 	//	{GSSExportActivateDICs}
 	//	'GSSExportActivateDICs' '{'
-	//	DIC+=GSSExportDIC*
+	//	DIC+=GSSExportDIC+
 	//	'}' ';';
 	public GSSExportActivateDICsElements getGSSExportActivateDICsAccess() {
 		return pGSSExportActivateDICs;

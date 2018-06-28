@@ -479,7 +479,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportExport"
-    // InternalEXPORT.g:195:1: ruleGSSExportExport returns [EObject current=null] : (otherlv_0= 'GSSExportExport' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_Sizes_20_0= ruleGSSExportSizes ) )? ( (lv_settings_21_0= ruleGSSExportSettings ) ) ( (lv_activateDICs_22_0= ruleGSSExportActivateDICs ) )? otherlv_23= '}' otherlv_24= ';' ) ;
+    // InternalEXPORT.g:195:1: ruleGSSExportExport returns [EObject current=null] : (otherlv_0= 'GSSExportExport' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ( (lv_Sizes_20_0= ruleGSSExportSizes ) )? ( (lv_settings_21_0= ruleGSSExportSettings ) ) ( (lv_activateDICs_22_0= ruleGSSExportActivateDICs ) )? otherlv_23= '}' otherlv_24= ';' ) ;
     public final EObject ruleGSSExportExport() throws RecognitionException {
         EObject current = null;
 
@@ -520,11 +520,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	);
 
         try {
-            // InternalEXPORT.g:204:2: ( (otherlv_0= 'GSSExportExport' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_Sizes_20_0= ruleGSSExportSizes ) )? ( (lv_settings_21_0= ruleGSSExportSettings ) ) ( (lv_activateDICs_22_0= ruleGSSExportActivateDICs ) )? otherlv_23= '}' otherlv_24= ';' ) )
-            // InternalEXPORT.g:205:2: (otherlv_0= 'GSSExportExport' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_Sizes_20_0= ruleGSSExportSizes ) )? ( (lv_settings_21_0= ruleGSSExportSettings ) ) ( (lv_activateDICs_22_0= ruleGSSExportActivateDICs ) )? otherlv_23= '}' otherlv_24= ';' )
+            // InternalEXPORT.g:204:2: ( (otherlv_0= 'GSSExportExport' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ( (lv_Sizes_20_0= ruleGSSExportSizes ) )? ( (lv_settings_21_0= ruleGSSExportSettings ) ) ( (lv_activateDICs_22_0= ruleGSSExportActivateDICs ) )? otherlv_23= '}' otherlv_24= ';' ) )
+            // InternalEXPORT.g:205:2: (otherlv_0= 'GSSExportExport' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ( (lv_Sizes_20_0= ruleGSSExportSizes ) )? ( (lv_settings_21_0= ruleGSSExportSettings ) ) ( (lv_activateDICs_22_0= ruleGSSExportActivateDICs ) )? otherlv_23= '}' otherlv_24= ';' )
             {
-            // InternalEXPORT.g:205:2: (otherlv_0= 'GSSExportExport' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_Sizes_20_0= ruleGSSExportSizes ) )? ( (lv_settings_21_0= ruleGSSExportSettings ) ) ( (lv_activateDICs_22_0= ruleGSSExportActivateDICs ) )? otherlv_23= '}' otherlv_24= ';' )
-            // InternalEXPORT.g:206:3: otherlv_0= 'GSSExportExport' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_Sizes_20_0= ruleGSSExportSizes ) )? ( (lv_settings_21_0= ruleGSSExportSettings ) ) ( (lv_activateDICs_22_0= ruleGSSExportActivateDICs ) )? otherlv_23= '}' otherlv_24= ';'
+            // InternalEXPORT.g:205:2: (otherlv_0= 'GSSExportExport' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ( (lv_Sizes_20_0= ruleGSSExportSizes ) )? ( (lv_settings_21_0= ruleGSSExportSettings ) ) ( (lv_activateDICs_22_0= ruleGSSExportActivateDICs ) )? otherlv_23= '}' otherlv_24= ';' )
+            // InternalEXPORT.g:206:3: otherlv_0= 'GSSExportExport' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ( (lv_Sizes_20_0= ruleGSSExportSizes ) )? ( (lv_settings_21_0= ruleGSSExportSettings ) ) ( (lv_activateDICs_22_0= ruleGSSExportActivateDICs ) )? otherlv_23= '}' otherlv_24= ';'
             {
             otherlv_0=(Token)match(input,14,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -568,21 +568,21 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSExportExportAccess().getLeftCurlyBracketKeyword_2());
               		
             }
-            // InternalEXPORT.g:232:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) ) )+ {...}?) ) )
-            // InternalEXPORT.g:233:4: ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) ) )+ {...}?) )
+            // InternalEXPORT.g:232:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) )
+            // InternalEXPORT.g:233:4: ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) )
             {
-            // InternalEXPORT.g:233:4: ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) ) )+ {...}?) )
-            // InternalEXPORT.g:234:5: ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) ) )+ {...}?)
+            // InternalEXPORT.g:233:4: ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) )
+            // InternalEXPORT.g:234:5: ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?)
             {
             getUnorderedGroupHelper().enter(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3());
-            // InternalEXPORT.g:237:5: ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) ) )+ {...}?)
-            // InternalEXPORT.g:238:6: ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) ) )+ {...}?
+            // InternalEXPORT.g:237:5: ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?)
+            // InternalEXPORT.g:238:6: ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?
             {
-            // InternalEXPORT.g:238:6: ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) ) )+
+            // InternalEXPORT.g:238:6: ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+
             int cnt2=0;
             loop2:
             do {
-                int alt2=5;
+                int alt2=3;
                 int LA2_0 = input.LA(1);
 
                 if ( LA2_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 0) ) {
@@ -590,12 +590,6 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                 }
                 else if ( LA2_0 == 18 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 1) ) {
                     alt2=2;
-                }
-                else if ( LA2_0 == 19 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 2) ) {
-                    alt2=3;
-                }
-                else if ( LA2_0 == 20 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 3) ) {
-                    alt2=4;
                 }
 
 
@@ -786,182 +780,6 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             	    }
             	    break;
-            	case 3 :
-            	    // InternalEXPORT.g:323:4: ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) )
-            	    {
-            	    // InternalEXPORT.g:323:4: ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) )
-            	    // InternalEXPORT.g:324:5: {...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) )
-            	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 2) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleGSSExportExport", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 2)");
-            	    }
-            	    // InternalEXPORT.g:324:112: ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) )
-            	    // InternalEXPORT.g:325:6: ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) )
-            	    {
-            	    getUnorderedGroupHelper().select(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 2);
-            	    // InternalEXPORT.g:328:9: ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) )
-            	    // InternalEXPORT.g:328:10: {...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' )
-            	    {
-            	    if ( !((true)) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleGSSExportExport", "true");
-            	    }
-            	    // InternalEXPORT.g:328:19: (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' )
-            	    // InternalEXPORT.g:328:20: otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';'
-            	    {
-            	    otherlv_12=(Token)match(input,19,FollowSets000.FOLLOW_8); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_12, grammarAccess.getGSSExportExportAccess().getFromKeyword_3_2_0());
-            	      								
-            	    }
-            	    otherlv_13=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_13, grammarAccess.getGSSExportExportAccess().getColonEqualsSignKeyword_3_2_1());
-            	      								
-            	    }
-            	    // InternalEXPORT.g:336:9: ( (lv_from_14_0= RULE_ID ) )
-            	    // InternalEXPORT.g:337:10: (lv_from_14_0= RULE_ID )
-            	    {
-            	    // InternalEXPORT.g:337:10: (lv_from_14_0= RULE_ID )
-            	    // InternalEXPORT.g:338:11: lv_from_14_0= RULE_ID
-            	    {
-            	    lv_from_14_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      											newLeafNode(lv_from_14_0, grammarAccess.getGSSExportExportAccess().getFromIDTerminalRuleCall_3_2_2_0());
-            	      										
-            	    }
-            	    if ( state.backtracking==0 ) {
-
-            	      											if (current==null) {
-            	      												current = createModelElement(grammarAccess.getGSSExportExportRule());
-            	      											}
-            	      											setWithLastConsumed(
-            	      												current,
-            	      												"from",
-            	      												lv_from_14_0,
-            	      												"org.eclipse.xtext.common.Terminals.ID");
-            	      										
-            	    }
-
-            	    }
-
-
-            	    }
-
-            	    otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_9); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_15, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_3_2_3());
-            	      								
-            	    }
-
-            	    }
-
-
-            	    }
-
-            	    getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3());
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 4 :
-            	    // InternalEXPORT.g:364:4: ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) )
-            	    {
-            	    // InternalEXPORT.g:364:4: ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) )
-            	    // InternalEXPORT.g:365:5: {...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) )
-            	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 3) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleGSSExportExport", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 3)");
-            	    }
-            	    // InternalEXPORT.g:365:112: ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) )
-            	    // InternalEXPORT.g:366:6: ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) )
-            	    {
-            	    getUnorderedGroupHelper().select(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 3);
-            	    // InternalEXPORT.g:369:9: ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) )
-            	    // InternalEXPORT.g:369:10: {...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' )
-            	    {
-            	    if ( !((true)) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleGSSExportExport", "true");
-            	    }
-            	    // InternalEXPORT.g:369:19: (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' )
-            	    // InternalEXPORT.g:369:20: otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';'
-            	    {
-            	    otherlv_16=(Token)match(input,20,FollowSets000.FOLLOW_8); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_16, grammarAccess.getGSSExportExportAccess().getToKeyword_3_3_0());
-            	      								
-            	    }
-            	    otherlv_17=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_17, grammarAccess.getGSSExportExportAccess().getColonEqualsSignKeyword_3_3_1());
-            	      								
-            	    }
-            	    // InternalEXPORT.g:377:9: ( (lv_to_18_0= RULE_ID ) )
-            	    // InternalEXPORT.g:378:10: (lv_to_18_0= RULE_ID )
-            	    {
-            	    // InternalEXPORT.g:378:10: (lv_to_18_0= RULE_ID )
-            	    // InternalEXPORT.g:379:11: lv_to_18_0= RULE_ID
-            	    {
-            	    lv_to_18_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      											newLeafNode(lv_to_18_0, grammarAccess.getGSSExportExportAccess().getToIDTerminalRuleCall_3_3_2_0());
-            	      										
-            	    }
-            	    if ( state.backtracking==0 ) {
-
-            	      											if (current==null) {
-            	      												current = createModelElement(grammarAccess.getGSSExportExportRule());
-            	      											}
-            	      											setWithLastConsumed(
-            	      												current,
-            	      												"to",
-            	      												lv_to_18_0,
-            	      												"org.eclipse.xtext.common.Terminals.ID");
-            	      										
-            	    }
-
-            	    }
-
-
-            	    }
-
-            	    otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_9); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_19, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_3_3_3());
-            	      								
-            	    }
-
-            	    }
-
-
-            	    }
-
-            	    getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3());
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
 
             	default :
             	    if ( cnt2 >= 1 ) break loop2;
@@ -987,7 +805,103 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalEXPORT.g:413:3: ( (lv_Sizes_20_0= ruleGSSExportSizes ) )?
+            otherlv_12=(Token)match(input,19,FollowSets000.FOLLOW_8); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_12, grammarAccess.getGSSExportExportAccess().getFromKeyword_4());
+              		
+            }
+            otherlv_13=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_13, grammarAccess.getGSSExportExportAccess().getColonEqualsSignKeyword_5());
+              		
+            }
+            // InternalEXPORT.g:339:3: ( (lv_from_14_0= RULE_ID ) )
+            // InternalEXPORT.g:340:4: (lv_from_14_0= RULE_ID )
+            {
+            // InternalEXPORT.g:340:4: (lv_from_14_0= RULE_ID )
+            // InternalEXPORT.g:341:5: lv_from_14_0= RULE_ID
+            {
+            lv_from_14_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					newLeafNode(lv_from_14_0, grammarAccess.getGSSExportExportAccess().getFromIDTerminalRuleCall_6_0());
+              				
+            }
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElement(grammarAccess.getGSSExportExportRule());
+              					}
+              					setWithLastConsumed(
+              						current,
+              						"from",
+              						lv_from_14_0,
+              						"org.eclipse.xtext.common.Terminals.ID");
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_15, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_7());
+              		
+            }
+            otherlv_16=(Token)match(input,20,FollowSets000.FOLLOW_8); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_16, grammarAccess.getGSSExportExportAccess().getToKeyword_8());
+              		
+            }
+            otherlv_17=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_17, grammarAccess.getGSSExportExportAccess().getColonEqualsSignKeyword_9());
+              		
+            }
+            // InternalEXPORT.g:369:3: ( (lv_to_18_0= RULE_ID ) )
+            // InternalEXPORT.g:370:4: (lv_to_18_0= RULE_ID )
+            {
+            // InternalEXPORT.g:370:4: (lv_to_18_0= RULE_ID )
+            // InternalEXPORT.g:371:5: lv_to_18_0= RULE_ID
+            {
+            lv_to_18_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					newLeafNode(lv_to_18_0, grammarAccess.getGSSExportExportAccess().getToIDTerminalRuleCall_10_0());
+              				
+            }
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElement(grammarAccess.getGSSExportExportRule());
+              					}
+              					setWithLastConsumed(
+              						current,
+              						"to",
+              						lv_to_18_0,
+              						"org.eclipse.xtext.common.Terminals.ID");
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_12); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_19, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_11());
+              		
+            }
+            // InternalEXPORT.g:391:3: ( (lv_Sizes_20_0= ruleGSSExportSizes ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -996,17 +910,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             }
             switch (alt3) {
                 case 1 :
-                    // InternalEXPORT.g:414:4: (lv_Sizes_20_0= ruleGSSExportSizes )
+                    // InternalEXPORT.g:392:4: (lv_Sizes_20_0= ruleGSSExportSizes )
                     {
-                    // InternalEXPORT.g:414:4: (lv_Sizes_20_0= ruleGSSExportSizes )
-                    // InternalEXPORT.g:415:5: lv_Sizes_20_0= ruleGSSExportSizes
+                    // InternalEXPORT.g:392:4: (lv_Sizes_20_0= ruleGSSExportSizes )
+                    // InternalEXPORT.g:393:5: lv_Sizes_20_0= ruleGSSExportSizes
                     {
                     if ( state.backtracking==0 ) {
 
-                      					newCompositeNode(grammarAccess.getGSSExportExportAccess().getSizesGSSExportSizesParserRuleCall_4_0());
+                      					newCompositeNode(grammarAccess.getGSSExportExportAccess().getSizesGSSExportSizesParserRuleCall_12_0());
                       				
                     }
-                    pushFollow(FollowSets000.FOLLOW_11);
+                    pushFollow(FollowSets000.FOLLOW_12);
                     lv_Sizes_20_0=ruleGSSExportSizes();
 
                     state._fsp--;
@@ -1033,18 +947,18 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalEXPORT.g:432:3: ( (lv_settings_21_0= ruleGSSExportSettings ) )
-            // InternalEXPORT.g:433:4: (lv_settings_21_0= ruleGSSExportSettings )
+            // InternalEXPORT.g:410:3: ( (lv_settings_21_0= ruleGSSExportSettings ) )
+            // InternalEXPORT.g:411:4: (lv_settings_21_0= ruleGSSExportSettings )
             {
-            // InternalEXPORT.g:433:4: (lv_settings_21_0= ruleGSSExportSettings )
-            // InternalEXPORT.g:434:5: lv_settings_21_0= ruleGSSExportSettings
+            // InternalEXPORT.g:411:4: (lv_settings_21_0= ruleGSSExportSettings )
+            // InternalEXPORT.g:412:5: lv_settings_21_0= ruleGSSExportSettings
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSExportExportAccess().getSettingsGSSExportSettingsParserRuleCall_5_0());
+              					newCompositeNode(grammarAccess.getGSSExportExportAccess().getSettingsGSSExportSettingsParserRuleCall_13_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_12);
+            pushFollow(FollowSets000.FOLLOW_13);
             lv_settings_21_0=ruleGSSExportSettings();
 
             state._fsp--;
@@ -1068,7 +982,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalEXPORT.g:451:3: ( (lv_activateDICs_22_0= ruleGSSExportActivateDICs ) )?
+            // InternalEXPORT.g:429:3: ( (lv_activateDICs_22_0= ruleGSSExportActivateDICs ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1077,17 +991,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             }
             switch (alt4) {
                 case 1 :
-                    // InternalEXPORT.g:452:4: (lv_activateDICs_22_0= ruleGSSExportActivateDICs )
+                    // InternalEXPORT.g:430:4: (lv_activateDICs_22_0= ruleGSSExportActivateDICs )
                     {
-                    // InternalEXPORT.g:452:4: (lv_activateDICs_22_0= ruleGSSExportActivateDICs )
-                    // InternalEXPORT.g:453:5: lv_activateDICs_22_0= ruleGSSExportActivateDICs
+                    // InternalEXPORT.g:430:4: (lv_activateDICs_22_0= ruleGSSExportActivateDICs )
+                    // InternalEXPORT.g:431:5: lv_activateDICs_22_0= ruleGSSExportActivateDICs
                     {
                     if ( state.backtracking==0 ) {
 
-                      					newCompositeNode(grammarAccess.getGSSExportExportAccess().getActivateDICsGSSExportActivateDICsParserRuleCall_6_0());
+                      					newCompositeNode(grammarAccess.getGSSExportExportAccess().getActivateDICsGSSExportActivateDICsParserRuleCall_14_0());
                       				
                     }
-                    pushFollow(FollowSets000.FOLLOW_13);
+                    pushFollow(FollowSets000.FOLLOW_14);
                     lv_activateDICs_22_0=ruleGSSExportActivateDICs();
 
                     state._fsp--;
@@ -1117,13 +1031,13 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             otherlv_23=(Token)match(input,21,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_23, grammarAccess.getGSSExportExportAccess().getRightCurlyBracketKeyword_7());
+              			newLeafNode(otherlv_23, grammarAccess.getGSSExportExportAccess().getRightCurlyBracketKeyword_15());
               		
             }
             otherlv_24=(Token)match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_24, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_8());
+              			newLeafNode(otherlv_24, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_16());
               		
             }
 
@@ -1154,7 +1068,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSExportSizes"
-    // InternalEXPORT.g:485:1: entryRuleGSSExportSizes returns [EObject current=null] : iv_ruleGSSExportSizes= ruleGSSExportSizes EOF ;
+    // InternalEXPORT.g:463:1: entryRuleGSSExportSizes returns [EObject current=null] : iv_ruleGSSExportSizes= ruleGSSExportSizes EOF ;
     public final EObject entryRuleGSSExportSizes() throws RecognitionException {
         EObject current = null;
 
@@ -1162,8 +1076,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:485:55: (iv_ruleGSSExportSizes= ruleGSSExportSizes EOF )
-            // InternalEXPORT.g:486:2: iv_ruleGSSExportSizes= ruleGSSExportSizes EOF
+            // InternalEXPORT.g:463:55: (iv_ruleGSSExportSizes= ruleGSSExportSizes EOF )
+            // InternalEXPORT.g:464:2: iv_ruleGSSExportSizes= ruleGSSExportSizes EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSExportSizesRule()); 
@@ -1194,7 +1108,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportSizes"
-    // InternalEXPORT.g:492:1: ruleGSSExportSizes returns [EObject current=null] : ( () otherlv_1= 'GSSExportSizes' otherlv_2= '{' ( ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) )* | ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) )* | ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) )* ) otherlv_6= '}' otherlv_7= ';' ) ;
+    // InternalEXPORT.g:470:1: ruleGSSExportSizes returns [EObject current=null] : ( () otherlv_1= 'GSSExportSizes' otherlv_2= '{' ( ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) ) | ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) ) | ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) ) )+ otherlv_6= '}' otherlv_7= ';' ) ;
     public final EObject ruleGSSExportSizes() throws RecognitionException {
         EObject current = null;
 
@@ -1213,14 +1127,14 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:498:2: ( ( () otherlv_1= 'GSSExportSizes' otherlv_2= '{' ( ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) )* | ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) )* | ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) )* ) otherlv_6= '}' otherlv_7= ';' ) )
-            // InternalEXPORT.g:499:2: ( () otherlv_1= 'GSSExportSizes' otherlv_2= '{' ( ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) )* | ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) )* | ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) )* ) otherlv_6= '}' otherlv_7= ';' )
+            // InternalEXPORT.g:476:2: ( ( () otherlv_1= 'GSSExportSizes' otherlv_2= '{' ( ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) ) | ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) ) | ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) ) )+ otherlv_6= '}' otherlv_7= ';' ) )
+            // InternalEXPORT.g:477:2: ( () otherlv_1= 'GSSExportSizes' otherlv_2= '{' ( ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) ) | ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) ) | ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) ) )+ otherlv_6= '}' otherlv_7= ';' )
             {
-            // InternalEXPORT.g:499:2: ( () otherlv_1= 'GSSExportSizes' otherlv_2= '{' ( ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) )* | ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) )* | ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) )* ) otherlv_6= '}' otherlv_7= ';' )
-            // InternalEXPORT.g:500:3: () otherlv_1= 'GSSExportSizes' otherlv_2= '{' ( ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) )* | ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) )* | ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) )* ) otherlv_6= '}' otherlv_7= ';'
+            // InternalEXPORT.g:477:2: ( () otherlv_1= 'GSSExportSizes' otherlv_2= '{' ( ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) ) | ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) ) | ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) ) )+ otherlv_6= '}' otherlv_7= ';' )
+            // InternalEXPORT.g:478:3: () otherlv_1= 'GSSExportSizes' otherlv_2= '{' ( ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) ) | ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) ) | ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) ) )+ otherlv_6= '}' otherlv_7= ';'
             {
-            // InternalEXPORT.g:500:3: ()
-            // InternalEXPORT.g:501:4: 
+            // InternalEXPORT.g:478:3: ()
+            // InternalEXPORT.g:479:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -1243,240 +1157,170 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getGSSExportSizesAccess().getGSSExportSizesKeyword_1());
               		
             }
-            otherlv_2=(Token)match(input,15,FollowSets000.FOLLOW_14); if (state.failed) return current;
+            otherlv_2=(Token)match(input,15,FollowSets000.FOLLOW_15); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getGSSExportSizesAccess().getLeftCurlyBracketKeyword_2());
               		
             }
-            // InternalEXPORT.g:518:3: ( ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) )* | ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) )* | ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) )* )
-            int alt8=3;
-            switch ( input.LA(1) ) {
-            case 23:
-                {
-                alt8=1;
-                }
-                break;
-            case 21:
-                {
-                int LA8_2 = input.LA(2);
-
-                if ( (synpred9_InternalEXPORT()) ) {
-                    alt8=1;
-                }
-                else if ( (synpred11_InternalEXPORT()) ) {
-                    alt8=2;
-                }
-                else if ( (true) ) {
-                    alt8=3;
-                }
-                else {
-                    if (state.backtracking>0) {state.failed=true; return current;}
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 8, 2, input);
-
-                    throw nvae;
-                }
-                }
-                break;
-            case 28:
-                {
-                alt8=2;
-                }
-                break;
-            case 30:
-                {
-                alt8=3;
-                }
-                break;
-            default:
-                if (state.backtracking>0) {state.failed=true; return current;}
-                NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
-
-                throw nvae;
-            }
-
-            switch (alt8) {
-                case 1 :
-                    // InternalEXPORT.g:519:4: ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) )*
+            // InternalEXPORT.g:496:3: ( ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) ) | ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) ) | ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) ) )+
+            int cnt5=0;
+            loop5:
+            do {
+                int alt5=4;
+                switch ( input.LA(1) ) {
+                case 23:
                     {
-                    // InternalEXPORT.g:519:4: ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) )*
-                    loop5:
-                    do {
-                        int alt5=2;
-                        int LA5_0 = input.LA(1);
-
-                        if ( (LA5_0==23) ) {
-                            alt5=1;
-                        }
-
-
-                        switch (alt5) {
-                    	case 1 :
-                    	    // InternalEXPORT.g:520:5: (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength )
-                    	    {
-                    	    // InternalEXPORT.g:520:5: (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength )
-                    	    // InternalEXPORT.g:521:6: lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength
-                    	    {
-                    	    if ( state.backtracking==0 ) {
-
-                    	      						newCompositeNode(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLengthGSSExportSizeFromFileLengthParserRuleCall_3_0_0());
-                    	      					
-                    	    }
-                    	    pushFollow(FollowSets000.FOLLOW_15);
-                    	    lv_sizeFromFileLength_3_0=ruleGSSExportSizeFromFileLength();
-
-                    	    state._fsp--;
-                    	    if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
-
-                    	      						if (current==null) {
-                    	      							current = createModelElementForParent(grammarAccess.getGSSExportSizesRule());
-                    	      						}
-                    	      						add(
-                    	      							current,
-                    	      							"sizeFromFileLength",
-                    	      							lv_sizeFromFileLength_3_0,
-                    	      							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSizeFromFileLength");
-                    	      						afterParserOrEnumRuleCall();
-                    	      					
-                    	    }
-
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop5;
-                        }
-                    } while (true);
-
-
+                    alt5=1;
                     }
                     break;
-                case 2 :
-                    // InternalEXPORT.g:539:4: ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) )*
+                case 28:
                     {
-                    // InternalEXPORT.g:539:4: ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) )*
-                    loop6:
-                    do {
-                        int alt6=2;
-                        int LA6_0 = input.LA(1);
-
-                        if ( (LA6_0==28) ) {
-                            alt6=1;
-                        }
-
-
-                        switch (alt6) {
-                    	case 1 :
-                    	    // InternalEXPORT.g:540:5: (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine )
-                    	    {
-                    	    // InternalEXPORT.g:540:5: (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine )
-                    	    // InternalEXPORT.g:541:6: lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine
-                    	    {
-                    	    if ( state.backtracking==0 ) {
-
-                    	      						newCompositeNode(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLineGSSExportSizeFromFileLineParserRuleCall_3_1_0());
-                    	      					
-                    	    }
-                    	    pushFollow(FollowSets000.FOLLOW_16);
-                    	    lv_sizeFromFileLine_4_0=ruleGSSExportSizeFromFileLine();
-
-                    	    state._fsp--;
-                    	    if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
-
-                    	      						if (current==null) {
-                    	      							current = createModelElementForParent(grammarAccess.getGSSExportSizesRule());
-                    	      						}
-                    	      						add(
-                    	      							current,
-                    	      							"sizeFromFileLine",
-                    	      							lv_sizeFromFileLine_4_0,
-                    	      							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSizeFromFileLine");
-                    	      						afterParserOrEnumRuleCall();
-                    	      					
-                    	    }
-
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop6;
-                        }
-                    } while (true);
-
-
+                    alt5=2;
                     }
                     break;
-                case 3 :
-                    // InternalEXPORT.g:559:4: ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) )*
+                case 30:
                     {
-                    // InternalEXPORT.g:559:4: ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) )*
-                    loop7:
-                    do {
-                        int alt7=2;
-                        int LA7_0 = input.LA(1);
-
-                        if ( (LA7_0==30) ) {
-                            alt7=1;
-                        }
-
-
-                        switch (alt7) {
-                    	case 1 :
-                    	    // InternalEXPORT.g:560:5: (lv_sizeInBits_5_0= ruleGSSExportSizeInBits )
-                    	    {
-                    	    // InternalEXPORT.g:560:5: (lv_sizeInBits_5_0= ruleGSSExportSizeInBits )
-                    	    // InternalEXPORT.g:561:6: lv_sizeInBits_5_0= ruleGSSExportSizeInBits
-                    	    {
-                    	    if ( state.backtracking==0 ) {
-
-                    	      						newCompositeNode(grammarAccess.getGSSExportSizesAccess().getSizeInBitsGSSExportSizeInBitsParserRuleCall_3_2_0());
-                    	      					
-                    	    }
-                    	    pushFollow(FollowSets000.FOLLOW_17);
-                    	    lv_sizeInBits_5_0=ruleGSSExportSizeInBits();
-
-                    	    state._fsp--;
-                    	    if (state.failed) return current;
-                    	    if ( state.backtracking==0 ) {
-
-                    	      						if (current==null) {
-                    	      							current = createModelElementForParent(grammarAccess.getGSSExportSizesRule());
-                    	      						}
-                    	      						add(
-                    	      							current,
-                    	      							"sizeInBits",
-                    	      							lv_sizeInBits_5_0,
-                    	      							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSizeInBits");
-                    	      						afterParserOrEnumRuleCall();
-                    	      					
-                    	    }
-
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop7;
-                        }
-                    } while (true);
-
-
+                    alt5=3;
                     }
                     break;
 
-            }
+                }
+
+                switch (alt5) {
+            	case 1 :
+            	    // InternalEXPORT.g:497:4: ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) )
+            	    {
+            	    // InternalEXPORT.g:497:4: ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) )
+            	    // InternalEXPORT.g:498:5: (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength )
+            	    {
+            	    // InternalEXPORT.g:498:5: (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength )
+            	    // InternalEXPORT.g:499:6: lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength
+            	    {
+            	    if ( state.backtracking==0 ) {
+
+            	      						newCompositeNode(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLengthGSSExportSizeFromFileLengthParserRuleCall_3_0_0());
+            	      					
+            	    }
+            	    pushFollow(FollowSets000.FOLLOW_16);
+            	    lv_sizeFromFileLength_3_0=ruleGSSExportSizeFromFileLength();
+
+            	    state._fsp--;
+            	    if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      						if (current==null) {
+            	      							current = createModelElementForParent(grammarAccess.getGSSExportSizesRule());
+            	      						}
+            	      						add(
+            	      							current,
+            	      							"sizeFromFileLength",
+            	      							lv_sizeFromFileLength_3_0,
+            	      							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSizeFromFileLength");
+            	      						afterParserOrEnumRuleCall();
+            	      					
+            	    }
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+            	case 2 :
+            	    // InternalEXPORT.g:517:4: ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) )
+            	    {
+            	    // InternalEXPORT.g:517:4: ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) )
+            	    // InternalEXPORT.g:518:5: (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine )
+            	    {
+            	    // InternalEXPORT.g:518:5: (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine )
+            	    // InternalEXPORT.g:519:6: lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine
+            	    {
+            	    if ( state.backtracking==0 ) {
+
+            	      						newCompositeNode(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLineGSSExportSizeFromFileLineParserRuleCall_3_1_0());
+            	      					
+            	    }
+            	    pushFollow(FollowSets000.FOLLOW_16);
+            	    lv_sizeFromFileLine_4_0=ruleGSSExportSizeFromFileLine();
+
+            	    state._fsp--;
+            	    if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      						if (current==null) {
+            	      							current = createModelElementForParent(grammarAccess.getGSSExportSizesRule());
+            	      						}
+            	      						add(
+            	      							current,
+            	      							"sizeFromFileLine",
+            	      							lv_sizeFromFileLine_4_0,
+            	      							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSizeFromFileLine");
+            	      						afterParserOrEnumRuleCall();
+            	      					
+            	    }
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+            	case 3 :
+            	    // InternalEXPORT.g:537:4: ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) )
+            	    {
+            	    // InternalEXPORT.g:537:4: ( (lv_sizeInBits_5_0= ruleGSSExportSizeInBits ) )
+            	    // InternalEXPORT.g:538:5: (lv_sizeInBits_5_0= ruleGSSExportSizeInBits )
+            	    {
+            	    // InternalEXPORT.g:538:5: (lv_sizeInBits_5_0= ruleGSSExportSizeInBits )
+            	    // InternalEXPORT.g:539:6: lv_sizeInBits_5_0= ruleGSSExportSizeInBits
+            	    {
+            	    if ( state.backtracking==0 ) {
+
+            	      						newCompositeNode(grammarAccess.getGSSExportSizesAccess().getSizeInBitsGSSExportSizeInBitsParserRuleCall_3_2_0());
+            	      					
+            	    }
+            	    pushFollow(FollowSets000.FOLLOW_16);
+            	    lv_sizeInBits_5_0=ruleGSSExportSizeInBits();
+
+            	    state._fsp--;
+            	    if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      						if (current==null) {
+            	      							current = createModelElementForParent(grammarAccess.getGSSExportSizesRule());
+            	      						}
+            	      						add(
+            	      							current,
+            	      							"sizeInBits",
+            	      							lv_sizeInBits_5_0,
+            	      							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSizeInBits");
+            	      						afterParserOrEnumRuleCall();
+            	      					
+            	    }
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt5 >= 1 ) break loop5;
+            	    if (state.backtracking>0) {state.failed=true; return current;}
+                        EarlyExitException eee =
+                            new EarlyExitException(5, input);
+                        throw eee;
+                }
+                cnt5++;
+            } while (true);
 
             otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1515,7 +1359,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSExportSizeFromFileLength"
-    // InternalEXPORT.g:591:1: entryRuleGSSExportSizeFromFileLength returns [EObject current=null] : iv_ruleGSSExportSizeFromFileLength= ruleGSSExportSizeFromFileLength EOF ;
+    // InternalEXPORT.g:569:1: entryRuleGSSExportSizeFromFileLength returns [EObject current=null] : iv_ruleGSSExportSizeFromFileLength= ruleGSSExportSizeFromFileLength EOF ;
     public final EObject entryRuleGSSExportSizeFromFileLength() throws RecognitionException {
         EObject current = null;
 
@@ -1523,8 +1367,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:591:68: (iv_ruleGSSExportSizeFromFileLength= ruleGSSExportSizeFromFileLength EOF )
-            // InternalEXPORT.g:592:2: iv_ruleGSSExportSizeFromFileLength= ruleGSSExportSizeFromFileLength EOF
+            // InternalEXPORT.g:569:68: (iv_ruleGSSExportSizeFromFileLength= ruleGSSExportSizeFromFileLength EOF )
+            // InternalEXPORT.g:570:2: iv_ruleGSSExportSizeFromFileLength= ruleGSSExportSizeFromFileLength EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSExportSizeFromFileLengthRule()); 
@@ -1555,7 +1399,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportSizeFromFileLength"
-    // InternalEXPORT.g:598:1: ruleGSSExportSizeFromFileLength returns [EObject current=null] : (otherlv_0= 'GSSExportSizeFromFileLength' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' ) ;
+    // InternalEXPORT.g:576:1: ruleGSSExportSizeFromFileLength returns [EObject current=null] : (otherlv_0= 'GSSExportSizeFromFileLength' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' ) ;
     public final EObject ruleGSSExportSizeFromFileLength() throws RecognitionException {
         EObject current = null;
 
@@ -1587,11 +1431,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:604:2: ( (otherlv_0= 'GSSExportSizeFromFileLength' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' ) )
-            // InternalEXPORT.g:605:2: (otherlv_0= 'GSSExportSizeFromFileLength' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' )
+            // InternalEXPORT.g:582:2: ( (otherlv_0= 'GSSExportSizeFromFileLength' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' ) )
+            // InternalEXPORT.g:583:2: (otherlv_0= 'GSSExportSizeFromFileLength' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' )
             {
-            // InternalEXPORT.g:605:2: (otherlv_0= 'GSSExportSizeFromFileLength' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' )
-            // InternalEXPORT.g:606:3: otherlv_0= 'GSSExportSizeFromFileLength' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';'
+            // InternalEXPORT.g:583:2: (otherlv_0= 'GSSExportSizeFromFileLength' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' )
+            // InternalEXPORT.g:584:3: otherlv_0= 'GSSExportSizeFromFileLength' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';'
             {
             otherlv_0=(Token)match(input,23,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1599,7 +1443,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSExportSizeFromFileLengthAccess().getGSSExportSizeFromFileLengthKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_17); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSExportSizeFromFileLengthAccess().getLeftCurlyBracketKeyword_1());
@@ -1611,17 +1455,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSExportSizeFromFileLengthAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSExportSizeFromFileLengthAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalEXPORT.g:622:3: ( (lv_id_4_0= ruleINTEGER ) )
-            // InternalEXPORT.g:623:4: (lv_id_4_0= ruleINTEGER )
+            // InternalEXPORT.g:600:3: ( (lv_id_4_0= ruleINTEGER ) )
+            // InternalEXPORT.g:601:4: (lv_id_4_0= ruleINTEGER )
             {
-            // InternalEXPORT.g:623:4: (lv_id_4_0= ruleINTEGER )
-            // InternalEXPORT.g:624:5: lv_id_4_0= ruleINTEGER
+            // InternalEXPORT.g:601:4: (lv_id_4_0= ruleINTEGER )
+            // InternalEXPORT.g:602:5: lv_id_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -1652,7 +1496,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSExportSizeFromFileLengthAccess().getSemicolonKeyword_5());
@@ -1670,11 +1514,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSExportSizeFromFileLengthAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalEXPORT.g:653:3: ( (lv_fromFile_8_0= RULE_ID ) )
-            // InternalEXPORT.g:654:4: (lv_fromFile_8_0= RULE_ID )
+            // InternalEXPORT.g:631:3: ( (lv_fromFile_8_0= RULE_ID ) )
+            // InternalEXPORT.g:632:4: (lv_fromFile_8_0= RULE_ID )
             {
-            // InternalEXPORT.g:654:4: (lv_fromFile_8_0= RULE_ID )
-            // InternalEXPORT.g:655:5: lv_fromFile_8_0= RULE_ID
+            // InternalEXPORT.g:632:4: (lv_fromFile_8_0= RULE_ID )
+            // InternalEXPORT.g:633:5: lv_fromFile_8_0= RULE_ID
             {
             lv_fromFile_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1700,22 +1544,22 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_21); if (state.failed) return current;
+            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSExportSizeFromFileLengthAccess().getSemicolonKeyword_9());
               		
             }
-            // InternalEXPORT.g:675:3: (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // InternalEXPORT.g:653:3: (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA9_0==26) ) {
-                alt9=1;
+            if ( (LA6_0==26) ) {
+                alt6=1;
             }
-            switch (alt9) {
+            switch (alt6) {
                 case 1 :
-                    // InternalEXPORT.g:676:4: otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';'
+                    // InternalEXPORT.g:654:4: otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';'
                     {
                     otherlv_10=(Token)match(input,26,FollowSets000.FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1723,17 +1567,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_10, grammarAccess.getGSSExportSizeFromFileLengthAccess().getAddSizeKeyword_10_0());
                       			
                     }
-                    otherlv_11=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+                    otherlv_11=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_11, grammarAccess.getGSSExportSizeFromFileLengthAccess().getColonEqualsSignKeyword_10_1());
                       			
                     }
-                    // InternalEXPORT.g:684:4: ( (lv_addSize_12_0= ruleINTEGER ) )
-                    // InternalEXPORT.g:685:5: (lv_addSize_12_0= ruleINTEGER )
+                    // InternalEXPORT.g:662:4: ( (lv_addSize_12_0= ruleINTEGER ) )
+                    // InternalEXPORT.g:663:5: (lv_addSize_12_0= ruleINTEGER )
                     {
-                    // InternalEXPORT.g:685:5: (lv_addSize_12_0= ruleINTEGER )
-                    // InternalEXPORT.g:686:6: lv_addSize_12_0= ruleINTEGER
+                    // InternalEXPORT.g:663:5: (lv_addSize_12_0= ruleINTEGER )
+                    // InternalEXPORT.g:664:6: lv_addSize_12_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -1764,7 +1608,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_22); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_21); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_13, grammarAccess.getGSSExportSizeFromFileLengthAccess().getSemicolonKeyword_10_3());
@@ -1776,16 +1620,16 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalEXPORT.g:708:3: (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // InternalEXPORT.g:686:3: (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA10_0==27) ) {
-                alt10=1;
+            if ( (LA7_0==27) ) {
+                alt7=1;
             }
-            switch (alt10) {
+            switch (alt7) {
                 case 1 :
-                    // InternalEXPORT.g:709:4: otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';'
+                    // InternalEXPORT.g:687:4: otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';'
                     {
                     otherlv_14=(Token)match(input,27,FollowSets000.FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1793,17 +1637,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_14, grammarAccess.getGSSExportSizeFromFileLengthAccess().getUnitKeyword_11_0());
                       			
                     }
-                    otherlv_15=(Token)match(input,17,FollowSets000.FOLLOW_23); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,17,FollowSets000.FOLLOW_22); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_15, grammarAccess.getGSSExportSizeFromFileLengthAccess().getColonEqualsSignKeyword_11_1());
                       			
                     }
-                    // InternalEXPORT.g:717:4: ( (lv_unit_16_0= ruleGSSExportUnit ) )
-                    // InternalEXPORT.g:718:5: (lv_unit_16_0= ruleGSSExportUnit )
+                    // InternalEXPORT.g:695:4: ( (lv_unit_16_0= ruleGSSExportUnit ) )
+                    // InternalEXPORT.g:696:5: (lv_unit_16_0= ruleGSSExportUnit )
                     {
-                    // InternalEXPORT.g:718:5: (lv_unit_16_0= ruleGSSExportUnit )
-                    // InternalEXPORT.g:719:6: lv_unit_16_0= ruleGSSExportUnit
+                    // InternalEXPORT.g:696:5: (lv_unit_16_0= ruleGSSExportUnit )
+                    // InternalEXPORT.g:697:6: lv_unit_16_0= ruleGSSExportUnit
                     {
                     if ( state.backtracking==0 ) {
 
@@ -1834,7 +1678,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_17=(Token)match(input,13,FollowSets000.FOLLOW_13); if (state.failed) return current;
+                    otherlv_17=(Token)match(input,13,FollowSets000.FOLLOW_14); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_17, grammarAccess.getGSSExportSizeFromFileLengthAccess().getSemicolonKeyword_11_3());
@@ -1883,7 +1727,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSExportSizeFromFileLine"
-    // InternalEXPORT.g:753:1: entryRuleGSSExportSizeFromFileLine returns [EObject current=null] : iv_ruleGSSExportSizeFromFileLine= ruleGSSExportSizeFromFileLine EOF ;
+    // InternalEXPORT.g:731:1: entryRuleGSSExportSizeFromFileLine returns [EObject current=null] : iv_ruleGSSExportSizeFromFileLine= ruleGSSExportSizeFromFileLine EOF ;
     public final EObject entryRuleGSSExportSizeFromFileLine() throws RecognitionException {
         EObject current = null;
 
@@ -1891,8 +1735,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:753:66: (iv_ruleGSSExportSizeFromFileLine= ruleGSSExportSizeFromFileLine EOF )
-            // InternalEXPORT.g:754:2: iv_ruleGSSExportSizeFromFileLine= ruleGSSExportSizeFromFileLine EOF
+            // InternalEXPORT.g:731:66: (iv_ruleGSSExportSizeFromFileLine= ruleGSSExportSizeFromFileLine EOF )
+            // InternalEXPORT.g:732:2: iv_ruleGSSExportSizeFromFileLine= ruleGSSExportSizeFromFileLine EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSExportSizeFromFileLineRule()); 
@@ -1923,7 +1767,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportSizeFromFileLine"
-    // InternalEXPORT.g:760:1: ruleGSSExportSizeFromFileLine returns [EObject current=null] : (otherlv_0= 'GSSExportSizeFromFileLine' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'line' otherlv_11= ':=' ( (lv_line_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'addSize' otherlv_15= ':=' ( (lv_addSize_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'unit' otherlv_19= ':=' ( (lv_unit_20_0= ruleGSSExportUnit ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) ;
+    // InternalEXPORT.g:738:1: ruleGSSExportSizeFromFileLine returns [EObject current=null] : (otherlv_0= 'GSSExportSizeFromFileLine' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'line' otherlv_11= ':=' ( (lv_line_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'addSize' otherlv_15= ':=' ( (lv_addSize_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'unit' otherlv_19= ':=' ( (lv_unit_20_0= ruleGSSExportUnit ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) ;
     public final EObject ruleGSSExportSizeFromFileLine() throws RecognitionException {
         EObject current = null;
 
@@ -1960,11 +1804,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:766:2: ( (otherlv_0= 'GSSExportSizeFromFileLine' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'line' otherlv_11= ':=' ( (lv_line_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'addSize' otherlv_15= ':=' ( (lv_addSize_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'unit' otherlv_19= ':=' ( (lv_unit_20_0= ruleGSSExportUnit ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) )
-            // InternalEXPORT.g:767:2: (otherlv_0= 'GSSExportSizeFromFileLine' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'line' otherlv_11= ':=' ( (lv_line_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'addSize' otherlv_15= ':=' ( (lv_addSize_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'unit' otherlv_19= ':=' ( (lv_unit_20_0= ruleGSSExportUnit ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
+            // InternalEXPORT.g:744:2: ( (otherlv_0= 'GSSExportSizeFromFileLine' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'line' otherlv_11= ':=' ( (lv_line_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'addSize' otherlv_15= ':=' ( (lv_addSize_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'unit' otherlv_19= ':=' ( (lv_unit_20_0= ruleGSSExportUnit ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) )
+            // InternalEXPORT.g:745:2: (otherlv_0= 'GSSExportSizeFromFileLine' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'line' otherlv_11= ':=' ( (lv_line_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'addSize' otherlv_15= ':=' ( (lv_addSize_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'unit' otherlv_19= ':=' ( (lv_unit_20_0= ruleGSSExportUnit ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
             {
-            // InternalEXPORT.g:767:2: (otherlv_0= 'GSSExportSizeFromFileLine' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'line' otherlv_11= ':=' ( (lv_line_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'addSize' otherlv_15= ':=' ( (lv_addSize_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'unit' otherlv_19= ':=' ( (lv_unit_20_0= ruleGSSExportUnit ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
-            // InternalEXPORT.g:768:3: otherlv_0= 'GSSExportSizeFromFileLine' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'line' otherlv_11= ':=' ( (lv_line_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'addSize' otherlv_15= ':=' ( (lv_addSize_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'unit' otherlv_19= ':=' ( (lv_unit_20_0= ruleGSSExportUnit ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';'
+            // InternalEXPORT.g:745:2: (otherlv_0= 'GSSExportSizeFromFileLine' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'line' otherlv_11= ':=' ( (lv_line_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'addSize' otherlv_15= ':=' ( (lv_addSize_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'unit' otherlv_19= ':=' ( (lv_unit_20_0= ruleGSSExportUnit ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
+            // InternalEXPORT.g:746:3: otherlv_0= 'GSSExportSizeFromFileLine' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'fromFile' otherlv_7= ':=' ( (lv_fromFile_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'line' otherlv_11= ':=' ( (lv_line_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'addSize' otherlv_15= ':=' ( (lv_addSize_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'unit' otherlv_19= ':=' ( (lv_unit_20_0= ruleGSSExportUnit ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';'
             {
             otherlv_0=(Token)match(input,28,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1972,7 +1816,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSExportSizeFromFileLineAccess().getGSSExportSizeFromFileLineKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_17); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSExportSizeFromFileLineAccess().getLeftCurlyBracketKeyword_1());
@@ -1984,17 +1828,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSExportSizeFromFileLineAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSExportSizeFromFileLineAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalEXPORT.g:784:3: ( (lv_id_4_0= ruleINTEGER ) )
-            // InternalEXPORT.g:785:4: (lv_id_4_0= ruleINTEGER )
+            // InternalEXPORT.g:762:3: ( (lv_id_4_0= ruleINTEGER ) )
+            // InternalEXPORT.g:763:4: (lv_id_4_0= ruleINTEGER )
             {
-            // InternalEXPORT.g:785:4: (lv_id_4_0= ruleINTEGER )
-            // InternalEXPORT.g:786:5: lv_id_4_0= ruleINTEGER
+            // InternalEXPORT.g:763:4: (lv_id_4_0= ruleINTEGER )
+            // InternalEXPORT.g:764:5: lv_id_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -2025,7 +1869,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSExportSizeFromFileLineAccess().getSemicolonKeyword_5());
@@ -2043,11 +1887,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSExportSizeFromFileLineAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalEXPORT.g:815:3: ( (lv_fromFile_8_0= RULE_ID ) )
-            // InternalEXPORT.g:816:4: (lv_fromFile_8_0= RULE_ID )
+            // InternalEXPORT.g:793:3: ( (lv_fromFile_8_0= RULE_ID ) )
+            // InternalEXPORT.g:794:4: (lv_fromFile_8_0= RULE_ID )
             {
-            // InternalEXPORT.g:816:4: (lv_fromFile_8_0= RULE_ID )
-            // InternalEXPORT.g:817:5: lv_fromFile_8_0= RULE_ID
+            // InternalEXPORT.g:794:4: (lv_fromFile_8_0= RULE_ID )
+            // InternalEXPORT.g:795:5: lv_fromFile_8_0= RULE_ID
             {
             lv_fromFile_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2073,7 +1917,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_24); if (state.failed) return current;
+            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_23); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSExportSizeFromFileLineAccess().getSemicolonKeyword_9());
@@ -2085,17 +1929,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSExportSizeFromFileLineAccess().getLineKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_11=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSExportSizeFromFileLineAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalEXPORT.g:845:3: ( (lv_line_12_0= ruleINTEGER ) )
-            // InternalEXPORT.g:846:4: (lv_line_12_0= ruleINTEGER )
+            // InternalEXPORT.g:823:3: ( (lv_line_12_0= ruleINTEGER ) )
+            // InternalEXPORT.g:824:4: (lv_line_12_0= ruleINTEGER )
             {
-            // InternalEXPORT.g:846:4: (lv_line_12_0= ruleINTEGER )
-            // InternalEXPORT.g:847:5: lv_line_12_0= ruleINTEGER
+            // InternalEXPORT.g:824:4: (lv_line_12_0= ruleINTEGER )
+            // InternalEXPORT.g:825:5: lv_line_12_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -2126,22 +1970,22 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_21); if (state.failed) return current;
+            otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSExportSizeFromFileLineAccess().getSemicolonKeyword_13());
               		
             }
-            // InternalEXPORT.g:868:3: (otherlv_14= 'addSize' otherlv_15= ':=' ( (lv_addSize_16_0= ruleINTEGER ) ) otherlv_17= ';' )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // InternalEXPORT.g:846:3: (otherlv_14= 'addSize' otherlv_15= ':=' ( (lv_addSize_16_0= ruleINTEGER ) ) otherlv_17= ';' )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA11_0==26) ) {
-                alt11=1;
+            if ( (LA8_0==26) ) {
+                alt8=1;
             }
-            switch (alt11) {
+            switch (alt8) {
                 case 1 :
-                    // InternalEXPORT.g:869:4: otherlv_14= 'addSize' otherlv_15= ':=' ( (lv_addSize_16_0= ruleINTEGER ) ) otherlv_17= ';'
+                    // InternalEXPORT.g:847:4: otherlv_14= 'addSize' otherlv_15= ':=' ( (lv_addSize_16_0= ruleINTEGER ) ) otherlv_17= ';'
                     {
                     otherlv_14=(Token)match(input,26,FollowSets000.FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2149,17 +1993,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_14, grammarAccess.getGSSExportSizeFromFileLineAccess().getAddSizeKeyword_14_0());
                       			
                     }
-                    otherlv_15=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_15, grammarAccess.getGSSExportSizeFromFileLineAccess().getColonEqualsSignKeyword_14_1());
                       			
                     }
-                    // InternalEXPORT.g:877:4: ( (lv_addSize_16_0= ruleINTEGER ) )
-                    // InternalEXPORT.g:878:5: (lv_addSize_16_0= ruleINTEGER )
+                    // InternalEXPORT.g:855:4: ( (lv_addSize_16_0= ruleINTEGER ) )
+                    // InternalEXPORT.g:856:5: (lv_addSize_16_0= ruleINTEGER )
                     {
-                    // InternalEXPORT.g:878:5: (lv_addSize_16_0= ruleINTEGER )
-                    // InternalEXPORT.g:879:6: lv_addSize_16_0= ruleINTEGER
+                    // InternalEXPORT.g:856:5: (lv_addSize_16_0= ruleINTEGER )
+                    // InternalEXPORT.g:857:6: lv_addSize_16_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2190,7 +2034,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_17=(Token)match(input,13,FollowSets000.FOLLOW_22); if (state.failed) return current;
+                    otherlv_17=(Token)match(input,13,FollowSets000.FOLLOW_21); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_17, grammarAccess.getGSSExportSizeFromFileLineAccess().getSemicolonKeyword_14_3());
@@ -2202,16 +2046,16 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalEXPORT.g:901:3: (otherlv_18= 'unit' otherlv_19= ':=' ( (lv_unit_20_0= ruleGSSExportUnit ) ) otherlv_21= ';' )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // InternalEXPORT.g:879:3: (otherlv_18= 'unit' otherlv_19= ':=' ( (lv_unit_20_0= ruleGSSExportUnit ) ) otherlv_21= ';' )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA12_0==27) ) {
-                alt12=1;
+            if ( (LA9_0==27) ) {
+                alt9=1;
             }
-            switch (alt12) {
+            switch (alt9) {
                 case 1 :
-                    // InternalEXPORT.g:902:4: otherlv_18= 'unit' otherlv_19= ':=' ( (lv_unit_20_0= ruleGSSExportUnit ) ) otherlv_21= ';'
+                    // InternalEXPORT.g:880:4: otherlv_18= 'unit' otherlv_19= ':=' ( (lv_unit_20_0= ruleGSSExportUnit ) ) otherlv_21= ';'
                     {
                     otherlv_18=(Token)match(input,27,FollowSets000.FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2219,17 +2063,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_18, grammarAccess.getGSSExportSizeFromFileLineAccess().getUnitKeyword_15_0());
                       			
                     }
-                    otherlv_19=(Token)match(input,17,FollowSets000.FOLLOW_23); if (state.failed) return current;
+                    otherlv_19=(Token)match(input,17,FollowSets000.FOLLOW_22); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_19, grammarAccess.getGSSExportSizeFromFileLineAccess().getColonEqualsSignKeyword_15_1());
                       			
                     }
-                    // InternalEXPORT.g:910:4: ( (lv_unit_20_0= ruleGSSExportUnit ) )
-                    // InternalEXPORT.g:911:5: (lv_unit_20_0= ruleGSSExportUnit )
+                    // InternalEXPORT.g:888:4: ( (lv_unit_20_0= ruleGSSExportUnit ) )
+                    // InternalEXPORT.g:889:5: (lv_unit_20_0= ruleGSSExportUnit )
                     {
-                    // InternalEXPORT.g:911:5: (lv_unit_20_0= ruleGSSExportUnit )
-                    // InternalEXPORT.g:912:6: lv_unit_20_0= ruleGSSExportUnit
+                    // InternalEXPORT.g:889:5: (lv_unit_20_0= ruleGSSExportUnit )
+                    // InternalEXPORT.g:890:6: lv_unit_20_0= ruleGSSExportUnit
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2260,7 +2104,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_21=(Token)match(input,13,FollowSets000.FOLLOW_13); if (state.failed) return current;
+                    otherlv_21=(Token)match(input,13,FollowSets000.FOLLOW_14); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_21, grammarAccess.getGSSExportSizeFromFileLineAccess().getSemicolonKeyword_15_3());
@@ -2309,7 +2153,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSExportSizeInBits"
-    // InternalEXPORT.g:946:1: entryRuleGSSExportSizeInBits returns [EObject current=null] : iv_ruleGSSExportSizeInBits= ruleGSSExportSizeInBits EOF ;
+    // InternalEXPORT.g:924:1: entryRuleGSSExportSizeInBits returns [EObject current=null] : iv_ruleGSSExportSizeInBits= ruleGSSExportSizeInBits EOF ;
     public final EObject entryRuleGSSExportSizeInBits() throws RecognitionException {
         EObject current = null;
 
@@ -2317,8 +2161,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:946:60: (iv_ruleGSSExportSizeInBits= ruleGSSExportSizeInBits EOF )
-            // InternalEXPORT.g:947:2: iv_ruleGSSExportSizeInBits= ruleGSSExportSizeInBits EOF
+            // InternalEXPORT.g:924:60: (iv_ruleGSSExportSizeInBits= ruleGSSExportSizeInBits EOF )
+            // InternalEXPORT.g:925:2: iv_ruleGSSExportSizeInBits= ruleGSSExportSizeInBits EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSExportSizeInBitsRule()); 
@@ -2349,7 +2193,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportSizeInBits"
-    // InternalEXPORT.g:953:1: ruleGSSExportSizeInBits returns [EObject current=null] : (otherlv_0= 'GSSExportSizeInBits' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'from' otherlv_7= ':=' ( (lv_from_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' ) ;
+    // InternalEXPORT.g:931:1: ruleGSSExportSizeInBits returns [EObject current=null] : (otherlv_0= 'GSSExportSizeInBits' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'from' otherlv_7= ':=' ( (lv_from_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' ) ;
     public final EObject ruleGSSExportSizeInBits() throws RecognitionException {
         EObject current = null;
 
@@ -2381,11 +2225,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:959:2: ( (otherlv_0= 'GSSExportSizeInBits' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'from' otherlv_7= ':=' ( (lv_from_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' ) )
-            // InternalEXPORT.g:960:2: (otherlv_0= 'GSSExportSizeInBits' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'from' otherlv_7= ':=' ( (lv_from_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' )
+            // InternalEXPORT.g:937:2: ( (otherlv_0= 'GSSExportSizeInBits' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'from' otherlv_7= ':=' ( (lv_from_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' ) )
+            // InternalEXPORT.g:938:2: (otherlv_0= 'GSSExportSizeInBits' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'from' otherlv_7= ':=' ( (lv_from_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' )
             {
-            // InternalEXPORT.g:960:2: (otherlv_0= 'GSSExportSizeInBits' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'from' otherlv_7= ':=' ( (lv_from_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' )
-            // InternalEXPORT.g:961:3: otherlv_0= 'GSSExportSizeInBits' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'from' otherlv_7= ':=' ( (lv_from_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';'
+            // InternalEXPORT.g:938:2: (otherlv_0= 'GSSExportSizeInBits' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'from' otherlv_7= ':=' ( (lv_from_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';' )
+            // InternalEXPORT.g:939:3: otherlv_0= 'GSSExportSizeInBits' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'from' otherlv_7= ':=' ( (lv_from_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )? otherlv_18= '}' otherlv_19= ';'
             {
             otherlv_0=(Token)match(input,30,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2393,7 +2237,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSExportSizeInBitsAccess().getGSSExportSizeInBitsKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_17); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSExportSizeInBitsAccess().getLeftCurlyBracketKeyword_1());
@@ -2405,17 +2249,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSExportSizeInBitsAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSExportSizeInBitsAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalEXPORT.g:977:3: ( (lv_id_4_0= ruleINTEGER ) )
-            // InternalEXPORT.g:978:4: (lv_id_4_0= ruleINTEGER )
+            // InternalEXPORT.g:955:3: ( (lv_id_4_0= ruleINTEGER ) )
+            // InternalEXPORT.g:956:4: (lv_id_4_0= ruleINTEGER )
             {
-            // InternalEXPORT.g:978:4: (lv_id_4_0= ruleINTEGER )
-            // InternalEXPORT.g:979:5: lv_id_4_0= ruleINTEGER
+            // InternalEXPORT.g:956:4: (lv_id_4_0= ruleINTEGER )
+            // InternalEXPORT.g:957:5: lv_id_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -2446,7 +2290,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_25); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_24); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSExportSizeInBitsAccess().getSemicolonKeyword_5());
@@ -2464,11 +2308,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSExportSizeInBitsAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalEXPORT.g:1008:3: ( (lv_from_8_0= RULE_ID ) )
-            // InternalEXPORT.g:1009:4: (lv_from_8_0= RULE_ID )
+            // InternalEXPORT.g:986:3: ( (lv_from_8_0= RULE_ID ) )
+            // InternalEXPORT.g:987:4: (lv_from_8_0= RULE_ID )
             {
-            // InternalEXPORT.g:1009:4: (lv_from_8_0= RULE_ID )
-            // InternalEXPORT.g:1010:5: lv_from_8_0= RULE_ID
+            // InternalEXPORT.g:987:4: (lv_from_8_0= RULE_ID )
+            // InternalEXPORT.g:988:5: lv_from_8_0= RULE_ID
             {
             lv_from_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2494,22 +2338,22 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_21); if (state.failed) return current;
+            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSExportSizeInBitsAccess().getSemicolonKeyword_9());
               		
             }
-            // InternalEXPORT.g:1030:3: (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // InternalEXPORT.g:1008:3: (otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';' )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA13_0==26) ) {
-                alt13=1;
+            if ( (LA10_0==26) ) {
+                alt10=1;
             }
-            switch (alt13) {
+            switch (alt10) {
                 case 1 :
-                    // InternalEXPORT.g:1031:4: otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';'
+                    // InternalEXPORT.g:1009:4: otherlv_10= 'addSize' otherlv_11= ':=' ( (lv_addSize_12_0= ruleINTEGER ) ) otherlv_13= ';'
                     {
                     otherlv_10=(Token)match(input,26,FollowSets000.FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2517,17 +2361,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_10, grammarAccess.getGSSExportSizeInBitsAccess().getAddSizeKeyword_10_0());
                       			
                     }
-                    otherlv_11=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+                    otherlv_11=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_11, grammarAccess.getGSSExportSizeInBitsAccess().getColonEqualsSignKeyword_10_1());
                       			
                     }
-                    // InternalEXPORT.g:1039:4: ( (lv_addSize_12_0= ruleINTEGER ) )
-                    // InternalEXPORT.g:1040:5: (lv_addSize_12_0= ruleINTEGER )
+                    // InternalEXPORT.g:1017:4: ( (lv_addSize_12_0= ruleINTEGER ) )
+                    // InternalEXPORT.g:1018:5: (lv_addSize_12_0= ruleINTEGER )
                     {
-                    // InternalEXPORT.g:1040:5: (lv_addSize_12_0= ruleINTEGER )
-                    // InternalEXPORT.g:1041:6: lv_addSize_12_0= ruleINTEGER
+                    // InternalEXPORT.g:1018:5: (lv_addSize_12_0= ruleINTEGER )
+                    // InternalEXPORT.g:1019:6: lv_addSize_12_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2558,7 +2402,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_22); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_21); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_13, grammarAccess.getGSSExportSizeInBitsAccess().getSemicolonKeyword_10_3());
@@ -2570,16 +2414,16 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalEXPORT.g:1063:3: (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // InternalEXPORT.g:1041:3: (otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';' )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA14_0==27) ) {
-                alt14=1;
+            if ( (LA11_0==27) ) {
+                alt11=1;
             }
-            switch (alt14) {
+            switch (alt11) {
                 case 1 :
-                    // InternalEXPORT.g:1064:4: otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';'
+                    // InternalEXPORT.g:1042:4: otherlv_14= 'unit' otherlv_15= ':=' ( (lv_unit_16_0= ruleGSSExportUnit ) ) otherlv_17= ';'
                     {
                     otherlv_14=(Token)match(input,27,FollowSets000.FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2587,17 +2431,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_14, grammarAccess.getGSSExportSizeInBitsAccess().getUnitKeyword_11_0());
                       			
                     }
-                    otherlv_15=(Token)match(input,17,FollowSets000.FOLLOW_23); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,17,FollowSets000.FOLLOW_22); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_15, grammarAccess.getGSSExportSizeInBitsAccess().getColonEqualsSignKeyword_11_1());
                       			
                     }
-                    // InternalEXPORT.g:1072:4: ( (lv_unit_16_0= ruleGSSExportUnit ) )
-                    // InternalEXPORT.g:1073:5: (lv_unit_16_0= ruleGSSExportUnit )
+                    // InternalEXPORT.g:1050:4: ( (lv_unit_16_0= ruleGSSExportUnit ) )
+                    // InternalEXPORT.g:1051:5: (lv_unit_16_0= ruleGSSExportUnit )
                     {
-                    // InternalEXPORT.g:1073:5: (lv_unit_16_0= ruleGSSExportUnit )
-                    // InternalEXPORT.g:1074:6: lv_unit_16_0= ruleGSSExportUnit
+                    // InternalEXPORT.g:1051:5: (lv_unit_16_0= ruleGSSExportUnit )
+                    // InternalEXPORT.g:1052:6: lv_unit_16_0= ruleGSSExportUnit
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2628,7 +2472,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_17=(Token)match(input,13,FollowSets000.FOLLOW_13); if (state.failed) return current;
+                    otherlv_17=(Token)match(input,13,FollowSets000.FOLLOW_14); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_17, grammarAccess.getGSSExportSizeInBitsAccess().getSemicolonKeyword_11_3());
@@ -2677,7 +2521,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSExportSettings"
-    // InternalEXPORT.g:1108:1: entryRuleGSSExportSettings returns [EObject current=null] : iv_ruleGSSExportSettings= ruleGSSExportSettings EOF ;
+    // InternalEXPORT.g:1086:1: entryRuleGSSExportSettings returns [EObject current=null] : iv_ruleGSSExportSettings= ruleGSSExportSettings EOF ;
     public final EObject entryRuleGSSExportSettings() throws RecognitionException {
         EObject current = null;
 
@@ -2685,8 +2529,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:1108:58: (iv_ruleGSSExportSettings= ruleGSSExportSettings EOF )
-            // InternalEXPORT.g:1109:2: iv_ruleGSSExportSettings= ruleGSSExportSettings EOF
+            // InternalEXPORT.g:1086:58: (iv_ruleGSSExportSettings= ruleGSSExportSettings EOF )
+            // InternalEXPORT.g:1087:2: iv_ruleGSSExportSettings= ruleGSSExportSettings EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSExportSettingsRule()); 
@@ -2717,7 +2561,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportSettings"
-    // InternalEXPORT.g:1115:1: ruleGSSExportSettings returns [EObject current=null] : ( () otherlv_1= 'GSSExportSettings' otherlv_2= '{' ( ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) ) | ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) ) | ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) ) | ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) ) | ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) ) | ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) ) )* otherlv_9= '}' otherlv_10= ';' ) ;
+    // InternalEXPORT.g:1093:1: ruleGSSExportSettings returns [EObject current=null] : ( () otherlv_1= 'GSSExportSettings' otherlv_2= '{' ( ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) ) | ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) ) | ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) ) | ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) ) | ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) ) | ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) ) )* otherlv_9= '}' otherlv_10= ';' ) ;
     public final EObject ruleGSSExportSettings() throws RecognitionException {
         EObject current = null;
 
@@ -2742,14 +2586,14 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:1121:2: ( ( () otherlv_1= 'GSSExportSettings' otherlv_2= '{' ( ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) ) | ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) ) | ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) ) | ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) ) | ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) ) | ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) ) )* otherlv_9= '}' otherlv_10= ';' ) )
-            // InternalEXPORT.g:1122:2: ( () otherlv_1= 'GSSExportSettings' otherlv_2= '{' ( ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) ) | ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) ) | ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) ) | ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) ) | ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) ) | ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) ) )* otherlv_9= '}' otherlv_10= ';' )
+            // InternalEXPORT.g:1099:2: ( ( () otherlv_1= 'GSSExportSettings' otherlv_2= '{' ( ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) ) | ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) ) | ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) ) | ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) ) | ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) ) | ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) ) )* otherlv_9= '}' otherlv_10= ';' ) )
+            // InternalEXPORT.g:1100:2: ( () otherlv_1= 'GSSExportSettings' otherlv_2= '{' ( ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) ) | ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) ) | ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) ) | ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) ) | ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) ) | ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) ) )* otherlv_9= '}' otherlv_10= ';' )
             {
-            // InternalEXPORT.g:1122:2: ( () otherlv_1= 'GSSExportSettings' otherlv_2= '{' ( ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) ) | ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) ) | ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) ) | ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) ) | ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) ) | ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) ) )* otherlv_9= '}' otherlv_10= ';' )
-            // InternalEXPORT.g:1123:3: () otherlv_1= 'GSSExportSettings' otherlv_2= '{' ( ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) ) | ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) ) | ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) ) | ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) ) | ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) ) | ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) ) )* otherlv_9= '}' otherlv_10= ';'
+            // InternalEXPORT.g:1100:2: ( () otherlv_1= 'GSSExportSettings' otherlv_2= '{' ( ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) ) | ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) ) | ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) ) | ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) ) | ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) ) | ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) ) )* otherlv_9= '}' otherlv_10= ';' )
+            // InternalEXPORT.g:1101:3: () otherlv_1= 'GSSExportSettings' otherlv_2= '{' ( ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) ) | ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) ) | ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) ) | ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) ) | ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) ) | ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) ) )* otherlv_9= '}' otherlv_10= ';'
             {
-            // InternalEXPORT.g:1123:3: ()
-            // InternalEXPORT.g:1124:4: 
+            // InternalEXPORT.g:1101:3: ()
+            // InternalEXPORT.g:1102:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -2772,66 +2616,66 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getGSSExportSettingsAccess().getGSSExportSettingsKeyword_1());
               		
             }
-            otherlv_2=(Token)match(input,15,FollowSets000.FOLLOW_26); if (state.failed) return current;
+            otherlv_2=(Token)match(input,15,FollowSets000.FOLLOW_25); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getGSSExportSettingsAccess().getLeftCurlyBracketKeyword_2());
               		
             }
-            // InternalEXPORT.g:1141:3: ( ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) ) | ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) ) | ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) ) | ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) ) | ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) ) | ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) ) )*
-            loop15:
+            // InternalEXPORT.g:1119:3: ( ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) ) | ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) ) | ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) ) | ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) ) | ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) ) | ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) ) )*
+            loop12:
             do {
-                int alt15=7;
+                int alt12=7;
                 switch ( input.LA(1) ) {
                 case 32:
                     {
-                    alt15=1;
+                    alt12=1;
                     }
                     break;
                 case 35:
                     {
-                    alt15=2;
+                    alt12=2;
                     }
                     break;
                 case 37:
                     {
-                    alt15=3;
+                    alt12=3;
                     }
                     break;
                 case 41:
                     {
-                    alt15=4;
+                    alt12=4;
                     }
                     break;
                 case 43:
                     {
-                    alt15=5;
+                    alt12=5;
                     }
                     break;
                 case 44:
                     {
-                    alt15=6;
+                    alt12=6;
                     }
                     break;
 
                 }
 
-                switch (alt15) {
+                switch (alt12) {
             	case 1 :
-            	    // InternalEXPORT.g:1142:4: ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) )
+            	    // InternalEXPORT.g:1120:4: ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) )
             	    {
-            	    // InternalEXPORT.g:1142:4: ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) )
-            	    // InternalEXPORT.g:1143:5: (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst )
+            	    // InternalEXPORT.g:1120:4: ( (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst ) )
+            	    // InternalEXPORT.g:1121:5: (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst )
             	    {
-            	    // InternalEXPORT.g:1143:5: (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst )
-            	    // InternalEXPORT.g:1144:6: lv_settingFromConst_3_0= ruleGSSExportSettingFromConst
+            	    // InternalEXPORT.g:1121:5: (lv_settingFromConst_3_0= ruleGSSExportSettingFromConst )
+            	    // InternalEXPORT.g:1122:6: lv_settingFromConst_3_0= ruleGSSExportSettingFromConst
             	    {
             	    if ( state.backtracking==0 ) {
 
             	      						newCompositeNode(grammarAccess.getGSSExportSettingsAccess().getSettingFromConstGSSExportSettingFromConstParserRuleCall_3_0_0());
             	      					
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_26);
+            	    pushFollow(FollowSets000.FOLLOW_25);
             	    lv_settingFromConst_3_0=ruleGSSExportSettingFromConst();
 
             	    state._fsp--;
@@ -2859,20 +2703,20 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalEXPORT.g:1162:4: ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) )
+            	    // InternalEXPORT.g:1140:4: ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) )
             	    {
-            	    // InternalEXPORT.g:1162:4: ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) )
-            	    // InternalEXPORT.g:1163:5: (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize )
+            	    // InternalEXPORT.g:1140:4: ( (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize ) )
+            	    // InternalEXPORT.g:1141:5: (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize )
             	    {
-            	    // InternalEXPORT.g:1163:5: (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize )
-            	    // InternalEXPORT.g:1164:6: lv_settingFromSize_4_0= ruleGSSExportSettingFromSize
+            	    // InternalEXPORT.g:1141:5: (lv_settingFromSize_4_0= ruleGSSExportSettingFromSize )
+            	    // InternalEXPORT.g:1142:6: lv_settingFromSize_4_0= ruleGSSExportSettingFromSize
             	    {
             	    if ( state.backtracking==0 ) {
 
             	      						newCompositeNode(grammarAccess.getGSSExportSettingsAccess().getSettingFromSizeGSSExportSettingFromSizeParserRuleCall_3_1_0());
             	      					
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_26);
+            	    pushFollow(FollowSets000.FOLLOW_25);
             	    lv_settingFromSize_4_0=ruleGSSExportSettingFromSize();
 
             	    state._fsp--;
@@ -2900,20 +2744,20 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalEXPORT.g:1182:4: ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) )
+            	    // InternalEXPORT.g:1160:4: ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) )
             	    {
-            	    // InternalEXPORT.g:1182:4: ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) )
-            	    // InternalEXPORT.g:1183:5: (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile )
+            	    // InternalEXPORT.g:1160:4: ( (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile ) )
+            	    // InternalEXPORT.g:1161:5: (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile )
             	    {
-            	    // InternalEXPORT.g:1183:5: (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile )
-            	    // InternalEXPORT.g:1184:6: lv_settingFromFile_5_0= ruleGSSExportSettingFromFile
+            	    // InternalEXPORT.g:1161:5: (lv_settingFromFile_5_0= ruleGSSExportSettingFromFile )
+            	    // InternalEXPORT.g:1162:6: lv_settingFromFile_5_0= ruleGSSExportSettingFromFile
             	    {
             	    if ( state.backtracking==0 ) {
 
             	      						newCompositeNode(grammarAccess.getGSSExportSettingsAccess().getSettingFromFileGSSExportSettingFromFileParserRuleCall_3_2_0());
             	      					
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_26);
+            	    pushFollow(FollowSets000.FOLLOW_25);
             	    lv_settingFromFile_5_0=ruleGSSExportSettingFromFile();
 
             	    state._fsp--;
@@ -2941,20 +2785,20 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 4 :
-            	    // InternalEXPORT.g:1202:4: ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) )
+            	    // InternalEXPORT.g:1180:4: ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) )
             	    {
-            	    // InternalEXPORT.g:1202:4: ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) )
-            	    // InternalEXPORT.g:1203:5: (lv_settingFromField_6_0= ruleGSSExportSettingFromField )
+            	    // InternalEXPORT.g:1180:4: ( (lv_settingFromField_6_0= ruleGSSExportSettingFromField ) )
+            	    // InternalEXPORT.g:1181:5: (lv_settingFromField_6_0= ruleGSSExportSettingFromField )
             	    {
-            	    // InternalEXPORT.g:1203:5: (lv_settingFromField_6_0= ruleGSSExportSettingFromField )
-            	    // InternalEXPORT.g:1204:6: lv_settingFromField_6_0= ruleGSSExportSettingFromField
+            	    // InternalEXPORT.g:1181:5: (lv_settingFromField_6_0= ruleGSSExportSettingFromField )
+            	    // InternalEXPORT.g:1182:6: lv_settingFromField_6_0= ruleGSSExportSettingFromField
             	    {
             	    if ( state.backtracking==0 ) {
 
             	      						newCompositeNode(grammarAccess.getGSSExportSettingsAccess().getSettingFromFieldGSSExportSettingFromFieldParserRuleCall_3_3_0());
             	      					
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_26);
+            	    pushFollow(FollowSets000.FOLLOW_25);
             	    lv_settingFromField_6_0=ruleGSSExportSettingFromField();
 
             	    state._fsp--;
@@ -2982,20 +2826,20 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 5 :
-            	    // InternalEXPORT.g:1222:4: ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) )
+            	    // InternalEXPORT.g:1200:4: ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) )
             	    {
-            	    // InternalEXPORT.g:1222:4: ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) )
-            	    // InternalEXPORT.g:1223:5: (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst )
+            	    // InternalEXPORT.g:1200:4: ( (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst ) )
+            	    // InternalEXPORT.g:1201:5: (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst )
             	    {
-            	    // InternalEXPORT.g:1223:5: (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst )
-            	    // InternalEXPORT.g:1224:6: lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst
+            	    // InternalEXPORT.g:1201:5: (lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst )
+            	    // InternalEXPORT.g:1202:6: lv_settingAIFromConst_7_0= ruleGSSExportSettingAIFromConst
             	    {
             	    if ( state.backtracking==0 ) {
 
             	      						newCompositeNode(grammarAccess.getGSSExportSettingsAccess().getSettingAIFromConstGSSExportSettingAIFromConstParserRuleCall_3_4_0());
             	      					
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_26);
+            	    pushFollow(FollowSets000.FOLLOW_25);
             	    lv_settingAIFromConst_7_0=ruleGSSExportSettingAIFromConst();
 
             	    state._fsp--;
@@ -3023,20 +2867,20 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 6 :
-            	    // InternalEXPORT.g:1242:4: ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) )
+            	    // InternalEXPORT.g:1220:4: ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) )
             	    {
-            	    // InternalEXPORT.g:1242:4: ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) )
-            	    // InternalEXPORT.g:1243:5: (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile )
+            	    // InternalEXPORT.g:1220:4: ( (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile ) )
+            	    // InternalEXPORT.g:1221:5: (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile )
             	    {
-            	    // InternalEXPORT.g:1243:5: (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile )
-            	    // InternalEXPORT.g:1244:6: lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile
+            	    // InternalEXPORT.g:1221:5: (lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile )
+            	    // InternalEXPORT.g:1222:6: lv_settingAIFromFile_8_0= ruleGSSExportSettingAIFromFile
             	    {
             	    if ( state.backtracking==0 ) {
 
             	      						newCompositeNode(grammarAccess.getGSSExportSettingsAccess().getSettingAIFromFileGSSExportSettingAIFromFileParserRuleCall_3_5_0());
             	      					
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_26);
+            	    pushFollow(FollowSets000.FOLLOW_25);
             	    lv_settingAIFromFile_8_0=ruleGSSExportSettingAIFromFile();
 
             	    state._fsp--;
@@ -3065,7 +2909,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop15;
+            	    break loop12;
                 }
             } while (true);
 
@@ -3106,7 +2950,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSExportSettingFromConst"
-    // InternalEXPORT.g:1274:1: entryRuleGSSExportSettingFromConst returns [EObject current=null] : iv_ruleGSSExportSettingFromConst= ruleGSSExportSettingFromConst EOF ;
+    // InternalEXPORT.g:1252:1: entryRuleGSSExportSettingFromConst returns [EObject current=null] : iv_ruleGSSExportSettingFromConst= ruleGSSExportSettingFromConst EOF ;
     public final EObject entryRuleGSSExportSettingFromConst() throws RecognitionException {
         EObject current = null;
 
@@ -3114,8 +2958,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:1274:66: (iv_ruleGSSExportSettingFromConst= ruleGSSExportSettingFromConst EOF )
-            // InternalEXPORT.g:1275:2: iv_ruleGSSExportSettingFromConst= ruleGSSExportSettingFromConst EOF
+            // InternalEXPORT.g:1252:66: (iv_ruleGSSExportSettingFromConst= ruleGSSExportSettingFromConst EOF )
+            // InternalEXPORT.g:1253:2: iv_ruleGSSExportSettingFromConst= ruleGSSExportSettingFromConst EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSExportSettingFromConstRule()); 
@@ -3146,7 +2990,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportSettingFromConst"
-    // InternalEXPORT.g:1281:1: ruleGSSExportSettingFromConst returns [EObject current=null] : (otherlv_0= 'GSSExportSettingFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalEXPORT.g:1259:1: ruleGSSExportSettingFromConst returns [EObject current=null] : (otherlv_0= 'GSSExportSettingFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
     public final EObject ruleGSSExportSettingFromConst() throws RecognitionException {
         EObject current = null;
 
@@ -3168,11 +3012,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:1287:2: ( (otherlv_0= 'GSSExportSettingFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalEXPORT.g:1288:2: (otherlv_0= 'GSSExportSettingFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalEXPORT.g:1265:2: ( (otherlv_0= 'GSSExportSettingFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
+            // InternalEXPORT.g:1266:2: (otherlv_0= 'GSSExportSettingFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
             {
-            // InternalEXPORT.g:1288:2: (otherlv_0= 'GSSExportSettingFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
-            // InternalEXPORT.g:1289:3: otherlv_0= 'GSSExportSettingFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
+            // InternalEXPORT.g:1266:2: (otherlv_0= 'GSSExportSettingFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalEXPORT.g:1267:3: otherlv_0= 'GSSExportSettingFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
             {
             otherlv_0=(Token)match(input,32,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3180,7 +3024,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSExportSettingFromConstAccess().getGSSExportSettingFromConstKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_27); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_26); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSExportSettingFromConstAccess().getLeftCurlyBracketKeyword_1());
@@ -3192,17 +3036,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSExportSettingFromConstAccess().getValueKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSExportSettingFromConstAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalEXPORT.g:1305:3: ( (lv_value_4_0= ruleINTEGER ) )
-            // InternalEXPORT.g:1306:4: (lv_value_4_0= ruleINTEGER )
+            // InternalEXPORT.g:1283:3: ( (lv_value_4_0= ruleINTEGER ) )
+            // InternalEXPORT.g:1284:4: (lv_value_4_0= ruleINTEGER )
             {
-            // InternalEXPORT.g:1306:4: (lv_value_4_0= ruleINTEGER )
-            // InternalEXPORT.g:1307:5: lv_value_4_0= ruleINTEGER
+            // InternalEXPORT.g:1284:4: (lv_value_4_0= ruleINTEGER )
+            // InternalEXPORT.g:1285:5: lv_value_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -3233,7 +3077,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_28); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_27); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSExportSettingFromConstAccess().getSemicolonKeyword_5());
@@ -3251,11 +3095,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSExportSettingFromConstAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalEXPORT.g:1336:3: ( (lv_toFieldRef_8_0= RULE_ID ) )
-            // InternalEXPORT.g:1337:4: (lv_toFieldRef_8_0= RULE_ID )
+            // InternalEXPORT.g:1314:3: ( (lv_toFieldRef_8_0= RULE_ID ) )
+            // InternalEXPORT.g:1315:4: (lv_toFieldRef_8_0= RULE_ID )
             {
-            // InternalEXPORT.g:1337:4: (lv_toFieldRef_8_0= RULE_ID )
-            // InternalEXPORT.g:1338:5: lv_toFieldRef_8_0= RULE_ID
+            // InternalEXPORT.g:1315:4: (lv_toFieldRef_8_0= RULE_ID )
+            // InternalEXPORT.g:1316:5: lv_toFieldRef_8_0= RULE_ID
             {
             lv_toFieldRef_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3281,7 +3125,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_13); if (state.failed) return current;
+            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_14); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSExportSettingFromConstAccess().getSemicolonKeyword_9());
@@ -3324,7 +3168,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSExportSettingFromSize"
-    // InternalEXPORT.g:1370:1: entryRuleGSSExportSettingFromSize returns [EObject current=null] : iv_ruleGSSExportSettingFromSize= ruleGSSExportSettingFromSize EOF ;
+    // InternalEXPORT.g:1348:1: entryRuleGSSExportSettingFromSize returns [EObject current=null] : iv_ruleGSSExportSettingFromSize= ruleGSSExportSettingFromSize EOF ;
     public final EObject entryRuleGSSExportSettingFromSize() throws RecognitionException {
         EObject current = null;
 
@@ -3332,8 +3176,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:1370:65: (iv_ruleGSSExportSettingFromSize= ruleGSSExportSettingFromSize EOF )
-            // InternalEXPORT.g:1371:2: iv_ruleGSSExportSettingFromSize= ruleGSSExportSettingFromSize EOF
+            // InternalEXPORT.g:1348:65: (iv_ruleGSSExportSettingFromSize= ruleGSSExportSettingFromSize EOF )
+            // InternalEXPORT.g:1349:2: iv_ruleGSSExportSettingFromSize= ruleGSSExportSettingFromSize EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSExportSettingFromSizeRule()); 
@@ -3364,7 +3208,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportSettingFromSize"
-    // InternalEXPORT.g:1377:1: ruleGSSExportSettingFromSize returns [EObject current=null] : (otherlv_0= 'GSSExportSettingFromSize' otherlv_1= '{' otherlv_2= 'sizeRef' otherlv_3= ':=' ( (lv_sizeRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalEXPORT.g:1355:1: ruleGSSExportSettingFromSize returns [EObject current=null] : (otherlv_0= 'GSSExportSettingFromSize' otherlv_1= '{' otherlv_2= 'sizeRef' otherlv_3= ':=' ( (lv_sizeRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
     public final EObject ruleGSSExportSettingFromSize() throws RecognitionException {
         EObject current = null;
 
@@ -3386,11 +3230,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:1383:2: ( (otherlv_0= 'GSSExportSettingFromSize' otherlv_1= '{' otherlv_2= 'sizeRef' otherlv_3= ':=' ( (lv_sizeRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalEXPORT.g:1384:2: (otherlv_0= 'GSSExportSettingFromSize' otherlv_1= '{' otherlv_2= 'sizeRef' otherlv_3= ':=' ( (lv_sizeRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalEXPORT.g:1361:2: ( (otherlv_0= 'GSSExportSettingFromSize' otherlv_1= '{' otherlv_2= 'sizeRef' otherlv_3= ':=' ( (lv_sizeRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
+            // InternalEXPORT.g:1362:2: (otherlv_0= 'GSSExportSettingFromSize' otherlv_1= '{' otherlv_2= 'sizeRef' otherlv_3= ':=' ( (lv_sizeRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
             {
-            // InternalEXPORT.g:1384:2: (otherlv_0= 'GSSExportSettingFromSize' otherlv_1= '{' otherlv_2= 'sizeRef' otherlv_3= ':=' ( (lv_sizeRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
-            // InternalEXPORT.g:1385:3: otherlv_0= 'GSSExportSettingFromSize' otherlv_1= '{' otherlv_2= 'sizeRef' otherlv_3= ':=' ( (lv_sizeRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
+            // InternalEXPORT.g:1362:2: (otherlv_0= 'GSSExportSettingFromSize' otherlv_1= '{' otherlv_2= 'sizeRef' otherlv_3= ':=' ( (lv_sizeRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalEXPORT.g:1363:3: otherlv_0= 'GSSExportSettingFromSize' otherlv_1= '{' otherlv_2= 'sizeRef' otherlv_3= ':=' ( (lv_sizeRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
             {
             otherlv_0=(Token)match(input,35,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3398,7 +3242,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSExportSettingFromSizeAccess().getGSSExportSettingFromSizeKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_29); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_28); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSExportSettingFromSizeAccess().getLeftCurlyBracketKeyword_1());
@@ -3410,17 +3254,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSExportSettingFromSizeAccess().getSizeRefKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSExportSettingFromSizeAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalEXPORT.g:1401:3: ( (lv_sizeRef_4_0= ruleINTEGER ) )
-            // InternalEXPORT.g:1402:4: (lv_sizeRef_4_0= ruleINTEGER )
+            // InternalEXPORT.g:1379:3: ( (lv_sizeRef_4_0= ruleINTEGER ) )
+            // InternalEXPORT.g:1380:4: (lv_sizeRef_4_0= ruleINTEGER )
             {
-            // InternalEXPORT.g:1402:4: (lv_sizeRef_4_0= ruleINTEGER )
-            // InternalEXPORT.g:1403:5: lv_sizeRef_4_0= ruleINTEGER
+            // InternalEXPORT.g:1380:4: (lv_sizeRef_4_0= ruleINTEGER )
+            // InternalEXPORT.g:1381:5: lv_sizeRef_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -3451,7 +3295,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_28); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_27); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSExportSettingFromSizeAccess().getSemicolonKeyword_5());
@@ -3469,11 +3313,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSExportSettingFromSizeAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalEXPORT.g:1432:3: ( (lv_toFieldRef_8_0= RULE_ID ) )
-            // InternalEXPORT.g:1433:4: (lv_toFieldRef_8_0= RULE_ID )
+            // InternalEXPORT.g:1410:3: ( (lv_toFieldRef_8_0= RULE_ID ) )
+            // InternalEXPORT.g:1411:4: (lv_toFieldRef_8_0= RULE_ID )
             {
-            // InternalEXPORT.g:1433:4: (lv_toFieldRef_8_0= RULE_ID )
-            // InternalEXPORT.g:1434:5: lv_toFieldRef_8_0= RULE_ID
+            // InternalEXPORT.g:1411:4: (lv_toFieldRef_8_0= RULE_ID )
+            // InternalEXPORT.g:1412:5: lv_toFieldRef_8_0= RULE_ID
             {
             lv_toFieldRef_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3499,7 +3343,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_13); if (state.failed) return current;
+            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_14); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSExportSettingFromSizeAccess().getSemicolonKeyword_9());
@@ -3542,7 +3386,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSExportSettingFromFile"
-    // InternalEXPORT.g:1466:1: entryRuleGSSExportSettingFromFile returns [EObject current=null] : iv_ruleGSSExportSettingFromFile= ruleGSSExportSettingFromFile EOF ;
+    // InternalEXPORT.g:1444:1: entryRuleGSSExportSettingFromFile returns [EObject current=null] : iv_ruleGSSExportSettingFromFile= ruleGSSExportSettingFromFile EOF ;
     public final EObject entryRuleGSSExportSettingFromFile() throws RecognitionException {
         EObject current = null;
 
@@ -3550,8 +3394,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:1466:65: (iv_ruleGSSExportSettingFromFile= ruleGSSExportSettingFromFile EOF )
-            // InternalEXPORT.g:1467:2: iv_ruleGSSExportSettingFromFile= ruleGSSExportSettingFromFile EOF
+            // InternalEXPORT.g:1444:65: (iv_ruleGSSExportSettingFromFile= ruleGSSExportSettingFromFile EOF )
+            // InternalEXPORT.g:1445:2: iv_ruleGSSExportSettingFromFile= ruleGSSExportSettingFromFile EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSExportSettingFromFileRule()); 
@@ -3582,7 +3426,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportSettingFromFile"
-    // InternalEXPORT.g:1473:1: ruleGSSExportSettingFromFile returns [EObject current=null] : (otherlv_0= 'GSSExportSettingFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'line' otherlv_19= ':=' ( (lv_line_20_0= ruleINTEGER ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) ;
+    // InternalEXPORT.g:1451:1: ruleGSSExportSettingFromFile returns [EObject current=null] : (otherlv_0= 'GSSExportSettingFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'line' otherlv_19= ':=' ( (lv_line_20_0= ruleINTEGER ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) ;
     public final EObject ruleGSSExportSettingFromFile() throws RecognitionException {
         EObject current = null;
 
@@ -3618,11 +3462,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:1479:2: ( (otherlv_0= 'GSSExportSettingFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'line' otherlv_19= ':=' ( (lv_line_20_0= ruleINTEGER ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) )
-            // InternalEXPORT.g:1480:2: (otherlv_0= 'GSSExportSettingFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'line' otherlv_19= ':=' ( (lv_line_20_0= ruleINTEGER ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
+            // InternalEXPORT.g:1457:2: ( (otherlv_0= 'GSSExportSettingFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'line' otherlv_19= ':=' ( (lv_line_20_0= ruleINTEGER ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) )
+            // InternalEXPORT.g:1458:2: (otherlv_0= 'GSSExportSettingFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'line' otherlv_19= ':=' ( (lv_line_20_0= ruleINTEGER ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
             {
-            // InternalEXPORT.g:1480:2: (otherlv_0= 'GSSExportSettingFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'line' otherlv_19= ':=' ( (lv_line_20_0= ruleINTEGER ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
-            // InternalEXPORT.g:1481:3: otherlv_0= 'GSSExportSettingFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'line' otherlv_19= ':=' ( (lv_line_20_0= ruleINTEGER ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';'
+            // InternalEXPORT.g:1458:2: (otherlv_0= 'GSSExportSettingFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'line' otherlv_19= ':=' ( (lv_line_20_0= ruleINTEGER ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
+            // InternalEXPORT.g:1459:3: otherlv_0= 'GSSExportSettingFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'line' otherlv_19= ':=' ( (lv_line_20_0= ruleINTEGER ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';'
             {
             otherlv_0=(Token)match(input,37,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3630,7 +3474,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSExportSettingFromFileAccess().getGSSExportSettingFromFileKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_30); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_29); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSExportSettingFromFileAccess().getLeftCurlyBracketKeyword_1());
@@ -3648,11 +3492,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSExportSettingFromFileAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalEXPORT.g:1497:3: ( (lv_file_4_0= RULE_ID ) )
-            // InternalEXPORT.g:1498:4: (lv_file_4_0= RULE_ID )
+            // InternalEXPORT.g:1475:3: ( (lv_file_4_0= RULE_ID ) )
+            // InternalEXPORT.g:1476:4: (lv_file_4_0= RULE_ID )
             {
-            // InternalEXPORT.g:1498:4: (lv_file_4_0= RULE_ID )
-            // InternalEXPORT.g:1499:5: lv_file_4_0= RULE_ID
+            // InternalEXPORT.g:1476:4: (lv_file_4_0= RULE_ID )
+            // InternalEXPORT.g:1477:5: lv_file_4_0= RULE_ID
             {
             lv_file_4_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3678,7 +3522,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_28); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_27); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSExportSettingFromFileAccess().getSemicolonKeyword_5());
@@ -3696,11 +3540,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSExportSettingFromFileAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalEXPORT.g:1527:3: ( (lv_toFieldRef_8_0= RULE_ID ) )
-            // InternalEXPORT.g:1528:4: (lv_toFieldRef_8_0= RULE_ID )
+            // InternalEXPORT.g:1505:3: ( (lv_toFieldRef_8_0= RULE_ID ) )
+            // InternalEXPORT.g:1506:4: (lv_toFieldRef_8_0= RULE_ID )
             {
-            // InternalEXPORT.g:1528:4: (lv_toFieldRef_8_0= RULE_ID )
-            // InternalEXPORT.g:1529:5: lv_toFieldRef_8_0= RULE_ID
+            // InternalEXPORT.g:1506:4: (lv_toFieldRef_8_0= RULE_ID )
+            // InternalEXPORT.g:1507:5: lv_toFieldRef_8_0= RULE_ID
             {
             lv_toFieldRef_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3726,22 +3570,22 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_31); if (state.failed) return current;
+            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_30); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSExportSettingFromFileAccess().getSemicolonKeyword_9());
               		
             }
-            // InternalEXPORT.g:1549:3: (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // InternalEXPORT.g:1527:3: (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA16_0==39) ) {
-                alt16=1;
+            if ( (LA13_0==39) ) {
+                alt13=1;
             }
-            switch (alt16) {
+            switch (alt13) {
                 case 1 :
-                    // InternalEXPORT.g:1550:4: otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';'
+                    // InternalEXPORT.g:1528:4: otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';'
                     {
                     otherlv_10=(Token)match(input,39,FollowSets000.FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3749,17 +3593,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_10, grammarAccess.getGSSExportSettingFromFileAccess().getOffsetKeyword_10_0());
                       			
                     }
-                    otherlv_11=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+                    otherlv_11=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_11, grammarAccess.getGSSExportSettingFromFileAccess().getColonEqualsSignKeyword_10_1());
                       			
                     }
-                    // InternalEXPORT.g:1558:4: ( (lv_offset_12_0= ruleINTEGER ) )
-                    // InternalEXPORT.g:1559:5: (lv_offset_12_0= ruleINTEGER )
+                    // InternalEXPORT.g:1536:4: ( (lv_offset_12_0= ruleINTEGER ) )
+                    // InternalEXPORT.g:1537:5: (lv_offset_12_0= ruleINTEGER )
                     {
-                    // InternalEXPORT.g:1559:5: (lv_offset_12_0= ruleINTEGER )
-                    // InternalEXPORT.g:1560:6: lv_offset_12_0= ruleINTEGER
+                    // InternalEXPORT.g:1537:5: (lv_offset_12_0= ruleINTEGER )
+                    // InternalEXPORT.g:1538:6: lv_offset_12_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3790,7 +3634,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_32); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_31); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_13, grammarAccess.getGSSExportSettingFromFileAccess().getSemicolonKeyword_10_3());
@@ -3802,16 +3646,16 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalEXPORT.g:1582:3: (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // InternalEXPORT.g:1560:3: (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA17_0==40) ) {
-                alt17=1;
+            if ( (LA14_0==40) ) {
+                alt14=1;
             }
-            switch (alt17) {
+            switch (alt14) {
                 case 1 :
-                    // InternalEXPORT.g:1583:4: otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';'
+                    // InternalEXPORT.g:1561:4: otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';'
                     {
                     otherlv_14=(Token)match(input,40,FollowSets000.FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3819,17 +3663,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_14, grammarAccess.getGSSExportSettingFromFileAccess().getSizeKeyword_11_0());
                       			
                     }
-                    otherlv_15=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_15, grammarAccess.getGSSExportSettingFromFileAccess().getColonEqualsSignKeyword_11_1());
                       			
                     }
-                    // InternalEXPORT.g:1591:4: ( (lv_size_16_0= ruleINTEGER ) )
-                    // InternalEXPORT.g:1592:5: (lv_size_16_0= ruleINTEGER )
+                    // InternalEXPORT.g:1569:4: ( (lv_size_16_0= ruleINTEGER ) )
+                    // InternalEXPORT.g:1570:5: (lv_size_16_0= ruleINTEGER )
                     {
-                    // InternalEXPORT.g:1592:5: (lv_size_16_0= ruleINTEGER )
-                    // InternalEXPORT.g:1593:6: lv_size_16_0= ruleINTEGER
+                    // InternalEXPORT.g:1570:5: (lv_size_16_0= ruleINTEGER )
+                    // InternalEXPORT.g:1571:6: lv_size_16_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3860,7 +3704,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_17=(Token)match(input,13,FollowSets000.FOLLOW_33); if (state.failed) return current;
+                    otherlv_17=(Token)match(input,13,FollowSets000.FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_17, grammarAccess.getGSSExportSettingFromFileAccess().getSemicolonKeyword_11_3());
@@ -3872,16 +3716,16 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalEXPORT.g:1615:3: (otherlv_18= 'line' otherlv_19= ':=' ( (lv_line_20_0= ruleINTEGER ) ) otherlv_21= ';' )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // InternalEXPORT.g:1593:3: (otherlv_18= 'line' otherlv_19= ':=' ( (lv_line_20_0= ruleINTEGER ) ) otherlv_21= ';' )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA18_0==29) ) {
-                alt18=1;
+            if ( (LA15_0==29) ) {
+                alt15=1;
             }
-            switch (alt18) {
+            switch (alt15) {
                 case 1 :
-                    // InternalEXPORT.g:1616:4: otherlv_18= 'line' otherlv_19= ':=' ( (lv_line_20_0= ruleINTEGER ) ) otherlv_21= ';'
+                    // InternalEXPORT.g:1594:4: otherlv_18= 'line' otherlv_19= ':=' ( (lv_line_20_0= ruleINTEGER ) ) otherlv_21= ';'
                     {
                     otherlv_18=(Token)match(input,29,FollowSets000.FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3889,17 +3733,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_18, grammarAccess.getGSSExportSettingFromFileAccess().getLineKeyword_12_0());
                       			
                     }
-                    otherlv_19=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+                    otherlv_19=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_19, grammarAccess.getGSSExportSettingFromFileAccess().getColonEqualsSignKeyword_12_1());
                       			
                     }
-                    // InternalEXPORT.g:1624:4: ( (lv_line_20_0= ruleINTEGER ) )
-                    // InternalEXPORT.g:1625:5: (lv_line_20_0= ruleINTEGER )
+                    // InternalEXPORT.g:1602:4: ( (lv_line_20_0= ruleINTEGER ) )
+                    // InternalEXPORT.g:1603:5: (lv_line_20_0= ruleINTEGER )
                     {
-                    // InternalEXPORT.g:1625:5: (lv_line_20_0= ruleINTEGER )
-                    // InternalEXPORT.g:1626:6: lv_line_20_0= ruleINTEGER
+                    // InternalEXPORT.g:1603:5: (lv_line_20_0= ruleINTEGER )
+                    // InternalEXPORT.g:1604:6: lv_line_20_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3930,7 +3774,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_21=(Token)match(input,13,FollowSets000.FOLLOW_13); if (state.failed) return current;
+                    otherlv_21=(Token)match(input,13,FollowSets000.FOLLOW_14); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_21, grammarAccess.getGSSExportSettingFromFileAccess().getSemicolonKeyword_12_3());
@@ -3979,7 +3823,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSExportSettingFromField"
-    // InternalEXPORT.g:1660:1: entryRuleGSSExportSettingFromField returns [EObject current=null] : iv_ruleGSSExportSettingFromField= ruleGSSExportSettingFromField EOF ;
+    // InternalEXPORT.g:1638:1: entryRuleGSSExportSettingFromField returns [EObject current=null] : iv_ruleGSSExportSettingFromField= ruleGSSExportSettingFromField EOF ;
     public final EObject entryRuleGSSExportSettingFromField() throws RecognitionException {
         EObject current = null;
 
@@ -3987,8 +3831,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:1660:66: (iv_ruleGSSExportSettingFromField= ruleGSSExportSettingFromField EOF )
-            // InternalEXPORT.g:1661:2: iv_ruleGSSExportSettingFromField= ruleGSSExportSettingFromField EOF
+            // InternalEXPORT.g:1638:66: (iv_ruleGSSExportSettingFromField= ruleGSSExportSettingFromField EOF )
+            // InternalEXPORT.g:1639:2: iv_ruleGSSExportSettingFromField= ruleGSSExportSettingFromField EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSExportSettingFromFieldRule()); 
@@ -4019,7 +3863,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportSettingFromField"
-    // InternalEXPORT.g:1667:1: ruleGSSExportSettingFromField returns [EObject current=null] : (otherlv_0= 'GSSExportSettingFromField' otherlv_1= '{' otherlv_2= 'fieldRef' otherlv_3= ':=' ( (lv_fieldRef_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalEXPORT.g:1645:1: ruleGSSExportSettingFromField returns [EObject current=null] : (otherlv_0= 'GSSExportSettingFromField' otherlv_1= '{' otherlv_2= 'fieldRef' otherlv_3= ':=' ( (lv_fieldRef_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
     public final EObject ruleGSSExportSettingFromField() throws RecognitionException {
         EObject current = null;
 
@@ -4040,11 +3884,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:1673:2: ( (otherlv_0= 'GSSExportSettingFromField' otherlv_1= '{' otherlv_2= 'fieldRef' otherlv_3= ':=' ( (lv_fieldRef_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalEXPORT.g:1674:2: (otherlv_0= 'GSSExportSettingFromField' otherlv_1= '{' otherlv_2= 'fieldRef' otherlv_3= ':=' ( (lv_fieldRef_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalEXPORT.g:1651:2: ( (otherlv_0= 'GSSExportSettingFromField' otherlv_1= '{' otherlv_2= 'fieldRef' otherlv_3= ':=' ( (lv_fieldRef_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
+            // InternalEXPORT.g:1652:2: (otherlv_0= 'GSSExportSettingFromField' otherlv_1= '{' otherlv_2= 'fieldRef' otherlv_3= ':=' ( (lv_fieldRef_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
             {
-            // InternalEXPORT.g:1674:2: (otherlv_0= 'GSSExportSettingFromField' otherlv_1= '{' otherlv_2= 'fieldRef' otherlv_3= ':=' ( (lv_fieldRef_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
-            // InternalEXPORT.g:1675:3: otherlv_0= 'GSSExportSettingFromField' otherlv_1= '{' otherlv_2= 'fieldRef' otherlv_3= ':=' ( (lv_fieldRef_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
+            // InternalEXPORT.g:1652:2: (otherlv_0= 'GSSExportSettingFromField' otherlv_1= '{' otherlv_2= 'fieldRef' otherlv_3= ':=' ( (lv_fieldRef_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalEXPORT.g:1653:3: otherlv_0= 'GSSExportSettingFromField' otherlv_1= '{' otherlv_2= 'fieldRef' otherlv_3= ':=' ( (lv_fieldRef_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
             {
             otherlv_0=(Token)match(input,41,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4052,7 +3896,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSExportSettingFromFieldAccess().getGSSExportSettingFromFieldKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_34); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_33); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSExportSettingFromFieldAccess().getLeftCurlyBracketKeyword_1());
@@ -4070,11 +3914,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSExportSettingFromFieldAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalEXPORT.g:1691:3: ( (lv_fieldRef_4_0= RULE_ID ) )
-            // InternalEXPORT.g:1692:4: (lv_fieldRef_4_0= RULE_ID )
+            // InternalEXPORT.g:1669:3: ( (lv_fieldRef_4_0= RULE_ID ) )
+            // InternalEXPORT.g:1670:4: (lv_fieldRef_4_0= RULE_ID )
             {
-            // InternalEXPORT.g:1692:4: (lv_fieldRef_4_0= RULE_ID )
-            // InternalEXPORT.g:1693:5: lv_fieldRef_4_0= RULE_ID
+            // InternalEXPORT.g:1670:4: (lv_fieldRef_4_0= RULE_ID )
+            // InternalEXPORT.g:1671:5: lv_fieldRef_4_0= RULE_ID
             {
             lv_fieldRef_4_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4100,7 +3944,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_28); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_27); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSExportSettingFromFieldAccess().getSemicolonKeyword_5());
@@ -4118,11 +3962,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSExportSettingFromFieldAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalEXPORT.g:1721:3: ( (lv_toFieldRef_8_0= RULE_ID ) )
-            // InternalEXPORT.g:1722:4: (lv_toFieldRef_8_0= RULE_ID )
+            // InternalEXPORT.g:1699:3: ( (lv_toFieldRef_8_0= RULE_ID ) )
+            // InternalEXPORT.g:1700:4: (lv_toFieldRef_8_0= RULE_ID )
             {
-            // InternalEXPORT.g:1722:4: (lv_toFieldRef_8_0= RULE_ID )
-            // InternalEXPORT.g:1723:5: lv_toFieldRef_8_0= RULE_ID
+            // InternalEXPORT.g:1700:4: (lv_toFieldRef_8_0= RULE_ID )
+            // InternalEXPORT.g:1701:5: lv_toFieldRef_8_0= RULE_ID
             {
             lv_toFieldRef_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4148,7 +3992,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_13); if (state.failed) return current;
+            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_14); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSExportSettingFromFieldAccess().getSemicolonKeyword_9());
@@ -4191,7 +4035,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSExportSettingAIFromConst"
-    // InternalEXPORT.g:1755:1: entryRuleGSSExportSettingAIFromConst returns [EObject current=null] : iv_ruleGSSExportSettingAIFromConst= ruleGSSExportSettingAIFromConst EOF ;
+    // InternalEXPORT.g:1733:1: entryRuleGSSExportSettingAIFromConst returns [EObject current=null] : iv_ruleGSSExportSettingAIFromConst= ruleGSSExportSettingAIFromConst EOF ;
     public final EObject entryRuleGSSExportSettingAIFromConst() throws RecognitionException {
         EObject current = null;
 
@@ -4199,8 +4043,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:1755:68: (iv_ruleGSSExportSettingAIFromConst= ruleGSSExportSettingAIFromConst EOF )
-            // InternalEXPORT.g:1756:2: iv_ruleGSSExportSettingAIFromConst= ruleGSSExportSettingAIFromConst EOF
+            // InternalEXPORT.g:1733:68: (iv_ruleGSSExportSettingAIFromConst= ruleGSSExportSettingAIFromConst EOF )
+            // InternalEXPORT.g:1734:2: iv_ruleGSSExportSettingAIFromConst= ruleGSSExportSettingAIFromConst EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSExportSettingAIFromConstRule()); 
@@ -4231,7 +4075,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportSettingAIFromConst"
-    // InternalEXPORT.g:1762:1: ruleGSSExportSettingAIFromConst returns [EObject current=null] : (otherlv_0= 'GSSExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalEXPORT.g:1740:1: ruleGSSExportSettingAIFromConst returns [EObject current=null] : (otherlv_0= 'GSSExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
     public final EObject ruleGSSExportSettingAIFromConst() throws RecognitionException {
         EObject current = null;
 
@@ -4253,11 +4097,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:1768:2: ( (otherlv_0= 'GSSExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalEXPORT.g:1769:2: (otherlv_0= 'GSSExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalEXPORT.g:1746:2: ( (otherlv_0= 'GSSExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
+            // InternalEXPORT.g:1747:2: (otherlv_0= 'GSSExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
             {
-            // InternalEXPORT.g:1769:2: (otherlv_0= 'GSSExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
-            // InternalEXPORT.g:1770:3: otherlv_0= 'GSSExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
+            // InternalEXPORT.g:1747:2: (otherlv_0= 'GSSExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalEXPORT.g:1748:3: otherlv_0= 'GSSExportSettingAIFromConst' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
             {
             otherlv_0=(Token)match(input,43,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4265,7 +4109,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSExportSettingAIFromConstAccess().getGSSExportSettingAIFromConstKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_27); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_26); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSExportSettingAIFromConstAccess().getLeftCurlyBracketKeyword_1());
@@ -4277,17 +4121,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSExportSettingAIFromConstAccess().getValueKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSExportSettingAIFromConstAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalEXPORT.g:1786:3: ( (lv_value_4_0= ruleINTEGER ) )
-            // InternalEXPORT.g:1787:4: (lv_value_4_0= ruleINTEGER )
+            // InternalEXPORT.g:1764:3: ( (lv_value_4_0= ruleINTEGER ) )
+            // InternalEXPORT.g:1765:4: (lv_value_4_0= ruleINTEGER )
             {
-            // InternalEXPORT.g:1787:4: (lv_value_4_0= ruleINTEGER )
-            // InternalEXPORT.g:1788:5: lv_value_4_0= ruleINTEGER
+            // InternalEXPORT.g:1765:4: (lv_value_4_0= ruleINTEGER )
+            // InternalEXPORT.g:1766:5: lv_value_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -4318,7 +4162,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_28); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_27); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSExportSettingAIFromConstAccess().getSemicolonKeyword_5());
@@ -4336,11 +4180,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSExportSettingAIFromConstAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalEXPORT.g:1817:3: ( (lv_toFieldRef_8_0= RULE_ID ) )
-            // InternalEXPORT.g:1818:4: (lv_toFieldRef_8_0= RULE_ID )
+            // InternalEXPORT.g:1795:3: ( (lv_toFieldRef_8_0= RULE_ID ) )
+            // InternalEXPORT.g:1796:4: (lv_toFieldRef_8_0= RULE_ID )
             {
-            // InternalEXPORT.g:1818:4: (lv_toFieldRef_8_0= RULE_ID )
-            // InternalEXPORT.g:1819:5: lv_toFieldRef_8_0= RULE_ID
+            // InternalEXPORT.g:1796:4: (lv_toFieldRef_8_0= RULE_ID )
+            // InternalEXPORT.g:1797:5: lv_toFieldRef_8_0= RULE_ID
             {
             lv_toFieldRef_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4366,7 +4210,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_13); if (state.failed) return current;
+            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_14); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSExportSettingAIFromConstAccess().getSemicolonKeyword_9());
@@ -4409,7 +4253,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSExportSettingAIFromFile"
-    // InternalEXPORT.g:1851:1: entryRuleGSSExportSettingAIFromFile returns [EObject current=null] : iv_ruleGSSExportSettingAIFromFile= ruleGSSExportSettingAIFromFile EOF ;
+    // InternalEXPORT.g:1829:1: entryRuleGSSExportSettingAIFromFile returns [EObject current=null] : iv_ruleGSSExportSettingAIFromFile= ruleGSSExportSettingAIFromFile EOF ;
     public final EObject entryRuleGSSExportSettingAIFromFile() throws RecognitionException {
         EObject current = null;
 
@@ -4417,8 +4261,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:1851:67: (iv_ruleGSSExportSettingAIFromFile= ruleGSSExportSettingAIFromFile EOF )
-            // InternalEXPORT.g:1852:2: iv_ruleGSSExportSettingAIFromFile= ruleGSSExportSettingAIFromFile EOF
+            // InternalEXPORT.g:1829:67: (iv_ruleGSSExportSettingAIFromFile= ruleGSSExportSettingAIFromFile EOF )
+            // InternalEXPORT.g:1830:2: iv_ruleGSSExportSettingAIFromFile= ruleGSSExportSettingAIFromFile EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSExportSettingAIFromFileRule()); 
@@ -4449,7 +4293,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportSettingAIFromFile"
-    // InternalEXPORT.g:1858:1: ruleGSSExportSettingAIFromFile returns [EObject current=null] : (otherlv_0= 'GSSExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' ) ;
+    // InternalEXPORT.g:1836:1: ruleGSSExportSettingAIFromFile returns [EObject current=null] : (otherlv_0= 'GSSExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' ) ;
     public final EObject ruleGSSExportSettingAIFromFile() throws RecognitionException {
         EObject current = null;
 
@@ -4490,11 +4334,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:1864:2: ( (otherlv_0= 'GSSExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' ) )
-            // InternalEXPORT.g:1865:2: (otherlv_0= 'GSSExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' )
+            // InternalEXPORT.g:1842:2: ( (otherlv_0= 'GSSExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' ) )
+            // InternalEXPORT.g:1843:2: (otherlv_0= 'GSSExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' )
             {
-            // InternalEXPORT.g:1865:2: (otherlv_0= 'GSSExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' )
-            // InternalEXPORT.g:1866:3: otherlv_0= 'GSSExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';'
+            // InternalEXPORT.g:1843:2: (otherlv_0= 'GSSExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';' )
+            // InternalEXPORT.g:1844:3: otherlv_0= 'GSSExportSettingAIFromFile' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'toFieldRef' otherlv_7= ':=' ( (lv_toFieldRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'toArrayIndex' otherlv_11= ':=' ( (lv_toArrayIndex_12_0= ruleINTEGER ) ) otherlv_13= ';' (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )? (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )? otherlv_26= '}' otherlv_27= ';'
             {
             otherlv_0=(Token)match(input,44,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4502,7 +4346,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSExportSettingAIFromFileAccess().getGSSExportSettingAIFromFileKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_30); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_29); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSExportSettingAIFromFileAccess().getLeftCurlyBracketKeyword_1());
@@ -4520,11 +4364,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSExportSettingAIFromFileAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalEXPORT.g:1882:3: ( (lv_file_4_0= RULE_ID ) )
-            // InternalEXPORT.g:1883:4: (lv_file_4_0= RULE_ID )
+            // InternalEXPORT.g:1860:3: ( (lv_file_4_0= RULE_ID ) )
+            // InternalEXPORT.g:1861:4: (lv_file_4_0= RULE_ID )
             {
-            // InternalEXPORT.g:1883:4: (lv_file_4_0= RULE_ID )
-            // InternalEXPORT.g:1884:5: lv_file_4_0= RULE_ID
+            // InternalEXPORT.g:1861:4: (lv_file_4_0= RULE_ID )
+            // InternalEXPORT.g:1862:5: lv_file_4_0= RULE_ID
             {
             lv_file_4_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4550,7 +4394,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_28); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_27); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSExportSettingAIFromFileAccess().getSemicolonKeyword_5());
@@ -4568,11 +4412,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSExportSettingAIFromFileAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalEXPORT.g:1912:3: ( (lv_toFieldRef_8_0= RULE_ID ) )
-            // InternalEXPORT.g:1913:4: (lv_toFieldRef_8_0= RULE_ID )
+            // InternalEXPORT.g:1890:3: ( (lv_toFieldRef_8_0= RULE_ID ) )
+            // InternalEXPORT.g:1891:4: (lv_toFieldRef_8_0= RULE_ID )
             {
-            // InternalEXPORT.g:1913:4: (lv_toFieldRef_8_0= RULE_ID )
-            // InternalEXPORT.g:1914:5: lv_toFieldRef_8_0= RULE_ID
+            // InternalEXPORT.g:1891:4: (lv_toFieldRef_8_0= RULE_ID )
+            // InternalEXPORT.g:1892:5: lv_toFieldRef_8_0= RULE_ID
             {
             lv_toFieldRef_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4598,7 +4442,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_35); if (state.failed) return current;
+            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_34); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSExportSettingAIFromFileAccess().getSemicolonKeyword_9());
@@ -4610,17 +4454,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSExportSettingAIFromFileAccess().getToArrayIndexKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_11=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSExportSettingAIFromFileAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalEXPORT.g:1942:3: ( (lv_toArrayIndex_12_0= ruleINTEGER ) )
-            // InternalEXPORT.g:1943:4: (lv_toArrayIndex_12_0= ruleINTEGER )
+            // InternalEXPORT.g:1920:3: ( (lv_toArrayIndex_12_0= ruleINTEGER ) )
+            // InternalEXPORT.g:1921:4: (lv_toArrayIndex_12_0= ruleINTEGER )
             {
-            // InternalEXPORT.g:1943:4: (lv_toArrayIndex_12_0= ruleINTEGER )
-            // InternalEXPORT.g:1944:5: lv_toArrayIndex_12_0= ruleINTEGER
+            // InternalEXPORT.g:1921:4: (lv_toArrayIndex_12_0= ruleINTEGER )
+            // InternalEXPORT.g:1922:5: lv_toArrayIndex_12_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -4651,22 +4495,22 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_31); if (state.failed) return current;
+            otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_30); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSExportSettingAIFromFileAccess().getSemicolonKeyword_13());
               		
             }
-            // InternalEXPORT.g:1965:3: (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // InternalEXPORT.g:1943:3: (otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA19_0==39) ) {
-                alt19=1;
+            if ( (LA16_0==39) ) {
+                alt16=1;
             }
-            switch (alt19) {
+            switch (alt16) {
                 case 1 :
-                    // InternalEXPORT.g:1966:4: otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';'
+                    // InternalEXPORT.g:1944:4: otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';'
                     {
                     otherlv_14=(Token)match(input,39,FollowSets000.FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4674,17 +4518,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_14, grammarAccess.getGSSExportSettingAIFromFileAccess().getOffsetKeyword_14_0());
                       			
                     }
-                    otherlv_15=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_15, grammarAccess.getGSSExportSettingAIFromFileAccess().getColonEqualsSignKeyword_14_1());
                       			
                     }
-                    // InternalEXPORT.g:1974:4: ( (lv_offset_16_0= ruleINTEGER ) )
-                    // InternalEXPORT.g:1975:5: (lv_offset_16_0= ruleINTEGER )
+                    // InternalEXPORT.g:1952:4: ( (lv_offset_16_0= ruleINTEGER ) )
+                    // InternalEXPORT.g:1953:5: (lv_offset_16_0= ruleINTEGER )
                     {
-                    // InternalEXPORT.g:1975:5: (lv_offset_16_0= ruleINTEGER )
-                    // InternalEXPORT.g:1976:6: lv_offset_16_0= ruleINTEGER
+                    // InternalEXPORT.g:1953:5: (lv_offset_16_0= ruleINTEGER )
+                    // InternalEXPORT.g:1954:6: lv_offset_16_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4715,7 +4559,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_17=(Token)match(input,13,FollowSets000.FOLLOW_32); if (state.failed) return current;
+                    otherlv_17=(Token)match(input,13,FollowSets000.FOLLOW_31); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_17, grammarAccess.getGSSExportSettingAIFromFileAccess().getSemicolonKeyword_14_3());
@@ -4727,16 +4571,16 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalEXPORT.g:1998:3: (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // InternalEXPORT.g:1976:3: (otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA20_0==40) ) {
-                alt20=1;
+            if ( (LA17_0==40) ) {
+                alt17=1;
             }
-            switch (alt20) {
+            switch (alt17) {
                 case 1 :
-                    // InternalEXPORT.g:1999:4: otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';'
+                    // InternalEXPORT.g:1977:4: otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';'
                     {
                     otherlv_18=(Token)match(input,40,FollowSets000.FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4744,17 +4588,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_18, grammarAccess.getGSSExportSettingAIFromFileAccess().getSizeKeyword_15_0());
                       			
                     }
-                    otherlv_19=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+                    otherlv_19=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_19, grammarAccess.getGSSExportSettingAIFromFileAccess().getColonEqualsSignKeyword_15_1());
                       			
                     }
-                    // InternalEXPORT.g:2007:4: ( (lv_size_20_0= ruleINTEGER ) )
-                    // InternalEXPORT.g:2008:5: (lv_size_20_0= ruleINTEGER )
+                    // InternalEXPORT.g:1985:4: ( (lv_size_20_0= ruleINTEGER ) )
+                    // InternalEXPORT.g:1986:5: (lv_size_20_0= ruleINTEGER )
                     {
-                    // InternalEXPORT.g:2008:5: (lv_size_20_0= ruleINTEGER )
-                    // InternalEXPORT.g:2009:6: lv_size_20_0= ruleINTEGER
+                    // InternalEXPORT.g:1986:5: (lv_size_20_0= ruleINTEGER )
+                    // InternalEXPORT.g:1987:6: lv_size_20_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4785,7 +4629,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_21=(Token)match(input,13,FollowSets000.FOLLOW_33); if (state.failed) return current;
+                    otherlv_21=(Token)match(input,13,FollowSets000.FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_21, grammarAccess.getGSSExportSettingAIFromFileAccess().getSemicolonKeyword_15_3());
@@ -4797,16 +4641,16 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalEXPORT.g:2031:3: (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // InternalEXPORT.g:2009:3: (otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';' )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA21_0==29) ) {
-                alt21=1;
+            if ( (LA18_0==29) ) {
+                alt18=1;
             }
-            switch (alt21) {
+            switch (alt18) {
                 case 1 :
-                    // InternalEXPORT.g:2032:4: otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';'
+                    // InternalEXPORT.g:2010:4: otherlv_22= 'line' otherlv_23= ':=' ( (lv_line_24_0= ruleINTEGER ) ) otherlv_25= ';'
                     {
                     otherlv_22=(Token)match(input,29,FollowSets000.FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4814,17 +4658,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_22, grammarAccess.getGSSExportSettingAIFromFileAccess().getLineKeyword_16_0());
                       			
                     }
-                    otherlv_23=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+                    otherlv_23=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_23, grammarAccess.getGSSExportSettingAIFromFileAccess().getColonEqualsSignKeyword_16_1());
                       			
                     }
-                    // InternalEXPORT.g:2040:4: ( (lv_line_24_0= ruleINTEGER ) )
-                    // InternalEXPORT.g:2041:5: (lv_line_24_0= ruleINTEGER )
+                    // InternalEXPORT.g:2018:4: ( (lv_line_24_0= ruleINTEGER ) )
+                    // InternalEXPORT.g:2019:5: (lv_line_24_0= ruleINTEGER )
                     {
-                    // InternalEXPORT.g:2041:5: (lv_line_24_0= ruleINTEGER )
-                    // InternalEXPORT.g:2042:6: lv_line_24_0= ruleINTEGER
+                    // InternalEXPORT.g:2019:5: (lv_line_24_0= ruleINTEGER )
+                    // InternalEXPORT.g:2020:6: lv_line_24_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4855,7 +4699,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_25=(Token)match(input,13,FollowSets000.FOLLOW_13); if (state.failed) return current;
+                    otherlv_25=(Token)match(input,13,FollowSets000.FOLLOW_14); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_25, grammarAccess.getGSSExportSettingAIFromFileAccess().getSemicolonKeyword_16_3());
@@ -4904,7 +4748,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSExportActivateDICs"
-    // InternalEXPORT.g:2076:1: entryRuleGSSExportActivateDICs returns [EObject current=null] : iv_ruleGSSExportActivateDICs= ruleGSSExportActivateDICs EOF ;
+    // InternalEXPORT.g:2054:1: entryRuleGSSExportActivateDICs returns [EObject current=null] : iv_ruleGSSExportActivateDICs= ruleGSSExportActivateDICs EOF ;
     public final EObject entryRuleGSSExportActivateDICs() throws RecognitionException {
         EObject current = null;
 
@@ -4912,8 +4756,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:2076:62: (iv_ruleGSSExportActivateDICs= ruleGSSExportActivateDICs EOF )
-            // InternalEXPORT.g:2077:2: iv_ruleGSSExportActivateDICs= ruleGSSExportActivateDICs EOF
+            // InternalEXPORT.g:2054:62: (iv_ruleGSSExportActivateDICs= ruleGSSExportActivateDICs EOF )
+            // InternalEXPORT.g:2055:2: iv_ruleGSSExportActivateDICs= ruleGSSExportActivateDICs EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSExportActivateDICsRule()); 
@@ -4944,7 +4788,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportActivateDICs"
-    // InternalEXPORT.g:2083:1: ruleGSSExportActivateDICs returns [EObject current=null] : ( () otherlv_1= 'GSSExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleGSSExportDIC ) )* otherlv_4= '}' otherlv_5= ';' ) ;
+    // InternalEXPORT.g:2061:1: ruleGSSExportActivateDICs returns [EObject current=null] : ( () otherlv_1= 'GSSExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleGSSExportDIC ) )+ otherlv_4= '}' otherlv_5= ';' ) ;
     public final EObject ruleGSSExportActivateDICs() throws RecognitionException {
         EObject current = null;
 
@@ -4959,14 +4803,14 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2089:2: ( ( () otherlv_1= 'GSSExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleGSSExportDIC ) )* otherlv_4= '}' otherlv_5= ';' ) )
-            // InternalEXPORT.g:2090:2: ( () otherlv_1= 'GSSExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleGSSExportDIC ) )* otherlv_4= '}' otherlv_5= ';' )
+            // InternalEXPORT.g:2067:2: ( ( () otherlv_1= 'GSSExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleGSSExportDIC ) )+ otherlv_4= '}' otherlv_5= ';' ) )
+            // InternalEXPORT.g:2068:2: ( () otherlv_1= 'GSSExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleGSSExportDIC ) )+ otherlv_4= '}' otherlv_5= ';' )
             {
-            // InternalEXPORT.g:2090:2: ( () otherlv_1= 'GSSExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleGSSExportDIC ) )* otherlv_4= '}' otherlv_5= ';' )
-            // InternalEXPORT.g:2091:3: () otherlv_1= 'GSSExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleGSSExportDIC ) )* otherlv_4= '}' otherlv_5= ';'
+            // InternalEXPORT.g:2068:2: ( () otherlv_1= 'GSSExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleGSSExportDIC ) )+ otherlv_4= '}' otherlv_5= ';' )
+            // InternalEXPORT.g:2069:3: () otherlv_1= 'GSSExportActivateDICs' otherlv_2= '{' ( (lv_DIC_3_0= ruleGSSExportDIC ) )+ otherlv_4= '}' otherlv_5= ';'
             {
-            // InternalEXPORT.g:2091:3: ()
-            // InternalEXPORT.g:2092:4: 
+            // InternalEXPORT.g:2069:3: ()
+            // InternalEXPORT.g:2070:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -4989,29 +4833,30 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getGSSExportActivateDICsAccess().getGSSExportActivateDICsKeyword_1());
               		
             }
-            otherlv_2=(Token)match(input,15,FollowSets000.FOLLOW_36); if (state.failed) return current;
+            otherlv_2=(Token)match(input,15,FollowSets000.FOLLOW_35); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getGSSExportActivateDICsAccess().getLeftCurlyBracketKeyword_2());
               		
             }
-            // InternalEXPORT.g:2109:3: ( (lv_DIC_3_0= ruleGSSExportDIC ) )*
-            loop22:
+            // InternalEXPORT.g:2087:3: ( (lv_DIC_3_0= ruleGSSExportDIC ) )+
+            int cnt19=0;
+            loop19:
             do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                if ( (LA22_0==47) ) {
-                    alt22=1;
+                if ( (LA19_0==47) ) {
+                    alt19=1;
                 }
 
 
-                switch (alt22) {
+                switch (alt19) {
             	case 1 :
-            	    // InternalEXPORT.g:2110:4: (lv_DIC_3_0= ruleGSSExportDIC )
+            	    // InternalEXPORT.g:2088:4: (lv_DIC_3_0= ruleGSSExportDIC )
             	    {
-            	    // InternalEXPORT.g:2110:4: (lv_DIC_3_0= ruleGSSExportDIC )
-            	    // InternalEXPORT.g:2111:5: lv_DIC_3_0= ruleGSSExportDIC
+            	    // InternalEXPORT.g:2088:4: (lv_DIC_3_0= ruleGSSExportDIC )
+            	    // InternalEXPORT.g:2089:5: lv_DIC_3_0= ruleGSSExportDIC
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -5044,8 +4889,13 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop22;
+            	    if ( cnt19 >= 1 ) break loop19;
+            	    if (state.backtracking>0) {state.failed=true; return current;}
+                        EarlyExitException eee =
+                            new EarlyExitException(19, input);
+                        throw eee;
                 }
+                cnt19++;
             } while (true);
 
             otherlv_4=(Token)match(input,21,FollowSets000.FOLLOW_5); if (state.failed) return current;
@@ -5085,7 +4935,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSExportDIC"
-    // InternalEXPORT.g:2140:1: entryRuleGSSExportDIC returns [EObject current=null] : iv_ruleGSSExportDIC= ruleGSSExportDIC EOF ;
+    // InternalEXPORT.g:2118:1: entryRuleGSSExportDIC returns [EObject current=null] : iv_ruleGSSExportDIC= ruleGSSExportDIC EOF ;
     public final EObject entryRuleGSSExportDIC() throws RecognitionException {
         EObject current = null;
 
@@ -5093,8 +4943,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:2140:53: (iv_ruleGSSExportDIC= ruleGSSExportDIC EOF )
-            // InternalEXPORT.g:2141:2: iv_ruleGSSExportDIC= ruleGSSExportDIC EOF
+            // InternalEXPORT.g:2118:53: (iv_ruleGSSExportDIC= ruleGSSExportDIC EOF )
+            // InternalEXPORT.g:2119:2: iv_ruleGSSExportDIC= ruleGSSExportDIC EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSExportDICRule()); 
@@ -5125,7 +4975,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportDIC"
-    // InternalEXPORT.g:2147:1: ruleGSSExportDIC returns [EObject current=null] : (otherlv_0= 'GSSExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalEXPORT.g:2125:1: ruleGSSExportDIC returns [EObject current=null] : (otherlv_0= 'GSSExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
     public final EObject ruleGSSExportDIC() throws RecognitionException {
         EObject current = null;
 
@@ -5147,11 +4997,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2153:2: ( (otherlv_0= 'GSSExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalEXPORT.g:2154:2: (otherlv_0= 'GSSExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalEXPORT.g:2131:2: ( (otherlv_0= 'GSSExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
+            // InternalEXPORT.g:2132:2: (otherlv_0= 'GSSExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
             {
-            // InternalEXPORT.g:2154:2: (otherlv_0= 'GSSExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
-            // InternalEXPORT.g:2155:3: otherlv_0= 'GSSExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
+            // InternalEXPORT.g:2132:2: (otherlv_0= 'GSSExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalEXPORT.g:2133:3: otherlv_0= 'GSSExportDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'DICRef' otherlv_7= ':=' ( (lv_DICRef_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
             {
             otherlv_0=(Token)match(input,47,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5159,7 +5009,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSExportDICAccess().getGSSExportDICKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_17); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSExportDICAccess().getLeftCurlyBracketKeyword_1());
@@ -5171,17 +5021,17 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSExportDICAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSExportDICAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalEXPORT.g:2171:3: ( (lv_id_4_0= ruleINTEGER ) )
-            // InternalEXPORT.g:2172:4: (lv_id_4_0= ruleINTEGER )
+            // InternalEXPORT.g:2149:3: ( (lv_id_4_0= ruleINTEGER ) )
+            // InternalEXPORT.g:2150:4: (lv_id_4_0= ruleINTEGER )
             {
-            // InternalEXPORT.g:2172:4: (lv_id_4_0= ruleINTEGER )
-            // InternalEXPORT.g:2173:5: lv_id_4_0= ruleINTEGER
+            // InternalEXPORT.g:2150:4: (lv_id_4_0= ruleINTEGER )
+            // InternalEXPORT.g:2151:5: lv_id_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -5230,11 +5080,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSExportDICAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalEXPORT.g:2202:3: ( (lv_DICRef_8_0= RULE_ID ) )
-            // InternalEXPORT.g:2203:4: (lv_DICRef_8_0= RULE_ID )
+            // InternalEXPORT.g:2180:3: ( (lv_DICRef_8_0= RULE_ID ) )
+            // InternalEXPORT.g:2181:4: (lv_DICRef_8_0= RULE_ID )
             {
-            // InternalEXPORT.g:2203:4: (lv_DICRef_8_0= RULE_ID )
-            // InternalEXPORT.g:2204:5: lv_DICRef_8_0= RULE_ID
+            // InternalEXPORT.g:2181:4: (lv_DICRef_8_0= RULE_ID )
+            // InternalEXPORT.g:2182:5: lv_DICRef_8_0= RULE_ID
             {
             lv_DICRef_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5260,7 +5110,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_13); if (state.failed) return current;
+            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_14); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSExportDICAccess().getSemicolonKeyword_9());
@@ -5303,7 +5153,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalEXPORT.g:2236:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalEXPORT.g:2214:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -5311,8 +5161,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:2236:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalEXPORT.g:2237:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalEXPORT.g:2214:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalEXPORT.g:2215:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameRule()); 
@@ -5343,7 +5193,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalEXPORT.g:2243:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalEXPORT.g:2221:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5355,11 +5205,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2249:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // InternalEXPORT.g:2250:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalEXPORT.g:2227:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalEXPORT.g:2228:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // InternalEXPORT.g:2250:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // InternalEXPORT.g:2251:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // InternalEXPORT.g:2228:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalEXPORT.g:2229:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_38); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5372,20 +5222,20 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
               		
             }
-            // InternalEXPORT.g:2258:3: (kw= '.' this_ID_2= RULE_ID )*
-            loop23:
+            // InternalEXPORT.g:2236:3: (kw= '.' this_ID_2= RULE_ID )*
+            loop20:
             do {
-                int alt23=2;
-                int LA23_0 = input.LA(1);
+                int alt20=2;
+                int LA20_0 = input.LA(1);
 
-                if ( (LA23_0==49) ) {
-                    alt23=1;
+                if ( (LA20_0==49) ) {
+                    alt20=1;
                 }
 
 
-                switch (alt23) {
+                switch (alt20) {
             	case 1 :
-            	    // InternalEXPORT.g:2259:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalEXPORT.g:2237:4: kw= '.' this_ID_2= RULE_ID
             	    {
             	    kw=(Token)match(input,49,FollowSets000.FOLLOW_4); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -5410,7 +5260,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop23;
+            	    break loop20;
                 }
             } while (true);
 
@@ -5439,7 +5289,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersion"
-    // InternalEXPORT.g:2276:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
+    // InternalEXPORT.g:2254:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
     public final String entryRuleVersion() throws RecognitionException {
         String current = null;
 
@@ -5447,8 +5297,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:2276:47: (iv_ruleVersion= ruleVersion EOF )
-            // InternalEXPORT.g:2277:2: iv_ruleVersion= ruleVersion EOF
+            // InternalEXPORT.g:2254:47: (iv_ruleVersion= ruleVersion EOF )
+            // InternalEXPORT.g:2255:2: iv_ruleVersion= ruleVersion EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionRule()); 
@@ -5479,7 +5329,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersion"
-    // InternalEXPORT.g:2283:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
+    // InternalEXPORT.g:2261:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
     public final AntlrDatatypeRuleToken ruleVersion() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5495,46 +5345,46 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2289:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
-            // InternalEXPORT.g:2290:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalEXPORT.g:2267:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
+            // InternalEXPORT.g:2268:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
             {
-            // InternalEXPORT.g:2290:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
-            // InternalEXPORT.g:2291:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalEXPORT.g:2268:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalEXPORT.g:2269:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             {
-            // InternalEXPORT.g:2291:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            // InternalEXPORT.g:2269:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA25_0==RULE_INT) ) {
-                int LA25_1 = input.LA(2);
+            if ( (LA22_0==RULE_INT) ) {
+                int LA22_1 = input.LA(2);
 
-                if ( (LA25_1==RULE_ID) ) {
-                    alt25=2;
+                if ( (LA22_1==RULE_ID) ) {
+                    alt22=2;
                 }
-                else if ( (LA25_1==EOF||LA25_1==13||LA25_1==49||LA25_1==51) ) {
-                    alt25=1;
+                else if ( (LA22_1==EOF||LA22_1==13||LA22_1==49||LA22_1==51) ) {
+                    alt22=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 25, 1, input);
+                        new NoViableAltException("", 22, 1, input);
 
                     throw nvae;
                 }
             }
-            else if ( (LA25_0==RULE_ID) ) {
-                alt25=2;
+            else if ( (LA22_0==RULE_ID) ) {
+                alt22=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 25, 0, input);
+                    new NoViableAltException("", 22, 0, input);
 
                 throw nvae;
             }
-            switch (alt25) {
+            switch (alt22) {
                 case 1 :
-                    // InternalEXPORT.g:2292:4: this_INT_0= RULE_INT
+                    // InternalEXPORT.g:2270:4: this_INT_0= RULE_INT
                     {
                     this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_38); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5551,21 +5401,21 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEXPORT.g:2300:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalEXPORT.g:2278:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
                     {
-                    // InternalEXPORT.g:2300:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
-                    // InternalEXPORT.g:2301:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
+                    // InternalEXPORT.g:2278:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalEXPORT.g:2279:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
                     {
-                    // InternalEXPORT.g:2301:5: (this_INT_1= RULE_INT )?
-                    int alt24=2;
-                    int LA24_0 = input.LA(1);
+                    // InternalEXPORT.g:2279:5: (this_INT_1= RULE_INT )?
+                    int alt21=2;
+                    int LA21_0 = input.LA(1);
 
-                    if ( (LA24_0==RULE_INT) ) {
-                        alt24=1;
+                    if ( (LA21_0==RULE_INT) ) {
+                        alt21=1;
                     }
-                    switch (alt24) {
+                    switch (alt21) {
                         case 1 :
-                            // InternalEXPORT.g:2302:6: this_INT_1= RULE_INT
+                            // InternalEXPORT.g:2280:6: this_INT_1= RULE_INT
                             {
                             this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_4); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -5604,20 +5454,20 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalEXPORT.g:2319:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
-            loop28:
+            // InternalEXPORT.g:2297:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            loop25:
             do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
+                int alt25=2;
+                int LA25_0 = input.LA(1);
 
-                if ( (LA28_0==49) ) {
-                    alt28=1;
+                if ( (LA25_0==49) ) {
+                    alt25=1;
                 }
 
 
-                switch (alt28) {
+                switch (alt25) {
             	case 1 :
-            	    // InternalEXPORT.g:2320:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalEXPORT.g:2298:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    {
             	    kw=(Token)match(input,49,FollowSets000.FOLLOW_10); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -5626,40 +5476,40 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(kw, grammarAccess.getVersionAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    // InternalEXPORT.g:2325:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
-            	    int alt27=2;
-            	    int LA27_0 = input.LA(1);
+            	    // InternalEXPORT.g:2303:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    int alt24=2;
+            	    int LA24_0 = input.LA(1);
 
-            	    if ( (LA27_0==RULE_INT) ) {
-            	        int LA27_1 = input.LA(2);
+            	    if ( (LA24_0==RULE_INT) ) {
+            	        int LA24_1 = input.LA(2);
 
-            	        if ( (LA27_1==EOF||LA27_1==13||LA27_1==49||LA27_1==51) ) {
-            	            alt27=1;
+            	        if ( (LA24_1==RULE_ID) ) {
+            	            alt24=2;
             	        }
-            	        else if ( (LA27_1==RULE_ID) ) {
-            	            alt27=2;
+            	        else if ( (LA24_1==EOF||LA24_1==13||LA24_1==49||LA24_1==51) ) {
+            	            alt24=1;
             	        }
             	        else {
             	            if (state.backtracking>0) {state.failed=true; return current;}
             	            NoViableAltException nvae =
-            	                new NoViableAltException("", 27, 1, input);
+            	                new NoViableAltException("", 24, 1, input);
 
             	            throw nvae;
             	        }
             	    }
-            	    else if ( (LA27_0==RULE_ID) ) {
-            	        alt27=2;
+            	    else if ( (LA24_0==RULE_ID) ) {
+            	        alt24=2;
             	    }
             	    else {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 27, 0, input);
+            	            new NoViableAltException("", 24, 0, input);
 
             	        throw nvae;
             	    }
-            	    switch (alt27) {
+            	    switch (alt24) {
             	        case 1 :
-            	            // InternalEXPORT.g:2326:5: this_INT_4= RULE_INT
+            	            // InternalEXPORT.g:2304:5: this_INT_4= RULE_INT
             	            {
             	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_38); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -5676,21 +5526,21 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalEXPORT.g:2334:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalEXPORT.g:2312:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
             	            {
-            	            // InternalEXPORT.g:2334:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
-            	            // InternalEXPORT.g:2335:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
+            	            // InternalEXPORT.g:2312:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalEXPORT.g:2313:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
             	            {
-            	            // InternalEXPORT.g:2335:6: (this_INT_5= RULE_INT )?
-            	            int alt26=2;
-            	            int LA26_0 = input.LA(1);
+            	            // InternalEXPORT.g:2313:6: (this_INT_5= RULE_INT )?
+            	            int alt23=2;
+            	            int LA23_0 = input.LA(1);
 
-            	            if ( (LA26_0==RULE_INT) ) {
-            	                alt26=1;
+            	            if ( (LA23_0==RULE_INT) ) {
+            	                alt23=1;
             	            }
-            	            switch (alt26) {
+            	            switch (alt23) {
             	                case 1 :
-            	                    // InternalEXPORT.g:2336:7: this_INT_5= RULE_INT
+            	                    // InternalEXPORT.g:2314:7: this_INT_5= RULE_INT
             	                    {
             	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_4); if (state.failed) return current;
             	                    if ( state.backtracking==0 ) {
@@ -5734,7 +5584,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop28;
+            	    break loop25;
                 }
             } while (true);
 
@@ -5763,7 +5613,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersionedQualifiedName"
-    // InternalEXPORT.g:2358:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
+    // InternalEXPORT.g:2336:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
     public final String entryRuleVersionedQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -5771,8 +5621,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:2358:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
-            // InternalEXPORT.g:2359:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
+            // InternalEXPORT.g:2336:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
+            // InternalEXPORT.g:2337:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionedQualifiedNameRule()); 
@@ -5803,7 +5653,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersionedQualifiedName"
-    // InternalEXPORT.g:2365:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
+    // InternalEXPORT.g:2343:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
     public final AntlrDatatypeRuleToken ruleVersionedQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5817,11 +5667,11 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2371:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
-            // InternalEXPORT.g:2372:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalEXPORT.g:2349:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
+            // InternalEXPORT.g:2350:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
             {
-            // InternalEXPORT.g:2372:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
-            // InternalEXPORT.g:2373:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
+            // InternalEXPORT.g:2350:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalEXPORT.g:2351:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
             {
             if ( state.backtracking==0 ) {
 
@@ -5902,7 +5752,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleINTEGER"
-    // InternalEXPORT.g:2407:1: entryRuleINTEGER returns [String current=null] : iv_ruleINTEGER= ruleINTEGER EOF ;
+    // InternalEXPORT.g:2385:1: entryRuleINTEGER returns [String current=null] : iv_ruleINTEGER= ruleINTEGER EOF ;
     public final String entryRuleINTEGER() throws RecognitionException {
         String current = null;
 
@@ -5910,8 +5760,8 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalEXPORT.g:2407:47: (iv_ruleINTEGER= ruleINTEGER EOF )
-            // InternalEXPORT.g:2408:2: iv_ruleINTEGER= ruleINTEGER EOF
+            // InternalEXPORT.g:2385:47: (iv_ruleINTEGER= ruleINTEGER EOF )
+            // InternalEXPORT.g:2386:2: iv_ruleINTEGER= ruleINTEGER EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getINTEGERRule()); 
@@ -5942,7 +5792,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleINTEGER"
-    // InternalEXPORT.g:2414:1: ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) ;
+    // InternalEXPORT.g:2392:1: ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) ;
     public final AntlrDatatypeRuleToken ruleINTEGER() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5954,43 +5804,43 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2420:2: ( ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) )
-            // InternalEXPORT.g:2421:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
+            // InternalEXPORT.g:2398:2: ( ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) )
+            // InternalEXPORT.g:2399:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
             {
-            // InternalEXPORT.g:2421:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // InternalEXPORT.g:2399:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA30_0==RULE_INT||LA30_0==52) ) {
-                alt30=1;
+            if ( (LA27_0==RULE_INT||LA27_0==52) ) {
+                alt27=1;
             }
-            else if ( (LA30_0==RULE_HEXADECIMAL) ) {
-                alt30=2;
+            else if ( (LA27_0==RULE_HEXADECIMAL) ) {
+                alt27=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 30, 0, input);
+                    new NoViableAltException("", 27, 0, input);
 
                 throw nvae;
             }
-            switch (alt30) {
+            switch (alt27) {
                 case 1 :
-                    // InternalEXPORT.g:2422:3: ( (kw= '-' )? this_INT_1= RULE_INT )
+                    // InternalEXPORT.g:2400:3: ( (kw= '-' )? this_INT_1= RULE_INT )
                     {
-                    // InternalEXPORT.g:2422:3: ( (kw= '-' )? this_INT_1= RULE_INT )
-                    // InternalEXPORT.g:2423:4: (kw= '-' )? this_INT_1= RULE_INT
+                    // InternalEXPORT.g:2400:3: ( (kw= '-' )? this_INT_1= RULE_INT )
+                    // InternalEXPORT.g:2401:4: (kw= '-' )? this_INT_1= RULE_INT
                     {
-                    // InternalEXPORT.g:2423:4: (kw= '-' )?
-                    int alt29=2;
-                    int LA29_0 = input.LA(1);
+                    // InternalEXPORT.g:2401:4: (kw= '-' )?
+                    int alt26=2;
+                    int LA26_0 = input.LA(1);
 
-                    if ( (LA29_0==52) ) {
-                        alt29=1;
+                    if ( (LA26_0==52) ) {
+                        alt26=1;
                     }
-                    switch (alt29) {
+                    switch (alt26) {
                         case 1 :
-                            // InternalEXPORT.g:2424:5: kw= '-'
+                            // InternalEXPORT.g:2402:5: kw= '-'
                             {
                             kw=(Token)match(input,52,FollowSets000.FOLLOW_41); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -6023,7 +5873,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEXPORT.g:2439:3: this_HEXADECIMAL_2= RULE_HEXADECIMAL
+                    // InternalEXPORT.g:2417:3: this_HEXADECIMAL_2= RULE_HEXADECIMAL
                     {
                     this_HEXADECIMAL_2=(Token)match(input,RULE_HEXADECIMAL,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -6064,7 +5914,7 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSExportUnit"
-    // InternalEXPORT.g:2450:1: ruleGSSExportUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) ) ;
+    // InternalEXPORT.g:2428:1: ruleGSSExportUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) ) ;
     public final Enumerator ruleGSSExportUnit() throws RecognitionException {
         Enumerator current = null;
 
@@ -6075,32 +5925,32 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEXPORT.g:2456:2: ( ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) ) )
-            // InternalEXPORT.g:2457:2: ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) )
+            // InternalEXPORT.g:2434:2: ( ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) ) )
+            // InternalEXPORT.g:2435:2: ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) )
             {
-            // InternalEXPORT.g:2457:2: ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) )
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            // InternalEXPORT.g:2435:2: ( (enumLiteral_0= 'bits' ) | (enumLiteral_1= 'bytes' ) )
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA31_0==53) ) {
-                alt31=1;
+            if ( (LA28_0==53) ) {
+                alt28=1;
             }
-            else if ( (LA31_0==54) ) {
-                alt31=2;
+            else if ( (LA28_0==54) ) {
+                alt28=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 31, 0, input);
+                    new NoViableAltException("", 28, 0, input);
 
                 throw nvae;
             }
-            switch (alt31) {
+            switch (alt28) {
                 case 1 :
-                    // InternalEXPORT.g:2458:3: (enumLiteral_0= 'bits' )
+                    // InternalEXPORT.g:2436:3: (enumLiteral_0= 'bits' )
                     {
-                    // InternalEXPORT.g:2458:3: (enumLiteral_0= 'bits' )
-                    // InternalEXPORT.g:2459:4: enumLiteral_0= 'bits'
+                    // InternalEXPORT.g:2436:3: (enumLiteral_0= 'bits' )
+                    // InternalEXPORT.g:2437:4: enumLiteral_0= 'bits'
                     {
                     enumLiteral_0=(Token)match(input,53,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -6116,10 +5966,10 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEXPORT.g:2466:3: (enumLiteral_1= 'bytes' )
+                    // InternalEXPORT.g:2444:3: (enumLiteral_1= 'bytes' )
                     {
-                    // InternalEXPORT.g:2466:3: (enumLiteral_1= 'bytes' )
-                    // InternalEXPORT.g:2467:4: enumLiteral_1= 'bytes'
+                    // InternalEXPORT.g:2444:3: (enumLiteral_1= 'bytes' )
+                    // InternalEXPORT.g:2445:4: enumLiteral_1= 'bytes'
                     {
                     enumLiteral_1=(Token)match(input,54,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -6305,289 +6155,13 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
     }
     // $ANTLR end synpred3_InternalEXPORT
 
-    // $ANTLR start synpred4_InternalEXPORT
-    public final void synpred4_InternalEXPORT_fragment() throws RecognitionException {   
-        Token otherlv_12=null;
-        Token otherlv_13=null;
-        Token lv_from_14_0=null;
-        Token otherlv_15=null;
-
-        // InternalEXPORT.g:323:4: ( ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) ) )
-        // InternalEXPORT.g:323:4: ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) )
-        {
-        // InternalEXPORT.g:323:4: ({...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ) )
-        // InternalEXPORT.g:324:5: {...}? => ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) )
-        {
-        if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 2) ) {
-            if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred4_InternalEXPORT", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 2)");
-        }
-        // InternalEXPORT.g:324:112: ( ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) ) )
-        // InternalEXPORT.g:325:6: ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) )
-        {
-        getUnorderedGroupHelper().select(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 2);
-        // InternalEXPORT.g:328:9: ({...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' ) )
-        // InternalEXPORT.g:328:10: {...}? => (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' )
-        {
-        if ( !((true)) ) {
-            if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred4_InternalEXPORT", "true");
-        }
-        // InternalEXPORT.g:328:19: (otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';' )
-        // InternalEXPORT.g:328:20: otherlv_12= 'from' otherlv_13= ':=' ( (lv_from_14_0= RULE_ID ) ) otherlv_15= ';'
-        {
-        otherlv_12=(Token)match(input,19,FollowSets000.FOLLOW_8); if (state.failed) return ;
-        otherlv_13=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        // InternalEXPORT.g:336:9: ( (lv_from_14_0= RULE_ID ) )
-        // InternalEXPORT.g:337:10: (lv_from_14_0= RULE_ID )
-        {
-        // InternalEXPORT.g:337:10: (lv_from_14_0= RULE_ID )
-        // InternalEXPORT.g:338:11: lv_from_14_0= RULE_ID
-        {
-        lv_from_14_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return ;
-
-        }
-
-
-        }
-
-        otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
-
-        }
-
-
-        }
-
-
-        }
-
-
-        }
-
-
-        }
-    }
-    // $ANTLR end synpred4_InternalEXPORT
-
-    // $ANTLR start synpred5_InternalEXPORT
-    public final void synpred5_InternalEXPORT_fragment() throws RecognitionException {   
-        Token otherlv_16=null;
-        Token otherlv_17=null;
-        Token lv_to_18_0=null;
-        Token otherlv_19=null;
-
-        // InternalEXPORT.g:364:4: ( ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) ) )
-        // InternalEXPORT.g:364:4: ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) )
-        {
-        // InternalEXPORT.g:364:4: ({...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) ) )
-        // InternalEXPORT.g:365:5: {...}? => ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) )
-        {
-        if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 3) ) {
-            if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred5_InternalEXPORT", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 3)");
-        }
-        // InternalEXPORT.g:365:112: ( ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) ) )
-        // InternalEXPORT.g:366:6: ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) )
-        {
-        getUnorderedGroupHelper().select(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 3);
-        // InternalEXPORT.g:369:9: ({...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' ) )
-        // InternalEXPORT.g:369:10: {...}? => (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' )
-        {
-        if ( !((true)) ) {
-            if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred5_InternalEXPORT", "true");
-        }
-        // InternalEXPORT.g:369:19: (otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';' )
-        // InternalEXPORT.g:369:20: otherlv_16= 'to' otherlv_17= ':=' ( (lv_to_18_0= RULE_ID ) ) otherlv_19= ';'
-        {
-        otherlv_16=(Token)match(input,20,FollowSets000.FOLLOW_8); if (state.failed) return ;
-        otherlv_17=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        // InternalEXPORT.g:377:9: ( (lv_to_18_0= RULE_ID ) )
-        // InternalEXPORT.g:378:10: (lv_to_18_0= RULE_ID )
-        {
-        // InternalEXPORT.g:378:10: (lv_to_18_0= RULE_ID )
-        // InternalEXPORT.g:379:11: lv_to_18_0= RULE_ID
-        {
-        lv_to_18_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return ;
-
-        }
-
-
-        }
-
-        otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
-
-        }
-
-
-        }
-
-
-        }
-
-
-        }
-
-
-        }
-    }
-    // $ANTLR end synpred5_InternalEXPORT
-
-    // $ANTLR start synpred9_InternalEXPORT
-    public final void synpred9_InternalEXPORT_fragment() throws RecognitionException {   
-        EObject lv_sizeFromFileLength_3_0 = null;
-
-
-        // InternalEXPORT.g:519:4: ( ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) )* )
-        // InternalEXPORT.g:519:4: ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) )*
-        {
-        // InternalEXPORT.g:519:4: ( (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength ) )*
-        loop32:
-        do {
-            int alt32=2;
-            int LA32_0 = input.LA(1);
-
-            if ( (LA32_0==23) ) {
-                alt32=1;
-            }
-
-
-            switch (alt32) {
-        	case 1 :
-        	    // InternalEXPORT.g:520:5: (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength )
-        	    {
-        	    // InternalEXPORT.g:520:5: (lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength )
-        	    // InternalEXPORT.g:521:6: lv_sizeFromFileLength_3_0= ruleGSSExportSizeFromFileLength
-        	    {
-        	    if ( state.backtracking==0 ) {
-
-        	      						newCompositeNode(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLengthGSSExportSizeFromFileLengthParserRuleCall_3_0_0());
-        	      					
-        	    }
-        	    pushFollow(FollowSets000.FOLLOW_42);
-        	    lv_sizeFromFileLength_3_0=ruleGSSExportSizeFromFileLength();
-
-        	    state._fsp--;
-        	    if (state.failed) return ;
-
-        	    }
-
-
-        	    }
-        	    break;
-
-        	default :
-        	    break loop32;
-            }
-        } while (true);
-
-
-        }
-    }
-    // $ANTLR end synpred9_InternalEXPORT
-
-    // $ANTLR start synpred11_InternalEXPORT
-    public final void synpred11_InternalEXPORT_fragment() throws RecognitionException {   
-        EObject lv_sizeFromFileLine_4_0 = null;
-
-
-        // InternalEXPORT.g:539:4: ( ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) )* )
-        // InternalEXPORT.g:539:4: ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) )*
-        {
-        // InternalEXPORT.g:539:4: ( (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine ) )*
-        loop33:
-        do {
-            int alt33=2;
-            int LA33_0 = input.LA(1);
-
-            if ( (LA33_0==28) ) {
-                alt33=1;
-            }
-
-
-            switch (alt33) {
-        	case 1 :
-        	    // InternalEXPORT.g:540:5: (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine )
-        	    {
-        	    // InternalEXPORT.g:540:5: (lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine )
-        	    // InternalEXPORT.g:541:6: lv_sizeFromFileLine_4_0= ruleGSSExportSizeFromFileLine
-        	    {
-        	    if ( state.backtracking==0 ) {
-
-        	      						newCompositeNode(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLineGSSExportSizeFromFileLineParserRuleCall_3_1_0());
-        	      					
-        	    }
-        	    pushFollow(FollowSets000.FOLLOW_43);
-        	    lv_sizeFromFileLine_4_0=ruleGSSExportSizeFromFileLine();
-
-        	    state._fsp--;
-        	    if (state.failed) return ;
-
-        	    }
-
-
-        	    }
-        	    break;
-
-        	default :
-        	    break loop33;
-            }
-        } while (true);
-
-
-        }
-    }
-    // $ANTLR end synpred11_InternalEXPORT
-
     // Delegated rules
 
-    public final boolean synpred11_InternalEXPORT() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred11_InternalEXPORT_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
     public final boolean synpred2_InternalEXPORT() {
         state.backtracking++;
         int start = input.mark();
         try {
             synpred2_InternalEXPORT_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred9_InternalEXPORT() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred9_InternalEXPORT_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred5_InternalEXPORT() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred5_InternalEXPORT_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -6611,20 +6185,6 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred4_InternalEXPORT() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred4_InternalEXPORT_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
 
 
  
@@ -6637,43 +6197,41 @@ public class InternalEXPORTParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000002000L});
         public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x00000000001D0000L});
+        public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000050000L});
         public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x00000000805D0000L});
+        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x00000000000D0000L});
         public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000080400000L});
-        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000400000200000L});
-        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000050A00000L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000A00000L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000010200000L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000040200000L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0010000000000060L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x000000000C200000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000008200000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0060000000000000L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000020000000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x00001A2900200000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000200000000L});
-        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000400000000L});
-        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000001000000000L});
-        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000004000000000L});
-        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000018020200000L});
-        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000010020200000L});
-        public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000020200000L});
-        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000040000000000L});
-        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000200000000000L});
+        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000100000L});
+        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000080400000L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000400000200000L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000200000L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000050800000L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000050A00000L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0010000000000060L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x000000000C200000L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000008200000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0060000000000000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x00001A2900200000L});
+        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000200000000L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000400000000L});
+        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000001000000000L});
+        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000004000000000L});
+        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000018020200000L});
+        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000010020200000L});
+        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000020200000L});
+        public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000040000000000L});
+        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000200000000000L});
+        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000800000000000L});
         public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000800000200000L});
         public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0001000000000000L});
         public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0002000000000002L});
         public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0004000000000000L});
         public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0008000000000000L});
         public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000000800002L});
-        public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000010000002L});
     }
 
 

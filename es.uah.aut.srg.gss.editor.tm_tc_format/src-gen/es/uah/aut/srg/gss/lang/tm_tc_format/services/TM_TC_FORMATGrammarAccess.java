@@ -2179,11 +2179,11 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSTmTcFormatSortedFieldsToCheck:
 		//	{GSSTmTcFormatSortedFieldsToCheck}
 		//	'GSSTmTcFormatSortedFieldsToCheck' '{'
-		//	fieldToCheck+=GSSTmTcFormatFieldToCheck*
+		//	fieldToCheck+=GSSTmTcFormatFieldToCheck+
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{GSSTmTcFormatSortedFieldsToCheck} 'GSSTmTcFormatSortedFieldsToCheck' '{' fieldToCheck+=GSSTmTcFormatFieldToCheck* '}'
+		//{GSSTmTcFormatSortedFieldsToCheck} 'GSSTmTcFormatSortedFieldsToCheck' '{' fieldToCheck+=GSSTmTcFormatFieldToCheck+ '}'
 		//';'
 		public Group getGroup() { return cGroup; }
 		
@@ -2196,7 +2196,7 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//fieldToCheck+=GSSTmTcFormatFieldToCheck*
+		//fieldToCheck+=GSSTmTcFormatFieldToCheck+
 		public Assignment getFieldToCheckAssignment_3() { return cFieldToCheckAssignment_3; }
 		
 		//GSSTmTcFormatFieldToCheck
@@ -3426,7 +3426,7 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSTmTcFormatSortedFieldsToCheck:
 	//	{GSSTmTcFormatSortedFieldsToCheck}
 	//	'GSSTmTcFormatSortedFieldsToCheck' '{'
-	//	fieldToCheck+=GSSTmTcFormatFieldToCheck*
+	//	fieldToCheck+=GSSTmTcFormatFieldToCheck+
 	//	'}' ';';
 	public GSSTmTcFormatSortedFieldsToCheckElements getGSSTmTcFormatSortedFieldsToCheckAccess() {
 		return pGSSTmTcFormatSortedFieldsToCheck;

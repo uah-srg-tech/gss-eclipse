@@ -10720,9 +10720,16 @@ rule__GSSTmTcFormatSortedFieldsToCheck__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSTmTcFormatSortedFieldsToCheckAccess().getFieldToCheckAssignment_3()); }
-	(rule__GSSTmTcFormatSortedFieldsToCheck__FieldToCheckAssignment_3)*
-	{ after(grammarAccess.getGSSTmTcFormatSortedFieldsToCheckAccess().getFieldToCheckAssignment_3()); }
+	(
+		{ before(grammarAccess.getGSSTmTcFormatSortedFieldsToCheckAccess().getFieldToCheckAssignment_3()); }
+		(rule__GSSTmTcFormatSortedFieldsToCheck__FieldToCheckAssignment_3)
+		{ after(grammarAccess.getGSSTmTcFormatSortedFieldsToCheckAccess().getFieldToCheckAssignment_3()); }
+	)
+	(
+		{ before(grammarAccess.getGSSTmTcFormatSortedFieldsToCheckAccess().getFieldToCheckAssignment_3()); }
+		(rule__GSSTmTcFormatSortedFieldsToCheck__FieldToCheckAssignment_3)*
+		{ after(grammarAccess.getGSSTmTcFormatSortedFieldsToCheckAccess().getFieldToCheckAssignment_3()); }
+	)
 )
 ;
 finally {

@@ -116,7 +116,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSExportActivateDICs returns GSSExportActivateDICs
 	 *
 	 * Constraint:
-	 *     DIC+=GSSExportDIC*
+	 *     DIC+=GSSExportDIC+
 	 */
 	protected void sequence_GSSExportActivateDICs(ISerializationContext context, GSSExportActivateDICs semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -151,7 +151,9 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         (uri=QualifiedName | version=Version | from=ID | to=ID)+ 
+	 *         (uri=QualifiedName | version=Version)+ 
+	 *         from=ID 
+	 *         to=ID 
 	 *         Sizes=GSSExportSizes? 
 	 *         settings=GSSExportSettings 
 	 *         activateDICs=GSSExportActivateDICs?
@@ -337,7 +339,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSExportSizes returns GSSExportSizes
 	 *
 	 * Constraint:
-	 *     (sizeFromFileLength+=GSSExportSizeFromFileLength+ | sizeFromFileLine+=GSSExportSizeFromFileLine+ | sizeInBits+=GSSExportSizeInBits+)?
+	 *     (sizeFromFileLength+=GSSExportSizeFromFileLength | sizeFromFileLine+=GSSExportSizeFromFileLine | sizeInBits+=GSSExportSizeInBits)+
 	 */
 	protected void sequence_GSSExportSizes(ISerializationContext context, GSSExportSizes semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

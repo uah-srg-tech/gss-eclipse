@@ -485,7 +485,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     GSSTmTcFormatSortedFieldsToCheck returns GSSTmTcFormatSortedFieldsToCheck
 	 *
 	 * Constraint:
-	 *     fieldToCheck+=GSSTmTcFormatFieldToCheck*
+	 *     fieldToCheck+=GSSTmTcFormatFieldToCheck+
 	 */
 	protected void sequence_GSSTmTcFormatSortedFieldsToCheck(ISerializationContext context, GSSTmTcFormatSortedFieldsToCheck semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

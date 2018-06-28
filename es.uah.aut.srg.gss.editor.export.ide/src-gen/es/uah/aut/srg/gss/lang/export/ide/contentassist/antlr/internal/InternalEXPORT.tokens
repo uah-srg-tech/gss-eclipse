@@ -2,7 +2,7 @@
 ')'=53
 '-'=54
 '.'=51
-':='=20
+':='=19
 ';'=15
 'DICRef'=50
 'GSSExportActivateDICs'=48
@@ -24,7 +24,7 @@
 'bytes'=13
 'fieldRef'=44
 'file'=40
-'from'=22
+'from'=18
 'fromFile'=27
 'id'=26
 'import'=14
@@ -32,15 +32,15 @@
 'offset'=41
 'size'=42
 'sizeRef'=38
-'to'=23
+'to'=20
 'toArrayIndex'=47
 'toFieldRef'=36
 'unit'=29
-'uri'=19
+'uri'=22
 'value'=35
-'version'=21
+'version'=23
 '{'=17
-'}'=18
+'}'=21
 RULE_ANY_OTHER=11
 RULE_HEXADECIMAL=5
 RULE_ID=6

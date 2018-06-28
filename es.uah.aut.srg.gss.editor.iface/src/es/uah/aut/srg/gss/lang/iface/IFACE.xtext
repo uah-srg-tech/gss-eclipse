@@ -19,8 +19,8 @@ GSSIfacePortConfig returns GSSIfacePortConfig:
 	name=ID
 	'{'
 		(('uri' ':=' uri=QualifiedName ';')
-		& ('version' ':=' version=Version ';')
-		& (port=GSSIfacePort))
+		& ('version' ':=' version=Version ';'))
+		port=GSSIfacePort
 	'}' ';';
 
 GSSIfacePort returns GSSIfacePort:
@@ -30,17 +30,16 @@ GSSIfacePort returns GSSIfacePort:
 
 GSSIfaceSpWPort returns GSSIfaceSpWPort:
 	'spwPort' '{'
-		(('type' ':=' type=GSSIfaceSpWPortType ';')
-		& ('link' ':=' link=INTEGER ';')
-		& ('writingPort' ':=' writingPort=INTEGER ';')
-		& (readingPort+=GSSIfaceReadingPort)*
-		)
+		'type' ':=' type=GSSIfaceSpWPortType ';'
+		'link' ':=' link=INTEGER ';'
+		'writingPort' ':=' writingPort=INTEGER ';'
+		(readingPort+=GSSIfaceReadingPort)+
 	'}' ';'
 ;
 
 GSSIfaceReadingPort returns GSSIfaceReadingPort:
 	'readingPort' '{'
-		('port' ':=' port=INTEGER ';')
+		'port' ':=' port=INTEGER ';'
 	'}' ';'
 ;
 
@@ -51,14 +50,14 @@ enum GSSIfaceSpWPortType returns GSSIfaceSpWPortType:
 
 GSSIfaceUartPort returns GSSIfaceUartPort:
 	'uartPort' '{'
-		(('number' ':=' number=INTEGER ';')
-		& ('baudRate' ':=' baudRate=GSSIfaceUartPortBaudRate ';')
-		& ('parity' ':=' parity=GSSIfaceUartPortParity ';')
-		& ('dataBits' ':=' dataBits=GSSIfaceUartPortDataBits ';')
-		& ('stopBits' ':=' stopBits=GSSIfaceUartPortStopBits ';')
-		& ('inputQueueSize' ':=' inputQueueSize=INTEGER ';')
-		& ('outputQueueSize' ':=' outputQueueSize=INTEGER ';')
-		& (uartProtocol=GSSIfaceUartProtocol))
+		'number' ':=' number=INTEGER ';'
+		'baudRate' ':=' baudRate=GSSIfaceUartPortBaudRate ';'
+		'parity' ':=' parity=GSSIfaceUartPortParity ';'
+		'dataBits' ':=' dataBits=GSSIfaceUartPortDataBits ';'
+		'stopBits' ':=' stopBits=GSSIfaceUartPortStopBits ';'
+		'inputQueueSize' ':=' inputQueueSize=INTEGER ';'
+		'outputQueueSize' ':=' outputQueueSize=INTEGER ';'
+		uartProtocol=GSSIfaceUartProtocol
 	'}' ';'
 ;
 
@@ -82,39 +81,39 @@ enum GSSIfaceUartPortStopBits returns GSSIfaceUartPortStopBits:
 
 GSSIfaceUartProtocol returns GSSIfaceUartProtocol:
 	'uartProtocol' '{'
-		(('unit' ':=' unit=GSSIfaceUartProtocolUnit ';')
-		& ('power' ':=' power=GSSIfaceUartProtocolPower ';')
-		& (constSize=GSSIfaceConstSize)
-		& (sizeFieldOffset=GSSIfaceSizeFieldOffset)
-		& (sizeFieldTrim=GSSIfaceSizeFieldTrim)
-		& (syncPattern=GSSIfaceSyncPattern))
+		'unit' ':=' unit=GSSIfaceUartProtocolUnit ';'
+		'power' ':=' power=GSSIfaceUartProtocolPower ';'
+		constSize=GSSIfaceConstSize
+		sizeFieldOffset=GSSIfaceSizeFieldOffset
+		sizeFieldTrim=GSSIfaceSizeFieldTrim
+		syncPattern=GSSIfaceSyncPattern
 	'}' ';'
 ;
 
 GSSIfaceConstSize returns GSSIfaceConstSize:
 	'constSize' '{'
-		(('bytes' ':=' bytes=INTEGER ';')
-		& ('bits' ':=' bits=INTEGER ';'))
+		'bytes' ':=' bytes=INTEGER ';'
+		'bits' ':=' bits=INTEGER ';'
 	'}' ';'
 ;
 
 GSSIfaceSizeFieldOffset returns GSSIfaceSizeFieldOffset:
 	'sizeFieldOffset' '{'
-		(('bytes' ':=' bytes=INTEGER ';')
-		& ('bits' ':=' bits=INTEGER ';'))
+		'bytes' ':=' bytes=INTEGER ';'
+		'bits' ':=' bits=INTEGER ';'
 	'}' ';'
 ;
 
 GSSIfaceSizeFieldTrim returns GSSIfaceSizeFieldTrim:
 	'sizeFieldTrim' '{'
-		(('bytes' ':=' bytes=INTEGER ';')
-		& ('bits' ':=' bits=INTEGER ';'))
+		'bytes' ':=' bytes=INTEGER ';'
+		'bits' ':=' bits=INTEGER ';'
 	'}' ';'
 ;
 
 GSSIfaceSyncPattern returns GSSIfaceSyncPattern:
 	'syncPattern' '{'
-		('hexValue' ':=' hexValue=HEXADECIMAL ';')
+		'hexValue' ':=' hexValue=HEXADECIMAL ';'
 	'}' ';'
 ;
 
@@ -128,7 +127,7 @@ enum GSSIfaceUartProtocolPower returns GSSIfaceUartProtocolPower:
 
 GSSIfaceSpWTCPort returns GSSIfaceSpWTCPort:
 	'spwTCPort' '{'
-		('spwPortRef' ':=' spwPortRef=INTEGER ';')
+		'spwPortRef' ':=' spwPortRef=INTEGER ';'
 	'}' ';'
 ;
 

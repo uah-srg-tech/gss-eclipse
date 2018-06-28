@@ -319,88 +319,6 @@ ruleGSSExportExport returns [EObject current=null]
 						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3());
 					}
 				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 2)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 2);
-					}
-								({true}?=>(otherlv_12='from'
-								{
-									newLeafNode(otherlv_12, grammarAccess.getGSSExportExportAccess().getFromKeyword_3_2_0());
-								}
-								otherlv_13=':='
-								{
-									newLeafNode(otherlv_13, grammarAccess.getGSSExportExportAccess().getColonEqualsSignKeyword_3_2_1());
-								}
-								(
-									(
-										lv_from_14_0=RULE_ID
-										{
-											newLeafNode(lv_from_14_0, grammarAccess.getGSSExportExportAccess().getFromIDTerminalRuleCall_3_2_2_0());
-										}
-										{
-											if ($current==null) {
-												$current = createModelElement(grammarAccess.getGSSExportExportRule());
-											}
-											setWithLastConsumed(
-												$current,
-												"from",
-												lv_from_14_0,
-												"org.eclipse.xtext.common.Terminals.ID");
-										}
-									)
-								)
-								otherlv_15=';'
-								{
-									newLeafNode(otherlv_15, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_3_2_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 3)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3(), 3);
-					}
-								({true}?=>(otherlv_16='to'
-								{
-									newLeafNode(otherlv_16, grammarAccess.getGSSExportExportAccess().getToKeyword_3_3_0());
-								}
-								otherlv_17=':='
-								{
-									newLeafNode(otherlv_17, grammarAccess.getGSSExportExportAccess().getColonEqualsSignKeyword_3_3_1());
-								}
-								(
-									(
-										lv_to_18_0=RULE_ID
-										{
-											newLeafNode(lv_to_18_0, grammarAccess.getGSSExportExportAccess().getToIDTerminalRuleCall_3_3_2_0());
-										}
-										{
-											if ($current==null) {
-												$current = createModelElement(grammarAccess.getGSSExportExportRule());
-											}
-											setWithLastConsumed(
-												$current,
-												"to",
-												lv_to_18_0,
-												"org.eclipse.xtext.common.Terminals.ID");
-										}
-									)
-								)
-								otherlv_19=';'
-								{
-									newLeafNode(otherlv_19, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_3_3_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3());
-					}
-				)
 			)
 					)+
 					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3())}?
@@ -410,10 +328,70 @@ ruleGSSExportExport returns [EObject current=null]
 				  getUnorderedGroupHelper().leave(grammarAccess.getGSSExportExportAccess().getUnorderedGroup_3());
 				}
 		)
+		otherlv_12='from'
+		{
+			newLeafNode(otherlv_12, grammarAccess.getGSSExportExportAccess().getFromKeyword_4());
+		}
+		otherlv_13=':='
+		{
+			newLeafNode(otherlv_13, grammarAccess.getGSSExportExportAccess().getColonEqualsSignKeyword_5());
+		}
+		(
+			(
+				lv_from_14_0=RULE_ID
+				{
+					newLeafNode(lv_from_14_0, grammarAccess.getGSSExportExportAccess().getFromIDTerminalRuleCall_6_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getGSSExportExportRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"from",
+						lv_from_14_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_15=';'
+		{
+			newLeafNode(otherlv_15, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_7());
+		}
+		otherlv_16='to'
+		{
+			newLeafNode(otherlv_16, grammarAccess.getGSSExportExportAccess().getToKeyword_8());
+		}
+		otherlv_17=':='
+		{
+			newLeafNode(otherlv_17, grammarAccess.getGSSExportExportAccess().getColonEqualsSignKeyword_9());
+		}
+		(
+			(
+				lv_to_18_0=RULE_ID
+				{
+					newLeafNode(lv_to_18_0, grammarAccess.getGSSExportExportAccess().getToIDTerminalRuleCall_10_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getGSSExportExportRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"to",
+						lv_to_18_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_19=';'
+		{
+			newLeafNode(otherlv_19, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_11());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSExportExportAccess().getSizesGSSExportSizesParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getGSSExportExportAccess().getSizesGSSExportSizesParserRuleCall_12_0());
 				}
 				lv_Sizes_20_0=ruleGSSExportSizes
 				{
@@ -432,7 +410,7 @@ ruleGSSExportExport returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSExportExportAccess().getSettingsGSSExportSettingsParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getGSSExportExportAccess().getSettingsGSSExportSettingsParserRuleCall_13_0());
 				}
 				lv_settings_21_0=ruleGSSExportSettings
 				{
@@ -451,7 +429,7 @@ ruleGSSExportExport returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSExportExportAccess().getActivateDICsGSSExportActivateDICsParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getGSSExportExportAccess().getActivateDICsGSSExportActivateDICsParserRuleCall_14_0());
 				}
 				lv_activateDICs_22_0=ruleGSSExportActivateDICs
 				{
@@ -469,11 +447,11 @@ ruleGSSExportExport returns [EObject current=null]
 		)?
 		otherlv_23='}'
 		{
-			newLeafNode(otherlv_23, grammarAccess.getGSSExportExportAccess().getRightCurlyBracketKeyword_7());
+			newLeafNode(otherlv_23, grammarAccess.getGSSExportExportAccess().getRightCurlyBracketKeyword_15());
 		}
 		otherlv_24=';'
 		{
-			newLeafNode(otherlv_24, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_8());
+			newLeafNode(otherlv_24, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_16());
 		}
 	)
 ;
@@ -534,7 +512,7 @@ ruleGSSExportSizes returns [EObject current=null]
 						afterParserOrEnumRuleCall();
 					}
 				)
-			)*
+			)
 			    |
 			(
 				(
@@ -554,7 +532,7 @@ ruleGSSExportSizes returns [EObject current=null]
 						afterParserOrEnumRuleCall();
 					}
 				)
-			)*
+			)
 			    |
 			(
 				(
@@ -574,8 +552,8 @@ ruleGSSExportSizes returns [EObject current=null]
 						afterParserOrEnumRuleCall();
 					}
 				)
-			)*
-		)
+			)
+		)+
 		otherlv_6='}'
 		{
 			newLeafNode(otherlv_6, grammarAccess.getGSSExportSizesAccess().getRightCurlyBracketKeyword_4());
@@ -2124,7 +2102,7 @@ ruleGSSExportActivateDICs returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)*
+		)+
 		otherlv_4='}'
 		{
 			newLeafNode(otherlv_4, grammarAccess.getGSSExportActivateDICsAccess().getRightCurlyBracketKeyword_4());

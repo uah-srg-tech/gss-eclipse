@@ -55,8 +55,6 @@ public class EXPORTParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSExportExportAccess().getGroup(), "rule__GSSExportExport__Group__0");
 					put(grammarAccess.getGSSExportExportAccess().getGroup_3_0(), "rule__GSSExportExport__Group_3_0__0");
 					put(grammarAccess.getGSSExportExportAccess().getGroup_3_1(), "rule__GSSExportExport__Group_3_1__0");
-					put(grammarAccess.getGSSExportExportAccess().getGroup_3_2(), "rule__GSSExportExport__Group_3_2__0");
-					put(grammarAccess.getGSSExportExportAccess().getGroup_3_3(), "rule__GSSExportExport__Group_3_3__0");
 					put(grammarAccess.getGSSExportSizesAccess().getGroup(), "rule__GSSExportSizes__Group__0");
 					put(grammarAccess.getGSSExportSizeFromFileLengthAccess().getGroup(), "rule__GSSExportSizeFromFileLength__Group__0");
 					put(grammarAccess.getGSSExportSizeFromFileLengthAccess().getGroup_10(), "rule__GSSExportSizeFromFileLength__Group_10__0");
@@ -99,11 +97,11 @@ public class EXPORTParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSExportExportAccess().getNameAssignment_1(), "rule__GSSExportExport__NameAssignment_1");
 					put(grammarAccess.getGSSExportExportAccess().getUriAssignment_3_0_2(), "rule__GSSExportExport__UriAssignment_3_0_2");
 					put(grammarAccess.getGSSExportExportAccess().getVersionAssignment_3_1_2(), "rule__GSSExportExport__VersionAssignment_3_1_2");
-					put(grammarAccess.getGSSExportExportAccess().getFromAssignment_3_2_2(), "rule__GSSExportExport__FromAssignment_3_2_2");
-					put(grammarAccess.getGSSExportExportAccess().getToAssignment_3_3_2(), "rule__GSSExportExport__ToAssignment_3_3_2");
-					put(grammarAccess.getGSSExportExportAccess().getSizesAssignment_4(), "rule__GSSExportExport__SizesAssignment_4");
-					put(grammarAccess.getGSSExportExportAccess().getSettingsAssignment_5(), "rule__GSSExportExport__SettingsAssignment_5");
-					put(grammarAccess.getGSSExportExportAccess().getActivateDICsAssignment_6(), "rule__GSSExportExport__ActivateDICsAssignment_6");
+					put(grammarAccess.getGSSExportExportAccess().getFromAssignment_6(), "rule__GSSExportExport__FromAssignment_6");
+					put(grammarAccess.getGSSExportExportAccess().getToAssignment_10(), "rule__GSSExportExport__ToAssignment_10");
+					put(grammarAccess.getGSSExportExportAccess().getSizesAssignment_12(), "rule__GSSExportExport__SizesAssignment_12");
+					put(grammarAccess.getGSSExportExportAccess().getSettingsAssignment_13(), "rule__GSSExportExport__SettingsAssignment_13");
+					put(grammarAccess.getGSSExportExportAccess().getActivateDICsAssignment_14(), "rule__GSSExportExport__ActivateDICsAssignment_14");
 					put(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLengthAssignment_3_0(), "rule__GSSExportSizes__SizeFromFileLengthAssignment_3_0");
 					put(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLineAssignment_3_1(), "rule__GSSExportSizes__SizeFromFileLineAssignment_3_1");
 					put(grammarAccess.getGSSExportSizesAccess().getSizeInBitsAssignment_3_2(), "rule__GSSExportSizes__SizeInBitsAssignment_3_2");
