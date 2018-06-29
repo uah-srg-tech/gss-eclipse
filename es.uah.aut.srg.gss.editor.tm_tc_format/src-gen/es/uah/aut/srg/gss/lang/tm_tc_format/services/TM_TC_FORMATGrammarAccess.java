@@ -110,57 +110,50 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVersionVersionParserRuleCall_3_1_2_0 = (RuleCall)cVersionAssignment_3_1_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3_1_3 = (Keyword)cGroup_3_1.eContents().get(3);
 		private final Group cGroup_3_2 = (Group)cUnorderedGroup_3.eContents().get(2);
-		private final Keyword cDescriptionKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
+		private final Keyword cProtocolKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_3_2_1 = (Keyword)cGroup_3_2.eContents().get(1);
-		private final Assignment cDescriptionAssignment_3_2_2 = (Assignment)cGroup_3_2.eContents().get(2);
-		private final RuleCall cDescriptionIDTerminalRuleCall_3_2_2_0 = (RuleCall)cDescriptionAssignment_3_2_2.eContents().get(0);
+		private final Assignment cProtocolAssignment_3_2_2 = (Assignment)cGroup_3_2.eContents().get(2);
+		private final RuleCall cProtocolIDTerminalRuleCall_3_2_2_0 = (RuleCall)cProtocolAssignment_3_2_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3_2_3 = (Keyword)cGroup_3_2.eContents().get(3);
 		private final Group cGroup_3_3 = (Group)cUnorderedGroup_3.eContents().get(3);
-		private final Keyword cProtocolKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_3_1 = (Keyword)cGroup_3_3.eContents().get(1);
-		private final Assignment cProtocolAssignment_3_3_2 = (Assignment)cGroup_3_3.eContents().get(2);
-		private final RuleCall cProtocolIDTerminalRuleCall_3_3_2_0 = (RuleCall)cProtocolAssignment_3_3_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_3_3 = (Keyword)cGroup_3_3.eContents().get(3);
-		private final Group cGroup_3_4 = (Group)cUnorderedGroup_3.eContents().get(4);
-		private final Group cGroup_3_4_0 = (Group)cGroup_3_4.eContents().get(0);
-		private final Keyword cTypeKeyword_3_4_0_0 = (Keyword)cGroup_3_4_0.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_4_0_1 = (Keyword)cGroup_3_4_0.eContents().get(1);
-		private final Assignment cTypeAssignment_3_4_0_2 = (Assignment)cGroup_3_4_0.eContents().get(2);
-		private final RuleCall cTypeGSSTmTcFormatTmTCFormatTypeEnumRuleCall_3_4_0_2_0 = (RuleCall)cTypeAssignment_3_4_0_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_4_0_3 = (Keyword)cGroup_3_4_0.eContents().get(3);
-		private final Alternatives cAlternatives_3_4_1 = (Alternatives)cGroup_3_4.eContents().get(1);
-		private final Assignment cCSFieldAssignment_3_4_1_0 = (Assignment)cAlternatives_3_4_1.eContents().get(0);
-		private final RuleCall cCSFieldGSSTmTcFormatCSFieldParserRuleCall_3_4_1_0_0 = (RuleCall)cCSFieldAssignment_3_4_1_0.eContents().get(0);
-		private final Assignment cCSFormulaFieldAssignment_3_4_1_1 = (Assignment)cAlternatives_3_4_1.eContents().get(1);
-		private final RuleCall cCSFormulaFieldGSSTmTcFormatCSFormulaFieldParserRuleCall_3_4_1_1_0 = (RuleCall)cCSFormulaFieldAssignment_3_4_1_1.eContents().get(0);
-		private final Assignment cVSFieldAssignment_3_4_1_2 = (Assignment)cAlternatives_3_4_1.eContents().get(2);
-		private final RuleCall cVSFieldGSSTmTcFormatVSFieldParserRuleCall_3_4_1_2_0 = (RuleCall)cVSFieldAssignment_3_4_1_2.eContents().get(0);
-		private final Assignment cFDICFieldAssignment_3_4_1_3 = (Assignment)cAlternatives_3_4_1.eContents().get(3);
-		private final RuleCall cFDICFieldGSSTmTcFormatFDICFieldParserRuleCall_3_4_1_3_0 = (RuleCall)cFDICFieldAssignment_3_4_1_3.eContents().get(0);
-		private final Assignment cVRFieldSizeAssignment_3_4_1_4 = (Assignment)cAlternatives_3_4_1.eContents().get(4);
-		private final RuleCall cVRFieldSizeGSSTmTcFormatVRFieldSizeParserRuleCall_3_4_1_4_0 = (RuleCall)cVRFieldSizeAssignment_3_4_1_4.eContents().get(0);
-		private final Assignment cAFieldAssignment_3_4_1_5 = (Assignment)cAlternatives_3_4_1.eContents().get(5);
-		private final RuleCall cAFieldGSSTmTcFormatAFieldParserRuleCall_3_4_1_5_0 = (RuleCall)cAFieldAssignment_3_4_1_5.eContents().get(0);
-		private final Assignment cAIFieldAssignment_3_4_1_6 = (Assignment)cAlternatives_3_4_1.eContents().get(6);
-		private final RuleCall cAIFieldGSSTmTcFormatAIFieldParserRuleCall_3_4_1_6_0 = (RuleCall)cAIFieldAssignment_3_4_1_6.eContents().get(0);
+		private final Group cGroup_3_3_0 = (Group)cGroup_3_3.eContents().get(0);
+		private final Keyword cTypeKeyword_3_3_0_0 = (Keyword)cGroup_3_3_0.eContents().get(0);
+		private final Keyword cColonEqualsSignKeyword_3_3_0_1 = (Keyword)cGroup_3_3_0.eContents().get(1);
+		private final Assignment cTypeAssignment_3_3_0_2 = (Assignment)cGroup_3_3_0.eContents().get(2);
+		private final RuleCall cTypeGSSTmTcFormatTmTCFormatTypeEnumRuleCall_3_3_0_2_0 = (RuleCall)cTypeAssignment_3_3_0_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3_3_0_3 = (Keyword)cGroup_3_3_0.eContents().get(3);
+		private final Alternatives cAlternatives_3_3_1 = (Alternatives)cGroup_3_3.eContents().get(1);
+		private final Assignment cCSFieldAssignment_3_3_1_0 = (Assignment)cAlternatives_3_3_1.eContents().get(0);
+		private final RuleCall cCSFieldGSSTmTcFormatCSFieldParserRuleCall_3_3_1_0_0 = (RuleCall)cCSFieldAssignment_3_3_1_0.eContents().get(0);
+		private final Assignment cCSFormulaFieldAssignment_3_3_1_1 = (Assignment)cAlternatives_3_3_1.eContents().get(1);
+		private final RuleCall cCSFormulaFieldGSSTmTcFormatCSFormulaFieldParserRuleCall_3_3_1_1_0 = (RuleCall)cCSFormulaFieldAssignment_3_3_1_1.eContents().get(0);
+		private final Assignment cVSFieldAssignment_3_3_1_2 = (Assignment)cAlternatives_3_3_1.eContents().get(2);
+		private final RuleCall cVSFieldGSSTmTcFormatVSFieldParserRuleCall_3_3_1_2_0 = (RuleCall)cVSFieldAssignment_3_3_1_2.eContents().get(0);
+		private final Assignment cFDICFieldAssignment_3_3_1_3 = (Assignment)cAlternatives_3_3_1.eContents().get(3);
+		private final RuleCall cFDICFieldGSSTmTcFormatFDICFieldParserRuleCall_3_3_1_3_0 = (RuleCall)cFDICFieldAssignment_3_3_1_3.eContents().get(0);
+		private final Assignment cVRFieldSizeAssignment_3_3_1_4 = (Assignment)cAlternatives_3_3_1.eContents().get(4);
+		private final RuleCall cVRFieldSizeGSSTmTcFormatVRFieldSizeParserRuleCall_3_3_1_4_0 = (RuleCall)cVRFieldSizeAssignment_3_3_1_4.eContents().get(0);
+		private final Assignment cAFieldAssignment_3_3_1_5 = (Assignment)cAlternatives_3_3_1.eContents().get(5);
+		private final RuleCall cAFieldGSSTmTcFormatAFieldParserRuleCall_3_3_1_5_0 = (RuleCall)cAFieldAssignment_3_3_1_5.eContents().get(0);
+		private final Assignment cAIFieldAssignment_3_3_1_6 = (Assignment)cAlternatives_3_3_1.eContents().get(6);
+		private final RuleCall cAIFieldGSSTmTcFormatAIFieldParserRuleCall_3_3_1_6_0 = (RuleCall)cAIFieldAssignment_3_3_1_6.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//GSSTmTcFormatTmTCFormat:
 		//	'GSSTmTcFormatTmTCFormat'
 		//	name=ID
-		//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & ('description' ':=' description=ID ';')?
-		//	& 'protocol' ':=' protocol=ID ';' & ('type' ':=' type=GSSTmTcFormatTmTCFormatType ';') (CSField+=GSSTmTcFormatCSField
-		//	| CSFormulaField+=GSSTmTcFormatCSFormulaField | VSField+=GSSTmTcFormatVSField | FDICField+=GSSTmTcFormatFDICField |
+		//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'protocol' ':=' protocol=ID ';' &
+		//	('type' ':=' type=GSSTmTcFormatTmTCFormatType ';') (CSField+=GSSTmTcFormatCSField |
+		//	CSFormulaField+=GSSTmTcFormatCSFormulaField | VSField+=GSSTmTcFormatVSField | FDICField+=GSSTmTcFormatFDICField |
 		//	VRFieldSize+=GSSTmTcFormatVRFieldSize | AField+=GSSTmTcFormatAField | AIField+=GSSTmTcFormatAIField)*)
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTmTcFormatTmTCFormat' name=ID '{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' &
-		//('description' ':=' description=ID ';')? & 'protocol' ':=' protocol=ID ';' & ('type' ':='
-		//type=GSSTmTcFormatTmTCFormatType ';') (CSField+=GSSTmTcFormatCSField | CSFormulaField+=GSSTmTcFormatCSFormulaField |
-		//VSField+=GSSTmTcFormatVSField | FDICField+=GSSTmTcFormatFDICField | VRFieldSize+=GSSTmTcFormatVRFieldSize |
-		//AField+=GSSTmTcFormatAField | AIField+=GSSTmTcFormatAIField)*) '}' ';'
+		//'protocol' ':=' protocol=ID ';' & ('type' ':=' type=GSSTmTcFormatTmTCFormatType ';') (CSField+=GSSTmTcFormatCSField |
+		//CSFormulaField+=GSSTmTcFormatCSFormulaField | VSField+=GSSTmTcFormatVSField | FDICField+=GSSTmTcFormatFDICField |
+		//VRFieldSize+=GSSTmTcFormatVRFieldSize | AField+=GSSTmTcFormatAField | AIField+=GSSTmTcFormatAIField)*) '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSTmTcFormatTmTCFormat'
@@ -175,10 +168,10 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & ('description' ':=' description=ID ';')? &
-		//'protocol' ':=' protocol=ID ';' & ('type' ':=' type=GSSTmTcFormatTmTCFormatType ';') (CSField+=GSSTmTcFormatCSField |
-		//CSFormulaField+=GSSTmTcFormatCSFormulaField | VSField+=GSSTmTcFormatVSField | FDICField+=GSSTmTcFormatFDICField |
-		//VRFieldSize+=GSSTmTcFormatVRFieldSize | AField+=GSSTmTcFormatAField | AIField+=GSSTmTcFormatAIField)*)
+		//('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'protocol' ':=' protocol=ID ';' & ('type' ':='
+		//type=GSSTmTcFormatTmTCFormatType ';') (CSField+=GSSTmTcFormatCSField | CSFormulaField+=GSSTmTcFormatCSFormulaField |
+		//VSField+=GSSTmTcFormatVSField | FDICField+=GSSTmTcFormatFDICField | VRFieldSize+=GSSTmTcFormatVRFieldSize |
+		//AField+=GSSTmTcFormatAField | AIField+=GSSTmTcFormatAIField)*)
 		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
 		
 		//'uri' ':=' uri=QualifiedName ';'
@@ -217,111 +210,93 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_3_1_3() { return cSemicolonKeyword_3_1_3; }
 		
-		//('description' ':=' description=ID ';')?
+		//'protocol' ':=' protocol=ID ';'
 		public Group getGroup_3_2() { return cGroup_3_2; }
 		
-		//'description'
-		public Keyword getDescriptionKeyword_3_2_0() { return cDescriptionKeyword_3_2_0; }
+		//'protocol'
+		public Keyword getProtocolKeyword_3_2_0() { return cProtocolKeyword_3_2_0; }
 		
 		//':='
 		public Keyword getColonEqualsSignKeyword_3_2_1() { return cColonEqualsSignKeyword_3_2_1; }
 		
-		//description=ID
-		public Assignment getDescriptionAssignment_3_2_2() { return cDescriptionAssignment_3_2_2; }
+		//protocol=ID
+		public Assignment getProtocolAssignment_3_2_2() { return cProtocolAssignment_3_2_2; }
 		
 		//ID
-		public RuleCall getDescriptionIDTerminalRuleCall_3_2_2_0() { return cDescriptionIDTerminalRuleCall_3_2_2_0; }
+		public RuleCall getProtocolIDTerminalRuleCall_3_2_2_0() { return cProtocolIDTerminalRuleCall_3_2_2_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_3_2_3() { return cSemicolonKeyword_3_2_3; }
 		
-		//'protocol' ':=' protocol=ID ';'
-		public Group getGroup_3_3() { return cGroup_3_3; }
-		
-		//'protocol'
-		public Keyword getProtocolKeyword_3_3_0() { return cProtocolKeyword_3_3_0; }
-		
-		//':='
-		public Keyword getColonEqualsSignKeyword_3_3_1() { return cColonEqualsSignKeyword_3_3_1; }
-		
-		//protocol=ID
-		public Assignment getProtocolAssignment_3_3_2() { return cProtocolAssignment_3_3_2; }
-		
-		//ID
-		public RuleCall getProtocolIDTerminalRuleCall_3_3_2_0() { return cProtocolIDTerminalRuleCall_3_3_2_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_3_3_3() { return cSemicolonKeyword_3_3_3; }
-		
 		//('type' ':=' type=GSSTmTcFormatTmTCFormatType ';') (CSField+=GSSTmTcFormatCSField |
 		//CSFormulaField+=GSSTmTcFormatCSFormulaField | VSField+=GSSTmTcFormatVSField | FDICField+=GSSTmTcFormatFDICField |
 		//VRFieldSize+=GSSTmTcFormatVRFieldSize | AField+=GSSTmTcFormatAField | AIField+=GSSTmTcFormatAIField)*
-		public Group getGroup_3_4() { return cGroup_3_4; }
+		public Group getGroup_3_3() { return cGroup_3_3; }
 		
 		//('type' ':=' type=GSSTmTcFormatTmTCFormatType ';')
-		public Group getGroup_3_4_0() { return cGroup_3_4_0; }
+		public Group getGroup_3_3_0() { return cGroup_3_3_0; }
 		
 		//'type'
-		public Keyword getTypeKeyword_3_4_0_0() { return cTypeKeyword_3_4_0_0; }
+		public Keyword getTypeKeyword_3_3_0_0() { return cTypeKeyword_3_3_0_0; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_3_4_0_1() { return cColonEqualsSignKeyword_3_4_0_1; }
+		public Keyword getColonEqualsSignKeyword_3_3_0_1() { return cColonEqualsSignKeyword_3_3_0_1; }
 		
 		//type=GSSTmTcFormatTmTCFormatType
-		public Assignment getTypeAssignment_3_4_0_2() { return cTypeAssignment_3_4_0_2; }
+		public Assignment getTypeAssignment_3_3_0_2() { return cTypeAssignment_3_3_0_2; }
 		
 		//GSSTmTcFormatTmTCFormatType
-		public RuleCall getTypeGSSTmTcFormatTmTCFormatTypeEnumRuleCall_3_4_0_2_0() { return cTypeGSSTmTcFormatTmTCFormatTypeEnumRuleCall_3_4_0_2_0; }
+		public RuleCall getTypeGSSTmTcFormatTmTCFormatTypeEnumRuleCall_3_3_0_2_0() { return cTypeGSSTmTcFormatTmTCFormatTypeEnumRuleCall_3_3_0_2_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_3_4_0_3() { return cSemicolonKeyword_3_4_0_3; }
+		public Keyword getSemicolonKeyword_3_3_0_3() { return cSemicolonKeyword_3_3_0_3; }
 		
 		//(CSField+=GSSTmTcFormatCSField | CSFormulaField+=GSSTmTcFormatCSFormulaField | VSField+=GSSTmTcFormatVSField |
 		//FDICField+=GSSTmTcFormatFDICField | VRFieldSize+=GSSTmTcFormatVRFieldSize | AField+=GSSTmTcFormatAField |
 		//AIField+=GSSTmTcFormatAIField)*
-		public Alternatives getAlternatives_3_4_1() { return cAlternatives_3_4_1; }
+		public Alternatives getAlternatives_3_3_1() { return cAlternatives_3_3_1; }
 		
 		//CSField+=GSSTmTcFormatCSField
-		public Assignment getCSFieldAssignment_3_4_1_0() { return cCSFieldAssignment_3_4_1_0; }
+		public Assignment getCSFieldAssignment_3_3_1_0() { return cCSFieldAssignment_3_3_1_0; }
 		
 		//GSSTmTcFormatCSField
-		public RuleCall getCSFieldGSSTmTcFormatCSFieldParserRuleCall_3_4_1_0_0() { return cCSFieldGSSTmTcFormatCSFieldParserRuleCall_3_4_1_0_0; }
+		public RuleCall getCSFieldGSSTmTcFormatCSFieldParserRuleCall_3_3_1_0_0() { return cCSFieldGSSTmTcFormatCSFieldParserRuleCall_3_3_1_0_0; }
 		
 		//CSFormulaField+=GSSTmTcFormatCSFormulaField
-		public Assignment getCSFormulaFieldAssignment_3_4_1_1() { return cCSFormulaFieldAssignment_3_4_1_1; }
+		public Assignment getCSFormulaFieldAssignment_3_3_1_1() { return cCSFormulaFieldAssignment_3_3_1_1; }
 		
 		//GSSTmTcFormatCSFormulaField
-		public RuleCall getCSFormulaFieldGSSTmTcFormatCSFormulaFieldParserRuleCall_3_4_1_1_0() { return cCSFormulaFieldGSSTmTcFormatCSFormulaFieldParserRuleCall_3_4_1_1_0; }
+		public RuleCall getCSFormulaFieldGSSTmTcFormatCSFormulaFieldParserRuleCall_3_3_1_1_0() { return cCSFormulaFieldGSSTmTcFormatCSFormulaFieldParserRuleCall_3_3_1_1_0; }
 		
 		//VSField+=GSSTmTcFormatVSField
-		public Assignment getVSFieldAssignment_3_4_1_2() { return cVSFieldAssignment_3_4_1_2; }
+		public Assignment getVSFieldAssignment_3_3_1_2() { return cVSFieldAssignment_3_3_1_2; }
 		
 		//GSSTmTcFormatVSField
-		public RuleCall getVSFieldGSSTmTcFormatVSFieldParserRuleCall_3_4_1_2_0() { return cVSFieldGSSTmTcFormatVSFieldParserRuleCall_3_4_1_2_0; }
+		public RuleCall getVSFieldGSSTmTcFormatVSFieldParserRuleCall_3_3_1_2_0() { return cVSFieldGSSTmTcFormatVSFieldParserRuleCall_3_3_1_2_0; }
 		
 		//FDICField+=GSSTmTcFormatFDICField
-		public Assignment getFDICFieldAssignment_3_4_1_3() { return cFDICFieldAssignment_3_4_1_3; }
+		public Assignment getFDICFieldAssignment_3_3_1_3() { return cFDICFieldAssignment_3_3_1_3; }
 		
 		//GSSTmTcFormatFDICField
-		public RuleCall getFDICFieldGSSTmTcFormatFDICFieldParserRuleCall_3_4_1_3_0() { return cFDICFieldGSSTmTcFormatFDICFieldParserRuleCall_3_4_1_3_0; }
+		public RuleCall getFDICFieldGSSTmTcFormatFDICFieldParserRuleCall_3_3_1_3_0() { return cFDICFieldGSSTmTcFormatFDICFieldParserRuleCall_3_3_1_3_0; }
 		
 		//VRFieldSize+=GSSTmTcFormatVRFieldSize
-		public Assignment getVRFieldSizeAssignment_3_4_1_4() { return cVRFieldSizeAssignment_3_4_1_4; }
+		public Assignment getVRFieldSizeAssignment_3_3_1_4() { return cVRFieldSizeAssignment_3_3_1_4; }
 		
 		//GSSTmTcFormatVRFieldSize
-		public RuleCall getVRFieldSizeGSSTmTcFormatVRFieldSizeParserRuleCall_3_4_1_4_0() { return cVRFieldSizeGSSTmTcFormatVRFieldSizeParserRuleCall_3_4_1_4_0; }
+		public RuleCall getVRFieldSizeGSSTmTcFormatVRFieldSizeParserRuleCall_3_3_1_4_0() { return cVRFieldSizeGSSTmTcFormatVRFieldSizeParserRuleCall_3_3_1_4_0; }
 		
 		//AField+=GSSTmTcFormatAField
-		public Assignment getAFieldAssignment_3_4_1_5() { return cAFieldAssignment_3_4_1_5; }
+		public Assignment getAFieldAssignment_3_3_1_5() { return cAFieldAssignment_3_3_1_5; }
 		
 		//GSSTmTcFormatAField
-		public RuleCall getAFieldGSSTmTcFormatAFieldParserRuleCall_3_4_1_5_0() { return cAFieldGSSTmTcFormatAFieldParserRuleCall_3_4_1_5_0; }
+		public RuleCall getAFieldGSSTmTcFormatAFieldParserRuleCall_3_3_1_5_0() { return cAFieldGSSTmTcFormatAFieldParserRuleCall_3_3_1_5_0; }
 		
 		//AIField+=GSSTmTcFormatAIField
-		public Assignment getAIFieldAssignment_3_4_1_6() { return cAIFieldAssignment_3_4_1_6; }
+		public Assignment getAIFieldAssignment_3_3_1_6() { return cAIFieldAssignment_3_3_1_6; }
 		
 		//GSSTmTcFormatAIField
-		public RuleCall getAIFieldGSSTmTcFormatAIFieldParserRuleCall_3_4_1_6_0() { return cAIFieldGSSTmTcFormatAIFieldParserRuleCall_3_4_1_6_0; }
+		public RuleCall getAIFieldGSSTmTcFormatAIFieldParserRuleCall_3_3_1_6_0() { return cAIFieldGSSTmTcFormatAIFieldParserRuleCall_3_3_1_6_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
@@ -3111,9 +3086,9 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSTmTcFormatTmTCFormat:
 	//	'GSSTmTcFormatTmTCFormat'
 	//	name=ID
-	//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & ('description' ':=' description=ID ';')?
-	//	& 'protocol' ':=' protocol=ID ';' & ('type' ':=' type=GSSTmTcFormatTmTCFormatType ';') (CSField+=GSSTmTcFormatCSField
-	//	| CSFormulaField+=GSSTmTcFormatCSFormulaField | VSField+=GSSTmTcFormatVSField | FDICField+=GSSTmTcFormatFDICField |
+	//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'protocol' ':=' protocol=ID ';' &
+	//	('type' ':=' type=GSSTmTcFormatTmTCFormatType ';') (CSField+=GSSTmTcFormatCSField |
+	//	CSFormulaField+=GSSTmTcFormatCSFormulaField | VSField+=GSSTmTcFormatVSField | FDICField+=GSSTmTcFormatFDICField |
 	//	VRFieldSize+=GSSTmTcFormatVRFieldSize | AField+=GSSTmTcFormatAField | AIField+=GSSTmTcFormatAIField)*)
 	//	'}' ';';
 	public GSSTmTcFormatTmTCFormatElements getGSSTmTcFormatTmTCFormatAccess() {

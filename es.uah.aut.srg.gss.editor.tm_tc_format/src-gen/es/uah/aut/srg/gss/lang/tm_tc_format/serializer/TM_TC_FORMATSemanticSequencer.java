@@ -497,7 +497,29 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     GSSTmTcFormatTmTCFormat returns GSSTmTcFormatTmTCFormat
 	 *
 	 * Constraint:
-	 *     (<unknown> name=ID)
+	 *     (
+	 *         name=ID 
+	 *         (
+	 *             ((uri=QualifiedName | version=Version | protocol=ID) (type=GSSTmTcFormatTmTCFormatType CSField+=GSSTmTcFormatCSField?)?)+ | 
+	 *             (
+	 *                 type=GSSTmTcFormatTmTCFormatType 
+	 *                 CSField+=GSSTmTcFormatCSField? 
+	 *                 (
+	 *                     (
+	 *                         type=GSSTmTcFormatTmTCFormatType | 
+	 *                         CSFormulaField+=GSSTmTcFormatCSFormulaField | 
+	 *                         VSField+=GSSTmTcFormatVSField | 
+	 *                         FDICField+=GSSTmTcFormatFDICField | 
+	 *                         VRFieldSize+=GSSTmTcFormatVRFieldSize | 
+	 *                         AField+=GSSTmTcFormatAField | 
+	 *                         AIField+=GSSTmTcFormatAIField
+	 *                     )? 
+	 *                     CSField+=GSSTmTcFormatCSField?
+	 *                 )* 
+	 *                 ((uri=QualifiedName | version=Version | protocol=ID) (type=GSSTmTcFormatTmTCFormatType CSField+=GSSTmTcFormatCSField?)?)+
+	 *             )
+	 *         )?
+	 *     )
 	 */
 	protected void sequence_GSSTmTcFormatTmTCFormat(ISerializationContext context, GSSTmTcFormatTmTCFormat semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -20,7 +20,6 @@ GSSTmTcFormatTmTCFormat returns GSSTmTcFormatTmTCFormat:
 	 '{'
 		(('uri' ':=' uri=QualifiedName ';')
 		& ('version' ':=' version=Version ';')
-		& ('description' ':=' description=ID ';')?
 		& ('protocol' ':=' protocol=ID ';')
 		& ('type' ':=' type=GSSTmTcFormatTmTCFormatType ';')
 		((CSField+=GSSTmTcFormatCSField) |
