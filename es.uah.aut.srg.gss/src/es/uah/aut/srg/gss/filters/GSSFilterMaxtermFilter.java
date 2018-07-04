@@ -135,7 +135,7 @@ public interface GSSFilterMaxtermFilter extends GSSFilterFilter {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maxterm</em>' containment reference list.
 	 * @see es.uah.aut.srg.gss.filters.filtersPackage#getGSSFilterMaxtermFilter_Maxterm()
-	 * @model containment="true" required="true"
+	 * @model containment="true" required="true" upper="10"
 	 * @generated
 	 */
 	EList<GSSFilterMaxterm> getMaxterm();

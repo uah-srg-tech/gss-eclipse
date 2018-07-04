@@ -46,4 +46,52 @@
             genModel="model/filters.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated import -->
+      <package
+            uri="http://srg.aut.uah.es/gss/import"
+            class="es.uah.aut.srg.gss.import_.importPackage"
+            genModel="model/imports.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated imports -->
+      <package
+            uri="http://srg.aut.uah.es/gss/imports"
+            class="es.uah.aut.srg.gss.imports.importsPackage"
+            genModel="model/imports.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated charts -->
+      <package
+            uri="http://srg.aut.uah.es/gss/charts"
+            class="es.uah.aut.srg.gss.charts.chartsPackage"
+            genModel="model/charts.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated protocol_packets -->
+      <package
+            uri="http://srg.aut.uah.es/gss/protocol_packets"
+            class="es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage"
+            genModel="model/protocol_packets.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated config -->
+      <package
+            uri="http://srg.aut.uah.es/gss/config"
+            class="es.uah.aut.srg.gss.config.configPackage"
+            genModel="model/config.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated test_proc -->
+      <package
+            uri="http://srg.aut.uah.es/gss/test_proc"
+            class="es.uah.aut.srg.gss.test_proc.test_procPackage"
+            genModel="model/test_proc.genmodel"/>
+   </extension>
+
 </plugin>

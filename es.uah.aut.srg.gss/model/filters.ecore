@@ -14,7 +14,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarFDIC" upperBound="-1"
         eType="#//GSSFilterBoolVarFDIC" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Maxterm" lowerBound="1"
-        upperBound="-1" eType="#//GSSFilterMaxterm" containment="true"/>
+        upperBound="10" eType="#//GSSFilterMaxterm" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSFilterMintermFilter" eSuperTypes="#//GSSFilterFilter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="formatFile" lowerBound="1"
@@ -28,7 +28,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarFDIC" upperBound="-1"
         eType="#//GSSFilterBoolVarFDIC" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Minterm" lowerBound="1"
-        upperBound="-1" eType="#//GSSFilterMinterm" containment="true"/>
+        upperBound="10" eType="#//GSSFilterMinterm" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSFilterBoolVar">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

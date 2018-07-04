@@ -135,7 +135,7 @@ public interface GSSFilterMintermFilter extends GSSFilterFilter {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minterm</em>' containment reference list.
 	 * @see es.uah.aut.srg.gss.filters.filtersPackage#getGSSFilterMintermFilter_Minterm()
-	 * @model containment="true" required="true"
+	 * @model containment="true" required="true" upper="10"
 	 * @generated
 	 */
 	EList<GSSFilterMinterm> getMinterm();

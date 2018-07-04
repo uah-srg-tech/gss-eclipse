@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="charts" nsURI="http://srg.aut.uah.es/gss/charts" nsPrefix="gss">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSChartsCharts" eSuperTypes="common.ecore#//GSSModelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Chart" lowerBound="1" upperBound="5"
+        eType="#//GSSChartsChart" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSChartsChart">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y_units" lowerBound="1"
+        eType="#//GSSChartsYUnits"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y_max" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSChartsYUnits">
+    <eLiterals name="volts"/>
+    <eLiterals name="amps" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -42,7 +42,7 @@ public class TM_TC_FORMATParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getAlternatives_3_4_1(), "rule__GSSTmTcFormatTmTCFormat__Alternatives_3_4_1");
+					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getAlternatives_3_3_1(), "rule__GSSTmTcFormatTmTCFormat__Alternatives_3_3_1");
 					put(grammarAccess.getVersionAccess().getAlternatives_0(), "rule__Version__Alternatives_0");
 					put(grammarAccess.getVersionAccess().getAlternatives_1_1(), "rule__Version__Alternatives_1_1");
 					put(grammarAccess.getINTEGERAccess().getAlternatives(), "rule__INTEGER__Alternatives");
@@ -61,8 +61,7 @@ public class TM_TC_FORMATParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getGroup_3_1(), "rule__GSSTmTcFormatTmTCFormat__Group_3_1__0");
 					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getGroup_3_2(), "rule__GSSTmTcFormatTmTCFormat__Group_3_2__0");
 					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getGroup_3_3(), "rule__GSSTmTcFormatTmTCFormat__Group_3_3__0");
-					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getGroup_3_4(), "rule__GSSTmTcFormatTmTCFormat__Group_3_4__0");
-					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getGroup_3_4_0(), "rule__GSSTmTcFormatTmTCFormat__Group_3_4_0__0");
+					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getGroup_3_3_0(), "rule__GSSTmTcFormatTmTCFormat__Group_3_3_0__0");
 					put(grammarAccess.getGSSTmTcFormatCSFieldAccess().getGroup(), "rule__GSSTmTcFormatCSField__Group__0");
 					put(grammarAccess.getGSSTmTcFormatCSFieldAccess().getGroup_14(), "rule__GSSTmTcFormatCSField__Group_14__0");
 					put(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getGroup(), "rule__GSSTmTcFormatCSFormulaField__Group__0");
@@ -109,16 +108,15 @@ public class TM_TC_FORMATParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getNameAssignment_1(), "rule__GSSTmTcFormatTmTCFormat__NameAssignment_1");
 					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUriAssignment_3_0_2(), "rule__GSSTmTcFormatTmTCFormat__UriAssignment_3_0_2");
 					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getVersionAssignment_3_1_2(), "rule__GSSTmTcFormatTmTCFormat__VersionAssignment_3_1_2");
-					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getDescriptionAssignment_3_2_2(), "rule__GSSTmTcFormatTmTCFormat__DescriptionAssignment_3_2_2");
-					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getProtocolAssignment_3_3_2(), "rule__GSSTmTcFormatTmTCFormat__ProtocolAssignment_3_3_2");
-					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getTypeAssignment_3_4_0_2(), "rule__GSSTmTcFormatTmTCFormat__TypeAssignment_3_4_0_2");
-					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getCSFieldAssignment_3_4_1_0(), "rule__GSSTmTcFormatTmTCFormat__CSFieldAssignment_3_4_1_0");
-					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getCSFormulaFieldAssignment_3_4_1_1(), "rule__GSSTmTcFormatTmTCFormat__CSFormulaFieldAssignment_3_4_1_1");
-					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getVSFieldAssignment_3_4_1_2(), "rule__GSSTmTcFormatTmTCFormat__VSFieldAssignment_3_4_1_2");
-					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getFDICFieldAssignment_3_4_1_3(), "rule__GSSTmTcFormatTmTCFormat__FDICFieldAssignment_3_4_1_3");
-					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getVRFieldSizeAssignment_3_4_1_4(), "rule__GSSTmTcFormatTmTCFormat__VRFieldSizeAssignment_3_4_1_4");
-					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getAFieldAssignment_3_4_1_5(), "rule__GSSTmTcFormatTmTCFormat__AFieldAssignment_3_4_1_5");
-					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getAIFieldAssignment_3_4_1_6(), "rule__GSSTmTcFormatTmTCFormat__AIFieldAssignment_3_4_1_6");
+					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getProtocolAssignment_3_2_2(), "rule__GSSTmTcFormatTmTCFormat__ProtocolAssignment_3_2_2");
+					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getTypeAssignment_3_3_0_2(), "rule__GSSTmTcFormatTmTCFormat__TypeAssignment_3_3_0_2");
+					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getCSFieldAssignment_3_3_1_0(), "rule__GSSTmTcFormatTmTCFormat__CSFieldAssignment_3_3_1_0");
+					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getCSFormulaFieldAssignment_3_3_1_1(), "rule__GSSTmTcFormatTmTCFormat__CSFormulaFieldAssignment_3_3_1_1");
+					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getVSFieldAssignment_3_3_1_2(), "rule__GSSTmTcFormatTmTCFormat__VSFieldAssignment_3_3_1_2");
+					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getFDICFieldAssignment_3_3_1_3(), "rule__GSSTmTcFormatTmTCFormat__FDICFieldAssignment_3_3_1_3");
+					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getVRFieldSizeAssignment_3_3_1_4(), "rule__GSSTmTcFormatTmTCFormat__VRFieldSizeAssignment_3_3_1_4");
+					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getAFieldAssignment_3_3_1_5(), "rule__GSSTmTcFormatTmTCFormat__AFieldAssignment_3_3_1_5");
+					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getAIFieldAssignment_3_3_1_6(), "rule__GSSTmTcFormatTmTCFormat__AIFieldAssignment_3_3_1_6");
 					put(grammarAccess.getGSSTmTcFormatCSFieldAccess().getFidAssignment_4(), "rule__GSSTmTcFormatCSField__FidAssignment_4");
 					put(grammarAccess.getGSSTmTcFormatCSFieldAccess().getPfidAssignment_8(), "rule__GSSTmTcFormatCSField__PfidAssignment_8");
 					put(grammarAccess.getGSSTmTcFormatCSFieldAccess().getNameAssignment_12(), "rule__GSSTmTcFormatCSField__NameAssignment_12");

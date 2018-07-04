@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="protocol_packets" nsURI="http://srg.aut.uah.es/gss/protocol_packets"
+    nsPrefix="gss">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSProtocolPacketsProtocolPackets" eSuperTypes="common.ecore#//GSSModelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ProtocolPacket" lowerBound="1"
+        upperBound="15" eType="#//GSSProtocolPacketsProtocolPacket" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSProtocolPacketsProtocolPacket">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="levelRef" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="export" lowerBound="1"
+        eType="#//GSSProtocolPacketsExport" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="format" lowerBound="1"
+        eType="#//GSSProtocolPacketsFormat" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSProtocolPacketsExport">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSProtocolPacketsFormat">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -42,7 +42,7 @@ public interface GSSExportActivateDICs extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>DIC</em>' containment reference list.
 	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportActivateDICs_DIC()
-	 * @model containment="true" required="true"
+	 * @model containment="true" required="true" upper="10"
 	 * @generated
 	 */
 	EList<GSSExportDIC> getDIC();

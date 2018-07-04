@@ -1026,7 +1026,7 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 		initEAttribute(getGSSExportSettingAIFromFile_Line(), ecorePackage.getEString(), "line", null, 0, 1, GSSExportSettingAIFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssExportActivateDICsEClass, GSSExportActivateDICs.class, "GSSExportActivateDICs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGSSExportActivateDICs_DIC(), this.getGSSExportDIC(), null, "DIC", null, 1, -1, GSSExportActivateDICs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSExportActivateDICs_DIC(), this.getGSSExportDIC(), null, "DIC", null, 1, 10, GSSExportActivateDICs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssExportDICEClass, GSSExportDIC.class, "GSSExportDIC", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSExportDIC_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSExportDIC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
