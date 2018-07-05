@@ -143,8 +143,8 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSTmTcFormatTmTCFormat:
 		//	'GSSTmTcFormatTmTCFormat'
 		//	name=ID
-		//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'protocol' ':=' protocol=ID ';' &
-		//	('type' ':=' type=GSSTmTcFormatTmTCFormatType ';') (CSField+=GSSTmTcFormatCSField |
+		//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'protocol' ':=' protocol=ID ';' & ('type'
+		//	':=' type=GSSTmTcFormatTmTCFormatType ';') (CSField+=GSSTmTcFormatCSField |
 		//	CSFormulaField+=GSSTmTcFormatCSFormulaField | VSField+=GSSTmTcFormatVSField | FDICField+=GSSTmTcFormatFDICField |
 		//	VRFieldSize+=GSSTmTcFormatVRFieldSize | AField+=GSSTmTcFormatAField | AIField+=GSSTmTcFormatAIField)*)
 		//	'}' ';';
@@ -3086,8 +3086,8 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSTmTcFormatTmTCFormat:
 	//	'GSSTmTcFormatTmTCFormat'
 	//	name=ID
-	//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'protocol' ':=' protocol=ID ';' &
-	//	('type' ':=' type=GSSTmTcFormatTmTCFormatType ';') (CSField+=GSSTmTcFormatCSField |
+	//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'protocol' ':=' protocol=ID ';' & ('type'
+	//	':=' type=GSSTmTcFormatTmTCFormatType ';') (CSField+=GSSTmTcFormatCSField |
 	//	CSFormulaField+=GSSTmTcFormatCSFormulaField | VSField+=GSSTmTcFormatVSField | FDICField+=GSSTmTcFormatFDICField |
 	//	VRFieldSize+=GSSTmTcFormatVRFieldSize | AField+=GSSTmTcFormatAField | AIField+=GSSTmTcFormatAIField)*)
 	//	'}' ';';
@@ -3550,7 +3550,8 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal STRING:
-	//	'"' ('\\' . | !('\\' | '"'))* '"' | "'" ('\\' . | !('\\' | "'"))* "'";
+	//	'"' ('\\' . | !('\\' | '"'))* '"' |
+	//	"'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	}
