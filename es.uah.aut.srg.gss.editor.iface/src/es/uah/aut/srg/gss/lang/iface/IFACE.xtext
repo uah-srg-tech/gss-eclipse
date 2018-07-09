@@ -20,7 +20,7 @@ GSSIfacePortConfig returns GSSIfacePortConfig:
 	'{'
 		(('uri' ':=' uri=QualifiedName ';')
 		& ('version' ':=' version=Version ';'))
-		port=GSSIfacePort
+		portConfig=GSSIfacePort
 	'}' ';';
 
 GSSIfacePort returns GSSIfacePort:

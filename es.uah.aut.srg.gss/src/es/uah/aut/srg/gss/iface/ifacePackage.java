@@ -114,13 +114,13 @@ public interface ifacePackage extends EPackage {
 	int GSS_IFACE_PORT_CONFIG__DESCRIPTION = commonPackage.GSS_MODEL_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Port</b></em>' containment reference.
+	 * The feature id for the '<em><b>Port Config</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_PORT_CONFIG__PORT = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int GSS_IFACE_PORT_CONFIG__PORT_CONFIG = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Iface Port Config</em>' class.
@@ -773,15 +773,15 @@ public interface ifacePackage extends EPackage {
 	EClass getGSSIfacePortConfig();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfacePortConfig#getPort <em>Port</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfacePortConfig#getPortConfig <em>Port Config</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Port</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfacePortConfig#getPort()
+	 * @return the meta object for the containment reference '<em>Port Config</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfacePortConfig#getPortConfig()
 	 * @see #getGSSIfacePortConfig()
 	 * @generated
 	 */
-	EReference getGSSIfacePortConfig_Port();
+	EReference getGSSIfacePortConfig_PortConfig();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.iface.GSSIfacePort <em>GSS Iface Port</em>}'.
@@ -1294,12 +1294,12 @@ public interface ifacePackage extends EPackage {
 		EClass GSS_IFACE_PORT_CONFIG = eINSTANCE.getGSSIfacePortConfig();
 
 		/**
-		 * The meta object literal for the '<em><b>Port</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Port Config</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_IFACE_PORT_CONFIG__PORT = eINSTANCE.getGSSIfacePortConfig_Port();
+		EReference GSS_IFACE_PORT_CONFIG__PORT_CONFIG = eINSTANCE.getGSSIfacePortConfig_PortConfig();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfacePortImpl <em>GSS Iface Port</em>}' class.

@@ -21,7 +21,7 @@ import es.uah.aut.srg.gss.common.GSSModelElement;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.iface.GSSIfacePortConfig#getPort <em>Port</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.iface.GSSIfacePortConfig#getPortConfig <em>Port Config</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfacePortConfig()
@@ -30,29 +30,29 @@ import es.uah.aut.srg.gss.common.GSSModelElement;
  */
 public interface GSSIfacePortConfig extends GSSModelElement {
 	/**
-	 * Returns the value of the '<em><b>Port</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Port Config</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Port</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Port Config</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Port</em>' containment reference.
-	 * @see #setPort(GSSIfacePort)
-	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfacePortConfig_Port()
+	 * @return the value of the '<em>Port Config</em>' containment reference.
+	 * @see #setPortConfig(GSSIfacePort)
+	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfacePortConfig_PortConfig()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSIfacePort getPort();
+	GSSIfacePort getPortConfig();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfacePortConfig#getPort <em>Port</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfacePortConfig#getPortConfig <em>Port Config</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Port</em>' containment reference.
-	 * @see #getPort()
+	 * @param value the new value of the '<em>Port Config</em>' containment reference.
+	 * @see #getPortConfig()
 	 * @generated
 	 */
-	void setPort(GSSIfacePort value);
+	void setPortConfig(GSSIfacePort value);
 
 } // GSSIfacePortConfig

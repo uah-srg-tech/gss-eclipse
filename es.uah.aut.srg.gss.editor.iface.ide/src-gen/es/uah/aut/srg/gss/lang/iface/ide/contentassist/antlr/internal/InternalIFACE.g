@@ -1165,9 +1165,9 @@ rule__GSSIfacePortConfig__Group__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSIfacePortConfigAccess().getPortAssignment_4()); }
-	(rule__GSSIfacePortConfig__PortAssignment_4)
-	{ after(grammarAccess.getGSSIfacePortConfigAccess().getPortAssignment_4()); }
+	{ before(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigAssignment_4()); }
+	(rule__GSSIfacePortConfig__PortConfigAssignment_4)
+	{ after(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigAssignment_4()); }
 )
 ;
 finally {
@@ -5647,15 +5647,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSIfacePortConfig__PortAssignment_4
+rule__GSSIfacePortConfig__PortConfigAssignment_4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSIfacePortConfigAccess().getPortGSSIfacePortParserRuleCall_4_0()); }
+		{ before(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigGSSIfacePortParserRuleCall_4_0()); }
 		ruleGSSIfacePort
-		{ after(grammarAccess.getGSSIfacePortConfigAccess().getPortGSSIfacePortParserRuleCall_4_0()); }
+		{ after(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigGSSIfacePortParserRuleCall_4_0()); }
 	)
 ;
 finally {

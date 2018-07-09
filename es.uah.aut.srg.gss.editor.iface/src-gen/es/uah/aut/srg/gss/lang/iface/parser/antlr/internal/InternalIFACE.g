@@ -331,17 +331,17 @@ ruleGSSIfacePortConfig returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSIfacePortConfigAccess().getPortGSSIfacePortParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigGSSIfacePortParserRuleCall_4_0());
 				}
-				lv_port_12_0=ruleGSSIfacePort
+				lv_portConfig_12_0=ruleGSSIfacePort
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSIfacePortConfigRule());
 					}
 					set(
 						$current,
-						"port",
-						lv_port_12_0,
+						"portConfig",
+						lv_portConfig_12_0,
 						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePort");
 					afterParserOrEnumRuleCall();
 				}

@@ -2,8 +2,8 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="iface" nsURI="http://srg.aut.uah.es/gss/iface" nsPrefix="gss">
   <eClassifiers xsi:type="ecore:EClass" name="GSSIfacePortConfig" eSuperTypes="common.ecore#//GSSModelElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="port" lowerBound="1" eType="#//GSSIfacePort"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portConfig" lowerBound="1"
+        eType="#//GSSIfacePort" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSIfacePort" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceSpWPort" eSuperTypes="#//GSSIfacePort">

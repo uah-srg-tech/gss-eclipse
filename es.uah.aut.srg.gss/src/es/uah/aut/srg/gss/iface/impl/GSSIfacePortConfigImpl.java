@@ -32,22 +32,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfacePortConfigImpl#getPort <em>Port</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfacePortConfigImpl#getPortConfig <em>Port Config</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class GSSIfacePortConfigImpl extends GSSModelElementImpl implements GSSIfacePortConfig {
 	/**
-	 * The cached value of the '{@link #getPort() <em>Port</em>}' containment reference.
+	 * The cached value of the '{@link #getPortConfig() <em>Port Config</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPort()
+	 * @see #getPortConfig()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSIfacePort port;
-
+	protected GSSIfacePort portConfig;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -72,8 +71,8 @@ public class GSSIfacePortConfigImpl extends GSSModelElementImpl implements GSSIf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSIfacePort getPort() {
-		return port;
+	public GSSIfacePort getPortConfig() {
+		return portConfig;
 	}
 
 	/**
@@ -81,11 +80,11 @@ public class GSSIfacePortConfigImpl extends GSSModelElementImpl implements GSSIf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPort(GSSIfacePort newPort, NotificationChain msgs) {
-		GSSIfacePort oldPort = port;
-		port = newPort;
+	public NotificationChain basicSetPortConfig(GSSIfacePort newPortConfig, NotificationChain msgs) {
+		GSSIfacePort oldPortConfig = portConfig;
+		portConfig = newPortConfig;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_PORT_CONFIG__PORT, oldPort, newPort);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_PORT_CONFIG__PORT_CONFIG, oldPortConfig, newPortConfig);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -96,18 +95,18 @@ public class GSSIfacePortConfigImpl extends GSSModelElementImpl implements GSSIf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPort(GSSIfacePort newPort) {
-		if (newPort != port) {
+	public void setPortConfig(GSSIfacePort newPortConfig) {
+		if (newPortConfig != portConfig) {
 			NotificationChain msgs = null;
-			if (port != null)
-				msgs = ((InternalEObject)port).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_PORT_CONFIG__PORT, null, msgs);
-			if (newPort != null)
-				msgs = ((InternalEObject)newPort).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_PORT_CONFIG__PORT, null, msgs);
-			msgs = basicSetPort(newPort, msgs);
+			if (portConfig != null)
+				msgs = ((InternalEObject)portConfig).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_PORT_CONFIG__PORT_CONFIG, null, msgs);
+			if (newPortConfig != null)
+				msgs = ((InternalEObject)newPortConfig).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_PORT_CONFIG__PORT_CONFIG, null, msgs);
+			msgs = basicSetPortConfig(newPortConfig, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_PORT_CONFIG__PORT, newPort, newPort));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_PORT_CONFIG__PORT_CONFIG, newPortConfig, newPortConfig));
 	}
 
 	/**
@@ -118,8 +117,8 @@ public class GSSIfacePortConfigImpl extends GSSModelElementImpl implements GSSIf
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ifacePackage.GSS_IFACE_PORT_CONFIG__PORT:
-				return basicSetPort(null, msgs);
+			case ifacePackage.GSS_IFACE_PORT_CONFIG__PORT_CONFIG:
+				return basicSetPortConfig(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -132,8 +131,8 @@ public class GSSIfacePortConfigImpl extends GSSModelElementImpl implements GSSIf
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ifacePackage.GSS_IFACE_PORT_CONFIG__PORT:
-				return getPort();
+			case ifacePackage.GSS_IFACE_PORT_CONFIG__PORT_CONFIG:
+				return getPortConfig();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -146,8 +145,8 @@ public class GSSIfacePortConfigImpl extends GSSModelElementImpl implements GSSIf
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ifacePackage.GSS_IFACE_PORT_CONFIG__PORT:
-				setPort((GSSIfacePort)newValue);
+			case ifacePackage.GSS_IFACE_PORT_CONFIG__PORT_CONFIG:
+				setPortConfig((GSSIfacePort)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -161,8 +160,8 @@ public class GSSIfacePortConfigImpl extends GSSModelElementImpl implements GSSIf
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ifacePackage.GSS_IFACE_PORT_CONFIG__PORT:
-				setPort((GSSIfacePort)null);
+			case ifacePackage.GSS_IFACE_PORT_CONFIG__PORT_CONFIG:
+				setPortConfig((GSSIfacePort)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -176,8 +175,8 @@ public class GSSIfacePortConfigImpl extends GSSModelElementImpl implements GSSIf
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ifacePackage.GSS_IFACE_PORT_CONFIG__PORT:
-				return port != null;
+			case ifacePackage.GSS_IFACE_PORT_CONFIG__PORT_CONFIG:
+				return portConfig != null;
 		}
 		return super.eIsSet(featureID);
 	}

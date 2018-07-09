@@ -260,7 +260,7 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSIfacePortConfig_Port() {
+	public EReference getGSSIfacePortConfig_PortConfig() {
 		return (EReference)gssIfacePortConfigEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -698,7 +698,7 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 
 		// Create classes and their features
 		gssIfacePortConfigEClass = createEClass(GSS_IFACE_PORT_CONFIG);
-		createEReference(gssIfacePortConfigEClass, GSS_IFACE_PORT_CONFIG__PORT);
+		createEReference(gssIfacePortConfigEClass, GSS_IFACE_PORT_CONFIG__PORT_CONFIG);
 
 		gssIfacePortEClass = createEClass(GSS_IFACE_PORT);
 
@@ -798,7 +798,7 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssIfacePortConfigEClass, GSSIfacePortConfig.class, "GSSIfacePortConfig", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGSSIfacePortConfig_Port(), this.getGSSIfacePort(), null, "port", null, 1, 1, GSSIfacePortConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSIfacePortConfig_PortConfig(), this.getGSSIfacePort(), null, "portConfig", null, 1, 1, GSSIfacePortConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssIfacePortEClass, GSSIfacePort.class, "GSSIfacePort", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

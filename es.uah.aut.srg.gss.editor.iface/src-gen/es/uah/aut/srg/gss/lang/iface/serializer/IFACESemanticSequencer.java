@@ -138,7 +138,7 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     GSSIfacePortConfig returns GSSIfacePortConfig
 	 *
 	 * Constraint:
-	 *     (name=ID (uri=QualifiedName | version=Version)+ port=GSSIfacePort)
+	 *     (name=ID (uri=QualifiedName | version=Version)+ portConfig=GSSIfacePort)
 	 */
 	protected void sequence_GSSIfacePortConfig(ISerializationContext context, GSSIfacePortConfig semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

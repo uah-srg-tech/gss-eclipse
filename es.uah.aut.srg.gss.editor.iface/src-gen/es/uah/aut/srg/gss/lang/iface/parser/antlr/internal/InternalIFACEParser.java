@@ -493,7 +493,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfacePortConfig"
-    // InternalIFACE.g:195:1: ruleGSSIfacePortConfig returns [EObject current=null] : (otherlv_0= 'portConfig' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_port_12_0= ruleGSSIfacePort ) ) otherlv_13= '}' otherlv_14= ';' ) ;
+    // InternalIFACE.g:195:1: ruleGSSIfacePortConfig returns [EObject current=null] : (otherlv_0= 'portConfig' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_portConfig_12_0= ruleGSSIfacePort ) ) otherlv_13= '}' otherlv_14= ';' ) ;
     public final EObject ruleGSSIfacePortConfig() throws RecognitionException {
         EObject current = null;
 
@@ -512,7 +512,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
         AntlrDatatypeRuleToken lv_version_10_0 = null;
 
-        EObject lv_port_12_0 = null;
+        EObject lv_portConfig_12_0 = null;
 
 
 
@@ -522,11 +522,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	);
 
         try {
-            // InternalIFACE.g:204:2: ( (otherlv_0= 'portConfig' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_port_12_0= ruleGSSIfacePort ) ) otherlv_13= '}' otherlv_14= ';' ) )
-            // InternalIFACE.g:205:2: (otherlv_0= 'portConfig' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_port_12_0= ruleGSSIfacePort ) ) otherlv_13= '}' otherlv_14= ';' )
+            // InternalIFACE.g:204:2: ( (otherlv_0= 'portConfig' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_portConfig_12_0= ruleGSSIfacePort ) ) otherlv_13= '}' otherlv_14= ';' ) )
+            // InternalIFACE.g:205:2: (otherlv_0= 'portConfig' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_portConfig_12_0= ruleGSSIfacePort ) ) otherlv_13= '}' otherlv_14= ';' )
             {
-            // InternalIFACE.g:205:2: (otherlv_0= 'portConfig' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_port_12_0= ruleGSSIfacePort ) ) otherlv_13= '}' otherlv_14= ';' )
-            // InternalIFACE.g:206:3: otherlv_0= 'portConfig' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_port_12_0= ruleGSSIfacePort ) ) otherlv_13= '}' otherlv_14= ';'
+            // InternalIFACE.g:205:2: (otherlv_0= 'portConfig' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_portConfig_12_0= ruleGSSIfacePort ) ) otherlv_13= '}' otherlv_14= ';' )
+            // InternalIFACE.g:206:3: otherlv_0= 'portConfig' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) ) ) ) )+ {...}?) ) ) ( (lv_portConfig_12_0= ruleGSSIfacePort ) ) otherlv_13= '}' otherlv_14= ';'
             {
             otherlv_0=(Token)match(input,14,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -807,19 +807,19 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalIFACE.g:331:3: ( (lv_port_12_0= ruleGSSIfacePort ) )
-            // InternalIFACE.g:332:4: (lv_port_12_0= ruleGSSIfacePort )
+            // InternalIFACE.g:331:3: ( (lv_portConfig_12_0= ruleGSSIfacePort ) )
+            // InternalIFACE.g:332:4: (lv_portConfig_12_0= ruleGSSIfacePort )
             {
-            // InternalIFACE.g:332:4: (lv_port_12_0= ruleGSSIfacePort )
-            // InternalIFACE.g:333:5: lv_port_12_0= ruleGSSIfacePort
+            // InternalIFACE.g:332:4: (lv_portConfig_12_0= ruleGSSIfacePort )
+            // InternalIFACE.g:333:5: lv_portConfig_12_0= ruleGSSIfacePort
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSIfacePortConfigAccess().getPortGSSIfacePortParserRuleCall_4_0());
+              					newCompositeNode(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigGSSIfacePortParserRuleCall_4_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_12);
-            lv_port_12_0=ruleGSSIfacePort();
+            lv_portConfig_12_0=ruleGSSIfacePort();
 
             state._fsp--;
             if (state.failed) return current;
@@ -830,8 +830,8 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               					}
               					set(
               						current,
-              						"port",
-              						lv_port_12_0,
+              						"portConfig",
+              						lv_portConfig_12_0,
               						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePort");
               					afterParserOrEnumRuleCall();
               				

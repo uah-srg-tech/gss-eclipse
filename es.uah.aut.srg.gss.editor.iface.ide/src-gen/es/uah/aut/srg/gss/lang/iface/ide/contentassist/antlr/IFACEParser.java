@@ -86,7 +86,7 @@ public class IFACEParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSIfacePortConfigAccess().getNameAssignment_1(), "rule__GSSIfacePortConfig__NameAssignment_1");
 					put(grammarAccess.getGSSIfacePortConfigAccess().getUriAssignment_3_0_2(), "rule__GSSIfacePortConfig__UriAssignment_3_0_2");
 					put(grammarAccess.getGSSIfacePortConfigAccess().getVersionAssignment_3_1_2(), "rule__GSSIfacePortConfig__VersionAssignment_3_1_2");
-					put(grammarAccess.getGSSIfacePortConfigAccess().getPortAssignment_4(), "rule__GSSIfacePortConfig__PortAssignment_4");
+					put(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigAssignment_4(), "rule__GSSIfacePortConfig__PortConfigAssignment_4");
 					put(grammarAccess.getGSSIfaceSpWPortAccess().getTypeAssignment_4(), "rule__GSSIfaceSpWPort__TypeAssignment_4");
 					put(grammarAccess.getGSSIfaceSpWPortAccess().getLinkAssignment_8(), "rule__GSSIfaceSpWPort__LinkAssignment_8");
 					put(grammarAccess.getGSSIfaceSpWPortAccess().getWritingPortAssignment_12(), "rule__GSSIfaceSpWPort__WritingPortAssignment_12");

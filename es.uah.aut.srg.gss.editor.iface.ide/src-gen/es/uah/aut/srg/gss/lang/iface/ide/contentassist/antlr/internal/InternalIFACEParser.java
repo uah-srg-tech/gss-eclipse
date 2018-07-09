@@ -4148,26 +4148,26 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__4__Impl"
-    // InternalIFACE.g:1162:1: rule__GSSIfacePortConfig__Group__4__Impl : ( ( rule__GSSIfacePortConfig__PortAssignment_4 ) ) ;
+    // InternalIFACE.g:1162:1: rule__GSSIfacePortConfig__Group__4__Impl : ( ( rule__GSSIfacePortConfig__PortConfigAssignment_4 ) ) ;
     public final void rule__GSSIfacePortConfig__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1166:1: ( ( ( rule__GSSIfacePortConfig__PortAssignment_4 ) ) )
-            // InternalIFACE.g:1167:1: ( ( rule__GSSIfacePortConfig__PortAssignment_4 ) )
+            // InternalIFACE.g:1166:1: ( ( ( rule__GSSIfacePortConfig__PortConfigAssignment_4 ) ) )
+            // InternalIFACE.g:1167:1: ( ( rule__GSSIfacePortConfig__PortConfigAssignment_4 ) )
             {
-            // InternalIFACE.g:1167:1: ( ( rule__GSSIfacePortConfig__PortAssignment_4 ) )
-            // InternalIFACE.g:1168:2: ( rule__GSSIfacePortConfig__PortAssignment_4 )
+            // InternalIFACE.g:1167:1: ( ( rule__GSSIfacePortConfig__PortConfigAssignment_4 ) )
+            // InternalIFACE.g:1168:2: ( rule__GSSIfacePortConfig__PortConfigAssignment_4 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSIfacePortConfigAccess().getPortAssignment_4()); 
+               before(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigAssignment_4()); 
             }
-            // InternalIFACE.g:1169:2: ( rule__GSSIfacePortConfig__PortAssignment_4 )
-            // InternalIFACE.g:1169:3: rule__GSSIfacePortConfig__PortAssignment_4
+            // InternalIFACE.g:1169:2: ( rule__GSSIfacePortConfig__PortConfigAssignment_4 )
+            // InternalIFACE.g:1169:3: rule__GSSIfacePortConfig__PortConfigAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSIfacePortConfig__PortAssignment_4();
+            rule__GSSIfacePortConfig__PortConfigAssignment_4();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4175,7 +4175,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSIfacePortConfigAccess().getPortAssignment_4()); 
+               after(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigAssignment_4()); 
             }
 
             }
@@ -17664,9 +17664,9 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSIfacePortConfig__VersionAssignment_3_1_2"
 
 
-    // $ANTLR start "rule__GSSIfacePortConfig__PortAssignment_4"
-    // InternalIFACE.g:5650:1: rule__GSSIfacePortConfig__PortAssignment_4 : ( ruleGSSIfacePort ) ;
-    public final void rule__GSSIfacePortConfig__PortAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__GSSIfacePortConfig__PortConfigAssignment_4"
+    // InternalIFACE.g:5650:1: rule__GSSIfacePortConfig__PortConfigAssignment_4 : ( ruleGSSIfacePort ) ;
+    public final void rule__GSSIfacePortConfig__PortConfigAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -17678,7 +17678,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             // InternalIFACE.g:5656:3: ruleGSSIfacePort
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSIfacePortConfigAccess().getPortGSSIfacePortParserRuleCall_4_0()); 
+               before(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigGSSIfacePortParserRuleCall_4_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleGSSIfacePort();
@@ -17686,7 +17686,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSIfacePortConfigAccess().getPortGSSIfacePortParserRuleCall_4_0()); 
+               after(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigGSSIfacePortParserRuleCall_4_0()); 
             }
 
             }
@@ -17706,7 +17706,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSIfacePortConfig__PortAssignment_4"
+    // $ANTLR end "rule__GSSIfacePortConfig__PortConfigAssignment_4"
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__TypeAssignment_4"

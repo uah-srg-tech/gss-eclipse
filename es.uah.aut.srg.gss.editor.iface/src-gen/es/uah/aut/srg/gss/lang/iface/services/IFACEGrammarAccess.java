@@ -109,20 +109,20 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cVersionAssignment_3_1_2 = (Assignment)cGroup_3_1.eContents().get(2);
 		private final RuleCall cVersionVersionParserRuleCall_3_1_2_0 = (RuleCall)cVersionAssignment_3_1_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3_1_3 = (Keyword)cGroup_3_1.eContents().get(3);
-		private final Assignment cPortAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cPortGSSIfacePortParserRuleCall_4_0 = (RuleCall)cPortAssignment_4.eContents().get(0);
+		private final Assignment cPortConfigAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPortConfigGSSIfacePortParserRuleCall_4_0 = (RuleCall)cPortConfigAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//GSSIfacePortConfig:
 		//	'portConfig'
 		//	name=ID
-		//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') port=GSSIfacePort
+		//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') portConfig=GSSIfacePort
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'portConfig' name=ID '{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') port=GSSIfacePort '}'
-		//';'
+		//'portConfig' name=ID '{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') portConfig=GSSIfacePort
+		//'}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'portConfig'
@@ -176,11 +176,11 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_3_1_3() { return cSemicolonKeyword_3_1_3; }
 		
-		//port=GSSIfacePort
-		public Assignment getPortAssignment_4() { return cPortAssignment_4; }
+		//portConfig=GSSIfacePort
+		public Assignment getPortConfigAssignment_4() { return cPortConfigAssignment_4; }
 		
 		//GSSIfacePort
-		public RuleCall getPortGSSIfacePortParserRuleCall_4_0() { return cPortGSSIfacePortParserRuleCall_4_0; }
+		public RuleCall getPortConfigGSSIfacePortParserRuleCall_4_0() { return cPortConfigGSSIfacePortParserRuleCall_4_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
@@ -1568,7 +1568,7 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSIfacePortConfig:
 	//	'portConfig'
 	//	name=ID
-	//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') port=GSSIfacePort
+	//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') portConfig=GSSIfacePort
 	//	'}' ';';
 	public GSSIfacePortConfigElements getGSSIfacePortConfigAccess() {
 		return pGSSIfacePortConfig;
