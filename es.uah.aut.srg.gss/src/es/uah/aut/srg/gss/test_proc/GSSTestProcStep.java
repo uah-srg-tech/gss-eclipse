@@ -126,9 +126,11 @@ public interface GSSTestProcStep extends GSSModelObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mode</em>' attribute.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcMode
+	 * @see #isSetMode()
+	 * @see #unsetMode()
 	 * @see #setMode(GSSTestProcMode)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcStep_Mode()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSTestProcMode getMode();
@@ -139,10 +141,35 @@ public interface GSSTestProcStep extends GSSModelObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mode</em>' attribute.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcMode
+	 * @see #isSetMode()
+	 * @see #unsetMode()
 	 * @see #getMode()
 	 * @generated
 	 */
 	void setMode(GSSTestProcMode value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getMode <em>Mode</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetMode()
+	 * @see #getMode()
+	 * @see #setMode(GSSTestProcMode)
+	 * @generated
+	 */
+	void unsetMode();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getMode <em>Mode</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Mode</em>' attribute is set.
+	 * @see #unsetMode()
+	 * @see #getMode()
+	 * @see #setMode(GSSTestProcMode)
+	 * @generated
+	 */
+	boolean isSetMode();
 
 	/**
 	 * Returns the value of the '<em><b>Replays</b></em>' attribute.

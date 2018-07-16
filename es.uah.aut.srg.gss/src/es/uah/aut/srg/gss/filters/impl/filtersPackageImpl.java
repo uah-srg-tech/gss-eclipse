@@ -1189,7 +1189,7 @@ public class filtersPackageImpl extends EPackageImpl implements filtersPackage {
 		initEClass(gssFilterBoolVarEClass, GSSFilterBoolVar.class, "GSSFilterBoolVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSFilterBoolVar_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSFilterBoolVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSFilterBoolVar_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSFilterBoolVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSFilterBoolVar_ConstantType(), this.getGSSFilterConstantType(), "constantType", null, 1, 1, GSSFilterBoolVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSFilterBoolVar_ConstantType(), this.getGSSFilterConstantType(), "constantType", null, 1, 1, GSSFilterBoolVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSFilterBoolVar_FieldRef(), this.getGSSFilterFieldRef(), null, "FieldRef", null, 1, 1, GSSFilterBoolVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSFilterBoolVar_Op(), this.getGSSFilterFieldOp(), null, "Op", null, 1, 1, GSSFilterBoolVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSFilterBoolVar_Constant(), this.getGSSFilterConstant(), null, "Constant", null, 0, 1, GSSFilterBoolVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1200,7 +1200,7 @@ public class filtersPackageImpl extends EPackageImpl implements filtersPackage {
 		initEAttribute(getGSSFilterFieldRef_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSFilterFieldRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssFilterFieldOpEClass, GSSFilterFieldOp.class, "GSSFilterFieldOp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSFilterFieldOp_Type(), this.getGSSFilterOPType(), "type", null, 1, 1, GSSFilterFieldOp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSFilterFieldOp_Type(), this.getGSSFilterOPType(), "type", null, 1, 1, GSSFilterFieldOp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssFilterConstantEClass, GSSFilterConstant.class, "GSSFilterConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSFilterConstant_Value(), ecorePackage.getEString(), "value", null, 1, 1, GSSFilterConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1208,7 +1208,7 @@ public class filtersPackageImpl extends EPackageImpl implements filtersPackage {
 
 		initEClass(gssFilterSelectEClass, GSSFilterSelect.class, "GSSFilterSelect", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSFilterSelect_FromFile(), ecorePackage.getEString(), "fromFile", null, 1, 1, GSSFilterSelect.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSFilterSelect_Type(), this.getGSSFilterSelectType(), "type", null, 1, 1, GSSFilterSelect.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSFilterSelect_Type(), this.getGSSFilterSelectType(), "type", null, 1, 1, GSSFilterSelect.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSFilterSelect_Offset(), ecorePackage.getEString(), "offset", null, 0, 1, GSSFilterSelect.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSFilterSelect_Size(), ecorePackage.getEString(), "size", null, 0, 1, GSSFilterSelect.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSFilterSelect_Mask(), ecorePackage.getEString(), "mask", null, 0, 1, GSSFilterSelect.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

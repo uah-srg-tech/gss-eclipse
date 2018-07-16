@@ -90,20 +90,12 @@ public class ifaceAdapterFactory extends AdapterFactoryImpl {
 				return createGSSIfaceSpWPortAdapter();
 			}
 			@Override
-			public Adapter caseGSSIfaceUartPort(GSSIfaceUartPort object) {
-				return createGSSIfaceUartPortAdapter();
-			}
-			@Override
-			public Adapter caseGSSIfaceSpWTCPort(GSSIfaceSpWTCPort object) {
-				return createGSSIfaceSpWTCPortAdapter();
-			}
-			@Override
-			public Adapter caseGSSIfaceDummyPort(GSSIfaceDummyPort object) {
-				return createGSSIfaceDummyPortAdapter();
-			}
-			@Override
 			public Adapter caseGSSIfaceReadingPort(GSSIfaceReadingPort object) {
 				return createGSSIfaceReadingPortAdapter();
+			}
+			@Override
+			public Adapter caseGSSIfaceUartPort(GSSIfaceUartPort object) {
+				return createGSSIfaceUartPortAdapter();
 			}
 			@Override
 			public Adapter caseGSSIfaceUartProtocol(GSSIfaceUartProtocol object) {
@@ -124,6 +116,14 @@ public class ifaceAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGSSIfaceSyncPattern(GSSIfaceSyncPattern object) {
 				return createGSSIfaceSyncPatternAdapter();
+			}
+			@Override
+			public Adapter caseGSSIfaceSpWTCPort(GSSIfaceSpWTCPort object) {
+				return createGSSIfaceSpWTCPortAdapter();
+			}
+			@Override
+			public Adapter caseGSSIfaceDummyPort(GSSIfaceDummyPort object) {
+				return createGSSIfaceDummyPortAdapter();
 			}
 			@Override
 			public Adapter caseGSSModelElement(GSSModelElement object) {

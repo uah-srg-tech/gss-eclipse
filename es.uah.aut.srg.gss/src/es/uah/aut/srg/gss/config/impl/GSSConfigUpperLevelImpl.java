@@ -64,6 +64,15 @@ public class GSSConfigUpperLevelImpl extends MinimalEObjectImpl.Container implem
 	protected GSSConfigUpperLevelLevel level = LEVEL_EDEFAULT;
 
 	/**
+	 * This is true if the Level attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean levelESet;
+
+	/**
 	 * The cached value of the '{@link #getTMformat() <em>TMformat</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,8 +138,33 @@ public class GSSConfigUpperLevelImpl extends MinimalEObjectImpl.Container implem
 	public void setLevel(GSSConfigUpperLevelLevel newLevel) {
 		GSSConfigUpperLevelLevel oldLevel = level;
 		level = newLevel == null ? LEVEL_EDEFAULT : newLevel;
+		boolean oldLevelESet = levelESet;
+		levelESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_UPPER_LEVEL__LEVEL, oldLevel, level));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_UPPER_LEVEL__LEVEL, oldLevel, level, !oldLevelESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetLevel() {
+		GSSConfigUpperLevelLevel oldLevel = level;
+		boolean oldLevelESet = levelESet;
+		level = LEVEL_EDEFAULT;
+		levelESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_UPPER_LEVEL__LEVEL, oldLevel, LEVEL_EDEFAULT, oldLevelESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetLevel() {
+		return levelESet;
 	}
 
 	/**
@@ -333,7 +367,7 @@ public class GSSConfigUpperLevelImpl extends MinimalEObjectImpl.Container implem
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_UPPER_LEVEL__LEVEL:
-				setLevel(LEVEL_EDEFAULT);
+				unsetLevel();
 				return;
 			case configPackage.GSS_CONFIG_UPPER_LEVEL__TMFORMAT:
 				setTMformat((GSSConfigTMFormat)null);
@@ -357,7 +391,7 @@ public class GSSConfigUpperLevelImpl extends MinimalEObjectImpl.Container implem
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_UPPER_LEVEL__LEVEL:
-				return level != LEVEL_EDEFAULT;
+				return isSetLevel();
 			case configPackage.GSS_CONFIG_UPPER_LEVEL__TMFORMAT:
 				return tMformat != null;
 			case configPackage.GSS_CONFIG_UPPER_LEVEL__INPUT_FILTER:
@@ -379,7 +413,7 @@ public class GSSConfigUpperLevelImpl extends MinimalEObjectImpl.Container implem
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (level: ");
-		result.append(level);
+		if (levelESet) result.append(level); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

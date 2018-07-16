@@ -17,15 +17,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rightTrim" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSImportUnit">
+    <eLiterals name="bits"/>
+    <eLiterals name="bytes" value="1"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSImportVirtualSize">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="FieldRef" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="addSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//GSSImportUnit"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="GSSImportUnit">
-    <eLiterals name="bits"/>
-    <eLiterals name="bytes" value="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//GSSImportUnit"
+        unsettable="true"/>
   </eClassifiers>
 </ecore:EPackage>

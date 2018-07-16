@@ -154,6 +154,15 @@ public class GSSTmTcFormatVSFieldImpl extends MinimalEObjectImpl.Container imple
 	protected GSSTmTcFormatFieldType type = TYPE_EDEFAULT;
 
 	/**
+	 * This is true if the Type attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean typeESet;
+
+	/**
 	 * The default value of the '{@link #getByteOrder() <em>Byte Order</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -174,6 +183,15 @@ public class GSSTmTcFormatVSFieldImpl extends MinimalEObjectImpl.Container imple
 	protected GSSTmTcFormatFieldByteOrder byteOrder = BYTE_ORDER_EDEFAULT;
 
 	/**
+	 * This is true if the Byte Order attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean byteOrderESet;
+
+	/**
 	 * The default value of the '{@link #getFirstBit() <em>First Bit</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -192,6 +210,15 @@ public class GSSTmTcFormatVSFieldImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected GSSTmTcFormatSFieldFirstBit firstBit = FIRST_BIT_EDEFAULT;
+
+	/**
+	 * This is true if the First Bit attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean firstBitESet;
 
 	/**
 	 * The cached value of the '{@link #getConstSize() <em>Const Size</em>}' containment reference.
@@ -353,8 +380,33 @@ public class GSSTmTcFormatVSFieldImpl extends MinimalEObjectImpl.Container imple
 	public void setType(GSSTmTcFormatFieldType newType) {
 		GSSTmTcFormatFieldType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
+		boolean oldTypeESet = typeESet;
+		typeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__TYPE, oldType, type, !oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetType() {
+		GSSTmTcFormatFieldType oldType = type;
+		boolean oldTypeESet = typeESet;
+		type = TYPE_EDEFAULT;
+		typeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__TYPE, oldType, TYPE_EDEFAULT, oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetType() {
+		return typeESet;
 	}
 
 	/**
@@ -374,8 +426,33 @@ public class GSSTmTcFormatVSFieldImpl extends MinimalEObjectImpl.Container imple
 	public void setByteOrder(GSSTmTcFormatFieldByteOrder newByteOrder) {
 		GSSTmTcFormatFieldByteOrder oldByteOrder = byteOrder;
 		byteOrder = newByteOrder == null ? BYTE_ORDER_EDEFAULT : newByteOrder;
+		boolean oldByteOrderESet = byteOrderESet;
+		byteOrderESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__BYTE_ORDER, oldByteOrder, byteOrder));
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__BYTE_ORDER, oldByteOrder, byteOrder, !oldByteOrderESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetByteOrder() {
+		GSSTmTcFormatFieldByteOrder oldByteOrder = byteOrder;
+		boolean oldByteOrderESet = byteOrderESet;
+		byteOrder = BYTE_ORDER_EDEFAULT;
+		byteOrderESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__BYTE_ORDER, oldByteOrder, BYTE_ORDER_EDEFAULT, oldByteOrderESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetByteOrder() {
+		return byteOrderESet;
 	}
 
 	/**
@@ -395,8 +472,33 @@ public class GSSTmTcFormatVSFieldImpl extends MinimalEObjectImpl.Container imple
 	public void setFirstBit(GSSTmTcFormatSFieldFirstBit newFirstBit) {
 		GSSTmTcFormatSFieldFirstBit oldFirstBit = firstBit;
 		firstBit = newFirstBit == null ? FIRST_BIT_EDEFAULT : newFirstBit;
+		boolean oldFirstBitESet = firstBitESet;
+		firstBitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__FIRST_BIT, oldFirstBit, firstBit));
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__FIRST_BIT, oldFirstBit, firstBit, !oldFirstBitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetFirstBit() {
+		GSSTmTcFormatSFieldFirstBit oldFirstBit = firstBit;
+		boolean oldFirstBitESet = firstBitESet;
+		firstBit = FIRST_BIT_EDEFAULT;
+		firstBitESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__FIRST_BIT, oldFirstBit, FIRST_BIT_EDEFAULT, oldFirstBitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetFirstBit() {
+		return firstBitESet;
 	}
 
 	/**
@@ -691,13 +793,13 @@ public class GSSTmTcFormatVSFieldImpl extends MinimalEObjectImpl.Container imple
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__TYPE:
-				setType(TYPE_EDEFAULT);
+				unsetType();
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__BYTE_ORDER:
-				setByteOrder(BYTE_ORDER_EDEFAULT);
+				unsetByteOrder();
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__FIRST_BIT:
-				setFirstBit(FIRST_BIT_EDEFAULT);
+				unsetFirstBit();
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__CONST_SIZE:
 				setConstSize((GSSTmTcFormatConstSize)null);
@@ -732,11 +834,11 @@ public class GSSTmTcFormatVSFieldImpl extends MinimalEObjectImpl.Container imple
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__TYPE:
-				return type != TYPE_EDEFAULT;
+				return isSetType();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__BYTE_ORDER:
-				return byteOrder != BYTE_ORDER_EDEFAULT;
+				return isSetByteOrder();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__FIRST_BIT:
-				return firstBit != FIRST_BIT_EDEFAULT;
+				return isSetFirstBit();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__CONST_SIZE:
 				return constSize != null;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET:
@@ -768,11 +870,11 @@ public class GSSTmTcFormatVSFieldImpl extends MinimalEObjectImpl.Container imple
 		result.append(", description: ");
 		result.append(description);
 		result.append(", type: ");
-		result.append(type);
+		if (typeESet) result.append(type); else result.append("<unset>");
 		result.append(", byteOrder: ");
-		result.append(byteOrder);
+		if (byteOrderESet) result.append(byteOrder); else result.append("<unset>");
 		result.append(", firstBit: ");
-		result.append(firstBit);
+		if (firstBitESet) result.append(firstBit); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

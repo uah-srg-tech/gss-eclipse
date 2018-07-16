@@ -84,6 +84,15 @@ public class GSSConfigModifyImpl extends MinimalEObjectImpl.Container implements
 	protected GSSConfigModifyType type = TYPE_EDEFAULT;
 
 	/**
+	 * This is true if the Type attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean typeESet;
+
+	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -180,8 +189,33 @@ public class GSSConfigModifyImpl extends MinimalEObjectImpl.Container implements
 	public void setType(GSSConfigModifyType newType) {
 		GSSConfigModifyType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
+		boolean oldTypeESet = typeESet;
+		typeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_MODIFY__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_MODIFY__TYPE, oldType, type, !oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetType() {
+		GSSConfigModifyType oldType = type;
+		boolean oldTypeESet = typeESet;
+		type = TYPE_EDEFAULT;
+		typeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_MODIFY__TYPE, oldType, TYPE_EDEFAULT, oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetType() {
+		return typeESet;
 	}
 
 	/**
@@ -368,7 +402,7 @@ public class GSSConfigModifyImpl extends MinimalEObjectImpl.Container implements
 				setName(NAME_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_MODIFY__TYPE:
-				setType(TYPE_EDEFAULT);
+				unsetType();
 				return;
 			case configPackage.GSS_CONFIG_MODIFY__VALUE:
 				setValue(VALUE_EDEFAULT);
@@ -394,7 +428,7 @@ public class GSSConfigModifyImpl extends MinimalEObjectImpl.Container implements
 			case configPackage.GSS_CONFIG_MODIFY__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case configPackage.GSS_CONFIG_MODIFY__TYPE:
-				return type != TYPE_EDEFAULT;
+				return isSetType();
 			case configPackage.GSS_CONFIG_MODIFY__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case configPackage.GSS_CONFIG_MODIFY__GV_FILTERED:
@@ -418,7 +452,7 @@ public class GSSConfigModifyImpl extends MinimalEObjectImpl.Container implements
 		result.append(" (name: ");
 		result.append(name);
 		result.append(", type: ");
-		result.append(type);
+		if (typeESet) result.append(type); else result.append("<unset>");
 		result.append(", value: ");
 		result.append(value);
 		result.append(')');

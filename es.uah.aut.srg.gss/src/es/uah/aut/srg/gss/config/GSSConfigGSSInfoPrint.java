@@ -42,9 +42,11 @@ public interface GSSConfigGSSInfoPrint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Main Log</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetMainLog()
+	 * @see #unsetMainLog()
 	 * @see #setMainLog(GSSConfigEnableDisable)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigGSSInfoPrint_MainLog()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigEnableDisable getMainLog();
@@ -55,10 +57,35 @@ public interface GSSConfigGSSInfoPrint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Main Log</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetMainLog()
+	 * @see #unsetMainLog()
 	 * @see #getMainLog()
 	 * @generated
 	 */
 	void setMainLog(GSSConfigEnableDisable value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getMainLog <em>Main Log</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetMainLog()
+	 * @see #getMainLog()
+	 * @see #setMainLog(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	void unsetMainLog();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getMainLog <em>Main Log</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Main Log</em>' attribute is set.
+	 * @see #unsetMainLog()
+	 * @see #getMainLog()
+	 * @see #setMainLog(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	boolean isSetMainLog();
 
 	/**
 	 * Returns the value of the '<em><b>Port Logs</b></em>' attribute.
@@ -71,9 +98,11 @@ public interface GSSConfigGSSInfoPrint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Port Logs</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetPortLogs()
+	 * @see #unsetPortLogs()
 	 * @see #setPortLogs(GSSConfigEnableDisable)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigGSSInfoPrint_PortLogs()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigEnableDisable getPortLogs();
@@ -84,10 +113,35 @@ public interface GSSConfigGSSInfoPrint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Port Logs</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetPortLogs()
+	 * @see #unsetPortLogs()
 	 * @see #getPortLogs()
 	 * @generated
 	 */
 	void setPortLogs(GSSConfigEnableDisable value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getPortLogs <em>Port Logs</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetPortLogs()
+	 * @see #getPortLogs()
+	 * @see #setPortLogs(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	void unsetPortLogs();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getPortLogs <em>Port Logs</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Port Logs</em>' attribute is set.
+	 * @see #unsetPortLogs()
+	 * @see #getPortLogs()
+	 * @see #setPortLogs(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	boolean isSetPortLogs();
 
 	/**
 	 * Returns the value of the '<em><b>Debug Log</b></em>' attribute.
@@ -100,9 +154,11 @@ public interface GSSConfigGSSInfoPrint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Debug Log</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetDebugLog()
+	 * @see #unsetDebugLog()
 	 * @see #setDebugLog(GSSConfigEnableDisable)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigGSSInfoPrint_DebugLog()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigEnableDisable getDebugLog();
@@ -113,9 +169,34 @@ public interface GSSConfigGSSInfoPrint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Debug Log</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetDebugLog()
+	 * @see #unsetDebugLog()
 	 * @see #getDebugLog()
 	 * @generated
 	 */
 	void setDebugLog(GSSConfigEnableDisable value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getDebugLog <em>Debug Log</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetDebugLog()
+	 * @see #getDebugLog()
+	 * @see #setDebugLog(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	void unsetDebugLog();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getDebugLog <em>Debug Log</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Debug Log</em>' attribute is set.
+	 * @see #unsetDebugLog()
+	 * @see #getDebugLog()
+	 * @see #setDebugLog(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	boolean isSetDebugLog();
 
 } // GSSConfigGSSInfoPrint

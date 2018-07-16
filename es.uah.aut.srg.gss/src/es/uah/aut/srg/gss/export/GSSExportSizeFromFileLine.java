@@ -148,9 +148,11 @@ public interface GSSExportSizeFromFileLine extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.export.GSSExportUnit
+	 * @see #isSetUnit()
+	 * @see #unsetUnit()
 	 * @see #setUnit(GSSExportUnit)
 	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportSizeFromFileLine_Unit()
-	 * @model
+	 * @model unsettable="true"
 	 * @generated
 	 */
 	GSSExportUnit getUnit();
@@ -161,9 +163,34 @@ public interface GSSExportSizeFromFileLine extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.export.GSSExportUnit
+	 * @see #isSetUnit()
+	 * @see #unsetUnit()
 	 * @see #getUnit()
 	 * @generated
 	 */
 	void setUnit(GSSExportUnit value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.export.GSSExportSizeFromFileLine#getUnit <em>Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetUnit()
+	 * @see #getUnit()
+	 * @see #setUnit(GSSExportUnit)
+	 * @generated
+	 */
+	void unsetUnit();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.export.GSSExportSizeFromFileLine#getUnit <em>Unit</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Unit</em>' attribute is set.
+	 * @see #unsetUnit()
+	 * @see #getUnit()
+	 * @see #setUnit(GSSExportUnit)
+	 * @generated
+	 */
+	boolean isSetUnit();
 
 } // GSSExportSizeFromFileLine

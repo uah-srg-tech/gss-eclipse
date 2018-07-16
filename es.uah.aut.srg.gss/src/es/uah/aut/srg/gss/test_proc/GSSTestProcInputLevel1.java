@@ -97,9 +97,11 @@ public interface GSSTestProcInputLevel1 extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Delay value</em>' attribute.
+	 * @see #isSetDelay_value()
+	 * @see #unsetDelay_value()
 	 * @see #setDelay_value(String)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputLevel1_Delay_value()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	String getDelay_value();
@@ -109,10 +111,35 @@ public interface GSSTestProcInputLevel1 extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Delay value</em>' attribute.
+	 * @see #isSetDelay_value()
+	 * @see #unsetDelay_value()
 	 * @see #getDelay_value()
 	 * @generated
 	 */
 	void setDelay_value(String value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1#getDelay_value <em>Delay value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetDelay_value()
+	 * @see #getDelay_value()
+	 * @see #setDelay_value(String)
+	 * @generated
+	 */
+	void unsetDelay_value();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1#getDelay_value <em>Delay value</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Delay value</em>' attribute is set.
+	 * @see #unsetDelay_value()
+	 * @see #getDelay_value()
+	 * @see #setDelay_value(String)
+	 * @generated
+	 */
+	boolean isSetDelay_value();
 
 	/**
 	 * Returns the value of the '<em><b>Delay unit</b></em>' attribute.

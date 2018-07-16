@@ -106,12 +106,12 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 				return createGSSTmTcFormatFieldByteOrderFromString(eDataType, initialValue);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_SFIELD_FIRST_BIT:
 				return createGSSTmTcFormatSFieldFirstBitFromString(eDataType, initialValue);
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CHECK_TYPE:
+				return createGSSTmTcFormatCheckTypeFromString(eDataType, initialValue);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_UNIT:
 				return createGSSTmTcFormatUnitFromString(eDataType, initialValue);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_POWER:
 				return createGSSTmTcFormatPowerFromString(eDataType, initialValue);
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CHECK_TYPE:
-				return createGSSTmTcFormatCheckTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -133,12 +133,12 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 				return convertGSSTmTcFormatFieldByteOrderToString(eDataType, instanceValue);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_SFIELD_FIRST_BIT:
 				return convertGSSTmTcFormatSFieldFirstBitToString(eDataType, instanceValue);
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CHECK_TYPE:
+				return convertGSSTmTcFormatCheckTypeToString(eDataType, instanceValue);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_UNIT:
 				return convertGSSTmTcFormatUnitToString(eDataType, instanceValue);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_POWER:
 				return convertGSSTmTcFormatPowerToString(eDataType, instanceValue);
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CHECK_TYPE:
-				return convertGSSTmTcFormatCheckTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}

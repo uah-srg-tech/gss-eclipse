@@ -969,7 +969,7 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 		initEAttribute(getGSSExportSizeFromFileLength_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSExportSizeFromFileLength.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSExportSizeFromFileLength_FromFile(), ecorePackage.getEString(), "fromFile", null, 1, 1, GSSExportSizeFromFileLength.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSExportSizeFromFileLength_AddSize(), ecorePackage.getEString(), "addSize", null, 0, 1, GSSExportSizeFromFileLength.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSExportSizeFromFileLength_Unit(), this.getGSSExportUnit(), "unit", null, 0, 1, GSSExportSizeFromFileLength.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSExportSizeFromFileLength_Unit(), this.getGSSExportUnit(), "unit", null, 0, 1, GSSExportSizeFromFileLength.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSExportSizeFromFileLength_SettingFromConst(), this.getGSSExportSettingFromConst(), null, "settingFromConst", null, 0, -1, GSSExportSizeFromFileLength.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssExportSizeFromFileLineEClass, GSSExportSizeFromFileLine.class, "GSSExportSizeFromFileLine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -977,13 +977,13 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 		initEAttribute(getGSSExportSizeFromFileLine_FromFile(), ecorePackage.getEString(), "fromFile", null, 1, 1, GSSExportSizeFromFileLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSExportSizeFromFileLine_Line(), ecorePackage.getEString(), "line", null, 1, 1, GSSExportSizeFromFileLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSExportSizeFromFileLine_AddSize(), ecorePackage.getEString(), "addSize", null, 0, 1, GSSExportSizeFromFileLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSExportSizeFromFileLine_Unit(), this.getGSSExportUnit(), "unit", null, 0, 1, GSSExportSizeFromFileLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSExportSizeFromFileLine_Unit(), this.getGSSExportUnit(), "unit", null, 0, 1, GSSExportSizeFromFileLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssExportSizeInBitsEClass, GSSExportSizeInBits.class, "GSSExportSizeInBits", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSExportSizeInBits_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSExportSizeInBits.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSExportSizeInBits_From(), ecorePackage.getEString(), "from", null, 1, 1, GSSExportSizeInBits.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSExportSizeInBits_AddSize(), ecorePackage.getEString(), "addSize", null, 0, 1, GSSExportSizeInBits.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSExportSizeInBits_Unit(), this.getGSSExportUnit(), "unit", null, 0, 1, GSSExportSizeInBits.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSExportSizeInBits_Unit(), this.getGSSExportUnit(), "unit", null, 0, 1, GSSExportSizeInBits.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssExportSettingsEClass, GSSExportSettings.class, "GSSExportSettings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSExportSettings_SettingFromConst(), this.getGSSExportSettingFromConst(), null, "settingFromConst", null, 0, -1, GSSExportSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

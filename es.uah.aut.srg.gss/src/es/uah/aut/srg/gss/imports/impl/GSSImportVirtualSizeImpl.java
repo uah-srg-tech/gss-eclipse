@@ -119,6 +119,15 @@ public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container imple
 	protected GSSImportUnit unit = UNIT_EDEFAULT;
 
 	/**
+	 * This is true if the Unit attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean unitESet;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -217,8 +226,33 @@ public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container imple
 	public void setUnit(GSSImportUnit newUnit) {
 		GSSImportUnit oldUnit = unit;
 		unit = newUnit == null ? UNIT_EDEFAULT : newUnit;
+		boolean oldUnitESet = unitESet;
+		unitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, importsPackage.GSS_IMPORT_VIRTUAL_SIZE__UNIT, oldUnit, unit));
+			eNotify(new ENotificationImpl(this, Notification.SET, importsPackage.GSS_IMPORT_VIRTUAL_SIZE__UNIT, oldUnit, unit, !oldUnitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetUnit() {
+		GSSImportUnit oldUnit = unit;
+		boolean oldUnitESet = unitESet;
+		unit = UNIT_EDEFAULT;
+		unitESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, importsPackage.GSS_IMPORT_VIRTUAL_SIZE__UNIT, oldUnit, UNIT_EDEFAULT, oldUnitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetUnit() {
+		return unitESet;
 	}
 
 	/**
@@ -283,7 +317,7 @@ public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container imple
 				setAddSize(ADD_SIZE_EDEFAULT);
 				return;
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__UNIT:
-				setUnit(UNIT_EDEFAULT);
+				unsetUnit();
 				return;
 		}
 		super.eUnset(featureID);
@@ -304,7 +338,7 @@ public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container imple
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__ADD_SIZE:
 				return ADD_SIZE_EDEFAULT == null ? addSize != null : !ADD_SIZE_EDEFAULT.equals(addSize);
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__UNIT:
-				return unit != UNIT_EDEFAULT;
+				return isSetUnit();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -326,7 +360,7 @@ public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container imple
 		result.append(", addSize: ");
 		result.append(addSize);
 		result.append(", unit: ");
-		result.append(unit);
+		if (unitESet) result.append(unit); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

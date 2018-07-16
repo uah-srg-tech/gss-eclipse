@@ -125,6 +125,15 @@ public class GSSTestProcInputLevel0Impl extends MinimalEObjectImpl.Container imp
 	protected GSSTestProcUnit delay_unit = DELAY_UNIT_EDEFAULT;
 
 	/**
+	 * This is true if the Delay unit attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean delay_unitESet;
+
+	/**
 	 * The cached value of the '{@link #getLevel0() <em>Level0</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -243,8 +252,33 @@ public class GSSTestProcInputLevel0Impl extends MinimalEObjectImpl.Container imp
 	public void setDelay_unit(GSSTestProcUnit newDelay_unit) {
 		GSSTestProcUnit oldDelay_unit = delay_unit;
 		delay_unit = newDelay_unit == null ? DELAY_UNIT_EDEFAULT : newDelay_unit;
+		boolean oldDelay_unitESet = delay_unitESet;
+		delay_unitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL0__DELAY_UNIT, oldDelay_unit, delay_unit));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL0__DELAY_UNIT, oldDelay_unit, delay_unit, !oldDelay_unitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetDelay_unit() {
+		GSSTestProcUnit oldDelay_unit = delay_unit;
+		boolean oldDelay_unitESet = delay_unitESet;
+		delay_unit = DELAY_UNIT_EDEFAULT;
+		delay_unitESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL0__DELAY_UNIT, oldDelay_unit, DELAY_UNIT_EDEFAULT, oldDelay_unitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetDelay_unit() {
+		return delay_unitESet;
 	}
 
 	/**
@@ -421,7 +455,7 @@ public class GSSTestProcInputLevel0Impl extends MinimalEObjectImpl.Container imp
 				setDelay_value(DELAY_VALUE_EDEFAULT);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL0__DELAY_UNIT:
-				setDelay_unit(DELAY_UNIT_EDEFAULT);
+				unsetDelay_unit();
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL0__LEVEL0:
 				setLevel0((GSSTestProcLevel0)null);
@@ -448,7 +482,7 @@ public class GSSTestProcInputLevel0Impl extends MinimalEObjectImpl.Container imp
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL0__DELAY_VALUE:
 				return DELAY_VALUE_EDEFAULT == null ? delay_value != null : !DELAY_VALUE_EDEFAULT.equals(delay_value);
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL0__DELAY_UNIT:
-				return delay_unit != DELAY_UNIT_EDEFAULT;
+				return isSetDelay_unit();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL0__LEVEL0:
 				return level0 != null;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL0__APP_TO_LEVEL0:
@@ -474,7 +508,7 @@ public class GSSTestProcInputLevel0Impl extends MinimalEObjectImpl.Container imp
 		result.append(", delay_value: ");
 		result.append(delay_value);
 		result.append(", delay_unit: ");
-		result.append(delay_unit);
+		if (delay_unitESet) result.append(delay_unit); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

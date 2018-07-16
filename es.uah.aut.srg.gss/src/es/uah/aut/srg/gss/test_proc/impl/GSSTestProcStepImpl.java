@@ -89,6 +89,15 @@ public class GSSTestProcStepImpl extends GSSModelObjectImpl implements GSSTestPr
 	protected GSSTestProcMode mode = MODE_EDEFAULT;
 
 	/**
+	 * This is true if the Mode attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean modeESet;
+
+	/**
 	 * The default value of the '{@link #getReplays() <em>Replays</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -301,8 +310,33 @@ public class GSSTestProcStepImpl extends GSSModelObjectImpl implements GSSTestPr
 	public void setMode(GSSTestProcMode newMode) {
 		GSSTestProcMode oldMode = mode;
 		mode = newMode == null ? MODE_EDEFAULT : newMode;
+		boolean oldModeESet = modeESet;
+		modeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_STEP__MODE, oldMode, mode));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_STEP__MODE, oldMode, mode, !oldModeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetMode() {
+		GSSTestProcMode oldMode = mode;
+		boolean oldModeESet = modeESet;
+		mode = MODE_EDEFAULT;
+		modeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, test_procPackage.GSS_TEST_PROC_STEP__MODE, oldMode, MODE_EDEFAULT, oldModeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetMode() {
+		return modeESet;
 	}
 
 	/**
@@ -602,7 +636,7 @@ public class GSSTestProcStepImpl extends GSSModelObjectImpl implements GSSTestPr
 				setId(ID_EDEFAULT);
 				return;
 			case test_procPackage.GSS_TEST_PROC_STEP__MODE:
-				setMode(MODE_EDEFAULT);
+				unsetMode();
 				return;
 			case test_procPackage.GSS_TEST_PROC_STEP__REPLAYS:
 				setReplays(REPLAYS_EDEFAULT);
@@ -640,7 +674,7 @@ public class GSSTestProcStepImpl extends GSSModelObjectImpl implements GSSTestPr
 			case test_procPackage.GSS_TEST_PROC_STEP__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case test_procPackage.GSS_TEST_PROC_STEP__MODE:
-				return mode != MODE_EDEFAULT;
+				return isSetMode();
 			case test_procPackage.GSS_TEST_PROC_STEP__REPLAYS:
 				return REPLAYS_EDEFAULT == null ? replays != null : !REPLAYS_EDEFAULT.equals(replays);
 			case test_procPackage.GSS_TEST_PROC_STEP__PREV_STEP_IDREF:
@@ -672,7 +706,7 @@ public class GSSTestProcStepImpl extends GSSModelObjectImpl implements GSSTestPr
 		result.append(" (id: ");
 		result.append(id);
 		result.append(", mode: ");
-		result.append(mode);
+		if (modeESet) result.append(mode); else result.append("<unset>");
 		result.append(", replays: ");
 		result.append(replays);
 		result.append(')');

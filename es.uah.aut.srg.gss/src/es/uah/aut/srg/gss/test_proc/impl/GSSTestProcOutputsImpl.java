@@ -76,6 +76,15 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 	protected GSSTestProcCheckmode checkmode = CHECKMODE_EDEFAULT;
 
 	/**
+	 * This is true if the Checkmode attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean checkmodeESet;
+
+	/**
 	 * The default value of the '{@link #getValid_time_interval_value() <em>Valid time interval value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -114,6 +123,15 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected GSSTestProcUnit valid_time_interval_unit = VALID_TIME_INTERVAL_UNIT_EDEFAULT;
+
+	/**
+	 * This is true if the Valid time interval unit attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean valid_time_interval_unitESet;
 
 	/**
 	 * The cached value of the '{@link #getOutput_level_3() <em>Output level 3</em>}' containment reference list.
@@ -191,8 +209,33 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 	public void setCheckmode(GSSTestProcCheckmode newCheckmode) {
 		GSSTestProcCheckmode oldCheckmode = checkmode;
 		checkmode = newCheckmode == null ? CHECKMODE_EDEFAULT : newCheckmode;
+		boolean oldCheckmodeESet = checkmodeESet;
+		checkmodeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUTS__CHECKMODE, oldCheckmode, checkmode));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUTS__CHECKMODE, oldCheckmode, checkmode, !oldCheckmodeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetCheckmode() {
+		GSSTestProcCheckmode oldCheckmode = checkmode;
+		boolean oldCheckmodeESet = checkmodeESet;
+		checkmode = CHECKMODE_EDEFAULT;
+		checkmodeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, test_procPackage.GSS_TEST_PROC_OUTPUTS__CHECKMODE, oldCheckmode, CHECKMODE_EDEFAULT, oldCheckmodeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetCheckmode() {
+		return checkmodeESet;
 	}
 
 	/**
@@ -233,8 +276,33 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 	public void setValid_time_interval_unit(GSSTestProcUnit newValid_time_interval_unit) {
 		GSSTestProcUnit oldValid_time_interval_unit = valid_time_interval_unit;
 		valid_time_interval_unit = newValid_time_interval_unit == null ? VALID_TIME_INTERVAL_UNIT_EDEFAULT : newValid_time_interval_unit;
+		boolean oldValid_time_interval_unitESet = valid_time_interval_unitESet;
+		valid_time_interval_unitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUTS__VALID_TIME_INTERVAL_UNIT, oldValid_time_interval_unit, valid_time_interval_unit));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUTS__VALID_TIME_INTERVAL_UNIT, oldValid_time_interval_unit, valid_time_interval_unit, !oldValid_time_interval_unitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetValid_time_interval_unit() {
+		GSSTestProcUnit oldValid_time_interval_unit = valid_time_interval_unit;
+		boolean oldValid_time_interval_unitESet = valid_time_interval_unitESet;
+		valid_time_interval_unit = VALID_TIME_INTERVAL_UNIT_EDEFAULT;
+		valid_time_interval_unitESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, test_procPackage.GSS_TEST_PROC_OUTPUTS__VALID_TIME_INTERVAL_UNIT, oldValid_time_interval_unit, VALID_TIME_INTERVAL_UNIT_EDEFAULT, oldValid_time_interval_unitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetValid_time_interval_unit() {
+		return valid_time_interval_unitESet;
 	}
 
 	/**
@@ -378,13 +446,13 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__CHECKMODE:
-				setCheckmode(CHECKMODE_EDEFAULT);
+				unsetCheckmode();
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__VALID_TIME_INTERVAL_VALUE:
 				setValid_time_interval_value(VALID_TIME_INTERVAL_VALUE_EDEFAULT);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__VALID_TIME_INTERVAL_UNIT:
-				setValid_time_interval_unit(VALID_TIME_INTERVAL_UNIT_EDEFAULT);
+				unsetValid_time_interval_unit();
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_3:
 				getOutput_level_3().clear();
@@ -411,11 +479,11 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__CHECKMODE:
-				return checkmode != CHECKMODE_EDEFAULT;
+				return isSetCheckmode();
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__VALID_TIME_INTERVAL_VALUE:
 				return VALID_TIME_INTERVAL_VALUE_EDEFAULT == null ? valid_time_interval_value != null : !VALID_TIME_INTERVAL_VALUE_EDEFAULT.equals(valid_time_interval_value);
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__VALID_TIME_INTERVAL_UNIT:
-				return valid_time_interval_unit != VALID_TIME_INTERVAL_UNIT_EDEFAULT;
+				return isSetValid_time_interval_unit();
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_3:
 				return output_level_3 != null && !output_level_3.isEmpty();
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_2:
@@ -439,11 +507,11 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (checkmode: ");
-		result.append(checkmode);
+		if (checkmodeESet) result.append(checkmode); else result.append("<unset>");
 		result.append(", valid_time_interval_value: ");
 		result.append(valid_time_interval_value);
 		result.append(", valid_time_interval_unit: ");
-		result.append(valid_time_interval_unit);
+		if (valid_time_interval_unitESet) result.append(valid_time_interval_unit); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

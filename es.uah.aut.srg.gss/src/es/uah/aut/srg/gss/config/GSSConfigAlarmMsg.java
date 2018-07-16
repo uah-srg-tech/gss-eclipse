@@ -70,9 +70,11 @@ public interface GSSConfigAlarmMsg extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigAlarmMsgType
+	 * @see #isSetType()
+	 * @see #unsetType()
 	 * @see #setType(GSSConfigAlarmMsgType)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigAlarmMsg_Type()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigAlarmMsgType getType();
@@ -83,10 +85,35 @@ public interface GSSConfigAlarmMsg extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigAlarmMsgType
+	 * @see #isSetType()
+	 * @see #unsetType()
 	 * @see #getType()
 	 * @generated
 	 */
 	void setType(GSSConfigAlarmMsgType value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigAlarmMsg#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetType()
+	 * @see #getType()
+	 * @see #setType(GSSConfigAlarmMsgType)
+	 * @generated
+	 */
+	void unsetType();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigAlarmMsg#getType <em>Type</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Type</em>' attribute is set.
+	 * @see #unsetType()
+	 * @see #getType()
+	 * @see #setType(GSSConfigAlarmMsgType)
+	 * @generated
+	 */
+	boolean isSetType();
 
 	/**
 	 * Returns the value of the '<em><b>Text</b></em>' attribute.

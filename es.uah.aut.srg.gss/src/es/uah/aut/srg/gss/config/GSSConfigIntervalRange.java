@@ -121,9 +121,11 @@ public interface GSSConfigIntervalRange extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interval unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigUnit
+	 * @see #isSetInterval_unit()
+	 * @see #unsetInterval_unit()
 	 * @see #setInterval_unit(GSSConfigUnit)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigIntervalRange_Interval_unit()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigUnit getInterval_unit();
@@ -134,9 +136,34 @@ public interface GSSConfigIntervalRange extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Interval unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigUnit
+	 * @see #isSetInterval_unit()
+	 * @see #unsetInterval_unit()
 	 * @see #getInterval_unit()
 	 * @generated
 	 */
 	void setInterval_unit(GSSConfigUnit value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigIntervalRange#getInterval_unit <em>Interval unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetInterval_unit()
+	 * @see #getInterval_unit()
+	 * @see #setInterval_unit(GSSConfigUnit)
+	 * @generated
+	 */
+	void unsetInterval_unit();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigIntervalRange#getInterval_unit <em>Interval unit</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Interval unit</em>' attribute is set.
+	 * @see #unsetInterval_unit()
+	 * @see #getInterval_unit()
+	 * @see #setInterval_unit(GSSConfigUnit)
+	 * @generated
+	 */
+	boolean isSetInterval_unit();
 
 } // GSSConfigIntervalRange

@@ -65,6 +65,15 @@ public class GSSIfaceSpWPortImpl extends GSSIfacePortImpl implements GSSIfaceSpW
 	protected GSSIfaceSpWPortType type = TYPE_EDEFAULT;
 
 	/**
+	 * This is true if the Type attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean typeESet;
+
+	/**
 	 * The default value of the '{@link #getLink() <em>Link</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -150,8 +159,33 @@ public class GSSIfaceSpWPortImpl extends GSSIfacePortImpl implements GSSIfaceSpW
 	public void setType(GSSIfaceSpWPortType newType) {
 		GSSIfaceSpWPortType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
+		boolean oldTypeESet = typeESet;
+		typeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_SP_WPORT__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_SP_WPORT__TYPE, oldType, type, !oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetType() {
+		GSSIfaceSpWPortType oldType = type;
+		boolean oldTypeESet = typeESet;
+		type = TYPE_EDEFAULT;
+		typeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, ifacePackage.GSS_IFACE_SP_WPORT__TYPE, oldType, TYPE_EDEFAULT, oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetType() {
+		return typeESet;
 	}
 
 	/**
@@ -277,7 +311,7 @@ public class GSSIfaceSpWPortImpl extends GSSIfacePortImpl implements GSSIfaceSpW
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ifacePackage.GSS_IFACE_SP_WPORT__TYPE:
-				setType(TYPE_EDEFAULT);
+				unsetType();
 				return;
 			case ifacePackage.GSS_IFACE_SP_WPORT__LINK:
 				setLink(LINK_EDEFAULT);
@@ -301,7 +335,7 @@ public class GSSIfaceSpWPortImpl extends GSSIfacePortImpl implements GSSIfaceSpW
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ifacePackage.GSS_IFACE_SP_WPORT__TYPE:
-				return type != TYPE_EDEFAULT;
+				return isSetType();
 			case ifacePackage.GSS_IFACE_SP_WPORT__LINK:
 				return LINK_EDEFAULT == null ? link != null : !LINK_EDEFAULT.equals(link);
 			case ifacePackage.GSS_IFACE_SP_WPORT__WRITING_PORT:
@@ -323,7 +357,7 @@ public class GSSIfaceSpWPortImpl extends GSSIfacePortImpl implements GSSIfaceSpW
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (type: ");
-		result.append(type);
+		if (typeESet) result.append(type); else result.append("<unset>");
 		result.append(", link: ");
 		result.append(link);
 		result.append(", writingPort: ");

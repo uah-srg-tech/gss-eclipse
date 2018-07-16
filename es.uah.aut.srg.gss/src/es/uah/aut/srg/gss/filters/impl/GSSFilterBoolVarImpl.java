@@ -110,6 +110,15 @@ public class GSSFilterBoolVarImpl extends MinimalEObjectImpl.Container implement
 	protected GSSFilterConstantType constantType = CONSTANT_TYPE_EDEFAULT;
 
 	/**
+	 * This is true if the Constant Type attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean constantTypeESet;
+
+	/**
 	 * The cached value of the '{@link #getFieldRef() <em>Field Ref</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -237,8 +246,33 @@ public class GSSFilterBoolVarImpl extends MinimalEObjectImpl.Container implement
 	public void setConstantType(GSSFilterConstantType newConstantType) {
 		GSSFilterConstantType oldConstantType = constantType;
 		constantType = newConstantType == null ? CONSTANT_TYPE_EDEFAULT : newConstantType;
+		boolean oldConstantTypeESet = constantTypeESet;
+		constantTypeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_BOOL_VAR__CONSTANT_TYPE, oldConstantType, constantType));
+			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_BOOL_VAR__CONSTANT_TYPE, oldConstantType, constantType, !oldConstantTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetConstantType() {
+		GSSFilterConstantType oldConstantType = constantType;
+		boolean oldConstantTypeESet = constantTypeESet;
+		constantType = CONSTANT_TYPE_EDEFAULT;
+		constantTypeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, filtersPackage.GSS_FILTER_BOOL_VAR__CONSTANT_TYPE, oldConstantType, CONSTANT_TYPE_EDEFAULT, oldConstantTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetConstantType() {
+		return constantTypeESet;
 	}
 
 	/**
@@ -557,7 +591,7 @@ public class GSSFilterBoolVarImpl extends MinimalEObjectImpl.Container implement
 				setName(NAME_EDEFAULT);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR__CONSTANT_TYPE:
-				setConstantType(CONSTANT_TYPE_EDEFAULT);
+				unsetConstantType();
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR__FIELD_REF:
 				setFieldRef((GSSFilterFieldRef)null);
@@ -591,7 +625,7 @@ public class GSSFilterBoolVarImpl extends MinimalEObjectImpl.Container implement
 			case filtersPackage.GSS_FILTER_BOOL_VAR__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case filtersPackage.GSS_FILTER_BOOL_VAR__CONSTANT_TYPE:
-				return constantType != CONSTANT_TYPE_EDEFAULT;
+				return isSetConstantType();
 			case filtersPackage.GSS_FILTER_BOOL_VAR__FIELD_REF:
 				return fieldRef != null;
 			case filtersPackage.GSS_FILTER_BOOL_VAR__OP:
@@ -621,7 +655,7 @@ public class GSSFilterBoolVarImpl extends MinimalEObjectImpl.Container implement
 		result.append(", name: ");
 		result.append(name);
 		result.append(", constantType: ");
-		result.append(constantType);
+		if (constantTypeESet) result.append(constantType); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

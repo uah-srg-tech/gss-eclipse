@@ -67,9 +67,11 @@ public interface GSSTestProcNextStep extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Concurrent</em>' attribute.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcYesNo
+	 * @see #isSetIsConcurrent()
+	 * @see #unsetIsConcurrent()
 	 * @see #setIsConcurrent(GSSTestProcYesNo)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcNextStep_IsConcurrent()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSTestProcYesNo getIsConcurrent();
@@ -80,9 +82,34 @@ public interface GSSTestProcNextStep extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Is Concurrent</em>' attribute.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcYesNo
+	 * @see #isSetIsConcurrent()
+	 * @see #unsetIsConcurrent()
 	 * @see #getIsConcurrent()
 	 * @generated
 	 */
 	void setIsConcurrent(GSSTestProcYesNo value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcNextStep#getIsConcurrent <em>Is Concurrent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetIsConcurrent()
+	 * @see #getIsConcurrent()
+	 * @see #setIsConcurrent(GSSTestProcYesNo)
+	 * @generated
+	 */
+	void unsetIsConcurrent();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcNextStep#getIsConcurrent <em>Is Concurrent</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Is Concurrent</em>' attribute is set.
+	 * @see #unsetIsConcurrent()
+	 * @see #getIsConcurrent()
+	 * @see #setIsConcurrent(GSSTestProcYesNo)
+	 * @generated
+	 */
+	boolean isSetIsConcurrent();
 
 } // GSSTestProcNextStep

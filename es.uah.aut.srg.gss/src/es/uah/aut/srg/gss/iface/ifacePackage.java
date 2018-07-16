@@ -240,7 +240,64 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartPort()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PORT = 3;
+	int GSS_IFACE_UART_PORT = 4;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSpWTCPortImpl <em>GSS Iface Sp WTC Port</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceSpWTCPortImpl
+	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSpWTCPort()
+	 * @generated
+	 */
+	int GSS_IFACE_SP_WTC_PORT = 10;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceDummyPortImpl <em>GSS Iface Dummy Port</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceDummyPortImpl
+	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceDummyPort()
+	 * @generated
+	 */
+	int GSS_IFACE_DUMMY_PORT = 11;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceReadingPortImpl <em>GSS Iface Reading Port</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceReadingPortImpl
+	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceReadingPort()
+	 * @generated
+	 */
+	int GSS_IFACE_READING_PORT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_READING_PORT__PORT = 0;
+
+	/**
+	 * The number of structural features of the '<em>GSS Iface Reading Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_READING_PORT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>GSS Iface Reading Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_READING_PORT_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Number</b></em>' attribute.
@@ -333,108 +390,6 @@ public interface ifacePackage extends EPackage {
 	int GSS_IFACE_UART_PORT_OPERATION_COUNT = GSS_IFACE_PORT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSpWTCPortImpl <em>GSS Iface Sp WTC Port</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceSpWTCPortImpl
-	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSpWTCPort()
-	 * @generated
-	 */
-	int GSS_IFACE_SP_WTC_PORT = 4;
-
-	/**
-	 * The feature id for the '<em><b>Spw Port Ref</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_SP_WTC_PORT__SPW_PORT_REF = GSS_IFACE_PORT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Iface Sp WTC Port</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_SP_WTC_PORT_FEATURE_COUNT = GSS_IFACE_PORT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Iface Sp WTC Port</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_SP_WTC_PORT_OPERATION_COUNT = GSS_IFACE_PORT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceDummyPortImpl <em>GSS Iface Dummy Port</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceDummyPortImpl
-	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceDummyPort()
-	 * @generated
-	 */
-	int GSS_IFACE_DUMMY_PORT = 5;
-
-	/**
-	 * The number of structural features of the '<em>GSS Iface Dummy Port</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_DUMMY_PORT_FEATURE_COUNT = GSS_IFACE_PORT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>GSS Iface Dummy Port</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_DUMMY_PORT_OPERATION_COUNT = GSS_IFACE_PORT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceReadingPortImpl <em>GSS Iface Reading Port</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceReadingPortImpl
-	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceReadingPort()
-	 * @generated
-	 */
-	int GSS_IFACE_READING_PORT = 6;
-
-	/**
-	 * The feature id for the '<em><b>Port</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_READING_PORT__PORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Iface Reading Port</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_READING_PORT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Iface Reading Port</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_READING_PORT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartProtocolImpl <em>GSS Iface Uart Protocol</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -442,7 +397,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartProtocol()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PROTOCOL = 7;
+	int GSS_IFACE_UART_PROTOCOL = 5;
 
 	/**
 	 * The feature id for the '<em><b>Unit</b></em>' attribute.
@@ -524,7 +479,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceConstSize()
 	 * @generated
 	 */
-	int GSS_IFACE_CONST_SIZE = 8;
+	int GSS_IFACE_CONST_SIZE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Bytes</b></em>' attribute.
@@ -570,7 +525,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSizeFieldOffset()
 	 * @generated
 	 */
-	int GSS_IFACE_SIZE_FIELD_OFFSET = 9;
+	int GSS_IFACE_SIZE_FIELD_OFFSET = 7;
 
 	/**
 	 * The feature id for the '<em><b>Bytes</b></em>' attribute.
@@ -616,7 +571,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSizeFieldTrim()
 	 * @generated
 	 */
-	int GSS_IFACE_SIZE_FIELD_TRIM = 10;
+	int GSS_IFACE_SIZE_FIELD_TRIM = 8;
 
 	/**
 	 * The feature id for the '<em><b>Bytes</b></em>' attribute.
@@ -662,7 +617,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSyncPattern()
 	 * @generated
 	 */
-	int GSS_IFACE_SYNC_PATTERN = 11;
+	int GSS_IFACE_SYNC_PATTERN = 9;
 
 	/**
 	 * The feature id for the '<em><b>Hex Value</b></em>' attribute.
@@ -690,6 +645,51 @@ public interface ifacePackage extends EPackage {
 	 * @ordered
 	 */
 	int GSS_IFACE_SYNC_PATTERN_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Spw Port Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_SP_WTC_PORT__SPW_PORT_REF = GSS_IFACE_PORT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>GSS Iface Sp WTC Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_SP_WTC_PORT_FEATURE_COUNT = GSS_IFACE_PORT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>GSS Iface Sp WTC Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_SP_WTC_PORT_OPERATION_COUNT = GSS_IFACE_PORT_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>GSS Iface Dummy Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_DUMMY_PORT_FEATURE_COUNT = GSS_IFACE_PORT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>GSS Iface Dummy Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_DUMMY_PORT_OPERATION_COUNT = GSS_IFACE_PORT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceSpWPortType <em>GSS Iface Sp WPort Type</em>}' enum.

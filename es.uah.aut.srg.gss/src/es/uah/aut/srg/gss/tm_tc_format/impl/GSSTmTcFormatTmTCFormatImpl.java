@@ -98,6 +98,15 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 	protected GSSTmTcFormatTmTCFormatType type = TYPE_EDEFAULT;
 
 	/**
+	 * This is true if the Type attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean typeESet;
+
+	/**
 	 * The cached value of the '{@link #getCSField() <em>CS Field</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -224,8 +233,33 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 	public void setType(GSSTmTcFormatTmTCFormatType newType) {
 		GSSTmTcFormatTmTCFormatType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
+		boolean oldTypeESet = typeESet;
+		typeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__TYPE, oldType, type, !oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetType() {
+		GSSTmTcFormatTmTCFormatType oldType = type;
+		boolean oldTypeESet = typeESet;
+		type = TYPE_EDEFAULT;
+		typeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__TYPE, oldType, TYPE_EDEFAULT, oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetType() {
+		return typeESet;
 	}
 
 	/**
@@ -427,7 +461,7 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 				setProtocol(PROTOCOL_EDEFAULT);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__TYPE:
-				setType(TYPE_EDEFAULT);
+				unsetType();
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FIELD:
 				getCSField().clear();
@@ -465,7 +499,7 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__PROTOCOL:
 				return PROTOCOL_EDEFAULT == null ? protocol != null : !PROTOCOL_EDEFAULT.equals(protocol);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__TYPE:
-				return type != TYPE_EDEFAULT;
+				return isSetType();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FIELD:
 				return csField != null && !csField.isEmpty();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FORMULA_FIELD:
@@ -497,7 +531,7 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 		result.append(" (protocol: ");
 		result.append(protocol);
 		result.append(", type: ");
-		result.append(type);
+		if (typeESet) result.append(type); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

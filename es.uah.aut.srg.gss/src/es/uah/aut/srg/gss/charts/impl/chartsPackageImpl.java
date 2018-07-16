@@ -271,7 +271,7 @@ public class chartsPackageImpl extends EPackageImpl implements chartsPackage {
 		initEClass(gssChartsChartEClass, GSSChartsChart.class, "GSSChartsChart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSChartsChart_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSChartsChart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSChartsChart_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSChartsChart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSChartsChart_Y_units(), this.getGSSChartsYUnits(), "y_units", null, 1, 1, GSSChartsChart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSChartsChart_Y_units(), this.getGSSChartsYUnits(), "y_units", null, 1, 1, GSSChartsChart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSChartsChart_Y_max(), ecorePackage.getEString(), "y_max", null, 1, 1, GSSChartsChart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals

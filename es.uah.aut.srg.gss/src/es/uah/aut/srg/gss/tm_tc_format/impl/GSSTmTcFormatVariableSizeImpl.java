@@ -79,6 +79,15 @@ public class GSSTmTcFormatVariableSizeImpl extends MinimalEObjectImpl.Container 
 	protected GSSTmTcFormatUnit unit = UNIT_EDEFAULT;
 
 	/**
+	 * This is true if the Unit attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean unitESet;
+
+	/**
 	 * The default value of the '{@link #getPower() <em>Power</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -97,6 +106,15 @@ public class GSSTmTcFormatVariableSizeImpl extends MinimalEObjectImpl.Container 
 	 * @ordered
 	 */
 	protected GSSTmTcFormatPower power = POWER_EDEFAULT;
+
+	/**
+	 * This is true if the Power attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean powerESet;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,8 +173,33 @@ public class GSSTmTcFormatVariableSizeImpl extends MinimalEObjectImpl.Container 
 	public void setUnit(GSSTmTcFormatUnit newUnit) {
 		GSSTmTcFormatUnit oldUnit = unit;
 		unit = newUnit == null ? UNIT_EDEFAULT : newUnit;
+		boolean oldUnitESet = unitESet;
+		unitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VARIABLE_SIZE__UNIT, oldUnit, unit));
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VARIABLE_SIZE__UNIT, oldUnit, unit, !oldUnitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetUnit() {
+		GSSTmTcFormatUnit oldUnit = unit;
+		boolean oldUnitESet = unitESet;
+		unit = UNIT_EDEFAULT;
+		unitESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VARIABLE_SIZE__UNIT, oldUnit, UNIT_EDEFAULT, oldUnitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetUnit() {
+		return unitESet;
 	}
 
 	/**
@@ -176,8 +219,33 @@ public class GSSTmTcFormatVariableSizeImpl extends MinimalEObjectImpl.Container 
 	public void setPower(GSSTmTcFormatPower newPower) {
 		GSSTmTcFormatPower oldPower = power;
 		power = newPower == null ? POWER_EDEFAULT : newPower;
+		boolean oldPowerESet = powerESet;
+		powerESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VARIABLE_SIZE__POWER, oldPower, power));
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VARIABLE_SIZE__POWER, oldPower, power, !oldPowerESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetPower() {
+		GSSTmTcFormatPower oldPower = power;
+		boolean oldPowerESet = powerESet;
+		power = POWER_EDEFAULT;
+		powerESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VARIABLE_SIZE__POWER, oldPower, POWER_EDEFAULT, oldPowerESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetPower() {
+		return powerESet;
 	}
 
 	/**
@@ -231,10 +299,10 @@ public class GSSTmTcFormatVariableSizeImpl extends MinimalEObjectImpl.Container 
 				setFidRef(FID_REF_EDEFAULT);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VARIABLE_SIZE__UNIT:
-				setUnit(UNIT_EDEFAULT);
+				unsetUnit();
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VARIABLE_SIZE__POWER:
-				setPower(POWER_EDEFAULT);
+				unsetPower();
 				return;
 		}
 		super.eUnset(featureID);
@@ -251,9 +319,9 @@ public class GSSTmTcFormatVariableSizeImpl extends MinimalEObjectImpl.Container 
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VARIABLE_SIZE__FID_REF:
 				return FID_REF_EDEFAULT == null ? fidRef != null : !FID_REF_EDEFAULT.equals(fidRef);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VARIABLE_SIZE__UNIT:
-				return unit != UNIT_EDEFAULT;
+				return isSetUnit();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VARIABLE_SIZE__POWER:
-				return power != POWER_EDEFAULT;
+				return isSetPower();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -271,9 +339,9 @@ public class GSSTmTcFormatVariableSizeImpl extends MinimalEObjectImpl.Container 
 		result.append(" (fidRef: ");
 		result.append(fidRef);
 		result.append(", unit: ");
-		result.append(unit);
+		if (unitESet) result.append(unit); else result.append("<unset>");
 		result.append(", power: ");
-		result.append(power);
+		if (powerESet) result.append(power); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

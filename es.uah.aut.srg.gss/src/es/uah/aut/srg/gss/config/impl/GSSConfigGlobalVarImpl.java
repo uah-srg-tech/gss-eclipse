@@ -107,6 +107,15 @@ public class GSSConfigGlobalVarImpl extends MinimalEObjectImpl.Container impleme
 	protected GSSConfigGlobalVarType type = TYPE_EDEFAULT;
 
 	/**
+	 * This is true if the Type attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean typeESet;
+
+	/**
 	 * The default value of the '{@link #getInitial_value() <em>Initial value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -234,8 +243,33 @@ public class GSSConfigGlobalVarImpl extends MinimalEObjectImpl.Container impleme
 	public void setType(GSSConfigGlobalVarType newType) {
 		GSSConfigGlobalVarType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
+		boolean oldTypeESet = typeESet;
+		typeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_GLOBAL_VAR__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_GLOBAL_VAR__TYPE, oldType, type, !oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetType() {
+		GSSConfigGlobalVarType oldType = type;
+		boolean oldTypeESet = typeESet;
+		type = TYPE_EDEFAULT;
+		typeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_GLOBAL_VAR__TYPE, oldType, TYPE_EDEFAULT, oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetType() {
+		return typeESet;
 	}
 
 	/**
@@ -480,7 +514,7 @@ public class GSSConfigGlobalVarImpl extends MinimalEObjectImpl.Container impleme
 				setId(ID_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_GLOBAL_VAR__TYPE:
-				setType(TYPE_EDEFAULT);
+				unsetType();
 				return;
 			case configPackage.GSS_CONFIG_GLOBAL_VAR__INITIAL_VALUE:
 				setInitial_value(INITIAL_VALUE_EDEFAULT);
@@ -511,7 +545,7 @@ public class GSSConfigGlobalVarImpl extends MinimalEObjectImpl.Container impleme
 			case configPackage.GSS_CONFIG_GLOBAL_VAR__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case configPackage.GSS_CONFIG_GLOBAL_VAR__TYPE:
-				return type != TYPE_EDEFAULT;
+				return isSetType();
 			case configPackage.GSS_CONFIG_GLOBAL_VAR__INITIAL_VALUE:
 				return INITIAL_VALUE_EDEFAULT == null ? initial_value != null : !INITIAL_VALUE_EDEFAULT.equals(initial_value);
 			case configPackage.GSS_CONFIG_GLOBAL_VAR__REFERENCE_FIELD:
@@ -539,7 +573,7 @@ public class GSSConfigGlobalVarImpl extends MinimalEObjectImpl.Container impleme
 		result.append(", id: ");
 		result.append(id);
 		result.append(", type: ");
-		result.append(type);
+		if (typeESet) result.append(type); else result.append("<unset>");
 		result.append(", initial_value: ");
 		result.append(initial_value);
 		result.append(')');

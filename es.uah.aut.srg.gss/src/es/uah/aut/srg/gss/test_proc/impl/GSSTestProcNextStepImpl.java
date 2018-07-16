@@ -77,6 +77,15 @@ public class GSSTestProcNextStepImpl extends MinimalEObjectImpl.Container implem
 	protected GSSTestProcYesNo isConcurrent = IS_CONCURRENT_EDEFAULT;
 
 	/**
+	 * This is true if the Is Concurrent attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isConcurrentESet;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -133,8 +142,33 @@ public class GSSTestProcNextStepImpl extends MinimalEObjectImpl.Container implem
 	public void setIsConcurrent(GSSTestProcYesNo newIsConcurrent) {
 		GSSTestProcYesNo oldIsConcurrent = isConcurrent;
 		isConcurrent = newIsConcurrent == null ? IS_CONCURRENT_EDEFAULT : newIsConcurrent;
+		boolean oldIsConcurrentESet = isConcurrentESet;
+		isConcurrentESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_NEXT_STEP__IS_CONCURRENT, oldIsConcurrent, isConcurrent));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_NEXT_STEP__IS_CONCURRENT, oldIsConcurrent, isConcurrent, !oldIsConcurrentESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetIsConcurrent() {
+		GSSTestProcYesNo oldIsConcurrent = isConcurrent;
+		boolean oldIsConcurrentESet = isConcurrentESet;
+		isConcurrent = IS_CONCURRENT_EDEFAULT;
+		isConcurrentESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, test_procPackage.GSS_TEST_PROC_NEXT_STEP__IS_CONCURRENT, oldIsConcurrent, IS_CONCURRENT_EDEFAULT, oldIsConcurrentESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetIsConcurrent() {
+		return isConcurrentESet;
 	}
 
 	/**
@@ -183,7 +217,7 @@ public class GSSTestProcNextStepImpl extends MinimalEObjectImpl.Container implem
 				setId(ID_EDEFAULT);
 				return;
 			case test_procPackage.GSS_TEST_PROC_NEXT_STEP__IS_CONCURRENT:
-				setIsConcurrent(IS_CONCURRENT_EDEFAULT);
+				unsetIsConcurrent();
 				return;
 		}
 		super.eUnset(featureID);
@@ -200,7 +234,7 @@ public class GSSTestProcNextStepImpl extends MinimalEObjectImpl.Container implem
 			case test_procPackage.GSS_TEST_PROC_NEXT_STEP__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case test_procPackage.GSS_TEST_PROC_NEXT_STEP__IS_CONCURRENT:
-				return isConcurrent != IS_CONCURRENT_EDEFAULT;
+				return isSetIsConcurrent();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -218,7 +252,7 @@ public class GSSTestProcNextStepImpl extends MinimalEObjectImpl.Container implem
 		result.append(" (id: ");
 		result.append(id);
 		result.append(", isConcurrent: ");
-		result.append(isConcurrent);
+		if (isConcurrentESet) result.append(isConcurrent); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

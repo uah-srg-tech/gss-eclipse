@@ -99,6 +99,15 @@ public class GSSChartsChartImpl extends MinimalEObjectImpl.Container implements 
 	protected GSSChartsYUnits y_units = YUNITS_EDEFAULT;
 
 	/**
+	 * This is true if the Yunits attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean y_unitsESet;
+
+	/**
 	 * The default value of the '{@link #getY_max() <em>Ymax</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -196,8 +205,33 @@ public class GSSChartsChartImpl extends MinimalEObjectImpl.Container implements 
 	public void setY_units(GSSChartsYUnits newY_units) {
 		GSSChartsYUnits oldY_units = y_units;
 		y_units = newY_units == null ? YUNITS_EDEFAULT : newY_units;
+		boolean oldY_unitsESet = y_unitsESet;
+		y_unitsESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, chartsPackage.GSS_CHARTS_CHART__YUNITS, oldY_units, y_units));
+			eNotify(new ENotificationImpl(this, Notification.SET, chartsPackage.GSS_CHARTS_CHART__YUNITS, oldY_units, y_units, !oldY_unitsESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetY_units() {
+		GSSChartsYUnits oldY_units = y_units;
+		boolean oldY_unitsESet = y_unitsESet;
+		y_units = YUNITS_EDEFAULT;
+		y_unitsESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, chartsPackage.GSS_CHARTS_CHART__YUNITS, oldY_units, YUNITS_EDEFAULT, oldY_unitsESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetY_units() {
+		return y_unitsESet;
 	}
 
 	/**
@@ -280,7 +314,7 @@ public class GSSChartsChartImpl extends MinimalEObjectImpl.Container implements 
 				setName(NAME_EDEFAULT);
 				return;
 			case chartsPackage.GSS_CHARTS_CHART__YUNITS:
-				setY_units(YUNITS_EDEFAULT);
+				unsetY_units();
 				return;
 			case chartsPackage.GSS_CHARTS_CHART__YMAX:
 				setY_max(YMAX_EDEFAULT);
@@ -302,7 +336,7 @@ public class GSSChartsChartImpl extends MinimalEObjectImpl.Container implements 
 			case chartsPackage.GSS_CHARTS_CHART__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case chartsPackage.GSS_CHARTS_CHART__YUNITS:
-				return y_units != YUNITS_EDEFAULT;
+				return isSetY_units();
 			case chartsPackage.GSS_CHARTS_CHART__YMAX:
 				return YMAX_EDEFAULT == null ? y_max != null : !YMAX_EDEFAULT.equals(y_max);
 		}
@@ -324,7 +358,7 @@ public class GSSChartsChartImpl extends MinimalEObjectImpl.Container implements 
 		result.append(", name: ");
 		result.append(name);
 		result.append(", y_units: ");
-		result.append(y_units);
+		if (y_unitsESet) result.append(y_units); else result.append("<unset>");
 		result.append(", y_max: ");
 		result.append(y_max);
 		result.append(')');

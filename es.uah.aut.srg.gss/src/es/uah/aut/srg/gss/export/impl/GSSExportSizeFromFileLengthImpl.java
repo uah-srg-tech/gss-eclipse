@@ -124,6 +124,15 @@ public class GSSExportSizeFromFileLengthImpl extends MinimalEObjectImpl.Containe
 	protected GSSExportUnit unit = UNIT_EDEFAULT;
 
 	/**
+	 * This is true if the Unit attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean unitESet;
+
+	/**
 	 * The cached value of the '{@link #getSettingFromConst() <em>Setting From Const</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -232,8 +241,33 @@ public class GSSExportSizeFromFileLengthImpl extends MinimalEObjectImpl.Containe
 	public void setUnit(GSSExportUnit newUnit) {
 		GSSExportUnit oldUnit = unit;
 		unit = newUnit == null ? UNIT_EDEFAULT : newUnit;
+		boolean oldUnitESet = unitESet;
+		unitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, exportPackage.GSS_EXPORT_SIZE_FROM_FILE_LENGTH__UNIT, oldUnit, unit));
+			eNotify(new ENotificationImpl(this, Notification.SET, exportPackage.GSS_EXPORT_SIZE_FROM_FILE_LENGTH__UNIT, oldUnit, unit, !oldUnitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetUnit() {
+		GSSExportUnit oldUnit = unit;
+		boolean oldUnitESet = unitESet;
+		unit = UNIT_EDEFAULT;
+		unitESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, exportPackage.GSS_EXPORT_SIZE_FROM_FILE_LENGTH__UNIT, oldUnit, UNIT_EDEFAULT, oldUnitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetUnit() {
+		return unitESet;
 	}
 
 	/**
@@ -317,7 +351,7 @@ public class GSSExportSizeFromFileLengthImpl extends MinimalEObjectImpl.Containe
 				setAddSize(ADD_SIZE_EDEFAULT);
 				return;
 			case exportPackage.GSS_EXPORT_SIZE_FROM_FILE_LENGTH__UNIT:
-				setUnit(UNIT_EDEFAULT);
+				unsetUnit();
 				return;
 			case exportPackage.GSS_EXPORT_SIZE_FROM_FILE_LENGTH__SETTING_FROM_CONST:
 				getSettingFromConst().clear();
@@ -341,7 +375,7 @@ public class GSSExportSizeFromFileLengthImpl extends MinimalEObjectImpl.Containe
 			case exportPackage.GSS_EXPORT_SIZE_FROM_FILE_LENGTH__ADD_SIZE:
 				return ADD_SIZE_EDEFAULT == null ? addSize != null : !ADD_SIZE_EDEFAULT.equals(addSize);
 			case exportPackage.GSS_EXPORT_SIZE_FROM_FILE_LENGTH__UNIT:
-				return unit != UNIT_EDEFAULT;
+				return isSetUnit();
 			case exportPackage.GSS_EXPORT_SIZE_FROM_FILE_LENGTH__SETTING_FROM_CONST:
 				return settingFromConst != null && !settingFromConst.isEmpty();
 		}
@@ -365,7 +399,7 @@ public class GSSExportSizeFromFileLengthImpl extends MinimalEObjectImpl.Containe
 		result.append(", addSize: ");
 		result.append(addSize);
 		result.append(", unit: ");
-		result.append(unit);
+		if (unitESet) result.append(unit); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

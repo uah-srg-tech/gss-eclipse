@@ -68,6 +68,15 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	protected GSSIfaceUartProtocolUnit unit = UNIT_EDEFAULT;
 
 	/**
+	 * This is true if the Unit attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean unitESet;
+
+	/**
 	 * The default value of the '{@link #getPower() <em>Power</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -86,6 +95,15 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected GSSIfaceUartProtocolPower power = POWER_EDEFAULT;
+
+	/**
+	 * This is true if the Power attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean powerESet;
 
 	/**
 	 * The cached value of the '{@link #getConstSize() <em>Const Size</em>}' containment reference.
@@ -163,8 +181,33 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	public void setUnit(GSSIfaceUartProtocolUnit newUnit) {
 		GSSIfaceUartProtocolUnit oldUnit = unit;
 		unit = newUnit == null ? UNIT_EDEFAULT : newUnit;
+		boolean oldUnitESet = unitESet;
+		unitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__UNIT, oldUnit, unit));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__UNIT, oldUnit, unit, !oldUnitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetUnit() {
+		GSSIfaceUartProtocolUnit oldUnit = unit;
+		boolean oldUnitESet = unitESet;
+		unit = UNIT_EDEFAULT;
+		unitESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, ifacePackage.GSS_IFACE_UART_PROTOCOL__UNIT, oldUnit, UNIT_EDEFAULT, oldUnitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetUnit() {
+		return unitESet;
 	}
 
 	/**
@@ -184,8 +227,33 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	public void setPower(GSSIfaceUartProtocolPower newPower) {
 		GSSIfaceUartProtocolPower oldPower = power;
 		power = newPower == null ? POWER_EDEFAULT : newPower;
+		boolean oldPowerESet = powerESet;
+		powerESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__POWER, oldPower, power));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__POWER, oldPower, power, !oldPowerESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetPower() {
+		GSSIfaceUartProtocolPower oldPower = power;
+		boolean oldPowerESet = powerESet;
+		power = POWER_EDEFAULT;
+		powerESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, ifacePackage.GSS_IFACE_UART_PROTOCOL__POWER, oldPower, POWER_EDEFAULT, oldPowerESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetPower() {
+		return powerESet;
 	}
 
 	/**
@@ -443,10 +511,10 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__UNIT:
-				setUnit(UNIT_EDEFAULT);
+				unsetUnit();
 				return;
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__POWER:
-				setPower(POWER_EDEFAULT);
+				unsetPower();
 				return;
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__CONST_SIZE:
 				setConstSize((GSSIfaceConstSize)null);
@@ -473,9 +541,9 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__UNIT:
-				return unit != UNIT_EDEFAULT;
+				return isSetUnit();
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__POWER:
-				return power != POWER_EDEFAULT;
+				return isSetPower();
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__CONST_SIZE:
 				return constSize != null;
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET:
@@ -499,9 +567,9 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (unit: ");
-		result.append(unit);
+		if (unitESet) result.append(unit); else result.append("<unset>");
 		result.append(", power: ");
-		result.append(power);
+		if (powerESet) result.append(power); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

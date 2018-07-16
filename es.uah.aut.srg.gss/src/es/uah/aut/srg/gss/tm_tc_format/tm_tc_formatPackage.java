@@ -1548,7 +1548,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatUnit()
 	 * @generated
 	 */
-	int GSS_TM_TC_FORMAT_UNIT = 24;
+	int GSS_TM_TC_FORMAT_UNIT = 25;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatPower <em>GSS Tm Tc Format Power</em>}' enum.
@@ -1558,7 +1558,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatPower()
 	 * @generated
 	 */
-	int GSS_TM_TC_FORMAT_POWER = 25;
+	int GSS_TM_TC_FORMAT_POWER = 26;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType <em>GSS Tm Tc Format Check Type</em>}' enum.
@@ -1568,7 +1568,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatCheckType()
 	 * @generated
 	 */
-	int GSS_TM_TC_FORMAT_CHECK_TYPE = 26;
+	int GSS_TM_TC_FORMAT_CHECK_TYPE = 24;
 
 
 	/**

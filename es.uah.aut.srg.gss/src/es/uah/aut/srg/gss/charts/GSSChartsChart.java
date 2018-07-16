@@ -95,9 +95,11 @@ public interface GSSChartsChart extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Yunits</em>' attribute.
 	 * @see es.uah.aut.srg.gss.charts.GSSChartsYUnits
+	 * @see #isSetY_units()
+	 * @see #unsetY_units()
 	 * @see #setY_units(GSSChartsYUnits)
 	 * @see es.uah.aut.srg.gss.charts.chartsPackage#getGSSChartsChart_Y_units()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSChartsYUnits getY_units();
@@ -108,10 +110,35 @@ public interface GSSChartsChart extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Yunits</em>' attribute.
 	 * @see es.uah.aut.srg.gss.charts.GSSChartsYUnits
+	 * @see #isSetY_units()
+	 * @see #unsetY_units()
 	 * @see #getY_units()
 	 * @generated
 	 */
 	void setY_units(GSSChartsYUnits value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.charts.GSSChartsChart#getY_units <em>Yunits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetY_units()
+	 * @see #getY_units()
+	 * @see #setY_units(GSSChartsYUnits)
+	 * @generated
+	 */
+	void unsetY_units();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.charts.GSSChartsChart#getY_units <em>Yunits</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Yunits</em>' attribute is set.
+	 * @see #unsetY_units()
+	 * @see #getY_units()
+	 * @see #setY_units(GSSChartsYUnits)
+	 * @generated
+	 */
+	boolean isSetY_units();
 
 	/**
 	 * Returns the value of the '<em><b>Ymax</b></em>' attribute.

@@ -45,9 +45,11 @@ public interface GSSConfigReferenceField extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigReferenceFieldType
+	 * @see #isSetType()
+	 * @see #unsetType()
 	 * @see #setType(GSSConfigReferenceFieldType)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigReferenceField_Type()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigReferenceFieldType getType();
@@ -58,10 +60,35 @@ public interface GSSConfigReferenceField extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigReferenceFieldType
+	 * @see #isSetType()
+	 * @see #unsetType()
 	 * @see #getType()
 	 * @generated
 	 */
 	void setType(GSSConfigReferenceFieldType value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigReferenceField#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetType()
+	 * @see #getType()
+	 * @see #setType(GSSConfigReferenceFieldType)
+	 * @generated
+	 */
+	void unsetType();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigReferenceField#getType <em>Type</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Type</em>' attribute is set.
+	 * @see #unsetType()
+	 * @see #getType()
+	 * @see #setType(GSSConfigReferenceFieldType)
+	 * @generated
+	 */
+	boolean isSetType();
 
 	/**
 	 * Returns the value of the '<em><b>If Ref</b></em>' attribute.

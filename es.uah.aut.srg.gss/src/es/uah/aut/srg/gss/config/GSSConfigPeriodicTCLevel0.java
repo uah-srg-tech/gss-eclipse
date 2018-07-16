@@ -152,7 +152,7 @@ public interface GSSConfigPeriodicTCLevel0 extends EObject {
 	 * @see es.uah.aut.srg.gss.config.GSSConfigUnit
 	 * @see #setPeriod_unit(GSSConfigUnit)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigPeriodicTCLevel0_Period_unit()
-	 * @model required="true"
+	 * @model required="true" transient="true"
 	 * @generated
 	 */
 	GSSConfigUnit getPeriod_unit();

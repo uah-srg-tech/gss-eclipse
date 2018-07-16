@@ -154,9 +154,11 @@ public interface GSSTestProcInputLevel2 extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level2</em>' containment reference.
+	 * @see #isSetLevel2()
+	 * @see #unsetLevel2()
 	 * @see #setLevel2(GSSTestProcLevel2)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputLevel2_Level2()
-	 * @model containment="true" required="true"
+	 * @model containment="true" unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSTestProcLevel2 getLevel2();
@@ -166,10 +168,35 @@ public interface GSSTestProcInputLevel2 extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Level2</em>' containment reference.
+	 * @see #isSetLevel2()
+	 * @see #unsetLevel2()
 	 * @see #getLevel2()
 	 * @generated
 	 */
 	void setLevel2(GSSTestProcLevel2 value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel2 <em>Level2</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetLevel2()
+	 * @see #getLevel2()
+	 * @see #setLevel2(GSSTestProcLevel2)
+	 * @generated
+	 */
+	void unsetLevel2();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel2 <em>Level2</em>}' containment reference is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Level2</em>' containment reference is set.
+	 * @see #unsetLevel2()
+	 * @see #getLevel2()
+	 * @see #setLevel2(GSSTestProcLevel2)
+	 * @generated
+	 */
+	boolean isSetLevel2();
 
 	/**
 	 * Returns the value of the '<em><b>App to level2</b></em>' containment reference.

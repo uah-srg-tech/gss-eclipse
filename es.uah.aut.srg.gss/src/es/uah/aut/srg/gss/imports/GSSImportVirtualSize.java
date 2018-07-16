@@ -121,9 +121,11 @@ public interface GSSImportVirtualSize extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.imports.GSSImportUnit
+	 * @see #isSetUnit()
+	 * @see #unsetUnit()
 	 * @see #setUnit(GSSImportUnit)
 	 * @see es.uah.aut.srg.gss.imports.importsPackage#getGSSImportVirtualSize_Unit()
-	 * @model
+	 * @model unsettable="true"
 	 * @generated
 	 */
 	GSSImportUnit getUnit();
@@ -134,9 +136,34 @@ public interface GSSImportVirtualSize extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.imports.GSSImportUnit
+	 * @see #isSetUnit()
+	 * @see #unsetUnit()
 	 * @see #getUnit()
 	 * @generated
 	 */
 	void setUnit(GSSImportUnit value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.imports.GSSImportVirtualSize#getUnit <em>Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetUnit()
+	 * @see #getUnit()
+	 * @see #setUnit(GSSImportUnit)
+	 * @generated
+	 */
+	void unsetUnit();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.imports.GSSImportVirtualSize#getUnit <em>Unit</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Unit</em>' attribute is set.
+	 * @see #unsetUnit()
+	 * @see #getUnit()
+	 * @see #setUnit(GSSImportUnit)
+	 * @generated
+	 */
+	boolean isSetUnit();
 
 } // GSSImportVirtualSize

@@ -45,9 +45,11 @@ public interface GSSIfaceUartProtocol extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolUnit
+	 * @see #isSetUnit()
+	 * @see #unsetUnit()
 	 * @see #setUnit(GSSIfaceUartProtocolUnit)
 	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartProtocol_Unit()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSIfaceUartProtocolUnit getUnit();
@@ -58,10 +60,35 @@ public interface GSSIfaceUartProtocol extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolUnit
+	 * @see #isSetUnit()
+	 * @see #unsetUnit()
 	 * @see #getUnit()
 	 * @generated
 	 */
 	void setUnit(GSSIfaceUartProtocolUnit value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getUnit <em>Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetUnit()
+	 * @see #getUnit()
+	 * @see #setUnit(GSSIfaceUartProtocolUnit)
+	 * @generated
+	 */
+	void unsetUnit();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getUnit <em>Unit</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Unit</em>' attribute is set.
+	 * @see #unsetUnit()
+	 * @see #getUnit()
+	 * @see #setUnit(GSSIfaceUartProtocolUnit)
+	 * @generated
+	 */
+	boolean isSetUnit();
 
 	/**
 	 * Returns the value of the '<em><b>Power</b></em>' attribute.
@@ -74,9 +101,11 @@ public interface GSSIfaceUartProtocol extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Power</em>' attribute.
 	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolPower
+	 * @see #isSetPower()
+	 * @see #unsetPower()
 	 * @see #setPower(GSSIfaceUartProtocolPower)
 	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartProtocol_Power()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSIfaceUartProtocolPower getPower();
@@ -87,10 +116,35 @@ public interface GSSIfaceUartProtocol extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Power</em>' attribute.
 	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolPower
+	 * @see #isSetPower()
+	 * @see #unsetPower()
 	 * @see #getPower()
 	 * @generated
 	 */
 	void setPower(GSSIfaceUartProtocolPower value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getPower <em>Power</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetPower()
+	 * @see #getPower()
+	 * @see #setPower(GSSIfaceUartProtocolPower)
+	 * @generated
+	 */
+	void unsetPower();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getPower <em>Power</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Power</em>' attribute is set.
+	 * @see #unsetPower()
+	 * @see #getPower()
+	 * @see #setPower(GSSIfaceUartProtocolPower)
+	 * @generated
+	 */
+	boolean isSetPower();
 
 	/**
 	 * Returns the value of the '<em><b>Const Size</b></em>' containment reference.

@@ -152,6 +152,15 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 	protected GSSTmTcFormatCheckType checkType = CHECK_TYPE_EDEFAULT;
 
 	/**
+	 * This is true if the Check Type attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean checkTypeESet;
+
+	/**
 	 * The default value of the '{@link #getByteOrder() <em>Byte Order</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -172,6 +181,15 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 	protected GSSTmTcFormatFieldByteOrder byteOrder = BYTE_ORDER_EDEFAULT;
 
 	/**
+	 * This is true if the Byte Order attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean byteOrderESet;
+
+	/**
 	 * The default value of the '{@link #getFirstBit() <em>First Bit</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -190,6 +208,15 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 	 * @ordered
 	 */
 	protected GSSTmTcFormatSFieldFirstBit firstBit = FIRST_BIT_EDEFAULT;
+
+	/**
+	 * This is true if the First Bit attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean firstBitESet;
 
 	/**
 	 * The cached value of the '{@link #getSize() <em>Size</em>}' containment reference.
@@ -341,8 +368,33 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 	public void setCheckType(GSSTmTcFormatCheckType newCheckType) {
 		GSSTmTcFormatCheckType oldCheckType = checkType;
 		checkType = newCheckType == null ? CHECK_TYPE_EDEFAULT : newCheckType;
+		boolean oldCheckTypeESet = checkTypeESet;
+		checkTypeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__CHECK_TYPE, oldCheckType, checkType));
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__CHECK_TYPE, oldCheckType, checkType, !oldCheckTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetCheckType() {
+		GSSTmTcFormatCheckType oldCheckType = checkType;
+		boolean oldCheckTypeESet = checkTypeESet;
+		checkType = CHECK_TYPE_EDEFAULT;
+		checkTypeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__CHECK_TYPE, oldCheckType, CHECK_TYPE_EDEFAULT, oldCheckTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetCheckType() {
+		return checkTypeESet;
 	}
 
 	/**
@@ -362,8 +414,33 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 	public void setByteOrder(GSSTmTcFormatFieldByteOrder newByteOrder) {
 		GSSTmTcFormatFieldByteOrder oldByteOrder = byteOrder;
 		byteOrder = newByteOrder == null ? BYTE_ORDER_EDEFAULT : newByteOrder;
+		boolean oldByteOrderESet = byteOrderESet;
+		byteOrderESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__BYTE_ORDER, oldByteOrder, byteOrder));
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__BYTE_ORDER, oldByteOrder, byteOrder, !oldByteOrderESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetByteOrder() {
+		GSSTmTcFormatFieldByteOrder oldByteOrder = byteOrder;
+		boolean oldByteOrderESet = byteOrderESet;
+		byteOrder = BYTE_ORDER_EDEFAULT;
+		byteOrderESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__BYTE_ORDER, oldByteOrder, BYTE_ORDER_EDEFAULT, oldByteOrderESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetByteOrder() {
+		return byteOrderESet;
 	}
 
 	/**
@@ -383,8 +460,33 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 	public void setFirstBit(GSSTmTcFormatSFieldFirstBit newFirstBit) {
 		GSSTmTcFormatSFieldFirstBit oldFirstBit = firstBit;
 		firstBit = newFirstBit == null ? FIRST_BIT_EDEFAULT : newFirstBit;
+		boolean oldFirstBitESet = firstBitESet;
+		firstBitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FIRST_BIT, oldFirstBit, firstBit));
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FIRST_BIT, oldFirstBit, firstBit, !oldFirstBitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetFirstBit() {
+		GSSTmTcFormatSFieldFirstBit oldFirstBit = firstBit;
+		boolean oldFirstBitESet = firstBitESet;
+		firstBit = FIRST_BIT_EDEFAULT;
+		firstBitESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FIRST_BIT, oldFirstBit, FIRST_BIT_EDEFAULT, oldFirstBitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetFirstBit() {
+		return firstBitESet;
 	}
 
 	/**
@@ -629,13 +731,13 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__CHECK_TYPE:
-				setCheckType(CHECK_TYPE_EDEFAULT);
+				unsetCheckType();
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__BYTE_ORDER:
-				setByteOrder(BYTE_ORDER_EDEFAULT);
+				unsetByteOrder();
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FIRST_BIT:
-				setFirstBit(FIRST_BIT_EDEFAULT);
+				unsetFirstBit();
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SIZE:
 				setSize((GSSTmTcFormatSize)null);
@@ -667,11 +769,11 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__CHECK_TYPE:
-				return checkType != CHECK_TYPE_EDEFAULT;
+				return isSetCheckType();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__BYTE_ORDER:
-				return byteOrder != BYTE_ORDER_EDEFAULT;
+				return isSetByteOrder();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FIRST_BIT:
-				return firstBit != FIRST_BIT_EDEFAULT;
+				return isSetFirstBit();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__SIZE:
 				return size != null;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__FLOATING_OFFSET:
@@ -701,11 +803,11 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 		result.append(", description: ");
 		result.append(description);
 		result.append(", checkType: ");
-		result.append(checkType);
+		if (checkTypeESet) result.append(checkType); else result.append("<unset>");
 		result.append(", byteOrder: ");
-		result.append(byteOrder);
+		if (byteOrderESet) result.append(byteOrder); else result.append("<unset>");
 		result.append(", firstBit: ");
-		result.append(firstBit);
+		if (firstBitESet) result.append(firstBit); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

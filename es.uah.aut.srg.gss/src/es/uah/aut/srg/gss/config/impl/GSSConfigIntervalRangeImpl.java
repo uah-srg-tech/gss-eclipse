@@ -119,6 +119,15 @@ public class GSSConfigIntervalRangeImpl extends MinimalEObjectImpl.Container imp
 	protected GSSConfigUnit interval_unit = INTERVAL_UNIT_EDEFAULT;
 
 	/**
+	 * This is true if the Interval unit attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean interval_unitESet;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -217,8 +226,33 @@ public class GSSConfigIntervalRangeImpl extends MinimalEObjectImpl.Container imp
 	public void setInterval_unit(GSSConfigUnit newInterval_unit) {
 		GSSConfigUnit oldInterval_unit = interval_unit;
 		interval_unit = newInterval_unit == null ? INTERVAL_UNIT_EDEFAULT : newInterval_unit;
+		boolean oldInterval_unitESet = interval_unitESet;
+		interval_unitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_INTERVAL_RANGE__INTERVAL_UNIT, oldInterval_unit, interval_unit));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_INTERVAL_RANGE__INTERVAL_UNIT, oldInterval_unit, interval_unit, !oldInterval_unitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetInterval_unit() {
+		GSSConfigUnit oldInterval_unit = interval_unit;
+		boolean oldInterval_unitESet = interval_unitESet;
+		interval_unit = INTERVAL_UNIT_EDEFAULT;
+		interval_unitESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_INTERVAL_RANGE__INTERVAL_UNIT, oldInterval_unit, INTERVAL_UNIT_EDEFAULT, oldInterval_unitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetInterval_unit() {
+		return interval_unitESet;
 	}
 
 	/**
@@ -283,7 +317,7 @@ public class GSSConfigIntervalRangeImpl extends MinimalEObjectImpl.Container imp
 				setInterval_value(INTERVAL_VALUE_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_INTERVAL_RANGE__INTERVAL_UNIT:
-				setInterval_unit(INTERVAL_UNIT_EDEFAULT);
+				unsetInterval_unit();
 				return;
 		}
 		super.eUnset(featureID);
@@ -304,7 +338,7 @@ public class GSSConfigIntervalRangeImpl extends MinimalEObjectImpl.Container imp
 			case configPackage.GSS_CONFIG_INTERVAL_RANGE__INTERVAL_VALUE:
 				return INTERVAL_VALUE_EDEFAULT == null ? interval_value != null : !INTERVAL_VALUE_EDEFAULT.equals(interval_value);
 			case configPackage.GSS_CONFIG_INTERVAL_RANGE__INTERVAL_UNIT:
-				return interval_unit != INTERVAL_UNIT_EDEFAULT;
+				return isSetInterval_unit();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -326,7 +360,7 @@ public class GSSConfigIntervalRangeImpl extends MinimalEObjectImpl.Container imp
 		result.append(", interval_value: ");
 		result.append(interval_value);
 		result.append(", interval_unit: ");
-		result.append(interval_unit);
+		if (interval_unitESet) result.append(interval_unit); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

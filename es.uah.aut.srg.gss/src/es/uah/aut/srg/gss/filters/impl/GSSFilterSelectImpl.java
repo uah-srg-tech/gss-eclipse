@@ -80,6 +80,15 @@ public class GSSFilterSelectImpl extends MinimalEObjectImpl.Container implements
 	protected GSSFilterSelectType type = TYPE_EDEFAULT;
 
 	/**
+	 * This is true if the Type attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean typeESet;
+
+	/**
 	 * The default value of the '{@link #getOffset() <em>Offset</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -196,8 +205,33 @@ public class GSSFilterSelectImpl extends MinimalEObjectImpl.Container implements
 	public void setType(GSSFilterSelectType newType) {
 		GSSFilterSelectType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
+		boolean oldTypeESet = typeESet;
+		typeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_SELECT__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_SELECT__TYPE, oldType, type, !oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetType() {
+		GSSFilterSelectType oldType = type;
+		boolean oldTypeESet = typeESet;
+		type = TYPE_EDEFAULT;
+		typeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, filtersPackage.GSS_FILTER_SELECT__TYPE, oldType, TYPE_EDEFAULT, oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetType() {
+		return typeESet;
 	}
 
 	/**
@@ -324,7 +358,7 @@ public class GSSFilterSelectImpl extends MinimalEObjectImpl.Container implements
 				setFromFile(FROM_FILE_EDEFAULT);
 				return;
 			case filtersPackage.GSS_FILTER_SELECT__TYPE:
-				setType(TYPE_EDEFAULT);
+				unsetType();
 				return;
 			case filtersPackage.GSS_FILTER_SELECT__OFFSET:
 				setOffset(OFFSET_EDEFAULT);
@@ -350,7 +384,7 @@ public class GSSFilterSelectImpl extends MinimalEObjectImpl.Container implements
 			case filtersPackage.GSS_FILTER_SELECT__FROM_FILE:
 				return FROM_FILE_EDEFAULT == null ? fromFile != null : !FROM_FILE_EDEFAULT.equals(fromFile);
 			case filtersPackage.GSS_FILTER_SELECT__TYPE:
-				return type != TYPE_EDEFAULT;
+				return isSetType();
 			case filtersPackage.GSS_FILTER_SELECT__OFFSET:
 				return OFFSET_EDEFAULT == null ? offset != null : !OFFSET_EDEFAULT.equals(offset);
 			case filtersPackage.GSS_FILTER_SELECT__SIZE:
@@ -374,7 +408,7 @@ public class GSSFilterSelectImpl extends MinimalEObjectImpl.Container implements
 		result.append(" (fromFile: ");
 		result.append(fromFile);
 		result.append(", type: ");
-		result.append(type);
+		if (typeESet) result.append(type); else result.append("<unset>");
 		result.append(", offset: ");
 		result.append(offset);
 		result.append(", size: ");

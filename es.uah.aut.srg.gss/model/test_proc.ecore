@@ -12,7 +12,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcStep" eSuperTypes="common.ecore#//GSSModelObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" lowerBound="1" eType="#//GSSTestProcMode"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" lowerBound="1" eType="#//GSSTestProcMode"
+        unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="replays" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prev_step_idref" eType="#//GSSTestProcStep"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="output_idref_from_prev_step"
@@ -47,11 +48,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcOutputs">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkmode" lowerBound="1"
-        eType="#//GSSTestProcCheckmode"/>
+        eType="#//GSSTestProcCheckmode" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valid_time_interval_value"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valid_time_interval_unit"
-        lowerBound="1" eType="#//GSSTestProcUnit"/>
+        lowerBound="1" eType="#//GSSTestProcUnit" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="output_level_3" upperBound="-1"
         eType="#//GSSTestProcOutputLevel3" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="output_level_2" upperBound="-1"
@@ -96,7 +97,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcNextStep">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isConcurrent" lowerBound="1"
-        eType="#//GSSTestProcYesNo"/>
+        eType="#//GSSTestProcYesNo" unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcConcurrentStep">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -107,7 +108,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_value" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_unit" lowerBound="1"
-        eType="#//GSSTestProcUnit"/>
+        eType="#//GSSTestProcUnit" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level3" lowerBound="1"
         eType="#//GSSTestProcLevel3" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level3" lowerBound="1"
@@ -133,7 +134,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_unit" lowerBound="1"
         eType="#//GSSTestProcUnit"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level2" lowerBound="1"
-        eType="#//GSSTestProcLevel2" containment="true"/>
+        eType="#//GSSTestProcLevel2" unsettable="true" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level2" lowerBound="1"
         eType="#//GSSTestProcAppToLevel2" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level1" lowerBound="1"
@@ -149,7 +150,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_value" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_unit" lowerBound="1"
         eType="#//GSSTestProcUnit"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level1" lowerBound="1"
@@ -167,7 +168,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_value" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_unit" lowerBound="1"
-        eType="#//GSSTestProcUnit"/>
+        eType="#//GSSTestProcUnit" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0" lowerBound="1"
         eType="#//GSSTestProcLevel0" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level0" lowerBound="1"

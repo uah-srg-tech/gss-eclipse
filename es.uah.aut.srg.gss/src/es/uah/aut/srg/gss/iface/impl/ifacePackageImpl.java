@@ -708,6 +708,9 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 		createEAttribute(gssIfaceSpWPortEClass, GSS_IFACE_SP_WPORT__WRITING_PORT);
 		createEReference(gssIfaceSpWPortEClass, GSS_IFACE_SP_WPORT__READING_PORT);
 
+		gssIfaceReadingPortEClass = createEClass(GSS_IFACE_READING_PORT);
+		createEAttribute(gssIfaceReadingPortEClass, GSS_IFACE_READING_PORT__PORT);
+
 		gssIfaceUartPortEClass = createEClass(GSS_IFACE_UART_PORT);
 		createEAttribute(gssIfaceUartPortEClass, GSS_IFACE_UART_PORT__NUMBER);
 		createEAttribute(gssIfaceUartPortEClass, GSS_IFACE_UART_PORT__BAUD_RATE);
@@ -717,14 +720,6 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 		createEAttribute(gssIfaceUartPortEClass, GSS_IFACE_UART_PORT__INPUT_QUEUE_SIZE);
 		createEAttribute(gssIfaceUartPortEClass, GSS_IFACE_UART_PORT__OUTPUT_QUEUE_SIZE);
 		createEReference(gssIfaceUartPortEClass, GSS_IFACE_UART_PORT__UART_PROTOCOL);
-
-		gssIfaceSpWTCPortEClass = createEClass(GSS_IFACE_SP_WTC_PORT);
-		createEAttribute(gssIfaceSpWTCPortEClass, GSS_IFACE_SP_WTC_PORT__SPW_PORT_REF);
-
-		gssIfaceDummyPortEClass = createEClass(GSS_IFACE_DUMMY_PORT);
-
-		gssIfaceReadingPortEClass = createEClass(GSS_IFACE_READING_PORT);
-		createEAttribute(gssIfaceReadingPortEClass, GSS_IFACE_READING_PORT__PORT);
 
 		gssIfaceUartProtocolEClass = createEClass(GSS_IFACE_UART_PROTOCOL);
 		createEAttribute(gssIfaceUartProtocolEClass, GSS_IFACE_UART_PROTOCOL__UNIT);
@@ -748,6 +743,11 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 
 		gssIfaceSyncPatternEClass = createEClass(GSS_IFACE_SYNC_PATTERN);
 		createEAttribute(gssIfaceSyncPatternEClass, GSS_IFACE_SYNC_PATTERN__HEX_VALUE);
+
+		gssIfaceSpWTCPortEClass = createEClass(GSS_IFACE_SP_WTC_PORT);
+		createEAttribute(gssIfaceSpWTCPortEClass, GSS_IFACE_SP_WTC_PORT__SPW_PORT_REF);
+
+		gssIfaceDummyPortEClass = createEClass(GSS_IFACE_DUMMY_PORT);
 
 		// Create enums
 		gssIfaceSpWPortTypeEEnum = createEEnum(GSS_IFACE_SP_WPORT_TYPE);
@@ -803,32 +803,27 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 		initEClass(gssIfacePortEClass, GSSIfacePort.class, "GSSIfacePort", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(gssIfaceSpWPortEClass, GSSIfaceSpWPort.class, "GSSIfaceSpWPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSIfaceSpWPort_Type(), this.getGSSIfaceSpWPortType(), "type", null, 1, 1, GSSIfaceSpWPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSIfaceSpWPort_Type(), this.getGSSIfaceSpWPortType(), "type", null, 1, 1, GSSIfaceSpWPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSIfaceSpWPort_Link(), ecorePackage.getEString(), "link", null, 1, 1, GSSIfaceSpWPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSIfaceSpWPort_WritingPort(), ecorePackage.getEString(), "writingPort", null, 1, 1, GSSIfaceSpWPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSIfaceSpWPort_ReadingPort(), this.getGSSIfaceReadingPort(), null, "readingPort", null, 1, 2, GSSIfaceSpWPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(gssIfaceReadingPortEClass, GSSIfaceReadingPort.class, "GSSIfaceReadingPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGSSIfaceReadingPort_Port(), ecorePackage.getEString(), "port", null, 1, 1, GSSIfaceReadingPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(gssIfaceUartPortEClass, GSSIfaceUartPort.class, "GSSIfaceUartPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSIfaceUartPort_Number(), ecorePackage.getEString(), "number", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSIfaceUartPort_BaudRate(), this.getGSSIfaceUartPortBaudRate(), "baudRate", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSIfaceUartPort_Parity(), this.getGSSIfaceUartPortParity(), "parity", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSIfaceUartPort_DataBits(), this.getGSSIfaceUartPortDataBits(), "dataBits", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSIfaceUartPort_StopBits(), this.getGSSIfaceUartPortStopBits(), "stopBits", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSIfaceUartPort_BaudRate(), this.getGSSIfaceUartPortBaudRate(), "baudRate", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSIfaceUartPort_Parity(), this.getGSSIfaceUartPortParity(), "parity", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSIfaceUartPort_DataBits(), this.getGSSIfaceUartPortDataBits(), "dataBits", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSIfaceUartPort_StopBits(), this.getGSSIfaceUartPortStopBits(), "stopBits", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSIfaceUartPort_InputQueueSize(), ecorePackage.getEString(), "inputQueueSize", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSIfaceUartPort_OutputQueueSize(), ecorePackage.getEString(), "outputQueueSize", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSIfaceUartPort_UartProtocol(), this.getGSSIfaceUartProtocol(), null, "uartProtocol", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(gssIfaceSpWTCPortEClass, GSSIfaceSpWTCPort.class, "GSSIfaceSpWTCPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSIfaceSpWTCPort_SpwPortRef(), ecorePackage.getEString(), "spwPortRef", null, 1, 1, GSSIfaceSpWTCPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssIfaceDummyPortEClass, GSSIfaceDummyPort.class, "GSSIfaceDummyPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(gssIfaceReadingPortEClass, GSSIfaceReadingPort.class, "GSSIfaceReadingPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSIfaceReadingPort_Port(), ecorePackage.getEString(), "port", null, 1, 1, GSSIfaceReadingPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(gssIfaceUartProtocolEClass, GSSIfaceUartProtocol.class, "GSSIfaceUartProtocol", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSIfaceUartProtocol_Unit(), this.getGSSIfaceUartProtocolUnit(), "unit", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSIfaceUartProtocol_Power(), this.getGSSIfaceUartProtocolPower(), "power", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSIfaceUartProtocol_Unit(), this.getGSSIfaceUartProtocolUnit(), "unit", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSIfaceUartProtocol_Power(), this.getGSSIfaceUartProtocolPower(), "power", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSIfaceUartProtocol_ConstSize(), this.getGSSIfaceConstSize(), null, "constSize", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSIfaceUartProtocol_SizeFieldOffset(), this.getGSSIfaceSizeFieldOffset(), null, "sizeFieldOffset", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSIfaceUartProtocol_SizeFieldTrim(), this.getGSSIfaceSizeFieldTrim(), null, "sizeFieldTrim", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -848,6 +843,11 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 
 		initEClass(gssIfaceSyncPatternEClass, GSSIfaceSyncPattern.class, "GSSIfaceSyncPattern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSIfaceSyncPattern_HexValue(), ecorePackage.getEString(), "hexValue", null, 1, 1, GSSIfaceSyncPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(gssIfaceSpWTCPortEClass, GSSIfaceSpWTCPort.class, "GSSIfaceSpWTCPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGSSIfaceSpWTCPort_SpwPortRef(), ecorePackage.getEString(), "spwPortRef", null, 1, 1, GSSIfaceSpWTCPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(gssIfaceDummyPortEClass, GSSIfaceDummyPort.class, "GSSIfaceDummyPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(gssIfaceSpWPortTypeEEnum, GSSIfaceSpWPortType.class, "GSSIfaceSpWPortType");

@@ -48,9 +48,11 @@ public interface GSSTestProcOutputs extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Checkmode</em>' attribute.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcCheckmode
+	 * @see #isSetCheckmode()
+	 * @see #unsetCheckmode()
 	 * @see #setCheckmode(GSSTestProcCheckmode)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputs_Checkmode()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSTestProcCheckmode getCheckmode();
@@ -61,10 +63,35 @@ public interface GSSTestProcOutputs extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Checkmode</em>' attribute.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcCheckmode
+	 * @see #isSetCheckmode()
+	 * @see #unsetCheckmode()
 	 * @see #getCheckmode()
 	 * @generated
 	 */
 	void setCheckmode(GSSTestProcCheckmode value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getCheckmode <em>Checkmode</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetCheckmode()
+	 * @see #getCheckmode()
+	 * @see #setCheckmode(GSSTestProcCheckmode)
+	 * @generated
+	 */
+	void unsetCheckmode();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getCheckmode <em>Checkmode</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Checkmode</em>' attribute is set.
+	 * @see #unsetCheckmode()
+	 * @see #getCheckmode()
+	 * @see #setCheckmode(GSSTestProcCheckmode)
+	 * @generated
+	 */
+	boolean isSetCheckmode();
 
 	/**
 	 * Returns the value of the '<em><b>Valid time interval value</b></em>' attribute.
@@ -103,9 +130,11 @@ public interface GSSTestProcOutputs extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Valid time interval unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
+	 * @see #isSetValid_time_interval_unit()
+	 * @see #unsetValid_time_interval_unit()
 	 * @see #setValid_time_interval_unit(GSSTestProcUnit)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputs_Valid_time_interval_unit()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSTestProcUnit getValid_time_interval_unit();
@@ -116,10 +145,35 @@ public interface GSSTestProcOutputs extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Valid time interval unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
+	 * @see #isSetValid_time_interval_unit()
+	 * @see #unsetValid_time_interval_unit()
 	 * @see #getValid_time_interval_unit()
 	 * @generated
 	 */
 	void setValid_time_interval_unit(GSSTestProcUnit value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getValid_time_interval_unit <em>Valid time interval unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetValid_time_interval_unit()
+	 * @see #getValid_time_interval_unit()
+	 * @see #setValid_time_interval_unit(GSSTestProcUnit)
+	 * @generated
+	 */
+	void unsetValid_time_interval_unit();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getValid_time_interval_unit <em>Valid time interval unit</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Valid time interval unit</em>' attribute is set.
+	 * @see #unsetValid_time_interval_unit()
+	 * @see #getValid_time_interval_unit()
+	 * @see #setValid_time_interval_unit(GSSTestProcUnit)
+	 * @generated
+	 */
+	boolean isSetValid_time_interval_unit();
 
 	/**
 	 * Returns the value of the '<em><b>Output level 3</b></em>' containment reference list.

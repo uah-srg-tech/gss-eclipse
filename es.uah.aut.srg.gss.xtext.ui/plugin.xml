@@ -33,10 +33,16 @@
                   <instanceof
                         value="org.eclipse.core.resources.IResource">
                   </instanceof>
-                  <test
-                        property="org.eclipse.core.resources.extension"
-                        value="gss_iface">
-                  </test>
+                  <or>
+                     <test
+                           property="org.eclipse.core.resources.extension"
+                           value="gss_iface">
+                     </test>
+                     <test
+                           property="org.eclipse.core.resources.extension"
+                           value="gss_test_proc">
+                     </test>
+                  </or>
                </iterate>
             </visibleWhen>
          </command>

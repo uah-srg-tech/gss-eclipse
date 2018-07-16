@@ -43,9 +43,11 @@ public interface GSSConfigPhyHeaderPrint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Main Log</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetMainLog()
+	 * @see #unsetMainLog()
 	 * @see #setMainLog(GSSConfigEnableDisable)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigPhyHeaderPrint_MainLog()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigEnableDisable getMainLog();
@@ -56,10 +58,35 @@ public interface GSSConfigPhyHeaderPrint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Main Log</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetMainLog()
+	 * @see #unsetMainLog()
 	 * @see #getMainLog()
 	 * @generated
 	 */
 	void setMainLog(GSSConfigEnableDisable value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPhyHeaderPrint#getMainLog <em>Main Log</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetMainLog()
+	 * @see #getMainLog()
+	 * @see #setMainLog(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	void unsetMainLog();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPhyHeaderPrint#getMainLog <em>Main Log</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Main Log</em>' attribute is set.
+	 * @see #unsetMainLog()
+	 * @see #getMainLog()
+	 * @see #setMainLog(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	boolean isSetMainLog();
 
 	/**
 	 * Returns the value of the '<em><b>Port Logs</b></em>' attribute.
@@ -72,9 +99,11 @@ public interface GSSConfigPhyHeaderPrint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Port Logs</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetPortLogs()
+	 * @see #unsetPortLogs()
 	 * @see #setPortLogs(GSSConfigEnableDisable)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigPhyHeaderPrint_PortLogs()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigEnableDisable getPortLogs();
@@ -85,10 +114,35 @@ public interface GSSConfigPhyHeaderPrint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Port Logs</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetPortLogs()
+	 * @see #unsetPortLogs()
 	 * @see #getPortLogs()
 	 * @generated
 	 */
 	void setPortLogs(GSSConfigEnableDisable value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPhyHeaderPrint#getPortLogs <em>Port Logs</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetPortLogs()
+	 * @see #getPortLogs()
+	 * @see #setPortLogs(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	void unsetPortLogs();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPhyHeaderPrint#getPortLogs <em>Port Logs</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Port Logs</em>' attribute is set.
+	 * @see #unsetPortLogs()
+	 * @see #getPortLogs()
+	 * @see #setPortLogs(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	boolean isSetPortLogs();
 
 	/**
 	 * Returns the value of the '<em><b>Debug Log</b></em>' attribute.
@@ -101,9 +155,11 @@ public interface GSSConfigPhyHeaderPrint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Debug Log</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetDebugLog()
+	 * @see #unsetDebugLog()
 	 * @see #setDebugLog(GSSConfigEnableDisable)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigPhyHeaderPrint_DebugLog()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigEnableDisable getDebugLog();
@@ -114,10 +170,35 @@ public interface GSSConfigPhyHeaderPrint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Debug Log</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetDebugLog()
+	 * @see #unsetDebugLog()
 	 * @see #getDebugLog()
 	 * @generated
 	 */
 	void setDebugLog(GSSConfigEnableDisable value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPhyHeaderPrint#getDebugLog <em>Debug Log</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetDebugLog()
+	 * @see #getDebugLog()
+	 * @see #setDebugLog(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	void unsetDebugLog();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPhyHeaderPrint#getDebugLog <em>Debug Log</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Debug Log</em>' attribute is set.
+	 * @see #unsetDebugLog()
+	 * @see #getDebugLog()
+	 * @see #setDebugLog(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	boolean isSetDebugLog();
 
 	/**
 	 * Returns the value of the '<em><b>Gss Tabs</b></em>' attribute.
@@ -130,9 +211,11 @@ public interface GSSConfigPhyHeaderPrint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gss Tabs</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetGssTabs()
+	 * @see #unsetGssTabs()
 	 * @see #setGssTabs(GSSConfigEnableDisable)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigPhyHeaderPrint_GssTabs()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigEnableDisable getGssTabs();
@@ -143,9 +226,34 @@ public interface GSSConfigPhyHeaderPrint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Gss Tabs</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetGssTabs()
+	 * @see #unsetGssTabs()
 	 * @see #getGssTabs()
 	 * @generated
 	 */
 	void setGssTabs(GSSConfigEnableDisable value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPhyHeaderPrint#getGssTabs <em>Gss Tabs</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetGssTabs()
+	 * @see #getGssTabs()
+	 * @see #setGssTabs(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	void unsetGssTabs();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPhyHeaderPrint#getGssTabs <em>Gss Tabs</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Gss Tabs</em>' attribute is set.
+	 * @see #unsetGssTabs()
+	 * @see #getGssTabs()
+	 * @see #setGssTabs(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	boolean isSetGssTabs();
 
 } // GSSConfigPhyHeaderPrint

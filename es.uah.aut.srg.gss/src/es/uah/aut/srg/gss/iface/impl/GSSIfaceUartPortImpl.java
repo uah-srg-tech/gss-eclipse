@@ -88,6 +88,15 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	protected GSSIfaceUartPortBaudRate baudRate = BAUD_RATE_EDEFAULT;
 
 	/**
+	 * This is true if the Baud Rate attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean baudRateESet;
+
+	/**
 	 * The default value of the '{@link #getParity() <em>Parity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,6 +115,15 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	 * @ordered
 	 */
 	protected GSSIfaceUartPortParity parity = PARITY_EDEFAULT;
+
+	/**
+	 * This is true if the Parity attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean parityESet;
 
 	/**
 	 * The default value of the '{@link #getDataBits() <em>Data Bits</em>}' attribute.
@@ -128,6 +146,15 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	protected GSSIfaceUartPortDataBits dataBits = DATA_BITS_EDEFAULT;
 
 	/**
+	 * This is true if the Data Bits attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean dataBitsESet;
+
+	/**
 	 * The default value of the '{@link #getStopBits() <em>Stop Bits</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -146,6 +173,15 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	 * @ordered
 	 */
 	protected GSSIfaceUartPortStopBits stopBits = STOP_BITS_EDEFAULT;
+
+	/**
+	 * This is true if the Stop Bits attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean stopBitsESet;
 
 	/**
 	 * The default value of the '{@link #getInputQueueSize() <em>Input Queue Size</em>}' attribute.
@@ -254,8 +290,33 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	public void setBaudRate(GSSIfaceUartPortBaudRate newBaudRate) {
 		GSSIfaceUartPortBaudRate oldBaudRate = baudRate;
 		baudRate = newBaudRate == null ? BAUD_RATE_EDEFAULT : newBaudRate;
+		boolean oldBaudRateESet = baudRateESet;
+		baudRateESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__BAUD_RATE, oldBaudRate, baudRate));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__BAUD_RATE, oldBaudRate, baudRate, !oldBaudRateESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetBaudRate() {
+		GSSIfaceUartPortBaudRate oldBaudRate = baudRate;
+		boolean oldBaudRateESet = baudRateESet;
+		baudRate = BAUD_RATE_EDEFAULT;
+		baudRateESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, ifacePackage.GSS_IFACE_UART_PORT__BAUD_RATE, oldBaudRate, BAUD_RATE_EDEFAULT, oldBaudRateESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetBaudRate() {
+		return baudRateESet;
 	}
 
 	/**
@@ -275,8 +336,33 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	public void setParity(GSSIfaceUartPortParity newParity) {
 		GSSIfaceUartPortParity oldParity = parity;
 		parity = newParity == null ? PARITY_EDEFAULT : newParity;
+		boolean oldParityESet = parityESet;
+		parityESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__PARITY, oldParity, parity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__PARITY, oldParity, parity, !oldParityESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetParity() {
+		GSSIfaceUartPortParity oldParity = parity;
+		boolean oldParityESet = parityESet;
+		parity = PARITY_EDEFAULT;
+		parityESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, ifacePackage.GSS_IFACE_UART_PORT__PARITY, oldParity, PARITY_EDEFAULT, oldParityESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetParity() {
+		return parityESet;
 	}
 
 	/**
@@ -296,8 +382,33 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	public void setDataBits(GSSIfaceUartPortDataBits newDataBits) {
 		GSSIfaceUartPortDataBits oldDataBits = dataBits;
 		dataBits = newDataBits == null ? DATA_BITS_EDEFAULT : newDataBits;
+		boolean oldDataBitsESet = dataBitsESet;
+		dataBitsESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__DATA_BITS, oldDataBits, dataBits));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__DATA_BITS, oldDataBits, dataBits, !oldDataBitsESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetDataBits() {
+		GSSIfaceUartPortDataBits oldDataBits = dataBits;
+		boolean oldDataBitsESet = dataBitsESet;
+		dataBits = DATA_BITS_EDEFAULT;
+		dataBitsESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, ifacePackage.GSS_IFACE_UART_PORT__DATA_BITS, oldDataBits, DATA_BITS_EDEFAULT, oldDataBitsESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetDataBits() {
+		return dataBitsESet;
 	}
 
 	/**
@@ -317,8 +428,33 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	public void setStopBits(GSSIfaceUartPortStopBits newStopBits) {
 		GSSIfaceUartPortStopBits oldStopBits = stopBits;
 		stopBits = newStopBits == null ? STOP_BITS_EDEFAULT : newStopBits;
+		boolean oldStopBitsESet = stopBitsESet;
+		stopBitsESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__STOP_BITS, oldStopBits, stopBits));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__STOP_BITS, oldStopBits, stopBits, !oldStopBitsESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetStopBits() {
+		GSSIfaceUartPortStopBits oldStopBits = stopBits;
+		boolean oldStopBitsESet = stopBitsESet;
+		stopBits = STOP_BITS_EDEFAULT;
+		stopBitsESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, ifacePackage.GSS_IFACE_UART_PORT__STOP_BITS, oldStopBits, STOP_BITS_EDEFAULT, oldStopBitsESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetStopBits() {
+		return stopBitsESet;
 	}
 
 	/**
@@ -496,16 +632,16 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 				setNumber(NUMBER_EDEFAULT);
 				return;
 			case ifacePackage.GSS_IFACE_UART_PORT__BAUD_RATE:
-				setBaudRate(BAUD_RATE_EDEFAULT);
+				unsetBaudRate();
 				return;
 			case ifacePackage.GSS_IFACE_UART_PORT__PARITY:
-				setParity(PARITY_EDEFAULT);
+				unsetParity();
 				return;
 			case ifacePackage.GSS_IFACE_UART_PORT__DATA_BITS:
-				setDataBits(DATA_BITS_EDEFAULT);
+				unsetDataBits();
 				return;
 			case ifacePackage.GSS_IFACE_UART_PORT__STOP_BITS:
-				setStopBits(STOP_BITS_EDEFAULT);
+				unsetStopBits();
 				return;
 			case ifacePackage.GSS_IFACE_UART_PORT__INPUT_QUEUE_SIZE:
 				setInputQueueSize(INPUT_QUEUE_SIZE_EDEFAULT);
@@ -531,13 +667,13 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 			case ifacePackage.GSS_IFACE_UART_PORT__NUMBER:
 				return NUMBER_EDEFAULT == null ? number != null : !NUMBER_EDEFAULT.equals(number);
 			case ifacePackage.GSS_IFACE_UART_PORT__BAUD_RATE:
-				return baudRate != BAUD_RATE_EDEFAULT;
+				return isSetBaudRate();
 			case ifacePackage.GSS_IFACE_UART_PORT__PARITY:
-				return parity != PARITY_EDEFAULT;
+				return isSetParity();
 			case ifacePackage.GSS_IFACE_UART_PORT__DATA_BITS:
-				return dataBits != DATA_BITS_EDEFAULT;
+				return isSetDataBits();
 			case ifacePackage.GSS_IFACE_UART_PORT__STOP_BITS:
-				return stopBits != STOP_BITS_EDEFAULT;
+				return isSetStopBits();
 			case ifacePackage.GSS_IFACE_UART_PORT__INPUT_QUEUE_SIZE:
 				return INPUT_QUEUE_SIZE_EDEFAULT == null ? inputQueueSize != null : !INPUT_QUEUE_SIZE_EDEFAULT.equals(inputQueueSize);
 			case ifacePackage.GSS_IFACE_UART_PORT__OUTPUT_QUEUE_SIZE:
@@ -561,13 +697,13 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 		result.append(" (number: ");
 		result.append(number);
 		result.append(", baudRate: ");
-		result.append(baudRate);
+		if (baudRateESet) result.append(baudRate); else result.append("<unset>");
 		result.append(", parity: ");
-		result.append(parity);
+		if (parityESet) result.append(parity); else result.append("<unset>");
 		result.append(", dataBits: ");
-		result.append(dataBits);
+		if (dataBitsESet) result.append(dataBits); else result.append("<unset>");
 		result.append(", stopBits: ");
-		result.append(stopBits);
+		if (stopBitsESet) result.append(stopBits); else result.append("<unset>");
 		result.append(", inputQueueSize: ");
 		result.append(inputQueueSize);
 		result.append(", outputQueueSize: ");

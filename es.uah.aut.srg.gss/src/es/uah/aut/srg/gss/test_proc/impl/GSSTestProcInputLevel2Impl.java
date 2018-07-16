@@ -143,6 +143,15 @@ public class GSSTestProcInputLevel2Impl extends MinimalEObjectImpl.Container imp
 	protected GSSTestProcLevel2 level2;
 
 	/**
+	 * This is true if the Level2 containment reference has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean level2ESet;
+
+	/**
 	 * The cached value of the '{@link #getApp_to_level2() <em>App to level2</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -312,8 +321,10 @@ public class GSSTestProcInputLevel2Impl extends MinimalEObjectImpl.Container imp
 	public NotificationChain basicSetLevel2(GSSTestProcLevel2 newLevel2, NotificationChain msgs) {
 		GSSTestProcLevel2 oldLevel2 = level2;
 		level2 = newLevel2;
+		boolean oldLevel2ESet = level2ESet;
+		level2ESet = true;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2, oldLevel2, newLevel2);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2, oldLevel2, newLevel2, !oldLevel2ESet);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -334,8 +345,58 @@ public class GSSTestProcInputLevel2Impl extends MinimalEObjectImpl.Container imp
 			msgs = basicSetLevel2(newLevel2, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2, newLevel2, newLevel2));
+		else {
+			boolean oldLevel2ESet = level2ESet;
+			level2ESet = true;
+			if (eNotificationRequired())
+				eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2, newLevel2, newLevel2, !oldLevel2ESet));
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicUnsetLevel2(NotificationChain msgs) {
+		GSSTestProcLevel2 oldLevel2 = level2;
+		level2 = null;
+		boolean oldLevel2ESet = level2ESet;
+		level2ESet = false;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.UNSET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2, oldLevel2, null, oldLevel2ESet);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetLevel2() {
+		if (level2 != null) {
+			NotificationChain msgs = null;
+			msgs = ((InternalEObject)level2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2, null, msgs);
+			msgs = basicUnsetLevel2(msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else {
+			boolean oldLevel2ESet = level2ESet;
+			level2ESet = false;
+			if (eNotificationRequired())
+				eNotify(new ENotificationImpl(this, Notification.UNSET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2, null, null, oldLevel2ESet));
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetLevel2() {
+		return level2ESet;
 	}
 
 	/**
@@ -562,7 +623,7 @@ public class GSSTestProcInputLevel2Impl extends MinimalEObjectImpl.Container imp
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2:
-				return basicSetLevel2(null, msgs);
+				return basicUnsetLevel2(msgs);
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__APP_TO_LEVEL2:
 				return basicSetApp_to_level2(null, msgs);
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL1:
@@ -672,7 +733,7 @@ public class GSSTestProcInputLevel2Impl extends MinimalEObjectImpl.Container imp
 				setDelay_unit(DELAY_UNIT_EDEFAULT);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2:
-				setLevel2((GSSTestProcLevel2)null);
+				unsetLevel2();
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__APP_TO_LEVEL2:
 				setApp_to_level2((GSSTestProcAppToLevel2)null);
@@ -710,7 +771,7 @@ public class GSSTestProcInputLevel2Impl extends MinimalEObjectImpl.Container imp
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__DELAY_UNIT:
 				return delay_unit != DELAY_UNIT_EDEFAULT;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2:
-				return level2 != null;
+				return isSetLevel2();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__APP_TO_LEVEL2:
 				return app_to_level2 != null;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL1:

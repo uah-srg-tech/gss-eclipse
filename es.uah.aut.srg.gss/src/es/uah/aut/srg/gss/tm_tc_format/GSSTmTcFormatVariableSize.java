@@ -68,9 +68,11 @@ public interface GSSTmTcFormatVariableSize extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatUnit
+	 * @see #isSetUnit()
+	 * @see #unsetUnit()
 	 * @see #setUnit(GSSTmTcFormatUnit)
 	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVariableSize_Unit()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSTmTcFormatUnit getUnit();
@@ -81,10 +83,35 @@ public interface GSSTmTcFormatVariableSize extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatUnit
+	 * @see #isSetUnit()
+	 * @see #unsetUnit()
 	 * @see #getUnit()
 	 * @generated
 	 */
 	void setUnit(GSSTmTcFormatUnit value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getUnit <em>Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetUnit()
+	 * @see #getUnit()
+	 * @see #setUnit(GSSTmTcFormatUnit)
+	 * @generated
+	 */
+	void unsetUnit();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getUnit <em>Unit</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Unit</em>' attribute is set.
+	 * @see #unsetUnit()
+	 * @see #getUnit()
+	 * @see #setUnit(GSSTmTcFormatUnit)
+	 * @generated
+	 */
+	boolean isSetUnit();
 
 	/**
 	 * Returns the value of the '<em><b>Power</b></em>' attribute.
@@ -97,9 +124,11 @@ public interface GSSTmTcFormatVariableSize extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Power</em>' attribute.
 	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatPower
+	 * @see #isSetPower()
+	 * @see #unsetPower()
 	 * @see #setPower(GSSTmTcFormatPower)
 	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVariableSize_Power()
-	 * @model
+	 * @model unsettable="true"
 	 * @generated
 	 */
 	GSSTmTcFormatPower getPower();
@@ -110,9 +139,34 @@ public interface GSSTmTcFormatVariableSize extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Power</em>' attribute.
 	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatPower
+	 * @see #isSetPower()
+	 * @see #unsetPower()
 	 * @see #getPower()
 	 * @generated
 	 */
 	void setPower(GSSTmTcFormatPower value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getPower <em>Power</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetPower()
+	 * @see #getPower()
+	 * @see #setPower(GSSTmTcFormatPower)
+	 * @generated
+	 */
+	void unsetPower();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getPower <em>Power</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Power</em>' attribute is set.
+	 * @see #unsetPower()
+	 * @see #getPower()
+	 * @see #setPower(GSSTmTcFormatPower)
+	 * @generated
+	 */
+	boolean isSetPower();
 
 } // GSSTmTcFormatVariableSize

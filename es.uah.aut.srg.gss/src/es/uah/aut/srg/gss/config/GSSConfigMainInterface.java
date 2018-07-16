@@ -99,9 +99,11 @@ public interface GSSConfigMainInterface extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>If Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterfaceType
+	 * @see #isSetIfType()
+	 * @see #unsetIfType()
 	 * @see #setIfType(GSSConfigMainInterfaceType)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigMainInterface_IfType()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigMainInterfaceType getIfType();
@@ -112,10 +114,35 @@ public interface GSSConfigMainInterface extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>If Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterfaceType
+	 * @see #isSetIfType()
+	 * @see #unsetIfType()
 	 * @see #getIfType()
 	 * @generated
 	 */
 	void setIfType(GSSConfigMainInterfaceType value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIfType <em>If Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetIfType()
+	 * @see #getIfType()
+	 * @see #setIfType(GSSConfigMainInterfaceType)
+	 * @generated
+	 */
+	void unsetIfType();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIfType <em>If Type</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>If Type</em>' attribute is set.
+	 * @see #unsetIfType()
+	 * @see #getIfType()
+	 * @see #setIfType(GSSConfigMainInterfaceType)
+	 * @generated
+	 */
+	boolean isSetIfType();
 
 	/**
 	 * Returns the value of the '<em><b>If Config</b></em>' attribute.
@@ -154,9 +181,11 @@ public interface GSSConfigMainInterface extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Io Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterfaceIOType
+	 * @see #isSetIoType()
+	 * @see #unsetIoType()
 	 * @see #setIoType(GSSConfigMainInterfaceIOType)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigMainInterface_IoType()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigMainInterfaceIOType getIoType();
@@ -167,10 +196,35 @@ public interface GSSConfigMainInterface extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Io Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterfaceIOType
+	 * @see #isSetIoType()
+	 * @see #unsetIoType()
 	 * @see #getIoType()
 	 * @generated
 	 */
 	void setIoType(GSSConfigMainInterfaceIOType value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIoType <em>Io Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetIoType()
+	 * @see #getIoType()
+	 * @see #setIoType(GSSConfigMainInterfaceIOType)
+	 * @generated
+	 */
+	void unsetIoType();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIoType <em>Io Type</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Io Type</em>' attribute is set.
+	 * @see #unsetIoType()
+	 * @see #getIoType()
+	 * @see #setIoType(GSSConfigMainInterfaceIOType)
+	 * @generated
+	 */
+	boolean isSetIoType();
 
 	/**
 	 * Returns the value of the '<em><b>Protocol ID</b></em>' attribute.

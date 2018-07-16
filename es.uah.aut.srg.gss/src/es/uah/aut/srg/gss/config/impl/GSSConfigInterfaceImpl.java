@@ -114,6 +114,15 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 	protected GSSConfigInterfaceType ifType = IF_TYPE_EDEFAULT;
 
 	/**
+	 * This is true if the If Type attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean ifTypeESet;
+
+	/**
 	 * The default value of the '{@link #getIfConfig() <em>If Config</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -152,6 +161,15 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected GSSConfigInterfaceIOType ioType = IO_TYPE_EDEFAULT;
+
+	/**
+	 * This is true if the Io Type attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean ioTypeESet;
 
 	/**
 	 * The default value of the '{@link #getProtocolID() <em>Protocol ID</em>}' attribute.
@@ -281,8 +299,33 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 	public void setIfType(GSSConfigInterfaceType newIfType) {
 		GSSConfigInterfaceType oldIfType = ifType;
 		ifType = newIfType == null ? IF_TYPE_EDEFAULT : newIfType;
+		boolean oldIfTypeESet = ifTypeESet;
+		ifTypeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_INTERFACE__IF_TYPE, oldIfType, ifType));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_INTERFACE__IF_TYPE, oldIfType, ifType, !oldIfTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetIfType() {
+		GSSConfigInterfaceType oldIfType = ifType;
+		boolean oldIfTypeESet = ifTypeESet;
+		ifType = IF_TYPE_EDEFAULT;
+		ifTypeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_INTERFACE__IF_TYPE, oldIfType, IF_TYPE_EDEFAULT, oldIfTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetIfType() {
+		return ifTypeESet;
 	}
 
 	/**
@@ -323,8 +366,33 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 	public void setIoType(GSSConfigInterfaceIOType newIoType) {
 		GSSConfigInterfaceIOType oldIoType = ioType;
 		ioType = newIoType == null ? IO_TYPE_EDEFAULT : newIoType;
+		boolean oldIoTypeESet = ioTypeESet;
+		ioTypeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_INTERFACE__IO_TYPE, oldIoType, ioType));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_INTERFACE__IO_TYPE, oldIoType, ioType, !oldIoTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetIoType() {
+		GSSConfigInterfaceIOType oldIoType = ioType;
+		boolean oldIoTypeESet = ioTypeESet;
+		ioType = IO_TYPE_EDEFAULT;
+		ioTypeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_INTERFACE__IO_TYPE, oldIoType, IO_TYPE_EDEFAULT, oldIoTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetIoType() {
+		return ioTypeESet;
 	}
 
 	/**
@@ -490,13 +558,13 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 				setName(NAME_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_INTERFACE__IF_TYPE:
-				setIfType(IF_TYPE_EDEFAULT);
+				unsetIfType();
 				return;
 			case configPackage.GSS_CONFIG_INTERFACE__IF_CONFIG:
 				setIfConfig(IF_CONFIG_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_INTERFACE__IO_TYPE:
-				setIoType(IO_TYPE_EDEFAULT);
+				unsetIoType();
 				return;
 			case configPackage.GSS_CONFIG_INTERFACE__PROTOCOL_ID:
 				setProtocolID(PROTOCOL_ID_EDEFAULT);
@@ -527,11 +595,11 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 			case configPackage.GSS_CONFIG_INTERFACE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case configPackage.GSS_CONFIG_INTERFACE__IF_TYPE:
-				return ifType != IF_TYPE_EDEFAULT;
+				return isSetIfType();
 			case configPackage.GSS_CONFIG_INTERFACE__IF_CONFIG:
 				return IF_CONFIG_EDEFAULT == null ? ifConfig != null : !IF_CONFIG_EDEFAULT.equals(ifConfig);
 			case configPackage.GSS_CONFIG_INTERFACE__IO_TYPE:
-				return ioType != IO_TYPE_EDEFAULT;
+				return isSetIoType();
 			case configPackage.GSS_CONFIG_INTERFACE__PROTOCOL_ID:
 				return PROTOCOL_ID_EDEFAULT == null ? protocolID != null : !PROTOCOL_ID_EDEFAULT.equals(protocolID);
 			case configPackage.GSS_CONFIG_INTERFACE__LEVEL_IN_OUT:
@@ -559,11 +627,11 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 		result.append(", name: ");
 		result.append(name);
 		result.append(", ifType: ");
-		result.append(ifType);
+		if (ifTypeESet) result.append(ifType); else result.append("<unset>");
 		result.append(", ifConfig: ");
 		result.append(ifConfig);
 		result.append(", ioType: ");
-		result.append(ioType);
+		if (ioTypeESet) result.append(ioType); else result.append("<unset>");
 		result.append(", protocolID: ");
 		result.append(protocolID);
 		result.append(')');

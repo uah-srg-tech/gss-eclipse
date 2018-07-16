@@ -83,6 +83,15 @@ public class GSSConfigAlarmValImpl extends MinimalEObjectImpl.Container implemen
 	protected GSSConfigAlarmValType type = TYPE_EDEFAULT;
 
 	/**
+	 * This is true if the Type attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean typeESet;
+
+	/**
 	 * The cached value of the '{@link #getGVFiltered() <em>GV Filtered</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -159,8 +168,33 @@ public class GSSConfigAlarmValImpl extends MinimalEObjectImpl.Container implemen
 	public void setType(GSSConfigAlarmValType newType) {
 		GSSConfigAlarmValType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
+		boolean oldTypeESet = typeESet;
+		typeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_ALARM_VAL__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_ALARM_VAL__TYPE, oldType, type, !oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetType() {
+		GSSConfigAlarmValType oldType = type;
+		boolean oldTypeESet = typeESet;
+		type = TYPE_EDEFAULT;
+		typeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_ALARM_VAL__TYPE, oldType, TYPE_EDEFAULT, oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetType() {
+		return typeESet;
 	}
 
 	/**
@@ -321,7 +355,7 @@ public class GSSConfigAlarmValImpl extends MinimalEObjectImpl.Container implemen
 				setName(NAME_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_ALARM_VAL__TYPE:
-				setType(TYPE_EDEFAULT);
+				unsetType();
 				return;
 			case configPackage.GSS_CONFIG_ALARM_VAL__GV_FILTERED:
 				setGVFiltered((GSSConfigGVFiltered)null);
@@ -344,7 +378,7 @@ public class GSSConfigAlarmValImpl extends MinimalEObjectImpl.Container implemen
 			case configPackage.GSS_CONFIG_ALARM_VAL__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case configPackage.GSS_CONFIG_ALARM_VAL__TYPE:
-				return type != TYPE_EDEFAULT;
+				return isSetType();
 			case configPackage.GSS_CONFIG_ALARM_VAL__GV_FILTERED:
 				return gvFiltered != null;
 			case configPackage.GSS_CONFIG_ALARM_VAL__GV_PERIODIC:
@@ -366,7 +400,7 @@ public class GSSConfigAlarmValImpl extends MinimalEObjectImpl.Container implemen
 		result.append(" (name: ");
 		result.append(name);
 		result.append(", type: ");
-		result.append(type);
+		if (typeESet) result.append(type); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

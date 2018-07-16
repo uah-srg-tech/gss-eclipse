@@ -359,7 +359,7 @@ public class importsPackageImpl extends EPackageImpl implements importsPackage {
 		initEAttribute(getGSSImportVirtualSize_FieldRef(), ecorePackage.getEString(), "FieldRef", null, 1, 1, GSSImportVirtualSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSImportVirtualSize_To(), ecorePackage.getEString(), "to", null, 1, 1, GSSImportVirtualSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSImportVirtualSize_AddSize(), ecorePackage.getEString(), "addSize", null, 0, 1, GSSImportVirtualSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSImportVirtualSize_Unit(), this.getGSSImportUnit(), "unit", null, 0, 1, GSSImportVirtualSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSImportVirtualSize_Unit(), this.getGSSImportUnit(), "unit", null, 0, 1, GSSImportVirtualSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(gssImportUnitEEnum, GSSImportUnit.class, "GSSImportUnit");

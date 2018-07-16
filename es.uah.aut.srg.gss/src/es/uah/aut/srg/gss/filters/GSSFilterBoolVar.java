@@ -99,9 +99,11 @@ public interface GSSFilterBoolVar extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Constant Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.filters.GSSFilterConstantType
+	 * @see #isSetConstantType()
+	 * @see #unsetConstantType()
 	 * @see #setConstantType(GSSFilterConstantType)
 	 * @see es.uah.aut.srg.gss.filters.filtersPackage#getGSSFilterBoolVar_ConstantType()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSFilterConstantType getConstantType();
@@ -112,10 +114,35 @@ public interface GSSFilterBoolVar extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Constant Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.filters.GSSFilterConstantType
+	 * @see #isSetConstantType()
+	 * @see #unsetConstantType()
 	 * @see #getConstantType()
 	 * @generated
 	 */
 	void setConstantType(GSSFilterConstantType value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.filters.GSSFilterBoolVar#getConstantType <em>Constant Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetConstantType()
+	 * @see #getConstantType()
+	 * @see #setConstantType(GSSFilterConstantType)
+	 * @generated
+	 */
+	void unsetConstantType();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.filters.GSSFilterBoolVar#getConstantType <em>Constant Type</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Constant Type</em>' attribute is set.
+	 * @see #unsetConstantType()
+	 * @see #getConstantType()
+	 * @see #setConstantType(GSSFilterConstantType)
+	 * @generated
+	 */
+	boolean isSetConstantType();
 
 	/**
 	 * Returns the value of the '<em><b>Field Ref</b></em>' containment reference.

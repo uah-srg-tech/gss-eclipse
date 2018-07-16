@@ -72,9 +72,11 @@ public interface GSSIfaceUartPort extends GSSIfacePort {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Baud Rate</em>' attribute.
 	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPortBaudRate
+	 * @see #isSetBaudRate()
+	 * @see #unsetBaudRate()
 	 * @see #setBaudRate(GSSIfaceUartPortBaudRate)
 	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartPort_BaudRate()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSIfaceUartPortBaudRate getBaudRate();
@@ -85,10 +87,35 @@ public interface GSSIfaceUartPort extends GSSIfacePort {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Baud Rate</em>' attribute.
 	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPortBaudRate
+	 * @see #isSetBaudRate()
+	 * @see #unsetBaudRate()
 	 * @see #getBaudRate()
 	 * @generated
 	 */
 	void setBaudRate(GSSIfaceUartPortBaudRate value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getBaudRate <em>Baud Rate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetBaudRate()
+	 * @see #getBaudRate()
+	 * @see #setBaudRate(GSSIfaceUartPortBaudRate)
+	 * @generated
+	 */
+	void unsetBaudRate();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getBaudRate <em>Baud Rate</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Baud Rate</em>' attribute is set.
+	 * @see #unsetBaudRate()
+	 * @see #getBaudRate()
+	 * @see #setBaudRate(GSSIfaceUartPortBaudRate)
+	 * @generated
+	 */
+	boolean isSetBaudRate();
 
 	/**
 	 * Returns the value of the '<em><b>Parity</b></em>' attribute.
@@ -101,9 +128,11 @@ public interface GSSIfaceUartPort extends GSSIfacePort {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parity</em>' attribute.
 	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPortParity
+	 * @see #isSetParity()
+	 * @see #unsetParity()
 	 * @see #setParity(GSSIfaceUartPortParity)
 	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartPort_Parity()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSIfaceUartPortParity getParity();
@@ -114,10 +143,35 @@ public interface GSSIfaceUartPort extends GSSIfacePort {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Parity</em>' attribute.
 	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPortParity
+	 * @see #isSetParity()
+	 * @see #unsetParity()
 	 * @see #getParity()
 	 * @generated
 	 */
 	void setParity(GSSIfaceUartPortParity value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getParity <em>Parity</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetParity()
+	 * @see #getParity()
+	 * @see #setParity(GSSIfaceUartPortParity)
+	 * @generated
+	 */
+	void unsetParity();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getParity <em>Parity</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Parity</em>' attribute is set.
+	 * @see #unsetParity()
+	 * @see #getParity()
+	 * @see #setParity(GSSIfaceUartPortParity)
+	 * @generated
+	 */
+	boolean isSetParity();
 
 	/**
 	 * Returns the value of the '<em><b>Data Bits</b></em>' attribute.
@@ -130,9 +184,11 @@ public interface GSSIfaceUartPort extends GSSIfacePort {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Bits</em>' attribute.
 	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPortDataBits
+	 * @see #isSetDataBits()
+	 * @see #unsetDataBits()
 	 * @see #setDataBits(GSSIfaceUartPortDataBits)
 	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartPort_DataBits()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSIfaceUartPortDataBits getDataBits();
@@ -143,10 +199,35 @@ public interface GSSIfaceUartPort extends GSSIfacePort {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Data Bits</em>' attribute.
 	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPortDataBits
+	 * @see #isSetDataBits()
+	 * @see #unsetDataBits()
 	 * @see #getDataBits()
 	 * @generated
 	 */
 	void setDataBits(GSSIfaceUartPortDataBits value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getDataBits <em>Data Bits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetDataBits()
+	 * @see #getDataBits()
+	 * @see #setDataBits(GSSIfaceUartPortDataBits)
+	 * @generated
+	 */
+	void unsetDataBits();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getDataBits <em>Data Bits</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Data Bits</em>' attribute is set.
+	 * @see #unsetDataBits()
+	 * @see #getDataBits()
+	 * @see #setDataBits(GSSIfaceUartPortDataBits)
+	 * @generated
+	 */
+	boolean isSetDataBits();
 
 	/**
 	 * Returns the value of the '<em><b>Stop Bits</b></em>' attribute.
@@ -159,9 +240,11 @@ public interface GSSIfaceUartPort extends GSSIfacePort {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Stop Bits</em>' attribute.
 	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPortStopBits
+	 * @see #isSetStopBits()
+	 * @see #unsetStopBits()
 	 * @see #setStopBits(GSSIfaceUartPortStopBits)
 	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartPort_StopBits()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSIfaceUartPortStopBits getStopBits();
@@ -172,10 +255,35 @@ public interface GSSIfaceUartPort extends GSSIfacePort {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Stop Bits</em>' attribute.
 	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPortStopBits
+	 * @see #isSetStopBits()
+	 * @see #unsetStopBits()
 	 * @see #getStopBits()
 	 * @generated
 	 */
 	void setStopBits(GSSIfaceUartPortStopBits value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getStopBits <em>Stop Bits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetStopBits()
+	 * @see #getStopBits()
+	 * @see #setStopBits(GSSIfaceUartPortStopBits)
+	 * @generated
+	 */
+	void unsetStopBits();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getStopBits <em>Stop Bits</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Stop Bits</em>' attribute is set.
+	 * @see #unsetStopBits()
+	 * @see #getStopBits()
+	 * @see #setStopBits(GSSIfaceUartPortStopBits)
+	 * @generated
+	 */
+	boolean isSetStopBits();
 
 	/**
 	 * Returns the value of the '<em><b>Input Queue Size</b></em>' attribute.

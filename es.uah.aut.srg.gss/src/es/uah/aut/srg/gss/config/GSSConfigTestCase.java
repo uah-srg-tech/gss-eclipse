@@ -67,9 +67,11 @@ public interface GSSConfigTestCase extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Procedure</em>' attribute.
+	 * @see #isSetProcedure()
+	 * @see #unsetProcedure()
 	 * @see #setProcedure(String)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigTestCase_Procedure()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	String getProcedure();
@@ -79,10 +81,35 @@ public interface GSSConfigTestCase extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Procedure</em>' attribute.
+	 * @see #isSetProcedure()
+	 * @see #unsetProcedure()
 	 * @see #getProcedure()
 	 * @generated
 	 */
 	void setProcedure(String value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getProcedure <em>Procedure</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetProcedure()
+	 * @see #getProcedure()
+	 * @see #setProcedure(String)
+	 * @generated
+	 */
+	void unsetProcedure();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getProcedure <em>Procedure</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Procedure</em>' attribute is set.
+	 * @see #unsetProcedure()
+	 * @see #getProcedure()
+	 * @see #setProcedure(String)
+	 * @generated
+	 */
+	boolean isSetProcedure();
 
 	/**
 	 * Returns the value of the '<em><b>Req</b></em>' attribute.
@@ -121,9 +148,11 @@ public interface GSSConfigTestCase extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Req Action</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigReqAction
+	 * @see #isSetReqAction()
+	 * @see #unsetReqAction()
 	 * @see #setReqAction(GSSConfigReqAction)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigTestCase_ReqAction()
-	 * @model
+	 * @model unsettable="true"
 	 * @generated
 	 */
 	GSSConfigReqAction getReqAction();
@@ -134,9 +163,34 @@ public interface GSSConfigTestCase extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Req Action</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigReqAction
+	 * @see #isSetReqAction()
+	 * @see #unsetReqAction()
 	 * @see #getReqAction()
 	 * @generated
 	 */
 	void setReqAction(GSSConfigReqAction value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getReqAction <em>Req Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetReqAction()
+	 * @see #getReqAction()
+	 * @see #setReqAction(GSSConfigReqAction)
+	 * @generated
+	 */
+	void unsetReqAction();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getReqAction <em>Req Action</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Req Action</em>' attribute is set.
+	 * @see #unsetReqAction()
+	 * @see #getReqAction()
+	 * @see #setReqAction(GSSConfigReqAction)
+	 * @generated
+	 */
+	boolean isSetReqAction();
 
 } // GSSConfigTestCase

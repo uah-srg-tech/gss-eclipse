@@ -123,9 +123,11 @@ public interface GSSTestProcInputLevel0 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Delay unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
+	 * @see #isSetDelay_unit()
+	 * @see #unsetDelay_unit()
 	 * @see #setDelay_unit(GSSTestProcUnit)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputLevel0_Delay_unit()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSTestProcUnit getDelay_unit();
@@ -136,10 +138,35 @@ public interface GSSTestProcInputLevel0 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Delay unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
+	 * @see #isSetDelay_unit()
+	 * @see #unsetDelay_unit()
 	 * @see #getDelay_unit()
 	 * @generated
 	 */
 	void setDelay_unit(GSSTestProcUnit value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel0#getDelay_unit <em>Delay unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetDelay_unit()
+	 * @see #getDelay_unit()
+	 * @see #setDelay_unit(GSSTestProcUnit)
+	 * @generated
+	 */
+	void unsetDelay_unit();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel0#getDelay_unit <em>Delay unit</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Delay unit</em>' attribute is set.
+	 * @see #unsetDelay_unit()
+	 * @see #getDelay_unit()
+	 * @see #setDelay_unit(GSSTestProcUnit)
+	 * @generated
+	 */
+	boolean isSetDelay_unit();
 
 	/**
 	 * Returns the value of the '<em><b>Level0</b></em>' containment reference.

@@ -75,9 +75,11 @@ public interface GSSTmTcFormatTmTCFormat extends GSSModelElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormatType
+	 * @see #isSetType()
+	 * @see #unsetType()
 	 * @see #setType(GSSTmTcFormatTmTCFormatType)
 	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTCFormat_Type()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSTmTcFormatTmTCFormatType getType();
@@ -88,10 +90,35 @@ public interface GSSTmTcFormatTmTCFormat extends GSSModelElement {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormatType
+	 * @see #isSetType()
+	 * @see #unsetType()
 	 * @see #getType()
 	 * @generated
 	 */
 	void setType(GSSTmTcFormatTmTCFormatType value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetType()
+	 * @see #getType()
+	 * @see #setType(GSSTmTcFormatTmTCFormatType)
+	 * @generated
+	 */
+	void unsetType();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getType <em>Type</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Type</em>' attribute is set.
+	 * @see #unsetType()
+	 * @see #getType()
+	 * @see #setType(GSSTmTcFormatTmTCFormatType)
+	 * @generated
+	 */
+	boolean isSetType();
 
 	/**
 	 * Returns the value of the '<em><b>CS Formula Field</b></em>' containment reference list.

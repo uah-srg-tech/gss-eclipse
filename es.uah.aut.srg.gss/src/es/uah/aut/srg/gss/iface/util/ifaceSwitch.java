@@ -96,30 +96,16 @@ public class ifaceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ifacePackage.GSS_IFACE_READING_PORT: {
+				GSSIfaceReadingPort gssIfaceReadingPort = (GSSIfaceReadingPort)theEObject;
+				T result = caseGSSIfaceReadingPort(gssIfaceReadingPort);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ifacePackage.GSS_IFACE_UART_PORT: {
 				GSSIfaceUartPort gssIfaceUartPort = (GSSIfaceUartPort)theEObject;
 				T result = caseGSSIfaceUartPort(gssIfaceUartPort);
 				if (result == null) result = caseGSSIfacePort(gssIfaceUartPort);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ifacePackage.GSS_IFACE_SP_WTC_PORT: {
-				GSSIfaceSpWTCPort gssIfaceSpWTCPort = (GSSIfaceSpWTCPort)theEObject;
-				T result = caseGSSIfaceSpWTCPort(gssIfaceSpWTCPort);
-				if (result == null) result = caseGSSIfacePort(gssIfaceSpWTCPort);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ifacePackage.GSS_IFACE_DUMMY_PORT: {
-				GSSIfaceDummyPort gssIfaceDummyPort = (GSSIfaceDummyPort)theEObject;
-				T result = caseGSSIfaceDummyPort(gssIfaceDummyPort);
-				if (result == null) result = caseGSSIfacePort(gssIfaceDummyPort);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ifacePackage.GSS_IFACE_READING_PORT: {
-				GSSIfaceReadingPort gssIfaceReadingPort = (GSSIfaceReadingPort)theEObject;
-				T result = caseGSSIfaceReadingPort(gssIfaceReadingPort);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,6 +136,20 @@ public class ifaceSwitch<T> extends Switch<T> {
 			case ifacePackage.GSS_IFACE_SYNC_PATTERN: {
 				GSSIfaceSyncPattern gssIfaceSyncPattern = (GSSIfaceSyncPattern)theEObject;
 				T result = caseGSSIfaceSyncPattern(gssIfaceSyncPattern);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ifacePackage.GSS_IFACE_SP_WTC_PORT: {
+				GSSIfaceSpWTCPort gssIfaceSpWTCPort = (GSSIfaceSpWTCPort)theEObject;
+				T result = caseGSSIfaceSpWTCPort(gssIfaceSpWTCPort);
+				if (result == null) result = caseGSSIfacePort(gssIfaceSpWTCPort);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ifacePackage.GSS_IFACE_DUMMY_PORT: {
+				GSSIfaceDummyPort gssIfaceDummyPort = (GSSIfaceDummyPort)theEObject;
+				T result = caseGSSIfaceDummyPort(gssIfaceDummyPort);
+				if (result == null) result = caseGSSIfacePort(gssIfaceDummyPort);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -56,6 +56,15 @@ public class GSSFilterFieldOpImpl extends MinimalEObjectImpl.Container implement
 	protected GSSFilterOPType type = TYPE_EDEFAULT;
 
 	/**
+	 * This is true if the Type attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean typeESet;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -91,8 +100,33 @@ public class GSSFilterFieldOpImpl extends MinimalEObjectImpl.Container implement
 	public void setType(GSSFilterOPType newType) {
 		GSSFilterOPType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
+		boolean oldTypeESet = typeESet;
+		typeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_FIELD_OP__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_FIELD_OP__TYPE, oldType, type, !oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetType() {
+		GSSFilterOPType oldType = type;
+		boolean oldTypeESet = typeESet;
+		type = TYPE_EDEFAULT;
+		typeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, filtersPackage.GSS_FILTER_FIELD_OP__TYPE, oldType, TYPE_EDEFAULT, oldTypeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetType() {
+		return typeESet;
 	}
 
 	/**
@@ -133,7 +167,7 @@ public class GSSFilterFieldOpImpl extends MinimalEObjectImpl.Container implement
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case filtersPackage.GSS_FILTER_FIELD_OP__TYPE:
-				setType(TYPE_EDEFAULT);
+				unsetType();
 				return;
 		}
 		super.eUnset(featureID);
@@ -148,7 +182,7 @@ public class GSSFilterFieldOpImpl extends MinimalEObjectImpl.Container implement
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case filtersPackage.GSS_FILTER_FIELD_OP__TYPE:
-				return type != TYPE_EDEFAULT;
+				return isSetType();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -164,7 +198,7 @@ public class GSSFilterFieldOpImpl extends MinimalEObjectImpl.Container implement
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (type: ");
-		result.append(type);
+		if (typeESet) result.append(type); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

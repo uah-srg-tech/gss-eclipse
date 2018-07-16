@@ -44,9 +44,11 @@ public interface GSSIfaceSpWPort extends GSSIfacePort {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSpWPortType
+	 * @see #isSetType()
+	 * @see #unsetType()
 	 * @see #setType(GSSIfaceSpWPortType)
 	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceSpWPort_Type()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSIfaceSpWPortType getType();
@@ -57,10 +59,35 @@ public interface GSSIfaceSpWPort extends GSSIfacePort {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSpWPortType
+	 * @see #isSetType()
+	 * @see #unsetType()
 	 * @see #getType()
 	 * @generated
 	 */
 	void setType(GSSIfaceSpWPortType value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceSpWPort#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetType()
+	 * @see #getType()
+	 * @see #setType(GSSIfaceSpWPortType)
+	 * @generated
+	 */
+	void unsetType();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceSpWPort#getType <em>Type</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Type</em>' attribute is set.
+	 * @see #unsetType()
+	 * @see #getType()
+	 * @see #setType(GSSIfaceSpWPortType)
+	 * @generated
+	 */
+	boolean isSetType();
 
 	/**
 	 * Returns the value of the '<em><b>Link</b></em>' attribute.

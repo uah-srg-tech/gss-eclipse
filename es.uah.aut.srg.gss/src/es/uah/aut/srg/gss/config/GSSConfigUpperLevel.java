@@ -43,9 +43,11 @@ public interface GSSConfigUpperLevel extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigUpperLevelLevel
+	 * @see #isSetLevel()
+	 * @see #unsetLevel()
 	 * @see #setLevel(GSSConfigUpperLevelLevel)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigUpperLevel_Level()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigUpperLevelLevel getLevel();
@@ -56,10 +58,35 @@ public interface GSSConfigUpperLevel extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Level</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigUpperLevelLevel
+	 * @see #isSetLevel()
+	 * @see #unsetLevel()
 	 * @see #getLevel()
 	 * @generated
 	 */
 	void setLevel(GSSConfigUpperLevelLevel value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getLevel <em>Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetLevel()
+	 * @see #getLevel()
+	 * @see #setLevel(GSSConfigUpperLevelLevel)
+	 * @generated
+	 */
+	void unsetLevel();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getLevel <em>Level</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Level</em>' attribute is set.
+	 * @see #unsetLevel()
+	 * @see #getLevel()
+	 * @see #setLevel(GSSConfigUpperLevelLevel)
+	 * @generated
+	 */
+	boolean isSetLevel();
 
 	/**
 	 * Returns the value of the '<em><b>TMformat</b></em>' containment reference.

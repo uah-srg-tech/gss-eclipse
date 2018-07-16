@@ -19,12 +19,17 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="sizeInBits" upperBound="-1"
         eType="#//GSSExportSizeInBits" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSExportUnit">
+    <eLiterals name="bits"/>
+    <eLiterals name="bytes" value="1"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSExportSizeFromFileLength">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromFile" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="addSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//GSSExportUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//GSSExportUnit"
+        unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="settingFromConst" upperBound="-1"
         eType="#//GSSExportSettingFromConst"/>
   </eClassifiers>
@@ -34,17 +39,15 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="line" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="addSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//GSSExportUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//GSSExportUnit"
+        unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSExportSizeInBits">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="addSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//GSSExportUnit"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="GSSExportUnit">
-    <eLiterals name="bits"/>
-    <eLiterals name="bytes" value="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//GSSExportUnit"
+        unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSExportSettings">
     <eStructuralFeatures xsi:type="ecore:EReference" name="settingFromConst" upperBound="-1"

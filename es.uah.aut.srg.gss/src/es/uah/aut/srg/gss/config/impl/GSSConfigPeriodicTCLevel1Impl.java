@@ -150,6 +150,15 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 	protected GSSConfigUnit period_unit = PERIOD_UNIT_EDEFAULT;
 
 	/**
+	 * This is true if the Period unit attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean period_unitESet;
+
+	/**
 	 * The cached value of the '{@link #getLevel1() <em>Level1</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -309,8 +318,33 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 	public void setPeriod_unit(GSSConfigUnit newPeriod_unit) {
 		GSSConfigUnit oldPeriod_unit = period_unit;
 		period_unit = newPeriod_unit == null ? PERIOD_UNIT_EDEFAULT : newPeriod_unit;
+		boolean oldPeriod_unitESet = period_unitESet;
+		period_unitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_UNIT, oldPeriod_unit, period_unit));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_UNIT, oldPeriod_unit, period_unit, !oldPeriod_unitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetPeriod_unit() {
+		GSSConfigUnit oldPeriod_unit = period_unit;
+		boolean oldPeriod_unitESet = period_unitESet;
+		period_unit = PERIOD_UNIT_EDEFAULT;
+		period_unitESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_UNIT, oldPeriod_unit, PERIOD_UNIT_EDEFAULT, oldPeriod_unitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetPeriod_unit() {
+		return period_unitESet;
 	}
 
 	/**
@@ -595,7 +629,7 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 				setPeriod_value(PERIOD_VALUE_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_UNIT:
-				setPeriod_unit(PERIOD_UNIT_EDEFAULT);
+				unsetPeriod_unit();
 				return;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1:
 				setLevel1((GSSConfigLevel1)null);
@@ -630,7 +664,7 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_VALUE:
 				return PERIOD_VALUE_EDEFAULT == null ? period_value != null : !PERIOD_VALUE_EDEFAULT.equals(period_value);
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_UNIT:
-				return period_unit != PERIOD_UNIT_EDEFAULT;
+				return isSetPeriod_unit();
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1:
 				return level1 != null;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1:
@@ -662,7 +696,7 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 		result.append(", period_value: ");
 		result.append(period_value);
 		result.append(", period_unit: ");
-		result.append(period_unit);
+		if (period_unitESet) result.append(period_unit); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

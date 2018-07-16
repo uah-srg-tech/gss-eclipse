@@ -43,9 +43,11 @@ public interface GSSConfigGSSDiscardErrorFlags extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tx Errors</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetTxErrors()
+	 * @see #unsetTxErrors()
 	 * @see #setTxErrors(GSSConfigEnableDisable)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigGSSDiscardErrorFlags_TxErrors()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigEnableDisable getTxErrors();
@@ -56,10 +58,35 @@ public interface GSSConfigGSSDiscardErrorFlags extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tx Errors</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetTxErrors()
+	 * @see #unsetTxErrors()
 	 * @see #getTxErrors()
 	 * @generated
 	 */
 	void setTxErrors(GSSConfigEnableDisable value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSDiscardErrorFlags#getTxErrors <em>Tx Errors</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetTxErrors()
+	 * @see #getTxErrors()
+	 * @see #setTxErrors(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	void unsetTxErrors();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSDiscardErrorFlags#getTxErrors <em>Tx Errors</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Tx Errors</em>' attribute is set.
+	 * @see #unsetTxErrors()
+	 * @see #getTxErrors()
+	 * @see #setTxErrors(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	boolean isSetTxErrors();
 
 	/**
 	 * Returns the value of the '<em><b>Not Expected Packets</b></em>' attribute.
@@ -72,9 +99,11 @@ public interface GSSConfigGSSDiscardErrorFlags extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Not Expected Packets</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetNotExpectedPackets()
+	 * @see #unsetNotExpectedPackets()
 	 * @see #setNotExpectedPackets(GSSConfigEnableDisable)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigGSSDiscardErrorFlags_NotExpectedPackets()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigEnableDisable getNotExpectedPackets();
@@ -85,10 +114,35 @@ public interface GSSConfigGSSDiscardErrorFlags extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Not Expected Packets</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetNotExpectedPackets()
+	 * @see #unsetNotExpectedPackets()
 	 * @see #getNotExpectedPackets()
 	 * @generated
 	 */
 	void setNotExpectedPackets(GSSConfigEnableDisable value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSDiscardErrorFlags#getNotExpectedPackets <em>Not Expected Packets</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetNotExpectedPackets()
+	 * @see #getNotExpectedPackets()
+	 * @see #setNotExpectedPackets(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	void unsetNotExpectedPackets();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSDiscardErrorFlags#getNotExpectedPackets <em>Not Expected Packets</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Not Expected Packets</em>' attribute is set.
+	 * @see #unsetNotExpectedPackets()
+	 * @see #getNotExpectedPackets()
+	 * @see #setNotExpectedPackets(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	boolean isSetNotExpectedPackets();
 
 	/**
 	 * Returns the value of the '<em><b>Filters Ko</b></em>' attribute.
@@ -101,9 +155,11 @@ public interface GSSConfigGSSDiscardErrorFlags extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Filters Ko</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetFiltersKo()
+	 * @see #unsetFiltersKo()
 	 * @see #setFiltersKo(GSSConfigEnableDisable)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigGSSDiscardErrorFlags_FiltersKo()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigEnableDisable getFiltersKo();
@@ -114,10 +170,35 @@ public interface GSSConfigGSSDiscardErrorFlags extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Filters Ko</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetFiltersKo()
+	 * @see #unsetFiltersKo()
 	 * @see #getFiltersKo()
 	 * @generated
 	 */
 	void setFiltersKo(GSSConfigEnableDisable value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSDiscardErrorFlags#getFiltersKo <em>Filters Ko</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetFiltersKo()
+	 * @see #getFiltersKo()
+	 * @see #setFiltersKo(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	void unsetFiltersKo();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSDiscardErrorFlags#getFiltersKo <em>Filters Ko</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Filters Ko</em>' attribute is set.
+	 * @see #unsetFiltersKo()
+	 * @see #getFiltersKo()
+	 * @see #setFiltersKo(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	boolean isSetFiltersKo();
 
 	/**
 	 * Returns the value of the '<em><b>Valid Times Ko</b></em>' attribute.
@@ -130,9 +211,11 @@ public interface GSSConfigGSSDiscardErrorFlags extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Valid Times Ko</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetValidTimesKo()
+	 * @see #unsetValidTimesKo()
 	 * @see #setValidTimesKo(GSSConfigEnableDisable)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigGSSDiscardErrorFlags_ValidTimesKo()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigEnableDisable getValidTimesKo();
@@ -143,9 +226,34 @@ public interface GSSConfigGSSDiscardErrorFlags extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Valid Times Ko</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
+	 * @see #isSetValidTimesKo()
+	 * @see #unsetValidTimesKo()
 	 * @see #getValidTimesKo()
 	 * @generated
 	 */
 	void setValidTimesKo(GSSConfigEnableDisable value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSDiscardErrorFlags#getValidTimesKo <em>Valid Times Ko</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetValidTimesKo()
+	 * @see #getValidTimesKo()
+	 * @see #setValidTimesKo(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	void unsetValidTimesKo();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSDiscardErrorFlags#getValidTimesKo <em>Valid Times Ko</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Valid Times Ko</em>' attribute is set.
+	 * @see #unsetValidTimesKo()
+	 * @see #getValidTimesKo()
+	 * @see #setValidTimesKo(GSSConfigEnableDisable)
+	 * @generated
+	 */
+	boolean isSetValidTimesKo();
 
 } // GSSConfigGSSDiscardErrorFlags

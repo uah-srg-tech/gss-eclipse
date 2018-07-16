@@ -154,9 +154,11 @@ public interface GSSConfigPeriodicTCLevel2 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Period unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigUnit
+	 * @see #isSetPeriod_unit()
+	 * @see #unsetPeriod_unit()
 	 * @see #setPeriod_unit(GSSConfigUnit)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigPeriodicTCLevel2_Period_unit()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigUnit getPeriod_unit();
@@ -167,10 +169,35 @@ public interface GSSConfigPeriodicTCLevel2 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Period unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigUnit
+	 * @see #isSetPeriod_unit()
+	 * @see #unsetPeriod_unit()
 	 * @see #getPeriod_unit()
 	 * @generated
 	 */
 	void setPeriod_unit(GSSConfigUnit value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getPeriod_unit <em>Period unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetPeriod_unit()
+	 * @see #getPeriod_unit()
+	 * @see #setPeriod_unit(GSSConfigUnit)
+	 * @generated
+	 */
+	void unsetPeriod_unit();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getPeriod_unit <em>Period unit</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Period unit</em>' attribute is set.
+	 * @see #unsetPeriod_unit()
+	 * @see #getPeriod_unit()
+	 * @see #setPeriod_unit(GSSConfigUnit)
+	 * @generated
+	 */
+	boolean isSetPeriod_unit();
 
 	/**
 	 * Returns the value of the '<em><b>Level2</b></em>' containment reference.

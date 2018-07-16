@@ -59,6 +59,15 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	protected GSSConfigEnableDisable mainLog = MAIN_LOG_EDEFAULT;
 
 	/**
+	 * This is true if the Main Log attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean mainLogESet;
+
+	/**
 	 * The default value of the '{@link #getPortLogs() <em>Port Logs</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -77,6 +86,15 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected GSSConfigEnableDisable portLogs = PORT_LOGS_EDEFAULT;
+
+	/**
+	 * This is true if the Port Logs attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean portLogsESet;
 
 	/**
 	 * The default value of the '{@link #getDebugLog() <em>Debug Log</em>}' attribute.
@@ -99,6 +117,15 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	protected GSSConfigEnableDisable debugLog = DEBUG_LOG_EDEFAULT;
 
 	/**
+	 * This is true if the Debug Log attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean debugLogESet;
+
+	/**
 	 * The default value of the '{@link #getGssTabs() <em>Gss Tabs</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -117,6 +144,15 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected GSSConfigEnableDisable gssTabs = GSS_TABS_EDEFAULT;
+
+	/**
+	 * This is true if the Gss Tabs attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean gssTabsESet;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,8 +190,33 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	public void setMainLog(GSSConfigEnableDisable newMainLog) {
 		GSSConfigEnableDisable oldMainLog = mainLog;
 		mainLog = newMainLog == null ? MAIN_LOG_EDEFAULT : newMainLog;
+		boolean oldMainLogESet = mainLogESet;
+		mainLogESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__MAIN_LOG, oldMainLog, mainLog));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__MAIN_LOG, oldMainLog, mainLog, !oldMainLogESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetMainLog() {
+		GSSConfigEnableDisable oldMainLog = mainLog;
+		boolean oldMainLogESet = mainLogESet;
+		mainLog = MAIN_LOG_EDEFAULT;
+		mainLogESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__MAIN_LOG, oldMainLog, MAIN_LOG_EDEFAULT, oldMainLogESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetMainLog() {
+		return mainLogESet;
 	}
 
 	/**
@@ -175,8 +236,33 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	public void setPortLogs(GSSConfigEnableDisable newPortLogs) {
 		GSSConfigEnableDisable oldPortLogs = portLogs;
 		portLogs = newPortLogs == null ? PORT_LOGS_EDEFAULT : newPortLogs;
+		boolean oldPortLogsESet = portLogsESet;
+		portLogsESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS, oldPortLogs, portLogs));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS, oldPortLogs, portLogs, !oldPortLogsESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetPortLogs() {
+		GSSConfigEnableDisable oldPortLogs = portLogs;
+		boolean oldPortLogsESet = portLogsESet;
+		portLogs = PORT_LOGS_EDEFAULT;
+		portLogsESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS, oldPortLogs, PORT_LOGS_EDEFAULT, oldPortLogsESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetPortLogs() {
+		return portLogsESet;
 	}
 
 	/**
@@ -196,8 +282,33 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	public void setDebugLog(GSSConfigEnableDisable newDebugLog) {
 		GSSConfigEnableDisable oldDebugLog = debugLog;
 		debugLog = newDebugLog == null ? DEBUG_LOG_EDEFAULT : newDebugLog;
+		boolean oldDebugLogESet = debugLogESet;
+		debugLogESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG, oldDebugLog, debugLog));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG, oldDebugLog, debugLog, !oldDebugLogESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetDebugLog() {
+		GSSConfigEnableDisable oldDebugLog = debugLog;
+		boolean oldDebugLogESet = debugLogESet;
+		debugLog = DEBUG_LOG_EDEFAULT;
+		debugLogESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG, oldDebugLog, DEBUG_LOG_EDEFAULT, oldDebugLogESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetDebugLog() {
+		return debugLogESet;
 	}
 
 	/**
@@ -217,8 +328,33 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	public void setGssTabs(GSSConfigEnableDisable newGssTabs) {
 		GSSConfigEnableDisable oldGssTabs = gssTabs;
 		gssTabs = newGssTabs == null ? GSS_TABS_EDEFAULT : newGssTabs;
+		boolean oldGssTabsESet = gssTabsESet;
+		gssTabsESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__GSS_TABS, oldGssTabs, gssTabs));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__GSS_TABS, oldGssTabs, gssTabs, !oldGssTabsESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetGssTabs() {
+		GSSConfigEnableDisable oldGssTabs = gssTabs;
+		boolean oldGssTabsESet = gssTabsESet;
+		gssTabs = GSS_TABS_EDEFAULT;
+		gssTabsESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__GSS_TABS, oldGssTabs, GSS_TABS_EDEFAULT, oldGssTabsESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetGssTabs() {
+		return gssTabsESet;
 	}
 
 	/**
@@ -274,16 +410,16 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__MAIN_LOG:
-				setMainLog(MAIN_LOG_EDEFAULT);
+				unsetMainLog();
 				return;
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS:
-				setPortLogs(PORT_LOGS_EDEFAULT);
+				unsetPortLogs();
 				return;
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG:
-				setDebugLog(DEBUG_LOG_EDEFAULT);
+				unsetDebugLog();
 				return;
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__GSS_TABS:
-				setGssTabs(GSS_TABS_EDEFAULT);
+				unsetGssTabs();
 				return;
 		}
 		super.eUnset(featureID);
@@ -298,13 +434,13 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__MAIN_LOG:
-				return mainLog != MAIN_LOG_EDEFAULT;
+				return isSetMainLog();
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS:
-				return portLogs != PORT_LOGS_EDEFAULT;
+				return isSetPortLogs();
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG:
-				return debugLog != DEBUG_LOG_EDEFAULT;
+				return isSetDebugLog();
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__GSS_TABS:
-				return gssTabs != GSS_TABS_EDEFAULT;
+				return isSetGssTabs();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -320,13 +456,13 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (mainLog: ");
-		result.append(mainLog);
+		if (mainLogESet) result.append(mainLog); else result.append("<unset>");
 		result.append(", portLogs: ");
-		result.append(portLogs);
+		if (portLogsESet) result.append(portLogs); else result.append("<unset>");
 		result.append(", debugLog: ");
-		result.append(debugLog);
+		if (debugLogESet) result.append(debugLog); else result.append("<unset>");
 		result.append(", gssTabs: ");
-		result.append(gssTabs);
+		if (gssTabsESet) result.append(gssTabs); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

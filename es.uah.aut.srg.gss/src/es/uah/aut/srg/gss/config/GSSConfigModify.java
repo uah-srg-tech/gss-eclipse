@@ -70,9 +70,11 @@ public interface GSSConfigModify extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigModifyType
+	 * @see #isSetType()
+	 * @see #unsetType()
 	 * @see #setType(GSSConfigModifyType)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigModify_Type()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigModifyType getType();
@@ -83,10 +85,35 @@ public interface GSSConfigModify extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigModifyType
+	 * @see #isSetType()
+	 * @see #unsetType()
 	 * @see #getType()
 	 * @generated
 	 */
 	void setType(GSSConfigModifyType value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigModify#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetType()
+	 * @see #getType()
+	 * @see #setType(GSSConfigModifyType)
+	 * @generated
+	 */
+	void unsetType();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigModify#getType <em>Type</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Type</em>' attribute is set.
+	 * @see #unsetType()
+	 * @see #getType()
+	 * @see #setType(GSSConfigModifyType)
+	 * @generated
+	 */
+	boolean isSetType();
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
