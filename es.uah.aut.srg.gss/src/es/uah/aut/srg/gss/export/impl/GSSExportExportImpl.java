@@ -17,11 +17,13 @@ import es.uah.aut.srg.gss.export.GSSExportExport;
 import es.uah.aut.srg.gss.export.GSSExportSettings;
 import es.uah.aut.srg.gss.export.GSSExportSizes;
 import es.uah.aut.srg.gss.export.exportPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -347,7 +349,6 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

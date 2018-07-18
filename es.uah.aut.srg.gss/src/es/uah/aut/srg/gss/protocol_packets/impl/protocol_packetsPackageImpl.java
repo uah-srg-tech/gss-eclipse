@@ -1,18 +1,11 @@
 /**
- * Copyright (c) 2018 UAH Space Research Group.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v2.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v20.html
- * 
- * Contributors:
- *     SRG Team - Initial API and implementation
  */
 package es.uah.aut.srg.gss.protocol_packets.impl;
 
 import es.uah.aut.srg.gss.common.commonPackage;
 
-import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsExport;
+import es.uah.aut.srg.gss.export.exportPackage;
+
 import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsFormat;
 import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket;
 import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPackets;
@@ -46,13 +39,6 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 	 * @generated
 	 */
 	private EClass gssProtocolPacketsProtocolPacketEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssProtocolPacketsExportEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -108,7 +94,7 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 		isInited = true;
 
 		// Initialize simple dependencies
-		commonPackage.eINSTANCE.eClass();
+		exportPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theprotocol_packetsPackage.createPackageContents();
@@ -202,24 +188,6 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGSSProtocolPacketsExport() {
-		return gssProtocolPacketsExportEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSProtocolPacketsExport_File() {
-		return (EAttribute)gssProtocolPacketsExportEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getGSSProtocolPacketsFormat() {
 		return gssProtocolPacketsFormatEClass;
 	}
@@ -271,9 +239,6 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 		createEReference(gssProtocolPacketsProtocolPacketEClass, GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT);
 		createEReference(gssProtocolPacketsProtocolPacketEClass, GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT);
 
-		gssProtocolPacketsExportEClass = createEClass(GSS_PROTOCOL_PACKETS_EXPORT);
-		createEAttribute(gssProtocolPacketsExportEClass, GSS_PROTOCOL_PACKETS_EXPORT__FILE);
-
 		gssProtocolPacketsFormatEClass = createEClass(GSS_PROTOCOL_PACKETS_FORMAT);
 		createEAttribute(gssProtocolPacketsFormatEClass, GSS_PROTOCOL_PACKETS_FORMAT__FILE);
 	}
@@ -303,6 +268,7 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 
 		// Obtain other dependent packages
 		commonPackage thecommonPackage = (commonPackage)EPackage.Registry.INSTANCE.getEPackage(commonPackage.eNS_URI);
+		exportPackage theexportPackage = (exportPackage)EPackage.Registry.INSTANCE.getEPackage(exportPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -319,11 +285,8 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 		initEAttribute(getGSSProtocolPacketsProtocolPacket_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSProtocolPacketsProtocolPacket_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSProtocolPacketsProtocolPacket_LevelRef(), ecorePackage.getEString(), "levelRef", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSProtocolPacketsProtocolPacket_Export(), this.getGSSProtocolPacketsExport(), null, "export", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSProtocolPacketsProtocolPacket_Export(), theexportPackage.getGSSExportExport(), null, "export", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSProtocolPacketsProtocolPacket_Format(), this.getGSSProtocolPacketsFormat(), null, "format", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssProtocolPacketsExportEClass, GSSProtocolPacketsExport.class, "GSSProtocolPacketsExport", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSProtocolPacketsExport_File(), ecorePackage.getEString(), "file", null, 1, 1, GSSProtocolPacketsExport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssProtocolPacketsFormatEClass, GSSProtocolPacketsFormat.class, "GSSProtocolPacketsFormat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSProtocolPacketsFormat_File(), ecorePackage.getEString(), "file", null, 1, 1, GSSProtocolPacketsFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

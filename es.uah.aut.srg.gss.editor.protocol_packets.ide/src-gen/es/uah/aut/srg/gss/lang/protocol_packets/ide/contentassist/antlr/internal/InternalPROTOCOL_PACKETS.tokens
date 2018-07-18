@@ -1,11 +1,10 @@
-'('=28
-')'=29
-'-'=30
-'.'=27
+'('=27
+')'=28
+'-'=29
+'.'=26
 ':='=13
 ';'=14
-'GSSProtocolPacketsExport'=24
-'GSSProtocolPacketsFormat'=26
+'GSSProtocolPacketsFormat'=24
 'GSSProtocolPacketsProtocolPacket'=20
 'GSSProtocolPacketsProtocolPackets'=15
 'file'=25
@@ -19,11 +18,11 @@
 '}'=17
 RULE_ANY_OTHER=11
 RULE_HEXADECIMAL=7
-RULE_ID=5
+RULE_ID=4
 RULE_INT=6
 RULE_ML_COMMENT=8
 RULE_SL_COMMENT=9
-RULE_STRING=4
+RULE_STRING=5
 RULE_WS=10
 T__12=12
 T__13=13
@@ -43,4 +42,3 @@ T__26=26
 T__27=27
 T__28=28
 T__29=29
-T__30=30

@@ -1,16 +1,9 @@
 /**
- * Copyright (c) 2018 UAH Space Research Group.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v2.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v20.html
- * 
- * Contributors:
- *     SRG Team - Initial API and implementation
  */
 package es.uah.aut.srg.gss.protocol_packets.impl;
 
-import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsExport;
+import es.uah.aut.srg.gss.export.GSSExportExport;
+
 import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsFormat;
 import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket;
 import es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage;
@@ -103,14 +96,14 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	protected String levelRef = LEVEL_REF_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getExport() <em>Export</em>}' containment reference.
+	 * The cached value of the '{@link #getExport() <em>Export</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExport()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSProtocolPacketsExport export;
+	protected GSSExportExport export;
 
 	/**
 	 * The cached value of the '{@link #getFormat() <em>Format</em>}' containment reference.
@@ -209,7 +202,15 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSProtocolPacketsExport getExport() {
+	public GSSExportExport getExport() {
+		if (export != null && export.eIsProxy()) {
+			InternalEObject oldExport = (InternalEObject)export;
+			export = (GSSExportExport)eResolveProxy(oldExport);
+			if (export != oldExport) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT, oldExport, export));
+			}
+		}
 		return export;
 	}
 
@@ -218,14 +219,8 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetExport(GSSProtocolPacketsExport newExport, NotificationChain msgs) {
-		GSSProtocolPacketsExport oldExport = export;
-		export = newExport;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT, oldExport, newExport);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public GSSExportExport basicGetExport() {
+		return export;
 	}
 
 	/**
@@ -233,18 +228,11 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExport(GSSProtocolPacketsExport newExport) {
-		if (newExport != export) {
-			NotificationChain msgs = null;
-			if (export != null)
-				msgs = ((InternalEObject)export).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT, null, msgs);
-			if (newExport != null)
-				msgs = ((InternalEObject)newExport).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT, null, msgs);
-			msgs = basicSetExport(newExport, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT, newExport, newExport));
+	public void setExport(GSSExportExport newExport) {
+		GSSExportExport oldExport = export;
+		export = newExport;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT, oldExport, export));
 	}
 
 	/**
@@ -298,8 +286,6 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT:
-				return basicSetExport(null, msgs);
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT:
 				return basicSetFormat(null, msgs);
 		}
@@ -321,7 +307,8 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__LEVEL_REF:
 				return getLevelRef();
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT:
-				return getExport();
+				if (resolve) return getExport();
+				return basicGetExport();
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT:
 				return getFormat();
 		}
@@ -346,7 +333,7 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 				setLevelRef((String)newValue);
 				return;
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT:
-				setExport((GSSProtocolPacketsExport)newValue);
+				setExport((GSSExportExport)newValue);
 				return;
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT:
 				setFormat((GSSProtocolPacketsFormat)newValue);
@@ -373,7 +360,7 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 				setLevelRef(LEVEL_REF_EDEFAULT);
 				return;
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT:
-				setExport((GSSProtocolPacketsExport)null);
+				setExport((GSSExportExport)null);
 				return;
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT:
 				setFormat((GSSProtocolPacketsFormat)null);

@@ -15,6 +15,7 @@ import com.google.inject.Singleton;
 import java.util.List;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
+import org.eclipse.xtext.CrossReference;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
 import org.eclipse.xtext.Group;
@@ -210,24 +211,27 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		private final RuleCall cLevelRefINTEGERParserRuleCall_12_0 = (RuleCall)cLevelRefAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Assignment cExportAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final RuleCall cExportGSSProtocolPacketsExportParserRuleCall_14_0 = (RuleCall)cExportAssignment_14.eContents().get(0);
-		private final Assignment cFormatAssignment_15 = (Assignment)cGroup.eContents().get(15);
-		private final RuleCall cFormatGSSProtocolPacketsFormatParserRuleCall_15_0 = (RuleCall)cFormatAssignment_15.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
-		private final Keyword cSemicolonKeyword_17 = (Keyword)cGroup.eContents().get(17);
+		private final CrossReference cExportGSSExportExportCrossReference_14_0 = (CrossReference)cExportAssignment_14.eContents().get(0);
+		private final RuleCall cExportGSSExportExportVersionedQualifiedNameParserRuleCall_14_0_1 = (RuleCall)cExportGSSExportExportCrossReference_14_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Assignment cFormatAssignment_16 = (Assignment)cGroup.eContents().get(16);
+		private final RuleCall cFormatGSSProtocolPacketsFormatParserRuleCall_16_0 = (RuleCall)cFormatAssignment_16.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_17 = (Keyword)cGroup.eContents().get(17);
+		private final Keyword cSemicolonKeyword_18 = (Keyword)cGroup.eContents().get(18);
 		
 		//GSSProtocolPacketsProtocolPacket:
 		//	'GSSProtocolPacketsProtocolPacket' '{'
 		//	'name' ':=' name=ID ';'
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'levelRef' ':=' levelRef=INTEGER ';'
-		//	export=GSSProtocolPacketsExport
+		//	export=[export::GSSExportExport|VersionedQualifiedName] ';'
 		//	format=GSSProtocolPacketsFormat
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSProtocolPacketsProtocolPacket' '{' 'name' ':=' name=ID ';' 'ifRef' ':=' ifRef=INTEGER ';' 'levelRef' ':='
-		//levelRef=INTEGER ';' export=GSSProtocolPacketsExport format=GSSProtocolPacketsFormat '}' ';'
+		//levelRef=INTEGER ';' export=[export::GSSExportExport|VersionedQualifiedName] ';' format=GSSProtocolPacketsFormat '}'
+		//';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSProtocolPacketsProtocolPacket'
@@ -281,72 +285,29 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
 		
-		//export=GSSProtocolPacketsExport
+		//export=[export::GSSExportExport|VersionedQualifiedName]
 		public Assignment getExportAssignment_14() { return cExportAssignment_14; }
 		
-		//GSSProtocolPacketsExport
-		public RuleCall getExportGSSProtocolPacketsExportParserRuleCall_14_0() { return cExportGSSProtocolPacketsExportParserRuleCall_14_0; }
+		//[export::GSSExportExport|VersionedQualifiedName]
+		public CrossReference getExportGSSExportExportCrossReference_14_0() { return cExportGSSExportExportCrossReference_14_0; }
+		
+		//VersionedQualifiedName
+		public RuleCall getExportGSSExportExportVersionedQualifiedNameParserRuleCall_14_0_1() { return cExportGSSExportExportVersionedQualifiedNameParserRuleCall_14_0_1; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_15() { return cSemicolonKeyword_15; }
 		
 		//format=GSSProtocolPacketsFormat
-		public Assignment getFormatAssignment_15() { return cFormatAssignment_15; }
+		public Assignment getFormatAssignment_16() { return cFormatAssignment_16; }
 		
 		//GSSProtocolPacketsFormat
-		public RuleCall getFormatGSSProtocolPacketsFormatParserRuleCall_15_0() { return cFormatGSSProtocolPacketsFormatParserRuleCall_15_0; }
+		public RuleCall getFormatGSSProtocolPacketsFormatParserRuleCall_16_0() { return cFormatGSSProtocolPacketsFormatParserRuleCall_16_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_16() { return cRightCurlyBracketKeyword_16; }
+		public Keyword getRightCurlyBracketKeyword_17() { return cRightCurlyBracketKeyword_17; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_17() { return cSemicolonKeyword_17; }
-	}
-	public class GSSProtocolPacketsExportElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.protocol_packets.PROTOCOL_PACKETS.GSSProtocolPacketsExport");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cGSSProtocolPacketsExportKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cFileKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cFileAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFileIDTerminalRuleCall_4_0 = (RuleCall)cFileAssignment_4.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		
-		//GSSProtocolPacketsExport:
-		//	'GSSProtocolPacketsExport' '{'
-		//	'file' ':=' file=ID ';'
-		//	'}' ';';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'GSSProtocolPacketsExport' '{' 'file' ':=' file=ID ';' '}' ';'
-		public Group getGroup() { return cGroup; }
-		
-		//'GSSProtocolPacketsExport'
-		public Keyword getGSSProtocolPacketsExportKeyword_0() { return cGSSProtocolPacketsExportKeyword_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
-		
-		//'file'
-		public Keyword getFileKeyword_2() { return cFileKeyword_2; }
-		
-		//':='
-		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
-		
-		//file=ID
-		public Assignment getFileAssignment_4() { return cFileAssignment_4; }
-		
-		//ID
-		public RuleCall getFileIDTerminalRuleCall_4_0() { return cFileIDTerminalRuleCall_4_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_7() { return cSemicolonKeyword_7; }
+		public Keyword getSemicolonKeyword_18() { return cSemicolonKeyword_18; }
 	}
 	public class GSSProtocolPacketsFormatElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.protocol_packets.PROTOCOL_PACKETS.GSSProtocolPacketsFormat");
@@ -356,18 +317,18 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		private final Keyword cFileKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cFileAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFileIDTerminalRuleCall_4_0 = (RuleCall)cFileAssignment_4.eContents().get(0);
+		private final RuleCall cFileXMLREFParserRuleCall_4_0 = (RuleCall)cFileAssignment_4.eContents().get(0);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//GSSProtocolPacketsFormat:
 		//	'GSSProtocolPacketsFormat' '{'
-		//	'file' ':=' file=ID ';'
+		//	'file' ':=' file=XMLREF ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSProtocolPacketsFormat' '{' 'file' ':=' file=ID ';' '}' ';'
+		//'GSSProtocolPacketsFormat' '{' 'file' ':=' file=XMLREF ';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSProtocolPacketsFormat'
@@ -382,11 +343,11 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		//':='
 		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
 		
-		//file=ID
+		//file=XMLREF
 		public Assignment getFileAssignment_4() { return cFileAssignment_4; }
 		
-		//ID
-		public RuleCall getFileIDTerminalRuleCall_4_0() { return cFileIDTerminalRuleCall_4_0; }
+		//XMLREF
+		public RuleCall getFileXMLREFParserRuleCall_4_0() { return cFileXMLREFParserRuleCall_4_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
@@ -682,7 +643,6 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 	private final GSSModelFileImportElements pGSSModelFileImport;
 	private final GSSProtocolPacketsProtocolPacketsElements pGSSProtocolPacketsProtocolPackets;
 	private final GSSProtocolPacketsProtocolPacketElements pGSSProtocolPacketsProtocolPacket;
-	private final GSSProtocolPacketsExportElements pGSSProtocolPacketsExport;
 	private final GSSProtocolPacketsFormatElements pGSSProtocolPacketsFormat;
 	private final EStringElements pEString;
 	private final QualifiedNameElements pQualifiedName;
@@ -708,7 +668,6 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		this.pGSSModelFileImport = new GSSModelFileImportElements();
 		this.pGSSProtocolPacketsProtocolPackets = new GSSProtocolPacketsProtocolPacketsElements();
 		this.pGSSProtocolPacketsProtocolPacket = new GSSProtocolPacketsProtocolPacketElements();
-		this.pGSSProtocolPacketsExport = new GSSProtocolPacketsExportElements();
 		this.pGSSProtocolPacketsFormat = new GSSProtocolPacketsFormatElements();
 		this.pEString = new EStringElements();
 		this.pQualifiedName = new QualifiedNameElements();
@@ -789,7 +748,7 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 	//	'name' ':=' name=ID ';'
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'levelRef' ':=' levelRef=INTEGER ';'
-	//	export=GSSProtocolPacketsExport
+	//	export=[export::GSSExportExport|VersionedQualifiedName] ';'
 	//	format=GSSProtocolPacketsFormat
 	//	'}' ';';
 	public GSSProtocolPacketsProtocolPacketElements getGSSProtocolPacketsProtocolPacketAccess() {
@@ -800,21 +759,9 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		return getGSSProtocolPacketsProtocolPacketAccess().getRule();
 	}
 	
-	//GSSProtocolPacketsExport:
-	//	'GSSProtocolPacketsExport' '{'
-	//	'file' ':=' file=ID ';'
-	//	'}' ';';
-	public GSSProtocolPacketsExportElements getGSSProtocolPacketsExportAccess() {
-		return pGSSProtocolPacketsExport;
-	}
-	
-	public ParserRule getGSSProtocolPacketsExportRule() {
-		return getGSSProtocolPacketsExportAccess().getRule();
-	}
-	
 	//GSSProtocolPacketsFormat:
 	//	'GSSProtocolPacketsFormat' '{'
-	//	'file' ':=' file=ID ';'
+	//	'file' ':=' file=XMLREF ';'
 	//	'}' ';';
 	public GSSProtocolPacketsFormatElements getGSSProtocolPacketsFormatAccess() {
 		return pGSSProtocolPacketsFormat;
@@ -933,7 +880,8 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 	}
 	
 	//terminal STRING:
-	//	'"' ('\\' . | !('\\' | '"'))* '"' | "'" ('\\' . | !('\\' | "'"))* "'";
+	//	'"' ('\\' . | !('\\' | '"'))* '"' |
+	//	"'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	}

@@ -1,14 +1,8 @@
 /**
- * Copyright (c) 2018 UAH Space Research Group.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v2.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v20.html
- * 
- * Contributors:
- *     SRG Team - Initial API and implementation
  */
 package es.uah.aut.srg.gss.protocol_packets;
+
+import es.uah.aut.srg.gss.export.GSSExportExport;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -112,30 +106,30 @@ public interface GSSProtocolPacketsProtocolPacket extends EObject {
 	void setLevelRef(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Export</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Export</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Export</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Export</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Export</em>' containment reference.
-	 * @see #setExport(GSSProtocolPacketsExport)
+	 * @return the value of the '<em>Export</em>' reference.
+	 * @see #setExport(GSSExportExport)
 	 * @see es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage#getGSSProtocolPacketsProtocolPacket_Export()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSProtocolPacketsExport getExport();
+	GSSExportExport getExport();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getExport <em>Export</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getExport <em>Export</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Export</em>' containment reference.
+	 * @param value the new value of the '<em>Export</em>' reference.
 	 * @see #getExport()
 	 * @generated
 	 */
-	void setExport(GSSProtocolPacketsExport value);
+	void setExport(GSSExportExport value);
 
 	/**
 	 * Returns the value of the '<em><b>Format</b></em>' containment reference.

@@ -47,14 +47,6 @@
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated import -->
-      <package
-            uri="http://srg.aut.uah.es/gss/import"
-            class="es.uah.aut.srg.gss.import_.importPackage"
-            genModel="model/imports.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated imports -->
       <package
             uri="http://srg.aut.uah.es/gss/imports"

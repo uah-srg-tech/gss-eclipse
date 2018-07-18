@@ -15,7 +15,6 @@ import es.uah.aut.srg.gss.common.GSSModelFile;
 import es.uah.aut.srg.gss.common.GSSModelFileImport;
 import es.uah.aut.srg.gss.common.commonPackage;
 import es.uah.aut.srg.gss.lang.protocol_packets.services.PROTOCOL_PACKETSGrammarAccess;
-import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsExport;
 import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsFormat;
 import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket;
 import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPackets;
@@ -54,9 +53,6 @@ public class PROTOCOL_PACKETSSemanticSequencer extends AbstractDelegatingSemanti
 			}
 		else if (epackage == protocol_packetsPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_EXPORT:
-				sequence_GSSProtocolPacketsExport(context, (GSSProtocolPacketsExport) semanticObject); 
-				return; 
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_FORMAT:
 				sequence_GSSProtocolPacketsFormat(context, (GSSProtocolPacketsFormat) semanticObject); 
 				return; 
@@ -103,28 +99,10 @@ public class PROTOCOL_PACKETSSemanticSequencer extends AbstractDelegatingSemanti
 	
 	/**
 	 * Contexts:
-	 *     GSSProtocolPacketsExport returns GSSProtocolPacketsExport
-	 *
-	 * Constraint:
-	 *     file=ID
-	 */
-	protected void sequence_GSSProtocolPacketsExport(ISerializationContext context, GSSProtocolPacketsExport semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, protocol_packetsPackage.Literals.GSS_PROTOCOL_PACKETS_EXPORT__FILE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, protocol_packetsPackage.Literals.GSS_PROTOCOL_PACKETS_EXPORT__FILE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSProtocolPacketsExportAccess().getFileIDTerminalRuleCall_4_0(), semanticObject.getFile());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     GSSProtocolPacketsFormat returns GSSProtocolPacketsFormat
 	 *
 	 * Constraint:
-	 *     file=ID
+	 *     file=XMLREF
 	 */
 	protected void sequence_GSSProtocolPacketsFormat(ISerializationContext context, GSSProtocolPacketsFormat semanticObject) {
 		if (errorAcceptor != null) {
@@ -132,7 +110,7 @@ public class PROTOCOL_PACKETSSemanticSequencer extends AbstractDelegatingSemanti
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, protocol_packetsPackage.Literals.GSS_PROTOCOL_PACKETS_FORMAT__FILE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSProtocolPacketsFormatAccess().getFileIDTerminalRuleCall_4_0(), semanticObject.getFile());
+		feeder.accept(grammarAccess.getGSSProtocolPacketsFormatAccess().getFileXMLREFParserRuleCall_4_0(), semanticObject.getFile());
 		feeder.finish();
 	}
 	
@@ -142,7 +120,7 @@ public class PROTOCOL_PACKETSSemanticSequencer extends AbstractDelegatingSemanti
 	 *     GSSProtocolPacketsProtocolPacket returns GSSProtocolPacketsProtocolPacket
 	 *
 	 * Constraint:
-	 *     (name=ID ifRef=INTEGER levelRef=INTEGER export=GSSProtocolPacketsExport format=GSSProtocolPacketsFormat)
+	 *     (name=ID ifRef=INTEGER levelRef=INTEGER export=[GSSExportExport|VersionedQualifiedName] format=GSSProtocolPacketsFormat)
 	 */
 	protected void sequence_GSSProtocolPacketsProtocolPacket(ISerializationContext context, GSSProtocolPacketsProtocolPacket semanticObject) {
 		if (errorAcceptor != null) {
@@ -161,8 +139,8 @@ public class PROTOCOL_PACKETSSemanticSequencer extends AbstractDelegatingSemanti
 		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameIDTerminalRuleCall_4_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getIfRefINTEGERParserRuleCall_8_0(), semanticObject.getIfRef());
 		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getLevelRefINTEGERParserRuleCall_12_0(), semanticObject.getLevelRef());
-		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSProtocolPacketsExportParserRuleCall_14_0(), semanticObject.getExport());
-		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSProtocolPacketsFormatParserRuleCall_15_0(), semanticObject.getFormat());
+		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportVersionedQualifiedNameParserRuleCall_14_0_1(), semanticObject.getExport());
+		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSProtocolPacketsFormatParserRuleCall_16_0(), semanticObject.getFormat());
 		feeder.finish();
 	}
 	

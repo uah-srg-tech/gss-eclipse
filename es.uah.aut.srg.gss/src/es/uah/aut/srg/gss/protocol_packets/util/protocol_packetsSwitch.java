@@ -1,12 +1,4 @@
 /**
- * Copyright (c) 2018 UAH Space Research Group.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v2.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v20.html
- * 
- * Contributors:
- *     SRG Team - Initial API and implementation
  */
 package es.uah.aut.srg.gss.protocol_packets.util;
 
@@ -89,12 +81,6 @@ public class protocol_packetsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_EXPORT: {
-				GSSProtocolPacketsExport gssProtocolPacketsExport = (GSSProtocolPacketsExport)theEObject;
-				T result = caseGSSProtocolPacketsExport(gssProtocolPacketsExport);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_FORMAT: {
 				GSSProtocolPacketsFormat gssProtocolPacketsFormat = (GSSProtocolPacketsFormat)theEObject;
 				T result = caseGSSProtocolPacketsFormat(gssProtocolPacketsFormat);
@@ -132,21 +118,6 @@ public class protocol_packetsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSProtocolPacketsProtocolPacket(GSSProtocolPacketsProtocolPacket object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Protocol Packets Export</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Protocol Packets Export</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSProtocolPacketsExport(GSSProtocolPacketsExport object) {
 		return null;
 	}
 

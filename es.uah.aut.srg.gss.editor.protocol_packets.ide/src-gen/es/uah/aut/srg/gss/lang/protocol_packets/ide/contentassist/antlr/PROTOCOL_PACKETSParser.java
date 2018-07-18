@@ -53,7 +53,6 @@ public class PROTOCOL_PACKETSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getGroup_3_0(), "rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0");
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getGroup_3_1(), "rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0");
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getGroup(), "rule__GSSProtocolPacketsProtocolPacket__Group__0");
-					put(grammarAccess.getGSSProtocolPacketsExportAccess().getGroup(), "rule__GSSProtocolPacketsExport__Group__0");
 					put(grammarAccess.getGSSProtocolPacketsFormatAccess().getGroup(), "rule__GSSProtocolPacketsFormat__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
@@ -80,8 +79,7 @@ public class PROTOCOL_PACKETSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getIfRefAssignment_8(), "rule__GSSProtocolPacketsProtocolPacket__IfRefAssignment_8");
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getLevelRefAssignment_12(), "rule__GSSProtocolPacketsProtocolPacket__LevelRefAssignment_12");
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportAssignment_14(), "rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_14");
-					put(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatAssignment_15(), "rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_15");
-					put(grammarAccess.getGSSProtocolPacketsExportAccess().getFileAssignment_4(), "rule__GSSProtocolPacketsExport__FileAssignment_4");
+					put(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatAssignment_16(), "rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_16");
 					put(grammarAccess.getGSSProtocolPacketsFormatAccess().getFileAssignment_4(), "rule__GSSProtocolPacketsFormat__FileAssignment_4");
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUnorderedGroup_3(), "rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3");
 				}
