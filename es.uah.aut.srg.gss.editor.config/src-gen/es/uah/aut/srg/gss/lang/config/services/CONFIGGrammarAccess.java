@@ -68,14 +68,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cImportKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cImportURIAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cImportURIIDTerminalRuleCall_2_0 = (RuleCall)cImportURIAssignment_2.eContents().get(0);
+		private final RuleCall cImportURISTRINGTerminalRuleCall_2_0 = (RuleCall)cImportURIAssignment_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//GSSModelFileImport common::GSSModelFileImport:
-		//	'import' ':=' importURI=ID ';'
+		//	'import' ':=' importURI=STRING ';'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'import' ':=' importURI=ID ';'
+		//'import' ':=' importURI=STRING ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'import'
@@ -84,11 +84,11 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_1() { return cColonEqualsSignKeyword_1; }
 		
-		//importURI=ID
+		//importURI=STRING
 		public Assignment getImportURIAssignment_2() { return cImportURIAssignment_2; }
 		
-		//ID
-		public RuleCall getImportURIIDTerminalRuleCall_2_0() { return cImportURIIDTerminalRuleCall_2_0; }
+		//STRING
+		public RuleCall getImportURISTRINGTerminalRuleCall_2_0() { return cImportURISTRINGTerminalRuleCall_2_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
@@ -5922,7 +5922,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//GSSModelFileImport common::GSSModelFileImport:
-	//	'import' ':=' importURI=ID ';'
+	//	'import' ':=' importURI=STRING ';'
 	public GSSModelFileImportElements getGSSModelFileImportAccess() {
 		return pGSSModelFileImport;
 	}

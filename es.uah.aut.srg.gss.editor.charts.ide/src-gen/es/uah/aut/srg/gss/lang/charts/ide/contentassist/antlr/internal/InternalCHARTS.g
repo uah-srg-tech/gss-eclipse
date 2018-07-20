@@ -2122,9 +2122,9 @@ rule__GSSModelFileImport__ImportURIAssignment_2
 	}
 :
 	(
-		{ before(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0()); }
+		{ before(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); }
 	)
 ;
 finally {

@@ -34,9 +34,9 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalCHARTSParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSChartsCharts'", "'{'", "'uri'", "'version'", "'}'", "'GSSChartsChart'", "'id'", "'name'", "'y_units'", "'y_max'", "'.'", "'('", "')'", "'-'", "'volts'", "'amps'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSChartsCharts'", "'{'", "'uri'", "'version'", "'}'", "'GSSChartsChart'", "'id'", "'name'", "'y_units'", "'y_max'", "'.'", "'('", "')'", "'-'", "'volts'", "'amps'"
     };
-    public static final int RULE_STRING=5;
+    public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__19=19;
     public static final int T__15=15;
@@ -48,7 +48,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
     public static final int T__14=14;
     public static final int EOF=-1;
     public static final int T__30=30;
-    public static final int RULE_ID=4;
+    public static final int RULE_ID=5;
     public static final int RULE_WS=10;
     public static final int RULE_ANY_OTHER=11;
     public static final int T__26=26;
@@ -322,7 +322,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSModelFileImport"
-    // InternalCHARTS.g:143:1: ruleGSSModelFileImport returns [EObject current=null] : (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' ) ;
+    // InternalCHARTS.g:143:1: ruleGSSModelFileImport returns [EObject current=null] : (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' ) ;
     public final EObject ruleGSSModelFileImport() throws RecognitionException {
         EObject current = null;
 
@@ -335,11 +335,11 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCHARTS.g:149:2: ( (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' ) )
-            // InternalCHARTS.g:150:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' )
+            // InternalCHARTS.g:149:2: ( (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' ) )
+            // InternalCHARTS.g:150:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' )
             {
-            // InternalCHARTS.g:150:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' )
-            // InternalCHARTS.g:151:3: otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';'
+            // InternalCHARTS.g:150:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' )
+            // InternalCHARTS.g:151:3: otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';'
             {
             otherlv_0=(Token)match(input,12,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -353,16 +353,16 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1());
               		
             }
-            // InternalCHARTS.g:159:3: ( (lv_importURI_2_0= RULE_ID ) )
-            // InternalCHARTS.g:160:4: (lv_importURI_2_0= RULE_ID )
+            // InternalCHARTS.g:159:3: ( (lv_importURI_2_0= RULE_STRING ) )
+            // InternalCHARTS.g:160:4: (lv_importURI_2_0= RULE_STRING )
             {
-            // InternalCHARTS.g:160:4: (lv_importURI_2_0= RULE_ID )
-            // InternalCHARTS.g:161:5: lv_importURI_2_0= RULE_ID
+            // InternalCHARTS.g:160:4: (lv_importURI_2_0= RULE_STRING )
+            // InternalCHARTS.g:161:5: lv_importURI_2_0= RULE_STRING
             {
-            lv_importURI_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            lv_importURI_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0());
+              					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0());
               				
             }
             if ( state.backtracking==0 ) {
@@ -374,7 +374,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
               						current,
               						"importURI",
               						lv_importURI_2_0,
-              						"org.eclipse.xtext.common.Terminals.ID");
+              						"org.eclipse.xtext.common.Terminals.STRING");
               				
             }
 
@@ -601,7 +601,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
             	      									newLeafNode(otherlv_4, grammarAccess.getGSSChartsChartsAccess().getUriKeyword_3_0_0());
             	      								
             	    }
-            	    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_5, grammarAccess.getGSSChartsChartsAccess().getColonEqualsSignKeyword_3_0_1());
@@ -642,7 +642,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_7, grammarAccess.getGSSChartsChartsAccess().getSemicolonKeyword_3_0_3());
@@ -694,7 +694,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
             	      									newLeafNode(otherlv_8, grammarAccess.getGSSChartsChartsAccess().getVersionKeyword_3_1_0());
             	      								
             	    }
-            	    otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            	    otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_12); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_9, grammarAccess.getGSSChartsChartsAccess().getColonEqualsSignKeyword_3_1_1());
@@ -735,7 +735,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            	    otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_11, grammarAccess.getGSSChartsChartsAccess().getSemicolonKeyword_3_1_3());
@@ -806,7 +806,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
             	      					newCompositeNode(grammarAccess.getGSSChartsChartsAccess().getChartGSSChartsChartParserRuleCall_4_0());
             	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_12);
+            	    pushFollow(FollowSets000.FOLLOW_13);
             	    lv_Chart_12_0=ruleGSSChartsChart();
 
             	    state._fsp--;
@@ -965,7 +965,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSChartsChartAccess().getGSSChartsChartKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_13); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_14); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSChartsChartAccess().getLeftCurlyBracketKeyword_1());
@@ -977,7 +977,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSChartsChartAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_14); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_15); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSChartsChartAccess().getColonEqualsSignKeyword_3());
@@ -1018,7 +1018,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_15); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_16); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSChartsChartAccess().getSemicolonKeyword_5());
@@ -1030,7 +1030,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSChartsChartAccess().getNameKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSChartsChartAccess().getColonEqualsSignKeyword_7());
@@ -1066,7 +1066,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_16); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_17); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSChartsChartAccess().getSemicolonKeyword_9());
@@ -1078,7 +1078,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSChartsChartAccess().getY_unitsKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_17); if (state.failed) return current;
+            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSChartsChartAccess().getColonEqualsSignKeyword_11());
@@ -1119,7 +1119,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSChartsChartAccess().getSemicolonKeyword_13());
@@ -1131,7 +1131,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_14, grammarAccess.getGSSChartsChartAccess().getY_maxKeyword_14());
               		
             }
-            otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_14); if (state.failed) return current;
+            otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_15); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_15, grammarAccess.getGSSChartsChartAccess().getColonEqualsSignKeyword_15());
@@ -1172,7 +1172,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSChartsChartAccess().getSemicolonKeyword_17());
@@ -1404,7 +1404,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
             // InternalCHARTS.g:576:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             // InternalCHARTS.g:577:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_ID_0);
@@ -1430,14 +1430,14 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // InternalCHARTS.g:585:4: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,25,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	    kw=(Token)match(input,25,FollowSets000.FOLLOW_10); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(kw);
             	      				newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_21); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_ID_2);
@@ -1579,7 +1579,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalCHARTS.g:618:4: this_INT_0= RULE_INT
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_20); if (state.failed) return current;
+                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_21); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current.merge(this_INT_0);
@@ -1610,7 +1610,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
                         case 1 :
                             // InternalCHARTS.g:628:6: this_INT_1= RULE_INT
                             {
-                            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_5); if (state.failed) return current;
+                            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_10); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               						current.merge(this_INT_1);
@@ -1627,7 +1627,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_20); if (state.failed) return current;
+                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_21); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					current.merge(this_ID_2);
@@ -1662,7 +1662,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // InternalCHARTS.g:646:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    {
-            	    kw=(Token)match(input,25,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            	    kw=(Token)match(input,25,FollowSets000.FOLLOW_12); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(kw);
@@ -1704,7 +1704,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
             	        case 1 :
             	            // InternalCHARTS.g:652:5: this_INT_4= RULE_INT
             	            {
-            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_21); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              					current.merge(this_INT_4);
@@ -1735,7 +1735,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
             	                case 1 :
             	                    // InternalCHARTS.g:662:7: this_INT_5= RULE_INT
             	                    {
-            	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_10); if (state.failed) return current;
             	                    if ( state.backtracking==0 ) {
 
             	                      							current.merge(this_INT_5);
@@ -1752,7 +1752,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
 
             	            }
 
-            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_21); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              						current.merge(this_ID_6);
@@ -1871,7 +1871,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_22);
             this_QualifiedName_0=ruleQualifiedName();
 
             state._fsp--;
@@ -1886,7 +1886,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            kw=(Token)match(input,26,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            kw=(Token)match(input,26,FollowSets000.FOLLOW_12); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(kw);
@@ -1898,7 +1898,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             this_Version_2=ruleVersion();
 
             state._fsp--;
@@ -2035,7 +2035,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
                         case 1 :
                             // InternalCHARTS.g:750:5: kw= '-'
                             {
-                            kw=(Token)match(input,28,FollowSets000.FOLLOW_23); if (state.failed) return current;
+                            kw=(Token)match(input,28,FollowSets000.FOLLOW_24); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               					current.merge(kw);
@@ -2233,7 +2233,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
         // InternalCHARTS.g:249:20: otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';'
         {
         otherlv_4=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return ;
+        otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return ;
         // InternalCHARTS.g:257:9: ( (lv_uri_6_0= ruleQualifiedName ) )
         // InternalCHARTS.g:258:10: (lv_uri_6_0= ruleQualifiedName )
         {
@@ -2307,7 +2307,7 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
         // InternalCHARTS.g:291:20: otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';'
         {
         otherlv_8=(Token)match(input,18,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return ;
+        otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_12); if (state.failed) return ;
         // InternalCHARTS.g:299:9: ( (lv_version_10_0= ruleVersion ) )
         // InternalCHARTS.g:300:10: (lv_version_10_0= ruleVersion )
         {
@@ -2393,20 +2393,21 @@ public class InternalCHARTSParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000010000L});
         public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000060000L});
-        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000160000L});
-        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000050L});
-        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000180000L});
-        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x00000000100000C0L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000400000L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000060000000L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000002000002L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000160000L});
+        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000180000L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000200000L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x00000000100000C0L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000400000L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000060000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000002000002L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000004000000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000008000000L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000000040L});
     }
 
 

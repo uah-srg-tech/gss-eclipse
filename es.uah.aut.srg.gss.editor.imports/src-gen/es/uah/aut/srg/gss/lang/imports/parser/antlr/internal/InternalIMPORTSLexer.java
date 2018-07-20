@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalIMPORTSLexer extends Lexer {
-    public static final int RULE_STRING=5;
+    public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__19=19;
     public static final int T__15=15;
@@ -28,7 +28,7 @@ public class InternalIMPORTSLexer extends Lexer {
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
-    public static final int RULE_ID=4;
+    public static final int RULE_ID=5;
     public static final int RULE_WS=10;
     public static final int RULE_ANY_OTHER=11;
     public static final int T__26=26;

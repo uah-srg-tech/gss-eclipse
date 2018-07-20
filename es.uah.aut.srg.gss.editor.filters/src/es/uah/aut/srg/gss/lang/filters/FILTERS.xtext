@@ -11,7 +11,7 @@ GSSModelFile returns common::GSSModelFile:
 ;
 
 GSSModelFileImport returns common::GSSModelFileImport: 
-	'import' ':=' importURI=ID ';'
+	'import' ':=' importURI=STRING ';'
 ;
 
 GSSFilterFilter returns GSSFilterFilter:

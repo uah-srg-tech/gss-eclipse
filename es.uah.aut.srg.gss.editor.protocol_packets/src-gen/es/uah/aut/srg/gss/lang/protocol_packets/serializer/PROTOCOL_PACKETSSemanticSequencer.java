@@ -72,7 +72,7 @@ public class PROTOCOL_PACKETSSemanticSequencer extends AbstractDelegatingSemanti
 	 *     GSSModelFileImport returns GSSModelFileImport
 	 *
 	 * Constraint:
-	 *     importURI=ID
+	 *     importURI=STRING
 	 */
 	protected void sequence_GSSModelFileImport(ISerializationContext context, GSSModelFileImport semanticObject) {
 		if (errorAcceptor != null) {
@@ -80,7 +80,7 @@ public class PROTOCOL_PACKETSSemanticSequencer extends AbstractDelegatingSemanti
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, commonPackage.Literals.GSS_MODEL_FILE_IMPORT__IMPORT_URI));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0(), semanticObject.getImportURI());
+		feeder.accept(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0(), semanticObject.getImportURI());
 		feeder.finish();
 	}
 	
@@ -139,8 +139,8 @@ public class PROTOCOL_PACKETSSemanticSequencer extends AbstractDelegatingSemanti
 		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameIDTerminalRuleCall_4_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getIfRefINTEGERParserRuleCall_8_0(), semanticObject.getIfRef());
 		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getLevelRefINTEGERParserRuleCall_12_0(), semanticObject.getLevelRef());
-		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportVersionedQualifiedNameParserRuleCall_14_0_1(), semanticObject.getExport());
-		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSProtocolPacketsFormatParserRuleCall_16_0(), semanticObject.getFormat());
+		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportVersionedQualifiedNameParserRuleCall_16_0_1(), semanticObject.getExport());
+		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSProtocolPacketsFormatParserRuleCall_18_0(), semanticObject.getFormat());
 		feeder.finish();
 	}
 	

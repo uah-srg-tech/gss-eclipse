@@ -2,12 +2,12 @@
 ')'=53
 '-'=54
 '.'=51
-':='=19
-';'=15
+':='=15
+';'=16
 'DICRef'=50
 'GSSExportActivateDICs'=48
 'GSSExportDIC'=49
-'GSSExportExport'=16
+'GSSExportExport'=17
 'GSSExportSettingAIFromConst'=45
 'GSSExportSettingAIFromFile'=46
 'GSSExportSettingFromConst'=34
@@ -24,7 +24,7 @@
 'bytes'=13
 'fieldRef'=44
 'file'=40
-'from'=18
+'from'=19
 'fromFile'=27
 'id'=26
 'import'=14
@@ -39,7 +39,7 @@
 'uri'=22
 'value'=35
 'version'=23
-'{'=17
+'{'=18
 '}'=21
 RULE_ANY_OTHER=11
 RULE_HEXADECIMAL=5

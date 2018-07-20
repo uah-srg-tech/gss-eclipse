@@ -4603,7 +4603,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1237:1: ( rule__GSSFilterMaxtermFilter__Group__0__Impl rule__GSSFilterMaxtermFilter__Group__1 )
             // InternalFILTERS.g:1238:2: rule__GSSFilterMaxtermFilter__Group__0__Impl rule__GSSFilterMaxtermFilter__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSFilterMaxtermFilter__Group__0__Impl();
 
             state._fsp--;
@@ -4682,7 +4682,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1264:1: ( rule__GSSFilterMaxtermFilter__Group__1__Impl rule__GSSFilterMaxtermFilter__Group__2 )
             // InternalFILTERS.g:1265:2: rule__GSSFilterMaxtermFilter__Group__1__Impl rule__GSSFilterMaxtermFilter__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterMaxtermFilter__Group__1__Impl();
 
             state._fsp--;
@@ -4771,7 +4771,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1291:1: ( rule__GSSFilterMaxtermFilter__Group__2__Impl rule__GSSFilterMaxtermFilter__Group__3 )
             // InternalFILTERS.g:1292:2: rule__GSSFilterMaxtermFilter__Group__2__Impl rule__GSSFilterMaxtermFilter__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_9);
+            pushFollow(FollowSets000.FOLLOW_10);
             rule__GSSFilterMaxtermFilter__Group__2__Impl();
 
             state._fsp--;
@@ -4850,7 +4850,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1318:1: ( rule__GSSFilterMaxtermFilter__Group__3__Impl rule__GSSFilterMaxtermFilter__Group__4 )
             // InternalFILTERS.g:1319:2: rule__GSSFilterMaxtermFilter__Group__3__Impl rule__GSSFilterMaxtermFilter__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_10);
+            pushFollow(FollowSets000.FOLLOW_11);
             rule__GSSFilterMaxtermFilter__Group__3__Impl();
 
             state._fsp--;
@@ -4939,7 +4939,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1345:1: ( rule__GSSFilterMaxtermFilter__Group__4__Impl rule__GSSFilterMaxtermFilter__Group__5 )
             // InternalFILTERS.g:1346:2: rule__GSSFilterMaxtermFilter__Group__4__Impl rule__GSSFilterMaxtermFilter__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_11);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterMaxtermFilter__Group__4__Impl();
 
             state._fsp--;
@@ -4989,7 +4989,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1361:3: ( rule__GSSFilterMaxtermFilter__MaxtermAssignment_4 )
             // InternalFILTERS.g:1361:4: rule__GSSFilterMaxtermFilter__MaxtermAssignment_4
             {
-            pushFollow(FollowSets000.FOLLOW_12);
+            pushFollow(FollowSets000.FOLLOW_13);
             rule__GSSFilterMaxtermFilter__MaxtermAssignment_4();
 
             state._fsp--;
@@ -5024,7 +5024,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalFILTERS.g:1366:4: rule__GSSFilterMaxtermFilter__MaxtermAssignment_4
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_12);
+            	    pushFollow(FollowSets000.FOLLOW_13);
             	    rule__GSSFilterMaxtermFilter__MaxtermAssignment_4();
 
             	    state._fsp--;
@@ -5307,7 +5307,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1460:1: ( rule__GSSFilterMaxtermFilter__Group_3_0__1__Impl rule__GSSFilterMaxtermFilter__Group_3_0__2 )
             // InternalFILTERS.g:1461:2: rule__GSSFilterMaxtermFilter__Group_3_0__1__Impl rule__GSSFilterMaxtermFilter__Group_3_0__2
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSFilterMaxtermFilter__Group_3_0__1__Impl();
 
             state._fsp--;
@@ -5549,7 +5549,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1541:1: ( rule__GSSFilterMaxtermFilter__Group_3_1__0__Impl rule__GSSFilterMaxtermFilter__Group_3_1__1 )
             // InternalFILTERS.g:1542:2: rule__GSSFilterMaxtermFilter__Group_3_1__0__Impl rule__GSSFilterMaxtermFilter__Group_3_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_13);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSFilterMaxtermFilter__Group_3_1__0__Impl();
 
             state._fsp--;
@@ -5717,7 +5717,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1595:1: ( rule__GSSFilterMaxtermFilter__Group_3_1__2__Impl rule__GSSFilterMaxtermFilter__Group_3_1__3 )
             // InternalFILTERS.g:1596:2: rule__GSSFilterMaxtermFilter__Group_3_1__2__Impl rule__GSSFilterMaxtermFilter__Group_3_1__3
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSFilterMaxtermFilter__Group_3_1__2__Impl();
 
             state._fsp--;
@@ -5885,7 +5885,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1649:1: ( rule__GSSFilterMaxtermFilter__Group_3_1__4__Impl rule__GSSFilterMaxtermFilter__Group_3_1__5 )
             // InternalFILTERS.g:1650:2: rule__GSSFilterMaxtermFilter__Group_3_1__4__Impl rule__GSSFilterMaxtermFilter__Group_3_1__5
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__GSSFilterMaxtermFilter__Group_3_1__4__Impl();
 
             state._fsp--;
@@ -6009,7 +6009,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1691:3: ( rule__GSSFilterMaxtermFilter__Alternatives_3_1_5 )
             // InternalFILTERS.g:1691:4: rule__GSSFilterMaxtermFilter__Alternatives_3_1_5
             {
-            pushFollow(FollowSets000.FOLLOW_15);
+            pushFollow(FollowSets000.FOLLOW_16);
             rule__GSSFilterMaxtermFilter__Alternatives_3_1_5();
 
             state._fsp--;
@@ -6044,7 +6044,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalFILTERS.g:1696:4: rule__GSSFilterMaxtermFilter__Alternatives_3_1_5
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_15);
+            	    pushFollow(FollowSets000.FOLLOW_16);
             	    rule__GSSFilterMaxtermFilter__Alternatives_3_1_5();
 
             	    state._fsp--;
@@ -6174,7 +6174,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1737:1: ( rule__GSSFilterMaxtermFilter__Group_3_1_0__1__Impl rule__GSSFilterMaxtermFilter__Group_3_1_0__2 )
             // InternalFILTERS.g:1738:2: rule__GSSFilterMaxtermFilter__Group_3_1_0__1__Impl rule__GSSFilterMaxtermFilter__Group_3_1_0__2
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSFilterMaxtermFilter__Group_3_1_0__1__Impl();
 
             state._fsp--;
@@ -6416,7 +6416,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1818:1: ( rule__GSSFilterMintermFilter__Group__0__Impl rule__GSSFilterMintermFilter__Group__1 )
             // InternalFILTERS.g:1819:2: rule__GSSFilterMintermFilter__Group__0__Impl rule__GSSFilterMintermFilter__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSFilterMintermFilter__Group__0__Impl();
 
             state._fsp--;
@@ -6495,7 +6495,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1845:1: ( rule__GSSFilterMintermFilter__Group__1__Impl rule__GSSFilterMintermFilter__Group__2 )
             // InternalFILTERS.g:1846:2: rule__GSSFilterMintermFilter__Group__1__Impl rule__GSSFilterMintermFilter__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterMintermFilter__Group__1__Impl();
 
             state._fsp--;
@@ -6584,7 +6584,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1872:1: ( rule__GSSFilterMintermFilter__Group__2__Impl rule__GSSFilterMintermFilter__Group__3 )
             // InternalFILTERS.g:1873:2: rule__GSSFilterMintermFilter__Group__2__Impl rule__GSSFilterMintermFilter__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_9);
+            pushFollow(FollowSets000.FOLLOW_10);
             rule__GSSFilterMintermFilter__Group__2__Impl();
 
             state._fsp--;
@@ -6663,7 +6663,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1899:1: ( rule__GSSFilterMintermFilter__Group__3__Impl rule__GSSFilterMintermFilter__Group__4 )
             // InternalFILTERS.g:1900:2: rule__GSSFilterMintermFilter__Group__3__Impl rule__GSSFilterMintermFilter__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_17);
+            pushFollow(FollowSets000.FOLLOW_18);
             rule__GSSFilterMintermFilter__Group__3__Impl();
 
             state._fsp--;
@@ -6752,7 +6752,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1926:1: ( rule__GSSFilterMintermFilter__Group__4__Impl rule__GSSFilterMintermFilter__Group__5 )
             // InternalFILTERS.g:1927:2: rule__GSSFilterMintermFilter__Group__4__Impl rule__GSSFilterMintermFilter__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_11);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterMintermFilter__Group__4__Impl();
 
             state._fsp--;
@@ -6802,7 +6802,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:1942:3: ( rule__GSSFilterMintermFilter__MintermAssignment_4 )
             // InternalFILTERS.g:1942:4: rule__GSSFilterMintermFilter__MintermAssignment_4
             {
-            pushFollow(FollowSets000.FOLLOW_18);
+            pushFollow(FollowSets000.FOLLOW_19);
             rule__GSSFilterMintermFilter__MintermAssignment_4();
 
             state._fsp--;
@@ -6837,7 +6837,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalFILTERS.g:1947:4: rule__GSSFilterMintermFilter__MintermAssignment_4
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_18);
+            	    pushFollow(FollowSets000.FOLLOW_19);
             	    rule__GSSFilterMintermFilter__MintermAssignment_4();
 
             	    state._fsp--;
@@ -7120,7 +7120,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2041:1: ( rule__GSSFilterMintermFilter__Group_3_0__1__Impl rule__GSSFilterMintermFilter__Group_3_0__2 )
             // InternalFILTERS.g:2042:2: rule__GSSFilterMintermFilter__Group_3_0__1__Impl rule__GSSFilterMintermFilter__Group_3_0__2
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSFilterMintermFilter__Group_3_0__1__Impl();
 
             state._fsp--;
@@ -7362,7 +7362,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2122:1: ( rule__GSSFilterMintermFilter__Group_3_1__0__Impl rule__GSSFilterMintermFilter__Group_3_1__1 )
             // InternalFILTERS.g:2123:2: rule__GSSFilterMintermFilter__Group_3_1__0__Impl rule__GSSFilterMintermFilter__Group_3_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_13);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSFilterMintermFilter__Group_3_1__0__Impl();
 
             state._fsp--;
@@ -7530,7 +7530,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2176:1: ( rule__GSSFilterMintermFilter__Group_3_1__2__Impl rule__GSSFilterMintermFilter__Group_3_1__3 )
             // InternalFILTERS.g:2177:2: rule__GSSFilterMintermFilter__Group_3_1__2__Impl rule__GSSFilterMintermFilter__Group_3_1__3
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSFilterMintermFilter__Group_3_1__2__Impl();
 
             state._fsp--;
@@ -7698,7 +7698,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2230:1: ( rule__GSSFilterMintermFilter__Group_3_1__4__Impl rule__GSSFilterMintermFilter__Group_3_1__5 )
             // InternalFILTERS.g:2231:2: rule__GSSFilterMintermFilter__Group_3_1__4__Impl rule__GSSFilterMintermFilter__Group_3_1__5
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__GSSFilterMintermFilter__Group_3_1__4__Impl();
 
             state._fsp--;
@@ -7822,7 +7822,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2272:3: ( rule__GSSFilterMintermFilter__Alternatives_3_1_5 )
             // InternalFILTERS.g:2272:4: rule__GSSFilterMintermFilter__Alternatives_3_1_5
             {
-            pushFollow(FollowSets000.FOLLOW_15);
+            pushFollow(FollowSets000.FOLLOW_16);
             rule__GSSFilterMintermFilter__Alternatives_3_1_5();
 
             state._fsp--;
@@ -7857,7 +7857,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalFILTERS.g:2277:4: rule__GSSFilterMintermFilter__Alternatives_3_1_5
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_15);
+            	    pushFollow(FollowSets000.FOLLOW_16);
             	    rule__GSSFilterMintermFilter__Alternatives_3_1_5();
 
             	    state._fsp--;
@@ -7987,7 +7987,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2318:1: ( rule__GSSFilterMintermFilter__Group_3_1_0__1__Impl rule__GSSFilterMintermFilter__Group_3_1_0__2 )
             // InternalFILTERS.g:2319:2: rule__GSSFilterMintermFilter__Group_3_1_0__1__Impl rule__GSSFilterMintermFilter__Group_3_1_0__2
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSFilterMintermFilter__Group_3_1_0__1__Impl();
 
             state._fsp--;
@@ -8229,7 +8229,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2399:1: ( rule__GSSFilterBoolVar__Group__0__Impl rule__GSSFilterBoolVar__Group__1 )
             // InternalFILTERS.g:2400:2: rule__GSSFilterBoolVar__Group__0__Impl rule__GSSFilterBoolVar__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterBoolVar__Group__0__Impl();
 
             state._fsp--;
@@ -8308,7 +8308,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2426:1: ( rule__GSSFilterBoolVar__Group__1__Impl rule__GSSFilterBoolVar__Group__2 )
             // InternalFILTERS.g:2427:2: rule__GSSFilterBoolVar__Group__1__Impl rule__GSSFilterBoolVar__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSFilterBoolVar__Group__1__Impl();
 
             state._fsp--;
@@ -8466,7 +8466,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2480:1: ( rule__GSSFilterBoolVar__Group__3__Impl rule__GSSFilterBoolVar__Group__4 )
             // InternalFILTERS.g:2481:2: rule__GSSFilterBoolVar__Group__3__Impl rule__GSSFilterBoolVar__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterBoolVar__Group__3__Impl();
 
             state._fsp--;
@@ -8634,7 +8634,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2534:1: ( rule__GSSFilterBoolVar__Group__5__Impl rule__GSSFilterBoolVar__Group__6 )
             // InternalFILTERS.g:2535:2: rule__GSSFilterBoolVar__Group__5__Impl rule__GSSFilterBoolVar__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_22);
             rule__GSSFilterBoolVar__Group__5__Impl();
 
             state._fsp--;
@@ -8792,7 +8792,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2588:1: ( rule__GSSFilterBoolVar__Group__7__Impl rule__GSSFilterBoolVar__Group__8 )
             // InternalFILTERS.g:2589:2: rule__GSSFilterBoolVar__Group__7__Impl rule__GSSFilterBoolVar__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSFilterBoolVar__Group__7__Impl();
 
             state._fsp--;
@@ -8960,7 +8960,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2642:1: ( rule__GSSFilterBoolVar__Group__9__Impl rule__GSSFilterBoolVar__Group__10 )
             // InternalFILTERS.g:2643:2: rule__GSSFilterBoolVar__Group__9__Impl rule__GSSFilterBoolVar__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__GSSFilterBoolVar__Group__9__Impl();
 
             state._fsp--;
@@ -9118,7 +9118,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2696:1: ( rule__GSSFilterBoolVar__Group__11__Impl rule__GSSFilterBoolVar__Group__12 )
             // InternalFILTERS.g:2697:2: rule__GSSFilterBoolVar__Group__11__Impl rule__GSSFilterBoolVar__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_23);
+            pushFollow(FollowSets000.FOLLOW_24);
             rule__GSSFilterBoolVar__Group__11__Impl();
 
             state._fsp--;
@@ -9286,7 +9286,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2750:1: ( rule__GSSFilterBoolVar__Group__13__Impl rule__GSSFilterBoolVar__Group__14 )
             // InternalFILTERS.g:2751:2: rule__GSSFilterBoolVar__Group__13__Impl rule__GSSFilterBoolVar__Group__14
             {
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             rule__GSSFilterBoolVar__Group__13__Impl();
 
             state._fsp--;
@@ -9365,7 +9365,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2777:1: ( rule__GSSFilterBoolVar__Group__14__Impl rule__GSSFilterBoolVar__Group__15 )
             // InternalFILTERS.g:2778:2: rule__GSSFilterBoolVar__Group__14__Impl rule__GSSFilterBoolVar__Group__15
             {
-            pushFollow(FollowSets000.FOLLOW_25);
+            pushFollow(FollowSets000.FOLLOW_26);
             rule__GSSFilterBoolVar__Group__14__Impl();
 
             state._fsp--;
@@ -9454,7 +9454,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2804:1: ( rule__GSSFilterBoolVar__Group__15__Impl rule__GSSFilterBoolVar__Group__16 )
             // InternalFILTERS.g:2805:2: rule__GSSFilterBoolVar__Group__15__Impl rule__GSSFilterBoolVar__Group__16
             {
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_27);
             rule__GSSFilterBoolVar__Group__15__Impl();
 
             state._fsp--;
@@ -9543,7 +9543,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2831:1: ( rule__GSSFilterBoolVar__Group__16__Impl rule__GSSFilterBoolVar__Group__17 )
             // InternalFILTERS.g:2832:2: rule__GSSFilterBoolVar__Group__16__Impl rule__GSSFilterBoolVar__Group__17
             {
-            pushFollow(FollowSets000.FOLLOW_11);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterBoolVar__Group__16__Impl();
 
             state._fsp--;
@@ -9785,7 +9785,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2912:1: ( rule__GSSFilterBoolVarFromArrayItem__Group__0__Impl rule__GSSFilterBoolVarFromArrayItem__Group__1 )
             // InternalFILTERS.g:2913:2: rule__GSSFilterBoolVarFromArrayItem__Group__0__Impl rule__GSSFilterBoolVarFromArrayItem__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterBoolVarFromArrayItem__Group__0__Impl();
 
             state._fsp--;
@@ -9864,7 +9864,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2939:1: ( rule__GSSFilterBoolVarFromArrayItem__Group__1__Impl rule__GSSFilterBoolVarFromArrayItem__Group__2 )
             // InternalFILTERS.g:2940:2: rule__GSSFilterBoolVarFromArrayItem__Group__1__Impl rule__GSSFilterBoolVarFromArrayItem__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSFilterBoolVarFromArrayItem__Group__1__Impl();
 
             state._fsp--;
@@ -10022,7 +10022,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:2993:1: ( rule__GSSFilterBoolVarFromArrayItem__Group__3__Impl rule__GSSFilterBoolVarFromArrayItem__Group__4 )
             // InternalFILTERS.g:2994:2: rule__GSSFilterBoolVarFromArrayItem__Group__3__Impl rule__GSSFilterBoolVarFromArrayItem__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterBoolVarFromArrayItem__Group__3__Impl();
 
             state._fsp--;
@@ -10190,7 +10190,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3047:1: ( rule__GSSFilterBoolVarFromArrayItem__Group__5__Impl rule__GSSFilterBoolVarFromArrayItem__Group__6 )
             // InternalFILTERS.g:3048:2: rule__GSSFilterBoolVarFromArrayItem__Group__5__Impl rule__GSSFilterBoolVarFromArrayItem__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_22);
             rule__GSSFilterBoolVarFromArrayItem__Group__5__Impl();
 
             state._fsp--;
@@ -10348,7 +10348,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3101:1: ( rule__GSSFilterBoolVarFromArrayItem__Group__7__Impl rule__GSSFilterBoolVarFromArrayItem__Group__8 )
             // InternalFILTERS.g:3102:2: rule__GSSFilterBoolVarFromArrayItem__Group__7__Impl rule__GSSFilterBoolVarFromArrayItem__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSFilterBoolVarFromArrayItem__Group__7__Impl();
 
             state._fsp--;
@@ -10516,7 +10516,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3155:1: ( rule__GSSFilterBoolVarFromArrayItem__Group__9__Impl rule__GSSFilterBoolVarFromArrayItem__Group__10 )
             // InternalFILTERS.g:3156:2: rule__GSSFilterBoolVarFromArrayItem__Group__9__Impl rule__GSSFilterBoolVarFromArrayItem__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__GSSFilterBoolVarFromArrayItem__Group__9__Impl();
 
             state._fsp--;
@@ -10674,7 +10674,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3209:1: ( rule__GSSFilterBoolVarFromArrayItem__Group__11__Impl rule__GSSFilterBoolVarFromArrayItem__Group__12 )
             // InternalFILTERS.g:3210:2: rule__GSSFilterBoolVarFromArrayItem__Group__11__Impl rule__GSSFilterBoolVarFromArrayItem__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_23);
+            pushFollow(FollowSets000.FOLLOW_24);
             rule__GSSFilterBoolVarFromArrayItem__Group__11__Impl();
 
             state._fsp--;
@@ -10842,7 +10842,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3263:1: ( rule__GSSFilterBoolVarFromArrayItem__Group__13__Impl rule__GSSFilterBoolVarFromArrayItem__Group__14 )
             // InternalFILTERS.g:3264:2: rule__GSSFilterBoolVarFromArrayItem__Group__13__Impl rule__GSSFilterBoolVarFromArrayItem__Group__14
             {
-            pushFollow(FollowSets000.FOLLOW_27);
+            pushFollow(FollowSets000.FOLLOW_28);
             rule__GSSFilterBoolVarFromArrayItem__Group__13__Impl();
 
             state._fsp--;
@@ -10921,7 +10921,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3290:1: ( rule__GSSFilterBoolVarFromArrayItem__Group__14__Impl rule__GSSFilterBoolVarFromArrayItem__Group__15 )
             // InternalFILTERS.g:3291:2: rule__GSSFilterBoolVarFromArrayItem__Group__14__Impl rule__GSSFilterBoolVarFromArrayItem__Group__15
             {
-            pushFollow(FollowSets000.FOLLOW_25);
+            pushFollow(FollowSets000.FOLLOW_26);
             rule__GSSFilterBoolVarFromArrayItem__Group__14__Impl();
 
             state._fsp--;
@@ -11010,7 +11010,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3317:1: ( rule__GSSFilterBoolVarFromArrayItem__Group__15__Impl rule__GSSFilterBoolVarFromArrayItem__Group__16 )
             // InternalFILTERS.g:3318:2: rule__GSSFilterBoolVarFromArrayItem__Group__15__Impl rule__GSSFilterBoolVarFromArrayItem__Group__16
             {
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_27);
             rule__GSSFilterBoolVarFromArrayItem__Group__15__Impl();
 
             state._fsp--;
@@ -11099,7 +11099,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3344:1: ( rule__GSSFilterBoolVarFromArrayItem__Group__16__Impl rule__GSSFilterBoolVarFromArrayItem__Group__17 )
             // InternalFILTERS.g:3345:2: rule__GSSFilterBoolVarFromArrayItem__Group__16__Impl rule__GSSFilterBoolVarFromArrayItem__Group__17
             {
-            pushFollow(FollowSets000.FOLLOW_11);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterBoolVarFromArrayItem__Group__16__Impl();
 
             state._fsp--;
@@ -11341,7 +11341,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3425:1: ( rule__GSSFilterBoolVarFromGroupedArrayItem__Group__0__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__1 )
             // InternalFILTERS.g:3426:2: rule__GSSFilterBoolVarFromGroupedArrayItem__Group__0__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterBoolVarFromGroupedArrayItem__Group__0__Impl();
 
             state._fsp--;
@@ -11420,7 +11420,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3452:1: ( rule__GSSFilterBoolVarFromGroupedArrayItem__Group__1__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__2 )
             // InternalFILTERS.g:3453:2: rule__GSSFilterBoolVarFromGroupedArrayItem__Group__1__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSFilterBoolVarFromGroupedArrayItem__Group__1__Impl();
 
             state._fsp--;
@@ -11578,7 +11578,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3506:1: ( rule__GSSFilterBoolVarFromGroupedArrayItem__Group__3__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__4 )
             // InternalFILTERS.g:3507:2: rule__GSSFilterBoolVarFromGroupedArrayItem__Group__3__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterBoolVarFromGroupedArrayItem__Group__3__Impl();
 
             state._fsp--;
@@ -11746,7 +11746,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3560:1: ( rule__GSSFilterBoolVarFromGroupedArrayItem__Group__5__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__6 )
             // InternalFILTERS.g:3561:2: rule__GSSFilterBoolVarFromGroupedArrayItem__Group__5__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_22);
             rule__GSSFilterBoolVarFromGroupedArrayItem__Group__5__Impl();
 
             state._fsp--;
@@ -11904,7 +11904,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3614:1: ( rule__GSSFilterBoolVarFromGroupedArrayItem__Group__7__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__8 )
             // InternalFILTERS.g:3615:2: rule__GSSFilterBoolVarFromGroupedArrayItem__Group__7__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSFilterBoolVarFromGroupedArrayItem__Group__7__Impl();
 
             state._fsp--;
@@ -12072,7 +12072,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3668:1: ( rule__GSSFilterBoolVarFromGroupedArrayItem__Group__9__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__10 )
             // InternalFILTERS.g:3669:2: rule__GSSFilterBoolVarFromGroupedArrayItem__Group__9__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__GSSFilterBoolVarFromGroupedArrayItem__Group__9__Impl();
 
             state._fsp--;
@@ -12230,7 +12230,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3722:1: ( rule__GSSFilterBoolVarFromGroupedArrayItem__Group__11__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__12 )
             // InternalFILTERS.g:3723:2: rule__GSSFilterBoolVarFromGroupedArrayItem__Group__11__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_23);
+            pushFollow(FollowSets000.FOLLOW_24);
             rule__GSSFilterBoolVarFromGroupedArrayItem__Group__11__Impl();
 
             state._fsp--;
@@ -12398,7 +12398,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3776:1: ( rule__GSSFilterBoolVarFromGroupedArrayItem__Group__13__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__14 )
             // InternalFILTERS.g:3777:2: rule__GSSFilterBoolVarFromGroupedArrayItem__Group__13__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__14
             {
-            pushFollow(FollowSets000.FOLLOW_28);
+            pushFollow(FollowSets000.FOLLOW_29);
             rule__GSSFilterBoolVarFromGroupedArrayItem__Group__13__Impl();
 
             state._fsp--;
@@ -12556,7 +12556,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3830:1: ( rule__GSSFilterBoolVarFromGroupedArrayItem__Group__15__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__16 )
             // InternalFILTERS.g:3831:2: rule__GSSFilterBoolVarFromGroupedArrayItem__Group__15__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__16
             {
-            pushFollow(FollowSets000.FOLLOW_29);
+            pushFollow(FollowSets000.FOLLOW_30);
             rule__GSSFilterBoolVarFromGroupedArrayItem__Group__15__Impl();
 
             state._fsp--;
@@ -12724,7 +12724,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3884:1: ( rule__GSSFilterBoolVarFromGroupedArrayItem__Group__17__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__18 )
             // InternalFILTERS.g:3885:2: rule__GSSFilterBoolVarFromGroupedArrayItem__Group__17__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__18
             {
-            pushFollow(FollowSets000.FOLLOW_30);
+            pushFollow(FollowSets000.FOLLOW_31);
             rule__GSSFilterBoolVarFromGroupedArrayItem__Group__17__Impl();
 
             state._fsp--;
@@ -12803,7 +12803,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3911:1: ( rule__GSSFilterBoolVarFromGroupedArrayItem__Group__18__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__19 )
             // InternalFILTERS.g:3912:2: rule__GSSFilterBoolVarFromGroupedArrayItem__Group__18__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__19
             {
-            pushFollow(FollowSets000.FOLLOW_25);
+            pushFollow(FollowSets000.FOLLOW_26);
             rule__GSSFilterBoolVarFromGroupedArrayItem__Group__18__Impl();
 
             state._fsp--;
@@ -12892,7 +12892,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3938:1: ( rule__GSSFilterBoolVarFromGroupedArrayItem__Group__19__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__20 )
             // InternalFILTERS.g:3939:2: rule__GSSFilterBoolVarFromGroupedArrayItem__Group__19__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__20
             {
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_27);
             rule__GSSFilterBoolVarFromGroupedArrayItem__Group__19__Impl();
 
             state._fsp--;
@@ -12981,7 +12981,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:3965:1: ( rule__GSSFilterBoolVarFromGroupedArrayItem__Group__20__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__21 )
             // InternalFILTERS.g:3966:2: rule__GSSFilterBoolVarFromGroupedArrayItem__Group__20__Impl rule__GSSFilterBoolVarFromGroupedArrayItem__Group__21
             {
-            pushFollow(FollowSets000.FOLLOW_11);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterBoolVarFromGroupedArrayItem__Group__20__Impl();
 
             state._fsp--;
@@ -13223,7 +13223,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4046:1: ( rule__GSSFilterBoolVarFDIC__Group__0__Impl rule__GSSFilterBoolVarFDIC__Group__1 )
             // InternalFILTERS.g:4047:2: rule__GSSFilterBoolVarFDIC__Group__0__Impl rule__GSSFilterBoolVarFDIC__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterBoolVarFDIC__Group__0__Impl();
 
             state._fsp--;
@@ -13302,7 +13302,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4073:1: ( rule__GSSFilterBoolVarFDIC__Group__1__Impl rule__GSSFilterBoolVarFDIC__Group__2 )
             // InternalFILTERS.g:4074:2: rule__GSSFilterBoolVarFDIC__Group__1__Impl rule__GSSFilterBoolVarFDIC__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSFilterBoolVarFDIC__Group__1__Impl();
 
             state._fsp--;
@@ -13460,7 +13460,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4127:1: ( rule__GSSFilterBoolVarFDIC__Group__3__Impl rule__GSSFilterBoolVarFDIC__Group__4 )
             // InternalFILTERS.g:4128:2: rule__GSSFilterBoolVarFDIC__Group__3__Impl rule__GSSFilterBoolVarFDIC__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterBoolVarFDIC__Group__3__Impl();
 
             state._fsp--;
@@ -13628,7 +13628,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4181:1: ( rule__GSSFilterBoolVarFDIC__Group__5__Impl rule__GSSFilterBoolVarFDIC__Group__6 )
             // InternalFILTERS.g:4182:2: rule__GSSFilterBoolVarFDIC__Group__5__Impl rule__GSSFilterBoolVarFDIC__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_22);
             rule__GSSFilterBoolVarFDIC__Group__5__Impl();
 
             state._fsp--;
@@ -13786,7 +13786,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4235:1: ( rule__GSSFilterBoolVarFDIC__Group__7__Impl rule__GSSFilterBoolVarFDIC__Group__8 )
             // InternalFILTERS.g:4236:2: rule__GSSFilterBoolVarFDIC__Group__7__Impl rule__GSSFilterBoolVarFDIC__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSFilterBoolVarFDIC__Group__7__Impl();
 
             state._fsp--;
@@ -13954,7 +13954,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4289:1: ( rule__GSSFilterBoolVarFDIC__Group__9__Impl rule__GSSFilterBoolVarFDIC__Group__10 )
             // InternalFILTERS.g:4290:2: rule__GSSFilterBoolVarFDIC__Group__9__Impl rule__GSSFilterBoolVarFDIC__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             rule__GSSFilterBoolVarFDIC__Group__9__Impl();
 
             state._fsp--;
@@ -14033,7 +14033,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4316:1: ( rule__GSSFilterBoolVarFDIC__Group__10__Impl rule__GSSFilterBoolVarFDIC__Group__11 )
             // InternalFILTERS.g:4317:2: rule__GSSFilterBoolVarFDIC__Group__10__Impl rule__GSSFilterBoolVarFDIC__Group__11
             {
-            pushFollow(FollowSets000.FOLLOW_25);
+            pushFollow(FollowSets000.FOLLOW_26);
             rule__GSSFilterBoolVarFDIC__Group__10__Impl();
 
             state._fsp--;
@@ -14122,7 +14122,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4343:1: ( rule__GSSFilterBoolVarFDIC__Group__11__Impl rule__GSSFilterBoolVarFDIC__Group__12 )
             // InternalFILTERS.g:4344:2: rule__GSSFilterBoolVarFDIC__Group__11__Impl rule__GSSFilterBoolVarFDIC__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_11);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterBoolVarFDIC__Group__11__Impl();
 
             state._fsp--;
@@ -14364,7 +14364,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4424:1: ( rule__GSSFilterFieldRef__Group__0__Impl rule__GSSFilterFieldRef__Group__1 )
             // InternalFILTERS.g:4425:2: rule__GSSFilterFieldRef__Group__0__Impl rule__GSSFilterFieldRef__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterFieldRef__Group__0__Impl();
 
             state._fsp--;
@@ -14443,7 +14443,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4451:1: ( rule__GSSFilterFieldRef__Group__1__Impl rule__GSSFilterFieldRef__Group__2 )
             // InternalFILTERS.g:4452:2: rule__GSSFilterFieldRef__Group__1__Impl rule__GSSFilterFieldRef__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_22);
             rule__GSSFilterFieldRef__Group__1__Impl();
 
             state._fsp--;
@@ -14601,7 +14601,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4505:1: ( rule__GSSFilterFieldRef__Group__3__Impl rule__GSSFilterFieldRef__Group__4 )
             // InternalFILTERS.g:4506:2: rule__GSSFilterFieldRef__Group__3__Impl rule__GSSFilterFieldRef__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSFilterFieldRef__Group__3__Impl();
 
             state._fsp--;
@@ -14769,7 +14769,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4559:1: ( rule__GSSFilterFieldRef__Group__5__Impl rule__GSSFilterFieldRef__Group__6 )
             // InternalFILTERS.g:4560:2: rule__GSSFilterFieldRef__Group__5__Impl rule__GSSFilterFieldRef__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_11);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterFieldRef__Group__5__Impl();
 
             state._fsp--;
@@ -15001,7 +15001,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4640:1: ( rule__GSSFilterFieldOp__Group__0__Impl rule__GSSFilterFieldOp__Group__1 )
             // InternalFILTERS.g:4641:2: rule__GSSFilterFieldOp__Group__0__Impl rule__GSSFilterFieldOp__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterFieldOp__Group__0__Impl();
 
             state._fsp--;
@@ -15080,7 +15080,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4667:1: ( rule__GSSFilterFieldOp__Group__1__Impl rule__GSSFilterFieldOp__Group__2 )
             // InternalFILTERS.g:4668:2: rule__GSSFilterFieldOp__Group__1__Impl rule__GSSFilterFieldOp__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_31);
+            pushFollow(FollowSets000.FOLLOW_32);
             rule__GSSFilterFieldOp__Group__1__Impl();
 
             state._fsp--;
@@ -15238,7 +15238,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4721:1: ( rule__GSSFilterFieldOp__Group__3__Impl rule__GSSFilterFieldOp__Group__4 )
             // InternalFILTERS.g:4722:2: rule__GSSFilterFieldOp__Group__3__Impl rule__GSSFilterFieldOp__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_32);
+            pushFollow(FollowSets000.FOLLOW_33);
             rule__GSSFilterFieldOp__Group__3__Impl();
 
             state._fsp--;
@@ -15406,7 +15406,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4775:1: ( rule__GSSFilterFieldOp__Group__5__Impl rule__GSSFilterFieldOp__Group__6 )
             // InternalFILTERS.g:4776:2: rule__GSSFilterFieldOp__Group__5__Impl rule__GSSFilterFieldOp__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_11);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterFieldOp__Group__5__Impl();
 
             state._fsp--;
@@ -15638,7 +15638,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4856:1: ( rule__GSSFilterConstant__Group__0__Impl rule__GSSFilterConstant__Group__1 )
             // InternalFILTERS.g:4857:2: rule__GSSFilterConstant__Group__0__Impl rule__GSSFilterConstant__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterConstant__Group__0__Impl();
 
             state._fsp--;
@@ -15717,7 +15717,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4883:1: ( rule__GSSFilterConstant__Group__1__Impl rule__GSSFilterConstant__Group__2 )
             // InternalFILTERS.g:4884:2: rule__GSSFilterConstant__Group__1__Impl rule__GSSFilterConstant__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_33);
+            pushFollow(FollowSets000.FOLLOW_34);
             rule__GSSFilterConstant__Group__1__Impl();
 
             state._fsp--;
@@ -15875,7 +15875,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4937:1: ( rule__GSSFilterConstant__Group__3__Impl rule__GSSFilterConstant__Group__4 )
             // InternalFILTERS.g:4938:2: rule__GSSFilterConstant__Group__3__Impl rule__GSSFilterConstant__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterConstant__Group__3__Impl();
 
             state._fsp--;
@@ -16043,7 +16043,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:4991:1: ( rule__GSSFilterConstant__Group__5__Impl rule__GSSFilterConstant__Group__6 )
             // InternalFILTERS.g:4992:2: rule__GSSFilterConstant__Group__5__Impl rule__GSSFilterConstant__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_34);
+            pushFollow(FollowSets000.FOLLOW_35);
             rule__GSSFilterConstant__Group__5__Impl();
 
             state._fsp--;
@@ -16122,7 +16122,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5018:1: ( rule__GSSFilterConstant__Group__6__Impl rule__GSSFilterConstant__Group__7 )
             // InternalFILTERS.g:5019:2: rule__GSSFilterConstant__Group__6__Impl rule__GSSFilterConstant__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_34);
+            pushFollow(FollowSets000.FOLLOW_35);
             rule__GSSFilterConstant__Group__6__Impl();
 
             state._fsp--;
@@ -16454,7 +16454,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5126:1: ( rule__GSSFilterConstant__Group_6__1__Impl rule__GSSFilterConstant__Group_6__2 )
             // InternalFILTERS.g:5127:2: rule__GSSFilterConstant__Group_6__1__Impl rule__GSSFilterConstant__Group_6__2
             {
-            pushFollow(FollowSets000.FOLLOW_35);
+            pushFollow(FollowSets000.FOLLOW_36);
             rule__GSSFilterConstant__Group_6__1__Impl();
 
             state._fsp--;
@@ -16696,7 +16696,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5207:1: ( rule__GSSFilterSelect__Group__0__Impl rule__GSSFilterSelect__Group__1 )
             // InternalFILTERS.g:5208:2: rule__GSSFilterSelect__Group__0__Impl rule__GSSFilterSelect__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterSelect__Group__0__Impl();
 
             state._fsp--;
@@ -16775,7 +16775,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5234:1: ( rule__GSSFilterSelect__Group__1__Impl rule__GSSFilterSelect__Group__2 )
             // InternalFILTERS.g:5235:2: rule__GSSFilterSelect__Group__1__Impl rule__GSSFilterSelect__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_36);
+            pushFollow(FollowSets000.FOLLOW_37);
             rule__GSSFilterSelect__Group__1__Impl();
 
             state._fsp--;
@@ -16933,7 +16933,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5288:1: ( rule__GSSFilterSelect__Group__3__Impl rule__GSSFilterSelect__Group__4 )
             // InternalFILTERS.g:5289:2: rule__GSSFilterSelect__Group__3__Impl rule__GSSFilterSelect__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSFilterSelect__Group__3__Impl();
 
             state._fsp--;
@@ -17101,7 +17101,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5342:1: ( rule__GSSFilterSelect__Group__5__Impl rule__GSSFilterSelect__Group__6 )
             // InternalFILTERS.g:5343:2: rule__GSSFilterSelect__Group__5__Impl rule__GSSFilterSelect__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_31);
+            pushFollow(FollowSets000.FOLLOW_32);
             rule__GSSFilterSelect__Group__5__Impl();
 
             state._fsp--;
@@ -17259,7 +17259,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5396:1: ( rule__GSSFilterSelect__Group__7__Impl rule__GSSFilterSelect__Group__8 )
             // InternalFILTERS.g:5397:2: rule__GSSFilterSelect__Group__7__Impl rule__GSSFilterSelect__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_37);
+            pushFollow(FollowSets000.FOLLOW_38);
             rule__GSSFilterSelect__Group__7__Impl();
 
             state._fsp--;
@@ -17427,7 +17427,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5450:1: ( rule__GSSFilterSelect__Group__9__Impl rule__GSSFilterSelect__Group__10 )
             // InternalFILTERS.g:5451:2: rule__GSSFilterSelect__Group__9__Impl rule__GSSFilterSelect__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_38);
+            pushFollow(FollowSets000.FOLLOW_39);
             rule__GSSFilterSelect__Group__9__Impl();
 
             state._fsp--;
@@ -17506,7 +17506,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5477:1: ( rule__GSSFilterSelect__Group__10__Impl rule__GSSFilterSelect__Group__11 )
             // InternalFILTERS.g:5478:2: rule__GSSFilterSelect__Group__10__Impl rule__GSSFilterSelect__Group__11
             {
-            pushFollow(FollowSets000.FOLLOW_38);
+            pushFollow(FollowSets000.FOLLOW_39);
             rule__GSSFilterSelect__Group__10__Impl();
 
             state._fsp--;
@@ -17606,7 +17606,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5504:1: ( rule__GSSFilterSelect__Group__11__Impl rule__GSSFilterSelect__Group__12 )
             // InternalFILTERS.g:5505:2: rule__GSSFilterSelect__Group__11__Impl rule__GSSFilterSelect__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_38);
+            pushFollow(FollowSets000.FOLLOW_39);
             rule__GSSFilterSelect__Group__11__Impl();
 
             state._fsp--;
@@ -17706,7 +17706,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5531:1: ( rule__GSSFilterSelect__Group__12__Impl rule__GSSFilterSelect__Group__13 )
             // InternalFILTERS.g:5532:2: rule__GSSFilterSelect__Group__12__Impl rule__GSSFilterSelect__Group__13
             {
-            pushFollow(FollowSets000.FOLLOW_38);
+            pushFollow(FollowSets000.FOLLOW_39);
             rule__GSSFilterSelect__Group__12__Impl();
 
             state._fsp--;
@@ -18038,7 +18038,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5639:1: ( rule__GSSFilterSelect__Group_10__1__Impl rule__GSSFilterSelect__Group_10__2 )
             // InternalFILTERS.g:5640:2: rule__GSSFilterSelect__Group_10__1__Impl rule__GSSFilterSelect__Group_10__2
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterSelect__Group_10__1__Impl();
 
             state._fsp--;
@@ -18359,7 +18359,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5747:1: ( rule__GSSFilterSelect__Group_11__1__Impl rule__GSSFilterSelect__Group_11__2 )
             // InternalFILTERS.g:5748:2: rule__GSSFilterSelect__Group_11__1__Impl rule__GSSFilterSelect__Group_11__2
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterSelect__Group_11__1__Impl();
 
             state._fsp--;
@@ -18680,7 +18680,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5855:1: ( rule__GSSFilterSelect__Group_12__1__Impl rule__GSSFilterSelect__Group_12__2 )
             // InternalFILTERS.g:5856:2: rule__GSSFilterSelect__Group_12__1__Impl rule__GSSFilterSelect__Group_12__2
             {
-            pushFollow(FollowSets000.FOLLOW_35);
+            pushFollow(FollowSets000.FOLLOW_36);
             rule__GSSFilterSelect__Group_12__1__Impl();
 
             state._fsp--;
@@ -18922,7 +18922,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5936:1: ( rule__GSSFilterSelectLine__Group__0__Impl rule__GSSFilterSelectLine__Group__1 )
             // InternalFILTERS.g:5937:2: rule__GSSFilterSelectLine__Group__0__Impl rule__GSSFilterSelectLine__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterSelectLine__Group__0__Impl();
 
             state._fsp--;
@@ -19001,7 +19001,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:5963:1: ( rule__GSSFilterSelectLine__Group__1__Impl rule__GSSFilterSelectLine__Group__2 )
             // InternalFILTERS.g:5964:2: rule__GSSFilterSelectLine__Group__1__Impl rule__GSSFilterSelectLine__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_36);
+            pushFollow(FollowSets000.FOLLOW_37);
             rule__GSSFilterSelectLine__Group__1__Impl();
 
             state._fsp--;
@@ -19159,7 +19159,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6017:1: ( rule__GSSFilterSelectLine__Group__3__Impl rule__GSSFilterSelectLine__Group__4 )
             // InternalFILTERS.g:6018:2: rule__GSSFilterSelectLine__Group__3__Impl rule__GSSFilterSelectLine__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSFilterSelectLine__Group__3__Impl();
 
             state._fsp--;
@@ -19327,7 +19327,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6071:1: ( rule__GSSFilterSelectLine__Group__5__Impl rule__GSSFilterSelectLine__Group__6 )
             // InternalFILTERS.g:6072:2: rule__GSSFilterSelectLine__Group__5__Impl rule__GSSFilterSelectLine__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_39);
+            pushFollow(FollowSets000.FOLLOW_40);
             rule__GSSFilterSelectLine__Group__5__Impl();
 
             state._fsp--;
@@ -19485,7 +19485,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6125:1: ( rule__GSSFilterSelectLine__Group__7__Impl rule__GSSFilterSelectLine__Group__8 )
             // InternalFILTERS.g:6126:2: rule__GSSFilterSelectLine__Group__7__Impl rule__GSSFilterSelectLine__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterSelectLine__Group__7__Impl();
 
             state._fsp--;
@@ -19653,7 +19653,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6179:1: ( rule__GSSFilterSelectLine__Group__9__Impl rule__GSSFilterSelectLine__Group__10 )
             // InternalFILTERS.g:6180:2: rule__GSSFilterSelectLine__Group__9__Impl rule__GSSFilterSelectLine__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_40);
+            pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSFilterSelectLine__Group__9__Impl();
 
             state._fsp--;
@@ -19732,7 +19732,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6206:1: ( rule__GSSFilterSelectLine__Group__10__Impl rule__GSSFilterSelectLine__Group__11 )
             // InternalFILTERS.g:6207:2: rule__GSSFilterSelectLine__Group__10__Impl rule__GSSFilterSelectLine__Group__11
             {
-            pushFollow(FollowSets000.FOLLOW_40);
+            pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSFilterSelectLine__Group__10__Impl();
 
             state._fsp--;
@@ -19832,7 +19832,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6233:1: ( rule__GSSFilterSelectLine__Group__11__Impl rule__GSSFilterSelectLine__Group__12 )
             // InternalFILTERS.g:6234:2: rule__GSSFilterSelectLine__Group__11__Impl rule__GSSFilterSelectLine__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_40);
+            pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSFilterSelectLine__Group__11__Impl();
 
             state._fsp--;
@@ -19932,7 +19932,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6260:1: ( rule__GSSFilterSelectLine__Group__12__Impl rule__GSSFilterSelectLine__Group__13 )
             // InternalFILTERS.g:6261:2: rule__GSSFilterSelectLine__Group__12__Impl rule__GSSFilterSelectLine__Group__13
             {
-            pushFollow(FollowSets000.FOLLOW_40);
+            pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSFilterSelectLine__Group__12__Impl();
 
             state._fsp--;
@@ -20264,7 +20264,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6368:1: ( rule__GSSFilterSelectLine__Group_10__1__Impl rule__GSSFilterSelectLine__Group_10__2 )
             // InternalFILTERS.g:6369:2: rule__GSSFilterSelectLine__Group_10__1__Impl rule__GSSFilterSelectLine__Group_10__2
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterSelectLine__Group_10__1__Impl();
 
             state._fsp--;
@@ -20585,7 +20585,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6476:1: ( rule__GSSFilterSelectLine__Group_11__1__Impl rule__GSSFilterSelectLine__Group_11__2 )
             // InternalFILTERS.g:6477:2: rule__GSSFilterSelectLine__Group_11__1__Impl rule__GSSFilterSelectLine__Group_11__2
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterSelectLine__Group_11__1__Impl();
 
             state._fsp--;
@@ -20906,7 +20906,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6584:1: ( rule__GSSFilterSelectLine__Group_12__1__Impl rule__GSSFilterSelectLine__Group_12__2 )
             // InternalFILTERS.g:6585:2: rule__GSSFilterSelectLine__Group_12__1__Impl rule__GSSFilterSelectLine__Group_12__2
             {
-            pushFollow(FollowSets000.FOLLOW_35);
+            pushFollow(FollowSets000.FOLLOW_36);
             rule__GSSFilterSelectLine__Group_12__1__Impl();
 
             state._fsp--;
@@ -21148,7 +21148,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6665:1: ( rule__GSSFilterAIFieldRef__Group__0__Impl rule__GSSFilterAIFieldRef__Group__1 )
             // InternalFILTERS.g:6666:2: rule__GSSFilterAIFieldRef__Group__0__Impl rule__GSSFilterAIFieldRef__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterAIFieldRef__Group__0__Impl();
 
             state._fsp--;
@@ -21227,7 +21227,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6692:1: ( rule__GSSFilterAIFieldRef__Group__1__Impl rule__GSSFilterAIFieldRef__Group__2 )
             // InternalFILTERS.g:6693:2: rule__GSSFilterAIFieldRef__Group__1__Impl rule__GSSFilterAIFieldRef__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_41);
+            pushFollow(FollowSets000.FOLLOW_42);
             rule__GSSFilterAIFieldRef__Group__1__Impl();
 
             state._fsp--;
@@ -21385,7 +21385,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6746:1: ( rule__GSSFilterAIFieldRef__Group__3__Impl rule__GSSFilterAIFieldRef__Group__4 )
             // InternalFILTERS.g:6747:2: rule__GSSFilterAIFieldRef__Group__3__Impl rule__GSSFilterAIFieldRef__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterAIFieldRef__Group__3__Impl();
 
             state._fsp--;
@@ -21553,7 +21553,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6800:1: ( rule__GSSFilterAIFieldRef__Group__5__Impl rule__GSSFilterAIFieldRef__Group__6 )
             // InternalFILTERS.g:6801:2: rule__GSSFilterAIFieldRef__Group__5__Impl rule__GSSFilterAIFieldRef__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_11);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterAIFieldRef__Group__5__Impl();
 
             state._fsp--;
@@ -21785,7 +21785,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6881:1: ( rule__GSSFilterAIFieldRefs__Group__0__Impl rule__GSSFilterAIFieldRefs__Group__1 )
             // InternalFILTERS.g:6882:2: rule__GSSFilterAIFieldRefs__Group__0__Impl rule__GSSFilterAIFieldRefs__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterAIFieldRefs__Group__0__Impl();
 
             state._fsp--;
@@ -21864,7 +21864,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6908:1: ( rule__GSSFilterAIFieldRefs__Group__1__Impl rule__GSSFilterAIFieldRefs__Group__2 )
             // InternalFILTERS.g:6909:2: rule__GSSFilterAIFieldRefs__Group__1__Impl rule__GSSFilterAIFieldRefs__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_22);
             rule__GSSFilterAIFieldRefs__Group__1__Impl();
 
             state._fsp--;
@@ -22022,7 +22022,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:6962:1: ( rule__GSSFilterAIFieldRefs__Group__3__Impl rule__GSSFilterAIFieldRefs__Group__4 )
             // InternalFILTERS.g:6963:2: rule__GSSFilterAIFieldRefs__Group__3__Impl rule__GSSFilterAIFieldRefs__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSFilterAIFieldRefs__Group__3__Impl();
 
             state._fsp--;
@@ -22190,7 +22190,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7016:1: ( rule__GSSFilterAIFieldRefs__Group__5__Impl rule__GSSFilterAIFieldRefs__Group__6 )
             // InternalFILTERS.g:7017:2: rule__GSSFilterAIFieldRefs__Group__5__Impl rule__GSSFilterAIFieldRefs__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_11);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterAIFieldRefs__Group__5__Impl();
 
             state._fsp--;
@@ -22422,7 +22422,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7097:1: ( rule__GSSFilterMaxterm__Group__0__Impl rule__GSSFilterMaxterm__Group__1 )
             // InternalFILTERS.g:7098:2: rule__GSSFilterMaxterm__Group__0__Impl rule__GSSFilterMaxterm__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterMaxterm__Group__0__Impl();
 
             state._fsp--;
@@ -22501,7 +22501,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7124:1: ( rule__GSSFilterMaxterm__Group__1__Impl rule__GSSFilterMaxterm__Group__2 )
             // InternalFILTERS.g:7125:2: rule__GSSFilterMaxterm__Group__1__Impl rule__GSSFilterMaxterm__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSFilterMaxterm__Group__1__Impl();
 
             state._fsp--;
@@ -22659,7 +22659,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7178:1: ( rule__GSSFilterMaxterm__Group__3__Impl rule__GSSFilterMaxterm__Group__4 )
             // InternalFILTERS.g:7179:2: rule__GSSFilterMaxterm__Group__3__Impl rule__GSSFilterMaxterm__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterMaxterm__Group__3__Impl();
 
             state._fsp--;
@@ -22827,7 +22827,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7232:1: ( rule__GSSFilterMaxterm__Group__5__Impl rule__GSSFilterMaxterm__Group__6 )
             // InternalFILTERS.g:7233:2: rule__GSSFilterMaxterm__Group__5__Impl rule__GSSFilterMaxterm__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_42);
+            pushFollow(FollowSets000.FOLLOW_43);
             rule__GSSFilterMaxterm__Group__5__Impl();
 
             state._fsp--;
@@ -22906,7 +22906,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7259:1: ( rule__GSSFilterMaxterm__Group__6__Impl rule__GSSFilterMaxterm__Group__7 )
             // InternalFILTERS.g:7260:2: rule__GSSFilterMaxterm__Group__6__Impl rule__GSSFilterMaxterm__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_11);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterMaxterm__Group__6__Impl();
 
             state._fsp--;
@@ -22956,7 +22956,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7275:3: ( rule__GSSFilterMaxterm__BoolVarRefAssignment_6 )
             // InternalFILTERS.g:7275:4: rule__GSSFilterMaxterm__BoolVarRefAssignment_6
             {
-            pushFollow(FollowSets000.FOLLOW_43);
+            pushFollow(FollowSets000.FOLLOW_44);
             rule__GSSFilterMaxterm__BoolVarRefAssignment_6();
 
             state._fsp--;
@@ -22991,7 +22991,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalFILTERS.g:7280:4: rule__GSSFilterMaxterm__BoolVarRefAssignment_6
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_43);
+            	    pushFollow(FollowSets000.FOLLOW_44);
             	    rule__GSSFilterMaxterm__BoolVarRefAssignment_6();
 
             	    state._fsp--;
@@ -23195,7 +23195,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7347:1: ( rule__GSSFilterMinterm__Group__0__Impl rule__GSSFilterMinterm__Group__1 )
             // InternalFILTERS.g:7348:2: rule__GSSFilterMinterm__Group__0__Impl rule__GSSFilterMinterm__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterMinterm__Group__0__Impl();
 
             state._fsp--;
@@ -23274,7 +23274,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7374:1: ( rule__GSSFilterMinterm__Group__1__Impl rule__GSSFilterMinterm__Group__2 )
             // InternalFILTERS.g:7375:2: rule__GSSFilterMinterm__Group__1__Impl rule__GSSFilterMinterm__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSFilterMinterm__Group__1__Impl();
 
             state._fsp--;
@@ -23432,7 +23432,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7428:1: ( rule__GSSFilterMinterm__Group__3__Impl rule__GSSFilterMinterm__Group__4 )
             // InternalFILTERS.g:7429:2: rule__GSSFilterMinterm__Group__3__Impl rule__GSSFilterMinterm__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterMinterm__Group__3__Impl();
 
             state._fsp--;
@@ -23511,7 +23511,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7455:1: ( rule__GSSFilterMinterm__Group__4__Impl rule__GSSFilterMinterm__Group__5 )
             // InternalFILTERS.g:7456:2: rule__GSSFilterMinterm__Group__4__Impl rule__GSSFilterMinterm__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_42);
+            pushFollow(FollowSets000.FOLLOW_43);
             rule__GSSFilterMinterm__Group__4__Impl();
 
             state._fsp--;
@@ -23600,7 +23600,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7482:1: ( rule__GSSFilterMinterm__Group__5__Impl rule__GSSFilterMinterm__Group__6 )
             // InternalFILTERS.g:7483:2: rule__GSSFilterMinterm__Group__5__Impl rule__GSSFilterMinterm__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_11);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterMinterm__Group__5__Impl();
 
             state._fsp--;
@@ -23650,7 +23650,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7498:3: ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 )
             // InternalFILTERS.g:7498:4: rule__GSSFilterMinterm__BoolVarRefAssignment_5
             {
-            pushFollow(FollowSets000.FOLLOW_43);
+            pushFollow(FollowSets000.FOLLOW_44);
             rule__GSSFilterMinterm__BoolVarRefAssignment_5();
 
             state._fsp--;
@@ -23685,7 +23685,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalFILTERS.g:7503:4: rule__GSSFilterMinterm__BoolVarRefAssignment_5
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_43);
+            	    pushFollow(FollowSets000.FOLLOW_44);
             	    rule__GSSFilterMinterm__BoolVarRefAssignment_5();
 
             	    state._fsp--;
@@ -23889,7 +23889,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7570:1: ( rule__GSSFilterBoolVarRef__Group__0__Impl rule__GSSFilterBoolVarRef__Group__1 )
             // InternalFILTERS.g:7571:2: rule__GSSFilterBoolVarRef__Group__0__Impl rule__GSSFilterBoolVarRef__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterBoolVarRef__Group__0__Impl();
 
             state._fsp--;
@@ -23968,7 +23968,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7597:1: ( rule__GSSFilterBoolVarRef__Group__1__Impl rule__GSSFilterBoolVarRef__Group__2 )
             // InternalFILTERS.g:7598:2: rule__GSSFilterBoolVarRef__Group__1__Impl rule__GSSFilterBoolVarRef__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_44);
+            pushFollow(FollowSets000.FOLLOW_45);
             rule__GSSFilterBoolVarRef__Group__1__Impl();
 
             state._fsp--;
@@ -24126,7 +24126,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7651:1: ( rule__GSSFilterBoolVarRef__Group__3__Impl rule__GSSFilterBoolVarRef__Group__4 )
             // InternalFILTERS.g:7652:2: rule__GSSFilterBoolVarRef__Group__3__Impl rule__GSSFilterBoolVarRef__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterBoolVarRef__Group__3__Impl();
 
             state._fsp--;
@@ -24294,7 +24294,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7705:1: ( rule__GSSFilterBoolVarRef__Group__5__Impl rule__GSSFilterBoolVarRef__Group__6 )
             // InternalFILTERS.g:7706:2: rule__GSSFilterBoolVarRef__Group__5__Impl rule__GSSFilterBoolVarRef__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_11);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterBoolVarRef__Group__5__Impl();
 
             state._fsp--;
@@ -24526,7 +24526,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7786:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
             // InternalFILTERS.g:7787:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_45);
+            pushFollow(FollowSets000.FOLLOW_46);
             rule__QualifiedName__Group__0__Impl();
 
             state._fsp--;
@@ -24659,7 +24659,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalFILTERS.g:7827:3: rule__QualifiedName__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_46);
+            	    pushFollow(FollowSets000.FOLLOW_47);
             	    rule__QualifiedName__Group_1__0();
 
             	    state._fsp--;
@@ -24707,7 +24707,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7840:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
             // InternalFILTERS.g:7841:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__QualifiedName__Group_1__0__Impl();
 
             state._fsp--;
@@ -24860,7 +24860,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7894:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
             // InternalFILTERS.g:7895:2: rule__Version__Group__0__Impl rule__Version__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_45);
+            pushFollow(FollowSets000.FOLLOW_46);
             rule__Version__Group__0__Impl();
 
             state._fsp--;
@@ -25003,7 +25003,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalFILTERS.g:7935:3: rule__Version__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_46);
+            	    pushFollow(FollowSets000.FOLLOW_47);
             	    rule__Version__Group_1__0();
 
             	    state._fsp--;
@@ -25051,7 +25051,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7948:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
             // InternalFILTERS.g:7949:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__Version__Group_0_1__0__Impl();
 
             state._fsp--;
@@ -25221,7 +25221,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:8002:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
             // InternalFILTERS.g:8003:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__Version__Group_1__0__Impl();
 
             state._fsp--;
@@ -25384,7 +25384,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:8056:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
             // InternalFILTERS.g:8057:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__Version__Group_1_1_1__0__Impl();
 
             state._fsp--;
@@ -25554,7 +25554,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:8110:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
             // InternalFILTERS.g:8111:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_47);
+            pushFollow(FollowSets000.FOLLOW_48);
             rule__VersionedQualifiedName__Group__0__Impl();
 
             state._fsp--;
@@ -25637,7 +25637,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:8137:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
             // InternalFILTERS.g:8138:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__VersionedQualifiedName__Group__1__Impl();
 
             state._fsp--;
@@ -25716,7 +25716,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:8164:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
             // InternalFILTERS.g:8165:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_48);
+            pushFollow(FollowSets000.FOLLOW_49);
             rule__VersionedQualifiedName__Group__2__Impl();
 
             state._fsp--;
@@ -25873,7 +25873,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:8218:1: ( rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 )
             // InternalFILTERS.g:8219:2: rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_49);
+            pushFollow(FollowSets000.FOLLOW_50);
             rule__INTEGER__Group_0__0__Impl();
 
             state._fsp--;
@@ -26228,7 +26228,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:8331:1: ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1 )? )
             // InternalFILTERS.g:8332:2: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1 )?
             {
-            pushFollow(FollowSets000.FOLLOW_50);
+            pushFollow(FollowSets000.FOLLOW_51);
             rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl();
 
             state._fsp--;
@@ -26504,7 +26504,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:8414:1: ( rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMintermFilter__UnorderedGroup_3__1 )? )
             // InternalFILTERS.g:8415:2: rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMintermFilter__UnorderedGroup_3__1 )?
             {
-            pushFollow(FollowSets000.FOLLOW_50);
+            pushFollow(FollowSets000.FOLLOW_51);
             rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl();
 
             state._fsp--;
@@ -26676,24 +26676,24 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFileImport__ImportURIAssignment_2"
-    // InternalFILTERS.g:8464:1: rule__GSSModelFileImport__ImportURIAssignment_2 : ( RULE_ID ) ;
+    // InternalFILTERS.g:8464:1: rule__GSSModelFileImport__ImportURIAssignment_2 : ( RULE_STRING ) ;
     public final void rule__GSSModelFileImport__ImportURIAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8468:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:8469:2: ( RULE_ID )
+            // InternalFILTERS.g:8468:1: ( ( RULE_STRING ) )
+            // InternalFILTERS.g:8469:2: ( RULE_STRING )
             {
-            // InternalFILTERS.g:8469:2: ( RULE_ID )
-            // InternalFILTERS.g:8470:3: RULE_ID
+            // InternalFILTERS.g:8469:2: ( RULE_STRING )
+            // InternalFILTERS.g:8470:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0()); 
+               before(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0()); 
+               after(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
             }
 
             }
@@ -29908,51 +29908,52 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000820000000L});
         public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000004000002L});
         public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000040000000L});
-        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000500000000L});
-        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x1000000000000000L});
-        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x1000000000000002L});
-        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000200000000L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x00000B1000000000L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x00000B1000000002L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x2000000000000000L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x2000000000000002L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000002000000000L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x00000000000000C0L,0x0000000000000008L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000004000000000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000008000000000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x000000000001F000L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000100000000000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000200000000000L});
-        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0024800000000000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0200000000000000L});
-        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000040000000000L});
-        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0800000000000000L});
-        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000400000000000L});
-        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x00000000007E0000L});
-        public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0001000000000000L});
-        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0002000080000000L});
-        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000000000080L});
-        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0008000000000000L});
-        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000003800000L});
-        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0012000081000000L});
-        public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0040000000000000L});
-        public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0182000080000000L});
-        public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0400000000000000L});
-        public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x4000000000000000L});
-        public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x4000000000000002L});
-        public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x8000000000000000L});
-        public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-        public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
-        public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-        public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000040L,0x0000000000000008L});
-        public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000500000002L});
+        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000500000000L});
+        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x1000000000000000L});
+        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000080000000L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x1000000000000002L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000200000000L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x00000B1000000000L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x00000B1000000002L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x2000000000000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x2000000000000002L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000002000000000L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x00000000000000C0L,0x0000000000000008L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000004000000000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000008000000000L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x000000000001F000L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000100000000000L});
+        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000200000000000L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0024800000000000L});
+        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0200000000000000L});
+        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000040000000000L});
+        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0800000000000000L});
+        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000400000000000L});
+        public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x00000000007E0000L});
+        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0001000000000000L});
+        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0002000080000000L});
+        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000000000080L});
+        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0008000000000000L});
+        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000003800000L});
+        public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0012000081000000L});
+        public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0040000000000000L});
+        public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0182000080000000L});
+        public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0400000000000000L});
+        public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x4000000000000000L});
+        public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x4000000000000002L});
+        public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x8000000000000000L});
+        public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+        public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
+        public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+        public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000000040L,0x0000000000000008L});
+        public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000000500000002L});
     }
 
 

@@ -13,7 +13,7 @@ GSSModelFile returns common::GSSModelFile:
 ;
 
 GSSModelFileImport returns common::GSSModelFileImport: 
-	'import' ':=' importURI=ID ';'
+	'import' ':=' importURI=STRING ';'
 ;
 
 GSSProtocolPacketsProtocolPackets returns GSSProtocolPacketsProtocolPackets:
@@ -31,7 +31,7 @@ GSSProtocolPacketsProtocolPacket returns GSSProtocolPacketsProtocolPacket:
 		'name' ':=' name=ID ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'levelRef' ':=' levelRef=INTEGER ';'
-		export=[export::GSSExportExport|VersionedQualifiedName] ';'
+		'export' ':=' export=[export::GSSExportExport|VersionedQualifiedName] ';'
 		format=GSSProtocolPacketsFormat
 	'}' ';'
 ;

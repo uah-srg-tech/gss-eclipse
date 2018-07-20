@@ -39,15 +39,15 @@ public class InternalCONFIGLexer extends Lexer {
     public static final int T__135=135;
     public static final int T__61=61;
     public static final int T__134=134;
-    public static final int RULE_ID=4;
+    public static final int RULE_ID=5;
     public static final int T__131=131;
     public static final int T__130=130;
-    public static final int RULE_INT=5;
+    public static final int RULE_INT=6;
     public static final int T__66=66;
     public static final int RULE_ML_COMMENT=8;
     public static final int T__67=67;
     public static final int T__129=129;
-    public static final int RULE_HEXADECIMAL=6;
+    public static final int RULE_HEXADECIMAL=7;
     public static final int T__68=68;
     public static final int T__69=69;
     public static final int T__62=62;
@@ -128,7 +128,7 @@ public class InternalCONFIGLexer extends Lexer {
     public static final int T__72=72;
     public static final int T__123=123;
     public static final int T__120=120;
-    public static final int RULE_STRING=7;
+    public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__77=77;
     public static final int T__119=119;

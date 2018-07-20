@@ -828,9 +828,9 @@ rule__GSSModelFileImport__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_1()); }
-	(rule__GSSModelFileImport__ImportURIAssignment_1)
-	{ after(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_1()); }
+	{ before(grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1()); }
+	':='
+	{ after(grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1()); }
 )
 ;
 finally {
@@ -843,6 +843,7 @@ rule__GSSModelFileImport__Group__2
 	}
 :
 	rule__GSSModelFileImport__Group__2__Impl
+	rule__GSSModelFileImport__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -854,9 +855,35 @@ rule__GSSModelFileImport__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_2()); }
+	{ before(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_2()); }
+	(rule__GSSModelFileImport__ImportURIAssignment_2)
+	{ after(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSModelFileImport__Group__3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSModelFileImport__Group__3__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSModelFileImport__Group__3__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_3()); }
 	';'
-	{ after(grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_2()); }
+	{ after(grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_3()); }
 )
 ;
 finally {
@@ -7714,15 +7741,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSModelFileImport__ImportURIAssignment_1
+rule__GSSModelFileImport__ImportURIAssignment_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_1_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_1_0()); }
+		{ before(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); }
 	)
 ;
 finally {

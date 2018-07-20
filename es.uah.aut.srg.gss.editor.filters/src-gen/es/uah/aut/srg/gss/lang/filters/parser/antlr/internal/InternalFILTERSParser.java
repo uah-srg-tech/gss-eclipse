@@ -34,7 +34,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalFILTERSParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_HEXADECIMAL", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSFilterMaxtermFilter'", "'{'", "'uri'", "'version'", "'formatFile'", "'}'", "'GSSFilterMintermFilter'", "'GSSFilterBoolVar'", "'id'", "'name'", "'constantType'", "'GSSFilterBoolVarFromArrayItem'", "'GSSFilterBoolVarFromGroupedArrayItem'", "'group'", "'GSSFilterBoolVarFDIC'", "'GSSFilterFieldRef'", "'GSSFilterFieldOp'", "'type'", "'GSSFilterConstant'", "'value'", "'mask'", "'GSSFilterSelect'", "'fromFile'", "'offset'", "'size'", "'GSSFilterSelectLine'", "'line'", "'leftTrim'", "'rightTrim'", "'GSSFilterAIFieldRef'", "'index'", "'GSSFilterAIFieldRefs'", "'GSSFilterMaxterm'", "'GSSFilterMinterm'", "'GSSFilterBoolVarRef'", "'idRef'", "'.'", "'('", "')'", "'-'", "'decimal'", "'hex'", "'binary'", "'char'", "'string'", "'equal'", "'different'", "'bigger_than'", "'smaller_than'", "'bigger_or_equal'", "'smaller_or_equal'", "'data'", "'crc'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_HEXADECIMAL", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSFilterMaxtermFilter'", "'{'", "'uri'", "'version'", "'formatFile'", "'}'", "'GSSFilterMintermFilter'", "'GSSFilterBoolVar'", "'id'", "'name'", "'constantType'", "'GSSFilterBoolVarFromArrayItem'", "'GSSFilterBoolVarFromGroupedArrayItem'", "'group'", "'GSSFilterBoolVarFDIC'", "'GSSFilterFieldRef'", "'GSSFilterFieldOp'", "'type'", "'GSSFilterConstant'", "'value'", "'mask'", "'GSSFilterSelect'", "'fromFile'", "'offset'", "'size'", "'GSSFilterSelectLine'", "'line'", "'leftTrim'", "'rightTrim'", "'GSSFilterAIFieldRef'", "'index'", "'GSSFilterAIFieldRefs'", "'GSSFilterMaxterm'", "'GSSFilterMinterm'", "'GSSFilterBoolVarRef'", "'idRef'", "'.'", "'('", "')'", "'-'", "'decimal'", "'hex'", "'binary'", "'char'", "'string'", "'equal'", "'different'", "'bigger_than'", "'smaller_than'", "'bigger_or_equal'", "'smaller_or_equal'", "'data'", "'crc'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -56,7 +56,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
     public static final int T__54=54;
     public static final int T__60=60;
     public static final int T__61=61;
-    public static final int RULE_ID=4;
+    public static final int RULE_ID=5;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
@@ -67,7 +67,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
     public static final int RULE_ML_COMMENT=8;
     public static final int T__23=23;
     public static final int T__67=67;
-    public static final int RULE_HEXADECIMAL=5;
+    public static final int RULE_HEXADECIMAL=6;
     public static final int T__24=24;
     public static final int T__25=25;
     public static final int T__62=62;
@@ -76,7 +76,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
     public static final int T__64=64;
     public static final int T__21=21;
     public static final int T__65=65;
-    public static final int RULE_STRING=6;
+    public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__37=37;
     public static final int T__38=38;
@@ -359,7 +359,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSModelFileImport"
-    // InternalFILTERS.g:143:1: ruleGSSModelFileImport returns [EObject current=null] : (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' ) ;
+    // InternalFILTERS.g:143:1: ruleGSSModelFileImport returns [EObject current=null] : (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' ) ;
     public final EObject ruleGSSModelFileImport() throws RecognitionException {
         EObject current = null;
 
@@ -372,11 +372,11 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTERS.g:149:2: ( (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' ) )
-            // InternalFILTERS.g:150:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' )
+            // InternalFILTERS.g:149:2: ( (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' ) )
+            // InternalFILTERS.g:150:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' )
             {
-            // InternalFILTERS.g:150:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' )
-            // InternalFILTERS.g:151:3: otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';'
+            // InternalFILTERS.g:150:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' )
+            // InternalFILTERS.g:151:3: otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';'
             {
             otherlv_0=(Token)match(input,12,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -390,16 +390,16 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1());
               		
             }
-            // InternalFILTERS.g:159:3: ( (lv_importURI_2_0= RULE_ID ) )
-            // InternalFILTERS.g:160:4: (lv_importURI_2_0= RULE_ID )
+            // InternalFILTERS.g:159:3: ( (lv_importURI_2_0= RULE_STRING ) )
+            // InternalFILTERS.g:160:4: (lv_importURI_2_0= RULE_STRING )
             {
-            // InternalFILTERS.g:160:4: (lv_importURI_2_0= RULE_ID )
-            // InternalFILTERS.g:161:5: lv_importURI_2_0= RULE_ID
+            // InternalFILTERS.g:160:4: (lv_importURI_2_0= RULE_STRING )
+            // InternalFILTERS.g:161:5: lv_importURI_2_0= RULE_STRING
             {
-            lv_importURI_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            lv_importURI_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0());
+              					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0());
               				
             }
             if ( state.backtracking==0 ) {
@@ -411,7 +411,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               						current,
               						"importURI",
               						lv_importURI_2_0,
-              						"org.eclipse.xtext.common.Terminals.ID");
+              						"org.eclipse.xtext.common.Terminals.STRING");
               				
             }
 
@@ -699,7 +699,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:251:2: (otherlv_0= 'GSSFilterMaxtermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( (lv_formatFile_14_0= RULE_ID ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) ) ( (lv_Maxterm_20_0= ruleGSSFilterMaxterm ) )+ otherlv_21= '}' otherlv_22= ';' )
             // InternalFILTERS.g:252:3: otherlv_0= 'GSSFilterMaxtermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( (lv_formatFile_14_0= RULE_ID ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) ) ( (lv_Maxterm_20_0= ruleGSSFilterMaxterm ) )+ otherlv_21= '}' otherlv_22= ';'
             {
-            otherlv_0=(Token)match(input,15,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_0=(Token)match(input,15,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterMaxtermFilterAccess().getGSSFilterMaxtermFilterKeyword_0());
@@ -711,7 +711,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:257:4: (lv_name_1_0= RULE_ID )
             // InternalFILTERS.g:258:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_name_1_0, grammarAccess.getGSSFilterMaxtermFilterAccess().getNameIDTerminalRuleCall_1_0());
@@ -735,7 +735,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,16,FollowSets000.FOLLOW_8); if (state.failed) return current;
+            otherlv_2=(Token)match(input,16,FollowSets000.FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterMaxtermFilterAccess().getLeftCurlyBracketKeyword_2());
@@ -797,7 +797,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	      									newLeafNode(otherlv_4, grammarAccess.getGSSFilterMaxtermFilterAccess().getUriKeyword_3_0_0());
             	      								
             	    }
-            	    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_5, grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_3_0_1());
@@ -838,7 +838,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_9); if (state.failed) return current;
+            	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_10); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_7, grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_3_0_3());
@@ -893,7 +893,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	      										newLeafNode(otherlv_8, grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionKeyword_3_1_0_0());
             	      									
             	    }
-            	    otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            	    otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(otherlv_9, grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_3_1_0_1());
@@ -934,7 +934,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            	    otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(otherlv_11, grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_3_1_0_3());
@@ -949,7 +949,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	      									newLeafNode(otherlv_12, grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileKeyword_3_1_1());
             	      								
             	    }
-            	    otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	    otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_13, grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_3_1_2());
@@ -985,7 +985,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return current;
+            	    otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_13); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_15, grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_3_1_4());
@@ -1035,7 +1035,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	    	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0());
             	    	      											
             	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_13);
+            	    	    pushFollow(FollowSets000.FOLLOW_14);
             	    	    lv_BoolVar_16_0=ruleGSSFilterBoolVar();
 
             	    	    state._fsp--;
@@ -1076,7 +1076,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	    	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0());
             	    	      											
             	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_13);
+            	    	    pushFollow(FollowSets000.FOLLOW_14);
             	    	    lv_BoolVarFromArrayItem_17_0=ruleGSSFilterBoolVarFromArrayItem();
 
             	    	    state._fsp--;
@@ -1117,7 +1117,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	    	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0());
             	    	      											
             	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_13);
+            	    	    pushFollow(FollowSets000.FOLLOW_14);
             	    	    lv_BoolVarFromGroupedArrayItem_18_0=ruleGSSFilterBoolVarFromGroupedArrayItem();
 
             	    	    state._fsp--;
@@ -1158,7 +1158,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	    	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0());
             	    	      											
             	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_13);
+            	    	    pushFollow(FollowSets000.FOLLOW_14);
             	    	    lv_BoolVarFDIC_19_0=ruleGSSFilterBoolVarFDIC();
 
             	    	    state._fsp--;
@@ -1261,7 +1261,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	      					newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermGSSFilterMaxtermParserRuleCall_4_0());
             	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_14);
+            	    pushFollow(FollowSets000.FOLLOW_15);
             	    lv_Maxterm_20_0=ruleGSSFilterMaxterm();
 
             	    state._fsp--;
@@ -1431,7 +1431,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:548:2: (otherlv_0= 'GSSFilterMintermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( (lv_formatFile_14_0= RULE_ID ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) ) ( (lv_Minterm_20_0= ruleGSSFilterMinterm ) )+ otherlv_21= '}' otherlv_22= ';' )
             // InternalFILTERS.g:549:3: otherlv_0= 'GSSFilterMintermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( (lv_formatFile_14_0= RULE_ID ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) ) ( (lv_Minterm_20_0= ruleGSSFilterMinterm ) )+ otherlv_21= '}' otherlv_22= ';'
             {
-            otherlv_0=(Token)match(input,21,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_0=(Token)match(input,21,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterMintermFilterAccess().getGSSFilterMintermFilterKeyword_0());
@@ -1443,7 +1443,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:554:4: (lv_name_1_0= RULE_ID )
             // InternalFILTERS.g:555:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_name_1_0, grammarAccess.getGSSFilterMintermFilterAccess().getNameIDTerminalRuleCall_1_0());
@@ -1467,7 +1467,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,16,FollowSets000.FOLLOW_8); if (state.failed) return current;
+            otherlv_2=(Token)match(input,16,FollowSets000.FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterMintermFilterAccess().getLeftCurlyBracketKeyword_2());
@@ -1529,7 +1529,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	      									newLeafNode(otherlv_4, grammarAccess.getGSSFilterMintermFilterAccess().getUriKeyword_3_0_0());
             	      								
             	    }
-            	    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_5, grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_3_0_1());
@@ -1570,7 +1570,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_15); if (state.failed) return current;
+            	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_16); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_7, grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_3_0_3());
@@ -1625,7 +1625,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	      										newLeafNode(otherlv_8, grammarAccess.getGSSFilterMintermFilterAccess().getVersionKeyword_3_1_0_0());
             	      									
             	    }
-            	    otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            	    otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(otherlv_9, grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_3_1_0_1());
@@ -1666,7 +1666,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            	    otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      										newLeafNode(otherlv_11, grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_3_1_0_3());
@@ -1681,7 +1681,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	      									newLeafNode(otherlv_12, grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileKeyword_3_1_1());
             	      								
             	    }
-            	    otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	    otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_13, grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_3_1_2());
@@ -1717,7 +1717,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return current;
+            	    otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_13); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_15, grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_3_1_4());
@@ -1767,7 +1767,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	    	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0());
             	    	      											
             	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_16);
+            	    	    pushFollow(FollowSets000.FOLLOW_17);
             	    	    lv_BoolVar_16_0=ruleGSSFilterBoolVar();
 
             	    	    state._fsp--;
@@ -1808,7 +1808,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	    	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0());
             	    	      											
             	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_16);
+            	    	    pushFollow(FollowSets000.FOLLOW_17);
             	    	    lv_BoolVarFromArrayItem_17_0=ruleGSSFilterBoolVarFromArrayItem();
 
             	    	    state._fsp--;
@@ -1849,7 +1849,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	    	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0());
             	    	      											
             	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_16);
+            	    	    pushFollow(FollowSets000.FOLLOW_17);
             	    	    lv_BoolVarFromGroupedArrayItem_18_0=ruleGSSFilterBoolVarFromGroupedArrayItem();
 
             	    	    state._fsp--;
@@ -1890,7 +1890,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	    	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0());
             	    	      											
             	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_16);
+            	    	    pushFollow(FollowSets000.FOLLOW_17);
             	    	    lv_BoolVarFDIC_19_0=ruleGSSFilterBoolVarFDIC();
 
             	    	    state._fsp--;
@@ -1993,7 +1993,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	      					newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getMintermGSSFilterMintermParserRuleCall_4_0());
             	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_17);
+            	    pushFollow(FollowSets000.FOLLOW_18);
             	    lv_Minterm_20_0=ruleGSSFilterMinterm();
 
             	    state._fsp--;
@@ -2151,13 +2151,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:835:2: (otherlv_0= 'GSSFilterBoolVar' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' ( (lv_FieldRef_14_0= ruleGSSFilterFieldRef ) ) ( (lv_Op_15_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_16_0= ruleGSSFilterConstant ) ) | ( (lv_Select_17_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_18_0= ruleGSSFilterSelectLine ) ) ) otherlv_19= '}' otherlv_20= ';' )
             // InternalFILTERS.g:836:3: otherlv_0= 'GSSFilterBoolVar' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' ( (lv_FieldRef_14_0= ruleGSSFilterFieldRef ) ) ( (lv_Op_15_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_16_0= ruleGSSFilterConstant ) ) | ( (lv_Select_17_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_18_0= ruleGSSFilterSelectLine ) ) ) otherlv_19= '}' otherlv_20= ';'
             {
-            otherlv_0=(Token)match(input,22,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,22,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterBoolVarAccess().getGSSFilterBoolVarKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterBoolVarAccess().getLeftCurlyBracketKeyword_1());
@@ -2169,7 +2169,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterBoolVarAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterBoolVarAccess().getColonEqualsSignKeyword_3());
@@ -2210,7 +2210,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_5());
@@ -2222,7 +2222,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSFilterBoolVarAccess().getNameKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSFilterBoolVarAccess().getColonEqualsSignKeyword_7());
@@ -2258,7 +2258,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_22); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_9());
@@ -2270,7 +2270,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSFilterBoolVarAccess().getConstantTypeKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_22); if (state.failed) return current;
+            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_23); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSFilterBoolVarAccess().getColonEqualsSignKeyword_11());
@@ -2311,7 +2311,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_23); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_24); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_13());
@@ -2328,7 +2328,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               					newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefGSSFilterFieldRefParserRuleCall_14_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             lv_FieldRef_14_0=ruleGSSFilterFieldRef();
 
             state._fsp--;
@@ -2363,7 +2363,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               					newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getOpGSSFilterFieldOpParserRuleCall_15_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_25);
+            pushFollow(FollowSets000.FOLLOW_26);
             lv_Op_15_0=ruleGSSFilterFieldOp();
 
             state._fsp--;
@@ -2428,7 +2428,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getConstantGSSFilterConstantParserRuleCall_16_0_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_26);
+                    pushFollow(FollowSets000.FOLLOW_27);
                     lv_Constant_16_0=ruleGSSFilterConstant();
 
                     state._fsp--;
@@ -2469,7 +2469,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getSelectGSSFilterSelectParserRuleCall_16_1_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_26);
+                    pushFollow(FollowSets000.FOLLOW_27);
                     lv_Select_17_0=ruleGSSFilterSelect();
 
                     state._fsp--;
@@ -2510,7 +2510,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineGSSFilterSelectLineParserRuleCall_16_2_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_26);
+                    pushFollow(FollowSets000.FOLLOW_27);
                     lv_SelectLine_18_0=ruleGSSFilterSelectLine();
 
                     state._fsp--;
@@ -2660,13 +2660,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:1061:2: (otherlv_0= 'GSSFilterBoolVarFromArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' ( (lv_AIFieldRef_14_0= ruleGSSFilterAIFieldRef ) ) ( (lv_Op_15_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_16_0= ruleGSSFilterConstant ) ) | ( (lv_Select_17_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_18_0= ruleGSSFilterSelectLine ) ) ) otherlv_19= '}' otherlv_20= ';' )
             // InternalFILTERS.g:1062:3: otherlv_0= 'GSSFilterBoolVarFromArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' ( (lv_AIFieldRef_14_0= ruleGSSFilterAIFieldRef ) ) ( (lv_Op_15_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_16_0= ruleGSSFilterConstant ) ) | ( (lv_Select_17_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_18_0= ruleGSSFilterSelectLine ) ) ) otherlv_19= '}' otherlv_20= ';'
             {
-            otherlv_0=(Token)match(input,26,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,26,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getGSSFilterBoolVarFromArrayItemKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getLeftCurlyBracketKeyword_1());
@@ -2678,7 +2678,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getColonEqualsSignKeyword_3());
@@ -2719,7 +2719,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_5());
@@ -2731,7 +2731,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getNameKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getColonEqualsSignKeyword_7());
@@ -2767,7 +2767,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_22); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_9());
@@ -2779,7 +2779,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantTypeKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_22); if (state.failed) return current;
+            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_23); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getColonEqualsSignKeyword_11());
@@ -2820,7 +2820,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_28); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_13());
@@ -2837,7 +2837,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefGSSFilterAIFieldRefParserRuleCall_14_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             lv_AIFieldRef_14_0=ruleGSSFilterAIFieldRef();
 
             state._fsp--;
@@ -2872,7 +2872,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_15_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_25);
+            pushFollow(FollowSets000.FOLLOW_26);
             lv_Op_15_0=ruleGSSFilterFieldOp();
 
             state._fsp--;
@@ -2937,7 +2937,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_16_0_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_26);
+                    pushFollow(FollowSets000.FOLLOW_27);
                     lv_Constant_16_0=ruleGSSFilterConstant();
 
                     state._fsp--;
@@ -2978,7 +2978,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_16_1_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_26);
+                    pushFollow(FollowSets000.FOLLOW_27);
                     lv_Select_17_0=ruleGSSFilterSelect();
 
                     state._fsp--;
@@ -3019,7 +3019,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_16_2_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_26);
+                    pushFollow(FollowSets000.FOLLOW_27);
                     lv_SelectLine_18_0=ruleGSSFilterSelectLine();
 
                     state._fsp--;
@@ -3174,13 +3174,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:1287:2: (otherlv_0= 'GSSFilterBoolVarFromGroupedArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'group' otherlv_15= ':=' ( (lv_group_16_0= ruleEString ) ) otherlv_17= ';' ( (lv_AIFieldRefs_18_0= ruleGSSFilterAIFieldRefs ) ) ( (lv_Op_19_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_20_0= ruleGSSFilterConstant ) ) | ( (lv_Select_21_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_22_0= ruleGSSFilterSelectLine ) ) ) otherlv_23= '}' otherlv_24= ';' )
             // InternalFILTERS.g:1288:3: otherlv_0= 'GSSFilterBoolVarFromGroupedArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'group' otherlv_15= ':=' ( (lv_group_16_0= ruleEString ) ) otherlv_17= ';' ( (lv_AIFieldRefs_18_0= ruleGSSFilterAIFieldRefs ) ) ( (lv_Op_19_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_20_0= ruleGSSFilterConstant ) ) | ( (lv_Select_21_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_22_0= ruleGSSFilterSelectLine ) ) ) otherlv_23= '}' otherlv_24= ';'
             {
-            otherlv_0=(Token)match(input,27,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,27,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getGSSFilterBoolVarFromGroupedArrayItemKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getLeftCurlyBracketKeyword_1());
@@ -3192,7 +3192,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getColonEqualsSignKeyword_3());
@@ -3233,7 +3233,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_5());
@@ -3245,7 +3245,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getNameKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getColonEqualsSignKeyword_7());
@@ -3281,7 +3281,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_22); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_9());
@@ -3293,7 +3293,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantTypeKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_22); if (state.failed) return current;
+            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_23); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getColonEqualsSignKeyword_11());
@@ -3334,7 +3334,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_28); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_29); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_13());
@@ -3346,7 +3346,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_14, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getGroupKeyword_14());
               		
             }
-            otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_29); if (state.failed) return current;
+            otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_30); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_15, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getColonEqualsSignKeyword_15());
@@ -3387,7 +3387,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_30); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_31); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_17());
@@ -3404,7 +3404,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsGSSFilterAIFieldRefsParserRuleCall_18_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             lv_AIFieldRefs_18_0=ruleGSSFilterAIFieldRefs();
 
             state._fsp--;
@@ -3439,7 +3439,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_19_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_25);
+            pushFollow(FollowSets000.FOLLOW_26);
             lv_Op_19_0=ruleGSSFilterFieldOp();
 
             state._fsp--;
@@ -3504,7 +3504,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_20_0_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_26);
+                    pushFollow(FollowSets000.FOLLOW_27);
                     lv_Constant_20_0=ruleGSSFilterConstant();
 
                     state._fsp--;
@@ -3545,7 +3545,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_20_1_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_26);
+                    pushFollow(FollowSets000.FOLLOW_27);
                     lv_Select_21_0=ruleGSSFilterSelect();
 
                     state._fsp--;
@@ -3586,7 +3586,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_20_2_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_26);
+                    pushFollow(FollowSets000.FOLLOW_27);
                     lv_SelectLine_22_0=ruleGSSFilterSelectLine();
 
                     state._fsp--;
@@ -3725,13 +3725,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:1544:2: (otherlv_0= 'GSSFilterBoolVarFDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' ( (lv_FieldRef_10_0= ruleGSSFilterFieldRef ) ) ( (lv_Op_11_0= ruleGSSFilterFieldOp ) ) otherlv_12= '}' otherlv_13= ';' )
             // InternalFILTERS.g:1545:3: otherlv_0= 'GSSFilterBoolVarFDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' ( (lv_FieldRef_10_0= ruleGSSFilterFieldRef ) ) ( (lv_Op_11_0= ruleGSSFilterFieldOp ) ) otherlv_12= '}' otherlv_13= ';'
             {
-            otherlv_0=(Token)match(input,29,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,29,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterBoolVarFDICAccess().getGSSFilterBoolVarFDICKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterBoolVarFDICAccess().getLeftCurlyBracketKeyword_1());
@@ -3743,7 +3743,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterBoolVarFDICAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterBoolVarFDICAccess().getColonEqualsSignKeyword_3());
@@ -3784,7 +3784,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterBoolVarFDICAccess().getSemicolonKeyword_5());
@@ -3796,7 +3796,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSFilterBoolVarFDICAccess().getNameKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSFilterBoolVarFDICAccess().getColonEqualsSignKeyword_7());
@@ -3832,7 +3832,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_23); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_24); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSFilterBoolVarFDICAccess().getSemicolonKeyword_9());
@@ -3849,7 +3849,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               					newCompositeNode(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefGSSFilterFieldRefParserRuleCall_10_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             lv_FieldRef_10_0=ruleGSSFilterFieldRef();
 
             state._fsp--;
@@ -3884,7 +3884,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               					newCompositeNode(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpGSSFilterFieldOpParserRuleCall_11_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_27);
             lv_Op_11_0=ruleGSSFilterFieldOp();
 
             state._fsp--;
@@ -4008,13 +4008,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:1678:2: (otherlv_0= 'GSSFilterFieldRef' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
             // InternalFILTERS.g:1679:3: otherlv_0= 'GSSFilterFieldRef' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
             {
-            otherlv_0=(Token)match(input,30,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,30,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterFieldRefAccess().getGSSFilterFieldRefKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterFieldRefAccess().getLeftCurlyBracketKeyword_1());
@@ -4026,7 +4026,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterFieldRefAccess().getNameKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterFieldRefAccess().getColonEqualsSignKeyword_3());
@@ -4062,7 +4062,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_26); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterFieldRefAccess().getSemicolonKeyword_5());
@@ -4169,13 +4169,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:1743:2: (otherlv_0= 'GSSFilterFieldOp' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSFilterOPType ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
             // InternalFILTERS.g:1744:3: otherlv_0= 'GSSFilterFieldOp' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSFilterOPType ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
             {
-            otherlv_0=(Token)match(input,31,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,31,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterFieldOpAccess().getGSSFilterFieldOpKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_31); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_32); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterFieldOpAccess().getLeftCurlyBracketKeyword_1());
@@ -4187,7 +4187,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterFieldOpAccess().getTypeKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_32); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_33); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterFieldOpAccess().getColonEqualsSignKeyword_3());
@@ -4228,7 +4228,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_26); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterFieldOpAccess().getSemicolonKeyword_5());
@@ -4339,13 +4339,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:1809:2: (otherlv_0= 'GSSFilterConstant' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' (otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' )
             // InternalFILTERS.g:1810:3: otherlv_0= 'GSSFilterConstant' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' (otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';'
             {
-            otherlv_0=(Token)match(input,33,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,33,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterConstantAccess().getGSSFilterConstantKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_33); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_34); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterConstantAccess().getLeftCurlyBracketKeyword_1());
@@ -4357,7 +4357,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterConstantAccess().getValueKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterConstantAccess().getColonEqualsSignKeyword_3());
@@ -4398,7 +4398,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_34); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_35); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterConstantAccess().getSemicolonKeyword_5());
@@ -4421,7 +4421,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_6, grammarAccess.getGSSFilterConstantAccess().getMaskKeyword_6_0());
                       			
                     }
-                    otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_35); if (state.failed) return current;
+                    otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_36); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_7, grammarAccess.getGSSFilterConstantAccess().getColonEqualsSignKeyword_6_1());
@@ -4457,7 +4457,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_26); if (state.failed) return current;
+                    otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_9, grammarAccess.getGSSFilterConstantAccess().getSemicolonKeyword_6_3());
@@ -4588,13 +4588,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:1907:2: (otherlv_0= 'GSSFilterSelect' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSFilterSelectType ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
             // InternalFILTERS.g:1908:3: otherlv_0= 'GSSFilterSelect' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSFilterSelectType ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';'
             {
-            otherlv_0=(Token)match(input,36,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,36,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterSelectAccess().getGSSFilterSelectKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_36); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_37); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterSelectAccess().getLeftCurlyBracketKeyword_1());
@@ -4606,7 +4606,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterSelectAccess().getFromFileKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterSelectAccess().getColonEqualsSignKeyword_3());
@@ -4642,7 +4642,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_31); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_32); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterSelectAccess().getSemicolonKeyword_5());
@@ -4654,7 +4654,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSFilterSelectAccess().getTypeKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_37); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_38); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSFilterSelectAccess().getColonEqualsSignKeyword_7());
@@ -4695,7 +4695,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_38); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_39); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSFilterSelectAccess().getSemicolonKeyword_9());
@@ -4718,7 +4718,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_10, grammarAccess.getGSSFilterSelectAccess().getOffsetKeyword_10_0());
                       			
                     }
-                    otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
+                    otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_11, grammarAccess.getGSSFilterSelectAccess().getColonEqualsSignKeyword_10_1());
@@ -4759,7 +4759,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_39); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_40); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_13, grammarAccess.getGSSFilterSelectAccess().getSemicolonKeyword_10_3());
@@ -4788,7 +4788,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_14, grammarAccess.getGSSFilterSelectAccess().getSizeKeyword_11_0());
                       			
                     }
-                    otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_15, grammarAccess.getGSSFilterSelectAccess().getColonEqualsSignKeyword_11_1());
@@ -4829,7 +4829,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_34); if (state.failed) return current;
+                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_35); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_17, grammarAccess.getGSSFilterSelectAccess().getSemicolonKeyword_11_3());
@@ -4858,7 +4858,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_18, grammarAccess.getGSSFilterSelectAccess().getMaskKeyword_12_0());
                       			
                     }
-                    otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_35); if (state.failed) return current;
+                    otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_36); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_19, grammarAccess.getGSSFilterSelectAccess().getColonEqualsSignKeyword_12_1());
@@ -4894,7 +4894,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_26); if (state.failed) return current;
+                    otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_21, grammarAccess.getGSSFilterSelectAccess().getSemicolonKeyword_12_3());
@@ -5025,13 +5025,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:2101:2: (otherlv_0= 'GSSFilterSelectLine' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'line' otherlv_7= ':=' ( (lv_line_8_0= ruleINTEGER ) ) otherlv_9= ';' (otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
             // InternalFILTERS.g:2102:3: otherlv_0= 'GSSFilterSelectLine' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'line' otherlv_7= ':=' ( (lv_line_8_0= ruleINTEGER ) ) otherlv_9= ';' (otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';'
             {
-            otherlv_0=(Token)match(input,40,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,40,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterSelectLineAccess().getGSSFilterSelectLineKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_36); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_37); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterSelectLineAccess().getLeftCurlyBracketKeyword_1());
@@ -5043,7 +5043,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterSelectLineAccess().getFromFileKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterSelectLineAccess().getColonEqualsSignKeyword_3());
@@ -5079,7 +5079,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_40); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_41); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterSelectLineAccess().getSemicolonKeyword_5());
@@ -5091,7 +5091,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSFilterSelectLineAccess().getLineKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSFilterSelectLineAccess().getColonEqualsSignKeyword_7());
@@ -5132,7 +5132,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_41); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_42); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSFilterSelectLineAccess().getSemicolonKeyword_9());
@@ -5155,7 +5155,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_10, grammarAccess.getGSSFilterSelectLineAccess().getLeftTrimKeyword_10_0());
                       			
                     }
-                    otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
+                    otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_11, grammarAccess.getGSSFilterSelectLineAccess().getColonEqualsSignKeyword_10_1());
@@ -5196,7 +5196,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_42); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_43); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_13, grammarAccess.getGSSFilterSelectLineAccess().getSemicolonKeyword_10_3());
@@ -5225,7 +5225,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_14, grammarAccess.getGSSFilterSelectLineAccess().getRightTrimKeyword_11_0());
                       			
                     }
-                    otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_15, grammarAccess.getGSSFilterSelectLineAccess().getColonEqualsSignKeyword_11_1());
@@ -5266,7 +5266,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_34); if (state.failed) return current;
+                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_35); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_17, grammarAccess.getGSSFilterSelectLineAccess().getSemicolonKeyword_11_3());
@@ -5295,7 +5295,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_18, grammarAccess.getGSSFilterSelectLineAccess().getMaskKeyword_12_0());
                       			
                     }
-                    otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_35); if (state.failed) return current;
+                    otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_36); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_19, grammarAccess.getGSSFilterSelectLineAccess().getColonEqualsSignKeyword_12_1());
@@ -5331,7 +5331,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_26); if (state.failed) return current;
+                    otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_21, grammarAccess.getGSSFilterSelectLineAccess().getSemicolonKeyword_12_3());
@@ -5444,13 +5444,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:2295:2: (otherlv_0= 'GSSFilterAIFieldRef' otherlv_1= '{' otherlv_2= 'index' otherlv_3= ':=' ( (lv_index_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
             // InternalFILTERS.g:2296:3: otherlv_0= 'GSSFilterAIFieldRef' otherlv_1= '{' otherlv_2= 'index' otherlv_3= ':=' ( (lv_index_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
             {
-            otherlv_0=(Token)match(input,44,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,44,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterAIFieldRefAccess().getGSSFilterAIFieldRefKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_43); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_44); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterAIFieldRefAccess().getLeftCurlyBracketKeyword_1());
@@ -5462,7 +5462,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterAIFieldRefAccess().getIndexKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterAIFieldRefAccess().getColonEqualsSignKeyword_3());
@@ -5503,7 +5503,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_26); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterAIFieldRefAccess().getSemicolonKeyword_5());
@@ -5609,13 +5609,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:2361:2: (otherlv_0= 'GSSFilterAIFieldRefs' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
             // InternalFILTERS.g:2362:3: otherlv_0= 'GSSFilterAIFieldRefs' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
             {
-            otherlv_0=(Token)match(input,46,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,46,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterAIFieldRefsAccess().getGSSFilterAIFieldRefsKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterAIFieldRefsAccess().getLeftCurlyBracketKeyword_1());
@@ -5627,7 +5627,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterAIFieldRefsAccess().getNameKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterAIFieldRefsAccess().getColonEqualsSignKeyword_3());
@@ -5663,7 +5663,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_26); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterAIFieldRefsAccess().getSemicolonKeyword_5());
@@ -5772,13 +5772,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:2426:2: (otherlv_0= 'GSSFilterMaxterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' )
             // InternalFILTERS.g:2427:3: otherlv_0= 'GSSFilterMaxterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';'
             {
-            otherlv_0=(Token)match(input,47,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,47,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterMaxtermAccess().getGSSFilterMaxtermKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterMaxtermAccess().getLeftCurlyBracketKeyword_1());
@@ -5790,7 +5790,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterMaxtermAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterMaxtermAccess().getColonEqualsSignKeyword_3());
@@ -5831,7 +5831,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_44); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_45); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterMaxtermAccess().getSemicolonKeyword_5());
@@ -5861,7 +5861,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	      					newCompositeNode(grammarAccess.getGSSFilterMaxtermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_6_0());
             	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_45);
+            	    pushFollow(FollowSets000.FOLLOW_46);
             	    lv_BoolVarRef_6_0=ruleGSSFilterBoolVarRef();
 
             	    state._fsp--;
@@ -5998,13 +5998,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:2511:2: (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) ( (lv_BoolVarRef_5_0= ruleGSSFilterBoolVarRef ) )+ otherlv_6= '}' otherlv_7= ';' )
             // InternalFILTERS.g:2512:3: otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) ( (lv_BoolVarRef_5_0= ruleGSSFilterBoolVarRef ) )+ otherlv_6= '}' otherlv_7= ';'
             {
-            otherlv_0=(Token)match(input,48,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,48,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterMintermAccess().getGSSFilterMintermKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterMintermAccess().getLeftCurlyBracketKeyword_1());
@@ -6016,7 +6016,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterMintermAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterMintermAccess().getColonEqualsSignKeyword_3());
@@ -6033,7 +6033,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               					newCompositeNode(grammarAccess.getGSSFilterMintermAccess().getIdINTEGERParserRuleCall_4_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_44);
+            pushFollow(FollowSets000.FOLLOW_45);
             lv_id_4_0=ruleINTEGER();
 
             state._fsp--;
@@ -6081,7 +6081,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	      					newCompositeNode(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_5_0());
             	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_45);
+            	    pushFollow(FollowSets000.FOLLOW_46);
             	    lv_BoolVarRef_5_0=ruleGSSFilterBoolVarRef();
 
             	    state._fsp--;
@@ -6217,13 +6217,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:2592:2: (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
             // InternalFILTERS.g:2593:3: otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
             {
-            otherlv_0=(Token)match(input,49,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,49,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterBoolVarRefAccess().getGSSFilterBoolVarRefKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_46); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_47); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterBoolVarRefAccess().getLeftCurlyBracketKeyword_1());
@@ -6235,7 +6235,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterBoolVarRefAccess().getIdRefKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterBoolVarRefAccess().getColonEqualsSignKeyword_3());
@@ -6276,7 +6276,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_26); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterBoolVarRefAccess().getSemicolonKeyword_5());
@@ -6508,7 +6508,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             // InternalFILTERS.g:2692:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             // InternalFILTERS.g:2693:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_47); if (state.failed) return current;
+            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_48); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_ID_0);
@@ -6534,14 +6534,14 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // InternalFILTERS.g:2701:4: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,51,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	    kw=(Token)match(input,51,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(kw);
             	      				newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_47); if (state.failed) return current;
+            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_48); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_ID_2);
@@ -6683,7 +6683,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalFILTERS.g:2734:4: this_INT_0= RULE_INT
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_47); if (state.failed) return current;
+                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_48); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current.merge(this_INT_0);
@@ -6714,7 +6714,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                         case 1 :
                             // InternalFILTERS.g:2744:6: this_INT_1= RULE_INT
                             {
-                            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_5); if (state.failed) return current;
+                            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_7); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               						current.merge(this_INT_1);
@@ -6731,7 +6731,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_47); if (state.failed) return current;
+                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_48); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					current.merge(this_ID_2);
@@ -6766,7 +6766,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // InternalFILTERS.g:2762:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    {
-            	    kw=(Token)match(input,51,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            	    kw=(Token)match(input,51,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(kw);
@@ -6808,7 +6808,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	        case 1 :
             	            // InternalFILTERS.g:2768:5: this_INT_4= RULE_INT
             	            {
-            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_47); if (state.failed) return current;
+            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_48); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              					current.merge(this_INT_4);
@@ -6839,7 +6839,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	                case 1 :
             	                    // InternalFILTERS.g:2778:7: this_INT_5= RULE_INT
             	                    {
-            	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	                    if ( state.backtracking==0 ) {
 
             	                      							current.merge(this_INT_5);
@@ -6856,7 +6856,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             	            }
 
-            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_47); if (state.failed) return current;
+            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_48); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              						current.merge(this_ID_6);
@@ -6975,7 +6975,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_48);
+            pushFollow(FollowSets000.FOLLOW_49);
             this_QualifiedName_0=ruleQualifiedName();
 
             state._fsp--;
@@ -6990,7 +6990,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            kw=(Token)match(input,52,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            kw=(Token)match(input,52,FollowSets000.FOLLOW_11); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(kw);
@@ -7002,7 +7002,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_49);
+            pushFollow(FollowSets000.FOLLOW_50);
             this_Version_2=ruleVersion();
 
             state._fsp--;
@@ -7139,7 +7139,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                         case 1 :
                             // InternalFILTERS.g:2866:5: kw= '-'
                             {
-                            kw=(Token)match(input,54,FollowSets000.FOLLOW_50); if (state.failed) return current;
+                            kw=(Token)match(input,54,FollowSets000.FOLLOW_51); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               					current.merge(kw);
@@ -7739,7 +7739,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         // InternalFILTERS.g:290:20: otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';'
         {
         otherlv_4=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return ;
+        otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return ;
         // InternalFILTERS.g:298:9: ( (lv_uri_6_0= ruleQualifiedName ) )
         // InternalFILTERS.g:299:10: (lv_uri_6_0= ruleQualifiedName )
         {
@@ -7828,7 +7828,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         // InternalFILTERS.g:333:10: otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';'
         {
         otherlv_8=(Token)match(input,18,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return ;
+        otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return ;
         // InternalFILTERS.g:341:10: ( (lv_version_10_0= ruleVersion ) )
         // InternalFILTERS.g:342:11: (lv_version_10_0= ruleVersion )
         {
@@ -7851,12 +7851,12 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
         }
 
-        otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_11); if (state.failed) return ;
+        otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return ;
 
         }
 
         otherlv_12=(Token)match(input,19,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return ;
+        otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return ;
         // InternalFILTERS.g:373:9: ( (lv_formatFile_14_0= RULE_ID ) )
         // InternalFILTERS.g:374:10: (lv_formatFile_14_0= RULE_ID )
         {
@@ -7870,7 +7870,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
         }
 
-        otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return ;
+        otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_13); if (state.failed) return ;
         // InternalFILTERS.g:395:9: ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+
         int cnt33=0;
         loop33:
@@ -7915,7 +7915,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_51);
+        	    pushFollow(FollowSets000.FOLLOW_52);
         	    lv_BoolVar_16_0=ruleGSSFilterBoolVar();
 
         	    state._fsp--;
@@ -7943,7 +7943,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_51);
+        	    pushFollow(FollowSets000.FOLLOW_52);
         	    lv_BoolVarFromArrayItem_17_0=ruleGSSFilterBoolVarFromArrayItem();
 
         	    state._fsp--;
@@ -7971,7 +7971,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_51);
+        	    pushFollow(FollowSets000.FOLLOW_52);
         	    lv_BoolVarFromGroupedArrayItem_18_0=ruleGSSFilterBoolVarFromGroupedArrayItem();
 
         	    state._fsp--;
@@ -7999,7 +7999,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_51);
+        	    pushFollow(FollowSets000.FOLLOW_52);
         	    lv_BoolVarFDIC_19_0=ruleGSSFilterBoolVarFDIC();
 
         	    state._fsp--;
@@ -8074,7 +8074,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         // InternalFILTERS.g:587:20: otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';'
         {
         otherlv_4=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return ;
+        otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return ;
         // InternalFILTERS.g:595:9: ( (lv_uri_6_0= ruleQualifiedName ) )
         // InternalFILTERS.g:596:10: (lv_uri_6_0= ruleQualifiedName )
         {
@@ -8163,7 +8163,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         // InternalFILTERS.g:630:10: otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';'
         {
         otherlv_8=(Token)match(input,18,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return ;
+        otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return ;
         // InternalFILTERS.g:638:10: ( (lv_version_10_0= ruleVersion ) )
         // InternalFILTERS.g:639:11: (lv_version_10_0= ruleVersion )
         {
@@ -8186,12 +8186,12 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
         }
 
-        otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_11); if (state.failed) return ;
+        otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return ;
 
         }
 
         otherlv_12=(Token)match(input,19,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return ;
+        otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return ;
         // InternalFILTERS.g:670:9: ( (lv_formatFile_14_0= RULE_ID ) )
         // InternalFILTERS.g:671:10: (lv_formatFile_14_0= RULE_ID )
         {
@@ -8205,7 +8205,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
         }
 
-        otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return ;
+        otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_13); if (state.failed) return ;
         // InternalFILTERS.g:692:9: ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+
         int cnt34=0;
         loop34:
@@ -8250,7 +8250,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_51);
+        	    pushFollow(FollowSets000.FOLLOW_52);
         	    lv_BoolVar_16_0=ruleGSSFilterBoolVar();
 
         	    state._fsp--;
@@ -8278,7 +8278,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_51);
+        	    pushFollow(FollowSets000.FOLLOW_52);
         	    lv_BoolVarFromArrayItem_17_0=ruleGSSFilterBoolVarFromArrayItem();
 
         	    state._fsp--;
@@ -8306,7 +8306,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_51);
+        	    pushFollow(FollowSets000.FOLLOW_52);
         	    lv_BoolVarFromGroupedArrayItem_18_0=ruleGSSFilterBoolVarFromGroupedArrayItem();
 
         	    state._fsp--;
@@ -8334,7 +8334,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0());
         	      											
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_51);
+        	    pushFollow(FollowSets000.FOLLOW_52);
         	    lv_BoolVarFDIC_19_0=ruleGSSFilterBoolVarFDIC();
 
         	    state._fsp--;
@@ -8446,51 +8446,52 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000002000L});
         public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000060000L});
-        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000800000060000L});
-        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000090L});
-        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x000000002C400000L});
-        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x000080002C460000L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000800000100000L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0001000000060000L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x000100002C460000L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0001000000100000L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x00400000000000A0L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0F80000000000000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000040000000L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000011200000000L});
-        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000100000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000100000000000L});
-        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000000050L});
-        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000400000000000L});
-        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000100000000L});
-        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0xF000000000000000L,0x0000000000000003L});
-        public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000400000000L});
-        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000800100000L});
-        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000002000000000L});
-        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000008000000000L,0x000000000000000CL});
-        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x000000C800100000L});
-        public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000008800100000L});
-        public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000020000000000L});
-        public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x00000C0800100000L});
-        public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000080800100000L});
-        public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000200000000000L});
-        public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0002000000000000L});
-        public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0002000000100000L});
-        public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0004000000000000L});
-        public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0008000000000002L});
-        public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0010000000000000L});
-        public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0020000000000000L});
-        public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000000080L});
-        public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x000000002C400002L});
+        public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000010000L});
+        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000060000L});
+        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000800000060000L});
+        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x00000000000000A0L});
+        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x000000002C400000L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x000080002C460000L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000800000100000L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0001000000060000L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x000100002C460000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0001000000100000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x00400000000000C0L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0F80000000000000L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000080000000L});
+        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000011200000000L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000100000L});
+        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000100000000000L});
+        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000400000000000L});
+        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000100000000L});
+        public static final BitSet FOLLOW_33 = new BitSet(new long[]{0xF000000000000000L,0x0000000000000003L});
+        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000400000000L});
+        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000800100000L});
+        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000002000000000L});
+        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000008000000000L,0x000000000000000CL});
+        public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x000000C800100000L});
+        public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000008800100000L});
+        public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000020000000000L});
+        public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x00000C0800100000L});
+        public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000080800100000L});
+        public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000200000000000L});
+        public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0002000000000000L});
+        public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0002000000100000L});
+        public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0004000000000000L});
+        public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0008000000000002L});
+        public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0010000000000000L});
+        public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0020000000000000L});
+        public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000000000000080L});
+        public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x000000002C400002L});
     }
 
 

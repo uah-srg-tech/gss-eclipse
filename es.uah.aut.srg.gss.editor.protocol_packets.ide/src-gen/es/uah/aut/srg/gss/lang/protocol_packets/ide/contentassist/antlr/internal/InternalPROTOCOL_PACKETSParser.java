@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSProtocolPacketsProtocolPackets'", "'{'", "'}'", "'uri'", "'version'", "'GSSProtocolPacketsProtocolPacket'", "'name'", "'ifRef'", "'levelRef'", "'GSSProtocolPacketsFormat'", "'file'", "'.'", "'('", "')'", "'-'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSProtocolPacketsProtocolPackets'", "'{'", "'}'", "'uri'", "'version'", "'GSSProtocolPacketsProtocolPacket'", "'name'", "'ifRef'", "'levelRef'", "'export'", "'GSSProtocolPacketsFormat'", "'file'", "'.'", "'('", "')'", "'-'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=9;
@@ -46,6 +46,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int EOF=-1;
+    public static final int T__30=30;
     public static final int RULE_ID=4;
     public static final int RULE_WS=10;
     public static final int RULE_ANY_OTHER=11;
@@ -1120,7 +1121,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
                 if ( (LA2_1==RULE_ID) ) {
                     alt2=2;
                 }
-                else if ( (LA2_1==EOF||LA2_1==14||LA2_1==26||LA2_1==28) ) {
+                else if ( (LA2_1==EOF||LA2_1==14||LA2_1==27||LA2_1==29) ) {
                     alt2=1;
                 }
                 else {
@@ -1221,11 +1222,11 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             if ( (LA3_0==RULE_INT) ) {
                 int LA3_1 = input.LA(2);
 
-                if ( (LA3_1==RULE_ID) ) {
-                    alt3=2;
-                }
-                else if ( (LA3_1==EOF||LA3_1==14||LA3_1==26||LA3_1==28) ) {
+                if ( (LA3_1==EOF||LA3_1==14||LA3_1==27||LA3_1==29) ) {
                     alt3=1;
+                }
+                else if ( (LA3_1==RULE_ID) ) {
+                    alt3=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -1322,7 +1323,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==RULE_INT||LA4_0==29) ) {
+            if ( (LA4_0==RULE_INT||LA4_0==30) ) {
                 alt4=1;
             }
             else if ( (LA4_0==RULE_HEXADECIMAL) ) {
@@ -2627,7 +2628,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:808:1: ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__1__Impl rule__GSSProtocolPacketsProtocolPackets__Group_3_0__2 )
             // InternalPROTOCOL_PACKETS.g:809:2: rule__GSSProtocolPacketsProtocolPackets__Group_3_0__1__Impl rule__GSSProtocolPacketsProtocolPackets__Group_3_0__2
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSProtocolPacketsProtocolPackets__Group_3_0__1__Impl();
 
             state._fsp--;
@@ -2948,7 +2949,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:916:1: ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__1__Impl rule__GSSProtocolPacketsProtocolPackets__Group_3_1__2 )
             // InternalPROTOCOL_PACKETS.g:917:2: rule__GSSProtocolPacketsProtocolPackets__Group_3_1__1__Impl rule__GSSProtocolPacketsProtocolPackets__Group_3_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__GSSProtocolPacketsProtocolPackets__Group_3_1__1__Impl();
 
             state._fsp--;
@@ -3269,7 +3270,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:1024:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__1__Impl rule__GSSProtocolPacketsProtocolPacket__Group__2 )
             // InternalPROTOCOL_PACKETS.g:1025:2: rule__GSSProtocolPacketsProtocolPacket__Group__1__Impl rule__GSSProtocolPacketsProtocolPacket__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_15);
+            pushFollow(FollowSets000.FOLLOW_16);
             rule__GSSProtocolPacketsProtocolPacket__Group__1__Impl();
 
             state._fsp--;
@@ -3427,7 +3428,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:1078:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__3__Impl rule__GSSProtocolPacketsProtocolPacket__Group__4 )
             // InternalPROTOCOL_PACKETS.g:1079:2: rule__GSSProtocolPacketsProtocolPacket__Group__3__Impl rule__GSSProtocolPacketsProtocolPacket__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSProtocolPacketsProtocolPacket__Group__3__Impl();
 
             state._fsp--;
@@ -3595,7 +3596,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:1132:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__5__Impl rule__GSSProtocolPacketsProtocolPacket__Group__6 )
             // InternalPROTOCOL_PACKETS.g:1133:2: rule__GSSProtocolPacketsProtocolPacket__Group__5__Impl rule__GSSProtocolPacketsProtocolPacket__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSProtocolPacketsProtocolPacket__Group__5__Impl();
 
             state._fsp--;
@@ -3753,7 +3754,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:1186:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__7__Impl rule__GSSProtocolPacketsProtocolPacket__Group__8 )
             // InternalPROTOCOL_PACKETS.g:1187:2: rule__GSSProtocolPacketsProtocolPacket__Group__7__Impl rule__GSSProtocolPacketsProtocolPacket__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_17);
+            pushFollow(FollowSets000.FOLLOW_18);
             rule__GSSProtocolPacketsProtocolPacket__Group__7__Impl();
 
             state._fsp--;
@@ -3921,7 +3922,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:1240:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__9__Impl rule__GSSProtocolPacketsProtocolPacket__Group__10 )
             // InternalPROTOCOL_PACKETS.g:1241:2: rule__GSSProtocolPacketsProtocolPacket__Group__9__Impl rule__GSSProtocolPacketsProtocolPacket__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_18);
+            pushFollow(FollowSets000.FOLLOW_19);
             rule__GSSProtocolPacketsProtocolPacket__Group__9__Impl();
 
             state._fsp--;
@@ -4079,7 +4080,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:1294:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__11__Impl rule__GSSProtocolPacketsProtocolPacket__Group__12 )
             // InternalPROTOCOL_PACKETS.g:1295:2: rule__GSSProtocolPacketsProtocolPacket__Group__11__Impl rule__GSSProtocolPacketsProtocolPacket__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_17);
+            pushFollow(FollowSets000.FOLLOW_18);
             rule__GSSProtocolPacketsProtocolPacket__Group__11__Impl();
 
             state._fsp--;
@@ -4247,7 +4248,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:1348:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__13__Impl rule__GSSProtocolPacketsProtocolPacket__Group__14 )
             // InternalPROTOCOL_PACKETS.g:1349:2: rule__GSSProtocolPacketsProtocolPacket__Group__13__Impl rule__GSSProtocolPacketsProtocolPacket__Group__14
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSProtocolPacketsProtocolPacket__Group__13__Impl();
 
             state._fsp--;
@@ -4326,7 +4327,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:1375:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__14__Impl rule__GSSProtocolPacketsProtocolPacket__Group__15 )
             // InternalPROTOCOL_PACKETS.g:1376:2: rule__GSSProtocolPacketsProtocolPacket__Group__14__Impl rule__GSSProtocolPacketsProtocolPacket__Group__15
             {
-            pushFollow(FollowSets000.FOLLOW_7);
+            pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSProtocolPacketsProtocolPacket__Group__14__Impl();
 
             state._fsp--;
@@ -4355,34 +4356,24 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__Group__14__Impl"
-    // InternalPROTOCOL_PACKETS.g:1383:1: rule__GSSProtocolPacketsProtocolPacket__Group__14__Impl : ( ( rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_14 ) ) ;
+    // InternalPROTOCOL_PACKETS.g:1383:1: rule__GSSProtocolPacketsProtocolPacket__Group__14__Impl : ( 'export' ) ;
     public final void rule__GSSProtocolPacketsProtocolPacket__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1387:1: ( ( ( rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_14 ) ) )
-            // InternalPROTOCOL_PACKETS.g:1388:1: ( ( rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_14 ) )
+            // InternalPROTOCOL_PACKETS.g:1387:1: ( ( 'export' ) )
+            // InternalPROTOCOL_PACKETS.g:1388:1: ( 'export' )
             {
-            // InternalPROTOCOL_PACKETS.g:1388:1: ( ( rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_14 ) )
-            // InternalPROTOCOL_PACKETS.g:1389:2: ( rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_14 )
+            // InternalPROTOCOL_PACKETS.g:1388:1: ( 'export' )
+            // InternalPROTOCOL_PACKETS.g:1389:2: 'export'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportAssignment_14()); 
+               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportKeyword_14()); 
             }
-            // InternalPROTOCOL_PACKETS.g:1390:2: ( rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_14 )
-            // InternalPROTOCOL_PACKETS.g:1390:3: rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_14
-            {
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_14();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
+            match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportAssignment_14()); 
+               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportKeyword_14()); 
             }
 
             }
@@ -4415,7 +4406,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:1402:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__15__Impl rule__GSSProtocolPacketsProtocolPacket__Group__16 )
             // InternalPROTOCOL_PACKETS.g:1403:2: rule__GSSProtocolPacketsProtocolPacket__Group__15__Impl rule__GSSProtocolPacketsProtocolPacket__Group__16
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSProtocolPacketsProtocolPacket__Group__15__Impl();
 
             state._fsp--;
@@ -4444,24 +4435,24 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__Group__15__Impl"
-    // InternalPROTOCOL_PACKETS.g:1410:1: rule__GSSProtocolPacketsProtocolPacket__Group__15__Impl : ( ';' ) ;
+    // InternalPROTOCOL_PACKETS.g:1410:1: rule__GSSProtocolPacketsProtocolPacket__Group__15__Impl : ( ':=' ) ;
     public final void rule__GSSProtocolPacketsProtocolPacket__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1414:1: ( ( ';' ) )
-            // InternalPROTOCOL_PACKETS.g:1415:1: ( ';' )
+            // InternalPROTOCOL_PACKETS.g:1414:1: ( ( ':=' ) )
+            // InternalPROTOCOL_PACKETS.g:1415:1: ( ':=' )
             {
-            // InternalPROTOCOL_PACKETS.g:1415:1: ( ';' )
-            // InternalPROTOCOL_PACKETS.g:1416:2: ';'
+            // InternalPROTOCOL_PACKETS.g:1415:1: ( ':=' )
+            // InternalPROTOCOL_PACKETS.g:1416:2: ':='
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_15()); 
+               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getColonEqualsSignKeyword_15()); 
             }
-            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_15()); 
+               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getColonEqualsSignKeyword_15()); 
             }
 
             }
@@ -4494,7 +4485,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:1429:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__16__Impl rule__GSSProtocolPacketsProtocolPacket__Group__17 )
             // InternalPROTOCOL_PACKETS.g:1430:2: rule__GSSProtocolPacketsProtocolPacket__Group__16__Impl rule__GSSProtocolPacketsProtocolPacket__Group__17
             {
-            pushFollow(FollowSets000.FOLLOW_12);
+            pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSProtocolPacketsProtocolPacket__Group__16__Impl();
 
             state._fsp--;
@@ -4523,26 +4514,26 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__Group__16__Impl"
-    // InternalPROTOCOL_PACKETS.g:1437:1: rule__GSSProtocolPacketsProtocolPacket__Group__16__Impl : ( ( rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_16 ) ) ;
+    // InternalPROTOCOL_PACKETS.g:1437:1: rule__GSSProtocolPacketsProtocolPacket__Group__16__Impl : ( ( rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_16 ) ) ;
     public final void rule__GSSProtocolPacketsProtocolPacket__Group__16__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1441:1: ( ( ( rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_16 ) ) )
-            // InternalPROTOCOL_PACKETS.g:1442:1: ( ( rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_16 ) )
+            // InternalPROTOCOL_PACKETS.g:1441:1: ( ( ( rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_16 ) ) )
+            // InternalPROTOCOL_PACKETS.g:1442:1: ( ( rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_16 ) )
             {
-            // InternalPROTOCOL_PACKETS.g:1442:1: ( ( rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_16 ) )
-            // InternalPROTOCOL_PACKETS.g:1443:2: ( rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_16 )
+            // InternalPROTOCOL_PACKETS.g:1442:1: ( ( rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_16 ) )
+            // InternalPROTOCOL_PACKETS.g:1443:2: ( rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_16 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatAssignment_16()); 
+               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportAssignment_16()); 
             }
-            // InternalPROTOCOL_PACKETS.g:1444:2: ( rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_16 )
-            // InternalPROTOCOL_PACKETS.g:1444:3: rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_16
+            // InternalPROTOCOL_PACKETS.g:1444:2: ( rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_16 )
+            // InternalPROTOCOL_PACKETS.g:1444:3: rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_16
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_16();
+            rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_16();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4550,7 +4541,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatAssignment_16()); 
+               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportAssignment_16()); 
             }
 
             }
@@ -4583,7 +4574,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:1456:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__17__Impl rule__GSSProtocolPacketsProtocolPacket__Group__18 )
             // InternalPROTOCOL_PACKETS.g:1457:2: rule__GSSProtocolPacketsProtocolPacket__Group__17__Impl rule__GSSProtocolPacketsProtocolPacket__Group__18
             {
-            pushFollow(FollowSets000.FOLLOW_7);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSProtocolPacketsProtocolPacket__Group__17__Impl();
 
             state._fsp--;
@@ -4612,24 +4603,24 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__Group__17__Impl"
-    // InternalPROTOCOL_PACKETS.g:1464:1: rule__GSSProtocolPacketsProtocolPacket__Group__17__Impl : ( '}' ) ;
+    // InternalPROTOCOL_PACKETS.g:1464:1: rule__GSSProtocolPacketsProtocolPacket__Group__17__Impl : ( ';' ) ;
     public final void rule__GSSProtocolPacketsProtocolPacket__Group__17__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1468:1: ( ( '}' ) )
-            // InternalPROTOCOL_PACKETS.g:1469:1: ( '}' )
+            // InternalPROTOCOL_PACKETS.g:1468:1: ( ( ';' ) )
+            // InternalPROTOCOL_PACKETS.g:1469:1: ( ';' )
             {
-            // InternalPROTOCOL_PACKETS.g:1469:1: ( '}' )
-            // InternalPROTOCOL_PACKETS.g:1470:2: '}'
+            // InternalPROTOCOL_PACKETS.g:1469:1: ( ';' )
+            // InternalPROTOCOL_PACKETS.g:1470:2: ';'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getRightCurlyBracketKeyword_17()); 
+               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_17()); 
             }
-            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getRightCurlyBracketKeyword_17()); 
+               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_17()); 
             }
 
             }
@@ -4653,17 +4644,22 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__Group__18"
-    // InternalPROTOCOL_PACKETS.g:1479:1: rule__GSSProtocolPacketsProtocolPacket__Group__18 : rule__GSSProtocolPacketsProtocolPacket__Group__18__Impl ;
+    // InternalPROTOCOL_PACKETS.g:1479:1: rule__GSSProtocolPacketsProtocolPacket__Group__18 : rule__GSSProtocolPacketsProtocolPacket__Group__18__Impl rule__GSSProtocolPacketsProtocolPacket__Group__19 ;
     public final void rule__GSSProtocolPacketsProtocolPacket__Group__18() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1483:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__18__Impl )
-            // InternalPROTOCOL_PACKETS.g:1484:2: rule__GSSProtocolPacketsProtocolPacket__Group__18__Impl
+            // InternalPROTOCOL_PACKETS.g:1483:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__18__Impl rule__GSSProtocolPacketsProtocolPacket__Group__19 )
+            // InternalPROTOCOL_PACKETS.g:1484:2: rule__GSSProtocolPacketsProtocolPacket__Group__18__Impl rule__GSSProtocolPacketsProtocolPacket__Group__19
             {
-            pushFollow(FollowSets000.FOLLOW_2);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSProtocolPacketsProtocolPacket__Group__18__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSProtocolPacketsProtocolPacket__Group__19();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4686,24 +4682,34 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__Group__18__Impl"
-    // InternalPROTOCOL_PACKETS.g:1490:1: rule__GSSProtocolPacketsProtocolPacket__Group__18__Impl : ( ';' ) ;
+    // InternalPROTOCOL_PACKETS.g:1491:1: rule__GSSProtocolPacketsProtocolPacket__Group__18__Impl : ( ( rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_18 ) ) ;
     public final void rule__GSSProtocolPacketsProtocolPacket__Group__18__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1494:1: ( ( ';' ) )
-            // InternalPROTOCOL_PACKETS.g:1495:1: ( ';' )
+            // InternalPROTOCOL_PACKETS.g:1495:1: ( ( ( rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_18 ) ) )
+            // InternalPROTOCOL_PACKETS.g:1496:1: ( ( rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_18 ) )
             {
-            // InternalPROTOCOL_PACKETS.g:1495:1: ( ';' )
-            // InternalPROTOCOL_PACKETS.g:1496:2: ';'
+            // InternalPROTOCOL_PACKETS.g:1496:1: ( ( rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_18 ) )
+            // InternalPROTOCOL_PACKETS.g:1497:2: ( rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_18 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_18()); 
+               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatAssignment_18()); 
             }
-            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalPROTOCOL_PACKETS.g:1498:2: ( rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_18 )
+            // InternalPROTOCOL_PACKETS.g:1498:3: rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_18
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_18();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_18()); 
+               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatAssignment_18()); 
             }
 
             }
@@ -4726,15 +4732,168 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
     // $ANTLR end "rule__GSSProtocolPacketsProtocolPacket__Group__18__Impl"
 
 
+    // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__Group__19"
+    // InternalPROTOCOL_PACKETS.g:1506:1: rule__GSSProtocolPacketsProtocolPacket__Group__19 : rule__GSSProtocolPacketsProtocolPacket__Group__19__Impl rule__GSSProtocolPacketsProtocolPacket__Group__20 ;
+    public final void rule__GSSProtocolPacketsProtocolPacket__Group__19() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPROTOCOL_PACKETS.g:1510:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__19__Impl rule__GSSProtocolPacketsProtocolPacket__Group__20 )
+            // InternalPROTOCOL_PACKETS.g:1511:2: rule__GSSProtocolPacketsProtocolPacket__Group__19__Impl rule__GSSProtocolPacketsProtocolPacket__Group__20
+            {
+            pushFollow(FollowSets000.FOLLOW_7);
+            rule__GSSProtocolPacketsProtocolPacket__Group__19__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSProtocolPacketsProtocolPacket__Group__20();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSProtocolPacketsProtocolPacket__Group__19"
+
+
+    // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__Group__19__Impl"
+    // InternalPROTOCOL_PACKETS.g:1518:1: rule__GSSProtocolPacketsProtocolPacket__Group__19__Impl : ( '}' ) ;
+    public final void rule__GSSProtocolPacketsProtocolPacket__Group__19__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPROTOCOL_PACKETS.g:1522:1: ( ( '}' ) )
+            // InternalPROTOCOL_PACKETS.g:1523:1: ( '}' )
+            {
+            // InternalPROTOCOL_PACKETS.g:1523:1: ( '}' )
+            // InternalPROTOCOL_PACKETS.g:1524:2: '}'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getRightCurlyBracketKeyword_19()); 
+            }
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getRightCurlyBracketKeyword_19()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSProtocolPacketsProtocolPacket__Group__19__Impl"
+
+
+    // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__Group__20"
+    // InternalPROTOCOL_PACKETS.g:1533:1: rule__GSSProtocolPacketsProtocolPacket__Group__20 : rule__GSSProtocolPacketsProtocolPacket__Group__20__Impl ;
+    public final void rule__GSSProtocolPacketsProtocolPacket__Group__20() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPROTOCOL_PACKETS.g:1537:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__20__Impl )
+            // InternalPROTOCOL_PACKETS.g:1538:2: rule__GSSProtocolPacketsProtocolPacket__Group__20__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSProtocolPacketsProtocolPacket__Group__20__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSProtocolPacketsProtocolPacket__Group__20"
+
+
+    // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__Group__20__Impl"
+    // InternalPROTOCOL_PACKETS.g:1544:1: rule__GSSProtocolPacketsProtocolPacket__Group__20__Impl : ( ';' ) ;
+    public final void rule__GSSProtocolPacketsProtocolPacket__Group__20__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPROTOCOL_PACKETS.g:1548:1: ( ( ';' ) )
+            // InternalPROTOCOL_PACKETS.g:1549:1: ( ';' )
+            {
+            // InternalPROTOCOL_PACKETS.g:1549:1: ( ';' )
+            // InternalPROTOCOL_PACKETS.g:1550:2: ';'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_20()); 
+            }
+            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_20()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSProtocolPacketsProtocolPacket__Group__20__Impl"
+
+
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__0"
-    // InternalPROTOCOL_PACKETS.g:1506:1: rule__GSSProtocolPacketsFormat__Group__0 : rule__GSSProtocolPacketsFormat__Group__0__Impl rule__GSSProtocolPacketsFormat__Group__1 ;
+    // InternalPROTOCOL_PACKETS.g:1560:1: rule__GSSProtocolPacketsFormat__Group__0 : rule__GSSProtocolPacketsFormat__Group__0__Impl rule__GSSProtocolPacketsFormat__Group__1 ;
     public final void rule__GSSProtocolPacketsFormat__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1510:1: ( rule__GSSProtocolPacketsFormat__Group__0__Impl rule__GSSProtocolPacketsFormat__Group__1 )
-            // InternalPROTOCOL_PACKETS.g:1511:2: rule__GSSProtocolPacketsFormat__Group__0__Impl rule__GSSProtocolPacketsFormat__Group__1
+            // InternalPROTOCOL_PACKETS.g:1564:1: ( rule__GSSProtocolPacketsFormat__Group__0__Impl rule__GSSProtocolPacketsFormat__Group__1 )
+            // InternalPROTOCOL_PACKETS.g:1565:2: rule__GSSProtocolPacketsFormat__Group__0__Impl rule__GSSProtocolPacketsFormat__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSProtocolPacketsFormat__Group__0__Impl();
@@ -4765,22 +4924,22 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__0__Impl"
-    // InternalPROTOCOL_PACKETS.g:1518:1: rule__GSSProtocolPacketsFormat__Group__0__Impl : ( 'GSSProtocolPacketsFormat' ) ;
+    // InternalPROTOCOL_PACKETS.g:1572:1: rule__GSSProtocolPacketsFormat__Group__0__Impl : ( 'GSSProtocolPacketsFormat' ) ;
     public final void rule__GSSProtocolPacketsFormat__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1522:1: ( ( 'GSSProtocolPacketsFormat' ) )
-            // InternalPROTOCOL_PACKETS.g:1523:1: ( 'GSSProtocolPacketsFormat' )
+            // InternalPROTOCOL_PACKETS.g:1576:1: ( ( 'GSSProtocolPacketsFormat' ) )
+            // InternalPROTOCOL_PACKETS.g:1577:1: ( 'GSSProtocolPacketsFormat' )
             {
-            // InternalPROTOCOL_PACKETS.g:1523:1: ( 'GSSProtocolPacketsFormat' )
-            // InternalPROTOCOL_PACKETS.g:1524:2: 'GSSProtocolPacketsFormat'
+            // InternalPROTOCOL_PACKETS.g:1577:1: ( 'GSSProtocolPacketsFormat' )
+            // InternalPROTOCOL_PACKETS.g:1578:2: 'GSSProtocolPacketsFormat'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsFormatAccess().getGSSProtocolPacketsFormatKeyword_0()); 
             }
-            match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSProtocolPacketsFormatAccess().getGSSProtocolPacketsFormatKeyword_0()); 
             }
@@ -4806,16 +4965,16 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__1"
-    // InternalPROTOCOL_PACKETS.g:1533:1: rule__GSSProtocolPacketsFormat__Group__1 : rule__GSSProtocolPacketsFormat__Group__1__Impl rule__GSSProtocolPacketsFormat__Group__2 ;
+    // InternalPROTOCOL_PACKETS.g:1587:1: rule__GSSProtocolPacketsFormat__Group__1 : rule__GSSProtocolPacketsFormat__Group__1__Impl rule__GSSProtocolPacketsFormat__Group__2 ;
     public final void rule__GSSProtocolPacketsFormat__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1537:1: ( rule__GSSProtocolPacketsFormat__Group__1__Impl rule__GSSProtocolPacketsFormat__Group__2 )
-            // InternalPROTOCOL_PACKETS.g:1538:2: rule__GSSProtocolPacketsFormat__Group__1__Impl rule__GSSProtocolPacketsFormat__Group__2
+            // InternalPROTOCOL_PACKETS.g:1591:1: ( rule__GSSProtocolPacketsFormat__Group__1__Impl rule__GSSProtocolPacketsFormat__Group__2 )
+            // InternalPROTOCOL_PACKETS.g:1592:2: rule__GSSProtocolPacketsFormat__Group__1__Impl rule__GSSProtocolPacketsFormat__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_22);
             rule__GSSProtocolPacketsFormat__Group__1__Impl();
 
             state._fsp--;
@@ -4844,17 +5003,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__1__Impl"
-    // InternalPROTOCOL_PACKETS.g:1545:1: rule__GSSProtocolPacketsFormat__Group__1__Impl : ( '{' ) ;
+    // InternalPROTOCOL_PACKETS.g:1599:1: rule__GSSProtocolPacketsFormat__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSProtocolPacketsFormat__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1549:1: ( ( '{' ) )
-            // InternalPROTOCOL_PACKETS.g:1550:1: ( '{' )
+            // InternalPROTOCOL_PACKETS.g:1603:1: ( ( '{' ) )
+            // InternalPROTOCOL_PACKETS.g:1604:1: ( '{' )
             {
-            // InternalPROTOCOL_PACKETS.g:1550:1: ( '{' )
-            // InternalPROTOCOL_PACKETS.g:1551:2: '{'
+            // InternalPROTOCOL_PACKETS.g:1604:1: ( '{' )
+            // InternalPROTOCOL_PACKETS.g:1605:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsFormatAccess().getLeftCurlyBracketKeyword_1()); 
@@ -4885,14 +5044,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__2"
-    // InternalPROTOCOL_PACKETS.g:1560:1: rule__GSSProtocolPacketsFormat__Group__2 : rule__GSSProtocolPacketsFormat__Group__2__Impl rule__GSSProtocolPacketsFormat__Group__3 ;
+    // InternalPROTOCOL_PACKETS.g:1614:1: rule__GSSProtocolPacketsFormat__Group__2 : rule__GSSProtocolPacketsFormat__Group__2__Impl rule__GSSProtocolPacketsFormat__Group__3 ;
     public final void rule__GSSProtocolPacketsFormat__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1564:1: ( rule__GSSProtocolPacketsFormat__Group__2__Impl rule__GSSProtocolPacketsFormat__Group__3 )
-            // InternalPROTOCOL_PACKETS.g:1565:2: rule__GSSProtocolPacketsFormat__Group__2__Impl rule__GSSProtocolPacketsFormat__Group__3
+            // InternalPROTOCOL_PACKETS.g:1618:1: ( rule__GSSProtocolPacketsFormat__Group__2__Impl rule__GSSProtocolPacketsFormat__Group__3 )
+            // InternalPROTOCOL_PACKETS.g:1619:2: rule__GSSProtocolPacketsFormat__Group__2__Impl rule__GSSProtocolPacketsFormat__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSProtocolPacketsFormat__Group__2__Impl();
@@ -4923,22 +5082,22 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__2__Impl"
-    // InternalPROTOCOL_PACKETS.g:1572:1: rule__GSSProtocolPacketsFormat__Group__2__Impl : ( 'file' ) ;
+    // InternalPROTOCOL_PACKETS.g:1626:1: rule__GSSProtocolPacketsFormat__Group__2__Impl : ( 'file' ) ;
     public final void rule__GSSProtocolPacketsFormat__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1576:1: ( ( 'file' ) )
-            // InternalPROTOCOL_PACKETS.g:1577:1: ( 'file' )
+            // InternalPROTOCOL_PACKETS.g:1630:1: ( ( 'file' ) )
+            // InternalPROTOCOL_PACKETS.g:1631:1: ( 'file' )
             {
-            // InternalPROTOCOL_PACKETS.g:1577:1: ( 'file' )
-            // InternalPROTOCOL_PACKETS.g:1578:2: 'file'
+            // InternalPROTOCOL_PACKETS.g:1631:1: ( 'file' )
+            // InternalPROTOCOL_PACKETS.g:1632:2: 'file'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsFormatAccess().getFileKeyword_2()); 
             }
-            match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSProtocolPacketsFormatAccess().getFileKeyword_2()); 
             }
@@ -4964,16 +5123,16 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__3"
-    // InternalPROTOCOL_PACKETS.g:1587:1: rule__GSSProtocolPacketsFormat__Group__3 : rule__GSSProtocolPacketsFormat__Group__3__Impl rule__GSSProtocolPacketsFormat__Group__4 ;
+    // InternalPROTOCOL_PACKETS.g:1641:1: rule__GSSProtocolPacketsFormat__Group__3 : rule__GSSProtocolPacketsFormat__Group__3__Impl rule__GSSProtocolPacketsFormat__Group__4 ;
     public final void rule__GSSProtocolPacketsFormat__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1591:1: ( rule__GSSProtocolPacketsFormat__Group__3__Impl rule__GSSProtocolPacketsFormat__Group__4 )
-            // InternalPROTOCOL_PACKETS.g:1592:2: rule__GSSProtocolPacketsFormat__Group__3__Impl rule__GSSProtocolPacketsFormat__Group__4
+            // InternalPROTOCOL_PACKETS.g:1645:1: ( rule__GSSProtocolPacketsFormat__Group__3__Impl rule__GSSProtocolPacketsFormat__Group__4 )
+            // InternalPROTOCOL_PACKETS.g:1646:2: rule__GSSProtocolPacketsFormat__Group__3__Impl rule__GSSProtocolPacketsFormat__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSProtocolPacketsFormat__Group__3__Impl();
 
             state._fsp--;
@@ -5002,17 +5161,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__3__Impl"
-    // InternalPROTOCOL_PACKETS.g:1599:1: rule__GSSProtocolPacketsFormat__Group__3__Impl : ( ':=' ) ;
+    // InternalPROTOCOL_PACKETS.g:1653:1: rule__GSSProtocolPacketsFormat__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSProtocolPacketsFormat__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1603:1: ( ( ':=' ) )
-            // InternalPROTOCOL_PACKETS.g:1604:1: ( ':=' )
+            // InternalPROTOCOL_PACKETS.g:1657:1: ( ( ':=' ) )
+            // InternalPROTOCOL_PACKETS.g:1658:1: ( ':=' )
             {
-            // InternalPROTOCOL_PACKETS.g:1604:1: ( ':=' )
-            // InternalPROTOCOL_PACKETS.g:1605:2: ':='
+            // InternalPROTOCOL_PACKETS.g:1658:1: ( ':=' )
+            // InternalPROTOCOL_PACKETS.g:1659:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsFormatAccess().getColonEqualsSignKeyword_3()); 
@@ -5043,14 +5202,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__4"
-    // InternalPROTOCOL_PACKETS.g:1614:1: rule__GSSProtocolPacketsFormat__Group__4 : rule__GSSProtocolPacketsFormat__Group__4__Impl rule__GSSProtocolPacketsFormat__Group__5 ;
+    // InternalPROTOCOL_PACKETS.g:1668:1: rule__GSSProtocolPacketsFormat__Group__4 : rule__GSSProtocolPacketsFormat__Group__4__Impl rule__GSSProtocolPacketsFormat__Group__5 ;
     public final void rule__GSSProtocolPacketsFormat__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1618:1: ( rule__GSSProtocolPacketsFormat__Group__4__Impl rule__GSSProtocolPacketsFormat__Group__5 )
-            // InternalPROTOCOL_PACKETS.g:1619:2: rule__GSSProtocolPacketsFormat__Group__4__Impl rule__GSSProtocolPacketsFormat__Group__5
+            // InternalPROTOCOL_PACKETS.g:1672:1: ( rule__GSSProtocolPacketsFormat__Group__4__Impl rule__GSSProtocolPacketsFormat__Group__5 )
+            // InternalPROTOCOL_PACKETS.g:1673:2: rule__GSSProtocolPacketsFormat__Group__4__Impl rule__GSSProtocolPacketsFormat__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSProtocolPacketsFormat__Group__4__Impl();
@@ -5081,23 +5240,23 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__4__Impl"
-    // InternalPROTOCOL_PACKETS.g:1626:1: rule__GSSProtocolPacketsFormat__Group__4__Impl : ( ( rule__GSSProtocolPacketsFormat__FileAssignment_4 ) ) ;
+    // InternalPROTOCOL_PACKETS.g:1680:1: rule__GSSProtocolPacketsFormat__Group__4__Impl : ( ( rule__GSSProtocolPacketsFormat__FileAssignment_4 ) ) ;
     public final void rule__GSSProtocolPacketsFormat__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1630:1: ( ( ( rule__GSSProtocolPacketsFormat__FileAssignment_4 ) ) )
-            // InternalPROTOCOL_PACKETS.g:1631:1: ( ( rule__GSSProtocolPacketsFormat__FileAssignment_4 ) )
+            // InternalPROTOCOL_PACKETS.g:1684:1: ( ( ( rule__GSSProtocolPacketsFormat__FileAssignment_4 ) ) )
+            // InternalPROTOCOL_PACKETS.g:1685:1: ( ( rule__GSSProtocolPacketsFormat__FileAssignment_4 ) )
             {
-            // InternalPROTOCOL_PACKETS.g:1631:1: ( ( rule__GSSProtocolPacketsFormat__FileAssignment_4 ) )
-            // InternalPROTOCOL_PACKETS.g:1632:2: ( rule__GSSProtocolPacketsFormat__FileAssignment_4 )
+            // InternalPROTOCOL_PACKETS.g:1685:1: ( ( rule__GSSProtocolPacketsFormat__FileAssignment_4 ) )
+            // InternalPROTOCOL_PACKETS.g:1686:2: ( rule__GSSProtocolPacketsFormat__FileAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsFormatAccess().getFileAssignment_4()); 
             }
-            // InternalPROTOCOL_PACKETS.g:1633:2: ( rule__GSSProtocolPacketsFormat__FileAssignment_4 )
-            // InternalPROTOCOL_PACKETS.g:1633:3: rule__GSSProtocolPacketsFormat__FileAssignment_4
+            // InternalPROTOCOL_PACKETS.g:1687:2: ( rule__GSSProtocolPacketsFormat__FileAssignment_4 )
+            // InternalPROTOCOL_PACKETS.g:1687:3: rule__GSSProtocolPacketsFormat__FileAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSProtocolPacketsFormat__FileAssignment_4();
@@ -5132,14 +5291,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__5"
-    // InternalPROTOCOL_PACKETS.g:1641:1: rule__GSSProtocolPacketsFormat__Group__5 : rule__GSSProtocolPacketsFormat__Group__5__Impl rule__GSSProtocolPacketsFormat__Group__6 ;
+    // InternalPROTOCOL_PACKETS.g:1695:1: rule__GSSProtocolPacketsFormat__Group__5 : rule__GSSProtocolPacketsFormat__Group__5__Impl rule__GSSProtocolPacketsFormat__Group__6 ;
     public final void rule__GSSProtocolPacketsFormat__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1645:1: ( rule__GSSProtocolPacketsFormat__Group__5__Impl rule__GSSProtocolPacketsFormat__Group__6 )
-            // InternalPROTOCOL_PACKETS.g:1646:2: rule__GSSProtocolPacketsFormat__Group__5__Impl rule__GSSProtocolPacketsFormat__Group__6
+            // InternalPROTOCOL_PACKETS.g:1699:1: ( rule__GSSProtocolPacketsFormat__Group__5__Impl rule__GSSProtocolPacketsFormat__Group__6 )
+            // InternalPROTOCOL_PACKETS.g:1700:2: rule__GSSProtocolPacketsFormat__Group__5__Impl rule__GSSProtocolPacketsFormat__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSProtocolPacketsFormat__Group__5__Impl();
@@ -5170,17 +5329,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__5__Impl"
-    // InternalPROTOCOL_PACKETS.g:1653:1: rule__GSSProtocolPacketsFormat__Group__5__Impl : ( ';' ) ;
+    // InternalPROTOCOL_PACKETS.g:1707:1: rule__GSSProtocolPacketsFormat__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSProtocolPacketsFormat__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1657:1: ( ( ';' ) )
-            // InternalPROTOCOL_PACKETS.g:1658:1: ( ';' )
+            // InternalPROTOCOL_PACKETS.g:1711:1: ( ( ';' ) )
+            // InternalPROTOCOL_PACKETS.g:1712:1: ( ';' )
             {
-            // InternalPROTOCOL_PACKETS.g:1658:1: ( ';' )
-            // InternalPROTOCOL_PACKETS.g:1659:2: ';'
+            // InternalPROTOCOL_PACKETS.g:1712:1: ( ';' )
+            // InternalPROTOCOL_PACKETS.g:1713:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsFormatAccess().getSemicolonKeyword_5()); 
@@ -5211,14 +5370,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__6"
-    // InternalPROTOCOL_PACKETS.g:1668:1: rule__GSSProtocolPacketsFormat__Group__6 : rule__GSSProtocolPacketsFormat__Group__6__Impl rule__GSSProtocolPacketsFormat__Group__7 ;
+    // InternalPROTOCOL_PACKETS.g:1722:1: rule__GSSProtocolPacketsFormat__Group__6 : rule__GSSProtocolPacketsFormat__Group__6__Impl rule__GSSProtocolPacketsFormat__Group__7 ;
     public final void rule__GSSProtocolPacketsFormat__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1672:1: ( rule__GSSProtocolPacketsFormat__Group__6__Impl rule__GSSProtocolPacketsFormat__Group__7 )
-            // InternalPROTOCOL_PACKETS.g:1673:2: rule__GSSProtocolPacketsFormat__Group__6__Impl rule__GSSProtocolPacketsFormat__Group__7
+            // InternalPROTOCOL_PACKETS.g:1726:1: ( rule__GSSProtocolPacketsFormat__Group__6__Impl rule__GSSProtocolPacketsFormat__Group__7 )
+            // InternalPROTOCOL_PACKETS.g:1727:2: rule__GSSProtocolPacketsFormat__Group__6__Impl rule__GSSProtocolPacketsFormat__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSProtocolPacketsFormat__Group__6__Impl();
@@ -5249,17 +5408,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__6__Impl"
-    // InternalPROTOCOL_PACKETS.g:1680:1: rule__GSSProtocolPacketsFormat__Group__6__Impl : ( '}' ) ;
+    // InternalPROTOCOL_PACKETS.g:1734:1: rule__GSSProtocolPacketsFormat__Group__6__Impl : ( '}' ) ;
     public final void rule__GSSProtocolPacketsFormat__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1684:1: ( ( '}' ) )
-            // InternalPROTOCOL_PACKETS.g:1685:1: ( '}' )
+            // InternalPROTOCOL_PACKETS.g:1738:1: ( ( '}' ) )
+            // InternalPROTOCOL_PACKETS.g:1739:1: ( '}' )
             {
-            // InternalPROTOCOL_PACKETS.g:1685:1: ( '}' )
-            // InternalPROTOCOL_PACKETS.g:1686:2: '}'
+            // InternalPROTOCOL_PACKETS.g:1739:1: ( '}' )
+            // InternalPROTOCOL_PACKETS.g:1740:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsFormatAccess().getRightCurlyBracketKeyword_6()); 
@@ -5290,14 +5449,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__7"
-    // InternalPROTOCOL_PACKETS.g:1695:1: rule__GSSProtocolPacketsFormat__Group__7 : rule__GSSProtocolPacketsFormat__Group__7__Impl ;
+    // InternalPROTOCOL_PACKETS.g:1749:1: rule__GSSProtocolPacketsFormat__Group__7 : rule__GSSProtocolPacketsFormat__Group__7__Impl ;
     public final void rule__GSSProtocolPacketsFormat__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1699:1: ( rule__GSSProtocolPacketsFormat__Group__7__Impl )
-            // InternalPROTOCOL_PACKETS.g:1700:2: rule__GSSProtocolPacketsFormat__Group__7__Impl
+            // InternalPROTOCOL_PACKETS.g:1753:1: ( rule__GSSProtocolPacketsFormat__Group__7__Impl )
+            // InternalPROTOCOL_PACKETS.g:1754:2: rule__GSSProtocolPacketsFormat__Group__7__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSProtocolPacketsFormat__Group__7__Impl();
@@ -5323,17 +5482,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__Group__7__Impl"
-    // InternalPROTOCOL_PACKETS.g:1706:1: rule__GSSProtocolPacketsFormat__Group__7__Impl : ( ';' ) ;
+    // InternalPROTOCOL_PACKETS.g:1760:1: rule__GSSProtocolPacketsFormat__Group__7__Impl : ( ';' ) ;
     public final void rule__GSSProtocolPacketsFormat__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1710:1: ( ( ';' ) )
-            // InternalPROTOCOL_PACKETS.g:1711:1: ( ';' )
+            // InternalPROTOCOL_PACKETS.g:1764:1: ( ( ';' ) )
+            // InternalPROTOCOL_PACKETS.g:1765:1: ( ';' )
             {
-            // InternalPROTOCOL_PACKETS.g:1711:1: ( ';' )
-            // InternalPROTOCOL_PACKETS.g:1712:2: ';'
+            // InternalPROTOCOL_PACKETS.g:1765:1: ( ';' )
+            // InternalPROTOCOL_PACKETS.g:1766:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsFormatAccess().getSemicolonKeyword_7()); 
@@ -5364,16 +5523,16 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__QualifiedName__Group__0"
-    // InternalPROTOCOL_PACKETS.g:1722:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
+    // InternalPROTOCOL_PACKETS.g:1776:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
     public final void rule__QualifiedName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1726:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
-            // InternalPROTOCOL_PACKETS.g:1727:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
+            // InternalPROTOCOL_PACKETS.g:1780:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
+            // InternalPROTOCOL_PACKETS.g:1781:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__QualifiedName__Group__0__Impl();
 
             state._fsp--;
@@ -5402,17 +5561,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__QualifiedName__Group__0__Impl"
-    // InternalPROTOCOL_PACKETS.g:1734:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
+    // InternalPROTOCOL_PACKETS.g:1788:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1738:1: ( ( RULE_ID ) )
-            // InternalPROTOCOL_PACKETS.g:1739:1: ( RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:1792:1: ( ( RULE_ID ) )
+            // InternalPROTOCOL_PACKETS.g:1793:1: ( RULE_ID )
             {
-            // InternalPROTOCOL_PACKETS.g:1739:1: ( RULE_ID )
-            // InternalPROTOCOL_PACKETS.g:1740:2: RULE_ID
+            // InternalPROTOCOL_PACKETS.g:1793:1: ( RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:1794:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
@@ -5443,14 +5602,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__QualifiedName__Group__1"
-    // InternalPROTOCOL_PACKETS.g:1749:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
+    // InternalPROTOCOL_PACKETS.g:1803:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
     public final void rule__QualifiedName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1753:1: ( rule__QualifiedName__Group__1__Impl )
-            // InternalPROTOCOL_PACKETS.g:1754:2: rule__QualifiedName__Group__1__Impl
+            // InternalPROTOCOL_PACKETS.g:1807:1: ( rule__QualifiedName__Group__1__Impl )
+            // InternalPROTOCOL_PACKETS.g:1808:2: rule__QualifiedName__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__QualifiedName__Group__1__Impl();
@@ -5476,37 +5635,37 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__QualifiedName__Group__1__Impl"
-    // InternalPROTOCOL_PACKETS.g:1760:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
+    // InternalPROTOCOL_PACKETS.g:1814:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
     public final void rule__QualifiedName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1764:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
-            // InternalPROTOCOL_PACKETS.g:1765:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // InternalPROTOCOL_PACKETS.g:1818:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
+            // InternalPROTOCOL_PACKETS.g:1819:1: ( ( rule__QualifiedName__Group_1__0 )* )
             {
-            // InternalPROTOCOL_PACKETS.g:1765:1: ( ( rule__QualifiedName__Group_1__0 )* )
-            // InternalPROTOCOL_PACKETS.g:1766:2: ( rule__QualifiedName__Group_1__0 )*
+            // InternalPROTOCOL_PACKETS.g:1819:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // InternalPROTOCOL_PACKETS.g:1820:2: ( rule__QualifiedName__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getGroup_1()); 
             }
-            // InternalPROTOCOL_PACKETS.g:1767:2: ( rule__QualifiedName__Group_1__0 )*
+            // InternalPROTOCOL_PACKETS.g:1821:2: ( rule__QualifiedName__Group_1__0 )*
             loop7:
             do {
                 int alt7=2;
                 int LA7_0 = input.LA(1);
 
-                if ( (LA7_0==26) ) {
+                if ( (LA7_0==27) ) {
                     alt7=1;
                 }
 
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalPROTOCOL_PACKETS.g:1767:3: rule__QualifiedName__Group_1__0
+            	    // InternalPROTOCOL_PACKETS.g:1821:3: rule__QualifiedName__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_22);
+            	    pushFollow(FollowSets000.FOLLOW_24);
             	    rule__QualifiedName__Group_1__0();
 
             	    state._fsp--;
@@ -5545,16 +5704,16 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0"
-    // InternalPROTOCOL_PACKETS.g:1776:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
+    // InternalPROTOCOL_PACKETS.g:1830:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
     public final void rule__QualifiedName__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1780:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
-            // InternalPROTOCOL_PACKETS.g:1781:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
+            // InternalPROTOCOL_PACKETS.g:1834:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
+            // InternalPROTOCOL_PACKETS.g:1835:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__QualifiedName__Group_1__0__Impl();
 
             state._fsp--;
@@ -5583,22 +5742,22 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0__Impl"
-    // InternalPROTOCOL_PACKETS.g:1788:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
+    // InternalPROTOCOL_PACKETS.g:1842:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
     public final void rule__QualifiedName__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1792:1: ( ( '.' ) )
-            // InternalPROTOCOL_PACKETS.g:1793:1: ( '.' )
+            // InternalPROTOCOL_PACKETS.g:1846:1: ( ( '.' ) )
+            // InternalPROTOCOL_PACKETS.g:1847:1: ( '.' )
             {
-            // InternalPROTOCOL_PACKETS.g:1793:1: ( '.' )
-            // InternalPROTOCOL_PACKETS.g:1794:2: '.'
+            // InternalPROTOCOL_PACKETS.g:1847:1: ( '.' )
+            // InternalPROTOCOL_PACKETS.g:1848:2: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
             }
-            match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,27,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
             }
@@ -5624,14 +5783,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1"
-    // InternalPROTOCOL_PACKETS.g:1803:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
+    // InternalPROTOCOL_PACKETS.g:1857:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
     public final void rule__QualifiedName__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1807:1: ( rule__QualifiedName__Group_1__1__Impl )
-            // InternalPROTOCOL_PACKETS.g:1808:2: rule__QualifiedName__Group_1__1__Impl
+            // InternalPROTOCOL_PACKETS.g:1861:1: ( rule__QualifiedName__Group_1__1__Impl )
+            // InternalPROTOCOL_PACKETS.g:1862:2: rule__QualifiedName__Group_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__QualifiedName__Group_1__1__Impl();
@@ -5657,17 +5816,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1__Impl"
-    // InternalPROTOCOL_PACKETS.g:1814:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
+    // InternalPROTOCOL_PACKETS.g:1868:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1818:1: ( ( RULE_ID ) )
-            // InternalPROTOCOL_PACKETS.g:1819:1: ( RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:1872:1: ( ( RULE_ID ) )
+            // InternalPROTOCOL_PACKETS.g:1873:1: ( RULE_ID )
             {
-            // InternalPROTOCOL_PACKETS.g:1819:1: ( RULE_ID )
-            // InternalPROTOCOL_PACKETS.g:1820:2: RULE_ID
+            // InternalPROTOCOL_PACKETS.g:1873:1: ( RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:1874:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
@@ -5698,16 +5857,16 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group__0"
-    // InternalPROTOCOL_PACKETS.g:1830:1: rule__Version__Group__0 : rule__Version__Group__0__Impl rule__Version__Group__1 ;
+    // InternalPROTOCOL_PACKETS.g:1884:1: rule__Version__Group__0 : rule__Version__Group__0__Impl rule__Version__Group__1 ;
     public final void rule__Version__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1834:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
-            // InternalPROTOCOL_PACKETS.g:1835:2: rule__Version__Group__0__Impl rule__Version__Group__1
+            // InternalPROTOCOL_PACKETS.g:1888:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
+            // InternalPROTOCOL_PACKETS.g:1889:2: rule__Version__Group__0__Impl rule__Version__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__Version__Group__0__Impl();
 
             state._fsp--;
@@ -5736,23 +5895,23 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group__0__Impl"
-    // InternalPROTOCOL_PACKETS.g:1842:1: rule__Version__Group__0__Impl : ( ( rule__Version__Alternatives_0 ) ) ;
+    // InternalPROTOCOL_PACKETS.g:1896:1: rule__Version__Group__0__Impl : ( ( rule__Version__Alternatives_0 ) ) ;
     public final void rule__Version__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1846:1: ( ( ( rule__Version__Alternatives_0 ) ) )
-            // InternalPROTOCOL_PACKETS.g:1847:1: ( ( rule__Version__Alternatives_0 ) )
+            // InternalPROTOCOL_PACKETS.g:1900:1: ( ( ( rule__Version__Alternatives_0 ) ) )
+            // InternalPROTOCOL_PACKETS.g:1901:1: ( ( rule__Version__Alternatives_0 ) )
             {
-            // InternalPROTOCOL_PACKETS.g:1847:1: ( ( rule__Version__Alternatives_0 ) )
-            // InternalPROTOCOL_PACKETS.g:1848:2: ( rule__Version__Alternatives_0 )
+            // InternalPROTOCOL_PACKETS.g:1901:1: ( ( rule__Version__Alternatives_0 ) )
+            // InternalPROTOCOL_PACKETS.g:1902:2: ( rule__Version__Alternatives_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getAlternatives_0()); 
             }
-            // InternalPROTOCOL_PACKETS.g:1849:2: ( rule__Version__Alternatives_0 )
-            // InternalPROTOCOL_PACKETS.g:1849:3: rule__Version__Alternatives_0
+            // InternalPROTOCOL_PACKETS.g:1903:2: ( rule__Version__Alternatives_0 )
+            // InternalPROTOCOL_PACKETS.g:1903:3: rule__Version__Alternatives_0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Alternatives_0();
@@ -5787,14 +5946,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group__1"
-    // InternalPROTOCOL_PACKETS.g:1857:1: rule__Version__Group__1 : rule__Version__Group__1__Impl ;
+    // InternalPROTOCOL_PACKETS.g:1911:1: rule__Version__Group__1 : rule__Version__Group__1__Impl ;
     public final void rule__Version__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1861:1: ( rule__Version__Group__1__Impl )
-            // InternalPROTOCOL_PACKETS.g:1862:2: rule__Version__Group__1__Impl
+            // InternalPROTOCOL_PACKETS.g:1915:1: ( rule__Version__Group__1__Impl )
+            // InternalPROTOCOL_PACKETS.g:1916:2: rule__Version__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group__1__Impl();
@@ -5820,37 +5979,37 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group__1__Impl"
-    // InternalPROTOCOL_PACKETS.g:1868:1: rule__Version__Group__1__Impl : ( ( rule__Version__Group_1__0 )* ) ;
+    // InternalPROTOCOL_PACKETS.g:1922:1: rule__Version__Group__1__Impl : ( ( rule__Version__Group_1__0 )* ) ;
     public final void rule__Version__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1872:1: ( ( ( rule__Version__Group_1__0 )* ) )
-            // InternalPROTOCOL_PACKETS.g:1873:1: ( ( rule__Version__Group_1__0 )* )
+            // InternalPROTOCOL_PACKETS.g:1926:1: ( ( ( rule__Version__Group_1__0 )* ) )
+            // InternalPROTOCOL_PACKETS.g:1927:1: ( ( rule__Version__Group_1__0 )* )
             {
-            // InternalPROTOCOL_PACKETS.g:1873:1: ( ( rule__Version__Group_1__0 )* )
-            // InternalPROTOCOL_PACKETS.g:1874:2: ( rule__Version__Group_1__0 )*
+            // InternalPROTOCOL_PACKETS.g:1927:1: ( ( rule__Version__Group_1__0 )* )
+            // InternalPROTOCOL_PACKETS.g:1928:2: ( rule__Version__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getGroup_1()); 
             }
-            // InternalPROTOCOL_PACKETS.g:1875:2: ( rule__Version__Group_1__0 )*
+            // InternalPROTOCOL_PACKETS.g:1929:2: ( rule__Version__Group_1__0 )*
             loop8:
             do {
                 int alt8=2;
                 int LA8_0 = input.LA(1);
 
-                if ( (LA8_0==26) ) {
+                if ( (LA8_0==27) ) {
                     alt8=1;
                 }
 
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalPROTOCOL_PACKETS.g:1875:3: rule__Version__Group_1__0
+            	    // InternalPROTOCOL_PACKETS.g:1929:3: rule__Version__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_22);
+            	    pushFollow(FollowSets000.FOLLOW_24);
             	    rule__Version__Group_1__0();
 
             	    state._fsp--;
@@ -5889,16 +6048,16 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group_0_1__0"
-    // InternalPROTOCOL_PACKETS.g:1884:1: rule__Version__Group_0_1__0 : rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 ;
+    // InternalPROTOCOL_PACKETS.g:1938:1: rule__Version__Group_0_1__0 : rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 ;
     public final void rule__Version__Group_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1888:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
-            // InternalPROTOCOL_PACKETS.g:1889:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
+            // InternalPROTOCOL_PACKETS.g:1942:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
+            // InternalPROTOCOL_PACKETS.g:1943:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__Version__Group_0_1__0__Impl();
 
             state._fsp--;
@@ -5927,22 +6086,22 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group_0_1__0__Impl"
-    // InternalPROTOCOL_PACKETS.g:1896:1: rule__Version__Group_0_1__0__Impl : ( ( RULE_INT )? ) ;
+    // InternalPROTOCOL_PACKETS.g:1950:1: rule__Version__Group_0_1__0__Impl : ( ( RULE_INT )? ) ;
     public final void rule__Version__Group_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1900:1: ( ( ( RULE_INT )? ) )
-            // InternalPROTOCOL_PACKETS.g:1901:1: ( ( RULE_INT )? )
+            // InternalPROTOCOL_PACKETS.g:1954:1: ( ( ( RULE_INT )? ) )
+            // InternalPROTOCOL_PACKETS.g:1955:1: ( ( RULE_INT )? )
             {
-            // InternalPROTOCOL_PACKETS.g:1901:1: ( ( RULE_INT )? )
-            // InternalPROTOCOL_PACKETS.g:1902:2: ( RULE_INT )?
+            // InternalPROTOCOL_PACKETS.g:1955:1: ( ( RULE_INT )? )
+            // InternalPROTOCOL_PACKETS.g:1956:2: ( RULE_INT )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_0_1_0()); 
             }
-            // InternalPROTOCOL_PACKETS.g:1903:2: ( RULE_INT )?
+            // InternalPROTOCOL_PACKETS.g:1957:2: ( RULE_INT )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -5951,7 +6110,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             }
             switch (alt9) {
                 case 1 :
-                    // InternalPROTOCOL_PACKETS.g:1903:3: RULE_INT
+                    // InternalPROTOCOL_PACKETS.g:1957:3: RULE_INT
                     {
                     match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -5985,14 +6144,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group_0_1__1"
-    // InternalPROTOCOL_PACKETS.g:1911:1: rule__Version__Group_0_1__1 : rule__Version__Group_0_1__1__Impl ;
+    // InternalPROTOCOL_PACKETS.g:1965:1: rule__Version__Group_0_1__1 : rule__Version__Group_0_1__1__Impl ;
     public final void rule__Version__Group_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1915:1: ( rule__Version__Group_0_1__1__Impl )
-            // InternalPROTOCOL_PACKETS.g:1916:2: rule__Version__Group_0_1__1__Impl
+            // InternalPROTOCOL_PACKETS.g:1969:1: ( rule__Version__Group_0_1__1__Impl )
+            // InternalPROTOCOL_PACKETS.g:1970:2: rule__Version__Group_0_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_0_1__1__Impl();
@@ -6018,17 +6177,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group_0_1__1__Impl"
-    // InternalPROTOCOL_PACKETS.g:1922:1: rule__Version__Group_0_1__1__Impl : ( RULE_ID ) ;
+    // InternalPROTOCOL_PACKETS.g:1976:1: rule__Version__Group_0_1__1__Impl : ( RULE_ID ) ;
     public final void rule__Version__Group_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1926:1: ( ( RULE_ID ) )
-            // InternalPROTOCOL_PACKETS.g:1927:1: ( RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:1980:1: ( ( RULE_ID ) )
+            // InternalPROTOCOL_PACKETS.g:1981:1: ( RULE_ID )
             {
-            // InternalPROTOCOL_PACKETS.g:1927:1: ( RULE_ID )
-            // InternalPROTOCOL_PACKETS.g:1928:2: RULE_ID
+            // InternalPROTOCOL_PACKETS.g:1981:1: ( RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:1982:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getIDTerminalRuleCall_0_1_1()); 
@@ -6059,16 +6218,16 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group_1__0"
-    // InternalPROTOCOL_PACKETS.g:1938:1: rule__Version__Group_1__0 : rule__Version__Group_1__0__Impl rule__Version__Group_1__1 ;
+    // InternalPROTOCOL_PACKETS.g:1992:1: rule__Version__Group_1__0 : rule__Version__Group_1__0__Impl rule__Version__Group_1__1 ;
     public final void rule__Version__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1942:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
-            // InternalPROTOCOL_PACKETS.g:1943:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
+            // InternalPROTOCOL_PACKETS.g:1996:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
+            // InternalPROTOCOL_PACKETS.g:1997:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__Version__Group_1__0__Impl();
 
             state._fsp--;
@@ -6097,22 +6256,22 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group_1__0__Impl"
-    // InternalPROTOCOL_PACKETS.g:1950:1: rule__Version__Group_1__0__Impl : ( '.' ) ;
+    // InternalPROTOCOL_PACKETS.g:2004:1: rule__Version__Group_1__0__Impl : ( '.' ) ;
     public final void rule__Version__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1954:1: ( ( '.' ) )
-            // InternalPROTOCOL_PACKETS.g:1955:1: ( '.' )
+            // InternalPROTOCOL_PACKETS.g:2008:1: ( ( '.' ) )
+            // InternalPROTOCOL_PACKETS.g:2009:1: ( '.' )
             {
-            // InternalPROTOCOL_PACKETS.g:1955:1: ( '.' )
-            // InternalPROTOCOL_PACKETS.g:1956:2: '.'
+            // InternalPROTOCOL_PACKETS.g:2009:1: ( '.' )
+            // InternalPROTOCOL_PACKETS.g:2010:2: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getFullStopKeyword_1_0()); 
             }
-            match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,27,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVersionAccess().getFullStopKeyword_1_0()); 
             }
@@ -6138,14 +6297,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group_1__1"
-    // InternalPROTOCOL_PACKETS.g:1965:1: rule__Version__Group_1__1 : rule__Version__Group_1__1__Impl ;
+    // InternalPROTOCOL_PACKETS.g:2019:1: rule__Version__Group_1__1 : rule__Version__Group_1__1__Impl ;
     public final void rule__Version__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1969:1: ( rule__Version__Group_1__1__Impl )
-            // InternalPROTOCOL_PACKETS.g:1970:2: rule__Version__Group_1__1__Impl
+            // InternalPROTOCOL_PACKETS.g:2023:1: ( rule__Version__Group_1__1__Impl )
+            // InternalPROTOCOL_PACKETS.g:2024:2: rule__Version__Group_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_1__1__Impl();
@@ -6171,23 +6330,23 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group_1__1__Impl"
-    // InternalPROTOCOL_PACKETS.g:1976:1: rule__Version__Group_1__1__Impl : ( ( rule__Version__Alternatives_1_1 ) ) ;
+    // InternalPROTOCOL_PACKETS.g:2030:1: rule__Version__Group_1__1__Impl : ( ( rule__Version__Alternatives_1_1 ) ) ;
     public final void rule__Version__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1980:1: ( ( ( rule__Version__Alternatives_1_1 ) ) )
-            // InternalPROTOCOL_PACKETS.g:1981:1: ( ( rule__Version__Alternatives_1_1 ) )
+            // InternalPROTOCOL_PACKETS.g:2034:1: ( ( ( rule__Version__Alternatives_1_1 ) ) )
+            // InternalPROTOCOL_PACKETS.g:2035:1: ( ( rule__Version__Alternatives_1_1 ) )
             {
-            // InternalPROTOCOL_PACKETS.g:1981:1: ( ( rule__Version__Alternatives_1_1 ) )
-            // InternalPROTOCOL_PACKETS.g:1982:2: ( rule__Version__Alternatives_1_1 )
+            // InternalPROTOCOL_PACKETS.g:2035:1: ( ( rule__Version__Alternatives_1_1 ) )
+            // InternalPROTOCOL_PACKETS.g:2036:2: ( rule__Version__Alternatives_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getAlternatives_1_1()); 
             }
-            // InternalPROTOCOL_PACKETS.g:1983:2: ( rule__Version__Alternatives_1_1 )
-            // InternalPROTOCOL_PACKETS.g:1983:3: rule__Version__Alternatives_1_1
+            // InternalPROTOCOL_PACKETS.g:2037:2: ( rule__Version__Alternatives_1_1 )
+            // InternalPROTOCOL_PACKETS.g:2037:3: rule__Version__Alternatives_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Alternatives_1_1();
@@ -6222,16 +6381,16 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__0"
-    // InternalPROTOCOL_PACKETS.g:1992:1: rule__Version__Group_1_1_1__0 : rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 ;
+    // InternalPROTOCOL_PACKETS.g:2046:1: rule__Version__Group_1_1_1__0 : rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 ;
     public final void rule__Version__Group_1_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:1996:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
-            // InternalPROTOCOL_PACKETS.g:1997:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
+            // InternalPROTOCOL_PACKETS.g:2050:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
+            // InternalPROTOCOL_PACKETS.g:2051:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__Version__Group_1_1_1__0__Impl();
 
             state._fsp--;
@@ -6260,22 +6419,22 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__0__Impl"
-    // InternalPROTOCOL_PACKETS.g:2004:1: rule__Version__Group_1_1_1__0__Impl : ( ( RULE_INT )? ) ;
+    // InternalPROTOCOL_PACKETS.g:2058:1: rule__Version__Group_1_1_1__0__Impl : ( ( RULE_INT )? ) ;
     public final void rule__Version__Group_1_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2008:1: ( ( ( RULE_INT )? ) )
-            // InternalPROTOCOL_PACKETS.g:2009:1: ( ( RULE_INT )? )
+            // InternalPROTOCOL_PACKETS.g:2062:1: ( ( ( RULE_INT )? ) )
+            // InternalPROTOCOL_PACKETS.g:2063:1: ( ( RULE_INT )? )
             {
-            // InternalPROTOCOL_PACKETS.g:2009:1: ( ( RULE_INT )? )
-            // InternalPROTOCOL_PACKETS.g:2010:2: ( RULE_INT )?
+            // InternalPROTOCOL_PACKETS.g:2063:1: ( ( RULE_INT )? )
+            // InternalPROTOCOL_PACKETS.g:2064:2: ( RULE_INT )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_1_1_1_0()); 
             }
-            // InternalPROTOCOL_PACKETS.g:2011:2: ( RULE_INT )?
+            // InternalPROTOCOL_PACKETS.g:2065:2: ( RULE_INT )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -6284,7 +6443,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             }
             switch (alt10) {
                 case 1 :
-                    // InternalPROTOCOL_PACKETS.g:2011:3: RULE_INT
+                    // InternalPROTOCOL_PACKETS.g:2065:3: RULE_INT
                     {
                     match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -6318,14 +6477,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__1"
-    // InternalPROTOCOL_PACKETS.g:2019:1: rule__Version__Group_1_1_1__1 : rule__Version__Group_1_1_1__1__Impl ;
+    // InternalPROTOCOL_PACKETS.g:2073:1: rule__Version__Group_1_1_1__1 : rule__Version__Group_1_1_1__1__Impl ;
     public final void rule__Version__Group_1_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2023:1: ( rule__Version__Group_1_1_1__1__Impl )
-            // InternalPROTOCOL_PACKETS.g:2024:2: rule__Version__Group_1_1_1__1__Impl
+            // InternalPROTOCOL_PACKETS.g:2077:1: ( rule__Version__Group_1_1_1__1__Impl )
+            // InternalPROTOCOL_PACKETS.g:2078:2: rule__Version__Group_1_1_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_1_1_1__1__Impl();
@@ -6351,17 +6510,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__1__Impl"
-    // InternalPROTOCOL_PACKETS.g:2030:1: rule__Version__Group_1_1_1__1__Impl : ( RULE_ID ) ;
+    // InternalPROTOCOL_PACKETS.g:2084:1: rule__Version__Group_1_1_1__1__Impl : ( RULE_ID ) ;
     public final void rule__Version__Group_1_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2034:1: ( ( RULE_ID ) )
-            // InternalPROTOCOL_PACKETS.g:2035:1: ( RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:2088:1: ( ( RULE_ID ) )
+            // InternalPROTOCOL_PACKETS.g:2089:1: ( RULE_ID )
             {
-            // InternalPROTOCOL_PACKETS.g:2035:1: ( RULE_ID )
-            // InternalPROTOCOL_PACKETS.g:2036:2: RULE_ID
+            // InternalPROTOCOL_PACKETS.g:2089:1: ( RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:2090:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getIDTerminalRuleCall_1_1_1_1()); 
@@ -6392,16 +6551,16 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__0"
-    // InternalPROTOCOL_PACKETS.g:2046:1: rule__VersionedQualifiedName__Group__0 : rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 ;
+    // InternalPROTOCOL_PACKETS.g:2100:1: rule__VersionedQualifiedName__Group__0 : rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 ;
     public final void rule__VersionedQualifiedName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2050:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
-            // InternalPROTOCOL_PACKETS.g:2051:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
+            // InternalPROTOCOL_PACKETS.g:2104:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
+            // InternalPROTOCOL_PACKETS.g:2105:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_23);
+            pushFollow(FollowSets000.FOLLOW_25);
             rule__VersionedQualifiedName__Group__0__Impl();
 
             state._fsp--;
@@ -6430,17 +6589,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__0__Impl"
-    // InternalPROTOCOL_PACKETS.g:2058:1: rule__VersionedQualifiedName__Group__0__Impl : ( ruleQualifiedName ) ;
+    // InternalPROTOCOL_PACKETS.g:2112:1: rule__VersionedQualifiedName__Group__0__Impl : ( ruleQualifiedName ) ;
     public final void rule__VersionedQualifiedName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2062:1: ( ( ruleQualifiedName ) )
-            // InternalPROTOCOL_PACKETS.g:2063:1: ( ruleQualifiedName )
+            // InternalPROTOCOL_PACKETS.g:2116:1: ( ( ruleQualifiedName ) )
+            // InternalPROTOCOL_PACKETS.g:2117:1: ( ruleQualifiedName )
             {
-            // InternalPROTOCOL_PACKETS.g:2063:1: ( ruleQualifiedName )
-            // InternalPROTOCOL_PACKETS.g:2064:2: ruleQualifiedName
+            // InternalPROTOCOL_PACKETS.g:2117:1: ( ruleQualifiedName )
+            // InternalPROTOCOL_PACKETS.g:2118:2: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0()); 
@@ -6475,16 +6634,16 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__1"
-    // InternalPROTOCOL_PACKETS.g:2073:1: rule__VersionedQualifiedName__Group__1 : rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 ;
+    // InternalPROTOCOL_PACKETS.g:2127:1: rule__VersionedQualifiedName__Group__1 : rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 ;
     public final void rule__VersionedQualifiedName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2077:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
-            // InternalPROTOCOL_PACKETS.g:2078:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
+            // InternalPROTOCOL_PACKETS.g:2131:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
+            // InternalPROTOCOL_PACKETS.g:2132:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__VersionedQualifiedName__Group__1__Impl();
 
             state._fsp--;
@@ -6513,22 +6672,22 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__1__Impl"
-    // InternalPROTOCOL_PACKETS.g:2085:1: rule__VersionedQualifiedName__Group__1__Impl : ( '(' ) ;
+    // InternalPROTOCOL_PACKETS.g:2139:1: rule__VersionedQualifiedName__Group__1__Impl : ( '(' ) ;
     public final void rule__VersionedQualifiedName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2089:1: ( ( '(' ) )
-            // InternalPROTOCOL_PACKETS.g:2090:1: ( '(' )
+            // InternalPROTOCOL_PACKETS.g:2143:1: ( ( '(' ) )
+            // InternalPROTOCOL_PACKETS.g:2144:1: ( '(' )
             {
-            // InternalPROTOCOL_PACKETS.g:2090:1: ( '(' )
-            // InternalPROTOCOL_PACKETS.g:2091:2: '('
+            // InternalPROTOCOL_PACKETS.g:2144:1: ( '(' )
+            // InternalPROTOCOL_PACKETS.g:2145:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getLeftParenthesisKeyword_1()); 
             }
-            match(input,27,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVersionedQualifiedNameAccess().getLeftParenthesisKeyword_1()); 
             }
@@ -6554,16 +6713,16 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__2"
-    // InternalPROTOCOL_PACKETS.g:2100:1: rule__VersionedQualifiedName__Group__2 : rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 ;
+    // InternalPROTOCOL_PACKETS.g:2154:1: rule__VersionedQualifiedName__Group__2 : rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 ;
     public final void rule__VersionedQualifiedName__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2104:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
-            // InternalPROTOCOL_PACKETS.g:2105:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
+            // InternalPROTOCOL_PACKETS.g:2158:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
+            // InternalPROTOCOL_PACKETS.g:2159:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_26);
             rule__VersionedQualifiedName__Group__2__Impl();
 
             state._fsp--;
@@ -6592,17 +6751,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__2__Impl"
-    // InternalPROTOCOL_PACKETS.g:2112:1: rule__VersionedQualifiedName__Group__2__Impl : ( ruleVersion ) ;
+    // InternalPROTOCOL_PACKETS.g:2166:1: rule__VersionedQualifiedName__Group__2__Impl : ( ruleVersion ) ;
     public final void rule__VersionedQualifiedName__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2116:1: ( ( ruleVersion ) )
-            // InternalPROTOCOL_PACKETS.g:2117:1: ( ruleVersion )
+            // InternalPROTOCOL_PACKETS.g:2170:1: ( ( ruleVersion ) )
+            // InternalPROTOCOL_PACKETS.g:2171:1: ( ruleVersion )
             {
-            // InternalPROTOCOL_PACKETS.g:2117:1: ( ruleVersion )
-            // InternalPROTOCOL_PACKETS.g:2118:2: ruleVersion
+            // InternalPROTOCOL_PACKETS.g:2171:1: ( ruleVersion )
+            // InternalPROTOCOL_PACKETS.g:2172:2: ruleVersion
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2()); 
@@ -6637,14 +6796,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__3"
-    // InternalPROTOCOL_PACKETS.g:2127:1: rule__VersionedQualifiedName__Group__3 : rule__VersionedQualifiedName__Group__3__Impl ;
+    // InternalPROTOCOL_PACKETS.g:2181:1: rule__VersionedQualifiedName__Group__3 : rule__VersionedQualifiedName__Group__3__Impl ;
     public final void rule__VersionedQualifiedName__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2131:1: ( rule__VersionedQualifiedName__Group__3__Impl )
-            // InternalPROTOCOL_PACKETS.g:2132:2: rule__VersionedQualifiedName__Group__3__Impl
+            // InternalPROTOCOL_PACKETS.g:2185:1: ( rule__VersionedQualifiedName__Group__3__Impl )
+            // InternalPROTOCOL_PACKETS.g:2186:2: rule__VersionedQualifiedName__Group__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__VersionedQualifiedName__Group__3__Impl();
@@ -6670,22 +6829,22 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__3__Impl"
-    // InternalPROTOCOL_PACKETS.g:2138:1: rule__VersionedQualifiedName__Group__3__Impl : ( ')' ) ;
+    // InternalPROTOCOL_PACKETS.g:2192:1: rule__VersionedQualifiedName__Group__3__Impl : ( ')' ) ;
     public final void rule__VersionedQualifiedName__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2142:1: ( ( ')' ) )
-            // InternalPROTOCOL_PACKETS.g:2143:1: ( ')' )
+            // InternalPROTOCOL_PACKETS.g:2196:1: ( ( ')' ) )
+            // InternalPROTOCOL_PACKETS.g:2197:1: ( ')' )
             {
-            // InternalPROTOCOL_PACKETS.g:2143:1: ( ')' )
-            // InternalPROTOCOL_PACKETS.g:2144:2: ')'
+            // InternalPROTOCOL_PACKETS.g:2197:1: ( ')' )
+            // InternalPROTOCOL_PACKETS.g:2198:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3()); 
             }
-            match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3()); 
             }
@@ -6711,16 +6870,16 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__INTEGER__Group_0__0"
-    // InternalPROTOCOL_PACKETS.g:2154:1: rule__INTEGER__Group_0__0 : rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 ;
+    // InternalPROTOCOL_PACKETS.g:2208:1: rule__INTEGER__Group_0__0 : rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 ;
     public final void rule__INTEGER__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2158:1: ( rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 )
-            // InternalPROTOCOL_PACKETS.g:2159:2: rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1
+            // InternalPROTOCOL_PACKETS.g:2212:1: ( rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 )
+            // InternalPROTOCOL_PACKETS.g:2213:2: rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_25);
+            pushFollow(FollowSets000.FOLLOW_27);
             rule__INTEGER__Group_0__0__Impl();
 
             state._fsp--;
@@ -6749,33 +6908,33 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__INTEGER__Group_0__0__Impl"
-    // InternalPROTOCOL_PACKETS.g:2166:1: rule__INTEGER__Group_0__0__Impl : ( ( '-' )? ) ;
+    // InternalPROTOCOL_PACKETS.g:2220:1: rule__INTEGER__Group_0__0__Impl : ( ( '-' )? ) ;
     public final void rule__INTEGER__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2170:1: ( ( ( '-' )? ) )
-            // InternalPROTOCOL_PACKETS.g:2171:1: ( ( '-' )? )
+            // InternalPROTOCOL_PACKETS.g:2224:1: ( ( ( '-' )? ) )
+            // InternalPROTOCOL_PACKETS.g:2225:1: ( ( '-' )? )
             {
-            // InternalPROTOCOL_PACKETS.g:2171:1: ( ( '-' )? )
-            // InternalPROTOCOL_PACKETS.g:2172:2: ( '-' )?
+            // InternalPROTOCOL_PACKETS.g:2225:1: ( ( '-' )? )
+            // InternalPROTOCOL_PACKETS.g:2226:2: ( '-' )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getINTEGERAccess().getHyphenMinusKeyword_0_0()); 
             }
-            // InternalPROTOCOL_PACKETS.g:2173:2: ( '-' )?
+            // InternalPROTOCOL_PACKETS.g:2227:2: ( '-' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( (LA11_0==29) ) {
+            if ( (LA11_0==30) ) {
                 alt11=1;
             }
             switch (alt11) {
                 case 1 :
-                    // InternalPROTOCOL_PACKETS.g:2173:3: '-'
+                    // InternalPROTOCOL_PACKETS.g:2227:3: '-'
                     {
-                    match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
                     break;
@@ -6807,14 +6966,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__INTEGER__Group_0__1"
-    // InternalPROTOCOL_PACKETS.g:2181:1: rule__INTEGER__Group_0__1 : rule__INTEGER__Group_0__1__Impl ;
+    // InternalPROTOCOL_PACKETS.g:2235:1: rule__INTEGER__Group_0__1 : rule__INTEGER__Group_0__1__Impl ;
     public final void rule__INTEGER__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2185:1: ( rule__INTEGER__Group_0__1__Impl )
-            // InternalPROTOCOL_PACKETS.g:2186:2: rule__INTEGER__Group_0__1__Impl
+            // InternalPROTOCOL_PACKETS.g:2239:1: ( rule__INTEGER__Group_0__1__Impl )
+            // InternalPROTOCOL_PACKETS.g:2240:2: rule__INTEGER__Group_0__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__INTEGER__Group_0__1__Impl();
@@ -6840,17 +6999,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__INTEGER__Group_0__1__Impl"
-    // InternalPROTOCOL_PACKETS.g:2192:1: rule__INTEGER__Group_0__1__Impl : ( RULE_INT ) ;
+    // InternalPROTOCOL_PACKETS.g:2246:1: rule__INTEGER__Group_0__1__Impl : ( RULE_INT ) ;
     public final void rule__INTEGER__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2196:1: ( ( RULE_INT ) )
-            // InternalPROTOCOL_PACKETS.g:2197:1: ( RULE_INT )
+            // InternalPROTOCOL_PACKETS.g:2250:1: ( ( RULE_INT ) )
+            // InternalPROTOCOL_PACKETS.g:2251:1: ( RULE_INT )
             {
-            // InternalPROTOCOL_PACKETS.g:2197:1: ( RULE_INT )
-            // InternalPROTOCOL_PACKETS.g:2198:2: RULE_INT
+            // InternalPROTOCOL_PACKETS.g:2251:1: ( RULE_INT )
+            // InternalPROTOCOL_PACKETS.g:2252:2: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getINTEGERAccess().getINTTerminalRuleCall_0_1()); 
@@ -6881,15 +7040,15 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3"
-    // InternalPROTOCOL_PACKETS.g:2208:1: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3 : rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__0 {...}?;
+    // InternalPROTOCOL_PACKETS.g:2262:1: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3 : rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__0 {...}?;
     public final void rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		getUnorderedGroupHelper().enter(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUnorderedGroup_3());
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2213:1: ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__0 {...}?)
-            // InternalPROTOCOL_PACKETS.g:2214:2: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__0 {...}?
+            // InternalPROTOCOL_PACKETS.g:2267:1: ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__0 {...}?)
+            // InternalPROTOCOL_PACKETS.g:2268:2: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__0 {...}?
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__0();
@@ -6920,17 +7079,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl"
-    // InternalPROTOCOL_PACKETS.g:2222:1: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl : ( ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) ) ) ) ;
+    // InternalPROTOCOL_PACKETS.g:2276:1: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl : ( ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) ) ) ) ;
     public final void rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2227:1: ( ( ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) ) ) ) )
-            // InternalPROTOCOL_PACKETS.g:2228:3: ( ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) ) ) )
+            // InternalPROTOCOL_PACKETS.g:2281:1: ( ( ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) ) ) ) )
+            // InternalPROTOCOL_PACKETS.g:2282:3: ( ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) ) ) )
             {
-            // InternalPROTOCOL_PACKETS.g:2228:3: ( ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) ) ) )
+            // InternalPROTOCOL_PACKETS.g:2282:3: ( ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) ) ) )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -6949,28 +7108,28 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             }
             switch (alt12) {
                 case 1 :
-                    // InternalPROTOCOL_PACKETS.g:2229:3: ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) )
+                    // InternalPROTOCOL_PACKETS.g:2283:3: ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) )
                     {
-                    // InternalPROTOCOL_PACKETS.g:2229:3: ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) )
-                    // InternalPROTOCOL_PACKETS.g:2230:4: {...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) )
+                    // InternalPROTOCOL_PACKETS.g:2283:3: ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) )
+                    // InternalPROTOCOL_PACKETS.g:2284:4: {...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUnorderedGroup_3(), 0) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         throw new FailedPredicateException(input, "rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUnorderedGroup_3(), 0)");
                     }
-                    // InternalPROTOCOL_PACKETS.g:2230:129: ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) )
-                    // InternalPROTOCOL_PACKETS.g:2231:5: ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) )
+                    // InternalPROTOCOL_PACKETS.g:2284:129: ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) )
+                    // InternalPROTOCOL_PACKETS.g:2285:5: ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) )
                     {
                     getUnorderedGroupHelper().select(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUnorderedGroup_3(), 0);
                     selected = true;
-                    // InternalPROTOCOL_PACKETS.g:2237:5: ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) )
-                    // InternalPROTOCOL_PACKETS.g:2238:6: ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 )
+                    // InternalPROTOCOL_PACKETS.g:2291:5: ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) )
+                    // InternalPROTOCOL_PACKETS.g:2292:6: ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getGroup_3_0()); 
                     }
-                    // InternalPROTOCOL_PACKETS.g:2239:6: ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 )
-                    // InternalPROTOCOL_PACKETS.g:2239:7: rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0
+                    // InternalPROTOCOL_PACKETS.g:2293:6: ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 )
+                    // InternalPROTOCOL_PACKETS.g:2293:7: rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0();
@@ -6996,28 +7155,28 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
                     }
                     break;
                 case 2 :
-                    // InternalPROTOCOL_PACKETS.g:2244:3: ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) ) )
+                    // InternalPROTOCOL_PACKETS.g:2298:3: ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) ) )
                     {
-                    // InternalPROTOCOL_PACKETS.g:2244:3: ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) ) )
-                    // InternalPROTOCOL_PACKETS.g:2245:4: {...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) )
+                    // InternalPROTOCOL_PACKETS.g:2298:3: ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) ) )
+                    // InternalPROTOCOL_PACKETS.g:2299:4: {...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUnorderedGroup_3(), 1) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         throw new FailedPredicateException(input, "rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUnorderedGroup_3(), 1)");
                     }
-                    // InternalPROTOCOL_PACKETS.g:2245:129: ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) )
-                    // InternalPROTOCOL_PACKETS.g:2246:5: ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) )
+                    // InternalPROTOCOL_PACKETS.g:2299:129: ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) ) )
+                    // InternalPROTOCOL_PACKETS.g:2300:5: ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) )
                     {
                     getUnorderedGroupHelper().select(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUnorderedGroup_3(), 1);
                     selected = true;
-                    // InternalPROTOCOL_PACKETS.g:2252:5: ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) )
-                    // InternalPROTOCOL_PACKETS.g:2253:6: ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 )
+                    // InternalPROTOCOL_PACKETS.g:2306:5: ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 ) )
+                    // InternalPROTOCOL_PACKETS.g:2307:6: ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getGroup_3_1()); 
                     }
-                    // InternalPROTOCOL_PACKETS.g:2254:6: ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 )
-                    // InternalPROTOCOL_PACKETS.g:2254:7: rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0
+                    // InternalPROTOCOL_PACKETS.g:2308:6: ( rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0 )
+                    // InternalPROTOCOL_PACKETS.g:2308:7: rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0();
@@ -7066,21 +7225,21 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__0"
-    // InternalPROTOCOL_PACKETS.g:2267:1: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__0 : rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1 )? ;
+    // InternalPROTOCOL_PACKETS.g:2321:1: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__0 : rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1 )? ;
     public final void rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2271:1: ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1 )? )
-            // InternalPROTOCOL_PACKETS.g:2272:2: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1 )?
+            // InternalPROTOCOL_PACKETS.g:2325:1: ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1 )? )
+            // InternalPROTOCOL_PACKETS.g:2326:2: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1 )?
             {
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_28);
             rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            // InternalPROTOCOL_PACKETS.g:2273:2: ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1 )?
+            // InternalPROTOCOL_PACKETS.g:2327:2: ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1 )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -7124,14 +7283,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1"
-    // InternalPROTOCOL_PACKETS.g:2279:1: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1 : rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl ;
+    // InternalPROTOCOL_PACKETS.g:2333:1: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1 : rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl ;
     public final void rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2283:1: ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl )
-            // InternalPROTOCOL_PACKETS.g:2284:2: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl
+            // InternalPROTOCOL_PACKETS.g:2337:1: ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl )
+            // InternalPROTOCOL_PACKETS.g:2338:2: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__Impl();
@@ -7157,17 +7316,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSModelFile__ImportsAssignment_0"
-    // InternalPROTOCOL_PACKETS.g:2291:1: rule__GSSModelFile__ImportsAssignment_0 : ( ruleGSSModelFileImport ) ;
+    // InternalPROTOCOL_PACKETS.g:2345:1: rule__GSSModelFile__ImportsAssignment_0 : ( ruleGSSModelFileImport ) ;
     public final void rule__GSSModelFile__ImportsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2295:1: ( ( ruleGSSModelFileImport ) )
-            // InternalPROTOCOL_PACKETS.g:2296:2: ( ruleGSSModelFileImport )
+            // InternalPROTOCOL_PACKETS.g:2349:1: ( ( ruleGSSModelFileImport ) )
+            // InternalPROTOCOL_PACKETS.g:2350:2: ( ruleGSSModelFileImport )
             {
-            // InternalPROTOCOL_PACKETS.g:2296:2: ( ruleGSSModelFileImport )
-            // InternalPROTOCOL_PACKETS.g:2297:3: ruleGSSModelFileImport
+            // InternalPROTOCOL_PACKETS.g:2350:2: ( ruleGSSModelFileImport )
+            // InternalPROTOCOL_PACKETS.g:2351:3: ruleGSSModelFileImport
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileAccess().getImportsGSSModelFileImportParserRuleCall_0_0()); 
@@ -7202,17 +7361,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSModelFile__ElementAssignment_1"
-    // InternalPROTOCOL_PACKETS.g:2306:1: rule__GSSModelFile__ElementAssignment_1 : ( ruleGSSProtocolPacketsProtocolPackets ) ;
+    // InternalPROTOCOL_PACKETS.g:2360:1: rule__GSSModelFile__ElementAssignment_1 : ( ruleGSSProtocolPacketsProtocolPackets ) ;
     public final void rule__GSSModelFile__ElementAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2310:1: ( ( ruleGSSProtocolPacketsProtocolPackets ) )
-            // InternalPROTOCOL_PACKETS.g:2311:2: ( ruleGSSProtocolPacketsProtocolPackets )
+            // InternalPROTOCOL_PACKETS.g:2364:1: ( ( ruleGSSProtocolPacketsProtocolPackets ) )
+            // InternalPROTOCOL_PACKETS.g:2365:2: ( ruleGSSProtocolPacketsProtocolPackets )
             {
-            // InternalPROTOCOL_PACKETS.g:2311:2: ( ruleGSSProtocolPacketsProtocolPackets )
-            // InternalPROTOCOL_PACKETS.g:2312:3: ruleGSSProtocolPacketsProtocolPackets
+            // InternalPROTOCOL_PACKETS.g:2365:2: ( ruleGSSProtocolPacketsProtocolPackets )
+            // InternalPROTOCOL_PACKETS.g:2366:3: ruleGSSProtocolPacketsProtocolPackets
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileAccess().getElementGSSProtocolPacketsProtocolPacketsParserRuleCall_1_0()); 
@@ -7247,24 +7406,24 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSModelFileImport__ImportURIAssignment_2"
-    // InternalPROTOCOL_PACKETS.g:2321:1: rule__GSSModelFileImport__ImportURIAssignment_2 : ( RULE_ID ) ;
+    // InternalPROTOCOL_PACKETS.g:2375:1: rule__GSSModelFileImport__ImportURIAssignment_2 : ( RULE_STRING ) ;
     public final void rule__GSSModelFileImport__ImportURIAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2325:1: ( ( RULE_ID ) )
-            // InternalPROTOCOL_PACKETS.g:2326:2: ( RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:2379:1: ( ( RULE_STRING ) )
+            // InternalPROTOCOL_PACKETS.g:2380:2: ( RULE_STRING )
             {
-            // InternalPROTOCOL_PACKETS.g:2326:2: ( RULE_ID )
-            // InternalPROTOCOL_PACKETS.g:2327:3: RULE_ID
+            // InternalPROTOCOL_PACKETS.g:2380:2: ( RULE_STRING )
+            // InternalPROTOCOL_PACKETS.g:2381:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0()); 
+               before(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0()); 
+               after(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
             }
 
             }
@@ -7288,17 +7447,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPackets__NameAssignment_1"
-    // InternalPROTOCOL_PACKETS.g:2336:1: rule__GSSProtocolPacketsProtocolPackets__NameAssignment_1 : ( ruleEString ) ;
+    // InternalPROTOCOL_PACKETS.g:2390:1: rule__GSSProtocolPacketsProtocolPackets__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__GSSProtocolPacketsProtocolPackets__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2340:1: ( ( ruleEString ) )
-            // InternalPROTOCOL_PACKETS.g:2341:2: ( ruleEString )
+            // InternalPROTOCOL_PACKETS.g:2394:1: ( ( ruleEString ) )
+            // InternalPROTOCOL_PACKETS.g:2395:2: ( ruleEString )
             {
-            // InternalPROTOCOL_PACKETS.g:2341:2: ( ruleEString )
-            // InternalPROTOCOL_PACKETS.g:2342:3: ruleEString
+            // InternalPROTOCOL_PACKETS.g:2395:2: ( ruleEString )
+            // InternalPROTOCOL_PACKETS.g:2396:3: ruleEString
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getNameEStringParserRuleCall_1_0()); 
@@ -7333,17 +7492,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPackets__UriAssignment_3_0_2"
-    // InternalPROTOCOL_PACKETS.g:2351:1: rule__GSSProtocolPacketsProtocolPackets__UriAssignment_3_0_2 : ( ruleQualifiedName ) ;
+    // InternalPROTOCOL_PACKETS.g:2405:1: rule__GSSProtocolPacketsProtocolPackets__UriAssignment_3_0_2 : ( ruleQualifiedName ) ;
     public final void rule__GSSProtocolPacketsProtocolPackets__UriAssignment_3_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2355:1: ( ( ruleQualifiedName ) )
-            // InternalPROTOCOL_PACKETS.g:2356:2: ( ruleQualifiedName )
+            // InternalPROTOCOL_PACKETS.g:2409:1: ( ( ruleQualifiedName ) )
+            // InternalPROTOCOL_PACKETS.g:2410:2: ( ruleQualifiedName )
             {
-            // InternalPROTOCOL_PACKETS.g:2356:2: ( ruleQualifiedName )
-            // InternalPROTOCOL_PACKETS.g:2357:3: ruleQualifiedName
+            // InternalPROTOCOL_PACKETS.g:2410:2: ( ruleQualifiedName )
+            // InternalPROTOCOL_PACKETS.g:2411:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUriQualifiedNameParserRuleCall_3_0_2_0()); 
@@ -7378,17 +7537,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPackets__VersionAssignment_3_1_2"
-    // InternalPROTOCOL_PACKETS.g:2366:1: rule__GSSProtocolPacketsProtocolPackets__VersionAssignment_3_1_2 : ( ruleVersion ) ;
+    // InternalPROTOCOL_PACKETS.g:2420:1: rule__GSSProtocolPacketsProtocolPackets__VersionAssignment_3_1_2 : ( ruleVersion ) ;
     public final void rule__GSSProtocolPacketsProtocolPackets__VersionAssignment_3_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2370:1: ( ( ruleVersion ) )
-            // InternalPROTOCOL_PACKETS.g:2371:2: ( ruleVersion )
+            // InternalPROTOCOL_PACKETS.g:2424:1: ( ( ruleVersion ) )
+            // InternalPROTOCOL_PACKETS.g:2425:2: ( ruleVersion )
             {
-            // InternalPROTOCOL_PACKETS.g:2371:2: ( ruleVersion )
-            // InternalPROTOCOL_PACKETS.g:2372:3: ruleVersion
+            // InternalPROTOCOL_PACKETS.g:2425:2: ( ruleVersion )
+            // InternalPROTOCOL_PACKETS.g:2426:3: ruleVersion
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getVersionVersionParserRuleCall_3_1_2_0()); 
@@ -7423,17 +7582,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPackets__ProtocolPacketAssignment_4"
-    // InternalPROTOCOL_PACKETS.g:2381:1: rule__GSSProtocolPacketsProtocolPackets__ProtocolPacketAssignment_4 : ( ruleGSSProtocolPacketsProtocolPacket ) ;
+    // InternalPROTOCOL_PACKETS.g:2435:1: rule__GSSProtocolPacketsProtocolPackets__ProtocolPacketAssignment_4 : ( ruleGSSProtocolPacketsProtocolPacket ) ;
     public final void rule__GSSProtocolPacketsProtocolPackets__ProtocolPacketAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2385:1: ( ( ruleGSSProtocolPacketsProtocolPacket ) )
-            // InternalPROTOCOL_PACKETS.g:2386:2: ( ruleGSSProtocolPacketsProtocolPacket )
+            // InternalPROTOCOL_PACKETS.g:2439:1: ( ( ruleGSSProtocolPacketsProtocolPacket ) )
+            // InternalPROTOCOL_PACKETS.g:2440:2: ( ruleGSSProtocolPacketsProtocolPacket )
             {
-            // InternalPROTOCOL_PACKETS.g:2386:2: ( ruleGSSProtocolPacketsProtocolPacket )
-            // InternalPROTOCOL_PACKETS.g:2387:3: ruleGSSProtocolPacketsProtocolPacket
+            // InternalPROTOCOL_PACKETS.g:2440:2: ( ruleGSSProtocolPacketsProtocolPacket )
+            // InternalPROTOCOL_PACKETS.g:2441:3: ruleGSSProtocolPacketsProtocolPacket
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getProtocolPacketGSSProtocolPacketsProtocolPacketParserRuleCall_4_0()); 
@@ -7468,17 +7627,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__NameAssignment_4"
-    // InternalPROTOCOL_PACKETS.g:2396:1: rule__GSSProtocolPacketsProtocolPacket__NameAssignment_4 : ( RULE_ID ) ;
+    // InternalPROTOCOL_PACKETS.g:2450:1: rule__GSSProtocolPacketsProtocolPacket__NameAssignment_4 : ( RULE_ID ) ;
     public final void rule__GSSProtocolPacketsProtocolPacket__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2400:1: ( ( RULE_ID ) )
-            // InternalPROTOCOL_PACKETS.g:2401:2: ( RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:2454:1: ( ( RULE_ID ) )
+            // InternalPROTOCOL_PACKETS.g:2455:2: ( RULE_ID )
             {
-            // InternalPROTOCOL_PACKETS.g:2401:2: ( RULE_ID )
-            // InternalPROTOCOL_PACKETS.g:2402:3: RULE_ID
+            // InternalPROTOCOL_PACKETS.g:2455:2: ( RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:2456:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameIDTerminalRuleCall_4_0()); 
@@ -7509,17 +7668,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__IfRefAssignment_8"
-    // InternalPROTOCOL_PACKETS.g:2411:1: rule__GSSProtocolPacketsProtocolPacket__IfRefAssignment_8 : ( ruleINTEGER ) ;
+    // InternalPROTOCOL_PACKETS.g:2465:1: rule__GSSProtocolPacketsProtocolPacket__IfRefAssignment_8 : ( ruleINTEGER ) ;
     public final void rule__GSSProtocolPacketsProtocolPacket__IfRefAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2415:1: ( ( ruleINTEGER ) )
-            // InternalPROTOCOL_PACKETS.g:2416:2: ( ruleINTEGER )
+            // InternalPROTOCOL_PACKETS.g:2469:1: ( ( ruleINTEGER ) )
+            // InternalPROTOCOL_PACKETS.g:2470:2: ( ruleINTEGER )
             {
-            // InternalPROTOCOL_PACKETS.g:2416:2: ( ruleINTEGER )
-            // InternalPROTOCOL_PACKETS.g:2417:3: ruleINTEGER
+            // InternalPROTOCOL_PACKETS.g:2470:2: ( ruleINTEGER )
+            // InternalPROTOCOL_PACKETS.g:2471:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getIfRefINTEGERParserRuleCall_8_0()); 
@@ -7554,17 +7713,17 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__LevelRefAssignment_12"
-    // InternalPROTOCOL_PACKETS.g:2426:1: rule__GSSProtocolPacketsProtocolPacket__LevelRefAssignment_12 : ( ruleINTEGER ) ;
+    // InternalPROTOCOL_PACKETS.g:2480:1: rule__GSSProtocolPacketsProtocolPacket__LevelRefAssignment_12 : ( ruleINTEGER ) ;
     public final void rule__GSSProtocolPacketsProtocolPacket__LevelRefAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2430:1: ( ( ruleINTEGER ) )
-            // InternalPROTOCOL_PACKETS.g:2431:2: ( ruleINTEGER )
+            // InternalPROTOCOL_PACKETS.g:2484:1: ( ( ruleINTEGER ) )
+            // InternalPROTOCOL_PACKETS.g:2485:2: ( ruleINTEGER )
             {
-            // InternalPROTOCOL_PACKETS.g:2431:2: ( ruleINTEGER )
-            // InternalPROTOCOL_PACKETS.g:2432:3: ruleINTEGER
+            // InternalPROTOCOL_PACKETS.g:2485:2: ( ruleINTEGER )
+            // InternalPROTOCOL_PACKETS.g:2486:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getLevelRefINTEGERParserRuleCall_12_0()); 
@@ -7598,27 +7757,27 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
     // $ANTLR end "rule__GSSProtocolPacketsProtocolPacket__LevelRefAssignment_12"
 
 
-    // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_14"
-    // InternalPROTOCOL_PACKETS.g:2441:1: rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_14 : ( ( ruleVersionedQualifiedName ) ) ;
-    public final void rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_14() throws RecognitionException {
+    // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_16"
+    // InternalPROTOCOL_PACKETS.g:2495:1: rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_16 : ( ( ruleVersionedQualifiedName ) ) ;
+    public final void rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2445:1: ( ( ( ruleVersionedQualifiedName ) ) )
-            // InternalPROTOCOL_PACKETS.g:2446:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalPROTOCOL_PACKETS.g:2499:1: ( ( ( ruleVersionedQualifiedName ) ) )
+            // InternalPROTOCOL_PACKETS.g:2500:2: ( ( ruleVersionedQualifiedName ) )
             {
-            // InternalPROTOCOL_PACKETS.g:2446:2: ( ( ruleVersionedQualifiedName ) )
-            // InternalPROTOCOL_PACKETS.g:2447:3: ( ruleVersionedQualifiedName )
+            // InternalPROTOCOL_PACKETS.g:2500:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalPROTOCOL_PACKETS.g:2501:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportCrossReference_14_0()); 
+               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportCrossReference_16_0()); 
             }
-            // InternalPROTOCOL_PACKETS.g:2448:3: ( ruleVersionedQualifiedName )
-            // InternalPROTOCOL_PACKETS.g:2449:4: ruleVersionedQualifiedName
+            // InternalPROTOCOL_PACKETS.g:2502:3: ( ruleVersionedQualifiedName )
+            // InternalPROTOCOL_PACKETS.g:2503:4: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportVersionedQualifiedNameParserRuleCall_14_0_1()); 
+               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportVersionedQualifiedNameParserRuleCall_16_0_1()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleVersionedQualifiedName();
@@ -7626,13 +7785,13 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportVersionedQualifiedNameParserRuleCall_14_0_1()); 
+               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportVersionedQualifiedNameParserRuleCall_16_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportCrossReference_14_0()); 
+               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportCrossReference_16_0()); 
             }
 
             }
@@ -7652,24 +7811,24 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
         }
         return ;
     }
-    // $ANTLR end "rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_14"
+    // $ANTLR end "rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_16"
 
 
-    // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_16"
-    // InternalPROTOCOL_PACKETS.g:2460:1: rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_16 : ( ruleGSSProtocolPacketsFormat ) ;
-    public final void rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_16() throws RecognitionException {
+    // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_18"
+    // InternalPROTOCOL_PACKETS.g:2514:1: rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_18 : ( ruleGSSProtocolPacketsFormat ) ;
+    public final void rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_18() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2464:1: ( ( ruleGSSProtocolPacketsFormat ) )
-            // InternalPROTOCOL_PACKETS.g:2465:2: ( ruleGSSProtocolPacketsFormat )
+            // InternalPROTOCOL_PACKETS.g:2518:1: ( ( ruleGSSProtocolPacketsFormat ) )
+            // InternalPROTOCOL_PACKETS.g:2519:2: ( ruleGSSProtocolPacketsFormat )
             {
-            // InternalPROTOCOL_PACKETS.g:2465:2: ( ruleGSSProtocolPacketsFormat )
-            // InternalPROTOCOL_PACKETS.g:2466:3: ruleGSSProtocolPacketsFormat
+            // InternalPROTOCOL_PACKETS.g:2519:2: ( ruleGSSProtocolPacketsFormat )
+            // InternalPROTOCOL_PACKETS.g:2520:3: ruleGSSProtocolPacketsFormat
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSProtocolPacketsFormatParserRuleCall_16_0()); 
+               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSProtocolPacketsFormatParserRuleCall_18_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleGSSProtocolPacketsFormat();
@@ -7677,7 +7836,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSProtocolPacketsFormatParserRuleCall_16_0()); 
+               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSProtocolPacketsFormatParserRuleCall_18_0()); 
             }
 
             }
@@ -7697,21 +7856,21 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
         }
         return ;
     }
-    // $ANTLR end "rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_16"
+    // $ANTLR end "rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_18"
 
 
     // $ANTLR start "rule__GSSProtocolPacketsFormat__FileAssignment_4"
-    // InternalPROTOCOL_PACKETS.g:2475:1: rule__GSSProtocolPacketsFormat__FileAssignment_4 : ( ruleXMLREF ) ;
+    // InternalPROTOCOL_PACKETS.g:2529:1: rule__GSSProtocolPacketsFormat__FileAssignment_4 : ( ruleXMLREF ) ;
     public final void rule__GSSProtocolPacketsFormat__FileAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2479:1: ( ( ruleXMLREF ) )
-            // InternalPROTOCOL_PACKETS.g:2480:2: ( ruleXMLREF )
+            // InternalPROTOCOL_PACKETS.g:2533:1: ( ( ruleXMLREF ) )
+            // InternalPROTOCOL_PACKETS.g:2534:2: ( ruleXMLREF )
             {
-            // InternalPROTOCOL_PACKETS.g:2480:2: ( ruleXMLREF )
-            // InternalPROTOCOL_PACKETS.g:2481:3: ruleXMLREF
+            // InternalPROTOCOL_PACKETS.g:2534:2: ( ruleXMLREF )
+            // InternalPROTOCOL_PACKETS.g:2535:3: ruleXMLREF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSProtocolPacketsFormatAccess().getFileXMLREFParserRuleCall_4_0()); 
@@ -7746,28 +7905,28 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
     // $ANTLR start synpred12_InternalPROTOCOL_PACKETS
     public final void synpred12_InternalPROTOCOL_PACKETS_fragment() throws RecognitionException {   
-        // InternalPROTOCOL_PACKETS.g:2229:3: ( ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) ) )
-        // InternalPROTOCOL_PACKETS.g:2229:3: ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) )
+        // InternalPROTOCOL_PACKETS.g:2283:3: ( ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) ) )
+        // InternalPROTOCOL_PACKETS.g:2283:3: ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) )
         {
-        // InternalPROTOCOL_PACKETS.g:2229:3: ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) )
-        // InternalPROTOCOL_PACKETS.g:2230:4: {...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) )
+        // InternalPROTOCOL_PACKETS.g:2283:3: ({...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) ) )
+        // InternalPROTOCOL_PACKETS.g:2284:4: {...}? => ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) )
         {
         if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUnorderedGroup_3(), 0) ) {
             if (state.backtracking>0) {state.failed=true; return ;}
             throw new FailedPredicateException(input, "synpred12_InternalPROTOCOL_PACKETS", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUnorderedGroup_3(), 0)");
         }
-        // InternalPROTOCOL_PACKETS.g:2230:129: ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) )
-        // InternalPROTOCOL_PACKETS.g:2231:5: ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) )
+        // InternalPROTOCOL_PACKETS.g:2284:129: ( ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) ) )
+        // InternalPROTOCOL_PACKETS.g:2285:5: ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) )
         {
         getUnorderedGroupHelper().select(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUnorderedGroup_3(), 0);
-        // InternalPROTOCOL_PACKETS.g:2237:5: ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) )
-        // InternalPROTOCOL_PACKETS.g:2238:6: ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 )
+        // InternalPROTOCOL_PACKETS.g:2291:5: ( ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 ) )
+        // InternalPROTOCOL_PACKETS.g:2292:6: ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getGroup_3_0()); 
         }
-        // InternalPROTOCOL_PACKETS.g:2239:6: ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 )
-        // InternalPROTOCOL_PACKETS.g:2239:7: rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0
+        // InternalPROTOCOL_PACKETS.g:2293:6: ( rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0 )
+        // InternalPROTOCOL_PACKETS.g:2293:7: rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0
         {
         pushFollow(FollowSets000.FOLLOW_2);
         rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0();
@@ -7793,8 +7952,8 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
     // $ANTLR start synpred13_InternalPROTOCOL_PACKETS
     public final void synpred13_InternalPROTOCOL_PACKETS_fragment() throws RecognitionException {   
-        // InternalPROTOCOL_PACKETS.g:2273:2: ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1 )
-        // InternalPROTOCOL_PACKETS.g:2273:2: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1
+        // InternalPROTOCOL_PACKETS.g:2327:2: ( rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1 )
+        // InternalPROTOCOL_PACKETS.g:2327:2: rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1
         {
         pushFollow(FollowSets000.FOLLOW_2);
         rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3__1();
@@ -7847,7 +8006,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
         public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000008000L});
         public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000001002L});
         public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000002000L});
-        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000020L});
         public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000004000L});
         public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000010000L});
@@ -7855,19 +8014,21 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
         public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000100000L});
         public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000020000L});
         public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000100002L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000050L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000400000L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x00000000200000C0L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000004000002L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000050L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000200000L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000400000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x00000000400000C0L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000004000000L});
         public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000020000040L});
-        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x00000000000C0002L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000008000002L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000040000040L});
+        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x00000000000C0002L});
     }
 
 

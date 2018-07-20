@@ -417,7 +417,7 @@ public class FILTERSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     GSSModelFileImport returns GSSModelFileImport
 	 *
 	 * Constraint:
-	 *     importURI=ID
+	 *     importURI=STRING
 	 */
 	protected void sequence_GSSModelFileImport(ISerializationContext context, GSSModelFileImport semanticObject) {
 		if (errorAcceptor != null) {
@@ -425,7 +425,7 @@ public class FILTERSSemanticSequencer extends AbstractDelegatingSemanticSequence
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, commonPackage.Literals.GSS_MODEL_FILE_IMPORT__IMPORT_URI));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0(), semanticObject.getImportURI());
+		feeder.accept(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0(), semanticObject.getImportURI());
 		feeder.finish();
 	}
 	

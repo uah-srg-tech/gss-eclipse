@@ -34,9 +34,9 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSImportImport'", "'{'", "'uri'", "'version'", "'from'", "'to'", "'}'", "'GSSImportDataSource'", "'FieldRef'", "'leftTrim'", "'rightTrim'", "'GSSImportVirtualSize'", "'addSize'", "'unit'", "'.'", "'('", "')'", "'-'", "'bits'", "'bytes'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSImportImport'", "'{'", "'uri'", "'version'", "'from'", "'to'", "'}'", "'GSSImportDataSource'", "'FieldRef'", "'leftTrim'", "'rightTrim'", "'GSSImportVirtualSize'", "'addSize'", "'unit'", "'.'", "'('", "')'", "'-'", "'bits'", "'bytes'"
     };
-    public static final int RULE_STRING=5;
+    public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__19=19;
     public static final int T__15=15;
@@ -52,7 +52,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
-    public static final int RULE_ID=4;
+    public static final int RULE_ID=5;
     public static final int RULE_WS=10;
     public static final int RULE_ANY_OTHER=11;
     public static final int T__26=26;
@@ -326,7 +326,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSModelFileImport"
-    // InternalIMPORTS.g:143:1: ruleGSSModelFileImport returns [EObject current=null] : (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' ) ;
+    // InternalIMPORTS.g:143:1: ruleGSSModelFileImport returns [EObject current=null] : (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' ) ;
     public final EObject ruleGSSModelFileImport() throws RecognitionException {
         EObject current = null;
 
@@ -339,11 +339,11 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIMPORTS.g:149:2: ( (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' ) )
-            // InternalIMPORTS.g:150:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' )
+            // InternalIMPORTS.g:149:2: ( (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' ) )
+            // InternalIMPORTS.g:150:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' )
             {
-            // InternalIMPORTS.g:150:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' )
-            // InternalIMPORTS.g:151:3: otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';'
+            // InternalIMPORTS.g:150:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' )
+            // InternalIMPORTS.g:151:3: otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';'
             {
             otherlv_0=(Token)match(input,12,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -357,16 +357,16 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1());
               		
             }
-            // InternalIMPORTS.g:159:3: ( (lv_importURI_2_0= RULE_ID ) )
-            // InternalIMPORTS.g:160:4: (lv_importURI_2_0= RULE_ID )
+            // InternalIMPORTS.g:159:3: ( (lv_importURI_2_0= RULE_STRING ) )
+            // InternalIMPORTS.g:160:4: (lv_importURI_2_0= RULE_STRING )
             {
-            // InternalIMPORTS.g:160:4: (lv_importURI_2_0= RULE_ID )
-            // InternalIMPORTS.g:161:5: lv_importURI_2_0= RULE_ID
+            // InternalIMPORTS.g:160:4: (lv_importURI_2_0= RULE_STRING )
+            // InternalIMPORTS.g:161:5: lv_importURI_2_0= RULE_STRING
             {
-            lv_importURI_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            lv_importURI_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0());
+              					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0());
               				
             }
             if ( state.backtracking==0 ) {
@@ -378,7 +378,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
               						current,
               						"importURI",
               						lv_importURI_2_0,
-              						"org.eclipse.xtext.common.Terminals.ID");
+              						"org.eclipse.xtext.common.Terminals.STRING");
               				
             }
 
@@ -615,7 +615,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
             	      									newLeafNode(otherlv_4, grammarAccess.getGSSImportImportAccess().getUriKeyword_3_0_0());
             	      								
             	    }
-            	    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_5, grammarAccess.getGSSImportImportAccess().getColonEqualsSignKeyword_3_0_1());
@@ -656,7 +656,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_7, grammarAccess.getGSSImportImportAccess().getSemicolonKeyword_3_0_3());
@@ -708,7 +708,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
             	      									newLeafNode(otherlv_8, grammarAccess.getGSSImportImportAccess().getVersionKeyword_3_1_0());
             	      								
             	    }
-            	    otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            	    otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_12); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_9, grammarAccess.getGSSImportImportAccess().getColonEqualsSignKeyword_3_1_1());
@@ -749,7 +749,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            	    otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_11, grammarAccess.getGSSImportImportAccess().getSemicolonKeyword_3_1_3());
@@ -802,7 +802,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_12, grammarAccess.getGSSImportImportAccess().getFromKeyword_4());
               		
             }
-            otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSImportImportAccess().getColonEqualsSignKeyword_5());
@@ -838,7 +838,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return current;
+            otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_13); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_15, grammarAccess.getGSSImportImportAccess().getSemicolonKeyword_7());
@@ -850,7 +850,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_16, grammarAccess.getGSSImportImportAccess().getToKeyword_8());
               		
             }
-            otherlv_17=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_17=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSImportImportAccess().getColonEqualsSignKeyword_9());
@@ -886,7 +886,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_19=(Token)match(input,14,FollowSets000.FOLLOW_13); if (state.failed) return current;
+            otherlv_19=(Token)match(input,14,FollowSets000.FOLLOW_14); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_19, grammarAccess.getGSSImportImportAccess().getSemicolonKeyword_11());
@@ -916,7 +916,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
             	      					newCompositeNode(grammarAccess.getGSSImportImportAccess().getDataSourceGSSImportDataSourceParserRuleCall_12_0());
             	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_14);
+            	    pushFollow(FollowSets000.FOLLOW_15);
             	    lv_dataSource_20_0=ruleGSSImportDataSource();
 
             	    state._fsp--;
@@ -970,7 +970,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
                       					newCompositeNode(grammarAccess.getGSSImportImportAccess().getVirtualSizeGSSImportVirtualSizeParserRuleCall_13_0());
                       				
                     }
-                    pushFollow(FollowSets000.FOLLOW_15);
+                    pushFollow(FollowSets000.FOLLOW_16);
                     lv_virtualSize_21_0=ruleGSSImportVirtualSize();
 
                     state._fsp--;
@@ -1116,7 +1116,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSImportDataSourceAccess().getGSSImportDataSourceKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_16); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_17); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSImportDataSourceAccess().getLeftCurlyBracketKeyword_1());
@@ -1128,7 +1128,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSImportDataSourceAccess().getFieldRefKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSImportDataSourceAccess().getColonEqualsSignKeyword_3());
@@ -1164,7 +1164,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_17); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSImportDataSourceAccess().getSemicolonKeyword_5());
@@ -1176,7 +1176,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSImportDataSourceAccess().getLeftTrimKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSImportDataSourceAccess().getColonEqualsSignKeyword_7());
@@ -1217,7 +1217,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSImportDataSourceAccess().getSemicolonKeyword_9());
@@ -1229,7 +1229,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSImportDataSourceAccess().getRightTrimKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSImportDataSourceAccess().getColonEqualsSignKeyword_11());
@@ -1270,7 +1270,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_15); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_16); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSImportDataSourceAccess().getSemicolonKeyword_13());
@@ -1396,7 +1396,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSImportVirtualSizeAccess().getGSSImportVirtualSizeKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_16); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_17); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSImportVirtualSizeAccess().getLeftCurlyBracketKeyword_1());
@@ -1408,7 +1408,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSImportVirtualSizeAccess().getFieldRefKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSImportVirtualSizeAccess().getColonEqualsSignKeyword_3());
@@ -1444,7 +1444,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_13); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSImportVirtualSizeAccess().getSemicolonKeyword_5());
@@ -1456,7 +1456,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSImportVirtualSizeAccess().getToKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSImportVirtualSizeAccess().getColonEqualsSignKeyword_7());
@@ -1492,7 +1492,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSImportVirtualSizeAccess().getSemicolonKeyword_9());
@@ -1515,7 +1515,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_10, grammarAccess.getGSSImportVirtualSizeAccess().getAddSizeKeyword_10_0());
                       			
                     }
-                    otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_18); if (state.failed) return current;
+                    otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_11, grammarAccess.getGSSImportVirtualSizeAccess().getColonEqualsSignKeyword_10_1());
@@ -1556,7 +1556,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_22); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_13, grammarAccess.getGSSImportVirtualSizeAccess().getSemicolonKeyword_10_3());
@@ -1585,7 +1585,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_14, grammarAccess.getGSSImportVirtualSizeAccess().getUnitKeyword_11_0());
                       			
                     }
-                    otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_22); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_23); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_15, grammarAccess.getGSSImportVirtualSizeAccess().getColonEqualsSignKeyword_11_1());
@@ -1626,7 +1626,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_15); if (state.failed) return current;
+                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_16); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_17, grammarAccess.getGSSImportVirtualSizeAccess().getSemicolonKeyword_11_3());
@@ -1864,7 +1864,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
             // InternalIMPORTS.g:785:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             // InternalIMPORTS.g:786:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_23); if (state.failed) return current;
+            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_24); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_ID_0);
@@ -1890,14 +1890,14 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // InternalIMPORTS.g:794:4: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,29,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	    kw=(Token)match(input,29,FollowSets000.FOLLOW_10); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(kw);
             	      				newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_23); if (state.failed) return current;
+            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_24); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_ID_2);
@@ -2039,7 +2039,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalIMPORTS.g:827:4: this_INT_0= RULE_INT
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_23); if (state.failed) return current;
+                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_24); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current.merge(this_INT_0);
@@ -2070,7 +2070,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
                         case 1 :
                             // InternalIMPORTS.g:837:6: this_INT_1= RULE_INT
                             {
-                            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_5); if (state.failed) return current;
+                            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_10); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               						current.merge(this_INT_1);
@@ -2087,7 +2087,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_23); if (state.failed) return current;
+                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_24); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					current.merge(this_ID_2);
@@ -2122,7 +2122,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // InternalIMPORTS.g:855:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    {
-            	    kw=(Token)match(input,29,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            	    kw=(Token)match(input,29,FollowSets000.FOLLOW_12); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(kw);
@@ -2164,7 +2164,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
             	        case 1 :
             	            // InternalIMPORTS.g:861:5: this_INT_4= RULE_INT
             	            {
-            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_23); if (state.failed) return current;
+            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_24); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              					current.merge(this_INT_4);
@@ -2195,7 +2195,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
             	                case 1 :
             	                    // InternalIMPORTS.g:871:7: this_INT_5= RULE_INT
             	                    {
-            	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_10); if (state.failed) return current;
             	                    if ( state.backtracking==0 ) {
 
             	                      							current.merge(this_INT_5);
@@ -2212,7 +2212,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
 
             	            }
 
-            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_23); if (state.failed) return current;
+            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_24); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              						current.merge(this_ID_6);
@@ -2331,7 +2331,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             this_QualifiedName_0=ruleQualifiedName();
 
             state._fsp--;
@@ -2346,7 +2346,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            kw=(Token)match(input,30,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            kw=(Token)match(input,30,FollowSets000.FOLLOW_12); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(kw);
@@ -2358,7 +2358,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_25);
+            pushFollow(FollowSets000.FOLLOW_26);
             this_Version_2=ruleVersion();
 
             state._fsp--;
@@ -2495,7 +2495,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
                         case 1 :
                             // InternalIMPORTS.g:959:5: kw= '-'
                             {
-                            kw=(Token)match(input,32,FollowSets000.FOLLOW_26); if (state.failed) return current;
+                            kw=(Token)match(input,32,FollowSets000.FOLLOW_27); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               					current.merge(kw);
@@ -2693,7 +2693,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
         // InternalIMPORTS.g:249:20: otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';'
         {
         otherlv_4=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return ;
+        otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return ;
         // InternalIMPORTS.g:257:9: ( (lv_uri_6_0= ruleQualifiedName ) )
         // InternalIMPORTS.g:258:10: (lv_uri_6_0= ruleQualifiedName )
         {
@@ -2767,7 +2767,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
         // InternalIMPORTS.g:291:20: otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';'
         {
         otherlv_8=(Token)match(input,18,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return ;
+        otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_12); if (state.failed) return ;
         // InternalIMPORTS.g:299:9: ( (lv_version_10_0= ruleVersion ) )
         // InternalIMPORTS.g:300:10: (lv_version_10_0= ruleVersion )
         {
@@ -2853,23 +2853,24 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000010000L});
         public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000060000L});
-        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x00000000000E0000L});
-        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000050L});
-        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000100000L});
-        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000400000L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000004600000L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x00000001000000C0L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000018200000L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000010200000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000600000000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000020000002L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000040000000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x00000000000E0000L});
+        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000100000L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000400000L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000004600000L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000200000L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x00000001000000C0L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000018200000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000010200000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000600000000L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000020000002L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000080000000L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000000040L});
     }
 
 

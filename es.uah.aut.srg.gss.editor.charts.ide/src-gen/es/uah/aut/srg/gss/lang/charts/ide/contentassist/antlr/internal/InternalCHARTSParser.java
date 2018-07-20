@@ -2611,7 +2611,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:795:1: ( rule__GSSChartsCharts__Group_3_0__1__Impl rule__GSSChartsCharts__Group_3_0__2 )
             // InternalCHARTS.g:796:2: rule__GSSChartsCharts__Group_3_0__1__Impl rule__GSSChartsCharts__Group_3_0__2
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSChartsCharts__Group_3_0__1__Impl();
 
             state._fsp--;
@@ -2932,7 +2932,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:903:1: ( rule__GSSChartsCharts__Group_3_1__1__Impl rule__GSSChartsCharts__Group_3_1__2 )
             // InternalCHARTS.g:904:2: rule__GSSChartsCharts__Group_3_1__1__Impl rule__GSSChartsCharts__Group_3_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__GSSChartsCharts__Group_3_1__1__Impl();
 
             state._fsp--;
@@ -3253,7 +3253,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1011:1: ( rule__GSSChartsChart__Group__1__Impl rule__GSSChartsChart__Group__2 )
             // InternalCHARTS.g:1012:2: rule__GSSChartsChart__Group__1__Impl rule__GSSChartsChart__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_15);
+            pushFollow(FollowSets000.FOLLOW_16);
             rule__GSSChartsChart__Group__1__Impl();
 
             state._fsp--;
@@ -3411,7 +3411,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1065:1: ( rule__GSSChartsChart__Group__3__Impl rule__GSSChartsChart__Group__4 )
             // InternalCHARTS.g:1066:2: rule__GSSChartsChart__Group__3__Impl rule__GSSChartsChart__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSChartsChart__Group__3__Impl();
 
             state._fsp--;
@@ -3579,7 +3579,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1119:1: ( rule__GSSChartsChart__Group__5__Impl rule__GSSChartsChart__Group__6 )
             // InternalCHARTS.g:1120:2: rule__GSSChartsChart__Group__5__Impl rule__GSSChartsChart__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_17);
+            pushFollow(FollowSets000.FOLLOW_18);
             rule__GSSChartsChart__Group__5__Impl();
 
             state._fsp--;
@@ -3737,7 +3737,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1173:1: ( rule__GSSChartsChart__Group__7__Impl rule__GSSChartsChart__Group__8 )
             // InternalCHARTS.g:1174:2: rule__GSSChartsChart__Group__7__Impl rule__GSSChartsChart__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSChartsChart__Group__7__Impl();
 
             state._fsp--;
@@ -3905,7 +3905,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1227:1: ( rule__GSSChartsChart__Group__9__Impl rule__GSSChartsChart__Group__10 )
             // InternalCHARTS.g:1228:2: rule__GSSChartsChart__Group__9__Impl rule__GSSChartsChart__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_18);
+            pushFollow(FollowSets000.FOLLOW_19);
             rule__GSSChartsChart__Group__9__Impl();
 
             state._fsp--;
@@ -4063,7 +4063,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1281:1: ( rule__GSSChartsChart__Group__11__Impl rule__GSSChartsChart__Group__12 )
             // InternalCHARTS.g:1282:2: rule__GSSChartsChart__Group__11__Impl rule__GSSChartsChart__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSChartsChart__Group__11__Impl();
 
             state._fsp--;
@@ -4231,7 +4231,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1335:1: ( rule__GSSChartsChart__Group__13__Impl rule__GSSChartsChart__Group__14 )
             // InternalCHARTS.g:1336:2: rule__GSSChartsChart__Group__13__Impl rule__GSSChartsChart__Group__14
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSChartsChart__Group__13__Impl();
 
             state._fsp--;
@@ -4389,7 +4389,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1389:1: ( rule__GSSChartsChart__Group__15__Impl rule__GSSChartsChart__Group__16 )
             // InternalCHARTS.g:1390:2: rule__GSSChartsChart__Group__15__Impl rule__GSSChartsChart__Group__16
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSChartsChart__Group__15__Impl();
 
             state._fsp--;
@@ -4789,7 +4789,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1524:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
             // InternalCHARTS.g:1525:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_22);
             rule__QualifiedName__Group__0__Impl();
 
             state._fsp--;
@@ -4922,7 +4922,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalCHARTS.g:1565:3: rule__QualifiedName__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_22);
+            	    pushFollow(FollowSets000.FOLLOW_23);
             	    rule__QualifiedName__Group_1__0();
 
             	    state._fsp--;
@@ -4970,7 +4970,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1578:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
             // InternalCHARTS.g:1579:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__QualifiedName__Group_1__0__Impl();
 
             state._fsp--;
@@ -5123,7 +5123,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1632:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
             // InternalCHARTS.g:1633:2: rule__Version__Group__0__Impl rule__Version__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_22);
             rule__Version__Group__0__Impl();
 
             state._fsp--;
@@ -5266,7 +5266,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalCHARTS.g:1673:3: rule__Version__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_22);
+            	    pushFollow(FollowSets000.FOLLOW_23);
             	    rule__Version__Group_1__0();
 
             	    state._fsp--;
@@ -5314,7 +5314,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1686:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
             // InternalCHARTS.g:1687:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__Version__Group_0_1__0__Impl();
 
             state._fsp--;
@@ -5484,7 +5484,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1740:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
             // InternalCHARTS.g:1741:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__Version__Group_1__0__Impl();
 
             state._fsp--;
@@ -5647,7 +5647,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1794:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
             // InternalCHARTS.g:1795:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__Version__Group_1_1_1__0__Impl();
 
             state._fsp--;
@@ -5817,7 +5817,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1848:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
             // InternalCHARTS.g:1849:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_23);
+            pushFollow(FollowSets000.FOLLOW_24);
             rule__VersionedQualifiedName__Group__0__Impl();
 
             state._fsp--;
@@ -5900,7 +5900,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1875:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
             // InternalCHARTS.g:1876:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__VersionedQualifiedName__Group__1__Impl();
 
             state._fsp--;
@@ -5979,7 +5979,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1902:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
             // InternalCHARTS.g:1903:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             rule__VersionedQualifiedName__Group__2__Impl();
 
             state._fsp--;
@@ -6136,7 +6136,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:1956:1: ( rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 )
             // InternalCHARTS.g:1957:2: rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_25);
+            pushFollow(FollowSets000.FOLLOW_26);
             rule__INTEGER__Group_0__0__Impl();
 
             state._fsp--;
@@ -6491,7 +6491,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
             // InternalCHARTS.g:2069:1: ( rule__GSSChartsCharts__UnorderedGroup_3__Impl ( rule__GSSChartsCharts__UnorderedGroup_3__1 )? )
             // InternalCHARTS.g:2070:2: rule__GSSChartsCharts__UnorderedGroup_3__Impl ( rule__GSSChartsCharts__UnorderedGroup_3__1 )?
             {
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_27);
             rule__GSSChartsCharts__UnorderedGroup_3__Impl();
 
             state._fsp--;
@@ -6663,24 +6663,24 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFileImport__ImportURIAssignment_2"
-    // InternalCHARTS.g:2119:1: rule__GSSModelFileImport__ImportURIAssignment_2 : ( RULE_ID ) ;
+    // InternalCHARTS.g:2119:1: rule__GSSModelFileImport__ImportURIAssignment_2 : ( RULE_STRING ) ;
     public final void rule__GSSModelFileImport__ImportURIAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCHARTS.g:2123:1: ( ( RULE_ID ) )
-            // InternalCHARTS.g:2124:2: ( RULE_ID )
+            // InternalCHARTS.g:2123:1: ( ( RULE_STRING ) )
+            // InternalCHARTS.g:2124:2: ( RULE_STRING )
             {
-            // InternalCHARTS.g:2124:2: ( RULE_ID )
-            // InternalCHARTS.g:2125:3: RULE_ID
+            // InternalCHARTS.g:2124:2: ( RULE_STRING )
+            // InternalCHARTS.g:2125:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0()); 
+               before(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0()); 
+               after(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
             }
 
             }
@@ -7161,7 +7161,7 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000020000L});
         public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000004002L});
         public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000010000L});
         public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000040000L});
@@ -7169,19 +7169,20 @@ public class InternalCHARTSParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000400000L});
         public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000080000L});
         public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000400002L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x00000000400000C0L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000003000L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000008000002L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000020000000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000040000040L});
-        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000300002L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x00000000400000C0L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000003000L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000004000000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000008000000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000008000002L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000040000040L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000300002L});
     }
 
 

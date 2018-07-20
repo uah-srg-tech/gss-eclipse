@@ -93,7 +93,7 @@ public class EXPORTParser extends AbstractContentAssistParser {
 					put(grammarAccess.getINTEGERAccess().getGroup_0(), "rule__INTEGER__Group_0__0");
 					put(grammarAccess.getGSSModelFileAccess().getImportsAssignment_0(), "rule__GSSModelFile__ImportsAssignment_0");
 					put(grammarAccess.getGSSModelFileAccess().getElementAssignment_1(), "rule__GSSModelFile__ElementAssignment_1");
-					put(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_1(), "rule__GSSModelFileImport__ImportURIAssignment_1");
+					put(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_2(), "rule__GSSModelFileImport__ImportURIAssignment_2");
 					put(grammarAccess.getGSSExportExportAccess().getNameAssignment_1(), "rule__GSSExportExport__NameAssignment_1");
 					put(grammarAccess.getGSSExportExportAccess().getUriAssignment_3_0_2(), "rule__GSSExportExport__UriAssignment_3_0_2");
 					put(grammarAccess.getGSSExportExportAccess().getVersionAssignment_3_1_2(), "rule__GSSExportExport__VersionAssignment_3_1_2");

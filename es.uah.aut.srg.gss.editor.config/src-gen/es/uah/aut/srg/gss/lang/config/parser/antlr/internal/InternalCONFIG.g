@@ -158,9 +158,9 @@ ruleGSSModelFileImport returns [EObject current=null]
 		}
 		(
 			(
-				lv_importURI_2_0=RULE_ID
+				lv_importURI_2_0=RULE_STRING
 				{
-					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0());
+					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -170,7 +170,7 @@ ruleGSSModelFileImport returns [EObject current=null]
 						$current,
 						"importURI",
 						lv_importURI_2_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)

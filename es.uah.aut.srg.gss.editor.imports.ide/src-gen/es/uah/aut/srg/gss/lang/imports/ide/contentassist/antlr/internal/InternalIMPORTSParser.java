@@ -2411,7 +2411,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:732:1: ( rule__GSSImportImport__Group__5__Impl rule__GSSImportImport__Group__6 )
             // InternalIMPORTS.g:733:2: rule__GSSImportImport__Group__5__Impl rule__GSSImportImport__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSImportImport__Group__5__Impl();
 
             state._fsp--;
@@ -2579,7 +2579,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:786:1: ( rule__GSSImportImport__Group__7__Impl rule__GSSImportImport__Group__8 )
             // InternalIMPORTS.g:787:2: rule__GSSImportImport__Group__7__Impl rule__GSSImportImport__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_12);
+            pushFollow(FollowSets000.FOLLOW_13);
             rule__GSSImportImport__Group__7__Impl();
 
             state._fsp--;
@@ -2737,7 +2737,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:840:1: ( rule__GSSImportImport__Group__9__Impl rule__GSSImportImport__Group__10 )
             // InternalIMPORTS.g:841:2: rule__GSSImportImport__Group__9__Impl rule__GSSImportImport__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSImportImport__Group__9__Impl();
 
             state._fsp--;
@@ -2905,7 +2905,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:894:1: ( rule__GSSImportImport__Group__11__Impl rule__GSSImportImport__Group__12 )
             // InternalIMPORTS.g:895:2: rule__GSSImportImport__Group__11__Impl rule__GSSImportImport__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_13);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSImportImport__Group__11__Impl();
 
             state._fsp--;
@@ -2984,7 +2984,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:921:1: ( rule__GSSImportImport__Group__12__Impl rule__GSSImportImport__Group__13 )
             // InternalIMPORTS.g:922:2: rule__GSSImportImport__Group__12__Impl rule__GSSImportImport__Group__13
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__GSSImportImport__Group__12__Impl();
 
             state._fsp--;
@@ -3034,7 +3034,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:937:3: ( rule__GSSImportImport__DataSourceAssignment_12 )
             // InternalIMPORTS.g:937:4: rule__GSSImportImport__DataSourceAssignment_12
             {
-            pushFollow(FollowSets000.FOLLOW_15);
+            pushFollow(FollowSets000.FOLLOW_16);
             rule__GSSImportImport__DataSourceAssignment_12();
 
             state._fsp--;
@@ -3069,7 +3069,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalIMPORTS.g:942:4: rule__GSSImportImport__DataSourceAssignment_12
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_15);
+            	    pushFollow(FollowSets000.FOLLOW_16);
             	    rule__GSSImportImport__DataSourceAssignment_12();
 
             	    state._fsp--;
@@ -3120,7 +3120,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:955:1: ( rule__GSSImportImport__Group__13__Impl rule__GSSImportImport__Group__14 )
             // InternalIMPORTS.g:956:2: rule__GSSImportImport__Group__13__Impl rule__GSSImportImport__Group__14
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__GSSImportImport__Group__13__Impl();
 
             state._fsp--;
@@ -3452,7 +3452,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1063:1: ( rule__GSSImportImport__Group_3_0__1__Impl rule__GSSImportImport__Group_3_0__2 )
             // InternalIMPORTS.g:1064:2: rule__GSSImportImport__Group_3_0__1__Impl rule__GSSImportImport__Group_3_0__2
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSImportImport__Group_3_0__1__Impl();
 
             state._fsp--;
@@ -3773,7 +3773,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1171:1: ( rule__GSSImportImport__Group_3_1__1__Impl rule__GSSImportImport__Group_3_1__2 )
             // InternalIMPORTS.g:1172:2: rule__GSSImportImport__Group_3_1__1__Impl rule__GSSImportImport__Group_3_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSImportImport__Group_3_1__1__Impl();
 
             state._fsp--;
@@ -4094,7 +4094,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1279:1: ( rule__GSSImportDataSource__Group__1__Impl rule__GSSImportDataSource__Group__2 )
             // InternalIMPORTS.g:1280:2: rule__GSSImportDataSource__Group__1__Impl rule__GSSImportDataSource__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_17);
+            pushFollow(FollowSets000.FOLLOW_18);
             rule__GSSImportDataSource__Group__1__Impl();
 
             state._fsp--;
@@ -4252,7 +4252,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1333:1: ( rule__GSSImportDataSource__Group__3__Impl rule__GSSImportDataSource__Group__4 )
             // InternalIMPORTS.g:1334:2: rule__GSSImportDataSource__Group__3__Impl rule__GSSImportDataSource__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSImportDataSource__Group__3__Impl();
 
             state._fsp--;
@@ -4420,7 +4420,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1387:1: ( rule__GSSImportDataSource__Group__5__Impl rule__GSSImportDataSource__Group__6 )
             // InternalIMPORTS.g:1388:2: rule__GSSImportDataSource__Group__5__Impl rule__GSSImportDataSource__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_18);
+            pushFollow(FollowSets000.FOLLOW_19);
             rule__GSSImportDataSource__Group__5__Impl();
 
             state._fsp--;
@@ -4578,7 +4578,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1441:1: ( rule__GSSImportDataSource__Group__7__Impl rule__GSSImportDataSource__Group__8 )
             // InternalIMPORTS.g:1442:2: rule__GSSImportDataSource__Group__7__Impl rule__GSSImportDataSource__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSImportDataSource__Group__7__Impl();
 
             state._fsp--;
@@ -4746,7 +4746,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1495:1: ( rule__GSSImportDataSource__Group__9__Impl rule__GSSImportDataSource__Group__10 )
             // InternalIMPORTS.g:1496:2: rule__GSSImportDataSource__Group__9__Impl rule__GSSImportDataSource__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSImportDataSource__Group__9__Impl();
 
             state._fsp--;
@@ -4904,7 +4904,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1549:1: ( rule__GSSImportDataSource__Group__11__Impl rule__GSSImportDataSource__Group__12 )
             // InternalIMPORTS.g:1550:2: rule__GSSImportDataSource__Group__11__Impl rule__GSSImportDataSource__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSImportDataSource__Group__11__Impl();
 
             state._fsp--;
@@ -5072,7 +5072,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1603:1: ( rule__GSSImportDataSource__Group__13__Impl rule__GSSImportDataSource__Group__14 )
             // InternalIMPORTS.g:1604:2: rule__GSSImportDataSource__Group__13__Impl rule__GSSImportDataSource__Group__14
             {
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_22);
             rule__GSSImportDataSource__Group__13__Impl();
 
             state._fsp--;
@@ -5383,7 +5383,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1711:1: ( rule__GSSImportVirtualSize__Group__1__Impl rule__GSSImportVirtualSize__Group__2 )
             // InternalIMPORTS.g:1712:2: rule__GSSImportVirtualSize__Group__1__Impl rule__GSSImportVirtualSize__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_17);
+            pushFollow(FollowSets000.FOLLOW_18);
             rule__GSSImportVirtualSize__Group__1__Impl();
 
             state._fsp--;
@@ -5541,7 +5541,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1765:1: ( rule__GSSImportVirtualSize__Group__3__Impl rule__GSSImportVirtualSize__Group__4 )
             // InternalIMPORTS.g:1766:2: rule__GSSImportVirtualSize__Group__3__Impl rule__GSSImportVirtualSize__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSImportVirtualSize__Group__3__Impl();
 
             state._fsp--;
@@ -5709,7 +5709,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1819:1: ( rule__GSSImportVirtualSize__Group__5__Impl rule__GSSImportVirtualSize__Group__6 )
             // InternalIMPORTS.g:1820:2: rule__GSSImportVirtualSize__Group__5__Impl rule__GSSImportVirtualSize__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_12);
+            pushFollow(FollowSets000.FOLLOW_13);
             rule__GSSImportVirtualSize__Group__5__Impl();
 
             state._fsp--;
@@ -5867,7 +5867,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1873:1: ( rule__GSSImportVirtualSize__Group__7__Impl rule__GSSImportVirtualSize__Group__8 )
             // InternalIMPORTS.g:1874:2: rule__GSSImportVirtualSize__Group__7__Impl rule__GSSImportVirtualSize__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSImportVirtualSize__Group__7__Impl();
 
             state._fsp--;
@@ -6035,7 +6035,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1927:1: ( rule__GSSImportVirtualSize__Group__9__Impl rule__GSSImportVirtualSize__Group__10 )
             // InternalIMPORTS.g:1928:2: rule__GSSImportVirtualSize__Group__9__Impl rule__GSSImportVirtualSize__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__GSSImportVirtualSize__Group__9__Impl();
 
             state._fsp--;
@@ -6114,7 +6114,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1954:1: ( rule__GSSImportVirtualSize__Group__10__Impl rule__GSSImportVirtualSize__Group__11 )
             // InternalIMPORTS.g:1955:2: rule__GSSImportVirtualSize__Group__10__Impl rule__GSSImportVirtualSize__Group__11
             {
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__GSSImportVirtualSize__Group__10__Impl();
 
             state._fsp--;
@@ -6214,7 +6214,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1981:1: ( rule__GSSImportVirtualSize__Group__11__Impl rule__GSSImportVirtualSize__Group__12 )
             // InternalIMPORTS.g:1982:2: rule__GSSImportVirtualSize__Group__11__Impl rule__GSSImportVirtualSize__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__GSSImportVirtualSize__Group__11__Impl();
 
             state._fsp--;
@@ -6546,7 +6546,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2089:1: ( rule__GSSImportVirtualSize__Group_10__1__Impl rule__GSSImportVirtualSize__Group_10__2 )
             // InternalIMPORTS.g:2090:2: rule__GSSImportVirtualSize__Group_10__1__Impl rule__GSSImportVirtualSize__Group_10__2
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSImportVirtualSize__Group_10__1__Impl();
 
             state._fsp--;
@@ -6867,7 +6867,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2197:1: ( rule__GSSImportVirtualSize__Group_11__1__Impl rule__GSSImportVirtualSize__Group_11__2 )
             // InternalIMPORTS.g:2198:2: rule__GSSImportVirtualSize__Group_11__1__Impl rule__GSSImportVirtualSize__Group_11__2
             {
-            pushFollow(FollowSets000.FOLLOW_23);
+            pushFollow(FollowSets000.FOLLOW_24);
             rule__GSSImportVirtualSize__Group_11__1__Impl();
 
             state._fsp--;
@@ -7109,7 +7109,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2278:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
             // InternalIMPORTS.g:2279:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             rule__QualifiedName__Group__0__Impl();
 
             state._fsp--;
@@ -7242,7 +7242,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalIMPORTS.g:2319:3: rule__QualifiedName__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_25);
+            	    pushFollow(FollowSets000.FOLLOW_26);
             	    rule__QualifiedName__Group_1__0();
 
             	    state._fsp--;
@@ -7290,7 +7290,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2332:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
             // InternalIMPORTS.g:2333:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__QualifiedName__Group_1__0__Impl();
 
             state._fsp--;
@@ -7443,7 +7443,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2386:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
             // InternalIMPORTS.g:2387:2: rule__Version__Group__0__Impl rule__Version__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             rule__Version__Group__0__Impl();
 
             state._fsp--;
@@ -7586,7 +7586,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalIMPORTS.g:2427:3: rule__Version__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_25);
+            	    pushFollow(FollowSets000.FOLLOW_26);
             	    rule__Version__Group_1__0();
 
             	    state._fsp--;
@@ -7634,7 +7634,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2440:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
             // InternalIMPORTS.g:2441:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__Version__Group_0_1__0__Impl();
 
             state._fsp--;
@@ -7804,7 +7804,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2494:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
             // InternalIMPORTS.g:2495:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__Version__Group_1__0__Impl();
 
             state._fsp--;
@@ -7967,7 +7967,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2548:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
             // InternalIMPORTS.g:2549:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__Version__Group_1_1_1__0__Impl();
 
             state._fsp--;
@@ -8137,7 +8137,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2602:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
             // InternalIMPORTS.g:2603:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_27);
             rule__VersionedQualifiedName__Group__0__Impl();
 
             state._fsp--;
@@ -8220,7 +8220,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2629:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
             // InternalIMPORTS.g:2630:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__VersionedQualifiedName__Group__1__Impl();
 
             state._fsp--;
@@ -8299,7 +8299,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2656:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
             // InternalIMPORTS.g:2657:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_27);
+            pushFollow(FollowSets000.FOLLOW_28);
             rule__VersionedQualifiedName__Group__2__Impl();
 
             state._fsp--;
@@ -8456,7 +8456,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2710:1: ( rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 )
             // InternalIMPORTS.g:2711:2: rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_28);
+            pushFollow(FollowSets000.FOLLOW_29);
             rule__INTEGER__Group_0__0__Impl();
 
             state._fsp--;
@@ -8811,7 +8811,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2823:1: ( rule__GSSImportImport__UnorderedGroup_3__Impl ( rule__GSSImportImport__UnorderedGroup_3__1 )? )
             // InternalIMPORTS.g:2824:2: rule__GSSImportImport__UnorderedGroup_3__Impl ( rule__GSSImportImport__UnorderedGroup_3__1 )?
             {
-            pushFollow(FollowSets000.FOLLOW_29);
+            pushFollow(FollowSets000.FOLLOW_30);
             rule__GSSImportImport__UnorderedGroup_3__Impl();
 
             state._fsp--;
@@ -8983,24 +8983,24 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFileImport__ImportURIAssignment_2"
-    // InternalIMPORTS.g:2873:1: rule__GSSModelFileImport__ImportURIAssignment_2 : ( RULE_ID ) ;
+    // InternalIMPORTS.g:2873:1: rule__GSSModelFileImport__ImportURIAssignment_2 : ( RULE_STRING ) ;
     public final void rule__GSSModelFileImport__ImportURIAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2877:1: ( ( RULE_ID ) )
-            // InternalIMPORTS.g:2878:2: ( RULE_ID )
+            // InternalIMPORTS.g:2877:1: ( ( RULE_STRING ) )
+            // InternalIMPORTS.g:2878:2: ( RULE_STRING )
             {
-            // InternalIMPORTS.g:2878:2: ( RULE_ID )
-            // InternalIMPORTS.g:2879:3: RULE_ID
+            // InternalIMPORTS.g:2878:2: ( RULE_STRING )
+            // InternalIMPORTS.g:2879:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0()); 
+               before(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0()); 
+               after(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
             }
 
             }
@@ -9735,30 +9735,31 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000020000L});
         public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000004002L});
         public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000010000L});
         public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000040000L});
         public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000C00000L});
         public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000100000L});
-        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000010200000L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000001000002L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x00000004000000C0L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000060200000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000003000L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000080000002L});
-        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000100000000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000200000000L});
-        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000400000040L});
-        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000C00002L});
+        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000100000L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000010200000L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000001000002L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000004000000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x00000004000000C0L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000008000000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000200000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000060200000L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000003000L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000080000000L});
+        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000080000002L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000100000000L});
+        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000200000000L});
+        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000400000040L});
+        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000C00002L});
     }
 
 

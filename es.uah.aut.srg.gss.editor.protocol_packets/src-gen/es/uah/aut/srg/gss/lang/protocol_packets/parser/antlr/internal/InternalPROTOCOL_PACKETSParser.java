@@ -33,9 +33,9 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSProtocolPacketsProtocolPackets'", "'{'", "'uri'", "'version'", "'}'", "'GSSProtocolPacketsProtocolPacket'", "'name'", "'ifRef'", "'levelRef'", "'GSSProtocolPacketsFormat'", "'file'", "'.'", "'('", "')'", "'-'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSProtocolPacketsProtocolPackets'", "'{'", "'uri'", "'version'", "'}'", "'GSSProtocolPacketsProtocolPacket'", "'name'", "'ifRef'", "'levelRef'", "'export'", "'GSSProtocolPacketsFormat'", "'file'", "'.'", "'('", "')'", "'-'"
     };
-    public static final int RULE_STRING=5;
+    public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__19=19;
     public static final int T__15=15;
@@ -46,7 +46,8 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int EOF=-1;
-    public static final int RULE_ID=4;
+    public static final int T__30=30;
+    public static final int RULE_ID=5;
     public static final int RULE_WS=10;
     public static final int RULE_ANY_OTHER=11;
     public static final int T__26=26;
@@ -320,7 +321,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "ruleGSSModelFileImport"
-    // InternalPROTOCOL_PACKETS.g:142:1: ruleGSSModelFileImport returns [EObject current=null] : (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' ) ;
+    // InternalPROTOCOL_PACKETS.g:142:1: ruleGSSModelFileImport returns [EObject current=null] : (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' ) ;
     public final EObject ruleGSSModelFileImport() throws RecognitionException {
         EObject current = null;
 
@@ -333,11 +334,11 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
         	enterRule();
 
         try {
-            // InternalPROTOCOL_PACKETS.g:148:2: ( (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' ) )
-            // InternalPROTOCOL_PACKETS.g:149:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' )
+            // InternalPROTOCOL_PACKETS.g:148:2: ( (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' ) )
+            // InternalPROTOCOL_PACKETS.g:149:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' )
             {
-            // InternalPROTOCOL_PACKETS.g:149:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';' )
-            // InternalPROTOCOL_PACKETS.g:150:3: otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_ID ) ) otherlv_3= ';'
+            // InternalPROTOCOL_PACKETS.g:149:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' )
+            // InternalPROTOCOL_PACKETS.g:150:3: otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';'
             {
             otherlv_0=(Token)match(input,12,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -351,16 +352,16 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
               			newLeafNode(otherlv_1, grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1());
               		
             }
-            // InternalPROTOCOL_PACKETS.g:158:3: ( (lv_importURI_2_0= RULE_ID ) )
-            // InternalPROTOCOL_PACKETS.g:159:4: (lv_importURI_2_0= RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:158:3: ( (lv_importURI_2_0= RULE_STRING ) )
+            // InternalPROTOCOL_PACKETS.g:159:4: (lv_importURI_2_0= RULE_STRING )
             {
-            // InternalPROTOCOL_PACKETS.g:159:4: (lv_importURI_2_0= RULE_ID )
-            // InternalPROTOCOL_PACKETS.g:160:5: lv_importURI_2_0= RULE_ID
+            // InternalPROTOCOL_PACKETS.g:159:4: (lv_importURI_2_0= RULE_STRING )
+            // InternalPROTOCOL_PACKETS.g:160:5: lv_importURI_2_0= RULE_STRING
             {
-            lv_importURI_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            lv_importURI_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0());
+              					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0());
               				
             }
             if ( state.backtracking==0 ) {
@@ -372,7 +373,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
               						current,
               						"importURI",
               						lv_importURI_2_0,
-              						"org.eclipse.xtext.common.Terminals.ID");
+              						"org.eclipse.xtext.common.Terminals.STRING");
               				
             }
 
@@ -599,7 +600,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
             	      									newLeafNode(otherlv_4, grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUriKeyword_3_0_0());
             	      								
             	    }
-            	    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_5, grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getColonEqualsSignKeyword_3_0_1());
@@ -640,7 +641,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
             	    }
 
-            	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_7, grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getSemicolonKeyword_3_0_3());
@@ -692,7 +693,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
             	      									newLeafNode(otherlv_8, grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getVersionKeyword_3_1_0());
             	      								
             	    }
-            	    otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            	    otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_12); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_9, grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getColonEqualsSignKeyword_3_1_1());
@@ -733,7 +734,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
             	    }
 
-            	    otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            	    otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      									newLeafNode(otherlv_11, grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getSemicolonKeyword_3_1_3());
@@ -804,7 +805,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
             	      					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getProtocolPacketGSSProtocolPacketsProtocolPacketParserRuleCall_4_0());
             	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_12);
+            	    pushFollow(FollowSets000.FOLLOW_13);
             	    lv_ProtocolPacket_12_0=ruleGSSProtocolPacketsProtocolPacket();
 
             	    state._fsp--;
@@ -919,7 +920,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "ruleGSSProtocolPacketsProtocolPacket"
-    // InternalPROTOCOL_PACKETS.g:376:1: ruleGSSProtocolPacketsProtocolPacket returns [EObject current=null] : (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( (lv_format_16_0= ruleGSSProtocolPacketsFormat ) ) otherlv_17= '}' otherlv_18= ';' ) ;
+    // InternalPROTOCOL_PACKETS.g:376:1: ruleGSSProtocolPacketsProtocolPacket returns [EObject current=null] : (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' ( (lv_format_18_0= ruleGSSProtocolPacketsFormat ) ) otherlv_19= '}' otherlv_20= ';' ) ;
     public final EObject ruleGSSProtocolPacketsProtocolPacket() throws RecognitionException {
         EObject current = null;
 
@@ -935,25 +936,27 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
         Token otherlv_10=null;
         Token otherlv_11=null;
         Token otherlv_13=null;
+        Token otherlv_14=null;
         Token otherlv_15=null;
         Token otherlv_17=null;
-        Token otherlv_18=null;
+        Token otherlv_19=null;
+        Token otherlv_20=null;
         AntlrDatatypeRuleToken lv_ifRef_8_0 = null;
 
         AntlrDatatypeRuleToken lv_levelRef_12_0 = null;
 
-        EObject lv_format_16_0 = null;
+        EObject lv_format_18_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalPROTOCOL_PACKETS.g:382:2: ( (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( (lv_format_16_0= ruleGSSProtocolPacketsFormat ) ) otherlv_17= '}' otherlv_18= ';' ) )
-            // InternalPROTOCOL_PACKETS.g:383:2: (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( (lv_format_16_0= ruleGSSProtocolPacketsFormat ) ) otherlv_17= '}' otherlv_18= ';' )
+            // InternalPROTOCOL_PACKETS.g:382:2: ( (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' ( (lv_format_18_0= ruleGSSProtocolPacketsFormat ) ) otherlv_19= '}' otherlv_20= ';' ) )
+            // InternalPROTOCOL_PACKETS.g:383:2: (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' ( (lv_format_18_0= ruleGSSProtocolPacketsFormat ) ) otherlv_19= '}' otherlv_20= ';' )
             {
-            // InternalPROTOCOL_PACKETS.g:383:2: (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( (lv_format_16_0= ruleGSSProtocolPacketsFormat ) ) otherlv_17= '}' otherlv_18= ';' )
-            // InternalPROTOCOL_PACKETS.g:384:3: otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( (lv_format_16_0= ruleGSSProtocolPacketsFormat ) ) otherlv_17= '}' otherlv_18= ';'
+            // InternalPROTOCOL_PACKETS.g:383:2: (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' ( (lv_format_18_0= ruleGSSProtocolPacketsFormat ) ) otherlv_19= '}' otherlv_20= ';' )
+            // InternalPROTOCOL_PACKETS.g:384:3: otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' ( (lv_format_18_0= ruleGSSProtocolPacketsFormat ) ) otherlv_19= '}' otherlv_20= ';'
             {
             otherlv_0=(Token)match(input,20,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -961,7 +964,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
               			newLeafNode(otherlv_0, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getGSSProtocolPacketsProtocolPacketKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_13); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_14); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getLeftCurlyBracketKeyword_1());
@@ -973,7 +976,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
               			newLeafNode(otherlv_2, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getColonEqualsSignKeyword_3());
@@ -1009,7 +1012,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_14); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_15); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_5());
@@ -1021,7 +1024,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
               			newLeafNode(otherlv_6, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getIfRefKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_15); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_16); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getColonEqualsSignKeyword_7());
@@ -1062,7 +1065,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_16); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_17); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_9());
@@ -1074,7 +1077,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
               			newLeafNode(otherlv_10, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getLevelRefKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_15); if (state.failed) return current;
+            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_16); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getColonEqualsSignKeyword_11());
@@ -1115,17 +1118,29 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_13());
               		
             }
-            // InternalPROTOCOL_PACKETS.g:484:3: ( ( ruleVersionedQualifiedName ) )
-            // InternalPROTOCOL_PACKETS.g:485:4: ( ruleVersionedQualifiedName )
+            otherlv_14=(Token)match(input,24,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_14, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportKeyword_14());
+              		
+            }
+            otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_15, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getColonEqualsSignKeyword_15());
+              		
+            }
+            // InternalPROTOCOL_PACKETS.g:492:3: ( ( ruleVersionedQualifiedName ) )
+            // InternalPROTOCOL_PACKETS.g:493:4: ( ruleVersionedQualifiedName )
             {
-            // InternalPROTOCOL_PACKETS.g:485:4: ( ruleVersionedQualifiedName )
-            // InternalPROTOCOL_PACKETS.g:486:5: ruleVersionedQualifiedName
+            // InternalPROTOCOL_PACKETS.g:493:4: ( ruleVersionedQualifiedName )
+            // InternalPROTOCOL_PACKETS.g:494:5: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -1141,7 +1156,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
             }
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportCrossReference_14_0());
+              					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportCrossReference_16_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);
@@ -1160,25 +1175,25 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
             }
 
-            otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_17); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_15, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_15());
+              			newLeafNode(otherlv_17, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_17());
               		
             }
-            // InternalPROTOCOL_PACKETS.g:507:3: ( (lv_format_16_0= ruleGSSProtocolPacketsFormat ) )
-            // InternalPROTOCOL_PACKETS.g:508:4: (lv_format_16_0= ruleGSSProtocolPacketsFormat )
+            // InternalPROTOCOL_PACKETS.g:515:3: ( (lv_format_18_0= ruleGSSProtocolPacketsFormat ) )
+            // InternalPROTOCOL_PACKETS.g:516:4: (lv_format_18_0= ruleGSSProtocolPacketsFormat )
             {
-            // InternalPROTOCOL_PACKETS.g:508:4: (lv_format_16_0= ruleGSSProtocolPacketsFormat )
-            // InternalPROTOCOL_PACKETS.g:509:5: lv_format_16_0= ruleGSSProtocolPacketsFormat
+            // InternalPROTOCOL_PACKETS.g:516:4: (lv_format_18_0= ruleGSSProtocolPacketsFormat )
+            // InternalPROTOCOL_PACKETS.g:517:5: lv_format_18_0= ruleGSSProtocolPacketsFormat
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSProtocolPacketsFormatParserRuleCall_16_0());
+              					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSProtocolPacketsFormatParserRuleCall_18_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_18);
-            lv_format_16_0=ruleGSSProtocolPacketsFormat();
+            pushFollow(FollowSets000.FOLLOW_20);
+            lv_format_18_0=ruleGSSProtocolPacketsFormat();
 
             state._fsp--;
             if (state.failed) return current;
@@ -1190,7 +1205,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
               					set(
               						current,
               						"format",
-              						lv_format_16_0,
+              						lv_format_18_0,
               						"es.uah.aut.srg.gss.lang.protocol_packets.PROTOCOL_PACKETS.GSSProtocolPacketsFormat");
               					afterParserOrEnumRuleCall();
               				
@@ -1201,16 +1216,16 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
             }
 
-            otherlv_17=(Token)match(input,19,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            otherlv_19=(Token)match(input,19,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_17, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getRightCurlyBracketKeyword_17());
+              			newLeafNode(otherlv_19, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getRightCurlyBracketKeyword_19());
               		
             }
-            otherlv_18=(Token)match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_20=(Token)match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_18, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_18());
+              			newLeafNode(otherlv_20, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_20());
               		
             }
 
@@ -1238,7 +1253,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "entryRuleGSSProtocolPacketsFormat"
-    // InternalPROTOCOL_PACKETS.g:538:1: entryRuleGSSProtocolPacketsFormat returns [EObject current=null] : iv_ruleGSSProtocolPacketsFormat= ruleGSSProtocolPacketsFormat EOF ;
+    // InternalPROTOCOL_PACKETS.g:546:1: entryRuleGSSProtocolPacketsFormat returns [EObject current=null] : iv_ruleGSSProtocolPacketsFormat= ruleGSSProtocolPacketsFormat EOF ;
     public final EObject entryRuleGSSProtocolPacketsFormat() throws RecognitionException {
         EObject current = null;
 
@@ -1246,8 +1261,8 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
         try {
-            // InternalPROTOCOL_PACKETS.g:538:65: (iv_ruleGSSProtocolPacketsFormat= ruleGSSProtocolPacketsFormat EOF )
-            // InternalPROTOCOL_PACKETS.g:539:2: iv_ruleGSSProtocolPacketsFormat= ruleGSSProtocolPacketsFormat EOF
+            // InternalPROTOCOL_PACKETS.g:546:65: (iv_ruleGSSProtocolPacketsFormat= ruleGSSProtocolPacketsFormat EOF )
+            // InternalPROTOCOL_PACKETS.g:547:2: iv_ruleGSSProtocolPacketsFormat= ruleGSSProtocolPacketsFormat EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSProtocolPacketsFormatRule()); 
@@ -1278,7 +1293,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "ruleGSSProtocolPacketsFormat"
-    // InternalPROTOCOL_PACKETS.g:545:1: ruleGSSProtocolPacketsFormat returns [EObject current=null] : (otherlv_0= 'GSSProtocolPacketsFormat' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= ruleXMLREF ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) ;
+    // InternalPROTOCOL_PACKETS.g:553:1: ruleGSSProtocolPacketsFormat returns [EObject current=null] : (otherlv_0= 'GSSProtocolPacketsFormat' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= ruleXMLREF ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) ;
     public final EObject ruleGSSProtocolPacketsFormat() throws RecognitionException {
         EObject current = null;
 
@@ -1296,41 +1311,41 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
         	enterRule();
 
         try {
-            // InternalPROTOCOL_PACKETS.g:551:2: ( (otherlv_0= 'GSSProtocolPacketsFormat' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= ruleXMLREF ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) )
-            // InternalPROTOCOL_PACKETS.g:552:2: (otherlv_0= 'GSSProtocolPacketsFormat' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= ruleXMLREF ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
+            // InternalPROTOCOL_PACKETS.g:559:2: ( (otherlv_0= 'GSSProtocolPacketsFormat' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= ruleXMLREF ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) )
+            // InternalPROTOCOL_PACKETS.g:560:2: (otherlv_0= 'GSSProtocolPacketsFormat' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= ruleXMLREF ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
             {
-            // InternalPROTOCOL_PACKETS.g:552:2: (otherlv_0= 'GSSProtocolPacketsFormat' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= ruleXMLREF ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
-            // InternalPROTOCOL_PACKETS.g:553:3: otherlv_0= 'GSSProtocolPacketsFormat' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= ruleXMLREF ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
+            // InternalPROTOCOL_PACKETS.g:560:2: (otherlv_0= 'GSSProtocolPacketsFormat' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= ruleXMLREF ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
+            // InternalPROTOCOL_PACKETS.g:561:3: otherlv_0= 'GSSProtocolPacketsFormat' otherlv_1= '{' otherlv_2= 'file' otherlv_3= ':=' ( (lv_file_4_0= ruleXMLREF ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
             {
-            otherlv_0=(Token)match(input,24,FollowSets000.FOLLOW_8); if (state.failed) return current;
+            otherlv_0=(Token)match(input,25,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSProtocolPacketsFormatAccess().getGSSProtocolPacketsFormatKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSProtocolPacketsFormatAccess().getLeftCurlyBracketKeyword_1());
               		
             }
-            otherlv_2=(Token)match(input,25,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            otherlv_2=(Token)match(input,26,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getGSSProtocolPacketsFormatAccess().getFileKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSProtocolPacketsFormatAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalPROTOCOL_PACKETS.g:569:3: ( (lv_file_4_0= ruleXMLREF ) )
-            // InternalPROTOCOL_PACKETS.g:570:4: (lv_file_4_0= ruleXMLREF )
+            // InternalPROTOCOL_PACKETS.g:577:3: ( (lv_file_4_0= ruleXMLREF ) )
+            // InternalPROTOCOL_PACKETS.g:578:4: (lv_file_4_0= ruleXMLREF )
             {
-            // InternalPROTOCOL_PACKETS.g:570:4: (lv_file_4_0= ruleXMLREF )
-            // InternalPROTOCOL_PACKETS.g:571:5: lv_file_4_0= ruleXMLREF
+            // InternalPROTOCOL_PACKETS.g:578:4: (lv_file_4_0= ruleXMLREF )
+            // InternalPROTOCOL_PACKETS.g:579:5: lv_file_4_0= ruleXMLREF
             {
             if ( state.backtracking==0 ) {
 
@@ -1361,7 +1376,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSProtocolPacketsFormatAccess().getSemicolonKeyword_5());
@@ -1404,7 +1419,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "entryRuleEString"
-    // InternalPROTOCOL_PACKETS.g:604:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
+    // InternalPROTOCOL_PACKETS.g:612:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
     public final String entryRuleEString() throws RecognitionException {
         String current = null;
 
@@ -1412,8 +1427,8 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
         try {
-            // InternalPROTOCOL_PACKETS.g:604:47: (iv_ruleEString= ruleEString EOF )
-            // InternalPROTOCOL_PACKETS.g:605:2: iv_ruleEString= ruleEString EOF
+            // InternalPROTOCOL_PACKETS.g:612:47: (iv_ruleEString= ruleEString EOF )
+            // InternalPROTOCOL_PACKETS.g:613:2: iv_ruleEString= ruleEString EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEStringRule()); 
@@ -1444,7 +1459,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "ruleEString"
-    // InternalPROTOCOL_PACKETS.g:611:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
+    // InternalPROTOCOL_PACKETS.g:619:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
     public final AntlrDatatypeRuleToken ruleEString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1455,10 +1470,10 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
         	enterRule();
 
         try {
-            // InternalPROTOCOL_PACKETS.g:617:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
-            // InternalPROTOCOL_PACKETS.g:618:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:625:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
+            // InternalPROTOCOL_PACKETS.g:626:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
             {
-            // InternalPROTOCOL_PACKETS.g:618:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:626:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1477,7 +1492,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
             }
             switch (alt4) {
                 case 1 :
-                    // InternalPROTOCOL_PACKETS.g:619:3: this_STRING_0= RULE_STRING
+                    // InternalPROTOCOL_PACKETS.g:627:3: this_STRING_0= RULE_STRING
                     {
                     this_STRING_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1494,7 +1509,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
                     }
                     break;
                 case 2 :
-                    // InternalPROTOCOL_PACKETS.g:627:3: this_ID_1= RULE_ID
+                    // InternalPROTOCOL_PACKETS.g:635:3: this_ID_1= RULE_ID
                     {
                     this_ID_1=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1535,7 +1550,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalPROTOCOL_PACKETS.g:638:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalPROTOCOL_PACKETS.g:646:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -1543,8 +1558,8 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
         try {
-            // InternalPROTOCOL_PACKETS.g:638:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalPROTOCOL_PACKETS.g:639:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalPROTOCOL_PACKETS.g:646:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalPROTOCOL_PACKETS.g:647:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameRule()); 
@@ -1575,7 +1590,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalPROTOCOL_PACKETS.g:645:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalPROTOCOL_PACKETS.g:653:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1587,13 +1602,13 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
         	enterRule();
 
         try {
-            // InternalPROTOCOL_PACKETS.g:651:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // InternalPROTOCOL_PACKETS.g:652:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalPROTOCOL_PACKETS.g:659:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalPROTOCOL_PACKETS.g:660:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // InternalPROTOCOL_PACKETS.g:652:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // InternalPROTOCOL_PACKETS.g:653:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // InternalPROTOCOL_PACKETS.g:660:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalPROTOCOL_PACKETS.g:661:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_22); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_ID_0);
@@ -1604,29 +1619,29 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
               			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
               		
             }
-            // InternalPROTOCOL_PACKETS.g:660:3: (kw= '.' this_ID_2= RULE_ID )*
+            // InternalPROTOCOL_PACKETS.g:668:3: (kw= '.' this_ID_2= RULE_ID )*
             loop5:
             do {
                 int alt5=2;
                 int LA5_0 = input.LA(1);
 
-                if ( (LA5_0==26) ) {
+                if ( (LA5_0==27) ) {
                     alt5=1;
                 }
 
 
                 switch (alt5) {
             	case 1 :
-            	    // InternalPROTOCOL_PACKETS.g:661:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalPROTOCOL_PACKETS.g:669:4: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,26,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	    kw=(Token)match(input,27,FollowSets000.FOLLOW_10); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(kw);
             	      				newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_22); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_ID_2);
@@ -1671,7 +1686,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "entryRuleVersion"
-    // InternalPROTOCOL_PACKETS.g:678:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
+    // InternalPROTOCOL_PACKETS.g:686:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
     public final String entryRuleVersion() throws RecognitionException {
         String current = null;
 
@@ -1679,8 +1694,8 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
         try {
-            // InternalPROTOCOL_PACKETS.g:678:47: (iv_ruleVersion= ruleVersion EOF )
-            // InternalPROTOCOL_PACKETS.g:679:2: iv_ruleVersion= ruleVersion EOF
+            // InternalPROTOCOL_PACKETS.g:686:47: (iv_ruleVersion= ruleVersion EOF )
+            // InternalPROTOCOL_PACKETS.g:687:2: iv_ruleVersion= ruleVersion EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionRule()); 
@@ -1711,7 +1726,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "ruleVersion"
-    // InternalPROTOCOL_PACKETS.g:685:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
+    // InternalPROTOCOL_PACKETS.g:693:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
     public final AntlrDatatypeRuleToken ruleVersion() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1727,24 +1742,24 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
         	enterRule();
 
         try {
-            // InternalPROTOCOL_PACKETS.g:691:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
-            // InternalPROTOCOL_PACKETS.g:692:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalPROTOCOL_PACKETS.g:699:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
+            // InternalPROTOCOL_PACKETS.g:700:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
             {
-            // InternalPROTOCOL_PACKETS.g:692:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
-            // InternalPROTOCOL_PACKETS.g:693:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalPROTOCOL_PACKETS.g:700:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalPROTOCOL_PACKETS.g:701:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             {
-            // InternalPROTOCOL_PACKETS.g:693:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
+            // InternalPROTOCOL_PACKETS.g:701:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
             if ( (LA7_0==RULE_INT) ) {
                 int LA7_1 = input.LA(2);
 
-                if ( (LA7_1==EOF||LA7_1==14||LA7_1==26||LA7_1==28) ) {
-                    alt7=1;
-                }
-                else if ( (LA7_1==RULE_ID) ) {
+                if ( (LA7_1==RULE_ID) ) {
                     alt7=2;
+                }
+                else if ( (LA7_1==EOF||LA7_1==14||LA7_1==27||LA7_1==29) ) {
+                    alt7=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -1766,9 +1781,9 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
             }
             switch (alt7) {
                 case 1 :
-                    // InternalPROTOCOL_PACKETS.g:694:4: this_INT_0= RULE_INT
+                    // InternalPROTOCOL_PACKETS.g:702:4: this_INT_0= RULE_INT
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_20); if (state.failed) return current;
+                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_22); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current.merge(this_INT_0);
@@ -1783,12 +1798,12 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
                     }
                     break;
                 case 2 :
-                    // InternalPROTOCOL_PACKETS.g:702:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalPROTOCOL_PACKETS.g:710:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
                     {
-                    // InternalPROTOCOL_PACKETS.g:702:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
-                    // InternalPROTOCOL_PACKETS.g:703:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
+                    // InternalPROTOCOL_PACKETS.g:710:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalPROTOCOL_PACKETS.g:711:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
                     {
-                    // InternalPROTOCOL_PACKETS.g:703:5: (this_INT_1= RULE_INT )?
+                    // InternalPROTOCOL_PACKETS.g:711:5: (this_INT_1= RULE_INT )?
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
@@ -1797,9 +1812,9 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
                     }
                     switch (alt6) {
                         case 1 :
-                            // InternalPROTOCOL_PACKETS.g:704:6: this_INT_1= RULE_INT
+                            // InternalPROTOCOL_PACKETS.g:712:6: this_INT_1= RULE_INT
                             {
-                            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_5); if (state.failed) return current;
+                            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_10); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               						current.merge(this_INT_1);
@@ -1816,7 +1831,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
                     }
 
-                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_20); if (state.failed) return current;
+                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_22); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					current.merge(this_ID_2);
@@ -1836,40 +1851,40 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
             }
 
-            // InternalPROTOCOL_PACKETS.g:721:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalPROTOCOL_PACKETS.g:729:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             loop10:
             do {
                 int alt10=2;
                 int LA10_0 = input.LA(1);
 
-                if ( (LA10_0==26) ) {
+                if ( (LA10_0==27) ) {
                     alt10=1;
                 }
 
 
                 switch (alt10) {
             	case 1 :
-            	    // InternalPROTOCOL_PACKETS.g:722:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalPROTOCOL_PACKETS.g:730:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    {
-            	    kw=(Token)match(input,26,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            	    kw=(Token)match(input,27,FollowSets000.FOLLOW_12); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(kw);
             	      				newLeafNode(kw, grammarAccess.getVersionAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    // InternalPROTOCOL_PACKETS.g:727:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalPROTOCOL_PACKETS.g:735:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    int alt9=2;
             	    int LA9_0 = input.LA(1);
 
             	    if ( (LA9_0==RULE_INT) ) {
             	        int LA9_1 = input.LA(2);
 
-            	        if ( (LA9_1==RULE_ID) ) {
-            	            alt9=2;
-            	        }
-            	        else if ( (LA9_1==EOF||LA9_1==14||LA9_1==26||LA9_1==28) ) {
+            	        if ( (LA9_1==EOF||LA9_1==14||LA9_1==27||LA9_1==29) ) {
             	            alt9=1;
+            	        }
+            	        else if ( (LA9_1==RULE_ID) ) {
+            	            alt9=2;
             	        }
             	        else {
             	            if (state.backtracking>0) {state.failed=true; return current;}
@@ -1891,9 +1906,9 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
             	    }
             	    switch (alt9) {
             	        case 1 :
-            	            // InternalPROTOCOL_PACKETS.g:728:5: this_INT_4= RULE_INT
+            	            // InternalPROTOCOL_PACKETS.g:736:5: this_INT_4= RULE_INT
             	            {
-            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_22); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              					current.merge(this_INT_4);
@@ -1908,12 +1923,12 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
             	            }
             	            break;
             	        case 2 :
-            	            // InternalPROTOCOL_PACKETS.g:736:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalPROTOCOL_PACKETS.g:744:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
             	            {
-            	            // InternalPROTOCOL_PACKETS.g:736:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
-            	            // InternalPROTOCOL_PACKETS.g:737:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
+            	            // InternalPROTOCOL_PACKETS.g:744:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalPROTOCOL_PACKETS.g:745:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
             	            {
-            	            // InternalPROTOCOL_PACKETS.g:737:6: (this_INT_5= RULE_INT )?
+            	            // InternalPROTOCOL_PACKETS.g:745:6: (this_INT_5= RULE_INT )?
             	            int alt8=2;
             	            int LA8_0 = input.LA(1);
 
@@ -1922,9 +1937,9 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
             	            }
             	            switch (alt8) {
             	                case 1 :
-            	                    // InternalPROTOCOL_PACKETS.g:738:7: this_INT_5= RULE_INT
+            	                    // InternalPROTOCOL_PACKETS.g:746:7: this_INT_5= RULE_INT
             	                    {
-            	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_10); if (state.failed) return current;
             	                    if ( state.backtracking==0 ) {
 
             	                      							current.merge(this_INT_5);
@@ -1941,7 +1956,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
             	            }
 
-            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_22); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              						current.merge(this_ID_6);
@@ -1995,7 +2010,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "entryRuleVersionedQualifiedName"
-    // InternalPROTOCOL_PACKETS.g:760:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
+    // InternalPROTOCOL_PACKETS.g:768:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
     public final String entryRuleVersionedQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -2003,8 +2018,8 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
         try {
-            // InternalPROTOCOL_PACKETS.g:760:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
-            // InternalPROTOCOL_PACKETS.g:761:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
+            // InternalPROTOCOL_PACKETS.g:768:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
+            // InternalPROTOCOL_PACKETS.g:769:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionedQualifiedNameRule()); 
@@ -2035,7 +2050,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "ruleVersionedQualifiedName"
-    // InternalPROTOCOL_PACKETS.g:767:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
+    // InternalPROTOCOL_PACKETS.g:775:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
     public final AntlrDatatypeRuleToken ruleVersionedQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2049,18 +2064,18 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
         	enterRule();
 
         try {
-            // InternalPROTOCOL_PACKETS.g:773:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
-            // InternalPROTOCOL_PACKETS.g:774:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalPROTOCOL_PACKETS.g:781:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
+            // InternalPROTOCOL_PACKETS.g:782:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
             {
-            // InternalPROTOCOL_PACKETS.g:774:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
-            // InternalPROTOCOL_PACKETS.g:775:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
+            // InternalPROTOCOL_PACKETS.g:782:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalPROTOCOL_PACKETS.g:783:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
             {
             if ( state.backtracking==0 ) {
 
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_23);
             this_QualifiedName_0=ruleQualifiedName();
 
             state._fsp--;
@@ -2075,7 +2090,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
               			afterParserOrEnumRuleCall();
               		
             }
-            kw=(Token)match(input,27,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            kw=(Token)match(input,28,FollowSets000.FOLLOW_12); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(kw);
@@ -2087,7 +2102,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_24);
             this_Version_2=ruleVersion();
 
             state._fsp--;
@@ -2102,7 +2117,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
               			afterParserOrEnumRuleCall();
               		
             }
-            kw=(Token)match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(kw);
@@ -2134,7 +2149,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "entryRuleINTEGER"
-    // InternalPROTOCOL_PACKETS.g:809:1: entryRuleINTEGER returns [String current=null] : iv_ruleINTEGER= ruleINTEGER EOF ;
+    // InternalPROTOCOL_PACKETS.g:817:1: entryRuleINTEGER returns [String current=null] : iv_ruleINTEGER= ruleINTEGER EOF ;
     public final String entryRuleINTEGER() throws RecognitionException {
         String current = null;
 
@@ -2142,8 +2157,8 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
         try {
-            // InternalPROTOCOL_PACKETS.g:809:47: (iv_ruleINTEGER= ruleINTEGER EOF )
-            // InternalPROTOCOL_PACKETS.g:810:2: iv_ruleINTEGER= ruleINTEGER EOF
+            // InternalPROTOCOL_PACKETS.g:817:47: (iv_ruleINTEGER= ruleINTEGER EOF )
+            // InternalPROTOCOL_PACKETS.g:818:2: iv_ruleINTEGER= ruleINTEGER EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getINTEGERRule()); 
@@ -2174,7 +2189,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "ruleINTEGER"
-    // InternalPROTOCOL_PACKETS.g:816:1: ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) ;
+    // InternalPROTOCOL_PACKETS.g:824:1: ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) ;
     public final AntlrDatatypeRuleToken ruleINTEGER() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2186,14 +2201,14 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
         	enterRule();
 
         try {
-            // InternalPROTOCOL_PACKETS.g:822:2: ( ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) )
-            // InternalPROTOCOL_PACKETS.g:823:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
+            // InternalPROTOCOL_PACKETS.g:830:2: ( ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) )
+            // InternalPROTOCOL_PACKETS.g:831:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
             {
-            // InternalPROTOCOL_PACKETS.g:823:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
+            // InternalPROTOCOL_PACKETS.g:831:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( (LA12_0==RULE_INT||LA12_0==29) ) {
+            if ( (LA12_0==RULE_INT||LA12_0==30) ) {
                 alt12=1;
             }
             else if ( (LA12_0==RULE_HEXADECIMAL) ) {
@@ -2208,23 +2223,23 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
             }
             switch (alt12) {
                 case 1 :
-                    // InternalPROTOCOL_PACKETS.g:824:3: ( (kw= '-' )? this_INT_1= RULE_INT )
+                    // InternalPROTOCOL_PACKETS.g:832:3: ( (kw= '-' )? this_INT_1= RULE_INT )
                     {
-                    // InternalPROTOCOL_PACKETS.g:824:3: ( (kw= '-' )? this_INT_1= RULE_INT )
-                    // InternalPROTOCOL_PACKETS.g:825:4: (kw= '-' )? this_INT_1= RULE_INT
+                    // InternalPROTOCOL_PACKETS.g:832:3: ( (kw= '-' )? this_INT_1= RULE_INT )
+                    // InternalPROTOCOL_PACKETS.g:833:4: (kw= '-' )? this_INT_1= RULE_INT
                     {
-                    // InternalPROTOCOL_PACKETS.g:825:4: (kw= '-' )?
+                    // InternalPROTOCOL_PACKETS.g:833:4: (kw= '-' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
-                    if ( (LA11_0==29) ) {
+                    if ( (LA11_0==30) ) {
                         alt11=1;
                     }
                     switch (alt11) {
                         case 1 :
-                            // InternalPROTOCOL_PACKETS.g:826:5: kw= '-'
+                            // InternalPROTOCOL_PACKETS.g:834:5: kw= '-'
                             {
-                            kw=(Token)match(input,29,FollowSets000.FOLLOW_23); if (state.failed) return current;
+                            kw=(Token)match(input,30,FollowSets000.FOLLOW_25); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               					current.merge(kw);
@@ -2255,7 +2270,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
                     }
                     break;
                 case 2 :
-                    // InternalPROTOCOL_PACKETS.g:841:3: this_HEXADECIMAL_2= RULE_HEXADECIMAL
+                    // InternalPROTOCOL_PACKETS.g:849:3: this_HEXADECIMAL_2= RULE_HEXADECIMAL
                     {
                     this_HEXADECIMAL_2=(Token)match(input,RULE_HEXADECIMAL,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2296,7 +2311,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "entryRuleXMLREF"
-    // InternalPROTOCOL_PACKETS.g:852:1: entryRuleXMLREF returns [String current=null] : iv_ruleXMLREF= ruleXMLREF EOF ;
+    // InternalPROTOCOL_PACKETS.g:860:1: entryRuleXMLREF returns [String current=null] : iv_ruleXMLREF= ruleXMLREF EOF ;
     public final String entryRuleXMLREF() throws RecognitionException {
         String current = null;
 
@@ -2304,8 +2319,8 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
         try {
-            // InternalPROTOCOL_PACKETS.g:852:46: (iv_ruleXMLREF= ruleXMLREF EOF )
-            // InternalPROTOCOL_PACKETS.g:853:2: iv_ruleXMLREF= ruleXMLREF EOF
+            // InternalPROTOCOL_PACKETS.g:860:46: (iv_ruleXMLREF= ruleXMLREF EOF )
+            // InternalPROTOCOL_PACKETS.g:861:2: iv_ruleXMLREF= ruleXMLREF EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXMLREFRule()); 
@@ -2336,7 +2351,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "ruleXMLREF"
-    // InternalPROTOCOL_PACKETS.g:859:1: ruleXMLREF returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
+    // InternalPROTOCOL_PACKETS.g:867:1: ruleXMLREF returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
     public final AntlrDatatypeRuleToken ruleXMLREF() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2346,8 +2361,8 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
         	enterRule();
 
         try {
-            // InternalPROTOCOL_PACKETS.g:865:2: (this_ID_0= RULE_ID )
-            // InternalPROTOCOL_PACKETS.g:866:2: this_ID_0= RULE_ID
+            // InternalPROTOCOL_PACKETS.g:873:2: (this_ID_0= RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:874:2: this_ID_0= RULE_ID
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2413,7 +2428,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
         // InternalPROTOCOL_PACKETS.g:248:20: otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';'
         {
         otherlv_4=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return ;
+        otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_10); if (state.failed) return ;
         // InternalPROTOCOL_PACKETS.g:256:9: ( (lv_uri_6_0= ruleQualifiedName ) )
         // InternalPROTOCOL_PACKETS.g:257:10: (lv_uri_6_0= ruleQualifiedName )
         {
@@ -2487,7 +2502,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
         // InternalPROTOCOL_PACKETS.g:290:20: otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';'
         {
         otherlv_8=(Token)match(input,18,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return ;
+        otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_12); if (state.failed) return ;
         // InternalPROTOCOL_PACKETS.g:298:9: ( (lv_version_10_0= ruleVersion ) )
         // InternalPROTOCOL_PACKETS.g:299:10: (lv_version_10_0= ruleVersion )
         {
@@ -2573,20 +2588,22 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
         public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000010000L});
         public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000060000L});
-        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000160000L});
-        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000050L});
-        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000180000L});
-        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000400000L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x00000000200000C0L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000160000L});
+        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000060L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000180000L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000200000L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000400000L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x00000000400000C0L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000001000000L});
         public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000004000002L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000004000000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000008000002L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000000040L});
     }
 
 

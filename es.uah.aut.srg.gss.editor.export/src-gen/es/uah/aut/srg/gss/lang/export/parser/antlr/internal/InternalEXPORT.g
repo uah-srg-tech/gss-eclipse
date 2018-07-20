@@ -152,11 +152,15 @@ ruleGSSModelFileImport returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getGSSModelFileImportAccess().getImportKeyword_0());
 		}
+		otherlv_1=':='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1());
+		}
 		(
 			(
-				lv_importURI_1_0=RULE_ID
+				lv_importURI_2_0=RULE_STRING
 				{
-					newLeafNode(lv_importURI_1_0, grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_1_0());
+					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -165,14 +169,14 @@ ruleGSSModelFileImport returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"importURI",
-						lv_importURI_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						lv_importURI_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
-		otherlv_2=';'
+		otherlv_3=';'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_2());
+			newLeafNode(otherlv_3, grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_3());
 		}
 	)
 ;

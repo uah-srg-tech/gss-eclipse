@@ -32,7 +32,7 @@ public class InternalFILTERSLexer extends Lexer {
     public static final int T__54=54;
     public static final int T__60=60;
     public static final int T__61=61;
-    public static final int RULE_ID=4;
+    public static final int RULE_ID=5;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
@@ -43,7 +43,7 @@ public class InternalFILTERSLexer extends Lexer {
     public static final int RULE_ML_COMMENT=8;
     public static final int T__23=23;
     public static final int T__67=67;
-    public static final int RULE_HEXADECIMAL=5;
+    public static final int RULE_HEXADECIMAL=6;
     public static final int T__24=24;
     public static final int T__25=25;
     public static final int T__62=62;
@@ -52,7 +52,7 @@ public class InternalFILTERSLexer extends Lexer {
     public static final int T__64=64;
     public static final int T__21=21;
     public static final int T__65=65;
-    public static final int RULE_STRING=6;
+    public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__37=37;
     public static final int T__38=38;
