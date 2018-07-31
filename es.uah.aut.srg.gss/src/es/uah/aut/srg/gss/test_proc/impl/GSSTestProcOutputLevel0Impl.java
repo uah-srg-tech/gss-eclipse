@@ -10,10 +10,11 @@
  */
 package es.uah.aut.srg.gss.test_proc.impl;
 
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
+
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -123,14 +124,14 @@ public class GSSTestProcOutputLevel0Impl extends GSSTestProcOutputImpl implement
 	protected String optional = OPTIONAL_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getLevel0() <em>Level0</em>}' containment reference.
+	 * The cached value of the '{@link #getLevel0() <em>Level0</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLevel0()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcLevel0 level0;
+	protected GSSTmTcFormatTmTCFormat level0;
 
 	/**
 	 * The cached value of the '{@link #getLevel0_filter() <em>Level0 filter</em>}' containment reference.
@@ -250,7 +251,15 @@ public class GSSTestProcOutputLevel0Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcLevel0 getLevel0() {
+	public GSSTmTcFormatTmTCFormat getLevel0() {
+		if (level0 != null && level0.eIsProxy()) {
+			InternalEObject oldLevel0 = (InternalEObject)level0;
+			level0 = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldLevel0);
+			if (level0 != oldLevel0) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0, oldLevel0, level0));
+			}
+		}
 		return level0;
 	}
 
@@ -259,14 +268,8 @@ public class GSSTestProcOutputLevel0Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel0(GSSTestProcLevel0 newLevel0, NotificationChain msgs) {
-		GSSTestProcLevel0 oldLevel0 = level0;
-		level0 = newLevel0;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0, oldLevel0, newLevel0);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public GSSTmTcFormatTmTCFormat basicGetLevel0() {
+		return level0;
 	}
 
 	/**
@@ -274,18 +277,11 @@ public class GSSTestProcOutputLevel0Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel0(GSSTestProcLevel0 newLevel0) {
-		if (newLevel0 != level0) {
-			NotificationChain msgs = null;
-			if (level0 != null)
-				msgs = ((InternalEObject)level0).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0, null, msgs);
-			if (newLevel0 != null)
-				msgs = ((InternalEObject)newLevel0).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0, null, msgs);
-			msgs = basicSetLevel0(newLevel0, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0, newLevel0, newLevel0));
+	public void setLevel0(GSSTmTcFormatTmTCFormat newLevel0) {
+		GSSTmTcFormatTmTCFormat oldLevel0 = level0;
+		level0 = newLevel0;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0, oldLevel0, level0));
 	}
 
 	/**
@@ -339,8 +335,6 @@ public class GSSTestProcOutputLevel0Impl extends GSSTestProcOutputImpl implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0:
-				return basicSetLevel0(null, msgs);
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0_FILTER:
 				return basicSetLevel0_filter(null, msgs);
 		}
@@ -364,7 +358,8 @@ public class GSSTestProcOutputLevel0Impl extends GSSTestProcOutputImpl implement
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__OPTIONAL:
 				return getOptional();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0:
-				return getLevel0();
+				if (resolve) return getLevel0();
+				return basicGetLevel0();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0_FILTER:
 				return getLevel0_filter();
 		}
@@ -392,7 +387,7 @@ public class GSSTestProcOutputLevel0Impl extends GSSTestProcOutputImpl implement
 				setOptional((String)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0:
-				setLevel0((GSSTestProcLevel0)newValue);
+				setLevel0((GSSTmTcFormatTmTCFormat)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0_FILTER:
 				setLevel0_filter((GSSTestProcLevel0Filter)newValue);
@@ -422,7 +417,7 @@ public class GSSTestProcOutputLevel0Impl extends GSSTestProcOutputImpl implement
 				setOptional(OPTIONAL_EDEFAULT);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0:
-				setLevel0((GSSTestProcLevel0)null);
+				setLevel0((GSSTmTcFormatTmTCFormat)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0_FILTER:
 				setLevel0_filter((GSSTestProcLevel0Filter)null);

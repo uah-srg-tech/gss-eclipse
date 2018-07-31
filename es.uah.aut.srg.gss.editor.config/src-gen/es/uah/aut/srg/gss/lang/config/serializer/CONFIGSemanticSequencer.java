@@ -16,10 +16,6 @@ import es.uah.aut.srg.gss.common.GSSModelFileImport;
 import es.uah.aut.srg.gss.common.commonPackage;
 import es.uah.aut.srg.gss.config.GSSConfigAlarmMsg;
 import es.uah.aut.srg.gss.config.GSSConfigAlarmVal;
-import es.uah.aut.srg.gss.config.GSSConfigAppToLevel0;
-import es.uah.aut.srg.gss.config.GSSConfigAppToLevel1;
-import es.uah.aut.srg.gss.config.GSSConfigAppToLevel2;
-import es.uah.aut.srg.gss.config.GSSConfigExportToPrevLevel;
 import es.uah.aut.srg.gss.config.GSSConfigGSSConfig;
 import es.uah.aut.srg.gss.config.GSSConfigGSSDiscardErrorFlags;
 import es.uah.aut.srg.gss.config.GSSConfigGSSInfo;
@@ -29,16 +25,9 @@ import es.uah.aut.srg.gss.config.GSSConfigGVFiltered;
 import es.uah.aut.srg.gss.config.GSSConfigGVPeriodic;
 import es.uah.aut.srg.gss.config.GSSConfigGlobalVar;
 import es.uah.aut.srg.gss.config.GSSConfigGlobalVars;
-import es.uah.aut.srg.gss.config.GSSConfigImportFromPrevLevel;
-import es.uah.aut.srg.gss.config.GSSConfigInputFilter;
 import es.uah.aut.srg.gss.config.GSSConfigInterface;
 import es.uah.aut.srg.gss.config.GSSConfigInterfaces;
 import es.uah.aut.srg.gss.config.GSSConfigIntervalRange;
-import es.uah.aut.srg.gss.config.GSSConfigLevel0;
-import es.uah.aut.srg.gss.config.GSSConfigLevel1;
-import es.uah.aut.srg.gss.config.GSSConfigLevel1ToLevel0;
-import es.uah.aut.srg.gss.config.GSSConfigLevel2;
-import es.uah.aut.srg.gss.config.GSSConfigLevel2ToLevel1;
 import es.uah.aut.srg.gss.config.GSSConfigLevelIn;
 import es.uah.aut.srg.gss.config.GSSConfigLevelInOut;
 import es.uah.aut.srg.gss.config.GSSConfigLevelOut;
@@ -61,8 +50,6 @@ import es.uah.aut.srg.gss.config.GSSConfigReferenceSpecialPacket;
 import es.uah.aut.srg.gss.config.GSSConfigSpecialPacket;
 import es.uah.aut.srg.gss.config.GSSConfigSpecialPackets;
 import es.uah.aut.srg.gss.config.GSSConfigStructuredData;
-import es.uah.aut.srg.gss.config.GSSConfigTCFormat;
-import es.uah.aut.srg.gss.config.GSSConfigTMFormat;
 import es.uah.aut.srg.gss.config.GSSConfigTestCase;
 import es.uah.aut.srg.gss.config.GSSConfigTests;
 import es.uah.aut.srg.gss.config.GSSConfigUpperLevel;
@@ -109,18 +96,6 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case configPackage.GSS_CONFIG_ALARM_VAL:
 				sequence_GSSConfigAlarmVal(context, (GSSConfigAlarmVal) semanticObject); 
 				return; 
-			case configPackage.GSS_CONFIG_APP_TO_LEVEL0:
-				sequence_GSSConfigAppToLevel0(context, (GSSConfigAppToLevel0) semanticObject); 
-				return; 
-			case configPackage.GSS_CONFIG_APP_TO_LEVEL1:
-				sequence_GSSConfigAppToLevel1(context, (GSSConfigAppToLevel1) semanticObject); 
-				return; 
-			case configPackage.GSS_CONFIG_APP_TO_LEVEL2:
-				sequence_GSSConfigAppToLevel2(context, (GSSConfigAppToLevel2) semanticObject); 
-				return; 
-			case configPackage.GSS_CONFIG_EXPORT_TO_PREV_LEVEL:
-				sequence_GSSConfigExportToPrevLevel(context, (GSSConfigExportToPrevLevel) semanticObject); 
-				return; 
 			case configPackage.GSS_CONFIG_GSS_CONFIG:
 				sequence_GSSConfigGSSConfig(context, (GSSConfigGSSConfig) semanticObject); 
 				return; 
@@ -148,12 +123,6 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case configPackage.GSS_CONFIG_GLOBAL_VARS:
 				sequence_GSSConfigGlobalVars(context, (GSSConfigGlobalVars) semanticObject); 
 				return; 
-			case configPackage.GSS_CONFIG_IMPORT_FROM_PREV_LEVEL:
-				sequence_GSSConfigImportFromPrevLevel(context, (GSSConfigImportFromPrevLevel) semanticObject); 
-				return; 
-			case configPackage.GSS_CONFIG_INPUT_FILTER:
-				sequence_GSSConfigInputFilter(context, (GSSConfigInputFilter) semanticObject); 
-				return; 
 			case configPackage.GSS_CONFIG_INTERFACE:
 				sequence_GSSConfigInterface(context, (GSSConfigInterface) semanticObject); 
 				return; 
@@ -162,21 +131,6 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				return; 
 			case configPackage.GSS_CONFIG_INTERVAL_RANGE:
 				sequence_GSSConfigIntervalRange(context, (GSSConfigIntervalRange) semanticObject); 
-				return; 
-			case configPackage.GSS_CONFIG_LEVEL0:
-				sequence_GSSConfigLevel0(context, (GSSConfigLevel0) semanticObject); 
-				return; 
-			case configPackage.GSS_CONFIG_LEVEL1:
-				sequence_GSSConfigLevel1(context, (GSSConfigLevel1) semanticObject); 
-				return; 
-			case configPackage.GSS_CONFIG_LEVEL1_TO_LEVEL0:
-				sequence_GSSConfigLevel1ToLevel0(context, (GSSConfigLevel1ToLevel0) semanticObject); 
-				return; 
-			case configPackage.GSS_CONFIG_LEVEL2:
-				sequence_GSSConfigLevel2(context, (GSSConfigLevel2) semanticObject); 
-				return; 
-			case configPackage.GSS_CONFIG_LEVEL2_TO_LEVEL1:
-				sequence_GSSConfigLevel2ToLevel1(context, (GSSConfigLevel2ToLevel1) semanticObject); 
 				return; 
 			case configPackage.GSS_CONFIG_LEVEL_IN:
 				sequence_GSSConfigLevelIn(context, (GSSConfigLevelIn) semanticObject); 
@@ -244,12 +198,6 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case configPackage.GSS_CONFIG_STRUCTURED_DATA:
 				sequence_GSSConfigStructuredData(context, (GSSConfigStructuredData) semanticObject); 
 				return; 
-			case configPackage.GSS_CONFIG_TC_FORMAT:
-				sequence_GSSConfigTCFormat(context, (GSSConfigTCFormat) semanticObject); 
-				return; 
-			case configPackage.GSS_CONFIG_TM_FORMAT:
-				sequence_GSSConfigTMFormat(context, (GSSConfigTMFormat) semanticObject); 
-				return; 
 			case configPackage.GSS_CONFIG_TEST_CASE:
 				sequence_GSSConfigTestCase(context, (GSSConfigTestCase) semanticObject); 
 				return; 
@@ -272,7 +220,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigAlarmMsg returns GSSConfigAlarmMsg
 	 *
 	 * Constraint:
-	 *     (name=ID type=GSSConfigAlarmMsgType text=ID (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic))
+	 *     (name=STRING type=GSSConfigAlarmMsgType text=ID (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic))
 	 */
 	protected void sequence_GSSConfigAlarmMsg(ISerializationContext context, GSSConfigAlarmMsg semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -284,82 +232,10 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigAlarmVal returns GSSConfigAlarmVal
 	 *
 	 * Constraint:
-	 *     (name=ID type=GSSConfigAlarmValType (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic))
+	 *     (name=STRING type=GSSConfigAlarmValType (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic))
 	 */
 	protected void sequence_GSSConfigAlarmVal(ISerializationContext context, GSSConfigAlarmVal semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSConfigAppToLevel0 returns GSSConfigAppToLevel0
-	 *
-	 * Constraint:
-	 *     export=XMLREF
-	 */
-	protected void sequence_GSSConfigAppToLevel0(ISerializationContext context, GSSConfigAppToLevel0 semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_APP_TO_LEVEL0__EXPORT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_APP_TO_LEVEL0__EXPORT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigAppToLevel0Access().getExportXMLREFParserRuleCall_4_0(), semanticObject.getExport());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSConfigAppToLevel1 returns GSSConfigAppToLevel1
-	 *
-	 * Constraint:
-	 *     export=XMLREF
-	 */
-	protected void sequence_GSSConfigAppToLevel1(ISerializationContext context, GSSConfigAppToLevel1 semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_APP_TO_LEVEL1__EXPORT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_APP_TO_LEVEL1__EXPORT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigAppToLevel1Access().getExportXMLREFParserRuleCall_4_0(), semanticObject.getExport());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSConfigAppToLevel2 returns GSSConfigAppToLevel2
-	 *
-	 * Constraint:
-	 *     export=XMLREF
-	 */
-	protected void sequence_GSSConfigAppToLevel2(ISerializationContext context, GSSConfigAppToLevel2 semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_APP_TO_LEVEL2__EXPORT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_APP_TO_LEVEL2__EXPORT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigAppToLevel2Access().getExportXMLREFParserRuleCall_4_0(), semanticObject.getExport());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSConfigExportToPrevLevel returns GSSConfigExportToPrevLevel
-	 *
-	 * Constraint:
-	 *     file=XMLREF
-	 */
-	protected void sequence_GSSConfigExportToPrevLevel(ISerializationContext context, GSSConfigExportToPrevLevel semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_EXPORT_TO_PREV_LEVEL__FILE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_EXPORT_TO_PREV_LEVEL__FILE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigExportToPrevLevelAccess().getFileXMLREFParserRuleCall_4_0(), semanticObject.getFile());
-		feeder.finish();
 	}
 	
 	
@@ -441,7 +317,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigGSSInfo returns GSSConfigGSSInfo
 	 *
 	 * Constraint:
-	 *     (test_campaign=ID version=Version date=DATE version_control_url=URL?)
+	 *     (test_campaign=STRING version=Version date=DATE version_control_url=URL?)
 	 */
 	protected void sequence_GSSConfigGSSInfo(ISerializationContext context, GSSConfigGSSInfo semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -485,19 +361,10 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigGVFiltered returns GSSConfigGVFiltered
 	 *
 	 * Constraint:
-	 *     (GlobalVarRef=INTEGER filter=XMLREF)
+	 *     (GlobalVarRef=INTEGER filter=[GSSFilterFilter|VersionedQualifiedName]?)
 	 */
 	protected void sequence_GSSConfigGVFiltered(ISerializationContext context, GSSConfigGVFiltered semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_GV_FILTERED__FILTER) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_GV_FILTERED__FILTER));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefINTEGERParserRuleCall_4_0(), semanticObject.getGlobalVarRef());
-		feeder.accept(grammarAccess.getGSSConfigGVFilteredAccess().getFilterXMLREFParserRuleCall_8_0(), semanticObject.getFilter());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -531,7 +398,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *
 	 * Constraint:
 	 *     (
-	 *         name=ID 
+	 *         name=STRING 
 	 *         id=INTEGER 
 	 *         type=GSSConfigGlobalVarType 
 	 *         initial_value=INTEGER 
@@ -557,52 +424,16 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     GSSConfigImportFromPrevLevel returns GSSConfigImportFromPrevLevel
-	 *
-	 * Constraint:
-	 *     file=XMLREF
-	 */
-	protected void sequence_GSSConfigImportFromPrevLevel(ISerializationContext context, GSSConfigImportFromPrevLevel semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_IMPORT_FROM_PREV_LEVEL__FILE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_IMPORT_FROM_PREV_LEVEL__FILE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigImportFromPrevLevelAccess().getFileXMLREFParserRuleCall_4_0(), semanticObject.getFile());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSConfigInputFilter returns GSSConfigInputFilter
-	 *
-	 * Constraint:
-	 *     file=XMLREF
-	 */
-	protected void sequence_GSSConfigInputFilter(ISerializationContext context, GSSConfigInputFilter semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_INPUT_FILTER__FILE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_INPUT_FILTER__FILE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigInputFilterAccess().getFileXMLREFParserRuleCall_4_0(), semanticObject.getFile());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     GSSConfigInterface returns GSSConfigInterface
 	 *
 	 * Constraint:
 	 *     (
 	 *         id=INTEGER 
-	 *         name=ID 
+	 *         name=STRING 
 	 *         ifType=GSSConfigInterfaceType 
-	 *         ifConfig=ID 
+	 *         ifConfig=[GSSIfacePortConfig|VersionedQualifiedName] 
 	 *         ioType=GSSConfigInterfaceIOType 
-	 *         protocolID=INTEGER? 
+	 *         protocolID=[GSSConfigProtocol|VersionedQualifiedReferenceName]? 
 	 *         (LevelInOut+=GSSConfigLevelInOut | LevelIn+=GSSConfigLevelIn | LevelOut+=GSSConfigLevelOut)+
 	 *     )
 	 */
@@ -616,7 +447,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigInterfaces returns GSSConfigInterfaces
 	 *
 	 * Constraint:
-	 *     (MainInterface=GSSConfigMainInterface Interface+=GSSConfigInterface+)
+	 *     (MainInterface=GSSConfigMainInterface Interface+=GSSConfigInterface*)
 	 */
 	protected void sequence_GSSConfigInterfaces(ISerializationContext context, GSSConfigInterfaces semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -652,107 +483,17 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     GSSConfigLevel0 returns GSSConfigLevel0
-	 *
-	 * Constraint:
-	 *     format=XMLREF
-	 */
-	protected void sequence_GSSConfigLevel0(ISerializationContext context, GSSConfigLevel0 semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_LEVEL0__FORMAT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_LEVEL0__FORMAT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigLevel0Access().getFormatXMLREFParserRuleCall_4_0(), semanticObject.getFormat());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSConfigLevel1ToLevel0 returns GSSConfigLevel1ToLevel0
-	 *
-	 * Constraint:
-	 *     export=XMLREF
-	 */
-	protected void sequence_GSSConfigLevel1ToLevel0(ISerializationContext context, GSSConfigLevel1ToLevel0 semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_LEVEL1_TO_LEVEL0__EXPORT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_LEVEL1_TO_LEVEL0__EXPORT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigLevel1ToLevel0Access().getExportXMLREFParserRuleCall_4_0(), semanticObject.getExport());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSConfigLevel1 returns GSSConfigLevel1
-	 *
-	 * Constraint:
-	 *     format=XMLREF
-	 */
-	protected void sequence_GSSConfigLevel1(ISerializationContext context, GSSConfigLevel1 semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_LEVEL1__FORMAT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_LEVEL1__FORMAT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigLevel1Access().getFormatXMLREFParserRuleCall_4_0(), semanticObject.getFormat());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSConfigLevel2ToLevel1 returns GSSConfigLevel2ToLevel1
-	 *
-	 * Constraint:
-	 *     export=XMLREF
-	 */
-	protected void sequence_GSSConfigLevel2ToLevel1(ISerializationContext context, GSSConfigLevel2ToLevel1 semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_LEVEL2_TO_LEVEL1__EXPORT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_LEVEL2_TO_LEVEL1__EXPORT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigLevel2ToLevel1Access().getExportXMLREFParserRuleCall_4_0(), semanticObject.getExport());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSConfigLevel2 returns GSSConfigLevel2
-	 *
-	 * Constraint:
-	 *     format=XMLREF
-	 */
-	protected void sequence_GSSConfigLevel2(ISerializationContext context, GSSConfigLevel2 semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_LEVEL2__FORMAT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_LEVEL2__FORMAT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigLevel2Access().getFormatXMLREFParserRuleCall_4_0(), semanticObject.getFormat());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     GSSConfigLevelInOut returns GSSConfigLevelInOut
 	 *
 	 * Constraint:
 	 *     (
 	 *         id=INTEGER 
-	 *         name=ID 
-	 *         TMformat=GSSConfigTMFormat 
-	 *         TCformat=GSSConfigTCFormat 
-	 *         inputFilter=GSSConfigInputFilter 
-	 *         export_to_prev_Level=GSSConfigExportToPrevLevel? 
-	 *         import_from_prev_Level=GSSConfigImportFromPrevLevel?
+	 *         name=STRING 
+	 *         TMformat=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName] 
+	 *         TCformat=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName] 
+	 *         inputFilter=[GSSFilterFilter|VersionedQualifiedName] 
+	 *         export_to_prev_Level=[GSSExportExport|VersionedQualifiedName]? 
+	 *         import_from_prev_Level=[GSSImportImport|VersionedQualifiedName]?
 	 *     )
 	 */
 	protected void sequence_GSSConfigLevelInOut(ISerializationContext context, GSSConfigLevelInOut semanticObject) {
@@ -765,7 +506,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigLevelIn returns GSSConfigLevelIn
 	 *
 	 * Constraint:
-	 *     (id=INTEGER name=ID TCformat=GSSConfigTCFormat export_to_prev_Level=GSSConfigExportToPrevLevel?)
+	 *     (id=INTEGER name=STRING TCformat=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName] export_to_prev_Level=[GSSExportExport|VersionedQualifiedName]?)
 	 */
 	protected void sequence_GSSConfigLevelIn(ISerializationContext context, GSSConfigLevelIn semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -777,7 +518,13 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigLevelOut returns GSSConfigLevelOut
 	 *
 	 * Constraint:
-	 *     (id=INTEGER name=ID TMformat=GSSConfigTMFormat inputFilter=GSSConfigInputFilter import_from_prev_Level=GSSConfigImportFromPrevLevel?)
+	 *     (
+	 *         id=INTEGER 
+	 *         name=STRING 
+	 *         TMformat=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName] 
+	 *         inputFilter=[GSSFilterFilter|VersionedQualifiedName] 
+	 *         import_from_prev_Level=[GSSImportImport|VersionedQualifiedName]?
+	 *     )
 	 */
 	protected void sequence_GSSConfigLevelOut(ISerializationContext context, GSSConfigLevelOut semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -791,11 +538,11 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 * Constraint:
 	 *     (
 	 *         id=INTEGER 
-	 *         name=ID 
+	 *         name=STRING 
 	 *         ifType=GSSConfigMainInterfaceType 
-	 *         ifConfig=ID 
+	 *         ifConfig=[GSSIfacePortConfig|VersionedQualifiedName] 
 	 *         ioType=GSSConfigMainInterfaceIOType 
-	 *         protocolID=INTEGER? 
+	 *         protocolID=[GSSConfigProtocol|VersionedQualifiedReferenceName]? 
 	 *         LevelInOut+=GSSConfigLevelInOut+
 	 *     )
 	 */
@@ -809,7 +556,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigModify returns GSSConfigModify
 	 *
 	 * Constraint:
-	 *     (name=ID type=GSSConfigModifyType value=INTEGER (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic))
+	 *     (name=STRING type=GSSConfigModifyType value=INTEGER (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic))
 	 */
 	protected void sequence_GSSConfigModify(ISerializationContext context, GSSConfigModify semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -821,7 +568,10 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigMonitors returns GSSConfigMonitors
 	 *
 	 * Constraint:
-	 *     (ChartsFile=ID? (plot+=GSSConfigPlot | alarmMsg+=GSSConfigAlarmMsg | modify+=GSSConfigModify | alarmVal+=GSSConfigAlarmVal)+)
+	 *     (
+	 *         ChartsFile=[GSSChartsCharts|VersionedQualifiedName]? 
+	 *         (plot+=GSSConfigPlot | alarmMsg+=GSSConfigAlarmMsg | modify+=GSSConfigModify | alarmVal+=GSSConfigAlarmVal)+
+	 *     )
 	 */
 	protected void sequence_GSSConfigMonitors(ISerializationContext context, GSSConfigMonitors semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -861,41 +611,17 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *
 	 * Constraint:
 	 *     (
-	 *         name=ID 
+	 *         name=STRING 
 	 *         id=INTEGER 
 	 *         ifRef=INTEGER 
 	 *         period_value=INTEGER 
 	 *         period_unit=GSSConfigUnit 
-	 *         level0=GSSConfigLevel0 
-	 *         app_to_level0=GSSConfigAppToLevel0
+	 *         level0=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         app_to_level0=[GSSExportExport|VersionedQualifiedName]
 	 *     )
 	 */
 	protected void sequence_GSSConfigPeriodicTCLevel0(ISerializationContext context, GSSConfigPeriodicTCLevel0 semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL0__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL0__NAME));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL0__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL0__ID));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL0__IF_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL0__IF_REF));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL0__PERIOD_VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL0__PERIOD_VALUE));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL0__PERIOD_UNIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL0__PERIOD_UNIT));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL0__LEVEL0) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL0__LEVEL0));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL0__APP_TO_LEVEL0) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL0__APP_TO_LEVEL0));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel0Access().getNameIDTerminalRuleCall_4_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel0Access().getIdINTEGERParserRuleCall_8_0(), semanticObject.getId());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel0Access().getIfRefINTEGERParserRuleCall_12_0(), semanticObject.getIfRef());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel0Access().getPeriod_valueINTEGERParserRuleCall_16_0(), semanticObject.getPeriod_value());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel0Access().getPeriod_unitGSSConfigUnitEnumRuleCall_20_0(), semanticObject.getPeriod_unit());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel0Access().getLevel0GSSConfigLevel0ParserRuleCall_22_0(), semanticObject.getLevel0());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel0Access().getApp_to_level0GSSConfigAppToLevel0ParserRuleCall_23_0(), semanticObject.getApp_to_level0());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -905,49 +631,19 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *
 	 * Constraint:
 	 *     (
-	 *         name=ID 
+	 *         name=STRING 
 	 *         id=INTEGER 
 	 *         ifRef=INTEGER 
 	 *         period_value=INTEGER 
 	 *         period_unit=GSSConfigUnit 
-	 *         level1=GSSConfigLevel1 
-	 *         app_to_level1=GSSConfigAppToLevel1 
-	 *         level0=GSSConfigLevel0 
-	 *         level1_to_level0=GSSConfigLevel1ToLevel0
+	 *         level1=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         app_to_level1=[GSSExportExport|VersionedQualifiedName] 
+	 *         level0=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level1_to_level0=[GSSExportExport|VersionedQualifiedName]?
 	 *     )
 	 */
 	protected void sequence_GSSConfigPeriodicTCLevel1(ISerializationContext context, GSSConfigPeriodicTCLevel1 semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__NAME));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__ID));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__IF_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__IF_REF));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_VALUE));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_UNIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_UNIT));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1_TO_LEVEL0) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1_TO_LEVEL0));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getNameIDTerminalRuleCall_4_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getIdINTEGERParserRuleCall_8_0(), semanticObject.getId());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getIfRefINTEGERParserRuleCall_12_0(), semanticObject.getIfRef());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getPeriod_valueINTEGERParserRuleCall_16_0(), semanticObject.getPeriod_value());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getPeriod_unitGSSConfigUnitEnumRuleCall_20_0(), semanticObject.getPeriod_unit());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel1GSSConfigLevel1ParserRuleCall_22_0(), semanticObject.getLevel1());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getApp_to_level1GSSConfigAppToLevel1ParserRuleCall_23_0(), semanticObject.getApp_to_level1());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel0GSSConfigLevel0ParserRuleCall_24_0(), semanticObject.getLevel0());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel1_to_level0GSSConfigLevel1ToLevel0ParserRuleCall_25_0(), semanticObject.getLevel1_to_level0());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -957,57 +653,21 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *
 	 * Constraint:
 	 *     (
-	 *         name=ID 
+	 *         name=STRING 
 	 *         id=INTEGER 
 	 *         ifRef=INTEGER 
 	 *         period_value=INTEGER 
 	 *         period_unit=GSSConfigUnit 
-	 *         level2=GSSConfigLevel2 
-	 *         app_to_level2=GSSConfigAppToLevel2 
-	 *         level1=GSSConfigLevel1 
-	 *         level2_to_level1=GSSConfigLevel2ToLevel1 
-	 *         level0=GSSConfigLevel0 
-	 *         level1_to_level0=GSSConfigLevel1ToLevel0
+	 *         level2=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         app_to_level2=[GSSExportExport|VersionedQualifiedName] 
+	 *         level1=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level2_to_level1=[GSSExportExport|VersionedQualifiedName]? 
+	 *         level0=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level1_to_level0=[GSSExportExport|VersionedQualifiedName]?
 	 *     )
 	 */
 	protected void sequence_GSSConfigPeriodicTCLevel2(ISerializationContext context, GSSConfigPeriodicTCLevel2 semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__NAME));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__ID));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__IF_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__IF_REF));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__PERIOD_VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__PERIOD_VALUE));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__PERIOD_UNIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__PERIOD_UNIT));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL2));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__APP_TO_LEVEL2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__APP_TO_LEVEL2));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL1));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL2_TO_LEVEL1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL2_TO_LEVEL1));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL0) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL0));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL1_TO_LEVEL0) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL1_TO_LEVEL0));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getNameIDTerminalRuleCall_4_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getIdINTEGERParserRuleCall_8_0(), semanticObject.getId());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getIfRefINTEGERParserRuleCall_12_0(), semanticObject.getIfRef());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getPeriod_valueINTEGERParserRuleCall_16_0(), semanticObject.getPeriod_value());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getPeriod_unitGSSConfigUnitEnumRuleCall_20_0(), semanticObject.getPeriod_unit());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel2GSSConfigLevel2ParserRuleCall_22_0(), semanticObject.getLevel2());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getApp_to_level2GSSConfigAppToLevel2ParserRuleCall_23_0(), semanticObject.getApp_to_level2());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel1GSSConfigLevel1ParserRuleCall_24_0(), semanticObject.getLevel1());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel2_to_level1GSSConfigLevel2ToLevel1ParserRuleCall_25_0(), semanticObject.getLevel2_to_level1());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel0GSSConfigLevel0ParserRuleCall_26_0(), semanticObject.getLevel0());
-		feeder.accept(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel1_to_level0GSSConfigLevel1ToLevel0ParserRuleCall_27_0(), semanticObject.getLevel1_to_level0());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1055,7 +715,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigPlot returns GSSConfigPlot
 	 *
 	 * Constraint:
-	 *     (name=ID (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic))
+	 *     (name=STRING (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic))
 	 */
 	protected void sequence_GSSConfigPlot(ISerializationContext context, GSSConfigPlot semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1205,12 +865,12 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 * Constraint:
 	 *     (
 	 *         status=GSSConfigEnableDisable 
-	 *         name=ID 
+	 *         name=STRING 
 	 *         id=INTEGER 
 	 *         ifRef=INTEGER 
 	 *         levels=INTEGER 
 	 *         levelRef=INTEGER 
-	 *         inputFilter=GSSConfigInputFilter 
+	 *         inputFilter=[GSSFilterFilter|VersionedQualifiedName] 
 	 *         UpperLevels+=GSSConfigUpperLevels? 
 	 *         printingData=GSSConfigPrintingData 
 	 *         (period=GSSConfigPeriod | intervalRange=GSSConfigIntervalRange)?
@@ -1256,46 +916,10 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     GSSConfigTCFormat returns GSSConfigTCFormat
-	 *
-	 * Constraint:
-	 *     file=XMLREF
-	 */
-	protected void sequence_GSSConfigTCFormat(ISerializationContext context, GSSConfigTCFormat semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_TC_FORMAT__FILE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_TC_FORMAT__FILE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigTCFormatAccess().getFileXMLREFParserRuleCall_4_0(), semanticObject.getFile());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSConfigTMFormat returns GSSConfigTMFormat
-	 *
-	 * Constraint:
-	 *     file=XMLREF
-	 */
-	protected void sequence_GSSConfigTMFormat(ISerializationContext context, GSSConfigTMFormat semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_TM_FORMAT__FILE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_TM_FORMAT__FILE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigTMFormatAccess().getFileXMLREFParserRuleCall_4_0(), semanticObject.getFile());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     GSSConfigTestCase returns GSSConfigTestCase
 	 *
 	 * Constraint:
-	 *     (name=ID procedure=ID req=ID? reqAction=GSSConfigReqAction?)
+	 *     (name=STRING procedure=[GSSTestProcTestProc|VersionedQualifiedName] req=ID? reqAction=GSSConfigReqAction?)
 	 */
 	protected void sequence_GSSConfigTestCase(ISerializationContext context, GSSConfigTestCase semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1307,7 +931,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigTests returns GSSConfigTests
 	 *
 	 * Constraint:
-	 *     (ProtocolPacketsFile=ID? TestCase+=GSSConfigTestCase+)
+	 *     (ProtocolPacketsFile=[GSSProtocolPacketsProtocolPackets|VersionedQualifiedName]? TestCase+=GSSConfigTestCase+)
 	 */
 	protected void sequence_GSSConfigTests(ISerializationContext context, GSSConfigTests semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1319,7 +943,12 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigUpperLevel returns GSSConfigUpperLevel
 	 *
 	 * Constraint:
-	 *     (level=GSSConfigUpperLevelLevel TMformat=GSSConfigTMFormat inputFilter=GSSConfigInputFilter import_from_prev_Level=GSSConfigImportFromPrevLevel?)
+	 *     (
+	 *         level=GSSConfigUpperLevelLevel 
+	 *         TMformat=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         inputFilter=[GSSFilterFilter|VersionedQualifiedName]? 
+	 *         import_from_prev_Level=[GSSImportImport|VersionedQualifiedName]?
+	 *     )
 	 */
 	protected void sequence_GSSConfigUpperLevel(ISerializationContext context, GSSConfigUpperLevel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

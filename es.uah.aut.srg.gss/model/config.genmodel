@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2018 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
     modelDirectory="/es.uah.aut.srg.gss/src" modelPluginID="es.uah.aut.srg.gss" modelName="Config"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" usedGenPackages="common.genmodel#//common"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="charts.genmodel#//charts common.genmodel#//common export.genmodel#//export filters.genmodel#//filters iface.genmodel#//iface imports.genmodel#//imports protocol_packets.genmodel#//protocol_packets test_proc.genmodel#//test_proc tm_tc_format.genmodel#//tm_tc_format"
     operationReflection="true" importOrganizing="true">
   <foreignModel>config.ecore</foreignModel>
   <genPackages prefix="config" basePackage="es.uah.aut.srg.gss" disposableProviderFactory="true"
@@ -61,6 +61,9 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="config.ecore#//GSSConfigAlarmValType">
       <genEnumLiterals ecoreEnumLiteral="config.ecore#//GSSConfigAlarmValType/alarm1"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="config.ecore#//GSSConfigReqAction">
+      <genEnumLiterals ecoreEnumLiteral="config.ecore#//GSSConfigReqAction/_1"/>
+    </genEnums>
     <genClasses ecoreClass="config.ecore#//GSSConfigGSSConfig">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigGSSConfig/gss_options"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigGSSConfig/Protocols"/>
@@ -101,7 +104,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigGSSDiscardErrorFlags/validTimesKo"/>
     </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigProtocols">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigProtocols/Protocol"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigProtocols/Protocol"/>
     </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigProtocol">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigProtocol/id"/>
@@ -109,26 +112,30 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigProtocol/typeLevel"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigProtocol/typeOffset"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigProtocol/subtypeOffset"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigProtocol/Protocol"/>
     </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigInterfaces">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigInterfaces/MainInterface"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigInterfaces/Interface"/>
     </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigTMFormat">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigTMFormat/file"/>
+    <genClasses ecoreClass="config.ecore#//GSSConfigMainInterface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigMainInterface/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigMainInterface/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigMainInterface/ifType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigMainInterface/ifConfig"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigMainInterface/ioType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigMainInterface/protocolID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigMainInterface/LevelInOut"/>
     </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigTCFormat">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigTCFormat/file"/>
-    </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigInputFilter">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigInputFilter/file"/>
-    </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigExportToPrevLevel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigExportToPrevLevel/file"/>
-    </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigImportFromPrevLevel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigImportFromPrevLevel/file"/>
+    <genClasses ecoreClass="config.ecore#//GSSConfigInterface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigInterface/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigInterface/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigInterface/ifType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigInterface/ifConfig"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigInterface/ioType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigInterface/protocolID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigInterface/LevelInOut"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigInterface/LevelIn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigInterface/LevelOut"/>
     </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigLevelInOut">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigLevelInOut/id"/>
@@ -152,28 +159,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigLevelOut/inputFilter"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigLevelOut/import_from_prev_Level"/>
     </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigMainInterface">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigMainInterface/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigMainInterface/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigMainInterface/ifType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigMainInterface/ifConfig"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigMainInterface/ioType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigMainInterface/protocolID"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigMainInterface/LevelInOut"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigMainInterface/LevelIn"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigMainInterface/LevelOut"/>
-    </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigInterface">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigInterface/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigInterface/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigInterface/ifType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigInterface/ifConfig"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigInterface/ioType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigInterface/protocolID"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigInterface/LevelInOut"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigInterface/LevelIn"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigInterface/LevelOut"/>
-    </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigSpecialPackets">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigSpecialPackets/SpecialPacket"/>
     </genClasses>
@@ -184,14 +169,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigSpecialPacket/ifRef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigSpecialPacket/levels"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigSpecialPacket/levelRef"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigSpecialPacket/inputFilter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigSpecialPacket/inputFilter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigSpecialPacket/UpperLevels"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigSpecialPacket/printingData"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigSpecialPacket/period"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigSpecialPacket/intervalRange"/>
     </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigUpperLevels">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigUpperLevels/UpperLevel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigUpperLevels/UpperLevel"/>
     </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigUpperLevel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigUpperLevel/level"/>
@@ -206,7 +191,6 @@
     <genClasses ecoreClass="config.ecore#//GSSConfigStructuredData">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigStructuredData/levelRef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigStructuredData/firstField"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigStructuredData/structuredData"/>
     </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigPeriod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriod/min_value"/>
@@ -225,52 +209,38 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCs/PeriodicTC_level_1"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCs/PeriodicTC_level_0"/>
     </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigLevel2">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigLevel2/format"/>
-    </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigLevel1">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigLevel1/format"/>
-    </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigLevel0">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigLevel0/format"/>
-    </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigAppToLevel2">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigAppToLevel2/export"/>
-    </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigAppToLevel1">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigAppToLevel1/export"/>
-    </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigAppToLevel0">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigAppToLevel0/export"/>
-    </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigLevel2ToLevel1">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigLevel2ToLevel1/export"/>
-    </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigLevel1ToLevel0">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigLevel1ToLevel0/export"/>
-    </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigPeriodicTCLevel2">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel2/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel2/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel2/ifRef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel2/period_value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel2/period_unit"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel2/level2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel2/app_to_level2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel2/level1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel2/level2_to_level1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel2/level0"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel2/level1_to_level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel2/level2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel2/app_to_level2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel2/level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel2/level2_to_level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel2/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel2/level1_to_level0"/>
     </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigPeriodicTCLevel1">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel1/level1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel1/app_to_level1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel1/level0"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel1/level1_to_level0"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel1/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel1/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel1/ifRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel1/period_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel1/period_unit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel1/level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel1/app_to_level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel1/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel1/level1_to_level0"/>
     </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigPeriodicTCLevel0">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel0/level0"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel0/app_to_level0"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel0/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel0/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel0/ifRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel0/period_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPeriodicTCLevel0/period_unit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel0/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigPeriodicTCLevel0/app_to_level0"/>
     </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigGlobalVars">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigGlobalVars/GlobalVar"/>
@@ -307,11 +277,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigReferenceSpecialPacket/size"/>
     </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigMonitors">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigMonitors/ChartsFile"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigMonitors/plot"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigMonitors/alarmMsg"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigMonitors/modify"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigMonitors/alarmVal"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigMonitors/ChartsFile"/>
     </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigPlot">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigPlot/name"/>
@@ -348,12 +318,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigGVPeriodic/period_unit"/>
     </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigTests">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigTests/ProtocolPacketsFile"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigTests/ProtocolPacketsFile"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigTests/TestCase"/>
     </genClasses>
     <genClasses ecoreClass="config.ecore#//GSSConfigTestCase">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigTestCase/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigTestCase/procedure"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigTestCase/procedure"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigTestCase/req"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigTestCase/reqAction"/>
     </genClasses>

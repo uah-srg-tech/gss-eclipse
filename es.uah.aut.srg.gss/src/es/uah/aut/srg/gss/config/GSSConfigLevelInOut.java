@@ -10,6 +10,14 @@
  */
 package es.uah.aut.srg.gss.config;
 
+import es.uah.aut.srg.gss.export.GSSExportExport;
+
+import es.uah.aut.srg.gss.filters.GSSFilterFilter;
+
+import es.uah.aut.srg.gss.imports.GSSImportImport;
+
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -88,133 +96,133 @@ public interface GSSConfigLevelInOut extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>TMformat</b></em>' containment reference.
+	 * Returns the value of the '<em><b>TMformat</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>TMformat</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>TMformat</em>' containment reference.
-	 * @see #setTMformat(GSSConfigTMFormat)
+	 * @return the value of the '<em>TMformat</em>' reference.
+	 * @see #setTMformat(GSSTmTcFormatTmTCFormat)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelInOut_TMformat()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSConfigTMFormat getTMformat();
+	GSSTmTcFormatTmTCFormat getTMformat();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getTMformat <em>TMformat</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getTMformat <em>TMformat</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>TMformat</em>' containment reference.
+	 * @param value the new value of the '<em>TMformat</em>' reference.
 	 * @see #getTMformat()
 	 * @generated
 	 */
-	void setTMformat(GSSConfigTMFormat value);
+	void setTMformat(GSSTmTcFormatTmTCFormat value);
 
 	/**
-	 * Returns the value of the '<em><b>TCformat</b></em>' containment reference.
+	 * Returns the value of the '<em><b>TCformat</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>TCformat</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>TCformat</em>' containment reference.
-	 * @see #setTCformat(GSSConfigTCFormat)
+	 * @return the value of the '<em>TCformat</em>' reference.
+	 * @see #setTCformat(GSSTmTcFormatTmTCFormat)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelInOut_TCformat()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSConfigTCFormat getTCformat();
+	GSSTmTcFormatTmTCFormat getTCformat();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getTCformat <em>TCformat</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getTCformat <em>TCformat</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>TCformat</em>' containment reference.
+	 * @param value the new value of the '<em>TCformat</em>' reference.
 	 * @see #getTCformat()
 	 * @generated
 	 */
-	void setTCformat(GSSConfigTCFormat value);
+	void setTCformat(GSSTmTcFormatTmTCFormat value);
 
 	/**
-	 * Returns the value of the '<em><b>Input Filter</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Input Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Input Filter</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Filter</em>' containment reference.
-	 * @see #setInputFilter(GSSConfigInputFilter)
+	 * @return the value of the '<em>Input Filter</em>' reference.
+	 * @see #setInputFilter(GSSFilterFilter)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelInOut_InputFilter()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSConfigInputFilter getInputFilter();
+	GSSFilterFilter getInputFilter();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getInputFilter <em>Input Filter</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getInputFilter <em>Input Filter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Filter</em>' containment reference.
+	 * @param value the new value of the '<em>Input Filter</em>' reference.
 	 * @see #getInputFilter()
 	 * @generated
 	 */
-	void setInputFilter(GSSConfigInputFilter value);
+	void setInputFilter(GSSFilterFilter value);
 
 	/**
-	 * Returns the value of the '<em><b>Export to prev Level</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Export to prev Level</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Export to prev Level</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Export to prev Level</em>' containment reference.
-	 * @see #setExport_to_prev_Level(GSSConfigExportToPrevLevel)
+	 * @return the value of the '<em>Export to prev Level</em>' reference.
+	 * @see #setExport_to_prev_Level(GSSExportExport)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelInOut_Export_to_prev_Level()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	GSSConfigExportToPrevLevel getExport_to_prev_Level();
+	GSSExportExport getExport_to_prev_Level();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getExport_to_prev_Level <em>Export to prev Level</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getExport_to_prev_Level <em>Export to prev Level</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Export to prev Level</em>' containment reference.
+	 * @param value the new value of the '<em>Export to prev Level</em>' reference.
 	 * @see #getExport_to_prev_Level()
 	 * @generated
 	 */
-	void setExport_to_prev_Level(GSSConfigExportToPrevLevel value);
+	void setExport_to_prev_Level(GSSExportExport value);
 
 	/**
-	 * Returns the value of the '<em><b>Import from prev Level</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Import from prev Level</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Import from prev Level</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Import from prev Level</em>' containment reference.
-	 * @see #setImport_from_prev_Level(GSSConfigImportFromPrevLevel)
+	 * @return the value of the '<em>Import from prev Level</em>' reference.
+	 * @see #setImport_from_prev_Level(GSSImportImport)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelInOut_Import_from_prev_Level()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	GSSConfigImportFromPrevLevel getImport_from_prev_Level();
+	GSSImportImport getImport_from_prev_Level();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getImport_from_prev_Level <em>Import from prev Level</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getImport_from_prev_Level <em>Import from prev Level</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Import from prev Level</em>' containment reference.
+	 * @param value the new value of the '<em>Import from prev Level</em>' reference.
 	 * @see #getImport_from_prev_Level()
 	 * @generated
 	 */
-	void setImport_from_prev_Level(GSSConfigImportFromPrevLevel value);
+	void setImport_from_prev_Level(GSSImportImport value);
 
 } // GSSConfigLevelInOut

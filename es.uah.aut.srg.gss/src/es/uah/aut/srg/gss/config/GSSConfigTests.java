@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.gss.config;
 
+import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPackets;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -33,30 +35,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface GSSConfigTests extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Protocol Packets File</b></em>' attribute.
+	 * Returns the value of the '<em><b>Protocol Packets File</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Protocol Packets File</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Protocol Packets File</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Protocol Packets File</em>' attribute.
-	 * @see #setProtocolPacketsFile(String)
+	 * @return the value of the '<em>Protocol Packets File</em>' reference.
+	 * @see #setProtocolPacketsFile(GSSProtocolPacketsProtocolPackets)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigTests_ProtocolPacketsFile()
 	 * @model
 	 * @generated
 	 */
-	String getProtocolPacketsFile();
+	GSSProtocolPacketsProtocolPackets getProtocolPacketsFile();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTests#getProtocolPacketsFile <em>Protocol Packets File</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTests#getProtocolPacketsFile <em>Protocol Packets File</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Protocol Packets File</em>' attribute.
+	 * @param value the new value of the '<em>Protocol Packets File</em>' reference.
 	 * @see #getProtocolPacketsFile()
 	 * @generated
 	 */
-	void setProtocolPacketsFile(String value);
+	void setProtocolPacketsFile(GSSProtocolPacketsProtocolPackets value);
 
 	/**
 	 * Returns the value of the '<em><b>Test Case</b></em>' containment reference list.

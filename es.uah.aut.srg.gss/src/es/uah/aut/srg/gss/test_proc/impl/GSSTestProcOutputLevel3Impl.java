@@ -10,19 +10,16 @@
  */
 package es.uah.aut.srg.gss.test_proc.impl;
 
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0;
+import es.uah.aut.srg.gss.imports.GSSImportImport;
+
 import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1FromLevel0;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2FromLevel1;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3Filter;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3FromLevel2;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
+
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -141,14 +138,14 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	protected String optional = OPTIONAL_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getLevel3() <em>Level3</em>}' containment reference.
+	 * The cached value of the '{@link #getLevel3() <em>Level3</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLevel3()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcLevel3 level3;
+	protected GSSTmTcFormatTmTCFormat level3;
 
 	/**
 	 * The cached value of the '{@link #getLevel3_filter() <em>Level3 filter</em>}' containment reference.
@@ -161,24 +158,24 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	protected GSSTestProcLevel3Filter level3_filter;
 
 	/**
-	 * The cached value of the '{@link #getLevel2() <em>Level2</em>}' containment reference.
+	 * The cached value of the '{@link #getLevel2() <em>Level2</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLevel2()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcLevel2 level2;
+	protected GSSTmTcFormatTmTCFormat level2;
 
 	/**
-	 * The cached value of the '{@link #getLevel3_from_level2() <em>Level3 from level2</em>}' containment reference.
+	 * The cached value of the '{@link #getLevel3_from_level2() <em>Level3 from level2</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLevel3_from_level2()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcLevel3FromLevel2 level3_from_level2;
+	protected GSSImportImport level3_from_level2;
 
 	/**
 	 * The cached value of the '{@link #getLevel2_filter() <em>Level2 filter</em>}' containment reference.
@@ -191,24 +188,24 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	protected GSSTestProcLevel2Filter level2_filter;
 
 	/**
-	 * The cached value of the '{@link #getLevel1() <em>Level1</em>}' containment reference.
+	 * The cached value of the '{@link #getLevel1() <em>Level1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLevel1()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcLevel1 level1;
+	protected GSSTmTcFormatTmTCFormat level1;
 
 	/**
-	 * The cached value of the '{@link #getLevel2_from_level1() <em>Level2 from level1</em>}' containment reference.
+	 * The cached value of the '{@link #getLevel2_from_level1() <em>Level2 from level1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLevel2_from_level1()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcLevel2FromLevel1 level2_from_level1;
+	protected GSSImportImport level2_from_level1;
 
 	/**
 	 * The cached value of the '{@link #getLevel1_filter() <em>Level1 filter</em>}' containment reference.
@@ -221,24 +218,24 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	protected GSSTestProcLevel1Filter level1_filter;
 
 	/**
-	 * The cached value of the '{@link #getLevel0() <em>Level0</em>}' containment reference.
+	 * The cached value of the '{@link #getLevel0() <em>Level0</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLevel0()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcLevel0 level0;
+	protected GSSTmTcFormatTmTCFormat level0;
 
 	/**
-	 * The cached value of the '{@link #getLevel1_from_level0() <em>Level1 from level0</em>}' containment reference.
+	 * The cached value of the '{@link #getLevel1_from_level0() <em>Level1 from level0</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLevel1_from_level0()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcLevel1FromLevel0 level1_from_level0;
+	protected GSSImportImport level1_from_level0;
 
 	/**
 	 * The cached value of the '{@link #getLevel0_filter() <em>Level0 filter</em>}' containment reference.
@@ -358,7 +355,15 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcLevel3 getLevel3() {
+	public GSSTmTcFormatTmTCFormat getLevel3() {
+		if (level3 != null && level3.eIsProxy()) {
+			InternalEObject oldLevel3 = (InternalEObject)level3;
+			level3 = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldLevel3);
+			if (level3 != oldLevel3) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3, oldLevel3, level3));
+			}
+		}
 		return level3;
 	}
 
@@ -367,14 +372,8 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel3(GSSTestProcLevel3 newLevel3, NotificationChain msgs) {
-		GSSTestProcLevel3 oldLevel3 = level3;
-		level3 = newLevel3;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3, oldLevel3, newLevel3);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public GSSTmTcFormatTmTCFormat basicGetLevel3() {
+		return level3;
 	}
 
 	/**
@@ -382,18 +381,11 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel3(GSSTestProcLevel3 newLevel3) {
-		if (newLevel3 != level3) {
-			NotificationChain msgs = null;
-			if (level3 != null)
-				msgs = ((InternalEObject)level3).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3, null, msgs);
-			if (newLevel3 != null)
-				msgs = ((InternalEObject)newLevel3).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3, null, msgs);
-			msgs = basicSetLevel3(newLevel3, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3, newLevel3, newLevel3));
+	public void setLevel3(GSSTmTcFormatTmTCFormat newLevel3) {
+		GSSTmTcFormatTmTCFormat oldLevel3 = level3;
+		level3 = newLevel3;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3, oldLevel3, level3));
 	}
 
 	/**
@@ -444,7 +436,15 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcLevel2 getLevel2() {
+	public GSSTmTcFormatTmTCFormat getLevel2() {
+		if (level2 != null && level2.eIsProxy()) {
+			InternalEObject oldLevel2 = (InternalEObject)level2;
+			level2 = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldLevel2);
+			if (level2 != oldLevel2) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2, oldLevel2, level2));
+			}
+		}
 		return level2;
 	}
 
@@ -453,14 +453,20 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel2(GSSTestProcLevel2 newLevel2, NotificationChain msgs) {
-		GSSTestProcLevel2 oldLevel2 = level2;
+	public GSSTmTcFormatTmTCFormat basicGetLevel2() {
+		return level2;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLevel2(GSSTmTcFormatTmTCFormat newLevel2) {
+		GSSTmTcFormatTmTCFormat oldLevel2 = level2;
 		level2 = newLevel2;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2, oldLevel2, newLevel2);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2, oldLevel2, level2));
 	}
 
 	/**
@@ -468,26 +474,15 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel2(GSSTestProcLevel2 newLevel2) {
-		if (newLevel2 != level2) {
-			NotificationChain msgs = null;
-			if (level2 != null)
-				msgs = ((InternalEObject)level2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2, null, msgs);
-			if (newLevel2 != null)
-				msgs = ((InternalEObject)newLevel2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2, null, msgs);
-			msgs = basicSetLevel2(newLevel2, msgs);
-			if (msgs != null) msgs.dispatch();
+	public GSSImportImport getLevel3_from_level2() {
+		if (level3_from_level2 != null && level3_from_level2.eIsProxy()) {
+			InternalEObject oldLevel3_from_level2 = (InternalEObject)level3_from_level2;
+			level3_from_level2 = (GSSImportImport)eResolveProxy(oldLevel3_from_level2);
+			if (level3_from_level2 != oldLevel3_from_level2) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2, oldLevel3_from_level2, level3_from_level2));
+			}
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2, newLevel2, newLevel2));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcLevel3FromLevel2 getLevel3_from_level2() {
 		return level3_from_level2;
 	}
 
@@ -496,14 +491,8 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel3_from_level2(GSSTestProcLevel3FromLevel2 newLevel3_from_level2, NotificationChain msgs) {
-		GSSTestProcLevel3FromLevel2 oldLevel3_from_level2 = level3_from_level2;
-		level3_from_level2 = newLevel3_from_level2;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2, oldLevel3_from_level2, newLevel3_from_level2);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public GSSImportImport basicGetLevel3_from_level2() {
+		return level3_from_level2;
 	}
 
 	/**
@@ -511,18 +500,11 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel3_from_level2(GSSTestProcLevel3FromLevel2 newLevel3_from_level2) {
-		if (newLevel3_from_level2 != level3_from_level2) {
-			NotificationChain msgs = null;
-			if (level3_from_level2 != null)
-				msgs = ((InternalEObject)level3_from_level2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2, null, msgs);
-			if (newLevel3_from_level2 != null)
-				msgs = ((InternalEObject)newLevel3_from_level2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2, null, msgs);
-			msgs = basicSetLevel3_from_level2(newLevel3_from_level2, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2, newLevel3_from_level2, newLevel3_from_level2));
+	public void setLevel3_from_level2(GSSImportImport newLevel3_from_level2) {
+		GSSImportImport oldLevel3_from_level2 = level3_from_level2;
+		level3_from_level2 = newLevel3_from_level2;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2, oldLevel3_from_level2, level3_from_level2));
 	}
 
 	/**
@@ -573,7 +555,15 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcLevel1 getLevel1() {
+	public GSSTmTcFormatTmTCFormat getLevel1() {
+		if (level1 != null && level1.eIsProxy()) {
+			InternalEObject oldLevel1 = (InternalEObject)level1;
+			level1 = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldLevel1);
+			if (level1 != oldLevel1) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1, oldLevel1, level1));
+			}
+		}
 		return level1;
 	}
 
@@ -582,14 +572,20 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel1(GSSTestProcLevel1 newLevel1, NotificationChain msgs) {
-		GSSTestProcLevel1 oldLevel1 = level1;
+	public GSSTmTcFormatTmTCFormat basicGetLevel1() {
+		return level1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLevel1(GSSTmTcFormatTmTCFormat newLevel1) {
+		GSSTmTcFormatTmTCFormat oldLevel1 = level1;
 		level1 = newLevel1;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1, oldLevel1, newLevel1);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1, oldLevel1, level1));
 	}
 
 	/**
@@ -597,26 +593,15 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel1(GSSTestProcLevel1 newLevel1) {
-		if (newLevel1 != level1) {
-			NotificationChain msgs = null;
-			if (level1 != null)
-				msgs = ((InternalEObject)level1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1, null, msgs);
-			if (newLevel1 != null)
-				msgs = ((InternalEObject)newLevel1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1, null, msgs);
-			msgs = basicSetLevel1(newLevel1, msgs);
-			if (msgs != null) msgs.dispatch();
+	public GSSImportImport getLevel2_from_level1() {
+		if (level2_from_level1 != null && level2_from_level1.eIsProxy()) {
+			InternalEObject oldLevel2_from_level1 = (InternalEObject)level2_from_level1;
+			level2_from_level1 = (GSSImportImport)eResolveProxy(oldLevel2_from_level1);
+			if (level2_from_level1 != oldLevel2_from_level1) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1, oldLevel2_from_level1, level2_from_level1));
+			}
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1, newLevel1, newLevel1));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcLevel2FromLevel1 getLevel2_from_level1() {
 		return level2_from_level1;
 	}
 
@@ -625,14 +610,8 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel2_from_level1(GSSTestProcLevel2FromLevel1 newLevel2_from_level1, NotificationChain msgs) {
-		GSSTestProcLevel2FromLevel1 oldLevel2_from_level1 = level2_from_level1;
-		level2_from_level1 = newLevel2_from_level1;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1, oldLevel2_from_level1, newLevel2_from_level1);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public GSSImportImport basicGetLevel2_from_level1() {
+		return level2_from_level1;
 	}
 
 	/**
@@ -640,18 +619,11 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel2_from_level1(GSSTestProcLevel2FromLevel1 newLevel2_from_level1) {
-		if (newLevel2_from_level1 != level2_from_level1) {
-			NotificationChain msgs = null;
-			if (level2_from_level1 != null)
-				msgs = ((InternalEObject)level2_from_level1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1, null, msgs);
-			if (newLevel2_from_level1 != null)
-				msgs = ((InternalEObject)newLevel2_from_level1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1, null, msgs);
-			msgs = basicSetLevel2_from_level1(newLevel2_from_level1, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1, newLevel2_from_level1, newLevel2_from_level1));
+	public void setLevel2_from_level1(GSSImportImport newLevel2_from_level1) {
+		GSSImportImport oldLevel2_from_level1 = level2_from_level1;
+		level2_from_level1 = newLevel2_from_level1;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1, oldLevel2_from_level1, level2_from_level1));
 	}
 
 	/**
@@ -702,7 +674,15 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcLevel0 getLevel0() {
+	public GSSTmTcFormatTmTCFormat getLevel0() {
+		if (level0 != null && level0.eIsProxy()) {
+			InternalEObject oldLevel0 = (InternalEObject)level0;
+			level0 = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldLevel0);
+			if (level0 != oldLevel0) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0, oldLevel0, level0));
+			}
+		}
 		return level0;
 	}
 
@@ -711,14 +691,20 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel0(GSSTestProcLevel0 newLevel0, NotificationChain msgs) {
-		GSSTestProcLevel0 oldLevel0 = level0;
+	public GSSTmTcFormatTmTCFormat basicGetLevel0() {
+		return level0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLevel0(GSSTmTcFormatTmTCFormat newLevel0) {
+		GSSTmTcFormatTmTCFormat oldLevel0 = level0;
 		level0 = newLevel0;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0, oldLevel0, newLevel0);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0, oldLevel0, level0));
 	}
 
 	/**
@@ -726,26 +712,15 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel0(GSSTestProcLevel0 newLevel0) {
-		if (newLevel0 != level0) {
-			NotificationChain msgs = null;
-			if (level0 != null)
-				msgs = ((InternalEObject)level0).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0, null, msgs);
-			if (newLevel0 != null)
-				msgs = ((InternalEObject)newLevel0).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0, null, msgs);
-			msgs = basicSetLevel0(newLevel0, msgs);
-			if (msgs != null) msgs.dispatch();
+	public GSSImportImport getLevel1_from_level0() {
+		if (level1_from_level0 != null && level1_from_level0.eIsProxy()) {
+			InternalEObject oldLevel1_from_level0 = (InternalEObject)level1_from_level0;
+			level1_from_level0 = (GSSImportImport)eResolveProxy(oldLevel1_from_level0);
+			if (level1_from_level0 != oldLevel1_from_level0) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0, oldLevel1_from_level0, level1_from_level0));
+			}
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0, newLevel0, newLevel0));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcLevel1FromLevel0 getLevel1_from_level0() {
 		return level1_from_level0;
 	}
 
@@ -754,14 +729,8 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel1_from_level0(GSSTestProcLevel1FromLevel0 newLevel1_from_level0, NotificationChain msgs) {
-		GSSTestProcLevel1FromLevel0 oldLevel1_from_level0 = level1_from_level0;
-		level1_from_level0 = newLevel1_from_level0;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0, oldLevel1_from_level0, newLevel1_from_level0);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public GSSImportImport basicGetLevel1_from_level0() {
+		return level1_from_level0;
 	}
 
 	/**
@@ -769,18 +738,11 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel1_from_level0(GSSTestProcLevel1FromLevel0 newLevel1_from_level0) {
-		if (newLevel1_from_level0 != level1_from_level0) {
-			NotificationChain msgs = null;
-			if (level1_from_level0 != null)
-				msgs = ((InternalEObject)level1_from_level0).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0, null, msgs);
-			if (newLevel1_from_level0 != null)
-				msgs = ((InternalEObject)newLevel1_from_level0).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0, null, msgs);
-			msgs = basicSetLevel1_from_level0(newLevel1_from_level0, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0, newLevel1_from_level0, newLevel1_from_level0));
+	public void setLevel1_from_level0(GSSImportImport newLevel1_from_level0) {
+		GSSImportImport oldLevel1_from_level0 = level1_from_level0;
+		level1_from_level0 = newLevel1_from_level0;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0, oldLevel1_from_level0, level1_from_level0));
 	}
 
 	/**
@@ -834,26 +796,12 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3:
-				return basicSetLevel3(null, msgs);
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FILTER:
 				return basicSetLevel3_filter(null, msgs);
-			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2:
-				return basicSetLevel2(null, msgs);
-			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2:
-				return basicSetLevel3_from_level2(null, msgs);
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FILTER:
 				return basicSetLevel2_filter(null, msgs);
-			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1:
-				return basicSetLevel1(null, msgs);
-			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1:
-				return basicSetLevel2_from_level1(null, msgs);
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FILTER:
 				return basicSetLevel1_filter(null, msgs);
-			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0:
-				return basicSetLevel0(null, msgs);
-			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0:
-				return basicSetLevel1_from_level0(null, msgs);
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0_FILTER:
 				return basicSetLevel0_filter(null, msgs);
 		}
@@ -877,25 +825,32 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__OPTIONAL:
 				return getOptional();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3:
-				return getLevel3();
+				if (resolve) return getLevel3();
+				return basicGetLevel3();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FILTER:
 				return getLevel3_filter();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2:
-				return getLevel2();
+				if (resolve) return getLevel2();
+				return basicGetLevel2();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2:
-				return getLevel3_from_level2();
+				if (resolve) return getLevel3_from_level2();
+				return basicGetLevel3_from_level2();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FILTER:
 				return getLevel2_filter();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1:
-				return getLevel1();
+				if (resolve) return getLevel1();
+				return basicGetLevel1();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1:
-				return getLevel2_from_level1();
+				if (resolve) return getLevel2_from_level1();
+				return basicGetLevel2_from_level1();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FILTER:
 				return getLevel1_filter();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0:
-				return getLevel0();
+				if (resolve) return getLevel0();
+				return basicGetLevel0();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0:
-				return getLevel1_from_level0();
+				if (resolve) return getLevel1_from_level0();
+				return basicGetLevel1_from_level0();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0_FILTER:
 				return getLevel0_filter();
 		}
@@ -923,34 +878,34 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 				setOptional((String)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3:
-				setLevel3((GSSTestProcLevel3)newValue);
+				setLevel3((GSSTmTcFormatTmTCFormat)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FILTER:
 				setLevel3_filter((GSSTestProcLevel3Filter)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2:
-				setLevel2((GSSTestProcLevel2)newValue);
+				setLevel2((GSSTmTcFormatTmTCFormat)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2:
-				setLevel3_from_level2((GSSTestProcLevel3FromLevel2)newValue);
+				setLevel3_from_level2((GSSImportImport)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FILTER:
 				setLevel2_filter((GSSTestProcLevel2Filter)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1:
-				setLevel1((GSSTestProcLevel1)newValue);
+				setLevel1((GSSTmTcFormatTmTCFormat)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1:
-				setLevel2_from_level1((GSSTestProcLevel2FromLevel1)newValue);
+				setLevel2_from_level1((GSSImportImport)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FILTER:
 				setLevel1_filter((GSSTestProcLevel1Filter)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0:
-				setLevel0((GSSTestProcLevel0)newValue);
+				setLevel0((GSSTmTcFormatTmTCFormat)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0:
-				setLevel1_from_level0((GSSTestProcLevel1FromLevel0)newValue);
+				setLevel1_from_level0((GSSImportImport)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0_FILTER:
 				setLevel0_filter((GSSTestProcLevel0Filter)newValue);
@@ -980,34 +935,34 @@ public class GSSTestProcOutputLevel3Impl extends GSSTestProcOutputImpl implement
 				setOptional(OPTIONAL_EDEFAULT);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3:
-				setLevel3((GSSTestProcLevel3)null);
+				setLevel3((GSSTmTcFormatTmTCFormat)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FILTER:
 				setLevel3_filter((GSSTestProcLevel3Filter)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2:
-				setLevel2((GSSTestProcLevel2)null);
+				setLevel2((GSSTmTcFormatTmTCFormat)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2:
-				setLevel3_from_level2((GSSTestProcLevel3FromLevel2)null);
+				setLevel3_from_level2((GSSImportImport)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FILTER:
 				setLevel2_filter((GSSTestProcLevel2Filter)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1:
-				setLevel1((GSSTestProcLevel1)null);
+				setLevel1((GSSTmTcFormatTmTCFormat)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1:
-				setLevel2_from_level1((GSSTestProcLevel2FromLevel1)null);
+				setLevel2_from_level1((GSSImportImport)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FILTER:
 				setLevel1_filter((GSSTestProcLevel1Filter)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0:
-				setLevel0((GSSTestProcLevel0)null);
+				setLevel0((GSSTmTcFormatTmTCFormat)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0:
-				setLevel1_from_level0((GSSTestProcLevel1FromLevel0)null);
+				setLevel1_from_level0((GSSImportImport)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0_FILTER:
 				setLevel0_filter((GSSTestProcLevel0Filter)null);

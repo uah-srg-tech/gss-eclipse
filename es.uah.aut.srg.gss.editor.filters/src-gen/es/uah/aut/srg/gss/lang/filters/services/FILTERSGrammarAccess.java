@@ -1601,19 +1601,20 @@ public class FILTERSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cIdINTEGERParserRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
-		private final Assignment cBoolVarRefAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cBoolVarRefGSSFilterBoolVarRefParserRuleCall_5_0 = (RuleCall)cBoolVarRefAssignment_5.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cBoolVarRefAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cBoolVarRefGSSFilterBoolVarRefParserRuleCall_6_0 = (RuleCall)cBoolVarRefAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//GSSFilterMinterm:
 		//	'GSSFilterMinterm' '{'
-		//	'id' ':=' id=INTEGER
+		//	'id' ':=' id=INTEGER ';'
 		//	BoolVarRef+=GSSFilterBoolVarRef+
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSFilterMinterm' '{' 'id' ':=' id=INTEGER BoolVarRef+=GSSFilterBoolVarRef+ '}' ';'
+		//'GSSFilterMinterm' '{' 'id' ':=' id=INTEGER ';' BoolVarRef+=GSSFilterBoolVarRef+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSFilterMinterm'
@@ -1634,17 +1635,20 @@ public class FILTERSGrammarAccess extends AbstractGrammarElementFinder {
 		//INTEGER
 		public RuleCall getIdINTEGERParserRuleCall_4_0() { return cIdINTEGERParserRuleCall_4_0; }
 		
+		//';'
+		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		
 		//BoolVarRef+=GSSFilterBoolVarRef+
-		public Assignment getBoolVarRefAssignment_5() { return cBoolVarRefAssignment_5; }
+		public Assignment getBoolVarRefAssignment_6() { return cBoolVarRefAssignment_6; }
 		
 		//GSSFilterBoolVarRef
-		public RuleCall getBoolVarRefGSSFilterBoolVarRefParserRuleCall_5_0() { return cBoolVarRefGSSFilterBoolVarRefParserRuleCall_5_0; }
+		public RuleCall getBoolVarRefGSSFilterBoolVarRefParserRuleCall_6_0() { return cBoolVarRefGSSFilterBoolVarRefParserRuleCall_6_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_7() { return cSemicolonKeyword_7; }
+		public Keyword getSemicolonKeyword_8() { return cSemicolonKeyword_8; }
 	}
 	public class GSSFilterBoolVarRefElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterBoolVarRef");
@@ -2482,7 +2486,7 @@ public class FILTERSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSFilterMinterm:
 	//	'GSSFilterMinterm' '{'
-	//	'id' ':=' id=INTEGER
+	//	'id' ':=' id=INTEGER ';'
 	//	BoolVarRef+=GSSFilterBoolVarRef+
 	//	'}' ';';
 	public GSSFilterMintermElements getGSSFilterMintermAccess() {

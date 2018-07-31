@@ -106,25 +106,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_value" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_unit" lowerBound="1"
         eType="#//GSSTestProcUnit" unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level3" lowerBound="1"
-        eType="#//GSSTestProcLevel3" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level3" lowerBound="1"
-        eType="#//GSSTestProcAppToLevel3" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" lowerBound="1"
-        eType="#//GSSTestProcLevel2" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level3_to_level2" lowerBound="1"
-        eType="#//GSSTestProcLevel3ToLevel2" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" lowerBound="1"
-        eType="#//GSSTestProcLevel1" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_to_level1" lowerBound="1"
-        eType="#//GSSTestProcLevel2ToLevel1" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" lowerBound="1"
-        eType="#//GSSTestProcLevel0" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_to_level0" lowerBound="1"
-        eType="#//GSSTestProcLevel1ToLevel0" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level3" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level3" eType="ecore:EClass export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level3_to_level2" eType="ecore:EClass export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_to_level1" eType="ecore:EClass export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_to_level0" eType="ecore:EClass export.ecore#//GSSExportExport"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcInputLevel2">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -132,19 +124,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_value" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_unit" lowerBound="1"
-        eType="#//GSSTestProcUnit"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" lowerBound="1"
-        eType="#//GSSTestProcLevel2" unsettable="true" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level2" lowerBound="1"
-        eType="#//GSSTestProcAppToLevel2" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" lowerBound="1"
-        eType="#//GSSTestProcLevel1" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_to_level1" lowerBound="1"
-        eType="#//GSSTestProcLevel2ToLevel1" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" lowerBound="1"
-        eType="#//GSSTestProcLevel0" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_to_level0" lowerBound="1"
-        eType="#//GSSTestProcLevel1ToLevel0" containment="true"/>
+        eType="#//GSSTestProcUnit" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level2" eType="ecore:EClass export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_to_level1" eType="ecore:EClass export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_to_level0" eType="ecore:EClass export.ecore#//GSSExportExport"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcInputLevel1">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -152,15 +138,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_value" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_unit" lowerBound="1"
-        eType="#//GSSTestProcUnit"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" lowerBound="1"
-        eType="#//GSSTestProcLevel1" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level1" lowerBound="1"
-        eType="#//GSSTestProcAppToLevel1" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" lowerBound="1"
-        eType="#//GSSTestProcLevel0" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_to_level0" lowerBound="1"
-        eType="#//GSSTestProcLevel1ToLevel0" containment="true"/>
+        eType="#//GSSTestProcUnit" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level1" eType="ecore:EClass export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_to_level0" eType="ecore:EClass export.ecore#//GSSExportExport"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcInputLevel0">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -169,54 +151,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_unit" lowerBound="1"
         eType="#//GSSTestProcUnit" unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" lowerBound="1"
-        eType="#//GSSTestProcLevel0" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level0" lowerBound="1"
-        eType="#//GSSTestProcAppToLevel0" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcLevel3">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcLevel2">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcLevel1">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcLevel0">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcAppToLevel3">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="export" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcAppToLevel2">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="export" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcAppToLevel1">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="export" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcAppToLevel0">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="export" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcLevel3ToLevel2">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="export" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcLevel2ToLevel1">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="export" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcLevel1ToLevel0">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="export" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level0" eType="ecore:EClass export.ecore#//GSSExportExport"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcOutput" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcOutputLevel3" eSuperTypes="#//GSSTestProcOutput">
@@ -224,26 +160,19 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="optional" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level3" lowerBound="1"
-        eType="#//GSSTestProcLevel3" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level3" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level3_filter" lowerBound="1"
         eType="#//GSSTestProcLevel3Filter" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" lowerBound="1"
-        eType="#//GSSTestProcLevel2" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level3_from_level2" lowerBound="1"
-        eType="#//GSSTestProcLevel3FromLevel2" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level3_from_level2" eType="ecore:EClass imports.ecore#//GSSImportImport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level2_filter" lowerBound="1"
         eType="#//GSSTestProcLevel2Filter" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" lowerBound="1"
-        eType="#//GSSTestProcLevel1" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_from_level1" lowerBound="1"
-        eType="#//GSSTestProcLevel2FromLevel1" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_from_level1" eType="ecore:EClass imports.ecore#//GSSImportImport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level1_filter" lowerBound="1"
         eType="#//GSSTestProcLevel1Filter" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" lowerBound="1"
-        eType="#//GSSTestProcLevel0" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_from_level0" lowerBound="1"
-        eType="#//GSSTestProcLevel1FromLevel0" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_from_level0" eType="ecore:EClass imports.ecore#//GSSImportImport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0_filter" lowerBound="1"
         eType="#//GSSTestProcLevel0Filter" containment="true"/>
   </eClassifiers>
@@ -252,20 +181,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="optional" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" lowerBound="1"
-        eType="#//GSSTestProcLevel2" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level2_filter" lowerBound="1"
         eType="#//GSSTestProcLevel2Filter" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" lowerBound="1"
-        eType="#//GSSTestProcLevel1" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_from_level1" lowerBound="1"
-        eType="#//GSSTestProcLevel2FromLevel1" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_from_level1" eType="ecore:EClass imports.ecore#//GSSImportImport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level1_filter" lowerBound="1"
         eType="#//GSSTestProcLevel1Filter" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" lowerBound="1"
-        eType="#//GSSTestProcLevel0" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_from_level0" lowerBound="1"
-        eType="#//GSSTestProcLevel1FromLevel0" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_from_level0" eType="ecore:EClass imports.ecore#//GSSImportImport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0_filter" lowerBound="1"
         eType="#//GSSTestProcLevel0Filter" containment="true"/>
   </eClassifiers>
@@ -274,14 +198,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="optional" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" lowerBound="1"
-        eType="#//GSSTestProcLevel1" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level1_filter" lowerBound="1"
         eType="#//GSSTestProcLevel1Filter" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" lowerBound="1"
-        eType="#//GSSTestProcLevel0" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_from_level0" lowerBound="1"
-        eType="#//GSSTestProcLevel1FromLevel0" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_from_level0" eType="ecore:EClass imports.ecore#//GSSImportImport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0_filter" lowerBound="1"
         eType="#//GSSTestProcLevel0Filter" containment="true"/>
   </eClassifiers>
@@ -290,45 +211,28 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="optional" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" lowerBound="1"
-        eType="#//GSSTestProcLevel0" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0_filter" lowerBound="1"
         eType="#//GSSTestProcLevel0Filter" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcLevel3Filter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="apply_def_filter" lowerBound="1"
-        eType="#//GSSTestProcYesNo"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extra_filter" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="#//GSSTestProcYesNo" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extra_filter" eType="ecore:EClass filters.ecore#//GSSFilterFilter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcLevel2Filter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="apply_def_filter" lowerBound="1"
-        eType="#//GSSTestProcYesNo"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extra_filter" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="#//GSSTestProcYesNo" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extra_filter" eType="ecore:EClass filters.ecore#//GSSFilterFilter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcLevel1Filter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="apply_def_filter" lowerBound="1"
-        eType="#//GSSTestProcYesNo"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extra_filter" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="#//GSSTestProcYesNo" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extra_filter" eType="ecore:EClass filters.ecore#//GSSFilterFilter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcLevel0Filter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="apply_def_filter" lowerBound="1"
-        eType="#//GSSTestProcYesNo"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extra_filter" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcLevel3FromLevel2">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="import" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcLevel2FromLevel1">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="import" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcLevel1FromLevel0">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="import" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="#//GSSTestProcYesNo" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extra_filter" eType="ecore:EClass filters.ecore#//GSSFilterFilter"/>
   </eClassifiers>
 </ecore:EPackage>

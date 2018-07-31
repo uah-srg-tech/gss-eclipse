@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.config;
 
+import es.uah.aut.srg.gss.filters.GSSFilterFilter;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -57,29 +58,29 @@ public interface GSSConfigGVFiltered extends EObject {
 	void setGlobalVarRef(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Filter</b></em>' attribute.
+	 * Returns the value of the '<em><b>Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Filter</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Filter</em>' attribute.
-	 * @see #setFilter(String)
+	 * @return the value of the '<em>Filter</em>' reference.
+	 * @see #setFilter(GSSFilterFilter)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigGVFiltered_Filter()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
-	String getFilter();
+	GSSFilterFilter getFilter();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGVFiltered#getFilter <em>Filter</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGVFiltered#getFilter <em>Filter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Filter</em>' attribute.
+	 * @param value the new value of the '<em>Filter</em>' reference.
 	 * @see #getFilter()
 	 * @generated
 	 */
-	void setFilter(String value);
+	void setFilter(GSSFilterFilter value);
 
 } // GSSConfigGVFiltered

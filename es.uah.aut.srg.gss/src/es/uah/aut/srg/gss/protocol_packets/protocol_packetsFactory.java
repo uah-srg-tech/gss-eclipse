@@ -40,15 +40,6 @@ public interface protocol_packetsFactory extends EFactory {
 	GSSProtocolPacketsProtocolPacket createGSSProtocolPacketsProtocolPacket();
 
 	/**
-	 * Returns a new object of class '<em>GSS Protocol Packets Format</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Protocol Packets Format</em>'.
-	 * @generated
-	 */
-	GSSProtocolPacketsFormat createGSSProtocolPacketsFormat();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

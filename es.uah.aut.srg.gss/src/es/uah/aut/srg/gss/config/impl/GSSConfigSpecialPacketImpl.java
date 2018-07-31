@@ -11,13 +11,14 @@
 package es.uah.aut.srg.gss.config.impl;
 
 import es.uah.aut.srg.gss.config.GSSConfigEnableDisable;
-import es.uah.aut.srg.gss.config.GSSConfigInputFilter;
 import es.uah.aut.srg.gss.config.GSSConfigIntervalRange;
 import es.uah.aut.srg.gss.config.GSSConfigPeriod;
 import es.uah.aut.srg.gss.config.GSSConfigPrintingData;
 import es.uah.aut.srg.gss.config.GSSConfigSpecialPacket;
 import es.uah.aut.srg.gss.config.GSSConfigUpperLevels;
 import es.uah.aut.srg.gss.config.configPackage;
+
+import es.uah.aut.srg.gss.filters.GSSFilterFilter;
 
 import java.util.Collection;
 
@@ -180,14 +181,14 @@ public class GSSConfigSpecialPacketImpl extends MinimalEObjectImpl.Container imp
 	protected String levelRef = LEVEL_REF_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getInputFilter() <em>Input Filter</em>}' containment reference.
+	 * The cached value of the '{@link #getInputFilter() <em>Input Filter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInputFilter()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSConfigInputFilter inputFilter;
+	protected GSSFilterFilter inputFilter;
 
 	/**
 	 * The cached value of the '{@link #getUpperLevels() <em>Upper Levels</em>}' containment reference list.
@@ -379,7 +380,15 @@ public class GSSConfigSpecialPacketImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSConfigInputFilter getInputFilter() {
+	public GSSFilterFilter getInputFilter() {
+		if (inputFilter != null && inputFilter.eIsProxy()) {
+			InternalEObject oldInputFilter = (InternalEObject)inputFilter;
+			inputFilter = (GSSFilterFilter)eResolveProxy(oldInputFilter);
+			if (inputFilter != oldInputFilter) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_SPECIAL_PACKET__INPUT_FILTER, oldInputFilter, inputFilter));
+			}
+		}
 		return inputFilter;
 	}
 
@@ -388,14 +397,8 @@ public class GSSConfigSpecialPacketImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetInputFilter(GSSConfigInputFilter newInputFilter, NotificationChain msgs) {
-		GSSConfigInputFilter oldInputFilter = inputFilter;
-		inputFilter = newInputFilter;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_SPECIAL_PACKET__INPUT_FILTER, oldInputFilter, newInputFilter);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public GSSFilterFilter basicGetInputFilter() {
+		return inputFilter;
 	}
 
 	/**
@@ -403,18 +406,11 @@ public class GSSConfigSpecialPacketImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputFilter(GSSConfigInputFilter newInputFilter) {
-		if (newInputFilter != inputFilter) {
-			NotificationChain msgs = null;
-			if (inputFilter != null)
-				msgs = ((InternalEObject)inputFilter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_SPECIAL_PACKET__INPUT_FILTER, null, msgs);
-			if (newInputFilter != null)
-				msgs = ((InternalEObject)newInputFilter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_SPECIAL_PACKET__INPUT_FILTER, null, msgs);
-			msgs = basicSetInputFilter(newInputFilter, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_SPECIAL_PACKET__INPUT_FILTER, newInputFilter, newInputFilter));
+	public void setInputFilter(GSSFilterFilter newInputFilter) {
+		GSSFilterFilter oldInputFilter = inputFilter;
+		inputFilter = newInputFilter;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_SPECIAL_PACKET__INPUT_FILTER, oldInputFilter, inputFilter));
 	}
 
 	/**
@@ -566,8 +562,6 @@ public class GSSConfigSpecialPacketImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case configPackage.GSS_CONFIG_SPECIAL_PACKET__INPUT_FILTER:
-				return basicSetInputFilter(null, msgs);
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET__UPPER_LEVELS:
 				return ((InternalEList<?>)getUpperLevels()).basicRemove(otherEnd, msgs);
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET__PRINTING_DATA:
@@ -601,7 +595,8 @@ public class GSSConfigSpecialPacketImpl extends MinimalEObjectImpl.Container imp
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET__LEVEL_REF:
 				return getLevelRef();
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET__INPUT_FILTER:
-				return getInputFilter();
+				if (resolve) return getInputFilter();
+				return basicGetInputFilter();
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET__UPPER_LEVELS:
 				return getUpperLevels();
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET__PRINTING_DATA:
@@ -642,7 +637,7 @@ public class GSSConfigSpecialPacketImpl extends MinimalEObjectImpl.Container imp
 				setLevelRef((String)newValue);
 				return;
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET__INPUT_FILTER:
-				setInputFilter((GSSConfigInputFilter)newValue);
+				setInputFilter((GSSFilterFilter)newValue);
 				return;
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET__UPPER_LEVELS:
 				getUpperLevels().clear();
@@ -688,7 +683,7 @@ public class GSSConfigSpecialPacketImpl extends MinimalEObjectImpl.Container imp
 				setLevelRef(LEVEL_REF_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET__INPUT_FILTER:
-				setInputFilter((GSSConfigInputFilter)null);
+				setInputFilter((GSSFilterFilter)null);
 				return;
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET__UPPER_LEVELS:
 				getUpperLevels().clear();

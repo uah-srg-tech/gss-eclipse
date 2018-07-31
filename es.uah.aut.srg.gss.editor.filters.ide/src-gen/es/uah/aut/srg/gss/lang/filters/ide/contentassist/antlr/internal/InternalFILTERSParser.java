@@ -3269,11 +3269,11 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             if ( (LA8_0==RULE_INT) ) {
                 int LA8_1 = input.LA(2);
 
-                if ( (LA8_1==RULE_ID) ) {
-                    alt8=2;
-                }
-                else if ( (LA8_1==EOF||LA8_1==28||LA8_1==64||LA8_1==66) ) {
+                if ( (LA8_1==EOF||LA8_1==28||LA8_1==64||LA8_1==66) ) {
                     alt8=1;
+                }
+                else if ( (LA8_1==RULE_ID) ) {
+                    alt8=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -23511,7 +23511,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7455:1: ( rule__GSSFilterMinterm__Group__4__Impl rule__GSSFilterMinterm__Group__5 )
             // InternalFILTERS.g:7456:2: rule__GSSFilterMinterm__Group__4__Impl rule__GSSFilterMinterm__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_43);
+            pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSFilterMinterm__Group__4__Impl();
 
             state._fsp--;
@@ -23600,7 +23600,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             // InternalFILTERS.g:7482:1: ( rule__GSSFilterMinterm__Group__5__Impl rule__GSSFilterMinterm__Group__6 )
             // InternalFILTERS.g:7483:2: rule__GSSFilterMinterm__Group__5__Impl rule__GSSFilterMinterm__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_12);
+            pushFollow(FollowSets000.FOLLOW_43);
             rule__GSSFilterMinterm__Group__5__Impl();
 
             state._fsp--;
@@ -23629,82 +23629,25 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMinterm__Group__5__Impl"
-    // InternalFILTERS.g:7490:1: rule__GSSFilterMinterm__Group__5__Impl : ( ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 ) ) ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 )* ) ) ;
+    // InternalFILTERS.g:7490:1: rule__GSSFilterMinterm__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSFilterMinterm__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7494:1: ( ( ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 ) ) ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 )* ) ) )
-            // InternalFILTERS.g:7495:1: ( ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 ) ) ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 )* ) )
+            // InternalFILTERS.g:7494:1: ( ( ';' ) )
+            // InternalFILTERS.g:7495:1: ( ';' )
             {
-            // InternalFILTERS.g:7495:1: ( ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 ) ) ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 )* ) )
-            // InternalFILTERS.g:7496:2: ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 ) ) ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 )* )
-            {
-            // InternalFILTERS.g:7496:2: ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 ) )
-            // InternalFILTERS.g:7497:3: ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 )
+            // InternalFILTERS.g:7495:1: ( ';' )
+            // InternalFILTERS.g:7496:2: ';'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefAssignment_5()); 
+               before(grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_5()); 
             }
-            // InternalFILTERS.g:7498:3: ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 )
-            // InternalFILTERS.g:7498:4: rule__GSSFilterMinterm__BoolVarRefAssignment_5
-            {
-            pushFollow(FollowSets000.FOLLOW_44);
-            rule__GSSFilterMinterm__BoolVarRefAssignment_5();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
+            match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefAssignment_5()); 
+               after(grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_5()); 
             }
-
-            }
-
-            // InternalFILTERS.g:7501:2: ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 )* )
-            // InternalFILTERS.g:7502:3: ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 )*
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefAssignment_5()); 
-            }
-            // InternalFILTERS.g:7503:3: ( rule__GSSFilterMinterm__BoolVarRefAssignment_5 )*
-            loop27:
-            do {
-                int alt27=2;
-                int LA27_0 = input.LA(1);
-
-                if ( (LA27_0==62) ) {
-                    alt27=1;
-                }
-
-
-                switch (alt27) {
-            	case 1 :
-            	    // InternalFILTERS.g:7503:4: rule__GSSFilterMinterm__BoolVarRefAssignment_5
-            	    {
-            	    pushFollow(FollowSets000.FOLLOW_44);
-            	    rule__GSSFilterMinterm__BoolVarRefAssignment_5();
-
-            	    state._fsp--;
-            	    if (state.failed) return ;
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop27;
-                }
-            } while (true);
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefAssignment_5()); 
-            }
-
-            }
-
 
             }
 
@@ -23727,16 +23670,16 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMinterm__Group__6"
-    // InternalFILTERS.g:7512:1: rule__GSSFilterMinterm__Group__6 : rule__GSSFilterMinterm__Group__6__Impl rule__GSSFilterMinterm__Group__7 ;
+    // InternalFILTERS.g:7505:1: rule__GSSFilterMinterm__Group__6 : rule__GSSFilterMinterm__Group__6__Impl rule__GSSFilterMinterm__Group__7 ;
     public final void rule__GSSFilterMinterm__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7516:1: ( rule__GSSFilterMinterm__Group__6__Impl rule__GSSFilterMinterm__Group__7 )
-            // InternalFILTERS.g:7517:2: rule__GSSFilterMinterm__Group__6__Impl rule__GSSFilterMinterm__Group__7
+            // InternalFILTERS.g:7509:1: ( rule__GSSFilterMinterm__Group__6__Impl rule__GSSFilterMinterm__Group__7 )
+            // InternalFILTERS.g:7510:2: rule__GSSFilterMinterm__Group__6__Impl rule__GSSFilterMinterm__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_7);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterMinterm__Group__6__Impl();
 
             state._fsp--;
@@ -23765,25 +23708,82 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMinterm__Group__6__Impl"
-    // InternalFILTERS.g:7524:1: rule__GSSFilterMinterm__Group__6__Impl : ( '}' ) ;
+    // InternalFILTERS.g:7517:1: rule__GSSFilterMinterm__Group__6__Impl : ( ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 ) ) ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 )* ) ) ;
     public final void rule__GSSFilterMinterm__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7528:1: ( ( '}' ) )
-            // InternalFILTERS.g:7529:1: ( '}' )
+            // InternalFILTERS.g:7521:1: ( ( ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 ) ) ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 )* ) ) )
+            // InternalFILTERS.g:7522:1: ( ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 ) ) ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 )* ) )
             {
-            // InternalFILTERS.g:7529:1: ( '}' )
-            // InternalFILTERS.g:7530:2: '}'
+            // InternalFILTERS.g:7522:1: ( ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 ) ) ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 )* ) )
+            // InternalFILTERS.g:7523:2: ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 ) ) ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 )* )
+            {
+            // InternalFILTERS.g:7523:2: ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 ) )
+            // InternalFILTERS.g:7524:3: ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSFilterMintermAccess().getRightCurlyBracketKeyword_6()); 
+               before(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefAssignment_6()); 
             }
-            match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalFILTERS.g:7525:3: ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 )
+            // InternalFILTERS.g:7525:4: rule__GSSFilterMinterm__BoolVarRefAssignment_6
+            {
+            pushFollow(FollowSets000.FOLLOW_44);
+            rule__GSSFilterMinterm__BoolVarRefAssignment_6();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSFilterMintermAccess().getRightCurlyBracketKeyword_6()); 
+               after(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefAssignment_6()); 
             }
+
+            }
+
+            // InternalFILTERS.g:7528:2: ( ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 )* )
+            // InternalFILTERS.g:7529:3: ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 )*
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefAssignment_6()); 
+            }
+            // InternalFILTERS.g:7530:3: ( rule__GSSFilterMinterm__BoolVarRefAssignment_6 )*
+            loop27:
+            do {
+                int alt27=2;
+                int LA27_0 = input.LA(1);
+
+                if ( (LA27_0==62) ) {
+                    alt27=1;
+                }
+
+
+                switch (alt27) {
+            	case 1 :
+            	    // InternalFILTERS.g:7530:4: rule__GSSFilterMinterm__BoolVarRefAssignment_6
+            	    {
+            	    pushFollow(FollowSets000.FOLLOW_44);
+            	    rule__GSSFilterMinterm__BoolVarRefAssignment_6();
+
+            	    state._fsp--;
+            	    if (state.failed) return ;
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop27;
+                }
+            } while (true);
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefAssignment_6()); 
+            }
+
+            }
+
 
             }
 
@@ -23806,17 +23806,22 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMinterm__Group__7"
-    // InternalFILTERS.g:7539:1: rule__GSSFilterMinterm__Group__7 : rule__GSSFilterMinterm__Group__7__Impl ;
+    // InternalFILTERS.g:7539:1: rule__GSSFilterMinterm__Group__7 : rule__GSSFilterMinterm__Group__7__Impl rule__GSSFilterMinterm__Group__8 ;
     public final void rule__GSSFilterMinterm__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7543:1: ( rule__GSSFilterMinterm__Group__7__Impl )
-            // InternalFILTERS.g:7544:2: rule__GSSFilterMinterm__Group__7__Impl
+            // InternalFILTERS.g:7543:1: ( rule__GSSFilterMinterm__Group__7__Impl rule__GSSFilterMinterm__Group__8 )
+            // InternalFILTERS.g:7544:2: rule__GSSFilterMinterm__Group__7__Impl rule__GSSFilterMinterm__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_2);
+            pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSFilterMinterm__Group__7__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSFilterMinterm__Group__8();
 
             state._fsp--;
             if (state.failed) return ;
@@ -23839,24 +23844,24 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMinterm__Group__7__Impl"
-    // InternalFILTERS.g:7550:1: rule__GSSFilterMinterm__Group__7__Impl : ( ';' ) ;
+    // InternalFILTERS.g:7551:1: rule__GSSFilterMinterm__Group__7__Impl : ( '}' ) ;
     public final void rule__GSSFilterMinterm__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7554:1: ( ( ';' ) )
-            // InternalFILTERS.g:7555:1: ( ';' )
+            // InternalFILTERS.g:7555:1: ( ( '}' ) )
+            // InternalFILTERS.g:7556:1: ( '}' )
             {
-            // InternalFILTERS.g:7555:1: ( ';' )
-            // InternalFILTERS.g:7556:2: ';'
+            // InternalFILTERS.g:7556:1: ( '}' )
+            // InternalFILTERS.g:7557:2: '}'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_7()); 
+               before(grammarAccess.getGSSFilterMintermAccess().getRightCurlyBracketKeyword_7()); 
             }
-            match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_7()); 
+               after(grammarAccess.getGSSFilterMintermAccess().getRightCurlyBracketKeyword_7()); 
             }
 
             }
@@ -23879,15 +23884,89 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSFilterMinterm__Group__7__Impl"
 
 
+    // $ANTLR start "rule__GSSFilterMinterm__Group__8"
+    // InternalFILTERS.g:7566:1: rule__GSSFilterMinterm__Group__8 : rule__GSSFilterMinterm__Group__8__Impl ;
+    public final void rule__GSSFilterMinterm__Group__8() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalFILTERS.g:7570:1: ( rule__GSSFilterMinterm__Group__8__Impl )
+            // InternalFILTERS.g:7571:2: rule__GSSFilterMinterm__Group__8__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSFilterMinterm__Group__8__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSFilterMinterm__Group__8"
+
+
+    // $ANTLR start "rule__GSSFilterMinterm__Group__8__Impl"
+    // InternalFILTERS.g:7577:1: rule__GSSFilterMinterm__Group__8__Impl : ( ';' ) ;
+    public final void rule__GSSFilterMinterm__Group__8__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalFILTERS.g:7581:1: ( ( ';' ) )
+            // InternalFILTERS.g:7582:1: ( ';' )
+            {
+            // InternalFILTERS.g:7582:1: ( ';' )
+            // InternalFILTERS.g:7583:2: ';'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_8()); 
+            }
+            match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_8()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSFilterMinterm__Group__8__Impl"
+
+
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__0"
-    // InternalFILTERS.g:7566:1: rule__GSSFilterBoolVarRef__Group__0 : rule__GSSFilterBoolVarRef__Group__0__Impl rule__GSSFilterBoolVarRef__Group__1 ;
+    // InternalFILTERS.g:7593:1: rule__GSSFilterBoolVarRef__Group__0 : rule__GSSFilterBoolVarRef__Group__0__Impl rule__GSSFilterBoolVarRef__Group__1 ;
     public final void rule__GSSFilterBoolVarRef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7570:1: ( rule__GSSFilterBoolVarRef__Group__0__Impl rule__GSSFilterBoolVarRef__Group__1 )
-            // InternalFILTERS.g:7571:2: rule__GSSFilterBoolVarRef__Group__0__Impl rule__GSSFilterBoolVarRef__Group__1
+            // InternalFILTERS.g:7597:1: ( rule__GSSFilterBoolVarRef__Group__0__Impl rule__GSSFilterBoolVarRef__Group__1 )
+            // InternalFILTERS.g:7598:2: rule__GSSFilterBoolVarRef__Group__0__Impl rule__GSSFilterBoolVarRef__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSFilterBoolVarRef__Group__0__Impl();
@@ -23918,17 +23997,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__0__Impl"
-    // InternalFILTERS.g:7578:1: rule__GSSFilterBoolVarRef__Group__0__Impl : ( 'GSSFilterBoolVarRef' ) ;
+    // InternalFILTERS.g:7605:1: rule__GSSFilterBoolVarRef__Group__0__Impl : ( 'GSSFilterBoolVarRef' ) ;
     public final void rule__GSSFilterBoolVarRef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7582:1: ( ( 'GSSFilterBoolVarRef' ) )
-            // InternalFILTERS.g:7583:1: ( 'GSSFilterBoolVarRef' )
+            // InternalFILTERS.g:7609:1: ( ( 'GSSFilterBoolVarRef' ) )
+            // InternalFILTERS.g:7610:1: ( 'GSSFilterBoolVarRef' )
             {
-            // InternalFILTERS.g:7583:1: ( 'GSSFilterBoolVarRef' )
-            // InternalFILTERS.g:7584:2: 'GSSFilterBoolVarRef'
+            // InternalFILTERS.g:7610:1: ( 'GSSFilterBoolVarRef' )
+            // InternalFILTERS.g:7611:2: 'GSSFilterBoolVarRef'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarRefAccess().getGSSFilterBoolVarRefKeyword_0()); 
@@ -23959,14 +24038,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__1"
-    // InternalFILTERS.g:7593:1: rule__GSSFilterBoolVarRef__Group__1 : rule__GSSFilterBoolVarRef__Group__1__Impl rule__GSSFilterBoolVarRef__Group__2 ;
+    // InternalFILTERS.g:7620:1: rule__GSSFilterBoolVarRef__Group__1 : rule__GSSFilterBoolVarRef__Group__1__Impl rule__GSSFilterBoolVarRef__Group__2 ;
     public final void rule__GSSFilterBoolVarRef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7597:1: ( rule__GSSFilterBoolVarRef__Group__1__Impl rule__GSSFilterBoolVarRef__Group__2 )
-            // InternalFILTERS.g:7598:2: rule__GSSFilterBoolVarRef__Group__1__Impl rule__GSSFilterBoolVarRef__Group__2
+            // InternalFILTERS.g:7624:1: ( rule__GSSFilterBoolVarRef__Group__1__Impl rule__GSSFilterBoolVarRef__Group__2 )
+            // InternalFILTERS.g:7625:2: rule__GSSFilterBoolVarRef__Group__1__Impl rule__GSSFilterBoolVarRef__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_45);
             rule__GSSFilterBoolVarRef__Group__1__Impl();
@@ -23997,17 +24076,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__1__Impl"
-    // InternalFILTERS.g:7605:1: rule__GSSFilterBoolVarRef__Group__1__Impl : ( '{' ) ;
+    // InternalFILTERS.g:7632:1: rule__GSSFilterBoolVarRef__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSFilterBoolVarRef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7609:1: ( ( '{' ) )
-            // InternalFILTERS.g:7610:1: ( '{' )
+            // InternalFILTERS.g:7636:1: ( ( '{' ) )
+            // InternalFILTERS.g:7637:1: ( '{' )
             {
-            // InternalFILTERS.g:7610:1: ( '{' )
-            // InternalFILTERS.g:7611:2: '{'
+            // InternalFILTERS.g:7637:1: ( '{' )
+            // InternalFILTERS.g:7638:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarRefAccess().getLeftCurlyBracketKeyword_1()); 
@@ -24038,14 +24117,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__2"
-    // InternalFILTERS.g:7620:1: rule__GSSFilterBoolVarRef__Group__2 : rule__GSSFilterBoolVarRef__Group__2__Impl rule__GSSFilterBoolVarRef__Group__3 ;
+    // InternalFILTERS.g:7647:1: rule__GSSFilterBoolVarRef__Group__2 : rule__GSSFilterBoolVarRef__Group__2__Impl rule__GSSFilterBoolVarRef__Group__3 ;
     public final void rule__GSSFilterBoolVarRef__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7624:1: ( rule__GSSFilterBoolVarRef__Group__2__Impl rule__GSSFilterBoolVarRef__Group__3 )
-            // InternalFILTERS.g:7625:2: rule__GSSFilterBoolVarRef__Group__2__Impl rule__GSSFilterBoolVarRef__Group__3
+            // InternalFILTERS.g:7651:1: ( rule__GSSFilterBoolVarRef__Group__2__Impl rule__GSSFilterBoolVarRef__Group__3 )
+            // InternalFILTERS.g:7652:2: rule__GSSFilterBoolVarRef__Group__2__Impl rule__GSSFilterBoolVarRef__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSFilterBoolVarRef__Group__2__Impl();
@@ -24076,17 +24155,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__2__Impl"
-    // InternalFILTERS.g:7632:1: rule__GSSFilterBoolVarRef__Group__2__Impl : ( 'idRef' ) ;
+    // InternalFILTERS.g:7659:1: rule__GSSFilterBoolVarRef__Group__2__Impl : ( 'idRef' ) ;
     public final void rule__GSSFilterBoolVarRef__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7636:1: ( ( 'idRef' ) )
-            // InternalFILTERS.g:7637:1: ( 'idRef' )
+            // InternalFILTERS.g:7663:1: ( ( 'idRef' ) )
+            // InternalFILTERS.g:7664:1: ( 'idRef' )
             {
-            // InternalFILTERS.g:7637:1: ( 'idRef' )
-            // InternalFILTERS.g:7638:2: 'idRef'
+            // InternalFILTERS.g:7664:1: ( 'idRef' )
+            // InternalFILTERS.g:7665:2: 'idRef'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarRefAccess().getIdRefKeyword_2()); 
@@ -24117,14 +24196,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__3"
-    // InternalFILTERS.g:7647:1: rule__GSSFilterBoolVarRef__Group__3 : rule__GSSFilterBoolVarRef__Group__3__Impl rule__GSSFilterBoolVarRef__Group__4 ;
+    // InternalFILTERS.g:7674:1: rule__GSSFilterBoolVarRef__Group__3 : rule__GSSFilterBoolVarRef__Group__3__Impl rule__GSSFilterBoolVarRef__Group__4 ;
     public final void rule__GSSFilterBoolVarRef__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7651:1: ( rule__GSSFilterBoolVarRef__Group__3__Impl rule__GSSFilterBoolVarRef__Group__4 )
-            // InternalFILTERS.g:7652:2: rule__GSSFilterBoolVarRef__Group__3__Impl rule__GSSFilterBoolVarRef__Group__4
+            // InternalFILTERS.g:7678:1: ( rule__GSSFilterBoolVarRef__Group__3__Impl rule__GSSFilterBoolVarRef__Group__4 )
+            // InternalFILTERS.g:7679:2: rule__GSSFilterBoolVarRef__Group__3__Impl rule__GSSFilterBoolVarRef__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSFilterBoolVarRef__Group__3__Impl();
@@ -24155,17 +24234,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__3__Impl"
-    // InternalFILTERS.g:7659:1: rule__GSSFilterBoolVarRef__Group__3__Impl : ( ':=' ) ;
+    // InternalFILTERS.g:7686:1: rule__GSSFilterBoolVarRef__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSFilterBoolVarRef__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7663:1: ( ( ':=' ) )
-            // InternalFILTERS.g:7664:1: ( ':=' )
+            // InternalFILTERS.g:7690:1: ( ( ':=' ) )
+            // InternalFILTERS.g:7691:1: ( ':=' )
             {
-            // InternalFILTERS.g:7664:1: ( ':=' )
-            // InternalFILTERS.g:7665:2: ':='
+            // InternalFILTERS.g:7691:1: ( ':=' )
+            // InternalFILTERS.g:7692:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarRefAccess().getColonEqualsSignKeyword_3()); 
@@ -24196,14 +24275,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__4"
-    // InternalFILTERS.g:7674:1: rule__GSSFilterBoolVarRef__Group__4 : rule__GSSFilterBoolVarRef__Group__4__Impl rule__GSSFilterBoolVarRef__Group__5 ;
+    // InternalFILTERS.g:7701:1: rule__GSSFilterBoolVarRef__Group__4 : rule__GSSFilterBoolVarRef__Group__4__Impl rule__GSSFilterBoolVarRef__Group__5 ;
     public final void rule__GSSFilterBoolVarRef__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7678:1: ( rule__GSSFilterBoolVarRef__Group__4__Impl rule__GSSFilterBoolVarRef__Group__5 )
-            // InternalFILTERS.g:7679:2: rule__GSSFilterBoolVarRef__Group__4__Impl rule__GSSFilterBoolVarRef__Group__5
+            // InternalFILTERS.g:7705:1: ( rule__GSSFilterBoolVarRef__Group__4__Impl rule__GSSFilterBoolVarRef__Group__5 )
+            // InternalFILTERS.g:7706:2: rule__GSSFilterBoolVarRef__Group__4__Impl rule__GSSFilterBoolVarRef__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSFilterBoolVarRef__Group__4__Impl();
@@ -24234,23 +24313,23 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__4__Impl"
-    // InternalFILTERS.g:7686:1: rule__GSSFilterBoolVarRef__Group__4__Impl : ( ( rule__GSSFilterBoolVarRef__IdRefAssignment_4 ) ) ;
+    // InternalFILTERS.g:7713:1: rule__GSSFilterBoolVarRef__Group__4__Impl : ( ( rule__GSSFilterBoolVarRef__IdRefAssignment_4 ) ) ;
     public final void rule__GSSFilterBoolVarRef__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7690:1: ( ( ( rule__GSSFilterBoolVarRef__IdRefAssignment_4 ) ) )
-            // InternalFILTERS.g:7691:1: ( ( rule__GSSFilterBoolVarRef__IdRefAssignment_4 ) )
+            // InternalFILTERS.g:7717:1: ( ( ( rule__GSSFilterBoolVarRef__IdRefAssignment_4 ) ) )
+            // InternalFILTERS.g:7718:1: ( ( rule__GSSFilterBoolVarRef__IdRefAssignment_4 ) )
             {
-            // InternalFILTERS.g:7691:1: ( ( rule__GSSFilterBoolVarRef__IdRefAssignment_4 ) )
-            // InternalFILTERS.g:7692:2: ( rule__GSSFilterBoolVarRef__IdRefAssignment_4 )
+            // InternalFILTERS.g:7718:1: ( ( rule__GSSFilterBoolVarRef__IdRefAssignment_4 ) )
+            // InternalFILTERS.g:7719:2: ( rule__GSSFilterBoolVarRef__IdRefAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarRefAccess().getIdRefAssignment_4()); 
             }
-            // InternalFILTERS.g:7693:2: ( rule__GSSFilterBoolVarRef__IdRefAssignment_4 )
-            // InternalFILTERS.g:7693:3: rule__GSSFilterBoolVarRef__IdRefAssignment_4
+            // InternalFILTERS.g:7720:2: ( rule__GSSFilterBoolVarRef__IdRefAssignment_4 )
+            // InternalFILTERS.g:7720:3: rule__GSSFilterBoolVarRef__IdRefAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSFilterBoolVarRef__IdRefAssignment_4();
@@ -24285,14 +24364,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__5"
-    // InternalFILTERS.g:7701:1: rule__GSSFilterBoolVarRef__Group__5 : rule__GSSFilterBoolVarRef__Group__5__Impl rule__GSSFilterBoolVarRef__Group__6 ;
+    // InternalFILTERS.g:7728:1: rule__GSSFilterBoolVarRef__Group__5 : rule__GSSFilterBoolVarRef__Group__5__Impl rule__GSSFilterBoolVarRef__Group__6 ;
     public final void rule__GSSFilterBoolVarRef__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7705:1: ( rule__GSSFilterBoolVarRef__Group__5__Impl rule__GSSFilterBoolVarRef__Group__6 )
-            // InternalFILTERS.g:7706:2: rule__GSSFilterBoolVarRef__Group__5__Impl rule__GSSFilterBoolVarRef__Group__6
+            // InternalFILTERS.g:7732:1: ( rule__GSSFilterBoolVarRef__Group__5__Impl rule__GSSFilterBoolVarRef__Group__6 )
+            // InternalFILTERS.g:7733:2: rule__GSSFilterBoolVarRef__Group__5__Impl rule__GSSFilterBoolVarRef__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSFilterBoolVarRef__Group__5__Impl();
@@ -24323,17 +24402,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__5__Impl"
-    // InternalFILTERS.g:7713:1: rule__GSSFilterBoolVarRef__Group__5__Impl : ( ';' ) ;
+    // InternalFILTERS.g:7740:1: rule__GSSFilterBoolVarRef__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSFilterBoolVarRef__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7717:1: ( ( ';' ) )
-            // InternalFILTERS.g:7718:1: ( ';' )
+            // InternalFILTERS.g:7744:1: ( ( ';' ) )
+            // InternalFILTERS.g:7745:1: ( ';' )
             {
-            // InternalFILTERS.g:7718:1: ( ';' )
-            // InternalFILTERS.g:7719:2: ';'
+            // InternalFILTERS.g:7745:1: ( ';' )
+            // InternalFILTERS.g:7746:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarRefAccess().getSemicolonKeyword_5()); 
@@ -24364,14 +24443,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__6"
-    // InternalFILTERS.g:7728:1: rule__GSSFilterBoolVarRef__Group__6 : rule__GSSFilterBoolVarRef__Group__6__Impl rule__GSSFilterBoolVarRef__Group__7 ;
+    // InternalFILTERS.g:7755:1: rule__GSSFilterBoolVarRef__Group__6 : rule__GSSFilterBoolVarRef__Group__6__Impl rule__GSSFilterBoolVarRef__Group__7 ;
     public final void rule__GSSFilterBoolVarRef__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7732:1: ( rule__GSSFilterBoolVarRef__Group__6__Impl rule__GSSFilterBoolVarRef__Group__7 )
-            // InternalFILTERS.g:7733:2: rule__GSSFilterBoolVarRef__Group__6__Impl rule__GSSFilterBoolVarRef__Group__7
+            // InternalFILTERS.g:7759:1: ( rule__GSSFilterBoolVarRef__Group__6__Impl rule__GSSFilterBoolVarRef__Group__7 )
+            // InternalFILTERS.g:7760:2: rule__GSSFilterBoolVarRef__Group__6__Impl rule__GSSFilterBoolVarRef__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSFilterBoolVarRef__Group__6__Impl();
@@ -24402,17 +24481,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__6__Impl"
-    // InternalFILTERS.g:7740:1: rule__GSSFilterBoolVarRef__Group__6__Impl : ( '}' ) ;
+    // InternalFILTERS.g:7767:1: rule__GSSFilterBoolVarRef__Group__6__Impl : ( '}' ) ;
     public final void rule__GSSFilterBoolVarRef__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7744:1: ( ( '}' ) )
-            // InternalFILTERS.g:7745:1: ( '}' )
+            // InternalFILTERS.g:7771:1: ( ( '}' ) )
+            // InternalFILTERS.g:7772:1: ( '}' )
             {
-            // InternalFILTERS.g:7745:1: ( '}' )
-            // InternalFILTERS.g:7746:2: '}'
+            // InternalFILTERS.g:7772:1: ( '}' )
+            // InternalFILTERS.g:7773:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarRefAccess().getRightCurlyBracketKeyword_6()); 
@@ -24443,14 +24522,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__7"
-    // InternalFILTERS.g:7755:1: rule__GSSFilterBoolVarRef__Group__7 : rule__GSSFilterBoolVarRef__Group__7__Impl ;
+    // InternalFILTERS.g:7782:1: rule__GSSFilterBoolVarRef__Group__7 : rule__GSSFilterBoolVarRef__Group__7__Impl ;
     public final void rule__GSSFilterBoolVarRef__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7759:1: ( rule__GSSFilterBoolVarRef__Group__7__Impl )
-            // InternalFILTERS.g:7760:2: rule__GSSFilterBoolVarRef__Group__7__Impl
+            // InternalFILTERS.g:7786:1: ( rule__GSSFilterBoolVarRef__Group__7__Impl )
+            // InternalFILTERS.g:7787:2: rule__GSSFilterBoolVarRef__Group__7__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSFilterBoolVarRef__Group__7__Impl();
@@ -24476,17 +24555,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__Group__7__Impl"
-    // InternalFILTERS.g:7766:1: rule__GSSFilterBoolVarRef__Group__7__Impl : ( ';' ) ;
+    // InternalFILTERS.g:7793:1: rule__GSSFilterBoolVarRef__Group__7__Impl : ( ';' ) ;
     public final void rule__GSSFilterBoolVarRef__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7770:1: ( ( ';' ) )
-            // InternalFILTERS.g:7771:1: ( ';' )
+            // InternalFILTERS.g:7797:1: ( ( ';' ) )
+            // InternalFILTERS.g:7798:1: ( ';' )
             {
-            // InternalFILTERS.g:7771:1: ( ';' )
-            // InternalFILTERS.g:7772:2: ';'
+            // InternalFILTERS.g:7798:1: ( ';' )
+            // InternalFILTERS.g:7799:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarRefAccess().getSemicolonKeyword_7()); 
@@ -24517,14 +24596,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__0"
-    // InternalFILTERS.g:7782:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
+    // InternalFILTERS.g:7809:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
     public final void rule__QualifiedName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7786:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
-            // InternalFILTERS.g:7787:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
+            // InternalFILTERS.g:7813:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
+            // InternalFILTERS.g:7814:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_46);
             rule__QualifiedName__Group__0__Impl();
@@ -24555,17 +24634,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__0__Impl"
-    // InternalFILTERS.g:7794:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
+    // InternalFILTERS.g:7821:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7798:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:7799:1: ( RULE_ID )
+            // InternalFILTERS.g:7825:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:7826:1: ( RULE_ID )
             {
-            // InternalFILTERS.g:7799:1: ( RULE_ID )
-            // InternalFILTERS.g:7800:2: RULE_ID
+            // InternalFILTERS.g:7826:1: ( RULE_ID )
+            // InternalFILTERS.g:7827:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
@@ -24596,14 +24675,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__1"
-    // InternalFILTERS.g:7809:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
+    // InternalFILTERS.g:7836:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
     public final void rule__QualifiedName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7813:1: ( rule__QualifiedName__Group__1__Impl )
-            // InternalFILTERS.g:7814:2: rule__QualifiedName__Group__1__Impl
+            // InternalFILTERS.g:7840:1: ( rule__QualifiedName__Group__1__Impl )
+            // InternalFILTERS.g:7841:2: rule__QualifiedName__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__QualifiedName__Group__1__Impl();
@@ -24629,22 +24708,22 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__1__Impl"
-    // InternalFILTERS.g:7820:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
+    // InternalFILTERS.g:7847:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
     public final void rule__QualifiedName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7824:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
-            // InternalFILTERS.g:7825:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // InternalFILTERS.g:7851:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
+            // InternalFILTERS.g:7852:1: ( ( rule__QualifiedName__Group_1__0 )* )
             {
-            // InternalFILTERS.g:7825:1: ( ( rule__QualifiedName__Group_1__0 )* )
-            // InternalFILTERS.g:7826:2: ( rule__QualifiedName__Group_1__0 )*
+            // InternalFILTERS.g:7852:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // InternalFILTERS.g:7853:2: ( rule__QualifiedName__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getGroup_1()); 
             }
-            // InternalFILTERS.g:7827:2: ( rule__QualifiedName__Group_1__0 )*
+            // InternalFILTERS.g:7854:2: ( rule__QualifiedName__Group_1__0 )*
             loop28:
             do {
                 int alt28=2;
@@ -24657,7 +24736,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
                 switch (alt28) {
             	case 1 :
-            	    // InternalFILTERS.g:7827:3: rule__QualifiedName__Group_1__0
+            	    // InternalFILTERS.g:7854:3: rule__QualifiedName__Group_1__0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_47);
             	    rule__QualifiedName__Group_1__0();
@@ -24698,14 +24777,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0"
-    // InternalFILTERS.g:7836:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
+    // InternalFILTERS.g:7863:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
     public final void rule__QualifiedName__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7840:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
-            // InternalFILTERS.g:7841:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
+            // InternalFILTERS.g:7867:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
+            // InternalFILTERS.g:7868:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__QualifiedName__Group_1__0__Impl();
@@ -24736,17 +24815,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0__Impl"
-    // InternalFILTERS.g:7848:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
+    // InternalFILTERS.g:7875:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
     public final void rule__QualifiedName__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7852:1: ( ( '.' ) )
-            // InternalFILTERS.g:7853:1: ( '.' )
+            // InternalFILTERS.g:7879:1: ( ( '.' ) )
+            // InternalFILTERS.g:7880:1: ( '.' )
             {
-            // InternalFILTERS.g:7853:1: ( '.' )
-            // InternalFILTERS.g:7854:2: '.'
+            // InternalFILTERS.g:7880:1: ( '.' )
+            // InternalFILTERS.g:7881:2: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
@@ -24777,14 +24856,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1"
-    // InternalFILTERS.g:7863:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
+    // InternalFILTERS.g:7890:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
     public final void rule__QualifiedName__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7867:1: ( rule__QualifiedName__Group_1__1__Impl )
-            // InternalFILTERS.g:7868:2: rule__QualifiedName__Group_1__1__Impl
+            // InternalFILTERS.g:7894:1: ( rule__QualifiedName__Group_1__1__Impl )
+            // InternalFILTERS.g:7895:2: rule__QualifiedName__Group_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__QualifiedName__Group_1__1__Impl();
@@ -24810,17 +24889,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1__Impl"
-    // InternalFILTERS.g:7874:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
+    // InternalFILTERS.g:7901:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7878:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:7879:1: ( RULE_ID )
+            // InternalFILTERS.g:7905:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:7906:1: ( RULE_ID )
             {
-            // InternalFILTERS.g:7879:1: ( RULE_ID )
-            // InternalFILTERS.g:7880:2: RULE_ID
+            // InternalFILTERS.g:7906:1: ( RULE_ID )
+            // InternalFILTERS.g:7907:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
@@ -24851,14 +24930,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__0"
-    // InternalFILTERS.g:7890:1: rule__Version__Group__0 : rule__Version__Group__0__Impl rule__Version__Group__1 ;
+    // InternalFILTERS.g:7917:1: rule__Version__Group__0 : rule__Version__Group__0__Impl rule__Version__Group__1 ;
     public final void rule__Version__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7894:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
-            // InternalFILTERS.g:7895:2: rule__Version__Group__0__Impl rule__Version__Group__1
+            // InternalFILTERS.g:7921:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
+            // InternalFILTERS.g:7922:2: rule__Version__Group__0__Impl rule__Version__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_46);
             rule__Version__Group__0__Impl();
@@ -24889,23 +24968,23 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__0__Impl"
-    // InternalFILTERS.g:7902:1: rule__Version__Group__0__Impl : ( ( rule__Version__Alternatives_0 ) ) ;
+    // InternalFILTERS.g:7929:1: rule__Version__Group__0__Impl : ( ( rule__Version__Alternatives_0 ) ) ;
     public final void rule__Version__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7906:1: ( ( ( rule__Version__Alternatives_0 ) ) )
-            // InternalFILTERS.g:7907:1: ( ( rule__Version__Alternatives_0 ) )
+            // InternalFILTERS.g:7933:1: ( ( ( rule__Version__Alternatives_0 ) ) )
+            // InternalFILTERS.g:7934:1: ( ( rule__Version__Alternatives_0 ) )
             {
-            // InternalFILTERS.g:7907:1: ( ( rule__Version__Alternatives_0 ) )
-            // InternalFILTERS.g:7908:2: ( rule__Version__Alternatives_0 )
+            // InternalFILTERS.g:7934:1: ( ( rule__Version__Alternatives_0 ) )
+            // InternalFILTERS.g:7935:2: ( rule__Version__Alternatives_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getAlternatives_0()); 
             }
-            // InternalFILTERS.g:7909:2: ( rule__Version__Alternatives_0 )
-            // InternalFILTERS.g:7909:3: rule__Version__Alternatives_0
+            // InternalFILTERS.g:7936:2: ( rule__Version__Alternatives_0 )
+            // InternalFILTERS.g:7936:3: rule__Version__Alternatives_0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Alternatives_0();
@@ -24940,14 +25019,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__1"
-    // InternalFILTERS.g:7917:1: rule__Version__Group__1 : rule__Version__Group__1__Impl ;
+    // InternalFILTERS.g:7944:1: rule__Version__Group__1 : rule__Version__Group__1__Impl ;
     public final void rule__Version__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7921:1: ( rule__Version__Group__1__Impl )
-            // InternalFILTERS.g:7922:2: rule__Version__Group__1__Impl
+            // InternalFILTERS.g:7948:1: ( rule__Version__Group__1__Impl )
+            // InternalFILTERS.g:7949:2: rule__Version__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group__1__Impl();
@@ -24973,22 +25052,22 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__1__Impl"
-    // InternalFILTERS.g:7928:1: rule__Version__Group__1__Impl : ( ( rule__Version__Group_1__0 )* ) ;
+    // InternalFILTERS.g:7955:1: rule__Version__Group__1__Impl : ( ( rule__Version__Group_1__0 )* ) ;
     public final void rule__Version__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7932:1: ( ( ( rule__Version__Group_1__0 )* ) )
-            // InternalFILTERS.g:7933:1: ( ( rule__Version__Group_1__0 )* )
+            // InternalFILTERS.g:7959:1: ( ( ( rule__Version__Group_1__0 )* ) )
+            // InternalFILTERS.g:7960:1: ( ( rule__Version__Group_1__0 )* )
             {
-            // InternalFILTERS.g:7933:1: ( ( rule__Version__Group_1__0 )* )
-            // InternalFILTERS.g:7934:2: ( rule__Version__Group_1__0 )*
+            // InternalFILTERS.g:7960:1: ( ( rule__Version__Group_1__0 )* )
+            // InternalFILTERS.g:7961:2: ( rule__Version__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getGroup_1()); 
             }
-            // InternalFILTERS.g:7935:2: ( rule__Version__Group_1__0 )*
+            // InternalFILTERS.g:7962:2: ( rule__Version__Group_1__0 )*
             loop29:
             do {
                 int alt29=2;
@@ -25001,7 +25080,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
                 switch (alt29) {
             	case 1 :
-            	    // InternalFILTERS.g:7935:3: rule__Version__Group_1__0
+            	    // InternalFILTERS.g:7962:3: rule__Version__Group_1__0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_47);
             	    rule__Version__Group_1__0();
@@ -25042,14 +25121,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_0_1__0"
-    // InternalFILTERS.g:7944:1: rule__Version__Group_0_1__0 : rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 ;
+    // InternalFILTERS.g:7971:1: rule__Version__Group_0_1__0 : rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 ;
     public final void rule__Version__Group_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7948:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
-            // InternalFILTERS.g:7949:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
+            // InternalFILTERS.g:7975:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
+            // InternalFILTERS.g:7976:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__Version__Group_0_1__0__Impl();
@@ -25080,22 +25159,22 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_0_1__0__Impl"
-    // InternalFILTERS.g:7956:1: rule__Version__Group_0_1__0__Impl : ( ( RULE_INT )? ) ;
+    // InternalFILTERS.g:7983:1: rule__Version__Group_0_1__0__Impl : ( ( RULE_INT )? ) ;
     public final void rule__Version__Group_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7960:1: ( ( ( RULE_INT )? ) )
-            // InternalFILTERS.g:7961:1: ( ( RULE_INT )? )
+            // InternalFILTERS.g:7987:1: ( ( ( RULE_INT )? ) )
+            // InternalFILTERS.g:7988:1: ( ( RULE_INT )? )
             {
-            // InternalFILTERS.g:7961:1: ( ( RULE_INT )? )
-            // InternalFILTERS.g:7962:2: ( RULE_INT )?
+            // InternalFILTERS.g:7988:1: ( ( RULE_INT )? )
+            // InternalFILTERS.g:7989:2: ( RULE_INT )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_0_1_0()); 
             }
-            // InternalFILTERS.g:7963:2: ( RULE_INT )?
+            // InternalFILTERS.g:7990:2: ( RULE_INT )?
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -25104,7 +25183,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             }
             switch (alt30) {
                 case 1 :
-                    // InternalFILTERS.g:7963:3: RULE_INT
+                    // InternalFILTERS.g:7990:3: RULE_INT
                     {
                     match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -25138,14 +25217,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_0_1__1"
-    // InternalFILTERS.g:7971:1: rule__Version__Group_0_1__1 : rule__Version__Group_0_1__1__Impl ;
+    // InternalFILTERS.g:7998:1: rule__Version__Group_0_1__1 : rule__Version__Group_0_1__1__Impl ;
     public final void rule__Version__Group_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7975:1: ( rule__Version__Group_0_1__1__Impl )
-            // InternalFILTERS.g:7976:2: rule__Version__Group_0_1__1__Impl
+            // InternalFILTERS.g:8002:1: ( rule__Version__Group_0_1__1__Impl )
+            // InternalFILTERS.g:8003:2: rule__Version__Group_0_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_0_1__1__Impl();
@@ -25171,17 +25250,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_0_1__1__Impl"
-    // InternalFILTERS.g:7982:1: rule__Version__Group_0_1__1__Impl : ( RULE_ID ) ;
+    // InternalFILTERS.g:8009:1: rule__Version__Group_0_1__1__Impl : ( RULE_ID ) ;
     public final void rule__Version__Group_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:7986:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:7987:1: ( RULE_ID )
+            // InternalFILTERS.g:8013:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:8014:1: ( RULE_ID )
             {
-            // InternalFILTERS.g:7987:1: ( RULE_ID )
-            // InternalFILTERS.g:7988:2: RULE_ID
+            // InternalFILTERS.g:8014:1: ( RULE_ID )
+            // InternalFILTERS.g:8015:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getIDTerminalRuleCall_0_1_1()); 
@@ -25212,14 +25291,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1__0"
-    // InternalFILTERS.g:7998:1: rule__Version__Group_1__0 : rule__Version__Group_1__0__Impl rule__Version__Group_1__1 ;
+    // InternalFILTERS.g:8025:1: rule__Version__Group_1__0 : rule__Version__Group_1__0__Impl rule__Version__Group_1__1 ;
     public final void rule__Version__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8002:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
-            // InternalFILTERS.g:8003:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
+            // InternalFILTERS.g:8029:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
+            // InternalFILTERS.g:8030:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__Version__Group_1__0__Impl();
@@ -25250,17 +25329,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1__0__Impl"
-    // InternalFILTERS.g:8010:1: rule__Version__Group_1__0__Impl : ( '.' ) ;
+    // InternalFILTERS.g:8037:1: rule__Version__Group_1__0__Impl : ( '.' ) ;
     public final void rule__Version__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8014:1: ( ( '.' ) )
-            // InternalFILTERS.g:8015:1: ( '.' )
+            // InternalFILTERS.g:8041:1: ( ( '.' ) )
+            // InternalFILTERS.g:8042:1: ( '.' )
             {
-            // InternalFILTERS.g:8015:1: ( '.' )
-            // InternalFILTERS.g:8016:2: '.'
+            // InternalFILTERS.g:8042:1: ( '.' )
+            // InternalFILTERS.g:8043:2: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getFullStopKeyword_1_0()); 
@@ -25291,14 +25370,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1__1"
-    // InternalFILTERS.g:8025:1: rule__Version__Group_1__1 : rule__Version__Group_1__1__Impl ;
+    // InternalFILTERS.g:8052:1: rule__Version__Group_1__1 : rule__Version__Group_1__1__Impl ;
     public final void rule__Version__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8029:1: ( rule__Version__Group_1__1__Impl )
-            // InternalFILTERS.g:8030:2: rule__Version__Group_1__1__Impl
+            // InternalFILTERS.g:8056:1: ( rule__Version__Group_1__1__Impl )
+            // InternalFILTERS.g:8057:2: rule__Version__Group_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_1__1__Impl();
@@ -25324,23 +25403,23 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1__1__Impl"
-    // InternalFILTERS.g:8036:1: rule__Version__Group_1__1__Impl : ( ( rule__Version__Alternatives_1_1 ) ) ;
+    // InternalFILTERS.g:8063:1: rule__Version__Group_1__1__Impl : ( ( rule__Version__Alternatives_1_1 ) ) ;
     public final void rule__Version__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8040:1: ( ( ( rule__Version__Alternatives_1_1 ) ) )
-            // InternalFILTERS.g:8041:1: ( ( rule__Version__Alternatives_1_1 ) )
+            // InternalFILTERS.g:8067:1: ( ( ( rule__Version__Alternatives_1_1 ) ) )
+            // InternalFILTERS.g:8068:1: ( ( rule__Version__Alternatives_1_1 ) )
             {
-            // InternalFILTERS.g:8041:1: ( ( rule__Version__Alternatives_1_1 ) )
-            // InternalFILTERS.g:8042:2: ( rule__Version__Alternatives_1_1 )
+            // InternalFILTERS.g:8068:1: ( ( rule__Version__Alternatives_1_1 ) )
+            // InternalFILTERS.g:8069:2: ( rule__Version__Alternatives_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getAlternatives_1_1()); 
             }
-            // InternalFILTERS.g:8043:2: ( rule__Version__Alternatives_1_1 )
-            // InternalFILTERS.g:8043:3: rule__Version__Alternatives_1_1
+            // InternalFILTERS.g:8070:2: ( rule__Version__Alternatives_1_1 )
+            // InternalFILTERS.g:8070:3: rule__Version__Alternatives_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Alternatives_1_1();
@@ -25375,14 +25454,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__0"
-    // InternalFILTERS.g:8052:1: rule__Version__Group_1_1_1__0 : rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 ;
+    // InternalFILTERS.g:8079:1: rule__Version__Group_1_1_1__0 : rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 ;
     public final void rule__Version__Group_1_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8056:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
-            // InternalFILTERS.g:8057:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
+            // InternalFILTERS.g:8083:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
+            // InternalFILTERS.g:8084:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__Version__Group_1_1_1__0__Impl();
@@ -25413,22 +25492,22 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__0__Impl"
-    // InternalFILTERS.g:8064:1: rule__Version__Group_1_1_1__0__Impl : ( ( RULE_INT )? ) ;
+    // InternalFILTERS.g:8091:1: rule__Version__Group_1_1_1__0__Impl : ( ( RULE_INT )? ) ;
     public final void rule__Version__Group_1_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8068:1: ( ( ( RULE_INT )? ) )
-            // InternalFILTERS.g:8069:1: ( ( RULE_INT )? )
+            // InternalFILTERS.g:8095:1: ( ( ( RULE_INT )? ) )
+            // InternalFILTERS.g:8096:1: ( ( RULE_INT )? )
             {
-            // InternalFILTERS.g:8069:1: ( ( RULE_INT )? )
-            // InternalFILTERS.g:8070:2: ( RULE_INT )?
+            // InternalFILTERS.g:8096:1: ( ( RULE_INT )? )
+            // InternalFILTERS.g:8097:2: ( RULE_INT )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_1_1_1_0()); 
             }
-            // InternalFILTERS.g:8071:2: ( RULE_INT )?
+            // InternalFILTERS.g:8098:2: ( RULE_INT )?
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -25437,7 +25516,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             }
             switch (alt31) {
                 case 1 :
-                    // InternalFILTERS.g:8071:3: RULE_INT
+                    // InternalFILTERS.g:8098:3: RULE_INT
                     {
                     match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -25471,14 +25550,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__1"
-    // InternalFILTERS.g:8079:1: rule__Version__Group_1_1_1__1 : rule__Version__Group_1_1_1__1__Impl ;
+    // InternalFILTERS.g:8106:1: rule__Version__Group_1_1_1__1 : rule__Version__Group_1_1_1__1__Impl ;
     public final void rule__Version__Group_1_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8083:1: ( rule__Version__Group_1_1_1__1__Impl )
-            // InternalFILTERS.g:8084:2: rule__Version__Group_1_1_1__1__Impl
+            // InternalFILTERS.g:8110:1: ( rule__Version__Group_1_1_1__1__Impl )
+            // InternalFILTERS.g:8111:2: rule__Version__Group_1_1_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_1_1_1__1__Impl();
@@ -25504,17 +25583,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__1__Impl"
-    // InternalFILTERS.g:8090:1: rule__Version__Group_1_1_1__1__Impl : ( RULE_ID ) ;
+    // InternalFILTERS.g:8117:1: rule__Version__Group_1_1_1__1__Impl : ( RULE_ID ) ;
     public final void rule__Version__Group_1_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8094:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:8095:1: ( RULE_ID )
+            // InternalFILTERS.g:8121:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:8122:1: ( RULE_ID )
             {
-            // InternalFILTERS.g:8095:1: ( RULE_ID )
-            // InternalFILTERS.g:8096:2: RULE_ID
+            // InternalFILTERS.g:8122:1: ( RULE_ID )
+            // InternalFILTERS.g:8123:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getIDTerminalRuleCall_1_1_1_1()); 
@@ -25545,14 +25624,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__0"
-    // InternalFILTERS.g:8106:1: rule__VersionedQualifiedName__Group__0 : rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 ;
+    // InternalFILTERS.g:8133:1: rule__VersionedQualifiedName__Group__0 : rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 ;
     public final void rule__VersionedQualifiedName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8110:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
-            // InternalFILTERS.g:8111:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
+            // InternalFILTERS.g:8137:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
+            // InternalFILTERS.g:8138:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_48);
             rule__VersionedQualifiedName__Group__0__Impl();
@@ -25583,17 +25662,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__0__Impl"
-    // InternalFILTERS.g:8118:1: rule__VersionedQualifiedName__Group__0__Impl : ( ruleQualifiedName ) ;
+    // InternalFILTERS.g:8145:1: rule__VersionedQualifiedName__Group__0__Impl : ( ruleQualifiedName ) ;
     public final void rule__VersionedQualifiedName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8122:1: ( ( ruleQualifiedName ) )
-            // InternalFILTERS.g:8123:1: ( ruleQualifiedName )
+            // InternalFILTERS.g:8149:1: ( ( ruleQualifiedName ) )
+            // InternalFILTERS.g:8150:1: ( ruleQualifiedName )
             {
-            // InternalFILTERS.g:8123:1: ( ruleQualifiedName )
-            // InternalFILTERS.g:8124:2: ruleQualifiedName
+            // InternalFILTERS.g:8150:1: ( ruleQualifiedName )
+            // InternalFILTERS.g:8151:2: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0()); 
@@ -25628,14 +25707,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__1"
-    // InternalFILTERS.g:8133:1: rule__VersionedQualifiedName__Group__1 : rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 ;
+    // InternalFILTERS.g:8160:1: rule__VersionedQualifiedName__Group__1 : rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 ;
     public final void rule__VersionedQualifiedName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8137:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
-            // InternalFILTERS.g:8138:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
+            // InternalFILTERS.g:8164:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
+            // InternalFILTERS.g:8165:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__VersionedQualifiedName__Group__1__Impl();
@@ -25666,17 +25745,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__1__Impl"
-    // InternalFILTERS.g:8145:1: rule__VersionedQualifiedName__Group__1__Impl : ( '(' ) ;
+    // InternalFILTERS.g:8172:1: rule__VersionedQualifiedName__Group__1__Impl : ( '(' ) ;
     public final void rule__VersionedQualifiedName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8149:1: ( ( '(' ) )
-            // InternalFILTERS.g:8150:1: ( '(' )
+            // InternalFILTERS.g:8176:1: ( ( '(' ) )
+            // InternalFILTERS.g:8177:1: ( '(' )
             {
-            // InternalFILTERS.g:8150:1: ( '(' )
-            // InternalFILTERS.g:8151:2: '('
+            // InternalFILTERS.g:8177:1: ( '(' )
+            // InternalFILTERS.g:8178:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getLeftParenthesisKeyword_1()); 
@@ -25707,14 +25786,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__2"
-    // InternalFILTERS.g:8160:1: rule__VersionedQualifiedName__Group__2 : rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 ;
+    // InternalFILTERS.g:8187:1: rule__VersionedQualifiedName__Group__2 : rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 ;
     public final void rule__VersionedQualifiedName__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8164:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
-            // InternalFILTERS.g:8165:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
+            // InternalFILTERS.g:8191:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
+            // InternalFILTERS.g:8192:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_49);
             rule__VersionedQualifiedName__Group__2__Impl();
@@ -25745,17 +25824,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__2__Impl"
-    // InternalFILTERS.g:8172:1: rule__VersionedQualifiedName__Group__2__Impl : ( ruleVersion ) ;
+    // InternalFILTERS.g:8199:1: rule__VersionedQualifiedName__Group__2__Impl : ( ruleVersion ) ;
     public final void rule__VersionedQualifiedName__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8176:1: ( ( ruleVersion ) )
-            // InternalFILTERS.g:8177:1: ( ruleVersion )
+            // InternalFILTERS.g:8203:1: ( ( ruleVersion ) )
+            // InternalFILTERS.g:8204:1: ( ruleVersion )
             {
-            // InternalFILTERS.g:8177:1: ( ruleVersion )
-            // InternalFILTERS.g:8178:2: ruleVersion
+            // InternalFILTERS.g:8204:1: ( ruleVersion )
+            // InternalFILTERS.g:8205:2: ruleVersion
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2()); 
@@ -25790,14 +25869,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__3"
-    // InternalFILTERS.g:8187:1: rule__VersionedQualifiedName__Group__3 : rule__VersionedQualifiedName__Group__3__Impl ;
+    // InternalFILTERS.g:8214:1: rule__VersionedQualifiedName__Group__3 : rule__VersionedQualifiedName__Group__3__Impl ;
     public final void rule__VersionedQualifiedName__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8191:1: ( rule__VersionedQualifiedName__Group__3__Impl )
-            // InternalFILTERS.g:8192:2: rule__VersionedQualifiedName__Group__3__Impl
+            // InternalFILTERS.g:8218:1: ( rule__VersionedQualifiedName__Group__3__Impl )
+            // InternalFILTERS.g:8219:2: rule__VersionedQualifiedName__Group__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__VersionedQualifiedName__Group__3__Impl();
@@ -25823,17 +25902,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__3__Impl"
-    // InternalFILTERS.g:8198:1: rule__VersionedQualifiedName__Group__3__Impl : ( ')' ) ;
+    // InternalFILTERS.g:8225:1: rule__VersionedQualifiedName__Group__3__Impl : ( ')' ) ;
     public final void rule__VersionedQualifiedName__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8202:1: ( ( ')' ) )
-            // InternalFILTERS.g:8203:1: ( ')' )
+            // InternalFILTERS.g:8229:1: ( ( ')' ) )
+            // InternalFILTERS.g:8230:1: ( ')' )
             {
-            // InternalFILTERS.g:8203:1: ( ')' )
-            // InternalFILTERS.g:8204:2: ')'
+            // InternalFILTERS.g:8230:1: ( ')' )
+            // InternalFILTERS.g:8231:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3()); 
@@ -25864,14 +25943,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__0"
-    // InternalFILTERS.g:8214:1: rule__INTEGER__Group_0__0 : rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 ;
+    // InternalFILTERS.g:8241:1: rule__INTEGER__Group_0__0 : rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 ;
     public final void rule__INTEGER__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8218:1: ( rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 )
-            // InternalFILTERS.g:8219:2: rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1
+            // InternalFILTERS.g:8245:1: ( rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 )
+            // InternalFILTERS.g:8246:2: rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1
             {
             pushFollow(FollowSets000.FOLLOW_50);
             rule__INTEGER__Group_0__0__Impl();
@@ -25902,22 +25981,22 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__0__Impl"
-    // InternalFILTERS.g:8226:1: rule__INTEGER__Group_0__0__Impl : ( ( '-' )? ) ;
+    // InternalFILTERS.g:8253:1: rule__INTEGER__Group_0__0__Impl : ( ( '-' )? ) ;
     public final void rule__INTEGER__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8230:1: ( ( ( '-' )? ) )
-            // InternalFILTERS.g:8231:1: ( ( '-' )? )
+            // InternalFILTERS.g:8257:1: ( ( ( '-' )? ) )
+            // InternalFILTERS.g:8258:1: ( ( '-' )? )
             {
-            // InternalFILTERS.g:8231:1: ( ( '-' )? )
-            // InternalFILTERS.g:8232:2: ( '-' )?
+            // InternalFILTERS.g:8258:1: ( ( '-' )? )
+            // InternalFILTERS.g:8259:2: ( '-' )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getINTEGERAccess().getHyphenMinusKeyword_0_0()); 
             }
-            // InternalFILTERS.g:8233:2: ( '-' )?
+            // InternalFILTERS.g:8260:2: ( '-' )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -25926,7 +26005,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             }
             switch (alt32) {
                 case 1 :
-                    // InternalFILTERS.g:8233:3: '-'
+                    // InternalFILTERS.g:8260:3: '-'
                     {
                     match(input,67,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -25960,14 +26039,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__1"
-    // InternalFILTERS.g:8241:1: rule__INTEGER__Group_0__1 : rule__INTEGER__Group_0__1__Impl ;
+    // InternalFILTERS.g:8268:1: rule__INTEGER__Group_0__1 : rule__INTEGER__Group_0__1__Impl ;
     public final void rule__INTEGER__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8245:1: ( rule__INTEGER__Group_0__1__Impl )
-            // InternalFILTERS.g:8246:2: rule__INTEGER__Group_0__1__Impl
+            // InternalFILTERS.g:8272:1: ( rule__INTEGER__Group_0__1__Impl )
+            // InternalFILTERS.g:8273:2: rule__INTEGER__Group_0__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__INTEGER__Group_0__1__Impl();
@@ -25993,17 +26072,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__1__Impl"
-    // InternalFILTERS.g:8252:1: rule__INTEGER__Group_0__1__Impl : ( RULE_INT ) ;
+    // InternalFILTERS.g:8279:1: rule__INTEGER__Group_0__1__Impl : ( RULE_INT ) ;
     public final void rule__INTEGER__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8256:1: ( ( RULE_INT ) )
-            // InternalFILTERS.g:8257:1: ( RULE_INT )
+            // InternalFILTERS.g:8283:1: ( ( RULE_INT ) )
+            // InternalFILTERS.g:8284:1: ( RULE_INT )
             {
-            // InternalFILTERS.g:8257:1: ( RULE_INT )
-            // InternalFILTERS.g:8258:2: RULE_INT
+            // InternalFILTERS.g:8284:1: ( RULE_INT )
+            // InternalFILTERS.g:8285:2: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getINTEGERAccess().getINTTerminalRuleCall_0_1()); 
@@ -26034,15 +26113,15 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxtermFilter__UnorderedGroup_3"
-    // InternalFILTERS.g:8268:1: rule__GSSFilterMaxtermFilter__UnorderedGroup_3 : rule__GSSFilterMaxtermFilter__UnorderedGroup_3__0 {...}?;
+    // InternalFILTERS.g:8295:1: rule__GSSFilterMaxtermFilter__UnorderedGroup_3 : rule__GSSFilterMaxtermFilter__UnorderedGroup_3__0 {...}?;
     public final void rule__GSSFilterMaxtermFilter__UnorderedGroup_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		getUnorderedGroupHelper().enter(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3());
         	
         try {
-            // InternalFILTERS.g:8273:1: ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__0 {...}?)
-            // InternalFILTERS.g:8274:2: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__0 {...}?
+            // InternalFILTERS.g:8300:1: ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__0 {...}?)
+            // InternalFILTERS.g:8301:2: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__0 {...}?
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSFilterMaxtermFilter__UnorderedGroup_3__0();
@@ -26073,17 +26152,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl"
-    // InternalFILTERS.g:8282:1: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl : ( ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) ) ) ) ;
+    // InternalFILTERS.g:8309:1: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl : ( ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) ) ) ) ;
     public final void rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalFILTERS.g:8287:1: ( ( ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) ) ) ) )
-            // InternalFILTERS.g:8288:3: ( ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) ) ) )
+            // InternalFILTERS.g:8314:1: ( ( ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) ) ) ) )
+            // InternalFILTERS.g:8315:3: ( ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) ) ) )
             {
-            // InternalFILTERS.g:8288:3: ( ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) ) ) )
+            // InternalFILTERS.g:8315:3: ( ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) ) ) )
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -26102,28 +26181,28 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             }
             switch (alt33) {
                 case 1 :
-                    // InternalFILTERS.g:8289:3: ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) )
+                    // InternalFILTERS.g:8316:3: ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) )
                     {
-                    // InternalFILTERS.g:8289:3: ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) )
-                    // InternalFILTERS.g:8290:4: {...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) )
+                    // InternalFILTERS.g:8316:3: ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) )
+                    // InternalFILTERS.g:8317:4: {...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         throw new FailedPredicateException(input, "rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0)");
                     }
-                    // InternalFILTERS.g:8290:118: ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) )
-                    // InternalFILTERS.g:8291:5: ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) )
+                    // InternalFILTERS.g:8317:118: ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) )
+                    // InternalFILTERS.g:8318:5: ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) )
                     {
                     getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0);
                     selected = true;
-                    // InternalFILTERS.g:8297:5: ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) )
-                    // InternalFILTERS.g:8298:6: ( rule__GSSFilterMaxtermFilter__Group_3_0__0 )
+                    // InternalFILTERS.g:8324:5: ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) )
+                    // InternalFILTERS.g:8325:6: ( rule__GSSFilterMaxtermFilter__Group_3_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSFilterMaxtermFilterAccess().getGroup_3_0()); 
                     }
-                    // InternalFILTERS.g:8299:6: ( rule__GSSFilterMaxtermFilter__Group_3_0__0 )
-                    // InternalFILTERS.g:8299:7: rule__GSSFilterMaxtermFilter__Group_3_0__0
+                    // InternalFILTERS.g:8326:6: ( rule__GSSFilterMaxtermFilter__Group_3_0__0 )
+                    // InternalFILTERS.g:8326:7: rule__GSSFilterMaxtermFilter__Group_3_0__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSFilterMaxtermFilter__Group_3_0__0();
@@ -26149,28 +26228,28 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTERS.g:8304:3: ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) ) )
+                    // InternalFILTERS.g:8331:3: ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) ) )
                     {
-                    // InternalFILTERS.g:8304:3: ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) ) )
-                    // InternalFILTERS.g:8305:4: {...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) )
+                    // InternalFILTERS.g:8331:3: ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) ) )
+                    // InternalFILTERS.g:8332:4: {...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 1) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         throw new FailedPredicateException(input, "rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 1)");
                     }
-                    // InternalFILTERS.g:8305:118: ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) )
-                    // InternalFILTERS.g:8306:5: ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) )
+                    // InternalFILTERS.g:8332:118: ( ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) ) )
+                    // InternalFILTERS.g:8333:5: ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) )
                     {
                     getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 1);
                     selected = true;
-                    // InternalFILTERS.g:8312:5: ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) )
-                    // InternalFILTERS.g:8313:6: ( rule__GSSFilterMaxtermFilter__Group_3_1__0 )
+                    // InternalFILTERS.g:8339:5: ( ( rule__GSSFilterMaxtermFilter__Group_3_1__0 ) )
+                    // InternalFILTERS.g:8340:6: ( rule__GSSFilterMaxtermFilter__Group_3_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSFilterMaxtermFilterAccess().getGroup_3_1()); 
                     }
-                    // InternalFILTERS.g:8314:6: ( rule__GSSFilterMaxtermFilter__Group_3_1__0 )
-                    // InternalFILTERS.g:8314:7: rule__GSSFilterMaxtermFilter__Group_3_1__0
+                    // InternalFILTERS.g:8341:6: ( rule__GSSFilterMaxtermFilter__Group_3_1__0 )
+                    // InternalFILTERS.g:8341:7: rule__GSSFilterMaxtermFilter__Group_3_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSFilterMaxtermFilter__Group_3_1__0();
@@ -26219,21 +26298,21 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxtermFilter__UnorderedGroup_3__0"
-    // InternalFILTERS.g:8327:1: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__0 : rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1 )? ;
+    // InternalFILTERS.g:8354:1: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__0 : rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1 )? ;
     public final void rule__GSSFilterMaxtermFilter__UnorderedGroup_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8331:1: ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1 )? )
-            // InternalFILTERS.g:8332:2: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1 )?
+            // InternalFILTERS.g:8358:1: ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1 )? )
+            // InternalFILTERS.g:8359:2: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1 )?
             {
             pushFollow(FollowSets000.FOLLOW_51);
             rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            // InternalFILTERS.g:8333:2: ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1 )?
+            // InternalFILTERS.g:8360:2: ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1 )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -26277,14 +26356,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1"
-    // InternalFILTERS.g:8339:1: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1 : rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl ;
+    // InternalFILTERS.g:8366:1: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1 : rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl ;
     public final void rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8343:1: ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl )
-            // InternalFILTERS.g:8344:2: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl
+            // InternalFILTERS.g:8370:1: ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl )
+            // InternalFILTERS.g:8371:2: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl();
@@ -26310,15 +26389,15 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMintermFilter__UnorderedGroup_3"
-    // InternalFILTERS.g:8351:1: rule__GSSFilterMintermFilter__UnorderedGroup_3 : rule__GSSFilterMintermFilter__UnorderedGroup_3__0 {...}?;
+    // InternalFILTERS.g:8378:1: rule__GSSFilterMintermFilter__UnorderedGroup_3 : rule__GSSFilterMintermFilter__UnorderedGroup_3__0 {...}?;
     public final void rule__GSSFilterMintermFilter__UnorderedGroup_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		getUnorderedGroupHelper().enter(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3());
         	
         try {
-            // InternalFILTERS.g:8356:1: ( rule__GSSFilterMintermFilter__UnorderedGroup_3__0 {...}?)
-            // InternalFILTERS.g:8357:2: rule__GSSFilterMintermFilter__UnorderedGroup_3__0 {...}?
+            // InternalFILTERS.g:8383:1: ( rule__GSSFilterMintermFilter__UnorderedGroup_3__0 {...}?)
+            // InternalFILTERS.g:8384:2: rule__GSSFilterMintermFilter__UnorderedGroup_3__0 {...}?
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSFilterMintermFilter__UnorderedGroup_3__0();
@@ -26349,17 +26428,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl"
-    // InternalFILTERS.g:8365:1: rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl : ( ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) ) ) ) ;
+    // InternalFILTERS.g:8392:1: rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl : ( ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) ) ) ) ;
     public final void rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalFILTERS.g:8370:1: ( ( ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) ) ) ) )
-            // InternalFILTERS.g:8371:3: ( ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) ) ) )
+            // InternalFILTERS.g:8397:1: ( ( ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) ) ) ) )
+            // InternalFILTERS.g:8398:3: ( ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) ) ) )
             {
-            // InternalFILTERS.g:8371:3: ( ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) ) ) )
+            // InternalFILTERS.g:8398:3: ( ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) ) ) )
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -26378,28 +26457,28 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             }
             switch (alt35) {
                 case 1 :
-                    // InternalFILTERS.g:8372:3: ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) )
+                    // InternalFILTERS.g:8399:3: ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) )
                     {
-                    // InternalFILTERS.g:8372:3: ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) )
-                    // InternalFILTERS.g:8373:4: {...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) )
+                    // InternalFILTERS.g:8399:3: ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) )
+                    // InternalFILTERS.g:8400:4: {...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         throw new FailedPredicateException(input, "rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0)");
                     }
-                    // InternalFILTERS.g:8373:118: ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) )
-                    // InternalFILTERS.g:8374:5: ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) )
+                    // InternalFILTERS.g:8400:118: ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) )
+                    // InternalFILTERS.g:8401:5: ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) )
                     {
                     getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0);
                     selected = true;
-                    // InternalFILTERS.g:8380:5: ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) )
-                    // InternalFILTERS.g:8381:6: ( rule__GSSFilterMintermFilter__Group_3_0__0 )
+                    // InternalFILTERS.g:8407:5: ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) )
+                    // InternalFILTERS.g:8408:6: ( rule__GSSFilterMintermFilter__Group_3_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSFilterMintermFilterAccess().getGroup_3_0()); 
                     }
-                    // InternalFILTERS.g:8382:6: ( rule__GSSFilterMintermFilter__Group_3_0__0 )
-                    // InternalFILTERS.g:8382:7: rule__GSSFilterMintermFilter__Group_3_0__0
+                    // InternalFILTERS.g:8409:6: ( rule__GSSFilterMintermFilter__Group_3_0__0 )
+                    // InternalFILTERS.g:8409:7: rule__GSSFilterMintermFilter__Group_3_0__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSFilterMintermFilter__Group_3_0__0();
@@ -26425,28 +26504,28 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTERS.g:8387:3: ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) ) )
+                    // InternalFILTERS.g:8414:3: ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) ) )
                     {
-                    // InternalFILTERS.g:8387:3: ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) ) )
-                    // InternalFILTERS.g:8388:4: {...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) )
+                    // InternalFILTERS.g:8414:3: ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) ) )
+                    // InternalFILTERS.g:8415:4: {...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 1) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         throw new FailedPredicateException(input, "rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 1)");
                     }
-                    // InternalFILTERS.g:8388:118: ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) )
-                    // InternalFILTERS.g:8389:5: ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) )
+                    // InternalFILTERS.g:8415:118: ( ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) ) )
+                    // InternalFILTERS.g:8416:5: ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) )
                     {
                     getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 1);
                     selected = true;
-                    // InternalFILTERS.g:8395:5: ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) )
-                    // InternalFILTERS.g:8396:6: ( rule__GSSFilterMintermFilter__Group_3_1__0 )
+                    // InternalFILTERS.g:8422:5: ( ( rule__GSSFilterMintermFilter__Group_3_1__0 ) )
+                    // InternalFILTERS.g:8423:6: ( rule__GSSFilterMintermFilter__Group_3_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSFilterMintermFilterAccess().getGroup_3_1()); 
                     }
-                    // InternalFILTERS.g:8397:6: ( rule__GSSFilterMintermFilter__Group_3_1__0 )
-                    // InternalFILTERS.g:8397:7: rule__GSSFilterMintermFilter__Group_3_1__0
+                    // InternalFILTERS.g:8424:6: ( rule__GSSFilterMintermFilter__Group_3_1__0 )
+                    // InternalFILTERS.g:8424:7: rule__GSSFilterMintermFilter__Group_3_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSFilterMintermFilter__Group_3_1__0();
@@ -26495,21 +26574,21 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMintermFilter__UnorderedGroup_3__0"
-    // InternalFILTERS.g:8410:1: rule__GSSFilterMintermFilter__UnorderedGroup_3__0 : rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMintermFilter__UnorderedGroup_3__1 )? ;
+    // InternalFILTERS.g:8437:1: rule__GSSFilterMintermFilter__UnorderedGroup_3__0 : rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMintermFilter__UnorderedGroup_3__1 )? ;
     public final void rule__GSSFilterMintermFilter__UnorderedGroup_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8414:1: ( rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMintermFilter__UnorderedGroup_3__1 )? )
-            // InternalFILTERS.g:8415:2: rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMintermFilter__UnorderedGroup_3__1 )?
+            // InternalFILTERS.g:8441:1: ( rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMintermFilter__UnorderedGroup_3__1 )? )
+            // InternalFILTERS.g:8442:2: rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl ( rule__GSSFilterMintermFilter__UnorderedGroup_3__1 )?
             {
             pushFollow(FollowSets000.FOLLOW_51);
             rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            // InternalFILTERS.g:8416:2: ( rule__GSSFilterMintermFilter__UnorderedGroup_3__1 )?
+            // InternalFILTERS.g:8443:2: ( rule__GSSFilterMintermFilter__UnorderedGroup_3__1 )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
@@ -26553,14 +26632,14 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMintermFilter__UnorderedGroup_3__1"
-    // InternalFILTERS.g:8422:1: rule__GSSFilterMintermFilter__UnorderedGroup_3__1 : rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl ;
+    // InternalFILTERS.g:8449:1: rule__GSSFilterMintermFilter__UnorderedGroup_3__1 : rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl ;
     public final void rule__GSSFilterMintermFilter__UnorderedGroup_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8426:1: ( rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl )
-            // InternalFILTERS.g:8427:2: rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl
+            // InternalFILTERS.g:8453:1: ( rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl )
+            // InternalFILTERS.g:8454:2: rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl();
@@ -26586,17 +26665,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFile__ImportsAssignment_0"
-    // InternalFILTERS.g:8434:1: rule__GSSModelFile__ImportsAssignment_0 : ( ruleGSSModelFileImport ) ;
+    // InternalFILTERS.g:8461:1: rule__GSSModelFile__ImportsAssignment_0 : ( ruleGSSModelFileImport ) ;
     public final void rule__GSSModelFile__ImportsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8438:1: ( ( ruleGSSModelFileImport ) )
-            // InternalFILTERS.g:8439:2: ( ruleGSSModelFileImport )
+            // InternalFILTERS.g:8465:1: ( ( ruleGSSModelFileImport ) )
+            // InternalFILTERS.g:8466:2: ( ruleGSSModelFileImport )
             {
-            // InternalFILTERS.g:8439:2: ( ruleGSSModelFileImport )
-            // InternalFILTERS.g:8440:3: ruleGSSModelFileImport
+            // InternalFILTERS.g:8466:2: ( ruleGSSModelFileImport )
+            // InternalFILTERS.g:8467:3: ruleGSSModelFileImport
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileAccess().getImportsGSSModelFileImportParserRuleCall_0_0()); 
@@ -26631,17 +26710,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFile__ElementAssignment_1"
-    // InternalFILTERS.g:8449:1: rule__GSSModelFile__ElementAssignment_1 : ( ruleGSSFilterFilter ) ;
+    // InternalFILTERS.g:8476:1: rule__GSSModelFile__ElementAssignment_1 : ( ruleGSSFilterFilter ) ;
     public final void rule__GSSModelFile__ElementAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8453:1: ( ( ruleGSSFilterFilter ) )
-            // InternalFILTERS.g:8454:2: ( ruleGSSFilterFilter )
+            // InternalFILTERS.g:8480:1: ( ( ruleGSSFilterFilter ) )
+            // InternalFILTERS.g:8481:2: ( ruleGSSFilterFilter )
             {
-            // InternalFILTERS.g:8454:2: ( ruleGSSFilterFilter )
-            // InternalFILTERS.g:8455:3: ruleGSSFilterFilter
+            // InternalFILTERS.g:8481:2: ( ruleGSSFilterFilter )
+            // InternalFILTERS.g:8482:3: ruleGSSFilterFilter
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileAccess().getElementGSSFilterFilterParserRuleCall_1_0()); 
@@ -26676,17 +26755,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFileImport__ImportURIAssignment_2"
-    // InternalFILTERS.g:8464:1: rule__GSSModelFileImport__ImportURIAssignment_2 : ( RULE_STRING ) ;
+    // InternalFILTERS.g:8491:1: rule__GSSModelFileImport__ImportURIAssignment_2 : ( RULE_STRING ) ;
     public final void rule__GSSModelFileImport__ImportURIAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8468:1: ( ( RULE_STRING ) )
-            // InternalFILTERS.g:8469:2: ( RULE_STRING )
+            // InternalFILTERS.g:8495:1: ( ( RULE_STRING ) )
+            // InternalFILTERS.g:8496:2: ( RULE_STRING )
             {
-            // InternalFILTERS.g:8469:2: ( RULE_STRING )
-            // InternalFILTERS.g:8470:3: RULE_STRING
+            // InternalFILTERS.g:8496:2: ( RULE_STRING )
+            // InternalFILTERS.g:8497:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
@@ -26717,17 +26796,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxtermFilter__NameAssignment_1"
-    // InternalFILTERS.g:8479:1: rule__GSSFilterMaxtermFilter__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalFILTERS.g:8506:1: rule__GSSFilterMaxtermFilter__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__GSSFilterMaxtermFilter__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8483:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:8484:2: ( RULE_ID )
+            // InternalFILTERS.g:8510:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:8511:2: ( RULE_ID )
             {
-            // InternalFILTERS.g:8484:2: ( RULE_ID )
-            // InternalFILTERS.g:8485:3: RULE_ID
+            // InternalFILTERS.g:8511:2: ( RULE_ID )
+            // InternalFILTERS.g:8512:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMaxtermFilterAccess().getNameIDTerminalRuleCall_1_0()); 
@@ -26758,17 +26837,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxtermFilter__UriAssignment_3_0_2"
-    // InternalFILTERS.g:8494:1: rule__GSSFilterMaxtermFilter__UriAssignment_3_0_2 : ( ruleQualifiedName ) ;
+    // InternalFILTERS.g:8521:1: rule__GSSFilterMaxtermFilter__UriAssignment_3_0_2 : ( ruleQualifiedName ) ;
     public final void rule__GSSFilterMaxtermFilter__UriAssignment_3_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8498:1: ( ( ruleQualifiedName ) )
-            // InternalFILTERS.g:8499:2: ( ruleQualifiedName )
+            // InternalFILTERS.g:8525:1: ( ( ruleQualifiedName ) )
+            // InternalFILTERS.g:8526:2: ( ruleQualifiedName )
             {
-            // InternalFILTERS.g:8499:2: ( ruleQualifiedName )
-            // InternalFILTERS.g:8500:3: ruleQualifiedName
+            // InternalFILTERS.g:8526:2: ( ruleQualifiedName )
+            // InternalFILTERS.g:8527:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriQualifiedNameParserRuleCall_3_0_2_0()); 
@@ -26803,17 +26882,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxtermFilter__VersionAssignment_3_1_0_2"
-    // InternalFILTERS.g:8509:1: rule__GSSFilterMaxtermFilter__VersionAssignment_3_1_0_2 : ( ruleVersion ) ;
+    // InternalFILTERS.g:8536:1: rule__GSSFilterMaxtermFilter__VersionAssignment_3_1_0_2 : ( ruleVersion ) ;
     public final void rule__GSSFilterMaxtermFilter__VersionAssignment_3_1_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8513:1: ( ( ruleVersion ) )
-            // InternalFILTERS.g:8514:2: ( ruleVersion )
+            // InternalFILTERS.g:8540:1: ( ( ruleVersion ) )
+            // InternalFILTERS.g:8541:2: ( ruleVersion )
             {
-            // InternalFILTERS.g:8514:2: ( ruleVersion )
-            // InternalFILTERS.g:8515:3: ruleVersion
+            // InternalFILTERS.g:8541:2: ( ruleVersion )
+            // InternalFILTERS.g:8542:3: ruleVersion
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionVersionParserRuleCall_3_1_0_2_0()); 
@@ -26848,17 +26927,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxtermFilter__FormatFileAssignment_3_1_3"
-    // InternalFILTERS.g:8524:1: rule__GSSFilterMaxtermFilter__FormatFileAssignment_3_1_3 : ( RULE_ID ) ;
+    // InternalFILTERS.g:8551:1: rule__GSSFilterMaxtermFilter__FormatFileAssignment_3_1_3 : ( RULE_ID ) ;
     public final void rule__GSSFilterMaxtermFilter__FormatFileAssignment_3_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8528:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:8529:2: ( RULE_ID )
+            // InternalFILTERS.g:8555:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:8556:2: ( RULE_ID )
             {
-            // InternalFILTERS.g:8529:2: ( RULE_ID )
-            // InternalFILTERS.g:8530:3: RULE_ID
+            // InternalFILTERS.g:8556:2: ( RULE_ID )
+            // InternalFILTERS.g:8557:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileIDTerminalRuleCall_3_1_3_0()); 
@@ -26889,17 +26968,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxtermFilter__BoolVarAssignment_3_1_5_0"
-    // InternalFILTERS.g:8539:1: rule__GSSFilterMaxtermFilter__BoolVarAssignment_3_1_5_0 : ( ruleGSSFilterBoolVar ) ;
+    // InternalFILTERS.g:8566:1: rule__GSSFilterMaxtermFilter__BoolVarAssignment_3_1_5_0 : ( ruleGSSFilterBoolVar ) ;
     public final void rule__GSSFilterMaxtermFilter__BoolVarAssignment_3_1_5_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8543:1: ( ( ruleGSSFilterBoolVar ) )
-            // InternalFILTERS.g:8544:2: ( ruleGSSFilterBoolVar )
+            // InternalFILTERS.g:8570:1: ( ( ruleGSSFilterBoolVar ) )
+            // InternalFILTERS.g:8571:2: ( ruleGSSFilterBoolVar )
             {
-            // InternalFILTERS.g:8544:2: ( ruleGSSFilterBoolVar )
-            // InternalFILTERS.g:8545:3: ruleGSSFilterBoolVar
+            // InternalFILTERS.g:8571:2: ( ruleGSSFilterBoolVar )
+            // InternalFILTERS.g:8572:3: ruleGSSFilterBoolVar
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0()); 
@@ -26934,17 +27013,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxtermFilter__BoolVarFromArrayItemAssignment_3_1_5_1"
-    // InternalFILTERS.g:8554:1: rule__GSSFilterMaxtermFilter__BoolVarFromArrayItemAssignment_3_1_5_1 : ( ruleGSSFilterBoolVarFromArrayItem ) ;
+    // InternalFILTERS.g:8581:1: rule__GSSFilterMaxtermFilter__BoolVarFromArrayItemAssignment_3_1_5_1 : ( ruleGSSFilterBoolVarFromArrayItem ) ;
     public final void rule__GSSFilterMaxtermFilter__BoolVarFromArrayItemAssignment_3_1_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8558:1: ( ( ruleGSSFilterBoolVarFromArrayItem ) )
-            // InternalFILTERS.g:8559:2: ( ruleGSSFilterBoolVarFromArrayItem )
+            // InternalFILTERS.g:8585:1: ( ( ruleGSSFilterBoolVarFromArrayItem ) )
+            // InternalFILTERS.g:8586:2: ( ruleGSSFilterBoolVarFromArrayItem )
             {
-            // InternalFILTERS.g:8559:2: ( ruleGSSFilterBoolVarFromArrayItem )
-            // InternalFILTERS.g:8560:3: ruleGSSFilterBoolVarFromArrayItem
+            // InternalFILTERS.g:8586:2: ( ruleGSSFilterBoolVarFromArrayItem )
+            // InternalFILTERS.g:8587:3: ruleGSSFilterBoolVarFromArrayItem
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0()); 
@@ -26979,17 +27058,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxtermFilter__BoolVarFromGroupedArrayItemAssignment_3_1_5_2"
-    // InternalFILTERS.g:8569:1: rule__GSSFilterMaxtermFilter__BoolVarFromGroupedArrayItemAssignment_3_1_5_2 : ( ruleGSSFilterBoolVarFromGroupedArrayItem ) ;
+    // InternalFILTERS.g:8596:1: rule__GSSFilterMaxtermFilter__BoolVarFromGroupedArrayItemAssignment_3_1_5_2 : ( ruleGSSFilterBoolVarFromGroupedArrayItem ) ;
     public final void rule__GSSFilterMaxtermFilter__BoolVarFromGroupedArrayItemAssignment_3_1_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8573:1: ( ( ruleGSSFilterBoolVarFromGroupedArrayItem ) )
-            // InternalFILTERS.g:8574:2: ( ruleGSSFilterBoolVarFromGroupedArrayItem )
+            // InternalFILTERS.g:8600:1: ( ( ruleGSSFilterBoolVarFromGroupedArrayItem ) )
+            // InternalFILTERS.g:8601:2: ( ruleGSSFilterBoolVarFromGroupedArrayItem )
             {
-            // InternalFILTERS.g:8574:2: ( ruleGSSFilterBoolVarFromGroupedArrayItem )
-            // InternalFILTERS.g:8575:3: ruleGSSFilterBoolVarFromGroupedArrayItem
+            // InternalFILTERS.g:8601:2: ( ruleGSSFilterBoolVarFromGroupedArrayItem )
+            // InternalFILTERS.g:8602:3: ruleGSSFilterBoolVarFromGroupedArrayItem
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0()); 
@@ -27024,17 +27103,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxtermFilter__BoolVarFDICAssignment_3_1_5_3"
-    // InternalFILTERS.g:8584:1: rule__GSSFilterMaxtermFilter__BoolVarFDICAssignment_3_1_5_3 : ( ruleGSSFilterBoolVarFDIC ) ;
+    // InternalFILTERS.g:8611:1: rule__GSSFilterMaxtermFilter__BoolVarFDICAssignment_3_1_5_3 : ( ruleGSSFilterBoolVarFDIC ) ;
     public final void rule__GSSFilterMaxtermFilter__BoolVarFDICAssignment_3_1_5_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8588:1: ( ( ruleGSSFilterBoolVarFDIC ) )
-            // InternalFILTERS.g:8589:2: ( ruleGSSFilterBoolVarFDIC )
+            // InternalFILTERS.g:8615:1: ( ( ruleGSSFilterBoolVarFDIC ) )
+            // InternalFILTERS.g:8616:2: ( ruleGSSFilterBoolVarFDIC )
             {
-            // InternalFILTERS.g:8589:2: ( ruleGSSFilterBoolVarFDIC )
-            // InternalFILTERS.g:8590:3: ruleGSSFilterBoolVarFDIC
+            // InternalFILTERS.g:8616:2: ( ruleGSSFilterBoolVarFDIC )
+            // InternalFILTERS.g:8617:3: ruleGSSFilterBoolVarFDIC
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0()); 
@@ -27069,17 +27148,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxtermFilter__MaxtermAssignment_4"
-    // InternalFILTERS.g:8599:1: rule__GSSFilterMaxtermFilter__MaxtermAssignment_4 : ( ruleGSSFilterMaxterm ) ;
+    // InternalFILTERS.g:8626:1: rule__GSSFilterMaxtermFilter__MaxtermAssignment_4 : ( ruleGSSFilterMaxterm ) ;
     public final void rule__GSSFilterMaxtermFilter__MaxtermAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8603:1: ( ( ruleGSSFilterMaxterm ) )
-            // InternalFILTERS.g:8604:2: ( ruleGSSFilterMaxterm )
+            // InternalFILTERS.g:8630:1: ( ( ruleGSSFilterMaxterm ) )
+            // InternalFILTERS.g:8631:2: ( ruleGSSFilterMaxterm )
             {
-            // InternalFILTERS.g:8604:2: ( ruleGSSFilterMaxterm )
-            // InternalFILTERS.g:8605:3: ruleGSSFilterMaxterm
+            // InternalFILTERS.g:8631:2: ( ruleGSSFilterMaxterm )
+            // InternalFILTERS.g:8632:3: ruleGSSFilterMaxterm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermGSSFilterMaxtermParserRuleCall_4_0()); 
@@ -27114,17 +27193,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMintermFilter__NameAssignment_1"
-    // InternalFILTERS.g:8614:1: rule__GSSFilterMintermFilter__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalFILTERS.g:8641:1: rule__GSSFilterMintermFilter__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__GSSFilterMintermFilter__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8618:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:8619:2: ( RULE_ID )
+            // InternalFILTERS.g:8645:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:8646:2: ( RULE_ID )
             {
-            // InternalFILTERS.g:8619:2: ( RULE_ID )
-            // InternalFILTERS.g:8620:3: RULE_ID
+            // InternalFILTERS.g:8646:2: ( RULE_ID )
+            // InternalFILTERS.g:8647:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMintermFilterAccess().getNameIDTerminalRuleCall_1_0()); 
@@ -27155,17 +27234,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMintermFilter__UriAssignment_3_0_2"
-    // InternalFILTERS.g:8629:1: rule__GSSFilterMintermFilter__UriAssignment_3_0_2 : ( ruleQualifiedName ) ;
+    // InternalFILTERS.g:8656:1: rule__GSSFilterMintermFilter__UriAssignment_3_0_2 : ( ruleQualifiedName ) ;
     public final void rule__GSSFilterMintermFilter__UriAssignment_3_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8633:1: ( ( ruleQualifiedName ) )
-            // InternalFILTERS.g:8634:2: ( ruleQualifiedName )
+            // InternalFILTERS.g:8660:1: ( ( ruleQualifiedName ) )
+            // InternalFILTERS.g:8661:2: ( ruleQualifiedName )
             {
-            // InternalFILTERS.g:8634:2: ( ruleQualifiedName )
-            // InternalFILTERS.g:8635:3: ruleQualifiedName
+            // InternalFILTERS.g:8661:2: ( ruleQualifiedName )
+            // InternalFILTERS.g:8662:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMintermFilterAccess().getUriQualifiedNameParserRuleCall_3_0_2_0()); 
@@ -27200,17 +27279,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMintermFilter__VersionAssignment_3_1_0_2"
-    // InternalFILTERS.g:8644:1: rule__GSSFilterMintermFilter__VersionAssignment_3_1_0_2 : ( ruleVersion ) ;
+    // InternalFILTERS.g:8671:1: rule__GSSFilterMintermFilter__VersionAssignment_3_1_0_2 : ( ruleVersion ) ;
     public final void rule__GSSFilterMintermFilter__VersionAssignment_3_1_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8648:1: ( ( ruleVersion ) )
-            // InternalFILTERS.g:8649:2: ( ruleVersion )
+            // InternalFILTERS.g:8675:1: ( ( ruleVersion ) )
+            // InternalFILTERS.g:8676:2: ( ruleVersion )
             {
-            // InternalFILTERS.g:8649:2: ( ruleVersion )
-            // InternalFILTERS.g:8650:3: ruleVersion
+            // InternalFILTERS.g:8676:2: ( ruleVersion )
+            // InternalFILTERS.g:8677:3: ruleVersion
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMintermFilterAccess().getVersionVersionParserRuleCall_3_1_0_2_0()); 
@@ -27245,17 +27324,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMintermFilter__FormatFileAssignment_3_1_3"
-    // InternalFILTERS.g:8659:1: rule__GSSFilterMintermFilter__FormatFileAssignment_3_1_3 : ( RULE_ID ) ;
+    // InternalFILTERS.g:8686:1: rule__GSSFilterMintermFilter__FormatFileAssignment_3_1_3 : ( RULE_ID ) ;
     public final void rule__GSSFilterMintermFilter__FormatFileAssignment_3_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8663:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:8664:2: ( RULE_ID )
+            // InternalFILTERS.g:8690:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:8691:2: ( RULE_ID )
             {
-            // InternalFILTERS.g:8664:2: ( RULE_ID )
-            // InternalFILTERS.g:8665:3: RULE_ID
+            // InternalFILTERS.g:8691:2: ( RULE_ID )
+            // InternalFILTERS.g:8692:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileIDTerminalRuleCall_3_1_3_0()); 
@@ -27286,17 +27365,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMintermFilter__BoolVarAssignment_3_1_5_0"
-    // InternalFILTERS.g:8674:1: rule__GSSFilterMintermFilter__BoolVarAssignment_3_1_5_0 : ( ruleGSSFilterBoolVar ) ;
+    // InternalFILTERS.g:8701:1: rule__GSSFilterMintermFilter__BoolVarAssignment_3_1_5_0 : ( ruleGSSFilterBoolVar ) ;
     public final void rule__GSSFilterMintermFilter__BoolVarAssignment_3_1_5_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8678:1: ( ( ruleGSSFilterBoolVar ) )
-            // InternalFILTERS.g:8679:2: ( ruleGSSFilterBoolVar )
+            // InternalFILTERS.g:8705:1: ( ( ruleGSSFilterBoolVar ) )
+            // InternalFILTERS.g:8706:2: ( ruleGSSFilterBoolVar )
             {
-            // InternalFILTERS.g:8679:2: ( ruleGSSFilterBoolVar )
-            // InternalFILTERS.g:8680:3: ruleGSSFilterBoolVar
+            // InternalFILTERS.g:8706:2: ( ruleGSSFilterBoolVar )
+            // InternalFILTERS.g:8707:3: ruleGSSFilterBoolVar
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0()); 
@@ -27331,17 +27410,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMintermFilter__BoolVarFromArrayItemAssignment_3_1_5_1"
-    // InternalFILTERS.g:8689:1: rule__GSSFilterMintermFilter__BoolVarFromArrayItemAssignment_3_1_5_1 : ( ruleGSSFilterBoolVarFromArrayItem ) ;
+    // InternalFILTERS.g:8716:1: rule__GSSFilterMintermFilter__BoolVarFromArrayItemAssignment_3_1_5_1 : ( ruleGSSFilterBoolVarFromArrayItem ) ;
     public final void rule__GSSFilterMintermFilter__BoolVarFromArrayItemAssignment_3_1_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8693:1: ( ( ruleGSSFilterBoolVarFromArrayItem ) )
-            // InternalFILTERS.g:8694:2: ( ruleGSSFilterBoolVarFromArrayItem )
+            // InternalFILTERS.g:8720:1: ( ( ruleGSSFilterBoolVarFromArrayItem ) )
+            // InternalFILTERS.g:8721:2: ( ruleGSSFilterBoolVarFromArrayItem )
             {
-            // InternalFILTERS.g:8694:2: ( ruleGSSFilterBoolVarFromArrayItem )
-            // InternalFILTERS.g:8695:3: ruleGSSFilterBoolVarFromArrayItem
+            // InternalFILTERS.g:8721:2: ( ruleGSSFilterBoolVarFromArrayItem )
+            // InternalFILTERS.g:8722:3: ruleGSSFilterBoolVarFromArrayItem
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0()); 
@@ -27376,17 +27455,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMintermFilter__BoolVarFromGroupedArrayItemAssignment_3_1_5_2"
-    // InternalFILTERS.g:8704:1: rule__GSSFilterMintermFilter__BoolVarFromGroupedArrayItemAssignment_3_1_5_2 : ( ruleGSSFilterBoolVarFromGroupedArrayItem ) ;
+    // InternalFILTERS.g:8731:1: rule__GSSFilterMintermFilter__BoolVarFromGroupedArrayItemAssignment_3_1_5_2 : ( ruleGSSFilterBoolVarFromGroupedArrayItem ) ;
     public final void rule__GSSFilterMintermFilter__BoolVarFromGroupedArrayItemAssignment_3_1_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8708:1: ( ( ruleGSSFilterBoolVarFromGroupedArrayItem ) )
-            // InternalFILTERS.g:8709:2: ( ruleGSSFilterBoolVarFromGroupedArrayItem )
+            // InternalFILTERS.g:8735:1: ( ( ruleGSSFilterBoolVarFromGroupedArrayItem ) )
+            // InternalFILTERS.g:8736:2: ( ruleGSSFilterBoolVarFromGroupedArrayItem )
             {
-            // InternalFILTERS.g:8709:2: ( ruleGSSFilterBoolVarFromGroupedArrayItem )
-            // InternalFILTERS.g:8710:3: ruleGSSFilterBoolVarFromGroupedArrayItem
+            // InternalFILTERS.g:8736:2: ( ruleGSSFilterBoolVarFromGroupedArrayItem )
+            // InternalFILTERS.g:8737:3: ruleGSSFilterBoolVarFromGroupedArrayItem
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0()); 
@@ -27421,17 +27500,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMintermFilter__BoolVarFDICAssignment_3_1_5_3"
-    // InternalFILTERS.g:8719:1: rule__GSSFilterMintermFilter__BoolVarFDICAssignment_3_1_5_3 : ( ruleGSSFilterBoolVarFDIC ) ;
+    // InternalFILTERS.g:8746:1: rule__GSSFilterMintermFilter__BoolVarFDICAssignment_3_1_5_3 : ( ruleGSSFilterBoolVarFDIC ) ;
     public final void rule__GSSFilterMintermFilter__BoolVarFDICAssignment_3_1_5_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8723:1: ( ( ruleGSSFilterBoolVarFDIC ) )
-            // InternalFILTERS.g:8724:2: ( ruleGSSFilterBoolVarFDIC )
+            // InternalFILTERS.g:8750:1: ( ( ruleGSSFilterBoolVarFDIC ) )
+            // InternalFILTERS.g:8751:2: ( ruleGSSFilterBoolVarFDIC )
             {
-            // InternalFILTERS.g:8724:2: ( ruleGSSFilterBoolVarFDIC )
-            // InternalFILTERS.g:8725:3: ruleGSSFilterBoolVarFDIC
+            // InternalFILTERS.g:8751:2: ( ruleGSSFilterBoolVarFDIC )
+            // InternalFILTERS.g:8752:3: ruleGSSFilterBoolVarFDIC
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0()); 
@@ -27466,17 +27545,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMintermFilter__MintermAssignment_4"
-    // InternalFILTERS.g:8734:1: rule__GSSFilterMintermFilter__MintermAssignment_4 : ( ruleGSSFilterMinterm ) ;
+    // InternalFILTERS.g:8761:1: rule__GSSFilterMintermFilter__MintermAssignment_4 : ( ruleGSSFilterMinterm ) ;
     public final void rule__GSSFilterMintermFilter__MintermAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8738:1: ( ( ruleGSSFilterMinterm ) )
-            // InternalFILTERS.g:8739:2: ( ruleGSSFilterMinterm )
+            // InternalFILTERS.g:8765:1: ( ( ruleGSSFilterMinterm ) )
+            // InternalFILTERS.g:8766:2: ( ruleGSSFilterMinterm )
             {
-            // InternalFILTERS.g:8739:2: ( ruleGSSFilterMinterm )
-            // InternalFILTERS.g:8740:3: ruleGSSFilterMinterm
+            // InternalFILTERS.g:8766:2: ( ruleGSSFilterMinterm )
+            // InternalFILTERS.g:8767:3: ruleGSSFilterMinterm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMintermFilterAccess().getMintermGSSFilterMintermParserRuleCall_4_0()); 
@@ -27511,17 +27590,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVar__IdAssignment_4"
-    // InternalFILTERS.g:8749:1: rule__GSSFilterBoolVar__IdAssignment_4 : ( ruleINTEGER ) ;
+    // InternalFILTERS.g:8776:1: rule__GSSFilterBoolVar__IdAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSFilterBoolVar__IdAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8753:1: ( ( ruleINTEGER ) )
-            // InternalFILTERS.g:8754:2: ( ruleINTEGER )
+            // InternalFILTERS.g:8780:1: ( ( ruleINTEGER ) )
+            // InternalFILTERS.g:8781:2: ( ruleINTEGER )
             {
-            // InternalFILTERS.g:8754:2: ( ruleINTEGER )
-            // InternalFILTERS.g:8755:3: ruleINTEGER
+            // InternalFILTERS.g:8781:2: ( ruleINTEGER )
+            // InternalFILTERS.g:8782:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarAccess().getIdINTEGERParserRuleCall_4_0()); 
@@ -27556,17 +27635,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVar__NameAssignment_8"
-    // InternalFILTERS.g:8764:1: rule__GSSFilterBoolVar__NameAssignment_8 : ( RULE_ID ) ;
+    // InternalFILTERS.g:8791:1: rule__GSSFilterBoolVar__NameAssignment_8 : ( RULE_ID ) ;
     public final void rule__GSSFilterBoolVar__NameAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8768:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:8769:2: ( RULE_ID )
+            // InternalFILTERS.g:8795:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:8796:2: ( RULE_ID )
             {
-            // InternalFILTERS.g:8769:2: ( RULE_ID )
-            // InternalFILTERS.g:8770:3: RULE_ID
+            // InternalFILTERS.g:8796:2: ( RULE_ID )
+            // InternalFILTERS.g:8797:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarAccess().getNameIDTerminalRuleCall_8_0()); 
@@ -27597,17 +27676,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVar__ConstantTypeAssignment_12"
-    // InternalFILTERS.g:8779:1: rule__GSSFilterBoolVar__ConstantTypeAssignment_12 : ( ruleGSSFilterConstantType ) ;
+    // InternalFILTERS.g:8806:1: rule__GSSFilterBoolVar__ConstantTypeAssignment_12 : ( ruleGSSFilterConstantType ) ;
     public final void rule__GSSFilterBoolVar__ConstantTypeAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8783:1: ( ( ruleGSSFilterConstantType ) )
-            // InternalFILTERS.g:8784:2: ( ruleGSSFilterConstantType )
+            // InternalFILTERS.g:8810:1: ( ( ruleGSSFilterConstantType ) )
+            // InternalFILTERS.g:8811:2: ( ruleGSSFilterConstantType )
             {
-            // InternalFILTERS.g:8784:2: ( ruleGSSFilterConstantType )
-            // InternalFILTERS.g:8785:3: ruleGSSFilterConstantType
+            // InternalFILTERS.g:8811:2: ( ruleGSSFilterConstantType )
+            // InternalFILTERS.g:8812:3: ruleGSSFilterConstantType
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarAccess().getConstantTypeGSSFilterConstantTypeEnumRuleCall_12_0()); 
@@ -27642,17 +27721,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVar__FieldRefAssignment_14"
-    // InternalFILTERS.g:8794:1: rule__GSSFilterBoolVar__FieldRefAssignment_14 : ( ruleGSSFilterFieldRef ) ;
+    // InternalFILTERS.g:8821:1: rule__GSSFilterBoolVar__FieldRefAssignment_14 : ( ruleGSSFilterFieldRef ) ;
     public final void rule__GSSFilterBoolVar__FieldRefAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8798:1: ( ( ruleGSSFilterFieldRef ) )
-            // InternalFILTERS.g:8799:2: ( ruleGSSFilterFieldRef )
+            // InternalFILTERS.g:8825:1: ( ( ruleGSSFilterFieldRef ) )
+            // InternalFILTERS.g:8826:2: ( ruleGSSFilterFieldRef )
             {
-            // InternalFILTERS.g:8799:2: ( ruleGSSFilterFieldRef )
-            // InternalFILTERS.g:8800:3: ruleGSSFilterFieldRef
+            // InternalFILTERS.g:8826:2: ( ruleGSSFilterFieldRef )
+            // InternalFILTERS.g:8827:3: ruleGSSFilterFieldRef
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefGSSFilterFieldRefParserRuleCall_14_0()); 
@@ -27687,17 +27766,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVar__OpAssignment_15"
-    // InternalFILTERS.g:8809:1: rule__GSSFilterBoolVar__OpAssignment_15 : ( ruleGSSFilterFieldOp ) ;
+    // InternalFILTERS.g:8836:1: rule__GSSFilterBoolVar__OpAssignment_15 : ( ruleGSSFilterFieldOp ) ;
     public final void rule__GSSFilterBoolVar__OpAssignment_15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8813:1: ( ( ruleGSSFilterFieldOp ) )
-            // InternalFILTERS.g:8814:2: ( ruleGSSFilterFieldOp )
+            // InternalFILTERS.g:8840:1: ( ( ruleGSSFilterFieldOp ) )
+            // InternalFILTERS.g:8841:2: ( ruleGSSFilterFieldOp )
             {
-            // InternalFILTERS.g:8814:2: ( ruleGSSFilterFieldOp )
-            // InternalFILTERS.g:8815:3: ruleGSSFilterFieldOp
+            // InternalFILTERS.g:8841:2: ( ruleGSSFilterFieldOp )
+            // InternalFILTERS.g:8842:3: ruleGSSFilterFieldOp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarAccess().getOpGSSFilterFieldOpParserRuleCall_15_0()); 
@@ -27732,17 +27811,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVar__ConstantAssignment_16_0"
-    // InternalFILTERS.g:8824:1: rule__GSSFilterBoolVar__ConstantAssignment_16_0 : ( ruleGSSFilterConstant ) ;
+    // InternalFILTERS.g:8851:1: rule__GSSFilterBoolVar__ConstantAssignment_16_0 : ( ruleGSSFilterConstant ) ;
     public final void rule__GSSFilterBoolVar__ConstantAssignment_16_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8828:1: ( ( ruleGSSFilterConstant ) )
-            // InternalFILTERS.g:8829:2: ( ruleGSSFilterConstant )
+            // InternalFILTERS.g:8855:1: ( ( ruleGSSFilterConstant ) )
+            // InternalFILTERS.g:8856:2: ( ruleGSSFilterConstant )
             {
-            // InternalFILTERS.g:8829:2: ( ruleGSSFilterConstant )
-            // InternalFILTERS.g:8830:3: ruleGSSFilterConstant
+            // InternalFILTERS.g:8856:2: ( ruleGSSFilterConstant )
+            // InternalFILTERS.g:8857:3: ruleGSSFilterConstant
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarAccess().getConstantGSSFilterConstantParserRuleCall_16_0_0()); 
@@ -27777,17 +27856,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVar__SelectAssignment_16_1"
-    // InternalFILTERS.g:8839:1: rule__GSSFilterBoolVar__SelectAssignment_16_1 : ( ruleGSSFilterSelect ) ;
+    // InternalFILTERS.g:8866:1: rule__GSSFilterBoolVar__SelectAssignment_16_1 : ( ruleGSSFilterSelect ) ;
     public final void rule__GSSFilterBoolVar__SelectAssignment_16_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8843:1: ( ( ruleGSSFilterSelect ) )
-            // InternalFILTERS.g:8844:2: ( ruleGSSFilterSelect )
+            // InternalFILTERS.g:8870:1: ( ( ruleGSSFilterSelect ) )
+            // InternalFILTERS.g:8871:2: ( ruleGSSFilterSelect )
             {
-            // InternalFILTERS.g:8844:2: ( ruleGSSFilterSelect )
-            // InternalFILTERS.g:8845:3: ruleGSSFilterSelect
+            // InternalFILTERS.g:8871:2: ( ruleGSSFilterSelect )
+            // InternalFILTERS.g:8872:3: ruleGSSFilterSelect
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarAccess().getSelectGSSFilterSelectParserRuleCall_16_1_0()); 
@@ -27822,17 +27901,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVar__SelectLineAssignment_16_2"
-    // InternalFILTERS.g:8854:1: rule__GSSFilterBoolVar__SelectLineAssignment_16_2 : ( ruleGSSFilterSelectLine ) ;
+    // InternalFILTERS.g:8881:1: rule__GSSFilterBoolVar__SelectLineAssignment_16_2 : ( ruleGSSFilterSelectLine ) ;
     public final void rule__GSSFilterBoolVar__SelectLineAssignment_16_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8858:1: ( ( ruleGSSFilterSelectLine ) )
-            // InternalFILTERS.g:8859:2: ( ruleGSSFilterSelectLine )
+            // InternalFILTERS.g:8885:1: ( ( ruleGSSFilterSelectLine ) )
+            // InternalFILTERS.g:8886:2: ( ruleGSSFilterSelectLine )
             {
-            // InternalFILTERS.g:8859:2: ( ruleGSSFilterSelectLine )
-            // InternalFILTERS.g:8860:3: ruleGSSFilterSelectLine
+            // InternalFILTERS.g:8886:2: ( ruleGSSFilterSelectLine )
+            // InternalFILTERS.g:8887:3: ruleGSSFilterSelectLine
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineGSSFilterSelectLineParserRuleCall_16_2_0()); 
@@ -27867,17 +27946,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromArrayItem__IdAssignment_4"
-    // InternalFILTERS.g:8869:1: rule__GSSFilterBoolVarFromArrayItem__IdAssignment_4 : ( ruleINTEGER ) ;
+    // InternalFILTERS.g:8896:1: rule__GSSFilterBoolVarFromArrayItem__IdAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSFilterBoolVarFromArrayItem__IdAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8873:1: ( ( ruleINTEGER ) )
-            // InternalFILTERS.g:8874:2: ( ruleINTEGER )
+            // InternalFILTERS.g:8900:1: ( ( ruleINTEGER ) )
+            // InternalFILTERS.g:8901:2: ( ruleINTEGER )
             {
-            // InternalFILTERS.g:8874:2: ( ruleINTEGER )
-            // InternalFILTERS.g:8875:3: ruleINTEGER
+            // InternalFILTERS.g:8901:2: ( ruleINTEGER )
+            // InternalFILTERS.g:8902:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getIdINTEGERParserRuleCall_4_0()); 
@@ -27912,17 +27991,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromArrayItem__NameAssignment_8"
-    // InternalFILTERS.g:8884:1: rule__GSSFilterBoolVarFromArrayItem__NameAssignment_8 : ( RULE_ID ) ;
+    // InternalFILTERS.g:8911:1: rule__GSSFilterBoolVarFromArrayItem__NameAssignment_8 : ( RULE_ID ) ;
     public final void rule__GSSFilterBoolVarFromArrayItem__NameAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8888:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:8889:2: ( RULE_ID )
+            // InternalFILTERS.g:8915:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:8916:2: ( RULE_ID )
             {
-            // InternalFILTERS.g:8889:2: ( RULE_ID )
-            // InternalFILTERS.g:8890:3: RULE_ID
+            // InternalFILTERS.g:8916:2: ( RULE_ID )
+            // InternalFILTERS.g:8917:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getNameIDTerminalRuleCall_8_0()); 
@@ -27953,17 +28032,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromArrayItem__ConstantTypeAssignment_12"
-    // InternalFILTERS.g:8899:1: rule__GSSFilterBoolVarFromArrayItem__ConstantTypeAssignment_12 : ( ruleGSSFilterConstantType ) ;
+    // InternalFILTERS.g:8926:1: rule__GSSFilterBoolVarFromArrayItem__ConstantTypeAssignment_12 : ( ruleGSSFilterConstantType ) ;
     public final void rule__GSSFilterBoolVarFromArrayItem__ConstantTypeAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8903:1: ( ( ruleGSSFilterConstantType ) )
-            // InternalFILTERS.g:8904:2: ( ruleGSSFilterConstantType )
+            // InternalFILTERS.g:8930:1: ( ( ruleGSSFilterConstantType ) )
+            // InternalFILTERS.g:8931:2: ( ruleGSSFilterConstantType )
             {
-            // InternalFILTERS.g:8904:2: ( ruleGSSFilterConstantType )
-            // InternalFILTERS.g:8905:3: ruleGSSFilterConstantType
+            // InternalFILTERS.g:8931:2: ( ruleGSSFilterConstantType )
+            // InternalFILTERS.g:8932:3: ruleGSSFilterConstantType
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantTypeGSSFilterConstantTypeEnumRuleCall_12_0()); 
@@ -27998,17 +28077,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromArrayItem__AIFieldRefAssignment_14"
-    // InternalFILTERS.g:8914:1: rule__GSSFilterBoolVarFromArrayItem__AIFieldRefAssignment_14 : ( ruleGSSFilterAIFieldRef ) ;
+    // InternalFILTERS.g:8941:1: rule__GSSFilterBoolVarFromArrayItem__AIFieldRefAssignment_14 : ( ruleGSSFilterAIFieldRef ) ;
     public final void rule__GSSFilterBoolVarFromArrayItem__AIFieldRefAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8918:1: ( ( ruleGSSFilterAIFieldRef ) )
-            // InternalFILTERS.g:8919:2: ( ruleGSSFilterAIFieldRef )
+            // InternalFILTERS.g:8945:1: ( ( ruleGSSFilterAIFieldRef ) )
+            // InternalFILTERS.g:8946:2: ( ruleGSSFilterAIFieldRef )
             {
-            // InternalFILTERS.g:8919:2: ( ruleGSSFilterAIFieldRef )
-            // InternalFILTERS.g:8920:3: ruleGSSFilterAIFieldRef
+            // InternalFILTERS.g:8946:2: ( ruleGSSFilterAIFieldRef )
+            // InternalFILTERS.g:8947:3: ruleGSSFilterAIFieldRef
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefGSSFilterAIFieldRefParserRuleCall_14_0()); 
@@ -28043,17 +28122,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromArrayItem__OpAssignment_15"
-    // InternalFILTERS.g:8929:1: rule__GSSFilterBoolVarFromArrayItem__OpAssignment_15 : ( ruleGSSFilterFieldOp ) ;
+    // InternalFILTERS.g:8956:1: rule__GSSFilterBoolVarFromArrayItem__OpAssignment_15 : ( ruleGSSFilterFieldOp ) ;
     public final void rule__GSSFilterBoolVarFromArrayItem__OpAssignment_15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8933:1: ( ( ruleGSSFilterFieldOp ) )
-            // InternalFILTERS.g:8934:2: ( ruleGSSFilterFieldOp )
+            // InternalFILTERS.g:8960:1: ( ( ruleGSSFilterFieldOp ) )
+            // InternalFILTERS.g:8961:2: ( ruleGSSFilterFieldOp )
             {
-            // InternalFILTERS.g:8934:2: ( ruleGSSFilterFieldOp )
-            // InternalFILTERS.g:8935:3: ruleGSSFilterFieldOp
+            // InternalFILTERS.g:8961:2: ( ruleGSSFilterFieldOp )
+            // InternalFILTERS.g:8962:3: ruleGSSFilterFieldOp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_15_0()); 
@@ -28088,17 +28167,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromArrayItem__ConstantAssignment_16_0"
-    // InternalFILTERS.g:8944:1: rule__GSSFilterBoolVarFromArrayItem__ConstantAssignment_16_0 : ( ruleGSSFilterConstant ) ;
+    // InternalFILTERS.g:8971:1: rule__GSSFilterBoolVarFromArrayItem__ConstantAssignment_16_0 : ( ruleGSSFilterConstant ) ;
     public final void rule__GSSFilterBoolVarFromArrayItem__ConstantAssignment_16_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8948:1: ( ( ruleGSSFilterConstant ) )
-            // InternalFILTERS.g:8949:2: ( ruleGSSFilterConstant )
+            // InternalFILTERS.g:8975:1: ( ( ruleGSSFilterConstant ) )
+            // InternalFILTERS.g:8976:2: ( ruleGSSFilterConstant )
             {
-            // InternalFILTERS.g:8949:2: ( ruleGSSFilterConstant )
-            // InternalFILTERS.g:8950:3: ruleGSSFilterConstant
+            // InternalFILTERS.g:8976:2: ( ruleGSSFilterConstant )
+            // InternalFILTERS.g:8977:3: ruleGSSFilterConstant
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_16_0_0()); 
@@ -28133,17 +28212,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromArrayItem__SelectAssignment_16_1"
-    // InternalFILTERS.g:8959:1: rule__GSSFilterBoolVarFromArrayItem__SelectAssignment_16_1 : ( ruleGSSFilterSelect ) ;
+    // InternalFILTERS.g:8986:1: rule__GSSFilterBoolVarFromArrayItem__SelectAssignment_16_1 : ( ruleGSSFilterSelect ) ;
     public final void rule__GSSFilterBoolVarFromArrayItem__SelectAssignment_16_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8963:1: ( ( ruleGSSFilterSelect ) )
-            // InternalFILTERS.g:8964:2: ( ruleGSSFilterSelect )
+            // InternalFILTERS.g:8990:1: ( ( ruleGSSFilterSelect ) )
+            // InternalFILTERS.g:8991:2: ( ruleGSSFilterSelect )
             {
-            // InternalFILTERS.g:8964:2: ( ruleGSSFilterSelect )
-            // InternalFILTERS.g:8965:3: ruleGSSFilterSelect
+            // InternalFILTERS.g:8991:2: ( ruleGSSFilterSelect )
+            // InternalFILTERS.g:8992:3: ruleGSSFilterSelect
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_16_1_0()); 
@@ -28178,17 +28257,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromArrayItem__SelectLineAssignment_16_2"
-    // InternalFILTERS.g:8974:1: rule__GSSFilterBoolVarFromArrayItem__SelectLineAssignment_16_2 : ( ruleGSSFilterSelectLine ) ;
+    // InternalFILTERS.g:9001:1: rule__GSSFilterBoolVarFromArrayItem__SelectLineAssignment_16_2 : ( ruleGSSFilterSelectLine ) ;
     public final void rule__GSSFilterBoolVarFromArrayItem__SelectLineAssignment_16_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8978:1: ( ( ruleGSSFilterSelectLine ) )
-            // InternalFILTERS.g:8979:2: ( ruleGSSFilterSelectLine )
+            // InternalFILTERS.g:9005:1: ( ( ruleGSSFilterSelectLine ) )
+            // InternalFILTERS.g:9006:2: ( ruleGSSFilterSelectLine )
             {
-            // InternalFILTERS.g:8979:2: ( ruleGSSFilterSelectLine )
-            // InternalFILTERS.g:8980:3: ruleGSSFilterSelectLine
+            // InternalFILTERS.g:9006:2: ( ruleGSSFilterSelectLine )
+            // InternalFILTERS.g:9007:3: ruleGSSFilterSelectLine
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_16_2_0()); 
@@ -28223,17 +28302,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromGroupedArrayItem__IdAssignment_4"
-    // InternalFILTERS.g:8989:1: rule__GSSFilterBoolVarFromGroupedArrayItem__IdAssignment_4 : ( ruleINTEGER ) ;
+    // InternalFILTERS.g:9016:1: rule__GSSFilterBoolVarFromGroupedArrayItem__IdAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSFilterBoolVarFromGroupedArrayItem__IdAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:8993:1: ( ( ruleINTEGER ) )
-            // InternalFILTERS.g:8994:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9020:1: ( ( ruleINTEGER ) )
+            // InternalFILTERS.g:9021:2: ( ruleINTEGER )
             {
-            // InternalFILTERS.g:8994:2: ( ruleINTEGER )
-            // InternalFILTERS.g:8995:3: ruleINTEGER
+            // InternalFILTERS.g:9021:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9022:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getIdINTEGERParserRuleCall_4_0()); 
@@ -28268,17 +28347,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromGroupedArrayItem__NameAssignment_8"
-    // InternalFILTERS.g:9004:1: rule__GSSFilterBoolVarFromGroupedArrayItem__NameAssignment_8 : ( RULE_ID ) ;
+    // InternalFILTERS.g:9031:1: rule__GSSFilterBoolVarFromGroupedArrayItem__NameAssignment_8 : ( RULE_ID ) ;
     public final void rule__GSSFilterBoolVarFromGroupedArrayItem__NameAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9008:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:9009:2: ( RULE_ID )
+            // InternalFILTERS.g:9035:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:9036:2: ( RULE_ID )
             {
-            // InternalFILTERS.g:9009:2: ( RULE_ID )
-            // InternalFILTERS.g:9010:3: RULE_ID
+            // InternalFILTERS.g:9036:2: ( RULE_ID )
+            // InternalFILTERS.g:9037:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getNameIDTerminalRuleCall_8_0()); 
@@ -28309,17 +28388,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromGroupedArrayItem__ConstantTypeAssignment_12"
-    // InternalFILTERS.g:9019:1: rule__GSSFilterBoolVarFromGroupedArrayItem__ConstantTypeAssignment_12 : ( ruleGSSFilterConstantType ) ;
+    // InternalFILTERS.g:9046:1: rule__GSSFilterBoolVarFromGroupedArrayItem__ConstantTypeAssignment_12 : ( ruleGSSFilterConstantType ) ;
     public final void rule__GSSFilterBoolVarFromGroupedArrayItem__ConstantTypeAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9023:1: ( ( ruleGSSFilterConstantType ) )
-            // InternalFILTERS.g:9024:2: ( ruleGSSFilterConstantType )
+            // InternalFILTERS.g:9050:1: ( ( ruleGSSFilterConstantType ) )
+            // InternalFILTERS.g:9051:2: ( ruleGSSFilterConstantType )
             {
-            // InternalFILTERS.g:9024:2: ( ruleGSSFilterConstantType )
-            // InternalFILTERS.g:9025:3: ruleGSSFilterConstantType
+            // InternalFILTERS.g:9051:2: ( ruleGSSFilterConstantType )
+            // InternalFILTERS.g:9052:3: ruleGSSFilterConstantType
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantTypeGSSFilterConstantTypeEnumRuleCall_12_0()); 
@@ -28354,17 +28433,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromGroupedArrayItem__GroupAssignment_16"
-    // InternalFILTERS.g:9034:1: rule__GSSFilterBoolVarFromGroupedArrayItem__GroupAssignment_16 : ( ruleEString ) ;
+    // InternalFILTERS.g:9061:1: rule__GSSFilterBoolVarFromGroupedArrayItem__GroupAssignment_16 : ( ruleEString ) ;
     public final void rule__GSSFilterBoolVarFromGroupedArrayItem__GroupAssignment_16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9038:1: ( ( ruleEString ) )
-            // InternalFILTERS.g:9039:2: ( ruleEString )
+            // InternalFILTERS.g:9065:1: ( ( ruleEString ) )
+            // InternalFILTERS.g:9066:2: ( ruleEString )
             {
-            // InternalFILTERS.g:9039:2: ( ruleEString )
-            // InternalFILTERS.g:9040:3: ruleEString
+            // InternalFILTERS.g:9066:2: ( ruleEString )
+            // InternalFILTERS.g:9067:3: ruleEString
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getGroupEStringParserRuleCall_16_0()); 
@@ -28399,17 +28478,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromGroupedArrayItem__AIFieldRefsAssignment_18"
-    // InternalFILTERS.g:9049:1: rule__GSSFilterBoolVarFromGroupedArrayItem__AIFieldRefsAssignment_18 : ( ruleGSSFilterAIFieldRefs ) ;
+    // InternalFILTERS.g:9076:1: rule__GSSFilterBoolVarFromGroupedArrayItem__AIFieldRefsAssignment_18 : ( ruleGSSFilterAIFieldRefs ) ;
     public final void rule__GSSFilterBoolVarFromGroupedArrayItem__AIFieldRefsAssignment_18() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9053:1: ( ( ruleGSSFilterAIFieldRefs ) )
-            // InternalFILTERS.g:9054:2: ( ruleGSSFilterAIFieldRefs )
+            // InternalFILTERS.g:9080:1: ( ( ruleGSSFilterAIFieldRefs ) )
+            // InternalFILTERS.g:9081:2: ( ruleGSSFilterAIFieldRefs )
             {
-            // InternalFILTERS.g:9054:2: ( ruleGSSFilterAIFieldRefs )
-            // InternalFILTERS.g:9055:3: ruleGSSFilterAIFieldRefs
+            // InternalFILTERS.g:9081:2: ( ruleGSSFilterAIFieldRefs )
+            // InternalFILTERS.g:9082:3: ruleGSSFilterAIFieldRefs
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsGSSFilterAIFieldRefsParserRuleCall_18_0()); 
@@ -28444,17 +28523,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromGroupedArrayItem__OpAssignment_19"
-    // InternalFILTERS.g:9064:1: rule__GSSFilterBoolVarFromGroupedArrayItem__OpAssignment_19 : ( ruleGSSFilterFieldOp ) ;
+    // InternalFILTERS.g:9091:1: rule__GSSFilterBoolVarFromGroupedArrayItem__OpAssignment_19 : ( ruleGSSFilterFieldOp ) ;
     public final void rule__GSSFilterBoolVarFromGroupedArrayItem__OpAssignment_19() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9068:1: ( ( ruleGSSFilterFieldOp ) )
-            // InternalFILTERS.g:9069:2: ( ruleGSSFilterFieldOp )
+            // InternalFILTERS.g:9095:1: ( ( ruleGSSFilterFieldOp ) )
+            // InternalFILTERS.g:9096:2: ( ruleGSSFilterFieldOp )
             {
-            // InternalFILTERS.g:9069:2: ( ruleGSSFilterFieldOp )
-            // InternalFILTERS.g:9070:3: ruleGSSFilterFieldOp
+            // InternalFILTERS.g:9096:2: ( ruleGSSFilterFieldOp )
+            // InternalFILTERS.g:9097:3: ruleGSSFilterFieldOp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_19_0()); 
@@ -28489,17 +28568,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromGroupedArrayItem__ConstantAssignment_20_0"
-    // InternalFILTERS.g:9079:1: rule__GSSFilterBoolVarFromGroupedArrayItem__ConstantAssignment_20_0 : ( ruleGSSFilterConstant ) ;
+    // InternalFILTERS.g:9106:1: rule__GSSFilterBoolVarFromGroupedArrayItem__ConstantAssignment_20_0 : ( ruleGSSFilterConstant ) ;
     public final void rule__GSSFilterBoolVarFromGroupedArrayItem__ConstantAssignment_20_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9083:1: ( ( ruleGSSFilterConstant ) )
-            // InternalFILTERS.g:9084:2: ( ruleGSSFilterConstant )
+            // InternalFILTERS.g:9110:1: ( ( ruleGSSFilterConstant ) )
+            // InternalFILTERS.g:9111:2: ( ruleGSSFilterConstant )
             {
-            // InternalFILTERS.g:9084:2: ( ruleGSSFilterConstant )
-            // InternalFILTERS.g:9085:3: ruleGSSFilterConstant
+            // InternalFILTERS.g:9111:2: ( ruleGSSFilterConstant )
+            // InternalFILTERS.g:9112:3: ruleGSSFilterConstant
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_20_0_0()); 
@@ -28534,17 +28613,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromGroupedArrayItem__SelectAssignment_20_1"
-    // InternalFILTERS.g:9094:1: rule__GSSFilterBoolVarFromGroupedArrayItem__SelectAssignment_20_1 : ( ruleGSSFilterSelect ) ;
+    // InternalFILTERS.g:9121:1: rule__GSSFilterBoolVarFromGroupedArrayItem__SelectAssignment_20_1 : ( ruleGSSFilterSelect ) ;
     public final void rule__GSSFilterBoolVarFromGroupedArrayItem__SelectAssignment_20_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9098:1: ( ( ruleGSSFilterSelect ) )
-            // InternalFILTERS.g:9099:2: ( ruleGSSFilterSelect )
+            // InternalFILTERS.g:9125:1: ( ( ruleGSSFilterSelect ) )
+            // InternalFILTERS.g:9126:2: ( ruleGSSFilterSelect )
             {
-            // InternalFILTERS.g:9099:2: ( ruleGSSFilterSelect )
-            // InternalFILTERS.g:9100:3: ruleGSSFilterSelect
+            // InternalFILTERS.g:9126:2: ( ruleGSSFilterSelect )
+            // InternalFILTERS.g:9127:3: ruleGSSFilterSelect
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_20_1_0()); 
@@ -28579,17 +28658,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFromGroupedArrayItem__SelectLineAssignment_20_2"
-    // InternalFILTERS.g:9109:1: rule__GSSFilterBoolVarFromGroupedArrayItem__SelectLineAssignment_20_2 : ( ruleGSSFilterSelectLine ) ;
+    // InternalFILTERS.g:9136:1: rule__GSSFilterBoolVarFromGroupedArrayItem__SelectLineAssignment_20_2 : ( ruleGSSFilterSelectLine ) ;
     public final void rule__GSSFilterBoolVarFromGroupedArrayItem__SelectLineAssignment_20_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9113:1: ( ( ruleGSSFilterSelectLine ) )
-            // InternalFILTERS.g:9114:2: ( ruleGSSFilterSelectLine )
+            // InternalFILTERS.g:9140:1: ( ( ruleGSSFilterSelectLine ) )
+            // InternalFILTERS.g:9141:2: ( ruleGSSFilterSelectLine )
             {
-            // InternalFILTERS.g:9114:2: ( ruleGSSFilterSelectLine )
-            // InternalFILTERS.g:9115:3: ruleGSSFilterSelectLine
+            // InternalFILTERS.g:9141:2: ( ruleGSSFilterSelectLine )
+            // InternalFILTERS.g:9142:3: ruleGSSFilterSelectLine
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_20_2_0()); 
@@ -28624,17 +28703,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFDIC__IdAssignment_4"
-    // InternalFILTERS.g:9124:1: rule__GSSFilterBoolVarFDIC__IdAssignment_4 : ( ruleINTEGER ) ;
+    // InternalFILTERS.g:9151:1: rule__GSSFilterBoolVarFDIC__IdAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSFilterBoolVarFDIC__IdAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9128:1: ( ( ruleINTEGER ) )
-            // InternalFILTERS.g:9129:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9155:1: ( ( ruleINTEGER ) )
+            // InternalFILTERS.g:9156:2: ( ruleINTEGER )
             {
-            // InternalFILTERS.g:9129:2: ( ruleINTEGER )
-            // InternalFILTERS.g:9130:3: ruleINTEGER
+            // InternalFILTERS.g:9156:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9157:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFDICAccess().getIdINTEGERParserRuleCall_4_0()); 
@@ -28669,17 +28748,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFDIC__NameAssignment_8"
-    // InternalFILTERS.g:9139:1: rule__GSSFilterBoolVarFDIC__NameAssignment_8 : ( RULE_ID ) ;
+    // InternalFILTERS.g:9166:1: rule__GSSFilterBoolVarFDIC__NameAssignment_8 : ( RULE_ID ) ;
     public final void rule__GSSFilterBoolVarFDIC__NameAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9143:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:9144:2: ( RULE_ID )
+            // InternalFILTERS.g:9170:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:9171:2: ( RULE_ID )
             {
-            // InternalFILTERS.g:9144:2: ( RULE_ID )
-            // InternalFILTERS.g:9145:3: RULE_ID
+            // InternalFILTERS.g:9171:2: ( RULE_ID )
+            // InternalFILTERS.g:9172:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFDICAccess().getNameIDTerminalRuleCall_8_0()); 
@@ -28710,17 +28789,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFDIC__FieldRefAssignment_10"
-    // InternalFILTERS.g:9154:1: rule__GSSFilterBoolVarFDIC__FieldRefAssignment_10 : ( ruleGSSFilterFieldRef ) ;
+    // InternalFILTERS.g:9181:1: rule__GSSFilterBoolVarFDIC__FieldRefAssignment_10 : ( ruleGSSFilterFieldRef ) ;
     public final void rule__GSSFilterBoolVarFDIC__FieldRefAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9158:1: ( ( ruleGSSFilterFieldRef ) )
-            // InternalFILTERS.g:9159:2: ( ruleGSSFilterFieldRef )
+            // InternalFILTERS.g:9185:1: ( ( ruleGSSFilterFieldRef ) )
+            // InternalFILTERS.g:9186:2: ( ruleGSSFilterFieldRef )
             {
-            // InternalFILTERS.g:9159:2: ( ruleGSSFilterFieldRef )
-            // InternalFILTERS.g:9160:3: ruleGSSFilterFieldRef
+            // InternalFILTERS.g:9186:2: ( ruleGSSFilterFieldRef )
+            // InternalFILTERS.g:9187:3: ruleGSSFilterFieldRef
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefGSSFilterFieldRefParserRuleCall_10_0()); 
@@ -28755,17 +28834,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterBoolVarFDIC__OpAssignment_11"
-    // InternalFILTERS.g:9169:1: rule__GSSFilterBoolVarFDIC__OpAssignment_11 : ( ruleGSSFilterFieldOp ) ;
+    // InternalFILTERS.g:9196:1: rule__GSSFilterBoolVarFDIC__OpAssignment_11 : ( ruleGSSFilterFieldOp ) ;
     public final void rule__GSSFilterBoolVarFDIC__OpAssignment_11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9173:1: ( ( ruleGSSFilterFieldOp ) )
-            // InternalFILTERS.g:9174:2: ( ruleGSSFilterFieldOp )
+            // InternalFILTERS.g:9200:1: ( ( ruleGSSFilterFieldOp ) )
+            // InternalFILTERS.g:9201:2: ( ruleGSSFilterFieldOp )
             {
-            // InternalFILTERS.g:9174:2: ( ruleGSSFilterFieldOp )
-            // InternalFILTERS.g:9175:3: ruleGSSFilterFieldOp
+            // InternalFILTERS.g:9201:2: ( ruleGSSFilterFieldOp )
+            // InternalFILTERS.g:9202:3: ruleGSSFilterFieldOp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpGSSFilterFieldOpParserRuleCall_11_0()); 
@@ -28800,17 +28879,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterFieldRef__NameAssignment_4"
-    // InternalFILTERS.g:9184:1: rule__GSSFilterFieldRef__NameAssignment_4 : ( RULE_ID ) ;
+    // InternalFILTERS.g:9211:1: rule__GSSFilterFieldRef__NameAssignment_4 : ( RULE_ID ) ;
     public final void rule__GSSFilterFieldRef__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9188:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:9189:2: ( RULE_ID )
+            // InternalFILTERS.g:9215:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:9216:2: ( RULE_ID )
             {
-            // InternalFILTERS.g:9189:2: ( RULE_ID )
-            // InternalFILTERS.g:9190:3: RULE_ID
+            // InternalFILTERS.g:9216:2: ( RULE_ID )
+            // InternalFILTERS.g:9217:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterFieldRefAccess().getNameIDTerminalRuleCall_4_0()); 
@@ -28841,17 +28920,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterFieldOp__TypeAssignment_4"
-    // InternalFILTERS.g:9199:1: rule__GSSFilterFieldOp__TypeAssignment_4 : ( ruleGSSFilterOPType ) ;
+    // InternalFILTERS.g:9226:1: rule__GSSFilterFieldOp__TypeAssignment_4 : ( ruleGSSFilterOPType ) ;
     public final void rule__GSSFilterFieldOp__TypeAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9203:1: ( ( ruleGSSFilterOPType ) )
-            // InternalFILTERS.g:9204:2: ( ruleGSSFilterOPType )
+            // InternalFILTERS.g:9230:1: ( ( ruleGSSFilterOPType ) )
+            // InternalFILTERS.g:9231:2: ( ruleGSSFilterOPType )
             {
-            // InternalFILTERS.g:9204:2: ( ruleGSSFilterOPType )
-            // InternalFILTERS.g:9205:3: ruleGSSFilterOPType
+            // InternalFILTERS.g:9231:2: ( ruleGSSFilterOPType )
+            // InternalFILTERS.g:9232:3: ruleGSSFilterOPType
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterFieldOpAccess().getTypeGSSFilterOPTypeEnumRuleCall_4_0()); 
@@ -28886,17 +28965,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterConstant__ValueAssignment_4"
-    // InternalFILTERS.g:9214:1: rule__GSSFilterConstant__ValueAssignment_4 : ( ruleINTEGER ) ;
+    // InternalFILTERS.g:9241:1: rule__GSSFilterConstant__ValueAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSFilterConstant__ValueAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9218:1: ( ( ruleINTEGER ) )
-            // InternalFILTERS.g:9219:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9245:1: ( ( ruleINTEGER ) )
+            // InternalFILTERS.g:9246:2: ( ruleINTEGER )
             {
-            // InternalFILTERS.g:9219:2: ( ruleINTEGER )
-            // InternalFILTERS.g:9220:3: ruleINTEGER
+            // InternalFILTERS.g:9246:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9247:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterConstantAccess().getValueINTEGERParserRuleCall_4_0()); 
@@ -28931,17 +29010,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterConstant__MaskAssignment_6_2"
-    // InternalFILTERS.g:9229:1: rule__GSSFilterConstant__MaskAssignment_6_2 : ( RULE_HEXADECIMAL ) ;
+    // InternalFILTERS.g:9256:1: rule__GSSFilterConstant__MaskAssignment_6_2 : ( RULE_HEXADECIMAL ) ;
     public final void rule__GSSFilterConstant__MaskAssignment_6_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9233:1: ( ( RULE_HEXADECIMAL ) )
-            // InternalFILTERS.g:9234:2: ( RULE_HEXADECIMAL )
+            // InternalFILTERS.g:9260:1: ( ( RULE_HEXADECIMAL ) )
+            // InternalFILTERS.g:9261:2: ( RULE_HEXADECIMAL )
             {
-            // InternalFILTERS.g:9234:2: ( RULE_HEXADECIMAL )
-            // InternalFILTERS.g:9235:3: RULE_HEXADECIMAL
+            // InternalFILTERS.g:9261:2: ( RULE_HEXADECIMAL )
+            // InternalFILTERS.g:9262:3: RULE_HEXADECIMAL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterConstantAccess().getMaskHEXADECIMALTerminalRuleCall_6_2_0()); 
@@ -28972,17 +29051,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterSelect__FromFileAssignment_4"
-    // InternalFILTERS.g:9244:1: rule__GSSFilterSelect__FromFileAssignment_4 : ( RULE_ID ) ;
+    // InternalFILTERS.g:9271:1: rule__GSSFilterSelect__FromFileAssignment_4 : ( RULE_ID ) ;
     public final void rule__GSSFilterSelect__FromFileAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9248:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:9249:2: ( RULE_ID )
+            // InternalFILTERS.g:9275:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:9276:2: ( RULE_ID )
             {
-            // InternalFILTERS.g:9249:2: ( RULE_ID )
-            // InternalFILTERS.g:9250:3: RULE_ID
+            // InternalFILTERS.g:9276:2: ( RULE_ID )
+            // InternalFILTERS.g:9277:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterSelectAccess().getFromFileIDTerminalRuleCall_4_0()); 
@@ -29013,17 +29092,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterSelect__TypeAssignment_8"
-    // InternalFILTERS.g:9259:1: rule__GSSFilterSelect__TypeAssignment_8 : ( ruleGSSFilterSelectType ) ;
+    // InternalFILTERS.g:9286:1: rule__GSSFilterSelect__TypeAssignment_8 : ( ruleGSSFilterSelectType ) ;
     public final void rule__GSSFilterSelect__TypeAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9263:1: ( ( ruleGSSFilterSelectType ) )
-            // InternalFILTERS.g:9264:2: ( ruleGSSFilterSelectType )
+            // InternalFILTERS.g:9290:1: ( ( ruleGSSFilterSelectType ) )
+            // InternalFILTERS.g:9291:2: ( ruleGSSFilterSelectType )
             {
-            // InternalFILTERS.g:9264:2: ( ruleGSSFilterSelectType )
-            // InternalFILTERS.g:9265:3: ruleGSSFilterSelectType
+            // InternalFILTERS.g:9291:2: ( ruleGSSFilterSelectType )
+            // InternalFILTERS.g:9292:3: ruleGSSFilterSelectType
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterSelectAccess().getTypeGSSFilterSelectTypeEnumRuleCall_8_0()); 
@@ -29058,17 +29137,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterSelect__OffsetAssignment_10_2"
-    // InternalFILTERS.g:9274:1: rule__GSSFilterSelect__OffsetAssignment_10_2 : ( ruleINTEGER ) ;
+    // InternalFILTERS.g:9301:1: rule__GSSFilterSelect__OffsetAssignment_10_2 : ( ruleINTEGER ) ;
     public final void rule__GSSFilterSelect__OffsetAssignment_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9278:1: ( ( ruleINTEGER ) )
-            // InternalFILTERS.g:9279:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9305:1: ( ( ruleINTEGER ) )
+            // InternalFILTERS.g:9306:2: ( ruleINTEGER )
             {
-            // InternalFILTERS.g:9279:2: ( ruleINTEGER )
-            // InternalFILTERS.g:9280:3: ruleINTEGER
+            // InternalFILTERS.g:9306:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9307:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterSelectAccess().getOffsetINTEGERParserRuleCall_10_2_0()); 
@@ -29103,17 +29182,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterSelect__SizeAssignment_11_2"
-    // InternalFILTERS.g:9289:1: rule__GSSFilterSelect__SizeAssignment_11_2 : ( ruleINTEGER ) ;
+    // InternalFILTERS.g:9316:1: rule__GSSFilterSelect__SizeAssignment_11_2 : ( ruleINTEGER ) ;
     public final void rule__GSSFilterSelect__SizeAssignment_11_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9293:1: ( ( ruleINTEGER ) )
-            // InternalFILTERS.g:9294:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9320:1: ( ( ruleINTEGER ) )
+            // InternalFILTERS.g:9321:2: ( ruleINTEGER )
             {
-            // InternalFILTERS.g:9294:2: ( ruleINTEGER )
-            // InternalFILTERS.g:9295:3: ruleINTEGER
+            // InternalFILTERS.g:9321:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9322:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterSelectAccess().getSizeINTEGERParserRuleCall_11_2_0()); 
@@ -29148,17 +29227,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterSelect__MaskAssignment_12_2"
-    // InternalFILTERS.g:9304:1: rule__GSSFilterSelect__MaskAssignment_12_2 : ( RULE_HEXADECIMAL ) ;
+    // InternalFILTERS.g:9331:1: rule__GSSFilterSelect__MaskAssignment_12_2 : ( RULE_HEXADECIMAL ) ;
     public final void rule__GSSFilterSelect__MaskAssignment_12_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9308:1: ( ( RULE_HEXADECIMAL ) )
-            // InternalFILTERS.g:9309:2: ( RULE_HEXADECIMAL )
+            // InternalFILTERS.g:9335:1: ( ( RULE_HEXADECIMAL ) )
+            // InternalFILTERS.g:9336:2: ( RULE_HEXADECIMAL )
             {
-            // InternalFILTERS.g:9309:2: ( RULE_HEXADECIMAL )
-            // InternalFILTERS.g:9310:3: RULE_HEXADECIMAL
+            // InternalFILTERS.g:9336:2: ( RULE_HEXADECIMAL )
+            // InternalFILTERS.g:9337:3: RULE_HEXADECIMAL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterSelectAccess().getMaskHEXADECIMALTerminalRuleCall_12_2_0()); 
@@ -29189,17 +29268,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterSelectLine__FromFileAssignment_4"
-    // InternalFILTERS.g:9319:1: rule__GSSFilterSelectLine__FromFileAssignment_4 : ( RULE_ID ) ;
+    // InternalFILTERS.g:9346:1: rule__GSSFilterSelectLine__FromFileAssignment_4 : ( RULE_ID ) ;
     public final void rule__GSSFilterSelectLine__FromFileAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9323:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:9324:2: ( RULE_ID )
+            // InternalFILTERS.g:9350:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:9351:2: ( RULE_ID )
             {
-            // InternalFILTERS.g:9324:2: ( RULE_ID )
-            // InternalFILTERS.g:9325:3: RULE_ID
+            // InternalFILTERS.g:9351:2: ( RULE_ID )
+            // InternalFILTERS.g:9352:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterSelectLineAccess().getFromFileIDTerminalRuleCall_4_0()); 
@@ -29230,17 +29309,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterSelectLine__LineAssignment_8"
-    // InternalFILTERS.g:9334:1: rule__GSSFilterSelectLine__LineAssignment_8 : ( ruleINTEGER ) ;
+    // InternalFILTERS.g:9361:1: rule__GSSFilterSelectLine__LineAssignment_8 : ( ruleINTEGER ) ;
     public final void rule__GSSFilterSelectLine__LineAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9338:1: ( ( ruleINTEGER ) )
-            // InternalFILTERS.g:9339:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9365:1: ( ( ruleINTEGER ) )
+            // InternalFILTERS.g:9366:2: ( ruleINTEGER )
             {
-            // InternalFILTERS.g:9339:2: ( ruleINTEGER )
-            // InternalFILTERS.g:9340:3: ruleINTEGER
+            // InternalFILTERS.g:9366:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9367:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterSelectLineAccess().getLineINTEGERParserRuleCall_8_0()); 
@@ -29275,17 +29354,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterSelectLine__LeftTrimAssignment_10_2"
-    // InternalFILTERS.g:9349:1: rule__GSSFilterSelectLine__LeftTrimAssignment_10_2 : ( ruleINTEGER ) ;
+    // InternalFILTERS.g:9376:1: rule__GSSFilterSelectLine__LeftTrimAssignment_10_2 : ( ruleINTEGER ) ;
     public final void rule__GSSFilterSelectLine__LeftTrimAssignment_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9353:1: ( ( ruleINTEGER ) )
-            // InternalFILTERS.g:9354:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9380:1: ( ( ruleINTEGER ) )
+            // InternalFILTERS.g:9381:2: ( ruleINTEGER )
             {
-            // InternalFILTERS.g:9354:2: ( ruleINTEGER )
-            // InternalFILTERS.g:9355:3: ruleINTEGER
+            // InternalFILTERS.g:9381:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9382:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterSelectLineAccess().getLeftTrimINTEGERParserRuleCall_10_2_0()); 
@@ -29320,17 +29399,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterSelectLine__RightTrimAssignment_11_2"
-    // InternalFILTERS.g:9364:1: rule__GSSFilterSelectLine__RightTrimAssignment_11_2 : ( ruleINTEGER ) ;
+    // InternalFILTERS.g:9391:1: rule__GSSFilterSelectLine__RightTrimAssignment_11_2 : ( ruleINTEGER ) ;
     public final void rule__GSSFilterSelectLine__RightTrimAssignment_11_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9368:1: ( ( ruleINTEGER ) )
-            // InternalFILTERS.g:9369:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9395:1: ( ( ruleINTEGER ) )
+            // InternalFILTERS.g:9396:2: ( ruleINTEGER )
             {
-            // InternalFILTERS.g:9369:2: ( ruleINTEGER )
-            // InternalFILTERS.g:9370:3: ruleINTEGER
+            // InternalFILTERS.g:9396:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9397:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterSelectLineAccess().getRightTrimINTEGERParserRuleCall_11_2_0()); 
@@ -29365,17 +29444,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterSelectLine__MaskAssignment_12_2"
-    // InternalFILTERS.g:9379:1: rule__GSSFilterSelectLine__MaskAssignment_12_2 : ( RULE_HEXADECIMAL ) ;
+    // InternalFILTERS.g:9406:1: rule__GSSFilterSelectLine__MaskAssignment_12_2 : ( RULE_HEXADECIMAL ) ;
     public final void rule__GSSFilterSelectLine__MaskAssignment_12_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9383:1: ( ( RULE_HEXADECIMAL ) )
-            // InternalFILTERS.g:9384:2: ( RULE_HEXADECIMAL )
+            // InternalFILTERS.g:9410:1: ( ( RULE_HEXADECIMAL ) )
+            // InternalFILTERS.g:9411:2: ( RULE_HEXADECIMAL )
             {
-            // InternalFILTERS.g:9384:2: ( RULE_HEXADECIMAL )
-            // InternalFILTERS.g:9385:3: RULE_HEXADECIMAL
+            // InternalFILTERS.g:9411:2: ( RULE_HEXADECIMAL )
+            // InternalFILTERS.g:9412:3: RULE_HEXADECIMAL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterSelectLineAccess().getMaskHEXADECIMALTerminalRuleCall_12_2_0()); 
@@ -29406,17 +29485,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterAIFieldRef__IndexAssignment_4"
-    // InternalFILTERS.g:9394:1: rule__GSSFilterAIFieldRef__IndexAssignment_4 : ( ruleINTEGER ) ;
+    // InternalFILTERS.g:9421:1: rule__GSSFilterAIFieldRef__IndexAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSFilterAIFieldRef__IndexAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9398:1: ( ( ruleINTEGER ) )
-            // InternalFILTERS.g:9399:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9425:1: ( ( ruleINTEGER ) )
+            // InternalFILTERS.g:9426:2: ( ruleINTEGER )
             {
-            // InternalFILTERS.g:9399:2: ( ruleINTEGER )
-            // InternalFILTERS.g:9400:3: ruleINTEGER
+            // InternalFILTERS.g:9426:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9427:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterAIFieldRefAccess().getIndexINTEGERParserRuleCall_4_0()); 
@@ -29451,17 +29530,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterAIFieldRefs__NameAssignment_4"
-    // InternalFILTERS.g:9409:1: rule__GSSFilterAIFieldRefs__NameAssignment_4 : ( RULE_ID ) ;
+    // InternalFILTERS.g:9436:1: rule__GSSFilterAIFieldRefs__NameAssignment_4 : ( RULE_ID ) ;
     public final void rule__GSSFilterAIFieldRefs__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9413:1: ( ( RULE_ID ) )
-            // InternalFILTERS.g:9414:2: ( RULE_ID )
+            // InternalFILTERS.g:9440:1: ( ( RULE_ID ) )
+            // InternalFILTERS.g:9441:2: ( RULE_ID )
             {
-            // InternalFILTERS.g:9414:2: ( RULE_ID )
-            // InternalFILTERS.g:9415:3: RULE_ID
+            // InternalFILTERS.g:9441:2: ( RULE_ID )
+            // InternalFILTERS.g:9442:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterAIFieldRefsAccess().getNameIDTerminalRuleCall_4_0()); 
@@ -29492,17 +29571,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxterm__IdAssignment_4"
-    // InternalFILTERS.g:9424:1: rule__GSSFilterMaxterm__IdAssignment_4 : ( ruleINTEGER ) ;
+    // InternalFILTERS.g:9451:1: rule__GSSFilterMaxterm__IdAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSFilterMaxterm__IdAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9428:1: ( ( ruleINTEGER ) )
-            // InternalFILTERS.g:9429:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9455:1: ( ( ruleINTEGER ) )
+            // InternalFILTERS.g:9456:2: ( ruleINTEGER )
             {
-            // InternalFILTERS.g:9429:2: ( ruleINTEGER )
-            // InternalFILTERS.g:9430:3: ruleINTEGER
+            // InternalFILTERS.g:9456:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9457:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMaxtermAccess().getIdINTEGERParserRuleCall_4_0()); 
@@ -29537,17 +29616,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMaxterm__BoolVarRefAssignment_6"
-    // InternalFILTERS.g:9439:1: rule__GSSFilterMaxterm__BoolVarRefAssignment_6 : ( ruleGSSFilterBoolVarRef ) ;
+    // InternalFILTERS.g:9466:1: rule__GSSFilterMaxterm__BoolVarRefAssignment_6 : ( ruleGSSFilterBoolVarRef ) ;
     public final void rule__GSSFilterMaxterm__BoolVarRefAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9443:1: ( ( ruleGSSFilterBoolVarRef ) )
-            // InternalFILTERS.g:9444:2: ( ruleGSSFilterBoolVarRef )
+            // InternalFILTERS.g:9470:1: ( ( ruleGSSFilterBoolVarRef ) )
+            // InternalFILTERS.g:9471:2: ( ruleGSSFilterBoolVarRef )
             {
-            // InternalFILTERS.g:9444:2: ( ruleGSSFilterBoolVarRef )
-            // InternalFILTERS.g:9445:3: ruleGSSFilterBoolVarRef
+            // InternalFILTERS.g:9471:2: ( ruleGSSFilterBoolVarRef )
+            // InternalFILTERS.g:9472:3: ruleGSSFilterBoolVarRef
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMaxtermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_6_0()); 
@@ -29582,17 +29661,17 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSFilterMinterm__IdAssignment_4"
-    // InternalFILTERS.g:9454:1: rule__GSSFilterMinterm__IdAssignment_4 : ( ruleINTEGER ) ;
+    // InternalFILTERS.g:9481:1: rule__GSSFilterMinterm__IdAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSFilterMinterm__IdAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9458:1: ( ( ruleINTEGER ) )
-            // InternalFILTERS.g:9459:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9485:1: ( ( ruleINTEGER ) )
+            // InternalFILTERS.g:9486:2: ( ruleINTEGER )
             {
-            // InternalFILTERS.g:9459:2: ( ruleINTEGER )
-            // InternalFILTERS.g:9460:3: ruleINTEGER
+            // InternalFILTERS.g:9486:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9487:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterMintermAccess().getIdINTEGERParserRuleCall_4_0()); 
@@ -29626,21 +29705,21 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSFilterMinterm__IdAssignment_4"
 
 
-    // $ANTLR start "rule__GSSFilterMinterm__BoolVarRefAssignment_5"
-    // InternalFILTERS.g:9469:1: rule__GSSFilterMinterm__BoolVarRefAssignment_5 : ( ruleGSSFilterBoolVarRef ) ;
-    public final void rule__GSSFilterMinterm__BoolVarRefAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__GSSFilterMinterm__BoolVarRefAssignment_6"
+    // InternalFILTERS.g:9496:1: rule__GSSFilterMinterm__BoolVarRefAssignment_6 : ( ruleGSSFilterBoolVarRef ) ;
+    public final void rule__GSSFilterMinterm__BoolVarRefAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9473:1: ( ( ruleGSSFilterBoolVarRef ) )
-            // InternalFILTERS.g:9474:2: ( ruleGSSFilterBoolVarRef )
+            // InternalFILTERS.g:9500:1: ( ( ruleGSSFilterBoolVarRef ) )
+            // InternalFILTERS.g:9501:2: ( ruleGSSFilterBoolVarRef )
             {
-            // InternalFILTERS.g:9474:2: ( ruleGSSFilterBoolVarRef )
-            // InternalFILTERS.g:9475:3: ruleGSSFilterBoolVarRef
+            // InternalFILTERS.g:9501:2: ( ruleGSSFilterBoolVarRef )
+            // InternalFILTERS.g:9502:3: ruleGSSFilterBoolVarRef
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_5_0()); 
+               before(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_6_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleGSSFilterBoolVarRef();
@@ -29648,7 +29727,7 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_5_0()); 
+               after(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_6_0()); 
             }
 
             }
@@ -29668,21 +29747,21 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSFilterMinterm__BoolVarRefAssignment_5"
+    // $ANTLR end "rule__GSSFilterMinterm__BoolVarRefAssignment_6"
 
 
     // $ANTLR start "rule__GSSFilterBoolVarRef__IdRefAssignment_4"
-    // InternalFILTERS.g:9484:1: rule__GSSFilterBoolVarRef__IdRefAssignment_4 : ( ruleINTEGER ) ;
+    // InternalFILTERS.g:9511:1: rule__GSSFilterBoolVarRef__IdRefAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSFilterBoolVarRef__IdRefAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFILTERS.g:9488:1: ( ( ruleINTEGER ) )
-            // InternalFILTERS.g:9489:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9515:1: ( ( ruleINTEGER ) )
+            // InternalFILTERS.g:9516:2: ( ruleINTEGER )
             {
-            // InternalFILTERS.g:9489:2: ( ruleINTEGER )
-            // InternalFILTERS.g:9490:3: ruleINTEGER
+            // InternalFILTERS.g:9516:2: ( ruleINTEGER )
+            // InternalFILTERS.g:9517:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSFilterBoolVarRefAccess().getIdRefINTEGERParserRuleCall_4_0()); 
@@ -29717,28 +29796,28 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred48_InternalFILTERS
     public final void synpred48_InternalFILTERS_fragment() throws RecognitionException {   
-        // InternalFILTERS.g:8289:3: ( ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) ) )
-        // InternalFILTERS.g:8289:3: ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) )
+        // InternalFILTERS.g:8316:3: ( ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) ) )
+        // InternalFILTERS.g:8316:3: ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) )
         {
-        // InternalFILTERS.g:8289:3: ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) )
-        // InternalFILTERS.g:8290:4: {...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) )
+        // InternalFILTERS.g:8316:3: ({...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) ) )
+        // InternalFILTERS.g:8317:4: {...}? => ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) )
         {
         if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0) ) {
             if (state.backtracking>0) {state.failed=true; return ;}
             throw new FailedPredicateException(input, "synpred48_InternalFILTERS", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0)");
         }
-        // InternalFILTERS.g:8290:118: ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) )
-        // InternalFILTERS.g:8291:5: ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) )
+        // InternalFILTERS.g:8317:118: ( ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) ) )
+        // InternalFILTERS.g:8318:5: ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) )
         {
         getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0);
-        // InternalFILTERS.g:8297:5: ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) )
-        // InternalFILTERS.g:8298:6: ( rule__GSSFilterMaxtermFilter__Group_3_0__0 )
+        // InternalFILTERS.g:8324:5: ( ( rule__GSSFilterMaxtermFilter__Group_3_0__0 ) )
+        // InternalFILTERS.g:8325:6: ( rule__GSSFilterMaxtermFilter__Group_3_0__0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getGSSFilterMaxtermFilterAccess().getGroup_3_0()); 
         }
-        // InternalFILTERS.g:8299:6: ( rule__GSSFilterMaxtermFilter__Group_3_0__0 )
-        // InternalFILTERS.g:8299:7: rule__GSSFilterMaxtermFilter__Group_3_0__0
+        // InternalFILTERS.g:8326:6: ( rule__GSSFilterMaxtermFilter__Group_3_0__0 )
+        // InternalFILTERS.g:8326:7: rule__GSSFilterMaxtermFilter__Group_3_0__0
         {
         pushFollow(FollowSets000.FOLLOW_2);
         rule__GSSFilterMaxtermFilter__Group_3_0__0();
@@ -29764,8 +29843,8 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred49_InternalFILTERS
     public final void synpred49_InternalFILTERS_fragment() throws RecognitionException {   
-        // InternalFILTERS.g:8333:2: ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1 )
-        // InternalFILTERS.g:8333:2: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1
+        // InternalFILTERS.g:8360:2: ( rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1 )
+        // InternalFILTERS.g:8360:2: rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1
         {
         pushFollow(FollowSets000.FOLLOW_2);
         rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1();
@@ -29779,28 +29858,28 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred50_InternalFILTERS
     public final void synpred50_InternalFILTERS_fragment() throws RecognitionException {   
-        // InternalFILTERS.g:8372:3: ( ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) ) )
-        // InternalFILTERS.g:8372:3: ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) )
+        // InternalFILTERS.g:8399:3: ( ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) ) )
+        // InternalFILTERS.g:8399:3: ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) )
         {
-        // InternalFILTERS.g:8372:3: ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) )
-        // InternalFILTERS.g:8373:4: {...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) )
+        // InternalFILTERS.g:8399:3: ({...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) ) )
+        // InternalFILTERS.g:8400:4: {...}? => ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) )
         {
         if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0) ) {
             if (state.backtracking>0) {state.failed=true; return ;}
             throw new FailedPredicateException(input, "synpred50_InternalFILTERS", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0)");
         }
-        // InternalFILTERS.g:8373:118: ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) )
-        // InternalFILTERS.g:8374:5: ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) )
+        // InternalFILTERS.g:8400:118: ( ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) ) )
+        // InternalFILTERS.g:8401:5: ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) )
         {
         getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0);
-        // InternalFILTERS.g:8380:5: ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) )
-        // InternalFILTERS.g:8381:6: ( rule__GSSFilterMintermFilter__Group_3_0__0 )
+        // InternalFILTERS.g:8407:5: ( ( rule__GSSFilterMintermFilter__Group_3_0__0 ) )
+        // InternalFILTERS.g:8408:6: ( rule__GSSFilterMintermFilter__Group_3_0__0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getGSSFilterMintermFilterAccess().getGroup_3_0()); 
         }
-        // InternalFILTERS.g:8382:6: ( rule__GSSFilterMintermFilter__Group_3_0__0 )
-        // InternalFILTERS.g:8382:7: rule__GSSFilterMintermFilter__Group_3_0__0
+        // InternalFILTERS.g:8409:6: ( rule__GSSFilterMintermFilter__Group_3_0__0 )
+        // InternalFILTERS.g:8409:7: rule__GSSFilterMintermFilter__Group_3_0__0
         {
         pushFollow(FollowSets000.FOLLOW_2);
         rule__GSSFilterMintermFilter__Group_3_0__0();
@@ -29826,8 +29905,8 @@ public class InternalFILTERSParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred51_InternalFILTERS
     public final void synpred51_InternalFILTERS_fragment() throws RecognitionException {   
-        // InternalFILTERS.g:8416:2: ( rule__GSSFilterMintermFilter__UnorderedGroup_3__1 )
-        // InternalFILTERS.g:8416:2: rule__GSSFilterMintermFilter__UnorderedGroup_3__1
+        // InternalFILTERS.g:8443:2: ( rule__GSSFilterMintermFilter__UnorderedGroup_3__1 )
+        // InternalFILTERS.g:8443:2: rule__GSSFilterMintermFilter__UnorderedGroup_3__1
         {
         pushFollow(FollowSets000.FOLLOW_2);
         rule__GSSFilterMintermFilter__UnorderedGroup_3__1();

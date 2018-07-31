@@ -104,7 +104,7 @@ public class TM_TC_FORMATParser extends AbstractContentAssistParser {
 					put(grammarAccess.getREALAccess().getGroup_2(), "rule__REAL__Group_2__0");
 					put(grammarAccess.getGSSModelFileAccess().getImportsAssignment_0(), "rule__GSSModelFile__ImportsAssignment_0");
 					put(grammarAccess.getGSSModelFileAccess().getElementAssignment_1(), "rule__GSSModelFile__ElementAssignment_1");
-					put(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_1(), "rule__GSSModelFileImport__ImportURIAssignment_1");
+					put(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_2(), "rule__GSSModelFileImport__ImportURIAssignment_2");
 					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getNameAssignment_1(), "rule__GSSTmTcFormatTmTCFormat__NameAssignment_1");
 					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUriAssignment_3_0_2(), "rule__GSSTmTcFormatTmTCFormat__UriAssignment_3_0_2");
 					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getVersionAssignment_3_1_2(), "rule__GSSTmTcFormatTmTCFormat__VersionAssignment_3_1_2");
@@ -144,9 +144,9 @@ public class TM_TC_FORMATParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSTmTcFormatVSFieldAccess().getByteOrderAssignment_21(), "rule__GSSTmTcFormatVSField__ByteOrderAssignment_21");
 					put(grammarAccess.getGSSTmTcFormatVSFieldAccess().getFirstBitAssignment_25(), "rule__GSSTmTcFormatVSField__FirstBitAssignment_25");
 					put(grammarAccess.getGSSTmTcFormatVSFieldAccess().getConstSizeAssignment_27(), "rule__GSSTmTcFormatVSField__ConstSizeAssignment_27");
-					put(grammarAccess.getGSSTmTcFormatVSFieldAccess().getGlobalOffsetAssignment_28(), "rule__GSSTmTcFormatVSField__GlobalOffsetAssignment_28");
-					put(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeAssignment_29(), "rule__GSSTmTcFormatVSField__MaxSizeAssignment_29");
-					put(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeAssignment_30(), "rule__GSSTmTcFormatVSField__VariableSizeAssignment_30");
+					put(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeAssignment_28(), "rule__GSSTmTcFormatVSField__MaxSizeAssignment_28");
+					put(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeAssignment_29(), "rule__GSSTmTcFormatVSField__VariableSizeAssignment_29");
+					put(grammarAccess.getGSSTmTcFormatVSFieldAccess().getGlobalOffsetAssignment_30(), "rule__GSSTmTcFormatVSField__GlobalOffsetAssignment_30");
 					put(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getFidAssignment_4(), "rule__GSSTmTcFormatFDICField__FidAssignment_4");
 					put(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getPfidAssignment_8(), "rule__GSSTmTcFormatFDICField__PfidAssignment_8");
 					put(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getNameAssignment_12(), "rule__GSSTmTcFormatFDICField__NameAssignment_12");

@@ -5973,7 +5973,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterMinterm"
-    // InternalFILTERS.g:2504:1: ruleGSSFilterMinterm returns [EObject current=null] : (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) ( (lv_BoolVarRef_5_0= ruleGSSFilterBoolVarRef ) )+ otherlv_6= '}' otherlv_7= ';' ) ;
+    // InternalFILTERS.g:2504:1: ruleGSSFilterMinterm returns [EObject current=null] : (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' ) ;
     public final EObject ruleGSSFilterMinterm() throws RecognitionException {
         EObject current = null;
 
@@ -5981,22 +5981,23 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         Token otherlv_1=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
-        Token otherlv_6=null;
+        Token otherlv_5=null;
         Token otherlv_7=null;
+        Token otherlv_8=null;
         AntlrDatatypeRuleToken lv_id_4_0 = null;
 
-        EObject lv_BoolVarRef_5_0 = null;
+        EObject lv_BoolVarRef_6_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalFILTERS.g:2510:2: ( (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) ( (lv_BoolVarRef_5_0= ruleGSSFilterBoolVarRef ) )+ otherlv_6= '}' otherlv_7= ';' ) )
-            // InternalFILTERS.g:2511:2: (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) ( (lv_BoolVarRef_5_0= ruleGSSFilterBoolVarRef ) )+ otherlv_6= '}' otherlv_7= ';' )
+            // InternalFILTERS.g:2510:2: ( (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' ) )
+            // InternalFILTERS.g:2511:2: (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' )
             {
-            // InternalFILTERS.g:2511:2: (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) ( (lv_BoolVarRef_5_0= ruleGSSFilterBoolVarRef ) )+ otherlv_6= '}' otherlv_7= ';' )
-            // InternalFILTERS.g:2512:3: otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) ( (lv_BoolVarRef_5_0= ruleGSSFilterBoolVarRef ) )+ otherlv_6= '}' otherlv_7= ';'
+            // InternalFILTERS.g:2511:2: (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' )
+            // InternalFILTERS.g:2512:3: otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';'
             {
             otherlv_0=(Token)match(input,48,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -6033,7 +6034,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               					newCompositeNode(grammarAccess.getGSSFilterMintermAccess().getIdINTEGERParserRuleCall_4_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_45);
+            pushFollow(FollowSets000.FOLLOW_6);
             lv_id_4_0=ruleINTEGER();
 
             state._fsp--;
@@ -6057,7 +6058,13 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFILTERS.g:2547:3: ( (lv_BoolVarRef_5_0= ruleGSSFilterBoolVarRef ) )+
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_45); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_5, grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_5());
+              		
+            }
+            // InternalFILTERS.g:2551:3: ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+
             int cnt20=0;
             loop20:
             do {
@@ -6071,18 +6078,18 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
                 switch (alt20) {
             	case 1 :
-            	    // InternalFILTERS.g:2548:4: (lv_BoolVarRef_5_0= ruleGSSFilterBoolVarRef )
+            	    // InternalFILTERS.g:2552:4: (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef )
             	    {
-            	    // InternalFILTERS.g:2548:4: (lv_BoolVarRef_5_0= ruleGSSFilterBoolVarRef )
-            	    // InternalFILTERS.g:2549:5: lv_BoolVarRef_5_0= ruleGSSFilterBoolVarRef
+            	    // InternalFILTERS.g:2552:4: (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef )
+            	    // InternalFILTERS.g:2553:5: lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef
             	    {
             	    if ( state.backtracking==0 ) {
 
-            	      					newCompositeNode(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_5_0());
+            	      					newCompositeNode(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_6_0());
             	      				
             	    }
             	    pushFollow(FollowSets000.FOLLOW_46);
-            	    lv_BoolVarRef_5_0=ruleGSSFilterBoolVarRef();
+            	    lv_BoolVarRef_6_0=ruleGSSFilterBoolVarRef();
 
             	    state._fsp--;
             	    if (state.failed) return current;
@@ -6094,7 +6101,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	      					add(
             	      						current,
             	      						"BoolVarRef",
-            	      						lv_BoolVarRef_5_0,
+            	      						lv_BoolVarRef_6_0,
             	      						"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterBoolVarRef");
             	      					afterParserOrEnumRuleCall();
             	      				
@@ -6116,16 +6123,16 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                 cnt20++;
             } while (true);
 
-            otherlv_6=(Token)match(input,20,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            otherlv_7=(Token)match(input,20,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_6, grammarAccess.getGSSFilterMintermAccess().getRightCurlyBracketKeyword_6());
+              			newLeafNode(otherlv_7, grammarAccess.getGSSFilterMintermAccess().getRightCurlyBracketKeyword_7());
               		
             }
-            otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_8=(Token)match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_7, grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_7());
+              			newLeafNode(otherlv_8, grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_8());
               		
             }
 
@@ -6153,7 +6160,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSFilterBoolVarRef"
-    // InternalFILTERS.g:2578:1: entryRuleGSSFilterBoolVarRef returns [EObject current=null] : iv_ruleGSSFilterBoolVarRef= ruleGSSFilterBoolVarRef EOF ;
+    // InternalFILTERS.g:2582:1: entryRuleGSSFilterBoolVarRef returns [EObject current=null] : iv_ruleGSSFilterBoolVarRef= ruleGSSFilterBoolVarRef EOF ;
     public final EObject entryRuleGSSFilterBoolVarRef() throws RecognitionException {
         EObject current = null;
 
@@ -6161,8 +6168,8 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTERS.g:2578:60: (iv_ruleGSSFilterBoolVarRef= ruleGSSFilterBoolVarRef EOF )
-            // InternalFILTERS.g:2579:2: iv_ruleGSSFilterBoolVarRef= ruleGSSFilterBoolVarRef EOF
+            // InternalFILTERS.g:2582:60: (iv_ruleGSSFilterBoolVarRef= ruleGSSFilterBoolVarRef EOF )
+            // InternalFILTERS.g:2583:2: iv_ruleGSSFilterBoolVarRef= ruleGSSFilterBoolVarRef EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterBoolVarRefRule()); 
@@ -6193,7 +6200,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterBoolVarRef"
-    // InternalFILTERS.g:2585:1: ruleGSSFilterBoolVarRef returns [EObject current=null] : (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) ;
+    // InternalFILTERS.g:2589:1: ruleGSSFilterBoolVarRef returns [EObject current=null] : (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) ;
     public final EObject ruleGSSFilterBoolVarRef() throws RecognitionException {
         EObject current = null;
 
@@ -6211,11 +6218,11 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTERS.g:2591:2: ( (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) )
-            // InternalFILTERS.g:2592:2: (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
+            // InternalFILTERS.g:2595:2: ( (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) )
+            // InternalFILTERS.g:2596:2: (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
             {
-            // InternalFILTERS.g:2592:2: (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
-            // InternalFILTERS.g:2593:3: otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
+            // InternalFILTERS.g:2596:2: (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
+            // InternalFILTERS.g:2597:3: otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
             {
             otherlv_0=(Token)match(input,49,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -6241,11 +6248,11 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterBoolVarRefAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalFILTERS.g:2609:3: ( (lv_idRef_4_0= ruleINTEGER ) )
-            // InternalFILTERS.g:2610:4: (lv_idRef_4_0= ruleINTEGER )
+            // InternalFILTERS.g:2613:3: ( (lv_idRef_4_0= ruleINTEGER ) )
+            // InternalFILTERS.g:2614:4: (lv_idRef_4_0= ruleINTEGER )
             {
-            // InternalFILTERS.g:2610:4: (lv_idRef_4_0= ruleINTEGER )
-            // InternalFILTERS.g:2611:5: lv_idRef_4_0= ruleINTEGER
+            // InternalFILTERS.g:2614:4: (lv_idRef_4_0= ruleINTEGER )
+            // InternalFILTERS.g:2615:5: lv_idRef_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -6319,7 +6326,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEString"
-    // InternalFILTERS.g:2644:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
+    // InternalFILTERS.g:2648:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
     public final String entryRuleEString() throws RecognitionException {
         String current = null;
 
@@ -6327,8 +6334,8 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTERS.g:2644:47: (iv_ruleEString= ruleEString EOF )
-            // InternalFILTERS.g:2645:2: iv_ruleEString= ruleEString EOF
+            // InternalFILTERS.g:2648:47: (iv_ruleEString= ruleEString EOF )
+            // InternalFILTERS.g:2649:2: iv_ruleEString= ruleEString EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEStringRule()); 
@@ -6359,7 +6366,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEString"
-    // InternalFILTERS.g:2651:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
+    // InternalFILTERS.g:2655:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
     public final AntlrDatatypeRuleToken ruleEString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6370,10 +6377,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTERS.g:2657:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
-            // InternalFILTERS.g:2658:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // InternalFILTERS.g:2661:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
+            // InternalFILTERS.g:2662:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
             {
-            // InternalFILTERS.g:2658:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // InternalFILTERS.g:2662:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -6392,7 +6399,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             }
             switch (alt21) {
                 case 1 :
-                    // InternalFILTERS.g:2659:3: this_STRING_0= RULE_STRING
+                    // InternalFILTERS.g:2663:3: this_STRING_0= RULE_STRING
                     {
                     this_STRING_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -6409,7 +6416,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTERS.g:2667:3: this_ID_1= RULE_ID
+                    // InternalFILTERS.g:2671:3: this_ID_1= RULE_ID
                     {
                     this_ID_1=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -6450,7 +6457,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalFILTERS.g:2678:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalFILTERS.g:2682:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -6458,8 +6465,8 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTERS.g:2678:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalFILTERS.g:2679:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalFILTERS.g:2682:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalFILTERS.g:2683:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameRule()); 
@@ -6490,7 +6497,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalFILTERS.g:2685:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalFILTERS.g:2689:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6502,11 +6509,11 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTERS.g:2691:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // InternalFILTERS.g:2692:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalFILTERS.g:2695:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalFILTERS.g:2696:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // InternalFILTERS.g:2692:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // InternalFILTERS.g:2693:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // InternalFILTERS.g:2696:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalFILTERS.g:2697:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_48); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -6519,7 +6526,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
               		
             }
-            // InternalFILTERS.g:2700:3: (kw= '.' this_ID_2= RULE_ID )*
+            // InternalFILTERS.g:2704:3: (kw= '.' this_ID_2= RULE_ID )*
             loop22:
             do {
                 int alt22=2;
@@ -6532,7 +6539,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
                 switch (alt22) {
             	case 1 :
-            	    // InternalFILTERS.g:2701:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalFILTERS.g:2705:4: kw= '.' this_ID_2= RULE_ID
             	    {
             	    kw=(Token)match(input,51,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -6586,7 +6593,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersion"
-    // InternalFILTERS.g:2718:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
+    // InternalFILTERS.g:2722:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
     public final String entryRuleVersion() throws RecognitionException {
         String current = null;
 
@@ -6594,8 +6601,8 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTERS.g:2718:47: (iv_ruleVersion= ruleVersion EOF )
-            // InternalFILTERS.g:2719:2: iv_ruleVersion= ruleVersion EOF
+            // InternalFILTERS.g:2722:47: (iv_ruleVersion= ruleVersion EOF )
+            // InternalFILTERS.g:2723:2: iv_ruleVersion= ruleVersion EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionRule()); 
@@ -6626,7 +6633,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersion"
-    // InternalFILTERS.g:2725:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
+    // InternalFILTERS.g:2729:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
     public final AntlrDatatypeRuleToken ruleVersion() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6642,24 +6649,24 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTERS.g:2731:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
-            // InternalFILTERS.g:2732:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalFILTERS.g:2735:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
+            // InternalFILTERS.g:2736:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
             {
-            // InternalFILTERS.g:2732:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
-            // InternalFILTERS.g:2733:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalFILTERS.g:2736:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalFILTERS.g:2737:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             {
-            // InternalFILTERS.g:2733:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
+            // InternalFILTERS.g:2737:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
             int alt24=2;
             int LA24_0 = input.LA(1);
 
             if ( (LA24_0==RULE_INT) ) {
                 int LA24_1 = input.LA(2);
 
-                if ( (LA24_1==RULE_ID) ) {
-                    alt24=2;
-                }
-                else if ( (LA24_1==EOF||LA24_1==14||LA24_1==51||LA24_1==53) ) {
+                if ( (LA24_1==EOF||LA24_1==14||LA24_1==51||LA24_1==53) ) {
                     alt24=1;
+                }
+                else if ( (LA24_1==RULE_ID) ) {
+                    alt24=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -6681,7 +6688,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             }
             switch (alt24) {
                 case 1 :
-                    // InternalFILTERS.g:2734:4: this_INT_0= RULE_INT
+                    // InternalFILTERS.g:2738:4: this_INT_0= RULE_INT
                     {
                     this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_48); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -6698,12 +6705,12 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTERS.g:2742:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalFILTERS.g:2746:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
                     {
-                    // InternalFILTERS.g:2742:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
-                    // InternalFILTERS.g:2743:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
+                    // InternalFILTERS.g:2746:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalFILTERS.g:2747:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
                     {
-                    // InternalFILTERS.g:2743:5: (this_INT_1= RULE_INT )?
+                    // InternalFILTERS.g:2747:5: (this_INT_1= RULE_INT )?
                     int alt23=2;
                     int LA23_0 = input.LA(1);
 
@@ -6712,7 +6719,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt23) {
                         case 1 :
-                            // InternalFILTERS.g:2744:6: this_INT_1= RULE_INT
+                            // InternalFILTERS.g:2748:6: this_INT_1= RULE_INT
                             {
                             this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_7); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -6751,7 +6758,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFILTERS.g:2761:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalFILTERS.g:2765:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             loop27:
             do {
                 int alt27=2;
@@ -6764,7 +6771,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
                 switch (alt27) {
             	case 1 :
-            	    // InternalFILTERS.g:2762:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalFILTERS.g:2766:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    {
             	    kw=(Token)match(input,51,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -6773,7 +6780,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(kw, grammarAccess.getVersionAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    // InternalFILTERS.g:2767:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalFILTERS.g:2771:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    int alt26=2;
             	    int LA26_0 = input.LA(1);
 
@@ -6806,7 +6813,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt26) {
             	        case 1 :
-            	            // InternalFILTERS.g:2768:5: this_INT_4= RULE_INT
+            	            // InternalFILTERS.g:2772:5: this_INT_4= RULE_INT
             	            {
             	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_48); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -6823,12 +6830,12 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalFILTERS.g:2776:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalFILTERS.g:2780:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
             	            {
-            	            // InternalFILTERS.g:2776:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
-            	            // InternalFILTERS.g:2777:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
+            	            // InternalFILTERS.g:2780:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalFILTERS.g:2781:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
             	            {
-            	            // InternalFILTERS.g:2777:6: (this_INT_5= RULE_INT )?
+            	            // InternalFILTERS.g:2781:6: (this_INT_5= RULE_INT )?
             	            int alt25=2;
             	            int LA25_0 = input.LA(1);
 
@@ -6837,7 +6844,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	            }
             	            switch (alt25) {
             	                case 1 :
-            	                    // InternalFILTERS.g:2778:7: this_INT_5= RULE_INT
+            	                    // InternalFILTERS.g:2782:7: this_INT_5= RULE_INT
             	                    {
             	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	                    if ( state.backtracking==0 ) {
@@ -6910,7 +6917,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersionedQualifiedName"
-    // InternalFILTERS.g:2800:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
+    // InternalFILTERS.g:2804:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
     public final String entryRuleVersionedQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -6918,8 +6925,8 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTERS.g:2800:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
-            // InternalFILTERS.g:2801:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
+            // InternalFILTERS.g:2804:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
+            // InternalFILTERS.g:2805:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionedQualifiedNameRule()); 
@@ -6950,7 +6957,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersionedQualifiedName"
-    // InternalFILTERS.g:2807:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
+    // InternalFILTERS.g:2811:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
     public final AntlrDatatypeRuleToken ruleVersionedQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6964,11 +6971,11 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTERS.g:2813:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
-            // InternalFILTERS.g:2814:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalFILTERS.g:2817:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
+            // InternalFILTERS.g:2818:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
             {
-            // InternalFILTERS.g:2814:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
-            // InternalFILTERS.g:2815:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
+            // InternalFILTERS.g:2818:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalFILTERS.g:2819:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
             {
             if ( state.backtracking==0 ) {
 
@@ -7049,7 +7056,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleINTEGER"
-    // InternalFILTERS.g:2849:1: entryRuleINTEGER returns [String current=null] : iv_ruleINTEGER= ruleINTEGER EOF ;
+    // InternalFILTERS.g:2853:1: entryRuleINTEGER returns [String current=null] : iv_ruleINTEGER= ruleINTEGER EOF ;
     public final String entryRuleINTEGER() throws RecognitionException {
         String current = null;
 
@@ -7057,8 +7064,8 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTERS.g:2849:47: (iv_ruleINTEGER= ruleINTEGER EOF )
-            // InternalFILTERS.g:2850:2: iv_ruleINTEGER= ruleINTEGER EOF
+            // InternalFILTERS.g:2853:47: (iv_ruleINTEGER= ruleINTEGER EOF )
+            // InternalFILTERS.g:2854:2: iv_ruleINTEGER= ruleINTEGER EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getINTEGERRule()); 
@@ -7089,7 +7096,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleINTEGER"
-    // InternalFILTERS.g:2856:1: ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) ;
+    // InternalFILTERS.g:2860:1: ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) ;
     public final AntlrDatatypeRuleToken ruleINTEGER() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -7101,10 +7108,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTERS.g:2862:2: ( ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) )
-            // InternalFILTERS.g:2863:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
+            // InternalFILTERS.g:2866:2: ( ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) )
+            // InternalFILTERS.g:2867:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
             {
-            // InternalFILTERS.g:2863:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
+            // InternalFILTERS.g:2867:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -7123,12 +7130,12 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             }
             switch (alt29) {
                 case 1 :
-                    // InternalFILTERS.g:2864:3: ( (kw= '-' )? this_INT_1= RULE_INT )
+                    // InternalFILTERS.g:2868:3: ( (kw= '-' )? this_INT_1= RULE_INT )
                     {
-                    // InternalFILTERS.g:2864:3: ( (kw= '-' )? this_INT_1= RULE_INT )
-                    // InternalFILTERS.g:2865:4: (kw= '-' )? this_INT_1= RULE_INT
+                    // InternalFILTERS.g:2868:3: ( (kw= '-' )? this_INT_1= RULE_INT )
+                    // InternalFILTERS.g:2869:4: (kw= '-' )? this_INT_1= RULE_INT
                     {
-                    // InternalFILTERS.g:2865:4: (kw= '-' )?
+                    // InternalFILTERS.g:2869:4: (kw= '-' )?
                     int alt28=2;
                     int LA28_0 = input.LA(1);
 
@@ -7137,7 +7144,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt28) {
                         case 1 :
-                            // InternalFILTERS.g:2866:5: kw= '-'
+                            // InternalFILTERS.g:2870:5: kw= '-'
                             {
                             kw=(Token)match(input,54,FollowSets000.FOLLOW_51); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -7170,7 +7177,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTERS.g:2881:3: this_HEXADECIMAL_2= RULE_HEXADECIMAL
+                    // InternalFILTERS.g:2885:3: this_HEXADECIMAL_2= RULE_HEXADECIMAL
                     {
                     this_HEXADECIMAL_2=(Token)match(input,RULE_HEXADECIMAL,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7211,7 +7218,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterConstantType"
-    // InternalFILTERS.g:2892:1: ruleGSSFilterConstantType returns [Enumerator current=null] : ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) ) ;
+    // InternalFILTERS.g:2896:1: ruleGSSFilterConstantType returns [Enumerator current=null] : ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) ) ;
     public final Enumerator ruleGSSFilterConstantType() throws RecognitionException {
         Enumerator current = null;
 
@@ -7225,10 +7232,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTERS.g:2898:2: ( ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) ) )
-            // InternalFILTERS.g:2899:2: ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) )
+            // InternalFILTERS.g:2902:2: ( ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) ) )
+            // InternalFILTERS.g:2903:2: ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) )
             {
-            // InternalFILTERS.g:2899:2: ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) )
+            // InternalFILTERS.g:2903:2: ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) )
             int alt30=5;
             switch ( input.LA(1) ) {
             case 55:
@@ -7266,10 +7273,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             switch (alt30) {
                 case 1 :
-                    // InternalFILTERS.g:2900:3: (enumLiteral_0= 'decimal' )
+                    // InternalFILTERS.g:2904:3: (enumLiteral_0= 'decimal' )
                     {
-                    // InternalFILTERS.g:2900:3: (enumLiteral_0= 'decimal' )
-                    // InternalFILTERS.g:2901:4: enumLiteral_0= 'decimal'
+                    // InternalFILTERS.g:2904:3: (enumLiteral_0= 'decimal' )
+                    // InternalFILTERS.g:2905:4: enumLiteral_0= 'decimal'
                     {
                     enumLiteral_0=(Token)match(input,55,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7285,10 +7292,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTERS.g:2908:3: (enumLiteral_1= 'hex' )
+                    // InternalFILTERS.g:2912:3: (enumLiteral_1= 'hex' )
                     {
-                    // InternalFILTERS.g:2908:3: (enumLiteral_1= 'hex' )
-                    // InternalFILTERS.g:2909:4: enumLiteral_1= 'hex'
+                    // InternalFILTERS.g:2912:3: (enumLiteral_1= 'hex' )
+                    // InternalFILTERS.g:2913:4: enumLiteral_1= 'hex'
                     {
                     enumLiteral_1=(Token)match(input,56,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7304,10 +7311,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalFILTERS.g:2916:3: (enumLiteral_2= 'binary' )
+                    // InternalFILTERS.g:2920:3: (enumLiteral_2= 'binary' )
                     {
-                    // InternalFILTERS.g:2916:3: (enumLiteral_2= 'binary' )
-                    // InternalFILTERS.g:2917:4: enumLiteral_2= 'binary'
+                    // InternalFILTERS.g:2920:3: (enumLiteral_2= 'binary' )
+                    // InternalFILTERS.g:2921:4: enumLiteral_2= 'binary'
                     {
                     enumLiteral_2=(Token)match(input,57,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7323,10 +7330,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalFILTERS.g:2924:3: (enumLiteral_3= 'char' )
+                    // InternalFILTERS.g:2928:3: (enumLiteral_3= 'char' )
                     {
-                    // InternalFILTERS.g:2924:3: (enumLiteral_3= 'char' )
-                    // InternalFILTERS.g:2925:4: enumLiteral_3= 'char'
+                    // InternalFILTERS.g:2928:3: (enumLiteral_3= 'char' )
+                    // InternalFILTERS.g:2929:4: enumLiteral_3= 'char'
                     {
                     enumLiteral_3=(Token)match(input,58,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7342,10 +7349,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalFILTERS.g:2932:3: (enumLiteral_4= 'string' )
+                    // InternalFILTERS.g:2936:3: (enumLiteral_4= 'string' )
                     {
-                    // InternalFILTERS.g:2932:3: (enumLiteral_4= 'string' )
-                    // InternalFILTERS.g:2933:4: enumLiteral_4= 'string'
+                    // InternalFILTERS.g:2936:3: (enumLiteral_4= 'string' )
+                    // InternalFILTERS.g:2937:4: enumLiteral_4= 'string'
                     {
                     enumLiteral_4=(Token)match(input,59,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7385,7 +7392,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterOPType"
-    // InternalFILTERS.g:2943:1: ruleGSSFilterOPType returns [Enumerator current=null] : ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) ) ;
+    // InternalFILTERS.g:2947:1: ruleGSSFilterOPType returns [Enumerator current=null] : ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) ) ;
     public final Enumerator ruleGSSFilterOPType() throws RecognitionException {
         Enumerator current = null;
 
@@ -7400,10 +7407,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTERS.g:2949:2: ( ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) ) )
-            // InternalFILTERS.g:2950:2: ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) )
+            // InternalFILTERS.g:2953:2: ( ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) ) )
+            // InternalFILTERS.g:2954:2: ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) )
             {
-            // InternalFILTERS.g:2950:2: ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) )
+            // InternalFILTERS.g:2954:2: ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) )
             int alt31=6;
             switch ( input.LA(1) ) {
             case 60:
@@ -7446,10 +7453,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             switch (alt31) {
                 case 1 :
-                    // InternalFILTERS.g:2951:3: (enumLiteral_0= 'equal' )
+                    // InternalFILTERS.g:2955:3: (enumLiteral_0= 'equal' )
                     {
-                    // InternalFILTERS.g:2951:3: (enumLiteral_0= 'equal' )
-                    // InternalFILTERS.g:2952:4: enumLiteral_0= 'equal'
+                    // InternalFILTERS.g:2955:3: (enumLiteral_0= 'equal' )
+                    // InternalFILTERS.g:2956:4: enumLiteral_0= 'equal'
                     {
                     enumLiteral_0=(Token)match(input,60,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7465,10 +7472,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTERS.g:2959:3: (enumLiteral_1= 'different' )
+                    // InternalFILTERS.g:2963:3: (enumLiteral_1= 'different' )
                     {
-                    // InternalFILTERS.g:2959:3: (enumLiteral_1= 'different' )
-                    // InternalFILTERS.g:2960:4: enumLiteral_1= 'different'
+                    // InternalFILTERS.g:2963:3: (enumLiteral_1= 'different' )
+                    // InternalFILTERS.g:2964:4: enumLiteral_1= 'different'
                     {
                     enumLiteral_1=(Token)match(input,61,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7484,10 +7491,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalFILTERS.g:2967:3: (enumLiteral_2= 'bigger_than' )
+                    // InternalFILTERS.g:2971:3: (enumLiteral_2= 'bigger_than' )
                     {
-                    // InternalFILTERS.g:2967:3: (enumLiteral_2= 'bigger_than' )
-                    // InternalFILTERS.g:2968:4: enumLiteral_2= 'bigger_than'
+                    // InternalFILTERS.g:2971:3: (enumLiteral_2= 'bigger_than' )
+                    // InternalFILTERS.g:2972:4: enumLiteral_2= 'bigger_than'
                     {
                     enumLiteral_2=(Token)match(input,62,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7503,10 +7510,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalFILTERS.g:2975:3: (enumLiteral_3= 'smaller_than' )
+                    // InternalFILTERS.g:2979:3: (enumLiteral_3= 'smaller_than' )
                     {
-                    // InternalFILTERS.g:2975:3: (enumLiteral_3= 'smaller_than' )
-                    // InternalFILTERS.g:2976:4: enumLiteral_3= 'smaller_than'
+                    // InternalFILTERS.g:2979:3: (enumLiteral_3= 'smaller_than' )
+                    // InternalFILTERS.g:2980:4: enumLiteral_3= 'smaller_than'
                     {
                     enumLiteral_3=(Token)match(input,63,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7522,10 +7529,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalFILTERS.g:2983:3: (enumLiteral_4= 'bigger_or_equal' )
+                    // InternalFILTERS.g:2987:3: (enumLiteral_4= 'bigger_or_equal' )
                     {
-                    // InternalFILTERS.g:2983:3: (enumLiteral_4= 'bigger_or_equal' )
-                    // InternalFILTERS.g:2984:4: enumLiteral_4= 'bigger_or_equal'
+                    // InternalFILTERS.g:2987:3: (enumLiteral_4= 'bigger_or_equal' )
+                    // InternalFILTERS.g:2988:4: enumLiteral_4= 'bigger_or_equal'
                     {
                     enumLiteral_4=(Token)match(input,64,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7541,10 +7548,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalFILTERS.g:2991:3: (enumLiteral_5= 'smaller_or_equal' )
+                    // InternalFILTERS.g:2995:3: (enumLiteral_5= 'smaller_or_equal' )
                     {
-                    // InternalFILTERS.g:2991:3: (enumLiteral_5= 'smaller_or_equal' )
-                    // InternalFILTERS.g:2992:4: enumLiteral_5= 'smaller_or_equal'
+                    // InternalFILTERS.g:2995:3: (enumLiteral_5= 'smaller_or_equal' )
+                    // InternalFILTERS.g:2996:4: enumLiteral_5= 'smaller_or_equal'
                     {
                     enumLiteral_5=(Token)match(input,65,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7584,7 +7591,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterSelectType"
-    // InternalFILTERS.g:3002:1: ruleGSSFilterSelectType returns [Enumerator current=null] : ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) ) ;
+    // InternalFILTERS.g:3006:1: ruleGSSFilterSelectType returns [Enumerator current=null] : ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) ) ;
     public final Enumerator ruleGSSFilterSelectType() throws RecognitionException {
         Enumerator current = null;
 
@@ -7596,10 +7603,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTERS.g:3008:2: ( ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) ) )
-            // InternalFILTERS.g:3009:2: ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) )
+            // InternalFILTERS.g:3012:2: ( ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) ) )
+            // InternalFILTERS.g:3013:2: ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) )
             {
-            // InternalFILTERS.g:3009:2: ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) )
+            // InternalFILTERS.g:3013:2: ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) )
             int alt32=3;
             switch ( input.LA(1) ) {
             case 66:
@@ -7627,10 +7634,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
 
             switch (alt32) {
                 case 1 :
-                    // InternalFILTERS.g:3010:3: (enumLiteral_0= 'data' )
+                    // InternalFILTERS.g:3014:3: (enumLiteral_0= 'data' )
                     {
-                    // InternalFILTERS.g:3010:3: (enumLiteral_0= 'data' )
-                    // InternalFILTERS.g:3011:4: enumLiteral_0= 'data'
+                    // InternalFILTERS.g:3014:3: (enumLiteral_0= 'data' )
+                    // InternalFILTERS.g:3015:4: enumLiteral_0= 'data'
                     {
                     enumLiteral_0=(Token)match(input,66,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7646,10 +7653,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTERS.g:3018:3: (enumLiteral_1= 'size' )
+                    // InternalFILTERS.g:3022:3: (enumLiteral_1= 'size' )
                     {
-                    // InternalFILTERS.g:3018:3: (enumLiteral_1= 'size' )
-                    // InternalFILTERS.g:3019:4: enumLiteral_1= 'size'
+                    // InternalFILTERS.g:3022:3: (enumLiteral_1= 'size' )
+                    // InternalFILTERS.g:3023:4: enumLiteral_1= 'size'
                     {
                     enumLiteral_1=(Token)match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7665,10 +7672,10 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalFILTERS.g:3026:3: (enumLiteral_2= 'crc' )
+                    // InternalFILTERS.g:3030:3: (enumLiteral_2= 'crc' )
                     {
-                    // InternalFILTERS.g:3026:3: (enumLiteral_2= 'crc' )
-                    // InternalFILTERS.g:3027:4: enumLiteral_2= 'crc'
+                    // InternalFILTERS.g:3030:3: (enumLiteral_2= 'crc' )
+                    // InternalFILTERS.g:3031:4: enumLiteral_2= 'crc'
                     {
                     enumLiteral_2=(Token)match(input,67,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {

@@ -16,18 +16,24 @@ import es.uah.aut.srg.gss.config.GSSConfigInterfaceType;
 import es.uah.aut.srg.gss.config.GSSConfigLevelIn;
 import es.uah.aut.srg.gss.config.GSSConfigLevelInOut;
 import es.uah.aut.srg.gss.config.GSSConfigLevelOut;
+import es.uah.aut.srg.gss.config.GSSConfigProtocol;
 import es.uah.aut.srg.gss.config.configPackage;
 
+import es.uah.aut.srg.gss.iface.GSSIfacePortConfig;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -123,24 +129,14 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 	protected boolean ifTypeESet;
 
 	/**
-	 * The default value of the '{@link #getIfConfig() <em>If Config</em>}' attribute.
+	 * The cached value of the '{@link #getIfConfig() <em>If Config</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIfConfig()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String IF_CONFIG_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getIfConfig() <em>If Config</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIfConfig()
-	 * @generated
-	 * @ordered
-	 */
-	protected String ifConfig = IF_CONFIG_EDEFAULT;
+	protected GSSIfacePortConfig ifConfig;
 
 	/**
 	 * The default value of the '{@link #getIoType() <em>Io Type</em>}' attribute.
@@ -172,24 +168,14 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 	protected boolean ioTypeESet;
 
 	/**
-	 * The default value of the '{@link #getProtocolID() <em>Protocol ID</em>}' attribute.
+	 * The cached value of the '{@link #getProtocolID() <em>Protocol ID</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProtocolID()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PROTOCOL_ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getProtocolID() <em>Protocol ID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProtocolID()
-	 * @generated
-	 * @ordered
-	 */
-	protected String protocolID = PROTOCOL_ID_EDEFAULT;
+	protected GSSConfigProtocol protocolID;
 
 	/**
 	 * The cached value of the '{@link #getLevelInOut() <em>Level In Out</em>}' containment reference list.
@@ -333,7 +319,15 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getIfConfig() {
+	public GSSIfacePortConfig getIfConfig() {
+		if (ifConfig != null && ifConfig.eIsProxy()) {
+			InternalEObject oldIfConfig = (InternalEObject)ifConfig;
+			ifConfig = (GSSIfacePortConfig)eResolveProxy(oldIfConfig);
+			if (ifConfig != oldIfConfig) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_INTERFACE__IF_CONFIG, oldIfConfig, ifConfig));
+			}
+		}
 		return ifConfig;
 	}
 
@@ -342,8 +336,17 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIfConfig(String newIfConfig) {
-		String oldIfConfig = ifConfig;
+	public GSSIfacePortConfig basicGetIfConfig() {
+		return ifConfig;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIfConfig(GSSIfacePortConfig newIfConfig) {
+		GSSIfacePortConfig oldIfConfig = ifConfig;
 		ifConfig = newIfConfig;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_INTERFACE__IF_CONFIG, oldIfConfig, ifConfig));
@@ -400,7 +403,15 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getProtocolID() {
+	public GSSConfigProtocol getProtocolID() {
+		if (protocolID != null && protocolID.eIsProxy()) {
+			InternalEObject oldProtocolID = (InternalEObject)protocolID;
+			protocolID = (GSSConfigProtocol)eResolveProxy(oldProtocolID);
+			if (protocolID != oldProtocolID) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_INTERFACE__PROTOCOL_ID, oldProtocolID, protocolID));
+			}
+		}
 		return protocolID;
 	}
 
@@ -409,8 +420,17 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProtocolID(String newProtocolID) {
-		String oldProtocolID = protocolID;
+	public GSSConfigProtocol basicGetProtocolID() {
+		return protocolID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProtocolID(GSSConfigProtocol newProtocolID) {
+		GSSConfigProtocol oldProtocolID = protocolID;
 		protocolID = newProtocolID;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_INTERFACE__PROTOCOL_ID, oldProtocolID, protocolID));
@@ -485,11 +505,13 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 			case configPackage.GSS_CONFIG_INTERFACE__IF_TYPE:
 				return getIfType();
 			case configPackage.GSS_CONFIG_INTERFACE__IF_CONFIG:
-				return getIfConfig();
+				if (resolve) return getIfConfig();
+				return basicGetIfConfig();
 			case configPackage.GSS_CONFIG_INTERFACE__IO_TYPE:
 				return getIoType();
 			case configPackage.GSS_CONFIG_INTERFACE__PROTOCOL_ID:
-				return getProtocolID();
+				if (resolve) return getProtocolID();
+				return basicGetProtocolID();
 			case configPackage.GSS_CONFIG_INTERFACE__LEVEL_IN_OUT:
 				return getLevelInOut();
 			case configPackage.GSS_CONFIG_INTERFACE__LEVEL_IN:
@@ -519,13 +541,13 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 				setIfType((GSSConfigInterfaceType)newValue);
 				return;
 			case configPackage.GSS_CONFIG_INTERFACE__IF_CONFIG:
-				setIfConfig((String)newValue);
+				setIfConfig((GSSIfacePortConfig)newValue);
 				return;
 			case configPackage.GSS_CONFIG_INTERFACE__IO_TYPE:
 				setIoType((GSSConfigInterfaceIOType)newValue);
 				return;
 			case configPackage.GSS_CONFIG_INTERFACE__PROTOCOL_ID:
-				setProtocolID((String)newValue);
+				setProtocolID((GSSConfigProtocol)newValue);
 				return;
 			case configPackage.GSS_CONFIG_INTERFACE__LEVEL_IN_OUT:
 				getLevelInOut().clear();
@@ -561,13 +583,13 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 				unsetIfType();
 				return;
 			case configPackage.GSS_CONFIG_INTERFACE__IF_CONFIG:
-				setIfConfig(IF_CONFIG_EDEFAULT);
+				setIfConfig((GSSIfacePortConfig)null);
 				return;
 			case configPackage.GSS_CONFIG_INTERFACE__IO_TYPE:
 				unsetIoType();
 				return;
 			case configPackage.GSS_CONFIG_INTERFACE__PROTOCOL_ID:
-				setProtocolID(PROTOCOL_ID_EDEFAULT);
+				setProtocolID((GSSConfigProtocol)null);
 				return;
 			case configPackage.GSS_CONFIG_INTERFACE__LEVEL_IN_OUT:
 				getLevelInOut().clear();
@@ -597,11 +619,11 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 			case configPackage.GSS_CONFIG_INTERFACE__IF_TYPE:
 				return isSetIfType();
 			case configPackage.GSS_CONFIG_INTERFACE__IF_CONFIG:
-				return IF_CONFIG_EDEFAULT == null ? ifConfig != null : !IF_CONFIG_EDEFAULT.equals(ifConfig);
+				return ifConfig != null;
 			case configPackage.GSS_CONFIG_INTERFACE__IO_TYPE:
 				return isSetIoType();
 			case configPackage.GSS_CONFIG_INTERFACE__PROTOCOL_ID:
-				return PROTOCOL_ID_EDEFAULT == null ? protocolID != null : !PROTOCOL_ID_EDEFAULT.equals(protocolID);
+				return protocolID != null;
 			case configPackage.GSS_CONFIG_INTERFACE__LEVEL_IN_OUT:
 				return levelInOut != null && !levelInOut.isEmpty();
 			case configPackage.GSS_CONFIG_INTERFACE__LEVEL_IN:
@@ -628,12 +650,8 @@ public class GSSConfigInterfaceImpl extends MinimalEObjectImpl.Container impleme
 		result.append(name);
 		result.append(", ifType: ");
 		if (ifTypeESet) result.append(ifType); else result.append("<unset>");
-		result.append(", ifConfig: ");
-		result.append(ifConfig);
 		result.append(", ioType: ");
 		if (ioTypeESet) result.append(ioType); else result.append("<unset>");
-		result.append(", protocolID: ");
-		result.append(protocolID);
 		result.append(')');
 		return result.toString();
 	}

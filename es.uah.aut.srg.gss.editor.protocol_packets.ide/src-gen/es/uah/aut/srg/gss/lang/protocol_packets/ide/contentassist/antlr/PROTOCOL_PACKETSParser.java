@@ -53,7 +53,6 @@ public class PROTOCOL_PACKETSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getGroup_3_0(), "rule__GSSProtocolPacketsProtocolPackets__Group_3_0__0");
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getGroup_3_1(), "rule__GSSProtocolPacketsProtocolPackets__Group_3_1__0");
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getGroup(), "rule__GSSProtocolPacketsProtocolPacket__Group__0");
-					put(grammarAccess.getGSSProtocolPacketsFormatAccess().getGroup(), "rule__GSSProtocolPacketsFormat__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getVersionAccess().getGroup(), "rule__Version__Group__0");
@@ -70,7 +69,7 @@ public class PROTOCOL_PACKETSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getREALAccess().getGroup_2(), "rule__REAL__Group_2__0");
 					put(grammarAccess.getGSSModelFileAccess().getImportsAssignment_0(), "rule__GSSModelFile__ImportsAssignment_0");
 					put(grammarAccess.getGSSModelFileAccess().getElementAssignment_1(), "rule__GSSModelFile__ElementAssignment_1");
-					put(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_2(), "rule__GSSModelFileImport__ImportURIAssignment_2");
+					put(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_1(), "rule__GSSModelFileImport__ImportURIAssignment_1");
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getNameAssignment_1(), "rule__GSSProtocolPacketsProtocolPackets__NameAssignment_1");
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUriAssignment_3_0_2(), "rule__GSSProtocolPacketsProtocolPackets__UriAssignment_3_0_2");
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getVersionAssignment_3_1_2(), "rule__GSSProtocolPacketsProtocolPackets__VersionAssignment_3_1_2");
@@ -79,8 +78,7 @@ public class PROTOCOL_PACKETSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getIfRefAssignment_8(), "rule__GSSProtocolPacketsProtocolPacket__IfRefAssignment_8");
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getLevelRefAssignment_12(), "rule__GSSProtocolPacketsProtocolPacket__LevelRefAssignment_12");
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportAssignment_16(), "rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_16");
-					put(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatAssignment_18(), "rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_18");
-					put(grammarAccess.getGSSProtocolPacketsFormatAccess().getFileAssignment_4(), "rule__GSSProtocolPacketsFormat__FileAssignment_4");
+					put(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatAssignment_20(), "rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_20");
 					put(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getUnorderedGroup_3(), "rule__GSSProtocolPacketsProtocolPackets__UnorderedGroup_3");
 				}
 			};

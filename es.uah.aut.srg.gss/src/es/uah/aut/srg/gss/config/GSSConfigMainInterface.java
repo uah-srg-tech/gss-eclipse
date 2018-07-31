@@ -10,7 +10,9 @@
  */
 package es.uah.aut.srg.gss.config;
 
+import es.uah.aut.srg.gss.iface.GSSIfacePortConfig;
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -145,30 +147,30 @@ public interface GSSConfigMainInterface extends EObject {
 	boolean isSetIfType();
 
 	/**
-	 * Returns the value of the '<em><b>If Config</b></em>' attribute.
+	 * Returns the value of the '<em><b>If Config</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>If Config</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>If Config</em>' attribute.
-	 * @see #setIfConfig(String)
+	 * @return the value of the '<em>If Config</em>' reference.
+	 * @see #setIfConfig(GSSIfacePortConfig)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigMainInterface_IfConfig()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getIfConfig();
+	GSSIfacePortConfig getIfConfig();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIfConfig <em>If Config</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIfConfig <em>If Config</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>If Config</em>' attribute.
+	 * @param value the new value of the '<em>If Config</em>' reference.
 	 * @see #getIfConfig()
 	 * @generated
 	 */
-	void setIfConfig(String value);
+	void setIfConfig(GSSIfacePortConfig value);
 
 	/**
 	 * Returns the value of the '<em><b>Io Type</b></em>' attribute.
@@ -227,37 +229,37 @@ public interface GSSConfigMainInterface extends EObject {
 	boolean isSetIoType();
 
 	/**
-	 * Returns the value of the '<em><b>Protocol ID</b></em>' attribute.
+	 * Returns the value of the '<em><b>Protocol ID</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Protocol ID</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Protocol ID</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Protocol ID</em>' attribute.
-	 * @see #setProtocolID(String)
+	 * @return the value of the '<em>Protocol ID</em>' reference.
+	 * @see #setProtocolID(GSSConfigProtocol)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigMainInterface_ProtocolID()
 	 * @model
 	 * @generated
 	 */
-	String getProtocolID();
+	GSSConfigProtocol getProtocolID();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getProtocolID <em>Protocol ID</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getProtocolID <em>Protocol ID</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Protocol ID</em>' attribute.
+	 * @param value the new value of the '<em>Protocol ID</em>' reference.
 	 * @see #getProtocolID()
 	 * @generated
 	 */
-	void setProtocolID(String value);
+	void setProtocolID(GSSConfigProtocol value);
 
 	/**
 	 * Returns the value of the '<em><b>Level In Out</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Level In Out</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Level In Out</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

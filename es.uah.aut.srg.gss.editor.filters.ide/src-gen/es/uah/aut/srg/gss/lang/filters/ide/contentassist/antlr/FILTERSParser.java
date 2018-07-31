@@ -170,7 +170,7 @@ public class FILTERSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSFilterMaxtermAccess().getIdAssignment_4(), "rule__GSSFilterMaxterm__IdAssignment_4");
 					put(grammarAccess.getGSSFilterMaxtermAccess().getBoolVarRefAssignment_6(), "rule__GSSFilterMaxterm__BoolVarRefAssignment_6");
 					put(grammarAccess.getGSSFilterMintermAccess().getIdAssignment_4(), "rule__GSSFilterMinterm__IdAssignment_4");
-					put(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefAssignment_5(), "rule__GSSFilterMinterm__BoolVarRefAssignment_5");
+					put(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefAssignment_6(), "rule__GSSFilterMinterm__BoolVarRefAssignment_6");
 					put(grammarAccess.getGSSFilterBoolVarRefAccess().getIdRefAssignment_4(), "rule__GSSFilterBoolVarRef__IdRefAssignment_4");
 					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), "rule__GSSFilterMaxtermFilter__UnorderedGroup_3");
 					put(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), "rule__GSSFilterMintermFilter__UnorderedGroup_3");

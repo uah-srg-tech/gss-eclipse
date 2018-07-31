@@ -10824,7 +10824,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             // InternalIFACE.g:3375:1: ( rule__GSSIfaceUartProtocol__Group__13__Impl rule__GSSIfaceUartProtocol__Group__14 )
             // InternalIFACE.g:3376:2: rule__GSSIfaceUartProtocol__Group__13__Impl rule__GSSIfaceUartProtocol__Group__14
             {
-            pushFollow(FollowSets000.FOLLOW_11);
+            pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSIfaceUartProtocol__Group__13__Impl();
 
             state._fsp--;
@@ -10853,29 +10853,40 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__13__Impl"
-    // InternalIFACE.g:3383:1: rule__GSSIfaceUartProtocol__Group__13__Impl : ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 ) ) ;
+    // InternalIFACE.g:3383:1: rule__GSSIfaceUartProtocol__Group__13__Impl : ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )? ) ;
     public final void rule__GSSIfaceUartProtocol__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3387:1: ( ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 ) ) )
-            // InternalIFACE.g:3388:1: ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 ) )
+            // InternalIFACE.g:3387:1: ( ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )? ) )
+            // InternalIFACE.g:3388:1: ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )? )
             {
-            // InternalIFACE.g:3388:1: ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 ) )
-            // InternalIFACE.g:3389:2: ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )
+            // InternalIFACE.g:3388:1: ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )? )
+            // InternalIFACE.g:3389:2: ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getSyncPatternAssignment_13()); 
             }
-            // InternalIFACE.g:3390:2: ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )
-            // InternalIFACE.g:3390:3: rule__GSSIfaceUartProtocol__SyncPatternAssignment_13
-            {
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSIfaceUartProtocol__SyncPatternAssignment_13();
+            // InternalIFACE.g:3390:2: ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            state._fsp--;
-            if (state.failed) return ;
+            if ( (LA14_0==60) ) {
+                alt14=1;
+            }
+            switch (alt14) {
+                case 1 :
+                    // InternalIFACE.g:3390:3: rule__GSSIfaceUartProtocol__SyncPatternAssignment_13
+                    {
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    rule__GSSIfaceUartProtocol__SyncPatternAssignment_13();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
 
             }
 
@@ -15738,17 +15749,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                before(grammarAccess.getQualifiedNameAccess().getGroup_1()); 
             }
             // InternalIFACE.g:5036:2: ( rule__QualifiedName__Group_1__0 )*
-            loop14:
+            loop15:
             do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
+                int alt15=2;
+                int LA15_0 = input.LA(1);
 
-                if ( (LA14_0==65) ) {
-                    alt14=1;
+                if ( (LA15_0==65) ) {
+                    alt15=1;
                 }
 
 
-                switch (alt14) {
+                switch (alt15) {
             	case 1 :
             	    // InternalIFACE.g:5036:3: rule__QualifiedName__Group_1__0
             	    {
@@ -15762,7 +15773,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop15;
                 }
             } while (true);
 
@@ -16082,17 +16093,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                before(grammarAccess.getVersionAccess().getGroup_1()); 
             }
             // InternalIFACE.g:5144:2: ( rule__Version__Group_1__0 )*
-            loop15:
+            loop16:
             do {
-                int alt15=2;
-                int LA15_0 = input.LA(1);
+                int alt16=2;
+                int LA16_0 = input.LA(1);
 
-                if ( (LA15_0==65) ) {
-                    alt15=1;
+                if ( (LA16_0==65) ) {
+                    alt16=1;
                 }
 
 
-                switch (alt15) {
+                switch (alt16) {
             	case 1 :
             	    // InternalIFACE.g:5144:3: rule__Version__Group_1__0
             	    {
@@ -16106,7 +16117,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop15;
+            	    break loop16;
                 }
             } while (true);
 
@@ -16189,13 +16200,13 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_0_1_0()); 
             }
             // InternalIFACE.g:5172:2: ( RULE_INT )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA16_0==RULE_INT) ) {
-                alt16=1;
+            if ( (LA17_0==RULE_INT) ) {
+                alt17=1;
             }
-            switch (alt16) {
+            switch (alt17) {
                 case 1 :
                     // InternalIFACE.g:5172:3: RULE_INT
                     {
@@ -16522,13 +16533,13 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_1_1_1_0()); 
             }
             // InternalIFACE.g:5280:2: ( RULE_INT )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA17_0==RULE_INT) ) {
-                alt17=1;
+            if ( (LA18_0==RULE_INT) ) {
+                alt18=1;
             }
-            switch (alt17) {
+            switch (alt18) {
                 case 1 :
                     // InternalIFACE.g:5280:3: RULE_INT
                     {
@@ -17011,13 +17022,13 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                before(grammarAccess.getINTEGERAccess().getHyphenMinusKeyword_0_0()); 
             }
             // InternalIFACE.g:5442:2: ( '-' )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA18_0==68) ) {
-                alt18=1;
+            if ( (LA19_0==68) ) {
+                alt19=1;
             }
-            switch (alt18) {
+            switch (alt19) {
                 case 1 :
                     // InternalIFACE.g:5442:3: '-'
                     {
@@ -17177,23 +17188,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             // InternalIFACE.g:5497:3: ( ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) ) ) )
             {
             // InternalIFACE.g:5497:3: ( ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) ) ) )
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( LA19_0 == 37 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0) ) {
-                alt19=1;
+            if ( LA20_0 == 37 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0) ) {
+                alt20=1;
             }
-            else if ( LA19_0 == 39 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 1) ) {
-                alt19=2;
+            else if ( LA20_0 == 39 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 1) ) {
+                alt20=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 20, 0, input);
 
                 throw nvae;
             }
-            switch (alt19) {
+            switch (alt20) {
                 case 1 :
                     // InternalIFACE.g:5498:3: ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) )
                     {
@@ -17327,16 +17338,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             // InternalIFACE.g:5542:2: ( rule__GSSIfacePortConfig__UnorderedGroup_3__1 )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( LA20_0 == 37 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0) ) {
-                alt20=1;
+            if ( LA21_0 == 37 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0) ) {
+                alt21=1;
             }
-            else if ( LA20_0 == 39 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 1) ) {
-                alt20=1;
+            else if ( LA21_0 == 39 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 1) ) {
+                alt21=1;
             }
-            switch (alt20) {
+            switch (alt21) {
                 case 1 :
                     // InternalIFACE.g:0:0: rule__GSSIfacePortConfig__UnorderedGroup_3__1
                     {
@@ -18919,8 +18930,8 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
     }
     // $ANTLR end "rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4"
 
-    // $ANTLR start synpred28_InternalIFACE
-    public final void synpred28_InternalIFACE_fragment() throws RecognitionException {   
+    // $ANTLR start synpred29_InternalIFACE
+    public final void synpred29_InternalIFACE_fragment() throws RecognitionException {   
         // InternalIFACE.g:5498:3: ( ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) ) )
         // InternalIFACE.g:5498:3: ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) )
         {
@@ -18929,7 +18940,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
         {
         if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0) ) {
             if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred28_InternalIFACE", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0)");
+            throw new FailedPredicateException(input, "synpred29_InternalIFACE", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0)");
         }
         // InternalIFACE.g:5499:114: ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) )
         // InternalIFACE.g:5500:5: ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) )
@@ -18964,10 +18975,10 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
         }
     }
-    // $ANTLR end synpred28_InternalIFACE
+    // $ANTLR end synpred29_InternalIFACE
 
-    // $ANTLR start synpred29_InternalIFACE
-    public final void synpred29_InternalIFACE_fragment() throws RecognitionException {   
+    // $ANTLR start synpred30_InternalIFACE
+    public final void synpred30_InternalIFACE_fragment() throws RecognitionException {   
         // InternalIFACE.g:5542:2: ( rule__GSSIfacePortConfig__UnorderedGroup_3__1 )
         // InternalIFACE.g:5542:2: rule__GSSIfacePortConfig__UnorderedGroup_3__1
         {
@@ -18979,15 +18990,15 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
         }
     }
-    // $ANTLR end synpred29_InternalIFACE
+    // $ANTLR end synpred30_InternalIFACE
 
     // Delegated rules
 
-    public final boolean synpred28_InternalIFACE() {
+    public final boolean synpred30_InternalIFACE() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred28_InternalIFACE_fragment(); // can never throw exception
+            synpred30_InternalIFACE_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -19057,7 +19068,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0200000000000000L});
         public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0400000000000000L});
         public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0800000000000000L});
-        public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x1000000000000000L});
+        public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x1000001000000000L});
         public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000010000000L});
         public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000020000000L});
         public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x2000000000000000L});

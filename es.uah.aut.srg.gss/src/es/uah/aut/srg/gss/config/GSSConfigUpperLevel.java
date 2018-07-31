@@ -10,6 +10,12 @@
  */
 package es.uah.aut.srg.gss.config;
 
+import es.uah.aut.srg.gss.filters.GSSFilterFilter;
+
+import es.uah.aut.srg.gss.imports.GSSImportImport;
+
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -89,81 +95,81 @@ public interface GSSConfigUpperLevel extends EObject {
 	boolean isSetLevel();
 
 	/**
-	 * Returns the value of the '<em><b>TMformat</b></em>' containment reference.
+	 * Returns the value of the '<em><b>TMformat</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>TMformat</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>TMformat</em>' containment reference.
-	 * @see #setTMformat(GSSConfigTMFormat)
+	 * @return the value of the '<em>TMformat</em>' reference.
+	 * @see #setTMformat(GSSTmTcFormatTmTCFormat)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigUpperLevel_TMformat()
-	 * @model containment="true" required="true"
+	 * @model
 	 * @generated
 	 */
-	GSSConfigTMFormat getTMformat();
+	GSSTmTcFormatTmTCFormat getTMformat();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getTMformat <em>TMformat</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getTMformat <em>TMformat</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>TMformat</em>' containment reference.
+	 * @param value the new value of the '<em>TMformat</em>' reference.
 	 * @see #getTMformat()
 	 * @generated
 	 */
-	void setTMformat(GSSConfigTMFormat value);
+	void setTMformat(GSSTmTcFormatTmTCFormat value);
 
 	/**
-	 * Returns the value of the '<em><b>Input Filter</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Input Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Input Filter</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Filter</em>' containment reference.
-	 * @see #setInputFilter(GSSConfigInputFilter)
+	 * @return the value of the '<em>Input Filter</em>' reference.
+	 * @see #setInputFilter(GSSFilterFilter)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigUpperLevel_InputFilter()
-	 * @model containment="true" required="true"
+	 * @model
 	 * @generated
 	 */
-	GSSConfigInputFilter getInputFilter();
+	GSSFilterFilter getInputFilter();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getInputFilter <em>Input Filter</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getInputFilter <em>Input Filter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Filter</em>' containment reference.
+	 * @param value the new value of the '<em>Input Filter</em>' reference.
 	 * @see #getInputFilter()
 	 * @generated
 	 */
-	void setInputFilter(GSSConfigInputFilter value);
+	void setInputFilter(GSSFilterFilter value);
 
 	/**
-	 * Returns the value of the '<em><b>Import from prev Level</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Import from prev Level</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Import from prev Level</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Import from prev Level</em>' containment reference.
-	 * @see #setImport_from_prev_Level(GSSConfigImportFromPrevLevel)
+	 * @return the value of the '<em>Import from prev Level</em>' reference.
+	 * @see #setImport_from_prev_Level(GSSImportImport)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigUpperLevel_Import_from_prev_Level()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	GSSConfigImportFromPrevLevel getImport_from_prev_Level();
+	GSSImportImport getImport_from_prev_Level();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getImport_from_prev_Level <em>Import from prev Level</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getImport_from_prev_Level <em>Import from prev Level</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Import from prev Level</em>' containment reference.
+	 * @param value the new value of the '<em>Import from prev Level</em>' reference.
 	 * @see #getImport_from_prev_Level()
 	 * @generated
 	 */
-	void setImport_from_prev_Level(GSSConfigImportFromPrevLevel value);
+	void setImport_from_prev_Level(GSSImportImport value);
 
 } // GSSConfigUpperLevel

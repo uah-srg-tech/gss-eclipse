@@ -75,9 +75,9 @@ GSSTmTcFormatVSField returns GSSTmTcFormatVSField:
 		'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 		'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
 		constSize=GSSTmTcFormatConstSize
-		globalOffset=GSSTmTcFormatGlobalOffset
 		maxSize=GSSTmTcFormatMaxSize
 		variableSize=GSSTmTcFormatVariableSize
+		globalOffset=GSSTmTcFormatGlobalOffset
 	'}' ';'
 ;
 
@@ -165,8 +165,8 @@ GSSTmTcFormatGlobalOffset returns GSSTmTcFormatGlobalOffset:
 
 GSSTmTcFormatFormula returns GSSTmTcFormatFormula:
 	'GSSTmTcFormatFormula' '{'
-		'slope' ':=' slope=REAL ';'
-		'intercept' ':=' intercept=REAL ';'
+		'slope' ':=' slope=STRING ';'
+		'intercept' ':=' intercept=STRING ';'
 	'}' ';'
 ;
 

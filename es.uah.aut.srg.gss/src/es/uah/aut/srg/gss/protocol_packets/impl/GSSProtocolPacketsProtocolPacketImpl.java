@@ -4,12 +4,11 @@ package es.uah.aut.srg.gss.protocol_packets.impl;
 
 import es.uah.aut.srg.gss.export.GSSExportExport;
 
-import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsFormat;
 import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket;
 import es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -106,14 +105,14 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	protected GSSExportExport export;
 
 	/**
-	 * The cached value of the '{@link #getFormat() <em>Format</em>}' containment reference.
+	 * The cached value of the '{@link #getFormat() <em>Format</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFormat()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSProtocolPacketsFormat format;
+	protected GSSTmTcFormatTmTCFormat format;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -240,7 +239,15 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSProtocolPacketsFormat getFormat() {
+	public GSSTmTcFormatTmTCFormat getFormat() {
+		if (format != null && format.eIsProxy()) {
+			InternalEObject oldFormat = (InternalEObject)format;
+			format = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldFormat);
+			if (format != oldFormat) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT, oldFormat, format));
+			}
+		}
 		return format;
 	}
 
@@ -249,47 +256,20 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetFormat(GSSProtocolPacketsFormat newFormat, NotificationChain msgs) {
-		GSSProtocolPacketsFormat oldFormat = format;
+	public GSSTmTcFormatTmTCFormat basicGetFormat() {
+		return format;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFormat(GSSTmTcFormatTmTCFormat newFormat) {
+		GSSTmTcFormatTmTCFormat oldFormat = format;
 		format = newFormat;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT, oldFormat, newFormat);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFormat(GSSProtocolPacketsFormat newFormat) {
-		if (newFormat != format) {
-			NotificationChain msgs = null;
-			if (format != null)
-				msgs = ((InternalEObject)format).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT, null, msgs);
-			if (newFormat != null)
-				msgs = ((InternalEObject)newFormat).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT, null, msgs);
-			msgs = basicSetFormat(newFormat, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT, newFormat, newFormat));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT:
-				return basicSetFormat(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT, oldFormat, format));
 	}
 
 	/**
@@ -310,7 +290,8 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 				if (resolve) return getExport();
 				return basicGetExport();
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT:
-				return getFormat();
+				if (resolve) return getFormat();
+				return basicGetFormat();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -336,7 +317,7 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 				setExport((GSSExportExport)newValue);
 				return;
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT:
-				setFormat((GSSProtocolPacketsFormat)newValue);
+				setFormat((GSSTmTcFormatTmTCFormat)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -363,7 +344,7 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 				setExport((GSSExportExport)null);
 				return;
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT:
-				setFormat((GSSProtocolPacketsFormat)null);
+				setFormat((GSSTmTcFormatTmTCFormat)null);
 				return;
 		}
 		super.eUnset(featureID);

@@ -152,11 +152,15 @@ ruleGSSModelFileImport returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getGSSModelFileImportAccess().getImportKeyword_0());
 		}
+		otherlv_1=':='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1());
+		}
 		(
 			(
-				lv_importURI_1_0=RULE_ID
+				lv_importURI_2_0=RULE_STRING
 				{
-					newLeafNode(lv_importURI_1_0, grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_1_0());
+					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -165,14 +169,14 @@ ruleGSSModelFileImport returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"importURI",
-						lv_importURI_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						lv_importURI_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
-		otherlv_2=';'
+		otherlv_3=';'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_2());
+			newLeafNode(otherlv_3, grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_3());
 		}
 	)
 ;
@@ -1430,28 +1434,9 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_28_0());
+					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_28_0());
 				}
-				lv_globalOffset_31_0=ruleGSSTmTcFormatGlobalOffset
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVSFieldRule());
-					}
-					set(
-						$current,
-						"globalOffset",
-						lv_globalOffset_31_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatGlobalOffset");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_29_0());
-				}
-				lv_maxSize_32_0=ruleGSSTmTcFormatMaxSize
+				lv_maxSize_31_0=ruleGSSTmTcFormatMaxSize
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVSFieldRule());
@@ -1459,7 +1444,7 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 					set(
 						$current,
 						"maxSize",
-						lv_maxSize_32_0,
+						lv_maxSize_31_0,
 						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatMaxSize");
 					afterParserOrEnumRuleCall();
 				}
@@ -1468,9 +1453,9 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_30_0());
+					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_29_0());
 				}
-				lv_variableSize_33_0=ruleGSSTmTcFormatVariableSize
+				lv_variableSize_32_0=ruleGSSTmTcFormatVariableSize
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVSFieldRule());
@@ -1478,8 +1463,27 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 					set(
 						$current,
 						"variableSize",
-						lv_variableSize_33_0,
+						lv_variableSize_32_0,
 						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatVariableSize");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_30_0());
+				}
+				lv_globalOffset_33_0=ruleGSSTmTcFormatGlobalOffset
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVSFieldRule());
+					}
+					set(
+						$current,
+						"globalOffset",
+						lv_globalOffset_33_0,
+						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatGlobalOffset");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2777,20 +2781,19 @@ ruleGSSTmTcFormatFormula returns [EObject current=null]
 		}
 		(
 			(
+				lv_slope_4_0=RULE_STRING
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatFormulaAccess().getSlopeREALParserRuleCall_4_0());
+					newLeafNode(lv_slope_4_0, grammarAccess.getGSSTmTcFormatFormulaAccess().getSlopeSTRINGTerminalRuleCall_4_0());
 				}
-				lv_slope_4_0=ruleREAL
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatFormulaRule());
+						$current = createModelElement(grammarAccess.getGSSTmTcFormatFormulaRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"slope",
 						lv_slope_4_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.REAL");
-					afterParserOrEnumRuleCall();
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -2808,20 +2811,19 @@ ruleGSSTmTcFormatFormula returns [EObject current=null]
 		}
 		(
 			(
+				lv_intercept_8_0=RULE_STRING
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatFormulaAccess().getInterceptREALParserRuleCall_8_0());
+					newLeafNode(lv_intercept_8_0, grammarAccess.getGSSTmTcFormatFormulaAccess().getInterceptSTRINGTerminalRuleCall_8_0());
 				}
-				lv_intercept_8_0=ruleREAL
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatFormulaRule());
+						$current = createModelElement(grammarAccess.getGSSTmTcFormatFormulaRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"intercept",
 						lv_intercept_8_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.REAL");
-					afterParserOrEnumRuleCall();
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -3831,74 +3833,6 @@ ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
 		{
 			newLeafNode(this_HEXADECIMAL_2, grammarAccess.getINTEGERAccess().getHEXADECIMALTerminalRuleCall_1());
 		}
-	)
-;
-
-// Entry rule entryRuleREAL
-entryRuleREAL returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getREALRule()); }
-	iv_ruleREAL=ruleREAL
-	{ $current=$iv_ruleREAL.current.getText(); }
-	EOF;
-
-// Rule REAL
-ruleREAL returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			kw='-'
-			{
-				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getREALAccess().getHyphenMinusKeyword_0());
-			}
-		)?
-		(
-			this_INT_1=RULE_INT
-			{
-				$current.merge(this_INT_1);
-			}
-			{
-				newLeafNode(this_INT_1, grammarAccess.getREALAccess().getINTTerminalRuleCall_1_0());
-			}
-			kw='.'
-			{
-				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getREALAccess().getFullStopKeyword_1_1());
-			}
-			this_INT_3=RULE_INT
-			{
-				$current.merge(this_INT_3);
-			}
-			{
-				newLeafNode(this_INT_3, grammarAccess.getREALAccess().getINTTerminalRuleCall_1_2());
-			}
-		)
-		(
-			kw='e'
-			{
-				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getREALAccess().getEKeyword_2_0());
-			}
-			(
-				kw='-'
-				{
-					$current.merge(kw);
-					newLeafNode(kw, grammarAccess.getREALAccess().getHyphenMinusKeyword_2_1());
-				}
-			)?
-			this_INT_6=RULE_INT
-			{
-				$current.merge(this_INT_6);
-			}
-			{
-				newLeafNode(this_INT_6, grammarAccess.getREALAccess().getINTTerminalRuleCall_2_2());
-			}
-		)?
 	)
 ;
 

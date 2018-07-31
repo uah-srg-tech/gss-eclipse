@@ -81,12 +81,6 @@ public class protocol_packetsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_FORMAT: {
-				GSSProtocolPacketsFormat gssProtocolPacketsFormat = (GSSProtocolPacketsFormat)theEObject;
-				T result = caseGSSProtocolPacketsFormat(gssProtocolPacketsFormat);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -118,21 +112,6 @@ public class protocol_packetsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSProtocolPacketsProtocolPacket(GSSProtocolPacketsProtocolPacket object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Protocol Packets Format</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Protocol Packets Format</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSProtocolPacketsFormat(GSSProtocolPacketsFormat object) {
 		return null;
 	}
 

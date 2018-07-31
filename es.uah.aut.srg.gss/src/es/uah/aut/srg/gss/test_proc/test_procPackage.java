@@ -810,7 +810,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL3__DELAY_UNIT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Level3</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level3</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -819,7 +819,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL3__LEVEL3 = 4;
 
 	/**
-	 * The feature id for the '<em><b>App to level3</b></em>' containment reference.
+	 * The feature id for the '<em><b>App to level3</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -828,7 +828,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL3__APP_TO_LEVEL3 = 5;
 
 	/**
-	 * The feature id for the '<em><b>Level2</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -837,7 +837,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL3__LEVEL2 = 6;
 
 	/**
-	 * The feature id for the '<em><b>Level3 to level2</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level3 to level2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -846,7 +846,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL3__LEVEL3_TO_LEVEL2 = 7;
 
 	/**
-	 * The feature id for the '<em><b>Level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -855,7 +855,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL3__LEVEL1 = 8;
 
 	/**
-	 * The feature id for the '<em><b>Level2 to level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level2 to level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -864,7 +864,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL3__LEVEL2_TO_LEVEL1 = 9;
 
 	/**
-	 * The feature id for the '<em><b>Level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -873,7 +873,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL3__LEVEL0 = 10;
 
 	/**
-	 * The feature id for the '<em><b>Level1 to level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1 to level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -946,7 +946,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL2__DELAY_UNIT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Level2</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -955,7 +955,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2 = 4;
 
 	/**
-	 * The feature id for the '<em><b>App to level2</b></em>' containment reference.
+	 * The feature id for the '<em><b>App to level2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -964,7 +964,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL2__APP_TO_LEVEL2 = 5;
 
 	/**
-	 * The feature id for the '<em><b>Level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -973,7 +973,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL2__LEVEL1 = 6;
 
 	/**
-	 * The feature id for the '<em><b>Level2 to level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level2 to level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -982,7 +982,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2_TO_LEVEL1 = 7;
 
 	/**
-	 * The feature id for the '<em><b>Level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -991,7 +991,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL2__LEVEL0 = 8;
 
 	/**
-	 * The feature id for the '<em><b>Level1 to level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1 to level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1064,7 +1064,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL1__DELAY_UNIT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1073,7 +1073,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1 = 4;
 
 	/**
-	 * The feature id for the '<em><b>App to level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>App to level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1082,7 +1082,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1 = 5;
 
 	/**
-	 * The feature id for the '<em><b>Level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1091,7 +1091,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0 = 6;
 
 	/**
-	 * The feature id for the '<em><b>Level1 to level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1 to level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1164,7 +1164,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL0__DELAY_UNIT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1173,7 +1173,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL0__LEVEL0 = 4;
 
 	/**
-	 * The feature id for the '<em><b>App to level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>App to level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1200,413 +1200,6 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUT_LEVEL0_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3Impl <em>GSS Test Proc Level3</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3Impl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel3()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_LEVEL3 = 16;
-
-	/**
-	 * The feature id for the '<em><b>Format</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL3__FORMAT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc Level3</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL3_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc Level3</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL3_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2Impl <em>GSS Test Proc Level2</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2Impl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel2()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_LEVEL2 = 17;
-
-	/**
-	 * The feature id for the '<em><b>Format</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL2__FORMAT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc Level2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL2_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc Level2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL2_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1Impl <em>GSS Test Proc Level1</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1Impl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel1()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_LEVEL1 = 18;
-
-	/**
-	 * The feature id for the '<em><b>Format</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL1__FORMAT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc Level1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL1_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc Level1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL1_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel0Impl <em>GSS Test Proc Level0</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel0Impl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel0()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_LEVEL0 = 19;
-
-	/**
-	 * The feature id for the '<em><b>Format</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL0__FORMAT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc Level0</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL0_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc Level0</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL0_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel3Impl <em>GSS Test Proc App To Level3</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel3Impl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcAppToLevel3()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL3 = 20;
-
-	/**
-	 * The feature id for the '<em><b>Export</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL3__EXPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc App To Level3</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL3_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc App To Level3</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL3_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel2Impl <em>GSS Test Proc App To Level2</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel2Impl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcAppToLevel2()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL2 = 21;
-
-	/**
-	 * The feature id for the '<em><b>Export</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL2__EXPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc App To Level2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL2_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc App To Level2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL2_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel1Impl <em>GSS Test Proc App To Level1</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel1Impl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcAppToLevel1()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL1 = 22;
-
-	/**
-	 * The feature id for the '<em><b>Export</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL1__EXPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc App To Level1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL1_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc App To Level1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL1_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel0Impl <em>GSS Test Proc App To Level0</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel0Impl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcAppToLevel0()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL0 = 23;
-
-	/**
-	 * The feature id for the '<em><b>Export</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL0__EXPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc App To Level0</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL0_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc App To Level0</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_APP_TO_LEVEL0_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3ToLevel2Impl <em>GSS Test Proc Level3 To Level2</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3ToLevel2Impl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel3ToLevel2()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_LEVEL3_TO_LEVEL2 = 24;
-
-	/**
-	 * The feature id for the '<em><b>Export</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL3_TO_LEVEL2__EXPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc Level3 To Level2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL3_TO_LEVEL2_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc Level3 To Level2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL3_TO_LEVEL2_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2ToLevel1Impl <em>GSS Test Proc Level2 To Level1</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2ToLevel1Impl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel2ToLevel1()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_LEVEL2_TO_LEVEL1 = 25;
-
-	/**
-	 * The feature id for the '<em><b>Export</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL2_TO_LEVEL1__EXPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc Level2 To Level1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL2_TO_LEVEL1_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc Level2 To Level1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL2_TO_LEVEL1_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1ToLevel0Impl <em>GSS Test Proc Level1 To Level0</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1ToLevel0Impl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel1ToLevel0()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_LEVEL1_TO_LEVEL0 = 26;
-
-	/**
-	 * The feature id for the '<em><b>Export</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL1_TO_LEVEL0__EXPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc Level1 To Level0</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL1_TO_LEVEL0_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc Level1 To Level0</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL1_TO_LEVEL0_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcOutputImpl <em>GSS Test Proc Output</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1614,7 +1207,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcOutput()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_OUTPUT = 27;
+	int GSS_TEST_PROC_OUTPUT = 16;
 
 	/**
 	 * The number of structural features of the '<em>GSS Test Proc Output</em>' class.
@@ -1642,7 +1235,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcOutputLevel3()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3 = 28;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3 = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1681,7 +1274,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL3__OPTIONAL = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Level3</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level3</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1699,7 +1292,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Level2</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1708,7 +1301,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Level3 from level2</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level3 from level2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1726,7 +1319,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1735,7 +1328,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 9;
 
 	/**
-	 * The feature id for the '<em><b>Level2 from level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level2 from level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1753,7 +1346,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 11;
 
 	/**
-	 * The feature id for the '<em><b>Level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1762,7 +1355,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 12;
 
 	/**
-	 * The feature id for the '<em><b>Level1 from level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1 from level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1805,7 +1398,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcOutputLevel2()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2 = 29;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2 = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1844,7 +1437,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL2__OPTIONAL = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Level2</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1862,7 +1455,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1871,7 +1464,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Level2 from level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level2 from level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1889,7 +1482,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1898,7 +1491,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 9;
 
 	/**
-	 * The feature id for the '<em><b>Level1 from level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1 from level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1941,7 +1534,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcOutputLevel1()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL1 = 30;
+	int GSS_TEST_PROC_OUTPUT_LEVEL1 = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1980,7 +1573,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL1__OPTIONAL = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1998,7 +1591,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL1_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2007,7 +1600,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Level1 from level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1 from level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2050,7 +1643,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcOutputLevel0()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL0 = 31;
+	int GSS_TEST_PROC_OUTPUT_LEVEL0 = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2089,7 +1682,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL0__OPTIONAL = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2132,7 +1725,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel3Filter()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_LEVEL3_FILTER = 32;
+	int GSS_TEST_PROC_LEVEL3_FILTER = 21;
 
 	/**
 	 * The feature id for the '<em><b>Apply def filter</b></em>' attribute.
@@ -2144,7 +1737,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_LEVEL3_FILTER__APPLY_DEF_FILTER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Extra filter</b></em>' attribute.
+	 * The feature id for the '<em><b>Extra filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2178,7 +1771,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel2Filter()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_LEVEL2_FILTER = 33;
+	int GSS_TEST_PROC_LEVEL2_FILTER = 22;
 
 	/**
 	 * The feature id for the '<em><b>Apply def filter</b></em>' attribute.
@@ -2190,7 +1783,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_LEVEL2_FILTER__APPLY_DEF_FILTER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Extra filter</b></em>' attribute.
+	 * The feature id for the '<em><b>Extra filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2224,7 +1817,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel1Filter()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_LEVEL1_FILTER = 34;
+	int GSS_TEST_PROC_LEVEL1_FILTER = 23;
 
 	/**
 	 * The feature id for the '<em><b>Apply def filter</b></em>' attribute.
@@ -2236,7 +1829,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_LEVEL1_FILTER__APPLY_DEF_FILTER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Extra filter</b></em>' attribute.
+	 * The feature id for the '<em><b>Extra filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2270,7 +1863,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel0Filter()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_LEVEL0_FILTER = 35;
+	int GSS_TEST_PROC_LEVEL0_FILTER = 24;
 
 	/**
 	 * The feature id for the '<em><b>Apply def filter</b></em>' attribute.
@@ -2282,7 +1875,7 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_LEVEL0_FILTER__APPLY_DEF_FILTER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Extra filter</b></em>' attribute.
+	 * The feature id for the '<em><b>Extra filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2309,115 +1902,14 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_LEVEL0_FILTER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3FromLevel2Impl <em>GSS Test Proc Level3 From Level2</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcMode <em>GSS Test Proc Mode</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3FromLevel2Impl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel3FromLevel2()
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcMode
+	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcMode()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_LEVEL3_FROM_LEVEL2 = 36;
-
-	/**
-	 * The feature id for the '<em><b>Import</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL3_FROM_LEVEL2__IMPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc Level3 From Level2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL3_FROM_LEVEL2_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc Level3 From Level2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL3_FROM_LEVEL2_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2FromLevel1Impl <em>GSS Test Proc Level2 From Level1</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2FromLevel1Impl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel2FromLevel1()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_LEVEL2_FROM_LEVEL1 = 37;
-
-	/**
-	 * The feature id for the '<em><b>Import</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL2_FROM_LEVEL1__IMPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc Level2 From Level1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL2_FROM_LEVEL1_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc Level2 From Level1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL2_FROM_LEVEL1_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1FromLevel0Impl <em>GSS Test Proc Level1 From Level0</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1FromLevel0Impl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel1FromLevel0()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_LEVEL1_FROM_LEVEL0 = 38;
-
-	/**
-	 * The feature id for the '<em><b>Import</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL1_FROM_LEVEL0__IMPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc Level1 From Level0</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL1_FROM_LEVEL0_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc Level1 From Level0</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL1_FROM_LEVEL0_OPERATION_COUNT = 0;
+	int GSS_TEST_PROC_MODE = 25;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcUnit <em>GSS Test Proc Unit</em>}' enum.
@@ -2427,17 +1919,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcUnit()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_UNIT = 40;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcMode <em>GSS Test Proc Mode</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcMode
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcMode()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_MODE = 39;
+	int GSS_TEST_PROC_UNIT = 26;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcCheckmode <em>GSS Test Proc Checkmode</em>}' enum.
@@ -2447,7 +1929,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcCheckmode()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_CHECKMODE = 41;
+	int GSS_TEST_PROC_CHECKMODE = 27;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcYesNo <em>GSS Test Proc Yes No</em>}' enum.
@@ -2457,7 +1939,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcYesNo()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_YES_NO = 42;
+	int GSS_TEST_PROC_YES_NO = 28;
 
 
 	/**
@@ -2503,28 +1985,6 @@ public interface test_procPackage extends EPackage {
 	EAttribute getGSSTestProcStep_Id();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getPrev_step_idref <em>Prev step idref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Prev step idref</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getPrev_step_idref()
-	 * @see #getGSSTestProcStep()
-	 * @generated
-	 */
-	EReference getGSSTestProcStep_Prev_step_idref();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getOutput_idref_from_prev_step <em>Output idref from prev step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Output idref from prev step</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getOutput_idref_from_prev_step()
-	 * @see #getGSSTestProcStep()
-	 * @generated
-	 */
-	EReference getGSSTestProcStep_Output_idref_from_prev_step();
-
-	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getMode <em>Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2545,6 +2005,28 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGSSTestProcStep_Replays();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getPrev_step_idref <em>Prev step idref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Prev step idref</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getPrev_step_idref()
+	 * @see #getGSSTestProcStep()
+	 * @generated
+	 */
+	EReference getGSSTestProcStep_Prev_step_idref();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getOutput_idref_from_prev_step <em>Output idref from prev step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Output idref from prev step</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getOutput_idref_from_prev_step()
+	 * @see #getGSSTestProcStep()
+	 * @generated
+	 */
+	EReference getGSSTestProcStep_Output_idref_from_prev_step();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getInputs <em>Inputs</em>}'.
@@ -3009,10 +2491,10 @@ public interface test_procPackage extends EPackage {
 	EAttribute getGSSTestProcInputLevel3_Delay_unit();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel3 <em>Level3</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel3 <em>Level3</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level3</em>'.
+	 * @return the meta object for the reference '<em>Level3</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel3()
 	 * @see #getGSSTestProcInputLevel3()
 	 * @generated
@@ -3020,10 +2502,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel3_Level3();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getApp_to_level3 <em>App to level3</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getApp_to_level3 <em>App to level3</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>App to level3</em>'.
+	 * @return the meta object for the reference '<em>App to level3</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getApp_to_level3()
 	 * @see #getGSSTestProcInputLevel3()
 	 * @generated
@@ -3031,10 +2513,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel3_App_to_level3();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel2 <em>Level2</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel2 <em>Level2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level2</em>'.
+	 * @return the meta object for the reference '<em>Level2</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel2()
 	 * @see #getGSSTestProcInputLevel3()
 	 * @generated
@@ -3042,10 +2524,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel3_Level2();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel3_to_level2 <em>Level3 to level2</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel3_to_level2 <em>Level3 to level2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level3 to level2</em>'.
+	 * @return the meta object for the reference '<em>Level3 to level2</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel3_to_level2()
 	 * @see #getGSSTestProcInputLevel3()
 	 * @generated
@@ -3053,10 +2535,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel3_Level3_to_level2();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel1 <em>Level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel1 <em>Level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1</em>'.
+	 * @return the meta object for the reference '<em>Level1</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel1()
 	 * @see #getGSSTestProcInputLevel3()
 	 * @generated
@@ -3064,10 +2546,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel3_Level1();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel2_to_level1 <em>Level2 to level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel2_to_level1 <em>Level2 to level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level2 to level1</em>'.
+	 * @return the meta object for the reference '<em>Level2 to level1</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel2_to_level1()
 	 * @see #getGSSTestProcInputLevel3()
 	 * @generated
@@ -3075,10 +2557,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel3_Level2_to_level1();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel0 <em>Level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel0 <em>Level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level0</em>'.
+	 * @return the meta object for the reference '<em>Level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel0()
 	 * @see #getGSSTestProcInputLevel3()
 	 * @generated
@@ -3086,10 +2568,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel3_Level0();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel1_to_level0 <em>Level1 to level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel1_to_level0 <em>Level1 to level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1 to level0</em>'.
+	 * @return the meta object for the reference '<em>Level1 to level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel1_to_level0()
 	 * @see #getGSSTestProcInputLevel3()
 	 * @generated
@@ -3151,10 +2633,10 @@ public interface test_procPackage extends EPackage {
 	EAttribute getGSSTestProcInputLevel2_Delay_unit();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel2 <em>Level2</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel2 <em>Level2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level2</em>'.
+	 * @return the meta object for the reference '<em>Level2</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel2()
 	 * @see #getGSSTestProcInputLevel2()
 	 * @generated
@@ -3162,10 +2644,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel2_Level2();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getApp_to_level2 <em>App to level2</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getApp_to_level2 <em>App to level2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>App to level2</em>'.
+	 * @return the meta object for the reference '<em>App to level2</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getApp_to_level2()
 	 * @see #getGSSTestProcInputLevel2()
 	 * @generated
@@ -3173,10 +2655,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel2_App_to_level2();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel1 <em>Level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel1 <em>Level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1</em>'.
+	 * @return the meta object for the reference '<em>Level1</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel1()
 	 * @see #getGSSTestProcInputLevel2()
 	 * @generated
@@ -3184,10 +2666,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel2_Level1();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel2_to_level1 <em>Level2 to level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel2_to_level1 <em>Level2 to level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level2 to level1</em>'.
+	 * @return the meta object for the reference '<em>Level2 to level1</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel2_to_level1()
 	 * @see #getGSSTestProcInputLevel2()
 	 * @generated
@@ -3195,10 +2677,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel2_Level2_to_level1();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel0 <em>Level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel0 <em>Level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level0</em>'.
+	 * @return the meta object for the reference '<em>Level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel0()
 	 * @see #getGSSTestProcInputLevel2()
 	 * @generated
@@ -3206,10 +2688,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel2_Level0();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel1_to_level0 <em>Level1 to level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel1_to_level0 <em>Level1 to level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1 to level0</em>'.
+	 * @return the meta object for the reference '<em>Level1 to level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2#getLevel1_to_level0()
 	 * @see #getGSSTestProcInputLevel2()
 	 * @generated
@@ -3271,10 +2753,10 @@ public interface test_procPackage extends EPackage {
 	EAttribute getGSSTestProcInputLevel1_Delay_unit();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1#getLevel1 <em>Level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1#getLevel1 <em>Level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1</em>'.
+	 * @return the meta object for the reference '<em>Level1</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1#getLevel1()
 	 * @see #getGSSTestProcInputLevel1()
 	 * @generated
@@ -3282,10 +2764,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel1_Level1();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1#getApp_to_level1 <em>App to level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1#getApp_to_level1 <em>App to level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>App to level1</em>'.
+	 * @return the meta object for the reference '<em>App to level1</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1#getApp_to_level1()
 	 * @see #getGSSTestProcInputLevel1()
 	 * @generated
@@ -3293,10 +2775,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel1_App_to_level1();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1#getLevel0 <em>Level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1#getLevel0 <em>Level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level0</em>'.
+	 * @return the meta object for the reference '<em>Level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1#getLevel0()
 	 * @see #getGSSTestProcInputLevel1()
 	 * @generated
@@ -3304,10 +2786,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel1_Level0();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1#getLevel1_to_level0 <em>Level1 to level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1#getLevel1_to_level0 <em>Level1 to level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1 to level0</em>'.
+	 * @return the meta object for the reference '<em>Level1 to level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1#getLevel1_to_level0()
 	 * @see #getGSSTestProcInputLevel1()
 	 * @generated
@@ -3369,10 +2851,10 @@ public interface test_procPackage extends EPackage {
 	EAttribute getGSSTestProcInputLevel0_Delay_unit();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel0#getLevel0 <em>Level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel0#getLevel0 <em>Level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level0</em>'.
+	 * @return the meta object for the reference '<em>Level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel0#getLevel0()
 	 * @see #getGSSTestProcInputLevel0()
 	 * @generated
@@ -3380,246 +2862,15 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcInputLevel0_Level0();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel0#getApp_to_level0 <em>App to level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel0#getApp_to_level0 <em>App to level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>App to level0</em>'.
+	 * @return the meta object for the reference '<em>App to level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel0#getApp_to_level0()
 	 * @see #getGSSTestProcInputLevel0()
 	 * @generated
 	 */
 	EReference getGSSTestProcInputLevel0_App_to_level0();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3 <em>GSS Test Proc Level3</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc Level3</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3
-	 * @generated
-	 */
-	EClass getGSSTestProcLevel3();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3#getFormat <em>Format</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Format</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3#getFormat()
-	 * @see #getGSSTestProcLevel3()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcLevel3_Format();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2 <em>GSS Test Proc Level2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc Level2</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2
-	 * @generated
-	 */
-	EClass getGSSTestProcLevel2();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2#getFormat <em>Format</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Format</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2#getFormat()
-	 * @see #getGSSTestProcLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcLevel2_Format();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1 <em>GSS Test Proc Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc Level1</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1
-	 * @generated
-	 */
-	EClass getGSSTestProcLevel1();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1#getFormat <em>Format</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Format</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1#getFormat()
-	 * @see #getGSSTestProcLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcLevel1_Format();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0 <em>GSS Test Proc Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc Level0</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0
-	 * @generated
-	 */
-	EClass getGSSTestProcLevel0();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0#getFormat <em>Format</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Format</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0#getFormat()
-	 * @see #getGSSTestProcLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcLevel0_Format();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel3 <em>GSS Test Proc App To Level3</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc App To Level3</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel3
-	 * @generated
-	 */
-	EClass getGSSTestProcAppToLevel3();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel3#getExport <em>Export</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Export</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel3#getExport()
-	 * @see #getGSSTestProcAppToLevel3()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcAppToLevel3_Export();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel2 <em>GSS Test Proc App To Level2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc App To Level2</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel2
-	 * @generated
-	 */
-	EClass getGSSTestProcAppToLevel2();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel2#getExport <em>Export</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Export</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel2#getExport()
-	 * @see #getGSSTestProcAppToLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcAppToLevel2_Export();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel1 <em>GSS Test Proc App To Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc App To Level1</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel1
-	 * @generated
-	 */
-	EClass getGSSTestProcAppToLevel1();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel1#getExport <em>Export</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Export</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel1#getExport()
-	 * @see #getGSSTestProcAppToLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcAppToLevel1_Export();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel0 <em>GSS Test Proc App To Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc App To Level0</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel0
-	 * @generated
-	 */
-	EClass getGSSTestProcAppToLevel0();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel0#getExport <em>Export</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Export</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel0#getExport()
-	 * @see #getGSSTestProcAppToLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcAppToLevel0_Export();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3ToLevel2 <em>GSS Test Proc Level3 To Level2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc Level3 To Level2</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3ToLevel2
-	 * @generated
-	 */
-	EClass getGSSTestProcLevel3ToLevel2();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3ToLevel2#getExport <em>Export</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Export</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3ToLevel2#getExport()
-	 * @see #getGSSTestProcLevel3ToLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcLevel3ToLevel2_Export();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2ToLevel1 <em>GSS Test Proc Level2 To Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc Level2 To Level1</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2ToLevel1
-	 * @generated
-	 */
-	EClass getGSSTestProcLevel2ToLevel1();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2ToLevel1#getExport <em>Export</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Export</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2ToLevel1#getExport()
-	 * @see #getGSSTestProcLevel2ToLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcLevel2ToLevel1_Export();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1ToLevel0 <em>GSS Test Proc Level1 To Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc Level1 To Level0</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1ToLevel0
-	 * @generated
-	 */
-	EClass getGSSTestProcLevel1ToLevel0();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1ToLevel0#getExport <em>Export</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Export</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1ToLevel0#getExport()
-	 * @see #getGSSTestProcLevel1ToLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcLevel1ToLevel0_Export();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutput <em>GSS Test Proc Output</em>}'.
@@ -3686,10 +2937,10 @@ public interface test_procPackage extends EPackage {
 	EAttribute getGSSTestProcOutputLevel3_Optional();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel3 <em>Level3</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel3 <em>Level3</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level3</em>'.
+	 * @return the meta object for the reference '<em>Level3</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel3()
 	 * @see #getGSSTestProcOutputLevel3()
 	 * @generated
@@ -3708,10 +2959,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcOutputLevel3_Level3_filter();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel2 <em>Level2</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel2 <em>Level2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level2</em>'.
+	 * @return the meta object for the reference '<em>Level2</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel2()
 	 * @see #getGSSTestProcOutputLevel3()
 	 * @generated
@@ -3719,10 +2970,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcOutputLevel3_Level2();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel3_from_level2 <em>Level3 from level2</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel3_from_level2 <em>Level3 from level2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level3 from level2</em>'.
+	 * @return the meta object for the reference '<em>Level3 from level2</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel3_from_level2()
 	 * @see #getGSSTestProcOutputLevel3()
 	 * @generated
@@ -3741,10 +2992,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcOutputLevel3_Level2_filter();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel1 <em>Level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel1 <em>Level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1</em>'.
+	 * @return the meta object for the reference '<em>Level1</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel1()
 	 * @see #getGSSTestProcOutputLevel3()
 	 * @generated
@@ -3752,10 +3003,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcOutputLevel3_Level1();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel2_from_level1 <em>Level2 from level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel2_from_level1 <em>Level2 from level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level2 from level1</em>'.
+	 * @return the meta object for the reference '<em>Level2 from level1</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel2_from_level1()
 	 * @see #getGSSTestProcOutputLevel3()
 	 * @generated
@@ -3774,10 +3025,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcOutputLevel3_Level1_filter();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel0 <em>Level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel0 <em>Level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level0</em>'.
+	 * @return the meta object for the reference '<em>Level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel0()
 	 * @see #getGSSTestProcOutputLevel3()
 	 * @generated
@@ -3785,10 +3036,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcOutputLevel3_Level0();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel1_from_level0 <em>Level1 from level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel1_from_level0 <em>Level1 from level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1 from level0</em>'.
+	 * @return the meta object for the reference '<em>Level1 from level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel1_from_level0()
 	 * @see #getGSSTestProcOutputLevel3()
 	 * @generated
@@ -3861,10 +3112,10 @@ public interface test_procPackage extends EPackage {
 	EAttribute getGSSTestProcOutputLevel2_Optional();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel2 <em>Level2</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel2 <em>Level2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level2</em>'.
+	 * @return the meta object for the reference '<em>Level2</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel2()
 	 * @see #getGSSTestProcOutputLevel2()
 	 * @generated
@@ -3883,10 +3134,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcOutputLevel2_Level2_filter();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel1 <em>Level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel1 <em>Level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1</em>'.
+	 * @return the meta object for the reference '<em>Level1</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel1()
 	 * @see #getGSSTestProcOutputLevel2()
 	 * @generated
@@ -3894,10 +3145,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcOutputLevel2_Level1();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel2_from_level1 <em>Level2 from level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel2_from_level1 <em>Level2 from level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level2 from level1</em>'.
+	 * @return the meta object for the reference '<em>Level2 from level1</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel2_from_level1()
 	 * @see #getGSSTestProcOutputLevel2()
 	 * @generated
@@ -3916,10 +3167,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcOutputLevel2_Level1_filter();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel0 <em>Level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel0 <em>Level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level0</em>'.
+	 * @return the meta object for the reference '<em>Level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel0()
 	 * @see #getGSSTestProcOutputLevel2()
 	 * @generated
@@ -3927,10 +3178,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcOutputLevel2_Level0();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel1_from_level0 <em>Level1 from level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel1_from_level0 <em>Level1 from level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1 from level0</em>'.
+	 * @return the meta object for the reference '<em>Level1 from level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel1_from_level0()
 	 * @see #getGSSTestProcOutputLevel2()
 	 * @generated
@@ -4003,10 +3254,10 @@ public interface test_procPackage extends EPackage {
 	EAttribute getGSSTestProcOutputLevel1_Optional();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel1 <em>Level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel1 <em>Level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1</em>'.
+	 * @return the meta object for the reference '<em>Level1</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel1()
 	 * @see #getGSSTestProcOutputLevel1()
 	 * @generated
@@ -4025,10 +3276,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcOutputLevel1_Level1_filter();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel0 <em>Level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel0 <em>Level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level0</em>'.
+	 * @return the meta object for the reference '<em>Level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel0()
 	 * @see #getGSSTestProcOutputLevel1()
 	 * @generated
@@ -4036,10 +3287,10 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcOutputLevel1_Level0();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel1_from_level0 <em>Level1 from level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel1_from_level0 <em>Level1 from level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1 from level0</em>'.
+	 * @return the meta object for the reference '<em>Level1 from level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel1_from_level0()
 	 * @see #getGSSTestProcOutputLevel1()
 	 * @generated
@@ -4112,10 +3363,10 @@ public interface test_procPackage extends EPackage {
 	EAttribute getGSSTestProcOutputLevel0_Optional();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0#getLevel0 <em>Level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0#getLevel0 <em>Level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level0</em>'.
+	 * @return the meta object for the reference '<em>Level0</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0#getLevel0()
 	 * @see #getGSSTestProcOutputLevel0()
 	 * @generated
@@ -4155,15 +3406,15 @@ public interface test_procPackage extends EPackage {
 	EAttribute getGSSTestProcLevel3Filter_Apply_def_filter();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3Filter#getExtra_filter <em>Extra filter</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3Filter#getExtra_filter <em>Extra filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Extra filter</em>'.
+	 * @return the meta object for the reference '<em>Extra filter</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3Filter#getExtra_filter()
 	 * @see #getGSSTestProcLevel3Filter()
 	 * @generated
 	 */
-	EAttribute getGSSTestProcLevel3Filter_Extra_filter();
+	EReference getGSSTestProcLevel3Filter_Extra_filter();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter <em>GSS Test Proc Level2 Filter</em>}'.
@@ -4187,15 +3438,15 @@ public interface test_procPackage extends EPackage {
 	EAttribute getGSSTestProcLevel2Filter_Apply_def_filter();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter#getExtra_filter <em>Extra filter</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter#getExtra_filter <em>Extra filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Extra filter</em>'.
+	 * @return the meta object for the reference '<em>Extra filter</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter#getExtra_filter()
 	 * @see #getGSSTestProcLevel2Filter()
 	 * @generated
 	 */
-	EAttribute getGSSTestProcLevel2Filter_Extra_filter();
+	EReference getGSSTestProcLevel2Filter_Extra_filter();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter <em>GSS Test Proc Level1 Filter</em>}'.
@@ -4219,15 +3470,15 @@ public interface test_procPackage extends EPackage {
 	EAttribute getGSSTestProcLevel1Filter_Apply_def_filter();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter#getExtra_filter <em>Extra filter</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter#getExtra_filter <em>Extra filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Extra filter</em>'.
+	 * @return the meta object for the reference '<em>Extra filter</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter#getExtra_filter()
 	 * @see #getGSSTestProcLevel1Filter()
 	 * @generated
 	 */
-	EAttribute getGSSTestProcLevel1Filter_Extra_filter();
+	EReference getGSSTestProcLevel1Filter_Extra_filter();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter <em>GSS Test Proc Level0 Filter</em>}'.
@@ -4251,88 +3502,15 @@ public interface test_procPackage extends EPackage {
 	EAttribute getGSSTestProcLevel0Filter_Apply_def_filter();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter#getExtra_filter <em>Extra filter</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter#getExtra_filter <em>Extra filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Extra filter</em>'.
+	 * @return the meta object for the reference '<em>Extra filter</em>'.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter#getExtra_filter()
 	 * @see #getGSSTestProcLevel0Filter()
 	 * @generated
 	 */
-	EAttribute getGSSTestProcLevel0Filter_Extra_filter();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3FromLevel2 <em>GSS Test Proc Level3 From Level2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc Level3 From Level2</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3FromLevel2
-	 * @generated
-	 */
-	EClass getGSSTestProcLevel3FromLevel2();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3FromLevel2#getImport <em>Import</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Import</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3FromLevel2#getImport()
-	 * @see #getGSSTestProcLevel3FromLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcLevel3FromLevel2_Import();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2FromLevel1 <em>GSS Test Proc Level2 From Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc Level2 From Level1</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2FromLevel1
-	 * @generated
-	 */
-	EClass getGSSTestProcLevel2FromLevel1();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2FromLevel1#getImport <em>Import</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Import</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2FromLevel1#getImport()
-	 * @see #getGSSTestProcLevel2FromLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcLevel2FromLevel1_Import();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1FromLevel0 <em>GSS Test Proc Level1 From Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc Level1 From Level0</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1FromLevel0
-	 * @generated
-	 */
-	EClass getGSSTestProcLevel1FromLevel0();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1FromLevel0#getImport <em>Import</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Import</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1FromLevel0#getImport()
-	 * @see #getGSSTestProcLevel1FromLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcLevel1FromLevel0_Import();
-
-	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcUnit <em>GSS Test Proc Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>GSS Test Proc Unit</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
-	 * @generated
-	 */
-	EEnum getGSSTestProcUnit();
+	EReference getGSSTestProcLevel0Filter_Extra_filter();
 
 	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcMode <em>GSS Test Proc Mode</em>}'.
@@ -4343,6 +3521,16 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getGSSTestProcMode();
+
+	/**
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcUnit <em>GSS Test Proc Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>GSS Test Proc Unit</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
+	 * @generated
+	 */
+	EEnum getGSSTestProcUnit();
 
 	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcCheckmode <em>GSS Test Proc Checkmode</em>}'.
@@ -4424,22 +3612,6 @@ public interface test_procPackage extends EPackage {
 		EAttribute GSS_TEST_PROC_STEP__ID = eINSTANCE.getGSSTestProcStep_Id();
 
 		/**
-		 * The meta object literal for the '<em><b>Prev step idref</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TEST_PROC_STEP__PREV_STEP_IDREF = eINSTANCE.getGSSTestProcStep_Prev_step_idref();
-
-		/**
-		 * The meta object literal for the '<em><b>Output idref from prev step</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TEST_PROC_STEP__OUTPUT_IDREF_FROM_PREV_STEP = eINSTANCE.getGSSTestProcStep_Output_idref_from_prev_step();
-
-		/**
 		 * The meta object literal for the '<em><b>Mode</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4454,6 +3626,22 @@ public interface test_procPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GSS_TEST_PROC_STEP__REPLAYS = eINSTANCE.getGSSTestProcStep_Replays();
+
+		/**
+		 * The meta object literal for the '<em><b>Prev step idref</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_TEST_PROC_STEP__PREV_STEP_IDREF = eINSTANCE.getGSSTestProcStep_Prev_step_idref();
+
+		/**
+		 * The meta object literal for the '<em><b>Output idref from prev step</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_TEST_PROC_STEP__OUTPUT_IDREF_FROM_PREV_STEP = eINSTANCE.getGSSTestProcStep_Output_idref_from_prev_step();
 
 		/**
 		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference feature.
@@ -4822,7 +4010,7 @@ public interface test_procPackage extends EPackage {
 		EAttribute GSS_TEST_PROC_INPUT_LEVEL3__DELAY_UNIT = eINSTANCE.getGSSTestProcInputLevel3_Delay_unit();
 
 		/**
-		 * The meta object literal for the '<em><b>Level3</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level3</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4830,7 +4018,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL3__LEVEL3 = eINSTANCE.getGSSTestProcInputLevel3_Level3();
 
 		/**
-		 * The meta object literal for the '<em><b>App to level3</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>App to level3</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4838,7 +4026,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL3__APP_TO_LEVEL3 = eINSTANCE.getGSSTestProcInputLevel3_App_to_level3();
 
 		/**
-		 * The meta object literal for the '<em><b>Level2</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level2</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4846,7 +4034,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL3__LEVEL2 = eINSTANCE.getGSSTestProcInputLevel3_Level2();
 
 		/**
-		 * The meta object literal for the '<em><b>Level3 to level2</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level3 to level2</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4854,7 +4042,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL3__LEVEL3_TO_LEVEL2 = eINSTANCE.getGSSTestProcInputLevel3_Level3_to_level2();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4862,7 +4050,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL3__LEVEL1 = eINSTANCE.getGSSTestProcInputLevel3_Level1();
 
 		/**
-		 * The meta object literal for the '<em><b>Level2 to level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level2 to level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4870,7 +4058,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL3__LEVEL2_TO_LEVEL1 = eINSTANCE.getGSSTestProcInputLevel3_Level2_to_level1();
 
 		/**
-		 * The meta object literal for the '<em><b>Level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4878,7 +4066,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL3__LEVEL0 = eINSTANCE.getGSSTestProcInputLevel3_Level0();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1 to level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1 to level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4928,7 +4116,7 @@ public interface test_procPackage extends EPackage {
 		EAttribute GSS_TEST_PROC_INPUT_LEVEL2__DELAY_UNIT = eINSTANCE.getGSSTestProcInputLevel2_Delay_unit();
 
 		/**
-		 * The meta object literal for the '<em><b>Level2</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level2</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4936,7 +4124,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2 = eINSTANCE.getGSSTestProcInputLevel2_Level2();
 
 		/**
-		 * The meta object literal for the '<em><b>App to level2</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>App to level2</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4944,7 +4132,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL2__APP_TO_LEVEL2 = eINSTANCE.getGSSTestProcInputLevel2_App_to_level2();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4952,7 +4140,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL2__LEVEL1 = eINSTANCE.getGSSTestProcInputLevel2_Level1();
 
 		/**
-		 * The meta object literal for the '<em><b>Level2 to level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level2 to level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4960,7 +4148,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2_TO_LEVEL1 = eINSTANCE.getGSSTestProcInputLevel2_Level2_to_level1();
 
 		/**
-		 * The meta object literal for the '<em><b>Level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4968,7 +4156,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL2__LEVEL0 = eINSTANCE.getGSSTestProcInputLevel2_Level0();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1 to level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1 to level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5018,7 +4206,7 @@ public interface test_procPackage extends EPackage {
 		EAttribute GSS_TEST_PROC_INPUT_LEVEL1__DELAY_UNIT = eINSTANCE.getGSSTestProcInputLevel1_Delay_unit();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5026,7 +4214,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1 = eINSTANCE.getGSSTestProcInputLevel1_Level1();
 
 		/**
-		 * The meta object literal for the '<em><b>App to level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>App to level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5034,7 +4222,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1 = eINSTANCE.getGSSTestProcInputLevel1_App_to_level1();
 
 		/**
-		 * The meta object literal for the '<em><b>Level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5042,7 +4230,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0 = eINSTANCE.getGSSTestProcInputLevel1_Level0();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1 to level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1 to level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5092,7 +4280,7 @@ public interface test_procPackage extends EPackage {
 		EAttribute GSS_TEST_PROC_INPUT_LEVEL0__DELAY_UNIT = eINSTANCE.getGSSTestProcInputLevel0_Delay_unit();
 
 		/**
-		 * The meta object literal for the '<em><b>Level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5100,210 +4288,12 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_INPUT_LEVEL0__LEVEL0 = eINSTANCE.getGSSTestProcInputLevel0_Level0();
 
 		/**
-		 * The meta object literal for the '<em><b>App to level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>App to level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference GSS_TEST_PROC_INPUT_LEVEL0__APP_TO_LEVEL0 = eINSTANCE.getGSSTestProcInputLevel0_App_to_level0();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3Impl <em>GSS Test Proc Level3</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3Impl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel3()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_LEVEL3 = eINSTANCE.getGSSTestProcLevel3();
-
-		/**
-		 * The meta object literal for the '<em><b>Format</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_LEVEL3__FORMAT = eINSTANCE.getGSSTestProcLevel3_Format();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2Impl <em>GSS Test Proc Level2</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2Impl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel2()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_LEVEL2 = eINSTANCE.getGSSTestProcLevel2();
-
-		/**
-		 * The meta object literal for the '<em><b>Format</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_LEVEL2__FORMAT = eINSTANCE.getGSSTestProcLevel2_Format();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1Impl <em>GSS Test Proc Level1</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1Impl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel1()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_LEVEL1 = eINSTANCE.getGSSTestProcLevel1();
-
-		/**
-		 * The meta object literal for the '<em><b>Format</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_LEVEL1__FORMAT = eINSTANCE.getGSSTestProcLevel1_Format();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel0Impl <em>GSS Test Proc Level0</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel0Impl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel0()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_LEVEL0 = eINSTANCE.getGSSTestProcLevel0();
-
-		/**
-		 * The meta object literal for the '<em><b>Format</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_LEVEL0__FORMAT = eINSTANCE.getGSSTestProcLevel0_Format();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel3Impl <em>GSS Test Proc App To Level3</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel3Impl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcAppToLevel3()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_APP_TO_LEVEL3 = eINSTANCE.getGSSTestProcAppToLevel3();
-
-		/**
-		 * The meta object literal for the '<em><b>Export</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_APP_TO_LEVEL3__EXPORT = eINSTANCE.getGSSTestProcAppToLevel3_Export();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel2Impl <em>GSS Test Proc App To Level2</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel2Impl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcAppToLevel2()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_APP_TO_LEVEL2 = eINSTANCE.getGSSTestProcAppToLevel2();
-
-		/**
-		 * The meta object literal for the '<em><b>Export</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_APP_TO_LEVEL2__EXPORT = eINSTANCE.getGSSTestProcAppToLevel2_Export();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel1Impl <em>GSS Test Proc App To Level1</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel1Impl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcAppToLevel1()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_APP_TO_LEVEL1 = eINSTANCE.getGSSTestProcAppToLevel1();
-
-		/**
-		 * The meta object literal for the '<em><b>Export</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_APP_TO_LEVEL1__EXPORT = eINSTANCE.getGSSTestProcAppToLevel1_Export();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel0Impl <em>GSS Test Proc App To Level0</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAppToLevel0Impl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcAppToLevel0()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_APP_TO_LEVEL0 = eINSTANCE.getGSSTestProcAppToLevel0();
-
-		/**
-		 * The meta object literal for the '<em><b>Export</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_APP_TO_LEVEL0__EXPORT = eINSTANCE.getGSSTestProcAppToLevel0_Export();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3ToLevel2Impl <em>GSS Test Proc Level3 To Level2</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3ToLevel2Impl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel3ToLevel2()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_LEVEL3_TO_LEVEL2 = eINSTANCE.getGSSTestProcLevel3ToLevel2();
-
-		/**
-		 * The meta object literal for the '<em><b>Export</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_LEVEL3_TO_LEVEL2__EXPORT = eINSTANCE.getGSSTestProcLevel3ToLevel2_Export();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2ToLevel1Impl <em>GSS Test Proc Level2 To Level1</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2ToLevel1Impl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel2ToLevel1()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_LEVEL2_TO_LEVEL1 = eINSTANCE.getGSSTestProcLevel2ToLevel1();
-
-		/**
-		 * The meta object literal for the '<em><b>Export</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_LEVEL2_TO_LEVEL1__EXPORT = eINSTANCE.getGSSTestProcLevel2ToLevel1_Export();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1ToLevel0Impl <em>GSS Test Proc Level1 To Level0</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1ToLevel0Impl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel1ToLevel0()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_LEVEL1_TO_LEVEL0 = eINSTANCE.getGSSTestProcLevel1ToLevel0();
-
-		/**
-		 * The meta object literal for the '<em><b>Export</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_LEVEL1_TO_LEVEL0__EXPORT = eINSTANCE.getGSSTestProcLevel1ToLevel0_Export();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcOutputImpl <em>GSS Test Proc Output</em>}' class.
@@ -5358,7 +4348,7 @@ public interface test_procPackage extends EPackage {
 		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL3__OPTIONAL = eINSTANCE.getGSSTestProcOutputLevel3_Optional();
 
 		/**
-		 * The meta object literal for the '<em><b>Level3</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level3</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5374,7 +4364,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FILTER = eINSTANCE.getGSSTestProcOutputLevel3_Level3_filter();
 
 		/**
-		 * The meta object literal for the '<em><b>Level2</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level2</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5382,7 +4372,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2 = eINSTANCE.getGSSTestProcOutputLevel3_Level2();
 
 		/**
-		 * The meta object literal for the '<em><b>Level3 from level2</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level3 from level2</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5398,7 +4388,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FILTER = eINSTANCE.getGSSTestProcOutputLevel3_Level2_filter();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5406,7 +4396,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1 = eINSTANCE.getGSSTestProcOutputLevel3_Level1();
 
 		/**
-		 * The meta object literal for the '<em><b>Level2 from level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level2 from level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5422,7 +4412,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FILTER = eINSTANCE.getGSSTestProcOutputLevel3_Level1_filter();
 
 		/**
-		 * The meta object literal for the '<em><b>Level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5430,7 +4420,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0 = eINSTANCE.getGSSTestProcOutputLevel3_Level0();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1 from level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1 from level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5488,7 +4478,7 @@ public interface test_procPackage extends EPackage {
 		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL2__OPTIONAL = eINSTANCE.getGSSTestProcOutputLevel2_Optional();
 
 		/**
-		 * The meta object literal for the '<em><b>Level2</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level2</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5504,7 +4494,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2_FILTER = eINSTANCE.getGSSTestProcOutputLevel2_Level2_filter();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5512,7 +4502,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1 = eINSTANCE.getGSSTestProcOutputLevel2_Level1();
 
 		/**
-		 * The meta object literal for the '<em><b>Level2 from level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level2 from level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5528,7 +4518,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1_FILTER = eINSTANCE.getGSSTestProcOutputLevel2_Level1_filter();
 
 		/**
-		 * The meta object literal for the '<em><b>Level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5536,7 +4526,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL0 = eINSTANCE.getGSSTestProcOutputLevel2_Level0();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1 from level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1 from level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5594,7 +4584,7 @@ public interface test_procPackage extends EPackage {
 		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL1__OPTIONAL = eINSTANCE.getGSSTestProcOutputLevel1_Optional();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5610,7 +4600,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL1_FILTER = eINSTANCE.getGSSTestProcOutputLevel1_Level1_filter();
 
 		/**
-		 * The meta object literal for the '<em><b>Level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5618,7 +4608,7 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL0 = eINSTANCE.getGSSTestProcOutputLevel1_Level0();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1 from level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1 from level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5676,7 +4666,7 @@ public interface test_procPackage extends EPackage {
 		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL0__OPTIONAL = eINSTANCE.getGSSTestProcOutputLevel0_Optional();
 
 		/**
-		 * The meta object literal for the '<em><b>Level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5710,12 +4700,12 @@ public interface test_procPackage extends EPackage {
 		EAttribute GSS_TEST_PROC_LEVEL3_FILTER__APPLY_DEF_FILTER = eINSTANCE.getGSSTestProcLevel3Filter_Apply_def_filter();
 
 		/**
-		 * The meta object literal for the '<em><b>Extra filter</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Extra filter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_TEST_PROC_LEVEL3_FILTER__EXTRA_FILTER = eINSTANCE.getGSSTestProcLevel3Filter_Extra_filter();
+		EReference GSS_TEST_PROC_LEVEL3_FILTER__EXTRA_FILTER = eINSTANCE.getGSSTestProcLevel3Filter_Extra_filter();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2FilterImpl <em>GSS Test Proc Level2 Filter</em>}' class.
@@ -5736,12 +4726,12 @@ public interface test_procPackage extends EPackage {
 		EAttribute GSS_TEST_PROC_LEVEL2_FILTER__APPLY_DEF_FILTER = eINSTANCE.getGSSTestProcLevel2Filter_Apply_def_filter();
 
 		/**
-		 * The meta object literal for the '<em><b>Extra filter</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Extra filter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_TEST_PROC_LEVEL2_FILTER__EXTRA_FILTER = eINSTANCE.getGSSTestProcLevel2Filter_Extra_filter();
+		EReference GSS_TEST_PROC_LEVEL2_FILTER__EXTRA_FILTER = eINSTANCE.getGSSTestProcLevel2Filter_Extra_filter();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1FilterImpl <em>GSS Test Proc Level1 Filter</em>}' class.
@@ -5762,12 +4752,12 @@ public interface test_procPackage extends EPackage {
 		EAttribute GSS_TEST_PROC_LEVEL1_FILTER__APPLY_DEF_FILTER = eINSTANCE.getGSSTestProcLevel1Filter_Apply_def_filter();
 
 		/**
-		 * The meta object literal for the '<em><b>Extra filter</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Extra filter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_TEST_PROC_LEVEL1_FILTER__EXTRA_FILTER = eINSTANCE.getGSSTestProcLevel1Filter_Extra_filter();
+		EReference GSS_TEST_PROC_LEVEL1_FILTER__EXTRA_FILTER = eINSTANCE.getGSSTestProcLevel1Filter_Extra_filter();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel0FilterImpl <em>GSS Test Proc Level0 Filter</em>}' class.
@@ -5788,76 +4778,12 @@ public interface test_procPackage extends EPackage {
 		EAttribute GSS_TEST_PROC_LEVEL0_FILTER__APPLY_DEF_FILTER = eINSTANCE.getGSSTestProcLevel0Filter_Apply_def_filter();
 
 		/**
-		 * The meta object literal for the '<em><b>Extra filter</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Extra filter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_TEST_PROC_LEVEL0_FILTER__EXTRA_FILTER = eINSTANCE.getGSSTestProcLevel0Filter_Extra_filter();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3FromLevel2Impl <em>GSS Test Proc Level3 From Level2</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3FromLevel2Impl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel3FromLevel2()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_LEVEL3_FROM_LEVEL2 = eINSTANCE.getGSSTestProcLevel3FromLevel2();
-
-		/**
-		 * The meta object literal for the '<em><b>Import</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_LEVEL3_FROM_LEVEL2__IMPORT = eINSTANCE.getGSSTestProcLevel3FromLevel2_Import();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2FromLevel1Impl <em>GSS Test Proc Level2 From Level1</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2FromLevel1Impl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel2FromLevel1()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_LEVEL2_FROM_LEVEL1 = eINSTANCE.getGSSTestProcLevel2FromLevel1();
-
-		/**
-		 * The meta object literal for the '<em><b>Import</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_LEVEL2_FROM_LEVEL1__IMPORT = eINSTANCE.getGSSTestProcLevel2FromLevel1_Import();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1FromLevel0Impl <em>GSS Test Proc Level1 From Level0</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1FromLevel0Impl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel1FromLevel0()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_LEVEL1_FROM_LEVEL0 = eINSTANCE.getGSSTestProcLevel1FromLevel0();
-
-		/**
-		 * The meta object literal for the '<em><b>Import</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_LEVEL1_FROM_LEVEL0__IMPORT = eINSTANCE.getGSSTestProcLevel1FromLevel0_Import();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcUnit <em>GSS Test Proc Unit</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcUnit()
-		 * @generated
-		 */
-		EEnum GSS_TEST_PROC_UNIT = eINSTANCE.getGSSTestProcUnit();
+		EReference GSS_TEST_PROC_LEVEL0_FILTER__EXTRA_FILTER = eINSTANCE.getGSSTestProcLevel0Filter_Extra_filter();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcMode <em>GSS Test Proc Mode</em>}' enum.
@@ -5868,6 +4794,16 @@ public interface test_procPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum GSS_TEST_PROC_MODE = eINSTANCE.getGSSTestProcMode();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcUnit <em>GSS Test Proc Unit</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
+		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcUnit()
+		 * @generated
+		 */
+		EEnum GSS_TEST_PROC_UNIT = eINSTANCE.getGSSTestProcUnit();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcCheckmode <em>GSS Test Proc Checkmode</em>}' enum.

@@ -10,6 +10,10 @@
  */
 package es.uah.aut.srg.gss.config;
 
+import es.uah.aut.srg.gss.export.GSSExportExport;
+
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -85,55 +89,55 @@ public interface GSSConfigLevelIn extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>TCformat</b></em>' containment reference.
+	 * Returns the value of the '<em><b>TCformat</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>TCformat</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>TCformat</em>' containment reference.
-	 * @see #setTCformat(GSSConfigTCFormat)
+	 * @return the value of the '<em>TCformat</em>' reference.
+	 * @see #setTCformat(GSSTmTcFormatTmTCFormat)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelIn_TCformat()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSConfigTCFormat getTCformat();
+	GSSTmTcFormatTmTCFormat getTCformat();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getTCformat <em>TCformat</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getTCformat <em>TCformat</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>TCformat</em>' containment reference.
+	 * @param value the new value of the '<em>TCformat</em>' reference.
 	 * @see #getTCformat()
 	 * @generated
 	 */
-	void setTCformat(GSSConfigTCFormat value);
+	void setTCformat(GSSTmTcFormatTmTCFormat value);
 
 	/**
-	 * Returns the value of the '<em><b>Export to prev Level</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Export to prev Level</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Export to prev Level</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Export to prev Level</em>' containment reference.
-	 * @see #setExport_to_prev_Level(GSSConfigExportToPrevLevel)
+	 * @return the value of the '<em>Export to prev Level</em>' reference.
+	 * @see #setExport_to_prev_Level(GSSExportExport)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelIn_Export_to_prev_Level()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	GSSConfigExportToPrevLevel getExport_to_prev_Level();
+	GSSExportExport getExport_to_prev_Level();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getExport_to_prev_Level <em>Export to prev Level</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getExport_to_prev_Level <em>Export to prev Level</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Export to prev Level</em>' containment reference.
+	 * @param value the new value of the '<em>Export to prev Level</em>' reference.
 	 * @see #getExport_to_prev_Level()
 	 * @generated
 	 */
-	void setExport_to_prev_Level(GSSConfigExportToPrevLevel value);
+	void setExport_to_prev_Level(GSSExportExport value);
 
 } // GSSConfigLevelIn

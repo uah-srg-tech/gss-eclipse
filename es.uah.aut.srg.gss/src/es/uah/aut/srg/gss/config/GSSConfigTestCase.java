@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.gss.config;
 
+import es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -59,57 +61,30 @@ public interface GSSConfigTestCase extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Procedure</b></em>' attribute.
+	 * Returns the value of the '<em><b>Procedure</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Procedure</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Procedure</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Procedure</em>' attribute.
-	 * @see #isSetProcedure()
-	 * @see #unsetProcedure()
-	 * @see #setProcedure(String)
+	 * @return the value of the '<em>Procedure</em>' reference.
+	 * @see #setProcedure(GSSTestProcTestProc)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigTestCase_Procedure()
-	 * @model unsettable="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	String getProcedure();
+	GSSTestProcTestProc getProcedure();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getProcedure <em>Procedure</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getProcedure <em>Procedure</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Procedure</em>' attribute.
-	 * @see #isSetProcedure()
-	 * @see #unsetProcedure()
+	 * @param value the new value of the '<em>Procedure</em>' reference.
 	 * @see #getProcedure()
 	 * @generated
 	 */
-	void setProcedure(String value);
-
-	/**
-	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getProcedure <em>Procedure</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetProcedure()
-	 * @see #getProcedure()
-	 * @see #setProcedure(String)
-	 * @generated
-	 */
-	void unsetProcedure();
-
-	/**
-	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getProcedure <em>Procedure</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Procedure</em>' attribute is set.
-	 * @see #unsetProcedure()
-	 * @see #getProcedure()
-	 * @see #setProcedure(String)
-	 * @generated
-	 */
-	boolean isSetProcedure();
+	void setProcedure(GSSTestProcTestProc value);
 
 	/**
 	 * Returns the value of the '<em><b>Req</b></em>' attribute.

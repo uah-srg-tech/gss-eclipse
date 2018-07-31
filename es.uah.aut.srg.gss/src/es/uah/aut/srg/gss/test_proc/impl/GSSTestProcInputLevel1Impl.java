@@ -10,16 +10,15 @@
  */
 package es.uah.aut.srg.gss.test_proc.impl;
 
-import es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel1;
+import es.uah.aut.srg.gss.export.GSSExportExport;
+
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1ToLevel0;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcUnit;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
+
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -138,44 +137,53 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	protected GSSTestProcUnit delay_unit = DELAY_UNIT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getLevel1() <em>Level1</em>}' containment reference.
+	 * This is true if the Delay unit attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean delay_unitESet;
+
+	/**
+	 * The cached value of the '{@link #getLevel1() <em>Level1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLevel1()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcLevel1 level1;
+	protected GSSTmTcFormatTmTCFormat level1;
 
 	/**
-	 * The cached value of the '{@link #getApp_to_level1() <em>App to level1</em>}' containment reference.
+	 * The cached value of the '{@link #getApp_to_level1() <em>App to level1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getApp_to_level1()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcAppToLevel1 app_to_level1;
+	protected GSSExportExport app_to_level1;
 
 	/**
-	 * The cached value of the '{@link #getLevel0() <em>Level0</em>}' containment reference.
+	 * The cached value of the '{@link #getLevel0() <em>Level0</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLevel0()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcLevel0 level0;
+	protected GSSTmTcFormatTmTCFormat level0;
 
 	/**
-	 * The cached value of the '{@link #getLevel1_to_level0() <em>Level1 to level0</em>}' containment reference.
+	 * The cached value of the '{@link #getLevel1_to_level0() <em>Level1 to level0</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLevel1_to_level0()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcLevel1ToLevel0 level1_to_level0;
+	protected GSSExportExport level1_to_level0;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -301,8 +309,10 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	public void setDelay_unit(GSSTestProcUnit newDelay_unit) {
 		GSSTestProcUnit oldDelay_unit = delay_unit;
 		delay_unit = newDelay_unit == null ? DELAY_UNIT_EDEFAULT : newDelay_unit;
+		boolean oldDelay_unitESet = delay_unitESet;
+		delay_unitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__DELAY_UNIT, oldDelay_unit, delay_unit));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__DELAY_UNIT, oldDelay_unit, delay_unit, !oldDelay_unitESet));
 	}
 
 	/**
@@ -310,7 +320,38 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcLevel1 getLevel1() {
+	public void unsetDelay_unit() {
+		GSSTestProcUnit oldDelay_unit = delay_unit;
+		boolean oldDelay_unitESet = delay_unitESet;
+		delay_unit = DELAY_UNIT_EDEFAULT;
+		delay_unitESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__DELAY_UNIT, oldDelay_unit, DELAY_UNIT_EDEFAULT, oldDelay_unitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetDelay_unit() {
+		return delay_unitESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTmTcFormatTmTCFormat getLevel1() {
+		if (level1 != null && level1.eIsProxy()) {
+			InternalEObject oldLevel1 = (InternalEObject)level1;
+			level1 = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldLevel1);
+			if (level1 != oldLevel1) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1, oldLevel1, level1));
+			}
+		}
 		return level1;
 	}
 
@@ -319,14 +360,20 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel1(GSSTestProcLevel1 newLevel1, NotificationChain msgs) {
-		GSSTestProcLevel1 oldLevel1 = level1;
+	public GSSTmTcFormatTmTCFormat basicGetLevel1() {
+		return level1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLevel1(GSSTmTcFormatTmTCFormat newLevel1) {
+		GSSTmTcFormatTmTCFormat oldLevel1 = level1;
 		level1 = newLevel1;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1, oldLevel1, newLevel1);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1, oldLevel1, level1));
 	}
 
 	/**
@@ -334,26 +381,15 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel1(GSSTestProcLevel1 newLevel1) {
-		if (newLevel1 != level1) {
-			NotificationChain msgs = null;
-			if (level1 != null)
-				msgs = ((InternalEObject)level1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1, null, msgs);
-			if (newLevel1 != null)
-				msgs = ((InternalEObject)newLevel1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1, null, msgs);
-			msgs = basicSetLevel1(newLevel1, msgs);
-			if (msgs != null) msgs.dispatch();
+	public GSSExportExport getApp_to_level1() {
+		if (app_to_level1 != null && app_to_level1.eIsProxy()) {
+			InternalEObject oldApp_to_level1 = (InternalEObject)app_to_level1;
+			app_to_level1 = (GSSExportExport)eResolveProxy(oldApp_to_level1);
+			if (app_to_level1 != oldApp_to_level1) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1, oldApp_to_level1, app_to_level1));
+			}
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1, newLevel1, newLevel1));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcAppToLevel1 getApp_to_level1() {
 		return app_to_level1;
 	}
 
@@ -362,14 +398,20 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetApp_to_level1(GSSTestProcAppToLevel1 newApp_to_level1, NotificationChain msgs) {
-		GSSTestProcAppToLevel1 oldApp_to_level1 = app_to_level1;
+	public GSSExportExport basicGetApp_to_level1() {
+		return app_to_level1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setApp_to_level1(GSSExportExport newApp_to_level1) {
+		GSSExportExport oldApp_to_level1 = app_to_level1;
 		app_to_level1 = newApp_to_level1;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1, oldApp_to_level1, newApp_to_level1);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1, oldApp_to_level1, app_to_level1));
 	}
 
 	/**
@@ -377,26 +419,15 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setApp_to_level1(GSSTestProcAppToLevel1 newApp_to_level1) {
-		if (newApp_to_level1 != app_to_level1) {
-			NotificationChain msgs = null;
-			if (app_to_level1 != null)
-				msgs = ((InternalEObject)app_to_level1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1, null, msgs);
-			if (newApp_to_level1 != null)
-				msgs = ((InternalEObject)newApp_to_level1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1, null, msgs);
-			msgs = basicSetApp_to_level1(newApp_to_level1, msgs);
-			if (msgs != null) msgs.dispatch();
+	public GSSTmTcFormatTmTCFormat getLevel0() {
+		if (level0 != null && level0.eIsProxy()) {
+			InternalEObject oldLevel0 = (InternalEObject)level0;
+			level0 = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldLevel0);
+			if (level0 != oldLevel0) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0, oldLevel0, level0));
+			}
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1, newApp_to_level1, newApp_to_level1));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcLevel0 getLevel0() {
 		return level0;
 	}
 
@@ -405,14 +436,20 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel0(GSSTestProcLevel0 newLevel0, NotificationChain msgs) {
-		GSSTestProcLevel0 oldLevel0 = level0;
+	public GSSTmTcFormatTmTCFormat basicGetLevel0() {
+		return level0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLevel0(GSSTmTcFormatTmTCFormat newLevel0) {
+		GSSTmTcFormatTmTCFormat oldLevel0 = level0;
 		level0 = newLevel0;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0, oldLevel0, newLevel0);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0, oldLevel0, level0));
 	}
 
 	/**
@@ -420,26 +457,15 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel0(GSSTestProcLevel0 newLevel0) {
-		if (newLevel0 != level0) {
-			NotificationChain msgs = null;
-			if (level0 != null)
-				msgs = ((InternalEObject)level0).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0, null, msgs);
-			if (newLevel0 != null)
-				msgs = ((InternalEObject)newLevel0).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0, null, msgs);
-			msgs = basicSetLevel0(newLevel0, msgs);
-			if (msgs != null) msgs.dispatch();
+	public GSSExportExport getLevel1_to_level0() {
+		if (level1_to_level0 != null && level1_to_level0.eIsProxy()) {
+			InternalEObject oldLevel1_to_level0 = (InternalEObject)level1_to_level0;
+			level1_to_level0 = (GSSExportExport)eResolveProxy(oldLevel1_to_level0);
+			if (level1_to_level0 != oldLevel1_to_level0) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1_TO_LEVEL0, oldLevel1_to_level0, level1_to_level0));
+			}
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0, newLevel0, newLevel0));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcLevel1ToLevel0 getLevel1_to_level0() {
 		return level1_to_level0;
 	}
 
@@ -448,53 +474,20 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel1_to_level0(GSSTestProcLevel1ToLevel0 newLevel1_to_level0, NotificationChain msgs) {
-		GSSTestProcLevel1ToLevel0 oldLevel1_to_level0 = level1_to_level0;
+	public GSSExportExport basicGetLevel1_to_level0() {
+		return level1_to_level0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLevel1_to_level0(GSSExportExport newLevel1_to_level0) {
+		GSSExportExport oldLevel1_to_level0 = level1_to_level0;
 		level1_to_level0 = newLevel1_to_level0;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1_TO_LEVEL0, oldLevel1_to_level0, newLevel1_to_level0);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLevel1_to_level0(GSSTestProcLevel1ToLevel0 newLevel1_to_level0) {
-		if (newLevel1_to_level0 != level1_to_level0) {
-			NotificationChain msgs = null;
-			if (level1_to_level0 != null)
-				msgs = ((InternalEObject)level1_to_level0).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1_TO_LEVEL0, null, msgs);
-			if (newLevel1_to_level0 != null)
-				msgs = ((InternalEObject)newLevel1_to_level0).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1_TO_LEVEL0, null, msgs);
-			msgs = basicSetLevel1_to_level0(newLevel1_to_level0, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1_TO_LEVEL0, newLevel1_to_level0, newLevel1_to_level0));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1:
-				return basicSetLevel1(null, msgs);
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1:
-				return basicSetApp_to_level1(null, msgs);
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0:
-				return basicSetLevel0(null, msgs);
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1_TO_LEVEL0:
-				return basicSetLevel1_to_level0(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1_TO_LEVEL0, oldLevel1_to_level0, level1_to_level0));
 	}
 
 	/**
@@ -514,13 +507,17 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__DELAY_UNIT:
 				return getDelay_unit();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1:
-				return getLevel1();
+				if (resolve) return getLevel1();
+				return basicGetLevel1();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1:
-				return getApp_to_level1();
+				if (resolve) return getApp_to_level1();
+				return basicGetApp_to_level1();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0:
-				return getLevel0();
+				if (resolve) return getLevel0();
+				return basicGetLevel0();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1_TO_LEVEL0:
-				return getLevel1_to_level0();
+				if (resolve) return getLevel1_to_level0();
+				return basicGetLevel1_to_level0();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -546,16 +543,16 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 				setDelay_unit((GSSTestProcUnit)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1:
-				setLevel1((GSSTestProcLevel1)newValue);
+				setLevel1((GSSTmTcFormatTmTCFormat)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1:
-				setApp_to_level1((GSSTestProcAppToLevel1)newValue);
+				setApp_to_level1((GSSExportExport)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0:
-				setLevel0((GSSTestProcLevel0)newValue);
+				setLevel0((GSSTmTcFormatTmTCFormat)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1_TO_LEVEL0:
-				setLevel1_to_level0((GSSTestProcLevel1ToLevel0)newValue);
+				setLevel1_to_level0((GSSExportExport)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -579,19 +576,19 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 				unsetDelay_value();
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__DELAY_UNIT:
-				setDelay_unit(DELAY_UNIT_EDEFAULT);
+				unsetDelay_unit();
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1:
-				setLevel1((GSSTestProcLevel1)null);
+				setLevel1((GSSTmTcFormatTmTCFormat)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1:
-				setApp_to_level1((GSSTestProcAppToLevel1)null);
+				setApp_to_level1((GSSExportExport)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0:
-				setLevel0((GSSTestProcLevel0)null);
+				setLevel0((GSSTmTcFormatTmTCFormat)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1_TO_LEVEL0:
-				setLevel1_to_level0((GSSTestProcLevel1ToLevel0)null);
+				setLevel1_to_level0((GSSExportExport)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -612,7 +609,7 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__DELAY_VALUE:
 				return isSetDelay_value();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__DELAY_UNIT:
-				return delay_unit != DELAY_UNIT_EDEFAULT;
+				return isSetDelay_unit();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1:
 				return level1 != null;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1:
@@ -642,7 +639,7 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 		result.append(", delay_value: ");
 		if (delay_valueESet) result.append(delay_value); else result.append("<unset>");
 		result.append(", delay_unit: ");
-		result.append(delay_unit);
+		if (delay_unitESet) result.append(delay_unit); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

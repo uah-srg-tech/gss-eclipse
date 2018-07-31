@@ -671,86 +671,6 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_INTERFACES_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigTMFormatImpl <em>GSS Config TM Format</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigTMFormatImpl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigTMFormat()
-	 * @generated
-	 */
-	int GSS_CONFIG_TM_FORMAT = 14;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigTCFormatImpl <em>GSS Config TC Format</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigTCFormatImpl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigTCFormat()
-	 * @generated
-	 */
-	int GSS_CONFIG_TC_FORMAT = 15;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigInputFilterImpl <em>GSS Config Input Filter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigInputFilterImpl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigInputFilter()
-	 * @generated
-	 */
-	int GSS_CONFIG_INPUT_FILTER = 16;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigExportToPrevLevelImpl <em>GSS Config Export To Prev Level</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigExportToPrevLevelImpl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigExportToPrevLevel()
-	 * @generated
-	 */
-	int GSS_CONFIG_EXPORT_TO_PREV_LEVEL = 17;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigImportFromPrevLevelImpl <em>GSS Config Import From Prev Level</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigImportFromPrevLevelImpl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigImportFromPrevLevel()
-	 * @generated
-	 */
-	int GSS_CONFIG_IMPORT_FROM_PREV_LEVEL = 18;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevelInOutImpl <em>GSS Config Level In Out</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevelInOutImpl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevelInOut()
-	 * @generated
-	 */
-	int GSS_CONFIG_LEVEL_IN_OUT = 11;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevelInImpl <em>GSS Config Level In</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevelInImpl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevelIn()
-	 * @generated
-	 */
-	int GSS_CONFIG_LEVEL_IN = 12;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevelOutImpl <em>GSS Config Level Out</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevelOutImpl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevelOut()
-	 * @generated
-	 */
-	int GSS_CONFIG_LEVEL_OUT = 13;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigMainInterfaceImpl <em>GSS Config Main Interface</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -788,7 +708,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_MAIN_INTERFACE__IF_TYPE = 2;
 
 	/**
-	 * The feature id for the '<em><b>If Config</b></em>' attribute.
+	 * The feature id for the '<em><b>If Config</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -806,7 +726,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_MAIN_INTERFACE__IO_TYPE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Protocol ID</b></em>' attribute.
+	 * The feature id for the '<em><b>Protocol ID</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -879,7 +799,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_INTERFACE__IF_TYPE = 2;
 
 	/**
-	 * The feature id for the '<em><b>If Config</b></em>' attribute.
+	 * The feature id for the '<em><b>If Config</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -897,7 +817,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_INTERFACE__IO_TYPE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Protocol ID</b></em>' attribute.
+	 * The feature id for the '<em><b>Protocol ID</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -951,6 +871,16 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_INTERFACE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevelInOutImpl <em>GSS Config Level In Out</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevelInOutImpl
+	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevelInOut()
+	 * @generated
+	 */
+	int GSS_CONFIG_LEVEL_IN_OUT = 11;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -969,7 +899,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_LEVEL_IN_OUT__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>TMformat</b></em>' containment reference.
+	 * The feature id for the '<em><b>TMformat</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -978,7 +908,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_LEVEL_IN_OUT__TMFORMAT = 2;
 
 	/**
-	 * The feature id for the '<em><b>TCformat</b></em>' containment reference.
+	 * The feature id for the '<em><b>TCformat</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -987,7 +917,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_LEVEL_IN_OUT__TCFORMAT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Input Filter</b></em>' containment reference.
+	 * The feature id for the '<em><b>Input Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -996,7 +926,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_LEVEL_IN_OUT__INPUT_FILTER = 4;
 
 	/**
-	 * The feature id for the '<em><b>Export to prev Level</b></em>' containment reference.
+	 * The feature id for the '<em><b>Export to prev Level</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1005,7 +935,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_LEVEL_IN_OUT__EXPORT_TO_PREV_LEVEL = 5;
 
 	/**
-	 * The feature id for the '<em><b>Import from prev Level</b></em>' containment reference.
+	 * The feature id for the '<em><b>Import from prev Level</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1032,6 +962,16 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_LEVEL_IN_OUT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevelInImpl <em>GSS Config Level In</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevelInImpl
+	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevelIn()
+	 * @generated
+	 */
+	int GSS_CONFIG_LEVEL_IN = 12;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1050,7 +990,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_LEVEL_IN__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>TCformat</b></em>' containment reference.
+	 * The feature id for the '<em><b>TCformat</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1059,7 +999,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_LEVEL_IN__TCFORMAT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Export to prev Level</b></em>' containment reference.
+	 * The feature id for the '<em><b>Export to prev Level</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1086,6 +1026,16 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_LEVEL_IN_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevelOutImpl <em>GSS Config Level Out</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevelOutImpl
+	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevelOut()
+	 * @generated
+	 */
+	int GSS_CONFIG_LEVEL_OUT = 13;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1104,7 +1054,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_LEVEL_OUT__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>TMformat</b></em>' containment reference.
+	 * The feature id for the '<em><b>TMformat</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1113,7 +1063,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_LEVEL_OUT__TMFORMAT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Input Filter</b></em>' containment reference.
+	 * The feature id for the '<em><b>Input Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1122,7 +1072,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_LEVEL_OUT__INPUT_FILTER = 3;
 
 	/**
-	 * The feature id for the '<em><b>Import from prev Level</b></em>' containment reference.
+	 * The feature id for the '<em><b>Import from prev Level</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1149,141 +1099,6 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_LEVEL_OUT_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>File</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_TM_FORMAT__FILE = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Config TM Format</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_TM_FORMAT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Config TM Format</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_TM_FORMAT_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>File</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_TC_FORMAT__FILE = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Config TC Format</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_TC_FORMAT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Config TC Format</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_TC_FORMAT_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>File</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_INPUT_FILTER__FILE = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Config Input Filter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_INPUT_FILTER_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Config Input Filter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_INPUT_FILTER_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>File</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_EXPORT_TO_PREV_LEVEL__FILE = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Config Export To Prev Level</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_EXPORT_TO_PREV_LEVEL_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Config Export To Prev Level</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_EXPORT_TO_PREV_LEVEL_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>File</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_IMPORT_FROM_PREV_LEVEL__FILE = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Config Import From Prev Level</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_IMPORT_FROM_PREV_LEVEL_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Config Import From Prev Level</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_IMPORT_FROM_PREV_LEVEL_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigSpecialPacketsImpl <em>GSS Config Special Packets</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1291,7 +1106,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigSpecialPackets()
 	 * @generated
 	 */
-	int GSS_CONFIG_SPECIAL_PACKETS = 19;
+	int GSS_CONFIG_SPECIAL_PACKETS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Special Packet</b></em>' containment reference list.
@@ -1328,7 +1143,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigSpecialPacket()
 	 * @generated
 	 */
-	int GSS_CONFIG_SPECIAL_PACKET = 20;
+	int GSS_CONFIG_SPECIAL_PACKET = 15;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -1385,7 +1200,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_SPECIAL_PACKET__LEVEL_REF = 5;
 
 	/**
-	 * The feature id for the '<em><b>Input Filter</b></em>' containment reference.
+	 * The feature id for the '<em><b>Input Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1455,7 +1270,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigUpperLevels()
 	 * @generated
 	 */
-	int GSS_CONFIG_UPPER_LEVELS = 21;
+	int GSS_CONFIG_UPPER_LEVELS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Upper Level</b></em>' containment reference list.
@@ -1492,7 +1307,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigUpperLevel()
 	 * @generated
 	 */
-	int GSS_CONFIG_UPPER_LEVEL = 22;
+	int GSS_CONFIG_UPPER_LEVEL = 17;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -1504,7 +1319,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_UPPER_LEVEL__LEVEL = 0;
 
 	/**
-	 * The feature id for the '<em><b>TMformat</b></em>' containment reference.
+	 * The feature id for the '<em><b>TMformat</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1513,7 +1328,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_UPPER_LEVEL__TMFORMAT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Input Filter</b></em>' containment reference.
+	 * The feature id for the '<em><b>Input Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1522,7 +1337,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_UPPER_LEVEL__INPUT_FILTER = 2;
 
 	/**
-	 * The feature id for the '<em><b>Import from prev Level</b></em>' containment reference.
+	 * The feature id for the '<em><b>Import from prev Level</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1556,7 +1371,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigPrintingData()
 	 * @generated
 	 */
-	int GSS_CONFIG_PRINTING_DATA = 23;
+	int GSS_CONFIG_PRINTING_DATA = 18;
 
 	/**
 	 * The feature id for the '<em><b>Print Status</b></em>' attribute.
@@ -1602,7 +1417,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigStructuredData()
 	 * @generated
 	 */
-	int GSS_CONFIG_STRUCTURED_DATA = 24;
+	int GSS_CONFIG_STRUCTURED_DATA = 19;
 
 	/**
 	 * The feature id for the '<em><b>Level Ref</b></em>' attribute.
@@ -1648,7 +1463,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigPeriod()
 	 * @generated
 	 */
-	int GSS_CONFIG_PERIOD = 25;
+	int GSS_CONFIG_PERIOD = 20;
 
 	/**
 	 * The feature id for the '<em><b>Min value</b></em>' attribute.
@@ -1712,7 +1527,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigIntervalRange()
 	 * @generated
 	 */
-	int GSS_CONFIG_INTERVAL_RANGE = 26;
+	int GSS_CONFIG_INTERVAL_RANGE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' attribute.
@@ -1776,7 +1591,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigPeriodicTCs()
 	 * @generated
 	 */
-	int GSS_CONFIG_PERIODIC_TCS = 27;
+	int GSS_CONFIG_PERIODIC_TCS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Periodic TC level 2</b></em>' containment reference list.
@@ -1824,86 +1639,6 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TCS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevel2Impl <em>GSS Config Level2</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevel2Impl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevel2()
-	 * @generated
-	 */
-	int GSS_CONFIG_LEVEL2 = 31;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevel1Impl <em>GSS Config Level1</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevel1Impl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevel1()
-	 * @generated
-	 */
-	int GSS_CONFIG_LEVEL1 = 32;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevel0Impl <em>GSS Config Level0</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevel0Impl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevel0()
-	 * @generated
-	 */
-	int GSS_CONFIG_LEVEL0 = 33;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigAppToLevel2Impl <em>GSS Config App To Level2</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigAppToLevel2Impl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigAppToLevel2()
-	 * @generated
-	 */
-	int GSS_CONFIG_APP_TO_LEVEL2 = 34;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigAppToLevel1Impl <em>GSS Config App To Level1</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigAppToLevel1Impl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigAppToLevel1()
-	 * @generated
-	 */
-	int GSS_CONFIG_APP_TO_LEVEL1 = 35;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigAppToLevel0Impl <em>GSS Config App To Level0</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigAppToLevel0Impl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigAppToLevel0()
-	 * @generated
-	 */
-	int GSS_CONFIG_APP_TO_LEVEL0 = 36;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevel2ToLevel1Impl <em>GSS Config Level2 To Level1</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevel2ToLevel1Impl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevel2ToLevel1()
-	 * @generated
-	 */
-	int GSS_CONFIG_LEVEL2_TO_LEVEL1 = 37;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevel1ToLevel0Impl <em>GSS Config Level1 To Level0</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevel1ToLevel0Impl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevel1ToLevel0()
-	 * @generated
-	 */
-	int GSS_CONFIG_LEVEL1_TO_LEVEL0 = 38;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigPeriodicTCLevel2Impl <em>GSS Config Periodic TC Level2</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1911,7 +1646,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigPeriodicTCLevel2()
 	 * @generated
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2 = 28;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2 = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1959,7 +1694,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TC_LEVEL2__PERIOD_UNIT = 4;
 
 	/**
-	 * The feature id for the '<em><b>Level2</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1968,7 +1703,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL2 = 5;
 
 	/**
-	 * The feature id for the '<em><b>App to level2</b></em>' containment reference.
+	 * The feature id for the '<em><b>App to level2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1977,7 +1712,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TC_LEVEL2__APP_TO_LEVEL2 = 6;
 
 	/**
-	 * The feature id for the '<em><b>Level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1986,7 +1721,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL1 = 7;
 
 	/**
-	 * The feature id for the '<em><b>Level2 to level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level2 to level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1995,7 +1730,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL2_TO_LEVEL1 = 8;
 
 	/**
-	 * The feature id for the '<em><b>Level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2004,7 +1739,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL0 = 9;
 
 	/**
-	 * The feature id for the '<em><b>Level1 to level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1 to level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2038,7 +1773,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigPeriodicTCLevel1()
 	 * @generated
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL1 = 29;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL1 = 24;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2086,7 +1821,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_UNIT = 4;
 
 	/**
-	 * The feature id for the '<em><b>Level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2095,7 +1830,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1 = 5;
 
 	/**
-	 * The feature id for the '<em><b>App to level1</b></em>' containment reference.
+	 * The feature id for the '<em><b>App to level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2104,7 +1839,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1 = 6;
 
 	/**
-	 * The feature id for the '<em><b>Level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2113,7 +1848,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0 = 7;
 
 	/**
-	 * The feature id for the '<em><b>Level1 to level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level1 to level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2147,7 +1882,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigPeriodicTCLevel0()
 	 * @generated
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL0 = 30;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL0 = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2195,7 +1930,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TC_LEVEL0__PERIOD_UNIT = 4;
 
 	/**
-	 * The feature id for the '<em><b>Level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2204,7 +1939,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TC_LEVEL0__LEVEL0 = 5;
 
 	/**
-	 * The feature id for the '<em><b>App to level0</b></em>' containment reference.
+	 * The feature id for the '<em><b>App to level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2231,222 +1966,6 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TC_LEVEL0_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Format</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL2__FORMAT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Config Level2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL2_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Config Level2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL2_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Format</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL1__FORMAT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Config Level1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL1_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Config Level1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL1_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Format</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL0__FORMAT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Config Level0</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL0_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Config Level0</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL0_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Export</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_APP_TO_LEVEL2__EXPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Config App To Level2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_APP_TO_LEVEL2_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Config App To Level2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_APP_TO_LEVEL2_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Export</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_APP_TO_LEVEL1__EXPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Config App To Level1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_APP_TO_LEVEL1_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Config App To Level1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_APP_TO_LEVEL1_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Export</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_APP_TO_LEVEL0__EXPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Config App To Level0</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_APP_TO_LEVEL0_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Config App To Level0</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_APP_TO_LEVEL0_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Export</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL2_TO_LEVEL1__EXPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Config Level2 To Level1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL2_TO_LEVEL1_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Config Level2 To Level1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL2_TO_LEVEL1_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Export</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL1_TO_LEVEL0__EXPORT = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Config Level1 To Level0</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL1_TO_LEVEL0_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Config Level1 To Level0</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_LEVEL1_TO_LEVEL0_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigGlobalVarsImpl <em>GSS Config Global Vars</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2454,7 +1973,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigGlobalVars()
 	 * @generated
 	 */
-	int GSS_CONFIG_GLOBAL_VARS = 39;
+	int GSS_CONFIG_GLOBAL_VARS = 26;
 
 	/**
 	 * The feature id for the '<em><b>Global Var</b></em>' containment reference list.
@@ -2491,7 +2010,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigGlobalVar()
 	 * @generated
 	 */
-	int GSS_CONFIG_GLOBAL_VAR = 40;
+	int GSS_CONFIG_GLOBAL_VAR = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2582,7 +2101,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigReferenceField()
 	 * @generated
 	 */
-	int GSS_CONFIG_REFERENCE_FIELD = 41;
+	int GSS_CONFIG_REFERENCE_FIELD = 28;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2664,7 +2183,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigReferencePeriodicTC()
 	 * @generated
 	 */
-	int GSS_CONFIG_REFERENCE_PERIODIC_TC = 42;
+	int GSS_CONFIG_REFERENCE_PERIODIC_TC = 29;
 
 	/**
 	 * The feature id for the '<em><b>Id Ref</b></em>' attribute.
@@ -2737,7 +2256,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigReferenceSpecialPacket()
 	 * @generated
 	 */
-	int GSS_CONFIG_REFERENCE_SPECIAL_PACKET = 43;
+	int GSS_CONFIG_REFERENCE_SPECIAL_PACKET = 30;
 
 	/**
 	 * The feature id for the '<em><b>Id Ref</b></em>' attribute.
@@ -2810,10 +2329,10 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigMonitors()
 	 * @generated
 	 */
-	int GSS_CONFIG_MONITORS = 44;
+	int GSS_CONFIG_MONITORS = 31;
 
 	/**
-	 * The feature id for the '<em><b>Charts File</b></em>' attribute.
+	 * The feature id for the '<em><b>Charts File</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2883,7 +2402,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigPlot()
 	 * @generated
 	 */
-	int GSS_CONFIG_PLOT = 45;
+	int GSS_CONFIG_PLOT = 32;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2938,7 +2457,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigAlarmMsg()
 	 * @generated
 	 */
-	int GSS_CONFIG_ALARM_MSG = 46;
+	int GSS_CONFIG_ALARM_MSG = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3011,7 +2530,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigModify()
 	 * @generated
 	 */
-	int GSS_CONFIG_MODIFY = 47;
+	int GSS_CONFIG_MODIFY = 34;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3084,7 +2603,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigAlarmVal()
 	 * @generated
 	 */
-	int GSS_CONFIG_ALARM_VAL = 48;
+	int GSS_CONFIG_ALARM_VAL = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3148,7 +2667,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigGVFiltered()
 	 * @generated
 	 */
-	int GSS_CONFIG_GV_FILTERED = 49;
+	int GSS_CONFIG_GV_FILTERED = 36;
 
 	/**
 	 * The feature id for the '<em><b>Global Var Ref</b></em>' attribute.
@@ -3160,7 +2679,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF = 0;
 
 	/**
-	 * The feature id for the '<em><b>Filter</b></em>' attribute.
+	 * The feature id for the '<em><b>Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3194,7 +2713,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigGVPeriodic()
 	 * @generated
 	 */
-	int GSS_CONFIG_GV_PERIODIC = 50;
+	int GSS_CONFIG_GV_PERIODIC = 37;
 
 	/**
 	 * The feature id for the '<em><b>Global Var Ref</b></em>' attribute.
@@ -3249,10 +2768,10 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigTests()
 	 * @generated
 	 */
-	int GSS_CONFIG_TESTS = 51;
+	int GSS_CONFIG_TESTS = 38;
 
 	/**
-	 * The feature id for the '<em><b>Protocol Packets File</b></em>' attribute.
+	 * The feature id for the '<em><b>Protocol Packets File</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3295,7 +2814,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigTestCase()
 	 * @generated
 	 */
-	int GSS_CONFIG_TEST_CASE = 52;
+	int GSS_CONFIG_TEST_CASE = 39;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3307,7 +2826,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_TEST_CASE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Procedure</b></em>' attribute.
+	 * The feature id for the '<em><b>Procedure</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3359,7 +2878,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigEnableDisable()
 	 * @generated
 	 */
-	int GSS_CONFIG_ENABLE_DISABLE = 53;
+	int GSS_CONFIG_ENABLE_DISABLE = 40;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterfaceType <em>GSS Config Main Interface Type</em>}' enum.
@@ -3369,7 +2888,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigMainInterfaceType()
 	 * @generated
 	 */
-	int GSS_CONFIG_MAIN_INTERFACE_TYPE = 54;
+	int GSS_CONFIG_MAIN_INTERFACE_TYPE = 41;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterfaceIOType <em>GSS Config Main Interface IO Type</em>}' enum.
@@ -3379,7 +2898,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigMainInterfaceIOType()
 	 * @generated
 	 */
-	int GSS_CONFIG_MAIN_INTERFACE_IO_TYPE = 55;
+	int GSS_CONFIG_MAIN_INTERFACE_IO_TYPE = 42;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigInterfaceType <em>GSS Config Interface Type</em>}' enum.
@@ -3389,7 +2908,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigInterfaceType()
 	 * @generated
 	 */
-	int GSS_CONFIG_INTERFACE_TYPE = 56;
+	int GSS_CONFIG_INTERFACE_TYPE = 43;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigInterfaceIOType <em>GSS Config Interface IO Type</em>}' enum.
@@ -3399,7 +2918,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigInterfaceIOType()
 	 * @generated
 	 */
-	int GSS_CONFIG_INTERFACE_IO_TYPE = 57;
+	int GSS_CONFIG_INTERFACE_IO_TYPE = 44;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevelLevel <em>GSS Config Upper Level Level</em>}' enum.
@@ -3409,7 +2928,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigUpperLevelLevel()
 	 * @generated
 	 */
-	int GSS_CONFIG_UPPER_LEVEL_LEVEL = 58;
+	int GSS_CONFIG_UPPER_LEVEL_LEVEL = 45;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigUnit <em>GSS Config Unit</em>}' enum.
@@ -3419,7 +2938,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigUnit()
 	 * @generated
 	 */
-	int GSS_CONFIG_UNIT = 59;
+	int GSS_CONFIG_UNIT = 46;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigGlobalVarType <em>GSS Config Global Var Type</em>}' enum.
@@ -3429,7 +2948,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigGlobalVarType()
 	 * @generated
 	 */
-	int GSS_CONFIG_GLOBAL_VAR_TYPE = 60;
+	int GSS_CONFIG_GLOBAL_VAR_TYPE = 47;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigReferenceFieldType <em>GSS Config Reference Field Type</em>}' enum.
@@ -3439,7 +2958,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigReferenceFieldType()
 	 * @generated
 	 */
-	int GSS_CONFIG_REFERENCE_FIELD_TYPE = 61;
+	int GSS_CONFIG_REFERENCE_FIELD_TYPE = 48;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigAlarmMsgType <em>GSS Config Alarm Msg Type</em>}' enum.
@@ -3449,7 +2968,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigAlarmMsgType()
 	 * @generated
 	 */
-	int GSS_CONFIG_ALARM_MSG_TYPE = 62;
+	int GSS_CONFIG_ALARM_MSG_TYPE = 49;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigModifyType <em>GSS Config Modify Type</em>}' enum.
@@ -3459,7 +2978,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigModifyType()
 	 * @generated
 	 */
-	int GSS_CONFIG_MODIFY_TYPE = 63;
+	int GSS_CONFIG_MODIFY_TYPE = 50;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigAlarmValType <em>GSS Config Alarm Val Type</em>}' enum.
@@ -3469,8 +2988,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigAlarmValType()
 	 * @generated
 	 */
-	int GSS_CONFIG_ALARM_VAL_TYPE = 64;
-
+	int GSS_CONFIG_ALARM_VAL_TYPE = 51;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigReqAction <em>GSS Config Req Action</em>}' enum.
@@ -3480,7 +2998,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigReqAction()
 	 * @generated
 	 */
-	int GSS_CONFIG_REQ_ACTION = 65;
+	int GSS_CONFIG_REQ_ACTION = 52;
 
 
 	/**
@@ -3959,317 +3477,6 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigInterfaces_Interface();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigTMFormat <em>GSS Config TM Format</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config TM Format</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigTMFormat
-	 * @generated
-	 */
-	EClass getGSSConfigTMFormat();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigTMFormat#getFile <em>File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>File</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigTMFormat#getFile()
-	 * @see #getGSSConfigTMFormat()
-	 * @generated
-	 */
-	EAttribute getGSSConfigTMFormat_File();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigTCFormat <em>GSS Config TC Format</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config TC Format</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigTCFormat
-	 * @generated
-	 */
-	EClass getGSSConfigTCFormat();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigTCFormat#getFile <em>File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>File</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigTCFormat#getFile()
-	 * @see #getGSSConfigTCFormat()
-	 * @generated
-	 */
-	EAttribute getGSSConfigTCFormat_File();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigInputFilter <em>GSS Config Input Filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config Input Filter</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigInputFilter
-	 * @generated
-	 */
-	EClass getGSSConfigInputFilter();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigInputFilter#getFile <em>File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>File</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigInputFilter#getFile()
-	 * @see #getGSSConfigInputFilter()
-	 * @generated
-	 */
-	EAttribute getGSSConfigInputFilter_File();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigExportToPrevLevel <em>GSS Config Export To Prev Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config Export To Prev Level</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigExportToPrevLevel
-	 * @generated
-	 */
-	EClass getGSSConfigExportToPrevLevel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigExportToPrevLevel#getFile <em>File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>File</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigExportToPrevLevel#getFile()
-	 * @see #getGSSConfigExportToPrevLevel()
-	 * @generated
-	 */
-	EAttribute getGSSConfigExportToPrevLevel_File();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigImportFromPrevLevel <em>GSS Config Import From Prev Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config Import From Prev Level</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigImportFromPrevLevel
-	 * @generated
-	 */
-	EClass getGSSConfigImportFromPrevLevel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigImportFromPrevLevel#getFile <em>File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>File</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigImportFromPrevLevel#getFile()
-	 * @see #getGSSConfigImportFromPrevLevel()
-	 * @generated
-	 */
-	EAttribute getGSSConfigImportFromPrevLevel_File();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut <em>GSS Config Level In Out</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config Level In Out</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut
-	 * @generated
-	 */
-	EClass getGSSConfigLevelInOut();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getId()
-	 * @see #getGSSConfigLevelInOut()
-	 * @generated
-	 */
-	EAttribute getGSSConfigLevelInOut_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getName()
-	 * @see #getGSSConfigLevelInOut()
-	 * @generated
-	 */
-	EAttribute getGSSConfigLevelInOut_Name();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getTMformat <em>TMformat</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>TMformat</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getTMformat()
-	 * @see #getGSSConfigLevelInOut()
-	 * @generated
-	 */
-	EReference getGSSConfigLevelInOut_TMformat();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getTCformat <em>TCformat</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>TCformat</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getTCformat()
-	 * @see #getGSSConfigLevelInOut()
-	 * @generated
-	 */
-	EReference getGSSConfigLevelInOut_TCformat();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getInputFilter <em>Input Filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Input Filter</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getInputFilter()
-	 * @see #getGSSConfigLevelInOut()
-	 * @generated
-	 */
-	EReference getGSSConfigLevelInOut_InputFilter();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getExport_to_prev_Level <em>Export to prev Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Export to prev Level</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getExport_to_prev_Level()
-	 * @see #getGSSConfigLevelInOut()
-	 * @generated
-	 */
-	EReference getGSSConfigLevelInOut_Export_to_prev_Level();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getImport_from_prev_Level <em>Import from prev Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Import from prev Level</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getImport_from_prev_Level()
-	 * @see #getGSSConfigLevelInOut()
-	 * @generated
-	 */
-	EReference getGSSConfigLevelInOut_Import_from_prev_Level();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn <em>GSS Config Level In</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config Level In</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelIn
-	 * @generated
-	 */
-	EClass getGSSConfigLevelIn();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelIn#getId()
-	 * @see #getGSSConfigLevelIn()
-	 * @generated
-	 */
-	EAttribute getGSSConfigLevelIn_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelIn#getName()
-	 * @see #getGSSConfigLevelIn()
-	 * @generated
-	 */
-	EAttribute getGSSConfigLevelIn_Name();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getTCformat <em>TCformat</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>TCformat</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelIn#getTCformat()
-	 * @see #getGSSConfigLevelIn()
-	 * @generated
-	 */
-	EReference getGSSConfigLevelIn_TCformat();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getExport_to_prev_Level <em>Export to prev Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Export to prev Level</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelIn#getExport_to_prev_Level()
-	 * @see #getGSSConfigLevelIn()
-	 * @generated
-	 */
-	EReference getGSSConfigLevelIn_Export_to_prev_Level();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut <em>GSS Config Level Out</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config Level Out</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelOut
-	 * @generated
-	 */
-	EClass getGSSConfigLevelOut();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelOut#getId()
-	 * @see #getGSSConfigLevelOut()
-	 * @generated
-	 */
-	EAttribute getGSSConfigLevelOut_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelOut#getName()
-	 * @see #getGSSConfigLevelOut()
-	 * @generated
-	 */
-	EAttribute getGSSConfigLevelOut_Name();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getTMformat <em>TMformat</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>TMformat</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelOut#getTMformat()
-	 * @see #getGSSConfigLevelOut()
-	 * @generated
-	 */
-	EReference getGSSConfigLevelOut_TMformat();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getInputFilter <em>Input Filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Input Filter</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelOut#getInputFilter()
-	 * @see #getGSSConfigLevelOut()
-	 * @generated
-	 */
-	EReference getGSSConfigLevelOut_InputFilter();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getImport_from_prev_Level <em>Import from prev Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Import from prev Level</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelOut#getImport_from_prev_Level()
-	 * @see #getGSSConfigLevelOut()
-	 * @generated
-	 */
-	EReference getGSSConfigLevelOut_Import_from_prev_Level();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface <em>GSS Config Main Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4313,15 +3520,15 @@ public interface configPackage extends EPackage {
 	EAttribute getGSSConfigMainInterface_IfType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIfConfig <em>If Config</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIfConfig <em>If Config</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>If Config</em>'.
+	 * @return the meta object for the reference '<em>If Config</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIfConfig()
 	 * @see #getGSSConfigMainInterface()
 	 * @generated
 	 */
-	EAttribute getGSSConfigMainInterface_IfConfig();
+	EReference getGSSConfigMainInterface_IfConfig();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIoType <em>Io Type</em>}'.
@@ -4335,15 +3542,15 @@ public interface configPackage extends EPackage {
 	EAttribute getGSSConfigMainInterface_IoType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getProtocolID <em>Protocol ID</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getProtocolID <em>Protocol ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Protocol ID</em>'.
+	 * @return the meta object for the reference '<em>Protocol ID</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterface#getProtocolID()
 	 * @see #getGSSConfigMainInterface()
 	 * @generated
 	 */
-	EAttribute getGSSConfigMainInterface_ProtocolID();
+	EReference getGSSConfigMainInterface_ProtocolID();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getLevelInOut <em>Level In Out</em>}'.
@@ -4400,15 +3607,15 @@ public interface configPackage extends EPackage {
 	EAttribute getGSSConfigInterface_IfType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigInterface#getIfConfig <em>If Config</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigInterface#getIfConfig <em>If Config</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>If Config</em>'.
+	 * @return the meta object for the reference '<em>If Config</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigInterface#getIfConfig()
 	 * @see #getGSSConfigInterface()
 	 * @generated
 	 */
-	EAttribute getGSSConfigInterface_IfConfig();
+	EReference getGSSConfigInterface_IfConfig();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigInterface#getIoType <em>Io Type</em>}'.
@@ -4422,15 +3629,15 @@ public interface configPackage extends EPackage {
 	EAttribute getGSSConfigInterface_IoType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigInterface#getProtocolID <em>Protocol ID</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigInterface#getProtocolID <em>Protocol ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Protocol ID</em>'.
+	 * @return the meta object for the reference '<em>Protocol ID</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigInterface#getProtocolID()
 	 * @see #getGSSConfigInterface()
 	 * @generated
 	 */
-	EAttribute getGSSConfigInterface_ProtocolID();
+	EReference getGSSConfigInterface_ProtocolID();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.config.GSSConfigInterface#getLevelInOut <em>Level In Out</em>}'.
@@ -4464,6 +3671,212 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGSSConfigInterface_LevelOut();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut <em>GSS Config Level In Out</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Config Level In Out</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut
+	 * @generated
+	 */
+	EClass getGSSConfigLevelInOut();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getId()
+	 * @see #getGSSConfigLevelInOut()
+	 * @generated
+	 */
+	EAttribute getGSSConfigLevelInOut_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getName()
+	 * @see #getGSSConfigLevelInOut()
+	 * @generated
+	 */
+	EAttribute getGSSConfigLevelInOut_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getTMformat <em>TMformat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>TMformat</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getTMformat()
+	 * @see #getGSSConfigLevelInOut()
+	 * @generated
+	 */
+	EReference getGSSConfigLevelInOut_TMformat();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getTCformat <em>TCformat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>TCformat</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getTCformat()
+	 * @see #getGSSConfigLevelInOut()
+	 * @generated
+	 */
+	EReference getGSSConfigLevelInOut_TCformat();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getInputFilter <em>Input Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Input Filter</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getInputFilter()
+	 * @see #getGSSConfigLevelInOut()
+	 * @generated
+	 */
+	EReference getGSSConfigLevelInOut_InputFilter();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getExport_to_prev_Level <em>Export to prev Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Export to prev Level</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getExport_to_prev_Level()
+	 * @see #getGSSConfigLevelInOut()
+	 * @generated
+	 */
+	EReference getGSSConfigLevelInOut_Export_to_prev_Level();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getImport_from_prev_Level <em>Import from prev Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Import from prev Level</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getImport_from_prev_Level()
+	 * @see #getGSSConfigLevelInOut()
+	 * @generated
+	 */
+	EReference getGSSConfigLevelInOut_Import_from_prev_Level();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn <em>GSS Config Level In</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Config Level In</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelIn
+	 * @generated
+	 */
+	EClass getGSSConfigLevelIn();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelIn#getId()
+	 * @see #getGSSConfigLevelIn()
+	 * @generated
+	 */
+	EAttribute getGSSConfigLevelIn_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelIn#getName()
+	 * @see #getGSSConfigLevelIn()
+	 * @generated
+	 */
+	EAttribute getGSSConfigLevelIn_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getTCformat <em>TCformat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>TCformat</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelIn#getTCformat()
+	 * @see #getGSSConfigLevelIn()
+	 * @generated
+	 */
+	EReference getGSSConfigLevelIn_TCformat();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getExport_to_prev_Level <em>Export to prev Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Export to prev Level</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelIn#getExport_to_prev_Level()
+	 * @see #getGSSConfigLevelIn()
+	 * @generated
+	 */
+	EReference getGSSConfigLevelIn_Export_to_prev_Level();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut <em>GSS Config Level Out</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Config Level Out</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelOut
+	 * @generated
+	 */
+	EClass getGSSConfigLevelOut();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelOut#getId()
+	 * @see #getGSSConfigLevelOut()
+	 * @generated
+	 */
+	EAttribute getGSSConfigLevelOut_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelOut#getName()
+	 * @see #getGSSConfigLevelOut()
+	 * @generated
+	 */
+	EAttribute getGSSConfigLevelOut_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getTMformat <em>TMformat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>TMformat</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelOut#getTMformat()
+	 * @see #getGSSConfigLevelOut()
+	 * @generated
+	 */
+	EReference getGSSConfigLevelOut_TMformat();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getInputFilter <em>Input Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Input Filter</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelOut#getInputFilter()
+	 * @see #getGSSConfigLevelOut()
+	 * @generated
+	 */
+	EReference getGSSConfigLevelOut_InputFilter();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getImport_from_prev_Level <em>Import from prev Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Import from prev Level</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigLevelOut#getImport_from_prev_Level()
+	 * @see #getGSSConfigLevelOut()
+	 * @generated
+	 */
+	EReference getGSSConfigLevelOut_Import_from_prev_Level();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigSpecialPackets <em>GSS Config Special Packets</em>}'.
@@ -4563,10 +3976,10 @@ public interface configPackage extends EPackage {
 	EAttribute getGSSConfigSpecialPacket_LevelRef();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigSpecialPacket#getInputFilter <em>Input Filter</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigSpecialPacket#getInputFilter <em>Input Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Input Filter</em>'.
+	 * @return the meta object for the reference '<em>Input Filter</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigSpecialPacket#getInputFilter()
 	 * @see #getGSSConfigSpecialPacket()
 	 * @generated
@@ -4660,10 +4073,10 @@ public interface configPackage extends EPackage {
 	EAttribute getGSSConfigUpperLevel_Level();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getTMformat <em>TMformat</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getTMformat <em>TMformat</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>TMformat</em>'.
+	 * @return the meta object for the reference '<em>TMformat</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getTMformat()
 	 * @see #getGSSConfigUpperLevel()
 	 * @generated
@@ -4671,10 +4084,10 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigUpperLevel_TMformat();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getInputFilter <em>Input Filter</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getInputFilter <em>Input Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Input Filter</em>'.
+	 * @return the meta object for the reference '<em>Input Filter</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getInputFilter()
 	 * @see #getGSSConfigUpperLevel()
 	 * @generated
@@ -4682,10 +4095,10 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigUpperLevel_InputFilter();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getImport_from_prev_Level <em>Import from prev Level</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getImport_from_prev_Level <em>Import from prev Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Import from prev Level</em>'.
+	 * @return the meta object for the reference '<em>Import from prev Level</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getImport_from_prev_Level()
 	 * @see #getGSSConfigUpperLevel()
 	 * @generated
@@ -4908,174 +4321,6 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigPeriodicTCs_PeriodicTC_level_0();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigLevel2 <em>GSS Config Level2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config Level2</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel2
-	 * @generated
-	 */
-	EClass getGSSConfigLevel2();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevel2#getFormat <em>Format</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Format</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel2#getFormat()
-	 * @see #getGSSConfigLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSConfigLevel2_Format();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigLevel1 <em>GSS Config Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config Level1</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel1
-	 * @generated
-	 */
-	EClass getGSSConfigLevel1();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevel1#getFormat <em>Format</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Format</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel1#getFormat()
-	 * @see #getGSSConfigLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSConfigLevel1_Format();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigLevel0 <em>GSS Config Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config Level0</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel0
-	 * @generated
-	 */
-	EClass getGSSConfigLevel0();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevel0#getFormat <em>Format</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Format</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel0#getFormat()
-	 * @see #getGSSConfigLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSConfigLevel0_Format();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigAppToLevel2 <em>GSS Config App To Level2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config App To Level2</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigAppToLevel2
-	 * @generated
-	 */
-	EClass getGSSConfigAppToLevel2();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigAppToLevel2#getExport <em>Export</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Export</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigAppToLevel2#getExport()
-	 * @see #getGSSConfigAppToLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSConfigAppToLevel2_Export();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigAppToLevel1 <em>GSS Config App To Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config App To Level1</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigAppToLevel1
-	 * @generated
-	 */
-	EClass getGSSConfigAppToLevel1();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigAppToLevel1#getExport <em>Export</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Export</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigAppToLevel1#getExport()
-	 * @see #getGSSConfigAppToLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSConfigAppToLevel1_Export();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigAppToLevel0 <em>GSS Config App To Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config App To Level0</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigAppToLevel0
-	 * @generated
-	 */
-	EClass getGSSConfigAppToLevel0();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigAppToLevel0#getExport <em>Export</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Export</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigAppToLevel0#getExport()
-	 * @see #getGSSConfigAppToLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSConfigAppToLevel0_Export();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigLevel2ToLevel1 <em>GSS Config Level2 To Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config Level2 To Level1</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel2ToLevel1
-	 * @generated
-	 */
-	EClass getGSSConfigLevel2ToLevel1();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevel2ToLevel1#getExport <em>Export</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Export</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel2ToLevel1#getExport()
-	 * @see #getGSSConfigLevel2ToLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSConfigLevel2ToLevel1_Export();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigLevel1ToLevel0 <em>GSS Config Level1 To Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Config Level1 To Level0</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel1ToLevel0
-	 * @generated
-	 */
-	EClass getGSSConfigLevel1ToLevel0();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigLevel1ToLevel0#getExport <em>Export</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Export</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel1ToLevel0#getExport()
-	 * @see #getGSSConfigLevel1ToLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSConfigLevel1ToLevel0_Export();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2 <em>GSS Config Periodic TC Level2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5141,10 +4386,10 @@ public interface configPackage extends EPackage {
 	EAttribute getGSSConfigPeriodicTCLevel2_Period_unit();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel2 <em>Level2</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel2 <em>Level2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level2</em>'.
+	 * @return the meta object for the reference '<em>Level2</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel2()
 	 * @see #getGSSConfigPeriodicTCLevel2()
 	 * @generated
@@ -5152,10 +4397,10 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigPeriodicTCLevel2_Level2();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getApp_to_level2 <em>App to level2</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getApp_to_level2 <em>App to level2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>App to level2</em>'.
+	 * @return the meta object for the reference '<em>App to level2</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getApp_to_level2()
 	 * @see #getGSSConfigPeriodicTCLevel2()
 	 * @generated
@@ -5163,10 +4408,10 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigPeriodicTCLevel2_App_to_level2();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel1 <em>Level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel1 <em>Level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1</em>'.
+	 * @return the meta object for the reference '<em>Level1</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel1()
 	 * @see #getGSSConfigPeriodicTCLevel2()
 	 * @generated
@@ -5174,10 +4419,10 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigPeriodicTCLevel2_Level1();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel2_to_level1 <em>Level2 to level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel2_to_level1 <em>Level2 to level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level2 to level1</em>'.
+	 * @return the meta object for the reference '<em>Level2 to level1</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel2_to_level1()
 	 * @see #getGSSConfigPeriodicTCLevel2()
 	 * @generated
@@ -5185,10 +4430,10 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigPeriodicTCLevel2_Level2_to_level1();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel0 <em>Level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel0 <em>Level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level0</em>'.
+	 * @return the meta object for the reference '<em>Level0</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel0()
 	 * @see #getGSSConfigPeriodicTCLevel2()
 	 * @generated
@@ -5196,10 +4441,10 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigPeriodicTCLevel2_Level0();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel1_to_level0 <em>Level1 to level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel1_to_level0 <em>Level1 to level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1 to level0</em>'.
+	 * @return the meta object for the reference '<em>Level1 to level0</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel1_to_level0()
 	 * @see #getGSSConfigPeriodicTCLevel2()
 	 * @generated
@@ -5272,10 +4517,10 @@ public interface configPackage extends EPackage {
 	EAttribute getGSSConfigPeriodicTCLevel1_Period_unit();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel1 <em>Level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel1 <em>Level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1</em>'.
+	 * @return the meta object for the reference '<em>Level1</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel1()
 	 * @see #getGSSConfigPeriodicTCLevel1()
 	 * @generated
@@ -5283,10 +4528,10 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigPeriodicTCLevel1_Level1();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getApp_to_level1 <em>App to level1</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getApp_to_level1 <em>App to level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>App to level1</em>'.
+	 * @return the meta object for the reference '<em>App to level1</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getApp_to_level1()
 	 * @see #getGSSConfigPeriodicTCLevel1()
 	 * @generated
@@ -5294,10 +4539,10 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigPeriodicTCLevel1_App_to_level1();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel0 <em>Level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel0 <em>Level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level0</em>'.
+	 * @return the meta object for the reference '<em>Level0</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel0()
 	 * @see #getGSSConfigPeriodicTCLevel1()
 	 * @generated
@@ -5305,10 +4550,10 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigPeriodicTCLevel1_Level0();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel1_to_level0 <em>Level1 to level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel1_to_level0 <em>Level1 to level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level1 to level0</em>'.
+	 * @return the meta object for the reference '<em>Level1 to level0</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel1_to_level0()
 	 * @see #getGSSConfigPeriodicTCLevel1()
 	 * @generated
@@ -5381,10 +4626,10 @@ public interface configPackage extends EPackage {
 	EAttribute getGSSConfigPeriodicTCLevel0_Period_unit();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getLevel0 <em>Level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getLevel0 <em>Level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Level0</em>'.
+	 * @return the meta object for the reference '<em>Level0</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getLevel0()
 	 * @see #getGSSConfigPeriodicTCLevel0()
 	 * @generated
@@ -5392,10 +4637,10 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigPeriodicTCLevel0_Level0();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getApp_to_level0 <em>App to level0</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getApp_to_level0 <em>App to level0</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>App to level0</em>'.
+	 * @return the meta object for the reference '<em>App to level0</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getApp_to_level0()
 	 * @see #getGSSConfigPeriodicTCLevel0()
 	 * @generated
@@ -5727,17 +4972,6 @@ public interface configPackage extends EPackage {
 	EClass getGSSConfigMonitors();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigMonitors#getChartsFile <em>Charts File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Charts File</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigMonitors#getChartsFile()
-	 * @see #getGSSConfigMonitors()
-	 * @generated
-	 */
-	EAttribute getGSSConfigMonitors_ChartsFile();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.config.GSSConfigMonitors#getPlot <em>Plot</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5780,6 +5014,17 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGSSConfigMonitors_AlarmVal();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigMonitors#getChartsFile <em>Charts File</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Charts File</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigMonitors#getChartsFile()
+	 * @see #getGSSConfigMonitors()
+	 * @generated
+	 */
+	EReference getGSSConfigMonitors_ChartsFile();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigPlot <em>GSS Config Plot</em>}'.
@@ -6030,15 +5275,15 @@ public interface configPackage extends EPackage {
 	EAttribute getGSSConfigGVFiltered_GlobalVarRef();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigGVFiltered#getFilter <em>Filter</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigGVFiltered#getFilter <em>Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Filter</em>'.
+	 * @return the meta object for the reference '<em>Filter</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigGVFiltered#getFilter()
 	 * @see #getGSSConfigGVFiltered()
 	 * @generated
 	 */
-	EAttribute getGSSConfigGVFiltered_Filter();
+	EReference getGSSConfigGVFiltered_Filter();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigGVPeriodic <em>GSS Config GV Periodic</em>}'.
@@ -6094,15 +5339,15 @@ public interface configPackage extends EPackage {
 	EClass getGSSConfigTests();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigTests#getProtocolPacketsFile <em>Protocol Packets File</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigTests#getProtocolPacketsFile <em>Protocol Packets File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Protocol Packets File</em>'.
+	 * @return the meta object for the reference '<em>Protocol Packets File</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigTests#getProtocolPacketsFile()
 	 * @see #getGSSConfigTests()
 	 * @generated
 	 */
-	EAttribute getGSSConfigTests_ProtocolPacketsFile();
+	EReference getGSSConfigTests_ProtocolPacketsFile();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.config.GSSConfigTests#getTestCase <em>Test Case</em>}'.
@@ -6137,15 +5382,15 @@ public interface configPackage extends EPackage {
 	EAttribute getGSSConfigTestCase_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getProcedure <em>Procedure</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getProcedure <em>Procedure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Procedure</em>'.
+	 * @return the meta object for the reference '<em>Procedure</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigTestCase#getProcedure()
 	 * @see #getGSSConfigTestCase()
 	 * @generated
 	 */
-	EAttribute getGSSConfigTestCase_Procedure();
+	EReference getGSSConfigTestCase_Procedure();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getReq <em>Req</em>}'.
@@ -6693,254 +5938,6 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_INTERFACES__INTERFACE = eINSTANCE.getGSSConfigInterfaces_Interface();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigTMFormatImpl <em>GSS Config TM Format</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigTMFormatImpl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigTMFormat()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_TM_FORMAT = eINSTANCE.getGSSConfigTMFormat();
-
-		/**
-		 * The meta object literal for the '<em><b>File</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_TM_FORMAT__FILE = eINSTANCE.getGSSConfigTMFormat_File();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigTCFormatImpl <em>GSS Config TC Format</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigTCFormatImpl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigTCFormat()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_TC_FORMAT = eINSTANCE.getGSSConfigTCFormat();
-
-		/**
-		 * The meta object literal for the '<em><b>File</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_TC_FORMAT__FILE = eINSTANCE.getGSSConfigTCFormat_File();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigInputFilterImpl <em>GSS Config Input Filter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigInputFilterImpl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigInputFilter()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_INPUT_FILTER = eINSTANCE.getGSSConfigInputFilter();
-
-		/**
-		 * The meta object literal for the '<em><b>File</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_INPUT_FILTER__FILE = eINSTANCE.getGSSConfigInputFilter_File();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigExportToPrevLevelImpl <em>GSS Config Export To Prev Level</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigExportToPrevLevelImpl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigExportToPrevLevel()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_EXPORT_TO_PREV_LEVEL = eINSTANCE.getGSSConfigExportToPrevLevel();
-
-		/**
-		 * The meta object literal for the '<em><b>File</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_EXPORT_TO_PREV_LEVEL__FILE = eINSTANCE.getGSSConfigExportToPrevLevel_File();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigImportFromPrevLevelImpl <em>GSS Config Import From Prev Level</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigImportFromPrevLevelImpl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigImportFromPrevLevel()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_IMPORT_FROM_PREV_LEVEL = eINSTANCE.getGSSConfigImportFromPrevLevel();
-
-		/**
-		 * The meta object literal for the '<em><b>File</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_IMPORT_FROM_PREV_LEVEL__FILE = eINSTANCE.getGSSConfigImportFromPrevLevel_File();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevelInOutImpl <em>GSS Config Level In Out</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevelInOutImpl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevelInOut()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_LEVEL_IN_OUT = eINSTANCE.getGSSConfigLevelInOut();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_LEVEL_IN_OUT__ID = eINSTANCE.getGSSConfigLevelInOut_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_LEVEL_IN_OUT__NAME = eINSTANCE.getGSSConfigLevelInOut_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>TMformat</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_CONFIG_LEVEL_IN_OUT__TMFORMAT = eINSTANCE.getGSSConfigLevelInOut_TMformat();
-
-		/**
-		 * The meta object literal for the '<em><b>TCformat</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_CONFIG_LEVEL_IN_OUT__TCFORMAT = eINSTANCE.getGSSConfigLevelInOut_TCformat();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Filter</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_CONFIG_LEVEL_IN_OUT__INPUT_FILTER = eINSTANCE.getGSSConfigLevelInOut_InputFilter();
-
-		/**
-		 * The meta object literal for the '<em><b>Export to prev Level</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_CONFIG_LEVEL_IN_OUT__EXPORT_TO_PREV_LEVEL = eINSTANCE.getGSSConfigLevelInOut_Export_to_prev_Level();
-
-		/**
-		 * The meta object literal for the '<em><b>Import from prev Level</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_CONFIG_LEVEL_IN_OUT__IMPORT_FROM_PREV_LEVEL = eINSTANCE.getGSSConfigLevelInOut_Import_from_prev_Level();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevelInImpl <em>GSS Config Level In</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevelInImpl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevelIn()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_LEVEL_IN = eINSTANCE.getGSSConfigLevelIn();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_LEVEL_IN__ID = eINSTANCE.getGSSConfigLevelIn_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_LEVEL_IN__NAME = eINSTANCE.getGSSConfigLevelIn_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>TCformat</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_CONFIG_LEVEL_IN__TCFORMAT = eINSTANCE.getGSSConfigLevelIn_TCformat();
-
-		/**
-		 * The meta object literal for the '<em><b>Export to prev Level</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_CONFIG_LEVEL_IN__EXPORT_TO_PREV_LEVEL = eINSTANCE.getGSSConfigLevelIn_Export_to_prev_Level();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevelOutImpl <em>GSS Config Level Out</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevelOutImpl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevelOut()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_LEVEL_OUT = eINSTANCE.getGSSConfigLevelOut();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_LEVEL_OUT__ID = eINSTANCE.getGSSConfigLevelOut_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_LEVEL_OUT__NAME = eINSTANCE.getGSSConfigLevelOut_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>TMformat</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_CONFIG_LEVEL_OUT__TMFORMAT = eINSTANCE.getGSSConfigLevelOut_TMformat();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Filter</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_CONFIG_LEVEL_OUT__INPUT_FILTER = eINSTANCE.getGSSConfigLevelOut_InputFilter();
-
-		/**
-		 * The meta object literal for the '<em><b>Import from prev Level</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_CONFIG_LEVEL_OUT__IMPORT_FROM_PREV_LEVEL = eINSTANCE.getGSSConfigLevelOut_Import_from_prev_Level();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigMainInterfaceImpl <em>GSS Config Main Interface</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6975,12 +5972,12 @@ public interface configPackage extends EPackage {
 		EAttribute GSS_CONFIG_MAIN_INTERFACE__IF_TYPE = eINSTANCE.getGSSConfigMainInterface_IfType();
 
 		/**
-		 * The meta object literal for the '<em><b>If Config</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>If Config</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_MAIN_INTERFACE__IF_CONFIG = eINSTANCE.getGSSConfigMainInterface_IfConfig();
+		EReference GSS_CONFIG_MAIN_INTERFACE__IF_CONFIG = eINSTANCE.getGSSConfigMainInterface_IfConfig();
 
 		/**
 		 * The meta object literal for the '<em><b>Io Type</b></em>' attribute feature.
@@ -6991,12 +5988,12 @@ public interface configPackage extends EPackage {
 		EAttribute GSS_CONFIG_MAIN_INTERFACE__IO_TYPE = eINSTANCE.getGSSConfigMainInterface_IoType();
 
 		/**
-		 * The meta object literal for the '<em><b>Protocol ID</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Protocol ID</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_MAIN_INTERFACE__PROTOCOL_ID = eINSTANCE.getGSSConfigMainInterface_ProtocolID();
+		EReference GSS_CONFIG_MAIN_INTERFACE__PROTOCOL_ID = eINSTANCE.getGSSConfigMainInterface_ProtocolID();
 
 		/**
 		 * The meta object literal for the '<em><b>Level In Out</b></em>' containment reference list feature.
@@ -7041,12 +6038,12 @@ public interface configPackage extends EPackage {
 		EAttribute GSS_CONFIG_INTERFACE__IF_TYPE = eINSTANCE.getGSSConfigInterface_IfType();
 
 		/**
-		 * The meta object literal for the '<em><b>If Config</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>If Config</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_INTERFACE__IF_CONFIG = eINSTANCE.getGSSConfigInterface_IfConfig();
+		EReference GSS_CONFIG_INTERFACE__IF_CONFIG = eINSTANCE.getGSSConfigInterface_IfConfig();
 
 		/**
 		 * The meta object literal for the '<em><b>Io Type</b></em>' attribute feature.
@@ -7057,12 +6054,12 @@ public interface configPackage extends EPackage {
 		EAttribute GSS_CONFIG_INTERFACE__IO_TYPE = eINSTANCE.getGSSConfigInterface_IoType();
 
 		/**
-		 * The meta object literal for the '<em><b>Protocol ID</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Protocol ID</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_INTERFACE__PROTOCOL_ID = eINSTANCE.getGSSConfigInterface_ProtocolID();
+		EReference GSS_CONFIG_INTERFACE__PROTOCOL_ID = eINSTANCE.getGSSConfigInterface_ProtocolID();
 
 		/**
 		 * The meta object literal for the '<em><b>Level In Out</b></em>' containment reference list feature.
@@ -7087,6 +6084,164 @@ public interface configPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GSS_CONFIG_INTERFACE__LEVEL_OUT = eINSTANCE.getGSSConfigInterface_LevelOut();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevelInOutImpl <em>GSS Config Level In Out</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevelInOutImpl
+		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevelInOut()
+		 * @generated
+		 */
+		EClass GSS_CONFIG_LEVEL_IN_OUT = eINSTANCE.getGSSConfigLevelInOut();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_CONFIG_LEVEL_IN_OUT__ID = eINSTANCE.getGSSConfigLevelInOut_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_CONFIG_LEVEL_IN_OUT__NAME = eINSTANCE.getGSSConfigLevelInOut_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>TMformat</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_CONFIG_LEVEL_IN_OUT__TMFORMAT = eINSTANCE.getGSSConfigLevelInOut_TMformat();
+
+		/**
+		 * The meta object literal for the '<em><b>TCformat</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_CONFIG_LEVEL_IN_OUT__TCFORMAT = eINSTANCE.getGSSConfigLevelInOut_TCformat();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Filter</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_CONFIG_LEVEL_IN_OUT__INPUT_FILTER = eINSTANCE.getGSSConfigLevelInOut_InputFilter();
+
+		/**
+		 * The meta object literal for the '<em><b>Export to prev Level</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_CONFIG_LEVEL_IN_OUT__EXPORT_TO_PREV_LEVEL = eINSTANCE.getGSSConfigLevelInOut_Export_to_prev_Level();
+
+		/**
+		 * The meta object literal for the '<em><b>Import from prev Level</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_CONFIG_LEVEL_IN_OUT__IMPORT_FROM_PREV_LEVEL = eINSTANCE.getGSSConfigLevelInOut_Import_from_prev_Level();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevelInImpl <em>GSS Config Level In</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevelInImpl
+		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevelIn()
+		 * @generated
+		 */
+		EClass GSS_CONFIG_LEVEL_IN = eINSTANCE.getGSSConfigLevelIn();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_CONFIG_LEVEL_IN__ID = eINSTANCE.getGSSConfigLevelIn_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_CONFIG_LEVEL_IN__NAME = eINSTANCE.getGSSConfigLevelIn_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>TCformat</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_CONFIG_LEVEL_IN__TCFORMAT = eINSTANCE.getGSSConfigLevelIn_TCformat();
+
+		/**
+		 * The meta object literal for the '<em><b>Export to prev Level</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_CONFIG_LEVEL_IN__EXPORT_TO_PREV_LEVEL = eINSTANCE.getGSSConfigLevelIn_Export_to_prev_Level();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevelOutImpl <em>GSS Config Level Out</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevelOutImpl
+		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevelOut()
+		 * @generated
+		 */
+		EClass GSS_CONFIG_LEVEL_OUT = eINSTANCE.getGSSConfigLevelOut();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_CONFIG_LEVEL_OUT__ID = eINSTANCE.getGSSConfigLevelOut_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_CONFIG_LEVEL_OUT__NAME = eINSTANCE.getGSSConfigLevelOut_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>TMformat</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_CONFIG_LEVEL_OUT__TMFORMAT = eINSTANCE.getGSSConfigLevelOut_TMformat();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Filter</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_CONFIG_LEVEL_OUT__INPUT_FILTER = eINSTANCE.getGSSConfigLevelOut_InputFilter();
+
+		/**
+		 * The meta object literal for the '<em><b>Import from prev Level</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_CONFIG_LEVEL_OUT__IMPORT_FROM_PREV_LEVEL = eINSTANCE.getGSSConfigLevelOut_Import_from_prev_Level();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigSpecialPacketsImpl <em>GSS Config Special Packets</em>}' class.
@@ -7165,7 +6320,7 @@ public interface configPackage extends EPackage {
 		EAttribute GSS_CONFIG_SPECIAL_PACKET__LEVEL_REF = eINSTANCE.getGSSConfigSpecialPacket_LevelRef();
 
 		/**
-		 * The meta object literal for the '<em><b>Input Filter</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Input Filter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7241,7 +6396,7 @@ public interface configPackage extends EPackage {
 		EAttribute GSS_CONFIG_UPPER_LEVEL__LEVEL = eINSTANCE.getGSSConfigUpperLevel_Level();
 
 		/**
-		 * The meta object literal for the '<em><b>TMformat</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>TMformat</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7249,7 +6404,7 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_UPPER_LEVEL__TMFORMAT = eINSTANCE.getGSSConfigUpperLevel_TMformat();
 
 		/**
-		 * The meta object literal for the '<em><b>Input Filter</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Input Filter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7257,7 +6412,7 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_UPPER_LEVEL__INPUT_FILTER = eINSTANCE.getGSSConfigUpperLevel_InputFilter();
 
 		/**
-		 * The meta object literal for the '<em><b>Import from prev Level</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Import from prev Level</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7435,150 +6590,6 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_PERIODIC_TCS__PERIODIC_TC_LEVEL_0 = eINSTANCE.getGSSConfigPeriodicTCs_PeriodicTC_level_0();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevel2Impl <em>GSS Config Level2</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevel2Impl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevel2()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_LEVEL2 = eINSTANCE.getGSSConfigLevel2();
-
-		/**
-		 * The meta object literal for the '<em><b>Format</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_LEVEL2__FORMAT = eINSTANCE.getGSSConfigLevel2_Format();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevel1Impl <em>GSS Config Level1</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevel1Impl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevel1()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_LEVEL1 = eINSTANCE.getGSSConfigLevel1();
-
-		/**
-		 * The meta object literal for the '<em><b>Format</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_LEVEL1__FORMAT = eINSTANCE.getGSSConfigLevel1_Format();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevel0Impl <em>GSS Config Level0</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevel0Impl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevel0()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_LEVEL0 = eINSTANCE.getGSSConfigLevel0();
-
-		/**
-		 * The meta object literal for the '<em><b>Format</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_LEVEL0__FORMAT = eINSTANCE.getGSSConfigLevel0_Format();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigAppToLevel2Impl <em>GSS Config App To Level2</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigAppToLevel2Impl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigAppToLevel2()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_APP_TO_LEVEL2 = eINSTANCE.getGSSConfigAppToLevel2();
-
-		/**
-		 * The meta object literal for the '<em><b>Export</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_APP_TO_LEVEL2__EXPORT = eINSTANCE.getGSSConfigAppToLevel2_Export();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigAppToLevel1Impl <em>GSS Config App To Level1</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigAppToLevel1Impl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigAppToLevel1()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_APP_TO_LEVEL1 = eINSTANCE.getGSSConfigAppToLevel1();
-
-		/**
-		 * The meta object literal for the '<em><b>Export</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_APP_TO_LEVEL1__EXPORT = eINSTANCE.getGSSConfigAppToLevel1_Export();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigAppToLevel0Impl <em>GSS Config App To Level0</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigAppToLevel0Impl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigAppToLevel0()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_APP_TO_LEVEL0 = eINSTANCE.getGSSConfigAppToLevel0();
-
-		/**
-		 * The meta object literal for the '<em><b>Export</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_APP_TO_LEVEL0__EXPORT = eINSTANCE.getGSSConfigAppToLevel0_Export();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevel2ToLevel1Impl <em>GSS Config Level2 To Level1</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevel2ToLevel1Impl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevel2ToLevel1()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_LEVEL2_TO_LEVEL1 = eINSTANCE.getGSSConfigLevel2ToLevel1();
-
-		/**
-		 * The meta object literal for the '<em><b>Export</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_LEVEL2_TO_LEVEL1__EXPORT = eINSTANCE.getGSSConfigLevel2ToLevel1_Export();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevel1ToLevel0Impl <em>GSS Config Level1 To Level0</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigLevel1ToLevel0Impl
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigLevel1ToLevel0()
-		 * @generated
-		 */
-		EClass GSS_CONFIG_LEVEL1_TO_LEVEL0 = eINSTANCE.getGSSConfigLevel1ToLevel0();
-
-		/**
-		 * The meta object literal for the '<em><b>Export</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_LEVEL1_TO_LEVEL0__EXPORT = eINSTANCE.getGSSConfigLevel1ToLevel0_Export();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigPeriodicTCLevel2Impl <em>GSS Config Periodic TC Level2</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7629,7 +6640,7 @@ public interface configPackage extends EPackage {
 		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL2__PERIOD_UNIT = eINSTANCE.getGSSConfigPeriodicTCLevel2_Period_unit();
 
 		/**
-		 * The meta object literal for the '<em><b>Level2</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level2</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7637,7 +6648,7 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL2 = eINSTANCE.getGSSConfigPeriodicTCLevel2_Level2();
 
 		/**
-		 * The meta object literal for the '<em><b>App to level2</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>App to level2</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7645,7 +6656,7 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_PERIODIC_TC_LEVEL2__APP_TO_LEVEL2 = eINSTANCE.getGSSConfigPeriodicTCLevel2_App_to_level2();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7653,7 +6664,7 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL1 = eINSTANCE.getGSSConfigPeriodicTCLevel2_Level1();
 
 		/**
-		 * The meta object literal for the '<em><b>Level2 to level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level2 to level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7661,7 +6672,7 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL2_TO_LEVEL1 = eINSTANCE.getGSSConfigPeriodicTCLevel2_Level2_to_level1();
 
 		/**
-		 * The meta object literal for the '<em><b>Level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7669,7 +6680,7 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL0 = eINSTANCE.getGSSConfigPeriodicTCLevel2_Level0();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1 to level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1 to level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7727,7 +6738,7 @@ public interface configPackage extends EPackage {
 		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_UNIT = eINSTANCE.getGSSConfigPeriodicTCLevel1_Period_unit();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7735,7 +6746,7 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1 = eINSTANCE.getGSSConfigPeriodicTCLevel1_Level1();
 
 		/**
-		 * The meta object literal for the '<em><b>App to level1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>App to level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7743,7 +6754,7 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1 = eINSTANCE.getGSSConfigPeriodicTCLevel1_App_to_level1();
 
 		/**
-		 * The meta object literal for the '<em><b>Level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7751,7 +6762,7 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0 = eINSTANCE.getGSSConfigPeriodicTCLevel1_Level0();
 
 		/**
-		 * The meta object literal for the '<em><b>Level1 to level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level1 to level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7809,7 +6820,7 @@ public interface configPackage extends EPackage {
 		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL0__PERIOD_UNIT = eINSTANCE.getGSSConfigPeriodicTCLevel0_Period_unit();
 
 		/**
-		 * The meta object literal for the '<em><b>Level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -7817,7 +6828,7 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_PERIODIC_TC_LEVEL0__LEVEL0 = eINSTANCE.getGSSConfigPeriodicTCLevel0_Level0();
 
 		/**
-		 * The meta object literal for the '<em><b>App to level0</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>App to level0</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -8077,14 +7088,6 @@ public interface configPackage extends EPackage {
 		EClass GSS_CONFIG_MONITORS = eINSTANCE.getGSSConfigMonitors();
 
 		/**
-		 * The meta object literal for the '<em><b>Charts File</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_MONITORS__CHARTS_FILE = eINSTANCE.getGSSConfigMonitors_ChartsFile();
-
-		/**
 		 * The meta object literal for the '<em><b>Plot</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8115,6 +7118,14 @@ public interface configPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GSS_CONFIG_MONITORS__ALARM_VAL = eINSTANCE.getGSSConfigMonitors_AlarmVal();
+
+		/**
+		 * The meta object literal for the '<em><b>Charts File</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_CONFIG_MONITORS__CHARTS_FILE = eINSTANCE.getGSSConfigMonitors_ChartsFile();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigPlotImpl <em>GSS Config Plot</em>}' class.
@@ -8311,12 +7322,12 @@ public interface configPackage extends EPackage {
 		EAttribute GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF = eINSTANCE.getGSSConfigGVFiltered_GlobalVarRef();
 
 		/**
-		 * The meta object literal for the '<em><b>Filter</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Filter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_GV_FILTERED__FILTER = eINSTANCE.getGSSConfigGVFiltered_Filter();
+		EReference GSS_CONFIG_GV_FILTERED__FILTER = eINSTANCE.getGSSConfigGVFiltered_Filter();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigGVPeriodicImpl <em>GSS Config GV Periodic</em>}' class.
@@ -8363,12 +7374,12 @@ public interface configPackage extends EPackage {
 		EClass GSS_CONFIG_TESTS = eINSTANCE.getGSSConfigTests();
 
 		/**
-		 * The meta object literal for the '<em><b>Protocol Packets File</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Protocol Packets File</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_TESTS__PROTOCOL_PACKETS_FILE = eINSTANCE.getGSSConfigTests_ProtocolPacketsFile();
+		EReference GSS_CONFIG_TESTS__PROTOCOL_PACKETS_FILE = eINSTANCE.getGSSConfigTests_ProtocolPacketsFile();
 
 		/**
 		 * The meta object literal for the '<em><b>Test Case</b></em>' containment reference list feature.
@@ -8397,12 +7408,12 @@ public interface configPackage extends EPackage {
 		EAttribute GSS_CONFIG_TEST_CASE__NAME = eINSTANCE.getGSSConfigTestCase_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Procedure</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Procedure</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_TEST_CASE__PROCEDURE = eINSTANCE.getGSSConfigTestCase_Procedure();
+		EReference GSS_CONFIG_TEST_CASE__PROCEDURE = eINSTANCE.getGSSConfigTestCase_Procedure();
 
 		/**
 		 * The meta object literal for the '<em><b>Req</b></em>' attribute feature.

@@ -78,10 +78,6 @@ public class protocol_packetsAdapterFactory extends AdapterFactoryImpl {
 				return createGSSProtocolPacketsProtocolPacketAdapter();
 			}
 			@Override
-			public Adapter caseGSSProtocolPacketsFormat(GSSProtocolPacketsFormat object) {
-				return createGSSProtocolPacketsFormatAdapter();
-			}
-			@Override
 			public Adapter caseGSSModelElement(GSSModelElement object) {
 				return createGSSModelElementAdapter();
 			}
@@ -130,20 +126,6 @@ public class protocol_packetsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSProtocolPacketsProtocolPacketAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsFormat <em>GSS Protocol Packets Format</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsFormat
-	 * @generated
-	 */
-	public Adapter createGSSProtocolPacketsFormatAdapter() {
 		return null;
 	}
 

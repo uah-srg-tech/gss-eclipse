@@ -79,6 +79,15 @@ public class GSSConfigPeriodImpl extends MinimalEObjectImpl.Container implements
 	protected GSSConfigUnit min_unit = MIN_UNIT_EDEFAULT;
 
 	/**
+	 * This is true if the Min unit attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean min_unitESet;
+
+	/**
 	 * The default value of the '{@link #getMax_value() <em>Max value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -117,6 +126,15 @@ public class GSSConfigPeriodImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected GSSConfigUnit max_unit = MAX_UNIT_EDEFAULT;
+
+	/**
+	 * This is true if the Max unit attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean max_unitESet;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,8 +193,33 @@ public class GSSConfigPeriodImpl extends MinimalEObjectImpl.Container implements
 	public void setMin_unit(GSSConfigUnit newMin_unit) {
 		GSSConfigUnit oldMin_unit = min_unit;
 		min_unit = newMin_unit == null ? MIN_UNIT_EDEFAULT : newMin_unit;
+		boolean oldMin_unitESet = min_unitESet;
+		min_unitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIOD__MIN_UNIT, oldMin_unit, min_unit));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIOD__MIN_UNIT, oldMin_unit, min_unit, !oldMin_unitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetMin_unit() {
+		GSSConfigUnit oldMin_unit = min_unit;
+		boolean oldMin_unitESet = min_unitESet;
+		min_unit = MIN_UNIT_EDEFAULT;
+		min_unitESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_PERIOD__MIN_UNIT, oldMin_unit, MIN_UNIT_EDEFAULT, oldMin_unitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetMin_unit() {
+		return min_unitESet;
 	}
 
 	/**
@@ -217,8 +260,33 @@ public class GSSConfigPeriodImpl extends MinimalEObjectImpl.Container implements
 	public void setMax_unit(GSSConfigUnit newMax_unit) {
 		GSSConfigUnit oldMax_unit = max_unit;
 		max_unit = newMax_unit == null ? MAX_UNIT_EDEFAULT : newMax_unit;
+		boolean oldMax_unitESet = max_unitESet;
+		max_unitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIOD__MAX_UNIT, oldMax_unit, max_unit));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIOD__MAX_UNIT, oldMax_unit, max_unit, !oldMax_unitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetMax_unit() {
+		GSSConfigUnit oldMax_unit = max_unit;
+		boolean oldMax_unitESet = max_unitESet;
+		max_unit = MAX_UNIT_EDEFAULT;
+		max_unitESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_PERIOD__MAX_UNIT, oldMax_unit, MAX_UNIT_EDEFAULT, oldMax_unitESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetMax_unit() {
+		return max_unitESet;
 	}
 
 	/**
@@ -277,13 +345,13 @@ public class GSSConfigPeriodImpl extends MinimalEObjectImpl.Container implements
 				setMin_value(MIN_VALUE_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_PERIOD__MIN_UNIT:
-				setMin_unit(MIN_UNIT_EDEFAULT);
+				unsetMin_unit();
 				return;
 			case configPackage.GSS_CONFIG_PERIOD__MAX_VALUE:
 				setMax_value(MAX_VALUE_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_PERIOD__MAX_UNIT:
-				setMax_unit(MAX_UNIT_EDEFAULT);
+				unsetMax_unit();
 				return;
 		}
 		super.eUnset(featureID);
@@ -300,11 +368,11 @@ public class GSSConfigPeriodImpl extends MinimalEObjectImpl.Container implements
 			case configPackage.GSS_CONFIG_PERIOD__MIN_VALUE:
 				return MIN_VALUE_EDEFAULT == null ? min_value != null : !MIN_VALUE_EDEFAULT.equals(min_value);
 			case configPackage.GSS_CONFIG_PERIOD__MIN_UNIT:
-				return min_unit != MIN_UNIT_EDEFAULT;
+				return isSetMin_unit();
 			case configPackage.GSS_CONFIG_PERIOD__MAX_VALUE:
 				return MAX_VALUE_EDEFAULT == null ? max_value != null : !MAX_VALUE_EDEFAULT.equals(max_value);
 			case configPackage.GSS_CONFIG_PERIOD__MAX_UNIT:
-				return max_unit != MAX_UNIT_EDEFAULT;
+				return isSetMax_unit();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -322,11 +390,11 @@ public class GSSConfigPeriodImpl extends MinimalEObjectImpl.Container implements
 		result.append(" (min_value: ");
 		result.append(min_value);
 		result.append(", min_unit: ");
-		result.append(min_unit);
+		if (min_unitESet) result.append(min_unit); else result.append("<unset>");
 		result.append(", max_value: ");
 		result.append(max_value);
 		result.append(", max_unit: ");
-		result.append(max_unit);
+		if (max_unitESet) result.append(max_unit); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

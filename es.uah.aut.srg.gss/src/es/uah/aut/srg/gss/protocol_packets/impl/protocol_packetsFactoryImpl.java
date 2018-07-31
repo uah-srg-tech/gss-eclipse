@@ -58,7 +58,6 @@ public class protocol_packetsFactoryImpl extends EFactoryImpl implements protoco
 		switch (eClass.getClassifierID()) {
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKETS: return createGSSProtocolPacketsProtocolPackets();
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET: return createGSSProtocolPacketsProtocolPacket();
-			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_FORMAT: return createGSSProtocolPacketsFormat();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -82,16 +81,6 @@ public class protocol_packetsFactoryImpl extends EFactoryImpl implements protoco
 	public GSSProtocolPacketsProtocolPacket createGSSProtocolPacketsProtocolPacket() {
 		GSSProtocolPacketsProtocolPacketImpl gssProtocolPacketsProtocolPacket = new GSSProtocolPacketsProtocolPacketImpl();
 		return gssProtocolPacketsProtocolPacket;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSProtocolPacketsFormat createGSSProtocolPacketsFormat() {
-		GSSProtocolPacketsFormatImpl gssProtocolPacketsFormat = new GSSProtocolPacketsFormatImpl();
-		return gssProtocolPacketsFormat;
 	}
 
 	/**

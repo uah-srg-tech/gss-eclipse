@@ -140,7 +140,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     GSSModelFileImport returns GSSModelFileImport
 	 *
 	 * Constraint:
-	 *     importURI=ID
+	 *     importURI=STRING
 	 */
 	protected void sequence_GSSModelFileImport(ISerializationContext context, GSSModelFileImport semanticObject) {
 		if (errorAcceptor != null) {
@@ -148,7 +148,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, commonPackage.Literals.GSS_MODEL_FILE_IMPORT__IMPORT_URI));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_1_0(), semanticObject.getImportURI());
+		feeder.accept(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0(), semanticObject.getImportURI());
 		feeder.finish();
 	}
 	
@@ -380,7 +380,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     GSSTmTcFormatFormula returns GSSTmTcFormatFormula
 	 *
 	 * Constraint:
-	 *     (slope=REAL intercept=REAL)
+	 *     (slope=STRING intercept=STRING)
 	 */
 	protected void sequence_GSSTmTcFormatFormula(ISerializationContext context, GSSTmTcFormatFormula semanticObject) {
 		if (errorAcceptor != null) {
@@ -390,8 +390,8 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_FORMULA__INTERCEPT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSTmTcFormatFormulaAccess().getSlopeREALParserRuleCall_4_0(), semanticObject.getSlope());
-		feeder.accept(grammarAccess.getGSSTmTcFormatFormulaAccess().getInterceptREALParserRuleCall_8_0(), semanticObject.getIntercept());
+		feeder.accept(grammarAccess.getGSSTmTcFormatFormulaAccess().getSlopeSTRINGTerminalRuleCall_4_0(), semanticObject.getSlope());
+		feeder.accept(grammarAccess.getGSSTmTcFormatFormulaAccess().getInterceptSTRINGTerminalRuleCall_8_0(), semanticObject.getIntercept());
 		feeder.finish();
 	}
 	
@@ -564,9 +564,9 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
 	 *         constSize=GSSTmTcFormatConstSize 
-	 *         globalOffset=GSSTmTcFormatGlobalOffset 
 	 *         maxSize=GSSTmTcFormatMaxSize 
-	 *         variableSize=GSSTmTcFormatVariableSize
+	 *         variableSize=GSSTmTcFormatVariableSize 
+	 *         globalOffset=GSSTmTcFormatGlobalOffset
 	 *     )
 	 */
 	protected void sequence_GSSTmTcFormatVSField(ISerializationContext context, GSSTmTcFormatVSField semanticObject) {

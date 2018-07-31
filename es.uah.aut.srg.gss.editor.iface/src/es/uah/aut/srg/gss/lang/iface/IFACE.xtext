@@ -86,7 +86,7 @@ GSSIfaceUartProtocol returns GSSIfaceUartProtocol:
 		constSize=GSSIfaceConstSize
 		sizeFieldOffset=GSSIfaceSizeFieldOffset
 		sizeFieldTrim=GSSIfaceSizeFieldTrim
-		syncPattern=GSSIfaceSyncPattern
+		(syncPattern=GSSIfaceSyncPattern)?
 	'}' ';'
 ;
 

@@ -23,7 +23,6 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int EOF=-1;
-    public static final int T__30=30;
     public static final int RULE_ID=5;
     public static final int RULE_WS=10;
     public static final int RULE_ANY_OTHER=11;
@@ -80,11 +79,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:12:7: ( ':=' )
-            // InternalPROTOCOL_PACKETS.g:12:9: ':='
+            // InternalPROTOCOL_PACKETS.g:12:7: ( ';' )
+            // InternalPROTOCOL_PACKETS.g:12:9: ';'
             {
-            match(":="); 
-
+            match(';'); 
 
             }
 
@@ -101,10 +99,11 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:13:7: ( ';' )
-            // InternalPROTOCOL_PACKETS.g:13:9: ';'
+            // InternalPROTOCOL_PACKETS.g:13:7: ( 'GSSProtocolPacketsProtocolPackets' )
+            // InternalPROTOCOL_PACKETS.g:13:9: 'GSSProtocolPacketsProtocolPackets'
             {
-            match(';'); 
+            match("GSSProtocolPacketsProtocolPackets"); 
+
 
             }
 
@@ -121,11 +120,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:14:7: ( 'GSSProtocolPacketsProtocolPackets' )
-            // InternalPROTOCOL_PACKETS.g:14:9: 'GSSProtocolPacketsProtocolPackets'
+            // InternalPROTOCOL_PACKETS.g:14:7: ( '{' )
+            // InternalPROTOCOL_PACKETS.g:14:9: '{'
             {
-            match("GSSProtocolPacketsProtocolPackets"); 
-
+            match('{'); 
 
             }
 
@@ -142,10 +140,11 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:15:7: ( '{' )
-            // InternalPROTOCOL_PACKETS.g:15:9: '{'
+            // InternalPROTOCOL_PACKETS.g:15:7: ( 'uri' )
+            // InternalPROTOCOL_PACKETS.g:15:9: 'uri'
             {
-            match('{'); 
+            match("uri"); 
+
 
             }
 
@@ -162,10 +161,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:16:7: ( 'uri' )
-            // InternalPROTOCOL_PACKETS.g:16:9: 'uri'
+            // InternalPROTOCOL_PACKETS.g:16:7: ( ':=' )
+            // InternalPROTOCOL_PACKETS.g:16:9: ':='
             {
-            match("uri"); 
+            match(":="); 
 
 
             }
@@ -329,10 +328,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:24:7: ( 'GSSProtocolPacketsFormat' )
-            // InternalPROTOCOL_PACKETS.g:24:9: 'GSSProtocolPacketsFormat'
+            // InternalPROTOCOL_PACKETS.g:24:7: ( 'format' )
+            // InternalPROTOCOL_PACKETS.g:24:9: 'format'
             {
-            match("GSSProtocolPacketsFormat"); 
+            match("format"); 
 
 
             }
@@ -350,11 +349,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:25:7: ( 'file' )
-            // InternalPROTOCOL_PACKETS.g:25:9: 'file'
+            // InternalPROTOCOL_PACKETS.g:25:7: ( '.' )
+            // InternalPROTOCOL_PACKETS.g:25:9: '.'
             {
-            match("file"); 
-
+            match('.'); 
 
             }
 
@@ -371,10 +369,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:26:7: ( '.' )
-            // InternalPROTOCOL_PACKETS.g:26:9: '.'
+            // InternalPROTOCOL_PACKETS.g:26:7: ( '(' )
+            // InternalPROTOCOL_PACKETS.g:26:9: '('
             {
-            match('.'); 
+            match('('); 
 
             }
 
@@ -391,10 +389,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:27:7: ( '(' )
-            // InternalPROTOCOL_PACKETS.g:27:9: '('
+            // InternalPROTOCOL_PACKETS.g:27:7: ( ')' )
+            // InternalPROTOCOL_PACKETS.g:27:9: ')'
             {
-            match('('); 
+            match(')'); 
 
             }
 
@@ -411,28 +409,8 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:28:7: ( ')' )
-            // InternalPROTOCOL_PACKETS.g:28:9: ')'
-            {
-            match(')'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__29"
-
-    // $ANTLR start "T__30"
-    public final void mT__30() throws RecognitionException {
-        try {
-            int _type = T__30;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:29:7: ( '-' )
-            // InternalPROTOCOL_PACKETS.g:29:9: '-'
+            // InternalPROTOCOL_PACKETS.g:28:7: ( '-' )
+            // InternalPROTOCOL_PACKETS.g:28:9: '-'
             {
             match('-'); 
 
@@ -444,19 +422,19 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__30"
+    // $ANTLR end "T__29"
 
     // $ANTLR start "RULE_HEXADECIMAL"
     public final void mRULE_HEXADECIMAL() throws RecognitionException {
         try {
             int _type = RULE_HEXADECIMAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:883:18: ( '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
-            // InternalPROTOCOL_PACKETS.g:883:20: '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+            // InternalPROTOCOL_PACKETS.g:766:18: ( '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
+            // InternalPROTOCOL_PACKETS.g:766:20: '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
             {
             match("0x"); 
 
-            // InternalPROTOCOL_PACKETS.g:883:25: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+            // InternalPROTOCOL_PACKETS.g:766:25: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
             int cnt1=0;
             loop1:
             do {
@@ -510,10 +488,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:885:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalPROTOCOL_PACKETS.g:885:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalPROTOCOL_PACKETS.g:768:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalPROTOCOL_PACKETS.g:768:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalPROTOCOL_PACKETS.g:885:11: ( '^' )?
+            // InternalPROTOCOL_PACKETS.g:768:11: ( '^' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -522,7 +500,7 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalPROTOCOL_PACKETS.g:885:11: '^'
+                    // InternalPROTOCOL_PACKETS.g:768:11: '^'
                     {
                     match('^'); 
 
@@ -540,7 +518,7 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalPROTOCOL_PACKETS.g:885:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalPROTOCOL_PACKETS.g:768:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -589,10 +567,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:887:10: ( ( '0' .. '9' )+ )
-            // InternalPROTOCOL_PACKETS.g:887:12: ( '0' .. '9' )+
+            // InternalPROTOCOL_PACKETS.g:770:10: ( ( '0' .. '9' )+ )
+            // InternalPROTOCOL_PACKETS.g:770:12: ( '0' .. '9' )+
             {
-            // InternalPROTOCOL_PACKETS.g:887:12: ( '0' .. '9' )+
+            // InternalPROTOCOL_PACKETS.g:770:12: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -606,7 +584,7 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalPROTOCOL_PACKETS.g:887:13: '0' .. '9'
+            	    // InternalPROTOCOL_PACKETS.g:770:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -638,10 +616,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:889:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalPROTOCOL_PACKETS.g:889:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalPROTOCOL_PACKETS.g:772:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalPROTOCOL_PACKETS.g:772:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalPROTOCOL_PACKETS.g:889:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalPROTOCOL_PACKETS.g:772:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -659,10 +637,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // InternalPROTOCOL_PACKETS.g:889:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalPROTOCOL_PACKETS.g:772:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalPROTOCOL_PACKETS.g:889:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalPROTOCOL_PACKETS.g:772:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -678,7 +656,7 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalPROTOCOL_PACKETS.g:889:21: '\\\\' .
+                    	    // InternalPROTOCOL_PACKETS.g:772:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -686,7 +664,7 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalPROTOCOL_PACKETS.g:889:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalPROTOCOL_PACKETS.g:772:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -711,10 +689,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalPROTOCOL_PACKETS.g:889:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalPROTOCOL_PACKETS.g:772:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalPROTOCOL_PACKETS.g:889:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalPROTOCOL_PACKETS.g:772:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -730,7 +708,7 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // InternalPROTOCOL_PACKETS.g:889:54: '\\\\' .
+                    	    // InternalPROTOCOL_PACKETS.g:772:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -738,7 +716,7 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalPROTOCOL_PACKETS.g:889:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalPROTOCOL_PACKETS.g:772:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -781,12 +759,12 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:891:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalPROTOCOL_PACKETS.g:891:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalPROTOCOL_PACKETS.g:774:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalPROTOCOL_PACKETS.g:774:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalPROTOCOL_PACKETS.g:891:24: ( options {greedy=false; } : . )*
+            // InternalPROTOCOL_PACKETS.g:774:24: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -811,7 +789,7 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalPROTOCOL_PACKETS.g:891:52: .
+            	    // InternalPROTOCOL_PACKETS.g:774:52: .
             	    {
             	    matchAny(); 
 
@@ -841,12 +819,12 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:893:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalPROTOCOL_PACKETS.g:893:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalPROTOCOL_PACKETS.g:776:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalPROTOCOL_PACKETS.g:776:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalPROTOCOL_PACKETS.g:893:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalPROTOCOL_PACKETS.g:776:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -859,7 +837,7 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // InternalPROTOCOL_PACKETS.g:893:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalPROTOCOL_PACKETS.g:776:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -879,7 +857,7 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalPROTOCOL_PACKETS.g:893:40: ( ( '\\r' )? '\\n' )?
+            // InternalPROTOCOL_PACKETS.g:776:40: ( ( '\\r' )? '\\n' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -888,9 +866,9 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // InternalPROTOCOL_PACKETS.g:893:41: ( '\\r' )? '\\n'
+                    // InternalPROTOCOL_PACKETS.g:776:41: ( '\\r' )? '\\n'
                     {
-                    // InternalPROTOCOL_PACKETS.g:893:41: ( '\\r' )?
+                    // InternalPROTOCOL_PACKETS.g:776:41: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -899,7 +877,7 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // InternalPROTOCOL_PACKETS.g:893:41: '\\r'
+                            // InternalPROTOCOL_PACKETS.g:776:41: '\\r'
                             {
                             match('\r'); 
 
@@ -931,10 +909,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:895:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalPROTOCOL_PACKETS.g:895:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalPROTOCOL_PACKETS.g:778:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalPROTOCOL_PACKETS.g:778:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalPROTOCOL_PACKETS.g:895:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalPROTOCOL_PACKETS.g:778:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt12=0;
             loop12:
             do {
@@ -988,8 +966,8 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPROTOCOL_PACKETS.g:897:16: ( . )
-            // InternalPROTOCOL_PACKETS.g:897:18: .
+            // InternalPROTOCOL_PACKETS.g:780:16: ( . )
+            // InternalPROTOCOL_PACKETS.g:780:18: .
             {
             matchAny(); 
 
@@ -1004,8 +982,8 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // InternalPROTOCOL_PACKETS.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | RULE_HEXADECIMAL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt13=27;
+        // InternalPROTOCOL_PACKETS.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | RULE_HEXADECIMAL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt13=26;
         alt13 = dfa13.predict(input);
         switch (alt13) {
             case 1 :
@@ -1135,63 +1113,56 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
                 }
                 break;
             case 19 :
-                // InternalPROTOCOL_PACKETS.g:1:118: T__30
-                {
-                mT__30(); 
-
-                }
-                break;
-            case 20 :
-                // InternalPROTOCOL_PACKETS.g:1:124: RULE_HEXADECIMAL
+                // InternalPROTOCOL_PACKETS.g:1:118: RULE_HEXADECIMAL
                 {
                 mRULE_HEXADECIMAL(); 
 
                 }
                 break;
-            case 21 :
-                // InternalPROTOCOL_PACKETS.g:1:141: RULE_ID
+            case 20 :
+                // InternalPROTOCOL_PACKETS.g:1:135: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 22 :
-                // InternalPROTOCOL_PACKETS.g:1:149: RULE_INT
+            case 21 :
+                // InternalPROTOCOL_PACKETS.g:1:143: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 23 :
-                // InternalPROTOCOL_PACKETS.g:1:158: RULE_STRING
+            case 22 :
+                // InternalPROTOCOL_PACKETS.g:1:152: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 24 :
-                // InternalPROTOCOL_PACKETS.g:1:170: RULE_ML_COMMENT
+            case 23 :
+                // InternalPROTOCOL_PACKETS.g:1:164: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 25 :
-                // InternalPROTOCOL_PACKETS.g:1:186: RULE_SL_COMMENT
+            case 24 :
+                // InternalPROTOCOL_PACKETS.g:1:180: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 26 :
-                // InternalPROTOCOL_PACKETS.g:1:202: RULE_WS
+            case 25 :
+                // InternalPROTOCOL_PACKETS.g:1:196: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 27 :
-                // InternalPROTOCOL_PACKETS.g:1:210: RULE_ANY_OTHER
+            case 26 :
+                // InternalPROTOCOL_PACKETS.g:1:204: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1205,24 +1176,24 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
 
     protected DFA13 dfa13 = new DFA13(this);
     static final String DFA13_eotS =
-        "\1\uffff\1\34\1\31\1\uffff\1\34\1\uffff\2\34\1\uffff\4\34\4\uffff\1\55\1\31\2\uffff\3\31\2\uffff\2\34\3\uffff\1\34\1\uffff\2\34\1\uffff\4\34\12\uffff\3\34\1\76\10\34\1\uffff\1\34\1\110\2\34\1\113\1\34\1\115\2\34\1\uffff\2\34\1\uffff\1\122\1\uffff\3\34\1\126\1\uffff\1\34\1\130\1\34\1\uffff\1\34\1\uffff\1\133\1\34\1\uffff\24\34\1\162\1\34\1\uffff\6\34\1\173\1\174\2\uffff";
+        "\1\uffff\1\34\1\uffff\1\34\1\uffff\1\34\1\31\1\34\1\uffff\4\34\4\uffff\1\55\1\31\2\uffff\3\31\2\uffff\2\34\2\uffff\1\34\1\uffff\1\34\1\uffff\1\34\1\uffff\4\34\12\uffff\3\34\1\76\10\34\1\uffff\1\34\1\110\4\34\1\115\2\34\1\uffff\3\34\1\123\1\uffff\3\34\1\127\1\130\1\uffff\1\34\1\132\1\34\2\uffff\1\34\1\uffff\1\135\1\34\1\uffff\26\34\1\166\1\167\2\uffff";
     static final String DFA13_eofS =
-        "\175\uffff";
+        "\170\uffff";
     static final String DFA13_minS =
-        "\1\0\1\146\1\75\1\uffff\1\123\1\uffff\1\162\1\145\1\uffff\1\141\1\145\1\170\1\151\4\uffff\1\170\1\101\2\uffff\2\0\1\52\2\uffff\1\160\1\122\3\uffff\1\123\1\uffff\1\151\1\162\1\uffff\1\155\1\166\1\160\1\154\12\uffff\1\157\1\145\1\120\1\60\1\163\2\145\1\157\1\145\1\162\1\146\1\162\1\uffff\1\151\1\60\1\154\1\162\1\60\1\164\1\60\2\157\1\uffff\1\122\1\164\1\uffff\1\60\1\uffff\1\164\1\156\1\145\1\60\1\uffff\1\157\1\60\1\146\1\uffff\1\143\1\uffff\1\60\1\157\1\uffff\1\154\1\120\1\141\1\143\1\153\1\145\1\164\1\163\1\106\1\162\2\157\1\162\1\164\1\155\1\157\1\141\1\143\1\164\1\157\1\60\1\154\1\uffff\1\120\1\141\1\143\1\153\1\145\1\164\2\60\2\uffff";
+        "\1\0\1\146\1\uffff\1\123\1\uffff\1\162\1\75\1\145\1\uffff\1\141\1\145\1\170\1\157\4\uffff\1\170\1\101\2\uffff\2\0\1\52\2\uffff\1\160\1\122\2\uffff\1\123\1\uffff\1\151\1\uffff\1\162\1\uffff\1\155\1\166\1\160\1\162\12\uffff\1\157\1\145\1\120\1\60\1\163\2\145\1\157\1\155\1\162\1\146\1\162\1\uffff\1\151\1\60\1\154\1\162\1\141\1\164\1\60\2\157\1\uffff\1\122\2\164\1\60\1\uffff\1\164\1\156\1\145\2\60\1\uffff\1\157\1\60\1\146\2\uffff\1\143\1\uffff\1\60\1\157\1\uffff\1\154\1\120\1\141\1\143\1\153\1\145\1\164\1\163\1\120\1\162\1\157\1\164\1\157\1\143\1\157\1\154\1\120\1\141\1\143\1\153\1\145\1\164\2\60\2\uffff";
     static final String DFA13_maxS =
-        "\1\uffff\1\155\1\75\1\uffff\1\123\1\uffff\1\162\1\145\1\uffff\1\141\1\145\1\170\1\151\4\uffff\1\170\1\172\2\uffff\2\uffff\1\57\2\uffff\1\160\1\122\3\uffff\1\123\1\uffff\1\151\1\162\1\uffff\1\155\1\166\1\160\1\154\12\uffff\1\157\1\145\1\120\1\172\1\163\2\145\1\157\1\145\1\162\1\146\1\162\1\uffff\1\151\1\172\1\154\1\162\1\172\1\164\1\172\2\157\1\uffff\1\122\1\164\1\uffff\1\172\1\uffff\1\164\1\156\1\145\1\172\1\uffff\1\157\1\172\1\146\1\uffff\1\143\1\uffff\1\172\1\157\1\uffff\1\154\1\120\1\141\1\143\1\153\1\145\1\164\1\163\1\120\1\162\2\157\1\162\1\164\1\155\1\157\1\141\1\143\1\164\1\157\1\172\1\154\1\uffff\1\120\1\141\1\143\1\153\1\145\1\164\2\172\2\uffff";
+        "\1\uffff\1\155\1\uffff\1\123\1\uffff\1\162\1\75\1\145\1\uffff\1\141\1\145\1\170\1\157\4\uffff\1\170\1\172\2\uffff\2\uffff\1\57\2\uffff\1\160\1\122\2\uffff\1\123\1\uffff\1\151\1\uffff\1\162\1\uffff\1\155\1\166\1\160\1\162\12\uffff\1\157\1\145\1\120\1\172\1\163\2\145\1\157\1\155\1\162\1\146\1\162\1\uffff\1\151\1\172\1\154\1\162\1\141\1\164\1\172\2\157\1\uffff\1\122\2\164\1\172\1\uffff\1\164\1\156\1\145\2\172\1\uffff\1\157\1\172\1\146\2\uffff\1\143\1\uffff\1\172\1\157\1\uffff\1\154\1\120\1\141\1\143\1\153\1\145\1\164\1\163\1\120\1\162\1\157\1\164\1\157\1\143\1\157\1\154\1\120\1\141\1\143\1\153\1\145\1\164\2\172\2\uffff";
     static final String DFA13_acceptS =
-        "\3\uffff\1\3\1\uffff\1\5\2\uffff\1\10\4\uffff\1\20\1\21\1\22\1\23\2\uffff\1\25\1\26\3\uffff\1\32\1\33\2\uffff\1\25\1\2\1\3\1\uffff\1\5\2\uffff\1\10\4\uffff\1\20\1\21\1\22\1\23\1\24\1\26\1\27\1\30\1\31\1\32\14\uffff\1\6\11\uffff\1\12\2\uffff\1\17\1\uffff\1\13\4\uffff\1\1\3\uffff\1\15\1\uffff\1\7\2\uffff\1\14\26\uffff\1\16\10\uffff\1\11\1\4";
+        "\2\uffff\1\2\1\uffff\1\4\3\uffff\1\10\4\uffff\1\17\1\20\1\21\1\22\2\uffff\1\24\1\25\3\uffff\1\31\1\32\2\uffff\1\24\1\2\1\uffff\1\4\1\uffff\1\6\1\uffff\1\10\4\uffff\1\17\1\20\1\21\1\22\1\23\1\25\1\26\1\27\1\30\1\31\14\uffff\1\5\11\uffff\1\12\4\uffff\1\13\5\uffff\1\1\3\uffff\1\15\1\16\1\uffff\1\7\2\uffff\1\14\30\uffff\1\11\1\3";
     static final String DFA13_specialS =
-        "\1\0\24\uffff\1\2\1\1\146\uffff}>";
+        "\1\0\24\uffff\1\2\1\1\141\uffff}>";
     static final String[] DFA13_transitionS = {
-            "\11\31\2\30\2\31\1\30\22\31\1\30\1\31\1\25\4\31\1\26\1\16\1\17\3\31\1\20\1\15\1\27\1\21\11\24\1\2\1\3\5\31\6\23\1\4\23\23\3\31\1\22\1\23\1\31\4\23\1\13\1\14\2\23\1\1\2\23\1\12\1\23\1\11\6\23\1\6\1\7\4\23\1\5\1\31\1\10\uff82\31",
+            "\11\31\2\30\2\31\1\30\22\31\1\30\1\31\1\25\4\31\1\26\1\16\1\17\3\31\1\20\1\15\1\27\1\21\11\24\1\6\1\2\5\31\6\23\1\3\23\23\3\31\1\22\1\23\1\31\4\23\1\13\1\14\2\23\1\1\2\23\1\12\1\23\1\11\6\23\1\5\1\7\4\23\1\4\1\31\1\10\uff82\31",
             "\1\33\6\uffff\1\32",
-            "\1\35",
             "",
-            "\1\37",
+            "\1\36",
             "",
+            "\1\40",
             "\1\41",
             "\1\42",
             "",
@@ -1247,10 +1218,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
             "\1\63",
             "",
             "",
-            "",
             "\1\64",
             "",
             "\1\65",
+            "",
             "\1\66",
             "",
             "\1\67",
@@ -1284,7 +1255,7 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\111",
             "\1\112",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\113",
             "\1\114",
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\116",
@@ -1292,32 +1263,33 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
             "",
             "\1\120",
             "\1\121",
-            "",
+            "\1\122",
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "",
-            "\1\123",
             "\1\124",
             "\1\125",
+            "\1\126",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "",
-            "\1\127",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\131",
-            "",
-            "\1\132",
-            "",
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\133",
+            "",
+            "",
             "\1\134",
             "",
-            "\1\135",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\136",
+            "",
             "\1\137",
             "\1\140",
             "\1\141",
             "\1\142",
             "\1\143",
             "\1\144",
-            "\1\146\11\uffff\1\145",
+            "\1\145",
+            "\1\146",
             "\1\147",
             "\1\150",
             "\1\151",
@@ -1329,16 +1301,10 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
             "\1\157",
             "\1\160",
             "\1\161",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\162",
             "\1\163",
-            "",
             "\1\164",
-            "\1\165",
-            "\1\166",
-            "\1\167",
-            "\1\170",
-            "\1\171",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\22\34\1\172\7\34",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\22\34\1\165\7\34",
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "",
             ""
@@ -1374,7 +1340,7 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | RULE_HEXADECIMAL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | RULE_HEXADECIMAL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -1386,15 +1352,15 @@ public class InternalPROTOCOL_PACKETSLexer extends Lexer {
                         s = -1;
                         if ( (LA13_0=='i') ) {s = 1;}
 
-                        else if ( (LA13_0==':') ) {s = 2;}
+                        else if ( (LA13_0==';') ) {s = 2;}
 
-                        else if ( (LA13_0==';') ) {s = 3;}
+                        else if ( (LA13_0=='G') ) {s = 3;}
 
-                        else if ( (LA13_0=='G') ) {s = 4;}
+                        else if ( (LA13_0=='{') ) {s = 4;}
 
-                        else if ( (LA13_0=='{') ) {s = 5;}
+                        else if ( (LA13_0=='u') ) {s = 5;}
 
-                        else if ( (LA13_0=='u') ) {s = 6;}
+                        else if ( (LA13_0==':') ) {s = 6;}
 
                         else if ( (LA13_0=='v') ) {s = 7;}
 

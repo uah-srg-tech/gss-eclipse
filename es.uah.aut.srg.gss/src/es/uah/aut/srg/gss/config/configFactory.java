@@ -111,49 +111,22 @@ public interface configFactory extends EFactory {
 	GSSConfigInterfaces createGSSConfigInterfaces();
 
 	/**
-	 * Returns a new object of class '<em>GSS Config TM Format</em>'.
+	 * Returns a new object of class '<em>GSS Config Main Interface</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config TM Format</em>'.
+	 * @return a new object of class '<em>GSS Config Main Interface</em>'.
 	 * @generated
 	 */
-	GSSConfigTMFormat createGSSConfigTMFormat();
+	GSSConfigMainInterface createGSSConfigMainInterface();
 
 	/**
-	 * Returns a new object of class '<em>GSS Config TC Format</em>'.
+	 * Returns a new object of class '<em>GSS Config Interface</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config TC Format</em>'.
+	 * @return a new object of class '<em>GSS Config Interface</em>'.
 	 * @generated
 	 */
-	GSSConfigTCFormat createGSSConfigTCFormat();
-
-	/**
-	 * Returns a new object of class '<em>GSS Config Input Filter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config Input Filter</em>'.
-	 * @generated
-	 */
-	GSSConfigInputFilter createGSSConfigInputFilter();
-
-	/**
-	 * Returns a new object of class '<em>GSS Config Export To Prev Level</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config Export To Prev Level</em>'.
-	 * @generated
-	 */
-	GSSConfigExportToPrevLevel createGSSConfigExportToPrevLevel();
-
-	/**
-	 * Returns a new object of class '<em>GSS Config Import From Prev Level</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config Import From Prev Level</em>'.
-	 * @generated
-	 */
-	GSSConfigImportFromPrevLevel createGSSConfigImportFromPrevLevel();
+	GSSConfigInterface createGSSConfigInterface();
 
 	/**
 	 * Returns a new object of class '<em>GSS Config Level In Out</em>'.
@@ -181,24 +154,6 @@ public interface configFactory extends EFactory {
 	 * @generated
 	 */
 	GSSConfigLevelOut createGSSConfigLevelOut();
-
-	/**
-	 * Returns a new object of class '<em>GSS Config Main Interface</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config Main Interface</em>'.
-	 * @generated
-	 */
-	GSSConfigMainInterface createGSSConfigMainInterface();
-
-	/**
-	 * Returns a new object of class '<em>GSS Config Interface</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config Interface</em>'.
-	 * @generated
-	 */
-	GSSConfigInterface createGSSConfigInterface();
 
 	/**
 	 * Returns a new object of class '<em>GSS Config Special Packets</em>'.
@@ -280,78 +235,6 @@ public interface configFactory extends EFactory {
 	 * @generated
 	 */
 	GSSConfigPeriodicTCs createGSSConfigPeriodicTCs();
-
-	/**
-	 * Returns a new object of class '<em>GSS Config Level2</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config Level2</em>'.
-	 * @generated
-	 */
-	GSSConfigLevel2 createGSSConfigLevel2();
-
-	/**
-	 * Returns a new object of class '<em>GSS Config Level1</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config Level1</em>'.
-	 * @generated
-	 */
-	GSSConfigLevel1 createGSSConfigLevel1();
-
-	/**
-	 * Returns a new object of class '<em>GSS Config Level0</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config Level0</em>'.
-	 * @generated
-	 */
-	GSSConfigLevel0 createGSSConfigLevel0();
-
-	/**
-	 * Returns a new object of class '<em>GSS Config App To Level2</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config App To Level2</em>'.
-	 * @generated
-	 */
-	GSSConfigAppToLevel2 createGSSConfigAppToLevel2();
-
-	/**
-	 * Returns a new object of class '<em>GSS Config App To Level1</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config App To Level1</em>'.
-	 * @generated
-	 */
-	GSSConfigAppToLevel1 createGSSConfigAppToLevel1();
-
-	/**
-	 * Returns a new object of class '<em>GSS Config App To Level0</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config App To Level0</em>'.
-	 * @generated
-	 */
-	GSSConfigAppToLevel0 createGSSConfigAppToLevel0();
-
-	/**
-	 * Returns a new object of class '<em>GSS Config Level2 To Level1</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config Level2 To Level1</em>'.
-	 * @generated
-	 */
-	GSSConfigLevel2ToLevel1 createGSSConfigLevel2ToLevel1();
-
-	/**
-	 * Returns a new object of class '<em>GSS Config Level1 To Level0</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config Level1 To Level0</em>'.
-	 * @generated
-	 */
-	GSSConfigLevel1ToLevel0 createGSSConfigLevel1ToLevel0();
 
 	/**
 	 * Returns a new object of class '<em>GSS Config Periodic TC Level2</em>'.

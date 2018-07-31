@@ -175,7 +175,7 @@ GSSFilterMaxterm returns GSSFilterMaxterm:
 
 GSSFilterMinterm returns GSSFilterMinterm:
 	'GSSFilterMinterm' '{'
-		'id' ':=' id=INTEGER
+		'id' ':=' id=INTEGER ';'
 		(BoolVarRef+=GSSFilterBoolVarRef)+ 
 	'}' ';'
 ;

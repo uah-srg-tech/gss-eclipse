@@ -10,6 +10,10 @@
  */
 package es.uah.aut.srg.gss.test_proc;
 
+import es.uah.aut.srg.gss.imports.GSSImportImport;
+
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Test Proc Output Level1</b></em>'.
@@ -140,30 +144,30 @@ public interface GSSTestProcOutputLevel1 extends GSSTestProcOutput {
 	void setOptional(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Level1</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Level1</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Level1</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Level1</em>' containment reference.
-	 * @see #setLevel1(GSSTestProcLevel1)
+	 * @return the value of the '<em>Level1</em>' reference.
+	 * @see #setLevel1(GSSTmTcFormatTmTCFormat)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel1_Level1()
-	 * @model containment="true" required="true"
+	 * @model
 	 * @generated
 	 */
-	GSSTestProcLevel1 getLevel1();
+	GSSTmTcFormatTmTCFormat getLevel1();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel1 <em>Level1</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel1 <em>Level1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Level1</em>' containment reference.
+	 * @param value the new value of the '<em>Level1</em>' reference.
 	 * @see #getLevel1()
 	 * @generated
 	 */
-	void setLevel1(GSSTestProcLevel1 value);
+	void setLevel1(GSSTmTcFormatTmTCFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Level1 filter</b></em>' containment reference.
@@ -192,56 +196,56 @@ public interface GSSTestProcOutputLevel1 extends GSSTestProcOutput {
 	void setLevel1_filter(GSSTestProcLevel1Filter value);
 
 	/**
-	 * Returns the value of the '<em><b>Level0</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Level0</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Level0</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Level0</em>' containment reference.
-	 * @see #setLevel0(GSSTestProcLevel0)
+	 * @return the value of the '<em>Level0</em>' reference.
+	 * @see #setLevel0(GSSTmTcFormatTmTCFormat)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel1_Level0()
-	 * @model containment="true" required="true"
+	 * @model
 	 * @generated
 	 */
-	GSSTestProcLevel0 getLevel0();
+	GSSTmTcFormatTmTCFormat getLevel0();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel0 <em>Level0</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel0 <em>Level0</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Level0</em>' containment reference.
+	 * @param value the new value of the '<em>Level0</em>' reference.
 	 * @see #getLevel0()
 	 * @generated
 	 */
-	void setLevel0(GSSTestProcLevel0 value);
+	void setLevel0(GSSTmTcFormatTmTCFormat value);
 
 	/**
-	 * Returns the value of the '<em><b>Level1 from level0</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Level1 from level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Level1 from level0</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Level1 from level0</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Level1 from level0</em>' containment reference.
-	 * @see #setLevel1_from_level0(GSSTestProcLevel1FromLevel0)
+	 * @return the value of the '<em>Level1 from level0</em>' reference.
+	 * @see #setLevel1_from_level0(GSSImportImport)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel1_Level1_from_level0()
-	 * @model containment="true" required="true"
+	 * @model
 	 * @generated
 	 */
-	GSSTestProcLevel1FromLevel0 getLevel1_from_level0();
+	GSSImportImport getLevel1_from_level0();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel1_from_level0 <em>Level1 from level0</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel1_from_level0 <em>Level1 from level0</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Level1 from level0</em>' containment reference.
+	 * @param value the new value of the '<em>Level1 from level0</em>' reference.
 	 * @see #getLevel1_from_level0()
 	 * @generated
 	 */
-	void setLevel1_from_level0(GSSTestProcLevel1FromLevel0 value);
+	void setLevel1_from_level0(GSSImportImport value);
 
 	/**
 	 * Returns the value of the '<em><b>Level0 filter</b></em>' containment reference.

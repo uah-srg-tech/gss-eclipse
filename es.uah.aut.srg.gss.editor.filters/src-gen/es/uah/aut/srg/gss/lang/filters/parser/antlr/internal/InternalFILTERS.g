@@ -2544,12 +2544,16 @@ ruleGSSFilterMinterm returns [EObject current=null]
 				}
 			)
 		)
+		otherlv_5=';'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_5());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_6_0());
 				}
-				lv_BoolVarRef_5_0=ruleGSSFilterBoolVarRef
+				lv_BoolVarRef_6_0=ruleGSSFilterBoolVarRef
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSFilterMintermRule());
@@ -2557,19 +2561,19 @@ ruleGSSFilterMinterm returns [EObject current=null]
 					add(
 						$current,
 						"BoolVarRef",
-						lv_BoolVarRef_5_0,
+						lv_BoolVarRef_6_0,
 						"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterBoolVarRef");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_6='}'
+		otherlv_7='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSFilterMintermAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_7, grammarAccess.getGSSFilterMintermAccess().getRightCurlyBracketKeyword_7());
 		}
-		otherlv_7=';'
+		otherlv_8=';'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_7());
+			newLeafNode(otherlv_8, grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_8());
 		}
 	)
 ;

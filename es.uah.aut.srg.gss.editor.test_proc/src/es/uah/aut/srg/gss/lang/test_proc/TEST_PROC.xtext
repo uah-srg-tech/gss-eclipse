@@ -5,13 +5,18 @@ import "http://srg.aut.uah.es/gss/test_proc"
 import "http://srg.aut.uah.es/gss/common" as common 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
+import "http://srg.aut.uah.es/gss/tm_tc_format" as tm_tc_format
+import "http://srg.aut.uah.es/gss/export" as export
+import "http://srg.aut.uah.es/gss/filters" as filters
+import "http://srg.aut.uah.es/gss/imports" as imports
+
 GSSModelFile returns common::GSSModelFile:
 	(imports+=GSSModelFileImport)*
 	element=GSSTestProcTestProc
 ;
 
 GSSModelFileImport returns common::GSSModelFileImport: 
-	'import' ':=' importURI=STRING ';'
+	'import' importURI=STRING ';'
 ;
 
 GSSTestProcTestProc returns GSSTestProcTestProc:
@@ -89,14 +94,14 @@ GSSTestProcInputLevel3 returns GSSTestProcInputLevel3:
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'delay_value' ':=' delay_value=INTEGER ';'
 		'delay_unit' ':=' delay_unit=GSSTestProcUnit ';'
-		level3=GSSTestProcLevel3
-		app_to_level3=GSSTestProcAppToLevel3
-		level2=GSSTestProcLevel2
-		level3_to_level2=GSSTestProcLevel3ToLevel2
-		level1=GSSTestProcLevel1
-		level2_to_level1=GSSTestProcLevel2ToLevel1
-		level0=GSSTestProcLevel0
-		level1_to_level0=GSSTestProcLevel1ToLevel0
+		('level3' ':=' level3=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? 
+		'app_to_level3' ':=' app_to_level3=[export::GSSExportExport|VersionedQualifiedName] ';'
+		('level2' ':=' level2=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		('level3_to_level2' ':=' level3_to_level2=[export::GSSExportExport|VersionedQualifiedName] ';')?
+		('level1' ':=' level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		('level2_to_level1' ':=' level2_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';')?
+		('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		('level1_to_level0' ':=' level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
@@ -106,12 +111,12 @@ GSSTestProcInputLevel2 returns GSSTestProcInputLevel2:
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'delay_value' ':=' delay_value=INTEGER ';'
 		'delay_unit' ':=' delay_unit=GSSTestProcUnit ';'
-		level2=GSSTestProcLevel2
-		app_to_level2=GSSTestProcAppToLevel2
-		level1=GSSTestProcLevel1
-		level2_to_level1=GSSTestProcLevel2ToLevel1
-		level0=GSSTestProcLevel0
-		level1_to_level0=GSSTestProcLevel1ToLevel0
+		('level2' ':=' level2=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		'app_to_level2' ':=' app_to_level2=[export::GSSExportExport|VersionedQualifiedName] ';'
+		('level1' ':=' level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		('level2_to_level1' ':=' level2_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';')?
+		('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		('level1_to_level0' ':=' level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
@@ -121,10 +126,10 @@ GSSTestProcInputLevel1 returns GSSTestProcInputLevel1:
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'delay_value' ':=' delay_value=INTEGER ';'
 		'delay_unit' ':=' delay_unit=GSSTestProcUnit ';'
-		level1=GSSTestProcLevel1
-		app_to_level1=GSSTestProcAppToLevel1
-		level0=GSSTestProcLevel0
-		level1_to_level0=GSSTestProcLevel1ToLevel0
+		('level1' ':=' level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		'app_to_level1' ':=' app_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';'
+		('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		('level1_to_level0' ':=' level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
@@ -134,79 +139,13 @@ GSSTestProcInputLevel0 returns GSSTestProcInputLevel0:
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'delay_value' ':=' delay_value=INTEGER ';'
 		'delay_unit' ':=' delay_unit=GSSTestProcUnit ';'
-		level0=GSSTestProcLevel0
-		app_to_level0=GSSTestProcAppToLevel0
+		('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		'app_to_level0' ':=' app_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';'
 	'}' ';'
 ;
 
 enum GSSTestProcUnit returns GSSTestProcUnit:
 	miliseconds = 'miliseconds' | seconds = 'seconds'
-;
-
-GSSTestProcLevel3 returns GSSTestProcLevel3:
-	'GSSTestProcLevel3' '{'
-		'format' ':=' format=ID ';'
-	'}' ';'
-;
-
-GSSTestProcLevel2 returns GSSTestProcLevel2:
-	'GSSTestProcLevel2' '{'
-		'format' ':=' format=XMLREF ';'
-	'}' ';'
-;
-
-GSSTestProcLevel1 returns GSSTestProcLevel1:
-	'GSSTestProcLevel1' '{'
-		'format' ':=' format=XMLREF ';'
-	'}' ';'
-;
-
-GSSTestProcLevel0 returns GSSTestProcLevel0:
-	'GSSTestProcLevel0' '{'
-		'format' ':=' format=XMLREF ';'
-	'}' ';'
-;
-
-GSSTestProcAppToLevel3 returns GSSTestProcAppToLevel3:
-	'GSSTestProcAppToLevel3' '{'
-		'export' ':=' export=XMLREF ';'
-	'}' ';'
-;
-
-GSSTestProcAppToLevel2 returns GSSTestProcAppToLevel2:
-	'GSSTestProcAppToLevel2' '{'
-		'export' ':=' export=XMLREF ';'
-	'}' ';'
-;
-
-GSSTestProcAppToLevel1 returns GSSTestProcAppToLevel1:
-	'GSSTestProcAppToLevel1' '{'
-		'export' ':=' export=XMLREF ';'
-	'}' ';'
-;
-
-GSSTestProcAppToLevel0 returns GSSTestProcAppToLevel0:
-	'GSSTestProcAppToLevel0' '{'
-		'export' ':=' export=XMLREF ';'
-	'}' ';'
-;
-
-GSSTestProcLevel3ToLevel2 returns GSSTestProcLevel3ToLevel2:
-	'GSSTestProcLevel3ToLevel2' '{'
-		'export' ':=' export=XMLREF ';'
-	'}' ';'
-;
-
-GSSTestProcLevel2ToLevel1 returns GSSTestProcLevel2ToLevel1:
-	'GSSTestProcLevel2ToLevel1' '{'
-		'export' ':=' export=XMLREF ';'
-	'}' ';'
-;
-
-GSSTestProcLevel1ToLevel0 returns GSSTestProcLevel1ToLevel0:
-	'GSSTestProcLevel1ToLevel0' '{'
-		'export' ':=' export=XMLREF ';'
-	'}' ';'
 ;
 
 enum GSSTestProcCheckmode returns GSSTestProcCheckmode:
@@ -219,16 +158,16 @@ GSSTestProcOutputLevel3 returns GSSTestProcOutputLevel3:
 		'id' ':=' id=INTEGER ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		('optional' ':=' optional=INTEGER ';')?
-		level3=GSSTestProcLevel3
+		('level3' ':=' level3=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
 		level3_filter=GSSTestProcLevel3Filter
-		level2=GSSTestProcLevel2
-		level3_from_level2=GSSTestProcLevel3FromLevel2
+		('level2' ':=' level2=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		('level3_from_level2' ':=' level3_from_level2=[imports::GSSImportImport|VersionedQualifiedName] ';')?
 		level2_filter=GSSTestProcLevel2Filter
-		level1=GSSTestProcLevel1
-		level2_from_level1=GSSTestProcLevel2FromLevel1
+		('level1' ':=' level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		('level2_from_level1' ':=' level2_from_level1=[imports::GSSImportImport|VersionedQualifiedName] ';')?
 		level1_filter=GSSTestProcLevel1Filter
-		level0=GSSTestProcLevel0
-		level1_from_level0=GSSTestProcLevel1FromLevel0
+		('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		('level1_from_level0' ':=' level1_from_level0=[imports::GSSImportImport|VersionedQualifiedName] ';')?
 		level0_filter=GSSTestProcLevel0Filter
 	'}' ';'
 ;
@@ -239,13 +178,13 @@ GSSTestProcOutputLevel2 returns GSSTestProcOutputLevel2:
 		'id' ':=' id=INTEGER ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		('optional' ':=' optional=INTEGER ';')?
-		level2=GSSTestProcLevel2
+		('level2' ':=' level2=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
 		level2_filter=GSSTestProcLevel2Filter
-		level1=GSSTestProcLevel1
-		level2_from_level1=GSSTestProcLevel2FromLevel1
+		('level1' ':=' level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		('level2_from_level1' ':=' level2_from_level1=[imports::GSSImportImport|VersionedQualifiedName] ';')?
 		level1_filter=GSSTestProcLevel1Filter
-		level0=GSSTestProcLevel0
-		level1_from_level0=GSSTestProcLevel1FromLevel0
+		('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		('level1_from_level0' ':=' level1_from_level0=[imports::GSSImportImport|VersionedQualifiedName] ';')?
 		level0_filter=GSSTestProcLevel0Filter
 	'}' ';'
 ;
@@ -256,10 +195,10 @@ GSSTestProcOutputLevel1 returns GSSTestProcOutputLevel1:
 		'id' ':=' id=INTEGER ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		('optional' ':=' optional=INTEGER ';')?
-		level1=GSSTestProcLevel1
+		('level1' ':=' level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
 		level1_filter=GSSTestProcLevel1Filter
-		level0=GSSTestProcLevel0
-		level1_from_level0=GSSTestProcLevel1FromLevel0
+		('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		('level1_from_level0' ':=' level1_from_level0=[imports::GSSImportImport|VersionedQualifiedName] ';')?
 		level0_filter=GSSTestProcLevel0Filter
 	'}' ';'
 ;
@@ -270,7 +209,7 @@ GSSTestProcOutputLevel0 returns GSSTestProcOutputLevel0:
 		'id' ':=' id=INTEGER ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		('optional' ':=' optional=INTEGER ';')?
-		level0=GSSTestProcLevel0
+		('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
 		level0_filter=GSSTestProcLevel0Filter
 	'}' ';'
 ;
@@ -278,46 +217,28 @@ GSSTestProcOutputLevel0 returns GSSTestProcOutputLevel0:
 GSSTestProcLevel3Filter returns GSSTestProcLevel3Filter:
 	'GSSTestProcLevel3Filter' '{'
 		'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';'
-		'extra_filter' ':=' extra_filter=XMLREF ';'
+		('extra_filter' ':=' extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
 GSSTestProcLevel2Filter returns GSSTestProcLevel2Filter:
 	'GSSTestProcLevel2Filter' '{'
 		'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';'
-		'extra_filter' ':=' extra_filter=XMLREF ';'
+		('extra_filter' ':=' extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
 GSSTestProcLevel1Filter returns GSSTestProcLevel1Filter:
 	'GSSTestProcLevel1Filter' '{'
 		'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';'
-		'extra_filter' ':=' extra_filter=XMLREF ';'
+		('extra_filter' ':=' extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
 GSSTestProcLevel0Filter returns GSSTestProcLevel0Filter:
 	'GSSTestProcLevel0Filter' '{'
 		'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';'
-		'extra_filter' ':=' extra_filter=XMLREF ';'
-	'}' ';'
-;
-
-GSSTestProcLevel3FromLevel2 returns GSSTestProcLevel3FromLevel2:
-	'GSSTestProcLevel3FromLevel2' '{'
-		'import' ':=' ^import=XMLREF ';'
-	'}' ';'
-;
-
-GSSTestProcLevel2FromLevel1 returns GSSTestProcLevel2FromLevel1:
-	'GSSTestProcLevel2FromLevel1' '{'
-		'import' ':=' ^import=XMLREF ';'
-	'}' ';'
-;
-
-GSSTestProcLevel1FromLevel0 returns GSSTestProcLevel1FromLevel0:
-	'GSSTestProcLevel1FromLevel0' '{'
-		'import' ':=' ^import=XMLREF ';'
+		('extra_filter' ':=' extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
@@ -390,6 +311,3 @@ EBoolean returns ecore::EBoolean:
 	
 REAL returns ecore::EString:
 	'-'? (INT '.' ':=' INT) ('e' ('-')? INT)?;
-
-XMLREF returns ecore::EString:
-	ID;

@@ -315,32 +315,11 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         constSize=GSSIfaceConstSize 
 	 *         sizeFieldOffset=GSSIfaceSizeFieldOffset 
 	 *         sizeFieldTrim=GSSIfaceSizeFieldTrim 
-	 *         syncPattern=GSSIfaceSyncPattern
+	 *         syncPattern=GSSIfaceSyncPattern?
 	 *     )
 	 */
 	protected void sequence_GSSIfaceUartProtocol(ISerializationContext context, GSSIfaceUartProtocol semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PROTOCOL__UNIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PROTOCOL__UNIT));
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PROTOCOL__POWER) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PROTOCOL__POWER));
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PROTOCOL__CONST_SIZE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PROTOCOL__CONST_SIZE));
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET));
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM));
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSIfaceUartProtocolAccess().getUnitGSSIfaceUartProtocolUnitEnumRuleCall_4_0(), semanticObject.getUnit());
-		feeder.accept(grammarAccess.getGSSIfaceUartProtocolAccess().getPowerGSSIfaceUartProtocolPowerEnumRuleCall_8_0(), semanticObject.getPower());
-		feeder.accept(grammarAccess.getGSSIfaceUartProtocolAccess().getConstSizeGSSIfaceConstSizeParserRuleCall_10_0(), semanticObject.getConstSize());
-		feeder.accept(grammarAccess.getGSSIfaceUartProtocolAccess().getSizeFieldOffsetGSSIfaceSizeFieldOffsetParserRuleCall_11_0(), semanticObject.getSizeFieldOffset());
-		feeder.accept(grammarAccess.getGSSIfaceUartProtocolAccess().getSizeFieldTrimGSSIfaceSizeFieldTrimParserRuleCall_12_0(), semanticObject.getSizeFieldTrim());
-		feeder.accept(grammarAccess.getGSSIfaceUartProtocolAccess().getSyncPatternGSSIfaceSyncPatternParserRuleCall_13_0(), semanticObject.getSyncPattern());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

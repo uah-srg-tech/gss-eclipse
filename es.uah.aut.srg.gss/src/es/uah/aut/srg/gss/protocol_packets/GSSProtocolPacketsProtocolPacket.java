@@ -4,6 +4,7 @@ package es.uah.aut.srg.gss.protocol_packets;
 
 import es.uah.aut.srg.gss.export.GSSExportExport;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -132,29 +133,29 @@ public interface GSSProtocolPacketsProtocolPacket extends EObject {
 	void setExport(GSSExportExport value);
 
 	/**
-	 * Returns the value of the '<em><b>Format</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Format</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Format</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Format</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Format</em>' containment reference.
-	 * @see #setFormat(GSSProtocolPacketsFormat)
+	 * @return the value of the '<em>Format</em>' reference.
+	 * @see #setFormat(GSSTmTcFormatTmTCFormat)
 	 * @see es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage#getGSSProtocolPacketsProtocolPacket_Format()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSProtocolPacketsFormat getFormat();
+	GSSTmTcFormatTmTCFormat getFormat();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getFormat <em>Format</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getFormat <em>Format</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Format</em>' containment reference.
+	 * @param value the new value of the '<em>Format</em>' reference.
 	 * @see #getFormat()
 	 * @generated
 	 */
-	void setFormat(GSSProtocolPacketsFormat value);
+	void setFormat(GSSTmTcFormatTmTCFormat value);
 
 } // GSSProtocolPacketsProtocolPacket

@@ -1072,7 +1072,7 @@ ruleGSSIfaceUartProtocol returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
+		)?
 		otherlv_14='}'
 		{
 			newLeafNode(otherlv_14, grammarAccess.getGSSIfaceUartProtocolAccess().getRightCurlyBracketKeyword_14());

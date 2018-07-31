@@ -178,7 +178,7 @@ public interface protocol_packetsPackage extends EPackage {
 	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Format</b></em>' containment reference.
+	 * The feature id for the '<em><b>Format</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -203,43 +203,6 @@ public interface protocol_packetsPackage extends EPackage {
 	 * @ordered
 	 */
 	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.protocol_packets.impl.GSSProtocolPacketsFormatImpl <em>GSS Protocol Packets Format</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.protocol_packets.impl.GSSProtocolPacketsFormatImpl
-	 * @see es.uah.aut.srg.gss.protocol_packets.impl.protocol_packetsPackageImpl#getGSSProtocolPacketsFormat()
-	 * @generated
-	 */
-	int GSS_PROTOCOL_PACKETS_FORMAT = 2;
-
-	/**
-	 * The feature id for the '<em><b>File</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_PROTOCOL_PACKETS_FORMAT__FILE = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Protocol Packets Format</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_PROTOCOL_PACKETS_FORMAT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Protocol Packets Format</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_PROTOCOL_PACKETS_FORMAT_OPERATION_COUNT = 0;
 
 
 	/**
@@ -318,36 +281,15 @@ public interface protocol_packetsPackage extends EPackage {
 	EReference getGSSProtocolPacketsProtocolPacket_Export();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getFormat <em>Format</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getFormat <em>Format</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Format</em>'.
+	 * @return the meta object for the reference '<em>Format</em>'.
 	 * @see es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getFormat()
 	 * @see #getGSSProtocolPacketsProtocolPacket()
 	 * @generated
 	 */
 	EReference getGSSProtocolPacketsProtocolPacket_Format();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsFormat <em>GSS Protocol Packets Format</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Protocol Packets Format</em>'.
-	 * @see es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsFormat
-	 * @generated
-	 */
-	EClass getGSSProtocolPacketsFormat();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsFormat#getFile <em>File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>File</em>'.
-	 * @see es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsFormat#getFile()
-	 * @see #getGSSProtocolPacketsFormat()
-	 * @generated
-	 */
-	EAttribute getGSSProtocolPacketsFormat_File();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -433,30 +375,12 @@ public interface protocol_packetsPackage extends EPackage {
 		EReference GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT = eINSTANCE.getGSSProtocolPacketsProtocolPacket_Export();
 
 		/**
-		 * The meta object literal for the '<em><b>Format</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Format</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT = eINSTANCE.getGSSProtocolPacketsProtocolPacket_Format();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.protocol_packets.impl.GSSProtocolPacketsFormatImpl <em>GSS Protocol Packets Format</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.protocol_packets.impl.GSSProtocolPacketsFormatImpl
-		 * @see es.uah.aut.srg.gss.protocol_packets.impl.protocol_packetsPackageImpl#getGSSProtocolPacketsFormat()
-		 * @generated
-		 */
-		EClass GSS_PROTOCOL_PACKETS_FORMAT = eINSTANCE.getGSSProtocolPacketsFormat();
-
-		/**
-		 * The meta object literal for the '<em><b>File</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_PROTOCOL_PACKETS_FORMAT__FILE = eINSTANCE.getGSSProtocolPacketsFormat_File();
 
 	}
 

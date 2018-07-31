@@ -10,6 +10,10 @@
  */
 package es.uah.aut.srg.gss.config;
 
+import es.uah.aut.srg.gss.export.GSSExportExport;
+
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -198,107 +202,107 @@ public interface GSSConfigPeriodicTCLevel1 extends EObject {
 	boolean isSetPeriod_unit();
 
 	/**
-	 * Returns the value of the '<em><b>Level1</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Level1</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Level1</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Level1</em>' containment reference.
-	 * @see #setLevel1(GSSConfigLevel1)
+	 * @return the value of the '<em>Level1</em>' reference.
+	 * @see #setLevel1(GSSTmTcFormatTmTCFormat)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigPeriodicTCLevel1_Level1()
-	 * @model containment="true" required="true"
+	 * @model
 	 * @generated
 	 */
-	GSSConfigLevel1 getLevel1();
+	GSSTmTcFormatTmTCFormat getLevel1();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel1 <em>Level1</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel1 <em>Level1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Level1</em>' containment reference.
+	 * @param value the new value of the '<em>Level1</em>' reference.
 	 * @see #getLevel1()
 	 * @generated
 	 */
-	void setLevel1(GSSConfigLevel1 value);
+	void setLevel1(GSSTmTcFormatTmTCFormat value);
 
 	/**
-	 * Returns the value of the '<em><b>App to level1</b></em>' containment reference.
+	 * Returns the value of the '<em><b>App to level1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>App to level1</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>App to level1</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>App to level1</em>' containment reference.
-	 * @see #setApp_to_level1(GSSConfigAppToLevel1)
+	 * @return the value of the '<em>App to level1</em>' reference.
+	 * @see #setApp_to_level1(GSSExportExport)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigPeriodicTCLevel1_App_to_level1()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSConfigAppToLevel1 getApp_to_level1();
+	GSSExportExport getApp_to_level1();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getApp_to_level1 <em>App to level1</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getApp_to_level1 <em>App to level1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>App to level1</em>' containment reference.
+	 * @param value the new value of the '<em>App to level1</em>' reference.
 	 * @see #getApp_to_level1()
 	 * @generated
 	 */
-	void setApp_to_level1(GSSConfigAppToLevel1 value);
+	void setApp_to_level1(GSSExportExport value);
 
 	/**
-	 * Returns the value of the '<em><b>Level0</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Level0</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Level0</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Level0</em>' containment reference.
-	 * @see #setLevel0(GSSConfigLevel0)
+	 * @return the value of the '<em>Level0</em>' reference.
+	 * @see #setLevel0(GSSTmTcFormatTmTCFormat)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigPeriodicTCLevel1_Level0()
-	 * @model containment="true" required="true"
+	 * @model
 	 * @generated
 	 */
-	GSSConfigLevel0 getLevel0();
+	GSSTmTcFormatTmTCFormat getLevel0();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel0 <em>Level0</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel0 <em>Level0</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Level0</em>' containment reference.
+	 * @param value the new value of the '<em>Level0</em>' reference.
 	 * @see #getLevel0()
 	 * @generated
 	 */
-	void setLevel0(GSSConfigLevel0 value);
+	void setLevel0(GSSTmTcFormatTmTCFormat value);
 
 	/**
-	 * Returns the value of the '<em><b>Level1 to level0</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Level1 to level0</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Level1 to level0</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Level1 to level0</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Level1 to level0</em>' containment reference.
-	 * @see #setLevel1_to_level0(GSSConfigLevel1ToLevel0)
+	 * @return the value of the '<em>Level1 to level0</em>' reference.
+	 * @see #setLevel1_to_level0(GSSExportExport)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigPeriodicTCLevel1_Level1_to_level0()
-	 * @model containment="true" required="true"
+	 * @model
 	 * @generated
 	 */
-	GSSConfigLevel1ToLevel0 getLevel1_to_level0();
+	GSSExportExport getLevel1_to_level0();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel1_to_level0 <em>Level1 to level0</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel1_to_level0 <em>Level1 to level0</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Level1 to level0</em>' containment reference.
+	 * @param value the new value of the '<em>Level1 to level0</em>' reference.
 	 * @see #getLevel1_to_level0()
 	 * @generated
 	 */
-	void setLevel1_to_level0(GSSConfigLevel1ToLevel0 value);
+	void setLevel1_to_level0(GSSExportExport value);
 
 } // GSSConfigPeriodicTCLevel1

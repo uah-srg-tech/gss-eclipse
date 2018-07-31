@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.gss.test_proc;
 
+import es.uah.aut.srg.gss.filters.GSSFilterFilter;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -41,9 +43,11 @@ public interface GSSTestProcLevel2Filter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Apply def filter</em>' attribute.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcYesNo
+	 * @see #isSetApply_def_filter()
+	 * @see #unsetApply_def_filter()
 	 * @see #setApply_def_filter(GSSTestProcYesNo)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcLevel2Filter_Apply_def_filter()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSTestProcYesNo getApply_def_filter();
@@ -54,35 +58,60 @@ public interface GSSTestProcLevel2Filter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Apply def filter</em>' attribute.
 	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcYesNo
+	 * @see #isSetApply_def_filter()
+	 * @see #unsetApply_def_filter()
 	 * @see #getApply_def_filter()
 	 * @generated
 	 */
 	void setApply_def_filter(GSSTestProcYesNo value);
 
 	/**
-	 * Returns the value of the '<em><b>Extra filter</b></em>' attribute.
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter#getApply_def_filter <em>Apply def filter</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetApply_def_filter()
+	 * @see #getApply_def_filter()
+	 * @see #setApply_def_filter(GSSTestProcYesNo)
+	 * @generated
+	 */
+	void unsetApply_def_filter();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter#getApply_def_filter <em>Apply def filter</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Apply def filter</em>' attribute is set.
+	 * @see #unsetApply_def_filter()
+	 * @see #getApply_def_filter()
+	 * @see #setApply_def_filter(GSSTestProcYesNo)
+	 * @generated
+	 */
+	boolean isSetApply_def_filter();
+
+	/**
+	 * Returns the value of the '<em><b>Extra filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Extra filter</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Extra filter</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Extra filter</em>' attribute.
-	 * @see #setExtra_filter(String)
+	 * @return the value of the '<em>Extra filter</em>' reference.
+	 * @see #setExtra_filter(GSSFilterFilter)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcLevel2Filter_Extra_filter()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
-	String getExtra_filter();
+	GSSFilterFilter getExtra_filter();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter#getExtra_filter <em>Extra filter</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter#getExtra_filter <em>Extra filter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Extra filter</em>' attribute.
+	 * @param value the new value of the '<em>Extra filter</em>' reference.
 	 * @see #getExtra_filter()
 	 * @generated
 	 */
-	void setExtra_filter(String value);
+	void setExtra_filter(GSSFilterFilter value);
 
 } // GSSTestProcLevel2Filter
