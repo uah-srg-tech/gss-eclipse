@@ -2180,6 +2180,15 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getGSSConfigMonitors_ChartsFile() {
+		return (EReference)gssConfigMonitorsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getGSSConfigMonitors_Plot() {
 		return (EReference)gssConfigMonitorsEClass.getEStructuralFeatures().get(1);
 	}
@@ -2209,15 +2218,6 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 */
 	public EReference getGSSConfigMonitors_AlarmVal() {
 		return (EReference)gssConfigMonitorsEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSConfigMonitors_ChartsFile() {
-		return (EReference)gssConfigMonitorsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3084,7 +3084,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		initEReference(getGSSConfigInterface_LevelOut(), this.getGSSConfigLevelOut(), null, "LevelOut", null, 0, 3, GSSConfigInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigLevelInOutEClass, GSSConfigLevelInOut.class, "GSSConfigLevelInOut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigLevelInOut_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSConfigLevelInOut_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigLevelInOut_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigLevelInOut_TMformat(), thetm_tc_formatPackage.getGSSTmTcFormatTmTCFormat(), null, "TMformat", null, 1, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigLevelInOut_TCformat(), thetm_tc_formatPackage.getGSSTmTcFormatTmTCFormat(), null, "TCformat", null, 1, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3093,13 +3093,13 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		initEReference(getGSSConfigLevelInOut_Import_from_prev_Level(), theimportsPackage.getGSSImportImport(), null, "import_from_prev_Level", null, 0, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigLevelInEClass, GSSConfigLevelIn.class, "GSSConfigLevelIn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigLevelIn_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSConfigLevelIn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSConfigLevelIn_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSConfigLevelIn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigLevelIn_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigLevelIn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigLevelIn_TCformat(), thetm_tc_formatPackage.getGSSTmTcFormatTmTCFormat(), null, "TCformat", null, 1, 1, GSSConfigLevelIn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigLevelIn_Export_to_prev_Level(), theexportPackage.getGSSExportExport(), null, "export_to_prev_Level", null, 0, 1, GSSConfigLevelIn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigLevelOutEClass, GSSConfigLevelOut.class, "GSSConfigLevelOut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigLevelOut_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSConfigLevelOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSConfigLevelOut_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSConfigLevelOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigLevelOut_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigLevelOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigLevelOut_TMformat(), thetm_tc_formatPackage.getGSSTmTcFormatTmTCFormat(), null, "TMformat", null, 1, 1, GSSConfigLevelOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigLevelOut_InputFilter(), thefiltersPackage.getGSSFilterFilter(), null, "inputFilter", null, 1, 1, GSSConfigLevelOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

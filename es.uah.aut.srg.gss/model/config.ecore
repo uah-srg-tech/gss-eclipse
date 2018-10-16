@@ -139,7 +139,8 @@
         eType="#//GSSConfigLevelOut" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSConfigLevelInOut">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="TMformat" lowerBound="1"
         eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
@@ -152,14 +153,16 @@
         eType="ecore:EClass imports.ecore#//GSSImportImport"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSConfigLevelIn">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="TCformat" lowerBound="1"
         eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="export_to_prev_Level" eType="ecore:EClass export.ecore#//GSSExportExport"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSConfigLevelOut">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="TMformat" lowerBound="1"
         eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>

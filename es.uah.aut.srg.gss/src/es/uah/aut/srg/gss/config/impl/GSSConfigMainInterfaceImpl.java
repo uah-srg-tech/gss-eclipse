@@ -18,6 +18,7 @@ import es.uah.aut.srg.gss.config.GSSConfigProtocol;
 import es.uah.aut.srg.gss.config.configPackage;
 
 import es.uah.aut.srg.gss.iface.GSSIfacePortConfig;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

@@ -69,8 +69,7 @@ public class CONFIGParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSModelFileAccess().getGroup(), "rule__GSSModelFile__Group__0");
 					put(grammarAccess.getGSSModelFileImportAccess().getGroup(), "rule__GSSModelFileImport__Group__0");
 					put(grammarAccess.getGSSConfigGSSConfigAccess().getGroup(), "rule__GSSConfigGSSConfig__Group__0");
-					put(grammarAccess.getGSSConfigGSSConfigAccess().getGroup_3_0(), "rule__GSSConfigGSSConfig__Group_3_0__0");
-					put(grammarAccess.getGSSConfigGSSConfigAccess().getGroup_3_1(), "rule__GSSConfigGSSConfig__Group_3_1__0");
+					put(grammarAccess.getGSSConfigGSSConfigAccess().getGroup_3(), "rule__GSSConfigGSSConfig__Group_3__0");
 					put(grammarAccess.getGSSConfigGSSOptionsAccess().getGroup(), "rule__GSSConfigGSSOptions__Group__0");
 					put(grammarAccess.getGSSConfigProtocolsAccess().getGroup(), "rule__GSSConfigProtocols__Group__0");
 					put(grammarAccess.getGSSConfigInterfacesAccess().getGroup(), "rule__GSSConfigInterfaces__Group__0");
@@ -158,16 +157,16 @@ public class CONFIGParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSModelFileAccess().getElementAssignment_1(), "rule__GSSModelFile__ElementAssignment_1");
 					put(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_2(), "rule__GSSModelFileImport__ImportURIAssignment_2");
 					put(grammarAccess.getGSSConfigGSSConfigAccess().getNameAssignment_1(), "rule__GSSConfigGSSConfig__NameAssignment_1");
-					put(grammarAccess.getGSSConfigGSSConfigAccess().getUriAssignment_3_0_2(), "rule__GSSConfigGSSConfig__UriAssignment_3_0_2");
-					put(grammarAccess.getGSSConfigGSSConfigAccess().getVersionAssignment_3_1_2(), "rule__GSSConfigGSSConfig__VersionAssignment_3_1_2");
-					put(grammarAccess.getGSSConfigGSSConfigAccess().getGss_optionsAssignment_4(), "rule__GSSConfigGSSConfig__Gss_optionsAssignment_4");
-					put(grammarAccess.getGSSConfigGSSConfigAccess().getProtocolsAssignment_5(), "rule__GSSConfigGSSConfig__ProtocolsAssignment_5");
-					put(grammarAccess.getGSSConfigGSSConfigAccess().getInterfacesAssignment_6(), "rule__GSSConfigGSSConfig__InterfacesAssignment_6");
-					put(grammarAccess.getGSSConfigGSSConfigAccess().getSpecialPacketsAssignment_7(), "rule__GSSConfigGSSConfig__SpecialPacketsAssignment_7");
-					put(grammarAccess.getGSSConfigGSSConfigAccess().getPeriodicTCsAssignment_8(), "rule__GSSConfigGSSConfig__PeriodicTCsAssignment_8");
-					put(grammarAccess.getGSSConfigGSSConfigAccess().getGlobalVarsAssignment_9_0(), "rule__GSSConfigGSSConfig__GlobalVarsAssignment_9_0");
-					put(grammarAccess.getGSSConfigGSSConfigAccess().getMonitorsAssignment_9_1(), "rule__GSSConfigGSSConfig__MonitorsAssignment_9_1");
-					put(grammarAccess.getGSSConfigGSSConfigAccess().getTestsAssignment_10(), "rule__GSSConfigGSSConfig__TestsAssignment_10");
+					put(grammarAccess.getGSSConfigGSSConfigAccess().getUriAssignment_3_2(), "rule__GSSConfigGSSConfig__UriAssignment_3_2");
+					put(grammarAccess.getGSSConfigGSSConfigAccess().getVersionAssignment_6(), "rule__GSSConfigGSSConfig__VersionAssignment_6");
+					put(grammarAccess.getGSSConfigGSSConfigAccess().getGss_optionsAssignment_8(), "rule__GSSConfigGSSConfig__Gss_optionsAssignment_8");
+					put(grammarAccess.getGSSConfigGSSConfigAccess().getProtocolsAssignment_9(), "rule__GSSConfigGSSConfig__ProtocolsAssignment_9");
+					put(grammarAccess.getGSSConfigGSSConfigAccess().getInterfacesAssignment_10(), "rule__GSSConfigGSSConfig__InterfacesAssignment_10");
+					put(grammarAccess.getGSSConfigGSSConfigAccess().getSpecialPacketsAssignment_11(), "rule__GSSConfigGSSConfig__SpecialPacketsAssignment_11");
+					put(grammarAccess.getGSSConfigGSSConfigAccess().getPeriodicTCsAssignment_12(), "rule__GSSConfigGSSConfig__PeriodicTCsAssignment_12");
+					put(grammarAccess.getGSSConfigGSSConfigAccess().getGlobalVarsAssignment_13_0(), "rule__GSSConfigGSSConfig__GlobalVarsAssignment_13_0");
+					put(grammarAccess.getGSSConfigGSSConfigAccess().getMonitorsAssignment_13_1(), "rule__GSSConfigGSSConfig__MonitorsAssignment_13_1");
+					put(grammarAccess.getGSSConfigGSSConfigAccess().getTestsAssignment_14(), "rule__GSSConfigGSSConfig__TestsAssignment_14");
 					put(grammarAccess.getGSSConfigGSSOptionsAccess().getGss_infoAssignment_2(), "rule__GSSConfigGSSOptions__Gss_infoAssignment_2");
 					put(grammarAccess.getGSSConfigGSSOptionsAccess().getGss_info_printAssignment_3(), "rule__GSSConfigGSSOptions__Gss_info_printAssignment_3");
 					put(grammarAccess.getGSSConfigGSSOptionsAccess().getPhy_header_printAssignment_4(), "rule__GSSConfigGSSOptions__Phy_header_printAssignment_4");
@@ -343,8 +342,7 @@ public class CONFIGParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSConfigTestCaseAccess().getProcedureAssignment_8(), "rule__GSSConfigTestCase__ProcedureAssignment_8");
 					put(grammarAccess.getGSSConfigTestCaseAccess().getReqAssignment_10_1(), "rule__GSSConfigTestCase__ReqAssignment_10_1");
 					put(grammarAccess.getGSSConfigTestCaseAccess().getReqActionAssignment_11_1(), "rule__GSSConfigTestCase__ReqActionAssignment_11_1");
-					put(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_3(), "rule__GSSConfigGSSConfig__UnorderedGroup_3");
-					put(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_9(), "rule__GSSConfigGSSConfig__UnorderedGroup_9");
+					put(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_13(), "rule__GSSConfigGSSConfig__UnorderedGroup_13");
 				}
 			};
 		}

@@ -135,13 +135,13 @@
 'typeOffset'=73
 'uart'=18
 'uint'=28
-'uri'=42
+'uri'=43
 'validTimesKo'=68
 'value'=138
-'version'=43
+'version'=41
 'version_control_url'=57
 '{'=40
-'}'=41
+'}'=42
 RULE_ANY_OTHER=11
 RULE_HEXADECIMAL=5
 RULE_ID=6

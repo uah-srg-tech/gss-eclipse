@@ -48,9 +48,11 @@ public interface GSSConfigLevelOut extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #isSetId()
+	 * @see #unsetId()
 	 * @see #setId(String)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelOut_Id()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	String getId();
@@ -60,10 +62,35 @@ public interface GSSConfigLevelOut extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #isSetId()
+	 * @see #unsetId()
 	 * @see #getId()
 	 * @generated
 	 */
 	void setId(String value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetId()
+	 * @see #getId()
+	 * @see #setId(String)
+	 * @generated
+	 */
+	void unsetId();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getId <em>Id</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Id</em>' attribute is set.
+	 * @see #unsetId()
+	 * @see #getId()
+	 * @see #setId(String)
+	 * @generated
+	 */
+	boolean isSetId();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

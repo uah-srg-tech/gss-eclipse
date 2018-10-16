@@ -63,6 +63,15 @@ public class GSSConfigLevelInImpl extends MinimalEObjectImpl.Container implement
 	protected String id = ID_EDEFAULT;
 
 	/**
+	 * This is true if the Id attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean idESet;
+
+	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,8 +147,33 @@ public class GSSConfigLevelInImpl extends MinimalEObjectImpl.Container implement
 	public void setId(String newId) {
 		String oldId = id;
 		id = newId;
+		boolean oldIdESet = idESet;
+		idESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_IN__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_IN__ID, oldId, id, !oldIdESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetId() {
+		String oldId = id;
+		boolean oldIdESet = idESet;
+		id = ID_EDEFAULT;
+		idESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_LEVEL_IN__ID, oldId, ID_EDEFAULT, oldIdESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetId() {
+		return idESet;
 	}
 
 	/**
@@ -294,7 +328,7 @@ public class GSSConfigLevelInImpl extends MinimalEObjectImpl.Container implement
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_LEVEL_IN__ID:
-				setId(ID_EDEFAULT);
+				unsetId();
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN__NAME:
 				setName(NAME_EDEFAULT);
@@ -318,7 +352,7 @@ public class GSSConfigLevelInImpl extends MinimalEObjectImpl.Container implement
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_LEVEL_IN__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+				return isSetId();
 			case configPackage.GSS_CONFIG_LEVEL_IN__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case configPackage.GSS_CONFIG_LEVEL_IN__TCFORMAT:
@@ -340,7 +374,7 @@ public class GSSConfigLevelInImpl extends MinimalEObjectImpl.Container implement
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
-		result.append(id);
+		if (idESet) result.append(id); else result.append("<unset>");
 		result.append(", name: ");
 		result.append(name);
 		result.append(')');

@@ -27,8 +27,8 @@ GSSConfigGSSConfig returns GSSConfigGSSConfig:
 	'GSSConfigGSSConfig'
 	name=ID
 	'{'
-		(('uri' ':=' uri=QualifiedName ';')
-		& ('version' ':=' version=Version ';'))
+		('uri' ':=' uri=QualifiedName ';')
+		'version' ':=' version=Version ';'
 		gss_options=GSSConfigGSSOptions
 		Protocols=GSSConfigProtocols
 		Interfaces=GSSConfigInterfaces

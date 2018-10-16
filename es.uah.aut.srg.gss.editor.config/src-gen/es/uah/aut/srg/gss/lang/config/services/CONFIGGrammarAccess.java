@@ -101,43 +101,43 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final UnorderedGroup cUnorderedGroup_3 = (UnorderedGroup)cGroup.eContents().get(3);
-		private final Group cGroup_3_0 = (Group)cUnorderedGroup_3.eContents().get(0);
-		private final Keyword cUriKeyword_3_0_0 = (Keyword)cGroup_3_0.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_0_1 = (Keyword)cGroup_3_0.eContents().get(1);
-		private final Assignment cUriAssignment_3_0_2 = (Assignment)cGroup_3_0.eContents().get(2);
-		private final RuleCall cUriQualifiedNameParserRuleCall_3_0_2_0 = (RuleCall)cUriAssignment_3_0_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_0_3 = (Keyword)cGroup_3_0.eContents().get(3);
-		private final Group cGroup_3_1 = (Group)cUnorderedGroup_3.eContents().get(1);
-		private final Keyword cVersionKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_1_1 = (Keyword)cGroup_3_1.eContents().get(1);
-		private final Assignment cVersionAssignment_3_1_2 = (Assignment)cGroup_3_1.eContents().get(2);
-		private final RuleCall cVersionVersionParserRuleCall_3_1_2_0 = (RuleCall)cVersionAssignment_3_1_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_1_3 = (Keyword)cGroup_3_1.eContents().get(3);
-		private final Assignment cGss_optionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cGss_optionsGSSConfigGSSOptionsParserRuleCall_4_0 = (RuleCall)cGss_optionsAssignment_4.eContents().get(0);
-		private final Assignment cProtocolsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cProtocolsGSSConfigProtocolsParserRuleCall_5_0 = (RuleCall)cProtocolsAssignment_5.eContents().get(0);
-		private final Assignment cInterfacesAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cInterfacesGSSConfigInterfacesParserRuleCall_6_0 = (RuleCall)cInterfacesAssignment_6.eContents().get(0);
-		private final Assignment cSpecialPacketsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cSpecialPacketsGSSConfigSpecialPacketsParserRuleCall_7_0 = (RuleCall)cSpecialPacketsAssignment_7.eContents().get(0);
-		private final Assignment cPeriodicTCsAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cPeriodicTCsGSSConfigPeriodicTCsParserRuleCall_8_0 = (RuleCall)cPeriodicTCsAssignment_8.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_9 = (UnorderedGroup)cGroup.eContents().get(9);
-		private final Assignment cGlobalVarsAssignment_9_0 = (Assignment)cUnorderedGroup_9.eContents().get(0);
-		private final RuleCall cGlobalVarsGSSConfigGlobalVarsParserRuleCall_9_0_0 = (RuleCall)cGlobalVarsAssignment_9_0.eContents().get(0);
-		private final Assignment cMonitorsAssignment_9_1 = (Assignment)cUnorderedGroup_9.eContents().get(1);
-		private final RuleCall cMonitorsGSSConfigMonitorsParserRuleCall_9_1_0 = (RuleCall)cMonitorsAssignment_9_1.eContents().get(0);
-		private final Assignment cTestsAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cTestsGSSConfigTestsParserRuleCall_10_0 = (RuleCall)cTestsAssignment_10.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Keyword cSemicolonKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cUriKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cColonEqualsSignKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cUriAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cUriQualifiedNameParserRuleCall_3_2_0 = (RuleCall)cUriAssignment_3_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
+		private final Keyword cVersionKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cColonEqualsSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cVersionAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cVersionVersionParserRuleCall_6_0 = (RuleCall)cVersionAssignment_6.eContents().get(0);
+		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cGss_optionsAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cGss_optionsGSSConfigGSSOptionsParserRuleCall_8_0 = (RuleCall)cGss_optionsAssignment_8.eContents().get(0);
+		private final Assignment cProtocolsAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cProtocolsGSSConfigProtocolsParserRuleCall_9_0 = (RuleCall)cProtocolsAssignment_9.eContents().get(0);
+		private final Assignment cInterfacesAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cInterfacesGSSConfigInterfacesParserRuleCall_10_0 = (RuleCall)cInterfacesAssignment_10.eContents().get(0);
+		private final Assignment cSpecialPacketsAssignment_11 = (Assignment)cGroup.eContents().get(11);
+		private final RuleCall cSpecialPacketsGSSConfigSpecialPacketsParserRuleCall_11_0 = (RuleCall)cSpecialPacketsAssignment_11.eContents().get(0);
+		private final Assignment cPeriodicTCsAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cPeriodicTCsGSSConfigPeriodicTCsParserRuleCall_12_0 = (RuleCall)cPeriodicTCsAssignment_12.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_13 = (UnorderedGroup)cGroup.eContents().get(13);
+		private final Assignment cGlobalVarsAssignment_13_0 = (Assignment)cUnorderedGroup_13.eContents().get(0);
+		private final RuleCall cGlobalVarsGSSConfigGlobalVarsParserRuleCall_13_0_0 = (RuleCall)cGlobalVarsAssignment_13_0.eContents().get(0);
+		private final Assignment cMonitorsAssignment_13_1 = (Assignment)cUnorderedGroup_13.eContents().get(1);
+		private final RuleCall cMonitorsGSSConfigMonitorsParserRuleCall_13_1_0 = (RuleCall)cMonitorsAssignment_13_1.eContents().get(0);
+		private final Assignment cTestsAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cTestsGSSConfigTestsParserRuleCall_14_0 = (RuleCall)cTestsAssignment_14.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Keyword cSemicolonKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
 		//GSSConfigGSSConfig:
 		//	'GSSConfigGSSConfig'
 		//	name=ID
-		//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') gss_options=GSSConfigGSSOptions
+		//	'{' ('uri' ':=' uri=QualifiedName ';')
+		//	'version' ':=' version=Version ';'
+		//	gss_options=GSSConfigGSSOptions
 		//	Protocols=GSSConfigProtocols
 		//	Interfaces=GSSConfigInterfaces
 		//	SpecialPackets=GSSConfigSpecialPackets?
@@ -146,7 +146,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSConfigGSSConfig' name=ID '{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';')
+		//'GSSConfigGSSConfig' name=ID '{' ('uri' ':=' uri=QualifiedName ';') 'version' ':=' version=Version ';'
 		//gss_options=GSSConfigGSSOptions Protocols=GSSConfigProtocols Interfaces=GSSConfigInterfaces
 		//SpecialPackets=GSSConfigSpecialPackets? PeriodicTCs=GSSConfigPeriodicTCs? (GlobalVars=GSSConfigGlobalVars &
 		//Monitors=GSSConfigMonitors)? Tests=GSSConfigTests '}' ';'
@@ -164,101 +164,95 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';')
-		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
-		
-		//'uri' ':=' uri=QualifiedName ';'
-		public Group getGroup_3_0() { return cGroup_3_0; }
+		//('uri' ':=' uri=QualifiedName ';')
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//'uri'
-		public Keyword getUriKeyword_3_0_0() { return cUriKeyword_3_0_0; }
+		public Keyword getUriKeyword_3_0() { return cUriKeyword_3_0; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_3_0_1() { return cColonEqualsSignKeyword_3_0_1; }
+		public Keyword getColonEqualsSignKeyword_3_1() { return cColonEqualsSignKeyword_3_1; }
 		
 		//uri=QualifiedName
-		public Assignment getUriAssignment_3_0_2() { return cUriAssignment_3_0_2; }
+		public Assignment getUriAssignment_3_2() { return cUriAssignment_3_2; }
 		
 		//QualifiedName
-		public RuleCall getUriQualifiedNameParserRuleCall_3_0_2_0() { return cUriQualifiedNameParserRuleCall_3_0_2_0; }
+		public RuleCall getUriQualifiedNameParserRuleCall_3_2_0() { return cUriQualifiedNameParserRuleCall_3_2_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_3_0_3() { return cSemicolonKeyword_3_0_3; }
-		
-		//'version' ':=' version=Version ';'
-		public Group getGroup_3_1() { return cGroup_3_1; }
+		public Keyword getSemicolonKeyword_3_3() { return cSemicolonKeyword_3_3; }
 		
 		//'version'
-		public Keyword getVersionKeyword_3_1_0() { return cVersionKeyword_3_1_0; }
+		public Keyword getVersionKeyword_4() { return cVersionKeyword_4; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_3_1_1() { return cColonEqualsSignKeyword_3_1_1; }
+		public Keyword getColonEqualsSignKeyword_5() { return cColonEqualsSignKeyword_5; }
 		
 		//version=Version
-		public Assignment getVersionAssignment_3_1_2() { return cVersionAssignment_3_1_2; }
+		public Assignment getVersionAssignment_6() { return cVersionAssignment_6; }
 		
 		//Version
-		public RuleCall getVersionVersionParserRuleCall_3_1_2_0() { return cVersionVersionParserRuleCall_3_1_2_0; }
+		public RuleCall getVersionVersionParserRuleCall_6_0() { return cVersionVersionParserRuleCall_6_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_3_1_3() { return cSemicolonKeyword_3_1_3; }
+		public Keyword getSemicolonKeyword_7() { return cSemicolonKeyword_7; }
 		
 		//gss_options=GSSConfigGSSOptions
-		public Assignment getGss_optionsAssignment_4() { return cGss_optionsAssignment_4; }
+		public Assignment getGss_optionsAssignment_8() { return cGss_optionsAssignment_8; }
 		
 		//GSSConfigGSSOptions
-		public RuleCall getGss_optionsGSSConfigGSSOptionsParserRuleCall_4_0() { return cGss_optionsGSSConfigGSSOptionsParserRuleCall_4_0; }
+		public RuleCall getGss_optionsGSSConfigGSSOptionsParserRuleCall_8_0() { return cGss_optionsGSSConfigGSSOptionsParserRuleCall_8_0; }
 		
 		//Protocols=GSSConfigProtocols
-		public Assignment getProtocolsAssignment_5() { return cProtocolsAssignment_5; }
+		public Assignment getProtocolsAssignment_9() { return cProtocolsAssignment_9; }
 		
 		//GSSConfigProtocols
-		public RuleCall getProtocolsGSSConfigProtocolsParserRuleCall_5_0() { return cProtocolsGSSConfigProtocolsParserRuleCall_5_0; }
+		public RuleCall getProtocolsGSSConfigProtocolsParserRuleCall_9_0() { return cProtocolsGSSConfigProtocolsParserRuleCall_9_0; }
 		
 		//Interfaces=GSSConfigInterfaces
-		public Assignment getInterfacesAssignment_6() { return cInterfacesAssignment_6; }
+		public Assignment getInterfacesAssignment_10() { return cInterfacesAssignment_10; }
 		
 		//GSSConfigInterfaces
-		public RuleCall getInterfacesGSSConfigInterfacesParserRuleCall_6_0() { return cInterfacesGSSConfigInterfacesParserRuleCall_6_0; }
+		public RuleCall getInterfacesGSSConfigInterfacesParserRuleCall_10_0() { return cInterfacesGSSConfigInterfacesParserRuleCall_10_0; }
 		
 		//SpecialPackets=GSSConfigSpecialPackets?
-		public Assignment getSpecialPacketsAssignment_7() { return cSpecialPacketsAssignment_7; }
+		public Assignment getSpecialPacketsAssignment_11() { return cSpecialPacketsAssignment_11; }
 		
 		//GSSConfigSpecialPackets
-		public RuleCall getSpecialPacketsGSSConfigSpecialPacketsParserRuleCall_7_0() { return cSpecialPacketsGSSConfigSpecialPacketsParserRuleCall_7_0; }
+		public RuleCall getSpecialPacketsGSSConfigSpecialPacketsParserRuleCall_11_0() { return cSpecialPacketsGSSConfigSpecialPacketsParserRuleCall_11_0; }
 		
 		//PeriodicTCs=GSSConfigPeriodicTCs?
-		public Assignment getPeriodicTCsAssignment_8() { return cPeriodicTCsAssignment_8; }
+		public Assignment getPeriodicTCsAssignment_12() { return cPeriodicTCsAssignment_12; }
 		
 		//GSSConfigPeriodicTCs
-		public RuleCall getPeriodicTCsGSSConfigPeriodicTCsParserRuleCall_8_0() { return cPeriodicTCsGSSConfigPeriodicTCsParserRuleCall_8_0; }
+		public RuleCall getPeriodicTCsGSSConfigPeriodicTCsParserRuleCall_12_0() { return cPeriodicTCsGSSConfigPeriodicTCsParserRuleCall_12_0; }
 		
 		//(GlobalVars=GSSConfigGlobalVars & Monitors=GSSConfigMonitors)?
-		public UnorderedGroup getUnorderedGroup_9() { return cUnorderedGroup_9; }
+		public UnorderedGroup getUnorderedGroup_13() { return cUnorderedGroup_13; }
 		
 		//GlobalVars=GSSConfigGlobalVars
-		public Assignment getGlobalVarsAssignment_9_0() { return cGlobalVarsAssignment_9_0; }
+		public Assignment getGlobalVarsAssignment_13_0() { return cGlobalVarsAssignment_13_0; }
 		
 		//GSSConfigGlobalVars
-		public RuleCall getGlobalVarsGSSConfigGlobalVarsParserRuleCall_9_0_0() { return cGlobalVarsGSSConfigGlobalVarsParserRuleCall_9_0_0; }
+		public RuleCall getGlobalVarsGSSConfigGlobalVarsParserRuleCall_13_0_0() { return cGlobalVarsGSSConfigGlobalVarsParserRuleCall_13_0_0; }
 		
 		//Monitors=GSSConfigMonitors
-		public Assignment getMonitorsAssignment_9_1() { return cMonitorsAssignment_9_1; }
+		public Assignment getMonitorsAssignment_13_1() { return cMonitorsAssignment_13_1; }
 		
 		//GSSConfigMonitors
-		public RuleCall getMonitorsGSSConfigMonitorsParserRuleCall_9_1_0() { return cMonitorsGSSConfigMonitorsParserRuleCall_9_1_0; }
+		public RuleCall getMonitorsGSSConfigMonitorsParserRuleCall_13_1_0() { return cMonitorsGSSConfigMonitorsParserRuleCall_13_1_0; }
 		
 		//Tests=GSSConfigTests
-		public Assignment getTestsAssignment_10() { return cTestsAssignment_10; }
+		public Assignment getTestsAssignment_14() { return cTestsAssignment_14; }
 		
 		//GSSConfigTests
-		public RuleCall getTestsGSSConfigTestsParserRuleCall_10_0() { return cTestsGSSConfigTestsParserRuleCall_10_0; }
+		public RuleCall getTestsGSSConfigTestsParserRuleCall_14_0() { return cTestsGSSConfigTestsParserRuleCall_14_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
+		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_12() { return cSemicolonKeyword_12; }
+		public Keyword getSemicolonKeyword_16() { return cSemicolonKeyword_16; }
 	}
 	public class GSSConfigGSSOptionsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigGSSOptions");
@@ -5811,7 +5805,9 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSConfigGSSConfig:
 	//	'GSSConfigGSSConfig'
 	//	name=ID
-	//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') gss_options=GSSConfigGSSOptions
+	//	'{' ('uri' ':=' uri=QualifiedName ';')
+	//	'version' ':=' version=Version ';'
+	//	gss_options=GSSConfigGSSOptions
 	//	Protocols=GSSConfigProtocols
 	//	Interfaces=GSSConfigInterfaces
 	//	SpecialPackets=GSSConfigSpecialPackets?

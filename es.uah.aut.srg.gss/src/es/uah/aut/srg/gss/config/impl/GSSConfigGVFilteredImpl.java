@@ -14,11 +14,12 @@ import es.uah.aut.srg.gss.config.GSSConfigGVFiltered;
 import es.uah.aut.srg.gss.config.configPackage;
 
 import es.uah.aut.srg.gss.filters.GSSFilterFilter;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 

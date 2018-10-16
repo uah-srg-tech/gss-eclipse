@@ -246,7 +246,8 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         (uri=QualifiedName | version=Version)+ 
+	 *         uri=QualifiedName 
+	 *         version=Version 
 	 *         gss_options=GSSConfigGSSOptions 
 	 *         Protocols=GSSConfigProtocols 
 	 *         Interfaces=GSSConfigInterfaces 
