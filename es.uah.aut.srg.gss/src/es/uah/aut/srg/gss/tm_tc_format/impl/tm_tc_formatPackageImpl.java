@@ -34,8 +34,8 @@ import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatPower;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSFieldFirstBit;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSortedFieldsToCheck;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormatType;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormatType;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatUnit;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField;
@@ -63,7 +63,7 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass gssTmTcFormatTmTCFormatEClass = null;
+	private EClass gssTmTcFormatTmTcFormatEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,7 +210,7 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum gssTmTcFormatTmTCFormatTypeEEnum = null;
+	private EEnum gssTmTcFormatTmTcFormatTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -323,8 +323,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGSSTmTcFormatTmTCFormat() {
-		return gssTmTcFormatTmTCFormatEClass;
+	public EClass getGSSTmTcFormatTmTcFormat() {
+		return gssTmTcFormatTmTcFormatEClass;
 	}
 
 	/**
@@ -332,8 +332,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSTmTcFormatTmTCFormat_Protocol() {
-		return (EAttribute)gssTmTcFormatTmTCFormatEClass.getEStructuralFeatures().get(0);
+	public EAttribute getGSSTmTcFormatTmTcFormat_Protocol() {
+		return (EAttribute)gssTmTcFormatTmTcFormatEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -341,8 +341,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSTmTcFormatTmTCFormat_Type() {
-		return (EAttribute)gssTmTcFormatTmTCFormatEClass.getEStructuralFeatures().get(1);
+	public EAttribute getGSSTmTcFormatTmTcFormat_Type() {
+		return (EAttribute)gssTmTcFormatTmTcFormatEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -350,8 +350,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTmTcFormatTmTCFormat_CSFormulaField() {
-		return (EReference)gssTmTcFormatTmTCFormatEClass.getEStructuralFeatures().get(3);
+	public EReference getGSSTmTcFormatTmTcFormat_CSField() {
+		return (EReference)gssTmTcFormatTmTcFormatEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -359,8 +359,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTmTcFormatTmTCFormat_CSField() {
-		return (EReference)gssTmTcFormatTmTCFormatEClass.getEStructuralFeatures().get(2);
+	public EReference getGSSTmTcFormatTmTcFormat_CSFormulaField() {
+		return (EReference)gssTmTcFormatTmTcFormatEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -368,8 +368,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTmTcFormatTmTCFormat_VSField() {
-		return (EReference)gssTmTcFormatTmTCFormatEClass.getEStructuralFeatures().get(4);
+	public EReference getGSSTmTcFormatTmTcFormat_VSField() {
+		return (EReference)gssTmTcFormatTmTcFormatEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -377,8 +377,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTmTcFormatTmTCFormat_FDICField() {
-		return (EReference)gssTmTcFormatTmTCFormatEClass.getEStructuralFeatures().get(5);
+	public EReference getGSSTmTcFormatTmTcFormat_FDICField() {
+		return (EReference)gssTmTcFormatTmTcFormatEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -386,8 +386,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTmTcFormatTmTCFormat_VRFieldSize() {
-		return (EReference)gssTmTcFormatTmTCFormatEClass.getEStructuralFeatures().get(6);
+	public EReference getGSSTmTcFormatTmTcFormat_VRFieldSize() {
+		return (EReference)gssTmTcFormatTmTcFormatEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -395,8 +395,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTmTcFormatTmTCFormat_AField() {
-		return (EReference)gssTmTcFormatTmTCFormatEClass.getEStructuralFeatures().get(7);
+	public EReference getGSSTmTcFormatTmTcFormat_AField() {
+		return (EReference)gssTmTcFormatTmTcFormatEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -404,8 +404,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTmTcFormatTmTCFormat_AIField() {
-		return (EReference)gssTmTcFormatTmTCFormatEClass.getEStructuralFeatures().get(8);
+	public EReference getGSSTmTcFormatTmTcFormat_AIField() {
+		return (EReference)gssTmTcFormatTmTcFormatEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1250,8 +1250,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getGSSTmTcFormatTmTCFormatType() {
-		return gssTmTcFormatTmTCFormatTypeEEnum;
+	public EEnum getGSSTmTcFormatTmTcFormatType() {
+		return gssTmTcFormatTmTcFormatTypeEEnum;
 	}
 
 	/**
@@ -1336,16 +1336,16 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		isCreated = true;
 
 		// Create classes and their features
-		gssTmTcFormatTmTCFormatEClass = createEClass(GSS_TM_TC_FORMAT_TM_TC_FORMAT);
-		createEAttribute(gssTmTcFormatTmTCFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__PROTOCOL);
-		createEAttribute(gssTmTcFormatTmTCFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__TYPE);
-		createEReference(gssTmTcFormatTmTCFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FIELD);
-		createEReference(gssTmTcFormatTmTCFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FORMULA_FIELD);
-		createEReference(gssTmTcFormatTmTCFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__VS_FIELD);
-		createEReference(gssTmTcFormatTmTCFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__FDIC_FIELD);
-		createEReference(gssTmTcFormatTmTCFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__VR_FIELD_SIZE);
-		createEReference(gssTmTcFormatTmTCFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__AFIELD);
-		createEReference(gssTmTcFormatTmTCFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__AI_FIELD);
+		gssTmTcFormatTmTcFormatEClass = createEClass(GSS_TM_TC_FORMAT_TM_TC_FORMAT);
+		createEAttribute(gssTmTcFormatTmTcFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__PROTOCOL);
+		createEAttribute(gssTmTcFormatTmTcFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__TYPE);
+		createEReference(gssTmTcFormatTmTcFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FIELD);
+		createEReference(gssTmTcFormatTmTcFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FORMULA_FIELD);
+		createEReference(gssTmTcFormatTmTcFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__VS_FIELD);
+		createEReference(gssTmTcFormatTmTcFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__FDIC_FIELD);
+		createEReference(gssTmTcFormatTmTcFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__VR_FIELD_SIZE);
+		createEReference(gssTmTcFormatTmTcFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__AFIELD);
+		createEReference(gssTmTcFormatTmTcFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__AI_FIELD);
 
 		gssTmTcFormatFieldEClass = createEClass(GSS_TM_TC_FORMAT_FIELD);
 
@@ -1461,7 +1461,7 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		createEAttribute(gssTmTcFormatLocalOffsetEClass, GSS_TM_TC_FORMAT_LOCAL_OFFSET__BITS);
 
 		// Create enums
-		gssTmTcFormatTmTCFormatTypeEEnum = createEEnum(GSS_TM_TC_FORMAT_TM_TC_FORMAT_TYPE);
+		gssTmTcFormatTmTcFormatTypeEEnum = createEEnum(GSS_TM_TC_FORMAT_TM_TC_FORMAT_TYPE);
 		gssTmTcFormatFieldTypeEEnum = createEEnum(GSS_TM_TC_FORMAT_FIELD_TYPE);
 		gssTmTcFormatFieldByteOrderEEnum = createEEnum(GSS_TM_TC_FORMAT_FIELD_BYTE_ORDER);
 		gssTmTcFormatSFieldFirstBitEEnum = createEEnum(GSS_TM_TC_FORMAT_SFIELD_FIRST_BIT);
@@ -1501,7 +1501,7 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		gssTmTcFormatTmTCFormatEClass.getESuperTypes().add(thecommonPackage.getGSSModelElement());
+		gssTmTcFormatTmTcFormatEClass.getESuperTypes().add(thecommonPackage.getGSSModelElement());
 		gssTmTcFormatFieldEClass.getESuperTypes().add(thecommonPackage.getGSSModelObject());
 		gssTmTcFormatCSFieldEClass.getESuperTypes().add(this.getGSSTmTcFormatField());
 		gssTmTcFormatCSFormulaFieldEClass.getESuperTypes().add(this.getGSSTmTcFormatField());
@@ -1511,16 +1511,16 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		gssTmTcFormatAIFieldEClass.getESuperTypes().add(thecommonPackage.getGSSModelObject());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(gssTmTcFormatTmTCFormatEClass, GSSTmTcFormatTmTCFormat.class, "GSSTmTcFormatTmTCFormat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSTmTcFormatTmTCFormat_Protocol(), ecorePackage.getEString(), "protocol", null, 1, 1, GSSTmTcFormatTmTCFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTmTcFormatTmTCFormat_Type(), this.getGSSTmTcFormatTmTCFormatType(), "type", null, 1, 1, GSSTmTcFormatTmTCFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTmTcFormatTmTCFormat_CSField(), this.getGSSTmTcFormatCSField(), null, "CSField", null, 0, -1, GSSTmTcFormatTmTCFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTmTcFormatTmTCFormat_CSFormulaField(), this.getGSSTmTcFormatCSFormulaField(), null, "CSFormulaField", null, 0, -1, GSSTmTcFormatTmTCFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTmTcFormatTmTCFormat_VSField(), this.getGSSTmTcFormatVSField(), null, "VSField", null, 0, -1, GSSTmTcFormatTmTCFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTmTcFormatTmTCFormat_FDICField(), this.getGSSTmTcFormatFDICField(), null, "FDICField", null, 0, -1, GSSTmTcFormatTmTCFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTmTcFormatTmTCFormat_VRFieldSize(), this.getGSSTmTcFormatVRFieldSize(), null, "VRFieldSize", null, 0, -1, GSSTmTcFormatTmTCFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTmTcFormatTmTCFormat_AField(), this.getGSSTmTcFormatAField(), null, "AField", null, 0, -1, GSSTmTcFormatTmTCFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTmTcFormatTmTCFormat_AIField(), this.getGSSTmTcFormatAIField(), null, "AIField", null, 0, -1, GSSTmTcFormatTmTCFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(gssTmTcFormatTmTcFormatEClass, GSSTmTcFormatTmTcFormat.class, "GSSTmTcFormatTmTcFormat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGSSTmTcFormatTmTcFormat_Protocol(), ecorePackage.getEString(), "protocol", null, 1, 1, GSSTmTcFormatTmTcFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSTmTcFormatTmTcFormat_Type(), this.getGSSTmTcFormatTmTcFormatType(), "type", null, 1, 1, GSSTmTcFormatTmTcFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTmTcFormatTmTcFormat_CSField(), this.getGSSTmTcFormatCSField(), null, "CSField", null, 0, -1, GSSTmTcFormatTmTcFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTmTcFormatTmTcFormat_CSFormulaField(), this.getGSSTmTcFormatCSFormulaField(), null, "CSFormulaField", null, 0, -1, GSSTmTcFormatTmTcFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTmTcFormatTmTcFormat_VSField(), this.getGSSTmTcFormatVSField(), null, "VSField", null, 0, -1, GSSTmTcFormatTmTcFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTmTcFormatTmTcFormat_FDICField(), this.getGSSTmTcFormatFDICField(), null, "FDICField", null, 0, -1, GSSTmTcFormatTmTcFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTmTcFormatTmTcFormat_VRFieldSize(), this.getGSSTmTcFormatVRFieldSize(), null, "VRFieldSize", null, 0, -1, GSSTmTcFormatTmTcFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTmTcFormatTmTcFormat_AField(), this.getGSSTmTcFormatAField(), null, "AField", null, 0, -1, GSSTmTcFormatTmTcFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTmTcFormatTmTcFormat_AIField(), this.getGSSTmTcFormatAIField(), null, "AIField", null, 0, -1, GSSTmTcFormatTmTcFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssTmTcFormatFieldEClass, GSSTmTcFormatField.class, "GSSTmTcFormatField", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1636,9 +1636,9 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		initEAttribute(getGSSTmTcFormatLocalOffset_Bits(), ecorePackage.getEString(), "bits", null, 1, 1, GSSTmTcFormatLocalOffset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
-		initEEnum(gssTmTcFormatTmTCFormatTypeEEnum, GSSTmTcFormatTmTCFormatType.class, "GSSTmTcFormatTmTCFormatType");
-		addEEnumLiteral(gssTmTcFormatTmTCFormatTypeEEnum, GSSTmTcFormatTmTCFormatType.TM);
-		addEEnumLiteral(gssTmTcFormatTmTCFormatTypeEEnum, GSSTmTcFormatTmTCFormatType.TC);
+		initEEnum(gssTmTcFormatTmTcFormatTypeEEnum, GSSTmTcFormatTmTcFormatType.class, "GSSTmTcFormatTmTcFormatType");
+		addEEnumLiteral(gssTmTcFormatTmTcFormatTypeEEnum, GSSTmTcFormatTmTcFormatType.TM);
+		addEEnumLiteral(gssTmTcFormatTmTcFormatTypeEEnum, GSSTmTcFormatTmTcFormatType.TC);
 
 		initEEnum(gssTmTcFormatFieldTypeEEnum, GSSTmTcFormatFieldType.class, "GSSTmTcFormatFieldType");
 		addEEnumLiteral(gssTmTcFormatFieldTypeEEnum, GSSTmTcFormatFieldType.STRUCTURED);

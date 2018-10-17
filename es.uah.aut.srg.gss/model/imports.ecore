@@ -2,8 +2,8 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="imports" nsURI="http://srg.aut.uah.es/gss/imports" nsPrefix="gss">
   <eClassifiers xsi:type="ecore:EClass" name="GSSImportImport" eSuperTypes="common.ecore#//GSSModelElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTCFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTcFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTcFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataSource" lowerBound="1"
         upperBound="-1" eType="#//GSSImportDataSource" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="virtualSize" eType="#//GSSImportVirtualSize"

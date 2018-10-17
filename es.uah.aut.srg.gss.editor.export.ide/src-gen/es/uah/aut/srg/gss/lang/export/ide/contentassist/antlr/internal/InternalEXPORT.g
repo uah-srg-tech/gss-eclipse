@@ -8021,13 +8021,13 @@ rule__GSSExportExport__FromAssignment_6
 	}
 :
 	(
-		{ before(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0()); }
+		{ before(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_0()); }
 		(
-			{ before(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_0_1()); }
+			{ before(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_0_1()); }
 			ruleVersionedQualifiedName
-			{ after(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_0_1()); }
+			{ after(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_0_1()); }
 		)
-		{ after(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0()); }
+		{ after(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_0()); }
 	)
 ;
 finally {
@@ -8040,13 +8040,13 @@ rule__GSSExportExport__ToAssignment_10
 	}
 :
 	(
-		{ before(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0()); }
+		{ before(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTcFormatCrossReference_10_0()); }
 		(
-			{ before(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_10_0_1()); }
+			{ before(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_10_0_1()); }
 			ruleVersionedQualifiedName
-			{ after(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_10_0_1()); }
+			{ after(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_10_0_1()); }
 		)
-		{ after(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0()); }
+		{ after(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTcFormatCrossReference_10_0()); }
 	)
 ;
 finally {

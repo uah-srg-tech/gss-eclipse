@@ -6248,7 +6248,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSConfigLevelInOutAccess().getTMformatGSSTmTcFormatTmTCFormatCrossReference_12_0());
+              					newCompositeNode(grammarAccess.getGSSConfigLevelInOutAccess().getTMformatGSSTmTcFormatTmTcFormatCrossReference_12_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);
@@ -6305,7 +6305,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSConfigLevelInOutAccess().getTCformatGSSTmTcFormatTmTCFormatCrossReference_16_0());
+              					newCompositeNode(grammarAccess.getGSSConfigLevelInOutAccess().getTCformatGSSTmTcFormatTmTcFormatCrossReference_16_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);
@@ -6791,7 +6791,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSConfigLevelInAccess().getTCformatGSSTmTcFormatTmTCFormatCrossReference_12_0());
+              					newCompositeNode(grammarAccess.getGSSConfigLevelInAccess().getTCformatGSSTmTcFormatTmTcFormatCrossReference_12_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);
@@ -7149,7 +7149,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSConfigLevelOutAccess().getTMformatGSSTmTcFormatTmTCFormatCrossReference_12_0());
+              					newCompositeNode(grammarAccess.getGSSConfigLevelOutAccess().getTMformatGSSTmTcFormatTmTcFormatCrossReference_12_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);
@@ -9281,7 +9281,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getGSSConfigUpperLevelAccess().getTMformatGSSTmTcFormatTmTCFormatCrossReference_6_2_0());
+                      						newCompositeNode(grammarAccess.getGSSConfigUpperLevelAccess().getTMformatGSSTmTcFormatTmTcFormatCrossReference_6_2_0());
                       					
                     }
                     pushFollow(FollowSets000.FOLLOW_6);
@@ -10137,7 +10137,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel2GSSTmTcFormatTmTCFormatCrossReference_22_2_0());
+                      						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel2GSSTmTcFormatTmTcFormatCrossReference_22_2_0());
                       					
                     }
                     pushFollow(FollowSets000.FOLLOW_6);
@@ -10268,7 +10268,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel1GSSTmTcFormatTmTCFormatCrossReference_27_2_0());
+                      						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel1GSSTmTcFormatTmTcFormatCrossReference_27_2_0());
                       					
                     }
                     pushFollow(FollowSets000.FOLLOW_6);
@@ -10416,7 +10416,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel0GSSTmTcFormatTmTCFormatCrossReference_29_2_0());
+                      						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel0GSSTmTcFormatTmTcFormatCrossReference_29_2_0());
                       					
                     }
                     pushFollow(FollowSets000.FOLLOW_6);
@@ -10968,7 +10968,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel1GSSTmTcFormatTmTCFormatCrossReference_22_2_0());
+                      						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel1GSSTmTcFormatTmTcFormatCrossReference_22_2_0());
                       					
                     }
                     pushFollow(FollowSets000.FOLLOW_6);
@@ -11099,7 +11099,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel0GSSTmTcFormatTmTCFormatCrossReference_27_2_0());
+                      						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel0GSSTmTcFormatTmTcFormatCrossReference_27_2_0());
                       					
                     }
                     pushFollow(FollowSets000.FOLLOW_6);
@@ -11645,7 +11645,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel0Access().getLevel0GSSTmTcFormatTmTCFormatCrossReference_22_2_0());
+                      						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel0Access().getLevel0GSSTmTcFormatTmTcFormatCrossReference_22_2_0());
                       					
                     }
                     pushFollow(FollowSets000.FOLLOW_6);

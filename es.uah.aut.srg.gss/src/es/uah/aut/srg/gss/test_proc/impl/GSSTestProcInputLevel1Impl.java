@@ -15,9 +15,7 @@ import es.uah.aut.srg.gss.export.GSSExportExport;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcUnit;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
-
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -153,7 +151,7 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatTmTCFormat level1;
+	protected GSSTmTcFormatTmTcFormat level1;
 
 	/**
 	 * The cached value of the '{@link #getApp_to_level1() <em>App to level1</em>}' reference.
@@ -173,7 +171,7 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatTmTCFormat level0;
+	protected GSSTmTcFormatTmTcFormat level0;
 
 	/**
 	 * The cached value of the '{@link #getLevel1_to_level0() <em>Level1 to level0</em>}' reference.
@@ -343,10 +341,10 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat getLevel1() {
+	public GSSTmTcFormatTmTcFormat getLevel1() {
 		if (level1 != null && level1.eIsProxy()) {
 			InternalEObject oldLevel1 = (InternalEObject)level1;
-			level1 = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldLevel1);
+			level1 = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldLevel1);
 			if (level1 != oldLevel1) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1, oldLevel1, level1));
@@ -360,7 +358,7 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat basicGetLevel1() {
+	public GSSTmTcFormatTmTcFormat basicGetLevel1() {
 		return level1;
 	}
 
@@ -369,8 +367,8 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel1(GSSTmTcFormatTmTCFormat newLevel1) {
-		GSSTmTcFormatTmTCFormat oldLevel1 = level1;
+	public void setLevel1(GSSTmTcFormatTmTcFormat newLevel1) {
+		GSSTmTcFormatTmTcFormat oldLevel1 = level1;
 		level1 = newLevel1;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1, oldLevel1, level1));
@@ -419,10 +417,10 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat getLevel0() {
+	public GSSTmTcFormatTmTcFormat getLevel0() {
 		if (level0 != null && level0.eIsProxy()) {
 			InternalEObject oldLevel0 = (InternalEObject)level0;
-			level0 = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldLevel0);
+			level0 = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldLevel0);
 			if (level0 != oldLevel0) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0, oldLevel0, level0));
@@ -436,7 +434,7 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat basicGetLevel0() {
+	public GSSTmTcFormatTmTcFormat basicGetLevel0() {
 		return level0;
 	}
 
@@ -445,8 +443,8 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel0(GSSTmTcFormatTmTCFormat newLevel0) {
-		GSSTmTcFormatTmTCFormat oldLevel0 = level0;
+	public void setLevel0(GSSTmTcFormatTmTcFormat newLevel0) {
+		GSSTmTcFormatTmTcFormat oldLevel0 = level0;
 		level0 = newLevel0;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0, oldLevel0, level0));
@@ -543,13 +541,13 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 				setDelay_unit((GSSTestProcUnit)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1:
-				setLevel1((GSSTmTcFormatTmTCFormat)newValue);
+				setLevel1((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1:
 				setApp_to_level1((GSSExportExport)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0:
-				setLevel0((GSSTmTcFormatTmTCFormat)newValue);
+				setLevel0((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1_TO_LEVEL0:
 				setLevel1_to_level0((GSSExportExport)newValue);
@@ -579,13 +577,13 @@ public class GSSTestProcInputLevel1Impl extends MinimalEObjectImpl.Container imp
 				unsetDelay_unit();
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1:
-				setLevel1((GSSTmTcFormatTmTCFormat)null);
+				setLevel1((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1:
 				setApp_to_level1((GSSExportExport)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0:
-				setLevel0((GSSTmTcFormatTmTCFormat)null);
+				setLevel0((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1_TO_LEVEL0:
 				setLevel1_to_level0((GSSExportExport)null);

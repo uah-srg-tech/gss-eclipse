@@ -9172,13 +9172,13 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2939:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0()); 
+               before(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_0()); 
             }
             // InternalIMPORTS.g:2940:3: ( ruleVersionedQualifiedName )
             // InternalIMPORTS.g:2941:4: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_0_1()); 
+               before(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_0_1()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleVersionedQualifiedName();
@@ -9186,13 +9186,13 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_0_1()); 
+               after(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0()); 
+               after(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_0()); 
             }
 
             }
@@ -9229,13 +9229,13 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2958:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0()); 
+               before(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTcFormatCrossReference_10_0()); 
             }
             // InternalIMPORTS.g:2959:3: ( ruleVersionedQualifiedName )
             // InternalIMPORTS.g:2960:4: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_10_0_1()); 
+               before(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_10_0_1()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleVersionedQualifiedName();
@@ -9243,13 +9243,13 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_10_0_1()); 
+               after(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_10_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0()); 
+               after(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTcFormatCrossReference_10_0()); 
             }
 
             }

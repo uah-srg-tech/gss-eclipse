@@ -826,7 +826,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
             }
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0());
+              					newCompositeNode(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);
@@ -883,7 +883,7 @@ public class InternalIMPORTSParser extends AbstractInternalAntlrParser {
             }
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0());
+              					newCompositeNode(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTcFormatCrossReference_10_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);

@@ -65,7 +65,7 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT: return createGSSTmTcFormatTmTCFormat();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT: return createGSSTmTcFormatTmTcFormat();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD: return createGSSTmTcFormatCSField();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FORMULA_FIELD: return createGSSTmTcFormatCSFormulaField();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD: return createGSSTmTcFormatVSField();
@@ -99,7 +99,7 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT_TYPE:
-				return createGSSTmTcFormatTmTCFormatTypeFromString(eDataType, initialValue);
+				return createGSSTmTcFormatTmTcFormatTypeFromString(eDataType, initialValue);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FIELD_TYPE:
 				return createGSSTmTcFormatFieldTypeFromString(eDataType, initialValue);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FIELD_BYTE_ORDER:
@@ -126,7 +126,7 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT_TYPE:
-				return convertGSSTmTcFormatTmTCFormatTypeToString(eDataType, instanceValue);
+				return convertGSSTmTcFormatTmTcFormatTypeToString(eDataType, instanceValue);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FIELD_TYPE:
 				return convertGSSTmTcFormatFieldTypeToString(eDataType, instanceValue);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FIELD_BYTE_ORDER:
@@ -149,9 +149,9 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat createGSSTmTcFormatTmTCFormat() {
-		GSSTmTcFormatTmTCFormatImpl gssTmTcFormatTmTCFormat = new GSSTmTcFormatTmTCFormatImpl();
-		return gssTmTcFormatTmTCFormat;
+	public GSSTmTcFormatTmTcFormat createGSSTmTcFormatTmTcFormat() {
+		GSSTmTcFormatTmTcFormatImpl gssTmTcFormatTmTcFormat = new GSSTmTcFormatTmTcFormatImpl();
+		return gssTmTcFormatTmTcFormat;
 	}
 
 	/**
@@ -349,8 +349,8 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormatType createGSSTmTcFormatTmTCFormatTypeFromString(EDataType eDataType, String initialValue) {
-		GSSTmTcFormatTmTCFormatType result = GSSTmTcFormatTmTCFormatType.get(initialValue);
+	public GSSTmTcFormatTmTcFormatType createGSSTmTcFormatTmTcFormatTypeFromString(EDataType eDataType, String initialValue) {
+		GSSTmTcFormatTmTcFormatType result = GSSTmTcFormatTmTcFormatType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -360,7 +360,7 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertGSSTmTcFormatTmTCFormatTypeToString(EDataType eDataType, Object instanceValue) {
+	public String convertGSSTmTcFormatTmTcFormatTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

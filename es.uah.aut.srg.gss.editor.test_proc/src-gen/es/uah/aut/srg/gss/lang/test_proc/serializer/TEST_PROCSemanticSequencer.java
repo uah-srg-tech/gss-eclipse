@@ -293,7 +293,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         ifRef=INTEGER 
 	 *         delay_value=INTEGER 
 	 *         delay_unit=GSSTestProcUnit 
-	 *         level0=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level0=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         app_to_level0=[GSSExportExport|VersionedQualifiedName]
 	 *     )
 	 */
@@ -312,9 +312,9 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         ifRef=INTEGER 
 	 *         delay_value=INTEGER 
 	 *         delay_unit=GSSTestProcUnit 
-	 *         level1=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level1=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         app_to_level1=[GSSExportExport|VersionedQualifiedName] 
-	 *         level0=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level0=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level1_to_level0=[GSSExportExport|VersionedQualifiedName]?
 	 *     )
 	 */
@@ -333,11 +333,11 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         ifRef=INTEGER 
 	 *         delay_value=INTEGER 
 	 *         delay_unit=GSSTestProcUnit 
-	 *         level2=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level2=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         app_to_level2=[GSSExportExport|VersionedQualifiedName] 
-	 *         level1=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level1=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level2_to_level1=[GSSExportExport|VersionedQualifiedName]? 
-	 *         level0=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level0=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level1_to_level0=[GSSExportExport|VersionedQualifiedName]?
 	 *     )
 	 */
@@ -356,13 +356,13 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         ifRef=INTEGER 
 	 *         delay_value=INTEGER 
 	 *         delay_unit=GSSTestProcUnit 
-	 *         level3=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level3=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         app_to_level3=[GSSExportExport|VersionedQualifiedName] 
-	 *         level2=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level2=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level3_to_level2=[GSSExportExport|VersionedQualifiedName]? 
-	 *         level1=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level1=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level2_to_level1=[GSSExportExport|VersionedQualifiedName]? 
-	 *         level0=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level0=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level1_to_level0=[GSSExportExport|VersionedQualifiedName]?
 	 *     )
 	 */
@@ -467,7 +467,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         id=INTEGER 
 	 *         ifRef=INTEGER 
 	 *         optional=INTEGER? 
-	 *         level0=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level0=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level0_filter=GSSTestProcLevel0Filter
 	 *     )
 	 */
@@ -486,9 +486,9 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         id=INTEGER 
 	 *         ifRef=INTEGER 
 	 *         optional=INTEGER? 
-	 *         level1=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level1=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level1_filter=GSSTestProcLevel1Filter 
-	 *         level0=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level0=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level1_from_level0=[GSSImportImport|VersionedQualifiedName]? 
 	 *         level0_filter=GSSTestProcLevel0Filter
 	 *     )
@@ -508,12 +508,12 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         id=INTEGER 
 	 *         ifRef=INTEGER 
 	 *         optional=INTEGER? 
-	 *         level2=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level2=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level2_filter=GSSTestProcLevel2Filter 
-	 *         level1=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level1=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level2_from_level1=[GSSImportImport|VersionedQualifiedName]? 
 	 *         level1_filter=GSSTestProcLevel1Filter 
-	 *         level0=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level0=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level1_from_level0=[GSSImportImport|VersionedQualifiedName]? 
 	 *         level0_filter=GSSTestProcLevel0Filter
 	 *     )
@@ -533,15 +533,15 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         id=INTEGER 
 	 *         ifRef=INTEGER 
 	 *         optional=INTEGER? 
-	 *         level3=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level3=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level3_filter=GSSTestProcLevel3Filter 
-	 *         level2=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level2=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level3_from_level2=[GSSImportImport|VersionedQualifiedName]? 
 	 *         level2_filter=GSSTestProcLevel2Filter 
-	 *         level1=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level1=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level2_from_level1=[GSSImportImport|VersionedQualifiedName]? 
 	 *         level1_filter=GSSTestProcLevel1Filter 
-	 *         level0=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level0=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level1_from_level0=[GSSImportImport|VersionedQualifiedName]? 
 	 *         level0_filter=GSSTestProcLevel0Filter
 	 *     )

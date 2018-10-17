@@ -351,7 +351,7 @@ ruleGSSExportExport returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0());
+					newCompositeNode(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -382,7 +382,7 @@ ruleGSSExportExport returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0());
+					newCompositeNode(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTcFormatCrossReference_10_0());
 				}
 				ruleVersionedQualifiedName
 				{

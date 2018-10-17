@@ -22,8 +22,8 @@ GSSExportExport returns GSSExportExport:
 	 '{'
 		(('uri' ':=' uri=QualifiedName ';')
 		& ('version' ':=' version=Version ';'))
-		'from' ':=' from=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
-		'to' ':=' to=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
+		'from' ':=' from=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
+		'to' ':=' to=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 		(Sizes=GSSExportSizes)? 
 		settings=GSSExportSettings
 		(activateDICs=GSSExportActivateDICs)?

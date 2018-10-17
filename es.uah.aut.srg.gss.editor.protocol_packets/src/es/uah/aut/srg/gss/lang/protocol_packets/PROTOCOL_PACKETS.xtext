@@ -33,7 +33,7 @@ GSSProtocolPacketsProtocolPacket returns GSSProtocolPacketsProtocolPacket:
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'levelRef' ':=' levelRef=INTEGER ';'
 		'export' ':=' export=[export::GSSExportExport|VersionedQualifiedName] ';'
-		'format' ':=' format=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
+		'format' ':=' format=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 	'}' ';'
 ;
 

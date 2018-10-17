@@ -24859,13 +24859,13 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             // InternalEXPORT.g:8024:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0()); 
+               before(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_0()); 
             }
             // InternalEXPORT.g:8025:3: ( ruleVersionedQualifiedName )
             // InternalEXPORT.g:8026:4: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_0_1()); 
+               before(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_0_1()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleVersionedQualifiedName();
@@ -24873,13 +24873,13 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_0_1()); 
+               after(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0()); 
+               after(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_0()); 
             }
 
             }
@@ -24916,13 +24916,13 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             // InternalEXPORT.g:8043:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0()); 
+               before(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTcFormatCrossReference_10_0()); 
             }
             // InternalEXPORT.g:8044:3: ( ruleVersionedQualifiedName )
             // InternalEXPORT.g:8045:4: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_10_0_1()); 
+               before(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_10_0_1()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleVersionedQualifiedName();
@@ -24930,13 +24930,13 @@ public class InternalEXPORTParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_10_0_1()); 
+               after(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_10_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0()); 
+               after(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTcFormatCrossReference_10_0()); 
             }
 
             }

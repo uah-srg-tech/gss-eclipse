@@ -526,7 +526,7 @@ ruleGSSProtocolPacketsProtocolPacket returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTCFormatCrossReference_20_0());
+					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTcFormatCrossReference_20_0());
 				}
 				ruleVersionedQualifiedName
 				{

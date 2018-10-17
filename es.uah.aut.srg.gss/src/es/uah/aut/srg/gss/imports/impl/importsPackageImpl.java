@@ -347,8 +347,8 @@ public class importsPackageImpl extends EPackageImpl implements importsPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssImportImportEClass, GSSImportImport.class, "GSSImportImport", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGSSImportImport_From(), thetm_tc_formatPackage.getGSSTmTcFormatTmTCFormat(), null, "from", null, 1, 1, GSSImportImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSImportImport_To(), thetm_tc_formatPackage.getGSSTmTcFormatTmTCFormat(), null, "to", null, 1, 1, GSSImportImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSImportImport_From(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "from", null, 1, 1, GSSImportImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSImportImport_To(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "to", null, 1, 1, GSSImportImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSImportImport_DataSource(), this.getGSSImportDataSource(), null, "dataSource", null, 1, -1, GSSImportImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSImportImport_VirtualSize(), this.getGSSImportVirtualSize(), null, "virtualSize", null, 0, 1, GSSImportImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

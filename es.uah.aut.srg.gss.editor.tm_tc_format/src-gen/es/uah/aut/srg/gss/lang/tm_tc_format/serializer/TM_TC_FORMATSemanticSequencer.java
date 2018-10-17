@@ -31,7 +31,7 @@ import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatLocalOffset;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatMaxSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSortedFieldsToCheck;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize;
@@ -119,7 +119,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 				sequence_GSSTmTcFormatSortedFieldsToCheck(context, (GSSTmTcFormatSortedFieldsToCheck) semanticObject); 
 				return; 
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT:
-				sequence_GSSTmTcFormatTmTCFormat(context, (GSSTmTcFormatTmTCFormat) semanticObject); 
+				sequence_GSSTmTcFormatTmTcFormat(context, (GSSTmTcFormatTmTcFormat) semanticObject); 
 				return; 
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VR_FIELD_SIZE:
 				sequence_GSSTmTcFormatVRFieldSize(context, (GSSTmTcFormatVRFieldSize) semanticObject); 
@@ -158,7 +158,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     GSSModelFile returns GSSModelFile
 	 *
 	 * Constraint:
-	 *     (imports+=GSSModelFileImport* element=GSSTmTcFormatTmTCFormat)
+	 *     (imports+=GSSModelFileImport* element=GSSTmTcFormatTmTcFormat)
 	 */
 	protected void sequence_GSSModelFile(ISerializationContext context, GSSModelFile semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -497,19 +497,19 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
-	 *     GSSTmTcFormatTmTCFormat returns GSSTmTcFormatTmTCFormat
+	 *     GSSTmTcFormatTmTcFormat returns GSSTmTcFormatTmTcFormat
 	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
 	 *         (
-	 *             ((uri=QualifiedName | version=Version | protocol=ID) (type=GSSTmTcFormatTmTCFormatType CSField+=GSSTmTcFormatCSField?)?)+ | 
+	 *             ((uri=QualifiedName | version=Version | protocol=ID) (type=GSSTmTcFormatTmTcFormatType CSField+=GSSTmTcFormatCSField?)?)+ | 
 	 *             (
-	 *                 type=GSSTmTcFormatTmTCFormatType 
+	 *                 type=GSSTmTcFormatTmTcFormatType 
 	 *                 CSField+=GSSTmTcFormatCSField? 
 	 *                 (
 	 *                     (
-	 *                         type=GSSTmTcFormatTmTCFormatType | 
+	 *                         type=GSSTmTcFormatTmTcFormatType | 
 	 *                         CSFormulaField+=GSSTmTcFormatCSFormulaField | 
 	 *                         VSField+=GSSTmTcFormatVSField | 
 	 *                         FDICField+=GSSTmTcFormatFDICField | 
@@ -519,12 +519,12 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *                     )? 
 	 *                     CSField+=GSSTmTcFormatCSField?
 	 *                 )* 
-	 *                 ((uri=QualifiedName | version=Version | protocol=ID) (type=GSSTmTcFormatTmTCFormatType CSField+=GSSTmTcFormatCSField?)?)+
+	 *                 ((uri=QualifiedName | version=Version | protocol=ID) (type=GSSTmTcFormatTmTcFormatType CSField+=GSSTmTcFormatCSField?)?)+
 	 *             )
 	 *         )?
 	 *     )
 	 */
-	protected void sequence_GSSTmTcFormatTmTCFormat(ISerializationContext context, GSSTmTcFormatTmTCFormat semanticObject) {
+	protected void sequence_GSSTmTcFormatTmTcFormat(ISerializationContext context, GSSTmTcFormatTmTcFormat semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

@@ -2609,7 +2609,7 @@ ruleGSSConfigLevelInOut returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSConfigLevelInOutAccess().getTMformatGSSTmTcFormatTmTCFormatCrossReference_12_0());
+					newCompositeNode(grammarAccess.getGSSConfigLevelInOutAccess().getTMformatGSSTmTcFormatTmTcFormatCrossReference_12_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -2640,7 +2640,7 @@ ruleGSSConfigLevelInOut returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSConfigLevelInOutAccess().getTCformatGSSTmTcFormatTmTCFormatCrossReference_16_0());
+					newCompositeNode(grammarAccess.getGSSConfigLevelInOutAccess().getTCformatGSSTmTcFormatTmTcFormatCrossReference_16_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -2864,7 +2864,7 @@ ruleGSSConfigLevelIn returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSConfigLevelInAccess().getTCformatGSSTmTcFormatTmTCFormatCrossReference_12_0());
+					newCompositeNode(grammarAccess.getGSSConfigLevelInAccess().getTCformatGSSTmTcFormatTmTcFormatCrossReference_12_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -3024,7 +3024,7 @@ ruleGSSConfigLevelOut returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSConfigLevelOutAccess().getTMformatGSSTmTcFormatTmTCFormatCrossReference_12_0());
+					newCompositeNode(grammarAccess.getGSSConfigLevelOutAccess().getTMformatGSSTmTcFormatTmTcFormatCrossReference_12_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -3973,7 +3973,7 @@ ruleGSSConfigUpperLevel returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSConfigUpperLevelAccess().getTMformatGSSTmTcFormatTmTCFormatCrossReference_6_2_0());
+						newCompositeNode(grammarAccess.getGSSConfigUpperLevelAccess().getTMformatGSSTmTcFormatTmTcFormatCrossReference_6_2_0());
 					}
 					ruleVersionedQualifiedName
 					{
@@ -4358,7 +4358,7 @@ ruleGSSConfigPeriodicTCLevel2 returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel2GSSTmTcFormatTmTCFormatCrossReference_22_2_0());
+						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel2GSSTmTcFormatTmTcFormatCrossReference_22_2_0());
 					}
 					ruleVersionedQualifiedName
 					{
@@ -4422,7 +4422,7 @@ ruleGSSConfigPeriodicTCLevel2 returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel1GSSTmTcFormatTmTCFormatCrossReference_27_2_0());
+						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel1GSSTmTcFormatTmTcFormatCrossReference_27_2_0());
 					}
 					ruleVersionedQualifiedName
 					{
@@ -4488,7 +4488,7 @@ ruleGSSConfigPeriodicTCLevel2 returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel0GSSTmTcFormatTmTCFormatCrossReference_29_2_0());
+						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel0GSSTmTcFormatTmTcFormatCrossReference_29_2_0());
 					}
 					ruleVersionedQualifiedName
 					{
@@ -4743,7 +4743,7 @@ ruleGSSConfigPeriodicTCLevel1 returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel1GSSTmTcFormatTmTCFormatCrossReference_22_2_0());
+						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel1GSSTmTcFormatTmTcFormatCrossReference_22_2_0());
 					}
 					ruleVersionedQualifiedName
 					{
@@ -4807,7 +4807,7 @@ ruleGSSConfigPeriodicTCLevel1 returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel0GSSTmTcFormatTmTCFormatCrossReference_27_2_0());
+						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel0GSSTmTcFormatTmTcFormatCrossReference_27_2_0());
 					}
 					ruleVersionedQualifiedName
 					{
@@ -5062,7 +5062,7 @@ ruleGSSConfigPeriodicTCLevel0 returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel0Access().getLevel0GSSTmTcFormatTmTCFormatCrossReference_22_2_0());
+						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel0Access().getLevel0GSSTmTcFormatTmTcFormatCrossReference_22_2_0());
 					}
 					ruleVersionedQualifiedName
 					{

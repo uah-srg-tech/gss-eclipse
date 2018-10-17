@@ -352,7 +352,7 @@ ruleGSSImportImport returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0());
+					newCompositeNode(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -383,7 +383,7 @@ ruleGSSImportImport returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0());
+					newCompositeNode(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTcFormatCrossReference_10_0());
 				}
 				ruleVersionedQualifiedName
 				{

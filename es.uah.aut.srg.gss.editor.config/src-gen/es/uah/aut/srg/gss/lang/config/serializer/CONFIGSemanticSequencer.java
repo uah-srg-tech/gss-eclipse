@@ -490,8 +490,8 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     (
 	 *         id=INTEGER 
 	 *         name=STRING 
-	 *         TMformat=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName] 
-	 *         TCformat=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName] 
+	 *         TMformat=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName] 
+	 *         TCformat=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName] 
 	 *         inputFilter=[GSSFilterFilter|VersionedQualifiedName] 
 	 *         export_to_prev_Level=[GSSExportExport|VersionedQualifiedName]? 
 	 *         import_from_prev_Level=[GSSImportImport|VersionedQualifiedName]?
@@ -507,7 +507,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigLevelIn returns GSSConfigLevelIn
 	 *
 	 * Constraint:
-	 *     (id=INTEGER name=STRING TCformat=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName] export_to_prev_Level=[GSSExportExport|VersionedQualifiedName]?)
+	 *     (id=INTEGER name=STRING TCformat=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName] export_to_prev_Level=[GSSExportExport|VersionedQualifiedName]?)
 	 */
 	protected void sequence_GSSConfigLevelIn(ISerializationContext context, GSSConfigLevelIn semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -522,7 +522,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     (
 	 *         id=INTEGER 
 	 *         name=STRING 
-	 *         TMformat=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName] 
+	 *         TMformat=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName] 
 	 *         inputFilter=[GSSFilterFilter|VersionedQualifiedName] 
 	 *         import_from_prev_Level=[GSSImportImport|VersionedQualifiedName]?
 	 *     )
@@ -617,7 +617,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *         ifRef=INTEGER 
 	 *         period_value=INTEGER 
 	 *         period_unit=GSSConfigUnit 
-	 *         level0=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level0=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         app_to_level0=[GSSExportExport|VersionedQualifiedName]
 	 *     )
 	 */
@@ -637,9 +637,9 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *         ifRef=INTEGER 
 	 *         period_value=INTEGER 
 	 *         period_unit=GSSConfigUnit 
-	 *         level1=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level1=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         app_to_level1=[GSSExportExport|VersionedQualifiedName] 
-	 *         level0=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level0=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level1_to_level0=[GSSExportExport|VersionedQualifiedName]?
 	 *     )
 	 */
@@ -659,11 +659,11 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *         ifRef=INTEGER 
 	 *         period_value=INTEGER 
 	 *         period_unit=GSSConfigUnit 
-	 *         level2=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level2=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         app_to_level2=[GSSExportExport|VersionedQualifiedName] 
-	 *         level1=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level1=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level2_to_level1=[GSSExportExport|VersionedQualifiedName]? 
-	 *         level0=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         level0=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         level1_to_level0=[GSSExportExport|VersionedQualifiedName]?
 	 *     )
 	 */
@@ -946,7 +946,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 * Constraint:
 	 *     (
 	 *         level=GSSConfigUpperLevelLevel 
-	 *         TMformat=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName]? 
+	 *         TMformat=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         inputFilter=[GSSFilterFilter|VersionedQualifiedName]? 
 	 *         import_from_prev_Level=[GSSImportImport|VersionedQualifiedName]?
 	 *     )

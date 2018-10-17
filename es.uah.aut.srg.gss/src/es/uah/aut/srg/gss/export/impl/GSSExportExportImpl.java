@@ -17,8 +17,7 @@ import es.uah.aut.srg.gss.export.GSSExportExport;
 import es.uah.aut.srg.gss.export.GSSExportSettings;
 import es.uah.aut.srg.gss.export.GSSExportSizes;
 import es.uah.aut.srg.gss.export.exportPackage;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -53,7 +52,7 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatTmTCFormat from;
+	protected GSSTmTcFormatTmTcFormat from;
 
 	/**
 	 * The cached value of the '{@link #getTo() <em>To</em>}' reference.
@@ -63,7 +62,7 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatTmTCFormat to;
+	protected GSSTmTcFormatTmTcFormat to;
 
 	/**
 	 * The cached value of the '{@link #getSizes() <em>Sizes</em>}' containment reference.
@@ -119,10 +118,10 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat getFrom() {
+	public GSSTmTcFormatTmTcFormat getFrom() {
 		if (from != null && from.eIsProxy()) {
 			InternalEObject oldFrom = (InternalEObject)from;
-			from = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldFrom);
+			from = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldFrom);
 			if (from != oldFrom) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, exportPackage.GSS_EXPORT_EXPORT__FROM, oldFrom, from));
@@ -136,7 +135,7 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat basicGetFrom() {
+	public GSSTmTcFormatTmTcFormat basicGetFrom() {
 		return from;
 	}
 
@@ -145,8 +144,8 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFrom(GSSTmTcFormatTmTCFormat newFrom) {
-		GSSTmTcFormatTmTCFormat oldFrom = from;
+	public void setFrom(GSSTmTcFormatTmTcFormat newFrom) {
+		GSSTmTcFormatTmTcFormat oldFrom = from;
 		from = newFrom;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, exportPackage.GSS_EXPORT_EXPORT__FROM, oldFrom, from));
@@ -157,10 +156,10 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat getTo() {
+	public GSSTmTcFormatTmTcFormat getTo() {
 		if (to != null && to.eIsProxy()) {
 			InternalEObject oldTo = (InternalEObject)to;
-			to = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldTo);
+			to = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldTo);
 			if (to != oldTo) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, exportPackage.GSS_EXPORT_EXPORT__TO, oldTo, to));
@@ -174,7 +173,7 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat basicGetTo() {
+	public GSSTmTcFormatTmTcFormat basicGetTo() {
 		return to;
 	}
 
@@ -183,8 +182,8 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTo(GSSTmTcFormatTmTCFormat newTo) {
-		GSSTmTcFormatTmTCFormat oldTo = to;
+	public void setTo(GSSTmTcFormatTmTcFormat newTo) {
+		GSSTmTcFormatTmTcFormat oldTo = to;
 		to = newTo;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, exportPackage.GSS_EXPORT_EXPORT__TO, oldTo, to));
@@ -370,10 +369,10 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_EXPORT__FROM:
-				setFrom((GSSTmTcFormatTmTCFormat)newValue);
+				setFrom((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case exportPackage.GSS_EXPORT_EXPORT__TO:
-				setTo((GSSTmTcFormatTmTCFormat)newValue);
+				setTo((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case exportPackage.GSS_EXPORT_EXPORT__SIZES:
 				setSizes((GSSExportSizes)newValue);
@@ -397,10 +396,10 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_EXPORT__FROM:
-				setFrom((GSSTmTcFormatTmTCFormat)null);
+				setFrom((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case exportPackage.GSS_EXPORT_EXPORT__TO:
-				setTo((GSSTmTcFormatTmTCFormat)null);
+				setTo((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case exportPackage.GSS_EXPORT_EXPORT__SIZES:
 				setSizes((GSSExportSizes)null);

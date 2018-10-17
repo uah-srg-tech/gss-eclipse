@@ -973,7 +973,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	    }
             	    if ( state.backtracking==0 ) {
 
-            	      											newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSTmTcFormatTmTCFormatCrossReference_3_1_3_0());
+            	      											newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatCrossReference_3_1_3_0());
             	      										
             	    }
             	    pushFollow(FollowSets000.FOLLOW_6);
@@ -1713,7 +1713,7 @@ public class InternalFILTERSParser extends AbstractInternalAntlrParser {
             	    }
             	    if ( state.backtracking==0 ) {
 
-            	      											newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSTmTcFormatTmTCFormatCrossReference_3_1_3_0());
+            	      											newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatCrossReference_3_1_3_0());
             	      										
             	    }
             	    pushFollow(FollowSets000.FOLLOW_6);

@@ -78,9 +78,9 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT: {
-				GSSTmTcFormatTmTCFormat gssTmTcFormatTmTCFormat = (GSSTmTcFormatTmTCFormat)theEObject;
-				T result = caseGSSTmTcFormatTmTCFormat(gssTmTcFormatTmTCFormat);
-				if (result == null) result = caseGSSModelElement(gssTmTcFormatTmTCFormat);
+				GSSTmTcFormatTmTcFormat gssTmTcFormatTmTcFormat = (GSSTmTcFormatTmTcFormat)theEObject;
+				T result = caseGSSTmTcFormatTmTcFormat(gssTmTcFormatTmTcFormat);
+				if (result == null) result = caseGSSModelElement(gssTmTcFormatTmTcFormat);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -221,17 +221,17 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Tm TC Format</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Tm Tc Format</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Tm TC Format</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Tm Tc Format</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGSSTmTcFormatTmTCFormat(GSSTmTcFormatTmTCFormat object) {
+	public T caseGSSTmTcFormatTmTcFormat(GSSTmTcFormatTmTcFormat object) {
 		return null;
 	}
 

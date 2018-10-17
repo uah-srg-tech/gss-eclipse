@@ -22,7 +22,7 @@
 'GSSTmTcFormatMaxSize'=44
 'GSSTmTcFormatSize'=36
 'GSSTmTcFormatSortedFieldsToCheck'=50
-'GSSTmTcFormatTmTCFormat'=15
+'GSSTmTcFormatTmTcFormat'=15
 'GSSTmTcFormatVRFieldSize'=31
 'GSSTmTcFormatVSField'=30
 'GSSTmTcFormatVariableSize'=45

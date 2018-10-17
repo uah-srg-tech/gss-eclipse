@@ -79,8 +79,8 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 	protected tm_tc_formatSwitch<Adapter> modelSwitch =
 		new tm_tc_formatSwitch<Adapter>() {
 			@Override
-			public Adapter caseGSSTmTcFormatTmTCFormat(GSSTmTcFormatTmTCFormat object) {
-				return createGSSTmTcFormatTmTCFormatAdapter();
+			public Adapter caseGSSTmTcFormatTmTcFormat(GSSTmTcFormatTmTcFormat object) {
+				return createGSSTmTcFormatTmTcFormatAdapter();
 			}
 			@Override
 			public Adapter caseGSSTmTcFormatField(GSSTmTcFormatField object) {
@@ -191,16 +191,16 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat <em>GSS Tm Tc Format Tm TC Format</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat <em>GSS Tm Tc Format Tm Tc Format</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat
 	 * @generated
 	 */
-	public Adapter createGSSTmTcFormatTmTCFormatAdapter() {
+	public Adapter createGSSTmTcFormatTmTcFormatAdapter() {
 		return null;
 	}
 

@@ -7019,13 +7019,13 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:2262:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTCFormatCrossReference_20_0()); 
+               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTcFormatCrossReference_20_0()); 
             }
             // InternalPROTOCOL_PACKETS.g:2263:3: ( ruleVersionedQualifiedName )
             // InternalPROTOCOL_PACKETS.g:2264:4: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_20_0_1()); 
+               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_20_0_1()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleVersionedQualifiedName();
@@ -7033,13 +7033,13 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_20_0_1()); 
+               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_20_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTCFormatCrossReference_20_0()); 
+               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTcFormatCrossReference_20_0()); 
             }
 
             }

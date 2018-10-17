@@ -11,33 +11,34 @@
 package es.uah.aut.srg.gss.tm_tc_format;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>GSS Tm Tc Format Tm TC Format</b></em>'.
+ * A representation of the model object '<em><b>GSS Tm Tc Format Tm Tc Format</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getProtocol <em>Protocol</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getType <em>Type</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getCSField <em>CS Field</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getCSFormulaField <em>CS Formula Field</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getVSField <em>VS Field</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getFDICField <em>FDIC Field</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getVRFieldSize <em>VR Field Size</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getAField <em>AField</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getAIField <em>AI Field</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getProtocol <em>Protocol</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getType <em>Type</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getCSField <em>CS Field</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getCSFormulaField <em>CS Formula Field</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getVSField <em>VS Field</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getFDICField <em>FDIC Field</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getVRFieldSize <em>VR Field Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getAField <em>AField</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getAIField <em>AI Field</em>}</li>
  * </ul>
  *
- * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTCFormat()
+ * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTcFormat()
  * @model
  * @generated
  */
-public interface GSSTmTcFormatTmTCFormat extends GSSModelElement {
+public interface GSSTmTcFormatTmTcFormat extends GSSModelElement {
 	/**
 	 * Returns the value of the '<em><b>Protocol</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -48,14 +49,14 @@ public interface GSSTmTcFormatTmTCFormat extends GSSModelElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Protocol</em>' attribute.
 	 * @see #setProtocol(String)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTCFormat_Protocol()
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTcFormat_Protocol()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getProtocol();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getProtocol <em>Protocol</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getProtocol <em>Protocol</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Protocol</em>' attribute.
@@ -66,7 +67,7 @@ public interface GSSTmTcFormatTmTCFormat extends GSSModelElement {
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormatType}.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormatType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
@@ -74,67 +75,51 @@ public interface GSSTmTcFormatTmTCFormat extends GSSModelElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormatType
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormatType
 	 * @see #isSetType()
 	 * @see #unsetType()
-	 * @see #setType(GSSTmTcFormatTmTCFormatType)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTCFormat_Type()
+	 * @see #setType(GSSTmTcFormatTmTcFormatType)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTcFormat_Type()
 	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormatType getType();
+	GSSTmTcFormatTmTcFormatType getType();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getType <em>Type</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormatType
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormatType
 	 * @see #isSetType()
 	 * @see #unsetType()
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(GSSTmTcFormatTmTCFormatType value);
+	void setType(GSSTmTcFormatTmTcFormatType value);
 
 	/**
-	 * Unsets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getType <em>Type</em>}' attribute.
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetType()
 	 * @see #getType()
-	 * @see #setType(GSSTmTcFormatTmTCFormatType)
+	 * @see #setType(GSSTmTcFormatTmTcFormatType)
 	 * @generated
 	 */
 	void unsetType();
 
 	/**
-	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getType <em>Type</em>}' attribute is set.
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getType <em>Type</em>}' attribute is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return whether the value of the '<em>Type</em>' attribute is set.
 	 * @see #unsetType()
 	 * @see #getType()
-	 * @see #setType(GSSTmTcFormatTmTCFormatType)
+	 * @see #setType(GSSTmTcFormatTmTcFormatType)
 	 * @generated
 	 */
 	boolean isSetType();
-
-	/**
-	 * Returns the value of the '<em><b>CS Formula Field</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>CS Formula Field</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>CS Formula Field</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTCFormat_CSFormulaField()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSTmTcFormatCSFormulaField> getCSFormulaField();
 
 	/**
 	 * Returns the value of the '<em><b>CS Field</b></em>' containment reference list.
@@ -146,11 +131,27 @@ public interface GSSTmTcFormatTmTCFormat extends GSSModelElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>CS Field</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTCFormat_CSField()
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTcFormat_CSField()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<GSSTmTcFormatCSField> getCSField();
+
+	/**
+	 * Returns the value of the '<em><b>CS Formula Field</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>CS Formula Field</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>CS Formula Field</em>' containment reference list.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTcFormat_CSFormulaField()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<GSSTmTcFormatCSFormulaField> getCSFormulaField();
 
 	/**
 	 * Returns the value of the '<em><b>VS Field</b></em>' containment reference list.
@@ -162,7 +163,7 @@ public interface GSSTmTcFormatTmTCFormat extends GSSModelElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>VS Field</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTCFormat_VSField()
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTcFormat_VSField()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -178,7 +179,7 @@ public interface GSSTmTcFormatTmTCFormat extends GSSModelElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>FDIC Field</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTCFormat_FDICField()
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTcFormat_FDICField()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -194,7 +195,7 @@ public interface GSSTmTcFormatTmTCFormat extends GSSModelElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>VR Field Size</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTCFormat_VRFieldSize()
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTcFormat_VRFieldSize()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -210,7 +211,7 @@ public interface GSSTmTcFormatTmTCFormat extends GSSModelElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>AField</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTCFormat_AField()
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTcFormat_AField()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -226,10 +227,10 @@ public interface GSSTmTcFormatTmTCFormat extends GSSModelElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>AI Field</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTCFormat_AIField()
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTcFormat_AIField()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<GSSTmTcFormatAIField> getAIField();
 
-} // GSSTmTcFormatTmTCFormat
+} // GSSTmTcFormatTmTcFormat

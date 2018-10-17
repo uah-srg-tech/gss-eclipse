@@ -11,7 +11,7 @@
 package es.uah.aut.srg.gss.imports;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -43,12 +43,12 @@ public interface GSSImportImport extends GSSModelElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From</em>' reference.
-	 * @see #setFrom(GSSTmTcFormatTmTCFormat)
+	 * @see #setFrom(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.imports.importsPackage#getGSSImportImport_From()
 	 * @model required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getFrom();
+	GSSTmTcFormatTmTcFormat getFrom();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.imports.GSSImportImport#getFrom <em>From</em>}' reference.
@@ -58,7 +58,7 @@ public interface GSSImportImport extends GSSModelElement {
 	 * @see #getFrom()
 	 * @generated
 	 */
-	void setFrom(GSSTmTcFormatTmTCFormat value);
+	void setFrom(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>To</b></em>' reference.
@@ -69,12 +69,12 @@ public interface GSSImportImport extends GSSModelElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To</em>' reference.
-	 * @see #setTo(GSSTmTcFormatTmTCFormat)
+	 * @see #setTo(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.imports.importsPackage#getGSSImportImport_To()
 	 * @model required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getTo();
+	GSSTmTcFormatTmTcFormat getTo();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.imports.GSSImportImport#getTo <em>To</em>}' reference.
@@ -84,7 +84,7 @@ public interface GSSImportImport extends GSSModelElement {
 	 * @see #getTo()
 	 * @generated
 	 */
-	void setTo(GSSTmTcFormatTmTCFormat value);
+	void setTo(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Data Source</b></em>' containment reference list.

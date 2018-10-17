@@ -99,8 +99,8 @@ public class IMPORTSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     (
 	 *         name=EString 
 	 *         (uri=QualifiedName | version=Version)+ 
-	 *         from=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName] 
-	 *         to=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName] 
+	 *         from=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName] 
+	 *         to=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName] 
 	 *         dataSource+=GSSImportDataSource+ 
 	 *         virtualSize=GSSImportVirtualSize?
 	 *     )

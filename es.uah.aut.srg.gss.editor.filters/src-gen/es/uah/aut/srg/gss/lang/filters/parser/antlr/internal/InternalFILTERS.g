@@ -381,7 +381,7 @@ ruleGSSFilterMaxtermFilter returns [EObject current=null]
 											}
 										}
 										{
-											newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSTmTcFormatTmTCFormatCrossReference_3_1_3_0());
+											newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatCrossReference_3_1_3_0());
 										}
 										ruleVersionedQualifiedName
 										{
@@ -679,7 +679,7 @@ ruleGSSFilterMintermFilter returns [EObject current=null]
 											}
 										}
 										{
-											newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSTmTcFormatTmTCFormatCrossReference_3_1_3_0());
+											newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatCrossReference_3_1_3_0());
 										}
 										ruleVersionedQualifiedName
 										{

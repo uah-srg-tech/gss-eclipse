@@ -252,7 +252,7 @@ public class FILTERSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *             uri=QualifiedName | 
 	 *             (
 	 *                 version=Version 
-	 *                 formatFile=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName] 
+	 *                 formatFile=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName] 
 	 *                 (
 	 *                     BoolVar+=GSSFilterBoolVar | 
 	 *                     BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem | 
@@ -293,7 +293,7 @@ public class FILTERSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *             uri=QualifiedName | 
 	 *             (
 	 *                 version=Version 
-	 *                 formatFile=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName] 
+	 *                 formatFile=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName] 
 	 *                 (
 	 *                     BoolVar+=GSSFilterBoolVar | 
 	 *                     BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem | 
