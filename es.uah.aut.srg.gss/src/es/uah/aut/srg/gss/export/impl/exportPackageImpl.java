@@ -30,6 +30,7 @@ import es.uah.aut.srg.gss.export.GSSExportUnit;
 import es.uah.aut.srg.gss.export.exportFactory;
 import es.uah.aut.srg.gss.export.exportPackage;
 
+import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -197,7 +198,7 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		commonPackage.eINSTANCE.eClass();
+		tm_tc_formatPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theexportPackage.createPackageContents();
@@ -228,8 +229,8 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSExportExport_From() {
-		return (EAttribute)gssExportExportEClass.getEStructuralFeatures().get(0);
+	public EReference getGSSExportExport_From() {
+		return (EReference)gssExportExportEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -237,8 +238,8 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSExportExport_To() {
-		return (EAttribute)gssExportExportEClass.getEStructuralFeatures().get(1);
+	public EReference getGSSExportExport_To() {
+		return (EReference)gssExportExportEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -543,8 +544,8 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSExportSettingFromConst_ToFieldRef() {
-		return (EAttribute)gssExportSettingFromConstEClass.getEStructuralFeatures().get(1);
+	public EReference getGSSExportSettingFromConst_ToFieldRef() {
+		return (EReference)gssExportSettingFromConstEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -570,8 +571,8 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSExportSettingFromSize_ToFieldRef() {
-		return (EAttribute)gssExportSettingFromSizeEClass.getEStructuralFeatures().get(1);
+	public EReference getGSSExportSettingFromSize_ToFieldRef() {
+		return (EReference)gssExportSettingFromSizeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -597,8 +598,8 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSExportSettingFromFile_ToFieldRef() {
-		return (EAttribute)gssExportSettingFromFileEClass.getEStructuralFeatures().get(1);
+	public EReference getGSSExportSettingFromFile_ToFieldRef() {
+		return (EReference)gssExportSettingFromFileEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -642,8 +643,8 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSExportSettingFromField_FieldRef() {
-		return (EAttribute)gssExportSettingFromFieldEClass.getEStructuralFeatures().get(0);
+	public EReference getGSSExportSettingFromField_FieldRef() {
+		return (EReference)gssExportSettingFromFieldEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -651,8 +652,8 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSExportSettingFromField_ToFieldRef() {
-		return (EAttribute)gssExportSettingFromFieldEClass.getEStructuralFeatures().get(1);
+	public EReference getGSSExportSettingFromField_ToFieldRef() {
+		return (EReference)gssExportSettingFromFieldEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -678,8 +679,8 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSExportSettingAIFromFile_ToFieldRef() {
-		return (EAttribute)gssExportSettingAIFromFileEClass.getEStructuralFeatures().get(1);
+	public EReference getGSSExportSettingAIFromFile_ToFieldRef() {
+		return (EReference)gssExportSettingAIFromFileEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -741,8 +742,8 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSExportSettingAIFromConst_ToFieldRef() {
-		return (EAttribute)gssExportSettingAIFromConstEClass.getEStructuralFeatures().get(1);
+	public EReference getGSSExportSettingAIFromConst_ToFieldRef() {
+		return (EReference)gssExportSettingAIFromConstEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -837,8 +838,8 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 
 		// Create classes and their features
 		gssExportExportEClass = createEClass(GSS_EXPORT_EXPORT);
-		createEAttribute(gssExportExportEClass, GSS_EXPORT_EXPORT__FROM);
-		createEAttribute(gssExportExportEClass, GSS_EXPORT_EXPORT__TO);
+		createEReference(gssExportExportEClass, GSS_EXPORT_EXPORT__FROM);
+		createEReference(gssExportExportEClass, GSS_EXPORT_EXPORT__TO);
 		createEReference(gssExportExportEClass, GSS_EXPORT_EXPORT__SIZES);
 		createEReference(gssExportExportEClass, GSS_EXPORT_EXPORT__SETTINGS);
 		createEReference(gssExportExportEClass, GSS_EXPORT_EXPORT__ACTIVATE_DI_CS);
@@ -878,31 +879,31 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 
 		gssExportSettingFromConstEClass = createEClass(GSS_EXPORT_SETTING_FROM_CONST);
 		createEAttribute(gssExportSettingFromConstEClass, GSS_EXPORT_SETTING_FROM_CONST__VALUE);
-		createEAttribute(gssExportSettingFromConstEClass, GSS_EXPORT_SETTING_FROM_CONST__TO_FIELD_REF);
+		createEReference(gssExportSettingFromConstEClass, GSS_EXPORT_SETTING_FROM_CONST__TO_FIELD_REF);
 
 		gssExportSettingFromSizeEClass = createEClass(GSS_EXPORT_SETTING_FROM_SIZE);
 		createEAttribute(gssExportSettingFromSizeEClass, GSS_EXPORT_SETTING_FROM_SIZE__SIZE_REF);
-		createEAttribute(gssExportSettingFromSizeEClass, GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF);
+		createEReference(gssExportSettingFromSizeEClass, GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF);
 
 		gssExportSettingFromFileEClass = createEClass(GSS_EXPORT_SETTING_FROM_FILE);
 		createEAttribute(gssExportSettingFromFileEClass, GSS_EXPORT_SETTING_FROM_FILE__FILE);
-		createEAttribute(gssExportSettingFromFileEClass, GSS_EXPORT_SETTING_FROM_FILE__TO_FIELD_REF);
+		createEReference(gssExportSettingFromFileEClass, GSS_EXPORT_SETTING_FROM_FILE__TO_FIELD_REF);
 		createEAttribute(gssExportSettingFromFileEClass, GSS_EXPORT_SETTING_FROM_FILE__OFFSET);
 		createEAttribute(gssExportSettingFromFileEClass, GSS_EXPORT_SETTING_FROM_FILE__SIZE);
 		createEAttribute(gssExportSettingFromFileEClass, GSS_EXPORT_SETTING_FROM_FILE__LINE);
 
 		gssExportSettingFromFieldEClass = createEClass(GSS_EXPORT_SETTING_FROM_FIELD);
-		createEAttribute(gssExportSettingFromFieldEClass, GSS_EXPORT_SETTING_FROM_FIELD__FIELD_REF);
-		createEAttribute(gssExportSettingFromFieldEClass, GSS_EXPORT_SETTING_FROM_FIELD__TO_FIELD_REF);
+		createEReference(gssExportSettingFromFieldEClass, GSS_EXPORT_SETTING_FROM_FIELD__FIELD_REF);
+		createEReference(gssExportSettingFromFieldEClass, GSS_EXPORT_SETTING_FROM_FIELD__TO_FIELD_REF);
 
 		gssExportSettingAIFromConstEClass = createEClass(GSS_EXPORT_SETTING_AI_FROM_CONST);
 		createEAttribute(gssExportSettingAIFromConstEClass, GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE);
-		createEAttribute(gssExportSettingAIFromConstEClass, GSS_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF);
+		createEReference(gssExportSettingAIFromConstEClass, GSS_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF);
 		createEAttribute(gssExportSettingAIFromConstEClass, GSS_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX);
 
 		gssExportSettingAIFromFileEClass = createEClass(GSS_EXPORT_SETTING_AI_FROM_FILE);
 		createEAttribute(gssExportSettingAIFromFileEClass, GSS_EXPORT_SETTING_AI_FROM_FILE__FILE);
-		createEAttribute(gssExportSettingAIFromFileEClass, GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF);
+		createEReference(gssExportSettingAIFromFileEClass, GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF);
 		createEAttribute(gssExportSettingAIFromFileEClass, GSS_EXPORT_SETTING_AI_FROM_FILE__TO_ARRAY_INDEX);
 		createEAttribute(gssExportSettingAIFromFileEClass, GSS_EXPORT_SETTING_AI_FROM_FILE__OFFSET);
 		createEAttribute(gssExportSettingAIFromFileEClass, GSS_EXPORT_SETTING_AI_FROM_FILE__SIZE);
@@ -944,6 +945,7 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 
 		// Obtain other dependent packages
 		commonPackage thecommonPackage = (commonPackage)EPackage.Registry.INSTANCE.getEPackage(commonPackage.eNS_URI);
+		tm_tc_formatPackage thetm_tc_formatPackage = (tm_tc_formatPackage)EPackage.Registry.INSTANCE.getEPackage(tm_tc_formatPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -954,8 +956,8 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssExportExportEClass, GSSExportExport.class, "GSSExportExport", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSExportExport_From(), ecorePackage.getEString(), "from", null, 1, 1, GSSExportExport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSExportExport_To(), ecorePackage.getEString(), "to", null, 1, 1, GSSExportExport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSExportExport_From(), thetm_tc_formatPackage.getGSSTmTcFormatTmTCFormat(), null, "from", null, 1, 1, GSSExportExport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSExportExport_To(), thetm_tc_formatPackage.getGSSTmTcFormatTmTCFormat(), null, "to", null, 1, 1, GSSExportExport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSExportExport_Sizes(), this.getGSSExportSizes(), null, "Sizes", null, 0, 1, GSSExportExport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSExportExport_Settings(), this.getGSSExportSettings(), null, "settings", null, 1, 1, GSSExportExport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSExportExport_ActivateDICs(), this.getGSSExportActivateDICs(), null, "activateDICs", null, 0, 1, GSSExportExport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -995,31 +997,31 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 
 		initEClass(gssExportSettingFromConstEClass, GSSExportSettingFromConst.class, "GSSExportSettingFromConst", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSExportSettingFromConst_Value(), ecorePackage.getEString(), "value", null, 1, 1, GSSExportSettingFromConst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSExportSettingFromConst_ToFieldRef(), ecorePackage.getEString(), "toFieldRef", null, 1, 1, GSSExportSettingFromConst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSExportSettingFromConst_ToFieldRef(), thetm_tc_formatPackage.getGSSTmTcFormatField(), null, "toFieldRef", null, 1, 1, GSSExportSettingFromConst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssExportSettingFromSizeEClass, GSSExportSettingFromSize.class, "GSSExportSettingFromSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSExportSettingFromSize_SizeRef(), ecorePackage.getEString(), "sizeRef", null, 1, 1, GSSExportSettingFromSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSExportSettingFromSize_ToFieldRef(), ecorePackage.getEString(), "toFieldRef", null, 1, 1, GSSExportSettingFromSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSExportSettingFromSize_ToFieldRef(), thetm_tc_formatPackage.getGSSTmTcFormatField(), null, "toFieldRef", null, 1, 1, GSSExportSettingFromSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssExportSettingFromFileEClass, GSSExportSettingFromFile.class, "GSSExportSettingFromFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSExportSettingFromFile_File(), ecorePackage.getEString(), "file", null, 1, 1, GSSExportSettingFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSExportSettingFromFile_ToFieldRef(), ecorePackage.getEString(), "toFieldRef", null, 1, 1, GSSExportSettingFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSExportSettingFromFile_ToFieldRef(), thetm_tc_formatPackage.getGSSTmTcFormatField(), null, "toFieldRef", null, 1, 1, GSSExportSettingFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSExportSettingFromFile_Offset(), ecorePackage.getEString(), "offset", null, 0, 1, GSSExportSettingFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSExportSettingFromFile_Size(), ecorePackage.getEString(), "size", null, 0, 1, GSSExportSettingFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSExportSettingFromFile_Line(), ecorePackage.getEString(), "line", null, 0, 1, GSSExportSettingFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssExportSettingFromFieldEClass, GSSExportSettingFromField.class, "GSSExportSettingFromField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSExportSettingFromField_FieldRef(), ecorePackage.getEString(), "fieldRef", null, 1, 1, GSSExportSettingFromField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSExportSettingFromField_ToFieldRef(), ecorePackage.getEString(), "toFieldRef", null, 1, 1, GSSExportSettingFromField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSExportSettingFromField_FieldRef(), thetm_tc_formatPackage.getGSSTmTcFormatField(), null, "fieldRef", null, 1, 1, GSSExportSettingFromField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSExportSettingFromField_ToFieldRef(), thetm_tc_formatPackage.getGSSTmTcFormatField(), null, "toFieldRef", null, 1, 1, GSSExportSettingFromField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssExportSettingAIFromConstEClass, GSSExportSettingAIFromConst.class, "GSSExportSettingAIFromConst", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSExportSettingAIFromConst_Value(), ecorePackage.getEString(), "value", null, 1, 1, GSSExportSettingAIFromConst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSExportSettingAIFromConst_ToFieldRef(), ecorePackage.getEString(), "toFieldRef", null, 1, 1, GSSExportSettingAIFromConst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSExportSettingAIFromConst_ToFieldRef(), thetm_tc_formatPackage.getGSSTmTcFormatAIField(), null, "toFieldRef", null, 1, 1, GSSExportSettingAIFromConst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSExportSettingAIFromConst_ToArrayIndex(), ecorePackage.getEString(), "toArrayIndex", null, 1, 1, GSSExportSettingAIFromConst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssExportSettingAIFromFileEClass, GSSExportSettingAIFromFile.class, "GSSExportSettingAIFromFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSExportSettingAIFromFile_File(), ecorePackage.getEString(), "file", null, 1, 1, GSSExportSettingAIFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSExportSettingAIFromFile_ToFieldRef(), ecorePackage.getEString(), "toFieldRef", null, 1, 1, GSSExportSettingAIFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSExportSettingAIFromFile_ToFieldRef(), thetm_tc_formatPackage.getGSSTmTcFormatAIField(), null, "toFieldRef", null, 1, 1, GSSExportSettingAIFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSExportSettingAIFromFile_ToArrayIndex(), ecorePackage.getEString(), "toArrayIndex", null, 1, 1, GSSExportSettingAIFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSExportSettingAIFromFile_Offset(), ecorePackage.getEString(), "offset", null, 0, 1, GSSExportSettingAIFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSExportSettingAIFromFile_Size(), ecorePackage.getEString(), "size", null, 0, 1, GSSExportSettingAIFromFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -252,6 +252,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
+	 *     GSSTmTcFormatField returns GSSTmTcFormatCSField
 	 *     GSSTmTcFormatCSField returns GSSTmTcFormatCSField
 	 *
 	 * Constraint:
@@ -274,6 +275,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
+	 *     GSSTmTcFormatField returns GSSTmTcFormatCSFormulaField
 	 *     GSSTmTcFormatCSFormulaField returns GSSTmTcFormatCSFormulaField
 	 *
 	 * Constraint:
@@ -318,6 +320,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
+	 *     GSSTmTcFormatField returns GSSTmTcFormatFDICField
 	 *     GSSTmTcFormatFDICField returns GSSTmTcFormatFDICField
 	 *
 	 * Constraint:
@@ -528,6 +531,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
+	 *     GSSTmTcFormatField returns GSSTmTcFormatVRFieldSize
 	 *     GSSTmTcFormatVRFieldSize returns GSSTmTcFormatVRFieldSize
 	 *
 	 * Constraint:
@@ -552,6 +556,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
+	 *     GSSTmTcFormatField returns GSSTmTcFormatVSField
 	 *     GSSTmTcFormatVSField returns GSSTmTcFormatVSField
 	 *
 	 * Constraint:

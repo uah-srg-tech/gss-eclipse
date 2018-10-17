@@ -21,6 +21,7 @@ import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatConstSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldByteOrder;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldToCheck;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldType;
@@ -63,6 +64,13 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * @generated
 	 */
 	private EClass gssTmTcFormatTmTCFormatEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gssTmTcFormatFieldEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -398,6 +406,15 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 */
 	public EReference getGSSTmTcFormatTmTCFormat_AIField() {
 		return (EReference)gssTmTcFormatTmTCFormatEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGSSTmTcFormatField() {
+		return gssTmTcFormatFieldEClass;
 	}
 
 	/**
@@ -1429,6 +1446,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		createEReference(gssTmTcFormatTmTCFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__AFIELD);
 		createEReference(gssTmTcFormatTmTCFormatEClass, GSS_TM_TC_FORMAT_TM_TC_FORMAT__AI_FIELD);
 
+		gssTmTcFormatFieldEClass = createEClass(GSS_TM_TC_FORMAT_FIELD);
+
 		gssTmTcFormatCSFieldEClass = createEClass(GSS_TM_TC_FORMAT_CS_FIELD);
 		createEAttribute(gssTmTcFormatCSFieldEClass, GSS_TM_TC_FORMAT_CS_FIELD__FID);
 		createEAttribute(gssTmTcFormatCSFieldEClass, GSS_TM_TC_FORMAT_CS_FIELD__PFID);
@@ -1593,6 +1612,11 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 
 		// Add supertypes to classes
 		gssTmTcFormatTmTCFormatEClass.getESuperTypes().add(thecommonPackage.getGSSModelElement());
+		gssTmTcFormatCSFieldEClass.getESuperTypes().add(this.getGSSTmTcFormatField());
+		gssTmTcFormatCSFormulaFieldEClass.getESuperTypes().add(this.getGSSTmTcFormatField());
+		gssTmTcFormatVSFieldEClass.getESuperTypes().add(this.getGSSTmTcFormatField());
+		gssTmTcFormatVRFieldSizeEClass.getESuperTypes().add(this.getGSSTmTcFormatField());
+		gssTmTcFormatFDICFieldEClass.getESuperTypes().add(this.getGSSTmTcFormatField());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssTmTcFormatTmTCFormatEClass, GSSTmTcFormatTmTCFormat.class, "GSSTmTcFormatTmTCFormat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1605,6 +1629,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		initEReference(getGSSTmTcFormatTmTCFormat_VRFieldSize(), this.getGSSTmTcFormatVRFieldSize(), null, "VRFieldSize", null, 0, -1, GSSTmTcFormatTmTCFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTmTcFormatTmTCFormat_AField(), this.getGSSTmTcFormatAField(), null, "AField", null, 0, -1, GSSTmTcFormatTmTCFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTmTcFormatTmTCFormat_AIField(), this.getGSSTmTcFormatAIField(), null, "AIField", null, 0, -1, GSSTmTcFormatTmTCFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(gssTmTcFormatFieldEClass, GSSTmTcFormatField.class, "GSSTmTcFormatField", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(gssTmTcFormatCSFieldEClass, GSSTmTcFormatCSField.class, "GSSTmTcFormatCSField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSTmTcFormatCSField_Fid(), ecorePackage.getEString(), "fid", null, 1, 1, GSSTmTcFormatCSField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

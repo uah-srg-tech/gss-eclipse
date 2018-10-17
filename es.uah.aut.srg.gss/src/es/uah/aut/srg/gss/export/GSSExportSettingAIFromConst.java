@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.export;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -58,30 +59,30 @@ public interface GSSExportSettingAIFromConst extends EObject {
 	void setValue(String value);
 
 	/**
-	 * Returns the value of the '<em><b>To Field Ref</b></em>' attribute.
+	 * Returns the value of the '<em><b>To Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>To Field Ref</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>To Field Ref</em>' attribute.
-	 * @see #setToFieldRef(String)
+	 * @return the value of the '<em>To Field Ref</em>' reference.
+	 * @see #setToFieldRef(GSSTmTcFormatAIField)
 	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportSettingAIFromConst_ToFieldRef()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getToFieldRef();
+	GSSTmTcFormatAIField getToFieldRef();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getToFieldRef <em>To Field Ref</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getToFieldRef <em>To Field Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To Field Ref</em>' attribute.
+	 * @param value the new value of the '<em>To Field Ref</em>' reference.
 	 * @see #getToFieldRef()
 	 * @generated
 	 */
-	void setToFieldRef(String value);
+	void setToFieldRef(GSSTmTcFormatAIField value);
 
 	/**
 	 * Returns the value of the '<em><b>To Array Index</b></em>' attribute.

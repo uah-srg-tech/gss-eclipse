@@ -1499,6 +1499,133 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleGSSTmTcFormatVRFieldSize
+entryRuleGSSTmTcFormatVRFieldSize returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSTmTcFormatVRFieldSizeRule()); }
+	iv_ruleGSSTmTcFormatVRFieldSize=ruleGSSTmTcFormatVRFieldSize
+	{ $current=$iv_ruleGSSTmTcFormatVRFieldSize.current; }
+	EOF;
+
+// Rule GSSTmTcFormatVRFieldSize
+ruleGSSTmTcFormatVRFieldSize returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='GSSTmTcFormatVRFieldSize'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getGSSTmTcFormatVRFieldSizeKeyword_0());
+		}
+		otherlv_1='{'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getLeftCurlyBracketKeyword_1());
+		}
+		otherlv_2='fid'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getFidKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getColonEqualsSignKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getFidINTEGERParserRuleCall_4_0());
+				}
+				lv_fid_4_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVRFieldSizeRule());
+					}
+					set(
+						$current,
+						"fid",
+						lv_fid_4_0,
+						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_5=';'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_5());
+		}
+		otherlv_6='pfid'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getPfidKeyword_6());
+		}
+		otherlv_7=':='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getColonEqualsSignKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getPfidINTEGERParserRuleCall_8_0());
+				}
+				lv_pfid_8_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVRFieldSizeRule());
+					}
+					set(
+						$current,
+						"pfid",
+						lv_pfid_8_0,
+						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9=';'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_9());
+		}
+		otherlv_10='name'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameKeyword_10());
+		}
+		otherlv_11=':='
+		{
+			newLeafNode(otherlv_11, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getColonEqualsSignKeyword_11());
+		}
+		(
+			(
+				lv_name_12_0=RULE_ID
+				{
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameIDTerminalRuleCall_12_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getGSSTmTcFormatVRFieldSizeRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_12_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_13=';'
+		{
+			newLeafNode(otherlv_13, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_13());
+		}
+		otherlv_14='}'
+		{
+			newLeafNode(otherlv_14, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getRightCurlyBracketKeyword_14());
+		}
+		otherlv_15=';'
+		{
+			newLeafNode(otherlv_15, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_15());
+		}
+	)
+;
+
 // Entry rule entryRuleGSSTmTcFormatFDICField
 entryRuleGSSTmTcFormatFDICField returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getGSSTmTcFormatFDICFieldRule()); }
@@ -1804,133 +1931,6 @@ ruleGSSTmTcFormatFDICField returns [EObject current=null]
 		otherlv_34=';'
 		{
 			newLeafNode(otherlv_34, grammarAccess.getGSSTmTcFormatFDICFieldAccess().getSemicolonKeyword_31());
-		}
-	)
-;
-
-// Entry rule entryRuleGSSTmTcFormatVRFieldSize
-entryRuleGSSTmTcFormatVRFieldSize returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSTmTcFormatVRFieldSizeRule()); }
-	iv_ruleGSSTmTcFormatVRFieldSize=ruleGSSTmTcFormatVRFieldSize
-	{ $current=$iv_ruleGSSTmTcFormatVRFieldSize.current; }
-	EOF;
-
-// Rule GSSTmTcFormatVRFieldSize
-ruleGSSTmTcFormatVRFieldSize returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='GSSTmTcFormatVRFieldSize'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getGSSTmTcFormatVRFieldSizeKeyword_0());
-		}
-		otherlv_1='{'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getLeftCurlyBracketKeyword_1());
-		}
-		otherlv_2='fid'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getFidKeyword_2());
-		}
-		otherlv_3=':='
-		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getColonEqualsSignKeyword_3());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getFidINTEGERParserRuleCall_4_0());
-				}
-				lv_fid_4_0=ruleINTEGER
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVRFieldSizeRule());
-					}
-					set(
-						$current,
-						"fid",
-						lv_fid_4_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.INTEGER");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_5=';'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_5());
-		}
-		otherlv_6='pfid'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getPfidKeyword_6());
-		}
-		otherlv_7=':='
-		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getColonEqualsSignKeyword_7());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getPfidINTEGERParserRuleCall_8_0());
-				}
-				lv_pfid_8_0=ruleINTEGER
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVRFieldSizeRule());
-					}
-					set(
-						$current,
-						"pfid",
-						lv_pfid_8_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.INTEGER");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_9=';'
-		{
-			newLeafNode(otherlv_9, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_9());
-		}
-		otherlv_10='name'
-		{
-			newLeafNode(otherlv_10, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameKeyword_10());
-		}
-		otherlv_11=':='
-		{
-			newLeafNode(otherlv_11, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getColonEqualsSignKeyword_11());
-		}
-		(
-			(
-				lv_name_12_0=RULE_ID
-				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameIDTerminalRuleCall_12_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGSSTmTcFormatVRFieldSizeRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-		otherlv_13=';'
-		{
-			newLeafNode(otherlv_13, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_13());
-		}
-		otherlv_14='}'
-		{
-			newLeafNode(otherlv_14, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getRightCurlyBracketKeyword_14());
-		}
-		otherlv_15=';'
-		{
-			newLeafNode(otherlv_15, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_15());
 		}
 	)
 ;

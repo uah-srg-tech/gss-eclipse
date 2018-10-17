@@ -13,7 +13,7 @@
 'GSSTmTcFormatCSField'=22
 'GSSTmTcFormatCSFormulaField'=29
 'GSSTmTcFormatConstSize'=43
-'GSSTmTcFormatFDICField'=31
+'GSSTmTcFormatFDICField'=32
 'GSSTmTcFormatFieldToCheck'=51
 'GSSTmTcFormatFloatingOffset'=49
 'GSSTmTcFormatFormula'=40
@@ -23,7 +23,7 @@
 'GSSTmTcFormatSize'=36
 'GSSTmTcFormatSortedFieldsToCheck'=50
 'GSSTmTcFormatTmTCFormat'=15
-'GSSTmTcFormatVRFieldSize'=33
+'GSSTmTcFormatVRFieldSize'=31
 'GSSTmTcFormatVSField'=30
 'GSSTmTcFormatVariableSize'=45
 'LSB'=74
@@ -36,7 +36,7 @@
 'byteOrder'=27
 'byte_vector'=67
 'bytes'=37
-'checkType'=32
+'checkType'=33
 'checksum16'=82
 'crc16'=81
 'deduced'=69

@@ -83,33 +83,44 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FIELD: {
+				GSSTmTcFormatField gssTmTcFormatField = (GSSTmTcFormatField)theEObject;
+				T result = caseGSSTmTcFormatField(gssTmTcFormatField);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD: {
 				GSSTmTcFormatCSField gssTmTcFormatCSField = (GSSTmTcFormatCSField)theEObject;
 				T result = caseGSSTmTcFormatCSField(gssTmTcFormatCSField);
+				if (result == null) result = caseGSSTmTcFormatField(gssTmTcFormatCSField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FORMULA_FIELD: {
 				GSSTmTcFormatCSFormulaField gssTmTcFormatCSFormulaField = (GSSTmTcFormatCSFormulaField)theEObject;
 				T result = caseGSSTmTcFormatCSFormulaField(gssTmTcFormatCSFormulaField);
+				if (result == null) result = caseGSSTmTcFormatField(gssTmTcFormatCSFormulaField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD: {
 				GSSTmTcFormatVSField gssTmTcFormatVSField = (GSSTmTcFormatVSField)theEObject;
 				T result = caseGSSTmTcFormatVSField(gssTmTcFormatVSField);
+				if (result == null) result = caseGSSTmTcFormatField(gssTmTcFormatVSField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VR_FIELD_SIZE: {
 				GSSTmTcFormatVRFieldSize gssTmTcFormatVRFieldSize = (GSSTmTcFormatVRFieldSize)theEObject;
 				T result = caseGSSTmTcFormatVRFieldSize(gssTmTcFormatVRFieldSize);
+				if (result == null) result = caseGSSTmTcFormatField(gssTmTcFormatVRFieldSize);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD: {
 				GSSTmTcFormatFDICField gssTmTcFormatFDICField = (GSSTmTcFormatFDICField)theEObject;
 				T result = caseGSSTmTcFormatFDICField(gssTmTcFormatFDICField);
+				if (result == null) result = caseGSSTmTcFormatField(gssTmTcFormatFDICField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -213,6 +224,21 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSTmTcFormatTmTCFormat(GSSTmTcFormatTmTCFormat object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSTmTcFormatField(GSSTmTcFormatField object) {
 		return null;
 	}
 

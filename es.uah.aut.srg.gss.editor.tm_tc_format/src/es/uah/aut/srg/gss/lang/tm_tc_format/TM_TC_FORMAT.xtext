@@ -36,6 +36,11 @@ enum GSSTmTcFormatTmTCFormatType returns GSSTmTcFormatTmTCFormatType:
 	TM = 'TM' | TC = 'TC'
 ;
 
+GSSTmTcFormatField returns GSSTmTcFormatField:
+	GSSTmTcFormatCSField | GSSTmTcFormatCSFormulaField |
+	GSSTmTcFormatVSField | GSSTmTcFormatVRFieldSize| GSSTmTcFormatFDICField
+;
+
 GSSTmTcFormatCSField returns GSSTmTcFormatCSField:
 	'GSSTmTcFormatCSField' '{'
 		'fid' ':=' fid=INTEGER ';'
@@ -81,6 +86,14 @@ GSSTmTcFormatVSField returns GSSTmTcFormatVSField:
 	'}' ';'
 ;
 
+GSSTmTcFormatVRFieldSize returns GSSTmTcFormatVRFieldSize:
+	'GSSTmTcFormatVRFieldSize' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=ID ';'
+	'}' ';'
+;
+
 GSSTmTcFormatFDICField returns GSSTmTcFormatFDICField:
 	'GSSTmTcFormatFDICField' '{'
 		'fid' ':=' fid=INTEGER ';'
@@ -93,14 +106,6 @@ GSSTmTcFormatFDICField returns GSSTmTcFormatFDICField:
 		size=GSSTmTcFormatSize
 		floatingOffset=GSSTmTcFormatFloatingOffset
 		sortedFieldsToCheck=GSSTmTcFormatSortedFieldsToCheck
-	'}' ';'
-;
-
-GSSTmTcFormatVRFieldSize returns GSSTmTcFormatVRFieldSize:
-	'GSSTmTcFormatVRFieldSize' '{'
-		'fid' ':=' fid=INTEGER ';'
-		'pfid' ':=' pfid=INTEGER ';'
-		'name' ':=' name=ID ';'
 	'}' ';'
 ;
 

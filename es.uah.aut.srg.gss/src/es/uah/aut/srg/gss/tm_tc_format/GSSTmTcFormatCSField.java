@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.gss.tm_tc_format;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Tm Tc Format CS Field</b></em>'.
@@ -36,7 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GSSTmTcFormatCSField extends EObject {
+public interface GSSTmTcFormatCSField extends GSSTmTcFormatField {
 	/**
 	 * Returns the value of the '<em><b>Fid</b></em>' attribute.
 	 * <!-- begin-user-doc -->

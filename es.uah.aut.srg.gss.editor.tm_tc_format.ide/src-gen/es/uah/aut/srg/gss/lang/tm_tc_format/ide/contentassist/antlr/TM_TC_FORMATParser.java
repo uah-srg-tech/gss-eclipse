@@ -43,6 +43,7 @@ public class TM_TC_FORMATParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getAlternatives_3_3_1(), "rule__GSSTmTcFormatTmTCFormat__Alternatives_3_3_1");
+					put(grammarAccess.getGSSTmTcFormatFieldAccess().getAlternatives(), "rule__GSSTmTcFormatField__Alternatives");
 					put(grammarAccess.getVersionAccess().getAlternatives_0(), "rule__Version__Alternatives_0");
 					put(grammarAccess.getVersionAccess().getAlternatives_1_1(), "rule__Version__Alternatives_1_1");
 					put(grammarAccess.getINTEGERAccess().getAlternatives(), "rule__INTEGER__Alternatives");
@@ -68,9 +69,9 @@ public class TM_TC_FORMATParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getGroup_14(), "rule__GSSTmTcFormatCSFormulaField__Group_14__0");
 					put(grammarAccess.getGSSTmTcFormatVSFieldAccess().getGroup(), "rule__GSSTmTcFormatVSField__Group__0");
 					put(grammarAccess.getGSSTmTcFormatVSFieldAccess().getGroup_14(), "rule__GSSTmTcFormatVSField__Group_14__0");
+					put(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getGroup(), "rule__GSSTmTcFormatVRFieldSize__Group__0");
 					put(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getGroup(), "rule__GSSTmTcFormatFDICField__Group__0");
 					put(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getGroup_14(), "rule__GSSTmTcFormatFDICField__Group_14__0");
-					put(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getGroup(), "rule__GSSTmTcFormatVRFieldSize__Group__0");
 					put(grammarAccess.getGSSTmTcFormatAFieldAccess().getGroup(), "rule__GSSTmTcFormatAField__Group__0");
 					put(grammarAccess.getGSSTmTcFormatAFieldAccess().getGroup_14(), "rule__GSSTmTcFormatAField__Group_14__0");
 					put(grammarAccess.getGSSTmTcFormatAIFieldAccess().getGroup(), "rule__GSSTmTcFormatAIField__Group__0");
@@ -147,6 +148,9 @@ public class TM_TC_FORMATParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeAssignment_28(), "rule__GSSTmTcFormatVSField__MaxSizeAssignment_28");
 					put(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeAssignment_29(), "rule__GSSTmTcFormatVSField__VariableSizeAssignment_29");
 					put(grammarAccess.getGSSTmTcFormatVSFieldAccess().getGlobalOffsetAssignment_30(), "rule__GSSTmTcFormatVSField__GlobalOffsetAssignment_30");
+					put(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getFidAssignment_4(), "rule__GSSTmTcFormatVRFieldSize__FidAssignment_4");
+					put(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getPfidAssignment_8(), "rule__GSSTmTcFormatVRFieldSize__PfidAssignment_8");
+					put(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameAssignment_12(), "rule__GSSTmTcFormatVRFieldSize__NameAssignment_12");
 					put(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getFidAssignment_4(), "rule__GSSTmTcFormatFDICField__FidAssignment_4");
 					put(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getPfidAssignment_8(), "rule__GSSTmTcFormatFDICField__PfidAssignment_8");
 					put(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getNameAssignment_12(), "rule__GSSTmTcFormatFDICField__NameAssignment_12");
@@ -157,9 +161,6 @@ public class TM_TC_FORMATParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getSizeAssignment_27(), "rule__GSSTmTcFormatFDICField__SizeAssignment_27");
 					put(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getFloatingOffsetAssignment_28(), "rule__GSSTmTcFormatFDICField__FloatingOffsetAssignment_28");
 					put(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getSortedFieldsToCheckAssignment_29(), "rule__GSSTmTcFormatFDICField__SortedFieldsToCheckAssignment_29");
-					put(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getFidAssignment_4(), "rule__GSSTmTcFormatVRFieldSize__FidAssignment_4");
-					put(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getPfidAssignment_8(), "rule__GSSTmTcFormatVRFieldSize__PfidAssignment_8");
-					put(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameAssignment_12(), "rule__GSSTmTcFormatVRFieldSize__NameAssignment_12");
 					put(grammarAccess.getGSSTmTcFormatAFieldAccess().getFidAssignment_4(), "rule__GSSTmTcFormatAField__FidAssignment_4");
 					put(grammarAccess.getGSSTmTcFormatAFieldAccess().getPfidAssignment_8(), "rule__GSSTmTcFormatAField__PfidAssignment_8");
 					put(grammarAccess.getGSSTmTcFormatAFieldAccess().getNameAssignment_12(), "rule__GSSTmTcFormatAField__NameAssignment_12");

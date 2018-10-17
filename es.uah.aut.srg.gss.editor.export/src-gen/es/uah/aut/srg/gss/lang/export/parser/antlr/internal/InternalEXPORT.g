@@ -342,19 +342,20 @@ ruleGSSExportExport returns [EObject current=null]
 		}
 		(
 			(
-				lv_from_14_0=RULE_ID
 				{
-					newLeafNode(lv_from_14_0, grammarAccess.getGSSExportExportAccess().getFromIDTerminalRuleCall_6_0());
+					/* */
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getGSSExportExportRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"from",
-						lv_from_14_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0());
+				}
+				ruleVersionedQualifiedName
+				{
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -372,19 +373,20 @@ ruleGSSExportExport returns [EObject current=null]
 		}
 		(
 			(
-				lv_to_18_0=RULE_ID
 				{
-					newLeafNode(lv_to_18_0, grammarAccess.getGSSExportExportAccess().getToIDTerminalRuleCall_10_0());
+					/* */
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getGSSExportExportRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"to",
-						lv_to_18_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0());
+				}
+				ruleVersionedQualifiedName
+				{
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -1317,19 +1319,20 @@ ruleGSSExportSettingFromConst returns [EObject current=null]
 		}
 		(
 			(
-				lv_toFieldRef_8_0=RULE_ID
 				{
-					newLeafNode(lv_toFieldRef_8_0, grammarAccess.getGSSExportSettingFromConstAccess().getToFieldRefIDTerminalRuleCall_8_0());
+					/* */
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getGSSExportSettingFromConstRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"toFieldRef",
-						lv_toFieldRef_8_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSExportSettingFromConstAccess().getToFieldRefGSSTmTcFormatFieldCrossReference_8_0());
+				}
+				ruleVersionedQualifiedName
+				{
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -1413,19 +1416,20 @@ ruleGSSExportSettingFromSize returns [EObject current=null]
 		}
 		(
 			(
-				lv_toFieldRef_8_0=RULE_ID
 				{
-					newLeafNode(lv_toFieldRef_8_0, grammarAccess.getGSSExportSettingFromSizeAccess().getToFieldRefIDTerminalRuleCall_8_0());
+					/* */
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getGSSExportSettingFromSizeRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"toFieldRef",
-						lv_toFieldRef_8_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSExportSettingFromSizeAccess().getToFieldRefGSSTmTcFormatFieldCrossReference_8_0());
+				}
+				ruleVersionedQualifiedName
+				{
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -1508,19 +1512,20 @@ ruleGSSExportSettingFromFile returns [EObject current=null]
 		}
 		(
 			(
-				lv_toFieldRef_8_0=RULE_ID
 				{
-					newLeafNode(lv_toFieldRef_8_0, grammarAccess.getGSSExportSettingFromFileAccess().getToFieldRefIDTerminalRuleCall_8_0());
+					/* */
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getGSSExportSettingFromFileRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"toFieldRef",
-						lv_toFieldRef_8_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSExportSettingFromFileAccess().getToFieldRefGSSTmTcFormatFieldCrossReference_8_0());
+				}
+				ruleVersionedQualifiedName
+				{
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -1672,19 +1677,20 @@ ruleGSSExportSettingFromField returns [EObject current=null]
 		}
 		(
 			(
-				lv_fieldRef_4_0=RULE_ID
 				{
-					newLeafNode(lv_fieldRef_4_0, grammarAccess.getGSSExportSettingFromFieldAccess().getFieldRefIDTerminalRuleCall_4_0());
+					/* */
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getGSSExportSettingFromFieldRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"fieldRef",
-						lv_fieldRef_4_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSExportSettingFromFieldAccess().getFieldRefGSSTmTcFormatFieldCrossReference_4_0());
+				}
+				ruleVersionedQualifiedName
+				{
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -1702,19 +1708,20 @@ ruleGSSExportSettingFromField returns [EObject current=null]
 		}
 		(
 			(
-				lv_toFieldRef_8_0=RULE_ID
 				{
-					newLeafNode(lv_toFieldRef_8_0, grammarAccess.getGSSExportSettingFromFieldAccess().getToFieldRefIDTerminalRuleCall_8_0());
+					/* */
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getGSSExportSettingFromFieldRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"toFieldRef",
-						lv_toFieldRef_8_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSExportSettingFromFieldAccess().getToFieldRefGSSTmTcFormatFieldCrossReference_8_0());
+				}
+				ruleVersionedQualifiedName
+				{
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -1798,19 +1805,20 @@ ruleGSSExportSettingAIFromConst returns [EObject current=null]
 		}
 		(
 			(
-				lv_toFieldRef_8_0=RULE_ID
 				{
-					newLeafNode(lv_toFieldRef_8_0, grammarAccess.getGSSExportSettingAIFromConstAccess().getToFieldRefIDTerminalRuleCall_8_0());
+					/* */
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getGSSExportSettingAIFromConstRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"toFieldRef",
-						lv_toFieldRef_8_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSExportSettingAIFromConstAccess().getToFieldRefGSSTmTcFormatAIFieldCrossReference_8_0());
+				}
+				ruleVersionedQualifiedName
+				{
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -1893,19 +1901,20 @@ ruleGSSExportSettingAIFromFile returns [EObject current=null]
 		}
 		(
 			(
-				lv_toFieldRef_8_0=RULE_ID
 				{
-					newLeafNode(lv_toFieldRef_8_0, grammarAccess.getGSSExportSettingAIFromFileAccess().getToFieldRefIDTerminalRuleCall_8_0());
+					/* */
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getGSSExportSettingAIFromFileRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"toFieldRef",
-						lv_toFieldRef_8_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSExportSettingAIFromFileAccess().getToFieldRefGSSTmTcFormatAIFieldCrossReference_8_0());
+				}
+				ruleVersionedQualifiedName
+				{
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)

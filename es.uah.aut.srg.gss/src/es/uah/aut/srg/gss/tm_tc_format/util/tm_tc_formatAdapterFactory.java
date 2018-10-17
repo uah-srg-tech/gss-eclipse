@@ -82,6 +82,10 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 				return createGSSTmTcFormatTmTCFormatAdapter();
 			}
 			@Override
+			public Adapter caseGSSTmTcFormatField(GSSTmTcFormatField object) {
+				return createGSSTmTcFormatFieldAdapter();
+			}
+			@Override
 			public Adapter caseGSSTmTcFormatCSField(GSSTmTcFormatCSField object) {
 				return createGSSTmTcFormatCSFieldAdapter();
 			}
@@ -192,6 +196,20 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSTmTcFormatTmTCFormatAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField <em>GSS Tm Tc Format Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField
+	 * @generated
+	 */
+	public Adapter createGSSTmTcFormatFieldAdapter() {
 		return null;
 	}
 
