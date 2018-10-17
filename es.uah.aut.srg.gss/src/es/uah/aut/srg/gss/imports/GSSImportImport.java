@@ -11,6 +11,7 @@
 package es.uah.aut.srg.gss.imports;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -34,56 +35,56 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface GSSImportImport extends GSSModelElement {
 	/**
-	 * Returns the value of the '<em><b>From</b></em>' attribute.
+	 * Returns the value of the '<em><b>From</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>From</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>From</em>' attribute.
-	 * @see #setFrom(String)
+	 * @return the value of the '<em>From</em>' reference.
+	 * @see #setFrom(GSSTmTcFormatTmTCFormat)
 	 * @see es.uah.aut.srg.gss.imports.importsPackage#getGSSImportImport_From()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getFrom();
+	GSSTmTcFormatTmTCFormat getFrom();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.imports.GSSImportImport#getFrom <em>From</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.imports.GSSImportImport#getFrom <em>From</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>From</em>' attribute.
+	 * @param value the new value of the '<em>From</em>' reference.
 	 * @see #getFrom()
 	 * @generated
 	 */
-	void setFrom(String value);
+	void setFrom(GSSTmTcFormatTmTCFormat value);
 
 	/**
-	 * Returns the value of the '<em><b>To</b></em>' attribute.
+	 * Returns the value of the '<em><b>To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>To</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>To</em>' attribute.
-	 * @see #setTo(String)
+	 * @return the value of the '<em>To</em>' reference.
+	 * @see #setTo(GSSTmTcFormatTmTCFormat)
 	 * @see es.uah.aut.srg.gss.imports.importsPackage#getGSSImportImport_To()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getTo();
+	GSSTmTcFormatTmTCFormat getTo();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.imports.GSSImportImport#getTo <em>To</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.imports.GSSImportImport#getTo <em>To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To</em>' attribute.
+	 * @param value the new value of the '<em>To</em>' reference.
 	 * @see #getTo()
 	 * @generated
 	 */
-	void setTo(String value);
+	void setTo(GSSTmTcFormatTmTCFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Data Source</b></em>' containment reference list.

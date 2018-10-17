@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.filters;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -35,30 +36,30 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface GSSFilterMaxtermFilter extends GSSFilterFilter {
 	/**
-	 * Returns the value of the '<em><b>Format File</b></em>' attribute.
+	 * Returns the value of the '<em><b>Format File</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Format File</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Format File</em>' attribute.
-	 * @see #setFormatFile(String)
+	 * @return the value of the '<em>Format File</em>' reference.
+	 * @see #setFormatFile(GSSTmTcFormatTmTCFormat)
 	 * @see es.uah.aut.srg.gss.filters.filtersPackage#getGSSFilterMaxtermFilter_FormatFile()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getFormatFile();
+	GSSTmTcFormatTmTCFormat getFormatFile();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter#getFormatFile <em>Format File</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter#getFormatFile <em>Format File</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Format File</em>' attribute.
+	 * @param value the new value of the '<em>Format File</em>' reference.
 	 * @see #getFormatFile()
 	 * @generated
 	 */
-	void setFormatFile(String value);
+	void setFormatFile(GSSTmTcFormatTmTCFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Bool Var</b></em>' containment reference list.

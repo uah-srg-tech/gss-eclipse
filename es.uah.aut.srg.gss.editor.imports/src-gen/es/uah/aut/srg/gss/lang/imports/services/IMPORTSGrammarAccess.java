@@ -15,6 +15,7 @@ import com.google.inject.Singleton;
 import java.util.List;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
+import org.eclipse.xtext.CrossReference;
 import org.eclipse.xtext.EnumLiteralDeclaration;
 import org.eclipse.xtext.EnumRule;
 import org.eclipse.xtext.Grammar;
@@ -115,12 +116,14 @@ public class IMPORTSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cFromKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cColonEqualsSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cFromAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cFromIDTerminalRuleCall_6_0 = (RuleCall)cFromAssignment_6.eContents().get(0);
+		private final CrossReference cFromGSSTmTcFormatTmTCFormatCrossReference_6_0 = (CrossReference)cFromAssignment_6.eContents().get(0);
+		private final RuleCall cFromGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_0_1 = (RuleCall)cFromGSSTmTcFormatTmTCFormatCrossReference_6_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cToKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		private final Keyword cColonEqualsSignKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Assignment cToAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cToIDTerminalRuleCall_10_0 = (RuleCall)cToAssignment_10.eContents().get(0);
+		private final CrossReference cToGSSTmTcFormatTmTCFormatCrossReference_10_0 = (CrossReference)cToAssignment_10.eContents().get(0);
+		private final RuleCall cToGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_10_0_1 = (RuleCall)cToGSSTmTcFormatTmTCFormatCrossReference_10_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Assignment cDataSourceAssignment_12 = (Assignment)cGroup.eContents().get(12);
 		private final RuleCall cDataSourceGSSImportDataSourceParserRuleCall_12_0 = (RuleCall)cDataSourceAssignment_12.eContents().get(0);
@@ -133,15 +136,17 @@ public class IMPORTSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSImportImport'
 		//	name=EString
 		//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';')
-		//	'from' ':=' from=ID ';'
-		//	'to' ':=' to=ID ';'
+		//	'from' ':=' from=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
+		//	'to' ':=' to=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
 		//	dataSource+=GSSImportDataSource+
 		//	virtualSize=GSSImportVirtualSize?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSImportImport' name=EString '{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') 'from' ':='
-		//from=ID ';' 'to' ':=' to=ID ';' dataSource+=GSSImportDataSource+ virtualSize=GSSImportVirtualSize? '}' ';'
+		//from=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';' 'to' ':='
+		//to=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';' dataSource+=GSSImportDataSource+
+		//virtualSize=GSSImportVirtualSize? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSImportImport'
@@ -201,11 +206,14 @@ public class IMPORTSGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_5() { return cColonEqualsSignKeyword_5; }
 		
-		//from=ID
+		//from=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
 		public Assignment getFromAssignment_6() { return cFromAssignment_6; }
 		
-		//ID
-		public RuleCall getFromIDTerminalRuleCall_6_0() { return cFromIDTerminalRuleCall_6_0; }
+		//[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
+		public CrossReference getFromGSSTmTcFormatTmTCFormatCrossReference_6_0() { return cFromGSSTmTcFormatTmTCFormatCrossReference_6_0; }
+		
+		//VersionedQualifiedName
+		public RuleCall getFromGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_0_1() { return cFromGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_7() { return cSemicolonKeyword_7; }
@@ -216,11 +224,14 @@ public class IMPORTSGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_9() { return cColonEqualsSignKeyword_9; }
 		
-		//to=ID
+		//to=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
 		public Assignment getToAssignment_10() { return cToAssignment_10; }
 		
-		//ID
-		public RuleCall getToIDTerminalRuleCall_10_0() { return cToIDTerminalRuleCall_10_0; }
+		//[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
+		public CrossReference getToGSSTmTcFormatTmTCFormatCrossReference_10_0() { return cToGSSTmTcFormatTmTCFormatCrossReference_10_0; }
+		
+		//VersionedQualifiedName
+		public RuleCall getToGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_10_0_1() { return cToGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_10_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_11() { return cSemicolonKeyword_11; }
@@ -251,7 +262,8 @@ public class IMPORTSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cFieldRefKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cFieldRefAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFieldRefIDTerminalRuleCall_4_0 = (RuleCall)cFieldRefAssignment_4.eContents().get(0);
+		private final CrossReference cFieldRefGSSTmTcFormatFieldCrossReference_4_0 = (CrossReference)cFieldRefAssignment_4.eContents().get(0);
+		private final RuleCall cFieldRefGSSTmTcFormatFieldVersionedQualifiedNameParserRuleCall_4_0_1 = (RuleCall)cFieldRefGSSTmTcFormatFieldCrossReference_4_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Keyword cLeftTrimKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cColonEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
@@ -268,14 +280,14 @@ public class IMPORTSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//GSSImportDataSource:
 		//	'GSSImportDataSource' '{'
-		//	'FieldRef' ':=' FieldRef=ID ';'
+		//	'FieldRef' ':=' FieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedName] ';'
 		//	'leftTrim' ':=' leftTrim=INTEGER ';'
 		//	'rightTrim' ':=' rightTrim=INTEGER ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSImportDataSource' '{' 'FieldRef' ':=' FieldRef=ID ';' 'leftTrim' ':=' leftTrim=INTEGER ';' 'rightTrim' ':='
-		//rightTrim=INTEGER ';' '}' ';'
+		//'GSSImportDataSource' '{' 'FieldRef' ':=' FieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedName] ';'
+		//'leftTrim' ':=' leftTrim=INTEGER ';' 'rightTrim' ':=' rightTrim=INTEGER ';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSImportDataSource'
@@ -290,11 +302,14 @@ public class IMPORTSGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
 		
-		//FieldRef=ID
+		//FieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedName]
 		public Assignment getFieldRefAssignment_4() { return cFieldRefAssignment_4; }
 		
-		//ID
-		public RuleCall getFieldRefIDTerminalRuleCall_4_0() { return cFieldRefIDTerminalRuleCall_4_0; }
+		//[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedName]
+		public CrossReference getFieldRefGSSTmTcFormatFieldCrossReference_4_0() { return cFieldRefGSSTmTcFormatFieldCrossReference_4_0; }
+		
+		//VersionedQualifiedName
+		public RuleCall getFieldRefGSSTmTcFormatFieldVersionedQualifiedNameParserRuleCall_4_0_1() { return cFieldRefGSSTmTcFormatFieldVersionedQualifiedNameParserRuleCall_4_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
@@ -845,8 +860,8 @@ public class IMPORTSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSImportImport'
 	//	name=EString
 	//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';')
-	//	'from' ':=' from=ID ';'
-	//	'to' ':=' to=ID ';'
+	//	'from' ':=' from=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
+	//	'to' ':=' to=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
 	//	dataSource+=GSSImportDataSource+
 	//	virtualSize=GSSImportVirtualSize?
 	//	'}' ';';
@@ -860,7 +875,7 @@ public class IMPORTSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSImportDataSource:
 	//	'GSSImportDataSource' '{'
-	//	'FieldRef' ':=' FieldRef=ID ';'
+	//	'FieldRef' ':=' FieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedName] ';'
 	//	'leftTrim' ':=' leftTrim=INTEGER ';'
 	//	'rightTrim' ':=' rightTrim=INTEGER ';'
 	//	'}' ';';

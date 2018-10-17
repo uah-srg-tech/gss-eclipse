@@ -114,7 +114,7 @@ public interface importsPackage extends EPackage {
 	int GSS_IMPORT_IMPORT__DESCRIPTION = commonPackage.GSS_MODEL_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>From</b></em>' attribute.
+	 * The feature id for the '<em><b>From</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -123,7 +123,7 @@ public interface importsPackage extends EPackage {
 	int GSS_IMPORT_IMPORT__FROM = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>To</b></em>' attribute.
+	 * The feature id for the '<em><b>To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -178,7 +178,7 @@ public interface importsPackage extends EPackage {
 	int GSS_IMPORT_DATA_SOURCE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Field Ref</b></em>' attribute.
+	 * The feature id for the '<em><b>Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -308,26 +308,26 @@ public interface importsPackage extends EPackage {
 	EClass getGSSImportImport();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.imports.GSSImportImport#getFrom <em>From</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.imports.GSSImportImport#getFrom <em>From</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>From</em>'.
+	 * @return the meta object for the reference '<em>From</em>'.
 	 * @see es.uah.aut.srg.gss.imports.GSSImportImport#getFrom()
 	 * @see #getGSSImportImport()
 	 * @generated
 	 */
-	EAttribute getGSSImportImport_From();
+	EReference getGSSImportImport_From();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.imports.GSSImportImport#getTo <em>To</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.imports.GSSImportImport#getTo <em>To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>To</em>'.
+	 * @return the meta object for the reference '<em>To</em>'.
 	 * @see es.uah.aut.srg.gss.imports.GSSImportImport#getTo()
 	 * @see #getGSSImportImport()
 	 * @generated
 	 */
-	EAttribute getGSSImportImport_To();
+	EReference getGSSImportImport_To();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.imports.GSSImportImport#getDataSource <em>Data Source</em>}'.
@@ -362,15 +362,15 @@ public interface importsPackage extends EPackage {
 	EClass getGSSImportDataSource();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.imports.GSSImportDataSource#getFieldRef <em>Field Ref</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.imports.GSSImportDataSource#getFieldRef <em>Field Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Field Ref</em>'.
+	 * @return the meta object for the reference '<em>Field Ref</em>'.
 	 * @see es.uah.aut.srg.gss.imports.GSSImportDataSource#getFieldRef()
 	 * @see #getGSSImportDataSource()
 	 * @generated
 	 */
-	EAttribute getGSSImportDataSource_FieldRef();
+	EReference getGSSImportDataSource_FieldRef();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.imports.GSSImportDataSource#getLeftTrim <em>Left Trim</em>}'.
@@ -492,20 +492,20 @@ public interface importsPackage extends EPackage {
 		EClass GSS_IMPORT_IMPORT = eINSTANCE.getGSSImportImport();
 
 		/**
-		 * The meta object literal for the '<em><b>From</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>From</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_IMPORT_IMPORT__FROM = eINSTANCE.getGSSImportImport_From();
+		EReference GSS_IMPORT_IMPORT__FROM = eINSTANCE.getGSSImportImport_From();
 
 		/**
-		 * The meta object literal for the '<em><b>To</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>To</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_IMPORT_IMPORT__TO = eINSTANCE.getGSSImportImport_To();
+		EReference GSS_IMPORT_IMPORT__TO = eINSTANCE.getGSSImportImport_To();
 
 		/**
 		 * The meta object literal for the '<em><b>Data Source</b></em>' containment reference list feature.
@@ -534,12 +534,12 @@ public interface importsPackage extends EPackage {
 		EClass GSS_IMPORT_DATA_SOURCE = eINSTANCE.getGSSImportDataSource();
 
 		/**
-		 * The meta object literal for the '<em><b>Field Ref</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Field Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_IMPORT_DATA_SOURCE__FIELD_REF = eINSTANCE.getGSSImportDataSource_FieldRef();
+		EReference GSS_IMPORT_DATA_SOURCE__FIELD_REF = eINSTANCE.getGSSImportDataSource_FieldRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Left Trim</b></em>' attribute feature.

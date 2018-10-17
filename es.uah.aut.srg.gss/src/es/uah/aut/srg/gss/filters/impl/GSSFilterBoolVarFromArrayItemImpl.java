@@ -10,7 +10,6 @@
  */
 package es.uah.aut.srg.gss.filters.impl;
 
-import es.uah.aut.srg.gss.filters.GSSFilterAIFieldRef;
 import es.uah.aut.srg.gss.filters.GSSFilterBoolVarFromArrayItem;
 import es.uah.aut.srg.gss.filters.GSSFilterConstant;
 import es.uah.aut.srg.gss.filters.GSSFilterConstantType;
@@ -19,6 +18,7 @@ import es.uah.aut.srg.gss.filters.GSSFilterSelect;
 import es.uah.aut.srg.gss.filters.GSSFilterSelectLine;
 import es.uah.aut.srg.gss.filters.filtersPackage;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -110,14 +110,14 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 	protected GSSFilterConstantType constantType = CONSTANT_TYPE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getAIFieldRef() <em>AI Field Ref</em>}' containment reference.
+	 * The cached value of the '{@link #getAIFieldRef() <em>AI Field Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAIFieldRef()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSFilterAIFieldRef aiFieldRef;
+	protected GSSTmTcFormatAIField aiFieldRef;
 
 	/**
 	 * The cached value of the '{@link #getOp() <em>Op</em>}' containment reference.
@@ -246,7 +246,15 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFilterAIFieldRef getAIFieldRef() {
+	public GSSTmTcFormatAIField getAIFieldRef() {
+		if (aiFieldRef != null && aiFieldRef.eIsProxy()) {
+			InternalEObject oldAIFieldRef = (InternalEObject)aiFieldRef;
+			aiFieldRef = (GSSTmTcFormatAIField)eResolveProxy(oldAIFieldRef);
+			if (aiFieldRef != oldAIFieldRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF, oldAIFieldRef, aiFieldRef));
+			}
+		}
 		return aiFieldRef;
 	}
 
@@ -255,14 +263,8 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAIFieldRef(GSSFilterAIFieldRef newAIFieldRef, NotificationChain msgs) {
-		GSSFilterAIFieldRef oldAIFieldRef = aiFieldRef;
-		aiFieldRef = newAIFieldRef;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF, oldAIFieldRef, newAIFieldRef);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public GSSTmTcFormatAIField basicGetAIFieldRef() {
+		return aiFieldRef;
 	}
 
 	/**
@@ -270,18 +272,11 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAIFieldRef(GSSFilterAIFieldRef newAIFieldRef) {
-		if (newAIFieldRef != aiFieldRef) {
-			NotificationChain msgs = null;
-			if (aiFieldRef != null)
-				msgs = ((InternalEObject)aiFieldRef).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF, null, msgs);
-			if (newAIFieldRef != null)
-				msgs = ((InternalEObject)newAIFieldRef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF, null, msgs);
-			msgs = basicSetAIFieldRef(newAIFieldRef, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF, newAIFieldRef, newAIFieldRef));
+	public void setAIFieldRef(GSSTmTcFormatAIField newAIFieldRef) {
+		GSSTmTcFormatAIField oldAIFieldRef = aiFieldRef;
+		aiFieldRef = newAIFieldRef;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF, oldAIFieldRef, aiFieldRef));
 	}
 
 	/**
@@ -464,8 +459,6 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF:
-				return basicSetAIFieldRef(null, msgs);
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__OP:
 				return basicSetOp(null, msgs);
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT:
@@ -493,7 +486,8 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT_TYPE:
 				return getConstantType();
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF:
-				return getAIFieldRef();
+				if (resolve) return getAIFieldRef();
+				return basicGetAIFieldRef();
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__OP:
 				return getOp();
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT:
@@ -524,7 +518,7 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 				setConstantType((GSSFilterConstantType)newValue);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF:
-				setAIFieldRef((GSSFilterAIFieldRef)newValue);
+				setAIFieldRef((GSSTmTcFormatAIField)newValue);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__OP:
 				setOp((GSSFilterFieldOp)newValue);
@@ -560,7 +554,7 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 				setConstantType(CONSTANT_TYPE_EDEFAULT);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF:
-				setAIFieldRef((GSSFilterAIFieldRef)null);
+				setAIFieldRef((GSSTmTcFormatAIField)null);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__OP:
 				setOp((GSSFilterFieldOp)null);

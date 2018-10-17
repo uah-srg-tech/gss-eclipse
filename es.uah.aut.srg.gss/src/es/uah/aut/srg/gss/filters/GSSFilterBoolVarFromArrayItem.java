@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.filters;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -118,30 +119,30 @@ public interface GSSFilterBoolVarFromArrayItem extends EObject {
 	void setConstantType(GSSFilterConstantType value);
 
 	/**
-	 * Returns the value of the '<em><b>AI Field Ref</b></em>' containment reference.
+	 * Returns the value of the '<em><b>AI Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>AI Field Ref</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>AI Field Ref</em>' containment reference.
-	 * @see #setAIFieldRef(GSSFilterAIFieldRef)
+	 * @return the value of the '<em>AI Field Ref</em>' reference.
+	 * @see #setAIFieldRef(GSSTmTcFormatAIField)
 	 * @see es.uah.aut.srg.gss.filters.filtersPackage#getGSSFilterBoolVarFromArrayItem_AIFieldRef()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSFilterAIFieldRef getAIFieldRef();
+	GSSTmTcFormatAIField getAIFieldRef();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.filters.GSSFilterBoolVarFromArrayItem#getAIFieldRef <em>AI Field Ref</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.filters.GSSFilterBoolVarFromArrayItem#getAIFieldRef <em>AI Field Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>AI Field Ref</em>' containment reference.
+	 * @param value the new value of the '<em>AI Field Ref</em>' reference.
 	 * @see #getAIFieldRef()
 	 * @generated
 	 */
-	void setAIFieldRef(GSSFilterAIFieldRef value);
+	void setAIFieldRef(GSSTmTcFormatAIField value);
 
 	/**
 	 * Returns the value of the '<em><b>Op</b></em>' containment reference.
