@@ -2936,9 +2936,13 @@ rule__GSSImportImport__FromAssignment_6
 	}
 :
 	(
-		{ before(grammarAccess.getGSSImportImportAccess().getFromIDTerminalRuleCall_6_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSImportImportAccess().getFromIDTerminalRuleCall_6_0()); }
+		{ before(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0()); }
+		(
+			{ before(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_0_1()); }
+			ruleVersionedQualifiedName
+			{ after(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_0_1()); }
+		)
+		{ after(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0()); }
 	)
 ;
 finally {
@@ -2951,9 +2955,13 @@ rule__GSSImportImport__ToAssignment_10
 	}
 :
 	(
-		{ before(grammarAccess.getGSSImportImportAccess().getToIDTerminalRuleCall_10_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSImportImportAccess().getToIDTerminalRuleCall_10_0()); }
+		{ before(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0()); }
+		(
+			{ before(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_10_0_1()); }
+			ruleVersionedQualifiedName
+			{ after(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_10_0_1()); }
+		)
+		{ after(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0()); }
 	)
 ;
 finally {
@@ -2996,9 +3004,13 @@ rule__GSSImportDataSource__FieldRefAssignment_4
 	}
 :
 	(
-		{ before(grammarAccess.getGSSImportDataSourceAccess().getFieldRefIDTerminalRuleCall_4_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSImportDataSourceAccess().getFieldRefIDTerminalRuleCall_4_0()); }
+		{ before(grammarAccess.getGSSImportDataSourceAccess().getFieldRefGSSTmTcFormatFieldCrossReference_4_0()); }
+		(
+			{ before(grammarAccess.getGSSImportDataSourceAccess().getFieldRefGSSTmTcFormatFieldVersionedQualifiedNameParserRuleCall_4_0_1()); }
+			ruleVersionedQualifiedName
+			{ after(grammarAccess.getGSSImportDataSourceAccess().getFieldRefGSSTmTcFormatFieldVersionedQualifiedNameParserRuleCall_4_0_1()); }
+		)
+		{ after(grammarAccess.getGSSImportDataSourceAccess().getFieldRefGSSTmTcFormatFieldCrossReference_4_0()); }
 	)
 ;
 finally {

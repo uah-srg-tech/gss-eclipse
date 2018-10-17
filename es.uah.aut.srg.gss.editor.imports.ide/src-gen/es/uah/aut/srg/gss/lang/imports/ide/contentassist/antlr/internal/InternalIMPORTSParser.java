@@ -9159,24 +9159,40 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportImport__FromAssignment_6"
-    // InternalIMPORTS.g:2933:1: rule__GSSImportImport__FromAssignment_6 : ( RULE_ID ) ;
+    // InternalIMPORTS.g:2933:1: rule__GSSImportImport__FromAssignment_6 : ( ( ruleVersionedQualifiedName ) ) ;
     public final void rule__GSSImportImport__FromAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2937:1: ( ( RULE_ID ) )
-            // InternalIMPORTS.g:2938:2: ( RULE_ID )
+            // InternalIMPORTS.g:2937:1: ( ( ( ruleVersionedQualifiedName ) ) )
+            // InternalIMPORTS.g:2938:2: ( ( ruleVersionedQualifiedName ) )
             {
-            // InternalIMPORTS.g:2938:2: ( RULE_ID )
-            // InternalIMPORTS.g:2939:3: RULE_ID
+            // InternalIMPORTS.g:2938:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalIMPORTS.g:2939:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSImportImportAccess().getFromIDTerminalRuleCall_6_0()); 
+               before(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalIMPORTS.g:2940:3: ( ruleVersionedQualifiedName )
+            // InternalIMPORTS.g:2941:4: ruleVersionedQualifiedName
+            {
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSImportImportAccess().getFromIDTerminalRuleCall_6_0()); 
+               before(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_0_1()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleVersionedQualifiedName();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0()); 
             }
 
             }
@@ -9200,24 +9216,40 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportImport__ToAssignment_10"
-    // InternalIMPORTS.g:2948:1: rule__GSSImportImport__ToAssignment_10 : ( RULE_ID ) ;
+    // InternalIMPORTS.g:2952:1: rule__GSSImportImport__ToAssignment_10 : ( ( ruleVersionedQualifiedName ) ) ;
     public final void rule__GSSImportImport__ToAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2952:1: ( ( RULE_ID ) )
-            // InternalIMPORTS.g:2953:2: ( RULE_ID )
+            // InternalIMPORTS.g:2956:1: ( ( ( ruleVersionedQualifiedName ) ) )
+            // InternalIMPORTS.g:2957:2: ( ( ruleVersionedQualifiedName ) )
             {
-            // InternalIMPORTS.g:2953:2: ( RULE_ID )
-            // InternalIMPORTS.g:2954:3: RULE_ID
+            // InternalIMPORTS.g:2957:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalIMPORTS.g:2958:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSImportImportAccess().getToIDTerminalRuleCall_10_0()); 
+               before(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalIMPORTS.g:2959:3: ( ruleVersionedQualifiedName )
+            // InternalIMPORTS.g:2960:4: ruleVersionedQualifiedName
+            {
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSImportImportAccess().getToIDTerminalRuleCall_10_0()); 
+               before(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_10_0_1()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleVersionedQualifiedName();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_10_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0()); 
             }
 
             }
@@ -9241,17 +9273,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportImport__DataSourceAssignment_12"
-    // InternalIMPORTS.g:2963:1: rule__GSSImportImport__DataSourceAssignment_12 : ( ruleGSSImportDataSource ) ;
+    // InternalIMPORTS.g:2971:1: rule__GSSImportImport__DataSourceAssignment_12 : ( ruleGSSImportDataSource ) ;
     public final void rule__GSSImportImport__DataSourceAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2967:1: ( ( ruleGSSImportDataSource ) )
-            // InternalIMPORTS.g:2968:2: ( ruleGSSImportDataSource )
+            // InternalIMPORTS.g:2975:1: ( ( ruleGSSImportDataSource ) )
+            // InternalIMPORTS.g:2976:2: ( ruleGSSImportDataSource )
             {
-            // InternalIMPORTS.g:2968:2: ( ruleGSSImportDataSource )
-            // InternalIMPORTS.g:2969:3: ruleGSSImportDataSource
+            // InternalIMPORTS.g:2976:2: ( ruleGSSImportDataSource )
+            // InternalIMPORTS.g:2977:3: ruleGSSImportDataSource
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getDataSourceGSSImportDataSourceParserRuleCall_12_0()); 
@@ -9286,17 +9318,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportImport__VirtualSizeAssignment_13"
-    // InternalIMPORTS.g:2978:1: rule__GSSImportImport__VirtualSizeAssignment_13 : ( ruleGSSImportVirtualSize ) ;
+    // InternalIMPORTS.g:2986:1: rule__GSSImportImport__VirtualSizeAssignment_13 : ( ruleGSSImportVirtualSize ) ;
     public final void rule__GSSImportImport__VirtualSizeAssignment_13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2982:1: ( ( ruleGSSImportVirtualSize ) )
-            // InternalIMPORTS.g:2983:2: ( ruleGSSImportVirtualSize )
+            // InternalIMPORTS.g:2990:1: ( ( ruleGSSImportVirtualSize ) )
+            // InternalIMPORTS.g:2991:2: ( ruleGSSImportVirtualSize )
             {
-            // InternalIMPORTS.g:2983:2: ( ruleGSSImportVirtualSize )
-            // InternalIMPORTS.g:2984:3: ruleGSSImportVirtualSize
+            // InternalIMPORTS.g:2991:2: ( ruleGSSImportVirtualSize )
+            // InternalIMPORTS.g:2992:3: ruleGSSImportVirtualSize
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getVirtualSizeGSSImportVirtualSizeParserRuleCall_13_0()); 
@@ -9331,24 +9363,40 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportDataSource__FieldRefAssignment_4"
-    // InternalIMPORTS.g:2993:1: rule__GSSImportDataSource__FieldRefAssignment_4 : ( RULE_ID ) ;
+    // InternalIMPORTS.g:3001:1: rule__GSSImportDataSource__FieldRefAssignment_4 : ( ( ruleVersionedQualifiedName ) ) ;
     public final void rule__GSSImportDataSource__FieldRefAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2997:1: ( ( RULE_ID ) )
-            // InternalIMPORTS.g:2998:2: ( RULE_ID )
+            // InternalIMPORTS.g:3005:1: ( ( ( ruleVersionedQualifiedName ) ) )
+            // InternalIMPORTS.g:3006:2: ( ( ruleVersionedQualifiedName ) )
             {
-            // InternalIMPORTS.g:2998:2: ( RULE_ID )
-            // InternalIMPORTS.g:2999:3: RULE_ID
+            // InternalIMPORTS.g:3006:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalIMPORTS.g:3007:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSImportDataSourceAccess().getFieldRefIDTerminalRuleCall_4_0()); 
+               before(grammarAccess.getGSSImportDataSourceAccess().getFieldRefGSSTmTcFormatFieldCrossReference_4_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalIMPORTS.g:3008:3: ( ruleVersionedQualifiedName )
+            // InternalIMPORTS.g:3009:4: ruleVersionedQualifiedName
+            {
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSImportDataSourceAccess().getFieldRefIDTerminalRuleCall_4_0()); 
+               before(grammarAccess.getGSSImportDataSourceAccess().getFieldRefGSSTmTcFormatFieldVersionedQualifiedNameParserRuleCall_4_0_1()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleVersionedQualifiedName();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportDataSourceAccess().getFieldRefGSSTmTcFormatFieldVersionedQualifiedNameParserRuleCall_4_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportDataSourceAccess().getFieldRefGSSTmTcFormatFieldCrossReference_4_0()); 
             }
 
             }
@@ -9372,17 +9420,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportDataSource__LeftTrimAssignment_8"
-    // InternalIMPORTS.g:3008:1: rule__GSSImportDataSource__LeftTrimAssignment_8 : ( ruleINTEGER ) ;
+    // InternalIMPORTS.g:3020:1: rule__GSSImportDataSource__LeftTrimAssignment_8 : ( ruleINTEGER ) ;
     public final void rule__GSSImportDataSource__LeftTrimAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:3012:1: ( ( ruleINTEGER ) )
-            // InternalIMPORTS.g:3013:2: ( ruleINTEGER )
+            // InternalIMPORTS.g:3024:1: ( ( ruleINTEGER ) )
+            // InternalIMPORTS.g:3025:2: ( ruleINTEGER )
             {
-            // InternalIMPORTS.g:3013:2: ( ruleINTEGER )
-            // InternalIMPORTS.g:3014:3: ruleINTEGER
+            // InternalIMPORTS.g:3025:2: ( ruleINTEGER )
+            // InternalIMPORTS.g:3026:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getLeftTrimINTEGERParserRuleCall_8_0()); 
@@ -9417,17 +9465,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportDataSource__RightTrimAssignment_12"
-    // InternalIMPORTS.g:3023:1: rule__GSSImportDataSource__RightTrimAssignment_12 : ( ruleINTEGER ) ;
+    // InternalIMPORTS.g:3035:1: rule__GSSImportDataSource__RightTrimAssignment_12 : ( ruleINTEGER ) ;
     public final void rule__GSSImportDataSource__RightTrimAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:3027:1: ( ( ruleINTEGER ) )
-            // InternalIMPORTS.g:3028:2: ( ruleINTEGER )
+            // InternalIMPORTS.g:3039:1: ( ( ruleINTEGER ) )
+            // InternalIMPORTS.g:3040:2: ( ruleINTEGER )
             {
-            // InternalIMPORTS.g:3028:2: ( ruleINTEGER )
-            // InternalIMPORTS.g:3029:3: ruleINTEGER
+            // InternalIMPORTS.g:3040:2: ( ruleINTEGER )
+            // InternalIMPORTS.g:3041:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getRightTrimINTEGERParserRuleCall_12_0()); 
@@ -9462,17 +9510,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportVirtualSize__FieldRefAssignment_4"
-    // InternalIMPORTS.g:3038:1: rule__GSSImportVirtualSize__FieldRefAssignment_4 : ( RULE_ID ) ;
+    // InternalIMPORTS.g:3050:1: rule__GSSImportVirtualSize__FieldRefAssignment_4 : ( RULE_ID ) ;
     public final void rule__GSSImportVirtualSize__FieldRefAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:3042:1: ( ( RULE_ID ) )
-            // InternalIMPORTS.g:3043:2: ( RULE_ID )
+            // InternalIMPORTS.g:3054:1: ( ( RULE_ID ) )
+            // InternalIMPORTS.g:3055:2: ( RULE_ID )
             {
-            // InternalIMPORTS.g:3043:2: ( RULE_ID )
-            // InternalIMPORTS.g:3044:3: RULE_ID
+            // InternalIMPORTS.g:3055:2: ( RULE_ID )
+            // InternalIMPORTS.g:3056:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getFieldRefIDTerminalRuleCall_4_0()); 
@@ -9503,17 +9551,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportVirtualSize__ToAssignment_8"
-    // InternalIMPORTS.g:3053:1: rule__GSSImportVirtualSize__ToAssignment_8 : ( RULE_ID ) ;
+    // InternalIMPORTS.g:3065:1: rule__GSSImportVirtualSize__ToAssignment_8 : ( RULE_ID ) ;
     public final void rule__GSSImportVirtualSize__ToAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:3057:1: ( ( RULE_ID ) )
-            // InternalIMPORTS.g:3058:2: ( RULE_ID )
+            // InternalIMPORTS.g:3069:1: ( ( RULE_ID ) )
+            // InternalIMPORTS.g:3070:2: ( RULE_ID )
             {
-            // InternalIMPORTS.g:3058:2: ( RULE_ID )
-            // InternalIMPORTS.g:3059:3: RULE_ID
+            // InternalIMPORTS.g:3070:2: ( RULE_ID )
+            // InternalIMPORTS.g:3071:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getToIDTerminalRuleCall_8_0()); 
@@ -9544,17 +9592,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportVirtualSize__AddSizeAssignment_10_2"
-    // InternalIMPORTS.g:3068:1: rule__GSSImportVirtualSize__AddSizeAssignment_10_2 : ( ruleINTEGER ) ;
+    // InternalIMPORTS.g:3080:1: rule__GSSImportVirtualSize__AddSizeAssignment_10_2 : ( ruleINTEGER ) ;
     public final void rule__GSSImportVirtualSize__AddSizeAssignment_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:3072:1: ( ( ruleINTEGER ) )
-            // InternalIMPORTS.g:3073:2: ( ruleINTEGER )
+            // InternalIMPORTS.g:3084:1: ( ( ruleINTEGER ) )
+            // InternalIMPORTS.g:3085:2: ( ruleINTEGER )
             {
-            // InternalIMPORTS.g:3073:2: ( ruleINTEGER )
-            // InternalIMPORTS.g:3074:3: ruleINTEGER
+            // InternalIMPORTS.g:3085:2: ( ruleINTEGER )
+            // InternalIMPORTS.g:3086:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getAddSizeINTEGERParserRuleCall_10_2_0()); 
@@ -9589,17 +9637,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportVirtualSize__UnitAssignment_11_2"
-    // InternalIMPORTS.g:3083:1: rule__GSSImportVirtualSize__UnitAssignment_11_2 : ( ruleGSSImportUnit ) ;
+    // InternalIMPORTS.g:3095:1: rule__GSSImportVirtualSize__UnitAssignment_11_2 : ( ruleGSSImportUnit ) ;
     public final void rule__GSSImportVirtualSize__UnitAssignment_11_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:3087:1: ( ( ruleGSSImportUnit ) )
-            // InternalIMPORTS.g:3088:2: ( ruleGSSImportUnit )
+            // InternalIMPORTS.g:3099:1: ( ( ruleGSSImportUnit ) )
+            // InternalIMPORTS.g:3100:2: ( ruleGSSImportUnit )
             {
-            // InternalIMPORTS.g:3088:2: ( ruleGSSImportUnit )
-            // InternalIMPORTS.g:3089:3: ruleGSSImportUnit
+            // InternalIMPORTS.g:3100:2: ( ruleGSSImportUnit )
+            // InternalIMPORTS.g:3101:3: ruleGSSImportUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getUnitGSSImportUnitEnumRuleCall_11_2_0()); 

@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.filters;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -145,30 +146,30 @@ public interface GSSFilterBoolVar extends EObject {
 	boolean isSetConstantType();
 
 	/**
-	 * Returns the value of the '<em><b>Field Ref</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Field Ref</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Field Ref</em>' containment reference.
-	 * @see #setFieldRef(GSSFilterFieldRef)
+	 * @return the value of the '<em>Field Ref</em>' reference.
+	 * @see #setFieldRef(GSSTmTcFormatField)
 	 * @see es.uah.aut.srg.gss.filters.filtersPackage#getGSSFilterBoolVar_FieldRef()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSFilterFieldRef getFieldRef();
+	GSSTmTcFormatField getFieldRef();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.filters.GSSFilterBoolVar#getFieldRef <em>Field Ref</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.filters.GSSFilterBoolVar#getFieldRef <em>Field Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Field Ref</em>' containment reference.
+	 * @param value the new value of the '<em>Field Ref</em>' reference.
 	 * @see #getFieldRef()
 	 * @generated
 	 */
-	void setFieldRef(GSSFilterFieldRef value);
+	void setFieldRef(GSSTmTcFormatField value);
 
 	/**
 	 * Returns the value of the '<em><b>Op</b></em>' containment reference.

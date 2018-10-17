@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.imports;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -32,30 +33,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface GSSImportDataSource extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Field Ref</b></em>' attribute.
+	 * Returns the value of the '<em><b>Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Field Ref</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Field Ref</em>' attribute.
-	 * @see #setFieldRef(String)
+	 * @return the value of the '<em>Field Ref</em>' reference.
+	 * @see #setFieldRef(GSSTmTcFormatField)
 	 * @see es.uah.aut.srg.gss.imports.importsPackage#getGSSImportDataSource_FieldRef()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getFieldRef();
+	GSSTmTcFormatField getFieldRef();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.imports.GSSImportDataSource#getFieldRef <em>Field Ref</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.imports.GSSImportDataSource#getFieldRef <em>Field Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Field Ref</em>' attribute.
+	 * @param value the new value of the '<em>Field Ref</em>' reference.
 	 * @see #getFieldRef()
 	 * @generated
 	 */
-	void setFieldRef(String value);
+	void setFieldRef(GSSTmTcFormatField value);
 
 	/**
 	 * Returns the value of the '<em><b>Left Trim</b></em>' attribute.

@@ -10,7 +10,6 @@
  */
 package es.uah.aut.srg.gss.filters.impl;
 
-import es.uah.aut.srg.gss.filters.GSSFilterAIFieldRefs;
 import es.uah.aut.srg.gss.filters.GSSFilterBoolVarFromGroupedArrayItem;
 import es.uah.aut.srg.gss.filters.GSSFilterConstant;
 import es.uah.aut.srg.gss.filters.GSSFilterConstantType;
@@ -19,6 +18,7 @@ import es.uah.aut.srg.gss.filters.GSSFilterSelect;
 import es.uah.aut.srg.gss.filters.GSSFilterSelectLine;
 import es.uah.aut.srg.gss.filters.filtersPackage;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -131,14 +131,14 @@ public class GSSFilterBoolVarFromGroupedArrayItemImpl extends MinimalEObjectImpl
 	protected String group = GROUP_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getAIFieldRefs() <em>AI Field Refs</em>}' containment reference.
+	 * The cached value of the '{@link #getAIFieldRefs() <em>AI Field Refs</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAIFieldRefs()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSFilterAIFieldRefs aiFieldRefs;
+	protected GSSTmTcFormatAField aiFieldRefs;
 
 	/**
 	 * The cached value of the '{@link #getOp() <em>Op</em>}' containment reference.
@@ -288,7 +288,15 @@ public class GSSFilterBoolVarFromGroupedArrayItemImpl extends MinimalEObjectImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFilterAIFieldRefs getAIFieldRefs() {
+	public GSSTmTcFormatAField getAIFieldRefs() {
+		if (aiFieldRefs != null && aiFieldRefs.eIsProxy()) {
+			InternalEObject oldAIFieldRefs = (InternalEObject)aiFieldRefs;
+			aiFieldRefs = (GSSTmTcFormatAField)eResolveProxy(oldAIFieldRefs);
+			if (aiFieldRefs != oldAIFieldRefs) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__AI_FIELD_REFS, oldAIFieldRefs, aiFieldRefs));
+			}
+		}
 		return aiFieldRefs;
 	}
 
@@ -297,14 +305,8 @@ public class GSSFilterBoolVarFromGroupedArrayItemImpl extends MinimalEObjectImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAIFieldRefs(GSSFilterAIFieldRefs newAIFieldRefs, NotificationChain msgs) {
-		GSSFilterAIFieldRefs oldAIFieldRefs = aiFieldRefs;
-		aiFieldRefs = newAIFieldRefs;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__AI_FIELD_REFS, oldAIFieldRefs, newAIFieldRefs);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public GSSTmTcFormatAField basicGetAIFieldRefs() {
+		return aiFieldRefs;
 	}
 
 	/**
@@ -312,18 +314,11 @@ public class GSSFilterBoolVarFromGroupedArrayItemImpl extends MinimalEObjectImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAIFieldRefs(GSSFilterAIFieldRefs newAIFieldRefs) {
-		if (newAIFieldRefs != aiFieldRefs) {
-			NotificationChain msgs = null;
-			if (aiFieldRefs != null)
-				msgs = ((InternalEObject)aiFieldRefs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__AI_FIELD_REFS, null, msgs);
-			if (newAIFieldRefs != null)
-				msgs = ((InternalEObject)newAIFieldRefs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__AI_FIELD_REFS, null, msgs);
-			msgs = basicSetAIFieldRefs(newAIFieldRefs, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__AI_FIELD_REFS, newAIFieldRefs, newAIFieldRefs));
+	public void setAIFieldRefs(GSSTmTcFormatAField newAIFieldRefs) {
+		GSSTmTcFormatAField oldAIFieldRefs = aiFieldRefs;
+		aiFieldRefs = newAIFieldRefs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__AI_FIELD_REFS, oldAIFieldRefs, aiFieldRefs));
 	}
 
 	/**
@@ -506,8 +501,6 @@ public class GSSFilterBoolVarFromGroupedArrayItemImpl extends MinimalEObjectImpl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__AI_FIELD_REFS:
-				return basicSetAIFieldRefs(null, msgs);
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__OP:
 				return basicSetOp(null, msgs);
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__CONSTANT:
@@ -537,7 +530,8 @@ public class GSSFilterBoolVarFromGroupedArrayItemImpl extends MinimalEObjectImpl
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__GROUP:
 				return getGroup();
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__AI_FIELD_REFS:
-				return getAIFieldRefs();
+				if (resolve) return getAIFieldRefs();
+				return basicGetAIFieldRefs();
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__OP:
 				return getOp();
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__CONSTANT:
@@ -571,7 +565,7 @@ public class GSSFilterBoolVarFromGroupedArrayItemImpl extends MinimalEObjectImpl
 				setGroup((String)newValue);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__AI_FIELD_REFS:
-				setAIFieldRefs((GSSFilterAIFieldRefs)newValue);
+				setAIFieldRefs((GSSTmTcFormatAField)newValue);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__OP:
 				setOp((GSSFilterFieldOp)newValue);
@@ -610,7 +604,7 @@ public class GSSFilterBoolVarFromGroupedArrayItemImpl extends MinimalEObjectImpl
 				setGroup(GROUP_EDEFAULT);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__AI_FIELD_REFS:
-				setAIFieldRefs((GSSFilterAIFieldRefs)null);
+				setAIFieldRefs((GSSTmTcFormatAField)null);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__OP:
 				setOp((GSSFilterFieldOp)null);

@@ -343,19 +343,20 @@ ruleGSSImportImport returns [EObject current=null]
 		}
 		(
 			(
-				lv_from_14_0=RULE_ID
 				{
-					newLeafNode(lv_from_14_0, grammarAccess.getGSSImportImportAccess().getFromIDTerminalRuleCall_6_0());
+					/* */
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getGSSImportImportRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"from",
-						lv_from_14_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0());
+				}
+				ruleVersionedQualifiedName
+				{
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -373,19 +374,20 @@ ruleGSSImportImport returns [EObject current=null]
 		}
 		(
 			(
-				lv_to_18_0=RULE_ID
 				{
-					newLeafNode(lv_to_18_0, grammarAccess.getGSSImportImportAccess().getToIDTerminalRuleCall_10_0());
+					/* */
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getGSSImportImportRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"to",
-						lv_to_18_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0());
+				}
+				ruleVersionedQualifiedName
+				{
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -479,19 +481,20 @@ ruleGSSImportDataSource returns [EObject current=null]
 		}
 		(
 			(
-				lv_FieldRef_4_0=RULE_ID
 				{
-					newLeafNode(lv_FieldRef_4_0, grammarAccess.getGSSImportDataSourceAccess().getFieldRefIDTerminalRuleCall_4_0());
+					/* */
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getGSSImportDataSourceRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"FieldRef",
-						lv_FieldRef_4_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSImportDataSourceAccess().getFieldRefGSSTmTcFormatFieldCrossReference_4_0());
+				}
+				ruleVersionedQualifiedName
+				{
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)

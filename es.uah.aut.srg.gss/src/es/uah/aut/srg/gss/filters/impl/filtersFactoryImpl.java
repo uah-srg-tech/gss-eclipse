@@ -68,15 +68,12 @@ public class filtersFactoryImpl extends EFactoryImpl implements filtersFactory {
 			case filtersPackage.GSS_FILTER_MAXTERM_FILTER: return createGSSFilterMaxtermFilter();
 			case filtersPackage.GSS_FILTER_MINTERM_FILTER: return createGSSFilterMintermFilter();
 			case filtersPackage.GSS_FILTER_BOOL_VAR: return createGSSFilterBoolVar();
-			case filtersPackage.GSS_FILTER_FIELD_REF: return createGSSFilterFieldRef();
 			case filtersPackage.GSS_FILTER_FIELD_OP: return createGSSFilterFieldOp();
 			case filtersPackage.GSS_FILTER_CONSTANT: return createGSSFilterConstant();
 			case filtersPackage.GSS_FILTER_SELECT: return createGSSFilterSelect();
 			case filtersPackage.GSS_FILTER_SELECT_LINE: return createGSSFilterSelectLine();
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM: return createGSSFilterBoolVarFromArrayItem();
-			case filtersPackage.GSS_FILTER_AI_FIELD_REF: return createGSSFilterAIFieldRef();
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM: return createGSSFilterBoolVarFromGroupedArrayItem();
-			case filtersPackage.GSS_FILTER_AI_FIELD_REFS: return createGSSFilterAIFieldRefs();
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FDIC: return createGSSFilterBoolVarFDIC();
 			case filtersPackage.GSS_FILTER_MAXTERM: return createGSSFilterMaxterm();
 			case filtersPackage.GSS_FILTER_MINTERM: return createGSSFilterMinterm();
@@ -159,16 +156,6 @@ public class filtersFactoryImpl extends EFactoryImpl implements filtersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFilterFieldRef createGSSFilterFieldRef() {
-		GSSFilterFieldRefImpl gssFilterFieldRef = new GSSFilterFieldRefImpl();
-		return gssFilterFieldRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public GSSFilterFieldOp createGSSFilterFieldOp() {
 		GSSFilterFieldOpImpl gssFilterFieldOp = new GSSFilterFieldOpImpl();
 		return gssFilterFieldOp;
@@ -219,29 +206,9 @@ public class filtersFactoryImpl extends EFactoryImpl implements filtersFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFilterAIFieldRef createGSSFilterAIFieldRef() {
-		GSSFilterAIFieldRefImpl gssFilterAIFieldRef = new GSSFilterAIFieldRefImpl();
-		return gssFilterAIFieldRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public GSSFilterBoolVarFromGroupedArrayItem createGSSFilterBoolVarFromGroupedArrayItem() {
 		GSSFilterBoolVarFromGroupedArrayItemImpl gssFilterBoolVarFromGroupedArrayItem = new GSSFilterBoolVarFromGroupedArrayItemImpl();
 		return gssFilterBoolVarFromGroupedArrayItem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSFilterAIFieldRefs createGSSFilterAIFieldRefs() {
-		GSSFilterAIFieldRefsImpl gssFilterAIFieldRefs = new GSSFilterAIFieldRefsImpl();
-		return gssFilterAIFieldRefs;
 	}
 
 	/**
