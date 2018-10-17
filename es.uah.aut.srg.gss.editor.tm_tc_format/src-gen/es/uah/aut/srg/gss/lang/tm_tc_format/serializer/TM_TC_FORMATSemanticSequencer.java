@@ -543,8 +543,8 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_VR_FIELD_SIZE__FID));
 			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_VR_FIELD_SIZE__PFID) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_VR_FIELD_SIZE__PFID));
-			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_VR_FIELD_SIZE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_VR_FIELD_SIZE__NAME));
+			if (transientValues.isValueTransient(semanticObject, commonPackage.Literals.GSS_MODEL_OBJECT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, commonPackage.Literals.GSS_MODEL_OBJECT__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getFidINTEGERParserRuleCall_4_0(), semanticObject.getFid());

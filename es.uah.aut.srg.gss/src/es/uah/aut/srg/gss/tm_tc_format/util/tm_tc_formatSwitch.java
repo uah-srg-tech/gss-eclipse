@@ -12,6 +12,7 @@ package es.uah.aut.srg.gss.tm_tc_format.util;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
 
+import es.uah.aut.srg.gss.common.GSSModelObject;
 import es.uah.aut.srg.gss.tm_tc_format.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -86,6 +87,7 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FIELD: {
 				GSSTmTcFormatField gssTmTcFormatField = (GSSTmTcFormatField)theEObject;
 				T result = caseGSSTmTcFormatField(gssTmTcFormatField);
+				if (result == null) result = caseGSSModelObject(gssTmTcFormatField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -93,6 +95,7 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 				GSSTmTcFormatCSField gssTmTcFormatCSField = (GSSTmTcFormatCSField)theEObject;
 				T result = caseGSSTmTcFormatCSField(gssTmTcFormatCSField);
 				if (result == null) result = caseGSSTmTcFormatField(gssTmTcFormatCSField);
+				if (result == null) result = caseGSSModelObject(gssTmTcFormatCSField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -100,6 +103,7 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 				GSSTmTcFormatCSFormulaField gssTmTcFormatCSFormulaField = (GSSTmTcFormatCSFormulaField)theEObject;
 				T result = caseGSSTmTcFormatCSFormulaField(gssTmTcFormatCSFormulaField);
 				if (result == null) result = caseGSSTmTcFormatField(gssTmTcFormatCSFormulaField);
+				if (result == null) result = caseGSSModelObject(gssTmTcFormatCSFormulaField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -107,6 +111,7 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 				GSSTmTcFormatVSField gssTmTcFormatVSField = (GSSTmTcFormatVSField)theEObject;
 				T result = caseGSSTmTcFormatVSField(gssTmTcFormatVSField);
 				if (result == null) result = caseGSSTmTcFormatField(gssTmTcFormatVSField);
+				if (result == null) result = caseGSSModelObject(gssTmTcFormatVSField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -114,6 +119,7 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 				GSSTmTcFormatVRFieldSize gssTmTcFormatVRFieldSize = (GSSTmTcFormatVRFieldSize)theEObject;
 				T result = caseGSSTmTcFormatVRFieldSize(gssTmTcFormatVRFieldSize);
 				if (result == null) result = caseGSSTmTcFormatField(gssTmTcFormatVRFieldSize);
+				if (result == null) result = caseGSSModelObject(gssTmTcFormatVRFieldSize);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -121,6 +127,7 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 				GSSTmTcFormatFDICField gssTmTcFormatFDICField = (GSSTmTcFormatFDICField)theEObject;
 				T result = caseGSSTmTcFormatFDICField(gssTmTcFormatFDICField);
 				if (result == null) result = caseGSSTmTcFormatField(gssTmTcFormatFDICField);
+				if (result == null) result = caseGSSModelObject(gssTmTcFormatFDICField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -133,6 +140,7 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD: {
 				GSSTmTcFormatAIField gssTmTcFormatAIField = (GSSTmTcFormatAIField)theEObject;
 				T result = caseGSSTmTcFormatAIField(gssTmTcFormatAIField);
+				if (result == null) result = caseGSSModelObject(gssTmTcFormatAIField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -539,6 +547,21 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSModelElement(GSSModelElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Model Object</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Model Object</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSModelObject(GSSModelObject object) {
 		return null;
 	}
 
