@@ -10,6 +10,14 @@
  ******************************************************************************/
 package es.uah.aut.srg.gss.lang.export.scoping;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.xtext.scoping.IScope;
+
+import es.uah.aut.srg.gss.export.GSSExportExport;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
 import es.uah.aut.srg.gss.xtext.GSSAbstractScopeProvider;
 
 /**
@@ -19,5 +27,29 @@ import es.uah.aut.srg.gss.xtext.GSSAbstractScopeProvider;
  * on how and when to use it.
  */
 public class EXPORTScopeProvider extends GSSAbstractScopeProvider  {
+	
+	public IScope scope_GSSTmTcFormatField(final GSSExportExport export, EReference reference) {
+		
+		if (export.getTo() == null) {
+			return IScope.NULLSCOPE;
+		}
+		
+		Set<GSSTmTcFormatField> fields = new HashSet<GSSTmTcFormatField>();
+		
+		fields.addAll(export.getTo().getCSField());
+		fields.addAll(export.getTo().getCSFormulaField());
+		fields.addAll(export.getTo().getFDICField());
+		fields.addAll(export.getTo().getVRFieldSize());
+		fields.addAll(export.getTo().getVSField());
+		
+		return getSimpleObjectScope(fields);
+		
+	}
+	public IScope scope_GSSTmTcFormatAIField(final GSSExportExport export, EReference reference) {
 
+		if (export.getTo() == null) {
+			return IScope.NULLSCOPE;
+		}
+		return getSimpleObjectScope(export.getTo().getAIField());
+	}
 }

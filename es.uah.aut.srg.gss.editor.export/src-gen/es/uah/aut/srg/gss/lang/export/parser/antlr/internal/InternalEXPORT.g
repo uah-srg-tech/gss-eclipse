@@ -1330,7 +1330,7 @@ ruleGSSExportSettingFromConst returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportSettingFromConstAccess().getToFieldRefGSSTmTcFormatFieldCrossReference_8_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1427,7 +1427,7 @@ ruleGSSExportSettingFromSize returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportSettingFromSizeAccess().getToFieldRefGSSTmTcFormatFieldCrossReference_8_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1523,7 +1523,7 @@ ruleGSSExportSettingFromFile returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportSettingFromFileAccess().getToFieldRefGSSTmTcFormatFieldCrossReference_8_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1688,7 +1688,7 @@ ruleGSSExportSettingFromField returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportSettingFromFieldAccess().getFieldRefGSSTmTcFormatFieldCrossReference_4_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1719,7 +1719,7 @@ ruleGSSExportSettingFromField returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportSettingFromFieldAccess().getToFieldRefGSSTmTcFormatFieldCrossReference_8_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1816,7 +1816,7 @@ ruleGSSExportSettingAIFromConst returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportSettingAIFromConstAccess().getToFieldRefGSSTmTcFormatAIFieldCrossReference_8_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1912,7 +1912,7 @@ ruleGSSExportSettingAIFromFile returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportSettingAIFromFileAccess().getToFieldRefGSSTmTcFormatAIFieldCrossReference_8_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -2391,6 +2391,63 @@ ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrData
 			$current.merge(kw);
 			newLeafNode(kw, grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3());
 		}
+	)
+;
+
+// Entry rule entryRuleVersionedQualifiedReferenceName
+entryRuleVersionedQualifiedReferenceName returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameRule()); }
+	iv_ruleVersionedQualifiedReferenceName=ruleVersionedQualifiedReferenceName
+	{ $current=$iv_ruleVersionedQualifiedReferenceName.current.getText(); }
+	EOF;
+
+// Rule VersionedQualifiedReferenceName
+ruleVersionedQualifiedReferenceName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameAccess().getVersionedQualifiedNameParserRuleCall_0_0());
+			}
+			this_VersionedQualifiedName_0=ruleVersionedQualifiedName
+			{
+				$current.merge(this_VersionedQualifiedName_0);
+			}
+			{
+				afterParserOrEnumRuleCall();
+			}
+			kw='::'
+			{
+				$current.merge(kw);
+				newLeafNode(kw, grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_0_1());
+			}
+		)?
+		this_ID_2=RULE_ID
+		{
+			$current.merge(this_ID_2);
+		}
+		{
+			newLeafNode(this_ID_2, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_1());
+		}
+		(
+			kw='::'
+			{
+				$current.merge(kw);
+				newLeafNode(kw, grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_2_0());
+			}
+			this_ID_4=RULE_ID
+			{
+				$current.merge(this_ID_4);
+			}
+			{
+				newLeafNode(this_ID_4, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_2_1());
+			}
+		)*
 	)
 ;
 
