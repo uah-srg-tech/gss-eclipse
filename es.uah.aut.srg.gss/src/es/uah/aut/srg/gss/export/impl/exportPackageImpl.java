@@ -956,7 +956,7 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssExportExportEClass, GSSExportExport.class, "GSSExportExport", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGSSExportExport_From(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "from", null, 1, 1, GSSExportExport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSExportExport_From(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "from", null, 0, 1, GSSExportExport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSExportExport_To(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "to", null, 1, 1, GSSExportExport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSExportExport_Sizes(), this.getGSSExportSizes(), null, "Sizes", null, 0, 1, GSSExportExport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSExportExport_Settings(), this.getGSSExportSettings(), null, "settings", null, 1, 1, GSSExportExport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

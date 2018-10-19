@@ -71,7 +71,7 @@ public interface GSSImportImport extends GSSModelElement {
 	 * @return the value of the '<em>To</em>' reference.
 	 * @see #setTo(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.imports.importsPackage#getGSSImportImport_To()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	GSSTmTcFormatTmTcFormat getTo();

@@ -10,6 +10,15 @@
  ******************************************************************************/
 package es.uah.aut.srg.gss.lang.filters.scoping;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.xtext.scoping.IScope;
+
+import es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter;
+import es.uah.aut.srg.gss.filters.GSSFilterMintermFilter;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
 import es.uah.aut.srg.gss.xtext.GSSAbstractScopeProvider;
 
 /**
@@ -20,4 +29,73 @@ import es.uah.aut.srg.gss.xtext.GSSAbstractScopeProvider;
  */
 public class FILTERSScopeProvider extends GSSAbstractScopeProvider {
 
+	public IScope scope_GSSTmTcFormatField(final GSSFilterMaxtermFilter filter, EReference reference) {
+		
+		if (filter.getFormatFile() == null) {
+			return IScope.NULLSCOPE;
+		}
+		
+		Set<GSSTmTcFormatField> fields = new HashSet<GSSTmTcFormatField>();
+		
+		fields.addAll(filter.getFormatFile().getCSField());
+		fields.addAll(filter.getFormatFile().getCSFormulaField());
+		fields.addAll(filter.getFormatFile().getFDICField());
+		fields.addAll(filter.getFormatFile().getVRFieldSize());
+		fields.addAll(filter.getFormatFile().getVSField());
+		
+		return getSimpleObjectScope(fields);
+	}
+
+	public IScope scope_GSSTmTcFormatField(final GSSFilterMintermFilter filter, EReference reference) {
+		
+		if (filter.getFormatFile() == null) {
+			return IScope.NULLSCOPE;
+		}
+		
+		Set<GSSTmTcFormatField> fields = new HashSet<GSSTmTcFormatField>();
+		
+		fields.addAll(filter.getFormatFile().getCSField());
+		fields.addAll(filter.getFormatFile().getCSFormulaField());
+		fields.addAll(filter.getFormatFile().getFDICField());
+		fields.addAll(filter.getFormatFile().getVRFieldSize());
+		fields.addAll(filter.getFormatFile().getVSField());
+		
+		return getSimpleObjectScope(fields);
+	}
+	
+	public IScope scope_GSSTmTcAIFormatField(final GSSFilterMaxtermFilter filter, EReference reference) {
+		
+		if (filter.getFormatFile() == null) {
+			return IScope.NULLSCOPE;
+		}
+		
+		return getSimpleObjectScope(filter.getFormatFile().getAIField());
+	}
+	
+	public IScope scope_GSSTmTcAIFormatField(final GSSFilterMintermFilter filter, EReference reference) {
+		
+		if (filter.getFormatFile() == null) {
+			return IScope.NULLSCOPE;
+		}
+		
+		return getSimpleObjectScope(filter.getFormatFile().getAIField());
+	}
+	
+	public IScope scope_GSSTmTcFormatFDICField(final GSSFilterMaxtermFilter filter, EReference reference) {
+		
+		if (filter.getFormatFile() == null) {
+			return IScope.NULLSCOPE;
+		}
+		
+		return getSimpleObjectScope(filter.getFormatFile().getFDICField());
+	}
+	
+	public IScope scope_GSSTmTcFormatFDICField(final GSSFilterMintermFilter filter, EReference reference) {
+		
+		if (filter.getFormatFile() == null) {
+			return IScope.NULLSCOPE;
+		}
+		
+		return getSimpleObjectScope(filter.getFormatFile().getFDICField());
+	}
 }

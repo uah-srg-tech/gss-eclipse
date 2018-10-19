@@ -116,9 +116,11 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3_1_3 = (Keyword)cGroup_3_1.eContents().get(3);
 		private final Keyword cFromKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cColonEqualsSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cFromAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final CrossReference cFromGSSTmTcFormatTmTcFormatCrossReference_6_0 = (CrossReference)cFromAssignment_6.eContents().get(0);
-		private final RuleCall cFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_0_1 = (RuleCall)cFromGSSTmTcFormatTmTcFormatCrossReference_6_0.eContents().get(1);
+		private final Alternatives cAlternatives_6 = (Alternatives)cGroup.eContents().get(6);
+		private final Keyword cNULLKeyword_6_0 = (Keyword)cAlternatives_6.eContents().get(0);
+		private final Assignment cFromAssignment_6_1 = (Assignment)cAlternatives_6.eContents().get(1);
+		private final CrossReference cFromGSSTmTcFormatTmTcFormatCrossReference_6_1_0 = (CrossReference)cFromAssignment_6_1.eContents().get(0);
+		private final RuleCall cFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_1_0_1 = (RuleCall)cFromGSSTmTcFormatTmTcFormatCrossReference_6_1_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cToKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		private final Keyword cColonEqualsSignKeyword_9 = (Keyword)cGroup.eContents().get(9);
@@ -139,7 +141,7 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSExportExport'
 		//	name=ID
 		//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';')
-		//	'from' ':=' from=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
+		//	'from' ':=' ('NULL' | from=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]) ';'
 		//	'to' ':=' to=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 		//	Sizes=GSSExportSizes?
 		//	settings=GSSExportSettings
@@ -148,7 +150,7 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSExportExport' name=ID '{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') 'from' ':='
-		//from=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';' 'to' ':='
+		//('NULL' | from=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]) ';' 'to' ':='
 		//to=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';' Sizes=GSSExportSizes? settings=GSSExportSettings
 		//activateDICs=GSSExportActivateDICs? '}' ';'
 		public Group getGroup() { return cGroup; }
@@ -210,14 +212,20 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_5() { return cColonEqualsSignKeyword_5; }
 		
+		//('NULL' | from=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName])
+		public Alternatives getAlternatives_6() { return cAlternatives_6; }
+		
+		//'NULL'
+		public Keyword getNULLKeyword_6_0() { return cNULLKeyword_6_0; }
+		
 		//from=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
-		public Assignment getFromAssignment_6() { return cFromAssignment_6; }
+		public Assignment getFromAssignment_6_1() { return cFromAssignment_6_1; }
 		
 		//[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
-		public CrossReference getFromGSSTmTcFormatTmTcFormatCrossReference_6_0() { return cFromGSSTmTcFormatTmTcFormatCrossReference_6_0; }
+		public CrossReference getFromGSSTmTcFormatTmTcFormatCrossReference_6_1_0() { return cFromGSSTmTcFormatTmTcFormatCrossReference_6_1_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_0_1() { return cFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_0_1; }
+		public RuleCall getFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_1_0_1() { return cFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_1_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_7() { return cSemicolonKeyword_7; }
@@ -1895,7 +1903,7 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSExportExport'
 	//	name=ID
 	//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';')
-	//	'from' ':=' from=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
+	//	'from' ':=' ('NULL' | from=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]) ';'
 	//	'to' ':=' to=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 	//	Sizes=GSSExportSizes?
 	//	settings=GSSExportSettings

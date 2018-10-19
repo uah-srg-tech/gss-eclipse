@@ -18,12 +18,12 @@ GSSModelFileImport returns common::GSSModelFileImport:
 
 GSSImportImport returns GSSImportImport:
 	'GSSImportImport'
-	name=EString
+	name = ID
 	'{'
 		(('uri' ':=' uri=QualifiedName ';')
 		& ('version' ':=' version=Version ';'))
 		'from' ':=' from=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
-		'to' ':=' to=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
+		'to' ':=' ('NULL' | to=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]) ';'
 		(dataSource+=GSSImportDataSource)+ 
 		(virtualSize=GSSImportVirtualSize)?
 	'}' ';'
@@ -31,7 +31,7 @@ GSSImportImport returns GSSImportImport:
 
 GSSImportDataSource returns GSSImportDataSource:
 	'GSSImportDataSource' '{'
-		'FieldRef' ':=' FieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedName] ';'
+		'FieldRef' ':=' FieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedReferenceName] ';'
 		'leftTrim' ':=' leftTrim=INTEGER ';'
 		'rightTrim' ':=' rightTrim=INTEGER ';'
 	'}' ';'
@@ -39,8 +39,8 @@ GSSImportDataSource returns GSSImportDataSource:
 
 GSSImportVirtualSize returns GSSImportVirtualSize:
 	'GSSImportVirtualSize' '{'
-		'FieldRef' ':=' FieldRef=ID ';'
-		'to' ':=' to=ID ';'
+		'FieldRef' ':=' FieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedReferenceName] ';'
+		'to' ':=' to=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedReferenceName] ';'
 		('addSize' ':=' addSize=INTEGER ';')?
 		('unit' ':=' unit=GSSImportUnit ';')?
 	'}' ';'

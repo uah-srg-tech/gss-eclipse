@@ -42,6 +42,7 @@ public class IMPORTSParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getGSSImportImportAccess().getAlternatives_10(), "rule__GSSImportImport__Alternatives_10");
 					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 					put(grammarAccess.getVersionAccess().getAlternatives_0(), "rule__Version__Alternatives_0");
 					put(grammarAccess.getVersionAccess().getAlternatives_1_1(), "rule__Version__Alternatives_1_1");
@@ -78,7 +79,7 @@ public class IMPORTSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSImportImportAccess().getUriAssignment_3_0_2(), "rule__GSSImportImport__UriAssignment_3_0_2");
 					put(grammarAccess.getGSSImportImportAccess().getVersionAssignment_3_1_2(), "rule__GSSImportImport__VersionAssignment_3_1_2");
 					put(grammarAccess.getGSSImportImportAccess().getFromAssignment_6(), "rule__GSSImportImport__FromAssignment_6");
-					put(grammarAccess.getGSSImportImportAccess().getToAssignment_10(), "rule__GSSImportImport__ToAssignment_10");
+					put(grammarAccess.getGSSImportImportAccess().getToAssignment_10_1(), "rule__GSSImportImport__ToAssignment_10_1");
 					put(grammarAccess.getGSSImportImportAccess().getDataSourceAssignment_12(), "rule__GSSImportImport__DataSourceAssignment_12");
 					put(grammarAccess.getGSSImportImportAccess().getVirtualSizeAssignment_13(), "rule__GSSImportImport__VirtualSizeAssignment_13");
 					put(grammarAccess.getGSSImportDataSourceAccess().getFieldRefAssignment_4(), "rule__GSSImportDataSource__FieldRefAssignment_4");

@@ -152,7 +152,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     (
 	 *         name=ID 
 	 *         (uri=QualifiedName | version=Version)+ 
-	 *         from=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName] 
+	 *         from=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         to=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName] 
 	 *         Sizes=GSSExportSizes? 
 	 *         settings=GSSExportSettings 

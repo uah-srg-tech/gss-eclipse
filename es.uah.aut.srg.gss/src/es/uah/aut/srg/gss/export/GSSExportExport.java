@@ -45,7 +45,7 @@ public interface GSSExportExport extends GSSModelElement {
 	 * @return the value of the '<em>From</em>' reference.
 	 * @see #setFrom(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportExport_From()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	GSSTmTcFormatTmTcFormat getFrom();

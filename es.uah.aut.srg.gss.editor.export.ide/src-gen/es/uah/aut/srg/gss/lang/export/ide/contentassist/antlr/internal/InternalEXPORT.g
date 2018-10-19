@@ -598,6 +598,27 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__GSSExportExport__Alternatives_6
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getGSSExportExportAccess().getNULLKeyword_6_0()); }
+		'NULL'
+		{ after(grammarAccess.getGSSExportExportAccess().getNULLKeyword_6_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSExportExportAccess().getFromAssignment_6_1()); }
+		(rule__GSSExportExport__FromAssignment_6_1)
+		{ after(grammarAccess.getGSSExportExportAccess().getFromAssignment_6_1()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__GSSExportSizes__Alternatives_3
 	@init {
 		int stackSize = keepStackSize();
@@ -1096,9 +1117,9 @@ rule__GSSExportExport__Group__6__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSExportExportAccess().getFromAssignment_6()); }
-	(rule__GSSExportExport__FromAssignment_6)
-	{ after(grammarAccess.getGSSExportExportAccess().getFromAssignment_6()); }
+	{ before(grammarAccess.getGSSExportExportAccess().getAlternatives_6()); }
+	(rule__GSSExportExport__Alternatives_6)
+	{ after(grammarAccess.getGSSExportExportAccess().getAlternatives_6()); }
 )
 ;
 finally {
@@ -8015,19 +8036,19 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSExportExport__FromAssignment_6
+rule__GSSExportExport__FromAssignment_6_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_0()); }
+		{ before(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_1_0()); }
 		(
-			{ before(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_0_1()); }
+			{ before(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_1_0_1()); }
 			ruleVersionedQualifiedName
-			{ after(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_0_1()); }
+			{ after(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_1_0_1()); }
 		)
-		{ after(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_0()); }
+		{ after(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_1_0()); }
 	)
 ;
 finally {

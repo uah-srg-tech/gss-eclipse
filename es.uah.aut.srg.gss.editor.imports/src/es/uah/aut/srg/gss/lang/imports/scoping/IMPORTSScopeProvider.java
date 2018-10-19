@@ -10,6 +10,14 @@
  ******************************************************************************/
 package es.uah.aut.srg.gss.lang.imports.scoping;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.xtext.scoping.IScope;
+
+import es.uah.aut.srg.gss.imports.GSSImportImport;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
 import es.uah.aut.srg.gss.xtext.GSSAbstractScopeProvider;
 
 /**
@@ -20,4 +28,21 @@ import es.uah.aut.srg.gss.xtext.GSSAbstractScopeProvider;
  */
 public class IMPORTSScopeProvider extends GSSAbstractScopeProvider  {
 
+	public IScope scope_GSSTmTcFormatField(final GSSImportImport imports, EReference reference) {
+		
+		if (imports.getFrom() == null) {
+			return IScope.NULLSCOPE;
+		}
+		
+		Set<GSSTmTcFormatField> fields = new HashSet<GSSTmTcFormatField>();
+		
+		fields.addAll(imports.getFrom().getCSField());
+		fields.addAll(imports.getFrom().getCSFormulaField());
+		fields.addAll(imports.getFrom().getFDICField());
+		fields.addAll(imports.getFrom().getVRFieldSize());
+		fields.addAll(imports.getFrom().getVSField());
+		
+		return getSimpleObjectScope(fields);
+		
+	}
 }
