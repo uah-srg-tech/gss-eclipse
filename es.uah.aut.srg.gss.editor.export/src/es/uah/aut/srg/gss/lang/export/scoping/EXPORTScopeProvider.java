@@ -30,26 +30,44 @@ public class EXPORTScopeProvider extends GSSAbstractScopeProvider  {
 	
 	public IScope scope_GSSTmTcFormatField(final GSSExportExport export, EReference reference) {
 		
-		if (export.getTo() == null) {
-			return IScope.NULLSCOPE;
-		}
-		
 		Set<GSSTmTcFormatField> fields = new HashSet<GSSTmTcFormatField>();
 		
-		fields.addAll(export.getTo().getCSField());
-		fields.addAll(export.getTo().getCSFormulaField());
-		fields.addAll(export.getTo().getFDICField());
-		fields.addAll(export.getTo().getVRFieldSize());
-		fields.addAll(export.getTo().getVSField());
-		
+		if(reference.getName() == "toFieldRef") {
+			if (export.getTo() == null) {
+				return IScope.NULLSCOPE;
+			}
+			
+			fields.addAll(export.getTo().getCSField());
+			fields.addAll(export.getTo().getCSFormulaField());
+			fields.addAll(export.getTo().getFDICField());
+			fields.addAll(export.getTo().getVRFieldSize());
+			fields.addAll(export.getTo().getVSField());
+			
+		} else {
+
+			fields.addAll(export.getFrom().getCSField());
+			fields.addAll(export.getFrom().getCSFormulaField());
+			fields.addAll(export.getFrom().getFDICField());
+			fields.addAll(export.getFrom().getVRFieldSize());
+			fields.addAll(export.getFrom().getVSField());
+		}
 		return getSimpleObjectScope(fields);
 		
 	}
 	public IScope scope_GSSTmTcFormatAIField(final GSSExportExport export, EReference reference) {
 
-		if (export.getTo() == null) {
-			return IScope.NULLSCOPE;
+		if(reference.getName() == "toFieldRef") {
+			if (export.getTo() == null) {
+				return IScope.NULLSCOPE;
+			} else {
+				return getSimpleObjectScope(export.getTo().getAIField());
+			}
+		} else {
+			if (export.getFrom() == null) {
+				return IScope.NULLSCOPE;
+			} else {
+				return getSimpleObjectScope(export.getFrom().getAIField());
+			}
 		}
-		return getSimpleObjectScope(export.getTo().getAIField());
 	}
 }

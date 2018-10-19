@@ -30,19 +30,31 @@ public class IMPORTSScopeProvider extends GSSAbstractScopeProvider  {
 
 	public IScope scope_GSSTmTcFormatField(final GSSImportImport imports, EReference reference) {
 		
-		if (imports.getFrom() == null) {
-			return IScope.NULLSCOPE;
-		}
-		
 		Set<GSSTmTcFormatField> fields = new HashSet<GSSTmTcFormatField>();
 		
-		fields.addAll(imports.getFrom().getCSField());
-		fields.addAll(imports.getFrom().getCSFormulaField());
-		fields.addAll(imports.getFrom().getFDICField());
-		fields.addAll(imports.getFrom().getVRFieldSize());
-		fields.addAll(imports.getFrom().getVSField());
-		
+		if(reference.getName() == "FieldRef") {
+			if (imports.getFrom() == null) {
+				return IScope.NULLSCOPE;
+			}
+			
+			fields.addAll(imports.getFrom().getCSField());
+			fields.addAll(imports.getFrom().getCSFormulaField());
+			fields.addAll(imports.getFrom().getFDICField());
+			fields.addAll(imports.getFrom().getVRFieldSize());
+			fields.addAll(imports.getFrom().getVSField());
+			
+		} else {
+
+			if (imports.getTo() == null) {
+				return IScope.NULLSCOPE;
+			}
+			
+			fields.addAll(imports.getTo().getCSField());
+			fields.addAll(imports.getTo().getCSFormulaField());
+			fields.addAll(imports.getTo().getFDICField());
+			fields.addAll(imports.getTo().getVRFieldSize());
+			fields.addAll(imports.getTo().getVSField());
+		}
 		return getSimpleObjectScope(fields);
-		
 	}
 }
