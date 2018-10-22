@@ -294,7 +294,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigGSSInfoPrint returns GSSConfigGSSInfoPrint
 	 *
 	 * Constraint:
-	 *     (mainLog=GSSConfigEnableDisable portLogs=GSSConfigEnableDisable debugLog=GSSConfigEnableDisable)
+	 *     (mainLog=GSSConfigEnableDisable portLogs=GSSConfigEnableDisable rawLog=GSSConfigEnableDisable)
 	 */
 	protected void sequence_GSSConfigGSSInfoPrint(ISerializationContext context, GSSConfigGSSInfoPrint semanticObject) {
 		if (errorAcceptor != null) {
@@ -302,13 +302,13 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_GSS_INFO_PRINT__MAIN_LOG));
 			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_GSS_INFO_PRINT__PORT_LOGS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_GSS_INFO_PRINT__PORT_LOGS));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_GSS_INFO_PRINT__DEBUG_LOG) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_GSS_INFO_PRINT__DEBUG_LOG));
+			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_GSS_INFO_PRINT__RAW_LOG) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_GSS_INFO_PRINT__RAW_LOG));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSConfigGSSInfoPrintAccess().getMainLogGSSConfigEnableDisableEnumRuleCall_4_0(), semanticObject.getMainLog());
 		feeder.accept(grammarAccess.getGSSConfigGSSInfoPrintAccess().getPortLogsGSSConfigEnableDisableEnumRuleCall_8_0(), semanticObject.getPortLogs());
-		feeder.accept(grammarAccess.getGSSConfigGSSInfoPrintAccess().getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0(), semanticObject.getDebugLog());
+		feeder.accept(grammarAccess.getGSSConfigGSSInfoPrintAccess().getRawLogGSSConfigEnableDisableEnumRuleCall_12_0(), semanticObject.getRawLog());
 		feeder.finish();
 	}
 	
@@ -689,7 +689,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigPhyHeaderPrint returns GSSConfigPhyHeaderPrint
 	 *
 	 * Constraint:
-	 *     (mainLog=GSSConfigEnableDisable portLogs=GSSConfigEnableDisable debugLog=GSSConfigEnableDisable gssTabs=GSSConfigEnableDisable)
+	 *     (mainLog=GSSConfigEnableDisable portLogs=GSSConfigEnableDisable rawLog=GSSConfigEnableDisable gssTabs=GSSConfigEnableDisable)
 	 */
 	protected void sequence_GSSConfigPhyHeaderPrint(ISerializationContext context, GSSConfigPhyHeaderPrint semanticObject) {
 		if (errorAcceptor != null) {
@@ -697,15 +697,15 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PHY_HEADER_PRINT__MAIN_LOG));
 			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS));
-			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG));
+			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PHY_HEADER_PRINT__RAW_LOG) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PHY_HEADER_PRINT__RAW_LOG));
 			if (transientValues.isValueTransient(semanticObject, configPackage.Literals.GSS_CONFIG_PHY_HEADER_PRINT__GSS_TABS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_PHY_HEADER_PRINT__GSS_TABS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getMainLogGSSConfigEnableDisableEnumRuleCall_4_0(), semanticObject.getMainLog());
 		feeder.accept(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getPortLogsGSSConfigEnableDisableEnumRuleCall_8_0(), semanticObject.getPortLogs());
-		feeder.accept(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0(), semanticObject.getDebugLog());
+		feeder.accept(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getRawLogGSSConfigEnableDisableEnumRuleCall_12_0(), semanticObject.getRawLog());
 		feeder.accept(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getGssTabsGSSConfigEnableDisableEnumRuleCall_16_0(), semanticObject.getGssTabs());
 		feeder.finish();
 	}

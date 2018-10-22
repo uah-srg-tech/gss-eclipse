@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'in_out'", "'alarm1'", "'_1'", "'disabled'", "'enabled'", "'SpW'", "'uart'", "'dummy'", "'SpW_TC'", "'SpW_Error'", "'in'", "'out'", "'_2'", "'_3'", "'miliseconds'", "'seconds'", "'uint'", "'formula'", "'tm'", "'tc'", "'alarm2'", "'alarm3'", "'increment'", "'increment1wrap'", "'import'", "':='", "';'", "'GSSConfigGSSConfig'", "'{'", "'version'", "'}'", "'uri'", "'GSSConfigGSSOptions'", "'GSSConfigProtocols'", "'GSSConfigInterfaces'", "'GSSConfigSpecialPackets'", "'GSSConfigPeriodicTCs'", "'GSSConfigGlobalVars'", "'GSSConfigMonitors'", "'ChartsFile'", "'GSSConfigTests'", "'ProtocolPacketsFile'", "'GSSConfigGSSInfo'", "'test_campaign'", "'date'", "'version_control_url'", "'GSSConfigGSSInfoPrint'", "'mainLog'", "'portLogs'", "'debugLog'", "'GSSConfigPhyHeaderPrint'", "'gssTabs'", "'GSSConfigGSSDiscardErrorFlags'", "'txErrors'", "'notExpectedPackets'", "'filtersKo'", "'validTimesKo'", "'GSSConfigProtocol'", "'id'", "'name'", "'typeLevel'", "'typeOffset'", "'subtypeOffset'", "'GSSConfigMainInterface'", "'ifType'", "'ifConfig'", "'ioType'", "'protocolID'", "'GSSConfigInterface'", "'GSSConfigLevelInOut'", "'TMformat'", "'TCformat'", "'inputFilter'", "'export_to_prev_Level'", "'import_from_prev_Level'", "'GSSConfigLevelIn'", "'GSSConfigLevelOut'", "'GSSConfigSpecialPacket'", "'status'", "'ifRef'", "'levels'", "'levelRef'", "'GSSConfigUpperLevels'", "'GSSConfigPrintingData'", "'printStatus'", "'GSSConfigPeriod'", "'min_value'", "'min_unit'", "'max_value'", "'max_unit'", "'GSSConfigIntervalRange'", "'min'", "'max'", "'interval_value'", "'interval_unit'", "'GSSConfigUpperLevel'", "'level'", "'GSSConfigStructuredData'", "'firstField'", "'GSSConfigPeriodicTCLevel2'", "'period_value'", "'period_unit'", "'app_to_level2'", "'level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSConfigPeriodicTCLevel1'", "'app_to_level1'", "'GSSConfigPeriodicTCLevel0'", "'app_to_level0'", "'GSSConfigGlobalVar'", "'type'", "'initial_value'", "'GSSConfigReferenceField'", "'fieldRef'", "'offset'", "'size'", "'GSSConfigReferencePeriodicTC'", "'idRef'", "'GSSConfigReferenceSpecialPacket'", "'GSSConfigPlot'", "'GSSConfigAlarmMsg'", "'text'", "'GSSConfigModify'", "'value'", "'GSSConfigAlarmVal'", "'GSSConfigGVFiltered'", "'GlobalVarRef'", "'filter'", "'GSSConfigGVPeriodic'", "'GSSConfigTestCase'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'", "'::'", "'-'", "'/'", "'://'", "'+'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'in_out'", "'alarm1'", "'_1'", "'disabled'", "'enabled'", "'SpW'", "'uart'", "'dummy'", "'SpW_TC'", "'SpW_Error'", "'in'", "'out'", "'_2'", "'_3'", "'miliseconds'", "'seconds'", "'uint'", "'formula'", "'tm'", "'tc'", "'alarm2'", "'alarm3'", "'increment'", "'increment1wrap'", "'import'", "':='", "';'", "'GSSConfigGSSConfig'", "'{'", "'version'", "'}'", "'uri'", "'GSSConfigGSSOptions'", "'GSSConfigProtocols'", "'GSSConfigInterfaces'", "'GSSConfigSpecialPackets'", "'GSSConfigPeriodicTCs'", "'GSSConfigGlobalVars'", "'GSSConfigMonitors'", "'ChartsFile'", "'GSSConfigTests'", "'ProtocolPacketsFile'", "'GSSConfigGSSInfo'", "'test_campaign'", "'date'", "'version_control_url'", "'GSSConfigGSSInfoPrint'", "'mainLog'", "'portLogs'", "'rawLog'", "'GSSConfigPhyHeaderPrint'", "'gssTabs'", "'GSSConfigGSSDiscardErrorFlags'", "'txErrors'", "'notExpectedPackets'", "'filtersKo'", "'validTimesKo'", "'GSSConfigProtocol'", "'id'", "'name'", "'typeLevel'", "'typeOffset'", "'subtypeOffset'", "'GSSConfigMainInterface'", "'ifType'", "'ifConfig'", "'ioType'", "'protocolID'", "'GSSConfigInterface'", "'GSSConfigLevelInOut'", "'TMformat'", "'TCformat'", "'inputFilter'", "'export_to_prev_Level'", "'import_from_prev_Level'", "'GSSConfigLevelIn'", "'GSSConfigLevelOut'", "'GSSConfigSpecialPacket'", "'status'", "'ifRef'", "'levels'", "'levelRef'", "'GSSConfigUpperLevels'", "'GSSConfigPrintingData'", "'printStatus'", "'GSSConfigPeriod'", "'min_value'", "'min_unit'", "'max_value'", "'max_unit'", "'GSSConfigIntervalRange'", "'min'", "'max'", "'interval_value'", "'interval_unit'", "'GSSConfigUpperLevel'", "'level'", "'GSSConfigStructuredData'", "'firstField'", "'GSSConfigPeriodicTCLevel2'", "'period_value'", "'period_unit'", "'app_to_level2'", "'level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSConfigPeriodicTCLevel1'", "'app_to_level1'", "'GSSConfigPeriodicTCLevel0'", "'app_to_level0'", "'GSSConfigGlobalVar'", "'type'", "'initial_value'", "'GSSConfigReferenceField'", "'fieldRef'", "'offset'", "'size'", "'GSSConfigReferencePeriodicTC'", "'idRef'", "'GSSConfigReferenceSpecialPacket'", "'GSSConfigPlot'", "'GSSConfigAlarmMsg'", "'text'", "'GSSConfigModify'", "'value'", "'GSSConfigAlarmVal'", "'GSSConfigGVFiltered'", "'GlobalVarRef'", "'filter'", "'GSSConfigGVPeriodic'", "'GSSConfigTestCase'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'", "'::'", "'-'", "'/'", "'://'", "'+'"
     };
     public static final int T__144=144;
     public static final int T__143=143;
@@ -17141,24 +17141,24 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSConfigGSSInfoPrint__Group__10__Impl"
-    // InternalCONFIG.g:5118:1: rule__GSSConfigGSSInfoPrint__Group__10__Impl : ( 'debugLog' ) ;
+    // InternalCONFIG.g:5118:1: rule__GSSConfigGSSInfoPrint__Group__10__Impl : ( 'rawLog' ) ;
     public final void rule__GSSConfigGSSInfoPrint__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:5122:1: ( ( 'debugLog' ) )
-            // InternalCONFIG.g:5123:1: ( 'debugLog' )
+            // InternalCONFIG.g:5122:1: ( ( 'rawLog' ) )
+            // InternalCONFIG.g:5123:1: ( 'rawLog' )
             {
-            // InternalCONFIG.g:5123:1: ( 'debugLog' )
-            // InternalCONFIG.g:5124:2: 'debugLog'
+            // InternalCONFIG.g:5123:1: ( 'rawLog' )
+            // InternalCONFIG.g:5124:2: 'rawLog'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigGSSInfoPrintAccess().getDebugLogKeyword_10()); 
+               before(grammarAccess.getGSSConfigGSSInfoPrintAccess().getRawLogKeyword_10()); 
             }
             match(input,61,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigGSSInfoPrintAccess().getDebugLogKeyword_10()); 
+               after(grammarAccess.getGSSConfigGSSInfoPrintAccess().getRawLogKeyword_10()); 
             }
 
             }
@@ -17299,26 +17299,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSConfigGSSInfoPrint__Group__12__Impl"
-    // InternalCONFIG.g:5172:1: rule__GSSConfigGSSInfoPrint__Group__12__Impl : ( ( rule__GSSConfigGSSInfoPrint__DebugLogAssignment_12 ) ) ;
+    // InternalCONFIG.g:5172:1: rule__GSSConfigGSSInfoPrint__Group__12__Impl : ( ( rule__GSSConfigGSSInfoPrint__RawLogAssignment_12 ) ) ;
     public final void rule__GSSConfigGSSInfoPrint__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:5176:1: ( ( ( rule__GSSConfigGSSInfoPrint__DebugLogAssignment_12 ) ) )
-            // InternalCONFIG.g:5177:1: ( ( rule__GSSConfigGSSInfoPrint__DebugLogAssignment_12 ) )
+            // InternalCONFIG.g:5176:1: ( ( ( rule__GSSConfigGSSInfoPrint__RawLogAssignment_12 ) ) )
+            // InternalCONFIG.g:5177:1: ( ( rule__GSSConfigGSSInfoPrint__RawLogAssignment_12 ) )
             {
-            // InternalCONFIG.g:5177:1: ( ( rule__GSSConfigGSSInfoPrint__DebugLogAssignment_12 ) )
-            // InternalCONFIG.g:5178:2: ( rule__GSSConfigGSSInfoPrint__DebugLogAssignment_12 )
+            // InternalCONFIG.g:5177:1: ( ( rule__GSSConfigGSSInfoPrint__RawLogAssignment_12 ) )
+            // InternalCONFIG.g:5178:2: ( rule__GSSConfigGSSInfoPrint__RawLogAssignment_12 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigGSSInfoPrintAccess().getDebugLogAssignment_12()); 
+               before(grammarAccess.getGSSConfigGSSInfoPrintAccess().getRawLogAssignment_12()); 
             }
-            // InternalCONFIG.g:5179:2: ( rule__GSSConfigGSSInfoPrint__DebugLogAssignment_12 )
-            // InternalCONFIG.g:5179:3: rule__GSSConfigGSSInfoPrint__DebugLogAssignment_12
+            // InternalCONFIG.g:5179:2: ( rule__GSSConfigGSSInfoPrint__RawLogAssignment_12 )
+            // InternalCONFIG.g:5179:3: rule__GSSConfigGSSInfoPrint__RawLogAssignment_12
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigGSSInfoPrint__DebugLogAssignment_12();
+            rule__GSSConfigGSSInfoPrint__RawLogAssignment_12();
 
             state._fsp--;
             if (state.failed) return ;
@@ -17326,7 +17326,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigGSSInfoPrintAccess().getDebugLogAssignment_12()); 
+               after(grammarAccess.getGSSConfigGSSInfoPrintAccess().getRawLogAssignment_12()); 
             }
 
             }
@@ -18430,24 +18430,24 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSConfigPhyHeaderPrint__Group__10__Impl"
-    // InternalCONFIG.g:5550:1: rule__GSSConfigPhyHeaderPrint__Group__10__Impl : ( 'debugLog' ) ;
+    // InternalCONFIG.g:5550:1: rule__GSSConfigPhyHeaderPrint__Group__10__Impl : ( 'rawLog' ) ;
     public final void rule__GSSConfigPhyHeaderPrint__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:5554:1: ( ( 'debugLog' ) )
-            // InternalCONFIG.g:5555:1: ( 'debugLog' )
+            // InternalCONFIG.g:5554:1: ( ( 'rawLog' ) )
+            // InternalCONFIG.g:5555:1: ( 'rawLog' )
             {
-            // InternalCONFIG.g:5555:1: ( 'debugLog' )
-            // InternalCONFIG.g:5556:2: 'debugLog'
+            // InternalCONFIG.g:5555:1: ( 'rawLog' )
+            // InternalCONFIG.g:5556:2: 'rawLog'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getDebugLogKeyword_10()); 
+               before(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getRawLogKeyword_10()); 
             }
             match(input,61,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getDebugLogKeyword_10()); 
+               after(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getRawLogKeyword_10()); 
             }
 
             }
@@ -18588,26 +18588,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSConfigPhyHeaderPrint__Group__12__Impl"
-    // InternalCONFIG.g:5604:1: rule__GSSConfigPhyHeaderPrint__Group__12__Impl : ( ( rule__GSSConfigPhyHeaderPrint__DebugLogAssignment_12 ) ) ;
+    // InternalCONFIG.g:5604:1: rule__GSSConfigPhyHeaderPrint__Group__12__Impl : ( ( rule__GSSConfigPhyHeaderPrint__RawLogAssignment_12 ) ) ;
     public final void rule__GSSConfigPhyHeaderPrint__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:5608:1: ( ( ( rule__GSSConfigPhyHeaderPrint__DebugLogAssignment_12 ) ) )
-            // InternalCONFIG.g:5609:1: ( ( rule__GSSConfigPhyHeaderPrint__DebugLogAssignment_12 ) )
+            // InternalCONFIG.g:5608:1: ( ( ( rule__GSSConfigPhyHeaderPrint__RawLogAssignment_12 ) ) )
+            // InternalCONFIG.g:5609:1: ( ( rule__GSSConfigPhyHeaderPrint__RawLogAssignment_12 ) )
             {
-            // InternalCONFIG.g:5609:1: ( ( rule__GSSConfigPhyHeaderPrint__DebugLogAssignment_12 ) )
-            // InternalCONFIG.g:5610:2: ( rule__GSSConfigPhyHeaderPrint__DebugLogAssignment_12 )
+            // InternalCONFIG.g:5609:1: ( ( rule__GSSConfigPhyHeaderPrint__RawLogAssignment_12 ) )
+            // InternalCONFIG.g:5610:2: ( rule__GSSConfigPhyHeaderPrint__RawLogAssignment_12 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getDebugLogAssignment_12()); 
+               before(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getRawLogAssignment_12()); 
             }
-            // InternalCONFIG.g:5611:2: ( rule__GSSConfigPhyHeaderPrint__DebugLogAssignment_12 )
-            // InternalCONFIG.g:5611:3: rule__GSSConfigPhyHeaderPrint__DebugLogAssignment_12
+            // InternalCONFIG.g:5611:2: ( rule__GSSConfigPhyHeaderPrint__RawLogAssignment_12 )
+            // InternalCONFIG.g:5611:3: rule__GSSConfigPhyHeaderPrint__RawLogAssignment_12
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigPhyHeaderPrint__DebugLogAssignment_12();
+            rule__GSSConfigPhyHeaderPrint__RawLogAssignment_12();
 
             state._fsp--;
             if (state.failed) return ;
@@ -18615,7 +18615,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getDebugLogAssignment_12()); 
+               after(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getRawLogAssignment_12()); 
             }
 
             }
@@ -77042,9 +77042,9 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSConfigGSSInfoPrint__PortLogsAssignment_8"
 
 
-    // $ANTLR start "rule__GSSConfigGSSInfoPrint__DebugLogAssignment_12"
-    // InternalCONFIG.g:24899:1: rule__GSSConfigGSSInfoPrint__DebugLogAssignment_12 : ( ruleGSSConfigEnableDisable ) ;
-    public final void rule__GSSConfigGSSInfoPrint__DebugLogAssignment_12() throws RecognitionException {
+    // $ANTLR start "rule__GSSConfigGSSInfoPrint__RawLogAssignment_12"
+    // InternalCONFIG.g:24899:1: rule__GSSConfigGSSInfoPrint__RawLogAssignment_12 : ( ruleGSSConfigEnableDisable ) ;
+    public final void rule__GSSConfigGSSInfoPrint__RawLogAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -77056,7 +77056,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:24905:3: ruleGSSConfigEnableDisable
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigGSSInfoPrintAccess().getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0()); 
+               before(grammarAccess.getGSSConfigGSSInfoPrintAccess().getRawLogGSSConfigEnableDisableEnumRuleCall_12_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleGSSConfigEnableDisable();
@@ -77064,7 +77064,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigGSSInfoPrintAccess().getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0()); 
+               after(grammarAccess.getGSSConfigGSSInfoPrintAccess().getRawLogGSSConfigEnableDisableEnumRuleCall_12_0()); 
             }
 
             }
@@ -77084,7 +77084,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigGSSInfoPrint__DebugLogAssignment_12"
+    // $ANTLR end "rule__GSSConfigGSSInfoPrint__RawLogAssignment_12"
 
 
     // $ANTLR start "rule__GSSConfigPhyHeaderPrint__MainLogAssignment_4"
@@ -77177,9 +77177,9 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSConfigPhyHeaderPrint__PortLogsAssignment_8"
 
 
-    // $ANTLR start "rule__GSSConfigPhyHeaderPrint__DebugLogAssignment_12"
-    // InternalCONFIG.g:24944:1: rule__GSSConfigPhyHeaderPrint__DebugLogAssignment_12 : ( ruleGSSConfigEnableDisable ) ;
-    public final void rule__GSSConfigPhyHeaderPrint__DebugLogAssignment_12() throws RecognitionException {
+    // $ANTLR start "rule__GSSConfigPhyHeaderPrint__RawLogAssignment_12"
+    // InternalCONFIG.g:24944:1: rule__GSSConfigPhyHeaderPrint__RawLogAssignment_12 : ( ruleGSSConfigEnableDisable ) ;
+    public final void rule__GSSConfigPhyHeaderPrint__RawLogAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -77191,7 +77191,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:24950:3: ruleGSSConfigEnableDisable
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0()); 
+               before(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getRawLogGSSConfigEnableDisableEnumRuleCall_12_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleGSSConfigEnableDisable();
@@ -77199,7 +77199,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0()); 
+               after(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getRawLogGSSConfigEnableDisableEnumRuleCall_12_0()); 
             }
 
             }
@@ -77219,7 +77219,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigPhyHeaderPrint__DebugLogAssignment_12"
+    // $ANTLR end "rule__GSSConfigPhyHeaderPrint__RawLogAssignment_12"
 
 
     // $ANTLR start "rule__GSSConfigPhyHeaderPrint__GssTabsAssignment_16"

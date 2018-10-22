@@ -34,7 +34,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalCONFIGParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSConfigGSSConfig'", "'{'", "'uri'", "'version'", "'}'", "'GSSConfigGSSOptions'", "'GSSConfigProtocols'", "'GSSConfigInterfaces'", "'GSSConfigSpecialPackets'", "'GSSConfigPeriodicTCs'", "'GSSConfigGlobalVars'", "'GSSConfigMonitors'", "'ChartsFile'", "'GSSConfigTests'", "'ProtocolPacketsFile'", "'GSSConfigGSSInfo'", "'test_campaign'", "'date'", "'version_control_url'", "'GSSConfigGSSInfoPrint'", "'mainLog'", "'portLogs'", "'debugLog'", "'GSSConfigPhyHeaderPrint'", "'gssTabs'", "'GSSConfigGSSDiscardErrorFlags'", "'txErrors'", "'notExpectedPackets'", "'filtersKo'", "'validTimesKo'", "'GSSConfigProtocol'", "'id'", "'name'", "'typeLevel'", "'typeOffset'", "'subtypeOffset'", "'GSSConfigMainInterface'", "'ifType'", "'ifConfig'", "'ioType'", "'protocolID'", "'GSSConfigInterface'", "'GSSConfigLevelInOut'", "'TMformat'", "'TCformat'", "'inputFilter'", "'export_to_prev_Level'", "'import_from_prev_Level'", "'GSSConfigLevelIn'", "'GSSConfigLevelOut'", "'GSSConfigSpecialPacket'", "'status'", "'ifRef'", "'levels'", "'levelRef'", "'GSSConfigUpperLevels'", "'GSSConfigPrintingData'", "'printStatus'", "'GSSConfigPeriod'", "'min_value'", "'min_unit'", "'max_value'", "'max_unit'", "'GSSConfigIntervalRange'", "'min'", "'max'", "'interval_value'", "'interval_unit'", "'GSSConfigUpperLevel'", "'level'", "'GSSConfigStructuredData'", "'firstField'", "'GSSConfigPeriodicTCLevel2'", "'period_value'", "'period_unit'", "'level2'", "'app_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSConfigPeriodicTCLevel1'", "'app_to_level1'", "'GSSConfigPeriodicTCLevel0'", "'app_to_level0'", "'GSSConfigGlobalVar'", "'type'", "'initial_value'", "'GSSConfigReferenceField'", "'fieldRef'", "'offset'", "'size'", "'GSSConfigReferencePeriodicTC'", "'idRef'", "'GSSConfigReferenceSpecialPacket'", "'GSSConfigPlot'", "'GSSConfigAlarmMsg'", "'text'", "'GSSConfigModify'", "'value'", "'GSSConfigAlarmVal'", "'GSSConfigGVFiltered'", "'GlobalVarRef'", "'filter'", "'GSSConfigGVPeriodic'", "'GSSConfigTestCase'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'", "'::'", "'-'", "'/'", "'+'", "'://'", "'disabled'", "'enabled'", "'SpW'", "'uart'", "'dummy'", "'in_out'", "'SpW_TC'", "'SpW_Error'", "'in'", "'out'", "'_1'", "'_2'", "'_3'", "'miliseconds'", "'seconds'", "'uint'", "'formula'", "'tm'", "'tc'", "'alarm1'", "'alarm2'", "'alarm3'", "'increment'", "'increment1wrap'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSConfigGSSConfig'", "'{'", "'uri'", "'version'", "'}'", "'GSSConfigGSSOptions'", "'GSSConfigProtocols'", "'GSSConfigInterfaces'", "'GSSConfigSpecialPackets'", "'GSSConfigPeriodicTCs'", "'GSSConfigGlobalVars'", "'GSSConfigMonitors'", "'ChartsFile'", "'GSSConfigTests'", "'ProtocolPacketsFile'", "'GSSConfigGSSInfo'", "'test_campaign'", "'date'", "'version_control_url'", "'GSSConfigGSSInfoPrint'", "'mainLog'", "'portLogs'", "'rawLog'", "'GSSConfigPhyHeaderPrint'", "'gssTabs'", "'GSSConfigGSSDiscardErrorFlags'", "'txErrors'", "'notExpectedPackets'", "'filtersKo'", "'validTimesKo'", "'GSSConfigProtocol'", "'id'", "'name'", "'typeLevel'", "'typeOffset'", "'subtypeOffset'", "'GSSConfigMainInterface'", "'ifType'", "'ifConfig'", "'ioType'", "'protocolID'", "'GSSConfigInterface'", "'GSSConfigLevelInOut'", "'TMformat'", "'TCformat'", "'inputFilter'", "'export_to_prev_Level'", "'import_from_prev_Level'", "'GSSConfigLevelIn'", "'GSSConfigLevelOut'", "'GSSConfigSpecialPacket'", "'status'", "'ifRef'", "'levels'", "'levelRef'", "'GSSConfigUpperLevels'", "'GSSConfigPrintingData'", "'printStatus'", "'GSSConfigPeriod'", "'min_value'", "'min_unit'", "'max_value'", "'max_unit'", "'GSSConfigIntervalRange'", "'min'", "'max'", "'interval_value'", "'interval_unit'", "'GSSConfigUpperLevel'", "'level'", "'GSSConfigStructuredData'", "'firstField'", "'GSSConfigPeriodicTCLevel2'", "'period_value'", "'period_unit'", "'level2'", "'app_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSConfigPeriodicTCLevel1'", "'app_to_level1'", "'GSSConfigPeriodicTCLevel0'", "'app_to_level0'", "'GSSConfigGlobalVar'", "'type'", "'initial_value'", "'GSSConfigReferenceField'", "'fieldRef'", "'offset'", "'size'", "'GSSConfigReferencePeriodicTC'", "'idRef'", "'GSSConfigReferenceSpecialPacket'", "'GSSConfigPlot'", "'GSSConfigAlarmMsg'", "'text'", "'GSSConfigModify'", "'value'", "'GSSConfigAlarmVal'", "'GSSConfigGVFiltered'", "'GlobalVarRef'", "'filter'", "'GSSConfigGVPeriodic'", "'GSSConfigTestCase'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'", "'::'", "'-'", "'/'", "'+'", "'://'", "'disabled'", "'enabled'", "'SpW'", "'uart'", "'dummy'", "'in_out'", "'SpW_TC'", "'SpW_Error'", "'in'", "'out'", "'_1'", "'_2'", "'_3'", "'miliseconds'", "'seconds'", "'uint'", "'formula'", "'tm'", "'tc'", "'alarm1'", "'alarm2'", "'alarm3'", "'increment'", "'increment1wrap'"
     };
     public static final int T__144=144;
     public static final int T__143=143;
@@ -3521,7 +3521,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigGSSInfoPrint"
-    // InternalCONFIG.g:1355:1: ruleGSSConfigGSSInfoPrint returns [EObject current=null] : (otherlv_0= 'GSSConfigGSSInfoPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'debugLog' otherlv_11= ':=' ( (lv_debugLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' ) ;
+    // InternalCONFIG.g:1355:1: ruleGSSConfigGSSInfoPrint returns [EObject current=null] : (otherlv_0= 'GSSConfigGSSInfoPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'rawLog' otherlv_11= ':=' ( (lv_rawLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' ) ;
     public final EObject ruleGSSConfigGSSInfoPrint() throws RecognitionException {
         EObject current = null;
 
@@ -3542,18 +3542,18 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
         Enumerator lv_portLogs_8_0 = null;
 
-        Enumerator lv_debugLog_12_0 = null;
+        Enumerator lv_rawLog_12_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalCONFIG.g:1361:2: ( (otherlv_0= 'GSSConfigGSSInfoPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'debugLog' otherlv_11= ':=' ( (lv_debugLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' ) )
-            // InternalCONFIG.g:1362:2: (otherlv_0= 'GSSConfigGSSInfoPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'debugLog' otherlv_11= ':=' ( (lv_debugLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' )
+            // InternalCONFIG.g:1361:2: ( (otherlv_0= 'GSSConfigGSSInfoPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'rawLog' otherlv_11= ':=' ( (lv_rawLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' ) )
+            // InternalCONFIG.g:1362:2: (otherlv_0= 'GSSConfigGSSInfoPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'rawLog' otherlv_11= ':=' ( (lv_rawLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' )
             {
-            // InternalCONFIG.g:1362:2: (otherlv_0= 'GSSConfigGSSInfoPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'debugLog' otherlv_11= ':=' ( (lv_debugLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' )
-            // InternalCONFIG.g:1363:3: otherlv_0= 'GSSConfigGSSInfoPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'debugLog' otherlv_11= ':=' ( (lv_debugLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';'
+            // InternalCONFIG.g:1362:2: (otherlv_0= 'GSSConfigGSSInfoPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'rawLog' otherlv_11= ':=' ( (lv_rawLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' )
+            // InternalCONFIG.g:1363:3: otherlv_0= 'GSSConfigGSSInfoPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'rawLog' otherlv_11= ':=' ( (lv_rawLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';'
             {
             otherlv_0=(Token)match(input,34,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3676,7 +3676,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             otherlv_10=(Token)match(input,37,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_10, grammarAccess.getGSSConfigGSSInfoPrintAccess().getDebugLogKeyword_10());
+              			newLeafNode(otherlv_10, grammarAccess.getGSSConfigGSSInfoPrintAccess().getRawLogKeyword_10());
               		
             }
             otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_38); if (state.failed) return current;
@@ -3685,19 +3685,19 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_11, grammarAccess.getGSSConfigGSSInfoPrintAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalCONFIG.g:1441:3: ( (lv_debugLog_12_0= ruleGSSConfigEnableDisable ) )
-            // InternalCONFIG.g:1442:4: (lv_debugLog_12_0= ruleGSSConfigEnableDisable )
+            // InternalCONFIG.g:1441:3: ( (lv_rawLog_12_0= ruleGSSConfigEnableDisable ) )
+            // InternalCONFIG.g:1442:4: (lv_rawLog_12_0= ruleGSSConfigEnableDisable )
             {
-            // InternalCONFIG.g:1442:4: (lv_debugLog_12_0= ruleGSSConfigEnableDisable )
-            // InternalCONFIG.g:1443:5: lv_debugLog_12_0= ruleGSSConfigEnableDisable
+            // InternalCONFIG.g:1442:4: (lv_rawLog_12_0= ruleGSSConfigEnableDisable )
+            // InternalCONFIG.g:1443:5: lv_rawLog_12_0= ruleGSSConfigEnableDisable
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSConfigGSSInfoPrintAccess().getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0());
+              					newCompositeNode(grammarAccess.getGSSConfigGSSInfoPrintAccess().getRawLogGSSConfigEnableDisableEnumRuleCall_12_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);
-            lv_debugLog_12_0=ruleGSSConfigEnableDisable();
+            lv_rawLog_12_0=ruleGSSConfigEnableDisable();
 
             state._fsp--;
             if (state.failed) return current;
@@ -3708,8 +3708,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               					}
               					set(
               						current,
-              						"debugLog",
-              						lv_debugLog_12_0,
+              						"rawLog",
+              						lv_rawLog_12_0,
               						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigEnableDisable");
               					afterParserOrEnumRuleCall();
               				
@@ -3803,7 +3803,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigPhyHeaderPrint"
-    // InternalCONFIG.g:1483:1: ruleGSSConfigPhyHeaderPrint returns [EObject current=null] : (otherlv_0= 'GSSConfigPhyHeaderPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'debugLog' otherlv_11= ':=' ( (lv_debugLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= 'gssTabs' otherlv_15= ':=' ( (lv_gssTabs_16_0= ruleGSSConfigEnableDisable ) ) otherlv_17= ';' otherlv_18= '}' otherlv_19= ';' ) ;
+    // InternalCONFIG.g:1483:1: ruleGSSConfigPhyHeaderPrint returns [EObject current=null] : (otherlv_0= 'GSSConfigPhyHeaderPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'rawLog' otherlv_11= ':=' ( (lv_rawLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= 'gssTabs' otherlv_15= ':=' ( (lv_gssTabs_16_0= ruleGSSConfigEnableDisable ) ) otherlv_17= ';' otherlv_18= '}' otherlv_19= ';' ) ;
     public final EObject ruleGSSConfigPhyHeaderPrint() throws RecognitionException {
         EObject current = null;
 
@@ -3827,7 +3827,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
         Enumerator lv_portLogs_8_0 = null;
 
-        Enumerator lv_debugLog_12_0 = null;
+        Enumerator lv_rawLog_12_0 = null;
 
         Enumerator lv_gssTabs_16_0 = null;
 
@@ -3836,11 +3836,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:1489:2: ( (otherlv_0= 'GSSConfigPhyHeaderPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'debugLog' otherlv_11= ':=' ( (lv_debugLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= 'gssTabs' otherlv_15= ':=' ( (lv_gssTabs_16_0= ruleGSSConfigEnableDisable ) ) otherlv_17= ';' otherlv_18= '}' otherlv_19= ';' ) )
-            // InternalCONFIG.g:1490:2: (otherlv_0= 'GSSConfigPhyHeaderPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'debugLog' otherlv_11= ':=' ( (lv_debugLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= 'gssTabs' otherlv_15= ':=' ( (lv_gssTabs_16_0= ruleGSSConfigEnableDisable ) ) otherlv_17= ';' otherlv_18= '}' otherlv_19= ';' )
+            // InternalCONFIG.g:1489:2: ( (otherlv_0= 'GSSConfigPhyHeaderPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'rawLog' otherlv_11= ':=' ( (lv_rawLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= 'gssTabs' otherlv_15= ':=' ( (lv_gssTabs_16_0= ruleGSSConfigEnableDisable ) ) otherlv_17= ';' otherlv_18= '}' otherlv_19= ';' ) )
+            // InternalCONFIG.g:1490:2: (otherlv_0= 'GSSConfigPhyHeaderPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'rawLog' otherlv_11= ':=' ( (lv_rawLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= 'gssTabs' otherlv_15= ':=' ( (lv_gssTabs_16_0= ruleGSSConfigEnableDisable ) ) otherlv_17= ';' otherlv_18= '}' otherlv_19= ';' )
             {
-            // InternalCONFIG.g:1490:2: (otherlv_0= 'GSSConfigPhyHeaderPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'debugLog' otherlv_11= ':=' ( (lv_debugLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= 'gssTabs' otherlv_15= ':=' ( (lv_gssTabs_16_0= ruleGSSConfigEnableDisable ) ) otherlv_17= ';' otherlv_18= '}' otherlv_19= ';' )
-            // InternalCONFIG.g:1491:3: otherlv_0= 'GSSConfigPhyHeaderPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'debugLog' otherlv_11= ':=' ( (lv_debugLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= 'gssTabs' otherlv_15= ':=' ( (lv_gssTabs_16_0= ruleGSSConfigEnableDisable ) ) otherlv_17= ';' otherlv_18= '}' otherlv_19= ';'
+            // InternalCONFIG.g:1490:2: (otherlv_0= 'GSSConfigPhyHeaderPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'rawLog' otherlv_11= ':=' ( (lv_rawLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= 'gssTabs' otherlv_15= ':=' ( (lv_gssTabs_16_0= ruleGSSConfigEnableDisable ) ) otherlv_17= ';' otherlv_18= '}' otherlv_19= ';' )
+            // InternalCONFIG.g:1491:3: otherlv_0= 'GSSConfigPhyHeaderPrint' otherlv_1= '{' otherlv_2= 'mainLog' otherlv_3= ':=' ( (lv_mainLog_4_0= ruleGSSConfigEnableDisable ) ) otherlv_5= ';' otherlv_6= 'portLogs' otherlv_7= ':=' ( (lv_portLogs_8_0= ruleGSSConfigEnableDisable ) ) otherlv_9= ';' otherlv_10= 'rawLog' otherlv_11= ':=' ( (lv_rawLog_12_0= ruleGSSConfigEnableDisable ) ) otherlv_13= ';' otherlv_14= 'gssTabs' otherlv_15= ':=' ( (lv_gssTabs_16_0= ruleGSSConfigEnableDisable ) ) otherlv_17= ';' otherlv_18= '}' otherlv_19= ';'
             {
             otherlv_0=(Token)match(input,38,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3963,7 +3963,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             otherlv_10=(Token)match(input,37,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_10, grammarAccess.getGSSConfigPhyHeaderPrintAccess().getDebugLogKeyword_10());
+              			newLeafNode(otherlv_10, grammarAccess.getGSSConfigPhyHeaderPrintAccess().getRawLogKeyword_10());
               		
             }
             otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_38); if (state.failed) return current;
@@ -3972,19 +3972,19 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_11, grammarAccess.getGSSConfigPhyHeaderPrintAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalCONFIG.g:1569:3: ( (lv_debugLog_12_0= ruleGSSConfigEnableDisable ) )
-            // InternalCONFIG.g:1570:4: (lv_debugLog_12_0= ruleGSSConfigEnableDisable )
+            // InternalCONFIG.g:1569:3: ( (lv_rawLog_12_0= ruleGSSConfigEnableDisable ) )
+            // InternalCONFIG.g:1570:4: (lv_rawLog_12_0= ruleGSSConfigEnableDisable )
             {
-            // InternalCONFIG.g:1570:4: (lv_debugLog_12_0= ruleGSSConfigEnableDisable )
-            // InternalCONFIG.g:1571:5: lv_debugLog_12_0= ruleGSSConfigEnableDisable
+            // InternalCONFIG.g:1570:4: (lv_rawLog_12_0= ruleGSSConfigEnableDisable )
+            // InternalCONFIG.g:1571:5: lv_rawLog_12_0= ruleGSSConfigEnableDisable
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0());
+              					newCompositeNode(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getRawLogGSSConfigEnableDisableEnumRuleCall_12_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);
-            lv_debugLog_12_0=ruleGSSConfigEnableDisable();
+            lv_rawLog_12_0=ruleGSSConfigEnableDisable();
 
             state._fsp--;
             if (state.failed) return current;
@@ -3995,8 +3995,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               					}
               					set(
               						current,
-              						"debugLog",
-              						lv_debugLog_12_0,
+              						"rawLog",
+              						lv_rawLog_12_0,
               						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigEnableDisable");
               					afterParserOrEnumRuleCall();
               				

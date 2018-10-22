@@ -740,7 +740,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigGSSInfoPrint_DebugLog() {
+	public EAttribute getGSSConfigGSSInfoPrint_RawLog() {
 		return (EAttribute)gssConfigGSSInfoPrintEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -776,7 +776,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigPhyHeaderPrint_DebugLog() {
+	public EAttribute getGSSConfigPhyHeaderPrint_RawLog() {
 		return (EAttribute)gssConfigPhyHeaderPrintEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2714,12 +2714,12 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		gssConfigGSSInfoPrintEClass = createEClass(GSS_CONFIG_GSS_INFO_PRINT);
 		createEAttribute(gssConfigGSSInfoPrintEClass, GSS_CONFIG_GSS_INFO_PRINT__MAIN_LOG);
 		createEAttribute(gssConfigGSSInfoPrintEClass, GSS_CONFIG_GSS_INFO_PRINT__PORT_LOGS);
-		createEAttribute(gssConfigGSSInfoPrintEClass, GSS_CONFIG_GSS_INFO_PRINT__DEBUG_LOG);
+		createEAttribute(gssConfigGSSInfoPrintEClass, GSS_CONFIG_GSS_INFO_PRINT__RAW_LOG);
 
 		gssConfigPhyHeaderPrintEClass = createEClass(GSS_CONFIG_PHY_HEADER_PRINT);
 		createEAttribute(gssConfigPhyHeaderPrintEClass, GSS_CONFIG_PHY_HEADER_PRINT__MAIN_LOG);
 		createEAttribute(gssConfigPhyHeaderPrintEClass, GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS);
-		createEAttribute(gssConfigPhyHeaderPrintEClass, GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG);
+		createEAttribute(gssConfigPhyHeaderPrintEClass, GSS_CONFIG_PHY_HEADER_PRINT__RAW_LOG);
 		createEAttribute(gssConfigPhyHeaderPrintEClass, GSS_CONFIG_PHY_HEADER_PRINT__GSS_TABS);
 
 		gssConfigGSSDiscardErrorFlagsEClass = createEClass(GSS_CONFIG_GSS_DISCARD_ERROR_FLAGS);
@@ -3035,12 +3035,12 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		initEClass(gssConfigGSSInfoPrintEClass, GSSConfigGSSInfoPrint.class, "GSSConfigGSSInfoPrint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigGSSInfoPrint_MainLog(), this.getGSSConfigEnableDisable(), "mainLog", null, 1, 1, GSSConfigGSSInfoPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigGSSInfoPrint_PortLogs(), this.getGSSConfigEnableDisable(), "portLogs", null, 1, 1, GSSConfigGSSInfoPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigGSSInfoPrint_DebugLog(), this.getGSSConfigEnableDisable(), "debugLog", null, 1, 1, GSSConfigGSSInfoPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSConfigGSSInfoPrint_RawLog(), this.getGSSConfigEnableDisable(), "rawLog", null, 1, 1, GSSConfigGSSInfoPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigPhyHeaderPrintEClass, GSSConfigPhyHeaderPrint.class, "GSSConfigPhyHeaderPrint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigPhyHeaderPrint_MainLog(), this.getGSSConfigEnableDisable(), "mainLog", null, 1, 1, GSSConfigPhyHeaderPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigPhyHeaderPrint_PortLogs(), this.getGSSConfigEnableDisable(), "portLogs", null, 1, 1, GSSConfigPhyHeaderPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigPhyHeaderPrint_DebugLog(), this.getGSSConfigEnableDisable(), "debugLog", null, 1, 1, GSSConfigPhyHeaderPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSConfigPhyHeaderPrint_RawLog(), this.getGSSConfigEnableDisable(), "rawLog", null, 1, 1, GSSConfigPhyHeaderPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigPhyHeaderPrint_GssTabs(), this.getGSSConfigEnableDisable(), "gssTabs", null, 1, 1, GSSConfigPhyHeaderPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigGSSDiscardErrorFlagsEClass, GSSConfigGSSDiscardErrorFlags.class, "GSSConfigGSSDiscardErrorFlags", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

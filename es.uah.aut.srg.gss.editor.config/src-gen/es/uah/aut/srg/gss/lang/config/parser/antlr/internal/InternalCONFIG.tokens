@@ -66,7 +66,6 @@
 'app_to_level1'=97
 'app_to_level2'=91
 'date'=32
-'debugLog'=37
 'disabled'=132
 'dummy'=136
 'enabled'=133
@@ -119,6 +118,7 @@
 'printStatus'=72
 'procedure'=121
 'protocolID'=55
+'rawLog'=37
 'req'=122
 'reqAction'=123
 'seconds'=146

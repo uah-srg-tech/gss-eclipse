@@ -1430,9 +1430,9 @@ ruleGSSConfigGSSInfoPrint returns [EObject current=null]
 		{
 			newLeafNode(otherlv_9, grammarAccess.getGSSConfigGSSInfoPrintAccess().getSemicolonKeyword_9());
 		}
-		otherlv_10='debugLog'
+		otherlv_10='rawLog'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getGSSConfigGSSInfoPrintAccess().getDebugLogKeyword_10());
+			newLeafNode(otherlv_10, grammarAccess.getGSSConfigGSSInfoPrintAccess().getRawLogKeyword_10());
 		}
 		otherlv_11=':='
 		{
@@ -1441,17 +1441,17 @@ ruleGSSConfigGSSInfoPrint returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGSSInfoPrintAccess().getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0());
+					newCompositeNode(grammarAccess.getGSSConfigGSSInfoPrintAccess().getRawLogGSSConfigEnableDisableEnumRuleCall_12_0());
 				}
-				lv_debugLog_12_0=ruleGSSConfigEnableDisable
+				lv_rawLog_12_0=ruleGSSConfigEnableDisable
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigGSSInfoPrintRule());
 					}
 					set(
 						$current,
-						"debugLog",
-						lv_debugLog_12_0,
+						"rawLog",
+						lv_rawLog_12_0,
 						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigEnableDisable");
 					afterParserOrEnumRuleCall();
 				}
@@ -1558,9 +1558,9 @@ ruleGSSConfigPhyHeaderPrint returns [EObject current=null]
 		{
 			newLeafNode(otherlv_9, grammarAccess.getGSSConfigPhyHeaderPrintAccess().getSemicolonKeyword_9());
 		}
-		otherlv_10='debugLog'
+		otherlv_10='rawLog'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getGSSConfigPhyHeaderPrintAccess().getDebugLogKeyword_10());
+			newLeafNode(otherlv_10, grammarAccess.getGSSConfigPhyHeaderPrintAccess().getRawLogKeyword_10());
 		}
 		otherlv_11=':='
 		{
@@ -1569,17 +1569,17 @@ ruleGSSConfigPhyHeaderPrint returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0());
+					newCompositeNode(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getRawLogGSSConfigEnableDisableEnumRuleCall_12_0());
 				}
-				lv_debugLog_12_0=ruleGSSConfigEnableDisable
+				lv_rawLog_12_0=ruleGSSConfigEnableDisable
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigPhyHeaderPrintRule());
 					}
 					set(
 						$current,
-						"debugLog",
-						lv_debugLog_12_0,
+						"rawLog",
+						lv_rawLog_12_0,
 						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigEnableDisable");
 					afterParserOrEnumRuleCall();
 				}

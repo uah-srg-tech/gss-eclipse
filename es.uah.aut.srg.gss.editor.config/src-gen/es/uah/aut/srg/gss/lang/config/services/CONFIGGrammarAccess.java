@@ -833,10 +833,10 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cPortLogsAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cPortLogsGSSConfigEnableDisableEnumRuleCall_8_0 = (RuleCall)cPortLogsAssignment_8.eContents().get(0);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Keyword cDebugLogKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cRawLogKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Assignment cDebugLogAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cDebugLogGSSConfigEnableDisableEnumRuleCall_12_0 = (RuleCall)cDebugLogAssignment_12.eContents().get(0);
+		private final Assignment cRawLogAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cRawLogGSSConfigEnableDisableEnumRuleCall_12_0 = (RuleCall)cRawLogAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Keyword cRightCurlyBracketKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cSemicolonKeyword_15 = (Keyword)cGroup.eContents().get(15);
@@ -846,12 +846,12 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'{'
 		//	'mainLog' ':=' mainLog=GSSConfigEnableDisable ';'
 		//	'portLogs' ':=' portLogs=GSSConfigEnableDisable ';'
-		//	'debugLog' ':=' debugLog=GSSConfigEnableDisable ';'
+		//	'rawLog' ':=' rawLog=GSSConfigEnableDisable ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSConfigGSSInfoPrint' '{' 'mainLog' ':=' mainLog=GSSConfigEnableDisable ';' 'portLogs' ':='
-		//portLogs=GSSConfigEnableDisable ';' 'debugLog' ':=' debugLog=GSSConfigEnableDisable ';' '}' ';'
+		//portLogs=GSSConfigEnableDisable ';' 'rawLog' ':=' rawLog=GSSConfigEnableDisable ';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSConfigGSSInfoPrint'
@@ -890,17 +890,17 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
-		//'debugLog'
-		public Keyword getDebugLogKeyword_10() { return cDebugLogKeyword_10; }
+		//'rawLog'
+		public Keyword getRawLogKeyword_10() { return cRawLogKeyword_10; }
 		
 		//':='
 		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
 		
-		//debugLog=GSSConfigEnableDisable
-		public Assignment getDebugLogAssignment_12() { return cDebugLogAssignment_12; }
+		//rawLog=GSSConfigEnableDisable
+		public Assignment getRawLogAssignment_12() { return cRawLogAssignment_12; }
 		
 		//GSSConfigEnableDisable
-		public RuleCall getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0() { return cDebugLogGSSConfigEnableDisableEnumRuleCall_12_0; }
+		public RuleCall getRawLogGSSConfigEnableDisableEnumRuleCall_12_0() { return cRawLogGSSConfigEnableDisableEnumRuleCall_12_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
@@ -926,10 +926,10 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cPortLogsAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cPortLogsGSSConfigEnableDisableEnumRuleCall_8_0 = (RuleCall)cPortLogsAssignment_8.eContents().get(0);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Keyword cDebugLogKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cRawLogKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Assignment cDebugLogAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cDebugLogGSSConfigEnableDisableEnumRuleCall_12_0 = (RuleCall)cDebugLogAssignment_12.eContents().get(0);
+		private final Assignment cRawLogAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cRawLogGSSConfigEnableDisableEnumRuleCall_12_0 = (RuleCall)cRawLogAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Keyword cGssTabsKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cColonEqualsSignKeyword_15 = (Keyword)cGroup.eContents().get(15);
@@ -943,13 +943,13 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSConfigPhyHeaderPrint' '{'
 		//	'mainLog' ':=' mainLog=GSSConfigEnableDisable ';'
 		//	'portLogs' ':=' portLogs=GSSConfigEnableDisable ';'
-		//	'debugLog' ':=' debugLog=GSSConfigEnableDisable ';'
+		//	'rawLog' ':=' rawLog=GSSConfigEnableDisable ';'
 		//	'gssTabs' ':=' gssTabs=GSSConfigEnableDisable ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSConfigPhyHeaderPrint' '{' 'mainLog' ':=' mainLog=GSSConfigEnableDisable ';' 'portLogs' ':='
-		//portLogs=GSSConfigEnableDisable ';' 'debugLog' ':=' debugLog=GSSConfigEnableDisable ';' 'gssTabs' ':='
+		//portLogs=GSSConfigEnableDisable ';' 'rawLog' ':=' rawLog=GSSConfigEnableDisable ';' 'gssTabs' ':='
 		//gssTabs=GSSConfigEnableDisable ';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
@@ -989,17 +989,17 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
-		//'debugLog'
-		public Keyword getDebugLogKeyword_10() { return cDebugLogKeyword_10; }
+		//'rawLog'
+		public Keyword getRawLogKeyword_10() { return cRawLogKeyword_10; }
 		
 		//':='
 		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
 		
-		//debugLog=GSSConfigEnableDisable
-		public Assignment getDebugLogAssignment_12() { return cDebugLogAssignment_12; }
+		//rawLog=GSSConfigEnableDisable
+		public Assignment getRawLogAssignment_12() { return cRawLogAssignment_12; }
 		
 		//GSSConfigEnableDisable
-		public RuleCall getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0() { return cDebugLogGSSConfigEnableDisableEnumRuleCall_12_0; }
+		public RuleCall getRawLogGSSConfigEnableDisableEnumRuleCall_12_0() { return cRawLogGSSConfigEnableDisableEnumRuleCall_12_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
@@ -5942,7 +5942,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'{'
 	//	'mainLog' ':=' mainLog=GSSConfigEnableDisable ';'
 	//	'portLogs' ':=' portLogs=GSSConfigEnableDisable ';'
-	//	'debugLog' ':=' debugLog=GSSConfigEnableDisable ';'
+	//	'rawLog' ':=' rawLog=GSSConfigEnableDisable ';'
 	//	'}' ';';
 	public GSSConfigGSSInfoPrintElements getGSSConfigGSSInfoPrintAccess() {
 		return pGSSConfigGSSInfoPrint;
@@ -5956,7 +5956,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSConfigPhyHeaderPrint' '{'
 	//	'mainLog' ':=' mainLog=GSSConfigEnableDisable ';'
 	//	'portLogs' ':=' portLogs=GSSConfigEnableDisable ';'
-	//	'debugLog' ':=' debugLog=GSSConfigEnableDisable ';'
+	//	'rawLog' ':=' rawLog=GSSConfigEnableDisable ';'
 	//	'gssTabs' ':=' gssTabs=GSSConfigEnableDisable ';'
 	//	'}' ';';
 	public GSSConfigPhyHeaderPrintElements getGSSConfigPhyHeaderPrintAccess() {

@@ -46,7 +46,7 @@
         eType="#//GSSConfigEnableDisable" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="portLogs" lowerBound="1"
         eType="#//GSSConfigEnableDisable" unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="debugLog" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rawLog" lowerBound="1"
         eType="#//GSSConfigEnableDisable" unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSConfigPhyHeaderPrint">
@@ -54,7 +54,7 @@
         eType="#//GSSConfigEnableDisable" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="portLogs" lowerBound="1"
         eType="#//GSSConfigEnableDisable" unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="debugLog" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rawLog" lowerBound="1"
         eType="#//GSSConfigEnableDisable" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gssTabs" lowerBound="1"
         eType="#//GSSConfigEnableDisable" unsettable="true"/>

@@ -192,10 +192,10 @@ public class CONFIGParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSConfigGSSInfoAccess().getVersion_control_urlAssignment_14_2(), "rule__GSSConfigGSSInfo__Version_control_urlAssignment_14_2");
 					put(grammarAccess.getGSSConfigGSSInfoPrintAccess().getMainLogAssignment_4(), "rule__GSSConfigGSSInfoPrint__MainLogAssignment_4");
 					put(grammarAccess.getGSSConfigGSSInfoPrintAccess().getPortLogsAssignment_8(), "rule__GSSConfigGSSInfoPrint__PortLogsAssignment_8");
-					put(grammarAccess.getGSSConfigGSSInfoPrintAccess().getDebugLogAssignment_12(), "rule__GSSConfigGSSInfoPrint__DebugLogAssignment_12");
+					put(grammarAccess.getGSSConfigGSSInfoPrintAccess().getRawLogAssignment_12(), "rule__GSSConfigGSSInfoPrint__RawLogAssignment_12");
 					put(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getMainLogAssignment_4(), "rule__GSSConfigPhyHeaderPrint__MainLogAssignment_4");
 					put(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getPortLogsAssignment_8(), "rule__GSSConfigPhyHeaderPrint__PortLogsAssignment_8");
-					put(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getDebugLogAssignment_12(), "rule__GSSConfigPhyHeaderPrint__DebugLogAssignment_12");
+					put(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getRawLogAssignment_12(), "rule__GSSConfigPhyHeaderPrint__RawLogAssignment_12");
 					put(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getGssTabsAssignment_16(), "rule__GSSConfigPhyHeaderPrint__GssTabsAssignment_16");
 					put(grammarAccess.getGSSConfigGSSDiscardErrorFlagsAccess().getTxErrorsAssignment_4(), "rule__GSSConfigGSSDiscardErrorFlags__TxErrorsAssignment_4");
 					put(grammarAccess.getGSSConfigGSSDiscardErrorFlagsAccess().getNotExpectedPacketsAssignment_8(), "rule__GSSConfigGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8");
