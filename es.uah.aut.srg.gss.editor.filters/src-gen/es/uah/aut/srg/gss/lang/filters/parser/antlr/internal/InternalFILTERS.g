@@ -381,7 +381,7 @@ ruleGSSFilterMaxtermFilter returns [EObject current=null]
 											}
 										}
 										{
-											newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSTmTcFormatTmTCFormatCrossReference_3_1_3_0());
+											newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatCrossReference_3_1_3_0());
 										}
 										ruleVersionedQualifiedName
 										{
@@ -679,7 +679,7 @@ ruleGSSFilterMintermFilter returns [EObject current=null]
 											}
 										}
 										{
-											newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSTmTcFormatTmTCFormatCrossReference_3_1_3_0());
+											newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatCrossReference_3_1_3_0());
 										}
 										ruleVersionedQualifiedName
 										{
@@ -956,7 +956,7 @@ ruleGSSFilterBoolVar returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefGSSTmTcFormatFieldCrossReference_16_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1194,7 +1194,7 @@ ruleGSSFilterBoolVarFromArrayItem returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefGSSTmTcFormatAIFieldCrossReference_16_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1463,7 +1463,7 @@ ruleGSSFilterBoolVarFromGroupedArrayItem returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsGSSTmTcFormatAFieldCrossReference_20_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1670,7 +1670,7 @@ ruleGSSFilterBoolVarFDIC returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefGSSTmTcFormatFDICFieldCrossReference_12_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -2700,6 +2700,63 @@ ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrData
 			$current.merge(kw);
 			newLeafNode(kw, grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3());
 		}
+	)
+;
+
+// Entry rule entryRuleVersionedQualifiedReferenceName
+entryRuleVersionedQualifiedReferenceName returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameRule()); }
+	iv_ruleVersionedQualifiedReferenceName=ruleVersionedQualifiedReferenceName
+	{ $current=$iv_ruleVersionedQualifiedReferenceName.current.getText(); }
+	EOF;
+
+// Rule VersionedQualifiedReferenceName
+ruleVersionedQualifiedReferenceName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameAccess().getVersionedQualifiedNameParserRuleCall_0_0());
+			}
+			this_VersionedQualifiedName_0=ruleVersionedQualifiedName
+			{
+				$current.merge(this_VersionedQualifiedName_0);
+			}
+			{
+				afterParserOrEnumRuleCall();
+			}
+			kw='::'
+			{
+				$current.merge(kw);
+				newLeafNode(kw, grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_0_1());
+			}
+		)?
+		this_ID_2=RULE_ID
+		{
+			$current.merge(this_ID_2);
+		}
+		{
+			newLeafNode(this_ID_2, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_1());
+		}
+		(
+			kw='::'
+			{
+				$current.merge(kw);
+				newLeafNode(kw, grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_2_0());
+			}
+			this_ID_4=RULE_ID
+			{
+				$current.merge(this_ID_4);
+			}
+			{
+				newLeafNode(this_ID_4, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_2_1());
+			}
+		)*
 	)
 ;
 

@@ -6,8 +6,7 @@ import es.uah.aut.srg.gss.export.GSSExportExport;
 
 import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket;
 import es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -112,7 +111,7 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatTmTCFormat format;
+	protected GSSTmTcFormatTmTcFormat format;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -239,10 +238,10 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat getFormat() {
+	public GSSTmTcFormatTmTcFormat getFormat() {
 		if (format != null && format.eIsProxy()) {
 			InternalEObject oldFormat = (InternalEObject)format;
-			format = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldFormat);
+			format = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldFormat);
 			if (format != oldFormat) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT, oldFormat, format));
@@ -256,7 +255,7 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat basicGetFormat() {
+	public GSSTmTcFormatTmTcFormat basicGetFormat() {
 		return format;
 	}
 
@@ -265,8 +264,8 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFormat(GSSTmTcFormatTmTCFormat newFormat) {
-		GSSTmTcFormatTmTCFormat oldFormat = format;
+	public void setFormat(GSSTmTcFormatTmTcFormat newFormat) {
+		GSSTmTcFormatTmTcFormat oldFormat = format;
 		format = newFormat;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT, oldFormat, format));
@@ -317,7 +316,7 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 				setExport((GSSExportExport)newValue);
 				return;
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT:
-				setFormat((GSSTmTcFormatTmTCFormat)newValue);
+				setFormat((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -344,7 +343,7 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 				setExport((GSSExportExport)null);
 				return;
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT:
-				setFormat((GSSTmTcFormatTmTCFormat)null);
+				setFormat((GSSTmTcFormatTmTcFormat)null);
 				return;
 		}
 		super.eUnset(featureID);

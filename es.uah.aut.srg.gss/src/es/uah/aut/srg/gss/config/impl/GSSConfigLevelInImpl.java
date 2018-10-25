@@ -14,9 +14,7 @@ import es.uah.aut.srg.gss.config.GSSConfigLevelIn;
 import es.uah.aut.srg.gss.config.configPackage;
 
 import es.uah.aut.srg.gss.export.GSSExportExport;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
-
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -99,7 +97,7 @@ public class GSSConfigLevelInImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatTmTCFormat tCformat;
+	protected GSSTmTcFormatTmTcFormat tCformat;
 
 	/**
 	 * The cached value of the '{@link #getExport_to_prev_Level() <em>Export to prev Level</em>}' reference.
@@ -202,10 +200,10 @@ public class GSSConfigLevelInImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat getTCformat() {
+	public GSSTmTcFormatTmTcFormat getTCformat() {
 		if (tCformat != null && tCformat.eIsProxy()) {
 			InternalEObject oldTCformat = (InternalEObject)tCformat;
-			tCformat = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldTCformat);
+			tCformat = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldTCformat);
 			if (tCformat != oldTCformat) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_LEVEL_IN__TCFORMAT, oldTCformat, tCformat));
@@ -219,7 +217,7 @@ public class GSSConfigLevelInImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat basicGetTCformat() {
+	public GSSTmTcFormatTmTcFormat basicGetTCformat() {
 		return tCformat;
 	}
 
@@ -228,8 +226,8 @@ public class GSSConfigLevelInImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTCformat(GSSTmTcFormatTmTCFormat newTCformat) {
-		GSSTmTcFormatTmTCFormat oldTCformat = tCformat;
+	public void setTCformat(GSSTmTcFormatTmTcFormat newTCformat) {
+		GSSTmTcFormatTmTcFormat oldTCformat = tCformat;
 		tCformat = newTCformat;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_IN__TCFORMAT, oldTCformat, tCformat));
@@ -310,7 +308,7 @@ public class GSSConfigLevelInImpl extends MinimalEObjectImpl.Container implement
 				setName((String)newValue);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN__TCFORMAT:
-				setTCformat((GSSTmTcFormatTmTCFormat)newValue);
+				setTCformat((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN__EXPORT_TO_PREV_LEVEL:
 				setExport_to_prev_Level((GSSExportExport)newValue);
@@ -334,7 +332,7 @@ public class GSSConfigLevelInImpl extends MinimalEObjectImpl.Container implement
 				setName(NAME_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN__TCFORMAT:
-				setTCformat((GSSTmTcFormatTmTCFormat)null);
+				setTCformat((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN__EXPORT_TO_PREV_LEVEL:
 				setExport_to_prev_Level((GSSExportExport)null);

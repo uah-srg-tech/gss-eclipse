@@ -341,35 +341,42 @@ ruleGSSExportExport returns [EObject current=null]
 			newLeafNode(otherlv_13, grammarAccess.getGSSExportExportAccess().getColonEqualsSignKeyword_5());
 		}
 		(
+			otherlv_14='NULL'
+			{
+				newLeafNode(otherlv_14, grammarAccess.getGSSExportExportAccess().getNULLKeyword_6_0());
+			}
+			    |
 			(
-				{
-					/* */
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGSSExportExportRule());
+				(
+					{
+						/* */
 					}
-				}
-				{
-					newCompositeNode(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTCFormatCrossReference_6_0());
-				}
-				ruleVersionedQualifiedName
-				{
-					afterParserOrEnumRuleCall();
-				}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getGSSExportExportRule());
+						}
+					}
+					{
+						newCompositeNode(grammarAccess.getGSSExportExportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_1_0());
+					}
+					ruleVersionedQualifiedName
+					{
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
 		)
-		otherlv_15=';'
+		otherlv_16=';'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_7());
+			newLeafNode(otherlv_16, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_7());
 		}
-		otherlv_16='to'
+		otherlv_17='to'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getGSSExportExportAccess().getToKeyword_8());
+			newLeafNode(otherlv_17, grammarAccess.getGSSExportExportAccess().getToKeyword_8());
 		}
-		otherlv_17=':='
+		otherlv_18=':='
 		{
-			newLeafNode(otherlv_17, grammarAccess.getGSSExportExportAccess().getColonEqualsSignKeyword_9());
+			newLeafNode(otherlv_18, grammarAccess.getGSSExportExportAccess().getColonEqualsSignKeyword_9());
 		}
 		(
 			(
@@ -382,7 +389,7 @@ ruleGSSExportExport returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTCFormatCrossReference_10_0());
+					newCompositeNode(grammarAccess.getGSSExportExportAccess().getToGSSTmTcFormatTmTcFormatCrossReference_10_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -390,16 +397,16 @@ ruleGSSExportExport returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_19=';'
+		otherlv_20=';'
 		{
-			newLeafNode(otherlv_19, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_11());
+			newLeafNode(otherlv_20, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_11());
 		}
 		(
 			(
 				{
 					newCompositeNode(grammarAccess.getGSSExportExportAccess().getSizesGSSExportSizesParserRuleCall_12_0());
 				}
-				lv_Sizes_20_0=ruleGSSExportSizes
+				lv_Sizes_21_0=ruleGSSExportSizes
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSExportExportRule());
@@ -407,7 +414,7 @@ ruleGSSExportExport returns [EObject current=null]
 					set(
 						$current,
 						"Sizes",
-						lv_Sizes_20_0,
+						lv_Sizes_21_0,
 						"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSizes");
 					afterParserOrEnumRuleCall();
 				}
@@ -418,7 +425,7 @@ ruleGSSExportExport returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportExportAccess().getSettingsGSSExportSettingsParserRuleCall_13_0());
 				}
-				lv_settings_21_0=ruleGSSExportSettings
+				lv_settings_22_0=ruleGSSExportSettings
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSExportExportRule());
@@ -426,7 +433,7 @@ ruleGSSExportExport returns [EObject current=null]
 					set(
 						$current,
 						"settings",
-						lv_settings_21_0,
+						lv_settings_22_0,
 						"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSettings");
 					afterParserOrEnumRuleCall();
 				}
@@ -437,7 +444,7 @@ ruleGSSExportExport returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportExportAccess().getActivateDICsGSSExportActivateDICsParserRuleCall_14_0());
 				}
-				lv_activateDICs_22_0=ruleGSSExportActivateDICs
+				lv_activateDICs_23_0=ruleGSSExportActivateDICs
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSExportExportRule());
@@ -445,19 +452,19 @@ ruleGSSExportExport returns [EObject current=null]
 					set(
 						$current,
 						"activateDICs",
-						lv_activateDICs_22_0,
+						lv_activateDICs_23_0,
 						"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportActivateDICs");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)?
-		otherlv_23='}'
+		otherlv_24='}'
 		{
-			newLeafNode(otherlv_23, grammarAccess.getGSSExportExportAccess().getRightCurlyBracketKeyword_15());
+			newLeafNode(otherlv_24, grammarAccess.getGSSExportExportAccess().getRightCurlyBracketKeyword_15());
 		}
-		otherlv_24=';'
+		otherlv_25=';'
 		{
-			newLeafNode(otherlv_24, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_16());
+			newLeafNode(otherlv_25, grammarAccess.getGSSExportExportAccess().getSemicolonKeyword_16());
 		}
 	)
 ;
@@ -1330,7 +1337,7 @@ ruleGSSExportSettingFromConst returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportSettingFromConstAccess().getToFieldRefGSSTmTcFormatFieldCrossReference_8_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1427,7 +1434,7 @@ ruleGSSExportSettingFromSize returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportSettingFromSizeAccess().getToFieldRefGSSTmTcFormatFieldCrossReference_8_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1523,7 +1530,7 @@ ruleGSSExportSettingFromFile returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportSettingFromFileAccess().getToFieldRefGSSTmTcFormatFieldCrossReference_8_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1688,7 +1695,7 @@ ruleGSSExportSettingFromField returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportSettingFromFieldAccess().getFieldRefGSSTmTcFormatFieldCrossReference_4_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1719,7 +1726,7 @@ ruleGSSExportSettingFromField returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportSettingFromFieldAccess().getToFieldRefGSSTmTcFormatFieldCrossReference_8_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1816,7 +1823,7 @@ ruleGSSExportSettingAIFromConst returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportSettingAIFromConstAccess().getToFieldRefGSSTmTcFormatAIFieldCrossReference_8_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -1912,7 +1919,7 @@ ruleGSSExportSettingAIFromFile returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSExportSettingAIFromFileAccess().getToFieldRefGSSTmTcFormatAIFieldCrossReference_8_0());
 				}
-				ruleVersionedQualifiedName
+				ruleVersionedQualifiedReferenceName
 				{
 					afterParserOrEnumRuleCall();
 				}
@@ -2391,6 +2398,63 @@ ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrData
 			$current.merge(kw);
 			newLeafNode(kw, grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3());
 		}
+	)
+;
+
+// Entry rule entryRuleVersionedQualifiedReferenceName
+entryRuleVersionedQualifiedReferenceName returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameRule()); }
+	iv_ruleVersionedQualifiedReferenceName=ruleVersionedQualifiedReferenceName
+	{ $current=$iv_ruleVersionedQualifiedReferenceName.current.getText(); }
+	EOF;
+
+// Rule VersionedQualifiedReferenceName
+ruleVersionedQualifiedReferenceName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameAccess().getVersionedQualifiedNameParserRuleCall_0_0());
+			}
+			this_VersionedQualifiedName_0=ruleVersionedQualifiedName
+			{
+				$current.merge(this_VersionedQualifiedName_0);
+			}
+			{
+				afterParserOrEnumRuleCall();
+			}
+			kw='::'
+			{
+				$current.merge(kw);
+				newLeafNode(kw, grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_0_1());
+			}
+		)?
+		this_ID_2=RULE_ID
+		{
+			$current.merge(this_ID_2);
+		}
+		{
+			newLeafNode(this_ID_2, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_1());
+		}
+		(
+			kw='::'
+			{
+				$current.merge(kw);
+				newLeafNode(kw, grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_2_0());
+			}
+			this_ID_4=RULE_ID
+			{
+				$current.merge(this_ID_4);
+			}
+			{
+				newLeafNode(this_ID_4, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_2_1());
+			}
+		)*
 	)
 ;
 

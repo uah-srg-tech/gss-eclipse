@@ -222,8 +222,8 @@ public class importsPackageImpl extends EPackageImpl implements importsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSImportVirtualSize_FieldRef() {
-		return (EAttribute)gssImportVirtualSizeEClass.getEStructuralFeatures().get(0);
+	public EReference getGSSImportVirtualSize_FieldRef() {
+		return (EReference)gssImportVirtualSizeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -231,8 +231,8 @@ public class importsPackageImpl extends EPackageImpl implements importsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSImportVirtualSize_To() {
-		return (EAttribute)gssImportVirtualSizeEClass.getEStructuralFeatures().get(1);
+	public EReference getGSSImportVirtualSize_To() {
+		return (EReference)gssImportVirtualSizeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -302,8 +302,8 @@ public class importsPackageImpl extends EPackageImpl implements importsPackage {
 		createEAttribute(gssImportDataSourceEClass, GSS_IMPORT_DATA_SOURCE__RIGHT_TRIM);
 
 		gssImportVirtualSizeEClass = createEClass(GSS_IMPORT_VIRTUAL_SIZE);
-		createEAttribute(gssImportVirtualSizeEClass, GSS_IMPORT_VIRTUAL_SIZE__FIELD_REF);
-		createEAttribute(gssImportVirtualSizeEClass, GSS_IMPORT_VIRTUAL_SIZE__TO);
+		createEReference(gssImportVirtualSizeEClass, GSS_IMPORT_VIRTUAL_SIZE__FIELD_REF);
+		createEReference(gssImportVirtualSizeEClass, GSS_IMPORT_VIRTUAL_SIZE__TO);
 		createEAttribute(gssImportVirtualSizeEClass, GSS_IMPORT_VIRTUAL_SIZE__ADD_SIZE);
 		createEAttribute(gssImportVirtualSizeEClass, GSS_IMPORT_VIRTUAL_SIZE__UNIT);
 
@@ -347,8 +347,8 @@ public class importsPackageImpl extends EPackageImpl implements importsPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssImportImportEClass, GSSImportImport.class, "GSSImportImport", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGSSImportImport_From(), thetm_tc_formatPackage.getGSSTmTcFormatTmTCFormat(), null, "from", null, 1, 1, GSSImportImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSImportImport_To(), thetm_tc_formatPackage.getGSSTmTcFormatTmTCFormat(), null, "to", null, 1, 1, GSSImportImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSImportImport_From(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "from", null, 1, 1, GSSImportImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSImportImport_To(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "to", null, 0, 1, GSSImportImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSImportImport_DataSource(), this.getGSSImportDataSource(), null, "dataSource", null, 1, -1, GSSImportImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSImportImport_VirtualSize(), this.getGSSImportVirtualSize(), null, "virtualSize", null, 0, 1, GSSImportImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -358,8 +358,8 @@ public class importsPackageImpl extends EPackageImpl implements importsPackage {
 		initEAttribute(getGSSImportDataSource_RightTrim(), ecorePackage.getEString(), "rightTrim", null, 1, 1, GSSImportDataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssImportVirtualSizeEClass, GSSImportVirtualSize.class, "GSSImportVirtualSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSImportVirtualSize_FieldRef(), ecorePackage.getEString(), "FieldRef", null, 1, 1, GSSImportVirtualSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSImportVirtualSize_To(), ecorePackage.getEString(), "to", null, 1, 1, GSSImportVirtualSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSImportVirtualSize_FieldRef(), thetm_tc_formatPackage.getGSSTmTcFormatField(), null, "FieldRef", null, 1, 1, GSSImportVirtualSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSImportVirtualSize_To(), thetm_tc_formatPackage.getGSSTmTcFormatField(), null, "to", null, 1, 1, GSSImportVirtualSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSImportVirtualSize_AddSize(), ecorePackage.getEString(), "addSize", null, 0, 1, GSSImportVirtualSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSImportVirtualSize_Unit(), this.getGSSImportUnit(), "unit", null, 0, 1, GSSImportVirtualSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

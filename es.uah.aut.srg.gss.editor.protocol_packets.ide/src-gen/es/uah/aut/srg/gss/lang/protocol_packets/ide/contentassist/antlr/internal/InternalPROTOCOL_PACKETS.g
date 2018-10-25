@@ -2259,13 +2259,13 @@ rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_20
 	}
 :
 	(
-		{ before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTCFormatCrossReference_20_0()); }
+		{ before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTcFormatCrossReference_20_0()); }
 		(
-			{ before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_20_0_1()); }
+			{ before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_20_0_1()); }
 			ruleVersionedQualifiedName
-			{ after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_20_0_1()); }
+			{ after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_20_0_1()); }
 		)
-		{ after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTCFormatCrossReference_20_0()); }
+		{ after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTcFormatCrossReference_20_0()); }
 	)
 ;
 finally {

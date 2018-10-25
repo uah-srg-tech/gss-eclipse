@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.gss.filters;
 
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -44,12 +44,12 @@ public interface GSSFilterMintermFilter extends GSSFilterFilter {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Format File</em>' reference.
-	 * @see #setFormatFile(GSSTmTcFormatTmTCFormat)
+	 * @see #setFormatFile(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.filters.filtersPackage#getGSSFilterMintermFilter_FormatFile()
 	 * @model required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getFormatFile();
+	GSSTmTcFormatTmTcFormat getFormatFile();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.filters.GSSFilterMintermFilter#getFormatFile <em>Format File</em>}' reference.
@@ -59,7 +59,7 @@ public interface GSSFilterMintermFilter extends GSSFilterFilter {
 	 * @see #getFormatFile()
 	 * @generated
 	 */
-	void setFormatFile(GSSTmTcFormatTmTCFormat value);
+	void setFormatFile(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Bool Var</b></em>' containment reference list.

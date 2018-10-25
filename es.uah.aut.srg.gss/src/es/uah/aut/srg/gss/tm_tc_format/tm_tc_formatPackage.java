@@ -68,11 +68,11 @@ public interface tm_tc_formatPackage extends EPackage {
 	tm_tc_formatPackage eINSTANCE = es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTCFormatImpl <em>GSS Tm Tc Format Tm TC Format</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTcFormatImpl <em>GSS Tm Tc Format Tm Tc Format</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTCFormatImpl
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatTmTCFormat()
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTcFormatImpl
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatTmTcFormat()
 	 * @generated
 	 */
 	int GSS_TM_TC_FORMAT_TM_TC_FORMAT = 0;
@@ -195,7 +195,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_TM_TC_FORMAT__AI_FIELD = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
-	 * The number of structural features of the '<em>GSS Tm Tc Format Tm TC Format</em>' class.
+	 * The number of structural features of the '<em>GSS Tm Tc Format Tm Tc Format</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -204,7 +204,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_TM_TC_FORMAT_FEATURE_COUNT = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
-	 * The number of operations of the '<em>GSS Tm Tc Format Tm TC Format</em>' class.
+	 * The number of operations of the '<em>GSS Tm Tc Format Tm Tc Format</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -223,13 +223,31 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_FIELD = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_FIELD__NAME = commonPackage.GSS_MODEL_OBJECT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_FIELD__DESCRIPTION = commonPackage.GSS_MODEL_OBJECT__DESCRIPTION;
+
+	/**
 	 * The number of structural features of the '<em>GSS Tm Tc Format Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT = 0;
+	int GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>GSS Tm Tc Format Field</em>' class.
@@ -238,7 +256,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_FIELD_OPERATION_COUNT = 0;
+	int GSS_TM_TC_FORMAT_FIELD_OPERATION_COUNT = commonPackage.GSS_MODEL_OBJECT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatCSFieldImpl <em>GSS Tm Tc Format CS Field</em>}' class.
@@ -249,6 +267,24 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 */
 	int GSS_TM_TC_FORMAT_CS_FIELD = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_CS_FIELD__NAME = GSS_TM_TC_FORMAT_FIELD__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_CS_FIELD__DESCRIPTION = GSS_TM_TC_FORMAT_FIELD__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Fid</b></em>' attribute.
@@ -269,31 +305,13 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_CS_FIELD__PFID = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TM_TC_FORMAT_CS_FIELD__NAME = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TM_TC_FORMAT_CS_FIELD__DESCRIPTION = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_CS_FIELD__TYPE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 4;
+	int GSS_TM_TC_FORMAT_CS_FIELD__TYPE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Byte Order</b></em>' attribute.
@@ -302,7 +320,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_CS_FIELD__BYTE_ORDER = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 5;
+	int GSS_TM_TC_FORMAT_CS_FIELD__BYTE_ORDER = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>First Bit</b></em>' attribute.
@@ -311,7 +329,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_CS_FIELD__FIRST_BIT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 6;
+	int GSS_TM_TC_FORMAT_CS_FIELD__FIRST_BIT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' containment reference.
@@ -320,7 +338,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_CS_FIELD__SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 7;
+	int GSS_TM_TC_FORMAT_CS_FIELD__SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Global Offset</b></em>' containment reference.
@@ -329,7 +347,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_CS_FIELD__GLOBAL_OFFSET = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 8;
+	int GSS_TM_TC_FORMAT_CS_FIELD__GLOBAL_OFFSET = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>GSS Tm Tc Format CS Field</em>' class.
@@ -338,7 +356,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_CS_FIELD_FEATURE_COUNT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 9;
+	int GSS_TM_TC_FORMAT_CS_FIELD_FEATURE_COUNT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>GSS Tm Tc Format CS Field</em>' class.
@@ -380,6 +398,24 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD = 3;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__NAME = GSS_TM_TC_FORMAT_FIELD__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__DESCRIPTION = GSS_TM_TC_FORMAT_FIELD__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Fid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -398,31 +434,13 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__PFID = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__NAME = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__DESCRIPTION = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__TYPE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 4;
+	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__TYPE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Byte Order</b></em>' attribute.
@@ -431,7 +449,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__BYTE_ORDER = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 5;
+	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__BYTE_ORDER = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>First Bit</b></em>' attribute.
@@ -440,7 +458,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__FIRST_BIT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 6;
+	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__FIRST_BIT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' containment reference.
@@ -449,7 +467,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 7;
+	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Global Offset</b></em>' containment reference.
@@ -458,7 +476,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__GLOBAL_OFFSET = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 8;
+	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__GLOBAL_OFFSET = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Formula</b></em>' containment reference.
@@ -467,7 +485,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__FORMULA = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 9;
+	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__FORMULA = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>GSS Tm Tc Format CS Formula Field</em>' class.
@@ -476,7 +494,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD_FEATURE_COUNT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 10;
+	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD_FEATURE_COUNT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>GSS Tm Tc Format CS Formula Field</em>' class.
@@ -508,6 +526,24 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_VS_FIELD = 4;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_VS_FIELD__NAME = GSS_TM_TC_FORMAT_FIELD__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_VS_FIELD__DESCRIPTION = GSS_TM_TC_FORMAT_FIELD__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Fid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -526,31 +562,13 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_VS_FIELD__PFID = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TM_TC_FORMAT_VS_FIELD__NAME = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TM_TC_FORMAT_VS_FIELD__DESCRIPTION = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_VS_FIELD__TYPE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 4;
+	int GSS_TM_TC_FORMAT_VS_FIELD__TYPE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Byte Order</b></em>' attribute.
@@ -559,7 +577,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_VS_FIELD__BYTE_ORDER = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 5;
+	int GSS_TM_TC_FORMAT_VS_FIELD__BYTE_ORDER = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>First Bit</b></em>' attribute.
@@ -568,7 +586,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_VS_FIELD__FIRST_BIT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 6;
+	int GSS_TM_TC_FORMAT_VS_FIELD__FIRST_BIT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Const Size</b></em>' containment reference.
@@ -577,7 +595,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_VS_FIELD__CONST_SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 7;
+	int GSS_TM_TC_FORMAT_VS_FIELD__CONST_SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Global Offset</b></em>' containment reference.
@@ -586,7 +604,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 8;
+	int GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Max Size</b></em>' containment reference.
@@ -595,7 +613,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_VS_FIELD__MAX_SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 9;
+	int GSS_TM_TC_FORMAT_VS_FIELD__MAX_SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Variable Size</b></em>' containment reference.
@@ -604,7 +622,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 10;
+	int GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>GSS Tm Tc Format VS Field</em>' class.
@@ -613,7 +631,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_VS_FIELD_FEATURE_COUNT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 11;
+	int GSS_TM_TC_FORMAT_VS_FIELD_FEATURE_COUNT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>GSS Tm Tc Format VS Field</em>' class.
@@ -665,6 +683,24 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_VR_FIELD_SIZE = 5;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_VR_FIELD_SIZE__NAME = GSS_TM_TC_FORMAT_FIELD__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_VR_FIELD_SIZE__DESCRIPTION = GSS_TM_TC_FORMAT_FIELD__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Fid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -683,22 +719,13 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_VR_FIELD_SIZE__PFID = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TM_TC_FORMAT_VR_FIELD_SIZE__NAME = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>GSS Tm Tc Format VR Field Size</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_VR_FIELD_SIZE_FEATURE_COUNT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 3;
+	int GSS_TM_TC_FORMAT_VR_FIELD_SIZE_FEATURE_COUNT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>GSS Tm Tc Format VR Field Size</em>' class.
@@ -720,6 +747,24 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_FDIC_FIELD = 6;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_FDIC_FIELD__NAME = GSS_TM_TC_FORMAT_FIELD__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_FDIC_FIELD__DESCRIPTION = GSS_TM_TC_FORMAT_FIELD__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Fid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -738,31 +783,13 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_FDIC_FIELD__PFID = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TM_TC_FORMAT_FDIC_FIELD__NAME = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TM_TC_FORMAT_FDIC_FIELD__DESCRIPTION = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Check Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_FDIC_FIELD__CHECK_TYPE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 4;
+	int GSS_TM_TC_FORMAT_FDIC_FIELD__CHECK_TYPE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Byte Order</b></em>' attribute.
@@ -771,7 +798,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_FDIC_FIELD__BYTE_ORDER = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 5;
+	int GSS_TM_TC_FORMAT_FDIC_FIELD__BYTE_ORDER = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>First Bit</b></em>' attribute.
@@ -780,7 +807,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_FDIC_FIELD__FIRST_BIT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 6;
+	int GSS_TM_TC_FORMAT_FDIC_FIELD__FIRST_BIT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' containment reference.
@@ -789,7 +816,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_FDIC_FIELD__SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 7;
+	int GSS_TM_TC_FORMAT_FDIC_FIELD__SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Floating Offset</b></em>' containment reference.
@@ -798,7 +825,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_FDIC_FIELD__FLOATING_OFFSET = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 8;
+	int GSS_TM_TC_FORMAT_FDIC_FIELD__FLOATING_OFFSET = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Sorted Fields To Check</b></em>' containment reference.
@@ -807,7 +834,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_FDIC_FIELD__SORTED_FIELDS_TO_CHECK = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 9;
+	int GSS_TM_TC_FORMAT_FDIC_FIELD__SORTED_FIELDS_TO_CHECK = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>GSS Tm Tc Format FDIC Field</em>' class.
@@ -816,7 +843,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_FDIC_FIELD_FEATURE_COUNT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 10;
+	int GSS_TM_TC_FORMAT_FDIC_FIELD_FEATURE_COUNT = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>GSS Tm Tc Format FDIC Field</em>' class.
@@ -996,31 +1023,13 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_AI_FIELD = 8;
 
 	/**
-	 * The feature id for the '<em><b>Fid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD__FID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Pfid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD__PFID = 1;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD__NAME = 2;
+	int GSS_TM_TC_FORMAT_AI_FIELD__NAME = commonPackage.GSS_MODEL_OBJECT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1029,7 +1038,25 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD__DESCRIPTION = 3;
+	int GSS_TM_TC_FORMAT_AI_FIELD__DESCRIPTION = commonPackage.GSS_MODEL_OBJECT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Fid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_AI_FIELD__FID = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Pfid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_AI_FIELD__PFID = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1038,7 +1065,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD__TYPE = 4;
+	int GSS_TM_TC_FORMAT_AI_FIELD__TYPE = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Byte Order</b></em>' attribute.
@@ -1047,7 +1074,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD__BYTE_ORDER = 5;
+	int GSS_TM_TC_FORMAT_AI_FIELD__BYTE_ORDER = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>First Bit</b></em>' attribute.
@@ -1056,7 +1083,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD__FIRST_BIT = 6;
+	int GSS_TM_TC_FORMAT_AI_FIELD__FIRST_BIT = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' containment reference.
@@ -1065,7 +1092,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD__SIZE = 7;
+	int GSS_TM_TC_FORMAT_AI_FIELD__SIZE = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Local Offset</b></em>' containment reference.
@@ -1074,7 +1101,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET = 8;
+	int GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Array Ref</b></em>' containment reference.
@@ -1083,7 +1110,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF = 9;
+	int GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>GSS Tm Tc Format AI Field</em>' class.
@@ -1092,7 +1119,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD_FEATURE_COUNT = 10;
+	int GSS_TM_TC_FORMAT_AI_FIELD_FEATURE_COUNT = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>GSS Tm Tc Format AI Field</em>' class.
@@ -1101,7 +1128,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD_OPERATION_COUNT = 0;
+	int GSS_TM_TC_FORMAT_AI_FIELD_OPERATION_COUNT = commonPackage.GSS_MODEL_OBJECT_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Bytes</b></em>' attribute.
@@ -1529,11 +1556,11 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_LOCAL_OFFSET_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormatType <em>GSS Tm Tc Format Tm TC Format Type</em>}' enum.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormatType <em>GSS Tm Tc Format Tm Tc Format Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormatType
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatTmTCFormatType()
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormatType
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatTmTcFormatType()
 	 * @generated
 	 */
 	int GSS_TM_TC_FORMAT_TM_TC_FORMAT_TYPE = 21;
@@ -1589,6 +1616,115 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_POWER = 27;
 
 	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat <em>GSS Tm Tc Format Tm Tc Format</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Tm Tc Format Tm Tc Format</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat
+	 * @generated
+	 */
+	EClass getGSSTmTcFormatTmTcFormat();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getProtocol <em>Protocol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Protocol</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getProtocol()
+	 * @see #getGSSTmTcFormatTmTcFormat()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatTmTcFormat_Protocol();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getType()
+	 * @see #getGSSTmTcFormatTmTcFormat()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatTmTcFormat_Type();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getCSField <em>CS Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>CS Field</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getCSField()
+	 * @see #getGSSTmTcFormatTmTcFormat()
+	 * @generated
+	 */
+	EReference getGSSTmTcFormatTmTcFormat_CSField();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getCSFormulaField <em>CS Formula Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>CS Formula Field</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getCSFormulaField()
+	 * @see #getGSSTmTcFormatTmTcFormat()
+	 * @generated
+	 */
+	EReference getGSSTmTcFormatTmTcFormat_CSFormulaField();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getVSField <em>VS Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>VS Field</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getVSField()
+	 * @see #getGSSTmTcFormatTmTcFormat()
+	 * @generated
+	 */
+	EReference getGSSTmTcFormatTmTcFormat_VSField();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getFDICField <em>FDIC Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>FDIC Field</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getFDICField()
+	 * @see #getGSSTmTcFormatTmTcFormat()
+	 * @generated
+	 */
+	EReference getGSSTmTcFormatTmTcFormat_FDICField();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getVRFieldSize <em>VR Field Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>VR Field Size</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getVRFieldSize()
+	 * @see #getGSSTmTcFormatTmTcFormat()
+	 * @generated
+	 */
+	EReference getGSSTmTcFormatTmTcFormat_VRFieldSize();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getAField <em>AField</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>AField</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getAField()
+	 * @see #getGSSTmTcFormatTmTcFormat()
+	 * @generated
+	 */
+	EReference getGSSTmTcFormatTmTcFormat_AField();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getAIField <em>AI Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>AI Field</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat#getAIField()
+	 * @see #getGSSTmTcFormatTmTcFormat()
+	 * @generated
+	 */
+	EReference getGSSTmTcFormatTmTcFormat_AIField();
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType <em>GSS Tm Tc Format Check Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1598,115 +1734,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	 */
 	int GSS_TM_TC_FORMAT_CHECK_TYPE = 25;
 
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat <em>GSS Tm Tc Format Tm TC Format</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Tm Tc Format Tm TC Format</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat
-	 * @generated
-	 */
-	EClass getGSSTmTcFormatTmTCFormat();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getProtocol <em>Protocol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Protocol</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getProtocol()
-	 * @see #getGSSTmTcFormatTmTCFormat()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatTmTCFormat_Protocol();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getType()
-	 * @see #getGSSTmTcFormatTmTCFormat()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatTmTCFormat_Type();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getCSFormulaField <em>CS Formula Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>CS Formula Field</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getCSFormulaField()
-	 * @see #getGSSTmTcFormatTmTCFormat()
-	 * @generated
-	 */
-	EReference getGSSTmTcFormatTmTCFormat_CSFormulaField();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getCSField <em>CS Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>CS Field</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getCSField()
-	 * @see #getGSSTmTcFormatTmTCFormat()
-	 * @generated
-	 */
-	EReference getGSSTmTcFormatTmTCFormat_CSField();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getVSField <em>VS Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>VS Field</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getVSField()
-	 * @see #getGSSTmTcFormatTmTCFormat()
-	 * @generated
-	 */
-	EReference getGSSTmTcFormatTmTCFormat_VSField();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getFDICField <em>FDIC Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>FDIC Field</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getFDICField()
-	 * @see #getGSSTmTcFormatTmTCFormat()
-	 * @generated
-	 */
-	EReference getGSSTmTcFormatTmTCFormat_FDICField();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getVRFieldSize <em>VR Field Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>VR Field Size</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getVRFieldSize()
-	 * @see #getGSSTmTcFormatTmTCFormat()
-	 * @generated
-	 */
-	EReference getGSSTmTcFormatTmTCFormat_VRFieldSize();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getAField <em>AField</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>AField</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getAField()
-	 * @see #getGSSTmTcFormatTmTCFormat()
-	 * @generated
-	 */
-	EReference getGSSTmTcFormatTmTCFormat_AField();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getAIField <em>AI Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>AI Field</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat#getAIField()
-	 * @see #getGSSTmTcFormatTmTCFormat()
-	 * @generated
-	 */
-	EReference getGSSTmTcFormatTmTCFormat_AIField();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField <em>GSS Tm Tc Format Field</em>}'.
@@ -1749,28 +1776,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGSSTmTcFormatCSField_Pfid();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getName()
-	 * @see #getGSSTmTcFormatCSField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatCSField_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getDescription()
-	 * @see #getGSSTmTcFormatCSField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatCSField_Description();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getType <em>Type</em>}'.
@@ -1924,28 +1929,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	EAttribute getGSSTmTcFormatCSFormulaField_Pfid();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField#getName()
-	 * @see #getGSSTmTcFormatCSFormulaField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatCSFormulaField_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField#getDescription()
-	 * @see #getGSSTmTcFormatCSFormulaField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatCSFormulaField_Description();
-
-	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2074,28 +2057,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGSSTmTcFormatVSField_Pfid();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getName()
-	 * @see #getGSSTmTcFormatVSField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatVSField_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getDescription()
-	 * @see #getGSSTmTcFormatVSField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatVSField_Description();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getType <em>Type</em>}'.
@@ -2314,17 +2275,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	EAttribute getGSSTmTcFormatVRFieldSize_Pfid();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize#getName()
-	 * @see #getGSSTmTcFormatVRFieldSize()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatVRFieldSize_Name();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField <em>GSS Tm Tc Format FDIC Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2355,28 +2305,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGSSTmTcFormatFDICField_Pfid();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField#getName()
-	 * @see #getGSSTmTcFormatFDICField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatFDICField_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField#getDescription()
-	 * @see #getGSSTmTcFormatFDICField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatFDICField_Description();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField#getCheckType <em>Check Type</em>}'.
@@ -2692,28 +2620,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	EAttribute getGSSTmTcFormatAIField_Pfid();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getName()
-	 * @see #getGSSTmTcFormatAIField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatAIField_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getDescription()
-	 * @see #getGSSTmTcFormatAIField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatAIField_Description();
-
-	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2833,14 +2739,14 @@ public interface tm_tc_formatPackage extends EPackage {
 	EAttribute getGSSTmTcFormatLocalOffset_Bits();
 
 	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormatType <em>GSS Tm Tc Format Tm TC Format Type</em>}'.
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormatType <em>GSS Tm Tc Format Tm Tc Format Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>GSS Tm Tc Format Tm TC Format Type</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormatType
+	 * @return the meta object for enum '<em>GSS Tm Tc Format Tm Tc Format Type</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormatType
 	 * @generated
 	 */
-	EEnum getGSSTmTcFormatTmTCFormatType();
+	EEnum getGSSTmTcFormatTmTcFormatType();
 
 	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldType <em>GSS Tm Tc Format Field Type</em>}'.
@@ -2926,14 +2832,14 @@ public interface tm_tc_formatPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTCFormatImpl <em>GSS Tm Tc Format Tm TC Format</em>}' class.
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTcFormatImpl <em>GSS Tm Tc Format Tm Tc Format</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTCFormatImpl
-		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatTmTCFormat()
+		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTcFormatImpl
+		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatTmTcFormat()
 		 * @generated
 		 */
-		EClass GSS_TM_TC_FORMAT_TM_TC_FORMAT = eINSTANCE.getGSSTmTcFormatTmTCFormat();
+		EClass GSS_TM_TC_FORMAT_TM_TC_FORMAT = eINSTANCE.getGSSTmTcFormatTmTcFormat();
 
 		/**
 		 * The meta object literal for the '<em><b>Protocol</b></em>' attribute feature.
@@ -2941,7 +2847,7 @@ public interface tm_tc_formatPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_TM_TC_FORMAT_TM_TC_FORMAT__PROTOCOL = eINSTANCE.getGSSTmTcFormatTmTCFormat_Protocol();
+		EAttribute GSS_TM_TC_FORMAT_TM_TC_FORMAT__PROTOCOL = eINSTANCE.getGSSTmTcFormatTmTcFormat_Protocol();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -2949,7 +2855,7 @@ public interface tm_tc_formatPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_TM_TC_FORMAT_TM_TC_FORMAT__TYPE = eINSTANCE.getGSSTmTcFormatTmTCFormat_Type();
+		EAttribute GSS_TM_TC_FORMAT_TM_TC_FORMAT__TYPE = eINSTANCE.getGSSTmTcFormatTmTcFormat_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>CS Formula Field</b></em>' containment reference list feature.
@@ -2957,7 +2863,7 @@ public interface tm_tc_formatPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FORMULA_FIELD = eINSTANCE.getGSSTmTcFormatTmTCFormat_CSFormulaField();
+		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FORMULA_FIELD = eINSTANCE.getGSSTmTcFormatTmTcFormat_CSFormulaField();
 
 		/**
 		 * The meta object literal for the '<em><b>CS Field</b></em>' containment reference list feature.
@@ -2965,7 +2871,7 @@ public interface tm_tc_formatPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FIELD = eINSTANCE.getGSSTmTcFormatTmTCFormat_CSField();
+		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FIELD = eINSTANCE.getGSSTmTcFormatTmTcFormat_CSField();
 
 		/**
 		 * The meta object literal for the '<em><b>VS Field</b></em>' containment reference list feature.
@@ -2973,7 +2879,7 @@ public interface tm_tc_formatPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__VS_FIELD = eINSTANCE.getGSSTmTcFormatTmTCFormat_VSField();
+		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__VS_FIELD = eINSTANCE.getGSSTmTcFormatTmTcFormat_VSField();
 
 		/**
 		 * The meta object literal for the '<em><b>FDIC Field</b></em>' containment reference list feature.
@@ -2981,7 +2887,7 @@ public interface tm_tc_formatPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__FDIC_FIELD = eINSTANCE.getGSSTmTcFormatTmTCFormat_FDICField();
+		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__FDIC_FIELD = eINSTANCE.getGSSTmTcFormatTmTcFormat_FDICField();
 
 		/**
 		 * The meta object literal for the '<em><b>VR Field Size</b></em>' containment reference list feature.
@@ -2989,7 +2895,7 @@ public interface tm_tc_formatPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__VR_FIELD_SIZE = eINSTANCE.getGSSTmTcFormatTmTCFormat_VRFieldSize();
+		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__VR_FIELD_SIZE = eINSTANCE.getGSSTmTcFormatTmTcFormat_VRFieldSize();
 
 		/**
 		 * The meta object literal for the '<em><b>AField</b></em>' containment reference list feature.
@@ -2997,7 +2903,7 @@ public interface tm_tc_formatPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__AFIELD = eINSTANCE.getGSSTmTcFormatTmTCFormat_AField();
+		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__AFIELD = eINSTANCE.getGSSTmTcFormatTmTcFormat_AField();
 
 		/**
 		 * The meta object literal for the '<em><b>AI Field</b></em>' containment reference list feature.
@@ -3005,7 +2911,7 @@ public interface tm_tc_formatPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__AI_FIELD = eINSTANCE.getGSSTmTcFormatTmTCFormat_AIField();
+		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__AI_FIELD = eINSTANCE.getGSSTmTcFormatTmTcFormat_AIField();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFieldImpl <em>GSS Tm Tc Format Field</em>}' class.
@@ -3042,22 +2948,6 @@ public interface tm_tc_formatPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GSS_TM_TC_FORMAT_CS_FIELD__PFID = eINSTANCE.getGSSTmTcFormatCSField_Pfid();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_CS_FIELD__NAME = eINSTANCE.getGSSTmTcFormatCSField_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_CS_FIELD__DESCRIPTION = eINSTANCE.getGSSTmTcFormatCSField_Description();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -3178,22 +3068,6 @@ public interface tm_tc_formatPackage extends EPackage {
 		EAttribute GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__PFID = eINSTANCE.getGSSTmTcFormatCSFormulaField_Pfid();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__NAME = eINSTANCE.getGSSTmTcFormatCSFormulaField_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__DESCRIPTION = eINSTANCE.getGSSTmTcFormatCSFormulaField_Description();
-
-		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3292,22 +3166,6 @@ public interface tm_tc_formatPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GSS_TM_TC_FORMAT_VS_FIELD__PFID = eINSTANCE.getGSSTmTcFormatVSField_Pfid();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_VS_FIELD__NAME = eINSTANCE.getGSSTmTcFormatVSField_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_VS_FIELD__DESCRIPTION = eINSTANCE.getGSSTmTcFormatVSField_Description();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -3478,14 +3336,6 @@ public interface tm_tc_formatPackage extends EPackage {
 		EAttribute GSS_TM_TC_FORMAT_VR_FIELD_SIZE__PFID = eINSTANCE.getGSSTmTcFormatVRFieldSize_Pfid();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_VR_FIELD_SIZE__NAME = eINSTANCE.getGSSTmTcFormatVRFieldSize_Name();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFDICFieldImpl <em>GSS Tm Tc Format FDIC Field</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3510,22 +3360,6 @@ public interface tm_tc_formatPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GSS_TM_TC_FORMAT_FDIC_FIELD__PFID = eINSTANCE.getGSSTmTcFormatFDICField_Pfid();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_FDIC_FIELD__NAME = eINSTANCE.getGSSTmTcFormatFDICField_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_FDIC_FIELD__DESCRIPTION = eINSTANCE.getGSSTmTcFormatFDICField_Description();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Type</b></em>' attribute feature.
@@ -3772,22 +3606,6 @@ public interface tm_tc_formatPackage extends EPackage {
 		EAttribute GSS_TM_TC_FORMAT_AI_FIELD__PFID = eINSTANCE.getGSSTmTcFormatAIField_Pfid();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_AI_FIELD__NAME = eINSTANCE.getGSSTmTcFormatAIField_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_AI_FIELD__DESCRIPTION = eINSTANCE.getGSSTmTcFormatAIField_Description();
-
-		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3880,14 +3698,14 @@ public interface tm_tc_formatPackage extends EPackage {
 		EAttribute GSS_TM_TC_FORMAT_LOCAL_OFFSET__BITS = eINSTANCE.getGSSTmTcFormatLocalOffset_Bits();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormatType <em>GSS Tm Tc Format Tm TC Format Type</em>}' enum.
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormatType <em>GSS Tm Tc Format Tm Tc Format Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormatType
-		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatTmTCFormatType()
+		 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormatType
+		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatTmTcFormatType()
 		 * @generated
 		 */
-		EEnum GSS_TM_TC_FORMAT_TM_TC_FORMAT_TYPE = eINSTANCE.getGSSTmTcFormatTmTCFormatType();
+		EEnum GSS_TM_TC_FORMAT_TM_TC_FORMAT_TYPE = eINSTANCE.getGSSTmTcFormatTmTcFormatType();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldType <em>GSS Tm Tc Format Field Type</em>}' enum.

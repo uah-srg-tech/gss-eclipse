@@ -17,9 +17,7 @@ import es.uah.aut.srg.gss.config.configPackage;
 import es.uah.aut.srg.gss.filters.GSSFilterFilter;
 
 import es.uah.aut.srg.gss.imports.GSSImportImport;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
-
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -82,7 +80,7 @@ public class GSSConfigUpperLevelImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatTmTCFormat tMformat;
+	protected GSSTmTcFormatTmTcFormat tMformat;
 
 	/**
 	 * The cached value of the '{@link #getInputFilter() <em>Input Filter</em>}' reference.
@@ -174,10 +172,10 @@ public class GSSConfigUpperLevelImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat getTMformat() {
+	public GSSTmTcFormatTmTcFormat getTMformat() {
 		if (tMformat != null && tMformat.eIsProxy()) {
 			InternalEObject oldTMformat = (InternalEObject)tMformat;
-			tMformat = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldTMformat);
+			tMformat = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldTMformat);
 			if (tMformat != oldTMformat) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_UPPER_LEVEL__TMFORMAT, oldTMformat, tMformat));
@@ -191,7 +189,7 @@ public class GSSConfigUpperLevelImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat basicGetTMformat() {
+	public GSSTmTcFormatTmTcFormat basicGetTMformat() {
 		return tMformat;
 	}
 
@@ -200,8 +198,8 @@ public class GSSConfigUpperLevelImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTMformat(GSSTmTcFormatTmTCFormat newTMformat) {
-		GSSTmTcFormatTmTCFormat oldTMformat = tMformat;
+	public void setTMformat(GSSTmTcFormatTmTcFormat newTMformat) {
+		GSSTmTcFormatTmTcFormat oldTMformat = tMformat;
 		tMformat = newTMformat;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_UPPER_LEVEL__TMFORMAT, oldTMformat, tMformat));
@@ -318,7 +316,7 @@ public class GSSConfigUpperLevelImpl extends MinimalEObjectImpl.Container implem
 				setLevel((GSSConfigUpperLevelLevel)newValue);
 				return;
 			case configPackage.GSS_CONFIG_UPPER_LEVEL__TMFORMAT:
-				setTMformat((GSSTmTcFormatTmTCFormat)newValue);
+				setTMformat((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case configPackage.GSS_CONFIG_UPPER_LEVEL__INPUT_FILTER:
 				setInputFilter((GSSFilterFilter)newValue);
@@ -342,7 +340,7 @@ public class GSSConfigUpperLevelImpl extends MinimalEObjectImpl.Container implem
 				unsetLevel();
 				return;
 			case configPackage.GSS_CONFIG_UPPER_LEVEL__TMFORMAT:
-				setTMformat((GSSTmTcFormatTmTCFormat)null);
+				setTMformat((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case configPackage.GSS_CONFIG_UPPER_LEVEL__INPUT_FILTER:
 				setInputFilter((GSSFilterFilter)null);

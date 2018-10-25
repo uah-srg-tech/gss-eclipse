@@ -17,46 +17,49 @@ import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormatType;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormatType;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GSS Tm Tc Format Tm TC Format</b></em>'.
+ * An implementation of the model object '<em><b>GSS Tm Tc Format Tm Tc Format</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTCFormatImpl#getProtocol <em>Protocol</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTCFormatImpl#getType <em>Type</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTCFormatImpl#getCSField <em>CS Field</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTCFormatImpl#getCSFormulaField <em>CS Formula Field</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTCFormatImpl#getVSField <em>VS Field</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTCFormatImpl#getFDICField <em>FDIC Field</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTCFormatImpl#getVRFieldSize <em>VR Field Size</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTCFormatImpl#getAField <em>AField</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTCFormatImpl#getAIField <em>AI Field</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTcFormatImpl#getProtocol <em>Protocol</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTcFormatImpl#getType <em>Type</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTcFormatImpl#getCSField <em>CS Field</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTcFormatImpl#getCSFormulaField <em>CS Formula Field</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTcFormatImpl#getVSField <em>VS Field</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTcFormatImpl#getFDICField <em>FDIC Field</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTcFormatImpl#getVRFieldSize <em>VR Field Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTcFormatImpl#getAField <em>AField</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatTmTcFormatImpl#getAIField <em>AI Field</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements GSSTmTcFormatTmTCFormat {
+public class GSSTmTcFormatTmTcFormatImpl extends GSSModelElementImpl implements GSSTmTcFormatTmTcFormat {
 	/**
 	 * The default value of the '{@link #getProtocol() <em>Protocol</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -85,7 +88,7 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final GSSTmTcFormatTmTCFormatType TYPE_EDEFAULT = GSSTmTcFormatTmTCFormatType.TM;
+	protected static final GSSTmTcFormatTmTcFormatType TYPE_EDEFAULT = GSSTmTcFormatTmTcFormatType.TM;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -95,7 +98,7 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatTmTCFormatType type = TYPE_EDEFAULT;
+	protected GSSTmTcFormatTmTcFormatType type = TYPE_EDEFAULT;
 
 	/**
 	 * This is true if the Type attribute has been set.
@@ -181,7 +184,7 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GSSTmTcFormatTmTCFormatImpl() {
+	protected GSSTmTcFormatTmTcFormatImpl() {
 		super();
 	}
 
@@ -221,7 +224,7 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormatType getType() {
+	public GSSTmTcFormatTmTcFormatType getType() {
 		return type;
 	}
 
@@ -230,8 +233,8 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(GSSTmTcFormatTmTCFormatType newType) {
-		GSSTmTcFormatTmTCFormatType oldType = type;
+	public void setType(GSSTmTcFormatTmTcFormatType newType) {
+		GSSTmTcFormatTmTcFormatType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
 		boolean oldTypeESet = typeESet;
 		typeESet = true;
@@ -245,7 +248,7 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 	 * @generated
 	 */
 	public void unsetType() {
-		GSSTmTcFormatTmTCFormatType oldType = type;
+		GSSTmTcFormatTmTcFormatType oldType = type;
 		boolean oldTypeESet = typeESet;
 		type = TYPE_EDEFAULT;
 		typeESet = false;
@@ -267,11 +270,11 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSTmTcFormatCSFormulaField> getCSFormulaField() {
-		if (csFormulaField == null) {
-			csFormulaField = new EObjectContainmentEList<GSSTmTcFormatCSFormulaField>(GSSTmTcFormatCSFormulaField.class, this, tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FORMULA_FIELD);
+	public EList<GSSTmTcFormatCSField> getCSField() {
+		if (csField == null) {
+			csField = new EObjectContainmentEList<GSSTmTcFormatCSField>(GSSTmTcFormatCSField.class, this, tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FIELD);
 		}
-		return csFormulaField;
+		return csField;
 	}
 
 	/**
@@ -279,11 +282,11 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSTmTcFormatCSField> getCSField() {
-		if (csField == null) {
-			csField = new EObjectContainmentEList<GSSTmTcFormatCSField>(GSSTmTcFormatCSField.class, this, tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FIELD);
+	public EList<GSSTmTcFormatCSFormulaField> getCSFormulaField() {
+		if (csFormulaField == null) {
+			csFormulaField = new EObjectContainmentEList<GSSTmTcFormatCSFormulaField>(GSSTmTcFormatCSFormulaField.class, this, tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FORMULA_FIELD);
 		}
-		return csField;
+		return csFormulaField;
 	}
 
 	/**
@@ -415,7 +418,7 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 				setProtocol((String)newValue);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__TYPE:
-				setType((GSSTmTcFormatTmTCFormatType)newValue);
+				setType((GSSTmTcFormatTmTcFormatType)newValue);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FIELD:
 				getCSField().clear();
@@ -536,4 +539,4 @@ public class GSSTmTcFormatTmTCFormatImpl extends GSSModelElementImpl implements 
 		return result.toString();
 	}
 
-} //GSSTmTcFormatTmTCFormatImpl
+} //GSSTmTcFormatTmTcFormatImpl

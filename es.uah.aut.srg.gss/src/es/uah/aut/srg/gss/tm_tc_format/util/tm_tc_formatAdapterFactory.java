@@ -12,6 +12,7 @@ package es.uah.aut.srg.gss.tm_tc_format.util;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
 
+import es.uah.aut.srg.gss.common.GSSModelObject;
 import es.uah.aut.srg.gss.tm_tc_format.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -78,8 +79,8 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 	protected tm_tc_formatSwitch<Adapter> modelSwitch =
 		new tm_tc_formatSwitch<Adapter>() {
 			@Override
-			public Adapter caseGSSTmTcFormatTmTCFormat(GSSTmTcFormatTmTCFormat object) {
-				return createGSSTmTcFormatTmTCFormatAdapter();
+			public Adapter caseGSSTmTcFormatTmTcFormat(GSSTmTcFormatTmTcFormat object) {
+				return createGSSTmTcFormatTmTcFormatAdapter();
 			}
 			@Override
 			public Adapter caseGSSTmTcFormatField(GSSTmTcFormatField object) {
@@ -166,6 +167,10 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 				return createGSSModelElementAdapter();
 			}
 			@Override
+			public Adapter caseGSSModelObject(GSSModelObject object) {
+				return createGSSModelObjectAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -186,16 +191,16 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat <em>GSS Tm Tc Format Tm TC Format</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat <em>GSS Tm Tc Format Tm Tc Format</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat
 	 * @generated
 	 */
-	public Adapter createGSSTmTcFormatTmTCFormatAdapter() {
+	public Adapter createGSSTmTcFormatTmTcFormatAdapter() {
 		return null;
 	}
 
@@ -490,6 +495,20 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSModelElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.common.GSSModelObject <em>GSS Model Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.common.GSSModelObject
+	 * @generated
+	 */
+	public Adapter createGSSModelObjectAdapter() {
 		return null;
 	}
 

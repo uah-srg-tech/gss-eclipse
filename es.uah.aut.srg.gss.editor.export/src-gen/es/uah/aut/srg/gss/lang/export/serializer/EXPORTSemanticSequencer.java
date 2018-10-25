@@ -152,8 +152,8 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     (
 	 *         name=ID 
 	 *         (uri=QualifiedName | version=Version)+ 
-	 *         from=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName] 
-	 *         to=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName] 
+	 *         from=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
+	 *         to=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName] 
 	 *         Sizes=GSSExportSizes? 
 	 *         settings=GSSExportSettings 
 	 *         activateDICs=GSSExportActivateDICs?
@@ -169,7 +169,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSExportSettingAIFromConst returns GSSExportSettingAIFromConst
 	 *
 	 * Constraint:
-	 *     (value=INTEGER toFieldRef=[GSSTmTcFormatAIField|VersionedQualifiedName])
+	 *     (value=INTEGER toFieldRef=[GSSTmTcFormatAIField|VersionedQualifiedReferenceName])
 	 */
 	protected void sequence_GSSExportSettingAIFromConst(ISerializationContext context, GSSExportSettingAIFromConst semanticObject) {
 		if (errorAcceptor != null) {
@@ -180,7 +180,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSExportSettingAIFromConstAccess().getValueINTEGERParserRuleCall_4_0(), semanticObject.getValue());
-		feeder.accept(grammarAccess.getGSSExportSettingAIFromConstAccess().getToFieldRefGSSTmTcFormatAIFieldVersionedQualifiedNameParserRuleCall_8_0_1(), semanticObject.getToFieldRef());
+		feeder.accept(grammarAccess.getGSSExportSettingAIFromConstAccess().getToFieldRefGSSTmTcFormatAIFieldVersionedQualifiedReferenceNameParserRuleCall_8_0_1(), semanticObject.getToFieldRef());
 		feeder.finish();
 	}
 	
@@ -192,7 +192,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 * Constraint:
 	 *     (
 	 *         file=ID 
-	 *         toFieldRef=[GSSTmTcFormatAIField|VersionedQualifiedName] 
+	 *         toFieldRef=[GSSTmTcFormatAIField|VersionedQualifiedReferenceName] 
 	 *         toArrayIndex=INTEGER 
 	 *         offset=INTEGER? 
 	 *         size=INTEGER? 
@@ -209,7 +209,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSExportSettingFromConst returns GSSExportSettingFromConst
 	 *
 	 * Constraint:
-	 *     (value=INTEGER toFieldRef=[GSSTmTcFormatField|VersionedQualifiedName])
+	 *     (value=INTEGER toFieldRef=[GSSTmTcFormatField|VersionedQualifiedReferenceName])
 	 */
 	protected void sequence_GSSExportSettingFromConst(ISerializationContext context, GSSExportSettingFromConst semanticObject) {
 		if (errorAcceptor != null) {
@@ -220,7 +220,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSExportSettingFromConstAccess().getValueINTEGERParserRuleCall_4_0(), semanticObject.getValue());
-		feeder.accept(grammarAccess.getGSSExportSettingFromConstAccess().getToFieldRefGSSTmTcFormatFieldVersionedQualifiedNameParserRuleCall_8_0_1(), semanticObject.getToFieldRef());
+		feeder.accept(grammarAccess.getGSSExportSettingFromConstAccess().getToFieldRefGSSTmTcFormatFieldVersionedQualifiedReferenceNameParserRuleCall_8_0_1(), semanticObject.getToFieldRef());
 		feeder.finish();
 	}
 	
@@ -230,7 +230,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSExportSettingFromField returns GSSExportSettingFromField
 	 *
 	 * Constraint:
-	 *     (fieldRef=[GSSTmTcFormatField|VersionedQualifiedName] toFieldRef=[GSSTmTcFormatField|VersionedQualifiedName])
+	 *     (fieldRef=[GSSTmTcFormatField|VersionedQualifiedReferenceName] toFieldRef=[GSSTmTcFormatField|VersionedQualifiedReferenceName])
 	 */
 	protected void sequence_GSSExportSettingFromField(ISerializationContext context, GSSExportSettingFromField semanticObject) {
 		if (errorAcceptor != null) {
@@ -240,8 +240,8 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_FROM_FIELD__TO_FIELD_REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSExportSettingFromFieldAccess().getFieldRefGSSTmTcFormatFieldVersionedQualifiedNameParserRuleCall_4_0_1(), semanticObject.getFieldRef());
-		feeder.accept(grammarAccess.getGSSExportSettingFromFieldAccess().getToFieldRefGSSTmTcFormatFieldVersionedQualifiedNameParserRuleCall_8_0_1(), semanticObject.getToFieldRef());
+		feeder.accept(grammarAccess.getGSSExportSettingFromFieldAccess().getFieldRefGSSTmTcFormatFieldVersionedQualifiedReferenceNameParserRuleCall_4_0_1(), semanticObject.getFieldRef());
+		feeder.accept(grammarAccess.getGSSExportSettingFromFieldAccess().getToFieldRefGSSTmTcFormatFieldVersionedQualifiedReferenceNameParserRuleCall_8_0_1(), semanticObject.getToFieldRef());
 		feeder.finish();
 	}
 	
@@ -251,7 +251,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSExportSettingFromFile returns GSSExportSettingFromFile
 	 *
 	 * Constraint:
-	 *     (file=ID toFieldRef=[GSSTmTcFormatField|VersionedQualifiedName] offset=INTEGER? size=INTEGER? line=INTEGER?)
+	 *     (file=ID toFieldRef=[GSSTmTcFormatField|VersionedQualifiedReferenceName] offset=INTEGER? size=INTEGER? line=INTEGER?)
 	 */
 	protected void sequence_GSSExportSettingFromFile(ISerializationContext context, GSSExportSettingFromFile semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -263,7 +263,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSExportSettingFromSize returns GSSExportSettingFromSize
 	 *
 	 * Constraint:
-	 *     (sizeRef=INTEGER toFieldRef=[GSSTmTcFormatField|VersionedQualifiedName])
+	 *     (sizeRef=INTEGER toFieldRef=[GSSTmTcFormatField|VersionedQualifiedReferenceName])
 	 */
 	protected void sequence_GSSExportSettingFromSize(ISerializationContext context, GSSExportSettingFromSize semanticObject) {
 		if (errorAcceptor != null) {
@@ -274,7 +274,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSExportSettingFromSizeAccess().getSizeRefINTEGERParserRuleCall_4_0(), semanticObject.getSizeRef());
-		feeder.accept(grammarAccess.getGSSExportSettingFromSizeAccess().getToFieldRefGSSTmTcFormatFieldVersionedQualifiedNameParserRuleCall_8_0_1(), semanticObject.getToFieldRef());
+		feeder.accept(grammarAccess.getGSSExportSettingFromSizeAccess().getToFieldRefGSSTmTcFormatFieldVersionedQualifiedReferenceNameParserRuleCall_8_0_1(), semanticObject.getToFieldRef());
 		feeder.finish();
 	}
 	

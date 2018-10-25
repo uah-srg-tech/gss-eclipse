@@ -215,8 +215,8 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		private final Keyword cFormatKeyword_18 = (Keyword)cGroup.eContents().get(18);
 		private final Keyword cColonEqualsSignKeyword_19 = (Keyword)cGroup.eContents().get(19);
 		private final Assignment cFormatAssignment_20 = (Assignment)cGroup.eContents().get(20);
-		private final CrossReference cFormatGSSTmTcFormatTmTCFormatCrossReference_20_0 = (CrossReference)cFormatAssignment_20.eContents().get(0);
-		private final RuleCall cFormatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_20_0_1 = (RuleCall)cFormatGSSTmTcFormatTmTCFormatCrossReference_20_0.eContents().get(1);
+		private final CrossReference cFormatGSSTmTcFormatTmTcFormatCrossReference_20_0 = (CrossReference)cFormatAssignment_20.eContents().get(0);
+		private final RuleCall cFormatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_20_0_1 = (RuleCall)cFormatGSSTmTcFormatTmTcFormatCrossReference_20_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_21 = (Keyword)cGroup.eContents().get(21);
 		private final Keyword cRightCurlyBracketKeyword_22 = (Keyword)cGroup.eContents().get(22);
 		private final Keyword cSemicolonKeyword_23 = (Keyword)cGroup.eContents().get(23);
@@ -227,13 +227,13 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'levelRef' ':=' levelRef=INTEGER ';'
 		//	'export' ':=' export=[export::GSSExportExport|VersionedQualifiedName] ';'
-		//	'format' ':=' format=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
+		//	'format' ':=' format=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSProtocolPacketsProtocolPacket' '{' 'name' ':=' name=ID ';' 'ifRef' ':=' ifRef=INTEGER ';' 'levelRef' ':='
 		//levelRef=INTEGER ';' 'export' ':=' export=[export::GSSExportExport|VersionedQualifiedName] ';' 'format' ':='
-		//format=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';' '}' ';'
+		//format=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSProtocolPacketsProtocolPacket'
@@ -311,14 +311,14 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		//':='
 		public Keyword getColonEqualsSignKeyword_19() { return cColonEqualsSignKeyword_19; }
 		
-		//format=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
+		//format=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
 		public Assignment getFormatAssignment_20() { return cFormatAssignment_20; }
 		
-		//[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
-		public CrossReference getFormatGSSTmTcFormatTmTCFormatCrossReference_20_0() { return cFormatGSSTmTcFormatTmTCFormatCrossReference_20_0; }
+		//[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
+		public CrossReference getFormatGSSTmTcFormatTmTcFormatCrossReference_20_0() { return cFormatGSSTmTcFormatTmTcFormatCrossReference_20_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getFormatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_20_0_1() { return cFormatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_20_0_1; }
+		public RuleCall getFormatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_20_0_1() { return cFormatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_20_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
@@ -718,7 +718,7 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'levelRef' ':=' levelRef=INTEGER ';'
 	//	'export' ':=' export=[export::GSSExportExport|VersionedQualifiedName] ';'
-	//	'format' ':=' format=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
+	//	'format' ':=' format=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 	//	'}' ';';
 	public GSSProtocolPacketsProtocolPacketElements getGSSProtocolPacketsProtocolPacketAccess() {
 		return pGSSProtocolPacketsProtocolPacket;

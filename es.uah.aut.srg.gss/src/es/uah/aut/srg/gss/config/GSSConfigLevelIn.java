@@ -11,9 +11,7 @@
 package es.uah.aut.srg.gss.config;
 
 import es.uah.aut.srg.gss.export.GSSExportExport;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
-
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -124,12 +122,12 @@ public interface GSSConfigLevelIn extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>TCformat</em>' reference.
-	 * @see #setTCformat(GSSTmTcFormatTmTCFormat)
+	 * @see #setTCformat(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelIn_TCformat()
 	 * @model required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getTCformat();
+	GSSTmTcFormatTmTcFormat getTCformat();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getTCformat <em>TCformat</em>}' reference.
@@ -139,7 +137,7 @@ public interface GSSConfigLevelIn extends EObject {
 	 * @see #getTCformat()
 	 * @generated
 	 */
-	void setTCformat(GSSTmTcFormatTmTCFormat value);
+	void setTCformat(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Export to prev Level</b></em>' reference.

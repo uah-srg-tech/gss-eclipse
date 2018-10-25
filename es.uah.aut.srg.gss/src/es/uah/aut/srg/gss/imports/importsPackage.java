@@ -233,7 +233,7 @@ public interface importsPackage extends EPackage {
 	int GSS_IMPORT_VIRTUAL_SIZE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Field Ref</b></em>' attribute.
+	 * The feature id for the '<em><b>Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -242,7 +242,7 @@ public interface importsPackage extends EPackage {
 	int GSS_IMPORT_VIRTUAL_SIZE__FIELD_REF = 0;
 
 	/**
-	 * The feature id for the '<em><b>To</b></em>' attribute.
+	 * The feature id for the '<em><b>To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -405,26 +405,26 @@ public interface importsPackage extends EPackage {
 	EClass getGSSImportVirtualSize();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.imports.GSSImportVirtualSize#getFieldRef <em>Field Ref</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.imports.GSSImportVirtualSize#getFieldRef <em>Field Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Field Ref</em>'.
+	 * @return the meta object for the reference '<em>Field Ref</em>'.
 	 * @see es.uah.aut.srg.gss.imports.GSSImportVirtualSize#getFieldRef()
 	 * @see #getGSSImportVirtualSize()
 	 * @generated
 	 */
-	EAttribute getGSSImportVirtualSize_FieldRef();
+	EReference getGSSImportVirtualSize_FieldRef();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.imports.GSSImportVirtualSize#getTo <em>To</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.imports.GSSImportVirtualSize#getTo <em>To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>To</em>'.
+	 * @return the meta object for the reference '<em>To</em>'.
 	 * @see es.uah.aut.srg.gss.imports.GSSImportVirtualSize#getTo()
 	 * @see #getGSSImportVirtualSize()
 	 * @generated
 	 */
-	EAttribute getGSSImportVirtualSize_To();
+	EReference getGSSImportVirtualSize_To();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.imports.GSSImportVirtualSize#getAddSize <em>Add Size</em>}'.
@@ -568,20 +568,20 @@ public interface importsPackage extends EPackage {
 		EClass GSS_IMPORT_VIRTUAL_SIZE = eINSTANCE.getGSSImportVirtualSize();
 
 		/**
-		 * The meta object literal for the '<em><b>Field Ref</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Field Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_IMPORT_VIRTUAL_SIZE__FIELD_REF = eINSTANCE.getGSSImportVirtualSize_FieldRef();
+		EReference GSS_IMPORT_VIRTUAL_SIZE__FIELD_REF = eINSTANCE.getGSSImportVirtualSize_FieldRef();
 
 		/**
-		 * The meta object literal for the '<em><b>To</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>To</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_IMPORT_VIRTUAL_SIZE__TO = eINSTANCE.getGSSImportVirtualSize_To();
+		EReference GSS_IMPORT_VIRTUAL_SIZE__TO = eINSTANCE.getGSSImportVirtualSize_To();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Size</b></em>' attribute feature.

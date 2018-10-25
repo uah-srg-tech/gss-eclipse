@@ -15,9 +15,7 @@ import es.uah.aut.srg.gss.config.GSSConfigUnit;
 import es.uah.aut.srg.gss.config.configPackage;
 
 import es.uah.aut.srg.gss.export.GSSExportExport;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
-
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -154,7 +152,7 @@ public class GSSConfigPeriodicTCLevel0Impl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatTmTCFormat level0;
+	protected GSSTmTcFormatTmTcFormat level0;
 
 	/**
 	 * The cached value of the '{@link #getApp_to_level0() <em>App to level0</em>}' reference.
@@ -295,10 +293,10 @@ public class GSSConfigPeriodicTCLevel0Impl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat getLevel0() {
+	public GSSTmTcFormatTmTcFormat getLevel0() {
 		if (level0 != null && level0.eIsProxy()) {
 			InternalEObject oldLevel0 = (InternalEObject)level0;
-			level0 = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldLevel0);
+			level0 = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldLevel0);
 			if (level0 != oldLevel0) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL0__LEVEL0, oldLevel0, level0));
@@ -312,7 +310,7 @@ public class GSSConfigPeriodicTCLevel0Impl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat basicGetLevel0() {
+	public GSSTmTcFormatTmTcFormat basicGetLevel0() {
 		return level0;
 	}
 
@@ -321,8 +319,8 @@ public class GSSConfigPeriodicTCLevel0Impl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel0(GSSTmTcFormatTmTCFormat newLevel0) {
-		GSSTmTcFormatTmTCFormat oldLevel0 = level0;
+	public void setLevel0(GSSTmTcFormatTmTcFormat newLevel0) {
+		GSSTmTcFormatTmTcFormat oldLevel0 = level0;
 		level0 = newLevel0;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL0__LEVEL0, oldLevel0, level0));
@@ -418,7 +416,7 @@ public class GSSConfigPeriodicTCLevel0Impl extends MinimalEObjectImpl.Container 
 				setPeriod_unit((GSSConfigUnit)newValue);
 				return;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL0__LEVEL0:
-				setLevel0((GSSTmTcFormatTmTCFormat)newValue);
+				setLevel0((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL0__APP_TO_LEVEL0:
 				setApp_to_level0((GSSExportExport)newValue);
@@ -451,7 +449,7 @@ public class GSSConfigPeriodicTCLevel0Impl extends MinimalEObjectImpl.Container 
 				setPeriod_unit(PERIOD_UNIT_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL0__LEVEL0:
-				setLevel0((GSSTmTcFormatTmTCFormat)null);
+				setLevel0((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL0__APP_TO_LEVEL0:
 				setApp_to_level0((GSSExportExport)null);

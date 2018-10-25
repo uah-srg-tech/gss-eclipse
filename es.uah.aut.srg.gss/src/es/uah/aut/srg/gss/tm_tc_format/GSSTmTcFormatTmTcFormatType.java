@@ -18,14 +18,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>GSS Tm Tc Format Tm TC Format Type</b></em>',
+ * A representation of the literals of the enumeration '<em><b>GSS Tm Tc Format Tm Tc Format Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTCFormatType()
+ * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatTmTcFormatType()
  * @model
  * @generated
  */
-public enum GSSTmTcFormatTmTCFormatType implements Enumerator {
+public enum GSSTmTcFormatTmTcFormatType implements Enumerator {
 	/**
 	 * The '<em><b>TM</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -77,36 +77,36 @@ public enum GSSTmTcFormatTmTCFormatType implements Enumerator {
 	public static final int TC_VALUE = 1;
 
 	/**
-	 * An array of all the '<em><b>GSS Tm Tc Format Tm TC Format Type</b></em>' enumerators.
+	 * An array of all the '<em><b>GSS Tm Tc Format Tm Tc Format Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final GSSTmTcFormatTmTCFormatType[] VALUES_ARRAY =
-		new GSSTmTcFormatTmTCFormatType[] {
+	private static final GSSTmTcFormatTmTcFormatType[] VALUES_ARRAY =
+		new GSSTmTcFormatTmTcFormatType[] {
 			TM,
 			TC,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>GSS Tm Tc Format Tm TC Format Type</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>GSS Tm Tc Format Tm Tc Format Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<GSSTmTcFormatTmTCFormatType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<GSSTmTcFormatTmTcFormatType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>GSS Tm Tc Format Tm TC Format Type</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>GSS Tm Tc Format Tm Tc Format Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static GSSTmTcFormatTmTCFormatType get(String literal) {
+	public static GSSTmTcFormatTmTcFormatType get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			GSSTmTcFormatTmTCFormatType result = VALUES_ARRAY[i];
+			GSSTmTcFormatTmTcFormatType result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -115,16 +115,16 @@ public enum GSSTmTcFormatTmTCFormatType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>GSS Tm Tc Format Tm TC Format Type</b></em>' literal with the specified name.
+	 * Returns the '<em><b>GSS Tm Tc Format Tm Tc Format Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static GSSTmTcFormatTmTCFormatType getByName(String name) {
+	public static GSSTmTcFormatTmTcFormatType getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			GSSTmTcFormatTmTCFormatType result = VALUES_ARRAY[i];
+			GSSTmTcFormatTmTcFormatType result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -133,14 +133,14 @@ public enum GSSTmTcFormatTmTCFormatType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>GSS Tm Tc Format Tm TC Format Type</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>GSS Tm Tc Format Tm Tc Format Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static GSSTmTcFormatTmTCFormatType get(int value) {
+	public static GSSTmTcFormatTmTcFormatType get(int value) {
 		switch (value) {
 			case TM_VALUE: return TM;
 			case TC_VALUE: return TC;
@@ -175,7 +175,7 @@ public enum GSSTmTcFormatTmTCFormatType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private GSSTmTcFormatTmTCFormatType(int value, String name, String literal) {
+	private GSSTmTcFormatTmTcFormatType(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -219,4 +219,4 @@ public enum GSSTmTcFormatTmTCFormatType implements Enumerator {
 		return literal;
 	}
 	
-} //GSSTmTcFormatTmTCFormatType
+} //GSSTmTcFormatTmTcFormatType

@@ -30,13 +30,13 @@ public interface tm_tc_formatFactory extends EFactory {
 	tm_tc_formatFactory eINSTANCE = es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>GSS Tm Tc Format Tm TC Format</em>'.
+	 * Returns a new object of class '<em>GSS Tm Tc Format Tm Tc Format</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Tm Tc Format Tm TC Format</em>'.
+	 * @return a new object of class '<em>GSS Tm Tc Format Tm Tc Format</em>'.
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat createGSSTmTcFormatTmTCFormat();
+	GSSTmTcFormatTmTcFormat createGSSTmTcFormatTmTcFormat();
 
 	/**
 	 * Returns a new object of class '<em>GSS Tm Tc Format CS Field</em>'.

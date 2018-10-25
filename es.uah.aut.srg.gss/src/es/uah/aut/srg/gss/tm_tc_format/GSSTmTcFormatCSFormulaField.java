@@ -21,8 +21,6 @@ package es.uah.aut.srg.gss.tm_tc_format;
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField#getFid <em>Fid</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField#getPfid <em>Pfid</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField#getDescription <em>Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField#getFirstBit <em>First Bit</em>}</li>
@@ -87,58 +85,6 @@ public interface GSSTmTcFormatCSFormulaField extends GSSTmTcFormatField {
 	 * @generated
 	 */
 	void setPfid(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatCSFormulaField_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatCSFormulaField_Description()
-	 * @model
-	 * @generated
-	 */
-	String getDescription();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField#getDescription <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
-	 * @generated
-	 */
-	void setDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.

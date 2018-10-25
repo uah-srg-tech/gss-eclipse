@@ -98,7 +98,7 @@ public class PROTOCOL_PACKETSSemanticSequencer extends AbstractDelegatingSemanti
 	 *     GSSProtocolPacketsProtocolPacket returns GSSProtocolPacketsProtocolPacket
 	 *
 	 * Constraint:
-	 *     (name=ID ifRef=INTEGER levelRef=INTEGER export=[GSSExportExport|VersionedQualifiedName] format=[GSSTmTcFormatTmTCFormat|VersionedQualifiedName])
+	 *     (name=ID ifRef=INTEGER levelRef=INTEGER export=[GSSExportExport|VersionedQualifiedName] format=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName])
 	 */
 	protected void sequence_GSSProtocolPacketsProtocolPacket(ISerializationContext context, GSSProtocolPacketsProtocolPacket semanticObject) {
 		if (errorAcceptor != null) {
@@ -118,7 +118,7 @@ public class PROTOCOL_PACKETSSemanticSequencer extends AbstractDelegatingSemanti
 		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getIfRefINTEGERParserRuleCall_8_0(), semanticObject.getIfRef());
 		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getLevelRefINTEGERParserRuleCall_12_0(), semanticObject.getLevelRef());
 		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportVersionedQualifiedNameParserRuleCall_16_0_1(), semanticObject.getExport());
-		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_20_0_1(), semanticObject.getFormat());
+		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_20_0_1(), semanticObject.getFormat());
 		feeder.finish();
 	}
 	

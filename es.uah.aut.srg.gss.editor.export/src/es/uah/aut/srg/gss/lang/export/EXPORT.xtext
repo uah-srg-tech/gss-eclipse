@@ -22,8 +22,8 @@ GSSExportExport returns GSSExportExport:
 	 '{'
 		(('uri' ':=' uri=QualifiedName ';')
 		& ('version' ':=' version=Version ';'))
-		'from' ':=' from=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
-		'to' ':=' to=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
+		'from' ':=' ('NULL' | from=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]) ';'
+		'to' ':=' to=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 		(Sizes=GSSExportSizes)? 
 		settings=GSSExportSettings
 		(activateDICs=GSSExportActivateDICs)?
@@ -86,20 +86,20 @@ GSSExportSettings returns GSSExportSettings:
 GSSExportSettingFromConst returns GSSExportSettingFromConst:
 	'GSSExportSettingFromConst' '{'
 		'value' ':=' value=INTEGER ';'
-		'toFieldRef' ':=' toFieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedName] ';'
+		'toFieldRef' ':=' toFieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedReferenceName] ';'
 	'}' ';'
 ;
 GSSExportSettingFromSize returns GSSExportSettingFromSize:
 	'GSSExportSettingFromSize' '{'
 		'sizeRef' ':=' sizeRef=INTEGER ';'
-		'toFieldRef' ':=' toFieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedName] ';'
+		'toFieldRef' ':=' toFieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedReferenceName] ';'
 	'}' ';'
 ;
 
 GSSExportSettingFromFile returns GSSExportSettingFromFile:
 	'GSSExportSettingFromFile' '{'
 		'file' ':=' file=ID ';'
-		'toFieldRef' ':=' toFieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedName] ';'
+		'toFieldRef' ':=' toFieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedReferenceName] ';'
 		('offset' ':=' offset=INTEGER ';')?
 		('size' ':=' size=INTEGER ';')?
 		('line' ':=' line=INTEGER ';')?
@@ -108,22 +108,22 @@ GSSExportSettingFromFile returns GSSExportSettingFromFile:
 
 GSSExportSettingFromField returns GSSExportSettingFromField:
 	'GSSExportSettingFromField' '{'
-		'fieldRef' ':=' fieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedName] ';'
-		'toFieldRef' ':=' toFieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedName] ';'
+		'fieldRef' ':=' fieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedReferenceName] ';'
+		'toFieldRef' ':=' toFieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedReferenceName] ';'
 	'}' ';'
 ;
 
 GSSExportSettingAIFromConst returns GSSExportSettingAIFromConst:
 	'GSSExportSettingAIFromConst' '{'
 		'value' ':=' value=INTEGER ';'
-		'toFieldRef' ':=' toFieldRef=[tm_tc_format::GSSTmTcFormatAIField|VersionedQualifiedName] ';'
+		'toFieldRef' ':=' toFieldRef=[tm_tc_format::GSSTmTcFormatAIField|VersionedQualifiedReferenceName] ';'
 	'}' ';'
 ;
 
 GSSExportSettingAIFromFile returns GSSExportSettingAIFromFile:
 	'GSSExportSettingAIFromFile' '{'
 		'file' ':=' file=ID ';'
-		'toFieldRef' ':=' toFieldRef=[tm_tc_format::GSSTmTcFormatAIField|VersionedQualifiedName] ';'
+		'toFieldRef' ':=' toFieldRef=[tm_tc_format::GSSTmTcFormatAIField|VersionedQualifiedReferenceName] ';'
 		'toArrayIndex' ':=' toArrayIndex=INTEGER ';'
 		('offset' ':=' offset=INTEGER ';')?
 		('size' ':=' size=INTEGER ';')?

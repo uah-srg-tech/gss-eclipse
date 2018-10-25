@@ -14,10 +14,12 @@ import es.uah.aut.srg.gss.imports.GSSImportUnit;
 import es.uah.aut.srg.gss.imports.GSSImportVirtualSize;
 import es.uah.aut.srg.gss.imports.importsPackage;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -39,44 +41,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container implements GSSImportVirtualSize {
 	/**
-	 * The default value of the '{@link #getFieldRef() <em>Field Ref</em>}' attribute.
+	 * The cached value of the '{@link #getFieldRef() <em>Field Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFieldRef()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FIELD_REF_EDEFAULT = null;
+	protected GSSTmTcFormatField fieldRef;
 
 	/**
-	 * The cached value of the '{@link #getFieldRef() <em>Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected String fieldRef = FIELD_REF_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTo() <em>To</em>}' attribute.
+	 * The cached value of the '{@link #getTo() <em>To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTo()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TO_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTo() <em>To</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTo()
-	 * @generated
-	 * @ordered
-	 */
-	protected String to = TO_EDEFAULT;
+	protected GSSTmTcFormatField to;
 
 	/**
 	 * The default value of the '{@link #getAddSize() <em>Add Size</em>}' attribute.
@@ -151,7 +133,15 @@ public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFieldRef() {
+	public GSSTmTcFormatField getFieldRef() {
+		if (fieldRef != null && fieldRef.eIsProxy()) {
+			InternalEObject oldFieldRef = (InternalEObject)fieldRef;
+			fieldRef = (GSSTmTcFormatField)eResolveProxy(oldFieldRef);
+			if (fieldRef != oldFieldRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, importsPackage.GSS_IMPORT_VIRTUAL_SIZE__FIELD_REF, oldFieldRef, fieldRef));
+			}
+		}
 		return fieldRef;
 	}
 
@@ -160,8 +150,17 @@ public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFieldRef(String newFieldRef) {
-		String oldFieldRef = fieldRef;
+	public GSSTmTcFormatField basicGetFieldRef() {
+		return fieldRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFieldRef(GSSTmTcFormatField newFieldRef) {
+		GSSTmTcFormatField oldFieldRef = fieldRef;
 		fieldRef = newFieldRef;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, importsPackage.GSS_IMPORT_VIRTUAL_SIZE__FIELD_REF, oldFieldRef, fieldRef));
@@ -172,7 +171,15 @@ public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTo() {
+	public GSSTmTcFormatField getTo() {
+		if (to != null && to.eIsProxy()) {
+			InternalEObject oldTo = (InternalEObject)to;
+			to = (GSSTmTcFormatField)eResolveProxy(oldTo);
+			if (to != oldTo) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, importsPackage.GSS_IMPORT_VIRTUAL_SIZE__TO, oldTo, to));
+			}
+		}
 		return to;
 	}
 
@@ -181,8 +188,17 @@ public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTo(String newTo) {
-		String oldTo = to;
+	public GSSTmTcFormatField basicGetTo() {
+		return to;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTo(GSSTmTcFormatField newTo) {
+		GSSTmTcFormatField oldTo = to;
 		to = newTo;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, importsPackage.GSS_IMPORT_VIRTUAL_SIZE__TO, oldTo, to));
@@ -264,9 +280,11 @@ public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container imple
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__FIELD_REF:
-				return getFieldRef();
+				if (resolve) return getFieldRef();
+				return basicGetFieldRef();
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__TO:
-				return getTo();
+				if (resolve) return getTo();
+				return basicGetTo();
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__ADD_SIZE:
 				return getAddSize();
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__UNIT:
@@ -284,10 +302,10 @@ public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container imple
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__FIELD_REF:
-				setFieldRef((String)newValue);
+				setFieldRef((GSSTmTcFormatField)newValue);
 				return;
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__TO:
-				setTo((String)newValue);
+				setTo((GSSTmTcFormatField)newValue);
 				return;
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__ADD_SIZE:
 				setAddSize((String)newValue);
@@ -308,10 +326,10 @@ public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container imple
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__FIELD_REF:
-				setFieldRef(FIELD_REF_EDEFAULT);
+				setFieldRef((GSSTmTcFormatField)null);
 				return;
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__TO:
-				setTo(TO_EDEFAULT);
+				setTo((GSSTmTcFormatField)null);
 				return;
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__ADD_SIZE:
 				setAddSize(ADD_SIZE_EDEFAULT);
@@ -332,9 +350,9 @@ public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container imple
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__FIELD_REF:
-				return FIELD_REF_EDEFAULT == null ? fieldRef != null : !FIELD_REF_EDEFAULT.equals(fieldRef);
+				return fieldRef != null;
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__TO:
-				return TO_EDEFAULT == null ? to != null : !TO_EDEFAULT.equals(to);
+				return to != null;
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__ADD_SIZE:
 				return ADD_SIZE_EDEFAULT == null ? addSize != null : !ADD_SIZE_EDEFAULT.equals(addSize);
 			case importsPackage.GSS_IMPORT_VIRTUAL_SIZE__UNIT:
@@ -353,11 +371,7 @@ public class GSSImportVirtualSizeImpl extends MinimalEObjectImpl.Container imple
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (FieldRef: ");
-		result.append(fieldRef);
-		result.append(", to: ");
-		result.append(to);
-		result.append(", addSize: ");
+		result.append(" (addSize: ");
 		result.append(addSize);
 		result.append(", unit: ");
 		if (unitESet) result.append(unit); else result.append("<unset>");

@@ -26,7 +26,7 @@ GSSFilterMaxtermFilter returns GSSFilterMaxtermFilter:
 	 '{'
 		(('uri' ':=' uri=QualifiedName ';')
 		& ('version' ':=' version=Version ';')
-		'formatFile' ':=' formatFile=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
+		'formatFile' ':=' formatFile=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 		((BoolVar+=GSSFilterBoolVar) | 
 			(BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem) |
 			(BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem) |
@@ -41,7 +41,7 @@ GSSFilterMintermFilter returns GSSFilterMintermFilter:
 	 '{'
 		(('uri' ':=' uri=QualifiedName ';')
 		& ('version' ':=' version=Version ';')
-		'formatFile' ':=' formatFile=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
+		'formatFile' ':=' formatFile=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 		((BoolVar+=GSSFilterBoolVar) | 
 		 (BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem) |
 		 (BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem) |
@@ -55,7 +55,7 @@ GSSFilterBoolVar returns GSSFilterBoolVar:
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=ID ';'
 		'constantType' ':=' constantType=GSSFilterConstantType ';'
-		'FieldRef' ':=' FieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedName] ';'
+		'FieldRef' ':=' FieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedReferenceName] ';'
 		Op=GSSFilterFieldOp
 		((Constant=GSSFilterConstant) |
 		 (Select=GSSFilterSelect) |
@@ -68,7 +68,7 @@ GSSFilterBoolVarFromArrayItem returns GSSFilterBoolVarFromArrayItem:
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=ID ';'
 		'constantType' ':=' constantType=GSSFilterConstantType ';'
-		'AIFieldRef' ':=' AIFieldRef=[tm_tc_format::GSSTmTcFormatAIField|VersionedQualifiedName] ';'
+		'AIFieldRef' ':=' AIFieldRef=[tm_tc_format::GSSTmTcFormatAIField|VersionedQualifiedReferenceName] ';'
 		Op=GSSFilterFieldOp
 		((Constant=GSSFilterConstant) |
 		 (Select=GSSFilterSelect) |
@@ -82,7 +82,7 @@ GSSFilterBoolVarFromGroupedArrayItem returns GSSFilterBoolVarFromGroupedArrayIte
 		'name' ':=' name=ID ';'
 		'constantType' ':=' constantType=GSSFilterConstantType ';'
 		'group' ':=' group=EString ';'
-		'AIFieldRefs' ':=' AIFieldRefs=[tm_tc_format::GSSTmTcFormatAField|VersionedQualifiedName] ';'
+		'AIFieldRefs' ':=' AIFieldRefs=[tm_tc_format::GSSTmTcFormatAField|VersionedQualifiedReferenceName] ';'
 		Op=GSSFilterFieldOp
 		((Constant=GSSFilterConstant) |
 		 (Select=GSSFilterSelect) |
@@ -94,7 +94,7 @@ GSSFilterBoolVarFDIC returns GSSFilterBoolVarFDIC:
 	'GSSFilterBoolVarFDIC' '{'
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=ID ';'
-		'FieldRef' ':=' FieldRef=[tm_tc_format::GSSTmTcFormatFDICField|VersionedQualifiedName] ';'
+		'FieldRef' ':=' FieldRef=[tm_tc_format::GSSTmTcFormatFDICField|VersionedQualifiedReferenceName] ';'
 		Op=GSSFilterFieldOp
 	'}' ';'
 ;

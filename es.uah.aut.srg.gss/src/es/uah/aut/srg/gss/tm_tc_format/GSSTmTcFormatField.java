@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.gss.tm_tc_format;
 
-import org.eclipse.emf.ecore.EObject;
+import es.uah.aut.srg.gss.common.GSSModelObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,5 +22,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface GSSTmTcFormatField extends EObject {
+public interface GSSTmTcFormatField extends GSSModelObject {
 } // GSSTmTcFormatField

@@ -10,12 +10,11 @@
  */
 package es.uah.aut.srg.gss.tm_tc_format.impl;
 
+import es.uah.aut.srg.gss.common.impl.GSSModelObjectImpl;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public abstract class GSSTmTcFormatFieldImpl extends MinimalEObjectImpl.Container implements GSSTmTcFormatField {
+public abstract class GSSTmTcFormatFieldImpl extends GSSModelObjectImpl implements GSSTmTcFormatField {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

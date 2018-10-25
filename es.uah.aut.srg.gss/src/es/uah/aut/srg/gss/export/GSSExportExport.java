@@ -11,7 +11,7 @@
 package es.uah.aut.srg.gss.export;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,12 +43,12 @@ public interface GSSExportExport extends GSSModelElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From</em>' reference.
-	 * @see #setFrom(GSSTmTcFormatTmTCFormat)
+	 * @see #setFrom(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportExport_From()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getFrom();
+	GSSTmTcFormatTmTcFormat getFrom();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.export.GSSExportExport#getFrom <em>From</em>}' reference.
@@ -58,7 +58,7 @@ public interface GSSExportExport extends GSSModelElement {
 	 * @see #getFrom()
 	 * @generated
 	 */
-	void setFrom(GSSTmTcFormatTmTCFormat value);
+	void setFrom(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>To</b></em>' reference.
@@ -69,12 +69,12 @@ public interface GSSExportExport extends GSSModelElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To</em>' reference.
-	 * @see #setTo(GSSTmTcFormatTmTCFormat)
+	 * @see #setTo(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportExport_To()
 	 * @model required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getTo();
+	GSSTmTcFormatTmTcFormat getTo();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.export.GSSExportExport#getTo <em>To</em>}' reference.
@@ -84,7 +84,7 @@ public interface GSSExportExport extends GSSModelElement {
 	 * @see #getTo()
 	 * @generated
 	 */
-	void setTo(GSSTmTcFormatTmTCFormat value);
+	void setTo(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Sizes</b></em>' containment reference.
