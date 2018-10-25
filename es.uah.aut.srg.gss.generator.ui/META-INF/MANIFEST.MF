@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: GSS Generator UI
+Bundle-SymbolicName: es.uah.aut.srg.gss.generator.ui;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: es.uah.aut.srg.gss.generator.ui.Activator
+Require-Bundle: es.uah.aut.srg.gss.generator,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.filesystem,
+ org.eclipse.core.resources,
+ org.eclipse.debug.core,
+ org.eclipse.debug.ui,
+ org.eclipse.ui.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
