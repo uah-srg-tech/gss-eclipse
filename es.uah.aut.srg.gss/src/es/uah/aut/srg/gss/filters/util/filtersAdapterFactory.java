@@ -94,10 +94,6 @@ public class filtersAdapterFactory extends AdapterFactoryImpl {
 				return createGSSFilterBoolVarAdapter();
 			}
 			@Override
-			public Adapter caseGSSFilterFieldRef(GSSFilterFieldRef object) {
-				return createGSSFilterFieldRefAdapter();
-			}
-			@Override
 			public Adapter caseGSSFilterFieldOp(GSSFilterFieldOp object) {
 				return createGSSFilterFieldOpAdapter();
 			}
@@ -118,16 +114,8 @@ public class filtersAdapterFactory extends AdapterFactoryImpl {
 				return createGSSFilterBoolVarFromArrayItemAdapter();
 			}
 			@Override
-			public Adapter caseGSSFilterAIFieldRef(GSSFilterAIFieldRef object) {
-				return createGSSFilterAIFieldRefAdapter();
-			}
-			@Override
 			public Adapter caseGSSFilterBoolVarFromGroupedArrayItem(GSSFilterBoolVarFromGroupedArrayItem object) {
 				return createGSSFilterBoolVarFromGroupedArrayItemAdapter();
-			}
-			@Override
-			public Adapter caseGSSFilterAIFieldRefs(GSSFilterAIFieldRefs object) {
-				return createGSSFilterAIFieldRefsAdapter();
 			}
 			@Override
 			public Adapter caseGSSFilterBoolVarFDIC(GSSFilterBoolVarFDIC object) {
@@ -226,20 +214,6 @@ public class filtersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.filters.GSSFilterFieldRef <em>GSS Filter Field Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.filters.GSSFilterFieldRef
-	 * @generated
-	 */
-	public Adapter createGSSFilterFieldRefAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.filters.GSSFilterFieldOp <em>GSS Filter Field Op</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -310,20 +284,6 @@ public class filtersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.filters.GSSFilterAIFieldRef <em>GSS Filter AI Field Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.filters.GSSFilterAIFieldRef
-	 * @generated
-	 */
-	public Adapter createGSSFilterAIFieldRefAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.filters.GSSFilterBoolVarFromGroupedArrayItem <em>GSS Filter Bool Var From Grouped Array Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -334,20 +294,6 @@ public class filtersAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSFilterBoolVarFromGroupedArrayItemAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.filters.GSSFilterAIFieldRefs <em>GSS Filter AI Field Refs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.filters.GSSFilterAIFieldRefs
-	 * @generated
-	 */
-	public Adapter createGSSFilterAIFieldRefsAdapter() {
 		return null;
 	}
 

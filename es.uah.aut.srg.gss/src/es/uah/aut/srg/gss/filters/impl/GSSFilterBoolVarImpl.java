@@ -14,11 +14,11 @@ import es.uah.aut.srg.gss.filters.GSSFilterBoolVar;
 import es.uah.aut.srg.gss.filters.GSSFilterConstant;
 import es.uah.aut.srg.gss.filters.GSSFilterConstantType;
 import es.uah.aut.srg.gss.filters.GSSFilterFieldOp;
-import es.uah.aut.srg.gss.filters.GSSFilterFieldRef;
 import es.uah.aut.srg.gss.filters.GSSFilterSelect;
 import es.uah.aut.srg.gss.filters.GSSFilterSelectLine;
 import es.uah.aut.srg.gss.filters.filtersPackage;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -119,14 +119,14 @@ public class GSSFilterBoolVarImpl extends MinimalEObjectImpl.Container implement
 	protected boolean constantTypeESet;
 
 	/**
-	 * The cached value of the '{@link #getFieldRef() <em>Field Ref</em>}' containment reference.
+	 * The cached value of the '{@link #getFieldRef() <em>Field Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFieldRef()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSFilterFieldRef fieldRef;
+	protected GSSTmTcFormatField fieldRef;
 
 	/**
 	 * The cached value of the '{@link #getOp() <em>Op</em>}' containment reference.
@@ -280,7 +280,15 @@ public class GSSFilterBoolVarImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFilterFieldRef getFieldRef() {
+	public GSSTmTcFormatField getFieldRef() {
+		if (fieldRef != null && fieldRef.eIsProxy()) {
+			InternalEObject oldFieldRef = (InternalEObject)fieldRef;
+			fieldRef = (GSSTmTcFormatField)eResolveProxy(oldFieldRef);
+			if (fieldRef != oldFieldRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, filtersPackage.GSS_FILTER_BOOL_VAR__FIELD_REF, oldFieldRef, fieldRef));
+			}
+		}
 		return fieldRef;
 	}
 
@@ -289,14 +297,8 @@ public class GSSFilterBoolVarImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetFieldRef(GSSFilterFieldRef newFieldRef, NotificationChain msgs) {
-		GSSFilterFieldRef oldFieldRef = fieldRef;
-		fieldRef = newFieldRef;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_BOOL_VAR__FIELD_REF, oldFieldRef, newFieldRef);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public GSSTmTcFormatField basicGetFieldRef() {
+		return fieldRef;
 	}
 
 	/**
@@ -304,18 +306,11 @@ public class GSSFilterBoolVarImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFieldRef(GSSFilterFieldRef newFieldRef) {
-		if (newFieldRef != fieldRef) {
-			NotificationChain msgs = null;
-			if (fieldRef != null)
-				msgs = ((InternalEObject)fieldRef).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - filtersPackage.GSS_FILTER_BOOL_VAR__FIELD_REF, null, msgs);
-			if (newFieldRef != null)
-				msgs = ((InternalEObject)newFieldRef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - filtersPackage.GSS_FILTER_BOOL_VAR__FIELD_REF, null, msgs);
-			msgs = basicSetFieldRef(newFieldRef, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_BOOL_VAR__FIELD_REF, newFieldRef, newFieldRef));
+	public void setFieldRef(GSSTmTcFormatField newFieldRef) {
+		GSSTmTcFormatField oldFieldRef = fieldRef;
+		fieldRef = newFieldRef;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_BOOL_VAR__FIELD_REF, oldFieldRef, fieldRef));
 	}
 
 	/**
@@ -498,8 +493,6 @@ public class GSSFilterBoolVarImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case filtersPackage.GSS_FILTER_BOOL_VAR__FIELD_REF:
-				return basicSetFieldRef(null, msgs);
 			case filtersPackage.GSS_FILTER_BOOL_VAR__OP:
 				return basicSetOp(null, msgs);
 			case filtersPackage.GSS_FILTER_BOOL_VAR__CONSTANT:
@@ -527,7 +520,8 @@ public class GSSFilterBoolVarImpl extends MinimalEObjectImpl.Container implement
 			case filtersPackage.GSS_FILTER_BOOL_VAR__CONSTANT_TYPE:
 				return getConstantType();
 			case filtersPackage.GSS_FILTER_BOOL_VAR__FIELD_REF:
-				return getFieldRef();
+				if (resolve) return getFieldRef();
+				return basicGetFieldRef();
 			case filtersPackage.GSS_FILTER_BOOL_VAR__OP:
 				return getOp();
 			case filtersPackage.GSS_FILTER_BOOL_VAR__CONSTANT:
@@ -558,7 +552,7 @@ public class GSSFilterBoolVarImpl extends MinimalEObjectImpl.Container implement
 				setConstantType((GSSFilterConstantType)newValue);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR__FIELD_REF:
-				setFieldRef((GSSFilterFieldRef)newValue);
+				setFieldRef((GSSTmTcFormatField)newValue);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR__OP:
 				setOp((GSSFilterFieldOp)newValue);
@@ -594,7 +588,7 @@ public class GSSFilterBoolVarImpl extends MinimalEObjectImpl.Container implement
 				unsetConstantType();
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR__FIELD_REF:
-				setFieldRef((GSSFilterFieldRef)null);
+				setFieldRef((GSSTmTcFormatField)null);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR__OP:
 				setOp((GSSFilterFieldOp)null);

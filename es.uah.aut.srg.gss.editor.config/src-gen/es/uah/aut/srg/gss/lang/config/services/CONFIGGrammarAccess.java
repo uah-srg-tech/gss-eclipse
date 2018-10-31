@@ -101,43 +101,43 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final UnorderedGroup cUnorderedGroup_3 = (UnorderedGroup)cGroup.eContents().get(3);
-		private final Group cGroup_3_0 = (Group)cUnorderedGroup_3.eContents().get(0);
-		private final Keyword cUriKeyword_3_0_0 = (Keyword)cGroup_3_0.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_0_1 = (Keyword)cGroup_3_0.eContents().get(1);
-		private final Assignment cUriAssignment_3_0_2 = (Assignment)cGroup_3_0.eContents().get(2);
-		private final RuleCall cUriQualifiedNameParserRuleCall_3_0_2_0 = (RuleCall)cUriAssignment_3_0_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_0_3 = (Keyword)cGroup_3_0.eContents().get(3);
-		private final Group cGroup_3_1 = (Group)cUnorderedGroup_3.eContents().get(1);
-		private final Keyword cVersionKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_1_1 = (Keyword)cGroup_3_1.eContents().get(1);
-		private final Assignment cVersionAssignment_3_1_2 = (Assignment)cGroup_3_1.eContents().get(2);
-		private final RuleCall cVersionVersionParserRuleCall_3_1_2_0 = (RuleCall)cVersionAssignment_3_1_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_1_3 = (Keyword)cGroup_3_1.eContents().get(3);
-		private final Assignment cGss_optionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cGss_optionsGSSConfigGSSOptionsParserRuleCall_4_0 = (RuleCall)cGss_optionsAssignment_4.eContents().get(0);
-		private final Assignment cProtocolsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cProtocolsGSSConfigProtocolsParserRuleCall_5_0 = (RuleCall)cProtocolsAssignment_5.eContents().get(0);
-		private final Assignment cInterfacesAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cInterfacesGSSConfigInterfacesParserRuleCall_6_0 = (RuleCall)cInterfacesAssignment_6.eContents().get(0);
-		private final Assignment cSpecialPacketsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cSpecialPacketsGSSConfigSpecialPacketsParserRuleCall_7_0 = (RuleCall)cSpecialPacketsAssignment_7.eContents().get(0);
-		private final Assignment cPeriodicTCsAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cPeriodicTCsGSSConfigPeriodicTCsParserRuleCall_8_0 = (RuleCall)cPeriodicTCsAssignment_8.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_9 = (UnorderedGroup)cGroup.eContents().get(9);
-		private final Assignment cGlobalVarsAssignment_9_0 = (Assignment)cUnorderedGroup_9.eContents().get(0);
-		private final RuleCall cGlobalVarsGSSConfigGlobalVarsParserRuleCall_9_0_0 = (RuleCall)cGlobalVarsAssignment_9_0.eContents().get(0);
-		private final Assignment cMonitorsAssignment_9_1 = (Assignment)cUnorderedGroup_9.eContents().get(1);
-		private final RuleCall cMonitorsGSSConfigMonitorsParserRuleCall_9_1_0 = (RuleCall)cMonitorsAssignment_9_1.eContents().get(0);
-		private final Assignment cTestsAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cTestsGSSConfigTestsParserRuleCall_10_0 = (RuleCall)cTestsAssignment_10.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Keyword cSemicolonKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cUriKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cColonEqualsSignKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cUriAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cUriQualifiedNameParserRuleCall_3_2_0 = (RuleCall)cUriAssignment_3_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
+		private final Keyword cVersionKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cColonEqualsSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cVersionAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cVersionVersionParserRuleCall_6_0 = (RuleCall)cVersionAssignment_6.eContents().get(0);
+		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cGss_optionsAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cGss_optionsGSSConfigGSSOptionsParserRuleCall_8_0 = (RuleCall)cGss_optionsAssignment_8.eContents().get(0);
+		private final Assignment cProtocolsAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cProtocolsGSSConfigProtocolsParserRuleCall_9_0 = (RuleCall)cProtocolsAssignment_9.eContents().get(0);
+		private final Assignment cInterfacesAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cInterfacesGSSConfigInterfacesParserRuleCall_10_0 = (RuleCall)cInterfacesAssignment_10.eContents().get(0);
+		private final Assignment cSpecialPacketsAssignment_11 = (Assignment)cGroup.eContents().get(11);
+		private final RuleCall cSpecialPacketsGSSConfigSpecialPacketsParserRuleCall_11_0 = (RuleCall)cSpecialPacketsAssignment_11.eContents().get(0);
+		private final Assignment cPeriodicTCsAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cPeriodicTCsGSSConfigPeriodicTCsParserRuleCall_12_0 = (RuleCall)cPeriodicTCsAssignment_12.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_13 = (UnorderedGroup)cGroup.eContents().get(13);
+		private final Assignment cGlobalVarsAssignment_13_0 = (Assignment)cUnorderedGroup_13.eContents().get(0);
+		private final RuleCall cGlobalVarsGSSConfigGlobalVarsParserRuleCall_13_0_0 = (RuleCall)cGlobalVarsAssignment_13_0.eContents().get(0);
+		private final Assignment cMonitorsAssignment_13_1 = (Assignment)cUnorderedGroup_13.eContents().get(1);
+		private final RuleCall cMonitorsGSSConfigMonitorsParserRuleCall_13_1_0 = (RuleCall)cMonitorsAssignment_13_1.eContents().get(0);
+		private final Assignment cTestsAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cTestsGSSConfigTestsParserRuleCall_14_0 = (RuleCall)cTestsAssignment_14.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Keyword cSemicolonKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
 		//GSSConfigGSSConfig:
 		//	'GSSConfigGSSConfig'
 		//	name=ID
-		//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') gss_options=GSSConfigGSSOptions
+		//	'{' ('uri' ':=' uri=QualifiedName ';')
+		//	'version' ':=' version=Version ';'
+		//	gss_options=GSSConfigGSSOptions
 		//	Protocols=GSSConfigProtocols
 		//	Interfaces=GSSConfigInterfaces
 		//	SpecialPackets=GSSConfigSpecialPackets?
@@ -146,7 +146,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSConfigGSSConfig' name=ID '{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';')
+		//'GSSConfigGSSConfig' name=ID '{' ('uri' ':=' uri=QualifiedName ';') 'version' ':=' version=Version ';'
 		//gss_options=GSSConfigGSSOptions Protocols=GSSConfigProtocols Interfaces=GSSConfigInterfaces
 		//SpecialPackets=GSSConfigSpecialPackets? PeriodicTCs=GSSConfigPeriodicTCs? (GlobalVars=GSSConfigGlobalVars &
 		//Monitors=GSSConfigMonitors)? Tests=GSSConfigTests '}' ';'
@@ -164,101 +164,95 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';')
-		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
-		
-		//'uri' ':=' uri=QualifiedName ';'
-		public Group getGroup_3_0() { return cGroup_3_0; }
+		//('uri' ':=' uri=QualifiedName ';')
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//'uri'
-		public Keyword getUriKeyword_3_0_0() { return cUriKeyword_3_0_0; }
+		public Keyword getUriKeyword_3_0() { return cUriKeyword_3_0; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_3_0_1() { return cColonEqualsSignKeyword_3_0_1; }
+		public Keyword getColonEqualsSignKeyword_3_1() { return cColonEqualsSignKeyword_3_1; }
 		
 		//uri=QualifiedName
-		public Assignment getUriAssignment_3_0_2() { return cUriAssignment_3_0_2; }
+		public Assignment getUriAssignment_3_2() { return cUriAssignment_3_2; }
 		
 		//QualifiedName
-		public RuleCall getUriQualifiedNameParserRuleCall_3_0_2_0() { return cUriQualifiedNameParserRuleCall_3_0_2_0; }
+		public RuleCall getUriQualifiedNameParserRuleCall_3_2_0() { return cUriQualifiedNameParserRuleCall_3_2_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_3_0_3() { return cSemicolonKeyword_3_0_3; }
-		
-		//'version' ':=' version=Version ';'
-		public Group getGroup_3_1() { return cGroup_3_1; }
+		public Keyword getSemicolonKeyword_3_3() { return cSemicolonKeyword_3_3; }
 		
 		//'version'
-		public Keyword getVersionKeyword_3_1_0() { return cVersionKeyword_3_1_0; }
+		public Keyword getVersionKeyword_4() { return cVersionKeyword_4; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_3_1_1() { return cColonEqualsSignKeyword_3_1_1; }
+		public Keyword getColonEqualsSignKeyword_5() { return cColonEqualsSignKeyword_5; }
 		
 		//version=Version
-		public Assignment getVersionAssignment_3_1_2() { return cVersionAssignment_3_1_2; }
+		public Assignment getVersionAssignment_6() { return cVersionAssignment_6; }
 		
 		//Version
-		public RuleCall getVersionVersionParserRuleCall_3_1_2_0() { return cVersionVersionParserRuleCall_3_1_2_0; }
+		public RuleCall getVersionVersionParserRuleCall_6_0() { return cVersionVersionParserRuleCall_6_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_3_1_3() { return cSemicolonKeyword_3_1_3; }
+		public Keyword getSemicolonKeyword_7() { return cSemicolonKeyword_7; }
 		
 		//gss_options=GSSConfigGSSOptions
-		public Assignment getGss_optionsAssignment_4() { return cGss_optionsAssignment_4; }
+		public Assignment getGss_optionsAssignment_8() { return cGss_optionsAssignment_8; }
 		
 		//GSSConfigGSSOptions
-		public RuleCall getGss_optionsGSSConfigGSSOptionsParserRuleCall_4_0() { return cGss_optionsGSSConfigGSSOptionsParserRuleCall_4_0; }
+		public RuleCall getGss_optionsGSSConfigGSSOptionsParserRuleCall_8_0() { return cGss_optionsGSSConfigGSSOptionsParserRuleCall_8_0; }
 		
 		//Protocols=GSSConfigProtocols
-		public Assignment getProtocolsAssignment_5() { return cProtocolsAssignment_5; }
+		public Assignment getProtocolsAssignment_9() { return cProtocolsAssignment_9; }
 		
 		//GSSConfigProtocols
-		public RuleCall getProtocolsGSSConfigProtocolsParserRuleCall_5_0() { return cProtocolsGSSConfigProtocolsParserRuleCall_5_0; }
+		public RuleCall getProtocolsGSSConfigProtocolsParserRuleCall_9_0() { return cProtocolsGSSConfigProtocolsParserRuleCall_9_0; }
 		
 		//Interfaces=GSSConfigInterfaces
-		public Assignment getInterfacesAssignment_6() { return cInterfacesAssignment_6; }
+		public Assignment getInterfacesAssignment_10() { return cInterfacesAssignment_10; }
 		
 		//GSSConfigInterfaces
-		public RuleCall getInterfacesGSSConfigInterfacesParserRuleCall_6_0() { return cInterfacesGSSConfigInterfacesParserRuleCall_6_0; }
+		public RuleCall getInterfacesGSSConfigInterfacesParserRuleCall_10_0() { return cInterfacesGSSConfigInterfacesParserRuleCall_10_0; }
 		
 		//SpecialPackets=GSSConfigSpecialPackets?
-		public Assignment getSpecialPacketsAssignment_7() { return cSpecialPacketsAssignment_7; }
+		public Assignment getSpecialPacketsAssignment_11() { return cSpecialPacketsAssignment_11; }
 		
 		//GSSConfigSpecialPackets
-		public RuleCall getSpecialPacketsGSSConfigSpecialPacketsParserRuleCall_7_0() { return cSpecialPacketsGSSConfigSpecialPacketsParserRuleCall_7_0; }
+		public RuleCall getSpecialPacketsGSSConfigSpecialPacketsParserRuleCall_11_0() { return cSpecialPacketsGSSConfigSpecialPacketsParserRuleCall_11_0; }
 		
 		//PeriodicTCs=GSSConfigPeriodicTCs?
-		public Assignment getPeriodicTCsAssignment_8() { return cPeriodicTCsAssignment_8; }
+		public Assignment getPeriodicTCsAssignment_12() { return cPeriodicTCsAssignment_12; }
 		
 		//GSSConfigPeriodicTCs
-		public RuleCall getPeriodicTCsGSSConfigPeriodicTCsParserRuleCall_8_0() { return cPeriodicTCsGSSConfigPeriodicTCsParserRuleCall_8_0; }
+		public RuleCall getPeriodicTCsGSSConfigPeriodicTCsParserRuleCall_12_0() { return cPeriodicTCsGSSConfigPeriodicTCsParserRuleCall_12_0; }
 		
 		//(GlobalVars=GSSConfigGlobalVars & Monitors=GSSConfigMonitors)?
-		public UnorderedGroup getUnorderedGroup_9() { return cUnorderedGroup_9; }
+		public UnorderedGroup getUnorderedGroup_13() { return cUnorderedGroup_13; }
 		
 		//GlobalVars=GSSConfigGlobalVars
-		public Assignment getGlobalVarsAssignment_9_0() { return cGlobalVarsAssignment_9_0; }
+		public Assignment getGlobalVarsAssignment_13_0() { return cGlobalVarsAssignment_13_0; }
 		
 		//GSSConfigGlobalVars
-		public RuleCall getGlobalVarsGSSConfigGlobalVarsParserRuleCall_9_0_0() { return cGlobalVarsGSSConfigGlobalVarsParserRuleCall_9_0_0; }
+		public RuleCall getGlobalVarsGSSConfigGlobalVarsParserRuleCall_13_0_0() { return cGlobalVarsGSSConfigGlobalVarsParserRuleCall_13_0_0; }
 		
 		//Monitors=GSSConfigMonitors
-		public Assignment getMonitorsAssignment_9_1() { return cMonitorsAssignment_9_1; }
+		public Assignment getMonitorsAssignment_13_1() { return cMonitorsAssignment_13_1; }
 		
 		//GSSConfigMonitors
-		public RuleCall getMonitorsGSSConfigMonitorsParserRuleCall_9_1_0() { return cMonitorsGSSConfigMonitorsParserRuleCall_9_1_0; }
+		public RuleCall getMonitorsGSSConfigMonitorsParserRuleCall_13_1_0() { return cMonitorsGSSConfigMonitorsParserRuleCall_13_1_0; }
 		
 		//Tests=GSSConfigTests
-		public Assignment getTestsAssignment_10() { return cTestsAssignment_10; }
+		public Assignment getTestsAssignment_14() { return cTestsAssignment_14; }
 		
 		//GSSConfigTests
-		public RuleCall getTestsGSSConfigTestsParserRuleCall_10_0() { return cTestsGSSConfigTestsParserRuleCall_10_0; }
+		public RuleCall getTestsGSSConfigTestsParserRuleCall_14_0() { return cTestsGSSConfigTestsParserRuleCall_14_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
+		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_12() { return cSemicolonKeyword_12; }
+		public Keyword getSemicolonKeyword_16() { return cSemicolonKeyword_16; }
 	}
 	public class GSSConfigGSSOptionsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigGSSOptions");
@@ -839,10 +833,10 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cPortLogsAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cPortLogsGSSConfigEnableDisableEnumRuleCall_8_0 = (RuleCall)cPortLogsAssignment_8.eContents().get(0);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Keyword cDebugLogKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cRawLogKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Assignment cDebugLogAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cDebugLogGSSConfigEnableDisableEnumRuleCall_12_0 = (RuleCall)cDebugLogAssignment_12.eContents().get(0);
+		private final Assignment cRawLogAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cRawLogGSSConfigEnableDisableEnumRuleCall_12_0 = (RuleCall)cRawLogAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Keyword cRightCurlyBracketKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cSemicolonKeyword_15 = (Keyword)cGroup.eContents().get(15);
@@ -852,12 +846,12 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'{'
 		//	'mainLog' ':=' mainLog=GSSConfigEnableDisable ';'
 		//	'portLogs' ':=' portLogs=GSSConfigEnableDisable ';'
-		//	'debugLog' ':=' debugLog=GSSConfigEnableDisable ';'
+		//	'rawLog' ':=' rawLog=GSSConfigEnableDisable ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSConfigGSSInfoPrint' '{' 'mainLog' ':=' mainLog=GSSConfigEnableDisable ';' 'portLogs' ':='
-		//portLogs=GSSConfigEnableDisable ';' 'debugLog' ':=' debugLog=GSSConfigEnableDisable ';' '}' ';'
+		//portLogs=GSSConfigEnableDisable ';' 'rawLog' ':=' rawLog=GSSConfigEnableDisable ';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSConfigGSSInfoPrint'
@@ -896,17 +890,17 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
-		//'debugLog'
-		public Keyword getDebugLogKeyword_10() { return cDebugLogKeyword_10; }
+		//'rawLog'
+		public Keyword getRawLogKeyword_10() { return cRawLogKeyword_10; }
 		
 		//':='
 		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
 		
-		//debugLog=GSSConfigEnableDisable
-		public Assignment getDebugLogAssignment_12() { return cDebugLogAssignment_12; }
+		//rawLog=GSSConfigEnableDisable
+		public Assignment getRawLogAssignment_12() { return cRawLogAssignment_12; }
 		
 		//GSSConfigEnableDisable
-		public RuleCall getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0() { return cDebugLogGSSConfigEnableDisableEnumRuleCall_12_0; }
+		public RuleCall getRawLogGSSConfigEnableDisableEnumRuleCall_12_0() { return cRawLogGSSConfigEnableDisableEnumRuleCall_12_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
@@ -932,10 +926,10 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cPortLogsAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cPortLogsGSSConfigEnableDisableEnumRuleCall_8_0 = (RuleCall)cPortLogsAssignment_8.eContents().get(0);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Keyword cDebugLogKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cRawLogKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Assignment cDebugLogAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cDebugLogGSSConfigEnableDisableEnumRuleCall_12_0 = (RuleCall)cDebugLogAssignment_12.eContents().get(0);
+		private final Assignment cRawLogAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cRawLogGSSConfigEnableDisableEnumRuleCall_12_0 = (RuleCall)cRawLogAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Keyword cGssTabsKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cColonEqualsSignKeyword_15 = (Keyword)cGroup.eContents().get(15);
@@ -949,13 +943,13 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSConfigPhyHeaderPrint' '{'
 		//	'mainLog' ':=' mainLog=GSSConfigEnableDisable ';'
 		//	'portLogs' ':=' portLogs=GSSConfigEnableDisable ';'
-		//	'debugLog' ':=' debugLog=GSSConfigEnableDisable ';'
+		//	'rawLog' ':=' rawLog=GSSConfigEnableDisable ';'
 		//	'gssTabs' ':=' gssTabs=GSSConfigEnableDisable ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSConfigPhyHeaderPrint' '{' 'mainLog' ':=' mainLog=GSSConfigEnableDisable ';' 'portLogs' ':='
-		//portLogs=GSSConfigEnableDisable ';' 'debugLog' ':=' debugLog=GSSConfigEnableDisable ';' 'gssTabs' ':='
+		//portLogs=GSSConfigEnableDisable ';' 'rawLog' ':=' rawLog=GSSConfigEnableDisable ';' 'gssTabs' ':='
 		//gssTabs=GSSConfigEnableDisable ';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
@@ -995,17 +989,17 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
-		//'debugLog'
-		public Keyword getDebugLogKeyword_10() { return cDebugLogKeyword_10; }
+		//'rawLog'
+		public Keyword getRawLogKeyword_10() { return cRawLogKeyword_10; }
 		
 		//':='
 		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
 		
-		//debugLog=GSSConfigEnableDisable
-		public Assignment getDebugLogAssignment_12() { return cDebugLogAssignment_12; }
+		//rawLog=GSSConfigEnableDisable
+		public Assignment getRawLogAssignment_12() { return cRawLogAssignment_12; }
 		
 		//GSSConfigEnableDisable
-		public RuleCall getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0() { return cDebugLogGSSConfigEnableDisableEnumRuleCall_12_0; }
+		public RuleCall getRawLogGSSConfigEnableDisableEnumRuleCall_12_0() { return cRawLogGSSConfigEnableDisableEnumRuleCall_12_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
@@ -1677,14 +1671,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTMformatKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Assignment cTMformatAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final CrossReference cTMformatGSSTmTcFormatTmTCFormatCrossReference_12_0 = (CrossReference)cTMformatAssignment_12.eContents().get(0);
-		private final RuleCall cTMformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_12_0_1 = (RuleCall)cTMformatGSSTmTcFormatTmTCFormatCrossReference_12_0.eContents().get(1);
+		private final CrossReference cTMformatGSSTmTcFormatTmTcFormatCrossReference_12_0 = (CrossReference)cTMformatAssignment_12.eContents().get(0);
+		private final RuleCall cTMformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_12_0_1 = (RuleCall)cTMformatGSSTmTcFormatTmTcFormatCrossReference_12_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Keyword cTCformatKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cColonEqualsSignKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Assignment cTCformatAssignment_16 = (Assignment)cGroup.eContents().get(16);
-		private final CrossReference cTCformatGSSTmTcFormatTmTCFormatCrossReference_16_0 = (CrossReference)cTCformatAssignment_16.eContents().get(0);
-		private final RuleCall cTCformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_16_0_1 = (RuleCall)cTCformatGSSTmTcFormatTmTCFormatCrossReference_16_0.eContents().get(1);
+		private final CrossReference cTCformatGSSTmTcFormatTmTcFormatCrossReference_16_0 = (CrossReference)cTCformatAssignment_16.eContents().get(0);
+		private final RuleCall cTCformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_16_0_1 = (RuleCall)cTCformatGSSTmTcFormatTmTcFormatCrossReference_16_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_17 = (Keyword)cGroup.eContents().get(17);
 		private final Keyword cInputFilterKeyword_18 = (Keyword)cGroup.eContents().get(18);
 		private final Keyword cColonEqualsSignKeyword_19 = (Keyword)cGroup.eContents().get(19);
@@ -1713,8 +1707,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSConfigLevelInOut' '{'
 		//	'id' ':=' id=INTEGER ';'
 		//	'name' ':=' name=STRING ';'
-		//	'TMformat' ':=' TMformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
-		//	'TCformat' ':=' TCformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
+		//	'TMformat' ':=' TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
+		//	'TCformat' ':=' TCformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 		//	'inputFilter' ':=' inputFilter=[filters::GSSFilterFilter|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
 		//	export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
 		//	import_from_prev_Level=[imports::GSSImportImport|VersionedQualifiedName] ';')?
@@ -1722,8 +1716,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSConfigLevelInOut' '{' 'id' ':=' id=INTEGER ';' 'name' ':=' name=STRING ';' 'TMformat' ':='
-		//TMformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';' 'TCformat' ':='
-		//TCformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';' 'inputFilter' ':='
+		//TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';' 'TCformat' ':='
+		//TCformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';' 'inputFilter' ':='
 		//inputFilter=[filters::GSSFilterFilter|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
 		//export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
 		//import_from_prev_Level=[imports::GSSImportImport|VersionedQualifiedName] ';')? '}' ';'
@@ -1771,14 +1765,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
 		
-		//TMformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
+		//TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
 		public Assignment getTMformatAssignment_12() { return cTMformatAssignment_12; }
 		
-		//[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
-		public CrossReference getTMformatGSSTmTcFormatTmTCFormatCrossReference_12_0() { return cTMformatGSSTmTcFormatTmTCFormatCrossReference_12_0; }
+		//[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
+		public CrossReference getTMformatGSSTmTcFormatTmTcFormatCrossReference_12_0() { return cTMformatGSSTmTcFormatTmTcFormatCrossReference_12_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getTMformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_12_0_1() { return cTMformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_12_0_1; }
+		public RuleCall getTMformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_12_0_1() { return cTMformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_12_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
@@ -1789,14 +1783,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_15() { return cColonEqualsSignKeyword_15; }
 		
-		//TCformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
+		//TCformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
 		public Assignment getTCformatAssignment_16() { return cTCformatAssignment_16; }
 		
-		//[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
-		public CrossReference getTCformatGSSTmTcFormatTmTCFormatCrossReference_16_0() { return cTCformatGSSTmTcFormatTmTCFormatCrossReference_16_0; }
+		//[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
+		public CrossReference getTCformatGSSTmTcFormatTmTcFormatCrossReference_16_0() { return cTCformatGSSTmTcFormatTmTcFormatCrossReference_16_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getTCformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_16_0_1() { return cTCformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_16_0_1; }
+		public RuleCall getTCformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_16_0_1() { return cTCformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_16_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_17() { return cSemicolonKeyword_17; }
@@ -1885,8 +1879,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTCformatKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Assignment cTCformatAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final CrossReference cTCformatGSSTmTcFormatTmTCFormatCrossReference_12_0 = (CrossReference)cTCformatAssignment_12.eContents().get(0);
-		private final RuleCall cTCformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_12_0_1 = (RuleCall)cTCformatGSSTmTcFormatTmTCFormatCrossReference_12_0.eContents().get(1);
+		private final CrossReference cTCformatGSSTmTcFormatTmTcFormatCrossReference_12_0 = (CrossReference)cTCformatAssignment_12.eContents().get(0);
+		private final RuleCall cTCformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_12_0_1 = (RuleCall)cTCformatGSSTmTcFormatTmTcFormatCrossReference_12_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
 		private final Keyword cExport_to_prev_LevelKeyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
@@ -1902,13 +1896,13 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSConfigLevelIn' '{'
 		//	'id' ':=' id=INTEGER ';'
 		//	'name' ':=' name=STRING ';'
-		//	'TCformat' ':=' TCformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';' ('export_to_prev_Level'
+		//	'TCformat' ':=' TCformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';' ('export_to_prev_Level'
 		//	':=' export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSConfigLevelIn' '{' 'id' ':=' id=INTEGER ';' 'name' ':=' name=STRING ';' 'TCformat' ':='
-		//TCformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
+		//TCformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
 		//export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
@@ -1954,14 +1948,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
 		
-		//TCformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
+		//TCformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
 		public Assignment getTCformatAssignment_12() { return cTCformatAssignment_12; }
 		
-		//[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
-		public CrossReference getTCformatGSSTmTcFormatTmTCFormatCrossReference_12_0() { return cTCformatGSSTmTcFormatTmTCFormatCrossReference_12_0; }
+		//[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
+		public CrossReference getTCformatGSSTmTcFormatTmTcFormatCrossReference_12_0() { return cTCformatGSSTmTcFormatTmTcFormatCrossReference_12_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getTCformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_12_0_1() { return cTCformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_12_0_1; }
+		public RuleCall getTCformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_12_0_1() { return cTCformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_12_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
@@ -2011,8 +2005,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTMformatKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Assignment cTMformatAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final CrossReference cTMformatGSSTmTcFormatTmTCFormatCrossReference_12_0 = (CrossReference)cTMformatAssignment_12.eContents().get(0);
-		private final RuleCall cTMformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_12_0_1 = (RuleCall)cTMformatGSSTmTcFormatTmTCFormatCrossReference_12_0.eContents().get(1);
+		private final CrossReference cTMformatGSSTmTcFormatTmTcFormatCrossReference_12_0 = (CrossReference)cTMformatAssignment_12.eContents().get(0);
+		private final RuleCall cTMformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_12_0_1 = (RuleCall)cTMformatGSSTmTcFormatTmTcFormatCrossReference_12_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Keyword cInputFilterKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cColonEqualsSignKeyword_15 = (Keyword)cGroup.eContents().get(15);
@@ -2034,14 +2028,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSConfigLevelOut' '{'
 		//	'id' ':=' id=INTEGER ';'
 		//	'name' ':=' name=STRING ';'
-		//	'TMformat' ':=' TMformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
+		//	'TMformat' ':=' TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 		//	'inputFilter' ':=' inputFilter=[filters::GSSFilterFilter|VersionedQualifiedName] ';' ('import_from_prev_Level' ':='
 		//	import_from_prev_Level=[imports::GSSImportImport|VersionedQualifiedName] ';')?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSConfigLevelOut' '{' 'id' ':=' id=INTEGER ';' 'name' ':=' name=STRING ';' 'TMformat' ':='
-		//TMformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';' 'inputFilter' ':='
+		//TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';' 'inputFilter' ':='
 		//inputFilter=[filters::GSSFilterFilter|VersionedQualifiedName] ';' ('import_from_prev_Level' ':='
 		//import_from_prev_Level=[imports::GSSImportImport|VersionedQualifiedName] ';')? '}' ';'
 		public Group getGroup() { return cGroup; }
@@ -2088,14 +2082,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
 		
-		//TMformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
+		//TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
 		public Assignment getTMformatAssignment_12() { return cTMformatAssignment_12; }
 		
-		//[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
-		public CrossReference getTMformatGSSTmTcFormatTmTCFormatCrossReference_12_0() { return cTMformatGSSTmTcFormatTmTCFormatCrossReference_12_0; }
+		//[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
+		public CrossReference getTMformatGSSTmTcFormatTmTcFormatCrossReference_12_0() { return cTMformatGSSTmTcFormatTmTcFormatCrossReference_12_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getTMformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_12_0_1() { return cTMformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_12_0_1; }
+		public RuleCall getTMformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_12_0_1() { return cTMformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_12_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
@@ -2702,8 +2696,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTMformatKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
 		private final Assignment cTMformatAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
-		private final CrossReference cTMformatGSSTmTcFormatTmTCFormatCrossReference_6_2_0 = (CrossReference)cTMformatAssignment_6_2.eContents().get(0);
-		private final RuleCall cTMformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_2_0_1 = (RuleCall)cTMformatGSSTmTcFormatTmTCFormatCrossReference_6_2_0.eContents().get(1);
+		private final CrossReference cTMformatGSSTmTcFormatTmTcFormatCrossReference_6_2_0 = (CrossReference)cTMformatAssignment_6_2.eContents().get(0);
+		private final RuleCall cTMformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_2_0_1 = (RuleCall)cTMformatGSSTmTcFormatTmTcFormatCrossReference_6_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_6_3 = (Keyword)cGroup_6.eContents().get(3);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cInputFilterKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
@@ -2725,14 +2719,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSConfigUpperLevel:
 		//	'GSSConfigUpperLevel' '{'
 		//	'level' ':=' level=GSSConfigUpperLevelLevel ';' ('TMformat' ':='
-		//	TMformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? ('inputFilter' ':='
+		//	TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? ('inputFilter' ':='
 		//	inputFilter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
 		//	import_from_prev_Level=[imports::GSSImportImport|VersionedQualifiedName] ';')?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSConfigUpperLevel' '{' 'level' ':=' level=GSSConfigUpperLevelLevel ';' ('TMformat' ':='
-		//TMformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? ('inputFilter' ':='
+		//TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? ('inputFilter' ':='
 		//inputFilter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
 		//import_from_prev_Level=[imports::GSSImportImport|VersionedQualifiedName] ';')? '}' ';'
 		public Group getGroup() { return cGroup; }
@@ -2758,7 +2752,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 		
-		//('TMformat' ':=' TMformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		//('TMformat' ':=' TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
 		public Group getGroup_6() { return cGroup_6; }
 		
 		//'TMformat'
@@ -2767,14 +2761,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_6_1() { return cColonEqualsSignKeyword_6_1; }
 		
-		//TMformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
+		//TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
 		public Assignment getTMformatAssignment_6_2() { return cTMformatAssignment_6_2; }
 		
-		//[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
-		public CrossReference getTMformatGSSTmTcFormatTmTCFormatCrossReference_6_2_0() { return cTMformatGSSTmTcFormatTmTCFormatCrossReference_6_2_0; }
+		//[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
+		public CrossReference getTMformatGSSTmTcFormatTmTcFormatCrossReference_6_2_0() { return cTMformatGSSTmTcFormatTmTcFormatCrossReference_6_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getTMformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_2_0_1() { return cTMformatGSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_6_2_0_1; }
+		public RuleCall getTMformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_2_0_1() { return cTMformatGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_6_3() { return cSemicolonKeyword_6_3; }
@@ -2931,8 +2925,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLevel2Keyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_22_1 = (Keyword)cGroup_22.eContents().get(1);
 		private final Assignment cLevel2Assignment_22_2 = (Assignment)cGroup_22.eContents().get(2);
-		private final CrossReference cLevel2GSSTmTcFormatTmTCFormatCrossReference_22_2_0 = (CrossReference)cLevel2Assignment_22_2.eContents().get(0);
-		private final RuleCall cLevel2GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_22_2_0_1 = (RuleCall)cLevel2GSSTmTcFormatTmTCFormatCrossReference_22_2_0.eContents().get(1);
+		private final CrossReference cLevel2GSSTmTcFormatTmTcFormatCrossReference_22_2_0 = (CrossReference)cLevel2Assignment_22_2.eContents().get(0);
+		private final RuleCall cLevel2GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_22_2_0_1 = (RuleCall)cLevel2GSSTmTcFormatTmTcFormatCrossReference_22_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_22_3 = (Keyword)cGroup_22.eContents().get(3);
 		private final Keyword cApp_to_level2Keyword_23 = (Keyword)cGroup.eContents().get(23);
 		private final Keyword cColonEqualsSignKeyword_24 = (Keyword)cGroup.eContents().get(24);
@@ -2944,8 +2938,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLevel1Keyword_27_0 = (Keyword)cGroup_27.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_27_1 = (Keyword)cGroup_27.eContents().get(1);
 		private final Assignment cLevel1Assignment_27_2 = (Assignment)cGroup_27.eContents().get(2);
-		private final CrossReference cLevel1GSSTmTcFormatTmTCFormatCrossReference_27_2_0 = (CrossReference)cLevel1Assignment_27_2.eContents().get(0);
-		private final RuleCall cLevel1GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_27_2_0_1 = (RuleCall)cLevel1GSSTmTcFormatTmTCFormatCrossReference_27_2_0.eContents().get(1);
+		private final CrossReference cLevel1GSSTmTcFormatTmTcFormatCrossReference_27_2_0 = (CrossReference)cLevel1Assignment_27_2.eContents().get(0);
+		private final RuleCall cLevel1GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_27_2_0_1 = (RuleCall)cLevel1GSSTmTcFormatTmTcFormatCrossReference_27_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_27_3 = (Keyword)cGroup_27.eContents().get(3);
 		private final Group cGroup_28 = (Group)cGroup.eContents().get(28);
 		private final Keyword cLevel2_to_level1Keyword_28_0 = (Keyword)cGroup_28.eContents().get(0);
@@ -2958,8 +2952,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLevel0Keyword_29_0 = (Keyword)cGroup_29.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_29_1 = (Keyword)cGroup_29.eContents().get(1);
 		private final Assignment cLevel0Assignment_29_2 = (Assignment)cGroup_29.eContents().get(2);
-		private final CrossReference cLevel0GSSTmTcFormatTmTCFormatCrossReference_29_2_0 = (CrossReference)cLevel0Assignment_29_2.eContents().get(0);
-		private final RuleCall cLevel0GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_29_2_0_1 = (RuleCall)cLevel0GSSTmTcFormatTmTCFormatCrossReference_29_2_0.eContents().get(1);
+		private final CrossReference cLevel0GSSTmTcFormatTmTcFormatCrossReference_29_2_0 = (CrossReference)cLevel0Assignment_29_2.eContents().get(0);
+		private final RuleCall cLevel0GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_29_2_0_1 = (RuleCall)cLevel0GSSTmTcFormatTmTcFormatCrossReference_29_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_29_3 = (Keyword)cGroup_29.eContents().get(3);
 		private final Group cGroup_30 = (Group)cGroup.eContents().get(30);
 		private final Keyword cLevel1_to_level0Keyword_30_0 = (Keyword)cGroup_30.eContents().get(0);
@@ -2978,22 +2972,22 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'period_value' ':=' period_value=INTEGER ';'
 		//	'period_unit' ':=' period_unit=GSSConfigUnit ';' ('level2' ':='
-		//	level2=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		//	level2=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
 		//	'app_to_level2' ':=' app_to_level2=[export::GSSExportExport|VersionedQualifiedName] ';' ('level1' ':='
-		//	level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
+		//	level1=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
 		//	level2_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';')? ('level0' ':='
-		//	level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
+		//	level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
 		//	level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSConfigPeriodicTCLevel2' '{' 'name' ':=' name=STRING ';' 'id' ':=' id=INTEGER ';' 'ifRef' ':=' ifRef=INTEGER ';'
 		//'period_value' ':=' period_value=INTEGER ';' 'period_unit' ':=' period_unit=GSSConfigUnit ';' ('level2' ':='
-		//level2=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? 'app_to_level2' ':='
+		//level2=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? 'app_to_level2' ':='
 		//app_to_level2=[export::GSSExportExport|VersionedQualifiedName] ';' ('level1' ':='
-		//level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
+		//level1=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
 		//level2_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';')? ('level0' ':='
-		//level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
+		//level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
 		//level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
@@ -3078,7 +3072,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
 		
-		//('level2' ':=' level2=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		//('level2' ':=' level2=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
 		public Group getGroup_22() { return cGroup_22; }
 		
 		//'level2'
@@ -3087,14 +3081,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_22_1() { return cColonEqualsSignKeyword_22_1; }
 		
-		//level2=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
+		//level2=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
 		public Assignment getLevel2Assignment_22_2() { return cLevel2Assignment_22_2; }
 		
-		//[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
-		public CrossReference getLevel2GSSTmTcFormatTmTCFormatCrossReference_22_2_0() { return cLevel2GSSTmTcFormatTmTCFormatCrossReference_22_2_0; }
+		//[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
+		public CrossReference getLevel2GSSTmTcFormatTmTcFormatCrossReference_22_2_0() { return cLevel2GSSTmTcFormatTmTcFormatCrossReference_22_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel2GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_22_2_0_1() { return cLevel2GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_22_2_0_1; }
+		public RuleCall getLevel2GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_22_2_0_1() { return cLevel2GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_22_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_22_3() { return cSemicolonKeyword_22_3; }
@@ -3117,7 +3111,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_26() { return cSemicolonKeyword_26; }
 		
-		//('level1' ':=' level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		//('level1' ':=' level1=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
 		public Group getGroup_27() { return cGroup_27; }
 		
 		//'level1'
@@ -3126,14 +3120,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_27_1() { return cColonEqualsSignKeyword_27_1; }
 		
-		//level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
+		//level1=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
 		public Assignment getLevel1Assignment_27_2() { return cLevel1Assignment_27_2; }
 		
-		//[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
-		public CrossReference getLevel1GSSTmTcFormatTmTCFormatCrossReference_27_2_0() { return cLevel1GSSTmTcFormatTmTCFormatCrossReference_27_2_0; }
+		//[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
+		public CrossReference getLevel1GSSTmTcFormatTmTcFormatCrossReference_27_2_0() { return cLevel1GSSTmTcFormatTmTcFormatCrossReference_27_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel1GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_27_2_0_1() { return cLevel1GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_27_2_0_1; }
+		public RuleCall getLevel1GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_27_2_0_1() { return cLevel1GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_27_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_27_3() { return cSemicolonKeyword_27_3; }
@@ -3159,7 +3153,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_28_3() { return cSemicolonKeyword_28_3; }
 		
-		//('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		//('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
 		public Group getGroup_29() { return cGroup_29; }
 		
 		//'level0'
@@ -3168,14 +3162,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_29_1() { return cColonEqualsSignKeyword_29_1; }
 		
-		//level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
+		//level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
 		public Assignment getLevel0Assignment_29_2() { return cLevel0Assignment_29_2; }
 		
-		//[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
-		public CrossReference getLevel0GSSTmTcFormatTmTCFormatCrossReference_29_2_0() { return cLevel0GSSTmTcFormatTmTCFormatCrossReference_29_2_0; }
+		//[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
+		public CrossReference getLevel0GSSTmTcFormatTmTcFormatCrossReference_29_2_0() { return cLevel0GSSTmTcFormatTmTcFormatCrossReference_29_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel0GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_29_2_0_1() { return cLevel0GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_29_2_0_1; }
+		public RuleCall getLevel0GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_29_2_0_1() { return cLevel0GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_29_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_29_3() { return cSemicolonKeyword_29_3; }
@@ -3241,8 +3235,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLevel1Keyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_22_1 = (Keyword)cGroup_22.eContents().get(1);
 		private final Assignment cLevel1Assignment_22_2 = (Assignment)cGroup_22.eContents().get(2);
-		private final CrossReference cLevel1GSSTmTcFormatTmTCFormatCrossReference_22_2_0 = (CrossReference)cLevel1Assignment_22_2.eContents().get(0);
-		private final RuleCall cLevel1GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_22_2_0_1 = (RuleCall)cLevel1GSSTmTcFormatTmTCFormatCrossReference_22_2_0.eContents().get(1);
+		private final CrossReference cLevel1GSSTmTcFormatTmTcFormatCrossReference_22_2_0 = (CrossReference)cLevel1Assignment_22_2.eContents().get(0);
+		private final RuleCall cLevel1GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_22_2_0_1 = (RuleCall)cLevel1GSSTmTcFormatTmTcFormatCrossReference_22_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_22_3 = (Keyword)cGroup_22.eContents().get(3);
 		private final Keyword cApp_to_level1Keyword_23 = (Keyword)cGroup.eContents().get(23);
 		private final Keyword cColonEqualsSignKeyword_24 = (Keyword)cGroup.eContents().get(24);
@@ -3254,8 +3248,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLevel0Keyword_27_0 = (Keyword)cGroup_27.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_27_1 = (Keyword)cGroup_27.eContents().get(1);
 		private final Assignment cLevel0Assignment_27_2 = (Assignment)cGroup_27.eContents().get(2);
-		private final CrossReference cLevel0GSSTmTcFormatTmTCFormatCrossReference_27_2_0 = (CrossReference)cLevel0Assignment_27_2.eContents().get(0);
-		private final RuleCall cLevel0GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_27_2_0_1 = (RuleCall)cLevel0GSSTmTcFormatTmTCFormatCrossReference_27_2_0.eContents().get(1);
+		private final CrossReference cLevel0GSSTmTcFormatTmTcFormatCrossReference_27_2_0 = (CrossReference)cLevel0Assignment_27_2.eContents().get(0);
+		private final RuleCall cLevel0GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_27_2_0_1 = (RuleCall)cLevel0GSSTmTcFormatTmTcFormatCrossReference_27_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_27_3 = (Keyword)cGroup_27.eContents().get(3);
 		private final Group cGroup_28 = (Group)cGroup.eContents().get(28);
 		private final Keyword cLevel1_to_level0Keyword_28_0 = (Keyword)cGroup_28.eContents().get(0);
@@ -3274,18 +3268,18 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'period_value' ':=' period_value=INTEGER ';'
 		//	'period_unit' ':=' period_unit=GSSConfigUnit ';' ('level1' ':='
-		//	level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		//	level1=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
 		//	'app_to_level1' ':=' app_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';' ('level0' ':='
-		//	level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
+		//	level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
 		//	level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSConfigPeriodicTCLevel1' '{' 'name' ':=' name=STRING ';' 'id' ':=' id=INTEGER ';' 'ifRef' ':=' ifRef=INTEGER ';'
 		//'period_value' ':=' period_value=INTEGER ';' 'period_unit' ':=' period_unit=GSSConfigUnit ';' ('level1' ':='
-		//level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? 'app_to_level1' ':='
+		//level1=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? 'app_to_level1' ':='
 		//app_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';' ('level0' ':='
-		//level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
+		//level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
 		//level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
@@ -3370,7 +3364,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
 		
-		//('level1' ':=' level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		//('level1' ':=' level1=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
 		public Group getGroup_22() { return cGroup_22; }
 		
 		//'level1'
@@ -3379,14 +3373,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_22_1() { return cColonEqualsSignKeyword_22_1; }
 		
-		//level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
+		//level1=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
 		public Assignment getLevel1Assignment_22_2() { return cLevel1Assignment_22_2; }
 		
-		//[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
-		public CrossReference getLevel1GSSTmTcFormatTmTCFormatCrossReference_22_2_0() { return cLevel1GSSTmTcFormatTmTCFormatCrossReference_22_2_0; }
+		//[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
+		public CrossReference getLevel1GSSTmTcFormatTmTcFormatCrossReference_22_2_0() { return cLevel1GSSTmTcFormatTmTcFormatCrossReference_22_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel1GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_22_2_0_1() { return cLevel1GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_22_2_0_1; }
+		public RuleCall getLevel1GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_22_2_0_1() { return cLevel1GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_22_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_22_3() { return cSemicolonKeyword_22_3; }
@@ -3409,7 +3403,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_26() { return cSemicolonKeyword_26; }
 		
-		//('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		//('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
 		public Group getGroup_27() { return cGroup_27; }
 		
 		//'level0'
@@ -3418,14 +3412,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_27_1() { return cColonEqualsSignKeyword_27_1; }
 		
-		//level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
+		//level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
 		public Assignment getLevel0Assignment_27_2() { return cLevel0Assignment_27_2; }
 		
-		//[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
-		public CrossReference getLevel0GSSTmTcFormatTmTCFormatCrossReference_27_2_0() { return cLevel0GSSTmTcFormatTmTCFormatCrossReference_27_2_0; }
+		//[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
+		public CrossReference getLevel0GSSTmTcFormatTmTcFormatCrossReference_27_2_0() { return cLevel0GSSTmTcFormatTmTcFormatCrossReference_27_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel0GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_27_2_0_1() { return cLevel0GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_27_2_0_1; }
+		public RuleCall getLevel0GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_27_2_0_1() { return cLevel0GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_27_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_27_3() { return cSemicolonKeyword_27_3; }
@@ -3491,8 +3485,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLevel0Keyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_22_1 = (Keyword)cGroup_22.eContents().get(1);
 		private final Assignment cLevel0Assignment_22_2 = (Assignment)cGroup_22.eContents().get(2);
-		private final CrossReference cLevel0GSSTmTcFormatTmTCFormatCrossReference_22_2_0 = (CrossReference)cLevel0Assignment_22_2.eContents().get(0);
-		private final RuleCall cLevel0GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_22_2_0_1 = (RuleCall)cLevel0GSSTmTcFormatTmTCFormatCrossReference_22_2_0.eContents().get(1);
+		private final CrossReference cLevel0GSSTmTcFormatTmTcFormatCrossReference_22_2_0 = (CrossReference)cLevel0Assignment_22_2.eContents().get(0);
+		private final RuleCall cLevel0GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_22_2_0_1 = (RuleCall)cLevel0GSSTmTcFormatTmTcFormatCrossReference_22_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_22_3 = (Keyword)cGroup_22.eContents().get(3);
 		private final Keyword cApp_to_level0Keyword_23 = (Keyword)cGroup.eContents().get(23);
 		private final Keyword cColonEqualsSignKeyword_24 = (Keyword)cGroup.eContents().get(24);
@@ -3510,14 +3504,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'period_value' ':=' period_value=INTEGER ';'
 		//	'period_unit' ':=' period_unit=GSSConfigUnit ';' ('level0' ':='
-		//	level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		//	level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
 		//	'app_to_level0' ':=' app_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSConfigPeriodicTCLevel0' '{' 'name' ':=' name=STRING ';' 'id' ':=' id=INTEGER ';' 'ifRef' ':=' ifRef=INTEGER ';'
 		//'period_value' ':=' period_value=INTEGER ';' 'period_unit' ':=' period_unit=GSSConfigUnit ';' ('level0' ':='
-		//level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? 'app_to_level0' ':='
+		//level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? 'app_to_level0' ':='
 		//app_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
@@ -3602,7 +3596,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
 		
-		//('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+		//('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
 		public Group getGroup_22() { return cGroup_22; }
 		
 		//'level0'
@@ -3611,14 +3605,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_22_1() { return cColonEqualsSignKeyword_22_1; }
 		
-		//level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
+		//level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
 		public Assignment getLevel0Assignment_22_2() { return cLevel0Assignment_22_2; }
 		
-		//[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName]
-		public CrossReference getLevel0GSSTmTcFormatTmTCFormatCrossReference_22_2_0() { return cLevel0GSSTmTcFormatTmTCFormatCrossReference_22_2_0; }
+		//[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
+		public CrossReference getLevel0GSSTmTcFormatTmTcFormatCrossReference_22_2_0() { return cLevel0GSSTmTcFormatTmTcFormatCrossReference_22_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel0GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_22_2_0_1() { return cLevel0GSSTmTcFormatTmTCFormatVersionedQualifiedNameParserRuleCall_22_2_0_1; }
+		public RuleCall getLevel0GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_22_2_0_1() { return cLevel0GSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_22_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_22_3() { return cSemicolonKeyword_22_3; }
@@ -5811,7 +5805,9 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSConfigGSSConfig:
 	//	'GSSConfigGSSConfig'
 	//	name=ID
-	//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') gss_options=GSSConfigGSSOptions
+	//	'{' ('uri' ':=' uri=QualifiedName ';')
+	//	'version' ':=' version=Version ';'
+	//	gss_options=GSSConfigGSSOptions
 	//	Protocols=GSSConfigProtocols
 	//	Interfaces=GSSConfigInterfaces
 	//	SpecialPackets=GSSConfigSpecialPackets?
@@ -5946,7 +5942,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'{'
 	//	'mainLog' ':=' mainLog=GSSConfigEnableDisable ';'
 	//	'portLogs' ':=' portLogs=GSSConfigEnableDisable ';'
-	//	'debugLog' ':=' debugLog=GSSConfigEnableDisable ';'
+	//	'rawLog' ':=' rawLog=GSSConfigEnableDisable ';'
 	//	'}' ';';
 	public GSSConfigGSSInfoPrintElements getGSSConfigGSSInfoPrintAccess() {
 		return pGSSConfigGSSInfoPrint;
@@ -5960,7 +5956,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSConfigPhyHeaderPrint' '{'
 	//	'mainLog' ':=' mainLog=GSSConfigEnableDisable ';'
 	//	'portLogs' ':=' portLogs=GSSConfigEnableDisable ';'
-	//	'debugLog' ':=' debugLog=GSSConfigEnableDisable ';'
+	//	'rawLog' ':=' rawLog=GSSConfigEnableDisable ';'
 	//	'gssTabs' ':=' gssTabs=GSSConfigEnableDisable ';'
 	//	'}' ';';
 	public GSSConfigPhyHeaderPrintElements getGSSConfigPhyHeaderPrintAccess() {
@@ -6071,8 +6067,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSConfigLevelInOut' '{'
 	//	'id' ':=' id=INTEGER ';'
 	//	'name' ':=' name=STRING ';'
-	//	'TMformat' ':=' TMformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
-	//	'TCformat' ':=' TCformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
+	//	'TMformat' ':=' TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
+	//	'TCformat' ':=' TCformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 	//	'inputFilter' ':=' inputFilter=[filters::GSSFilterFilter|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
 	//	export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
 	//	import_from_prev_Level=[imports::GSSImportImport|VersionedQualifiedName] ';')?
@@ -6089,7 +6085,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSConfigLevelIn' '{'
 	//	'id' ':=' id=INTEGER ';'
 	//	'name' ':=' name=STRING ';'
-	//	'TCformat' ':=' TCformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';' ('export_to_prev_Level'
+	//	'TCformat' ':=' TCformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';' ('export_to_prev_Level'
 	//	':=' export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')?
 	//	'}' ';';
 	public GSSConfigLevelInElements getGSSConfigLevelInAccess() {
@@ -6104,7 +6100,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSConfigLevelOut' '{'
 	//	'id' ':=' id=INTEGER ';'
 	//	'name' ':=' name=STRING ';'
-	//	'TMformat' ':=' TMformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';'
+	//	'TMformat' ':=' TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 	//	'inputFilter' ':=' inputFilter=[filters::GSSFilterFilter|VersionedQualifiedName] ';' ('import_from_prev_Level' ':='
 	//	import_from_prev_Level=[imports::GSSImportImport|VersionedQualifiedName] ';')?
 	//	'}' ';';
@@ -6215,7 +6211,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSConfigUpperLevel:
 	//	'GSSConfigUpperLevel' '{'
 	//	'level' ':=' level=GSSConfigUpperLevelLevel ';' ('TMformat' ':='
-	//	TMformat=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? ('inputFilter' ':='
+	//	TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? ('inputFilter' ':='
 	//	inputFilter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
 	//	import_from_prev_Level=[imports::GSSImportImport|VersionedQualifiedName] ';')?
 	//	'}' ';';
@@ -6267,11 +6263,11 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'period_value' ':=' period_value=INTEGER ';'
 	//	'period_unit' ':=' period_unit=GSSConfigUnit ';' ('level2' ':='
-	//	level2=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+	//	level2=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
 	//	'app_to_level2' ':=' app_to_level2=[export::GSSExportExport|VersionedQualifiedName] ';' ('level1' ':='
-	//	level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
+	//	level1=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
 	//	level2_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';')? ('level0' ':='
-	//	level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
+	//	level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
 	//	level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
 	//	'}' ';';
 	public GSSConfigPeriodicTCLevel2Elements getGSSConfigPeriodicTCLevel2Access() {
@@ -6289,9 +6285,9 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'period_value' ':=' period_value=INTEGER ';'
 	//	'period_unit' ':=' period_unit=GSSConfigUnit ';' ('level1' ':='
-	//	level1=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+	//	level1=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
 	//	'app_to_level1' ':=' app_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';' ('level0' ':='
-	//	level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
+	//	level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
 	//	level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
 	//	'}' ';';
 	public GSSConfigPeriodicTCLevel1Elements getGSSConfigPeriodicTCLevel1Access() {
@@ -6309,7 +6305,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'period_value' ':=' period_value=INTEGER ';'
 	//	'period_unit' ':=' period_unit=GSSConfigUnit ';' ('level0' ':='
-	//	level0=[tm_tc_format::GSSTmTcFormatTmTCFormat|VersionedQualifiedName] ';')?
+	//	level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
 	//	'app_to_level0' ':=' app_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';'
 	//	'}' ';';
 	public GSSConfigPeriodicTCLevel0Elements getGSSConfigPeriodicTCLevel0Access() {

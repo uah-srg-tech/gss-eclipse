@@ -13,9 +13,7 @@ package es.uah.aut.srg.gss.config;
 import es.uah.aut.srg.gss.filters.GSSFilterFilter;
 
 import es.uah.aut.srg.gss.imports.GSSImportImport;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
-
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -48,9 +46,11 @@ public interface GSSConfigLevelOut extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #isSetId()
+	 * @see #unsetId()
 	 * @see #setId(String)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelOut_Id()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	String getId();
@@ -60,10 +60,35 @@ public interface GSSConfigLevelOut extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #isSetId()
+	 * @see #unsetId()
 	 * @see #getId()
 	 * @generated
 	 */
 	void setId(String value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetId()
+	 * @see #getId()
+	 * @see #setId(String)
+	 * @generated
+	 */
+	void unsetId();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getId <em>Id</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Id</em>' attribute is set.
+	 * @see #unsetId()
+	 * @see #getId()
+	 * @see #setId(String)
+	 * @generated
+	 */
+	boolean isSetId();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -100,12 +125,12 @@ public interface GSSConfigLevelOut extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>TMformat</em>' reference.
-	 * @see #setTMformat(GSSTmTcFormatTmTCFormat)
+	 * @see #setTMformat(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelOut_TMformat()
 	 * @model required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getTMformat();
+	GSSTmTcFormatTmTcFormat getTMformat();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelOut#getTMformat <em>TMformat</em>}' reference.
@@ -115,7 +140,7 @@ public interface GSSConfigLevelOut extends EObject {
 	 * @see #getTMformat()
 	 * @generated
 	 */
-	void setTMformat(GSSTmTcFormatTmTCFormat value);
+	void setTMformat(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Input Filter</b></em>' reference.

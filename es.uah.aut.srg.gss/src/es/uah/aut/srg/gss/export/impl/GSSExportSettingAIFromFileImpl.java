@@ -13,10 +13,12 @@ package es.uah.aut.srg.gss.export.impl;
 import es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile;
 import es.uah.aut.srg.gss.export.exportPackage;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -60,24 +62,14 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 	protected String file = FILE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' attribute.
+	 * The cached value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getToFieldRef()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TO_FIELD_REF_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getToFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected String toFieldRef = TO_FIELD_REF_EDEFAULT;
+	protected GSSTmTcFormatAIField toFieldRef;
 
 	/**
 	 * The default value of the '{@link #getToArrayIndex() <em>To Array Index</em>}' attribute.
@@ -204,7 +196,15 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getToFieldRef() {
+	public GSSTmTcFormatAIField getToFieldRef() {
+		if (toFieldRef != null && toFieldRef.eIsProxy()) {
+			InternalEObject oldToFieldRef = (InternalEObject)toFieldRef;
+			toFieldRef = (GSSTmTcFormatAIField)eResolveProxy(oldToFieldRef);
+			if (toFieldRef != oldToFieldRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF, oldToFieldRef, toFieldRef));
+			}
+		}
 		return toFieldRef;
 	}
 
@@ -213,8 +213,17 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setToFieldRef(String newToFieldRef) {
-		String oldToFieldRef = toFieldRef;
+	public GSSTmTcFormatAIField basicGetToFieldRef() {
+		return toFieldRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setToFieldRef(GSSTmTcFormatAIField newToFieldRef) {
+		GSSTmTcFormatAIField oldToFieldRef = toFieldRef;
 		toFieldRef = newToFieldRef;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF, oldToFieldRef, toFieldRef));
@@ -315,7 +324,8 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__FILE:
 				return getFile();
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF:
-				return getToFieldRef();
+				if (resolve) return getToFieldRef();
+				return basicGetToFieldRef();
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_ARRAY_INDEX:
 				return getToArrayIndex();
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__OFFSET:
@@ -340,7 +350,7 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 				setFile((String)newValue);
 				return;
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF:
-				setToFieldRef((String)newValue);
+				setToFieldRef((GSSTmTcFormatAIField)newValue);
 				return;
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_ARRAY_INDEX:
 				setToArrayIndex((String)newValue);
@@ -370,7 +380,7 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 				setFile(FILE_EDEFAULT);
 				return;
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF:
-				setToFieldRef(TO_FIELD_REF_EDEFAULT);
+				setToFieldRef((GSSTmTcFormatAIField)null);
 				return;
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_ARRAY_INDEX:
 				setToArrayIndex(TO_ARRAY_INDEX_EDEFAULT);
@@ -399,7 +409,7 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__FILE:
 				return FILE_EDEFAULT == null ? file != null : !FILE_EDEFAULT.equals(file);
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF:
-				return TO_FIELD_REF_EDEFAULT == null ? toFieldRef != null : !TO_FIELD_REF_EDEFAULT.equals(toFieldRef);
+				return toFieldRef != null;
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_ARRAY_INDEX:
 				return TO_ARRAY_INDEX_EDEFAULT == null ? toArrayIndex != null : !TO_ARRAY_INDEX_EDEFAULT.equals(toArrayIndex);
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__OFFSET:
@@ -424,8 +434,6 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (file: ");
 		result.append(file);
-		result.append(", toFieldRef: ");
-		result.append(toFieldRef);
 		result.append(", toArrayIndex: ");
 		result.append(toArrayIndex);
 		result.append(", offset: ");

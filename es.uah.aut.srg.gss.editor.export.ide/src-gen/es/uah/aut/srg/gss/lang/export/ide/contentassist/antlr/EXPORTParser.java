@@ -42,6 +42,7 @@ public class EXPORTParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getGSSExportExportAccess().getAlternatives_6(), "rule__GSSExportExport__Alternatives_6");
 					put(grammarAccess.getGSSExportSizesAccess().getAlternatives_3(), "rule__GSSExportSizes__Alternatives_3");
 					put(grammarAccess.getGSSExportSettingsAccess().getAlternatives_3(), "rule__GSSExportSettings__Alternatives_3");
 					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
@@ -97,7 +98,7 @@ public class EXPORTParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSExportExportAccess().getNameAssignment_1(), "rule__GSSExportExport__NameAssignment_1");
 					put(grammarAccess.getGSSExportExportAccess().getUriAssignment_3_0_2(), "rule__GSSExportExport__UriAssignment_3_0_2");
 					put(grammarAccess.getGSSExportExportAccess().getVersionAssignment_3_1_2(), "rule__GSSExportExport__VersionAssignment_3_1_2");
-					put(grammarAccess.getGSSExportExportAccess().getFromAssignment_6(), "rule__GSSExportExport__FromAssignment_6");
+					put(grammarAccess.getGSSExportExportAccess().getFromAssignment_6_1(), "rule__GSSExportExport__FromAssignment_6_1");
 					put(grammarAccess.getGSSExportExportAccess().getToAssignment_10(), "rule__GSSExportExport__ToAssignment_10");
 					put(grammarAccess.getGSSExportExportAccess().getSizesAssignment_12(), "rule__GSSExportExport__SizesAssignment_12");
 					put(grammarAccess.getGSSExportExportAccess().getSettingsAssignment_13(), "rule__GSSExportExport__SettingsAssignment_13");

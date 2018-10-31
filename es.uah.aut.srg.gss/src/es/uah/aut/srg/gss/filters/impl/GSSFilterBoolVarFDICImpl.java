@@ -12,9 +12,9 @@ package es.uah.aut.srg.gss.filters.impl;
 
 import es.uah.aut.srg.gss.filters.GSSFilterBoolVarFDIC;
 import es.uah.aut.srg.gss.filters.GSSFilterFieldOp;
-import es.uah.aut.srg.gss.filters.GSSFilterFieldRef;
 import es.uah.aut.srg.gss.filters.filtersPackage;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -82,14 +82,14 @@ public class GSSFilterBoolVarFDICImpl extends MinimalEObjectImpl.Container imple
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getFieldRef() <em>Field Ref</em>}' containment reference.
+	 * The cached value of the '{@link #getFieldRef() <em>Field Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFieldRef()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSFilterFieldRef fieldRef;
+	protected GSSTmTcFormatFDICField fieldRef;
 
 	/**
 	 * The cached value of the '{@link #getOp() <em>Op</em>}' containment reference.
@@ -167,7 +167,15 @@ public class GSSFilterBoolVarFDICImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFilterFieldRef getFieldRef() {
+	public GSSTmTcFormatFDICField getFieldRef() {
+		if (fieldRef != null && fieldRef.eIsProxy()) {
+			InternalEObject oldFieldRef = (InternalEObject)fieldRef;
+			fieldRef = (GSSTmTcFormatFDICField)eResolveProxy(oldFieldRef);
+			if (fieldRef != oldFieldRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__FIELD_REF, oldFieldRef, fieldRef));
+			}
+		}
 		return fieldRef;
 	}
 
@@ -176,14 +184,8 @@ public class GSSFilterBoolVarFDICImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetFieldRef(GSSFilterFieldRef newFieldRef, NotificationChain msgs) {
-		GSSFilterFieldRef oldFieldRef = fieldRef;
-		fieldRef = newFieldRef;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__FIELD_REF, oldFieldRef, newFieldRef);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public GSSTmTcFormatFDICField basicGetFieldRef() {
+		return fieldRef;
 	}
 
 	/**
@@ -191,18 +193,11 @@ public class GSSFilterBoolVarFDICImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFieldRef(GSSFilterFieldRef newFieldRef) {
-		if (newFieldRef != fieldRef) {
-			NotificationChain msgs = null;
-			if (fieldRef != null)
-				msgs = ((InternalEObject)fieldRef).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__FIELD_REF, null, msgs);
-			if (newFieldRef != null)
-				msgs = ((InternalEObject)newFieldRef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__FIELD_REF, null, msgs);
-			msgs = basicSetFieldRef(newFieldRef, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__FIELD_REF, newFieldRef, newFieldRef));
+	public void setFieldRef(GSSTmTcFormatFDICField newFieldRef) {
+		GSSTmTcFormatFDICField oldFieldRef = fieldRef;
+		fieldRef = newFieldRef;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__FIELD_REF, oldFieldRef, fieldRef));
 	}
 
 	/**
@@ -256,8 +251,6 @@ public class GSSFilterBoolVarFDICImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__FIELD_REF:
-				return basicSetFieldRef(null, msgs);
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__OP:
 				return basicSetOp(null, msgs);
 		}
@@ -277,7 +270,8 @@ public class GSSFilterBoolVarFDICImpl extends MinimalEObjectImpl.Container imple
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__NAME:
 				return getName();
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__FIELD_REF:
-				return getFieldRef();
+				if (resolve) return getFieldRef();
+				return basicGetFieldRef();
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__OP:
 				return getOp();
 		}
@@ -299,7 +293,7 @@ public class GSSFilterBoolVarFDICImpl extends MinimalEObjectImpl.Container imple
 				setName((String)newValue);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__FIELD_REF:
-				setFieldRef((GSSFilterFieldRef)newValue);
+				setFieldRef((GSSTmTcFormatFDICField)newValue);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__OP:
 				setOp((GSSFilterFieldOp)newValue);
@@ -323,7 +317,7 @@ public class GSSFilterBoolVarFDICImpl extends MinimalEObjectImpl.Container imple
 				setName(NAME_EDEFAULT);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__FIELD_REF:
-				setFieldRef((GSSFilterFieldRef)null);
+				setFieldRef((GSSTmTcFormatFDICField)null);
 				return;
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FDIC__OP:
 				setOp((GSSFilterFieldOp)null);

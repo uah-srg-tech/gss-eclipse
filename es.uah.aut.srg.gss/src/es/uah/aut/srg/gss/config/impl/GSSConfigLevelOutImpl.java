@@ -16,9 +16,7 @@ import es.uah.aut.srg.gss.config.configPackage;
 import es.uah.aut.srg.gss.filters.GSSFilterFilter;
 
 import es.uah.aut.srg.gss.imports.GSSImportImport;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
-
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -66,6 +64,15 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	protected String id = ID_EDEFAULT;
 
 	/**
+	 * This is true if the Id attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean idESet;
+
+	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,7 +100,7 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatTmTCFormat tMformat;
+	protected GSSTmTcFormatTmTcFormat tMformat;
 
 	/**
 	 * The cached value of the '{@link #getInputFilter() <em>Input Filter</em>}' reference.
@@ -151,8 +158,33 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	public void setId(String newId) {
 		String oldId = id;
 		id = newId;
+		boolean oldIdESet = idESet;
+		idESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_OUT__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_OUT__ID, oldId, id, !oldIdESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetId() {
+		String oldId = id;
+		boolean oldIdESet = idESet;
+		id = ID_EDEFAULT;
+		idESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_LEVEL_OUT__ID, oldId, ID_EDEFAULT, oldIdESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetId() {
+		return idESet;
 	}
 
 	/**
@@ -181,10 +213,10 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat getTMformat() {
+	public GSSTmTcFormatTmTcFormat getTMformat() {
 		if (tMformat != null && tMformat.eIsProxy()) {
 			InternalEObject oldTMformat = (InternalEObject)tMformat;
-			tMformat = (GSSTmTcFormatTmTCFormat)eResolveProxy(oldTMformat);
+			tMformat = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldTMformat);
 			if (tMformat != oldTMformat) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT, oldTMformat, tMformat));
@@ -198,7 +230,7 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTCFormat basicGetTMformat() {
+	public GSSTmTcFormatTmTcFormat basicGetTMformat() {
 		return tMformat;
 	}
 
@@ -207,8 +239,8 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTMformat(GSSTmTcFormatTmTCFormat newTMformat) {
-		GSSTmTcFormatTmTCFormat oldTMformat = tMformat;
+	public void setTMformat(GSSTmTcFormatTmTcFormat newTMformat) {
+		GSSTmTcFormatTmTcFormat oldTMformat = tMformat;
 		tMformat = newTMformat;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT, oldTMformat, tMformat));
@@ -330,7 +362,7 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 				setName((String)newValue);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT:
-				setTMformat((GSSTmTcFormatTmTCFormat)newValue);
+				setTMformat((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_OUT__INPUT_FILTER:
 				setInputFilter((GSSFilterFilter)newValue);
@@ -351,13 +383,13 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_LEVEL_OUT__ID:
-				setId(ID_EDEFAULT);
+				unsetId();
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_OUT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT:
-				setTMformat((GSSTmTcFormatTmTCFormat)null);
+				setTMformat((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_OUT__INPUT_FILTER:
 				setInputFilter((GSSFilterFilter)null);
@@ -378,7 +410,7 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_LEVEL_OUT__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+				return isSetId();
 			case configPackage.GSS_CONFIG_LEVEL_OUT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT:
@@ -402,7 +434,7 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
-		result.append(id);
+		if (idESet) result.append(id); else result.append("<unset>");
 		result.append(", name: ");
 		result.append(name);
 		result.append(')');

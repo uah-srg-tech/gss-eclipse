@@ -11,9 +11,7 @@
 package es.uah.aut.srg.gss.config;
 
 import es.uah.aut.srg.gss.export.GSSExportExport;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
-
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -45,9 +43,11 @@ public interface GSSConfigLevelIn extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #isSetId()
+	 * @see #unsetId()
 	 * @see #setId(String)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelIn_Id()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	String getId();
@@ -57,10 +57,35 @@ public interface GSSConfigLevelIn extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #isSetId()
+	 * @see #unsetId()
 	 * @see #getId()
 	 * @generated
 	 */
 	void setId(String value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetId()
+	 * @see #getId()
+	 * @see #setId(String)
+	 * @generated
+	 */
+	void unsetId();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getId <em>Id</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Id</em>' attribute is set.
+	 * @see #unsetId()
+	 * @see #getId()
+	 * @see #setId(String)
+	 * @generated
+	 */
+	boolean isSetId();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -97,12 +122,12 @@ public interface GSSConfigLevelIn extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>TCformat</em>' reference.
-	 * @see #setTCformat(GSSTmTcFormatTmTCFormat)
+	 * @see #setTCformat(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelIn_TCformat()
 	 * @model required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getTCformat();
+	GSSTmTcFormatTmTcFormat getTCformat();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getTCformat <em>TCformat</em>}' reference.
@@ -112,7 +137,7 @@ public interface GSSConfigLevelIn extends EObject {
 	 * @see #getTCformat()
 	 * @generated
 	 */
-	void setTCformat(GSSTmTcFormatTmTCFormat value);
+	void setTCformat(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Export to prev Level</b></em>' reference.

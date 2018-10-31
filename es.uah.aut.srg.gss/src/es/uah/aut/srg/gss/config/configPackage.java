@@ -360,13 +360,13 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_GSS_INFO_PRINT__PORT_LOGS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Debug Log</b></em>' attribute.
+	 * The feature id for the '<em><b>Raw Log</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_GSS_INFO_PRINT__DEBUG_LOG = 2;
+	int GSS_CONFIG_GSS_INFO_PRINT__RAW_LOG = 2;
 
 	/**
 	 * The number of structural features of the '<em>GSS Config GSS Info Print</em>' class.
@@ -415,13 +415,13 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Debug Log</b></em>' attribute.
+	 * The feature id for the '<em><b>Raw Log</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG = 2;
+	int GSS_CONFIG_PHY_HEADER_PRINT__RAW_LOG = 2;
 
 	/**
 	 * The feature id for the '<em><b>Gss Tabs</b></em>' attribute.
@@ -3240,15 +3240,15 @@ public interface configPackage extends EPackage {
 	EAttribute getGSSConfigGSSInfoPrint_PortLogs();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getDebugLog <em>Debug Log</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getRawLog <em>Raw Log</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Debug Log</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getDebugLog()
+	 * @return the meta object for the attribute '<em>Raw Log</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getRawLog()
 	 * @see #getGSSConfigGSSInfoPrint()
 	 * @generated
 	 */
-	EAttribute getGSSConfigGSSInfoPrint_DebugLog();
+	EAttribute getGSSConfigGSSInfoPrint_RawLog();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigPhyHeaderPrint <em>GSS Config Phy Header Print</em>}'.
@@ -3283,15 +3283,15 @@ public interface configPackage extends EPackage {
 	EAttribute getGSSConfigPhyHeaderPrint_PortLogs();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPhyHeaderPrint#getDebugLog <em>Debug Log</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPhyHeaderPrint#getRawLog <em>Raw Log</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Debug Log</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPhyHeaderPrint#getDebugLog()
+	 * @return the meta object for the attribute '<em>Raw Log</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigPhyHeaderPrint#getRawLog()
 	 * @see #getGSSConfigPhyHeaderPrint()
 	 * @generated
 	 */
-	EAttribute getGSSConfigPhyHeaderPrint_DebugLog();
+	EAttribute getGSSConfigPhyHeaderPrint_RawLog();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPhyHeaderPrint#getGssTabs <em>Gss Tabs</em>}'.
@@ -5752,12 +5752,12 @@ public interface configPackage extends EPackage {
 		EAttribute GSS_CONFIG_GSS_INFO_PRINT__PORT_LOGS = eINSTANCE.getGSSConfigGSSInfoPrint_PortLogs();
 
 		/**
-		 * The meta object literal for the '<em><b>Debug Log</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Raw Log</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_GSS_INFO_PRINT__DEBUG_LOG = eINSTANCE.getGSSConfigGSSInfoPrint_DebugLog();
+		EAttribute GSS_CONFIG_GSS_INFO_PRINT__RAW_LOG = eINSTANCE.getGSSConfigGSSInfoPrint_RawLog();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigPhyHeaderPrintImpl <em>GSS Config Phy Header Print</em>}' class.
@@ -5786,12 +5786,12 @@ public interface configPackage extends EPackage {
 		EAttribute GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS = eINSTANCE.getGSSConfigPhyHeaderPrint_PortLogs();
 
 		/**
-		 * The meta object literal for the '<em><b>Debug Log</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Raw Log</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG = eINSTANCE.getGSSConfigPhyHeaderPrint_DebugLog();
+		EAttribute GSS_CONFIG_PHY_HEADER_PRINT__RAW_LOG = eINSTANCE.getGSSConfigPhyHeaderPrint_RawLog();
 
 		/**
 		 * The meta object literal for the '<em><b>Gss Tabs</b></em>' attribute feature.

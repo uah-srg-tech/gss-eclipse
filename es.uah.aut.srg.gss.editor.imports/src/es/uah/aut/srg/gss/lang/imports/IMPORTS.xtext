@@ -5,6 +5,8 @@ import "http://srg.aut.uah.es/gss/imports"
 import "http://srg.aut.uah.es/gss/common" as common 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
+import "http://srg.aut.uah.es/gss/tm_tc_format" as tm_tc_format
+
 GSSModelFile returns common::GSSModelFile:
 	(imports+=GSSModelFileImport)*
 	element=GSSImportImport
@@ -16,12 +18,12 @@ GSSModelFileImport returns common::GSSModelFileImport:
 
 GSSImportImport returns GSSImportImport:
 	'GSSImportImport'
-	name=EString
+	name = ID
 	'{'
 		(('uri' ':=' uri=QualifiedName ';')
 		& ('version' ':=' version=Version ';'))
-		'from' ':=' from=ID ';'
-		'to' ':=' to=ID ';'
+		'from' ':=' from=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
+		'to' ':=' ('NULL' | to=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName]) ';'
 		(dataSource+=GSSImportDataSource)+ 
 		(virtualSize=GSSImportVirtualSize)?
 	'}' ';'
@@ -29,7 +31,7 @@ GSSImportImport returns GSSImportImport:
 
 GSSImportDataSource returns GSSImportDataSource:
 	'GSSImportDataSource' '{'
-		'FieldRef' ':=' FieldRef=ID ';'
+		'FieldRef' ':=' FieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedReferenceName] ';'
 		'leftTrim' ':=' leftTrim=INTEGER ';'
 		'rightTrim' ':=' rightTrim=INTEGER ';'
 	'}' ';'
@@ -37,8 +39,8 @@ GSSImportDataSource returns GSSImportDataSource:
 
 GSSImportVirtualSize returns GSSImportVirtualSize:
 	'GSSImportVirtualSize' '{'
-		'FieldRef' ':=' FieldRef=ID ';'
-		'to' ':=' to=ID ';'
+		'FieldRef' ':=' FieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedReferenceName] ';'
+		'to' ':=' to=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedReferenceName] ';'
 		('addSize' ':=' addSize=INTEGER ';')?
 		('unit' ':=' unit=GSSImportUnit ';')?
 	'}' ';'

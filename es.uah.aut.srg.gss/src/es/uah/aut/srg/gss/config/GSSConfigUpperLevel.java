@@ -13,9 +13,7 @@ package es.uah.aut.srg.gss.config;
 import es.uah.aut.srg.gss.filters.GSSFilterFilter;
 
 import es.uah.aut.srg.gss.imports.GSSImportImport;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
-
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -103,12 +101,12 @@ public interface GSSConfigUpperLevel extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>TMformat</em>' reference.
-	 * @see #setTMformat(GSSTmTcFormatTmTCFormat)
+	 * @see #setTMformat(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigUpperLevel_TMformat()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getTMformat();
+	GSSTmTcFormatTmTcFormat getTMformat();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevel#getTMformat <em>TMformat</em>}' reference.
@@ -118,7 +116,7 @@ public interface GSSConfigUpperLevel extends EObject {
 	 * @see #getTMformat()
 	 * @generated
 	 */
-	void setTMformat(GSSTmTcFormatTmTCFormat value);
+	void setTMformat(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Input Filter</b></em>' reference.

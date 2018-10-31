@@ -13,10 +13,12 @@ package es.uah.aut.srg.gss.export.impl;
 import es.uah.aut.srg.gss.export.GSSExportSettingFromConst;
 import es.uah.aut.srg.gss.export.exportPackage;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -56,24 +58,14 @@ public class GSSExportSettingFromConstImpl extends MinimalEObjectImpl.Container 
 	protected String value = VALUE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' attribute.
+	 * The cached value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getToFieldRef()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TO_FIELD_REF_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getToFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected String toFieldRef = TO_FIELD_REF_EDEFAULT;
+	protected GSSTmTcFormatField toFieldRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,7 +112,15 @@ public class GSSExportSettingFromConstImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getToFieldRef() {
+	public GSSTmTcFormatField getToFieldRef() {
+		if (toFieldRef != null && toFieldRef.eIsProxy()) {
+			InternalEObject oldToFieldRef = (InternalEObject)toFieldRef;
+			toFieldRef = (GSSTmTcFormatField)eResolveProxy(oldToFieldRef);
+			if (toFieldRef != oldToFieldRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, exportPackage.GSS_EXPORT_SETTING_FROM_CONST__TO_FIELD_REF, oldToFieldRef, toFieldRef));
+			}
+		}
 		return toFieldRef;
 	}
 
@@ -129,8 +129,17 @@ public class GSSExportSettingFromConstImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setToFieldRef(String newToFieldRef) {
-		String oldToFieldRef = toFieldRef;
+	public GSSTmTcFormatField basicGetToFieldRef() {
+		return toFieldRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setToFieldRef(GSSTmTcFormatField newToFieldRef) {
+		GSSTmTcFormatField oldToFieldRef = toFieldRef;
 		toFieldRef = newToFieldRef;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, exportPackage.GSS_EXPORT_SETTING_FROM_CONST__TO_FIELD_REF, oldToFieldRef, toFieldRef));
@@ -147,7 +156,8 @@ public class GSSExportSettingFromConstImpl extends MinimalEObjectImpl.Container 
 			case exportPackage.GSS_EXPORT_SETTING_FROM_CONST__VALUE:
 				return getValue();
 			case exportPackage.GSS_EXPORT_SETTING_FROM_CONST__TO_FIELD_REF:
-				return getToFieldRef();
+				if (resolve) return getToFieldRef();
+				return basicGetToFieldRef();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -164,7 +174,7 @@ public class GSSExportSettingFromConstImpl extends MinimalEObjectImpl.Container 
 				setValue((String)newValue);
 				return;
 			case exportPackage.GSS_EXPORT_SETTING_FROM_CONST__TO_FIELD_REF:
-				setToFieldRef((String)newValue);
+				setToFieldRef((GSSTmTcFormatField)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -182,7 +192,7 @@ public class GSSExportSettingFromConstImpl extends MinimalEObjectImpl.Container 
 				setValue(VALUE_EDEFAULT);
 				return;
 			case exportPackage.GSS_EXPORT_SETTING_FROM_CONST__TO_FIELD_REF:
-				setToFieldRef(TO_FIELD_REF_EDEFAULT);
+				setToFieldRef((GSSTmTcFormatField)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -199,7 +209,7 @@ public class GSSExportSettingFromConstImpl extends MinimalEObjectImpl.Container 
 			case exportPackage.GSS_EXPORT_SETTING_FROM_CONST__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case exportPackage.GSS_EXPORT_SETTING_FROM_CONST__TO_FIELD_REF:
-				return TO_FIELD_REF_EDEFAULT == null ? toFieldRef != null : !TO_FIELD_REF_EDEFAULT.equals(toFieldRef);
+				return toFieldRef != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -216,8 +226,6 @@ public class GSSExportSettingFromConstImpl extends MinimalEObjectImpl.Container 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");
 		result.append(value);
-		result.append(", toFieldRef: ");
-		result.append(toFieldRef);
 		result.append(')');
 		return result.toString();
 	}

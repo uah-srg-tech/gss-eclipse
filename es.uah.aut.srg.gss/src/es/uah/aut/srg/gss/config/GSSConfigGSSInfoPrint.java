@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getMainLog <em>Main Log</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getPortLogs <em>Port Logs</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getDebugLog <em>Debug Log</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getRawLog <em>Raw Log</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigGSSInfoPrint()
@@ -144,59 +144,59 @@ public interface GSSConfigGSSInfoPrint extends EObject {
 	boolean isSetPortLogs();
 
 	/**
-	 * Returns the value of the '<em><b>Debug Log</b></em>' attribute.
+	 * Returns the value of the '<em><b>Raw Log</b></em>' attribute.
 	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.config.GSSConfigEnableDisable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Debug Log</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Raw Log</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Debug Log</em>' attribute.
+	 * @return the value of the '<em>Raw Log</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
-	 * @see #isSetDebugLog()
-	 * @see #unsetDebugLog()
-	 * @see #setDebugLog(GSSConfigEnableDisable)
-	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigGSSInfoPrint_DebugLog()
+	 * @see #isSetRawLog()
+	 * @see #unsetRawLog()
+	 * @see #setRawLog(GSSConfigEnableDisable)
+	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigGSSInfoPrint_RawLog()
 	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
-	GSSConfigEnableDisable getDebugLog();
+	GSSConfigEnableDisable getRawLog();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getDebugLog <em>Debug Log</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getRawLog <em>Raw Log</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Debug Log</em>' attribute.
+	 * @param value the new value of the '<em>Raw Log</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigEnableDisable
-	 * @see #isSetDebugLog()
-	 * @see #unsetDebugLog()
-	 * @see #getDebugLog()
+	 * @see #isSetRawLog()
+	 * @see #unsetRawLog()
+	 * @see #getRawLog()
 	 * @generated
 	 */
-	void setDebugLog(GSSConfigEnableDisable value);
+	void setRawLog(GSSConfigEnableDisable value);
 
 	/**
-	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getDebugLog <em>Debug Log</em>}' attribute.
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getRawLog <em>Raw Log</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isSetDebugLog()
-	 * @see #getDebugLog()
-	 * @see #setDebugLog(GSSConfigEnableDisable)
+	 * @see #isSetRawLog()
+	 * @see #getRawLog()
+	 * @see #setRawLog(GSSConfigEnableDisable)
 	 * @generated
 	 */
-	void unsetDebugLog();
+	void unsetRawLog();
 
 	/**
-	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getDebugLog <em>Debug Log</em>}' attribute is set.
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSInfoPrint#getRawLog <em>Raw Log</em>}' attribute is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Debug Log</em>' attribute is set.
-	 * @see #unsetDebugLog()
-	 * @see #getDebugLog()
-	 * @see #setDebugLog(GSSConfigEnableDisable)
+	 * @return whether the value of the '<em>Raw Log</em>' attribute is set.
+	 * @see #unsetRawLog()
+	 * @see #getRawLog()
+	 * @see #setRawLog(GSSConfigEnableDisable)
 	 * @generated
 	 */
-	boolean isSetDebugLog();
+	boolean isSetRawLog();
 
 } // GSSConfigGSSInfoPrint

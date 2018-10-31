@@ -14,8 +14,6 @@ import com.google.inject.Inject;
 import es.uah.aut.srg.gss.common.GSSModelFile;
 import es.uah.aut.srg.gss.common.GSSModelFileImport;
 import es.uah.aut.srg.gss.common.commonPackage;
-import es.uah.aut.srg.gss.filters.GSSFilterAIFieldRef;
-import es.uah.aut.srg.gss.filters.GSSFilterAIFieldRefs;
 import es.uah.aut.srg.gss.filters.GSSFilterBoolVar;
 import es.uah.aut.srg.gss.filters.GSSFilterBoolVarFDIC;
 import es.uah.aut.srg.gss.filters.GSSFilterBoolVarFromArrayItem;
@@ -23,7 +21,6 @@ import es.uah.aut.srg.gss.filters.GSSFilterBoolVarFromGroupedArrayItem;
 import es.uah.aut.srg.gss.filters.GSSFilterBoolVarRef;
 import es.uah.aut.srg.gss.filters.GSSFilterConstant;
 import es.uah.aut.srg.gss.filters.GSSFilterFieldOp;
-import es.uah.aut.srg.gss.filters.GSSFilterFieldRef;
 import es.uah.aut.srg.gss.filters.GSSFilterMaxterm;
 import es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter;
 import es.uah.aut.srg.gss.filters.GSSFilterMinterm;
@@ -66,12 +63,6 @@ public class FILTERSSemanticSequencer extends AbstractDelegatingSemanticSequence
 			}
 		else if (epackage == filtersPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case filtersPackage.GSS_FILTER_AI_FIELD_REF:
-				sequence_GSSFilterAIFieldRef(context, (GSSFilterAIFieldRef) semanticObject); 
-				return; 
-			case filtersPackage.GSS_FILTER_AI_FIELD_REFS:
-				sequence_GSSFilterAIFieldRefs(context, (GSSFilterAIFieldRefs) semanticObject); 
-				return; 
 			case filtersPackage.GSS_FILTER_BOOL_VAR:
 				sequence_GSSFilterBoolVar(context, (GSSFilterBoolVar) semanticObject); 
 				return; 
@@ -92,9 +83,6 @@ public class FILTERSSemanticSequencer extends AbstractDelegatingSemanticSequence
 				return; 
 			case filtersPackage.GSS_FILTER_FIELD_OP:
 				sequence_GSSFilterFieldOp(context, (GSSFilterFieldOp) semanticObject); 
-				return; 
-			case filtersPackage.GSS_FILTER_FIELD_REF:
-				sequence_GSSFilterFieldRef(context, (GSSFilterFieldRef) semanticObject); 
 				return; 
 			case filtersPackage.GSS_FILTER_MAXTERM:
 				sequence_GSSFilterMaxterm(context, (GSSFilterMaxterm) semanticObject); 
@@ -121,46 +109,10 @@ public class FILTERSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Contexts:
-	 *     GSSFilterAIFieldRef returns GSSFilterAIFieldRef
-	 *
-	 * Constraint:
-	 *     index=INTEGER
-	 */
-	protected void sequence_GSSFilterAIFieldRef(ISerializationContext context, GSSFilterAIFieldRef semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, filtersPackage.Literals.GSS_FILTER_AI_FIELD_REF__INDEX) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filtersPackage.Literals.GSS_FILTER_AI_FIELD_REF__INDEX));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSFilterAIFieldRefAccess().getIndexINTEGERParserRuleCall_4_0(), semanticObject.getIndex());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSFilterAIFieldRefs returns GSSFilterAIFieldRefs
-	 *
-	 * Constraint:
-	 *     name=ID
-	 */
-	protected void sequence_GSSFilterAIFieldRefs(ISerializationContext context, GSSFilterAIFieldRefs semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, filtersPackage.Literals.GSS_FILTER_AI_FIELD_REFS__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filtersPackage.Literals.GSS_FILTER_AI_FIELD_REFS__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSFilterAIFieldRefsAccess().getNameIDTerminalRuleCall_4_0(), semanticObject.getName());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     GSSFilterBoolVarFDIC returns GSSFilterBoolVarFDIC
 	 *
 	 * Constraint:
-	 *     (id=INTEGER name=ID FieldRef=GSSFilterFieldRef Op=GSSFilterFieldOp)
+	 *     (id=INTEGER name=ID FieldRef=[GSSTmTcFormatFDICField|VersionedQualifiedReferenceName] Op=GSSFilterFieldOp)
 	 */
 	protected void sequence_GSSFilterBoolVarFDIC(ISerializationContext context, GSSFilterBoolVarFDIC semanticObject) {
 		if (errorAcceptor != null) {
@@ -176,8 +128,8 @@ public class FILTERSSemanticSequencer extends AbstractDelegatingSemanticSequence
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSFilterBoolVarFDICAccess().getIdINTEGERParserRuleCall_4_0(), semanticObject.getId());
 		feeder.accept(grammarAccess.getGSSFilterBoolVarFDICAccess().getNameIDTerminalRuleCall_8_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefGSSFilterFieldRefParserRuleCall_10_0(), semanticObject.getFieldRef());
-		feeder.accept(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpGSSFilterFieldOpParserRuleCall_11_0(), semanticObject.getOp());
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefGSSTmTcFormatFDICFieldVersionedQualifiedReferenceNameParserRuleCall_12_0_1(), semanticObject.getFieldRef());
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpGSSFilterFieldOpParserRuleCall_14_0(), semanticObject.getOp());
 		feeder.finish();
 	}
 	
@@ -191,7 +143,7 @@ public class FILTERSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *         id=INTEGER 
 	 *         name=ID 
 	 *         constantType=GSSFilterConstantType 
-	 *         AIFieldRef=GSSFilterAIFieldRef 
+	 *         AIFieldRef=[GSSTmTcFormatAIField|VersionedQualifiedReferenceName] 
 	 *         Op=GSSFilterFieldOp 
 	 *         (Constant=GSSFilterConstant | Select=GSSFilterSelect | SelectLine=GSSFilterSelectLine)
 	 *     )
@@ -211,7 +163,7 @@ public class FILTERSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *         name=ID 
 	 *         constantType=GSSFilterConstantType 
 	 *         group=EString 
-	 *         AIFieldRefs=GSSFilterAIFieldRefs 
+	 *         AIFieldRefs=[GSSTmTcFormatAField|VersionedQualifiedReferenceName] 
 	 *         Op=GSSFilterFieldOp 
 	 *         (Constant=GSSFilterConstant | Select=GSSFilterSelect | SelectLine=GSSFilterSelectLine)
 	 *     )
@@ -248,7 +200,7 @@ public class FILTERSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *         id=INTEGER 
 	 *         name=ID 
 	 *         constantType=GSSFilterConstantType 
-	 *         FieldRef=GSSFilterFieldRef 
+	 *         FieldRef=[GSSTmTcFormatField|VersionedQualifiedReferenceName] 
 	 *         Op=GSSFilterFieldOp 
 	 *         (Constant=GSSFilterConstant | Select=GSSFilterSelect | SelectLine=GSSFilterSelectLine)
 	 *     )
@@ -290,24 +242,6 @@ public class FILTERSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Contexts:
-	 *     GSSFilterFieldRef returns GSSFilterFieldRef
-	 *
-	 * Constraint:
-	 *     name=ID
-	 */
-	protected void sequence_GSSFilterFieldRef(ISerializationContext context, GSSFilterFieldRef semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, filtersPackage.Literals.GSS_FILTER_FIELD_REF__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filtersPackage.Literals.GSS_FILTER_FIELD_REF__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSFilterFieldRefAccess().getNameIDTerminalRuleCall_4_0(), semanticObject.getName());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     GSSFilterFilter returns GSSFilterMaxtermFilter
 	 *     GSSFilterMaxtermFilter returns GSSFilterMaxtermFilter
 	 *
@@ -318,7 +252,7 @@ public class FILTERSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *             uri=QualifiedName | 
 	 *             (
 	 *                 version=Version 
-	 *                 formatFile=ID 
+	 *                 formatFile=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName] 
 	 *                 (
 	 *                     BoolVar+=GSSFilterBoolVar | 
 	 *                     BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem | 
@@ -359,7 +293,7 @@ public class FILTERSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *             uri=QualifiedName | 
 	 *             (
 	 *                 version=Version 
-	 *                 formatFile=ID 
+	 *                 formatFile=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName] 
 	 *                 (
 	 *                     BoolVar+=GSSFilterBoolVar | 
 	 *                     BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem | 

@@ -57,15 +57,6 @@ public interface filtersFactory extends EFactory {
 	GSSFilterBoolVar createGSSFilterBoolVar();
 
 	/**
-	 * Returns a new object of class '<em>GSS Filter Field Ref</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Filter Field Ref</em>'.
-	 * @generated
-	 */
-	GSSFilterFieldRef createGSSFilterFieldRef();
-
-	/**
 	 * Returns a new object of class '<em>GSS Filter Field Op</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,15 +102,6 @@ public interface filtersFactory extends EFactory {
 	GSSFilterBoolVarFromArrayItem createGSSFilterBoolVarFromArrayItem();
 
 	/**
-	 * Returns a new object of class '<em>GSS Filter AI Field Ref</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Filter AI Field Ref</em>'.
-	 * @generated
-	 */
-	GSSFilterAIFieldRef createGSSFilterAIFieldRef();
-
-	/**
 	 * Returns a new object of class '<em>GSS Filter Bool Var From Grouped Array Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -127,15 +109,6 @@ public interface filtersFactory extends EFactory {
 	 * @generated
 	 */
 	GSSFilterBoolVarFromGroupedArrayItem createGSSFilterBoolVarFromGroupedArrayItem();
-
-	/**
-	 * Returns a new object of class '<em>GSS Filter AI Field Refs</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Filter AI Field Refs</em>'.
-	 * @generated
-	 */
-	GSSFilterAIFieldRefs createGSSFilterAIFieldRefs();
 
 	/**
 	 * Returns a new object of class '<em>GSS Filter Bool Var FDIC</em>'.

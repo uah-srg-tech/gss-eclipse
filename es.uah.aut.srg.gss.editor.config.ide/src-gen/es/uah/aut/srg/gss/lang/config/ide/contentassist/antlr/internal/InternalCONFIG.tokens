@@ -66,7 +66,6 @@
 'app_to_level1'=121
 'app_to_level2'=114
 'date'=56
-'debugLog'=61
 'disabled'=15
 'dummy'=19
 'enabled'=16
@@ -119,6 +118,7 @@
 'printStatus'=96
 'procedure'=145
 'protocolID'=79
+'rawLog'=61
 'req'=146
 'reqAction'=147
 'seconds'=27
@@ -135,13 +135,13 @@
 'typeOffset'=73
 'uart'=18
 'uint'=28
-'uri'=42
+'uri'=43
 'validTimesKo'=68
 'value'=138
-'version'=43
+'version'=41
 'version_control_url'=57
 '{'=40
-'}'=41
+'}'=42
 RULE_ANY_OTHER=11
 RULE_HEXADECIMAL=5
 RULE_ID=6

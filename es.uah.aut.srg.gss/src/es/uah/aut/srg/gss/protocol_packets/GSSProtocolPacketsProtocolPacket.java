@@ -3,8 +3,7 @@
 package es.uah.aut.srg.gss.protocol_packets;
 
 import es.uah.aut.srg.gss.export.GSSExportExport;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -141,12 +140,12 @@ public interface GSSProtocolPacketsProtocolPacket extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Format</em>' reference.
-	 * @see #setFormat(GSSTmTcFormatTmTCFormat)
+	 * @see #setFormat(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage#getGSSProtocolPacketsProtocolPacket_Format()
 	 * @model required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getFormat();
+	GSSTmTcFormatTmTcFormat getFormat();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getFormat <em>Format</em>}' reference.
@@ -156,6 +155,6 @@ public interface GSSProtocolPacketsProtocolPacket extends EObject {
 	 * @see #getFormat()
 	 * @generated
 	 */
-	void setFormat(GSSTmTcFormatTmTCFormat value);
+	void setFormat(GSSTmTcFormatTmTcFormat value);
 
 } // GSSProtocolPacketsProtocolPacket

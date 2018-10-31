@@ -11,9 +11,7 @@
 package es.uah.aut.srg.gss.config;
 
 import es.uah.aut.srg.gss.export.GSSExportExport;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
-
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -181,12 +179,12 @@ public interface GSSConfigPeriodicTCLevel0 extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level0</em>' reference.
-	 * @see #setLevel0(GSSTmTcFormatTmTCFormat)
+	 * @see #setLevel0(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigPeriodicTCLevel0_Level0()
 	 * @model
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getLevel0();
+	GSSTmTcFormatTmTcFormat getLevel0();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getLevel0 <em>Level0</em>}' reference.
@@ -196,7 +194,7 @@ public interface GSSConfigPeriodicTCLevel0 extends EObject {
 	 * @see #getLevel0()
 	 * @generated
 	 */
-	void setLevel0(GSSTmTcFormatTmTCFormat value);
+	void setLevel0(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>App to level0</b></em>' reference.

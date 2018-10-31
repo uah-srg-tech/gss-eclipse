@@ -282,31 +282,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleGSSFilterFieldRef
-entryRuleGSSFilterFieldRef
-:
-{ before(grammarAccess.getGSSFilterFieldRefRule()); }
-	 ruleGSSFilterFieldRef
-{ after(grammarAccess.getGSSFilterFieldRefRule()); } 
-	 EOF 
-;
-
-// Rule GSSFilterFieldRef
-ruleGSSFilterFieldRef 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getGSSFilterFieldRefAccess().getGroup()); }
-		(rule__GSSFilterFieldRef__Group__0)
-		{ after(grammarAccess.getGSSFilterFieldRefAccess().getGroup()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 // Entry rule entryRuleGSSFilterFieldOp
 entryRuleGSSFilterFieldOp
 :
@@ -401,56 +376,6 @@ ruleGSSFilterSelectLine
 		{ before(grammarAccess.getGSSFilterSelectLineAccess().getGroup()); }
 		(rule__GSSFilterSelectLine__Group__0)
 		{ after(grammarAccess.getGSSFilterSelectLineAccess().getGroup()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-// Entry rule entryRuleGSSFilterAIFieldRef
-entryRuleGSSFilterAIFieldRef
-:
-{ before(grammarAccess.getGSSFilterAIFieldRefRule()); }
-	 ruleGSSFilterAIFieldRef
-{ after(grammarAccess.getGSSFilterAIFieldRefRule()); } 
-	 EOF 
-;
-
-// Rule GSSFilterAIFieldRef
-ruleGSSFilterAIFieldRef 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getGSSFilterAIFieldRefAccess().getGroup()); }
-		(rule__GSSFilterAIFieldRef__Group__0)
-		{ after(grammarAccess.getGSSFilterAIFieldRefAccess().getGroup()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-// Entry rule entryRuleGSSFilterAIFieldRefs
-entryRuleGSSFilterAIFieldRefs
-:
-{ before(grammarAccess.getGSSFilterAIFieldRefsRule()); }
-	 ruleGSSFilterAIFieldRefs
-{ after(grammarAccess.getGSSFilterAIFieldRefsRule()); } 
-	 EOF 
-;
-
-// Rule GSSFilterAIFieldRefs
-ruleGSSFilterAIFieldRefs 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getGSSFilterAIFieldRefsAccess().getGroup()); }
-		(rule__GSSFilterAIFieldRefs__Group__0)
-		{ after(grammarAccess.getGSSFilterAIFieldRefsAccess().getGroup()); }
 	)
 ;
 finally {
@@ -632,6 +557,31 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleVersionedQualifiedReferenceName
+entryRuleVersionedQualifiedReferenceName
+:
+{ before(grammarAccess.getVersionedQualifiedReferenceNameRule()); }
+	 ruleVersionedQualifiedReferenceName
+{ after(grammarAccess.getVersionedQualifiedReferenceNameRule()); } 
+	 EOF 
+;
+
+// Rule VersionedQualifiedReferenceName
+ruleVersionedQualifiedReferenceName 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup()); }
+		(rule__VersionedQualifiedReferenceName__Group__0)
+		{ after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Entry rule entryRuleINTEGER
 entryRuleINTEGER
 :
@@ -792,81 +742,81 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVar__Alternatives_16
+rule__GSSFilterBoolVar__Alternatives_19
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarAccess().getConstantAssignment_16_0()); }
-		(rule__GSSFilterBoolVar__ConstantAssignment_16_0)
-		{ after(grammarAccess.getGSSFilterBoolVarAccess().getConstantAssignment_16_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarAccess().getConstantAssignment_19_0()); }
+		(rule__GSSFilterBoolVar__ConstantAssignment_19_0)
+		{ after(grammarAccess.getGSSFilterBoolVarAccess().getConstantAssignment_19_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarAccess().getSelectAssignment_16_1()); }
-		(rule__GSSFilterBoolVar__SelectAssignment_16_1)
-		{ after(grammarAccess.getGSSFilterBoolVarAccess().getSelectAssignment_16_1()); }
+		{ before(grammarAccess.getGSSFilterBoolVarAccess().getSelectAssignment_19_1()); }
+		(rule__GSSFilterBoolVar__SelectAssignment_19_1)
+		{ after(grammarAccess.getGSSFilterBoolVarAccess().getSelectAssignment_19_1()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineAssignment_16_2()); }
-		(rule__GSSFilterBoolVar__SelectLineAssignment_16_2)
-		{ after(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineAssignment_16_2()); }
+		{ before(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineAssignment_19_2()); }
+		(rule__GSSFilterBoolVar__SelectLineAssignment_19_2)
+		{ after(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineAssignment_19_2()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromArrayItem__Alternatives_16
+rule__GSSFilterBoolVarFromArrayItem__Alternatives_19
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantAssignment_16_0()); }
-		(rule__GSSFilterBoolVarFromArrayItem__ConstantAssignment_16_0)
-		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantAssignment_16_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantAssignment_19_0()); }
+		(rule__GSSFilterBoolVarFromArrayItem__ConstantAssignment_19_0)
+		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantAssignment_19_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectAssignment_16_1()); }
-		(rule__GSSFilterBoolVarFromArrayItem__SelectAssignment_16_1)
-		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectAssignment_16_1()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectAssignment_19_1()); }
+		(rule__GSSFilterBoolVarFromArrayItem__SelectAssignment_19_1)
+		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectAssignment_19_1()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineAssignment_16_2()); }
-		(rule__GSSFilterBoolVarFromArrayItem__SelectLineAssignment_16_2)
-		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineAssignment_16_2()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineAssignment_19_2()); }
+		(rule__GSSFilterBoolVarFromArrayItem__SelectLineAssignment_19_2)
+		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineAssignment_19_2()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromGroupedArrayItem__Alternatives_20
+rule__GSSFilterBoolVarFromGroupedArrayItem__Alternatives_23
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantAssignment_20_0()); }
-		(rule__GSSFilterBoolVarFromGroupedArrayItem__ConstantAssignment_20_0)
-		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantAssignment_20_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantAssignment_23_0()); }
+		(rule__GSSFilterBoolVarFromGroupedArrayItem__ConstantAssignment_23_0)
+		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantAssignment_23_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectAssignment_20_1()); }
-		(rule__GSSFilterBoolVarFromGroupedArrayItem__SelectAssignment_20_1)
-		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectAssignment_20_1()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectAssignment_23_1()); }
+		(rule__GSSFilterBoolVarFromGroupedArrayItem__SelectAssignment_23_1)
+		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectAssignment_23_1()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineAssignment_20_2()); }
-		(rule__GSSFilterBoolVarFromGroupedArrayItem__SelectLineAssignment_20_2)
-		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineAssignment_20_2()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineAssignment_23_2()); }
+		(rule__GSSFilterBoolVarFromGroupedArrayItem__SelectLineAssignment_23_2)
+		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineAssignment_23_2()); }
 	)
 ;
 finally {
@@ -2788,9 +2738,9 @@ rule__GSSFilterBoolVar__Group__14__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefAssignment_14()); }
-	(rule__GSSFilterBoolVar__FieldRefAssignment_14)
-	{ after(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefAssignment_14()); }
+	{ before(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefKeyword_14()); }
+	'FieldRef'
+	{ after(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefKeyword_14()); }
 )
 ;
 finally {
@@ -2815,9 +2765,9 @@ rule__GSSFilterBoolVar__Group__15__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarAccess().getOpAssignment_15()); }
-	(rule__GSSFilterBoolVar__OpAssignment_15)
-	{ after(grammarAccess.getGSSFilterBoolVarAccess().getOpAssignment_15()); }
+	{ before(grammarAccess.getGSSFilterBoolVarAccess().getColonEqualsSignKeyword_15()); }
+	':='
+	{ after(grammarAccess.getGSSFilterBoolVarAccess().getColonEqualsSignKeyword_15()); }
 )
 ;
 finally {
@@ -2842,9 +2792,9 @@ rule__GSSFilterBoolVar__Group__16__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarAccess().getAlternatives_16()); }
-	(rule__GSSFilterBoolVar__Alternatives_16)
-	{ after(grammarAccess.getGSSFilterBoolVarAccess().getAlternatives_16()); }
+	{ before(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefAssignment_16()); }
+	(rule__GSSFilterBoolVar__FieldRefAssignment_16)
+	{ after(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefAssignment_16()); }
 )
 ;
 finally {
@@ -2869,9 +2819,9 @@ rule__GSSFilterBoolVar__Group__17__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarAccess().getRightCurlyBracketKeyword_17()); }
-	'}'
-	{ after(grammarAccess.getGSSFilterBoolVarAccess().getRightCurlyBracketKeyword_17()); }
+	{ before(grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_17()); }
+	';'
+	{ after(grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_17()); }
 )
 ;
 finally {
@@ -2884,6 +2834,7 @@ rule__GSSFilterBoolVar__Group__18
 	}
 :
 	rule__GSSFilterBoolVar__Group__18__Impl
+	rule__GSSFilterBoolVar__Group__19
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2895,9 +2846,89 @@ rule__GSSFilterBoolVar__Group__18__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_18()); }
+	{ before(grammarAccess.getGSSFilterBoolVarAccess().getOpAssignment_18()); }
+	(rule__GSSFilterBoolVar__OpAssignment_18)
+	{ after(grammarAccess.getGSSFilterBoolVarAccess().getOpAssignment_18()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVar__Group__19
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterBoolVar__Group__19__Impl
+	rule__GSSFilterBoolVar__Group__20
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVar__Group__19__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterBoolVarAccess().getAlternatives_19()); }
+	(rule__GSSFilterBoolVar__Alternatives_19)
+	{ after(grammarAccess.getGSSFilterBoolVarAccess().getAlternatives_19()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVar__Group__20
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterBoolVar__Group__20__Impl
+	rule__GSSFilterBoolVar__Group__21
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVar__Group__20__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterBoolVarAccess().getRightCurlyBracketKeyword_20()); }
+	'}'
+	{ after(grammarAccess.getGSSFilterBoolVarAccess().getRightCurlyBracketKeyword_20()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVar__Group__21
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterBoolVar__Group__21__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVar__Group__21__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_21()); }
 	';'
-	{ after(grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_18()); }
+	{ after(grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_21()); }
 )
 ;
 finally {
@@ -3301,9 +3332,9 @@ rule__GSSFilterBoolVarFromArrayItem__Group__14__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefAssignment_14()); }
-	(rule__GSSFilterBoolVarFromArrayItem__AIFieldRefAssignment_14)
-	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefAssignment_14()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefKeyword_14()); }
+	'AIFieldRef'
+	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefKeyword_14()); }
 )
 ;
 finally {
@@ -3328,9 +3359,9 @@ rule__GSSFilterBoolVarFromArrayItem__Group__15__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getOpAssignment_15()); }
-	(rule__GSSFilterBoolVarFromArrayItem__OpAssignment_15)
-	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getOpAssignment_15()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getColonEqualsSignKeyword_15()); }
+	':='
+	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getColonEqualsSignKeyword_15()); }
 )
 ;
 finally {
@@ -3355,9 +3386,9 @@ rule__GSSFilterBoolVarFromArrayItem__Group__16__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAlternatives_16()); }
-	(rule__GSSFilterBoolVarFromArrayItem__Alternatives_16)
-	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAlternatives_16()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefAssignment_16()); }
+	(rule__GSSFilterBoolVarFromArrayItem__AIFieldRefAssignment_16)
+	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefAssignment_16()); }
 )
 ;
 finally {
@@ -3382,9 +3413,9 @@ rule__GSSFilterBoolVarFromArrayItem__Group__17__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getRightCurlyBracketKeyword_17()); }
-	'}'
-	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getRightCurlyBracketKeyword_17()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_17()); }
+	';'
+	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_17()); }
 )
 ;
 finally {
@@ -3397,6 +3428,7 @@ rule__GSSFilterBoolVarFromArrayItem__Group__18
 	}
 :
 	rule__GSSFilterBoolVarFromArrayItem__Group__18__Impl
+	rule__GSSFilterBoolVarFromArrayItem__Group__19
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -3408,9 +3440,89 @@ rule__GSSFilterBoolVarFromArrayItem__Group__18__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_18()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getOpAssignment_18()); }
+	(rule__GSSFilterBoolVarFromArrayItem__OpAssignment_18)
+	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getOpAssignment_18()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVarFromArrayItem__Group__19
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterBoolVarFromArrayItem__Group__19__Impl
+	rule__GSSFilterBoolVarFromArrayItem__Group__20
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVarFromArrayItem__Group__19__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAlternatives_19()); }
+	(rule__GSSFilterBoolVarFromArrayItem__Alternatives_19)
+	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAlternatives_19()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVarFromArrayItem__Group__20
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterBoolVarFromArrayItem__Group__20__Impl
+	rule__GSSFilterBoolVarFromArrayItem__Group__21
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVarFromArrayItem__Group__20__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getRightCurlyBracketKeyword_20()); }
+	'}'
+	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getRightCurlyBracketKeyword_20()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVarFromArrayItem__Group__21
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterBoolVarFromArrayItem__Group__21__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVarFromArrayItem__Group__21__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_21()); }
 	';'
-	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_18()); }
+	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_21()); }
 )
 ;
 finally {
@@ -3922,9 +4034,9 @@ rule__GSSFilterBoolVarFromGroupedArrayItem__Group__18__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsAssignment_18()); }
-	(rule__GSSFilterBoolVarFromGroupedArrayItem__AIFieldRefsAssignment_18)
-	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsAssignment_18()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsKeyword_18()); }
+	'AIFieldRefs'
+	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsKeyword_18()); }
 )
 ;
 finally {
@@ -3949,9 +4061,9 @@ rule__GSSFilterBoolVarFromGroupedArrayItem__Group__19__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getOpAssignment_19()); }
-	(rule__GSSFilterBoolVarFromGroupedArrayItem__OpAssignment_19)
-	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getOpAssignment_19()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getColonEqualsSignKeyword_19()); }
+	':='
+	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getColonEqualsSignKeyword_19()); }
 )
 ;
 finally {
@@ -3976,9 +4088,9 @@ rule__GSSFilterBoolVarFromGroupedArrayItem__Group__20__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAlternatives_20()); }
-	(rule__GSSFilterBoolVarFromGroupedArrayItem__Alternatives_20)
-	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAlternatives_20()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsAssignment_20()); }
+	(rule__GSSFilterBoolVarFromGroupedArrayItem__AIFieldRefsAssignment_20)
+	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsAssignment_20()); }
 )
 ;
 finally {
@@ -4003,9 +4115,9 @@ rule__GSSFilterBoolVarFromGroupedArrayItem__Group__21__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getRightCurlyBracketKeyword_21()); }
-	'}'
-	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getRightCurlyBracketKeyword_21()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_21()); }
+	';'
+	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_21()); }
 )
 ;
 finally {
@@ -4018,6 +4130,7 @@ rule__GSSFilterBoolVarFromGroupedArrayItem__Group__22
 	}
 :
 	rule__GSSFilterBoolVarFromGroupedArrayItem__Group__22__Impl
+	rule__GSSFilterBoolVarFromGroupedArrayItem__Group__23
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -4029,9 +4142,89 @@ rule__GSSFilterBoolVarFromGroupedArrayItem__Group__22__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_22()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getOpAssignment_22()); }
+	(rule__GSSFilterBoolVarFromGroupedArrayItem__OpAssignment_22)
+	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getOpAssignment_22()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVarFromGroupedArrayItem__Group__23
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterBoolVarFromGroupedArrayItem__Group__23__Impl
+	rule__GSSFilterBoolVarFromGroupedArrayItem__Group__24
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVarFromGroupedArrayItem__Group__23__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAlternatives_23()); }
+	(rule__GSSFilterBoolVarFromGroupedArrayItem__Alternatives_23)
+	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAlternatives_23()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVarFromGroupedArrayItem__Group__24
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterBoolVarFromGroupedArrayItem__Group__24__Impl
+	rule__GSSFilterBoolVarFromGroupedArrayItem__Group__25
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVarFromGroupedArrayItem__Group__24__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getRightCurlyBracketKeyword_24()); }
+	'}'
+	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getRightCurlyBracketKeyword_24()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVarFromGroupedArrayItem__Group__25
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterBoolVarFromGroupedArrayItem__Group__25__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterBoolVarFromGroupedArrayItem__Group__25__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_25()); }
 	';'
-	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_22()); }
+	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_25()); }
 )
 ;
 finally {
@@ -4327,9 +4520,9 @@ rule__GSSFilterBoolVarFDIC__Group__10__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefAssignment_10()); }
-	(rule__GSSFilterBoolVarFDIC__FieldRefAssignment_10)
-	{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefAssignment_10()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefKeyword_10()); }
+	'FieldRef'
+	{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefKeyword_10()); }
 )
 ;
 finally {
@@ -4354,9 +4547,9 @@ rule__GSSFilterBoolVarFDIC__Group__11__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpAssignment_11()); }
-	(rule__GSSFilterBoolVarFDIC__OpAssignment_11)
-	{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpAssignment_11()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getColonEqualsSignKeyword_11()); }
+	':='
+	{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getColonEqualsSignKeyword_11()); }
 )
 ;
 finally {
@@ -4381,9 +4574,9 @@ rule__GSSFilterBoolVarFDIC__Group__12__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getRightCurlyBracketKeyword_12()); }
-	'}'
-	{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getRightCurlyBracketKeyword_12()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefAssignment_12()); }
+	(rule__GSSFilterBoolVarFDIC__FieldRefAssignment_12)
+	{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefAssignment_12()); }
 )
 ;
 finally {
@@ -4396,6 +4589,7 @@ rule__GSSFilterBoolVarFDIC__Group__13
 	}
 :
 	rule__GSSFilterBoolVarFDIC__Group__13__Impl
+	rule__GSSFilterBoolVarFDIC__Group__14
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -4416,216 +4610,80 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-
-rule__GSSFilterFieldRef__Group__0
+rule__GSSFilterBoolVarFDIC__Group__14
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__GSSFilterFieldRef__Group__0__Impl
-	rule__GSSFilterFieldRef__Group__1
+	rule__GSSFilterBoolVarFDIC__Group__14__Impl
+	rule__GSSFilterBoolVarFDIC__Group__15
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterFieldRef__Group__0__Impl
+rule__GSSFilterBoolVarFDIC__Group__14__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterFieldRefAccess().getGSSFilterFieldRefKeyword_0()); }
-	'GSSFilterFieldRef'
-	{ after(grammarAccess.getGSSFilterFieldRefAccess().getGSSFilterFieldRefKeyword_0()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpAssignment_14()); }
+	(rule__GSSFilterBoolVarFDIC__OpAssignment_14)
+	{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpAssignment_14()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterFieldRef__Group__1
+rule__GSSFilterBoolVarFDIC__Group__15
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__GSSFilterFieldRef__Group__1__Impl
-	rule__GSSFilterFieldRef__Group__2
+	rule__GSSFilterBoolVarFDIC__Group__15__Impl
+	rule__GSSFilterBoolVarFDIC__Group__16
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterFieldRef__Group__1__Impl
+rule__GSSFilterBoolVarFDIC__Group__15__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterFieldRefAccess().getLeftCurlyBracketKeyword_1()); }
-	'{'
-	{ after(grammarAccess.getGSSFilterFieldRefAccess().getLeftCurlyBracketKeyword_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterFieldRef__Group__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterFieldRef__Group__2__Impl
-	rule__GSSFilterFieldRef__Group__3
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterFieldRef__Group__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterFieldRefAccess().getNameKeyword_2()); }
-	'name'
-	{ after(grammarAccess.getGSSFilterFieldRefAccess().getNameKeyword_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterFieldRef__Group__3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterFieldRef__Group__3__Impl
-	rule__GSSFilterFieldRef__Group__4
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterFieldRef__Group__3__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterFieldRefAccess().getColonEqualsSignKeyword_3()); }
-	':='
-	{ after(grammarAccess.getGSSFilterFieldRefAccess().getColonEqualsSignKeyword_3()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterFieldRef__Group__4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterFieldRef__Group__4__Impl
-	rule__GSSFilterFieldRef__Group__5
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterFieldRef__Group__4__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterFieldRefAccess().getNameAssignment_4()); }
-	(rule__GSSFilterFieldRef__NameAssignment_4)
-	{ after(grammarAccess.getGSSFilterFieldRefAccess().getNameAssignment_4()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterFieldRef__Group__5
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterFieldRef__Group__5__Impl
-	rule__GSSFilterFieldRef__Group__6
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterFieldRef__Group__5__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterFieldRefAccess().getSemicolonKeyword_5()); }
-	';'
-	{ after(grammarAccess.getGSSFilterFieldRefAccess().getSemicolonKeyword_5()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterFieldRef__Group__6
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterFieldRef__Group__6__Impl
-	rule__GSSFilterFieldRef__Group__7
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterFieldRef__Group__6__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterFieldRefAccess().getRightCurlyBracketKeyword_6()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getRightCurlyBracketKeyword_15()); }
 	'}'
-	{ after(grammarAccess.getGSSFilterFieldRefAccess().getRightCurlyBracketKeyword_6()); }
+	{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getRightCurlyBracketKeyword_15()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterFieldRef__Group__7
+rule__GSSFilterBoolVarFDIC__Group__16
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__GSSFilterFieldRef__Group__7__Impl
+	rule__GSSFilterBoolVarFDIC__Group__16__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterFieldRef__Group__7__Impl
+rule__GSSFilterBoolVarFDIC__Group__16__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterFieldRefAccess().getSemicolonKeyword_7()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getSemicolonKeyword_16()); }
 	';'
-	{ after(grammarAccess.getGSSFilterFieldRefAccess().getSemicolonKeyword_7()); }
+	{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getSemicolonKeyword_16()); }
 )
 ;
 finally {
@@ -6658,438 +6716,6 @@ finally {
 }
 
 
-rule__GSSFilterAIFieldRef__Group__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRef__Group__0__Impl
-	rule__GSSFilterAIFieldRef__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefAccess().getGSSFilterAIFieldRefKeyword_0()); }
-	'GSSFilterAIFieldRef'
-	{ after(grammarAccess.getGSSFilterAIFieldRefAccess().getGSSFilterAIFieldRefKeyword_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRef__Group__1__Impl
-	rule__GSSFilterAIFieldRef__Group__2
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefAccess().getLeftCurlyBracketKeyword_1()); }
-	'{'
-	{ after(grammarAccess.getGSSFilterAIFieldRefAccess().getLeftCurlyBracketKeyword_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRef__Group__2__Impl
-	rule__GSSFilterAIFieldRef__Group__3
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefAccess().getIndexKeyword_2()); }
-	'index'
-	{ after(grammarAccess.getGSSFilterAIFieldRefAccess().getIndexKeyword_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRef__Group__3__Impl
-	rule__GSSFilterAIFieldRef__Group__4
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__3__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefAccess().getColonEqualsSignKeyword_3()); }
-	':='
-	{ after(grammarAccess.getGSSFilterAIFieldRefAccess().getColonEqualsSignKeyword_3()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRef__Group__4__Impl
-	rule__GSSFilterAIFieldRef__Group__5
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__4__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefAccess().getIndexAssignment_4()); }
-	(rule__GSSFilterAIFieldRef__IndexAssignment_4)
-	{ after(grammarAccess.getGSSFilterAIFieldRefAccess().getIndexAssignment_4()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__5
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRef__Group__5__Impl
-	rule__GSSFilterAIFieldRef__Group__6
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__5__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefAccess().getSemicolonKeyword_5()); }
-	';'
-	{ after(grammarAccess.getGSSFilterAIFieldRefAccess().getSemicolonKeyword_5()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__6
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRef__Group__6__Impl
-	rule__GSSFilterAIFieldRef__Group__7
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__6__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefAccess().getRightCurlyBracketKeyword_6()); }
-	'}'
-	{ after(grammarAccess.getGSSFilterAIFieldRefAccess().getRightCurlyBracketKeyword_6()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__7
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRef__Group__7__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__Group__7__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefAccess().getSemicolonKeyword_7()); }
-	';'
-	{ after(grammarAccess.getGSSFilterAIFieldRefAccess().getSemicolonKeyword_7()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__GSSFilterAIFieldRefs__Group__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRefs__Group__0__Impl
-	rule__GSSFilterAIFieldRefs__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefsAccess().getGSSFilterAIFieldRefsKeyword_0()); }
-	'GSSFilterAIFieldRefs'
-	{ after(grammarAccess.getGSSFilterAIFieldRefsAccess().getGSSFilterAIFieldRefsKeyword_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRefs__Group__1__Impl
-	rule__GSSFilterAIFieldRefs__Group__2
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefsAccess().getLeftCurlyBracketKeyword_1()); }
-	'{'
-	{ after(grammarAccess.getGSSFilterAIFieldRefsAccess().getLeftCurlyBracketKeyword_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRefs__Group__2__Impl
-	rule__GSSFilterAIFieldRefs__Group__3
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefsAccess().getNameKeyword_2()); }
-	'name'
-	{ after(grammarAccess.getGSSFilterAIFieldRefsAccess().getNameKeyword_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRefs__Group__3__Impl
-	rule__GSSFilterAIFieldRefs__Group__4
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__3__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefsAccess().getColonEqualsSignKeyword_3()); }
-	':='
-	{ after(grammarAccess.getGSSFilterAIFieldRefsAccess().getColonEqualsSignKeyword_3()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRefs__Group__4__Impl
-	rule__GSSFilterAIFieldRefs__Group__5
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__4__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefsAccess().getNameAssignment_4()); }
-	(rule__GSSFilterAIFieldRefs__NameAssignment_4)
-	{ after(grammarAccess.getGSSFilterAIFieldRefsAccess().getNameAssignment_4()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__5
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRefs__Group__5__Impl
-	rule__GSSFilterAIFieldRefs__Group__6
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__5__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefsAccess().getSemicolonKeyword_5()); }
-	';'
-	{ after(grammarAccess.getGSSFilterAIFieldRefsAccess().getSemicolonKeyword_5()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__6
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRefs__Group__6__Impl
-	rule__GSSFilterAIFieldRefs__Group__7
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__6__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefsAccess().getRightCurlyBracketKeyword_6()); }
-	'}'
-	{ after(grammarAccess.getGSSFilterAIFieldRefsAccess().getRightCurlyBracketKeyword_6()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__7
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterAIFieldRefs__Group__7__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__Group__7__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterAIFieldRefsAccess().getSemicolonKeyword_7()); }
-	';'
-	{ after(grammarAccess.getGSSFilterAIFieldRefsAccess().getSemicolonKeyword_7()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
 rule__GSSFilterMaxterm__Group__0
 	@init {
 		int stackSize = keepStackSize();
@@ -8238,6 +7864,195 @@ finally {
 }
 
 
+rule__VersionedQualifiedReferenceName__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VersionedQualifiedReferenceName__Group__0__Impl
+	rule__VersionedQualifiedReferenceName__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VersionedQualifiedReferenceName__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup_0()); }
+	(rule__VersionedQualifiedReferenceName__Group_0__0)?
+	{ after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VersionedQualifiedReferenceName__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VersionedQualifiedReferenceName__Group__1__Impl
+	rule__VersionedQualifiedReferenceName__Group__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VersionedQualifiedReferenceName__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_1()); }
+	RULE_ID
+	{ after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VersionedQualifiedReferenceName__Group__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VersionedQualifiedReferenceName__Group__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VersionedQualifiedReferenceName__Group__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup_2()); }
+	(rule__VersionedQualifiedReferenceName__Group_2__0)*
+	{ after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__VersionedQualifiedReferenceName__Group_0__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VersionedQualifiedReferenceName__Group_0__0__Impl
+	rule__VersionedQualifiedReferenceName__Group_0__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VersionedQualifiedReferenceName__Group_0__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getVersionedQualifiedNameParserRuleCall_0_0()); }
+	ruleVersionedQualifiedName
+	{ after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getVersionedQualifiedNameParserRuleCall_0_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VersionedQualifiedReferenceName__Group_0__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VersionedQualifiedReferenceName__Group_0__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VersionedQualifiedReferenceName__Group_0__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_0_1()); }
+	'::'
+	{ after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_0_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__VersionedQualifiedReferenceName__Group_2__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VersionedQualifiedReferenceName__Group_2__0__Impl
+	rule__VersionedQualifiedReferenceName__Group_2__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VersionedQualifiedReferenceName__Group_2__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_2_0()); }
+	'::'
+	{ after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_2_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VersionedQualifiedReferenceName__Group_2__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VersionedQualifiedReferenceName__Group_2__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VersionedQualifiedReferenceName__Group_2__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_2_1()); }
+	RULE_ID
+	{ after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_2_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 rule__INTEGER__Group_0__0
 	@init {
 		int stackSize = keepStackSize();
@@ -8554,9 +8369,13 @@ rule__GSSFilterMaxtermFilter__FormatFileAssignment_3_1_3
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileIDTerminalRuleCall_3_1_3_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileIDTerminalRuleCall_3_1_3_0()); }
+		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatCrossReference_3_1_3_0()); }
+		(
+			{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_3_1_3_0_1()); }
+			ruleVersionedQualifiedName
+			{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_3_1_3_0_1()); }
+		)
+		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatCrossReference_3_1_3_0()); }
 	)
 ;
 finally {
@@ -8689,9 +8508,13 @@ rule__GSSFilterMintermFilter__FormatFileAssignment_3_1_3
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileIDTerminalRuleCall_3_1_3_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileIDTerminalRuleCall_3_1_3_0()); }
+		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatCrossReference_3_1_3_0()); }
+		(
+			{ before(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_3_1_3_0_1()); }
+			ruleVersionedQualifiedName
+			{ after(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_3_1_3_0_1()); }
+		)
+		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatCrossReference_3_1_3_0()); }
 	)
 ;
 finally {
@@ -8818,75 +8641,79 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVar__FieldRefAssignment_14
+rule__GSSFilterBoolVar__FieldRefAssignment_16
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefGSSFilterFieldRefParserRuleCall_14_0()); }
-		ruleGSSFilterFieldRef
-		{ after(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefGSSFilterFieldRefParserRuleCall_14_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefGSSTmTcFormatFieldCrossReference_16_0()); }
+		(
+			{ before(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefGSSTmTcFormatFieldVersionedQualifiedReferenceNameParserRuleCall_16_0_1()); }
+			ruleVersionedQualifiedReferenceName
+			{ after(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefGSSTmTcFormatFieldVersionedQualifiedReferenceNameParserRuleCall_16_0_1()); }
+		)
+		{ after(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefGSSTmTcFormatFieldCrossReference_16_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVar__OpAssignment_15
+rule__GSSFilterBoolVar__OpAssignment_18
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarAccess().getOpGSSFilterFieldOpParserRuleCall_15_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarAccess().getOpGSSFilterFieldOpParserRuleCall_18_0()); }
 		ruleGSSFilterFieldOp
-		{ after(grammarAccess.getGSSFilterBoolVarAccess().getOpGSSFilterFieldOpParserRuleCall_15_0()); }
+		{ after(grammarAccess.getGSSFilterBoolVarAccess().getOpGSSFilterFieldOpParserRuleCall_18_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVar__ConstantAssignment_16_0
+rule__GSSFilterBoolVar__ConstantAssignment_19_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarAccess().getConstantGSSFilterConstantParserRuleCall_16_0_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarAccess().getConstantGSSFilterConstantParserRuleCall_19_0_0()); }
 		ruleGSSFilterConstant
-		{ after(grammarAccess.getGSSFilterBoolVarAccess().getConstantGSSFilterConstantParserRuleCall_16_0_0()); }
+		{ after(grammarAccess.getGSSFilterBoolVarAccess().getConstantGSSFilterConstantParserRuleCall_19_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVar__SelectAssignment_16_1
+rule__GSSFilterBoolVar__SelectAssignment_19_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarAccess().getSelectGSSFilterSelectParserRuleCall_16_1_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarAccess().getSelectGSSFilterSelectParserRuleCall_19_1_0()); }
 		ruleGSSFilterSelect
-		{ after(grammarAccess.getGSSFilterBoolVarAccess().getSelectGSSFilterSelectParserRuleCall_16_1_0()); }
+		{ after(grammarAccess.getGSSFilterBoolVarAccess().getSelectGSSFilterSelectParserRuleCall_19_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVar__SelectLineAssignment_16_2
+rule__GSSFilterBoolVar__SelectLineAssignment_19_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineGSSFilterSelectLineParserRuleCall_16_2_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineGSSFilterSelectLineParserRuleCall_19_2_0()); }
 		ruleGSSFilterSelectLine
-		{ after(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineGSSFilterSelectLineParserRuleCall_16_2_0()); }
+		{ after(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineGSSFilterSelectLineParserRuleCall_19_2_0()); }
 	)
 ;
 finally {
@@ -8938,75 +8765,79 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromArrayItem__AIFieldRefAssignment_14
+rule__GSSFilterBoolVarFromArrayItem__AIFieldRefAssignment_16
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefGSSFilterAIFieldRefParserRuleCall_14_0()); }
-		ruleGSSFilterAIFieldRef
-		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefGSSFilterAIFieldRefParserRuleCall_14_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefGSSTmTcFormatAIFieldCrossReference_16_0()); }
+		(
+			{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefGSSTmTcFormatAIFieldVersionedQualifiedReferenceNameParserRuleCall_16_0_1()); }
+			ruleVersionedQualifiedReferenceName
+			{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefGSSTmTcFormatAIFieldVersionedQualifiedReferenceNameParserRuleCall_16_0_1()); }
+		)
+		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefGSSTmTcFormatAIFieldCrossReference_16_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromArrayItem__OpAssignment_15
+rule__GSSFilterBoolVarFromArrayItem__OpAssignment_18
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_15_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_18_0()); }
 		ruleGSSFilterFieldOp
-		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_15_0()); }
+		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_18_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromArrayItem__ConstantAssignment_16_0
+rule__GSSFilterBoolVarFromArrayItem__ConstantAssignment_19_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_16_0_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_19_0_0()); }
 		ruleGSSFilterConstant
-		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_16_0_0()); }
+		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_19_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromArrayItem__SelectAssignment_16_1
+rule__GSSFilterBoolVarFromArrayItem__SelectAssignment_19_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_16_1_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_19_1_0()); }
 		ruleGSSFilterSelect
-		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_16_1_0()); }
+		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_19_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromArrayItem__SelectLineAssignment_16_2
+rule__GSSFilterBoolVarFromArrayItem__SelectLineAssignment_19_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_16_2_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_19_2_0()); }
 		ruleGSSFilterSelectLine
-		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_16_2_0()); }
+		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_19_2_0()); }
 	)
 ;
 finally {
@@ -9073,75 +8904,79 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromGroupedArrayItem__AIFieldRefsAssignment_18
+rule__GSSFilterBoolVarFromGroupedArrayItem__AIFieldRefsAssignment_20
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsGSSFilterAIFieldRefsParserRuleCall_18_0()); }
-		ruleGSSFilterAIFieldRefs
-		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsGSSFilterAIFieldRefsParserRuleCall_18_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsGSSTmTcFormatAFieldCrossReference_20_0()); }
+		(
+			{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsGSSTmTcFormatAFieldVersionedQualifiedReferenceNameParserRuleCall_20_0_1()); }
+			ruleVersionedQualifiedReferenceName
+			{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsGSSTmTcFormatAFieldVersionedQualifiedReferenceNameParserRuleCall_20_0_1()); }
+		)
+		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsGSSTmTcFormatAFieldCrossReference_20_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromGroupedArrayItem__OpAssignment_19
+rule__GSSFilterBoolVarFromGroupedArrayItem__OpAssignment_22
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_19_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_22_0()); }
 		ruleGSSFilterFieldOp
-		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_19_0()); }
+		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_22_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromGroupedArrayItem__ConstantAssignment_20_0
+rule__GSSFilterBoolVarFromGroupedArrayItem__ConstantAssignment_23_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_20_0_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_23_0_0()); }
 		ruleGSSFilterConstant
-		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_20_0_0()); }
+		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_23_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromGroupedArrayItem__SelectAssignment_20_1
+rule__GSSFilterBoolVarFromGroupedArrayItem__SelectAssignment_23_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_20_1_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_23_1_0()); }
 		ruleGSSFilterSelect
-		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_20_1_0()); }
+		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_23_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromGroupedArrayItem__SelectLineAssignment_20_2
+rule__GSSFilterBoolVarFromGroupedArrayItem__SelectLineAssignment_23_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_20_2_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_23_2_0()); }
 		ruleGSSFilterSelectLine
-		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_20_2_0()); }
+		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_23_2_0()); }
 	)
 ;
 finally {
@@ -9178,45 +9013,34 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFDIC__FieldRefAssignment_10
+rule__GSSFilterBoolVarFDIC__FieldRefAssignment_12
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefGSSFilterFieldRefParserRuleCall_10_0()); }
-		ruleGSSFilterFieldRef
-		{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefGSSFilterFieldRefParserRuleCall_10_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefGSSTmTcFormatFDICFieldCrossReference_12_0()); }
+		(
+			{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefGSSTmTcFormatFDICFieldVersionedQualifiedReferenceNameParserRuleCall_12_0_1()); }
+			ruleVersionedQualifiedReferenceName
+			{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefGSSTmTcFormatFDICFieldVersionedQualifiedReferenceNameParserRuleCall_12_0_1()); }
+		)
+		{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefGSSTmTcFormatFDICFieldCrossReference_12_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFDIC__OpAssignment_11
+rule__GSSFilterBoolVarFDIC__OpAssignment_14
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpGSSFilterFieldOpParserRuleCall_11_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpGSSFilterFieldOpParserRuleCall_14_0()); }
 		ruleGSSFilterFieldOp
-		{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpGSSFilterFieldOpParserRuleCall_11_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterFieldRef__NameAssignment_4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterFieldRefAccess().getNameIDTerminalRuleCall_4_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSFilterFieldRefAccess().getNameIDTerminalRuleCall_4_0()); }
+		{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpGSSFilterFieldOpParserRuleCall_14_0()); }
 	)
 ;
 finally {
@@ -9412,36 +9236,6 @@ rule__GSSFilterSelectLine__MaskAssignment_12_2
 		{ before(grammarAccess.getGSSFilterSelectLineAccess().getMaskHEXADECIMALTerminalRuleCall_12_2_0()); }
 		RULE_HEXADECIMAL
 		{ after(grammarAccess.getGSSFilterSelectLineAccess().getMaskHEXADECIMALTerminalRuleCall_12_2_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRef__IndexAssignment_4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterAIFieldRefAccess().getIndexINTEGERParserRuleCall_4_0()); }
-		ruleINTEGER
-		{ after(grammarAccess.getGSSFilterAIFieldRefAccess().getIndexINTEGERParserRuleCall_4_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterAIFieldRefs__NameAssignment_4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterAIFieldRefsAccess().getNameIDTerminalRuleCall_4_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSFilterAIFieldRefsAccess().getNameIDTerminalRuleCall_4_0()); }
 	)
 ;
 finally {

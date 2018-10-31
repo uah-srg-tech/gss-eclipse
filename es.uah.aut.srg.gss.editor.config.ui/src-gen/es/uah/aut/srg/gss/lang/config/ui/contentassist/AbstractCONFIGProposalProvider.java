@@ -142,7 +142,7 @@ public abstract class AbstractCONFIGProposalProvider extends TerminalsProposalPr
 	public void completeGSSConfigGSSInfoPrint_PortLogs(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
 	}
-	public void completeGSSConfigGSSInfoPrint_DebugLog(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+	public void completeGSSConfigGSSInfoPrint_RawLog(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
 	}
 	public void completeGSSConfigPhyHeaderPrint_MainLog(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
@@ -151,7 +151,7 @@ public abstract class AbstractCONFIGProposalProvider extends TerminalsProposalPr
 	public void completeGSSConfigPhyHeaderPrint_PortLogs(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
 	}
-	public void completeGSSConfigPhyHeaderPrint_DebugLog(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+	public void completeGSSConfigPhyHeaderPrint_RawLog(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
 	}
 	public void completeGSSConfigPhyHeaderPrint_GssTabs(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {

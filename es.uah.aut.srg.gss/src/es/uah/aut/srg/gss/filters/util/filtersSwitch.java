@@ -105,12 +105,6 @@ public class filtersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case filtersPackage.GSS_FILTER_FIELD_REF: {
-				GSSFilterFieldRef gssFilterFieldRef = (GSSFilterFieldRef)theEObject;
-				T result = caseGSSFilterFieldRef(gssFilterFieldRef);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case filtersPackage.GSS_FILTER_FIELD_OP: {
 				GSSFilterFieldOp gssFilterFieldOp = (GSSFilterFieldOp)theEObject;
 				T result = caseGSSFilterFieldOp(gssFilterFieldOp);
@@ -141,21 +135,9 @@ public class filtersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case filtersPackage.GSS_FILTER_AI_FIELD_REF: {
-				GSSFilterAIFieldRef gssFilterAIFieldRef = (GSSFilterAIFieldRef)theEObject;
-				T result = caseGSSFilterAIFieldRef(gssFilterAIFieldRef);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case filtersPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM: {
 				GSSFilterBoolVarFromGroupedArrayItem gssFilterBoolVarFromGroupedArrayItem = (GSSFilterBoolVarFromGroupedArrayItem)theEObject;
 				T result = caseGSSFilterBoolVarFromGroupedArrayItem(gssFilterBoolVarFromGroupedArrayItem);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case filtersPackage.GSS_FILTER_AI_FIELD_REFS: {
-				GSSFilterAIFieldRefs gssFilterAIFieldRefs = (GSSFilterAIFieldRefs)theEObject;
-				T result = caseGSSFilterAIFieldRefs(gssFilterAIFieldRefs);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -248,21 +230,6 @@ public class filtersSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Filter Field Ref</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Filter Field Ref</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSFilterFieldRef(GSSFilterFieldRef object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>GSS Filter Field Op</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -338,21 +305,6 @@ public class filtersSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Filter AI Field Ref</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Filter AI Field Ref</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSFilterAIFieldRef(GSSFilterAIFieldRef object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>GSS Filter Bool Var From Grouped Array Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -364,21 +316,6 @@ public class filtersSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSFilterBoolVarFromGroupedArrayItem(GSSFilterBoolVarFromGroupedArrayItem object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Filter AI Field Refs</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Filter AI Field Refs</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSFilterAIFieldRefs(GSSFilterAIFieldRefs object) {
 		return null;
 	}
 

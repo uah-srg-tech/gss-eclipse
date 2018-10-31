@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,8 +37,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFDICFieldImpl#getFid <em>Fid</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFDICFieldImpl#getPfid <em>Pfid</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFDICFieldImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFDICFieldImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFDICFieldImpl#getCheckType <em>Check Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFDICFieldImpl#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFDICFieldImpl#getFirstBit <em>First Bit</em>}</li>
@@ -50,7 +47,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container implements GSSTmTcFormatFDICField {
+public class GSSTmTcFormatFDICFieldImpl extends GSSTmTcFormatFieldImpl implements GSSTmTcFormatFDICField {
 	/**
 	 * The default value of the '{@link #getFid() <em>Fid</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -90,46 +87,6 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 	 * @ordered
 	 */
 	protected String pfid = PFID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCheckType() <em>Check Type</em>}' attribute.
@@ -307,48 +264,6 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 		pfid = newPfid;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__PFID, oldPfid, pfid));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDescription() {
-		return description;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -648,10 +563,6 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 				return getFid();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__PFID:
 				return getPfid();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__NAME:
-				return getName();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__DESCRIPTION:
-				return getDescription();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__CHECK_TYPE:
 				return getCheckType();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__BYTE_ORDER:
@@ -681,12 +592,6 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__PFID:
 				setPfid((String)newValue);
-				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__NAME:
-				setName((String)newValue);
-				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__DESCRIPTION:
-				setDescription((String)newValue);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__CHECK_TYPE:
 				setCheckType((GSSTmTcFormatCheckType)newValue);
@@ -724,12 +629,6 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__PFID:
 				setPfid(PFID_EDEFAULT);
 				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
-				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__CHECK_TYPE:
 				unsetCheckType();
 				return;
@@ -764,10 +663,6 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 				return FID_EDEFAULT == null ? fid != null : !FID_EDEFAULT.equals(fid);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__PFID:
 				return PFID_EDEFAULT == null ? pfid != null : !PFID_EDEFAULT.equals(pfid);
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__CHECK_TYPE:
 				return isSetCheckType();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD__BYTE_ORDER:
@@ -798,10 +693,6 @@ public class GSSTmTcFormatFDICFieldImpl extends MinimalEObjectImpl.Container imp
 		result.append(fid);
 		result.append(", pfid: ");
 		result.append(pfid);
-		result.append(", name: ");
-		result.append(name);
-		result.append(", description: ");
-		result.append(description);
 		result.append(", checkType: ");
 		if (checkTypeESet) result.append(checkType); else result.append("<unset>");
 		result.append(", byteOrder: ");

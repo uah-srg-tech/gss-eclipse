@@ -11,9 +11,7 @@
 package es.uah.aut.srg.gss.test_proc;
 
 import es.uah.aut.srg.gss.export.GSSExportExport;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
-
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -214,12 +212,12 @@ public interface GSSTestProcInputLevel3 extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level3</em>' reference.
-	 * @see #setLevel3(GSSTmTcFormatTmTCFormat)
+	 * @see #setLevel3(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputLevel3_Level3()
 	 * @model
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getLevel3();
+	GSSTmTcFormatTmTcFormat getLevel3();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel3 <em>Level3</em>}' reference.
@@ -229,7 +227,7 @@ public interface GSSTestProcInputLevel3 extends EObject {
 	 * @see #getLevel3()
 	 * @generated
 	 */
-	void setLevel3(GSSTmTcFormatTmTCFormat value);
+	void setLevel3(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>App to level3</b></em>' reference.
@@ -266,12 +264,12 @@ public interface GSSTestProcInputLevel3 extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level2</em>' reference.
-	 * @see #setLevel2(GSSTmTcFormatTmTCFormat)
+	 * @see #setLevel2(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputLevel3_Level2()
 	 * @model
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getLevel2();
+	GSSTmTcFormatTmTcFormat getLevel2();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel2 <em>Level2</em>}' reference.
@@ -281,7 +279,7 @@ public interface GSSTestProcInputLevel3 extends EObject {
 	 * @see #getLevel2()
 	 * @generated
 	 */
-	void setLevel2(GSSTmTcFormatTmTCFormat value);
+	void setLevel2(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Level3 to level2</b></em>' reference.
@@ -318,12 +316,12 @@ public interface GSSTestProcInputLevel3 extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level1</em>' reference.
-	 * @see #setLevel1(GSSTmTcFormatTmTCFormat)
+	 * @see #setLevel1(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputLevel3_Level1()
 	 * @model
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getLevel1();
+	GSSTmTcFormatTmTcFormat getLevel1();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel1 <em>Level1</em>}' reference.
@@ -333,7 +331,7 @@ public interface GSSTestProcInputLevel3 extends EObject {
 	 * @see #getLevel1()
 	 * @generated
 	 */
-	void setLevel1(GSSTmTcFormatTmTCFormat value);
+	void setLevel1(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Level2 to level1</b></em>' reference.
@@ -370,12 +368,12 @@ public interface GSSTestProcInputLevel3 extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level0</em>' reference.
-	 * @see #setLevel0(GSSTmTcFormatTmTCFormat)
+	 * @see #setLevel0(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputLevel3_Level0()
 	 * @model
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat getLevel0();
+	GSSTmTcFormatTmTcFormat getLevel0();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel0 <em>Level0</em>}' reference.
@@ -385,7 +383,7 @@ public interface GSSTestProcInputLevel3 extends EObject {
 	 * @see #getLevel0()
 	 * @generated
 	 */
-	void setLevel0(GSSTmTcFormatTmTCFormat value);
+	void setLevel0(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Level1 to level0</b></em>' reference.

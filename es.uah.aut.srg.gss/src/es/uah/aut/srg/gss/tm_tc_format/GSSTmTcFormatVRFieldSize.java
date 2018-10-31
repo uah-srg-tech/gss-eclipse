@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.gss.tm_tc_format;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Tm Tc Format VR Field Size</b></em>'.
@@ -23,14 +21,13 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize#getFid <em>Fid</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize#getPfid <em>Pfid</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVRFieldSize()
  * @model
  * @generated
  */
-public interface GSSTmTcFormatVRFieldSize extends EObject {
+public interface GSSTmTcFormatVRFieldSize extends GSSTmTcFormatField {
 	/**
 	 * Returns the value of the '<em><b>Fid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -82,31 +79,5 @@ public interface GSSTmTcFormatVRFieldSize extends EObject {
 	 * @generated
 	 */
 	void setPfid(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVRFieldSize_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 } // GSSTmTcFormatVRFieldSize

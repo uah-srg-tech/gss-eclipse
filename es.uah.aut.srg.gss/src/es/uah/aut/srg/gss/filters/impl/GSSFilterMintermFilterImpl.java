@@ -17,7 +17,7 @@ import es.uah.aut.srg.gss.filters.GSSFilterBoolVarFromGroupedArrayItem;
 import es.uah.aut.srg.gss.filters.GSSFilterMinterm;
 import es.uah.aut.srg.gss.filters.GSSFilterMintermFilter;
 import es.uah.aut.srg.gss.filters.filtersPackage;
-
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -53,24 +53,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class GSSFilterMintermFilterImpl extends GSSFilterFilterImpl implements GSSFilterMintermFilter {
 	/**
-	 * The default value of the '{@link #getFormatFile() <em>Format File</em>}' attribute.
+	 * The cached value of the '{@link #getFormatFile() <em>Format File</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFormatFile()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FORMAT_FILE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getFormatFile() <em>Format File</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFormatFile()
-	 * @generated
-	 * @ordered
-	 */
-	protected String formatFile = FORMAT_FILE_EDEFAULT;
+	protected GSSTmTcFormatTmTcFormat formatFile;
 
 	/**
 	 * The cached value of the '{@link #getBoolVar() <em>Bool Var</em>}' containment reference list.
@@ -146,7 +136,15 @@ public class GSSFilterMintermFilterImpl extends GSSFilterFilterImpl implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFormatFile() {
+	public GSSTmTcFormatTmTcFormat getFormatFile() {
+		if (formatFile != null && formatFile.eIsProxy()) {
+			InternalEObject oldFormatFile = (InternalEObject)formatFile;
+			formatFile = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldFormatFile);
+			if (formatFile != oldFormatFile) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, filtersPackage.GSS_FILTER_MINTERM_FILTER__FORMAT_FILE, oldFormatFile, formatFile));
+			}
+		}
 		return formatFile;
 	}
 
@@ -155,8 +153,17 @@ public class GSSFilterMintermFilterImpl extends GSSFilterFilterImpl implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFormatFile(String newFormatFile) {
-		String oldFormatFile = formatFile;
+	public GSSTmTcFormatTmTcFormat basicGetFormatFile() {
+		return formatFile;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFormatFile(GSSTmTcFormatTmTcFormat newFormatFile) {
+		GSSTmTcFormatTmTcFormat oldFormatFile = formatFile;
 		formatFile = newFormatFile;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, filtersPackage.GSS_FILTER_MINTERM_FILTER__FORMAT_FILE, oldFormatFile, formatFile));
@@ -253,7 +260,8 @@ public class GSSFilterMintermFilterImpl extends GSSFilterFilterImpl implements G
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case filtersPackage.GSS_FILTER_MINTERM_FILTER__FORMAT_FILE:
-				return getFormatFile();
+				if (resolve) return getFormatFile();
+				return basicGetFormatFile();
 			case filtersPackage.GSS_FILTER_MINTERM_FILTER__BOOL_VAR:
 				return getBoolVar();
 			case filtersPackage.GSS_FILTER_MINTERM_FILTER__BOOL_VAR_FROM_ARRAY_ITEM:
@@ -278,7 +286,7 @@ public class GSSFilterMintermFilterImpl extends GSSFilterFilterImpl implements G
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case filtersPackage.GSS_FILTER_MINTERM_FILTER__FORMAT_FILE:
-				setFormatFile((String)newValue);
+				setFormatFile((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case filtersPackage.GSS_FILTER_MINTERM_FILTER__BOOL_VAR:
 				getBoolVar().clear();
@@ -313,7 +321,7 @@ public class GSSFilterMintermFilterImpl extends GSSFilterFilterImpl implements G
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case filtersPackage.GSS_FILTER_MINTERM_FILTER__FORMAT_FILE:
-				setFormatFile(FORMAT_FILE_EDEFAULT);
+				setFormatFile((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case filtersPackage.GSS_FILTER_MINTERM_FILTER__BOOL_VAR:
 				getBoolVar().clear();
@@ -343,7 +351,7 @@ public class GSSFilterMintermFilterImpl extends GSSFilterFilterImpl implements G
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case filtersPackage.GSS_FILTER_MINTERM_FILTER__FORMAT_FILE:
-				return FORMAT_FILE_EDEFAULT == null ? formatFile != null : !FORMAT_FILE_EDEFAULT.equals(formatFile);
+				return formatFile != null;
 			case filtersPackage.GSS_FILTER_MINTERM_FILTER__BOOL_VAR:
 				return boolVar != null && !boolVar.isEmpty();
 			case filtersPackage.GSS_FILTER_MINTERM_FILTER__BOOL_VAR_FROM_ARRAY_ITEM:
@@ -356,22 +364,6 @@ public class GSSFilterMintermFilterImpl extends GSSFilterFilterImpl implements G
 				return minterm != null && !minterm.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (formatFile: ");
-		result.append(formatFile);
-		result.append(')');
-		return result.toString();
 	}
 
 } //GSSFilterMintermFilterImpl

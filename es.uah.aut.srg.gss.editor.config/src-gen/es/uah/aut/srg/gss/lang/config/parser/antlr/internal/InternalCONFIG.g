@@ -184,8 +184,7 @@ ruleGSSModelFileImport returns [EObject current=null]
 // Entry rule entryRuleGSSConfigGSSConfig
 entryRuleGSSConfigGSSConfig returns [EObject current=null]@init {
 	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_3(), 
-	grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_9()
+	grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_13()
 	);
 }:
 	{ newCompositeNode(grammarAccess.getGSSConfigGSSConfigRule()); }
@@ -201,8 +200,7 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 @init {
 	enterRule();
 	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_3(), 
-	grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_9()
+	grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_13()
 	);
 }
 @after {
@@ -236,110 +234,75 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 			newLeafNode(otherlv_2, grammarAccess.getGSSConfigGSSConfigAccess().getLeftCurlyBracketKeyword_2());
 		}
 		(
+			otherlv_3='uri'
+			{
+				newLeafNode(otherlv_3, grammarAccess.getGSSConfigGSSConfigAccess().getUriKeyword_3_0());
+			}
+			otherlv_4=':='
+			{
+				newLeafNode(otherlv_4, grammarAccess.getGSSConfigGSSConfigAccess().getColonEqualsSignKeyword_3_1());
+			}
 			(
-				{ 
-				  getUnorderedGroupHelper().enter(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_3());
-				}
 				(
-					(
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_3(), 0)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_3(), 0);
+						newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getUriQualifiedNameParserRuleCall_3_2_0());
 					}
-								({true}?=>(otherlv_4='uri'
-								{
-									newLeafNode(otherlv_4, grammarAccess.getGSSConfigGSSConfigAccess().getUriKeyword_3_0_0());
-								}
-								otherlv_5=':='
-								{
-									newLeafNode(otherlv_5, grammarAccess.getGSSConfigGSSConfigAccess().getColonEqualsSignKeyword_3_0_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getUriQualifiedNameParserRuleCall_3_0_2_0());
-										}
-										lv_uri_6_0=ruleQualifiedName
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSConfigGSSConfigRule());
-											}
-											set(
-												$current,
-												"uri",
-												lv_uri_6_0,
-												"es.uah.aut.srg.gss.lang.config.CONFIG.QualifiedName");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_7=';'
-								{
-									newLeafNode(otherlv_7, grammarAccess.getGSSConfigGSSConfigAccess().getSemicolonKeyword_3_0_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_3());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_3(), 1)}?=>(
+					lv_uri_5_0=ruleQualifiedName
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_3(), 1);
-					}
-								({true}?=>(otherlv_8='version'
-								{
-									newLeafNode(otherlv_8, grammarAccess.getGSSConfigGSSConfigAccess().getVersionKeyword_3_1_0());
-								}
-								otherlv_9=':='
-								{
-									newLeafNode(otherlv_9, grammarAccess.getGSSConfigGSSConfigAccess().getColonEqualsSignKeyword_3_1_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getVersionVersionParserRuleCall_3_1_2_0());
-										}
-										lv_version_10_0=ruleVersion
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSConfigGSSConfigRule());
-											}
-											set(
-												$current,
-												"version",
-												lv_version_10_0,
-												"es.uah.aut.srg.gss.lang.config.CONFIG.Version");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_11=';'
-								{
-									newLeafNode(otherlv_11, grammarAccess.getGSSConfigGSSConfigAccess().getSemicolonKeyword_3_1_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_3());
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getGSSConfigGSSConfigRule());
+						}
+						set(
+							$current,
+							"uri",
+							lv_uri_5_0,
+							"es.uah.aut.srg.gss.lang.config.CONFIG.QualifiedName");
+						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-					)+
-					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_3())}?
-				)
-			)
-				{ 
-				  getUnorderedGroupHelper().leave(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_3());
-				}
+			otherlv_6=';'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getGSSConfigGSSConfigAccess().getSemicolonKeyword_3_3());
+			}
 		)
+		otherlv_7='version'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSConfigGSSConfigAccess().getVersionKeyword_4());
+		}
+		otherlv_8=':='
+		{
+			newLeafNode(otherlv_8, grammarAccess.getGSSConfigGSSConfigAccess().getColonEqualsSignKeyword_5());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getGss_optionsGSSConfigGSSOptionsParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getVersionVersionParserRuleCall_6_0());
 				}
-				lv_gss_options_12_0=ruleGSSConfigGSSOptions
+				lv_version_9_0=ruleVersion
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSConfigGSSConfigRule());
+					}
+					set(
+						$current,
+						"version",
+						lv_version_9_0,
+						"es.uah.aut.srg.gss.lang.config.CONFIG.Version");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_10=';'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getGSSConfigGSSConfigAccess().getSemicolonKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getGss_optionsGSSConfigGSSOptionsParserRuleCall_8_0());
+				}
+				lv_gss_options_11_0=ruleGSSConfigGSSOptions
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigGSSConfigRule());
@@ -347,7 +310,7 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 					set(
 						$current,
 						"gss_options",
-						lv_gss_options_12_0,
+						lv_gss_options_11_0,
 						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigGSSOptions");
 					afterParserOrEnumRuleCall();
 				}
@@ -356,9 +319,9 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getProtocolsGSSConfigProtocolsParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getProtocolsGSSConfigProtocolsParserRuleCall_9_0());
 				}
-				lv_Protocols_13_0=ruleGSSConfigProtocols
+				lv_Protocols_12_0=ruleGSSConfigProtocols
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigGSSConfigRule());
@@ -366,7 +329,7 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 					set(
 						$current,
 						"Protocols",
-						lv_Protocols_13_0,
+						lv_Protocols_12_0,
 						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigProtocols");
 					afterParserOrEnumRuleCall();
 				}
@@ -375,9 +338,9 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getInterfacesGSSConfigInterfacesParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getInterfacesGSSConfigInterfacesParserRuleCall_10_0());
 				}
-				lv_Interfaces_14_0=ruleGSSConfigInterfaces
+				lv_Interfaces_13_0=ruleGSSConfigInterfaces
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigGSSConfigRule());
@@ -385,7 +348,7 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 					set(
 						$current,
 						"Interfaces",
-						lv_Interfaces_14_0,
+						lv_Interfaces_13_0,
 						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigInterfaces");
 					afterParserOrEnumRuleCall();
 				}
@@ -394,9 +357,9 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getSpecialPacketsGSSConfigSpecialPacketsParserRuleCall_7_0());
+					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getSpecialPacketsGSSConfigSpecialPacketsParserRuleCall_11_0());
 				}
-				lv_SpecialPackets_15_0=ruleGSSConfigSpecialPackets
+				lv_SpecialPackets_14_0=ruleGSSConfigSpecialPackets
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigGSSConfigRule());
@@ -404,7 +367,7 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 					set(
 						$current,
 						"SpecialPackets",
-						lv_SpecialPackets_15_0,
+						lv_SpecialPackets_14_0,
 						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigSpecialPackets");
 					afterParserOrEnumRuleCall();
 				}
@@ -413,9 +376,9 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getPeriodicTCsGSSConfigPeriodicTCsParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getPeriodicTCsGSSConfigPeriodicTCsParserRuleCall_12_0());
 				}
-				lv_PeriodicTCs_16_0=ruleGSSConfigPeriodicTCs
+				lv_PeriodicTCs_15_0=ruleGSSConfigPeriodicTCs
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigGSSConfigRule());
@@ -423,7 +386,7 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 					set(
 						$current,
 						"PeriodicTCs",
-						lv_PeriodicTCs_16_0,
+						lv_PeriodicTCs_15_0,
 						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigPeriodicTCs");
 					afterParserOrEnumRuleCall();
 				}
@@ -432,20 +395,20 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 		(
 			(
 				{ 
-				  getUnorderedGroupHelper().enter(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_9());
+				  getUnorderedGroupHelper().enter(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_13());
 				}
 				(
 					(
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_9(), 0)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_13(), 0)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_9(), 0);
+						getUnorderedGroupHelper().select(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_13(), 0);
 					}
 								({true}?=>((
 									{
-										newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getGlobalVarsGSSConfigGlobalVarsParserRuleCall_9_0_0());
+										newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getGlobalVarsGSSConfigGlobalVarsParserRuleCall_13_0_0());
 									}
-									lv_GlobalVars_18_0=ruleGSSConfigGlobalVars
+									lv_GlobalVars_17_0=ruleGSSConfigGlobalVars
 									{
 										if ($current==null) {
 											$current = createModelElementForParent(grammarAccess.getGSSConfigGSSConfigRule());
@@ -453,27 +416,27 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 										set(
 											$current,
 											"GlobalVars",
-											lv_GlobalVars_18_0,
+											lv_GlobalVars_17_0,
 											"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigGlobalVars");
 										afterParserOrEnumRuleCall();
 									}
 								)
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_9());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_13());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_9(), 1)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_13(), 1)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_9(), 1);
+						getUnorderedGroupHelper().select(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_13(), 1);
 					}
 								({true}?=>((
 									{
-										newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getMonitorsGSSConfigMonitorsParserRuleCall_9_1_0());
+										newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getMonitorsGSSConfigMonitorsParserRuleCall_13_1_0());
 									}
-									lv_Monitors_19_0=ruleGSSConfigMonitors
+									lv_Monitors_18_0=ruleGSSConfigMonitors
 									{
 										if ($current==null) {
 											$current = createModelElementForParent(grammarAccess.getGSSConfigGSSConfigRule());
@@ -481,31 +444,31 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 										set(
 											$current,
 											"Monitors",
-											lv_Monitors_19_0,
+											lv_Monitors_18_0,
 											"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigMonitors");
 										afterParserOrEnumRuleCall();
 									}
 								)
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_9());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_13());
 					}
 				)
 			)
 					)+
-					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_9())}?
+					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_13())}?
 				)
 			)
 				{ 
-				  getUnorderedGroupHelper().leave(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_9());
+				  getUnorderedGroupHelper().leave(grammarAccess.getGSSConfigGSSConfigAccess().getUnorderedGroup_13());
 				}
 		)?
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getTestsGSSConfigTestsParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getTestsGSSConfigTestsParserRuleCall_14_0());
 				}
-				lv_Tests_20_0=ruleGSSConfigTests
+				lv_Tests_19_0=ruleGSSConfigTests
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigGSSConfigRule());
@@ -513,19 +476,19 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 					set(
 						$current,
 						"Tests",
-						lv_Tests_20_0,
+						lv_Tests_19_0,
 						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigTests");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_21='}'
+		otherlv_20='}'
 		{
-			newLeafNode(otherlv_21, grammarAccess.getGSSConfigGSSConfigAccess().getRightCurlyBracketKeyword_11());
+			newLeafNode(otherlv_20, grammarAccess.getGSSConfigGSSConfigAccess().getRightCurlyBracketKeyword_15());
 		}
-		otherlv_22=';'
+		otherlv_21=';'
 		{
-			newLeafNode(otherlv_22, grammarAccess.getGSSConfigGSSConfigAccess().getSemicolonKeyword_12());
+			newLeafNode(otherlv_21, grammarAccess.getGSSConfigGSSConfigAccess().getSemicolonKeyword_16());
 		}
 	)
 ;
@@ -1467,9 +1430,9 @@ ruleGSSConfigGSSInfoPrint returns [EObject current=null]
 		{
 			newLeafNode(otherlv_9, grammarAccess.getGSSConfigGSSInfoPrintAccess().getSemicolonKeyword_9());
 		}
-		otherlv_10='debugLog'
+		otherlv_10='rawLog'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getGSSConfigGSSInfoPrintAccess().getDebugLogKeyword_10());
+			newLeafNode(otherlv_10, grammarAccess.getGSSConfigGSSInfoPrintAccess().getRawLogKeyword_10());
 		}
 		otherlv_11=':='
 		{
@@ -1478,17 +1441,17 @@ ruleGSSConfigGSSInfoPrint returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGSSInfoPrintAccess().getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0());
+					newCompositeNode(grammarAccess.getGSSConfigGSSInfoPrintAccess().getRawLogGSSConfigEnableDisableEnumRuleCall_12_0());
 				}
-				lv_debugLog_12_0=ruleGSSConfigEnableDisable
+				lv_rawLog_12_0=ruleGSSConfigEnableDisable
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigGSSInfoPrintRule());
 					}
 					set(
 						$current,
-						"debugLog",
-						lv_debugLog_12_0,
+						"rawLog",
+						lv_rawLog_12_0,
 						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigEnableDisable");
 					afterParserOrEnumRuleCall();
 				}
@@ -1595,9 +1558,9 @@ ruleGSSConfigPhyHeaderPrint returns [EObject current=null]
 		{
 			newLeafNode(otherlv_9, grammarAccess.getGSSConfigPhyHeaderPrintAccess().getSemicolonKeyword_9());
 		}
-		otherlv_10='debugLog'
+		otherlv_10='rawLog'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getGSSConfigPhyHeaderPrintAccess().getDebugLogKeyword_10());
+			newLeafNode(otherlv_10, grammarAccess.getGSSConfigPhyHeaderPrintAccess().getRawLogKeyword_10());
 		}
 		otherlv_11=':='
 		{
@@ -1606,17 +1569,17 @@ ruleGSSConfigPhyHeaderPrint returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getDebugLogGSSConfigEnableDisableEnumRuleCall_12_0());
+					newCompositeNode(grammarAccess.getGSSConfigPhyHeaderPrintAccess().getRawLogGSSConfigEnableDisableEnumRuleCall_12_0());
 				}
-				lv_debugLog_12_0=ruleGSSConfigEnableDisable
+				lv_rawLog_12_0=ruleGSSConfigEnableDisable
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigPhyHeaderPrintRule());
 					}
 					set(
 						$current,
-						"debugLog",
-						lv_debugLog_12_0,
+						"rawLog",
+						lv_rawLog_12_0,
 						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigEnableDisable");
 					afterParserOrEnumRuleCall();
 				}
@@ -2646,7 +2609,7 @@ ruleGSSConfigLevelInOut returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSConfigLevelInOutAccess().getTMformatGSSTmTcFormatTmTCFormatCrossReference_12_0());
+					newCompositeNode(grammarAccess.getGSSConfigLevelInOutAccess().getTMformatGSSTmTcFormatTmTcFormatCrossReference_12_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -2677,7 +2640,7 @@ ruleGSSConfigLevelInOut returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSConfigLevelInOutAccess().getTCformatGSSTmTcFormatTmTCFormatCrossReference_16_0());
+					newCompositeNode(grammarAccess.getGSSConfigLevelInOutAccess().getTCformatGSSTmTcFormatTmTcFormatCrossReference_16_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -2901,7 +2864,7 @@ ruleGSSConfigLevelIn returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSConfigLevelInAccess().getTCformatGSSTmTcFormatTmTCFormatCrossReference_12_0());
+					newCompositeNode(grammarAccess.getGSSConfigLevelInAccess().getTCformatGSSTmTcFormatTmTcFormatCrossReference_12_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -3061,7 +3024,7 @@ ruleGSSConfigLevelOut returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSConfigLevelOutAccess().getTMformatGSSTmTcFormatTmTCFormatCrossReference_12_0());
+					newCompositeNode(grammarAccess.getGSSConfigLevelOutAccess().getTMformatGSSTmTcFormatTmTcFormatCrossReference_12_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -4010,7 +3973,7 @@ ruleGSSConfigUpperLevel returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSConfigUpperLevelAccess().getTMformatGSSTmTcFormatTmTCFormatCrossReference_6_2_0());
+						newCompositeNode(grammarAccess.getGSSConfigUpperLevelAccess().getTMformatGSSTmTcFormatTmTcFormatCrossReference_6_2_0());
 					}
 					ruleVersionedQualifiedName
 					{
@@ -4395,7 +4358,7 @@ ruleGSSConfigPeriodicTCLevel2 returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel2GSSTmTcFormatTmTCFormatCrossReference_22_2_0());
+						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel2GSSTmTcFormatTmTcFormatCrossReference_22_2_0());
 					}
 					ruleVersionedQualifiedName
 					{
@@ -4459,7 +4422,7 @@ ruleGSSConfigPeriodicTCLevel2 returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel1GSSTmTcFormatTmTCFormatCrossReference_27_2_0());
+						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel1GSSTmTcFormatTmTcFormatCrossReference_27_2_0());
 					}
 					ruleVersionedQualifiedName
 					{
@@ -4525,7 +4488,7 @@ ruleGSSConfigPeriodicTCLevel2 returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel0GSSTmTcFormatTmTCFormatCrossReference_29_2_0());
+						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel2Access().getLevel0GSSTmTcFormatTmTcFormatCrossReference_29_2_0());
 					}
 					ruleVersionedQualifiedName
 					{
@@ -4780,7 +4743,7 @@ ruleGSSConfigPeriodicTCLevel1 returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel1GSSTmTcFormatTmTCFormatCrossReference_22_2_0());
+						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel1GSSTmTcFormatTmTcFormatCrossReference_22_2_0());
 					}
 					ruleVersionedQualifiedName
 					{
@@ -4844,7 +4807,7 @@ ruleGSSConfigPeriodicTCLevel1 returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel0GSSTmTcFormatTmTCFormatCrossReference_27_2_0());
+						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel1Access().getLevel0GSSTmTcFormatTmTcFormatCrossReference_27_2_0());
 					}
 					ruleVersionedQualifiedName
 					{
@@ -5099,7 +5062,7 @@ ruleGSSConfigPeriodicTCLevel0 returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel0Access().getLevel0GSSTmTcFormatTmTCFormatCrossReference_22_2_0());
+						newCompositeNode(grammarAccess.getGSSConfigPeriodicTCLevel0Access().getLevel0GSSTmTcFormatTmTcFormatCrossReference_22_2_0());
 					}
 					ruleVersionedQualifiedName
 					{

@@ -127,6 +127,44 @@ public class GSSConfigMonitorsImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GSSChartsCharts getChartsFile() {
+		if (chartsFile != null && chartsFile.eIsProxy()) {
+			InternalEObject oldChartsFile = (InternalEObject)chartsFile;
+			chartsFile = (GSSChartsCharts)eResolveProxy(oldChartsFile);
+			if (chartsFile != oldChartsFile) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_MONITORS__CHARTS_FILE, oldChartsFile, chartsFile));
+			}
+		}
+		return chartsFile;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSChartsCharts basicGetChartsFile() {
+		return chartsFile;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setChartsFile(GSSChartsCharts newChartsFile) {
+		GSSChartsCharts oldChartsFile = chartsFile;
+		chartsFile = newChartsFile;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_MONITORS__CHARTS_FILE, oldChartsFile, chartsFile));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<GSSConfigPlot> getPlot() {
 		if (plot == null) {
 			plot = new EObjectContainmentEList<GSSConfigPlot>(GSSConfigPlot.class, this, configPackage.GSS_CONFIG_MONITORS__PLOT);
@@ -168,44 +206,6 @@ public class GSSConfigMonitorsImpl extends MinimalEObjectImpl.Container implemen
 			alarmVal = new EObjectContainmentEList<GSSConfigAlarmVal>(GSSConfigAlarmVal.class, this, configPackage.GSS_CONFIG_MONITORS__ALARM_VAL);
 		}
 		return alarmVal;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSChartsCharts getChartsFile() {
-		if (chartsFile != null && chartsFile.eIsProxy()) {
-			InternalEObject oldChartsFile = (InternalEObject)chartsFile;
-			chartsFile = (GSSChartsCharts)eResolveProxy(oldChartsFile);
-			if (chartsFile != oldChartsFile) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_MONITORS__CHARTS_FILE, oldChartsFile, chartsFile));
-			}
-		}
-		return chartsFile;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSChartsCharts basicGetChartsFile() {
-		return chartsFile;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setChartsFile(GSSChartsCharts newChartsFile) {
-		GSSChartsCharts oldChartsFile = chartsFile;
-		chartsFile = newChartsFile;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_MONITORS__CHARTS_FILE, oldChartsFile, chartsFile));
 	}
 
 	/**

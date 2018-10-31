@@ -7,21 +7,21 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 GSSModelFile returns common::GSSModelFile:
 	(imports+=GSSModelFileImport)*
-	element=GSSTmTcFormatTmTCFormat
+	element=GSSTmTcFormatTmTcFormat
 ;
 
 GSSModelFileImport returns common::GSSModelFileImport: 
 	'import' ':=' importURI=STRING ';'
 ;
 
-GSSTmTcFormatTmTCFormat returns GSSTmTcFormatTmTCFormat:
-	'GSSTmTcFormatTmTCFormat'
+GSSTmTcFormatTmTcFormat returns GSSTmTcFormatTmTcFormat:
+	'GSSTmTcFormatTmTcFormat'
 	name=ID
 	 '{'
 		(('uri' ':=' uri=QualifiedName ';')
 		& ('version' ':=' version=Version ';')
 		& ('protocol' ':=' protocol=ID ';')
-		& ('type' ':=' type=GSSTmTcFormatTmTCFormatType ';')
+		& ('type' ':=' type=GSSTmTcFormatTmTcFormatType ';')
 		((CSField+=GSSTmTcFormatCSField) |
 		 (CSFormulaField+=GSSTmTcFormatCSFormulaField) |
 		 (VSField+=GSSTmTcFormatVSField) |
@@ -32,8 +32,13 @@ GSSTmTcFormatTmTCFormat returns GSSTmTcFormatTmTCFormat:
 	'}' ';'
 ;
 
-enum GSSTmTcFormatTmTCFormatType returns GSSTmTcFormatTmTCFormatType:
+enum GSSTmTcFormatTmTcFormatType returns GSSTmTcFormatTmTcFormatType:
 	TM = 'TM' | TC = 'TC'
+;
+
+GSSTmTcFormatField returns GSSTmTcFormatField:
+	GSSTmTcFormatCSField | GSSTmTcFormatCSFormulaField |
+	GSSTmTcFormatVSField | GSSTmTcFormatVRFieldSize| GSSTmTcFormatFDICField
 ;
 
 GSSTmTcFormatCSField returns GSSTmTcFormatCSField:
@@ -81,6 +86,14 @@ GSSTmTcFormatVSField returns GSSTmTcFormatVSField:
 	'}' ';'
 ;
 
+GSSTmTcFormatVRFieldSize returns GSSTmTcFormatVRFieldSize:
+	'GSSTmTcFormatVRFieldSize' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=ID ';'
+	'}' ';'
+;
+
 GSSTmTcFormatFDICField returns GSSTmTcFormatFDICField:
 	'GSSTmTcFormatFDICField' '{'
 		'fid' ':=' fid=INTEGER ';'
@@ -93,14 +106,6 @@ GSSTmTcFormatFDICField returns GSSTmTcFormatFDICField:
 		size=GSSTmTcFormatSize
 		floatingOffset=GSSTmTcFormatFloatingOffset
 		sortedFieldsToCheck=GSSTmTcFormatSortedFieldsToCheck
-	'}' ';'
-;
-
-GSSTmTcFormatVRFieldSize returns GSSTmTcFormatVRFieldSize:
-	'GSSTmTcFormatVRFieldSize' '{'
-		'fid' ':=' fid=INTEGER ';'
-		'pfid' ':=' pfid=INTEGER ';'
-		'name' ':=' name=ID ';'
 	'}' ';'
 ;
 

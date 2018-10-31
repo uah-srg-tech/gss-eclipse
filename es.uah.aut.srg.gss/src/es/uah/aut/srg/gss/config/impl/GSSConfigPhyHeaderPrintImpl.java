@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigPhyHeaderPrintImpl#getMainLog <em>Main Log</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigPhyHeaderPrintImpl#getPortLogs <em>Port Logs</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigPhyHeaderPrintImpl#getDebugLog <em>Debug Log</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigPhyHeaderPrintImpl#getRawLog <em>Raw Log</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigPhyHeaderPrintImpl#getGssTabs <em>Gss Tabs</em>}</li>
  * </ul>
  *
@@ -97,33 +97,33 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	protected boolean portLogsESet;
 
 	/**
-	 * The default value of the '{@link #getDebugLog() <em>Debug Log</em>}' attribute.
+	 * The default value of the '{@link #getRawLog() <em>Raw Log</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDebugLog()
+	 * @see #getRawLog()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final GSSConfigEnableDisable DEBUG_LOG_EDEFAULT = GSSConfigEnableDisable.DISABLED;
+	protected static final GSSConfigEnableDisable RAW_LOG_EDEFAULT = GSSConfigEnableDisable.DISABLED;
 
 	/**
-	 * The cached value of the '{@link #getDebugLog() <em>Debug Log</em>}' attribute.
+	 * The cached value of the '{@link #getRawLog() <em>Raw Log</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDebugLog()
+	 * @see #getRawLog()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSConfigEnableDisable debugLog = DEBUG_LOG_EDEFAULT;
+	protected GSSConfigEnableDisable rawLog = RAW_LOG_EDEFAULT;
 
 	/**
-	 * This is true if the Debug Log attribute has been set.
+	 * This is true if the Raw Log attribute has been set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean debugLogESet;
+	protected boolean rawLogESet;
 
 	/**
 	 * The default value of the '{@link #getGssTabs() <em>Gss Tabs</em>}' attribute.
@@ -270,8 +270,8 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSConfigEnableDisable getDebugLog() {
-		return debugLog;
+	public GSSConfigEnableDisable getRawLog() {
+		return rawLog;
 	}
 
 	/**
@@ -279,13 +279,13 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDebugLog(GSSConfigEnableDisable newDebugLog) {
-		GSSConfigEnableDisable oldDebugLog = debugLog;
-		debugLog = newDebugLog == null ? DEBUG_LOG_EDEFAULT : newDebugLog;
-		boolean oldDebugLogESet = debugLogESet;
-		debugLogESet = true;
+	public void setRawLog(GSSConfigEnableDisable newRawLog) {
+		GSSConfigEnableDisable oldRawLog = rawLog;
+		rawLog = newRawLog == null ? RAW_LOG_EDEFAULT : newRawLog;
+		boolean oldRawLogESet = rawLogESet;
+		rawLogESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG, oldDebugLog, debugLog, !oldDebugLogESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__RAW_LOG, oldRawLog, rawLog, !oldRawLogESet));
 	}
 
 	/**
@@ -293,13 +293,13 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void unsetDebugLog() {
-		GSSConfigEnableDisable oldDebugLog = debugLog;
-		boolean oldDebugLogESet = debugLogESet;
-		debugLog = DEBUG_LOG_EDEFAULT;
-		debugLogESet = false;
+	public void unsetRawLog() {
+		GSSConfigEnableDisable oldRawLog = rawLog;
+		boolean oldRawLogESet = rawLogESet;
+		rawLog = RAW_LOG_EDEFAULT;
+		rawLogESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG, oldDebugLog, DEBUG_LOG_EDEFAULT, oldDebugLogESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_PHY_HEADER_PRINT__RAW_LOG, oldRawLog, RAW_LOG_EDEFAULT, oldRawLogESet));
 	}
 
 	/**
@@ -307,8 +307,8 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isSetDebugLog() {
-		return debugLogESet;
+	public boolean isSetRawLog() {
+		return rawLogESet;
 	}
 
 	/**
@@ -369,8 +369,8 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 				return getMainLog();
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS:
 				return getPortLogs();
-			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG:
-				return getDebugLog();
+			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__RAW_LOG:
+				return getRawLog();
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__GSS_TABS:
 				return getGssTabs();
 		}
@@ -391,8 +391,8 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS:
 				setPortLogs((GSSConfigEnableDisable)newValue);
 				return;
-			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG:
-				setDebugLog((GSSConfigEnableDisable)newValue);
+			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__RAW_LOG:
+				setRawLog((GSSConfigEnableDisable)newValue);
 				return;
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__GSS_TABS:
 				setGssTabs((GSSConfigEnableDisable)newValue);
@@ -415,8 +415,8 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS:
 				unsetPortLogs();
 				return;
-			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG:
-				unsetDebugLog();
+			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__RAW_LOG:
+				unsetRawLog();
 				return;
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__GSS_TABS:
 				unsetGssTabs();
@@ -437,8 +437,8 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 				return isSetMainLog();
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS:
 				return isSetPortLogs();
-			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG:
-				return isSetDebugLog();
+			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__RAW_LOG:
+				return isSetRawLog();
 			case configPackage.GSS_CONFIG_PHY_HEADER_PRINT__GSS_TABS:
 				return isSetGssTabs();
 		}
@@ -459,8 +459,8 @@ public class GSSConfigPhyHeaderPrintImpl extends MinimalEObjectImpl.Container im
 		if (mainLogESet) result.append(mainLog); else result.append("<unset>");
 		result.append(", portLogs: ");
 		if (portLogsESet) result.append(portLogs); else result.append("<unset>");
-		result.append(", debugLog: ");
-		if (debugLogESet) result.append(debugLog); else result.append("<unset>");
+		result.append(", rawLog: ");
+		if (rawLogESet) result.append(rawLog); else result.append("<unset>");
 		result.append(", gssTabs: ");
 		if (gssTabsESet) result.append(gssTabs); else result.append("<unset>");
 		result.append(')');

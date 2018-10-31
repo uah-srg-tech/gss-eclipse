@@ -88,7 +88,6 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 
 		// Initialize simple dependencies
 		exportPackage.eINSTANCE.eClass();
-		tm_tc_formatPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theprotocol_packetsPackage.createPackageContents();
@@ -260,7 +259,7 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 		initEAttribute(getGSSProtocolPacketsProtocolPacket_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSProtocolPacketsProtocolPacket_LevelRef(), ecorePackage.getEString(), "levelRef", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSProtocolPacketsProtocolPacket_Export(), theexportPackage.getGSSExportExport(), null, "export", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSProtocolPacketsProtocolPacket_Format(), thetm_tc_formatPackage.getGSSTmTcFormatTmTCFormat(), null, "format", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSProtocolPacketsProtocolPacket_Format(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "format", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

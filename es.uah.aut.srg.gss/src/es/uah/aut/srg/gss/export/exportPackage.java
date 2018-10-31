@@ -114,7 +114,7 @@ public interface exportPackage extends EPackage {
 	int GSS_EXPORT_EXPORT__DESCRIPTION = commonPackage.GSS_MODEL_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>From</b></em>' attribute.
+	 * The feature id for the '<em><b>From</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -123,7 +123,7 @@ public interface exportPackage extends EPackage {
 	int GSS_EXPORT_EXPORT__FROM = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>To</b></em>' attribute.
+	 * The feature id for the '<em><b>To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -543,7 +543,7 @@ public interface exportPackage extends EPackage {
 	int GSS_EXPORT_SETTING_FROM_CONST__VALUE = 0;
 
 	/**
-	 * The feature id for the '<em><b>To Field Ref</b></em>' attribute.
+	 * The feature id for the '<em><b>To Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -589,7 +589,7 @@ public interface exportPackage extends EPackage {
 	int GSS_EXPORT_SETTING_FROM_SIZE__SIZE_REF = 0;
 
 	/**
-	 * The feature id for the '<em><b>To Field Ref</b></em>' attribute.
+	 * The feature id for the '<em><b>To Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -635,7 +635,7 @@ public interface exportPackage extends EPackage {
 	int GSS_EXPORT_SETTING_FROM_FILE__FILE = 0;
 
 	/**
-	 * The feature id for the '<em><b>To Field Ref</b></em>' attribute.
+	 * The feature id for the '<em><b>To Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -699,7 +699,7 @@ public interface exportPackage extends EPackage {
 	int GSS_EXPORT_SETTING_FROM_FIELD = 9;
 
 	/**
-	 * The feature id for the '<em><b>Field Ref</b></em>' attribute.
+	 * The feature id for the '<em><b>Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -708,7 +708,7 @@ public interface exportPackage extends EPackage {
 	int GSS_EXPORT_SETTING_FROM_FIELD__FIELD_REF = 0;
 
 	/**
-	 * The feature id for the '<em><b>To Field Ref</b></em>' attribute.
+	 * The feature id for the '<em><b>To Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -764,7 +764,7 @@ public interface exportPackage extends EPackage {
 	int GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE = 0;
 
 	/**
-	 * The feature id for the '<em><b>To Field Ref</b></em>' attribute.
+	 * The feature id for the '<em><b>To Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -809,7 +809,7 @@ public interface exportPackage extends EPackage {
 	int GSS_EXPORT_SETTING_AI_FROM_FILE__FILE = 0;
 
 	/**
-	 * The feature id for the '<em><b>To Field Ref</b></em>' attribute.
+	 * The feature id for the '<em><b>To Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -976,26 +976,26 @@ public interface exportPackage extends EPackage {
 	EClass getGSSExportExport();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportExport#getFrom <em>From</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.export.GSSExportExport#getFrom <em>From</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>From</em>'.
+	 * @return the meta object for the reference '<em>From</em>'.
 	 * @see es.uah.aut.srg.gss.export.GSSExportExport#getFrom()
 	 * @see #getGSSExportExport()
 	 * @generated
 	 */
-	EAttribute getGSSExportExport_From();
+	EReference getGSSExportExport_From();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportExport#getTo <em>To</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.export.GSSExportExport#getTo <em>To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>To</em>'.
+	 * @return the meta object for the reference '<em>To</em>'.
 	 * @see es.uah.aut.srg.gss.export.GSSExportExport#getTo()
 	 * @see #getGSSExportExport()
 	 * @generated
 	 */
-	EAttribute getGSSExportExport_To();
+	EReference getGSSExportExport_To();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.export.GSSExportExport#getSizes <em>Sizes</em>}'.
@@ -1355,15 +1355,15 @@ public interface exportPackage extends EPackage {
 	EAttribute getGSSExportSettingFromConst_Value();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromConst#getToFieldRef <em>To Field Ref</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromConst#getToFieldRef <em>To Field Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>To Field Ref</em>'.
+	 * @return the meta object for the reference '<em>To Field Ref</em>'.
 	 * @see es.uah.aut.srg.gss.export.GSSExportSettingFromConst#getToFieldRef()
 	 * @see #getGSSExportSettingFromConst()
 	 * @generated
 	 */
-	EAttribute getGSSExportSettingFromConst_ToFieldRef();
+	EReference getGSSExportSettingFromConst_ToFieldRef();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromSize <em>GSS Export Setting From Size</em>}'.
@@ -1387,15 +1387,15 @@ public interface exportPackage extends EPackage {
 	EAttribute getGSSExportSettingFromSize_SizeRef();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromSize#getToFieldRef <em>To Field Ref</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromSize#getToFieldRef <em>To Field Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>To Field Ref</em>'.
+	 * @return the meta object for the reference '<em>To Field Ref</em>'.
 	 * @see es.uah.aut.srg.gss.export.GSSExportSettingFromSize#getToFieldRef()
 	 * @see #getGSSExportSettingFromSize()
 	 * @generated
 	 */
-	EAttribute getGSSExportSettingFromSize_ToFieldRef();
+	EReference getGSSExportSettingFromSize_ToFieldRef();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromFile <em>GSS Export Setting From File</em>}'.
@@ -1419,15 +1419,15 @@ public interface exportPackage extends EPackage {
 	EAttribute getGSSExportSettingFromFile_File();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromFile#getToFieldRef <em>To Field Ref</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromFile#getToFieldRef <em>To Field Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>To Field Ref</em>'.
+	 * @return the meta object for the reference '<em>To Field Ref</em>'.
 	 * @see es.uah.aut.srg.gss.export.GSSExportSettingFromFile#getToFieldRef()
 	 * @see #getGSSExportSettingFromFile()
 	 * @generated
 	 */
-	EAttribute getGSSExportSettingFromFile_ToFieldRef();
+	EReference getGSSExportSettingFromFile_ToFieldRef();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromFile#getOffset <em>Offset</em>}'.
@@ -1473,26 +1473,26 @@ public interface exportPackage extends EPackage {
 	EClass getGSSExportSettingFromField();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromField#getFieldRef <em>Field Ref</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromField#getFieldRef <em>Field Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Field Ref</em>'.
+	 * @return the meta object for the reference '<em>Field Ref</em>'.
 	 * @see es.uah.aut.srg.gss.export.GSSExportSettingFromField#getFieldRef()
 	 * @see #getGSSExportSettingFromField()
 	 * @generated
 	 */
-	EAttribute getGSSExportSettingFromField_FieldRef();
+	EReference getGSSExportSettingFromField_FieldRef();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromField#getToFieldRef <em>To Field Ref</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromField#getToFieldRef <em>To Field Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>To Field Ref</em>'.
+	 * @return the meta object for the reference '<em>To Field Ref</em>'.
 	 * @see es.uah.aut.srg.gss.export.GSSExportSettingFromField#getToFieldRef()
 	 * @see #getGSSExportSettingFromField()
 	 * @generated
 	 */
-	EAttribute getGSSExportSettingFromField_ToFieldRef();
+	EReference getGSSExportSettingFromField_ToFieldRef();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile <em>GSS Export Setting AI From File</em>}'.
@@ -1516,15 +1516,15 @@ public interface exportPackage extends EPackage {
 	EAttribute getGSSExportSettingAIFromFile_File();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile#getToFieldRef <em>To Field Ref</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile#getToFieldRef <em>To Field Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>To Field Ref</em>'.
+	 * @return the meta object for the reference '<em>To Field Ref</em>'.
 	 * @see es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile#getToFieldRef()
 	 * @see #getGSSExportSettingAIFromFile()
 	 * @generated
 	 */
-	EAttribute getGSSExportSettingAIFromFile_ToFieldRef();
+	EReference getGSSExportSettingAIFromFile_ToFieldRef();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile#getToArrayIndex <em>To Array Index</em>}'.
@@ -1592,15 +1592,15 @@ public interface exportPackage extends EPackage {
 	EAttribute getGSSExportSettingAIFromConst_Value();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getToFieldRef <em>To Field Ref</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getToFieldRef <em>To Field Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>To Field Ref</em>'.
+	 * @return the meta object for the reference '<em>To Field Ref</em>'.
 	 * @see es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getToFieldRef()
 	 * @see #getGSSExportSettingAIFromConst()
 	 * @generated
 	 */
-	EAttribute getGSSExportSettingAIFromConst_ToFieldRef();
+	EReference getGSSExportSettingAIFromConst_ToFieldRef();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getToArrayIndex <em>To Array Index</em>}'.
@@ -1710,20 +1710,20 @@ public interface exportPackage extends EPackage {
 		EClass GSS_EXPORT_EXPORT = eINSTANCE.getGSSExportExport();
 
 		/**
-		 * The meta object literal for the '<em><b>From</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>From</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_EXPORT_EXPORT__FROM = eINSTANCE.getGSSExportExport_From();
+		EReference GSS_EXPORT_EXPORT__FROM = eINSTANCE.getGSSExportExport_From();
 
 		/**
-		 * The meta object literal for the '<em><b>To</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>To</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_EXPORT_EXPORT__TO = eINSTANCE.getGSSExportExport_To();
+		EReference GSS_EXPORT_EXPORT__TO = eINSTANCE.getGSSExportExport_To();
 
 		/**
 		 * The meta object literal for the '<em><b>Sizes</b></em>' containment reference feature.
@@ -2002,12 +2002,12 @@ public interface exportPackage extends EPackage {
 		EAttribute GSS_EXPORT_SETTING_FROM_CONST__VALUE = eINSTANCE.getGSSExportSettingFromConst_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>To Field Ref</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>To Field Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_EXPORT_SETTING_FROM_CONST__TO_FIELD_REF = eINSTANCE.getGSSExportSettingFromConst_ToFieldRef();
+		EReference GSS_EXPORT_SETTING_FROM_CONST__TO_FIELD_REF = eINSTANCE.getGSSExportSettingFromConst_ToFieldRef();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingFromSizeImpl <em>GSS Export Setting From Size</em>}' class.
@@ -2028,12 +2028,12 @@ public interface exportPackage extends EPackage {
 		EAttribute GSS_EXPORT_SETTING_FROM_SIZE__SIZE_REF = eINSTANCE.getGSSExportSettingFromSize_SizeRef();
 
 		/**
-		 * The meta object literal for the '<em><b>To Field Ref</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>To Field Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF = eINSTANCE.getGSSExportSettingFromSize_ToFieldRef();
+		EReference GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF = eINSTANCE.getGSSExportSettingFromSize_ToFieldRef();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingFromFileImpl <em>GSS Export Setting From File</em>}' class.
@@ -2054,12 +2054,12 @@ public interface exportPackage extends EPackage {
 		EAttribute GSS_EXPORT_SETTING_FROM_FILE__FILE = eINSTANCE.getGSSExportSettingFromFile_File();
 
 		/**
-		 * The meta object literal for the '<em><b>To Field Ref</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>To Field Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_EXPORT_SETTING_FROM_FILE__TO_FIELD_REF = eINSTANCE.getGSSExportSettingFromFile_ToFieldRef();
+		EReference GSS_EXPORT_SETTING_FROM_FILE__TO_FIELD_REF = eINSTANCE.getGSSExportSettingFromFile_ToFieldRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Offset</b></em>' attribute feature.
@@ -2096,20 +2096,20 @@ public interface exportPackage extends EPackage {
 		EClass GSS_EXPORT_SETTING_FROM_FIELD = eINSTANCE.getGSSExportSettingFromField();
 
 		/**
-		 * The meta object literal for the '<em><b>Field Ref</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Field Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_EXPORT_SETTING_FROM_FIELD__FIELD_REF = eINSTANCE.getGSSExportSettingFromField_FieldRef();
+		EReference GSS_EXPORT_SETTING_FROM_FIELD__FIELD_REF = eINSTANCE.getGSSExportSettingFromField_FieldRef();
 
 		/**
-		 * The meta object literal for the '<em><b>To Field Ref</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>To Field Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_EXPORT_SETTING_FROM_FIELD__TO_FIELD_REF = eINSTANCE.getGSSExportSettingFromField_ToFieldRef();
+		EReference GSS_EXPORT_SETTING_FROM_FIELD__TO_FIELD_REF = eINSTANCE.getGSSExportSettingFromField_ToFieldRef();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromFileImpl <em>GSS Export Setting AI From File</em>}' class.
@@ -2130,12 +2130,12 @@ public interface exportPackage extends EPackage {
 		EAttribute GSS_EXPORT_SETTING_AI_FROM_FILE__FILE = eINSTANCE.getGSSExportSettingAIFromFile_File();
 
 		/**
-		 * The meta object literal for the '<em><b>To Field Ref</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>To Field Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF = eINSTANCE.getGSSExportSettingAIFromFile_ToFieldRef();
+		EReference GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF = eINSTANCE.getGSSExportSettingAIFromFile_ToFieldRef();
 
 		/**
 		 * The meta object literal for the '<em><b>To Array Index</b></em>' attribute feature.
@@ -2188,12 +2188,12 @@ public interface exportPackage extends EPackage {
 		EAttribute GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE = eINSTANCE.getGSSExportSettingAIFromConst_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>To Field Ref</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>To Field Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF = eINSTANCE.getGSSExportSettingAIFromConst_ToFieldRef();
+		EReference GSS_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF = eINSTANCE.getGSSExportSettingAIFromConst_ToFieldRef();
 
 		/**
 		 * The meta object literal for the '<em><b>To Array Index</b></em>' attribute feature.

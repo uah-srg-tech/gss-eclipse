@@ -1200,7 +1200,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
             }
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTCFormatCrossReference_20_0());
+              					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTcFormatCrossReference_20_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_5);
