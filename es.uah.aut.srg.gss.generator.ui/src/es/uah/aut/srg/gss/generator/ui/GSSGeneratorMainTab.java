@@ -23,6 +23,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.DirectoryDialog;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
@@ -38,7 +39,6 @@ import org.eclipse.ui.model.WorkbenchLabelProvider;
 public class GSSGeneratorMainTab extends AbstractLaunchConfigurationTab {
 
 	protected Text fDatabaseLocationText;
-	protected Button fDatabaseWorkspaceButton;
 	protected Button fDatabaseFileSystemButton;
 	
 	protected Text fOutputLocationText;
@@ -63,11 +63,9 @@ public class GSSGeneratorMainTab extends AbstractLaunchConfigurationTab {
 		public void widgetSelected(SelectionEvent e) {
 			Object source = e.getSource();
 			if (source == fDatabaseFileSystemButton) {
-				handleSelectFileFromFileSystem(fDatabaseFileSystemButton, fDatabaseLocationText);
-			} else if (source == fDatabaseWorkspaceButton) {
-				handleSelectFileFromWorkspace(fDatabaseWorkspaceButton, fDatabaseLocationText);
+				handleSelectFolderFromFileSystem(fDatabaseFileSystemButton, fDatabaseLocationText);
 			} else if (source == fOutputWorkspaceButton) {
-				handleSelectFolderFromWorkspace(fDatabaseWorkspaceButton, fOutputLocationText);
+				handleSelectFolderFromWorkspace(fOutputWorkspaceButton, fOutputLocationText);
 			}else  {
 				updateLaunchConfigurationDialog();
 			}
@@ -79,6 +77,17 @@ public class GSSGeneratorMainTab extends AbstractLaunchConfigurationTab {
 		}
 	}
 	
+	protected void handleSelectFolderFromFileSystem(Button source, Text dest) {
+		
+		DirectoryDialog dialog = new DirectoryDialog(source.getShell());
+		dialog.setText(SELECT_FOLDER_LABEL);
+		
+		String result = dialog.open();
+		if (result != null) {
+			dest.setText(result);
+		}
+	}
+	
 	protected void handleSelectFileFromFileSystem(Button source, Text dest) {
 		
 		FileDialog dialog = new FileDialog(source.getShell());
@@ -86,7 +95,7 @@ public class GSSGeneratorMainTab extends AbstractLaunchConfigurationTab {
 		
 		String result = dialog.open();
 		if (result != null) {
-			dest.setText(URI.createFileURI(result).toString());
+			dest.setText(result);
 		}
 	}
 	
@@ -100,7 +109,7 @@ public class GSSGeneratorMainTab extends AbstractLaunchConfigurationTab {
 		if (dialog.open() == Window.OK) {
 			Object[] result = dialog.getResult();
 			IPath file = (IPath) result[0];
-			dest.setText(URI.createPlatformResourceURI(file.toString(), true).toString());
+			dest.setText(file.toString());
 		}
 	}
 	
@@ -151,17 +160,13 @@ public class GSSGeneratorMainTab extends AbstractLaunchConfigurationTab {
 		fDatabaseLocationText.addModifyListener(fListener);
 		
 		Composite buttons = new Composite(group, SWT.NONE);
-		layout = new GridLayout(2, false);
+		layout = new GridLayout(1, false);
 		layout.marginHeight = layout.marginWidth = 0;
 		buttons.setLayout(layout);
 		gd = new GridData(GridData.FILL_HORIZONTAL | GridData.HORIZONTAL_ALIGN_END);
 		gd.horizontalSpan = 2;
 		buttons.setLayoutData(gd);
 		
-		fDatabaseWorkspaceButton = new Button(buttons, SWT.PUSH);
-		fDatabaseWorkspaceButton.setText(BUTTON_WORKSPACE_LABEL);
-		fDatabaseWorkspaceButton.setLayoutData(new GridData());
-		fDatabaseWorkspaceButton.addSelectionListener(fListener);
 		fDatabaseFileSystemButton = new Button(buttons, SWT.PUSH);
 		fDatabaseFileSystemButton.setText(BUTTON_FILESYSTEM_LABEL);
 		fDatabaseFileSystemButton.setLayoutData(new GridData());
