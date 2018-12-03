@@ -35,13 +35,11 @@ public class GSSGenerator {
 	public static Collection<GSSTmTcFormatTmTcFormat> getTmTcFormats(String database) throws IOException {
 
 		Map<String, GSSTmTcFormatTmTcFormat> formats = new HashMap<String, GSSTmTcFormatTmTcFormat>();
-		
+
+		//process TC database tables and populate the collection
 		BufferedReader ccf = new BufferedReader(
 		        new InputStreamReader(new FileInputStream(database+"\\ccf.dat")));
-		BufferedReader cdf = new BufferedReader(
-		        new InputStreamReader(new FileInputStream(database+"\\cdf.dat")));
 
-		// TODO: Read from the database and populate the set
 	    String ccf_line;
 	    while ((ccf_line = ccf.readLine()) != null) {
 	    	
@@ -55,9 +53,12 @@ public class GSSGenerator {
 			formats.put(ccf_rows[0], format);
 	    	
 	    }
+		ccf.close();
+
 	    Integer fid = 0, isArrayFormatField = 0, n_max = 0;
+		BufferedReader cdf = new BufferedReader(
+		        new InputStreamReader(new FileInputStream(database+"\\cdf.dat")));
 	    String cdf_line, lastID = "";
-	    
 	    while ((cdf_line = cdf.readLine()) != null) {
 	    	
 	    	String[] cdf_rows = cdf_line.split("\t");
@@ -104,16 +105,14 @@ public class GSSGenerator {
 		    		csfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
 		    		csfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
 		    		
-		    		Integer sizeBits = Integer.parseInt(cdf_rows[3]);//ELLEN
 		    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-		    		formatSize.setBytes(Integer.toString(sizeBits%8));
-		    		formatSize.setBits(Integer.toString(sizeBits/8));
+		    		formatSize.setBytes(Integer.toString(constSizeBits%8));
+		    		formatSize.setBits(Integer.toString(constSizeBits/8));
 		    		csfield.setSize(formatSize);
 		    		
-		    		Integer offset = Integer.parseInt(cdf_rows[5]);//BIT
 		    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
-		    		formatOffset.setBytes(Integer.toString(offset%8));
-		    		formatOffset.setBits(Integer.toString(offset/8));
+		    		formatOffset.setBytes(Integer.toString(0));
+		    		formatOffset.setBits(Integer.toString(0));
 		    		csfield.setGlobalOffset(formatOffset);
 		    		
 		    		// TODO: Check if "format" exists?
@@ -147,10 +146,9 @@ public class GSSGenerator {
 		    		formatMaxSize.setBits(Integer.toString(maxSizeBits/8));
 		    		vsfield.setMaxSize(formatMaxSize);
 		    		
-		    		Integer offset = Integer.parseInt(cdf_rows[5]);//BIT
 		    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
-		    		formatOffset.setBytes(Integer.toString(offset%8));
-		    		formatOffset.setBits(Integer.toString(offset/8));
+		    		formatOffset.setBytes(Integer.toString(0));
+		    		formatOffset.setBits(Integer.toString(0));
 		    		vsfield.setGlobalOffset(formatOffset);
 		    		
 		    		// TODO: Check if "format" exists?
@@ -172,16 +170,16 @@ public class GSSGenerator {
 	    		csfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
 	    		csfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
 	    		
-	    		Integer size = Integer.parseInt(cdf_rows[3]);//ELLEN
+	    		Integer sizeBits = Integer.parseInt(cdf_rows[3]);//ELLEN
 	    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-	    		formatSize.setBytes(Integer.toString(size%8));
-	    		formatSize.setBits(Integer.toString(size/8));
+	    		formatSize.setBytes(Integer.toString(sizeBits%8));
+	    		formatSize.setBits(Integer.toString(sizeBits/8));
 	    		csfield.setSize(formatSize);
 	    		
-	    		Integer offset = Integer.parseInt(cdf_rows[5]);//BIT
+	    		Integer offsetBits = Integer.parseInt(cdf_rows[5]);//BIT
 	    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
-	    		formatOffset.setBytes(Integer.toString(offset%8));
-	    		formatOffset.setBits(Integer.toString(offset/8));
+	    		formatOffset.setBytes(Integer.toString(offsetBits%8));
+	    		formatOffset.setBits(Integer.toString(offsetBits/8));
 	    		csfield.setGlobalOffset(formatOffset);
 	    		
 	    		// TODO: Check if "format" exists?
@@ -203,16 +201,16 @@ public class GSSGenerator {
 	    		arrayRef.setFidRef(Integer.toString(isArrayFormatField));
 	    		aifield.setArrayRef(arrayRef);
 	    		
-	    		Integer size = Integer.parseInt(cdf_rows[3]);//ELLEN
+	    		Integer sizeBits = Integer.parseInt(cdf_rows[3]);//ELLEN
 	    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-	    		formatSize.setBytes(Integer.toString(size%8));
-	    		formatSize.setBits(Integer.toString(size/8));
+	    		formatSize.setBytes(Integer.toString(sizeBits%8));
+	    		formatSize.setBits(Integer.toString(sizeBits/8));
 	    		aifield.setSize(formatSize);
 	    		
-	    		Integer offset = Integer.parseInt(cdf_rows[5]) - constSizeBits;//BIT
+	    		Integer offsetBits = Integer.parseInt(cdf_rows[5]) - constSizeBits;//BIT
 	    		GSSTmTcFormatLocalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatLocalOffset();
-	    		formatOffset.setBytes(Integer.toString(offset%8));
-	    		formatOffset.setBits(Integer.toString(offset/8));
+	    		formatOffset.setBytes(Integer.toString(offsetBits%8));
+	    		formatOffset.setBits(Integer.toString(offsetBits/8));
 	    		aifield.setLocalOffset(formatOffset);
 	    		
 	    		// TODO: Check if "format" exists?
@@ -235,16 +233,16 @@ public class GSSGenerator {
 	    		arrayDimension.setMaxItems(Integer.toString(n_max));
 	    		afield.setArrayDimension(arrayDimension);
 	    		
-	    		Integer size = Integer.parseInt(cdf_rows[3]);//ELLEN
+	    		Integer sizeBits = Integer.parseInt(cdf_rows[3]);//ELLEN
 	    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-	    		formatSize.setBytes(Integer.toString(size%8));
-	    		formatSize.setBits(Integer.toString(size/8));
+	    		formatSize.setBytes(Integer.toString(sizeBits%8));
+	    		formatSize.setBits(Integer.toString(sizeBits/8));
 	    		afield.setSize(formatSize);
 	    		
-	    		Integer offset = Integer.parseInt(cdf_rows[5]);//BIT
+	    		Integer offsetBits = Integer.parseInt(cdf_rows[5]);//BIT
 	    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
-	    		formatOffset.setBytes(Integer.toString(offset%8));
-	    		formatOffset.setBits(Integer.toString(offset/8));
+	    		formatOffset.setBytes(Integer.toString(offsetBits%8));
+	    		formatOffset.setBits(Integer.toString(offsetBits/8));
 	    		afield.setGlobalOffset(formatOffset);
 	    		
 	    		// TODO: Check if "format" exists?
@@ -252,8 +250,6 @@ public class GSSGenerator {
 	    		format.getAField().add(afield);
 	    	}
 		}
-		
-		ccf.close();
 		cdf.close();
 		return formats.values();
 	}
