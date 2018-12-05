@@ -1,0 +1,7 @@
+«IMPORT tm_tc_format»
+
+«DEFINE Serializer(String outputFile) FOR GSSTmTcFormatTmTcFormat»
+«FILE outputFile -»
+«this.name»
+«ENDFILE -»
+«ENDDEFINE»
