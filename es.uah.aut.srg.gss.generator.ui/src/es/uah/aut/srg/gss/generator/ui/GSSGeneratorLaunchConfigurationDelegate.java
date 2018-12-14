@@ -63,7 +63,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		
 			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssTmTcFormatTmTcFormat,
 					"es::uah::aut::srg::gss::generator::templates::tm_tc_formatSerializer::Serializer", 
-					false, "cucutras.txt");
+					false, gssTmTcFormatTmTcFormat.getName() + ".gss_tm_tc_format");
 			
 		}
 		
