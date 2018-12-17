@@ -12,10 +12,10 @@ GSSTmTcFormatTmTcFormat «this.name» {
 «EXPAND SerializeCSField FOREACH this.CSField -»
 «EXPAND SerializeAField FOREACH this.AField -»
 «EXPAND SerializeAIField FOREACH this.AIField -»
+«EXPAND SerializeVRFieldSize FOREACH this.VRFieldSize -»
 };
 «ENDFILE -»
 «ENDDEFINE»
-
 
 «DEFINE SerializeCSField FOR GSSTmTcFormatCSField -»
 	GSSTmTcFormatCSField {
@@ -114,4 +114,12 @@ GSSTmTcFormatTmTcFormat «this.name» {
 			bytes := «this.bytes»;
 			bits := «this.bits»;
 		};
+«ENDDEFINE»
+
+«DEFINE SerializeVRFieldSize FOR GSSTmTcFormatVRFieldSize -»
+	GSSTmTcFormatVRFieldSize {
+		fid := «this.fid»;
+		pfid := «this.pfid»;
+		name := «this.name»;
+	};
 «ENDDEFINE»
