@@ -14,6 +14,7 @@ Require-Bundle: es.uah.aut.srg.gss.generator,
  org.eclipse.ui.ide,
  org.eclipse.xpand,
  org.eclipse.xtend,
- org.eclipse.xtend.typesystem.emf
+ org.eclipse.xtend.typesystem.emf,
+ es.uah.aut.srg.gss.xtext
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
