@@ -55,7 +55,7 @@ public class GSSGenerator {
 			GSSTmTcFormatTmTcFormat format = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
 			format.setName(ccf_rows[0]);
 			format.setDescription(ccf_rows[1]);
-			format.setProtocol("EPD-PUS");
+			format.setProtocol("EPD_PUS");
 			format.setType(GSSTmTcFormatTmTcFormatType.TC);
 			format.setUri("es.uah.aut.srg." + ccf_rows[0].toLowerCase());
 			format.setVersion("v1");
@@ -166,7 +166,7 @@ public class GSSGenerator {
 		    			formatVariableSize.setFidRef(Integer.toString(variableFormatFieldRef));
 			    		maxSizeBits = MAX_APP_DATA_BYTES*8;
 		    		}
-		    		formatVariableSize.setUnit(GSSTmTcFormatUnit.BYTES);
+		    		formatVariableSize.setUnit(getVariableFieldUnitText(vbleSizeBits));
 		    		vsfield.setVariableSize(formatVariableSize);
 
 		    		GSSTmTcFormatMaxSize formatMaxSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatMaxSize();
@@ -208,7 +208,7 @@ public class GSSGenerator {
 	    		
 	    		GSSTmTcFormatVariableSize formatVariableSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatVariableSize();
     			formatVariableSize.setFidRef(Integer.toString(variableFormatFieldRef));
-	    		formatVariableSize.setUnit(GSSTmTcFormatUnit.BYTES);
+	    		formatVariableSize.setUnit(getVariableFieldUnitText(vbleSizeBits));
 	    		vsfield.setVariableSize(formatVariableSize);
 
 	    		maxSizeBits = MAX_APP_DATA_BYTES*8 - constSizeBits;
@@ -327,10 +327,9 @@ public class GSSGenerator {
 	    		arrayDimension.setMaxItems(Integer.toString(n_max));
 	    		afield.setArrayDimension(arrayDimension);
 	    		
-	    		Integer sizeBits = Integer.parseInt(cdf_rows[3]);//ELLEN
 	    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-	    		formatSize.setBytes(Integer.toString(sizeBits/8));
-	    		formatSize.setBits(Integer.toString(sizeBits%8));
+	    		formatSize.setBytes(Integer.toString(vbleSizeBits/8));
+	    		formatSize.setBits(Integer.toString(vbleSizeBits%8));
 	    		afield.setSize(formatSize);
 	    		
 	    		Integer offsetBits = Integer.parseInt(cdf_rows[4]) + Integer.parseInt(cdf_rows[3]);//BIT + ELLEN
@@ -359,7 +358,7 @@ public class GSSGenerator {
 			GSSTmTcFormatTmTcFormat format = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
 			format.setName("YID" + pid_rows[5]);//NAME
 			format.setDescription(pid_rows[6]);//DESCR
-			format.setProtocol("EPD-PUS");
+			format.setProtocol("EPD_PUS");
 			format.setType(GSSTmTcFormatTmTcFormatType.TM);
 			format.setUri("es.uah.aut.srg.yid" + pid_rows[5]);
 			format.setVersion("v1");
@@ -540,7 +539,7 @@ public class GSSGenerator {
 	    		
 	    		GSSTmTcFormatVariableSize formatVariableSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatVariableSize();
 	    		formatVariableSize.setFidRef(Integer.toString(arrayFormatFieldRef));
-	    		formatVariableSize.setUnit(GSSTmTcFormatUnit.BYTES);
+	    		formatVariableSize.setUnit(getVariableFieldUnitText(vbleSizeBits));
 	    		vsfield.setVariableSize(formatVariableSize);
 
 		    	n_max = (MAX_SRC_DATA_BYTES*8 - constSizeBits) / vbleSizeBits;
@@ -635,10 +634,9 @@ public class GSSGenerator {
 	    		arrayDimension.setMaxItems(Integer.toString(n_max));
 	    		afield.setArrayDimension(arrayDimension);
 
-	    		Integer sizeBits = tmSizes.get(vpd_rows[2]);
 	    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-	    		formatSize.setBytes(Integer.toString(sizeBits/8));
-	    		formatSize.setBits(Integer.toString(sizeBits%8));
+	    		formatSize.setBytes(Integer.toString(vbleSizeBits/8));
+	    		formatSize.setBits(Integer.toString(vbleSizeBits%8));
 	    		afield.setSize(formatSize);
 
 	    		//add current field offset bits for getting AField Offset 
@@ -716,5 +714,32 @@ public class GSSGenerator {
 				break;
 		}
 		return length;
+	}
+
+	public static GSSTmTcFormatUnit getVariableFieldUnitText(Integer variable_field_length_bits)
+	{
+		GSSTmTcFormatUnit ret = GSSTmTcFormatUnit.BYTES;
+		
+		switch(variable_field_length_bits)
+		{
+			case 1:
+				ret = GSSTmTcFormatUnit.BITS;
+				break;
+			case 16:
+				ret = GSSTmTcFormatUnit.HALFWORD;
+				break;
+			case 80:
+				ret = GSSTmTcFormatUnit.STRING10;
+				break;
+			case 136:
+				ret = GSSTmTcFormatUnit.STRING17;
+				break;
+			case 552:
+				ret = GSSTmTcFormatUnit.STRING69;
+				break;
+			default: case 8:
+				break;
+		}
+		return ret;
 	}
 }

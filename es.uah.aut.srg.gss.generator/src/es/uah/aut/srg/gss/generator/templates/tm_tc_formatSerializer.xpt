@@ -21,9 +21,9 @@ GSSTmTcFormatTmTcFormat «this.name» {
 	GSSTmTcFormatCSField {
 		fid := «this.fid»;
 		pfid := «this.pfid»;
-		name := «this.name»;
+		name := "«this.name»";
 «IF this.description != null -»
-		descr = «this.description»;
+		description := "«this.description»";
 «ENDIF -»
 		type := «this.type»;
 		byteOrder := «this.byteOrder»;
@@ -37,9 +37,9 @@ GSSTmTcFormatTmTcFormat «this.name» {
 	GSSTmTcFormatVSField {
 		fid := «this.fid»;
 		pfid := «this.pfid»;
-		name := «this.name»;
+		name := "«this.name»";
 «IF this.description != null -»
-		descr = «this.description»;
+		description := "«this.description»";
 «ENDIF -»
 		type := «this.type»;
 		byteOrder := «this.byteOrder»;
@@ -48,13 +48,13 @@ GSSTmTcFormatTmTcFormat «this.name» {
 			bytes := «this.constSize.bytes»;
 			bits := «this.constSize.bits»;
 		};
-		GSSTmTcFormatVariableSize {
-			fidRef := «this.variableSize.fidRef»;
-			unit := «this.variableSize.unit»;
-		};
 		GSSTmTcFormatMaxSize {
 			bytes := «this.maxSize.bytes»;
 			bits := «this.maxSize.bits»;
+		};
+		GSSTmTcFormatVariableSize {
+			fidRef := «this.variableSize.fidRef»;
+			unit := «this.variableSize.unit»;
 		};
 «EXPAND SerializeGlobalOffset FOR this.globalOffset -»
 	};
@@ -64,19 +64,19 @@ GSSTmTcFormatTmTcFormat «this.name» {
 	GSSTmTcFormatAField {
 		fid := «this.fid»;
 		pfid := «this.pfid»;
-		name := «this.name»;
+		name := "«this.name»";
 «IF this.description != null -»
-		descr = «this.description»;
+		description := "«this.description»";
 «ENDIF -»
 		type := «this.type»;
 		byteOrder := «this.byteOrder»;
 		firstBit := «this.firstBit»;
 «EXPAND SerializeSize FOR this.size -»
+«EXPAND SerializeGlobalOffset FOR this.globalOffset -»
 		GSSTmTcFormatArrayDimension {
 			fidRef := «this.arrayDimension.fidRef»;
 			maxItems := «this.arrayDimension.maxItems»;
 		};
-«EXPAND SerializeGlobalOffset FOR this.globalOffset -»
 	};
 «ENDDEFINE»
 
@@ -84,20 +84,20 @@ GSSTmTcFormatTmTcFormat «this.name» {
 	GSSTmTcFormatAIField {
 		fid := «this.fid»;
 		pfid := «this.pfid»;
-		name := «this.name»;
+		name := "«this.name»";
 «IF this.description != null -»
-		descr = «this.description»;
+		description := "«this.description»";
 «ENDIF -»
 		type := «this.type»;
 		byteOrder := «this.byteOrder»;
 		firstBit := «this.firstBit»;
-		GSSTmTcFormatArrayRef {
-			fidRef := «this.arrayRef.fidRef»;
-		};
 «EXPAND SerializeSize FOR this.size -»
 		GSSTmTcFormatLocalOffset {
 			bytes := «this.localOffset.bytes»;
 			bits := «this.localOffset.bits»;
+		};
+		GSSTmTcFormatArrayRef {
+			fidRef := «this.arrayRef.fidRef»;
 		};
 	};
 «ENDDEFINE»
@@ -120,6 +120,6 @@ GSSTmTcFormatTmTcFormat «this.name» {
 	GSSTmTcFormatVRFieldSize {
 		fid := «this.fid»;
 		pfid := «this.pfid»;
-		name := «this.name»;
+		name := "«this.name»";
 	};
 «ENDDEFINE»
