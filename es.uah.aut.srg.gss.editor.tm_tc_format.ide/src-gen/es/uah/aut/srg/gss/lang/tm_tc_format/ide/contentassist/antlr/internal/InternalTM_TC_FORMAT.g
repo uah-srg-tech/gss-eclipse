@@ -12648,9 +12648,9 @@ rule__GSSTmTcFormatCSField__NameAssignment_12
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTmTcFormatCSFieldAccess().getNameIDTerminalRuleCall_12_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSTmTcFormatCSFieldAccess().getNameIDTerminalRuleCall_12_0()); }
+		{ before(grammarAccess.getGSSTmTcFormatCSFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSTmTcFormatCSFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); }
 	)
 ;
 finally {
@@ -12663,9 +12663,9 @@ rule__GSSTmTcFormatCSField__DescriptionAssignment_14_2
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTmTcFormatCSFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSTmTcFormatCSFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); }
+		{ before(grammarAccess.getGSSTmTcFormatCSFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSTmTcFormatCSFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); }
 	)
 ;
 finally {
@@ -12783,9 +12783,9 @@ rule__GSSTmTcFormatCSFormulaField__NameAssignment_12
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getNameIDTerminalRuleCall_12_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getNameIDTerminalRuleCall_12_0()); }
+		{ before(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); }
 	)
 ;
 finally {
@@ -12798,9 +12798,9 @@ rule__GSSTmTcFormatCSFormulaField__DescriptionAssignment_14_2
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); }
+		{ before(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); }
 	)
 ;
 finally {
@@ -12933,9 +12933,9 @@ rule__GSSTmTcFormatVSField__NameAssignment_12
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getNameIDTerminalRuleCall_12_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getNameIDTerminalRuleCall_12_0()); }
+		{ before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); }
 	)
 ;
 finally {
@@ -12948,9 +12948,9 @@ rule__GSSTmTcFormatVSField__DescriptionAssignment_14_2
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); }
+		{ before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); }
 	)
 ;
 finally {
@@ -13098,9 +13098,9 @@ rule__GSSTmTcFormatVRFieldSize__NameAssignment_12
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameIDTerminalRuleCall_12_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameIDTerminalRuleCall_12_0()); }
+		{ before(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameSTRINGTerminalRuleCall_12_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameSTRINGTerminalRuleCall_12_0()); }
 	)
 ;
 finally {
@@ -13143,9 +13143,9 @@ rule__GSSTmTcFormatFDICField__NameAssignment_12
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getNameIDTerminalRuleCall_12_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getNameIDTerminalRuleCall_12_0()); }
+		{ before(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); }
 	)
 ;
 finally {
@@ -13158,9 +13158,9 @@ rule__GSSTmTcFormatFDICField__DescriptionAssignment_14_2
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); }
+		{ before(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); }
 	)
 ;
 finally {
@@ -13293,9 +13293,9 @@ rule__GSSTmTcFormatAField__NameAssignment_12
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTmTcFormatAFieldAccess().getNameIDTerminalRuleCall_12_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSTmTcFormatAFieldAccess().getNameIDTerminalRuleCall_12_0()); }
+		{ before(grammarAccess.getGSSTmTcFormatAFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSTmTcFormatAFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); }
 	)
 ;
 finally {
@@ -13308,9 +13308,9 @@ rule__GSSTmTcFormatAField__DescriptionAssignment_14_2
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTmTcFormatAFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSTmTcFormatAFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); }
+		{ before(grammarAccess.getGSSTmTcFormatAFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSTmTcFormatAFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); }
 	)
 ;
 finally {
@@ -13443,9 +13443,9 @@ rule__GSSTmTcFormatAIField__NameAssignment_12
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getNameIDTerminalRuleCall_12_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getNameIDTerminalRuleCall_12_0()); }
+		{ before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); }
 	)
 ;
 finally {
@@ -13458,9 +13458,9 @@ rule__GSSTmTcFormatAIField__DescriptionAssignment_14_2
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); }
+		{ before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); }
 	)
 ;
 finally {

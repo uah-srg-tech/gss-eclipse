@@ -668,9 +668,9 @@ ruleGSSTmTcFormatCSField returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_12_0=RULE_ID
+				lv_name_12_0=RULE_STRING
 				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatCSFieldAccess().getNameIDTerminalRuleCall_12_0());
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatCSFieldAccess().getNameSTRINGTerminalRuleCall_12_0());
 				}
 				{
 					if ($current==null) {
@@ -680,7 +680,7 @@ ruleGSSTmTcFormatCSField returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -699,9 +699,9 @@ ruleGSSTmTcFormatCSField returns [EObject current=null]
 			}
 			(
 				(
-					lv_description_16_0=RULE_ID
+					lv_description_16_0=RULE_STRING
 					{
-						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatCSFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0());
+						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatCSFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0());
 					}
 					{
 						if ($current==null) {
@@ -711,7 +711,7 @@ ruleGSSTmTcFormatCSField returns [EObject current=null]
 							$current,
 							"description",
 							lv_description_16_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
@@ -958,9 +958,9 @@ ruleGSSTmTcFormatCSFormulaField returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_12_0=RULE_ID
+				lv_name_12_0=RULE_STRING
 				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getNameIDTerminalRuleCall_12_0());
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getNameSTRINGTerminalRuleCall_12_0());
 				}
 				{
 					if ($current==null) {
@@ -970,7 +970,7 @@ ruleGSSTmTcFormatCSFormulaField returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -989,9 +989,9 @@ ruleGSSTmTcFormatCSFormulaField returns [EObject current=null]
 			}
 			(
 				(
-					lv_description_16_0=RULE_ID
+					lv_description_16_0=RULE_STRING
 					{
-						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0());
+						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0());
 					}
 					{
 						if ($current==null) {
@@ -1001,7 +1001,7 @@ ruleGSSTmTcFormatCSFormulaField returns [EObject current=null]
 							$current,
 							"description",
 							lv_description_16_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
@@ -1267,9 +1267,9 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_12_0=RULE_ID
+				lv_name_12_0=RULE_STRING
 				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatVSFieldAccess().getNameIDTerminalRuleCall_12_0());
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatVSFieldAccess().getNameSTRINGTerminalRuleCall_12_0());
 				}
 				{
 					if ($current==null) {
@@ -1279,7 +1279,7 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -1298,9 +1298,9 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 			}
 			(
 				(
-					lv_description_16_0=RULE_ID
+					lv_description_16_0=RULE_STRING
 					{
-						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatVSFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0());
+						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatVSFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0());
 					}
 					{
 						if ($current==null) {
@@ -1310,7 +1310,7 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 							$current,
 							"description",
 							lv_description_16_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
@@ -1595,9 +1595,9 @@ ruleGSSTmTcFormatVRFieldSize returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_12_0=RULE_ID
+				lv_name_12_0=RULE_STRING
 				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameIDTerminalRuleCall_12_0());
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameSTRINGTerminalRuleCall_12_0());
 				}
 				{
 					if ($current==null) {
@@ -1607,7 +1607,7 @@ ruleGSSTmTcFormatVRFieldSize returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -1722,9 +1722,9 @@ ruleGSSTmTcFormatFDICField returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_12_0=RULE_ID
+				lv_name_12_0=RULE_STRING
 				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatFDICFieldAccess().getNameIDTerminalRuleCall_12_0());
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatFDICFieldAccess().getNameSTRINGTerminalRuleCall_12_0());
 				}
 				{
 					if ($current==null) {
@@ -1734,7 +1734,7 @@ ruleGSSTmTcFormatFDICField returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -1753,9 +1753,9 @@ ruleGSSTmTcFormatFDICField returns [EObject current=null]
 			}
 			(
 				(
-					lv_description_16_0=RULE_ID
+					lv_description_16_0=RULE_STRING
 					{
-						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatFDICFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0());
+						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatFDICFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0());
 					}
 					{
 						if ($current==null) {
@@ -1765,7 +1765,7 @@ ruleGSSTmTcFormatFDICField returns [EObject current=null]
 							$current,
 							"description",
 							lv_description_16_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
@@ -2031,9 +2031,9 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_12_0=RULE_ID
+				lv_name_12_0=RULE_STRING
 				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatAFieldAccess().getNameIDTerminalRuleCall_12_0());
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatAFieldAccess().getNameSTRINGTerminalRuleCall_12_0());
 				}
 				{
 					if ($current==null) {
@@ -2043,7 +2043,7 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -2062,9 +2062,9 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 			}
 			(
 				(
-					lv_description_16_0=RULE_ID
+					lv_description_16_0=RULE_STRING
 					{
-						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatAFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0());
+						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatAFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0());
 					}
 					{
 						if ($current==null) {
@@ -2074,7 +2074,7 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 							$current,
 							"description",
 							lv_description_16_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
@@ -2340,9 +2340,9 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_12_0=RULE_ID
+				lv_name_12_0=RULE_STRING
 				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatAIFieldAccess().getNameIDTerminalRuleCall_12_0());
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatAIFieldAccess().getNameSTRINGTerminalRuleCall_12_0());
 				}
 				{
 					if ($current==null) {
@@ -2352,7 +2352,7 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -2371,9 +2371,9 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 			}
 			(
 				(
-					lv_description_16_0=RULE_ID
+					lv_description_16_0=RULE_STRING
 					{
-						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatAIFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0());
+						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatAIFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0());
 					}
 					{
 						if ($current==null) {
@@ -2383,7 +2383,7 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 							$current,
 							"description",
 							lv_description_16_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)

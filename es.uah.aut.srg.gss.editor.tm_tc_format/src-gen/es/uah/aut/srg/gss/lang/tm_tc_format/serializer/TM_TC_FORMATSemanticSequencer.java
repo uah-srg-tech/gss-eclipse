@@ -173,8 +173,8 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     (
 	 *         fid=INTEGER 
 	 *         pfid=INTEGER 
-	 *         name=ID 
-	 *         description=ID? 
+	 *         name=STRING 
+	 *         description=STRING? 
 	 *         type=GSSTmTcFormatFieldType 
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
@@ -196,8 +196,8 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     (
 	 *         fid=INTEGER 
 	 *         pfid=INTEGER 
-	 *         name=ID 
-	 *         description=ID? 
+	 *         name=STRING 
+	 *         description=STRING? 
 	 *         type=GSSTmTcFormatFieldType 
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
@@ -259,8 +259,8 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     (
 	 *         fid=INTEGER 
 	 *         pfid=INTEGER 
-	 *         name=ID 
-	 *         description=ID? 
+	 *         name=STRING 
+	 *         description=STRING? 
 	 *         type=GSSTmTcFormatFieldType 
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
@@ -282,8 +282,8 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     (
 	 *         fid=INTEGER 
 	 *         pfid=INTEGER 
-	 *         name=ID 
-	 *         description=ID? 
+	 *         name=STRING 
+	 *         description=STRING? 
 	 *         type=GSSTmTcFormatFieldType 
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
@@ -327,8 +327,8 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     (
 	 *         fid=INTEGER 
 	 *         pfid=INTEGER 
-	 *         name=ID 
-	 *         description=ID? 
+	 *         name=STRING 
+	 *         description=STRING? 
 	 *         checkType=GSSTmTcFormatCheckType 
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
@@ -535,7 +535,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     GSSTmTcFormatVRFieldSize returns GSSTmTcFormatVRFieldSize
 	 *
 	 * Constraint:
-	 *     (fid=INTEGER pfid=INTEGER name=ID)
+	 *     (fid=INTEGER pfid=INTEGER name=STRING)
 	 */
 	protected void sequence_GSSTmTcFormatVRFieldSize(ISerializationContext context, GSSTmTcFormatVRFieldSize semanticObject) {
 		if (errorAcceptor != null) {
@@ -549,7 +549,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getFidINTEGERParserRuleCall_4_0(), semanticObject.getFid());
 		feeder.accept(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getPfidINTEGERParserRuleCall_8_0(), semanticObject.getPfid());
-		feeder.accept(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameIDTerminalRuleCall_12_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameSTRINGTerminalRuleCall_12_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -563,8 +563,8 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     (
 	 *         fid=INTEGER 
 	 *         pfid=INTEGER 
-	 *         name=ID 
-	 *         description=ID? 
+	 *         name=STRING 
+	 *         description=STRING? 
 	 *         type=GSSTmTcFormatFieldType 
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 

@@ -7651,7 +7651,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:2260:1: ( rule__GSSTmTcFormatCSField__Group__11__Impl rule__GSSTmTcFormatCSField__Group__12 )
             // InternalTM_TC_FORMAT.g:2261:2: rule__GSSTmTcFormatCSField__Group__11__Impl rule__GSSTmTcFormatCSField__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSTmTcFormatCSField__Group__11__Impl();
 
             state._fsp--;
@@ -9386,7 +9386,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:2827:1: ( rule__GSSTmTcFormatCSField__Group_14__1__Impl rule__GSSTmTcFormatCSField__Group_14__2 )
             // InternalTM_TC_FORMAT.g:2828:2: rule__GSSTmTcFormatCSField__Group_14__1__Impl rule__GSSTmTcFormatCSField__Group_14__2
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSTmTcFormatCSField__Group_14__1__Impl();
 
             state._fsp--;
@@ -10517,7 +10517,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:3205:1: ( rule__GSSTmTcFormatCSFormulaField__Group__11__Impl rule__GSSTmTcFormatCSFormulaField__Group__12 )
             // InternalTM_TC_FORMAT.g:3206:2: rule__GSSTmTcFormatCSFormulaField__Group__11__Impl rule__GSSTmTcFormatCSFormulaField__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSTmTcFormatCSFormulaField__Group__11__Impl();
 
             state._fsp--;
@@ -12341,7 +12341,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:3799:1: ( rule__GSSTmTcFormatCSFormulaField__Group_14__1__Impl rule__GSSTmTcFormatCSFormulaField__Group_14__2 )
             // InternalTM_TC_FORMAT.g:3800:2: rule__GSSTmTcFormatCSFormulaField__Group_14__1__Impl rule__GSSTmTcFormatCSFormulaField__Group_14__2
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSTmTcFormatCSFormulaField__Group_14__1__Impl();
 
             state._fsp--;
@@ -13472,7 +13472,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:4177:1: ( rule__GSSTmTcFormatVSField__Group__11__Impl rule__GSSTmTcFormatVSField__Group__12 )
             // InternalTM_TC_FORMAT.g:4178:2: rule__GSSTmTcFormatVSField__Group__11__Impl rule__GSSTmTcFormatVSField__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSTmTcFormatVSField__Group__11__Impl();
 
             state._fsp--;
@@ -15385,7 +15385,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:4798:1: ( rule__GSSTmTcFormatVSField__Group_14__1__Impl rule__GSSTmTcFormatVSField__Group_14__2 )
             // InternalTM_TC_FORMAT.g:4799:2: rule__GSSTmTcFormatVSField__Group_14__1__Impl rule__GSSTmTcFormatVSField__Group_14__2
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSTmTcFormatVSField__Group_14__1__Impl();
 
             state._fsp--;
@@ -16516,7 +16516,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:5176:1: ( rule__GSSTmTcFormatVRFieldSize__Group__11__Impl rule__GSSTmTcFormatVRFieldSize__Group__12 )
             // InternalTM_TC_FORMAT.g:5177:2: rule__GSSTmTcFormatVRFieldSize__Group__11__Impl rule__GSSTmTcFormatVRFieldSize__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSTmTcFormatVRFieldSize__Group__11__Impl();
 
             state._fsp--;
@@ -17805,7 +17805,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:5608:1: ( rule__GSSTmTcFormatFDICField__Group__11__Impl rule__GSSTmTcFormatFDICField__Group__12 )
             // InternalTM_TC_FORMAT.g:5609:2: rule__GSSTmTcFormatFDICField__Group__11__Impl rule__GSSTmTcFormatFDICField__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSTmTcFormatFDICField__Group__11__Impl();
 
             state._fsp--;
@@ -19629,7 +19629,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:6202:1: ( rule__GSSTmTcFormatFDICField__Group_14__1__Impl rule__GSSTmTcFormatFDICField__Group_14__2 )
             // InternalTM_TC_FORMAT.g:6203:2: rule__GSSTmTcFormatFDICField__Group_14__1__Impl rule__GSSTmTcFormatFDICField__Group_14__2
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSTmTcFormatFDICField__Group_14__1__Impl();
 
             state._fsp--;
@@ -20760,7 +20760,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:6580:1: ( rule__GSSTmTcFormatAField__Group__11__Impl rule__GSSTmTcFormatAField__Group__12 )
             // InternalTM_TC_FORMAT.g:6581:2: rule__GSSTmTcFormatAField__Group__11__Impl rule__GSSTmTcFormatAField__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSTmTcFormatAField__Group__11__Impl();
 
             state._fsp--;
@@ -22584,7 +22584,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:7174:1: ( rule__GSSTmTcFormatAField__Group_14__1__Impl rule__GSSTmTcFormatAField__Group_14__2 )
             // InternalTM_TC_FORMAT.g:7175:2: rule__GSSTmTcFormatAField__Group_14__1__Impl rule__GSSTmTcFormatAField__Group_14__2
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSTmTcFormatAField__Group_14__1__Impl();
 
             state._fsp--;
@@ -23715,7 +23715,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:7552:1: ( rule__GSSTmTcFormatAIField__Group__11__Impl rule__GSSTmTcFormatAIField__Group__12 )
             // InternalTM_TC_FORMAT.g:7553:2: rule__GSSTmTcFormatAIField__Group__11__Impl rule__GSSTmTcFormatAIField__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSTmTcFormatAIField__Group__11__Impl();
 
             state._fsp--;
@@ -25539,7 +25539,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:8146:1: ( rule__GSSTmTcFormatAIField__Group_14__1__Impl rule__GSSTmTcFormatAIField__Group_14__2 )
             // InternalTM_TC_FORMAT.g:8147:2: rule__GSSTmTcFormatAIField__Group_14__1__Impl rule__GSSTmTcFormatAIField__Group_14__2
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSTmTcFormatAIField__Group_14__1__Impl();
 
             state._fsp--;
@@ -39114,24 +39114,24 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatCSField__NameAssignment_12"
-    // InternalTM_TC_FORMAT.g:12645:1: rule__GSSTmTcFormatCSField__NameAssignment_12 : ( RULE_ID ) ;
+    // InternalTM_TC_FORMAT.g:12645:1: rule__GSSTmTcFormatCSField__NameAssignment_12 : ( RULE_STRING ) ;
     public final void rule__GSSTmTcFormatCSField__NameAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:12649:1: ( ( RULE_ID ) )
-            // InternalTM_TC_FORMAT.g:12650:2: ( RULE_ID )
+            // InternalTM_TC_FORMAT.g:12649:1: ( ( RULE_STRING ) )
+            // InternalTM_TC_FORMAT.g:12650:2: ( RULE_STRING )
             {
-            // InternalTM_TC_FORMAT.g:12650:2: ( RULE_ID )
-            // InternalTM_TC_FORMAT.g:12651:3: RULE_ID
+            // InternalTM_TC_FORMAT.g:12650:2: ( RULE_STRING )
+            // InternalTM_TC_FORMAT.g:12651:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatCSFieldAccess().getNameIDTerminalRuleCall_12_0()); 
+               before(grammarAccess.getGSSTmTcFormatCSFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatCSFieldAccess().getNameIDTerminalRuleCall_12_0()); 
+               after(grammarAccess.getGSSTmTcFormatCSFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); 
             }
 
             }
@@ -39155,24 +39155,24 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatCSField__DescriptionAssignment_14_2"
-    // InternalTM_TC_FORMAT.g:12660:1: rule__GSSTmTcFormatCSField__DescriptionAssignment_14_2 : ( RULE_ID ) ;
+    // InternalTM_TC_FORMAT.g:12660:1: rule__GSSTmTcFormatCSField__DescriptionAssignment_14_2 : ( RULE_STRING ) ;
     public final void rule__GSSTmTcFormatCSField__DescriptionAssignment_14_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:12664:1: ( ( RULE_ID ) )
-            // InternalTM_TC_FORMAT.g:12665:2: ( RULE_ID )
+            // InternalTM_TC_FORMAT.g:12664:1: ( ( RULE_STRING ) )
+            // InternalTM_TC_FORMAT.g:12665:2: ( RULE_STRING )
             {
-            // InternalTM_TC_FORMAT.g:12665:2: ( RULE_ID )
-            // InternalTM_TC_FORMAT.g:12666:3: RULE_ID
+            // InternalTM_TC_FORMAT.g:12665:2: ( RULE_STRING )
+            // InternalTM_TC_FORMAT.g:12666:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatCSFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); 
+               before(grammarAccess.getGSSTmTcFormatCSFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatCSFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); 
+               after(grammarAccess.getGSSTmTcFormatCSFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); 
             }
 
             }
@@ -39511,24 +39511,24 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatCSFormulaField__NameAssignment_12"
-    // InternalTM_TC_FORMAT.g:12780:1: rule__GSSTmTcFormatCSFormulaField__NameAssignment_12 : ( RULE_ID ) ;
+    // InternalTM_TC_FORMAT.g:12780:1: rule__GSSTmTcFormatCSFormulaField__NameAssignment_12 : ( RULE_STRING ) ;
     public final void rule__GSSTmTcFormatCSFormulaField__NameAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:12784:1: ( ( RULE_ID ) )
-            // InternalTM_TC_FORMAT.g:12785:2: ( RULE_ID )
+            // InternalTM_TC_FORMAT.g:12784:1: ( ( RULE_STRING ) )
+            // InternalTM_TC_FORMAT.g:12785:2: ( RULE_STRING )
             {
-            // InternalTM_TC_FORMAT.g:12785:2: ( RULE_ID )
-            // InternalTM_TC_FORMAT.g:12786:3: RULE_ID
+            // InternalTM_TC_FORMAT.g:12785:2: ( RULE_STRING )
+            // InternalTM_TC_FORMAT.g:12786:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getNameIDTerminalRuleCall_12_0()); 
+               before(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getNameIDTerminalRuleCall_12_0()); 
+               after(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); 
             }
 
             }
@@ -39552,24 +39552,24 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatCSFormulaField__DescriptionAssignment_14_2"
-    // InternalTM_TC_FORMAT.g:12795:1: rule__GSSTmTcFormatCSFormulaField__DescriptionAssignment_14_2 : ( RULE_ID ) ;
+    // InternalTM_TC_FORMAT.g:12795:1: rule__GSSTmTcFormatCSFormulaField__DescriptionAssignment_14_2 : ( RULE_STRING ) ;
     public final void rule__GSSTmTcFormatCSFormulaField__DescriptionAssignment_14_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:12799:1: ( ( RULE_ID ) )
-            // InternalTM_TC_FORMAT.g:12800:2: ( RULE_ID )
+            // InternalTM_TC_FORMAT.g:12799:1: ( ( RULE_STRING ) )
+            // InternalTM_TC_FORMAT.g:12800:2: ( RULE_STRING )
             {
-            // InternalTM_TC_FORMAT.g:12800:2: ( RULE_ID )
-            // InternalTM_TC_FORMAT.g:12801:3: RULE_ID
+            // InternalTM_TC_FORMAT.g:12800:2: ( RULE_STRING )
+            // InternalTM_TC_FORMAT.g:12801:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); 
+               before(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); 
+               after(grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); 
             }
 
             }
@@ -39953,24 +39953,24 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatVSField__NameAssignment_12"
-    // InternalTM_TC_FORMAT.g:12930:1: rule__GSSTmTcFormatVSField__NameAssignment_12 : ( RULE_ID ) ;
+    // InternalTM_TC_FORMAT.g:12930:1: rule__GSSTmTcFormatVSField__NameAssignment_12 : ( RULE_STRING ) ;
     public final void rule__GSSTmTcFormatVSField__NameAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:12934:1: ( ( RULE_ID ) )
-            // InternalTM_TC_FORMAT.g:12935:2: ( RULE_ID )
+            // InternalTM_TC_FORMAT.g:12934:1: ( ( RULE_STRING ) )
+            // InternalTM_TC_FORMAT.g:12935:2: ( RULE_STRING )
             {
-            // InternalTM_TC_FORMAT.g:12935:2: ( RULE_ID )
-            // InternalTM_TC_FORMAT.g:12936:3: RULE_ID
+            // InternalTM_TC_FORMAT.g:12935:2: ( RULE_STRING )
+            // InternalTM_TC_FORMAT.g:12936:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getNameIDTerminalRuleCall_12_0()); 
+               before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getNameIDTerminalRuleCall_12_0()); 
+               after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); 
             }
 
             }
@@ -39994,24 +39994,24 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatVSField__DescriptionAssignment_14_2"
-    // InternalTM_TC_FORMAT.g:12945:1: rule__GSSTmTcFormatVSField__DescriptionAssignment_14_2 : ( RULE_ID ) ;
+    // InternalTM_TC_FORMAT.g:12945:1: rule__GSSTmTcFormatVSField__DescriptionAssignment_14_2 : ( RULE_STRING ) ;
     public final void rule__GSSTmTcFormatVSField__DescriptionAssignment_14_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:12949:1: ( ( RULE_ID ) )
-            // InternalTM_TC_FORMAT.g:12950:2: ( RULE_ID )
+            // InternalTM_TC_FORMAT.g:12949:1: ( ( RULE_STRING ) )
+            // InternalTM_TC_FORMAT.g:12950:2: ( RULE_STRING )
             {
-            // InternalTM_TC_FORMAT.g:12950:2: ( RULE_ID )
-            // InternalTM_TC_FORMAT.g:12951:3: RULE_ID
+            // InternalTM_TC_FORMAT.g:12950:2: ( RULE_STRING )
+            // InternalTM_TC_FORMAT.g:12951:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); 
+               before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); 
+               after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); 
             }
 
             }
@@ -40440,24 +40440,24 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatVRFieldSize__NameAssignment_12"
-    // InternalTM_TC_FORMAT.g:13095:1: rule__GSSTmTcFormatVRFieldSize__NameAssignment_12 : ( RULE_ID ) ;
+    // InternalTM_TC_FORMAT.g:13095:1: rule__GSSTmTcFormatVRFieldSize__NameAssignment_12 : ( RULE_STRING ) ;
     public final void rule__GSSTmTcFormatVRFieldSize__NameAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:13099:1: ( ( RULE_ID ) )
-            // InternalTM_TC_FORMAT.g:13100:2: ( RULE_ID )
+            // InternalTM_TC_FORMAT.g:13099:1: ( ( RULE_STRING ) )
+            // InternalTM_TC_FORMAT.g:13100:2: ( RULE_STRING )
             {
-            // InternalTM_TC_FORMAT.g:13100:2: ( RULE_ID )
-            // InternalTM_TC_FORMAT.g:13101:3: RULE_ID
+            // InternalTM_TC_FORMAT.g:13100:2: ( RULE_STRING )
+            // InternalTM_TC_FORMAT.g:13101:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameIDTerminalRuleCall_12_0()); 
+               before(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameSTRINGTerminalRuleCall_12_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameIDTerminalRuleCall_12_0()); 
+               after(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameSTRINGTerminalRuleCall_12_0()); 
             }
 
             }
@@ -40571,24 +40571,24 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatFDICField__NameAssignment_12"
-    // InternalTM_TC_FORMAT.g:13140:1: rule__GSSTmTcFormatFDICField__NameAssignment_12 : ( RULE_ID ) ;
+    // InternalTM_TC_FORMAT.g:13140:1: rule__GSSTmTcFormatFDICField__NameAssignment_12 : ( RULE_STRING ) ;
     public final void rule__GSSTmTcFormatFDICField__NameAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:13144:1: ( ( RULE_ID ) )
-            // InternalTM_TC_FORMAT.g:13145:2: ( RULE_ID )
+            // InternalTM_TC_FORMAT.g:13144:1: ( ( RULE_STRING ) )
+            // InternalTM_TC_FORMAT.g:13145:2: ( RULE_STRING )
             {
-            // InternalTM_TC_FORMAT.g:13145:2: ( RULE_ID )
-            // InternalTM_TC_FORMAT.g:13146:3: RULE_ID
+            // InternalTM_TC_FORMAT.g:13145:2: ( RULE_STRING )
+            // InternalTM_TC_FORMAT.g:13146:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getNameIDTerminalRuleCall_12_0()); 
+               before(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getNameIDTerminalRuleCall_12_0()); 
+               after(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); 
             }
 
             }
@@ -40612,24 +40612,24 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatFDICField__DescriptionAssignment_14_2"
-    // InternalTM_TC_FORMAT.g:13155:1: rule__GSSTmTcFormatFDICField__DescriptionAssignment_14_2 : ( RULE_ID ) ;
+    // InternalTM_TC_FORMAT.g:13155:1: rule__GSSTmTcFormatFDICField__DescriptionAssignment_14_2 : ( RULE_STRING ) ;
     public final void rule__GSSTmTcFormatFDICField__DescriptionAssignment_14_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:13159:1: ( ( RULE_ID ) )
-            // InternalTM_TC_FORMAT.g:13160:2: ( RULE_ID )
+            // InternalTM_TC_FORMAT.g:13159:1: ( ( RULE_STRING ) )
+            // InternalTM_TC_FORMAT.g:13160:2: ( RULE_STRING )
             {
-            // InternalTM_TC_FORMAT.g:13160:2: ( RULE_ID )
-            // InternalTM_TC_FORMAT.g:13161:3: RULE_ID
+            // InternalTM_TC_FORMAT.g:13160:2: ( RULE_STRING )
+            // InternalTM_TC_FORMAT.g:13161:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); 
+               before(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); 
+               after(grammarAccess.getGSSTmTcFormatFDICFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); 
             }
 
             }
@@ -41013,24 +41013,24 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatAField__NameAssignment_12"
-    // InternalTM_TC_FORMAT.g:13290:1: rule__GSSTmTcFormatAField__NameAssignment_12 : ( RULE_ID ) ;
+    // InternalTM_TC_FORMAT.g:13290:1: rule__GSSTmTcFormatAField__NameAssignment_12 : ( RULE_STRING ) ;
     public final void rule__GSSTmTcFormatAField__NameAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:13294:1: ( ( RULE_ID ) )
-            // InternalTM_TC_FORMAT.g:13295:2: ( RULE_ID )
+            // InternalTM_TC_FORMAT.g:13294:1: ( ( RULE_STRING ) )
+            // InternalTM_TC_FORMAT.g:13295:2: ( RULE_STRING )
             {
-            // InternalTM_TC_FORMAT.g:13295:2: ( RULE_ID )
-            // InternalTM_TC_FORMAT.g:13296:3: RULE_ID
+            // InternalTM_TC_FORMAT.g:13295:2: ( RULE_STRING )
+            // InternalTM_TC_FORMAT.g:13296:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getNameIDTerminalRuleCall_12_0()); 
+               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getNameIDTerminalRuleCall_12_0()); 
+               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); 
             }
 
             }
@@ -41054,24 +41054,24 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatAField__DescriptionAssignment_14_2"
-    // InternalTM_TC_FORMAT.g:13305:1: rule__GSSTmTcFormatAField__DescriptionAssignment_14_2 : ( RULE_ID ) ;
+    // InternalTM_TC_FORMAT.g:13305:1: rule__GSSTmTcFormatAField__DescriptionAssignment_14_2 : ( RULE_STRING ) ;
     public final void rule__GSSTmTcFormatAField__DescriptionAssignment_14_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:13309:1: ( ( RULE_ID ) )
-            // InternalTM_TC_FORMAT.g:13310:2: ( RULE_ID )
+            // InternalTM_TC_FORMAT.g:13309:1: ( ( RULE_STRING ) )
+            // InternalTM_TC_FORMAT.g:13310:2: ( RULE_STRING )
             {
-            // InternalTM_TC_FORMAT.g:13310:2: ( RULE_ID )
-            // InternalTM_TC_FORMAT.g:13311:3: RULE_ID
+            // InternalTM_TC_FORMAT.g:13310:2: ( RULE_STRING )
+            // InternalTM_TC_FORMAT.g:13311:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); 
+               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); 
+               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); 
             }
 
             }
@@ -41455,24 +41455,24 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatAIField__NameAssignment_12"
-    // InternalTM_TC_FORMAT.g:13440:1: rule__GSSTmTcFormatAIField__NameAssignment_12 : ( RULE_ID ) ;
+    // InternalTM_TC_FORMAT.g:13440:1: rule__GSSTmTcFormatAIField__NameAssignment_12 : ( RULE_STRING ) ;
     public final void rule__GSSTmTcFormatAIField__NameAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:13444:1: ( ( RULE_ID ) )
-            // InternalTM_TC_FORMAT.g:13445:2: ( RULE_ID )
+            // InternalTM_TC_FORMAT.g:13444:1: ( ( RULE_STRING ) )
+            // InternalTM_TC_FORMAT.g:13445:2: ( RULE_STRING )
             {
-            // InternalTM_TC_FORMAT.g:13445:2: ( RULE_ID )
-            // InternalTM_TC_FORMAT.g:13446:3: RULE_ID
+            // InternalTM_TC_FORMAT.g:13445:2: ( RULE_STRING )
+            // InternalTM_TC_FORMAT.g:13446:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getNameIDTerminalRuleCall_12_0()); 
+               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getNameIDTerminalRuleCall_12_0()); 
+               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getNameSTRINGTerminalRuleCall_12_0()); 
             }
 
             }
@@ -41496,24 +41496,24 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatAIField__DescriptionAssignment_14_2"
-    // InternalTM_TC_FORMAT.g:13455:1: rule__GSSTmTcFormatAIField__DescriptionAssignment_14_2 : ( RULE_ID ) ;
+    // InternalTM_TC_FORMAT.g:13455:1: rule__GSSTmTcFormatAIField__DescriptionAssignment_14_2 : ( RULE_STRING ) ;
     public final void rule__GSSTmTcFormatAIField__DescriptionAssignment_14_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:13459:1: ( ( RULE_ID ) )
-            // InternalTM_TC_FORMAT.g:13460:2: ( RULE_ID )
+            // InternalTM_TC_FORMAT.g:13459:1: ( ( RULE_STRING ) )
+            // InternalTM_TC_FORMAT.g:13460:2: ( RULE_STRING )
             {
-            // InternalTM_TC_FORMAT.g:13460:2: ( RULE_ID )
-            // InternalTM_TC_FORMAT.g:13461:3: RULE_ID
+            // InternalTM_TC_FORMAT.g:13460:2: ( RULE_STRING )
+            // InternalTM_TC_FORMAT.g:13461:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); 
+               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0()); 
+               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0()); 
             }
 
             }

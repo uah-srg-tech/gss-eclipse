@@ -45,8 +45,8 @@ GSSTmTcFormatCSField returns GSSTmTcFormatCSField:
 	'GSSTmTcFormatCSField' '{'
 		'fid' ':=' fid=INTEGER ';'
 		'pfid' ':=' pfid=INTEGER ';'
-		'name' ':=' name=ID ';'
-		('description' ':=' description=ID ';')?
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
 		'type' ':=' type=GSSTmTcFormatFieldType ';'
 		'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 		'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
@@ -59,8 +59,8 @@ GSSTmTcFormatCSFormulaField returns GSSTmTcFormatCSFormulaField:
 	'GSSTmTcFormatCSFormulaField' '{'
 		'fid' ':=' fid=INTEGER ';'
 		'pfid' ':=' pfid=INTEGER ';'
-		'name' ':=' name=ID ';'
-		('description' ':=' description=ID ';')?
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
 		'type' ':=' type=GSSTmTcFormatFieldType ';'
 		'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 		'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
@@ -74,8 +74,8 @@ GSSTmTcFormatVSField returns GSSTmTcFormatVSField:
 	'GSSTmTcFormatVSField' '{'
 		'fid' ':=' fid=INTEGER ';'
 		'pfid' ':=' pfid=INTEGER ';'
-		'name' ':=' name=ID ';'
-		('description' ':=' description=ID ';')?
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
 		'type' ':=' type=GSSTmTcFormatFieldType ';'
 		'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 		'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
@@ -90,7 +90,7 @@ GSSTmTcFormatVRFieldSize returns GSSTmTcFormatVRFieldSize:
 	'GSSTmTcFormatVRFieldSize' '{'
 		'fid' ':=' fid=INTEGER ';'
 		'pfid' ':=' pfid=INTEGER ';'
-		'name' ':=' name=ID ';'
+		'name' ':=' name=STRING ';'
 	'}' ';'
 ;
 
@@ -98,8 +98,8 @@ GSSTmTcFormatFDICField returns GSSTmTcFormatFDICField:
 	'GSSTmTcFormatFDICField' '{'
 		'fid' ':=' fid=INTEGER ';'
 		'pfid' ':=' pfid=INTEGER ';'
-		'name' ':=' name=ID ';'
-		('description' ':=' description=ID ';')?
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
 		'checkType' ':=' checkType=GSSTmTcFormatCheckType ';'
 		'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 		'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
@@ -113,8 +113,8 @@ GSSTmTcFormatAField returns GSSTmTcFormatAField:
 	'GSSTmTcFormatAField' '{'
 		'fid' ':=' fid=INTEGER ';'
 		'pfid' ':=' pfid=INTEGER ';'
-		'name' ':=' name=ID ';'
-		('description' ':=' description=ID ';')?
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
 		'type' ':=' type=GSSTmTcFormatFieldType ';'
 		'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 		'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
@@ -128,8 +128,8 @@ GSSTmTcFormatAIField returns GSSTmTcFormatAIField:
 	'GSSTmTcFormatAIField' '{'
 		'fid' ':=' fid=INTEGER ';'
 		'pfid' ':=' pfid=INTEGER ';'
-		'name' ':=' name=ID ';'
-		('description' ':=' description=ID ';')?
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
 		'type' ':=' type=GSSTmTcFormatFieldType ';'
 		'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 		'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
