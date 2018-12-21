@@ -33,15 +33,18 @@ public class GSSGenerator {
 	
 	public static final int MAX_APP_DATA_BYTES = 236;
 	public static final int MAX_SRC_DATA_BYTES = 4096;
+	public static final String CNAME_CRC = "NID00048";
+	public static final String CNAME_CRC_HK = "NID00198";
+	public static final String CNAME_CHECKSUM = "NID10413";
 	
 	public static Collection<GSSTmTcFormatTmTcFormat> getTmTcFormats(String database) throws IOException {
 
 		Map<String, GSSTmTcFormatTmTcFormat> formats = new HashMap<String, GSSTmTcFormatTmTcFormat>();
 	    Integer constSizeBits = 0, fid = 0, n_max = 0;
-	    Integer arrayFormatFieldRef = Integer.MAX_VALUE;
+	    Integer arrayFormatFieldRef = Integer.MAX_VALUE, lastArrayFormatFieldRef = 0;
 	    Integer variableFormatField = Integer.MAX_VALUE, variableFormatFieldRef = Integer.MAX_VALUE;
 	    String lastID = "";
-
+if(1==1) {
 		//process TC database tables and populate the collection
 		
 		//read TC format names from CCF table
@@ -80,6 +83,7 @@ public class GSSGenerator {
 			    fid = 0;
 		    	n_max = 0;
 			    arrayFormatFieldRef = Integer.MAX_VALUE;
+			    lastArrayFormatFieldRef = 0;
 			    variableFormatField = Integer.MAX_VALUE;
 			    variableFormatFieldRef = Integer.MAX_VALUE;
 			    
@@ -103,16 +107,17 @@ public class GSSGenerator {
 		    	    	}
 	    	    	}
 	    	    	if(cdf_same_format_rows[5].compareTo("0") == 0) {//GRP_SIZE
-			    		if(arrayFormatFieldRef == Integer.MAX_VALUE) {
-			    			constSizeBits += Integer.parseInt(cdf_same_format_rows[3]);//ELLEN
+			    		if((countFields > arrayFormatFieldRef) && (countFields <= lastArrayFormatFieldRef)){
+			    			vbleSizeBits += Integer.parseInt(cdf_same_format_rows[3]);//ELLEN
 			    		}
 			    		else {
-			    			vbleSizeBits += Integer.parseInt(cdf_same_format_rows[3]);//ELLEN
+			    			constSizeBits += Integer.parseInt(cdf_same_format_rows[3]);//ELLEN
 			    		}
 			    	}
 			    	else {
 		    			constSizeBits += Integer.parseInt(cdf_same_format_rows[3]);//ELLEN
 		    			arrayFormatFieldRef = countFields;
+		    			lastArrayFormatFieldRef = countFields+1+Integer.parseInt(cdf_same_format_rows[5]);//GRP_SIZE
 	    	    	}
 	    	    }while ((cdf_same_format = cdf.readLine()) != null);
 	    	    cdf.reset();
@@ -183,9 +188,9 @@ public class GSSGenerator {
 		    		if(format != null)
 		    			format.getVSField().add(vsfield);
 		    	}
+		    	lastID = cdf_rows[0];
 	    	}
 	    	fid++;
-	    	lastID = cdf_rows[0];
 
 	    	if(fid == variableFormatField) {
 	    		//insert VSFIELD
@@ -227,7 +232,7 @@ public class GSSGenerator {
 	    		if(format != null)
 	    			format.getVSField().add(vsfield);
 	    		
-	    		if(variableFormatFieldRef > fid) {
+	    		if(fid < variableFormatFieldRef) {
 		    		//insert VRFIELDSIZE too
 		    		GSSTmTcFormatVRFieldSize vrfieldsize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatVRFieldSize();
 		    		vrfieldsize.setFid(Integer.toString(fid+1));
@@ -241,7 +246,7 @@ public class GSSGenerator {
 		    		format.getVRFieldSize().add(vrfieldsize);
 	    		}
 	    	}
-	    	else if(fid > arrayFormatFieldRef) {
+	    	else if((fid > arrayFormatFieldRef) && (fid <= lastArrayFormatFieldRef)) {
 	    		//insert AIFIELD
 	    		GSSTmTcFormatAIField aifield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatAIField();
 	    		aifield.setFid(Integer.toString(fid));
@@ -344,7 +349,7 @@ public class GSSGenerator {
 	    	}
 		}
 		cdf.close();
-
+}
 		//process TM database tables and populate the collection
 
 		//read TM format names from PID table
@@ -392,7 +397,9 @@ public class GSSGenerator {
 	    	
 	    	String[] plf_rows = plf_line.split("\t");
 	    	
-	    	if(plf_rows[0].compareTo("NID00048") == 0) {
+	    	if((plf_rows[0].compareTo(CNAME_CRC) == 0) ||
+	    			(plf_rows[0].compareTo(CNAME_CRC_HK) == 0) ||
+	    			(plf_rows[0].compareTo(CNAME_CHECKSUM) == 0)) {
 	    		continue;
 	    	}
 
@@ -406,7 +413,9 @@ public class GSSGenerator {
 		    	plf.mark(7000);
 	    		do {
 	    	    	String[] plf_same_format_rows = plf_same_format.split("\t");
-	    	    	if(plf_same_format_rows[0].compareTo("NID00048") == 0) {
+    		    	if((plf_same_format_rows[0].compareTo(CNAME_CRC) == 0) ||
+    		    			(plf_same_format_rows[0].compareTo(CNAME_CRC_HK) == 0) ||
+    		    			(plf_same_format_rows[0].compareTo(CNAME_CHECKSUM) == 0)) {
 	    	    		continue;
 	    	    	}
 	    	    	
@@ -439,9 +448,10 @@ public class GSSGenerator {
 	    		GSSTmTcFormatTmTcFormat format = formats.get("YID" + plf_rows[1]);
 	    		if(format != null)
 	    			format.getCSField().add(csfield);
+	    		
+		    	lastID = plf_rows[1];
 	    	}
 	    	fid++;
-	    	lastID = plf_rows[1];
 
     		//insert CSFIELD
     		GSSTmTcFormatCSField csfield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatCSField();
@@ -475,13 +485,15 @@ public class GSSGenerator {
 		BufferedReader vpd = new BufferedReader(
 		        new InputStreamReader(new FileInputStream(database+"\\vpd.dat")));
 	    String vpd_line;
-	    Integer offsetBits = 0;
+	    Integer offsetBits = 0, vbleSizeBits = 0;
 	    while ((vpd_line = vpd.readLine()) != null) {
 
 	    	String[] vpd_rows = vpd_line.split("\t");
-	    	Integer vbleSizeBits = 0, maxSizeBits = 0;
-	    	
-	    	if(vpd_rows[2].compareTo("NID00048") == 0) {
+	    	Integer maxSizeBits = 0, last_NIDG_field = 0;
+
+	    	if((vpd_rows[2].compareTo(CNAME_CRC) == 0) ||
+	    			(vpd_rows[2].compareTo(CNAME_CRC_HK) == 0) ||
+	    			(vpd_rows[2].compareTo(CNAME_CHECKSUM) == 0)) {
 	    		continue;
 	    	}
 
@@ -489,9 +501,11 @@ public class GSSGenerator {
 
 	    		//new format, compare all fields to check if packet constant or variable
 	    		constSizeBits = 0;
+	    		vbleSizeBits = 0;
 			    fid = 0;
 		    	n_max = 0;
 			    arrayFormatFieldRef = Integer.MAX_VALUE;
+			    lastArrayFormatFieldRef = 0;
 			    
 		    	Integer countFields = 0;
 	    		String vpd_same_format = vpd_line;
@@ -499,7 +513,9 @@ public class GSSGenerator {
 	    		do {
 
 	    	    	String[] vpd_same_format_rows = vpd_same_format.split("\t");
-	    	    	if(vpd_same_format_rows[2].compareTo("NID00048") == 0) {
+	    	    	if((vpd_same_format_rows[2].compareTo(CNAME_CRC) == 0) ||
+	    	    			(vpd_same_format_rows[2].compareTo(CNAME_CRC_HK) == 0) ||
+	    	    			(vpd_same_format_rows[2].compareTo(CNAME_CHECKSUM) == 0)) {
 	    	    		continue;
 	    	    	}
 	    	    	countFields++; 
@@ -509,16 +525,19 @@ public class GSSGenerator {
 	    	    	}
 
 			    	if(vpd_same_format_rows[3].compareTo("0") == 0) {//GRP_SIZE
-			    		if(arrayFormatFieldRef == Integer.MAX_VALUE) {
-			    			constSizeBits += tmSizes.get(vpd_same_format_rows[2]);
-			    		}
-			    		else {
-			    			vbleSizeBits += tmSizes.get(vpd_same_format_rows[2]);
+			    		if (vpd_same_format_rows[2].substring(0, 4).compareTo("NIDD") != 0) {
+				    		if((countFields > arrayFormatFieldRef) && (countFields <= lastArrayFormatFieldRef)){
+				    			vbleSizeBits += tmSizes.get(vpd_same_format_rows[2]);
+				    		}
+				    		else {
+				    			constSizeBits += tmSizes.get(vpd_same_format_rows[2]);
+				    		}
 			    		}
 			    	}
 			    	else {
 		    			constSizeBits += tmSizes.get(vpd_same_format_rows[2]);
 		    			arrayFormatFieldRef = countFields;
+		    			lastArrayFormatFieldRef = countFields+1+Integer.parseInt(vpd_same_format_rows[3]);//GRP_SIZE
 			    	}
 	    	    }while ((vpd_same_format = vpd.readLine()) != null);
 	    		vpd.reset();
@@ -557,12 +576,14 @@ public class GSSGenerator {
 	    		GSSTmTcFormatTmTcFormat format = formats.get("YID" + vpd_rows[0]);
 	    		if(format != null)
 	    			format.getVSField().add(vsfield);
+	    		
+			    offsetBits = 0;
+		    	lastID = vpd_rows[0];
+		    	last_NIDG_field = 0;
 	    	}
 	    	fid++;
-		    offsetBits = 0;
-	    	lastID = vpd_rows[0];
-
-	    	if(fid > arrayFormatFieldRef) {
+	    	
+	    	if((fid > arrayFormatFieldRef) && (fid <= lastArrayFormatFieldRef)){
 	    		//insert AIFIELD
 	    		GSSTmTcFormatAIField aifield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatAIField();
 	    		aifield.setFid(Integer.toString(fid));
@@ -583,6 +604,7 @@ public class GSSGenerator {
 	    		formatSize.setBits(Integer.toString(sizeBits%8));
 	    		aifield.setSize(formatSize);
 	    		
+	    		offsetBits += Integer.parseInt(vpd_rows[13]);
 	    		GSSTmTcFormatLocalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatLocalOffset();
 	    		formatOffset.setBytes(Integer.toString(offsetBits/8));
 	    		formatOffset.setBits(Integer.toString(offsetBits%8));
@@ -596,7 +618,14 @@ public class GSSGenerator {
 	    		//insert CSFIELD
 	    		GSSTmTcFormatCSField csfield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatCSField();
 	    		csfield.setFid(Integer.toString(fid));
-	    		csfield.setPfid(Integer.toString(0));
+    			if(vpd_rows[2].substring(0, 4).compareTo("NIDD") == 0) {
+    				csfield.setPfid(Integer.toString(last_NIDG_field));
+    			}
+    			else
+    			{
+    				last_NIDG_field = fid;
+    				csfield.setPfid(Integer.toString(0));
+    			}
 	    		csfield.setName(vpd_rows[2]);//NAME
 	    		csfield.setDescription(tmDescr.get(vpd_rows[2]));
 	    		csfield.setType(GSSTmTcFormatFieldType.STRUCTURED);
@@ -608,7 +637,8 @@ public class GSSGenerator {
 	    		formatSize.setBytes(Integer.toString(sizeBits/8));
 	    		formatSize.setBits(Integer.toString(sizeBits%8));
 	    		csfield.setSize(formatSize);
-	    		
+
+	    		offsetBits += Integer.parseInt(vpd_rows[13]);
 	    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
 	    		formatOffset.setBytes(Integer.toString(offsetBits/8));
 	    		formatOffset.setBits(Integer.toString(offsetBits%8));
@@ -654,6 +684,7 @@ public class GSSGenerator {
 		    	offsetBits = 0;
 	    	}
 	    	else {
+				//previous offset + db offset value
 		    	offsetBits += tmSizes.get(vpd_rows[2]);
 	    	}
 	    }
