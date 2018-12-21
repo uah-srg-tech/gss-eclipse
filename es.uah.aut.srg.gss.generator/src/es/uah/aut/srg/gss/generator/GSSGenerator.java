@@ -10,6 +10,8 @@ import java.util.Map;
 
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField;
+import es.uah.aut.srg.gss.export.GSSExportExport;
+import es.uah.aut.srg.gss.filters.GSSFilterFilter;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldByteOrder;
@@ -36,6 +38,20 @@ public class GSSGenerator {
 	public static final String CNAME_CRC = "NID00048";
 	public static final String CNAME_CRC_HK = "NID00198";
 	public static final String CNAME_CHECKSUM = "NID10413";
+	
+	public static Collection<GSSExportExport> getExports(String database) throws IOException {
+
+		Map<String, GSSExportExport> exports = new HashMap<String, GSSExportExport>();
+		
+		return exports.values();
+	}
+	
+	public static Collection<GSSFilterFilter> getFilters(String database) throws IOException {
+
+		Map<String, GSSFilterFilter> filters = new HashMap<String, GSSFilterFilter>();
+		
+		return filters.values();
+	}
 	
 	public static Collection<GSSTmTcFormatTmTcFormat> getTmTcFormats(String database) throws IOException {
 
