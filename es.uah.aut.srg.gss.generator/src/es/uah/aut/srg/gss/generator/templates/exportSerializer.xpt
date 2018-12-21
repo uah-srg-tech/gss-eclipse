@@ -1,0 +1,44 @@
+«IMPORT export»
+
+«DEFINE Serializer(String outputFile) FOR GSSExportExport»
+«FILE outputFile -»
+GSSTmTcFormatTmTcFormat «this.name» {
+	uri := «this.uri»;
+	version := «this.version»;
+	from := «this.from»;
+	to := «this.to»;
+«IF this.Sizes != null -»
+	GSSExportSizes {
+«EXPAND SerializSizeInBits FOREACH this.Sizes.sizeInBits -»
+	};
+«ENDIF -»
+	GSSExportSettings {
+«EXPAND SerializeSettingFromConst FOREACH this.settings.settingFromConst -»
+«EXPAND SerializeSettingFromSize FOREACH this.settings.settingFromSize -»
+	};
+};
+«ENDFILE -»
+«ENDDEFINE»
+
+«DEFINE SerializSizeInBits FOR GSSExportSizeInBits -»
+		GSSExportSizeInBits {
+			id := «this.id»;
+			from := «this.from»;
+			addSize := «this.addSize»;
+			unit := «this.unit»;
+		};
+«ENDDEFINE»
+
+«DEFINE SerializeSettingFromConst FOR GSSExportSettingFromConst -»
+		GSSExportSettingFromConst {
+			value := «this.value»;
+			toFieldRef := «this.toFieldRef»;
+		};
+«ENDDEFINE»
+
+«DEFINE SerializeSettingFromSize FOR GSSExportSettingFromSize -»
+		GSSExportSettingFromConst {
+			sizeRef := «this.sizeRef»;
+			toFieldRef := «this.toFieldRef»;
+		};
+«ENDDEFINE»
