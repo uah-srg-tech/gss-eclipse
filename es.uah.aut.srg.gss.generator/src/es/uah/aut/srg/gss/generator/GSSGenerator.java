@@ -44,7 +44,7 @@ public class GSSGenerator {
 	    Integer arrayFormatFieldRef = Integer.MAX_VALUE, lastArrayFormatFieldRef = 0;
 	    Integer variableFormatField = Integer.MAX_VALUE, variableFormatFieldRef = Integer.MAX_VALUE;
 	    String lastID = "";
-if(1==1) {
+
 		//process TC database tables and populate the collection
 		
 		//read TC format names from CCF table
@@ -349,7 +349,7 @@ if(1==1) {
 	    	}
 		}
 		cdf.close();
-}
+
 		//process TM database tables and populate the collection
 
 		//read TM format names from PID table
