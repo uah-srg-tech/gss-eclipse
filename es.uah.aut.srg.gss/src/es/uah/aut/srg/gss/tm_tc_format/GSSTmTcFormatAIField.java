@@ -26,9 +26,9 @@ import es.uah.aut.srg.gss.common.GSSModelObject;
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getFirstBit <em>First Bit</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getArrayRef <em>Array Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getSize <em>Size</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getLocalOffset <em>Local Offset</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getArrayRef <em>Array Ref</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAIField()

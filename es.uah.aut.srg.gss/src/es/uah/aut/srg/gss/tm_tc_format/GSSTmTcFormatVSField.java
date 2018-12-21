@@ -25,9 +25,9 @@ package es.uah.aut.srg.gss.tm_tc_format;
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getFirstBit <em>First Bit</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getConstSize <em>Const Size</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getGlobalOffset <em>Global Offset</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getMaxSize <em>Max Size</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getVariableSize <em>Variable Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getMaxSize <em>Max Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getGlobalOffset <em>Global Offset</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVSField()

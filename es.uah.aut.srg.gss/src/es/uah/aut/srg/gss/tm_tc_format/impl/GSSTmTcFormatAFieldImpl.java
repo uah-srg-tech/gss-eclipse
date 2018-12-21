@@ -43,9 +43,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl#getFirstBit <em>First Bit</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl#getArrayDimension <em>Array Dimension</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl#getSize <em>Size</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl#getGlobalOffset <em>Global Offset</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl#getArrayDimension <em>Array Dimension</em>}</li>
  * </ul>
  *
  * @generated
@@ -219,6 +219,16 @@ public class GSSTmTcFormatAFieldImpl extends MinimalEObjectImpl.Container implem
 	protected boolean firstBitESet;
 
 	/**
+	 * The cached value of the '{@link #getArrayDimension() <em>Array Dimension</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArrayDimension()
+	 * @generated
+	 * @ordered
+	 */
+	protected GSSTmTcFormatArrayDimension arrayDimension;
+
+	/**
 	 * The cached value of the '{@link #getSize() <em>Size</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -237,16 +247,6 @@ public class GSSTmTcFormatAFieldImpl extends MinimalEObjectImpl.Container implem
 	 * @ordered
 	 */
 	protected GSSTmTcFormatGlobalOffset globalOffset;
-
-	/**
-	 * The cached value of the '{@link #getArrayDimension() <em>Array Dimension</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getArrayDimension()
-	 * @generated
-	 * @ordered
-	 */
-	protected GSSTmTcFormatArrayDimension arrayDimension;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -626,12 +626,12 @@ public class GSSTmTcFormatAFieldImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION:
+				return basicSetArrayDimension(null, msgs);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__SIZE:
 				return basicSetSize(null, msgs);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__GLOBAL_OFFSET:
 				return basicSetGlobalOffset(null, msgs);
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION:
-				return basicSetArrayDimension(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -658,12 +658,12 @@ public class GSSTmTcFormatAFieldImpl extends MinimalEObjectImpl.Container implem
 				return getByteOrder();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__FIRST_BIT:
 				return getFirstBit();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION:
+				return getArrayDimension();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__SIZE:
 				return getSize();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__GLOBAL_OFFSET:
 				return getGlobalOffset();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION:
-				return getArrayDimension();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -697,14 +697,14 @@ public class GSSTmTcFormatAFieldImpl extends MinimalEObjectImpl.Container implem
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__FIRST_BIT:
 				setFirstBit((GSSTmTcFormatSFieldFirstBit)newValue);
 				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION:
+				setArrayDimension((GSSTmTcFormatArrayDimension)newValue);
+				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__SIZE:
 				setSize((GSSTmTcFormatSize)newValue);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__GLOBAL_OFFSET:
 				setGlobalOffset((GSSTmTcFormatGlobalOffset)newValue);
-				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION:
-				setArrayDimension((GSSTmTcFormatArrayDimension)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -739,14 +739,14 @@ public class GSSTmTcFormatAFieldImpl extends MinimalEObjectImpl.Container implem
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__FIRST_BIT:
 				unsetFirstBit();
 				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION:
+				setArrayDimension((GSSTmTcFormatArrayDimension)null);
+				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__SIZE:
 				setSize((GSSTmTcFormatSize)null);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__GLOBAL_OFFSET:
 				setGlobalOffset((GSSTmTcFormatGlobalOffset)null);
-				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION:
-				setArrayDimension((GSSTmTcFormatArrayDimension)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -774,12 +774,12 @@ public class GSSTmTcFormatAFieldImpl extends MinimalEObjectImpl.Container implem
 				return isSetByteOrder();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__FIRST_BIT:
 				return isSetFirstBit();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION:
+				return arrayDimension != null;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__SIZE:
 				return size != null;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__GLOBAL_OFFSET:
 				return globalOffset != null;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION:
-				return arrayDimension != null;
 		}
 		return super.eIsSet(featureID);
 	}

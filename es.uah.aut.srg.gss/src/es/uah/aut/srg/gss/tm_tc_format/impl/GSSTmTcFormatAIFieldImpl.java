@@ -41,9 +41,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl#getFirstBit <em>First Bit</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl#getArrayRef <em>Array Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl#getSize <em>Size</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl#getLocalOffset <em>Local Offset</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl#getArrayRef <em>Array Ref</em>}</li>
  * </ul>
  *
  * @generated
@@ -177,6 +177,16 @@ public class GSSTmTcFormatAIFieldImpl extends GSSModelObjectImpl implements GSST
 	protected boolean firstBitESet;
 
 	/**
+	 * The cached value of the '{@link #getArrayRef() <em>Array Ref</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArrayRef()
+	 * @generated
+	 * @ordered
+	 */
+	protected GSSTmTcFormatArrayRef arrayRef;
+
+	/**
 	 * The cached value of the '{@link #getSize() <em>Size</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -195,16 +205,6 @@ public class GSSTmTcFormatAIFieldImpl extends GSSModelObjectImpl implements GSST
 	 * @ordered
 	 */
 	protected GSSTmTcFormatLocalOffset localOffset;
-
-	/**
-	 * The cached value of the '{@link #getArrayRef() <em>Array Ref</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getArrayRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected GSSTmTcFormatArrayRef arrayRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -542,12 +542,12 @@ public class GSSTmTcFormatAIFieldImpl extends GSSModelObjectImpl implements GSST
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
+				return basicSetArrayRef(null, msgs);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__SIZE:
 				return basicSetSize(null, msgs);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET:
 				return basicSetLocalOffset(null, msgs);
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
-				return basicSetArrayRef(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -570,12 +570,12 @@ public class GSSTmTcFormatAIFieldImpl extends GSSModelObjectImpl implements GSST
 				return getByteOrder();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__FIRST_BIT:
 				return getFirstBit();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
+				return getArrayRef();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__SIZE:
 				return getSize();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET:
 				return getLocalOffset();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
-				return getArrayRef();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -603,14 +603,14 @@ public class GSSTmTcFormatAIFieldImpl extends GSSModelObjectImpl implements GSST
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__FIRST_BIT:
 				setFirstBit((GSSTmTcFormatSFieldFirstBit)newValue);
 				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
+				setArrayRef((GSSTmTcFormatArrayRef)newValue);
+				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__SIZE:
 				setSize((GSSTmTcFormatSize)newValue);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET:
 				setLocalOffset((GSSTmTcFormatLocalOffset)newValue);
-				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
-				setArrayRef((GSSTmTcFormatArrayRef)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -639,14 +639,14 @@ public class GSSTmTcFormatAIFieldImpl extends GSSModelObjectImpl implements GSST
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__FIRST_BIT:
 				unsetFirstBit();
 				return;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
+				setArrayRef((GSSTmTcFormatArrayRef)null);
+				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__SIZE:
 				setSize((GSSTmTcFormatSize)null);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET:
 				setLocalOffset((GSSTmTcFormatLocalOffset)null);
-				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
-				setArrayRef((GSSTmTcFormatArrayRef)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -670,12 +670,12 @@ public class GSSTmTcFormatAIFieldImpl extends GSSModelObjectImpl implements GSST
 				return isSetByteOrder();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__FIRST_BIT:
 				return isSetFirstBit();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
+				return arrayRef != null;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__SIZE:
 				return size != null;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET:
 				return localOffset != null;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF:
-				return arrayRef != null;
 		}
 		return super.eIsSet(featureID);
 	}

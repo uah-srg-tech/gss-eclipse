@@ -80,8 +80,8 @@ GSSTmTcFormatVSField returns GSSTmTcFormatVSField:
 		'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 		'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
 		constSize=GSSTmTcFormatConstSize
-		maxSize=GSSTmTcFormatMaxSize
 		variableSize=GSSTmTcFormatVariableSize
+		maxSize=GSSTmTcFormatMaxSize
 		globalOffset=GSSTmTcFormatGlobalOffset
 	'}' ';'
 ;
@@ -118,9 +118,9 @@ GSSTmTcFormatAField returns GSSTmTcFormatAField:
 		'type' ':=' type=GSSTmTcFormatFieldType ';'
 		'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 		'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
+		arrayDimension=GSSTmTcFormatArrayDimension
 		size=GSSTmTcFormatSize
 		globalOffset=GSSTmTcFormatGlobalOffset
-		arrayDimension=GSSTmTcFormatArrayDimension
 	'}' ';'
 ;
 
@@ -133,9 +133,9 @@ GSSTmTcFormatAIField returns GSSTmTcFormatAIField:
 		'type' ':=' type=GSSTmTcFormatFieldType ';'
 		'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 		'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
+		arrayRef=GSSTmTcFormatArrayRef
 		size=GSSTmTcFormatSize
 		localOffset=GSSTmTcFormatLocalOffset
-		arrayRef=GSSTmTcFormatArrayRef
 	'}' ';'
 ;
 

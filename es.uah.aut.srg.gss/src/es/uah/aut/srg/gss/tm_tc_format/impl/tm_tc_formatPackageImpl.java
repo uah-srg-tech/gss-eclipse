@@ -720,7 +720,7 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * @generated
 	 */
 	public EReference getGSSTmTcFormatVSField_GlobalOffset() {
-		return (EReference)gssTmTcFormatVSFieldEClass.getEStructuralFeatures().get(6);
+		return (EReference)gssTmTcFormatVSFieldEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -738,7 +738,7 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * @generated
 	 */
 	public EReference getGSSTmTcFormatVSField_VariableSize() {
-		return (EReference)gssTmTcFormatVSFieldEClass.getEStructuralFeatures().get(8);
+		return (EReference)gssTmTcFormatVSFieldEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1071,15 +1071,6 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * @generated
 	 */
 	public EReference getGSSTmTcFormatAField_Size() {
-		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSTmTcFormatAField_GlobalOffset() {
 		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -1088,8 +1079,17 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTmTcFormatAField_ArrayDimension() {
+	public EReference getGSSTmTcFormatAField_GlobalOffset() {
 		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSTmTcFormatAField_ArrayDimension() {
+		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1179,15 +1179,6 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * @generated
 	 */
 	public EReference getGSSTmTcFormatAIField_Size() {
-		return (EReference)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSTmTcFormatAIField_LocalOffset() {
 		return (EReference)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -1196,8 +1187,17 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTmTcFormatAIField_ArrayRef() {
+	public EReference getGSSTmTcFormatAIField_LocalOffset() {
 		return (EReference)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSTmTcFormatAIField_ArrayRef() {
+		return (EReference)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1375,9 +1375,9 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		createEAttribute(gssTmTcFormatVSFieldEClass, GSS_TM_TC_FORMAT_VS_FIELD__BYTE_ORDER);
 		createEAttribute(gssTmTcFormatVSFieldEClass, GSS_TM_TC_FORMAT_VS_FIELD__FIRST_BIT);
 		createEReference(gssTmTcFormatVSFieldEClass, GSS_TM_TC_FORMAT_VS_FIELD__CONST_SIZE);
-		createEReference(gssTmTcFormatVSFieldEClass, GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET);
-		createEReference(gssTmTcFormatVSFieldEClass, GSS_TM_TC_FORMAT_VS_FIELD__MAX_SIZE);
 		createEReference(gssTmTcFormatVSFieldEClass, GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE);
+		createEReference(gssTmTcFormatVSFieldEClass, GSS_TM_TC_FORMAT_VS_FIELD__MAX_SIZE);
+		createEReference(gssTmTcFormatVSFieldEClass, GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET);
 
 		gssTmTcFormatVRFieldSizeEClass = createEClass(GSS_TM_TC_FORMAT_VR_FIELD_SIZE);
 		createEAttribute(gssTmTcFormatVRFieldSizeEClass, GSS_TM_TC_FORMAT_VR_FIELD_SIZE__FID);
@@ -1401,9 +1401,9 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		createEAttribute(gssTmTcFormatAFieldEClass, GSS_TM_TC_FORMAT_AFIELD__TYPE);
 		createEAttribute(gssTmTcFormatAFieldEClass, GSS_TM_TC_FORMAT_AFIELD__BYTE_ORDER);
 		createEAttribute(gssTmTcFormatAFieldEClass, GSS_TM_TC_FORMAT_AFIELD__FIRST_BIT);
+		createEReference(gssTmTcFormatAFieldEClass, GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION);
 		createEReference(gssTmTcFormatAFieldEClass, GSS_TM_TC_FORMAT_AFIELD__SIZE);
 		createEReference(gssTmTcFormatAFieldEClass, GSS_TM_TC_FORMAT_AFIELD__GLOBAL_OFFSET);
-		createEReference(gssTmTcFormatAFieldEClass, GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION);
 
 		gssTmTcFormatAIFieldEClass = createEClass(GSS_TM_TC_FORMAT_AI_FIELD);
 		createEAttribute(gssTmTcFormatAIFieldEClass, GSS_TM_TC_FORMAT_AI_FIELD__FID);
@@ -1411,9 +1411,9 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		createEAttribute(gssTmTcFormatAIFieldEClass, GSS_TM_TC_FORMAT_AI_FIELD__TYPE);
 		createEAttribute(gssTmTcFormatAIFieldEClass, GSS_TM_TC_FORMAT_AI_FIELD__BYTE_ORDER);
 		createEAttribute(gssTmTcFormatAIFieldEClass, GSS_TM_TC_FORMAT_AI_FIELD__FIRST_BIT);
+		createEReference(gssTmTcFormatAIFieldEClass, GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF);
 		createEReference(gssTmTcFormatAIFieldEClass, GSS_TM_TC_FORMAT_AI_FIELD__SIZE);
 		createEReference(gssTmTcFormatAIFieldEClass, GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET);
-		createEReference(gssTmTcFormatAIFieldEClass, GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF);
 
 		gssTmTcFormatSizeEClass = createEClass(GSS_TM_TC_FORMAT_SIZE);
 		createEAttribute(gssTmTcFormatSizeEClass, GSS_TM_TC_FORMAT_SIZE__BYTES);
@@ -1550,9 +1550,9 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		initEAttribute(getGSSTmTcFormatVSField_ByteOrder(), this.getGSSTmTcFormatFieldByteOrder(), "byteOrder", null, 1, 1, GSSTmTcFormatVSField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSTmTcFormatVSField_FirstBit(), this.getGSSTmTcFormatSFieldFirstBit(), "firstBit", null, 1, 1, GSSTmTcFormatVSField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTmTcFormatVSField_ConstSize(), this.getGSSTmTcFormatConstSize(), null, "constSize", null, 1, 1, GSSTmTcFormatVSField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTmTcFormatVSField_GlobalOffset(), this.getGSSTmTcFormatGlobalOffset(), null, "globalOffset", null, 1, 1, GSSTmTcFormatVSField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTmTcFormatVSField_MaxSize(), this.getGSSTmTcFormatMaxSize(), null, "maxSize", null, 1, 1, GSSTmTcFormatVSField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTmTcFormatVSField_VariableSize(), this.getGSSTmTcFormatVariableSize(), null, "variableSize", null, 1, 1, GSSTmTcFormatVSField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTmTcFormatVSField_MaxSize(), this.getGSSTmTcFormatMaxSize(), null, "maxSize", null, 1, 1, GSSTmTcFormatVSField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTmTcFormatVSField_GlobalOffset(), this.getGSSTmTcFormatGlobalOffset(), null, "globalOffset", null, 1, 1, GSSTmTcFormatVSField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssTmTcFormatVRFieldSizeEClass, GSSTmTcFormatVRFieldSize.class, "GSSTmTcFormatVRFieldSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSTmTcFormatVRFieldSize_Fid(), ecorePackage.getEString(), "fid", null, 1, 1, GSSTmTcFormatVRFieldSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1576,9 +1576,9 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		initEAttribute(getGSSTmTcFormatAField_Type(), this.getGSSTmTcFormatFieldType(), "type", null, 1, 1, GSSTmTcFormatAField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSTmTcFormatAField_ByteOrder(), this.getGSSTmTcFormatFieldByteOrder(), "byteOrder", null, 1, 1, GSSTmTcFormatAField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSTmTcFormatAField_FirstBit(), this.getGSSTmTcFormatSFieldFirstBit(), "firstBit", null, 1, 1, GSSTmTcFormatAField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTmTcFormatAField_ArrayDimension(), this.getGSSTmTcFormatArrayDimension(), null, "arrayDimension", null, 1, 1, GSSTmTcFormatAField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTmTcFormatAField_Size(), this.getGSSTmTcFormatSize(), null, "size", null, 1, 1, GSSTmTcFormatAField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTmTcFormatAField_GlobalOffset(), this.getGSSTmTcFormatGlobalOffset(), null, "globalOffset", null, 1, 1, GSSTmTcFormatAField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTmTcFormatAField_ArrayDimension(), this.getGSSTmTcFormatArrayDimension(), null, "arrayDimension", null, 1, 1, GSSTmTcFormatAField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssTmTcFormatAIFieldEClass, GSSTmTcFormatAIField.class, "GSSTmTcFormatAIField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSTmTcFormatAIField_Fid(), ecorePackage.getEString(), "fid", null, 1, 1, GSSTmTcFormatAIField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1586,9 +1586,9 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		initEAttribute(getGSSTmTcFormatAIField_Type(), this.getGSSTmTcFormatFieldType(), "type", null, 1, 1, GSSTmTcFormatAIField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSTmTcFormatAIField_ByteOrder(), this.getGSSTmTcFormatFieldByteOrder(), "byteOrder", null, 1, 1, GSSTmTcFormatAIField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSTmTcFormatAIField_FirstBit(), this.getGSSTmTcFormatSFieldFirstBit(), "firstBit", null, 1, 1, GSSTmTcFormatAIField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTmTcFormatAIField_ArrayRef(), this.getGSSTmTcFormatArrayRef(), null, "arrayRef", null, 1, 1, GSSTmTcFormatAIField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTmTcFormatAIField_Size(), this.getGSSTmTcFormatSize(), null, "size", null, 1, 1, GSSTmTcFormatAIField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTmTcFormatAIField_LocalOffset(), this.getGSSTmTcFormatLocalOffset(), null, "localOffset", null, 1, 1, GSSTmTcFormatAIField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTmTcFormatAIField_ArrayRef(), this.getGSSTmTcFormatArrayRef(), null, "arrayRef", null, 1, 1, GSSTmTcFormatAIField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssTmTcFormatSizeEClass, GSSTmTcFormatSize.class, "GSSTmTcFormatSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSTmTcFormatSize_Bytes(), ecorePackage.getEString(), "bytes", null, 1, 1, GSSTmTcFormatSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

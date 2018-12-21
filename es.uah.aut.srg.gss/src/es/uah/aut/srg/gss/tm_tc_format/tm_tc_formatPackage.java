@@ -598,13 +598,13 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_VS_FIELD__CONST_SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Global Offset</b></em>' containment reference.
+	 * The feature id for the '<em><b>Variable Size</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 6;
+	int GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Max Size</b></em>' containment reference.
@@ -616,13 +616,13 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_VS_FIELD__MAX_SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Variable Size</b></em>' containment reference.
+	 * The feature id for the '<em><b>Global Offset</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 8;
+	int GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET = GSS_TM_TC_FORMAT_FIELD_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>GSS Tm Tc Format VS Field</em>' class.
@@ -958,13 +958,22 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_AFIELD__FIRST_BIT = 6;
 
 	/**
+	 * The feature id for the '<em><b>Array Dimension</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION = 7;
+
+	/**
 	 * The feature id for the '<em><b>Size</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_AFIELD__SIZE = 7;
+	int GSS_TM_TC_FORMAT_AFIELD__SIZE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Global Offset</b></em>' containment reference.
@@ -973,16 +982,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_AFIELD__GLOBAL_OFFSET = 8;
-
-	/**
-	 * The feature id for the '<em><b>Array Dimension</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION = 9;
+	int GSS_TM_TC_FORMAT_AFIELD__GLOBAL_OFFSET = 9;
 
 	/**
 	 * The number of structural features of the '<em>GSS Tm Tc Format AField</em>' class.
@@ -1086,13 +1086,22 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_AI_FIELD__FIRST_BIT = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Array Ref</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 5;
+
+	/**
 	 * The feature id for the '<em><b>Size</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD__SIZE = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 5;
+	int GSS_TM_TC_FORMAT_AI_FIELD__SIZE = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Local Offset</b></em>' containment reference.
@@ -1101,16 +1110,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Array Ref</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 7;
+	int GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>GSS Tm Tc Format AI Field</em>' class.

@@ -42,9 +42,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVSFieldImpl#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVSFieldImpl#getFirstBit <em>First Bit</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVSFieldImpl#getConstSize <em>Const Size</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVSFieldImpl#getGlobalOffset <em>Global Offset</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVSFieldImpl#getMaxSize <em>Max Size</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVSFieldImpl#getVariableSize <em>Variable Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVSFieldImpl#getMaxSize <em>Max Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVSFieldImpl#getGlobalOffset <em>Global Offset</em>}</li>
  * </ul>
  *
  * @generated
@@ -188,14 +188,14 @@ public class GSSTmTcFormatVSFieldImpl extends GSSTmTcFormatFieldImpl implements 
 	protected GSSTmTcFormatConstSize constSize;
 
 	/**
-	 * The cached value of the '{@link #getGlobalOffset() <em>Global Offset</em>}' containment reference.
+	 * The cached value of the '{@link #getVariableSize() <em>Variable Size</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGlobalOffset()
+	 * @see #getVariableSize()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatGlobalOffset globalOffset;
+	protected GSSTmTcFormatVariableSize variableSize;
 
 	/**
 	 * The cached value of the '{@link #getMaxSize() <em>Max Size</em>}' containment reference.
@@ -208,14 +208,14 @@ public class GSSTmTcFormatVSFieldImpl extends GSSTmTcFormatFieldImpl implements 
 	protected GSSTmTcFormatMaxSize maxSize;
 
 	/**
-	 * The cached value of the '{@link #getVariableSize() <em>Variable Size</em>}' containment reference.
+	 * The cached value of the '{@link #getGlobalOffset() <em>Global Offset</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVariableSize()
+	 * @see #getGlobalOffset()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatVariableSize variableSize;
+	protected GSSTmTcFormatGlobalOffset globalOffset;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -598,12 +598,12 @@ public class GSSTmTcFormatVSFieldImpl extends GSSTmTcFormatFieldImpl implements 
 		switch (featureID) {
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__CONST_SIZE:
 				return basicSetConstSize(null, msgs);
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET:
-				return basicSetGlobalOffset(null, msgs);
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__MAX_SIZE:
-				return basicSetMaxSize(null, msgs);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE:
 				return basicSetVariableSize(null, msgs);
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__MAX_SIZE:
+				return basicSetMaxSize(null, msgs);
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET:
+				return basicSetGlobalOffset(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -628,12 +628,12 @@ public class GSSTmTcFormatVSFieldImpl extends GSSTmTcFormatFieldImpl implements 
 				return getFirstBit();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__CONST_SIZE:
 				return getConstSize();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET:
-				return getGlobalOffset();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__MAX_SIZE:
-				return getMaxSize();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE:
 				return getVariableSize();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__MAX_SIZE:
+				return getMaxSize();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET:
+				return getGlobalOffset();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -664,14 +664,14 @@ public class GSSTmTcFormatVSFieldImpl extends GSSTmTcFormatFieldImpl implements 
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__CONST_SIZE:
 				setConstSize((GSSTmTcFormatConstSize)newValue);
 				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET:
-				setGlobalOffset((GSSTmTcFormatGlobalOffset)newValue);
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE:
+				setVariableSize((GSSTmTcFormatVariableSize)newValue);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__MAX_SIZE:
 				setMaxSize((GSSTmTcFormatMaxSize)newValue);
 				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE:
-				setVariableSize((GSSTmTcFormatVariableSize)newValue);
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET:
+				setGlobalOffset((GSSTmTcFormatGlobalOffset)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -703,14 +703,14 @@ public class GSSTmTcFormatVSFieldImpl extends GSSTmTcFormatFieldImpl implements 
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__CONST_SIZE:
 				setConstSize((GSSTmTcFormatConstSize)null);
 				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET:
-				setGlobalOffset((GSSTmTcFormatGlobalOffset)null);
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE:
+				setVariableSize((GSSTmTcFormatVariableSize)null);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__MAX_SIZE:
 				setMaxSize((GSSTmTcFormatMaxSize)null);
 				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE:
-				setVariableSize((GSSTmTcFormatVariableSize)null);
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET:
+				setGlobalOffset((GSSTmTcFormatGlobalOffset)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -736,12 +736,12 @@ public class GSSTmTcFormatVSFieldImpl extends GSSTmTcFormatFieldImpl implements 
 				return isSetFirstBit();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__CONST_SIZE:
 				return constSize != null;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET:
-				return globalOffset != null;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__MAX_SIZE:
-				return maxSize != null;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE:
 				return variableSize != null;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__MAX_SIZE:
+				return maxSize != null;
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET:
+				return globalOffset != null;
 		}
 		return super.eIsSet(featureID);
 	}

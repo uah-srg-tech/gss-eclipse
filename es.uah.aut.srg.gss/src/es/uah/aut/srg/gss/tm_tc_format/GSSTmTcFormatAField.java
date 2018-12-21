@@ -28,9 +28,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getFirstBit <em>First Bit</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getArrayDimension <em>Array Dimension</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getSize <em>Size</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getGlobalOffset <em>Global Offset</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getArrayDimension <em>Array Dimension</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAField()

@@ -48,13 +48,13 @@ GSSTmTcFormatTmTcFormat «this.name» {
 			bytes := «this.constSize.bytes»;
 			bits := «this.constSize.bits»;
 		};
-		GSSTmTcFormatMaxSize {
-			bytes := «this.maxSize.bytes»;
-			bits := «this.maxSize.bits»;
-		};
 		GSSTmTcFormatVariableSize {
 			fidRef := «this.variableSize.fidRef»;
 			unit := «this.variableSize.unit»;
+		};
+		GSSTmTcFormatMaxSize {
+			bytes := «this.maxSize.bytes»;
+			bits := «this.maxSize.bits»;
 		};
 «EXPAND SerializeGlobalOffset FOR this.globalOffset -»
 	};
@@ -71,12 +71,12 @@ GSSTmTcFormatTmTcFormat «this.name» {
 		type := «this.type»;
 		byteOrder := «this.byteOrder»;
 		firstBit := «this.firstBit»;
-«EXPAND SerializeSize FOR this.size -»
-«EXPAND SerializeGlobalOffset FOR this.globalOffset -»
 		GSSTmTcFormatArrayDimension {
 			fidRef := «this.arrayDimension.fidRef»;
 			maxItems := «this.arrayDimension.maxItems»;
 		};
+«EXPAND SerializeSize FOR this.size -»
+«EXPAND SerializeGlobalOffset FOR this.globalOffset -»
 	};
 «ENDDEFINE»
 
@@ -91,13 +91,13 @@ GSSTmTcFormatTmTcFormat «this.name» {
 		type := «this.type»;
 		byteOrder := «this.byteOrder»;
 		firstBit := «this.firstBit»;
+		GSSTmTcFormatArrayRef {
+			fidRef := «this.arrayRef.fidRef»;
+		};
 «EXPAND SerializeSize FOR this.size -»
 		GSSTmTcFormatLocalOffset {
 			bytes := «this.localOffset.bytes»;
 			bits := «this.localOffset.bits»;
-		};
-		GSSTmTcFormatArrayRef {
-			fidRef := «this.arrayRef.fidRef»;
 		};
 	};
 «ENDDEFINE»

@@ -791,10 +791,10 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_26 = (Keyword)cGroup.eContents().get(26);
 		private final Assignment cConstSizeAssignment_27 = (Assignment)cGroup.eContents().get(27);
 		private final RuleCall cConstSizeGSSTmTcFormatConstSizeParserRuleCall_27_0 = (RuleCall)cConstSizeAssignment_27.eContents().get(0);
-		private final Assignment cMaxSizeAssignment_28 = (Assignment)cGroup.eContents().get(28);
-		private final RuleCall cMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_28_0 = (RuleCall)cMaxSizeAssignment_28.eContents().get(0);
-		private final Assignment cVariableSizeAssignment_29 = (Assignment)cGroup.eContents().get(29);
-		private final RuleCall cVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_29_0 = (RuleCall)cVariableSizeAssignment_29.eContents().get(0);
+		private final Assignment cVariableSizeAssignment_28 = (Assignment)cGroup.eContents().get(28);
+		private final RuleCall cVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_28_0 = (RuleCall)cVariableSizeAssignment_28.eContents().get(0);
+		private final Assignment cMaxSizeAssignment_29 = (Assignment)cGroup.eContents().get(29);
+		private final RuleCall cMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_29_0 = (RuleCall)cMaxSizeAssignment_29.eContents().get(0);
 		private final Assignment cGlobalOffsetAssignment_30 = (Assignment)cGroup.eContents().get(30);
 		private final RuleCall cGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_30_0 = (RuleCall)cGlobalOffsetAssignment_30.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_31 = (Keyword)cGroup.eContents().get(31);
@@ -809,8 +809,8 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		//	'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 		//	'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
 		//	constSize=GSSTmTcFormatConstSize
-		//	maxSize=GSSTmTcFormatMaxSize
 		//	variableSize=GSSTmTcFormatVariableSize
+		//	maxSize=GSSTmTcFormatMaxSize
 		//	globalOffset=GSSTmTcFormatGlobalOffset
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
@@ -818,7 +818,7 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		//'GSSTmTcFormatVSField' '{' 'fid' ':=' fid=INTEGER ';' 'pfid' ':=' pfid=INTEGER ';' 'name' ':=' name=STRING ';'
 		//('description' ':=' description=STRING ';')? 'type' ':=' type=GSSTmTcFormatFieldType ';' 'byteOrder' ':='
 		//byteOrder=GSSTmTcFormatFieldByteOrder ';' 'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
-		//constSize=GSSTmTcFormatConstSize maxSize=GSSTmTcFormatMaxSize variableSize=GSSTmTcFormatVariableSize
+		//constSize=GSSTmTcFormatConstSize variableSize=GSSTmTcFormatVariableSize maxSize=GSSTmTcFormatMaxSize
 		//globalOffset=GSSTmTcFormatGlobalOffset '}' ';'
 		public Group getGroup() { return cGroup; }
 		
@@ -942,17 +942,17 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSTmTcFormatConstSize
 		public RuleCall getConstSizeGSSTmTcFormatConstSizeParserRuleCall_27_0() { return cConstSizeGSSTmTcFormatConstSizeParserRuleCall_27_0; }
 		
-		//maxSize=GSSTmTcFormatMaxSize
-		public Assignment getMaxSizeAssignment_28() { return cMaxSizeAssignment_28; }
-		
-		//GSSTmTcFormatMaxSize
-		public RuleCall getMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_28_0() { return cMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_28_0; }
-		
 		//variableSize=GSSTmTcFormatVariableSize
-		public Assignment getVariableSizeAssignment_29() { return cVariableSizeAssignment_29; }
+		public Assignment getVariableSizeAssignment_28() { return cVariableSizeAssignment_28; }
 		
 		//GSSTmTcFormatVariableSize
-		public RuleCall getVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_29_0() { return cVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_29_0; }
+		public RuleCall getVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_28_0() { return cVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_28_0; }
+		
+		//maxSize=GSSTmTcFormatMaxSize
+		public Assignment getMaxSizeAssignment_29() { return cMaxSizeAssignment_29; }
+		
+		//GSSTmTcFormatMaxSize
+		public RuleCall getMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_29_0() { return cMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_29_0; }
 		
 		//globalOffset=GSSTmTcFormatGlobalOffset
 		public Assignment getGlobalOffsetAssignment_30() { return cGlobalOffsetAssignment_30; }
@@ -1308,12 +1308,12 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cFirstBitAssignment_25 = (Assignment)cGroup.eContents().get(25);
 		private final RuleCall cFirstBitGSSTmTcFormatSFieldFirstBitEnumRuleCall_25_0 = (RuleCall)cFirstBitAssignment_25.eContents().get(0);
 		private final Keyword cSemicolonKeyword_26 = (Keyword)cGroup.eContents().get(26);
-		private final Assignment cSizeAssignment_27 = (Assignment)cGroup.eContents().get(27);
-		private final RuleCall cSizeGSSTmTcFormatSizeParserRuleCall_27_0 = (RuleCall)cSizeAssignment_27.eContents().get(0);
-		private final Assignment cGlobalOffsetAssignment_28 = (Assignment)cGroup.eContents().get(28);
-		private final RuleCall cGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_28_0 = (RuleCall)cGlobalOffsetAssignment_28.eContents().get(0);
-		private final Assignment cArrayDimensionAssignment_29 = (Assignment)cGroup.eContents().get(29);
-		private final RuleCall cArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_29_0 = (RuleCall)cArrayDimensionAssignment_29.eContents().get(0);
+		private final Assignment cArrayDimensionAssignment_27 = (Assignment)cGroup.eContents().get(27);
+		private final RuleCall cArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_27_0 = (RuleCall)cArrayDimensionAssignment_27.eContents().get(0);
+		private final Assignment cSizeAssignment_28 = (Assignment)cGroup.eContents().get(28);
+		private final RuleCall cSizeGSSTmTcFormatSizeParserRuleCall_28_0 = (RuleCall)cSizeAssignment_28.eContents().get(0);
+		private final Assignment cGlobalOffsetAssignment_29 = (Assignment)cGroup.eContents().get(29);
+		private final RuleCall cGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_29_0 = (RuleCall)cGlobalOffsetAssignment_29.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_30 = (Keyword)cGroup.eContents().get(30);
 		private final Keyword cSemicolonKeyword_31 = (Keyword)cGroup.eContents().get(31);
 		
@@ -1325,16 +1325,16 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		//	'type' ':=' type=GSSTmTcFormatFieldType ';'
 		//	'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 		//	'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
+		//	arrayDimension=GSSTmTcFormatArrayDimension
 		//	size=GSSTmTcFormatSize
 		//	globalOffset=GSSTmTcFormatGlobalOffset
-		//	arrayDimension=GSSTmTcFormatArrayDimension
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTmTcFormatAField' '{' 'fid' ':=' fid=INTEGER ';' 'pfid' ':=' pfid=INTEGER ';' 'name' ':=' name=STRING ';'
 		//('description' ':=' description=STRING ';')? 'type' ':=' type=GSSTmTcFormatFieldType ';' 'byteOrder' ':='
 		//byteOrder=GSSTmTcFormatFieldByteOrder ';' 'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
-		//size=GSSTmTcFormatSize globalOffset=GSSTmTcFormatGlobalOffset arrayDimension=GSSTmTcFormatArrayDimension '}' ';'
+		//arrayDimension=GSSTmTcFormatArrayDimension size=GSSTmTcFormatSize globalOffset=GSSTmTcFormatGlobalOffset '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSTmTcFormatAField'
@@ -1451,23 +1451,23 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_26() { return cSemicolonKeyword_26; }
 		
-		//size=GSSTmTcFormatSize
-		public Assignment getSizeAssignment_27() { return cSizeAssignment_27; }
-		
-		//GSSTmTcFormatSize
-		public RuleCall getSizeGSSTmTcFormatSizeParserRuleCall_27_0() { return cSizeGSSTmTcFormatSizeParserRuleCall_27_0; }
-		
-		//globalOffset=GSSTmTcFormatGlobalOffset
-		public Assignment getGlobalOffsetAssignment_28() { return cGlobalOffsetAssignment_28; }
-		
-		//GSSTmTcFormatGlobalOffset
-		public RuleCall getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_28_0() { return cGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_28_0; }
-		
 		//arrayDimension=GSSTmTcFormatArrayDimension
-		public Assignment getArrayDimensionAssignment_29() { return cArrayDimensionAssignment_29; }
+		public Assignment getArrayDimensionAssignment_27() { return cArrayDimensionAssignment_27; }
 		
 		//GSSTmTcFormatArrayDimension
-		public RuleCall getArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_29_0() { return cArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_29_0; }
+		public RuleCall getArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_27_0() { return cArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_27_0; }
+		
+		//size=GSSTmTcFormatSize
+		public Assignment getSizeAssignment_28() { return cSizeAssignment_28; }
+		
+		//GSSTmTcFormatSize
+		public RuleCall getSizeGSSTmTcFormatSizeParserRuleCall_28_0() { return cSizeGSSTmTcFormatSizeParserRuleCall_28_0; }
+		
+		//globalOffset=GSSTmTcFormatGlobalOffset
+		public Assignment getGlobalOffsetAssignment_29() { return cGlobalOffsetAssignment_29; }
+		
+		//GSSTmTcFormatGlobalOffset
+		public RuleCall getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_29_0() { return cGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_29_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_30() { return cRightCurlyBracketKeyword_30; }
@@ -1516,12 +1516,12 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cFirstBitAssignment_25 = (Assignment)cGroup.eContents().get(25);
 		private final RuleCall cFirstBitGSSTmTcFormatSFieldFirstBitEnumRuleCall_25_0 = (RuleCall)cFirstBitAssignment_25.eContents().get(0);
 		private final Keyword cSemicolonKeyword_26 = (Keyword)cGroup.eContents().get(26);
-		private final Assignment cSizeAssignment_27 = (Assignment)cGroup.eContents().get(27);
-		private final RuleCall cSizeGSSTmTcFormatSizeParserRuleCall_27_0 = (RuleCall)cSizeAssignment_27.eContents().get(0);
-		private final Assignment cLocalOffsetAssignment_28 = (Assignment)cGroup.eContents().get(28);
-		private final RuleCall cLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_28_0 = (RuleCall)cLocalOffsetAssignment_28.eContents().get(0);
-		private final Assignment cArrayRefAssignment_29 = (Assignment)cGroup.eContents().get(29);
-		private final RuleCall cArrayRefGSSTmTcFormatArrayRefParserRuleCall_29_0 = (RuleCall)cArrayRefAssignment_29.eContents().get(0);
+		private final Assignment cArrayRefAssignment_27 = (Assignment)cGroup.eContents().get(27);
+		private final RuleCall cArrayRefGSSTmTcFormatArrayRefParserRuleCall_27_0 = (RuleCall)cArrayRefAssignment_27.eContents().get(0);
+		private final Assignment cSizeAssignment_28 = (Assignment)cGroup.eContents().get(28);
+		private final RuleCall cSizeGSSTmTcFormatSizeParserRuleCall_28_0 = (RuleCall)cSizeAssignment_28.eContents().get(0);
+		private final Assignment cLocalOffsetAssignment_29 = (Assignment)cGroup.eContents().get(29);
+		private final RuleCall cLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_29_0 = (RuleCall)cLocalOffsetAssignment_29.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_30 = (Keyword)cGroup.eContents().get(30);
 		private final Keyword cSemicolonKeyword_31 = (Keyword)cGroup.eContents().get(31);
 		
@@ -1533,16 +1533,16 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		//	'type' ':=' type=GSSTmTcFormatFieldType ';'
 		//	'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 		//	'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
+		//	arrayRef=GSSTmTcFormatArrayRef
 		//	size=GSSTmTcFormatSize
 		//	localOffset=GSSTmTcFormatLocalOffset
-		//	arrayRef=GSSTmTcFormatArrayRef
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTmTcFormatAIField' '{' 'fid' ':=' fid=INTEGER ';' 'pfid' ':=' pfid=INTEGER ';' 'name' ':=' name=STRING ';'
 		//('description' ':=' description=STRING ';')? 'type' ':=' type=GSSTmTcFormatFieldType ';' 'byteOrder' ':='
 		//byteOrder=GSSTmTcFormatFieldByteOrder ';' 'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
-		//size=GSSTmTcFormatSize localOffset=GSSTmTcFormatLocalOffset arrayRef=GSSTmTcFormatArrayRef '}' ';'
+		//arrayRef=GSSTmTcFormatArrayRef size=GSSTmTcFormatSize localOffset=GSSTmTcFormatLocalOffset '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSTmTcFormatAIField'
@@ -1659,23 +1659,23 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_26() { return cSemicolonKeyword_26; }
 		
-		//size=GSSTmTcFormatSize
-		public Assignment getSizeAssignment_27() { return cSizeAssignment_27; }
-		
-		//GSSTmTcFormatSize
-		public RuleCall getSizeGSSTmTcFormatSizeParserRuleCall_27_0() { return cSizeGSSTmTcFormatSizeParserRuleCall_27_0; }
-		
-		//localOffset=GSSTmTcFormatLocalOffset
-		public Assignment getLocalOffsetAssignment_28() { return cLocalOffsetAssignment_28; }
-		
-		//GSSTmTcFormatLocalOffset
-		public RuleCall getLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_28_0() { return cLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_28_0; }
-		
 		//arrayRef=GSSTmTcFormatArrayRef
-		public Assignment getArrayRefAssignment_29() { return cArrayRefAssignment_29; }
+		public Assignment getArrayRefAssignment_27() { return cArrayRefAssignment_27; }
 		
 		//GSSTmTcFormatArrayRef
-		public RuleCall getArrayRefGSSTmTcFormatArrayRefParserRuleCall_29_0() { return cArrayRefGSSTmTcFormatArrayRefParserRuleCall_29_0; }
+		public RuleCall getArrayRefGSSTmTcFormatArrayRefParserRuleCall_27_0() { return cArrayRefGSSTmTcFormatArrayRefParserRuleCall_27_0; }
+		
+		//size=GSSTmTcFormatSize
+		public Assignment getSizeAssignment_28() { return cSizeAssignment_28; }
+		
+		//GSSTmTcFormatSize
+		public RuleCall getSizeGSSTmTcFormatSizeParserRuleCall_28_0() { return cSizeGSSTmTcFormatSizeParserRuleCall_28_0; }
+		
+		//localOffset=GSSTmTcFormatLocalOffset
+		public Assignment getLocalOffsetAssignment_29() { return cLocalOffsetAssignment_29; }
+		
+		//GSSTmTcFormatLocalOffset
+		public RuleCall getLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_29_0() { return cLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_29_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_30() { return cRightCurlyBracketKeyword_30; }
@@ -3208,8 +3208,8 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 	//	'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 	//	'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
 	//	constSize=GSSTmTcFormatConstSize
-	//	maxSize=GSSTmTcFormatMaxSize
 	//	variableSize=GSSTmTcFormatVariableSize
+	//	maxSize=GSSTmTcFormatMaxSize
 	//	globalOffset=GSSTmTcFormatGlobalOffset
 	//	'}' ';';
 	public GSSTmTcFormatVSFieldElements getGSSTmTcFormatVSFieldAccess() {
@@ -3262,9 +3262,9 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 	//	'type' ':=' type=GSSTmTcFormatFieldType ';'
 	//	'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 	//	'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
+	//	arrayDimension=GSSTmTcFormatArrayDimension
 	//	size=GSSTmTcFormatSize
 	//	globalOffset=GSSTmTcFormatGlobalOffset
-	//	arrayDimension=GSSTmTcFormatArrayDimension
 	//	'}' ';';
 	public GSSTmTcFormatAFieldElements getGSSTmTcFormatAFieldAccess() {
 		return pGSSTmTcFormatAField;
@@ -3282,9 +3282,9 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 	//	'type' ':=' type=GSSTmTcFormatFieldType ';'
 	//	'byteOrder' ':=' byteOrder=GSSTmTcFormatFieldByteOrder ';'
 	//	'firstBit' ':=' firstBit=GSSTmTcFormatSFieldFirstBit ';'
+	//	arrayRef=GSSTmTcFormatArrayRef
 	//	size=GSSTmTcFormatSize
 	//	localOffset=GSSTmTcFormatLocalOffset
-	//	arrayRef=GSSTmTcFormatArrayRef
 	//	'}' ';';
 	public GSSTmTcFormatAIFieldElements getGSSTmTcFormatAIFieldAccess() {
 		return pGSSTmTcFormatAIField;

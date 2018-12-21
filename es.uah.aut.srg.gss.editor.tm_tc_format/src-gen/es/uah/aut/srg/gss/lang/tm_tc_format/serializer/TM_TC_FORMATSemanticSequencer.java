@@ -178,9 +178,9 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *         type=GSSTmTcFormatFieldType 
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
+	 *         arrayDimension=GSSTmTcFormatArrayDimension 
 	 *         size=GSSTmTcFormatSize 
-	 *         globalOffset=GSSTmTcFormatGlobalOffset 
-	 *         arrayDimension=GSSTmTcFormatArrayDimension
+	 *         globalOffset=GSSTmTcFormatGlobalOffset
 	 *     )
 	 */
 	protected void sequence_GSSTmTcFormatAField(ISerializationContext context, GSSTmTcFormatAField semanticObject) {
@@ -201,9 +201,9 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *         type=GSSTmTcFormatFieldType 
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
+	 *         arrayRef=GSSTmTcFormatArrayRef 
 	 *         size=GSSTmTcFormatSize 
-	 *         localOffset=GSSTmTcFormatLocalOffset 
-	 *         arrayRef=GSSTmTcFormatArrayRef
+	 *         localOffset=GSSTmTcFormatLocalOffset
 	 *     )
 	 */
 	protected void sequence_GSSTmTcFormatAIField(ISerializationContext context, GSSTmTcFormatAIField semanticObject) {
@@ -569,8 +569,8 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
 	 *         constSize=GSSTmTcFormatConstSize 
-	 *         maxSize=GSSTmTcFormatMaxSize 
 	 *         variableSize=GSSTmTcFormatVariableSize 
+	 *         maxSize=GSSTmTcFormatMaxSize 
 	 *         globalOffset=GSSTmTcFormatGlobalOffset
 	 *     )
 	 */

@@ -1434,28 +1434,9 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_28_0());
+					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_28_0());
 				}
-				lv_maxSize_31_0=ruleGSSTmTcFormatMaxSize
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVSFieldRule());
-					}
-					set(
-						$current,
-						"maxSize",
-						lv_maxSize_31_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatMaxSize");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_29_0());
-				}
-				lv_variableSize_32_0=ruleGSSTmTcFormatVariableSize
+				lv_variableSize_31_0=ruleGSSTmTcFormatVariableSize
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVSFieldRule());
@@ -1463,8 +1444,27 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 					set(
 						$current,
 						"variableSize",
-						lv_variableSize_32_0,
+						lv_variableSize_31_0,
 						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatVariableSize");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_29_0());
+				}
+				lv_maxSize_32_0=ruleGSSTmTcFormatMaxSize
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVSFieldRule());
+					}
+					set(
+						$current,
+						"maxSize",
+						lv_maxSize_32_0,
+						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatMaxSize");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2179,9 +2179,28 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_27_0());
+					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_27_0());
 				}
-				lv_size_30_0=ruleGSSTmTcFormatSize
+				lv_arrayDimension_30_0=ruleGSSTmTcFormatArrayDimension
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAFieldRule());
+					}
+					set(
+						$current,
+						"arrayDimension",
+						lv_arrayDimension_30_0,
+						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatArrayDimension");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_28_0());
+				}
+				lv_size_31_0=ruleGSSTmTcFormatSize
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAFieldRule());
@@ -2189,7 +2208,7 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 					set(
 						$current,
 						"size",
-						lv_size_30_0,
+						lv_size_31_0,
 						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatSize");
 					afterParserOrEnumRuleCall();
 				}
@@ -2198,9 +2217,9 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_28_0());
+					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_29_0());
 				}
-				lv_globalOffset_31_0=ruleGSSTmTcFormatGlobalOffset
+				lv_globalOffset_32_0=ruleGSSTmTcFormatGlobalOffset
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAFieldRule());
@@ -2208,27 +2227,8 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 					set(
 						$current,
 						"globalOffset",
-						lv_globalOffset_31_0,
+						lv_globalOffset_32_0,
 						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatGlobalOffset");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_29_0());
-				}
-				lv_arrayDimension_32_0=ruleGSSTmTcFormatArrayDimension
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAFieldRule());
-					}
-					set(
-						$current,
-						"arrayDimension",
-						lv_arrayDimension_32_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatArrayDimension");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2488,9 +2488,28 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_27_0());
+					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getArrayRefGSSTmTcFormatArrayRefParserRuleCall_27_0());
 				}
-				lv_size_30_0=ruleGSSTmTcFormatSize
+				lv_arrayRef_30_0=ruleGSSTmTcFormatArrayRef
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAIFieldRule());
+					}
+					set(
+						$current,
+						"arrayRef",
+						lv_arrayRef_30_0,
+						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatArrayRef");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_28_0());
+				}
+				lv_size_31_0=ruleGSSTmTcFormatSize
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAIFieldRule());
@@ -2498,7 +2517,7 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 					set(
 						$current,
 						"size",
-						lv_size_30_0,
+						lv_size_31_0,
 						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatSize");
 					afterParserOrEnumRuleCall();
 				}
@@ -2507,9 +2526,9 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_28_0());
+					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_29_0());
 				}
-				lv_localOffset_31_0=ruleGSSTmTcFormatLocalOffset
+				lv_localOffset_32_0=ruleGSSTmTcFormatLocalOffset
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAIFieldRule());
@@ -2517,27 +2536,8 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 					set(
 						$current,
 						"localOffset",
-						lv_localOffset_31_0,
+						lv_localOffset_32_0,
 						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatLocalOffset");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getArrayRefGSSTmTcFormatArrayRefParserRuleCall_29_0());
-				}
-				lv_arrayRef_32_0=ruleGSSTmTcFormatArrayRef
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAIFieldRule());
-					}
-					set(
-						$current,
-						"arrayRef",
-						lv_arrayRef_32_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatArrayRef");
 					afterParserOrEnumRuleCall();
 				}
 			)

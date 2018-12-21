@@ -2682,7 +2682,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSTmTcFormatVSField"
-    // InternalTM_TC_FORMAT.g:1182:1: ruleGSSTmTcFormatVSField returns [EObject current=null] : (otherlv_0= 'GSSTmTcFormatVSField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_constSize_30_0= ruleGSSTmTcFormatConstSize ) ) ( (lv_maxSize_31_0= ruleGSSTmTcFormatMaxSize ) ) ( (lv_variableSize_32_0= ruleGSSTmTcFormatVariableSize ) ) ( (lv_globalOffset_33_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_34= '}' otherlv_35= ';' ) ;
+    // InternalTM_TC_FORMAT.g:1182:1: ruleGSSTmTcFormatVSField returns [EObject current=null] : (otherlv_0= 'GSSTmTcFormatVSField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_constSize_30_0= ruleGSSTmTcFormatConstSize ) ) ( (lv_variableSize_31_0= ruleGSSTmTcFormatVariableSize ) ) ( (lv_maxSize_32_0= ruleGSSTmTcFormatMaxSize ) ) ( (lv_globalOffset_33_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_34= '}' otherlv_35= ';' ) ;
     public final EObject ruleGSSTmTcFormatVSField() throws RecognitionException {
         EObject current = null;
 
@@ -2725,9 +2725,9 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
 
         EObject lv_constSize_30_0 = null;
 
-        EObject lv_maxSize_31_0 = null;
+        EObject lv_variableSize_31_0 = null;
 
-        EObject lv_variableSize_32_0 = null;
+        EObject lv_maxSize_32_0 = null;
 
         EObject lv_globalOffset_33_0 = null;
 
@@ -2736,11 +2736,11 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTM_TC_FORMAT.g:1188:2: ( (otherlv_0= 'GSSTmTcFormatVSField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_constSize_30_0= ruleGSSTmTcFormatConstSize ) ) ( (lv_maxSize_31_0= ruleGSSTmTcFormatMaxSize ) ) ( (lv_variableSize_32_0= ruleGSSTmTcFormatVariableSize ) ) ( (lv_globalOffset_33_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_34= '}' otherlv_35= ';' ) )
-            // InternalTM_TC_FORMAT.g:1189:2: (otherlv_0= 'GSSTmTcFormatVSField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_constSize_30_0= ruleGSSTmTcFormatConstSize ) ) ( (lv_maxSize_31_0= ruleGSSTmTcFormatMaxSize ) ) ( (lv_variableSize_32_0= ruleGSSTmTcFormatVariableSize ) ) ( (lv_globalOffset_33_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_34= '}' otherlv_35= ';' )
+            // InternalTM_TC_FORMAT.g:1188:2: ( (otherlv_0= 'GSSTmTcFormatVSField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_constSize_30_0= ruleGSSTmTcFormatConstSize ) ) ( (lv_variableSize_31_0= ruleGSSTmTcFormatVariableSize ) ) ( (lv_maxSize_32_0= ruleGSSTmTcFormatMaxSize ) ) ( (lv_globalOffset_33_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_34= '}' otherlv_35= ';' ) )
+            // InternalTM_TC_FORMAT.g:1189:2: (otherlv_0= 'GSSTmTcFormatVSField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_constSize_30_0= ruleGSSTmTcFormatConstSize ) ) ( (lv_variableSize_31_0= ruleGSSTmTcFormatVariableSize ) ) ( (lv_maxSize_32_0= ruleGSSTmTcFormatMaxSize ) ) ( (lv_globalOffset_33_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_34= '}' otherlv_35= ';' )
             {
-            // InternalTM_TC_FORMAT.g:1189:2: (otherlv_0= 'GSSTmTcFormatVSField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_constSize_30_0= ruleGSSTmTcFormatConstSize ) ) ( (lv_maxSize_31_0= ruleGSSTmTcFormatMaxSize ) ) ( (lv_variableSize_32_0= ruleGSSTmTcFormatVariableSize ) ) ( (lv_globalOffset_33_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_34= '}' otherlv_35= ';' )
-            // InternalTM_TC_FORMAT.g:1190:3: otherlv_0= 'GSSTmTcFormatVSField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_constSize_30_0= ruleGSSTmTcFormatConstSize ) ) ( (lv_maxSize_31_0= ruleGSSTmTcFormatMaxSize ) ) ( (lv_variableSize_32_0= ruleGSSTmTcFormatVariableSize ) ) ( (lv_globalOffset_33_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_34= '}' otherlv_35= ';'
+            // InternalTM_TC_FORMAT.g:1189:2: (otherlv_0= 'GSSTmTcFormatVSField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_constSize_30_0= ruleGSSTmTcFormatConstSize ) ) ( (lv_variableSize_31_0= ruleGSSTmTcFormatVariableSize ) ) ( (lv_maxSize_32_0= ruleGSSTmTcFormatMaxSize ) ) ( (lv_globalOffset_33_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_34= '}' otherlv_35= ';' )
+            // InternalTM_TC_FORMAT.g:1190:3: otherlv_0= 'GSSTmTcFormatVSField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_constSize_30_0= ruleGSSTmTcFormatConstSize ) ) ( (lv_variableSize_31_0= ruleGSSTmTcFormatVariableSize ) ) ( (lv_maxSize_32_0= ruleGSSTmTcFormatMaxSize ) ) ( (lv_globalOffset_33_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_34= '}' otherlv_35= ';'
             {
             otherlv_0=(Token)match(input,30,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3167,54 +3167,19 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalTM_TC_FORMAT.g:1434:3: ( (lv_maxSize_31_0= ruleGSSTmTcFormatMaxSize ) )
-            // InternalTM_TC_FORMAT.g:1435:4: (lv_maxSize_31_0= ruleGSSTmTcFormatMaxSize )
+            // InternalTM_TC_FORMAT.g:1434:3: ( (lv_variableSize_31_0= ruleGSSTmTcFormatVariableSize ) )
+            // InternalTM_TC_FORMAT.g:1435:4: (lv_variableSize_31_0= ruleGSSTmTcFormatVariableSize )
             {
-            // InternalTM_TC_FORMAT.g:1435:4: (lv_maxSize_31_0= ruleGSSTmTcFormatMaxSize )
-            // InternalTM_TC_FORMAT.g:1436:5: lv_maxSize_31_0= ruleGSSTmTcFormatMaxSize
+            // InternalTM_TC_FORMAT.g:1435:4: (lv_variableSize_31_0= ruleGSSTmTcFormatVariableSize )
+            // InternalTM_TC_FORMAT.g:1436:5: lv_variableSize_31_0= ruleGSSTmTcFormatVariableSize
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_28_0());
+              					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_28_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_31);
-            lv_maxSize_31_0=ruleGSSTmTcFormatMaxSize();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVSFieldRule());
-              					}
-              					set(
-              						current,
-              						"maxSize",
-              						lv_maxSize_31_0,
-              						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatMaxSize");
-              					afterParserOrEnumRuleCall();
-              				
-            }
-
-            }
-
-
-            }
-
-            // InternalTM_TC_FORMAT.g:1453:3: ( (lv_variableSize_32_0= ruleGSSTmTcFormatVariableSize ) )
-            // InternalTM_TC_FORMAT.g:1454:4: (lv_variableSize_32_0= ruleGSSTmTcFormatVariableSize )
-            {
-            // InternalTM_TC_FORMAT.g:1454:4: (lv_variableSize_32_0= ruleGSSTmTcFormatVariableSize )
-            // InternalTM_TC_FORMAT.g:1455:5: lv_variableSize_32_0= ruleGSSTmTcFormatVariableSize
-            {
-            if ( state.backtracking==0 ) {
-
-              					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_29_0());
-              				
-            }
-            pushFollow(FollowSets000.FOLLOW_26);
-            lv_variableSize_32_0=ruleGSSTmTcFormatVariableSize();
+            lv_variableSize_31_0=ruleGSSTmTcFormatVariableSize();
 
             state._fsp--;
             if (state.failed) return current;
@@ -3226,8 +3191,43 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
               					set(
               						current,
               						"variableSize",
-              						lv_variableSize_32_0,
+              						lv_variableSize_31_0,
               						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatVariableSize");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            // InternalTM_TC_FORMAT.g:1453:3: ( (lv_maxSize_32_0= ruleGSSTmTcFormatMaxSize ) )
+            // InternalTM_TC_FORMAT.g:1454:4: (lv_maxSize_32_0= ruleGSSTmTcFormatMaxSize )
+            {
+            // InternalTM_TC_FORMAT.g:1454:4: (lv_maxSize_32_0= ruleGSSTmTcFormatMaxSize )
+            // InternalTM_TC_FORMAT.g:1455:5: lv_maxSize_32_0= ruleGSSTmTcFormatMaxSize
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_29_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_26);
+            lv_maxSize_32_0=ruleGSSTmTcFormatMaxSize();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVSFieldRule());
+              					}
+              					set(
+              						current,
+              						"maxSize",
+              						lv_maxSize_32_0,
+              						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatMaxSize");
               					afterParserOrEnumRuleCall();
               				
             }
@@ -4255,7 +4255,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSTmTcFormatAField"
-    // InternalTM_TC_FORMAT.g:1946:1: ruleGSSTmTcFormatAField returns [EObject current=null] : (otherlv_0= 'GSSTmTcFormatAField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_size_30_0= ruleGSSTmTcFormatSize ) ) ( (lv_globalOffset_31_0= ruleGSSTmTcFormatGlobalOffset ) ) ( (lv_arrayDimension_32_0= ruleGSSTmTcFormatArrayDimension ) ) otherlv_33= '}' otherlv_34= ';' ) ;
+    // InternalTM_TC_FORMAT.g:1946:1: ruleGSSTmTcFormatAField returns [EObject current=null] : (otherlv_0= 'GSSTmTcFormatAField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_arrayDimension_30_0= ruleGSSTmTcFormatArrayDimension ) ) ( (lv_size_31_0= ruleGSSTmTcFormatSize ) ) ( (lv_globalOffset_32_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_33= '}' otherlv_34= ';' ) ;
     public final EObject ruleGSSTmTcFormatAField() throws RecognitionException {
         EObject current = null;
 
@@ -4296,22 +4296,22 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
 
         Enumerator lv_firstBit_28_0 = null;
 
-        EObject lv_size_30_0 = null;
+        EObject lv_arrayDimension_30_0 = null;
 
-        EObject lv_globalOffset_31_0 = null;
+        EObject lv_size_31_0 = null;
 
-        EObject lv_arrayDimension_32_0 = null;
+        EObject lv_globalOffset_32_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalTM_TC_FORMAT.g:1952:2: ( (otherlv_0= 'GSSTmTcFormatAField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_size_30_0= ruleGSSTmTcFormatSize ) ) ( (lv_globalOffset_31_0= ruleGSSTmTcFormatGlobalOffset ) ) ( (lv_arrayDimension_32_0= ruleGSSTmTcFormatArrayDimension ) ) otherlv_33= '}' otherlv_34= ';' ) )
-            // InternalTM_TC_FORMAT.g:1953:2: (otherlv_0= 'GSSTmTcFormatAField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_size_30_0= ruleGSSTmTcFormatSize ) ) ( (lv_globalOffset_31_0= ruleGSSTmTcFormatGlobalOffset ) ) ( (lv_arrayDimension_32_0= ruleGSSTmTcFormatArrayDimension ) ) otherlv_33= '}' otherlv_34= ';' )
+            // InternalTM_TC_FORMAT.g:1952:2: ( (otherlv_0= 'GSSTmTcFormatAField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_arrayDimension_30_0= ruleGSSTmTcFormatArrayDimension ) ) ( (lv_size_31_0= ruleGSSTmTcFormatSize ) ) ( (lv_globalOffset_32_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_33= '}' otherlv_34= ';' ) )
+            // InternalTM_TC_FORMAT.g:1953:2: (otherlv_0= 'GSSTmTcFormatAField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_arrayDimension_30_0= ruleGSSTmTcFormatArrayDimension ) ) ( (lv_size_31_0= ruleGSSTmTcFormatSize ) ) ( (lv_globalOffset_32_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_33= '}' otherlv_34= ';' )
             {
-            // InternalTM_TC_FORMAT.g:1953:2: (otherlv_0= 'GSSTmTcFormatAField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_size_30_0= ruleGSSTmTcFormatSize ) ) ( (lv_globalOffset_31_0= ruleGSSTmTcFormatGlobalOffset ) ) ( (lv_arrayDimension_32_0= ruleGSSTmTcFormatArrayDimension ) ) otherlv_33= '}' otherlv_34= ';' )
-            // InternalTM_TC_FORMAT.g:1954:3: otherlv_0= 'GSSTmTcFormatAField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_size_30_0= ruleGSSTmTcFormatSize ) ) ( (lv_globalOffset_31_0= ruleGSSTmTcFormatGlobalOffset ) ) ( (lv_arrayDimension_32_0= ruleGSSTmTcFormatArrayDimension ) ) otherlv_33= '}' otherlv_34= ';'
+            // InternalTM_TC_FORMAT.g:1953:2: (otherlv_0= 'GSSTmTcFormatAField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_arrayDimension_30_0= ruleGSSTmTcFormatArrayDimension ) ) ( (lv_size_31_0= ruleGSSTmTcFormatSize ) ) ( (lv_globalOffset_32_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_33= '}' otherlv_34= ';' )
+            // InternalTM_TC_FORMAT.g:1954:3: otherlv_0= 'GSSTmTcFormatAField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_arrayDimension_30_0= ruleGSSTmTcFormatArrayDimension ) ) ( (lv_size_31_0= ruleGSSTmTcFormatSize ) ) ( (lv_globalOffset_32_0= ruleGSSTmTcFormatGlobalOffset ) ) otherlv_33= '}' otherlv_34= ';'
             {
             otherlv_0=(Token)match(input,34,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4697,95 +4697,25 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_29=(Token)match(input,14,FollowSets000.FOLLOW_25); if (state.failed) return current;
+            otherlv_29=(Token)match(input,14,FollowSets000.FOLLOW_37); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_29, grammarAccess.getGSSTmTcFormatAFieldAccess().getSemicolonKeyword_26());
               		
             }
-            // InternalTM_TC_FORMAT.g:2179:3: ( (lv_size_30_0= ruleGSSTmTcFormatSize ) )
-            // InternalTM_TC_FORMAT.g:2180:4: (lv_size_30_0= ruleGSSTmTcFormatSize )
+            // InternalTM_TC_FORMAT.g:2179:3: ( (lv_arrayDimension_30_0= ruleGSSTmTcFormatArrayDimension ) )
+            // InternalTM_TC_FORMAT.g:2180:4: (lv_arrayDimension_30_0= ruleGSSTmTcFormatArrayDimension )
             {
-            // InternalTM_TC_FORMAT.g:2180:4: (lv_size_30_0= ruleGSSTmTcFormatSize )
-            // InternalTM_TC_FORMAT.g:2181:5: lv_size_30_0= ruleGSSTmTcFormatSize
-            {
-            if ( state.backtracking==0 ) {
-
-              					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_27_0());
-              				
-            }
-            pushFollow(FollowSets000.FOLLOW_26);
-            lv_size_30_0=ruleGSSTmTcFormatSize();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAFieldRule());
-              					}
-              					set(
-              						current,
-              						"size",
-              						lv_size_30_0,
-              						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatSize");
-              					afterParserOrEnumRuleCall();
-              				
-            }
-
-            }
-
-
-            }
-
-            // InternalTM_TC_FORMAT.g:2198:3: ( (lv_globalOffset_31_0= ruleGSSTmTcFormatGlobalOffset ) )
-            // InternalTM_TC_FORMAT.g:2199:4: (lv_globalOffset_31_0= ruleGSSTmTcFormatGlobalOffset )
-            {
-            // InternalTM_TC_FORMAT.g:2199:4: (lv_globalOffset_31_0= ruleGSSTmTcFormatGlobalOffset )
-            // InternalTM_TC_FORMAT.g:2200:5: lv_globalOffset_31_0= ruleGSSTmTcFormatGlobalOffset
+            // InternalTM_TC_FORMAT.g:2180:4: (lv_arrayDimension_30_0= ruleGSSTmTcFormatArrayDimension )
+            // InternalTM_TC_FORMAT.g:2181:5: lv_arrayDimension_30_0= ruleGSSTmTcFormatArrayDimension
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_28_0());
+              					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_27_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_37);
-            lv_globalOffset_31_0=ruleGSSTmTcFormatGlobalOffset();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAFieldRule());
-              					}
-              					set(
-              						current,
-              						"globalOffset",
-              						lv_globalOffset_31_0,
-              						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatGlobalOffset");
-              					afterParserOrEnumRuleCall();
-              				
-            }
-
-            }
-
-
-            }
-
-            // InternalTM_TC_FORMAT.g:2217:3: ( (lv_arrayDimension_32_0= ruleGSSTmTcFormatArrayDimension ) )
-            // InternalTM_TC_FORMAT.g:2218:4: (lv_arrayDimension_32_0= ruleGSSTmTcFormatArrayDimension )
-            {
-            // InternalTM_TC_FORMAT.g:2218:4: (lv_arrayDimension_32_0= ruleGSSTmTcFormatArrayDimension )
-            // InternalTM_TC_FORMAT.g:2219:5: lv_arrayDimension_32_0= ruleGSSTmTcFormatArrayDimension
-            {
-            if ( state.backtracking==0 ) {
-
-              					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_29_0());
-              				
-            }
-            pushFollow(FollowSets000.FOLLOW_27);
-            lv_arrayDimension_32_0=ruleGSSTmTcFormatArrayDimension();
+            pushFollow(FollowSets000.FOLLOW_25);
+            lv_arrayDimension_30_0=ruleGSSTmTcFormatArrayDimension();
 
             state._fsp--;
             if (state.failed) return current;
@@ -4797,8 +4727,78 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
               					set(
               						current,
               						"arrayDimension",
-              						lv_arrayDimension_32_0,
+              						lv_arrayDimension_30_0,
               						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatArrayDimension");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            // InternalTM_TC_FORMAT.g:2198:3: ( (lv_size_31_0= ruleGSSTmTcFormatSize ) )
+            // InternalTM_TC_FORMAT.g:2199:4: (lv_size_31_0= ruleGSSTmTcFormatSize )
+            {
+            // InternalTM_TC_FORMAT.g:2199:4: (lv_size_31_0= ruleGSSTmTcFormatSize )
+            // InternalTM_TC_FORMAT.g:2200:5: lv_size_31_0= ruleGSSTmTcFormatSize
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_28_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_26);
+            lv_size_31_0=ruleGSSTmTcFormatSize();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAFieldRule());
+              					}
+              					set(
+              						current,
+              						"size",
+              						lv_size_31_0,
+              						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatSize");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            // InternalTM_TC_FORMAT.g:2217:3: ( (lv_globalOffset_32_0= ruleGSSTmTcFormatGlobalOffset ) )
+            // InternalTM_TC_FORMAT.g:2218:4: (lv_globalOffset_32_0= ruleGSSTmTcFormatGlobalOffset )
+            {
+            // InternalTM_TC_FORMAT.g:2218:4: (lv_globalOffset_32_0= ruleGSSTmTcFormatGlobalOffset )
+            // InternalTM_TC_FORMAT.g:2219:5: lv_globalOffset_32_0= ruleGSSTmTcFormatGlobalOffset
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_29_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_27);
+            lv_globalOffset_32_0=ruleGSSTmTcFormatGlobalOffset();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAFieldRule());
+              					}
+              					set(
+              						current,
+              						"globalOffset",
+              						lv_globalOffset_32_0,
+              						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatGlobalOffset");
               					afterParserOrEnumRuleCall();
               				
             }
@@ -4885,7 +4885,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSTmTcFormatAIField"
-    // InternalTM_TC_FORMAT.g:2255:1: ruleGSSTmTcFormatAIField returns [EObject current=null] : (otherlv_0= 'GSSTmTcFormatAIField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_size_30_0= ruleGSSTmTcFormatSize ) ) ( (lv_localOffset_31_0= ruleGSSTmTcFormatLocalOffset ) ) ( (lv_arrayRef_32_0= ruleGSSTmTcFormatArrayRef ) ) otherlv_33= '}' otherlv_34= ';' ) ;
+    // InternalTM_TC_FORMAT.g:2255:1: ruleGSSTmTcFormatAIField returns [EObject current=null] : (otherlv_0= 'GSSTmTcFormatAIField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_arrayRef_30_0= ruleGSSTmTcFormatArrayRef ) ) ( (lv_size_31_0= ruleGSSTmTcFormatSize ) ) ( (lv_localOffset_32_0= ruleGSSTmTcFormatLocalOffset ) ) otherlv_33= '}' otherlv_34= ';' ) ;
     public final EObject ruleGSSTmTcFormatAIField() throws RecognitionException {
         EObject current = null;
 
@@ -4926,22 +4926,22 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
 
         Enumerator lv_firstBit_28_0 = null;
 
-        EObject lv_size_30_0 = null;
+        EObject lv_arrayRef_30_0 = null;
 
-        EObject lv_localOffset_31_0 = null;
+        EObject lv_size_31_0 = null;
 
-        EObject lv_arrayRef_32_0 = null;
+        EObject lv_localOffset_32_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalTM_TC_FORMAT.g:2261:2: ( (otherlv_0= 'GSSTmTcFormatAIField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_size_30_0= ruleGSSTmTcFormatSize ) ) ( (lv_localOffset_31_0= ruleGSSTmTcFormatLocalOffset ) ) ( (lv_arrayRef_32_0= ruleGSSTmTcFormatArrayRef ) ) otherlv_33= '}' otherlv_34= ';' ) )
-            // InternalTM_TC_FORMAT.g:2262:2: (otherlv_0= 'GSSTmTcFormatAIField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_size_30_0= ruleGSSTmTcFormatSize ) ) ( (lv_localOffset_31_0= ruleGSSTmTcFormatLocalOffset ) ) ( (lv_arrayRef_32_0= ruleGSSTmTcFormatArrayRef ) ) otherlv_33= '}' otherlv_34= ';' )
+            // InternalTM_TC_FORMAT.g:2261:2: ( (otherlv_0= 'GSSTmTcFormatAIField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_arrayRef_30_0= ruleGSSTmTcFormatArrayRef ) ) ( (lv_size_31_0= ruleGSSTmTcFormatSize ) ) ( (lv_localOffset_32_0= ruleGSSTmTcFormatLocalOffset ) ) otherlv_33= '}' otherlv_34= ';' ) )
+            // InternalTM_TC_FORMAT.g:2262:2: (otherlv_0= 'GSSTmTcFormatAIField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_arrayRef_30_0= ruleGSSTmTcFormatArrayRef ) ) ( (lv_size_31_0= ruleGSSTmTcFormatSize ) ) ( (lv_localOffset_32_0= ruleGSSTmTcFormatLocalOffset ) ) otherlv_33= '}' otherlv_34= ';' )
             {
-            // InternalTM_TC_FORMAT.g:2262:2: (otherlv_0= 'GSSTmTcFormatAIField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_size_30_0= ruleGSSTmTcFormatSize ) ) ( (lv_localOffset_31_0= ruleGSSTmTcFormatLocalOffset ) ) ( (lv_arrayRef_32_0= ruleGSSTmTcFormatArrayRef ) ) otherlv_33= '}' otherlv_34= ';' )
-            // InternalTM_TC_FORMAT.g:2263:3: otherlv_0= 'GSSTmTcFormatAIField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_size_30_0= ruleGSSTmTcFormatSize ) ) ( (lv_localOffset_31_0= ruleGSSTmTcFormatLocalOffset ) ) ( (lv_arrayRef_32_0= ruleGSSTmTcFormatArrayRef ) ) otherlv_33= '}' otherlv_34= ';'
+            // InternalTM_TC_FORMAT.g:2262:2: (otherlv_0= 'GSSTmTcFormatAIField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_arrayRef_30_0= ruleGSSTmTcFormatArrayRef ) ) ( (lv_size_31_0= ruleGSSTmTcFormatSize ) ) ( (lv_localOffset_32_0= ruleGSSTmTcFormatLocalOffset ) ) otherlv_33= '}' otherlv_34= ';' )
+            // InternalTM_TC_FORMAT.g:2263:3: otherlv_0= 'GSSTmTcFormatAIField' otherlv_1= '{' otherlv_2= 'fid' otherlv_3= ':=' ( (lv_fid_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'pfid' otherlv_7= ':=' ( (lv_pfid_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'name' otherlv_11= ':=' ( (lv_name_12_0= RULE_STRING ) ) otherlv_13= ';' (otherlv_14= 'description' otherlv_15= ':=' ( (lv_description_16_0= RULE_STRING ) ) otherlv_17= ';' )? otherlv_18= 'type' otherlv_19= ':=' ( (lv_type_20_0= ruleGSSTmTcFormatFieldType ) ) otherlv_21= ';' otherlv_22= 'byteOrder' otherlv_23= ':=' ( (lv_byteOrder_24_0= ruleGSSTmTcFormatFieldByteOrder ) ) otherlv_25= ';' otherlv_26= 'firstBit' otherlv_27= ':=' ( (lv_firstBit_28_0= ruleGSSTmTcFormatSFieldFirstBit ) ) otherlv_29= ';' ( (lv_arrayRef_30_0= ruleGSSTmTcFormatArrayRef ) ) ( (lv_size_31_0= ruleGSSTmTcFormatSize ) ) ( (lv_localOffset_32_0= ruleGSSTmTcFormatLocalOffset ) ) otherlv_33= '}' otherlv_34= ';'
             {
             otherlv_0=(Token)match(input,35,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5327,95 +5327,25 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_29=(Token)match(input,14,FollowSets000.FOLLOW_25); if (state.failed) return current;
+            otherlv_29=(Token)match(input,14,FollowSets000.FOLLOW_38); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_29, grammarAccess.getGSSTmTcFormatAIFieldAccess().getSemicolonKeyword_26());
               		
             }
-            // InternalTM_TC_FORMAT.g:2488:3: ( (lv_size_30_0= ruleGSSTmTcFormatSize ) )
-            // InternalTM_TC_FORMAT.g:2489:4: (lv_size_30_0= ruleGSSTmTcFormatSize )
+            // InternalTM_TC_FORMAT.g:2488:3: ( (lv_arrayRef_30_0= ruleGSSTmTcFormatArrayRef ) )
+            // InternalTM_TC_FORMAT.g:2489:4: (lv_arrayRef_30_0= ruleGSSTmTcFormatArrayRef )
             {
-            // InternalTM_TC_FORMAT.g:2489:4: (lv_size_30_0= ruleGSSTmTcFormatSize )
-            // InternalTM_TC_FORMAT.g:2490:5: lv_size_30_0= ruleGSSTmTcFormatSize
-            {
-            if ( state.backtracking==0 ) {
-
-              					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_27_0());
-              				
-            }
-            pushFollow(FollowSets000.FOLLOW_38);
-            lv_size_30_0=ruleGSSTmTcFormatSize();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAIFieldRule());
-              					}
-              					set(
-              						current,
-              						"size",
-              						lv_size_30_0,
-              						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatSize");
-              					afterParserOrEnumRuleCall();
-              				
-            }
-
-            }
-
-
-            }
-
-            // InternalTM_TC_FORMAT.g:2507:3: ( (lv_localOffset_31_0= ruleGSSTmTcFormatLocalOffset ) )
-            // InternalTM_TC_FORMAT.g:2508:4: (lv_localOffset_31_0= ruleGSSTmTcFormatLocalOffset )
-            {
-            // InternalTM_TC_FORMAT.g:2508:4: (lv_localOffset_31_0= ruleGSSTmTcFormatLocalOffset )
-            // InternalTM_TC_FORMAT.g:2509:5: lv_localOffset_31_0= ruleGSSTmTcFormatLocalOffset
+            // InternalTM_TC_FORMAT.g:2489:4: (lv_arrayRef_30_0= ruleGSSTmTcFormatArrayRef )
+            // InternalTM_TC_FORMAT.g:2490:5: lv_arrayRef_30_0= ruleGSSTmTcFormatArrayRef
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_28_0());
+              					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getArrayRefGSSTmTcFormatArrayRefParserRuleCall_27_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_39);
-            lv_localOffset_31_0=ruleGSSTmTcFormatLocalOffset();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAIFieldRule());
-              					}
-              					set(
-              						current,
-              						"localOffset",
-              						lv_localOffset_31_0,
-              						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatLocalOffset");
-              					afterParserOrEnumRuleCall();
-              				
-            }
-
-            }
-
-
-            }
-
-            // InternalTM_TC_FORMAT.g:2526:3: ( (lv_arrayRef_32_0= ruleGSSTmTcFormatArrayRef ) )
-            // InternalTM_TC_FORMAT.g:2527:4: (lv_arrayRef_32_0= ruleGSSTmTcFormatArrayRef )
-            {
-            // InternalTM_TC_FORMAT.g:2527:4: (lv_arrayRef_32_0= ruleGSSTmTcFormatArrayRef )
-            // InternalTM_TC_FORMAT.g:2528:5: lv_arrayRef_32_0= ruleGSSTmTcFormatArrayRef
-            {
-            if ( state.backtracking==0 ) {
-
-              					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getArrayRefGSSTmTcFormatArrayRefParserRuleCall_29_0());
-              				
-            }
-            pushFollow(FollowSets000.FOLLOW_27);
-            lv_arrayRef_32_0=ruleGSSTmTcFormatArrayRef();
+            pushFollow(FollowSets000.FOLLOW_25);
+            lv_arrayRef_30_0=ruleGSSTmTcFormatArrayRef();
 
             state._fsp--;
             if (state.failed) return current;
@@ -5427,8 +5357,78 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
               					set(
               						current,
               						"arrayRef",
-              						lv_arrayRef_32_0,
+              						lv_arrayRef_30_0,
               						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatArrayRef");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            // InternalTM_TC_FORMAT.g:2507:3: ( (lv_size_31_0= ruleGSSTmTcFormatSize ) )
+            // InternalTM_TC_FORMAT.g:2508:4: (lv_size_31_0= ruleGSSTmTcFormatSize )
+            {
+            // InternalTM_TC_FORMAT.g:2508:4: (lv_size_31_0= ruleGSSTmTcFormatSize )
+            // InternalTM_TC_FORMAT.g:2509:5: lv_size_31_0= ruleGSSTmTcFormatSize
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_28_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_39);
+            lv_size_31_0=ruleGSSTmTcFormatSize();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAIFieldRule());
+              					}
+              					set(
+              						current,
+              						"size",
+              						lv_size_31_0,
+              						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatSize");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            // InternalTM_TC_FORMAT.g:2526:3: ( (lv_localOffset_32_0= ruleGSSTmTcFormatLocalOffset ) )
+            // InternalTM_TC_FORMAT.g:2527:4: (lv_localOffset_32_0= ruleGSSTmTcFormatLocalOffset )
+            {
+            // InternalTM_TC_FORMAT.g:2527:4: (lv_localOffset_32_0= ruleGSSTmTcFormatLocalOffset )
+            // InternalTM_TC_FORMAT.g:2528:5: lv_localOffset_32_0= ruleGSSTmTcFormatLocalOffset
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_29_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_27);
+            lv_localOffset_32_0=ruleGSSTmTcFormatLocalOffset();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAIFieldRule());
+              					}
+              					set(
+              						current,
+              						"localOffset",
+              						lv_localOffset_32_0,
+              						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatLocalOffset");
               					afterParserOrEnumRuleCall();
               				
             }
@@ -10371,16 +10371,16 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000200000L});
         public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000010000000000L});
         public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000080000000000L});
-        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000100000000000L});
-        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000200000000000L});
+        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000200000000000L});
+        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000100000000000L});
         public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000204000000L});
         public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000200000000L});
         public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000000000000L,0x0000000000060000L});
         public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0002000000000000L});
         public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0004000000000000L});
         public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0010000000000000L});
-        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0040000000000000L});
-        public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0080000000000000L});
+        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0080000000000000L});
+        public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0040000000000000L});
         public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000002000000000L});
         public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000004000000000L});
         public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000020000000000L});

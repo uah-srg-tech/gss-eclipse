@@ -14915,26 +14915,26 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatVSField__Group__28__Impl"
-    // InternalTM_TC_FORMAT.g:4644:1: rule__GSSTmTcFormatVSField__Group__28__Impl : ( ( rule__GSSTmTcFormatVSField__MaxSizeAssignment_28 ) ) ;
+    // InternalTM_TC_FORMAT.g:4644:1: rule__GSSTmTcFormatVSField__Group__28__Impl : ( ( rule__GSSTmTcFormatVSField__VariableSizeAssignment_28 ) ) ;
     public final void rule__GSSTmTcFormatVSField__Group__28__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:4648:1: ( ( ( rule__GSSTmTcFormatVSField__MaxSizeAssignment_28 ) ) )
-            // InternalTM_TC_FORMAT.g:4649:1: ( ( rule__GSSTmTcFormatVSField__MaxSizeAssignment_28 ) )
+            // InternalTM_TC_FORMAT.g:4648:1: ( ( ( rule__GSSTmTcFormatVSField__VariableSizeAssignment_28 ) ) )
+            // InternalTM_TC_FORMAT.g:4649:1: ( ( rule__GSSTmTcFormatVSField__VariableSizeAssignment_28 ) )
             {
-            // InternalTM_TC_FORMAT.g:4649:1: ( ( rule__GSSTmTcFormatVSField__MaxSizeAssignment_28 ) )
-            // InternalTM_TC_FORMAT.g:4650:2: ( rule__GSSTmTcFormatVSField__MaxSizeAssignment_28 )
+            // InternalTM_TC_FORMAT.g:4649:1: ( ( rule__GSSTmTcFormatVSField__VariableSizeAssignment_28 ) )
+            // InternalTM_TC_FORMAT.g:4650:2: ( rule__GSSTmTcFormatVSField__VariableSizeAssignment_28 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeAssignment_28()); 
+               before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeAssignment_28()); 
             }
-            // InternalTM_TC_FORMAT.g:4651:2: ( rule__GSSTmTcFormatVSField__MaxSizeAssignment_28 )
-            // InternalTM_TC_FORMAT.g:4651:3: rule__GSSTmTcFormatVSField__MaxSizeAssignment_28
+            // InternalTM_TC_FORMAT.g:4651:2: ( rule__GSSTmTcFormatVSField__VariableSizeAssignment_28 )
+            // InternalTM_TC_FORMAT.g:4651:3: rule__GSSTmTcFormatVSField__VariableSizeAssignment_28
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSTmTcFormatVSField__MaxSizeAssignment_28();
+            rule__GSSTmTcFormatVSField__VariableSizeAssignment_28();
 
             state._fsp--;
             if (state.failed) return ;
@@ -14942,7 +14942,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeAssignment_28()); 
+               after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeAssignment_28()); 
             }
 
             }
@@ -15004,26 +15004,26 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatVSField__Group__29__Impl"
-    // InternalTM_TC_FORMAT.g:4671:1: rule__GSSTmTcFormatVSField__Group__29__Impl : ( ( rule__GSSTmTcFormatVSField__VariableSizeAssignment_29 ) ) ;
+    // InternalTM_TC_FORMAT.g:4671:1: rule__GSSTmTcFormatVSField__Group__29__Impl : ( ( rule__GSSTmTcFormatVSField__MaxSizeAssignment_29 ) ) ;
     public final void rule__GSSTmTcFormatVSField__Group__29__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:4675:1: ( ( ( rule__GSSTmTcFormatVSField__VariableSizeAssignment_29 ) ) )
-            // InternalTM_TC_FORMAT.g:4676:1: ( ( rule__GSSTmTcFormatVSField__VariableSizeAssignment_29 ) )
+            // InternalTM_TC_FORMAT.g:4675:1: ( ( ( rule__GSSTmTcFormatVSField__MaxSizeAssignment_29 ) ) )
+            // InternalTM_TC_FORMAT.g:4676:1: ( ( rule__GSSTmTcFormatVSField__MaxSizeAssignment_29 ) )
             {
-            // InternalTM_TC_FORMAT.g:4676:1: ( ( rule__GSSTmTcFormatVSField__VariableSizeAssignment_29 ) )
-            // InternalTM_TC_FORMAT.g:4677:2: ( rule__GSSTmTcFormatVSField__VariableSizeAssignment_29 )
+            // InternalTM_TC_FORMAT.g:4676:1: ( ( rule__GSSTmTcFormatVSField__MaxSizeAssignment_29 ) )
+            // InternalTM_TC_FORMAT.g:4677:2: ( rule__GSSTmTcFormatVSField__MaxSizeAssignment_29 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeAssignment_29()); 
+               before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeAssignment_29()); 
             }
-            // InternalTM_TC_FORMAT.g:4678:2: ( rule__GSSTmTcFormatVSField__VariableSizeAssignment_29 )
-            // InternalTM_TC_FORMAT.g:4678:3: rule__GSSTmTcFormatVSField__VariableSizeAssignment_29
+            // InternalTM_TC_FORMAT.g:4678:2: ( rule__GSSTmTcFormatVSField__MaxSizeAssignment_29 )
+            // InternalTM_TC_FORMAT.g:4678:3: rule__GSSTmTcFormatVSField__MaxSizeAssignment_29
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSTmTcFormatVSField__VariableSizeAssignment_29();
+            rule__GSSTmTcFormatVSField__MaxSizeAssignment_29();
 
             state._fsp--;
             if (state.failed) return ;
@@ -15031,7 +15031,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeAssignment_29()); 
+               after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeAssignment_29()); 
             }
 
             }
@@ -22006,7 +22006,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:6985:1: ( rule__GSSTmTcFormatAField__Group__26__Impl rule__GSSTmTcFormatAField__Group__27 )
             // InternalTM_TC_FORMAT.g:6986:2: rule__GSSTmTcFormatAField__Group__26__Impl rule__GSSTmTcFormatAField__Group__27
             {
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_36);
             rule__GSSTmTcFormatAField__Group__26__Impl();
 
             state._fsp--;
@@ -22085,7 +22085,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:7012:1: ( rule__GSSTmTcFormatAField__Group__27__Impl rule__GSSTmTcFormatAField__Group__28 )
             // InternalTM_TC_FORMAT.g:7013:2: rule__GSSTmTcFormatAField__Group__27__Impl rule__GSSTmTcFormatAField__Group__28
             {
-            pushFollow(FollowSets000.FOLLOW_27);
+            pushFollow(FollowSets000.FOLLOW_26);
             rule__GSSTmTcFormatAField__Group__27__Impl();
 
             state._fsp--;
@@ -22114,26 +22114,26 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatAField__Group__27__Impl"
-    // InternalTM_TC_FORMAT.g:7020:1: rule__GSSTmTcFormatAField__Group__27__Impl : ( ( rule__GSSTmTcFormatAField__SizeAssignment_27 ) ) ;
+    // InternalTM_TC_FORMAT.g:7020:1: rule__GSSTmTcFormatAField__Group__27__Impl : ( ( rule__GSSTmTcFormatAField__ArrayDimensionAssignment_27 ) ) ;
     public final void rule__GSSTmTcFormatAField__Group__27__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:7024:1: ( ( ( rule__GSSTmTcFormatAField__SizeAssignment_27 ) ) )
-            // InternalTM_TC_FORMAT.g:7025:1: ( ( rule__GSSTmTcFormatAField__SizeAssignment_27 ) )
+            // InternalTM_TC_FORMAT.g:7024:1: ( ( ( rule__GSSTmTcFormatAField__ArrayDimensionAssignment_27 ) ) )
+            // InternalTM_TC_FORMAT.g:7025:1: ( ( rule__GSSTmTcFormatAField__ArrayDimensionAssignment_27 ) )
             {
-            // InternalTM_TC_FORMAT.g:7025:1: ( ( rule__GSSTmTcFormatAField__SizeAssignment_27 ) )
-            // InternalTM_TC_FORMAT.g:7026:2: ( rule__GSSTmTcFormatAField__SizeAssignment_27 )
+            // InternalTM_TC_FORMAT.g:7025:1: ( ( rule__GSSTmTcFormatAField__ArrayDimensionAssignment_27 ) )
+            // InternalTM_TC_FORMAT.g:7026:2: ( rule__GSSTmTcFormatAField__ArrayDimensionAssignment_27 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getSizeAssignment_27()); 
+               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getArrayDimensionAssignment_27()); 
             }
-            // InternalTM_TC_FORMAT.g:7027:2: ( rule__GSSTmTcFormatAField__SizeAssignment_27 )
-            // InternalTM_TC_FORMAT.g:7027:3: rule__GSSTmTcFormatAField__SizeAssignment_27
+            // InternalTM_TC_FORMAT.g:7027:2: ( rule__GSSTmTcFormatAField__ArrayDimensionAssignment_27 )
+            // InternalTM_TC_FORMAT.g:7027:3: rule__GSSTmTcFormatAField__ArrayDimensionAssignment_27
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSTmTcFormatAField__SizeAssignment_27();
+            rule__GSSTmTcFormatAField__ArrayDimensionAssignment_27();
 
             state._fsp--;
             if (state.failed) return ;
@@ -22141,7 +22141,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getSizeAssignment_27()); 
+               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getArrayDimensionAssignment_27()); 
             }
 
             }
@@ -22174,7 +22174,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:7039:1: ( rule__GSSTmTcFormatAField__Group__28__Impl rule__GSSTmTcFormatAField__Group__29 )
             // InternalTM_TC_FORMAT.g:7040:2: rule__GSSTmTcFormatAField__Group__28__Impl rule__GSSTmTcFormatAField__Group__29
             {
-            pushFollow(FollowSets000.FOLLOW_36);
+            pushFollow(FollowSets000.FOLLOW_27);
             rule__GSSTmTcFormatAField__Group__28__Impl();
 
             state._fsp--;
@@ -22203,26 +22203,26 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatAField__Group__28__Impl"
-    // InternalTM_TC_FORMAT.g:7047:1: rule__GSSTmTcFormatAField__Group__28__Impl : ( ( rule__GSSTmTcFormatAField__GlobalOffsetAssignment_28 ) ) ;
+    // InternalTM_TC_FORMAT.g:7047:1: rule__GSSTmTcFormatAField__Group__28__Impl : ( ( rule__GSSTmTcFormatAField__SizeAssignment_28 ) ) ;
     public final void rule__GSSTmTcFormatAField__Group__28__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:7051:1: ( ( ( rule__GSSTmTcFormatAField__GlobalOffsetAssignment_28 ) ) )
-            // InternalTM_TC_FORMAT.g:7052:1: ( ( rule__GSSTmTcFormatAField__GlobalOffsetAssignment_28 ) )
+            // InternalTM_TC_FORMAT.g:7051:1: ( ( ( rule__GSSTmTcFormatAField__SizeAssignment_28 ) ) )
+            // InternalTM_TC_FORMAT.g:7052:1: ( ( rule__GSSTmTcFormatAField__SizeAssignment_28 ) )
             {
-            // InternalTM_TC_FORMAT.g:7052:1: ( ( rule__GSSTmTcFormatAField__GlobalOffsetAssignment_28 ) )
-            // InternalTM_TC_FORMAT.g:7053:2: ( rule__GSSTmTcFormatAField__GlobalOffsetAssignment_28 )
+            // InternalTM_TC_FORMAT.g:7052:1: ( ( rule__GSSTmTcFormatAField__SizeAssignment_28 ) )
+            // InternalTM_TC_FORMAT.g:7053:2: ( rule__GSSTmTcFormatAField__SizeAssignment_28 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getGlobalOffsetAssignment_28()); 
+               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getSizeAssignment_28()); 
             }
-            // InternalTM_TC_FORMAT.g:7054:2: ( rule__GSSTmTcFormatAField__GlobalOffsetAssignment_28 )
-            // InternalTM_TC_FORMAT.g:7054:3: rule__GSSTmTcFormatAField__GlobalOffsetAssignment_28
+            // InternalTM_TC_FORMAT.g:7054:2: ( rule__GSSTmTcFormatAField__SizeAssignment_28 )
+            // InternalTM_TC_FORMAT.g:7054:3: rule__GSSTmTcFormatAField__SizeAssignment_28
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSTmTcFormatAField__GlobalOffsetAssignment_28();
+            rule__GSSTmTcFormatAField__SizeAssignment_28();
 
             state._fsp--;
             if (state.failed) return ;
@@ -22230,7 +22230,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getGlobalOffsetAssignment_28()); 
+               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getSizeAssignment_28()); 
             }
 
             }
@@ -22292,26 +22292,26 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatAField__Group__29__Impl"
-    // InternalTM_TC_FORMAT.g:7074:1: rule__GSSTmTcFormatAField__Group__29__Impl : ( ( rule__GSSTmTcFormatAField__ArrayDimensionAssignment_29 ) ) ;
+    // InternalTM_TC_FORMAT.g:7074:1: rule__GSSTmTcFormatAField__Group__29__Impl : ( ( rule__GSSTmTcFormatAField__GlobalOffsetAssignment_29 ) ) ;
     public final void rule__GSSTmTcFormatAField__Group__29__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:7078:1: ( ( ( rule__GSSTmTcFormatAField__ArrayDimensionAssignment_29 ) ) )
-            // InternalTM_TC_FORMAT.g:7079:1: ( ( rule__GSSTmTcFormatAField__ArrayDimensionAssignment_29 ) )
+            // InternalTM_TC_FORMAT.g:7078:1: ( ( ( rule__GSSTmTcFormatAField__GlobalOffsetAssignment_29 ) ) )
+            // InternalTM_TC_FORMAT.g:7079:1: ( ( rule__GSSTmTcFormatAField__GlobalOffsetAssignment_29 ) )
             {
-            // InternalTM_TC_FORMAT.g:7079:1: ( ( rule__GSSTmTcFormatAField__ArrayDimensionAssignment_29 ) )
-            // InternalTM_TC_FORMAT.g:7080:2: ( rule__GSSTmTcFormatAField__ArrayDimensionAssignment_29 )
+            // InternalTM_TC_FORMAT.g:7079:1: ( ( rule__GSSTmTcFormatAField__GlobalOffsetAssignment_29 ) )
+            // InternalTM_TC_FORMAT.g:7080:2: ( rule__GSSTmTcFormatAField__GlobalOffsetAssignment_29 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getArrayDimensionAssignment_29()); 
+               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getGlobalOffsetAssignment_29()); 
             }
-            // InternalTM_TC_FORMAT.g:7081:2: ( rule__GSSTmTcFormatAField__ArrayDimensionAssignment_29 )
-            // InternalTM_TC_FORMAT.g:7081:3: rule__GSSTmTcFormatAField__ArrayDimensionAssignment_29
+            // InternalTM_TC_FORMAT.g:7081:2: ( rule__GSSTmTcFormatAField__GlobalOffsetAssignment_29 )
+            // InternalTM_TC_FORMAT.g:7081:3: rule__GSSTmTcFormatAField__GlobalOffsetAssignment_29
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSTmTcFormatAField__ArrayDimensionAssignment_29();
+            rule__GSSTmTcFormatAField__GlobalOffsetAssignment_29();
 
             state._fsp--;
             if (state.failed) return ;
@@ -22319,7 +22319,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getArrayDimensionAssignment_29()); 
+               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getGlobalOffsetAssignment_29()); 
             }
 
             }
@@ -24961,7 +24961,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:7957:1: ( rule__GSSTmTcFormatAIField__Group__26__Impl rule__GSSTmTcFormatAIField__Group__27 )
             // InternalTM_TC_FORMAT.g:7958:2: rule__GSSTmTcFormatAIField__Group__26__Impl rule__GSSTmTcFormatAIField__Group__27
             {
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_37);
             rule__GSSTmTcFormatAIField__Group__26__Impl();
 
             state._fsp--;
@@ -25040,7 +25040,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             // InternalTM_TC_FORMAT.g:7984:1: ( rule__GSSTmTcFormatAIField__Group__27__Impl rule__GSSTmTcFormatAIField__Group__28 )
             // InternalTM_TC_FORMAT.g:7985:2: rule__GSSTmTcFormatAIField__Group__27__Impl rule__GSSTmTcFormatAIField__Group__28
             {
-            pushFollow(FollowSets000.FOLLOW_37);
+            pushFollow(FollowSets000.FOLLOW_26);
             rule__GSSTmTcFormatAIField__Group__27__Impl();
 
             state._fsp--;
@@ -25069,26 +25069,26 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatAIField__Group__27__Impl"
-    // InternalTM_TC_FORMAT.g:7992:1: rule__GSSTmTcFormatAIField__Group__27__Impl : ( ( rule__GSSTmTcFormatAIField__SizeAssignment_27 ) ) ;
+    // InternalTM_TC_FORMAT.g:7992:1: rule__GSSTmTcFormatAIField__Group__27__Impl : ( ( rule__GSSTmTcFormatAIField__ArrayRefAssignment_27 ) ) ;
     public final void rule__GSSTmTcFormatAIField__Group__27__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:7996:1: ( ( ( rule__GSSTmTcFormatAIField__SizeAssignment_27 ) ) )
-            // InternalTM_TC_FORMAT.g:7997:1: ( ( rule__GSSTmTcFormatAIField__SizeAssignment_27 ) )
+            // InternalTM_TC_FORMAT.g:7996:1: ( ( ( rule__GSSTmTcFormatAIField__ArrayRefAssignment_27 ) ) )
+            // InternalTM_TC_FORMAT.g:7997:1: ( ( rule__GSSTmTcFormatAIField__ArrayRefAssignment_27 ) )
             {
-            // InternalTM_TC_FORMAT.g:7997:1: ( ( rule__GSSTmTcFormatAIField__SizeAssignment_27 ) )
-            // InternalTM_TC_FORMAT.g:7998:2: ( rule__GSSTmTcFormatAIField__SizeAssignment_27 )
+            // InternalTM_TC_FORMAT.g:7997:1: ( ( rule__GSSTmTcFormatAIField__ArrayRefAssignment_27 ) )
+            // InternalTM_TC_FORMAT.g:7998:2: ( rule__GSSTmTcFormatAIField__ArrayRefAssignment_27 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getSizeAssignment_27()); 
+               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getArrayRefAssignment_27()); 
             }
-            // InternalTM_TC_FORMAT.g:7999:2: ( rule__GSSTmTcFormatAIField__SizeAssignment_27 )
-            // InternalTM_TC_FORMAT.g:7999:3: rule__GSSTmTcFormatAIField__SizeAssignment_27
+            // InternalTM_TC_FORMAT.g:7999:2: ( rule__GSSTmTcFormatAIField__ArrayRefAssignment_27 )
+            // InternalTM_TC_FORMAT.g:7999:3: rule__GSSTmTcFormatAIField__ArrayRefAssignment_27
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSTmTcFormatAIField__SizeAssignment_27();
+            rule__GSSTmTcFormatAIField__ArrayRefAssignment_27();
 
             state._fsp--;
             if (state.failed) return ;
@@ -25096,7 +25096,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getSizeAssignment_27()); 
+               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getArrayRefAssignment_27()); 
             }
 
             }
@@ -25158,26 +25158,26 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatAIField__Group__28__Impl"
-    // InternalTM_TC_FORMAT.g:8019:1: rule__GSSTmTcFormatAIField__Group__28__Impl : ( ( rule__GSSTmTcFormatAIField__LocalOffsetAssignment_28 ) ) ;
+    // InternalTM_TC_FORMAT.g:8019:1: rule__GSSTmTcFormatAIField__Group__28__Impl : ( ( rule__GSSTmTcFormatAIField__SizeAssignment_28 ) ) ;
     public final void rule__GSSTmTcFormatAIField__Group__28__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:8023:1: ( ( ( rule__GSSTmTcFormatAIField__LocalOffsetAssignment_28 ) ) )
-            // InternalTM_TC_FORMAT.g:8024:1: ( ( rule__GSSTmTcFormatAIField__LocalOffsetAssignment_28 ) )
+            // InternalTM_TC_FORMAT.g:8023:1: ( ( ( rule__GSSTmTcFormatAIField__SizeAssignment_28 ) ) )
+            // InternalTM_TC_FORMAT.g:8024:1: ( ( rule__GSSTmTcFormatAIField__SizeAssignment_28 ) )
             {
-            // InternalTM_TC_FORMAT.g:8024:1: ( ( rule__GSSTmTcFormatAIField__LocalOffsetAssignment_28 ) )
-            // InternalTM_TC_FORMAT.g:8025:2: ( rule__GSSTmTcFormatAIField__LocalOffsetAssignment_28 )
+            // InternalTM_TC_FORMAT.g:8024:1: ( ( rule__GSSTmTcFormatAIField__SizeAssignment_28 ) )
+            // InternalTM_TC_FORMAT.g:8025:2: ( rule__GSSTmTcFormatAIField__SizeAssignment_28 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getLocalOffsetAssignment_28()); 
+               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getSizeAssignment_28()); 
             }
-            // InternalTM_TC_FORMAT.g:8026:2: ( rule__GSSTmTcFormatAIField__LocalOffsetAssignment_28 )
-            // InternalTM_TC_FORMAT.g:8026:3: rule__GSSTmTcFormatAIField__LocalOffsetAssignment_28
+            // InternalTM_TC_FORMAT.g:8026:2: ( rule__GSSTmTcFormatAIField__SizeAssignment_28 )
+            // InternalTM_TC_FORMAT.g:8026:3: rule__GSSTmTcFormatAIField__SizeAssignment_28
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSTmTcFormatAIField__LocalOffsetAssignment_28();
+            rule__GSSTmTcFormatAIField__SizeAssignment_28();
 
             state._fsp--;
             if (state.failed) return ;
@@ -25185,7 +25185,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getLocalOffsetAssignment_28()); 
+               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getSizeAssignment_28()); 
             }
 
             }
@@ -25247,26 +25247,26 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__GSSTmTcFormatAIField__Group__29__Impl"
-    // InternalTM_TC_FORMAT.g:8046:1: rule__GSSTmTcFormatAIField__Group__29__Impl : ( ( rule__GSSTmTcFormatAIField__ArrayRefAssignment_29 ) ) ;
+    // InternalTM_TC_FORMAT.g:8046:1: rule__GSSTmTcFormatAIField__Group__29__Impl : ( ( rule__GSSTmTcFormatAIField__LocalOffsetAssignment_29 ) ) ;
     public final void rule__GSSTmTcFormatAIField__Group__29__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:8050:1: ( ( ( rule__GSSTmTcFormatAIField__ArrayRefAssignment_29 ) ) )
-            // InternalTM_TC_FORMAT.g:8051:1: ( ( rule__GSSTmTcFormatAIField__ArrayRefAssignment_29 ) )
+            // InternalTM_TC_FORMAT.g:8050:1: ( ( ( rule__GSSTmTcFormatAIField__LocalOffsetAssignment_29 ) ) )
+            // InternalTM_TC_FORMAT.g:8051:1: ( ( rule__GSSTmTcFormatAIField__LocalOffsetAssignment_29 ) )
             {
-            // InternalTM_TC_FORMAT.g:8051:1: ( ( rule__GSSTmTcFormatAIField__ArrayRefAssignment_29 ) )
-            // InternalTM_TC_FORMAT.g:8052:2: ( rule__GSSTmTcFormatAIField__ArrayRefAssignment_29 )
+            // InternalTM_TC_FORMAT.g:8051:1: ( ( rule__GSSTmTcFormatAIField__LocalOffsetAssignment_29 ) )
+            // InternalTM_TC_FORMAT.g:8052:2: ( rule__GSSTmTcFormatAIField__LocalOffsetAssignment_29 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getArrayRefAssignment_29()); 
+               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getLocalOffsetAssignment_29()); 
             }
-            // InternalTM_TC_FORMAT.g:8053:2: ( rule__GSSTmTcFormatAIField__ArrayRefAssignment_29 )
-            // InternalTM_TC_FORMAT.g:8053:3: rule__GSSTmTcFormatAIField__ArrayRefAssignment_29
+            // InternalTM_TC_FORMAT.g:8053:2: ( rule__GSSTmTcFormatAIField__LocalOffsetAssignment_29 )
+            // InternalTM_TC_FORMAT.g:8053:3: rule__GSSTmTcFormatAIField__LocalOffsetAssignment_29
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSTmTcFormatAIField__ArrayRefAssignment_29();
+            rule__GSSTmTcFormatAIField__LocalOffsetAssignment_29();
 
             state._fsp--;
             if (state.failed) return ;
@@ -25274,7 +25274,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getArrayRefAssignment_29()); 
+               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getLocalOffsetAssignment_29()); 
             }
 
             }
@@ -40214,66 +40214,21 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
     // $ANTLR end "rule__GSSTmTcFormatVSField__ConstSizeAssignment_27"
 
 
-    // $ANTLR start "rule__GSSTmTcFormatVSField__MaxSizeAssignment_28"
-    // InternalTM_TC_FORMAT.g:13020:1: rule__GSSTmTcFormatVSField__MaxSizeAssignment_28 : ( ruleGSSTmTcFormatMaxSize ) ;
-    public final void rule__GSSTmTcFormatVSField__MaxSizeAssignment_28() throws RecognitionException {
+    // $ANTLR start "rule__GSSTmTcFormatVSField__VariableSizeAssignment_28"
+    // InternalTM_TC_FORMAT.g:13020:1: rule__GSSTmTcFormatVSField__VariableSizeAssignment_28 : ( ruleGSSTmTcFormatVariableSize ) ;
+    public final void rule__GSSTmTcFormatVSField__VariableSizeAssignment_28() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:13024:1: ( ( ruleGSSTmTcFormatMaxSize ) )
-            // InternalTM_TC_FORMAT.g:13025:2: ( ruleGSSTmTcFormatMaxSize )
+            // InternalTM_TC_FORMAT.g:13024:1: ( ( ruleGSSTmTcFormatVariableSize ) )
+            // InternalTM_TC_FORMAT.g:13025:2: ( ruleGSSTmTcFormatVariableSize )
             {
-            // InternalTM_TC_FORMAT.g:13025:2: ( ruleGSSTmTcFormatMaxSize )
-            // InternalTM_TC_FORMAT.g:13026:3: ruleGSSTmTcFormatMaxSize
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_28_0()); 
-            }
-            pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSTmTcFormatMaxSize();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_28_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSTmTcFormatVSField__MaxSizeAssignment_28"
-
-
-    // $ANTLR start "rule__GSSTmTcFormatVSField__VariableSizeAssignment_29"
-    // InternalTM_TC_FORMAT.g:13035:1: rule__GSSTmTcFormatVSField__VariableSizeAssignment_29 : ( ruleGSSTmTcFormatVariableSize ) ;
-    public final void rule__GSSTmTcFormatVSField__VariableSizeAssignment_29() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTM_TC_FORMAT.g:13039:1: ( ( ruleGSSTmTcFormatVariableSize ) )
-            // InternalTM_TC_FORMAT.g:13040:2: ( ruleGSSTmTcFormatVariableSize )
-            {
-            // InternalTM_TC_FORMAT.g:13040:2: ( ruleGSSTmTcFormatVariableSize )
-            // InternalTM_TC_FORMAT.g:13041:3: ruleGSSTmTcFormatVariableSize
+            // InternalTM_TC_FORMAT.g:13025:2: ( ruleGSSTmTcFormatVariableSize )
+            // InternalTM_TC_FORMAT.g:13026:3: ruleGSSTmTcFormatVariableSize
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_29_0()); 
+               before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_28_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleGSSTmTcFormatVariableSize();
@@ -40281,7 +40236,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_29_0()); 
+               after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_28_0()); 
             }
 
             }
@@ -40301,7 +40256,52 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
         }
         return ;
     }
-    // $ANTLR end "rule__GSSTmTcFormatVSField__VariableSizeAssignment_29"
+    // $ANTLR end "rule__GSSTmTcFormatVSField__VariableSizeAssignment_28"
+
+
+    // $ANTLR start "rule__GSSTmTcFormatVSField__MaxSizeAssignment_29"
+    // InternalTM_TC_FORMAT.g:13035:1: rule__GSSTmTcFormatVSField__MaxSizeAssignment_29 : ( ruleGSSTmTcFormatMaxSize ) ;
+    public final void rule__GSSTmTcFormatVSField__MaxSizeAssignment_29() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTM_TC_FORMAT.g:13039:1: ( ( ruleGSSTmTcFormatMaxSize ) )
+            // InternalTM_TC_FORMAT.g:13040:2: ( ruleGSSTmTcFormatMaxSize )
+            {
+            // InternalTM_TC_FORMAT.g:13040:2: ( ruleGSSTmTcFormatMaxSize )
+            // InternalTM_TC_FORMAT.g:13041:3: ruleGSSTmTcFormatMaxSize
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_29_0()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleGSSTmTcFormatMaxSize();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSTmTcFormatVSFieldAccess().getMaxSizeGSSTmTcFormatMaxSizeParserRuleCall_29_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSTmTcFormatVSField__MaxSizeAssignment_29"
 
 
     // $ANTLR start "rule__GSSTmTcFormatVSField__GlobalOffsetAssignment_30"
@@ -41229,111 +41229,21 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
     // $ANTLR end "rule__GSSTmTcFormatAField__FirstBitAssignment_25"
 
 
-    // $ANTLR start "rule__GSSTmTcFormatAField__SizeAssignment_27"
-    // InternalTM_TC_FORMAT.g:13365:1: rule__GSSTmTcFormatAField__SizeAssignment_27 : ( ruleGSSTmTcFormatSize ) ;
-    public final void rule__GSSTmTcFormatAField__SizeAssignment_27() throws RecognitionException {
+    // $ANTLR start "rule__GSSTmTcFormatAField__ArrayDimensionAssignment_27"
+    // InternalTM_TC_FORMAT.g:13365:1: rule__GSSTmTcFormatAField__ArrayDimensionAssignment_27 : ( ruleGSSTmTcFormatArrayDimension ) ;
+    public final void rule__GSSTmTcFormatAField__ArrayDimensionAssignment_27() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:13369:1: ( ( ruleGSSTmTcFormatSize ) )
-            // InternalTM_TC_FORMAT.g:13370:2: ( ruleGSSTmTcFormatSize )
+            // InternalTM_TC_FORMAT.g:13369:1: ( ( ruleGSSTmTcFormatArrayDimension ) )
+            // InternalTM_TC_FORMAT.g:13370:2: ( ruleGSSTmTcFormatArrayDimension )
             {
-            // InternalTM_TC_FORMAT.g:13370:2: ( ruleGSSTmTcFormatSize )
-            // InternalTM_TC_FORMAT.g:13371:3: ruleGSSTmTcFormatSize
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_27_0()); 
-            }
-            pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSTmTcFormatSize();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_27_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSTmTcFormatAField__SizeAssignment_27"
-
-
-    // $ANTLR start "rule__GSSTmTcFormatAField__GlobalOffsetAssignment_28"
-    // InternalTM_TC_FORMAT.g:13380:1: rule__GSSTmTcFormatAField__GlobalOffsetAssignment_28 : ( ruleGSSTmTcFormatGlobalOffset ) ;
-    public final void rule__GSSTmTcFormatAField__GlobalOffsetAssignment_28() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTM_TC_FORMAT.g:13384:1: ( ( ruleGSSTmTcFormatGlobalOffset ) )
-            // InternalTM_TC_FORMAT.g:13385:2: ( ruleGSSTmTcFormatGlobalOffset )
-            {
-            // InternalTM_TC_FORMAT.g:13385:2: ( ruleGSSTmTcFormatGlobalOffset )
-            // InternalTM_TC_FORMAT.g:13386:3: ruleGSSTmTcFormatGlobalOffset
+            // InternalTM_TC_FORMAT.g:13370:2: ( ruleGSSTmTcFormatArrayDimension )
+            // InternalTM_TC_FORMAT.g:13371:3: ruleGSSTmTcFormatArrayDimension
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_28_0()); 
-            }
-            pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSTmTcFormatGlobalOffset();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_28_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSTmTcFormatAField__GlobalOffsetAssignment_28"
-
-
-    // $ANTLR start "rule__GSSTmTcFormatAField__ArrayDimensionAssignment_29"
-    // InternalTM_TC_FORMAT.g:13395:1: rule__GSSTmTcFormatAField__ArrayDimensionAssignment_29 : ( ruleGSSTmTcFormatArrayDimension ) ;
-    public final void rule__GSSTmTcFormatAField__ArrayDimensionAssignment_29() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTM_TC_FORMAT.g:13399:1: ( ( ruleGSSTmTcFormatArrayDimension ) )
-            // InternalTM_TC_FORMAT.g:13400:2: ( ruleGSSTmTcFormatArrayDimension )
-            {
-            // InternalTM_TC_FORMAT.g:13400:2: ( ruleGSSTmTcFormatArrayDimension )
-            // InternalTM_TC_FORMAT.g:13401:3: ruleGSSTmTcFormatArrayDimension
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_29_0()); 
+               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_27_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleGSSTmTcFormatArrayDimension();
@@ -41341,7 +41251,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_29_0()); 
+               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_27_0()); 
             }
 
             }
@@ -41361,7 +41271,97 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
         }
         return ;
     }
-    // $ANTLR end "rule__GSSTmTcFormatAField__ArrayDimensionAssignment_29"
+    // $ANTLR end "rule__GSSTmTcFormatAField__ArrayDimensionAssignment_27"
+
+
+    // $ANTLR start "rule__GSSTmTcFormatAField__SizeAssignment_28"
+    // InternalTM_TC_FORMAT.g:13380:1: rule__GSSTmTcFormatAField__SizeAssignment_28 : ( ruleGSSTmTcFormatSize ) ;
+    public final void rule__GSSTmTcFormatAField__SizeAssignment_28() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTM_TC_FORMAT.g:13384:1: ( ( ruleGSSTmTcFormatSize ) )
+            // InternalTM_TC_FORMAT.g:13385:2: ( ruleGSSTmTcFormatSize )
+            {
+            // InternalTM_TC_FORMAT.g:13385:2: ( ruleGSSTmTcFormatSize )
+            // InternalTM_TC_FORMAT.g:13386:3: ruleGSSTmTcFormatSize
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_28_0()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleGSSTmTcFormatSize();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_28_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSTmTcFormatAField__SizeAssignment_28"
+
+
+    // $ANTLR start "rule__GSSTmTcFormatAField__GlobalOffsetAssignment_29"
+    // InternalTM_TC_FORMAT.g:13395:1: rule__GSSTmTcFormatAField__GlobalOffsetAssignment_29 : ( ruleGSSTmTcFormatGlobalOffset ) ;
+    public final void rule__GSSTmTcFormatAField__GlobalOffsetAssignment_29() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTM_TC_FORMAT.g:13399:1: ( ( ruleGSSTmTcFormatGlobalOffset ) )
+            // InternalTM_TC_FORMAT.g:13400:2: ( ruleGSSTmTcFormatGlobalOffset )
+            {
+            // InternalTM_TC_FORMAT.g:13400:2: ( ruleGSSTmTcFormatGlobalOffset )
+            // InternalTM_TC_FORMAT.g:13401:3: ruleGSSTmTcFormatGlobalOffset
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSTmTcFormatAFieldAccess().getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_29_0()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleGSSTmTcFormatGlobalOffset();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSTmTcFormatAFieldAccess().getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_29_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSTmTcFormatAField__GlobalOffsetAssignment_29"
 
 
     // $ANTLR start "rule__GSSTmTcFormatAIField__FidAssignment_4"
@@ -41671,111 +41671,21 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
     // $ANTLR end "rule__GSSTmTcFormatAIField__FirstBitAssignment_25"
 
 
-    // $ANTLR start "rule__GSSTmTcFormatAIField__SizeAssignment_27"
-    // InternalTM_TC_FORMAT.g:13515:1: rule__GSSTmTcFormatAIField__SizeAssignment_27 : ( ruleGSSTmTcFormatSize ) ;
-    public final void rule__GSSTmTcFormatAIField__SizeAssignment_27() throws RecognitionException {
+    // $ANTLR start "rule__GSSTmTcFormatAIField__ArrayRefAssignment_27"
+    // InternalTM_TC_FORMAT.g:13515:1: rule__GSSTmTcFormatAIField__ArrayRefAssignment_27 : ( ruleGSSTmTcFormatArrayRef ) ;
+    public final void rule__GSSTmTcFormatAIField__ArrayRefAssignment_27() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTM_TC_FORMAT.g:13519:1: ( ( ruleGSSTmTcFormatSize ) )
-            // InternalTM_TC_FORMAT.g:13520:2: ( ruleGSSTmTcFormatSize )
+            // InternalTM_TC_FORMAT.g:13519:1: ( ( ruleGSSTmTcFormatArrayRef ) )
+            // InternalTM_TC_FORMAT.g:13520:2: ( ruleGSSTmTcFormatArrayRef )
             {
-            // InternalTM_TC_FORMAT.g:13520:2: ( ruleGSSTmTcFormatSize )
-            // InternalTM_TC_FORMAT.g:13521:3: ruleGSSTmTcFormatSize
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_27_0()); 
-            }
-            pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSTmTcFormatSize();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_27_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSTmTcFormatAIField__SizeAssignment_27"
-
-
-    // $ANTLR start "rule__GSSTmTcFormatAIField__LocalOffsetAssignment_28"
-    // InternalTM_TC_FORMAT.g:13530:1: rule__GSSTmTcFormatAIField__LocalOffsetAssignment_28 : ( ruleGSSTmTcFormatLocalOffset ) ;
-    public final void rule__GSSTmTcFormatAIField__LocalOffsetAssignment_28() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTM_TC_FORMAT.g:13534:1: ( ( ruleGSSTmTcFormatLocalOffset ) )
-            // InternalTM_TC_FORMAT.g:13535:2: ( ruleGSSTmTcFormatLocalOffset )
-            {
-            // InternalTM_TC_FORMAT.g:13535:2: ( ruleGSSTmTcFormatLocalOffset )
-            // InternalTM_TC_FORMAT.g:13536:3: ruleGSSTmTcFormatLocalOffset
+            // InternalTM_TC_FORMAT.g:13520:2: ( ruleGSSTmTcFormatArrayRef )
+            // InternalTM_TC_FORMAT.g:13521:3: ruleGSSTmTcFormatArrayRef
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_28_0()); 
-            }
-            pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSTmTcFormatLocalOffset();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_28_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSTmTcFormatAIField__LocalOffsetAssignment_28"
-
-
-    // $ANTLR start "rule__GSSTmTcFormatAIField__ArrayRefAssignment_29"
-    // InternalTM_TC_FORMAT.g:13545:1: rule__GSSTmTcFormatAIField__ArrayRefAssignment_29 : ( ruleGSSTmTcFormatArrayRef ) ;
-    public final void rule__GSSTmTcFormatAIField__ArrayRefAssignment_29() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTM_TC_FORMAT.g:13549:1: ( ( ruleGSSTmTcFormatArrayRef ) )
-            // InternalTM_TC_FORMAT.g:13550:2: ( ruleGSSTmTcFormatArrayRef )
-            {
-            // InternalTM_TC_FORMAT.g:13550:2: ( ruleGSSTmTcFormatArrayRef )
-            // InternalTM_TC_FORMAT.g:13551:3: ruleGSSTmTcFormatArrayRef
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getArrayRefGSSTmTcFormatArrayRefParserRuleCall_29_0()); 
+               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getArrayRefGSSTmTcFormatArrayRefParserRuleCall_27_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleGSSTmTcFormatArrayRef();
@@ -41783,7 +41693,7 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getArrayRefGSSTmTcFormatArrayRefParserRuleCall_29_0()); 
+               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getArrayRefGSSTmTcFormatArrayRefParserRuleCall_27_0()); 
             }
 
             }
@@ -41803,7 +41713,97 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
         }
         return ;
     }
-    // $ANTLR end "rule__GSSTmTcFormatAIField__ArrayRefAssignment_29"
+    // $ANTLR end "rule__GSSTmTcFormatAIField__ArrayRefAssignment_27"
+
+
+    // $ANTLR start "rule__GSSTmTcFormatAIField__SizeAssignment_28"
+    // InternalTM_TC_FORMAT.g:13530:1: rule__GSSTmTcFormatAIField__SizeAssignment_28 : ( ruleGSSTmTcFormatSize ) ;
+    public final void rule__GSSTmTcFormatAIField__SizeAssignment_28() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTM_TC_FORMAT.g:13534:1: ( ( ruleGSSTmTcFormatSize ) )
+            // InternalTM_TC_FORMAT.g:13535:2: ( ruleGSSTmTcFormatSize )
+            {
+            // InternalTM_TC_FORMAT.g:13535:2: ( ruleGSSTmTcFormatSize )
+            // InternalTM_TC_FORMAT.g:13536:3: ruleGSSTmTcFormatSize
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_28_0()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleGSSTmTcFormatSize();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_28_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSTmTcFormatAIField__SizeAssignment_28"
+
+
+    // $ANTLR start "rule__GSSTmTcFormatAIField__LocalOffsetAssignment_29"
+    // InternalTM_TC_FORMAT.g:13545:1: rule__GSSTmTcFormatAIField__LocalOffsetAssignment_29 : ( ruleGSSTmTcFormatLocalOffset ) ;
+    public final void rule__GSSTmTcFormatAIField__LocalOffsetAssignment_29() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTM_TC_FORMAT.g:13549:1: ( ( ruleGSSTmTcFormatLocalOffset ) )
+            // InternalTM_TC_FORMAT.g:13550:2: ( ruleGSSTmTcFormatLocalOffset )
+            {
+            // InternalTM_TC_FORMAT.g:13550:2: ( ruleGSSTmTcFormatLocalOffset )
+            // InternalTM_TC_FORMAT.g:13551:3: ruleGSSTmTcFormatLocalOffset
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSTmTcFormatAIFieldAccess().getLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_29_0()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleGSSTmTcFormatLocalOffset();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSTmTcFormatAIFieldAccess().getLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_29_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSTmTcFormatAIField__LocalOffsetAssignment_29"
 
 
     // $ANTLR start "rule__GSSTmTcFormatSize__BytesAssignment_4"
@@ -43049,15 +43049,15 @@ public class InternalTM_TC_FORMATParser extends AbstractInternalContentAssistPar
         public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x4000000000000000L});
         public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x8000000000000000L});
         public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
         public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0420000000000000L});
         public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000001800000000L});
         public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
         public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000200L});
         public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
-        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
         public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000000008000000L});
         public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000000010000000L});
         public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
