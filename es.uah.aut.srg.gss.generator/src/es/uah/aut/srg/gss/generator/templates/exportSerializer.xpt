@@ -2,14 +2,14 @@
 
 «DEFINE Serializer(String outputFile) FOR GSSExportExport»
 «FILE outputFile -»
-GSSTmTcFormatTmTcFormat «this.name» {
+GSSExportExport «this.name» {
 	uri := «this.uri»;
 	version := «this.version»;
 	from := «this.from»;
 	to := «this.to»;
 «IF this.Sizes != null -»
 	GSSExportSizes {
-«EXPAND SerializSizeInBits FOREACH this.Sizes.sizeInBits -»
+«EXPAND SerializeSizeInBits FOREACH this.Sizes.sizeInBits -»
 	};
 «ENDIF -»
 	GSSExportSettings {
@@ -20,7 +20,7 @@ GSSTmTcFormatTmTcFormat «this.name» {
 «ENDFILE -»
 «ENDDEFINE»
 
-«DEFINE SerializSizeInBits FOR GSSExportSizeInBits -»
+«DEFINE SerializeSizeInBits FOR GSSExportSizeInBits -»
 		GSSExportSizeInBits {
 			id := «this.id»;
 			from := «this.from»;
