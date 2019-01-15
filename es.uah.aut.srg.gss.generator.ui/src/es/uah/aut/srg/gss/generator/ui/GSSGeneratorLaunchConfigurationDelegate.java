@@ -1,7 +1,7 @@
 package es.uah.aut.srg.gss.generator.ui;
 
 import java.io.IOException;
-import java.util.Collection;
+import java.util.Map;
 
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -18,35 +18,19 @@ import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.model.ILaunchConfigurationDelegate;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.xtend.typesystem.emf.EmfRegistryMetaModel;
 
 import es.uah.aut.srg.gss.common.GSSModelFile;
-import es.uah.aut.srg.gss.common.commonPackage;
-import es.uah.aut.srg.gss.export.GSSExportExport;
-import es.uah.aut.srg.gss.filters.GSSFilterFilter;
 import es.uah.aut.srg.gss.generator.GSSGenerator;
 import es.uah.aut.srg.gss.generator.util.XpandGeneratorUtil;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
-import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 import es.uah.aut.srg.gss.xtext.xml.XMLGeneratorUtil;
 
 
 public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigurationDelegate {
-	
-	protected static EmfRegistryMetaModel metamodel = new EmfRegistryMetaModel() {
-		@Override
-		protected EPackage[] allPackages() {
-			return new EPackage[] { EcorePackage.eINSTANCE, 
-				commonPackage.eINSTANCE,
-				tm_tc_formatPackage.eINSTANCE };
-    	}
-	};
 
 	@Override
 	public void launch(ILaunchConfiguration configuration, String mode, ILaunch launch, IProgressMonitor monitor)
@@ -54,28 +38,18 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		
 		String database = configuration.getAttribute(GSSGeneratorLaunchConfigurationAttributes.SOURCE_DB, "");
 		String output = configuration.getAttribute(GSSGeneratorLaunchConfigurationAttributes.OUTPUT_FOLDER, "");
-		
-		Collection<GSSTmTcFormatTmTcFormat> formats = null;
-		
+
+		Map<String, GSSTmTcFormatTmTcFormat> tcFormats = null;
 		try {
-			formats = GSSGenerator.getTmTcFormats(database);
+			tcFormats = GSSGenerator.getTcFormats(database);
 		} catch (IOException e) {
 			throw new CoreException(new Status(
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
 		}
 		
-		Collection<GSSExportExport> exports = null;
-				
+		Map<String, GSSTmTcFormatTmTcFormat> tmFormats = null;
 		try {
-			exports = GSSGenerator.getExports(database);
-		} catch (IOException e) {
-			throw new CoreException(new Status(
-				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
-		}
-		Collection<GSSFilterFilter> filters = null;
-				
-		try {
-			filters = GSSGenerator.getFilters(database);
+			tmFormats = GSSGenerator.getTmFormats(database);
 		} catch (IOException e) {
 			throw new CoreException(new Status(
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
@@ -89,11 +63,13 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 					IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + output + "' not found!"));
 		}
 		
-		for (GSSTmTcFormatTmTcFormat gssTmTcFormatTmTcFormat : formats) {
+		for (GSSTmTcFormatTmTcFormat gssTmTcFormatTmTcFormat : tcFormats.values()) {
 		
+			String formatName = "tcFormats\\" + gssTmTcFormatTmTcFormat.getName() + ".gss_tm_tc_format";
+			
 			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssTmTcFormatTmTcFormat,
 					"es::uah::aut::srg::gss::generator::templates::tm_tc_formatSerializer::Serializer", 
-					false, gssTmTcFormatTmTcFormat.getName() + ".gss_tm_tc_format");
+					false, formatName);
 			
 			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
 			
@@ -101,49 +77,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			
 			ResourceSet resourceSet = new ResourceSetImpl();
 			
-			IResource newFile = ((IFolder)folder).findMember(gssTmTcFormatTmTcFormat.getName() + ".gss_tm_tc_format");
-			
-			if (newFile == null) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
-			}
-			
-			Resource xtextResource = 
-					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
-				
-			EObject model = xtextResource.getContents().get(0);
-				
-			XMLGeneratorUtil.convertReferences(model);
-
-			EObject outputModel = EcoreUtil.copy(((GSSModelFile)model).getElement());
-			String pathName = 
-					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
-				
-			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
-												
-			xmiResource.getContents().add(outputModel);
-			
-			try {
-				xmiResource.save(null);
-			} catch (IOException e) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
-			}
-		}
-
-		for (GSSExportExport gssExportExport : exports) {
-		
-			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssExportExport,
-					"es::uah::aut::srg::gss::generator::templates::exportSerializer::Serializer", 
-					false, gssExportExport.getName() + ".gss_export");
-			
-			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
-			
-			// If everything went fine, we should be able to open the new file
-			
-			ResourceSet resourceSet = new ResourceSetImpl();
-			
-			IResource newFile = ((IFolder)folder).findMember(gssExportExport.getName() + ".gss_tm_tc_format");
+			IResource newFile = ((IFolder)folder).findMember(formatName);
 			
 			if (newFile == null) {
 				throw new CoreException(new Status(
@@ -173,11 +107,13 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			}
 		}
 		
-		for (GSSFilterFilter gssFilterFilter : filters) {
+		for (GSSTmTcFormatTmTcFormat gssTmTcFormatTmTcFormat : tmFormats.values()) {
 		
-			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssFilterFilter,
-					"es::uah::aut::srg::gss::generator::templates::filtersSerializer::Serializer", 
-					false, gssFilterFilter.getName() + ".gss_filters");
+			String formatName = "tmFormats\\" + gssTmTcFormatTmTcFormat.getName() + ".gss_tm_tc_format";
+			
+			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssTmTcFormatTmTcFormat,
+					"es::uah::aut::srg::gss::generator::templates::tm_tc_formatSerializer::Serializer", 
+					false, formatName);
 			
 			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
 			
@@ -185,7 +121,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			
 			ResourceSet resourceSet = new ResourceSetImpl();
 			
-			IResource newFile = ((IFolder)folder).findMember(gssFilterFilter.getName() + ".gss_tm_tc_format");
+			IResource newFile = ((IFolder)folder).findMember(formatName);
 			
 			if (newFile == null) {
 				throw new CoreException(new Status(
@@ -215,5 +151,4 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			}
 		}
 	}
-
 }

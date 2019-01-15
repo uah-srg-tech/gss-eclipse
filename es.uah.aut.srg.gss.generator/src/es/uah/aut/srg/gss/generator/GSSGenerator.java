@@ -4,14 +4,25 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField;
+import es.uah.aut.srg.gss.export.GSSExportActivateDICs;
+import es.uah.aut.srg.gss.export.GSSExportDIC;
 import es.uah.aut.srg.gss.export.GSSExportExport;
-import es.uah.aut.srg.gss.filters.GSSFilterFilter;
+import es.uah.aut.srg.gss.export.GSSExportSettingFromConst;
+import es.uah.aut.srg.gss.export.GSSExportSettingFromField;
+import es.uah.aut.srg.gss.export.GSSExportSettingFromSize;
+import es.uah.aut.srg.gss.export.GSSExportSettings;
+import es.uah.aut.srg.gss.export.GSSExportSizeInBits;
+import es.uah.aut.srg.gss.export.GSSExportSizes;
+import es.uah.aut.srg.gss.export.GSSExportUnit;
+import es.uah.aut.srg.gss.export.exportFactory;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldByteOrder;
@@ -21,11 +32,12 @@ import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatLocalOffset;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSFieldFirstBit;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatConstSize;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatArrayDimension;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatArrayRef;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatUnit;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatMaxSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormatType;
@@ -39,21 +51,231 @@ public class GSSGenerator {
 	public static final String CNAME_CRC_HK = "NID00198";
 	public static final String CNAME_CHECKSUM = "NID10413";
 	
-	public static Collection<GSSExportExport> getExports(String database) throws IOException {
+	public static Collection<GSSExportExport> getExportsLevel1(String database) throws IOException {
 
-		Map<String, GSSExportExport> exports = new HashMap<String, GSSExportExport>();
+		Set<GSSExportExport> exports = new HashSet<GSSExportExport>();
+	    
+		//process TC database tables and populate the collection
 		
-		return exports.values();
+		//read TC format names from CCF table
+		BufferedReader ccf = new BufferedReader(
+		        new InputStreamReader(new FileInputStream(database + "\\ccf.dat")));
+	    String ccf_line;
+	    while ((ccf_line = ccf.readLine()) != null) {
+	    	
+	    	String[] ccf_rows = ccf_line.split("\t");
+			
+	    	GSSExportExport exportLevel1 = exportFactory.eINSTANCE.createGSSExportExport();
+	    	exportLevel1.setName(ccf_rows[0] + "_export_level_1");
+	    	exportLevel1.setDescription(ccf_rows[1]);
+	    	exportLevel1.setUri("es.uah.aut.srg." + ccf_rows[0].toLowerCase() + "_export_level_1");
+	    	exportLevel1.setVersion("v1");
+	    	exportLevel1.setFrom(null);//CCSDS
+	    	exportLevel1.setTo(null);//EPD_PUS
+
+	    	GSSExportSizes sizes = exportFactory.eINSTANCE.createGSSExportSizes();
+	    	
+	    	GSSExportSizeInBits sizeInBits = exportFactory.eINSTANCE.createGSSExportSizeInBits();
+	    	sizeInBits.setId("0");
+	    	sizeInBits.setFrom("ApplicationData");
+	    	sizeInBits.setAddSize("5");
+	    	sizeInBits.setUnit(GSSExportUnit.BYTES);
+	    	sizes.getSizeInBits().add(sizeInBits);
+	    	
+	    	exportLevel1.setSizes(sizes);
+
+	    	GSSExportSettings settings = exportFactory.eINSTANCE.createGSSExportSettings();
+	    	
+	    	GSSExportSettingFromField settingSecondaryHeader = exportFactory.eINSTANCE.createGSSExportSettingFromField();
+	    	settingSecondaryHeader.setFieldRef(null);
+	    	settingSecondaryHeader.setToFieldRef(null);
+	    	settings.getSettingFromField().add(settingSecondaryHeader);
+	    	
+	    	GSSExportSettingFromField settingApplicationData = exportFactory.eINSTANCE.createGSSExportSettingFromField();
+	    	settingApplicationData.setFieldRef(null);
+	    	settingApplicationData.setToFieldRef(null);
+	    	settings.getSettingFromField().add(settingApplicationData);
+	    	
+	    	GSSExportSettingFromConst settingVersionNumber = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
+	    	settingVersionNumber.setValue("0");
+	    	settingVersionNumber.setToFieldRef(null);
+	    	settings.getSettingFromConst().add(settingVersionNumber);
+	    	
+	    	GSSExportSettingFromConst settingType = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
+	    	settingType.setValue("1");
+	    	settingType.setToFieldRef(null);
+	    	settings.getSettingFromConst().add(settingType);
+	    	
+	    	GSSExportSettingFromConst settingDFHFlag = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
+	    	settingDFHFlag.setValue("1");
+	    	settingDFHFlag.setToFieldRef(null);
+	    	settings.getSettingFromConst().add(settingDFHFlag);
+	    	
+	    	GSSExportSettingFromConst settingAPID = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
+	    	settingAPID.setValue(ccf_rows[8]);
+	    	settingAPID.setToFieldRef(null);
+	    	settings.getSettingFromConst().add(settingAPID);
+	    	
+	    	GSSExportSettingFromConst settingSequenceFlag = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
+	    	settingSequenceFlag.setValue("1");
+	    	settingSequenceFlag.setToFieldRef(null);
+	    	settings.getSettingFromConst().add(settingSequenceFlag);
+	    	
+	    	GSSExportSettingFromSize settingPacketLength = exportFactory.eINSTANCE.createGSSExportSettingFromSize();
+	    	settingPacketLength.setSizeRef("0");
+	    	settingPacketLength.setToFieldRef(null);
+	    	settings.getSettingFromSize().add(settingPacketLength);
+	    	
+	    	exportLevel1.setSettings(settings);
+
+	    	GSSExportActivateDICs activateDICs = exportFactory.eINSTANCE.createGSSExportActivateDICs();
+	    	
+	    	GSSExportDIC cssdsDic = exportFactory.eINSTANCE.createGSSExportDIC();
+	    	cssdsDic.setId("0");
+	    	cssdsDic.setDICRef("CRC");
+	    	activateDICs.getDIC().add(cssdsDic);
+	    	
+	    	exportLevel1.setActivateDICs(activateDICs);
+	    	
+	    	exports.add(exportLevel1);
+	    }
+		ccf.close();
+	    
+		return exports;
+	}
+
+	public static Collection<GSSExportExport> getExportsLevel2(String database,
+			Map<String, GSSTmTcFormatTmTcFormat> formats) throws IOException {
+
+		Set<GSSExportExport> exports = new HashSet<GSSExportExport>();
+		
+		//read TC format names from CCF table
+		BufferedReader ccf = new BufferedReader(
+		        new InputStreamReader(new FileInputStream(database + "\\ccf.dat")));
+	    String ccf_line;
+	    while ((ccf_line = ccf.readLine()) != null) {
+	    	
+	    	String[] ccf_rows = ccf_line.split("\t");
+			
+	    	GSSExportExport exportLevel2 = exportFactory.eINSTANCE.createGSSExportExport();
+	    	exportLevel2.setName(ccf_rows[0].toLowerCase() + "_export_level_1");
+	    	exportLevel2.setDescription(ccf_rows[1]);
+	    	exportLevel2.setUri("es.uah.aut.srg." + ccf_rows[0] + "_export_level_1");
+	    	exportLevel2.setVersion("v1");
+	    	exportLevel2.setFrom(null);//EPD_PUS
+	    	exportLevel2.setTo(formats.get(ccf_rows[0]));
+
+	    	GSSExportSizes sizes = exportFactory.eINSTANCE.createGSSExportSizes();
+	    	
+	    	GSSExportSizeInBits sizeInBits = exportFactory.eINSTANCE.createGSSExportSizeInBits();
+	    	if(formats.get(ccf_rows[0]).getVSField().size() != 0) {
+		    	if(formats.get(ccf_rows[0]).getAField().size() == 0) {
+		    		//csfields and vsfields: ZID52538 & ZID52540
+    				sizeInBits.setFrom("PID00075");
+		    		for (GSSTmTcFormatCSField csfield : formats.get(ccf_rows[0]).getCSField()) {
+		    			if(csfield.getName() == "ApplicationData") {
+							sizeInBits.setAddSize(csfield.getSize().getBytes());
+		    		    	break;
+		    			}
+		    		}
+		    	}
+		    	else {
+		    		//csfields, vsfields and afields
+					sizeInBits.setFrom("ApplicationData");
+					sizeInBits.setAddSize("5");
+		    	}
+	    	}
+			sizeInBits.setId("0");
+	    	sizeInBits.setUnit(GSSExportUnit.BYTES);
+	    	sizes.getSizeInBits().add(sizeInBits);
+	    	
+	    	exportLevel2.setSizes(sizes);
+
+	    	GSSExportSettings settings = exportFactory.eINSTANCE.createGSSExportSettings();
+	    	
+	    	GSSExportSettingFromConst settingCCSDSSecondaryHeaderFlag = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
+	    	settingCCSDSSecondaryHeaderFlag.setValue("0");
+	    	settingCCSDSSecondaryHeaderFlag.setToFieldRef(null);
+	    	settings.getSettingFromConst().add(settingCCSDSSecondaryHeaderFlag);
+	    	
+	    	GSSExportSettingFromConst settingPUSVersion = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
+	    	settingPUSVersion.setValue("1");
+	    	settingPUSVersion.setToFieldRef(null);
+	    	settings.getSettingFromConst().add(settingPUSVersion);
+	    	
+	    	GSSExportSettingFromConst settingACK = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
+	    	settingACK.setValue("9");
+	    	settingACK.setToFieldRef(null);
+	    	settings.getSettingFromConst().add(settingACK);
+	    	
+	    	GSSExportSettingFromConst settingType = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
+	    	settingType.setValue(ccf_rows[6]);
+	    	settingType.setToFieldRef(null);
+	    	settings.getSettingFromConst().add(settingType);
+	    	
+	    	GSSExportSettingFromConst settingSubtype = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
+	    	settingSubtype.setValue(ccf_rows[7]);
+	    	settingSubtype.setToFieldRef(null);
+	    	settings.getSettingFromConst().add(settingSubtype);
+	    	
+	    	GSSExportSettingFromConst settingSourceID = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
+	    	settingSourceID.setValue("120");
+	    	settingSourceID.setToFieldRef(null);
+	    	settings.getSettingFromConst().add(settingSourceID);
+	    	
+	    	//GSSTmTcFormatVSField fieldApplicationData = tcFormats.get(ccf_rows[0]).getVSField().get(0);
+	    	GSSTmTcFormatField fieldApplicationData = null;
+	    	
+	    	if(formats.get(ccf_rows[0]).getVSField().size() == 0) {
+	    		//csfields
+	    		for (GSSTmTcFormatCSField csfield : formats.get(ccf_rows[0]).getCSField()) {
+	    			if(csfield.getName() == "ApplicationData") {
+	    				fieldApplicationData = csfield;
+	    		    	break;
+	    			}
+	    		}
+	    		
+		    	GSSExportSettingFromConst settingAppDataLength = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
+		    	if(fieldApplicationData == null) {
+		    		settingAppDataLength.setValue("0");
+		    	}
+		    	else {
+			    	GSSTmTcFormatCSField csfieldApplicationData = (GSSTmTcFormatCSField)fieldApplicationData;
+		    		settingAppDataLength.setValue(csfieldApplicationData.getSize().getBytes());
+		    	}
+		    	settingAppDataLength.setToFieldRef(null);
+		    	settings.getSettingFromConst().add(settingAppDataLength);
+	    	}
+	    	else {
+	    		//vsfields
+	    		for (GSSTmTcFormatVSField vsfield : formats.get(ccf_rows[0]).getVSField()) {
+	    			if(vsfield.getName() == "ApplicationData") {
+	    				fieldApplicationData = vsfield;
+	    				break;
+	    			}
+	    		}
+	    		
+		    	GSSExportSettingFromSize settingAppDataLength = exportFactory.eINSTANCE.createGSSExportSettingFromSize();
+		    	settingAppDataLength.setSizeRef("0");
+		    	settingAppDataLength.setToFieldRef(null);
+		    	settings.getSettingFromSize().add(settingAppDataLength);
+	    	}
+	    	
+	    	GSSExportSettingFromField settingApplicationData = exportFactory.eINSTANCE.createGSSExportSettingFromField();
+	    	settingApplicationData.setFieldRef(fieldApplicationData);
+	    	settingApplicationData.setToFieldRef(null);//EPD PUS ApplicationData
+	    	settings.getSettingFromField().add(settingApplicationData);
+	    	
+	    	exportLevel2.setSettings(settings);
+
+	    	exports.add(exportLevel2);
+	    }
+		ccf.close();
+	    
+		return exports;
 	}
 	
-	public static Collection<GSSFilterFilter> getFilters(String database) throws IOException {
-
-		Map<String, GSSFilterFilter> filters = new HashMap<String, GSSFilterFilter>();
-		
-		return filters.values();
-	}
-	
-	public static Collection<GSSTmTcFormatTmTcFormat> getTmTcFormats(String database) throws IOException {
+	public static Map<String, GSSTmTcFormatTmTcFormat> getTcFormats(String database) throws IOException {
 
 		Map<String, GSSTmTcFormatTmTcFormat> formats = new HashMap<String, GSSTmTcFormatTmTcFormat>();
 	    Integer constSizeBits = 0, fid = 0, n_max = 0;
@@ -65,7 +287,7 @@ public class GSSGenerator {
 		
 		//read TC format names from CCF table
 		BufferedReader ccf = new BufferedReader(
-		        new InputStreamReader(new FileInputStream(database+"\\ccf.dat")));
+		        new InputStreamReader(new FileInputStream(database + "\\ccf.dat")));
 	    String ccf_line;
 	    while ((ccf_line = ccf.readLine()) != null) {
 	    	
@@ -74,10 +296,10 @@ public class GSSGenerator {
 			GSSTmTcFormatTmTcFormat format = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
 			format.setName(ccf_rows[0]);
 			format.setDescription(ccf_rows[1]);
-			format.setProtocol("EPD_PUS");
-			format.setType(GSSTmTcFormatTmTcFormatType.TC);
 			format.setUri("es.uah.aut.srg." + ccf_rows[0].toLowerCase());
 			format.setVersion("v1");
+			format.setProtocol("EPD_PUS");
+			format.setType(GSSTmTcFormatTmTcFormatType.TC);
 			
 			formats.put(ccf_rows[0], format);
 	    	
@@ -137,237 +359,103 @@ public class GSSGenerator {
 	    	    	}
 	    	    }while ((cdf_same_format = cdf.readLine()) != null);
 	    	    cdf.reset();
-		    	
-		    	if((arrayFormatFieldRef == Integer.MAX_VALUE) && (variableFormatFieldRef == Integer.MAX_VALUE)){
-		    		//insert CSField ApplicationData
-		    		GSSTmTcFormatCSField csfield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatCSField();
-		    		csfield.setFid(Integer.toString(0));
-		    		csfield.setPfid(Integer.toString(0));
-		    		csfield.setName("ApplicationData");
-		    		csfield.setType(GSSTmTcFormatFieldType.STRUCTURED);
-		    		csfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
-		    		csfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
-		    		
-		    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-		    		formatSize.setBytes(Integer.toString(constSizeBits/8));
-		    		formatSize.setBits(Integer.toString(constSizeBits%8));
-		    		csfield.setSize(formatSize);
-		    		
-		    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
-		    		formatOffset.setBytes(Integer.toString(0));
-		    		formatOffset.setBits(Integer.toString(0));
-		    		csfield.setGlobalOffset(formatOffset);
-		    		
-		    		GSSTmTcFormatTmTcFormat format = formats.get(cdf_rows[0]);
-		    		if(format != null)
-		    			format.getCSField().add(csfield);
-		    	}
-		    	else {
-		    		//insert VSField ApplicationData
-		    		GSSTmTcFormatVSField vsfield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatVSField();
-		    		vsfield.setFid(Integer.toString(0));
-		    		vsfield.setPfid(Integer.toString(0));
-		    		vsfield.setName("ApplicationData");
-		    		vsfield.setType(GSSTmTcFormatFieldType.STRUCTURED);
-		    		vsfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
-		    		vsfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
-		    		
-		    		GSSTmTcFormatConstSize formatConstSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatConstSize();
-		    		formatConstSize.setBytes(Integer.toString(constSizeBits/8));
-		    		formatConstSize.setBits(Integer.toString(constSizeBits%8));
-		    		vsfield.setConstSize(formatConstSize);
-		    		
-		    		GSSTmTcFormatVariableSize formatVariableSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatVariableSize();
-		    		if(arrayFormatFieldRef != Integer.MAX_VALUE) {
-		    			formatVariableSize.setFidRef(Integer.toString(arrayFormatFieldRef));
-				    	n_max = (MAX_APP_DATA_BYTES*8 - constSizeBits) / vbleSizeBits;
-			    		maxSizeBits = constSizeBits + n_max * vbleSizeBits;
-		    		}
-		    		else if(variableFormatFieldRef != Integer.MAX_VALUE) {
-		    			formatVariableSize.setFidRef(Integer.toString(variableFormatFieldRef));
-			    		maxSizeBits = MAX_APP_DATA_BYTES*8;
-		    		}
-		    		formatVariableSize.setUnit(getVariableFieldUnitText(vbleSizeBits));
-		    		vsfield.setVariableSize(formatVariableSize);
 
-		    		GSSTmTcFormatMaxSize formatMaxSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatMaxSize();
-		    		formatMaxSize.setBytes(Integer.toString(maxSizeBits/8));
-		    		formatMaxSize.setBits(Integer.toString(maxSizeBits%8));
-		    		vsfield.setMaxSize(formatMaxSize);
-		    		
-		    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
-		    		formatOffset.setBytes(Integer.toString(0));
-		    		formatOffset.setBits(Integer.toString(0));
-		    		vsfield.setGlobalOffset(formatOffset);
-		    		
-		    		GSSTmTcFormatTmTcFormat format = formats.get(cdf_rows[0]);
-		    		if(format != null)
-		    			format.getVSField().add(vsfield);
+	    		GSSTmTcFormatTmTcFormat format = formats.get(cdf_rows[0]); 		
+	    		if(format != null) {
+	    			
+			    	if((arrayFormatFieldRef == Integer.MAX_VALUE) && (variableFormatFieldRef == Integer.MAX_VALUE)) {
+			    		//insert CSField ApplicationData
+			    		createCSField(format, 0, 0, "ApplicationData", null, constSizeBits, 0);
+			    	}
+			    	else {
+			    		//insert VSField ApplicationData
+			    		Integer fidRef = 0;
+			    		if(arrayFormatFieldRef != Integer.MAX_VALUE) {
+			    			fidRef = arrayFormatFieldRef;
+					    	n_max = (MAX_APP_DATA_BYTES*8 - constSizeBits) / vbleSizeBits;
+				    		maxSizeBits = constSizeBits + n_max * vbleSizeBits;
+			    		}
+			    		else if(variableFormatFieldRef != Integer.MAX_VALUE) {
+			    			fidRef = variableFormatFieldRef;
+				    		maxSizeBits = MAX_APP_DATA_BYTES*8;
+			    		}
+			    		
+		    			createVSField(format, 0, 0, "ApplicationData", null, constSizeBits, fidRef, vbleSizeBits,
+		    					maxSizeBits, 0);
+			    	}
 		    	}
 		    	lastID = cdf_rows[0];
 	    	}
 	    	fid++;
-
-	    	if(fid == variableFormatField) {
-	    		//insert VSFIELD
-	    		GSSTmTcFormatVSField vsfield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatVSField();
-	    		vsfield.setFid(Integer.toString(fid));
-	    		vsfield.setPfid(Integer.toString(0));
-	    		if(cdf_rows[6] == null) {
-	    			vsfield.setName(cdf_rows[2]);//DESCR
-	    		} else {
-	    			vsfield.setName(cdf_rows[6]);//PNAME
-	    		}
-	    		vsfield.setType(GSSTmTcFormatFieldType.STRUCTURED);
-	    		vsfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
-	    		vsfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
-	    		
-	    		GSSTmTcFormatConstSize formatConstSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatConstSize();
-	    		formatConstSize.setBytes(Integer.toString(0));
-	    		formatConstSize.setBits(Integer.toString(0));
-	    		vsfield.setConstSize(formatConstSize);
-	    		
-	    		GSSTmTcFormatVariableSize formatVariableSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatVariableSize();
-    			formatVariableSize.setFidRef(Integer.toString(variableFormatFieldRef));
-	    		formatVariableSize.setUnit(getVariableFieldUnitText(vbleSizeBits));
-	    		vsfield.setVariableSize(formatVariableSize);
-
-	    		maxSizeBits = MAX_APP_DATA_BYTES*8 - constSizeBits;
-	    		GSSTmTcFormatMaxSize formatMaxSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatMaxSize();
-	    		formatMaxSize.setBytes(Integer.toString(maxSizeBits/8));
-	    		formatMaxSize.setBits(Integer.toString(maxSizeBits%8));
-	    		vsfield.setMaxSize(formatMaxSize);
-	    		
-	    		Integer offsetBits = Integer.parseInt(cdf_rows[4]);//BIT
-	    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
-	    		formatOffset.setBytes(Integer.toString(offsetBits/8));
-	    		formatOffset.setBits(Integer.toString(offsetBits%8));
-	    		vsfield.setGlobalOffset(formatOffset);
-	    		
-	    		GSSTmTcFormatTmTcFormat format = formats.get(cdf_rows[0]);
-	    		if(format != null)
-	    			format.getVSField().add(vsfield);
-	    		
-	    		if(fid < variableFormatFieldRef) {
-		    		//insert VRFIELDSIZE too
-		    		GSSTmTcFormatVRFieldSize vrfieldsize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatVRFieldSize();
-		    		vrfieldsize.setFid(Integer.toString(fid+1));
-		    		vrfieldsize.setPfid(Integer.toString(fid));
-		    		if(cdf_rows[6] == null) {
-		    			vsfield.setName(cdf_rows[2] + "_length");//DESCR
-		    		} else {
-		    			vsfield.setName(cdf_rows[6] + "_length");//PNAME
-		    		}
+    		
+    		GSSTmTcFormatTmTcFormat format = formats.get(cdf_rows[0]);
+    		if(format != null) {
+    			
+        		String name, descr;
+        		if(cdf_rows[6] == null) {
+        			name = cdf_rows[2];//DESCR
+        			descr = null;
+        		} else {
+        			name = cdf_rows[6];//PNAME
+        			descr = cdf_rows[2];//DESCR
+        		}
+        		
+		    	if(fid == variableFormatField) {
+		    		//insert VSFIELD
+	    			createVSField(format, fid, 0, name, descr, 0, variableFormatFieldRef, vbleSizeBits,
+	    					(MAX_APP_DATA_BYTES*8 - constSizeBits), Integer.parseInt(cdf_rows[4]));//BIT
 		    		
-		    		format.getVRFieldSize().add(vrfieldsize);
-	    		}
-	    	}
-	    	else if((fid > arrayFormatFieldRef) && (fid <= lastArrayFormatFieldRef)) {
-	    		//insert AIFIELD
-	    		GSSTmTcFormatAIField aifield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatAIField();
-	    		aifield.setFid(Integer.toString(fid));
-	    		aifield.setPfid(Integer.toString(0));
-	    		if(cdf_rows[6] == null) {
-	    			aifield.setName(cdf_rows[2]);//DESCR
-	    		} else {
-	    			aifield.setName(cdf_rows[6]);//PNAME
-	    			aifield.setDescription(cdf_rows[2]);//DESCR
-	    		}
-	    		aifield.setType(GSSTmTcFormatFieldType.STRUCTURED);
-	    		aifield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
-	    		aifield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
-	    		
-	    		GSSTmTcFormatArrayRef arrayRef = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatArrayRef();
-	    		arrayRef.setFidRef(Integer.toString(arrayFormatFieldRef+1));
-	    		aifield.setArrayRef(arrayRef);
-	    		
-	    		Integer sizeBits = Integer.parseInt(cdf_rows[3]);//ELLEN
-	    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-	    		formatSize.setBytes(Integer.toString(sizeBits/8));
-	    		formatSize.setBits(Integer.toString(sizeBits%8));
-	    		aifield.setSize(formatSize);
-	    		
-	    		Integer offsetBits = Integer.parseInt(cdf_rows[4]) - constSizeBits;//BIT
-	    		GSSTmTcFormatLocalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatLocalOffset();
-	    		formatOffset.setBytes(Integer.toString(offsetBits/8));
-	    		formatOffset.setBits(Integer.toString(offsetBits%8));
-	    		aifield.setLocalOffset(formatOffset);
-
-	    		GSSTmTcFormatTmTcFormat format = formats.get(cdf_rows[0]);
-	    		if(format != null)
-	    			format.getAIField().add(aifield);
-	    	}
-	    	else {
-	    		//insert CSFIELD
-	    		GSSTmTcFormatCSField csfield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatCSField();
-	    		csfield.setFid(Integer.toString(fid));
-	    		csfield.setPfid(Integer.toString(0));
-	    		if(cdf_rows[6] == null) {
-		    		csfield.setName(cdf_rows[2]);//DESCR
-	    		} else {
-		    		csfield.setName(cdf_rows[6]);//PNAME
-		    		csfield.setDescription(cdf_rows[2]);//DESCR
-	    		}
-	    		csfield.setType(GSSTmTcFormatFieldType.STRUCTURED);
-	    		csfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
-	    		csfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
-	    		
-	    		Integer sizeBits = Integer.parseInt(cdf_rows[3]);//ELLEN
-	    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-	    		formatSize.setBytes(Integer.toString(sizeBits/8));
-	    		formatSize.setBits(Integer.toString(sizeBits%8));
-	    		csfield.setSize(formatSize);
-	    		
-	    		Integer offsetBits = Integer.parseInt(cdf_rows[4]);//BIT
-	    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
-	    		formatOffset.setBytes(Integer.toString(offsetBits/8));
-	    		formatOffset.setBits(Integer.toString(offsetBits%8));
-	    		csfield.setGlobalOffset(formatOffset);
-	    		
-	    		GSSTmTcFormatTmTcFormat format = formats.get(cdf_rows[0]);
-	    		if(format != null)
-	    			format.getCSField().add(csfield);
-	    	}
-	    	if(fid == arrayFormatFieldRef) {
-	    		//insert AFIELD too
-		    	fid++;
-	    		GSSTmTcFormatAField afield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatAField();
-	    		afield.setFid(Integer.toString(fid));
-	    		afield.setPfid(Integer.toString(0));
-	    		if(cdf_rows[6] == null) {
-	    			afield.setName(cdf_rows[2] + "_block");//DESCR
-	    		} else {
-	    			afield.setName(cdf_rows[6] + "_block");//PNAME
-	    		}
-	    		afield.setType(GSSTmTcFormatFieldType.STRUCTURED);
-	    		afield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
-	    		afield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
-	    		
-	    		GSSTmTcFormatArrayDimension arrayDimension = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatArrayDimension();
-	    		arrayDimension.setFidRef(Integer.toString(arrayFormatFieldRef));
-	    		arrayDimension.setMaxItems(Integer.toString(n_max));
-	    		afield.setArrayDimension(arrayDimension);
-	    		
-	    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-	    		formatSize.setBytes(Integer.toString(vbleSizeBits/8));
-	    		formatSize.setBits(Integer.toString(vbleSizeBits%8));
-	    		afield.setSize(formatSize);
-	    		
-	    		Integer offsetBits = Integer.parseInt(cdf_rows[4]) + Integer.parseInt(cdf_rows[3]);//BIT + ELLEN
-	    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
-	    		formatOffset.setBytes(Integer.toString(offsetBits/8));
-	    		formatOffset.setBits(Integer.toString(offsetBits%8));
-	    		afield.setGlobalOffset(formatOffset);
-	    		
-	    		GSSTmTcFormatTmTcFormat format = formats.get(cdf_rows[0]);
-	    		if(format != null)
-	    			format.getAField().add(afield);
-	    	}
+		    		if(fid < variableFormatFieldRef) {
+			    		//insert VRFIELDSIZE too
+			    		GSSTmTcFormatVRFieldSize vrfieldsize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatVRFieldSize();
+			    		vrfieldsize.setFid(Integer.toString(fid+1));
+			    		vrfieldsize.setPfid(Integer.toString(fid));
+			    		if(cdf_rows[6] == null) {
+			    			vrfieldsize.setName(cdf_rows[2] + "_length");//DESCR
+			    		} else {
+			    			vrfieldsize.setName(cdf_rows[6] + "_length");//PNAME
+			    		}
+			    		format.getVRFieldSize().add(vrfieldsize);
+		    		}
+		    	}
+		    	else if((fid > arrayFormatFieldRef) && (fid <= lastArrayFormatFieldRef)) {
+		    		//insert AIFIELD
+		    		createAIField(format, fid, 0, name, descr, arrayFormatFieldRef+1, Integer.parseInt(cdf_rows[3]),
+		    				(Integer.parseInt(cdf_rows[4]) - constSizeBits));//ELLEN, BIT
+		    	}
+		    	else {
+		    		//insert CSFIELD	    	
+	    			createCSField(format, fid, 0, name, descr, Integer.parseInt(cdf_rows[3]), Integer.parseInt(cdf_rows[4]));//ELLEN, BIT
+		    	}
+    		
+		    	if(fid == arrayFormatFieldRef) {
+		    		//insert AFIELD too
+		    		if(cdf_rows[6] == null) {
+		    			name = cdf_rows[2] + "_block";//DESCR
+		    			descr = null;
+		    		} else {
+		    			name = cdf_rows[6] + "_block";//PNAME
+		    			descr = null;
+		    		}
+			    	fid++;
+			    	    		
+	    			createAField(format, fid, 0, name, null, arrayFormatFieldRef, n_max, vbleSizeBits, 
+	    					(Integer.parseInt(cdf_rows[4]) + Integer.parseInt(cdf_rows[3])));//BIT + ELLEN
+		    	}
+    		}
 		}
 		cdf.close();
+		return formats;
+	}
 
+	public static Map<String, GSSTmTcFormatTmTcFormat> getTmFormats(String database) throws IOException {
 		//process TM database tables and populate the collection
 
+		Map<String, GSSTmTcFormatTmTcFormat> formats = new HashMap<String, GSSTmTcFormatTmTcFormat>();
+	    Integer constSizeBits = 0, fid = 0, n_max = 0;
+	    Integer arrayFormatFieldRef = Integer.MAX_VALUE, lastArrayFormatFieldRef = 0;
+	    String lastID = "";
+	    
 		//read TM format names from PID table
 		BufferedReader pid = new BufferedReader(
 		        new InputStreamReader(new FileInputStream(database+"\\pid.dat")));
@@ -379,10 +467,10 @@ public class GSSGenerator {
 			GSSTmTcFormatTmTcFormat format = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
 			format.setName("YID" + pid_rows[5]);//NAME
 			format.setDescription(pid_rows[6]);//DESCR
-			format.setProtocol("EPD_PUS");
-			format.setType(GSSTmTcFormatTmTcFormatType.TM);
 			format.setUri("es.uah.aut.srg.yid" + pid_rows[5]);
 			format.setVersion("v1");
+			format.setProtocol("EPD_PUS");
+			format.setType(GSSTmTcFormatTmTcFormatType.TM);
 			
 			formats.put("YID" + pid_rows[5], format);
 	    	
@@ -441,59 +529,23 @@ public class GSSGenerator {
 	        		sizeBits += tmSizes.get(plf_same_format_rows[0]);
 	    	    }while ((plf_same_format = plf.readLine()) != null);
 	    		plf.reset();
-	    	    
-	    		//insert CSField SourceData
-	    		GSSTmTcFormatCSField csfield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatCSField();
-	    		csfield.setFid(Integer.toString(0));
-	    		csfield.setPfid(Integer.toString(0));
-	    		csfield.setName("SourceData");
-	    		csfield.setType(GSSTmTcFormatFieldType.STRUCTURED);
-	    		csfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
-	    		csfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
-	    		
-	    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-	    		formatSize.setBytes(Integer.toString(sizeBits/8));
-	    		formatSize.setBits(Integer.toString(sizeBits%8));
-	    		csfield.setSize(formatSize);
-	    		
-	    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
-	    		formatOffset.setBytes(Integer.toString(0));
-	    		formatOffset.setBits(Integer.toString(0));
-	    		csfield.setGlobalOffset(formatOffset);
-	    		
+
 	    		GSSTmTcFormatTmTcFormat format = formats.get("YID" + plf_rows[1]);
-	    		if(format != null)
-	    			format.getCSField().add(csfield);
-	    		
+	    		if(format != null) {
+		    		//insert CSField SourceData
+		    		createCSField(format, 0, 0, "SourceData", null, sizeBits, 0);
+	    		}
 		    	lastID = plf_rows[1];
 	    	}
 	    	fid++;
 
     		//insert CSFIELD
-    		GSSTmTcFormatCSField csfield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatCSField();
-    		csfield.setFid(Integer.toString(fid));
-    		csfield.setPfid(Integer.toString(0));
-    		csfield.setName(plf_rows[0]);//NAME
-    		csfield.setDescription(tmDescr.get(plf_rows[0]));
-    		csfield.setType(GSSTmTcFormatFieldType.STRUCTURED);
-    		csfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
-    		csfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
-
-    		Integer sizeBits = tmSizes.get(plf_rows[0]);
-    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-    		formatSize.setBytes(Integer.toString(sizeBits/8));
-    		formatSize.setBits(Integer.toString(sizeBits%8));
-    		csfield.setSize(formatSize);
-    		
-    		Integer offsetBytes = Integer.parseInt(plf_rows[2]) - 16; //OFFBY - CCSDS + PUS HEADER
-    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
-    		formatOffset.setBytes(Integer.toString(offsetBytes));//OFFBY
-    		formatOffset.setBits(plf_rows[3]);//OFFBI
-    		csfield.setGlobalOffset(formatOffset);
-    		
     		GSSTmTcFormatTmTcFormat format = formats.get("YID" + plf_rows[1]);
-    		if(format != null)
-    			format.getCSField().add(csfield);
+    		if(format != null) {
+        		Integer offsetBits = (Integer.parseInt(plf_rows[2]) - 16) * 8 + Integer.parseInt(plf_rows[3]);
+        		//(OFFBY - CCSDS + PUS HEADER) * 8 + OFFBI
+	    		createCSField(format, fid, 0, plf_rows[0], tmDescr.get(plf_rows[0]), tmSizes.get(plf_rows[0]), offsetBits);
+    		}
 	    }
 	    plf.close();
 
@@ -559,158 +611,71 @@ public class GSSGenerator {
 	    		vpd.reset();
 	    	    
 	    		//insert VSField SourceData
-	    		GSSTmTcFormatVSField vsfield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatVSField();
-	    		vsfield.setFid(Integer.toString(0));
-	    		vsfield.setPfid(Integer.toString(0));
-	    		vsfield.setName("SourceData");
-	    		vsfield.setType(GSSTmTcFormatFieldType.STRUCTURED);
-	    		vsfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
-	    		vsfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
-
-	    		GSSTmTcFormatConstSize formatConstSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatConstSize();
-	    		formatConstSize.setBytes(Integer.toString(constSizeBits/8));
-	    		formatConstSize.setBits(Integer.toString(constSizeBits%8));
-	    		vsfield.setConstSize(formatConstSize);
-	    		
-	    		GSSTmTcFormatVariableSize formatVariableSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatVariableSize();
-	    		formatVariableSize.setFidRef(Integer.toString(arrayFormatFieldRef));
-	    		formatVariableSize.setUnit(getVariableFieldUnitText(vbleSizeBits));
-	    		vsfield.setVariableSize(formatVariableSize);
-
 		    	n_max = (MAX_SRC_DATA_BYTES*8 - constSizeBits) / vbleSizeBits;
 	    		maxSizeBits = constSizeBits + n_max * vbleSizeBits;
-	    		GSSTmTcFormatMaxSize formatMaxSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatMaxSize();
-	    		formatMaxSize.setBytes(Integer.toString(maxSizeBits/8));
-	    		formatMaxSize.setBits(Integer.toString(maxSizeBits%8));
-	    		vsfield.setMaxSize(formatMaxSize);
-	    		
-	    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
-	    		formatOffset.setBytes(Integer.toString(0));
-	    		formatOffset.setBits(Integer.toString(0));
-	    		vsfield.setGlobalOffset(formatOffset);
 	    		
 	    		GSSTmTcFormatTmTcFormat format = formats.get("YID" + vpd_rows[0]);
-	    		if(format != null)
-	    			format.getVSField().add(vsfield);
+	    		if(format != null) {
+	    			createVSField(format, 0, 0, "SourceData", null, constSizeBits, arrayFormatFieldRef, vbleSizeBits,
+	    					maxSizeBits, 0);//BIT
+	    		}
 	    		
 			    offsetBits = 0;
 		    	lastID = vpd_rows[0];
 		    	last_NIDG_field = 0;
 	    	}
 	    	fid++;
-	    	
-	    	if((fid > arrayFormatFieldRef) && (fid <= lastArrayFormatFieldRef)){
-	    		//insert AIFIELD
-	    		GSSTmTcFormatAIField aifield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatAIField();
-	    		aifield.setFid(Integer.toString(fid));
-	    		aifield.setPfid(Integer.toString(0));
-	    		aifield.setName(vpd_rows[2]);//NAME
-	    		aifield.setDescription(tmDescr.get(vpd_rows[2]));
-	    		aifield.setType(GSSTmTcFormatFieldType.STRUCTURED);
-	    		aifield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
-	    		aifield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
-	    		
-	    		GSSTmTcFormatArrayRef arrayRef = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatArrayRef();
-	    		arrayRef.setFidRef(Integer.toString(arrayFormatFieldRef+1));
-	    		aifield.setArrayRef(arrayRef);
 
-	    		Integer sizeBits = tmSizes.get(vpd_rows[2]);
-	    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-	    		formatSize.setBytes(Integer.toString(sizeBits/8));
-	    		formatSize.setBits(Integer.toString(sizeBits%8));
-	    		aifield.setSize(formatSize);
-	    		
-	    		offsetBits += Integer.parseInt(vpd_rows[13]);
-	    		GSSTmTcFormatLocalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatLocalOffset();
-	    		formatOffset.setBytes(Integer.toString(offsetBits/8));
-	    		formatOffset.setBits(Integer.toString(offsetBits%8));
-	    		aifield.setLocalOffset(formatOffset);
-	    		
-	    		GSSTmTcFormatTmTcFormat format = formats.get("YID" + vpd_rows[0]);
-	    		if(format != null)
-	    			format.getAIField().add(aifield);
-	    	}
-	    	else {
-	    		//insert CSFIELD
-	    		GSSTmTcFormatCSField csfield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatCSField();
-	    		csfield.setFid(Integer.toString(fid));
-    			if(vpd_rows[2].substring(0, 4).compareTo("NIDD") == 0) {
-    				csfield.setPfid(Integer.toString(last_NIDG_field));
-    			}
-    			else
-    			{
-    				last_NIDG_field = fid;
-    				csfield.setPfid(Integer.toString(0));
-    			}
-	    		csfield.setName(vpd_rows[2]);//NAME
-	    		csfield.setDescription(tmDescr.get(vpd_rows[2]));
-	    		csfield.setType(GSSTmTcFormatFieldType.STRUCTURED);
-	    		csfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
-	    		csfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
+    		GSSTmTcFormatTmTcFormat format = formats.get("YID" + vpd_rows[0]);
+    		if(format != null) {
+    			
+		    	if((fid > arrayFormatFieldRef) && (fid <= lastArrayFormatFieldRef)){
+		    		//insert AIFIELD
+		    		offsetBits += Integer.parseInt(vpd_rows[13]);
+		    		
+		    		createAIField(format, fid, 0, vpd_rows[2], tmDescr.get(vpd_rows[2]), arrayFormatFieldRef+1,
+		    				tmSizes.get(vpd_rows[2]), offsetBits);
+		    	}
+		    	else {
+		    		//insert CSFIELD
+	    			Integer pfid = 0;
+	    			if(vpd_rows[2].substring(0, 4).compareTo("NIDD") == 0) {
+	    				pfid = last_NIDG_field;
+	    			}
+	    			else {
+	    				last_NIDG_field = fid;
+	    			}
+		    		offsetBits += Integer.parseInt(vpd_rows[13]);
+	    			
+		    		createCSField(format, fid, pfid, vpd_rows[2], tmDescr.get(vpd_rows[2]), tmSizes.get(vpd_rows[2]), offsetBits);
+		    	}
+		    	
+		    	if(fid == arrayFormatFieldRef) {
+		    		//insert AFIELD too
+			    	fid++;
+			    	
+		    		//add current field offset bits for getting AField Offset 
+			    	offsetBits += tmSizes.get(vpd_rows[2]);
+			    	   		
+	    			createAField(format, fid, 0, vpd_rows[2] + "_block", null, arrayFormatFieldRef, n_max, vbleSizeBits, 
+	    					offsetBits);//BIT + ELLEN
 
-	    		Integer sizeBits = tmSizes.get(vpd_rows[2]);
-	    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-	    		formatSize.setBytes(Integer.toString(sizeBits/8));
-	    		formatSize.setBits(Integer.toString(sizeBits%8));
-	    		csfield.setSize(formatSize);
-
-	    		offsetBits += Integer.parseInt(vpd_rows[13]);
-	    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
-	    		formatOffset.setBytes(Integer.toString(offsetBits/8));
-	    		formatOffset.setBits(Integer.toString(offsetBits%8));
-	    		csfield.setGlobalOffset(formatOffset);
-	    		
-	    		GSSTmTcFormatTmTcFormat format = formats.get("YID" + vpd_rows[0]);
-	    		if(format != null)
-	    			format.getCSField().add(csfield);
-	    	}
-	    	if(fid == arrayFormatFieldRef) {
-	    		//insert AFIELD too
-		    	fid++;
-	    		GSSTmTcFormatAField afield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatAField();
-	    		afield.setFid(Integer.toString(fid));
-	    		afield.setPfid(Integer.toString(0));
-	    		afield.setName(vpd_rows[2] + "_block");//NAME
-	    		afield.setType(GSSTmTcFormatFieldType.STRUCTURED);
-	    		afield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
-	    		afield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
-	    		
-	    		GSSTmTcFormatArrayDimension arrayDimension = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatArrayDimension();
-	    		arrayDimension.setFidRef(Integer.toString(arrayFormatFieldRef));
-	    		arrayDimension.setMaxItems(Integer.toString(n_max));
-	    		afield.setArrayDimension(arrayDimension);
-
-	    		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
-	    		formatSize.setBytes(Integer.toString(vbleSizeBits/8));
-	    		formatSize.setBits(Integer.toString(vbleSizeBits%8));
-	    		afield.setSize(formatSize);
-
-	    		//add current field offset bits for getting AField Offset 
-		    	offsetBits += tmSizes.get(vpd_rows[2]);
-	    		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
-	    		formatOffset.setBytes(Integer.toString(offsetBits/8));
-	    		formatOffset.setBits(Integer.toString(offsetBits%8));
-	    		afield.setGlobalOffset(formatOffset);
-	    		
-	    		GSSTmTcFormatTmTcFormat format = formats.get("YID" + vpd_rows[0]);
-	    		if(format != null)
-	    			format.getAField().add(afield);
-	    		
-	    		//reset offset bits for Local Offset
-		    	offsetBits = 0;
-	    	}
-	    	else {
-				//previous offset + db offset value
-		    	offsetBits += tmSizes.get(vpd_rows[2]);
+		    		//reset offset bits for Local Offset
+			    	offsetBits = 0;
+		    		
+		    	}
+		    	else {
+					//previous offset + db offset value
+			    	offsetBits += tmSizes.get(vpd_rows[2]);
+		    	}
 	    	}
 	    }
 	    vpd.close();
 	    
-		return formats.values();
+		return formats;
 	}
 
-	public static Integer getSizeBitsFromPtcFfc(Integer ptc, Integer pfc)
-	{
+	public static Integer getSizeBitsFromPtcFfc(Integer ptc, Integer pfc) {
 		Integer length = 0;
 		switch(ptc)
 		{
@@ -763,8 +728,7 @@ public class GSSGenerator {
 		return length;
 	}
 
-	public static GSSTmTcFormatUnit getVariableFieldUnitText(Integer variable_field_length_bits)
-	{
+	public static GSSTmTcFormatUnit getVariableFieldUnitText(Integer variable_field_length_bits) {
 		GSSTmTcFormatUnit ret = GSSTmTcFormatUnit.BYTES;
 		
 		switch(variable_field_length_bits)
@@ -788,5 +752,124 @@ public class GSSGenerator {
 				break;
 		}
 		return ret;
+	}
+
+	public static void createVSField(GSSTmTcFormatTmTcFormat format, Integer fid, Integer pfid, String name, String descr,
+			Integer constSizeBits, Integer fidRef, Integer vbleSizeBits, Integer maxSizeBits, Integer offsetBits) {
+
+		GSSTmTcFormatVSField vsfield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatVSField();
+		vsfield.setFid(Integer.toString(fid));
+		vsfield.setPfid(Integer.toString(pfid));
+		vsfield.setName(name);
+		vsfield.setDescription(descr);
+		vsfield.setType(GSSTmTcFormatFieldType.STRUCTURED);
+		vsfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
+		vsfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
+		
+		GSSTmTcFormatConstSize formatConstSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatConstSize();
+		formatConstSize.setBytes(Integer.toString(constSizeBits/8));
+		formatConstSize.setBits(Integer.toString(constSizeBits%8));
+		vsfield.setConstSize(formatConstSize);
+		
+		GSSTmTcFormatVariableSize formatVariableSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatVariableSize();
+		formatVariableSize.setFidRef(Integer.toString(fidRef));
+		formatVariableSize.setUnit(getVariableFieldUnitText(vbleSizeBits));
+		vsfield.setVariableSize(formatVariableSize);
+
+		GSSTmTcFormatMaxSize formatMaxSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatMaxSize();
+		formatMaxSize.setBytes(Integer.toString(maxSizeBits/8));
+		formatMaxSize.setBits(Integer.toString(maxSizeBits%8));
+		vsfield.setMaxSize(formatMaxSize);
+		
+		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
+		formatOffset.setBytes(Integer.toString(offsetBits/8));
+		formatOffset.setBits(Integer.toString(offsetBits%8));
+		vsfield.setGlobalOffset(formatOffset);
+		
+		format.getVSField().add(vsfield);
+	}
+
+	public static void createCSField(GSSTmTcFormatTmTcFormat format, Integer fid, Integer pfid, String name, String descr,
+			Integer constSizeBits, Integer offsetBits) {
+
+		GSSTmTcFormatCSField csfield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatCSField();
+		csfield.setFid(Integer.toString(fid));
+		csfield.setPfid(Integer.toString(pfid));
+		csfield.setName(name);
+		csfield.setDescription(descr);
+		csfield.setType(GSSTmTcFormatFieldType.STRUCTURED);
+		csfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
+		csfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
+		
+		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
+		formatSize.setBytes(Integer.toString(constSizeBits/8));
+		formatSize.setBits(Integer.toString(constSizeBits%8));
+		csfield.setSize(formatSize);
+		
+		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
+		formatOffset.setBytes(Integer.toString(offsetBits/8));
+		formatOffset.setBits(Integer.toString(offsetBits%8));
+		csfield.setGlobalOffset(formatOffset);
+		
+		format.getCSField().add(csfield);
+	}
+
+	public static void createAIField(GSSTmTcFormatTmTcFormat format, Integer fid, Integer pfid, String name, String descr,
+			Integer fidRef, Integer sizeBits, Integer offsetBits) {
+
+		GSSTmTcFormatAIField aifield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatAIField();
+		aifield.setFid(Integer.toString(fid));
+		aifield.setPfid(Integer.toString(pfid));
+		aifield.setName(name);
+		aifield.setDescription(descr);
+		aifield.setType(GSSTmTcFormatFieldType.STRUCTURED);
+		aifield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
+		aifield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
+		
+		GSSTmTcFormatArrayRef arrayRef = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatArrayRef();
+		arrayRef.setFidRef(Integer.toString(fidRef));
+		aifield.setArrayRef(arrayRef);
+		
+		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
+		formatSize.setBytes(Integer.toString(sizeBits/8));
+		formatSize.setBits(Integer.toString(sizeBits%8));
+		aifield.setSize(formatSize);
+		
+		GSSTmTcFormatLocalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatLocalOffset();
+		formatOffset.setBytes(Integer.toString(offsetBits/8));
+		formatOffset.setBits(Integer.toString(offsetBits%8));
+		aifield.setLocalOffset(formatOffset);
+		
+		format.getAIField().add(aifield);
+	}
+	
+	public static void createAField(GSSTmTcFormatTmTcFormat format, Integer fid, Integer pfid, String name, String descr,
+			Integer arrayFormatFieldRef, Integer n_max, Integer vbleSizeBits, Integer offsetBits) {
+
+		GSSTmTcFormatAField afield = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatAField();
+		afield.setFid(Integer.toString(fid));
+		afield.setPfid(Integer.toString(pfid));
+		afield.setName(name);
+		afield.setDescription(null);
+		afield.setType(GSSTmTcFormatFieldType.STRUCTURED);
+		afield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
+		afield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
+		
+		GSSTmTcFormatArrayDimension arrayDimension = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatArrayDimension();
+		arrayDimension.setFidRef(Integer.toString(arrayFormatFieldRef));
+		arrayDimension.setMaxItems(Integer.toString(n_max));
+		afield.setArrayDimension(arrayDimension);
+		
+		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
+		formatSize.setBytes(Integer.toString(vbleSizeBits/8));
+		formatSize.setBits(Integer.toString(vbleSizeBits%8));
+		afield.setSize(formatSize);
+		
+		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
+		formatOffset.setBytes(Integer.toString(offsetBits/8));
+		formatOffset.setBits(Integer.toString(offsetBits%8));
+		afield.setGlobalOffset(formatOffset);
+
+		format.getAField().add(afield);
 	}
 }
