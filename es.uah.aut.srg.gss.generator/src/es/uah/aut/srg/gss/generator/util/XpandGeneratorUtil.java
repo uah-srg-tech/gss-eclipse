@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.xtend.typesystem.emf.EmfRegistryMetaModel;
 
+import es.uah.aut.srg.gss.export.exportPackage;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 
 import org.eclipse.internal.xpand2.pr.ProtectedRegionResolverImpl;
@@ -45,7 +46,8 @@ public class XpandGeneratorUtil {
 		@Override
 		protected EPackage[] allPackages() {
 			return new EPackage[] {
-				tm_tc_formatPackage.eINSTANCE
+				tm_tc_formatPackage.eINSTANCE,
+				exportPackage.eINSTANCE
 			};
 		}
 		

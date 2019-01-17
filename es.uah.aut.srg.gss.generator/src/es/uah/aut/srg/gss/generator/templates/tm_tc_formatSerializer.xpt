@@ -13,6 +13,7 @@ GSSTmTcFormatTmTcFormat «this.name» {
 «EXPAND SerializeAField FOREACH this.AField -»
 «EXPAND SerializeAIField FOREACH this.AIField -»
 «EXPAND SerializeVRFieldSize FOREACH this.VRFieldSize -»
+«EXPAND SerializeFDICField FOREACH this.FDICField -»
 };
 «ENDFILE -»
 «ENDDEFINE»
@@ -102,18 +103,25 @@ GSSTmTcFormatTmTcFormat «this.name» {
 	};
 «ENDDEFINE»
 
-«DEFINE SerializeSize FOR GSSTmTcFormatSize -»
-		GSSTmTcFormatSize {
-			bytes := «this.bytes»;
-			bits := «this.bits»;
+«DEFINE SerializeFDICField FOR GSSTmTcFormatFDICField -»
+	GSSTmTcFormatFDICField {
+		fid := «this.fid»;
+		pfid := «this.pfid»;
+		name := "«this.name»";
+«IF this.description != null -»
+		description := "«this.description»";
+«ENDIF -»
+		checkType := «this.checkType»;
+		byteOrder := «this.byteOrder»;
+		firstBit := «this.firstBit»;
+«EXPAND SerializeSize FOR this.size -»
+		GSSTmTcFormatFloatingOffset {
+			fidRef := «this.floatingOffset.fidRef»;
 		};
-«ENDDEFINE»
-		
-«DEFINE SerializeGlobalOffset FOR GSSTmTcFormatGlobalOffset -»
-		GSSTmTcFormatGlobalOffset {
-			bytes := «this.bytes»;
-			bits := «this.bits»;
+		GSSTmTcFormatSortedFieldsToCheck {
+«EXPAND SerializeSortedFieldsToCheck FOREACH this.sortedFieldsToCheck.fieldToCheck -»
 		};
+	};
 «ENDDEFINE»
 
 «DEFINE SerializeVRFieldSize FOR GSSTmTcFormatVRFieldSize -»
@@ -122,4 +130,24 @@ GSSTmTcFormatTmTcFormat «this.name» {
 		pfid := «this.pfid»;
 		name := "«this.name»";
 	};
+«ENDDEFINE»
+
+«DEFINE SerializeSize FOR GSSTmTcFormatSize -»
+		GSSTmTcFormatSize {
+			bytes := «this.bytes»;
+			bits := «this.bits»;
+		};
+«ENDDEFINE»
+
+«DEFINE SerializeGlobalOffset FOR GSSTmTcFormatGlobalOffset -»
+		GSSTmTcFormatGlobalOffset {
+			bytes := «this.bytes»;
+			bits := «this.bits»;
+		};
+«ENDDEFINE»
+
+«DEFINE SerializeSortedFieldsToCheck FOR GSSTmTcFormatFieldToCheck -»
+			GSSTmTcFormatFieldToCheck {
+				fidRef := «this.fidRef»;
+			};
 «ENDDEFINE»

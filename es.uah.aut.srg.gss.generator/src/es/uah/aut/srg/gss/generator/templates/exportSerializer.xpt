@@ -5,8 +5,8 @@
 GSSExportExport «this.name» {
 	uri := «this.uri»;
 	version := «this.version»;
-	from := «this.from»;
-	to := «this.to»;
+	from := «this.from.name»(«this.from.version»);
+	to := «this.to.name»(«this.to.version»);
 «IF this.Sizes != null -»
 	GSSExportSizes {
 «EXPAND SerializeSizeInBits FOREACH this.Sizes.sizeInBits -»
@@ -32,13 +32,13 @@ GSSExportExport «this.name» {
 «DEFINE SerializeSettingFromConst FOR GSSExportSettingFromConst -»
 		GSSExportSettingFromConst {
 			value := «this.value»;
-			toFieldRef := «this.toFieldRef»;
+			toFieldRef := «this.toFieldRef.name»;
 		};
 «ENDDEFINE»
 
 «DEFINE SerializeSettingFromSize FOR GSSExportSettingFromSize -»
-		GSSExportSettingFromConst {
+		GSSExportSettingFromSize {
 			sizeRef := «this.sizeRef»;
-			toFieldRef := «this.toFieldRef»;
+			toFieldRef := «this.toFieldRef.name»;
 		};
 «ENDDEFINE»
