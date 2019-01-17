@@ -5,7 +5,7 @@
 GSSFilterMintermFilter «this.name» {
 	uri := «this.uri»;
 	version := «this.version»;
-	formatFile := «this.formatFile»;
+	formatFile := «this.formatFile.name»(«this.formatFile.version»);
 	
 «EXPAND SerializeBoolVar FOREACH this.BoolVar -»
 «EXPAND SerializeMinterm FOREACH this.Minterm -»
@@ -15,24 +15,28 @@ GSSFilterMintermFilter «this.name» {
 
 «DEFINE SerializeBoolVar FOR GSSFilterBoolVar -»
 	GSSFilterBoolVar {
-		id := "«this.id»";
-		name := "«this.name»";
-		constantType := "«this.constantType»";
-		FieldRef := "«this.FieldRef»";
+		id := «this.id»;
+		name := «this.name»;
+		constantType := «this.constantType»;
+		FieldRef := «this.FieldRef.name»;
 		GSSFilterFieldOp {
-			type := "«this.Op.type»";
+			type := «this.Op.type»;
 		};
 		GSSFilterConstant {
-			value := "«this.Constant.value»";
+			value := «this.Constant.value»;
 		};
 	};
 «ENDDEFINE»
 
 «DEFINE SerializeMinterm FOR GSSFilterMinterm -»
 	GSSFilterMinterm { 
-		id := "«this.id»";
-		GSSFilterBoolVarRef {
-			idRef := "«this.BoolVarRef.idRef»";
-		};
+		id := «this.id»;
+«EXPAND SerializeBoolVarRef FOREACH this.BoolVarRef -»
 	};
+«ENDDEFINE»
+
+«DEFINE SerializeBoolVarRef FOR GSSFilterBoolVarRef -»
+		GSSFilterBoolVarRef {
+			idRef := «this.idRef»;
+		};
 «ENDDEFINE»

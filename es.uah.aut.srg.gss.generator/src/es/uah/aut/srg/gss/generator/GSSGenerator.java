@@ -25,6 +25,15 @@ import es.uah.aut.srg.gss.export.GSSExportSizeInBits;
 import es.uah.aut.srg.gss.export.GSSExportSizes;
 import es.uah.aut.srg.gss.export.GSSExportUnit;
 import es.uah.aut.srg.gss.export.exportFactory;
+import es.uah.aut.srg.gss.filters.GSSFilterBoolVar;
+import es.uah.aut.srg.gss.filters.GSSFilterBoolVarRef;
+import es.uah.aut.srg.gss.filters.GSSFilterConstant;
+import es.uah.aut.srg.gss.filters.GSSFilterConstantType;
+import es.uah.aut.srg.gss.filters.GSSFilterFieldOp;
+import es.uah.aut.srg.gss.filters.GSSFilterMinterm;
+import es.uah.aut.srg.gss.filters.GSSFilterMintermFilter;
+import es.uah.aut.srg.gss.filters.GSSFilterOPType;
+import es.uah.aut.srg.gss.filters.filtersFactory;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldByteOrder;
@@ -286,6 +295,209 @@ public class GSSGenerator {
 		return exports;
 	}
 	
+	public static Collection<GSSFilterMintermFilter> getFiltersLevel0(String database,
+			GSSTmTcFormatTmTcFormat ccsdsTmFormat) throws IOException {
+
+		Set<GSSFilterMintermFilter> filters = new HashSet<GSSFilterMintermFilter>();
+
+		//read APID from PID table
+		BufferedReader pid = new BufferedReader(
+		        new InputStreamReader(new FileInputStream(database+"\\pid.dat")));
+	    String pid_line;
+	    while ((pid_line = pid.readLine()) != null) {
+	    	
+	    	String[] pid_rows = pid_line.split("\t");
+		    
+	    	GSSFilterMintermFilter filter = filtersFactory.eINSTANCE.createGSSFilterMintermFilter();
+	    	filter.setName("YID" + pid_rows[5] + "_filter_level_0");//NAME
+	    	filter.setDescription(pid_rows[6]);//DESCR
+	    	filter.setUri("es.uah.aut.srg.yid" + pid_rows[5] + "_filter_level_0");
+	    	filter.setVersion("v1");
+	    	filter.setFormatFile(ccsdsTmFormat);//CCSDS
+
+	    	GSSFilterBoolVar boolvar = filtersFactory.eINSTANCE.createGSSFilterBoolVar();
+	    	boolvar.setId("0");
+	    	boolvar.setName("APID" + pid_rows[2]);
+	    	boolvar.setConstantType(GSSFilterConstantType.DECIMAL);
+	    	boolvar.setFieldRef(ccsdsTmFormat.getCSField().get(5));//APID
+	    	
+	    	GSSFilterFieldOp fieldOp = filtersFactory.eINSTANCE.createGSSFilterFieldOp();
+	    	fieldOp.setType(GSSFilterOPType.EQUAL);
+	    	boolvar.setOp(fieldOp);
+	    	
+	    	GSSFilterConstant constant = filtersFactory.eINSTANCE.createGSSFilterConstant();
+	    	constant.setValue(pid_rows[2]);
+	    	boolvar.setConstant(constant);
+	    	
+	    	filter.getBoolVar().add(boolvar);
+
+	    	GSSFilterMinterm minterm = filtersFactory.eINSTANCE.createGSSFilterMinterm();
+	    	minterm.setId("0");
+	    	GSSFilterBoolVarRef boolvarRef = filtersFactory.eINSTANCE.createGSSFilterBoolVarRef();
+	    	boolvarRef.setIdRef("0");
+	    	minterm.getBoolVarRef().add(boolvarRef);
+	    	filter.getMinterm().add(minterm);
+	    	
+	    	filters.add(filter);
+	    }
+	    pid.close();
+		return filters;
+	}
+	
+	public static Collection<GSSFilterMintermFilter> getFiltersLevel1(String database,
+			GSSTmTcFormatTmTcFormat pusTmFormat) throws IOException {
+
+		Set<GSSFilterMintermFilter> filters = new HashSet<GSSFilterMintermFilter>();
+
+		//read TYPE & STYPE from PID table
+		BufferedReader pid = new BufferedReader(
+		        new InputStreamReader(new FileInputStream(database+"\\pid.dat")));
+	    String pid_line;
+	    while ((pid_line = pid.readLine()) != null) {
+	    	
+	    	String[] pid_rows = pid_line.split("\t");
+		    
+	    	GSSFilterMintermFilter filter = filtersFactory.eINSTANCE.createGSSFilterMintermFilter();
+	    	filter.setName("YID" + pid_rows[5] + "_filter_level_1");//NAME
+	    	filter.setDescription(pid_rows[6]);//DESCR
+	    	filter.setUri("es.uah.aut.srg.yid" + pid_rows[5] + "_filter_level_1");
+	    	filter.setVersion("v1");
+	    	filter.setFormatFile(pusTmFormat);//EPD_PUS
+
+	    	GSSFilterBoolVar boolvarType = filtersFactory.eINSTANCE.createGSSFilterBoolVar();
+	    	boolvarType.setId("0");
+	    	boolvarType.setName("ServiceType" + pid_rows[0]);
+	    	boolvarType.setConstantType(GSSFilterConstantType.DECIMAL);
+	    	boolvarType.setFieldRef(pusTmFormat.getCSField().get(4));//ServiceType
+	    	
+	    	GSSFilterFieldOp fieldOpType = filtersFactory.eINSTANCE.createGSSFilterFieldOp();
+	    	fieldOpType.setType(GSSFilterOPType.EQUAL);
+	    	boolvarType.setOp(fieldOpType);
+	    	
+	    	GSSFilterConstant constantType = filtersFactory.eINSTANCE.createGSSFilterConstant();
+	    	constantType.setValue(pid_rows[0]);
+	    	boolvarType.setConstant(constantType);
+	    	
+	    	filter.getBoolVar().add(boolvarType);
+
+	    	GSSFilterBoolVar boolvarSubtype = filtersFactory.eINSTANCE.createGSSFilterBoolVar();
+	    	boolvarSubtype.setId("1");
+	    	boolvarSubtype.setName("ServiceSubtype" + pid_rows[1]);
+	    	boolvarSubtype.setConstantType(GSSFilterConstantType.DECIMAL);
+	    	boolvarSubtype.setFieldRef(pusTmFormat.getCSField().get(5));//ServiceSubtype
+	    	
+	    	GSSFilterFieldOp fieldOpSubtype = filtersFactory.eINSTANCE.createGSSFilterFieldOp();
+	    	fieldOpSubtype.setType(GSSFilterOPType.EQUAL);
+	    	boolvarSubtype.setOp(fieldOpSubtype);
+	    	
+	    	GSSFilterConstant constantSubtype = filtersFactory.eINSTANCE.createGSSFilterConstant();
+	    	constantSubtype.setValue(pid_rows[1]);
+	    	boolvarSubtype.setConstant(constantSubtype);
+	    	
+	    	filter.getBoolVar().add(boolvarSubtype);
+
+	    	GSSFilterMinterm minterm = filtersFactory.eINSTANCE.createGSSFilterMinterm();
+	    	minterm.setId("0");
+	    	
+	    	GSSFilterBoolVarRef boolvarRefType = filtersFactory.eINSTANCE.createGSSFilterBoolVarRef();
+	    	boolvarRefType.setIdRef("0");
+	    	minterm.getBoolVarRef().add(boolvarRefType);
+	    	
+	    	GSSFilterBoolVarRef boolvarRefSubtype = filtersFactory.eINSTANCE.createGSSFilterBoolVarRef();
+	    	boolvarRefSubtype.setIdRef("1");
+	    	minterm.getBoolVarRef().add(boolvarRefSubtype);
+	    	
+	    	filter.getMinterm().add(minterm);
+	    	
+	    	filters.add(filter);
+	    }
+	    pid.close();
+		return filters;
+	}
+
+	public static Collection<GSSFilterMintermFilter> getFiltersLevel2(String database,
+			Map<String, GSSTmTcFormatTmTcFormat> formats) throws IOException {
+
+		Set<GSSFilterMintermFilter> filters = new HashSet<GSSFilterMintermFilter>();
+		
+		//read PI1_OFF from PIC table
+		Map<String, Map<String, String> > picTypeSubtype = new HashMap<>();
+		Map<String, String> auxMap = new HashMap<>();
+		BufferedReader pic = new BufferedReader(
+		        new InputStreamReader(new FileInputStream(database+"\\pic.dat")));
+	    String pic_line;
+	    while ((pic_line = pic.readLine()) != null) {
+	    	
+	    	String[] pic_rows = pic_line.split("\t");
+	    	
+	    	auxMap.put(pic_rows[1], pic_rows[2]);
+	    	picTypeSubtype.put(pic_rows[0], auxMap);
+	    }
+	    pic.close();
+	    
+		//read PI1_VAL from PID table only if PI1_OFF from PIC is not -1 
+		BufferedReader pid = new BufferedReader(
+		        new InputStreamReader(new FileInputStream(database+"\\pid.dat")));
+	    String pid_line;
+	    while ((pid_line = pid.readLine()) != null) {
+	    	
+	    	String[] pid_rows = pid_line.split("\t");
+	    	
+	    	if(picTypeSubtype.get(pid_rows[0]).get(pid_rows[1]) == "-1") {
+	    		continue;
+	    	}
+
+	    	GSSTmTcFormatField fieldRefPI1_val = null;
+	    	if((formats.get("YID" + pid_rows[5]).getCSField().size() == 0) &&
+	    			(formats.get("YID" + pid_rows[5]).getVSField().size() == 0)) {
+	    		//if no fields -> empty format
+	    		continue;
+	    	}
+	    	else if(formats.get("YID" + pid_rows[5]).getVSField().size() == 0) {
+	    		//only csfields: get second csfield
+	    		fieldRefPI1_val = formats.get("YID" + pid_rows[5]).getCSField().get(1);
+	    	}
+	    	else {
+	    		//csfields and vsfields: get first csfield
+	    		fieldRefPI1_val = formats.get("YID" + pid_rows[5]).getCSField().get(0);
+	    	}
+		    
+	    	GSSFilterMintermFilter filter = filtersFactory.eINSTANCE.createGSSFilterMintermFilter();
+	    	filter.setName("YID" + pid_rows[5] + "_filter_level_2");//NAME
+	    	filter.setDescription(pid_rows[6]);//DESCR
+	    	filter.setUri("es.uah.aut.srg.yid" + pid_rows[5] + "_filter_level_2");
+	    	filter.setVersion("v1");
+	    	filter.setFormatFile(formats.get("YID" + pid_rows[5]));
+	    	
+	    	GSSFilterBoolVar boolvar = filtersFactory.eINSTANCE.createGSSFilterBoolVar();
+	    	boolvar.setId("0");
+	    	boolvar.setName(fieldRefPI1_val.getName() + "_" + pid_rows[3]);
+	    	boolvar.setConstantType(GSSFilterConstantType.DECIMAL);
+	    	boolvar.setFieldRef(fieldRefPI1_val);//PI1_VAL
+	    	
+	    	GSSFilterFieldOp fieldOp = filtersFactory.eINSTANCE.createGSSFilterFieldOp();
+	    	fieldOp.setType(GSSFilterOPType.EQUAL);
+	    	boolvar.setOp(fieldOp);
+	    	
+	    	GSSFilterConstant constant = filtersFactory.eINSTANCE.createGSSFilterConstant();
+	    	constant.setValue(pid_rows[3]);
+	    	boolvar.setConstant(constant);
+	    	
+	    	filter.getBoolVar().add(boolvar);
+
+	    	GSSFilterMinterm minterm = filtersFactory.eINSTANCE.createGSSFilterMinterm();
+	    	minterm.setId("0");
+	    	GSSFilterBoolVarRef boolvarRef = filtersFactory.eINSTANCE.createGSSFilterBoolVarRef();
+	    	boolvarRef.setIdRef("0");
+	    	minterm.getBoolVarRef().add(boolvarRef);
+	    	filter.getMinterm().add(minterm);
+	    	
+	    	filters.add(filter);
+	    }
+	    pid.close();
+		return filters;
+	}
+	
 	public static Map<String, GSSTmTcFormatTmTcFormat> getTcFormats(String database) throws IOException {
 
 		Map<String, GSSTmTcFormatTmTcFormat> formats = new HashMap<String, GSSTmTcFormatTmTcFormat>();
@@ -446,7 +658,7 @@ public class GSSGenerator {
 		    			descr = null;
 		    		}
 			    	fid++;
-			    	    		
+			    	
 	    			createAField(format, fid, 0, name, null, arrayFormatFieldRef, n_max, vbleSizeBits, 
 	    					(Integer.parseInt(cdf_rows[4]) + Integer.parseInt(cdf_rows[3])));//BIT + ELLEN
 		    	}
@@ -664,7 +876,7 @@ public class GSSGenerator {
 			    	
 		    		//add current field offset bits for getting AField Offset 
 			    	offsetBits += tmSizes.get(vpd_rows[2]);
-			    	   		
+			    	
 	    			createAField(format, fid, 0, vpd_rows[2] + "_block", null, arrayFormatFieldRef, n_max, vbleSizeBits, 
 	    					offsetBits);//BIT + ELLEN
 

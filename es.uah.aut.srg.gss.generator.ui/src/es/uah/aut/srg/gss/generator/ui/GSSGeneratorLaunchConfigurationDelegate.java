@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import es.uah.aut.srg.gss.common.GSSModelFile;
 import es.uah.aut.srg.gss.export.GSSExportExport;
+import es.uah.aut.srg.gss.filters.GSSFilterMintermFilter;
 import es.uah.aut.srg.gss.generator.GSSGenerator;
 import es.uah.aut.srg.gss.generator.util.XpandGeneratorUtil;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
@@ -156,7 +157,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		tmFormats.put("CCSDS_TC", ccsdsTmFormat);
 		tmFormats.put("PUS_TC", pusTmFormat);
 
-		Collection<GSSExportExport> exportsLevel1 = null;
+		/*Collection<GSSExportExport> exportsLevel1 = null;
 		try {
 			exportsLevel1 = GSSGenerator.getExportsLevel1(database, ccsdsTcFormat, pusTcFormat);
 		} catch (IOException e) {
@@ -167,6 +168,30 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		Collection<GSSExportExport> exportsLevel2 = null;
 		try {
 			exportsLevel2 = GSSGenerator.getExportsLevel2(database, tcFormats);
+		} catch (IOException e) {
+			throw new CoreException(new Status(
+				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
+		}*/
+		
+		Collection<GSSFilterMintermFilter> filtersLevel0 = null;
+		try {
+			filtersLevel0 = GSSGenerator.getFiltersLevel0(database, ccsdsTmFormat);
+		} catch (IOException e) {
+			throw new CoreException(new Status(
+				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
+		}
+		
+		Collection<GSSFilterMintermFilter> filtersLevel1 = null;
+		try {
+			filtersLevel1 = GSSGenerator.getFiltersLevel1(database, pusTmFormat);
+		} catch (IOException e) {
+			throw new CoreException(new Status(
+				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
+		}
+		
+		Collection<GSSFilterMintermFilter> filtersLevel2 = null;
+		try {
+			filtersLevel2 = GSSGenerator.getFiltersLevel2(database, tmFormats);
 		} catch (IOException e) {
 			throw new CoreException(new Status(
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
@@ -268,7 +293,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			}
 		}
 		
-		for (GSSExportExport gssExportExport : exportsLevel1) {
+		/*for (GSSExportExport gssExportExport : exportsLevel1) {
 		
 			String exportName = "exportsLevel1\\" + gssExportExport.getName() + ".gss_export";
 			
@@ -354,7 +379,138 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				throw new CoreException(new Status(
 						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
 			}
+		}*/
+		
+		for (GSSFilterMintermFilter gssFilterMintermFilter : filtersLevel0) {
+		
+			String filterName = "filtersLevel0\\" + gssFilterMintermFilter.getName() + ".gss_filters";
+			
+			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssFilterMintermFilter,
+					"es::uah::aut::srg::gss::generator::templates::filtersSerializer::Serializer", 
+					false, filterName);
+			
+			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
+			
+			// If everything went fine, we should be able to open the new file
+			
+			ResourceSet resourceSet = new ResourceSetImpl();
+			
+			IResource newFile = ((IFolder)folder).findMember(filterName);
+			
+			if (newFile == null) {
+				throw new CoreException(new Status(
+						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
+			}
+			
+			Resource xtextResource = 
+					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+				
+			EObject model = xtextResource.getContents().get(0);
+				
+			XMLGeneratorUtil.convertReferences(model);
+
+			EObject outputModel = EcoreUtil.copy(((GSSModelFile)model).getElement());
+			String pathName = 
+					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+				
+			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
+												
+			xmiResource.getContents().add(outputModel);
+			
+			try {
+				xmiResource.save(null);
+			} catch (IOException e) {
+				throw new CoreException(new Status(
+						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
+			}
+		}
+
+		for (GSSFilterMintermFilter gssFilterMintermFilter : filtersLevel1) {
+		
+			String filterName = "filtersLevel1\\" + gssFilterMintermFilter.getName() + ".gss_filters";
+			
+			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssFilterMintermFilter,
+					"es::uah::aut::srg::gss::generator::templates::filtersSerializer::Serializer", 
+					false, filterName);
+			
+			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
+			
+			// If everything went fine, we should be able to open the new file
+			
+			ResourceSet resourceSet = new ResourceSetImpl();
+			
+			IResource newFile = ((IFolder)folder).findMember(filterName);
+			
+			if (newFile == null) {
+				throw new CoreException(new Status(
+						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
+			}
+			
+			Resource xtextResource = 
+					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+				
+			EObject model = xtextResource.getContents().get(0);
+				
+			XMLGeneratorUtil.convertReferences(model);
+
+			EObject outputModel = EcoreUtil.copy(((GSSModelFile)model).getElement());
+			String pathName = 
+					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+				
+			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
+												
+			xmiResource.getContents().add(outputModel);
+			
+			try {
+				xmiResource.save(null);
+			} catch (IOException e) {
+				throw new CoreException(new Status(
+						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
+			}
 		}
 		
+		for (GSSFilterMintermFilter gssFilterMintermFilter : filtersLevel2) {
+		
+			String filterName = "filtersLevel2\\" + gssFilterMintermFilter.getName() + ".gss_filters";
+			
+			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssFilterMintermFilter,
+					"es::uah::aut::srg::gss::generator::templates::filtersSerializer::Serializer", 
+					false, filterName);
+			
+			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
+			
+			// If everything went fine, we should be able to open the new file
+			
+			ResourceSet resourceSet = new ResourceSetImpl();
+			
+			IResource newFile = ((IFolder)folder).findMember(filterName);
+			
+			if (newFile == null) {
+				throw new CoreException(new Status(
+						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
+			}
+			
+			Resource xtextResource = 
+					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+				
+			EObject model = xtextResource.getContents().get(0);
+				
+			XMLGeneratorUtil.convertReferences(model);
+
+			EObject outputModel = EcoreUtil.copy(((GSSModelFile)model).getElement());
+			String pathName = 
+					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+				
+			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
+												
+			xmiResource.getContents().add(outputModel);
+			
+			try {
+				xmiResource.save(null);
+			} catch (IOException e) {
+				throw new CoreException(new Status(
+						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
+			}
+		}
 	}
 }
