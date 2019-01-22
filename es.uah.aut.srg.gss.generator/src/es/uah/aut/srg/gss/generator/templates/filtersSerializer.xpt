@@ -3,6 +3,7 @@
 «DEFINE Serializer(String outputFile) FOR GSSFilterMintermFilter»
 «FILE outputFile -»
 GSSFilterMintermFilter «this.name» {
+	//«this.description»
 	uri := «this.uri»;
 	version := «this.version»;
 	formatFile := «this.formatFile.name»(«this.formatFile.version»);

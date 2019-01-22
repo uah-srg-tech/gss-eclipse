@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import es.uah.aut.srg.gss.common.GSSModelFile;
 import es.uah.aut.srg.gss.export.GSSExportExport;
 import es.uah.aut.srg.gss.filters.GSSFilterMintermFilter;
+import es.uah.aut.srg.gss.filters.filtersFactory;
 import es.uah.aut.srg.gss.generator.GSSGenerator;
 import es.uah.aut.srg.gss.generator.util.XpandGeneratorUtil;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
@@ -47,7 +48,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		GSSTmTcFormatTmTcFormat ccsdsTcFormat = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
 		ccsdsTcFormat.setName("CCSDS_TC");
 		ccsdsTcFormat.setDescription("CCSDS_TC");
-		ccsdsTcFormat.setUri("es.uah.aut.srg.ccsds_tc");
+		ccsdsTcFormat.setUri("es.uah.aut.srg.CCSDS_TC");
 		ccsdsTcFormat.setVersion("v1");
 		ccsdsTcFormat.setProtocol("CCSDS");
 		ccsdsTcFormat.setType(GSSTmTcFormatTmTcFormatType.TC);
@@ -70,27 +71,27 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		GSSGenerator.createFDICField(ccsdsTcFormat, 16, 13, "CRC", null, 16, 15,
 				new ArrayList<Integer>(Arrays.asList(1, 14, 15)));
 		
-		GSSTmTcFormatTmTcFormat pusTcFormat = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
-		pusTcFormat.setName("PUS_TC");
-		pusTcFormat.setDescription("PUS_TC");
-		pusTcFormat.setUri("es.uah.aut.srg.pus_tc");
-		pusTcFormat.setVersion("v1");
-		pusTcFormat.setProtocol("PUS");
-		pusTcFormat.setType(GSSTmTcFormatTmTcFormatType.TC);
-		GSSGenerator.createCSField(pusTcFormat, 0, 0, "SecondaryHeader", null, 4*8, 0);
-		GSSGenerator.createCSField(pusTcFormat, 1, 0, "CCSDSSecondaryHeaderFlag", null, 1, 0);
-		GSSGenerator.createCSField(pusTcFormat, 2, 0, "PUSVersion", null, 3, 1);
-		GSSGenerator.createCSField(pusTcFormat, 3, 0, "ACK", null, 4, 4);
-		GSSGenerator.createCSField(pusTcFormat, 4, 0, "ServiceType", null, 1*8, 1*8);
-		GSSGenerator.createCSField(pusTcFormat, 5, 0, "ServiceSubtype", null, 1*8, 2*8);
-		GSSGenerator.createCSField(pusTcFormat, 6, 0, "SourceID", null, 1*8, 3*8);
-		GSSGenerator.createVSField(pusTcFormat, 7, 7, "ApplicationData", null, 0, 8, 8, 236*8, 4*8);
-		GSSGenerator.createVRFieldSize(pusTcFormat, 8, 7, "AppDataLength");
+		GSSTmTcFormatTmTcFormat epdPusTcFormat = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
+		epdPusTcFormat.setName("EPD_PUS_TC");
+		epdPusTcFormat.setDescription("EPD_PUS_TC");
+		epdPusTcFormat.setUri("es.uah.aut.srg.EPD_PUS_TC");
+		epdPusTcFormat.setVersion("v1");
+		epdPusTcFormat.setProtocol("PUS");
+		epdPusTcFormat.setType(GSSTmTcFormatTmTcFormatType.TC);
+		GSSGenerator.createCSField(epdPusTcFormat, 0, 0, "SecondaryHeader", null, 4*8, 0);
+		GSSGenerator.createCSField(epdPusTcFormat, 1, 0, "CCSDSSecondaryHeaderFlag", null, 1, 0);
+		GSSGenerator.createCSField(epdPusTcFormat, 2, 0, "PUSVersion", null, 3, 1);
+		GSSGenerator.createCSField(epdPusTcFormat, 3, 0, "ACK", null, 4, 4);
+		GSSGenerator.createCSField(epdPusTcFormat, 4, 0, "ServiceType", null, 1*8, 1*8);
+		GSSGenerator.createCSField(epdPusTcFormat, 5, 0, "ServiceSubtype", null, 1*8, 2*8);
+		GSSGenerator.createCSField(epdPusTcFormat, 6, 0, "SourceID", null, 1*8, 3*8);
+		GSSGenerator.createVSField(epdPusTcFormat, 7, 7, "ApplicationData", null, 0, 8, 8, 236*8, 4*8);
+		GSSGenerator.createVRFieldSize(epdPusTcFormat, 8, 7, "AppDataLength");
 		
 		GSSTmTcFormatTmTcFormat ccsdsTmFormat = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
 		ccsdsTmFormat.setName("CCSDS_TM");
 		ccsdsTmFormat.setDescription("CCSDS_TM");
-		ccsdsTmFormat.setUri("es.uah.aut.srg.ccsds_tm");
+		ccsdsTmFormat.setUri("es.uah.aut.srg.CCSDS_TM");
 		ccsdsTmFormat.setVersion("v1");
 		ccsdsTmFormat.setProtocol("CCSDS");
 		ccsdsTmFormat.setType(GSSTmTcFormatTmTcFormatType.TM);
@@ -113,26 +114,36 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		GSSGenerator.createFDICField(ccsdsTmFormat, 16, 13, "CRC", null, 16, 15,
 				new ArrayList<Integer>(Arrays.asList(1, 14, 15)));
 		
-		GSSTmTcFormatTmTcFormat pusTmFormat = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
-		pusTmFormat.setName("PUS_TM");
-		pusTmFormat.setDescription("PUS_TM");
-		pusTmFormat.setUri("es.uah.aut.srg.pus_tm");
-		pusTmFormat.setVersion("v1");
-		pusTmFormat.setProtocol("PUS");
-		pusTmFormat.setType(GSSTmTcFormatTmTcFormatType.TM);
-		GSSGenerator.createCSField(pusTmFormat, 0, 0, "SecondaryHeader", null, 10*8, 0);
-		GSSGenerator.createCSField(pusTmFormat, 1, 0, "Spare", null, 1, 0);
-		GSSGenerator.createCSField(pusTmFormat, 2, 0, "PUSVersion", null, 3, 1);
-		GSSGenerator.createCSField(pusTmFormat, 3, 0, "Spare", null, 4, 4);
-		GSSGenerator.createCSField(pusTmFormat, 4, 0, "ServiceType", null, 8, 1*8);
-		GSSGenerator.createCSField(pusTmFormat, 5, 0, "ServiceSubtype", null, 8, 2*8);
-		GSSGenerator.createCSField(pusTmFormat, 6, 0, "DestinationID", null, 8, 3*8);
-		GSSGenerator.createCSField(pusTmFormat, 7, 0, "SCTime", null, 6*8, 4*8);
-		GSSGenerator.createCSField(pusTmFormat, 8, 7, "Sync", null, 1, 4*8);
-		GSSGenerator.createCSField(pusTmFormat, 9, 7, "Seconds", null, 31, 4*8+1);
-		GSSGenerator.createCSField(pusTmFormat, 10, 7, "Subseconds", null, 16, 8*8);
-		GSSGenerator.createVSField(pusTmFormat, 11, 11, "SourceData", null, 0, 12, 8, 4096*8, 10*8);
-		GSSGenerator.createVRFieldSize(pusTmFormat, 12, 11, "SourceDataLength");
+		GSSTmTcFormatTmTcFormat epdPusTmFormat = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
+		epdPusTmFormat.setName("EPD_PUS_TM");
+		epdPusTmFormat.setDescription("EPD_PUS_TM");
+		epdPusTmFormat.setUri("es.uah.aut.srg.EPD_PUS_TM");
+		epdPusTmFormat.setVersion("v1");
+		epdPusTmFormat.setProtocol("PUS");
+		epdPusTmFormat.setType(GSSTmTcFormatTmTcFormatType.TM);
+		GSSGenerator.createCSField(epdPusTmFormat, 0, 0, "SecondaryHeader", null, 10*8, 0);
+		GSSGenerator.createCSField(epdPusTmFormat, 1, 0, "Spare", null, 1, 0);
+		GSSGenerator.createCSField(epdPusTmFormat, 2, 0, "PUSVersion", null, 3, 1);
+		GSSGenerator.createCSField(epdPusTmFormat, 3, 0, "Spare", null, 4, 4);
+		GSSGenerator.createCSField(epdPusTmFormat, 4, 0, "ServiceType", null, 8, 1*8);
+		GSSGenerator.createCSField(epdPusTmFormat, 5, 0, "ServiceSubtype", null, 8, 2*8);
+		GSSGenerator.createCSField(epdPusTmFormat, 6, 0, "DestinationID", null, 8, 3*8);
+		GSSGenerator.createCSField(epdPusTmFormat, 7, 0, "SCTime", null, 6*8, 4*8);
+		GSSGenerator.createCSField(epdPusTmFormat, 8, 7, "Sync", null, 1, 4*8);
+		GSSGenerator.createCSField(epdPusTmFormat, 9, 7, "Seconds", null, 31, 4*8+1);
+		GSSGenerator.createCSField(epdPusTmFormat, 10, 7, "Subseconds", null, 16, 8*8);
+		GSSGenerator.createVSField(epdPusTmFormat, 11, 11, "SourceData", null, 0, 12, 8, 4096*8, 10*8);
+		GSSGenerator.createVRFieldSize(epdPusTmFormat, 12, 11, "SourceDataLength");
+		
+		GSSFilterMintermFilter epdCcsdsFilter = filtersFactory.eINSTANCE.createGSSFilterMintermFilter();
+		epdCcsdsFilter.setName("EPD_CCSDS_TM");
+		epdCcsdsFilter.setDescription("EPD_CCSDS_TM");
+		epdCcsdsFilter.setUri("es.uah.aut.srg.EPD_CCSDS_TM");
+		epdCcsdsFilter.setVersion("v1");
+		epdCcsdsFilter.setFormatFile(ccsdsTmFormat);//CCSDS
+		GSSGenerator.createMintermFilterBoolVar(epdCcsdsFilter, "0", ccsdsTmFormat.getCSField().get(2), "0");//Version
+		GSSGenerator.createMintermFilterBoolVarFDIC(epdCcsdsFilter, "1", ccsdsTmFormat.getFDICField().get(0));//CRC
+		GSSGenerator.createMintermFilterMinterm(epdCcsdsFilter, "0", 0, 2);
 		
 		String database = configuration.getAttribute(GSSGeneratorLaunchConfigurationAttributes.SOURCE_DB, "");
 		String output = configuration.getAttribute(GSSGeneratorLaunchConfigurationAttributes.OUTPUT_FOLDER, "");
@@ -145,7 +156,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
 		}
 		tcFormats.put("CCSDS_TC", ccsdsTcFormat);
-		tcFormats.put("PUS_TC", pusTcFormat);
+		tcFormats.put("EPD_PUS_TC", epdPusTcFormat);
 		
 		Map<String, GSSTmTcFormatTmTcFormat> tmFormats = null;
 		try {
@@ -155,23 +166,23 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
 		}
 		tmFormats.put("CCSDS_TC", ccsdsTmFormat);
-		tmFormats.put("PUS_TC", pusTmFormat);
+		tmFormats.put("EPD_PUS_TC", epdPusTmFormat);
 
-		/*Collection<GSSExportExport> exportsLevel1 = null;
+		Collection<GSSExportExport> exportsToLevel0 = null;
 		try {
-			exportsLevel1 = GSSGenerator.getExportsLevel1(database, ccsdsTcFormat, pusTcFormat);
+			exportsToLevel0 = GSSGenerator.getExportsToLevel0(database, ccsdsTcFormat, epdPusTcFormat);
 		} catch (IOException e) {
 			throw new CoreException(new Status(
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
 		}
 		
-		Collection<GSSExportExport> exportsLevel2 = null;
+		Collection<GSSExportExport> exportsToLevel1 = null;
 		try {
-			exportsLevel2 = GSSGenerator.getExportsLevel2(database, tcFormats);
+			exportsToLevel1 = GSSGenerator.getExportsToLevel1(database, tcFormats);
 		} catch (IOException e) {
 			throw new CoreException(new Status(
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
-		}*/
+		}
 		
 		Collection<GSSFilterMintermFilter> filtersLevel0 = null;
 		try {
@@ -180,10 +191,11 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			throw new CoreException(new Status(
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
 		}
+		filtersLevel0.add(epdCcsdsFilter);
 		
 		Collection<GSSFilterMintermFilter> filtersLevel1 = null;
 		try {
-			filtersLevel1 = GSSGenerator.getFiltersLevel1(database, pusTmFormat);
+			filtersLevel1 = GSSGenerator.getFiltersLevel1(database, epdPusTmFormat);
 		} catch (IOException e) {
 			throw new CoreException(new Status(
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
@@ -293,9 +305,9 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			}
 		}
 		
-		/*for (GSSExportExport gssExportExport : exportsLevel1) {
+		for (GSSExportExport gssExportExport : exportsToLevel0) {
 		
-			String exportName = "exportsLevel1\\" + gssExportExport.getName() + ".gss_export";
+			String exportName = "exportsToLevel0\\" + gssExportExport.getName() + ".gss_export";
 			
 			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssExportExport,
 					"es::uah::aut::srg::gss::generator::templates::exportSerializer::Serializer", 
@@ -337,9 +349,9 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			}
 		}
 		
-		for (GSSExportExport gssExportExport : exportsLevel2) {
+		for (GSSExportExport gssExportExport : exportsToLevel1) {
 		
-			String exportName = "exportsLevel2\\" + gssExportExport.getName() + ".gss_export";
+			String exportName = "exportsToLevel1\\" + gssExportExport.getName() + ".gss_export";
 			
 			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssExportExport,
 					"es::uah::aut::srg::gss::generator::templates::exportSerializer::Serializer", 
@@ -379,7 +391,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				throw new CoreException(new Status(
 						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
 			}
-		}*/
+		}
 		
 		for (GSSFilterMintermFilter gssFilterMintermFilter : filtersLevel0) {
 		

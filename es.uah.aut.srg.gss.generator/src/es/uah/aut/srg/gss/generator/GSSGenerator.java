@@ -26,6 +26,7 @@ import es.uah.aut.srg.gss.export.GSSExportSizes;
 import es.uah.aut.srg.gss.export.GSSExportUnit;
 import es.uah.aut.srg.gss.export.exportFactory;
 import es.uah.aut.srg.gss.filters.GSSFilterBoolVar;
+import es.uah.aut.srg.gss.filters.GSSFilterBoolVarFDIC;
 import es.uah.aut.srg.gss.filters.GSSFilterBoolVarRef;
 import es.uah.aut.srg.gss.filters.GSSFilterConstant;
 import es.uah.aut.srg.gss.filters.GSSFilterConstantType;
@@ -34,6 +35,11 @@ import es.uah.aut.srg.gss.filters.GSSFilterMinterm;
 import es.uah.aut.srg.gss.filters.GSSFilterMintermFilter;
 import es.uah.aut.srg.gss.filters.GSSFilterOPType;
 import es.uah.aut.srg.gss.filters.filtersFactory;
+import es.uah.aut.srg.gss.imports.GSSImportDataSource;
+import es.uah.aut.srg.gss.imports.GSSImportImport;
+import es.uah.aut.srg.gss.imports.GSSImportUnit;
+import es.uah.aut.srg.gss.imports.GSSImportVirtualSize;
+import es.uah.aut.srg.gss.imports.importsFactory;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldByteOrder;
@@ -66,10 +72,10 @@ public class GSSGenerator {
 	public static final String CNAME_CRC_HK = "NID00198";
 	public static final String CNAME_CHECKSUM = "NID10413";
 	
-	public static Collection<GSSExportExport> getExportsLevel1(String database,
-			GSSTmTcFormatTmTcFormat ccsdsTcFormat, GSSTmTcFormatTmTcFormat pusTcFormat) throws IOException {
+	public static Collection<GSSExportExport> getExportsToLevel0(String database,
+			GSSTmTcFormatTmTcFormat ccsdsTcFormat, GSSTmTcFormatTmTcFormat epdPusTcFormat) throws IOException {
 
-		Set<GSSExportExport> exports = new HashSet<GSSExportExport>();
+		Set<GSSExportExport> exportsToLevel0 = new HashSet<GSSExportExport>();
 	    
 		//process TC database tables and populate the collection
 		
@@ -81,68 +87,33 @@ public class GSSGenerator {
 	    	
 	    	String[] ccf_rows = ccf_line.split("\t");
 			
-	    	GSSExportExport exportLevel1 = exportFactory.eINSTANCE.createGSSExportExport();
-	    	exportLevel1.setName(ccf_rows[0] + "_export_level_1");
-	    	exportLevel1.setDescription(ccf_rows[1]);
-	    	exportLevel1.setUri("es.uah.aut.srg." + ccf_rows[0].toLowerCase() + "_export_level_1");
-	    	exportLevel1.setVersion("v1");
-	    	exportLevel1.setFrom(pusTcFormat);//EPD_PUS
-	    	exportLevel1.setTo(ccsdsTcFormat);//CCSDS
+	    	GSSExportExport exportToLevel0 = exportFactory.eINSTANCE.createGSSExportExport();
+	    	exportToLevel0.setName(ccf_rows[0] + "_export_to_level_0");
+	    	exportToLevel0.setDescription(ccf_rows[1]);
+	    	exportToLevel0.setUri("es.uah.aut.srg." + ccf_rows[0] + "_export_to_level_0");
+	    	exportToLevel0.setVersion("v1");
+	    	exportToLevel0.setFrom(epdPusTcFormat);
+	    	exportToLevel0.setTo(ccsdsTcFormat);
 
 	    	GSSExportSizes sizes = exportFactory.eINSTANCE.createGSSExportSizes();
-	    	
 	    	GSSExportSizeInBits sizeInBits = exportFactory.eINSTANCE.createGSSExportSizeInBits();
 	    	sizeInBits.setId("0");
 	    	sizeInBits.setFrom("ApplicationData");
 	    	sizeInBits.setAddSize("5");
 	    	sizeInBits.setUnit(GSSExportUnit.BYTES);
 	    	sizes.getSizeInBits().add(sizeInBits);
-	    	
-	    	exportLevel1.setSizes(sizes);
+	    	exportToLevel0.setSizes(sizes);
 
 	    	GSSExportSettings settings = exportFactory.eINSTANCE.createGSSExportSettings();
-	    	
-	    	GSSExportSettingFromField settingSecondaryHeader = exportFactory.eINSTANCE.createGSSExportSettingFromField();
-	    	settingSecondaryHeader.setFieldRef(pusTcFormat.getCSField().get(0));
-	    	settingSecondaryHeader.setToFieldRef(ccsdsTcFormat.getCSField().get(12));
-	    	settings.getSettingFromField().add(settingSecondaryHeader);
-	    	
-	    	GSSExportSettingFromField settingApplicationData = exportFactory.eINSTANCE.createGSSExportSettingFromField();
-	    	settingApplicationData.setFieldRef(pusTcFormat.getVSField().get(0));
-	    	settingApplicationData.setToFieldRef(ccsdsTcFormat.getVSField().get(2));
-	    	settings.getSettingFromField().add(settingApplicationData);
-	    	
-	    	GSSExportSettingFromConst settingVersionNumber = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
-	    	settingVersionNumber.setValue("0");
-	    	settingVersionNumber.setToFieldRef(ccsdsTcFormat.getCSField().get(2));
-	    	settings.getSettingFromConst().add(settingVersionNumber);
-	    	
-	    	GSSExportSettingFromConst settingType = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
-	    	settingType.setValue("1");
-	    	settingType.setToFieldRef(ccsdsTcFormat.getCSField().get(3));
-	    	settings.getSettingFromConst().add(settingType);
-	    	
-	    	GSSExportSettingFromConst settingDFHFlag = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
-	    	settingDFHFlag.setValue("1");
-	    	settingDFHFlag.setToFieldRef(ccsdsTcFormat.getCSField().get(4));
-	    	settings.getSettingFromConst().add(settingDFHFlag);
-	    	
-	    	GSSExportSettingFromConst settingAPID = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
-	    	settingAPID.setValue(ccf_rows[8]);
-	    	settingAPID.setToFieldRef(ccsdsTcFormat.getCSField().get(5));
-	    	settings.getSettingFromConst().add(settingAPID);
-	    	
-	    	GSSExportSettingFromConst settingSequenceFlag = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
-	    	settingSequenceFlag.setValue("1");
-	    	settingSequenceFlag.setToFieldRef(ccsdsTcFormat.getCSField().get(9));
-	    	settings.getSettingFromConst().add(settingSequenceFlag);
-	    	
-	    	GSSExportSettingFromSize settingPacketLength = exportFactory.eINSTANCE.createGSSExportSettingFromSize();
-	    	settingPacketLength.setSizeRef("0");
-	    	settingPacketLength.setToFieldRef(ccsdsTcFormat.getCSField().get(11));
-	    	settings.getSettingFromSize().add(settingPacketLength);
-	    	
-	    	exportLevel1.setSettings(settings);
+	    	createExportSettingFromField(settings, epdPusTcFormat.getCSField().get(0), ccsdsTcFormat.getCSField().get(12));//SecondaryHeader
+	    	createExportSettingFromField(settings, epdPusTcFormat.getVSField().get(0), ccsdsTcFormat.getVSField().get(2));//ApplicationData
+	    	createExportSettingFromConst(settings, "0", ccsdsTcFormat.getCSField().get(2));//VersionNumber
+	    	createExportSettingFromConst(settings, "1", ccsdsTcFormat.getCSField().get(3));//Type
+	    	createExportSettingFromConst(settings, "1", ccsdsTcFormat.getCSField().get(4));//DFHFlag
+	    	createExportSettingFromConst(settings, ccf_rows[8], ccsdsTcFormat.getCSField().get(5));//APID
+	    	createExportSettingFromConst(settings, "3", ccsdsTcFormat.getCSField().get(9));//SequenceFlag
+	    	createExportSettingFromSize(settings, "0", ccsdsTcFormat.getCSField().get(11));//PacketLength
+	    	exportToLevel0.setSettings(settings);
 
 	    	GSSExportActivateDICs activateDICs = exportFactory.eINSTANCE.createGSSExportActivateDICs();
 	    	
@@ -151,20 +122,20 @@ public class GSSGenerator {
 	    	cssdsDic.setDICRef("CRC");
 	    	activateDICs.getDIC().add(cssdsDic);
 	    	
-	    	exportLevel1.setActivateDICs(activateDICs);
+	    	exportToLevel0.setActivateDICs(activateDICs);
 	    	
-	    	exports.add(exportLevel1);
+	    	exportsToLevel0.add(exportToLevel0);
 	    }
 		ccf.close();
 	    
-		return exports;
+		return exportsToLevel0;
 	}
 
-	public static Collection<GSSExportExport> getExportsLevel2(String database,
+	public static Collection<GSSExportExport> getExportsToLevel1(String database,
 			Map<String, GSSTmTcFormatTmTcFormat> formats) throws IOException {
 
-		Set<GSSExportExport> exports = new HashSet<GSSExportExport>();
-		GSSTmTcFormatTmTcFormat pusTcFormat = formats.get("PUS_TC");
+		Set<GSSExportExport> exportsToLevel1 = new HashSet<GSSExportExport>();
+		GSSTmTcFormatTmTcFormat epdPusTcFormat = formats.get("EPD_PUS_TC");
 		
 		//read TC format names from CCF table
 		BufferedReader ccf = new BufferedReader(
@@ -174,13 +145,19 @@ public class GSSGenerator {
 	    	
 	    	String[] ccf_rows = ccf_line.split("\t");
 			
-	    	GSSExportExport exportLevel2 = exportFactory.eINSTANCE.createGSSExportExport();
-	    	exportLevel2.setName(ccf_rows[0].toLowerCase() + "_export_level_1");
-	    	exportLevel2.setDescription(ccf_rows[1]);
-	    	exportLevel2.setUri("es.uah.aut.srg." + ccf_rows[0] + "_export_level_1");
-	    	exportLevel2.setVersion("v1");
-	    	exportLevel2.setFrom(formats.get(ccf_rows[0]));
-	    	exportLevel2.setTo(pusTcFormat);//EPD_PUS
+	    	GSSExportExport exportToLevel1 = exportFactory.eINSTANCE.createGSSExportExport();
+	    	if(ccf_rows[19].compareTo("9") == 0) {
+		    	exportToLevel1.setName(ccf_rows[0] + "_export_to_level_1_ack");
+		    	exportToLevel1.setUri("es.uah.aut.srg." + ccf_rows[0] + "_export_to_level_1_ack");
+	    	}
+	    	else {
+		    	exportToLevel1.setName(ccf_rows[0] + "_export_to_level_1");
+		    	exportToLevel1.setUri("es.uah.aut.srg." + ccf_rows[0] + "_export_to_level_1");
+	    	}
+	    	exportToLevel1.setDescription(ccf_rows[1]);
+	    	exportToLevel1.setVersion("v1");
+	    	exportToLevel1.setFrom(formats.get(ccf_rows[0]));
+	    	exportToLevel1.setTo(epdPusTcFormat);
 
 	    	GSSExportSizeInBits sizeInBits = null;
 	    	if(formats.get(ccf_rows[0]).getVSField().size() != 0) {
@@ -188,12 +165,8 @@ public class GSSGenerator {
 		    		//csfields and vsfields: ZID52538 & ZID52540
 			    	sizeInBits = exportFactory.eINSTANCE.createGSSExportSizeInBits();
     				sizeInBits.setFrom("PID00075");
-		    		for (GSSTmTcFormatVSField vsfield : formats.get(ccf_rows[0]).getVSField()) {
-		    			if(vsfield.getName() == "ApplicationData") {
-							sizeInBits.setAddSize(vsfield.getConstSize().getBytes());
-		    		    	break;
-		    			}
-		    		}
+    				sizeInBits.setAddSize(formats.get(ccf_rows[0]).getVSField().get(0).getConstSize().getBytes());
+    				//EPD PUS ApplicationData
 		    	}
 		    	else {
 		    		//csfields, vsfields and afields
@@ -208,91 +181,44 @@ public class GSSGenerator {
 	    		
 		    	GSSExportSizes sizes = exportFactory.eINSTANCE.createGSSExportSizes();
 	    		sizes.getSizeInBits().add(sizeInBits);
-		    	exportLevel2.setSizes(sizes);
+		    	exportToLevel1.setSizes(sizes);
 	    	}
 
 	    	GSSExportSettings settings = exportFactory.eINSTANCE.createGSSExportSettings();
-	    	
-	    	GSSExportSettingFromConst settingCCSDSSecondaryHeaderFlag = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
-	    	settingCCSDSSecondaryHeaderFlag.setValue("0");
-	    	settingCCSDSSecondaryHeaderFlag.setToFieldRef(pusTcFormat.getCSField().get(1));
-	    	settings.getSettingFromConst().add(settingCCSDSSecondaryHeaderFlag);
-	    	
-	    	GSSExportSettingFromConst settingPUSVersion = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
-	    	settingPUSVersion.setValue("1");
-	    	settingPUSVersion.setToFieldRef(pusTcFormat.getCSField().get(2));
-	    	settings.getSettingFromConst().add(settingPUSVersion);
-	    	
-	    	GSSExportSettingFromConst settingACK = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
-	    	settingACK.setValue("9");
-	    	settingACK.setToFieldRef(pusTcFormat.getCSField().get(3));
-	    	settings.getSettingFromConst().add(settingACK);
-	    	
-	    	GSSExportSettingFromConst settingType = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
-	    	settingType.setValue(ccf_rows[6]);
-	    	settingType.setToFieldRef(pusTcFormat.getCSField().get(4));
-	    	settings.getSettingFromConst().add(settingType);
-	    	
-	    	GSSExportSettingFromConst settingSubtype = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
-	    	settingSubtype.setValue(ccf_rows[7]);
-	    	settingSubtype.setToFieldRef(pusTcFormat.getCSField().get(5));
-	    	settings.getSettingFromConst().add(settingSubtype);
-	    	
-	    	GSSExportSettingFromConst settingSourceID = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
-	    	settingSourceID.setValue("120");
-	    	settingSourceID.setToFieldRef(pusTcFormat.getCSField().get(6));
-	    	settings.getSettingFromConst().add(settingSourceID);
-	    	
-	    	//GSSTmTcFormatVSField fieldApplicationData = tcFormats.get(ccf_rows[0]).getVSField().get(0);
-	    	GSSTmTcFormatField fieldApplicationData = null;
+	    	createExportSettingFromConst(settings, "0", epdPusTcFormat.getCSField().get(1));//CCSDSSecondaryHeaderFlag
+	    	createExportSettingFromConst(settings, "1", epdPusTcFormat.getCSField().get(2));//PUSVersion
+	    	createExportSettingFromConst(settings, ccf_rows[19], epdPusTcFormat.getCSField().get(3));//ACK
+	    	createExportSettingFromConst(settings, ccf_rows[6], epdPusTcFormat.getCSField().get(4));//Type
+	    	createExportSettingFromConst(settings, ccf_rows[7], epdPusTcFormat.getCSField().get(5));//Subtype
+	    	createExportSettingFromConst(settings, "120", epdPusTcFormat.getCSField().get(6));//SourceID
 	    	
 	    	if(formats.get(ccf_rows[0]).getVSField().size() == 0) {
-	    		//csfields
-	    		for (GSSTmTcFormatCSField csfield : formats.get(ccf_rows[0]).getCSField()) {
-	    			if(csfield.getName() == "ApplicationData") {
-	    				fieldApplicationData = csfield;
-	    		    	break;
-	    			}
-	    		}
-	    		
-		    	GSSExportSettingFromConst settingAppDataLength = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
-		    	if(fieldApplicationData == null) {
-		    		settingAppDataLength.setValue("0");
+	    		//only csfields or not fields
+	    		String appDataLengthValue;
+		    	
+	    		if(formats.get(ccf_rows[0]).getCSField().size() == 0) {
+		    		appDataLengthValue = "0";
 		    	}
 		    	else {
-			    	GSSTmTcFormatCSField csfieldApplicationData = (GSSTmTcFormatCSField)fieldApplicationData;
-		    		settingAppDataLength.setValue(csfieldApplicationData.getSize().getBytes());
+		    		createExportSettingFromField(settings, formats.get(ccf_rows[0]).getCSField().get(0),
+		    				epdPusTcFormat.getVSField().get(0));//EPD PUS ApplicationData
+					appDataLengthValue = formats.get(ccf_rows[0]).getCSField().get(0).getSize().getBytes();
 		    	}
-		    	settingAppDataLength.setToFieldRef(pusTcFormat.getVRFieldSize().get(0));
-		    	settings.getSettingFromConst().add(settingAppDataLength);
+	    		createExportSettingFromConst(settings, appDataLengthValue, epdPusTcFormat.getVRFieldSize().get(0));
 	    	}
 	    	else {
-	    		//vsfields
-	    		for (GSSTmTcFormatVSField vsfield : formats.get(ccf_rows[0]).getVSField()) {
-	    			if(vsfield.getName() == "ApplicationData") {
-	    				fieldApplicationData = vsfield;
-	    				break;
-	    			}
-	    		}
-	    		
-		    	GSSExportSettingFromSize settingAppDataLength = exportFactory.eINSTANCE.createGSSExportSettingFromSize();
-		    	settingAppDataLength.setSizeRef("0");
-		    	settingAppDataLength.setToFieldRef(pusTcFormat.getVRFieldSize().get(0));
-		    	settings.getSettingFromSize().add(settingAppDataLength);
+	    		//vsfields, (csfields, afields)
+	    		createExportSettingFromField(settings, formats.get(ccf_rows[0]).getVSField().get(0),
+	    				epdPusTcFormat.getVSField().get(0));//EPD PUS ApplicationData
+		    	createExportSettingFromSize(settings, "0", epdPusTcFormat.getVRFieldSize().get(0));//AppDataLength
 	    	}
-	    	
-	    	GSSExportSettingFromField settingApplicationData = exportFactory.eINSTANCE.createGSSExportSettingFromField();
-	    	settingApplicationData.setFieldRef(fieldApplicationData);
-	    	settingApplicationData.setToFieldRef(pusTcFormat.getVSField().get(0));//EPD PUS ApplicationData
-	    	settings.getSettingFromField().add(settingApplicationData);
-	    	
-	    	exportLevel2.setSettings(settings);
+	    	exportToLevel1.setSettings(settings);
 
-	    	exports.add(exportLevel2);
+	    	exportsToLevel1.add(exportToLevel1);
 	    }
 		ccf.close();
 	    
-		return exports;
+		return exportsToLevel1;
 	}
 	
 	public static Collection<GSSFilterMintermFilter> getFiltersLevel0(String database,
@@ -313,31 +239,11 @@ public class GSSGenerator {
 	    	filter.setDescription(pid_rows[6]);//DESCR
 	    	filter.setUri("es.uah.aut.srg.yid" + pid_rows[5] + "_filter_level_0");
 	    	filter.setVersion("v1");
-	    	filter.setFormatFile(ccsdsTmFormat);//CCSDS
+	    	filter.setFormatFile(ccsdsTmFormat);
 
-	    	GSSFilterBoolVar boolvar = filtersFactory.eINSTANCE.createGSSFilterBoolVar();
-	    	boolvar.setId("0");
-	    	boolvar.setName("APID" + pid_rows[2]);
-	    	boolvar.setConstantType(GSSFilterConstantType.DECIMAL);
-	    	boolvar.setFieldRef(ccsdsTmFormat.getCSField().get(5));//APID
-	    	
-	    	GSSFilterFieldOp fieldOp = filtersFactory.eINSTANCE.createGSSFilterFieldOp();
-	    	fieldOp.setType(GSSFilterOPType.EQUAL);
-	    	boolvar.setOp(fieldOp);
-	    	
-	    	GSSFilterConstant constant = filtersFactory.eINSTANCE.createGSSFilterConstant();
-	    	constant.setValue(pid_rows[2]);
-	    	boolvar.setConstant(constant);
-	    	
-	    	filter.getBoolVar().add(boolvar);
-
-	    	GSSFilterMinterm minterm = filtersFactory.eINSTANCE.createGSSFilterMinterm();
-	    	minterm.setId("0");
-	    	GSSFilterBoolVarRef boolvarRef = filtersFactory.eINSTANCE.createGSSFilterBoolVarRef();
-	    	boolvarRef.setIdRef("0");
-	    	minterm.getBoolVarRef().add(boolvarRef);
-	    	filter.getMinterm().add(minterm);
-	    	
+	    	createMintermFilterBoolVar(filter, "0", ccsdsTmFormat.getCSField().get(5), pid_rows[2]);//APID
+			
+	    	createMintermFilterMinterm(filter, "0", 0, 1);
 	    	filters.add(filter);
 	    }
 	    pid.close();
@@ -345,7 +251,7 @@ public class GSSGenerator {
 	}
 	
 	public static Collection<GSSFilterMintermFilter> getFiltersLevel1(String database,
-			GSSTmTcFormatTmTcFormat pusTmFormat) throws IOException {
+			GSSTmTcFormatTmTcFormat epdPusTmFormat) throws IOException {
 
 		Set<GSSFilterMintermFilter> filters = new HashSet<GSSFilterMintermFilter>();
 
@@ -362,53 +268,12 @@ public class GSSGenerator {
 	    	filter.setDescription(pid_rows[6]);//DESCR
 	    	filter.setUri("es.uah.aut.srg.yid" + pid_rows[5] + "_filter_level_1");
 	    	filter.setVersion("v1");
-	    	filter.setFormatFile(pusTmFormat);//EPD_PUS
+	    	filter.setFormatFile(epdPusTmFormat);
 
-	    	GSSFilterBoolVar boolvarType = filtersFactory.eINSTANCE.createGSSFilterBoolVar();
-	    	boolvarType.setId("0");
-	    	boolvarType.setName("ServiceType" + pid_rows[0]);
-	    	boolvarType.setConstantType(GSSFilterConstantType.DECIMAL);
-	    	boolvarType.setFieldRef(pusTmFormat.getCSField().get(4));//ServiceType
-	    	
-	    	GSSFilterFieldOp fieldOpType = filtersFactory.eINSTANCE.createGSSFilterFieldOp();
-	    	fieldOpType.setType(GSSFilterOPType.EQUAL);
-	    	boolvarType.setOp(fieldOpType);
-	    	
-	    	GSSFilterConstant constantType = filtersFactory.eINSTANCE.createGSSFilterConstant();
-	    	constantType.setValue(pid_rows[0]);
-	    	boolvarType.setConstant(constantType);
-	    	
-	    	filter.getBoolVar().add(boolvarType);
+	    	createMintermFilterBoolVar(filter, "0", epdPusTmFormat.getCSField().get(4), pid_rows[0]);//ServiceSubtype
+	    	createMintermFilterBoolVar(filter, "1", epdPusTmFormat.getCSField().get(5), pid_rows[1]);//ServiceType
 
-	    	GSSFilterBoolVar boolvarSubtype = filtersFactory.eINSTANCE.createGSSFilterBoolVar();
-	    	boolvarSubtype.setId("1");
-	    	boolvarSubtype.setName("ServiceSubtype" + pid_rows[1]);
-	    	boolvarSubtype.setConstantType(GSSFilterConstantType.DECIMAL);
-	    	boolvarSubtype.setFieldRef(pusTmFormat.getCSField().get(5));//ServiceSubtype
-	    	
-	    	GSSFilterFieldOp fieldOpSubtype = filtersFactory.eINSTANCE.createGSSFilterFieldOp();
-	    	fieldOpSubtype.setType(GSSFilterOPType.EQUAL);
-	    	boolvarSubtype.setOp(fieldOpSubtype);
-	    	
-	    	GSSFilterConstant constantSubtype = filtersFactory.eINSTANCE.createGSSFilterConstant();
-	    	constantSubtype.setValue(pid_rows[1]);
-	    	boolvarSubtype.setConstant(constantSubtype);
-	    	
-	    	filter.getBoolVar().add(boolvarSubtype);
-
-	    	GSSFilterMinterm minterm = filtersFactory.eINSTANCE.createGSSFilterMinterm();
-	    	minterm.setId("0");
-	    	
-	    	GSSFilterBoolVarRef boolvarRefType = filtersFactory.eINSTANCE.createGSSFilterBoolVarRef();
-	    	boolvarRefType.setIdRef("0");
-	    	minterm.getBoolVarRef().add(boolvarRefType);
-	    	
-	    	GSSFilterBoolVarRef boolvarRefSubtype = filtersFactory.eINSTANCE.createGSSFilterBoolVarRef();
-	    	boolvarRefSubtype.setIdRef("1");
-	    	minterm.getBoolVarRef().add(boolvarRefSubtype);
-	    	
-	    	filter.getMinterm().add(minterm);
-	    	
+	    	createMintermFilterMinterm(filter, "0", 0, 2);
 	    	filters.add(filter);
 	    }
 	    pid.close();
@@ -468,30 +333,10 @@ public class GSSGenerator {
 	    	filter.setUri("es.uah.aut.srg.yid" + pid_rows[5] + "_filter_level_2");
 	    	filter.setVersion("v1");
 	    	filter.setFormatFile(formats.get("YID" + pid_rows[5]));
-	    	
-	    	GSSFilterBoolVar boolvar = filtersFactory.eINSTANCE.createGSSFilterBoolVar();
-	    	boolvar.setId("0");
-	    	boolvar.setName(fieldRefPI1_val.getName() + "_" + pid_rows[3]);
-	    	boolvar.setConstantType(GSSFilterConstantType.DECIMAL);
-	    	boolvar.setFieldRef(fieldRefPI1_val);//PI1_VAL
-	    	
-	    	GSSFilterFieldOp fieldOp = filtersFactory.eINSTANCE.createGSSFilterFieldOp();
-	    	fieldOp.setType(GSSFilterOPType.EQUAL);
-	    	boolvar.setOp(fieldOp);
-	    	
-	    	GSSFilterConstant constant = filtersFactory.eINSTANCE.createGSSFilterConstant();
-	    	constant.setValue(pid_rows[3]);
-	    	boolvar.setConstant(constant);
-	    	
-	    	filter.getBoolVar().add(boolvar);
+			
+	    	createMintermFilterBoolVar(filter, "0", fieldRefPI1_val, pid_rows[3]);//PI1_VAL
 
-	    	GSSFilterMinterm minterm = filtersFactory.eINSTANCE.createGSSFilterMinterm();
-	    	minterm.setId("0");
-	    	GSSFilterBoolVarRef boolvarRef = filtersFactory.eINSTANCE.createGSSFilterBoolVarRef();
-	    	boolvarRef.setIdRef("0");
-	    	minterm.getBoolVarRef().add(boolvarRef);
-	    	filter.getMinterm().add(minterm);
-	    	
+	    	createMintermFilterMinterm(filter, "0", 0, 1);
 	    	filters.add(filter);
 	    }
 	    pid.close();
@@ -519,7 +364,7 @@ public class GSSGenerator {
 			GSSTmTcFormatTmTcFormat format = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
 			format.setName(ccf_rows[0]);
 			format.setDescription(ccf_rows[1]);
-			format.setUri("es.uah.aut.srg." + ccf_rows[0].toLowerCase());
+			format.setUri("es.uah.aut.srg." + ccf_rows[0]);
 			format.setVersion("v1");
 			format.setProtocol("EPD_PUS");
 			format.setType(GSSTmTcFormatTmTcFormatType.TC);
@@ -602,7 +447,6 @@ public class GSSGenerator {
 			    			fidRef = variableFormatFieldRef;
 				    		maxSizeBits = MAX_APP_DATA_BYTES*8;
 			    		}
-			    		
 		    			createVSField(format, 0, 0, "ApplicationData", null, constSizeBits, fidRef, vbleSizeBits,
 		    					maxSizeBits, 0);
 			    	}
@@ -615,7 +459,7 @@ public class GSSGenerator {
     		if(format != null) {
     			
         		String name, descr;
-        		if(cdf_rows[6] == null) {
+        		if(cdf_rows[6] == "") {
         			name = cdf_rows[2];//DESCR
         			descr = null;
         		} else {
@@ -630,10 +474,12 @@ public class GSSGenerator {
 		    		
 		    		if(fid < variableFormatFieldRef) {
 			    		//insert VRFIELDSIZE too
-		    			if(cdf_rows[6] == null) {
+		    			if(cdf_rows[6] == "") {
 			    			name = cdf_rows[2] + "_length";//DESCR
+							descr = null;
 			    		} else {
 			    			name = cdf_rows[6] + "_length";//PNAME
+							descr = null;
 			    		}
 		    			createVRFieldSize(format, fid+1, fid, name);
 		    		}
@@ -650,7 +496,7 @@ public class GSSGenerator {
     		
 		    	if(fid == arrayFormatFieldRef) {
 		    		//insert AFIELD too
-		    		if(cdf_rows[6] == null) {
+		    		if(cdf_rows[6] == "") {
 		    			name = cdf_rows[2] + "_block";//DESCR
 		    			descr = null;
 		    		} else {
@@ -1137,5 +983,102 @@ public class GSSGenerator {
 		fdicfield.setSortedFieldsToCheck(sortedFieldsToCheck);
 
 		format.getFDICField().add(fdicfield);
+	}
+	
+	public static void createExportSettingFromField(GSSExportSettings settings, GSSTmTcFormatField fieldRef,
+			GSSTmTcFormatField toFieldRef) {
+		
+    	GSSExportSettingFromField settingFromField = exportFactory.eINSTANCE.createGSSExportSettingFromField();
+    	settingFromField.setFieldRef(fieldRef);
+    	settingFromField.setToFieldRef(toFieldRef);
+    	settings.getSettingFromField().add(settingFromField);
+	}
+	
+	public static void createExportSettingFromConst(GSSExportSettings settings, String value,
+			GSSTmTcFormatField toFieldRef) {
+
+    	GSSExportSettingFromConst settingFromConst = exportFactory.eINSTANCE.createGSSExportSettingFromConst();
+    	settingFromConst.setValue(value);
+    	settingFromConst.setToFieldRef(toFieldRef);
+    	settings.getSettingFromConst().add(settingFromConst);
+	}
+	
+	public static void createExportSettingFromSize(GSSExportSettings settings, String sizeRef,
+			GSSTmTcFormatField toFieldRef) {
+
+		GSSExportSettingFromSize settingFromSize = exportFactory.eINSTANCE.createGSSExportSettingFromSize();
+		settingFromSize.setSizeRef(sizeRef);
+		settingFromSize.setToFieldRef(toFieldRef);
+		settings.getSettingFromSize().add(settingFromSize);
+	}
+
+	public static void createMintermFilterBoolVar(GSSFilterMintermFilter filter, String id, GSSTmTcFormatField fieldRef, String value) {
+		
+    	GSSFilterBoolVar boolvar = filtersFactory.eINSTANCE.createGSSFilterBoolVar();
+    	boolvar.setId(id);
+    	boolvar.setName(fieldRef.getName() + "_" + value);
+    	boolvar.setConstantType(GSSFilterConstantType.DECIMAL);
+    	boolvar.setFieldRef(fieldRef);
+    	
+    	GSSFilterFieldOp fieldOp = filtersFactory.eINSTANCE.createGSSFilterFieldOp();
+    	fieldOp.setType(GSSFilterOPType.EQUAL);
+    	boolvar.setOp(fieldOp);
+    	
+    	GSSFilterConstant constant = filtersFactory.eINSTANCE.createGSSFilterConstant();
+    	constant.setValue(value);
+    	boolvar.setConstant(constant);
+    	
+    	filter.getBoolVar().add(boolvar);
+	}
+
+	public static void createMintermFilterBoolVarFDIC(GSSFilterMintermFilter filter, String id, GSSTmTcFormatFDICField fdicFieldRef) {
+		
+    	GSSFilterBoolVarFDIC boolvarFDIC = filtersFactory.eINSTANCE.createGSSFilterBoolVarFDIC();
+    	boolvarFDIC.setId(id);
+    	boolvarFDIC.setName(fdicFieldRef.getName());
+    	boolvarFDIC.setFieldRef(fdicFieldRef);
+    	
+    	GSSFilterFieldOp fieldOp = filtersFactory.eINSTANCE.createGSSFilterFieldOp();
+    	fieldOp.setType(GSSFilterOPType.EQUAL);
+    	boolvarFDIC.setOp(fieldOp);
+    	
+    	filter.getBoolVarFDIC().add(boolvarFDIC);
+	}
+
+	public static void createMintermFilterMinterm(GSSFilterMintermFilter filter, String id, Integer start, Integer end) {
+
+    	GSSFilterMinterm minterm = filtersFactory.eINSTANCE.createGSSFilterMinterm();
+    	minterm.setId(id);
+    	for(Integer idx=start; idx<end; ++idx) {
+    		createMintermFilterBoolVarRef(minterm, Integer.toString(idx));
+    	}
+    	filter.getMinterm().add(minterm);
+	}
+
+	public static void createMintermFilterBoolVarRef(GSSFilterMinterm minterm, String idRef) {
+
+		GSSFilterBoolVarRef boolvarRef = filtersFactory.eINSTANCE.createGSSFilterBoolVarRef();
+		boolvarRef.setIdRef(idRef);
+		minterm.getBoolVarRef().add(boolvarRef);
+	}
+	
+	public static void createImportDataSource(GSSImportImport imports, GSSTmTcFormatField fieldRef, String leftTrim, String rightTrim) {
+
+		GSSImportDataSource dataSource = importsFactory.eINSTANCE.createGSSImportDataSource();
+		dataSource.setFieldRef(fieldRef);
+		dataSource.setLeftTrim(leftTrim);
+		dataSource.setRightTrim(rightTrim);
+		imports.getDataSource().add(dataSource);
+	}
+	
+	public static void createImportVirtualSize(GSSImportImport imports, GSSTmTcFormatField fieldRef, GSSTmTcFormatVRFieldSize to,
+			String addSize) {
+		
+		GSSImportVirtualSize virtualSize = importsFactory.eINSTANCE.createGSSImportVirtualSize();
+		virtualSize.setFieldRef(fieldRef);
+		virtualSize.setTo(to);
+		virtualSize.setAddSize(addSize);
+		virtualSize.setUnit(GSSImportUnit.BYTES);
+		imports.setVirtualSize(virtualSize);
 	}
 }
