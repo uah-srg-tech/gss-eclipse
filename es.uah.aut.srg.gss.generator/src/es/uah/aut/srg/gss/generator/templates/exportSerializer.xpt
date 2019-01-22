@@ -17,6 +17,11 @@ GSSExportExport «this.name» {
 «EXPAND SerializeSettingFromConst FOREACH this.settings.settingFromConst -»
 «EXPAND SerializeSettingFromSize FOREACH this.settings.settingFromSize -»
 	};
+«IF this.activateDICs != null -»
+	GSSExportActivateDICs {
+«EXPAND SerializeDIC FOREACH this.activateDICs.DIC -»
+	};
+«ENDIF -»
 };
 «ENDFILE -»
 «ENDDEFINE»
@@ -41,5 +46,12 @@ GSSExportExport «this.name» {
 		GSSExportSettingFromSize {
 			sizeRef := «this.sizeRef»;
 			toFieldRef := «this.toFieldRef.name»;
+		};
+«ENDDEFINE»
+
+«DEFINE SerializeDIC FOR GSSExportDIC -»
+		GSSExportDIC {
+			id := «this.id»;
+			DICRef := «this.DICRef»;
 		};
 «ENDDEFINE»
