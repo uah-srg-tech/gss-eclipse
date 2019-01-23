@@ -20,6 +20,7 @@ import org.eclipse.xtend.typesystem.emf.EmfRegistryMetaModel;
 
 import es.uah.aut.srg.gss.export.exportPackage;
 import es.uah.aut.srg.gss.filters.filtersPackage;
+import es.uah.aut.srg.gss.imports.importsPackage;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 
 import org.eclipse.internal.xpand2.pr.ProtectedRegionResolverImpl;
@@ -49,7 +50,8 @@ public class XpandGeneratorUtil {
 			return new EPackage[] {
 				tm_tc_formatPackage.eINSTANCE,
 				exportPackage.eINSTANCE,
-				filtersPackage.eINSTANCE
+				filtersPackage.eINSTANCE,
+				importsPackage.eINSTANCE,
 			};
 		}
 		

@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
 
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -32,6 +33,8 @@ import es.uah.aut.srg.gss.filters.GSSFilterMintermFilter;
 import es.uah.aut.srg.gss.filters.filtersFactory;
 import es.uah.aut.srg.gss.generator.GSSGenerator;
 import es.uah.aut.srg.gss.generator.util.XpandGeneratorUtil;
+import es.uah.aut.srg.gss.imports.GSSImportImport;
+import es.uah.aut.srg.gss.imports.importsFactory;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormatType;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatFactory;
@@ -44,7 +47,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 	public void launch(ILaunchConfiguration configuration, String mode, ILaunch launch, IProgressMonitor monitor)
 			throws CoreException {
 
-		//create common ccsds/pus formats
+		//create common ccsds/pus formats, filters and imports
 		GSSTmTcFormatTmTcFormat ccsdsTcFormat = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
 		ccsdsTcFormat.setName("CCSDS_TC");
 		ccsdsTcFormat.setDescription("CCSDS_TC");
@@ -135,6 +138,16 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		GSSGenerator.createVSField(epdPusTmFormat, 11, 11, "SourceData", null, 0, 12, 8, 4096*8, 10*8);
 		GSSGenerator.createVRFieldSize(epdPusTmFormat, 12, 11, "SourceDataLength");
 		
+		GSSTmTcFormatTmTcFormat epdPusDataDataTmFormat = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
+		epdPusDataDataTmFormat.setName("EPD_PUS_TM_DATA");
+		epdPusDataDataTmFormat.setDescription("EPD_PUS_TM_DATA");
+		epdPusDataDataTmFormat.setUri("es.uah.aut.srg.EPD_PUS_TM_DATA");
+		epdPusDataDataTmFormat.setVersion("v1");
+		epdPusDataDataTmFormat.setProtocol("PUS_DATA");
+		epdPusDataDataTmFormat.setType(GSSTmTcFormatTmTcFormatType.TM);
+		GSSGenerator.createVSField(epdPusDataDataTmFormat, 0, 0, "SourceData", null, 0, 1, 8, 4096*8, 10*8);
+		GSSGenerator.createVRFieldSize(epdPusDataDataTmFormat, 1, 0, "SourceDataLength");
+		
 		GSSFilterMintermFilter epdCcsdsFilter = filtersFactory.eINSTANCE.createGSSFilterMintermFilter();
 		epdCcsdsFilter.setName("EPD_CCSDS_TM");
 		epdCcsdsFilter.setDescription("EPD_CCSDS_TM");
@@ -145,9 +158,31 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		GSSGenerator.createMintermFilterBoolVarFDIC(epdCcsdsFilter, "1", ccsdsTmFormat.getFDICField().get(0));//CRC
 		GSSGenerator.createMintermFilterMinterm(epdCcsdsFilter, "0", 0, 2);
 		
+		GSSImportImport epdPusFromCcsdsImport = importsFactory.eINSTANCE.createGSSImportImport();
+		epdPusFromCcsdsImport.setName("EPD_PUS_TM_FROM_CCSDS_TM");
+		epdPusFromCcsdsImport.setDescription("EPD_PUS_TM_FROM_CCSDS_TM");
+		epdPusFromCcsdsImport.setUri("es.uah.aut.srg.EPD_PUS_TM_FROM_CCSDS_TM");
+		epdPusFromCcsdsImport.setVersion("v1");
+		epdPusFromCcsdsImport.setFrom(ccsdsTmFormat);
+		epdPusFromCcsdsImport.setTo(epdPusTmFormat);
+		GSSGenerator.createImportDataSource(epdPusFromCcsdsImport, ccsdsTmFormat.getCSField().get(12), "0", "0");//SecondaryHeader
+		GSSGenerator.createImportDataSource(epdPusFromCcsdsImport, ccsdsTmFormat.getVSField().get(2), "0", "0");//SourceData
+		GSSGenerator.createImportVirtualSize(epdPusFromCcsdsImport, ccsdsTmFormat.getCSField().get(11),
+				epdPusTmFormat.getVRFieldSize().get(0), "-11");//PacketLength to SourceDataLength
+		
+		GSSImportImport epdPusDataFromEpdPusImport = importsFactory.eINSTANCE.createGSSImportImport();
+		epdPusDataFromEpdPusImport.setName("EPD_PUS_DATA_TM_FROM_EPD_PUS_TM");
+		epdPusDataFromEpdPusImport.setDescription("EPD_PUS_DATA_TM_FROM_EPD_PUS_TM");
+		epdPusDataFromEpdPusImport.setUri("es.uah.aut.srg.EPD_PUS_DATA_TM_FROM_EPD_PUS_TM");
+		epdPusDataFromEpdPusImport.setVersion("v1");
+		epdPusDataFromEpdPusImport.setFrom(epdPusTmFormat);
+		epdPusDataFromEpdPusImport.setTo(epdPusDataDataTmFormat);
+		GSSGenerator.createImportDataSource(epdPusDataFromEpdPusImport, epdPusTmFormat.getVSField().get(0), "0", "0");//SourceData
+		epdPusDataFromEpdPusImport.setVirtualSize(null);
+		
 		String database = configuration.getAttribute(GSSGeneratorLaunchConfigurationAttributes.SOURCE_DB, "");
 		String output = configuration.getAttribute(GSSGeneratorLaunchConfigurationAttributes.OUTPUT_FOLDER, "");
-
+		
 		Map<String, GSSTmTcFormatTmTcFormat> tcFormats = null;
 		try {
 			tcFormats = GSSGenerator.getTcFormats(database);
@@ -158,16 +193,6 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		tcFormats.put("CCSDS_TC", ccsdsTcFormat);
 		tcFormats.put("EPD_PUS_TC", epdPusTcFormat);
 		
-		Map<String, GSSTmTcFormatTmTcFormat> tmFormats = null;
-		try {
-			tmFormats = GSSGenerator.getTmFormats(database);
-		} catch (IOException e) {
-			throw new CoreException(new Status(
-				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
-		}
-		tmFormats.put("CCSDS_TC", ccsdsTmFormat);
-		tmFormats.put("EPD_PUS_TC", epdPusTmFormat);
-
 		Collection<GSSExportExport> exportsToLevel0 = null;
 		try {
 			exportsToLevel0 = GSSGenerator.getExportsToLevel0(database, ccsdsTcFormat, epdPusTcFormat);
@@ -183,6 +208,17 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			throw new CoreException(new Status(
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
 		}
+		
+		Map<String, GSSTmTcFormatTmTcFormat> tmFormats = null;
+		try {
+			tmFormats = GSSGenerator.getTmFormats(database);
+		} catch (IOException e) {
+			throw new CoreException(new Status(
+				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
+		}
+		tmFormats.put("CCSDS_TC", ccsdsTmFormat);
+		tmFormats.put("EPD_PUS_TC", epdPusTmFormat);
+		tmFormats.put("EPD_PUS_TM_DATA", epdPusDataDataTmFormat);
 		
 		Collection<GSSFilterMintermFilter> filtersLevel0 = null;
 		try {
@@ -208,6 +244,9 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			throw new CoreException(new Status(
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
 		}
+		Collection<GSSImportImport> imports = new HashSet<GSSImportImport>();
+		imports.add(epdPusFromCcsdsImport);
+		imports.add(epdPusDataFromEpdPusImport);
 		
 		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
 		IResource folder = root.findMember(output);
@@ -220,50 +259,6 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		for (GSSTmTcFormatTmTcFormat gssTmTcFormatTmTcFormat : tcFormats.values()) {
 		
 			String formatName = "tcFormats\\" + gssTmTcFormatTmTcFormat.getName() + ".gss_tm_tc_format";
-			
-			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssTmTcFormatTmTcFormat,
-					"es::uah::aut::srg::gss::generator::templates::tm_tc_formatSerializer::Serializer", 
-					false, formatName);
-			
-			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
-			
-			// If everything went fine, we should be able to open the new file
-			
-			ResourceSet resourceSet = new ResourceSetImpl();
-			
-			IResource newFile = ((IFolder)folder).findMember(formatName);
-			
-			if (newFile == null) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
-			}
-			
-			Resource xtextResource = 
-					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
-				
-			EObject model = xtextResource.getContents().get(0);
-				
-			XMLGeneratorUtil.convertReferences(model);
-
-			EObject outputModel = EcoreUtil.copy(((GSSModelFile)model).getElement());
-			String pathName = 
-					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
-				
-			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
-												
-			xmiResource.getContents().add(outputModel);
-			
-			try {
-				xmiResource.save(null);
-			} catch (IOException e) {
-				throw new CoreException(new Status(
-						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
-			}
-		}
-		
-		for (GSSTmTcFormatTmTcFormat gssTmTcFormatTmTcFormat : tmFormats.values()) {
-		
-			String formatName = "tmFormats\\" + gssTmTcFormatTmTcFormat.getName() + ".gss_tm_tc_format";
 			
 			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssTmTcFormatTmTcFormat,
 					"es::uah::aut::srg::gss::generator::templates::tm_tc_formatSerializer::Serializer", 
@@ -364,6 +359,50 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			ResourceSet resourceSet = new ResourceSetImpl();
 			
 			IResource newFile = ((IFolder)folder).findMember(exportName);
+			
+			if (newFile == null) {
+				throw new CoreException(new Status(
+						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
+			}
+			
+			Resource xtextResource = 
+					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+				
+			EObject model = xtextResource.getContents().get(0);
+				
+			XMLGeneratorUtil.convertReferences(model);
+
+			EObject outputModel = EcoreUtil.copy(((GSSModelFile)model).getElement());
+			String pathName = 
+					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+				
+			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
+												
+			xmiResource.getContents().add(outputModel);
+			
+			try {
+				xmiResource.save(null);
+			} catch (IOException e) {
+				throw new CoreException(new Status(
+						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
+			}
+		}
+		
+		for (GSSTmTcFormatTmTcFormat gssTmTcFormatTmTcFormat : tmFormats.values()) {
+		
+			String formatName = "tmFormats\\" + gssTmTcFormatTmTcFormat.getName() + ".gss_tm_tc_format";
+			
+			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssTmTcFormatTmTcFormat,
+					"es::uah::aut::srg::gss::generator::templates::tm_tc_formatSerializer::Serializer", 
+					false, formatName);
+			
+			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
+			
+			// If everything went fine, we should be able to open the new file
+			
+			ResourceSet resourceSet = new ResourceSetImpl();
+			
+			IResource newFile = ((IFolder)folder).findMember(formatName);
 			
 			if (newFile == null) {
 				throw new CoreException(new Status(
@@ -496,6 +535,50 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			ResourceSet resourceSet = new ResourceSetImpl();
 			
 			IResource newFile = ((IFolder)folder).findMember(filterName);
+			
+			if (newFile == null) {
+				throw new CoreException(new Status(
+						IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + newFile + "' not found!"));
+			}
+			
+			Resource xtextResource = 
+					resourceSet.getResource(URI.createPlatformResourceURI(newFile.getFullPath().toString(), true), true);
+				
+			EObject model = xtextResource.getContents().get(0);
+				
+			XMLGeneratorUtil.convertReferences(model);
+
+			EObject outputModel = EcoreUtil.copy(((GSSModelFile)model).getElement());
+			String pathName = 
+					newFile.getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+				
+			final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
+												
+			xmiResource.getContents().add(outputModel);
+			
+			try {
+				xmiResource.save(null);
+			} catch (IOException e) {
+				throw new CoreException(new Status(
+						IStatus.ERROR, Activator.PLUGIN_ID, "Error when generating '" + newFile));
+			}
+		}
+		
+		for (GSSImportImport gSSImportImport : imports) {
+		
+			String importName = "imports\\" + gSSImportImport.getName() + ".gss_imports";
+			
+			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gSSImportImport,
+					"es::uah::aut::srg::gss::generator::templates::importsSerializer::Serializer", 
+					false, importName);
+			
+			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
+			
+			// If everything went fine, we should be able to open the new file
+			
+			ResourceSet resourceSet = new ResourceSetImpl();
+			
+			IResource newFile = ((IFolder)folder).findMember(importName);
 			
 			if (newFile == null) {
 				throw new CoreException(new Status(
