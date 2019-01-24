@@ -14,6 +14,7 @@ GSSExportExport «this.name» {
 	};
 «ENDIF -»
 	GSSExportSettings {
+«EXPAND SerializeSettingFromField FOREACH this.settings.settingFromField -»
 «EXPAND SerializeSettingFromConst FOREACH this.settings.settingFromConst -»
 «EXPAND SerializeSettingFromSize FOREACH this.settings.settingFromSize -»
 	};
@@ -32,6 +33,13 @@ GSSExportExport «this.name» {
 			from := «this.from»;
 			addSize := «this.addSize»;
 			unit := «this.unit»;
+		};
+«ENDDEFINE»
+
+«DEFINE SerializeSettingFromField FOR GSSExportSettingFromField -»
+		GSSExportSettingFromField {
+			fieldRef := «this.fieldRef.name»;
+			toFieldRef := «this.toFieldRef.name»;
 		};
 «ENDDEFINE»
 

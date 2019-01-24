@@ -459,7 +459,7 @@ public class GSSGenerator {
     		if(format != null) {
     			
         		String name, descr;
-        		if(cdf_rows[6] == "") {
+        		if(cdf_rows[6].length() == 0) {
         			name = cdf_rows[2];//DESCR
         			descr = null;
         		} else {
@@ -474,7 +474,7 @@ public class GSSGenerator {
 		    		
 		    		if(fid < variableFormatFieldRef) {
 			    		//insert VRFIELDSIZE too
-		    			if(cdf_rows[6] == "") {
+		        		if(cdf_rows[6].length() == 0) {
 			    			name = cdf_rows[2] + "_length";//DESCR
 							descr = null;
 			    		} else {
@@ -496,7 +496,7 @@ public class GSSGenerator {
     		
 		    	if(fid == arrayFormatFieldRef) {
 		    		//insert AFIELD too
-		    		if(cdf_rows[6] == "") {
+	        		if(cdf_rows[6].length() == 0) {
 		    			name = cdf_rows[2] + "_block";//DESCR
 		    			descr = null;
 		    		} else {

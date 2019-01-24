@@ -244,6 +244,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			throw new CoreException(new Status(
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
 		}
+		
 		Collection<GSSImportImport> imports = new HashSet<GSSImportImport>();
 		imports.add(epdPusFromCcsdsImport);
 		imports.add(epdPusDataFromEpdPusImport);
