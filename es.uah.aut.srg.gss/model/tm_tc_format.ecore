@@ -119,11 +119,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="sortedFieldsToCheck" lowerBound="1"
         eType="#//GSSTmTcFormatSortedFieldsToCheck" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTmTcFormatAField">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSTmTcFormatAField" eSuperTypes="#//GSSTmTcFormatField">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fid" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pfid" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSTmTcFormatFieldType"
         unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="byteOrder" lowerBound="1"
@@ -137,7 +135,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="globalOffset" lowerBound="1"
         eType="#//GSSTmTcFormatGlobalOffset" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTmTcFormatAIField" eSuperTypes="common.ecore#//GSSModelObject">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSTmTcFormatAIField" eSuperTypes="#//GSSTmTcFormatField">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fid" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pfid" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSTmTcFormatFieldType"

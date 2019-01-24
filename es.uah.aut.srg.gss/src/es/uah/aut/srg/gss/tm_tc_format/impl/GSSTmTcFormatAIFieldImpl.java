@@ -10,7 +10,6 @@
  */
 package es.uah.aut.srg.gss.tm_tc_format.impl;
 
-import es.uah.aut.srg.gss.common.impl.GSSModelObjectImpl;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatArrayRef;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldByteOrder;
@@ -48,7 +47,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class GSSTmTcFormatAIFieldImpl extends GSSModelObjectImpl implements GSSTmTcFormatAIField {
+public class GSSTmTcFormatAIFieldImpl extends GSSTmTcFormatFieldImpl implements GSSTmTcFormatAIField {
 	/**
 	 * The default value of the '{@link #getFid() <em>Fid</em>}' attribute.
 	 * <!-- begin-user-doc -->

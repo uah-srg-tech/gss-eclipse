@@ -1025,7 +1025,7 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSTmTcFormatAField_Name() {
+	public EAttribute getGSSTmTcFormatAField_Type() {
 		return (EAttribute)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1034,7 +1034,7 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSTmTcFormatAField_Description() {
+	public EAttribute getGSSTmTcFormatAField_ByteOrder() {
 		return (EAttribute)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1043,7 +1043,7 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSTmTcFormatAField_Type() {
+	public EAttribute getGSSTmTcFormatAField_FirstBit() {
 		return (EAttribute)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1052,26 +1052,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSTmTcFormatAField_ByteOrder() {
-		return (EAttribute)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTmTcFormatAField_FirstBit() {
-		return (EAttribute)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getGSSTmTcFormatAField_Size() {
-		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(8);
+		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1080,7 +1062,7 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * @generated
 	 */
 	public EReference getGSSTmTcFormatAField_GlobalOffset() {
-		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(9);
+		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1089,7 +1071,7 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * @generated
 	 */
 	public EReference getGSSTmTcFormatAField_ArrayDimension() {
-		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(7);
+		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1396,8 +1378,6 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		gssTmTcFormatAFieldEClass = createEClass(GSS_TM_TC_FORMAT_AFIELD);
 		createEAttribute(gssTmTcFormatAFieldEClass, GSS_TM_TC_FORMAT_AFIELD__FID);
 		createEAttribute(gssTmTcFormatAFieldEClass, GSS_TM_TC_FORMAT_AFIELD__PFID);
-		createEAttribute(gssTmTcFormatAFieldEClass, GSS_TM_TC_FORMAT_AFIELD__NAME);
-		createEAttribute(gssTmTcFormatAFieldEClass, GSS_TM_TC_FORMAT_AFIELD__DESCRIPTION);
 		createEAttribute(gssTmTcFormatAFieldEClass, GSS_TM_TC_FORMAT_AFIELD__TYPE);
 		createEAttribute(gssTmTcFormatAFieldEClass, GSS_TM_TC_FORMAT_AFIELD__BYTE_ORDER);
 		createEAttribute(gssTmTcFormatAFieldEClass, GSS_TM_TC_FORMAT_AFIELD__FIRST_BIT);
@@ -1508,7 +1488,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		gssTmTcFormatVSFieldEClass.getESuperTypes().add(this.getGSSTmTcFormatField());
 		gssTmTcFormatVRFieldSizeEClass.getESuperTypes().add(this.getGSSTmTcFormatField());
 		gssTmTcFormatFDICFieldEClass.getESuperTypes().add(this.getGSSTmTcFormatField());
-		gssTmTcFormatAIFieldEClass.getESuperTypes().add(thecommonPackage.getGSSModelObject());
+		gssTmTcFormatAFieldEClass.getESuperTypes().add(this.getGSSTmTcFormatField());
+		gssTmTcFormatAIFieldEClass.getESuperTypes().add(this.getGSSTmTcFormatField());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssTmTcFormatTmTcFormatEClass, GSSTmTcFormatTmTcFormat.class, "GSSTmTcFormatTmTcFormat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1571,8 +1552,6 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 		initEClass(gssTmTcFormatAFieldEClass, GSSTmTcFormatAField.class, "GSSTmTcFormatAField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSTmTcFormatAField_Fid(), ecorePackage.getEString(), "fid", null, 1, 1, GSSTmTcFormatAField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSTmTcFormatAField_Pfid(), ecorePackage.getEString(), "pfid", null, 1, 1, GSSTmTcFormatAField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTmTcFormatAField_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSTmTcFormatAField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTmTcFormatAField_Description(), ecorePackage.getEString(), "description", null, 0, 1, GSSTmTcFormatAField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSTmTcFormatAField_Type(), this.getGSSTmTcFormatFieldType(), "type", null, 1, 1, GSSTmTcFormatAField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSTmTcFormatAField_ByteOrder(), this.getGSSTmTcFormatFieldByteOrder(), "byteOrder", null, 1, 1, GSSTmTcFormatAField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSTmTcFormatAField_FirstBit(), this.getGSSTmTcFormatSFieldFirstBit(), "firstBit", null, 1, 1, GSSTmTcFormatAField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

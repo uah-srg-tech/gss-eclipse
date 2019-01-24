@@ -134,12 +134,15 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD: {
 				GSSTmTcFormatAField gssTmTcFormatAField = (GSSTmTcFormatAField)theEObject;
 				T result = caseGSSTmTcFormatAField(gssTmTcFormatAField);
+				if (result == null) result = caseGSSTmTcFormatField(gssTmTcFormatAField);
+				if (result == null) result = caseGSSModelObject(gssTmTcFormatAField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD: {
 				GSSTmTcFormatAIField gssTmTcFormatAIField = (GSSTmTcFormatAIField)theEObject;
 				T result = caseGSSTmTcFormatAIField(gssTmTcFormatAIField);
+				if (result == null) result = caseGSSTmTcFormatField(gssTmTcFormatAIField);
 				if (result == null) result = caseGSSModelObject(gssTmTcFormatAIField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

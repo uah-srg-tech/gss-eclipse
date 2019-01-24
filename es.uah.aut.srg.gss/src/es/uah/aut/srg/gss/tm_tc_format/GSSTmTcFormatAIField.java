@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.gss.tm_tc_format;
 
-import es.uah.aut.srg.gss.common.GSSModelObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Tm Tc Format AI Field</b></em>'.
@@ -35,7 +33,7 @@ import es.uah.aut.srg.gss.common.GSSModelObject;
  * @model
  * @generated
  */
-public interface GSSTmTcFormatAIField extends GSSModelObject {
+public interface GSSTmTcFormatAIField extends GSSTmTcFormatField {
 	/**
 	 * Returns the value of the '<em><b>Fid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
