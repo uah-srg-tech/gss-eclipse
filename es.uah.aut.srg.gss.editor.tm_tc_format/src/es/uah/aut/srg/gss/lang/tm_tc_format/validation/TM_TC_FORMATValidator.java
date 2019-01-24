@@ -14,7 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.xtext.validation.Check;
 
+import es.uah.aut.srg.gss.common.commonPackage;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
 import es.uah.aut.srg.gss.xtext.GSSAbstractJavaValidator;
 
 /**
@@ -30,6 +33,16 @@ public class TM_TC_FORMATValidator extends GSSAbstractJavaValidator {
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/gss/common"));
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/gss/tm_tc_format"));
 		return result;
+	}
+	
+	@Check
+	public void checkGSSTmTcFormatField_name(GSSTmTcFormatField field) {
+	
+		if (field.getName() != null && field.getName().length() == 0) {
+			error("The field name cannot be an empty string", commonPackage.eINSTANCE.getGSSModelObject_Name());
+					
+		}
+		
 	}
 	
 }
