@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
 
 import org.eclipse.core.resources.IFolder;
@@ -46,6 +47,8 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 	@Override
 	public void launch(ILaunchConfiguration configuration, String mode, ILaunch launch, IProgressMonitor monitor)
 			throws CoreException {
+		
+		boolean useTypeInsteadOfId = true;
 
 		//create common ccsds/pus formats, filters and imports
 		GSSTmTcFormatTmTcFormat ccsdsTcFormat = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
@@ -216,8 +219,8 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			throw new CoreException(new Status(
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
 		}
-		tmFormats.put("CCSDS_TC", ccsdsTmFormat);
-		tmFormats.put("EPD_PUS_TC", epdPusTmFormat);
+		tmFormats.put("CCSDS_TM", ccsdsTmFormat);
+		tmFormats.put("EPD_PUS_TM", epdPusTmFormat);
 		tmFormats.put("EPD_PUS_TM_DATA", epdPusDataDataTmFormat);
 		
 		Collection<GSSFilterMintermFilter> filtersLevel0 = null;
@@ -257,8 +260,50 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 					IStatus.ERROR, Activator.PLUGIN_ID, "Resource '" + output + "' not found!"));
 		}
 		
-		for (GSSTmTcFormatTmTcFormat gssTmTcFormatTmTcFormat : tcFormats.values()) {
+		Map<String, String> ZID_tc_type = new HashMap<String, String>();
+		Map<String, String> YID_tm_type = new HashMap<String, String>();
+		if(useTypeInsteadOfId) {
+			for (GSSExportExport gssExportExport : exportsToLevel1) {
+				String typeSubtype = "tc_";
+				if(Integer.parseInt(gssExportExport.getName().substring(5, 8)) >= 500) {
+					typeSubtype += "epd_";
+				} else {
+					typeSubtype += "sis_";
+				}
+				typeSubtype += gssExportExport.getSettings().getSettingFromConst().get(3).getValue() + "_"
+						 + gssExportExport.getSettings().getSettingFromConst().get(4).getValue();
+				ZID_tc_type.put(gssExportExport.getName(), typeSubtype);
+			}
+
+			Map<String, String> PI1_Val = new HashMap<String, String>();
+			for (GSSFilterMintermFilter gssFilterMintermFilter : filtersLevel2) {
+				PI1_Val.put(gssFilterMintermFilter.getName(),
+						gssFilterMintermFilter.getBoolVar().get(0).getConstant().getValue());
+			}
+			for (GSSFilterMintermFilter gssFilterMintermFilter : filtersLevel1) {
+				String typeSubtype = "tm_";
+				if(Integer.parseInt(gssFilterMintermFilter.getName().substring(5, 8)) < 700) {
+					typeSubtype += "epd_";
+				} else {
+					typeSubtype += "sis_";
+				}
+				typeSubtype += gssFilterMintermFilter.getBoolVar().get(0).getConstant().getValue() + "_"
+						 + gssFilterMintermFilter.getBoolVar().get(1).getConstant().getValue();
+				if(PI1_Val.get(gssFilterMintermFilter.getName()) != null) {
+					typeSubtype += "_" + PI1_Val.get(gssFilterMintermFilter.getName());
+				}
+				YID_tm_type.put(gssFilterMintermFilter.getName(), typeSubtype);
+			}
+		}
 		
+		for (GSSTmTcFormatTmTcFormat gssTmTcFormatTmTcFormat : tcFormats.values()) {
+
+			if((useTypeInsteadOfId) && (gssTmTcFormatTmTcFormat.getName().compareTo("CCSDS_TC") != 0)
+					 && (gssTmTcFormatTmTcFormat.getName().compareTo("EPD_PUS_TC") != 0)) {
+				gssTmTcFormatTmTcFormat.setName(ZID_tc_type.get(gssTmTcFormatTmTcFormat.getName()));
+			}
+			gssTmTcFormatTmTcFormat.setUri("es.uah.aut.srg." + gssTmTcFormatTmTcFormat.getName());
+			
 			String formatName = "tcFormats\\" + gssTmTcFormatTmTcFormat.getName() + ".gss_tm_tc_format";
 			
 			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssTmTcFormatTmTcFormat,
@@ -302,7 +347,13 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		}
 		
 		for (GSSExportExport gssExportExport : exportsToLevel0) {
+
+			if(useTypeInsteadOfId)
+				gssExportExport.setName(ZID_tc_type.get(gssExportExport.getName())); 
 		
+			gssExportExport.setName(gssExportExport.getName() + "_export_to_level_0");
+			gssExportExport.setUri("es.uah.aut.srg." + gssExportExport.getName());
+			
 			String exportName = "exportsToLevel0\\" + gssExportExport.getName() + ".gss_export";
 			
 			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssExportExport,
@@ -346,6 +397,17 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		}
 		
 		for (GSSExportExport gssExportExport : exportsToLevel1) {
+
+			if(useTypeInsteadOfId)
+				gssExportExport.setName(ZID_tc_type.get(gssExportExport.getName())); 
+			    	
+	    	if(gssExportExport.getSettings().getSettingFromConst().get(2).getValue().compareTo("9") == 0) {
+	    		gssExportExport.setName(gssExportExport.getName() + "_export_to_level_1_ack");
+	    	}
+	    	else {
+	    		gssExportExport.setName(gssExportExport.getName() + "_export_to_level_1");
+	    	}
+			gssExportExport.setUri("es.uah.aut.srg." + gssExportExport.getName());
 		
 			String exportName = "exportsToLevel1\\" + gssExportExport.getName() + ".gss_export";
 			
@@ -390,6 +452,13 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		}
 		
 		for (GSSTmTcFormatTmTcFormat gssTmTcFormatTmTcFormat : tmFormats.values()) {
+
+			if((useTypeInsteadOfId) && (gssTmTcFormatTmTcFormat.getName().compareTo("CCSDS_TM") != 0)
+					 && (gssTmTcFormatTmTcFormat.getName().compareTo("EPD_PUS_TM") != 0)
+					 && (gssTmTcFormatTmTcFormat.getName().compareTo("EPD_PUS_TM_DATA") != 0)) {
+				gssTmTcFormatTmTcFormat.setName(YID_tm_type.get(gssTmTcFormatTmTcFormat.getName()));
+			}
+			gssTmTcFormatTmTcFormat.setUri("es.uah.aut.srg." + gssTmTcFormatTmTcFormat.getName());
 		
 			String formatName = "tmFormats\\" + gssTmTcFormatTmTcFormat.getName() + ".gss_tm_tc_format";
 			
@@ -434,6 +503,15 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		}
 		
 		for (GSSFilterMintermFilter gssFilterMintermFilter : filtersLevel0) {
+
+			if(gssFilterMintermFilter.getName().compareTo("EPD_CCSDS_TM") != 0) {
+
+				if(useTypeInsteadOfId)
+					gssFilterMintermFilter.setName(YID_tm_type.get(gssFilterMintermFilter.getName())); 
+				
+				gssFilterMintermFilter.setName(gssFilterMintermFilter.getName() + "_filter_level_0");
+				gssFilterMintermFilter.setUri("es.uah.aut.srg." + gssFilterMintermFilter.getName());
+			}
 		
 			String filterName = "filtersLevel0\\" + gssFilterMintermFilter.getName() + ".gss_filters";
 			
@@ -478,6 +556,12 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		}
 
 		for (GSSFilterMintermFilter gssFilterMintermFilter : filtersLevel1) {
+			
+			if(useTypeInsteadOfId)
+				gssFilterMintermFilter.setName(YID_tm_type.get(gssFilterMintermFilter.getName())); 
+			
+			gssFilterMintermFilter.setName(gssFilterMintermFilter.getName() + "_filter_level_1");
+			gssFilterMintermFilter.setUri("es.uah.aut.srg." + gssFilterMintermFilter.getName());
 		
 			String filterName = "filtersLevel1\\" + gssFilterMintermFilter.getName() + ".gss_filters";
 			
@@ -522,6 +606,12 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		}
 		
 		for (GSSFilterMintermFilter gssFilterMintermFilter : filtersLevel2) {
+			
+			if(useTypeInsteadOfId)
+				gssFilterMintermFilter.setName(YID_tm_type.get(gssFilterMintermFilter.getName())); 
+			
+			gssFilterMintermFilter.setName(gssFilterMintermFilter.getName() + "_filter_level_2");
+			gssFilterMintermFilter.setUri("es.uah.aut.srg." + gssFilterMintermFilter.getName());
 		
 			String filterName = "filtersLevel2\\" + gssFilterMintermFilter.getName() + ".gss_filters";
 			

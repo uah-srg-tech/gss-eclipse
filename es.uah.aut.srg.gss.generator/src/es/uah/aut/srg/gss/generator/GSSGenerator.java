@@ -88,9 +88,8 @@ public class GSSGenerator {
 	    	String[] ccf_rows = ccf_line.split("\t");
 			
 	    	GSSExportExport exportToLevel0 = exportFactory.eINSTANCE.createGSSExportExport();
-	    	exportToLevel0.setName(ccf_rows[0] + "_export_to_level_0");
+	    	exportToLevel0.setName(ccf_rows[0]);
 	    	exportToLevel0.setDescription(ccf_rows[1]);
-	    	exportToLevel0.setUri("es.uah.aut.srg." + ccf_rows[0] + "_export_to_level_0");
 	    	exportToLevel0.setVersion("v1");
 	    	exportToLevel0.setFrom(epdPusTcFormat);
 	    	exportToLevel0.setTo(ccsdsTcFormat);
@@ -146,14 +145,7 @@ public class GSSGenerator {
 	    	String[] ccf_rows = ccf_line.split("\t");
 			
 	    	GSSExportExport exportToLevel1 = exportFactory.eINSTANCE.createGSSExportExport();
-	    	if(ccf_rows[19].compareTo("9") == 0) {
-		    	exportToLevel1.setName(ccf_rows[0] + "_export_to_level_1_ack");
-		    	exportToLevel1.setUri("es.uah.aut.srg." + ccf_rows[0] + "_export_to_level_1_ack");
-	    	}
-	    	else {
-		    	exportToLevel1.setName(ccf_rows[0] + "_export_to_level_1");
-		    	exportToLevel1.setUri("es.uah.aut.srg." + ccf_rows[0] + "_export_to_level_1");
-	    	}
+	    	exportToLevel1.setName(ccf_rows[0]);
 	    	exportToLevel1.setDescription(ccf_rows[1]);
 	    	exportToLevel1.setVersion("v1");
 	    	exportToLevel1.setFrom(formats.get(ccf_rows[0]));
@@ -235,9 +227,8 @@ public class GSSGenerator {
 	    	String[] pid_rows = pid_line.split("\t");
 		    
 	    	GSSFilterMintermFilter filter = filtersFactory.eINSTANCE.createGSSFilterMintermFilter();
-	    	filter.setName("YID" + pid_rows[5] + "_filter_level_0");//NAME
+	    	filter.setName("YID" + pid_rows[5]);//NAME
 	    	filter.setDescription(pid_rows[6]);//DESCR
-	    	filter.setUri("es.uah.aut.srg.yid" + pid_rows[5] + "_filter_level_0");
 	    	filter.setVersion("v1");
 	    	filter.setFormatFile(ccsdsTmFormat);
 
@@ -264,9 +255,8 @@ public class GSSGenerator {
 	    	String[] pid_rows = pid_line.split("\t");
 		    
 	    	GSSFilterMintermFilter filter = filtersFactory.eINSTANCE.createGSSFilterMintermFilter();
-	    	filter.setName("YID" + pid_rows[5] + "_filter_level_1");//NAME
+	    	filter.setName("YID" + pid_rows[5]);//NAME
 	    	filter.setDescription(pid_rows[6]);//DESCR
-	    	filter.setUri("es.uah.aut.srg.yid" + pid_rows[5] + "_filter_level_1");
 	    	filter.setVersion("v1");
 	    	filter.setFormatFile(epdPusTmFormat);
 
@@ -326,9 +316,8 @@ public class GSSGenerator {
 	    	}
 		    
 	    	GSSFilterMintermFilter filter = filtersFactory.eINSTANCE.createGSSFilterMintermFilter();
-	    	filter.setName("YID" + pid_rows[5] + "_filter_level_2");//NAME
+	    	filter.setName("YID" + pid_rows[5]);//NAME
 	    	filter.setDescription(pid_rows[6]);//DESCR
-	    	filter.setUri("es.uah.aut.srg.yid" + pid_rows[5] + "_filter_level_2");
 	    	filter.setVersion("v1");
 	    	filter.setFormatFile(formats.get("YID" + pid_rows[5]));
 			
@@ -360,8 +349,7 @@ public class GSSGenerator {
 	    	String[] ccf_rows = ccf_line.split("\t");
 		    
 			GSSTmTcFormatTmTcFormat format = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
-			format.setName(ccf_rows[0]);
-			format.setUri("es.uah.aut.srg." + ccf_rows[0]);
+			format.setName(ccf_rows[0]);//NAME
 			format.setDescription(ccf_rows[0] + ": " + ccf_rows[1]);//NAME: DESCR
 			format.setVersion("v1");
 			format.setProtocol("EPD_PUS");
@@ -531,7 +519,6 @@ public class GSSGenerator {
 			GSSTmTcFormatTmTcFormat format = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
 			format.setName("YID" + pid_rows[5]);//NAME
 			format.setDescription("YID" + pid_rows[5] + ": " + pid_rows[6]);//NAME: DESCR
-			format.setUri("es.uah.aut.srg.yid" + pid_rows[5]);
 			format.setVersion("v1");
 			format.setProtocol("EPD_PUS");
 			format.setType(GSSTmTcFormatTmTcFormatType.TM);
