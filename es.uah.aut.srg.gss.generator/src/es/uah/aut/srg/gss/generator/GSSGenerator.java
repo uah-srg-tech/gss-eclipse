@@ -286,8 +286,7 @@ public class GSSGenerator {
 		Set<GSSFilterMintermFilter> filters = new HashSet<GSSFilterMintermFilter>();
 		
 		//read PI1_OFF from PIC table
-		Map<String, Map<String, String> > picTypeSubtype = new HashMap<>();
-		Map<String, String> auxMap = new HashMap<>();
+		Map<String, String> picTypeSubtype = new HashMap<String, String>();
 		BufferedReader pic = new BufferedReader(
 		        new InputStreamReader(new FileInputStream(database+"\\pic.dat")));
 	    String pic_line;
@@ -295,8 +294,7 @@ public class GSSGenerator {
 	    	
 	    	String[] pic_rows = pic_line.split("\t");
 	    	
-	    	auxMap.put(pic_rows[1], pic_rows[2]);
-	    	picTypeSubtype.put(pic_rows[0], auxMap);
+	    	picTypeSubtype.put(pic_rows[0] + "_" + pic_rows[1], pic_rows[2]);
 	    }
 	    pic.close();
 	    
@@ -308,7 +306,7 @@ public class GSSGenerator {
 	    	
 	    	String[] pid_rows = pid_line.split("\t");
 	    	
-	    	if(picTypeSubtype.get(pid_rows[0]).get(pid_rows[1]) == "-1") {
+	    	if(picTypeSubtype.get(pid_rows[0] + "_" + pid_rows[1]).compareTo("-1") == 0) {
 	    		continue;
 	    	}
 
@@ -363,8 +361,8 @@ public class GSSGenerator {
 		    
 			GSSTmTcFormatTmTcFormat format = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
 			format.setName(ccf_rows[0]);
-			format.setDescription(ccf_rows[1]);
 			format.setUri("es.uah.aut.srg." + ccf_rows[0]);
+			format.setDescription(ccf_rows[0] + ": " + ccf_rows[1]);//NAME: DESCR
 			format.setVersion("v1");
 			format.setProtocol("EPD_PUS");
 			format.setType(GSSTmTcFormatTmTcFormatType.TC);
@@ -532,7 +530,7 @@ public class GSSGenerator {
 		    
 			GSSTmTcFormatTmTcFormat format = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
 			format.setName("YID" + pid_rows[5]);//NAME
-			format.setDescription(pid_rows[6]);//DESCR
+			format.setDescription("YID" + pid_rows[5] + ": " + pid_rows[6]);//NAME: DESCR
 			format.setUri("es.uah.aut.srg.yid" + pid_rows[5]);
 			format.setVersion("v1");
 			format.setProtocol("EPD_PUS");
