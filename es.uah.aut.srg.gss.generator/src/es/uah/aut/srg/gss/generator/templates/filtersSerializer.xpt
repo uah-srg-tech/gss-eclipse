@@ -9,6 +9,7 @@ GSSFilterMintermFilter «this.name» {
 	formatFile := «this.formatFile.name»(«this.formatFile.version»);
 	
 «EXPAND SerializeBoolVar FOREACH this.BoolVar -»
+«EXPAND GSSFilterBoolVarFDIC FOREACH this.BoolVarFDIC -»
 «EXPAND SerializeMinterm FOREACH this.Minterm -»
 };
 «ENDFILE -»
@@ -29,6 +30,17 @@ GSSFilterMintermFilter «this.name» {
 	};
 «ENDDEFINE»
 
+«DEFINE GSSFilterBoolVarFDIC FOR GSSFilterBoolVarFDIC -»
+	GSSFilterBoolVarFDIC {
+		id := «this.id»;
+		name := «this.name»;
+		FieldRef := «this.FieldRef.name»;
+		GSSFilterFieldOp {
+			type := «this.Op.type»;
+		};
+	};
+«ENDDEFINE»
+	
 «DEFINE SerializeMinterm FOR GSSFilterMinterm -»
 	GSSFilterMinterm { 
 		id := «this.id»;
