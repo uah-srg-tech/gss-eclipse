@@ -30,6 +30,11 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import es.uah.aut.srg.gss.common.GSSModelFile;
 import es.uah.aut.srg.gss.export.GSSExportExport;
+import es.uah.aut.srg.gss.export.GSSExportSettings;
+import es.uah.aut.srg.gss.export.GSSExportSizeInBits;
+import es.uah.aut.srg.gss.export.GSSExportSizes;
+import es.uah.aut.srg.gss.export.GSSExportUnit;
+import es.uah.aut.srg.gss.export.exportFactory;
 import es.uah.aut.srg.gss.filters.GSSFilterMintermFilter;
 import es.uah.aut.srg.gss.filters.filtersFactory;
 import es.uah.aut.srg.gss.generator.GSSGenerator;
@@ -93,6 +98,31 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		GSSGenerator.createCSField(epdPusTcFormat, 6, 0, "SourceID", null, 1*8, 3*8);
 		GSSGenerator.createVSField(epdPusTcFormat, 7, 7, "ApplicationData", null, 0, 8, 8, 236*8, 4*8);
 		GSSGenerator.createVRFieldSize(epdPusTcFormat, 8, 7, "AppDataLength");
+		
+    	GSSExportExport epdExportPusToLevel0 = exportFactory.eINSTANCE.createGSSExportExport();
+    	epdExportPusToLevel0.setName("EPD_PUS_TC_TO_CCSDS_TC");
+    	epdExportPusToLevel0.setUri("es.uah.aut.srg.EPD_PUS_TC_TO_CCSDS_TC");
+    	epdExportPusToLevel0.setVersion("v1");
+    	epdExportPusToLevel0.setFrom(epdPusTcFormat);
+    	epdExportPusToLevel0.setTo(ccsdsTcFormat);
+    	GSSExportSizes epdExportPusToLevel0Sizes = exportFactory.eINSTANCE.createGSSExportSizes();
+    	GSSExportSizeInBits epdExportPusToLevel0SizeInBits = exportFactory.eINSTANCE.createGSSExportSizeInBits();
+    	epdExportPusToLevel0SizeInBits.setId("0");
+    	epdExportPusToLevel0SizeInBits.setFrom("ApplicationData");
+    	epdExportPusToLevel0SizeInBits.setAddSize("5");
+    	epdExportPusToLevel0SizeInBits.setUnit(GSSExportUnit.BYTES);
+    	epdExportPusToLevel0Sizes.getSizeInBits().add(epdExportPusToLevel0SizeInBits);
+    	epdExportPusToLevel0.setSizes(epdExportPusToLevel0Sizes);
+    	GSSExportSettings epdExportPusToCcsdsSettings = exportFactory.eINSTANCE.createGSSExportSettings();
+    	GSSGenerator.createExportSettingFromField(epdExportPusToCcsdsSettings, epdPusTcFormat.getCSField().get(0), ccsdsTcFormat.getCSField().get(12));//SecondaryHeader
+    	GSSGenerator.createExportSettingFromField(epdExportPusToCcsdsSettings, epdPusTcFormat.getVSField().get(0), ccsdsTcFormat.getVSField().get(2));//ApplicationData
+    	GSSGenerator.createExportSettingFromConst(epdExportPusToCcsdsSettings, "0", ccsdsTcFormat.getCSField().get(2));//VersionNumber
+    	GSSGenerator.createExportSettingFromConst(epdExportPusToCcsdsSettings, "1", ccsdsTcFormat.getCSField().get(3));//Type
+    	GSSGenerator.createExportSettingFromConst(epdExportPusToCcsdsSettings, "1", ccsdsTcFormat.getCSField().get(4));//DFHFlag
+    	GSSGenerator.createExportSettingFromConst(epdExportPusToCcsdsSettings, "812", ccsdsTcFormat.getCSField().get(5));//APID
+    	GSSGenerator.createExportSettingFromConst(epdExportPusToCcsdsSettings, "3", ccsdsTcFormat.getCSField().get(9));//SequenceFlag
+    	GSSGenerator.createExportSettingFromSize(epdExportPusToCcsdsSettings, "0", ccsdsTcFormat.getCSField().get(11));//PacketLength
+    	epdExportPusToLevel0.setSettings(epdExportPusToCcsdsSettings);
 		
 		GSSTmTcFormatTmTcFormat ccsdsTmFormat = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatTmTcFormat();
 		ccsdsTmFormat.setName("CCSDS_TM");
@@ -161,6 +191,15 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		GSSGenerator.createMintermFilterBoolVarFDIC(epdCcsdsFilter, "1", ccsdsTmFormat.getFDICField().get(0));//CRC
 		GSSGenerator.createMintermFilterMinterm(epdCcsdsFilter, "0", 0, 2);
 		
+		GSSFilterMintermFilter epdPusFilter = filtersFactory.eINSTANCE.createGSSFilterMintermFilter();
+		epdPusFilter.setName("EPD_PUS_TM");
+		epdPusFilter.setDescription("EPD_PUS_TM");
+		epdPusFilter.setUri("es.uah.aut.srg.EPD_PUS_TM");
+		epdPusFilter.setVersion("v1");
+		epdPusFilter.setFormatFile(epdPusTmFormat);//CCSDS
+		GSSGenerator.createMintermFilterBoolVar(epdPusFilter, "0", epdPusTmFormat.getCSField().get(2), "1");//PUSVersion
+		GSSGenerator.createMintermFilterMinterm(epdPusFilter, "0", 0, 1);
+		
 		GSSImportImport epdPusFromCcsdsImport = importsFactory.eINSTANCE.createGSSImportImport();
 		epdPusFromCcsdsImport.setName("EPD_PUS_TM_FROM_CCSDS_TM");
 		epdPusFromCcsdsImport.setDescription("EPD_PUS_TM_FROM_CCSDS_TM");
@@ -203,6 +242,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			throw new CoreException(new Status(
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
 		}
+		exportsToLevel0.add(epdExportPusToLevel0);
 		
 		Collection<GSSExportExport> exportsToLevel1 = null;
 		try {
@@ -239,6 +279,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			throw new CoreException(new Status(
 				IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
 		}
+		filtersLevel1.add(epdPusFilter);
 		
 		Collection<GSSFilterMintermFilter> filtersLevel2 = null;
 		try {
@@ -281,6 +322,9 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 						gssFilterMintermFilter.getBoolVar().get(0).getConstant().getValue());
 			}
 			for (GSSFilterMintermFilter gssFilterMintermFilter : filtersLevel1) {
+				if(gssFilterMintermFilter.getName().substring(0, 3).compareTo("EPD") == 0) {
+					continue;
+				}
 				String typeSubtype = "tm_";
 				if(Integer.parseInt(gssFilterMintermFilter.getName().substring(5, 8)) < 700) {
 					typeSubtype += "epd_";
@@ -348,11 +392,14 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		
 		for (GSSExportExport gssExportExport : exportsToLevel0) {
 
-			if(useTypeInsteadOfId)
-				gssExportExport.setName(ZID_tc_type.get(gssExportExport.getName())); 
-		
-			gssExportExport.setName(gssExportExport.getName() + "_export_to_level_0");
-			gssExportExport.setUri("es.uah.aut.srg." + gssExportExport.getName());
+			if(gssExportExport.getName().compareTo("EPD_PUS_TC_TO_CCSDS_TC") != 0) {
+
+				if(useTypeInsteadOfId)
+					gssExportExport.setName(ZID_tc_type.get(gssExportExport.getName())); 
+
+				gssExportExport.setName(gssExportExport.getName() + "_export_to_level_0");
+				gssExportExport.setUri("es.uah.aut.srg." + gssExportExport.getName());
+			}
 			
 			String exportName = "exportsToLevel0\\" + gssExportExport.getName() + ".gss_export";
 			
@@ -556,12 +603,15 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		}
 
 		for (GSSFilterMintermFilter gssFilterMintermFilter : filtersLevel1) {
-			
-			if(useTypeInsteadOfId)
-				gssFilterMintermFilter.setName(YID_tm_type.get(gssFilterMintermFilter.getName())); 
-			
-			gssFilterMintermFilter.setName(gssFilterMintermFilter.getName() + "_filter_level_1");
-			gssFilterMintermFilter.setUri("es.uah.aut.srg." + gssFilterMintermFilter.getName());
+
+			if(gssFilterMintermFilter.getName().compareTo("EPD_PUS_TM") != 0) {
+
+				if(useTypeInsteadOfId)
+					gssFilterMintermFilter.setName(YID_tm_type.get(gssFilterMintermFilter.getName())); 
+				
+				gssFilterMintermFilter.setName(gssFilterMintermFilter.getName() + "_filter_level_1");
+				gssFilterMintermFilter.setUri("es.uah.aut.srg." + gssFilterMintermFilter.getName());
+			}
 		
 			String filterName = "filtersLevel1\\" + gssFilterMintermFilter.getName() + ".gss_filters";
 			
