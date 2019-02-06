@@ -64599,7 +64599,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:20818:1: ( rule__GSSConfigAlarmMsg__Group__11__Impl rule__GSSConfigAlarmMsg__Group__12 )
             // InternalCONFIG.g:20819:2: rule__GSSConfigAlarmMsg__Group__11__Impl rule__GSSConfigAlarmMsg__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSConfigAlarmMsg__Group__11__Impl();
 
             state._fsp--;
@@ -83156,24 +83156,24 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSConfigAlarmMsg__TextAssignment_12"
-    // InternalCONFIG.g:26954:1: rule__GSSConfigAlarmMsg__TextAssignment_12 : ( RULE_ID ) ;
+    // InternalCONFIG.g:26954:1: rule__GSSConfigAlarmMsg__TextAssignment_12 : ( RULE_STRING ) ;
     public final void rule__GSSConfigAlarmMsg__TextAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:26958:1: ( ( RULE_ID ) )
-            // InternalCONFIG.g:26959:2: ( RULE_ID )
+            // InternalCONFIG.g:26958:1: ( ( RULE_STRING ) )
+            // InternalCONFIG.g:26959:2: ( RULE_STRING )
             {
-            // InternalCONFIG.g:26959:2: ( RULE_ID )
-            // InternalCONFIG.g:26960:3: RULE_ID
+            // InternalCONFIG.g:26959:2: ( RULE_STRING )
+            // InternalCONFIG.g:26960:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigAlarmMsgAccess().getTextIDTerminalRuleCall_12_0()); 
+               before(grammarAccess.getGSSConfigAlarmMsgAccess().getTextSTRINGTerminalRuleCall_12_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigAlarmMsgAccess().getTextIDTerminalRuleCall_12_0()); 
+               after(grammarAccess.getGSSConfigAlarmMsgAccess().getTextSTRINGTerminalRuleCall_12_0()); 
             }
 
             }

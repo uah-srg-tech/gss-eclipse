@@ -220,7 +220,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigAlarmMsg returns GSSConfigAlarmMsg
 	 *
 	 * Constraint:
-	 *     (name=STRING type=GSSConfigAlarmMsgType text=ID (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic))
+	 *     (name=STRING type=GSSConfigAlarmMsgType text=STRING (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic))
 	 */
 	protected void sequence_GSSConfigAlarmMsg(ISerializationContext context, GSSConfigAlarmMsg semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

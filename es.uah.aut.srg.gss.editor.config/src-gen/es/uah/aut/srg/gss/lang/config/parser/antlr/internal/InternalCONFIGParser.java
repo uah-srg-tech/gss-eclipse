@@ -13822,7 +13822,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigAlarmMsg"
-    // InternalCONFIG.g:6054:1: ruleGSSConfigAlarmMsg returns [EObject current=null] : (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_ID ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' ) ;
+    // InternalCONFIG.g:6054:1: ruleGSSConfigAlarmMsg returns [EObject current=null] : (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' ) ;
     public final EObject ruleGSSConfigAlarmMsg() throws RecognitionException {
         EObject current = null;
 
@@ -13852,11 +13852,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:6060:2: ( (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_ID ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' ) )
-            // InternalCONFIG.g:6061:2: (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_ID ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' )
+            // InternalCONFIG.g:6060:2: ( (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' ) )
+            // InternalCONFIG.g:6061:2: (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' )
             {
-            // InternalCONFIG.g:6061:2: (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_ID ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' )
-            // InternalCONFIG.g:6062:3: otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_ID ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';'
+            // InternalCONFIG.g:6061:2: (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' )
+            // InternalCONFIG.g:6062:3: otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';'
             {
             otherlv_0=(Token)match(input,111,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -13977,22 +13977,22 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSConfigAlarmMsgAccess().getTextKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSConfigAlarmMsgAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalCONFIG.g:6139:3: ( (lv_text_12_0= RULE_ID ) )
-            // InternalCONFIG.g:6140:4: (lv_text_12_0= RULE_ID )
+            // InternalCONFIG.g:6139:3: ( (lv_text_12_0= RULE_STRING ) )
+            // InternalCONFIG.g:6140:4: (lv_text_12_0= RULE_STRING )
             {
-            // InternalCONFIG.g:6140:4: (lv_text_12_0= RULE_ID )
-            // InternalCONFIG.g:6141:5: lv_text_12_0= RULE_ID
+            // InternalCONFIG.g:6140:4: (lv_text_12_0= RULE_STRING )
+            // InternalCONFIG.g:6141:5: lv_text_12_0= RULE_STRING
             {
-            lv_text_12_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            lv_text_12_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_text_12_0, grammarAccess.getGSSConfigAlarmMsgAccess().getTextIDTerminalRuleCall_12_0());
+              					newLeafNode(lv_text_12_0, grammarAccess.getGSSConfigAlarmMsgAccess().getTextSTRINGTerminalRuleCall_12_0());
               				
             }
             if ( state.backtracking==0 ) {
@@ -14004,7 +14004,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               						current,
               						"text",
               						lv_text_12_0,
-              						"org.eclipse.xtext.common.Terminals.ID");
+              						"org.eclipse.xtext.common.Terminals.STRING");
               				
             }
 

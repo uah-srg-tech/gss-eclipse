@@ -26957,9 +26957,9 @@ rule__GSSConfigAlarmMsg__TextAssignment_12
 	}
 :
 	(
-		{ before(grammarAccess.getGSSConfigAlarmMsgAccess().getTextIDTerminalRuleCall_12_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSConfigAlarmMsgAccess().getTextIDTerminalRuleCall_12_0()); }
+		{ before(grammarAccess.getGSSConfigAlarmMsgAccess().getTextSTRINGTerminalRuleCall_12_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSConfigAlarmMsgAccess().getTextSTRINGTerminalRuleCall_12_0()); }
 	)
 ;
 finally {

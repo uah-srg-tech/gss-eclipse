@@ -401,7 +401,7 @@ GSSConfigAlarmMsg returns GSSConfigAlarmMsg:
 	'GSSConfigAlarmMsg' '{'
 		'name' ':=' name=STRING ';'
 		'type' ':=' type=GSSConfigAlarmMsgType ';'
-		'text' ':=' text=ID ';'
+		'text' ':=' text=STRING ';'
 		((GVFiltered=GSSConfigGVFiltered) |
 		 (GVPeriodic=GSSConfigGVPeriodic))
 	'}' ';'

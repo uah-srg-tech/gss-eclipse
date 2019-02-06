@@ -4297,7 +4297,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTextKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Assignment cTextAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cTextIDTerminalRuleCall_12_0 = (RuleCall)cTextAssignment_12.eContents().get(0);
+		private final RuleCall cTextSTRINGTerminalRuleCall_12_0 = (RuleCall)cTextAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Alternatives cAlternatives_14 = (Alternatives)cGroup.eContents().get(14);
 		private final Assignment cGVFilteredAssignment_14_0 = (Assignment)cAlternatives_14.eContents().get(0);
@@ -4311,12 +4311,12 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSConfigAlarmMsg' '{'
 		//	'name' ':=' name=STRING ';'
 		//	'type' ':=' type=GSSConfigAlarmMsgType ';'
-		//	'text' ':=' text=ID ';' (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic)
+		//	'text' ':=' text=STRING ';' (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic)
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSConfigAlarmMsg' '{' 'name' ':=' name=STRING ';' 'type' ':=' type=GSSConfigAlarmMsgType ';' 'text' ':=' text=ID ';'
-		//(GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic) '}' ';'
+		//'GSSConfigAlarmMsg' '{' 'name' ':=' name=STRING ';' 'type' ':=' type=GSSConfigAlarmMsgType ';' 'text' ':=' text=STRING
+		//';' (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic) '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSConfigAlarmMsg'
@@ -4361,11 +4361,11 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
 		
-		//text=ID
+		//text=STRING
 		public Assignment getTextAssignment_12() { return cTextAssignment_12; }
 		
-		//ID
-		public RuleCall getTextIDTerminalRuleCall_12_0() { return cTextIDTerminalRuleCall_12_0; }
+		//STRING
+		public RuleCall getTextSTRINGTerminalRuleCall_12_0() { return cTextSTRINGTerminalRuleCall_12_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
@@ -6417,7 +6417,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSConfigAlarmMsg' '{'
 	//	'name' ':=' name=STRING ';'
 	//	'type' ':=' type=GSSConfigAlarmMsgType ';'
-	//	'text' ':=' text=ID ';' (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic)
+	//	'text' ':=' text=STRING ';' (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic)
 	//	'}' ';';
 	public GSSConfigAlarmMsgElements getGSSConfigAlarmMsgAccess() {
 		return pGSSConfigAlarmMsg;

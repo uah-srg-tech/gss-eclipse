@@ -6138,9 +6138,9 @@ ruleGSSConfigAlarmMsg returns [EObject current=null]
 		}
 		(
 			(
-				lv_text_12_0=RULE_ID
+				lv_text_12_0=RULE_STRING
 				{
-					newLeafNode(lv_text_12_0, grammarAccess.getGSSConfigAlarmMsgAccess().getTextIDTerminalRuleCall_12_0());
+					newLeafNode(lv_text_12_0, grammarAccess.getGSSConfigAlarmMsgAccess().getTextSTRINGTerminalRuleCall_12_0());
 				}
 				{
 					if ($current==null) {
@@ -6150,7 +6150,7 @@ ruleGSSConfigAlarmMsg returns [EObject current=null]
 						$current,
 						"text",
 						lv_text_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
