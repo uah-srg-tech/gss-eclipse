@@ -47,7 +47,7 @@ public class CONFIGParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSConfigInterfaceAccess().getAlternatives_23(), "rule__GSSConfigInterface__Alternatives_23");
 					put(grammarAccess.getGSSConfigSpecialPacketAccess().getAlternatives_32(), "rule__GSSConfigSpecialPacket__Alternatives_32");
 					put(grammarAccess.getGSSConfigGlobalVarAccess().getAlternatives_18(), "rule__GSSConfigGlobalVar__Alternatives_18");
-					put(grammarAccess.getGSSConfigPlotAccess().getAlternatives_6(), "rule__GSSConfigPlot__Alternatives_6");
+					put(grammarAccess.getGSSConfigPlotAccess().getAlternatives_10(), "rule__GSSConfigPlot__Alternatives_10");
 					put(grammarAccess.getGSSConfigAlarmMsgAccess().getAlternatives_14(), "rule__GSSConfigAlarmMsg__Alternatives_14");
 					put(grammarAccess.getGSSConfigModifyAccess().getAlternatives_14(), "rule__GSSConfigModify__Alternatives_14");
 					put(grammarAccess.getGSSConfigAlarmValAccess().getAlternatives_10(), "rule__GSSConfigAlarmVal__Alternatives_10");
@@ -317,8 +317,9 @@ public class CONFIGParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getOffsetAssignment_16(), "rule__GSSConfigReferenceSpecialPacket__OffsetAssignment_16");
 					put(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getSizeAssignment_20(), "rule__GSSConfigReferenceSpecialPacket__SizeAssignment_20");
 					put(grammarAccess.getGSSConfigPlotAccess().getNameAssignment_4(), "rule__GSSConfigPlot__NameAssignment_4");
-					put(grammarAccess.getGSSConfigPlotAccess().getGVFilteredAssignment_6_0(), "rule__GSSConfigPlot__GVFilteredAssignment_6_0");
-					put(grammarAccess.getGSSConfigPlotAccess().getGVPeriodicAssignment_6_1(), "rule__GSSConfigPlot__GVPeriodicAssignment_6_1");
+					put(grammarAccess.getGSSConfigPlotAccess().getChartRefAssignment_8(), "rule__GSSConfigPlot__ChartRefAssignment_8");
+					put(grammarAccess.getGSSConfigPlotAccess().getGVFilteredAssignment_10_0(), "rule__GSSConfigPlot__GVFilteredAssignment_10_0");
+					put(grammarAccess.getGSSConfigPlotAccess().getGVPeriodicAssignment_10_1(), "rule__GSSConfigPlot__GVPeriodicAssignment_10_1");
 					put(grammarAccess.getGSSConfigAlarmMsgAccess().getNameAssignment_4(), "rule__GSSConfigAlarmMsg__NameAssignment_4");
 					put(grammarAccess.getGSSConfigAlarmMsgAccess().getTypeAssignment_8(), "rule__GSSConfigAlarmMsg__TypeAssignment_8");
 					put(grammarAccess.getGSSConfigAlarmMsgAccess().getTextAssignment_12(), "rule__GSSConfigAlarmMsg__TextAssignment_12");

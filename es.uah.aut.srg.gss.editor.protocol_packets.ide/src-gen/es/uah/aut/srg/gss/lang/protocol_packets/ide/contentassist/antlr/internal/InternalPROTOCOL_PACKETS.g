@@ -2195,9 +2195,9 @@ rule__GSSProtocolPacketsProtocolPacket__NameAssignment_4
 	}
 :
 	(
-		{ before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameIDTerminalRuleCall_4_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameIDTerminalRuleCall_4_0()); }
+		{ before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameSTRINGTerminalRuleCall_4_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameSTRINGTerminalRuleCall_4_0()); }
 	)
 ;
 finally {

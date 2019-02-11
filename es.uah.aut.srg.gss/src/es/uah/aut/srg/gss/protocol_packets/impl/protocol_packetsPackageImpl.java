@@ -136,7 +136,7 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSProtocolPacketsProtocolPacket_Name() {
+	public EAttribute getGSSProtocolPacketsProtocolPacket_IfRef() {
 		return (EAttribute)gssProtocolPacketsProtocolPacketEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -145,7 +145,7 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSProtocolPacketsProtocolPacket_IfRef() {
+	public EAttribute getGSSProtocolPacketsProtocolPacket_LevelRef() {
 		return (EAttribute)gssProtocolPacketsProtocolPacketEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -154,17 +154,8 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSProtocolPacketsProtocolPacket_LevelRef() {
-		return (EAttribute)gssProtocolPacketsProtocolPacketEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getGSSProtocolPacketsProtocolPacket_Export() {
-		return (EReference)gssProtocolPacketsProtocolPacketEClass.getEStructuralFeatures().get(3);
+		return (EReference)gssProtocolPacketsProtocolPacketEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -173,7 +164,7 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 	 * @generated
 	 */
 	public EReference getGSSProtocolPacketsProtocolPacket_Format() {
-		return (EReference)gssProtocolPacketsProtocolPacketEClass.getEStructuralFeatures().get(4);
+		return (EReference)gssProtocolPacketsProtocolPacketEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -208,7 +199,6 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 		createEReference(gssProtocolPacketsProtocolPacketsEClass, GSS_PROTOCOL_PACKETS_PROTOCOL_PACKETS__PROTOCOL_PACKET);
 
 		gssProtocolPacketsProtocolPacketEClass = createEClass(GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET);
-		createEAttribute(gssProtocolPacketsProtocolPacketEClass, GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__NAME);
 		createEAttribute(gssProtocolPacketsProtocolPacketEClass, GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__IF_REF);
 		createEAttribute(gssProtocolPacketsProtocolPacketEClass, GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__LEVEL_REF);
 		createEReference(gssProtocolPacketsProtocolPacketEClass, GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT);
@@ -249,13 +239,13 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 
 		// Add supertypes to classes
 		gssProtocolPacketsProtocolPacketsEClass.getESuperTypes().add(thecommonPackage.getGSSModelElement());
+		gssProtocolPacketsProtocolPacketEClass.getESuperTypes().add(thecommonPackage.getGSSModelObject());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssProtocolPacketsProtocolPacketsEClass, GSSProtocolPacketsProtocolPackets.class, "GSSProtocolPacketsProtocolPackets", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSProtocolPacketsProtocolPackets_ProtocolPacket(), this.getGSSProtocolPacketsProtocolPacket(), null, "ProtocolPacket", null, 1, 15, GSSProtocolPacketsProtocolPackets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssProtocolPacketsProtocolPacketEClass, GSSProtocolPacketsProtocolPacket.class, "GSSProtocolPacketsProtocolPacket", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSProtocolPacketsProtocolPacket_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSProtocolPacketsProtocolPacket_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSProtocolPacketsProtocolPacket_LevelRef(), ecorePackage.getEString(), "levelRef", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSProtocolPacketsProtocolPacket_Export(), theexportPackage.getGSSExportExport(), null, "export", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -1625,21 +1625,21 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSConfigPlot__Alternatives_6
+rule__GSSConfigPlot__Alternatives_10
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSConfigPlotAccess().getGVFilteredAssignment_6_0()); }
-		(rule__GSSConfigPlot__GVFilteredAssignment_6_0)
-		{ after(grammarAccess.getGSSConfigPlotAccess().getGVFilteredAssignment_6_0()); }
+		{ before(grammarAccess.getGSSConfigPlotAccess().getGVFilteredAssignment_10_0()); }
+		(rule__GSSConfigPlot__GVFilteredAssignment_10_0)
+		{ after(grammarAccess.getGSSConfigPlotAccess().getGVFilteredAssignment_10_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSConfigPlotAccess().getGVPeriodicAssignment_6_1()); }
-		(rule__GSSConfigPlot__GVPeriodicAssignment_6_1)
-		{ after(grammarAccess.getGSSConfigPlotAccess().getGVPeriodicAssignment_6_1()); }
+		{ before(grammarAccess.getGSSConfigPlotAccess().getGVPeriodicAssignment_10_1()); }
+		(rule__GSSConfigPlot__GVPeriodicAssignment_10_1)
+		{ after(grammarAccess.getGSSConfigPlotAccess().getGVPeriodicAssignment_10_1()); }
 	)
 ;
 finally {
@@ -20451,9 +20451,9 @@ rule__GSSConfigPlot__Group__6__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSConfigPlotAccess().getAlternatives_6()); }
-	(rule__GSSConfigPlot__Alternatives_6)
-	{ after(grammarAccess.getGSSConfigPlotAccess().getAlternatives_6()); }
+	{ before(grammarAccess.getGSSConfigPlotAccess().getChartRefKeyword_6()); }
+	'chartRef'
+	{ after(grammarAccess.getGSSConfigPlotAccess().getChartRefKeyword_6()); }
 )
 ;
 finally {
@@ -20478,9 +20478,9 @@ rule__GSSConfigPlot__Group__7__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSConfigPlotAccess().getRightCurlyBracketKeyword_7()); }
-	'}'
-	{ after(grammarAccess.getGSSConfigPlotAccess().getRightCurlyBracketKeyword_7()); }
+	{ before(grammarAccess.getGSSConfigPlotAccess().getColonEqualsSignKeyword_7()); }
+	':='
+	{ after(grammarAccess.getGSSConfigPlotAccess().getColonEqualsSignKeyword_7()); }
 )
 ;
 finally {
@@ -20493,6 +20493,7 @@ rule__GSSConfigPlot__Group__8
 	}
 :
 	rule__GSSConfigPlot__Group__8__Impl
+	rule__GSSConfigPlot__Group__9
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -20504,9 +20505,116 @@ rule__GSSConfigPlot__Group__8__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSConfigPlotAccess().getSemicolonKeyword_8()); }
+	{ before(grammarAccess.getGSSConfigPlotAccess().getChartRefAssignment_8()); }
+	(rule__GSSConfigPlot__ChartRefAssignment_8)
+	{ after(grammarAccess.getGSSConfigPlotAccess().getChartRefAssignment_8()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigPlot__Group__9
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSConfigPlot__Group__9__Impl
+	rule__GSSConfigPlot__Group__10
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigPlot__Group__9__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSConfigPlotAccess().getSemicolonKeyword_9()); }
 	';'
-	{ after(grammarAccess.getGSSConfigPlotAccess().getSemicolonKeyword_8()); }
+	{ after(grammarAccess.getGSSConfigPlotAccess().getSemicolonKeyword_9()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigPlot__Group__10
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSConfigPlot__Group__10__Impl
+	rule__GSSConfigPlot__Group__11
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigPlot__Group__10__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSConfigPlotAccess().getAlternatives_10()); }
+	(rule__GSSConfigPlot__Alternatives_10)
+	{ after(grammarAccess.getGSSConfigPlotAccess().getAlternatives_10()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigPlot__Group__11
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSConfigPlot__Group__11__Impl
+	rule__GSSConfigPlot__Group__12
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigPlot__Group__11__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSConfigPlotAccess().getRightCurlyBracketKeyword_11()); }
+	'}'
+	{ after(grammarAccess.getGSSConfigPlotAccess().getRightCurlyBracketKeyword_11()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigPlot__Group__12
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSConfigPlot__Group__12__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigPlot__Group__12__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSConfigPlotAccess().getSemicolonKeyword_12()); }
+	';'
+	{ after(grammarAccess.getGSSConfigPlotAccess().getSemicolonKeyword_12()); }
 )
 ;
 finally {
@@ -26891,30 +26999,49 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSConfigPlot__GVFilteredAssignment_6_0
+rule__GSSConfigPlot__ChartRefAssignment_8
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSConfigPlotAccess().getGVFilteredGSSConfigGVFilteredParserRuleCall_6_0_0()); }
-		ruleGSSConfigGVFiltered
-		{ after(grammarAccess.getGSSConfigPlotAccess().getGVFilteredGSSConfigGVFilteredParserRuleCall_6_0_0()); }
+		{ before(grammarAccess.getGSSConfigPlotAccess().getChartRefGSSChartsChartCrossReference_8_0()); }
+		(
+			{ before(grammarAccess.getGSSConfigPlotAccess().getChartRefGSSChartsChartVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); }
+			ruleVersionedQualifiedReferenceName
+			{ after(grammarAccess.getGSSConfigPlotAccess().getChartRefGSSChartsChartVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); }
+		)
+		{ after(grammarAccess.getGSSConfigPlotAccess().getChartRefGSSChartsChartCrossReference_8_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSConfigPlot__GVPeriodicAssignment_6_1
+rule__GSSConfigPlot__GVFilteredAssignment_10_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSConfigPlotAccess().getGVPeriodicGSSConfigGVPeriodicParserRuleCall_6_1_0()); }
+		{ before(grammarAccess.getGSSConfigPlotAccess().getGVFilteredGSSConfigGVFilteredParserRuleCall_10_0_0()); }
+		ruleGSSConfigGVFiltered
+		{ after(grammarAccess.getGSSConfigPlotAccess().getGVFilteredGSSConfigGVFilteredParserRuleCall_10_0_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigPlot__GVPeriodicAssignment_10_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getGSSConfigPlotAccess().getGVPeriodicGSSConfigGVPeriodicParserRuleCall_10_1_0()); }
 		ruleGSSConfigGVPeriodic
-		{ after(grammarAccess.getGSSConfigPlotAccess().getGVPeriodicGSSConfigGVPeriodicParserRuleCall_6_1_0()); }
+		{ after(grammarAccess.getGSSConfigPlotAccess().getGVPeriodicGSSConfigGVPeriodicParserRuleCall_10_1_0()); }
 	)
 ;
 finally {

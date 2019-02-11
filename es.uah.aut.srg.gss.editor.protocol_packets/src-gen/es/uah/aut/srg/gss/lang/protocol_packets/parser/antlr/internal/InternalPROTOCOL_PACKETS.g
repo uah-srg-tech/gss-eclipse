@@ -394,9 +394,9 @@ ruleGSSProtocolPacketsProtocolPacket returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_4_0=RULE_ID
+				lv_name_4_0=RULE_STRING
 				{
-					newLeafNode(lv_name_4_0, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameIDTerminalRuleCall_4_0());
+					newLeafNode(lv_name_4_0, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameSTRINGTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -406,7 +406,7 @@ ruleGSSProtocolPacketsProtocolPacket returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_4_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)

@@ -2,9 +2,9 @@
  */
 package es.uah.aut.srg.gss.protocol_packets;
 
+import es.uah.aut.srg.gss.common.GSSModelObject;
 import es.uah.aut.srg.gss.export.GSSExportExport;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getIfRef <em>If Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getLevelRef <em>Level Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getExport <em>Export</em>}</li>
@@ -26,33 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GSSProtocolPacketsProtocolPacket extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage#getGSSProtocolPacketsProtocolPacket_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
+public interface GSSProtocolPacketsProtocolPacket extends GSSModelObject {
 	/**
 	 * Returns the value of the '<em><b>If Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->

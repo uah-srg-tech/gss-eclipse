@@ -2,6 +2,7 @@
  */
 package es.uah.aut.srg.gss.protocol_packets.impl;
 
+import es.uah.aut.srg.gss.common.impl.GSSModelObjectImpl;
 import es.uah.aut.srg.gss.export.GSSExportExport;
 
 import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket;
@@ -13,7 +14,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.protocol_packets.impl.GSSProtocolPacketsProtocolPacketImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.protocol_packets.impl.GSSProtocolPacketsProtocolPacketImpl#getIfRef <em>If Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.protocol_packets.impl.GSSProtocolPacketsProtocolPacketImpl#getLevelRef <em>Level Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.protocol_packets.impl.GSSProtocolPacketsProtocolPacketImpl#getExport <em>Export</em>}</li>
@@ -32,27 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Container implements GSSProtocolPacketsProtocolPacket {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
+public class GSSProtocolPacketsProtocolPacketImpl extends GSSModelObjectImpl implements GSSProtocolPacketsProtocolPacket {
 	/**
 	 * The default value of the '{@link #getIfRef() <em>If Ref</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -130,27 +109,6 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	@Override
 	protected EClass eStaticClass() {
 		return protocol_packetsPackage.Literals.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__NAME, oldName, name));
 	}
 
 	/**
@@ -279,8 +237,6 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__NAME:
-				return getName();
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__IF_REF:
 				return getIfRef();
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__LEVEL_REF:
@@ -303,9 +259,6 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__NAME:
-				setName((String)newValue);
-				return;
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__IF_REF:
 				setIfRef((String)newValue);
 				return;
@@ -330,9 +283,6 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__IF_REF:
 				setIfRef(IF_REF_EDEFAULT);
 				return;
@@ -357,8 +307,6 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__IF_REF:
 				return IF_REF_EDEFAULT == null ? ifRef != null : !IF_REF_EDEFAULT.equals(ifRef);
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__LEVEL_REF:
@@ -381,9 +329,7 @@ public class GSSProtocolPacketsProtocolPacketImpl extends MinimalEObjectImpl.Con
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", ifRef: ");
+		result.append(" (ifRef: ");
 		result.append(ifRef);
 		result.append(", levelRef: ");
 		result.append(levelRef);

@@ -392,6 +392,7 @@ enum GSSConfigReferenceFieldType returns GSSConfigReferenceFieldType:
 GSSConfigPlot returns GSSConfigPlot:
 	'GSSConfigPlot' '{'
 		'name' ':=' name=STRING ';'
+		'chartRef' ':=' chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';'
 		((GVFiltered=GSSConfigGVFiltered) |
 		 (GVPeriodic=GSSConfigGVPeriodic))
 	'}' ';'

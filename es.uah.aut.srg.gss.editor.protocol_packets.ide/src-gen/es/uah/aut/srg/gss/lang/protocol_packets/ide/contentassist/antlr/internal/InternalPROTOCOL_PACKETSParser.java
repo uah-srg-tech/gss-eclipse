@@ -3023,7 +3023,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
             // InternalPROTOCOL_PACKETS.g:955:1: ( rule__GSSProtocolPacketsProtocolPacket__Group__3__Impl rule__GSSProtocolPacketsProtocolPacket__Group__4 )
             // InternalPROTOCOL_PACKETS.g:956:2: rule__GSSProtocolPacketsProtocolPacket__Group__3__Impl rule__GSSProtocolPacketsProtocolPacket__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_7);
+            pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSProtocolPacketsProtocolPacket__Group__3__Impl();
 
             state._fsp--;
@@ -6818,24 +6818,24 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GSSProtocolPacketsProtocolPacket__NameAssignment_4"
-    // InternalPROTOCOL_PACKETS.g:2192:1: rule__GSSProtocolPacketsProtocolPacket__NameAssignment_4 : ( RULE_ID ) ;
+    // InternalPROTOCOL_PACKETS.g:2192:1: rule__GSSProtocolPacketsProtocolPacket__NameAssignment_4 : ( RULE_STRING ) ;
     public final void rule__GSSProtocolPacketsProtocolPacket__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPROTOCOL_PACKETS.g:2196:1: ( ( RULE_ID ) )
-            // InternalPROTOCOL_PACKETS.g:2197:2: ( RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:2196:1: ( ( RULE_STRING ) )
+            // InternalPROTOCOL_PACKETS.g:2197:2: ( RULE_STRING )
             {
-            // InternalPROTOCOL_PACKETS.g:2197:2: ( RULE_ID )
-            // InternalPROTOCOL_PACKETS.g:2198:3: RULE_ID
+            // InternalPROTOCOL_PACKETS.g:2197:2: ( RULE_STRING )
+            // InternalPROTOCOL_PACKETS.g:2198:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameIDTerminalRuleCall_4_0()); 
+               before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameSTRINGTerminalRuleCall_4_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameIDTerminalRuleCall_4_0()); 
+               after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameSTRINGTerminalRuleCall_4_0()); 
             }
 
             }

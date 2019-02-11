@@ -4219,22 +4219,31 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cNameSTRINGTerminalRuleCall_4_0 = (RuleCall)cNameAssignment_4.eContents().get(0);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Alternatives cAlternatives_6 = (Alternatives)cGroup.eContents().get(6);
-		private final Assignment cGVFilteredAssignment_6_0 = (Assignment)cAlternatives_6.eContents().get(0);
-		private final RuleCall cGVFilteredGSSConfigGVFilteredParserRuleCall_6_0_0 = (RuleCall)cGVFilteredAssignment_6_0.eContents().get(0);
-		private final Assignment cGVPeriodicAssignment_6_1 = (Assignment)cAlternatives_6.eContents().get(1);
-		private final RuleCall cGVPeriodicGSSConfigGVPeriodicParserRuleCall_6_1_0 = (RuleCall)cGVPeriodicAssignment_6_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cChartRefKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cColonEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cChartRefAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final CrossReference cChartRefGSSChartsChartCrossReference_8_0 = (CrossReference)cChartRefAssignment_8.eContents().get(0);
+		private final RuleCall cChartRefGSSChartsChartVersionedQualifiedReferenceNameParserRuleCall_8_0_1 = (RuleCall)cChartRefGSSChartsChartCrossReference_8_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Alternatives cAlternatives_10 = (Alternatives)cGroup.eContents().get(10);
+		private final Assignment cGVFilteredAssignment_10_0 = (Assignment)cAlternatives_10.eContents().get(0);
+		private final RuleCall cGVFilteredGSSConfigGVFilteredParserRuleCall_10_0_0 = (RuleCall)cGVFilteredAssignment_10_0.eContents().get(0);
+		private final Assignment cGVPeriodicAssignment_10_1 = (Assignment)cAlternatives_10.eContents().get(1);
+		private final RuleCall cGVPeriodicGSSConfigGVPeriodicParserRuleCall_10_1_0 = (RuleCall)cGVPeriodicAssignment_10_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Keyword cSemicolonKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
 		//GSSConfigPlot:
 		//	'GSSConfigPlot' '{'
-		//	'name' ':=' name=STRING ';' (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic)
+		//	'name' ':=' name=STRING ';'
+		//	'chartRef' ':=' chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';' (GVFiltered=GSSConfigGVFiltered
+		//	| GVPeriodic=GSSConfigGVPeriodic)
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSConfigPlot' '{' 'name' ':=' name=STRING ';' (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic) '}'
-		//';'
+		//'GSSConfigPlot' '{' 'name' ':=' name=STRING ';' 'chartRef' ':='
+		//chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';' (GVFiltered=GSSConfigGVFiltered |
+		//GVPeriodic=GSSConfigGVPeriodic) '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSConfigPlot'
@@ -4258,26 +4267,44 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 		
-		//(GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic)
-		public Alternatives getAlternatives_6() { return cAlternatives_6; }
+		//'chartRef'
+		public Keyword getChartRefKeyword_6() { return cChartRefKeyword_6; }
 		
-		//GVFiltered=GSSConfigGVFiltered
-		public Assignment getGVFilteredAssignment_6_0() { return cGVFilteredAssignment_6_0; }
+		//':='
+		public Keyword getColonEqualsSignKeyword_7() { return cColonEqualsSignKeyword_7; }
 		
-		//GSSConfigGVFiltered
-		public RuleCall getGVFilteredGSSConfigGVFilteredParserRuleCall_6_0_0() { return cGVFilteredGSSConfigGVFilteredParserRuleCall_6_0_0; }
+		//chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName]
+		public Assignment getChartRefAssignment_8() { return cChartRefAssignment_8; }
 		
-		//GVPeriodic=GSSConfigGVPeriodic
-		public Assignment getGVPeriodicAssignment_6_1() { return cGVPeriodicAssignment_6_1; }
+		//[charts::GSSChartsChart|VersionedQualifiedReferenceName]
+		public CrossReference getChartRefGSSChartsChartCrossReference_8_0() { return cChartRefGSSChartsChartCrossReference_8_0; }
 		
-		//GSSConfigGVPeriodic
-		public RuleCall getGVPeriodicGSSConfigGVPeriodicParserRuleCall_6_1_0() { return cGVPeriodicGSSConfigGVPeriodicParserRuleCall_6_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		//VersionedQualifiedReferenceName
+		public RuleCall getChartRefGSSChartsChartVersionedQualifiedReferenceNameParserRuleCall_8_0_1() { return cChartRefGSSChartsChartVersionedQualifiedReferenceNameParserRuleCall_8_0_1; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_8() { return cSemicolonKeyword_8; }
+		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
+		
+		//(GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic)
+		public Alternatives getAlternatives_10() { return cAlternatives_10; }
+		
+		//GVFiltered=GSSConfigGVFiltered
+		public Assignment getGVFilteredAssignment_10_0() { return cGVFilteredAssignment_10_0; }
+		
+		//GSSConfigGVFiltered
+		public RuleCall getGVFilteredGSSConfigGVFilteredParserRuleCall_10_0_0() { return cGVFilteredGSSConfigGVFilteredParserRuleCall_10_0_0; }
+		
+		//GVPeriodic=GSSConfigGVPeriodic
+		public Assignment getGVPeriodicAssignment_10_1() { return cGVPeriodicAssignment_10_1; }
+		
+		//GSSConfigGVPeriodic
+		public RuleCall getGVPeriodicGSSConfigGVPeriodicParserRuleCall_10_1_0() { return cGVPeriodicGSSConfigGVPeriodicParserRuleCall_10_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_12() { return cSemicolonKeyword_12; }
 	}
 	public class GSSConfigAlarmMsgElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigAlarmMsg");
@@ -6403,7 +6430,9 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSConfigPlot:
 	//	'GSSConfigPlot' '{'
-	//	'name' ':=' name=STRING ';' (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic)
+	//	'name' ':=' name=STRING ';'
+	//	'chartRef' ':=' chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';' (GVFiltered=GSSConfigGVFiltered
+	//	| GVPeriodic=GSSConfigGVPeriodic)
 	//	'}' ';';
 	public GSSConfigPlotElements getGSSConfigPlotAccess() {
 		return pGSSConfigPlot;

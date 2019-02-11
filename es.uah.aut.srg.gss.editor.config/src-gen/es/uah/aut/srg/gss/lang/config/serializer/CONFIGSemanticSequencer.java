@@ -716,7 +716,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigPlot returns GSSConfigPlot
 	 *
 	 * Constraint:
-	 *     (name=STRING (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic))
+	 *     (name=STRING chartRef=[GSSChartsChart|VersionedQualifiedReferenceName] (GVFiltered=GSSConfigGVFiltered | GVPeriodic=GSSConfigGVPeriodic))
 	 */
 	protected void sequence_GSSConfigPlot(ISerializationContext context, GSSConfigPlot semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

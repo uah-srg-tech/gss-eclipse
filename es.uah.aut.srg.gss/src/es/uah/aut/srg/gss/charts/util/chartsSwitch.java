@@ -14,6 +14,7 @@ import es.uah.aut.srg.gss.charts.*;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
 
+import es.uah.aut.srg.gss.common.GSSModelObject;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -86,6 +87,7 @@ public class chartsSwitch<T> extends Switch<T> {
 			case chartsPackage.GSS_CHARTS_CHART: {
 				GSSChartsChart gssChartsChart = (GSSChartsChart)theEObject;
 				T result = caseGSSChartsChart(gssChartsChart);
+				if (result == null) result = caseGSSModelObject(gssChartsChart);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -135,6 +137,21 @@ public class chartsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSModelElement(GSSModelElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Model Object</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Model Object</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSModelObject(GSSModelObject object) {
 		return null;
 	}
 

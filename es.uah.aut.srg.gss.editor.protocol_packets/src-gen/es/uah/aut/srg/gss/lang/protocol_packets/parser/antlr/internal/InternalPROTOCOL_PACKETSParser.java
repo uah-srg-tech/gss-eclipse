@@ -906,7 +906,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "ruleGSSProtocolPacketsProtocolPacket"
-    // InternalPROTOCOL_PACKETS.g:371:1: ruleGSSProtocolPacketsProtocolPacket returns [EObject current=null] : (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'format' otherlv_19= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' ) ;
+    // InternalPROTOCOL_PACKETS.g:371:1: ruleGSSProtocolPacketsProtocolPacket returns [EObject current=null] : (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'format' otherlv_19= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' ) ;
     public final EObject ruleGSSProtocolPacketsProtocolPacket() throws RecognitionException {
         EObject current = null;
 
@@ -939,11 +939,11 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
         	enterRule();
 
         try {
-            // InternalPROTOCOL_PACKETS.g:377:2: ( (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'format' otherlv_19= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' ) )
-            // InternalPROTOCOL_PACKETS.g:378:2: (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'format' otherlv_19= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' )
+            // InternalPROTOCOL_PACKETS.g:377:2: ( (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'format' otherlv_19= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' ) )
+            // InternalPROTOCOL_PACKETS.g:378:2: (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'format' otherlv_19= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' )
             {
-            // InternalPROTOCOL_PACKETS.g:378:2: (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'format' otherlv_19= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' )
-            // InternalPROTOCOL_PACKETS.g:379:3: otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'format' otherlv_19= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';'
+            // InternalPROTOCOL_PACKETS.g:378:2: (otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'format' otherlv_19= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' )
+            // InternalPROTOCOL_PACKETS.g:379:3: otherlv_0= 'GSSProtocolPacketsProtocolPacket' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'ifRef' otherlv_7= ':=' ( (lv_ifRef_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'levelRef' otherlv_11= ':=' ( (lv_levelRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'export' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'format' otherlv_19= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';'
             {
             otherlv_0=(Token)match(input,20,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -963,22 +963,22 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
               			newLeafNode(otherlv_2, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalPROTOCOL_PACKETS.g:395:3: ( (lv_name_4_0= RULE_ID ) )
-            // InternalPROTOCOL_PACKETS.g:396:4: (lv_name_4_0= RULE_ID )
+            // InternalPROTOCOL_PACKETS.g:395:3: ( (lv_name_4_0= RULE_STRING ) )
+            // InternalPROTOCOL_PACKETS.g:396:4: (lv_name_4_0= RULE_STRING )
             {
-            // InternalPROTOCOL_PACKETS.g:396:4: (lv_name_4_0= RULE_ID )
-            // InternalPROTOCOL_PACKETS.g:397:5: lv_name_4_0= RULE_ID
+            // InternalPROTOCOL_PACKETS.g:396:4: (lv_name_4_0= RULE_STRING )
+            // InternalPROTOCOL_PACKETS.g:397:5: lv_name_4_0= RULE_STRING
             {
-            lv_name_4_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            lv_name_4_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_name_4_0, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameIDTerminalRuleCall_4_0());
+              					newLeafNode(lv_name_4_0, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameSTRINGTerminalRuleCall_4_0());
               				
             }
             if ( state.backtracking==0 ) {
@@ -990,7 +990,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
               						current,
               						"name",
               						lv_name_4_0,
-              						"org.eclipse.xtext.common.Terminals.ID");
+              						"org.eclipse.xtext.common.Terminals.STRING");
               				
             }
 

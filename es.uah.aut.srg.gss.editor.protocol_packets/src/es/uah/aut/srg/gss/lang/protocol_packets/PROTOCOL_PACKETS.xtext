@@ -29,7 +29,7 @@ GSSProtocolPacketsProtocolPackets returns GSSProtocolPacketsProtocolPackets:
 
 GSSProtocolPacketsProtocolPacket returns GSSProtocolPacketsProtocolPacket:
 	'GSSProtocolPacketsProtocolPacket' '{'
-		'name' ':=' name=ID ';'
+		'name' ':=' name=STRING ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'levelRef' ':=' levelRef=INTEGER ';'
 		'export' ':=' export=[export::GSSExportExport|VersionedQualifiedName] ';'

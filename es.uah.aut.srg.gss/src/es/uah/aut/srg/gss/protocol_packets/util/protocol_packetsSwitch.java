@@ -4,6 +4,7 @@ package es.uah.aut.srg.gss.protocol_packets.util;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
 
+import es.uah.aut.srg.gss.common.GSSModelObject;
 import es.uah.aut.srg.gss.protocol_packets.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -78,6 +79,7 @@ public class protocol_packetsSwitch<T> extends Switch<T> {
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET: {
 				GSSProtocolPacketsProtocolPacket gssProtocolPacketsProtocolPacket = (GSSProtocolPacketsProtocolPacket)theEObject;
 				T result = caseGSSProtocolPacketsProtocolPacket(gssProtocolPacketsProtocolPacket);
+				if (result == null) result = caseGSSModelObject(gssProtocolPacketsProtocolPacket);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -127,6 +129,21 @@ public class protocol_packetsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSModelElement(GSSModelElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Model Object</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Model Object</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSModelObject(GSSModelObject object) {
 		return null;
 	}
 

@@ -98,12 +98,18 @@ public class PROTOCOL_PACKETSSemanticSequencer extends AbstractDelegatingSemanti
 	 *     GSSProtocolPacketsProtocolPacket returns GSSProtocolPacketsProtocolPacket
 	 *
 	 * Constraint:
-	 *     (name=ID ifRef=INTEGER levelRef=INTEGER export=[GSSExportExport|VersionedQualifiedName] format=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName])
+	 *     (
+	 *         name=STRING 
+	 *         ifRef=INTEGER 
+	 *         levelRef=INTEGER 
+	 *         export=[GSSExportExport|VersionedQualifiedName] 
+	 *         format=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]
+	 *     )
 	 */
 	protected void sequence_GSSProtocolPacketsProtocolPacket(ISerializationContext context, GSSProtocolPacketsProtocolPacket semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, protocol_packetsPackage.Literals.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, protocol_packetsPackage.Literals.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__NAME));
+			if (transientValues.isValueTransient(semanticObject, commonPackage.Literals.GSS_MODEL_OBJECT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, commonPackage.Literals.GSS_MODEL_OBJECT__NAME));
 			if (transientValues.isValueTransient(semanticObject, protocol_packetsPackage.Literals.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__IF_REF) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, protocol_packetsPackage.Literals.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__IF_REF));
 			if (transientValues.isValueTransient(semanticObject, protocol_packetsPackage.Literals.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__LEVEL_REF) == ValueTransient.YES)
@@ -114,7 +120,7 @@ public class PROTOCOL_PACKETSSemanticSequencer extends AbstractDelegatingSemanti
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, protocol_packetsPackage.Literals.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameIDTerminalRuleCall_4_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameSTRINGTerminalRuleCall_4_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getIfRefINTEGERParserRuleCall_8_0(), semanticObject.getIfRef());
 		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getLevelRefINTEGERParserRuleCall_12_0(), semanticObject.getLevelRef());
 		feeder.accept(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportVersionedQualifiedNameParserRuleCall_16_0_1(), semanticObject.getExport());

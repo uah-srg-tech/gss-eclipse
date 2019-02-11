@@ -97,7 +97,7 @@ public class CHARTSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cGSSChartsChartsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final UnorderedGroup cUnorderedGroup_3 = (UnorderedGroup)cGroup.eContents().get(3);
 		private final Group cGroup_3_0 = (Group)cUnorderedGroup_3.eContents().get(0);
@@ -119,23 +119,23 @@ public class CHARTSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//GSSChartsCharts:
 		//	'GSSChartsCharts'
-		//	name=EString
+		//	name=ID
 		//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') Chart+=GSSChartsChart+
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSChartsCharts' name=EString '{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';')
+		//'GSSChartsCharts' name=ID '{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';')
 		//Chart+=GSSChartsChart+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSChartsCharts'
 		public Keyword getGSSChartsChartsKeyword_0() { return cGSSChartsChartsKeyword_0; }
 		
-		//name=EString
+		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 		
-		//EString
-		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
@@ -204,7 +204,7 @@ public class CHARTSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNameKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cColonEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cNameAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cNameIDTerminalRuleCall_8_0 = (RuleCall)cNameAssignment_8.eContents().get(0);
+		private final RuleCall cNameSTRINGTerminalRuleCall_8_0 = (RuleCall)cNameAssignment_8.eContents().get(0);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Keyword cY_unitsKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
@@ -222,14 +222,14 @@ public class CHARTSGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSChartsChart:
 		//	'GSSChartsChart' '{'
 		//	'id' ':=' id=INTEGER ';'
-		//	'name' ':=' name=ID ';'
+		//	'name' ':=' name=STRING ';'
 		//	'y_units' ':=' y_units=GSSChartsYUnits ';'
 		//	'y_max' ':=' y_max=INTEGER ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSChartsChart' '{' 'id' ':=' id=INTEGER ';' 'name' ':=' name=ID ';' 'y_units' ':=' y_units=GSSChartsYUnits ';' 'y_max'
-		//':=' y_max=INTEGER ';' '}' ';'
+		//'GSSChartsChart' '{' 'id' ':=' id=INTEGER ';' 'name' ':=' name=STRING ';' 'y_units' ':=' y_units=GSSChartsYUnits ';'
+		//'y_max' ':=' y_max=INTEGER ';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSChartsChart'
@@ -259,11 +259,11 @@ public class CHARTSGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_7() { return cColonEqualsSignKeyword_7; }
 		
-		//name=ID
+		//name=STRING
 		public Assignment getNameAssignment_8() { return cNameAssignment_8; }
 		
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_8_0() { return cNameIDTerminalRuleCall_8_0; }
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_8_0() { return cNameSTRINGTerminalRuleCall_8_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
@@ -691,7 +691,7 @@ public class CHARTSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSChartsCharts:
 	//	'GSSChartsCharts'
-	//	name=EString
+	//	name=ID
 	//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';') Chart+=GSSChartsChart+
 	//	'}' ';';
 	public GSSChartsChartsElements getGSSChartsChartsAccess() {
@@ -705,7 +705,7 @@ public class CHARTSGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSChartsChart:
 	//	'GSSChartsChart' '{'
 	//	'id' ':=' id=INTEGER ';'
-	//	'name' ':=' name=ID ';'
+	//	'name' ':=' name=STRING ';'
 	//	'y_units' ':=' y_units=GSSChartsYUnits ';'
 	//	'y_max' ':=' y_max=INTEGER ';'
 	//	'}' ';';

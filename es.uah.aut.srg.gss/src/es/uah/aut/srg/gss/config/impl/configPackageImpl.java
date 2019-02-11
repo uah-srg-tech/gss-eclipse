@@ -2243,7 +2243,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSConfigPlot_GVFiltered() {
+	public EReference getGSSConfigPlot_ChartRef() {
 		return (EReference)gssConfigPlotEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2252,8 +2252,17 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSConfigPlot_GVPeriodic() {
+	public EReference getGSSConfigPlot_GVFiltered() {
 		return (EReference)gssConfigPlotEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSConfigPlot_GVPeriodic() {
+		return (EReference)gssConfigPlotEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2910,6 +2919,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 
 		gssConfigPlotEClass = createEClass(GSS_CONFIG_PLOT);
 		createEAttribute(gssConfigPlotEClass, GSS_CONFIG_PLOT__NAME);
+		createEReference(gssConfigPlotEClass, GSS_CONFIG_PLOT__CHART_REF);
 		createEReference(gssConfigPlotEClass, GSS_CONFIG_PLOT__GV_FILTERED);
 		createEReference(gssConfigPlotEClass, GSS_CONFIG_PLOT__GV_PERIODIC);
 
@@ -3231,6 +3241,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 
 		initEClass(gssConfigPlotEClass, GSSConfigPlot.class, "GSSConfigPlot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigPlot_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigPlot_ChartRef(), thechartsPackage.getGSSChartsChart(), null, "chartRef", null, 1, 1, GSSConfigPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigPlot_GVFiltered(), this.getGSSConfigGVFiltered(), null, "GVFiltered", null, 0, 1, GSSConfigPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigPlot_GVPeriodic(), this.getGSSConfigGVPeriodic(), null, "GVPeriodic", null, 0, 1, GSSConfigPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

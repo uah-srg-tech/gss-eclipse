@@ -194,7 +194,7 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		private final Keyword cNameKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cNameIDTerminalRuleCall_4_0 = (RuleCall)cNameAssignment_4.eContents().get(0);
+		private final RuleCall cNameSTRINGTerminalRuleCall_4_0 = (RuleCall)cNameAssignment_4.eContents().get(0);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Keyword cIfRefKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cColonEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
@@ -223,7 +223,7 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		
 		//GSSProtocolPacketsProtocolPacket:
 		//	'GSSProtocolPacketsProtocolPacket' '{'
-		//	'name' ':=' name=ID ';'
+		//	'name' ':=' name=STRING ';'
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'levelRef' ':=' levelRef=INTEGER ';'
 		//	'export' ':=' export=[export::GSSExportExport|VersionedQualifiedName] ';'
@@ -231,7 +231,7 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSProtocolPacketsProtocolPacket' '{' 'name' ':=' name=ID ';' 'ifRef' ':=' ifRef=INTEGER ';' 'levelRef' ':='
+		//'GSSProtocolPacketsProtocolPacket' '{' 'name' ':=' name=STRING ';' 'ifRef' ':=' ifRef=INTEGER ';' 'levelRef' ':='
 		//levelRef=INTEGER ';' 'export' ':=' export=[export::GSSExportExport|VersionedQualifiedName] ';' 'format' ':='
 		//format=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';' '}' ';'
 		public Group getGroup() { return cGroup; }
@@ -248,11 +248,11 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		//':='
 		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
 		
-		//name=ID
+		//name=STRING
 		public Assignment getNameAssignment_4() { return cNameAssignment_4; }
 		
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_4_0() { return cNameIDTerminalRuleCall_4_0; }
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_4_0() { return cNameSTRINGTerminalRuleCall_4_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
@@ -714,7 +714,7 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 	
 	//GSSProtocolPacketsProtocolPacket:
 	//	'GSSProtocolPacketsProtocolPacket' '{'
-	//	'name' ':=' name=ID ';'
+	//	'name' ':=' name=STRING ';'
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'levelRef' ':=' levelRef=INTEGER ';'
 	//	'export' ':=' export=[export::GSSExportExport|VersionedQualifiedName] ';'

@@ -159,7 +159,7 @@ public class chartsPackageImpl extends EPackageImpl implements chartsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSChartsChart_Name() {
+	public EAttribute getGSSChartsChart_Y_units() {
 		return (EAttribute)gssChartsChartEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -168,17 +168,8 @@ public class chartsPackageImpl extends EPackageImpl implements chartsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSChartsChart_Y_units() {
-		return (EAttribute)gssChartsChartEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getGSSChartsChart_Y_max() {
-		return (EAttribute)gssChartsChartEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)gssChartsChartEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -223,7 +214,6 @@ public class chartsPackageImpl extends EPackageImpl implements chartsPackage {
 
 		gssChartsChartEClass = createEClass(GSS_CHARTS_CHART);
 		createEAttribute(gssChartsChartEClass, GSS_CHARTS_CHART__ID);
-		createEAttribute(gssChartsChartEClass, GSS_CHARTS_CHART__NAME);
 		createEAttribute(gssChartsChartEClass, GSS_CHARTS_CHART__YUNITS);
 		createEAttribute(gssChartsChartEClass, GSS_CHARTS_CHART__YMAX);
 
@@ -263,6 +253,7 @@ public class chartsPackageImpl extends EPackageImpl implements chartsPackage {
 
 		// Add supertypes to classes
 		gssChartsChartsEClass.getESuperTypes().add(thecommonPackage.getGSSModelElement());
+		gssChartsChartEClass.getESuperTypes().add(thecommonPackage.getGSSModelObject());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssChartsChartsEClass, GSSChartsCharts.class, "GSSChartsCharts", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -270,7 +261,6 @@ public class chartsPackageImpl extends EPackageImpl implements chartsPackage {
 
 		initEClass(gssChartsChartEClass, GSSChartsChart.class, "GSSChartsChart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSChartsChart_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSChartsChart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSChartsChart_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSChartsChart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSChartsChart_Y_units(), this.getGSSChartsYUnits(), "y_units", null, 1, 1, GSSChartsChart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSChartsChart_Y_max(), ecorePackage.getEString(), "y_max", null, 1, 1, GSSChartsChart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

@@ -5991,13 +5991,44 @@ ruleGSSConfigPlot returns [EObject current=null]
 		{
 			newLeafNode(otherlv_5, grammarAccess.getGSSConfigPlotAccess().getSemicolonKeyword_5());
 		}
+		otherlv_6='chartRef'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getGSSConfigPlotAccess().getChartRefKeyword_6());
+		}
+		otherlv_7=':='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSConfigPlotAccess().getColonEqualsSignKeyword_7());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getGSSConfigPlotRule());
+					}
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSConfigPlotAccess().getChartRefGSSChartsChartCrossReference_8_0());
+				}
+				ruleVersionedQualifiedReferenceName
+				{
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9=';'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getGSSConfigPlotAccess().getSemicolonKeyword_9());
+		}
 		(
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSConfigPlotAccess().getGVFilteredGSSConfigGVFilteredParserRuleCall_6_0_0());
+						newCompositeNode(grammarAccess.getGSSConfigPlotAccess().getGVFilteredGSSConfigGVFilteredParserRuleCall_10_0_0());
 					}
-					lv_GVFiltered_6_0=ruleGSSConfigGVFiltered
+					lv_GVFiltered_10_0=ruleGSSConfigGVFiltered
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSConfigPlotRule());
@@ -6005,7 +6036,7 @@ ruleGSSConfigPlot returns [EObject current=null]
 						set(
 							$current,
 							"GVFiltered",
-							lv_GVFiltered_6_0,
+							lv_GVFiltered_10_0,
 							"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigGVFiltered");
 						afterParserOrEnumRuleCall();
 					}
@@ -6015,9 +6046,9 @@ ruleGSSConfigPlot returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSConfigPlotAccess().getGVPeriodicGSSConfigGVPeriodicParserRuleCall_6_1_0());
+						newCompositeNode(grammarAccess.getGSSConfigPlotAccess().getGVPeriodicGSSConfigGVPeriodicParserRuleCall_10_1_0());
 					}
-					lv_GVPeriodic_7_0=ruleGSSConfigGVPeriodic
+					lv_GVPeriodic_11_0=ruleGSSConfigGVPeriodic
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSConfigPlotRule());
@@ -6025,20 +6056,20 @@ ruleGSSConfigPlot returns [EObject current=null]
 						set(
 							$current,
 							"GVPeriodic",
-							lv_GVPeriodic_7_0,
+							lv_GVPeriodic_11_0,
 							"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigGVPeriodic");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)
-		otherlv_8='}'
+		otherlv_12='}'
 		{
-			newLeafNode(otherlv_8, grammarAccess.getGSSConfigPlotAccess().getRightCurlyBracketKeyword_7());
+			newLeafNode(otherlv_12, grammarAccess.getGSSConfigPlotAccess().getRightCurlyBracketKeyword_11());
 		}
-		otherlv_9=';'
+		otherlv_13=';'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getGSSConfigPlotAccess().getSemicolonKeyword_8());
+			newLeafNode(otherlv_13, grammarAccess.getGSSConfigPlotAccess().getSemicolonKeyword_12());
 		}
 	)
 ;

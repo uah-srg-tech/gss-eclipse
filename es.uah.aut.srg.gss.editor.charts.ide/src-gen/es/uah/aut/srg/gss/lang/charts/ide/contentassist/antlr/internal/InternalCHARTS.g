@@ -157,31 +157,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleEString
-entryRuleEString
-:
-{ before(grammarAccess.getEStringRule()); }
-	 ruleEString
-{ after(grammarAccess.getEStringRule()); } 
-	 EOF 
-;
-
-// Rule EString
-ruleEString 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getEStringAccess().getAlternatives()); }
-		(rule__EString__Alternatives)
-		{ after(grammarAccess.getEStringAccess().getAlternatives()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 // Entry rule entryRuleQualifiedName
 entryRuleQualifiedName
 :
@@ -292,27 +267,6 @@ ruleGSSChartsYUnits
 		{ before(grammarAccess.getGSSChartsYUnitsAccess().getAlternatives()); }
 		(rule__GSSChartsYUnits__Alternatives)
 		{ after(grammarAccess.getGSSChartsYUnitsAccess().getAlternatives()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__EString__Alternatives
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); }
-		RULE_STRING
-		{ after(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); }
-		RULE_ID
-		{ after(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); }
 	)
 ;
 finally {
@@ -2137,9 +2091,9 @@ rule__GSSChartsCharts__NameAssignment_1
 	}
 :
 	(
-		{ before(grammarAccess.getGSSChartsChartsAccess().getNameEStringParserRuleCall_1_0()); }
-		ruleEString
-		{ after(grammarAccess.getGSSChartsChartsAccess().getNameEStringParserRuleCall_1_0()); }
+		{ before(grammarAccess.getGSSChartsChartsAccess().getNameIDTerminalRuleCall_1_0()); }
+		RULE_ID
+		{ after(grammarAccess.getGSSChartsChartsAccess().getNameIDTerminalRuleCall_1_0()); }
 	)
 ;
 finally {
@@ -2212,9 +2166,9 @@ rule__GSSChartsChart__NameAssignment_8
 	}
 :
 	(
-		{ before(grammarAccess.getGSSChartsChartAccess().getNameIDTerminalRuleCall_8_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSChartsChartAccess().getNameIDTerminalRuleCall_8_0()); }
+		{ before(grammarAccess.getGSSChartsChartAccess().getNameSTRINGTerminalRuleCall_8_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSChartsChartAccess().getNameSTRINGTerminalRuleCall_8_0()); }
 	)
 ;
 finally {

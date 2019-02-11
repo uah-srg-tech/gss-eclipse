@@ -16,7 +16,7 @@ GSSModelFileImport returns common::GSSModelFileImport:
 
 GSSChartsCharts returns GSSChartsCharts:
 	'GSSChartsCharts'
-	name=EString
+	name=ID
 	'{'
 		(('uri' ':=' uri=QualifiedName ';')
 		& ('version' ':=' version=Version ';'))
@@ -27,7 +27,7 @@ GSSChartsCharts returns GSSChartsCharts:
 GSSChartsChart returns GSSChartsChart:
 	'GSSChartsChart' '{'
 		'id' ':='  id=INTEGER ';'
-		'name' ':=' name=ID ';'
+		'name' ':=' name=STRING ';'
 		'y_units' ':=' y_units=GSSChartsYUnits ';'
 		'y_max' ':=' y_max=INTEGER ';'
 	'}' ';'

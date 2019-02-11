@@ -2414,13 +2414,22 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PLOT__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Chart Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_PLOT__CHART_REF = 1;
+
+	/**
 	 * The feature id for the '<em><b>GV Filtered</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PLOT__GV_FILTERED = 1;
+	int GSS_CONFIG_PLOT__GV_FILTERED = 2;
 
 	/**
 	 * The feature id for the '<em><b>GV Periodic</b></em>' containment reference.
@@ -2429,7 +2438,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PLOT__GV_PERIODIC = 2;
+	int GSS_CONFIG_PLOT__GV_PERIODIC = 3;
 
 	/**
 	 * The number of structural features of the '<em>GSS Config Plot</em>' class.
@@ -2438,7 +2447,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PLOT_FEATURE_COUNT = 3;
+	int GSS_CONFIG_PLOT_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>GSS Config Plot</em>' class.
@@ -5048,6 +5057,17 @@ public interface configPackage extends EPackage {
 	EAttribute getGSSConfigPlot_Name();
 
 	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPlot#getChartRef <em>Chart Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Chart Ref</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigPlot#getChartRef()
+	 * @see #getGSSConfigPlot()
+	 * @generated
+	 */
+	EReference getGSSConfigPlot_ChartRef();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.config.GSSConfigPlot#getGVFiltered <em>GV Filtered</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7144,6 +7164,14 @@ public interface configPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GSS_CONFIG_PLOT__NAME = eINSTANCE.getGSSConfigPlot_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Chart Ref</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_CONFIG_PLOT__CHART_REF = eINSTANCE.getGSSConfigPlot_ChartRef();
 
 		/**
 		 * The meta object literal for the '<em><b>GV Filtered</b></em>' containment reference feature.

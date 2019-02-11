@@ -148,7 +148,16 @@ public interface protocol_packetsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__NAME = 0;
+	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__NAME = commonPackage.GSS_MODEL_OBJECT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__DESCRIPTION = commonPackage.GSS_MODEL_OBJECT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
@@ -157,7 +166,7 @@ public interface protocol_packetsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__IF_REF = 1;
+	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__IF_REF = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Level Ref</b></em>' attribute.
@@ -166,7 +175,7 @@ public interface protocol_packetsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__LEVEL_REF = 2;
+	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__LEVEL_REF = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Export</b></em>' reference.
@@ -175,7 +184,7 @@ public interface protocol_packetsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT = 3;
+	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Format</b></em>' reference.
@@ -184,7 +193,7 @@ public interface protocol_packetsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT = 4;
+	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>GSS Protocol Packets Protocol Packet</em>' class.
@@ -193,7 +202,7 @@ public interface protocol_packetsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET_FEATURE_COUNT = 5;
+	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET_FEATURE_COUNT = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>GSS Protocol Packets Protocol Packet</em>' class.
@@ -202,7 +211,7 @@ public interface protocol_packetsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET_OPERATION_COUNT = 0;
+	int GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET_OPERATION_COUNT = commonPackage.GSS_MODEL_OBJECT_OPERATION_COUNT + 0;
 
 
 	/**
@@ -235,17 +244,6 @@ public interface protocol_packetsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSProtocolPacketsProtocolPacket();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getName()
-	 * @see #getGSSProtocolPacketsProtocolPacket()
-	 * @generated
-	 */
-	EAttribute getGSSProtocolPacketsProtocolPacket_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getIfRef <em>If Ref</em>}'.
@@ -341,14 +339,6 @@ public interface protocol_packetsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET = eINSTANCE.getGSSProtocolPacketsProtocolPacket();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__NAME = eINSTANCE.getGSSProtocolPacketsProtocolPacket_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>If Ref</b></em>' attribute feature.
