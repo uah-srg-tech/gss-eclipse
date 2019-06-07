@@ -22,10 +22,6 @@ import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getId <em>Id</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getIfRef <em>If Ref</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getOptional <em>Optional</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel3 <em>Level3</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel3_filter <em>Level3 filter</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel2 <em>Level2</em>}</li>
@@ -44,110 +40,6 @@ import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
  * @generated
  */
 public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel3_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel3_Id()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getId();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
-
-	/**
-	 * Returns the value of the '<em><b>If Ref</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>If Ref</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>If Ref</em>' attribute.
-	 * @see #setIfRef(String)
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel3_IfRef()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getIfRef();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getIfRef <em>If Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>If Ref</em>' attribute.
-	 * @see #getIfRef()
-	 * @generated
-	 */
-	void setIfRef(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Optional</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Optional</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Optional</em>' attribute.
-	 * @see #setOptional(String)
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel3_Optional()
-	 * @model
-	 * @generated
-	 */
-	String getOptional();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getOptional <em>Optional</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Optional</em>' attribute.
-	 * @see #getOptional()
-	 * @generated
-	 */
-	void setOptional(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Level3</b></em>' reference.
 	 * <!-- begin-user-doc -->

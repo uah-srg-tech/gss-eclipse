@@ -1210,13 +1210,49 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT = 16;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_PROC_OUTPUT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_PROC_OUTPUT__ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_PROC_OUTPUT__IF_REF = 2;
+
+	/**
+	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_PROC_OUTPUT__OPTIONAL = 3;
+
+	/**
 	 * The number of structural features of the '<em>GSS Test Proc Output</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_FEATURE_COUNT = 0;
+	int GSS_TEST_PROC_OUTPUT_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>GSS Test Proc Output</em>' class.
@@ -1244,7 +1280,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__NAME = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 0;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__NAME = GSS_TEST_PROC_OUTPUT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1253,7 +1289,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__ID = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 1;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__ID = GSS_TEST_PROC_OUTPUT__ID;
 
 	/**
 	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
@@ -1262,7 +1298,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__IF_REF = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 2;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__IF_REF = GSS_TEST_PROC_OUTPUT__IF_REF;
 
 	/**
 	 * The feature id for the '<em><b>Optional</b></em>' attribute.
@@ -1271,7 +1307,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__OPTIONAL = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 3;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__OPTIONAL = GSS_TEST_PROC_OUTPUT__OPTIONAL;
 
 	/**
 	 * The feature id for the '<em><b>Level3</b></em>' reference.
@@ -1280,7 +1316,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 4;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Level3 filter</b></em>' containment reference.
@@ -1289,7 +1325,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 5;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Level2</b></em>' reference.
@@ -1298,7 +1334,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 6;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Level3 from level2</b></em>' reference.
@@ -1307,7 +1343,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 7;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Level2 filter</b></em>' containment reference.
@@ -1316,7 +1352,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 8;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Level1</b></em>' reference.
@@ -1325,7 +1361,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 9;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Level2 from level1</b></em>' reference.
@@ -1334,7 +1370,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 10;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Level1 filter</b></em>' containment reference.
@@ -1343,7 +1379,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 11;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Level0</b></em>' reference.
@@ -1352,7 +1388,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 12;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Level1 from level0</b></em>' reference.
@@ -1361,7 +1397,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 13;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Level0 filter</b></em>' containment reference.
@@ -1370,7 +1406,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 14;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3__LEVEL0_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of structural features of the '<em>GSS Test Proc Output Level3</em>' class.
@@ -1379,7 +1415,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3_FEATURE_COUNT = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 15;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3_FEATURE_COUNT = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>GSS Test Proc Output Level3</em>' class.
@@ -1407,7 +1443,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2__NAME = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 0;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2__NAME = GSS_TEST_PROC_OUTPUT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1416,7 +1452,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2__ID = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 1;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2__ID = GSS_TEST_PROC_OUTPUT__ID;
 
 	/**
 	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
@@ -1425,7 +1461,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2__IF_REF = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 2;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2__IF_REF = GSS_TEST_PROC_OUTPUT__IF_REF;
 
 	/**
 	 * The feature id for the '<em><b>Optional</b></em>' attribute.
@@ -1434,7 +1470,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2__OPTIONAL = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 3;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2__OPTIONAL = GSS_TEST_PROC_OUTPUT__OPTIONAL;
 
 	/**
 	 * The feature id for the '<em><b>Level2</b></em>' reference.
@@ -1443,7 +1479,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 4;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Level2 filter</b></em>' containment reference.
@@ -1452,7 +1488,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 5;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Level1</b></em>' reference.
@@ -1461,7 +1497,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 6;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Level2 from level1</b></em>' reference.
@@ -1470,7 +1506,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2_FROM_LEVEL1 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 7;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2_FROM_LEVEL1 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Level1 filter</b></em>' containment reference.
@@ -1479,7 +1515,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 8;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Level0</b></em>' reference.
@@ -1488,7 +1524,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 9;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Level1 from level0</b></em>' reference.
@@ -1497,7 +1533,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1_FROM_LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 10;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1_FROM_LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Level0 filter</b></em>' containment reference.
@@ -1506,7 +1542,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL0_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 11;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL0_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>GSS Test Proc Output Level2</em>' class.
@@ -1515,7 +1551,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2_FEATURE_COUNT = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 12;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2_FEATURE_COUNT = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>GSS Test Proc Output Level2</em>' class.
@@ -1543,7 +1579,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL1__NAME = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 0;
+	int GSS_TEST_PROC_OUTPUT_LEVEL1__NAME = GSS_TEST_PROC_OUTPUT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1552,7 +1588,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL1__ID = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 1;
+	int GSS_TEST_PROC_OUTPUT_LEVEL1__ID = GSS_TEST_PROC_OUTPUT__ID;
 
 	/**
 	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
@@ -1561,7 +1597,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL1__IF_REF = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 2;
+	int GSS_TEST_PROC_OUTPUT_LEVEL1__IF_REF = GSS_TEST_PROC_OUTPUT__IF_REF;
 
 	/**
 	 * The feature id for the '<em><b>Optional</b></em>' attribute.
@@ -1570,7 +1606,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL1__OPTIONAL = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 3;
+	int GSS_TEST_PROC_OUTPUT_LEVEL1__OPTIONAL = GSS_TEST_PROC_OUTPUT__OPTIONAL;
 
 	/**
 	 * The feature id for the '<em><b>Level1</b></em>' reference.
@@ -1579,7 +1615,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL1 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 4;
+	int GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL1 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Level1 filter</b></em>' containment reference.
@@ -1588,7 +1624,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL1_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 5;
+	int GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL1_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Level0</b></em>' reference.
@@ -1597,7 +1633,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 6;
+	int GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Level1 from level0</b></em>' reference.
@@ -1606,7 +1642,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL1_FROM_LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 7;
+	int GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL1_FROM_LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Level0 filter</b></em>' containment reference.
@@ -1615,7 +1651,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL0_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 8;
+	int GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL0_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>GSS Test Proc Output Level1</em>' class.
@@ -1624,7 +1660,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL1_FEATURE_COUNT = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 9;
+	int GSS_TEST_PROC_OUTPUT_LEVEL1_FEATURE_COUNT = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>GSS Test Proc Output Level1</em>' class.
@@ -1652,7 +1688,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL0__NAME = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 0;
+	int GSS_TEST_PROC_OUTPUT_LEVEL0__NAME = GSS_TEST_PROC_OUTPUT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1661,7 +1697,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL0__ID = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 1;
+	int GSS_TEST_PROC_OUTPUT_LEVEL0__ID = GSS_TEST_PROC_OUTPUT__ID;
 
 	/**
 	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
@@ -1670,7 +1706,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL0__IF_REF = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 2;
+	int GSS_TEST_PROC_OUTPUT_LEVEL0__IF_REF = GSS_TEST_PROC_OUTPUT__IF_REF;
 
 	/**
 	 * The feature id for the '<em><b>Optional</b></em>' attribute.
@@ -1679,7 +1715,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL0__OPTIONAL = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 3;
+	int GSS_TEST_PROC_OUTPUT_LEVEL0__OPTIONAL = GSS_TEST_PROC_OUTPUT__OPTIONAL;
 
 	/**
 	 * The feature id for the '<em><b>Level0</b></em>' reference.
@@ -1688,7 +1724,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 4;
+	int GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0 = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Level0 filter</b></em>' containment reference.
@@ -1697,7 +1733,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 5;
+	int GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0_FILTER = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Test Proc Output Level0</em>' class.
@@ -1706,7 +1742,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL0_FEATURE_COUNT = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 6;
+	int GSS_TEST_PROC_OUTPUT_LEVEL0_FEATURE_COUNT = GSS_TEST_PROC_OUTPUT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>GSS Test Proc Output Level0</em>' class.
@@ -2883,6 +2919,50 @@ public interface test_procPackage extends EPackage {
 	EClass getGSSTestProcOutput();
 
 	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutput#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutput#getName()
+	 * @see #getGSSTestProcOutput()
+	 * @generated
+	 */
+	EAttribute getGSSTestProcOutput_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutput#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutput#getId()
+	 * @see #getGSSTestProcOutput()
+	 * @generated
+	 */
+	EAttribute getGSSTestProcOutput_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutput#getIfRef <em>If Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>If Ref</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutput#getIfRef()
+	 * @see #getGSSTestProcOutput()
+	 * @generated
+	 */
+	EAttribute getGSSTestProcOutput_IfRef();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutput#getOptional <em>Optional</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Optional</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutput#getOptional()
+	 * @see #getGSSTestProcOutput()
+	 * @generated
+	 */
+	EAttribute getGSSTestProcOutput_Optional();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3 <em>GSS Test Proc Output Level3</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2891,50 +2971,6 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSTestProcOutputLevel3();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getName()
-	 * @see #getGSSTestProcOutputLevel3()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel3_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getId()
-	 * @see #getGSSTestProcOutputLevel3()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel3_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getIfRef <em>If Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>If Ref</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getIfRef()
-	 * @see #getGSSTestProcOutputLevel3()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel3_IfRef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getOptional <em>Optional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Optional</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getOptional()
-	 * @see #getGSSTestProcOutputLevel3()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel3_Optional();
 
 	/**
 	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel3 <em>Level3</em>}'.
@@ -3068,50 +3104,6 @@ public interface test_procPackage extends EPackage {
 	EClass getGSSTestProcOutputLevel2();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getName()
-	 * @see #getGSSTestProcOutputLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel2_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getId()
-	 * @see #getGSSTestProcOutputLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel2_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getIfRef <em>If Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>If Ref</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getIfRef()
-	 * @see #getGSSTestProcOutputLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel2_IfRef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getOptional <em>Optional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Optional</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getOptional()
-	 * @see #getGSSTestProcOutputLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel2_Optional();
-
-	/**
 	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2#getLevel2 <em>Level2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3210,50 +3202,6 @@ public interface test_procPackage extends EPackage {
 	EClass getGSSTestProcOutputLevel1();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getName()
-	 * @see #getGSSTestProcOutputLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel1_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getId()
-	 * @see #getGSSTestProcOutputLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel1_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getIfRef <em>If Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>If Ref</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getIfRef()
-	 * @see #getGSSTestProcOutputLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel1_IfRef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getOptional <em>Optional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Optional</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getOptional()
-	 * @see #getGSSTestProcOutputLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel1_Optional();
-
-	/**
 	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel1 <em>Level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3317,50 +3265,6 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSTestProcOutputLevel0();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0#getName()
-	 * @see #getGSSTestProcOutputLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel0_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0#getId()
-	 * @see #getGSSTestProcOutputLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel0_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0#getIfRef <em>If Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>If Ref</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0#getIfRef()
-	 * @see #getGSSTestProcOutputLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel0_IfRef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0#getOptional <em>Optional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Optional</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0#getOptional()
-	 * @see #getGSSTestProcOutputLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcOutputLevel0_Optional();
 
 	/**
 	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0#getLevel0 <em>Level0</em>}'.
@@ -4306,6 +4210,38 @@ public interface test_procPackage extends EPackage {
 		EClass GSS_TEST_PROC_OUTPUT = eINSTANCE.getGSSTestProcOutput();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TEST_PROC_OUTPUT__NAME = eINSTANCE.getGSSTestProcOutput_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TEST_PROC_OUTPUT__ID = eINSTANCE.getGSSTestProcOutput_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>If Ref</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TEST_PROC_OUTPUT__IF_REF = eINSTANCE.getGSSTestProcOutput_IfRef();
+
+		/**
+		 * The meta object literal for the '<em><b>Optional</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TEST_PROC_OUTPUT__OPTIONAL = eINSTANCE.getGSSTestProcOutput_Optional();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcOutputLevel3Impl <em>GSS Test Proc Output Level3</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4314,38 +4250,6 @@ public interface test_procPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_TEST_PROC_OUTPUT_LEVEL3 = eINSTANCE.getGSSTestProcOutputLevel3();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL3__NAME = eINSTANCE.getGSSTestProcOutputLevel3_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL3__ID = eINSTANCE.getGSSTestProcOutputLevel3_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>If Ref</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL3__IF_REF = eINSTANCE.getGSSTestProcOutputLevel3_IfRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Optional</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL3__OPTIONAL = eINSTANCE.getGSSTestProcOutputLevel3_Optional();
 
 		/**
 		 * The meta object literal for the '<em><b>Level3</b></em>' reference feature.
@@ -4446,38 +4350,6 @@ public interface test_procPackage extends EPackage {
 		EClass GSS_TEST_PROC_OUTPUT_LEVEL2 = eINSTANCE.getGSSTestProcOutputLevel2();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL2__NAME = eINSTANCE.getGSSTestProcOutputLevel2_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL2__ID = eINSTANCE.getGSSTestProcOutputLevel2_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>If Ref</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL2__IF_REF = eINSTANCE.getGSSTestProcOutputLevel2_IfRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Optional</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL2__OPTIONAL = eINSTANCE.getGSSTestProcOutputLevel2_Optional();
-
-		/**
 		 * The meta object literal for the '<em><b>Level2</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4552,38 +4424,6 @@ public interface test_procPackage extends EPackage {
 		EClass GSS_TEST_PROC_OUTPUT_LEVEL1 = eINSTANCE.getGSSTestProcOutputLevel1();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL1__NAME = eINSTANCE.getGSSTestProcOutputLevel1_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL1__ID = eINSTANCE.getGSSTestProcOutputLevel1_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>If Ref</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL1__IF_REF = eINSTANCE.getGSSTestProcOutputLevel1_IfRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Optional</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL1__OPTIONAL = eINSTANCE.getGSSTestProcOutputLevel1_Optional();
-
-		/**
 		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4632,38 +4472,6 @@ public interface test_procPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_TEST_PROC_OUTPUT_LEVEL0 = eINSTANCE.getGSSTestProcOutputLevel0();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL0__NAME = eINSTANCE.getGSSTestProcOutputLevel0_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL0__ID = eINSTANCE.getGSSTestProcOutputLevel0_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>If Ref</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL0__IF_REF = eINSTANCE.getGSSTestProcOutputLevel0_IfRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Optional</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_OUTPUT_LEVEL0__OPTIONAL = eINSTANCE.getGSSTestProcOutputLevel0_Optional();
 
 		/**
 		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
