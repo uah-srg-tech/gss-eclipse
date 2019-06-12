@@ -21,10 +21,8 @@ import es.uah.aut.srg.gss.imports.importsPackage;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcCheckmode;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcConcurrentStep;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcConcurrentSteps;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcDisable;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcDisablePrint;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcEnable;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcEnablePrint;
+import es.uah.aut.srg.gss.test_proc.GSSTestProcEnableDisable;
+import es.uah.aut.srg.gss.test_proc.GSSTestProcInput;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel0;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2;
@@ -107,28 +105,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass gssTestProcEnableEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssTestProcDisableEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssTestProcEnablePrintEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssTestProcDisablePrintEClass = null;
+	private EClass gssTestProcEnableDisableEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -150,6 +127,13 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	private EClass gssTestProcConcurrentStepEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gssTestProcInputEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -611,8 +595,8 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGSSTestProcEnable() {
-		return gssTestProcEnableEClass;
+	public EClass getGSSTestProcEnableDisable() {
+		return gssTestProcEnableDisableEClass;
 	}
 
 	/**
@@ -620,62 +604,8 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSTestProcEnable_Id() {
-		return (EAttribute)gssTestProcEnableEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSTestProcDisable() {
-		return gssTestProcDisableEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcDisable_Id() {
-		return (EAttribute)gssTestProcDisableEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSTestProcEnablePrint() {
-		return gssTestProcEnablePrintEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcEnablePrint_Id() {
-		return (EAttribute)gssTestProcEnablePrintEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSTestProcDisablePrint() {
-		return gssTestProcDisablePrintEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcDisablePrint_Id() {
-		return (EAttribute)gssTestProcDisablePrintEClass.getEStructuralFeatures().get(0);
+	public EAttribute getGSSTestProcEnableDisable_Id() {
+		return (EAttribute)gssTestProcEnableDisableEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -755,6 +685,51 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getGSSTestProcInput() {
+		return gssTestProcInputEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTestProcInput_Name() {
+		return (EAttribute)gssTestProcInputEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTestProcInput_IfRef() {
+		return (EAttribute)gssTestProcInputEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTestProcInput_Delay_value() {
+		return (EAttribute)gssTestProcInputEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTestProcInput_Delay_unit() {
+		return (EAttribute)gssTestProcInputEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGSSTestProcInputLevel3() {
 		return gssTestProcInputLevel3EClass;
 	}
@@ -764,44 +739,8 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSTestProcInputLevel3_Name() {
-		return (EAttribute)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcInputLevel3_IfRef() {
-		return (EAttribute)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcInputLevel3_Delay_value() {
-		return (EAttribute)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcInputLevel3_Delay_unit() {
-		return (EAttribute)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getGSSTestProcInputLevel3_Level3() {
-		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(4);
+		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -810,7 +749,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel3_App_to_level3() {
-		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(5);
+		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -819,7 +758,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel3_Level2() {
-		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(6);
+		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -828,7 +767,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel3_Level3_to_level2() {
-		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(7);
+		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -837,7 +776,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel3_Level1() {
-		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(8);
+		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -846,7 +785,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel3_Level2_to_level1() {
-		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(9);
+		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -855,7 +794,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel3_Level0() {
-		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(10);
+		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -864,7 +803,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel3_Level1_to_level0() {
-		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(11);
+		return (EReference)gssTestProcInputLevel3EClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -881,44 +820,8 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSTestProcInputLevel2_Name() {
-		return (EAttribute)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcInputLevel2_IfRef() {
-		return (EAttribute)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcInputLevel2_Delay_value() {
-		return (EAttribute)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcInputLevel2_Delay_unit() {
-		return (EAttribute)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getGSSTestProcInputLevel2_Level2() {
-		return (EReference)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(4);
+		return (EReference)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -927,7 +830,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel2_App_to_level2() {
-		return (EReference)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(5);
+		return (EReference)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -936,7 +839,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel2_Level1() {
-		return (EReference)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(6);
+		return (EReference)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -945,7 +848,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel2_Level2_to_level1() {
-		return (EReference)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(7);
+		return (EReference)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -954,7 +857,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel2_Level0() {
-		return (EReference)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(8);
+		return (EReference)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -963,7 +866,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel2_Level1_to_level0() {
-		return (EReference)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(9);
+		return (EReference)gssTestProcInputLevel2EClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -980,44 +883,8 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSTestProcInputLevel1_Name() {
-		return (EAttribute)gssTestProcInputLevel1EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcInputLevel1_IfRef() {
-		return (EAttribute)gssTestProcInputLevel1EClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcInputLevel1_Delay_value() {
-		return (EAttribute)gssTestProcInputLevel1EClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcInputLevel1_Delay_unit() {
-		return (EAttribute)gssTestProcInputLevel1EClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getGSSTestProcInputLevel1_Level1() {
-		return (EReference)gssTestProcInputLevel1EClass.getEStructuralFeatures().get(4);
+		return (EReference)gssTestProcInputLevel1EClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1026,7 +893,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel1_App_to_level1() {
-		return (EReference)gssTestProcInputLevel1EClass.getEStructuralFeatures().get(5);
+		return (EReference)gssTestProcInputLevel1EClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1035,7 +902,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel1_Level0() {
-		return (EReference)gssTestProcInputLevel1EClass.getEStructuralFeatures().get(6);
+		return (EReference)gssTestProcInputLevel1EClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1044,7 +911,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel1_Level1_to_level0() {
-		return (EReference)gssTestProcInputLevel1EClass.getEStructuralFeatures().get(7);
+		return (EReference)gssTestProcInputLevel1EClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1061,44 +928,8 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSTestProcInputLevel0_Name() {
-		return (EAttribute)gssTestProcInputLevel0EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcInputLevel0_IfRef() {
-		return (EAttribute)gssTestProcInputLevel0EClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcInputLevel0_Delay_value() {
-		return (EAttribute)gssTestProcInputLevel0EClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTestProcInputLevel0_Delay_unit() {
-		return (EAttribute)gssTestProcInputLevel0EClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getGSSTestProcInputLevel0_Level0() {
-		return (EReference)gssTestProcInputLevel0EClass.getEStructuralFeatures().get(4);
+		return (EReference)gssTestProcInputLevel0EClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1107,7 +938,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	public EReference getGSSTestProcInputLevel0_App_to_level0() {
-		return (EReference)gssTestProcInputLevel0EClass.getEStructuralFeatures().get(5);
+		return (EReference)gssTestProcInputLevel0EClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1632,17 +1463,8 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		createEReference(gssTestProcSpecialPacketsEClass, GSS_TEST_PROC_SPECIAL_PACKETS__ENABLE_PRINT);
 		createEReference(gssTestProcSpecialPacketsEClass, GSS_TEST_PROC_SPECIAL_PACKETS__DISABLE_PRINT);
 
-		gssTestProcEnableEClass = createEClass(GSS_TEST_PROC_ENABLE);
-		createEAttribute(gssTestProcEnableEClass, GSS_TEST_PROC_ENABLE__ID);
-
-		gssTestProcDisableEClass = createEClass(GSS_TEST_PROC_DISABLE);
-		createEAttribute(gssTestProcDisableEClass, GSS_TEST_PROC_DISABLE__ID);
-
-		gssTestProcEnablePrintEClass = createEClass(GSS_TEST_PROC_ENABLE_PRINT);
-		createEAttribute(gssTestProcEnablePrintEClass, GSS_TEST_PROC_ENABLE_PRINT__ID);
-
-		gssTestProcDisablePrintEClass = createEClass(GSS_TEST_PROC_DISABLE_PRINT);
-		createEAttribute(gssTestProcDisablePrintEClass, GSS_TEST_PROC_DISABLE_PRINT__ID);
+		gssTestProcEnableDisableEClass = createEClass(GSS_TEST_PROC_ENABLE_DISABLE);
+		createEAttribute(gssTestProcEnableDisableEClass, GSS_TEST_PROC_ENABLE_DISABLE__ID);
 
 		gssTestProcConcurrentStepsEClass = createEClass(GSS_TEST_PROC_CONCURRENT_STEPS);
 		createEReference(gssTestProcConcurrentStepsEClass, GSS_TEST_PROC_CONCURRENT_STEPS__NEXT_STEP);
@@ -1655,11 +1477,13 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		gssTestProcConcurrentStepEClass = createEClass(GSS_TEST_PROC_CONCURRENT_STEP);
 		createEAttribute(gssTestProcConcurrentStepEClass, GSS_TEST_PROC_CONCURRENT_STEP__ID);
 
+		gssTestProcInputEClass = createEClass(GSS_TEST_PROC_INPUT);
+		createEAttribute(gssTestProcInputEClass, GSS_TEST_PROC_INPUT__NAME);
+		createEAttribute(gssTestProcInputEClass, GSS_TEST_PROC_INPUT__IF_REF);
+		createEAttribute(gssTestProcInputEClass, GSS_TEST_PROC_INPUT__DELAY_VALUE);
+		createEAttribute(gssTestProcInputEClass, GSS_TEST_PROC_INPUT__DELAY_UNIT);
+
 		gssTestProcInputLevel3EClass = createEClass(GSS_TEST_PROC_INPUT_LEVEL3);
-		createEAttribute(gssTestProcInputLevel3EClass, GSS_TEST_PROC_INPUT_LEVEL3__NAME);
-		createEAttribute(gssTestProcInputLevel3EClass, GSS_TEST_PROC_INPUT_LEVEL3__IF_REF);
-		createEAttribute(gssTestProcInputLevel3EClass, GSS_TEST_PROC_INPUT_LEVEL3__DELAY_VALUE);
-		createEAttribute(gssTestProcInputLevel3EClass, GSS_TEST_PROC_INPUT_LEVEL3__DELAY_UNIT);
 		createEReference(gssTestProcInputLevel3EClass, GSS_TEST_PROC_INPUT_LEVEL3__LEVEL3);
 		createEReference(gssTestProcInputLevel3EClass, GSS_TEST_PROC_INPUT_LEVEL3__APP_TO_LEVEL3);
 		createEReference(gssTestProcInputLevel3EClass, GSS_TEST_PROC_INPUT_LEVEL3__LEVEL2);
@@ -1670,10 +1494,6 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		createEReference(gssTestProcInputLevel3EClass, GSS_TEST_PROC_INPUT_LEVEL3__LEVEL1_TO_LEVEL0);
 
 		gssTestProcInputLevel2EClass = createEClass(GSS_TEST_PROC_INPUT_LEVEL2);
-		createEAttribute(gssTestProcInputLevel2EClass, GSS_TEST_PROC_INPUT_LEVEL2__NAME);
-		createEAttribute(gssTestProcInputLevel2EClass, GSS_TEST_PROC_INPUT_LEVEL2__IF_REF);
-		createEAttribute(gssTestProcInputLevel2EClass, GSS_TEST_PROC_INPUT_LEVEL2__DELAY_VALUE);
-		createEAttribute(gssTestProcInputLevel2EClass, GSS_TEST_PROC_INPUT_LEVEL2__DELAY_UNIT);
 		createEReference(gssTestProcInputLevel2EClass, GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2);
 		createEReference(gssTestProcInputLevel2EClass, GSS_TEST_PROC_INPUT_LEVEL2__APP_TO_LEVEL2);
 		createEReference(gssTestProcInputLevel2EClass, GSS_TEST_PROC_INPUT_LEVEL2__LEVEL1);
@@ -1682,20 +1502,12 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		createEReference(gssTestProcInputLevel2EClass, GSS_TEST_PROC_INPUT_LEVEL2__LEVEL1_TO_LEVEL0);
 
 		gssTestProcInputLevel1EClass = createEClass(GSS_TEST_PROC_INPUT_LEVEL1);
-		createEAttribute(gssTestProcInputLevel1EClass, GSS_TEST_PROC_INPUT_LEVEL1__NAME);
-		createEAttribute(gssTestProcInputLevel1EClass, GSS_TEST_PROC_INPUT_LEVEL1__IF_REF);
-		createEAttribute(gssTestProcInputLevel1EClass, GSS_TEST_PROC_INPUT_LEVEL1__DELAY_VALUE);
-		createEAttribute(gssTestProcInputLevel1EClass, GSS_TEST_PROC_INPUT_LEVEL1__DELAY_UNIT);
 		createEReference(gssTestProcInputLevel1EClass, GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1);
 		createEReference(gssTestProcInputLevel1EClass, GSS_TEST_PROC_INPUT_LEVEL1__APP_TO_LEVEL1);
 		createEReference(gssTestProcInputLevel1EClass, GSS_TEST_PROC_INPUT_LEVEL1__LEVEL0);
 		createEReference(gssTestProcInputLevel1EClass, GSS_TEST_PROC_INPUT_LEVEL1__LEVEL1_TO_LEVEL0);
 
 		gssTestProcInputLevel0EClass = createEClass(GSS_TEST_PROC_INPUT_LEVEL0);
-		createEAttribute(gssTestProcInputLevel0EClass, GSS_TEST_PROC_INPUT_LEVEL0__NAME);
-		createEAttribute(gssTestProcInputLevel0EClass, GSS_TEST_PROC_INPUT_LEVEL0__IF_REF);
-		createEAttribute(gssTestProcInputLevel0EClass, GSS_TEST_PROC_INPUT_LEVEL0__DELAY_VALUE);
-		createEAttribute(gssTestProcInputLevel0EClass, GSS_TEST_PROC_INPUT_LEVEL0__DELAY_UNIT);
 		createEReference(gssTestProcInputLevel0EClass, GSS_TEST_PROC_INPUT_LEVEL0__LEVEL0);
 		createEReference(gssTestProcInputLevel0EClass, GSS_TEST_PROC_INPUT_LEVEL0__APP_TO_LEVEL0);
 
@@ -1799,6 +1611,10 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		// Add supertypes to classes
 		gssTestProcTestProcEClass.getESuperTypes().add(thecommonPackage.getGSSModelElement());
 		gssTestProcStepEClass.getESuperTypes().add(thecommonPackage.getGSSModelObject());
+		gssTestProcInputLevel3EClass.getESuperTypes().add(this.getGSSTestProcInput());
+		gssTestProcInputLevel2EClass.getESuperTypes().add(this.getGSSTestProcInput());
+		gssTestProcInputLevel1EClass.getESuperTypes().add(this.getGSSTestProcInput());
+		gssTestProcInputLevel0EClass.getESuperTypes().add(this.getGSSTestProcInput());
 		gssTestProcOutputLevel3EClass.getESuperTypes().add(this.getGSSTestProcOutput());
 		gssTestProcOutputLevel2EClass.getESuperTypes().add(this.getGSSTestProcOutput());
 		gssTestProcOutputLevel1EClass.getESuperTypes().add(this.getGSSTestProcOutput());
@@ -1835,22 +1651,13 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		initEReference(getGSSTestProcOutputs_Output_level_0(), this.getGSSTestProcOutputLevel0(), null, "output_level_0", null, 0, -1, GSSTestProcOutputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssTestProcSpecialPacketsEClass, GSSTestProcSpecialPackets.class, "GSSTestProcSpecialPackets", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGSSTestProcSpecialPackets_Enable(), this.getGSSTestProcEnable(), null, "enable", null, 0, -1, GSSTestProcSpecialPackets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTestProcSpecialPackets_Disable(), this.getGSSTestProcDisable(), null, "disable", null, 0, -1, GSSTestProcSpecialPackets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTestProcSpecialPackets_Enable_print(), this.getGSSTestProcEnablePrint(), null, "enable_print", null, 0, -1, GSSTestProcSpecialPackets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTestProcSpecialPackets_Disable_print(), this.getGSSTestProcDisablePrint(), null, "disable_print", null, 0, -1, GSSTestProcSpecialPackets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTestProcSpecialPackets_Enable(), this.getGSSTestProcEnableDisable(), null, "enable", null, 0, -1, GSSTestProcSpecialPackets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTestProcSpecialPackets_Disable(), this.getGSSTestProcEnableDisable(), null, "disable", null, 0, -1, GSSTestProcSpecialPackets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTestProcSpecialPackets_Enable_print(), this.getGSSTestProcEnableDisable(), null, "enable_print", null, 0, -1, GSSTestProcSpecialPackets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTestProcSpecialPackets_Disable_print(), this.getGSSTestProcEnableDisable(), null, "disable_print", null, 0, -1, GSSTestProcSpecialPackets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(gssTestProcEnableEClass, GSSTestProcEnable.class, "GSSTestProcEnable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSTestProcEnable_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSTestProcEnable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssTestProcDisableEClass, GSSTestProcDisable.class, "GSSTestProcDisable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSTestProcDisable_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSTestProcDisable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssTestProcEnablePrintEClass, GSSTestProcEnablePrint.class, "GSSTestProcEnablePrint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSTestProcEnablePrint_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSTestProcEnablePrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssTestProcDisablePrintEClass, GSSTestProcDisablePrint.class, "GSSTestProcDisablePrint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSTestProcDisablePrint_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSTestProcDisablePrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(gssTestProcEnableDisableEClass, GSSTestProcEnableDisable.class, "GSSTestProcEnableDisable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGSSTestProcEnableDisable_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSTestProcEnableDisable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssTestProcConcurrentStepsEClass, GSSTestProcConcurrentSteps.class, "GSSTestProcConcurrentSteps", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSTestProcConcurrentSteps_NextStep(), this.getGSSTestProcNextStep(), null, "nextStep", null, 1, 1, GSSTestProcConcurrentSteps.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1863,11 +1670,13 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		initEClass(gssTestProcConcurrentStepEClass, GSSTestProcConcurrentStep.class, "GSSTestProcConcurrentStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSTestProcConcurrentStep_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSTestProcConcurrentStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(gssTestProcInputEClass, GSSTestProcInput.class, "GSSTestProcInput", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGSSTestProcInput_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSTestProcInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSTestProcInput_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSTestProcInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSTestProcInput_Delay_value(), ecorePackage.getEString(), "delay_value", null, 1, 1, GSSTestProcInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSTestProcInput_Delay_unit(), this.getGSSTestProcUnit(), "delay_unit", null, 1, 1, GSSTestProcInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(gssTestProcInputLevel3EClass, GSSTestProcInputLevel3.class, "GSSTestProcInputLevel3", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSTestProcInputLevel3_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSTestProcInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTestProcInputLevel3_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSTestProcInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTestProcInputLevel3_Delay_value(), ecorePackage.getEString(), "delay_value", null, 1, 1, GSSTestProcInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTestProcInputLevel3_Delay_unit(), this.getGSSTestProcUnit(), "delay_unit", null, 1, 1, GSSTestProcInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTestProcInputLevel3_Level3(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "level3", null, 0, 1, GSSTestProcInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTestProcInputLevel3_App_to_level3(), theexportPackage.getGSSExportExport(), null, "app_to_level3", null, 0, 1, GSSTestProcInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTestProcInputLevel3_Level2(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "level2", null, 0, 1, GSSTestProcInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1878,10 +1687,6 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		initEReference(getGSSTestProcInputLevel3_Level1_to_level0(), theexportPackage.getGSSExportExport(), null, "level1_to_level0", null, 0, 1, GSSTestProcInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssTestProcInputLevel2EClass, GSSTestProcInputLevel2.class, "GSSTestProcInputLevel2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSTestProcInputLevel2_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSTestProcInputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTestProcInputLevel2_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSTestProcInputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTestProcInputLevel2_Delay_value(), ecorePackage.getEString(), "delay_value", null, 1, 1, GSSTestProcInputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTestProcInputLevel2_Delay_unit(), this.getGSSTestProcUnit(), "delay_unit", null, 1, 1, GSSTestProcInputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTestProcInputLevel2_Level2(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "level2", null, 0, 1, GSSTestProcInputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTestProcInputLevel2_App_to_level2(), theexportPackage.getGSSExportExport(), null, "app_to_level2", null, 0, 1, GSSTestProcInputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTestProcInputLevel2_Level1(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "level1", null, 0, 1, GSSTestProcInputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1890,20 +1695,12 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		initEReference(getGSSTestProcInputLevel2_Level1_to_level0(), theexportPackage.getGSSExportExport(), null, "level1_to_level0", null, 0, 1, GSSTestProcInputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssTestProcInputLevel1EClass, GSSTestProcInputLevel1.class, "GSSTestProcInputLevel1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSTestProcInputLevel1_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSTestProcInputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTestProcInputLevel1_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSTestProcInputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTestProcInputLevel1_Delay_value(), ecorePackage.getEString(), "delay_value", null, 1, 1, GSSTestProcInputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTestProcInputLevel1_Delay_unit(), this.getGSSTestProcUnit(), "delay_unit", null, 1, 1, GSSTestProcInputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTestProcInputLevel1_Level1(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "level1", null, 0, 1, GSSTestProcInputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTestProcInputLevel1_App_to_level1(), theexportPackage.getGSSExportExport(), null, "app_to_level1", null, 0, 1, GSSTestProcInputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTestProcInputLevel1_Level0(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "level0", null, 0, 1, GSSTestProcInputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTestProcInputLevel1_Level1_to_level0(), theexportPackage.getGSSExportExport(), null, "level1_to_level0", null, 0, 1, GSSTestProcInputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssTestProcInputLevel0EClass, GSSTestProcInputLevel0.class, "GSSTestProcInputLevel0", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSTestProcInputLevel0_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSTestProcInputLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTestProcInputLevel0_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSTestProcInputLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTestProcInputLevel0_Delay_value(), ecorePackage.getEString(), "delay_value", null, 1, 1, GSSTestProcInputLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTestProcInputLevel0_Delay_unit(), this.getGSSTestProcUnit(), "delay_unit", null, 1, 1, GSSTestProcInputLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTestProcInputLevel0_Level0(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "level0", null, 0, 1, GSSTestProcInputLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTestProcInputLevel0_App_to_level0(), theexportPackage.getGSSExportExport(), null, "app_to_level0", null, 0, 1, GSSTestProcInputLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

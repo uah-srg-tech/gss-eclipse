@@ -119,10 +119,7 @@ public class TEST_PROCParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSTestProcLevel1FilterAccess().getGroup_6(), "rule__GSSTestProcLevel1Filter__Group_6__0");
 					put(grammarAccess.getGSSTestProcLevel0FilterAccess().getGroup(), "rule__GSSTestProcLevel0Filter__Group__0");
 					put(grammarAccess.getGSSTestProcLevel0FilterAccess().getGroup_6(), "rule__GSSTestProcLevel0Filter__Group_6__0");
-					put(grammarAccess.getGSSTestProcEnableAccess().getGroup(), "rule__GSSTestProcEnable__Group__0");
-					put(grammarAccess.getGSSTestProcDisableAccess().getGroup(), "rule__GSSTestProcDisable__Group__0");
-					put(grammarAccess.getGSSTestProcEnablePrintAccess().getGroup(), "rule__GSSTestProcEnablePrint__Group__0");
-					put(grammarAccess.getGSSTestProcDisablePrintAccess().getGroup(), "rule__GSSTestProcDisablePrint__Group__0");
+					put(grammarAccess.getGSSTestProcEnableDisableAccess().getGroup(), "rule__GSSTestProcEnableDisable__Group__0");
 					put(grammarAccess.getGSSTestProcNextStepAccess().getGroup(), "rule__GSSTestProcNextStep__Group__0");
 					put(grammarAccess.getGSSTestProcConcurrentStepAccess().getGroup(), "rule__GSSTestProcConcurrentStep__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
@@ -259,10 +256,7 @@ public class TEST_PROCParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSTestProcLevel1FilterAccess().getExtra_filterAssignment_6_2(), "rule__GSSTestProcLevel1Filter__Extra_filterAssignment_6_2");
 					put(grammarAccess.getGSSTestProcLevel0FilterAccess().getApply_def_filterAssignment_4(), "rule__GSSTestProcLevel0Filter__Apply_def_filterAssignment_4");
 					put(grammarAccess.getGSSTestProcLevel0FilterAccess().getExtra_filterAssignment_6_2(), "rule__GSSTestProcLevel0Filter__Extra_filterAssignment_6_2");
-					put(grammarAccess.getGSSTestProcEnableAccess().getIdAssignment_4(), "rule__GSSTestProcEnable__IdAssignment_4");
-					put(grammarAccess.getGSSTestProcDisableAccess().getIdAssignment_4(), "rule__GSSTestProcDisable__IdAssignment_4");
-					put(grammarAccess.getGSSTestProcEnablePrintAccess().getIdAssignment_4(), "rule__GSSTestProcEnablePrint__IdAssignment_4");
-					put(grammarAccess.getGSSTestProcDisablePrintAccess().getIdAssignment_4(), "rule__GSSTestProcDisablePrint__IdAssignment_4");
+					put(grammarAccess.getGSSTestProcEnableDisableAccess().getIdAssignment_4(), "rule__GSSTestProcEnableDisable__IdAssignment_4");
 					put(grammarAccess.getGSSTestProcNextStepAccess().getIdAssignment_4(), "rule__GSSTestProcNextStep__IdAssignment_4");
 					put(grammarAccess.getGSSTestProcNextStepAccess().getIsConcurrentAssignment_8(), "rule__GSSTestProcNextStep__IsConcurrentAssignment_8");
 					put(grammarAccess.getGSSTestProcConcurrentStepAccess().getIdAssignment_4(), "rule__GSSTestProcConcurrentStep__IdAssignment_4");

@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface GSSTestProcSpecialPackets extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Enable</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcEnable}.
+	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcEnableDisable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Enable</em>' containment reference list isn't clear,
@@ -48,11 +48,11 @@ public interface GSSTestProcSpecialPackets extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<GSSTestProcEnable> getEnable();
+	EList<GSSTestProcEnableDisable> getEnable();
 
 	/**
 	 * Returns the value of the '<em><b>Disable</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcDisable}.
+	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcEnableDisable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Disable</em>' containment reference list isn't clear,
@@ -64,11 +64,11 @@ public interface GSSTestProcSpecialPackets extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<GSSTestProcDisable> getDisable();
+	EList<GSSTestProcEnableDisable> getDisable();
 
 	/**
 	 * Returns the value of the '<em><b>Enable print</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcEnablePrint}.
+	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcEnableDisable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Enable print</em>' containment reference list isn't clear,
@@ -80,11 +80,11 @@ public interface GSSTestProcSpecialPackets extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<GSSTestProcEnablePrint> getEnable_print();
+	EList<GSSTestProcEnableDisable> getEnable_print();
 
 	/**
 	 * Returns the value of the '<em><b>Disable print</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcDisablePrint}.
+	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcEnableDisable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Disable print</em>' containment reference list isn't clear,
@@ -96,6 +96,6 @@ public interface GSSTestProcSpecialPackets extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<GSSTestProcDisablePrint> getDisable_print();
+	EList<GSSTestProcEnableDisable> getDisable_print();
 
 } // GSSTestProcSpecialPackets

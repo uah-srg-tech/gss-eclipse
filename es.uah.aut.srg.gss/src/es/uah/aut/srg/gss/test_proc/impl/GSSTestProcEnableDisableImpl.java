@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.gss.test_proc.impl;
 
-import es.uah.aut.srg.gss.test_proc.GSSTestProcEnable;
+import es.uah.aut.srg.gss.test_proc.GSSTestProcEnableDisable;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -22,18 +22,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GSS Test Proc Enable</b></em>'.
+ * An implementation of the model object '<em><b>GSS Test Proc Enable Disable</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcEnableImpl#getId <em>Id</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcEnableDisableImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSTestProcEnableImpl extends MinimalEObjectImpl.Container implements GSSTestProcEnable {
+public class GSSTestProcEnableDisableImpl extends MinimalEObjectImpl.Container implements GSSTestProcEnableDisable {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -59,7 +59,7 @@ public class GSSTestProcEnableImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GSSTestProcEnableImpl() {
+	protected GSSTestProcEnableDisableImpl() {
 		super();
 	}
 
@@ -70,7 +70,7 @@ public class GSSTestProcEnableImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return test_procPackage.Literals.GSS_TEST_PROC_ENABLE;
+		return test_procPackage.Literals.GSS_TEST_PROC_ENABLE_DISABLE;
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class GSSTestProcEnableImpl extends MinimalEObjectImpl.Container implemen
 		String oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_ENABLE__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_ENABLE_DISABLE__ID, oldId, id));
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class GSSTestProcEnableImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_ENABLE__ID:
+			case test_procPackage.GSS_TEST_PROC_ENABLE_DISABLE__ID:
 				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -116,7 +116,7 @@ public class GSSTestProcEnableImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_ENABLE__ID:
+			case test_procPackage.GSS_TEST_PROC_ENABLE_DISABLE__ID:
 				setId((String)newValue);
 				return;
 		}
@@ -131,7 +131,7 @@ public class GSSTestProcEnableImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_ENABLE__ID:
+			case test_procPackage.GSS_TEST_PROC_ENABLE_DISABLE__ID:
 				setId(ID_EDEFAULT);
 				return;
 		}
@@ -146,7 +146,7 @@ public class GSSTestProcEnableImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_ENABLE__ID:
+			case test_procPackage.GSS_TEST_PROC_ENABLE_DISABLE__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
@@ -168,4 +168,4 @@ public class GSSTestProcEnableImpl extends MinimalEObjectImpl.Container implemen
 		return result.toString();
 	}
 
-} //GSSTestProcEnableImpl
+} //GSSTestProcEnableDisableImpl

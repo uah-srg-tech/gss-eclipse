@@ -13,7 +13,6 @@ package es.uah.aut.srg.gss.test_proc.impl;
 import es.uah.aut.srg.gss.export.GSSExportExport;
 
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcUnit;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.common.notify.Notification;
@@ -22,7 +21,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,10 +30,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcInputLevel2Impl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcInputLevel2Impl#getIfRef <em>If Ref</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcInputLevel2Impl#getDelay_value <em>Delay value</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcInputLevel2Impl#getDelay_unit <em>Delay unit</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcInputLevel2Impl#getLevel2 <em>Level2</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcInputLevel2Impl#getApp_to_level2 <em>App to level2</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcInputLevel2Impl#getLevel1 <em>Level1</em>}</li>
@@ -46,96 +40,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class GSSTestProcInputLevel2Impl extends MinimalEObjectImpl.Container implements GSSTestProcInputLevel2 {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIfRef() <em>If Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIfRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String IF_REF_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getIfRef() <em>If Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIfRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected String ifRef = IF_REF_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDelay_value() <em>Delay value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDelay_value()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DELAY_VALUE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDelay_value() <em>Delay value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDelay_value()
-	 * @generated
-	 * @ordered
-	 */
-	protected String delay_value = DELAY_VALUE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDelay_unit() <em>Delay unit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDelay_unit()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final GSSTestProcUnit DELAY_UNIT_EDEFAULT = GSSTestProcUnit.MILISECONDS;
-
-	/**
-	 * The cached value of the '{@link #getDelay_unit() <em>Delay unit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDelay_unit()
-	 * @generated
-	 * @ordered
-	 */
-	protected GSSTestProcUnit delay_unit = DELAY_UNIT_EDEFAULT;
-
-	/**
-	 * This is true if the Delay unit attribute has been set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean delay_unitESet;
-
+public class GSSTestProcInputLevel2Impl extends GSSTestProcInputImpl implements GSSTestProcInputLevel2 {
 	/**
 	 * The cached value of the '{@link #getLevel2() <em>Level2</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -213,115 +118,6 @@ public class GSSTestProcInputLevel2Impl extends MinimalEObjectImpl.Container imp
 	@Override
 	protected EClass eStaticClass() {
 		return test_procPackage.Literals.GSS_TEST_PROC_INPUT_LEVEL2;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getIfRef() {
-		return ifRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIfRef(String newIfRef) {
-		String oldIfRef = ifRef;
-		ifRef = newIfRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__IF_REF, oldIfRef, ifRef));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDelay_value() {
-		return delay_value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDelay_value(String newDelay_value) {
-		String oldDelay_value = delay_value;
-		delay_value = newDelay_value;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__DELAY_VALUE, oldDelay_value, delay_value));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcUnit getDelay_unit() {
-		return delay_unit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDelay_unit(GSSTestProcUnit newDelay_unit) {
-		GSSTestProcUnit oldDelay_unit = delay_unit;
-		delay_unit = newDelay_unit == null ? DELAY_UNIT_EDEFAULT : newDelay_unit;
-		boolean oldDelay_unitESet = delay_unitESet;
-		delay_unitESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__DELAY_UNIT, oldDelay_unit, delay_unit, !oldDelay_unitESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetDelay_unit() {
-		GSSTestProcUnit oldDelay_unit = delay_unit;
-		boolean oldDelay_unitESet = delay_unitESet;
-		delay_unit = DELAY_UNIT_EDEFAULT;
-		delay_unitESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__DELAY_UNIT, oldDelay_unit, DELAY_UNIT_EDEFAULT, oldDelay_unitESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetDelay_unit() {
-		return delay_unitESet;
 	}
 
 	/**
@@ -560,14 +356,6 @@ public class GSSTestProcInputLevel2Impl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__NAME:
-				return getName();
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__IF_REF:
-				return getIfRef();
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__DELAY_VALUE:
-				return getDelay_value();
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__DELAY_UNIT:
-				return getDelay_unit();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2:
 				if (resolve) return getLevel2();
 				return basicGetLevel2();
@@ -598,18 +386,6 @@ public class GSSTestProcInputLevel2Impl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__NAME:
-				setName((String)newValue);
-				return;
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__IF_REF:
-				setIfRef((String)newValue);
-				return;
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__DELAY_VALUE:
-				setDelay_value((String)newValue);
-				return;
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__DELAY_UNIT:
-				setDelay_unit((GSSTestProcUnit)newValue);
-				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2:
 				setLevel2((GSSTmTcFormatTmTcFormat)newValue);
 				return;
@@ -640,18 +416,6 @@ public class GSSTestProcInputLevel2Impl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__IF_REF:
-				setIfRef(IF_REF_EDEFAULT);
-				return;
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__DELAY_VALUE:
-				setDelay_value(DELAY_VALUE_EDEFAULT);
-				return;
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__DELAY_UNIT:
-				unsetDelay_unit();
-				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2:
 				setLevel2((GSSTmTcFormatTmTcFormat)null);
 				return;
@@ -682,14 +446,6 @@ public class GSSTestProcInputLevel2Impl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__IF_REF:
-				return IF_REF_EDEFAULT == null ? ifRef != null : !IF_REF_EDEFAULT.equals(ifRef);
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__DELAY_VALUE:
-				return DELAY_VALUE_EDEFAULT == null ? delay_value != null : !DELAY_VALUE_EDEFAULT.equals(delay_value);
-			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__DELAY_UNIT:
-				return isSetDelay_unit();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__LEVEL2:
 				return level2 != null;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2__APP_TO_LEVEL2:
@@ -704,28 +460,6 @@ public class GSSTestProcInputLevel2Impl extends MinimalEObjectImpl.Container imp
 				return level1_to_level0 != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", ifRef: ");
-		result.append(ifRef);
-		result.append(", delay_value: ");
-		result.append(delay_value);
-		result.append(", delay_unit: ");
-		if (delay_unitESet) result.append(delay_unit); else result.append("<unset>");
-		result.append(')');
-		return result.toString();
 	}
 
 } //GSSTestProcInputLevel2Impl

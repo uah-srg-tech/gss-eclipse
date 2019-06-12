@@ -99,20 +99,8 @@ public class test_procAdapterFactory extends AdapterFactoryImpl {
 				return createGSSTestProcSpecialPacketsAdapter();
 			}
 			@Override
-			public Adapter caseGSSTestProcEnable(GSSTestProcEnable object) {
-				return createGSSTestProcEnableAdapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcDisable(GSSTestProcDisable object) {
-				return createGSSTestProcDisableAdapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcEnablePrint(GSSTestProcEnablePrint object) {
-				return createGSSTestProcEnablePrintAdapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcDisablePrint(GSSTestProcDisablePrint object) {
-				return createGSSTestProcDisablePrintAdapter();
+			public Adapter caseGSSTestProcEnableDisable(GSSTestProcEnableDisable object) {
+				return createGSSTestProcEnableDisableAdapter();
 			}
 			@Override
 			public Adapter caseGSSTestProcConcurrentSteps(GSSTestProcConcurrentSteps object) {
@@ -125,6 +113,10 @@ public class test_procAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGSSTestProcConcurrentStep(GSSTestProcConcurrentStep object) {
 				return createGSSTestProcConcurrentStepAdapter();
+			}
+			@Override
+			public Adapter caseGSSTestProcInput(GSSTestProcInput object) {
+				return createGSSTestProcInputAdapter();
 			}
 			@Override
 			public Adapter caseGSSTestProcInputLevel3(GSSTestProcInputLevel3 object) {
@@ -277,58 +269,16 @@ public class test_procAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcEnable <em>GSS Test Proc Enable</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcEnableDisable <em>GSS Test Proc Enable Disable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcEnable
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcEnableDisable
 	 * @generated
 	 */
-	public Adapter createGSSTestProcEnableAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcDisable <em>GSS Test Proc Disable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcDisable
-	 * @generated
-	 */
-	public Adapter createGSSTestProcDisableAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcEnablePrint <em>GSS Test Proc Enable Print</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcEnablePrint
-	 * @generated
-	 */
-	public Adapter createGSSTestProcEnablePrintAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcDisablePrint <em>GSS Test Proc Disable Print</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcDisablePrint
-	 * @generated
-	 */
-	public Adapter createGSSTestProcDisablePrintAdapter() {
+	public Adapter createGSSTestProcEnableDisableAdapter() {
 		return null;
 	}
 
@@ -371,6 +321,20 @@ public class test_procAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSTestProcConcurrentStepAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInput <em>GSS Test Proc Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInput
+	 * @generated
+	 */
+	public Adapter createGSSTestProcInputAdapter() {
 		return null;
 	}
 

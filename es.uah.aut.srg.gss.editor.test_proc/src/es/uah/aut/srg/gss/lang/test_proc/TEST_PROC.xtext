@@ -74,10 +74,10 @@ GSSTestProcOutputs returns GSSTestProcOutputs:
 GSSTestProcSpecialPackets returns GSSTestProcSpecialPackets:
 	{GSSTestProcSpecialPackets}
 	'GSSTestProcSpecialPackets' '{'
-		((enable+=GSSTestProcEnable) |
-		 (disable+=GSSTestProcDisable) |
-		 (enable_print+=GSSTestProcEnablePrint) |
-		 (disable_print+=GSSTestProcDisablePrint))+
+		((enable+=GSSTestProcEnableDisable) |
+		 (disable+=GSSTestProcEnableDisable) |
+		 (enable_print+=GSSTestProcEnableDisable) |
+		 (disable_print+=GSSTestProcEnableDisable))+
 	'}' ';'
 ;
 
@@ -246,26 +246,8 @@ enum GSSTestProcYesNo returns GSSTestProcYesNo:
 	yes = 'yes' | no = 'no'
 ;
 
-GSSTestProcEnable returns GSSTestProcEnable:
+GSSTestProcEnableDisable returns GSSTestProcEnableDisable:
 	'GSSTestProcEnable' '{'
-		'id' ':=' id=INTEGER ';'
-	'}' ';'
-;
-
-GSSTestProcDisable returns GSSTestProcDisable:
-	'GSSTestProcDisable' '{'
-		'id' ':=' id=INTEGER ';'
-	'}' ';'
-;
-
-GSSTestProcEnablePrint returns GSSTestProcEnablePrint:
-	'GSSTestProcEnablePrint' '{'
-		'id' ':=' id=INTEGER ';'
-	'}' ';'
-;
-
-GSSTestProcDisablePrint returns GSSTestProcDisablePrint:
-	'GSSTestProcDisablePrint' '{'
 		'id' ':=' id=INTEGER ';'
 	'}' ';'
 ;

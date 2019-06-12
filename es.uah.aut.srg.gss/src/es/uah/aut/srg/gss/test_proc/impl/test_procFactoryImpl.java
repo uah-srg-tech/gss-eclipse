@@ -70,13 +70,11 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 			case test_procPackage.GSS_TEST_PROC_INPUTS: return createGSSTestProcInputs();
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS: return createGSSTestProcOutputs();
 			case test_procPackage.GSS_TEST_PROC_SPECIAL_PACKETS: return createGSSTestProcSpecialPackets();
-			case test_procPackage.GSS_TEST_PROC_ENABLE: return createGSSTestProcEnable();
-			case test_procPackage.GSS_TEST_PROC_DISABLE: return createGSSTestProcDisable();
-			case test_procPackage.GSS_TEST_PROC_ENABLE_PRINT: return createGSSTestProcEnablePrint();
-			case test_procPackage.GSS_TEST_PROC_DISABLE_PRINT: return createGSSTestProcDisablePrint();
+			case test_procPackage.GSS_TEST_PROC_ENABLE_DISABLE: return createGSSTestProcEnableDisable();
 			case test_procPackage.GSS_TEST_PROC_CONCURRENT_STEPS: return createGSSTestProcConcurrentSteps();
 			case test_procPackage.GSS_TEST_PROC_NEXT_STEP: return createGSSTestProcNextStep();
 			case test_procPackage.GSS_TEST_PROC_CONCURRENT_STEP: return createGSSTestProcConcurrentStep();
+			case test_procPackage.GSS_TEST_PROC_INPUT: return createGSSTestProcInput();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL3: return createGSSTestProcInputLevel3();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2: return createGSSTestProcInputLevel2();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1: return createGSSTestProcInputLevel1();
@@ -191,39 +189,9 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcEnable createGSSTestProcEnable() {
-		GSSTestProcEnableImpl gssTestProcEnable = new GSSTestProcEnableImpl();
-		return gssTestProcEnable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcDisable createGSSTestProcDisable() {
-		GSSTestProcDisableImpl gssTestProcDisable = new GSSTestProcDisableImpl();
-		return gssTestProcDisable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcEnablePrint createGSSTestProcEnablePrint() {
-		GSSTestProcEnablePrintImpl gssTestProcEnablePrint = new GSSTestProcEnablePrintImpl();
-		return gssTestProcEnablePrint;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcDisablePrint createGSSTestProcDisablePrint() {
-		GSSTestProcDisablePrintImpl gssTestProcDisablePrint = new GSSTestProcDisablePrintImpl();
-		return gssTestProcDisablePrint;
+	public GSSTestProcEnableDisable createGSSTestProcEnableDisable() {
+		GSSTestProcEnableDisableImpl gssTestProcEnableDisable = new GSSTestProcEnableDisableImpl();
+		return gssTestProcEnableDisable;
 	}
 
 	/**
@@ -254,6 +222,16 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 	public GSSTestProcConcurrentStep createGSSTestProcConcurrentStep() {
 		GSSTestProcConcurrentStepImpl gssTestProcConcurrentStep = new GSSTestProcConcurrentStepImpl();
 		return gssTestProcConcurrentStep;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTestProcInput createGSSTestProcInput() {
+		GSSTestProcInputImpl gssTestProcInput = new GSSTestProcInputImpl();
+		return gssTestProcInput;
 	}
 
 	/**

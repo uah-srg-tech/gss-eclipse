@@ -109,27 +109,9 @@ public class test_procSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case test_procPackage.GSS_TEST_PROC_ENABLE: {
-				GSSTestProcEnable gssTestProcEnable = (GSSTestProcEnable)theEObject;
-				T result = caseGSSTestProcEnable(gssTestProcEnable);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case test_procPackage.GSS_TEST_PROC_DISABLE: {
-				GSSTestProcDisable gssTestProcDisable = (GSSTestProcDisable)theEObject;
-				T result = caseGSSTestProcDisable(gssTestProcDisable);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case test_procPackage.GSS_TEST_PROC_ENABLE_PRINT: {
-				GSSTestProcEnablePrint gssTestProcEnablePrint = (GSSTestProcEnablePrint)theEObject;
-				T result = caseGSSTestProcEnablePrint(gssTestProcEnablePrint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case test_procPackage.GSS_TEST_PROC_DISABLE_PRINT: {
-				GSSTestProcDisablePrint gssTestProcDisablePrint = (GSSTestProcDisablePrint)theEObject;
-				T result = caseGSSTestProcDisablePrint(gssTestProcDisablePrint);
+			case test_procPackage.GSS_TEST_PROC_ENABLE_DISABLE: {
+				GSSTestProcEnableDisable gssTestProcEnableDisable = (GSSTestProcEnableDisable)theEObject;
+				T result = caseGSSTestProcEnableDisable(gssTestProcEnableDisable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -151,27 +133,37 @@ public class test_procSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case test_procPackage.GSS_TEST_PROC_INPUT: {
+				GSSTestProcInput gssTestProcInput = (GSSTestProcInput)theEObject;
+				T result = caseGSSTestProcInput(gssTestProcInput);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL3: {
 				GSSTestProcInputLevel3 gssTestProcInputLevel3 = (GSSTestProcInputLevel3)theEObject;
 				T result = caseGSSTestProcInputLevel3(gssTestProcInputLevel3);
+				if (result == null) result = caseGSSTestProcInput(gssTestProcInputLevel3);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2: {
 				GSSTestProcInputLevel2 gssTestProcInputLevel2 = (GSSTestProcInputLevel2)theEObject;
 				T result = caseGSSTestProcInputLevel2(gssTestProcInputLevel2);
+				if (result == null) result = caseGSSTestProcInput(gssTestProcInputLevel2);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1: {
 				GSSTestProcInputLevel1 gssTestProcInputLevel1 = (GSSTestProcInputLevel1)theEObject;
 				T result = caseGSSTestProcInputLevel1(gssTestProcInputLevel1);
+				if (result == null) result = caseGSSTestProcInput(gssTestProcInputLevel1);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL0: {
 				GSSTestProcInputLevel0 gssTestProcInputLevel0 = (GSSTestProcInputLevel0)theEObject;
 				T result = caseGSSTestProcInputLevel0(gssTestProcInputLevel0);
+				if (result == null) result = caseGSSTestProcInput(gssTestProcInputLevel0);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -313,62 +305,17 @@ public class test_procSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Proc Enable</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Proc Enable Disable</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Test Proc Enable</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Test Proc Enable Disable</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGSSTestProcEnable(GSSTestProcEnable object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Proc Disable</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Test Proc Disable</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTestProcDisable(GSSTestProcDisable object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Proc Enable Print</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Test Proc Enable Print</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTestProcEnablePrint(GSSTestProcEnablePrint object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Proc Disable Print</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Test Proc Disable Print</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTestProcDisablePrint(GSSTestProcDisablePrint object) {
+	public T caseGSSTestProcEnableDisable(GSSTestProcEnableDisable object) {
 		return null;
 	}
 
@@ -414,6 +361,21 @@ public class test_procSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSTestProcConcurrentStep(GSSTestProcConcurrentStep object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Proc Input</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Test Proc Input</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSTestProcInput(GSSTestProcInput object) {
 		return null;
 	}
 

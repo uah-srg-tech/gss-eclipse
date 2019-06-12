@@ -12,7 +12,6 @@ package es.uah.aut.srg.gss.test_proc;
 
 import es.uah.aut.srg.gss.export.GSSExportExport;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,10 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getIfRef <em>If Ref</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getDelay_value <em>Delay value</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getDelay_unit <em>Delay unit</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel3 <em>Level3</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getApp_to_level3 <em>App to level3</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getLevel2 <em>Level2</em>}</li>
@@ -41,168 +36,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GSSTestProcInputLevel3 extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputLevel3_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>If Ref</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>If Ref</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>If Ref</em>' attribute.
-	 * @see #setIfRef(String)
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputLevel3_IfRef()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getIfRef();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getIfRef <em>If Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>If Ref</em>' attribute.
-	 * @see #getIfRef()
-	 * @generated
-	 */
-	void setIfRef(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Delay value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Delay value</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Delay value</em>' attribute.
-	 * @see #isSetDelay_value()
-	 * @see #unsetDelay_value()
-	 * @see #setDelay_value(String)
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputLevel3_Delay_value()
-	 * @model unsettable="true" required="true"
-	 * @generated
-	 */
-	String getDelay_value();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getDelay_value <em>Delay value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Delay value</em>' attribute.
-	 * @see #isSetDelay_value()
-	 * @see #unsetDelay_value()
-	 * @see #getDelay_value()
-	 * @generated
-	 */
-	void setDelay_value(String value);
-
-	/**
-	 * Unsets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getDelay_value <em>Delay value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetDelay_value()
-	 * @see #getDelay_value()
-	 * @see #setDelay_value(String)
-	 * @generated
-	 */
-	void unsetDelay_value();
-
-	/**
-	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getDelay_value <em>Delay value</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Delay value</em>' attribute is set.
-	 * @see #unsetDelay_value()
-	 * @see #getDelay_value()
-	 * @see #setDelay_value(String)
-	 * @generated
-	 */
-	boolean isSetDelay_value();
-
-	/**
-	 * Returns the value of the '<em><b>Delay unit</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.test_proc.GSSTestProcUnit}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Delay unit</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Delay unit</em>' attribute.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
-	 * @see #isSetDelay_unit()
-	 * @see #unsetDelay_unit()
-	 * @see #setDelay_unit(GSSTestProcUnit)
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputLevel3_Delay_unit()
-	 * @model unsettable="true" required="true"
-	 * @generated
-	 */
-	GSSTestProcUnit getDelay_unit();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getDelay_unit <em>Delay unit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Delay unit</em>' attribute.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
-	 * @see #isSetDelay_unit()
-	 * @see #unsetDelay_unit()
-	 * @see #getDelay_unit()
-	 * @generated
-	 */
-	void setDelay_unit(GSSTestProcUnit value);
-
-	/**
-	 * Unsets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getDelay_unit <em>Delay unit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetDelay_unit()
-	 * @see #getDelay_unit()
-	 * @see #setDelay_unit(GSSTestProcUnit)
-	 * @generated
-	 */
-	void unsetDelay_unit();
-
-	/**
-	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3#getDelay_unit <em>Delay unit</em>}' attribute is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Delay unit</em>' attribute is set.
-	 * @see #unsetDelay_unit()
-	 * @see #getDelay_unit()
-	 * @see #setDelay_unit(GSSTestProcUnit)
-	 * @generated
-	 */
-	boolean isSetDelay_unit();
-
+public interface GSSTestProcInputLevel3 extends GSSTestProcInput {
 	/**
 	 * Returns the value of the '<em><b>Level3</b></em>' reference.
 	 * <!-- begin-user-doc -->

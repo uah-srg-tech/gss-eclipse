@@ -1036,9 +1036,9 @@ ruleGSSTestProcSpecialPackets returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSTestProcSpecialPacketsAccess().getEnableGSSTestProcEnableParserRuleCall_3_0_0());
+						newCompositeNode(grammarAccess.getGSSTestProcSpecialPacketsAccess().getEnableGSSTestProcEnableDisableParserRuleCall_3_0_0());
 					}
-					lv_enable_3_0=ruleGSSTestProcEnable
+					lv_enable_3_0=ruleGSSTestProcEnableDisable
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSTestProcSpecialPacketsRule());
@@ -1047,7 +1047,7 @@ ruleGSSTestProcSpecialPackets returns [EObject current=null]
 							$current,
 							"enable",
 							lv_enable_3_0,
-							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcEnable");
+							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcEnableDisable");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -1056,9 +1056,9 @@ ruleGSSTestProcSpecialPackets returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSTestProcSpecialPacketsAccess().getDisableGSSTestProcDisableParserRuleCall_3_1_0());
+						newCompositeNode(grammarAccess.getGSSTestProcSpecialPacketsAccess().getDisableGSSTestProcEnableDisableParserRuleCall_3_1_0());
 					}
-					lv_disable_4_0=ruleGSSTestProcDisable
+					lv_disable_4_0=ruleGSSTestProcEnableDisable
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSTestProcSpecialPacketsRule());
@@ -1067,7 +1067,7 @@ ruleGSSTestProcSpecialPackets returns [EObject current=null]
 							$current,
 							"disable",
 							lv_disable_4_0,
-							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcDisable");
+							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcEnableDisable");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -1076,9 +1076,9 @@ ruleGSSTestProcSpecialPackets returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSTestProcSpecialPacketsAccess().getEnable_printGSSTestProcEnablePrintParserRuleCall_3_2_0());
+						newCompositeNode(grammarAccess.getGSSTestProcSpecialPacketsAccess().getEnable_printGSSTestProcEnableDisableParserRuleCall_3_2_0());
 					}
-					lv_enable_print_5_0=ruleGSSTestProcEnablePrint
+					lv_enable_print_5_0=ruleGSSTestProcEnableDisable
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSTestProcSpecialPacketsRule());
@@ -1087,7 +1087,7 @@ ruleGSSTestProcSpecialPackets returns [EObject current=null]
 							$current,
 							"enable_print",
 							lv_enable_print_5_0,
-							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcEnablePrint");
+							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcEnableDisable");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -1096,9 +1096,9 @@ ruleGSSTestProcSpecialPackets returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSTestProcSpecialPacketsAccess().getDisable_printGSSTestProcDisablePrintParserRuleCall_3_3_0());
+						newCompositeNode(grammarAccess.getGSSTestProcSpecialPacketsAccess().getDisable_printGSSTestProcEnableDisableParserRuleCall_3_3_0());
 					}
-					lv_disable_print_6_0=ruleGSSTestProcDisablePrint
+					lv_disable_print_6_0=ruleGSSTestProcEnableDisable
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSTestProcSpecialPacketsRule());
@@ -1107,7 +1107,7 @@ ruleGSSTestProcSpecialPackets returns [EObject current=null]
 							$current,
 							"disable_print",
 							lv_disable_print_6_0,
-							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcDisablePrint");
+							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcEnableDisable");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -4247,15 +4247,15 @@ ruleGSSTestProcLevel0Filter returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleGSSTestProcEnable
-entryRuleGSSTestProcEnable returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSTestProcEnableRule()); }
-	iv_ruleGSSTestProcEnable=ruleGSSTestProcEnable
-	{ $current=$iv_ruleGSSTestProcEnable.current; }
+// Entry rule entryRuleGSSTestProcEnableDisable
+entryRuleGSSTestProcEnableDisable returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSTestProcEnableDisableRule()); }
+	iv_ruleGSSTestProcEnableDisable=ruleGSSTestProcEnableDisable
+	{ $current=$iv_ruleGSSTestProcEnableDisable.current; }
 	EOF;
 
-// Rule GSSTestProcEnable
-ruleGSSTestProcEnable returns [EObject current=null]
+// Rule GSSTestProcEnableDisable
+ruleGSSTestProcEnableDisable returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -4265,29 +4265,29 @@ ruleGSSTestProcEnable returns [EObject current=null]
 	(
 		otherlv_0='GSSTestProcEnable'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSTestProcEnableAccess().getGSSTestProcEnableKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getGSSTestProcEnableDisableAccess().getGSSTestProcEnableKeyword_0());
 		}
 		otherlv_1='{'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSTestProcEnableAccess().getLeftCurlyBracketKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getGSSTestProcEnableDisableAccess().getLeftCurlyBracketKeyword_1());
 		}
 		otherlv_2='id'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSTestProcEnableAccess().getIdKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getGSSTestProcEnableDisableAccess().getIdKeyword_2());
 		}
 		otherlv_3=':='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSTestProcEnableAccess().getColonEqualsSignKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getGSSTestProcEnableDisableAccess().getColonEqualsSignKeyword_3());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTestProcEnableAccess().getIdINTEGERParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getGSSTestProcEnableDisableAccess().getIdINTEGERParserRuleCall_4_0());
 				}
 				lv_id_4_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTestProcEnableRule());
+						$current = createModelElementForParent(grammarAccess.getGSSTestProcEnableDisableRule());
 					}
 					set(
 						$current,
@@ -4300,213 +4300,15 @@ ruleGSSTestProcEnable returns [EObject current=null]
 		)
 		otherlv_5=';'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSTestProcEnableAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getGSSTestProcEnableDisableAccess().getSemicolonKeyword_5());
 		}
 		otherlv_6='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSTestProcEnableAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_6, grammarAccess.getGSSTestProcEnableDisableAccess().getRightCurlyBracketKeyword_6());
 		}
 		otherlv_7=';'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSTestProcEnableAccess().getSemicolonKeyword_7());
-		}
-	)
-;
-
-// Entry rule entryRuleGSSTestProcDisable
-entryRuleGSSTestProcDisable returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSTestProcDisableRule()); }
-	iv_ruleGSSTestProcDisable=ruleGSSTestProcDisable
-	{ $current=$iv_ruleGSSTestProcDisable.current; }
-	EOF;
-
-// Rule GSSTestProcDisable
-ruleGSSTestProcDisable returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='GSSTestProcDisable'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSTestProcDisableAccess().getGSSTestProcDisableKeyword_0());
-		}
-		otherlv_1='{'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSTestProcDisableAccess().getLeftCurlyBracketKeyword_1());
-		}
-		otherlv_2='id'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSTestProcDisableAccess().getIdKeyword_2());
-		}
-		otherlv_3=':='
-		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSTestProcDisableAccess().getColonEqualsSignKeyword_3());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSTestProcDisableAccess().getIdINTEGERParserRuleCall_4_0());
-				}
-				lv_id_4_0=ruleINTEGER
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTestProcDisableRule());
-					}
-					set(
-						$current,
-						"id",
-						lv_id_4_0,
-						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.INTEGER");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_5=';'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSTestProcDisableAccess().getSemicolonKeyword_5());
-		}
-		otherlv_6='}'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSTestProcDisableAccess().getRightCurlyBracketKeyword_6());
-		}
-		otherlv_7=';'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSTestProcDisableAccess().getSemicolonKeyword_7());
-		}
-	)
-;
-
-// Entry rule entryRuleGSSTestProcEnablePrint
-entryRuleGSSTestProcEnablePrint returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSTestProcEnablePrintRule()); }
-	iv_ruleGSSTestProcEnablePrint=ruleGSSTestProcEnablePrint
-	{ $current=$iv_ruleGSSTestProcEnablePrint.current; }
-	EOF;
-
-// Rule GSSTestProcEnablePrint
-ruleGSSTestProcEnablePrint returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='GSSTestProcEnablePrint'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSTestProcEnablePrintAccess().getGSSTestProcEnablePrintKeyword_0());
-		}
-		otherlv_1='{'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSTestProcEnablePrintAccess().getLeftCurlyBracketKeyword_1());
-		}
-		otherlv_2='id'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSTestProcEnablePrintAccess().getIdKeyword_2());
-		}
-		otherlv_3=':='
-		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSTestProcEnablePrintAccess().getColonEqualsSignKeyword_3());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSTestProcEnablePrintAccess().getIdINTEGERParserRuleCall_4_0());
-				}
-				lv_id_4_0=ruleINTEGER
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTestProcEnablePrintRule());
-					}
-					set(
-						$current,
-						"id",
-						lv_id_4_0,
-						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.INTEGER");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_5=';'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSTestProcEnablePrintAccess().getSemicolonKeyword_5());
-		}
-		otherlv_6='}'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSTestProcEnablePrintAccess().getRightCurlyBracketKeyword_6());
-		}
-		otherlv_7=';'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSTestProcEnablePrintAccess().getSemicolonKeyword_7());
-		}
-	)
-;
-
-// Entry rule entryRuleGSSTestProcDisablePrint
-entryRuleGSSTestProcDisablePrint returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSTestProcDisablePrintRule()); }
-	iv_ruleGSSTestProcDisablePrint=ruleGSSTestProcDisablePrint
-	{ $current=$iv_ruleGSSTestProcDisablePrint.current; }
-	EOF;
-
-// Rule GSSTestProcDisablePrint
-ruleGSSTestProcDisablePrint returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='GSSTestProcDisablePrint'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSTestProcDisablePrintAccess().getGSSTestProcDisablePrintKeyword_0());
-		}
-		otherlv_1='{'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSTestProcDisablePrintAccess().getLeftCurlyBracketKeyword_1());
-		}
-		otherlv_2='id'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSTestProcDisablePrintAccess().getIdKeyword_2());
-		}
-		otherlv_3=':='
-		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSTestProcDisablePrintAccess().getColonEqualsSignKeyword_3());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSTestProcDisablePrintAccess().getIdINTEGERParserRuleCall_4_0());
-				}
-				lv_id_4_0=ruleINTEGER
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTestProcDisablePrintRule());
-					}
-					set(
-						$current,
-						"id",
-						lv_id_4_0,
-						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.INTEGER");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_5=';'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSTestProcDisablePrintAccess().getSemicolonKeyword_5());
-		}
-		otherlv_6='}'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSTestProcDisablePrintAccess().getRightCurlyBracketKeyword_6());
-		}
-		otherlv_7=';'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSTestProcDisablePrintAccess().getSemicolonKeyword_7());
+			newLeafNode(otherlv_7, grammarAccess.getGSSTestProcEnableDisableAccess().getSemicolonKeyword_7());
 		}
 	)
 ;

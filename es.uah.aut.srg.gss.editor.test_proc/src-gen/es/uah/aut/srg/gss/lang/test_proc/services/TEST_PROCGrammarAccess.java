@@ -617,25 +617,26 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
 		private final Assignment cEnableAssignment_3_0 = (Assignment)cAlternatives_3.eContents().get(0);
-		private final RuleCall cEnableGSSTestProcEnableParserRuleCall_3_0_0 = (RuleCall)cEnableAssignment_3_0.eContents().get(0);
+		private final RuleCall cEnableGSSTestProcEnableDisableParserRuleCall_3_0_0 = (RuleCall)cEnableAssignment_3_0.eContents().get(0);
 		private final Assignment cDisableAssignment_3_1 = (Assignment)cAlternatives_3.eContents().get(1);
-		private final RuleCall cDisableGSSTestProcDisableParserRuleCall_3_1_0 = (RuleCall)cDisableAssignment_3_1.eContents().get(0);
+		private final RuleCall cDisableGSSTestProcEnableDisableParserRuleCall_3_1_0 = (RuleCall)cDisableAssignment_3_1.eContents().get(0);
 		private final Assignment cEnable_printAssignment_3_2 = (Assignment)cAlternatives_3.eContents().get(2);
-		private final RuleCall cEnable_printGSSTestProcEnablePrintParserRuleCall_3_2_0 = (RuleCall)cEnable_printAssignment_3_2.eContents().get(0);
+		private final RuleCall cEnable_printGSSTestProcEnableDisableParserRuleCall_3_2_0 = (RuleCall)cEnable_printAssignment_3_2.eContents().get(0);
 		private final Assignment cDisable_printAssignment_3_3 = (Assignment)cAlternatives_3.eContents().get(3);
-		private final RuleCall cDisable_printGSSTestProcDisablePrintParserRuleCall_3_3_0 = (RuleCall)cDisable_printAssignment_3_3.eContents().get(0);
+		private final RuleCall cDisable_printGSSTestProcEnableDisableParserRuleCall_3_3_0 = (RuleCall)cDisable_printAssignment_3_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//GSSTestProcSpecialPackets:
 		//	{GSSTestProcSpecialPackets}
-		//	'GSSTestProcSpecialPackets' '{' (enable+=GSSTestProcEnable | disable+=GSSTestProcDisable |
-		//	enable_print+=GSSTestProcEnablePrint | disable_print+=GSSTestProcDisablePrint)+
+		//	'GSSTestProcSpecialPackets' '{' (enable+=GSSTestProcEnableDisable | disable+=GSSTestProcEnableDisable |
+		//	enable_print+=GSSTestProcEnableDisable | disable_print+=GSSTestProcEnableDisable)+
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{GSSTestProcSpecialPackets} 'GSSTestProcSpecialPackets' '{' (enable+=GSSTestProcEnable | disable+=GSSTestProcDisable |
-		//enable_print+=GSSTestProcEnablePrint | disable_print+=GSSTestProcDisablePrint)+ '}' ';'
+		//{GSSTestProcSpecialPackets} 'GSSTestProcSpecialPackets' '{' (enable+=GSSTestProcEnableDisable |
+		//disable+=GSSTestProcEnableDisable | enable_print+=GSSTestProcEnableDisable | disable_print+=GSSTestProcEnableDisable)+
+		//'}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//{GSSTestProcSpecialPackets}
@@ -647,33 +648,33 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//(enable+=GSSTestProcEnable | disable+=GSSTestProcDisable | enable_print+=GSSTestProcEnablePrint |
-		//disable_print+=GSSTestProcDisablePrint)+
+		//(enable+=GSSTestProcEnableDisable | disable+=GSSTestProcEnableDisable | enable_print+=GSSTestProcEnableDisable |
+		//disable_print+=GSSTestProcEnableDisable)+
 		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 		
-		//enable+=GSSTestProcEnable
+		//enable+=GSSTestProcEnableDisable
 		public Assignment getEnableAssignment_3_0() { return cEnableAssignment_3_0; }
 		
-		//GSSTestProcEnable
-		public RuleCall getEnableGSSTestProcEnableParserRuleCall_3_0_0() { return cEnableGSSTestProcEnableParserRuleCall_3_0_0; }
+		//GSSTestProcEnableDisable
+		public RuleCall getEnableGSSTestProcEnableDisableParserRuleCall_3_0_0() { return cEnableGSSTestProcEnableDisableParserRuleCall_3_0_0; }
 		
-		//disable+=GSSTestProcDisable
+		//disable+=GSSTestProcEnableDisable
 		public Assignment getDisableAssignment_3_1() { return cDisableAssignment_3_1; }
 		
-		//GSSTestProcDisable
-		public RuleCall getDisableGSSTestProcDisableParserRuleCall_3_1_0() { return cDisableGSSTestProcDisableParserRuleCall_3_1_0; }
+		//GSSTestProcEnableDisable
+		public RuleCall getDisableGSSTestProcEnableDisableParserRuleCall_3_1_0() { return cDisableGSSTestProcEnableDisableParserRuleCall_3_1_0; }
 		
-		//enable_print+=GSSTestProcEnablePrint
+		//enable_print+=GSSTestProcEnableDisable
 		public Assignment getEnable_printAssignment_3_2() { return cEnable_printAssignment_3_2; }
 		
-		//GSSTestProcEnablePrint
-		public RuleCall getEnable_printGSSTestProcEnablePrintParserRuleCall_3_2_0() { return cEnable_printGSSTestProcEnablePrintParserRuleCall_3_2_0; }
+		//GSSTestProcEnableDisable
+		public RuleCall getEnable_printGSSTestProcEnableDisableParserRuleCall_3_2_0() { return cEnable_printGSSTestProcEnableDisableParserRuleCall_3_2_0; }
 		
-		//disable_print+=GSSTestProcDisablePrint
+		//disable_print+=GSSTestProcEnableDisable
 		public Assignment getDisable_printAssignment_3_3() { return cDisable_printAssignment_3_3; }
 		
-		//GSSTestProcDisablePrint
-		public RuleCall getDisable_printGSSTestProcDisablePrintParserRuleCall_3_3_0() { return cDisable_printGSSTestProcDisablePrintParserRuleCall_3_3_0; }
+		//GSSTestProcEnableDisable
+		public RuleCall getDisable_printGSSTestProcEnableDisableParserRuleCall_3_3_0() { return cDisable_printGSSTestProcEnableDisableParserRuleCall_3_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
@@ -3130,8 +3131,8 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_8() { return cSemicolonKeyword_8; }
 	}
-	public class GSSTestProcEnableElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcEnable");
+	public class GSSTestProcEnableDisableElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcEnableDisable");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cGSSTestProcEnableKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -3143,7 +3144,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//GSSTestProcEnable:
+		//GSSTestProcEnableDisable:
 		//	'GSSTestProcEnable' '{'
 		//	'id' ':=' id=INTEGER ';'
 		//	'}' ';';
@@ -3154,153 +3155,6 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'GSSTestProcEnable'
 		public Keyword getGSSTestProcEnableKeyword_0() { return cGSSTestProcEnableKeyword_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
-		
-		//'id'
-		public Keyword getIdKeyword_2() { return cIdKeyword_2; }
-		
-		//':='
-		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
-		
-		//id=INTEGER
-		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
-		
-		//INTEGER
-		public RuleCall getIdINTEGERParserRuleCall_4_0() { return cIdINTEGERParserRuleCall_4_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_7() { return cSemicolonKeyword_7; }
-	}
-	public class GSSTestProcDisableElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcDisable");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cGSSTestProcDisableKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cIdKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIdINTEGERParserRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		
-		//GSSTestProcDisable:
-		//	'GSSTestProcDisable' '{'
-		//	'id' ':=' id=INTEGER ';'
-		//	'}' ';';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'GSSTestProcDisable' '{' 'id' ':=' id=INTEGER ';' '}' ';'
-		public Group getGroup() { return cGroup; }
-		
-		//'GSSTestProcDisable'
-		public Keyword getGSSTestProcDisableKeyword_0() { return cGSSTestProcDisableKeyword_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
-		
-		//'id'
-		public Keyword getIdKeyword_2() { return cIdKeyword_2; }
-		
-		//':='
-		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
-		
-		//id=INTEGER
-		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
-		
-		//INTEGER
-		public RuleCall getIdINTEGERParserRuleCall_4_0() { return cIdINTEGERParserRuleCall_4_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_7() { return cSemicolonKeyword_7; }
-	}
-	public class GSSTestProcEnablePrintElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcEnablePrint");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cGSSTestProcEnablePrintKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cIdKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIdINTEGERParserRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		
-		//GSSTestProcEnablePrint:
-		//	'GSSTestProcEnablePrint' '{'
-		//	'id' ':=' id=INTEGER ';'
-		//	'}' ';';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'GSSTestProcEnablePrint' '{' 'id' ':=' id=INTEGER ';' '}' ';'
-		public Group getGroup() { return cGroup; }
-		
-		//'GSSTestProcEnablePrint'
-		public Keyword getGSSTestProcEnablePrintKeyword_0() { return cGSSTestProcEnablePrintKeyword_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
-		
-		//'id'
-		public Keyword getIdKeyword_2() { return cIdKeyword_2; }
-		
-		//':='
-		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
-		
-		//id=INTEGER
-		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
-		
-		//INTEGER
-		public RuleCall getIdINTEGERParserRuleCall_4_0() { return cIdINTEGERParserRuleCall_4_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_7() { return cSemicolonKeyword_7; }
-	}
-	public class GSSTestProcDisablePrintElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcDisablePrint");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cGSSTestProcDisablePrintKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cIdKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIdINTEGERParserRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		
-		//GSSTestProcDisablePrint:
-		//	'GSSTestProcDisablePrint' '{'
-		//	'id' ':=' id=INTEGER ';'
-		//	'}' ';';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'GSSTestProcDisablePrint' '{' 'id' ':=' id=INTEGER ';' '}' ';'
-		public Group getGroup() { return cGroup; }
-		
-		//'GSSTestProcDisablePrint'
-		public Keyword getGSSTestProcDisablePrintKeyword_0() { return cGSSTestProcDisablePrintKeyword_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
@@ -3864,10 +3718,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSTestProcLevel1FilterElements pGSSTestProcLevel1Filter;
 	private final GSSTestProcLevel0FilterElements pGSSTestProcLevel0Filter;
 	private final GSSTestProcYesNoElements eGSSTestProcYesNo;
-	private final GSSTestProcEnableElements pGSSTestProcEnable;
-	private final GSSTestProcDisableElements pGSSTestProcDisable;
-	private final GSSTestProcEnablePrintElements pGSSTestProcEnablePrint;
-	private final GSSTestProcDisablePrintElements pGSSTestProcDisablePrint;
+	private final GSSTestProcEnableDisableElements pGSSTestProcEnableDisable;
 	private final GSSTestProcNextStepElements pGSSTestProcNextStep;
 	private final GSSTestProcConcurrentStepElements pGSSTestProcConcurrentStep;
 	private final EStringElements pEString;
@@ -3913,10 +3764,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGSSTestProcLevel1Filter = new GSSTestProcLevel1FilterElements();
 		this.pGSSTestProcLevel0Filter = new GSSTestProcLevel0FilterElements();
 		this.eGSSTestProcYesNo = new GSSTestProcYesNoElements();
-		this.pGSSTestProcEnable = new GSSTestProcEnableElements();
-		this.pGSSTestProcDisable = new GSSTestProcDisableElements();
-		this.pGSSTestProcEnablePrint = new GSSTestProcEnablePrintElements();
-		this.pGSSTestProcDisablePrint = new GSSTestProcDisablePrintElements();
+		this.pGSSTestProcEnableDisable = new GSSTestProcEnableDisableElements();
 		this.pGSSTestProcNextStep = new GSSTestProcNextStepElements();
 		this.pGSSTestProcConcurrentStep = new GSSTestProcConcurrentStepElements();
 		this.pEString = new EStringElements();
@@ -4053,8 +3901,8 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSTestProcSpecialPackets:
 	//	{GSSTestProcSpecialPackets}
-	//	'GSSTestProcSpecialPackets' '{' (enable+=GSSTestProcEnable | disable+=GSSTestProcDisable |
-	//	enable_print+=GSSTestProcEnablePrint | disable_print+=GSSTestProcDisablePrint)+
+	//	'GSSTestProcSpecialPackets' '{' (enable+=GSSTestProcEnableDisable | disable+=GSSTestProcEnableDisable |
+	//	enable_print+=GSSTestProcEnableDisable | disable_print+=GSSTestProcEnableDisable)+
 	//	'}' ';';
 	public GSSTestProcSpecialPacketsElements getGSSTestProcSpecialPacketsAccess() {
 		return pGSSTestProcSpecialPackets;
@@ -4321,52 +4169,16 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSTestProcYesNoAccess().getRule();
 	}
 	
-	//GSSTestProcEnable:
+	//GSSTestProcEnableDisable:
 	//	'GSSTestProcEnable' '{'
 	//	'id' ':=' id=INTEGER ';'
 	//	'}' ';';
-	public GSSTestProcEnableElements getGSSTestProcEnableAccess() {
-		return pGSSTestProcEnable;
+	public GSSTestProcEnableDisableElements getGSSTestProcEnableDisableAccess() {
+		return pGSSTestProcEnableDisable;
 	}
 	
-	public ParserRule getGSSTestProcEnableRule() {
-		return getGSSTestProcEnableAccess().getRule();
-	}
-	
-	//GSSTestProcDisable:
-	//	'GSSTestProcDisable' '{'
-	//	'id' ':=' id=INTEGER ';'
-	//	'}' ';';
-	public GSSTestProcDisableElements getGSSTestProcDisableAccess() {
-		return pGSSTestProcDisable;
-	}
-	
-	public ParserRule getGSSTestProcDisableRule() {
-		return getGSSTestProcDisableAccess().getRule();
-	}
-	
-	//GSSTestProcEnablePrint:
-	//	'GSSTestProcEnablePrint' '{'
-	//	'id' ':=' id=INTEGER ';'
-	//	'}' ';';
-	public GSSTestProcEnablePrintElements getGSSTestProcEnablePrintAccess() {
-		return pGSSTestProcEnablePrint;
-	}
-	
-	public ParserRule getGSSTestProcEnablePrintRule() {
-		return getGSSTestProcEnablePrintAccess().getRule();
-	}
-	
-	//GSSTestProcDisablePrint:
-	//	'GSSTestProcDisablePrint' '{'
-	//	'id' ':=' id=INTEGER ';'
-	//	'}' ';';
-	public GSSTestProcDisablePrintElements getGSSTestProcDisablePrintAccess() {
-		return pGSSTestProcDisablePrint;
-	}
-	
-	public ParserRule getGSSTestProcDisablePrintRule() {
-		return getGSSTestProcDisablePrintAccess().getRule();
+	public ParserRule getGSSTestProcEnableDisableRule() {
+		return getGSSTestProcEnableDisableAccess().getRule();
 	}
 	
 	//GSSTestProcNextStep:

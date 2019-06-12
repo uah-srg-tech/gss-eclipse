@@ -75,40 +75,13 @@ public interface test_procFactory extends EFactory {
 	GSSTestProcSpecialPackets createGSSTestProcSpecialPackets();
 
 	/**
-	 * Returns a new object of class '<em>GSS Test Proc Enable</em>'.
+	 * Returns a new object of class '<em>GSS Test Proc Enable Disable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Enable</em>'.
+	 * @return a new object of class '<em>GSS Test Proc Enable Disable</em>'.
 	 * @generated
 	 */
-	GSSTestProcEnable createGSSTestProcEnable();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Disable</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Disable</em>'.
-	 * @generated
-	 */
-	GSSTestProcDisable createGSSTestProcDisable();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Enable Print</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Enable Print</em>'.
-	 * @generated
-	 */
-	GSSTestProcEnablePrint createGSSTestProcEnablePrint();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Disable Print</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Disable Print</em>'.
-	 * @generated
-	 */
-	GSSTestProcDisablePrint createGSSTestProcDisablePrint();
+	GSSTestProcEnableDisable createGSSTestProcEnableDisable();
 
 	/**
 	 * Returns a new object of class '<em>GSS Test Proc Concurrent Steps</em>'.
@@ -136,6 +109,15 @@ public interface test_procFactory extends EFactory {
 	 * @generated
 	 */
 	GSSTestProcConcurrentStep createGSSTestProcConcurrentStep();
+
+	/**
+	 * Returns a new object of class '<em>GSS Test Proc Input</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Test Proc Input</em>'.
+	 * @generated
+	 */
+	GSSTestProcInput createGSSTestProcInput();
 
 	/**
 	 * Returns a new object of class '<em>GSS Test Proc Input Level3</em>'.

@@ -17,10 +17,7 @@ import es.uah.aut.srg.gss.common.commonPackage;
 import es.uah.aut.srg.gss.lang.test_proc.services.TEST_PROCGrammarAccess;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcConcurrentStep;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcConcurrentSteps;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcDisable;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcDisablePrint;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcEnable;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcEnablePrint;
+import es.uah.aut.srg.gss.test_proc.GSSTestProcEnableDisable;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel0;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2;
@@ -80,17 +77,8 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case test_procPackage.GSS_TEST_PROC_CONCURRENT_STEPS:
 				sequence_GSSTestProcConcurrentSteps(context, (GSSTestProcConcurrentSteps) semanticObject); 
 				return; 
-			case test_procPackage.GSS_TEST_PROC_DISABLE:
-				sequence_GSSTestProcDisable(context, (GSSTestProcDisable) semanticObject); 
-				return; 
-			case test_procPackage.GSS_TEST_PROC_DISABLE_PRINT:
-				sequence_GSSTestProcDisablePrint(context, (GSSTestProcDisablePrint) semanticObject); 
-				return; 
-			case test_procPackage.GSS_TEST_PROC_ENABLE:
-				sequence_GSSTestProcEnable(context, (GSSTestProcEnable) semanticObject); 
-				return; 
-			case test_procPackage.GSS_TEST_PROC_ENABLE_PRINT:
-				sequence_GSSTestProcEnablePrint(context, (GSSTestProcEnablePrint) semanticObject); 
+			case test_procPackage.GSS_TEST_PROC_ENABLE_DISABLE:
+				sequence_GSSTestProcEnableDisable(context, (GSSTestProcEnableDisable) semanticObject); 
 				return; 
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL0:
 				sequence_GSSTestProcInputLevel0(context, (GSSTestProcInputLevel0) semanticObject); 
@@ -213,72 +201,18 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
-	 *     GSSTestProcDisablePrint returns GSSTestProcDisablePrint
+	 *     GSSTestProcEnableDisable returns GSSTestProcEnableDisable
 	 *
 	 * Constraint:
 	 *     id=INTEGER
 	 */
-	protected void sequence_GSSTestProcDisablePrint(ISerializationContext context, GSSTestProcDisablePrint semanticObject) {
+	protected void sequence_GSSTestProcEnableDisable(ISerializationContext context, GSSTestProcEnableDisable semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_DISABLE_PRINT__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_DISABLE_PRINT__ID));
+			if (transientValues.isValueTransient(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ENABLE_DISABLE__ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ENABLE_DISABLE__ID));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSTestProcDisablePrintAccess().getIdINTEGERParserRuleCall_4_0(), semanticObject.getId());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSTestProcDisable returns GSSTestProcDisable
-	 *
-	 * Constraint:
-	 *     id=INTEGER
-	 */
-	protected void sequence_GSSTestProcDisable(ISerializationContext context, GSSTestProcDisable semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_DISABLE__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_DISABLE__ID));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSTestProcDisableAccess().getIdINTEGERParserRuleCall_4_0(), semanticObject.getId());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSTestProcEnablePrint returns GSSTestProcEnablePrint
-	 *
-	 * Constraint:
-	 *     id=INTEGER
-	 */
-	protected void sequence_GSSTestProcEnablePrint(ISerializationContext context, GSSTestProcEnablePrint semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ENABLE_PRINT__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ENABLE_PRINT__ID));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSTestProcEnablePrintAccess().getIdINTEGERParserRuleCall_4_0(), semanticObject.getId());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSTestProcEnable returns GSSTestProcEnable
-	 *
-	 * Constraint:
-	 *     id=INTEGER
-	 */
-	protected void sequence_GSSTestProcEnable(ISerializationContext context, GSSTestProcEnable semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ENABLE__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ENABLE__ID));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSTestProcEnableAccess().getIdINTEGERParserRuleCall_4_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getGSSTestProcEnableDisableAccess().getIdINTEGERParserRuleCall_4_0(), semanticObject.getId());
 		feeder.finish();
 	}
 	
@@ -578,7 +512,12 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     GSSTestProcSpecialPackets returns GSSTestProcSpecialPackets
 	 *
 	 * Constraint:
-	 *     (enable+=GSSTestProcEnable | disable+=GSSTestProcDisable | enable_print+=GSSTestProcEnablePrint | disable_print+=GSSTestProcDisablePrint)+
+	 *     (
+	 *         enable+=GSSTestProcEnableDisable | 
+	 *         disable+=GSSTestProcEnableDisable | 
+	 *         enable_print+=GSSTestProcEnableDisable | 
+	 *         disable_print+=GSSTestProcEnableDisable
+	 *     )+
 	 */
 	protected void sequence_GSSTestProcSpecialPackets(ISerializationContext context, GSSTestProcSpecialPackets semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
