@@ -175,8 +175,8 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE));
-			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING__TO_FIELD_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING__TO_FIELD_REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSExportSettingAIFromConstAccess().getValueINTEGERParserRuleCall_4_0(), semanticObject.getValue());
@@ -215,8 +215,8 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_FROM_CONST__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_FROM_CONST__VALUE));
-			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_FROM_CONST__TO_FIELD_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_FROM_CONST__TO_FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING__TO_FIELD_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING__TO_FIELD_REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSExportSettingFromConstAccess().getValueINTEGERParserRuleCall_4_0(), semanticObject.getValue());
@@ -236,8 +236,8 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_FROM_FIELD__FIELD_REF) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_FROM_FIELD__FIELD_REF));
-			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_FROM_FIELD__TO_FIELD_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_FROM_FIELD__TO_FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING__TO_FIELD_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING__TO_FIELD_REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSExportSettingFromFieldAccess().getFieldRefGSSTmTcFormatFieldVersionedQualifiedReferenceNameParserRuleCall_4_0_1(), semanticObject.getFieldRef());
@@ -269,8 +269,8 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_FROM_SIZE__SIZE_REF) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_FROM_SIZE__SIZE_REF));
-			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING__TO_FIELD_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING__TO_FIELD_REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSExportSettingFromSizeAccess().getSizeRefINTEGERParserRuleCall_4_0(), semanticObject.getSizeRef());

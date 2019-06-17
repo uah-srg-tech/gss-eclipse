@@ -73,18 +73,14 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD: return createGSSTmTcFormatFDICField();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD: return createGSSTmTcFormatAField();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD: return createGSSTmTcFormatAIField();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_SIZE: return createGSSTmTcFormatSize();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_GLOBAL_OFFSET: return createGSSTmTcFormatGlobalOffset();
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_BYTES_BITS: return createGSSTmTcFormatBytesBits();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FORMULA: return createGSSTmTcFormatFormula();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CONST_SIZE: return createGSSTmTcFormatConstSize();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VARIABLE_SIZE: return createGSSTmTcFormatVariableSize();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_MAX_SIZE: return createGSSTmTcFormatMaxSize();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FLOATING_OFFSET: return createGSSTmTcFormatFloatingOffset();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_SORTED_FIELDS_TO_CHECK: return createGSSTmTcFormatSortedFieldsToCheck();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FIELD_TO_CHECK: return createGSSTmTcFormatFieldToCheck();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_ARRAY_DIMENSION: return createGSSTmTcFormatArrayDimension();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_ARRAY_REF: return createGSSTmTcFormatArrayRef();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_LOCAL_OFFSET: return createGSSTmTcFormatLocalOffset();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -169,26 +165,6 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatSize createGSSTmTcFormatSize() {
-		GSSTmTcFormatSizeImpl gssTmTcFormatSize = new GSSTmTcFormatSizeImpl();
-		return gssTmTcFormatSize;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTmTcFormatGlobalOffset createGSSTmTcFormatGlobalOffset() {
-		GSSTmTcFormatGlobalOffsetImpl gssTmTcFormatGlobalOffset = new GSSTmTcFormatGlobalOffsetImpl();
-		return gssTmTcFormatGlobalOffset;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public GSSTmTcFormatCSFormulaField createGSSTmTcFormatCSFormulaField() {
 		GSSTmTcFormatCSFormulaFieldImpl gssTmTcFormatCSFormulaField = new GSSTmTcFormatCSFormulaFieldImpl();
 		return gssTmTcFormatCSFormulaField;
@@ -219,29 +195,9 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatConstSize createGSSTmTcFormatConstSize() {
-		GSSTmTcFormatConstSizeImpl gssTmTcFormatConstSize = new GSSTmTcFormatConstSizeImpl();
-		return gssTmTcFormatConstSize;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public GSSTmTcFormatVariableSize createGSSTmTcFormatVariableSize() {
 		GSSTmTcFormatVariableSizeImpl gssTmTcFormatVariableSize = new GSSTmTcFormatVariableSizeImpl();
 		return gssTmTcFormatVariableSize;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTmTcFormatMaxSize createGSSTmTcFormatMaxSize() {
-		GSSTmTcFormatMaxSizeImpl gssTmTcFormatMaxSize = new GSSTmTcFormatMaxSizeImpl();
-		return gssTmTcFormatMaxSize;
 	}
 
 	/**
@@ -329,9 +285,9 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatArrayRef createGSSTmTcFormatArrayRef() {
-		GSSTmTcFormatArrayRefImpl gssTmTcFormatArrayRef = new GSSTmTcFormatArrayRefImpl();
-		return gssTmTcFormatArrayRef;
+	public GSSTmTcFormatBytesBits createGSSTmTcFormatBytesBits() {
+		GSSTmTcFormatBytesBitsImpl gssTmTcFormatBytesBits = new GSSTmTcFormatBytesBitsImpl();
+		return gssTmTcFormatBytesBits;
 	}
 
 	/**
@@ -339,9 +295,9 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatLocalOffset createGSSTmTcFormatLocalOffset() {
-		GSSTmTcFormatLocalOffsetImpl gssTmTcFormatLocalOffset = new GSSTmTcFormatLocalOffsetImpl();
-		return gssTmTcFormatLocalOffset;
+	public GSSTmTcFormatArrayRef createGSSTmTcFormatArrayRef() {
+		GSSTmTcFormatArrayRefImpl gssTmTcFormatArrayRef = new GSSTmTcFormatArrayRefImpl();
+		return gssTmTcFormatArrayRef;
 	}
 
 	/**

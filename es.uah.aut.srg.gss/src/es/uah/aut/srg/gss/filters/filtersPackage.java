@@ -114,13 +114,58 @@ public interface filtersPackage extends EPackage {
 	int GSS_FILTER_FILTER__DESCRIPTION = commonPackage.GSS_MODEL_ELEMENT__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Format File</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_FILTER__FORMAT_FILE = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Bool Var</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_FILTER__BOOL_VAR = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Bool Var From Array Item</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_FILTER__BOOL_VAR_FROM_ARRAY_ITEM = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Bool Var From Grouped Array Item</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Bool Var FDIC</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_FILTER__BOOL_VAR_FDIC = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>GSS Filter Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_FILTER_FEATURE_COUNT = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int GSS_FILTER_FILTER_FEATURE_COUNT = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>GSS Filter Filter</em>' class.
@@ -184,7 +229,7 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_MAXTERM_FILTER__FORMAT_FILE = GSS_FILTER_FILTER_FEATURE_COUNT + 0;
+	int GSS_FILTER_MAXTERM_FILTER__FORMAT_FILE = GSS_FILTER_FILTER__FORMAT_FILE;
 
 	/**
 	 * The feature id for the '<em><b>Bool Var</b></em>' containment reference list.
@@ -193,7 +238,7 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_MAXTERM_FILTER__BOOL_VAR = GSS_FILTER_FILTER_FEATURE_COUNT + 1;
+	int GSS_FILTER_MAXTERM_FILTER__BOOL_VAR = GSS_FILTER_FILTER__BOOL_VAR;
 
 	/**
 	 * The feature id for the '<em><b>Bool Var From Array Item</b></em>' containment reference list.
@@ -202,7 +247,7 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_MAXTERM_FILTER__BOOL_VAR_FROM_ARRAY_ITEM = GSS_FILTER_FILTER_FEATURE_COUNT + 2;
+	int GSS_FILTER_MAXTERM_FILTER__BOOL_VAR_FROM_ARRAY_ITEM = GSS_FILTER_FILTER__BOOL_VAR_FROM_ARRAY_ITEM;
 
 	/**
 	 * The feature id for the '<em><b>Bool Var From Grouped Array Item</b></em>' containment reference list.
@@ -211,7 +256,7 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_MAXTERM_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM = GSS_FILTER_FILTER_FEATURE_COUNT + 3;
+	int GSS_FILTER_MAXTERM_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM = GSS_FILTER_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM;
 
 	/**
 	 * The feature id for the '<em><b>Bool Var FDIC</b></em>' containment reference list.
@@ -220,7 +265,7 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_MAXTERM_FILTER__BOOL_VAR_FDIC = GSS_FILTER_FILTER_FEATURE_COUNT + 4;
+	int GSS_FILTER_MAXTERM_FILTER__BOOL_VAR_FDIC = GSS_FILTER_FILTER__BOOL_VAR_FDIC;
 
 	/**
 	 * The feature id for the '<em><b>Maxterm</b></em>' containment reference list.
@@ -229,7 +274,7 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_MAXTERM_FILTER__MAXTERM = GSS_FILTER_FILTER_FEATURE_COUNT + 5;
+	int GSS_FILTER_MAXTERM_FILTER__MAXTERM = GSS_FILTER_FILTER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Filter Maxterm Filter</em>' class.
@@ -238,7 +283,7 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_MAXTERM_FILTER_FEATURE_COUNT = GSS_FILTER_FILTER_FEATURE_COUNT + 6;
+	int GSS_FILTER_MAXTERM_FILTER_FEATURE_COUNT = GSS_FILTER_FILTER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Filter Maxterm Filter</em>' class.
@@ -302,7 +347,7 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_MINTERM_FILTER__FORMAT_FILE = GSS_FILTER_FILTER_FEATURE_COUNT + 0;
+	int GSS_FILTER_MINTERM_FILTER__FORMAT_FILE = GSS_FILTER_FILTER__FORMAT_FILE;
 
 	/**
 	 * The feature id for the '<em><b>Bool Var</b></em>' containment reference list.
@@ -311,7 +356,7 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_MINTERM_FILTER__BOOL_VAR = GSS_FILTER_FILTER_FEATURE_COUNT + 1;
+	int GSS_FILTER_MINTERM_FILTER__BOOL_VAR = GSS_FILTER_FILTER__BOOL_VAR;
 
 	/**
 	 * The feature id for the '<em><b>Bool Var From Array Item</b></em>' containment reference list.
@@ -320,7 +365,7 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_MINTERM_FILTER__BOOL_VAR_FROM_ARRAY_ITEM = GSS_FILTER_FILTER_FEATURE_COUNT + 2;
+	int GSS_FILTER_MINTERM_FILTER__BOOL_VAR_FROM_ARRAY_ITEM = GSS_FILTER_FILTER__BOOL_VAR_FROM_ARRAY_ITEM;
 
 	/**
 	 * The feature id for the '<em><b>Bool Var From Grouped Array Item</b></em>' containment reference list.
@@ -329,7 +374,7 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_MINTERM_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM = GSS_FILTER_FILTER_FEATURE_COUNT + 3;
+	int GSS_FILTER_MINTERM_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM = GSS_FILTER_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM;
 
 	/**
 	 * The feature id for the '<em><b>Bool Var FDIC</b></em>' containment reference list.
@@ -338,7 +383,7 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_MINTERM_FILTER__BOOL_VAR_FDIC = GSS_FILTER_FILTER_FEATURE_COUNT + 4;
+	int GSS_FILTER_MINTERM_FILTER__BOOL_VAR_FDIC = GSS_FILTER_FILTER__BOOL_VAR_FDIC;
 
 	/**
 	 * The feature id for the '<em><b>Minterm</b></em>' containment reference list.
@@ -347,7 +392,7 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_MINTERM_FILTER__MINTERM = GSS_FILTER_FILTER_FEATURE_COUNT + 5;
+	int GSS_FILTER_MINTERM_FILTER__MINTERM = GSS_FILTER_FILTER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Filter Minterm Filter</em>' class.
@@ -356,7 +401,7 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_MINTERM_FILTER_FEATURE_COUNT = GSS_FILTER_FILTER_FEATURE_COUNT + 6;
+	int GSS_FILTER_MINTERM_FILTER_FEATURE_COUNT = GSS_FILTER_FILTER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Filter Minterm Filter</em>' class.
@@ -1140,6 +1185,61 @@ public interface filtersPackage extends EPackage {
 	EClass getGSSFilterFilter();
 
 	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.filters.GSSFilterFilter#getFormatFile <em>Format File</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Format File</em>'.
+	 * @see es.uah.aut.srg.gss.filters.GSSFilterFilter#getFormatFile()
+	 * @see #getGSSFilterFilter()
+	 * @generated
+	 */
+	EReference getGSSFilterFilter_FormatFile();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.filters.GSSFilterFilter#getBoolVar <em>Bool Var</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Bool Var</em>'.
+	 * @see es.uah.aut.srg.gss.filters.GSSFilterFilter#getBoolVar()
+	 * @see #getGSSFilterFilter()
+	 * @generated
+	 */
+	EReference getGSSFilterFilter_BoolVar();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.filters.GSSFilterFilter#getBoolVarFromArrayItem <em>Bool Var From Array Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Bool Var From Array Item</em>'.
+	 * @see es.uah.aut.srg.gss.filters.GSSFilterFilter#getBoolVarFromArrayItem()
+	 * @see #getGSSFilterFilter()
+	 * @generated
+	 */
+	EReference getGSSFilterFilter_BoolVarFromArrayItem();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.filters.GSSFilterFilter#getBoolVarFromGroupedArrayItem <em>Bool Var From Grouped Array Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Bool Var From Grouped Array Item</em>'.
+	 * @see es.uah.aut.srg.gss.filters.GSSFilterFilter#getBoolVarFromGroupedArrayItem()
+	 * @see #getGSSFilterFilter()
+	 * @generated
+	 */
+	EReference getGSSFilterFilter_BoolVarFromGroupedArrayItem();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.filters.GSSFilterFilter#getBoolVarFDIC <em>Bool Var FDIC</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Bool Var FDIC</em>'.
+	 * @see es.uah.aut.srg.gss.filters.GSSFilterFilter#getBoolVarFDIC()
+	 * @see #getGSSFilterFilter()
+	 * @generated
+	 */
+	EReference getGSSFilterFilter_BoolVarFDIC();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter <em>GSS Filter Maxterm Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1148,61 +1248,6 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSFilterMaxtermFilter();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter#getFormatFile <em>Format File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Format File</em>'.
-	 * @see es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter#getFormatFile()
-	 * @see #getGSSFilterMaxtermFilter()
-	 * @generated
-	 */
-	EReference getGSSFilterMaxtermFilter_FormatFile();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter#getBoolVar <em>Bool Var</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Bool Var</em>'.
-	 * @see es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter#getBoolVar()
-	 * @see #getGSSFilterMaxtermFilter()
-	 * @generated
-	 */
-	EReference getGSSFilterMaxtermFilter_BoolVar();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter#getBoolVarFromArrayItem <em>Bool Var From Array Item</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Bool Var From Array Item</em>'.
-	 * @see es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter#getBoolVarFromArrayItem()
-	 * @see #getGSSFilterMaxtermFilter()
-	 * @generated
-	 */
-	EReference getGSSFilterMaxtermFilter_BoolVarFromArrayItem();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter#getBoolVarFromGroupedArrayItem <em>Bool Var From Grouped Array Item</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Bool Var From Grouped Array Item</em>'.
-	 * @see es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter#getBoolVarFromGroupedArrayItem()
-	 * @see #getGSSFilterMaxtermFilter()
-	 * @generated
-	 */
-	EReference getGSSFilterMaxtermFilter_BoolVarFromGroupedArrayItem();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter#getBoolVarFDIC <em>Bool Var FDIC</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Bool Var FDIC</em>'.
-	 * @see es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter#getBoolVarFDIC()
-	 * @see #getGSSFilterMaxtermFilter()
-	 * @generated
-	 */
-	EReference getGSSFilterMaxtermFilter_BoolVarFDIC();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter#getMaxterm <em>Maxterm</em>}'.
@@ -1224,61 +1269,6 @@ public interface filtersPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSFilterMintermFilter();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.filters.GSSFilterMintermFilter#getFormatFile <em>Format File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Format File</em>'.
-	 * @see es.uah.aut.srg.gss.filters.GSSFilterMintermFilter#getFormatFile()
-	 * @see #getGSSFilterMintermFilter()
-	 * @generated
-	 */
-	EReference getGSSFilterMintermFilter_FormatFile();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.filters.GSSFilterMintermFilter#getBoolVar <em>Bool Var</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Bool Var</em>'.
-	 * @see es.uah.aut.srg.gss.filters.GSSFilterMintermFilter#getBoolVar()
-	 * @see #getGSSFilterMintermFilter()
-	 * @generated
-	 */
-	EReference getGSSFilterMintermFilter_BoolVar();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.filters.GSSFilterMintermFilter#getBoolVarFromArrayItem <em>Bool Var From Array Item</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Bool Var From Array Item</em>'.
-	 * @see es.uah.aut.srg.gss.filters.GSSFilterMintermFilter#getBoolVarFromArrayItem()
-	 * @see #getGSSFilterMintermFilter()
-	 * @generated
-	 */
-	EReference getGSSFilterMintermFilter_BoolVarFromArrayItem();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.filters.GSSFilterMintermFilter#getBoolVarFromGroupedArrayItem <em>Bool Var From Grouped Array Item</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Bool Var From Grouped Array Item</em>'.
-	 * @see es.uah.aut.srg.gss.filters.GSSFilterMintermFilter#getBoolVarFromGroupedArrayItem()
-	 * @see #getGSSFilterMintermFilter()
-	 * @generated
-	 */
-	EReference getGSSFilterMintermFilter_BoolVarFromGroupedArrayItem();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.filters.GSSFilterMintermFilter#getBoolVarFDIC <em>Bool Var FDIC</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Bool Var FDIC</em>'.
-	 * @see es.uah.aut.srg.gss.filters.GSSFilterMintermFilter#getBoolVarFDIC()
-	 * @see #getGSSFilterMintermFilter()
-	 * @generated
-	 */
-	EReference getGSSFilterMintermFilter_BoolVarFDIC();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.filters.GSSFilterMintermFilter#getMinterm <em>Minterm</em>}'.
@@ -1982,6 +1972,46 @@ public interface filtersPackage extends EPackage {
 		EClass GSS_FILTER_FILTER = eINSTANCE.getGSSFilterFilter();
 
 		/**
+		 * The meta object literal for the '<em><b>Format File</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_FILTER_FILTER__FORMAT_FILE = eINSTANCE.getGSSFilterFilter_FormatFile();
+
+		/**
+		 * The meta object literal for the '<em><b>Bool Var</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_FILTER_FILTER__BOOL_VAR = eINSTANCE.getGSSFilterFilter_BoolVar();
+
+		/**
+		 * The meta object literal for the '<em><b>Bool Var From Array Item</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_FILTER_FILTER__BOOL_VAR_FROM_ARRAY_ITEM = eINSTANCE.getGSSFilterFilter_BoolVarFromArrayItem();
+
+		/**
+		 * The meta object literal for the '<em><b>Bool Var From Grouped Array Item</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_FILTER_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM = eINSTANCE.getGSSFilterFilter_BoolVarFromGroupedArrayItem();
+
+		/**
+		 * The meta object literal for the '<em><b>Bool Var FDIC</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_FILTER_FILTER__BOOL_VAR_FDIC = eINSTANCE.getGSSFilterFilter_BoolVarFDIC();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.filters.impl.GSSFilterMaxtermFilterImpl <em>GSS Filter Maxterm Filter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1990,46 +2020,6 @@ public interface filtersPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_FILTER_MAXTERM_FILTER = eINSTANCE.getGSSFilterMaxtermFilter();
-
-		/**
-		 * The meta object literal for the '<em><b>Format File</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_MAXTERM_FILTER__FORMAT_FILE = eINSTANCE.getGSSFilterMaxtermFilter_FormatFile();
-
-		/**
-		 * The meta object literal for the '<em><b>Bool Var</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_MAXTERM_FILTER__BOOL_VAR = eINSTANCE.getGSSFilterMaxtermFilter_BoolVar();
-
-		/**
-		 * The meta object literal for the '<em><b>Bool Var From Array Item</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_MAXTERM_FILTER__BOOL_VAR_FROM_ARRAY_ITEM = eINSTANCE.getGSSFilterMaxtermFilter_BoolVarFromArrayItem();
-
-		/**
-		 * The meta object literal for the '<em><b>Bool Var From Grouped Array Item</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_MAXTERM_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM = eINSTANCE.getGSSFilterMaxtermFilter_BoolVarFromGroupedArrayItem();
-
-		/**
-		 * The meta object literal for the '<em><b>Bool Var FDIC</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_MAXTERM_FILTER__BOOL_VAR_FDIC = eINSTANCE.getGSSFilterMaxtermFilter_BoolVarFDIC();
 
 		/**
 		 * The meta object literal for the '<em><b>Maxterm</b></em>' containment reference list feature.
@@ -2048,46 +2038,6 @@ public interface filtersPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_FILTER_MINTERM_FILTER = eINSTANCE.getGSSFilterMintermFilter();
-
-		/**
-		 * The meta object literal for the '<em><b>Format File</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_MINTERM_FILTER__FORMAT_FILE = eINSTANCE.getGSSFilterMintermFilter_FormatFile();
-
-		/**
-		 * The meta object literal for the '<em><b>Bool Var</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_MINTERM_FILTER__BOOL_VAR = eINSTANCE.getGSSFilterMintermFilter_BoolVar();
-
-		/**
-		 * The meta object literal for the '<em><b>Bool Var From Array Item</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_MINTERM_FILTER__BOOL_VAR_FROM_ARRAY_ITEM = eINSTANCE.getGSSFilterMintermFilter_BoolVarFromArrayItem();
-
-		/**
-		 * The meta object literal for the '<em><b>Bool Var From Grouped Array Item</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_MINTERM_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM = eINSTANCE.getGSSFilterMintermFilter_BoolVarFromGroupedArrayItem();
-
-		/**
-		 * The meta object literal for the '<em><b>Bool Var FDIC</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_MINTERM_FILTER__BOOL_VAR_FDIC = eINSTANCE.getGSSFilterMintermFilter_BoolVarFDIC();
 
 		/**
 		 * The meta object literal for the '<em><b>Minterm</b></em>' containment reference list feature.

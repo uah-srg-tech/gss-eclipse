@@ -89,21 +89,30 @@ public class exportSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case exportPackage.GSS_EXPORT_SIZE: {
+				GSSExportSize gssExportSize = (GSSExportSize)theEObject;
+				T result = caseGSSExportSize(gssExportSize);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case exportPackage.GSS_EXPORT_SIZE_FROM_FILE_LENGTH: {
 				GSSExportSizeFromFileLength gssExportSizeFromFileLength = (GSSExportSizeFromFileLength)theEObject;
 				T result = caseGSSExportSizeFromFileLength(gssExportSizeFromFileLength);
+				if (result == null) result = caseGSSExportSize(gssExportSizeFromFileLength);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case exportPackage.GSS_EXPORT_SIZE_FROM_FILE_LINE: {
 				GSSExportSizeFromFileLine gssExportSizeFromFileLine = (GSSExportSizeFromFileLine)theEObject;
 				T result = caseGSSExportSizeFromFileLine(gssExportSizeFromFileLine);
+				if (result == null) result = caseGSSExportSize(gssExportSizeFromFileLine);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case exportPackage.GSS_EXPORT_SIZE_IN_BITS: {
 				GSSExportSizeInBits gssExportSizeInBits = (GSSExportSizeInBits)theEObject;
 				T result = caseGSSExportSizeInBits(gssExportSizeInBits);
+				if (result == null) result = caseGSSExportSize(gssExportSizeInBits);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -113,39 +122,51 @@ public class exportSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case exportPackage.GSS_EXPORT_SETTING: {
+				GSSExportSetting gssExportSetting = (GSSExportSetting)theEObject;
+				T result = caseGSSExportSetting(gssExportSetting);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case exportPackage.GSS_EXPORT_SETTING_FROM_CONST: {
 				GSSExportSettingFromConst gssExportSettingFromConst = (GSSExportSettingFromConst)theEObject;
 				T result = caseGSSExportSettingFromConst(gssExportSettingFromConst);
+				if (result == null) result = caseGSSExportSetting(gssExportSettingFromConst);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE: {
 				GSSExportSettingFromSize gssExportSettingFromSize = (GSSExportSettingFromSize)theEObject;
 				T result = caseGSSExportSettingFromSize(gssExportSettingFromSize);
+				if (result == null) result = caseGSSExportSetting(gssExportSettingFromSize);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE: {
 				GSSExportSettingFromFile gssExportSettingFromFile = (GSSExportSettingFromFile)theEObject;
 				T result = caseGSSExportSettingFromFile(gssExportSettingFromFile);
+				if (result == null) result = caseGSSExportSetting(gssExportSettingFromFile);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case exportPackage.GSS_EXPORT_SETTING_FROM_FIELD: {
 				GSSExportSettingFromField gssExportSettingFromField = (GSSExportSettingFromField)theEObject;
 				T result = caseGSSExportSettingFromField(gssExportSettingFromField);
+				if (result == null) result = caseGSSExportSetting(gssExportSettingFromField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST: {
 				GSSExportSettingAIFromConst gssExportSettingAIFromConst = (GSSExportSettingAIFromConst)theEObject;
 				T result = caseGSSExportSettingAIFromConst(gssExportSettingAIFromConst);
+				if (result == null) result = caseGSSExportSetting(gssExportSettingAIFromConst);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE: {
 				GSSExportSettingAIFromFile gssExportSettingAIFromFile = (GSSExportSettingAIFromFile)theEObject;
 				T result = caseGSSExportSettingAIFromFile(gssExportSettingAIFromFile);
+				if (result == null) result = caseGSSExportSetting(gssExportSettingAIFromFile);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -192,6 +213,21 @@ public class exportSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSExportSizes(GSSExportSizes object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Export Size</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Export Size</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSExportSize(GSSExportSize object) {
 		return null;
 	}
 
@@ -252,6 +288,21 @@ public class exportSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSExportSettings(GSSExportSettings object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Export Setting</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Export Setting</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSExportSetting(GSSExportSetting object) {
 		return null;
 	}
 

@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.gss.tm_tc_format.impl;
 
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatConstSize;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -22,19 +22,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GSS Tm Tc Format Const Size</b></em>'.
+ * An implementation of the model object '<em><b>GSS Tm Tc Format Bytes Bits</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatConstSizeImpl#getBytes <em>Bytes</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatConstSizeImpl#getBits <em>Bits</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatBytesBitsImpl#getBytes <em>Bytes</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatBytesBitsImpl#getBits <em>Bits</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSTmTcFormatConstSizeImpl extends MinimalEObjectImpl.Container implements GSSTmTcFormatConstSize {
+public class GSSTmTcFormatBytesBitsImpl extends MinimalEObjectImpl.Container implements GSSTmTcFormatBytesBits {
 	/**
 	 * The default value of the '{@link #getBytes() <em>Bytes</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -80,7 +80,7 @@ public class GSSTmTcFormatConstSizeImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GSSTmTcFormatConstSizeImpl() {
+	protected GSSTmTcFormatBytesBitsImpl() {
 		super();
 	}
 
@@ -91,7 +91,7 @@ public class GSSTmTcFormatConstSizeImpl extends MinimalEObjectImpl.Container imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_CONST_SIZE;
+		return tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS;
 	}
 
 	/**
@@ -112,7 +112,7 @@ public class GSSTmTcFormatConstSizeImpl extends MinimalEObjectImpl.Container imp
 		String oldBytes = bytes;
 		bytes = newBytes;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_CONST_SIZE__BYTES, oldBytes, bytes));
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES, oldBytes, bytes));
 	}
 
 	/**
@@ -133,7 +133,7 @@ public class GSSTmTcFormatConstSizeImpl extends MinimalEObjectImpl.Container imp
 		String oldBits = bits;
 		bits = newBits;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_CONST_SIZE__BITS, oldBits, bits));
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_BYTES_BITS__BITS, oldBits, bits));
 	}
 
 	/**
@@ -144,9 +144,9 @@ public class GSSTmTcFormatConstSizeImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CONST_SIZE__BYTES:
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES:
 				return getBytes();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CONST_SIZE__BITS:
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_BYTES_BITS__BITS:
 				return getBits();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -160,10 +160,10 @@ public class GSSTmTcFormatConstSizeImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CONST_SIZE__BYTES:
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES:
 				setBytes((String)newValue);
 				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CONST_SIZE__BITS:
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_BYTES_BITS__BITS:
 				setBits((String)newValue);
 				return;
 		}
@@ -178,10 +178,10 @@ public class GSSTmTcFormatConstSizeImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CONST_SIZE__BYTES:
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES:
 				setBytes(BYTES_EDEFAULT);
 				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CONST_SIZE__BITS:
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_BYTES_BITS__BITS:
 				setBits(BITS_EDEFAULT);
 				return;
 		}
@@ -196,9 +196,9 @@ public class GSSTmTcFormatConstSizeImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CONST_SIZE__BYTES:
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES:
 				return BYTES_EDEFAULT == null ? bytes != null : !BYTES_EDEFAULT.equals(bytes);
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CONST_SIZE__BITS:
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_BYTES_BITS__BITS:
 				return BITS_EDEFAULT == null ? bits != null : !BITS_EDEFAULT.equals(bits);
 		}
 		return super.eIsSet(featureID);
@@ -222,4 +222,4 @@ public class GSSTmTcFormatConstSizeImpl extends MinimalEObjectImpl.Container imp
 		return result.toString();
 	}
 
-} //GSSTmTcFormatConstSizeImpl
+} //GSSTmTcFormatBytesBitsImpl

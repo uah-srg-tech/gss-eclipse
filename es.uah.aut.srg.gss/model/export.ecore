@@ -23,31 +23,23 @@
     <eLiterals name="bits"/>
     <eLiterals name="bytes" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSizeFromFileLength">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSize">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromFile" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="addSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//GSSExportUnit"
         unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="settingFromConst" upperBound="-1"
-        eType="#//GSSExportSettingFromConst"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSizeFromFileLine">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSizeFromFileLength" eSuperTypes="#//GSSExportSize">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromFile" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSizeFromFileLine" eSuperTypes="#//GSSExportSize">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromFile" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="line" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="addSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//GSSExportUnit"
-        unsettable="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSizeInBits">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSizeInBits" eSuperTypes="#//GSSExportSize">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="addSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//GSSExportUnit"
-        unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSExportSettings">
     <eStructuralFeatures xsi:type="ecore:EReference" name="settingFromConst" upperBound="-1"
@@ -63,42 +55,34 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="settingAIFromFile" upperBound="-1"
         eType="#//GSSExportSettingAIFromFile" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSettingFromConst">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSetting">
     <eStructuralFeatures xsi:type="ecore:EReference" name="toFieldRef" lowerBound="1"
         eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatField"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSettingFromSize">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSettingFromConst" eSuperTypes="#//GSSExportSetting">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSettingFromSize" eSuperTypes="#//GSSExportSetting">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sizeRef" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="toFieldRef" lowerBound="1"
-        eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatField"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSettingFromFile">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSettingFromFile" eSuperTypes="#//GSSExportSetting">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="toFieldRef" lowerBound="1"
-        eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatField"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="line" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSettingFromField">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSettingFromField" eSuperTypes="#//GSSExportSetting">
     <eStructuralFeatures xsi:type="ecore:EReference" name="fieldRef" lowerBound="1"
         eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatField"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="toFieldRef" lowerBound="1"
-        eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatField"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSettingAIFromConst">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSettingAIFromConst" eSuperTypes="#//GSSExportSetting">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="toFieldRef" lowerBound="1"
-        eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatAIField"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="toArrayIndex" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSettingAIFromFile">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSExportSettingAIFromFile" eSuperTypes="#//GSSExportSetting">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="toFieldRef" lowerBound="1"
-        eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatAIField"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="toArrayIndex" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

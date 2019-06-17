@@ -115,28 +115,16 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 				return createGSSTmTcFormatAIFieldAdapter();
 			}
 			@Override
-			public Adapter caseGSSTmTcFormatSize(GSSTmTcFormatSize object) {
-				return createGSSTmTcFormatSizeAdapter();
-			}
-			@Override
-			public Adapter caseGSSTmTcFormatGlobalOffset(GSSTmTcFormatGlobalOffset object) {
-				return createGSSTmTcFormatGlobalOffsetAdapter();
+			public Adapter caseGSSTmTcFormatBytesBits(GSSTmTcFormatBytesBits object) {
+				return createGSSTmTcFormatBytesBitsAdapter();
 			}
 			@Override
 			public Adapter caseGSSTmTcFormatFormula(GSSTmTcFormatFormula object) {
 				return createGSSTmTcFormatFormulaAdapter();
 			}
 			@Override
-			public Adapter caseGSSTmTcFormatConstSize(GSSTmTcFormatConstSize object) {
-				return createGSSTmTcFormatConstSizeAdapter();
-			}
-			@Override
 			public Adapter caseGSSTmTcFormatVariableSize(GSSTmTcFormatVariableSize object) {
 				return createGSSTmTcFormatVariableSizeAdapter();
-			}
-			@Override
-			public Adapter caseGSSTmTcFormatMaxSize(GSSTmTcFormatMaxSize object) {
-				return createGSSTmTcFormatMaxSizeAdapter();
 			}
 			@Override
 			public Adapter caseGSSTmTcFormatFloatingOffset(GSSTmTcFormatFloatingOffset object) {
@@ -157,10 +145,6 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGSSTmTcFormatArrayRef(GSSTmTcFormatArrayRef object) {
 				return createGSSTmTcFormatArrayRefAdapter();
-			}
-			@Override
-			public Adapter caseGSSTmTcFormatLocalOffset(GSSTmTcFormatLocalOffset object) {
-				return createGSSTmTcFormatLocalOffsetAdapter();
 			}
 			@Override
 			public Adapter caseGSSModelElement(GSSModelElement object) {
@@ -233,34 +217,6 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSize <em>GSS Tm Tc Format Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSize
-	 * @generated
-	 */
-	public Adapter createGSSTmTcFormatSizeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatGlobalOffset <em>GSS Tm Tc Format Global Offset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatGlobalOffset
-	 * @generated
-	 */
-	public Adapter createGSSTmTcFormatGlobalOffsetAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField <em>GSS Tm Tc Format CS Formula Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -303,20 +259,6 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatConstSize <em>GSS Tm Tc Format Const Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatConstSize
-	 * @generated
-	 */
-	public Adapter createGSSTmTcFormatConstSizeAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize <em>GSS Tm Tc Format Variable Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -327,20 +269,6 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSTmTcFormatVariableSizeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatMaxSize <em>GSS Tm Tc Format Max Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatMaxSize
-	 * @generated
-	 */
-	public Adapter createGSSTmTcFormatMaxSizeAdapter() {
 		return null;
 	}
 
@@ -457,6 +385,20 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits <em>GSS Tm Tc Format Bytes Bits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits
+	 * @generated
+	 */
+	public Adapter createGSSTmTcFormatBytesBitsAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatArrayRef <em>GSS Tm Tc Format Array Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -467,20 +409,6 @@ public class tm_tc_formatAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSTmTcFormatArrayRefAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatLocalOffset <em>GSS Tm Tc Format Local Offset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatLocalOffset
-	 * @generated
-	 */
-	public Adapter createGSSTmTcFormatLocalOffsetAdapter() {
 		return null;
 	}
 

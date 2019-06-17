@@ -48,6 +48,15 @@ public interface exportFactory extends EFactory {
 	GSSExportSizes createGSSExportSizes();
 
 	/**
+	 * Returns a new object of class '<em>GSS Export Size</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Export Size</em>'.
+	 * @generated
+	 */
+	GSSExportSize createGSSExportSize();
+
+	/**
 	 * Returns a new object of class '<em>GSS Export Size From File Length</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,6 +91,15 @@ public interface exportFactory extends EFactory {
 	 * @generated
 	 */
 	GSSExportSettings createGSSExportSettings();
+
+	/**
+	 * Returns a new object of class '<em>GSS Export Setting</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Export Setting</em>'.
+	 * @generated
+	 */
+	GSSExportSetting createGSSExportSetting();
 
 	/**
 	 * Returns a new object of class '<em>GSS Export Setting From Const</em>'.
