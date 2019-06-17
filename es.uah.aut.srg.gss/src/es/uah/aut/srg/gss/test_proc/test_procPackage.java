@@ -1707,14 +1707,14 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUT_LEVEL0_OPERATION_COUNT = GSS_TEST_PROC_OUTPUT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3FilterImpl <em>GSS Test Proc Level3 Filter</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcFilterImpl <em>GSS Test Proc Filter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3FilterImpl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel3Filter()
+	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcFilterImpl
+	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcFilter()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_LEVEL3_FILTER = 19;
+	int GSS_TEST_PROC_FILTER = 19;
 
 	/**
 	 * The feature id for the '<em><b>Apply def filter</b></em>' attribute.
@@ -1723,7 +1723,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_LEVEL3_FILTER__APPLY_DEF_FILTER = 0;
+	int GSS_TEST_PROC_FILTER__APPLY_DEF_FILTER = 0;
 
 	/**
 	 * The feature id for the '<em><b>Extra filter</b></em>' reference.
@@ -1732,163 +1732,25 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_LEVEL3_FILTER__EXTRA_FILTER = 1;
+	int GSS_TEST_PROC_FILTER__EXTRA_FILTER = 1;
 
 	/**
-	 * The number of structural features of the '<em>GSS Test Proc Level3 Filter</em>' class.
+	 * The number of structural features of the '<em>GSS Test Proc Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_LEVEL3_FILTER_FEATURE_COUNT = 2;
+	int GSS_TEST_PROC_FILTER_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>GSS Test Proc Level3 Filter</em>' class.
+	 * The number of operations of the '<em>GSS Test Proc Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_LEVEL3_FILTER_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2FilterImpl <em>GSS Test Proc Level2 Filter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2FilterImpl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel2Filter()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_LEVEL2_FILTER = 20;
-
-	/**
-	 * The feature id for the '<em><b>Apply def filter</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL2_FILTER__APPLY_DEF_FILTER = 0;
-
-	/**
-	 * The feature id for the '<em><b>Extra filter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL2_FILTER__EXTRA_FILTER = 1;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc Level2 Filter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL2_FILTER_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc Level2 Filter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL2_FILTER_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1FilterImpl <em>GSS Test Proc Level1 Filter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1FilterImpl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel1Filter()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_LEVEL1_FILTER = 21;
-
-	/**
-	 * The feature id for the '<em><b>Apply def filter</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL1_FILTER__APPLY_DEF_FILTER = 0;
-
-	/**
-	 * The feature id for the '<em><b>Extra filter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL1_FILTER__EXTRA_FILTER = 1;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc Level1 Filter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL1_FILTER_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc Level1 Filter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL1_FILTER_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel0FilterImpl <em>GSS Test Proc Level0 Filter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel0FilterImpl
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel0Filter()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_LEVEL0_FILTER = 22;
-
-	/**
-	 * The feature id for the '<em><b>Apply def filter</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL0_FILTER__APPLY_DEF_FILTER = 0;
-
-	/**
-	 * The feature id for the '<em><b>Extra filter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL0_FILTER__EXTRA_FILTER = 1;
-
-	/**
-	 * The number of structural features of the '<em>GSS Test Proc Level0 Filter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL0_FILTER_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>GSS Test Proc Level0 Filter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_LEVEL0_FILTER_OPERATION_COUNT = 0;
+	int GSS_TEST_PROC_FILTER_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcMode <em>GSS Test Proc Mode</em>}' enum.
@@ -1898,7 +1760,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcMode()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_MODE = 23;
+	int GSS_TEST_PROC_MODE = 20;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcUnit <em>GSS Test Proc Unit</em>}' enum.
@@ -1908,7 +1770,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcUnit()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_UNIT = 24;
+	int GSS_TEST_PROC_UNIT = 21;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcCheckmode <em>GSS Test Proc Checkmode</em>}' enum.
@@ -1918,7 +1780,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcCheckmode()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_CHECKMODE = 25;
+	int GSS_TEST_PROC_CHECKMODE = 22;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcYesNo <em>GSS Test Proc Yes No</em>}' enum.
@@ -1928,7 +1790,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcYesNo()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_YES_NO = 26;
+	int GSS_TEST_PROC_YES_NO = 23;
 
 
 	/**
@@ -3057,132 +2919,36 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcOutputLevel0_Level0_filter();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3Filter <em>GSS Test Proc Level3 Filter</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcFilter <em>GSS Test Proc Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc Level3 Filter</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3Filter
+	 * @return the meta object for class '<em>GSS Test Proc Filter</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcFilter
 	 * @generated
 	 */
-	EClass getGSSTestProcLevel3Filter();
+	EClass getGSSTestProcFilter();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3Filter#getApply_def_filter <em>Apply def filter</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcFilter#getApply_def_filter <em>Apply def filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Apply def filter</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3Filter#getApply_def_filter()
-	 * @see #getGSSTestProcLevel3Filter()
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcFilter#getApply_def_filter()
+	 * @see #getGSSTestProcFilter()
 	 * @generated
 	 */
-	EAttribute getGSSTestProcLevel3Filter_Apply_def_filter();
+	EAttribute getGSSTestProcFilter_Apply_def_filter();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3Filter#getExtra_filter <em>Extra filter</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcFilter#getExtra_filter <em>Extra filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Extra filter</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3Filter#getExtra_filter()
-	 * @see #getGSSTestProcLevel3Filter()
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcFilter#getExtra_filter()
+	 * @see #getGSSTestProcFilter()
 	 * @generated
 	 */
-	EReference getGSSTestProcLevel3Filter_Extra_filter();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter <em>GSS Test Proc Level2 Filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc Level2 Filter</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter
-	 * @generated
-	 */
-	EClass getGSSTestProcLevel2Filter();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter#getApply_def_filter <em>Apply def filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Apply def filter</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter#getApply_def_filter()
-	 * @see #getGSSTestProcLevel2Filter()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcLevel2Filter_Apply_def_filter();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter#getExtra_filter <em>Extra filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Extra filter</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter#getExtra_filter()
-	 * @see #getGSSTestProcLevel2Filter()
-	 * @generated
-	 */
-	EReference getGSSTestProcLevel2Filter_Extra_filter();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter <em>GSS Test Proc Level1 Filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc Level1 Filter</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter
-	 * @generated
-	 */
-	EClass getGSSTestProcLevel1Filter();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter#getApply_def_filter <em>Apply def filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Apply def filter</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter#getApply_def_filter()
-	 * @see #getGSSTestProcLevel1Filter()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcLevel1Filter_Apply_def_filter();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter#getExtra_filter <em>Extra filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Extra filter</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter#getExtra_filter()
-	 * @see #getGSSTestProcLevel1Filter()
-	 * @generated
-	 */
-	EReference getGSSTestProcLevel1Filter_Extra_filter();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter <em>GSS Test Proc Level0 Filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Test Proc Level0 Filter</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter
-	 * @generated
-	 */
-	EClass getGSSTestProcLevel0Filter();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter#getApply_def_filter <em>Apply def filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Apply def filter</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter#getApply_def_filter()
-	 * @see #getGSSTestProcLevel0Filter()
-	 * @generated
-	 */
-	EAttribute getGSSTestProcLevel0Filter_Apply_def_filter();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter#getExtra_filter <em>Extra filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Extra filter</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter#getExtra_filter()
-	 * @see #getGSSTestProcLevel0Filter()
-	 * @generated
-	 */
-	EReference getGSSTestProcLevel0Filter_Extra_filter();
+	EReference getGSSTestProcFilter_Extra_filter();
 
 	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcMode <em>GSS Test Proc Mode</em>}'.
@@ -4118,14 +3884,14 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_OUTPUT_LEVEL0__LEVEL0_FILTER = eINSTANCE.getGSSTestProcOutputLevel0_Level0_filter();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3FilterImpl <em>GSS Test Proc Level3 Filter</em>}' class.
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcFilterImpl <em>GSS Test Proc Filter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel3FilterImpl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel3Filter()
+		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcFilterImpl
+		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcFilter()
 		 * @generated
 		 */
-		EClass GSS_TEST_PROC_LEVEL3_FILTER = eINSTANCE.getGSSTestProcLevel3Filter();
+		EClass GSS_TEST_PROC_FILTER = eINSTANCE.getGSSTestProcFilter();
 
 		/**
 		 * The meta object literal for the '<em><b>Apply def filter</b></em>' attribute feature.
@@ -4133,7 +3899,7 @@ public interface test_procPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_TEST_PROC_LEVEL3_FILTER__APPLY_DEF_FILTER = eINSTANCE.getGSSTestProcLevel3Filter_Apply_def_filter();
+		EAttribute GSS_TEST_PROC_FILTER__APPLY_DEF_FILTER = eINSTANCE.getGSSTestProcFilter_Apply_def_filter();
 
 		/**
 		 * The meta object literal for the '<em><b>Extra filter</b></em>' reference feature.
@@ -4141,85 +3907,7 @@ public interface test_procPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_TEST_PROC_LEVEL3_FILTER__EXTRA_FILTER = eINSTANCE.getGSSTestProcLevel3Filter_Extra_filter();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2FilterImpl <em>GSS Test Proc Level2 Filter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel2FilterImpl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel2Filter()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_LEVEL2_FILTER = eINSTANCE.getGSSTestProcLevel2Filter();
-
-		/**
-		 * The meta object literal for the '<em><b>Apply def filter</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_LEVEL2_FILTER__APPLY_DEF_FILTER = eINSTANCE.getGSSTestProcLevel2Filter_Apply_def_filter();
-
-		/**
-		 * The meta object literal for the '<em><b>Extra filter</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TEST_PROC_LEVEL2_FILTER__EXTRA_FILTER = eINSTANCE.getGSSTestProcLevel2Filter_Extra_filter();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1FilterImpl <em>GSS Test Proc Level1 Filter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel1FilterImpl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel1Filter()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_LEVEL1_FILTER = eINSTANCE.getGSSTestProcLevel1Filter();
-
-		/**
-		 * The meta object literal for the '<em><b>Apply def filter</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_LEVEL1_FILTER__APPLY_DEF_FILTER = eINSTANCE.getGSSTestProcLevel1Filter_Apply_def_filter();
-
-		/**
-		 * The meta object literal for the '<em><b>Extra filter</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TEST_PROC_LEVEL1_FILTER__EXTRA_FILTER = eINSTANCE.getGSSTestProcLevel1Filter_Extra_filter();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel0FilterImpl <em>GSS Test Proc Level0 Filter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel0FilterImpl
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcLevel0Filter()
-		 * @generated
-		 */
-		EClass GSS_TEST_PROC_LEVEL0_FILTER = eINSTANCE.getGSSTestProcLevel0Filter();
-
-		/**
-		 * The meta object literal for the '<em><b>Apply def filter</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TEST_PROC_LEVEL0_FILTER__APPLY_DEF_FILTER = eINSTANCE.getGSSTestProcLevel0Filter_Apply_def_filter();
-
-		/**
-		 * The meta object literal for the '<em><b>Extra filter</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TEST_PROC_LEVEL0_FILTER__EXTRA_FILTER = eINSTANCE.getGSSTestProcLevel0Filter_Extra_filter();
+		EReference GSS_TEST_PROC_FILTER__EXTRA_FILTER = eINSTANCE.getGSSTestProcFilter_Extra_filter();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcMode <em>GSS Test Proc Mode</em>}' enum.

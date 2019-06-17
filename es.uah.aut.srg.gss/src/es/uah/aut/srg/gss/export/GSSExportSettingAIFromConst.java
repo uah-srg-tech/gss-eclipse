@@ -10,9 +10,6 @@
  */
 package es.uah.aut.srg.gss.export;
 
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField;
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Export Setting AI From Const</b></em>'.
@@ -23,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getValue <em>Value</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getToFieldRef <em>To Field Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getToArrayIndex <em>To Array Index</em>}</li>
  * </ul>
  *
@@ -31,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GSSExportSettingAIFromConst extends EObject {
+public interface GSSExportSettingAIFromConst extends GSSExportSetting {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -57,32 +53,6 @@ public interface GSSExportSettingAIFromConst extends EObject {
 	 * @generated
 	 */
 	void setValue(String value);
-
-	/**
-	 * Returns the value of the '<em><b>To Field Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>To Field Ref</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>To Field Ref</em>' reference.
-	 * @see #setToFieldRef(GSSTmTcFormatAIField)
-	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportSettingAIFromConst_ToFieldRef()
-	 * @model required="true"
-	 * @generated
-	 */
-	GSSTmTcFormatAIField getToFieldRef();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getToFieldRef <em>To Field Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To Field Ref</em>' reference.
-	 * @see #getToFieldRef()
-	 * @generated
-	 */
-	void setToFieldRef(GSSTmTcFormatAIField value);
 
 	/**
 	 * Returns the value of the '<em><b>To Array Index</b></em>' attribute.

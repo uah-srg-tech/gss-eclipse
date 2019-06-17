@@ -10,9 +10,6 @@
  */
 package es.uah.aut.srg.gss.export;
 
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Export Setting From Size</b></em>'.
@@ -23,14 +20,13 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSettingFromSize#getSizeRef <em>Size Ref</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSettingFromSize#getToFieldRef <em>To Field Ref</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportSettingFromSize()
  * @model
  * @generated
  */
-public interface GSSExportSettingFromSize extends EObject {
+public interface GSSExportSettingFromSize extends GSSExportSetting {
 	/**
 	 * Returns the value of the '<em><b>Size Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -56,31 +52,5 @@ public interface GSSExportSettingFromSize extends EObject {
 	 * @generated
 	 */
 	void setSizeRef(String value);
-
-	/**
-	 * Returns the value of the '<em><b>To Field Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>To Field Ref</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>To Field Ref</em>' reference.
-	 * @see #setToFieldRef(GSSTmTcFormatField)
-	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportSettingFromSize_ToFieldRef()
-	 * @model required="true"
-	 * @generated
-	 */
-	GSSTmTcFormatField getToFieldRef();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromSize#getToFieldRef <em>To Field Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To Field Ref</em>' reference.
-	 * @see #getToFieldRef()
-	 * @generated
-	 */
-	void setToFieldRef(GSSTmTcFormatField value);
 
 } // GSSExportSettingFromSize

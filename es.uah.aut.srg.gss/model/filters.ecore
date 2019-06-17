@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="filters" nsURI="http://srg.aut.uah.es/gss/filters" nsPrefix="gss">
-  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterFilter" abstract="true" eSuperTypes="common.ecore#//GSSModelElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterMaxtermFilter" eSuperTypes="#//GSSFilterFilter">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterFilter" abstract="true" eSuperTypes="common.ecore#//GSSModelElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="formatFile" lowerBound="1"
         eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTcFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVar" upperBound="-1"
@@ -13,20 +12,12 @@
         upperBound="-1" eType="#//GSSFilterBoolVarFromGroupedArrayItem" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarFDIC" upperBound="-1"
         eType="#//GSSFilterBoolVarFDIC" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterMaxtermFilter" eSuperTypes="#//GSSFilterFilter">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Maxterm" lowerBound="1"
         upperBound="10" eType="#//GSSFilterMaxterm" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSFilterMintermFilter" eSuperTypes="#//GSSFilterFilter">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="formatFile" lowerBound="1"
-        eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTcFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVar" upperBound="-1"
-        eType="#//GSSFilterBoolVar" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarFromArrayItem" upperBound="-1"
-        eType="#//GSSFilterBoolVarFromArrayItem" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarFromGroupedArrayItem"
-        upperBound="-1" eType="#//GSSFilterBoolVarFromGroupedArrayItem" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarFDIC" upperBound="-1"
-        eType="#//GSSFilterBoolVarFDIC" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Minterm" lowerBound="1"
         upperBound="10" eType="#//GSSFilterMinterm" containment="true"/>
   </eClassifiers>

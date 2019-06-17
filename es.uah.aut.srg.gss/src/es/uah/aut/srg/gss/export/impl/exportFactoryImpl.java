@@ -67,10 +67,12 @@ public class exportFactoryImpl extends EFactoryImpl implements exportFactory {
 		switch (eClass.getClassifierID()) {
 			case exportPackage.GSS_EXPORT_EXPORT: return createGSSExportExport();
 			case exportPackage.GSS_EXPORT_SIZES: return createGSSExportSizes();
+			case exportPackage.GSS_EXPORT_SIZE: return createGSSExportSize();
 			case exportPackage.GSS_EXPORT_SIZE_FROM_FILE_LENGTH: return createGSSExportSizeFromFileLength();
 			case exportPackage.GSS_EXPORT_SIZE_FROM_FILE_LINE: return createGSSExportSizeFromFileLine();
 			case exportPackage.GSS_EXPORT_SIZE_IN_BITS: return createGSSExportSizeInBits();
 			case exportPackage.GSS_EXPORT_SETTINGS: return createGSSExportSettings();
+			case exportPackage.GSS_EXPORT_SETTING: return createGSSExportSetting();
 			case exportPackage.GSS_EXPORT_SETTING_FROM_CONST: return createGSSExportSettingFromConst();
 			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE: return createGSSExportSettingFromSize();
 			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE: return createGSSExportSettingFromFile();
@@ -139,6 +141,16 @@ public class exportFactoryImpl extends EFactoryImpl implements exportFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GSSExportSize createGSSExportSize() {
+		GSSExportSizeImpl gssExportSize = new GSSExportSizeImpl();
+		return gssExportSize;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GSSExportSizeFromFileLength createGSSExportSizeFromFileLength() {
 		GSSExportSizeFromFileLengthImpl gssExportSizeFromFileLength = new GSSExportSizeFromFileLengthImpl();
 		return gssExportSizeFromFileLength;
@@ -172,6 +184,16 @@ public class exportFactoryImpl extends EFactoryImpl implements exportFactory {
 	public GSSExportSettings createGSSExportSettings() {
 		GSSExportSettingsImpl gssExportSettings = new GSSExportSettingsImpl();
 		return gssExportSettings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSExportSetting createGSSExportSetting() {
+		GSSExportSettingImpl gssExportSetting = new GSSExportSettingImpl();
+		return gssExportSetting;
 	}
 
 	/**

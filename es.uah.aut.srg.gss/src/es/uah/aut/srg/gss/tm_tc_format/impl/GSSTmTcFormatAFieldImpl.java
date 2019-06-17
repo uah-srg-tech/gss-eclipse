@@ -12,11 +12,10 @@ package es.uah.aut.srg.gss.tm_tc_format.impl;
 
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatArrayDimension;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldByteOrder;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldType;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatGlobalOffset;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSFieldFirstBit;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSize;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -35,8 +34,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl#getFid <em>Fid</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl#getPfid <em>Pfid</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl#getFirstBit <em>First Bit</em>}</li>
@@ -48,46 +45,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements GSSTmTcFormatAField {
-	/**
-	 * The default value of the '{@link #getFid() <em>Fid</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFid()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getFid() <em>Fid</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFid()
-	 * @generated
-	 * @ordered
-	 */
-	protected String fid = FID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPfid() <em>Pfid</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPfid()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PFID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPfid() <em>Pfid</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPfid()
-	 * @generated
-	 * @ordered
-	 */
-	protected String pfid = PFID_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -193,7 +150,7 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatSize size;
+	protected GSSTmTcFormatBytesBits size;
 
 	/**
 	 * The cached value of the '{@link #getGlobalOffset() <em>Global Offset</em>}' containment reference.
@@ -203,7 +160,7 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatGlobalOffset globalOffset;
+	protected GSSTmTcFormatBytesBits globalOffset;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -222,48 +179,6 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 	@Override
 	protected EClass eStaticClass() {
 		return tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_AFIELD;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getFid() {
-		return fid;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFid(String newFid) {
-		String oldFid = fid;
-		fid = newFid;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__FID, oldFid, fid));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getPfid() {
-		return pfid;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPfid(String newPfid) {
-		String oldPfid = pfid;
-		pfid = newPfid;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__PFID, oldPfid, pfid));
 	}
 
 	/**
@@ -409,7 +324,7 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatSize getSize() {
+	public GSSTmTcFormatBytesBits getSize() {
 		return size;
 	}
 
@@ -418,8 +333,8 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSize(GSSTmTcFormatSize newSize, NotificationChain msgs) {
-		GSSTmTcFormatSize oldSize = size;
+	public NotificationChain basicSetSize(GSSTmTcFormatBytesBits newSize, NotificationChain msgs) {
+		GSSTmTcFormatBytesBits oldSize = size;
 		size = newSize;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__SIZE, oldSize, newSize);
@@ -433,7 +348,7 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSize(GSSTmTcFormatSize newSize) {
+	public void setSize(GSSTmTcFormatBytesBits newSize) {
 		if (newSize != size) {
 			NotificationChain msgs = null;
 			if (size != null)
@@ -452,7 +367,7 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatGlobalOffset getGlobalOffset() {
+	public GSSTmTcFormatBytesBits getGlobalOffset() {
 		return globalOffset;
 	}
 
@@ -461,8 +376,8 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetGlobalOffset(GSSTmTcFormatGlobalOffset newGlobalOffset, NotificationChain msgs) {
-		GSSTmTcFormatGlobalOffset oldGlobalOffset = globalOffset;
+	public NotificationChain basicSetGlobalOffset(GSSTmTcFormatBytesBits newGlobalOffset, NotificationChain msgs) {
+		GSSTmTcFormatBytesBits oldGlobalOffset = globalOffset;
 		globalOffset = newGlobalOffset;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__GLOBAL_OFFSET, oldGlobalOffset, newGlobalOffset);
@@ -476,7 +391,7 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGlobalOffset(GSSTmTcFormatGlobalOffset newGlobalOffset) {
+	public void setGlobalOffset(GSSTmTcFormatBytesBits newGlobalOffset) {
 		if (newGlobalOffset != globalOffset) {
 			NotificationChain msgs = null;
 			if (globalOffset != null)
@@ -559,10 +474,6 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__FID:
-				return getFid();
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__PFID:
-				return getPfid();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__TYPE:
 				return getType();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__BYTE_ORDER:
@@ -587,12 +498,6 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__FID:
-				setFid((String)newValue);
-				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__PFID:
-				setPfid((String)newValue);
-				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__TYPE:
 				setType((GSSTmTcFormatFieldType)newValue);
 				return;
@@ -606,10 +511,10 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 				setArrayDimension((GSSTmTcFormatArrayDimension)newValue);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__SIZE:
-				setSize((GSSTmTcFormatSize)newValue);
+				setSize((GSSTmTcFormatBytesBits)newValue);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__GLOBAL_OFFSET:
-				setGlobalOffset((GSSTmTcFormatGlobalOffset)newValue);
+				setGlobalOffset((GSSTmTcFormatBytesBits)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -623,12 +528,6 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__FID:
-				setFid(FID_EDEFAULT);
-				return;
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__PFID:
-				setPfid(PFID_EDEFAULT);
-				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__TYPE:
 				unsetType();
 				return;
@@ -642,10 +541,10 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 				setArrayDimension((GSSTmTcFormatArrayDimension)null);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__SIZE:
-				setSize((GSSTmTcFormatSize)null);
+				setSize((GSSTmTcFormatBytesBits)null);
 				return;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__GLOBAL_OFFSET:
-				setGlobalOffset((GSSTmTcFormatGlobalOffset)null);
+				setGlobalOffset((GSSTmTcFormatBytesBits)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -659,10 +558,6 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__FID:
-				return FID_EDEFAULT == null ? fid != null : !FID_EDEFAULT.equals(fid);
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__PFID:
-				return PFID_EDEFAULT == null ? pfid != null : !PFID_EDEFAULT.equals(pfid);
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__TYPE:
 				return isSetType();
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__BYTE_ORDER:
@@ -689,11 +584,7 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (fid: ");
-		result.append(fid);
-		result.append(", pfid: ");
-		result.append(pfid);
-		result.append(", type: ");
+		result.append(" (type: ");
 		if (typeESet) result.append(type); else result.append("<unset>");
 		result.append(", byteOrder: ");
 		if (byteOrderESet) result.append(byteOrder); else result.append("<unset>");

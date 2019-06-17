@@ -214,28 +214,28 @@ GSSTestProcOutputLevel0 returns GSSTestProcOutputLevel0:
 	'}' ';'
 ;
 
-GSSTestProcLevel3Filter returns GSSTestProcLevel3Filter:
+GSSTestProcLevel3Filter returns GSSTestProcFilter:
 	'GSSTestProcLevel3Filter' '{'
 		'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';'
 		('extra_filter' ':=' extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
-GSSTestProcLevel2Filter returns GSSTestProcLevel2Filter:
+GSSTestProcLevel2Filter returns GSSTestProcFilter:
 	'GSSTestProcLevel2Filter' '{'
 		'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';'
 		('extra_filter' ':=' extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
-GSSTestProcLevel1Filter returns GSSTestProcLevel1Filter:
+GSSTestProcLevel1Filter returns GSSTestProcFilter:
 	'GSSTestProcLevel1Filter' '{'
 		'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';'
 		('extra_filter' ':=' extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
-GSSTestProcLevel0Filter returns GSSTestProcLevel0Filter:
+GSSTestProcLevel0Filter returns GSSTestProcFilter:
 	'GSSTestProcLevel0Filter' '{'
 		'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';'
 		('extra_filter' ':=' extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?

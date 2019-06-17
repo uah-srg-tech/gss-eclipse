@@ -12,15 +12,10 @@ package es.uah.aut.srg.gss.export.impl;
 
 import es.uah.aut.srg.gss.export.GSSExportSettingFromSize;
 import es.uah.aut.srg.gss.export.exportPackage;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,12 +26,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingFromSizeImpl#getSizeRef <em>Size Ref</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingFromSizeImpl#getToFieldRef <em>To Field Ref</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSExportSettingFromSizeImpl extends MinimalEObjectImpl.Container implements GSSExportSettingFromSize {
+public class GSSExportSettingFromSizeImpl extends GSSExportSettingImpl implements GSSExportSettingFromSize {
 	/**
 	 * The default value of the '{@link #getSizeRef() <em>Size Ref</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -56,16 +50,6 @@ public class GSSExportSettingFromSizeImpl extends MinimalEObjectImpl.Container i
 	 * @ordered
 	 */
 	protected String sizeRef = SIZE_REF_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getToFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected GSSTmTcFormatField toFieldRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,52 +96,11 @@ public class GSSExportSettingFromSizeImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatField getToFieldRef() {
-		if (toFieldRef != null && toFieldRef.eIsProxy()) {
-			InternalEObject oldToFieldRef = (InternalEObject)toFieldRef;
-			toFieldRef = (GSSTmTcFormatField)eResolveProxy(oldToFieldRef);
-			if (toFieldRef != oldToFieldRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF, oldToFieldRef, toFieldRef));
-			}
-		}
-		return toFieldRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTmTcFormatField basicGetToFieldRef() {
-		return toFieldRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setToFieldRef(GSSTmTcFormatField newToFieldRef) {
-		GSSTmTcFormatField oldToFieldRef = toFieldRef;
-		toFieldRef = newToFieldRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF, oldToFieldRef, toFieldRef));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__SIZE_REF:
 				return getSizeRef();
-			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF:
-				if (resolve) return getToFieldRef();
-				return basicGetToFieldRef();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -172,9 +115,6 @@ public class GSSExportSettingFromSizeImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__SIZE_REF:
 				setSizeRef((String)newValue);
-				return;
-			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF:
-				setToFieldRef((GSSTmTcFormatField)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -191,9 +131,6 @@ public class GSSExportSettingFromSizeImpl extends MinimalEObjectImpl.Container i
 			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__SIZE_REF:
 				setSizeRef(SIZE_REF_EDEFAULT);
 				return;
-			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF:
-				setToFieldRef((GSSTmTcFormatField)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -208,8 +145,6 @@ public class GSSExportSettingFromSizeImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__SIZE_REF:
 				return SIZE_REF_EDEFAULT == null ? sizeRef != null : !SIZE_REF_EDEFAULT.equals(sizeRef);
-			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF:
-				return toFieldRef != null;
 		}
 		return super.eIsSet(featureID);
 	}

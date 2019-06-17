@@ -18,15 +18,12 @@ import es.uah.aut.srg.gss.lang.test_proc.services.TEST_PROCGrammarAccess;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcConcurrentStep;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcConcurrentSteps;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcEnableDisable;
+import es.uah.aut.srg.gss.test_proc.GSSTestProcFilter;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel0;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputs;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3Filter;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcNextStep;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1;
@@ -80,6 +77,24 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case test_procPackage.GSS_TEST_PROC_ENABLE_DISABLE:
 				sequence_GSSTestProcEnableDisable(context, (GSSTestProcEnableDisable) semanticObject); 
 				return; 
+			case test_procPackage.GSS_TEST_PROC_FILTER:
+				if (rule == grammarAccess.getGSSTestProcLevel0FilterRule()) {
+					sequence_GSSTestProcLevel0Filter(context, (GSSTestProcFilter) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getGSSTestProcLevel1FilterRule()) {
+					sequence_GSSTestProcLevel1Filter(context, (GSSTestProcFilter) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getGSSTestProcLevel2FilterRule()) {
+					sequence_GSSTestProcLevel2Filter(context, (GSSTestProcFilter) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getGSSTestProcLevel3FilterRule()) {
+					sequence_GSSTestProcLevel3Filter(context, (GSSTestProcFilter) semanticObject); 
+					return; 
+				}
+				else break;
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL0:
 				sequence_GSSTestProcInputLevel0(context, (GSSTestProcInputLevel0) semanticObject); 
 				return; 
@@ -94,18 +109,6 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 				return; 
 			case test_procPackage.GSS_TEST_PROC_INPUTS:
 				sequence_GSSTestProcInputs(context, (GSSTestProcInputs) semanticObject); 
-				return; 
-			case test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER:
-				sequence_GSSTestProcLevel0Filter(context, (GSSTestProcLevel0Filter) semanticObject); 
-				return; 
-			case test_procPackage.GSS_TEST_PROC_LEVEL1_FILTER:
-				sequence_GSSTestProcLevel1Filter(context, (GSSTestProcLevel1Filter) semanticObject); 
-				return; 
-			case test_procPackage.GSS_TEST_PROC_LEVEL2_FILTER:
-				sequence_GSSTestProcLevel2Filter(context, (GSSTestProcLevel2Filter) semanticObject); 
-				return; 
-			case test_procPackage.GSS_TEST_PROC_LEVEL3_FILTER:
-				sequence_GSSTestProcLevel3Filter(context, (GSSTestProcLevel3Filter) semanticObject); 
 				return; 
 			case test_procPackage.GSS_TEST_PROC_NEXT_STEP:
 				sequence_GSSTestProcNextStep(context, (GSSTestProcNextStep) semanticObject); 
@@ -324,48 +327,48 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
-	 *     GSSTestProcLevel0Filter returns GSSTestProcLevel0Filter
+	 *     GSSTestProcLevel0Filter returns GSSTestProcFilter
 	 *
 	 * Constraint:
 	 *     (apply_def_filter=GSSTestProcYesNo extra_filter=[GSSFilterFilter|VersionedQualifiedName]?)
 	 */
-	protected void sequence_GSSTestProcLevel0Filter(ISerializationContext context, GSSTestProcLevel0Filter semanticObject) {
+	protected void sequence_GSSTestProcLevel0Filter(ISerializationContext context, GSSTestProcFilter semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     GSSTestProcLevel1Filter returns GSSTestProcLevel1Filter
+	 *     GSSTestProcLevel1Filter returns GSSTestProcFilter
 	 *
 	 * Constraint:
 	 *     (apply_def_filter=GSSTestProcYesNo extra_filter=[GSSFilterFilter|VersionedQualifiedName]?)
 	 */
-	protected void sequence_GSSTestProcLevel1Filter(ISerializationContext context, GSSTestProcLevel1Filter semanticObject) {
+	protected void sequence_GSSTestProcLevel1Filter(ISerializationContext context, GSSTestProcFilter semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     GSSTestProcLevel2Filter returns GSSTestProcLevel2Filter
+	 *     GSSTestProcLevel2Filter returns GSSTestProcFilter
 	 *
 	 * Constraint:
 	 *     (apply_def_filter=GSSTestProcYesNo extra_filter=[GSSFilterFilter|VersionedQualifiedName]?)
 	 */
-	protected void sequence_GSSTestProcLevel2Filter(ISerializationContext context, GSSTestProcLevel2Filter semanticObject) {
+	protected void sequence_GSSTestProcLevel2Filter(ISerializationContext context, GSSTestProcFilter semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     GSSTestProcLevel3Filter returns GSSTestProcLevel3Filter
+	 *     GSSTestProcLevel3Filter returns GSSTestProcFilter
 	 *
 	 * Constraint:
 	 *     (apply_def_filter=GSSTestProcYesNo extra_filter=[GSSFilterFilter|VersionedQualifiedName]?)
 	 */
-	protected void sequence_GSSTestProcLevel3Filter(ISerializationContext context, GSSTestProcLevel3Filter semanticObject) {
+	protected void sequence_GSSTestProcLevel3Filter(ISerializationContext context, GSSTestProcFilter semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

@@ -201,27 +201,9 @@ public class test_procSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case test_procPackage.GSS_TEST_PROC_LEVEL3_FILTER: {
-				GSSTestProcLevel3Filter gssTestProcLevel3Filter = (GSSTestProcLevel3Filter)theEObject;
-				T result = caseGSSTestProcLevel3Filter(gssTestProcLevel3Filter);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case test_procPackage.GSS_TEST_PROC_LEVEL2_FILTER: {
-				GSSTestProcLevel2Filter gssTestProcLevel2Filter = (GSSTestProcLevel2Filter)theEObject;
-				T result = caseGSSTestProcLevel2Filter(gssTestProcLevel2Filter);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case test_procPackage.GSS_TEST_PROC_LEVEL1_FILTER: {
-				GSSTestProcLevel1Filter gssTestProcLevel1Filter = (GSSTestProcLevel1Filter)theEObject;
-				T result = caseGSSTestProcLevel1Filter(gssTestProcLevel1Filter);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER: {
-				GSSTestProcLevel0Filter gssTestProcLevel0Filter = (GSSTestProcLevel0Filter)theEObject;
-				T result = caseGSSTestProcLevel0Filter(gssTestProcLevel0Filter);
+			case test_procPackage.GSS_TEST_PROC_FILTER: {
+				GSSTestProcFilter gssTestProcFilter = (GSSTestProcFilter)theEObject;
+				T result = caseGSSTestProcFilter(gssTestProcFilter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -515,62 +497,17 @@ public class test_procSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Proc Level3 Filter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Proc Filter</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Test Proc Level3 Filter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Test Proc Filter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGSSTestProcLevel3Filter(GSSTestProcLevel3Filter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Proc Level2 Filter</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Test Proc Level2 Filter</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTestProcLevel2Filter(GSSTestProcLevel2Filter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Proc Level1 Filter</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Test Proc Level1 Filter</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTestProcLevel1Filter(GSSTestProcLevel1Filter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Proc Level0 Filter</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Test Proc Level0 Filter</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTestProcLevel0Filter(GSSTestProcLevel0Filter object) {
+	public T caseGSSTestProcFilter(GSSTestProcFilter object) {
 		return null;
 	}
 

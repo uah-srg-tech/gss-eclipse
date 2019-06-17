@@ -12,7 +12,7 @@ package es.uah.aut.srg.gss.test_proc.impl;
 
 import es.uah.aut.srg.gss.filters.GSSFilterFilter;
 
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter;
+import es.uah.aut.srg.gss.test_proc.GSSTestProcFilter;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcYesNo;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
 
@@ -26,19 +26,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GSS Test Proc Level0 Filter</b></em>'.
+ * An implementation of the model object '<em><b>GSS Test Proc Filter</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel0FilterImpl#getApply_def_filter <em>Apply def filter</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcLevel0FilterImpl#getExtra_filter <em>Extra filter</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcFilterImpl#getApply_def_filter <em>Apply def filter</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcFilterImpl#getExtra_filter <em>Extra filter</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSTestProcLevel0FilterImpl extends MinimalEObjectImpl.Container implements GSSTestProcLevel0Filter {
+public class GSSTestProcFilterImpl extends MinimalEObjectImpl.Container implements GSSTestProcFilter {
 	/**
 	 * The default value of the '{@link #getApply_def_filter() <em>Apply def filter</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -83,7 +83,7 @@ public class GSSTestProcLevel0FilterImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GSSTestProcLevel0FilterImpl() {
+	protected GSSTestProcFilterImpl() {
 		super();
 	}
 
@@ -94,7 +94,7 @@ public class GSSTestProcLevel0FilterImpl extends MinimalEObjectImpl.Container im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return test_procPackage.Literals.GSS_TEST_PROC_LEVEL0_FILTER;
+		return test_procPackage.Literals.GSS_TEST_PROC_FILTER;
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class GSSTestProcLevel0FilterImpl extends MinimalEObjectImpl.Container im
 		boolean oldApply_def_filterESet = apply_def_filterESet;
 		apply_def_filterESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER__APPLY_DEF_FILTER, oldApply_def_filter, apply_def_filter, !oldApply_def_filterESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_FILTER__APPLY_DEF_FILTER, oldApply_def_filter, apply_def_filter, !oldApply_def_filterESet));
 	}
 
 	/**
@@ -131,7 +131,7 @@ public class GSSTestProcLevel0FilterImpl extends MinimalEObjectImpl.Container im
 		apply_def_filter = APPLY_DEF_FILTER_EDEFAULT;
 		apply_def_filterESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER__APPLY_DEF_FILTER, oldApply_def_filter, APPLY_DEF_FILTER_EDEFAULT, oldApply_def_filterESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, test_procPackage.GSS_TEST_PROC_FILTER__APPLY_DEF_FILTER, oldApply_def_filter, APPLY_DEF_FILTER_EDEFAULT, oldApply_def_filterESet));
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class GSSTestProcLevel0FilterImpl extends MinimalEObjectImpl.Container im
 			extra_filter = (GSSFilterFilter)eResolveProxy(oldExtra_filter);
 			if (extra_filter != oldExtra_filter) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER__EXTRA_FILTER, oldExtra_filter, extra_filter));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_FILTER__EXTRA_FILTER, oldExtra_filter, extra_filter));
 			}
 		}
 		return extra_filter;
@@ -178,7 +178,7 @@ public class GSSTestProcLevel0FilterImpl extends MinimalEObjectImpl.Container im
 		GSSFilterFilter oldExtra_filter = extra_filter;
 		extra_filter = newExtra_filter;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER__EXTRA_FILTER, oldExtra_filter, extra_filter));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_FILTER__EXTRA_FILTER, oldExtra_filter, extra_filter));
 	}
 
 	/**
@@ -189,9 +189,9 @@ public class GSSTestProcLevel0FilterImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER__APPLY_DEF_FILTER:
+			case test_procPackage.GSS_TEST_PROC_FILTER__APPLY_DEF_FILTER:
 				return getApply_def_filter();
-			case test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER__EXTRA_FILTER:
+			case test_procPackage.GSS_TEST_PROC_FILTER__EXTRA_FILTER:
 				if (resolve) return getExtra_filter();
 				return basicGetExtra_filter();
 		}
@@ -206,10 +206,10 @@ public class GSSTestProcLevel0FilterImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER__APPLY_DEF_FILTER:
+			case test_procPackage.GSS_TEST_PROC_FILTER__APPLY_DEF_FILTER:
 				setApply_def_filter((GSSTestProcYesNo)newValue);
 				return;
-			case test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER__EXTRA_FILTER:
+			case test_procPackage.GSS_TEST_PROC_FILTER__EXTRA_FILTER:
 				setExtra_filter((GSSFilterFilter)newValue);
 				return;
 		}
@@ -224,10 +224,10 @@ public class GSSTestProcLevel0FilterImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER__APPLY_DEF_FILTER:
+			case test_procPackage.GSS_TEST_PROC_FILTER__APPLY_DEF_FILTER:
 				unsetApply_def_filter();
 				return;
-			case test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER__EXTRA_FILTER:
+			case test_procPackage.GSS_TEST_PROC_FILTER__EXTRA_FILTER:
 				setExtra_filter((GSSFilterFilter)null);
 				return;
 		}
@@ -242,9 +242,9 @@ public class GSSTestProcLevel0FilterImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER__APPLY_DEF_FILTER:
+			case test_procPackage.GSS_TEST_PROC_FILTER__APPLY_DEF_FILTER:
 				return isSetApply_def_filter();
-			case test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER__EXTRA_FILTER:
+			case test_procPackage.GSS_TEST_PROC_FILTER__EXTRA_FILTER:
 				return extra_filter != null;
 		}
 		return super.eIsSet(featureID);
@@ -266,4 +266,4 @@ public class GSSTestProcLevel0FilterImpl extends MinimalEObjectImpl.Container im
 		return result.toString();
 	}
 
-} //GSSTestProcLevel0FilterImpl
+} //GSSTestProcFilterImpl

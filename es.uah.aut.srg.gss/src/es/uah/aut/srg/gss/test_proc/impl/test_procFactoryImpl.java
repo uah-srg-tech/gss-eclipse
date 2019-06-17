@@ -83,10 +83,7 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2: return createGSSTestProcOutputLevel2();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL1: return createGSSTestProcOutputLevel1();
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL0: return createGSSTestProcOutputLevel0();
-			case test_procPackage.GSS_TEST_PROC_LEVEL3_FILTER: return createGSSTestProcLevel3Filter();
-			case test_procPackage.GSS_TEST_PROC_LEVEL2_FILTER: return createGSSTestProcLevel2Filter();
-			case test_procPackage.GSS_TEST_PROC_LEVEL1_FILTER: return createGSSTestProcLevel1Filter();
-			case test_procPackage.GSS_TEST_PROC_LEVEL0_FILTER: return createGSSTestProcLevel0Filter();
+			case test_procPackage.GSS_TEST_PROC_FILTER: return createGSSTestProcFilter();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -319,39 +316,9 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcLevel3Filter createGSSTestProcLevel3Filter() {
-		GSSTestProcLevel3FilterImpl gssTestProcLevel3Filter = new GSSTestProcLevel3FilterImpl();
-		return gssTestProcLevel3Filter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcLevel2Filter createGSSTestProcLevel2Filter() {
-		GSSTestProcLevel2FilterImpl gssTestProcLevel2Filter = new GSSTestProcLevel2FilterImpl();
-		return gssTestProcLevel2Filter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcLevel1Filter createGSSTestProcLevel1Filter() {
-		GSSTestProcLevel1FilterImpl gssTestProcLevel1Filter = new GSSTestProcLevel1FilterImpl();
-		return gssTestProcLevel1Filter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcLevel0Filter createGSSTestProcLevel0Filter() {
-		GSSTestProcLevel0FilterImpl gssTestProcLevel0Filter = new GSSTestProcLevel0FilterImpl();
-		return gssTestProcLevel0Filter;
+	public GSSTestProcFilter createGSSTestProcFilter() {
+		GSSTestProcFilterImpl gssTestProcFilter = new GSSTestProcFilterImpl();
+		return gssTestProcFilter;
 	}
 
 	/**

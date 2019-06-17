@@ -19,8 +19,6 @@ package es.uah.aut.srg.gss.tm_tc_format;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getFid <em>Fid</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getPfid <em>Pfid</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getFirstBit <em>First Bit</em>}</li>
@@ -34,58 +32,6 @@ package es.uah.aut.srg.gss.tm_tc_format;
  * @generated
  */
 public interface GSSTmTcFormatAIField extends GSSTmTcFormatField {
-	/**
-	 * Returns the value of the '<em><b>Fid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Fid</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Fid</em>' attribute.
-	 * @see #setFid(String)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAIField_Fid()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getFid();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getFid <em>Fid</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fid</em>' attribute.
-	 * @see #getFid()
-	 * @generated
-	 */
-	void setFid(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Pfid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Pfid</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pfid</em>' attribute.
-	 * @see #setPfid(String)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAIField_Pfid()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getPfid();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getPfid <em>Pfid</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pfid</em>' attribute.
-	 * @see #getPfid()
-	 * @generated
-	 */
-	void setPfid(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldType}.
@@ -263,12 +209,12 @@ public interface GSSTmTcFormatAIField extends GSSTmTcFormatField {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Size</em>' containment reference.
-	 * @see #setSize(GSSTmTcFormatSize)
+	 * @see #setSize(GSSTmTcFormatBytesBits)
 	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAIField_Size()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatSize getSize();
+	GSSTmTcFormatBytesBits getSize();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getSize <em>Size</em>}' containment reference.
@@ -278,7 +224,7 @@ public interface GSSTmTcFormatAIField extends GSSTmTcFormatField {
 	 * @see #getSize()
 	 * @generated
 	 */
-	void setSize(GSSTmTcFormatSize value);
+	void setSize(GSSTmTcFormatBytesBits value);
 
 	/**
 	 * Returns the value of the '<em><b>Local Offset</b></em>' containment reference.
@@ -289,12 +235,12 @@ public interface GSSTmTcFormatAIField extends GSSTmTcFormatField {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Local Offset</em>' containment reference.
-	 * @see #setLocalOffset(GSSTmTcFormatLocalOffset)
+	 * @see #setLocalOffset(GSSTmTcFormatBytesBits)
 	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAIField_LocalOffset()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatLocalOffset getLocalOffset();
+	GSSTmTcFormatBytesBits getLocalOffset();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getLocalOffset <em>Local Offset</em>}' containment reference.
@@ -304,7 +250,7 @@ public interface GSSTmTcFormatAIField extends GSSTmTcFormatField {
 	 * @see #getLocalOffset()
 	 * @generated
 	 */
-	void setLocalOffset(GSSTmTcFormatLocalOffset value);
+	void setLocalOffset(GSSTmTcFormatBytesBits value);
 
 	/**
 	 * Returns the value of the '<em><b>Array Ref</b></em>' containment reference.

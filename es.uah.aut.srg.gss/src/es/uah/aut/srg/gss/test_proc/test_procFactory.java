@@ -192,40 +192,13 @@ public interface test_procFactory extends EFactory {
 	GSSTestProcOutputLevel0 createGSSTestProcOutputLevel0();
 
 	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level3 Filter</em>'.
+	 * Returns a new object of class '<em>GSS Test Proc Filter</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level3 Filter</em>'.
+	 * @return a new object of class '<em>GSS Test Proc Filter</em>'.
 	 * @generated
 	 */
-	GSSTestProcLevel3Filter createGSSTestProcLevel3Filter();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level2 Filter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level2 Filter</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel2Filter createGSSTestProcLevel2Filter();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level1 Filter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level1 Filter</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel1Filter createGSSTestProcLevel1Filter();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level0 Filter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level0 Filter</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel0Filter createGSSTestProcLevel0Filter();
+	GSSTestProcFilter createGSSTestProcFilter();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -102,6 +102,7 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FORMULA_FIELD: {
 				GSSTmTcFormatCSFormulaField gssTmTcFormatCSFormulaField = (GSSTmTcFormatCSFormulaField)theEObject;
 				T result = caseGSSTmTcFormatCSFormulaField(gssTmTcFormatCSFormulaField);
+				if (result == null) result = caseGSSTmTcFormatCSField(gssTmTcFormatCSFormulaField);
 				if (result == null) result = caseGSSTmTcFormatField(gssTmTcFormatCSFormulaField);
 				if (result == null) result = caseGSSModelObject(gssTmTcFormatCSFormulaField);
 				if (result == null) result = defaultCase(theEObject);
@@ -147,15 +148,9 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_SIZE: {
-				GSSTmTcFormatSize gssTmTcFormatSize = (GSSTmTcFormatSize)theEObject;
-				T result = caseGSSTmTcFormatSize(gssTmTcFormatSize);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_GLOBAL_OFFSET: {
-				GSSTmTcFormatGlobalOffset gssTmTcFormatGlobalOffset = (GSSTmTcFormatGlobalOffset)theEObject;
-				T result = caseGSSTmTcFormatGlobalOffset(gssTmTcFormatGlobalOffset);
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_BYTES_BITS: {
+				GSSTmTcFormatBytesBits gssTmTcFormatBytesBits = (GSSTmTcFormatBytesBits)theEObject;
+				T result = caseGSSTmTcFormatBytesBits(gssTmTcFormatBytesBits);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -165,21 +160,9 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CONST_SIZE: {
-				GSSTmTcFormatConstSize gssTmTcFormatConstSize = (GSSTmTcFormatConstSize)theEObject;
-				T result = caseGSSTmTcFormatConstSize(gssTmTcFormatConstSize);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VARIABLE_SIZE: {
 				GSSTmTcFormatVariableSize gssTmTcFormatVariableSize = (GSSTmTcFormatVariableSize)theEObject;
 				T result = caseGSSTmTcFormatVariableSize(gssTmTcFormatVariableSize);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_MAX_SIZE: {
-				GSSTmTcFormatMaxSize gssTmTcFormatMaxSize = (GSSTmTcFormatMaxSize)theEObject;
-				T result = caseGSSTmTcFormatMaxSize(gssTmTcFormatMaxSize);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -210,12 +193,6 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_ARRAY_REF: {
 				GSSTmTcFormatArrayRef gssTmTcFormatArrayRef = (GSSTmTcFormatArrayRef)theEObject;
 				T result = caseGSSTmTcFormatArrayRef(gssTmTcFormatArrayRef);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_LOCAL_OFFSET: {
-				GSSTmTcFormatLocalOffset gssTmTcFormatLocalOffset = (GSSTmTcFormatLocalOffset)theEObject;
-				T result = caseGSSTmTcFormatLocalOffset(gssTmTcFormatLocalOffset);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -269,36 +246,6 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Size</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Size</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTmTcFormatSize(GSSTmTcFormatSize object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Global Offset</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Global Offset</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTmTcFormatGlobalOffset(GSSTmTcFormatGlobalOffset object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format CS Formula Field</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -344,21 +291,6 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Const Size</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Const Size</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTmTcFormatConstSize(GSSTmTcFormatConstSize object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Variable Size</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -370,21 +302,6 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSTmTcFormatVariableSize(GSSTmTcFormatVariableSize object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Max Size</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Max Size</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTmTcFormatMaxSize(GSSTmTcFormatMaxSize object) {
 		return null;
 	}
 
@@ -509,6 +426,21 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Bytes Bits</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Bytes Bits</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSTmTcFormatBytesBits(GSSTmTcFormatBytesBits object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Array Ref</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -520,21 +452,6 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSTmTcFormatArrayRef(GSSTmTcFormatArrayRef object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Local Offset</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Local Offset</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTmTcFormatLocalOffset(GSSTmTcFormatLocalOffset object) {
 		return null;
 	}
 

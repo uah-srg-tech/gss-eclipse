@@ -2835,11 +2835,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//GSSTestProcLevel3Filter:
+		//GSSTestProcLevel3Filter GSSTestProcFilter:
 		//	'GSSTestProcLevel3Filter' '{'
 		//	'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';' ('extra_filter' ':='
 		//	extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
-		//	'}' ';';
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTestProcLevel3Filter' '{' 'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';' ('extra_filter' ':='
@@ -2914,11 +2914,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//GSSTestProcLevel2Filter:
+		//GSSTestProcLevel2Filter GSSTestProcFilter:
 		//	'GSSTestProcLevel2Filter' '{'
 		//	'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';' ('extra_filter' ':='
 		//	extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
-		//	'}' ';';
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTestProcLevel2Filter' '{' 'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';' ('extra_filter' ':='
@@ -2993,11 +2993,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//GSSTestProcLevel1Filter:
+		//GSSTestProcLevel1Filter GSSTestProcFilter:
 		//	'GSSTestProcLevel1Filter' '{'
 		//	'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';' ('extra_filter' ':='
 		//	extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
-		//	'}' ';';
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTestProcLevel1Filter' '{' 'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';' ('extra_filter' ':='
@@ -3072,11 +3072,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//GSSTestProcLevel0Filter:
+		//GSSTestProcLevel0Filter GSSTestProcFilter:
 		//	'GSSTestProcLevel0Filter' '{'
 		//	'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';' ('extra_filter' ':='
 		//	extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
-		//	'}' ';';
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTestProcLevel0Filter' '{' 'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';' ('extra_filter' ':='
@@ -4107,11 +4107,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSTestProcOutputLevel0Access().getRule();
 	}
 	
-	//GSSTestProcLevel3Filter:
+	//GSSTestProcLevel3Filter GSSTestProcFilter:
 	//	'GSSTestProcLevel3Filter' '{'
 	//	'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';' ('extra_filter' ':='
 	//	extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
-	//	'}' ';';
+	//	'}' ';'
 	public GSSTestProcLevel3FilterElements getGSSTestProcLevel3FilterAccess() {
 		return pGSSTestProcLevel3Filter;
 	}
@@ -4120,11 +4120,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSTestProcLevel3FilterAccess().getRule();
 	}
 	
-	//GSSTestProcLevel2Filter:
+	//GSSTestProcLevel2Filter GSSTestProcFilter:
 	//	'GSSTestProcLevel2Filter' '{'
 	//	'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';' ('extra_filter' ':='
 	//	extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
-	//	'}' ';';
+	//	'}' ';'
 	public GSSTestProcLevel2FilterElements getGSSTestProcLevel2FilterAccess() {
 		return pGSSTestProcLevel2Filter;
 	}
@@ -4133,11 +4133,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSTestProcLevel2FilterAccess().getRule();
 	}
 	
-	//GSSTestProcLevel1Filter:
+	//GSSTestProcLevel1Filter GSSTestProcFilter:
 	//	'GSSTestProcLevel1Filter' '{'
 	//	'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';' ('extra_filter' ':='
 	//	extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
-	//	'}' ';';
+	//	'}' ';'
 	public GSSTestProcLevel1FilterElements getGSSTestProcLevel1FilterAccess() {
 		return pGSSTestProcLevel1Filter;
 	}
@@ -4146,11 +4146,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSTestProcLevel1FilterAccess().getRule();
 	}
 	
-	//GSSTestProcLevel0Filter:
+	//GSSTestProcLevel0Filter GSSTestProcFilter:
 	//	'GSSTestProcLevel0Filter' '{'
 	//	'apply_def_filter' ':=' apply_def_filter=GSSTestProcYesNo ';' ('extra_filter' ':='
 	//	extra_filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
-	//	'}' ';';
+	//	'}' ';'
 	public GSSTestProcLevel0FilterElements getGSSTestProcLevel0FilterAccess() {
 		return pGSSTestProcLevel0Filter;
 	}

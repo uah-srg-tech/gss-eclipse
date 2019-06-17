@@ -69,12 +69,12 @@ public interface GSSTestProcOutputLevel1 extends GSSTestProcOutput {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level1 filter</em>' containment reference.
-	 * @see #setLevel1_filter(GSSTestProcLevel1Filter)
+	 * @see #setLevel1_filter(GSSTestProcFilter)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel1_Level1_filter()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSTestProcLevel1Filter getLevel1_filter();
+	GSSTestProcFilter getLevel1_filter();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel1_filter <em>Level1 filter</em>}' containment reference.
@@ -84,7 +84,7 @@ public interface GSSTestProcOutputLevel1 extends GSSTestProcOutput {
 	 * @see #getLevel1_filter()
 	 * @generated
 	 */
-	void setLevel1_filter(GSSTestProcLevel1Filter value);
+	void setLevel1_filter(GSSTestProcFilter value);
 
 	/**
 	 * Returns the value of the '<em><b>Level0</b></em>' reference.
@@ -147,12 +147,12 @@ public interface GSSTestProcOutputLevel1 extends GSSTestProcOutput {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level0 filter</em>' containment reference.
-	 * @see #setLevel0_filter(GSSTestProcLevel0Filter)
+	 * @see #setLevel0_filter(GSSTestProcFilter)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel1_Level0_filter()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSTestProcLevel0Filter getLevel0_filter();
+	GSSTestProcFilter getLevel0_filter();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1#getLevel0_filter <em>Level0 filter</em>}' containment reference.
@@ -162,6 +162,6 @@ public interface GSSTestProcOutputLevel1 extends GSSTestProcOutput {
 	 * @see #getLevel0_filter()
 	 * @generated
 	 */
-	void setLevel0_filter(GSSTestProcLevel0Filter value);
+	void setLevel0_filter(GSSTestProcFilter value);
 
 } // GSSTestProcOutputLevel1

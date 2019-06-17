@@ -86,6 +86,10 @@ public class exportAdapterFactory extends AdapterFactoryImpl {
 				return createGSSExportSizesAdapter();
 			}
 			@Override
+			public Adapter caseGSSExportSize(GSSExportSize object) {
+				return createGSSExportSizeAdapter();
+			}
+			@Override
 			public Adapter caseGSSExportSizeFromFileLength(GSSExportSizeFromFileLength object) {
 				return createGSSExportSizeFromFileLengthAdapter();
 			}
@@ -100,6 +104,10 @@ public class exportAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGSSExportSettings(GSSExportSettings object) {
 				return createGSSExportSettingsAdapter();
+			}
+			@Override
+			public Adapter caseGSSExportSetting(GSSExportSetting object) {
+				return createGSSExportSettingAdapter();
 			}
 			@Override
 			public Adapter caseGSSExportSettingFromConst(GSSExportSettingFromConst object) {
@@ -186,6 +194,20 @@ public class exportAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.export.GSSExportSize <em>GSS Export Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.export.GSSExportSize
+	 * @generated
+	 */
+	public Adapter createGSSExportSizeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.export.GSSExportSizeFromFileLength <em>GSS Export Size From File Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -238,6 +260,20 @@ public class exportAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSExportSettingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.export.GSSExportSetting <em>GSS Export Setting</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.export.GSSExportSetting
+	 * @generated
+	 */
+	public Adapter createGSSExportSettingAdapter() {
 		return null;
 	}
 

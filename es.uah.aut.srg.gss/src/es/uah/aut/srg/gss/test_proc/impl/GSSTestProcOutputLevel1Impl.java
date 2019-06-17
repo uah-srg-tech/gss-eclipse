@@ -12,8 +12,7 @@ package es.uah.aut.srg.gss.test_proc.impl;
 
 import es.uah.aut.srg.gss.imports.GSSImportImport;
 
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter;
+import es.uah.aut.srg.gss.test_proc.GSSTestProcFilter;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
@@ -61,7 +60,7 @@ public class GSSTestProcOutputLevel1Impl extends GSSTestProcOutputImpl implement
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcLevel1Filter level1_filter;
+	protected GSSTestProcFilter level1_filter;
 
 	/**
 	 * The cached value of the '{@link #getLevel0() <em>Level0</em>}' reference.
@@ -91,7 +90,7 @@ public class GSSTestProcOutputLevel1Impl extends GSSTestProcOutputImpl implement
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcLevel0Filter level0_filter;
+	protected GSSTestProcFilter level0_filter;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,7 +154,7 @@ public class GSSTestProcOutputLevel1Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcLevel1Filter getLevel1_filter() {
+	public GSSTestProcFilter getLevel1_filter() {
 		return level1_filter;
 	}
 
@@ -164,8 +163,8 @@ public class GSSTestProcOutputLevel1Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel1_filter(GSSTestProcLevel1Filter newLevel1_filter, NotificationChain msgs) {
-		GSSTestProcLevel1Filter oldLevel1_filter = level1_filter;
+	public NotificationChain basicSetLevel1_filter(GSSTestProcFilter newLevel1_filter, NotificationChain msgs) {
+		GSSTestProcFilter oldLevel1_filter = level1_filter;
 		level1_filter = newLevel1_filter;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL1_FILTER, oldLevel1_filter, newLevel1_filter);
@@ -179,7 +178,7 @@ public class GSSTestProcOutputLevel1Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel1_filter(GSSTestProcLevel1Filter newLevel1_filter) {
+	public void setLevel1_filter(GSSTestProcFilter newLevel1_filter) {
 		if (newLevel1_filter != level1_filter) {
 			NotificationChain msgs = null;
 			if (level1_filter != null)
@@ -274,7 +273,7 @@ public class GSSTestProcOutputLevel1Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcLevel0Filter getLevel0_filter() {
+	public GSSTestProcFilter getLevel0_filter() {
 		return level0_filter;
 	}
 
@@ -283,8 +282,8 @@ public class GSSTestProcOutputLevel1Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel0_filter(GSSTestProcLevel0Filter newLevel0_filter, NotificationChain msgs) {
-		GSSTestProcLevel0Filter oldLevel0_filter = level0_filter;
+	public NotificationChain basicSetLevel0_filter(GSSTestProcFilter newLevel0_filter, NotificationChain msgs) {
+		GSSTestProcFilter oldLevel0_filter = level0_filter;
 		level0_filter = newLevel0_filter;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL0_FILTER, oldLevel0_filter, newLevel0_filter);
@@ -298,7 +297,7 @@ public class GSSTestProcOutputLevel1Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel0_filter(GSSTestProcLevel0Filter newLevel0_filter) {
+	public void setLevel0_filter(GSSTestProcFilter newLevel0_filter) {
 		if (newLevel0_filter != level0_filter) {
 			NotificationChain msgs = null;
 			if (level0_filter != null)
@@ -365,7 +364,7 @@ public class GSSTestProcOutputLevel1Impl extends GSSTestProcOutputImpl implement
 				setLevel1((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL1_FILTER:
-				setLevel1_filter((GSSTestProcLevel1Filter)newValue);
+				setLevel1_filter((GSSTestProcFilter)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL0:
 				setLevel0((GSSTmTcFormatTmTcFormat)newValue);
@@ -374,7 +373,7 @@ public class GSSTestProcOutputLevel1Impl extends GSSTestProcOutputImpl implement
 				setLevel1_from_level0((GSSImportImport)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL0_FILTER:
-				setLevel0_filter((GSSTestProcLevel0Filter)newValue);
+				setLevel0_filter((GSSTestProcFilter)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -392,7 +391,7 @@ public class GSSTestProcOutputLevel1Impl extends GSSTestProcOutputImpl implement
 				setLevel1((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL1_FILTER:
-				setLevel1_filter((GSSTestProcLevel1Filter)null);
+				setLevel1_filter((GSSTestProcFilter)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL0:
 				setLevel0((GSSTmTcFormatTmTcFormat)null);
@@ -401,7 +400,7 @@ public class GSSTestProcOutputLevel1Impl extends GSSTestProcOutputImpl implement
 				setLevel1_from_level0((GSSImportImport)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL1__LEVEL0_FILTER:
-				setLevel0_filter((GSSTestProcLevel0Filter)null);
+				setLevel0_filter((GSSTestProcFilter)null);
 				return;
 		}
 		super.eUnset(featureID);
