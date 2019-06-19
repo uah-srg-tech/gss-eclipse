@@ -1701,12 +1701,12 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//GSSTmTcFormatSize:
+		//GSSTmTcFormatSize GSSTmTcFormatBytesBits:
 		//	'GSSTmTcFormatSize'
 		//	'{'
 		//	'bytes' ':=' bytes=INTEGER ';'
 		//	'bits' ':=' bits=INTEGER ';'
-		//	'}' ';';
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTmTcFormatSize' '{' 'bytes' ':=' bytes=INTEGER ';' 'bits' ':=' bits=INTEGER ';' '}' ';'
@@ -1772,11 +1772,11 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//GSSTmTcFormatGlobalOffset:
+		//GSSTmTcFormatGlobalOffset GSSTmTcFormatBytesBits:
 		//	'GSSTmTcFormatGlobalOffset' '{'
 		//	'bytes' ':=' bytes=INTEGER ';'
 		//	'bits' ':=' bits=INTEGER ';'
-		//	'}' ';';
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTmTcFormatGlobalOffset' '{' 'bytes' ':=' bytes=INTEGER ';' 'bits' ':=' bits=INTEGER ';' '}' ';'
@@ -1912,11 +1912,11 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//GSSTmTcFormatConstSize:
+		//GSSTmTcFormatConstSize GSSTmTcFormatBytesBits:
 		//	'GSSTmTcFormatConstSize' '{'
 		//	'bytes' ':=' bytes=INTEGER ';'
 		//	'bits' ':=' bits=INTEGER ';'
-		//	'}' ';';
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTmTcFormatConstSize' '{' 'bytes' ':=' bytes=INTEGER ';' 'bits' ':=' bits=INTEGER ';' '}' ';'
@@ -1982,11 +1982,11 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//GSSTmTcFormatMaxSize:
+		//GSSTmTcFormatMaxSize GSSTmTcFormatBytesBits:
 		//	'GSSTmTcFormatMaxSize' '{'
 		//	'bytes' ':=' bytes=INTEGER ';'
 		//	'bits' ':=' bits=INTEGER ';'
-		//	'}' ';';
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTmTcFormatMaxSize' '{' 'bytes' ':=' bytes=INTEGER ';' 'bits' ':=' bits=INTEGER ';' '}' ';'
@@ -2358,11 +2358,11 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//GSSTmTcFormatLocalOffset:
+		//GSSTmTcFormatLocalOffset GSSTmTcFormatBytesBits:
 		//	'GSSTmTcFormatLocalOffset' '{'
 		//	'bytes' ':=' bytes=INTEGER ';'
 		//	'bits' ':=' bits=INTEGER ';'
-		//	'}' ';';
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTmTcFormatLocalOffset' '{' 'bytes' ':=' bytes=INTEGER ';' 'bits' ':=' bits=INTEGER ';' '}' ';'
@@ -3326,12 +3326,12 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSTmTcFormatSFieldFirstBitAccess().getRule();
 	}
 	
-	//GSSTmTcFormatSize:
+	//GSSTmTcFormatSize GSSTmTcFormatBytesBits:
 	//	'GSSTmTcFormatSize'
 	//	'{'
 	//	'bytes' ':=' bytes=INTEGER ';'
 	//	'bits' ':=' bits=INTEGER ';'
-	//	'}' ';';
+	//	'}' ';'
 	public GSSTmTcFormatSizeElements getGSSTmTcFormatSizeAccess() {
 		return pGSSTmTcFormatSize;
 	}
@@ -3340,11 +3340,11 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSTmTcFormatSizeAccess().getRule();
 	}
 	
-	//GSSTmTcFormatGlobalOffset:
+	//GSSTmTcFormatGlobalOffset GSSTmTcFormatBytesBits:
 	//	'GSSTmTcFormatGlobalOffset' '{'
 	//	'bytes' ':=' bytes=INTEGER ';'
 	//	'bits' ':=' bits=INTEGER ';'
-	//	'}' ';';
+	//	'}' ';'
 	public GSSTmTcFormatGlobalOffsetElements getGSSTmTcFormatGlobalOffsetAccess() {
 		return pGSSTmTcFormatGlobalOffset;
 	}
@@ -3366,11 +3366,11 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSTmTcFormatFormulaAccess().getRule();
 	}
 	
-	//GSSTmTcFormatConstSize:
+	//GSSTmTcFormatConstSize GSSTmTcFormatBytesBits:
 	//	'GSSTmTcFormatConstSize' '{'
 	//	'bytes' ':=' bytes=INTEGER ';'
 	//	'bits' ':=' bits=INTEGER ';'
-	//	'}' ';';
+	//	'}' ';'
 	public GSSTmTcFormatConstSizeElements getGSSTmTcFormatConstSizeAccess() {
 		return pGSSTmTcFormatConstSize;
 	}
@@ -3379,11 +3379,11 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSTmTcFormatConstSizeAccess().getRule();
 	}
 	
-	//GSSTmTcFormatMaxSize:
+	//GSSTmTcFormatMaxSize GSSTmTcFormatBytesBits:
 	//	'GSSTmTcFormatMaxSize' '{'
 	//	'bytes' ':=' bytes=INTEGER ';'
 	//	'bits' ':=' bits=INTEGER ';'
-	//	'}' ';';
+	//	'}' ';'
 	public GSSTmTcFormatMaxSizeElements getGSSTmTcFormatMaxSizeAccess() {
 		return pGSSTmTcFormatMaxSize;
 	}
@@ -3487,11 +3487,11 @@ public class TM_TC_FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSTmTcFormatArrayDimensionAccess().getRule();
 	}
 	
-	//GSSTmTcFormatLocalOffset:
+	//GSSTmTcFormatLocalOffset GSSTmTcFormatBytesBits:
 	//	'GSSTmTcFormatLocalOffset' '{'
 	//	'bytes' ':=' bytes=INTEGER ';'
 	//	'bits' ':=' bits=INTEGER ';'
-	//	'}' ';';
+	//	'}' ';'
 	public GSSTmTcFormatLocalOffsetElements getGSSTmTcFormatLocalOffsetAccess() {
 		return pGSSTmTcFormatLocalOffset;
 	}

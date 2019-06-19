@@ -153,7 +153,7 @@ enum GSSTmTcFormatSFieldFirstBit returns GSSTmTcFormatSFieldFirstBit:
 	MSB = 'MSB' | LSB = 'LSB'
 ;
 
-GSSTmTcFormatSize returns GSSTmTcFormatSize:
+GSSTmTcFormatSize returns GSSTmTcFormatBytesBits:
 	'GSSTmTcFormatSize'
 	'{'
 		'bytes' ':=' bytes=INTEGER ';'
@@ -161,7 +161,7 @@ GSSTmTcFormatSize returns GSSTmTcFormatSize:
 	'}' ';'
 ;
 
-GSSTmTcFormatGlobalOffset returns GSSTmTcFormatGlobalOffset:
+GSSTmTcFormatGlobalOffset returns GSSTmTcFormatBytesBits:
 	'GSSTmTcFormatGlobalOffset' '{'
 		'bytes' ':=' bytes=INTEGER ';'
 		'bits' ':=' bits=INTEGER ';'
@@ -175,14 +175,14 @@ GSSTmTcFormatFormula returns GSSTmTcFormatFormula:
 	'}' ';'
 ;
 
-GSSTmTcFormatConstSize returns GSSTmTcFormatConstSize:
+GSSTmTcFormatConstSize returns GSSTmTcFormatBytesBits:
 	'GSSTmTcFormatConstSize' '{'
 		'bytes' ':=' bytes=INTEGER ';'
 		'bits' ':=' bits=INTEGER ';'
 	'}' ';'
 ;
 
-GSSTmTcFormatMaxSize returns GSSTmTcFormatMaxSize:
+GSSTmTcFormatMaxSize returns GSSTmTcFormatBytesBits:
 	'GSSTmTcFormatMaxSize' '{'
 		'bytes' ':=' bytes=INTEGER ';'
 		'bits' ':=' bits=INTEGER ';'
@@ -237,7 +237,7 @@ GSSTmTcFormatArrayDimension returns GSSTmTcFormatArrayDimension:
 	'}' ';'
 ;
 
-GSSTmTcFormatLocalOffset returns GSSTmTcFormatLocalOffset:
+GSSTmTcFormatLocalOffset returns GSSTmTcFormatBytesBits:
 	'GSSTmTcFormatLocalOffset' '{'
 		'bytes' ':=' bytes=INTEGER ';'
 		'bits' ':=' bits=INTEGER ';'
