@@ -334,20 +334,6 @@ public class exportAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile <em>GSS Export Setting AI From File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile
-	 * @generated
-	 */
-	public Adapter createGSSExportSettingAIFromFileAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst <em>GSS Export Setting AI From Const</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -358,6 +344,20 @@ public class exportAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSExportSettingAIFromConstAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile <em>GSS Export Setting AI From File</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile
+	 * @generated
+	 */
+	public Adapter createGSSExportSettingAIFromFileAdapter() {
 		return null;
 	}
 

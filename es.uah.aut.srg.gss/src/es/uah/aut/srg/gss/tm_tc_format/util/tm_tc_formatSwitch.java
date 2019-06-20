@@ -11,8 +11,8 @@
 package es.uah.aut.srg.gss.tm_tc_format.util;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
-
 import es.uah.aut.srg.gss.common.GSSModelObject;
+
 import es.uah.aut.srg.gss.tm_tc_format.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -261,21 +261,6 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Formula</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Formula</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTmTcFormatFormula(GSSTmTcFormatFormula object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format VS Field</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -287,21 +272,6 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSTmTcFormatVSField(GSSTmTcFormatVSField object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Variable Size</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Variable Size</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTmTcFormatVariableSize(GSSTmTcFormatVariableSize object) {
 		return null;
 	}
 
@@ -332,6 +302,81 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSTmTcFormatFDICField(GSSTmTcFormatFDICField object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format AField</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format AField</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSTmTcFormatAField(GSSTmTcFormatAField object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format AI Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format AI Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSTmTcFormatAIField(GSSTmTcFormatAIField object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Bytes Bits</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Bytes Bits</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSTmTcFormatBytesBits(GSSTmTcFormatBytesBits object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Formula</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Formula</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSTmTcFormatFormula(GSSTmTcFormatFormula object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Variable Size</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Variable Size</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSTmTcFormatVariableSize(GSSTmTcFormatVariableSize object) {
 		return null;
 	}
 
@@ -381,21 +426,6 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format AField</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format AField</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTmTcFormatAField(GSSTmTcFormatAField object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Array Dimension</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -407,36 +437,6 @@ public class tm_tc_formatSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSTmTcFormatArrayDimension(GSSTmTcFormatArrayDimension object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format AI Field</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format AI Field</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTmTcFormatAIField(GSSTmTcFormatAIField object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Bytes Bits</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Tm Tc Format Bytes Bits</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSTmTcFormatBytesBits(GSSTmTcFormatBytesBits object) {
 		return null;
 	}
 

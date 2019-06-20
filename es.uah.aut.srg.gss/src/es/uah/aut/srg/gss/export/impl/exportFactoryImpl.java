@@ -241,9 +241,9 @@ public class exportFactoryImpl extends EFactoryImpl implements exportFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSExportSettingAIFromFile createGSSExportSettingAIFromFile() {
-		GSSExportSettingAIFromFileImpl gssExportSettingAIFromFile = new GSSExportSettingAIFromFileImpl();
-		return gssExportSettingAIFromFile;
+	public GSSExportSettingAIFromConst createGSSExportSettingAIFromConst() {
+		GSSExportSettingAIFromConstImpl gssExportSettingAIFromConst = new GSSExportSettingAIFromConstImpl();
+		return gssExportSettingAIFromConst;
 	}
 
 	/**
@@ -251,9 +251,9 @@ public class exportFactoryImpl extends EFactoryImpl implements exportFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSExportSettingAIFromConst createGSSExportSettingAIFromConst() {
-		GSSExportSettingAIFromConstImpl gssExportSettingAIFromConst = new GSSExportSettingAIFromConstImpl();
-		return gssExportSettingAIFromConst;
+	public GSSExportSettingAIFromFile createGSSExportSettingAIFromFile() {
+		GSSExportSettingAIFromFileImpl gssExportSettingAIFromFile = new GSSExportSettingAIFromFileImpl();
+		return gssExportSettingAIFromFile;
 	}
 
 	/**

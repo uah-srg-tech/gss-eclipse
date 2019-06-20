@@ -11,7 +11,9 @@
 package es.uah.aut.srg.gss.imports;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
+
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -38,7 +40,7 @@ public interface GSSImportImport extends GSSModelElement {
 	 * Returns the value of the '<em><b>From</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>From</em>' attribute isn't clear,
+	 * If the meaning of the '<em>From</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -64,7 +66,7 @@ public interface GSSImportImport extends GSSModelElement {
 	 * Returns the value of the '<em><b>To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>To</em>' attribute isn't clear,
+	 * If the meaning of the '<em>To</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -91,7 +93,7 @@ public interface GSSImportImport extends GSSModelElement {
 	 * The list contents are of type {@link es.uah.aut.srg.gss.imports.GSSImportDataSource}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Data Source</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Data Source</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

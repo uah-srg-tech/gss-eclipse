@@ -30,7 +30,6 @@ import es.uah.aut.srg.gss.common.GSSModelObject;
  * @generated
  */
 public interface GSSTmTcFormatField extends GSSModelObject {
-
 	/**
 	 * Returns the value of the '<em><b>Fid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -82,4 +81,5 @@ public interface GSSTmTcFormatField extends GSSModelObject {
 	 * @generated
 	 */
 	void setPfid(String value);
+
 } // GSSTmTcFormatField

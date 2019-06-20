@@ -43,8 +43,8 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -87,21 +87,7 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass gssTmTcFormatFormulaEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass gssTmTcFormatVSFieldEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssTmTcFormatVariableSizeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,6 +102,41 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * @generated
 	 */
 	private EClass gssTmTcFormatFDICFieldEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gssTmTcFormatAFieldEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gssTmTcFormatAIFieldEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gssTmTcFormatBytesBitsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gssTmTcFormatFormulaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gssTmTcFormatVariableSizeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -143,28 +164,7 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass gssTmTcFormatAFieldEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass gssTmTcFormatArrayDimensionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssTmTcFormatAIFieldEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssTmTcFormatBytesBitsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -206,6 +206,13 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum gssTmTcFormatCheckTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum gssTmTcFormatUnitEEnum = null;
 
 	/**
@@ -214,13 +221,6 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * @generated
 	 */
 	private EEnum gssTmTcFormatPowerEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum gssTmTcFormatCheckTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -480,33 +480,6 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGSSTmTcFormatFormula() {
-		return gssTmTcFormatFormulaEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTmTcFormatFormula_Slope() {
-		return (EAttribute)gssTmTcFormatFormulaEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTmTcFormatFormula_Intercept() {
-		return (EAttribute)gssTmTcFormatFormulaEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getGSSTmTcFormatVSField() {
 		return gssTmTcFormatVSFieldEClass;
 	}
@@ -552,8 +525,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTmTcFormatVSField_GlobalOffset() {
-		return (EReference)gssTmTcFormatVSFieldEClass.getEStructuralFeatures().get(6);
+	public EReference getGSSTmTcFormatVSField_VariableSize() {
+		return (EReference)gssTmTcFormatVSFieldEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -570,44 +543,8 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTmTcFormatVSField_VariableSize() {
-		return (EReference)gssTmTcFormatVSFieldEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSTmTcFormatVariableSize() {
-		return gssTmTcFormatVariableSizeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTmTcFormatVariableSize_FidRef() {
-		return (EAttribute)gssTmTcFormatVariableSizeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTmTcFormatVariableSize_Unit() {
-		return (EAttribute)gssTmTcFormatVariableSizeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTmTcFormatVariableSize_Power() {
-		return (EAttribute)gssTmTcFormatVariableSizeEClass.getEStructuralFeatures().get(2);
+	public EReference getGSSTmTcFormatVSField_GlobalOffset() {
+		return (EReference)gssTmTcFormatVSFieldEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -687,6 +624,222 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getGSSTmTcFormatAField() {
+		return gssTmTcFormatAFieldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTmTcFormatAField_Type() {
+		return (EAttribute)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTmTcFormatAField_ByteOrder() {
+		return (EAttribute)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTmTcFormatAField_FirstBit() {
+		return (EAttribute)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSTmTcFormatAField_ArrayDimension() {
+		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSTmTcFormatAField_Size() {
+		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSTmTcFormatAField_GlobalOffset() {
+		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGSSTmTcFormatAIField() {
+		return gssTmTcFormatAIFieldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTmTcFormatAIField_Type() {
+		return (EAttribute)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTmTcFormatAIField_ByteOrder() {
+		return (EAttribute)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTmTcFormatAIField_FirstBit() {
+		return (EAttribute)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSTmTcFormatAIField_ArrayRef() {
+		return (EReference)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSTmTcFormatAIField_Size() {
+		return (EReference)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSTmTcFormatAIField_LocalOffset() {
+		return (EReference)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGSSTmTcFormatBytesBits() {
+		return gssTmTcFormatBytesBitsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTmTcFormatBytesBits_Bytes() {
+		return (EAttribute)gssTmTcFormatBytesBitsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTmTcFormatBytesBits_Bits() {
+		return (EAttribute)gssTmTcFormatBytesBitsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGSSTmTcFormatFormula() {
+		return gssTmTcFormatFormulaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTmTcFormatFormula_Slope() {
+		return (EAttribute)gssTmTcFormatFormulaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTmTcFormatFormula_Intercept() {
+		return (EAttribute)gssTmTcFormatFormulaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGSSTmTcFormatVariableSize() {
+		return gssTmTcFormatVariableSizeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTmTcFormatVariableSize_FidRef() {
+		return (EAttribute)gssTmTcFormatVariableSizeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTmTcFormatVariableSize_Unit() {
+		return (EAttribute)gssTmTcFormatVariableSizeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTmTcFormatVariableSize_Power() {
+		return (EAttribute)gssTmTcFormatVariableSizeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGSSTmTcFormatFloatingOffset() {
 		return gssTmTcFormatFloatingOffsetEClass;
 	}
@@ -741,69 +894,6 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGSSTmTcFormatAField() {
-		return gssTmTcFormatAFieldEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTmTcFormatAField_Type() {
-		return (EAttribute)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTmTcFormatAField_ByteOrder() {
-		return (EAttribute)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTmTcFormatAField_FirstBit() {
-		return (EAttribute)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSTmTcFormatAField_Size() {
-		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSTmTcFormatAField_GlobalOffset() {
-		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSTmTcFormatAField_ArrayDimension() {
-		return (EReference)gssTmTcFormatAFieldEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getGSSTmTcFormatArrayDimension() {
 		return gssTmTcFormatArrayDimensionEClass;
 	}
@@ -824,96 +914,6 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 */
 	public EAttribute getGSSTmTcFormatArrayDimension_MaxItems() {
 		return (EAttribute)gssTmTcFormatArrayDimensionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSTmTcFormatAIField() {
-		return gssTmTcFormatAIFieldEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTmTcFormatAIField_Type() {
-		return (EAttribute)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTmTcFormatAIField_ByteOrder() {
-		return (EAttribute)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTmTcFormatAIField_FirstBit() {
-		return (EAttribute)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSTmTcFormatAIField_Size() {
-		return (EReference)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSTmTcFormatAIField_LocalOffset() {
-		return (EReference)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSTmTcFormatBytesBits() {
-		return gssTmTcFormatBytesBitsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTmTcFormatBytesBits_Bytes() {
-		return (EAttribute)gssTmTcFormatBytesBitsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSTmTcFormatBytesBits_Bits() {
-		return (EAttribute)gssTmTcFormatBytesBitsEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSTmTcFormatAIField_ArrayRef() {
-		return (EReference)gssTmTcFormatAIFieldEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -975,6 +975,15 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getGSSTmTcFormatCheckType() {
+		return gssTmTcFormatCheckTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getGSSTmTcFormatUnit() {
 		return gssTmTcFormatUnitEEnum;
 	}
@@ -986,15 +995,6 @@ public class tm_tc_formatPackageImpl extends EPackageImpl implements tm_tc_forma
 	 */
 	public EEnum getGSSTmTcFormatPower() {
 		return gssTmTcFormatPowerEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getGSSTmTcFormatCheckType() {
-		return gssTmTcFormatCheckTypeEEnum;
 	}
 
 	/**

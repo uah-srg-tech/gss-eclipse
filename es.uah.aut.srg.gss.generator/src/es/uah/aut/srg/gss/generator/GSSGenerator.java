@@ -46,12 +46,9 @@ import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldByteOrder;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldToCheck;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldType;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFloatingOffset;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatGlobalOffset;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatLocalOffset;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSFieldFirstBit;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSortedFieldsToCheck;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatConstSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize;
@@ -59,7 +56,6 @@ import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatArrayDimension;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatArrayRef;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatUnit;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatMaxSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormatType;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatFactory;
@@ -817,7 +813,7 @@ public class GSSGenerator {
 		vsfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
 		vsfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
 		
-		GSSTmTcFormatConstSize formatConstSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatConstSize();
+		GSSTmTcFormatBytesBits formatConstSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatBytesBits();
 		formatConstSize.setBytes(Integer.toString(constSizeBits/8));
 		formatConstSize.setBits(Integer.toString(constSizeBits%8));
 		vsfield.setConstSize(formatConstSize);
@@ -827,12 +823,12 @@ public class GSSGenerator {
 		formatVariableSize.setUnit(getVariableFieldUnitText(vbleSizeBits));
 		vsfield.setVariableSize(formatVariableSize);
 
-		GSSTmTcFormatMaxSize formatMaxSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatMaxSize();
+		GSSTmTcFormatBytesBits formatMaxSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatBytesBits();
 		formatMaxSize.setBytes(Integer.toString(maxSizeBits/8));
 		formatMaxSize.setBits(Integer.toString(maxSizeBits%8));
 		vsfield.setMaxSize(formatMaxSize);
 		
-		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
+		GSSTmTcFormatBytesBits formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatBytesBits();
 		formatOffset.setBytes(Integer.toString(offsetBits/8));
 		formatOffset.setBits(Integer.toString(offsetBits%8));
 		vsfield.setGlobalOffset(formatOffset);
@@ -852,12 +848,12 @@ public class GSSGenerator {
 		csfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
 		csfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
 		
-		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
+		GSSTmTcFormatBytesBits formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatBytesBits();
 		formatSize.setBytes(Integer.toString(constSizeBits/8));
 		formatSize.setBits(Integer.toString(constSizeBits%8));
 		csfield.setSize(formatSize);
 		
-		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
+		GSSTmTcFormatBytesBits formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatBytesBits();
 		formatOffset.setBytes(Integer.toString(offsetBits/8));
 		formatOffset.setBits(Integer.toString(offsetBits%8));
 		csfield.setGlobalOffset(formatOffset);
@@ -881,12 +877,12 @@ public class GSSGenerator {
 		arrayRef.setFidRef(Integer.toString(fidRef));
 		aifield.setArrayRef(arrayRef);
 		
-		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
+		GSSTmTcFormatBytesBits formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatBytesBits();
 		formatSize.setBytes(Integer.toString(sizeBits/8));
 		formatSize.setBits(Integer.toString(sizeBits%8));
 		aifield.setSize(formatSize);
 		
-		GSSTmTcFormatLocalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatLocalOffset();
+		GSSTmTcFormatBytesBits formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatBytesBits();
 		formatOffset.setBytes(Integer.toString(offsetBits/8));
 		formatOffset.setBits(Integer.toString(offsetBits%8));
 		aifield.setLocalOffset(formatOffset);
@@ -911,12 +907,12 @@ public class GSSGenerator {
 		arrayDimension.setMaxItems(Integer.toString(n_max));
 		afield.setArrayDimension(arrayDimension);
 		
-		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
+		GSSTmTcFormatBytesBits formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatBytesBits();
 		formatSize.setBytes(Integer.toString(vbleSizeBits/8));
 		formatSize.setBits(Integer.toString(vbleSizeBits%8));
 		afield.setSize(formatSize);
 		
-		GSSTmTcFormatGlobalOffset formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatGlobalOffset();
+		GSSTmTcFormatBytesBits formatOffset = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatBytesBits();
 		formatOffset.setBytes(Integer.toString(offsetBits/8));
 		formatOffset.setBits(Integer.toString(offsetBits%8));
 		afield.setGlobalOffset(formatOffset);
@@ -949,7 +945,7 @@ public class GSSGenerator {
 		fdicfield.setByteOrder(GSSTmTcFormatFieldByteOrder.BIG_ENDIAN);
 		fdicfield.setFirstBit(GSSTmTcFormatSFieldFirstBit.MSB);
 		
-		GSSTmTcFormatSize formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatSize();
+		GSSTmTcFormatBytesBits formatSize = tm_tc_formatFactory.eINSTANCE.createGSSTmTcFormatBytesBits();
 		formatSize.setBytes(Integer.toString(sizeBits/8));
 		formatSize.setBits(Integer.toString(sizeBits%8));
 		fdicfield.setSize(formatSize);

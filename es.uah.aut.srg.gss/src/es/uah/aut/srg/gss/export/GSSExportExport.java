@@ -11,6 +11,7 @@
 package es.uah.aut.srg.gss.export;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
+
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 
 /**
@@ -38,7 +39,7 @@ public interface GSSExportExport extends GSSModelElement {
 	 * Returns the value of the '<em><b>From</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>From</em>' attribute isn't clear,
+	 * If the meaning of the '<em>From</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -64,7 +65,7 @@ public interface GSSExportExport extends GSSModelElement {
 	 * Returns the value of the '<em><b>To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>To</em>' attribute isn't clear,
+	 * If the meaning of the '<em>To</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -90,7 +91,7 @@ public interface GSSExportExport extends GSSModelElement {
 	 * Returns the value of the '<em><b>Sizes</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sizes</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Sizes</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -116,7 +117,7 @@ public interface GSSExportExport extends GSSModelElement {
 	 * Returns the value of the '<em><b>Settings</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Settings</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Settings</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -142,7 +143,7 @@ public interface GSSExportExport extends GSSModelElement {
 	 * Returns the value of the '<em><b>Activate DI Cs</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activate DI Cs</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Activate DI Cs</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

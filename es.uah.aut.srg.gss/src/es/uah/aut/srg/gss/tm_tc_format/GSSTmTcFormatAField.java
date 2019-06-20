@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.tm_tc_format;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Tm Tc Format AField</b></em>'.
@@ -201,6 +202,32 @@ public interface GSSTmTcFormatAField extends GSSTmTcFormatField {
 	boolean isSetFirstBit();
 
 	/**
+	 * Returns the value of the '<em><b>Array Dimension</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Array Dimension</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Array Dimension</em>' containment reference.
+	 * @see #setArrayDimension(GSSTmTcFormatArrayDimension)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAField_ArrayDimension()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GSSTmTcFormatArrayDimension getArrayDimension();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getArrayDimension <em>Array Dimension</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Array Dimension</em>' containment reference.
+	 * @see #getArrayDimension()
+	 * @generated
+	 */
+	void setArrayDimension(GSSTmTcFormatArrayDimension value);
+
+	/**
 	 * Returns the value of the '<em><b>Size</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -251,31 +278,5 @@ public interface GSSTmTcFormatAField extends GSSTmTcFormatField {
 	 * @generated
 	 */
 	void setGlobalOffset(GSSTmTcFormatBytesBits value);
-
-	/**
-	 * Returns the value of the '<em><b>Array Dimension</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Array Dimension</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Array Dimension</em>' containment reference.
-	 * @see #setArrayDimension(GSSTmTcFormatArrayDimension)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAField_ArrayDimension()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	GSSTmTcFormatArrayDimension getArrayDimension();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getArrayDimension <em>Array Dimension</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Array Dimension</em>' containment reference.
-	 * @see #getArrayDimension()
-	 * @generated
-	 */
-	void setArrayDimension(GSSTmTcFormatArrayDimension value);
 
 } // GSSTmTcFormatAField

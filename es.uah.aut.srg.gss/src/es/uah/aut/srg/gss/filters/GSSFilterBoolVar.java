@@ -11,6 +11,7 @@
 package es.uah.aut.srg.gss.filters;
 
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -175,7 +176,7 @@ public interface GSSFilterBoolVar extends EObject {
 	 * Returns the value of the '<em><b>Op</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Op</em>' reference isn't clear,
+	 * If the meaning of the '<em>Op</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -201,7 +202,7 @@ public interface GSSFilterBoolVar extends EObject {
 	 * Returns the value of the '<em><b>Constant</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Constant</em>' reference isn't clear,
+	 * If the meaning of the '<em>Constant</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -227,7 +228,7 @@ public interface GSSFilterBoolVar extends EObject {
 	 * Returns the value of the '<em><b>Select</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Select</em>' reference isn't clear,
+	 * If the meaning of the '<em>Select</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -253,7 +254,7 @@ public interface GSSFilterBoolVar extends EObject {
 	 * Returns the value of the '<em><b>Select Line</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Select Line</em>' reference isn't clear,
+	 * If the meaning of the '<em>Select Line</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

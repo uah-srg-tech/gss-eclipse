@@ -138,15 +138,6 @@ public interface exportFactory extends EFactory {
 	GSSExportSettingFromField createGSSExportSettingFromField();
 
 	/**
-	 * Returns a new object of class '<em>GSS Export Setting AI From File</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Export Setting AI From File</em>'.
-	 * @generated
-	 */
-	GSSExportSettingAIFromFile createGSSExportSettingAIFromFile();
-
-	/**
 	 * Returns a new object of class '<em>GSS Export Setting AI From Const</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -154,6 +145,15 @@ public interface exportFactory extends EFactory {
 	 * @generated
 	 */
 	GSSExportSettingAIFromConst createGSSExportSettingAIFromConst();
+
+	/**
+	 * Returns a new object of class '<em>GSS Export Setting AI From File</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Export Setting AI From File</em>'.
+	 * @generated
+	 */
+	GSSExportSettingAIFromFile createGSSExportSettingAIFromFile();
 
 	/**
 	 * Returns a new object of class '<em>GSS Export Activate DI Cs</em>'.

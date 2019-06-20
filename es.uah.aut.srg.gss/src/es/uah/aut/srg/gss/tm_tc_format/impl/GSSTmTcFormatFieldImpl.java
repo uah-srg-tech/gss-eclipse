@@ -11,11 +11,14 @@
 package es.uah.aut.srg.gss.tm_tc_format.impl;
 
 import es.uah.aut.srg.gss.common.impl.GSSModelObjectImpl;
+
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -42,6 +45,7 @@ public abstract class GSSTmTcFormatFieldImpl extends GSSModelObjectImpl implemen
 	 * @ordered
 	 */
 	protected static final String FID_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getFid() <em>Fid</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -51,6 +55,7 @@ public abstract class GSSTmTcFormatFieldImpl extends GSSModelObjectImpl implemen
 	 * @ordered
 	 */
 	protected String fid = FID_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getPfid() <em>Pfid</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -60,6 +65,7 @@ public abstract class GSSTmTcFormatFieldImpl extends GSSModelObjectImpl implemen
 	 * @ordered
 	 */
 	protected static final String PFID_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getPfid() <em>Pfid</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -20,13 +20,19 @@ import es.uah.aut.srg.gss.filters.GSSFilterFilter;
 import es.uah.aut.srg.gss.filters.filtersPackage;
 
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -57,6 +63,7 @@ public abstract class GSSFilterFilterImpl extends GSSModelElementImpl implements
 	 * @ordered
 	 */
 	protected GSSTmTcFormatTmTcFormat formatFile;
+
 	/**
 	 * The cached value of the '{@link #getBoolVar() <em>Bool Var</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -66,6 +73,7 @@ public abstract class GSSFilterFilterImpl extends GSSModelElementImpl implements
 	 * @ordered
 	 */
 	protected EList<GSSFilterBoolVar> boolVar;
+
 	/**
 	 * The cached value of the '{@link #getBoolVarFromArrayItem() <em>Bool Var From Array Item</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -75,6 +83,7 @@ public abstract class GSSFilterFilterImpl extends GSSModelElementImpl implements
 	 * @ordered
 	 */
 	protected EList<GSSFilterBoolVarFromArrayItem> boolVarFromArrayItem;
+
 	/**
 	 * The cached value of the '{@link #getBoolVarFromGroupedArrayItem() <em>Bool Var From Grouped Array Item</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -84,6 +93,7 @@ public abstract class GSSFilterFilterImpl extends GSSModelElementImpl implements
 	 * @ordered
 	 */
 	protected EList<GSSFilterBoolVarFromGroupedArrayItem> boolVarFromGroupedArrayItem;
+
 	/**
 	 * The cached value of the '{@link #getBoolVarFDIC() <em>Bool Var FDIC</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

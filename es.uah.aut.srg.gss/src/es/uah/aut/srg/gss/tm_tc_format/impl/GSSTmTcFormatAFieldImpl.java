@@ -19,11 +19,11 @@ import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSFieldFirstBit;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -324,6 +324,49 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GSSTmTcFormatArrayDimension getArrayDimension() {
+		return arrayDimension;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetArrayDimension(GSSTmTcFormatArrayDimension newArrayDimension, NotificationChain msgs) {
+		GSSTmTcFormatArrayDimension oldArrayDimension = arrayDimension;
+		arrayDimension = newArrayDimension;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION, oldArrayDimension, newArrayDimension);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setArrayDimension(GSSTmTcFormatArrayDimension newArrayDimension) {
+		if (newArrayDimension != arrayDimension) {
+			NotificationChain msgs = null;
+			if (arrayDimension != null)
+				msgs = ((InternalEObject)arrayDimension).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION, null, msgs);
+			if (newArrayDimension != null)
+				msgs = ((InternalEObject)newArrayDimension).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION, null, msgs);
+			msgs = basicSetArrayDimension(newArrayDimension, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION, newArrayDimension, newArrayDimension));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GSSTmTcFormatBytesBits getSize() {
 		return size;
 	}
@@ -403,49 +446,6 @@ public class GSSTmTcFormatAFieldImpl extends GSSTmTcFormatFieldImpl implements G
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__GLOBAL_OFFSET, newGlobalOffset, newGlobalOffset));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTmTcFormatArrayDimension getArrayDimension() {
-		return arrayDimension;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetArrayDimension(GSSTmTcFormatArrayDimension newArrayDimension, NotificationChain msgs) {
-		GSSTmTcFormatArrayDimension oldArrayDimension = arrayDimension;
-		arrayDimension = newArrayDimension;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION, oldArrayDimension, newArrayDimension);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setArrayDimension(GSSTmTcFormatArrayDimension newArrayDimension) {
-		if (newArrayDimension != arrayDimension) {
-			NotificationChain msgs = null;
-			if (arrayDimension != null)
-				msgs = ((InternalEObject)arrayDimension).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION, null, msgs);
-			if (newArrayDimension != null)
-				msgs = ((InternalEObject)newArrayDimension).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION, null, msgs);
-			msgs = basicSetArrayDimension(newArrayDimension, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION, newArrayDimension, newArrayDimension));
 	}
 
 	/**

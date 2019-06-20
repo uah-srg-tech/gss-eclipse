@@ -19,9 +19,10 @@ import es.uah.aut.srg.gss.filters.GSSFilterSelectLine;
 import es.uah.aut.srg.gss.filters.filtersPackage;
 
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField;
-import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 

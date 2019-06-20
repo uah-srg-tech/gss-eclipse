@@ -132,14 +132,14 @@ GSSTmTcFormatTmTcFormat «this.name» {
 	};
 «ENDDEFINE»
 
-«DEFINE SerializeSize FOR GSSTmTcFormatSize -»
+«DEFINE SerializeSize FOR GSSTmTcFormatBytesBits -»
 		GSSTmTcFormatSize {
 			bytes := «this.bytes»;
 			bits := «this.bits»;
 		};
 «ENDDEFINE»
 
-«DEFINE SerializeGlobalOffset FOR GSSTmTcFormatGlobalOffset -»
+«DEFINE SerializeGlobalOffset FOR GSSTmTcFormatBytesBits -»
 		GSSTmTcFormatGlobalOffset {
 			bytes := «this.bytes»;
 			bits := «this.bits»;

@@ -20,6 +20,7 @@ import es.uah.aut.srg.gss.imports.importsFactory;
 import es.uah.aut.srg.gss.imports.importsPackage;
 
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;

@@ -818,16 +818,6 @@ public interface exportPackage extends EPackage {
 	int GSS_EXPORT_SETTING_FROM_FIELD_OPERATION_COUNT = GSS_EXPORT_SETTING_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromFileImpl <em>GSS Export Setting AI From File</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromFileImpl
-	 * @see es.uah.aut.srg.gss.export.impl.exportPackageImpl#getGSSExportSettingAIFromFile()
-	 * @generated
-	 */
-	int GSS_EXPORT_SETTING_AI_FROM_FILE = 13;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromConstImpl <em>GSS Export Setting AI From Const</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -881,6 +871,16 @@ public interface exportPackage extends EPackage {
 	 * @ordered
 	 */
 	int GSS_EXPORT_SETTING_AI_FROM_CONST_OPERATION_COUNT = GSS_EXPORT_SETTING_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromFileImpl <em>GSS Export Setting AI From File</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromFileImpl
+	 * @see es.uah.aut.srg.gss.export.impl.exportPackageImpl#getGSSExportSettingAIFromFile()
+	 * @generated
+	 */
+	int GSS_EXPORT_SETTING_AI_FROM_FILE = 13;
 
 	/**
 	 * The feature id for the '<em><b>To Field Ref</b></em>' reference.
@@ -1488,6 +1488,38 @@ public interface exportPackage extends EPackage {
 	EReference getGSSExportSettingFromField_FieldRef();
 
 	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst <em>GSS Export Setting AI From Const</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Export Setting AI From Const</em>'.
+	 * @see es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst
+	 * @generated
+	 */
+	EClass getGSSExportSettingAIFromConst();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getValue()
+	 * @see #getGSSExportSettingAIFromConst()
+	 * @generated
+	 */
+	EAttribute getGSSExportSettingAIFromConst_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getToArrayIndex <em>To Array Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>To Array Index</em>'.
+	 * @see es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getToArrayIndex()
+	 * @see #getGSSExportSettingAIFromConst()
+	 * @generated
+	 */
+	EAttribute getGSSExportSettingAIFromConst_ToArrayIndex();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile <em>GSS Export Setting AI From File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1551,38 +1583,6 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGSSExportSettingAIFromFile_Line();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst <em>GSS Export Setting AI From Const</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Export Setting AI From Const</em>'.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst
-	 * @generated
-	 */
-	EClass getGSSExportSettingAIFromConst();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getValue()
-	 * @see #getGSSExportSettingAIFromConst()
-	 * @generated
-	 */
-	EAttribute getGSSExportSettingAIFromConst_Value();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getToArrayIndex <em>To Array Index</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>To Array Index</em>'.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst#getToArrayIndex()
-	 * @see #getGSSExportSettingAIFromConst()
-	 * @generated
-	 */
-	EAttribute getGSSExportSettingAIFromConst_ToArrayIndex();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.export.GSSExportActivateDICs <em>GSS Export Activate DI Cs</em>}'.
@@ -2023,6 +2023,32 @@ public interface exportPackage extends EPackage {
 		EReference GSS_EXPORT_SETTING_FROM_FIELD__FIELD_REF = eINSTANCE.getGSSExportSettingFromField_FieldRef();
 
 		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromConstImpl <em>GSS Export Setting AI From Const</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromConstImpl
+		 * @see es.uah.aut.srg.gss.export.impl.exportPackageImpl#getGSSExportSettingAIFromConst()
+		 * @generated
+		 */
+		EClass GSS_EXPORT_SETTING_AI_FROM_CONST = eINSTANCE.getGSSExportSettingAIFromConst();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE = eINSTANCE.getGSSExportSettingAIFromConst_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>To Array Index</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX = eINSTANCE.getGSSExportSettingAIFromConst_ToArrayIndex();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromFileImpl <em>GSS Export Setting AI From File</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2071,32 +2097,6 @@ public interface exportPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GSS_EXPORT_SETTING_AI_FROM_FILE__LINE = eINSTANCE.getGSSExportSettingAIFromFile_Line();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromConstImpl <em>GSS Export Setting AI From Const</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromConstImpl
-		 * @see es.uah.aut.srg.gss.export.impl.exportPackageImpl#getGSSExportSettingAIFromConst()
-		 * @generated
-		 */
-		EClass GSS_EXPORT_SETTING_AI_FROM_CONST = eINSTANCE.getGSSExportSettingAIFromConst();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE = eINSTANCE.getGSSExportSettingAIFromConst_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>To Array Index</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX = eINSTANCE.getGSSExportSettingAIFromConst_ToArrayIndex();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportActivateDICsImpl <em>GSS Export Activate DI Cs</em>}' class.

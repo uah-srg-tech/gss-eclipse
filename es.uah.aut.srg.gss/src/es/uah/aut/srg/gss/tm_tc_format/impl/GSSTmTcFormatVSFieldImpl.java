@@ -19,11 +19,11 @@ import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -378,8 +378,8 @@ public class GSSTmTcFormatVSFieldImpl extends GSSTmTcFormatFieldImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatBytesBits getGlobalOffset() {
-		return globalOffset;
+	public GSSTmTcFormatVariableSize getVariableSize() {
+		return variableSize;
 	}
 
 	/**
@@ -387,11 +387,11 @@ public class GSSTmTcFormatVSFieldImpl extends GSSTmTcFormatFieldImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetGlobalOffset(GSSTmTcFormatBytesBits newGlobalOffset, NotificationChain msgs) {
-		GSSTmTcFormatBytesBits oldGlobalOffset = globalOffset;
-		globalOffset = newGlobalOffset;
+	public NotificationChain basicSetVariableSize(GSSTmTcFormatVariableSize newVariableSize, NotificationChain msgs) {
+		GSSTmTcFormatVariableSize oldVariableSize = variableSize;
+		variableSize = newVariableSize;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET, oldGlobalOffset, newGlobalOffset);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE, oldVariableSize, newVariableSize);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -402,18 +402,18 @@ public class GSSTmTcFormatVSFieldImpl extends GSSTmTcFormatFieldImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGlobalOffset(GSSTmTcFormatBytesBits newGlobalOffset) {
-		if (newGlobalOffset != globalOffset) {
+	public void setVariableSize(GSSTmTcFormatVariableSize newVariableSize) {
+		if (newVariableSize != variableSize) {
 			NotificationChain msgs = null;
-			if (globalOffset != null)
-				msgs = ((InternalEObject)globalOffset).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET, null, msgs);
-			if (newGlobalOffset != null)
-				msgs = ((InternalEObject)newGlobalOffset).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET, null, msgs);
-			msgs = basicSetGlobalOffset(newGlobalOffset, msgs);
+			if (variableSize != null)
+				msgs = ((InternalEObject)variableSize).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE, null, msgs);
+			if (newVariableSize != null)
+				msgs = ((InternalEObject)newVariableSize).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE, null, msgs);
+			msgs = basicSetVariableSize(newVariableSize, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET, newGlobalOffset, newGlobalOffset));
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE, newVariableSize, newVariableSize));
 	}
 
 	/**
@@ -464,8 +464,8 @@ public class GSSTmTcFormatVSFieldImpl extends GSSTmTcFormatFieldImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatVariableSize getVariableSize() {
-		return variableSize;
+	public GSSTmTcFormatBytesBits getGlobalOffset() {
+		return globalOffset;
 	}
 
 	/**
@@ -473,11 +473,11 @@ public class GSSTmTcFormatVSFieldImpl extends GSSTmTcFormatFieldImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVariableSize(GSSTmTcFormatVariableSize newVariableSize, NotificationChain msgs) {
-		GSSTmTcFormatVariableSize oldVariableSize = variableSize;
-		variableSize = newVariableSize;
+	public NotificationChain basicSetGlobalOffset(GSSTmTcFormatBytesBits newGlobalOffset, NotificationChain msgs) {
+		GSSTmTcFormatBytesBits oldGlobalOffset = globalOffset;
+		globalOffset = newGlobalOffset;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE, oldVariableSize, newVariableSize);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET, oldGlobalOffset, newGlobalOffset);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -488,18 +488,18 @@ public class GSSTmTcFormatVSFieldImpl extends GSSTmTcFormatFieldImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVariableSize(GSSTmTcFormatVariableSize newVariableSize) {
-		if (newVariableSize != variableSize) {
+	public void setGlobalOffset(GSSTmTcFormatBytesBits newGlobalOffset) {
+		if (newGlobalOffset != globalOffset) {
 			NotificationChain msgs = null;
-			if (variableSize != null)
-				msgs = ((InternalEObject)variableSize).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE, null, msgs);
-			if (newVariableSize != null)
-				msgs = ((InternalEObject)newVariableSize).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE, null, msgs);
-			msgs = basicSetVariableSize(newVariableSize, msgs);
+			if (globalOffset != null)
+				msgs = ((InternalEObject)globalOffset).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET, null, msgs);
+			if (newGlobalOffset != null)
+				msgs = ((InternalEObject)newGlobalOffset).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET, null, msgs);
+			msgs = basicSetGlobalOffset(newGlobalOffset, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE, newVariableSize, newVariableSize));
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET, newGlobalOffset, newGlobalOffset));
 	}
 
 	/**

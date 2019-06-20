@@ -33,6 +33,7 @@ import es.uah.aut.srg.gss.export.exportFactory;
 import es.uah.aut.srg.gss.export.exportPackage;
 
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -137,14 +138,14 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass gssExportSettingAIFromFileEClass = null;
+	private EClass gssExportSettingAIFromConstEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass gssExportSettingAIFromConstEClass = null;
+	private EClass gssExportSettingAIFromFileEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -605,6 +606,33 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getGSSExportSettingAIFromConst() {
+		return gssExportSettingAIFromConstEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSExportSettingAIFromConst_Value() {
+		return (EAttribute)gssExportSettingAIFromConstEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSExportSettingAIFromConst_ToArrayIndex() {
+		return (EAttribute)gssExportSettingAIFromConstEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGSSExportSettingAIFromFile() {
 		return gssExportSettingAIFromFileEClass;
 	}
@@ -652,33 +680,6 @@ public class exportPackageImpl extends EPackageImpl implements exportPackage {
 	 */
 	public EAttribute getGSSExportSettingAIFromFile_Line() {
 		return (EAttribute)gssExportSettingAIFromFileEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSExportSettingAIFromConst() {
-		return gssExportSettingAIFromConstEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSExportSettingAIFromConst_Value() {
-		return (EAttribute)gssExportSettingAIFromConstEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSExportSettingAIFromConst_ToArrayIndex() {
-		return (EAttribute)gssExportSettingAIFromConstEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**

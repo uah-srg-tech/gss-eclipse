@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.tm_tc_format;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Tm Tc Format AI Field</b></em>'.
@@ -201,6 +202,32 @@ public interface GSSTmTcFormatAIField extends GSSTmTcFormatField {
 	boolean isSetFirstBit();
 
 	/**
+	 * Returns the value of the '<em><b>Array Ref</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Array Ref</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Array Ref</em>' containment reference.
+	 * @see #setArrayRef(GSSTmTcFormatArrayRef)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAIField_ArrayRef()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	GSSTmTcFormatArrayRef getArrayRef();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getArrayRef <em>Array Ref</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Array Ref</em>' containment reference.
+	 * @see #getArrayRef()
+	 * @generated
+	 */
+	void setArrayRef(GSSTmTcFormatArrayRef value);
+
+	/**
 	 * Returns the value of the '<em><b>Size</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -251,31 +278,5 @@ public interface GSSTmTcFormatAIField extends GSSTmTcFormatField {
 	 * @generated
 	 */
 	void setLocalOffset(GSSTmTcFormatBytesBits value);
-
-	/**
-	 * Returns the value of the '<em><b>Array Ref</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Array Ref</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Array Ref</em>' containment reference.
-	 * @see #setArrayRef(GSSTmTcFormatArrayRef)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatAIField_ArrayRef()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	GSSTmTcFormatArrayRef getArrayRef();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getArrayRef <em>Array Ref</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Array Ref</em>' containment reference.
-	 * @see #getArrayRef()
-	 * @generated
-	 */
-	void setArrayRef(GSSTmTcFormatArrayRef value);
 
 } // GSSTmTcFormatAIField

@@ -175,29 +175,9 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatFormula createGSSTmTcFormatFormula() {
-		GSSTmTcFormatFormulaImpl gssTmTcFormatFormula = new GSSTmTcFormatFormulaImpl();
-		return gssTmTcFormatFormula;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public GSSTmTcFormatVSField createGSSTmTcFormatVSField() {
 		GSSTmTcFormatVSFieldImpl gssTmTcFormatVSField = new GSSTmTcFormatVSFieldImpl();
 		return gssTmTcFormatVSField;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTmTcFormatVariableSize createGSSTmTcFormatVariableSize() {
-		GSSTmTcFormatVariableSizeImpl gssTmTcFormatVariableSize = new GSSTmTcFormatVariableSizeImpl();
-		return gssTmTcFormatVariableSize;
 	}
 
 	/**
@@ -218,6 +198,56 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	public GSSTmTcFormatFDICField createGSSTmTcFormatFDICField() {
 		GSSTmTcFormatFDICFieldImpl gssTmTcFormatFDICField = new GSSTmTcFormatFDICFieldImpl();
 		return gssTmTcFormatFDICField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTmTcFormatAField createGSSTmTcFormatAField() {
+		GSSTmTcFormatAFieldImpl gssTmTcFormatAField = new GSSTmTcFormatAFieldImpl();
+		return gssTmTcFormatAField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTmTcFormatAIField createGSSTmTcFormatAIField() {
+		GSSTmTcFormatAIFieldImpl gssTmTcFormatAIField = new GSSTmTcFormatAIFieldImpl();
+		return gssTmTcFormatAIField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTmTcFormatBytesBits createGSSTmTcFormatBytesBits() {
+		GSSTmTcFormatBytesBitsImpl gssTmTcFormatBytesBits = new GSSTmTcFormatBytesBitsImpl();
+		return gssTmTcFormatBytesBits;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTmTcFormatFormula createGSSTmTcFormatFormula() {
+		GSSTmTcFormatFormulaImpl gssTmTcFormatFormula = new GSSTmTcFormatFormulaImpl();
+		return gssTmTcFormatFormula;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTmTcFormatVariableSize createGSSTmTcFormatVariableSize() {
+		GSSTmTcFormatVariableSizeImpl gssTmTcFormatVariableSize = new GSSTmTcFormatVariableSizeImpl();
+		return gssTmTcFormatVariableSize;
 	}
 
 	/**
@@ -255,39 +285,9 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatAField createGSSTmTcFormatAField() {
-		GSSTmTcFormatAFieldImpl gssTmTcFormatAField = new GSSTmTcFormatAFieldImpl();
-		return gssTmTcFormatAField;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public GSSTmTcFormatArrayDimension createGSSTmTcFormatArrayDimension() {
 		GSSTmTcFormatArrayDimensionImpl gssTmTcFormatArrayDimension = new GSSTmTcFormatArrayDimensionImpl();
 		return gssTmTcFormatArrayDimension;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTmTcFormatAIField createGSSTmTcFormatAIField() {
-		GSSTmTcFormatAIFieldImpl gssTmTcFormatAIField = new GSSTmTcFormatAIFieldImpl();
-		return gssTmTcFormatAIField;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTmTcFormatBytesBits createGSSTmTcFormatBytesBits() {
-		GSSTmTcFormatBytesBitsImpl gssTmTcFormatBytesBits = new GSSTmTcFormatBytesBitsImpl();
-		return gssTmTcFormatBytesBits;
 	}
 
 	/**
@@ -385,6 +385,26 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GSSTmTcFormatCheckType createGSSTmTcFormatCheckTypeFromString(EDataType eDataType, String initialValue) {
+		GSSTmTcFormatCheckType result = GSSTmTcFormatCheckType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGSSTmTcFormatCheckTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GSSTmTcFormatUnit createGSSTmTcFormatUnitFromString(EDataType eDataType, String initialValue) {
 		GSSTmTcFormatUnit result = GSSTmTcFormatUnit.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -417,26 +437,6 @@ public class tm_tc_formatFactoryImpl extends EFactoryImpl implements tm_tc_forma
 	 * @generated
 	 */
 	public String convertGSSTmTcFormatPowerToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTmTcFormatCheckType createGSSTmTcFormatCheckTypeFromString(EDataType eDataType, String initialValue) {
-		GSSTmTcFormatCheckType result = GSSTmTcFormatCheckType.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertGSSTmTcFormatCheckTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

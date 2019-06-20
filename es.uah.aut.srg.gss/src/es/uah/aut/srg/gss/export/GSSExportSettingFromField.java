@@ -33,7 +33,7 @@ public interface GSSExportSettingFromField extends GSSExportSetting {
 	 * Returns the value of the '<em><b>Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Field Ref</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Field Ref</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

@@ -11,7 +11,9 @@
 package es.uah.aut.srg.gss.filters;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
+
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -35,7 +37,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface GSSFilterFilter extends GSSModelElement {
-
 	/**
 	 * Returns the value of the '<em><b>Format File</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -125,4 +126,5 @@ public interface GSSFilterFilter extends GSSModelElement {
 	 * @generated
 	 */
 	EList<GSSFilterBoolVarFDIC> getBoolVarFDIC();
+
 } // GSSFilterFilter

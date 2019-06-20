@@ -11,6 +11,7 @@
 package es.uah.aut.srg.gss.filters.impl;
 
 import es.uah.aut.srg.gss.common.commonPackage;
+
 import es.uah.aut.srg.gss.filters.GSSFilterBoolVar;
 import es.uah.aut.srg.gss.filters.GSSFilterBoolVarFDIC;
 import es.uah.aut.srg.gss.filters.GSSFilterBoolVarFromArrayItem;
@@ -32,6 +33,7 @@ import es.uah.aut.srg.gss.filters.filtersFactory;
 import es.uah.aut.srg.gss.filters.filtersPackage;
 
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;

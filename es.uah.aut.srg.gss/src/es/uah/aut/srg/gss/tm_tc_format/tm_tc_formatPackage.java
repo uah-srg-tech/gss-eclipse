@@ -504,16 +504,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_CS_FORMULA_FIELD_OPERATION_COUNT = GSS_TM_TC_FORMAT_CS_FIELD_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFormulaImpl <em>GSS Tm Tc Format Formula</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFormulaImpl
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatFormula()
-	 * @generated
-	 */
-	int GSS_TM_TC_FORMAT_FORMULA = 10;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVSFieldImpl <em>GSS Tm Tc Format VS Field</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -639,16 +629,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @ordered
 	 */
 	int GSS_TM_TC_FORMAT_VS_FIELD_OPERATION_COUNT = GSS_TM_TC_FORMAT_FIELD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVariableSizeImpl <em>GSS Tm Tc Format Variable Size</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVariableSizeImpl
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatVariableSize()
-	 * @generated
-	 */
-	int GSS_TM_TC_FORMAT_VARIABLE_SIZE = 11;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVRFieldSizeImpl <em>GSS Tm Tc Format VR Field Size</em>}' class.
@@ -833,36 +813,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_FDIC_FIELD_OPERATION_COUNT = GSS_TM_TC_FORMAT_FIELD_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFloatingOffsetImpl <em>GSS Tm Tc Format Floating Offset</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFloatingOffsetImpl
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatFloatingOffset()
-	 * @generated
-	 */
-	int GSS_TM_TC_FORMAT_FLOATING_OFFSET = 12;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatSortedFieldsToCheckImpl <em>GSS Tm Tc Format Sorted Fields To Check</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatSortedFieldsToCheckImpl
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatSortedFieldsToCheck()
-	 * @generated
-	 */
-	int GSS_TM_TC_FORMAT_SORTED_FIELDS_TO_CHECK = 13;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFieldToCheckImpl <em>GSS Tm Tc Format Field To Check</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFieldToCheckImpl
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatFieldToCheck()
-	 * @generated
-	 */
-	int GSS_TM_TC_FORMAT_FIELD_TO_CHECK = 14;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl <em>GSS Tm Tc Format AField</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -979,16 +929,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @ordered
 	 */
 	int GSS_TM_TC_FORMAT_AFIELD_OPERATION_COUNT = GSS_TM_TC_FORMAT_FIELD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatArrayDimensionImpl <em>GSS Tm Tc Format Array Dimension</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatArrayDimensionImpl
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatArrayDimension()
-	 * @generated
-	 */
-	int GSS_TM_TC_FORMAT_ARRAY_DIMENSION = 15;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl <em>GSS Tm Tc Format AI Field</em>}' class.
@@ -1155,6 +1095,16 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_BYTES_BITS_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFormulaImpl <em>GSS Tm Tc Format Formula</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFormulaImpl
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatFormula()
+	 * @generated
+	 */
+	int GSS_TM_TC_FORMAT_FORMULA = 10;
+
+	/**
 	 * The feature id for the '<em><b>Slope</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1189,6 +1139,16 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @ordered
 	 */
 	int GSS_TM_TC_FORMAT_FORMULA_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVariableSizeImpl <em>GSS Tm Tc Format Variable Size</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVariableSizeImpl
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatVariableSize()
+	 * @generated
+	 */
+	int GSS_TM_TC_FORMAT_VARIABLE_SIZE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Fid Ref</b></em>' attribute.
@@ -1236,6 +1196,16 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_VARIABLE_SIZE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFloatingOffsetImpl <em>GSS Tm Tc Format Floating Offset</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFloatingOffsetImpl
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatFloatingOffset()
+	 * @generated
+	 */
+	int GSS_TM_TC_FORMAT_FLOATING_OFFSET = 12;
+
+	/**
 	 * The feature id for the '<em><b>Fid Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1261,6 +1231,16 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @ordered
 	 */
 	int GSS_TM_TC_FORMAT_FLOATING_OFFSET_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatSortedFieldsToCheckImpl <em>GSS Tm Tc Format Sorted Fields To Check</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatSortedFieldsToCheckImpl
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatSortedFieldsToCheck()
+	 * @generated
+	 */
+	int GSS_TM_TC_FORMAT_SORTED_FIELDS_TO_CHECK = 13;
 
 	/**
 	 * The feature id for the '<em><b>Field To Check</b></em>' containment reference list.
@@ -1290,6 +1270,16 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_SORTED_FIELDS_TO_CHECK_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFieldToCheckImpl <em>GSS Tm Tc Format Field To Check</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFieldToCheckImpl
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatFieldToCheck()
+	 * @generated
+	 */
+	int GSS_TM_TC_FORMAT_FIELD_TO_CHECK = 14;
+
+	/**
 	 * The feature id for the '<em><b>Fid Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1315,6 +1305,16 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @ordered
 	 */
 	int GSS_TM_TC_FORMAT_FIELD_TO_CHECK_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatArrayDimensionImpl <em>GSS Tm Tc Format Array Dimension</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatArrayDimensionImpl
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatArrayDimension()
+	 * @generated
+	 */
+	int GSS_TM_TC_FORMAT_ARRAY_DIMENSION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Fid Ref</b></em>' attribute.
@@ -1430,6 +1430,16 @@ public interface tm_tc_formatPackage extends EPackage {
 	int GSS_TM_TC_FORMAT_SFIELD_FIRST_BIT = 20;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType <em>GSS Tm Tc Format Check Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType
+	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatCheckType()
+	 * @generated
+	 */
+	int GSS_TM_TC_FORMAT_CHECK_TYPE = 21;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatUnit <em>GSS Tm Tc Format Unit</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1448,6 +1458,7 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 */
 	int GSS_TM_TC_FORMAT_POWER = 23;
+
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat <em>GSS Tm Tc Format Tm Tc Format</em>}'.
@@ -1557,17 +1568,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGSSTmTcFormatTmTcFormat_AIField();
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType <em>GSS Tm Tc Format Check Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType
-	 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatCheckType()
-	 * @generated
-	 */
-	int GSS_TM_TC_FORMAT_CHECK_TYPE = 21;
-
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField <em>GSS Tm Tc Format Field</em>}'.
@@ -1688,38 +1688,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	EReference getGSSTmTcFormatCSFormulaField_Formula();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFormula <em>GSS Tm Tc Format Formula</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Tm Tc Format Formula</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFormula
-	 * @generated
-	 */
-	EClass getGSSTmTcFormatFormula();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFormula#getSlope <em>Slope</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Slope</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFormula#getSlope()
-	 * @see #getGSSTmTcFormatFormula()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatFormula_Slope();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFormula#getIntercept <em>Intercept</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Intercept</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFormula#getIntercept()
-	 * @see #getGSSTmTcFormatFormula()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatFormula_Intercept();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField <em>GSS Tm Tc Format VS Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1774,15 +1742,15 @@ public interface tm_tc_formatPackage extends EPackage {
 	EReference getGSSTmTcFormatVSField_ConstSize();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getGlobalOffset <em>Global Offset</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getVariableSize <em>Variable Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Global Offset</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getGlobalOffset()
+	 * @return the meta object for the containment reference '<em>Variable Size</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getVariableSize()
 	 * @see #getGSSTmTcFormatVSField()
 	 * @generated
 	 */
-	EReference getGSSTmTcFormatVSField_GlobalOffset();
+	EReference getGSSTmTcFormatVSField_VariableSize();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getMaxSize <em>Max Size</em>}'.
@@ -1796,58 +1764,15 @@ public interface tm_tc_formatPackage extends EPackage {
 	EReference getGSSTmTcFormatVSField_MaxSize();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getVariableSize <em>Variable Size</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getGlobalOffset <em>Global Offset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Variable Size</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getVariableSize()
+	 * @return the meta object for the containment reference '<em>Global Offset</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getGlobalOffset()
 	 * @see #getGSSTmTcFormatVSField()
 	 * @generated
 	 */
-	EReference getGSSTmTcFormatVSField_VariableSize();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize <em>GSS Tm Tc Format Variable Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Tm Tc Format Variable Size</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize
-	 * @generated
-	 */
-	EClass getGSSTmTcFormatVariableSize();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getFidRef <em>Fid Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Fid Ref</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getFidRef()
-	 * @see #getGSSTmTcFormatVariableSize()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatVariableSize_FidRef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getUnit <em>Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Unit</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getUnit()
-	 * @see #getGSSTmTcFormatVariableSize()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatVariableSize_Unit();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getPower <em>Power</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Power</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getPower()
-	 * @see #getGSSTmTcFormatVariableSize()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatVariableSize_Power();
+	EReference getGSSTmTcFormatVSField_GlobalOffset();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize <em>GSS Tm Tc Format VR Field Size</em>}'.
@@ -1936,6 +1861,265 @@ public interface tm_tc_formatPackage extends EPackage {
 	EReference getGSSTmTcFormatFDICField_SortedFieldsToCheck();
 
 	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField <em>GSS Tm Tc Format AField</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Tm Tc Format AField</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField
+	 * @generated
+	 */
+	EClass getGSSTmTcFormatAField();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getType()
+	 * @see #getGSSTmTcFormatAField()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatAField_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getByteOrder <em>Byte Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Byte Order</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getByteOrder()
+	 * @see #getGSSTmTcFormatAField()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatAField_ByteOrder();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getFirstBit <em>First Bit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>First Bit</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getFirstBit()
+	 * @see #getGSSTmTcFormatAField()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatAField_FirstBit();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getArrayDimension <em>Array Dimension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Array Dimension</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getArrayDimension()
+	 * @see #getGSSTmTcFormatAField()
+	 * @generated
+	 */
+	EReference getGSSTmTcFormatAField_ArrayDimension();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Size</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getSize()
+	 * @see #getGSSTmTcFormatAField()
+	 * @generated
+	 */
+	EReference getGSSTmTcFormatAField_Size();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getGlobalOffset <em>Global Offset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Global Offset</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getGlobalOffset()
+	 * @see #getGSSTmTcFormatAField()
+	 * @generated
+	 */
+	EReference getGSSTmTcFormatAField_GlobalOffset();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField <em>GSS Tm Tc Format AI Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Tm Tc Format AI Field</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField
+	 * @generated
+	 */
+	EClass getGSSTmTcFormatAIField();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getType()
+	 * @see #getGSSTmTcFormatAIField()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatAIField_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getByteOrder <em>Byte Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Byte Order</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getByteOrder()
+	 * @see #getGSSTmTcFormatAIField()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatAIField_ByteOrder();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getFirstBit <em>First Bit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>First Bit</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getFirstBit()
+	 * @see #getGSSTmTcFormatAIField()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatAIField_FirstBit();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getArrayRef <em>Array Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Array Ref</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getArrayRef()
+	 * @see #getGSSTmTcFormatAIField()
+	 * @generated
+	 */
+	EReference getGSSTmTcFormatAIField_ArrayRef();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Size</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getSize()
+	 * @see #getGSSTmTcFormatAIField()
+	 * @generated
+	 */
+	EReference getGSSTmTcFormatAIField_Size();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getLocalOffset <em>Local Offset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Local Offset</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getLocalOffset()
+	 * @see #getGSSTmTcFormatAIField()
+	 * @generated
+	 */
+	EReference getGSSTmTcFormatAIField_LocalOffset();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits <em>GSS Tm Tc Format Bytes Bits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Tm Tc Format Bytes Bits</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits
+	 * @generated
+	 */
+	EClass getGSSTmTcFormatBytesBits();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits#getBytes <em>Bytes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bytes</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits#getBytes()
+	 * @see #getGSSTmTcFormatBytesBits()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatBytesBits_Bytes();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits#getBits <em>Bits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bits</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits#getBits()
+	 * @see #getGSSTmTcFormatBytesBits()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatBytesBits_Bits();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFormula <em>GSS Tm Tc Format Formula</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Tm Tc Format Formula</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFormula
+	 * @generated
+	 */
+	EClass getGSSTmTcFormatFormula();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFormula#getSlope <em>Slope</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Slope</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFormula#getSlope()
+	 * @see #getGSSTmTcFormatFormula()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatFormula_Slope();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFormula#getIntercept <em>Intercept</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Intercept</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFormula#getIntercept()
+	 * @see #getGSSTmTcFormatFormula()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatFormula_Intercept();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize <em>GSS Tm Tc Format Variable Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Tm Tc Format Variable Size</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize
+	 * @generated
+	 */
+	EClass getGSSTmTcFormatVariableSize();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getFidRef <em>Fid Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fid Ref</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getFidRef()
+	 * @see #getGSSTmTcFormatVariableSize()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatVariableSize_FidRef();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unit</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getUnit()
+	 * @see #getGSSTmTcFormatVariableSize()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatVariableSize_Unit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getPower <em>Power</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Power</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize#getPower()
+	 * @see #getGSSTmTcFormatVariableSize()
+	 * @generated
+	 */
+	EAttribute getGSSTmTcFormatVariableSize_Power();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFloatingOffset <em>GSS Tm Tc Format Floating Offset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1999,82 +2183,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	EAttribute getGSSTmTcFormatFieldToCheck_FidRef();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField <em>GSS Tm Tc Format AField</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Tm Tc Format AField</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField
-	 * @generated
-	 */
-	EClass getGSSTmTcFormatAField();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getType()
-	 * @see #getGSSTmTcFormatAField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatAField_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getByteOrder <em>Byte Order</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Byte Order</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getByteOrder()
-	 * @see #getGSSTmTcFormatAField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatAField_ByteOrder();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getFirstBit <em>First Bit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>First Bit</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getFirstBit()
-	 * @see #getGSSTmTcFormatAField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatAField_FirstBit();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getSize <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Size</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getSize()
-	 * @see #getGSSTmTcFormatAField()
-	 * @generated
-	 */
-	EReference getGSSTmTcFormatAField_Size();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getGlobalOffset <em>Global Offset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Global Offset</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getGlobalOffset()
-	 * @see #getGSSTmTcFormatAField()
-	 * @generated
-	 */
-	EReference getGSSTmTcFormatAField_GlobalOffset();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getArrayDimension <em>Array Dimension</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Array Dimension</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField#getArrayDimension()
-	 * @see #getGSSTmTcFormatAField()
-	 * @generated
-	 */
-	EReference getGSSTmTcFormatAField_ArrayDimension();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatArrayDimension <em>GSS Tm Tc Format Array Dimension</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2105,114 +2213,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGSSTmTcFormatArrayDimension_MaxItems();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField <em>GSS Tm Tc Format AI Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Tm Tc Format AI Field</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField
-	 * @generated
-	 */
-	EClass getGSSTmTcFormatAIField();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getType()
-	 * @see #getGSSTmTcFormatAIField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatAIField_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getByteOrder <em>Byte Order</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Byte Order</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getByteOrder()
-	 * @see #getGSSTmTcFormatAIField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatAIField_ByteOrder();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getFirstBit <em>First Bit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>First Bit</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getFirstBit()
-	 * @see #getGSSTmTcFormatAIField()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatAIField_FirstBit();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getSize <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Size</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getSize()
-	 * @see #getGSSTmTcFormatAIField()
-	 * @generated
-	 */
-	EReference getGSSTmTcFormatAIField_Size();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getLocalOffset <em>Local Offset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Local Offset</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getLocalOffset()
-	 * @see #getGSSTmTcFormatAIField()
-	 * @generated
-	 */
-	EReference getGSSTmTcFormatAIField_LocalOffset();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits <em>GSS Tm Tc Format Bytes Bits</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Tm Tc Format Bytes Bits</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits
-	 * @generated
-	 */
-	EClass getGSSTmTcFormatBytesBits();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits#getBytes <em>Bytes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Bytes</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits#getBytes()
-	 * @see #getGSSTmTcFormatBytesBits()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatBytesBits_Bytes();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits#getBits <em>Bits</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Bits</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits#getBits()
-	 * @see #getGSSTmTcFormatBytesBits()
-	 * @generated
-	 */
-	EAttribute getGSSTmTcFormatBytesBits_Bits();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getArrayRef <em>Array Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Array Ref</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField#getArrayRef()
-	 * @see #getGSSTmTcFormatAIField()
-	 * @generated
-	 */
-	EReference getGSSTmTcFormatAIField_ArrayRef();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatArrayRef <em>GSS Tm Tc Format Array Ref</em>}'.
@@ -2276,6 +2276,16 @@ public interface tm_tc_formatPackage extends EPackage {
 	EEnum getGSSTmTcFormatSFieldFirstBit();
 
 	/**
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType <em>GSS Tm Tc Format Check Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>GSS Tm Tc Format Check Type</em>'.
+	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType
+	 * @generated
+	 */
+	EEnum getGSSTmTcFormatCheckType();
+
+	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatUnit <em>GSS Tm Tc Format Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2294,16 +2304,6 @@ public interface tm_tc_formatPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getGSSTmTcFormatPower();
-
-	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType <em>GSS Tm Tc Format Check Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>GSS Tm Tc Format Check Type</em>'.
-	 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType
-	 * @generated
-	 */
-	EEnum getGSSTmTcFormatCheckType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2355,20 +2355,20 @@ public interface tm_tc_formatPackage extends EPackage {
 		EAttribute GSS_TM_TC_FORMAT_TM_TC_FORMAT__TYPE = eINSTANCE.getGSSTmTcFormatTmTcFormat_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>CS Formula Field</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FORMULA_FIELD = eINSTANCE.getGSSTmTcFormatTmTcFormat_CSFormulaField();
-
-		/**
 		 * The meta object literal for the '<em><b>CS Field</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FIELD = eINSTANCE.getGSSTmTcFormatTmTcFormat_CSField();
+
+		/**
+		 * The meta object literal for the '<em><b>CS Formula Field</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_TM_TC_FORMAT_TM_TC_FORMAT__CS_FORMULA_FIELD = eINSTANCE.getGSSTmTcFormatTmTcFormat_CSFormulaField();
 
 		/**
 		 * The meta object literal for the '<em><b>VS Field</b></em>' containment reference list feature.
@@ -2505,32 +2505,6 @@ public interface tm_tc_formatPackage extends EPackage {
 		EReference GSS_TM_TC_FORMAT_CS_FORMULA_FIELD__FORMULA = eINSTANCE.getGSSTmTcFormatCSFormulaField_Formula();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFormulaImpl <em>GSS Tm Tc Format Formula</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFormulaImpl
-		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatFormula()
-		 * @generated
-		 */
-		EClass GSS_TM_TC_FORMAT_FORMULA = eINSTANCE.getGSSTmTcFormatFormula();
-
-		/**
-		 * The meta object literal for the '<em><b>Slope</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_FORMULA__SLOPE = eINSTANCE.getGSSTmTcFormatFormula_Slope();
-
-		/**
-		 * The meta object literal for the '<em><b>Intercept</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_FORMULA__INTERCEPT = eINSTANCE.getGSSTmTcFormatFormula_Intercept();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVSFieldImpl <em>GSS Tm Tc Format VS Field</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2573,12 +2547,12 @@ public interface tm_tc_formatPackage extends EPackage {
 		EReference GSS_TM_TC_FORMAT_VS_FIELD__CONST_SIZE = eINSTANCE.getGSSTmTcFormatVSField_ConstSize();
 
 		/**
-		 * The meta object literal for the '<em><b>Global Offset</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Variable Size</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET = eINSTANCE.getGSSTmTcFormatVSField_GlobalOffset();
+		EReference GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE = eINSTANCE.getGSSTmTcFormatVSField_VariableSize();
 
 		/**
 		 * The meta object literal for the '<em><b>Max Size</b></em>' containment reference feature.
@@ -2589,46 +2563,12 @@ public interface tm_tc_formatPackage extends EPackage {
 		EReference GSS_TM_TC_FORMAT_VS_FIELD__MAX_SIZE = eINSTANCE.getGSSTmTcFormatVSField_MaxSize();
 
 		/**
-		 * The meta object literal for the '<em><b>Variable Size</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Global Offset</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_TM_TC_FORMAT_VS_FIELD__VARIABLE_SIZE = eINSTANCE.getGSSTmTcFormatVSField_VariableSize();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVariableSizeImpl <em>GSS Tm Tc Format Variable Size</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVariableSizeImpl
-		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatVariableSize()
-		 * @generated
-		 */
-		EClass GSS_TM_TC_FORMAT_VARIABLE_SIZE = eINSTANCE.getGSSTmTcFormatVariableSize();
-
-		/**
-		 * The meta object literal for the '<em><b>Fid Ref</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_VARIABLE_SIZE__FID_REF = eINSTANCE.getGSSTmTcFormatVariableSize_FidRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_VARIABLE_SIZE__UNIT = eINSTANCE.getGSSTmTcFormatVariableSize_Unit();
-
-		/**
-		 * The meta object literal for the '<em><b>Power</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_VARIABLE_SIZE__POWER = eINSTANCE.getGSSTmTcFormatVariableSize_Power();
+		EReference GSS_TM_TC_FORMAT_VS_FIELD__GLOBAL_OFFSET = eINSTANCE.getGSSTmTcFormatVSField_GlobalOffset();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVRFieldSizeImpl <em>GSS Tm Tc Format VR Field Size</em>}' class.
@@ -2699,6 +2639,208 @@ public interface tm_tc_formatPackage extends EPackage {
 		EReference GSS_TM_TC_FORMAT_FDIC_FIELD__SORTED_FIELDS_TO_CHECK = eINSTANCE.getGSSTmTcFormatFDICField_SortedFieldsToCheck();
 
 		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl <em>GSS Tm Tc Format AField</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl
+		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatAField()
+		 * @generated
+		 */
+		EClass GSS_TM_TC_FORMAT_AFIELD = eINSTANCE.getGSSTmTcFormatAField();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TM_TC_FORMAT_AFIELD__TYPE = eINSTANCE.getGSSTmTcFormatAField_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Byte Order</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TM_TC_FORMAT_AFIELD__BYTE_ORDER = eINSTANCE.getGSSTmTcFormatAField_ByteOrder();
+
+		/**
+		 * The meta object literal for the '<em><b>First Bit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TM_TC_FORMAT_AFIELD__FIRST_BIT = eINSTANCE.getGSSTmTcFormatAField_FirstBit();
+
+		/**
+		 * The meta object literal for the '<em><b>Array Dimension</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION = eINSTANCE.getGSSTmTcFormatAField_ArrayDimension();
+
+		/**
+		 * The meta object literal for the '<em><b>Size</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_TM_TC_FORMAT_AFIELD__SIZE = eINSTANCE.getGSSTmTcFormatAField_Size();
+
+		/**
+		 * The meta object literal for the '<em><b>Global Offset</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_TM_TC_FORMAT_AFIELD__GLOBAL_OFFSET = eINSTANCE.getGSSTmTcFormatAField_GlobalOffset();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl <em>GSS Tm Tc Format AI Field</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl
+		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatAIField()
+		 * @generated
+		 */
+		EClass GSS_TM_TC_FORMAT_AI_FIELD = eINSTANCE.getGSSTmTcFormatAIField();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TM_TC_FORMAT_AI_FIELD__TYPE = eINSTANCE.getGSSTmTcFormatAIField_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Byte Order</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TM_TC_FORMAT_AI_FIELD__BYTE_ORDER = eINSTANCE.getGSSTmTcFormatAIField_ByteOrder();
+
+		/**
+		 * The meta object literal for the '<em><b>First Bit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TM_TC_FORMAT_AI_FIELD__FIRST_BIT = eINSTANCE.getGSSTmTcFormatAIField_FirstBit();
+
+		/**
+		 * The meta object literal for the '<em><b>Array Ref</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF = eINSTANCE.getGSSTmTcFormatAIField_ArrayRef();
+
+		/**
+		 * The meta object literal for the '<em><b>Size</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_TM_TC_FORMAT_AI_FIELD__SIZE = eINSTANCE.getGSSTmTcFormatAIField_Size();
+
+		/**
+		 * The meta object literal for the '<em><b>Local Offset</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET = eINSTANCE.getGSSTmTcFormatAIField_LocalOffset();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatBytesBitsImpl <em>GSS Tm Tc Format Bytes Bits</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatBytesBitsImpl
+		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatBytesBits()
+		 * @generated
+		 */
+		EClass GSS_TM_TC_FORMAT_BYTES_BITS = eINSTANCE.getGSSTmTcFormatBytesBits();
+
+		/**
+		 * The meta object literal for the '<em><b>Bytes</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TM_TC_FORMAT_BYTES_BITS__BYTES = eINSTANCE.getGSSTmTcFormatBytesBits_Bytes();
+
+		/**
+		 * The meta object literal for the '<em><b>Bits</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TM_TC_FORMAT_BYTES_BITS__BITS = eINSTANCE.getGSSTmTcFormatBytesBits_Bits();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFormulaImpl <em>GSS Tm Tc Format Formula</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFormulaImpl
+		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatFormula()
+		 * @generated
+		 */
+		EClass GSS_TM_TC_FORMAT_FORMULA = eINSTANCE.getGSSTmTcFormatFormula();
+
+		/**
+		 * The meta object literal for the '<em><b>Slope</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TM_TC_FORMAT_FORMULA__SLOPE = eINSTANCE.getGSSTmTcFormatFormula_Slope();
+
+		/**
+		 * The meta object literal for the '<em><b>Intercept</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TM_TC_FORMAT_FORMULA__INTERCEPT = eINSTANCE.getGSSTmTcFormatFormula_Intercept();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVariableSizeImpl <em>GSS Tm Tc Format Variable Size</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatVariableSizeImpl
+		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatVariableSize()
+		 * @generated
+		 */
+		EClass GSS_TM_TC_FORMAT_VARIABLE_SIZE = eINSTANCE.getGSSTmTcFormatVariableSize();
+
+		/**
+		 * The meta object literal for the '<em><b>Fid Ref</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TM_TC_FORMAT_VARIABLE_SIZE__FID_REF = eINSTANCE.getGSSTmTcFormatVariableSize_FidRef();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TM_TC_FORMAT_VARIABLE_SIZE__UNIT = eINSTANCE.getGSSTmTcFormatVariableSize_Unit();
+
+		/**
+		 * The meta object literal for the '<em><b>Power</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TM_TC_FORMAT_VARIABLE_SIZE__POWER = eINSTANCE.getGSSTmTcFormatVariableSize_Power();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatFloatingOffsetImpl <em>GSS Tm Tc Format Floating Offset</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2753,64 +2895,6 @@ public interface tm_tc_formatPackage extends EPackage {
 		EAttribute GSS_TM_TC_FORMAT_FIELD_TO_CHECK__FID_REF = eINSTANCE.getGSSTmTcFormatFieldToCheck_FidRef();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl <em>GSS Tm Tc Format AField</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAFieldImpl
-		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatAField()
-		 * @generated
-		 */
-		EClass GSS_TM_TC_FORMAT_AFIELD = eINSTANCE.getGSSTmTcFormatAField();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_AFIELD__TYPE = eINSTANCE.getGSSTmTcFormatAField_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Byte Order</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_AFIELD__BYTE_ORDER = eINSTANCE.getGSSTmTcFormatAField_ByteOrder();
-
-		/**
-		 * The meta object literal for the '<em><b>First Bit</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_AFIELD__FIRST_BIT = eINSTANCE.getGSSTmTcFormatAField_FirstBit();
-
-		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TM_TC_FORMAT_AFIELD__SIZE = eINSTANCE.getGSSTmTcFormatAField_Size();
-
-		/**
-		 * The meta object literal for the '<em><b>Global Offset</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TM_TC_FORMAT_AFIELD__GLOBAL_OFFSET = eINSTANCE.getGSSTmTcFormatAField_GlobalOffset();
-
-		/**
-		 * The meta object literal for the '<em><b>Array Dimension</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TM_TC_FORMAT_AFIELD__ARRAY_DIMENSION = eINSTANCE.getGSSTmTcFormatAField_ArrayDimension();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatArrayDimensionImpl <em>GSS Tm Tc Format Array Dimension</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2835,90 +2919,6 @@ public interface tm_tc_formatPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GSS_TM_TC_FORMAT_ARRAY_DIMENSION__MAX_ITEMS = eINSTANCE.getGSSTmTcFormatArrayDimension_MaxItems();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl <em>GSS Tm Tc Format AI Field</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatAIFieldImpl
-		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatAIField()
-		 * @generated
-		 */
-		EClass GSS_TM_TC_FORMAT_AI_FIELD = eINSTANCE.getGSSTmTcFormatAIField();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_AI_FIELD__TYPE = eINSTANCE.getGSSTmTcFormatAIField_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Byte Order</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_AI_FIELD__BYTE_ORDER = eINSTANCE.getGSSTmTcFormatAIField_ByteOrder();
-
-		/**
-		 * The meta object literal for the '<em><b>First Bit</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_AI_FIELD__FIRST_BIT = eINSTANCE.getGSSTmTcFormatAIField_FirstBit();
-
-		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TM_TC_FORMAT_AI_FIELD__SIZE = eINSTANCE.getGSSTmTcFormatAIField_Size();
-
-		/**
-		 * The meta object literal for the '<em><b>Local Offset</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET = eINSTANCE.getGSSTmTcFormatAIField_LocalOffset();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatBytesBitsImpl <em>GSS Tm Tc Format Bytes Bits</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatBytesBitsImpl
-		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatBytesBits()
-		 * @generated
-		 */
-		EClass GSS_TM_TC_FORMAT_BYTES_BITS = eINSTANCE.getGSSTmTcFormatBytesBits();
-
-		/**
-		 * The meta object literal for the '<em><b>Bytes</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_BYTES_BITS__BYTES = eINSTANCE.getGSSTmTcFormatBytesBits_Bytes();
-
-		/**
-		 * The meta object literal for the '<em><b>Bits</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_TM_TC_FORMAT_BYTES_BITS__BITS = eINSTANCE.getGSSTmTcFormatBytesBits_Bits();
-
-		/**
-		 * The meta object literal for the '<em><b>Array Ref</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF = eINSTANCE.getGSSTmTcFormatAIField_ArrayRef();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.impl.GSSTmTcFormatArrayRefImpl <em>GSS Tm Tc Format Array Ref</em>}' class.
@@ -2979,6 +2979,16 @@ public interface tm_tc_formatPackage extends EPackage {
 		EEnum GSS_TM_TC_FORMAT_SFIELD_FIRST_BIT = eINSTANCE.getGSSTmTcFormatSFieldFirstBit();
 
 		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType <em>GSS Tm Tc Format Check Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType
+		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatCheckType()
+		 * @generated
+		 */
+		EEnum GSS_TM_TC_FORMAT_CHECK_TYPE = eINSTANCE.getGSSTmTcFormatCheckType();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatUnit <em>GSS Tm Tc Format Unit</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2997,16 +3007,6 @@ public interface tm_tc_formatPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum GSS_TM_TC_FORMAT_POWER = eINSTANCE.getGSSTmTcFormatPower();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType <em>GSS Tm Tc Format Check Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCheckType
-		 * @see es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatPackageImpl#getGSSTmTcFormatCheckType()
-		 * @generated
-		 */
-		EEnum GSS_TM_TC_FORMAT_CHECK_TYPE = eINSTANCE.getGSSTmTcFormatCheckType();
 
 	}
 

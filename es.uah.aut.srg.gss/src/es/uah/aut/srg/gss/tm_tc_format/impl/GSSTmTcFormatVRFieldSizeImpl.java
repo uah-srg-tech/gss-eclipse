@@ -12,6 +12,7 @@ package es.uah.aut.srg.gss.tm_tc_format.impl;
 
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

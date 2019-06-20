@@ -19,11 +19,11 @@ import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSFieldFirstBit;
 import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -324,6 +324,49 @@ public class GSSTmTcFormatAIFieldImpl extends GSSTmTcFormatFieldImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GSSTmTcFormatArrayRef getArrayRef() {
+		return arrayRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetArrayRef(GSSTmTcFormatArrayRef newArrayRef, NotificationChain msgs) {
+		GSSTmTcFormatArrayRef oldArrayRef = arrayRef;
+		arrayRef = newArrayRef;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF, oldArrayRef, newArrayRef);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setArrayRef(GSSTmTcFormatArrayRef newArrayRef) {
+		if (newArrayRef != arrayRef) {
+			NotificationChain msgs = null;
+			if (arrayRef != null)
+				msgs = ((InternalEObject)arrayRef).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF, null, msgs);
+			if (newArrayRef != null)
+				msgs = ((InternalEObject)newArrayRef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF, null, msgs);
+			msgs = basicSetArrayRef(newArrayRef, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF, newArrayRef, newArrayRef));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GSSTmTcFormatBytesBits getSize() {
 		return size;
 	}
@@ -403,49 +446,6 @@ public class GSSTmTcFormatAIFieldImpl extends GSSTmTcFormatFieldImpl implements 
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__LOCAL_OFFSET, newLocalOffset, newLocalOffset));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTmTcFormatArrayRef getArrayRef() {
-		return arrayRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetArrayRef(GSSTmTcFormatArrayRef newArrayRef, NotificationChain msgs) {
-		GSSTmTcFormatArrayRef oldArrayRef = arrayRef;
-		arrayRef = newArrayRef;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF, oldArrayRef, newArrayRef);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setArrayRef(GSSTmTcFormatArrayRef newArrayRef) {
-		if (newArrayRef != arrayRef) {
-			NotificationChain msgs = null;
-			if (arrayRef != null)
-				msgs = ((InternalEObject)arrayRef).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF, null, msgs);
-			if (newArrayRef != null)
-				msgs = ((InternalEObject)newArrayRef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF, null, msgs);
-			msgs = basicSetArrayRef(newArrayRef, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tm_tc_formatPackage.GSS_TM_TC_FORMAT_AI_FIELD__ARRAY_REF, newArrayRef, newArrayRef));
 	}
 
 	/**

@@ -11,6 +11,7 @@
 package es.uah.aut.srg.gss.filters;
 
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -115,7 +116,7 @@ public interface GSSFilterBoolVarFDIC extends EObject {
 	 * Returns the value of the '<em><b>Op</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Op</em>' reference isn't clear,
+	 * If the meaning of the '<em>Op</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

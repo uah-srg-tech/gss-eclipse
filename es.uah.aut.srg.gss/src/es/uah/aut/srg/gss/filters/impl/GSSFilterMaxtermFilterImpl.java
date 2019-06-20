@@ -13,13 +13,16 @@ package es.uah.aut.srg.gss.filters.impl;
 import es.uah.aut.srg.gss.filters.GSSFilterMaxterm;
 import es.uah.aut.srg.gss.filters.GSSFilterMaxtermFilter;
 import es.uah.aut.srg.gss.filters.filtersPackage;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 

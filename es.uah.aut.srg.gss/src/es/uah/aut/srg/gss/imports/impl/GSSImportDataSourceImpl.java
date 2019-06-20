@@ -14,11 +14,12 @@ import es.uah.aut.srg.gss.imports.GSSImportDataSource;
 import es.uah.aut.srg.gss.imports.importsPackage;
 
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 

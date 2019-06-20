@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.tm_tc_format;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Tm Tc Format VS Field</b></em>'.
@@ -228,30 +229,30 @@ public interface GSSTmTcFormatVSField extends GSSTmTcFormatField {
 	void setConstSize(GSSTmTcFormatBytesBits value);
 
 	/**
-	 * Returns the value of the '<em><b>Global Offset</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Variable Size</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Global Offset</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Variable Size</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Global Offset</em>' containment reference.
-	 * @see #setGlobalOffset(GSSTmTcFormatBytesBits)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVSField_GlobalOffset()
+	 * @return the value of the '<em>Variable Size</em>' containment reference.
+	 * @see #setVariableSize(GSSTmTcFormatVariableSize)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVSField_VariableSize()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatBytesBits getGlobalOffset();
+	GSSTmTcFormatVariableSize getVariableSize();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getGlobalOffset <em>Global Offset</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getVariableSize <em>Variable Size</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Global Offset</em>' containment reference.
-	 * @see #getGlobalOffset()
+	 * @param value the new value of the '<em>Variable Size</em>' containment reference.
+	 * @see #getVariableSize()
 	 * @generated
 	 */
-	void setGlobalOffset(GSSTmTcFormatBytesBits value);
+	void setVariableSize(GSSTmTcFormatVariableSize value);
 
 	/**
 	 * Returns the value of the '<em><b>Max Size</b></em>' containment reference.
@@ -280,29 +281,29 @@ public interface GSSTmTcFormatVSField extends GSSTmTcFormatField {
 	void setMaxSize(GSSTmTcFormatBytesBits value);
 
 	/**
-	 * Returns the value of the '<em><b>Variable Size</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Global Offset</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Variable Size</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Global Offset</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Variable Size</em>' containment reference.
-	 * @see #setVariableSize(GSSTmTcFormatVariableSize)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVSField_VariableSize()
+	 * @return the value of the '<em>Global Offset</em>' containment reference.
+	 * @see #setGlobalOffset(GSSTmTcFormatBytesBits)
+	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatVSField_GlobalOffset()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatVariableSize getVariableSize();
+	GSSTmTcFormatBytesBits getGlobalOffset();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getVariableSize <em>Variable Size</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField#getGlobalOffset <em>Global Offset</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Variable Size</em>' containment reference.
-	 * @see #getVariableSize()
+	 * @param value the new value of the '<em>Global Offset</em>' containment reference.
+	 * @see #getGlobalOffset()
 	 * @generated
 	 */
-	void setVariableSize(GSSTmTcFormatVariableSize value);
+	void setGlobalOffset(GSSTmTcFormatBytesBits value);
 
 } // GSSTmTcFormatVSField
