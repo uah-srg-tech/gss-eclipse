@@ -10,10 +10,7 @@
  */
 package es.uah.aut.srg.gss.test_proc.impl;
 
-import es.uah.aut.srg.gss.test_proc.GSSTestProcDisable;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcDisablePrint;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcEnable;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcEnablePrint;
+import es.uah.aut.srg.gss.test_proc.GSSTestProcEnableDisable;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcSpecialPackets;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
 
@@ -56,7 +53,7 @@ public class GSSTestProcSpecialPacketsImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GSSTestProcEnable> enable;
+	protected EList<GSSTestProcEnableDisable> enable;
 
 	/**
 	 * The cached value of the '{@link #getDisable() <em>Disable</em>}' containment reference list.
@@ -66,7 +63,7 @@ public class GSSTestProcSpecialPacketsImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GSSTestProcDisable> disable;
+	protected EList<GSSTestProcEnableDisable> disable;
 
 	/**
 	 * The cached value of the '{@link #getEnable_print() <em>Enable print</em>}' containment reference list.
@@ -76,7 +73,7 @@ public class GSSTestProcSpecialPacketsImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GSSTestProcEnablePrint> enable_print;
+	protected EList<GSSTestProcEnableDisable> enable_print;
 
 	/**
 	 * The cached value of the '{@link #getDisable_print() <em>Disable print</em>}' containment reference list.
@@ -86,7 +83,7 @@ public class GSSTestProcSpecialPacketsImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GSSTestProcDisablePrint> disable_print;
+	protected EList<GSSTestProcEnableDisable> disable_print;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,9 +109,9 @@ public class GSSTestProcSpecialPacketsImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSTestProcEnable> getEnable() {
+	public EList<GSSTestProcEnableDisable> getEnable() {
 		if (enable == null) {
-			enable = new EObjectContainmentEList<GSSTestProcEnable>(GSSTestProcEnable.class, this, test_procPackage.GSS_TEST_PROC_SPECIAL_PACKETS__ENABLE);
+			enable = new EObjectContainmentEList<GSSTestProcEnableDisable>(GSSTestProcEnableDisable.class, this, test_procPackage.GSS_TEST_PROC_SPECIAL_PACKETS__ENABLE);
 		}
 		return enable;
 	}
@@ -124,9 +121,9 @@ public class GSSTestProcSpecialPacketsImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSTestProcDisable> getDisable() {
+	public EList<GSSTestProcEnableDisable> getDisable() {
 		if (disable == null) {
-			disable = new EObjectContainmentEList<GSSTestProcDisable>(GSSTestProcDisable.class, this, test_procPackage.GSS_TEST_PROC_SPECIAL_PACKETS__DISABLE);
+			disable = new EObjectContainmentEList<GSSTestProcEnableDisable>(GSSTestProcEnableDisable.class, this, test_procPackage.GSS_TEST_PROC_SPECIAL_PACKETS__DISABLE);
 		}
 		return disable;
 	}
@@ -136,9 +133,9 @@ public class GSSTestProcSpecialPacketsImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSTestProcEnablePrint> getEnable_print() {
+	public EList<GSSTestProcEnableDisable> getEnable_print() {
 		if (enable_print == null) {
-			enable_print = new EObjectContainmentEList<GSSTestProcEnablePrint>(GSSTestProcEnablePrint.class, this, test_procPackage.GSS_TEST_PROC_SPECIAL_PACKETS__ENABLE_PRINT);
+			enable_print = new EObjectContainmentEList<GSSTestProcEnableDisable>(GSSTestProcEnableDisable.class, this, test_procPackage.GSS_TEST_PROC_SPECIAL_PACKETS__ENABLE_PRINT);
 		}
 		return enable_print;
 	}
@@ -148,9 +145,9 @@ public class GSSTestProcSpecialPacketsImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSTestProcDisablePrint> getDisable_print() {
+	public EList<GSSTestProcEnableDisable> getDisable_print() {
 		if (disable_print == null) {
-			disable_print = new EObjectContainmentEList<GSSTestProcDisablePrint>(GSSTestProcDisablePrint.class, this, test_procPackage.GSS_TEST_PROC_SPECIAL_PACKETS__DISABLE_PRINT);
+			disable_print = new EObjectContainmentEList<GSSTestProcEnableDisable>(GSSTestProcEnableDisable.class, this, test_procPackage.GSS_TEST_PROC_SPECIAL_PACKETS__DISABLE_PRINT);
 		}
 		return disable_print;
 	}
@@ -206,19 +203,19 @@ public class GSSTestProcSpecialPacketsImpl extends MinimalEObjectImpl.Container 
 		switch (featureID) {
 			case test_procPackage.GSS_TEST_PROC_SPECIAL_PACKETS__ENABLE:
 				getEnable().clear();
-				getEnable().addAll((Collection<? extends GSSTestProcEnable>)newValue);
+				getEnable().addAll((Collection<? extends GSSTestProcEnableDisable>)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_SPECIAL_PACKETS__DISABLE:
 				getDisable().clear();
-				getDisable().addAll((Collection<? extends GSSTestProcDisable>)newValue);
+				getDisable().addAll((Collection<? extends GSSTestProcEnableDisable>)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_SPECIAL_PACKETS__ENABLE_PRINT:
 				getEnable_print().clear();
-				getEnable_print().addAll((Collection<? extends GSSTestProcEnablePrint>)newValue);
+				getEnable_print().addAll((Collection<? extends GSSTestProcEnableDisable>)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_SPECIAL_PACKETS__DISABLE_PRINT:
 				getDisable_print().clear();
-				getDisable_print().addAll((Collection<? extends GSSTestProcDisablePrint>)newValue);
+				getDisable_print().addAll((Collection<? extends GSSTestProcEnableDisable>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

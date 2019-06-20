@@ -30,13 +30,13 @@ public interface tm_tc_formatFactory extends EFactory {
 	tm_tc_formatFactory eINSTANCE = es.uah.aut.srg.gss.tm_tc_format.impl.tm_tc_formatFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>GSS Tm Tc Format Tm TC Format</em>'.
+	 * Returns a new object of class '<em>GSS Tm Tc Format Tm Tc Format</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Tm Tc Format Tm TC Format</em>'.
+	 * @return a new object of class '<em>GSS Tm Tc Format Tm Tc Format</em>'.
 	 * @generated
 	 */
-	GSSTmTcFormatTmTCFormat createGSSTmTcFormatTmTCFormat();
+	GSSTmTcFormatTmTcFormat createGSSTmTcFormatTmTcFormat();
 
 	/**
 	 * Returns a new object of class '<em>GSS Tm Tc Format CS Field</em>'.
@@ -48,24 +48,6 @@ public interface tm_tc_formatFactory extends EFactory {
 	GSSTmTcFormatCSField createGSSTmTcFormatCSField();
 
 	/**
-	 * Returns a new object of class '<em>GSS Tm Tc Format Size</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Tm Tc Format Size</em>'.
-	 * @generated
-	 */
-	GSSTmTcFormatSize createGSSTmTcFormatSize();
-
-	/**
-	 * Returns a new object of class '<em>GSS Tm Tc Format Global Offset</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Tm Tc Format Global Offset</em>'.
-	 * @generated
-	 */
-	GSSTmTcFormatGlobalOffset createGSSTmTcFormatGlobalOffset();
-
-	/**
 	 * Returns a new object of class '<em>GSS Tm Tc Format CS Formula Field</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,15 +57,6 @@ public interface tm_tc_formatFactory extends EFactory {
 	GSSTmTcFormatCSFormulaField createGSSTmTcFormatCSFormulaField();
 
 	/**
-	 * Returns a new object of class '<em>GSS Tm Tc Format Formula</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Tm Tc Format Formula</em>'.
-	 * @generated
-	 */
-	GSSTmTcFormatFormula createGSSTmTcFormatFormula();
-
-	/**
 	 * Returns a new object of class '<em>GSS Tm Tc Format VS Field</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -91,33 +64,6 @@ public interface tm_tc_formatFactory extends EFactory {
 	 * @generated
 	 */
 	GSSTmTcFormatVSField createGSSTmTcFormatVSField();
-
-	/**
-	 * Returns a new object of class '<em>GSS Tm Tc Format Const Size</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Tm Tc Format Const Size</em>'.
-	 * @generated
-	 */
-	GSSTmTcFormatConstSize createGSSTmTcFormatConstSize();
-
-	/**
-	 * Returns a new object of class '<em>GSS Tm Tc Format Variable Size</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Tm Tc Format Variable Size</em>'.
-	 * @generated
-	 */
-	GSSTmTcFormatVariableSize createGSSTmTcFormatVariableSize();
-
-	/**
-	 * Returns a new object of class '<em>GSS Tm Tc Format Max Size</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Tm Tc Format Max Size</em>'.
-	 * @generated
-	 */
-	GSSTmTcFormatMaxSize createGSSTmTcFormatMaxSize();
 
 	/**
 	 * Returns a new object of class '<em>GSS Tm Tc Format VR Field Size</em>'.
@@ -136,6 +82,51 @@ public interface tm_tc_formatFactory extends EFactory {
 	 * @generated
 	 */
 	GSSTmTcFormatFDICField createGSSTmTcFormatFDICField();
+
+	/**
+	 * Returns a new object of class '<em>GSS Tm Tc Format AField</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Tm Tc Format AField</em>'.
+	 * @generated
+	 */
+	GSSTmTcFormatAField createGSSTmTcFormatAField();
+
+	/**
+	 * Returns a new object of class '<em>GSS Tm Tc Format AI Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Tm Tc Format AI Field</em>'.
+	 * @generated
+	 */
+	GSSTmTcFormatAIField createGSSTmTcFormatAIField();
+
+	/**
+	 * Returns a new object of class '<em>GSS Tm Tc Format Bytes Bits</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Tm Tc Format Bytes Bits</em>'.
+	 * @generated
+	 */
+	GSSTmTcFormatBytesBits createGSSTmTcFormatBytesBits();
+
+	/**
+	 * Returns a new object of class '<em>GSS Tm Tc Format Formula</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Tm Tc Format Formula</em>'.
+	 * @generated
+	 */
+	GSSTmTcFormatFormula createGSSTmTcFormatFormula();
+
+	/**
+	 * Returns a new object of class '<em>GSS Tm Tc Format Variable Size</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Tm Tc Format Variable Size</em>'.
+	 * @generated
+	 */
+	GSSTmTcFormatVariableSize createGSSTmTcFormatVariableSize();
 
 	/**
 	 * Returns a new object of class '<em>GSS Tm Tc Format Floating Offset</em>'.
@@ -165,15 +156,6 @@ public interface tm_tc_formatFactory extends EFactory {
 	GSSTmTcFormatFieldToCheck createGSSTmTcFormatFieldToCheck();
 
 	/**
-	 * Returns a new object of class '<em>GSS Tm Tc Format AField</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Tm Tc Format AField</em>'.
-	 * @generated
-	 */
-	GSSTmTcFormatAField createGSSTmTcFormatAField();
-
-	/**
 	 * Returns a new object of class '<em>GSS Tm Tc Format Array Dimension</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -183,15 +165,6 @@ public interface tm_tc_formatFactory extends EFactory {
 	GSSTmTcFormatArrayDimension createGSSTmTcFormatArrayDimension();
 
 	/**
-	 * Returns a new object of class '<em>GSS Tm Tc Format AI Field</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Tm Tc Format AI Field</em>'.
-	 * @generated
-	 */
-	GSSTmTcFormatAIField createGSSTmTcFormatAIField();
-
-	/**
 	 * Returns a new object of class '<em>GSS Tm Tc Format Array Ref</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -199,15 +172,6 @@ public interface tm_tc_formatFactory extends EFactory {
 	 * @generated
 	 */
 	GSSTmTcFormatArrayRef createGSSTmTcFormatArrayRef();
-
-	/**
-	 * Returns a new object of class '<em>GSS Tm Tc Format Local Offset</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Tm Tc Format Local Offset</em>'.
-	 * @generated
-	 */
-	GSSTmTcFormatLocalOffset createGSSTmTcFormatLocalOffset();
 
 	/**
 	 * Returns the package supported by this factory.

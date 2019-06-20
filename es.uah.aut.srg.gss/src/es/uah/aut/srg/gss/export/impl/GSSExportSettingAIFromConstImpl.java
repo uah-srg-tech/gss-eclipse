@@ -18,7 +18,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,13 +28,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromConstImpl#getValue <em>Value</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromConstImpl#getToFieldRef <em>To Field Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromConstImpl#getToArrayIndex <em>To Array Index</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSExportSettingAIFromConstImpl extends MinimalEObjectImpl.Container implements GSSExportSettingAIFromConst {
+public class GSSExportSettingAIFromConstImpl extends GSSExportSettingImpl implements GSSExportSettingAIFromConst {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -55,26 +53,6 @@ public class GSSExportSettingAIFromConstImpl extends MinimalEObjectImpl.Containe
 	 * @ordered
 	 */
 	protected String value = VALUE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getToFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TO_FIELD_REF_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getToFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected String toFieldRef = TO_FIELD_REF_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getToArrayIndex() <em>To Array Index</em>}' attribute.
@@ -141,27 +119,6 @@ public class GSSExportSettingAIFromConstImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getToFieldRef() {
-		return toFieldRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setToFieldRef(String newToFieldRef) {
-		String oldToFieldRef = toFieldRef;
-		toFieldRef = newToFieldRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF, oldToFieldRef, toFieldRef));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getToArrayIndex() {
 		return toArrayIndex;
 	}
@@ -188,8 +145,6 @@ public class GSSExportSettingAIFromConstImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE:
 				return getValue();
-			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF:
-				return getToFieldRef();
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX:
 				return getToArrayIndex();
 		}
@@ -206,9 +161,6 @@ public class GSSExportSettingAIFromConstImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE:
 				setValue((String)newValue);
-				return;
-			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF:
-				setToFieldRef((String)newValue);
 				return;
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX:
 				setToArrayIndex((String)newValue);
@@ -228,9 +180,6 @@ public class GSSExportSettingAIFromConstImpl extends MinimalEObjectImpl.Containe
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
-			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF:
-				setToFieldRef(TO_FIELD_REF_EDEFAULT);
-				return;
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX:
 				setToArrayIndex(TO_ARRAY_INDEX_EDEFAULT);
 				return;
@@ -248,8 +197,6 @@ public class GSSExportSettingAIFromConstImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF:
-				return TO_FIELD_REF_EDEFAULT == null ? toFieldRef != null : !TO_FIELD_REF_EDEFAULT.equals(toFieldRef);
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX:
 				return TO_ARRAY_INDEX_EDEFAULT == null ? toArrayIndex != null : !TO_ARRAY_INDEX_EDEFAULT.equals(toArrayIndex);
 		}
@@ -268,8 +215,6 @@ public class GSSExportSettingAIFromConstImpl extends MinimalEObjectImpl.Containe
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");
 		result.append(value);
-		result.append(", toFieldRef: ");
-		result.append(toFieldRef);
 		result.append(", toArrayIndex: ");
 		result.append(toArrayIndex);
 		result.append(')');

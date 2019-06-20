@@ -10,7 +10,6 @@
  */
 package es.uah.aut.srg.gss.tm_tc_format;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,10 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getFid <em>Fid</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getPfid <em>Pfid</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getDescription <em>Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getByteOrder <em>Byte Order</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getFirstBit <em>First Bit</em>}</li>
@@ -36,111 +31,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GSSTmTcFormatCSField extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Fid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Fid</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Fid</em>' attribute.
-	 * @see #setFid(String)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatCSField_Fid()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getFid();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getFid <em>Fid</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fid</em>' attribute.
-	 * @see #getFid()
-	 * @generated
-	 */
-	void setFid(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Pfid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Pfid</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pfid</em>' attribute.
-	 * @see #setPfid(String)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatCSField_Pfid()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getPfid();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getPfid <em>Pfid</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pfid</em>' attribute.
-	 * @see #getPfid()
-	 * @generated
-	 */
-	void setPfid(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatCSField_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatCSField_Description()
-	 * @model
-	 * @generated
-	 */
-	String getDescription();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getDescription <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
-	 * @generated
-	 */
-	void setDescription(String value);
-
+public interface GSSTmTcFormatCSField extends GSSTmTcFormatField {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldType}.
@@ -318,12 +209,12 @@ public interface GSSTmTcFormatCSField extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Size</em>' containment reference.
-	 * @see #setSize(GSSTmTcFormatSize)
+	 * @see #setSize(GSSTmTcFormatBytesBits)
 	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatCSField_Size()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatSize getSize();
+	GSSTmTcFormatBytesBits getSize();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getSize <em>Size</em>}' containment reference.
@@ -333,7 +224,7 @@ public interface GSSTmTcFormatCSField extends EObject {
 	 * @see #getSize()
 	 * @generated
 	 */
-	void setSize(GSSTmTcFormatSize value);
+	void setSize(GSSTmTcFormatBytesBits value);
 
 	/**
 	 * Returns the value of the '<em><b>Global Offset</b></em>' containment reference.
@@ -344,12 +235,12 @@ public interface GSSTmTcFormatCSField extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Global Offset</em>' containment reference.
-	 * @see #setGlobalOffset(GSSTmTcFormatGlobalOffset)
+	 * @see #setGlobalOffset(GSSTmTcFormatBytesBits)
 	 * @see es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage#getGSSTmTcFormatCSField_GlobalOffset()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatGlobalOffset getGlobalOffset();
+	GSSTmTcFormatBytesBits getGlobalOffset();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField#getGlobalOffset <em>Global Offset</em>}' containment reference.
@@ -359,6 +250,6 @@ public interface GSSTmTcFormatCSField extends EObject {
 	 * @see #getGlobalOffset()
 	 * @generated
 	 */
-	void setGlobalOffset(GSSTmTcFormatGlobalOffset value);
+	void setGlobalOffset(GSSTmTcFormatBytesBits value);
 
 } // GSSTmTcFormatCSField

@@ -1,16 +1,10 @@
 /**
- * Copyright (c) 2018 UAH Space Research Group.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v2.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v20.html
- * 
- * Contributors:
- *     SRG Team - Initial API and implementation
  */
 package es.uah.aut.srg.gss.protocol_packets;
 
-import org.eclipse.emf.ecore.EObject;
+import es.uah.aut.srg.gss.common.GSSModelObject;
+import es.uah.aut.srg.gss.export.GSSExportExport;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getIfRef <em>If Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getLevelRef <em>Level Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getExport <em>Export</em>}</li>
@@ -32,33 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GSSProtocolPacketsProtocolPacket extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage#getGSSProtocolPacketsProtocolPacket_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
+public interface GSSProtocolPacketsProtocolPacket extends GSSModelObject {
 	/**
 	 * Returns the value of the '<em><b>If Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -112,55 +79,55 @@ public interface GSSProtocolPacketsProtocolPacket extends EObject {
 	void setLevelRef(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Export</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Export</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Export</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Export</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Export</em>' containment reference.
-	 * @see #setExport(GSSProtocolPacketsExport)
+	 * @return the value of the '<em>Export</em>' reference.
+	 * @see #setExport(GSSExportExport)
 	 * @see es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage#getGSSProtocolPacketsProtocolPacket_Export()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSProtocolPacketsExport getExport();
+	GSSExportExport getExport();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getExport <em>Export</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getExport <em>Export</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Export</em>' containment reference.
+	 * @param value the new value of the '<em>Export</em>' reference.
 	 * @see #getExport()
 	 * @generated
 	 */
-	void setExport(GSSProtocolPacketsExport value);
+	void setExport(GSSExportExport value);
 
 	/**
-	 * Returns the value of the '<em><b>Format</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Format</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Format</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Format</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Format</em>' containment reference.
-	 * @see #setFormat(GSSProtocolPacketsFormat)
+	 * @return the value of the '<em>Format</em>' reference.
+	 * @see #setFormat(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage#getGSSProtocolPacketsProtocolPacket_Format()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSProtocolPacketsFormat getFormat();
+	GSSTmTcFormatTmTcFormat getFormat();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getFormat <em>Format</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getFormat <em>Format</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Format</em>' containment reference.
+	 * @param value the new value of the '<em>Format</em>' reference.
 	 * @see #getFormat()
 	 * @generated
 	 */
-	void setFormat(GSSProtocolPacketsFormat value);
+	void setFormat(GSSTmTcFormatTmTcFormat value);
 
 } // GSSProtocolPacketsProtocolPacket

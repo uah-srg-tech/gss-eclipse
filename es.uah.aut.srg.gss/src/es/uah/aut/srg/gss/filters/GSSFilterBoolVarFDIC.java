@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.gss.filters;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -85,36 +87,36 @@ public interface GSSFilterBoolVarFDIC extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Field Ref</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Field Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Field Ref</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Field Ref</em>' containment reference.
-	 * @see #setFieldRef(GSSFilterFieldRef)
+	 * @return the value of the '<em>Field Ref</em>' reference.
+	 * @see #setFieldRef(GSSTmTcFormatFDICField)
 	 * @see es.uah.aut.srg.gss.filters.filtersPackage#getGSSFilterBoolVarFDIC_FieldRef()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSFilterFieldRef getFieldRef();
+	GSSTmTcFormatFDICField getFieldRef();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.filters.GSSFilterBoolVarFDIC#getFieldRef <em>Field Ref</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.filters.GSSFilterBoolVarFDIC#getFieldRef <em>Field Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Field Ref</em>' containment reference.
+	 * @param value the new value of the '<em>Field Ref</em>' reference.
 	 * @see #getFieldRef()
 	 * @generated
 	 */
-	void setFieldRef(GSSFilterFieldRef value);
+	void setFieldRef(GSSTmTcFormatFDICField value);
 
 	/**
 	 * Returns the value of the '<em><b>Op</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Op</em>' reference isn't clear,
+	 * If the meaning of the '<em>Op</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

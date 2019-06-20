@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.gss.filters;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -145,36 +147,36 @@ public interface GSSFilterBoolVarFromGroupedArrayItem extends EObject {
 	void setGroup(String value);
 
 	/**
-	 * Returns the value of the '<em><b>AI Field Refs</b></em>' containment reference.
+	 * Returns the value of the '<em><b>AI Field Refs</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>AI Field Refs</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>AI Field Refs</em>' containment reference.
-	 * @see #setAIFieldRefs(GSSFilterAIFieldRefs)
+	 * @return the value of the '<em>AI Field Refs</em>' reference.
+	 * @see #setAIFieldRefs(GSSTmTcFormatAField)
 	 * @see es.uah.aut.srg.gss.filters.filtersPackage#getGSSFilterBoolVarFromGroupedArrayItem_AIFieldRefs()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSFilterAIFieldRefs getAIFieldRefs();
+	GSSTmTcFormatAField getAIFieldRefs();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.filters.GSSFilterBoolVarFromGroupedArrayItem#getAIFieldRefs <em>AI Field Refs</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.filters.GSSFilterBoolVarFromGroupedArrayItem#getAIFieldRefs <em>AI Field Refs</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>AI Field Refs</em>' containment reference.
+	 * @param value the new value of the '<em>AI Field Refs</em>' reference.
 	 * @see #getAIFieldRefs()
 	 * @generated
 	 */
-	void setAIFieldRefs(GSSFilterAIFieldRefs value);
+	void setAIFieldRefs(GSSTmTcFormatAField value);
 
 	/**
 	 * Returns the value of the '<em><b>Op</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Op</em>' reference isn't clear,
+	 * If the meaning of the '<em>Op</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -200,7 +202,7 @@ public interface GSSFilterBoolVarFromGroupedArrayItem extends EObject {
 	 * Returns the value of the '<em><b>Constant</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Constant</em>' reference isn't clear,
+	 * If the meaning of the '<em>Constant</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -226,7 +228,7 @@ public interface GSSFilterBoolVarFromGroupedArrayItem extends EObject {
 	 * Returns the value of the '<em><b>Select</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Select</em>' reference isn't clear,
+	 * If the meaning of the '<em>Select</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -252,7 +254,7 @@ public interface GSSFilterBoolVarFromGroupedArrayItem extends EObject {
 	 * Returns the value of the '<em><b>Select Line</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Select Line</em>' reference isn't clear,
+	 * If the meaning of the '<em>Select Line</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

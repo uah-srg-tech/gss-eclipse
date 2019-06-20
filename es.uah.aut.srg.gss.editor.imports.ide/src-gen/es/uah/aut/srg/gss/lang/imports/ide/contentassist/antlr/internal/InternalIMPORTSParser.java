@@ -33,9 +33,9 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'bits'", "'bytes'", "'import'", "':='", "';'", "'GSSImportImport'", "'{'", "'from'", "'to'", "'}'", "'uri'", "'version'", "'GSSImportDataSource'", "'FieldRef'", "'leftTrim'", "'rightTrim'", "'GSSImportVirtualSize'", "'addSize'", "'unit'", "'.'", "'('", "')'", "'-'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'NULL'", "'bits'", "'bytes'", "'import'", "':='", "';'", "'GSSImportImport'", "'{'", "'from'", "'to'", "'}'", "'uri'", "'version'", "'GSSImportDataSource'", "'FieldRef'", "'leftTrim'", "'rightTrim'", "'GSSImportVirtualSize'", "'addSize'", "'unit'", "'.'", "'('", "')'", "'::'", "'-'"
     };
-    public static final int RULE_STRING=4;
+    public static final int RULE_STRING=7;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__19=19;
     public static final int T__15=15;
@@ -46,23 +46,25 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
     public static final int T__12=12;
     public static final int T__34=34;
     public static final int T__13=13;
+    public static final int T__35=35;
     public static final int T__14=14;
+    public static final int T__36=36;
     public static final int EOF=-1;
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
-    public static final int RULE_ID=5;
+    public static final int RULE_ID=6;
     public static final int RULE_WS=10;
     public static final int RULE_ANY_OTHER=11;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
-    public static final int RULE_INT=6;
+    public static final int RULE_INT=4;
     public static final int T__29=29;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=8;
     public static final int T__23=23;
-    public static final int RULE_HEXADECIMAL=7;
+    public static final int RULE_HEXADECIMAL=5;
     public static final int T__24=24;
     public static final int T__25=25;
     public static final int T__20=20;
@@ -528,97 +530,12 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleGSSImportVirtualSize"
 
 
-    // $ANTLR start "entryRuleEString"
-    // InternalIMPORTS.g:186:1: entryRuleEString : ruleEString EOF ;
-    public final void entryRuleEString() throws RecognitionException {
-        try {
-            // InternalIMPORTS.g:187:1: ( ruleEString EOF )
-            // InternalIMPORTS.g:188:1: ruleEString EOF
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getEStringRule()); 
-            }
-            pushFollow(FollowSets000.FOLLOW_1);
-            ruleEString();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getEStringRule()); 
-            }
-            match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleEString"
-
-
-    // $ANTLR start "ruleEString"
-    // InternalIMPORTS.g:195:1: ruleEString : ( ( rule__EString__Alternatives ) ) ;
-    public final void ruleEString() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalIMPORTS.g:199:2: ( ( ( rule__EString__Alternatives ) ) )
-            // InternalIMPORTS.g:200:2: ( ( rule__EString__Alternatives ) )
-            {
-            // InternalIMPORTS.g:200:2: ( ( rule__EString__Alternatives ) )
-            // InternalIMPORTS.g:201:3: ( rule__EString__Alternatives )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getEStringAccess().getAlternatives()); 
-            }
-            // InternalIMPORTS.g:202:3: ( rule__EString__Alternatives )
-            // InternalIMPORTS.g:202:4: rule__EString__Alternatives
-            {
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__EString__Alternatives();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getEStringAccess().getAlternatives()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleEString"
-
-
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalIMPORTS.g:211:1: entryRuleQualifiedName : ruleQualifiedName EOF ;
+    // InternalIMPORTS.g:186:1: entryRuleQualifiedName : ruleQualifiedName EOF ;
     public final void entryRuleQualifiedName() throws RecognitionException {
         try {
-            // InternalIMPORTS.g:212:1: ( ruleQualifiedName EOF )
-            // InternalIMPORTS.g:213:1: ruleQualifiedName EOF
+            // InternalIMPORTS.g:187:1: ( ruleQualifiedName EOF )
+            // InternalIMPORTS.g:188:1: ruleQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameRule()); 
@@ -648,23 +565,23 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalIMPORTS.g:220:1: ruleQualifiedName : ( ( rule__QualifiedName__Group__0 ) ) ;
+    // InternalIMPORTS.g:195:1: ruleQualifiedName : ( ( rule__QualifiedName__Group__0 ) ) ;
     public final void ruleQualifiedName() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:224:2: ( ( ( rule__QualifiedName__Group__0 ) ) )
-            // InternalIMPORTS.g:225:2: ( ( rule__QualifiedName__Group__0 ) )
+            // InternalIMPORTS.g:199:2: ( ( ( rule__QualifiedName__Group__0 ) ) )
+            // InternalIMPORTS.g:200:2: ( ( rule__QualifiedName__Group__0 ) )
             {
-            // InternalIMPORTS.g:225:2: ( ( rule__QualifiedName__Group__0 ) )
-            // InternalIMPORTS.g:226:3: ( rule__QualifiedName__Group__0 )
+            // InternalIMPORTS.g:200:2: ( ( rule__QualifiedName__Group__0 ) )
+            // InternalIMPORTS.g:201:3: ( rule__QualifiedName__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getGroup()); 
             }
-            // InternalIMPORTS.g:227:3: ( rule__QualifiedName__Group__0 )
-            // InternalIMPORTS.g:227:4: rule__QualifiedName__Group__0
+            // InternalIMPORTS.g:202:3: ( rule__QualifiedName__Group__0 )
+            // InternalIMPORTS.g:202:4: rule__QualifiedName__Group__0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__QualifiedName__Group__0();
@@ -699,11 +616,11 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleVersion"
-    // InternalIMPORTS.g:236:1: entryRuleVersion : ruleVersion EOF ;
+    // InternalIMPORTS.g:211:1: entryRuleVersion : ruleVersion EOF ;
     public final void entryRuleVersion() throws RecognitionException {
         try {
-            // InternalIMPORTS.g:237:1: ( ruleVersion EOF )
-            // InternalIMPORTS.g:238:1: ruleVersion EOF
+            // InternalIMPORTS.g:212:1: ( ruleVersion EOF )
+            // InternalIMPORTS.g:213:1: ruleVersion EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionRule()); 
@@ -733,23 +650,23 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleVersion"
-    // InternalIMPORTS.g:245:1: ruleVersion : ( ( rule__Version__Group__0 ) ) ;
+    // InternalIMPORTS.g:220:1: ruleVersion : ( ( rule__Version__Group__0 ) ) ;
     public final void ruleVersion() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:249:2: ( ( ( rule__Version__Group__0 ) ) )
-            // InternalIMPORTS.g:250:2: ( ( rule__Version__Group__0 ) )
+            // InternalIMPORTS.g:224:2: ( ( ( rule__Version__Group__0 ) ) )
+            // InternalIMPORTS.g:225:2: ( ( rule__Version__Group__0 ) )
             {
-            // InternalIMPORTS.g:250:2: ( ( rule__Version__Group__0 ) )
-            // InternalIMPORTS.g:251:3: ( rule__Version__Group__0 )
+            // InternalIMPORTS.g:225:2: ( ( rule__Version__Group__0 ) )
+            // InternalIMPORTS.g:226:3: ( rule__Version__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getGroup()); 
             }
-            // InternalIMPORTS.g:252:3: ( rule__Version__Group__0 )
-            // InternalIMPORTS.g:252:4: rule__Version__Group__0
+            // InternalIMPORTS.g:227:3: ( rule__Version__Group__0 )
+            // InternalIMPORTS.g:227:4: rule__Version__Group__0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group__0();
@@ -784,11 +701,11 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleVersionedQualifiedName"
-    // InternalIMPORTS.g:261:1: entryRuleVersionedQualifiedName : ruleVersionedQualifiedName EOF ;
+    // InternalIMPORTS.g:236:1: entryRuleVersionedQualifiedName : ruleVersionedQualifiedName EOF ;
     public final void entryRuleVersionedQualifiedName() throws RecognitionException {
         try {
-            // InternalIMPORTS.g:262:1: ( ruleVersionedQualifiedName EOF )
-            // InternalIMPORTS.g:263:1: ruleVersionedQualifiedName EOF
+            // InternalIMPORTS.g:237:1: ( ruleVersionedQualifiedName EOF )
+            // InternalIMPORTS.g:238:1: ruleVersionedQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameRule()); 
@@ -818,23 +735,23 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleVersionedQualifiedName"
-    // InternalIMPORTS.g:270:1: ruleVersionedQualifiedName : ( ( rule__VersionedQualifiedName__Group__0 ) ) ;
+    // InternalIMPORTS.g:245:1: ruleVersionedQualifiedName : ( ( rule__VersionedQualifiedName__Group__0 ) ) ;
     public final void ruleVersionedQualifiedName() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:274:2: ( ( ( rule__VersionedQualifiedName__Group__0 ) ) )
-            // InternalIMPORTS.g:275:2: ( ( rule__VersionedQualifiedName__Group__0 ) )
+            // InternalIMPORTS.g:249:2: ( ( ( rule__VersionedQualifiedName__Group__0 ) ) )
+            // InternalIMPORTS.g:250:2: ( ( rule__VersionedQualifiedName__Group__0 ) )
             {
-            // InternalIMPORTS.g:275:2: ( ( rule__VersionedQualifiedName__Group__0 ) )
-            // InternalIMPORTS.g:276:3: ( rule__VersionedQualifiedName__Group__0 )
+            // InternalIMPORTS.g:250:2: ( ( rule__VersionedQualifiedName__Group__0 ) )
+            // InternalIMPORTS.g:251:3: ( rule__VersionedQualifiedName__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getGroup()); 
             }
-            // InternalIMPORTS.g:277:3: ( rule__VersionedQualifiedName__Group__0 )
-            // InternalIMPORTS.g:277:4: rule__VersionedQualifiedName__Group__0
+            // InternalIMPORTS.g:252:3: ( rule__VersionedQualifiedName__Group__0 )
+            // InternalIMPORTS.g:252:4: rule__VersionedQualifiedName__Group__0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__VersionedQualifiedName__Group__0();
@@ -866,6 +783,91 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
         return ;
     }
     // $ANTLR end "ruleVersionedQualifiedName"
+
+
+    // $ANTLR start "entryRuleVersionedQualifiedReferenceName"
+    // InternalIMPORTS.g:261:1: entryRuleVersionedQualifiedReferenceName : ruleVersionedQualifiedReferenceName EOF ;
+    public final void entryRuleVersionedQualifiedReferenceName() throws RecognitionException {
+        try {
+            // InternalIMPORTS.g:262:1: ( ruleVersionedQualifiedReferenceName EOF )
+            // InternalIMPORTS.g:263:1: ruleVersionedQualifiedReferenceName EOF
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVersionedQualifiedReferenceNameRule()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_1);
+            ruleVersionedQualifiedReferenceName();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVersionedQualifiedReferenceNameRule()); 
+            }
+            match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleVersionedQualifiedReferenceName"
+
+
+    // $ANTLR start "ruleVersionedQualifiedReferenceName"
+    // InternalIMPORTS.g:270:1: ruleVersionedQualifiedReferenceName : ( ( rule__VersionedQualifiedReferenceName__Group__0 ) ) ;
+    public final void ruleVersionedQualifiedReferenceName() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:274:2: ( ( ( rule__VersionedQualifiedReferenceName__Group__0 ) ) )
+            // InternalIMPORTS.g:275:2: ( ( rule__VersionedQualifiedReferenceName__Group__0 ) )
+            {
+            // InternalIMPORTS.g:275:2: ( ( rule__VersionedQualifiedReferenceName__Group__0 ) )
+            // InternalIMPORTS.g:276:3: ( rule__VersionedQualifiedReferenceName__Group__0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup()); 
+            }
+            // InternalIMPORTS.g:277:3: ( rule__VersionedQualifiedReferenceName__Group__0 )
+            // InternalIMPORTS.g:277:4: rule__VersionedQualifiedReferenceName__Group__0
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__VersionedQualifiedReferenceName__Group__0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleVersionedQualifiedReferenceName"
 
 
     // $ANTLR start "entryRuleINTEGER"
@@ -1004,18 +1006,18 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleGSSImportUnit"
 
 
-    // $ANTLR start "rule__EString__Alternatives"
-    // InternalIMPORTS.g:326:1: rule__EString__Alternatives : ( ( RULE_STRING ) | ( RULE_ID ) );
-    public final void rule__EString__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__GSSImportImport__Alternatives_10"
+    // InternalIMPORTS.g:326:1: rule__GSSImportImport__Alternatives_10 : ( ( 'NULL' ) | ( ( rule__GSSImportImport__ToAssignment_10_1 ) ) );
+    public final void rule__GSSImportImport__Alternatives_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:330:1: ( ( RULE_STRING ) | ( RULE_ID ) )
+            // InternalIMPORTS.g:330:1: ( ( 'NULL' ) | ( ( rule__GSSImportImport__ToAssignment_10_1 ) ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==RULE_STRING) ) {
+            if ( (LA1_0==12) ) {
                 alt1=1;
             }
             else if ( (LA1_0==RULE_ID) ) {
@@ -1030,17 +1032,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalIMPORTS.g:331:2: ( RULE_STRING )
+                    // InternalIMPORTS.g:331:2: ( 'NULL' )
                     {
-                    // InternalIMPORTS.g:331:2: ( RULE_STRING )
-                    // InternalIMPORTS.g:332:3: RULE_STRING
+                    // InternalIMPORTS.g:331:2: ( 'NULL' )
+                    // InternalIMPORTS.g:332:3: 'NULL'
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
+                       before(grammarAccess.getGSSImportImportAccess().getNULLKeyword_10_0()); 
                     }
-                    match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,12,FollowSets000.FOLLOW_2); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
+                       after(grammarAccess.getGSSImportImportAccess().getNULLKeyword_10_0()); 
                     }
 
                     }
@@ -1049,17 +1051,27 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalIMPORTS.g:337:2: ( RULE_ID )
+                    // InternalIMPORTS.g:337:2: ( ( rule__GSSImportImport__ToAssignment_10_1 ) )
                     {
-                    // InternalIMPORTS.g:337:2: ( RULE_ID )
-                    // InternalIMPORTS.g:338:3: RULE_ID
+                    // InternalIMPORTS.g:337:2: ( ( rule__GSSImportImport__ToAssignment_10_1 ) )
+                    // InternalIMPORTS.g:338:3: ( rule__GSSImportImport__ToAssignment_10_1 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); 
+                       before(grammarAccess.getGSSImportImportAccess().getToAssignment_10_1()); 
                     }
-                    match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    // InternalIMPORTS.g:339:3: ( rule__GSSImportImport__ToAssignment_10_1 )
+                    // InternalIMPORTS.g:339:4: rule__GSSImportImport__ToAssignment_10_1
+                    {
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    rule__GSSImportImport__ToAssignment_10_1();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); 
+                       after(grammarAccess.getGSSImportImportAccess().getToAssignment_10_1()); 
                     }
 
                     }
@@ -1081,7 +1093,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__EString__Alternatives"
+    // $ANTLR end "rule__GSSImportImport__Alternatives_10"
 
 
     // $ANTLR start "rule__Version__Alternatives_0"
@@ -1101,7 +1113,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
                 if ( (LA2_1==RULE_ID) ) {
                     alt2=2;
                 }
-                else if ( (LA2_1==EOF||LA2_1==16||LA2_1==31||LA2_1==33) ) {
+                else if ( (LA2_1==EOF||LA2_1==17||LA2_1==32||LA2_1==34) ) {
                     alt2=1;
                 }
                 else {
@@ -1202,7 +1214,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( (LA3_0==RULE_INT) ) {
                 int LA3_1 = input.LA(2);
 
-                if ( (LA3_1==EOF||LA3_1==16||LA3_1==31||LA3_1==33) ) {
+                if ( (LA3_1==EOF||LA3_1==17||LA3_1==32||LA3_1==34) ) {
                     alt3=1;
                 }
                 else if ( (LA3_1==RULE_ID) ) {
@@ -1303,7 +1315,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==RULE_INT||LA4_0==34) ) {
+            if ( (LA4_0==RULE_INT||LA4_0==36) ) {
                 alt4=1;
             }
             else if ( (LA4_0==RULE_HEXADECIMAL) ) {
@@ -1393,10 +1405,10 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==12) ) {
+            if ( (LA5_0==13) ) {
                 alt5=1;
             }
-            else if ( (LA5_0==13) ) {
+            else if ( (LA5_0==14) ) {
                 alt5=2;
             }
             else {
@@ -1419,7 +1431,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
                     // InternalIMPORTS.g:417:3: ( 'bits' )
                     // InternalIMPORTS.g:417:4: 'bits'
                     {
-                    match(input,12,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -1444,7 +1456,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
                     // InternalIMPORTS.g:423:3: ( 'bytes' )
                     // InternalIMPORTS.g:423:4: 'bytes'
                     {
-                    match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -1534,7 +1546,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
                 int alt6=2;
                 int LA6_0 = input.LA(1);
 
-                if ( (LA6_0==14) ) {
+                if ( (LA6_0==15) ) {
                     alt6=1;
                 }
 
@@ -1719,7 +1731,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileImportAccess().getImportKeyword_0()); 
             }
-            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSModelFileImportAccess().getImportKeyword_0()); 
             }
@@ -1798,7 +1810,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1()); 
             }
@@ -1961,7 +1973,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_3()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_3()); 
             }
@@ -2040,7 +2052,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getGSSImportImportKeyword_0()); 
             }
-            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getGSSImportImportKeyword_0()); 
             }
@@ -2208,7 +2220,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getLeftCurlyBracketKeyword_2()); 
             }
-            match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,19,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getLeftCurlyBracketKeyword_2()); 
             }
@@ -2376,7 +2388,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getFromKeyword_4()); 
             }
-            match(input,19,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getFromKeyword_4()); 
             }
@@ -2411,7 +2423,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:732:1: ( rule__GSSImportImport__Group__5__Impl rule__GSSImportImport__Group__6 )
             // InternalIMPORTS.g:733:2: rule__GSSImportImport__Group__5__Impl rule__GSSImportImport__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSImportImport__Group__5__Impl();
 
             state._fsp--;
@@ -2455,7 +2467,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getColonEqualsSignKeyword_5()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getColonEqualsSignKeyword_5()); 
             }
@@ -2623,7 +2635,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getSemicolonKeyword_7()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getSemicolonKeyword_7()); 
             }
@@ -2702,7 +2714,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getToKeyword_8()); 
             }
-            match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,21,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getToKeyword_8()); 
             }
@@ -2737,7 +2749,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:840:1: ( rule__GSSImportImport__Group__9__Impl rule__GSSImportImport__Group__10 )
             // InternalIMPORTS.g:841:2: rule__GSSImportImport__Group__9__Impl rule__GSSImportImport__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_13);
             rule__GSSImportImport__Group__9__Impl();
 
             state._fsp--;
@@ -2781,7 +2793,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getColonEqualsSignKeyword_9()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getColonEqualsSignKeyword_9()); 
             }
@@ -2845,26 +2857,26 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportImport__Group__10__Impl"
-    // InternalIMPORTS.g:875:1: rule__GSSImportImport__Group__10__Impl : ( ( rule__GSSImportImport__ToAssignment_10 ) ) ;
+    // InternalIMPORTS.g:875:1: rule__GSSImportImport__Group__10__Impl : ( ( rule__GSSImportImport__Alternatives_10 ) ) ;
     public final void rule__GSSImportImport__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:879:1: ( ( ( rule__GSSImportImport__ToAssignment_10 ) ) )
-            // InternalIMPORTS.g:880:1: ( ( rule__GSSImportImport__ToAssignment_10 ) )
+            // InternalIMPORTS.g:879:1: ( ( ( rule__GSSImportImport__Alternatives_10 ) ) )
+            // InternalIMPORTS.g:880:1: ( ( rule__GSSImportImport__Alternatives_10 ) )
             {
-            // InternalIMPORTS.g:880:1: ( ( rule__GSSImportImport__ToAssignment_10 ) )
-            // InternalIMPORTS.g:881:2: ( rule__GSSImportImport__ToAssignment_10 )
+            // InternalIMPORTS.g:880:1: ( ( rule__GSSImportImport__Alternatives_10 ) )
+            // InternalIMPORTS.g:881:2: ( rule__GSSImportImport__Alternatives_10 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSImportImportAccess().getToAssignment_10()); 
+               before(grammarAccess.getGSSImportImportAccess().getAlternatives_10()); 
             }
-            // InternalIMPORTS.g:882:2: ( rule__GSSImportImport__ToAssignment_10 )
-            // InternalIMPORTS.g:882:3: rule__GSSImportImport__ToAssignment_10
+            // InternalIMPORTS.g:882:2: ( rule__GSSImportImport__Alternatives_10 )
+            // InternalIMPORTS.g:882:3: rule__GSSImportImport__Alternatives_10
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSImportImport__ToAssignment_10();
+            rule__GSSImportImport__Alternatives_10();
 
             state._fsp--;
             if (state.failed) return ;
@@ -2872,7 +2884,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSImportImportAccess().getToAssignment_10()); 
+               after(grammarAccess.getGSSImportImportAccess().getAlternatives_10()); 
             }
 
             }
@@ -2905,7 +2917,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:894:1: ( rule__GSSImportImport__Group__11__Impl rule__GSSImportImport__Group__12 )
             // InternalIMPORTS.g:895:2: rule__GSSImportImport__Group__11__Impl rule__GSSImportImport__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_13);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSImportImport__Group__11__Impl();
 
             state._fsp--;
@@ -2949,7 +2961,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getSemicolonKeyword_11()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getSemicolonKeyword_11()); 
             }
@@ -2984,7 +2996,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:921:1: ( rule__GSSImportImport__Group__12__Impl rule__GSSImportImport__Group__13 )
             // InternalIMPORTS.g:922:2: rule__GSSImportImport__Group__12__Impl rule__GSSImportImport__Group__13
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__GSSImportImport__Group__12__Impl();
 
             state._fsp--;
@@ -3034,7 +3046,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:937:3: ( rule__GSSImportImport__DataSourceAssignment_12 )
             // InternalIMPORTS.g:937:4: rule__GSSImportImport__DataSourceAssignment_12
             {
-            pushFollow(FollowSets000.FOLLOW_15);
+            pushFollow(FollowSets000.FOLLOW_16);
             rule__GSSImportImport__DataSourceAssignment_12();
 
             state._fsp--;
@@ -3060,7 +3072,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
                 int alt7=2;
                 int LA7_0 = input.LA(1);
 
-                if ( (LA7_0==24) ) {
+                if ( (LA7_0==25) ) {
                     alt7=1;
                 }
 
@@ -3069,7 +3081,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalIMPORTS.g:942:4: rule__GSSImportImport__DataSourceAssignment_12
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_15);
+            	    pushFollow(FollowSets000.FOLLOW_16);
             	    rule__GSSImportImport__DataSourceAssignment_12();
 
             	    state._fsp--;
@@ -3120,7 +3132,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:955:1: ( rule__GSSImportImport__Group__13__Impl rule__GSSImportImport__Group__14 )
             // InternalIMPORTS.g:956:2: rule__GSSImportImport__Group__13__Impl rule__GSSImportImport__Group__14
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__GSSImportImport__Group__13__Impl();
 
             state._fsp--;
@@ -3168,7 +3180,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==28) ) {
+            if ( (LA8_0==29) ) {
                 alt8=1;
             }
             switch (alt8) {
@@ -3264,7 +3276,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getRightCurlyBracketKeyword_14()); 
             }
-            match(input,21,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,22,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getRightCurlyBracketKeyword_14()); 
             }
@@ -3338,7 +3350,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getSemicolonKeyword_15()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getSemicolonKeyword_15()); 
             }
@@ -3417,7 +3429,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getUriKeyword_3_0_0()); 
             }
-            match(input,22,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,23,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getUriKeyword_3_0_0()); 
             }
@@ -3452,7 +3464,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1063:1: ( rule__GSSImportImport__Group_3_0__1__Impl rule__GSSImportImport__Group_3_0__2 )
             // InternalIMPORTS.g:1064:2: rule__GSSImportImport__Group_3_0__1__Impl rule__GSSImportImport__Group_3_0__2
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSImportImport__Group_3_0__1__Impl();
 
             state._fsp--;
@@ -3496,7 +3508,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getColonEqualsSignKeyword_3_0_1()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getColonEqualsSignKeyword_3_0_1()); 
             }
@@ -3659,7 +3671,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getSemicolonKeyword_3_0_3()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getSemicolonKeyword_3_0_3()); 
             }
@@ -3738,7 +3750,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getVersionKeyword_3_1_0()); 
             }
-            match(input,23,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getVersionKeyword_3_1_0()); 
             }
@@ -3773,7 +3785,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1171:1: ( rule__GSSImportImport__Group_3_1__1__Impl rule__GSSImportImport__Group_3_1__2 )
             // InternalIMPORTS.g:1172:2: rule__GSSImportImport__Group_3_1__1__Impl rule__GSSImportImport__Group_3_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSImportImport__Group_3_1__1__Impl();
 
             state._fsp--;
@@ -3817,7 +3829,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getColonEqualsSignKeyword_3_1_1()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getColonEqualsSignKeyword_3_1_1()); 
             }
@@ -3980,7 +3992,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getSemicolonKeyword_3_1_3()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportImportAccess().getSemicolonKeyword_3_1_3()); 
             }
@@ -4059,7 +4071,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getGSSImportDataSourceKeyword_0()); 
             }
-            match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportDataSourceAccess().getGSSImportDataSourceKeyword_0()); 
             }
@@ -4094,7 +4106,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1279:1: ( rule__GSSImportDataSource__Group__1__Impl rule__GSSImportDataSource__Group__2 )
             // InternalIMPORTS.g:1280:2: rule__GSSImportDataSource__Group__1__Impl rule__GSSImportDataSource__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_17);
+            pushFollow(FollowSets000.FOLLOW_18);
             rule__GSSImportDataSource__Group__1__Impl();
 
             state._fsp--;
@@ -4138,7 +4150,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,19,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportDataSourceAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -4217,7 +4229,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getFieldRefKeyword_2()); 
             }
-            match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportDataSourceAccess().getFieldRefKeyword_2()); 
             }
@@ -4252,7 +4264,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1333:1: ( rule__GSSImportDataSource__Group__3__Impl rule__GSSImportDataSource__Group__4 )
             // InternalIMPORTS.g:1334:2: rule__GSSImportDataSource__Group__3__Impl rule__GSSImportDataSource__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSImportDataSource__Group__3__Impl();
 
             state._fsp--;
@@ -4296,7 +4308,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getColonEqualsSignKeyword_3()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportDataSourceAccess().getColonEqualsSignKeyword_3()); 
             }
@@ -4420,7 +4432,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1387:1: ( rule__GSSImportDataSource__Group__5__Impl rule__GSSImportDataSource__Group__6 )
             // InternalIMPORTS.g:1388:2: rule__GSSImportDataSource__Group__5__Impl rule__GSSImportDataSource__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_18);
+            pushFollow(FollowSets000.FOLLOW_19);
             rule__GSSImportDataSource__Group__5__Impl();
 
             state._fsp--;
@@ -4464,7 +4476,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getSemicolonKeyword_5()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportDataSourceAccess().getSemicolonKeyword_5()); 
             }
@@ -4543,7 +4555,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getLeftTrimKeyword_6()); 
             }
-            match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,27,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportDataSourceAccess().getLeftTrimKeyword_6()); 
             }
@@ -4578,7 +4590,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1441:1: ( rule__GSSImportDataSource__Group__7__Impl rule__GSSImportDataSource__Group__8 )
             // InternalIMPORTS.g:1442:2: rule__GSSImportDataSource__Group__7__Impl rule__GSSImportDataSource__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSImportDataSource__Group__7__Impl();
 
             state._fsp--;
@@ -4622,7 +4634,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getColonEqualsSignKeyword_7()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportDataSourceAccess().getColonEqualsSignKeyword_7()); 
             }
@@ -4746,7 +4758,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1495:1: ( rule__GSSImportDataSource__Group__9__Impl rule__GSSImportDataSource__Group__10 )
             // InternalIMPORTS.g:1496:2: rule__GSSImportDataSource__Group__9__Impl rule__GSSImportDataSource__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSImportDataSource__Group__9__Impl();
 
             state._fsp--;
@@ -4790,7 +4802,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getSemicolonKeyword_9()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportDataSourceAccess().getSemicolonKeyword_9()); 
             }
@@ -4869,7 +4881,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getRightTrimKeyword_10()); 
             }
-            match(input,27,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportDataSourceAccess().getRightTrimKeyword_10()); 
             }
@@ -4904,7 +4916,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1549:1: ( rule__GSSImportDataSource__Group__11__Impl rule__GSSImportDataSource__Group__12 )
             // InternalIMPORTS.g:1550:2: rule__GSSImportDataSource__Group__11__Impl rule__GSSImportDataSource__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSImportDataSource__Group__11__Impl();
 
             state._fsp--;
@@ -4948,7 +4960,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getColonEqualsSignKeyword_11()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportDataSourceAccess().getColonEqualsSignKeyword_11()); 
             }
@@ -5072,7 +5084,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1603:1: ( rule__GSSImportDataSource__Group__13__Impl rule__GSSImportDataSource__Group__14 )
             // InternalIMPORTS.g:1604:2: rule__GSSImportDataSource__Group__13__Impl rule__GSSImportDataSource__Group__14
             {
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_22);
             rule__GSSImportDataSource__Group__13__Impl();
 
             state._fsp--;
@@ -5116,7 +5128,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getSemicolonKeyword_13()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportDataSourceAccess().getSemicolonKeyword_13()); 
             }
@@ -5195,7 +5207,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getRightCurlyBracketKeyword_14()); 
             }
-            match(input,21,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,22,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportDataSourceAccess().getRightCurlyBracketKeyword_14()); 
             }
@@ -5269,7 +5281,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getSemicolonKeyword_15()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportDataSourceAccess().getSemicolonKeyword_15()); 
             }
@@ -5348,7 +5360,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getGSSImportVirtualSizeKeyword_0()); 
             }
-            match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getGSSImportVirtualSizeKeyword_0()); 
             }
@@ -5383,7 +5395,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1711:1: ( rule__GSSImportVirtualSize__Group__1__Impl rule__GSSImportVirtualSize__Group__2 )
             // InternalIMPORTS.g:1712:2: rule__GSSImportVirtualSize__Group__1__Impl rule__GSSImportVirtualSize__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_17);
+            pushFollow(FollowSets000.FOLLOW_18);
             rule__GSSImportVirtualSize__Group__1__Impl();
 
             state._fsp--;
@@ -5427,7 +5439,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,19,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -5506,7 +5518,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getFieldRefKeyword_2()); 
             }
-            match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getFieldRefKeyword_2()); 
             }
@@ -5541,7 +5553,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1765:1: ( rule__GSSImportVirtualSize__Group__3__Impl rule__GSSImportVirtualSize__Group__4 )
             // InternalIMPORTS.g:1766:2: rule__GSSImportVirtualSize__Group__3__Impl rule__GSSImportVirtualSize__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSImportVirtualSize__Group__3__Impl();
 
             state._fsp--;
@@ -5585,7 +5597,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getColonEqualsSignKeyword_3()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getColonEqualsSignKeyword_3()); 
             }
@@ -5753,7 +5765,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getSemicolonKeyword_5()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getSemicolonKeyword_5()); 
             }
@@ -5832,7 +5844,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getToKeyword_6()); 
             }
-            match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,21,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getToKeyword_6()); 
             }
@@ -5867,7 +5879,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1873:1: ( rule__GSSImportVirtualSize__Group__7__Impl rule__GSSImportVirtualSize__Group__8 )
             // InternalIMPORTS.g:1874:2: rule__GSSImportVirtualSize__Group__7__Impl rule__GSSImportVirtualSize__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSImportVirtualSize__Group__7__Impl();
 
             state._fsp--;
@@ -5911,7 +5923,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getColonEqualsSignKeyword_7()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getColonEqualsSignKeyword_7()); 
             }
@@ -6035,7 +6047,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1927:1: ( rule__GSSImportVirtualSize__Group__9__Impl rule__GSSImportVirtualSize__Group__10 )
             // InternalIMPORTS.g:1928:2: rule__GSSImportVirtualSize__Group__9__Impl rule__GSSImportVirtualSize__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__GSSImportVirtualSize__Group__9__Impl();
 
             state._fsp--;
@@ -6079,7 +6091,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getSemicolonKeyword_9()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getSemicolonKeyword_9()); 
             }
@@ -6114,7 +6126,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1954:1: ( rule__GSSImportVirtualSize__Group__10__Impl rule__GSSImportVirtualSize__Group__11 )
             // InternalIMPORTS.g:1955:2: rule__GSSImportVirtualSize__Group__10__Impl rule__GSSImportVirtualSize__Group__11
             {
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__GSSImportVirtualSize__Group__10__Impl();
 
             state._fsp--;
@@ -6162,7 +6174,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==29) ) {
+            if ( (LA9_0==30) ) {
                 alt9=1;
             }
             switch (alt9) {
@@ -6214,7 +6226,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:1981:1: ( rule__GSSImportVirtualSize__Group__11__Impl rule__GSSImportVirtualSize__Group__12 )
             // InternalIMPORTS.g:1982:2: rule__GSSImportVirtualSize__Group__11__Impl rule__GSSImportVirtualSize__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__GSSImportVirtualSize__Group__11__Impl();
 
             state._fsp--;
@@ -6262,7 +6274,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==30) ) {
+            if ( (LA10_0==31) ) {
                 alt10=1;
             }
             switch (alt10) {
@@ -6358,7 +6370,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getRightCurlyBracketKeyword_12()); 
             }
-            match(input,21,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,22,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getRightCurlyBracketKeyword_12()); 
             }
@@ -6432,7 +6444,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getSemicolonKeyword_13()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getSemicolonKeyword_13()); 
             }
@@ -6511,7 +6523,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getAddSizeKeyword_10_0()); 
             }
-            match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getAddSizeKeyword_10_0()); 
             }
@@ -6546,7 +6558,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2089:1: ( rule__GSSImportVirtualSize__Group_10__1__Impl rule__GSSImportVirtualSize__Group_10__2 )
             // InternalIMPORTS.g:2090:2: rule__GSSImportVirtualSize__Group_10__1__Impl rule__GSSImportVirtualSize__Group_10__2
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSImportVirtualSize__Group_10__1__Impl();
 
             state._fsp--;
@@ -6590,7 +6602,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getColonEqualsSignKeyword_10_1()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getColonEqualsSignKeyword_10_1()); 
             }
@@ -6753,7 +6765,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getSemicolonKeyword_10_3()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getSemicolonKeyword_10_3()); 
             }
@@ -6832,7 +6844,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getUnitKeyword_11_0()); 
             }
-            match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getUnitKeyword_11_0()); 
             }
@@ -6867,7 +6879,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2197:1: ( rule__GSSImportVirtualSize__Group_11__1__Impl rule__GSSImportVirtualSize__Group_11__2 )
             // InternalIMPORTS.g:2198:2: rule__GSSImportVirtualSize__Group_11__1__Impl rule__GSSImportVirtualSize__Group_11__2
             {
-            pushFollow(FollowSets000.FOLLOW_23);
+            pushFollow(FollowSets000.FOLLOW_24);
             rule__GSSImportVirtualSize__Group_11__1__Impl();
 
             state._fsp--;
@@ -6911,7 +6923,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getColonEqualsSignKeyword_11_1()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getColonEqualsSignKeyword_11_1()); 
             }
@@ -7074,7 +7086,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getSemicolonKeyword_11_3()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSImportVirtualSizeAccess().getSemicolonKeyword_11_3()); 
             }
@@ -7109,7 +7121,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2278:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
             // InternalIMPORTS.g:2279:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             rule__QualifiedName__Group__0__Impl();
 
             state._fsp--;
@@ -7233,7 +7245,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
                 int alt11=2;
                 int LA11_0 = input.LA(1);
 
-                if ( (LA11_0==31) ) {
+                if ( (LA11_0==32) ) {
                     alt11=1;
                 }
 
@@ -7242,7 +7254,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalIMPORTS.g:2319:3: rule__QualifiedName__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_25);
+            	    pushFollow(FollowSets000.FOLLOW_26);
             	    rule__QualifiedName__Group_1__0();
 
             	    state._fsp--;
@@ -7290,7 +7302,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2332:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
             // InternalIMPORTS.g:2333:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_6);
+            pushFollow(FollowSets000.FOLLOW_8);
             rule__QualifiedName__Group_1__0__Impl();
 
             state._fsp--;
@@ -7334,7 +7346,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
             }
-            match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,32,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
             }
@@ -7443,7 +7455,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2386:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
             // InternalIMPORTS.g:2387:2: rule__Version__Group__0__Impl rule__Version__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             rule__Version__Group__0__Impl();
 
             state._fsp--;
@@ -7577,7 +7589,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
                 int alt12=2;
                 int LA12_0 = input.LA(1);
 
-                if ( (LA12_0==31) ) {
+                if ( (LA12_0==32) ) {
                     alt12=1;
                 }
 
@@ -7586,7 +7598,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalIMPORTS.g:2427:3: rule__Version__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_25);
+            	    pushFollow(FollowSets000.FOLLOW_26);
             	    rule__Version__Group_1__0();
 
             	    state._fsp--;
@@ -7634,7 +7646,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2440:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
             // InternalIMPORTS.g:2441:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__Version__Group_0_1__0__Impl();
 
             state._fsp--;
@@ -7804,7 +7816,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2494:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
             // InternalIMPORTS.g:2495:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__Version__Group_1__0__Impl();
 
             state._fsp--;
@@ -7848,7 +7860,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getFullStopKeyword_1_0()); 
             }
-            match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,32,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVersionAccess().getFullStopKeyword_1_0()); 
             }
@@ -7967,7 +7979,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2548:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
             // InternalIMPORTS.g:2549:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__Version__Group_1_1_1__0__Impl();
 
             state._fsp--;
@@ -8137,7 +8149,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2602:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
             // InternalIMPORTS.g:2603:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_27);
             rule__VersionedQualifiedName__Group__0__Impl();
 
             state._fsp--;
@@ -8220,7 +8232,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2629:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
             // InternalIMPORTS.g:2630:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__VersionedQualifiedName__Group__1__Impl();
 
             state._fsp--;
@@ -8264,7 +8276,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getLeftParenthesisKeyword_1()); 
             }
-            match(input,32,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVersionedQualifiedNameAccess().getLeftParenthesisKeyword_1()); 
             }
@@ -8299,7 +8311,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             // InternalIMPORTS.g:2656:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
             // InternalIMPORTS.g:2657:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_27);
+            pushFollow(FollowSets000.FOLLOW_28);
             rule__VersionedQualifiedName__Group__2__Impl();
 
             state._fsp--;
@@ -8421,7 +8433,7 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,34,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3()); 
             }
@@ -8446,17 +8458,612 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__VersionedQualifiedName__Group__3__Impl"
 
 
+    // $ANTLR start "rule__VersionedQualifiedReferenceName__Group__0"
+    // InternalIMPORTS.g:2706:1: rule__VersionedQualifiedReferenceName__Group__0 : rule__VersionedQualifiedReferenceName__Group__0__Impl rule__VersionedQualifiedReferenceName__Group__1 ;
+    public final void rule__VersionedQualifiedReferenceName__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:2710:1: ( rule__VersionedQualifiedReferenceName__Group__0__Impl rule__VersionedQualifiedReferenceName__Group__1 )
+            // InternalIMPORTS.g:2711:2: rule__VersionedQualifiedReferenceName__Group__0__Impl rule__VersionedQualifiedReferenceName__Group__1
+            {
+            pushFollow(FollowSets000.FOLLOW_8);
+            rule__VersionedQualifiedReferenceName__Group__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__VersionedQualifiedReferenceName__Group__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VersionedQualifiedReferenceName__Group__0"
+
+
+    // $ANTLR start "rule__VersionedQualifiedReferenceName__Group__0__Impl"
+    // InternalIMPORTS.g:2718:1: rule__VersionedQualifiedReferenceName__Group__0__Impl : ( ( rule__VersionedQualifiedReferenceName__Group_0__0 )? ) ;
+    public final void rule__VersionedQualifiedReferenceName__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:2722:1: ( ( ( rule__VersionedQualifiedReferenceName__Group_0__0 )? ) )
+            // InternalIMPORTS.g:2723:1: ( ( rule__VersionedQualifiedReferenceName__Group_0__0 )? )
+            {
+            // InternalIMPORTS.g:2723:1: ( ( rule__VersionedQualifiedReferenceName__Group_0__0 )? )
+            // InternalIMPORTS.g:2724:2: ( rule__VersionedQualifiedReferenceName__Group_0__0 )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup_0()); 
+            }
+            // InternalIMPORTS.g:2725:2: ( rule__VersionedQualifiedReferenceName__Group_0__0 )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
+
+            if ( (LA15_0==RULE_ID) ) {
+                int LA15_1 = input.LA(2);
+
+                if ( ((LA15_1>=32 && LA15_1<=33)) ) {
+                    alt15=1;
+                }
+            }
+            switch (alt15) {
+                case 1 :
+                    // InternalIMPORTS.g:2725:3: rule__VersionedQualifiedReferenceName__Group_0__0
+                    {
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    rule__VersionedQualifiedReferenceName__Group_0__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VersionedQualifiedReferenceName__Group__0__Impl"
+
+
+    // $ANTLR start "rule__VersionedQualifiedReferenceName__Group__1"
+    // InternalIMPORTS.g:2733:1: rule__VersionedQualifiedReferenceName__Group__1 : rule__VersionedQualifiedReferenceName__Group__1__Impl rule__VersionedQualifiedReferenceName__Group__2 ;
+    public final void rule__VersionedQualifiedReferenceName__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:2737:1: ( rule__VersionedQualifiedReferenceName__Group__1__Impl rule__VersionedQualifiedReferenceName__Group__2 )
+            // InternalIMPORTS.g:2738:2: rule__VersionedQualifiedReferenceName__Group__1__Impl rule__VersionedQualifiedReferenceName__Group__2
+            {
+            pushFollow(FollowSets000.FOLLOW_29);
+            rule__VersionedQualifiedReferenceName__Group__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__VersionedQualifiedReferenceName__Group__2();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VersionedQualifiedReferenceName__Group__1"
+
+
+    // $ANTLR start "rule__VersionedQualifiedReferenceName__Group__1__Impl"
+    // InternalIMPORTS.g:2745:1: rule__VersionedQualifiedReferenceName__Group__1__Impl : ( RULE_ID ) ;
+    public final void rule__VersionedQualifiedReferenceName__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:2749:1: ( ( RULE_ID ) )
+            // InternalIMPORTS.g:2750:1: ( RULE_ID )
+            {
+            // InternalIMPORTS.g:2750:1: ( RULE_ID )
+            // InternalIMPORTS.g:2751:2: RULE_ID
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_1()); 
+            }
+            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VersionedQualifiedReferenceName__Group__1__Impl"
+
+
+    // $ANTLR start "rule__VersionedQualifiedReferenceName__Group__2"
+    // InternalIMPORTS.g:2760:1: rule__VersionedQualifiedReferenceName__Group__2 : rule__VersionedQualifiedReferenceName__Group__2__Impl ;
+    public final void rule__VersionedQualifiedReferenceName__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:2764:1: ( rule__VersionedQualifiedReferenceName__Group__2__Impl )
+            // InternalIMPORTS.g:2765:2: rule__VersionedQualifiedReferenceName__Group__2__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__VersionedQualifiedReferenceName__Group__2__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VersionedQualifiedReferenceName__Group__2"
+
+
+    // $ANTLR start "rule__VersionedQualifiedReferenceName__Group__2__Impl"
+    // InternalIMPORTS.g:2771:1: rule__VersionedQualifiedReferenceName__Group__2__Impl : ( ( rule__VersionedQualifiedReferenceName__Group_2__0 )* ) ;
+    public final void rule__VersionedQualifiedReferenceName__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:2775:1: ( ( ( rule__VersionedQualifiedReferenceName__Group_2__0 )* ) )
+            // InternalIMPORTS.g:2776:1: ( ( rule__VersionedQualifiedReferenceName__Group_2__0 )* )
+            {
+            // InternalIMPORTS.g:2776:1: ( ( rule__VersionedQualifiedReferenceName__Group_2__0 )* )
+            // InternalIMPORTS.g:2777:2: ( rule__VersionedQualifiedReferenceName__Group_2__0 )*
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup_2()); 
+            }
+            // InternalIMPORTS.g:2778:2: ( rule__VersionedQualifiedReferenceName__Group_2__0 )*
+            loop16:
+            do {
+                int alt16=2;
+                int LA16_0 = input.LA(1);
+
+                if ( (LA16_0==35) ) {
+                    alt16=1;
+                }
+
+
+                switch (alt16) {
+            	case 1 :
+            	    // InternalIMPORTS.g:2778:3: rule__VersionedQualifiedReferenceName__Group_2__0
+            	    {
+            	    pushFollow(FollowSets000.FOLLOW_30);
+            	    rule__VersionedQualifiedReferenceName__Group_2__0();
+
+            	    state._fsp--;
+            	    if (state.failed) return ;
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop16;
+                }
+            } while (true);
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup_2()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VersionedQualifiedReferenceName__Group__2__Impl"
+
+
+    // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_0__0"
+    // InternalIMPORTS.g:2787:1: rule__VersionedQualifiedReferenceName__Group_0__0 : rule__VersionedQualifiedReferenceName__Group_0__0__Impl rule__VersionedQualifiedReferenceName__Group_0__1 ;
+    public final void rule__VersionedQualifiedReferenceName__Group_0__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:2791:1: ( rule__VersionedQualifiedReferenceName__Group_0__0__Impl rule__VersionedQualifiedReferenceName__Group_0__1 )
+            // InternalIMPORTS.g:2792:2: rule__VersionedQualifiedReferenceName__Group_0__0__Impl rule__VersionedQualifiedReferenceName__Group_0__1
+            {
+            pushFollow(FollowSets000.FOLLOW_29);
+            rule__VersionedQualifiedReferenceName__Group_0__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__VersionedQualifiedReferenceName__Group_0__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VersionedQualifiedReferenceName__Group_0__0"
+
+
+    // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_0__0__Impl"
+    // InternalIMPORTS.g:2799:1: rule__VersionedQualifiedReferenceName__Group_0__0__Impl : ( ruleVersionedQualifiedName ) ;
+    public final void rule__VersionedQualifiedReferenceName__Group_0__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:2803:1: ( ( ruleVersionedQualifiedName ) )
+            // InternalIMPORTS.g:2804:1: ( ruleVersionedQualifiedName )
+            {
+            // InternalIMPORTS.g:2804:1: ( ruleVersionedQualifiedName )
+            // InternalIMPORTS.g:2805:2: ruleVersionedQualifiedName
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getVersionedQualifiedNameParserRuleCall_0_0()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleVersionedQualifiedName();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getVersionedQualifiedNameParserRuleCall_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VersionedQualifiedReferenceName__Group_0__0__Impl"
+
+
+    // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_0__1"
+    // InternalIMPORTS.g:2814:1: rule__VersionedQualifiedReferenceName__Group_0__1 : rule__VersionedQualifiedReferenceName__Group_0__1__Impl ;
+    public final void rule__VersionedQualifiedReferenceName__Group_0__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:2818:1: ( rule__VersionedQualifiedReferenceName__Group_0__1__Impl )
+            // InternalIMPORTS.g:2819:2: rule__VersionedQualifiedReferenceName__Group_0__1__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__VersionedQualifiedReferenceName__Group_0__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VersionedQualifiedReferenceName__Group_0__1"
+
+
+    // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_0__1__Impl"
+    // InternalIMPORTS.g:2825:1: rule__VersionedQualifiedReferenceName__Group_0__1__Impl : ( '::' ) ;
+    public final void rule__VersionedQualifiedReferenceName__Group_0__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:2829:1: ( ( '::' ) )
+            // InternalIMPORTS.g:2830:1: ( '::' )
+            {
+            // InternalIMPORTS.g:2830:1: ( '::' )
+            // InternalIMPORTS.g:2831:2: '::'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_0_1()); 
+            }
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_0_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VersionedQualifiedReferenceName__Group_0__1__Impl"
+
+
+    // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_2__0"
+    // InternalIMPORTS.g:2841:1: rule__VersionedQualifiedReferenceName__Group_2__0 : rule__VersionedQualifiedReferenceName__Group_2__0__Impl rule__VersionedQualifiedReferenceName__Group_2__1 ;
+    public final void rule__VersionedQualifiedReferenceName__Group_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:2845:1: ( rule__VersionedQualifiedReferenceName__Group_2__0__Impl rule__VersionedQualifiedReferenceName__Group_2__1 )
+            // InternalIMPORTS.g:2846:2: rule__VersionedQualifiedReferenceName__Group_2__0__Impl rule__VersionedQualifiedReferenceName__Group_2__1
+            {
+            pushFollow(FollowSets000.FOLLOW_8);
+            rule__VersionedQualifiedReferenceName__Group_2__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__VersionedQualifiedReferenceName__Group_2__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VersionedQualifiedReferenceName__Group_2__0"
+
+
+    // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_2__0__Impl"
+    // InternalIMPORTS.g:2853:1: rule__VersionedQualifiedReferenceName__Group_2__0__Impl : ( '::' ) ;
+    public final void rule__VersionedQualifiedReferenceName__Group_2__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:2857:1: ( ( '::' ) )
+            // InternalIMPORTS.g:2858:1: ( '::' )
+            {
+            // InternalIMPORTS.g:2858:1: ( '::' )
+            // InternalIMPORTS.g:2859:2: '::'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_2_0()); 
+            }
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_2_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VersionedQualifiedReferenceName__Group_2__0__Impl"
+
+
+    // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_2__1"
+    // InternalIMPORTS.g:2868:1: rule__VersionedQualifiedReferenceName__Group_2__1 : rule__VersionedQualifiedReferenceName__Group_2__1__Impl ;
+    public final void rule__VersionedQualifiedReferenceName__Group_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:2872:1: ( rule__VersionedQualifiedReferenceName__Group_2__1__Impl )
+            // InternalIMPORTS.g:2873:2: rule__VersionedQualifiedReferenceName__Group_2__1__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__VersionedQualifiedReferenceName__Group_2__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VersionedQualifiedReferenceName__Group_2__1"
+
+
+    // $ANTLR start "rule__VersionedQualifiedReferenceName__Group_2__1__Impl"
+    // InternalIMPORTS.g:2879:1: rule__VersionedQualifiedReferenceName__Group_2__1__Impl : ( RULE_ID ) ;
+    public final void rule__VersionedQualifiedReferenceName__Group_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIMPORTS.g:2883:1: ( ( RULE_ID ) )
+            // InternalIMPORTS.g:2884:1: ( RULE_ID )
+            {
+            // InternalIMPORTS.g:2884:1: ( RULE_ID )
+            // InternalIMPORTS.g:2885:2: RULE_ID
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_2_1()); 
+            }
+            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_2_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VersionedQualifiedReferenceName__Group_2__1__Impl"
+
+
     // $ANTLR start "rule__INTEGER__Group_0__0"
-    // InternalIMPORTS.g:2706:1: rule__INTEGER__Group_0__0 : rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 ;
+    // InternalIMPORTS.g:2895:1: rule__INTEGER__Group_0__0 : rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 ;
     public final void rule__INTEGER__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2710:1: ( rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 )
-            // InternalIMPORTS.g:2711:2: rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1
+            // InternalIMPORTS.g:2899:1: ( rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 )
+            // InternalIMPORTS.g:2900:2: rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_28);
+            pushFollow(FollowSets000.FOLLOW_31);
             rule__INTEGER__Group_0__0__Impl();
 
             state._fsp--;
@@ -8485,33 +9092,33 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__0__Impl"
-    // InternalIMPORTS.g:2718:1: rule__INTEGER__Group_0__0__Impl : ( ( '-' )? ) ;
+    // InternalIMPORTS.g:2907:1: rule__INTEGER__Group_0__0__Impl : ( ( '-' )? ) ;
     public final void rule__INTEGER__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2722:1: ( ( ( '-' )? ) )
-            // InternalIMPORTS.g:2723:1: ( ( '-' )? )
+            // InternalIMPORTS.g:2911:1: ( ( ( '-' )? ) )
+            // InternalIMPORTS.g:2912:1: ( ( '-' )? )
             {
-            // InternalIMPORTS.g:2723:1: ( ( '-' )? )
-            // InternalIMPORTS.g:2724:2: ( '-' )?
+            // InternalIMPORTS.g:2912:1: ( ( '-' )? )
+            // InternalIMPORTS.g:2913:2: ( '-' )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getINTEGERAccess().getHyphenMinusKeyword_0_0()); 
             }
-            // InternalIMPORTS.g:2725:2: ( '-' )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // InternalIMPORTS.g:2914:2: ( '-' )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA15_0==34) ) {
-                alt15=1;
+            if ( (LA17_0==36) ) {
+                alt17=1;
             }
-            switch (alt15) {
+            switch (alt17) {
                 case 1 :
-                    // InternalIMPORTS.g:2725:3: '-'
+                    // InternalIMPORTS.g:2914:3: '-'
                     {
-                    match(input,34,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
                     break;
@@ -8543,14 +9150,14 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__1"
-    // InternalIMPORTS.g:2733:1: rule__INTEGER__Group_0__1 : rule__INTEGER__Group_0__1__Impl ;
+    // InternalIMPORTS.g:2922:1: rule__INTEGER__Group_0__1 : rule__INTEGER__Group_0__1__Impl ;
     public final void rule__INTEGER__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2737:1: ( rule__INTEGER__Group_0__1__Impl )
-            // InternalIMPORTS.g:2738:2: rule__INTEGER__Group_0__1__Impl
+            // InternalIMPORTS.g:2926:1: ( rule__INTEGER__Group_0__1__Impl )
+            // InternalIMPORTS.g:2927:2: rule__INTEGER__Group_0__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__INTEGER__Group_0__1__Impl();
@@ -8576,17 +9183,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__1__Impl"
-    // InternalIMPORTS.g:2744:1: rule__INTEGER__Group_0__1__Impl : ( RULE_INT ) ;
+    // InternalIMPORTS.g:2933:1: rule__INTEGER__Group_0__1__Impl : ( RULE_INT ) ;
     public final void rule__INTEGER__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2748:1: ( ( RULE_INT ) )
-            // InternalIMPORTS.g:2749:1: ( RULE_INT )
+            // InternalIMPORTS.g:2937:1: ( ( RULE_INT ) )
+            // InternalIMPORTS.g:2938:1: ( RULE_INT )
             {
-            // InternalIMPORTS.g:2749:1: ( RULE_INT )
-            // InternalIMPORTS.g:2750:2: RULE_INT
+            // InternalIMPORTS.g:2938:1: ( RULE_INT )
+            // InternalIMPORTS.g:2939:2: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getINTEGERAccess().getINTTerminalRuleCall_0_1()); 
@@ -8617,15 +9224,15 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportImport__UnorderedGroup_3"
-    // InternalIMPORTS.g:2760:1: rule__GSSImportImport__UnorderedGroup_3 : rule__GSSImportImport__UnorderedGroup_3__0 {...}?;
+    // InternalIMPORTS.g:2949:1: rule__GSSImportImport__UnorderedGroup_3 : rule__GSSImportImport__UnorderedGroup_3__0 {...}?;
     public final void rule__GSSImportImport__UnorderedGroup_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		getUnorderedGroupHelper().enter(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3());
         	
         try {
-            // InternalIMPORTS.g:2765:1: ( rule__GSSImportImport__UnorderedGroup_3__0 {...}?)
-            // InternalIMPORTS.g:2766:2: rule__GSSImportImport__UnorderedGroup_3__0 {...}?
+            // InternalIMPORTS.g:2954:1: ( rule__GSSImportImport__UnorderedGroup_3__0 {...}?)
+            // InternalIMPORTS.g:2955:2: rule__GSSImportImport__UnorderedGroup_3__0 {...}?
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSImportImport__UnorderedGroup_3__0();
@@ -8656,57 +9263,57 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportImport__UnorderedGroup_3__Impl"
-    // InternalIMPORTS.g:2774:1: rule__GSSImportImport__UnorderedGroup_3__Impl : ( ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) ) ) ) ;
+    // InternalIMPORTS.g:2963:1: rule__GSSImportImport__UnorderedGroup_3__Impl : ( ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) ) ) ) ;
     public final void rule__GSSImportImport__UnorderedGroup_3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalIMPORTS.g:2779:1: ( ( ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) ) ) ) )
-            // InternalIMPORTS.g:2780:3: ( ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) ) ) )
+            // InternalIMPORTS.g:2968:1: ( ( ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) ) ) ) )
+            // InternalIMPORTS.g:2969:3: ( ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) ) ) )
             {
-            // InternalIMPORTS.g:2780:3: ( ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) ) ) )
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // InternalIMPORTS.g:2969:3: ( ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) ) ) )
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( LA16_0 == 22 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 0) ) {
-                alt16=1;
+            if ( LA18_0 == 23 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 0) ) {
+                alt18=1;
             }
-            else if ( LA16_0 == 23 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 1) ) {
-                alt16=2;
+            else if ( LA18_0 == 24 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 1) ) {
+                alt18=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 16, 0, input);
+                    new NoViableAltException("", 18, 0, input);
 
                 throw nvae;
             }
-            switch (alt16) {
+            switch (alt18) {
                 case 1 :
-                    // InternalIMPORTS.g:2781:3: ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) )
+                    // InternalIMPORTS.g:2970:3: ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) )
                     {
-                    // InternalIMPORTS.g:2781:3: ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) )
-                    // InternalIMPORTS.g:2782:4: {...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) )
+                    // InternalIMPORTS.g:2970:3: ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) )
+                    // InternalIMPORTS.g:2971:4: {...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 0) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         throw new FailedPredicateException(input, "rule__GSSImportImport__UnorderedGroup_3__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 0)");
                     }
-                    // InternalIMPORTS.g:2782:111: ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) )
-                    // InternalIMPORTS.g:2783:5: ( ( rule__GSSImportImport__Group_3_0__0 ) )
+                    // InternalIMPORTS.g:2971:111: ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) )
+                    // InternalIMPORTS.g:2972:5: ( ( rule__GSSImportImport__Group_3_0__0 ) )
                     {
                     getUnorderedGroupHelper().select(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 0);
                     selected = true;
-                    // InternalIMPORTS.g:2789:5: ( ( rule__GSSImportImport__Group_3_0__0 ) )
-                    // InternalIMPORTS.g:2790:6: ( rule__GSSImportImport__Group_3_0__0 )
+                    // InternalIMPORTS.g:2978:5: ( ( rule__GSSImportImport__Group_3_0__0 ) )
+                    // InternalIMPORTS.g:2979:6: ( rule__GSSImportImport__Group_3_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSImportImportAccess().getGroup_3_0()); 
                     }
-                    // InternalIMPORTS.g:2791:6: ( rule__GSSImportImport__Group_3_0__0 )
-                    // InternalIMPORTS.g:2791:7: rule__GSSImportImport__Group_3_0__0
+                    // InternalIMPORTS.g:2980:6: ( rule__GSSImportImport__Group_3_0__0 )
+                    // InternalIMPORTS.g:2980:7: rule__GSSImportImport__Group_3_0__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSImportImport__Group_3_0__0();
@@ -8732,28 +9339,28 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalIMPORTS.g:2796:3: ({...}? => ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) ) )
+                    // InternalIMPORTS.g:2985:3: ({...}? => ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) ) )
                     {
-                    // InternalIMPORTS.g:2796:3: ({...}? => ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) ) )
-                    // InternalIMPORTS.g:2797:4: {...}? => ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) )
+                    // InternalIMPORTS.g:2985:3: ({...}? => ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) ) )
+                    // InternalIMPORTS.g:2986:4: {...}? => ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 1) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         throw new FailedPredicateException(input, "rule__GSSImportImport__UnorderedGroup_3__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 1)");
                     }
-                    // InternalIMPORTS.g:2797:111: ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) )
-                    // InternalIMPORTS.g:2798:5: ( ( rule__GSSImportImport__Group_3_1__0 ) )
+                    // InternalIMPORTS.g:2986:111: ( ( ( rule__GSSImportImport__Group_3_1__0 ) ) )
+                    // InternalIMPORTS.g:2987:5: ( ( rule__GSSImportImport__Group_3_1__0 ) )
                     {
                     getUnorderedGroupHelper().select(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 1);
                     selected = true;
-                    // InternalIMPORTS.g:2804:5: ( ( rule__GSSImportImport__Group_3_1__0 ) )
-                    // InternalIMPORTS.g:2805:6: ( rule__GSSImportImport__Group_3_1__0 )
+                    // InternalIMPORTS.g:2993:5: ( ( rule__GSSImportImport__Group_3_1__0 ) )
+                    // InternalIMPORTS.g:2994:6: ( rule__GSSImportImport__Group_3_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSImportImportAccess().getGroup_3_1()); 
                     }
-                    // InternalIMPORTS.g:2806:6: ( rule__GSSImportImport__Group_3_1__0 )
-                    // InternalIMPORTS.g:2806:7: rule__GSSImportImport__Group_3_1__0
+                    // InternalIMPORTS.g:2995:6: ( rule__GSSImportImport__Group_3_1__0 )
+                    // InternalIMPORTS.g:2995:7: rule__GSSImportImport__Group_3_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSImportImport__Group_3_1__0();
@@ -8802,31 +9409,31 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportImport__UnorderedGroup_3__0"
-    // InternalIMPORTS.g:2819:1: rule__GSSImportImport__UnorderedGroup_3__0 : rule__GSSImportImport__UnorderedGroup_3__Impl ( rule__GSSImportImport__UnorderedGroup_3__1 )? ;
+    // InternalIMPORTS.g:3008:1: rule__GSSImportImport__UnorderedGroup_3__0 : rule__GSSImportImport__UnorderedGroup_3__Impl ( rule__GSSImportImport__UnorderedGroup_3__1 )? ;
     public final void rule__GSSImportImport__UnorderedGroup_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2823:1: ( rule__GSSImportImport__UnorderedGroup_3__Impl ( rule__GSSImportImport__UnorderedGroup_3__1 )? )
-            // InternalIMPORTS.g:2824:2: rule__GSSImportImport__UnorderedGroup_3__Impl ( rule__GSSImportImport__UnorderedGroup_3__1 )?
+            // InternalIMPORTS.g:3012:1: ( rule__GSSImportImport__UnorderedGroup_3__Impl ( rule__GSSImportImport__UnorderedGroup_3__1 )? )
+            // InternalIMPORTS.g:3013:2: rule__GSSImportImport__UnorderedGroup_3__Impl ( rule__GSSImportImport__UnorderedGroup_3__1 )?
             {
-            pushFollow(FollowSets000.FOLLOW_29);
+            pushFollow(FollowSets000.FOLLOW_32);
             rule__GSSImportImport__UnorderedGroup_3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            // InternalIMPORTS.g:2825:2: ( rule__GSSImportImport__UnorderedGroup_3__1 )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // InternalIMPORTS.g:3014:2: ( rule__GSSImportImport__UnorderedGroup_3__1 )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( LA17_0 == 22 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 0) ) {
-                alt17=1;
+            if ( LA19_0 == 23 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 0) ) {
+                alt19=1;
             }
-            else if ( LA17_0 == 23 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 1) ) {
-                alt17=1;
+            else if ( LA19_0 == 24 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 1) ) {
+                alt19=1;
             }
-            switch (alt17) {
+            switch (alt19) {
                 case 1 :
                     // InternalIMPORTS.g:0:0: rule__GSSImportImport__UnorderedGroup_3__1
                     {
@@ -8860,14 +9467,14 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportImport__UnorderedGroup_3__1"
-    // InternalIMPORTS.g:2831:1: rule__GSSImportImport__UnorderedGroup_3__1 : rule__GSSImportImport__UnorderedGroup_3__Impl ;
+    // InternalIMPORTS.g:3020:1: rule__GSSImportImport__UnorderedGroup_3__1 : rule__GSSImportImport__UnorderedGroup_3__Impl ;
     public final void rule__GSSImportImport__UnorderedGroup_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2835:1: ( rule__GSSImportImport__UnorderedGroup_3__Impl )
-            // InternalIMPORTS.g:2836:2: rule__GSSImportImport__UnorderedGroup_3__Impl
+            // InternalIMPORTS.g:3024:1: ( rule__GSSImportImport__UnorderedGroup_3__Impl )
+            // InternalIMPORTS.g:3025:2: rule__GSSImportImport__UnorderedGroup_3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSImportImport__UnorderedGroup_3__Impl();
@@ -8893,17 +9500,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFile__ImportsAssignment_0"
-    // InternalIMPORTS.g:2843:1: rule__GSSModelFile__ImportsAssignment_0 : ( ruleGSSModelFileImport ) ;
+    // InternalIMPORTS.g:3032:1: rule__GSSModelFile__ImportsAssignment_0 : ( ruleGSSModelFileImport ) ;
     public final void rule__GSSModelFile__ImportsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2847:1: ( ( ruleGSSModelFileImport ) )
-            // InternalIMPORTS.g:2848:2: ( ruleGSSModelFileImport )
+            // InternalIMPORTS.g:3036:1: ( ( ruleGSSModelFileImport ) )
+            // InternalIMPORTS.g:3037:2: ( ruleGSSModelFileImport )
             {
-            // InternalIMPORTS.g:2848:2: ( ruleGSSModelFileImport )
-            // InternalIMPORTS.g:2849:3: ruleGSSModelFileImport
+            // InternalIMPORTS.g:3037:2: ( ruleGSSModelFileImport )
+            // InternalIMPORTS.g:3038:3: ruleGSSModelFileImport
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileAccess().getImportsGSSModelFileImportParserRuleCall_0_0()); 
@@ -8938,17 +9545,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFile__ElementAssignment_1"
-    // InternalIMPORTS.g:2858:1: rule__GSSModelFile__ElementAssignment_1 : ( ruleGSSImportImport ) ;
+    // InternalIMPORTS.g:3047:1: rule__GSSModelFile__ElementAssignment_1 : ( ruleGSSImportImport ) ;
     public final void rule__GSSModelFile__ElementAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2862:1: ( ( ruleGSSImportImport ) )
-            // InternalIMPORTS.g:2863:2: ( ruleGSSImportImport )
+            // InternalIMPORTS.g:3051:1: ( ( ruleGSSImportImport ) )
+            // InternalIMPORTS.g:3052:2: ( ruleGSSImportImport )
             {
-            // InternalIMPORTS.g:2863:2: ( ruleGSSImportImport )
-            // InternalIMPORTS.g:2864:3: ruleGSSImportImport
+            // InternalIMPORTS.g:3052:2: ( ruleGSSImportImport )
+            // InternalIMPORTS.g:3053:3: ruleGSSImportImport
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileAccess().getElementGSSImportImportParserRuleCall_1_0()); 
@@ -8983,24 +9590,24 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFileImport__ImportURIAssignment_2"
-    // InternalIMPORTS.g:2873:1: rule__GSSModelFileImport__ImportURIAssignment_2 : ( RULE_ID ) ;
+    // InternalIMPORTS.g:3062:1: rule__GSSModelFileImport__ImportURIAssignment_2 : ( RULE_STRING ) ;
     public final void rule__GSSModelFileImport__ImportURIAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2877:1: ( ( RULE_ID ) )
-            // InternalIMPORTS.g:2878:2: ( RULE_ID )
+            // InternalIMPORTS.g:3066:1: ( ( RULE_STRING ) )
+            // InternalIMPORTS.g:3067:2: ( RULE_STRING )
             {
-            // InternalIMPORTS.g:2878:2: ( RULE_ID )
-            // InternalIMPORTS.g:2879:3: RULE_ID
+            // InternalIMPORTS.g:3067:2: ( RULE_STRING )
+            // InternalIMPORTS.g:3068:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0()); 
+               before(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0()); 
+               after(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
             }
 
             }
@@ -9024,28 +9631,24 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportImport__NameAssignment_1"
-    // InternalIMPORTS.g:2888:1: rule__GSSImportImport__NameAssignment_1 : ( ruleEString ) ;
+    // InternalIMPORTS.g:3077:1: rule__GSSImportImport__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__GSSImportImport__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2892:1: ( ( ruleEString ) )
-            // InternalIMPORTS.g:2893:2: ( ruleEString )
+            // InternalIMPORTS.g:3081:1: ( ( RULE_ID ) )
+            // InternalIMPORTS.g:3082:2: ( RULE_ID )
             {
-            // InternalIMPORTS.g:2893:2: ( ruleEString )
-            // InternalIMPORTS.g:2894:3: ruleEString
+            // InternalIMPORTS.g:3082:2: ( RULE_ID )
+            // InternalIMPORTS.g:3083:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSImportImportAccess().getNameEStringParserRuleCall_1_0()); 
+               before(grammarAccess.getGSSImportImportAccess().getNameIDTerminalRuleCall_1_0()); 
             }
-            pushFollow(FollowSets000.FOLLOW_2);
-            ruleEString();
-
-            state._fsp--;
-            if (state.failed) return ;
+            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSImportImportAccess().getNameEStringParserRuleCall_1_0()); 
+               after(grammarAccess.getGSSImportImportAccess().getNameIDTerminalRuleCall_1_0()); 
             }
 
             }
@@ -9069,17 +9672,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportImport__UriAssignment_3_0_2"
-    // InternalIMPORTS.g:2903:1: rule__GSSImportImport__UriAssignment_3_0_2 : ( ruleQualifiedName ) ;
+    // InternalIMPORTS.g:3092:1: rule__GSSImportImport__UriAssignment_3_0_2 : ( ruleQualifiedName ) ;
     public final void rule__GSSImportImport__UriAssignment_3_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2907:1: ( ( ruleQualifiedName ) )
-            // InternalIMPORTS.g:2908:2: ( ruleQualifiedName )
+            // InternalIMPORTS.g:3096:1: ( ( ruleQualifiedName ) )
+            // InternalIMPORTS.g:3097:2: ( ruleQualifiedName )
             {
-            // InternalIMPORTS.g:2908:2: ( ruleQualifiedName )
-            // InternalIMPORTS.g:2909:3: ruleQualifiedName
+            // InternalIMPORTS.g:3097:2: ( ruleQualifiedName )
+            // InternalIMPORTS.g:3098:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getUriQualifiedNameParserRuleCall_3_0_2_0()); 
@@ -9114,17 +9717,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportImport__VersionAssignment_3_1_2"
-    // InternalIMPORTS.g:2918:1: rule__GSSImportImport__VersionAssignment_3_1_2 : ( ruleVersion ) ;
+    // InternalIMPORTS.g:3107:1: rule__GSSImportImport__VersionAssignment_3_1_2 : ( ruleVersion ) ;
     public final void rule__GSSImportImport__VersionAssignment_3_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2922:1: ( ( ruleVersion ) )
-            // InternalIMPORTS.g:2923:2: ( ruleVersion )
+            // InternalIMPORTS.g:3111:1: ( ( ruleVersion ) )
+            // InternalIMPORTS.g:3112:2: ( ruleVersion )
             {
-            // InternalIMPORTS.g:2923:2: ( ruleVersion )
-            // InternalIMPORTS.g:2924:3: ruleVersion
+            // InternalIMPORTS.g:3112:2: ( ruleVersion )
+            // InternalIMPORTS.g:3113:3: ruleVersion
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getVersionVersionParserRuleCall_3_1_2_0()); 
@@ -9159,24 +9762,40 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportImport__FromAssignment_6"
-    // InternalIMPORTS.g:2933:1: rule__GSSImportImport__FromAssignment_6 : ( RULE_ID ) ;
+    // InternalIMPORTS.g:3122:1: rule__GSSImportImport__FromAssignment_6 : ( ( ruleVersionedQualifiedName ) ) ;
     public final void rule__GSSImportImport__FromAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2937:1: ( ( RULE_ID ) )
-            // InternalIMPORTS.g:2938:2: ( RULE_ID )
+            // InternalIMPORTS.g:3126:1: ( ( ( ruleVersionedQualifiedName ) ) )
+            // InternalIMPORTS.g:3127:2: ( ( ruleVersionedQualifiedName ) )
             {
-            // InternalIMPORTS.g:2938:2: ( RULE_ID )
-            // InternalIMPORTS.g:2939:3: RULE_ID
+            // InternalIMPORTS.g:3127:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalIMPORTS.g:3128:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSImportImportAccess().getFromIDTerminalRuleCall_6_0()); 
+               before(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalIMPORTS.g:3129:3: ( ruleVersionedQualifiedName )
+            // InternalIMPORTS.g:3130:4: ruleVersionedQualifiedName
+            {
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSImportImportAccess().getFromIDTerminalRuleCall_6_0()); 
+               before(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_0_1()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleVersionedQualifiedName();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_6_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportImportAccess().getFromGSSTmTcFormatTmTcFormatCrossReference_6_0()); 
             }
 
             }
@@ -9199,25 +9818,41 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSImportImport__FromAssignment_6"
 
 
-    // $ANTLR start "rule__GSSImportImport__ToAssignment_10"
-    // InternalIMPORTS.g:2948:1: rule__GSSImportImport__ToAssignment_10 : ( RULE_ID ) ;
-    public final void rule__GSSImportImport__ToAssignment_10() throws RecognitionException {
+    // $ANTLR start "rule__GSSImportImport__ToAssignment_10_1"
+    // InternalIMPORTS.g:3141:1: rule__GSSImportImport__ToAssignment_10_1 : ( ( ruleVersionedQualifiedName ) ) ;
+    public final void rule__GSSImportImport__ToAssignment_10_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2952:1: ( ( RULE_ID ) )
-            // InternalIMPORTS.g:2953:2: ( RULE_ID )
+            // InternalIMPORTS.g:3145:1: ( ( ( ruleVersionedQualifiedName ) ) )
+            // InternalIMPORTS.g:3146:2: ( ( ruleVersionedQualifiedName ) )
             {
-            // InternalIMPORTS.g:2953:2: ( RULE_ID )
-            // InternalIMPORTS.g:2954:3: RULE_ID
+            // InternalIMPORTS.g:3146:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalIMPORTS.g:3147:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSImportImportAccess().getToIDTerminalRuleCall_10_0()); 
+               before(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTcFormatCrossReference_10_1_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalIMPORTS.g:3148:3: ( ruleVersionedQualifiedName )
+            // InternalIMPORTS.g:3149:4: ruleVersionedQualifiedName
+            {
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSImportImportAccess().getToIDTerminalRuleCall_10_0()); 
+               before(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_10_1_0_1()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleVersionedQualifiedName();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTcFormatVersionedQualifiedNameParserRuleCall_10_1_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportImportAccess().getToGSSTmTcFormatTmTcFormatCrossReference_10_1_0()); 
             }
 
             }
@@ -9237,21 +9872,21 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSImportImport__ToAssignment_10"
+    // $ANTLR end "rule__GSSImportImport__ToAssignment_10_1"
 
 
     // $ANTLR start "rule__GSSImportImport__DataSourceAssignment_12"
-    // InternalIMPORTS.g:2963:1: rule__GSSImportImport__DataSourceAssignment_12 : ( ruleGSSImportDataSource ) ;
+    // InternalIMPORTS.g:3160:1: rule__GSSImportImport__DataSourceAssignment_12 : ( ruleGSSImportDataSource ) ;
     public final void rule__GSSImportImport__DataSourceAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2967:1: ( ( ruleGSSImportDataSource ) )
-            // InternalIMPORTS.g:2968:2: ( ruleGSSImportDataSource )
+            // InternalIMPORTS.g:3164:1: ( ( ruleGSSImportDataSource ) )
+            // InternalIMPORTS.g:3165:2: ( ruleGSSImportDataSource )
             {
-            // InternalIMPORTS.g:2968:2: ( ruleGSSImportDataSource )
-            // InternalIMPORTS.g:2969:3: ruleGSSImportDataSource
+            // InternalIMPORTS.g:3165:2: ( ruleGSSImportDataSource )
+            // InternalIMPORTS.g:3166:3: ruleGSSImportDataSource
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getDataSourceGSSImportDataSourceParserRuleCall_12_0()); 
@@ -9286,17 +9921,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportImport__VirtualSizeAssignment_13"
-    // InternalIMPORTS.g:2978:1: rule__GSSImportImport__VirtualSizeAssignment_13 : ( ruleGSSImportVirtualSize ) ;
+    // InternalIMPORTS.g:3175:1: rule__GSSImportImport__VirtualSizeAssignment_13 : ( ruleGSSImportVirtualSize ) ;
     public final void rule__GSSImportImport__VirtualSizeAssignment_13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2982:1: ( ( ruleGSSImportVirtualSize ) )
-            // InternalIMPORTS.g:2983:2: ( ruleGSSImportVirtualSize )
+            // InternalIMPORTS.g:3179:1: ( ( ruleGSSImportVirtualSize ) )
+            // InternalIMPORTS.g:3180:2: ( ruleGSSImportVirtualSize )
             {
-            // InternalIMPORTS.g:2983:2: ( ruleGSSImportVirtualSize )
-            // InternalIMPORTS.g:2984:3: ruleGSSImportVirtualSize
+            // InternalIMPORTS.g:3180:2: ( ruleGSSImportVirtualSize )
+            // InternalIMPORTS.g:3181:3: ruleGSSImportVirtualSize
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportImportAccess().getVirtualSizeGSSImportVirtualSizeParserRuleCall_13_0()); 
@@ -9331,24 +9966,40 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportDataSource__FieldRefAssignment_4"
-    // InternalIMPORTS.g:2993:1: rule__GSSImportDataSource__FieldRefAssignment_4 : ( RULE_ID ) ;
+    // InternalIMPORTS.g:3190:1: rule__GSSImportDataSource__FieldRefAssignment_4 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
     public final void rule__GSSImportDataSource__FieldRefAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:2997:1: ( ( RULE_ID ) )
-            // InternalIMPORTS.g:2998:2: ( RULE_ID )
+            // InternalIMPORTS.g:3194:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
+            // InternalIMPORTS.g:3195:2: ( ( ruleVersionedQualifiedReferenceName ) )
             {
-            // InternalIMPORTS.g:2998:2: ( RULE_ID )
-            // InternalIMPORTS.g:2999:3: RULE_ID
+            // InternalIMPORTS.g:3195:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalIMPORTS.g:3196:3: ( ruleVersionedQualifiedReferenceName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSImportDataSourceAccess().getFieldRefIDTerminalRuleCall_4_0()); 
+               before(grammarAccess.getGSSImportDataSourceAccess().getFieldRefGSSTmTcFormatFieldCrossReference_4_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalIMPORTS.g:3197:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalIMPORTS.g:3198:4: ruleVersionedQualifiedReferenceName
+            {
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSImportDataSourceAccess().getFieldRefIDTerminalRuleCall_4_0()); 
+               before(grammarAccess.getGSSImportDataSourceAccess().getFieldRefGSSTmTcFormatFieldVersionedQualifiedReferenceNameParserRuleCall_4_0_1()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleVersionedQualifiedReferenceName();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportDataSourceAccess().getFieldRefGSSTmTcFormatFieldVersionedQualifiedReferenceNameParserRuleCall_4_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportDataSourceAccess().getFieldRefGSSTmTcFormatFieldCrossReference_4_0()); 
             }
 
             }
@@ -9372,17 +10023,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportDataSource__LeftTrimAssignment_8"
-    // InternalIMPORTS.g:3008:1: rule__GSSImportDataSource__LeftTrimAssignment_8 : ( ruleINTEGER ) ;
+    // InternalIMPORTS.g:3209:1: rule__GSSImportDataSource__LeftTrimAssignment_8 : ( ruleINTEGER ) ;
     public final void rule__GSSImportDataSource__LeftTrimAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:3012:1: ( ( ruleINTEGER ) )
-            // InternalIMPORTS.g:3013:2: ( ruleINTEGER )
+            // InternalIMPORTS.g:3213:1: ( ( ruleINTEGER ) )
+            // InternalIMPORTS.g:3214:2: ( ruleINTEGER )
             {
-            // InternalIMPORTS.g:3013:2: ( ruleINTEGER )
-            // InternalIMPORTS.g:3014:3: ruleINTEGER
+            // InternalIMPORTS.g:3214:2: ( ruleINTEGER )
+            // InternalIMPORTS.g:3215:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getLeftTrimINTEGERParserRuleCall_8_0()); 
@@ -9417,17 +10068,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportDataSource__RightTrimAssignment_12"
-    // InternalIMPORTS.g:3023:1: rule__GSSImportDataSource__RightTrimAssignment_12 : ( ruleINTEGER ) ;
+    // InternalIMPORTS.g:3224:1: rule__GSSImportDataSource__RightTrimAssignment_12 : ( ruleINTEGER ) ;
     public final void rule__GSSImportDataSource__RightTrimAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:3027:1: ( ( ruleINTEGER ) )
-            // InternalIMPORTS.g:3028:2: ( ruleINTEGER )
+            // InternalIMPORTS.g:3228:1: ( ( ruleINTEGER ) )
+            // InternalIMPORTS.g:3229:2: ( ruleINTEGER )
             {
-            // InternalIMPORTS.g:3028:2: ( ruleINTEGER )
-            // InternalIMPORTS.g:3029:3: ruleINTEGER
+            // InternalIMPORTS.g:3229:2: ( ruleINTEGER )
+            // InternalIMPORTS.g:3230:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportDataSourceAccess().getRightTrimINTEGERParserRuleCall_12_0()); 
@@ -9462,24 +10113,40 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportVirtualSize__FieldRefAssignment_4"
-    // InternalIMPORTS.g:3038:1: rule__GSSImportVirtualSize__FieldRefAssignment_4 : ( RULE_ID ) ;
+    // InternalIMPORTS.g:3239:1: rule__GSSImportVirtualSize__FieldRefAssignment_4 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
     public final void rule__GSSImportVirtualSize__FieldRefAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:3042:1: ( ( RULE_ID ) )
-            // InternalIMPORTS.g:3043:2: ( RULE_ID )
+            // InternalIMPORTS.g:3243:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
+            // InternalIMPORTS.g:3244:2: ( ( ruleVersionedQualifiedReferenceName ) )
             {
-            // InternalIMPORTS.g:3043:2: ( RULE_ID )
-            // InternalIMPORTS.g:3044:3: RULE_ID
+            // InternalIMPORTS.g:3244:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalIMPORTS.g:3245:3: ( ruleVersionedQualifiedReferenceName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSImportVirtualSizeAccess().getFieldRefIDTerminalRuleCall_4_0()); 
+               before(grammarAccess.getGSSImportVirtualSizeAccess().getFieldRefGSSTmTcFormatFieldCrossReference_4_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalIMPORTS.g:3246:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalIMPORTS.g:3247:4: ruleVersionedQualifiedReferenceName
+            {
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSImportVirtualSizeAccess().getFieldRefIDTerminalRuleCall_4_0()); 
+               before(grammarAccess.getGSSImportVirtualSizeAccess().getFieldRefGSSTmTcFormatFieldVersionedQualifiedReferenceNameParserRuleCall_4_0_1()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleVersionedQualifiedReferenceName();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportVirtualSizeAccess().getFieldRefGSSTmTcFormatFieldVersionedQualifiedReferenceNameParserRuleCall_4_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportVirtualSizeAccess().getFieldRefGSSTmTcFormatFieldCrossReference_4_0()); 
             }
 
             }
@@ -9503,24 +10170,40 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportVirtualSize__ToAssignment_8"
-    // InternalIMPORTS.g:3053:1: rule__GSSImportVirtualSize__ToAssignment_8 : ( RULE_ID ) ;
+    // InternalIMPORTS.g:3258:1: rule__GSSImportVirtualSize__ToAssignment_8 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
     public final void rule__GSSImportVirtualSize__ToAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:3057:1: ( ( RULE_ID ) )
-            // InternalIMPORTS.g:3058:2: ( RULE_ID )
+            // InternalIMPORTS.g:3262:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
+            // InternalIMPORTS.g:3263:2: ( ( ruleVersionedQualifiedReferenceName ) )
             {
-            // InternalIMPORTS.g:3058:2: ( RULE_ID )
-            // InternalIMPORTS.g:3059:3: RULE_ID
+            // InternalIMPORTS.g:3263:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalIMPORTS.g:3264:3: ( ruleVersionedQualifiedReferenceName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSImportVirtualSizeAccess().getToIDTerminalRuleCall_8_0()); 
+               before(grammarAccess.getGSSImportVirtualSizeAccess().getToGSSTmTcFormatFieldCrossReference_8_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalIMPORTS.g:3265:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalIMPORTS.g:3266:4: ruleVersionedQualifiedReferenceName
+            {
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSImportVirtualSizeAccess().getToIDTerminalRuleCall_8_0()); 
+               before(grammarAccess.getGSSImportVirtualSizeAccess().getToGSSTmTcFormatFieldVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleVersionedQualifiedReferenceName();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportVirtualSizeAccess().getToGSSTmTcFormatFieldVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSImportVirtualSizeAccess().getToGSSTmTcFormatFieldCrossReference_8_0()); 
             }
 
             }
@@ -9544,17 +10227,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportVirtualSize__AddSizeAssignment_10_2"
-    // InternalIMPORTS.g:3068:1: rule__GSSImportVirtualSize__AddSizeAssignment_10_2 : ( ruleINTEGER ) ;
+    // InternalIMPORTS.g:3277:1: rule__GSSImportVirtualSize__AddSizeAssignment_10_2 : ( ruleINTEGER ) ;
     public final void rule__GSSImportVirtualSize__AddSizeAssignment_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:3072:1: ( ( ruleINTEGER ) )
-            // InternalIMPORTS.g:3073:2: ( ruleINTEGER )
+            // InternalIMPORTS.g:3281:1: ( ( ruleINTEGER ) )
+            // InternalIMPORTS.g:3282:2: ( ruleINTEGER )
             {
-            // InternalIMPORTS.g:3073:2: ( ruleINTEGER )
-            // InternalIMPORTS.g:3074:3: ruleINTEGER
+            // InternalIMPORTS.g:3282:2: ( ruleINTEGER )
+            // InternalIMPORTS.g:3283:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getAddSizeINTEGERParserRuleCall_10_2_0()); 
@@ -9589,17 +10272,17 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSImportVirtualSize__UnitAssignment_11_2"
-    // InternalIMPORTS.g:3083:1: rule__GSSImportVirtualSize__UnitAssignment_11_2 : ( ruleGSSImportUnit ) ;
+    // InternalIMPORTS.g:3292:1: rule__GSSImportVirtualSize__UnitAssignment_11_2 : ( ruleGSSImportUnit ) ;
     public final void rule__GSSImportVirtualSize__UnitAssignment_11_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIMPORTS.g:3087:1: ( ( ruleGSSImportUnit ) )
-            // InternalIMPORTS.g:3088:2: ( ruleGSSImportUnit )
+            // InternalIMPORTS.g:3296:1: ( ( ruleGSSImportUnit ) )
+            // InternalIMPORTS.g:3297:2: ( ruleGSSImportUnit )
             {
-            // InternalIMPORTS.g:3088:2: ( ruleGSSImportUnit )
-            // InternalIMPORTS.g:3089:3: ruleGSSImportUnit
+            // InternalIMPORTS.g:3297:2: ( ruleGSSImportUnit )
+            // InternalIMPORTS.g:3298:3: ruleGSSImportUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSImportVirtualSizeAccess().getUnitGSSImportUnitEnumRuleCall_11_2_0()); 
@@ -9632,30 +10315,30 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
     }
     // $ANTLR end "rule__GSSImportVirtualSize__UnitAssignment_11_2"
 
-    // $ANTLR start synpred16_InternalIMPORTS
-    public final void synpred16_InternalIMPORTS_fragment() throws RecognitionException {   
-        // InternalIMPORTS.g:2781:3: ( ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) ) )
-        // InternalIMPORTS.g:2781:3: ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) )
+    // $ANTLR start synpred18_InternalIMPORTS
+    public final void synpred18_InternalIMPORTS_fragment() throws RecognitionException {   
+        // InternalIMPORTS.g:2970:3: ( ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) ) )
+        // InternalIMPORTS.g:2970:3: ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) )
         {
-        // InternalIMPORTS.g:2781:3: ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) )
-        // InternalIMPORTS.g:2782:4: {...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) )
+        // InternalIMPORTS.g:2970:3: ({...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) ) )
+        // InternalIMPORTS.g:2971:4: {...}? => ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) )
         {
         if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 0) ) {
             if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred16_InternalIMPORTS", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 0)");
+            throw new FailedPredicateException(input, "synpred18_InternalIMPORTS", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 0)");
         }
-        // InternalIMPORTS.g:2782:111: ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) )
-        // InternalIMPORTS.g:2783:5: ( ( rule__GSSImportImport__Group_3_0__0 ) )
+        // InternalIMPORTS.g:2971:111: ( ( ( rule__GSSImportImport__Group_3_0__0 ) ) )
+        // InternalIMPORTS.g:2972:5: ( ( rule__GSSImportImport__Group_3_0__0 ) )
         {
         getUnorderedGroupHelper().select(grammarAccess.getGSSImportImportAccess().getUnorderedGroup_3(), 0);
-        // InternalIMPORTS.g:2789:5: ( ( rule__GSSImportImport__Group_3_0__0 ) )
-        // InternalIMPORTS.g:2790:6: ( rule__GSSImportImport__Group_3_0__0 )
+        // InternalIMPORTS.g:2978:5: ( ( rule__GSSImportImport__Group_3_0__0 ) )
+        // InternalIMPORTS.g:2979:6: ( rule__GSSImportImport__Group_3_0__0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getGSSImportImportAccess().getGroup_3_0()); 
         }
-        // InternalIMPORTS.g:2791:6: ( rule__GSSImportImport__Group_3_0__0 )
-        // InternalIMPORTS.g:2791:7: rule__GSSImportImport__Group_3_0__0
+        // InternalIMPORTS.g:2980:6: ( rule__GSSImportImport__Group_3_0__0 )
+        // InternalIMPORTS.g:2980:7: rule__GSSImportImport__Group_3_0__0
         {
         pushFollow(FollowSets000.FOLLOW_2);
         rule__GSSImportImport__Group_3_0__0();
@@ -9677,12 +10360,12 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
         }
     }
-    // $ANTLR end synpred16_InternalIMPORTS
+    // $ANTLR end synpred18_InternalIMPORTS
 
-    // $ANTLR start synpred17_InternalIMPORTS
-    public final void synpred17_InternalIMPORTS_fragment() throws RecognitionException {   
-        // InternalIMPORTS.g:2825:2: ( rule__GSSImportImport__UnorderedGroup_3__1 )
-        // InternalIMPORTS.g:2825:2: rule__GSSImportImport__UnorderedGroup_3__1
+    // $ANTLR start synpred19_InternalIMPORTS
+    public final void synpred19_InternalIMPORTS_fragment() throws RecognitionException {   
+        // InternalIMPORTS.g:3014:2: ( rule__GSSImportImport__UnorderedGroup_3__1 )
+        // InternalIMPORTS.g:3014:2: rule__GSSImportImport__UnorderedGroup_3__1
         {
         pushFollow(FollowSets000.FOLLOW_2);
         rule__GSSImportImport__UnorderedGroup_3__1();
@@ -9692,15 +10375,15 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
 
         }
     }
-    // $ANTLR end synpred17_InternalIMPORTS
+    // $ANTLR end synpred19_InternalIMPORTS
 
     // Delegated rules
 
-    public final boolean synpred17_InternalIMPORTS() {
+    public final boolean synpred19_InternalIMPORTS() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred17_InternalIMPORTS_fragment(); // can never throw exception
+            synpred19_InternalIMPORTS_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -9710,11 +10393,11 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred16_InternalIMPORTS() {
+    public final boolean synpred18_InternalIMPORTS() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred16_InternalIMPORTS_fragment(); // can never throw exception
+            synpred18_InternalIMPORTS_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -9732,33 +10415,36 @@ public class InternalIMPORTSParser extends AbstractInternalContentAssistParser {
     private static class FollowSets000 {
         public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000004002L});
-        public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000C00000L});
-        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000100000L});
-        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000010200000L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000001000002L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000008002L});
+        public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000010000L});
+        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000080L});
+        public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000001800000L});
+        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000100000L});
+        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000200000L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000001040L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000020400000L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000002000002L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000000050L});
         public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x00000004000000C0L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000060200000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000003000L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000080000002L});
-        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000100000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000008000000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000001000000030L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000400000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x00000000C0400000L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000006000L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000100000000L});
+        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000100000002L});
         public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000200000000L});
-        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000400000040L});
-        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000C00002L});
+        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000400000000L});
+        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000800000000L});
+        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000800000002L});
+        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000001000000010L});
+        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000001800002L});
     }
 
 

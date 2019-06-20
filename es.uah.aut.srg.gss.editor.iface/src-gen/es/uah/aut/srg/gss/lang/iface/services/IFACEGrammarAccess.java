@@ -585,13 +585,13 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//	constSize=GSSIfaceConstSize
 		//	sizeFieldOffset=GSSIfaceSizeFieldOffset
 		//	sizeFieldTrim=GSSIfaceSizeFieldTrim
-		//	syncPattern=GSSIfaceSyncPattern
+		//	syncPattern=GSSIfaceSyncPattern?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'uartProtocol' '{' 'unit' ':=' unit=GSSIfaceUartProtocolUnit ';' 'power' ':=' power=GSSIfaceUartProtocolPower ';'
 		//constSize=GSSIfaceConstSize sizeFieldOffset=GSSIfaceSizeFieldOffset sizeFieldTrim=GSSIfaceSizeFieldTrim
-		//syncPattern=GSSIfaceSyncPattern '}' ';'
+		//syncPattern=GSSIfaceSyncPattern? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'uartProtocol'
@@ -648,7 +648,7 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSIfaceSizeFieldTrim
 		public RuleCall getSizeFieldTrimGSSIfaceSizeFieldTrimParserRuleCall_12_0() { return cSizeFieldTrimGSSIfaceSizeFieldTrimParserRuleCall_12_0; }
 		
-		//syncPattern=GSSIfaceSyncPattern
+		//syncPattern=GSSIfaceSyncPattern?
 		public Assignment getSyncPatternAssignment_13() { return cSyncPatternAssignment_13; }
 		
 		//GSSIfaceSyncPattern
@@ -1694,7 +1694,7 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 	//	constSize=GSSIfaceConstSize
 	//	sizeFieldOffset=GSSIfaceSizeFieldOffset
 	//	sizeFieldTrim=GSSIfaceSizeFieldTrim
-	//	syncPattern=GSSIfaceSyncPattern
+	//	syncPattern=GSSIfaceSyncPattern?
 	//	'}' ';';
 	public GSSIfaceUartProtocolElements getGSSIfaceUartProtocolAccess() {
 		return pGSSIfaceUartProtocol;

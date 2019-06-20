@@ -1,0 +1,55 @@
+«IMPORT filters»
+
+«DEFINE Serializer(String outputFile) FOR GSSFilterMintermFilter»
+«FILE outputFile -»
+GSSFilterMintermFilter «this.name» {
+	//«this.description»
+	uri := «this.uri»;
+	version := «this.version»;
+	formatFile := «this.formatFile.name»(«this.formatFile.version»);
+	
+«EXPAND SerializeBoolVar FOREACH this.BoolVar -»
+«EXPAND GSSFilterBoolVarFDIC FOREACH this.BoolVarFDIC -»
+«EXPAND SerializeMinterm FOREACH this.Minterm -»
+};
+«ENDFILE -»
+«ENDDEFINE»
+
+«DEFINE SerializeBoolVar FOR GSSFilterBoolVar -»
+	GSSFilterBoolVar {
+		id := «this.id»;
+		name := «this.name»;
+		constantType := «this.constantType»;
+		FieldRef := «this.FieldRef.name»;
+		GSSFilterFieldOp {
+			type := «this.Op.type»;
+		};
+		GSSFilterConstant {
+			value := «this.Constant.value»;
+		};
+	};
+«ENDDEFINE»
+
+«DEFINE GSSFilterBoolVarFDIC FOR GSSFilterBoolVarFDIC -»
+	GSSFilterBoolVarFDIC {
+		id := «this.id»;
+		name := «this.name»;
+		FieldRef := «this.FieldRef.name»;
+		GSSFilterFieldOp {
+			type := «this.Op.type»;
+		};
+	};
+«ENDDEFINE»
+	
+«DEFINE SerializeMinterm FOR GSSFilterMinterm -»
+	GSSFilterMinterm { 
+		id := «this.id»;
+«EXPAND SerializeBoolVarRef FOREACH this.BoolVarRef -»
+	};
+«ENDDEFINE»
+
+«DEFINE SerializeBoolVarRef FOR GSSFilterBoolVarRef -»
+		GSSFilterBoolVarRef {
+			idRef := «this.idRef»;
+		};
+«ENDDEFINE»

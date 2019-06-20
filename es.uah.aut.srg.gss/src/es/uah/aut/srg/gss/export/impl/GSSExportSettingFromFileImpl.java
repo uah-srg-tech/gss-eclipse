@@ -18,7 +18,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +28,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingFromFileImpl#getFile <em>File</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingFromFileImpl#getToFieldRef <em>To Field Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingFromFileImpl#getOffset <em>Offset</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingFromFileImpl#getSize <em>Size</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingFromFileImpl#getLine <em>Line</em>}</li>
@@ -37,7 +35,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class GSSExportSettingFromFileImpl extends MinimalEObjectImpl.Container implements GSSExportSettingFromFile {
+public class GSSExportSettingFromFileImpl extends GSSExportSettingImpl implements GSSExportSettingFromFile {
 	/**
 	 * The default value of the '{@link #getFile() <em>File</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -57,26 +55,6 @@ public class GSSExportSettingFromFileImpl extends MinimalEObjectImpl.Container i
 	 * @ordered
 	 */
 	protected String file = FILE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getToFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TO_FIELD_REF_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getToFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected String toFieldRef = TO_FIELD_REF_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getOffset() <em>Offset</em>}' attribute.
@@ -183,27 +161,6 @@ public class GSSExportSettingFromFileImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getToFieldRef() {
-		return toFieldRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setToFieldRef(String newToFieldRef) {
-		String oldToFieldRef = toFieldRef;
-		toFieldRef = newToFieldRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, exportPackage.GSS_EXPORT_SETTING_FROM_FILE__TO_FIELD_REF, oldToFieldRef, toFieldRef));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getOffset() {
 		return offset;
 	}
@@ -272,8 +229,6 @@ public class GSSExportSettingFromFileImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE__FILE:
 				return getFile();
-			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE__TO_FIELD_REF:
-				return getToFieldRef();
 			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE__OFFSET:
 				return getOffset();
 			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE__SIZE:
@@ -294,9 +249,6 @@ public class GSSExportSettingFromFileImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE__FILE:
 				setFile((String)newValue);
-				return;
-			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE__TO_FIELD_REF:
-				setToFieldRef((String)newValue);
 				return;
 			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE__OFFSET:
 				setOffset((String)newValue);
@@ -322,9 +274,6 @@ public class GSSExportSettingFromFileImpl extends MinimalEObjectImpl.Container i
 			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE__FILE:
 				setFile(FILE_EDEFAULT);
 				return;
-			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE__TO_FIELD_REF:
-				setToFieldRef(TO_FIELD_REF_EDEFAULT);
-				return;
 			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE__OFFSET:
 				setOffset(OFFSET_EDEFAULT);
 				return;
@@ -348,8 +297,6 @@ public class GSSExportSettingFromFileImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE__FILE:
 				return FILE_EDEFAULT == null ? file != null : !FILE_EDEFAULT.equals(file);
-			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE__TO_FIELD_REF:
-				return TO_FIELD_REF_EDEFAULT == null ? toFieldRef != null : !TO_FIELD_REF_EDEFAULT.equals(toFieldRef);
 			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE__OFFSET:
 				return OFFSET_EDEFAULT == null ? offset != null : !OFFSET_EDEFAULT.equals(offset);
 			case exportPackage.GSS_EXPORT_SETTING_FROM_FILE__SIZE:
@@ -372,8 +319,6 @@ public class GSSExportSettingFromFileImpl extends MinimalEObjectImpl.Container i
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (file: ");
 		result.append(file);
-		result.append(", toFieldRef: ");
-		result.append(toFieldRef);
 		result.append(", offset: ");
 		result.append(offset);
 		result.append(", size: ");

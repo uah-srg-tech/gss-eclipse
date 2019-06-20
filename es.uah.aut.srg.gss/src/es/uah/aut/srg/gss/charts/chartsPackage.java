@@ -151,22 +151,31 @@ public interface chartsPackage extends EPackage {
 	int GSS_CHARTS_CHART = 1;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CHARTS_CHART__ID = 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CHARTS_CHART__NAME = 1;
+	int GSS_CHARTS_CHART__NAME = commonPackage.GSS_MODEL_OBJECT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CHARTS_CHART__DESCRIPTION = commonPackage.GSS_MODEL_OBJECT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CHARTS_CHART__ID = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Yunits</b></em>' attribute.
@@ -175,7 +184,7 @@ public interface chartsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CHARTS_CHART__YUNITS = 2;
+	int GSS_CHARTS_CHART__YUNITS = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Ymax</b></em>' attribute.
@@ -184,7 +193,7 @@ public interface chartsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CHARTS_CHART__YMAX = 3;
+	int GSS_CHARTS_CHART__YMAX = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>GSS Charts Chart</em>' class.
@@ -193,7 +202,7 @@ public interface chartsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CHARTS_CHART_FEATURE_COUNT = 4;
+	int GSS_CHARTS_CHART_FEATURE_COUNT = commonPackage.GSS_MODEL_OBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>GSS Charts Chart</em>' class.
@@ -202,7 +211,7 @@ public interface chartsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CHARTS_CHART_OPERATION_COUNT = 0;
+	int GSS_CHARTS_CHART_OPERATION_COUNT = commonPackage.GSS_MODEL_OBJECT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.charts.GSSChartsYUnits <em>GSS Charts YUnits</em>}' enum.
@@ -256,17 +265,6 @@ public interface chartsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGSSChartsChart_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.charts.GSSChartsChart#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.charts.GSSChartsChart#getName()
-	 * @see #getGSSChartsChart()
-	 * @generated
-	 */
-	EAttribute getGSSChartsChart_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.charts.GSSChartsChart#getY_units <em>Yunits</em>}'.
@@ -358,14 +356,6 @@ public interface chartsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GSS_CHARTS_CHART__ID = eINSTANCE.getGSSChartsChart_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CHARTS_CHART__NAME = eINSTANCE.getGSSChartsChart_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Yunits</b></em>' attribute feature.

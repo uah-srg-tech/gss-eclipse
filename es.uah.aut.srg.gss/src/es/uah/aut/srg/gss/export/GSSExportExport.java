@@ -12,6 +12,8 @@ package es.uah.aut.srg.gss.export;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Export Export</b></em>'.
@@ -34,62 +36,62 @@ import es.uah.aut.srg.gss.common.GSSModelElement;
  */
 public interface GSSExportExport extends GSSModelElement {
 	/**
-	 * Returns the value of the '<em><b>From</b></em>' attribute.
+	 * Returns the value of the '<em><b>From</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>From</em>' attribute isn't clear,
+	 * If the meaning of the '<em>From</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>From</em>' attribute.
-	 * @see #setFrom(String)
+	 * @return the value of the '<em>From</em>' reference.
+	 * @see #setFrom(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportExport_From()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
-	String getFrom();
+	GSSTmTcFormatTmTcFormat getFrom();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.export.GSSExportExport#getFrom <em>From</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.export.GSSExportExport#getFrom <em>From</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>From</em>' attribute.
+	 * @param value the new value of the '<em>From</em>' reference.
 	 * @see #getFrom()
 	 * @generated
 	 */
-	void setFrom(String value);
+	void setFrom(GSSTmTcFormatTmTcFormat value);
 
 	/**
-	 * Returns the value of the '<em><b>To</b></em>' attribute.
+	 * Returns the value of the '<em><b>To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>To</em>' attribute isn't clear,
+	 * If the meaning of the '<em>To</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>To</em>' attribute.
-	 * @see #setTo(String)
+	 * @return the value of the '<em>To</em>' reference.
+	 * @see #setTo(GSSTmTcFormatTmTcFormat)
 	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportExport_To()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getTo();
+	GSSTmTcFormatTmTcFormat getTo();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.export.GSSExportExport#getTo <em>To</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.export.GSSExportExport#getTo <em>To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To</em>' attribute.
+	 * @param value the new value of the '<em>To</em>' reference.
 	 * @see #getTo()
 	 * @generated
 	 */
-	void setTo(String value);
+	void setTo(GSSTmTcFormatTmTcFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Sizes</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sizes</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Sizes</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -115,7 +117,7 @@ public interface GSSExportExport extends GSSModelElement {
 	 * Returns the value of the '<em><b>Settings</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Settings</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Settings</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -141,7 +143,7 @@ public interface GSSExportExport extends GSSModelElement {
 	 * Returns the value of the '<em><b>Activate DI Cs</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activate DI Cs</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Activate DI Cs</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

@@ -161,36 +161,6 @@ public class configSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case configPackage.GSS_CONFIG_TM_FORMAT: {
-				GSSConfigTMFormat gssConfigTMFormat = (GSSConfigTMFormat)theEObject;
-				T result = caseGSSConfigTMFormat(gssConfigTMFormat);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case configPackage.GSS_CONFIG_TC_FORMAT: {
-				GSSConfigTCFormat gssConfigTCFormat = (GSSConfigTCFormat)theEObject;
-				T result = caseGSSConfigTCFormat(gssConfigTCFormat);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case configPackage.GSS_CONFIG_INPUT_FILTER: {
-				GSSConfigInputFilter gssConfigInputFilter = (GSSConfigInputFilter)theEObject;
-				T result = caseGSSConfigInputFilter(gssConfigInputFilter);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case configPackage.GSS_CONFIG_EXPORT_TO_PREV_LEVEL: {
-				GSSConfigExportToPrevLevel gssConfigExportToPrevLevel = (GSSConfigExportToPrevLevel)theEObject;
-				T result = caseGSSConfigExportToPrevLevel(gssConfigExportToPrevLevel);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case configPackage.GSS_CONFIG_IMPORT_FROM_PREV_LEVEL: {
-				GSSConfigImportFromPrevLevel gssConfigImportFromPrevLevel = (GSSConfigImportFromPrevLevel)theEObject;
-				T result = caseGSSConfigImportFromPrevLevel(gssConfigImportFromPrevLevel);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case configPackage.GSS_CONFIG_SPECIAL_PACKETS: {
 				GSSConfigSpecialPackets gssConfigSpecialPackets = (GSSConfigSpecialPackets)theEObject;
 				T result = caseGSSConfigSpecialPackets(gssConfigSpecialPackets);
@@ -260,54 +230,6 @@ public class configSwitch<T> extends Switch<T> {
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL0: {
 				GSSConfigPeriodicTCLevel0 gssConfigPeriodicTCLevel0 = (GSSConfigPeriodicTCLevel0)theEObject;
 				T result = caseGSSConfigPeriodicTCLevel0(gssConfigPeriodicTCLevel0);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case configPackage.GSS_CONFIG_LEVEL2: {
-				GSSConfigLevel2 gssConfigLevel2 = (GSSConfigLevel2)theEObject;
-				T result = caseGSSConfigLevel2(gssConfigLevel2);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case configPackage.GSS_CONFIG_LEVEL1: {
-				GSSConfigLevel1 gssConfigLevel1 = (GSSConfigLevel1)theEObject;
-				T result = caseGSSConfigLevel1(gssConfigLevel1);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case configPackage.GSS_CONFIG_LEVEL0: {
-				GSSConfigLevel0 gssConfigLevel0 = (GSSConfigLevel0)theEObject;
-				T result = caseGSSConfigLevel0(gssConfigLevel0);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case configPackage.GSS_CONFIG_APP_TO_LEVEL2: {
-				GSSConfigAppToLevel2 gssConfigAppToLevel2 = (GSSConfigAppToLevel2)theEObject;
-				T result = caseGSSConfigAppToLevel2(gssConfigAppToLevel2);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case configPackage.GSS_CONFIG_APP_TO_LEVEL1: {
-				GSSConfigAppToLevel1 gssConfigAppToLevel1 = (GSSConfigAppToLevel1)theEObject;
-				T result = caseGSSConfigAppToLevel1(gssConfigAppToLevel1);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case configPackage.GSS_CONFIG_APP_TO_LEVEL0: {
-				GSSConfigAppToLevel0 gssConfigAppToLevel0 = (GSSConfigAppToLevel0)theEObject;
-				T result = caseGSSConfigAppToLevel0(gssConfigAppToLevel0);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case configPackage.GSS_CONFIG_LEVEL2_TO_LEVEL1: {
-				GSSConfigLevel2ToLevel1 gssConfigLevel2ToLevel1 = (GSSConfigLevel2ToLevel1)theEObject;
-				T result = caseGSSConfigLevel2ToLevel1(gssConfigLevel2ToLevel1);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case configPackage.GSS_CONFIG_LEVEL1_TO_LEVEL0: {
-				GSSConfigLevel1ToLevel0 gssConfigLevel1ToLevel0 = (GSSConfigLevel1ToLevel0)theEObject;
-				T result = caseGSSConfigLevel1ToLevel0(gssConfigLevel1ToLevel0);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -535,77 +457,32 @@ public class configSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config TM Format</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Main Interface</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config TM Format</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Config Main Interface</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGSSConfigTMFormat(GSSConfigTMFormat object) {
+	public T caseGSSConfigMainInterface(GSSConfigMainInterface object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config TC Format</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Interface</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config TC Format</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Config Interface</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGSSConfigTCFormat(GSSConfigTCFormat object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Input Filter</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config Input Filter</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigInputFilter(GSSConfigInputFilter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Export To Prev Level</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config Export To Prev Level</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigExportToPrevLevel(GSSConfigExportToPrevLevel object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Import From Prev Level</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config Import From Prev Level</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigImportFromPrevLevel(GSSConfigImportFromPrevLevel object) {
+	public T caseGSSConfigInterface(GSSConfigInterface object) {
 		return null;
 	}
 
@@ -651,36 +528,6 @@ public class configSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSConfigLevelOut(GSSConfigLevelOut object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Main Interface</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config Main Interface</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigMainInterface(GSSConfigMainInterface object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Interface</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config Interface</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigInterface(GSSConfigInterface object) {
 		return null;
 	}
 
@@ -816,126 +663,6 @@ public class configSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSConfigPeriodicTCs(GSSConfigPeriodicTCs object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Level2</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config Level2</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigLevel2(GSSConfigLevel2 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Level1</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config Level1</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigLevel1(GSSConfigLevel1 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Level0</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config Level0</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigLevel0(GSSConfigLevel0 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config App To Level2</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config App To Level2</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigAppToLevel2(GSSConfigAppToLevel2 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config App To Level1</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config App To Level1</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigAppToLevel1(GSSConfigAppToLevel1 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config App To Level0</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config App To Level0</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigAppToLevel0(GSSConfigAppToLevel0 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Level2 To Level1</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config Level2 To Level1</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigLevel2ToLevel1(GSSConfigLevel2ToLevel1 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Level1 To Level0</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config Level1 To Level0</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigLevel1ToLevel0(GSSConfigLevel1ToLevel0 object) {
 		return null;
 	}
 

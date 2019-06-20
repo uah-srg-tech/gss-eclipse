@@ -3387,7 +3387,7 @@ rule__GSSIfaceUartProtocol__Group__13__Impl
 :
 (
 	{ before(grammarAccess.getGSSIfaceUartProtocolAccess().getSyncPatternAssignment_13()); }
-	(rule__GSSIfaceUartProtocol__SyncPatternAssignment_13)
+	(rule__GSSIfaceUartProtocol__SyncPatternAssignment_13)?
 	{ after(grammarAccess.getGSSIfaceUartProtocolAccess().getSyncPatternAssignment_13()); }
 )
 ;

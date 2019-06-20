@@ -1,0 +1,30 @@
+«IMPORT imports»
+
+«DEFINE Serializer(String outputFile) FOR GSSImportImport»
+«FILE outputFile -»
+GSSImportImport «this.name» {
+	//«this.description»
+	uri := «this.uri»;
+	version := «this.version»;
+	from := «this.from.name»(«this.from.version»);
+	to := «this.to.name»(«this.to.version»);
+«EXPAND SerializeDataSource FOREACH this.dataSource -»
+«IF this.virtualSize != null -»
+	GSSImportVirtualSize {
+		FieldRef := «this.virtualSize.FieldRef.name»;
+		to := «this.virtualSize.to.name»;
+		addSize := «this.virtualSize.addSize»;
+		unit := «this.virtualSize.unit»;
+	};
+«ENDIF -»
+};
+«ENDFILE -»
+«ENDDEFINE»
+
+«DEFINE SerializeDataSource FOR GSSImportDataSource -»
+	GSSImportDataSource {
+		FieldRef := «this.FieldRef.name»;
+		leftTrim := «this.leftTrim»;
+		rightTrim := «this.rightTrim»;
+	};
+«ENDDEFINE»

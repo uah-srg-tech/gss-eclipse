@@ -11,6 +11,7 @@
 package es.uah.aut.srg.gss.test_proc.impl;
 
 import es.uah.aut.srg.gss.common.impl.GSSModelObjectImpl;
+
 import es.uah.aut.srg.gss.test_proc.GSSTestProcConcurrentSteps;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInputs;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcMode;
@@ -19,8 +20,10 @@ import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcSpecialPackets;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcStep;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -222,6 +225,73 @@ public class GSSTestProcStepImpl extends GSSModelObjectImpl implements GSSTestPr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GSSTestProcMode getMode() {
+		return mode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMode(GSSTestProcMode newMode) {
+		GSSTestProcMode oldMode = mode;
+		mode = newMode == null ? MODE_EDEFAULT : newMode;
+		boolean oldModeESet = modeESet;
+		modeESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_STEP__MODE, oldMode, mode, !oldModeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetMode() {
+		GSSTestProcMode oldMode = mode;
+		boolean oldModeESet = modeESet;
+		mode = MODE_EDEFAULT;
+		modeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, test_procPackage.GSS_TEST_PROC_STEP__MODE, oldMode, MODE_EDEFAULT, oldModeESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetMode() {
+		return modeESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getReplays() {
+		return replays;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReplays(String newReplays) {
+		String oldReplays = replays;
+		replays = newReplays;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_STEP__REPLAYS, oldReplays, replays));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GSSTestProcStep getPrev_step_idref() {
 		if (prev_step_idref != null && prev_step_idref.eIsProxy()) {
 			InternalEObject oldPrev_step_idref = (InternalEObject)prev_step_idref;
@@ -291,73 +361,6 @@ public class GSSTestProcStepImpl extends GSSModelObjectImpl implements GSSTestPr
 		output_idref_from_prev_step = newOutput_idref_from_prev_step;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_STEP__OUTPUT_IDREF_FROM_PREV_STEP, oldOutput_idref_from_prev_step, output_idref_from_prev_step));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcMode getMode() {
-		return mode;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMode(GSSTestProcMode newMode) {
-		GSSTestProcMode oldMode = mode;
-		mode = newMode == null ? MODE_EDEFAULT : newMode;
-		boolean oldModeESet = modeESet;
-		modeESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_STEP__MODE, oldMode, mode, !oldModeESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetMode() {
-		GSSTestProcMode oldMode = mode;
-		boolean oldModeESet = modeESet;
-		mode = MODE_EDEFAULT;
-		modeESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, test_procPackage.GSS_TEST_PROC_STEP__MODE, oldMode, MODE_EDEFAULT, oldModeESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetMode() {
-		return modeESet;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getReplays() {
-		return replays;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setReplays(String newReplays) {
-		String oldReplays = replays;
-		replays = newReplays;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_STEP__REPLAYS, oldReplays, replays));
 	}
 
 	/**
@@ -589,7 +592,6 @@ public class GSSTestProcStepImpl extends GSSModelObjectImpl implements GSSTestPr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

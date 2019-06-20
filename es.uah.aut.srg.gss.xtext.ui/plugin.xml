@@ -40,7 +40,39 @@
                      </test>
                      <test
                            property="org.eclipse.core.resources.extension"
+                           value="gss_tm_tc_format">
+                     </test>
+                     <test
+                           property="org.eclipse.core.resources.extension"
+                           value="gss_filters">
+                     </test>
+                     <test
+                           property="org.eclipse.core.resources.extension"
+                           value="gss_export">
+                     </test>
+                     <test
+                           property="org.eclipse.core.resources.extension"
+                           value="gss_imports">
+                     </test>
+                     <test
+                           property="org.eclipse.core.resources.extension"
                            value="gss_test_proc">
+                     </test>
+                     <test
+                           property="org.eclipse.core.resources.extension"
+                           value="gss_charts">
+                     </test>
+                     <test
+                           property="org.eclipse.core.resources.extension"
+                           value="gss_protocol_packets">
+                     </test>
+                     <test
+                           property="org.eclipse.core.resources.extension"
+                           value="gss_imports">
+                     </test>
+                     <test
+                           property="org.eclipse.core.resources.extension"
+                           value="gss_config">
                      </test>
                   </or>
                </iterate>

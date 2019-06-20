@@ -113,9 +113,9 @@ ruleGSSModelFile returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSModelFileAccess().getElementGSSTmTcFormatTmTCFormatParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getGSSModelFileAccess().getElementGSSTmTcFormatTmTcFormatParserRuleCall_1_0());
 				}
-				lv_element_1_0=ruleGSSTmTcFormatTmTCFormat
+				lv_element_1_0=ruleGSSTmTcFormatTmTcFormat
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSModelFileRule());
@@ -124,7 +124,7 @@ ruleGSSModelFile returns [EObject current=null]
 						$current,
 						"element",
 						lv_element_1_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatTmTCFormat");
+						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatTmTcFormat");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -152,11 +152,15 @@ ruleGSSModelFileImport returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getGSSModelFileImportAccess().getImportKeyword_0());
 		}
+		otherlv_1=':='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1());
+		}
 		(
 			(
-				lv_importURI_1_0=RULE_ID
+				lv_importURI_2_0=RULE_STRING
 				{
-					newLeafNode(lv_importURI_1_0, grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_1_0());
+					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -165,57 +169,57 @@ ruleGSSModelFileImport returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"importURI",
-						lv_importURI_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						lv_importURI_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
-		otherlv_2=';'
+		otherlv_3=';'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_2());
+			newLeafNode(otherlv_3, grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_3());
 		}
 	)
 ;
 
-// Entry rule entryRuleGSSTmTcFormatTmTCFormat
-entryRuleGSSTmTcFormatTmTCFormat returns [EObject current=null]@init {
+// Entry rule entryRuleGSSTmTcFormatTmTcFormat
+entryRuleGSSTmTcFormatTmTcFormat returns [EObject current=null]@init {
 	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3()
+	grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3()
 	);
 }:
-	{ newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatRule()); }
-	iv_ruleGSSTmTcFormatTmTCFormat=ruleGSSTmTcFormatTmTCFormat
-	{ $current=$iv_ruleGSSTmTcFormatTmTCFormat.current; }
+	{ newCompositeNode(grammarAccess.getGSSTmTcFormatTmTcFormatRule()); }
+	iv_ruleGSSTmTcFormatTmTcFormat=ruleGSSTmTcFormatTmTcFormat
+	{ $current=$iv_ruleGSSTmTcFormatTmTcFormat.current; }
 	EOF;
 finally {
 	myUnorderedGroupState.restore();
 }
 
-// Rule GSSTmTcFormatTmTCFormat
-ruleGSSTmTcFormatTmTCFormat returns [EObject current=null]
+// Rule GSSTmTcFormatTmTcFormat
+ruleGSSTmTcFormatTmTcFormat returns [EObject current=null]
 @init {
 	enterRule();
 	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3()
+	grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3()
 	);
 }
 @after {
 	leaveRule();
 }:
 	(
-		otherlv_0='GSSTmTcFormatTmTCFormat'
+		otherlv_0='GSSTmTcFormatTmTcFormat'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getGSSTmTcFormatTmTCFormatKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getGSSTmTcFormatTmTcFormatKeyword_0());
 		}
 		(
 			(
 				lv_name_1_0=RULE_ID
 				{
-					newLeafNode(lv_name_1_0, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getNameIDTerminalRuleCall_1_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getNameIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGSSTmTcFormatTmTCFormatRule());
+						$current = createModelElement(grammarAccess.getGSSTmTcFormatTmTcFormatRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -227,37 +231,37 @@ ruleGSSTmTcFormatTmTCFormat returns [EObject current=null]
 		)
 		otherlv_2='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getLeftCurlyBracketKeyword_2());
 		}
 		(
 			(
 				{ 
-				  getUnorderedGroupHelper().enter(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3());
+				  getUnorderedGroupHelper().enter(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3());
 				}
 				(
 					(
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3(), 0)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3(), 0)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3(), 0);
+						getUnorderedGroupHelper().select(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3(), 0);
 					}
 								({true}?=>(otherlv_4='uri'
 								{
-									newLeafNode(otherlv_4, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUriKeyword_3_0_0());
+									newLeafNode(otherlv_4, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUriKeyword_3_0_0());
 								}
 								otherlv_5=':='
 								{
-									newLeafNode(otherlv_5, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getColonEqualsSignKeyword_3_0_1());
+									newLeafNode(otherlv_5, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getColonEqualsSignKeyword_3_0_1());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUriQualifiedNameParserRuleCall_3_0_2_0());
+											newCompositeNode(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUriQualifiedNameParserRuleCall_3_0_2_0());
 										}
 										lv_uri_6_0=ruleQualifiedName
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTCFormatRule());
+												$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTcFormatRule());
 											}
 											set(
 												$current,
@@ -270,36 +274,36 @@ ruleGSSTmTcFormatTmTCFormat returns [EObject current=null]
 								)
 								otherlv_7=';'
 								{
-									newLeafNode(otherlv_7, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getSemicolonKeyword_3_0_3());
+									newLeafNode(otherlv_7, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getSemicolonKeyword_3_0_3());
 								}
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3(), 1)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3(), 1)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3(), 1);
+						getUnorderedGroupHelper().select(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3(), 1);
 					}
 								({true}?=>(otherlv_8='version'
 								{
-									newLeafNode(otherlv_8, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getVersionKeyword_3_1_0());
+									newLeafNode(otherlv_8, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getVersionKeyword_3_1_0());
 								}
 								otherlv_9=':='
 								{
-									newLeafNode(otherlv_9, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getColonEqualsSignKeyword_3_1_1());
+									newLeafNode(otherlv_9, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getColonEqualsSignKeyword_3_1_1());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getVersionVersionParserRuleCall_3_1_2_0());
+											newCompositeNode(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getVersionVersionParserRuleCall_3_1_2_0());
 										}
 										lv_version_10_0=ruleVersion
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTCFormatRule());
+												$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTcFormatRule());
 											}
 											set(
 												$current,
@@ -312,36 +316,36 @@ ruleGSSTmTcFormatTmTCFormat returns [EObject current=null]
 								)
 								otherlv_11=';'
 								{
-									newLeafNode(otherlv_11, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getSemicolonKeyword_3_1_3());
+									newLeafNode(otherlv_11, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getSemicolonKeyword_3_1_3());
 								}
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3(), 2)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3(), 2)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3(), 2);
+						getUnorderedGroupHelper().select(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3(), 2);
 					}
 								({true}?=>(otherlv_12='protocol'
 								{
-									newLeafNode(otherlv_12, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getProtocolKeyword_3_2_0());
+									newLeafNode(otherlv_12, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getProtocolKeyword_3_2_0());
 								}
 								otherlv_13=':='
 								{
-									newLeafNode(otherlv_13, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getColonEqualsSignKeyword_3_2_1());
+									newLeafNode(otherlv_13, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getColonEqualsSignKeyword_3_2_1());
 								}
 								(
 									(
 										lv_protocol_14_0=RULE_ID
 										{
-											newLeafNode(lv_protocol_14_0, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getProtocolIDTerminalRuleCall_3_2_2_0());
+											newLeafNode(lv_protocol_14_0, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getProtocolIDTerminalRuleCall_3_2_2_0());
 										}
 										{
 											if ($current==null) {
-												$current = createModelElement(grammarAccess.getGSSTmTcFormatTmTCFormatRule());
+												$current = createModelElement(grammarAccess.getGSSTmTcFormatTmTcFormatRule());
 											}
 											setWithLastConsumed(
 												$current,
@@ -353,62 +357,62 @@ ruleGSSTmTcFormatTmTCFormat returns [EObject current=null]
 								)
 								otherlv_15=';'
 								{
-									newLeafNode(otherlv_15, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getSemicolonKeyword_3_2_3());
+									newLeafNode(otherlv_15, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getSemicolonKeyword_3_2_3());
 								}
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3(), 3)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3(), 3)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3(), 3);
+						getUnorderedGroupHelper().select(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3(), 3);
 					}
 								({true}?=>((
 									otherlv_16='type'
 									{
-										newLeafNode(otherlv_16, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getTypeKeyword_3_3_0_0());
+										newLeafNode(otherlv_16, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getTypeKeyword_3_3_0_0());
 									}
 									otherlv_17=':='
 									{
-										newLeafNode(otherlv_17, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getColonEqualsSignKeyword_3_3_0_1());
+										newLeafNode(otherlv_17, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getColonEqualsSignKeyword_3_3_0_1());
 									}
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getTypeGSSTmTcFormatTmTCFormatTypeEnumRuleCall_3_3_0_2_0());
+												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getTypeGSSTmTcFormatTmTcFormatTypeEnumRuleCall_3_3_0_2_0());
 											}
-											lv_type_18_0=ruleGSSTmTcFormatTmTCFormatType
+											lv_type_18_0=ruleGSSTmTcFormatTmTcFormatType
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTCFormatRule());
+													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTcFormatRule());
 												}
 												set(
 													$current,
 													"type",
 													lv_type_18_0,
-													"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatTmTCFormatType");
+													"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatTmTcFormatType");
 												afterParserOrEnumRuleCall();
 											}
 										)
 									)
 									otherlv_19=';'
 									{
-										newLeafNode(otherlv_19, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getSemicolonKeyword_3_3_0_3());
+										newLeafNode(otherlv_19, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getSemicolonKeyword_3_3_0_3());
 									}
 								)
 								(
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getCSFieldGSSTmTcFormatCSFieldParserRuleCall_3_3_1_0_0());
+												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getCSFieldGSSTmTcFormatCSFieldParserRuleCall_3_3_1_0_0());
 											}
 											lv_CSField_20_0=ruleGSSTmTcFormatCSField
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTCFormatRule());
+													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTcFormatRule());
 												}
 												add(
 													$current,
@@ -423,12 +427,12 @@ ruleGSSTmTcFormatTmTCFormat returns [EObject current=null]
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getCSFormulaFieldGSSTmTcFormatCSFormulaFieldParserRuleCall_3_3_1_1_0());
+												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getCSFormulaFieldGSSTmTcFormatCSFormulaFieldParserRuleCall_3_3_1_1_0());
 											}
 											lv_CSFormulaField_21_0=ruleGSSTmTcFormatCSFormulaField
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTCFormatRule());
+													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTcFormatRule());
 												}
 												add(
 													$current,
@@ -443,12 +447,12 @@ ruleGSSTmTcFormatTmTCFormat returns [EObject current=null]
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getVSFieldGSSTmTcFormatVSFieldParserRuleCall_3_3_1_2_0());
+												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getVSFieldGSSTmTcFormatVSFieldParserRuleCall_3_3_1_2_0());
 											}
 											lv_VSField_22_0=ruleGSSTmTcFormatVSField
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTCFormatRule());
+													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTcFormatRule());
 												}
 												add(
 													$current,
@@ -463,12 +467,12 @@ ruleGSSTmTcFormatTmTCFormat returns [EObject current=null]
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getFDICFieldGSSTmTcFormatFDICFieldParserRuleCall_3_3_1_3_0());
+												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getFDICFieldGSSTmTcFormatFDICFieldParserRuleCall_3_3_1_3_0());
 											}
 											lv_FDICField_23_0=ruleGSSTmTcFormatFDICField
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTCFormatRule());
+													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTcFormatRule());
 												}
 												add(
 													$current,
@@ -483,12 +487,12 @@ ruleGSSTmTcFormatTmTCFormat returns [EObject current=null]
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getVRFieldSizeGSSTmTcFormatVRFieldSizeParserRuleCall_3_3_1_4_0());
+												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getVRFieldSizeGSSTmTcFormatVRFieldSizeParserRuleCall_3_3_1_4_0());
 											}
 											lv_VRFieldSize_24_0=ruleGSSTmTcFormatVRFieldSize
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTCFormatRule());
+													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTcFormatRule());
 												}
 												add(
 													$current,
@@ -503,12 +507,12 @@ ruleGSSTmTcFormatTmTCFormat returns [EObject current=null]
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getAFieldGSSTmTcFormatAFieldParserRuleCall_3_3_1_5_0());
+												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getAFieldGSSTmTcFormatAFieldParserRuleCall_3_3_1_5_0());
 											}
 											lv_AField_25_0=ruleGSSTmTcFormatAField
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTCFormatRule());
+													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTcFormatRule());
 												}
 												add(
 													$current,
@@ -523,12 +527,12 @@ ruleGSSTmTcFormatTmTCFormat returns [EObject current=null]
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getAIFieldGSSTmTcFormatAIFieldParserRuleCall_3_3_1_6_0());
+												newCompositeNode(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getAIFieldGSSTmTcFormatAIFieldParserRuleCall_3_3_1_6_0());
 											}
 											lv_AIField_26_0=ruleGSSTmTcFormatAIField
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTCFormatRule());
+													$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatTmTcFormatRule());
 												}
 												add(
 													$current,
@@ -542,25 +546,25 @@ ruleGSSTmTcFormatTmTCFormat returns [EObject current=null]
 								)*
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3());
 					}
 				)
 			)
 					)+
-					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3())}?
+					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3())}?
 				)
 			)
 				{ 
-				  getUnorderedGroupHelper().leave(grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getUnorderedGroup_3());
+				  getUnorderedGroupHelper().leave(grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getUnorderedGroup_3());
 				}
 		)
 		otherlv_27='}'
 		{
-			newLeafNode(otherlv_27, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_27, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getRightCurlyBracketKeyword_4());
 		}
 		otherlv_28=';'
 		{
-			newLeafNode(otherlv_28, grammarAccess.getGSSTmTcFormatTmTCFormatAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_28, grammarAccess.getGSSTmTcFormatTmTcFormatAccess().getSemicolonKeyword_5());
 		}
 	)
 ;
@@ -664,9 +668,9 @@ ruleGSSTmTcFormatCSField returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_12_0=RULE_ID
+				lv_name_12_0=RULE_STRING
 				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatCSFieldAccess().getNameIDTerminalRuleCall_12_0());
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatCSFieldAccess().getNameSTRINGTerminalRuleCall_12_0());
 				}
 				{
 					if ($current==null) {
@@ -676,7 +680,7 @@ ruleGSSTmTcFormatCSField returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -695,9 +699,9 @@ ruleGSSTmTcFormatCSField returns [EObject current=null]
 			}
 			(
 				(
-					lv_description_16_0=RULE_ID
+					lv_description_16_0=RULE_STRING
 					{
-						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatCSFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0());
+						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatCSFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0());
 					}
 					{
 						if ($current==null) {
@@ -707,7 +711,7 @@ ruleGSSTmTcFormatCSField returns [EObject current=null]
 							$current,
 							"description",
 							lv_description_16_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
@@ -954,9 +958,9 @@ ruleGSSTmTcFormatCSFormulaField returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_12_0=RULE_ID
+				lv_name_12_0=RULE_STRING
 				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getNameIDTerminalRuleCall_12_0());
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getNameSTRINGTerminalRuleCall_12_0());
 				}
 				{
 					if ($current==null) {
@@ -966,7 +970,7 @@ ruleGSSTmTcFormatCSFormulaField returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -985,9 +989,9 @@ ruleGSSTmTcFormatCSFormulaField returns [EObject current=null]
 			}
 			(
 				(
-					lv_description_16_0=RULE_ID
+					lv_description_16_0=RULE_STRING
 					{
-						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0());
+						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatCSFormulaFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0());
 					}
 					{
 						if ($current==null) {
@@ -997,7 +1001,7 @@ ruleGSSTmTcFormatCSFormulaField returns [EObject current=null]
 							$current,
 							"description",
 							lv_description_16_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
@@ -1263,9 +1267,9 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_12_0=RULE_ID
+				lv_name_12_0=RULE_STRING
 				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatVSFieldAccess().getNameIDTerminalRuleCall_12_0());
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatVSFieldAccess().getNameSTRINGTerminalRuleCall_12_0());
 				}
 				{
 					if ($current==null) {
@@ -1275,7 +1279,7 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -1294,9 +1298,9 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 			}
 			(
 				(
-					lv_description_16_0=RULE_ID
+					lv_description_16_0=RULE_STRING
 					{
-						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatVSFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0());
+						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatVSFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0());
 					}
 					{
 						if ($current==null) {
@@ -1306,7 +1310,7 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 							$current,
 							"description",
 							lv_description_16_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
@@ -1430,18 +1434,18 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_28_0());
+					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_28_0());
 				}
-				lv_globalOffset_31_0=ruleGSSTmTcFormatGlobalOffset
+				lv_variableSize_31_0=ruleGSSTmTcFormatVariableSize
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVSFieldRule());
 					}
 					set(
 						$current,
-						"globalOffset",
-						lv_globalOffset_31_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatGlobalOffset");
+						"variableSize",
+						lv_variableSize_31_0,
+						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatVariableSize");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1468,18 +1472,18 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getVariableSizeGSSTmTcFormatVariableSizeParserRuleCall_30_0());
+					newCompositeNode(grammarAccess.getGSSTmTcFormatVSFieldAccess().getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_30_0());
 				}
-				lv_variableSize_33_0=ruleGSSTmTcFormatVariableSize
+				lv_globalOffset_33_0=ruleGSSTmTcFormatGlobalOffset
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVSFieldRule());
 					}
 					set(
 						$current,
-						"variableSize",
-						lv_variableSize_33_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatVariableSize");
+						"globalOffset",
+						lv_globalOffset_33_0,
+						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatGlobalOffset");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1491,6 +1495,133 @@ ruleGSSTmTcFormatVSField returns [EObject current=null]
 		otherlv_35=';'
 		{
 			newLeafNode(otherlv_35, grammarAccess.getGSSTmTcFormatVSFieldAccess().getSemicolonKeyword_32());
+		}
+	)
+;
+
+// Entry rule entryRuleGSSTmTcFormatVRFieldSize
+entryRuleGSSTmTcFormatVRFieldSize returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSTmTcFormatVRFieldSizeRule()); }
+	iv_ruleGSSTmTcFormatVRFieldSize=ruleGSSTmTcFormatVRFieldSize
+	{ $current=$iv_ruleGSSTmTcFormatVRFieldSize.current; }
+	EOF;
+
+// Rule GSSTmTcFormatVRFieldSize
+ruleGSSTmTcFormatVRFieldSize returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='GSSTmTcFormatVRFieldSize'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getGSSTmTcFormatVRFieldSizeKeyword_0());
+		}
+		otherlv_1='{'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getLeftCurlyBracketKeyword_1());
+		}
+		otherlv_2='fid'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getFidKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getColonEqualsSignKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getFidINTEGERParserRuleCall_4_0());
+				}
+				lv_fid_4_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVRFieldSizeRule());
+					}
+					set(
+						$current,
+						"fid",
+						lv_fid_4_0,
+						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_5=';'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_5());
+		}
+		otherlv_6='pfid'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getPfidKeyword_6());
+		}
+		otherlv_7=':='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getColonEqualsSignKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getPfidINTEGERParserRuleCall_8_0());
+				}
+				lv_pfid_8_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVRFieldSizeRule());
+					}
+					set(
+						$current,
+						"pfid",
+						lv_pfid_8_0,
+						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9=';'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_9());
+		}
+		otherlv_10='name'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameKeyword_10());
+		}
+		otherlv_11=':='
+		{
+			newLeafNode(otherlv_11, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getColonEqualsSignKeyword_11());
+		}
+		(
+			(
+				lv_name_12_0=RULE_STRING
+				{
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameSTRINGTerminalRuleCall_12_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getGSSTmTcFormatVRFieldSizeRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_12_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_13=';'
+		{
+			newLeafNode(otherlv_13, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_13());
+		}
+		otherlv_14='}'
+		{
+			newLeafNode(otherlv_14, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getRightCurlyBracketKeyword_14());
+		}
+		otherlv_15=';'
+		{
+			newLeafNode(otherlv_15, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_15());
 		}
 	)
 ;
@@ -1591,9 +1722,9 @@ ruleGSSTmTcFormatFDICField returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_12_0=RULE_ID
+				lv_name_12_0=RULE_STRING
 				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatFDICFieldAccess().getNameIDTerminalRuleCall_12_0());
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatFDICFieldAccess().getNameSTRINGTerminalRuleCall_12_0());
 				}
 				{
 					if ($current==null) {
@@ -1603,7 +1734,7 @@ ruleGSSTmTcFormatFDICField returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -1622,9 +1753,9 @@ ruleGSSTmTcFormatFDICField returns [EObject current=null]
 			}
 			(
 				(
-					lv_description_16_0=RULE_ID
+					lv_description_16_0=RULE_STRING
 					{
-						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatFDICFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0());
+						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatFDICFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0());
 					}
 					{
 						if ($current==null) {
@@ -1634,7 +1765,7 @@ ruleGSSTmTcFormatFDICField returns [EObject current=null]
 							$current,
 							"description",
 							lv_description_16_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
@@ -1804,133 +1935,6 @@ ruleGSSTmTcFormatFDICField returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleGSSTmTcFormatVRFieldSize
-entryRuleGSSTmTcFormatVRFieldSize returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSTmTcFormatVRFieldSizeRule()); }
-	iv_ruleGSSTmTcFormatVRFieldSize=ruleGSSTmTcFormatVRFieldSize
-	{ $current=$iv_ruleGSSTmTcFormatVRFieldSize.current; }
-	EOF;
-
-// Rule GSSTmTcFormatVRFieldSize
-ruleGSSTmTcFormatVRFieldSize returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='GSSTmTcFormatVRFieldSize'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getGSSTmTcFormatVRFieldSizeKeyword_0());
-		}
-		otherlv_1='{'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getLeftCurlyBracketKeyword_1());
-		}
-		otherlv_2='fid'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getFidKeyword_2());
-		}
-		otherlv_3=':='
-		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getColonEqualsSignKeyword_3());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getFidINTEGERParserRuleCall_4_0());
-				}
-				lv_fid_4_0=ruleINTEGER
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVRFieldSizeRule());
-					}
-					set(
-						$current,
-						"fid",
-						lv_fid_4_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.INTEGER");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_5=';'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_5());
-		}
-		otherlv_6='pfid'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getPfidKeyword_6());
-		}
-		otherlv_7=':='
-		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getColonEqualsSignKeyword_7());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getPfidINTEGERParserRuleCall_8_0());
-				}
-				lv_pfid_8_0=ruleINTEGER
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatVRFieldSizeRule());
-					}
-					set(
-						$current,
-						"pfid",
-						lv_pfid_8_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.INTEGER");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_9=';'
-		{
-			newLeafNode(otherlv_9, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_9());
-		}
-		otherlv_10='name'
-		{
-			newLeafNode(otherlv_10, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameKeyword_10());
-		}
-		otherlv_11=':='
-		{
-			newLeafNode(otherlv_11, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getColonEqualsSignKeyword_11());
-		}
-		(
-			(
-				lv_name_12_0=RULE_ID
-				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameIDTerminalRuleCall_12_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGSSTmTcFormatVRFieldSizeRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-		otherlv_13=';'
-		{
-			newLeafNode(otherlv_13, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_13());
-		}
-		otherlv_14='}'
-		{
-			newLeafNode(otherlv_14, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getRightCurlyBracketKeyword_14());
-		}
-		otherlv_15=';'
-		{
-			newLeafNode(otherlv_15, grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getSemicolonKeyword_15());
-		}
-	)
-;
-
 // Entry rule entryRuleGSSTmTcFormatAField
 entryRuleGSSTmTcFormatAField returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldRule()); }
@@ -2027,9 +2031,9 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_12_0=RULE_ID
+				lv_name_12_0=RULE_STRING
 				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatAFieldAccess().getNameIDTerminalRuleCall_12_0());
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatAFieldAccess().getNameSTRINGTerminalRuleCall_12_0());
 				}
 				{
 					if ($current==null) {
@@ -2039,7 +2043,7 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -2058,9 +2062,9 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 			}
 			(
 				(
-					lv_description_16_0=RULE_ID
+					lv_description_16_0=RULE_STRING
 					{
-						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatAFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0());
+						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatAFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0());
 					}
 					{
 						if ($current==null) {
@@ -2070,7 +2074,7 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 							$current,
 							"description",
 							lv_description_16_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
@@ -2175,9 +2179,28 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_27_0());
+					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_27_0());
 				}
-				lv_size_30_0=ruleGSSTmTcFormatSize
+				lv_arrayDimension_30_0=ruleGSSTmTcFormatArrayDimension
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAFieldRule());
+					}
+					set(
+						$current,
+						"arrayDimension",
+						lv_arrayDimension_30_0,
+						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatArrayDimension");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_28_0());
+				}
+				lv_size_31_0=ruleGSSTmTcFormatSize
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAFieldRule());
@@ -2185,7 +2208,7 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 					set(
 						$current,
 						"size",
-						lv_size_30_0,
+						lv_size_31_0,
 						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatSize");
 					afterParserOrEnumRuleCall();
 				}
@@ -2194,9 +2217,9 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_28_0());
+					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getGlobalOffsetGSSTmTcFormatGlobalOffsetParserRuleCall_29_0());
 				}
-				lv_globalOffset_31_0=ruleGSSTmTcFormatGlobalOffset
+				lv_globalOffset_32_0=ruleGSSTmTcFormatGlobalOffset
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAFieldRule());
@@ -2204,27 +2227,8 @@ ruleGSSTmTcFormatAField returns [EObject current=null]
 					set(
 						$current,
 						"globalOffset",
-						lv_globalOffset_31_0,
+						lv_globalOffset_32_0,
 						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatGlobalOffset");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatAFieldAccess().getArrayDimensionGSSTmTcFormatArrayDimensionParserRuleCall_29_0());
-				}
-				lv_arrayDimension_32_0=ruleGSSTmTcFormatArrayDimension
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAFieldRule());
-					}
-					set(
-						$current,
-						"arrayDimension",
-						lv_arrayDimension_32_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatArrayDimension");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2336,9 +2340,9 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_12_0=RULE_ID
+				lv_name_12_0=RULE_STRING
 				{
-					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatAIFieldAccess().getNameIDTerminalRuleCall_12_0());
+					newLeafNode(lv_name_12_0, grammarAccess.getGSSTmTcFormatAIFieldAccess().getNameSTRINGTerminalRuleCall_12_0());
 				}
 				{
 					if ($current==null) {
@@ -2348,7 +2352,7 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_12_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -2367,9 +2371,9 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 			}
 			(
 				(
-					lv_description_16_0=RULE_ID
+					lv_description_16_0=RULE_STRING
 					{
-						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatAIFieldAccess().getDescriptionIDTerminalRuleCall_14_2_0());
+						newLeafNode(lv_description_16_0, grammarAccess.getGSSTmTcFormatAIFieldAccess().getDescriptionSTRINGTerminalRuleCall_14_2_0());
 					}
 					{
 						if ($current==null) {
@@ -2379,7 +2383,7 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 							$current,
 							"description",
 							lv_description_16_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
@@ -2484,9 +2488,28 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_27_0());
+					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getArrayRefGSSTmTcFormatArrayRefParserRuleCall_27_0());
 				}
-				lv_size_30_0=ruleGSSTmTcFormatSize
+				lv_arrayRef_30_0=ruleGSSTmTcFormatArrayRef
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAIFieldRule());
+					}
+					set(
+						$current,
+						"arrayRef",
+						lv_arrayRef_30_0,
+						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatArrayRef");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getSizeGSSTmTcFormatSizeParserRuleCall_28_0());
+				}
+				lv_size_31_0=ruleGSSTmTcFormatSize
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAIFieldRule());
@@ -2494,7 +2517,7 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 					set(
 						$current,
 						"size",
-						lv_size_30_0,
+						lv_size_31_0,
 						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatSize");
 					afterParserOrEnumRuleCall();
 				}
@@ -2503,9 +2526,9 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_28_0());
+					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getLocalOffsetGSSTmTcFormatLocalOffsetParserRuleCall_29_0());
 				}
-				lv_localOffset_31_0=ruleGSSTmTcFormatLocalOffset
+				lv_localOffset_32_0=ruleGSSTmTcFormatLocalOffset
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAIFieldRule());
@@ -2513,27 +2536,8 @@ ruleGSSTmTcFormatAIField returns [EObject current=null]
 					set(
 						$current,
 						"localOffset",
-						lv_localOffset_31_0,
+						lv_localOffset_32_0,
 						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatLocalOffset");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatAIFieldAccess().getArrayRefGSSTmTcFormatArrayRefParserRuleCall_29_0());
-				}
-				lv_arrayRef_32_0=ruleGSSTmTcFormatArrayRef
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatAIFieldRule());
-					}
-					set(
-						$current,
-						"arrayRef",
-						lv_arrayRef_32_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.GSSTmTcFormatArrayRef");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2777,20 +2781,19 @@ ruleGSSTmTcFormatFormula returns [EObject current=null]
 		}
 		(
 			(
+				lv_slope_4_0=RULE_STRING
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatFormulaAccess().getSlopeREALParserRuleCall_4_0());
+					newLeafNode(lv_slope_4_0, grammarAccess.getGSSTmTcFormatFormulaAccess().getSlopeSTRINGTerminalRuleCall_4_0());
 				}
-				lv_slope_4_0=ruleREAL
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatFormulaRule());
+						$current = createModelElement(grammarAccess.getGSSTmTcFormatFormulaRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"slope",
 						lv_slope_4_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.REAL");
-					afterParserOrEnumRuleCall();
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -2808,20 +2811,19 @@ ruleGSSTmTcFormatFormula returns [EObject current=null]
 		}
 		(
 			(
+				lv_intercept_8_0=RULE_STRING
 				{
-					newCompositeNode(grammarAccess.getGSSTmTcFormatFormulaAccess().getInterceptREALParserRuleCall_8_0());
+					newLeafNode(lv_intercept_8_0, grammarAccess.getGSSTmTcFormatFormulaAccess().getInterceptSTRINGTerminalRuleCall_8_0());
 				}
-				lv_intercept_8_0=ruleREAL
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSTmTcFormatFormulaRule());
+						$current = createModelElement(grammarAccess.getGSSTmTcFormatFormulaRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"intercept",
 						lv_intercept_8_0,
-						"es.uah.aut.srg.gss.lang.tm_tc_format.TM_TC_FORMAT.REAL");
-					afterParserOrEnumRuleCall();
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -3834,76 +3836,8 @@ ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
 	)
 ;
 
-// Entry rule entryRuleREAL
-entryRuleREAL returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getREALRule()); }
-	iv_ruleREAL=ruleREAL
-	{ $current=$iv_ruleREAL.current.getText(); }
-	EOF;
-
-// Rule REAL
-ruleREAL returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			kw='-'
-			{
-				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getREALAccess().getHyphenMinusKeyword_0());
-			}
-		)?
-		(
-			this_INT_1=RULE_INT
-			{
-				$current.merge(this_INT_1);
-			}
-			{
-				newLeafNode(this_INT_1, grammarAccess.getREALAccess().getINTTerminalRuleCall_1_0());
-			}
-			kw='.'
-			{
-				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getREALAccess().getFullStopKeyword_1_1());
-			}
-			this_INT_3=RULE_INT
-			{
-				$current.merge(this_INT_3);
-			}
-			{
-				newLeafNode(this_INT_3, grammarAccess.getREALAccess().getINTTerminalRuleCall_1_2());
-			}
-		)
-		(
-			kw='e'
-			{
-				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getREALAccess().getEKeyword_2_0());
-			}
-			(
-				kw='-'
-				{
-					$current.merge(kw);
-					newLeafNode(kw, grammarAccess.getREALAccess().getHyphenMinusKeyword_2_1());
-				}
-			)?
-			this_INT_6=RULE_INT
-			{
-				$current.merge(this_INT_6);
-			}
-			{
-				newLeafNode(this_INT_6, grammarAccess.getREALAccess().getINTTerminalRuleCall_2_2());
-			}
-		)?
-	)
-;
-
-// Rule GSSTmTcFormatTmTCFormatType
-ruleGSSTmTcFormatTmTCFormatType returns [Enumerator current=null]
+// Rule GSSTmTcFormatTmTcFormatType
+ruleGSSTmTcFormatTmTcFormatType returns [Enumerator current=null]
 @init {
 	enterRule();
 }
@@ -3914,16 +3848,16 @@ ruleGSSTmTcFormatTmTCFormatType returns [Enumerator current=null]
 		(
 			enumLiteral_0='TM'
 			{
-				$current = grammarAccess.getGSSTmTcFormatTmTCFormatTypeAccess().getTMEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getGSSTmTcFormatTmTCFormatTypeAccess().getTMEnumLiteralDeclaration_0());
+				$current = grammarAccess.getGSSTmTcFormatTmTcFormatTypeAccess().getTMEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getGSSTmTcFormatTmTcFormatTypeAccess().getTMEnumLiteralDeclaration_0());
 			}
 		)
 		    |
 		(
 			enumLiteral_1='TC'
 			{
-				$current = grammarAccess.getGSSTmTcFormatTmTCFormatTypeAccess().getTCEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getGSSTmTcFormatTmTCFormatTypeAccess().getTCEnumLiteralDeclaration_1());
+				$current = grammarAccess.getGSSTmTcFormatTmTcFormatTypeAccess().getTCEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getGSSTmTcFormatTmTcFormatTypeAccess().getTCEnumLiteralDeclaration_1());
 			}
 		)
 	)

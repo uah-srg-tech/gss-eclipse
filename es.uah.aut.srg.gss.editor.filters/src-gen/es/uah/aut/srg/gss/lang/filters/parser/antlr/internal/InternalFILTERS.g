@@ -158,9 +158,9 @@ ruleGSSModelFileImport returns [EObject current=null]
 		}
 		(
 			(
-				lv_importURI_2_0=RULE_ID
+				lv_importURI_2_0=RULE_STRING
 				{
-					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0());
+					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -170,7 +170,7 @@ ruleGSSModelFileImport returns [EObject current=null]
 						$current,
 						"importURI",
 						lv_importURI_2_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -372,19 +372,20 @@ ruleGSSFilterMaxtermFilter returns [EObject current=null]
 								}
 								(
 									(
-										lv_formatFile_14_0=RULE_ID
 										{
-											newLeafNode(lv_formatFile_14_0, grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileIDTerminalRuleCall_3_1_3_0());
+											/* */
 										}
 										{
 											if ($current==null) {
 												$current = createModelElement(grammarAccess.getGSSFilterMaxtermFilterRule());
 											}
-											setWithLastConsumed(
-												$current,
-												"formatFile",
-												lv_formatFile_14_0,
-												"org.eclipse.xtext.common.Terminals.ID");
+										}
+										{
+											newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatCrossReference_3_1_3_0());
+										}
+										ruleVersionedQualifiedName
+										{
+											afterParserOrEnumRuleCall();
 										}
 									)
 								)
@@ -669,19 +670,20 @@ ruleGSSFilterMintermFilter returns [EObject current=null]
 								}
 								(
 									(
-										lv_formatFile_14_0=RULE_ID
 										{
-											newLeafNode(lv_formatFile_14_0, grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileIDTerminalRuleCall_3_1_3_0());
+											/* */
 										}
 										{
 											if ($current==null) {
 												$current = createModelElement(grammarAccess.getGSSFilterMintermFilterRule());
 											}
-											setWithLastConsumed(
-												$current,
-												"formatFile",
-												lv_formatFile_14_0,
-												"org.eclipse.xtext.common.Terminals.ID");
+										}
+										{
+											newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSTmTcFormatTmTcFormatCrossReference_3_1_3_0());
+										}
+										ruleVersionedQualifiedName
+										{
+											afterParserOrEnumRuleCall();
 										}
 									)
 								)
@@ -933,31 +935,43 @@ ruleGSSFilterBoolVar returns [EObject current=null]
 		{
 			newLeafNode(otherlv_13, grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_13());
 		}
+		otherlv_14='FieldRef'
+		{
+			newLeafNode(otherlv_14, grammarAccess.getGSSFilterBoolVarAccess().getFieldRefKeyword_14());
+		}
+		otherlv_15=':='
+		{
+			newLeafNode(otherlv_15, grammarAccess.getGSSFilterBoolVarAccess().getColonEqualsSignKeyword_15());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefGSSFilterFieldRefParserRuleCall_14_0());
+					/* */
 				}
-				lv_FieldRef_14_0=ruleGSSFilterFieldRef
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarRule());
+						$current = createModelElement(grammarAccess.getGSSFilterBoolVarRule());
 					}
-					set(
-						$current,
-						"FieldRef",
-						lv_FieldRef_14_0,
-						"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterFieldRef");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefGSSTmTcFormatFieldCrossReference_16_0());
+				}
+				ruleVersionedQualifiedReferenceName
+				{
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
+		otherlv_17=';'
+		{
+			newLeafNode(otherlv_17, grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_17());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getOpGSSFilterFieldOpParserRuleCall_15_0());
+					newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getOpGSSFilterFieldOpParserRuleCall_18_0());
 				}
-				lv_Op_15_0=ruleGSSFilterFieldOp
+				lv_Op_18_0=ruleGSSFilterFieldOp
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarRule());
@@ -965,7 +979,7 @@ ruleGSSFilterBoolVar returns [EObject current=null]
 					set(
 						$current,
 						"Op",
-						lv_Op_15_0,
+						lv_Op_18_0,
 						"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterFieldOp");
 					afterParserOrEnumRuleCall();
 				}
@@ -975,9 +989,9 @@ ruleGSSFilterBoolVar returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getConstantGSSFilterConstantParserRuleCall_16_0_0());
+						newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getConstantGSSFilterConstantParserRuleCall_19_0_0());
 					}
-					lv_Constant_16_0=ruleGSSFilterConstant
+					lv_Constant_19_0=ruleGSSFilterConstant
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarRule());
@@ -985,7 +999,7 @@ ruleGSSFilterBoolVar returns [EObject current=null]
 						set(
 							$current,
 							"Constant",
-							lv_Constant_16_0,
+							lv_Constant_19_0,
 							"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterConstant");
 						afterParserOrEnumRuleCall();
 					}
@@ -995,9 +1009,9 @@ ruleGSSFilterBoolVar returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getSelectGSSFilterSelectParserRuleCall_16_1_0());
+						newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getSelectGSSFilterSelectParserRuleCall_19_1_0());
 					}
-					lv_Select_17_0=ruleGSSFilterSelect
+					lv_Select_20_0=ruleGSSFilterSelect
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarRule());
@@ -1005,7 +1019,7 @@ ruleGSSFilterBoolVar returns [EObject current=null]
 						set(
 							$current,
 							"Select",
-							lv_Select_17_0,
+							lv_Select_20_0,
 							"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterSelect");
 						afterParserOrEnumRuleCall();
 					}
@@ -1015,9 +1029,9 @@ ruleGSSFilterBoolVar returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineGSSFilterSelectLineParserRuleCall_16_2_0());
+						newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineGSSFilterSelectLineParserRuleCall_19_2_0());
 					}
-					lv_SelectLine_18_0=ruleGSSFilterSelectLine
+					lv_SelectLine_21_0=ruleGSSFilterSelectLine
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarRule());
@@ -1025,20 +1039,20 @@ ruleGSSFilterBoolVar returns [EObject current=null]
 						set(
 							$current,
 							"SelectLine",
-							lv_SelectLine_18_0,
+							lv_SelectLine_21_0,
 							"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterSelectLine");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)
-		otherlv_19='}'
+		otherlv_22='}'
 		{
-			newLeafNode(otherlv_19, grammarAccess.getGSSFilterBoolVarAccess().getRightCurlyBracketKeyword_17());
+			newLeafNode(otherlv_22, grammarAccess.getGSSFilterBoolVarAccess().getRightCurlyBracketKeyword_20());
 		}
-		otherlv_20=';'
+		otherlv_23=';'
 		{
-			newLeafNode(otherlv_20, grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_18());
+			newLeafNode(otherlv_23, grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_21());
 		}
 	)
 ;
@@ -1159,31 +1173,43 @@ ruleGSSFilterBoolVarFromArrayItem returns [EObject current=null]
 		{
 			newLeafNode(otherlv_13, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_13());
 		}
+		otherlv_14='AIFieldRef'
+		{
+			newLeafNode(otherlv_14, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefKeyword_14());
+		}
+		otherlv_15=':='
+		{
+			newLeafNode(otherlv_15, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getColonEqualsSignKeyword_15());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefGSSFilterAIFieldRefParserRuleCall_14_0());
+					/* */
 				}
-				lv_AIFieldRef_14_0=ruleGSSFilterAIFieldRef
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromArrayItemRule());
+						$current = createModelElement(grammarAccess.getGSSFilterBoolVarFromArrayItemRule());
 					}
-					set(
-						$current,
-						"AIFieldRef",
-						lv_AIFieldRef_14_0,
-						"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterAIFieldRef");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefGSSTmTcFormatAIFieldCrossReference_16_0());
+				}
+				ruleVersionedQualifiedReferenceName
+				{
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
+		otherlv_17=';'
+		{
+			newLeafNode(otherlv_17, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_17());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_15_0());
+					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_18_0());
 				}
-				lv_Op_15_0=ruleGSSFilterFieldOp
+				lv_Op_18_0=ruleGSSFilterFieldOp
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromArrayItemRule());
@@ -1191,7 +1217,7 @@ ruleGSSFilterBoolVarFromArrayItem returns [EObject current=null]
 					set(
 						$current,
 						"Op",
-						lv_Op_15_0,
+						lv_Op_18_0,
 						"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterFieldOp");
 					afterParserOrEnumRuleCall();
 				}
@@ -1201,9 +1227,9 @@ ruleGSSFilterBoolVarFromArrayItem returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_16_0_0());
+						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_19_0_0());
 					}
-					lv_Constant_16_0=ruleGSSFilterConstant
+					lv_Constant_19_0=ruleGSSFilterConstant
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromArrayItemRule());
@@ -1211,7 +1237,7 @@ ruleGSSFilterBoolVarFromArrayItem returns [EObject current=null]
 						set(
 							$current,
 							"Constant",
-							lv_Constant_16_0,
+							lv_Constant_19_0,
 							"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterConstant");
 						afterParserOrEnumRuleCall();
 					}
@@ -1221,9 +1247,9 @@ ruleGSSFilterBoolVarFromArrayItem returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_16_1_0());
+						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_19_1_0());
 					}
-					lv_Select_17_0=ruleGSSFilterSelect
+					lv_Select_20_0=ruleGSSFilterSelect
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromArrayItemRule());
@@ -1231,7 +1257,7 @@ ruleGSSFilterBoolVarFromArrayItem returns [EObject current=null]
 						set(
 							$current,
 							"Select",
-							lv_Select_17_0,
+							lv_Select_20_0,
 							"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterSelect");
 						afterParserOrEnumRuleCall();
 					}
@@ -1241,9 +1267,9 @@ ruleGSSFilterBoolVarFromArrayItem returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_16_2_0());
+						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_19_2_0());
 					}
-					lv_SelectLine_18_0=ruleGSSFilterSelectLine
+					lv_SelectLine_21_0=ruleGSSFilterSelectLine
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromArrayItemRule());
@@ -1251,20 +1277,20 @@ ruleGSSFilterBoolVarFromArrayItem returns [EObject current=null]
 						set(
 							$current,
 							"SelectLine",
-							lv_SelectLine_18_0,
+							lv_SelectLine_21_0,
 							"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterSelectLine");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)
-		otherlv_19='}'
+		otherlv_22='}'
 		{
-			newLeafNode(otherlv_19, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getRightCurlyBracketKeyword_17());
+			newLeafNode(otherlv_22, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getRightCurlyBracketKeyword_20());
 		}
-		otherlv_20=';'
+		otherlv_23=';'
 		{
-			newLeafNode(otherlv_20, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_18());
+			newLeafNode(otherlv_23, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_21());
 		}
 	)
 ;
@@ -1416,31 +1442,43 @@ ruleGSSFilterBoolVarFromGroupedArrayItem returns [EObject current=null]
 		{
 			newLeafNode(otherlv_17, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_17());
 		}
+		otherlv_18='AIFieldRefs'
+		{
+			newLeafNode(otherlv_18, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsKeyword_18());
+		}
+		otherlv_19=':='
+		{
+			newLeafNode(otherlv_19, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getColonEqualsSignKeyword_19());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsGSSFilterAIFieldRefsParserRuleCall_18_0());
+					/* */
 				}
-				lv_AIFieldRefs_18_0=ruleGSSFilterAIFieldRefs
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemRule());
+						$current = createModelElement(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemRule());
 					}
-					set(
-						$current,
-						"AIFieldRefs",
-						lv_AIFieldRefs_18_0,
-						"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterAIFieldRefs");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsGSSTmTcFormatAFieldCrossReference_20_0());
+				}
+				ruleVersionedQualifiedReferenceName
+				{
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
+		otherlv_21=';'
+		{
+			newLeafNode(otherlv_21, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_21());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_19_0());
+					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_22_0());
 				}
-				lv_Op_19_0=ruleGSSFilterFieldOp
+				lv_Op_22_0=ruleGSSFilterFieldOp
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemRule());
@@ -1448,7 +1486,7 @@ ruleGSSFilterBoolVarFromGroupedArrayItem returns [EObject current=null]
 					set(
 						$current,
 						"Op",
-						lv_Op_19_0,
+						lv_Op_22_0,
 						"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterFieldOp");
 					afterParserOrEnumRuleCall();
 				}
@@ -1458,9 +1496,9 @@ ruleGSSFilterBoolVarFromGroupedArrayItem returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_20_0_0());
+						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_23_0_0());
 					}
-					lv_Constant_20_0=ruleGSSFilterConstant
+					lv_Constant_23_0=ruleGSSFilterConstant
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemRule());
@@ -1468,7 +1506,7 @@ ruleGSSFilterBoolVarFromGroupedArrayItem returns [EObject current=null]
 						set(
 							$current,
 							"Constant",
-							lv_Constant_20_0,
+							lv_Constant_23_0,
 							"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterConstant");
 						afterParserOrEnumRuleCall();
 					}
@@ -1478,9 +1516,9 @@ ruleGSSFilterBoolVarFromGroupedArrayItem returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_20_1_0());
+						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_23_1_0());
 					}
-					lv_Select_21_0=ruleGSSFilterSelect
+					lv_Select_24_0=ruleGSSFilterSelect
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemRule());
@@ -1488,7 +1526,7 @@ ruleGSSFilterBoolVarFromGroupedArrayItem returns [EObject current=null]
 						set(
 							$current,
 							"Select",
-							lv_Select_21_0,
+							lv_Select_24_0,
 							"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterSelect");
 						afterParserOrEnumRuleCall();
 					}
@@ -1498,9 +1536,9 @@ ruleGSSFilterBoolVarFromGroupedArrayItem returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_20_2_0());
+						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_23_2_0());
 					}
-					lv_SelectLine_22_0=ruleGSSFilterSelectLine
+					lv_SelectLine_25_0=ruleGSSFilterSelectLine
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemRule());
@@ -1508,20 +1546,20 @@ ruleGSSFilterBoolVarFromGroupedArrayItem returns [EObject current=null]
 						set(
 							$current,
 							"SelectLine",
-							lv_SelectLine_22_0,
+							lv_SelectLine_25_0,
 							"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterSelectLine");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)
-		otherlv_23='}'
+		otherlv_26='}'
 		{
-			newLeafNode(otherlv_23, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getRightCurlyBracketKeyword_21());
+			newLeafNode(otherlv_26, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getRightCurlyBracketKeyword_24());
 		}
-		otherlv_24=';'
+		otherlv_27=';'
 		{
-			newLeafNode(otherlv_24, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_22());
+			newLeafNode(otherlv_27, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_25());
 		}
 	)
 ;
@@ -1611,31 +1649,43 @@ ruleGSSFilterBoolVarFDIC returns [EObject current=null]
 		{
 			newLeafNode(otherlv_9, grammarAccess.getGSSFilterBoolVarFDICAccess().getSemicolonKeyword_9());
 		}
+		otherlv_10='FieldRef'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefKeyword_10());
+		}
+		otherlv_11=':='
+		{
+			newLeafNode(otherlv_11, grammarAccess.getGSSFilterBoolVarFDICAccess().getColonEqualsSignKeyword_11());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefGSSFilterFieldRefParserRuleCall_10_0());
+					/* */
 				}
-				lv_FieldRef_10_0=ruleGSSFilterFieldRef
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFDICRule());
+						$current = createModelElement(grammarAccess.getGSSFilterBoolVarFDICRule());
 					}
-					set(
-						$current,
-						"FieldRef",
-						lv_FieldRef_10_0,
-						"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterFieldRef");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSFilterBoolVarFDICAccess().getFieldRefGSSTmTcFormatFDICFieldCrossReference_12_0());
+				}
+				ruleVersionedQualifiedReferenceName
+				{
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
+		otherlv_13=';'
+		{
+			newLeafNode(otherlv_13, grammarAccess.getGSSFilterBoolVarFDICAccess().getSemicolonKeyword_13());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpGSSFilterFieldOpParserRuleCall_11_0());
+					newCompositeNode(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpGSSFilterFieldOpParserRuleCall_14_0());
 				}
-				lv_Op_11_0=ruleGSSFilterFieldOp
+				lv_Op_14_0=ruleGSSFilterFieldOp
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFDICRule());
@@ -1643,84 +1693,19 @@ ruleGSSFilterBoolVarFDIC returns [EObject current=null]
 					set(
 						$current,
 						"Op",
-						lv_Op_11_0,
+						lv_Op_14_0,
 						"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterFieldOp");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_12='}'
+		otherlv_15='}'
 		{
-			newLeafNode(otherlv_12, grammarAccess.getGSSFilterBoolVarFDICAccess().getRightCurlyBracketKeyword_12());
+			newLeafNode(otherlv_15, grammarAccess.getGSSFilterBoolVarFDICAccess().getRightCurlyBracketKeyword_15());
 		}
-		otherlv_13=';'
+		otherlv_16=';'
 		{
-			newLeafNode(otherlv_13, grammarAccess.getGSSFilterBoolVarFDICAccess().getSemicolonKeyword_13());
-		}
-	)
-;
-
-// Entry rule entryRuleGSSFilterFieldRef
-entryRuleGSSFilterFieldRef returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSFilterFieldRefRule()); }
-	iv_ruleGSSFilterFieldRef=ruleGSSFilterFieldRef
-	{ $current=$iv_ruleGSSFilterFieldRef.current; }
-	EOF;
-
-// Rule GSSFilterFieldRef
-ruleGSSFilterFieldRef returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='GSSFilterFieldRef'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSFilterFieldRefAccess().getGSSFilterFieldRefKeyword_0());
-		}
-		otherlv_1='{'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSFilterFieldRefAccess().getLeftCurlyBracketKeyword_1());
-		}
-		otherlv_2='name'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSFilterFieldRefAccess().getNameKeyword_2());
-		}
-		otherlv_3=':='
-		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSFilterFieldRefAccess().getColonEqualsSignKeyword_3());
-		}
-		(
-			(
-				lv_name_4_0=RULE_ID
-				{
-					newLeafNode(lv_name_4_0, grammarAccess.getGSSFilterFieldRefAccess().getNameIDTerminalRuleCall_4_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGSSFilterFieldRefRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_4_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-		otherlv_5=';'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSFilterFieldRefAccess().getSemicolonKeyword_5());
-		}
-		otherlv_6='}'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSFilterFieldRefAccess().getRightCurlyBracketKeyword_6());
-		}
-		otherlv_7=';'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSFilterFieldRefAccess().getSemicolonKeyword_7());
+			newLeafNode(otherlv_16, grammarAccess.getGSSFilterBoolVarFDICAccess().getSemicolonKeyword_16());
 		}
 	)
 ;
@@ -2277,137 +2262,6 @@ ruleGSSFilterSelectLine returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleGSSFilterAIFieldRef
-entryRuleGSSFilterAIFieldRef returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSFilterAIFieldRefRule()); }
-	iv_ruleGSSFilterAIFieldRef=ruleGSSFilterAIFieldRef
-	{ $current=$iv_ruleGSSFilterAIFieldRef.current; }
-	EOF;
-
-// Rule GSSFilterAIFieldRef
-ruleGSSFilterAIFieldRef returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='GSSFilterAIFieldRef'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSFilterAIFieldRefAccess().getGSSFilterAIFieldRefKeyword_0());
-		}
-		otherlv_1='{'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSFilterAIFieldRefAccess().getLeftCurlyBracketKeyword_1());
-		}
-		otherlv_2='index'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSFilterAIFieldRefAccess().getIndexKeyword_2());
-		}
-		otherlv_3=':='
-		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSFilterAIFieldRefAccess().getColonEqualsSignKeyword_3());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSFilterAIFieldRefAccess().getIndexINTEGERParserRuleCall_4_0());
-				}
-				lv_index_4_0=ruleINTEGER
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSFilterAIFieldRefRule());
-					}
-					set(
-						$current,
-						"index",
-						lv_index_4_0,
-						"es.uah.aut.srg.gss.lang.filters.FILTERS.INTEGER");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_5=';'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSFilterAIFieldRefAccess().getSemicolonKeyword_5());
-		}
-		otherlv_6='}'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSFilterAIFieldRefAccess().getRightCurlyBracketKeyword_6());
-		}
-		otherlv_7=';'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSFilterAIFieldRefAccess().getSemicolonKeyword_7());
-		}
-	)
-;
-
-// Entry rule entryRuleGSSFilterAIFieldRefs
-entryRuleGSSFilterAIFieldRefs returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSFilterAIFieldRefsRule()); }
-	iv_ruleGSSFilterAIFieldRefs=ruleGSSFilterAIFieldRefs
-	{ $current=$iv_ruleGSSFilterAIFieldRefs.current; }
-	EOF;
-
-// Rule GSSFilterAIFieldRefs
-ruleGSSFilterAIFieldRefs returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='GSSFilterAIFieldRefs'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSFilterAIFieldRefsAccess().getGSSFilterAIFieldRefsKeyword_0());
-		}
-		otherlv_1='{'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSFilterAIFieldRefsAccess().getLeftCurlyBracketKeyword_1());
-		}
-		otherlv_2='name'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSFilterAIFieldRefsAccess().getNameKeyword_2());
-		}
-		otherlv_3=':='
-		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSFilterAIFieldRefsAccess().getColonEqualsSignKeyword_3());
-		}
-		(
-			(
-				lv_name_4_0=RULE_ID
-				{
-					newLeafNode(lv_name_4_0, grammarAccess.getGSSFilterAIFieldRefsAccess().getNameIDTerminalRuleCall_4_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGSSFilterAIFieldRefsRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_4_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-		otherlv_5=';'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSFilterAIFieldRefsAccess().getSemicolonKeyword_5());
-		}
-		otherlv_6='}'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSFilterAIFieldRefsAccess().getRightCurlyBracketKeyword_6());
-		}
-		otherlv_7=';'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSFilterAIFieldRefsAccess().getSemicolonKeyword_7());
-		}
-	)
-;
-
 // Entry rule entryRuleGSSFilterMaxterm
 entryRuleGSSFilterMaxterm returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getGSSFilterMaxtermRule()); }
@@ -2544,12 +2398,16 @@ ruleGSSFilterMinterm returns [EObject current=null]
 				}
 			)
 		)
+		otherlv_5=';'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_5());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_6_0());
 				}
-				lv_BoolVarRef_5_0=ruleGSSFilterBoolVarRef
+				lv_BoolVarRef_6_0=ruleGSSFilterBoolVarRef
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSFilterMintermRule());
@@ -2557,19 +2415,19 @@ ruleGSSFilterMinterm returns [EObject current=null]
 					add(
 						$current,
 						"BoolVarRef",
-						lv_BoolVarRef_5_0,
+						lv_BoolVarRef_6_0,
 						"es.uah.aut.srg.gss.lang.filters.FILTERS.GSSFilterBoolVarRef");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_6='}'
+		otherlv_7='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSFilterMintermAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_7, grammarAccess.getGSSFilterMintermAccess().getRightCurlyBracketKeyword_7());
 		}
-		otherlv_7=';'
+		otherlv_8=';'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_7());
+			newLeafNode(otherlv_8, grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_8());
 		}
 	)
 ;
@@ -2842,6 +2700,63 @@ ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrData
 			$current.merge(kw);
 			newLeafNode(kw, grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3());
 		}
+	)
+;
+
+// Entry rule entryRuleVersionedQualifiedReferenceName
+entryRuleVersionedQualifiedReferenceName returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameRule()); }
+	iv_ruleVersionedQualifiedReferenceName=ruleVersionedQualifiedReferenceName
+	{ $current=$iv_ruleVersionedQualifiedReferenceName.current.getText(); }
+	EOF;
+
+// Rule VersionedQualifiedReferenceName
+ruleVersionedQualifiedReferenceName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameAccess().getVersionedQualifiedNameParserRuleCall_0_0());
+			}
+			this_VersionedQualifiedName_0=ruleVersionedQualifiedName
+			{
+				$current.merge(this_VersionedQualifiedName_0);
+			}
+			{
+				afterParserOrEnumRuleCall();
+			}
+			kw='::'
+			{
+				$current.merge(kw);
+				newLeafNode(kw, grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_0_1());
+			}
+		)?
+		this_ID_2=RULE_ID
+		{
+			$current.merge(this_ID_2);
+		}
+		{
+			newLeafNode(this_ID_2, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_1());
+		}
+		(
+			kw='::'
+			{
+				$current.merge(kw);
+				newLeafNode(kw, grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_2_0());
+			}
+			this_ID_4=RULE_ID
+			{
+				$current.merge(this_ID_4);
+			}
+			{
+				newLeafNode(this_ID_4, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_2_1());
+			}
+		)*
 	)
 ;
 

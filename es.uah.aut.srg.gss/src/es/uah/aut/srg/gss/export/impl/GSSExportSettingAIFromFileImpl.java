@@ -18,7 +18,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +28,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromFileImpl#getFile <em>File</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromFileImpl#getToFieldRef <em>To Field Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromFileImpl#getToArrayIndex <em>To Array Index</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromFileImpl#getOffset <em>Offset</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromFileImpl#getSize <em>Size</em>}</li>
@@ -38,7 +36,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container implements GSSExportSettingAIFromFile {
+public class GSSExportSettingAIFromFileImpl extends GSSExportSettingImpl implements GSSExportSettingAIFromFile {
 	/**
 	 * The default value of the '{@link #getFile() <em>File</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -58,26 +56,6 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected String file = FILE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getToFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TO_FIELD_REF_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getToFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected String toFieldRef = TO_FIELD_REF_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getToArrayIndex() <em>To Array Index</em>}' attribute.
@@ -204,27 +182,6 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getToFieldRef() {
-		return toFieldRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setToFieldRef(String newToFieldRef) {
-		String oldToFieldRef = toFieldRef;
-		toFieldRef = newToFieldRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF, oldToFieldRef, toFieldRef));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getToArrayIndex() {
 		return toArrayIndex;
 	}
@@ -314,8 +271,6 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__FILE:
 				return getFile();
-			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF:
-				return getToFieldRef();
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_ARRAY_INDEX:
 				return getToArrayIndex();
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__OFFSET:
@@ -338,9 +293,6 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__FILE:
 				setFile((String)newValue);
-				return;
-			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF:
-				setToFieldRef((String)newValue);
 				return;
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_ARRAY_INDEX:
 				setToArrayIndex((String)newValue);
@@ -369,9 +321,6 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__FILE:
 				setFile(FILE_EDEFAULT);
 				return;
-			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF:
-				setToFieldRef(TO_FIELD_REF_EDEFAULT);
-				return;
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_ARRAY_INDEX:
 				setToArrayIndex(TO_ARRAY_INDEX_EDEFAULT);
 				return;
@@ -398,8 +347,6 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__FILE:
 				return FILE_EDEFAULT == null ? file != null : !FILE_EDEFAULT.equals(file);
-			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF:
-				return TO_FIELD_REF_EDEFAULT == null ? toFieldRef != null : !TO_FIELD_REF_EDEFAULT.equals(toFieldRef);
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__TO_ARRAY_INDEX:
 				return TO_ARRAY_INDEX_EDEFAULT == null ? toArrayIndex != null : !TO_ARRAY_INDEX_EDEFAULT.equals(toArrayIndex);
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE__OFFSET:
@@ -424,8 +371,6 @@ public class GSSExportSettingAIFromFileImpl extends MinimalEObjectImpl.Container
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (file: ");
 		result.append(file);
-		result.append(", toFieldRef: ");
-		result.append(toFieldRef);
 		result.append(", toArrayIndex: ");
 		result.append(toArrayIndex);
 		result.append(", offset: ");

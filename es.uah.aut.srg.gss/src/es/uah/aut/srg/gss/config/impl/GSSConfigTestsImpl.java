@@ -14,6 +14,8 @@ import es.uah.aut.srg.gss.config.GSSConfigTestCase;
 import es.uah.aut.srg.gss.config.GSSConfigTests;
 import es.uah.aut.srg.gss.config.configPackage;
 
+import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPackets;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -46,24 +48,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements GSSConfigTests {
 	/**
-	 * The default value of the '{@link #getProtocolPacketsFile() <em>Protocol Packets File</em>}' attribute.
+	 * The cached value of the '{@link #getProtocolPacketsFile() <em>Protocol Packets File</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProtocolPacketsFile()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PROTOCOL_PACKETS_FILE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getProtocolPacketsFile() <em>Protocol Packets File</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProtocolPacketsFile()
-	 * @generated
-	 * @ordered
-	 */
-	protected String protocolPacketsFile = PROTOCOL_PACKETS_FILE_EDEFAULT;
+	protected GSSProtocolPacketsProtocolPackets protocolPacketsFile;
 
 	/**
 	 * The cached value of the '{@link #getTestCase() <em>Test Case</em>}' containment reference list.
@@ -99,7 +91,15 @@ public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getProtocolPacketsFile() {
+	public GSSProtocolPacketsProtocolPackets getProtocolPacketsFile() {
+		if (protocolPacketsFile != null && protocolPacketsFile.eIsProxy()) {
+			InternalEObject oldProtocolPacketsFile = (InternalEObject)protocolPacketsFile;
+			protocolPacketsFile = (GSSProtocolPacketsProtocolPackets)eResolveProxy(oldProtocolPacketsFile);
+			if (protocolPacketsFile != oldProtocolPacketsFile) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_TESTS__PROTOCOL_PACKETS_FILE, oldProtocolPacketsFile, protocolPacketsFile));
+			}
+		}
 		return protocolPacketsFile;
 	}
 
@@ -108,8 +108,17 @@ public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProtocolPacketsFile(String newProtocolPacketsFile) {
-		String oldProtocolPacketsFile = protocolPacketsFile;
+	public GSSProtocolPacketsProtocolPackets basicGetProtocolPacketsFile() {
+		return protocolPacketsFile;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProtocolPacketsFile(GSSProtocolPacketsProtocolPackets newProtocolPacketsFile) {
+		GSSProtocolPacketsProtocolPackets oldProtocolPacketsFile = protocolPacketsFile;
 		protocolPacketsFile = newProtocolPacketsFile;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_TESTS__PROTOCOL_PACKETS_FILE, oldProtocolPacketsFile, protocolPacketsFile));
@@ -150,7 +159,8 @@ public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements 
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_TESTS__PROTOCOL_PACKETS_FILE:
-				return getProtocolPacketsFile();
+				if (resolve) return getProtocolPacketsFile();
+				return basicGetProtocolPacketsFile();
 			case configPackage.GSS_CONFIG_TESTS__TEST_CASE:
 				return getTestCase();
 		}
@@ -167,7 +177,7 @@ public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements 
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_TESTS__PROTOCOL_PACKETS_FILE:
-				setProtocolPacketsFile((String)newValue);
+				setProtocolPacketsFile((GSSProtocolPacketsProtocolPackets)newValue);
 				return;
 			case configPackage.GSS_CONFIG_TESTS__TEST_CASE:
 				getTestCase().clear();
@@ -186,7 +196,7 @@ public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements 
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_TESTS__PROTOCOL_PACKETS_FILE:
-				setProtocolPacketsFile(PROTOCOL_PACKETS_FILE_EDEFAULT);
+				setProtocolPacketsFile((GSSProtocolPacketsProtocolPackets)null);
 				return;
 			case configPackage.GSS_CONFIG_TESTS__TEST_CASE:
 				getTestCase().clear();
@@ -204,27 +214,11 @@ public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements 
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_TESTS__PROTOCOL_PACKETS_FILE:
-				return PROTOCOL_PACKETS_FILE_EDEFAULT == null ? protocolPacketsFile != null : !PROTOCOL_PACKETS_FILE_EDEFAULT.equals(protocolPacketsFile);
+				return protocolPacketsFile != null;
 			case configPackage.GSS_CONFIG_TESTS__TEST_CASE:
 				return testCase != null && !testCase.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (ProtocolPacketsFile: ");
-		result.append(protocolPacketsFile);
-		result.append(')');
-		return result.toString();
 	}
 
 } //GSSConfigTestsImpl

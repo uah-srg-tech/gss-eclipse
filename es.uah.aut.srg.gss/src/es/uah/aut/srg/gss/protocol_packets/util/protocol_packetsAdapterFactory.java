@@ -1,17 +1,10 @@
 /**
- * Copyright (c) 2018 UAH Space Research Group.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v2.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v20.html
- * 
- * Contributors:
- *     SRG Team - Initial API and implementation
  */
 package es.uah.aut.srg.gss.protocol_packets.util;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
 
+import es.uah.aut.srg.gss.common.GSSModelObject;
 import es.uah.aut.srg.gss.protocol_packets.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -86,16 +79,12 @@ public class protocol_packetsAdapterFactory extends AdapterFactoryImpl {
 				return createGSSProtocolPacketsProtocolPacketAdapter();
 			}
 			@Override
-			public Adapter caseGSSProtocolPacketsExport(GSSProtocolPacketsExport object) {
-				return createGSSProtocolPacketsExportAdapter();
-			}
-			@Override
-			public Adapter caseGSSProtocolPacketsFormat(GSSProtocolPacketsFormat object) {
-				return createGSSProtocolPacketsFormatAdapter();
-			}
-			@Override
 			public Adapter caseGSSModelElement(GSSModelElement object) {
 				return createGSSModelElementAdapter();
+			}
+			@Override
+			public Adapter caseGSSModelObject(GSSModelObject object) {
+				return createGSSModelObjectAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -146,34 +135,6 @@ public class protocol_packetsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsExport <em>GSS Protocol Packets Export</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsExport
-	 * @generated
-	 */
-	public Adapter createGSSProtocolPacketsExportAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsFormat <em>GSS Protocol Packets Format</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsFormat
-	 * @generated
-	 */
-	public Adapter createGSSProtocolPacketsFormatAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.common.GSSModelElement <em>GSS Model Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -184,6 +145,20 @@ public class protocol_packetsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSModelElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.common.GSSModelObject <em>GSS Model Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.common.GSSModelObject
+	 * @generated
+	 */
+	public Adapter createGSSModelObjectAdapter() {
 		return null;
 	}
 

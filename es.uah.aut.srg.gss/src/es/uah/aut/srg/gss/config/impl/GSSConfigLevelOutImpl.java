@@ -10,15 +10,15 @@
  */
 package es.uah.aut.srg.gss.config.impl;
 
-import es.uah.aut.srg.gss.config.GSSConfigImportFromPrevLevel;
-import es.uah.aut.srg.gss.config.GSSConfigInputFilter;
 import es.uah.aut.srg.gss.config.GSSConfigLevelOut;
-import es.uah.aut.srg.gss.config.GSSConfigTMFormat;
 import es.uah.aut.srg.gss.config.configPackage;
 
+import es.uah.aut.srg.gss.filters.GSSFilterFilter;
+
+import es.uah.aut.srg.gss.imports.GSSImportImport;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -64,6 +64,15 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	protected String id = ID_EDEFAULT;
 
 	/**
+	 * This is true if the Id attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean idESet;
+
+	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,34 +93,34 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTMformat() <em>TMformat</em>}' containment reference.
+	 * The cached value of the '{@link #getTMformat() <em>TMformat</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTMformat()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSConfigTMFormat tMformat;
+	protected GSSTmTcFormatTmTcFormat tMformat;
 
 	/**
-	 * The cached value of the '{@link #getInputFilter() <em>Input Filter</em>}' containment reference.
+	 * The cached value of the '{@link #getInputFilter() <em>Input Filter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInputFilter()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSConfigInputFilter inputFilter;
+	protected GSSFilterFilter inputFilter;
 
 	/**
-	 * The cached value of the '{@link #getImport_from_prev_Level() <em>Import from prev Level</em>}' containment reference.
+	 * The cached value of the '{@link #getImport_from_prev_Level() <em>Import from prev Level</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getImport_from_prev_Level()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSConfigImportFromPrevLevel import_from_prev_Level;
+	protected GSSImportImport import_from_prev_Level;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -149,8 +158,33 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	public void setId(String newId) {
 		String oldId = id;
 		id = newId;
+		boolean oldIdESet = idESet;
+		idESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_OUT__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_OUT__ID, oldId, id, !oldIdESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetId() {
+		String oldId = id;
+		boolean oldIdESet = idESet;
+		id = ID_EDEFAULT;
+		idESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_LEVEL_OUT__ID, oldId, ID_EDEFAULT, oldIdESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetId() {
+		return idESet;
 	}
 
 	/**
@@ -179,7 +213,15 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSConfigTMFormat getTMformat() {
+	public GSSTmTcFormatTmTcFormat getTMformat() {
+		if (tMformat != null && tMformat.eIsProxy()) {
+			InternalEObject oldTMformat = (InternalEObject)tMformat;
+			tMformat = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldTMformat);
+			if (tMformat != oldTMformat) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT, oldTMformat, tMformat));
+			}
+		}
 		return tMformat;
 	}
 
@@ -188,14 +230,20 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTMformat(GSSConfigTMFormat newTMformat, NotificationChain msgs) {
-		GSSConfigTMFormat oldTMformat = tMformat;
+	public GSSTmTcFormatTmTcFormat basicGetTMformat() {
+		return tMformat;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTMformat(GSSTmTcFormatTmTcFormat newTMformat) {
+		GSSTmTcFormatTmTcFormat oldTMformat = tMformat;
 		tMformat = newTMformat;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT, oldTMformat, newTMformat);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT, oldTMformat, tMformat));
 	}
 
 	/**
@@ -203,26 +251,15 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTMformat(GSSConfigTMFormat newTMformat) {
-		if (newTMformat != tMformat) {
-			NotificationChain msgs = null;
-			if (tMformat != null)
-				msgs = ((InternalEObject)tMformat).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT, null, msgs);
-			if (newTMformat != null)
-				msgs = ((InternalEObject)newTMformat).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT, null, msgs);
-			msgs = basicSetTMformat(newTMformat, msgs);
-			if (msgs != null) msgs.dispatch();
+	public GSSFilterFilter getInputFilter() {
+		if (inputFilter != null && inputFilter.eIsProxy()) {
+			InternalEObject oldInputFilter = (InternalEObject)inputFilter;
+			inputFilter = (GSSFilterFilter)eResolveProxy(oldInputFilter);
+			if (inputFilter != oldInputFilter) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_LEVEL_OUT__INPUT_FILTER, oldInputFilter, inputFilter));
+			}
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT, newTMformat, newTMformat));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigInputFilter getInputFilter() {
 		return inputFilter;
 	}
 
@@ -231,14 +268,20 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetInputFilter(GSSConfigInputFilter newInputFilter, NotificationChain msgs) {
-		GSSConfigInputFilter oldInputFilter = inputFilter;
+	public GSSFilterFilter basicGetInputFilter() {
+		return inputFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInputFilter(GSSFilterFilter newInputFilter) {
+		GSSFilterFilter oldInputFilter = inputFilter;
 		inputFilter = newInputFilter;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_OUT__INPUT_FILTER, oldInputFilter, newInputFilter);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_OUT__INPUT_FILTER, oldInputFilter, inputFilter));
 	}
 
 	/**
@@ -246,26 +289,15 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputFilter(GSSConfigInputFilter newInputFilter) {
-		if (newInputFilter != inputFilter) {
-			NotificationChain msgs = null;
-			if (inputFilter != null)
-				msgs = ((InternalEObject)inputFilter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_LEVEL_OUT__INPUT_FILTER, null, msgs);
-			if (newInputFilter != null)
-				msgs = ((InternalEObject)newInputFilter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_LEVEL_OUT__INPUT_FILTER, null, msgs);
-			msgs = basicSetInputFilter(newInputFilter, msgs);
-			if (msgs != null) msgs.dispatch();
+	public GSSImportImport getImport_from_prev_Level() {
+		if (import_from_prev_Level != null && import_from_prev_Level.eIsProxy()) {
+			InternalEObject oldImport_from_prev_Level = (InternalEObject)import_from_prev_Level;
+			import_from_prev_Level = (GSSImportImport)eResolveProxy(oldImport_from_prev_Level);
+			if (import_from_prev_Level != oldImport_from_prev_Level) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_LEVEL_OUT__IMPORT_FROM_PREV_LEVEL, oldImport_from_prev_Level, import_from_prev_Level));
+			}
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_OUT__INPUT_FILTER, newInputFilter, newInputFilter));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigImportFromPrevLevel getImport_from_prev_Level() {
 		return import_from_prev_Level;
 	}
 
@@ -274,51 +306,20 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetImport_from_prev_Level(GSSConfigImportFromPrevLevel newImport_from_prev_Level, NotificationChain msgs) {
-		GSSConfigImportFromPrevLevel oldImport_from_prev_Level = import_from_prev_Level;
+	public GSSImportImport basicGetImport_from_prev_Level() {
+		return import_from_prev_Level;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setImport_from_prev_Level(GSSImportImport newImport_from_prev_Level) {
+		GSSImportImport oldImport_from_prev_Level = import_from_prev_Level;
 		import_from_prev_Level = newImport_from_prev_Level;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_OUT__IMPORT_FROM_PREV_LEVEL, oldImport_from_prev_Level, newImport_from_prev_Level);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setImport_from_prev_Level(GSSConfigImportFromPrevLevel newImport_from_prev_Level) {
-		if (newImport_from_prev_Level != import_from_prev_Level) {
-			NotificationChain msgs = null;
-			if (import_from_prev_Level != null)
-				msgs = ((InternalEObject)import_from_prev_Level).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_LEVEL_OUT__IMPORT_FROM_PREV_LEVEL, null, msgs);
-			if (newImport_from_prev_Level != null)
-				msgs = ((InternalEObject)newImport_from_prev_Level).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_LEVEL_OUT__IMPORT_FROM_PREV_LEVEL, null, msgs);
-			msgs = basicSetImport_from_prev_Level(newImport_from_prev_Level, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_OUT__IMPORT_FROM_PREV_LEVEL, newImport_from_prev_Level, newImport_from_prev_Level));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT:
-				return basicSetTMformat(null, msgs);
-			case configPackage.GSS_CONFIG_LEVEL_OUT__INPUT_FILTER:
-				return basicSetInputFilter(null, msgs);
-			case configPackage.GSS_CONFIG_LEVEL_OUT__IMPORT_FROM_PREV_LEVEL:
-				return basicSetImport_from_prev_Level(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_OUT__IMPORT_FROM_PREV_LEVEL, oldImport_from_prev_Level, import_from_prev_Level));
 	}
 
 	/**
@@ -334,11 +335,14 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 			case configPackage.GSS_CONFIG_LEVEL_OUT__NAME:
 				return getName();
 			case configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT:
-				return getTMformat();
+				if (resolve) return getTMformat();
+				return basicGetTMformat();
 			case configPackage.GSS_CONFIG_LEVEL_OUT__INPUT_FILTER:
-				return getInputFilter();
+				if (resolve) return getInputFilter();
+				return basicGetInputFilter();
 			case configPackage.GSS_CONFIG_LEVEL_OUT__IMPORT_FROM_PREV_LEVEL:
-				return getImport_from_prev_Level();
+				if (resolve) return getImport_from_prev_Level();
+				return basicGetImport_from_prev_Level();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -358,13 +362,13 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 				setName((String)newValue);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT:
-				setTMformat((GSSConfigTMFormat)newValue);
+				setTMformat((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_OUT__INPUT_FILTER:
-				setInputFilter((GSSConfigInputFilter)newValue);
+				setInputFilter((GSSFilterFilter)newValue);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_OUT__IMPORT_FROM_PREV_LEVEL:
-				setImport_from_prev_Level((GSSConfigImportFromPrevLevel)newValue);
+				setImport_from_prev_Level((GSSImportImport)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -379,19 +383,19 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_LEVEL_OUT__ID:
-				setId(ID_EDEFAULT);
+				unsetId();
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_OUT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT:
-				setTMformat((GSSConfigTMFormat)null);
+				setTMformat((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_OUT__INPUT_FILTER:
-				setInputFilter((GSSConfigInputFilter)null);
+				setInputFilter((GSSFilterFilter)null);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_OUT__IMPORT_FROM_PREV_LEVEL:
-				setImport_from_prev_Level((GSSConfigImportFromPrevLevel)null);
+				setImport_from_prev_Level((GSSImportImport)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -406,7 +410,7 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_LEVEL_OUT__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+				return isSetId();
 			case configPackage.GSS_CONFIG_LEVEL_OUT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case configPackage.GSS_CONFIG_LEVEL_OUT__TMFORMAT:
@@ -430,7 +434,7 @@ public class GSSConfigLevelOutImpl extends MinimalEObjectImpl.Container implemen
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
-		result.append(id);
+		if (idESet) result.append(id); else result.append("<unset>");
 		result.append(", name: ");
 		result.append(name);
 		result.append(')');

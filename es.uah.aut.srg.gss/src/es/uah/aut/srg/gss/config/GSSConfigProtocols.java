@@ -36,7 +36,7 @@ public interface GSSConfigProtocols extends EObject {
 	 * The list contents are of type {@link es.uah.aut.srg.gss.config.GSSConfigProtocol}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Protocol</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Protocol</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

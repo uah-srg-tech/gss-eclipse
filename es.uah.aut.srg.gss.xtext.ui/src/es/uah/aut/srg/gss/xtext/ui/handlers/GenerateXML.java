@@ -36,11 +36,14 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 import es.uah.aut.srg.gss.common.GSSModelFile;
+import es.uah.aut.srg.gss.xtext.xml.XMLGeneratorUtil;
 
 public class GenerateXML extends AbstractHandler {
 	
 	protected Shell shell;
-
+	
+	protected ResourceSet resourceSet = new ResourceSetImpl();
+	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		
@@ -55,12 +58,20 @@ public class GenerateXML extends AbstractHandler {
 				final IRunnableContext context = new ProgressMonitorDialog(shell);
 				final Exception except[] = new Exception[1];
 
-				ResourceSet resourceSet = new ResourceSetImpl();
 				Resource xtextResource = 
 					resourceSet.getResource(URI.createPlatformResourceURI(((IResource)object).getFullPath().toString(), true), true);
 				
 				EObject model = xtextResource.getContents().get(0);
-				final EObject outputModel = EcoreUtil.copy(((GSSModelFile)model).getElement());
+				
+				XMLGeneratorUtil.convertReferences(model);
+
+				EObject outputModel = EcoreUtil.copy(((GSSModelFile)model).getElement());
+				String pathName = 
+						((IResource)object).getFullPath().removeFileExtension().addFileExtension("xmi").toString();
+				
+				final Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
+												
+				xmiResource.getContents().add(outputModel);
 				
 				shell.getDisplay().syncExec(new Runnable() {
 
@@ -73,13 +84,6 @@ public class GenerateXML extends AbstractHandler {
 								throws InvocationTargetException, InterruptedException {
 									
 									monitor.beginTask("Generating XMI files", 50);
-									
-									String pathName = 
-											((IResource)object).getFullPath().removeFileExtension().addFileExtension("xmi").toString();
-									
-									Resource xmiResource = resourceSet.createResource(URI.createPlatformResourceURI(pathName, true));
-																	
-									xmiResource.getContents().add(outputModel);
 									
 									try {
 										xmiResource.save(null);

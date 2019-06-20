@@ -10,16 +10,13 @@
  */
 package es.uah.aut.srg.gss.config.impl;
 
-import es.uah.aut.srg.gss.config.GSSConfigAppToLevel1;
-import es.uah.aut.srg.gss.config.GSSConfigLevel0;
-import es.uah.aut.srg.gss.config.GSSConfigLevel1;
-import es.uah.aut.srg.gss.config.GSSConfigLevel1ToLevel0;
 import es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1;
 import es.uah.aut.srg.gss.config.GSSConfigUnit;
 import es.uah.aut.srg.gss.config.configPackage;
 
+import es.uah.aut.srg.gss.export.GSSExportExport;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -159,44 +156,44 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 	protected boolean period_unitESet;
 
 	/**
-	 * The cached value of the '{@link #getLevel1() <em>Level1</em>}' containment reference.
+	 * The cached value of the '{@link #getLevel1() <em>Level1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLevel1()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSConfigLevel1 level1;
+	protected GSSTmTcFormatTmTcFormat level1;
 
 	/**
-	 * The cached value of the '{@link #getApp_to_level1() <em>App to level1</em>}' containment reference.
+	 * The cached value of the '{@link #getApp_to_level1() <em>App to level1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getApp_to_level1()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSConfigAppToLevel1 app_to_level1;
+	protected GSSExportExport app_to_level1;
 
 	/**
-	 * The cached value of the '{@link #getLevel0() <em>Level0</em>}' containment reference.
+	 * The cached value of the '{@link #getLevel0() <em>Level0</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLevel0()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSConfigLevel0 level0;
+	protected GSSTmTcFormatTmTcFormat level0;
 
 	/**
-	 * The cached value of the '{@link #getLevel1_to_level0() <em>Level1 to level0</em>}' containment reference.
+	 * The cached value of the '{@link #getLevel1_to_level0() <em>Level1 to level0</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLevel1_to_level0()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSConfigLevel1ToLevel0 level1_to_level0;
+	protected GSSExportExport level1_to_level0;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -352,7 +349,15 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSConfigLevel1 getLevel1() {
+	public GSSTmTcFormatTmTcFormat getLevel1() {
+		if (level1 != null && level1.eIsProxy()) {
+			InternalEObject oldLevel1 = (InternalEObject)level1;
+			level1 = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldLevel1);
+			if (level1 != oldLevel1) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1, oldLevel1, level1));
+			}
+		}
 		return level1;
 	}
 
@@ -361,14 +366,20 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel1(GSSConfigLevel1 newLevel1, NotificationChain msgs) {
-		GSSConfigLevel1 oldLevel1 = level1;
+	public GSSTmTcFormatTmTcFormat basicGetLevel1() {
+		return level1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLevel1(GSSTmTcFormatTmTcFormat newLevel1) {
+		GSSTmTcFormatTmTcFormat oldLevel1 = level1;
 		level1 = newLevel1;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1, oldLevel1, newLevel1);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1, oldLevel1, level1));
 	}
 
 	/**
@@ -376,26 +387,15 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel1(GSSConfigLevel1 newLevel1) {
-		if (newLevel1 != level1) {
-			NotificationChain msgs = null;
-			if (level1 != null)
-				msgs = ((InternalEObject)level1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1, null, msgs);
-			if (newLevel1 != null)
-				msgs = ((InternalEObject)newLevel1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1, null, msgs);
-			msgs = basicSetLevel1(newLevel1, msgs);
-			if (msgs != null) msgs.dispatch();
+	public GSSExportExport getApp_to_level1() {
+		if (app_to_level1 != null && app_to_level1.eIsProxy()) {
+			InternalEObject oldApp_to_level1 = (InternalEObject)app_to_level1;
+			app_to_level1 = (GSSExportExport)eResolveProxy(oldApp_to_level1);
+			if (app_to_level1 != oldApp_to_level1) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1, oldApp_to_level1, app_to_level1));
+			}
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1, newLevel1, newLevel1));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigAppToLevel1 getApp_to_level1() {
 		return app_to_level1;
 	}
 
@@ -404,14 +404,20 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetApp_to_level1(GSSConfigAppToLevel1 newApp_to_level1, NotificationChain msgs) {
-		GSSConfigAppToLevel1 oldApp_to_level1 = app_to_level1;
+	public GSSExportExport basicGetApp_to_level1() {
+		return app_to_level1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setApp_to_level1(GSSExportExport newApp_to_level1) {
+		GSSExportExport oldApp_to_level1 = app_to_level1;
 		app_to_level1 = newApp_to_level1;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1, oldApp_to_level1, newApp_to_level1);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1, oldApp_to_level1, app_to_level1));
 	}
 
 	/**
@@ -419,26 +425,15 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setApp_to_level1(GSSConfigAppToLevel1 newApp_to_level1) {
-		if (newApp_to_level1 != app_to_level1) {
-			NotificationChain msgs = null;
-			if (app_to_level1 != null)
-				msgs = ((InternalEObject)app_to_level1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1, null, msgs);
-			if (newApp_to_level1 != null)
-				msgs = ((InternalEObject)newApp_to_level1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1, null, msgs);
-			msgs = basicSetApp_to_level1(newApp_to_level1, msgs);
-			if (msgs != null) msgs.dispatch();
+	public GSSTmTcFormatTmTcFormat getLevel0() {
+		if (level0 != null && level0.eIsProxy()) {
+			InternalEObject oldLevel0 = (InternalEObject)level0;
+			level0 = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldLevel0);
+			if (level0 != oldLevel0) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0, oldLevel0, level0));
+			}
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1, newApp_to_level1, newApp_to_level1));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigLevel0 getLevel0() {
 		return level0;
 	}
 
@@ -447,14 +442,20 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel0(GSSConfigLevel0 newLevel0, NotificationChain msgs) {
-		GSSConfigLevel0 oldLevel0 = level0;
+	public GSSTmTcFormatTmTcFormat basicGetLevel0() {
+		return level0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLevel0(GSSTmTcFormatTmTcFormat newLevel0) {
+		GSSTmTcFormatTmTcFormat oldLevel0 = level0;
 		level0 = newLevel0;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0, oldLevel0, newLevel0);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0, oldLevel0, level0));
 	}
 
 	/**
@@ -462,26 +463,15 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel0(GSSConfigLevel0 newLevel0) {
-		if (newLevel0 != level0) {
-			NotificationChain msgs = null;
-			if (level0 != null)
-				msgs = ((InternalEObject)level0).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0, null, msgs);
-			if (newLevel0 != null)
-				msgs = ((InternalEObject)newLevel0).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0, null, msgs);
-			msgs = basicSetLevel0(newLevel0, msgs);
-			if (msgs != null) msgs.dispatch();
+	public GSSExportExport getLevel1_to_level0() {
+		if (level1_to_level0 != null && level1_to_level0.eIsProxy()) {
+			InternalEObject oldLevel1_to_level0 = (InternalEObject)level1_to_level0;
+			level1_to_level0 = (GSSExportExport)eResolveProxy(oldLevel1_to_level0);
+			if (level1_to_level0 != oldLevel1_to_level0) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1_TO_LEVEL0, oldLevel1_to_level0, level1_to_level0));
+			}
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0, newLevel0, newLevel0));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigLevel1ToLevel0 getLevel1_to_level0() {
 		return level1_to_level0;
 	}
 
@@ -490,53 +480,20 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLevel1_to_level0(GSSConfigLevel1ToLevel0 newLevel1_to_level0, NotificationChain msgs) {
-		GSSConfigLevel1ToLevel0 oldLevel1_to_level0 = level1_to_level0;
+	public GSSExportExport basicGetLevel1_to_level0() {
+		return level1_to_level0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLevel1_to_level0(GSSExportExport newLevel1_to_level0) {
+		GSSExportExport oldLevel1_to_level0 = level1_to_level0;
 		level1_to_level0 = newLevel1_to_level0;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1_TO_LEVEL0, oldLevel1_to_level0, newLevel1_to_level0);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLevel1_to_level0(GSSConfigLevel1ToLevel0 newLevel1_to_level0) {
-		if (newLevel1_to_level0 != level1_to_level0) {
-			NotificationChain msgs = null;
-			if (level1_to_level0 != null)
-				msgs = ((InternalEObject)level1_to_level0).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1_TO_LEVEL0, null, msgs);
-			if (newLevel1_to_level0 != null)
-				msgs = ((InternalEObject)newLevel1_to_level0).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1_TO_LEVEL0, null, msgs);
-			msgs = basicSetLevel1_to_level0(newLevel1_to_level0, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1_TO_LEVEL0, newLevel1_to_level0, newLevel1_to_level0));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1:
-				return basicSetLevel1(null, msgs);
-			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1:
-				return basicSetApp_to_level1(null, msgs);
-			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0:
-				return basicSetLevel0(null, msgs);
-			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1_TO_LEVEL0:
-				return basicSetLevel1_to_level0(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1_TO_LEVEL0, oldLevel1_to_level0, level1_to_level0));
 	}
 
 	/**
@@ -558,13 +515,17 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_UNIT:
 				return getPeriod_unit();
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1:
-				return getLevel1();
+				if (resolve) return getLevel1();
+				return basicGetLevel1();
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1:
-				return getApp_to_level1();
+				if (resolve) return getApp_to_level1();
+				return basicGetApp_to_level1();
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0:
-				return getLevel0();
+				if (resolve) return getLevel0();
+				return basicGetLevel0();
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1_TO_LEVEL0:
-				return getLevel1_to_level0();
+				if (resolve) return getLevel1_to_level0();
+				return basicGetLevel1_to_level0();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -593,16 +554,16 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 				setPeriod_unit((GSSConfigUnit)newValue);
 				return;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1:
-				setLevel1((GSSConfigLevel1)newValue);
+				setLevel1((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1:
-				setApp_to_level1((GSSConfigAppToLevel1)newValue);
+				setApp_to_level1((GSSExportExport)newValue);
 				return;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0:
-				setLevel0((GSSConfigLevel0)newValue);
+				setLevel0((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1_TO_LEVEL0:
-				setLevel1_to_level0((GSSConfigLevel1ToLevel0)newValue);
+				setLevel1_to_level0((GSSExportExport)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -632,16 +593,16 @@ public class GSSConfigPeriodicTCLevel1Impl extends MinimalEObjectImpl.Container 
 				unsetPeriod_unit();
 				return;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1:
-				setLevel1((GSSConfigLevel1)null);
+				setLevel1((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1:
-				setApp_to_level1((GSSConfigAppToLevel1)null);
+				setApp_to_level1((GSSExportExport)null);
 				return;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0:
-				setLevel0((GSSConfigLevel0)null);
+				setLevel0((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1_TO_LEVEL0:
-				setLevel1_to_level0((GSSConfigLevel1ToLevel0)null);
+				setLevel1_to_level0((GSSExportExport)null);
 				return;
 		}
 		super.eUnset(featureID);

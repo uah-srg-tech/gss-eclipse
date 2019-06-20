@@ -75,40 +75,13 @@ public interface test_procFactory extends EFactory {
 	GSSTestProcSpecialPackets createGSSTestProcSpecialPackets();
 
 	/**
-	 * Returns a new object of class '<em>GSS Test Proc Enable</em>'.
+	 * Returns a new object of class '<em>GSS Test Proc Enable Disable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Enable</em>'.
+	 * @return a new object of class '<em>GSS Test Proc Enable Disable</em>'.
 	 * @generated
 	 */
-	GSSTestProcEnable createGSSTestProcEnable();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Disable</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Disable</em>'.
-	 * @generated
-	 */
-	GSSTestProcDisable createGSSTestProcDisable();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Enable Print</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Enable Print</em>'.
-	 * @generated
-	 */
-	GSSTestProcEnablePrint createGSSTestProcEnablePrint();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Disable Print</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Disable Print</em>'.
-	 * @generated
-	 */
-	GSSTestProcDisablePrint createGSSTestProcDisablePrint();
+	GSSTestProcEnableDisable createGSSTestProcEnableDisable();
 
 	/**
 	 * Returns a new object of class '<em>GSS Test Proc Concurrent Steps</em>'.
@@ -136,6 +109,15 @@ public interface test_procFactory extends EFactory {
 	 * @generated
 	 */
 	GSSTestProcConcurrentStep createGSSTestProcConcurrentStep();
+
+	/**
+	 * Returns a new object of class '<em>GSS Test Proc Input</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Test Proc Input</em>'.
+	 * @generated
+	 */
+	GSSTestProcInput createGSSTestProcInput();
 
 	/**
 	 * Returns a new object of class '<em>GSS Test Proc Input Level3</em>'.
@@ -174,105 +156,6 @@ public interface test_procFactory extends EFactory {
 	GSSTestProcInputLevel0 createGSSTestProcInputLevel0();
 
 	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level3</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level3</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel3 createGSSTestProcLevel3();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level2</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level2</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel2 createGSSTestProcLevel2();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level1</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level1</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel1 createGSSTestProcLevel1();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level0</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level0</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel0 createGSSTestProcLevel0();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc App To Level3</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc App To Level3</em>'.
-	 * @generated
-	 */
-	GSSTestProcAppToLevel3 createGSSTestProcAppToLevel3();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc App To Level2</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc App To Level2</em>'.
-	 * @generated
-	 */
-	GSSTestProcAppToLevel2 createGSSTestProcAppToLevel2();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc App To Level1</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc App To Level1</em>'.
-	 * @generated
-	 */
-	GSSTestProcAppToLevel1 createGSSTestProcAppToLevel1();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc App To Level0</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc App To Level0</em>'.
-	 * @generated
-	 */
-	GSSTestProcAppToLevel0 createGSSTestProcAppToLevel0();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level3 To Level2</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level3 To Level2</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel3ToLevel2 createGSSTestProcLevel3ToLevel2();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level2 To Level1</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level2 To Level1</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel2ToLevel1 createGSSTestProcLevel2ToLevel1();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level1 To Level0</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level1 To Level0</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel1ToLevel0 createGSSTestProcLevel1ToLevel0();
-
-	/**
 	 * Returns a new object of class '<em>GSS Test Proc Output Level3</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -309,67 +192,13 @@ public interface test_procFactory extends EFactory {
 	GSSTestProcOutputLevel0 createGSSTestProcOutputLevel0();
 
 	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level3 Filter</em>'.
+	 * Returns a new object of class '<em>GSS Test Proc Filter</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level3 Filter</em>'.
+	 * @return a new object of class '<em>GSS Test Proc Filter</em>'.
 	 * @generated
 	 */
-	GSSTestProcLevel3Filter createGSSTestProcLevel3Filter();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level2 Filter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level2 Filter</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel2Filter createGSSTestProcLevel2Filter();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level1 Filter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level1 Filter</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel1Filter createGSSTestProcLevel1Filter();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level0 Filter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level0 Filter</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel0Filter createGSSTestProcLevel0Filter();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level3 From Level2</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level3 From Level2</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel3FromLevel2 createGSSTestProcLevel3FromLevel2();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level2 From Level1</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level2 From Level1</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel2FromLevel1 createGSSTestProcLevel2FromLevel1();
-
-	/**
-	 * Returns a new object of class '<em>GSS Test Proc Level1 From Level0</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Level1 From Level0</em>'.
-	 * @generated
-	 */
-	GSSTestProcLevel1FromLevel0 createGSSTestProcLevel1FromLevel0();
+	GSSTestProcFilter createGSSTestProcFilter();
 
 	/**
 	 * Returns the package supported by this factory.

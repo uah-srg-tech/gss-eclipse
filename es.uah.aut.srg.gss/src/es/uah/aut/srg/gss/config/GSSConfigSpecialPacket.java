@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.gss.config;
 
+import es.uah.aut.srg.gss.filters.GSSFilterFilter;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -201,30 +203,30 @@ public interface GSSConfigSpecialPacket extends EObject {
 	void setLevelRef(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Input Filter</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Input Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Input Filter</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Input Filter</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Filter</em>' containment reference.
-	 * @see #setInputFilter(GSSConfigInputFilter)
+	 * @return the value of the '<em>Input Filter</em>' reference.
+	 * @see #setInputFilter(GSSFilterFilter)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigSpecialPacket_InputFilter()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	GSSConfigInputFilter getInputFilter();
+	GSSFilterFilter getInputFilter();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigSpecialPacket#getInputFilter <em>Input Filter</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigSpecialPacket#getInputFilter <em>Input Filter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Filter</em>' containment reference.
+	 * @param value the new value of the '<em>Input Filter</em>' reference.
 	 * @see #getInputFilter()
 	 * @generated
 	 */
-	void setInputFilter(GSSConfigInputFilter value);
+	void setInputFilter(GSSFilterFilter value);
 
 	/**
 	 * Returns the value of the '<em><b>Upper Levels</b></em>' containment reference list.

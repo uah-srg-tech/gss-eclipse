@@ -13,9 +13,12 @@ package es.uah.aut.srg.gss.imports.impl;
 import es.uah.aut.srg.gss.imports.GSSImportDataSource;
 import es.uah.aut.srg.gss.imports.importsPackage;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatField;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -37,24 +40,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class GSSImportDataSourceImpl extends MinimalEObjectImpl.Container implements GSSImportDataSource {
 	/**
-	 * The default value of the '{@link #getFieldRef() <em>Field Ref</em>}' attribute.
+	 * The cached value of the '{@link #getFieldRef() <em>Field Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFieldRef()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FIELD_REF_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getFieldRef() <em>Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected String fieldRef = FIELD_REF_EDEFAULT;
+	protected GSSTmTcFormatField fieldRef;
 
 	/**
 	 * The default value of the '{@link #getLeftTrim() <em>Left Trim</em>}' attribute.
@@ -120,7 +113,15 @@ public class GSSImportDataSourceImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFieldRef() {
+	public GSSTmTcFormatField getFieldRef() {
+		if (fieldRef != null && fieldRef.eIsProxy()) {
+			InternalEObject oldFieldRef = (InternalEObject)fieldRef;
+			fieldRef = (GSSTmTcFormatField)eResolveProxy(oldFieldRef);
+			if (fieldRef != oldFieldRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, importsPackage.GSS_IMPORT_DATA_SOURCE__FIELD_REF, oldFieldRef, fieldRef));
+			}
+		}
 		return fieldRef;
 	}
 
@@ -129,8 +130,17 @@ public class GSSImportDataSourceImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFieldRef(String newFieldRef) {
-		String oldFieldRef = fieldRef;
+	public GSSTmTcFormatField basicGetFieldRef() {
+		return fieldRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFieldRef(GSSTmTcFormatField newFieldRef) {
+		GSSTmTcFormatField oldFieldRef = fieldRef;
 		fieldRef = newFieldRef;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, importsPackage.GSS_IMPORT_DATA_SOURCE__FIELD_REF, oldFieldRef, fieldRef));
@@ -187,7 +197,8 @@ public class GSSImportDataSourceImpl extends MinimalEObjectImpl.Container implem
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case importsPackage.GSS_IMPORT_DATA_SOURCE__FIELD_REF:
-				return getFieldRef();
+				if (resolve) return getFieldRef();
+				return basicGetFieldRef();
 			case importsPackage.GSS_IMPORT_DATA_SOURCE__LEFT_TRIM:
 				return getLeftTrim();
 			case importsPackage.GSS_IMPORT_DATA_SOURCE__RIGHT_TRIM:
@@ -205,7 +216,7 @@ public class GSSImportDataSourceImpl extends MinimalEObjectImpl.Container implem
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case importsPackage.GSS_IMPORT_DATA_SOURCE__FIELD_REF:
-				setFieldRef((String)newValue);
+				setFieldRef((GSSTmTcFormatField)newValue);
 				return;
 			case importsPackage.GSS_IMPORT_DATA_SOURCE__LEFT_TRIM:
 				setLeftTrim((String)newValue);
@@ -226,7 +237,7 @@ public class GSSImportDataSourceImpl extends MinimalEObjectImpl.Container implem
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case importsPackage.GSS_IMPORT_DATA_SOURCE__FIELD_REF:
-				setFieldRef(FIELD_REF_EDEFAULT);
+				setFieldRef((GSSTmTcFormatField)null);
 				return;
 			case importsPackage.GSS_IMPORT_DATA_SOURCE__LEFT_TRIM:
 				setLeftTrim(LEFT_TRIM_EDEFAULT);
@@ -247,7 +258,7 @@ public class GSSImportDataSourceImpl extends MinimalEObjectImpl.Container implem
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case importsPackage.GSS_IMPORT_DATA_SOURCE__FIELD_REF:
-				return FIELD_REF_EDEFAULT == null ? fieldRef != null : !FIELD_REF_EDEFAULT.equals(fieldRef);
+				return fieldRef != null;
 			case importsPackage.GSS_IMPORT_DATA_SOURCE__LEFT_TRIM:
 				return LEFT_TRIM_EDEFAULT == null ? leftTrim != null : !LEFT_TRIM_EDEFAULT.equals(leftTrim);
 			case importsPackage.GSS_IMPORT_DATA_SOURCE__RIGHT_TRIM:
@@ -266,9 +277,7 @@ public class GSSImportDataSourceImpl extends MinimalEObjectImpl.Container implem
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (FieldRef: ");
-		result.append(fieldRef);
-		result.append(", leftTrim: ");
+		result.append(" (leftTrim: ");
 		result.append(leftTrim);
 		result.append(", rightTrim: ");
 		result.append(rightTrim);

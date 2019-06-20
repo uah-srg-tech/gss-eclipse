@@ -2207,7 +2207,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceUartProtocol"
-    // InternalIFACE.g:922:1: ruleGSSIfaceUartProtocol returns [EObject current=null] : (otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) ) otherlv_14= '}' otherlv_15= ';' ) ;
+    // InternalIFACE.g:922:1: ruleGSSIfaceUartProtocol returns [EObject current=null] : (otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';' ) ;
     public final EObject ruleGSSIfaceUartProtocol() throws RecognitionException {
         EObject current = null;
 
@@ -2238,11 +2238,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:928:2: ( (otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) ) otherlv_14= '}' otherlv_15= ';' ) )
-            // InternalIFACE.g:929:2: (otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) ) otherlv_14= '}' otherlv_15= ';' )
+            // InternalIFACE.g:928:2: ( (otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';' ) )
+            // InternalIFACE.g:929:2: (otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';' )
             {
-            // InternalIFACE.g:929:2: (otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) ) otherlv_14= '}' otherlv_15= ';' )
-            // InternalIFACE.g:930:3: otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) ) otherlv_14= '}' otherlv_15= ';'
+            // InternalIFACE.g:929:2: (otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';' )
+            // InternalIFACE.g:930:3: otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';'
             {
             otherlv_0=(Token)match(input,34,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2467,38 +2467,49 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalIFACE.g:1057:3: ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )
-            // InternalIFACE.g:1058:4: (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern )
-            {
-            // InternalIFACE.g:1058:4: (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern )
-            // InternalIFACE.g:1059:5: lv_syncPattern_13_0= ruleGSSIfaceSyncPattern
-            {
-            if ( state.backtracking==0 ) {
+            // InternalIFACE.g:1057:3: ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-              					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getSyncPatternGSSIfaceSyncPatternParserRuleCall_13_0());
-              				
+            if ( (LA5_0==42) ) {
+                alt5=1;
             }
-            pushFollow(FollowSets000.FOLLOW_12);
-            lv_syncPattern_13_0=ruleGSSIfaceSyncPattern();
+            switch (alt5) {
+                case 1 :
+                    // InternalIFACE.g:1058:4: (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern )
+                    {
+                    // InternalIFACE.g:1058:4: (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern )
+                    // InternalIFACE.g:1059:5: lv_syncPattern_13_0= ruleGSSIfaceSyncPattern
+                    {
+                    if ( state.backtracking==0 ) {
 
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+                      					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getSyncPatternGSSIfaceSyncPatternParserRuleCall_13_0());
+                      				
+                    }
+                    pushFollow(FollowSets000.FOLLOW_12);
+                    lv_syncPattern_13_0=ruleGSSIfaceSyncPattern();
 
-              					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
-              					}
-              					set(
-              						current,
-              						"syncPattern",
-              						lv_syncPattern_13_0,
-              						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceSyncPattern");
-              					afterParserOrEnumRuleCall();
-              				
-            }
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
 
-            }
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+                      					}
+                      					set(
+                      						current,
+                      						"syncPattern",
+                      						lv_syncPattern_13_0,
+                      						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceSyncPattern");
+                      					afterParserOrEnumRuleCall();
+                      				
+                    }
 
+                    }
+
+
+                    }
+                    break;
 
             }
 
@@ -3733,17 +3744,17 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               		
             }
             // InternalIFACE.g:1577:3: (kw= '.' this_ID_2= RULE_ID )*
-            loop5:
+            loop6:
             do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
+                int alt6=2;
+                int LA6_0 = input.LA(1);
 
-                if ( (LA5_0==47) ) {
-                    alt5=1;
+                if ( (LA6_0==47) ) {
+                    alt6=1;
                 }
 
 
-                switch (alt5) {
+                switch (alt6) {
             	case 1 :
             	    // InternalIFACE.g:1578:4: kw= '.' this_ID_2= RULE_ID
             	    {
@@ -3770,7 +3781,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop5;
+            	    break loop6;
                 }
             } while (true);
 
@@ -3862,37 +3873,37 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             // InternalIFACE.g:1610:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             {
             // InternalIFACE.g:1610:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA7_0==RULE_INT) ) {
-                int LA7_1 = input.LA(2);
+            if ( (LA8_0==RULE_INT) ) {
+                int LA8_1 = input.LA(2);
 
-                if ( (LA7_1==EOF||LA7_1==13||LA7_1==47||LA7_1==49) ) {
-                    alt7=1;
+                if ( (LA8_1==RULE_ID) ) {
+                    alt8=2;
                 }
-                else if ( (LA7_1==RULE_ID) ) {
-                    alt7=2;
+                else if ( (LA8_1==EOF||LA8_1==13||LA8_1==47||LA8_1==49) ) {
+                    alt8=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 7, 1, input);
+                        new NoViableAltException("", 8, 1, input);
 
                     throw nvae;
                 }
             }
-            else if ( (LA7_0==RULE_ID) ) {
-                alt7=2;
+            else if ( (LA8_0==RULE_ID) ) {
+                alt8=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
                     // InternalIFACE.g:1611:4: this_INT_0= RULE_INT
                     {
@@ -3917,13 +3928,13 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     // InternalIFACE.g:1620:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
                     {
                     // InternalIFACE.g:1620:5: (this_INT_1= RULE_INT )?
-                    int alt6=2;
-                    int LA6_0 = input.LA(1);
+                    int alt7=2;
+                    int LA7_0 = input.LA(1);
 
-                    if ( (LA6_0==RULE_INT) ) {
-                        alt6=1;
+                    if ( (LA7_0==RULE_INT) ) {
+                        alt7=1;
                     }
-                    switch (alt6) {
+                    switch (alt7) {
                         case 1 :
                             // InternalIFACE.g:1621:6: this_INT_1= RULE_INT
                             {
@@ -3965,17 +3976,17 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             }
 
             // InternalIFACE.g:1638:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
-            loop10:
+            loop11:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                if ( (LA10_0==47) ) {
-                    alt10=1;
+                if ( (LA11_0==47) ) {
+                    alt11=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt11) {
             	case 1 :
             	    // InternalIFACE.g:1639:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    {
@@ -3987,37 +3998,37 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             	      			
             	    }
             	    // InternalIFACE.g:1644:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
-            	    int alt9=2;
-            	    int LA9_0 = input.LA(1);
+            	    int alt10=2;
+            	    int LA10_0 = input.LA(1);
 
-            	    if ( (LA9_0==RULE_INT) ) {
-            	        int LA9_1 = input.LA(2);
+            	    if ( (LA10_0==RULE_INT) ) {
+            	        int LA10_1 = input.LA(2);
 
-            	        if ( (LA9_1==EOF||LA9_1==13||LA9_1==47||LA9_1==49) ) {
-            	            alt9=1;
+            	        if ( (LA10_1==RULE_ID) ) {
+            	            alt10=2;
             	        }
-            	        else if ( (LA9_1==RULE_ID) ) {
-            	            alt9=2;
+            	        else if ( (LA10_1==EOF||LA10_1==13||LA10_1==47||LA10_1==49) ) {
+            	            alt10=1;
             	        }
             	        else {
             	            if (state.backtracking>0) {state.failed=true; return current;}
             	            NoViableAltException nvae =
-            	                new NoViableAltException("", 9, 1, input);
+            	                new NoViableAltException("", 10, 1, input);
 
             	            throw nvae;
             	        }
             	    }
-            	    else if ( (LA9_0==RULE_ID) ) {
-            	        alt9=2;
+            	    else if ( (LA10_0==RULE_ID) ) {
+            	        alt10=2;
             	    }
             	    else {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 9, 0, input);
+            	            new NoViableAltException("", 10, 0, input);
 
             	        throw nvae;
             	    }
-            	    switch (alt9) {
+            	    switch (alt10) {
             	        case 1 :
             	            // InternalIFACE.g:1645:5: this_INT_4= RULE_INT
             	            {
@@ -4042,13 +4053,13 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             	            // InternalIFACE.g:1654:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
             	            {
             	            // InternalIFACE.g:1654:6: (this_INT_5= RULE_INT )?
-            	            int alt8=2;
-            	            int LA8_0 = input.LA(1);
+            	            int alt9=2;
+            	            int LA9_0 = input.LA(1);
 
-            	            if ( (LA8_0==RULE_INT) ) {
-            	                alt8=1;
+            	            if ( (LA9_0==RULE_INT) ) {
+            	                alt9=1;
             	            }
-            	            switch (alt8) {
+            	            switch (alt9) {
             	                case 1 :
             	                    // InternalIFACE.g:1655:7: this_INT_5= RULE_INT
             	                    {
@@ -4094,7 +4105,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop11;
                 }
             } while (true);
 
@@ -4318,23 +4329,23 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             // InternalIFACE.g:1740:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
             {
             // InternalIFACE.g:1740:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA12_0==RULE_INT||LA12_0==50) ) {
-                alt12=1;
+            if ( (LA13_0==RULE_INT||LA13_0==50) ) {
+                alt13=1;
             }
-            else if ( (LA12_0==RULE_HEXADECIMAL) ) {
-                alt12=2;
+            else if ( (LA13_0==RULE_HEXADECIMAL) ) {
+                alt13=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
-            switch (alt12) {
+            switch (alt13) {
                 case 1 :
                     // InternalIFACE.g:1741:3: ( (kw= '-' )? this_INT_1= RULE_INT )
                     {
@@ -4342,13 +4353,13 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     // InternalIFACE.g:1742:4: (kw= '-' )? this_INT_1= RULE_INT
                     {
                     // InternalIFACE.g:1742:4: (kw= '-' )?
-                    int alt11=2;
-                    int LA11_0 = input.LA(1);
+                    int alt12=2;
+                    int LA12_0 = input.LA(1);
 
-                    if ( (LA11_0==50) ) {
-                        alt11=1;
+                    if ( (LA12_0==50) ) {
+                        alt12=1;
                     }
-                    switch (alt11) {
+                    switch (alt12) {
                         case 1 :
                             // InternalIFACE.g:1743:5: kw= '-'
                             {
@@ -4440,32 +4451,32 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             // InternalIFACE.g:1776:2: ( (enumLiteral_0= 'usb' ) | (enumLiteral_1= 'mk2' ) | (enumLiteral_2= 'pci' ) )
             {
             // InternalIFACE.g:1776:2: ( (enumLiteral_0= 'usb' ) | (enumLiteral_1= 'mk2' ) | (enumLiteral_2= 'pci' ) )
-            int alt13=3;
+            int alt14=3;
             switch ( input.LA(1) ) {
             case 51:
                 {
-                alt13=1;
+                alt14=1;
                 }
                 break;
             case 52:
                 {
-                alt13=2;
+                alt14=2;
                 }
                 break;
             case 53:
                 {
-                alt13=3;
+                alt14=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 14, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt13) {
+            switch (alt14) {
                 case 1 :
                     // InternalIFACE.g:1777:3: (enumLiteral_0= 'usb' )
                     {
@@ -4563,23 +4574,23 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             // InternalIFACE.g:1811:2: ( (enumLiteral_0= '38400bauds' ) | (enumLiteral_1= '115200bauds' ) )
             {
             // InternalIFACE.g:1811:2: ( (enumLiteral_0= '38400bauds' ) | (enumLiteral_1= '115200bauds' ) )
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA14_0==54) ) {
-                alt14=1;
+            if ( (LA15_0==54) ) {
+                alt15=1;
             }
-            else if ( (LA14_0==55) ) {
-                alt14=2;
+            else if ( (LA15_0==55) ) {
+                alt15=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
                     // InternalIFACE.g:1812:3: (enumLiteral_0= '38400bauds' )
                     {
@@ -4661,42 +4672,42 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             // InternalIFACE.g:1838:2: ( (enumLiteral_0= 'NO' ) | (enumLiteral_1= 'ODD' ) | (enumLiteral_2= 'EVEN' ) | (enumLiteral_3= 'MARK' ) | (enumLiteral_4= 'SPACE' ) )
             {
             // InternalIFACE.g:1838:2: ( (enumLiteral_0= 'NO' ) | (enumLiteral_1= 'ODD' ) | (enumLiteral_2= 'EVEN' ) | (enumLiteral_3= 'MARK' ) | (enumLiteral_4= 'SPACE' ) )
-            int alt15=5;
+            int alt16=5;
             switch ( input.LA(1) ) {
             case 56:
                 {
-                alt15=1;
+                alt16=1;
                 }
                 break;
             case 57:
                 {
-                alt15=2;
+                alt16=2;
                 }
                 break;
             case 58:
                 {
-                alt15=3;
+                alt16=3;
                 }
                 break;
             case 59:
                 {
-                alt15=4;
+                alt16=4;
                 }
                 break;
             case 60:
                 {
-                alt15=5;
+                alt16=5;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 15, 0, input);
+                    new NoViableAltException("", 16, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
                     // InternalIFACE.g:1839:3: (enumLiteral_0= 'NO' )
                     {
@@ -4834,37 +4845,37 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             // InternalIFACE.g:1889:2: ( (enumLiteral_0= '5bits' ) | (enumLiteral_1= '6bits' ) | (enumLiteral_2= '7bits' ) | (enumLiteral_3= '8bits' ) )
             {
             // InternalIFACE.g:1889:2: ( (enumLiteral_0= '5bits' ) | (enumLiteral_1= '6bits' ) | (enumLiteral_2= '7bits' ) | (enumLiteral_3= '8bits' ) )
-            int alt16=4;
+            int alt17=4;
             switch ( input.LA(1) ) {
             case 61:
                 {
-                alt16=1;
+                alt17=1;
                 }
                 break;
             case 62:
                 {
-                alt16=2;
+                alt17=2;
                 }
                 break;
             case 63:
                 {
-                alt16=3;
+                alt17=3;
                 }
                 break;
             case 64:
                 {
-                alt16=4;
+                alt17=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 16, 0, input);
+                    new NoViableAltException("", 17, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt16) {
+            switch (alt17) {
                 case 1 :
                     // InternalIFACE.g:1890:3: (enumLiteral_0= '5bits' )
                     {
@@ -4981,23 +4992,23 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             // InternalIFACE.g:1932:2: ( (enumLiteral_0= '1bit' ) | (enumLiteral_1= '2bits' ) )
             {
             // InternalIFACE.g:1932:2: ( (enumLiteral_0= '1bit' ) | (enumLiteral_1= '2bits' ) )
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA17_0==65) ) {
-                alt17=1;
+            if ( (LA18_0==65) ) {
+                alt18=1;
             }
-            else if ( (LA17_0==66) ) {
-                alt17=2;
+            else if ( (LA18_0==66) ) {
+                alt18=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 17, 0, input);
+                    new NoViableAltException("", 18, 0, input);
 
                 throw nvae;
             }
-            switch (alt17) {
+            switch (alt18) {
                 case 1 :
                     // InternalIFACE.g:1933:3: (enumLiteral_0= '1bit' )
                     {
@@ -5076,23 +5087,23 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             // InternalIFACE.g:1959:2: ( (enumLiteral_0= 'bytes' ) | (enumLiteral_1= 'bits' ) )
             {
             // InternalIFACE.g:1959:2: ( (enumLiteral_0= 'bytes' ) | (enumLiteral_1= 'bits' ) )
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA18_0==38) ) {
-                alt18=1;
+            if ( (LA19_0==38) ) {
+                alt19=1;
             }
-            else if ( (LA18_0==39) ) {
-                alt18=2;
+            else if ( (LA19_0==39) ) {
+                alt19=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 18, 0, input);
+                    new NoViableAltException("", 19, 0, input);
 
                 throw nvae;
             }
-            switch (alt18) {
+            switch (alt19) {
                 case 1 :
                     // InternalIFACE.g:1960:3: (enumLiteral_0= 'bytes' )
                     {
@@ -5172,32 +5183,32 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             // InternalIFACE.g:1986:2: ( (enumLiteral_0= 'no' ) | (enumLiteral_1= '2bits' ) | (enumLiteral_2= '2_with_0' ) )
             {
             // InternalIFACE.g:1986:2: ( (enumLiteral_0= 'no' ) | (enumLiteral_1= '2bits' ) | (enumLiteral_2= '2_with_0' ) )
-            int alt19=3;
+            int alt20=3;
             switch ( input.LA(1) ) {
             case 67:
                 {
-                alt19=1;
+                alt20=1;
                 }
                 break;
             case 66:
                 {
-                alt19=2;
+                alt20=2;
                 }
                 break;
             case 68:
                 {
-                alt19=3;
+                alt20=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 20, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt19) {
+            switch (alt20) {
                 case 1 :
                     // InternalIFACE.g:1987:3: (enumLiteral_0= 'no' )
                     {
@@ -5501,7 +5512,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000002000000000L});
         public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000010000000000L});
         public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000020000000000L});
-        public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000040000000000L});
+        public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000040000080000L});
         public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000004000000000L});
         public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000008000000000L});
         public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000080000000000L});

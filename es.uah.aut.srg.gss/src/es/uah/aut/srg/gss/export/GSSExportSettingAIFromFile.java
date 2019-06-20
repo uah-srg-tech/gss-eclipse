@@ -10,7 +10,6 @@
  */
 package es.uah.aut.srg.gss.export;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile#getFile <em>File</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile#getToFieldRef <em>To Field Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile#getToArrayIndex <em>To Array Index</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile#getOffset <em>Offset</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile#getSize <em>Size</em>}</li>
@@ -33,7 +31,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GSSExportSettingAIFromFile extends EObject {
+public interface GSSExportSettingAIFromFile extends GSSExportSetting {
 	/**
 	 * Returns the value of the '<em><b>File</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -59,32 +57,6 @@ public interface GSSExportSettingAIFromFile extends EObject {
 	 * @generated
 	 */
 	void setFile(String value);
-
-	/**
-	 * Returns the value of the '<em><b>To Field Ref</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>To Field Ref</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>To Field Ref</em>' attribute.
-	 * @see #setToFieldRef(String)
-	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportSettingAIFromFile_ToFieldRef()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getToFieldRef();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile#getToFieldRef <em>To Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To Field Ref</em>' attribute.
-	 * @see #getToFieldRef()
-	 * @generated
-	 */
-	void setToFieldRef(String value);
 
 	/**
 	 * Returns the value of the '<em><b>To Array Index</b></em>' attribute.

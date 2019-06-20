@@ -14,9 +14,12 @@ import es.uah.aut.srg.gss.config.GSSConfigReqAction;
 import es.uah.aut.srg.gss.config.GSSConfigTestCase;
 import es.uah.aut.srg.gss.config.configPackage;
 
+import es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -59,33 +62,14 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getProcedure() <em>Procedure</em>}' attribute.
+	 * The cached value of the '{@link #getProcedure() <em>Procedure</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProcedure()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PROCEDURE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getProcedure() <em>Procedure</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProcedure()
-	 * @generated
-	 * @ordered
-	 */
-	protected String procedure = PROCEDURE_EDEFAULT;
-
-	/**
-	 * This is true if the Procedure attribute has been set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean procedureESet;
+	protected GSSTestProcTestProc procedure;
 
 	/**
 	 * The default value of the '{@link #getReq() <em>Req</em>}' attribute.
@@ -181,7 +165,15 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getProcedure() {
+	public GSSTestProcTestProc getProcedure() {
+		if (procedure != null && procedure.eIsProxy()) {
+			InternalEObject oldProcedure = (InternalEObject)procedure;
+			procedure = (GSSTestProcTestProc)eResolveProxy(oldProcedure);
+			if (procedure != oldProcedure) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_TEST_CASE__PROCEDURE, oldProcedure, procedure));
+			}
+		}
 		return procedure;
 	}
 
@@ -190,36 +182,20 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProcedure(String newProcedure) {
-		String oldProcedure = procedure;
+	public GSSTestProcTestProc basicGetProcedure() {
+		return procedure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProcedure(GSSTestProcTestProc newProcedure) {
+		GSSTestProcTestProc oldProcedure = procedure;
 		procedure = newProcedure;
-		boolean oldProcedureESet = procedureESet;
-		procedureESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_TEST_CASE__PROCEDURE, oldProcedure, procedure, !oldProcedureESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetProcedure() {
-		String oldProcedure = procedure;
-		boolean oldProcedureESet = procedureESet;
-		procedure = PROCEDURE_EDEFAULT;
-		procedureESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_TEST_CASE__PROCEDURE, oldProcedure, PROCEDURE_EDEFAULT, oldProcedureESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetProcedure() {
-		return procedureESet;
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_TEST_CASE__PROCEDURE, oldProcedure, procedure));
 	}
 
 	/**
@@ -300,7 +276,8 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 			case configPackage.GSS_CONFIG_TEST_CASE__NAME:
 				return getName();
 			case configPackage.GSS_CONFIG_TEST_CASE__PROCEDURE:
-				return getProcedure();
+				if (resolve) return getProcedure();
+				return basicGetProcedure();
 			case configPackage.GSS_CONFIG_TEST_CASE__REQ:
 				return getReq();
 			case configPackage.GSS_CONFIG_TEST_CASE__REQ_ACTION:
@@ -321,7 +298,7 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 				setName((String)newValue);
 				return;
 			case configPackage.GSS_CONFIG_TEST_CASE__PROCEDURE:
-				setProcedure((String)newValue);
+				setProcedure((GSSTestProcTestProc)newValue);
 				return;
 			case configPackage.GSS_CONFIG_TEST_CASE__REQ:
 				setReq((String)newValue);
@@ -345,7 +322,7 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 				setName(NAME_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_TEST_CASE__PROCEDURE:
-				unsetProcedure();
+				setProcedure((GSSTestProcTestProc)null);
 				return;
 			case configPackage.GSS_CONFIG_TEST_CASE__REQ:
 				setReq(REQ_EDEFAULT);
@@ -368,7 +345,7 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 			case configPackage.GSS_CONFIG_TEST_CASE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case configPackage.GSS_CONFIG_TEST_CASE__PROCEDURE:
-				return isSetProcedure();
+				return procedure != null;
 			case configPackage.GSS_CONFIG_TEST_CASE__REQ:
 				return REQ_EDEFAULT == null ? req != null : !REQ_EDEFAULT.equals(req);
 			case configPackage.GSS_CONFIG_TEST_CASE__REQ_ACTION:
@@ -389,8 +366,6 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", procedure: ");
-		if (procedureESet) result.append(procedure); else result.append("<unset>");
 		result.append(", req: ");
 		result.append(req);
 		result.append(", reqAction: ");

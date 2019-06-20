@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.gss.config;
 
+import es.uah.aut.srg.gss.charts.GSSChartsCharts;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -35,32 +37,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface GSSConfigMonitors extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Charts File</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Charts File</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Charts File</em>' attribute.
-	 * @see #setChartsFile(String)
-	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigMonitors_ChartsFile()
-	 * @model
-	 * @generated
-	 */
-	String getChartsFile();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigMonitors#getChartsFile <em>Charts File</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Charts File</em>' attribute.
-	 * @see #getChartsFile()
-	 * @generated
-	 */
-	void setChartsFile(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Plot</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.gss.config.GSSConfigPlot}.
@@ -124,5 +100,31 @@ public interface GSSConfigMonitors extends EObject {
 	 * @generated
 	 */
 	EList<GSSConfigAlarmVal> getAlarmVal();
+
+	/**
+	 * Returns the value of the '<em><b>Charts File</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Charts File</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Charts File</em>' reference.
+	 * @see #setChartsFile(GSSChartsCharts)
+	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigMonitors_ChartsFile()
+	 * @model
+	 * @generated
+	 */
+	GSSChartsCharts getChartsFile();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigMonitors#getChartsFile <em>Charts File</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Charts File</em>' reference.
+	 * @see #getChartsFile()
+	 * @generated
+	 */
+	void setChartsFile(GSSChartsCharts value);
 
 } // GSSConfigMonitors

@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.gss.config.impl;
 
+import es.uah.aut.srg.gss.charts.GSSChartsCharts;
+
 import es.uah.aut.srg.gss.config.GSSConfigAlarmMsg;
 import es.uah.aut.srg.gss.config.GSSConfigAlarmVal;
 import es.uah.aut.srg.gss.config.GSSConfigModify;
@@ -52,24 +54,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class GSSConfigMonitorsImpl extends MinimalEObjectImpl.Container implements GSSConfigMonitors {
 	/**
-	 * The default value of the '{@link #getChartsFile() <em>Charts File</em>}' attribute.
+	 * The cached value of the '{@link #getChartsFile() <em>Charts File</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getChartsFile()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CHARTS_FILE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getChartsFile() <em>Charts File</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getChartsFile()
-	 * @generated
-	 * @ordered
-	 */
-	protected String chartsFile = CHARTS_FILE_EDEFAULT;
+	protected GSSChartsCharts chartsFile;
 
 	/**
 	 * The cached value of the '{@link #getPlot() <em>Plot</em>}' containment reference list.
@@ -135,7 +127,15 @@ public class GSSConfigMonitorsImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getChartsFile() {
+	public GSSChartsCharts getChartsFile() {
+		if (chartsFile != null && chartsFile.eIsProxy()) {
+			InternalEObject oldChartsFile = (InternalEObject)chartsFile;
+			chartsFile = (GSSChartsCharts)eResolveProxy(oldChartsFile);
+			if (chartsFile != oldChartsFile) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_MONITORS__CHARTS_FILE, oldChartsFile, chartsFile));
+			}
+		}
 		return chartsFile;
 	}
 
@@ -144,8 +144,17 @@ public class GSSConfigMonitorsImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setChartsFile(String newChartsFile) {
-		String oldChartsFile = chartsFile;
+	public GSSChartsCharts basicGetChartsFile() {
+		return chartsFile;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setChartsFile(GSSChartsCharts newChartsFile) {
+		GSSChartsCharts oldChartsFile = chartsFile;
 		chartsFile = newChartsFile;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_MONITORS__CHARTS_FILE, oldChartsFile, chartsFile));
@@ -228,7 +237,8 @@ public class GSSConfigMonitorsImpl extends MinimalEObjectImpl.Container implemen
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_MONITORS__CHARTS_FILE:
-				return getChartsFile();
+				if (resolve) return getChartsFile();
+				return basicGetChartsFile();
 			case configPackage.GSS_CONFIG_MONITORS__PLOT:
 				return getPlot();
 			case configPackage.GSS_CONFIG_MONITORS__ALARM_MSG:
@@ -251,7 +261,7 @@ public class GSSConfigMonitorsImpl extends MinimalEObjectImpl.Container implemen
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_MONITORS__CHARTS_FILE:
-				setChartsFile((String)newValue);
+				setChartsFile((GSSChartsCharts)newValue);
 				return;
 			case configPackage.GSS_CONFIG_MONITORS__PLOT:
 				getPlot().clear();
@@ -282,7 +292,7 @@ public class GSSConfigMonitorsImpl extends MinimalEObjectImpl.Container implemen
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_MONITORS__CHARTS_FILE:
-				setChartsFile(CHARTS_FILE_EDEFAULT);
+				setChartsFile((GSSChartsCharts)null);
 				return;
 			case configPackage.GSS_CONFIG_MONITORS__PLOT:
 				getPlot().clear();
@@ -309,7 +319,7 @@ public class GSSConfigMonitorsImpl extends MinimalEObjectImpl.Container implemen
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_MONITORS__CHARTS_FILE:
-				return CHARTS_FILE_EDEFAULT == null ? chartsFile != null : !CHARTS_FILE_EDEFAULT.equals(chartsFile);
+				return chartsFile != null;
 			case configPackage.GSS_CONFIG_MONITORS__PLOT:
 				return plot != null && !plot.isEmpty();
 			case configPackage.GSS_CONFIG_MONITORS__ALARM_MSG:
@@ -320,22 +330,6 @@ public class GSSConfigMonitorsImpl extends MinimalEObjectImpl.Container implemen
 				return alarmVal != null && !alarmVal.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (ChartsFile: ");
-		result.append(chartsFile);
-		result.append(')');
-		return result.toString();
 	}
 
 } //GSSConfigMonitorsImpl

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="filters" nsURI="http://srg.aut.uah.es/gss/filters" nsPrefix="gss">
-  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterFilter" abstract="true" eSuperTypes="common.ecore#//GSSModelElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterMaxtermFilter" eSuperTypes="#//GSSFilterFilter">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="formatFile" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterFilter" abstract="true" eSuperTypes="common.ecore#//GSSModelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formatFile" lowerBound="1"
+        eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTcFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVar" upperBound="-1"
         eType="#//GSSFilterBoolVar" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarFromArrayItem" upperBound="-1"
@@ -13,20 +12,12 @@
         upperBound="-1" eType="#//GSSFilterBoolVarFromGroupedArrayItem" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarFDIC" upperBound="-1"
         eType="#//GSSFilterBoolVarFDIC" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterMaxtermFilter" eSuperTypes="#//GSSFilterFilter">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Maxterm" lowerBound="1"
         upperBound="10" eType="#//GSSFilterMaxterm" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSFilterMintermFilter" eSuperTypes="#//GSSFilterFilter">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="formatFile" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVar" upperBound="-1"
-        eType="#//GSSFilterBoolVar" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarFromArrayItem" upperBound="-1"
-        eType="#//GSSFilterBoolVarFromArrayItem" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarFromGroupedArrayItem"
-        upperBound="-1" eType="#//GSSFilterBoolVarFromGroupedArrayItem" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BoolVarFDIC" upperBound="-1"
-        eType="#//GSSFilterBoolVarFDIC" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Minterm" lowerBound="1"
         upperBound="10" eType="#//GSSFilterMinterm" containment="true"/>
   </eClassifiers>
@@ -43,7 +34,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="constantType" lowerBound="1"
         eType="#//GSSFilterConstantType" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="FieldRef" lowerBound="1"
-        eType="#//GSSFilterFieldRef" containment="true"/>
+        eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatField"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Op" lowerBound="1" eType="#//GSSFilterFieldOp"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Constant" eType="#//GSSFilterConstant"
@@ -52,9 +43,6 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="SelectLine" eType="#//GSSFilterSelectLine"
         containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterFieldRef">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSFilterOPType">
     <eLiterals name="equal"/>
@@ -100,7 +88,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="constantType" lowerBound="1"
         eType="#//GSSFilterConstantType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AIFieldRef" lowerBound="1"
-        eType="#//GSSFilterAIFieldRef" containment="true"/>
+        eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatAIField"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Op" lowerBound="1" eType="#//GSSFilterFieldOp"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Constant" eType="#//GSSFilterConstant"
@@ -109,10 +97,6 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="SelectLine" eType="#//GSSFilterSelectLine"
         containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterAIFieldRef">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="index" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSFilterBoolVarFromGroupedArrayItem">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -121,7 +105,7 @@
         eType="#//GSSFilterConstantType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="group" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AIFieldRefs" lowerBound="1"
-        eType="#//GSSFilterAIFieldRefs" containment="true"/>
+        eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatAField"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Op" lowerBound="1" eType="#//GSSFilterFieldOp"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Constant" eType="#//GSSFilterConstant"
@@ -131,14 +115,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="SelectLine" eType="#//GSSFilterSelectLine"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterAIFieldRefs">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSFilterBoolVarFDIC">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="FieldRef" lowerBound="1"
-        eType="#//GSSFilterFieldRef" containment="true"/>
+        eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatFDICField"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Op" lowerBound="1" eType="#//GSSFilterFieldOp"
         containment="true"/>
   </eClassifiers>

@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.config;
 
+import es.uah.aut.srg.gss.charts.GSSChartsChart;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigPlot#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigPlot#getChartRef <em>Chart Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigPlot#getGVFiltered <em>GV Filtered</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigPlot#getGVPeriodic <em>GV Periodic</em>}</li>
  * </ul>
@@ -56,6 +58,32 @@ public interface GSSConfigPlot extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Chart Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Chart Ref</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Chart Ref</em>' reference.
+	 * @see #setChartRef(GSSChartsChart)
+	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigPlot_ChartRef()
+	 * @model required="true"
+	 * @generated
+	 */
+	GSSChartsChart getChartRef();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPlot#getChartRef <em>Chart Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Chart Ref</em>' reference.
+	 * @see #getChartRef()
+	 * @generated
+	 */
+	void setChartRef(GSSChartsChart value);
 
 	/**
 	 * Returns the value of the '<em><b>GV Filtered</b></em>' containment reference.

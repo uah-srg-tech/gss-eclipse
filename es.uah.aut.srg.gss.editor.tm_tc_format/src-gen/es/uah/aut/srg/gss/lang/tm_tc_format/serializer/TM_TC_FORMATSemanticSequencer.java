@@ -19,19 +19,15 @@ import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatAIField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatArrayDimension;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatArrayRef;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatBytesBits;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatCSFormulaField;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatConstSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFDICField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldToCheck;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFloatingOffset;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFormula;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatGlobalOffset;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatLocalOffset;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatMaxSize;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatSortedFieldsToCheck;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTCFormat;
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVRFieldSize;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVSField;
 import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatVariableSize;
@@ -82,14 +78,33 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_ARRAY_REF:
 				sequence_GSSTmTcFormatArrayRef(context, (GSSTmTcFormatArrayRef) semanticObject); 
 				return; 
+			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_BYTES_BITS:
+				if (rule == grammarAccess.getGSSTmTcFormatConstSizeRule()) {
+					sequence_GSSTmTcFormatConstSize(context, (GSSTmTcFormatBytesBits) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getGSSTmTcFormatGlobalOffsetRule()) {
+					sequence_GSSTmTcFormatGlobalOffset(context, (GSSTmTcFormatBytesBits) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getGSSTmTcFormatLocalOffsetRule()) {
+					sequence_GSSTmTcFormatLocalOffset(context, (GSSTmTcFormatBytesBits) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getGSSTmTcFormatMaxSizeRule()) {
+					sequence_GSSTmTcFormatMaxSize(context, (GSSTmTcFormatBytesBits) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getGSSTmTcFormatSizeRule()) {
+					sequence_GSSTmTcFormatSize(context, (GSSTmTcFormatBytesBits) semanticObject); 
+					return; 
+				}
+				else break;
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FIELD:
 				sequence_GSSTmTcFormatCSField(context, (GSSTmTcFormatCSField) semanticObject); 
 				return; 
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CS_FORMULA_FIELD:
 				sequence_GSSTmTcFormatCSFormulaField(context, (GSSTmTcFormatCSFormulaField) semanticObject); 
-				return; 
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_CONST_SIZE:
-				sequence_GSSTmTcFormatConstSize(context, (GSSTmTcFormatConstSize) semanticObject); 
 				return; 
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FDIC_FIELD:
 				sequence_GSSTmTcFormatFDICField(context, (GSSTmTcFormatFDICField) semanticObject); 
@@ -103,23 +118,11 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_FORMULA:
 				sequence_GSSTmTcFormatFormula(context, (GSSTmTcFormatFormula) semanticObject); 
 				return; 
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_GLOBAL_OFFSET:
-				sequence_GSSTmTcFormatGlobalOffset(context, (GSSTmTcFormatGlobalOffset) semanticObject); 
-				return; 
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_LOCAL_OFFSET:
-				sequence_GSSTmTcFormatLocalOffset(context, (GSSTmTcFormatLocalOffset) semanticObject); 
-				return; 
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_MAX_SIZE:
-				sequence_GSSTmTcFormatMaxSize(context, (GSSTmTcFormatMaxSize) semanticObject); 
-				return; 
-			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_SIZE:
-				sequence_GSSTmTcFormatSize(context, (GSSTmTcFormatSize) semanticObject); 
-				return; 
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_SORTED_FIELDS_TO_CHECK:
 				sequence_GSSTmTcFormatSortedFieldsToCheck(context, (GSSTmTcFormatSortedFieldsToCheck) semanticObject); 
 				return; 
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_TM_TC_FORMAT:
-				sequence_GSSTmTcFormatTmTCFormat(context, (GSSTmTcFormatTmTCFormat) semanticObject); 
+				sequence_GSSTmTcFormatTmTcFormat(context, (GSSTmTcFormatTmTcFormat) semanticObject); 
 				return; 
 			case tm_tc_formatPackage.GSS_TM_TC_FORMAT_VR_FIELD_SIZE:
 				sequence_GSSTmTcFormatVRFieldSize(context, (GSSTmTcFormatVRFieldSize) semanticObject); 
@@ -140,7 +143,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     GSSModelFileImport returns GSSModelFileImport
 	 *
 	 * Constraint:
-	 *     importURI=ID
+	 *     importURI=STRING
 	 */
 	protected void sequence_GSSModelFileImport(ISerializationContext context, GSSModelFileImport semanticObject) {
 		if (errorAcceptor != null) {
@@ -148,7 +151,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, commonPackage.Literals.GSS_MODEL_FILE_IMPORT__IMPORT_URI));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_1_0(), semanticObject.getImportURI());
+		feeder.accept(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0(), semanticObject.getImportURI());
 		feeder.finish();
 	}
 	
@@ -158,7 +161,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     GSSModelFile returns GSSModelFile
 	 *
 	 * Constraint:
-	 *     (imports+=GSSModelFileImport* element=GSSTmTcFormatTmTCFormat)
+	 *     (imports+=GSSModelFileImport* element=GSSTmTcFormatTmTcFormat)
 	 */
 	protected void sequence_GSSModelFile(ISerializationContext context, GSSModelFile semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -173,14 +176,14 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     (
 	 *         fid=INTEGER 
 	 *         pfid=INTEGER 
-	 *         name=ID 
-	 *         description=ID? 
+	 *         name=STRING 
+	 *         description=STRING? 
 	 *         type=GSSTmTcFormatFieldType 
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
+	 *         arrayDimension=GSSTmTcFormatArrayDimension 
 	 *         size=GSSTmTcFormatSize 
-	 *         globalOffset=GSSTmTcFormatGlobalOffset 
-	 *         arrayDimension=GSSTmTcFormatArrayDimension
+	 *         globalOffset=GSSTmTcFormatGlobalOffset
 	 *     )
 	 */
 	protected void sequence_GSSTmTcFormatAField(ISerializationContext context, GSSTmTcFormatAField semanticObject) {
@@ -196,14 +199,14 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     (
 	 *         fid=INTEGER 
 	 *         pfid=INTEGER 
-	 *         name=ID 
-	 *         description=ID? 
+	 *         name=STRING 
+	 *         description=STRING? 
 	 *         type=GSSTmTcFormatFieldType 
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
+	 *         arrayRef=GSSTmTcFormatArrayRef 
 	 *         size=GSSTmTcFormatSize 
-	 *         localOffset=GSSTmTcFormatLocalOffset 
-	 *         arrayRef=GSSTmTcFormatArrayRef
+	 *         localOffset=GSSTmTcFormatLocalOffset
 	 *     )
 	 */
 	protected void sequence_GSSTmTcFormatAIField(ISerializationContext context, GSSTmTcFormatAIField semanticObject) {
@@ -252,14 +255,15 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
+	 *     GSSTmTcFormatField returns GSSTmTcFormatCSField
 	 *     GSSTmTcFormatCSField returns GSSTmTcFormatCSField
 	 *
 	 * Constraint:
 	 *     (
 	 *         fid=INTEGER 
 	 *         pfid=INTEGER 
-	 *         name=ID 
-	 *         description=ID? 
+	 *         name=STRING 
+	 *         description=STRING? 
 	 *         type=GSSTmTcFormatFieldType 
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
@@ -274,14 +278,15 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
+	 *     GSSTmTcFormatField returns GSSTmTcFormatCSFormulaField
 	 *     GSSTmTcFormatCSFormulaField returns GSSTmTcFormatCSFormulaField
 	 *
 	 * Constraint:
 	 *     (
 	 *         fid=INTEGER 
 	 *         pfid=INTEGER 
-	 *         name=ID 
-	 *         description=ID? 
+	 *         name=STRING 
+	 *         description=STRING? 
 	 *         type=GSSTmTcFormatFieldType 
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
@@ -297,17 +302,17 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
-	 *     GSSTmTcFormatConstSize returns GSSTmTcFormatConstSize
+	 *     GSSTmTcFormatConstSize returns GSSTmTcFormatBytesBits
 	 *
 	 * Constraint:
 	 *     (bytes=INTEGER bits=INTEGER)
 	 */
-	protected void sequence_GSSTmTcFormatConstSize(ISerializationContext context, GSSTmTcFormatConstSize semanticObject) {
+	protected void sequence_GSSTmTcFormatConstSize(ISerializationContext context, GSSTmTcFormatBytesBits semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_CONST_SIZE__BYTES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_CONST_SIZE__BYTES));
-			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_CONST_SIZE__BITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_CONST_SIZE__BITS));
+			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES));
+			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BITS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BITS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSTmTcFormatConstSizeAccess().getBytesINTEGERParserRuleCall_4_0(), semanticObject.getBytes());
@@ -318,14 +323,15 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
+	 *     GSSTmTcFormatField returns GSSTmTcFormatFDICField
 	 *     GSSTmTcFormatFDICField returns GSSTmTcFormatFDICField
 	 *
 	 * Constraint:
 	 *     (
 	 *         fid=INTEGER 
 	 *         pfid=INTEGER 
-	 *         name=ID 
-	 *         description=ID? 
+	 *         name=STRING 
+	 *         description=STRING? 
 	 *         checkType=GSSTmTcFormatCheckType 
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
@@ -380,7 +386,7 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     GSSTmTcFormatFormula returns GSSTmTcFormatFormula
 	 *
 	 * Constraint:
-	 *     (slope=REAL intercept=REAL)
+	 *     (slope=STRING intercept=STRING)
 	 */
 	protected void sequence_GSSTmTcFormatFormula(ISerializationContext context, GSSTmTcFormatFormula semanticObject) {
 		if (errorAcceptor != null) {
@@ -390,25 +396,25 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_FORMULA__INTERCEPT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSTmTcFormatFormulaAccess().getSlopeREALParserRuleCall_4_0(), semanticObject.getSlope());
-		feeder.accept(grammarAccess.getGSSTmTcFormatFormulaAccess().getInterceptREALParserRuleCall_8_0(), semanticObject.getIntercept());
+		feeder.accept(grammarAccess.getGSSTmTcFormatFormulaAccess().getSlopeSTRINGTerminalRuleCall_4_0(), semanticObject.getSlope());
+		feeder.accept(grammarAccess.getGSSTmTcFormatFormulaAccess().getInterceptSTRINGTerminalRuleCall_8_0(), semanticObject.getIntercept());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     GSSTmTcFormatGlobalOffset returns GSSTmTcFormatGlobalOffset
+	 *     GSSTmTcFormatGlobalOffset returns GSSTmTcFormatBytesBits
 	 *
 	 * Constraint:
 	 *     (bytes=INTEGER bits=INTEGER)
 	 */
-	protected void sequence_GSSTmTcFormatGlobalOffset(ISerializationContext context, GSSTmTcFormatGlobalOffset semanticObject) {
+	protected void sequence_GSSTmTcFormatGlobalOffset(ISerializationContext context, GSSTmTcFormatBytesBits semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_GLOBAL_OFFSET__BYTES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_GLOBAL_OFFSET__BYTES));
-			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_GLOBAL_OFFSET__BITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_GLOBAL_OFFSET__BITS));
+			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES));
+			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BITS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BITS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSTmTcFormatGlobalOffsetAccess().getBytesINTEGERParserRuleCall_4_0(), semanticObject.getBytes());
@@ -419,17 +425,17 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
-	 *     GSSTmTcFormatLocalOffset returns GSSTmTcFormatLocalOffset
+	 *     GSSTmTcFormatLocalOffset returns GSSTmTcFormatBytesBits
 	 *
 	 * Constraint:
 	 *     (bytes=INTEGER bits=INTEGER)
 	 */
-	protected void sequence_GSSTmTcFormatLocalOffset(ISerializationContext context, GSSTmTcFormatLocalOffset semanticObject) {
+	protected void sequence_GSSTmTcFormatLocalOffset(ISerializationContext context, GSSTmTcFormatBytesBits semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_LOCAL_OFFSET__BYTES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_LOCAL_OFFSET__BYTES));
-			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_LOCAL_OFFSET__BITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_LOCAL_OFFSET__BITS));
+			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES));
+			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BITS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BITS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSTmTcFormatLocalOffsetAccess().getBytesINTEGERParserRuleCall_4_0(), semanticObject.getBytes());
@@ -440,17 +446,17 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
-	 *     GSSTmTcFormatMaxSize returns GSSTmTcFormatMaxSize
+	 *     GSSTmTcFormatMaxSize returns GSSTmTcFormatBytesBits
 	 *
 	 * Constraint:
 	 *     (bytes=INTEGER bits=INTEGER)
 	 */
-	protected void sequence_GSSTmTcFormatMaxSize(ISerializationContext context, GSSTmTcFormatMaxSize semanticObject) {
+	protected void sequence_GSSTmTcFormatMaxSize(ISerializationContext context, GSSTmTcFormatBytesBits semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_MAX_SIZE__BYTES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_MAX_SIZE__BYTES));
-			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_MAX_SIZE__BITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_MAX_SIZE__BITS));
+			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES));
+			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BITS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BITS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSTmTcFormatMaxSizeAccess().getBytesINTEGERParserRuleCall_4_0(), semanticObject.getBytes());
@@ -461,17 +467,17 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
-	 *     GSSTmTcFormatSize returns GSSTmTcFormatSize
+	 *     GSSTmTcFormatSize returns GSSTmTcFormatBytesBits
 	 *
 	 * Constraint:
 	 *     (bytes=INTEGER bits=INTEGER)
 	 */
-	protected void sequence_GSSTmTcFormatSize(ISerializationContext context, GSSTmTcFormatSize semanticObject) {
+	protected void sequence_GSSTmTcFormatSize(ISerializationContext context, GSSTmTcFormatBytesBits semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_SIZE__BYTES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_SIZE__BYTES));
-			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_SIZE__BITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_SIZE__BITS));
+			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BYTES));
+			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BITS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_BYTES_BITS__BITS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSTmTcFormatSizeAccess().getBytesINTEGERParserRuleCall_4_0(), semanticObject.getBytes());
@@ -494,19 +500,19 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
-	 *     GSSTmTcFormatTmTCFormat returns GSSTmTcFormatTmTCFormat
+	 *     GSSTmTcFormatTmTcFormat returns GSSTmTcFormatTmTcFormat
 	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
 	 *         (
-	 *             ((uri=QualifiedName | version=Version | protocol=ID) (type=GSSTmTcFormatTmTCFormatType CSField+=GSSTmTcFormatCSField?)?)+ | 
+	 *             ((uri=QualifiedName | version=Version | protocol=ID) (type=GSSTmTcFormatTmTcFormatType CSField+=GSSTmTcFormatCSField?)?)+ | 
 	 *             (
-	 *                 type=GSSTmTcFormatTmTCFormatType 
+	 *                 type=GSSTmTcFormatTmTcFormatType 
 	 *                 CSField+=GSSTmTcFormatCSField? 
 	 *                 (
 	 *                     (
-	 *                         type=GSSTmTcFormatTmTCFormatType | 
+	 *                         type=GSSTmTcFormatTmTcFormatType | 
 	 *                         CSFormulaField+=GSSTmTcFormatCSFormulaField | 
 	 *                         VSField+=GSSTmTcFormatVSField | 
 	 *                         FDICField+=GSSTmTcFormatFDICField | 
@@ -516,57 +522,59 @@ public class TM_TC_FORMATSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *                     )? 
 	 *                     CSField+=GSSTmTcFormatCSField?
 	 *                 )* 
-	 *                 ((uri=QualifiedName | version=Version | protocol=ID) (type=GSSTmTcFormatTmTCFormatType CSField+=GSSTmTcFormatCSField?)?)+
+	 *                 ((uri=QualifiedName | version=Version | protocol=ID) (type=GSSTmTcFormatTmTcFormatType CSField+=GSSTmTcFormatCSField?)?)+
 	 *             )
 	 *         )?
 	 *     )
 	 */
-	protected void sequence_GSSTmTcFormatTmTCFormat(ISerializationContext context, GSSTmTcFormatTmTCFormat semanticObject) {
+	protected void sequence_GSSTmTcFormatTmTcFormat(ISerializationContext context, GSSTmTcFormatTmTcFormat semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
+	 *     GSSTmTcFormatField returns GSSTmTcFormatVRFieldSize
 	 *     GSSTmTcFormatVRFieldSize returns GSSTmTcFormatVRFieldSize
 	 *
 	 * Constraint:
-	 *     (fid=INTEGER pfid=INTEGER name=ID)
+	 *     (fid=INTEGER pfid=INTEGER name=STRING)
 	 */
 	protected void sequence_GSSTmTcFormatVRFieldSize(ISerializationContext context, GSSTmTcFormatVRFieldSize semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_VR_FIELD_SIZE__FID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_VR_FIELD_SIZE__FID));
-			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_VR_FIELD_SIZE__PFID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_VR_FIELD_SIZE__PFID));
-			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_VR_FIELD_SIZE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_VR_FIELD_SIZE__NAME));
+			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_FIELD__FID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_FIELD__FID));
+			if (transientValues.isValueTransient(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_FIELD__PFID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tm_tc_formatPackage.Literals.GSS_TM_TC_FORMAT_FIELD__PFID));
+			if (transientValues.isValueTransient(semanticObject, commonPackage.Literals.GSS_MODEL_OBJECT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, commonPackage.Literals.GSS_MODEL_OBJECT__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getFidINTEGERParserRuleCall_4_0(), semanticObject.getFid());
 		feeder.accept(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getPfidINTEGERParserRuleCall_8_0(), semanticObject.getPfid());
-		feeder.accept(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameIDTerminalRuleCall_12_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGSSTmTcFormatVRFieldSizeAccess().getNameSTRINGTerminalRuleCall_12_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
+	 *     GSSTmTcFormatField returns GSSTmTcFormatVSField
 	 *     GSSTmTcFormatVSField returns GSSTmTcFormatVSField
 	 *
 	 * Constraint:
 	 *     (
 	 *         fid=INTEGER 
 	 *         pfid=INTEGER 
-	 *         name=ID 
-	 *         description=ID? 
+	 *         name=STRING 
+	 *         description=STRING? 
 	 *         type=GSSTmTcFormatFieldType 
 	 *         byteOrder=GSSTmTcFormatFieldByteOrder 
 	 *         firstBit=GSSTmTcFormatSFieldFirstBit 
 	 *         constSize=GSSTmTcFormatConstSize 
-	 *         globalOffset=GSSTmTcFormatGlobalOffset 
+	 *         variableSize=GSSTmTcFormatVariableSize 
 	 *         maxSize=GSSTmTcFormatMaxSize 
-	 *         variableSize=GSSTmTcFormatVariableSize
+	 *         globalOffset=GSSTmTcFormatGlobalOffset
 	 *     )
 	 */
 	protected void sequence_GSSTmTcFormatVSField(ISerializationContext context, GSSTmTcFormatVSField semanticObject) {

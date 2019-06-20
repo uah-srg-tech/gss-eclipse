@@ -134,26 +134,6 @@ public class configAdapterFactory extends AdapterFactoryImpl {
 				return createGSSConfigLevelOutAdapter();
 			}
 			@Override
-			public Adapter caseGSSConfigTMFormat(GSSConfigTMFormat object) {
-				return createGSSConfigTMFormatAdapter();
-			}
-			@Override
-			public Adapter caseGSSConfigTCFormat(GSSConfigTCFormat object) {
-				return createGSSConfigTCFormatAdapter();
-			}
-			@Override
-			public Adapter caseGSSConfigInputFilter(GSSConfigInputFilter object) {
-				return createGSSConfigInputFilterAdapter();
-			}
-			@Override
-			public Adapter caseGSSConfigExportToPrevLevel(GSSConfigExportToPrevLevel object) {
-				return createGSSConfigExportToPrevLevelAdapter();
-			}
-			@Override
-			public Adapter caseGSSConfigImportFromPrevLevel(GSSConfigImportFromPrevLevel object) {
-				return createGSSConfigImportFromPrevLevelAdapter();
-			}
-			@Override
 			public Adapter caseGSSConfigSpecialPackets(GSSConfigSpecialPackets object) {
 				return createGSSConfigSpecialPacketsAdapter();
 			}
@@ -200,38 +180,6 @@ public class configAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGSSConfigPeriodicTCLevel0(GSSConfigPeriodicTCLevel0 object) {
 				return createGSSConfigPeriodicTCLevel0Adapter();
-			}
-			@Override
-			public Adapter caseGSSConfigLevel2(GSSConfigLevel2 object) {
-				return createGSSConfigLevel2Adapter();
-			}
-			@Override
-			public Adapter caseGSSConfigLevel1(GSSConfigLevel1 object) {
-				return createGSSConfigLevel1Adapter();
-			}
-			@Override
-			public Adapter caseGSSConfigLevel0(GSSConfigLevel0 object) {
-				return createGSSConfigLevel0Adapter();
-			}
-			@Override
-			public Adapter caseGSSConfigAppToLevel2(GSSConfigAppToLevel2 object) {
-				return createGSSConfigAppToLevel2Adapter();
-			}
-			@Override
-			public Adapter caseGSSConfigAppToLevel1(GSSConfigAppToLevel1 object) {
-				return createGSSConfigAppToLevel1Adapter();
-			}
-			@Override
-			public Adapter caseGSSConfigAppToLevel0(GSSConfigAppToLevel0 object) {
-				return createGSSConfigAppToLevel0Adapter();
-			}
-			@Override
-			public Adapter caseGSSConfigLevel2ToLevel1(GSSConfigLevel2ToLevel1 object) {
-				return createGSSConfigLevel2ToLevel1Adapter();
-			}
-			@Override
-			public Adapter caseGSSConfigLevel1ToLevel0(GSSConfigLevel1ToLevel0 object) {
-				return createGSSConfigLevel1ToLevel0Adapter();
 			}
 			@Override
 			public Adapter caseGSSConfigGlobalVars(GSSConfigGlobalVars object) {
@@ -440,72 +388,30 @@ public class configAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigTMFormat <em>GSS Config TM Format</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface <em>GSS Config Main Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigTMFormat
+	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterface
 	 * @generated
 	 */
-	public Adapter createGSSConfigTMFormatAdapter() {
+	public Adapter createGSSConfigMainInterfaceAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigTCFormat <em>GSS Config TC Format</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigInterface <em>GSS Config Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigTCFormat
+	 * @see es.uah.aut.srg.gss.config.GSSConfigInterface
 	 * @generated
 	 */
-	public Adapter createGSSConfigTCFormatAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigInputFilter <em>GSS Config Input Filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigInputFilter
-	 * @generated
-	 */
-	public Adapter createGSSConfigInputFilterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigExportToPrevLevel <em>GSS Config Export To Prev Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigExportToPrevLevel
-	 * @generated
-	 */
-	public Adapter createGSSConfigExportToPrevLevelAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigImportFromPrevLevel <em>GSS Config Import From Prev Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigImportFromPrevLevel
-	 * @generated
-	 */
-	public Adapter createGSSConfigImportFromPrevLevelAdapter() {
+	public Adapter createGSSConfigInterfaceAdapter() {
 		return null;
 	}
 
@@ -548,34 +454,6 @@ public class configAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSConfigLevelOutAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface <em>GSS Config Main Interface</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterface
-	 * @generated
-	 */
-	public Adapter createGSSConfigMainInterfaceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigInterface <em>GSS Config Interface</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigInterface
-	 * @generated
-	 */
-	public Adapter createGSSConfigInterfaceAdapter() {
 		return null;
 	}
 
@@ -702,118 +580,6 @@ public class configAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSConfigPeriodicTCsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigLevel2 <em>GSS Config Level2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel2
-	 * @generated
-	 */
-	public Adapter createGSSConfigLevel2Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigLevel1 <em>GSS Config Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel1
-	 * @generated
-	 */
-	public Adapter createGSSConfigLevel1Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigLevel0 <em>GSS Config Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel0
-	 * @generated
-	 */
-	public Adapter createGSSConfigLevel0Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigAppToLevel2 <em>GSS Config App To Level2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigAppToLevel2
-	 * @generated
-	 */
-	public Adapter createGSSConfigAppToLevel2Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigAppToLevel1 <em>GSS Config App To Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigAppToLevel1
-	 * @generated
-	 */
-	public Adapter createGSSConfigAppToLevel1Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigAppToLevel0 <em>GSS Config App To Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigAppToLevel0
-	 * @generated
-	 */
-	public Adapter createGSSConfigAppToLevel0Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigLevel2ToLevel1 <em>GSS Config Level2 To Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel2ToLevel1
-	 * @generated
-	 */
-	public Adapter createGSSConfigLevel2ToLevel1Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigLevel1ToLevel0 <em>GSS Config Level1 To Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigLevel1ToLevel0
-	 * @generated
-	 */
-	public Adapter createGSSConfigLevel1ToLevel0Adapter() {
 		return null;
 	}
 

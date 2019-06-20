@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.config.impl;
 
+import es.uah.aut.srg.gss.charts.GSSChartsChart;
 import es.uah.aut.srg.gss.config.GSSConfigGVFiltered;
 import es.uah.aut.srg.gss.config.GSSConfigGVPeriodic;
 import es.uah.aut.srg.gss.config.GSSConfigPlot;
@@ -33,6 +34,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigPlotImpl#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigPlotImpl#getChartRef <em>Chart Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigPlotImpl#getGVFiltered <em>GV Filtered</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigPlotImpl#getGVPeriodic <em>GV Periodic</em>}</li>
  * </ul>
@@ -59,6 +61,16 @@ public class GSSConfigPlotImpl extends MinimalEObjectImpl.Container implements G
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getChartRef() <em>Chart Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getChartRef()
+	 * @generated
+	 * @ordered
+	 */
+	protected GSSChartsChart chartRef;
 
 	/**
 	 * The cached value of the '{@link #getGVFiltered() <em>GV Filtered</em>}' containment reference.
@@ -118,6 +130,44 @@ public class GSSConfigPlotImpl extends MinimalEObjectImpl.Container implements G
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PLOT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSChartsChart getChartRef() {
+		if (chartRef != null && chartRef.eIsProxy()) {
+			InternalEObject oldChartRef = (InternalEObject)chartRef;
+			chartRef = (GSSChartsChart)eResolveProxy(oldChartRef);
+			if (chartRef != oldChartRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_PLOT__CHART_REF, oldChartRef, chartRef));
+			}
+		}
+		return chartRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSChartsChart basicGetChartRef() {
+		return chartRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setChartRef(GSSChartsChart newChartRef) {
+		GSSChartsChart oldChartRef = chartRef;
+		chartRef = newChartRef;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_PLOT__CHART_REF, oldChartRef, chartRef));
 	}
 
 	/**
@@ -232,6 +282,9 @@ public class GSSConfigPlotImpl extends MinimalEObjectImpl.Container implements G
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_PLOT__NAME:
 				return getName();
+			case configPackage.GSS_CONFIG_PLOT__CHART_REF:
+				if (resolve) return getChartRef();
+				return basicGetChartRef();
 			case configPackage.GSS_CONFIG_PLOT__GV_FILTERED:
 				return getGVFiltered();
 			case configPackage.GSS_CONFIG_PLOT__GV_PERIODIC:
@@ -250,6 +303,9 @@ public class GSSConfigPlotImpl extends MinimalEObjectImpl.Container implements G
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_PLOT__NAME:
 				setName((String)newValue);
+				return;
+			case configPackage.GSS_CONFIG_PLOT__CHART_REF:
+				setChartRef((GSSChartsChart)newValue);
 				return;
 			case configPackage.GSS_CONFIG_PLOT__GV_FILTERED:
 				setGVFiltered((GSSConfigGVFiltered)newValue);
@@ -272,6 +328,9 @@ public class GSSConfigPlotImpl extends MinimalEObjectImpl.Container implements G
 			case configPackage.GSS_CONFIG_PLOT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case configPackage.GSS_CONFIG_PLOT__CHART_REF:
+				setChartRef((GSSChartsChart)null);
+				return;
 			case configPackage.GSS_CONFIG_PLOT__GV_FILTERED:
 				setGVFiltered((GSSConfigGVFiltered)null);
 				return;
@@ -292,6 +351,8 @@ public class GSSConfigPlotImpl extends MinimalEObjectImpl.Container implements G
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_PLOT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case configPackage.GSS_CONFIG_PLOT__CHART_REF:
+				return chartRef != null;
 			case configPackage.GSS_CONFIG_PLOT__GV_FILTERED:
 				return gvFiltered != null;
 			case configPackage.GSS_CONFIG_PLOT__GV_PERIODIC:

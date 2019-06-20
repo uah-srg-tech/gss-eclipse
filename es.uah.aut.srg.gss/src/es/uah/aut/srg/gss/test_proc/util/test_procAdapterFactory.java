@@ -11,8 +11,8 @@
 package es.uah.aut.srg.gss.test_proc.util;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
-
 import es.uah.aut.srg.gss.common.GSSModelObject;
+
 import es.uah.aut.srg.gss.test_proc.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -99,20 +99,8 @@ public class test_procAdapterFactory extends AdapterFactoryImpl {
 				return createGSSTestProcSpecialPacketsAdapter();
 			}
 			@Override
-			public Adapter caseGSSTestProcEnable(GSSTestProcEnable object) {
-				return createGSSTestProcEnableAdapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcDisable(GSSTestProcDisable object) {
-				return createGSSTestProcDisableAdapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcEnablePrint(GSSTestProcEnablePrint object) {
-				return createGSSTestProcEnablePrintAdapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcDisablePrint(GSSTestProcDisablePrint object) {
-				return createGSSTestProcDisablePrintAdapter();
+			public Adapter caseGSSTestProcEnableDisable(GSSTestProcEnableDisable object) {
+				return createGSSTestProcEnableDisableAdapter();
 			}
 			@Override
 			public Adapter caseGSSTestProcConcurrentSteps(GSSTestProcConcurrentSteps object) {
@@ -125,6 +113,10 @@ public class test_procAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGSSTestProcConcurrentStep(GSSTestProcConcurrentStep object) {
 				return createGSSTestProcConcurrentStepAdapter();
+			}
+			@Override
+			public Adapter caseGSSTestProcInput(GSSTestProcInput object) {
+				return createGSSTestProcInputAdapter();
 			}
 			@Override
 			public Adapter caseGSSTestProcInputLevel3(GSSTestProcInputLevel3 object) {
@@ -141,50 +133,6 @@ public class test_procAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGSSTestProcInputLevel0(GSSTestProcInputLevel0 object) {
 				return createGSSTestProcInputLevel0Adapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcLevel3(GSSTestProcLevel3 object) {
-				return createGSSTestProcLevel3Adapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcLevel2(GSSTestProcLevel2 object) {
-				return createGSSTestProcLevel2Adapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcLevel1(GSSTestProcLevel1 object) {
-				return createGSSTestProcLevel1Adapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcLevel0(GSSTestProcLevel0 object) {
-				return createGSSTestProcLevel0Adapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcAppToLevel3(GSSTestProcAppToLevel3 object) {
-				return createGSSTestProcAppToLevel3Adapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcAppToLevel2(GSSTestProcAppToLevel2 object) {
-				return createGSSTestProcAppToLevel2Adapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcAppToLevel1(GSSTestProcAppToLevel1 object) {
-				return createGSSTestProcAppToLevel1Adapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcAppToLevel0(GSSTestProcAppToLevel0 object) {
-				return createGSSTestProcAppToLevel0Adapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcLevel3ToLevel2(GSSTestProcLevel3ToLevel2 object) {
-				return createGSSTestProcLevel3ToLevel2Adapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcLevel2ToLevel1(GSSTestProcLevel2ToLevel1 object) {
-				return createGSSTestProcLevel2ToLevel1Adapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcLevel1ToLevel0(GSSTestProcLevel1ToLevel0 object) {
-				return createGSSTestProcLevel1ToLevel0Adapter();
 			}
 			@Override
 			public Adapter caseGSSTestProcOutput(GSSTestProcOutput object) {
@@ -207,32 +155,8 @@ public class test_procAdapterFactory extends AdapterFactoryImpl {
 				return createGSSTestProcOutputLevel0Adapter();
 			}
 			@Override
-			public Adapter caseGSSTestProcLevel3Filter(GSSTestProcLevel3Filter object) {
-				return createGSSTestProcLevel3FilterAdapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcLevel2Filter(GSSTestProcLevel2Filter object) {
-				return createGSSTestProcLevel2FilterAdapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcLevel1Filter(GSSTestProcLevel1Filter object) {
-				return createGSSTestProcLevel1FilterAdapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcLevel0Filter(GSSTestProcLevel0Filter object) {
-				return createGSSTestProcLevel0FilterAdapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcLevel3FromLevel2(GSSTestProcLevel3FromLevel2 object) {
-				return createGSSTestProcLevel3FromLevel2Adapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcLevel2FromLevel1(GSSTestProcLevel2FromLevel1 object) {
-				return createGSSTestProcLevel2FromLevel1Adapter();
-			}
-			@Override
-			public Adapter caseGSSTestProcLevel1FromLevel0(GSSTestProcLevel1FromLevel0 object) {
-				return createGSSTestProcLevel1FromLevel0Adapter();
+			public Adapter caseGSSTestProcFilter(GSSTestProcFilter object) {
+				return createGSSTestProcFilterAdapter();
 			}
 			@Override
 			public Adapter caseGSSModelElement(GSSModelElement object) {
@@ -333,58 +257,16 @@ public class test_procAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcEnable <em>GSS Test Proc Enable</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcEnableDisable <em>GSS Test Proc Enable Disable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcEnable
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcEnableDisable
 	 * @generated
 	 */
-	public Adapter createGSSTestProcEnableAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcDisable <em>GSS Test Proc Disable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcDisable
-	 * @generated
-	 */
-	public Adapter createGSSTestProcDisableAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcEnablePrint <em>GSS Test Proc Enable Print</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcEnablePrint
-	 * @generated
-	 */
-	public Adapter createGSSTestProcEnablePrintAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcDisablePrint <em>GSS Test Proc Disable Print</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcDisablePrint
-	 * @generated
-	 */
-	public Adapter createGSSTestProcDisablePrintAdapter() {
+	public Adapter createGSSTestProcEnableDisableAdapter() {
 		return null;
 	}
 
@@ -427,6 +309,20 @@ public class test_procAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSTestProcConcurrentStepAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInput <em>GSS Test Proc Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInput
+	 * @generated
+	 */
+	public Adapter createGSSTestProcInputAdapter() {
 		return null;
 	}
 
@@ -483,160 +379,6 @@ public class test_procAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSTestProcInputLevel0Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3 <em>GSS Test Proc Level3</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3
-	 * @generated
-	 */
-	public Adapter createGSSTestProcLevel3Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2 <em>GSS Test Proc Level2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2
-	 * @generated
-	 */
-	public Adapter createGSSTestProcLevel2Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1 <em>GSS Test Proc Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1
-	 * @generated
-	 */
-	public Adapter createGSSTestProcLevel1Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0 <em>GSS Test Proc Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0
-	 * @generated
-	 */
-	public Adapter createGSSTestProcLevel0Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel3 <em>GSS Test Proc App To Level3</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel3
-	 * @generated
-	 */
-	public Adapter createGSSTestProcAppToLevel3Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel2 <em>GSS Test Proc App To Level2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel2
-	 * @generated
-	 */
-	public Adapter createGSSTestProcAppToLevel2Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel1 <em>GSS Test Proc App To Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel1
-	 * @generated
-	 */
-	public Adapter createGSSTestProcAppToLevel1Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel0 <em>GSS Test Proc App To Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAppToLevel0
-	 * @generated
-	 */
-	public Adapter createGSSTestProcAppToLevel0Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3ToLevel2 <em>GSS Test Proc Level3 To Level2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3ToLevel2
-	 * @generated
-	 */
-	public Adapter createGSSTestProcLevel3ToLevel2Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2ToLevel1 <em>GSS Test Proc Level2 To Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2ToLevel1
-	 * @generated
-	 */
-	public Adapter createGSSTestProcLevel2ToLevel1Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1ToLevel0 <em>GSS Test Proc Level1 To Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1ToLevel0
-	 * @generated
-	 */
-	public Adapter createGSSTestProcLevel1ToLevel0Adapter() {
 		return null;
 	}
 
@@ -711,100 +453,16 @@ public class test_procAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3Filter <em>GSS Test Proc Level3 Filter</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcFilter <em>GSS Test Proc Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3Filter
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcFilter
 	 * @generated
 	 */
-	public Adapter createGSSTestProcLevel3FilterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter <em>GSS Test Proc Level2 Filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2Filter
-	 * @generated
-	 */
-	public Adapter createGSSTestProcLevel2FilterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter <em>GSS Test Proc Level1 Filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1Filter
-	 * @generated
-	 */
-	public Adapter createGSSTestProcLevel1FilterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter <em>GSS Test Proc Level0 Filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel0Filter
-	 * @generated
-	 */
-	public Adapter createGSSTestProcLevel0FilterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3FromLevel2 <em>GSS Test Proc Level3 From Level2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel3FromLevel2
-	 * @generated
-	 */
-	public Adapter createGSSTestProcLevel3FromLevel2Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2FromLevel1 <em>GSS Test Proc Level2 From Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel2FromLevel1
-	 * @generated
-	 */
-	public Adapter createGSSTestProcLevel2FromLevel1Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1FromLevel0 <em>GSS Test Proc Level1 From Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcLevel1FromLevel0
-	 * @generated
-	 */
-	public Adapter createGSSTestProcLevel1FromLevel0Adapter() {
+	public Adapter createGSSTestProcFilterAdapter() {
 		return null;
 	}
 

@@ -11,6 +11,7 @@
 package es.uah.aut.srg.gss.tm_tc_format;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -30,7 +31,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface GSSTmTcFormatSortedFieldsToCheck extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Field To Check</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatFieldToCheck}.
@@ -46,4 +46,5 @@ public interface GSSTmTcFormatSortedFieldsToCheck extends EObject {
 	 * @generated
 	 */
 	EList<GSSTmTcFormatFieldToCheck> getFieldToCheck();
+
 } // GSSTmTcFormatSortedFieldsToCheck

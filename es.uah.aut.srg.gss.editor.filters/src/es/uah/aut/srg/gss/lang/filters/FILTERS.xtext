@@ -5,13 +5,15 @@ import "http://srg.aut.uah.es/gss/filters"
 import "http://srg.aut.uah.es/gss/common" as common 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
+import "http://srg.aut.uah.es/gss/tm_tc_format" as tm_tc_format
+
 GSSModelFile returns common::GSSModelFile:
 	(imports+=GSSModelFileImport)*
 	element=GSSFilterFilter
 ;
 
 GSSModelFileImport returns common::GSSModelFileImport: 
-	'import' ':=' importURI=ID ';'
+	'import' ':=' importURI=STRING ';'
 ;
 
 GSSFilterFilter returns GSSFilterFilter:
@@ -24,7 +26,7 @@ GSSFilterMaxtermFilter returns GSSFilterMaxtermFilter:
 	 '{'
 		(('uri' ':=' uri=QualifiedName ';')
 		& ('version' ':=' version=Version ';')
-		'formatFile' ':=' formatFile=ID ';'
+		'formatFile' ':=' formatFile=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 		((BoolVar+=GSSFilterBoolVar) | 
 			(BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem) |
 			(BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem) |
@@ -39,7 +41,7 @@ GSSFilterMintermFilter returns GSSFilterMintermFilter:
 	 '{'
 		(('uri' ':=' uri=QualifiedName ';')
 		& ('version' ':=' version=Version ';')
-		'formatFile' ':=' formatFile=ID ';'
+		'formatFile' ':=' formatFile=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
 		((BoolVar+=GSSFilterBoolVar) | 
 		 (BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem) |
 		 (BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem) |
@@ -53,7 +55,7 @@ GSSFilterBoolVar returns GSSFilterBoolVar:
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=ID ';'
 		'constantType' ':=' constantType=GSSFilterConstantType ';'
-		FieldRef=GSSFilterFieldRef
+		'FieldRef' ':=' FieldRef=[tm_tc_format::GSSTmTcFormatField|VersionedQualifiedReferenceName] ';'
 		Op=GSSFilterFieldOp
 		((Constant=GSSFilterConstant) |
 		 (Select=GSSFilterSelect) |
@@ -66,7 +68,7 @@ GSSFilterBoolVarFromArrayItem returns GSSFilterBoolVarFromArrayItem:
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=ID ';'
 		'constantType' ':=' constantType=GSSFilterConstantType ';'
-		AIFieldRef=GSSFilterAIFieldRef
+		'AIFieldRef' ':=' AIFieldRef=[tm_tc_format::GSSTmTcFormatAIField|VersionedQualifiedReferenceName] ';'
 		Op=GSSFilterFieldOp
 		((Constant=GSSFilterConstant) |
 		 (Select=GSSFilterSelect) |
@@ -80,7 +82,7 @@ GSSFilterBoolVarFromGroupedArrayItem returns GSSFilterBoolVarFromGroupedArrayIte
 		'name' ':=' name=ID ';'
 		'constantType' ':=' constantType=GSSFilterConstantType ';'
 		'group' ':=' group=EString ';'
-		AIFieldRefs=GSSFilterAIFieldRefs 
+		'AIFieldRefs' ':=' AIFieldRefs=[tm_tc_format::GSSTmTcFormatAField|VersionedQualifiedReferenceName] ';'
 		Op=GSSFilterFieldOp
 		((Constant=GSSFilterConstant) |
 		 (Select=GSSFilterSelect) |
@@ -92,7 +94,7 @@ GSSFilterBoolVarFDIC returns GSSFilterBoolVarFDIC:
 	'GSSFilterBoolVarFDIC' '{'
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=ID ';'
-		FieldRef=GSSFilterFieldRef
+		'FieldRef' ':=' FieldRef=[tm_tc_format::GSSTmTcFormatFDICField|VersionedQualifiedReferenceName] ';'
 		Op=GSSFilterFieldOp
 	'}' ';'
 ;
@@ -100,12 +102,6 @@ GSSFilterBoolVarFDIC returns GSSFilterBoolVarFDIC:
 enum GSSFilterConstantType returns GSSFilterConstantType:
 	decimal = 'decimal' | hex = 'hex' |
 	binary = 'binary' | char = 'char' | string = 'string'
-;
-
-GSSFilterFieldRef returns GSSFilterFieldRef:
-	'GSSFilterFieldRef' '{'
-		'name' ':=' name=ID ';'
-	'}' ';'
 ;
 
 GSSFilterFieldOp returns GSSFilterFieldOp:
@@ -154,18 +150,6 @@ enum GSSFilterSelectType returns GSSFilterSelectType:
 	data = 'data' | size = 'size' | crc = 'crc'
 ;
 
-GSSFilterAIFieldRef returns GSSFilterAIFieldRef:
-	'GSSFilterAIFieldRef' '{'
-		'index' ':=' index=INTEGER ';'
-	'}' ';'
-;
-
-GSSFilterAIFieldRefs returns GSSFilterAIFieldRefs:
-	'GSSFilterAIFieldRefs' '{'
-		'name' ':=' name=ID ';'
-	'}' ';'
-;
-
 GSSFilterMaxterm returns GSSFilterMaxterm:
 	'GSSFilterMaxterm' '{'
 		'id' ':=' id=INTEGER ';'
@@ -175,7 +159,7 @@ GSSFilterMaxterm returns GSSFilterMaxterm:
 
 GSSFilterMinterm returns GSSFilterMinterm:
 	'GSSFilterMinterm' '{'
-		'id' ':=' id=INTEGER
+		'id' ':=' id=INTEGER ';'
 		(BoolVarRef+=GSSFilterBoolVarRef)+ 
 	'}' ';'
 ;

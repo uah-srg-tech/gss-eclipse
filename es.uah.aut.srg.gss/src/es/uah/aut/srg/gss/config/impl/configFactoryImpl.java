@@ -79,11 +79,6 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 			case configPackage.GSS_CONFIG_LEVEL_IN_OUT: return createGSSConfigLevelInOut();
 			case configPackage.GSS_CONFIG_LEVEL_IN: return createGSSConfigLevelIn();
 			case configPackage.GSS_CONFIG_LEVEL_OUT: return createGSSConfigLevelOut();
-			case configPackage.GSS_CONFIG_TM_FORMAT: return createGSSConfigTMFormat();
-			case configPackage.GSS_CONFIG_TC_FORMAT: return createGSSConfigTCFormat();
-			case configPackage.GSS_CONFIG_INPUT_FILTER: return createGSSConfigInputFilter();
-			case configPackage.GSS_CONFIG_EXPORT_TO_PREV_LEVEL: return createGSSConfigExportToPrevLevel();
-			case configPackage.GSS_CONFIG_IMPORT_FROM_PREV_LEVEL: return createGSSConfigImportFromPrevLevel();
 			case configPackage.GSS_CONFIG_SPECIAL_PACKETS: return createGSSConfigSpecialPackets();
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET: return createGSSConfigSpecialPacket();
 			case configPackage.GSS_CONFIG_UPPER_LEVELS: return createGSSConfigUpperLevels();
@@ -96,14 +91,6 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL2: return createGSSConfigPeriodicTCLevel2();
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1: return createGSSConfigPeriodicTCLevel1();
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL0: return createGSSConfigPeriodicTCLevel0();
-			case configPackage.GSS_CONFIG_LEVEL2: return createGSSConfigLevel2();
-			case configPackage.GSS_CONFIG_LEVEL1: return createGSSConfigLevel1();
-			case configPackage.GSS_CONFIG_LEVEL0: return createGSSConfigLevel0();
-			case configPackage.GSS_CONFIG_APP_TO_LEVEL2: return createGSSConfigAppToLevel2();
-			case configPackage.GSS_CONFIG_APP_TO_LEVEL1: return createGSSConfigAppToLevel1();
-			case configPackage.GSS_CONFIG_APP_TO_LEVEL0: return createGSSConfigAppToLevel0();
-			case configPackage.GSS_CONFIG_LEVEL2_TO_LEVEL1: return createGSSConfigLevel2ToLevel1();
-			case configPackage.GSS_CONFIG_LEVEL1_TO_LEVEL0: return createGSSConfigLevel1ToLevel0();
 			case configPackage.GSS_CONFIG_GLOBAL_VARS: return createGSSConfigGlobalVars();
 			case configPackage.GSS_CONFIG_GLOBAL_VAR: return createGSSConfigGlobalVar();
 			case configPackage.GSS_CONFIG_REFERENCE_FIELD: return createGSSConfigReferenceField();
@@ -296,9 +283,9 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSConfigTMFormat createGSSConfigTMFormat() {
-		GSSConfigTMFormatImpl gssConfigTMFormat = new GSSConfigTMFormatImpl();
-		return gssConfigTMFormat;
+	public GSSConfigMainInterface createGSSConfigMainInterface() {
+		GSSConfigMainInterfaceImpl gssConfigMainInterface = new GSSConfigMainInterfaceImpl();
+		return gssConfigMainInterface;
 	}
 
 	/**
@@ -306,39 +293,9 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSConfigTCFormat createGSSConfigTCFormat() {
-		GSSConfigTCFormatImpl gssConfigTCFormat = new GSSConfigTCFormatImpl();
-		return gssConfigTCFormat;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigInputFilter createGSSConfigInputFilter() {
-		GSSConfigInputFilterImpl gssConfigInputFilter = new GSSConfigInputFilterImpl();
-		return gssConfigInputFilter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigExportToPrevLevel createGSSConfigExportToPrevLevel() {
-		GSSConfigExportToPrevLevelImpl gssConfigExportToPrevLevel = new GSSConfigExportToPrevLevelImpl();
-		return gssConfigExportToPrevLevel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigImportFromPrevLevel createGSSConfigImportFromPrevLevel() {
-		GSSConfigImportFromPrevLevelImpl gssConfigImportFromPrevLevel = new GSSConfigImportFromPrevLevelImpl();
-		return gssConfigImportFromPrevLevel;
+	public GSSConfigInterface createGSSConfigInterface() {
+		GSSConfigInterfaceImpl gssConfigInterface = new GSSConfigInterfaceImpl();
+		return gssConfigInterface;
 	}
 
 	/**
@@ -369,26 +326,6 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 	public GSSConfigLevelOut createGSSConfigLevelOut() {
 		GSSConfigLevelOutImpl gssConfigLevelOut = new GSSConfigLevelOutImpl();
 		return gssConfigLevelOut;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigMainInterface createGSSConfigMainInterface() {
-		GSSConfigMainInterfaceImpl gssConfigMainInterface = new GSSConfigMainInterfaceImpl();
-		return gssConfigMainInterface;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigInterface createGSSConfigInterface() {
-		GSSConfigInterfaceImpl gssConfigInterface = new GSSConfigInterfaceImpl();
-		return gssConfigInterface;
 	}
 
 	/**
@@ -479,86 +416,6 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 	public GSSConfigPeriodicTCs createGSSConfigPeriodicTCs() {
 		GSSConfigPeriodicTCsImpl gssConfigPeriodicTCs = new GSSConfigPeriodicTCsImpl();
 		return gssConfigPeriodicTCs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigLevel2 createGSSConfigLevel2() {
-		GSSConfigLevel2Impl gssConfigLevel2 = new GSSConfigLevel2Impl();
-		return gssConfigLevel2;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigLevel1 createGSSConfigLevel1() {
-		GSSConfigLevel1Impl gssConfigLevel1 = new GSSConfigLevel1Impl();
-		return gssConfigLevel1;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigLevel0 createGSSConfigLevel0() {
-		GSSConfigLevel0Impl gssConfigLevel0 = new GSSConfigLevel0Impl();
-		return gssConfigLevel0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigAppToLevel2 createGSSConfigAppToLevel2() {
-		GSSConfigAppToLevel2Impl gssConfigAppToLevel2 = new GSSConfigAppToLevel2Impl();
-		return gssConfigAppToLevel2;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigAppToLevel1 createGSSConfigAppToLevel1() {
-		GSSConfigAppToLevel1Impl gssConfigAppToLevel1 = new GSSConfigAppToLevel1Impl();
-		return gssConfigAppToLevel1;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigAppToLevel0 createGSSConfigAppToLevel0() {
-		GSSConfigAppToLevel0Impl gssConfigAppToLevel0 = new GSSConfigAppToLevel0Impl();
-		return gssConfigAppToLevel0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigLevel2ToLevel1 createGSSConfigLevel2ToLevel1() {
-		GSSConfigLevel2ToLevel1Impl gssConfigLevel2ToLevel1 = new GSSConfigLevel2ToLevel1Impl();
-		return gssConfigLevel2ToLevel1;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigLevel1ToLevel0 createGSSConfigLevel1ToLevel0() {
-		GSSConfigLevel1ToLevel0Impl gssConfigLevel1ToLevel0 = new GSSConfigLevel1ToLevel0Impl();
-		return gssConfigLevel1ToLevel0;
 	}
 
 	/**

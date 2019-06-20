@@ -64,58 +64,6 @@ public interface GSSTestProcStep extends GSSModelObject {
 	void setId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Prev step idref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Prev step idref</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prev step idref</em>' reference.
-	 * @see #setPrev_step_idref(GSSTestProcStep)
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcStep_Prev_step_idref()
-	 * @model
-	 * @generated
-	 */
-	GSSTestProcStep getPrev_step_idref();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getPrev_step_idref <em>Prev step idref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prev step idref</em>' reference.
-	 * @see #getPrev_step_idref()
-	 * @generated
-	 */
-	void setPrev_step_idref(GSSTestProcStep value);
-
-	/**
-	 * Returns the value of the '<em><b>Output idref from prev step</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Output idref from prev step</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Output idref from prev step</em>' reference.
-	 * @see #setOutput_idref_from_prev_step(GSSTestProcOutput)
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcStep_Output_idref_from_prev_step()
-	 * @model
-	 * @generated
-	 */
-	GSSTestProcOutput getOutput_idref_from_prev_step();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getOutput_idref_from_prev_step <em>Output idref from prev step</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Output idref from prev step</em>' reference.
-	 * @see #getOutput_idref_from_prev_step()
-	 * @generated
-	 */
-	void setOutput_idref_from_prev_step(GSSTestProcOutput value);
-
-	/**
 	 * Returns the value of the '<em><b>Mode</b></em>' attribute.
 	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.test_proc.GSSTestProcMode}.
 	 * <!-- begin-user-doc -->
@@ -198,10 +146,62 @@ public interface GSSTestProcStep extends GSSModelObject {
 	void setReplays(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Prev step idref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Prev step idref</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prev step idref</em>' reference.
+	 * @see #setPrev_step_idref(GSSTestProcStep)
+	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcStep_Prev_step_idref()
+	 * @model
+	 * @generated
+	 */
+	GSSTestProcStep getPrev_step_idref();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getPrev_step_idref <em>Prev step idref</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Prev step idref</em>' reference.
+	 * @see #getPrev_step_idref()
+	 * @generated
+	 */
+	void setPrev_step_idref(GSSTestProcStep value);
+
+	/**
+	 * Returns the value of the '<em><b>Output idref from prev step</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Output idref from prev step</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Output idref from prev step</em>' reference.
+	 * @see #setOutput_idref_from_prev_step(GSSTestProcOutput)
+	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcStep_Output_idref_from_prev_step()
+	 * @model
+	 * @generated
+	 */
+	GSSTestProcOutput getOutput_idref_from_prev_step();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getOutput_idref_from_prev_step <em>Output idref from prev step</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Output idref from prev step</em>' reference.
+	 * @see #getOutput_idref_from_prev_step()
+	 * @generated
+	 */
+	void setOutput_idref_from_prev_step(GSSTestProcOutput value);
+
+	/**
 	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Inputs</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Inputs</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -227,7 +227,7 @@ public interface GSSTestProcStep extends GSSModelObject {
 	 * Returns the value of the '<em><b>Outputs</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Outputs</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Outputs</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -253,7 +253,7 @@ public interface GSSTestProcStep extends GSSModelObject {
 	 * Returns the value of the '<em><b>Special Packets</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Special Packets</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Special Packets</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -279,7 +279,7 @@ public interface GSSTestProcStep extends GSSModelObject {
 	 * Returns the value of the '<em><b>Concurrent steps</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Concurrent steps</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Concurrent steps</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

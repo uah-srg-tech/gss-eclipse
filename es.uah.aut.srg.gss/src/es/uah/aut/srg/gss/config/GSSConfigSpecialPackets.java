@@ -11,6 +11,7 @@
 package es.uah.aut.srg.gss.config;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -35,7 +36,7 @@ public interface GSSConfigSpecialPackets extends EObject {
 	 * The list contents are of type {@link es.uah.aut.srg.gss.config.GSSConfigSpecialPacket}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Special Packet</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Special Packet</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

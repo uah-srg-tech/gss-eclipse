@@ -12,6 +12,7 @@ package es.uah.aut.srg.gss.config.impl;
 
 import es.uah.aut.srg.gss.config.GSSConfigGSSInfo;
 import es.uah.aut.srg.gss.config.configPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;

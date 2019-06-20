@@ -68,14 +68,14 @@ public class CHARTSSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSChartsChart returns GSSChartsChart
 	 *
 	 * Constraint:
-	 *     (id=INTEGER name=ID y_units=GSSChartsYUnits y_max=INTEGER)
+	 *     (id=INTEGER name=STRING y_units=GSSChartsYUnits y_max=INTEGER)
 	 */
 	protected void sequence_GSSChartsChart(ISerializationContext context, GSSChartsChart semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, chartsPackage.Literals.GSS_CHARTS_CHART__ID) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, chartsPackage.Literals.GSS_CHARTS_CHART__ID));
-			if (transientValues.isValueTransient(semanticObject, chartsPackage.Literals.GSS_CHARTS_CHART__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, chartsPackage.Literals.GSS_CHARTS_CHART__NAME));
+			if (transientValues.isValueTransient(semanticObject, commonPackage.Literals.GSS_MODEL_OBJECT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, commonPackage.Literals.GSS_MODEL_OBJECT__NAME));
 			if (transientValues.isValueTransient(semanticObject, chartsPackage.Literals.GSS_CHARTS_CHART__YUNITS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, chartsPackage.Literals.GSS_CHARTS_CHART__YUNITS));
 			if (transientValues.isValueTransient(semanticObject, chartsPackage.Literals.GSS_CHARTS_CHART__YMAX) == ValueTransient.YES)
@@ -83,7 +83,7 @@ public class CHARTSSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSChartsChartAccess().getIdINTEGERParserRuleCall_4_0(), semanticObject.getId());
-		feeder.accept(grammarAccess.getGSSChartsChartAccess().getNameIDTerminalRuleCall_8_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGSSChartsChartAccess().getNameSTRINGTerminalRuleCall_8_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getGSSChartsChartAccess().getY_unitsGSSChartsYUnitsEnumRuleCall_12_0(), semanticObject.getY_units());
 		feeder.accept(grammarAccess.getGSSChartsChartAccess().getY_maxINTEGERParserRuleCall_16_0(), semanticObject.getY_max());
 		feeder.finish();
@@ -95,7 +95,7 @@ public class CHARTSSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSChartsCharts returns GSSChartsCharts
 	 *
 	 * Constraint:
-	 *     (name=EString (uri=QualifiedName | version=Version)+ Chart+=GSSChartsChart+)
+	 *     (name=ID (uri=QualifiedName | version=Version)+ Chart+=GSSChartsChart+)
 	 */
 	protected void sequence_GSSChartsCharts(ISerializationContext context, GSSChartsCharts semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -107,7 +107,7 @@ public class CHARTSSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSModelFileImport returns GSSModelFileImport
 	 *
 	 * Constraint:
-	 *     importURI=ID
+	 *     importURI=STRING
 	 */
 	protected void sequence_GSSModelFileImport(ISerializationContext context, GSSModelFileImport semanticObject) {
 		if (errorAcceptor != null) {
@@ -115,7 +115,7 @@ public class CHARTSSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, commonPackage.Literals.GSS_MODEL_FILE_IMPORT__IMPORT_URI));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0(), semanticObject.getImportURI());
+		feeder.accept(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0(), semanticObject.getImportURI());
 		feeder.finish();
 	}
 	

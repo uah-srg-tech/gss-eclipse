@@ -18,7 +18,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,12 +28,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingFromSizeImpl#getSizeRef <em>Size Ref</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingFromSizeImpl#getToFieldRef <em>To Field Ref</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSExportSettingFromSizeImpl extends MinimalEObjectImpl.Container implements GSSExportSettingFromSize {
+public class GSSExportSettingFromSizeImpl extends GSSExportSettingImpl implements GSSExportSettingFromSize {
 	/**
 	 * The default value of the '{@link #getSizeRef() <em>Size Ref</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -54,26 +52,6 @@ public class GSSExportSettingFromSizeImpl extends MinimalEObjectImpl.Container i
 	 * @ordered
 	 */
 	protected String sizeRef = SIZE_REF_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getToFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TO_FIELD_REF_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getToFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected String toFieldRef = TO_FIELD_REF_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,34 +98,11 @@ public class GSSExportSettingFromSizeImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getToFieldRef() {
-		return toFieldRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setToFieldRef(String newToFieldRef) {
-		String oldToFieldRef = toFieldRef;
-		toFieldRef = newToFieldRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF, oldToFieldRef, toFieldRef));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__SIZE_REF:
 				return getSizeRef();
-			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF:
-				return getToFieldRef();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -162,9 +117,6 @@ public class GSSExportSettingFromSizeImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__SIZE_REF:
 				setSizeRef((String)newValue);
-				return;
-			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF:
-				setToFieldRef((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -181,9 +133,6 @@ public class GSSExportSettingFromSizeImpl extends MinimalEObjectImpl.Container i
 			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__SIZE_REF:
 				setSizeRef(SIZE_REF_EDEFAULT);
 				return;
-			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF:
-				setToFieldRef(TO_FIELD_REF_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -198,8 +147,6 @@ public class GSSExportSettingFromSizeImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__SIZE_REF:
 				return SIZE_REF_EDEFAULT == null ? sizeRef != null : !SIZE_REF_EDEFAULT.equals(sizeRef);
-			case exportPackage.GSS_EXPORT_SETTING_FROM_SIZE__TO_FIELD_REF:
-				return TO_FIELD_REF_EDEFAULT == null ? toFieldRef != null : !TO_FIELD_REF_EDEFAULT.equals(toFieldRef);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -216,8 +163,6 @@ public class GSSExportSettingFromSizeImpl extends MinimalEObjectImpl.Container i
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (sizeRef: ");
 		result.append(sizeRef);
-		result.append(", toFieldRef: ");
-		result.append(toFieldRef);
 		result.append(')');
 		return result.toString();
 	}

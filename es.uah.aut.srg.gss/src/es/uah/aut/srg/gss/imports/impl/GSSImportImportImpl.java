@@ -17,15 +17,20 @@ import es.uah.aut.srg.gss.imports.GSSImportImport;
 import es.uah.aut.srg.gss.imports.GSSImportVirtualSize;
 import es.uah.aut.srg.gss.imports.importsPackage;
 
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -47,44 +52,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class GSSImportImportImpl extends GSSModelElementImpl implements GSSImportImport {
 	/**
-	 * The default value of the '{@link #getFrom() <em>From</em>}' attribute.
+	 * The cached value of the '{@link #getFrom() <em>From</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFrom()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FROM_EDEFAULT = null;
+	protected GSSTmTcFormatTmTcFormat from;
 
 	/**
-	 * The cached value of the '{@link #getFrom() <em>From</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFrom()
-	 * @generated
-	 * @ordered
-	 */
-	protected String from = FROM_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTo() <em>To</em>}' attribute.
+	 * The cached value of the '{@link #getTo() <em>To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTo()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TO_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTo() <em>To</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTo()
-	 * @generated
-	 * @ordered
-	 */
-	protected String to = TO_EDEFAULT;
+	protected GSSTmTcFormatTmTcFormat to;
 
 	/**
 	 * The cached value of the '{@link #getDataSource() <em>Data Source</em>}' containment reference list.
@@ -130,7 +115,15 @@ public class GSSImportImportImpl extends GSSModelElementImpl implements GSSImpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFrom() {
+	public GSSTmTcFormatTmTcFormat getFrom() {
+		if (from != null && from.eIsProxy()) {
+			InternalEObject oldFrom = (InternalEObject)from;
+			from = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldFrom);
+			if (from != oldFrom) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, importsPackage.GSS_IMPORT_IMPORT__FROM, oldFrom, from));
+			}
+		}
 		return from;
 	}
 
@@ -139,8 +132,17 @@ public class GSSImportImportImpl extends GSSModelElementImpl implements GSSImpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFrom(String newFrom) {
-		String oldFrom = from;
+	public GSSTmTcFormatTmTcFormat basicGetFrom() {
+		return from;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFrom(GSSTmTcFormatTmTcFormat newFrom) {
+		GSSTmTcFormatTmTcFormat oldFrom = from;
 		from = newFrom;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, importsPackage.GSS_IMPORT_IMPORT__FROM, oldFrom, from));
@@ -151,7 +153,15 @@ public class GSSImportImportImpl extends GSSModelElementImpl implements GSSImpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTo() {
+	public GSSTmTcFormatTmTcFormat getTo() {
+		if (to != null && to.eIsProxy()) {
+			InternalEObject oldTo = (InternalEObject)to;
+			to = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldTo);
+			if (to != oldTo) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, importsPackage.GSS_IMPORT_IMPORT__TO, oldTo, to));
+			}
+		}
 		return to;
 	}
 
@@ -160,8 +170,17 @@ public class GSSImportImportImpl extends GSSModelElementImpl implements GSSImpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTo(String newTo) {
-		String oldTo = to;
+	public GSSTmTcFormatTmTcFormat basicGetTo() {
+		return to;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTo(GSSTmTcFormatTmTcFormat newTo) {
+		GSSTmTcFormatTmTcFormat oldTo = to;
 		to = newTo;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, importsPackage.GSS_IMPORT_IMPORT__TO, oldTo, to));
@@ -247,9 +266,11 @@ public class GSSImportImportImpl extends GSSModelElementImpl implements GSSImpor
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case importsPackage.GSS_IMPORT_IMPORT__FROM:
-				return getFrom();
+				if (resolve) return getFrom();
+				return basicGetFrom();
 			case importsPackage.GSS_IMPORT_IMPORT__TO:
-				return getTo();
+				if (resolve) return getTo();
+				return basicGetTo();
 			case importsPackage.GSS_IMPORT_IMPORT__DATA_SOURCE:
 				return getDataSource();
 			case importsPackage.GSS_IMPORT_IMPORT__VIRTUAL_SIZE:
@@ -268,10 +289,10 @@ public class GSSImportImportImpl extends GSSModelElementImpl implements GSSImpor
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case importsPackage.GSS_IMPORT_IMPORT__FROM:
-				setFrom((String)newValue);
+				setFrom((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case importsPackage.GSS_IMPORT_IMPORT__TO:
-				setTo((String)newValue);
+				setTo((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case importsPackage.GSS_IMPORT_IMPORT__DATA_SOURCE:
 				getDataSource().clear();
@@ -293,10 +314,10 @@ public class GSSImportImportImpl extends GSSModelElementImpl implements GSSImpor
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case importsPackage.GSS_IMPORT_IMPORT__FROM:
-				setFrom(FROM_EDEFAULT);
+				setFrom((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case importsPackage.GSS_IMPORT_IMPORT__TO:
-				setTo(TO_EDEFAULT);
+				setTo((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case importsPackage.GSS_IMPORT_IMPORT__DATA_SOURCE:
 				getDataSource().clear();
@@ -317,33 +338,15 @@ public class GSSImportImportImpl extends GSSModelElementImpl implements GSSImpor
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case importsPackage.GSS_IMPORT_IMPORT__FROM:
-				return FROM_EDEFAULT == null ? from != null : !FROM_EDEFAULT.equals(from);
+				return from != null;
 			case importsPackage.GSS_IMPORT_IMPORT__TO:
-				return TO_EDEFAULT == null ? to != null : !TO_EDEFAULT.equals(to);
+				return to != null;
 			case importsPackage.GSS_IMPORT_IMPORT__DATA_SOURCE:
 				return dataSource != null && !dataSource.isEmpty();
 			case importsPackage.GSS_IMPORT_IMPORT__VIRTUAL_SIZE:
 				return virtualSize != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (from: ");
-		result.append(from);
-		result.append(", to: ");
-		result.append(to);
-		result.append(')');
-		return result.toString();
 	}
 
 } //GSSImportImportImpl

@@ -69,9 +69,11 @@ public interface GSSConfigPeriod extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Min unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigUnit
+	 * @see #isSetMin_unit()
+	 * @see #unsetMin_unit()
 	 * @see #setMin_unit(GSSConfigUnit)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigPeriod_Min_unit()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigUnit getMin_unit();
@@ -82,10 +84,35 @@ public interface GSSConfigPeriod extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Min unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigUnit
+	 * @see #isSetMin_unit()
+	 * @see #unsetMin_unit()
 	 * @see #getMin_unit()
 	 * @generated
 	 */
 	void setMin_unit(GSSConfigUnit value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriod#getMin_unit <em>Min unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetMin_unit()
+	 * @see #getMin_unit()
+	 * @see #setMin_unit(GSSConfigUnit)
+	 * @generated
+	 */
+	void unsetMin_unit();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriod#getMin_unit <em>Min unit</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Min unit</em>' attribute is set.
+	 * @see #unsetMin_unit()
+	 * @see #getMin_unit()
+	 * @see #setMin_unit(GSSConfigUnit)
+	 * @generated
+	 */
+	boolean isSetMin_unit();
 
 	/**
 	 * Returns the value of the '<em><b>Max value</b></em>' attribute.
@@ -124,9 +151,11 @@ public interface GSSConfigPeriod extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigUnit
+	 * @see #isSetMax_unit()
+	 * @see #unsetMax_unit()
 	 * @see #setMax_unit(GSSConfigUnit)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigPeriod_Max_unit()
-	 * @model required="true"
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
 	GSSConfigUnit getMax_unit();
@@ -137,9 +166,34 @@ public interface GSSConfigPeriod extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Max unit</em>' attribute.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigUnit
+	 * @see #isSetMax_unit()
+	 * @see #unsetMax_unit()
 	 * @see #getMax_unit()
 	 * @generated
 	 */
 	void setMax_unit(GSSConfigUnit value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriod#getMax_unit <em>Max unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetMax_unit()
+	 * @see #getMax_unit()
+	 * @see #setMax_unit(GSSConfigUnit)
+	 * @generated
+	 */
+	void unsetMax_unit();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigPeriod#getMax_unit <em>Max unit</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Max unit</em>' attribute is set.
+	 * @see #unsetMax_unit()
+	 * @see #getMax_unit()
+	 * @see #setMax_unit(GSSConfigUnit)
+	 * @generated
+	 */
+	boolean isSetMax_unit();
 
 } // GSSConfigPeriod

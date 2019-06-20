@@ -151,15 +151,11 @@ ruleGSSModelFileImport returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getGSSModelFileImportAccess().getImportKeyword_0());
 		}
-		otherlv_1=':='
-		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1());
-		}
 		(
 			(
-				lv_importURI_2_0=RULE_ID
+				lv_importURI_1_0=RULE_STRING
 				{
-					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0());
+					newLeafNode(lv_importURI_1_0, grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -168,14 +164,14 @@ ruleGSSModelFileImport returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"importURI",
-						lv_importURI_2_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						lv_importURI_1_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
-		otherlv_3=';'
+		otherlv_2=';'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_3());
+			newLeafNode(otherlv_2, grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_2());
 		}
 	)
 ;
@@ -212,20 +208,19 @@ ruleGSSProtocolPacketsProtocolPackets returns [EObject current=null]
 		}
 		(
 			(
+				lv_name_1_0=RULE_ID
 				{
-					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getNameEStringParserRuleCall_1_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getGSSProtocolPacketsProtocolPacketsAccess().getNameIDTerminalRuleCall_1_0());
 				}
-				lv_name_1_0=ruleEString
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSProtocolPacketsProtocolPacketsRule());
+						$current = createModelElement(grammarAccess.getGSSProtocolPacketsProtocolPacketsRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"name",
 						lv_name_1_0,
-						"es.uah.aut.srg.gss.lang.protocol_packets.PROTOCOL_PACKETS.EString");
-					afterParserOrEnumRuleCall();
+						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
@@ -399,9 +394,9 @@ ruleGSSProtocolPacketsProtocolPacket returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_4_0=RULE_ID
+				lv_name_4_0=RULE_STRING
 				{
-					newLeafNode(lv_name_4_0, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameIDTerminalRuleCall_4_0());
+					newLeafNode(lv_name_4_0, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getNameSTRINGTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -411,7 +406,7 @@ ruleGSSProtocolPacketsProtocolPacket returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_4_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -481,215 +476,75 @@ ruleGSSProtocolPacketsProtocolPacket returns [EObject current=null]
 		{
 			newLeafNode(otherlv_13, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_13());
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSProtocolPacketsExportParserRuleCall_14_0());
-				}
-				lv_export_14_0=ruleGSSProtocolPacketsExport
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSProtocolPacketsProtocolPacketRule());
-					}
-					set(
-						$current,
-						"export",
-						lv_export_14_0,
-						"es.uah.aut.srg.gss.lang.protocol_packets.PROTOCOL_PACKETS.GSSProtocolPacketsExport");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSProtocolPacketsFormatParserRuleCall_15_0());
-				}
-				lv_format_15_0=ruleGSSProtocolPacketsFormat
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSProtocolPacketsProtocolPacketRule());
-					}
-					set(
-						$current,
-						"format",
-						lv_format_15_0,
-						"es.uah.aut.srg.gss.lang.protocol_packets.PROTOCOL_PACKETS.GSSProtocolPacketsFormat");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_16='}'
+		otherlv_14='export'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getRightCurlyBracketKeyword_16());
+			newLeafNode(otherlv_14, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportKeyword_14());
 		}
+		otherlv_15=':='
+		{
+			newLeafNode(otherlv_15, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getColonEqualsSignKeyword_15());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getGSSProtocolPacketsProtocolPacketRule());
+					}
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportCrossReference_16_0());
+				}
+				ruleVersionedQualifiedName
+				{
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 		otherlv_17=';'
 		{
 			newLeafNode(otherlv_17, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_17());
 		}
-	)
-;
-
-// Entry rule entryRuleGSSProtocolPacketsExport
-entryRuleGSSProtocolPacketsExport returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSProtocolPacketsExportRule()); }
-	iv_ruleGSSProtocolPacketsExport=ruleGSSProtocolPacketsExport
-	{ $current=$iv_ruleGSSProtocolPacketsExport.current; }
-	EOF;
-
-// Rule GSSProtocolPacketsExport
-ruleGSSProtocolPacketsExport returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='GSSProtocolPacketsExport'
+		otherlv_18='format'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSProtocolPacketsExportAccess().getGSSProtocolPacketsExportKeyword_0());
+			newLeafNode(otherlv_18, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatKeyword_18());
 		}
-		otherlv_1='{'
+		otherlv_19=':='
 		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSProtocolPacketsExportAccess().getLeftCurlyBracketKeyword_1());
-		}
-		otherlv_2='file'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSProtocolPacketsExportAccess().getFileKeyword_2());
-		}
-		otherlv_3=':='
-		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSProtocolPacketsExportAccess().getColonEqualsSignKeyword_3());
+			newLeafNode(otherlv_19, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getColonEqualsSignKeyword_19());
 		}
 		(
 			(
-				lv_file_4_0=RULE_ID
 				{
-					newLeafNode(lv_file_4_0, grammarAccess.getGSSProtocolPacketsExportAccess().getFileIDTerminalRuleCall_4_0());
+					/* */
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGSSProtocolPacketsExportRule());
+						$current = createModelElement(grammarAccess.getGSSProtocolPacketsProtocolPacketRule());
 					}
-					setWithLastConsumed(
-						$current,
-						"file",
-						lv_file_4_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTcFormatCrossReference_20_0());
+				}
+				ruleVersionedQualifiedName
+				{
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_5=';'
+		otherlv_21=';'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSProtocolPacketsExportAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_21, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_21());
 		}
-		otherlv_6='}'
+		otherlv_22='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSProtocolPacketsExportAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_22, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getRightCurlyBracketKeyword_22());
 		}
-		otherlv_7=';'
+		otherlv_23=';'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSProtocolPacketsExportAccess().getSemicolonKeyword_7());
-		}
-	)
-;
-
-// Entry rule entryRuleGSSProtocolPacketsFormat
-entryRuleGSSProtocolPacketsFormat returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSProtocolPacketsFormatRule()); }
-	iv_ruleGSSProtocolPacketsFormat=ruleGSSProtocolPacketsFormat
-	{ $current=$iv_ruleGSSProtocolPacketsFormat.current; }
-	EOF;
-
-// Rule GSSProtocolPacketsFormat
-ruleGSSProtocolPacketsFormat returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='GSSProtocolPacketsFormat'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSProtocolPacketsFormatAccess().getGSSProtocolPacketsFormatKeyword_0());
-		}
-		otherlv_1='{'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSProtocolPacketsFormatAccess().getLeftCurlyBracketKeyword_1());
-		}
-		otherlv_2='file'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSProtocolPacketsFormatAccess().getFileKeyword_2());
-		}
-		otherlv_3=':='
-		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSProtocolPacketsFormatAccess().getColonEqualsSignKeyword_3());
-		}
-		(
-			(
-				lv_file_4_0=RULE_ID
-				{
-					newLeafNode(lv_file_4_0, grammarAccess.getGSSProtocolPacketsFormatAccess().getFileIDTerminalRuleCall_4_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGSSProtocolPacketsFormatRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"file",
-						lv_file_4_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-		otherlv_5=';'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSProtocolPacketsFormatAccess().getSemicolonKeyword_5());
-		}
-		otherlv_6='}'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSProtocolPacketsFormatAccess().getRightCurlyBracketKeyword_6());
-		}
-		otherlv_7=';'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSProtocolPacketsFormatAccess().getSemicolonKeyword_7());
-		}
-	)
-;
-
-// Entry rule entryRuleEString
-entryRuleEString returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getEStringRule()); }
-	iv_ruleEString=ruleEString
-	{ $current=$iv_ruleEString.current.getText(); }
-	EOF;
-
-// Rule EString
-ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		this_STRING_0=RULE_STRING
-		{
-			$current.merge(this_STRING_0);
-		}
-		{
-			newLeafNode(this_STRING_0, grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0());
-		}
-		    |
-		this_ID_1=RULE_ID
-		{
-			$current.merge(this_ID_1);
-		}
-		{
-			newLeafNode(this_ID_1, grammarAccess.getEStringAccess().getIDTerminalRuleCall_1());
+			newLeafNode(otherlv_23, grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getSemicolonKeyword_23());
 		}
 	)
 ;

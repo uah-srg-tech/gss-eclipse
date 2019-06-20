@@ -14,6 +14,7 @@ import es.uah.aut.srg.gss.charts.*;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
 
+import es.uah.aut.srg.gss.common.GSSModelObject;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -90,6 +91,10 @@ public class chartsAdapterFactory extends AdapterFactoryImpl {
 				return createGSSModelElementAdapter();
 			}
 			@Override
+			public Adapter caseGSSModelObject(GSSModelObject object) {
+				return createGSSModelObjectAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -148,6 +153,20 @@ public class chartsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSModelElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.common.GSSModelObject <em>GSS Model Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.common.GSSModelObject
+	 * @generated
+	 */
+	public Adapter createGSSModelObjectAdapter() {
 		return null;
 	}
 

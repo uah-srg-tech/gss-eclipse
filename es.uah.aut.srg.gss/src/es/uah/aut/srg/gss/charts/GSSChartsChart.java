@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.gss.charts;
 
-import org.eclipse.emf.ecore.EObject;
+import es.uah.aut.srg.gss.common.GSSModelObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.charts.GSSChartsChart#getId <em>Id</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.charts.GSSChartsChart#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.charts.GSSChartsChart#getY_units <em>Yunits</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.charts.GSSChartsChart#getY_max <em>Ymax</em>}</li>
  * </ul>
@@ -31,7 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GSSChartsChart extends EObject {
+public interface GSSChartsChart extends GSSModelObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -57,32 +56,6 @@ public interface GSSChartsChart extends EObject {
 	 * @generated
 	 */
 	void setId(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see es.uah.aut.srg.gss.charts.chartsPackage#getGSSChartsChart_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.charts.GSSChartsChart#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Yunits</b></em>' attribute.

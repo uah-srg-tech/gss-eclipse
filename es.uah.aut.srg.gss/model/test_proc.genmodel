@@ -3,19 +3,19 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2018 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
     modelDirectory="/es.uah.aut.srg.gss/src" modelPluginID="es.uah.aut.srg.gss" modelName="Test_proc"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" usedGenPackages="common.genmodel#//common"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="common.genmodel#//common export.genmodel#//export filters.genmodel#//filters imports.genmodel#//imports tm_tc_format.genmodel#//tm_tc_format"
     operationReflection="true" importOrganizing="true">
   <foreignModel>test_proc.ecore</foreignModel>
   <genPackages prefix="test_proc" basePackage="es.uah.aut.srg.gss" disposableProviderFactory="true"
       ecorePackage="test_proc.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="test_proc.ecore#//GSSTestProcUnit">
-      <genEnumLiterals ecoreEnumLiteral="test_proc.ecore#//GSSTestProcUnit/miliseconds"/>
-      <genEnumLiterals ecoreEnumLiteral="test_proc.ecore#//GSSTestProcUnit/seconds"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="test_proc.ecore#//GSSTestProcMode">
       <genEnumLiterals ecoreEnumLiteral="test_proc.ecore#//GSSTestProcMode/continuous"/>
       <genEnumLiterals ecoreEnumLiteral="test_proc.ecore#//GSSTestProcMode/manual"/>
       <genEnumLiterals ecoreEnumLiteral="test_proc.ecore#//GSSTestProcMode/concurrent"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="test_proc.ecore#//GSSTestProcUnit">
+      <genEnumLiterals ecoreEnumLiteral="test_proc.ecore#//GSSTestProcUnit/miliseconds"/>
+      <genEnumLiterals ecoreEnumLiteral="test_proc.ecore#//GSSTestProcUnit/seconds"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="test_proc.ecore#//GSSTestProcCheckmode">
       <genEnumLiterals ecoreEnumLiteral="test_proc.ecore#//GSSTestProcCheckmode/all"/>
@@ -27,15 +27,14 @@
       <genEnumLiterals ecoreEnumLiteral="test_proc.ecore#//GSSTestProcYesNo/no"/>
     </genEnums>
     <genClasses ecoreClass="test_proc.ecore#//GSSTestProcTestProc">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcTestProc/step"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcTestProc/step"/>
     </genClasses>
     <genClasses ecoreClass="test_proc.ecore#//GSSTestProcStep">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcStep/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcStep/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcStep/prev_step_idref"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcStep/output_idref_from_prev_step"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcStep/mode"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcStep/replays"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcStep/prev_step_idref"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcStep/output_idref_from_prev_step"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcStep/inputs"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcStep/outputs"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcStep/specialPackets"/>
@@ -90,93 +89,61 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel3/ifRef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel3/delay_value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel3/delay_unit"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/level3"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/app_to_level3"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/level2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/level3_to_level2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/level1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/level2_to_level1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/level0"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/level1_to_level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/level3"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/app_to_level3"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/level2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/level3_to_level2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/level2_to_level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel3/level1_to_level0"/>
     </genClasses>
     <genClasses ecoreClass="test_proc.ecore#//GSSTestProcInputLevel2">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel2/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel2/ifRef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel2/delay_value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel2/delay_unit"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel2/level2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel2/app_to_level2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel2/level1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel2/level2_to_level1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel2/level0"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel2/level1_to_level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel2/level2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel2/app_to_level2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel2/level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel2/level2_to_level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel2/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel2/level1_to_level0"/>
     </genClasses>
     <genClasses ecoreClass="test_proc.ecore#//GSSTestProcInputLevel1">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel1/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel1/ifRef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel1/delay_value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel1/delay_unit"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel1/level1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel1/app_to_level1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel1/level0"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel1/level1_to_level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel1/level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel1/app_to_level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel1/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel1/level1_to_level0"/>
     </genClasses>
     <genClasses ecoreClass="test_proc.ecore#//GSSTestProcInputLevel0">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel0/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel0/ifRef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel0/delay_value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcInputLevel0/delay_unit"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel0/level0"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel0/app_to_level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel0/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcInputLevel0/app_to_level0"/>
     </genClasses>
-    <genClasses ecoreClass="test_proc.ecore#//GSSTestProcLevel3">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel3/format"/>
-    </genClasses>
-    <genClasses ecoreClass="test_proc.ecore#//GSSTestProcLevel2">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel2/format"/>
-    </genClasses>
-    <genClasses ecoreClass="test_proc.ecore#//GSSTestProcLevel1">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel1/format"/>
-    </genClasses>
-    <genClasses ecoreClass="test_proc.ecore#//GSSTestProcLevel0">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel0/format"/>
-    </genClasses>
-    <genClasses ecoreClass="test_proc.ecore#//GSSTestProcAppToLevel3">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcAppToLevel3/export"/>
-    </genClasses>
-    <genClasses ecoreClass="test_proc.ecore#//GSSTestProcAppToLevel2">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcAppToLevel2/export"/>
-    </genClasses>
-    <genClasses ecoreClass="test_proc.ecore#//GSSTestProcAppToLevel1">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcAppToLevel1/export"/>
-    </genClasses>
-    <genClasses ecoreClass="test_proc.ecore#//GSSTestProcAppToLevel0">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcAppToLevel0/export"/>
-    </genClasses>
-    <genClasses ecoreClass="test_proc.ecore#//GSSTestProcLevel3ToLevel2">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel3ToLevel2/export"/>
-    </genClasses>
-    <genClasses ecoreClass="test_proc.ecore#//GSSTestProcLevel2ToLevel1">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel2ToLevel1/export"/>
-    </genClasses>
-    <genClasses ecoreClass="test_proc.ecore#//GSSTestProcLevel1ToLevel0">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel1ToLevel0/export"/>
-    </genClasses>
+    <genClasses image="false" ecoreClass="test_proc.ecore#//GSSTestProcOutput"/>
     <genClasses ecoreClass="test_proc.ecore#//GSSTestProcOutputLevel3">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcOutputLevel3/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcOutputLevel3/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcOutputLevel3/ifRef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcOutputLevel3/optional"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level3"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level3"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level3_filter"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level3_from_level2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level3_from_level2"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level2_filter"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level2_from_level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level2_from_level1"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level1_filter"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level0"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level1_from_level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level1_from_level0"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel3/level0_filter"/>
     </genClasses>
     <genClasses ecoreClass="test_proc.ecore#//GSSTestProcOutputLevel2">
@@ -184,13 +151,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcOutputLevel2/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcOutputLevel2/ifRef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcOutputLevel2/optional"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel2/level2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel2/level2"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel2/level2_filter"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel2/level1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel2/level2_from_level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel2/level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel2/level2_from_level1"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel2/level1_filter"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel2/level0"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel2/level1_from_level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel2/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel2/level1_from_level0"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel2/level0_filter"/>
     </genClasses>
     <genClasses ecoreClass="test_proc.ecore#//GSSTestProcOutputLevel1">
@@ -198,10 +165,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcOutputLevel1/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcOutputLevel1/ifRef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcOutputLevel1/optional"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel1/level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel1/level1"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel1/level1_filter"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel1/level0"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel1/level1_from_level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel1/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel1/level1_from_level0"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel1/level0_filter"/>
     </genClasses>
     <genClasses ecoreClass="test_proc.ecore#//GSSTestProcOutputLevel0">
@@ -209,33 +176,24 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcOutputLevel0/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcOutputLevel0/ifRef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcOutputLevel0/optional"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel0/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel0/level0"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcOutputLevel0/level0_filter"/>
     </genClasses>
     <genClasses ecoreClass="test_proc.ecore#//GSSTestProcLevel3Filter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel3Filter/apply_def_filter"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel3Filter/extra_filter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcLevel3Filter/extra_filter"/>
     </genClasses>
     <genClasses ecoreClass="test_proc.ecore#//GSSTestProcLevel2Filter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel2Filter/apply_def_filter"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel2Filter/extra_filter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcLevel2Filter/extra_filter"/>
     </genClasses>
     <genClasses ecoreClass="test_proc.ecore#//GSSTestProcLevel1Filter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel1Filter/apply_def_filter"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel1Filter/extra_filter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcLevel1Filter/extra_filter"/>
     </genClasses>
     <genClasses ecoreClass="test_proc.ecore#//GSSTestProcLevel0Filter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel0Filter/apply_def_filter"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel0Filter/extra_filter"/>
-    </genClasses>
-    <genClasses ecoreClass="test_proc.ecore#//GSSTestProcLevel3FromLevel2">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel3FromLevel2/import"/>
-    </genClasses>
-    <genClasses ecoreClass="test_proc.ecore#//GSSTestProcLevel2FromLevel1">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel2FromLevel1/import"/>
-    </genClasses>
-    <genClasses ecoreClass="test_proc.ecore#//GSSTestProcLevel1FromLevel0">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute test_proc.ecore#//GSSTestProcLevel1FromLevel0/import"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference test_proc.ecore#//GSSTestProcLevel0Filter/extra_filter"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -10,17 +10,15 @@
  */
 package es.uah.aut.srg.gss.config.impl;
 
+import es.uah.aut.srg.gss.charts.chartsPackage;
+
 import es.uah.aut.srg.gss.common.commonPackage;
 
 import es.uah.aut.srg.gss.config.GSSConfigAlarmMsg;
 import es.uah.aut.srg.gss.config.GSSConfigAlarmMsgType;
 import es.uah.aut.srg.gss.config.GSSConfigAlarmVal;
 import es.uah.aut.srg.gss.config.GSSConfigAlarmValType;
-import es.uah.aut.srg.gss.config.GSSConfigAppToLevel0;
-import es.uah.aut.srg.gss.config.GSSConfigAppToLevel1;
-import es.uah.aut.srg.gss.config.GSSConfigAppToLevel2;
 import es.uah.aut.srg.gss.config.GSSConfigEnableDisable;
-import es.uah.aut.srg.gss.config.GSSConfigExportToPrevLevel;
 import es.uah.aut.srg.gss.config.GSSConfigGSSConfig;
 import es.uah.aut.srg.gss.config.GSSConfigGSSDiscardErrorFlags;
 import es.uah.aut.srg.gss.config.GSSConfigGSSInfo;
@@ -31,18 +29,11 @@ import es.uah.aut.srg.gss.config.GSSConfigGVPeriodic;
 import es.uah.aut.srg.gss.config.GSSConfigGlobalVar;
 import es.uah.aut.srg.gss.config.GSSConfigGlobalVarType;
 import es.uah.aut.srg.gss.config.GSSConfigGlobalVars;
-import es.uah.aut.srg.gss.config.GSSConfigImportFromPrevLevel;
-import es.uah.aut.srg.gss.config.GSSConfigInputFilter;
 import es.uah.aut.srg.gss.config.GSSConfigInterface;
 import es.uah.aut.srg.gss.config.GSSConfigInterfaceIOType;
 import es.uah.aut.srg.gss.config.GSSConfigInterfaceType;
 import es.uah.aut.srg.gss.config.GSSConfigInterfaces;
 import es.uah.aut.srg.gss.config.GSSConfigIntervalRange;
-import es.uah.aut.srg.gss.config.GSSConfigLevel0;
-import es.uah.aut.srg.gss.config.GSSConfigLevel1;
-import es.uah.aut.srg.gss.config.GSSConfigLevel1ToLevel0;
-import es.uah.aut.srg.gss.config.GSSConfigLevel2;
-import es.uah.aut.srg.gss.config.GSSConfigLevel2ToLevel1;
 import es.uah.aut.srg.gss.config.GSSConfigLevelIn;
 import es.uah.aut.srg.gss.config.GSSConfigLevelInOut;
 import es.uah.aut.srg.gss.config.GSSConfigLevelOut;
@@ -70,8 +61,6 @@ import es.uah.aut.srg.gss.config.GSSConfigReqAction;
 import es.uah.aut.srg.gss.config.GSSConfigSpecialPacket;
 import es.uah.aut.srg.gss.config.GSSConfigSpecialPackets;
 import es.uah.aut.srg.gss.config.GSSConfigStructuredData;
-import es.uah.aut.srg.gss.config.GSSConfigTCFormat;
-import es.uah.aut.srg.gss.config.GSSConfigTMFormat;
 import es.uah.aut.srg.gss.config.GSSConfigTestCase;
 import es.uah.aut.srg.gss.config.GSSConfigTests;
 import es.uah.aut.srg.gss.config.GSSConfigUnit;
@@ -80,6 +69,20 @@ import es.uah.aut.srg.gss.config.GSSConfigUpperLevelLevel;
 import es.uah.aut.srg.gss.config.GSSConfigUpperLevels;
 import es.uah.aut.srg.gss.config.configFactory;
 import es.uah.aut.srg.gss.config.configPackage;
+
+import es.uah.aut.srg.gss.export.exportPackage;
+
+import es.uah.aut.srg.gss.filters.filtersPackage;
+
+import es.uah.aut.srg.gss.iface.ifacePackage;
+
+import es.uah.aut.srg.gss.imports.importsPackage;
+
+import es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage;
+
+import es.uah.aut.srg.gss.test_proc.test_procPackage;
+
+import es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -164,35 +167,14 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass gssConfigTMFormatEClass = null;
+	private EClass gssConfigMainInterfaceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass gssConfigTCFormatEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigInputFilterEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigExportToPrevLevelEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigImportFromPrevLevelEClass = null;
+	private EClass gssConfigInterfaceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -214,20 +196,6 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * @generated
 	 */
 	private EClass gssConfigLevelOutEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigMainInterfaceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigInterfaceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -291,62 +259,6 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * @generated
 	 */
 	private EClass gssConfigPeriodicTCsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigLevel2EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigLevel1EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigLevel0EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigAppToLevel2EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigAppToLevel1EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigAppToLevel0EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigLevel2ToLevel1EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigLevel1ToLevel0EClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -605,7 +517,10 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		commonPackage.eINSTANCE.eClass();
+		chartsPackage.eINSTANCE.eClass();
+		ifacePackage.eINSTANCE.eClass();
+		protocol_packetsPackage.eINSTANCE.eClass();
+		test_procPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theconfigPackage.createPackageContents();
@@ -825,7 +740,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigGSSInfoPrint_DebugLog() {
+	public EAttribute getGSSConfigGSSInfoPrint_RawLog() {
 		return (EAttribute)gssConfigGSSInfoPrintEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -861,7 +776,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigPhyHeaderPrint_DebugLog() {
+	public EAttribute getGSSConfigPhyHeaderPrint_RawLog() {
 		return (EAttribute)gssConfigPhyHeaderPrintEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1023,8 +938,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGSSConfigTMFormat() {
-		return gssConfigTMFormatEClass;
+	public EClass getGSSConfigMainInterface() {
+		return gssConfigMainInterfaceEClass;
 	}
 
 	/**
@@ -1032,8 +947,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigTMFormat_File() {
-		return (EAttribute)gssConfigTMFormatEClass.getEStructuralFeatures().get(0);
+	public EAttribute getGSSConfigMainInterface_Id() {
+		return (EAttribute)gssConfigMainInterfaceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1041,8 +956,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGSSConfigTCFormat() {
-		return gssConfigTCFormatEClass;
+	public EAttribute getGSSConfigMainInterface_Name() {
+		return (EAttribute)gssConfigMainInterfaceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1050,8 +965,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigTCFormat_File() {
-		return (EAttribute)gssConfigTCFormatEClass.getEStructuralFeatures().get(0);
+	public EAttribute getGSSConfigMainInterface_IfType() {
+		return (EAttribute)gssConfigMainInterfaceEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1059,8 +974,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGSSConfigInputFilter() {
-		return gssConfigInputFilterEClass;
+	public EReference getGSSConfigMainInterface_IfConfig() {
+		return (EReference)gssConfigMainInterfaceEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1068,8 +983,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigInputFilter_File() {
-		return (EAttribute)gssConfigInputFilterEClass.getEStructuralFeatures().get(0);
+	public EAttribute getGSSConfigMainInterface_IoType() {
+		return (EAttribute)gssConfigMainInterfaceEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1077,8 +992,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGSSConfigExportToPrevLevel() {
-		return gssConfigExportToPrevLevelEClass;
+	public EReference getGSSConfigMainInterface_ProtocolID() {
+		return (EReference)gssConfigMainInterfaceEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1086,8 +1001,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigExportToPrevLevel_File() {
-		return (EAttribute)gssConfigExportToPrevLevelEClass.getEStructuralFeatures().get(0);
+	public EReference getGSSConfigMainInterface_LevelInOut() {
+		return (EReference)gssConfigMainInterfaceEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1095,8 +1010,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGSSConfigImportFromPrevLevel() {
-		return gssConfigImportFromPrevLevelEClass;
+	public EClass getGSSConfigInterface() {
+		return gssConfigInterfaceEClass;
 	}
 
 	/**
@@ -1104,8 +1019,80 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigImportFromPrevLevel_File() {
-		return (EAttribute)gssConfigImportFromPrevLevelEClass.getEStructuralFeatures().get(0);
+	public EAttribute getGSSConfigInterface_Id() {
+		return (EAttribute)gssConfigInterfaceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSConfigInterface_Name() {
+		return (EAttribute)gssConfigInterfaceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSConfigInterface_IfType() {
+		return (EAttribute)gssConfigInterfaceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSConfigInterface_IfConfig() {
+		return (EReference)gssConfigInterfaceEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSConfigInterface_IoType() {
+		return (EAttribute)gssConfigInterfaceEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSConfigInterface_ProtocolID() {
+		return (EReference)gssConfigInterfaceEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSConfigInterface_LevelInOut() {
+		return (EReference)gssConfigInterfaceEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSConfigInterface_LevelIn() {
+		return (EReference)gssConfigInterfaceEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSConfigInterface_LevelOut() {
+		return (EReference)gssConfigInterfaceEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1277,168 +1264,6 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 */
 	public EReference getGSSConfigLevelOut_Import_from_prev_Level() {
 		return (EReference)gssConfigLevelOutEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSConfigMainInterface() {
-		return gssConfigMainInterfaceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigMainInterface_Id() {
-		return (EAttribute)gssConfigMainInterfaceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigMainInterface_Name() {
-		return (EAttribute)gssConfigMainInterfaceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigMainInterface_IfType() {
-		return (EAttribute)gssConfigMainInterfaceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigMainInterface_IfConfig() {
-		return (EAttribute)gssConfigMainInterfaceEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigMainInterface_IoType() {
-		return (EAttribute)gssConfigMainInterfaceEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigMainInterface_ProtocolID() {
-		return (EAttribute)gssConfigMainInterfaceEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSConfigMainInterface_LevelInOut() {
-		return (EReference)gssConfigMainInterfaceEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSConfigInterface() {
-		return gssConfigInterfaceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigInterface_Id() {
-		return (EAttribute)gssConfigInterfaceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigInterface_Name() {
-		return (EAttribute)gssConfigInterfaceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigInterface_IfType() {
-		return (EAttribute)gssConfigInterfaceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigInterface_IfConfig() {
-		return (EAttribute)gssConfigInterfaceEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigInterface_IoType() {
-		return (EAttribute)gssConfigInterfaceEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigInterface_ProtocolID() {
-		return (EAttribute)gssConfigInterfaceEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSConfigInterface_LevelInOut() {
-		return (EReference)gssConfigInterfaceEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSConfigInterface_LevelIn() {
-		return (EReference)gssConfigInterfaceEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSConfigInterface_LevelOut() {
-		return (EReference)gssConfigInterfaceEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1808,150 +1633,6 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 */
 	public EReference getGSSConfigPeriodicTCs_PeriodicTC_level_0() {
 		return (EReference)gssConfigPeriodicTCsEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSConfigLevel2() {
-		return gssConfigLevel2EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigLevel2_Format() {
-		return (EAttribute)gssConfigLevel2EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSConfigLevel1() {
-		return gssConfigLevel1EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigLevel1_Format() {
-		return (EAttribute)gssConfigLevel1EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSConfigLevel0() {
-		return gssConfigLevel0EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigLevel0_Format() {
-		return (EAttribute)gssConfigLevel0EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSConfigAppToLevel2() {
-		return gssConfigAppToLevel2EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigAppToLevel2_Export() {
-		return (EAttribute)gssConfigAppToLevel2EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSConfigAppToLevel1() {
-		return gssConfigAppToLevel1EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigAppToLevel1_Export() {
-		return (EAttribute)gssConfigAppToLevel1EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSConfigAppToLevel0() {
-		return gssConfigAppToLevel0EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigAppToLevel0_Export() {
-		return (EAttribute)gssConfigAppToLevel0EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSConfigLevel2ToLevel1() {
-		return gssConfigLevel2ToLevel1EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigLevel2ToLevel1_Export() {
-		return (EAttribute)gssConfigLevel2ToLevel1EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSConfigLevel1ToLevel0() {
-		return gssConfigLevel1ToLevel0EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigLevel1ToLevel0_Export() {
-		return (EAttribute)gssConfigLevel1ToLevel0EClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2499,8 +2180,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigMonitors_ChartsFile() {
-		return (EAttribute)gssConfigMonitorsEClass.getEStructuralFeatures().get(0);
+	public EReference getGSSConfigMonitors_ChartsFile() {
+		return (EReference)gssConfigMonitorsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2562,7 +2243,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSConfigPlot_GVFiltered() {
+	public EReference getGSSConfigPlot_ChartRef() {
 		return (EReference)gssConfigPlotEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2571,8 +2252,17 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSConfigPlot_GVPeriodic() {
+	public EReference getGSSConfigPlot_GVFiltered() {
 		return (EReference)gssConfigPlotEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSConfigPlot_GVPeriodic() {
+		return (EReference)gssConfigPlotEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2751,8 +2441,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigGVFiltered_Filter() {
-		return (EAttribute)gssConfigGVFilteredEClass.getEStructuralFeatures().get(1);
+	public EReference getGSSConfigGVFiltered_Filter() {
+		return (EReference)gssConfigGVFilteredEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2805,8 +2495,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigTests_ProtocolPacketsFile() {
-		return (EAttribute)gssConfigTestsEClass.getEStructuralFeatures().get(0);
+	public EReference getGSSConfigTests_ProtocolPacketsFile() {
+		return (EReference)gssConfigTestsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2841,8 +2531,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigTestCase_Procedure() {
-		return (EAttribute)gssConfigTestCaseEClass.getEStructuralFeatures().get(1);
+	public EReference getGSSConfigTestCase_Procedure() {
+		return (EReference)gssConfigTestCaseEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3033,12 +2723,12 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		gssConfigGSSInfoPrintEClass = createEClass(GSS_CONFIG_GSS_INFO_PRINT);
 		createEAttribute(gssConfigGSSInfoPrintEClass, GSS_CONFIG_GSS_INFO_PRINT__MAIN_LOG);
 		createEAttribute(gssConfigGSSInfoPrintEClass, GSS_CONFIG_GSS_INFO_PRINT__PORT_LOGS);
-		createEAttribute(gssConfigGSSInfoPrintEClass, GSS_CONFIG_GSS_INFO_PRINT__DEBUG_LOG);
+		createEAttribute(gssConfigGSSInfoPrintEClass, GSS_CONFIG_GSS_INFO_PRINT__RAW_LOG);
 
 		gssConfigPhyHeaderPrintEClass = createEClass(GSS_CONFIG_PHY_HEADER_PRINT);
 		createEAttribute(gssConfigPhyHeaderPrintEClass, GSS_CONFIG_PHY_HEADER_PRINT__MAIN_LOG);
 		createEAttribute(gssConfigPhyHeaderPrintEClass, GSS_CONFIG_PHY_HEADER_PRINT__PORT_LOGS);
-		createEAttribute(gssConfigPhyHeaderPrintEClass, GSS_CONFIG_PHY_HEADER_PRINT__DEBUG_LOG);
+		createEAttribute(gssConfigPhyHeaderPrintEClass, GSS_CONFIG_PHY_HEADER_PRINT__RAW_LOG);
 		createEAttribute(gssConfigPhyHeaderPrintEClass, GSS_CONFIG_PHY_HEADER_PRINT__GSS_TABS);
 
 		gssConfigGSSDiscardErrorFlagsEClass = createEClass(GSS_CONFIG_GSS_DISCARD_ERROR_FLAGS);
@@ -3065,18 +2755,18 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		createEAttribute(gssConfigMainInterfaceEClass, GSS_CONFIG_MAIN_INTERFACE__ID);
 		createEAttribute(gssConfigMainInterfaceEClass, GSS_CONFIG_MAIN_INTERFACE__NAME);
 		createEAttribute(gssConfigMainInterfaceEClass, GSS_CONFIG_MAIN_INTERFACE__IF_TYPE);
-		createEAttribute(gssConfigMainInterfaceEClass, GSS_CONFIG_MAIN_INTERFACE__IF_CONFIG);
+		createEReference(gssConfigMainInterfaceEClass, GSS_CONFIG_MAIN_INTERFACE__IF_CONFIG);
 		createEAttribute(gssConfigMainInterfaceEClass, GSS_CONFIG_MAIN_INTERFACE__IO_TYPE);
-		createEAttribute(gssConfigMainInterfaceEClass, GSS_CONFIG_MAIN_INTERFACE__PROTOCOL_ID);
+		createEReference(gssConfigMainInterfaceEClass, GSS_CONFIG_MAIN_INTERFACE__PROTOCOL_ID);
 		createEReference(gssConfigMainInterfaceEClass, GSS_CONFIG_MAIN_INTERFACE__LEVEL_IN_OUT);
 
 		gssConfigInterfaceEClass = createEClass(GSS_CONFIG_INTERFACE);
 		createEAttribute(gssConfigInterfaceEClass, GSS_CONFIG_INTERFACE__ID);
 		createEAttribute(gssConfigInterfaceEClass, GSS_CONFIG_INTERFACE__NAME);
 		createEAttribute(gssConfigInterfaceEClass, GSS_CONFIG_INTERFACE__IF_TYPE);
-		createEAttribute(gssConfigInterfaceEClass, GSS_CONFIG_INTERFACE__IF_CONFIG);
+		createEReference(gssConfigInterfaceEClass, GSS_CONFIG_INTERFACE__IF_CONFIG);
 		createEAttribute(gssConfigInterfaceEClass, GSS_CONFIG_INTERFACE__IO_TYPE);
-		createEAttribute(gssConfigInterfaceEClass, GSS_CONFIG_INTERFACE__PROTOCOL_ID);
+		createEReference(gssConfigInterfaceEClass, GSS_CONFIG_INTERFACE__PROTOCOL_ID);
 		createEReference(gssConfigInterfaceEClass, GSS_CONFIG_INTERFACE__LEVEL_IN_OUT);
 		createEReference(gssConfigInterfaceEClass, GSS_CONFIG_INTERFACE__LEVEL_IN);
 		createEReference(gssConfigInterfaceEClass, GSS_CONFIG_INTERFACE__LEVEL_OUT);
@@ -3102,21 +2792,6 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		createEReference(gssConfigLevelOutEClass, GSS_CONFIG_LEVEL_OUT__TMFORMAT);
 		createEReference(gssConfigLevelOutEClass, GSS_CONFIG_LEVEL_OUT__INPUT_FILTER);
 		createEReference(gssConfigLevelOutEClass, GSS_CONFIG_LEVEL_OUT__IMPORT_FROM_PREV_LEVEL);
-
-		gssConfigTMFormatEClass = createEClass(GSS_CONFIG_TM_FORMAT);
-		createEAttribute(gssConfigTMFormatEClass, GSS_CONFIG_TM_FORMAT__FILE);
-
-		gssConfigTCFormatEClass = createEClass(GSS_CONFIG_TC_FORMAT);
-		createEAttribute(gssConfigTCFormatEClass, GSS_CONFIG_TC_FORMAT__FILE);
-
-		gssConfigInputFilterEClass = createEClass(GSS_CONFIG_INPUT_FILTER);
-		createEAttribute(gssConfigInputFilterEClass, GSS_CONFIG_INPUT_FILTER__FILE);
-
-		gssConfigExportToPrevLevelEClass = createEClass(GSS_CONFIG_EXPORT_TO_PREV_LEVEL);
-		createEAttribute(gssConfigExportToPrevLevelEClass, GSS_CONFIG_EXPORT_TO_PREV_LEVEL__FILE);
-
-		gssConfigImportFromPrevLevelEClass = createEClass(GSS_CONFIG_IMPORT_FROM_PREV_LEVEL);
-		createEAttribute(gssConfigImportFromPrevLevelEClass, GSS_CONFIG_IMPORT_FROM_PREV_LEVEL__FILE);
 
 		gssConfigSpecialPacketsEClass = createEClass(GSS_CONFIG_SPECIAL_PACKETS);
 		createEReference(gssConfigSpecialPacketsEClass, GSS_CONFIG_SPECIAL_PACKETS__SPECIAL_PACKET);
@@ -3201,30 +2876,6 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		createEReference(gssConfigPeriodicTCLevel0EClass, GSS_CONFIG_PERIODIC_TC_LEVEL0__LEVEL0);
 		createEReference(gssConfigPeriodicTCLevel0EClass, GSS_CONFIG_PERIODIC_TC_LEVEL0__APP_TO_LEVEL0);
 
-		gssConfigLevel2EClass = createEClass(GSS_CONFIG_LEVEL2);
-		createEAttribute(gssConfigLevel2EClass, GSS_CONFIG_LEVEL2__FORMAT);
-
-		gssConfigLevel1EClass = createEClass(GSS_CONFIG_LEVEL1);
-		createEAttribute(gssConfigLevel1EClass, GSS_CONFIG_LEVEL1__FORMAT);
-
-		gssConfigLevel0EClass = createEClass(GSS_CONFIG_LEVEL0);
-		createEAttribute(gssConfigLevel0EClass, GSS_CONFIG_LEVEL0__FORMAT);
-
-		gssConfigAppToLevel2EClass = createEClass(GSS_CONFIG_APP_TO_LEVEL2);
-		createEAttribute(gssConfigAppToLevel2EClass, GSS_CONFIG_APP_TO_LEVEL2__EXPORT);
-
-		gssConfigAppToLevel1EClass = createEClass(GSS_CONFIG_APP_TO_LEVEL1);
-		createEAttribute(gssConfigAppToLevel1EClass, GSS_CONFIG_APP_TO_LEVEL1__EXPORT);
-
-		gssConfigAppToLevel0EClass = createEClass(GSS_CONFIG_APP_TO_LEVEL0);
-		createEAttribute(gssConfigAppToLevel0EClass, GSS_CONFIG_APP_TO_LEVEL0__EXPORT);
-
-		gssConfigLevel2ToLevel1EClass = createEClass(GSS_CONFIG_LEVEL2_TO_LEVEL1);
-		createEAttribute(gssConfigLevel2ToLevel1EClass, GSS_CONFIG_LEVEL2_TO_LEVEL1__EXPORT);
-
-		gssConfigLevel1ToLevel0EClass = createEClass(GSS_CONFIG_LEVEL1_TO_LEVEL0);
-		createEAttribute(gssConfigLevel1ToLevel0EClass, GSS_CONFIG_LEVEL1_TO_LEVEL0__EXPORT);
-
 		gssConfigGlobalVarsEClass = createEClass(GSS_CONFIG_GLOBAL_VARS);
 		createEReference(gssConfigGlobalVarsEClass, GSS_CONFIG_GLOBAL_VARS__GLOBAL_VAR);
 
@@ -3260,7 +2911,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		createEAttribute(gssConfigReferenceSpecialPacketEClass, GSS_CONFIG_REFERENCE_SPECIAL_PACKET__SIZE);
 
 		gssConfigMonitorsEClass = createEClass(GSS_CONFIG_MONITORS);
-		createEAttribute(gssConfigMonitorsEClass, GSS_CONFIG_MONITORS__CHARTS_FILE);
+		createEReference(gssConfigMonitorsEClass, GSS_CONFIG_MONITORS__CHARTS_FILE);
 		createEReference(gssConfigMonitorsEClass, GSS_CONFIG_MONITORS__PLOT);
 		createEReference(gssConfigMonitorsEClass, GSS_CONFIG_MONITORS__ALARM_MSG);
 		createEReference(gssConfigMonitorsEClass, GSS_CONFIG_MONITORS__MODIFY);
@@ -3268,6 +2919,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 
 		gssConfigPlotEClass = createEClass(GSS_CONFIG_PLOT);
 		createEAttribute(gssConfigPlotEClass, GSS_CONFIG_PLOT__NAME);
+		createEReference(gssConfigPlotEClass, GSS_CONFIG_PLOT__CHART_REF);
 		createEReference(gssConfigPlotEClass, GSS_CONFIG_PLOT__GV_FILTERED);
 		createEReference(gssConfigPlotEClass, GSS_CONFIG_PLOT__GV_PERIODIC);
 
@@ -3293,7 +2945,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 
 		gssConfigGVFilteredEClass = createEClass(GSS_CONFIG_GV_FILTERED);
 		createEAttribute(gssConfigGVFilteredEClass, GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF);
-		createEAttribute(gssConfigGVFilteredEClass, GSS_CONFIG_GV_FILTERED__FILTER);
+		createEReference(gssConfigGVFilteredEClass, GSS_CONFIG_GV_FILTERED__FILTER);
 
 		gssConfigGVPeriodicEClass = createEClass(GSS_CONFIG_GV_PERIODIC);
 		createEAttribute(gssConfigGVPeriodicEClass, GSS_CONFIG_GV_PERIODIC__GLOBAL_VAR_REF);
@@ -3301,12 +2953,12 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		createEAttribute(gssConfigGVPeriodicEClass, GSS_CONFIG_GV_PERIODIC__PERIOD_UNIT);
 
 		gssConfigTestsEClass = createEClass(GSS_CONFIG_TESTS);
-		createEAttribute(gssConfigTestsEClass, GSS_CONFIG_TESTS__PROTOCOL_PACKETS_FILE);
+		createEReference(gssConfigTestsEClass, GSS_CONFIG_TESTS__PROTOCOL_PACKETS_FILE);
 		createEReference(gssConfigTestsEClass, GSS_CONFIG_TESTS__TEST_CASE);
 
 		gssConfigTestCaseEClass = createEClass(GSS_CONFIG_TEST_CASE);
 		createEAttribute(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__NAME);
-		createEAttribute(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__PROCEDURE);
+		createEReference(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__PROCEDURE);
 		createEAttribute(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__REQ);
 		createEAttribute(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__REQ_ACTION);
 
@@ -3351,6 +3003,14 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 
 		// Obtain other dependent packages
 		commonPackage thecommonPackage = (commonPackage)EPackage.Registry.INSTANCE.getEPackage(commonPackage.eNS_URI);
+		ifacePackage theifacePackage = (ifacePackage)EPackage.Registry.INSTANCE.getEPackage(ifacePackage.eNS_URI);
+		tm_tc_formatPackage thetm_tc_formatPackage = (tm_tc_formatPackage)EPackage.Registry.INSTANCE.getEPackage(tm_tc_formatPackage.eNS_URI);
+		filtersPackage thefiltersPackage = (filtersPackage)EPackage.Registry.INSTANCE.getEPackage(filtersPackage.eNS_URI);
+		exportPackage theexportPackage = (exportPackage)EPackage.Registry.INSTANCE.getEPackage(exportPackage.eNS_URI);
+		importsPackage theimportsPackage = (importsPackage)EPackage.Registry.INSTANCE.getEPackage(importsPackage.eNS_URI);
+		chartsPackage thechartsPackage = (chartsPackage)EPackage.Registry.INSTANCE.getEPackage(chartsPackage.eNS_URI);
+		protocol_packetsPackage theprotocol_packetsPackage = (protocol_packetsPackage)EPackage.Registry.INSTANCE.getEPackage(protocol_packetsPackage.eNS_URI);
+		test_procPackage thetest_procPackage = (test_procPackage)EPackage.Registry.INSTANCE.getEPackage(test_procPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -3385,12 +3045,12 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		initEClass(gssConfigGSSInfoPrintEClass, GSSConfigGSSInfoPrint.class, "GSSConfigGSSInfoPrint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigGSSInfoPrint_MainLog(), this.getGSSConfigEnableDisable(), "mainLog", null, 1, 1, GSSConfigGSSInfoPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigGSSInfoPrint_PortLogs(), this.getGSSConfigEnableDisable(), "portLogs", null, 1, 1, GSSConfigGSSInfoPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigGSSInfoPrint_DebugLog(), this.getGSSConfigEnableDisable(), "debugLog", null, 1, 1, GSSConfigGSSInfoPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSConfigGSSInfoPrint_RawLog(), this.getGSSConfigEnableDisable(), "rawLog", null, 1, 1, GSSConfigGSSInfoPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigPhyHeaderPrintEClass, GSSConfigPhyHeaderPrint.class, "GSSConfigPhyHeaderPrint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigPhyHeaderPrint_MainLog(), this.getGSSConfigEnableDisable(), "mainLog", null, 1, 1, GSSConfigPhyHeaderPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigPhyHeaderPrint_PortLogs(), this.getGSSConfigEnableDisable(), "portLogs", null, 1, 1, GSSConfigPhyHeaderPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigPhyHeaderPrint_DebugLog(), this.getGSSConfigEnableDisable(), "debugLog", null, 1, 1, GSSConfigPhyHeaderPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSConfigPhyHeaderPrint_RawLog(), this.getGSSConfigEnableDisable(), "rawLog", null, 1, 1, GSSConfigPhyHeaderPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigPhyHeaderPrint_GssTabs(), this.getGSSConfigEnableDisable(), "gssTabs", null, 1, 1, GSSConfigPhyHeaderPrint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigGSSDiscardErrorFlagsEClass, GSSConfigGSSDiscardErrorFlags.class, "GSSConfigGSSDiscardErrorFlags", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3417,58 +3077,43 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		initEAttribute(getGSSConfigMainInterface_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSConfigMainInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigMainInterface_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigMainInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigMainInterface_IfType(), this.getGSSConfigMainInterfaceType(), "ifType", null, 1, 1, GSSConfigMainInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigMainInterface_IfConfig(), ecorePackage.getEString(), "ifConfig", null, 1, 1, GSSConfigMainInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigMainInterface_IfConfig(), theifacePackage.getGSSIfacePortConfig(), null, "ifConfig", null, 1, 1, GSSConfigMainInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigMainInterface_IoType(), this.getGSSConfigMainInterfaceIOType(), "ioType", null, 1, 1, GSSConfigMainInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigMainInterface_ProtocolID(), ecorePackage.getEString(), "protocolID", null, 0, 1, GSSConfigMainInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigMainInterface_ProtocolID(), this.getGSSConfigProtocol(), null, "protocolID", null, 0, 1, GSSConfigMainInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigMainInterface_LevelInOut(), this.getGSSConfigLevelInOut(), null, "LevelInOut", null, 1, 3, GSSConfigMainInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigInterfaceEClass, GSSConfigInterface.class, "GSSConfigInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigInterface_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSConfigInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigInterface_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigInterface_IfType(), this.getGSSConfigInterfaceType(), "ifType", null, 1, 1, GSSConfigInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigInterface_IfConfig(), ecorePackage.getEString(), "ifConfig", null, 1, 1, GSSConfigInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigInterface_IfConfig(), theifacePackage.getGSSIfacePortConfig(), null, "ifConfig", null, 1, 1, GSSConfigInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigInterface_IoType(), this.getGSSConfigInterfaceIOType(), "ioType", null, 1, 1, GSSConfigInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigInterface_ProtocolID(), ecorePackage.getEString(), "protocolID", null, 0, 1, GSSConfigInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigInterface_ProtocolID(), this.getGSSConfigProtocol(), null, "protocolID", null, 0, 1, GSSConfigInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigInterface_LevelInOut(), this.getGSSConfigLevelInOut(), null, "LevelInOut", null, 0, 3, GSSConfigInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigInterface_LevelIn(), this.getGSSConfigLevelIn(), null, "LevelIn", null, 0, 3, GSSConfigInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigInterface_LevelOut(), this.getGSSConfigLevelOut(), null, "LevelOut", null, 0, 3, GSSConfigInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigLevelInOutEClass, GSSConfigLevelInOut.class, "GSSConfigLevelInOut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigLevelInOut_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSConfigLevelInOut_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigLevelInOut_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigLevelInOut_TMformat(), this.getGSSConfigTMFormat(), null, "TMformat", null, 1, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigLevelInOut_TCformat(), this.getGSSConfigTCFormat(), null, "TCformat", null, 1, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigLevelInOut_InputFilter(), this.getGSSConfigInputFilter(), null, "inputFilter", null, 1, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigLevelInOut_Export_to_prev_Level(), this.getGSSConfigExportToPrevLevel(), null, "export_to_prev_Level", null, 0, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigLevelInOut_Import_from_prev_Level(), this.getGSSConfigImportFromPrevLevel(), null, "import_from_prev_Level", null, 0, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigLevelInOut_TMformat(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "TMformat", null, 1, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigLevelInOut_TCformat(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "TCformat", null, 1, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigLevelInOut_InputFilter(), thefiltersPackage.getGSSFilterFilter(), null, "inputFilter", null, 1, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigLevelInOut_Export_to_prev_Level(), theexportPackage.getGSSExportExport(), null, "export_to_prev_Level", null, 0, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigLevelInOut_Import_from_prev_Level(), theimportsPackage.getGSSImportImport(), null, "import_from_prev_Level", null, 0, 1, GSSConfigLevelInOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigLevelInEClass, GSSConfigLevelIn.class, "GSSConfigLevelIn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigLevelIn_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSConfigLevelIn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSConfigLevelIn_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSConfigLevelIn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigLevelIn_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigLevelIn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigLevelIn_TCformat(), this.getGSSConfigTCFormat(), null, "TCformat", null, 1, 1, GSSConfigLevelIn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigLevelIn_Export_to_prev_Level(), this.getGSSConfigExportToPrevLevel(), null, "export_to_prev_Level", null, 0, 1, GSSConfigLevelIn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigLevelIn_TCformat(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "TCformat", null, 1, 1, GSSConfigLevelIn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigLevelIn_Export_to_prev_Level(), theexportPackage.getGSSExportExport(), null, "export_to_prev_Level", null, 0, 1, GSSConfigLevelIn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigLevelOutEClass, GSSConfigLevelOut.class, "GSSConfigLevelOut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigLevelOut_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSConfigLevelOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSConfigLevelOut_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSConfigLevelOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigLevelOut_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigLevelOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigLevelOut_TMformat(), this.getGSSConfigTMFormat(), null, "TMformat", null, 1, 1, GSSConfigLevelOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigLevelOut_InputFilter(), this.getGSSConfigInputFilter(), null, "inputFilter", null, 1, 1, GSSConfigLevelOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigLevelOut_Import_from_prev_Level(), this.getGSSConfigImportFromPrevLevel(), null, "import_from_prev_Level", null, 0, 1, GSSConfigLevelOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigTMFormatEClass, GSSConfigTMFormat.class, "GSSConfigTMFormat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigTMFormat_File(), ecorePackage.getEString(), "file", null, 1, 1, GSSConfigTMFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigTCFormatEClass, GSSConfigTCFormat.class, "GSSConfigTCFormat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigTCFormat_File(), ecorePackage.getEString(), "file", null, 1, 1, GSSConfigTCFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigInputFilterEClass, GSSConfigInputFilter.class, "GSSConfigInputFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigInputFilter_File(), ecorePackage.getEString(), "file", null, 1, 1, GSSConfigInputFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigExportToPrevLevelEClass, GSSConfigExportToPrevLevel.class, "GSSConfigExportToPrevLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigExportToPrevLevel_File(), ecorePackage.getEString(), "file", null, 1, 1, GSSConfigExportToPrevLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigImportFromPrevLevelEClass, GSSConfigImportFromPrevLevel.class, "GSSConfigImportFromPrevLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigImportFromPrevLevel_File(), ecorePackage.getEString(), "file", null, 1, 1, GSSConfigImportFromPrevLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigLevelOut_TMformat(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "TMformat", null, 1, 1, GSSConfigLevelOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigLevelOut_InputFilter(), thefiltersPackage.getGSSFilterFilter(), null, "inputFilter", null, 1, 1, GSSConfigLevelOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigLevelOut_Import_from_prev_Level(), theimportsPackage.getGSSImportImport(), null, "import_from_prev_Level", null, 0, 1, GSSConfigLevelOut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigSpecialPacketsEClass, GSSConfigSpecialPackets.class, "GSSConfigSpecialPackets", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSConfigSpecialPackets_SpecialPacket(), this.getGSSConfigSpecialPacket(), null, "SpecialPacket", null, 1, 17, GSSConfigSpecialPackets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3480,7 +3125,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		initEAttribute(getGSSConfigSpecialPacket_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSConfigSpecialPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigSpecialPacket_Levels(), ecorePackage.getEString(), "levels", null, 1, 1, GSSConfigSpecialPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigSpecialPacket_LevelRef(), ecorePackage.getEString(), "levelRef", null, 1, 1, GSSConfigSpecialPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigSpecialPacket_InputFilter(), this.getGSSConfigInputFilter(), null, "inputFilter", null, 1, 1, GSSConfigSpecialPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigSpecialPacket_InputFilter(), thefiltersPackage.getGSSFilterFilter(), null, "inputFilter", null, 1, 1, GSSConfigSpecialPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigSpecialPacket_UpperLevels(), this.getGSSConfigUpperLevels(), null, "UpperLevels", null, 0, 3, GSSConfigSpecialPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigSpecialPacket_PrintingData(), this.getGSSConfigPrintingData(), null, "printingData", null, 1, 1, GSSConfigSpecialPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigSpecialPacket_Period(), this.getGSSConfigPeriod(), null, "period", null, 0, 1, GSSConfigSpecialPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3491,9 +3136,9 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 
 		initEClass(gssConfigUpperLevelEClass, GSSConfigUpperLevel.class, "GSSConfigUpperLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigUpperLevel_Level(), this.getGSSConfigUpperLevelLevel(), "level", null, 1, 1, GSSConfigUpperLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigUpperLevel_TMformat(), this.getGSSConfigTMFormat(), null, "TMformat", null, 1, 1, GSSConfigUpperLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigUpperLevel_InputFilter(), this.getGSSConfigInputFilter(), null, "inputFilter", null, 1, 1, GSSConfigUpperLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigUpperLevel_Import_from_prev_Level(), this.getGSSConfigImportFromPrevLevel(), null, "import_from_prev_Level", null, 0, 1, GSSConfigUpperLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigUpperLevel_TMformat(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "TMformat", null, 1, 1, GSSConfigUpperLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigUpperLevel_InputFilter(), thefiltersPackage.getGSSFilterFilter(), null, "inputFilter", null, 0, 1, GSSConfigUpperLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigUpperLevel_Import_from_prev_Level(), theimportsPackage.getGSSImportImport(), null, "import_from_prev_Level", null, 0, 1, GSSConfigUpperLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigPrintingDataEClass, GSSConfigPrintingData.class, "GSSConfigPrintingData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigPrintingData_PrintStatus(), this.getGSSConfigEnableDisable(), "printStatus", null, 1, 1, GSSConfigPrintingData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3505,9 +3150,9 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 
 		initEClass(gssConfigPeriodEClass, GSSConfigPeriod.class, "GSSConfigPeriod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigPeriod_Min_value(), ecorePackage.getEString(), "min_value", null, 1, 1, GSSConfigPeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigPeriod_Min_unit(), this.getGSSConfigUnit(), "min_unit", null, 1, 1, GSSConfigPeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSConfigPeriod_Min_unit(), this.getGSSConfigUnit(), "min_unit", null, 1, 1, GSSConfigPeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigPeriod_Max_value(), ecorePackage.getEString(), "max_value", null, 1, 1, GSSConfigPeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigPeriod_Max_unit(), this.getGSSConfigUnit(), "max_unit", null, 1, 1, GSSConfigPeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSConfigPeriod_Max_unit(), this.getGSSConfigUnit(), "max_unit", null, 1, 1, GSSConfigPeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigIntervalRangeEClass, GSSConfigIntervalRange.class, "GSSConfigIntervalRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigIntervalRange_Min(), ecorePackage.getEString(), "min", null, 1, 1, GSSConfigIntervalRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3526,12 +3171,12 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		initEAttribute(getGSSConfigPeriodicTCLevel2_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigPeriodicTCLevel2_Period_value(), ecorePackage.getEString(), "period_value", null, 1, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigPeriodicTCLevel2_Period_unit(), this.getGSSConfigUnit(), "period_unit", null, 1, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigPeriodicTCLevel2_Level2(), this.getGSSConfigLevel2(), null, "level2", null, 1, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigPeriodicTCLevel2_App_to_level2(), this.getGSSConfigAppToLevel2(), null, "app_to_level2", null, 1, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigPeriodicTCLevel2_Level1(), this.getGSSConfigLevel1(), null, "level1", null, 1, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigPeriodicTCLevel2_Level2_to_level1(), this.getGSSConfigLevel2ToLevel1(), null, "level2_to_level1", null, 1, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigPeriodicTCLevel2_Level0(), this.getGSSConfigLevel0(), null, "level0", null, 1, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigPeriodicTCLevel2_Level1_to_level0(), this.getGSSConfigLevel1ToLevel0(), null, "level1_to_level0", null, 1, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigPeriodicTCLevel2_Level2(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "level2", null, 0, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigPeriodicTCLevel2_App_to_level2(), theexportPackage.getGSSExportExport(), null, "app_to_level2", null, 1, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigPeriodicTCLevel2_Level1(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "level1", null, 0, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigPeriodicTCLevel2_Level2_to_level1(), theexportPackage.getGSSExportExport(), null, "level2_to_level1", null, 0, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigPeriodicTCLevel2_Level0(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "level0", null, 0, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigPeriodicTCLevel2_Level1_to_level0(), theexportPackage.getGSSExportExport(), null, "level1_to_level0", null, 0, 1, GSSConfigPeriodicTCLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigPeriodicTCLevel1EClass, GSSConfigPeriodicTCLevel1.class, "GSSConfigPeriodicTCLevel1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigPeriodicTCLevel1_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigPeriodicTCLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3539,10 +3184,10 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		initEAttribute(getGSSConfigPeriodicTCLevel1_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSConfigPeriodicTCLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigPeriodicTCLevel1_Period_value(), ecorePackage.getEString(), "period_value", null, 1, 1, GSSConfigPeriodicTCLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigPeriodicTCLevel1_Period_unit(), this.getGSSConfigUnit(), "period_unit", null, 1, 1, GSSConfigPeriodicTCLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigPeriodicTCLevel1_Level1(), this.getGSSConfigLevel1(), null, "level1", null, 1, 1, GSSConfigPeriodicTCLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigPeriodicTCLevel1_App_to_level1(), this.getGSSConfigAppToLevel1(), null, "app_to_level1", null, 1, 1, GSSConfigPeriodicTCLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigPeriodicTCLevel1_Level0(), this.getGSSConfigLevel0(), null, "level0", null, 1, 1, GSSConfigPeriodicTCLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigPeriodicTCLevel1_Level1_to_level0(), this.getGSSConfigLevel1ToLevel0(), null, "level1_to_level0", null, 1, 1, GSSConfigPeriodicTCLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigPeriodicTCLevel1_Level1(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "level1", null, 0, 1, GSSConfigPeriodicTCLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigPeriodicTCLevel1_App_to_level1(), theexportPackage.getGSSExportExport(), null, "app_to_level1", null, 1, 1, GSSConfigPeriodicTCLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigPeriodicTCLevel1_Level0(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "level0", null, 0, 1, GSSConfigPeriodicTCLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigPeriodicTCLevel1_Level1_to_level0(), theexportPackage.getGSSExportExport(), null, "level1_to_level0", null, 0, 1, GSSConfigPeriodicTCLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigPeriodicTCLevel0EClass, GSSConfigPeriodicTCLevel0.class, "GSSConfigPeriodicTCLevel0", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigPeriodicTCLevel0_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigPeriodicTCLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3550,32 +3195,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		initEAttribute(getGSSConfigPeriodicTCLevel0_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSConfigPeriodicTCLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigPeriodicTCLevel0_Period_value(), ecorePackage.getEString(), "period_value", null, 1, 1, GSSConfigPeriodicTCLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigPeriodicTCLevel0_Period_unit(), this.getGSSConfigUnit(), "period_unit", null, 1, 1, GSSConfigPeriodicTCLevel0.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigPeriodicTCLevel0_Level0(), this.getGSSConfigLevel0(), null, "level0", null, 1, 1, GSSConfigPeriodicTCLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigPeriodicTCLevel0_App_to_level0(), this.getGSSConfigAppToLevel0(), null, "app_to_level0", null, 1, 1, GSSConfigPeriodicTCLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigLevel2EClass, GSSConfigLevel2.class, "GSSConfigLevel2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigLevel2_Format(), ecorePackage.getEString(), "format", null, 1, 1, GSSConfigLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigLevel1EClass, GSSConfigLevel1.class, "GSSConfigLevel1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigLevel1_Format(), ecorePackage.getEString(), "format", null, 1, 1, GSSConfigLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigLevel0EClass, GSSConfigLevel0.class, "GSSConfigLevel0", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigLevel0_Format(), ecorePackage.getEString(), "format", null, 1, 1, GSSConfigLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigAppToLevel2EClass, GSSConfigAppToLevel2.class, "GSSConfigAppToLevel2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigAppToLevel2_Export(), ecorePackage.getEString(), "export", null, 1, 1, GSSConfigAppToLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigAppToLevel1EClass, GSSConfigAppToLevel1.class, "GSSConfigAppToLevel1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigAppToLevel1_Export(), ecorePackage.getEString(), "export", null, 1, 1, GSSConfigAppToLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigAppToLevel0EClass, GSSConfigAppToLevel0.class, "GSSConfigAppToLevel0", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigAppToLevel0_Export(), ecorePackage.getEString(), "export", null, 1, 1, GSSConfigAppToLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigLevel2ToLevel1EClass, GSSConfigLevel2ToLevel1.class, "GSSConfigLevel2ToLevel1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigLevel2ToLevel1_Export(), ecorePackage.getEString(), "export", null, 1, 1, GSSConfigLevel2ToLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigLevel1ToLevel0EClass, GSSConfigLevel1ToLevel0.class, "GSSConfigLevel1ToLevel0", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigLevel1ToLevel0_Export(), ecorePackage.getEString(), "export", null, 1, 1, GSSConfigLevel1ToLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigPeriodicTCLevel0_Level0(), thetm_tc_formatPackage.getGSSTmTcFormatTmTcFormat(), null, "level0", null, 0, 1, GSSConfigPeriodicTCLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigPeriodicTCLevel0_App_to_level0(), theexportPackage.getGSSExportExport(), null, "app_to_level0", null, 1, 1, GSSConfigPeriodicTCLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigGlobalVarsEClass, GSSConfigGlobalVars.class, "GSSConfigGlobalVars", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSConfigGlobalVars_GlobalVar(), this.getGSSConfigGlobalVar(), null, "GlobalVar", null, 1, 10, GSSConfigGlobalVars.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3612,7 +3233,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		initEAttribute(getGSSConfigReferenceSpecialPacket_Size(), ecorePackage.getEString(), "size", null, 1, 1, GSSConfigReferenceSpecialPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigMonitorsEClass, GSSConfigMonitors.class, "GSSConfigMonitors", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigMonitors_ChartsFile(), ecorePackage.getEString(), "ChartsFile", null, 0, 1, GSSConfigMonitors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigMonitors_ChartsFile(), thechartsPackage.getGSSChartsCharts(), null, "ChartsFile", null, 0, 1, GSSConfigMonitors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigMonitors_Plot(), this.getGSSConfigPlot(), null, "plot", null, 0, -1, GSSConfigMonitors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigMonitors_AlarmMsg(), this.getGSSConfigAlarmMsg(), null, "alarmMsg", null, 0, -1, GSSConfigMonitors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigMonitors_Modify(), this.getGSSConfigModify(), null, "modify", null, 0, -1, GSSConfigMonitors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3620,6 +3241,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 
 		initEClass(gssConfigPlotEClass, GSSConfigPlot.class, "GSSConfigPlot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigPlot_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigPlot_ChartRef(), thechartsPackage.getGSSChartsChart(), null, "chartRef", null, 1, 1, GSSConfigPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigPlot_GVFiltered(), this.getGSSConfigGVFiltered(), null, "GVFiltered", null, 0, 1, GSSConfigPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigPlot_GVPeriodic(), this.getGSSConfigGVPeriodic(), null, "GVPeriodic", null, 0, 1, GSSConfigPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -3645,7 +3267,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 
 		initEClass(gssConfigGVFilteredEClass, GSSConfigGVFiltered.class, "GSSConfigGVFiltered", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigGVFiltered_GlobalVarRef(), ecorePackage.getEString(), "GlobalVarRef", null, 1, 1, GSSConfigGVFiltered.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigGVFiltered_Filter(), ecorePackage.getEString(), "filter", null, 1, 1, GSSConfigGVFiltered.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigGVFiltered_Filter(), thefiltersPackage.getGSSFilterFilter(), null, "filter", null, 0, 1, GSSConfigGVFiltered.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigGVPeriodicEClass, GSSConfigGVPeriodic.class, "GSSConfigGVPeriodic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigGVPeriodic_GlobalVarRef(), ecorePackage.getEString(), "GlobalVarRef", null, 1, 1, GSSConfigGVPeriodic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3653,12 +3275,12 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		initEAttribute(getGSSConfigGVPeriodic_Period_unit(), this.getGSSConfigUnit(), "period_unit", null, 1, 1, GSSConfigGVPeriodic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigTestsEClass, GSSConfigTests.class, "GSSConfigTests", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigTests_ProtocolPacketsFile(), ecorePackage.getEString(), "ProtocolPacketsFile", null, 0, 1, GSSConfigTests.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigTests_ProtocolPacketsFile(), theprotocol_packetsPackage.getGSSProtocolPacketsProtocolPackets(), null, "ProtocolPacketsFile", null, 0, 1, GSSConfigTests.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigTests_TestCase(), this.getGSSConfigTestCase(), null, "TestCase", null, 1, 150, GSSConfigTests.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigTestCaseEClass, GSSConfigTestCase.class, "GSSConfigTestCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigTestCase_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigTestCase_Procedure(), ecorePackage.getEString(), "procedure", null, 1, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigTestCase_Procedure(), thetest_procPackage.getGSSTestProcTestProc(), null, "procedure", null, 1, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigTestCase_Req(), ecorePackage.getEString(), "req", null, 0, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigTestCase_ReqAction(), this.getGSSConfigReqAction(), "reqAction", null, 0, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

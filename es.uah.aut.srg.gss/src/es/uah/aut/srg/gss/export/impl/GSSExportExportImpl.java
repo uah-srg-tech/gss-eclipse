@@ -17,11 +17,15 @@ import es.uah.aut.srg.gss.export.GSSExportExport;
 import es.uah.aut.srg.gss.export.GSSExportSettings;
 import es.uah.aut.srg.gss.export.GSSExportSizes;
 import es.uah.aut.srg.gss.export.exportPackage;
+
+import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -43,44 +47,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExportExport {
 	/**
-	 * The default value of the '{@link #getFrom() <em>From</em>}' attribute.
+	 * The cached value of the '{@link #getFrom() <em>From</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFrom()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FROM_EDEFAULT = null;
+	protected GSSTmTcFormatTmTcFormat from;
 
 	/**
-	 * The cached value of the '{@link #getFrom() <em>From</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFrom()
-	 * @generated
-	 * @ordered
-	 */
-	protected String from = FROM_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTo() <em>To</em>}' attribute.
+	 * The cached value of the '{@link #getTo() <em>To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTo()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TO_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTo() <em>To</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTo()
-	 * @generated
-	 * @ordered
-	 */
-	protected String to = TO_EDEFAULT;
+	protected GSSTmTcFormatTmTcFormat to;
 
 	/**
 	 * The cached value of the '{@link #getSizes() <em>Sizes</em>}' containment reference.
@@ -136,7 +120,15 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFrom() {
+	public GSSTmTcFormatTmTcFormat getFrom() {
+		if (from != null && from.eIsProxy()) {
+			InternalEObject oldFrom = (InternalEObject)from;
+			from = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldFrom);
+			if (from != oldFrom) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, exportPackage.GSS_EXPORT_EXPORT__FROM, oldFrom, from));
+			}
+		}
 		return from;
 	}
 
@@ -145,8 +137,17 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFrom(String newFrom) {
-		String oldFrom = from;
+	public GSSTmTcFormatTmTcFormat basicGetFrom() {
+		return from;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFrom(GSSTmTcFormatTmTcFormat newFrom) {
+		GSSTmTcFormatTmTcFormat oldFrom = from;
 		from = newFrom;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, exportPackage.GSS_EXPORT_EXPORT__FROM, oldFrom, from));
@@ -157,7 +158,15 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTo() {
+	public GSSTmTcFormatTmTcFormat getTo() {
+		if (to != null && to.eIsProxy()) {
+			InternalEObject oldTo = (InternalEObject)to;
+			to = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldTo);
+			if (to != oldTo) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, exportPackage.GSS_EXPORT_EXPORT__TO, oldTo, to));
+			}
+		}
 		return to;
 	}
 
@@ -166,8 +175,17 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTo(String newTo) {
-		String oldTo = to;
+	public GSSTmTcFormatTmTcFormat basicGetTo() {
+		return to;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTo(GSSTmTcFormatTmTcFormat newTo) {
+		GSSTmTcFormatTmTcFormat oldTo = to;
 		to = newTo;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, exportPackage.GSS_EXPORT_EXPORT__TO, oldTo, to));
@@ -329,9 +347,11 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_EXPORT__FROM:
-				return getFrom();
+				if (resolve) return getFrom();
+				return basicGetFrom();
 			case exportPackage.GSS_EXPORT_EXPORT__TO:
-				return getTo();
+				if (resolve) return getTo();
+				return basicGetTo();
 			case exportPackage.GSS_EXPORT_EXPORT__SIZES:
 				return getSizes();
 			case exportPackage.GSS_EXPORT_EXPORT__SETTINGS:
@@ -347,15 +367,14 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_EXPORT__FROM:
-				setFrom((String)newValue);
+				setFrom((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case exportPackage.GSS_EXPORT_EXPORT__TO:
-				setTo((String)newValue);
+				setTo((GSSTmTcFormatTmTcFormat)newValue);
 				return;
 			case exportPackage.GSS_EXPORT_EXPORT__SIZES:
 				setSizes((GSSExportSizes)newValue);
@@ -379,10 +398,10 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_EXPORT__FROM:
-				setFrom(FROM_EDEFAULT);
+				setFrom((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case exportPackage.GSS_EXPORT_EXPORT__TO:
-				setTo(TO_EDEFAULT);
+				setTo((GSSTmTcFormatTmTcFormat)null);
 				return;
 			case exportPackage.GSS_EXPORT_EXPORT__SIZES:
 				setSizes((GSSExportSizes)null);
@@ -406,9 +425,9 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case exportPackage.GSS_EXPORT_EXPORT__FROM:
-				return FROM_EDEFAULT == null ? from != null : !FROM_EDEFAULT.equals(from);
+				return from != null;
 			case exportPackage.GSS_EXPORT_EXPORT__TO:
-				return TO_EDEFAULT == null ? to != null : !TO_EDEFAULT.equals(to);
+				return to != null;
 			case exportPackage.GSS_EXPORT_EXPORT__SIZES:
 				return sizes != null;
 			case exportPackage.GSS_EXPORT_EXPORT__SETTINGS:
@@ -417,24 +436,6 @@ public class GSSExportExportImpl extends GSSModelElementImpl implements GSSExpor
 				return activateDICs != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (from: ");
-		result.append(from);
-		result.append(", to: ");
-		result.append(to);
-		result.append(')');
-		return result.toString();
 	}
 
 } //GSSExportExportImpl

@@ -41,7 +41,7 @@ public interface GSSExportSettings extends EObject {
 	 * The list contents are of type {@link es.uah.aut.srg.gss.export.GSSExportSettingFromConst}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Setting From Const</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Setting From Const</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -57,7 +57,7 @@ public interface GSSExportSettings extends EObject {
 	 * The list contents are of type {@link es.uah.aut.srg.gss.export.GSSExportSettingFromSize}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Setting From Size</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Setting From Size</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -73,7 +73,7 @@ public interface GSSExportSettings extends EObject {
 	 * The list contents are of type {@link es.uah.aut.srg.gss.export.GSSExportSettingFromFile}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Setting From File</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Setting From File</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -89,7 +89,7 @@ public interface GSSExportSettings extends EObject {
 	 * The list contents are of type {@link es.uah.aut.srg.gss.export.GSSExportSettingFromField}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Setting From Field</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Setting From Field</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -105,7 +105,7 @@ public interface GSSExportSettings extends EObject {
 	 * The list contents are of type {@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Setting AI From Const</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Setting AI From Const</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -121,7 +121,7 @@ public interface GSSExportSettings extends EObject {
 	 * The list contents are of type {@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromFile}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Setting AI From File</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Setting AI From File</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

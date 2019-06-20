@@ -72,7 +72,7 @@ public class IMPORTSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     GSSImportDataSource returns GSSImportDataSource
 	 *
 	 * Constraint:
-	 *     (FieldRef=ID leftTrim=INTEGER rightTrim=INTEGER)
+	 *     (FieldRef=[GSSTmTcFormatField|VersionedQualifiedReferenceName] leftTrim=INTEGER rightTrim=INTEGER)
 	 */
 	protected void sequence_GSSImportDataSource(ISerializationContext context, GSSImportDataSource semanticObject) {
 		if (errorAcceptor != null) {
@@ -84,7 +84,7 @@ public class IMPORTSSemanticSequencer extends AbstractDelegatingSemanticSequence
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, importsPackage.Literals.GSS_IMPORT_DATA_SOURCE__RIGHT_TRIM));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSImportDataSourceAccess().getFieldRefIDTerminalRuleCall_4_0(), semanticObject.getFieldRef());
+		feeder.accept(grammarAccess.getGSSImportDataSourceAccess().getFieldRefGSSTmTcFormatFieldVersionedQualifiedReferenceNameParserRuleCall_4_0_1(), semanticObject.getFieldRef());
 		feeder.accept(grammarAccess.getGSSImportDataSourceAccess().getLeftTrimINTEGERParserRuleCall_8_0(), semanticObject.getLeftTrim());
 		feeder.accept(grammarAccess.getGSSImportDataSourceAccess().getRightTrimINTEGERParserRuleCall_12_0(), semanticObject.getRightTrim());
 		feeder.finish();
@@ -97,10 +97,10 @@ public class IMPORTSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *
 	 * Constraint:
 	 *     (
-	 *         name=EString 
+	 *         name=ID 
 	 *         (uri=QualifiedName | version=Version)+ 
-	 *         from=ID 
-	 *         to=ID 
+	 *         from=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName] 
+	 *         to=[GSSTmTcFormatTmTcFormat|VersionedQualifiedName]? 
 	 *         dataSource+=GSSImportDataSource+ 
 	 *         virtualSize=GSSImportVirtualSize?
 	 *     )
@@ -115,7 +115,12 @@ public class IMPORTSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     GSSImportVirtualSize returns GSSImportVirtualSize
 	 *
 	 * Constraint:
-	 *     (FieldRef=ID to=ID addSize=INTEGER? unit=GSSImportUnit?)
+	 *     (
+	 *         FieldRef=[GSSTmTcFormatField|VersionedQualifiedReferenceName] 
+	 *         to=[GSSTmTcFormatField|VersionedQualifiedReferenceName] 
+	 *         addSize=INTEGER? 
+	 *         unit=GSSImportUnit?
+	 *     )
 	 */
 	protected void sequence_GSSImportVirtualSize(ISerializationContext context, GSSImportVirtualSize semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -127,7 +132,7 @@ public class IMPORTSSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     GSSModelFileImport returns GSSModelFileImport
 	 *
 	 * Constraint:
-	 *     importURI=ID
+	 *     importURI=STRING
 	 */
 	protected void sequence_GSSModelFileImport(ISerializationContext context, GSSModelFileImport semanticObject) {
 		if (errorAcceptor != null) {
@@ -135,7 +140,7 @@ public class IMPORTSSemanticSequencer extends AbstractDelegatingSemanticSequence
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, commonPackage.Literals.GSS_MODEL_FILE_IMPORT__IMPORT_URI));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0(), semanticObject.getImportURI());
+		feeder.accept(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0(), semanticObject.getImportURI());
 		feeder.finish();
 	}
 	

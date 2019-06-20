@@ -10,7 +10,6 @@
  */
 package es.uah.aut.srg.gss.export;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,14 +21,13 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSettingFromConst#getValue <em>Value</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSettingFromConst#getToFieldRef <em>To Field Ref</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportSettingFromConst()
  * @model
  * @generated
  */
-public interface GSSExportSettingFromConst extends EObject {
+public interface GSSExportSettingFromConst extends GSSExportSetting {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -55,31 +53,5 @@ public interface GSSExportSettingFromConst extends EObject {
 	 * @generated
 	 */
 	void setValue(String value);
-
-	/**
-	 * Returns the value of the '<em><b>To Field Ref</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>To Field Ref</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>To Field Ref</em>' attribute.
-	 * @see #setToFieldRef(String)
-	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportSettingFromConst_ToFieldRef()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getToFieldRef();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.export.GSSExportSettingFromConst#getToFieldRef <em>To Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To Field Ref</em>' attribute.
-	 * @see #getToFieldRef()
-	 * @generated
-	 */
-	void setToFieldRef(String value);
 
 } // GSSExportSettingFromConst

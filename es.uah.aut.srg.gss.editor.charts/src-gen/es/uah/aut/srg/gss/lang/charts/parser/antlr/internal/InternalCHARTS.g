@@ -158,9 +158,9 @@ ruleGSSModelFileImport returns [EObject current=null]
 		}
 		(
 			(
-				lv_importURI_2_0=RULE_ID
+				lv_importURI_2_0=RULE_STRING
 				{
-					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURIIDTerminalRuleCall_2_0());
+					newLeafNode(lv_importURI_2_0, grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -170,7 +170,7 @@ ruleGSSModelFileImport returns [EObject current=null]
 						$current,
 						"importURI",
 						lv_importURI_2_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -213,20 +213,19 @@ ruleGSSChartsCharts returns [EObject current=null]
 		}
 		(
 			(
+				lv_name_1_0=RULE_ID
 				{
-					newCompositeNode(grammarAccess.getGSSChartsChartsAccess().getNameEStringParserRuleCall_1_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getGSSChartsChartsAccess().getNameIDTerminalRuleCall_1_0());
 				}
-				lv_name_1_0=ruleEString
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSChartsChartsRule());
+						$current = createModelElement(grammarAccess.getGSSChartsChartsRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"name",
 						lv_name_1_0,
-						"es.uah.aut.srg.gss.lang.charts.CHARTS.EString");
-					afterParserOrEnumRuleCall();
+						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
@@ -431,9 +430,9 @@ ruleGSSChartsChart returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_8_0=RULE_ID
+				lv_name_8_0=RULE_STRING
 				{
-					newLeafNode(lv_name_8_0, grammarAccess.getGSSChartsChartAccess().getNameIDTerminalRuleCall_8_0());
+					newLeafNode(lv_name_8_0, grammarAccess.getGSSChartsChartAccess().getNameSTRINGTerminalRuleCall_8_0());
 				}
 				{
 					if ($current==null) {
@@ -443,7 +442,7 @@ ruleGSSChartsChart returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_8_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -520,40 +519,6 @@ ruleGSSChartsChart returns [EObject current=null]
 		otherlv_19=';'
 		{
 			newLeafNode(otherlv_19, grammarAccess.getGSSChartsChartAccess().getSemicolonKeyword_19());
-		}
-	)
-;
-
-// Entry rule entryRuleEString
-entryRuleEString returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getEStringRule()); }
-	iv_ruleEString=ruleEString
-	{ $current=$iv_ruleEString.current.getText(); }
-	EOF;
-
-// Rule EString
-ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		this_STRING_0=RULE_STRING
-		{
-			$current.merge(this_STRING_0);
-		}
-		{
-			newLeafNode(this_STRING_0, grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0());
-		}
-		    |
-		this_ID_1=RULE_ID
-		{
-			$current.merge(this_ID_1);
-		}
-		{
-			newLeafNode(this_ID_1, grammarAccess.getEStringAccess().getIDTerminalRuleCall_1());
 		}
 	)
 ;
