@@ -32,7 +32,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface GSSTestProcOutput extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -136,4 +135,5 @@ public interface GSSTestProcOutput extends EObject {
 	 * @generated
 	 */
 	void setOptional(String value);
+
 } // GSSTestProcOutput

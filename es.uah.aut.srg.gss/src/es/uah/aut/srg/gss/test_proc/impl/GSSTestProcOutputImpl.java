@@ -14,6 +14,7 @@ import es.uah.aut.srg.gss.test_proc.GSSTestProcOutput;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -45,6 +46,7 @@ public abstract class GSSTestProcOutputImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -54,6 +56,7 @@ public abstract class GSSTestProcOutputImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -63,6 +66,7 @@ public abstract class GSSTestProcOutputImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected static final String ID_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -72,6 +76,7 @@ public abstract class GSSTestProcOutputImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getIfRef() <em>If Ref</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -81,6 +86,7 @@ public abstract class GSSTestProcOutputImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected static final String IF_REF_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getIfRef() <em>If Ref</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -90,6 +96,7 @@ public abstract class GSSTestProcOutputImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected String ifRef = IF_REF_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getOptional() <em>Optional</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -99,6 +106,7 @@ public abstract class GSSTestProcOutputImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected static final String OPTIONAL_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getOptional() <em>Optional</em>}' attribute.
 	 * <!-- begin-user-doc -->
