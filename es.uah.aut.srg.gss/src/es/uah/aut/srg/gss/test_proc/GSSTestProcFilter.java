@@ -10,8 +10,7 @@
  */
 package es.uah.aut.srg.gss.test_proc;
 
-import es.uah.aut.srg.gss.filters.GSSFilterFilter;
-
+import es.uah.aut.srg.tmtcif.filter.TMTCIFFilterFilter;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -97,12 +96,12 @@ public interface GSSTestProcFilter extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extra filter</em>' reference.
-	 * @see #setExtra_filter(GSSFilterFilter)
+	 * @see #setExtra_filter(TMTCIFFilterFilter)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcFilter_Extra_filter()
 	 * @model
 	 * @generated
 	 */
-	GSSFilterFilter getExtra_filter();
+	TMTCIFFilterFilter getExtra_filter();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcFilter#getExtra_filter <em>Extra filter</em>}' reference.
@@ -112,6 +111,6 @@ public interface GSSTestProcFilter extends EObject {
 	 * @see #getExtra_filter()
 	 * @generated
 	 */
-	void setExtra_filter(GSSFilterFilter value);
+	void setExtra_filter(TMTCIFFilterFilter value);
 
 } // GSSTestProcFilter

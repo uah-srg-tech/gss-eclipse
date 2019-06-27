@@ -3,11 +3,10 @@
 package es.uah.aut.srg.gss.protocol_packets.impl;
 
 import es.uah.aut.srg.gss.common.impl.GSSModelObjectImpl;
-import es.uah.aut.srg.gss.export.GSSExportExport;
-
 import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket;
 import es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
+import es.uah.aut.srg.tmtcif.export.TMTCIFExportExport;
+import es.uah.aut.srg.tmtcif.format.TMTCIFFormatFormat;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -80,7 +79,7 @@ public class GSSProtocolPacketsProtocolPacketImpl extends GSSModelObjectImpl imp
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSExportExport export;
+	protected TMTCIFExportExport export;
 
 	/**
 	 * The cached value of the '{@link #getFormat() <em>Format</em>}' reference.
@@ -90,7 +89,7 @@ public class GSSProtocolPacketsProtocolPacketImpl extends GSSModelObjectImpl imp
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatTmTcFormat format;
+	protected TMTCIFFormatFormat format;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -158,10 +157,10 @@ public class GSSProtocolPacketsProtocolPacketImpl extends GSSModelObjectImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSExportExport getExport() {
+	public TMTCIFExportExport getExport() {
 		if (export != null && export.eIsProxy()) {
 			InternalEObject oldExport = (InternalEObject)export;
-			export = (GSSExportExport)eResolveProxy(oldExport);
+			export = (TMTCIFExportExport)eResolveProxy(oldExport);
 			if (export != oldExport) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT, oldExport, export));
@@ -175,7 +174,7 @@ public class GSSProtocolPacketsProtocolPacketImpl extends GSSModelObjectImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSExportExport basicGetExport() {
+	public TMTCIFExportExport basicGetExport() {
 		return export;
 	}
 
@@ -184,8 +183,8 @@ public class GSSProtocolPacketsProtocolPacketImpl extends GSSModelObjectImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExport(GSSExportExport newExport) {
-		GSSExportExport oldExport = export;
+	public void setExport(TMTCIFExportExport newExport) {
+		TMTCIFExportExport oldExport = export;
 		export = newExport;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT, oldExport, export));
@@ -196,10 +195,10 @@ public class GSSProtocolPacketsProtocolPacketImpl extends GSSModelObjectImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTcFormat getFormat() {
+	public TMTCIFFormatFormat getFormat() {
 		if (format != null && format.eIsProxy()) {
 			InternalEObject oldFormat = (InternalEObject)format;
-			format = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldFormat);
+			format = (TMTCIFFormatFormat)eResolveProxy(oldFormat);
 			if (format != oldFormat) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT, oldFormat, format));
@@ -213,7 +212,7 @@ public class GSSProtocolPacketsProtocolPacketImpl extends GSSModelObjectImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTcFormat basicGetFormat() {
+	public TMTCIFFormatFormat basicGetFormat() {
 		return format;
 	}
 
@@ -222,8 +221,8 @@ public class GSSProtocolPacketsProtocolPacketImpl extends GSSModelObjectImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFormat(GSSTmTcFormatTmTcFormat newFormat) {
-		GSSTmTcFormatTmTcFormat oldFormat = format;
+	public void setFormat(TMTCIFFormatFormat newFormat) {
+		TMTCIFFormatFormat oldFormat = format;
 		format = newFormat;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT, oldFormat, format));
@@ -266,10 +265,10 @@ public class GSSProtocolPacketsProtocolPacketImpl extends GSSModelObjectImpl imp
 				setLevelRef((String)newValue);
 				return;
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT:
-				setExport((GSSExportExport)newValue);
+				setExport((TMTCIFExportExport)newValue);
 				return;
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT:
-				setFormat((GSSTmTcFormatTmTcFormat)newValue);
+				setFormat((TMTCIFFormatFormat)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -290,10 +289,10 @@ public class GSSProtocolPacketsProtocolPacketImpl extends GSSModelObjectImpl imp
 				setLevelRef(LEVEL_REF_EDEFAULT);
 				return;
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__EXPORT:
-				setExport((GSSExportExport)null);
+				setExport((TMTCIFExportExport)null);
 				return;
 			case protocol_packetsPackage.GSS_PROTOCOL_PACKETS_PROTOCOL_PACKET__FORMAT:
-				setFormat((GSSTmTcFormatTmTcFormat)null);
+				setFormat((TMTCIFFormatFormat)null);
 				return;
 		}
 		super.eUnset(featureID);

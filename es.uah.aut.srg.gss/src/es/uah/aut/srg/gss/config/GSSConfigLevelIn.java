@@ -10,8 +10,8 @@
  */
 package es.uah.aut.srg.gss.config;
 
-import es.uah.aut.srg.gss.export.GSSExportExport;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
+import es.uah.aut.srg.tmtcif.export.TMTCIFExportExport;
+import es.uah.aut.srg.tmtcif.format.TMTCIFFormatFormat;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -122,12 +122,12 @@ public interface GSSConfigLevelIn extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>TCformat</em>' reference.
-	 * @see #setTCformat(GSSTmTcFormatTmTcFormat)
+	 * @see #setTCformat(TMTCIFFormatFormat)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelIn_TCformat()
 	 * @model required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatTmTcFormat getTCformat();
+	TMTCIFFormatFormat getTCformat();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getTCformat <em>TCformat</em>}' reference.
@@ -137,7 +137,7 @@ public interface GSSConfigLevelIn extends EObject {
 	 * @see #getTCformat()
 	 * @generated
 	 */
-	void setTCformat(GSSTmTcFormatTmTcFormat value);
+	void setTCformat(TMTCIFFormatFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Export to prev Level</b></em>' reference.
@@ -148,12 +148,12 @@ public interface GSSConfigLevelIn extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Export to prev Level</em>' reference.
-	 * @see #setExport_to_prev_Level(GSSExportExport)
+	 * @see #setExport_to_prev_Level(TMTCIFExportExport)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelIn_Export_to_prev_Level()
 	 * @model
 	 * @generated
 	 */
-	GSSExportExport getExport_to_prev_Level();
+	TMTCIFExportExport getExport_to_prev_Level();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelIn#getExport_to_prev_Level <em>Export to prev Level</em>}' reference.
@@ -163,6 +163,6 @@ public interface GSSConfigLevelIn extends EObject {
 	 * @see #getExport_to_prev_Level()
 	 * @generated
 	 */
-	void setExport_to_prev_Level(GSSExportExport value);
+	void setExport_to_prev_Level(TMTCIFExportExport value);
 
 } // GSSConfigLevelIn

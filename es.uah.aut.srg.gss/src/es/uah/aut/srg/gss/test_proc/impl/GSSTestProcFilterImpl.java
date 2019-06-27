@@ -10,12 +10,11 @@
  */
 package es.uah.aut.srg.gss.test_proc.impl;
 
-import es.uah.aut.srg.gss.filters.GSSFilterFilter;
-
 import es.uah.aut.srg.gss.test_proc.GSSTestProcFilter;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcYesNo;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
 
+import es.uah.aut.srg.tmtcif.filter.TMTCIFFilterFilter;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -76,7 +75,7 @@ public class GSSTestProcFilterImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSFilterFilter extra_filter;
+	protected TMTCIFFilterFilter extra_filter;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,10 +147,10 @@ public class GSSTestProcFilterImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFilterFilter getExtra_filter() {
+	public TMTCIFFilterFilter getExtra_filter() {
 		if (extra_filter != null && extra_filter.eIsProxy()) {
 			InternalEObject oldExtra_filter = (InternalEObject)extra_filter;
-			extra_filter = (GSSFilterFilter)eResolveProxy(oldExtra_filter);
+			extra_filter = (TMTCIFFilterFilter)eResolveProxy(oldExtra_filter);
 			if (extra_filter != oldExtra_filter) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_FILTER__EXTRA_FILTER, oldExtra_filter, extra_filter));
@@ -165,7 +164,7 @@ public class GSSTestProcFilterImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFilterFilter basicGetExtra_filter() {
+	public TMTCIFFilterFilter basicGetExtra_filter() {
 		return extra_filter;
 	}
 
@@ -174,8 +173,8 @@ public class GSSTestProcFilterImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExtra_filter(GSSFilterFilter newExtra_filter) {
-		GSSFilterFilter oldExtra_filter = extra_filter;
+	public void setExtra_filter(TMTCIFFilterFilter newExtra_filter) {
+		TMTCIFFilterFilter oldExtra_filter = extra_filter;
 		extra_filter = newExtra_filter;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_FILTER__EXTRA_FILTER, oldExtra_filter, extra_filter));
@@ -210,7 +209,7 @@ public class GSSTestProcFilterImpl extends MinimalEObjectImpl.Container implemen
 				setApply_def_filter((GSSTestProcYesNo)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_FILTER__EXTRA_FILTER:
-				setExtra_filter((GSSFilterFilter)newValue);
+				setExtra_filter((TMTCIFFilterFilter)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -228,7 +227,7 @@ public class GSSTestProcFilterImpl extends MinimalEObjectImpl.Container implemen
 				unsetApply_def_filter();
 				return;
 			case test_procPackage.GSS_TEST_PROC_FILTER__EXTRA_FILTER:
-				setExtra_filter((GSSFilterFilter)null);
+				setExtra_filter((TMTCIFFilterFilter)null);
 				return;
 		}
 		super.eUnset(featureID);

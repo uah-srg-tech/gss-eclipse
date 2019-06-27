@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.gss.test_proc;
 
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
+import es.uah.aut.srg.tmtcif.format.TMTCIFFormatFormat;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,12 +39,12 @@ public interface GSSTestProcOutputLevel0 extends GSSTestProcOutput {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level0</em>' reference.
-	 * @see #setLevel0(GSSTmTcFormatTmTcFormat)
+	 * @see #setLevel0(TMTCIFFormatFormat)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel0_Level0()
 	 * @model
 	 * @generated
 	 */
-	GSSTmTcFormatTmTcFormat getLevel0();
+	TMTCIFFormatFormat getLevel0();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0#getLevel0 <em>Level0</em>}' reference.
@@ -54,7 +54,7 @@ public interface GSSTestProcOutputLevel0 extends GSSTestProcOutput {
 	 * @see #getLevel0()
 	 * @generated
 	 */
-	void setLevel0(GSSTmTcFormatTmTcFormat value);
+	void setLevel0(TMTCIFFormatFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Level0 filter</b></em>' containment reference.

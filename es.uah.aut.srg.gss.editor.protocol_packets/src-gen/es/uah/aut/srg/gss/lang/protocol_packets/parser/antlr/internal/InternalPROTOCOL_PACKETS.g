@@ -495,7 +495,7 @@ ruleGSSProtocolPacketsProtocolPacket returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportCrossReference_16_0());
+					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportTMTCIFExportExportCrossReference_16_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -526,7 +526,7 @@ ruleGSSProtocolPacketsProtocolPacket returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTcFormatCrossReference_20_0());
+					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatTMTCIFFormatFormatCrossReference_20_0());
 				}
 				ruleVersionedQualifiedName
 				{

@@ -1143,7 +1143,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
             }
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportCrossReference_16_0());
+              					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportTMTCIFExportExportCrossReference_16_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_5);
@@ -1200,7 +1200,7 @@ public class InternalPROTOCOL_PACKETSParser extends AbstractInternalAntlrParser 
             }
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSTmTcFormatTmTcFormatCrossReference_20_0());
+              					newCompositeNode(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatTMTCIFFormatFormatCrossReference_20_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_5);

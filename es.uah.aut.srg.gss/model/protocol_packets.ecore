@@ -11,8 +11,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="levelRef" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="export" lowerBound="1"
-        eType="ecore:EClass export.ecore#//GSSExportExport"/>
+        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/export.ecore#//TMTCIFExportExport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="format" lowerBound="1"
-        eType="ecore:EClass tm_tc_format.ecore#//GSSTmTcFormatTmTcFormat"/>
+        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/format.ecore#//TMTCIFFormatFormat"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -12,9 +12,7 @@ package es.uah.aut.srg.gss.config.impl;
 
 import es.uah.aut.srg.gss.config.GSSConfigGVFiltered;
 import es.uah.aut.srg.gss.config.configPackage;
-
-import es.uah.aut.srg.gss.filters.GSSFilterFilter;
-
+import es.uah.aut.srg.tmtcif.filter.TMTCIFFilterFilter;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -66,7 +64,7 @@ public class GSSConfigGVFilteredImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSFilterFilter filter;
+	protected TMTCIFFilterFilter filter;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,10 +111,10 @@ public class GSSConfigGVFilteredImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFilterFilter getFilter() {
+	public TMTCIFFilterFilter getFilter() {
 		if (filter != null && filter.eIsProxy()) {
 			InternalEObject oldFilter = (InternalEObject)filter;
-			filter = (GSSFilterFilter)eResolveProxy(oldFilter);
+			filter = (TMTCIFFilterFilter)eResolveProxy(oldFilter);
 			if (filter != oldFilter) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_GV_FILTERED__FILTER, oldFilter, filter));
@@ -130,7 +128,7 @@ public class GSSConfigGVFilteredImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFilterFilter basicGetFilter() {
+	public TMTCIFFilterFilter basicGetFilter() {
 		return filter;
 	}
 
@@ -139,8 +137,8 @@ public class GSSConfigGVFilteredImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFilter(GSSFilterFilter newFilter) {
-		GSSFilterFilter oldFilter = filter;
+	public void setFilter(TMTCIFFilterFilter newFilter) {
+		TMTCIFFilterFilter oldFilter = filter;
 		filter = newFilter;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_GV_FILTERED__FILTER, oldFilter, filter));
@@ -175,7 +173,7 @@ public class GSSConfigGVFilteredImpl extends MinimalEObjectImpl.Container implem
 				setGlobalVarRef((String)newValue);
 				return;
 			case configPackage.GSS_CONFIG_GV_FILTERED__FILTER:
-				setFilter((GSSFilterFilter)newValue);
+				setFilter((TMTCIFFilterFilter)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -193,7 +191,7 @@ public class GSSConfigGVFilteredImpl extends MinimalEObjectImpl.Container implem
 				setGlobalVarRef(GLOBAL_VAR_REF_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_GV_FILTERED__FILTER:
-				setFilter((GSSFilterFilter)null);
+				setFilter((TMTCIFFilterFilter)null);
 				return;
 		}
 		super.eUnset(featureID);

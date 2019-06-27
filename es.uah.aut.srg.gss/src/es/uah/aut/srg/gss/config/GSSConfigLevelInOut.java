@@ -10,12 +10,10 @@
  */
 package es.uah.aut.srg.gss.config;
 
-import es.uah.aut.srg.gss.export.GSSExportExport;
-
-import es.uah.aut.srg.gss.filters.GSSFilterFilter;
-
-import es.uah.aut.srg.gss.imports.GSSImportImport;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
+import es.uah.aut.srg.tmtcif.export.TMTCIFExportExport;
+import es.uah.aut.srg.tmtcif.filter.TMTCIFFilterFilter;
+import es.uah.aut.srg.tmtcif.format.TMTCIFFormatFormat;
+import es.uah.aut.srg.tmtcif.import_.TMTCIFImportImport;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -129,12 +127,12 @@ public interface GSSConfigLevelInOut extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>TMformat</em>' reference.
-	 * @see #setTMformat(GSSTmTcFormatTmTcFormat)
+	 * @see #setTMformat(TMTCIFFormatFormat)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelInOut_TMformat()
 	 * @model required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatTmTcFormat getTMformat();
+	TMTCIFFormatFormat getTMformat();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getTMformat <em>TMformat</em>}' reference.
@@ -144,7 +142,7 @@ public interface GSSConfigLevelInOut extends EObject {
 	 * @see #getTMformat()
 	 * @generated
 	 */
-	void setTMformat(GSSTmTcFormatTmTcFormat value);
+	void setTMformat(TMTCIFFormatFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>TCformat</b></em>' reference.
@@ -155,12 +153,12 @@ public interface GSSConfigLevelInOut extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>TCformat</em>' reference.
-	 * @see #setTCformat(GSSTmTcFormatTmTcFormat)
+	 * @see #setTCformat(TMTCIFFormatFormat)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelInOut_TCformat()
 	 * @model required="true"
 	 * @generated
 	 */
-	GSSTmTcFormatTmTcFormat getTCformat();
+	TMTCIFFormatFormat getTCformat();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getTCformat <em>TCformat</em>}' reference.
@@ -170,7 +168,7 @@ public interface GSSConfigLevelInOut extends EObject {
 	 * @see #getTCformat()
 	 * @generated
 	 */
-	void setTCformat(GSSTmTcFormatTmTcFormat value);
+	void setTCformat(TMTCIFFormatFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Input Filter</b></em>' reference.
@@ -181,12 +179,12 @@ public interface GSSConfigLevelInOut extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input Filter</em>' reference.
-	 * @see #setInputFilter(GSSFilterFilter)
+	 * @see #setInputFilter(TMTCIFFilterFilter)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelInOut_InputFilter()
 	 * @model required="true"
 	 * @generated
 	 */
-	GSSFilterFilter getInputFilter();
+	TMTCIFFilterFilter getInputFilter();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getInputFilter <em>Input Filter</em>}' reference.
@@ -196,7 +194,7 @@ public interface GSSConfigLevelInOut extends EObject {
 	 * @see #getInputFilter()
 	 * @generated
 	 */
-	void setInputFilter(GSSFilterFilter value);
+	void setInputFilter(TMTCIFFilterFilter value);
 
 	/**
 	 * Returns the value of the '<em><b>Export to prev Level</b></em>' reference.
@@ -207,12 +205,12 @@ public interface GSSConfigLevelInOut extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Export to prev Level</em>' reference.
-	 * @see #setExport_to_prev_Level(GSSExportExport)
+	 * @see #setExport_to_prev_Level(TMTCIFExportExport)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelInOut_Export_to_prev_Level()
 	 * @model
 	 * @generated
 	 */
-	GSSExportExport getExport_to_prev_Level();
+	TMTCIFExportExport getExport_to_prev_Level();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getExport_to_prev_Level <em>Export to prev Level</em>}' reference.
@@ -222,7 +220,7 @@ public interface GSSConfigLevelInOut extends EObject {
 	 * @see #getExport_to_prev_Level()
 	 * @generated
 	 */
-	void setExport_to_prev_Level(GSSExportExport value);
+	void setExport_to_prev_Level(TMTCIFExportExport value);
 
 	/**
 	 * Returns the value of the '<em><b>Import from prev Level</b></em>' reference.
@@ -233,12 +231,12 @@ public interface GSSConfigLevelInOut extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Import from prev Level</em>' reference.
-	 * @see #setImport_from_prev_Level(GSSImportImport)
+	 * @see #setImport_from_prev_Level(TMTCIFImportImport)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigLevelInOut_Import_from_prev_Level()
 	 * @model
 	 * @generated
 	 */
-	GSSImportImport getImport_from_prev_Level();
+	TMTCIFImportImport getImport_from_prev_Level();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigLevelInOut#getImport_from_prev_Level <em>Import from prev Level</em>}' reference.
@@ -248,6 +246,6 @@ public interface GSSConfigLevelInOut extends EObject {
 	 * @see #getImport_from_prev_Level()
 	 * @generated
 	 */
-	void setImport_from_prev_Level(GSSImportImport value);
+	void setImport_from_prev_Level(TMTCIFImportImport value);
 
 } // GSSConfigLevelInOut

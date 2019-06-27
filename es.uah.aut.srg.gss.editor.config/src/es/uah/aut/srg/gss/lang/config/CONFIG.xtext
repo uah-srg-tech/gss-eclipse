@@ -5,10 +5,10 @@ import "http://srg.aut.uah.es/gss/config"
 import "http://srg.aut.uah.es/gss/common" as common 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
-import "http://srg.aut.uah.es/gss/tm_tc_format" as tm_tc_format
-import "http://srg.aut.uah.es/gss/export" as export
-import "http://srg.aut.uah.es/gss/filters" as filters
-import "http://srg.aut.uah.es/gss/imports" as imports
+import "http://srg.aut.uah.es/tmtcif/format" as format
+import "http://srg.aut.uah.es/tmtcif/export" as export
+import "http://srg.aut.uah.es/tmtcif/filter" as filter
+import "http://srg.aut.uah.es/tmtcif/import" as import_
 import "http://srg.aut.uah.es/gss/charts" as charts
 import "http://srg.aut.uah.es/gss/protocol_packets" as protocol_packets
 import "http://srg.aut.uah.es/gss/iface" as iface
@@ -188,11 +188,11 @@ GSSConfigLevelInOut returns GSSConfigLevelInOut:
 	'GSSConfigLevelInOut' '{'
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=STRING ';'
-		'TMformat' ':=' TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
-		'TCformat' ':=' TCformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
-		'inputFilter' ':=' inputFilter=[filters::GSSFilterFilter|VersionedQualifiedName] ';'
-		('export_to_prev_Level' ':=' export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')?
-		('import_from_prev_Level' ':=' import_from_prev_Level=[imports::GSSImportImport|VersionedQualifiedName] ';')?
+		'TMformat' ':=' TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
+		'TCformat' ':=' TCformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
+		'inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';'
+		('export_to_prev_Level' ':=' export_to_prev_Level=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+		('import_from_prev_Level' ':=' import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
@@ -200,8 +200,8 @@ GSSConfigLevelIn returns GSSConfigLevelIn:
 	'GSSConfigLevelIn' '{'
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=STRING ';'
-		'TCformat' ':=' TCformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
-		('export_to_prev_Level' ':=' export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')?
+		'TCformat' ':=' TCformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
+		('export_to_prev_Level' ':=' export_to_prev_Level=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
@@ -209,9 +209,9 @@ GSSConfigLevelOut returns GSSConfigLevelOut:
 	'GSSConfigLevelOut' '{'
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=STRING ';'
-		'TMformat' ':=' TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';'
-		'inputFilter' ':=' inputFilter=[filters::GSSFilterFilter|VersionedQualifiedName] ';'
-		('import_from_prev_Level' ':=' import_from_prev_Level=[imports::GSSImportImport|VersionedQualifiedName] ';')?
+		'TMformat' ':=' TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
+		'inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';'
+		('import_from_prev_Level' ':=' import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
@@ -233,7 +233,7 @@ GSSConfigSpecialPacket returns GSSConfigSpecialPacket:
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'levels' ':=' levels=INTEGER ';'
 		'levelRef' ':=' levelRef=INTEGER ';'
-		'inputFilter' ':=' inputFilter=[filters::GSSFilterFilter|VersionedQualifiedName] ';'
+		'inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';'
 		(UpperLevels+=GSSConfigUpperLevels)?
 		printingData=GSSConfigPrintingData
 		((period=GSSConfigPeriod) |
@@ -275,9 +275,9 @@ GSSConfigIntervalRange returns GSSConfigIntervalRange:
 GSSConfigUpperLevel returns GSSConfigUpperLevel:
 	'GSSConfigUpperLevel' '{'
 		'level' ':=' level=GSSConfigUpperLevelLevel ';' 
-		('TMformat' ':=' TMformat=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
-		('inputFilter' ':=' inputFilter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
-		('import_from_prev_Level' ':=' import_from_prev_Level=[imports::GSSImportImport|VersionedQualifiedName] ';')?
+		('TMformat' ':=' TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		('inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')?
+		('import_from_prev_Level' ':=' import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
@@ -303,12 +303,12 @@ GSSConfigPeriodicTCLevel2 returns GSSConfigPeriodicTCLevel2:
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'period_value' ':=' period_value=INTEGER ';'
 		'period_unit' ':=' period_unit=GSSConfigUnit ';'
-		('level2' ':=' level2=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
-		'app_to_level2' ':=' app_to_level2=[export::GSSExportExport|VersionedQualifiedName] ';'
-		('level1' ':=' level1=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
-		('level2_to_level1' ':=' level2_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';')?
-		('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
-		('level1_to_level0' ':=' level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
+		('level2' ':=' level2=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		'app_to_level2' ':=' app_to_level2=[export::TMTCIFExportExport|VersionedQualifiedName] ';'
+		('level1' ':=' level1=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		('level2_to_level1' ':=' level2_to_level1=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+		('level0' ':=' level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		('level1_to_level0' ':=' level1_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
@@ -319,10 +319,10 @@ GSSConfigPeriodicTCLevel1 returns GSSConfigPeriodicTCLevel1:
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'period_value' ':=' period_value=INTEGER ';'
 		'period_unit' ':=' period_unit=GSSConfigUnit ';'
-		('level1' ':=' level1=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
-		'app_to_level1' ':=' app_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';'
-		('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
-		('level1_to_level0' ':=' level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
+		('level1' ':=' level1=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		'app_to_level1' ':=' app_to_level1=[export::TMTCIFExportExport|VersionedQualifiedName] ';'
+		('level0' ':=' level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		('level1_to_level0' ':=' level1_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
@@ -333,8 +333,8 @@ GSSConfigPeriodicTCLevel0 returns GSSConfigPeriodicTCLevel0:
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'period_value' ':=' period_value=INTEGER ';'
 		'period_unit' ':=' period_unit=GSSConfigUnit ';'
-		('level0' ':=' level0=[tm_tc_format::GSSTmTcFormatTmTcFormat|VersionedQualifiedName] ';')?
-		'app_to_level0' ':=' app_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';'
+		('level0' ':=' level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		'app_to_level0' ':=' app_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';'
 	'}' ';'
 ;
 
@@ -430,7 +430,7 @@ GSSConfigAlarmVal returns GSSConfigAlarmVal:
 GSSConfigGVFiltered returns GSSConfigGVFiltered:
 	'GSSConfigGVFiltered' '{'
 		'GlobalVarRef' ':=' GlobalVarRef=INTEGER ';'
-		('filter' ':=' filter=[filters::GSSFilterFilter|VersionedQualifiedName] ';')?
+		('filter' ':=' filter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 

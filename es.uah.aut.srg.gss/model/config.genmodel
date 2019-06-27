@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2018 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
     modelDirectory="/es.uah.aut.srg.gss/src" modelPluginID="es.uah.aut.srg.gss" modelName="Config"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" usedGenPackages="charts.genmodel#//charts common.genmodel#//common export.genmodel#//export filters.genmodel#//filters iface.genmodel#//iface imports.genmodel#//imports protocol_packets.genmodel#//protocol_packets test_proc.genmodel#//test_proc tm_tc_format.genmodel#//tm_tc_format"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="charts.genmodel#//charts common.genmodel#//common ../../es.uah.aut.srg.tmtcif/model/export.genmodel#//export ../../es.uah.aut.srg.tmtcif/model/filter.genmodel#//filter iface.genmodel#//iface ../../es.uah.aut.srg.tmtcif/model/import.genmodel#//import protocol_packets.genmodel#//protocol_packets test_proc.genmodel#//test_proc ../../es.uah.aut.srg.tmtcif/model/format.genmodel#//../../es.uah.aut.srg.tmtcif/model/format"
     operationReflection="true" importOrganizing="true">
   <foreignModel>config.ecore</foreignModel>
   <genPackages prefix="config" basePackage="es.uah.aut.srg.gss" disposableProviderFactory="true"

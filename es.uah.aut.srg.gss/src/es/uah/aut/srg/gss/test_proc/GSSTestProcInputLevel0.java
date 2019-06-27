@@ -10,9 +10,8 @@
  */
 package es.uah.aut.srg.gss.test_proc;
 
-import es.uah.aut.srg.gss.export.GSSExportExport;
-
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
+import es.uah.aut.srg.tmtcif.export.TMTCIFExportExport;
+import es.uah.aut.srg.tmtcif.format.TMTCIFFormatFormat;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,12 +40,12 @@ public interface GSSTestProcInputLevel0 extends GSSTestProcInput {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level0</em>' reference.
-	 * @see #setLevel0(GSSTmTcFormatTmTcFormat)
+	 * @see #setLevel0(TMTCIFFormatFormat)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputLevel0_Level0()
 	 * @model
 	 * @generated
 	 */
-	GSSTmTcFormatTmTcFormat getLevel0();
+	TMTCIFFormatFormat getLevel0();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel0#getLevel0 <em>Level0</em>}' reference.
@@ -56,7 +55,7 @@ public interface GSSTestProcInputLevel0 extends GSSTestProcInput {
 	 * @see #getLevel0()
 	 * @generated
 	 */
-	void setLevel0(GSSTmTcFormatTmTcFormat value);
+	void setLevel0(TMTCIFFormatFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>App to level0</b></em>' reference.
@@ -67,12 +66,12 @@ public interface GSSTestProcInputLevel0 extends GSSTestProcInput {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>App to level0</em>' reference.
-	 * @see #setApp_to_level0(GSSExportExport)
+	 * @see #setApp_to_level0(TMTCIFExportExport)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputLevel0_App_to_level0()
 	 * @model
 	 * @generated
 	 */
-	GSSExportExport getApp_to_level0();
+	TMTCIFExportExport getApp_to_level0();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel0#getApp_to_level0 <em>App to level0</em>}' reference.
@@ -82,6 +81,6 @@ public interface GSSTestProcInputLevel0 extends GSSTestProcInput {
 	 * @see #getApp_to_level0()
 	 * @generated
 	 */
-	void setApp_to_level0(GSSExportExport value);
+	void setApp_to_level0(TMTCIFExportExport value);
 
 } // GSSTestProcInputLevel0

@@ -12,13 +12,10 @@ package es.uah.aut.srg.gss.config.impl;
 
 import es.uah.aut.srg.gss.config.GSSConfigLevelInOut;
 import es.uah.aut.srg.gss.config.configPackage;
-
-import es.uah.aut.srg.gss.export.GSSExportExport;
-
-import es.uah.aut.srg.gss.filters.GSSFilterFilter;
-
-import es.uah.aut.srg.gss.imports.GSSImportImport;
-import es.uah.aut.srg.gss.tm_tc_format.GSSTmTcFormatTmTcFormat;
+import es.uah.aut.srg.tmtcif.export.TMTCIFExportExport;
+import es.uah.aut.srg.tmtcif.filter.TMTCIFFilterFilter;
+import es.uah.aut.srg.tmtcif.format.TMTCIFFormatFormat;
+import es.uah.aut.srg.tmtcif.import_.TMTCIFImportImport;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -104,7 +101,7 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatTmTcFormat tMformat;
+	protected TMTCIFFormatFormat tMformat;
 
 	/**
 	 * The cached value of the '{@link #getTCformat() <em>TCformat</em>}' reference.
@@ -114,7 +111,7 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTmTcFormatTmTcFormat tCformat;
+	protected TMTCIFFormatFormat tCformat;
 
 	/**
 	 * The cached value of the '{@link #getInputFilter() <em>Input Filter</em>}' reference.
@@ -124,7 +121,7 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSFilterFilter inputFilter;
+	protected TMTCIFFilterFilter inputFilter;
 
 	/**
 	 * The cached value of the '{@link #getExport_to_prev_Level() <em>Export to prev Level</em>}' reference.
@@ -134,7 +131,7 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSExportExport export_to_prev_Level;
+	protected TMTCIFExportExport export_to_prev_Level;
 
 	/**
 	 * The cached value of the '{@link #getImport_from_prev_Level() <em>Import from prev Level</em>}' reference.
@@ -144,7 +141,7 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSImportImport import_from_prev_Level;
+	protected TMTCIFImportImport import_from_prev_Level;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -237,10 +234,10 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTcFormat getTMformat() {
+	public TMTCIFFormatFormat getTMformat() {
 		if (tMformat != null && tMformat.eIsProxy()) {
 			InternalEObject oldTMformat = (InternalEObject)tMformat;
-			tMformat = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldTMformat);
+			tMformat = (TMTCIFFormatFormat)eResolveProxy(oldTMformat);
 			if (tMformat != oldTMformat) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_LEVEL_IN_OUT__TMFORMAT, oldTMformat, tMformat));
@@ -254,7 +251,7 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTcFormat basicGetTMformat() {
+	public TMTCIFFormatFormat basicGetTMformat() {
 		return tMformat;
 	}
 
@@ -263,8 +260,8 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTMformat(GSSTmTcFormatTmTcFormat newTMformat) {
-		GSSTmTcFormatTmTcFormat oldTMformat = tMformat;
+	public void setTMformat(TMTCIFFormatFormat newTMformat) {
+		TMTCIFFormatFormat oldTMformat = tMformat;
 		tMformat = newTMformat;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_IN_OUT__TMFORMAT, oldTMformat, tMformat));
@@ -275,10 +272,10 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTcFormat getTCformat() {
+	public TMTCIFFormatFormat getTCformat() {
 		if (tCformat != null && tCformat.eIsProxy()) {
 			InternalEObject oldTCformat = (InternalEObject)tCformat;
-			tCformat = (GSSTmTcFormatTmTcFormat)eResolveProxy(oldTCformat);
+			tCformat = (TMTCIFFormatFormat)eResolveProxy(oldTCformat);
 			if (tCformat != oldTCformat) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_LEVEL_IN_OUT__TCFORMAT, oldTCformat, tCformat));
@@ -292,7 +289,7 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTmTcFormatTmTcFormat basicGetTCformat() {
+	public TMTCIFFormatFormat basicGetTCformat() {
 		return tCformat;
 	}
 
@@ -301,8 +298,8 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTCformat(GSSTmTcFormatTmTcFormat newTCformat) {
-		GSSTmTcFormatTmTcFormat oldTCformat = tCformat;
+	public void setTCformat(TMTCIFFormatFormat newTCformat) {
+		TMTCIFFormatFormat oldTCformat = tCformat;
 		tCformat = newTCformat;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_IN_OUT__TCFORMAT, oldTCformat, tCformat));
@@ -313,10 +310,10 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFilterFilter getInputFilter() {
+	public TMTCIFFilterFilter getInputFilter() {
 		if (inputFilter != null && inputFilter.eIsProxy()) {
 			InternalEObject oldInputFilter = (InternalEObject)inputFilter;
-			inputFilter = (GSSFilterFilter)eResolveProxy(oldInputFilter);
+			inputFilter = (TMTCIFFilterFilter)eResolveProxy(oldInputFilter);
 			if (inputFilter != oldInputFilter) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_LEVEL_IN_OUT__INPUT_FILTER, oldInputFilter, inputFilter));
@@ -330,7 +327,7 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFilterFilter basicGetInputFilter() {
+	public TMTCIFFilterFilter basicGetInputFilter() {
 		return inputFilter;
 	}
 
@@ -339,8 +336,8 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputFilter(GSSFilterFilter newInputFilter) {
-		GSSFilterFilter oldInputFilter = inputFilter;
+	public void setInputFilter(TMTCIFFilterFilter newInputFilter) {
+		TMTCIFFilterFilter oldInputFilter = inputFilter;
 		inputFilter = newInputFilter;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_IN_OUT__INPUT_FILTER, oldInputFilter, inputFilter));
@@ -351,10 +348,10 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSExportExport getExport_to_prev_Level() {
+	public TMTCIFExportExport getExport_to_prev_Level() {
 		if (export_to_prev_Level != null && export_to_prev_Level.eIsProxy()) {
 			InternalEObject oldExport_to_prev_Level = (InternalEObject)export_to_prev_Level;
-			export_to_prev_Level = (GSSExportExport)eResolveProxy(oldExport_to_prev_Level);
+			export_to_prev_Level = (TMTCIFExportExport)eResolveProxy(oldExport_to_prev_Level);
 			if (export_to_prev_Level != oldExport_to_prev_Level) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_LEVEL_IN_OUT__EXPORT_TO_PREV_LEVEL, oldExport_to_prev_Level, export_to_prev_Level));
@@ -368,7 +365,7 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSExportExport basicGetExport_to_prev_Level() {
+	public TMTCIFExportExport basicGetExport_to_prev_Level() {
 		return export_to_prev_Level;
 	}
 
@@ -377,8 +374,8 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExport_to_prev_Level(GSSExportExport newExport_to_prev_Level) {
-		GSSExportExport oldExport_to_prev_Level = export_to_prev_Level;
+	public void setExport_to_prev_Level(TMTCIFExportExport newExport_to_prev_Level) {
+		TMTCIFExportExport oldExport_to_prev_Level = export_to_prev_Level;
 		export_to_prev_Level = newExport_to_prev_Level;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_IN_OUT__EXPORT_TO_PREV_LEVEL, oldExport_to_prev_Level, export_to_prev_Level));
@@ -389,10 +386,10 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSImportImport getImport_from_prev_Level() {
+	public TMTCIFImportImport getImport_from_prev_Level() {
 		if (import_from_prev_Level != null && import_from_prev_Level.eIsProxy()) {
 			InternalEObject oldImport_from_prev_Level = (InternalEObject)import_from_prev_Level;
-			import_from_prev_Level = (GSSImportImport)eResolveProxy(oldImport_from_prev_Level);
+			import_from_prev_Level = (TMTCIFImportImport)eResolveProxy(oldImport_from_prev_Level);
 			if (import_from_prev_Level != oldImport_from_prev_Level) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_LEVEL_IN_OUT__IMPORT_FROM_PREV_LEVEL, oldImport_from_prev_Level, import_from_prev_Level));
@@ -406,7 +403,7 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSImportImport basicGetImport_from_prev_Level() {
+	public TMTCIFImportImport basicGetImport_from_prev_Level() {
 		return import_from_prev_Level;
 	}
 
@@ -415,8 +412,8 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setImport_from_prev_Level(GSSImportImport newImport_from_prev_Level) {
-		GSSImportImport oldImport_from_prev_Level = import_from_prev_Level;
+	public void setImport_from_prev_Level(TMTCIFImportImport newImport_from_prev_Level) {
+		TMTCIFImportImport oldImport_from_prev_Level = import_from_prev_Level;
 		import_from_prev_Level = newImport_from_prev_Level;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_LEVEL_IN_OUT__IMPORT_FROM_PREV_LEVEL, oldImport_from_prev_Level, import_from_prev_Level));
@@ -468,19 +465,19 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 				setName((String)newValue);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN_OUT__TMFORMAT:
-				setTMformat((GSSTmTcFormatTmTcFormat)newValue);
+				setTMformat((TMTCIFFormatFormat)newValue);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN_OUT__TCFORMAT:
-				setTCformat((GSSTmTcFormatTmTcFormat)newValue);
+				setTCformat((TMTCIFFormatFormat)newValue);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN_OUT__INPUT_FILTER:
-				setInputFilter((GSSFilterFilter)newValue);
+				setInputFilter((TMTCIFFilterFilter)newValue);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN_OUT__EXPORT_TO_PREV_LEVEL:
-				setExport_to_prev_Level((GSSExportExport)newValue);
+				setExport_to_prev_Level((TMTCIFExportExport)newValue);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN_OUT__IMPORT_FROM_PREV_LEVEL:
-				setImport_from_prev_Level((GSSImportImport)newValue);
+				setImport_from_prev_Level((TMTCIFImportImport)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -501,19 +498,19 @@ public class GSSConfigLevelInOutImpl extends MinimalEObjectImpl.Container implem
 				setName(NAME_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN_OUT__TMFORMAT:
-				setTMformat((GSSTmTcFormatTmTcFormat)null);
+				setTMformat((TMTCIFFormatFormat)null);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN_OUT__TCFORMAT:
-				setTCformat((GSSTmTcFormatTmTcFormat)null);
+				setTCformat((TMTCIFFormatFormat)null);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN_OUT__INPUT_FILTER:
-				setInputFilter((GSSFilterFilter)null);
+				setInputFilter((TMTCIFFilterFilter)null);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN_OUT__EXPORT_TO_PREV_LEVEL:
-				setExport_to_prev_Level((GSSExportExport)null);
+				setExport_to_prev_Level((TMTCIFExportExport)null);
 				return;
 			case configPackage.GSS_CONFIG_LEVEL_IN_OUT__IMPORT_FROM_PREV_LEVEL:
-				setImport_from_prev_Level((GSSImportImport)null);
+				setImport_from_prev_Level((TMTCIFImportImport)null);
 				return;
 		}
 		super.eUnset(featureID);
