@@ -23,38 +23,6 @@
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated tm_tc_format -->
-      <package
-            uri="http://srg.aut.uah.es/gss/tm_tc_format"
-            class="es.uah.aut.srg.gss.tm_tc_format.tm_tc_formatPackage"
-            genModel="model/tm_tc_format.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated export -->
-      <package
-            uri="http://srg.aut.uah.es/gss/export"
-            class="es.uah.aut.srg.gss.export.exportPackage"
-            genModel="model/export.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated filters -->
-      <package
-            uri="http://srg.aut.uah.es/gss/filters"
-            class="es.uah.aut.srg.gss.filters.filtersPackage"
-            genModel="model/filters.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated imports -->
-      <package
-            uri="http://srg.aut.uah.es/gss/imports"
-            class="es.uah.aut.srg.gss.imports.importsPackage"
-            genModel="model/imports.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated charts -->
       <package
             uri="http://srg.aut.uah.es/gss/charts"
