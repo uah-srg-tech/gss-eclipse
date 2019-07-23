@@ -415,13 +415,13 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSConfigGVFiltered">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="GlobalVarRef" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="GlobalVarRef" lowerBound="1"
+        eType="#//GSSConfigGlobalVar"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="filter" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/filter.ecore#//TMTCIFFilterFilter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSConfigGVPeriodic">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="GlobalVarRef" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="GlobalVarRef" lowerBound="1"
+        eType="#//GSSConfigGlobalVar"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="period_value" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="period_unit" lowerBound="1"

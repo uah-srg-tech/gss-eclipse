@@ -336,9 +336,9 @@ public class CONFIGParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSConfigAlarmValAccess().getGVPeriodicAssignment_10_1(), "rule__GSSConfigAlarmVal__GVPeriodicAssignment_10_1");
 					put(grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefAssignment_4(), "rule__GSSConfigGVFiltered__GlobalVarRefAssignment_4");
 					put(grammarAccess.getGSSConfigGVFilteredAccess().getFilterAssignment_6_2(), "rule__GSSConfigGVFiltered__FilterAssignment_6_2");
-					put(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefAssignment_5(), "rule__GSSConfigGVPeriodic__GlobalVarRefAssignment_5");
-					put(grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_valueAssignment_9(), "rule__GSSConfigGVPeriodic__Period_valueAssignment_9");
-					put(grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_unitAssignment_13(), "rule__GSSConfigGVPeriodic__Period_unitAssignment_13");
+					put(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefAssignment_4(), "rule__GSSConfigGVPeriodic__GlobalVarRefAssignment_4");
+					put(grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_valueAssignment_8(), "rule__GSSConfigGVPeriodic__Period_valueAssignment_8");
+					put(grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_unitAssignment_12(), "rule__GSSConfigGVPeriodic__Period_unitAssignment_12");
 					put(grammarAccess.getGSSConfigTestCaseAccess().getNameAssignment_4(), "rule__GSSConfigTestCase__NameAssignment_4");
 					put(grammarAccess.getGSSConfigTestCaseAccess().getProcedureAssignment_8(), "rule__GSSConfigTestCase__ProcedureAssignment_8");
 					put(grammarAccess.getGSSConfigTestCaseAccess().getReqAssignment_10_1(), "rule__GSSConfigTestCase__ReqAssignment_10_1");

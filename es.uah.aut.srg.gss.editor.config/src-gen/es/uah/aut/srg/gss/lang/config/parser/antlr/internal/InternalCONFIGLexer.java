@@ -3221,12 +3221,12 @@ public class InternalCONFIGLexer extends Lexer {
         try {
             int _type = RULE_HEXADECIMAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCONFIG.g:7705:18: ( '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
-            // InternalCONFIG.g:7705:20: '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+            // InternalCONFIG.g:7701:18: ( '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
+            // InternalCONFIG.g:7701:20: '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
             {
             match("0x"); 
 
-            // InternalCONFIG.g:7705:25: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+            // InternalCONFIG.g:7701:25: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
             int cnt1=0;
             loop1:
             do {
@@ -3280,10 +3280,10 @@ public class InternalCONFIGLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCONFIG.g:7707:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalCONFIG.g:7707:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalCONFIG.g:7703:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalCONFIG.g:7703:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalCONFIG.g:7707:11: ( '^' )?
+            // InternalCONFIG.g:7703:11: ( '^' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -3292,7 +3292,7 @@ public class InternalCONFIGLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalCONFIG.g:7707:11: '^'
+                    // InternalCONFIG.g:7703:11: '^'
                     {
                     match('^'); 
 
@@ -3310,7 +3310,7 @@ public class InternalCONFIGLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalCONFIG.g:7707:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalCONFIG.g:7703:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -3359,10 +3359,10 @@ public class InternalCONFIGLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCONFIG.g:7709:10: ( ( '0' .. '9' )+ )
-            // InternalCONFIG.g:7709:12: ( '0' .. '9' )+
+            // InternalCONFIG.g:7705:10: ( ( '0' .. '9' )+ )
+            // InternalCONFIG.g:7705:12: ( '0' .. '9' )+
             {
-            // InternalCONFIG.g:7709:12: ( '0' .. '9' )+
+            // InternalCONFIG.g:7705:12: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -3376,7 +3376,7 @@ public class InternalCONFIGLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalCONFIG.g:7709:13: '0' .. '9'
+            	    // InternalCONFIG.g:7705:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -3408,10 +3408,10 @@ public class InternalCONFIGLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCONFIG.g:7711:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalCONFIG.g:7711:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalCONFIG.g:7707:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalCONFIG.g:7707:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalCONFIG.g:7711:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalCONFIG.g:7707:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -3429,10 +3429,10 @@ public class InternalCONFIGLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // InternalCONFIG.g:7711:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalCONFIG.g:7707:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalCONFIG.g:7711:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalCONFIG.g:7707:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -3448,7 +3448,7 @@ public class InternalCONFIGLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalCONFIG.g:7711:21: '\\\\' .
+                    	    // InternalCONFIG.g:7707:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -3456,7 +3456,7 @@ public class InternalCONFIGLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalCONFIG.g:7711:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalCONFIG.g:7707:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3481,10 +3481,10 @@ public class InternalCONFIGLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7711:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalCONFIG.g:7707:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalCONFIG.g:7711:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalCONFIG.g:7707:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -3500,7 +3500,7 @@ public class InternalCONFIGLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // InternalCONFIG.g:7711:54: '\\\\' .
+                    	    // InternalCONFIG.g:7707:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -3508,7 +3508,7 @@ public class InternalCONFIGLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalCONFIG.g:7711:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalCONFIG.g:7707:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3551,12 +3551,12 @@ public class InternalCONFIGLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCONFIG.g:7713:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalCONFIG.g:7713:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalCONFIG.g:7709:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalCONFIG.g:7709:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalCONFIG.g:7713:24: ( options {greedy=false; } : . )*
+            // InternalCONFIG.g:7709:24: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -3581,7 +3581,7 @@ public class InternalCONFIGLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalCONFIG.g:7713:52: .
+            	    // InternalCONFIG.g:7709:52: .
             	    {
             	    matchAny(); 
 
@@ -3611,12 +3611,12 @@ public class InternalCONFIGLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCONFIG.g:7715:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalCONFIG.g:7715:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalCONFIG.g:7711:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalCONFIG.g:7711:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalCONFIG.g:7715:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalCONFIG.g:7711:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -3629,7 +3629,7 @@ public class InternalCONFIGLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // InternalCONFIG.g:7715:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalCONFIG.g:7711:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -3649,7 +3649,7 @@ public class InternalCONFIGLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalCONFIG.g:7715:40: ( ( '\\r' )? '\\n' )?
+            // InternalCONFIG.g:7711:40: ( ( '\\r' )? '\\n' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -3658,9 +3658,9 @@ public class InternalCONFIGLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // InternalCONFIG.g:7715:41: ( '\\r' )? '\\n'
+                    // InternalCONFIG.g:7711:41: ( '\\r' )? '\\n'
                     {
-                    // InternalCONFIG.g:7715:41: ( '\\r' )?
+                    // InternalCONFIG.g:7711:41: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -3669,7 +3669,7 @@ public class InternalCONFIGLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // InternalCONFIG.g:7715:41: '\\r'
+                            // InternalCONFIG.g:7711:41: '\\r'
                             {
                             match('\r'); 
 
@@ -3701,10 +3701,10 @@ public class InternalCONFIGLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCONFIG.g:7717:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalCONFIG.g:7717:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalCONFIG.g:7713:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalCONFIG.g:7713:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalCONFIG.g:7717:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalCONFIG.g:7713:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt12=0;
             loop12:
             do {
@@ -3758,8 +3758,8 @@ public class InternalCONFIGLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCONFIG.g:7719:16: ( . )
-            // InternalCONFIG.g:7719:18: .
+            // InternalCONFIG.g:7715:16: ( . )
+            // InternalCONFIG.g:7715:18: .
             {
             matchAny(); 
 

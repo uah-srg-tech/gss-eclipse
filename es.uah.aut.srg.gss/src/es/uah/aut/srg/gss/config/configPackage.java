@@ -2679,7 +2679,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_GV_FILTERED = 36;
 
 	/**
-	 * The feature id for the '<em><b>Global Var Ref</b></em>' attribute.
+	 * The feature id for the '<em><b>Global Var Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2725,7 +2725,7 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_GV_PERIODIC = 37;
 
 	/**
-	 * The feature id for the '<em><b>Global Var Ref</b></em>' attribute.
+	 * The feature id for the '<em><b>Global Var Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5284,15 +5284,15 @@ public interface configPackage extends EPackage {
 	EClass getGSSConfigGVFiltered();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigGVFiltered#getGlobalVarRef <em>Global Var Ref</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigGVFiltered#getGlobalVarRef <em>Global Var Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Global Var Ref</em>'.
+	 * @return the meta object for the reference '<em>Global Var Ref</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigGVFiltered#getGlobalVarRef()
 	 * @see #getGSSConfigGVFiltered()
 	 * @generated
 	 */
-	EAttribute getGSSConfigGVFiltered_GlobalVarRef();
+	EReference getGSSConfigGVFiltered_GlobalVarRef();
 
 	/**
 	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigGVFiltered#getFilter <em>Filter</em>}'.
@@ -5316,15 +5316,15 @@ public interface configPackage extends EPackage {
 	EClass getGSSConfigGVPeriodic();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigGVPeriodic#getGlobalVarRef <em>Global Var Ref</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigGVPeriodic#getGlobalVarRef <em>Global Var Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Global Var Ref</em>'.
+	 * @return the meta object for the reference '<em>Global Var Ref</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigGVPeriodic#getGlobalVarRef()
 	 * @see #getGSSConfigGVPeriodic()
 	 * @generated
 	 */
-	EAttribute getGSSConfigGVPeriodic_GlobalVarRef();
+	EReference getGSSConfigGVPeriodic_GlobalVarRef();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigGVPeriodic#getPeriod_value <em>Period value</em>}'.
@@ -7342,12 +7342,12 @@ public interface configPackage extends EPackage {
 		EClass GSS_CONFIG_GV_FILTERED = eINSTANCE.getGSSConfigGVFiltered();
 
 		/**
-		 * The meta object literal for the '<em><b>Global Var Ref</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Global Var Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF = eINSTANCE.getGSSConfigGVFiltered_GlobalVarRef();
+		EReference GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF = eINSTANCE.getGSSConfigGVFiltered_GlobalVarRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Filter</b></em>' reference feature.
@@ -7368,12 +7368,12 @@ public interface configPackage extends EPackage {
 		EClass GSS_CONFIG_GV_PERIODIC = eINSTANCE.getGSSConfigGVPeriodic();
 
 		/**
-		 * The meta object literal for the '<em><b>Global Var Ref</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Global Var Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_GV_PERIODIC__GLOBAL_VAR_REF = eINSTANCE.getGSSConfigGVPeriodic_GlobalVarRef();
+		EReference GSS_CONFIG_GV_PERIODIC__GLOBAL_VAR_REF = eINSTANCE.getGSSConfigGVPeriodic_GlobalVarRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Period value</b></em>' attribute feature.

@@ -6581,18 +6581,18 @@ ruleGSSConfigGVFiltered returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefINTEGERParserRuleCall_4_0());
+					/* */
 				}
-				lv_GlobalVarRef_4_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSConfigGVFilteredRule());
+						$current = createModelElement(grammarAccess.getGSSConfigGVFilteredRule());
 					}
-					set(
-						$current,
-						"GlobalVarRef",
-						lv_GlobalVarRef_4_0,
-						"es.uah.aut.srg.gss.lang.config.CONFIG.INTEGER");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0());
+				}
+				ruleVersionedQualifiedReferenceName
+				{
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -6677,47 +6677,43 @@ ruleGSSConfigGVPeriodic returns [EObject current=null]
 		{
 			newLeafNode(otherlv_3, grammarAccess.getGSSConfigGVPeriodicAccess().getColonEqualsSignKeyword_3());
 		}
-		otherlv_4=':='
-		{
-			newLeafNode(otherlv_4, grammarAccess.getGSSConfigGVPeriodicAccess().getColonEqualsSignKeyword_4());
-		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefINTEGERParserRuleCall_5_0());
+					/* */
 				}
-				lv_GlobalVarRef_5_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSConfigGVPeriodicRule());
+						$current = createModelElement(grammarAccess.getGSSConfigGVPeriodicRule());
 					}
-					set(
-						$current,
-						"GlobalVarRef",
-						lv_GlobalVarRef_5_0,
-						"es.uah.aut.srg.gss.lang.config.CONFIG.INTEGER");
+				}
+				{
+					newCompositeNode(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0());
+				}
+				ruleVersionedQualifiedReferenceName
+				{
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_6=';'
+		otherlv_5=';'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSConfigGVPeriodicAccess().getSemicolonKeyword_6());
+			newLeafNode(otherlv_5, grammarAccess.getGSSConfigGVPeriodicAccess().getSemicolonKeyword_5());
 		}
-		otherlv_7='period_value'
+		otherlv_6='period_value'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_valueKeyword_7());
+			newLeafNode(otherlv_6, grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_valueKeyword_6());
 		}
-		otherlv_8=':='
+		otherlv_7=':='
 		{
-			newLeafNode(otherlv_8, grammarAccess.getGSSConfigGVPeriodicAccess().getColonEqualsSignKeyword_8());
+			newLeafNode(otherlv_7, grammarAccess.getGSSConfigGVPeriodicAccess().getColonEqualsSignKeyword_7());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_valueINTEGERParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_valueINTEGERParserRuleCall_8_0());
 				}
-				lv_period_value_9_0=ruleINTEGER
+				lv_period_value_8_0=ruleINTEGER
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigGVPeriodicRule());
@@ -6725,30 +6721,30 @@ ruleGSSConfigGVPeriodic returns [EObject current=null]
 					set(
 						$current,
 						"period_value",
-						lv_period_value_9_0,
+						lv_period_value_8_0,
 						"es.uah.aut.srg.gss.lang.config.CONFIG.INTEGER");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_10=';'
+		otherlv_9=';'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getGSSConfigGVPeriodicAccess().getSemicolonKeyword_10());
+			newLeafNode(otherlv_9, grammarAccess.getGSSConfigGVPeriodicAccess().getSemicolonKeyword_9());
 		}
-		otherlv_11='period_unit'
+		otherlv_10='period_unit'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_unitKeyword_11());
+			newLeafNode(otherlv_10, grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_unitKeyword_10());
 		}
-		otherlv_12=':='
+		otherlv_11=':='
 		{
-			newLeafNode(otherlv_12, grammarAccess.getGSSConfigGVPeriodicAccess().getColonEqualsSignKeyword_12());
+			newLeafNode(otherlv_11, grammarAccess.getGSSConfigGVPeriodicAccess().getColonEqualsSignKeyword_11());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_unitGSSConfigUnitEnumRuleCall_13_0());
+					newCompositeNode(grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_unitGSSConfigUnitEnumRuleCall_12_0());
 				}
-				lv_period_unit_13_0=ruleGSSConfigUnit
+				lv_period_unit_12_0=ruleGSSConfigUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigGVPeriodicRule());
@@ -6756,23 +6752,23 @@ ruleGSSConfigGVPeriodic returns [EObject current=null]
 					set(
 						$current,
 						"period_unit",
-						lv_period_unit_13_0,
+						lv_period_unit_12_0,
 						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_14=';'
+		otherlv_13=';'
 		{
-			newLeafNode(otherlv_14, grammarAccess.getGSSConfigGVPeriodicAccess().getSemicolonKeyword_14());
+			newLeafNode(otherlv_13, grammarAccess.getGSSConfigGVPeriodicAccess().getSemicolonKeyword_13());
 		}
-		otherlv_15='}'
+		otherlv_14='}'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getGSSConfigGVPeriodicAccess().getRightCurlyBracketKeyword_15());
+			newLeafNode(otherlv_14, grammarAccess.getGSSConfigGVPeriodicAccess().getRightCurlyBracketKeyword_14());
 		}
-		otherlv_16=';'
+		otherlv_15=';'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getGSSConfigGVPeriodicAccess().getSemicolonKeyword_16());
+			newLeafNode(otherlv_15, grammarAccess.getGSSConfigGVPeriodicAccess().getSemicolonKeyword_15());
 		}
 	)
 ;

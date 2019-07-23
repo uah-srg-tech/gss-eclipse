@@ -362,7 +362,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigGVFiltered returns GSSConfigGVFiltered
 	 *
 	 * Constraint:
-	 *     (GlobalVarRef=INTEGER filter=[TMTCIFFilterFilter|VersionedQualifiedName]?)
+	 *     (GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName] filter=[TMTCIFFilterFilter|VersionedQualifiedName]?)
 	 */
 	protected void sequence_GSSConfigGVFiltered(ISerializationContext context, GSSConfigGVFiltered semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -374,7 +374,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigGVPeriodic returns GSSConfigGVPeriodic
 	 *
 	 * Constraint:
-	 *     (GlobalVarRef=INTEGER period_value=INTEGER period_unit=GSSConfigUnit)
+	 *     (GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName] period_value=INTEGER period_unit=GSSConfigUnit)
 	 */
 	protected void sequence_GSSConfigGVPeriodic(ISerializationContext context, GSSConfigGVPeriodic semanticObject) {
 		if (errorAcceptor != null) {
@@ -386,9 +386,9 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_GV_PERIODIC__PERIOD_UNIT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefINTEGERParserRuleCall_5_0(), semanticObject.getGlobalVarRef());
-		feeder.accept(grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_valueINTEGERParserRuleCall_9_0(), semanticObject.getPeriod_value());
-		feeder.accept(grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_unitGSSConfigUnitEnumRuleCall_13_0(), semanticObject.getPeriod_unit());
+		feeder.accept(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefGSSConfigGlobalVarVersionedQualifiedReferenceNameParserRuleCall_4_0_1(), semanticObject.getGlobalVarRef());
+		feeder.accept(grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_valueINTEGERParserRuleCall_8_0(), semanticObject.getPeriod_value());
+		feeder.accept(grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_unitGSSConfigUnitEnumRuleCall_12_0(), semanticObject.getPeriod_unit());
 		feeder.finish();
 	}
 	

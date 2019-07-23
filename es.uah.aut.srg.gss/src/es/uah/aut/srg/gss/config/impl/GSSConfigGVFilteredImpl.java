@@ -11,6 +11,7 @@
 package es.uah.aut.srg.gss.config.impl;
 
 import es.uah.aut.srg.gss.config.GSSConfigGVFiltered;
+import es.uah.aut.srg.gss.config.GSSConfigGlobalVar;
 import es.uah.aut.srg.gss.config.configPackage;
 import es.uah.aut.srg.tmtcif.filter.TMTCIFFilterFilter;
 import org.eclipse.emf.common.notify.Notification;
@@ -37,24 +38,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class GSSConfigGVFilteredImpl extends MinimalEObjectImpl.Container implements GSSConfigGVFiltered {
 	/**
-	 * The default value of the '{@link #getGlobalVarRef() <em>Global Var Ref</em>}' attribute.
+	 * The cached value of the '{@link #getGlobalVarRef() <em>Global Var Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGlobalVarRef()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String GLOBAL_VAR_REF_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getGlobalVarRef() <em>Global Var Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGlobalVarRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected String globalVarRef = GLOBAL_VAR_REF_EDEFAULT;
+	protected GSSConfigGlobalVar globalVarRef;
 
 	/**
 	 * The cached value of the '{@link #getFilter() <em>Filter</em>}' reference.
@@ -90,7 +81,15 @@ public class GSSConfigGVFilteredImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getGlobalVarRef() {
+	public GSSConfigGlobalVar getGlobalVarRef() {
+		if (globalVarRef != null && globalVarRef.eIsProxy()) {
+			InternalEObject oldGlobalVarRef = (InternalEObject)globalVarRef;
+			globalVarRef = (GSSConfigGlobalVar)eResolveProxy(oldGlobalVarRef);
+			if (globalVarRef != oldGlobalVarRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF, oldGlobalVarRef, globalVarRef));
+			}
+		}
 		return globalVarRef;
 	}
 
@@ -99,8 +98,17 @@ public class GSSConfigGVFilteredImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGlobalVarRef(String newGlobalVarRef) {
-		String oldGlobalVarRef = globalVarRef;
+	public GSSConfigGlobalVar basicGetGlobalVarRef() {
+		return globalVarRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGlobalVarRef(GSSConfigGlobalVar newGlobalVarRef) {
+		GSSConfigGlobalVar oldGlobalVarRef = globalVarRef;
 		globalVarRef = newGlobalVarRef;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF, oldGlobalVarRef, globalVarRef));
@@ -153,7 +161,8 @@ public class GSSConfigGVFilteredImpl extends MinimalEObjectImpl.Container implem
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF:
-				return getGlobalVarRef();
+				if (resolve) return getGlobalVarRef();
+				return basicGetGlobalVarRef();
 			case configPackage.GSS_CONFIG_GV_FILTERED__FILTER:
 				if (resolve) return getFilter();
 				return basicGetFilter();
@@ -170,7 +179,7 @@ public class GSSConfigGVFilteredImpl extends MinimalEObjectImpl.Container implem
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF:
-				setGlobalVarRef((String)newValue);
+				setGlobalVarRef((GSSConfigGlobalVar)newValue);
 				return;
 			case configPackage.GSS_CONFIG_GV_FILTERED__FILTER:
 				setFilter((TMTCIFFilterFilter)newValue);
@@ -188,7 +197,7 @@ public class GSSConfigGVFilteredImpl extends MinimalEObjectImpl.Container implem
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF:
-				setGlobalVarRef(GLOBAL_VAR_REF_EDEFAULT);
+				setGlobalVarRef((GSSConfigGlobalVar)null);
 				return;
 			case configPackage.GSS_CONFIG_GV_FILTERED__FILTER:
 				setFilter((TMTCIFFilterFilter)null);
@@ -206,27 +215,11 @@ public class GSSConfigGVFilteredImpl extends MinimalEObjectImpl.Container implem
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF:
-				return GLOBAL_VAR_REF_EDEFAULT == null ? globalVarRef != null : !GLOBAL_VAR_REF_EDEFAULT.equals(globalVarRef);
+				return globalVarRef != null;
 			case configPackage.GSS_CONFIG_GV_FILTERED__FILTER:
 				return filter != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (GlobalVarRef: ");
-		result.append(globalVarRef);
-		result.append(')');
-		return result.toString();
 	}
 
 } //GSSConfigGVFilteredImpl

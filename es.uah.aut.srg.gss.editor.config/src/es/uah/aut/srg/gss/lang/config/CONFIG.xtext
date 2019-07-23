@@ -429,14 +429,14 @@ GSSConfigAlarmVal returns GSSConfigAlarmVal:
 
 GSSConfigGVFiltered returns GSSConfigGVFiltered:
 	'GSSConfigGVFiltered' '{'
-		'GlobalVarRef' ':=' GlobalVarRef=INTEGER ';'
+		'GlobalVarRef' ':=' GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName] ';'
 		('filter' ':=' filter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
 GSSConfigGVPeriodic returns GSSConfigGVPeriodic:
 	'GSSConfigGVPeriodic' '{'
-		'GlobalVarRef' ':=' ':=' GlobalVarRef=INTEGER ';'
+		'GlobalVarRef' ':=' GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName] ';'
 		'period_value' ':=' period_value=INTEGER ';'
 		'period_unit' ':=' period_unit=GSSConfigUnit ';'
 	'}' ';'

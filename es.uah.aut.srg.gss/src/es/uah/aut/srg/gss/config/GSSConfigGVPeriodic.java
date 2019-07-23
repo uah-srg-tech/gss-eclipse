@@ -32,30 +32,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface GSSConfigGVPeriodic extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Global Var Ref</b></em>' attribute.
+	 * Returns the value of the '<em><b>Global Var Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Global Var Ref</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Global Var Ref</em>' attribute.
-	 * @see #setGlobalVarRef(String)
+	 * @return the value of the '<em>Global Var Ref</em>' reference.
+	 * @see #setGlobalVarRef(GSSConfigGlobalVar)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigGVPeriodic_GlobalVarRef()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getGlobalVarRef();
+	GSSConfigGlobalVar getGlobalVarRef();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGVPeriodic#getGlobalVarRef <em>Global Var Ref</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGVPeriodic#getGlobalVarRef <em>Global Var Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Global Var Ref</em>' attribute.
+	 * @param value the new value of the '<em>Global Var Ref</em>' reference.
 	 * @see #getGlobalVarRef()
 	 * @generated
 	 */
-	void setGlobalVarRef(String value);
+	void setGlobalVarRef(GSSConfigGlobalVar value);
 
 	/**
 	 * Returns the value of the '<em><b>Period value</b></em>' attribute.

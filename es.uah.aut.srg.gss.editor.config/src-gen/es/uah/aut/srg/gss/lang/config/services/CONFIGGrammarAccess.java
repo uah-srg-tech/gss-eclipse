@@ -4629,7 +4629,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cGlobalVarRefKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cGlobalVarRefAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cGlobalVarRefINTEGERParserRuleCall_4_0 = (RuleCall)cGlobalVarRefAssignment_4.eContents().get(0);
+		private final CrossReference cGlobalVarRefGSSConfigGlobalVarCrossReference_4_0 = (CrossReference)cGlobalVarRefAssignment_4.eContents().get(0);
+		private final RuleCall cGlobalVarRefGSSConfigGlobalVarVersionedQualifiedReferenceNameParserRuleCall_4_0_1 = (RuleCall)cGlobalVarRefGSSConfigGlobalVarCrossReference_4_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Keyword cFilterKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
@@ -4643,13 +4644,13 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//GSSConfigGVFiltered:
 		//	'GSSConfigGVFiltered' '{'
-		//	'GlobalVarRef' ':=' GlobalVarRef=INTEGER ';' ('filter' ':='
+		//	'GlobalVarRef' ':=' GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName] ';' ('filter' ':='
 		//	filter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSConfigGVFiltered' '{' 'GlobalVarRef' ':=' GlobalVarRef=INTEGER ';' ('filter' ':='
-		//filter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')? '}' ';'
+		//'GSSConfigGVFiltered' '{' 'GlobalVarRef' ':=' GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName] ';'
+		//('filter' ':=' filter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSConfigGVFiltered'
@@ -4664,11 +4665,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
 		
-		//GlobalVarRef=INTEGER
+		//GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName]
 		public Assignment getGlobalVarRefAssignment_4() { return cGlobalVarRefAssignment_4; }
 		
-		//INTEGER
-		public RuleCall getGlobalVarRefINTEGERParserRuleCall_4_0() { return cGlobalVarRefINTEGERParserRuleCall_4_0; }
+		//[GSSConfigGlobalVar|VersionedQualifiedReferenceName]
+		public CrossReference getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0() { return cGlobalVarRefGSSConfigGlobalVarCrossReference_4_0; }
+		
+		//VersionedQualifiedReferenceName
+		public RuleCall getGlobalVarRefGSSConfigGlobalVarVersionedQualifiedReferenceNameParserRuleCall_4_0_1() { return cGlobalVarRefGSSConfigGlobalVarVersionedQualifiedReferenceNameParserRuleCall_4_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
@@ -4707,33 +4711,33 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cGlobalVarRefKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cColonEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cGlobalVarRefAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cGlobalVarRefINTEGERParserRuleCall_5_0 = (RuleCall)cGlobalVarRefAssignment_5.eContents().get(0);
-		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cPeriod_valueKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Keyword cColonEqualsSignKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Assignment cPeriod_valueAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cPeriod_valueINTEGERParserRuleCall_9_0 = (RuleCall)cPeriod_valueAssignment_9.eContents().get(0);
-		private final Keyword cSemicolonKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Keyword cPeriod_unitKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Keyword cColonEqualsSignKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final Assignment cPeriod_unitAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cPeriod_unitGSSConfigUnitEnumRuleCall_13_0 = (RuleCall)cPeriod_unitAssignment_13.eContents().get(0);
-		private final Keyword cSemicolonKeyword_14 = (Keyword)cGroup.eContents().get(14);
-		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
-		private final Keyword cSemicolonKeyword_16 = (Keyword)cGroup.eContents().get(16);
+		private final Assignment cGlobalVarRefAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cGlobalVarRefGSSConfigGlobalVarCrossReference_4_0 = (CrossReference)cGlobalVarRefAssignment_4.eContents().get(0);
+		private final RuleCall cGlobalVarRefGSSConfigGlobalVarVersionedQualifiedReferenceNameParserRuleCall_4_0_1 = (RuleCall)cGlobalVarRefGSSConfigGlobalVarCrossReference_4_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cPeriod_valueKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cColonEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cPeriod_valueAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cPeriod_valueINTEGERParserRuleCall_8_0 = (RuleCall)cPeriod_valueAssignment_8.eContents().get(0);
+		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Keyword cPeriod_unitKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cPeriod_unitAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cPeriod_unitGSSConfigUnitEnumRuleCall_12_0 = (RuleCall)cPeriod_unitAssignment_12.eContents().get(0);
+		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Keyword cRightCurlyBracketKeyword_14 = (Keyword)cGroup.eContents().get(14);
+		private final Keyword cSemicolonKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
 		//GSSConfigGVPeriodic:
 		//	'GSSConfigGVPeriodic' '{'
-		//	'GlobalVarRef' ':=' ':=' GlobalVarRef=INTEGER ';'
+		//	'GlobalVarRef' ':=' GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName] ';'
 		//	'period_value' ':=' period_value=INTEGER ';'
 		//	'period_unit' ':=' period_unit=GSSConfigUnit ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSConfigGVPeriodic' '{' 'GlobalVarRef' ':=' ':=' GlobalVarRef=INTEGER ';' 'period_value' ':=' period_value=INTEGER ';'
-		//'period_unit' ':=' period_unit=GSSConfigUnit ';' '}' ';'
+		//'GSSConfigGVPeriodic' '{' 'GlobalVarRef' ':=' GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName] ';'
+		//'period_value' ':=' period_value=INTEGER ';' 'period_unit' ':=' period_unit=GSSConfigUnit ';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSConfigGVPeriodic'
@@ -4748,53 +4752,53 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
 		
-		//':='
-		public Keyword getColonEqualsSignKeyword_4() { return cColonEqualsSignKeyword_4; }
+		//GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName]
+		public Assignment getGlobalVarRefAssignment_4() { return cGlobalVarRefAssignment_4; }
 		
-		//GlobalVarRef=INTEGER
-		public Assignment getGlobalVarRefAssignment_5() { return cGlobalVarRefAssignment_5; }
+		//[GSSConfigGlobalVar|VersionedQualifiedReferenceName]
+		public CrossReference getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0() { return cGlobalVarRefGSSConfigGlobalVarCrossReference_4_0; }
 		
-		//INTEGER
-		public RuleCall getGlobalVarRefINTEGERParserRuleCall_5_0() { return cGlobalVarRefINTEGERParserRuleCall_5_0; }
+		//VersionedQualifiedReferenceName
+		public RuleCall getGlobalVarRefGSSConfigGlobalVarVersionedQualifiedReferenceNameParserRuleCall_4_0_1() { return cGlobalVarRefGSSConfigGlobalVarVersionedQualifiedReferenceNameParserRuleCall_4_0_1; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
+		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 		
 		//'period_value'
-		public Keyword getPeriod_valueKeyword_7() { return cPeriod_valueKeyword_7; }
+		public Keyword getPeriod_valueKeyword_6() { return cPeriod_valueKeyword_6; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_8() { return cColonEqualsSignKeyword_8; }
+		public Keyword getColonEqualsSignKeyword_7() { return cColonEqualsSignKeyword_7; }
 		
 		//period_value=INTEGER
-		public Assignment getPeriod_valueAssignment_9() { return cPeriod_valueAssignment_9; }
+		public Assignment getPeriod_valueAssignment_8() { return cPeriod_valueAssignment_8; }
 		
 		//INTEGER
-		public RuleCall getPeriod_valueINTEGERParserRuleCall_9_0() { return cPeriod_valueINTEGERParserRuleCall_9_0; }
+		public RuleCall getPeriod_valueINTEGERParserRuleCall_8_0() { return cPeriod_valueINTEGERParserRuleCall_8_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_10() { return cSemicolonKeyword_10; }
+		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
 		//'period_unit'
-		public Keyword getPeriod_unitKeyword_11() { return cPeriod_unitKeyword_11; }
+		public Keyword getPeriod_unitKeyword_10() { return cPeriod_unitKeyword_10; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_12() { return cColonEqualsSignKeyword_12; }
+		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
 		
 		//period_unit=GSSConfigUnit
-		public Assignment getPeriod_unitAssignment_13() { return cPeriod_unitAssignment_13; }
+		public Assignment getPeriod_unitAssignment_12() { return cPeriod_unitAssignment_12; }
 		
 		//GSSConfigUnit
-		public RuleCall getPeriod_unitGSSConfigUnitEnumRuleCall_13_0() { return cPeriod_unitGSSConfigUnitEnumRuleCall_13_0; }
+		public RuleCall getPeriod_unitGSSConfigUnitEnumRuleCall_12_0() { return cPeriod_unitGSSConfigUnitEnumRuleCall_12_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_14() { return cSemicolonKeyword_14; }
+		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
+		public Keyword getRightCurlyBracketKeyword_14() { return cRightCurlyBracketKeyword_14; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_16() { return cSemicolonKeyword_16; }
+		public Keyword getSemicolonKeyword_15() { return cSemicolonKeyword_15; }
 	}
 	public class GSSConfigTestCaseElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigTestCase");
@@ -6485,7 +6489,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSConfigGVFiltered:
 	//	'GSSConfigGVFiltered' '{'
-	//	'GlobalVarRef' ':=' GlobalVarRef=INTEGER ';' ('filter' ':='
+	//	'GlobalVarRef' ':=' GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName] ';' ('filter' ':='
 	//	filter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')?
 	//	'}' ';';
 	public GSSConfigGVFilteredElements getGSSConfigGVFilteredAccess() {
@@ -6498,7 +6502,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSConfigGVPeriodic:
 	//	'GSSConfigGVPeriodic' '{'
-	//	'GlobalVarRef' ':=' ':=' GlobalVarRef=INTEGER ';'
+	//	'GlobalVarRef' ':=' GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName] ';'
 	//	'period_value' ':=' period_value=INTEGER ';'
 	//	'period_unit' ':=' period_unit=GSSConfigUnit ';'
 	//	'}' ';';

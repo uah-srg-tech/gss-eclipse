@@ -73,6 +73,7 @@ import es.uah.aut.srg.gss.iface.ifacePackage;
 import es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage;
 
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
+import es.uah.aut.srg.tmtcif.export.exportPackage;
 import es.uah.aut.srg.tmtcif.filter.filterPackage;
 import es.uah.aut.srg.tmtcif.format.formatPackage;
 import es.uah.aut.srg.tmtcif.import_.importPackage;
@@ -2424,8 +2425,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigGVFiltered_GlobalVarRef() {
-		return (EAttribute)gssConfigGVFilteredEClass.getEStructuralFeatures().get(0);
+	public EReference getGSSConfigGVFiltered_GlobalVarRef() {
+		return (EReference)gssConfigGVFilteredEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2451,8 +2452,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigGVPeriodic_GlobalVarRef() {
-		return (EAttribute)gssConfigGVPeriodicEClass.getEStructuralFeatures().get(0);
+	public EReference getGSSConfigGVPeriodic_GlobalVarRef() {
+		return (EReference)gssConfigGVPeriodicEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2936,11 +2937,11 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		createEReference(gssConfigAlarmValEClass, GSS_CONFIG_ALARM_VAL__GV_PERIODIC);
 
 		gssConfigGVFilteredEClass = createEClass(GSS_CONFIG_GV_FILTERED);
-		createEAttribute(gssConfigGVFilteredEClass, GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF);
+		createEReference(gssConfigGVFilteredEClass, GSS_CONFIG_GV_FILTERED__GLOBAL_VAR_REF);
 		createEReference(gssConfigGVFilteredEClass, GSS_CONFIG_GV_FILTERED__FILTER);
 
 		gssConfigGVPeriodicEClass = createEClass(GSS_CONFIG_GV_PERIODIC);
-		createEAttribute(gssConfigGVPeriodicEClass, GSS_CONFIG_GV_PERIODIC__GLOBAL_VAR_REF);
+		createEReference(gssConfigGVPeriodicEClass, GSS_CONFIG_GV_PERIODIC__GLOBAL_VAR_REF);
 		createEAttribute(gssConfigGVPeriodicEClass, GSS_CONFIG_GV_PERIODIC__PERIOD_VALUE);
 		createEAttribute(gssConfigGVPeriodicEClass, GSS_CONFIG_GV_PERIODIC__PERIOD_UNIT);
 
@@ -2998,7 +2999,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		ifacePackage theifacePackage = (ifacePackage)EPackage.Registry.INSTANCE.getEPackage(ifacePackage.eNS_URI);
 		formatPackage theformatPackage = (formatPackage)EPackage.Registry.INSTANCE.getEPackage(formatPackage.eNS_URI);
 		filterPackage thefilterPackage = (filterPackage)EPackage.Registry.INSTANCE.getEPackage(filterPackage.eNS_URI);
-		es.uah.aut.srg.tmtcif.export.exportPackage theexportPackage = (es.uah.aut.srg.tmtcif.export.exportPackage)EPackage.Registry.INSTANCE.getEPackage(es.uah.aut.srg.tmtcif.export.exportPackage.eNS_URI);
+		exportPackage theexportPackage = (exportPackage)EPackage.Registry.INSTANCE.getEPackage(exportPackage.eNS_URI);
 		importPackage theimportPackage = (importPackage)EPackage.Registry.INSTANCE.getEPackage(importPackage.eNS_URI);
 		chartsPackage thechartsPackage = (chartsPackage)EPackage.Registry.INSTANCE.getEPackage(chartsPackage.eNS_URI);
 		protocol_packetsPackage theprotocol_packetsPackage = (protocol_packetsPackage)EPackage.Registry.INSTANCE.getEPackage(protocol_packetsPackage.eNS_URI);
@@ -3258,11 +3259,11 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		initEReference(getGSSConfigAlarmVal_GVPeriodic(), this.getGSSConfigGVPeriodic(), null, "GVPeriodic", null, 0, 1, GSSConfigAlarmVal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigGVFilteredEClass, GSSConfigGVFiltered.class, "GSSConfigGVFiltered", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigGVFiltered_GlobalVarRef(), ecorePackage.getEString(), "GlobalVarRef", null, 1, 1, GSSConfigGVFiltered.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigGVFiltered_GlobalVarRef(), this.getGSSConfigGlobalVar(), null, "GlobalVarRef", null, 1, 1, GSSConfigGVFiltered.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigGVFiltered_Filter(), thefilterPackage.getTMTCIFFilterFilter(), null, "filter", null, 0, 1, GSSConfigGVFiltered.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssConfigGVPeriodicEClass, GSSConfigGVPeriodic.class, "GSSConfigGVPeriodic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigGVPeriodic_GlobalVarRef(), ecorePackage.getEString(), "GlobalVarRef", null, 1, 1, GSSConfigGVPeriodic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigGVPeriodic_GlobalVarRef(), this.getGSSConfigGlobalVar(), null, "GlobalVarRef", null, 1, 1, GSSConfigGVPeriodic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigGVPeriodic_Period_value(), ecorePackage.getEString(), "period_value", null, 1, 1, GSSConfigGVPeriodic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSConfigGVPeriodic_Period_unit(), this.getGSSConfigUnit(), "period_unit", null, 1, 1, GSSConfigGVPeriodic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
