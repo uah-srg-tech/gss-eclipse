@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import es.uah.aut.srg.gss.common.GSSModelFile;
+import es.uah.aut.srg.tmtcif.common.TMTCIFModelFile;
 
 public class XMLGeneratorUtil {
 
@@ -48,11 +49,13 @@ public class XMLGeneratorUtil {
 			    
 			    EObject root = EcoreUtil.getRootContainer(referredObject);
 			    
-			    if ((root instanceof GSSModelFile) == false) {
+			    if ((root instanceof GSSModelFile) == true) {
+			    	resource.getContents().add(((GSSModelFile)root).getElement());
+			    } else if ((root instanceof TMTCIFModelFile) == true) {
+			    	resource.getContents().add(((TMTCIFModelFile)root).getElement());
+			    } else {
 			    	continue;
 			    }
-			    
-			    resource.getContents().add(((GSSModelFile)root).getElement());
    
 			    EcoreUtil.delete(root);
 			    
