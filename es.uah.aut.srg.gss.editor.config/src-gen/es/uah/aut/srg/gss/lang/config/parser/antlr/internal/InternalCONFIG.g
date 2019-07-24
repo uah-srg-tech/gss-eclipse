@@ -2077,9 +2077,9 @@ ruleGSSConfigMainInterface returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigMainInterfaceAccess().getIfTypeGSSConfigMainInterfaceTypeEnumRuleCall_12_0());
+					newCompositeNode(grammarAccess.getGSSConfigMainInterfaceAccess().getIfTypeGSSConfigInterfaceTypeEnumRuleCall_12_0());
 				}
-				lv_ifType_12_0=ruleGSSConfigMainInterfaceType
+				lv_ifType_12_0=ruleGSSConfigInterfaceType
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigMainInterfaceRule());
@@ -2088,7 +2088,7 @@ ruleGSSConfigMainInterface returns [EObject current=null]
 						$current,
 						"ifType",
 						lv_ifType_12_0,
-						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigMainInterfaceType");
+						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigInterfaceType");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2139,9 +2139,9 @@ ruleGSSConfigMainInterface returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigMainInterfaceAccess().getIoTypeGSSConfigMainInterfaceIOTypeEnumRuleCall_20_0());
+					newCompositeNode(grammarAccess.getGSSConfigMainInterfaceAccess().getIoTypeGSSConfigInterfaceIOTypeEnumRuleCall_20_0());
 				}
-				lv_ioType_20_0=ruleGSSConfigMainInterfaceIOType
+				lv_ioType_20_0=ruleGSSConfigInterfaceIOType
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigMainInterfaceRule());
@@ -2150,7 +2150,7 @@ ruleGSSConfigMainInterface returns [EObject current=null]
 						$current,
 						"ioType",
 						lv_ioType_20_0,
-						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigMainInterfaceIOType");
+						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigInterfaceIOType");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -5592,19 +5592,16 @@ ruleGSSConfigReferencePeriodicTC returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigReferencePeriodicTCAccess().getIdRefINTEGERParserRuleCall_4_0());
+					/* */
 				}
-				lv_idRef_4_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSConfigReferencePeriodicTCRule());
+						$current = createModelElement(grammarAccess.getGSSConfigReferencePeriodicTCRule());
 					}
-					set(
-						$current,
-						"idRef",
-						lv_idRef_4_0,
-						"es.uah.aut.srg.gss.lang.config.CONFIG.INTEGER");
-					afterParserOrEnumRuleCall();
+				}
+				otherlv_4=RULE_STRING
+				{
+					newLeafNode(otherlv_4, grammarAccess.getGSSConfigReferencePeriodicTCAccess().getIdRefGSSConfigPeriodicTCCrossReference_4_0());
 				}
 			)
 		)
@@ -5782,19 +5779,16 @@ ruleGSSConfigReferenceSpecialPacket returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getIdRefINTEGERParserRuleCall_4_0());
+					/* */
 				}
-				lv_idRef_4_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSConfigReferenceSpecialPacketRule());
+						$current = createModelElement(grammarAccess.getGSSConfigReferenceSpecialPacketRule());
 					}
-					set(
-						$current,
-						"idRef",
-						lv_idRef_4_0,
-						"es.uah.aut.srg.gss.lang.config.CONFIG.INTEGER");
-					afterParserOrEnumRuleCall();
+				}
+				otherlv_4=RULE_STRING
+				{
+					newLeafNode(otherlv_4, grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getIdRefGSSConfigSpecialPacketCrossReference_4_0());
 				}
 			)
 		)
@@ -6588,12 +6582,9 @@ ruleGSSConfigGVFiltered returns [EObject current=null]
 						$current = createModelElement(grammarAccess.getGSSConfigGVFilteredRule());
 					}
 				}
+				otherlv_4=RULE_STRING
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0());
-				}
-				ruleVersionedQualifiedReferenceName
-				{
-					afterParserOrEnumRuleCall();
+					newLeafNode(otherlv_4, grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0());
 				}
 			)
 		)
@@ -6687,12 +6678,9 @@ ruleGSSConfigGVPeriodic returns [EObject current=null]
 						$current = createModelElement(grammarAccess.getGSSConfigGVPeriodicRule());
 					}
 				}
+				otherlv_4=RULE_STRING
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0());
-				}
-				ruleVersionedQualifiedReferenceName
-				{
-					afterParserOrEnumRuleCall();
+					newLeafNode(otherlv_4, grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0());
 				}
 			)
 		)
@@ -7345,58 +7333,6 @@ ruleGSSConfigEnableDisable returns [Enumerator current=null]
 				newLeafNode(enumLiteral_1, grammarAccess.getGSSConfigEnableDisableAccess().getEnabledEnumLiteralDeclaration_1());
 			}
 		)
-	)
-;
-
-// Rule GSSConfigMainInterfaceType
-ruleGSSConfigMainInterfaceType returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			enumLiteral_0='SpW'
-			{
-				$current = grammarAccess.getGSSConfigMainInterfaceTypeAccess().getSpWEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getGSSConfigMainInterfaceTypeAccess().getSpWEnumLiteralDeclaration_0());
-			}
-		)
-		    |
-		(
-			enumLiteral_1='uart'
-			{
-				$current = grammarAccess.getGSSConfigMainInterfaceTypeAccess().getUartEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getGSSConfigMainInterfaceTypeAccess().getUartEnumLiteralDeclaration_1());
-			}
-		)
-		    |
-		(
-			enumLiteral_2='dummy'
-			{
-				$current = grammarAccess.getGSSConfigMainInterfaceTypeAccess().getDummyEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_2, grammarAccess.getGSSConfigMainInterfaceTypeAccess().getDummyEnumLiteralDeclaration_2());
-			}
-		)
-	)
-;
-
-// Rule GSSConfigMainInterfaceIOType
-ruleGSSConfigMainInterfaceIOType returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		enumLiteral_0='in_out'
-		{
-			$current = grammarAccess.getGSSConfigMainInterfaceIOTypeAccess().getIn_outEnumLiteralDeclaration().getEnumLiteral().getInstance();
-			newLeafNode(enumLiteral_0, grammarAccess.getGSSConfigMainInterfaceIOTypeAccess().getIn_outEnumLiteralDeclaration());
-		}
 	)
 ;
 

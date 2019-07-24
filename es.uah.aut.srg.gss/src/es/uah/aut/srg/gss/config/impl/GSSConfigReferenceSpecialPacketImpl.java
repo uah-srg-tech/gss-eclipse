@@ -11,12 +11,14 @@
 package es.uah.aut.srg.gss.config.impl;
 
 import es.uah.aut.srg.gss.config.GSSConfigReferenceSpecialPacket;
+import es.uah.aut.srg.gss.config.GSSConfigSpecialPacket;
 import es.uah.aut.srg.gss.config.configPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -39,24 +41,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class GSSConfigReferenceSpecialPacketImpl extends MinimalEObjectImpl.Container implements GSSConfigReferenceSpecialPacket {
 	/**
-	 * The default value of the '{@link #getIdRef() <em>Id Ref</em>}' attribute.
+	 * The cached value of the '{@link #getIdRef() <em>Id Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIdRef()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_REF_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getIdRef() <em>Id Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected String idRef = ID_REF_EDEFAULT;
+	protected GSSConfigSpecialPacket idRef;
 
 	/**
 	 * The default value of the '{@link #getLevel() <em>Level</em>}' attribute.
@@ -162,7 +154,15 @@ public class GSSConfigReferenceSpecialPacketImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getIdRef() {
+	public GSSConfigSpecialPacket getIdRef() {
+		if (idRef != null && idRef.eIsProxy()) {
+			InternalEObject oldIdRef = (InternalEObject)idRef;
+			idRef = (GSSConfigSpecialPacket)eResolveProxy(oldIdRef);
+			if (idRef != oldIdRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_REFERENCE_SPECIAL_PACKET__ID_REF, oldIdRef, idRef));
+			}
+		}
 		return idRef;
 	}
 
@@ -171,8 +171,17 @@ public class GSSConfigReferenceSpecialPacketImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIdRef(String newIdRef) {
-		String oldIdRef = idRef;
+	public GSSConfigSpecialPacket basicGetIdRef() {
+		return idRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIdRef(GSSConfigSpecialPacket newIdRef) {
+		GSSConfigSpecialPacket oldIdRef = idRef;
 		idRef = newIdRef;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_REFERENCE_SPECIAL_PACKET__ID_REF, oldIdRef, idRef));
@@ -271,7 +280,8 @@ public class GSSConfigReferenceSpecialPacketImpl extends MinimalEObjectImpl.Cont
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_REFERENCE_SPECIAL_PACKET__ID_REF:
-				return getIdRef();
+				if (resolve) return getIdRef();
+				return basicGetIdRef();
 			case configPackage.GSS_CONFIG_REFERENCE_SPECIAL_PACKET__LEVEL:
 				return getLevel();
 			case configPackage.GSS_CONFIG_REFERENCE_SPECIAL_PACKET__FIELD_REF:
@@ -293,7 +303,7 @@ public class GSSConfigReferenceSpecialPacketImpl extends MinimalEObjectImpl.Cont
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_REFERENCE_SPECIAL_PACKET__ID_REF:
-				setIdRef((String)newValue);
+				setIdRef((GSSConfigSpecialPacket)newValue);
 				return;
 			case configPackage.GSS_CONFIG_REFERENCE_SPECIAL_PACKET__LEVEL:
 				setLevel((String)newValue);
@@ -320,7 +330,7 @@ public class GSSConfigReferenceSpecialPacketImpl extends MinimalEObjectImpl.Cont
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_REFERENCE_SPECIAL_PACKET__ID_REF:
-				setIdRef(ID_REF_EDEFAULT);
+				setIdRef((GSSConfigSpecialPacket)null);
 				return;
 			case configPackage.GSS_CONFIG_REFERENCE_SPECIAL_PACKET__LEVEL:
 				setLevel(LEVEL_EDEFAULT);
@@ -347,7 +357,7 @@ public class GSSConfigReferenceSpecialPacketImpl extends MinimalEObjectImpl.Cont
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case configPackage.GSS_CONFIG_REFERENCE_SPECIAL_PACKET__ID_REF:
-				return ID_REF_EDEFAULT == null ? idRef != null : !ID_REF_EDEFAULT.equals(idRef);
+				return idRef != null;
 			case configPackage.GSS_CONFIG_REFERENCE_SPECIAL_PACKET__LEVEL:
 				return LEVEL_EDEFAULT == null ? level != null : !LEVEL_EDEFAULT.equals(level);
 			case configPackage.GSS_CONFIG_REFERENCE_SPECIAL_PACKET__FIELD_REF:
@@ -370,9 +380,7 @@ public class GSSConfigReferenceSpecialPacketImpl extends MinimalEObjectImpl.Cont
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (idRef: ");
-		result.append(idRef);
-		result.append(", level: ");
+		result.append(" (level: ");
 		result.append(level);
 		result.append(", fieldRef: ");
 		result.append(fieldRef);

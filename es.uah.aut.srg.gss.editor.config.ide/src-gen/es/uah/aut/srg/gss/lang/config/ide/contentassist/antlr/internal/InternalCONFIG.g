@@ -1298,38 +1298,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Rule GSSConfigMainInterfaceType
-ruleGSSConfigMainInterfaceType
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSConfigMainInterfaceTypeAccess().getAlternatives()); }
-		(rule__GSSConfigMainInterfaceType__Alternatives)
-		{ after(grammarAccess.getGSSConfigMainInterfaceTypeAccess().getAlternatives()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-// Rule GSSConfigMainInterfaceIOType
-ruleGSSConfigMainInterfaceIOType
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSConfigMainInterfaceIOTypeAccess().getIn_outEnumLiteralDeclaration()); }
-		('in_out')
-		{ after(grammarAccess.getGSSConfigMainInterfaceIOTypeAccess().getIn_outEnumLiteralDeclaration()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 // Rule GSSConfigInterfaceType
 ruleGSSConfigInterfaceType
 	@init {
@@ -1787,33 +1755,6 @@ rule__GSSConfigEnableDisable__Alternatives
 		{ before(grammarAccess.getGSSConfigEnableDisableAccess().getEnabledEnumLiteralDeclaration_1()); }
 		('enabled')
 		{ after(grammarAccess.getGSSConfigEnableDisableAccess().getEnabledEnumLiteralDeclaration_1()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSConfigMainInterfaceType__Alternatives
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSConfigMainInterfaceTypeAccess().getSpWEnumLiteralDeclaration_0()); }
-		('SpW')
-		{ after(grammarAccess.getGSSConfigMainInterfaceTypeAccess().getSpWEnumLiteralDeclaration_0()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSConfigMainInterfaceTypeAccess().getUartEnumLiteralDeclaration_1()); }
-		('uart')
-		{ after(grammarAccess.getGSSConfigMainInterfaceTypeAccess().getUartEnumLiteralDeclaration_1()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSConfigMainInterfaceTypeAccess().getDummyEnumLiteralDeclaration_2()); }
-		('dummy')
-		{ after(grammarAccess.getGSSConfigMainInterfaceTypeAccess().getDummyEnumLiteralDeclaration_2()); }
 	)
 ;
 finally {
@@ -25223,9 +25164,9 @@ rule__GSSConfigMainInterface__IfTypeAssignment_12
 	}
 :
 	(
-		{ before(grammarAccess.getGSSConfigMainInterfaceAccess().getIfTypeGSSConfigMainInterfaceTypeEnumRuleCall_12_0()); }
-		ruleGSSConfigMainInterfaceType
-		{ after(grammarAccess.getGSSConfigMainInterfaceAccess().getIfTypeGSSConfigMainInterfaceTypeEnumRuleCall_12_0()); }
+		{ before(grammarAccess.getGSSConfigMainInterfaceAccess().getIfTypeGSSConfigInterfaceTypeEnumRuleCall_12_0()); }
+		ruleGSSConfigInterfaceType
+		{ after(grammarAccess.getGSSConfigMainInterfaceAccess().getIfTypeGSSConfigInterfaceTypeEnumRuleCall_12_0()); }
 	)
 ;
 finally {
@@ -25257,9 +25198,9 @@ rule__GSSConfigMainInterface__IoTypeAssignment_20
 	}
 :
 	(
-		{ before(grammarAccess.getGSSConfigMainInterfaceAccess().getIoTypeGSSConfigMainInterfaceIOTypeEnumRuleCall_20_0()); }
-		ruleGSSConfigMainInterfaceIOType
-		{ after(grammarAccess.getGSSConfigMainInterfaceAccess().getIoTypeGSSConfigMainInterfaceIOTypeEnumRuleCall_20_0()); }
+		{ before(grammarAccess.getGSSConfigMainInterfaceAccess().getIoTypeGSSConfigInterfaceIOTypeEnumRuleCall_20_0()); }
+		ruleGSSConfigInterfaceIOType
+		{ after(grammarAccess.getGSSConfigMainInterfaceAccess().getIoTypeGSSConfigInterfaceIOTypeEnumRuleCall_20_0()); }
 	)
 ;
 finally {
@@ -26813,9 +26754,13 @@ rule__GSSConfigReferencePeriodicTC__IdRefAssignment_4
 	}
 :
 	(
-		{ before(grammarAccess.getGSSConfigReferencePeriodicTCAccess().getIdRefINTEGERParserRuleCall_4_0()); }
-		ruleINTEGER
-		{ after(grammarAccess.getGSSConfigReferencePeriodicTCAccess().getIdRefINTEGERParserRuleCall_4_0()); }
+		{ before(grammarAccess.getGSSConfigReferencePeriodicTCAccess().getIdRefGSSConfigPeriodicTCCrossReference_4_0()); }
+		(
+			{ before(grammarAccess.getGSSConfigReferencePeriodicTCAccess().getIdRefGSSConfigPeriodicTCSTRINGTerminalRuleCall_4_0_1()); }
+			RULE_STRING
+			{ after(grammarAccess.getGSSConfigReferencePeriodicTCAccess().getIdRefGSSConfigPeriodicTCSTRINGTerminalRuleCall_4_0_1()); }
+		)
+		{ after(grammarAccess.getGSSConfigReferencePeriodicTCAccess().getIdRefGSSConfigPeriodicTCCrossReference_4_0()); }
 	)
 ;
 finally {
@@ -26888,9 +26833,13 @@ rule__GSSConfigReferenceSpecialPacket__IdRefAssignment_4
 	}
 :
 	(
-		{ before(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getIdRefINTEGERParserRuleCall_4_0()); }
-		ruleINTEGER
-		{ after(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getIdRefINTEGERParserRuleCall_4_0()); }
+		{ before(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getIdRefGSSConfigSpecialPacketCrossReference_4_0()); }
+		(
+			{ before(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getIdRefGSSConfigSpecialPacketSTRINGTerminalRuleCall_4_0_1()); }
+			RULE_STRING
+			{ after(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getIdRefGSSConfigSpecialPacketSTRINGTerminalRuleCall_4_0_1()); }
+		)
+		{ after(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getIdRefGSSConfigSpecialPacketCrossReference_4_0()); }
 	)
 ;
 finally {
@@ -27239,9 +27188,9 @@ rule__GSSConfigGVFiltered__GlobalVarRefAssignment_4
 	(
 		{ before(grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0()); }
 		(
-			{ before(grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefGSSConfigGlobalVarVersionedQualifiedReferenceNameParserRuleCall_4_0_1()); }
-			ruleVersionedQualifiedReferenceName
-			{ after(grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefGSSConfigGlobalVarVersionedQualifiedReferenceNameParserRuleCall_4_0_1()); }
+			{ before(grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefGSSConfigGlobalVarSTRINGTerminalRuleCall_4_0_1()); }
+			RULE_STRING
+			{ after(grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefGSSConfigGlobalVarSTRINGTerminalRuleCall_4_0_1()); }
 		)
 		{ after(grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0()); }
 	)
@@ -27277,9 +27226,9 @@ rule__GSSConfigGVPeriodic__GlobalVarRefAssignment_4
 	(
 		{ before(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0()); }
 		(
-			{ before(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefGSSConfigGlobalVarVersionedQualifiedReferenceNameParserRuleCall_4_0_1()); }
-			ruleVersionedQualifiedReferenceName
-			{ after(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefGSSConfigGlobalVarVersionedQualifiedReferenceNameParserRuleCall_4_0_1()); }
+			{ before(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefGSSConfigGlobalVarSTRINGTerminalRuleCall_4_0_1()); }
+			RULE_STRING
+			{ after(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefGSSConfigGlobalVarSTRINGTerminalRuleCall_4_0_1()); }
 		)
 		{ after(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0()); }
 	)

@@ -170,6 +170,10 @@ public class configAdapterFactory extends AdapterFactoryImpl {
 				return createGSSConfigPeriodicTCsAdapter();
 			}
 			@Override
+			public Adapter caseGSSConfigPeriodicTC(GSSConfigPeriodicTC object) {
+				return createGSSConfigPeriodicTCAdapter();
+			}
+			@Override
 			public Adapter caseGSSConfigPeriodicTCLevel2(GSSConfigPeriodicTCLevel2 object) {
 				return createGSSConfigPeriodicTCLevel2Adapter();
 			}
@@ -580,6 +584,20 @@ public class configAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSConfigPeriodicTCsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTC <em>GSS Config Periodic TC</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTC
+	 * @generated
+	 */
+	public Adapter createGSSConfigPeriodicTCAdapter() {
 		return null;
 	}
 

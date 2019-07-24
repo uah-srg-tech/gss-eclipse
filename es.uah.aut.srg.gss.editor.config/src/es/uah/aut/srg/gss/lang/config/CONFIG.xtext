@@ -154,9 +154,9 @@ GSSConfigMainInterface returns GSSConfigMainInterface:
 	'GSSConfigMainInterface' '{'
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=STRING ';'
-		'ifType' ':=' ifType=GSSConfigMainInterfaceType ';'
+		'ifType' ':=' ifType=GSSConfigInterfaceType ';'
 		'ifConfig' ':=' ifConfig=[iface::GSSIfacePortConfig|VersionedQualifiedName] ';' 
-		'ioType' ':=' ioType=GSSConfigMainInterfaceIOType ';'
+		'ioType' ':=' ioType=GSSConfigInterfaceIOType ';'
 		('protocolID' ':=' protocolID=[GSSConfigProtocol|VersionedQualifiedReferenceName] ';')?
 		(LevelInOut+=GSSConfigLevelInOut)+ 
 	'}' ';'
@@ -174,14 +174,6 @@ GSSConfigInterface returns GSSConfigInterface:
 		 (LevelIn+=GSSConfigLevelIn) |
 		 (LevelOut+=GSSConfigLevelOut))+ 
 	'}' ';'
-;
-
-enum GSSConfigMainInterfaceType returns GSSConfigMainInterfaceType:
-	SpW = 'SpW' | uart = 'uart' | dummy = 'dummy'
-;
-
-enum GSSConfigMainInterfaceIOType returns GSSConfigMainInterfaceIOType:
-	in_out = 'in_out'
 ;
 
 GSSConfigLevelInOut returns GSSConfigLevelInOut:
@@ -367,7 +359,7 @@ GSSConfigReferenceField returns GSSConfigReferenceField:
 
 GSSConfigReferencePeriodicTC returns GSSConfigReferencePeriodicTC:
 	'GSSConfigReferencePeriodicTC' '{'
-		'idRef' ':=' idRef=INTEGER ';'
+		'idRef' ':=' idRef=[GSSConfigPeriodicTC|STRING] ';'
 		'level' ':=' level=INTEGER ';'
 		'fieldRef' ':=' fieldRef=INTEGER ';'
 		'offset' ':=' offset=INTEGER ';'
@@ -377,7 +369,7 @@ GSSConfigReferencePeriodicTC returns GSSConfigReferencePeriodicTC:
 
 GSSConfigReferenceSpecialPacket returns GSSConfigReferenceSpecialPacket:
 	'GSSConfigReferenceSpecialPacket' '{'
-		'idRef' ':=' idRef=INTEGER ';'
+		'idRef' ':=' idRef=[GSSConfigSpecialPacket|STRING] ';'
 		'level' ':=' level=INTEGER ';'
 		'fieldRef' ':=' fieldRef=INTEGER ';'
 		'offset' ':=' offset=INTEGER ';'
@@ -429,14 +421,14 @@ GSSConfigAlarmVal returns GSSConfigAlarmVal:
 
 GSSConfigGVFiltered returns GSSConfigGVFiltered:
 	'GSSConfigGVFiltered' '{'
-		'GlobalVarRef' ':=' GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName] ';'
+		'GlobalVarRef' ':=' GlobalVarRef=[GSSConfigGlobalVar|STRING] ';'
 		('filter' ':=' filter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
 GSSConfigGVPeriodic returns GSSConfigGVPeriodic:
 	'GSSConfigGVPeriodic' '{'
-		'GlobalVarRef' ':=' GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName] ';'
+		'GlobalVarRef' ':=' GlobalVarRef=[GSSConfigGlobalVar|STRING] ';'
 		'period_value' ':=' period_value=INTEGER ';'
 		'period_unit' ':=' period_unit=GSSConfigUnit ';'
 	'}' ';'

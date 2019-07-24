@@ -681,87 +681,6 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_MAIN_INTERFACE = 9;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_MAIN_INTERFACE__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_MAIN_INTERFACE__NAME = 1;
-
-	/**
-	 * The feature id for the '<em><b>If Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_MAIN_INTERFACE__IF_TYPE = 2;
-
-	/**
-	 * The feature id for the '<em><b>If Config</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_MAIN_INTERFACE__IF_CONFIG = 3;
-
-	/**
-	 * The feature id for the '<em><b>Io Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_MAIN_INTERFACE__IO_TYPE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Protocol ID</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_MAIN_INTERFACE__PROTOCOL_ID = 5;
-
-	/**
-	 * The feature id for the '<em><b>Level In Out</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_MAIN_INTERFACE__LEVEL_IN_OUT = 6;
-
-	/**
-	 * The number of structural features of the '<em>GSS Config Main Interface</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_MAIN_INTERFACE_FEATURE_COUNT = 7;
-
-	/**
-	 * The number of operations of the '<em>GSS Config Main Interface</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_CONFIG_MAIN_INTERFACE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigInterfaceImpl <em>GSS Config Interface</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -869,6 +788,105 @@ public interface configPackage extends EPackage {
 	 * @ordered
 	 */
 	int GSS_CONFIG_INTERFACE_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_MAIN_INTERFACE__ID = GSS_CONFIG_INTERFACE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_MAIN_INTERFACE__NAME = GSS_CONFIG_INTERFACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>If Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_MAIN_INTERFACE__IF_TYPE = GSS_CONFIG_INTERFACE__IF_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>If Config</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_MAIN_INTERFACE__IF_CONFIG = GSS_CONFIG_INTERFACE__IF_CONFIG;
+
+	/**
+	 * The feature id for the '<em><b>Io Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_MAIN_INTERFACE__IO_TYPE = GSS_CONFIG_INTERFACE__IO_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Protocol ID</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_MAIN_INTERFACE__PROTOCOL_ID = GSS_CONFIG_INTERFACE__PROTOCOL_ID;
+
+	/**
+	 * The feature id for the '<em><b>Level In Out</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_MAIN_INTERFACE__LEVEL_IN_OUT = GSS_CONFIG_INTERFACE__LEVEL_IN_OUT;
+
+	/**
+	 * The feature id for the '<em><b>Level In</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_MAIN_INTERFACE__LEVEL_IN = GSS_CONFIG_INTERFACE__LEVEL_IN;
+
+	/**
+	 * The feature id for the '<em><b>Level Out</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_MAIN_INTERFACE__LEVEL_OUT = GSS_CONFIG_INTERFACE__LEVEL_OUT;
+
+	/**
+	 * The number of structural features of the '<em>GSS Config Main Interface</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_MAIN_INTERFACE_FEATURE_COUNT = GSS_CONFIG_INTERFACE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>GSS Config Main Interface</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_MAIN_INTERFACE_OPERATION_COUNT = GSS_CONFIG_INTERFACE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigLevelInOutImpl <em>GSS Config Level In Out</em>}' class.
@@ -1639,14 +1657,14 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_PERIODIC_TCS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigPeriodicTCLevel2Impl <em>GSS Config Periodic TC Level2</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigPeriodicTCImpl <em>GSS Config Periodic TC</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigPeriodicTCLevel2Impl
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigPeriodicTCLevel2()
+	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigPeriodicTCImpl
+	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigPeriodicTC()
 	 * @generated
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2 = 23;
+	int GSS_CONFIG_PERIODIC_TC = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1655,7 +1673,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2__NAME = 0;
+	int GSS_CONFIG_PERIODIC_TC__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1664,7 +1682,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2__ID = 1;
+	int GSS_CONFIG_PERIODIC_TC__ID = 1;
 
 	/**
 	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
@@ -1673,7 +1691,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2__IF_REF = 2;
+	int GSS_CONFIG_PERIODIC_TC__IF_REF = 2;
 
 	/**
 	 * The feature id for the '<em><b>Period value</b></em>' attribute.
@@ -1682,7 +1700,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2__PERIOD_VALUE = 3;
+	int GSS_CONFIG_PERIODIC_TC__PERIOD_VALUE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Period unit</b></em>' attribute.
@@ -1691,7 +1709,80 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2__PERIOD_UNIT = 4;
+	int GSS_CONFIG_PERIODIC_TC__PERIOD_UNIT = 4;
+
+	/**
+	 * The number of structural features of the '<em>GSS Config Periodic TC</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>GSS Config Periodic TC</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_PERIODIC_TC_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigPeriodicTCLevel2Impl <em>GSS Config Periodic TC Level2</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.config.impl.GSSConfigPeriodicTCLevel2Impl
+	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigPeriodicTCLevel2()
+	 * @generated
+	 */
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2 = 24;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2__NAME = GSS_CONFIG_PERIODIC_TC__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2__ID = GSS_CONFIG_PERIODIC_TC__ID;
+
+	/**
+	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2__IF_REF = GSS_CONFIG_PERIODIC_TC__IF_REF;
+
+	/**
+	 * The feature id for the '<em><b>Period value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2__PERIOD_VALUE = GSS_CONFIG_PERIODIC_TC__PERIOD_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Period unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2__PERIOD_UNIT = GSS_CONFIG_PERIODIC_TC__PERIOD_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>Level2</b></em>' reference.
@@ -1700,7 +1791,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL2 = 5;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL2 = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>App to level2</b></em>' reference.
@@ -1709,7 +1800,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2__APP_TO_LEVEL2 = 6;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2__APP_TO_LEVEL2 = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Level1</b></em>' reference.
@@ -1718,7 +1809,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL1 = 7;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL1 = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Level2 to level1</b></em>' reference.
@@ -1727,7 +1818,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL2_TO_LEVEL1 = 8;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL2_TO_LEVEL1 = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Level0</b></em>' reference.
@@ -1736,7 +1827,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL0 = 9;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL0 = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Level1 to level0</b></em>' reference.
@@ -1745,7 +1836,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL1_TO_LEVEL0 = 10;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2__LEVEL1_TO_LEVEL0 = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>GSS Config Periodic TC Level2</em>' class.
@@ -1754,7 +1845,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2_FEATURE_COUNT = 11;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2_FEATURE_COUNT = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>GSS Config Periodic TC Level2</em>' class.
@@ -1763,7 +1854,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL2_OPERATION_COUNT = 0;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL2_OPERATION_COUNT = GSS_CONFIG_PERIODIC_TC_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigPeriodicTCLevel1Impl <em>GSS Config Periodic TC Level1</em>}' class.
@@ -1773,7 +1864,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigPeriodicTCLevel1()
 	 * @generated
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL1 = 24;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL1 = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1782,7 +1873,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL1__NAME = 0;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL1__NAME = GSS_CONFIG_PERIODIC_TC__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1791,7 +1882,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL1__ID = 1;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL1__ID = GSS_CONFIG_PERIODIC_TC__ID;
 
 	/**
 	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
@@ -1800,7 +1891,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL1__IF_REF = 2;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL1__IF_REF = GSS_CONFIG_PERIODIC_TC__IF_REF;
 
 	/**
 	 * The feature id for the '<em><b>Period value</b></em>' attribute.
@@ -1809,7 +1900,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_VALUE = 3;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_VALUE = GSS_CONFIG_PERIODIC_TC__PERIOD_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Period unit</b></em>' attribute.
@@ -1818,7 +1909,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_UNIT = 4;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_UNIT = GSS_CONFIG_PERIODIC_TC__PERIOD_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>Level1</b></em>' reference.
@@ -1827,7 +1918,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1 = 5;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1 = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>App to level1</b></em>' reference.
@@ -1836,7 +1927,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1 = 6;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL1__APP_TO_LEVEL1 = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Level0</b></em>' reference.
@@ -1845,7 +1936,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0 = 7;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL0 = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Level1 to level0</b></em>' reference.
@@ -1854,7 +1945,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1_TO_LEVEL0 = 8;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL1__LEVEL1_TO_LEVEL0 = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>GSS Config Periodic TC Level1</em>' class.
@@ -1863,7 +1954,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL1_FEATURE_COUNT = 9;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL1_FEATURE_COUNT = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>GSS Config Periodic TC Level1</em>' class.
@@ -1872,7 +1963,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL1_OPERATION_COUNT = 0;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL1_OPERATION_COUNT = GSS_CONFIG_PERIODIC_TC_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigPeriodicTCLevel0Impl <em>GSS Config Periodic TC Level0</em>}' class.
@@ -1882,7 +1973,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigPeriodicTCLevel0()
 	 * @generated
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL0 = 25;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL0 = 26;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1891,7 +1982,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL0__NAME = 0;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL0__NAME = GSS_CONFIG_PERIODIC_TC__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1900,7 +1991,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL0__ID = 1;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL0__ID = GSS_CONFIG_PERIODIC_TC__ID;
 
 	/**
 	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
@@ -1909,7 +2000,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL0__IF_REF = 2;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL0__IF_REF = GSS_CONFIG_PERIODIC_TC__IF_REF;
 
 	/**
 	 * The feature id for the '<em><b>Period value</b></em>' attribute.
@@ -1918,7 +2009,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL0__PERIOD_VALUE = 3;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL0__PERIOD_VALUE = GSS_CONFIG_PERIODIC_TC__PERIOD_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Period unit</b></em>' attribute.
@@ -1927,7 +2018,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL0__PERIOD_UNIT = 4;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL0__PERIOD_UNIT = GSS_CONFIG_PERIODIC_TC__PERIOD_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>Level0</b></em>' reference.
@@ -1936,7 +2027,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL0__LEVEL0 = 5;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL0__LEVEL0 = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>App to level0</b></em>' reference.
@@ -1945,7 +2036,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL0__APP_TO_LEVEL0 = 6;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL0__APP_TO_LEVEL0 = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Config Periodic TC Level0</em>' class.
@@ -1954,7 +2045,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL0_FEATURE_COUNT = 7;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL0_FEATURE_COUNT = GSS_CONFIG_PERIODIC_TC_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>GSS Config Periodic TC Level0</em>' class.
@@ -1963,7 +2054,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_PERIODIC_TC_LEVEL0_OPERATION_COUNT = 0;
+	int GSS_CONFIG_PERIODIC_TC_LEVEL0_OPERATION_COUNT = GSS_CONFIG_PERIODIC_TC_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigGlobalVarsImpl <em>GSS Config Global Vars</em>}' class.
@@ -1973,7 +2064,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigGlobalVars()
 	 * @generated
 	 */
-	int GSS_CONFIG_GLOBAL_VARS = 26;
+	int GSS_CONFIG_GLOBAL_VARS = 27;
 
 	/**
 	 * The feature id for the '<em><b>Global Var</b></em>' containment reference list.
@@ -2010,7 +2101,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigGlobalVar()
 	 * @generated
 	 */
-	int GSS_CONFIG_GLOBAL_VAR = 27;
+	int GSS_CONFIG_GLOBAL_VAR = 28;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2101,7 +2192,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigReferenceField()
 	 * @generated
 	 */
-	int GSS_CONFIG_REFERENCE_FIELD = 28;
+	int GSS_CONFIG_REFERENCE_FIELD = 29;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2183,10 +2274,10 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigReferencePeriodicTC()
 	 * @generated
 	 */
-	int GSS_CONFIG_REFERENCE_PERIODIC_TC = 29;
+	int GSS_CONFIG_REFERENCE_PERIODIC_TC = 30;
 
 	/**
-	 * The feature id for the '<em><b>Id Ref</b></em>' attribute.
+	 * The feature id for the '<em><b>Id Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2256,10 +2347,10 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigReferenceSpecialPacket()
 	 * @generated
 	 */
-	int GSS_CONFIG_REFERENCE_SPECIAL_PACKET = 30;
+	int GSS_CONFIG_REFERENCE_SPECIAL_PACKET = 31;
 
 	/**
-	 * The feature id for the '<em><b>Id Ref</b></em>' attribute.
+	 * The feature id for the '<em><b>Id Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2329,7 +2420,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigMonitors()
 	 * @generated
 	 */
-	int GSS_CONFIG_MONITORS = 31;
+	int GSS_CONFIG_MONITORS = 32;
 
 	/**
 	 * The feature id for the '<em><b>Charts File</b></em>' reference.
@@ -2402,7 +2493,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigPlot()
 	 * @generated
 	 */
-	int GSS_CONFIG_PLOT = 32;
+	int GSS_CONFIG_PLOT = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2466,7 +2557,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigAlarmMsg()
 	 * @generated
 	 */
-	int GSS_CONFIG_ALARM_MSG = 33;
+	int GSS_CONFIG_ALARM_MSG = 34;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2539,7 +2630,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigModify()
 	 * @generated
 	 */
-	int GSS_CONFIG_MODIFY = 34;
+	int GSS_CONFIG_MODIFY = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2612,7 +2703,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigAlarmVal()
 	 * @generated
 	 */
-	int GSS_CONFIG_ALARM_VAL = 35;
+	int GSS_CONFIG_ALARM_VAL = 36;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2676,7 +2767,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigGVFiltered()
 	 * @generated
 	 */
-	int GSS_CONFIG_GV_FILTERED = 36;
+	int GSS_CONFIG_GV_FILTERED = 37;
 
 	/**
 	 * The feature id for the '<em><b>Global Var Ref</b></em>' reference.
@@ -2722,7 +2813,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigGVPeriodic()
 	 * @generated
 	 */
-	int GSS_CONFIG_GV_PERIODIC = 37;
+	int GSS_CONFIG_GV_PERIODIC = 38;
 
 	/**
 	 * The feature id for the '<em><b>Global Var Ref</b></em>' reference.
@@ -2777,7 +2868,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigTests()
 	 * @generated
 	 */
-	int GSS_CONFIG_TESTS = 38;
+	int GSS_CONFIG_TESTS = 39;
 
 	/**
 	 * The feature id for the '<em><b>Protocol Packets File</b></em>' reference.
@@ -2823,7 +2914,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigTestCase()
 	 * @generated
 	 */
-	int GSS_CONFIG_TEST_CASE = 39;
+	int GSS_CONFIG_TEST_CASE = 40;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2887,27 +2978,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigEnableDisable()
 	 * @generated
 	 */
-	int GSS_CONFIG_ENABLE_DISABLE = 40;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterfaceType <em>GSS Config Main Interface Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterfaceType
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigMainInterfaceType()
-	 * @generated
-	 */
-	int GSS_CONFIG_MAIN_INTERFACE_TYPE = 41;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterfaceIOType <em>GSS Config Main Interface IO Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterfaceIOType
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigMainInterfaceIOType()
-	 * @generated
-	 */
-	int GSS_CONFIG_MAIN_INTERFACE_IO_TYPE = 42;
+	int GSS_CONFIG_ENABLE_DISABLE = 41;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigInterfaceType <em>GSS Config Interface Type</em>}' enum.
@@ -2917,7 +2988,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigInterfaceType()
 	 * @generated
 	 */
-	int GSS_CONFIG_INTERFACE_TYPE = 43;
+	int GSS_CONFIG_INTERFACE_TYPE = 42;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigInterfaceIOType <em>GSS Config Interface IO Type</em>}' enum.
@@ -2927,7 +2998,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigInterfaceIOType()
 	 * @generated
 	 */
-	int GSS_CONFIG_INTERFACE_IO_TYPE = 44;
+	int GSS_CONFIG_INTERFACE_IO_TYPE = 43;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigUpperLevelLevel <em>GSS Config Upper Level Level</em>}' enum.
@@ -2937,7 +3008,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigUpperLevelLevel()
 	 * @generated
 	 */
-	int GSS_CONFIG_UPPER_LEVEL_LEVEL = 45;
+	int GSS_CONFIG_UPPER_LEVEL_LEVEL = 44;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigUnit <em>GSS Config Unit</em>}' enum.
@@ -2947,7 +3018,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigUnit()
 	 * @generated
 	 */
-	int GSS_CONFIG_UNIT = 46;
+	int GSS_CONFIG_UNIT = 45;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigGlobalVarType <em>GSS Config Global Var Type</em>}' enum.
@@ -2957,7 +3028,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigGlobalVarType()
 	 * @generated
 	 */
-	int GSS_CONFIG_GLOBAL_VAR_TYPE = 47;
+	int GSS_CONFIG_GLOBAL_VAR_TYPE = 46;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigReferenceFieldType <em>GSS Config Reference Field Type</em>}' enum.
@@ -2967,7 +3038,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigReferenceFieldType()
 	 * @generated
 	 */
-	int GSS_CONFIG_REFERENCE_FIELD_TYPE = 48;
+	int GSS_CONFIG_REFERENCE_FIELD_TYPE = 47;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigAlarmMsgType <em>GSS Config Alarm Msg Type</em>}' enum.
@@ -2977,7 +3048,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigAlarmMsgType()
 	 * @generated
 	 */
-	int GSS_CONFIG_ALARM_MSG_TYPE = 49;
+	int GSS_CONFIG_ALARM_MSG_TYPE = 48;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigModifyType <em>GSS Config Modify Type</em>}' enum.
@@ -2987,7 +3058,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigModifyType()
 	 * @generated
 	 */
-	int GSS_CONFIG_MODIFY_TYPE = 50;
+	int GSS_CONFIG_MODIFY_TYPE = 49;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigAlarmValType <em>GSS Config Alarm Val Type</em>}' enum.
@@ -2997,7 +3068,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigAlarmValType()
 	 * @generated
 	 */
-	int GSS_CONFIG_ALARM_VAL_TYPE = 51;
+	int GSS_CONFIG_ALARM_VAL_TYPE = 50;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigReqAction <em>GSS Config Req Action</em>}' enum.
@@ -3007,7 +3078,7 @@ public interface configPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigReqAction()
 	 * @generated
 	 */
-	int GSS_CONFIG_REQ_ACTION = 52;
+	int GSS_CONFIG_REQ_ACTION = 51;
 
 
 	/**
@@ -3494,83 +3565,6 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSConfigMainInterface();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterface#getId()
-	 * @see #getGSSConfigMainInterface()
-	 * @generated
-	 */
-	EAttribute getGSSConfigMainInterface_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterface#getName()
-	 * @see #getGSSConfigMainInterface()
-	 * @generated
-	 */
-	EAttribute getGSSConfigMainInterface_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIfType <em>If Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>If Type</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIfType()
-	 * @see #getGSSConfigMainInterface()
-	 * @generated
-	 */
-	EAttribute getGSSConfigMainInterface_IfType();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIfConfig <em>If Config</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>If Config</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIfConfig()
-	 * @see #getGSSConfigMainInterface()
-	 * @generated
-	 */
-	EReference getGSSConfigMainInterface_IfConfig();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIoType <em>Io Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Io Type</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterface#getIoType()
-	 * @see #getGSSConfigMainInterface()
-	 * @generated
-	 */
-	EAttribute getGSSConfigMainInterface_IoType();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getProtocolID <em>Protocol ID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Protocol ID</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterface#getProtocolID()
-	 * @see #getGSSConfigMainInterface()
-	 * @generated
-	 */
-	EReference getGSSConfigMainInterface_ProtocolID();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterface#getLevelInOut <em>Level In Out</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Level In Out</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterface#getLevelInOut()
-	 * @see #getGSSConfigMainInterface()
-	 * @generated
-	 */
-	EReference getGSSConfigMainInterface_LevelInOut();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigInterface <em>GSS Config Interface</em>}'.
@@ -4330,6 +4324,71 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigPeriodicTCs_PeriodicTC_level_0();
 
 	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTC <em>GSS Config Periodic TC</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Config Periodic TC</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTC
+	 * @generated
+	 */
+	EClass getGSSConfigPeriodicTC();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTC#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTC#getName()
+	 * @see #getGSSConfigPeriodicTC()
+	 * @generated
+	 */
+	EAttribute getGSSConfigPeriodicTC_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTC#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTC#getId()
+	 * @see #getGSSConfigPeriodicTC()
+	 * @generated
+	 */
+	EAttribute getGSSConfigPeriodicTC_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTC#getIfRef <em>If Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>If Ref</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTC#getIfRef()
+	 * @see #getGSSConfigPeriodicTC()
+	 * @generated
+	 */
+	EAttribute getGSSConfigPeriodicTC_IfRef();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTC#getPeriod_value <em>Period value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Period value</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTC#getPeriod_value()
+	 * @see #getGSSConfigPeriodicTC()
+	 * @generated
+	 */
+	EAttribute getGSSConfigPeriodicTC_Period_value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTC#getPeriod_unit <em>Period unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Period unit</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTC#getPeriod_unit()
+	 * @see #getGSSConfigPeriodicTC()
+	 * @generated
+	 */
+	EAttribute getGSSConfigPeriodicTC_Period_unit();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2 <em>GSS Config Periodic TC Level2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4338,61 +4397,6 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSConfigPeriodicTCLevel2();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getName()
-	 * @see #getGSSConfigPeriodicTCLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel2_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getId()
-	 * @see #getGSSConfigPeriodicTCLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel2_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getIfRef <em>If Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>If Ref</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getIfRef()
-	 * @see #getGSSConfigPeriodicTCLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel2_IfRef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getPeriod_value <em>Period value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Period value</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getPeriod_value()
-	 * @see #getGSSConfigPeriodicTCLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel2_Period_value();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getPeriod_unit <em>Period unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Period unit</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getPeriod_unit()
-	 * @see #getGSSConfigPeriodicTCLevel2()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel2_Period_unit();
 
 	/**
 	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel2#getLevel2 <em>Level2</em>}'.
@@ -4471,61 +4475,6 @@ public interface configPackage extends EPackage {
 	EClass getGSSConfigPeriodicTCLevel1();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getName()
-	 * @see #getGSSConfigPeriodicTCLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel1_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getId()
-	 * @see #getGSSConfigPeriodicTCLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel1_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getIfRef <em>If Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>If Ref</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getIfRef()
-	 * @see #getGSSConfigPeriodicTCLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel1_IfRef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getPeriod_value <em>Period value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Period value</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getPeriod_value()
-	 * @see #getGSSConfigPeriodicTCLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel1_Period_value();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getPeriod_unit <em>Period unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Period unit</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getPeriod_unit()
-	 * @see #getGSSConfigPeriodicTCLevel1()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel1_Period_unit();
-
-	/**
 	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel1#getLevel1 <em>Level1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4578,61 +4527,6 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSConfigPeriodicTCLevel0();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getName()
-	 * @see #getGSSConfigPeriodicTCLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel0_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getId()
-	 * @see #getGSSConfigPeriodicTCLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel0_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getIfRef <em>If Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>If Ref</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getIfRef()
-	 * @see #getGSSConfigPeriodicTCLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel0_IfRef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getPeriod_value <em>Period value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Period value</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getPeriod_value()
-	 * @see #getGSSConfigPeriodicTCLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel0_Period_value();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getPeriod_unit <em>Period unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Period unit</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getPeriod_unit()
-	 * @see #getGSSConfigPeriodicTCLevel0()
-	 * @generated
-	 */
-	EAttribute getGSSConfigPeriodicTCLevel0_Period_unit();
 
 	/**
 	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigPeriodicTCLevel0#getLevel0 <em>Level0</em>}'.
@@ -4851,15 +4745,15 @@ public interface configPackage extends EPackage {
 	EClass getGSSConfigReferencePeriodicTC();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigReferencePeriodicTC#getIdRef <em>Id Ref</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigReferencePeriodicTC#getIdRef <em>Id Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id Ref</em>'.
+	 * @return the meta object for the reference '<em>Id Ref</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigReferencePeriodicTC#getIdRef()
 	 * @see #getGSSConfigReferencePeriodicTC()
 	 * @generated
 	 */
-	EAttribute getGSSConfigReferencePeriodicTC_IdRef();
+	EReference getGSSConfigReferencePeriodicTC_IdRef();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigReferencePeriodicTC#getLevel <em>Level</em>}'.
@@ -4916,15 +4810,15 @@ public interface configPackage extends EPackage {
 	EClass getGSSConfigReferenceSpecialPacket();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigReferenceSpecialPacket#getIdRef <em>Id Ref</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.config.GSSConfigReferenceSpecialPacket#getIdRef <em>Id Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id Ref</em>'.
+	 * @return the meta object for the reference '<em>Id Ref</em>'.
 	 * @see es.uah.aut.srg.gss.config.GSSConfigReferenceSpecialPacket#getIdRef()
 	 * @see #getGSSConfigReferenceSpecialPacket()
 	 * @generated
 	 */
-	EAttribute getGSSConfigReferenceSpecialPacket_IdRef();
+	EReference getGSSConfigReferenceSpecialPacket_IdRef();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigReferenceSpecialPacket#getLevel <em>Level</em>}'.
@@ -5445,26 +5339,6 @@ public interface configPackage extends EPackage {
 	EEnum getGSSConfigEnableDisable();
 
 	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterfaceType <em>GSS Config Main Interface Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>GSS Config Main Interface Type</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterfaceType
-	 * @generated
-	 */
-	EEnum getGSSConfigMainInterfaceType();
-
-	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterfaceIOType <em>GSS Config Main Interface IO Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>GSS Config Main Interface IO Type</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterfaceIOType
-	 * @generated
-	 */
-	EEnum getGSSConfigMainInterfaceIOType();
-
-	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.config.GSSConfigInterfaceType <em>GSS Config Interface Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5966,62 +5840,6 @@ public interface configPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_CONFIG_MAIN_INTERFACE = eINSTANCE.getGSSConfigMainInterface();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_MAIN_INTERFACE__ID = eINSTANCE.getGSSConfigMainInterface_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_MAIN_INTERFACE__NAME = eINSTANCE.getGSSConfigMainInterface_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>If Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_MAIN_INTERFACE__IF_TYPE = eINSTANCE.getGSSConfigMainInterface_IfType();
-
-		/**
-		 * The meta object literal for the '<em><b>If Config</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_CONFIG_MAIN_INTERFACE__IF_CONFIG = eINSTANCE.getGSSConfigMainInterface_IfConfig();
-
-		/**
-		 * The meta object literal for the '<em><b>Io Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_MAIN_INTERFACE__IO_TYPE = eINSTANCE.getGSSConfigMainInterface_IoType();
-
-		/**
-		 * The meta object literal for the '<em><b>Protocol ID</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_CONFIG_MAIN_INTERFACE__PROTOCOL_ID = eINSTANCE.getGSSConfigMainInterface_ProtocolID();
-
-		/**
-		 * The meta object literal for the '<em><b>Level In Out</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_CONFIG_MAIN_INTERFACE__LEVEL_IN_OUT = eINSTANCE.getGSSConfigMainInterface_LevelInOut();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigInterfaceImpl <em>GSS Config Interface</em>}' class.
@@ -6610,6 +6428,56 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_PERIODIC_TCS__PERIODIC_TC_LEVEL_0 = eINSTANCE.getGSSConfigPeriodicTCs_PeriodicTC_level_0();
 
 		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigPeriodicTCImpl <em>GSS Config Periodic TC</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.config.impl.GSSConfigPeriodicTCImpl
+		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigPeriodicTC()
+		 * @generated
+		 */
+		EClass GSS_CONFIG_PERIODIC_TC = eINSTANCE.getGSSConfigPeriodicTC();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_CONFIG_PERIODIC_TC__NAME = eINSTANCE.getGSSConfigPeriodicTC_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_CONFIG_PERIODIC_TC__ID = eINSTANCE.getGSSConfigPeriodicTC_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>If Ref</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_CONFIG_PERIODIC_TC__IF_REF = eINSTANCE.getGSSConfigPeriodicTC_IfRef();
+
+		/**
+		 * The meta object literal for the '<em><b>Period value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_CONFIG_PERIODIC_TC__PERIOD_VALUE = eINSTANCE.getGSSConfigPeriodicTC_Period_value();
+
+		/**
+		 * The meta object literal for the '<em><b>Period unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_CONFIG_PERIODIC_TC__PERIOD_UNIT = eINSTANCE.getGSSConfigPeriodicTC_Period_unit();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.impl.GSSConfigPeriodicTCLevel2Impl <em>GSS Config Periodic TC Level2</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6618,46 +6486,6 @@ public interface configPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_CONFIG_PERIODIC_TC_LEVEL2 = eINSTANCE.getGSSConfigPeriodicTCLevel2();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL2__NAME = eINSTANCE.getGSSConfigPeriodicTCLevel2_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL2__ID = eINSTANCE.getGSSConfigPeriodicTCLevel2_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>If Ref</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL2__IF_REF = eINSTANCE.getGSSConfigPeriodicTCLevel2_IfRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Period value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL2__PERIOD_VALUE = eINSTANCE.getGSSConfigPeriodicTCLevel2_Period_value();
-
-		/**
-		 * The meta object literal for the '<em><b>Period unit</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL2__PERIOD_UNIT = eINSTANCE.getGSSConfigPeriodicTCLevel2_Period_unit();
 
 		/**
 		 * The meta object literal for the '<em><b>Level2</b></em>' reference feature.
@@ -6718,46 +6546,6 @@ public interface configPackage extends EPackage {
 		EClass GSS_CONFIG_PERIODIC_TC_LEVEL1 = eINSTANCE.getGSSConfigPeriodicTCLevel1();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL1__NAME = eINSTANCE.getGSSConfigPeriodicTCLevel1_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL1__ID = eINSTANCE.getGSSConfigPeriodicTCLevel1_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>If Ref</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL1__IF_REF = eINSTANCE.getGSSConfigPeriodicTCLevel1_IfRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Period value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_VALUE = eINSTANCE.getGSSConfigPeriodicTCLevel1_Period_value();
-
-		/**
-		 * The meta object literal for the '<em><b>Period unit</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL1__PERIOD_UNIT = eINSTANCE.getGSSConfigPeriodicTCLevel1_Period_unit();
-
-		/**
 		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6798,46 +6586,6 @@ public interface configPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_CONFIG_PERIODIC_TC_LEVEL0 = eINSTANCE.getGSSConfigPeriodicTCLevel0();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL0__NAME = eINSTANCE.getGSSConfigPeriodicTCLevel0_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL0__ID = eINSTANCE.getGSSConfigPeriodicTCLevel0_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>If Ref</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL0__IF_REF = eINSTANCE.getGSSConfigPeriodicTCLevel0_IfRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Period value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL0__PERIOD_VALUE = eINSTANCE.getGSSConfigPeriodicTCLevel0_Period_value();
-
-		/**
-		 * The meta object literal for the '<em><b>Period unit</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_CONFIG_PERIODIC_TC_LEVEL0__PERIOD_UNIT = eINSTANCE.getGSSConfigPeriodicTCLevel0_Period_unit();
 
 		/**
 		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
@@ -7008,12 +6756,12 @@ public interface configPackage extends EPackage {
 		EClass GSS_CONFIG_REFERENCE_PERIODIC_TC = eINSTANCE.getGSSConfigReferencePeriodicTC();
 
 		/**
-		 * The meta object literal for the '<em><b>Id Ref</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Id Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_REFERENCE_PERIODIC_TC__ID_REF = eINSTANCE.getGSSConfigReferencePeriodicTC_IdRef();
+		EReference GSS_CONFIG_REFERENCE_PERIODIC_TC__ID_REF = eINSTANCE.getGSSConfigReferencePeriodicTC_IdRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
@@ -7058,12 +6806,12 @@ public interface configPackage extends EPackage {
 		EClass GSS_CONFIG_REFERENCE_SPECIAL_PACKET = eINSTANCE.getGSSConfigReferenceSpecialPacket();
 
 		/**
-		 * The meta object literal for the '<em><b>Id Ref</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Id Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_REFERENCE_SPECIAL_PACKET__ID_REF = eINSTANCE.getGSSConfigReferenceSpecialPacket_IdRef();
+		EReference GSS_CONFIG_REFERENCE_SPECIAL_PACKET__ID_REF = eINSTANCE.getGSSConfigReferenceSpecialPacket_IdRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
@@ -7468,26 +7216,6 @@ public interface configPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum GSS_CONFIG_ENABLE_DISABLE = eINSTANCE.getGSSConfigEnableDisable();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterfaceType <em>GSS Config Main Interface Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterfaceType
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigMainInterfaceType()
-		 * @generated
-		 */
-		EEnum GSS_CONFIG_MAIN_INTERFACE_TYPE = eINSTANCE.getGSSConfigMainInterfaceType();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.GSSConfigMainInterfaceIOType <em>GSS Config Main Interface IO Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.GSSConfigMainInterfaceIOType
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigMainInterfaceIOType()
-		 * @generated
-		 */
-		EEnum GSS_CONFIG_MAIN_INTERFACE_IO_TYPE = eINSTANCE.getGSSConfigMainInterfaceIOType();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.GSSConfigInterfaceType <em>GSS Config Interface Type</em>}' enum.

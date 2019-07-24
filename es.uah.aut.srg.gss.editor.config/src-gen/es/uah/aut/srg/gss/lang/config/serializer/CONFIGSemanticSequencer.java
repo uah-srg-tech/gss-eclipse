@@ -362,7 +362,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigGVFiltered returns GSSConfigGVFiltered
 	 *
 	 * Constraint:
-	 *     (GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName] filter=[TMTCIFFilterFilter|VersionedQualifiedName]?)
+	 *     (GlobalVarRef=[GSSConfigGlobalVar|STRING] filter=[TMTCIFFilterFilter|VersionedQualifiedName]?)
 	 */
 	protected void sequence_GSSConfigGVFiltered(ISerializationContext context, GSSConfigGVFiltered semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -374,7 +374,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigGVPeriodic returns GSSConfigGVPeriodic
 	 *
 	 * Constraint:
-	 *     (GlobalVarRef=[GSSConfigGlobalVar|VersionedQualifiedReferenceName] period_value=INTEGER period_unit=GSSConfigUnit)
+	 *     (GlobalVarRef=[GSSConfigGlobalVar|STRING] period_value=INTEGER period_unit=GSSConfigUnit)
 	 */
 	protected void sequence_GSSConfigGVPeriodic(ISerializationContext context, GSSConfigGVPeriodic semanticObject) {
 		if (errorAcceptor != null) {
@@ -386,7 +386,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_GV_PERIODIC__PERIOD_UNIT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefGSSConfigGlobalVarVersionedQualifiedReferenceNameParserRuleCall_4_0_1(), semanticObject.getGlobalVarRef());
+		feeder.accept(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefGSSConfigGlobalVarSTRINGTerminalRuleCall_4_0_1(), semanticObject.getGlobalVarRef());
 		feeder.accept(grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_valueINTEGERParserRuleCall_8_0(), semanticObject.getPeriod_value());
 		feeder.accept(grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_unitGSSConfigUnitEnumRuleCall_12_0(), semanticObject.getPeriod_unit());
 		feeder.finish();
@@ -540,9 +540,9 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     (
 	 *         id=INTEGER 
 	 *         name=STRING 
-	 *         ifType=GSSConfigMainInterfaceType 
+	 *         ifType=GSSConfigInterfaceType 
 	 *         ifConfig=[GSSIfacePortConfig|VersionedQualifiedName] 
-	 *         ioType=GSSConfigMainInterfaceIOType 
+	 *         ioType=GSSConfigInterfaceIOType 
 	 *         protocolID=[GSSConfigProtocol|VersionedQualifiedReferenceName]? 
 	 *         LevelInOut+=GSSConfigLevelInOut+
 	 *     )
@@ -804,7 +804,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigReferencePeriodicTC returns GSSConfigReferencePeriodicTC
 	 *
 	 * Constraint:
-	 *     (idRef=INTEGER level=INTEGER fieldRef=INTEGER offset=INTEGER size=INTEGER)
+	 *     (idRef=[GSSConfigPeriodicTC|STRING] level=INTEGER fieldRef=INTEGER offset=INTEGER size=INTEGER)
 	 */
 	protected void sequence_GSSConfigReferencePeriodicTC(ISerializationContext context, GSSConfigReferencePeriodicTC semanticObject) {
 		if (errorAcceptor != null) {
@@ -820,7 +820,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_REFERENCE_PERIODIC_TC__SIZE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigReferencePeriodicTCAccess().getIdRefINTEGERParserRuleCall_4_0(), semanticObject.getIdRef());
+		feeder.accept(grammarAccess.getGSSConfigReferencePeriodicTCAccess().getIdRefGSSConfigPeriodicTCSTRINGTerminalRuleCall_4_0_1(), semanticObject.getIdRef());
 		feeder.accept(grammarAccess.getGSSConfigReferencePeriodicTCAccess().getLevelINTEGERParserRuleCall_8_0(), semanticObject.getLevel());
 		feeder.accept(grammarAccess.getGSSConfigReferencePeriodicTCAccess().getFieldRefINTEGERParserRuleCall_12_0(), semanticObject.getFieldRef());
 		feeder.accept(grammarAccess.getGSSConfigReferencePeriodicTCAccess().getOffsetINTEGERParserRuleCall_16_0(), semanticObject.getOffset());
@@ -834,7 +834,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigReferenceSpecialPacket returns GSSConfigReferenceSpecialPacket
 	 *
 	 * Constraint:
-	 *     (idRef=INTEGER level=INTEGER fieldRef=INTEGER offset=INTEGER size=INTEGER)
+	 *     (idRef=[GSSConfigSpecialPacket|STRING] level=INTEGER fieldRef=INTEGER offset=INTEGER size=INTEGER)
 	 */
 	protected void sequence_GSSConfigReferenceSpecialPacket(ISerializationContext context, GSSConfigReferenceSpecialPacket semanticObject) {
 		if (errorAcceptor != null) {
@@ -850,7 +850,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, configPackage.Literals.GSS_CONFIG_REFERENCE_SPECIAL_PACKET__SIZE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getIdRefINTEGERParserRuleCall_4_0(), semanticObject.getIdRef());
+		feeder.accept(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getIdRefGSSConfigSpecialPacketSTRINGTerminalRuleCall_4_0_1(), semanticObject.getIdRef());
 		feeder.accept(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getLevelINTEGERParserRuleCall_8_0(), semanticObject.getLevel());
 		feeder.accept(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getFieldRefINTEGERParserRuleCall_12_0(), semanticObject.getFieldRef());
 		feeder.accept(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getOffsetINTEGERParserRuleCall_16_0(), semanticObject.getOffset());

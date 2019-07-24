@@ -52,8 +52,8 @@
 'GlobalVarRef'=118
 'ProtocolPacketsFile'=29
 'SpW'=135
-'SpW_Error'=140
-'SpW_TC'=139
+'SpW_Error'=137
+'SpW_TC'=136
 'TCformat'=59
 'TMformat'=58
 '_1'=143
@@ -68,7 +68,7 @@
 'chartRef'=111
 'date'=32
 'disabled'=133
-'dummy'=137
+'dummy'=139
 'enabled'=134
 'export_to_prev_Level'=61
 'fieldRef'=104
@@ -85,7 +85,7 @@
 'import'=12
 'import_from_prev_Level'=62
 'in'=141
-'in_out'=138
+'in_out'=140
 'increment'=155
 'increment1wrap'=156
 'initial_value'=102
@@ -134,7 +134,7 @@
 'type'=101
 'typeLevel'=48
 'typeOffset'=49
-'uart'=136
+'uart'=138
 'uint'=148
 'uri'=17
 'validTimesKo'=44

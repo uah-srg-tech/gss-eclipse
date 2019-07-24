@@ -134,6 +134,7 @@ public class configSwitch<T> extends Switch<T> {
 			case configPackage.GSS_CONFIG_MAIN_INTERFACE: {
 				GSSConfigMainInterface gssConfigMainInterface = (GSSConfigMainInterface)theEObject;
 				T result = caseGSSConfigMainInterface(gssConfigMainInterface);
+				if (result == null) result = caseGSSConfigInterface(gssConfigMainInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -215,21 +216,30 @@ public class configSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case configPackage.GSS_CONFIG_PERIODIC_TC: {
+				GSSConfigPeriodicTC gssConfigPeriodicTC = (GSSConfigPeriodicTC)theEObject;
+				T result = caseGSSConfigPeriodicTC(gssConfigPeriodicTC);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL2: {
 				GSSConfigPeriodicTCLevel2 gssConfigPeriodicTCLevel2 = (GSSConfigPeriodicTCLevel2)theEObject;
 				T result = caseGSSConfigPeriodicTCLevel2(gssConfigPeriodicTCLevel2);
+				if (result == null) result = caseGSSConfigPeriodicTC(gssConfigPeriodicTCLevel2);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1: {
 				GSSConfigPeriodicTCLevel1 gssConfigPeriodicTCLevel1 = (GSSConfigPeriodicTCLevel1)theEObject;
 				T result = caseGSSConfigPeriodicTCLevel1(gssConfigPeriodicTCLevel1);
+				if (result == null) result = caseGSSConfigPeriodicTC(gssConfigPeriodicTCLevel1);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL0: {
 				GSSConfigPeriodicTCLevel0 gssConfigPeriodicTCLevel0 = (GSSConfigPeriodicTCLevel0)theEObject;
 				T result = caseGSSConfigPeriodicTCLevel0(gssConfigPeriodicTCLevel0);
+				if (result == null) result = caseGSSConfigPeriodicTC(gssConfigPeriodicTCLevel0);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -663,6 +673,21 @@ public class configSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSConfigPeriodicTCs(GSSConfigPeriodicTCs object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Periodic TC</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Config Periodic TC</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSConfigPeriodicTC(GSSConfigPeriodicTC object) {
 		return null;
 	}
 

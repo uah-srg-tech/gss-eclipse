@@ -88,27 +88,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Interface" upperBound="7"
         eType="#//GSSConfigInterface" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="GSSConfigMainInterfaceType">
-    <eLiterals name="SpW"/>
-    <eLiterals name="uart" value="1"/>
-    <eLiterals name="dummy" value="2"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="GSSConfigMainInterfaceIOType">
-    <eLiterals name="in_out"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSConfigMainInterface">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifType" lowerBound="1"
-        eType="#//GSSConfigMainInterfaceType" unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ifConfig" lowerBound="1"
-        eType="ecore:EClass iface.ecore#//GSSIfacePortConfig"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ioType" lowerBound="1"
-        eType="#//GSSConfigMainInterfaceIOType" unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="protocolID" eType="#//GSSConfigProtocol"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="LevelInOut" lowerBound="1"
-        upperBound="3" eType="#//GSSConfigLevelInOut" containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSConfigMainInterface" eSuperTypes="#//GSSConfigInterface"/>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSConfigInterfaceType">
     <eLiterals name="SpW"/>
     <eLiterals name="SpW_TC" value="1"/>
@@ -256,14 +236,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="PeriodicTC_level_0" upperBound="-1"
         eType="#//GSSConfigPeriodicTCLevel0" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSConfigPeriodicTCLevel2">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSConfigPeriodicTC">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="period_value" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="period_unit" lowerBound="1"
-        eType="#//GSSConfigUnit" unsettable="true"/>
+        eType="#//GSSConfigUnit" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSConfigPeriodicTCLevel2" eSuperTypes="#//GSSConfigPeriodicTC">
     <eStructuralFeatures xsi:type="ecore:EReference" name="level2" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/format.ecore#//TMTCIFFormatFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level2" lowerBound="1"
         eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/export.ecore#//TMTCIFExportExport"/>
@@ -272,28 +254,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/format.ecore#//TMTCIFFormatFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level1_to_level0" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/export.ecore#//TMTCIFExportExport"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSConfigPeriodicTCLevel1">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="period_value" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="period_unit" lowerBound="1"
-        eType="#//GSSConfigUnit" unsettable="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSConfigPeriodicTCLevel1" eSuperTypes="#//GSSConfigPeriodicTC">
     <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/format.ecore#//TMTCIFFormatFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level1" lowerBound="1"
         eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/export.ecore#//TMTCIFExportExport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/format.ecore#//TMTCIFFormatFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level1_to_level0" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/export.ecore#//TMTCIFExportExport"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSConfigPeriodicTCLevel0">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="period_value" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="period_unit" lowerBound="1"
-        eType="#//GSSConfigUnit" transient="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSConfigPeriodicTCLevel0" eSuperTypes="#//GSSConfigPeriodicTC">
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/format.ecore#//TMTCIFFormatFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level0" lowerBound="1"
         eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/export.ecore#//TMTCIFExportExport"/>
@@ -336,7 +304,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSConfigReferencePeriodicTC">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="idRef" lowerBound="1" eType="#//GSSConfigPeriodicTC"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldRef" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -345,7 +313,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSConfigReferenceSpecialPacket">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="idRef" lowerBound="1" eType="#//GSSConfigSpecialPacket"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldRef" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

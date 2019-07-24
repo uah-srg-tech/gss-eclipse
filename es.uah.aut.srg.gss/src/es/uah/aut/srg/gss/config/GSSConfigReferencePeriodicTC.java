@@ -34,30 +34,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface GSSConfigReferencePeriodicTC extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Id Ref</b></em>' attribute.
+	 * Returns the value of the '<em><b>Id Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Id Ref</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Ref</em>' attribute.
-	 * @see #setIdRef(String)
+	 * @return the value of the '<em>Id Ref</em>' reference.
+	 * @see #setIdRef(GSSConfigPeriodicTC)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigReferencePeriodicTC_IdRef()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getIdRef();
+	GSSConfigPeriodicTC getIdRef();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigReferencePeriodicTC#getIdRef <em>Id Ref</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigReferencePeriodicTC#getIdRef <em>Id Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Ref</em>' attribute.
+	 * @param value the new value of the '<em>Id Ref</em>' reference.
 	 * @see #getIdRef()
 	 * @generated
 	 */
-	void setIdRef(String value);
+	void setIdRef(GSSConfigPeriodicTC value);
 
 	/**
 	 * Returns the value of the '<em><b>Level</b></em>' attribute.

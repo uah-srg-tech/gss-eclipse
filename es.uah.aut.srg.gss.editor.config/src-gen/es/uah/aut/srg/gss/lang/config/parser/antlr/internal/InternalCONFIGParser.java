@@ -34,7 +34,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalCONFIGParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSConfigGSSConfig'", "'{'", "'uri'", "'version'", "'}'", "'GSSConfigGSSOptions'", "'GSSConfigProtocols'", "'GSSConfigInterfaces'", "'GSSConfigSpecialPackets'", "'GSSConfigPeriodicTCs'", "'GSSConfigGlobalVars'", "'GSSConfigMonitors'", "'ChartsFile'", "'GSSConfigTests'", "'ProtocolPacketsFile'", "'GSSConfigGSSInfo'", "'test_campaign'", "'date'", "'version_control_url'", "'GSSConfigGSSInfoPrint'", "'mainLog'", "'portLogs'", "'rawLog'", "'GSSConfigPhyHeaderPrint'", "'gssTabs'", "'GSSConfigGSSDiscardErrorFlags'", "'txErrors'", "'notExpectedPackets'", "'filtersKo'", "'validTimesKo'", "'GSSConfigProtocol'", "'id'", "'name'", "'typeLevel'", "'typeOffset'", "'subtypeOffset'", "'GSSConfigMainInterface'", "'ifType'", "'ifConfig'", "'ioType'", "'protocolID'", "'GSSConfigInterface'", "'GSSConfigLevelInOut'", "'TMformat'", "'TCformat'", "'inputFilter'", "'export_to_prev_Level'", "'import_from_prev_Level'", "'GSSConfigLevelIn'", "'GSSConfigLevelOut'", "'GSSConfigSpecialPacket'", "'status'", "'ifRef'", "'levels'", "'levelRef'", "'GSSConfigUpperLevels'", "'GSSConfigPrintingData'", "'printStatus'", "'GSSConfigPeriod'", "'min_value'", "'min_unit'", "'max_value'", "'max_unit'", "'GSSConfigIntervalRange'", "'min'", "'max'", "'interval_value'", "'interval_unit'", "'GSSConfigUpperLevel'", "'level'", "'GSSConfigStructuredData'", "'firstField'", "'GSSConfigPeriodicTCLevel2'", "'period_value'", "'period_unit'", "'level2'", "'app_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSConfigPeriodicTCLevel1'", "'app_to_level1'", "'GSSConfigPeriodicTCLevel0'", "'app_to_level0'", "'GSSConfigGlobalVar'", "'type'", "'initial_value'", "'GSSConfigReferenceField'", "'fieldRef'", "'offset'", "'size'", "'GSSConfigReferencePeriodicTC'", "'idRef'", "'GSSConfigReferenceSpecialPacket'", "'GSSConfigPlot'", "'chartRef'", "'GSSConfigAlarmMsg'", "'text'", "'GSSConfigModify'", "'value'", "'GSSConfigAlarmVal'", "'GSSConfigGVFiltered'", "'GlobalVarRef'", "'filter'", "'GSSConfigGVPeriodic'", "'GSSConfigTestCase'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'", "'::'", "'-'", "'/'", "'+'", "'://'", "'disabled'", "'enabled'", "'SpW'", "'uart'", "'dummy'", "'in_out'", "'SpW_TC'", "'SpW_Error'", "'in'", "'out'", "'_1'", "'_2'", "'_3'", "'miliseconds'", "'seconds'", "'uint'", "'formula'", "'tm'", "'tc'", "'alarm1'", "'alarm2'", "'alarm3'", "'increment'", "'increment1wrap'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSConfigGSSConfig'", "'{'", "'uri'", "'version'", "'}'", "'GSSConfigGSSOptions'", "'GSSConfigProtocols'", "'GSSConfigInterfaces'", "'GSSConfigSpecialPackets'", "'GSSConfigPeriodicTCs'", "'GSSConfigGlobalVars'", "'GSSConfigMonitors'", "'ChartsFile'", "'GSSConfigTests'", "'ProtocolPacketsFile'", "'GSSConfigGSSInfo'", "'test_campaign'", "'date'", "'version_control_url'", "'GSSConfigGSSInfoPrint'", "'mainLog'", "'portLogs'", "'rawLog'", "'GSSConfigPhyHeaderPrint'", "'gssTabs'", "'GSSConfigGSSDiscardErrorFlags'", "'txErrors'", "'notExpectedPackets'", "'filtersKo'", "'validTimesKo'", "'GSSConfigProtocol'", "'id'", "'name'", "'typeLevel'", "'typeOffset'", "'subtypeOffset'", "'GSSConfigMainInterface'", "'ifType'", "'ifConfig'", "'ioType'", "'protocolID'", "'GSSConfigInterface'", "'GSSConfigLevelInOut'", "'TMformat'", "'TCformat'", "'inputFilter'", "'export_to_prev_Level'", "'import_from_prev_Level'", "'GSSConfigLevelIn'", "'GSSConfigLevelOut'", "'GSSConfigSpecialPacket'", "'status'", "'ifRef'", "'levels'", "'levelRef'", "'GSSConfigUpperLevels'", "'GSSConfigPrintingData'", "'printStatus'", "'GSSConfigPeriod'", "'min_value'", "'min_unit'", "'max_value'", "'max_unit'", "'GSSConfigIntervalRange'", "'min'", "'max'", "'interval_value'", "'interval_unit'", "'GSSConfigUpperLevel'", "'level'", "'GSSConfigStructuredData'", "'firstField'", "'GSSConfigPeriodicTCLevel2'", "'period_value'", "'period_unit'", "'level2'", "'app_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSConfigPeriodicTCLevel1'", "'app_to_level1'", "'GSSConfigPeriodicTCLevel0'", "'app_to_level0'", "'GSSConfigGlobalVar'", "'type'", "'initial_value'", "'GSSConfigReferenceField'", "'fieldRef'", "'offset'", "'size'", "'GSSConfigReferencePeriodicTC'", "'idRef'", "'GSSConfigReferenceSpecialPacket'", "'GSSConfigPlot'", "'chartRef'", "'GSSConfigAlarmMsg'", "'text'", "'GSSConfigModify'", "'value'", "'GSSConfigAlarmVal'", "'GSSConfigGVFiltered'", "'GlobalVarRef'", "'filter'", "'GSSConfigGVPeriodic'", "'GSSConfigTestCase'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'", "'::'", "'-'", "'/'", "'+'", "'://'", "'disabled'", "'enabled'", "'SpW'", "'SpW_TC'", "'SpW_Error'", "'uart'", "'dummy'", "'in_out'", "'in'", "'out'", "'_1'", "'_2'", "'_3'", "'miliseconds'", "'seconds'", "'uint'", "'formula'", "'tm'", "'tc'", "'alarm1'", "'alarm2'", "'alarm3'", "'increment'", "'increment1wrap'"
     };
     public static final int T__144=144;
     public static final int T__143=143;
@@ -4893,7 +4893,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigMainInterface"
-    // InternalCONFIG.g:1992:1: ruleGSSConfigMainInterface returns [EObject current=null] : (otherlv_0= 'GSSConfigMainInterface' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_STRING ) ) otherlv_9= ';' otherlv_10= 'ifType' otherlv_11= ':=' ( (lv_ifType_12_0= ruleGSSConfigMainInterfaceType ) ) otherlv_13= ';' otherlv_14= 'ifConfig' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'ioType' otherlv_19= ':=' ( (lv_ioType_20_0= ruleGSSConfigMainInterfaceIOType ) ) otherlv_21= ';' (otherlv_22= 'protocolID' otherlv_23= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_25= ';' )? ( (lv_LevelInOut_26_0= ruleGSSConfigLevelInOut ) )+ otherlv_27= '}' otherlv_28= ';' ) ;
+    // InternalCONFIG.g:1992:1: ruleGSSConfigMainInterface returns [EObject current=null] : (otherlv_0= 'GSSConfigMainInterface' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_STRING ) ) otherlv_9= ';' otherlv_10= 'ifType' otherlv_11= ':=' ( (lv_ifType_12_0= ruleGSSConfigInterfaceType ) ) otherlv_13= ';' otherlv_14= 'ifConfig' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'ioType' otherlv_19= ':=' ( (lv_ioType_20_0= ruleGSSConfigInterfaceIOType ) ) otherlv_21= ';' (otherlv_22= 'protocolID' otherlv_23= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_25= ';' )? ( (lv_LevelInOut_26_0= ruleGSSConfigLevelInOut ) )+ otherlv_27= '}' otherlv_28= ';' ) ;
     public final EObject ruleGSSConfigMainInterface() throws RecognitionException {
         EObject current = null;
 
@@ -4933,11 +4933,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:1998:2: ( (otherlv_0= 'GSSConfigMainInterface' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_STRING ) ) otherlv_9= ';' otherlv_10= 'ifType' otherlv_11= ':=' ( (lv_ifType_12_0= ruleGSSConfigMainInterfaceType ) ) otherlv_13= ';' otherlv_14= 'ifConfig' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'ioType' otherlv_19= ':=' ( (lv_ioType_20_0= ruleGSSConfigMainInterfaceIOType ) ) otherlv_21= ';' (otherlv_22= 'protocolID' otherlv_23= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_25= ';' )? ( (lv_LevelInOut_26_0= ruleGSSConfigLevelInOut ) )+ otherlv_27= '}' otherlv_28= ';' ) )
-            // InternalCONFIG.g:1999:2: (otherlv_0= 'GSSConfigMainInterface' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_STRING ) ) otherlv_9= ';' otherlv_10= 'ifType' otherlv_11= ':=' ( (lv_ifType_12_0= ruleGSSConfigMainInterfaceType ) ) otherlv_13= ';' otherlv_14= 'ifConfig' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'ioType' otherlv_19= ':=' ( (lv_ioType_20_0= ruleGSSConfigMainInterfaceIOType ) ) otherlv_21= ';' (otherlv_22= 'protocolID' otherlv_23= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_25= ';' )? ( (lv_LevelInOut_26_0= ruleGSSConfigLevelInOut ) )+ otherlv_27= '}' otherlv_28= ';' )
+            // InternalCONFIG.g:1998:2: ( (otherlv_0= 'GSSConfigMainInterface' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_STRING ) ) otherlv_9= ';' otherlv_10= 'ifType' otherlv_11= ':=' ( (lv_ifType_12_0= ruleGSSConfigInterfaceType ) ) otherlv_13= ';' otherlv_14= 'ifConfig' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'ioType' otherlv_19= ':=' ( (lv_ioType_20_0= ruleGSSConfigInterfaceIOType ) ) otherlv_21= ';' (otherlv_22= 'protocolID' otherlv_23= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_25= ';' )? ( (lv_LevelInOut_26_0= ruleGSSConfigLevelInOut ) )+ otherlv_27= '}' otherlv_28= ';' ) )
+            // InternalCONFIG.g:1999:2: (otherlv_0= 'GSSConfigMainInterface' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_STRING ) ) otherlv_9= ';' otherlv_10= 'ifType' otherlv_11= ':=' ( (lv_ifType_12_0= ruleGSSConfigInterfaceType ) ) otherlv_13= ';' otherlv_14= 'ifConfig' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'ioType' otherlv_19= ':=' ( (lv_ioType_20_0= ruleGSSConfigInterfaceIOType ) ) otherlv_21= ';' (otherlv_22= 'protocolID' otherlv_23= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_25= ';' )? ( (lv_LevelInOut_26_0= ruleGSSConfigLevelInOut ) )+ otherlv_27= '}' otherlv_28= ';' )
             {
-            // InternalCONFIG.g:1999:2: (otherlv_0= 'GSSConfigMainInterface' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_STRING ) ) otherlv_9= ';' otherlv_10= 'ifType' otherlv_11= ':=' ( (lv_ifType_12_0= ruleGSSConfigMainInterfaceType ) ) otherlv_13= ';' otherlv_14= 'ifConfig' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'ioType' otherlv_19= ':=' ( (lv_ioType_20_0= ruleGSSConfigMainInterfaceIOType ) ) otherlv_21= ';' (otherlv_22= 'protocolID' otherlv_23= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_25= ';' )? ( (lv_LevelInOut_26_0= ruleGSSConfigLevelInOut ) )+ otherlv_27= '}' otherlv_28= ';' )
-            // InternalCONFIG.g:2000:3: otherlv_0= 'GSSConfigMainInterface' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_STRING ) ) otherlv_9= ';' otherlv_10= 'ifType' otherlv_11= ':=' ( (lv_ifType_12_0= ruleGSSConfigMainInterfaceType ) ) otherlv_13= ';' otherlv_14= 'ifConfig' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'ioType' otherlv_19= ':=' ( (lv_ioType_20_0= ruleGSSConfigMainInterfaceIOType ) ) otherlv_21= ';' (otherlv_22= 'protocolID' otherlv_23= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_25= ';' )? ( (lv_LevelInOut_26_0= ruleGSSConfigLevelInOut ) )+ otherlv_27= '}' otherlv_28= ';'
+            // InternalCONFIG.g:1999:2: (otherlv_0= 'GSSConfigMainInterface' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_STRING ) ) otherlv_9= ';' otherlv_10= 'ifType' otherlv_11= ':=' ( (lv_ifType_12_0= ruleGSSConfigInterfaceType ) ) otherlv_13= ';' otherlv_14= 'ifConfig' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'ioType' otherlv_19= ':=' ( (lv_ioType_20_0= ruleGSSConfigInterfaceIOType ) ) otherlv_21= ';' (otherlv_22= 'protocolID' otherlv_23= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_25= ';' )? ( (lv_LevelInOut_26_0= ruleGSSConfigLevelInOut ) )+ otherlv_27= '}' otherlv_28= ';' )
+            // InternalCONFIG.g:2000:3: otherlv_0= 'GSSConfigMainInterface' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_STRING ) ) otherlv_9= ';' otherlv_10= 'ifType' otherlv_11= ':=' ( (lv_ifType_12_0= ruleGSSConfigInterfaceType ) ) otherlv_13= ';' otherlv_14= 'ifConfig' otherlv_15= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_17= ';' otherlv_18= 'ioType' otherlv_19= ':=' ( (lv_ioType_20_0= ruleGSSConfigInterfaceIOType ) ) otherlv_21= ';' (otherlv_22= 'protocolID' otherlv_23= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_25= ';' )? ( (lv_LevelInOut_26_0= ruleGSSConfigLevelInOut ) )+ otherlv_27= '}' otherlv_28= ';'
             {
             otherlv_0=(Token)match(input,51,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5064,19 +5064,19 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_11, grammarAccess.getGSSConfigMainInterfaceAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalCONFIG.g:2077:3: ( (lv_ifType_12_0= ruleGSSConfigMainInterfaceType ) )
-            // InternalCONFIG.g:2078:4: (lv_ifType_12_0= ruleGSSConfigMainInterfaceType )
+            // InternalCONFIG.g:2077:3: ( (lv_ifType_12_0= ruleGSSConfigInterfaceType ) )
+            // InternalCONFIG.g:2078:4: (lv_ifType_12_0= ruleGSSConfigInterfaceType )
             {
-            // InternalCONFIG.g:2078:4: (lv_ifType_12_0= ruleGSSConfigMainInterfaceType )
-            // InternalCONFIG.g:2079:5: lv_ifType_12_0= ruleGSSConfigMainInterfaceType
+            // InternalCONFIG.g:2078:4: (lv_ifType_12_0= ruleGSSConfigInterfaceType )
+            // InternalCONFIG.g:2079:5: lv_ifType_12_0= ruleGSSConfigInterfaceType
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSConfigMainInterfaceAccess().getIfTypeGSSConfigMainInterfaceTypeEnumRuleCall_12_0());
+              					newCompositeNode(grammarAccess.getGSSConfigMainInterfaceAccess().getIfTypeGSSConfigInterfaceTypeEnumRuleCall_12_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);
-            lv_ifType_12_0=ruleGSSConfigMainInterfaceType();
+            lv_ifType_12_0=ruleGSSConfigInterfaceType();
 
             state._fsp--;
             if (state.failed) return current;
@@ -5089,7 +5089,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               						current,
               						"ifType",
               						lv_ifType_12_0,
-              						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigMainInterfaceType");
+              						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigInterfaceType");
               					afterParserOrEnumRuleCall();
               				
             }
@@ -5174,19 +5174,19 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_19, grammarAccess.getGSSConfigMainInterfaceAccess().getColonEqualsSignKeyword_19());
               		
             }
-            // InternalCONFIG.g:2139:3: ( (lv_ioType_20_0= ruleGSSConfigMainInterfaceIOType ) )
-            // InternalCONFIG.g:2140:4: (lv_ioType_20_0= ruleGSSConfigMainInterfaceIOType )
+            // InternalCONFIG.g:2139:3: ( (lv_ioType_20_0= ruleGSSConfigInterfaceIOType ) )
+            // InternalCONFIG.g:2140:4: (lv_ioType_20_0= ruleGSSConfigInterfaceIOType )
             {
-            // InternalCONFIG.g:2140:4: (lv_ioType_20_0= ruleGSSConfigMainInterfaceIOType )
-            // InternalCONFIG.g:2141:5: lv_ioType_20_0= ruleGSSConfigMainInterfaceIOType
+            // InternalCONFIG.g:2140:4: (lv_ioType_20_0= ruleGSSConfigInterfaceIOType )
+            // InternalCONFIG.g:2141:5: lv_ioType_20_0= ruleGSSConfigInterfaceIOType
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSConfigMainInterfaceAccess().getIoTypeGSSConfigMainInterfaceIOTypeEnumRuleCall_20_0());
+              					newCompositeNode(grammarAccess.getGSSConfigMainInterfaceAccess().getIoTypeGSSConfigInterfaceIOTypeEnumRuleCall_20_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);
-            lv_ioType_20_0=ruleGSSConfigMainInterfaceIOType();
+            lv_ioType_20_0=ruleGSSConfigInterfaceIOType();
 
             state._fsp--;
             if (state.failed) return current;
@@ -5199,7 +5199,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               						current,
               						"ioType",
               						lv_ioType_20_0,
-              						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigMainInterfaceIOType");
+              						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigInterfaceIOType");
               					afterParserOrEnumRuleCall();
               				
             }
@@ -5594,7 +5594,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSConfigInterfaceAccess().getIfTypeKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_59); if (state.failed) return current;
+            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_53); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSConfigInterfaceAccess().getColonEqualsSignKeyword_11());
@@ -5704,7 +5704,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_18, grammarAccess.getGSSConfigInterfaceAccess().getIoTypeKeyword_18());
               		
             }
-            otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_60); if (state.failed) return current;
+            otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_56); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_19, grammarAccess.getGSSConfigInterfaceAccess().getColonEqualsSignKeyword_19());
@@ -5745,7 +5745,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_61); if (state.failed) return current;
+            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_59); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_21, grammarAccess.getGSSConfigInterfaceAccess().getSemicolonKeyword_21());
@@ -5813,7 +5813,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_25=(Token)match(input,14,FollowSets000.FOLLOW_61); if (state.failed) return current;
+                    otherlv_25=(Token)match(input,14,FollowSets000.FOLLOW_59); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_25, grammarAccess.getGSSConfigInterfaceAccess().getSemicolonKeyword_22_3());
@@ -5864,7 +5864,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             	      						newCompositeNode(grammarAccess.getGSSConfigInterfaceAccess().getLevelInOutGSSConfigLevelInOutParserRuleCall_23_0_0());
             	      					
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_62);
+            	    pushFollow(FollowSets000.FOLLOW_60);
             	    lv_LevelInOut_26_0=ruleGSSConfigLevelInOut();
 
             	    state._fsp--;
@@ -5905,7 +5905,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             	      						newCompositeNode(grammarAccess.getGSSConfigInterfaceAccess().getLevelInGSSConfigLevelInParserRuleCall_23_1_0());
             	      					
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_62);
+            	    pushFollow(FollowSets000.FOLLOW_60);
             	    lv_LevelIn_27_0=ruleGSSConfigLevelIn();
 
             	    state._fsp--;
@@ -5946,7 +5946,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             	      						newCompositeNode(grammarAccess.getGSSConfigInterfaceAccess().getLevelOutGSSConfigLevelOutParserRuleCall_23_2_0());
             	      					
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_62);
+            	    pushFollow(FollowSets000.FOLLOW_60);
             	    lv_LevelOut_28_0=ruleGSSConfigLevelOut();
 
             	    state._fsp--;
@@ -6211,7 +6211,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_63); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_61); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigLevelInOutAccess().getSemicolonKeyword_9());
@@ -6268,7 +6268,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_64); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_62); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigLevelInOutAccess().getSemicolonKeyword_13());
@@ -6325,7 +6325,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_65); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_63); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSConfigLevelInOutAccess().getSemicolonKeyword_17());
@@ -6382,7 +6382,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_66); if (state.failed) return current;
+            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_21, grammarAccess.getGSSConfigLevelInOutAccess().getSemicolonKeyword_21());
@@ -6450,7 +6450,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_25=(Token)match(input,14,FollowSets000.FOLLOW_67); if (state.failed) return current;
+                    otherlv_25=(Token)match(input,14,FollowSets000.FOLLOW_65); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_25, grammarAccess.getGSSConfigLevelInOutAccess().getSemicolonKeyword_22_3());
@@ -6754,7 +6754,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_64); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_62); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigLevelInAccess().getSemicolonKeyword_9());
@@ -6811,7 +6811,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_68); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_66); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigLevelInAccess().getSemicolonKeyword_13());
@@ -7112,7 +7112,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_63); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_61); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigLevelOutAccess().getSemicolonKeyword_9());
@@ -7169,7 +7169,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_65); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_63); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigLevelOutAccess().getSemicolonKeyword_13());
@@ -7226,7 +7226,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_67); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_65); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSConfigLevelOutAccess().getSemicolonKeyword_17());
@@ -7448,7 +7448,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSConfigSpecialPacketAccess().getGSSConfigSpecialPacketKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_69); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_67); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSConfigSpecialPacketAccess().getLeftCurlyBracketKeyword_1());
@@ -7602,7 +7602,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_70); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_68); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigSpecialPacketAccess().getSemicolonKeyword_13());
@@ -7655,7 +7655,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_71); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_69); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSConfigSpecialPacketAccess().getSemicolonKeyword_17());
@@ -7708,7 +7708,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_72); if (state.failed) return current;
+            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_70); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_21, grammarAccess.getGSSConfigSpecialPacketAccess().getSemicolonKeyword_21());
@@ -7761,7 +7761,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_25=(Token)match(input,14,FollowSets000.FOLLOW_65); if (state.failed) return current;
+            otherlv_25=(Token)match(input,14,FollowSets000.FOLLOW_63); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_25, grammarAccess.getGSSConfigSpecialPacketAccess().getSemicolonKeyword_25());
@@ -7818,7 +7818,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_29=(Token)match(input,14,FollowSets000.FOLLOW_73); if (state.failed) return current;
+            otherlv_29=(Token)match(input,14,FollowSets000.FOLLOW_71); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_29, grammarAccess.getGSSConfigSpecialPacketAccess().getSemicolonKeyword_29());
@@ -7843,7 +7843,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                       					newCompositeNode(grammarAccess.getGSSConfigSpecialPacketAccess().getUpperLevelsGSSConfigUpperLevelsParserRuleCall_30_0());
                       				
                     }
-                    pushFollow(FollowSets000.FOLLOW_73);
+                    pushFollow(FollowSets000.FOLLOW_71);
                     lv_UpperLevels_30_0=ruleGSSConfigUpperLevels();
 
                     state._fsp--;
@@ -7881,7 +7881,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               					newCompositeNode(grammarAccess.getGSSConfigSpecialPacketAccess().getPrintingDataGSSConfigPrintingDataParserRuleCall_31_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_74);
+            pushFollow(FollowSets000.FOLLOW_72);
             lv_printingData_31_0=ruleGSSConfigPrintingData();
 
             state._fsp--;
@@ -8105,7 +8105,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSConfigUpperLevelsAccess().getGSSConfigUpperLevelsKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_75); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_73); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSConfigUpperLevelsAccess().getLeftCurlyBracketKeyword_1());
@@ -8135,7 +8135,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             	      					newCompositeNode(grammarAccess.getGSSConfigUpperLevelsAccess().getUpperLevelGSSConfigUpperLevelParserRuleCall_2_0());
             	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_76);
+            	    pushFollow(FollowSets000.FOLLOW_74);
             	    lv_UpperLevel_2_0=ruleGSSConfigUpperLevel();
 
             	    state._fsp--;
@@ -8279,7 +8279,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSConfigPrintingDataAccess().getGSSConfigPrintingDataKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_77); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_75); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSConfigPrintingDataAccess().getLeftCurlyBracketKeyword_1());
@@ -8332,7 +8332,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_78); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_76); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigPrintingDataAccess().getSemicolonKeyword_5());
@@ -8506,7 +8506,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSConfigPeriodAccess().getGSSConfigPeriodKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_79); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_77); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSConfigPeriodAccess().getLeftCurlyBracketKeyword_1());
@@ -8559,7 +8559,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_80); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_78); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigPeriodAccess().getSemicolonKeyword_5());
@@ -8571,7 +8571,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSConfigPeriodAccess().getMin_unitKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_81); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_79); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSConfigPeriodAccess().getColonEqualsSignKeyword_7());
@@ -8612,7 +8612,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_82); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_80); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigPeriodAccess().getSemicolonKeyword_9());
@@ -8665,7 +8665,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_83); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_81); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigPeriodAccess().getSemicolonKeyword_13());
@@ -8677,7 +8677,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_14, grammarAccess.getGSSConfigPeriodAccess().getMax_unitKeyword_14());
               		
             }
-            otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_81); if (state.failed) return current;
+            otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_79); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_15, grammarAccess.getGSSConfigPeriodAccess().getColonEqualsSignKeyword_15());
@@ -8846,7 +8846,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSConfigIntervalRangeAccess().getGSSConfigIntervalRangeKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_84); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_82); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSConfigIntervalRangeAccess().getLeftCurlyBracketKeyword_1());
@@ -8899,7 +8899,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_85); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_83); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigIntervalRangeAccess().getSemicolonKeyword_5());
@@ -8952,7 +8952,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_86); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_84); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigIntervalRangeAccess().getSemicolonKeyword_9());
@@ -9005,7 +9005,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_87); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_85); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigIntervalRangeAccess().getSemicolonKeyword_13());
@@ -9017,7 +9017,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_14, grammarAccess.getGSSConfigIntervalRangeAccess().getInterval_unitKeyword_14());
               		
             }
-            otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_81); if (state.failed) return current;
+            otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_79); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_15, grammarAccess.getGSSConfigIntervalRangeAccess().getColonEqualsSignKeyword_15());
@@ -9180,7 +9180,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSConfigUpperLevelAccess().getGSSConfigUpperLevelKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_88); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_86); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSConfigUpperLevelAccess().getLeftCurlyBracketKeyword_1());
@@ -9192,7 +9192,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSConfigUpperLevelAccess().getLevelKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_89); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_87); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSConfigUpperLevelAccess().getColonEqualsSignKeyword_3());
@@ -9233,7 +9233,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_90); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_88); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigUpperLevelAccess().getSemicolonKeyword_5());
@@ -9301,7 +9301,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_91); if (state.failed) return current;
+                    otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_89); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_9, grammarAccess.getGSSConfigUpperLevelAccess().getSemicolonKeyword_6_3());
@@ -9375,7 +9375,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_67); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_65); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_13, grammarAccess.getGSSConfigUpperLevelAccess().getSemicolonKeyword_7_3());
@@ -9573,7 +9573,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSConfigStructuredDataAccess().getGSSConfigStructuredDataKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_72); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_70); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSConfigStructuredDataAccess().getLeftCurlyBracketKeyword_1());
@@ -9626,7 +9626,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_92); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_90); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigStructuredDataAccess().getSemicolonKeyword_5());
@@ -9930,7 +9930,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_70); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_68); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigPeriodicTCLevel2Access().getSemicolonKeyword_9());
@@ -9983,7 +9983,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_93); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_91); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigPeriodicTCLevel2Access().getSemicolonKeyword_13());
@@ -10036,7 +10036,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_94); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_92); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSConfigPeriodicTCLevel2Access().getSemicolonKeyword_17());
@@ -10048,7 +10048,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_18, grammarAccess.getGSSConfigPeriodicTCLevel2Access().getPeriod_unitKeyword_18());
               		
             }
-            otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_81); if (state.failed) return current;
+            otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_79); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_19, grammarAccess.getGSSConfigPeriodicTCLevel2Access().getColonEqualsSignKeyword_19());
@@ -10089,7 +10089,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_95); if (state.failed) return current;
+            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_93); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_21, grammarAccess.getGSSConfigPeriodicTCLevel2Access().getSemicolonKeyword_21());
@@ -10157,7 +10157,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_25=(Token)match(input,14,FollowSets000.FOLLOW_96); if (state.failed) return current;
+                    otherlv_25=(Token)match(input,14,FollowSets000.FOLLOW_94); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_25, grammarAccess.getGSSConfigPeriodicTCLevel2Access().getSemicolonKeyword_22_3());
@@ -10220,7 +10220,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_29=(Token)match(input,14,FollowSets000.FOLLOW_97); if (state.failed) return current;
+            otherlv_29=(Token)match(input,14,FollowSets000.FOLLOW_95); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_29, grammarAccess.getGSSConfigPeriodicTCLevel2Access().getSemicolonKeyword_26());
@@ -10288,7 +10288,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_33=(Token)match(input,14,FollowSets000.FOLLOW_98); if (state.failed) return current;
+                    otherlv_33=(Token)match(input,14,FollowSets000.FOLLOW_96); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_33, grammarAccess.getGSSConfigPeriodicTCLevel2Access().getSemicolonKeyword_27_3());
@@ -10362,7 +10362,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_37=(Token)match(input,14,FollowSets000.FOLLOW_99); if (state.failed) return current;
+                    otherlv_37=(Token)match(input,14,FollowSets000.FOLLOW_97); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_37, grammarAccess.getGSSConfigPeriodicTCLevel2Access().getSemicolonKeyword_28_3());
@@ -10436,7 +10436,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_41=(Token)match(input,14,FollowSets000.FOLLOW_100); if (state.failed) return current;
+                    otherlv_41=(Token)match(input,14,FollowSets000.FOLLOW_98); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_41, grammarAccess.getGSSConfigPeriodicTCLevel2Access().getSemicolonKeyword_29_3());
@@ -10761,7 +10761,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_70); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_68); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigPeriodicTCLevel1Access().getSemicolonKeyword_9());
@@ -10814,7 +10814,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_93); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_91); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigPeriodicTCLevel1Access().getSemicolonKeyword_13());
@@ -10867,7 +10867,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_94); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_92); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSConfigPeriodicTCLevel1Access().getSemicolonKeyword_17());
@@ -10879,7 +10879,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_18, grammarAccess.getGSSConfigPeriodicTCLevel1Access().getPeriod_unitKeyword_18());
               		
             }
-            otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_81); if (state.failed) return current;
+            otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_79); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_19, grammarAccess.getGSSConfigPeriodicTCLevel1Access().getColonEqualsSignKeyword_19());
@@ -10920,7 +10920,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_101); if (state.failed) return current;
+            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_99); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_21, grammarAccess.getGSSConfigPeriodicTCLevel1Access().getSemicolonKeyword_21());
@@ -10988,7 +10988,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_25=(Token)match(input,14,FollowSets000.FOLLOW_102); if (state.failed) return current;
+                    otherlv_25=(Token)match(input,14,FollowSets000.FOLLOW_100); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_25, grammarAccess.getGSSConfigPeriodicTCLevel1Access().getSemicolonKeyword_22_3());
@@ -11051,7 +11051,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_29=(Token)match(input,14,FollowSets000.FOLLOW_99); if (state.failed) return current;
+            otherlv_29=(Token)match(input,14,FollowSets000.FOLLOW_97); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_29, grammarAccess.getGSSConfigPeriodicTCLevel1Access().getSemicolonKeyword_26());
@@ -11119,7 +11119,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_33=(Token)match(input,14,FollowSets000.FOLLOW_100); if (state.failed) return current;
+                    otherlv_33=(Token)match(input,14,FollowSets000.FOLLOW_98); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_33, grammarAccess.getGSSConfigPeriodicTCLevel1Access().getSemicolonKeyword_27_3());
@@ -11438,7 +11438,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_70); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_68); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigPeriodicTCLevel0Access().getSemicolonKeyword_9());
@@ -11491,7 +11491,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_93); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_91); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigPeriodicTCLevel0Access().getSemicolonKeyword_13());
@@ -11544,7 +11544,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_94); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_92); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSConfigPeriodicTCLevel0Access().getSemicolonKeyword_17());
@@ -11556,7 +11556,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_18, grammarAccess.getGSSConfigPeriodicTCLevel0Access().getPeriod_unitKeyword_18());
               		
             }
-            otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_81); if (state.failed) return current;
+            otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_79); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_19, grammarAccess.getGSSConfigPeriodicTCLevel0Access().getColonEqualsSignKeyword_19());
@@ -11597,7 +11597,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_103); if (state.failed) return current;
+            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_101); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_21, grammarAccess.getGSSConfigPeriodicTCLevel0Access().getSemicolonKeyword_21());
@@ -11665,7 +11665,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_25=(Token)match(input,14,FollowSets000.FOLLOW_104); if (state.failed) return current;
+                    otherlv_25=(Token)match(input,14,FollowSets000.FOLLOW_102); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_25, grammarAccess.getGSSConfigPeriodicTCLevel0Access().getSemicolonKeyword_22_3());
@@ -11962,7 +11962,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_105); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_103); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigGlobalVarAccess().getSemicolonKeyword_9());
@@ -11974,7 +11974,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSConfigGlobalVarAccess().getTypeKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_106); if (state.failed) return current;
+            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_104); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSConfigGlobalVarAccess().getColonEqualsSignKeyword_11());
@@ -12015,7 +12015,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_107); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_105); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigGlobalVarAccess().getSemicolonKeyword_13());
@@ -12068,7 +12068,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_108); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_106); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSConfigGlobalVarAccess().getSemicolonKeyword_17());
@@ -12359,7 +12359,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSConfigReferenceFieldAccess().getGSSConfigReferenceFieldKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_105); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_103); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSConfigReferenceFieldAccess().getLeftCurlyBracketKeyword_1());
@@ -12371,7 +12371,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSConfigReferenceFieldAccess().getTypeKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_109); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_107); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSConfigReferenceFieldAccess().getColonEqualsSignKeyword_3());
@@ -12412,7 +12412,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_70); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_68); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigReferenceFieldAccess().getSemicolonKeyword_5());
@@ -12465,7 +12465,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_88); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_86); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigReferenceFieldAccess().getSemicolonKeyword_9());
@@ -12518,7 +12518,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_110); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_108); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigReferenceFieldAccess().getSemicolonKeyword_13());
@@ -12571,7 +12571,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_111); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_109); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSConfigReferenceFieldAccess().getSemicolonKeyword_17());
@@ -12624,7 +12624,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_112); if (state.failed) return current;
+            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_110); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_21, grammarAccess.getGSSConfigReferenceFieldAccess().getSemicolonKeyword_21());
@@ -12760,7 +12760,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigReferencePeriodicTC"
-    // InternalCONFIG.g:5568:1: ruleGSSConfigReferencePeriodicTC returns [EObject current=null] : (otherlv_0= 'GSSConfigReferencePeriodicTC' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' ) ;
+    // InternalCONFIG.g:5568:1: ruleGSSConfigReferencePeriodicTC returns [EObject current=null] : (otherlv_0= 'GSSConfigReferencePeriodicTC' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' ) ;
     public final EObject ruleGSSConfigReferencePeriodicTC() throws RecognitionException {
         EObject current = null;
 
@@ -12768,6 +12768,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         Token otherlv_1=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
+        Token otherlv_4=null;
         Token otherlv_5=null;
         Token otherlv_6=null;
         Token otherlv_7=null;
@@ -12783,8 +12784,6 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         Token otherlv_21=null;
         Token otherlv_22=null;
         Token otherlv_23=null;
-        AntlrDatatypeRuleToken lv_idRef_4_0 = null;
-
         AntlrDatatypeRuleToken lv_level_8_0 = null;
 
         AntlrDatatypeRuleToken lv_fieldRef_12_0 = null;
@@ -12798,11 +12797,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:5574:2: ( (otherlv_0= 'GSSConfigReferencePeriodicTC' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' ) )
-            // InternalCONFIG.g:5575:2: (otherlv_0= 'GSSConfigReferencePeriodicTC' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' )
+            // InternalCONFIG.g:5574:2: ( (otherlv_0= 'GSSConfigReferencePeriodicTC' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' ) )
+            // InternalCONFIG.g:5575:2: (otherlv_0= 'GSSConfigReferencePeriodicTC' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' )
             {
-            // InternalCONFIG.g:5575:2: (otherlv_0= 'GSSConfigReferencePeriodicTC' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' )
-            // InternalCONFIG.g:5576:3: otherlv_0= 'GSSConfigReferencePeriodicTC' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';'
+            // InternalCONFIG.g:5575:2: (otherlv_0= 'GSSConfigReferencePeriodicTC' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' )
+            // InternalCONFIG.g:5576:3: otherlv_0= 'GSSConfigReferencePeriodicTC' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';'
             {
             otherlv_0=(Token)match(input,107,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -12810,7 +12809,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSConfigReferencePeriodicTCAccess().getGSSConfigReferencePeriodicTCKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_113); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_111); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSConfigReferencePeriodicTCAccess().getLeftCurlyBracketKeyword_1());
@@ -12822,39 +12821,34 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSConfigReferencePeriodicTCAccess().getIdRefKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_47); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSConfigReferencePeriodicTCAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalCONFIG.g:5592:3: ( (lv_idRef_4_0= ruleINTEGER ) )
-            // InternalCONFIG.g:5593:4: (lv_idRef_4_0= ruleINTEGER )
+            // InternalCONFIG.g:5592:3: ( (otherlv_4= RULE_STRING ) )
+            // InternalCONFIG.g:5593:4: (otherlv_4= RULE_STRING )
             {
-            // InternalCONFIG.g:5593:4: (lv_idRef_4_0= ruleINTEGER )
-            // InternalCONFIG.g:5594:5: lv_idRef_4_0= ruleINTEGER
+            // InternalCONFIG.g:5593:4: (otherlv_4= RULE_STRING )
+            // InternalCONFIG.g:5594:5: otherlv_4= RULE_STRING
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSConfigReferencePeriodicTCAccess().getIdRefINTEGERParserRuleCall_4_0());
+              					/* */
               				
             }
-            pushFollow(FollowSets000.FOLLOW_6);
-            lv_idRef_4_0=ruleINTEGER();
-
-            state._fsp--;
-            if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getGSSConfigReferencePeriodicTCRule());
+              						current = createModelElement(grammarAccess.getGSSConfigReferencePeriodicTCRule());
               					}
-              					set(
-              						current,
-              						"idRef",
-              						lv_idRef_4_0,
-              						"es.uah.aut.srg.gss.lang.config.CONFIG.INTEGER");
-              					afterParserOrEnumRuleCall();
+              				
+            }
+            otherlv_4=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					newLeafNode(otherlv_4, grammarAccess.getGSSConfigReferencePeriodicTCAccess().getIdRefGSSConfigPeriodicTCCrossReference_4_0());
               				
             }
 
@@ -12863,7 +12857,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_88); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_86); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigReferencePeriodicTCAccess().getSemicolonKeyword_5());
@@ -12881,11 +12875,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSConfigReferencePeriodicTCAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalCONFIG.g:5623:3: ( (lv_level_8_0= ruleINTEGER ) )
-            // InternalCONFIG.g:5624:4: (lv_level_8_0= ruleINTEGER )
+            // InternalCONFIG.g:5620:3: ( (lv_level_8_0= ruleINTEGER ) )
+            // InternalCONFIG.g:5621:4: (lv_level_8_0= ruleINTEGER )
             {
-            // InternalCONFIG.g:5624:4: (lv_level_8_0= ruleINTEGER )
-            // InternalCONFIG.g:5625:5: lv_level_8_0= ruleINTEGER
+            // InternalCONFIG.g:5621:4: (lv_level_8_0= ruleINTEGER )
+            // InternalCONFIG.g:5622:5: lv_level_8_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -12916,7 +12910,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_110); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_108); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigReferencePeriodicTCAccess().getSemicolonKeyword_9());
@@ -12934,11 +12928,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_11, grammarAccess.getGSSConfigReferencePeriodicTCAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalCONFIG.g:5654:3: ( (lv_fieldRef_12_0= ruleINTEGER ) )
-            // InternalCONFIG.g:5655:4: (lv_fieldRef_12_0= ruleINTEGER )
+            // InternalCONFIG.g:5651:3: ( (lv_fieldRef_12_0= ruleINTEGER ) )
+            // InternalCONFIG.g:5652:4: (lv_fieldRef_12_0= ruleINTEGER )
             {
-            // InternalCONFIG.g:5655:4: (lv_fieldRef_12_0= ruleINTEGER )
-            // InternalCONFIG.g:5656:5: lv_fieldRef_12_0= ruleINTEGER
+            // InternalCONFIG.g:5652:4: (lv_fieldRef_12_0= ruleINTEGER )
+            // InternalCONFIG.g:5653:5: lv_fieldRef_12_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -12969,7 +12963,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_111); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_109); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigReferencePeriodicTCAccess().getSemicolonKeyword_13());
@@ -12987,11 +12981,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_15, grammarAccess.getGSSConfigReferencePeriodicTCAccess().getColonEqualsSignKeyword_15());
               		
             }
-            // InternalCONFIG.g:5685:3: ( (lv_offset_16_0= ruleINTEGER ) )
-            // InternalCONFIG.g:5686:4: (lv_offset_16_0= ruleINTEGER )
+            // InternalCONFIG.g:5682:3: ( (lv_offset_16_0= ruleINTEGER ) )
+            // InternalCONFIG.g:5683:4: (lv_offset_16_0= ruleINTEGER )
             {
-            // InternalCONFIG.g:5686:4: (lv_offset_16_0= ruleINTEGER )
-            // InternalCONFIG.g:5687:5: lv_offset_16_0= ruleINTEGER
+            // InternalCONFIG.g:5683:4: (lv_offset_16_0= ruleINTEGER )
+            // InternalCONFIG.g:5684:5: lv_offset_16_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -13022,7 +13016,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_112); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_110); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSConfigReferencePeriodicTCAccess().getSemicolonKeyword_17());
@@ -13040,11 +13034,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_19, grammarAccess.getGSSConfigReferencePeriodicTCAccess().getColonEqualsSignKeyword_19());
               		
             }
-            // InternalCONFIG.g:5716:3: ( (lv_size_20_0= ruleINTEGER ) )
-            // InternalCONFIG.g:5717:4: (lv_size_20_0= ruleINTEGER )
+            // InternalCONFIG.g:5713:3: ( (lv_size_20_0= ruleINTEGER ) )
+            // InternalCONFIG.g:5714:4: (lv_size_20_0= ruleINTEGER )
             {
-            // InternalCONFIG.g:5717:4: (lv_size_20_0= ruleINTEGER )
-            // InternalCONFIG.g:5718:5: lv_size_20_0= ruleINTEGER
+            // InternalCONFIG.g:5714:4: (lv_size_20_0= ruleINTEGER )
+            // InternalCONFIG.g:5715:5: lv_size_20_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -13118,7 +13112,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSConfigReferenceSpecialPacket"
-    // InternalCONFIG.g:5751:1: entryRuleGSSConfigReferenceSpecialPacket returns [EObject current=null] : iv_ruleGSSConfigReferenceSpecialPacket= ruleGSSConfigReferenceSpecialPacket EOF ;
+    // InternalCONFIG.g:5748:1: entryRuleGSSConfigReferenceSpecialPacket returns [EObject current=null] : iv_ruleGSSConfigReferenceSpecialPacket= ruleGSSConfigReferenceSpecialPacket EOF ;
     public final EObject entryRuleGSSConfigReferenceSpecialPacket() throws RecognitionException {
         EObject current = null;
 
@@ -13126,8 +13120,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:5751:72: (iv_ruleGSSConfigReferenceSpecialPacket= ruleGSSConfigReferenceSpecialPacket EOF )
-            // InternalCONFIG.g:5752:2: iv_ruleGSSConfigReferenceSpecialPacket= ruleGSSConfigReferenceSpecialPacket EOF
+            // InternalCONFIG.g:5748:72: (iv_ruleGSSConfigReferenceSpecialPacket= ruleGSSConfigReferenceSpecialPacket EOF )
+            // InternalCONFIG.g:5749:2: iv_ruleGSSConfigReferenceSpecialPacket= ruleGSSConfigReferenceSpecialPacket EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSConfigReferenceSpecialPacketRule()); 
@@ -13158,7 +13152,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigReferenceSpecialPacket"
-    // InternalCONFIG.g:5758:1: ruleGSSConfigReferenceSpecialPacket returns [EObject current=null] : (otherlv_0= 'GSSConfigReferenceSpecialPacket' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' ) ;
+    // InternalCONFIG.g:5755:1: ruleGSSConfigReferenceSpecialPacket returns [EObject current=null] : (otherlv_0= 'GSSConfigReferenceSpecialPacket' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' ) ;
     public final EObject ruleGSSConfigReferenceSpecialPacket() throws RecognitionException {
         EObject current = null;
 
@@ -13166,6 +13160,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         Token otherlv_1=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
+        Token otherlv_4=null;
         Token otherlv_5=null;
         Token otherlv_6=null;
         Token otherlv_7=null;
@@ -13181,8 +13176,6 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         Token otherlv_21=null;
         Token otherlv_22=null;
         Token otherlv_23=null;
-        AntlrDatatypeRuleToken lv_idRef_4_0 = null;
-
         AntlrDatatypeRuleToken lv_level_8_0 = null;
 
         AntlrDatatypeRuleToken lv_fieldRef_12_0 = null;
@@ -13196,11 +13189,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:5764:2: ( (otherlv_0= 'GSSConfigReferenceSpecialPacket' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' ) )
-            // InternalCONFIG.g:5765:2: (otherlv_0= 'GSSConfigReferenceSpecialPacket' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' )
+            // InternalCONFIG.g:5761:2: ( (otherlv_0= 'GSSConfigReferenceSpecialPacket' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' ) )
+            // InternalCONFIG.g:5762:2: (otherlv_0= 'GSSConfigReferenceSpecialPacket' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' )
             {
-            // InternalCONFIG.g:5765:2: (otherlv_0= 'GSSConfigReferenceSpecialPacket' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' )
-            // InternalCONFIG.g:5766:3: otherlv_0= 'GSSConfigReferenceSpecialPacket' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';'
+            // InternalCONFIG.g:5762:2: (otherlv_0= 'GSSConfigReferenceSpecialPacket' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';' )
+            // InternalCONFIG.g:5763:3: otherlv_0= 'GSSConfigReferenceSpecialPacket' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'level' otherlv_7= ':=' ( (lv_level_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'fieldRef' otherlv_11= ':=' ( (lv_fieldRef_12_0= ruleINTEGER ) ) otherlv_13= ';' otherlv_14= 'offset' otherlv_15= ':=' ( (lv_offset_16_0= ruleINTEGER ) ) otherlv_17= ';' otherlv_18= 'size' otherlv_19= ':=' ( (lv_size_20_0= ruleINTEGER ) ) otherlv_21= ';' otherlv_22= '}' otherlv_23= ';'
             {
             otherlv_0=(Token)match(input,109,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -13208,7 +13201,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getGSSConfigReferenceSpecialPacketKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_113); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_111); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getLeftCurlyBracketKeyword_1());
@@ -13220,39 +13213,34 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getIdRefKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_47); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalCONFIG.g:5782:3: ( (lv_idRef_4_0= ruleINTEGER ) )
-            // InternalCONFIG.g:5783:4: (lv_idRef_4_0= ruleINTEGER )
+            // InternalCONFIG.g:5779:3: ( (otherlv_4= RULE_STRING ) )
+            // InternalCONFIG.g:5780:4: (otherlv_4= RULE_STRING )
             {
-            // InternalCONFIG.g:5783:4: (lv_idRef_4_0= ruleINTEGER )
-            // InternalCONFIG.g:5784:5: lv_idRef_4_0= ruleINTEGER
+            // InternalCONFIG.g:5780:4: (otherlv_4= RULE_STRING )
+            // InternalCONFIG.g:5781:5: otherlv_4= RULE_STRING
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getIdRefINTEGERParserRuleCall_4_0());
+              					/* */
               				
             }
-            pushFollow(FollowSets000.FOLLOW_6);
-            lv_idRef_4_0=ruleINTEGER();
-
-            state._fsp--;
-            if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getGSSConfigReferenceSpecialPacketRule());
+              						current = createModelElement(grammarAccess.getGSSConfigReferenceSpecialPacketRule());
               					}
-              					set(
-              						current,
-              						"idRef",
-              						lv_idRef_4_0,
-              						"es.uah.aut.srg.gss.lang.config.CONFIG.INTEGER");
-              					afterParserOrEnumRuleCall();
+              				
+            }
+            otherlv_4=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					newLeafNode(otherlv_4, grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getIdRefGSSConfigSpecialPacketCrossReference_4_0());
               				
             }
 
@@ -13261,7 +13249,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_88); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_86); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getSemicolonKeyword_5());
@@ -13279,11 +13267,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalCONFIG.g:5813:3: ( (lv_level_8_0= ruleINTEGER ) )
-            // InternalCONFIG.g:5814:4: (lv_level_8_0= ruleINTEGER )
+            // InternalCONFIG.g:5807:3: ( (lv_level_8_0= ruleINTEGER ) )
+            // InternalCONFIG.g:5808:4: (lv_level_8_0= ruleINTEGER )
             {
-            // InternalCONFIG.g:5814:4: (lv_level_8_0= ruleINTEGER )
-            // InternalCONFIG.g:5815:5: lv_level_8_0= ruleINTEGER
+            // InternalCONFIG.g:5808:4: (lv_level_8_0= ruleINTEGER )
+            // InternalCONFIG.g:5809:5: lv_level_8_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -13314,7 +13302,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_110); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_108); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getSemicolonKeyword_9());
@@ -13332,11 +13320,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_11, grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalCONFIG.g:5844:3: ( (lv_fieldRef_12_0= ruleINTEGER ) )
-            // InternalCONFIG.g:5845:4: (lv_fieldRef_12_0= ruleINTEGER )
+            // InternalCONFIG.g:5838:3: ( (lv_fieldRef_12_0= ruleINTEGER ) )
+            // InternalCONFIG.g:5839:4: (lv_fieldRef_12_0= ruleINTEGER )
             {
-            // InternalCONFIG.g:5845:4: (lv_fieldRef_12_0= ruleINTEGER )
-            // InternalCONFIG.g:5846:5: lv_fieldRef_12_0= ruleINTEGER
+            // InternalCONFIG.g:5839:4: (lv_fieldRef_12_0= ruleINTEGER )
+            // InternalCONFIG.g:5840:5: lv_fieldRef_12_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -13367,7 +13355,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_111); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_109); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getSemicolonKeyword_13());
@@ -13385,11 +13373,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_15, grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getColonEqualsSignKeyword_15());
               		
             }
-            // InternalCONFIG.g:5875:3: ( (lv_offset_16_0= ruleINTEGER ) )
-            // InternalCONFIG.g:5876:4: (lv_offset_16_0= ruleINTEGER )
+            // InternalCONFIG.g:5869:3: ( (lv_offset_16_0= ruleINTEGER ) )
+            // InternalCONFIG.g:5870:4: (lv_offset_16_0= ruleINTEGER )
             {
-            // InternalCONFIG.g:5876:4: (lv_offset_16_0= ruleINTEGER )
-            // InternalCONFIG.g:5877:5: lv_offset_16_0= ruleINTEGER
+            // InternalCONFIG.g:5870:4: (lv_offset_16_0= ruleINTEGER )
+            // InternalCONFIG.g:5871:5: lv_offset_16_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -13420,7 +13408,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_112); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_110); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getSemicolonKeyword_17());
@@ -13438,11 +13426,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_19, grammarAccess.getGSSConfigReferenceSpecialPacketAccess().getColonEqualsSignKeyword_19());
               		
             }
-            // InternalCONFIG.g:5906:3: ( (lv_size_20_0= ruleINTEGER ) )
-            // InternalCONFIG.g:5907:4: (lv_size_20_0= ruleINTEGER )
+            // InternalCONFIG.g:5900:3: ( (lv_size_20_0= ruleINTEGER ) )
+            // InternalCONFIG.g:5901:4: (lv_size_20_0= ruleINTEGER )
             {
-            // InternalCONFIG.g:5907:4: (lv_size_20_0= ruleINTEGER )
-            // InternalCONFIG.g:5908:5: lv_size_20_0= ruleINTEGER
+            // InternalCONFIG.g:5901:4: (lv_size_20_0= ruleINTEGER )
+            // InternalCONFIG.g:5902:5: lv_size_20_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -13516,7 +13504,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSConfigPlot"
-    // InternalCONFIG.g:5941:1: entryRuleGSSConfigPlot returns [EObject current=null] : iv_ruleGSSConfigPlot= ruleGSSConfigPlot EOF ;
+    // InternalCONFIG.g:5935:1: entryRuleGSSConfigPlot returns [EObject current=null] : iv_ruleGSSConfigPlot= ruleGSSConfigPlot EOF ;
     public final EObject entryRuleGSSConfigPlot() throws RecognitionException {
         EObject current = null;
 
@@ -13524,8 +13512,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:5941:54: (iv_ruleGSSConfigPlot= ruleGSSConfigPlot EOF )
-            // InternalCONFIG.g:5942:2: iv_ruleGSSConfigPlot= ruleGSSConfigPlot EOF
+            // InternalCONFIG.g:5935:54: (iv_ruleGSSConfigPlot= ruleGSSConfigPlot EOF )
+            // InternalCONFIG.g:5936:2: iv_ruleGSSConfigPlot= ruleGSSConfigPlot EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSConfigPlotRule()); 
@@ -13556,7 +13544,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigPlot"
-    // InternalCONFIG.g:5948:1: ruleGSSConfigPlot returns [EObject current=null] : (otherlv_0= 'GSSConfigPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' ) ;
+    // InternalCONFIG.g:5942:1: ruleGSSConfigPlot returns [EObject current=null] : (otherlv_0= 'GSSConfigPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' ) ;
     public final EObject ruleGSSConfigPlot() throws RecognitionException {
         EObject current = null;
 
@@ -13580,11 +13568,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:5954:2: ( (otherlv_0= 'GSSConfigPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' ) )
-            // InternalCONFIG.g:5955:2: (otherlv_0= 'GSSConfigPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' )
+            // InternalCONFIG.g:5948:2: ( (otherlv_0= 'GSSConfigPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' ) )
+            // InternalCONFIG.g:5949:2: (otherlv_0= 'GSSConfigPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' )
             {
-            // InternalCONFIG.g:5955:2: (otherlv_0= 'GSSConfigPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' )
-            // InternalCONFIG.g:5956:3: otherlv_0= 'GSSConfigPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';'
+            // InternalCONFIG.g:5949:2: (otherlv_0= 'GSSConfigPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' )
+            // InternalCONFIG.g:5950:3: otherlv_0= 'GSSConfigPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';'
             {
             otherlv_0=(Token)match(input,110,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -13610,11 +13598,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSConfigPlotAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalCONFIG.g:5972:3: ( (lv_name_4_0= RULE_STRING ) )
-            // InternalCONFIG.g:5973:4: (lv_name_4_0= RULE_STRING )
+            // InternalCONFIG.g:5966:3: ( (lv_name_4_0= RULE_STRING ) )
+            // InternalCONFIG.g:5967:4: (lv_name_4_0= RULE_STRING )
             {
-            // InternalCONFIG.g:5973:4: (lv_name_4_0= RULE_STRING )
-            // InternalCONFIG.g:5974:5: lv_name_4_0= RULE_STRING
+            // InternalCONFIG.g:5967:4: (lv_name_4_0= RULE_STRING )
+            // InternalCONFIG.g:5968:5: lv_name_4_0= RULE_STRING
             {
             lv_name_4_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -13640,7 +13628,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_114); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_112); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigPlotAccess().getSemicolonKeyword_5());
@@ -13658,11 +13646,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSConfigPlotAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalCONFIG.g:6002:3: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalCONFIG.g:6003:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalCONFIG.g:5996:3: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalCONFIG.g:5997:4: ( ruleVersionedQualifiedReferenceName )
             {
-            // InternalCONFIG.g:6003:4: ( ruleVersionedQualifiedReferenceName )
-            // InternalCONFIG.g:6004:5: ruleVersionedQualifiedReferenceName
+            // InternalCONFIG.g:5997:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalCONFIG.g:5998:5: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
 
@@ -13697,13 +13685,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_115); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_113); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigPlotAccess().getSemicolonKeyword_9());
               		
             }
-            // InternalCONFIG.g:6025:3: ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) )
+            // InternalCONFIG.g:6019:3: ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) )
             int alt41=2;
             int LA41_0 = input.LA(1);
 
@@ -13722,13 +13710,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt41) {
                 case 1 :
-                    // InternalCONFIG.g:6026:4: ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) )
+                    // InternalCONFIG.g:6020:4: ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) )
                     {
-                    // InternalCONFIG.g:6026:4: ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) )
-                    // InternalCONFIG.g:6027:5: (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered )
+                    // InternalCONFIG.g:6020:4: ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) )
+                    // InternalCONFIG.g:6021:5: (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered )
                     {
-                    // InternalCONFIG.g:6027:5: (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered )
-                    // InternalCONFIG.g:6028:6: lv_GVFiltered_10_0= ruleGSSConfigGVFiltered
+                    // InternalCONFIG.g:6021:5: (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered )
+                    // InternalCONFIG.g:6022:6: lv_GVFiltered_10_0= ruleGSSConfigGVFiltered
                     {
                     if ( state.backtracking==0 ) {
 
@@ -13763,13 +13751,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:6046:4: ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) )
+                    // InternalCONFIG.g:6040:4: ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) )
                     {
-                    // InternalCONFIG.g:6046:4: ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) )
-                    // InternalCONFIG.g:6047:5: (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic )
+                    // InternalCONFIG.g:6040:4: ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) )
+                    // InternalCONFIG.g:6041:5: (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic )
                     {
-                    // InternalCONFIG.g:6047:5: (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic )
-                    // InternalCONFIG.g:6048:6: lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic
+                    // InternalCONFIG.g:6041:5: (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic )
+                    // InternalCONFIG.g:6042:6: lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic
                     {
                     if ( state.backtracking==0 ) {
 
@@ -13843,7 +13831,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSConfigAlarmMsg"
-    // InternalCONFIG.g:6078:1: entryRuleGSSConfigAlarmMsg returns [EObject current=null] : iv_ruleGSSConfigAlarmMsg= ruleGSSConfigAlarmMsg EOF ;
+    // InternalCONFIG.g:6072:1: entryRuleGSSConfigAlarmMsg returns [EObject current=null] : iv_ruleGSSConfigAlarmMsg= ruleGSSConfigAlarmMsg EOF ;
     public final EObject entryRuleGSSConfigAlarmMsg() throws RecognitionException {
         EObject current = null;
 
@@ -13851,8 +13839,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:6078:58: (iv_ruleGSSConfigAlarmMsg= ruleGSSConfigAlarmMsg EOF )
-            // InternalCONFIG.g:6079:2: iv_ruleGSSConfigAlarmMsg= ruleGSSConfigAlarmMsg EOF
+            // InternalCONFIG.g:6072:58: (iv_ruleGSSConfigAlarmMsg= ruleGSSConfigAlarmMsg EOF )
+            // InternalCONFIG.g:6073:2: iv_ruleGSSConfigAlarmMsg= ruleGSSConfigAlarmMsg EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSConfigAlarmMsgRule()); 
@@ -13883,7 +13871,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigAlarmMsg"
-    // InternalCONFIG.g:6085:1: ruleGSSConfigAlarmMsg returns [EObject current=null] : (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' ) ;
+    // InternalCONFIG.g:6079:1: ruleGSSConfigAlarmMsg returns [EObject current=null] : (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' ) ;
     public final EObject ruleGSSConfigAlarmMsg() throws RecognitionException {
         EObject current = null;
 
@@ -13913,11 +13901,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:6091:2: ( (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' ) )
-            // InternalCONFIG.g:6092:2: (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' )
+            // InternalCONFIG.g:6085:2: ( (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' ) )
+            // InternalCONFIG.g:6086:2: (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' )
             {
-            // InternalCONFIG.g:6092:2: (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' )
-            // InternalCONFIG.g:6093:3: otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';'
+            // InternalCONFIG.g:6086:2: (otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' )
+            // InternalCONFIG.g:6087:3: otherlv_0= 'GSSConfigAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';'
             {
             otherlv_0=(Token)match(input,112,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -13943,11 +13931,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSConfigAlarmMsgAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalCONFIG.g:6109:3: ( (lv_name_4_0= RULE_STRING ) )
-            // InternalCONFIG.g:6110:4: (lv_name_4_0= RULE_STRING )
+            // InternalCONFIG.g:6103:3: ( (lv_name_4_0= RULE_STRING ) )
+            // InternalCONFIG.g:6104:4: (lv_name_4_0= RULE_STRING )
             {
-            // InternalCONFIG.g:6110:4: (lv_name_4_0= RULE_STRING )
-            // InternalCONFIG.g:6111:5: lv_name_4_0= RULE_STRING
+            // InternalCONFIG.g:6104:4: (lv_name_4_0= RULE_STRING )
+            // InternalCONFIG.g:6105:5: lv_name_4_0= RULE_STRING
             {
             lv_name_4_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -13973,7 +13961,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_105); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_103); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigAlarmMsgAccess().getSemicolonKeyword_5());
@@ -13985,17 +13973,17 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSConfigAlarmMsgAccess().getTypeKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_116); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_114); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSConfigAlarmMsgAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalCONFIG.g:6139:3: ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) )
-            // InternalCONFIG.g:6140:4: (lv_type_8_0= ruleGSSConfigAlarmMsgType )
+            // InternalCONFIG.g:6133:3: ( (lv_type_8_0= ruleGSSConfigAlarmMsgType ) )
+            // InternalCONFIG.g:6134:4: (lv_type_8_0= ruleGSSConfigAlarmMsgType )
             {
-            // InternalCONFIG.g:6140:4: (lv_type_8_0= ruleGSSConfigAlarmMsgType )
-            // InternalCONFIG.g:6141:5: lv_type_8_0= ruleGSSConfigAlarmMsgType
+            // InternalCONFIG.g:6134:4: (lv_type_8_0= ruleGSSConfigAlarmMsgType )
+            // InternalCONFIG.g:6135:5: lv_type_8_0= ruleGSSConfigAlarmMsgType
             {
             if ( state.backtracking==0 ) {
 
@@ -14026,7 +14014,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_117); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_115); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigAlarmMsgAccess().getSemicolonKeyword_9());
@@ -14044,11 +14032,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_11, grammarAccess.getGSSConfigAlarmMsgAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalCONFIG.g:6170:3: ( (lv_text_12_0= RULE_STRING ) )
-            // InternalCONFIG.g:6171:4: (lv_text_12_0= RULE_STRING )
+            // InternalCONFIG.g:6164:3: ( (lv_text_12_0= RULE_STRING ) )
+            // InternalCONFIG.g:6165:4: (lv_text_12_0= RULE_STRING )
             {
-            // InternalCONFIG.g:6171:4: (lv_text_12_0= RULE_STRING )
-            // InternalCONFIG.g:6172:5: lv_text_12_0= RULE_STRING
+            // InternalCONFIG.g:6165:4: (lv_text_12_0= RULE_STRING )
+            // InternalCONFIG.g:6166:5: lv_text_12_0= RULE_STRING
             {
             lv_text_12_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14074,13 +14062,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_115); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_113); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigAlarmMsgAccess().getSemicolonKeyword_13());
               		
             }
-            // InternalCONFIG.g:6192:3: ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) )
+            // InternalCONFIG.g:6186:3: ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) )
             int alt42=2;
             int LA42_0 = input.LA(1);
 
@@ -14099,13 +14087,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt42) {
                 case 1 :
-                    // InternalCONFIG.g:6193:4: ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) )
+                    // InternalCONFIG.g:6187:4: ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) )
                     {
-                    // InternalCONFIG.g:6193:4: ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) )
-                    // InternalCONFIG.g:6194:5: (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered )
+                    // InternalCONFIG.g:6187:4: ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) )
+                    // InternalCONFIG.g:6188:5: (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered )
                     {
-                    // InternalCONFIG.g:6194:5: (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered )
-                    // InternalCONFIG.g:6195:6: lv_GVFiltered_14_0= ruleGSSConfigGVFiltered
+                    // InternalCONFIG.g:6188:5: (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered )
+                    // InternalCONFIG.g:6189:6: lv_GVFiltered_14_0= ruleGSSConfigGVFiltered
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14140,13 +14128,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:6213:4: ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) )
+                    // InternalCONFIG.g:6207:4: ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) )
                     {
-                    // InternalCONFIG.g:6213:4: ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) )
-                    // InternalCONFIG.g:6214:5: (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic )
+                    // InternalCONFIG.g:6207:4: ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) )
+                    // InternalCONFIG.g:6208:5: (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic )
                     {
-                    // InternalCONFIG.g:6214:5: (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic )
-                    // InternalCONFIG.g:6215:6: lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic
+                    // InternalCONFIG.g:6208:5: (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic )
+                    // InternalCONFIG.g:6209:6: lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14220,7 +14208,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSConfigModify"
-    // InternalCONFIG.g:6245:1: entryRuleGSSConfigModify returns [EObject current=null] : iv_ruleGSSConfigModify= ruleGSSConfigModify EOF ;
+    // InternalCONFIG.g:6239:1: entryRuleGSSConfigModify returns [EObject current=null] : iv_ruleGSSConfigModify= ruleGSSConfigModify EOF ;
     public final EObject entryRuleGSSConfigModify() throws RecognitionException {
         EObject current = null;
 
@@ -14228,8 +14216,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:6245:56: (iv_ruleGSSConfigModify= ruleGSSConfigModify EOF )
-            // InternalCONFIG.g:6246:2: iv_ruleGSSConfigModify= ruleGSSConfigModify EOF
+            // InternalCONFIG.g:6239:56: (iv_ruleGSSConfigModify= ruleGSSConfigModify EOF )
+            // InternalCONFIG.g:6240:2: iv_ruleGSSConfigModify= ruleGSSConfigModify EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSConfigModifyRule()); 
@@ -14260,7 +14248,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigModify"
-    // InternalCONFIG.g:6252:1: ruleGSSConfigModify returns [EObject current=null] : (otherlv_0= 'GSSConfigModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' ) ;
+    // InternalCONFIG.g:6246:1: ruleGSSConfigModify returns [EObject current=null] : (otherlv_0= 'GSSConfigModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' ) ;
     public final EObject ruleGSSConfigModify() throws RecognitionException {
         EObject current = null;
 
@@ -14291,11 +14279,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:6258:2: ( (otherlv_0= 'GSSConfigModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' ) )
-            // InternalCONFIG.g:6259:2: (otherlv_0= 'GSSConfigModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' )
+            // InternalCONFIG.g:6252:2: ( (otherlv_0= 'GSSConfigModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' ) )
+            // InternalCONFIG.g:6253:2: (otherlv_0= 'GSSConfigModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' )
             {
-            // InternalCONFIG.g:6259:2: (otherlv_0= 'GSSConfigModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' )
-            // InternalCONFIG.g:6260:3: otherlv_0= 'GSSConfigModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';'
+            // InternalCONFIG.g:6253:2: (otherlv_0= 'GSSConfigModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';' )
+            // InternalCONFIG.g:6254:3: otherlv_0= 'GSSConfigModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_16= '}' otherlv_17= ';'
             {
             otherlv_0=(Token)match(input,114,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14321,11 +14309,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSConfigModifyAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalCONFIG.g:6276:3: ( (lv_name_4_0= RULE_STRING ) )
-            // InternalCONFIG.g:6277:4: (lv_name_4_0= RULE_STRING )
+            // InternalCONFIG.g:6270:3: ( (lv_name_4_0= RULE_STRING ) )
+            // InternalCONFIG.g:6271:4: (lv_name_4_0= RULE_STRING )
             {
-            // InternalCONFIG.g:6277:4: (lv_name_4_0= RULE_STRING )
-            // InternalCONFIG.g:6278:5: lv_name_4_0= RULE_STRING
+            // InternalCONFIG.g:6271:4: (lv_name_4_0= RULE_STRING )
+            // InternalCONFIG.g:6272:5: lv_name_4_0= RULE_STRING
             {
             lv_name_4_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14351,7 +14339,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_105); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_103); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigModifyAccess().getSemicolonKeyword_5());
@@ -14363,17 +14351,17 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSConfigModifyAccess().getTypeKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_118); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_116); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSConfigModifyAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalCONFIG.g:6306:3: ( (lv_type_8_0= ruleGSSConfigModifyType ) )
-            // InternalCONFIG.g:6307:4: (lv_type_8_0= ruleGSSConfigModifyType )
+            // InternalCONFIG.g:6300:3: ( (lv_type_8_0= ruleGSSConfigModifyType ) )
+            // InternalCONFIG.g:6301:4: (lv_type_8_0= ruleGSSConfigModifyType )
             {
-            // InternalCONFIG.g:6307:4: (lv_type_8_0= ruleGSSConfigModifyType )
-            // InternalCONFIG.g:6308:5: lv_type_8_0= ruleGSSConfigModifyType
+            // InternalCONFIG.g:6301:4: (lv_type_8_0= ruleGSSConfigModifyType )
+            // InternalCONFIG.g:6302:5: lv_type_8_0= ruleGSSConfigModifyType
             {
             if ( state.backtracking==0 ) {
 
@@ -14404,7 +14392,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_119); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_117); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigModifyAccess().getSemicolonKeyword_9());
@@ -14422,11 +14410,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_11, grammarAccess.getGSSConfigModifyAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalCONFIG.g:6337:3: ( (lv_value_12_0= ruleINTEGER ) )
-            // InternalCONFIG.g:6338:4: (lv_value_12_0= ruleINTEGER )
+            // InternalCONFIG.g:6331:3: ( (lv_value_12_0= ruleINTEGER ) )
+            // InternalCONFIG.g:6332:4: (lv_value_12_0= ruleINTEGER )
             {
-            // InternalCONFIG.g:6338:4: (lv_value_12_0= ruleINTEGER )
-            // InternalCONFIG.g:6339:5: lv_value_12_0= ruleINTEGER
+            // InternalCONFIG.g:6332:4: (lv_value_12_0= ruleINTEGER )
+            // InternalCONFIG.g:6333:5: lv_value_12_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -14457,13 +14445,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_115); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_113); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSConfigModifyAccess().getSemicolonKeyword_13());
               		
             }
-            // InternalCONFIG.g:6360:3: ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) )
+            // InternalCONFIG.g:6354:3: ( ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) ) )
             int alt43=2;
             int LA43_0 = input.LA(1);
 
@@ -14482,13 +14470,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt43) {
                 case 1 :
-                    // InternalCONFIG.g:6361:4: ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) )
+                    // InternalCONFIG.g:6355:4: ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) )
                     {
-                    // InternalCONFIG.g:6361:4: ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) )
-                    // InternalCONFIG.g:6362:5: (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered )
+                    // InternalCONFIG.g:6355:4: ( (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered ) )
+                    // InternalCONFIG.g:6356:5: (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered )
                     {
-                    // InternalCONFIG.g:6362:5: (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered )
-                    // InternalCONFIG.g:6363:6: lv_GVFiltered_14_0= ruleGSSConfigGVFiltered
+                    // InternalCONFIG.g:6356:5: (lv_GVFiltered_14_0= ruleGSSConfigGVFiltered )
+                    // InternalCONFIG.g:6357:6: lv_GVFiltered_14_0= ruleGSSConfigGVFiltered
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14523,13 +14511,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:6381:4: ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) )
+                    // InternalCONFIG.g:6375:4: ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) )
                     {
-                    // InternalCONFIG.g:6381:4: ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) )
-                    // InternalCONFIG.g:6382:5: (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic )
+                    // InternalCONFIG.g:6375:4: ( (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic ) )
+                    // InternalCONFIG.g:6376:5: (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic )
                     {
-                    // InternalCONFIG.g:6382:5: (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic )
-                    // InternalCONFIG.g:6383:6: lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic
+                    // InternalCONFIG.g:6376:5: (lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic )
+                    // InternalCONFIG.g:6377:6: lv_GVPeriodic_15_0= ruleGSSConfigGVPeriodic
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14603,7 +14591,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSConfigAlarmVal"
-    // InternalCONFIG.g:6413:1: entryRuleGSSConfigAlarmVal returns [EObject current=null] : iv_ruleGSSConfigAlarmVal= ruleGSSConfigAlarmVal EOF ;
+    // InternalCONFIG.g:6407:1: entryRuleGSSConfigAlarmVal returns [EObject current=null] : iv_ruleGSSConfigAlarmVal= ruleGSSConfigAlarmVal EOF ;
     public final EObject entryRuleGSSConfigAlarmVal() throws RecognitionException {
         EObject current = null;
 
@@ -14611,8 +14599,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:6413:58: (iv_ruleGSSConfigAlarmVal= ruleGSSConfigAlarmVal EOF )
-            // InternalCONFIG.g:6414:2: iv_ruleGSSConfigAlarmVal= ruleGSSConfigAlarmVal EOF
+            // InternalCONFIG.g:6407:58: (iv_ruleGSSConfigAlarmVal= ruleGSSConfigAlarmVal EOF )
+            // InternalCONFIG.g:6408:2: iv_ruleGSSConfigAlarmVal= ruleGSSConfigAlarmVal EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSConfigAlarmValRule()); 
@@ -14643,7 +14631,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigAlarmVal"
-    // InternalCONFIG.g:6420:1: ruleGSSConfigAlarmVal returns [EObject current=null] : (otherlv_0= 'GSSConfigAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmValType ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' ) ;
+    // InternalCONFIG.g:6414:1: ruleGSSConfigAlarmVal returns [EObject current=null] : (otherlv_0= 'GSSConfigAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmValType ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' ) ;
     public final EObject ruleGSSConfigAlarmVal() throws RecognitionException {
         EObject current = null;
 
@@ -14669,11 +14657,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:6426:2: ( (otherlv_0= 'GSSConfigAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmValType ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' ) )
-            // InternalCONFIG.g:6427:2: (otherlv_0= 'GSSConfigAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmValType ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' )
+            // InternalCONFIG.g:6420:2: ( (otherlv_0= 'GSSConfigAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmValType ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' ) )
+            // InternalCONFIG.g:6421:2: (otherlv_0= 'GSSConfigAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmValType ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' )
             {
-            // InternalCONFIG.g:6427:2: (otherlv_0= 'GSSConfigAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmValType ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' )
-            // InternalCONFIG.g:6428:3: otherlv_0= 'GSSConfigAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmValType ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';'
+            // InternalCONFIG.g:6421:2: (otherlv_0= 'GSSConfigAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmValType ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';' )
+            // InternalCONFIG.g:6422:3: otherlv_0= 'GSSConfigAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSConfigAlarmValType ) ) otherlv_9= ';' ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) ) otherlv_12= '}' otherlv_13= ';'
             {
             otherlv_0=(Token)match(input,116,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14699,11 +14687,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSConfigAlarmValAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalCONFIG.g:6444:3: ( (lv_name_4_0= RULE_STRING ) )
-            // InternalCONFIG.g:6445:4: (lv_name_4_0= RULE_STRING )
+            // InternalCONFIG.g:6438:3: ( (lv_name_4_0= RULE_STRING ) )
+            // InternalCONFIG.g:6439:4: (lv_name_4_0= RULE_STRING )
             {
-            // InternalCONFIG.g:6445:4: (lv_name_4_0= RULE_STRING )
-            // InternalCONFIG.g:6446:5: lv_name_4_0= RULE_STRING
+            // InternalCONFIG.g:6439:4: (lv_name_4_0= RULE_STRING )
+            // InternalCONFIG.g:6440:5: lv_name_4_0= RULE_STRING
             {
             lv_name_4_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14729,7 +14717,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_105); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_103); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigAlarmValAccess().getSemicolonKeyword_5());
@@ -14741,17 +14729,17 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSConfigAlarmValAccess().getTypeKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_120); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_118); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSConfigAlarmValAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalCONFIG.g:6474:3: ( (lv_type_8_0= ruleGSSConfigAlarmValType ) )
-            // InternalCONFIG.g:6475:4: (lv_type_8_0= ruleGSSConfigAlarmValType )
+            // InternalCONFIG.g:6468:3: ( (lv_type_8_0= ruleGSSConfigAlarmValType ) )
+            // InternalCONFIG.g:6469:4: (lv_type_8_0= ruleGSSConfigAlarmValType )
             {
-            // InternalCONFIG.g:6475:4: (lv_type_8_0= ruleGSSConfigAlarmValType )
-            // InternalCONFIG.g:6476:5: lv_type_8_0= ruleGSSConfigAlarmValType
+            // InternalCONFIG.g:6469:4: (lv_type_8_0= ruleGSSConfigAlarmValType )
+            // InternalCONFIG.g:6470:5: lv_type_8_0= ruleGSSConfigAlarmValType
             {
             if ( state.backtracking==0 ) {
 
@@ -14782,13 +14770,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_115); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_113); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigAlarmValAccess().getSemicolonKeyword_9());
               		
             }
-            // InternalCONFIG.g:6497:3: ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) )
+            // InternalCONFIG.g:6491:3: ( ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) ) | ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) ) )
             int alt44=2;
             int LA44_0 = input.LA(1);
 
@@ -14807,13 +14795,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt44) {
                 case 1 :
-                    // InternalCONFIG.g:6498:4: ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) )
+                    // InternalCONFIG.g:6492:4: ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) )
                     {
-                    // InternalCONFIG.g:6498:4: ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) )
-                    // InternalCONFIG.g:6499:5: (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered )
+                    // InternalCONFIG.g:6492:4: ( (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered ) )
+                    // InternalCONFIG.g:6493:5: (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered )
                     {
-                    // InternalCONFIG.g:6499:5: (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered )
-                    // InternalCONFIG.g:6500:6: lv_GVFiltered_10_0= ruleGSSConfigGVFiltered
+                    // InternalCONFIG.g:6493:5: (lv_GVFiltered_10_0= ruleGSSConfigGVFiltered )
+                    // InternalCONFIG.g:6494:6: lv_GVFiltered_10_0= ruleGSSConfigGVFiltered
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14848,13 +14836,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:6518:4: ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) )
+                    // InternalCONFIG.g:6512:4: ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) )
                     {
-                    // InternalCONFIG.g:6518:4: ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) )
-                    // InternalCONFIG.g:6519:5: (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic )
+                    // InternalCONFIG.g:6512:4: ( (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic ) )
+                    // InternalCONFIG.g:6513:5: (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic )
                     {
-                    // InternalCONFIG.g:6519:5: (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic )
-                    // InternalCONFIG.g:6520:6: lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic
+                    // InternalCONFIG.g:6513:5: (lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic )
+                    // InternalCONFIG.g:6514:6: lv_GVPeriodic_11_0= ruleGSSConfigGVPeriodic
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14928,7 +14916,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSConfigGVFiltered"
-    // InternalCONFIG.g:6550:1: entryRuleGSSConfigGVFiltered returns [EObject current=null] : iv_ruleGSSConfigGVFiltered= ruleGSSConfigGVFiltered EOF ;
+    // InternalCONFIG.g:6544:1: entryRuleGSSConfigGVFiltered returns [EObject current=null] : iv_ruleGSSConfigGVFiltered= ruleGSSConfigGVFiltered EOF ;
     public final EObject entryRuleGSSConfigGVFiltered() throws RecognitionException {
         EObject current = null;
 
@@ -14936,8 +14924,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:6550:60: (iv_ruleGSSConfigGVFiltered= ruleGSSConfigGVFiltered EOF )
-            // InternalCONFIG.g:6551:2: iv_ruleGSSConfigGVFiltered= ruleGSSConfigGVFiltered EOF
+            // InternalCONFIG.g:6544:60: (iv_ruleGSSConfigGVFiltered= ruleGSSConfigGVFiltered EOF )
+            // InternalCONFIG.g:6545:2: iv_ruleGSSConfigGVFiltered= ruleGSSConfigGVFiltered EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSConfigGVFilteredRule()); 
@@ -14968,7 +14956,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigGVFiltered"
-    // InternalCONFIG.g:6557:1: ruleGSSConfigGVFiltered returns [EObject current=null] : (otherlv_0= 'GSSConfigGVFiltered' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_5= ';' (otherlv_6= 'filter' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalCONFIG.g:6551:1: ruleGSSConfigGVFiltered returns [EObject current=null] : (otherlv_0= 'GSSConfigGVFiltered' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' (otherlv_6= 'filter' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' ) ;
     public final EObject ruleGSSConfigGVFiltered() throws RecognitionException {
         EObject current = null;
 
@@ -14976,6 +14964,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         Token otherlv_1=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
+        Token otherlv_4=null;
         Token otherlv_5=null;
         Token otherlv_6=null;
         Token otherlv_7=null;
@@ -14987,11 +14976,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:6563:2: ( (otherlv_0= 'GSSConfigGVFiltered' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_5= ';' (otherlv_6= 'filter' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalCONFIG.g:6564:2: (otherlv_0= 'GSSConfigGVFiltered' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_5= ';' (otherlv_6= 'filter' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' )
+            // InternalCONFIG.g:6557:2: ( (otherlv_0= 'GSSConfigGVFiltered' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' (otherlv_6= 'filter' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' ) )
+            // InternalCONFIG.g:6558:2: (otherlv_0= 'GSSConfigGVFiltered' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' (otherlv_6= 'filter' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' )
             {
-            // InternalCONFIG.g:6564:2: (otherlv_0= 'GSSConfigGVFiltered' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_5= ';' (otherlv_6= 'filter' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' )
-            // InternalCONFIG.g:6565:3: otherlv_0= 'GSSConfigGVFiltered' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_5= ';' (otherlv_6= 'filter' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';'
+            // InternalCONFIG.g:6558:2: (otherlv_0= 'GSSConfigGVFiltered' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' (otherlv_6= 'filter' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' )
+            // InternalCONFIG.g:6559:3: otherlv_0= 'GSSConfigGVFiltered' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' (otherlv_6= 'filter' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';'
             {
             otherlv_0=(Token)match(input,117,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14999,7 +14988,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSConfigGVFilteredAccess().getGSSConfigGVFilteredKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_121); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_119); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSConfigGVFilteredAccess().getLeftCurlyBracketKeyword_1());
@@ -15011,17 +15000,17 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSConfigGVFilteredAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalCONFIG.g:6581:3: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalCONFIG.g:6582:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalCONFIG.g:6575:3: ( (otherlv_4= RULE_STRING ) )
+            // InternalCONFIG.g:6576:4: (otherlv_4= RULE_STRING )
             {
-            // InternalCONFIG.g:6582:4: ( ruleVersionedQualifiedReferenceName )
-            // InternalCONFIG.g:6583:5: ruleVersionedQualifiedReferenceName
+            // InternalCONFIG.g:6576:4: (otherlv_4= RULE_STRING )
+            // InternalCONFIG.g:6577:5: otherlv_4= RULE_STRING
             {
             if ( state.backtracking==0 ) {
 
@@ -15035,19 +15024,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               					}
               				
             }
+            otherlv_4=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0());
-              				
-            }
-            pushFollow(FollowSets000.FOLLOW_6);
-            ruleVersionedQualifiedReferenceName();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              					afterParserOrEnumRuleCall();
+              					newLeafNode(otherlv_4, grammarAccess.getGSSConfigGVFilteredAccess().getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0());
               				
             }
 
@@ -15056,13 +15036,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_122); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_120); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigGVFilteredAccess().getSemicolonKeyword_5());
               		
             }
-            // InternalCONFIG.g:6604:3: (otherlv_6= 'filter' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' )?
+            // InternalCONFIG.g:6595:3: (otherlv_6= 'filter' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' )?
             int alt45=2;
             int LA45_0 = input.LA(1);
 
@@ -15071,7 +15051,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt45) {
                 case 1 :
-                    // InternalCONFIG.g:6605:4: otherlv_6= 'filter' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';'
+                    // InternalCONFIG.g:6596:4: otherlv_6= 'filter' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';'
                     {
                     otherlv_6=(Token)match(input,119,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -15085,11 +15065,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_7, grammarAccess.getGSSConfigGVFilteredAccess().getColonEqualsSignKeyword_6_1());
                       			
                     }
-                    // InternalCONFIG.g:6613:4: ( ( ruleVersionedQualifiedName ) )
-                    // InternalCONFIG.g:6614:5: ( ruleVersionedQualifiedName )
+                    // InternalCONFIG.g:6604:4: ( ( ruleVersionedQualifiedName ) )
+                    // InternalCONFIG.g:6605:5: ( ruleVersionedQualifiedName )
                     {
-                    // InternalCONFIG.g:6614:5: ( ruleVersionedQualifiedName )
-                    // InternalCONFIG.g:6615:6: ruleVersionedQualifiedName
+                    // InternalCONFIG.g:6605:5: ( ruleVersionedQualifiedName )
+                    // InternalCONFIG.g:6606:6: ruleVersionedQualifiedName
                     {
                     if ( state.backtracking==0 ) {
 
@@ -15173,7 +15153,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSConfigGVPeriodic"
-    // InternalCONFIG.g:6649:1: entryRuleGSSConfigGVPeriodic returns [EObject current=null] : iv_ruleGSSConfigGVPeriodic= ruleGSSConfigGVPeriodic EOF ;
+    // InternalCONFIG.g:6640:1: entryRuleGSSConfigGVPeriodic returns [EObject current=null] : iv_ruleGSSConfigGVPeriodic= ruleGSSConfigGVPeriodic EOF ;
     public final EObject entryRuleGSSConfigGVPeriodic() throws RecognitionException {
         EObject current = null;
 
@@ -15181,8 +15161,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:6649:60: (iv_ruleGSSConfigGVPeriodic= ruleGSSConfigGVPeriodic EOF )
-            // InternalCONFIG.g:6650:2: iv_ruleGSSConfigGVPeriodic= ruleGSSConfigGVPeriodic EOF
+            // InternalCONFIG.g:6640:60: (iv_ruleGSSConfigGVPeriodic= ruleGSSConfigGVPeriodic EOF )
+            // InternalCONFIG.g:6641:2: iv_ruleGSSConfigGVPeriodic= ruleGSSConfigGVPeriodic EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSConfigGVPeriodicRule()); 
@@ -15213,7 +15193,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigGVPeriodic"
-    // InternalCONFIG.g:6656:1: ruleGSSConfigGVPeriodic returns [EObject current=null] : (otherlv_0= 'GSSConfigGVPeriodic' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_5= ';' otherlv_6= 'period_value' otherlv_7= ':=' ( (lv_period_value_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'period_unit' otherlv_11= ':=' ( (lv_period_unit_12_0= ruleGSSConfigUnit ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' ) ;
+    // InternalCONFIG.g:6647:1: ruleGSSConfigGVPeriodic returns [EObject current=null] : (otherlv_0= 'GSSConfigGVPeriodic' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'period_value' otherlv_7= ':=' ( (lv_period_value_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'period_unit' otherlv_11= ':=' ( (lv_period_unit_12_0= ruleGSSConfigUnit ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' ) ;
     public final EObject ruleGSSConfigGVPeriodic() throws RecognitionException {
         EObject current = null;
 
@@ -15221,6 +15201,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         Token otherlv_1=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
+        Token otherlv_4=null;
         Token otherlv_5=null;
         Token otherlv_6=null;
         Token otherlv_7=null;
@@ -15239,11 +15220,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:6662:2: ( (otherlv_0= 'GSSConfigGVPeriodic' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_5= ';' otherlv_6= 'period_value' otherlv_7= ':=' ( (lv_period_value_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'period_unit' otherlv_11= ':=' ( (lv_period_unit_12_0= ruleGSSConfigUnit ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' ) )
-            // InternalCONFIG.g:6663:2: (otherlv_0= 'GSSConfigGVPeriodic' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_5= ';' otherlv_6= 'period_value' otherlv_7= ':=' ( (lv_period_value_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'period_unit' otherlv_11= ':=' ( (lv_period_unit_12_0= ruleGSSConfigUnit ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' )
+            // InternalCONFIG.g:6653:2: ( (otherlv_0= 'GSSConfigGVPeriodic' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'period_value' otherlv_7= ':=' ( (lv_period_value_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'period_unit' otherlv_11= ':=' ( (lv_period_unit_12_0= ruleGSSConfigUnit ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' ) )
+            // InternalCONFIG.g:6654:2: (otherlv_0= 'GSSConfigGVPeriodic' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'period_value' otherlv_7= ':=' ( (lv_period_value_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'period_unit' otherlv_11= ':=' ( (lv_period_unit_12_0= ruleGSSConfigUnit ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' )
             {
-            // InternalCONFIG.g:6663:2: (otherlv_0= 'GSSConfigGVPeriodic' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_5= ';' otherlv_6= 'period_value' otherlv_7= ':=' ( (lv_period_value_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'period_unit' otherlv_11= ':=' ( (lv_period_unit_12_0= ruleGSSConfigUnit ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' )
-            // InternalCONFIG.g:6664:3: otherlv_0= 'GSSConfigGVPeriodic' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_5= ';' otherlv_6= 'period_value' otherlv_7= ':=' ( (lv_period_value_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'period_unit' otherlv_11= ':=' ( (lv_period_unit_12_0= ruleGSSConfigUnit ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';'
+            // InternalCONFIG.g:6654:2: (otherlv_0= 'GSSConfigGVPeriodic' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'period_value' otherlv_7= ':=' ( (lv_period_value_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'period_unit' otherlv_11= ':=' ( (lv_period_unit_12_0= ruleGSSConfigUnit ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';' )
+            // InternalCONFIG.g:6655:3: otherlv_0= 'GSSConfigGVPeriodic' otherlv_1= '{' otherlv_2= 'GlobalVarRef' otherlv_3= ':=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'period_value' otherlv_7= ':=' ( (lv_period_value_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'period_unit' otherlv_11= ':=' ( (lv_period_unit_12_0= ruleGSSConfigUnit ) ) otherlv_13= ';' otherlv_14= '}' otherlv_15= ';'
             {
             otherlv_0=(Token)match(input,120,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -15251,7 +15232,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSConfigGVPeriodicAccess().getGSSConfigGVPeriodicKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_121); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_119); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSConfigGVPeriodicAccess().getLeftCurlyBracketKeyword_1());
@@ -15263,17 +15244,17 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSConfigGVPeriodicAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalCONFIG.g:6680:3: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalCONFIG.g:6681:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalCONFIG.g:6671:3: ( (otherlv_4= RULE_STRING ) )
+            // InternalCONFIG.g:6672:4: (otherlv_4= RULE_STRING )
             {
-            // InternalCONFIG.g:6681:4: ( ruleVersionedQualifiedReferenceName )
-            // InternalCONFIG.g:6682:5: ruleVersionedQualifiedReferenceName
+            // InternalCONFIG.g:6672:4: (otherlv_4= RULE_STRING )
+            // InternalCONFIG.g:6673:5: otherlv_4= RULE_STRING
             {
             if ( state.backtracking==0 ) {
 
@@ -15287,19 +15268,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               					}
               				
             }
+            otherlv_4=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0());
-              				
-            }
-            pushFollow(FollowSets000.FOLLOW_6);
-            ruleVersionedQualifiedReferenceName();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              					afterParserOrEnumRuleCall();
+              					newLeafNode(otherlv_4, grammarAccess.getGSSConfigGVPeriodicAccess().getGlobalVarRefGSSConfigGlobalVarCrossReference_4_0());
               				
             }
 
@@ -15308,7 +15280,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_93); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_91); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigGVPeriodicAccess().getSemicolonKeyword_5());
@@ -15326,11 +15298,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSConfigGVPeriodicAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalCONFIG.g:6711:3: ( (lv_period_value_8_0= ruleINTEGER ) )
-            // InternalCONFIG.g:6712:4: (lv_period_value_8_0= ruleINTEGER )
+            // InternalCONFIG.g:6699:3: ( (lv_period_value_8_0= ruleINTEGER ) )
+            // InternalCONFIG.g:6700:4: (lv_period_value_8_0= ruleINTEGER )
             {
-            // InternalCONFIG.g:6712:4: (lv_period_value_8_0= ruleINTEGER )
-            // InternalCONFIG.g:6713:5: lv_period_value_8_0= ruleINTEGER
+            // InternalCONFIG.g:6700:4: (lv_period_value_8_0= ruleINTEGER )
+            // InternalCONFIG.g:6701:5: lv_period_value_8_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -15361,7 +15333,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_94); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_92); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigGVPeriodicAccess().getSemicolonKeyword_9());
@@ -15373,17 +15345,17 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSConfigGVPeriodicAccess().getPeriod_unitKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_81); if (state.failed) return current;
+            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_79); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSConfigGVPeriodicAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalCONFIG.g:6742:3: ( (lv_period_unit_12_0= ruleGSSConfigUnit ) )
-            // InternalCONFIG.g:6743:4: (lv_period_unit_12_0= ruleGSSConfigUnit )
+            // InternalCONFIG.g:6730:3: ( (lv_period_unit_12_0= ruleGSSConfigUnit ) )
+            // InternalCONFIG.g:6731:4: (lv_period_unit_12_0= ruleGSSConfigUnit )
             {
-            // InternalCONFIG.g:6743:4: (lv_period_unit_12_0= ruleGSSConfigUnit )
-            // InternalCONFIG.g:6744:5: lv_period_unit_12_0= ruleGSSConfigUnit
+            // InternalCONFIG.g:6731:4: (lv_period_unit_12_0= ruleGSSConfigUnit )
+            // InternalCONFIG.g:6732:5: lv_period_unit_12_0= ruleGSSConfigUnit
             {
             if ( state.backtracking==0 ) {
 
@@ -15457,7 +15429,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSConfigTestCase"
-    // InternalCONFIG.g:6777:1: entryRuleGSSConfigTestCase returns [EObject current=null] : iv_ruleGSSConfigTestCase= ruleGSSConfigTestCase EOF ;
+    // InternalCONFIG.g:6765:1: entryRuleGSSConfigTestCase returns [EObject current=null] : iv_ruleGSSConfigTestCase= ruleGSSConfigTestCase EOF ;
     public final EObject entryRuleGSSConfigTestCase() throws RecognitionException {
         EObject current = null;
 
@@ -15465,8 +15437,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:6777:58: (iv_ruleGSSConfigTestCase= ruleGSSConfigTestCase EOF )
-            // InternalCONFIG.g:6778:2: iv_ruleGSSConfigTestCase= ruleGSSConfigTestCase EOF
+            // InternalCONFIG.g:6765:58: (iv_ruleGSSConfigTestCase= ruleGSSConfigTestCase EOF )
+            // InternalCONFIG.g:6766:2: iv_ruleGSSConfigTestCase= ruleGSSConfigTestCase EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSConfigTestCaseRule()); 
@@ -15497,7 +15469,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigTestCase"
-    // InternalCONFIG.g:6784:1: ruleGSSConfigTestCase returns [EObject current=null] : (otherlv_0= 'GSSConfigTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' ) ;
+    // InternalCONFIG.g:6772:1: ruleGSSConfigTestCase returns [EObject current=null] : (otherlv_0= 'GSSConfigTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' ) ;
     public final EObject ruleGSSConfigTestCase() throws RecognitionException {
         EObject current = null;
 
@@ -15522,11 +15494,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:6790:2: ( (otherlv_0= 'GSSConfigTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' ) )
-            // InternalCONFIG.g:6791:2: (otherlv_0= 'GSSConfigTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' )
+            // InternalCONFIG.g:6778:2: ( (otherlv_0= 'GSSConfigTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' ) )
+            // InternalCONFIG.g:6779:2: (otherlv_0= 'GSSConfigTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' )
             {
-            // InternalCONFIG.g:6791:2: (otherlv_0= 'GSSConfigTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' )
-            // InternalCONFIG.g:6792:3: otherlv_0= 'GSSConfigTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) ) )? otherlv_14= '}' otherlv_15= ';'
+            // InternalCONFIG.g:6779:2: (otherlv_0= 'GSSConfigTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' )
+            // InternalCONFIG.g:6780:3: otherlv_0= 'GSSConfigTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) ) )? otherlv_14= '}' otherlv_15= ';'
             {
             otherlv_0=(Token)match(input,121,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -15552,11 +15524,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSConfigTestCaseAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalCONFIG.g:6808:3: ( (lv_name_4_0= RULE_STRING ) )
-            // InternalCONFIG.g:6809:4: (lv_name_4_0= RULE_STRING )
+            // InternalCONFIG.g:6796:3: ( (lv_name_4_0= RULE_STRING ) )
+            // InternalCONFIG.g:6797:4: (lv_name_4_0= RULE_STRING )
             {
-            // InternalCONFIG.g:6809:4: (lv_name_4_0= RULE_STRING )
-            // InternalCONFIG.g:6810:5: lv_name_4_0= RULE_STRING
+            // InternalCONFIG.g:6797:4: (lv_name_4_0= RULE_STRING )
+            // InternalCONFIG.g:6798:5: lv_name_4_0= RULE_STRING
             {
             lv_name_4_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -15582,7 +15554,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_123); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_121); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSConfigTestCaseAccess().getSemicolonKeyword_5());
@@ -15600,11 +15572,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSConfigTestCaseAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalCONFIG.g:6838:3: ( ( ruleVersionedQualifiedName ) )
-            // InternalCONFIG.g:6839:4: ( ruleVersionedQualifiedName )
+            // InternalCONFIG.g:6826:3: ( ( ruleVersionedQualifiedName ) )
+            // InternalCONFIG.g:6827:4: ( ruleVersionedQualifiedName )
             {
-            // InternalCONFIG.g:6839:4: ( ruleVersionedQualifiedName )
-            // InternalCONFIG.g:6840:5: ruleVersionedQualifiedName
+            // InternalCONFIG.g:6827:4: ( ruleVersionedQualifiedName )
+            // InternalCONFIG.g:6828:5: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -15639,13 +15611,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_124); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_122); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSConfigTestCaseAccess().getSemicolonKeyword_9());
               		
             }
-            // InternalCONFIG.g:6861:3: (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )?
+            // InternalCONFIG.g:6849:3: (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )?
             int alt46=2;
             int LA46_0 = input.LA(1);
 
@@ -15654,7 +15626,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt46) {
                 case 1 :
-                    // InternalCONFIG.g:6862:4: otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) )
+                    // InternalCONFIG.g:6850:4: otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) )
                     {
                     otherlv_10=(Token)match(input,123,FollowSets000.FOLLOW_7); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -15662,13 +15634,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_10, grammarAccess.getGSSConfigTestCaseAccess().getReqKeyword_10_0());
                       			
                     }
-                    // InternalCONFIG.g:6866:4: ( (lv_req_11_0= RULE_ID ) )
-                    // InternalCONFIG.g:6867:5: (lv_req_11_0= RULE_ID )
+                    // InternalCONFIG.g:6854:4: ( (lv_req_11_0= RULE_ID ) )
+                    // InternalCONFIG.g:6855:5: (lv_req_11_0= RULE_ID )
                     {
-                    // InternalCONFIG.g:6867:5: (lv_req_11_0= RULE_ID )
-                    // InternalCONFIG.g:6868:6: lv_req_11_0= RULE_ID
+                    // InternalCONFIG.g:6855:5: (lv_req_11_0= RULE_ID )
+                    // InternalCONFIG.g:6856:6: lv_req_11_0= RULE_ID
                     {
-                    lv_req_11_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_125); if (state.failed) return current;
+                    lv_req_11_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_123); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_req_11_0, grammarAccess.getGSSConfigTestCaseAccess().getReqIDTerminalRuleCall_10_1_0());
@@ -15698,7 +15670,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCONFIG.g:6885:3: (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) ) )?
+            // InternalCONFIG.g:6873:3: (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) ) )?
             int alt47=2;
             int LA47_0 = input.LA(1);
 
@@ -15707,19 +15679,19 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt47) {
                 case 1 :
-                    // InternalCONFIG.g:6886:4: otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) )
+                    // InternalCONFIG.g:6874:4: otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) )
                     {
-                    otherlv_12=(Token)match(input,124,FollowSets000.FOLLOW_126); if (state.failed) return current;
+                    otherlv_12=(Token)match(input,124,FollowSets000.FOLLOW_124); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_12, grammarAccess.getGSSConfigTestCaseAccess().getReqActionKeyword_11_0());
                       			
                     }
-                    // InternalCONFIG.g:6890:4: ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) )
-                    // InternalCONFIG.g:6891:5: (lv_reqAction_13_0= ruleGSSConfigReqAction )
+                    // InternalCONFIG.g:6878:4: ( (lv_reqAction_13_0= ruleGSSConfigReqAction ) )
+                    // InternalCONFIG.g:6879:5: (lv_reqAction_13_0= ruleGSSConfigReqAction )
                     {
-                    // InternalCONFIG.g:6891:5: (lv_reqAction_13_0= ruleGSSConfigReqAction )
-                    // InternalCONFIG.g:6892:6: lv_reqAction_13_0= ruleGSSConfigReqAction
+                    // InternalCONFIG.g:6879:5: (lv_reqAction_13_0= ruleGSSConfigReqAction )
+                    // InternalCONFIG.g:6880:6: lv_reqAction_13_0= ruleGSSConfigReqAction
                     {
                     if ( state.backtracking==0 ) {
 
@@ -15793,7 +15765,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalCONFIG.g:6922:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalCONFIG.g:6910:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -15801,8 +15773,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:6922:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalCONFIG.g:6923:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalCONFIG.g:6910:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalCONFIG.g:6911:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameRule()); 
@@ -15833,7 +15805,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalCONFIG.g:6929:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalCONFIG.g:6917:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -15845,13 +15817,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:6935:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // InternalCONFIG.g:6936:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalCONFIG.g:6923:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalCONFIG.g:6924:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // InternalCONFIG.g:6936:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // InternalCONFIG.g:6937:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // InternalCONFIG.g:6924:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalCONFIG.g:6925:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_127); if (state.failed) return current;
+            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_125); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_ID_0);
@@ -15862,7 +15834,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
               		
             }
-            // InternalCONFIG.g:6944:3: (kw= '.' this_ID_2= RULE_ID )*
+            // InternalCONFIG.g:6932:3: (kw= '.' this_ID_2= RULE_ID )*
             loop48:
             do {
                 int alt48=2;
@@ -15875,7 +15847,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                 switch (alt48) {
             	case 1 :
-            	    // InternalCONFIG.g:6945:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalCONFIG.g:6933:4: kw= '.' this_ID_2= RULE_ID
             	    {
             	    kw=(Token)match(input,125,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -15884,7 +15856,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_127); if (state.failed) return current;
+            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_125); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_ID_2);
@@ -15929,7 +15901,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersion"
-    // InternalCONFIG.g:6962:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
+    // InternalCONFIG.g:6950:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
     public final String entryRuleVersion() throws RecognitionException {
         String current = null;
 
@@ -15937,8 +15909,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:6962:47: (iv_ruleVersion= ruleVersion EOF )
-            // InternalCONFIG.g:6963:2: iv_ruleVersion= ruleVersion EOF
+            // InternalCONFIG.g:6950:47: (iv_ruleVersion= ruleVersion EOF )
+            // InternalCONFIG.g:6951:2: iv_ruleVersion= ruleVersion EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionRule()); 
@@ -15969,7 +15941,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersion"
-    // InternalCONFIG.g:6969:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
+    // InternalCONFIG.g:6957:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
     public final AntlrDatatypeRuleToken ruleVersion() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -15985,24 +15957,24 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:6975:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
-            // InternalCONFIG.g:6976:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalCONFIG.g:6963:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
+            // InternalCONFIG.g:6964:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
             {
-            // InternalCONFIG.g:6976:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
-            // InternalCONFIG.g:6977:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalCONFIG.g:6964:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalCONFIG.g:6965:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             {
-            // InternalCONFIG.g:6977:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
+            // InternalCONFIG.g:6965:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
             int alt50=2;
             int LA50_0 = input.LA(1);
 
             if ( (LA50_0==RULE_INT) ) {
                 int LA50_1 = input.LA(2);
 
-                if ( (LA50_1==RULE_ID) ) {
-                    alt50=2;
-                }
-                else if ( (LA50_1==EOF||LA50_1==14||LA50_1==125||LA50_1==127) ) {
+                if ( (LA50_1==EOF||LA50_1==14||LA50_1==125||LA50_1==127) ) {
                     alt50=1;
+                }
+                else if ( (LA50_1==RULE_ID) ) {
+                    alt50=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -16024,9 +15996,9 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt50) {
                 case 1 :
-                    // InternalCONFIG.g:6978:4: this_INT_0= RULE_INT
+                    // InternalCONFIG.g:6966:4: this_INT_0= RULE_INT
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_127); if (state.failed) return current;
+                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_125); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current.merge(this_INT_0);
@@ -16041,12 +16013,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:6986:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalCONFIG.g:6974:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
                     {
-                    // InternalCONFIG.g:6986:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
-                    // InternalCONFIG.g:6987:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
+                    // InternalCONFIG.g:6974:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalCONFIG.g:6975:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
                     {
-                    // InternalCONFIG.g:6987:5: (this_INT_1= RULE_INT )?
+                    // InternalCONFIG.g:6975:5: (this_INT_1= RULE_INT )?
                     int alt49=2;
                     int LA49_0 = input.LA(1);
 
@@ -16055,7 +16027,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt49) {
                         case 1 :
-                            // InternalCONFIG.g:6988:6: this_INT_1= RULE_INT
+                            // InternalCONFIG.g:6976:6: this_INT_1= RULE_INT
                             {
                             this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_7); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -16074,7 +16046,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_127); if (state.failed) return current;
+                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_125); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					current.merge(this_ID_2);
@@ -16094,7 +16066,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCONFIG.g:7005:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalCONFIG.g:6993:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             loop53:
             do {
                 int alt53=2;
@@ -16107,7 +16079,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                 switch (alt53) {
             	case 1 :
-            	    // InternalCONFIG.g:7006:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalCONFIG.g:6994:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    {
             	    kw=(Token)match(input,125,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -16116,18 +16088,18 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(kw, grammarAccess.getVersionAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    // InternalCONFIG.g:7011:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalCONFIG.g:6999:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    int alt52=2;
             	    int LA52_0 = input.LA(1);
 
             	    if ( (LA52_0==RULE_INT) ) {
             	        int LA52_1 = input.LA(2);
 
-            	        if ( (LA52_1==RULE_ID) ) {
-            	            alt52=2;
-            	        }
-            	        else if ( (LA52_1==EOF||LA52_1==14||LA52_1==125||LA52_1==127) ) {
+            	        if ( (LA52_1==EOF||LA52_1==14||LA52_1==125||LA52_1==127) ) {
             	            alt52=1;
+            	        }
+            	        else if ( (LA52_1==RULE_ID) ) {
+            	            alt52=2;
             	        }
             	        else {
             	            if (state.backtracking>0) {state.failed=true; return current;}
@@ -16149,9 +16121,9 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt52) {
             	        case 1 :
-            	            // InternalCONFIG.g:7012:5: this_INT_4= RULE_INT
+            	            // InternalCONFIG.g:7000:5: this_INT_4= RULE_INT
             	            {
-            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_127); if (state.failed) return current;
+            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_125); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              					current.merge(this_INT_4);
@@ -16166,12 +16138,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalCONFIG.g:7020:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalCONFIG.g:7008:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
             	            {
-            	            // InternalCONFIG.g:7020:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
-            	            // InternalCONFIG.g:7021:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
+            	            // InternalCONFIG.g:7008:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalCONFIG.g:7009:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
             	            {
-            	            // InternalCONFIG.g:7021:6: (this_INT_5= RULE_INT )?
+            	            // InternalCONFIG.g:7009:6: (this_INT_5= RULE_INT )?
             	            int alt51=2;
             	            int LA51_0 = input.LA(1);
 
@@ -16180,7 +16152,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             	            }
             	            switch (alt51) {
             	                case 1 :
-            	                    // InternalCONFIG.g:7022:7: this_INT_5= RULE_INT
+            	                    // InternalCONFIG.g:7010:7: this_INT_5= RULE_INT
             	                    {
             	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	                    if ( state.backtracking==0 ) {
@@ -16199,7 +16171,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             	            }
 
-            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_127); if (state.failed) return current;
+            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_125); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              						current.merge(this_ID_6);
@@ -16253,7 +16225,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersionedQualifiedName"
-    // InternalCONFIG.g:7044:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
+    // InternalCONFIG.g:7032:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
     public final String entryRuleVersionedQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -16261,8 +16233,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:7044:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
-            // InternalCONFIG.g:7045:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
+            // InternalCONFIG.g:7032:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
+            // InternalCONFIG.g:7033:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionedQualifiedNameRule()); 
@@ -16293,7 +16265,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersionedQualifiedName"
-    // InternalCONFIG.g:7051:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
+    // InternalCONFIG.g:7039:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
     public final AntlrDatatypeRuleToken ruleVersionedQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -16307,18 +16279,18 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7057:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
-            // InternalCONFIG.g:7058:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalCONFIG.g:7045:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
+            // InternalCONFIG.g:7046:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
             {
-            // InternalCONFIG.g:7058:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
-            // InternalCONFIG.g:7059:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
+            // InternalCONFIG.g:7046:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalCONFIG.g:7047:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
             {
             if ( state.backtracking==0 ) {
 
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_128);
+            pushFollow(FollowSets000.FOLLOW_126);
             this_QualifiedName_0=ruleQualifiedName();
 
             state._fsp--;
@@ -16345,7 +16317,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_129);
+            pushFollow(FollowSets000.FOLLOW_127);
             this_Version_2=ruleVersion();
 
             state._fsp--;
@@ -16392,7 +16364,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersionedQualifiedReferenceName"
-    // InternalCONFIG.g:7093:1: entryRuleVersionedQualifiedReferenceName returns [String current=null] : iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF ;
+    // InternalCONFIG.g:7081:1: entryRuleVersionedQualifiedReferenceName returns [String current=null] : iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF ;
     public final String entryRuleVersionedQualifiedReferenceName() throws RecognitionException {
         String current = null;
 
@@ -16400,8 +16372,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:7093:71: (iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF )
-            // InternalCONFIG.g:7094:2: iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF
+            // InternalCONFIG.g:7081:71: (iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF )
+            // InternalCONFIG.g:7082:2: iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameRule()); 
@@ -16432,7 +16404,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersionedQualifiedReferenceName"
-    // InternalCONFIG.g:7100:1: ruleVersionedQualifiedReferenceName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* ) ;
+    // InternalCONFIG.g:7088:1: ruleVersionedQualifiedReferenceName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleVersionedQualifiedReferenceName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -16446,13 +16418,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7106:2: ( ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* ) )
-            // InternalCONFIG.g:7107:2: ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* )
+            // InternalCONFIG.g:7094:2: ( ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* ) )
+            // InternalCONFIG.g:7095:2: ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* )
             {
-            // InternalCONFIG.g:7107:2: ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* )
-            // InternalCONFIG.g:7108:3: (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )*
+            // InternalCONFIG.g:7095:2: ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* )
+            // InternalCONFIG.g:7096:3: (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )*
             {
-            // InternalCONFIG.g:7108:3: (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )?
+            // InternalCONFIG.g:7096:3: (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )?
             int alt54=2;
             int LA54_0 = input.LA(1);
 
@@ -16465,14 +16437,14 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt54) {
                 case 1 :
-                    // InternalCONFIG.g:7109:4: this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::'
+                    // InternalCONFIG.g:7097:4: this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::'
                     {
                     if ( state.backtracking==0 ) {
 
                       				newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameAccess().getVersionedQualifiedNameParserRuleCall_0_0());
                       			
                     }
-                    pushFollow(FollowSets000.FOLLOW_130);
+                    pushFollow(FollowSets000.FOLLOW_128);
                     this_VersionedQualifiedName_0=ruleVersionedQualifiedName();
 
                     state._fsp--;
@@ -16500,7 +16472,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_131); if (state.failed) return current;
+            this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_129); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_ID_2);
@@ -16511,7 +16483,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_ID_2, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_1());
               		
             }
-            // InternalCONFIG.g:7132:3: (kw= '::' this_ID_4= RULE_ID )*
+            // InternalCONFIG.g:7120:3: (kw= '::' this_ID_4= RULE_ID )*
             loop55:
             do {
                 int alt55=2;
@@ -16524,7 +16496,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                 switch (alt55) {
             	case 1 :
-            	    // InternalCONFIG.g:7133:4: kw= '::' this_ID_4= RULE_ID
+            	    // InternalCONFIG.g:7121:4: kw= '::' this_ID_4= RULE_ID
             	    {
             	    kw=(Token)match(input,128,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -16533,7 +16505,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(kw, grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_2_0());
             	      			
             	    }
-            	    this_ID_4=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_131); if (state.failed) return current;
+            	    this_ID_4=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_129); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_ID_4);
@@ -16578,7 +16550,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleINTEGER"
-    // InternalCONFIG.g:7150:1: entryRuleINTEGER returns [String current=null] : iv_ruleINTEGER= ruleINTEGER EOF ;
+    // InternalCONFIG.g:7138:1: entryRuleINTEGER returns [String current=null] : iv_ruleINTEGER= ruleINTEGER EOF ;
     public final String entryRuleINTEGER() throws RecognitionException {
         String current = null;
 
@@ -16586,8 +16558,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:7150:47: (iv_ruleINTEGER= ruleINTEGER EOF )
-            // InternalCONFIG.g:7151:2: iv_ruleINTEGER= ruleINTEGER EOF
+            // InternalCONFIG.g:7138:47: (iv_ruleINTEGER= ruleINTEGER EOF )
+            // InternalCONFIG.g:7139:2: iv_ruleINTEGER= ruleINTEGER EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getINTEGERRule()); 
@@ -16618,7 +16590,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleINTEGER"
-    // InternalCONFIG.g:7157:1: ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) ;
+    // InternalCONFIG.g:7145:1: ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) ;
     public final AntlrDatatypeRuleToken ruleINTEGER() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -16630,10 +16602,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7163:2: ( ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) )
-            // InternalCONFIG.g:7164:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
+            // InternalCONFIG.g:7151:2: ( ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) )
+            // InternalCONFIG.g:7152:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
             {
-            // InternalCONFIG.g:7164:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
+            // InternalCONFIG.g:7152:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
             int alt57=2;
             int LA57_0 = input.LA(1);
 
@@ -16652,12 +16624,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt57) {
                 case 1 :
-                    // InternalCONFIG.g:7165:3: ( (kw= '-' )? this_INT_1= RULE_INT )
+                    // InternalCONFIG.g:7153:3: ( (kw= '-' )? this_INT_1= RULE_INT )
                     {
-                    // InternalCONFIG.g:7165:3: ( (kw= '-' )? this_INT_1= RULE_INT )
-                    // InternalCONFIG.g:7166:4: (kw= '-' )? this_INT_1= RULE_INT
+                    // InternalCONFIG.g:7153:3: ( (kw= '-' )? this_INT_1= RULE_INT )
+                    // InternalCONFIG.g:7154:4: (kw= '-' )? this_INT_1= RULE_INT
                     {
-                    // InternalCONFIG.g:7166:4: (kw= '-' )?
+                    // InternalCONFIG.g:7154:4: (kw= '-' )?
                     int alt56=2;
                     int LA56_0 = input.LA(1);
 
@@ -16666,7 +16638,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt56) {
                         case 1 :
-                            // InternalCONFIG.g:7167:5: kw= '-'
+                            // InternalCONFIG.g:7155:5: kw= '-'
                             {
                             kw=(Token)match(input,129,FollowSets000.FOLLOW_35); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -16699,7 +16671,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7182:3: this_HEXADECIMAL_2= RULE_HEXADECIMAL
+                    // InternalCONFIG.g:7170:3: this_HEXADECIMAL_2= RULE_HEXADECIMAL
                     {
                     this_HEXADECIMAL_2=(Token)match(input,RULE_HEXADECIMAL,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -16740,7 +16712,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDATE"
-    // InternalCONFIG.g:7193:1: entryRuleDATE returns [String current=null] : iv_ruleDATE= ruleDATE EOF ;
+    // InternalCONFIG.g:7181:1: entryRuleDATE returns [String current=null] : iv_ruleDATE= ruleDATE EOF ;
     public final String entryRuleDATE() throws RecognitionException {
         String current = null;
 
@@ -16748,8 +16720,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:7193:44: (iv_ruleDATE= ruleDATE EOF )
-            // InternalCONFIG.g:7194:2: iv_ruleDATE= ruleDATE EOF
+            // InternalCONFIG.g:7181:44: (iv_ruleDATE= ruleDATE EOF )
+            // InternalCONFIG.g:7182:2: iv_ruleDATE= ruleDATE EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDATERule()); 
@@ -16780,7 +16752,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDATE"
-    // InternalCONFIG.g:7200:1: ruleDATE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT kw= '/' this_INT_2= RULE_INT kw= '/' this_INT_4= RULE_INT ) ;
+    // InternalCONFIG.g:7188:1: ruleDATE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT kw= '/' this_INT_2= RULE_INT kw= '/' this_INT_4= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleDATE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -16793,13 +16765,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7206:2: ( (this_INT_0= RULE_INT kw= '/' this_INT_2= RULE_INT kw= '/' this_INT_4= RULE_INT ) )
-            // InternalCONFIG.g:7207:2: (this_INT_0= RULE_INT kw= '/' this_INT_2= RULE_INT kw= '/' this_INT_4= RULE_INT )
+            // InternalCONFIG.g:7194:2: ( (this_INT_0= RULE_INT kw= '/' this_INT_2= RULE_INT kw= '/' this_INT_4= RULE_INT ) )
+            // InternalCONFIG.g:7195:2: (this_INT_0= RULE_INT kw= '/' this_INT_2= RULE_INT kw= '/' this_INT_4= RULE_INT )
             {
-            // InternalCONFIG.g:7207:2: (this_INT_0= RULE_INT kw= '/' this_INT_2= RULE_INT kw= '/' this_INT_4= RULE_INT )
-            // InternalCONFIG.g:7208:3: this_INT_0= RULE_INT kw= '/' this_INT_2= RULE_INT kw= '/' this_INT_4= RULE_INT
+            // InternalCONFIG.g:7195:2: (this_INT_0= RULE_INT kw= '/' this_INT_2= RULE_INT kw= '/' this_INT_4= RULE_INT )
+            // InternalCONFIG.g:7196:3: this_INT_0= RULE_INT kw= '/' this_INT_2= RULE_INT kw= '/' this_INT_4= RULE_INT
             {
-            this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_132); if (state.failed) return current;
+            this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_130); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_INT_0);
@@ -16817,7 +16789,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(kw, grammarAccess.getDATEAccess().getSolidusKeyword_1());
               		
             }
-            this_INT_2=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_132); if (state.failed) return current;
+            this_INT_2=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_130); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_INT_2);
@@ -16871,7 +16843,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleURL"
-    // InternalCONFIG.g:7243:1: entryRuleURL returns [String current=null] : iv_ruleURL= ruleURL EOF ;
+    // InternalCONFIG.g:7231:1: entryRuleURL returns [String current=null] : iv_ruleURL= ruleURL EOF ;
     public final String entryRuleURL() throws RecognitionException {
         String current = null;
 
@@ -16879,8 +16851,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCONFIG.g:7243:43: (iv_ruleURL= ruleURL EOF )
-            // InternalCONFIG.g:7244:2: iv_ruleURL= ruleURL EOF
+            // InternalCONFIG.g:7231:43: (iv_ruleURL= ruleURL EOF )
+            // InternalCONFIG.g:7232:2: iv_ruleURL= ruleURL EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getURLRule()); 
@@ -16911,7 +16883,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleURL"
-    // InternalCONFIG.g:7250:1: ruleURL returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '+' this_ID_2= RULE_ID )? kw= '://' (this_ID_4= RULE_ID (kw= '.' )? )+ (kw= '/' this_ID_7= RULE_ID )* (kw= '/' )? ) ;
+    // InternalCONFIG.g:7238:1: ruleURL returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '+' this_ID_2= RULE_ID )? kw= '://' (this_ID_4= RULE_ID (kw= '.' )? )+ (kw= '/' this_ID_7= RULE_ID )* (kw= '/' )? ) ;
     public final AntlrDatatypeRuleToken ruleURL() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -16925,13 +16897,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7256:2: ( (this_ID_0= RULE_ID (kw= '+' this_ID_2= RULE_ID )? kw= '://' (this_ID_4= RULE_ID (kw= '.' )? )+ (kw= '/' this_ID_7= RULE_ID )* (kw= '/' )? ) )
-            // InternalCONFIG.g:7257:2: (this_ID_0= RULE_ID (kw= '+' this_ID_2= RULE_ID )? kw= '://' (this_ID_4= RULE_ID (kw= '.' )? )+ (kw= '/' this_ID_7= RULE_ID )* (kw= '/' )? )
+            // InternalCONFIG.g:7244:2: ( (this_ID_0= RULE_ID (kw= '+' this_ID_2= RULE_ID )? kw= '://' (this_ID_4= RULE_ID (kw= '.' )? )+ (kw= '/' this_ID_7= RULE_ID )* (kw= '/' )? ) )
+            // InternalCONFIG.g:7245:2: (this_ID_0= RULE_ID (kw= '+' this_ID_2= RULE_ID )? kw= '://' (this_ID_4= RULE_ID (kw= '.' )? )+ (kw= '/' this_ID_7= RULE_ID )* (kw= '/' )? )
             {
-            // InternalCONFIG.g:7257:2: (this_ID_0= RULE_ID (kw= '+' this_ID_2= RULE_ID )? kw= '://' (this_ID_4= RULE_ID (kw= '.' )? )+ (kw= '/' this_ID_7= RULE_ID )* (kw= '/' )? )
-            // InternalCONFIG.g:7258:3: this_ID_0= RULE_ID (kw= '+' this_ID_2= RULE_ID )? kw= '://' (this_ID_4= RULE_ID (kw= '.' )? )+ (kw= '/' this_ID_7= RULE_ID )* (kw= '/' )?
+            // InternalCONFIG.g:7245:2: (this_ID_0= RULE_ID (kw= '+' this_ID_2= RULE_ID )? kw= '://' (this_ID_4= RULE_ID (kw= '.' )? )+ (kw= '/' this_ID_7= RULE_ID )* (kw= '/' )? )
+            // InternalCONFIG.g:7246:3: this_ID_0= RULE_ID (kw= '+' this_ID_2= RULE_ID )? kw= '://' (this_ID_4= RULE_ID (kw= '.' )? )+ (kw= '/' this_ID_7= RULE_ID )* (kw= '/' )?
             {
-            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_133); if (state.failed) return current;
+            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_131); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_ID_0);
@@ -16942,7 +16914,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_ID_0, grammarAccess.getURLAccess().getIDTerminalRuleCall_0());
               		
             }
-            // InternalCONFIG.g:7265:3: (kw= '+' this_ID_2= RULE_ID )?
+            // InternalCONFIG.g:7253:3: (kw= '+' this_ID_2= RULE_ID )?
             int alt58=2;
             int LA58_0 = input.LA(1);
 
@@ -16951,7 +16923,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt58) {
                 case 1 :
-                    // InternalCONFIG.g:7266:4: kw= '+' this_ID_2= RULE_ID
+                    // InternalCONFIG.g:7254:4: kw= '+' this_ID_2= RULE_ID
                     {
                     kw=(Token)match(input,131,FollowSets000.FOLLOW_7); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -16960,7 +16932,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                       				newLeafNode(kw, grammarAccess.getURLAccess().getPlusSignKeyword_1_0());
                       			
                     }
-                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_134); if (state.failed) return current;
+                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_132); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current.merge(this_ID_2);
@@ -16984,7 +16956,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
               			newLeafNode(kw, grammarAccess.getURLAccess().getColonSolidusSolidusKeyword_2());
               		
             }
-            // InternalCONFIG.g:7284:3: (this_ID_4= RULE_ID (kw= '.' )? )+
+            // InternalCONFIG.g:7272:3: (this_ID_4= RULE_ID (kw= '.' )? )+
             int cnt60=0;
             loop60:
             do {
@@ -16998,9 +16970,9 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                 switch (alt60) {
             	case 1 :
-            	    // InternalCONFIG.g:7285:4: this_ID_4= RULE_ID (kw= '.' )?
+            	    // InternalCONFIG.g:7273:4: this_ID_4= RULE_ID (kw= '.' )?
             	    {
-            	    this_ID_4=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_135); if (state.failed) return current;
+            	    this_ID_4=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_133); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_ID_4);
@@ -17011,7 +16983,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(this_ID_4, grammarAccess.getURLAccess().getIDTerminalRuleCall_3_0());
             	      			
             	    }
-            	    // InternalCONFIG.g:7292:4: (kw= '.' )?
+            	    // InternalCONFIG.g:7280:4: (kw= '.' )?
             	    int alt59=2;
             	    int LA59_0 = input.LA(1);
 
@@ -17020,9 +16992,9 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt59) {
             	        case 1 :
-            	            // InternalCONFIG.g:7293:5: kw= '.'
+            	            // InternalCONFIG.g:7281:5: kw= '.'
             	            {
-            	            kw=(Token)match(input,125,FollowSets000.FOLLOW_136); if (state.failed) return current;
+            	            kw=(Token)match(input,125,FollowSets000.FOLLOW_134); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              					current.merge(kw);
@@ -17049,7 +17021,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                 cnt60++;
             } while (true);
 
-            // InternalCONFIG.g:7300:3: (kw= '/' this_ID_7= RULE_ID )*
+            // InternalCONFIG.g:7288:3: (kw= '/' this_ID_7= RULE_ID )*
             loop61:
             do {
                 int alt61=2;
@@ -17068,7 +17040,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
                 switch (alt61) {
             	case 1 :
-            	    // InternalCONFIG.g:7301:4: kw= '/' this_ID_7= RULE_ID
+            	    // InternalCONFIG.g:7289:4: kw= '/' this_ID_7= RULE_ID
             	    {
             	    kw=(Token)match(input,130,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -17077,7 +17049,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(kw, grammarAccess.getURLAccess().getSolidusKeyword_4_0());
             	      			
             	    }
-            	    this_ID_7=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_137); if (state.failed) return current;
+            	    this_ID_7=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_135); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_ID_7);
@@ -17097,7 +17069,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalCONFIG.g:7314:3: (kw= '/' )?
+            // InternalCONFIG.g:7302:3: (kw= '/' )?
             int alt62=2;
             int LA62_0 = input.LA(1);
 
@@ -17106,7 +17078,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt62) {
                 case 1 :
-                    // InternalCONFIG.g:7315:4: kw= '/'
+                    // InternalCONFIG.g:7303:4: kw= '/'
                     {
                     kw=(Token)match(input,130,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17146,7 +17118,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigEnableDisable"
-    // InternalCONFIG.g:7325:1: ruleGSSConfigEnableDisable returns [Enumerator current=null] : ( (enumLiteral_0= 'disabled' ) | (enumLiteral_1= 'enabled' ) ) ;
+    // InternalCONFIG.g:7313:1: ruleGSSConfigEnableDisable returns [Enumerator current=null] : ( (enumLiteral_0= 'disabled' ) | (enumLiteral_1= 'enabled' ) ) ;
     public final Enumerator ruleGSSConfigEnableDisable() throws RecognitionException {
         Enumerator current = null;
 
@@ -17157,10 +17129,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7331:2: ( ( (enumLiteral_0= 'disabled' ) | (enumLiteral_1= 'enabled' ) ) )
-            // InternalCONFIG.g:7332:2: ( (enumLiteral_0= 'disabled' ) | (enumLiteral_1= 'enabled' ) )
+            // InternalCONFIG.g:7319:2: ( ( (enumLiteral_0= 'disabled' ) | (enumLiteral_1= 'enabled' ) ) )
+            // InternalCONFIG.g:7320:2: ( (enumLiteral_0= 'disabled' ) | (enumLiteral_1= 'enabled' ) )
             {
-            // InternalCONFIG.g:7332:2: ( (enumLiteral_0= 'disabled' ) | (enumLiteral_1= 'enabled' ) )
+            // InternalCONFIG.g:7320:2: ( (enumLiteral_0= 'disabled' ) | (enumLiteral_1= 'enabled' ) )
             int alt63=2;
             int LA63_0 = input.LA(1);
 
@@ -17179,10 +17151,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt63) {
                 case 1 :
-                    // InternalCONFIG.g:7333:3: (enumLiteral_0= 'disabled' )
+                    // InternalCONFIG.g:7321:3: (enumLiteral_0= 'disabled' )
                     {
-                    // InternalCONFIG.g:7333:3: (enumLiteral_0= 'disabled' )
-                    // InternalCONFIG.g:7334:4: enumLiteral_0= 'disabled'
+                    // InternalCONFIG.g:7321:3: (enumLiteral_0= 'disabled' )
+                    // InternalCONFIG.g:7322:4: enumLiteral_0= 'disabled'
                     {
                     enumLiteral_0=(Token)match(input,133,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17198,10 +17170,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7341:3: (enumLiteral_1= 'enabled' )
+                    // InternalCONFIG.g:7329:3: (enumLiteral_1= 'enabled' )
                     {
-                    // InternalCONFIG.g:7341:3: (enumLiteral_1= 'enabled' )
-                    // InternalCONFIG.g:7342:4: enumLiteral_1= 'enabled'
+                    // InternalCONFIG.g:7329:3: (enumLiteral_1= 'enabled' )
+                    // InternalCONFIG.g:7330:4: enumLiteral_1= 'enabled'
                     {
                     enumLiteral_1=(Token)match(input,134,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17240,24 +17212,26 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleGSSConfigEnableDisable"
 
 
-    // $ANTLR start "ruleGSSConfigMainInterfaceType"
-    // InternalCONFIG.g:7352:1: ruleGSSConfigMainInterfaceType returns [Enumerator current=null] : ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'uart' ) | (enumLiteral_2= 'dummy' ) ) ;
-    public final Enumerator ruleGSSConfigMainInterfaceType() throws RecognitionException {
+    // $ANTLR start "ruleGSSConfigInterfaceType"
+    // InternalCONFIG.g:7340:1: ruleGSSConfigInterfaceType returns [Enumerator current=null] : ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) ) ;
+    public final Enumerator ruleGSSConfigInterfaceType() throws RecognitionException {
         Enumerator current = null;
 
         Token enumLiteral_0=null;
         Token enumLiteral_1=null;
         Token enumLiteral_2=null;
+        Token enumLiteral_3=null;
+        Token enumLiteral_4=null;
 
 
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7358:2: ( ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'uart' ) | (enumLiteral_2= 'dummy' ) ) )
-            // InternalCONFIG.g:7359:2: ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'uart' ) | (enumLiteral_2= 'dummy' ) )
+            // InternalCONFIG.g:7346:2: ( ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) ) )
+            // InternalCONFIG.g:7347:2: ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) )
             {
-            // InternalCONFIG.g:7359:2: ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'uart' ) | (enumLiteral_2= 'dummy' ) )
-            int alt64=3;
+            // InternalCONFIG.g:7347:2: ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) )
+            int alt64=5;
             switch ( input.LA(1) ) {
             case 135:
                 {
@@ -17274,6 +17248,16 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                 alt64=3;
                 }
                 break;
+            case 138:
+                {
+                alt64=4;
+                }
+                break;
+            case 139:
+                {
+                alt64=5;
+                }
+                break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
@@ -17284,194 +17268,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             switch (alt64) {
                 case 1 :
-                    // InternalCONFIG.g:7360:3: (enumLiteral_0= 'SpW' )
+                    // InternalCONFIG.g:7348:3: (enumLiteral_0= 'SpW' )
                     {
-                    // InternalCONFIG.g:7360:3: (enumLiteral_0= 'SpW' )
-                    // InternalCONFIG.g:7361:4: enumLiteral_0= 'SpW'
-                    {
-                    enumLiteral_0=(Token)match(input,135,FollowSets000.FOLLOW_2); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      				current = grammarAccess.getGSSConfigMainInterfaceTypeAccess().getSpWEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                      				newLeafNode(enumLiteral_0, grammarAccess.getGSSConfigMainInterfaceTypeAccess().getSpWEnumLiteralDeclaration_0());
-                      			
-                    }
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // InternalCONFIG.g:7368:3: (enumLiteral_1= 'uart' )
-                    {
-                    // InternalCONFIG.g:7368:3: (enumLiteral_1= 'uart' )
-                    // InternalCONFIG.g:7369:4: enumLiteral_1= 'uart'
-                    {
-                    enumLiteral_1=(Token)match(input,136,FollowSets000.FOLLOW_2); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      				current = grammarAccess.getGSSConfigMainInterfaceTypeAccess().getUartEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                      				newLeafNode(enumLiteral_1, grammarAccess.getGSSConfigMainInterfaceTypeAccess().getUartEnumLiteralDeclaration_1());
-                      			
-                    }
-
-                    }
-
-
-                    }
-                    break;
-                case 3 :
-                    // InternalCONFIG.g:7376:3: (enumLiteral_2= 'dummy' )
-                    {
-                    // InternalCONFIG.g:7376:3: (enumLiteral_2= 'dummy' )
-                    // InternalCONFIG.g:7377:4: enumLiteral_2= 'dummy'
-                    {
-                    enumLiteral_2=(Token)match(input,137,FollowSets000.FOLLOW_2); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      				current = grammarAccess.getGSSConfigMainInterfaceTypeAccess().getDummyEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-                      				newLeafNode(enumLiteral_2, grammarAccess.getGSSConfigMainInterfaceTypeAccess().getDummyEnumLiteralDeclaration_2());
-                      			
-                    }
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleGSSConfigMainInterfaceType"
-
-
-    // $ANTLR start "ruleGSSConfigMainInterfaceIOType"
-    // InternalCONFIG.g:7387:1: ruleGSSConfigMainInterfaceIOType returns [Enumerator current=null] : (enumLiteral_0= 'in_out' ) ;
-    public final Enumerator ruleGSSConfigMainInterfaceIOType() throws RecognitionException {
-        Enumerator current = null;
-
-        Token enumLiteral_0=null;
-
-
-        	enterRule();
-
-        try {
-            // InternalCONFIG.g:7393:2: ( (enumLiteral_0= 'in_out' ) )
-            // InternalCONFIG.g:7394:2: (enumLiteral_0= 'in_out' )
-            {
-            // InternalCONFIG.g:7394:2: (enumLiteral_0= 'in_out' )
-            // InternalCONFIG.g:7395:3: enumLiteral_0= 'in_out'
-            {
-            enumLiteral_0=(Token)match(input,138,FollowSets000.FOLLOW_2); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              			current = grammarAccess.getGSSConfigMainInterfaceIOTypeAccess().getIn_outEnumLiteralDeclaration().getEnumLiteral().getInstance();
-              			newLeafNode(enumLiteral_0, grammarAccess.getGSSConfigMainInterfaceIOTypeAccess().getIn_outEnumLiteralDeclaration());
-              		
-            }
-
-            }
-
-
-            }
-
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleGSSConfigMainInterfaceIOType"
-
-
-    // $ANTLR start "ruleGSSConfigInterfaceType"
-    // InternalCONFIG.g:7404:1: ruleGSSConfigInterfaceType returns [Enumerator current=null] : ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) ) ;
-    public final Enumerator ruleGSSConfigInterfaceType() throws RecognitionException {
-        Enumerator current = null;
-
-        Token enumLiteral_0=null;
-        Token enumLiteral_1=null;
-        Token enumLiteral_2=null;
-        Token enumLiteral_3=null;
-        Token enumLiteral_4=null;
-
-
-        	enterRule();
-
-        try {
-            // InternalCONFIG.g:7410:2: ( ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) ) )
-            // InternalCONFIG.g:7411:2: ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) )
-            {
-            // InternalCONFIG.g:7411:2: ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) )
-            int alt65=5;
-            switch ( input.LA(1) ) {
-            case 135:
-                {
-                alt65=1;
-                }
-                break;
-            case 139:
-                {
-                alt65=2;
-                }
-                break;
-            case 140:
-                {
-                alt65=3;
-                }
-                break;
-            case 136:
-                {
-                alt65=4;
-                }
-                break;
-            case 137:
-                {
-                alt65=5;
-                }
-                break;
-            default:
-                if (state.backtracking>0) {state.failed=true; return current;}
-                NoViableAltException nvae =
-                    new NoViableAltException("", 65, 0, input);
-
-                throw nvae;
-            }
-
-            switch (alt65) {
-                case 1 :
-                    // InternalCONFIG.g:7412:3: (enumLiteral_0= 'SpW' )
-                    {
-                    // InternalCONFIG.g:7412:3: (enumLiteral_0= 'SpW' )
-                    // InternalCONFIG.g:7413:4: enumLiteral_0= 'SpW'
+                    // InternalCONFIG.g:7348:3: (enumLiteral_0= 'SpW' )
+                    // InternalCONFIG.g:7349:4: enumLiteral_0= 'SpW'
                     {
                     enumLiteral_0=(Token)match(input,135,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17487,12 +17287,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7420:3: (enumLiteral_1= 'SpW_TC' )
+                    // InternalCONFIG.g:7356:3: (enumLiteral_1= 'SpW_TC' )
                     {
-                    // InternalCONFIG.g:7420:3: (enumLiteral_1= 'SpW_TC' )
-                    // InternalCONFIG.g:7421:4: enumLiteral_1= 'SpW_TC'
+                    // InternalCONFIG.g:7356:3: (enumLiteral_1= 'SpW_TC' )
+                    // InternalCONFIG.g:7357:4: enumLiteral_1= 'SpW_TC'
                     {
-                    enumLiteral_1=(Token)match(input,139,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,136,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSConfigInterfaceTypeAccess().getSpW_TCEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -17506,12 +17306,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalCONFIG.g:7428:3: (enumLiteral_2= 'SpW_Error' )
+                    // InternalCONFIG.g:7364:3: (enumLiteral_2= 'SpW_Error' )
                     {
-                    // InternalCONFIG.g:7428:3: (enumLiteral_2= 'SpW_Error' )
-                    // InternalCONFIG.g:7429:4: enumLiteral_2= 'SpW_Error'
+                    // InternalCONFIG.g:7364:3: (enumLiteral_2= 'SpW_Error' )
+                    // InternalCONFIG.g:7365:4: enumLiteral_2= 'SpW_Error'
                     {
-                    enumLiteral_2=(Token)match(input,140,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,137,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSConfigInterfaceTypeAccess().getSpW_ErrorEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -17525,12 +17325,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalCONFIG.g:7436:3: (enumLiteral_3= 'uart' )
+                    // InternalCONFIG.g:7372:3: (enumLiteral_3= 'uart' )
                     {
-                    // InternalCONFIG.g:7436:3: (enumLiteral_3= 'uart' )
-                    // InternalCONFIG.g:7437:4: enumLiteral_3= 'uart'
+                    // InternalCONFIG.g:7372:3: (enumLiteral_3= 'uart' )
+                    // InternalCONFIG.g:7373:4: enumLiteral_3= 'uart'
                     {
-                    enumLiteral_3=(Token)match(input,136,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,138,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSConfigInterfaceTypeAccess().getUartEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -17544,12 +17344,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalCONFIG.g:7444:3: (enumLiteral_4= 'dummy' )
+                    // InternalCONFIG.g:7380:3: (enumLiteral_4= 'dummy' )
                     {
-                    // InternalCONFIG.g:7444:3: (enumLiteral_4= 'dummy' )
-                    // InternalCONFIG.g:7445:4: enumLiteral_4= 'dummy'
+                    // InternalCONFIG.g:7380:3: (enumLiteral_4= 'dummy' )
+                    // InternalCONFIG.g:7381:4: enumLiteral_4= 'dummy'
                     {
-                    enumLiteral_4=(Token)match(input,137,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_4=(Token)match(input,139,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSConfigInterfaceTypeAccess().getDummyEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
@@ -17587,7 +17387,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigInterfaceIOType"
-    // InternalCONFIG.g:7455:1: ruleGSSConfigInterfaceIOType returns [Enumerator current=null] : ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) ) ;
+    // InternalCONFIG.g:7391:1: ruleGSSConfigInterfaceIOType returns [Enumerator current=null] : ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) ) ;
     public final Enumerator ruleGSSConfigInterfaceIOType() throws RecognitionException {
         Enumerator current = null;
 
@@ -17599,43 +17399,43 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7461:2: ( ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) ) )
-            // InternalCONFIG.g:7462:2: ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) )
+            // InternalCONFIG.g:7397:2: ( ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) ) )
+            // InternalCONFIG.g:7398:2: ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) )
             {
-            // InternalCONFIG.g:7462:2: ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) )
-            int alt66=3;
+            // InternalCONFIG.g:7398:2: ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) )
+            int alt65=3;
             switch ( input.LA(1) ) {
-            case 138:
+            case 140:
                 {
-                alt66=1;
+                alt65=1;
                 }
                 break;
             case 141:
                 {
-                alt66=2;
+                alt65=2;
                 }
                 break;
             case 142:
                 {
-                alt66=3;
+                alt65=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 66, 0, input);
+                    new NoViableAltException("", 65, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt66) {
+            switch (alt65) {
                 case 1 :
-                    // InternalCONFIG.g:7463:3: (enumLiteral_0= 'in_out' )
+                    // InternalCONFIG.g:7399:3: (enumLiteral_0= 'in_out' )
                     {
-                    // InternalCONFIG.g:7463:3: (enumLiteral_0= 'in_out' )
-                    // InternalCONFIG.g:7464:4: enumLiteral_0= 'in_out'
+                    // InternalCONFIG.g:7399:3: (enumLiteral_0= 'in_out' )
+                    // InternalCONFIG.g:7400:4: enumLiteral_0= 'in_out'
                     {
-                    enumLiteral_0=(Token)match(input,138,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,140,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSConfigInterfaceIOTypeAccess().getIn_outEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -17649,10 +17449,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7471:3: (enumLiteral_1= 'in' )
+                    // InternalCONFIG.g:7407:3: (enumLiteral_1= 'in' )
                     {
-                    // InternalCONFIG.g:7471:3: (enumLiteral_1= 'in' )
-                    // InternalCONFIG.g:7472:4: enumLiteral_1= 'in'
+                    // InternalCONFIG.g:7407:3: (enumLiteral_1= 'in' )
+                    // InternalCONFIG.g:7408:4: enumLiteral_1= 'in'
                     {
                     enumLiteral_1=(Token)match(input,141,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17668,10 +17468,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalCONFIG.g:7479:3: (enumLiteral_2= 'out' )
+                    // InternalCONFIG.g:7415:3: (enumLiteral_2= 'out' )
                     {
-                    // InternalCONFIG.g:7479:3: (enumLiteral_2= 'out' )
-                    // InternalCONFIG.g:7480:4: enumLiteral_2= 'out'
+                    // InternalCONFIG.g:7415:3: (enumLiteral_2= 'out' )
+                    // InternalCONFIG.g:7416:4: enumLiteral_2= 'out'
                     {
                     enumLiteral_2=(Token)match(input,142,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17711,7 +17511,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigUpperLevelLevel"
-    // InternalCONFIG.g:7490:1: ruleGSSConfigUpperLevelLevel returns [Enumerator current=null] : ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) ) ;
+    // InternalCONFIG.g:7426:1: ruleGSSConfigUpperLevelLevel returns [Enumerator current=null] : ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) ) ;
     public final Enumerator ruleGSSConfigUpperLevelLevel() throws RecognitionException {
         Enumerator current = null;
 
@@ -17723,41 +17523,41 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7496:2: ( ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) ) )
-            // InternalCONFIG.g:7497:2: ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) )
+            // InternalCONFIG.g:7432:2: ( ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) ) )
+            // InternalCONFIG.g:7433:2: ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) )
             {
-            // InternalCONFIG.g:7497:2: ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) )
-            int alt67=3;
+            // InternalCONFIG.g:7433:2: ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) )
+            int alt66=3;
             switch ( input.LA(1) ) {
             case 143:
                 {
-                alt67=1;
+                alt66=1;
                 }
                 break;
             case 144:
                 {
-                alt67=2;
+                alt66=2;
                 }
                 break;
             case 145:
                 {
-                alt67=3;
+                alt66=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 67, 0, input);
+                    new NoViableAltException("", 66, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt67) {
+            switch (alt66) {
                 case 1 :
-                    // InternalCONFIG.g:7498:3: (enumLiteral_0= '_1' )
+                    // InternalCONFIG.g:7434:3: (enumLiteral_0= '_1' )
                     {
-                    // InternalCONFIG.g:7498:3: (enumLiteral_0= '_1' )
-                    // InternalCONFIG.g:7499:4: enumLiteral_0= '_1'
+                    // InternalCONFIG.g:7434:3: (enumLiteral_0= '_1' )
+                    // InternalCONFIG.g:7435:4: enumLiteral_0= '_1'
                     {
                     enumLiteral_0=(Token)match(input,143,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17773,10 +17573,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7506:3: (enumLiteral_1= '_2' )
+                    // InternalCONFIG.g:7442:3: (enumLiteral_1= '_2' )
                     {
-                    // InternalCONFIG.g:7506:3: (enumLiteral_1= '_2' )
-                    // InternalCONFIG.g:7507:4: enumLiteral_1= '_2'
+                    // InternalCONFIG.g:7442:3: (enumLiteral_1= '_2' )
+                    // InternalCONFIG.g:7443:4: enumLiteral_1= '_2'
                     {
                     enumLiteral_1=(Token)match(input,144,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17792,10 +17592,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalCONFIG.g:7514:3: (enumLiteral_2= '_3' )
+                    // InternalCONFIG.g:7450:3: (enumLiteral_2= '_3' )
                     {
-                    // InternalCONFIG.g:7514:3: (enumLiteral_2= '_3' )
-                    // InternalCONFIG.g:7515:4: enumLiteral_2= '_3'
+                    // InternalCONFIG.g:7450:3: (enumLiteral_2= '_3' )
+                    // InternalCONFIG.g:7451:4: enumLiteral_2= '_3'
                     {
                     enumLiteral_2=(Token)match(input,145,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17835,7 +17635,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigUnit"
-    // InternalCONFIG.g:7525:1: ruleGSSConfigUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) ;
+    // InternalCONFIG.g:7461:1: ruleGSSConfigUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) ;
     public final Enumerator ruleGSSConfigUnit() throws RecognitionException {
         Enumerator current = null;
 
@@ -17846,32 +17646,32 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7531:2: ( ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) )
-            // InternalCONFIG.g:7532:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
+            // InternalCONFIG.g:7467:2: ( ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) )
+            // InternalCONFIG.g:7468:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
             {
-            // InternalCONFIG.g:7532:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
-            int alt68=2;
-            int LA68_0 = input.LA(1);
+            // InternalCONFIG.g:7468:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
+            int alt67=2;
+            int LA67_0 = input.LA(1);
 
-            if ( (LA68_0==146) ) {
-                alt68=1;
+            if ( (LA67_0==146) ) {
+                alt67=1;
             }
-            else if ( (LA68_0==147) ) {
-                alt68=2;
+            else if ( (LA67_0==147) ) {
+                alt67=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 68, 0, input);
+                    new NoViableAltException("", 67, 0, input);
 
                 throw nvae;
             }
-            switch (alt68) {
+            switch (alt67) {
                 case 1 :
-                    // InternalCONFIG.g:7533:3: (enumLiteral_0= 'miliseconds' )
+                    // InternalCONFIG.g:7469:3: (enumLiteral_0= 'miliseconds' )
                     {
-                    // InternalCONFIG.g:7533:3: (enumLiteral_0= 'miliseconds' )
-                    // InternalCONFIG.g:7534:4: enumLiteral_0= 'miliseconds'
+                    // InternalCONFIG.g:7469:3: (enumLiteral_0= 'miliseconds' )
+                    // InternalCONFIG.g:7470:4: enumLiteral_0= 'miliseconds'
                     {
                     enumLiteral_0=(Token)match(input,146,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17887,10 +17687,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7541:3: (enumLiteral_1= 'seconds' )
+                    // InternalCONFIG.g:7477:3: (enumLiteral_1= 'seconds' )
                     {
-                    // InternalCONFIG.g:7541:3: (enumLiteral_1= 'seconds' )
-                    // InternalCONFIG.g:7542:4: enumLiteral_1= 'seconds'
+                    // InternalCONFIG.g:7477:3: (enumLiteral_1= 'seconds' )
+                    // InternalCONFIG.g:7478:4: enumLiteral_1= 'seconds'
                     {
                     enumLiteral_1=(Token)match(input,147,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17930,7 +17730,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigGlobalVarType"
-    // InternalCONFIG.g:7552:1: ruleGSSConfigGlobalVarType returns [Enumerator current=null] : ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) ) ;
+    // InternalCONFIG.g:7488:1: ruleGSSConfigGlobalVarType returns [Enumerator current=null] : ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) ) ;
     public final Enumerator ruleGSSConfigGlobalVarType() throws RecognitionException {
         Enumerator current = null;
 
@@ -17941,32 +17741,32 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7558:2: ( ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) ) )
-            // InternalCONFIG.g:7559:2: ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) )
+            // InternalCONFIG.g:7494:2: ( ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) ) )
+            // InternalCONFIG.g:7495:2: ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) )
             {
-            // InternalCONFIG.g:7559:2: ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) )
-            int alt69=2;
-            int LA69_0 = input.LA(1);
+            // InternalCONFIG.g:7495:2: ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) )
+            int alt68=2;
+            int LA68_0 = input.LA(1);
 
-            if ( (LA69_0==148) ) {
-                alt69=1;
+            if ( (LA68_0==148) ) {
+                alt68=1;
             }
-            else if ( (LA69_0==149) ) {
-                alt69=2;
+            else if ( (LA68_0==149) ) {
+                alt68=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 69, 0, input);
+                    new NoViableAltException("", 68, 0, input);
 
                 throw nvae;
             }
-            switch (alt69) {
+            switch (alt68) {
                 case 1 :
-                    // InternalCONFIG.g:7560:3: (enumLiteral_0= 'uint' )
+                    // InternalCONFIG.g:7496:3: (enumLiteral_0= 'uint' )
                     {
-                    // InternalCONFIG.g:7560:3: (enumLiteral_0= 'uint' )
-                    // InternalCONFIG.g:7561:4: enumLiteral_0= 'uint'
+                    // InternalCONFIG.g:7496:3: (enumLiteral_0= 'uint' )
+                    // InternalCONFIG.g:7497:4: enumLiteral_0= 'uint'
                     {
                     enumLiteral_0=(Token)match(input,148,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17982,10 +17782,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7568:3: (enumLiteral_1= 'formula' )
+                    // InternalCONFIG.g:7504:3: (enumLiteral_1= 'formula' )
                     {
-                    // InternalCONFIG.g:7568:3: (enumLiteral_1= 'formula' )
-                    // InternalCONFIG.g:7569:4: enumLiteral_1= 'formula'
+                    // InternalCONFIG.g:7504:3: (enumLiteral_1= 'formula' )
+                    // InternalCONFIG.g:7505:4: enumLiteral_1= 'formula'
                     {
                     enumLiteral_1=(Token)match(input,149,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18025,7 +17825,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigReferenceFieldType"
-    // InternalCONFIG.g:7579:1: ruleGSSConfigReferenceFieldType returns [Enumerator current=null] : ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) ) ;
+    // InternalCONFIG.g:7515:1: ruleGSSConfigReferenceFieldType returns [Enumerator current=null] : ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) ) ;
     public final Enumerator ruleGSSConfigReferenceFieldType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18036,32 +17836,32 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7585:2: ( ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) ) )
-            // InternalCONFIG.g:7586:2: ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) )
+            // InternalCONFIG.g:7521:2: ( ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) ) )
+            // InternalCONFIG.g:7522:2: ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) )
             {
-            // InternalCONFIG.g:7586:2: ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) )
-            int alt70=2;
-            int LA70_0 = input.LA(1);
+            // InternalCONFIG.g:7522:2: ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) )
+            int alt69=2;
+            int LA69_0 = input.LA(1);
 
-            if ( (LA70_0==150) ) {
-                alt70=1;
+            if ( (LA69_0==150) ) {
+                alt69=1;
             }
-            else if ( (LA70_0==151) ) {
-                alt70=2;
+            else if ( (LA69_0==151) ) {
+                alt69=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 70, 0, input);
+                    new NoViableAltException("", 69, 0, input);
 
                 throw nvae;
             }
-            switch (alt70) {
+            switch (alt69) {
                 case 1 :
-                    // InternalCONFIG.g:7587:3: (enumLiteral_0= 'tm' )
+                    // InternalCONFIG.g:7523:3: (enumLiteral_0= 'tm' )
                     {
-                    // InternalCONFIG.g:7587:3: (enumLiteral_0= 'tm' )
-                    // InternalCONFIG.g:7588:4: enumLiteral_0= 'tm'
+                    // InternalCONFIG.g:7523:3: (enumLiteral_0= 'tm' )
+                    // InternalCONFIG.g:7524:4: enumLiteral_0= 'tm'
                     {
                     enumLiteral_0=(Token)match(input,150,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18077,10 +17877,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7595:3: (enumLiteral_1= 'tc' )
+                    // InternalCONFIG.g:7531:3: (enumLiteral_1= 'tc' )
                     {
-                    // InternalCONFIG.g:7595:3: (enumLiteral_1= 'tc' )
-                    // InternalCONFIG.g:7596:4: enumLiteral_1= 'tc'
+                    // InternalCONFIG.g:7531:3: (enumLiteral_1= 'tc' )
+                    // InternalCONFIG.g:7532:4: enumLiteral_1= 'tc'
                     {
                     enumLiteral_1=(Token)match(input,151,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18120,7 +17920,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigAlarmMsgType"
-    // InternalCONFIG.g:7606:1: ruleGSSConfigAlarmMsgType returns [Enumerator current=null] : ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) ) ;
+    // InternalCONFIG.g:7542:1: ruleGSSConfigAlarmMsgType returns [Enumerator current=null] : ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) ) ;
     public final Enumerator ruleGSSConfigAlarmMsgType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18132,41 +17932,41 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7612:2: ( ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) ) )
-            // InternalCONFIG.g:7613:2: ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) )
+            // InternalCONFIG.g:7548:2: ( ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) ) )
+            // InternalCONFIG.g:7549:2: ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) )
             {
-            // InternalCONFIG.g:7613:2: ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) )
-            int alt71=3;
+            // InternalCONFIG.g:7549:2: ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) )
+            int alt70=3;
             switch ( input.LA(1) ) {
             case 152:
                 {
-                alt71=1;
+                alt70=1;
                 }
                 break;
             case 153:
                 {
-                alt71=2;
+                alt70=2;
                 }
                 break;
             case 154:
                 {
-                alt71=3;
+                alt70=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 71, 0, input);
+                    new NoViableAltException("", 70, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt71) {
+            switch (alt70) {
                 case 1 :
-                    // InternalCONFIG.g:7614:3: (enumLiteral_0= 'alarm1' )
+                    // InternalCONFIG.g:7550:3: (enumLiteral_0= 'alarm1' )
                     {
-                    // InternalCONFIG.g:7614:3: (enumLiteral_0= 'alarm1' )
-                    // InternalCONFIG.g:7615:4: enumLiteral_0= 'alarm1'
+                    // InternalCONFIG.g:7550:3: (enumLiteral_0= 'alarm1' )
+                    // InternalCONFIG.g:7551:4: enumLiteral_0= 'alarm1'
                     {
                     enumLiteral_0=(Token)match(input,152,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18182,10 +17982,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7622:3: (enumLiteral_1= 'alarm2' )
+                    // InternalCONFIG.g:7558:3: (enumLiteral_1= 'alarm2' )
                     {
-                    // InternalCONFIG.g:7622:3: (enumLiteral_1= 'alarm2' )
-                    // InternalCONFIG.g:7623:4: enumLiteral_1= 'alarm2'
+                    // InternalCONFIG.g:7558:3: (enumLiteral_1= 'alarm2' )
+                    // InternalCONFIG.g:7559:4: enumLiteral_1= 'alarm2'
                     {
                     enumLiteral_1=(Token)match(input,153,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18201,10 +18001,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalCONFIG.g:7630:3: (enumLiteral_2= 'alarm3' )
+                    // InternalCONFIG.g:7566:3: (enumLiteral_2= 'alarm3' )
                     {
-                    // InternalCONFIG.g:7630:3: (enumLiteral_2= 'alarm3' )
-                    // InternalCONFIG.g:7631:4: enumLiteral_2= 'alarm3'
+                    // InternalCONFIG.g:7566:3: (enumLiteral_2= 'alarm3' )
+                    // InternalCONFIG.g:7567:4: enumLiteral_2= 'alarm3'
                     {
                     enumLiteral_2=(Token)match(input,154,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18244,7 +18044,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigModifyType"
-    // InternalCONFIG.g:7641:1: ruleGSSConfigModifyType returns [Enumerator current=null] : ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) ) ;
+    // InternalCONFIG.g:7577:1: ruleGSSConfigModifyType returns [Enumerator current=null] : ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) ) ;
     public final Enumerator ruleGSSConfigModifyType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18255,32 +18055,32 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7647:2: ( ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) ) )
-            // InternalCONFIG.g:7648:2: ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) )
+            // InternalCONFIG.g:7583:2: ( ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) ) )
+            // InternalCONFIG.g:7584:2: ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) )
             {
-            // InternalCONFIG.g:7648:2: ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) )
-            int alt72=2;
-            int LA72_0 = input.LA(1);
+            // InternalCONFIG.g:7584:2: ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) )
+            int alt71=2;
+            int LA71_0 = input.LA(1);
 
-            if ( (LA72_0==155) ) {
-                alt72=1;
+            if ( (LA71_0==155) ) {
+                alt71=1;
             }
-            else if ( (LA72_0==156) ) {
-                alt72=2;
+            else if ( (LA71_0==156) ) {
+                alt71=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 72, 0, input);
+                    new NoViableAltException("", 71, 0, input);
 
                 throw nvae;
             }
-            switch (alt72) {
+            switch (alt71) {
                 case 1 :
-                    // InternalCONFIG.g:7649:3: (enumLiteral_0= 'increment' )
+                    // InternalCONFIG.g:7585:3: (enumLiteral_0= 'increment' )
                     {
-                    // InternalCONFIG.g:7649:3: (enumLiteral_0= 'increment' )
-                    // InternalCONFIG.g:7650:4: enumLiteral_0= 'increment'
+                    // InternalCONFIG.g:7585:3: (enumLiteral_0= 'increment' )
+                    // InternalCONFIG.g:7586:4: enumLiteral_0= 'increment'
                     {
                     enumLiteral_0=(Token)match(input,155,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18296,10 +18096,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7657:3: (enumLiteral_1= 'increment1wrap' )
+                    // InternalCONFIG.g:7593:3: (enumLiteral_1= 'increment1wrap' )
                     {
-                    // InternalCONFIG.g:7657:3: (enumLiteral_1= 'increment1wrap' )
-                    // InternalCONFIG.g:7658:4: enumLiteral_1= 'increment1wrap'
+                    // InternalCONFIG.g:7593:3: (enumLiteral_1= 'increment1wrap' )
+                    // InternalCONFIG.g:7594:4: enumLiteral_1= 'increment1wrap'
                     {
                     enumLiteral_1=(Token)match(input,156,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18339,7 +18139,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigAlarmValType"
-    // InternalCONFIG.g:7668:1: ruleGSSConfigAlarmValType returns [Enumerator current=null] : (enumLiteral_0= 'alarm1' ) ;
+    // InternalCONFIG.g:7604:1: ruleGSSConfigAlarmValType returns [Enumerator current=null] : (enumLiteral_0= 'alarm1' ) ;
     public final Enumerator ruleGSSConfigAlarmValType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18349,11 +18149,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7674:2: ( (enumLiteral_0= 'alarm1' ) )
-            // InternalCONFIG.g:7675:2: (enumLiteral_0= 'alarm1' )
+            // InternalCONFIG.g:7610:2: ( (enumLiteral_0= 'alarm1' ) )
+            // InternalCONFIG.g:7611:2: (enumLiteral_0= 'alarm1' )
             {
-            // InternalCONFIG.g:7675:2: (enumLiteral_0= 'alarm1' )
-            // InternalCONFIG.g:7676:3: enumLiteral_0= 'alarm1'
+            // InternalCONFIG.g:7611:2: (enumLiteral_0= 'alarm1' )
+            // InternalCONFIG.g:7612:3: enumLiteral_0= 'alarm1'
             {
             enumLiteral_0=(Token)match(input,152,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -18387,7 +18187,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSConfigReqAction"
-    // InternalCONFIG.g:7685:1: ruleGSSConfigReqAction returns [Enumerator current=null] : (enumLiteral_0= '_1' ) ;
+    // InternalCONFIG.g:7621:1: ruleGSSConfigReqAction returns [Enumerator current=null] : (enumLiteral_0= '_1' ) ;
     public final Enumerator ruleGSSConfigReqAction() throws RecognitionException {
         Enumerator current = null;
 
@@ -18397,11 +18197,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7691:2: ( (enumLiteral_0= '_1' ) )
-            // InternalCONFIG.g:7692:2: (enumLiteral_0= '_1' )
+            // InternalCONFIG.g:7627:2: ( (enumLiteral_0= '_1' ) )
+            // InternalCONFIG.g:7628:2: (enumLiteral_0= '_1' )
             {
-            // InternalCONFIG.g:7692:2: (enumLiteral_0= '_1' )
-            // InternalCONFIG.g:7693:3: enumLiteral_0= '_1'
+            // InternalCONFIG.g:7628:2: (enumLiteral_0= '_1' )
+            // InternalCONFIG.g:7629:3: enumLiteral_0= '_1'
             {
             enumLiteral_0=(Token)match(input,143,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -18645,91 +18445,89 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0002000000000000L});
         public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0004000000080000L});
         public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0010000000000000L});
-        public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000380L});
+        public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000F80L});
         public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0020000000000000L});
         public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0040000000000000L});
-        public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+        public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000007000L});
         public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0280000000000000L});
         public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0280000000080000L});
-        public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000001B80L});
-        public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000006400L});
-        public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x8280000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x8280000000080000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x0400000000000000L});
-        public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x0800000000000000L});
-        public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x1000000000000000L});
-        public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x6000000000080000L});
-        public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x4000000000080000L});
-        public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x2000000000080000L});
-        public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-        public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-        public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
-        public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-        public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x0000000000000000L,0x00000000000000C0L});
-        public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x0000000000080000L,0x0000000000004200L});
-        public static final BitSet FOLLOW_75 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-        public static final BitSet FOLLOW_76 = new BitSet(new long[]{0x0000000000080000L,0x0000000000080000L});
-        public static final BitSet FOLLOW_77 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-        public static final BitSet FOLLOW_78 = new BitSet(new long[]{0x0000000000080000L,0x0000000000200000L});
-        public static final BitSet FOLLOW_79 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
-        public static final BitSet FOLLOW_80 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
-        public static final BitSet FOLLOW_81 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x00000000000C0000L});
-        public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
-        public static final BitSet FOLLOW_83 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-        public static final BitSet FOLLOW_84 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-        public static final BitSet FOLLOW_85 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-        public static final BitSet FOLLOW_86 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-        public static final BitSet FOLLOW_87 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
-        public static final BitSet FOLLOW_88 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-        public static final BitSet FOLLOW_89 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000038000L});
-        public static final BitSet FOLLOW_90 = new BitSet(new long[]{0x5400000000080000L});
-        public static final BitSet FOLLOW_91 = new BitSet(new long[]{0x5000000000080000L});
-        public static final BitSet FOLLOW_92 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-        public static final BitSet FOLLOW_93 = new BitSet(new long[]{0x0000000000000000L,0x0000000001000000L});
-        public static final BitSet FOLLOW_94 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
-        public static final BitSet FOLLOW_95 = new BitSet(new long[]{0x0000000000000000L,0x000000000C000000L});
-        public static final BitSet FOLLOW_96 = new BitSet(new long[]{0x0000000000000000L,0x0000000008000000L});
-        public static final BitSet FOLLOW_97 = new BitSet(new long[]{0x0000000000080000L,0x00000000F0000000L});
-        public static final BitSet FOLLOW_98 = new BitSet(new long[]{0x0000000000080000L,0x00000000E0000000L});
-        public static final BitSet FOLLOW_99 = new BitSet(new long[]{0x0000000000080000L,0x00000000C0000000L});
-        public static final BitSet FOLLOW_100 = new BitSet(new long[]{0x0000000000080000L,0x0000000080000000L});
-        public static final BitSet FOLLOW_101 = new BitSet(new long[]{0x0000000000000000L,0x0000000210000000L});
-        public static final BitSet FOLLOW_102 = new BitSet(new long[]{0x0000000000000000L,0x0000000200000000L});
-        public static final BitSet FOLLOW_103 = new BitSet(new long[]{0x0000000000000000L,0x0000000840000000L});
-        public static final BitSet FOLLOW_104 = new BitSet(new long[]{0x0000000000000000L,0x0000000800000000L});
-        public static final BitSet FOLLOW_105 = new BitSet(new long[]{0x0000000000000000L,0x0000002000000000L});
-        public static final BitSet FOLLOW_106 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000300000L});
-        public static final BitSet FOLLOW_107 = new BitSet(new long[]{0x0000000000000000L,0x0000004000000000L});
-        public static final BitSet FOLLOW_108 = new BitSet(new long[]{0x0000000000000000L,0x0000288000000000L});
-        public static final BitSet FOLLOW_109 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000C00000L});
-        public static final BitSet FOLLOW_110 = new BitSet(new long[]{0x0000000000000000L,0x0000010000000000L});
-        public static final BitSet FOLLOW_111 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-        public static final BitSet FOLLOW_112 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
-        public static final BitSet FOLLOW_113 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-        public static final BitSet FOLLOW_114 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-        public static final BitSet FOLLOW_115 = new BitSet(new long[]{0x0000000000000000L,0x0120000000000000L});
-        public static final BitSet FOLLOW_116 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000007000000L});
-        public static final BitSet FOLLOW_117 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
-        public static final BitSet FOLLOW_118 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000018000000L});
-        public static final BitSet FOLLOW_119 = new BitSet(new long[]{0x0000000000000000L,0x0008000000000000L});
-        public static final BitSet FOLLOW_120 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000001000000L});
-        public static final BitSet FOLLOW_121 = new BitSet(new long[]{0x0000000000000000L,0x0040000000000000L});
-        public static final BitSet FOLLOW_122 = new BitSet(new long[]{0x0000000000080000L,0x0080000000000000L});
-        public static final BitSet FOLLOW_123 = new BitSet(new long[]{0x0000000000000000L,0x0400000000000000L});
-        public static final BitSet FOLLOW_124 = new BitSet(new long[]{0x0000000000080000L,0x1800000000000000L});
-        public static final BitSet FOLLOW_125 = new BitSet(new long[]{0x0000000000080000L,0x1000000000000000L});
-        public static final BitSet FOLLOW_126 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-        public static final BitSet FOLLOW_127 = new BitSet(new long[]{0x0000000000000002L,0x2000000000000000L});
-        public static final BitSet FOLLOW_128 = new BitSet(new long[]{0x0000000000000000L,0x4000000000000000L});
-        public static final BitSet FOLLOW_129 = new BitSet(new long[]{0x0000000000000000L,0x8000000000000000L});
-        public static final BitSet FOLLOW_130 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_131 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_132 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
-        public static final BitSet FOLLOW_133 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000018L});
-        public static final BitSet FOLLOW_134 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000010L});
-        public static final BitSet FOLLOW_135 = new BitSet(new long[]{0x0000000000000022L,0x2000000000000000L,0x0000000000000004L});
-        public static final BitSet FOLLOW_136 = new BitSet(new long[]{0x0000000000000022L,0x0000000000000000L,0x0000000000000004L});
-        public static final BitSet FOLLOW_137 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000004L});
+        public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x8280000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x8280000000080000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0400000000000000L});
+        public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x0800000000000000L});
+        public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x1000000000000000L});
+        public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x6000000000080000L});
+        public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x4000000000080000L});
+        public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x2000000000080000L});
+        public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+        public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+        public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+        public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+        public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0000000000000000L,0x00000000000000C0L});
+        public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x0000000000080000L,0x0000000000004200L});
+        public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
+        public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x0000000000080000L,0x0000000000080000L});
+        public static final BitSet FOLLOW_75 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+        public static final BitSet FOLLOW_76 = new BitSet(new long[]{0x0000000000080000L,0x0000000000200000L});
+        public static final BitSet FOLLOW_77 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
+        public static final BitSet FOLLOW_78 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
+        public static final BitSet FOLLOW_79 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x00000000000C0000L});
+        public static final BitSet FOLLOW_80 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
+        public static final BitSet FOLLOW_81 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
+        public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+        public static final BitSet FOLLOW_83 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+        public static final BitSet FOLLOW_84 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+        public static final BitSet FOLLOW_85 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
+        public static final BitSet FOLLOW_86 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+        public static final BitSet FOLLOW_87 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000038000L});
+        public static final BitSet FOLLOW_88 = new BitSet(new long[]{0x5400000000080000L});
+        public static final BitSet FOLLOW_89 = new BitSet(new long[]{0x5000000000080000L});
+        public static final BitSet FOLLOW_90 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+        public static final BitSet FOLLOW_91 = new BitSet(new long[]{0x0000000000000000L,0x0000000001000000L});
+        public static final BitSet FOLLOW_92 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
+        public static final BitSet FOLLOW_93 = new BitSet(new long[]{0x0000000000000000L,0x000000000C000000L});
+        public static final BitSet FOLLOW_94 = new BitSet(new long[]{0x0000000000000000L,0x0000000008000000L});
+        public static final BitSet FOLLOW_95 = new BitSet(new long[]{0x0000000000080000L,0x00000000F0000000L});
+        public static final BitSet FOLLOW_96 = new BitSet(new long[]{0x0000000000080000L,0x00000000E0000000L});
+        public static final BitSet FOLLOW_97 = new BitSet(new long[]{0x0000000000080000L,0x00000000C0000000L});
+        public static final BitSet FOLLOW_98 = new BitSet(new long[]{0x0000000000080000L,0x0000000080000000L});
+        public static final BitSet FOLLOW_99 = new BitSet(new long[]{0x0000000000000000L,0x0000000210000000L});
+        public static final BitSet FOLLOW_100 = new BitSet(new long[]{0x0000000000000000L,0x0000000200000000L});
+        public static final BitSet FOLLOW_101 = new BitSet(new long[]{0x0000000000000000L,0x0000000840000000L});
+        public static final BitSet FOLLOW_102 = new BitSet(new long[]{0x0000000000000000L,0x0000000800000000L});
+        public static final BitSet FOLLOW_103 = new BitSet(new long[]{0x0000000000000000L,0x0000002000000000L});
+        public static final BitSet FOLLOW_104 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000300000L});
+        public static final BitSet FOLLOW_105 = new BitSet(new long[]{0x0000000000000000L,0x0000004000000000L});
+        public static final BitSet FOLLOW_106 = new BitSet(new long[]{0x0000000000000000L,0x0000288000000000L});
+        public static final BitSet FOLLOW_107 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000C00000L});
+        public static final BitSet FOLLOW_108 = new BitSet(new long[]{0x0000000000000000L,0x0000010000000000L});
+        public static final BitSet FOLLOW_109 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+        public static final BitSet FOLLOW_110 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+        public static final BitSet FOLLOW_111 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
+        public static final BitSet FOLLOW_112 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
+        public static final BitSet FOLLOW_113 = new BitSet(new long[]{0x0000000000000000L,0x0120000000000000L});
+        public static final BitSet FOLLOW_114 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000007000000L});
+        public static final BitSet FOLLOW_115 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+        public static final BitSet FOLLOW_116 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000018000000L});
+        public static final BitSet FOLLOW_117 = new BitSet(new long[]{0x0000000000000000L,0x0008000000000000L});
+        public static final BitSet FOLLOW_118 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000001000000L});
+        public static final BitSet FOLLOW_119 = new BitSet(new long[]{0x0000000000000000L,0x0040000000000000L});
+        public static final BitSet FOLLOW_120 = new BitSet(new long[]{0x0000000000080000L,0x0080000000000000L});
+        public static final BitSet FOLLOW_121 = new BitSet(new long[]{0x0000000000000000L,0x0400000000000000L});
+        public static final BitSet FOLLOW_122 = new BitSet(new long[]{0x0000000000080000L,0x1800000000000000L});
+        public static final BitSet FOLLOW_123 = new BitSet(new long[]{0x0000000000080000L,0x1000000000000000L});
+        public static final BitSet FOLLOW_124 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
+        public static final BitSet FOLLOW_125 = new BitSet(new long[]{0x0000000000000002L,0x2000000000000000L});
+        public static final BitSet FOLLOW_126 = new BitSet(new long[]{0x0000000000000000L,0x4000000000000000L});
+        public static final BitSet FOLLOW_127 = new BitSet(new long[]{0x0000000000000000L,0x8000000000000000L});
+        public static final BitSet FOLLOW_128 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_129 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_130 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
+        public static final BitSet FOLLOW_131 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000018L});
+        public static final BitSet FOLLOW_132 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000010L});
+        public static final BitSet FOLLOW_133 = new BitSet(new long[]{0x0000000000000022L,0x2000000000000000L,0x0000000000000004L});
+        public static final BitSet FOLLOW_134 = new BitSet(new long[]{0x0000000000000022L,0x0000000000000000L,0x0000000000000004L});
+        public static final BitSet FOLLOW_135 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000004L});
     }
 
 

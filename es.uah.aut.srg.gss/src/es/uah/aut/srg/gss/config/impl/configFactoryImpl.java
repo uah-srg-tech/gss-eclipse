@@ -88,6 +88,7 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 			case configPackage.GSS_CONFIG_PERIOD: return createGSSConfigPeriod();
 			case configPackage.GSS_CONFIG_INTERVAL_RANGE: return createGSSConfigIntervalRange();
 			case configPackage.GSS_CONFIG_PERIODIC_TCS: return createGSSConfigPeriodicTCs();
+			case configPackage.GSS_CONFIG_PERIODIC_TC: return createGSSConfigPeriodicTC();
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL2: return createGSSConfigPeriodicTCLevel2();
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL1: return createGSSConfigPeriodicTCLevel1();
 			case configPackage.GSS_CONFIG_PERIODIC_TC_LEVEL0: return createGSSConfigPeriodicTCLevel0();
@@ -120,10 +121,6 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 		switch (eDataType.getClassifierID()) {
 			case configPackage.GSS_CONFIG_ENABLE_DISABLE:
 				return createGSSConfigEnableDisableFromString(eDataType, initialValue);
-			case configPackage.GSS_CONFIG_MAIN_INTERFACE_TYPE:
-				return createGSSConfigMainInterfaceTypeFromString(eDataType, initialValue);
-			case configPackage.GSS_CONFIG_MAIN_INTERFACE_IO_TYPE:
-				return createGSSConfigMainInterfaceIOTypeFromString(eDataType, initialValue);
 			case configPackage.GSS_CONFIG_INTERFACE_TYPE:
 				return createGSSConfigInterfaceTypeFromString(eDataType, initialValue);
 			case configPackage.GSS_CONFIG_INTERFACE_IO_TYPE:
@@ -159,10 +156,6 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 		switch (eDataType.getClassifierID()) {
 			case configPackage.GSS_CONFIG_ENABLE_DISABLE:
 				return convertGSSConfigEnableDisableToString(eDataType, instanceValue);
-			case configPackage.GSS_CONFIG_MAIN_INTERFACE_TYPE:
-				return convertGSSConfigMainInterfaceTypeToString(eDataType, instanceValue);
-			case configPackage.GSS_CONFIG_MAIN_INTERFACE_IO_TYPE:
-				return convertGSSConfigMainInterfaceIOTypeToString(eDataType, instanceValue);
 			case configPackage.GSS_CONFIG_INTERFACE_TYPE:
 				return convertGSSConfigInterfaceTypeToString(eDataType, instanceValue);
 			case configPackage.GSS_CONFIG_INTERFACE_IO_TYPE:
@@ -423,6 +416,16 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GSSConfigPeriodicTC createGSSConfigPeriodicTC() {
+		GSSConfigPeriodicTCImpl gssConfigPeriodicTC = new GSSConfigPeriodicTCImpl();
+		return gssConfigPeriodicTC;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GSSConfigPeriodicTCLevel2 createGSSConfigPeriodicTCLevel2() {
 		GSSConfigPeriodicTCLevel2Impl gssConfigPeriodicTCLevel2 = new GSSConfigPeriodicTCLevel2Impl();
 		return gssConfigPeriodicTCLevel2;
@@ -605,46 +608,6 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 	 * @generated
 	 */
 	public String convertGSSConfigEnableDisableToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigMainInterfaceType createGSSConfigMainInterfaceTypeFromString(EDataType eDataType, String initialValue) {
-		GSSConfigMainInterfaceType result = GSSConfigMainInterfaceType.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertGSSConfigMainInterfaceTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigMainInterfaceIOType createGSSConfigMainInterfaceIOTypeFromString(EDataType eDataType, String initialValue) {
-		GSSConfigMainInterfaceIOType result = GSSConfigMainInterfaceIOType.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertGSSConfigMainInterfaceIOTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

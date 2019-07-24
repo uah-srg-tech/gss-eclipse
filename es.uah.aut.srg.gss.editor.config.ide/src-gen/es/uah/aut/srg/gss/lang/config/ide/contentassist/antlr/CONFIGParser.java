@@ -57,7 +57,6 @@ public class CONFIGParser extends AbstractContentAssistParser {
 					put(grammarAccess.getINTEGERAccess().getAlternatives(), "rule__INTEGER__Alternatives");
 					put(grammarAccess.getEBooleanAccess().getAlternatives(), "rule__EBoolean__Alternatives");
 					put(grammarAccess.getGSSConfigEnableDisableAccess().getAlternatives(), "rule__GSSConfigEnableDisable__Alternatives");
-					put(grammarAccess.getGSSConfigMainInterfaceTypeAccess().getAlternatives(), "rule__GSSConfigMainInterfaceType__Alternatives");
 					put(grammarAccess.getGSSConfigInterfaceTypeAccess().getAlternatives(), "rule__GSSConfigInterfaceType__Alternatives");
 					put(grammarAccess.getGSSConfigInterfaceIOTypeAccess().getAlternatives(), "rule__GSSConfigInterfaceIOType__Alternatives");
 					put(grammarAccess.getGSSConfigUpperLevelLevelAccess().getAlternatives(), "rule__GSSConfigUpperLevelLevel__Alternatives");

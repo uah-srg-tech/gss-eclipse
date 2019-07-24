@@ -237,6 +237,15 @@ public interface configFactory extends EFactory {
 	GSSConfigPeriodicTCs createGSSConfigPeriodicTCs();
 
 	/**
+	 * Returns a new object of class '<em>GSS Config Periodic TC</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Config Periodic TC</em>'.
+	 * @generated
+	 */
+	GSSConfigPeriodicTC createGSSConfigPeriodicTC();
+
+	/**
 	 * Returns a new object of class '<em>GSS Config Periodic TC Level2</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
