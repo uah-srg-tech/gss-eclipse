@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2019 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.gss/src" modelPluginID="es.uah.aut.srg.gss" modelName="Environment"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="charts.genmodel#//charts common.genmodel#//common ../../es.uah.aut.srg.tmtcif/model/common.genmodel#//common ../../es.uah.aut.srg.tmtcif/model/export.genmodel#//export ../../es.uah.aut.srg.tmtcif/model/filter.genmodel#//filter ../../es.uah.aut.srg.tmtcif/model/format.genmodel#//format iface.genmodel#//iface ../../es.uah.aut.srg.tmtcif/model/import.genmodel#//import protocol_packets.genmodel#//protocol_packets"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>environment.ecore</foreignModel>
+  <genPackages prefix="environment" basePackage="es.uah.aut.srg.gss" disposableProviderFactory="true"
+      ecorePackage="environment.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//GSSEnvironmentEnableDisable">
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentEnableDisable/disabled"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentEnableDisable/enabled"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//GSSEnvironmentInterfaceType">
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentInterfaceType/SpW"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentInterfaceType/SpW_TC"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentInterfaceType/SpW_Error"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentInterfaceType/uart"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentInterfaceType/dummy"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//GSSEnvironmentInterfaceIOType">
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentInterfaceIOType/in_out"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentInterfaceIOType/in"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentInterfaceIOType/out"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//GSSEnvironmentUpperLevelLevel">
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentUpperLevelLevel/_1"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentUpperLevelLevel/_2"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentUpperLevelLevel/_3"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//GSSEnvironmentUnit">
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentUnit/miliseconds"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentUnit/seconds"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//GSSEnvironmentGlobalVarType">
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentGlobalVarType/uint"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentGlobalVarType/formula"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//GSSEnvironmentReferenceFieldType">
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentReferenceFieldType/tm"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentReferenceFieldType/tc"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//GSSEnvironmentAlarmMsgType">
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentAlarmMsgType/alarm1"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentAlarmMsgType/alarm2"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentAlarmMsgType/alarm3"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//GSSEnvironmentModifyType">
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentModifyType/increment"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentModifyType/increment1wrap"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//GSSEnvironmentAlarmValType">
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//GSSEnvironmentAlarmValType/alarm1"/>
+    </genEnums>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironment/scenario"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentScenario">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentScenario/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentScenario/gss_options"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentScenario/Protocols"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentScenario/Interfaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentScenario/SpecialPackets"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentScenario/PeriodicTCs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentScenario/GlobalVars"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentScenario/Monitors"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentOptions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentOptions/gss_info"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentOptions/gss_info_print"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentOptions/phy_header_print"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentOptions/discardErrorFlags"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentInfo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentInfo/test_campaign"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentInfo/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentInfo/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentInfo/version_control_url"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentInfoPrint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentInfoPrint/mainLog"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentInfoPrint/portLogs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentInfoPrint/rawLog"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentPhyHeaderPrint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPhyHeaderPrint/mainLog"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPhyHeaderPrint/portLogs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPhyHeaderPrint/rawLog"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPhyHeaderPrint/gssTabs"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentDiscardErrorFlags">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentDiscardErrorFlags/txErrors"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentDiscardErrorFlags/notExpectedPackets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentDiscardErrorFlags/filtersKo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentDiscardErrorFlags/validTimesKo"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentProtocols">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentProtocols/Protocol"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentProtocol">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentProtocol/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentProtocol/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentProtocol/typeLevel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentProtocol/typeOffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentProtocol/subtypeOffset"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentInterfaces">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentInterfaces/MainInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentInterfaces/Interface"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentMainInterface">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentMainInterface/ProtocolPacketsFile"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentInterface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentInterface/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentInterface/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentInterface/ifType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentInterface/ifConfig"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentInterface/ioType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentInterface/protocolID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentInterface/LevelInOut"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentInterface/LevelIn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentInterface/LevelOut"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentLevelInOut">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentLevelInOut/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentLevelInOut/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentLevelInOut/TMformat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentLevelInOut/TCformat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentLevelInOut/inputFilter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentLevelInOut/export_to_prev_Level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentLevelInOut/import_from_prev_Level"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentLevelIn">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentLevelIn/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentLevelIn/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentLevelIn/TCformat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentLevelIn/export_to_prev_Level"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentLevelOut">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentLevelOut/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentLevelOut/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentLevelOut/TMformat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentLevelOut/inputFilter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentLevelOut/import_from_prev_Level"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentSpecialPackets">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentSpecialPackets/SpecialPacket"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentSpecialPacket">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentSpecialPacket/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentSpecialPacket/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentSpecialPacket/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentSpecialPacket/ifRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentSpecialPacket/levels"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentSpecialPacket/levelRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentSpecialPacket/inputFilter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentSpecialPacket/UpperLevels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentSpecialPacket/printingData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentSpecialPacket/period"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentSpecialPacket/intervalRange"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentUpperLevels">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentUpperLevels/UpperLevel"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentUpperLevel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentUpperLevel/level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentUpperLevel/TMformat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentUpperLevel/inputFilter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentUpperLevel/import_from_prev_Level"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentPrintingData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPrintingData/printStatus"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPrintingData/structuredData"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentStructuredData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentStructuredData/levelRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentStructuredData/firstField"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentPeriod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPeriod/min_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPeriod/min_unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPeriod/max_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPeriod/max_unit"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentIntervalRange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentIntervalRange/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentIntervalRange/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentIntervalRange/interval_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentIntervalRange/interval_unit"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentPeriodicTCs">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCs/PeriodicTC_level_2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCs/PeriodicTC_level_1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCs/PeriodicTC_level_0"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentPeriodicTC">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPeriodicTC/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPeriodicTC/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPeriodicTC/ifRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPeriodicTC/period_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPeriodicTC/period_unit"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentPeriodicTCLevel2">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCLevel2/level2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCLevel2/app_to_level2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCLevel2/level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCLevel2/level2_to_level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCLevel2/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCLevel2/level1_to_level0"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentPeriodicTCLevel1">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCLevel1/level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCLevel1/app_to_level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCLevel1/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCLevel1/level1_to_level0"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentPeriodicTCLevel0">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCLevel0/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPeriodicTCLevel0/app_to_level0"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentGlobalVars">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentGlobalVars/GlobalVar"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentGlobalVar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentGlobalVar/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentGlobalVar/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentGlobalVar/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentGlobalVar/initial_value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentGlobalVar/referenceField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentGlobalVar/referencePeriodicTC"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentGlobalVar/referenceSpecialPacket"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentReferenceField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentReferenceField/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentReferenceField/ifRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentReferenceField/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentReferenceField/fieldRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentReferenceField/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentReferenceField/size"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentReferencePeriodicTC">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentReferencePeriodicTC/idRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentReferencePeriodicTC/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentReferencePeriodicTC/fieldRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentReferencePeriodicTC/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentReferencePeriodicTC/size"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentReferenceSpecialPacket">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentReferenceSpecialPacket/idRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentReferenceSpecialPacket/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentReferenceSpecialPacket/fieldRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentReferenceSpecialPacket/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentReferenceSpecialPacket/size"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentMonitors">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentMonitors/ChartsFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentMonitors/plot"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentMonitors/alarmMsg"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentMonitors/modify"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentMonitors/alarmVal"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentPlot">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentPlot/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPlot/chartRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPlot/GVFiltered"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentPlot/GVPeriodic"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentAlarmMsg">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentAlarmMsg/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentAlarmMsg/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentAlarmMsg/text"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentAlarmMsg/GVFiltered"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentAlarmMsg/GVPeriodic"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentModify">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentModify/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentModify/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentModify/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentModify/GVFiltered"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentModify/GVPeriodic"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentAlarmVal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentAlarmVal/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentAlarmVal/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentAlarmVal/GVFiltered"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentAlarmVal/GVPeriodic"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentGVFiltered">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentGVFiltered/GlobalVarRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentGVFiltered/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="environment.ecore#//GSSEnvironmentGVPeriodic">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//GSSEnvironmentGVPeriodic/GlobalVarRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentGVPeriodic/period_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//GSSEnvironmentGVPeriodic/period_unit"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

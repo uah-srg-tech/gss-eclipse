@@ -54,4 +54,12 @@
             genModel="model/test_proc.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated environment -->
+      <package
+            uri="http://srg.aut.uah.es/gss/environment"
+            class="es.uah.aut.srg.gss.environment.environmentPackage"
+            genModel="model/environment.genmodel"/>
+   </extension>
+
 </plugin>

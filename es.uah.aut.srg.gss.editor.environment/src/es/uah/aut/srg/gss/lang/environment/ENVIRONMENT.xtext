@@ -1,0 +1,482 @@
+grammar es.uah.aut.srg.gss.lang.environment.ENVIRONMENT with org.eclipse.xtext.common.Terminals
+
+import "http://srg.aut.uah.es/gss/environment" 
+import "http://srg.aut.uah.es/gss/common" as common 
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+import "http://srg.aut.uah.es/tmtcif/format" as format
+import "http://srg.aut.uah.es/tmtcif/export" as export
+import "http://srg.aut.uah.es/tmtcif/filter" as filter
+import "http://srg.aut.uah.es/tmtcif/import" as import_
+import "http://srg.aut.uah.es/gss/charts" as charts
+import "http://srg.aut.uah.es/gss/protocol_packets" as protocol_packets
+import "http://srg.aut.uah.es/gss/iface" as iface
+
+GSSModelFile returns common::GSSModelFile:
+	(imports+=GSSModelFileImport)*
+	element=GSSEnvironmentGSSEnvironment
+;
+
+GSSModelFileImport returns common::GSSModelFileImport: 
+	'import' ':=' importURI=STRING ';'
+;
+
+GSSEnvironmentGSSEnvironment returns GSSEnvironmentEnvironment:
+	'GSSEnvironmentEnvironment'
+	name=ID
+	'{'
+		('uri' ':=' uri=QualifiedName ';')
+		'version' ':=' version=Version ';'
+		scenario+=GSSEnvironmentScenario
+	'}' ';'
+;
+
+GSSEnvironmentScenario returns GSSEnvironmentScenario:
+	'GSSEnvironmentScenario'
+	name=ID
+	'{'
+		'id' ':=' id=INTEGER ';'
+		gss_options=GSSEnvironmentOptions
+		Protocols=GSSEnvironmentProtocols
+		Interfaces=GSSEnvironmentInterfaces
+		(SpecialPackets=GSSEnvironmentSpecialPackets)?
+		(PeriodicTCs=GSSEnvironmentPeriodicTCs)?
+		((GlobalVars=GSSEnvironmentGlobalVars) &
+		 (Monitors=GSSEnvironmentMonitors))?
+	'}' ';'
+;
+
+GSSEnvironmentOptions returns GSSEnvironmentOptions:
+	'GSSEnvironmentOptions' '{'
+		gss_info=GSSEnvironmentGSSInfo
+		gss_info_print=GSSEnvironmentGSSInfoPrint
+		phy_header_print=GSSEnvironmentPhyHeaderPrint
+		discardErrorFlags=GSSEnvironmentGSSDiscardErrorFlags
+	'}' ';'
+;
+
+GSSEnvironmentProtocols returns GSSEnvironmentProtocols:
+	'GSSEnvironmentProtocols' '{'
+		(Protocol+=GSSEnvironmentProtocol)+
+	'}' ';'
+;
+
+GSSEnvironmentInterfaces returns GSSEnvironmentInterfaces:
+	'GSSEnvironmentInterfaces' '{'
+		MainInterface=GSSEnvironmentMainInterface
+		(Interface+=GSSEnvironmentInterface)*
+	'}' ';'
+;
+
+GSSEnvironmentSpecialPackets returns GSSEnvironmentSpecialPackets:
+	'GSSEnvironmentSpecialPackets' '{'
+		(SpecialPacket+=GSSEnvironmentSpecialPacket)
+	'}' ';'
+;
+
+GSSEnvironmentPeriodicTCs returns GSSEnvironmentPeriodicTCs:
+	{GSSEnvironmentPeriodicTCs}
+	'GSSEnvironmentPeriodicTCs' '{'
+		((PeriodicTC_level_2+=GSSEnvironmentPeriodicTCLevel2) |
+		 (PeriodicTC_level_1+=GSSEnvironmentPeriodicTCLevel1) |
+		 (PeriodicTC_level_0+=GSSEnvironmentPeriodicTCLevel0))*
+	'}' ';'
+;
+
+GSSEnvironmentGlobalVars returns GSSEnvironmentGlobalVars:
+	'GSSEnvironmentGlobalVars' '{'
+		(GlobalVar+=GSSEnvironmentGlobalVar)+ 
+	'}' ';'
+;
+
+GSSEnvironmentMonitors returns GSSEnvironmentMonitors:
+	'GSSEnvironmentMonitors' '{'
+		('ChartsFile' ':=' ChartsFile=[charts::GSSChartsCharts|VersionedQualifiedName] ';')?
+		((plot+=GSSEnvironmentPlot) |
+		 (alarmMsg+=GSSEnvironmentAlarmMsg) |
+		 (modify+=GSSEnvironmentModify) |
+		 (alarmVal+=GSSEnvironmentAlarmVal))+
+	'}' ';'
+;
+
+GSSEnvironmentGSSInfo returns GSSEnvironmentInfo:
+	'GSSEnvironmentInfo' '{'
+		'test_campaign' ':=' test_campaign=STRING ';'
+		'version' ':=' version=Version ';'
+		'date' ':=' date=DATE ';'
+		('version_control_url' ':=' version_control_url=URL ';')?
+	'}' ';'
+;
+
+GSSEnvironmentGSSInfoPrint returns GSSEnvironmentInfoPrint:
+	'GSSEnvironmentInfoPrint'
+	'{'
+		'mainLog' ':=' mainLog=GSSEnvironmentEnableDisable ';'
+		'portLogs' ':=' portLogs=GSSEnvironmentEnableDisable ';'
+		'rawLog' ':=' rawLog=GSSEnvironmentEnableDisable ';'
+	'}' ';'
+;
+
+GSSEnvironmentPhyHeaderPrint returns GSSEnvironmentPhyHeaderPrint:
+	'GSSEnvironmentPhyHeaderPrint' '{'
+		'mainLog' ':=' mainLog=GSSEnvironmentEnableDisable ';'
+		'portLogs' ':=' portLogs=GSSEnvironmentEnableDisable ';'
+		'rawLog' ':=' rawLog=GSSEnvironmentEnableDisable ';'
+		'gssTabs' ':=' gssTabs=GSSEnvironmentEnableDisable ';'
+	'}' ';'
+;
+
+GSSEnvironmentGSSDiscardErrorFlags returns GSSEnvironmentDiscardErrorFlags:
+	'GSSEnvironmentDiscardErrorFlags' '{'
+		'txErrors' ':=' txErrors=GSSEnvironmentEnableDisable ';'
+		'notExpectedPackets' ':=' notExpectedPackets=GSSEnvironmentEnableDisable ';'
+		'filtersKo' ':=' filtersKo=GSSEnvironmentEnableDisable ';'
+		'validTimesKo' ':=' validTimesKo=GSSEnvironmentEnableDisable ';'
+	'}' ';'
+;
+
+enum GSSEnvironmentEnableDisable returns GSSEnvironmentEnableDisable:
+	disabled = 'disabled' | enabled = 'enabled'
+;
+
+GSSEnvironmentProtocol returns GSSEnvironmentProtocol:
+	'GSSEnvironmentProtocol' '{'
+		'id' ':=' id=INTEGER ';'
+		'name' ':=' name=ID ';'
+		'typeLevel' ':=' typeLevel=INTEGER ';'
+		'typeOffset' ':=' typeOffset=INTEGER ';'
+		('subtypeOffset' ':=' subtypeOffset=INTEGER ';')?
+	'}' ';'
+;
+
+GSSEnvironmentMainInterface returns GSSEnvironmentMainInterface:
+	'GSSEnvironmentMainInterface' '{'
+		'id' ':=' id=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		'ifType' ':=' ifType=GSSEnvironmentInterfaceType ';'
+		'ifConfig' ':=' ifConfig=[iface::GSSIfacePortConfig|VersionedQualifiedName] ';' 
+		'ioType' ':=' ioType=GSSEnvironmentInterfaceIOType ';'
+		('protocolID' ':=' protocolID=[GSSEnvironmentProtocol|VersionedQualifiedReferenceName] ';')?
+		('ProtocolPacketsFile' ':=' ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
+		(LevelInOut+=GSSEnvironmentLevelInOut)+ 
+	'}' ';'
+;
+
+GSSEnvironmentInterface returns GSSEnvironmentInterface:
+	'GSSEnvironmentInterface' '{'
+		'id' ':=' id=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		'ifType' ':=' ifType=GSSEnvironmentInterfaceType ';'
+		'ifConfig' ':=' ifConfig=[iface::GSSIfacePortConfig|VersionedQualifiedName] ';'
+		'ioType' ':=' ioType=GSSEnvironmentInterfaceIOType ';'
+		('protocolID' ':=' protocolID=[GSSEnvironmentProtocol|VersionedQualifiedReferenceName] ';')?
+		((LevelInOut+=GSSEnvironmentLevelInOut) |
+		 (LevelIn+=GSSEnvironmentLevelIn) |
+		 (LevelOut+=GSSEnvironmentLevelOut))+ 
+	'}' ';'
+;
+
+GSSEnvironmentLevelInOut returns GSSEnvironmentLevelInOut:
+	'GSSEnvironmentLevelInOut' '{'
+		'id' ':=' id=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		'TMformat' ':=' TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
+		'TCformat' ':=' TCformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
+		'inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';'
+		('export_to_prev_Level' ':=' export_to_prev_Level=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+		('import_from_prev_Level' ':=' import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
+	'}' ';'
+;
+
+GSSEnvironmentLevelIn returns GSSEnvironmentLevelIn:
+	'GSSEnvironmentLevelIn' '{'
+		'id' ':=' id=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		'TCformat' ':=' TCformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
+		('export_to_prev_Level' ':=' export_to_prev_Level=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+	'}' ';'
+;
+
+GSSEnvironmentLevelOut returns GSSEnvironmentLevelOut:
+	'GSSEnvironmentLevelOut' '{'
+		'id' ':=' id=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		'TMformat' ':=' TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
+		'inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';'
+		('import_from_prev_Level' ':=' import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
+	'}' ';'
+;
+
+
+enum GSSEnvironmentInterfaceType returns GSSEnvironmentInterfaceType:
+	SpW = 'SpW' | SpW_TC = 'SpW_TC' | SpW_Error = 'SpW_Error' |
+	uart = 'uart' | dummy = 'dummy'
+;
+
+enum GSSEnvironmentInterfaceIOType returns GSSEnvironmentInterfaceIOType:
+	in_out = 'in_out' | in = 'in' | out = 'out'
+;
+
+GSSEnvironmentSpecialPacket returns GSSEnvironmentSpecialPacket:
+	'GSSEnvironmentSpecialPacket' '{'
+		'status' ':=' status=GSSEnvironmentEnableDisable ';'
+		'name' ':=' name=STRING ';'
+		'id' ':=' id=INTEGER ';'
+		'ifRef' ':=' ifRef=INTEGER ';'
+		'levels' ':=' levels=INTEGER ';'
+		'levelRef' ':=' levelRef=INTEGER ';'
+		'inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';'
+		(UpperLevels+=GSSEnvironmentUpperLevels)?
+		printingData=GSSEnvironmentPrintingData
+		((period=GSSEnvironmentPeriod) |
+		 (intervalRange=GSSEnvironmentIntervalRange))?
+	'}' ';'
+;
+
+GSSEnvironmentUpperLevels returns GSSEnvironmentUpperLevels:
+	'GSSEnvironmentUpperLevels' '{'
+		(UpperLevel+=GSSEnvironmentUpperLevel)+
+	'}' ';'
+;
+
+GSSEnvironmentPrintingData returns GSSEnvironmentPrintingData:
+	'GSSEnvironmentPrintingData' '{'
+		'printStatus' ':=' printStatus=GSSEnvironmentEnableDisable ';'
+		(structuredData=GSSEnvironmentStructuredData)?
+	'}' ';'
+;
+
+GSSEnvironmentPeriod returns GSSEnvironmentPeriod:
+	'GSSEnvironmentPeriod' '{'
+		'min_value' ':=' min_value=INTEGER ';'
+		'min_unit' ':=' min_unit=GSSEnvironmentUnit ';'
+		'max_value' ':=' max_value=INTEGER ';'
+		'max_unit' ':=' max_unit=GSSEnvironmentUnit ';'
+	'}' ';'
+;
+
+GSSEnvironmentIntervalRange returns GSSEnvironmentIntervalRange:
+	'GSSEnvironmentIntervalRange' '{'
+		'min' ':=' min=INTEGER ';'
+		'max' ':=' max=INTEGER ';'
+		'interval_value' ':=' interval_value=INTEGER ';'
+		'interval_unit' ':=' interval_unit=GSSEnvironmentUnit ';'
+	'}' ';'
+;
+
+GSSEnvironmentUpperLevel returns GSSEnvironmentUpperLevel:
+	'GSSEnvironmentUpperLevel' '{'
+		'level' ':=' level=GSSEnvironmentUpperLevelLevel ';' 
+		('TMformat' ':=' TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		('inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')?
+		('import_from_prev_Level' ':=' import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
+	'}' ';'
+;
+
+enum GSSEnvironmentUpperLevelLevel returns GSSEnvironmentUpperLevelLevel:
+	_1 = '_1' | _2 = '_2' | _3 = '_3'
+;
+
+GSSEnvironmentStructuredData returns GSSEnvironmentStructuredData:
+	'GSSEnvironmentStructuredData' '{'
+		'levelRef' ':=' levelRef=INTEGER ';'
+		'firstField' ':=' firstField=INTEGER ';'
+	'}' ';'
+;
+
+enum GSSEnvironmentUnit returns GSSEnvironmentUnit:
+	miliseconds = 'miliseconds' | seconds = 'seconds'
+;
+
+GSSEnvironmentPeriodicTCLevel2 returns GSSEnvironmentPeriodicTCLevel2:
+	'GSSEnvironmentPeriodicTCLevel2' '{'
+		'name' ':=' name=STRING ';'
+		'id' ':=' id=INTEGER ';'
+		'ifRef' ':=' ifRef=INTEGER ';'
+		'period_value' ':=' period_value=INTEGER ';'
+		'period_unit' ':=' period_unit=GSSEnvironmentUnit ';'
+		('level2' ':=' level2=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		'app_to_level2' ':=' app_to_level2=[export::TMTCIFExportExport|VersionedQualifiedName] ';'
+		('level1' ':=' level1=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		('level2_to_level1' ':=' level2_to_level1=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+		('level0' ':=' level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		('level1_to_level0' ':=' level1_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+	'}' ';'
+;
+
+GSSEnvironmentPeriodicTCLevel1 returns GSSEnvironmentPeriodicTCLevel1:
+	'GSSEnvironmentPeriodicTCLevel1' '{'
+		'name' ':=' name=STRING ';'
+		'id' ':=' id=INTEGER ';'
+		'ifRef' ':=' ifRef=INTEGER ';'
+		'period_value' ':=' period_value=INTEGER ';'
+		'period_unit' ':=' period_unit=GSSEnvironmentUnit ';'
+		('level1' ':=' level1=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		'app_to_level1' ':=' app_to_level1=[export::TMTCIFExportExport|VersionedQualifiedName] ';'
+		('level0' ':=' level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		('level1_to_level0' ':=' level1_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+	'}' ';'
+;
+
+GSSEnvironmentPeriodicTCLevel0 returns GSSEnvironmentPeriodicTCLevel0:
+	'GSSEnvironmentPeriodicTCLevel0' '{'
+		'name' ':=' name=STRING ';'
+		'id' ':=' id=INTEGER ';'
+		'ifRef' ':=' ifRef=INTEGER ';'
+		'period_value' ':=' period_value=INTEGER ';'
+		'period_unit' ':=' period_unit=GSSEnvironmentUnit ';'
+		('level0' ':=' level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		'app_to_level0' ':=' app_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';'
+	'}' ';'
+;
+
+GSSEnvironmentGlobalVar returns GSSEnvironmentGlobalVar:
+	'GSSEnvironmentGlobalVar' '{'
+		'name' ':=' name=STRING ';'
+		'id' ':=' id=INTEGER ';'
+		'type' ':=' type=GSSEnvironmentGlobalVarType ';'
+		'initial_value' ':=' initial_value=INTEGER ';'
+		 ((referenceField=GSSEnvironmentReferenceField) |
+		 (referencePeriodicTC=GSSEnvironmentReferencePeriodicTC) |
+		 (referenceSpecialPacket=GSSEnvironmentReferenceSpecialPacket))
+	'}' ';'
+;
+
+enum GSSEnvironmentGlobalVarType returns GSSEnvironmentGlobalVarType:
+	uint = 'uint' | formula = 'formula'
+;
+
+GSSEnvironmentReferenceField returns GSSEnvironmentReferenceField:
+	'GSSEnvironmentReferenceField' '{'
+		'type' ':=' type=GSSEnvironmentReferenceFieldType ';'
+		'ifRef' ':=' ifRef=INTEGER ';'
+		'level' ':=' level=INTEGER ';'
+		'fieldRef' ':=' fieldRef=INTEGER ';'
+		'offset' ':=' offset=INTEGER ';'
+		'size' ':=' size=INTEGER ';'
+	'}' ';'
+;
+
+GSSEnvironmentReferencePeriodicTC returns GSSEnvironmentReferencePeriodicTC:
+	'GSSEnvironmentReferencePeriodicTC' '{'
+		'idRef' ':=' idRef=[GSSEnvironmentPeriodicTC|STRING] ';'
+		'level' ':=' level=INTEGER ';'
+		'fieldRef' ':=' fieldRef=INTEGER ';'
+		'offset' ':=' offset=INTEGER ';'
+		'size' ':=' size=INTEGER ';'
+	'}' ';'
+;
+
+GSSEnvironmentReferenceSpecialPacket returns GSSEnvironmentReferenceSpecialPacket:
+	'GSSEnvironmentReferenceSpecialPacket' '{'
+		'idRef' ':=' idRef=[GSSEnvironmentSpecialPacket|STRING] ';'
+		'level' ':=' level=INTEGER ';'
+		'fieldRef' ':=' fieldRef=INTEGER ';'
+		'offset' ':=' offset=INTEGER ';'
+		'size' ':=' size=INTEGER ';'
+	'}' ';'
+;
+
+enum GSSEnvironmentReferenceFieldType returns GSSEnvironmentReferenceFieldType:
+	tm = 'tm' | tc = 'tc'
+;
+
+GSSEnvironmentPlot returns GSSEnvironmentPlot:
+	'GSSEnvironmentPlot' '{'
+		'name' ':=' name=STRING ';'
+		'chartRef' ':=' chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';'
+		((GVFiltered=GSSEnvironmentGVFiltered) |
+		 (GVPeriodic=GSSEnvironmentGVPeriodic))
+	'}' ';'
+;
+
+GSSEnvironmentAlarmMsg returns GSSEnvironmentAlarmMsg:
+	'GSSEnvironmentAlarmMsg' '{'
+		'name' ':=' name=STRING ';'
+		'type' ':=' type=GSSEnvironmentAlarmMsgType ';'
+		'text' ':=' text=STRING ';'
+		((GVFiltered=GSSEnvironmentGVFiltered) |
+		 (GVPeriodic=GSSEnvironmentGVPeriodic))
+	'}' ';'
+;
+
+GSSEnvironmentModify returns GSSEnvironmentModify:
+	'GSSEnvironmentModify' '{'
+		'name' ':=' name=STRING ';'
+		'type' ':=' type=GSSEnvironmentModifyType ';'
+		'value' ':=' value=INTEGER ';'
+		((GVFiltered=GSSEnvironmentGVFiltered) |
+		 (GVPeriodic=GSSEnvironmentGVPeriodic))
+	'}' ';'
+;
+
+GSSEnvironmentAlarmVal returns GSSEnvironmentAlarmVal:
+	'GSSEnvironmentAlarmVal' '{'
+		'name' ':=' name=STRING ';'
+		'type' ':=' type=GSSEnvironmentAlarmValType ';'
+		((GVFiltered=GSSEnvironmentGVFiltered) |
+		 (GVPeriodic=GSSEnvironmentGVPeriodic))
+	'}' ';'
+;
+
+GSSEnvironmentGVFiltered returns GSSEnvironmentGVFiltered:
+	'GSSEnvironmentGVFiltered' '{'
+		'GlobalVarRef' ':=' GlobalVarRef=[GSSEnvironmentGlobalVar|STRING] ';'
+		('filter' ':=' filter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')?
+	'}' ';'
+;
+
+GSSEnvironmentGVPeriodic returns GSSEnvironmentGVPeriodic:
+	'GSSEnvironmentGVPeriodic' '{'
+		'GlobalVarRef' ':=' GlobalVarRef=[GSSEnvironmentGlobalVar|STRING] ';'
+		'period_value' ':=' period_value=INTEGER ';'
+		'period_unit' ':=' period_unit=GSSEnvironmentUnit ';'
+	'}' ';'
+;
+
+enum GSSEnvironmentAlarmMsgType returns GSSEnvironmentAlarmMsgType:
+	alarm1 = 'alarm1' | alarm2 = 'alarm2' | alarm3 = 'alarm3'
+;
+
+enum GSSEnvironmentModifyType returns GSSEnvironmentModifyType:
+	increment = 'increment' | increment1wrap = 'increment1wrap'
+;
+
+enum GSSEnvironmentAlarmValType returns GSSEnvironmentAlarmValType:
+	alarm1 = 'alarm1'
+;
+
+EString returns ecore::EString:
+	STRING | ID;
+
+QualifiedName returns ecore::EString:
+	ID ('.' ID)*;
+
+Version returns ecore::EString:
+	(INT | ((INT)? ID)) ('.' (INT | ((INT)? ID)))*
+	;
+
+VersionedQualifiedName returns ecore::EString:
+	QualifiedName '(' Version ')'
+	;
+
+VersionedQualifiedReferenceName returns ecore::EString:
+	(VersionedQualifiedName '::')? ID ('::' ID)*;
+
+terminal HEXADECIMAL returns ecore::EString:
+	('0x' (('0'..'9') | ('a'..'f') | ('A'..'F'))+);
+
+INTEGER returns ecore::EString:
+	('-'? INT | HEXADECIMAL);
+
+EBoolean returns ecore::EBoolean:
+	'true' | 'false'; 
+	
+REAL returns ecore::EString:
+	'-'? (INT '.' ':=' INT) ('e' ('-')? INT)?;
+
+DATE returns ecore::EString:
+	INT ('/') INT ('/') INT;
+
+URL returns ecore::EString:
+	ID ('+' ID)? '://' (ID ('.')?)+ ('/' ID)* ('/')?;

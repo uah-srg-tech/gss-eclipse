@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.gss.config;
 
-import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPackets;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -25,7 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigTests#getProtocolPacketsFile <em>Protocol Packets File</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigTests#getTestCase <em>Test Case</em>}</li>
  * </ul>
  *
@@ -34,32 +31,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface GSSConfigTests extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Protocol Packets File</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Protocol Packets File</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Protocol Packets File</em>' reference.
-	 * @see #setProtocolPacketsFile(GSSProtocolPacketsProtocolPackets)
-	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigTests_ProtocolPacketsFile()
-	 * @model
-	 * @generated
-	 */
-	GSSProtocolPacketsProtocolPackets getProtocolPacketsFile();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTests#getProtocolPacketsFile <em>Protocol Packets File</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Protocol Packets File</em>' reference.
-	 * @see #getProtocolPacketsFile()
-	 * @generated
-	 */
-	void setProtocolPacketsFile(GSSProtocolPacketsProtocolPackets value);
-
 	/**
 	 * Returns the value of the '<em><b>Test Case</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.gss.config.GSSConfigTestCase}.

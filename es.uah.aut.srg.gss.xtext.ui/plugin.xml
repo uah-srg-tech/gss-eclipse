@@ -54,6 +54,10 @@
                            property="org.eclipse.core.resources.extension"
                            value="gss_config">
                      </test>
+                     <test
+                           property="org.eclipse.core.resources.extension"
+                           value="gss_environment">
+                     </test>
                   </or>
                </iterate>
             </visibleWhen>

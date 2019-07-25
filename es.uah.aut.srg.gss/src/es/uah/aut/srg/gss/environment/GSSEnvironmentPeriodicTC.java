@@ -1,0 +1,196 @@
+/**
+ * Copyright (c) 2019 UAH Space Research Group.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ * 
+ * Contributors:
+ *     SRG Team - Initial API and implementation
+ */
+package es.uah.aut.srg.gss.environment;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>GSS Environment Periodic TC</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link es.uah.aut.srg.gss.environment.GSSEnvironmentPeriodicTC#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.environment.GSSEnvironmentPeriodicTC#getId <em>Id</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.environment.GSSEnvironmentPeriodicTC#getIfRef <em>If Ref</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.environment.GSSEnvironmentPeriodicTC#getPeriod_value <em>Period value</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.environment.GSSEnvironmentPeriodicTC#getPeriod_unit <em>Period unit</em>}</li>
+ * </ul>
+ *
+ * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentPeriodicTC()
+ * @model
+ * @generated
+ */
+public interface GSSEnvironmentPeriodicTC extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentPeriodicTC_Name()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentPeriodicTC#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentPeriodicTC_Id()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentPeriodicTC#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>If Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>If Ref</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>If Ref</em>' attribute.
+	 * @see #setIfRef(String)
+	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentPeriodicTC_IfRef()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getIfRef();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentPeriodicTC#getIfRef <em>If Ref</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>If Ref</em>' attribute.
+	 * @see #getIfRef()
+	 * @generated
+	 */
+	void setIfRef(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Period value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Period value</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Period value</em>' attribute.
+	 * @see #setPeriod_value(String)
+	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentPeriodicTC_Period_value()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getPeriod_value();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentPeriodicTC#getPeriod_value <em>Period value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Period value</em>' attribute.
+	 * @see #getPeriod_value()
+	 * @generated
+	 */
+	void setPeriod_value(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Period unit</b></em>' attribute.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.environment.GSSEnvironmentUnit}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Period unit</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Period unit</em>' attribute.
+	 * @see es.uah.aut.srg.gss.environment.GSSEnvironmentUnit
+	 * @see #isSetPeriod_unit()
+	 * @see #unsetPeriod_unit()
+	 * @see #setPeriod_unit(GSSEnvironmentUnit)
+	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentPeriodicTC_Period_unit()
+	 * @model unsettable="true" required="true"
+	 * @generated
+	 */
+	GSSEnvironmentUnit getPeriod_unit();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentPeriodicTC#getPeriod_unit <em>Period unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Period unit</em>' attribute.
+	 * @see es.uah.aut.srg.gss.environment.GSSEnvironmentUnit
+	 * @see #isSetPeriod_unit()
+	 * @see #unsetPeriod_unit()
+	 * @see #getPeriod_unit()
+	 * @generated
+	 */
+	void setPeriod_unit(GSSEnvironmentUnit value);
+
+	/**
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentPeriodicTC#getPeriod_unit <em>Period unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetPeriod_unit()
+	 * @see #getPeriod_unit()
+	 * @see #setPeriod_unit(GSSEnvironmentUnit)
+	 * @generated
+	 */
+	void unsetPeriod_unit();
+
+	/**
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentPeriodicTC#getPeriod_unit <em>Period unit</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Period unit</em>' attribute is set.
+	 * @see #unsetPeriod_unit()
+	 * @see #getPeriod_unit()
+	 * @see #setPeriod_unit(GSSEnvironmentUnit)
+	 * @generated
+	 */
+	boolean isSetPeriod_unit();
+
+} // GSSEnvironmentPeriodicTC
