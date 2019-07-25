@@ -56,6 +56,7 @@ GSSEnvironmentOptions returns GSSEnvironmentOptions:
 
 GSSEnvironmentProtocols returns GSSEnvironmentProtocols:
 	'GSSEnvironmentProtocols' '{'
+		('ProtocolPacketsFile' ':=' ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
 		(Protocol+=GSSEnvironmentProtocol)+
 	'}' ';'
 ;
@@ -156,7 +157,6 @@ GSSEnvironmentMainInterface returns GSSEnvironmentMainInterface:
 		'ifConfig' ':=' ifConfig=[iface::GSSIfacePortConfig|VersionedQualifiedName] ';' 
 		'ioType' ':=' ioType=GSSEnvironmentInterfaceIOType ';'
 		('protocolID' ':=' protocolID=[GSSEnvironmentProtocol|VersionedQualifiedReferenceName] ';')?
-		('ProtocolPacketsFile' ':=' ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
 		(LevelInOut+=GSSEnvironmentLevelInOut)+ 
 	'}' ';'
 ;

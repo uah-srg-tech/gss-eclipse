@@ -363,18 +363,28 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cGSSEnvironmentProtocolsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cProtocolAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cProtocolGSSEnvironmentProtocolParserRuleCall_2_0 = (RuleCall)cProtocolAssignment_2.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cProtocolPacketsFileKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cColonEqualsSignKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cProtocolPacketsFileAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final CrossReference cProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_2_2_0 = (CrossReference)cProtocolPacketsFileAssignment_2_2.eContents().get(0);
+		private final RuleCall cProtocolPacketsFileGSSProtocolPacketsProtocolPacketsVersionedQualifiedNameParserRuleCall_2_2_0_1 = (RuleCall)cProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_2_2_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
+		private final Assignment cProtocolAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cProtocolGSSEnvironmentProtocolParserRuleCall_3_0 = (RuleCall)cProtocolAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//GSSEnvironmentProtocols:
-		//	'GSSEnvironmentProtocols' '{'
+		//	'GSSEnvironmentProtocols' '{' ('ProtocolPacketsFile' ':='
+		//	ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
 		//	Protocol+=GSSEnvironmentProtocol+
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSEnvironmentProtocols' '{' Protocol+=GSSEnvironmentProtocol+ '}' ';'
+		//'GSSEnvironmentProtocols' '{' ('ProtocolPacketsFile' ':='
+		//ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
+		//Protocol+=GSSEnvironmentProtocol+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSEnvironmentProtocols'
@@ -383,17 +393,39 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//Protocol+=GSSEnvironmentProtocol+
-		public Assignment getProtocolAssignment_2() { return cProtocolAssignment_2; }
+		//('ProtocolPacketsFile' ':='
+		//ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
+		public Group getGroup_2() { return cGroup_2; }
 		
-		//GSSEnvironmentProtocol
-		public RuleCall getProtocolGSSEnvironmentProtocolParserRuleCall_2_0() { return cProtocolGSSEnvironmentProtocolParserRuleCall_2_0; }
+		//'ProtocolPacketsFile'
+		public Keyword getProtocolPacketsFileKeyword_2_0() { return cProtocolPacketsFileKeyword_2_0; }
 		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
+		//':='
+		public Keyword getColonEqualsSignKeyword_2_1() { return cColonEqualsSignKeyword_2_1; }
+		
+		//ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName]
+		public Assignment getProtocolPacketsFileAssignment_2_2() { return cProtocolPacketsFileAssignment_2_2; }
+		
+		//[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName]
+		public CrossReference getProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_2_2_0() { return cProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_2_2_0; }
+		
+		//VersionedQualifiedName
+		public RuleCall getProtocolPacketsFileGSSProtocolPacketsProtocolPacketsVersionedQualifiedNameParserRuleCall_2_2_0_1() { return cProtocolPacketsFileGSSProtocolPacketsProtocolPacketsVersionedQualifiedNameParserRuleCall_2_2_0_1; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
+		public Keyword getSemicolonKeyword_2_3() { return cSemicolonKeyword_2_3; }
+		
+		//Protocol+=GSSEnvironmentProtocol+
+		public Assignment getProtocolAssignment_3() { return cProtocolAssignment_3; }
+		
+		//GSSEnvironmentProtocol
+		public RuleCall getProtocolGSSEnvironmentProtocolParserRuleCall_3_0() { return cProtocolGSSEnvironmentProtocolParserRuleCall_3_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
 	public class GSSEnvironmentInterfacesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentInterfaces");
@@ -1287,17 +1319,10 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cProtocolIDGSSEnvironmentProtocolCrossReference_22_2_0 = (CrossReference)cProtocolIDAssignment_22_2.eContents().get(0);
 		private final RuleCall cProtocolIDGSSEnvironmentProtocolVersionedQualifiedReferenceNameParserRuleCall_22_2_0_1 = (RuleCall)cProtocolIDGSSEnvironmentProtocolCrossReference_22_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_22_3 = (Keyword)cGroup_22.eContents().get(3);
-		private final Group cGroup_23 = (Group)cGroup.eContents().get(23);
-		private final Keyword cProtocolPacketsFileKeyword_23_0 = (Keyword)cGroup_23.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_23_1 = (Keyword)cGroup_23.eContents().get(1);
-		private final Assignment cProtocolPacketsFileAssignment_23_2 = (Assignment)cGroup_23.eContents().get(2);
-		private final CrossReference cProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_23_2_0 = (CrossReference)cProtocolPacketsFileAssignment_23_2.eContents().get(0);
-		private final RuleCall cProtocolPacketsFileGSSProtocolPacketsProtocolPacketsVersionedQualifiedNameParserRuleCall_23_2_0_1 = (RuleCall)cProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_23_2_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_23_3 = (Keyword)cGroup_23.eContents().get(3);
-		private final Assignment cLevelInOutAssignment_24 = (Assignment)cGroup.eContents().get(24);
-		private final RuleCall cLevelInOutGSSEnvironmentLevelInOutParserRuleCall_24_0 = (RuleCall)cLevelInOutAssignment_24.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_25 = (Keyword)cGroup.eContents().get(25);
-		private final Keyword cSemicolonKeyword_26 = (Keyword)cGroup.eContents().get(26);
+		private final Assignment cLevelInOutAssignment_23 = (Assignment)cGroup.eContents().get(23);
+		private final RuleCall cLevelInOutGSSEnvironmentLevelInOutParserRuleCall_23_0 = (RuleCall)cLevelInOutAssignment_23.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_24 = (Keyword)cGroup.eContents().get(24);
+		private final Keyword cSemicolonKeyword_25 = (Keyword)cGroup.eContents().get(25);
 		
 		//GSSEnvironmentMainInterface:
 		//	'GSSEnvironmentMainInterface' '{'
@@ -1306,8 +1331,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//	'ifType' ':=' ifType=GSSEnvironmentInterfaceType ';'
 		//	'ifConfig' ':=' ifConfig=[iface::GSSIfacePortConfig|VersionedQualifiedName] ';'
 		//	'ioType' ':=' ioType=GSSEnvironmentInterfaceIOType ';' ('protocolID' ':='
-		//	protocolID=[GSSEnvironmentProtocol|VersionedQualifiedReferenceName] ';')? ('ProtocolPacketsFile' ':='
-		//	ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
+		//	protocolID=[GSSEnvironmentProtocol|VersionedQualifiedReferenceName] ';')?
 		//	LevelInOut+=GSSEnvironmentLevelInOut+
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
@@ -1315,9 +1339,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//'GSSEnvironmentMainInterface' '{' 'id' ':=' id=INTEGER ';' 'name' ':=' name=STRING ';' 'ifType' ':='
 		//ifType=GSSEnvironmentInterfaceType ';' 'ifConfig' ':=' ifConfig=[iface::GSSIfacePortConfig|VersionedQualifiedName] ';'
 		//'ioType' ':=' ioType=GSSEnvironmentInterfaceIOType ';' ('protocolID' ':='
-		//protocolID=[GSSEnvironmentProtocol|VersionedQualifiedReferenceName] ';')? ('ProtocolPacketsFile' ':='
-		//ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
-		//LevelInOut+=GSSEnvironmentLevelInOut+ '}' ';'
+		//protocolID=[GSSEnvironmentProtocol|VersionedQualifiedReferenceName] ';')? LevelInOut+=GSSEnvironmentLevelInOut+ '}'
+		//';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSEnvironmentMainInterface'
@@ -1425,39 +1448,17 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_22_3() { return cSemicolonKeyword_22_3; }
 		
-		//('ProtocolPacketsFile' ':='
-		//ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
-		public Group getGroup_23() { return cGroup_23; }
-		
-		//'ProtocolPacketsFile'
-		public Keyword getProtocolPacketsFileKeyword_23_0() { return cProtocolPacketsFileKeyword_23_0; }
-		
-		//':='
-		public Keyword getColonEqualsSignKeyword_23_1() { return cColonEqualsSignKeyword_23_1; }
-		
-		//ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName]
-		public Assignment getProtocolPacketsFileAssignment_23_2() { return cProtocolPacketsFileAssignment_23_2; }
-		
-		//[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName]
-		public CrossReference getProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_23_2_0() { return cProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_23_2_0; }
-		
-		//VersionedQualifiedName
-		public RuleCall getProtocolPacketsFileGSSProtocolPacketsProtocolPacketsVersionedQualifiedNameParserRuleCall_23_2_0_1() { return cProtocolPacketsFileGSSProtocolPacketsProtocolPacketsVersionedQualifiedNameParserRuleCall_23_2_0_1; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_23_3() { return cSemicolonKeyword_23_3; }
-		
 		//LevelInOut+=GSSEnvironmentLevelInOut+
-		public Assignment getLevelInOutAssignment_24() { return cLevelInOutAssignment_24; }
+		public Assignment getLevelInOutAssignment_23() { return cLevelInOutAssignment_23; }
 		
 		//GSSEnvironmentLevelInOut
-		public RuleCall getLevelInOutGSSEnvironmentLevelInOutParserRuleCall_24_0() { return cLevelInOutGSSEnvironmentLevelInOutParserRuleCall_24_0; }
+		public RuleCall getLevelInOutGSSEnvironmentLevelInOutParserRuleCall_23_0() { return cLevelInOutGSSEnvironmentLevelInOutParserRuleCall_23_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_25() { return cRightCurlyBracketKeyword_25; }
+		public Keyword getRightCurlyBracketKeyword_24() { return cRightCurlyBracketKeyword_24; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_26() { return cSemicolonKeyword_26; }
+		public Keyword getSemicolonKeyword_25() { return cSemicolonKeyword_25; }
 	}
 	public class GSSEnvironmentInterfaceElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentInterface");
@@ -5717,7 +5718,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//GSSEnvironmentProtocols:
-	//	'GSSEnvironmentProtocols' '{'
+	//	'GSSEnvironmentProtocols' '{' ('ProtocolPacketsFile' ':='
+	//	ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
 	//	Protocol+=GSSEnvironmentProtocol+
 	//	'}' ';';
 	public GSSEnvironmentProtocolsElements getGSSEnvironmentProtocolsAccess() {
@@ -5881,8 +5883,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'ifType' ':=' ifType=GSSEnvironmentInterfaceType ';'
 	//	'ifConfig' ':=' ifConfig=[iface::GSSIfacePortConfig|VersionedQualifiedName] ';'
 	//	'ioType' ':=' ioType=GSSEnvironmentInterfaceIOType ';' ('protocolID' ':='
-	//	protocolID=[GSSEnvironmentProtocol|VersionedQualifiedReferenceName] ';')? ('ProtocolPacketsFile' ':='
-	//	ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
+	//	protocolID=[GSSEnvironmentProtocol|VersionedQualifiedReferenceName] ';')?
 	//	LevelInOut+=GSSEnvironmentLevelInOut+
 	//	'}' ';';
 	public GSSEnvironmentMainInterfaceElements getGSSEnvironmentMainInterfaceAccess() {

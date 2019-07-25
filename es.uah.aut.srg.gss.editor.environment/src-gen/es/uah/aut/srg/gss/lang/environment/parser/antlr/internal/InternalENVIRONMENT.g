@@ -685,11 +685,44 @@ ruleGSSEnvironmentProtocols returns [EObject current=null]
 			newLeafNode(otherlv_1, grammarAccess.getGSSEnvironmentProtocolsAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
+			otherlv_2='ProtocolPacketsFile'
+			{
+				newLeafNode(otherlv_2, grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolPacketsFileKeyword_2_0());
+			}
+			otherlv_3=':='
+			{
+				newLeafNode(otherlv_3, grammarAccess.getGSSEnvironmentProtocolsAccess().getColonEqualsSignKeyword_2_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getGSSEnvironmentProtocolsRule());
+						}
+					}
+					{
+						newCompositeNode(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_2_2_0());
+					}
+					ruleVersionedQualifiedName
+					{
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_5=';'
+			{
+				newLeafNode(otherlv_5, grammarAccess.getGSSEnvironmentProtocolsAccess().getSemicolonKeyword_2_3());
+			}
+		)?
+		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolGSSEnvironmentProtocolParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolGSSEnvironmentProtocolParserRuleCall_3_0());
 				}
-				lv_Protocol_2_0=ruleGSSEnvironmentProtocol
+				lv_Protocol_6_0=ruleGSSEnvironmentProtocol
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSEnvironmentProtocolsRule());
@@ -697,19 +730,19 @@ ruleGSSEnvironmentProtocols returns [EObject current=null]
 					add(
 						$current,
 						"Protocol",
-						lv_Protocol_2_0,
+						lv_Protocol_6_0,
 						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentProtocol");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_3='}'
+		otherlv_7='}'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSEnvironmentProtocolsAccess().getRightCurlyBracketKeyword_3());
+			newLeafNode(otherlv_7, grammarAccess.getGSSEnvironmentProtocolsAccess().getRightCurlyBracketKeyword_4());
 		}
-		otherlv_4=';'
+		otherlv_8=';'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getGSSEnvironmentProtocolsAccess().getSemicolonKeyword_4());
+			newLeafNode(otherlv_8, grammarAccess.getGSSEnvironmentProtocolsAccess().getSemicolonKeyword_5());
 		}
 	)
 ;
@@ -2159,44 +2192,11 @@ ruleGSSEnvironmentMainInterface returns [EObject current=null]
 			}
 		)?
 		(
-			otherlv_26='ProtocolPacketsFile'
-			{
-				newLeafNode(otherlv_26, grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolPacketsFileKeyword_23_0());
-			}
-			otherlv_27=':='
-			{
-				newLeafNode(otherlv_27, grammarAccess.getGSSEnvironmentMainInterfaceAccess().getColonEqualsSignKeyword_23_1());
-			}
-			(
-				(
-					{
-						/* */
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getGSSEnvironmentMainInterfaceRule());
-						}
-					}
-					{
-						newCompositeNode(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_23_2_0());
-					}
-					ruleVersionedQualifiedName
-					{
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			otherlv_29=';'
-			{
-				newLeafNode(otherlv_29, grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_23_3());
-			}
-		)?
-		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutGSSEnvironmentLevelInOutParserRuleCall_24_0());
+					newCompositeNode(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutGSSEnvironmentLevelInOutParserRuleCall_23_0());
 				}
-				lv_LevelInOut_30_0=ruleGSSEnvironmentLevelInOut
+				lv_LevelInOut_26_0=ruleGSSEnvironmentLevelInOut
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSEnvironmentMainInterfaceRule());
@@ -2204,19 +2204,19 @@ ruleGSSEnvironmentMainInterface returns [EObject current=null]
 					add(
 						$current,
 						"LevelInOut",
-						lv_LevelInOut_30_0,
+						lv_LevelInOut_26_0,
 						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentLevelInOut");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_31='}'
+		otherlv_27='}'
 		{
-			newLeafNode(otherlv_31, grammarAccess.getGSSEnvironmentMainInterfaceAccess().getRightCurlyBracketKeyword_25());
+			newLeafNode(otherlv_27, grammarAccess.getGSSEnvironmentMainInterfaceAccess().getRightCurlyBracketKeyword_24());
 		}
-		otherlv_32=';'
+		otherlv_28=';'
 		{
-			newLeafNode(otherlv_32, grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_26());
+			newLeafNode(otherlv_28, grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_25());
 		}
 	)
 ;

@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalENVIRONMENTParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'alarm1'", "'disabled'", "'enabled'", "'SpW'", "'SpW_TC'", "'SpW_Error'", "'uart'", "'dummy'", "'in_out'", "'in'", "'out'", "'_1'", "'_2'", "'_3'", "'miliseconds'", "'seconds'", "'uint'", "'formula'", "'tm'", "'tc'", "'alarm2'", "'alarm3'", "'increment'", "'increment1wrap'", "'import'", "':='", "';'", "'GSSEnvironmentEnvironment'", "'{'", "'version'", "'}'", "'uri'", "'GSSEnvironmentScenario'", "'GSSEnvironmentOptions'", "'GSSEnvironmentProtocols'", "'GSSEnvironmentInterfaces'", "'GSSEnvironmentSpecialPackets'", "'GSSEnvironmentPeriodicTCs'", "'GSSEnvironmentGlobalVars'", "'GSSEnvironmentMonitors'", "'ChartsFile'", "'GSSEnvironmentInfo'", "'test_campaign'", "'date'", "'version_control_url'", "'GSSEnvironmentInfoPrint'", "'mainLog'", "'portLogs'", "'rawLog'", "'GSSEnvironmentPhyHeaderPrint'", "'gssTabs'", "'GSSEnvironmentDiscardErrorFlags'", "'txErrors'", "'notExpectedPackets'", "'filtersKo'", "'validTimesKo'", "'GSSEnvironmentProtocol'", "'id'", "'name'", "'typeLevel'", "'typeOffset'", "'subtypeOffset'", "'GSSEnvironmentMainInterface'", "'ifType'", "'ifConfig'", "'ioType'", "'protocolID'", "'ProtocolPacketsFile'", "'GSSEnvironmentInterface'", "'GSSEnvironmentLevelInOut'", "'TMformat'", "'TCformat'", "'inputFilter'", "'export_to_prev_Level'", "'import_from_prev_Level'", "'GSSEnvironmentLevelIn'", "'GSSEnvironmentLevelOut'", "'GSSEnvironmentSpecialPacket'", "'status'", "'ifRef'", "'levels'", "'levelRef'", "'GSSEnvironmentUpperLevels'", "'GSSEnvironmentPrintingData'", "'printStatus'", "'GSSEnvironmentPeriod'", "'min_value'", "'min_unit'", "'max_value'", "'max_unit'", "'GSSEnvironmentIntervalRange'", "'min'", "'max'", "'interval_value'", "'interval_unit'", "'GSSEnvironmentUpperLevel'", "'level'", "'GSSEnvironmentStructuredData'", "'firstField'", "'GSSEnvironmentPeriodicTCLevel2'", "'period_value'", "'period_unit'", "'app_to_level2'", "'level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSEnvironmentPeriodicTCLevel1'", "'app_to_level1'", "'GSSEnvironmentPeriodicTCLevel0'", "'app_to_level0'", "'GSSEnvironmentGlobalVar'", "'type'", "'initial_value'", "'GSSEnvironmentReferenceField'", "'fieldRef'", "'offset'", "'size'", "'GSSEnvironmentReferencePeriodicTC'", "'idRef'", "'GSSEnvironmentReferenceSpecialPacket'", "'GSSEnvironmentPlot'", "'chartRef'", "'GSSEnvironmentAlarmMsg'", "'text'", "'GSSEnvironmentModify'", "'value'", "'GSSEnvironmentAlarmVal'", "'GSSEnvironmentGVFiltered'", "'GlobalVarRef'", "'filter'", "'GSSEnvironmentGVPeriodic'", "'.'", "'('", "')'", "'::'", "'-'", "'/'", "'://'", "'+'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'alarm1'", "'disabled'", "'enabled'", "'SpW'", "'SpW_TC'", "'SpW_Error'", "'uart'", "'dummy'", "'in_out'", "'in'", "'out'", "'_1'", "'_2'", "'_3'", "'miliseconds'", "'seconds'", "'uint'", "'formula'", "'tm'", "'tc'", "'alarm2'", "'alarm3'", "'increment'", "'increment1wrap'", "'import'", "':='", "';'", "'GSSEnvironmentEnvironment'", "'{'", "'version'", "'}'", "'uri'", "'GSSEnvironmentScenario'", "'GSSEnvironmentOptions'", "'GSSEnvironmentProtocols'", "'ProtocolPacketsFile'", "'GSSEnvironmentInterfaces'", "'GSSEnvironmentSpecialPackets'", "'GSSEnvironmentPeriodicTCs'", "'GSSEnvironmentGlobalVars'", "'GSSEnvironmentMonitors'", "'ChartsFile'", "'GSSEnvironmentInfo'", "'test_campaign'", "'date'", "'version_control_url'", "'GSSEnvironmentInfoPrint'", "'mainLog'", "'portLogs'", "'rawLog'", "'GSSEnvironmentPhyHeaderPrint'", "'gssTabs'", "'GSSEnvironmentDiscardErrorFlags'", "'txErrors'", "'notExpectedPackets'", "'filtersKo'", "'validTimesKo'", "'GSSEnvironmentProtocol'", "'id'", "'name'", "'typeLevel'", "'typeOffset'", "'subtypeOffset'", "'GSSEnvironmentMainInterface'", "'ifType'", "'ifConfig'", "'ioType'", "'protocolID'", "'GSSEnvironmentInterface'", "'GSSEnvironmentLevelInOut'", "'TMformat'", "'TCformat'", "'inputFilter'", "'export_to_prev_Level'", "'import_from_prev_Level'", "'GSSEnvironmentLevelIn'", "'GSSEnvironmentLevelOut'", "'GSSEnvironmentSpecialPacket'", "'status'", "'ifRef'", "'levels'", "'levelRef'", "'GSSEnvironmentUpperLevels'", "'GSSEnvironmentPrintingData'", "'printStatus'", "'GSSEnvironmentPeriod'", "'min_value'", "'min_unit'", "'max_value'", "'max_unit'", "'GSSEnvironmentIntervalRange'", "'min'", "'max'", "'interval_value'", "'interval_unit'", "'GSSEnvironmentUpperLevel'", "'level'", "'GSSEnvironmentStructuredData'", "'firstField'", "'GSSEnvironmentPeriodicTCLevel2'", "'period_value'", "'period_unit'", "'app_to_level2'", "'level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSEnvironmentPeriodicTCLevel1'", "'app_to_level1'", "'GSSEnvironmentPeriodicTCLevel0'", "'app_to_level0'", "'GSSEnvironmentGlobalVar'", "'type'", "'initial_value'", "'GSSEnvironmentReferenceField'", "'fieldRef'", "'offset'", "'size'", "'GSSEnvironmentReferencePeriodicTC'", "'idRef'", "'GSSEnvironmentReferenceSpecialPacket'", "'GSSEnvironmentPlot'", "'chartRef'", "'GSSEnvironmentAlarmMsg'", "'text'", "'GSSEnvironmentModify'", "'value'", "'GSSEnvironmentAlarmVal'", "'GSSEnvironmentGVFiltered'", "'GlobalVarRef'", "'filter'", "'GSSEnvironmentGVPeriodic'", "'.'", "'('", "')'", "'::'", "'-'", "'/'", "'://'", "'+'"
     };
     public static final int T__144=144;
     public static final int T__143=143;
@@ -9524,7 +9524,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             int alt23=2;
             int LA23_0 = input.LA(1);
 
-            if ( (LA23_0==48) ) {
+            if ( (LA23_0==49) ) {
                 alt23=1;
             }
             switch (alt23) {
@@ -9624,7 +9624,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             int alt24=2;
             int LA24_0 = input.LA(1);
 
-            if ( (LA24_0==49) ) {
+            if ( (LA24_0==50) ) {
                 alt24=1;
             }
             switch (alt24) {
@@ -9724,10 +9724,10 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             int alt25=2;
             int LA25_0 = input.LA(1);
 
-            if ( LA25_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 0) ) {
+            if ( LA25_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 0) ) {
                 alt25=1;
             }
-            else if ( LA25_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 1) ) {
+            else if ( LA25_0 == 52 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 1) ) {
                 alt25=1;
             }
             switch (alt25) {
@@ -10757,7 +10757,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             // InternalENVIRONMENT.g:3065:1: ( rule__GSSEnvironmentProtocols__Group__2__Impl rule__GSSEnvironmentProtocols__Group__3 )
             // InternalENVIRONMENT.g:3066:2: rule__GSSEnvironmentProtocols__Group__2__Impl rule__GSSEnvironmentProtocols__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__GSSEnvironmentProtocols__Group__2__Impl();
 
             state._fsp--;
@@ -10786,82 +10786,46 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocols__Group__2__Impl"
-    // InternalENVIRONMENT.g:3073:1: rule__GSSEnvironmentProtocols__Group__2__Impl : ( ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 ) ) ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 )* ) ) ;
+    // InternalENVIRONMENT.g:3073:1: rule__GSSEnvironmentProtocols__Group__2__Impl : ( ( rule__GSSEnvironmentProtocols__Group_2__0 )? ) ;
     public final void rule__GSSEnvironmentProtocols__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3077:1: ( ( ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 ) ) ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 )* ) ) )
-            // InternalENVIRONMENT.g:3078:1: ( ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 ) ) ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 )* ) )
+            // InternalENVIRONMENT.g:3077:1: ( ( ( rule__GSSEnvironmentProtocols__Group_2__0 )? ) )
+            // InternalENVIRONMENT.g:3078:1: ( ( rule__GSSEnvironmentProtocols__Group_2__0 )? )
             {
-            // InternalENVIRONMENT.g:3078:1: ( ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 ) ) ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 )* ) )
-            // InternalENVIRONMENT.g:3079:2: ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 ) ) ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 )* )
-            {
-            // InternalENVIRONMENT.g:3079:2: ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 ) )
-            // InternalENVIRONMENT.g:3080:3: ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 )
+            // InternalENVIRONMENT.g:3078:1: ( ( rule__GSSEnvironmentProtocols__Group_2__0 )? )
+            // InternalENVIRONMENT.g:3079:2: ( rule__GSSEnvironmentProtocols__Group_2__0 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolAssignment_2()); 
+               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getGroup_2()); 
             }
-            // InternalENVIRONMENT.g:3081:3: ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 )
-            // InternalENVIRONMENT.g:3081:4: rule__GSSEnvironmentProtocols__ProtocolAssignment_2
-            {
-            pushFollow(FollowSets000.FOLLOW_24);
-            rule__GSSEnvironmentProtocols__ProtocolAssignment_2();
+            // InternalENVIRONMENT.g:3080:2: ( rule__GSSEnvironmentProtocols__Group_2__0 )?
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            state._fsp--;
-            if (state.failed) return ;
+            if ( (LA26_0==47) ) {
+                alt26=1;
+            }
+            switch (alt26) {
+                case 1 :
+                    // InternalENVIRONMENT.g:3080:3: rule__GSSEnvironmentProtocols__Group_2__0
+                    {
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    rule__GSSEnvironmentProtocols__Group_2__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolAssignment_2()); 
+               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getGroup_2()); 
             }
-
-            }
-
-            // InternalENVIRONMENT.g:3084:2: ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 )* )
-            // InternalENVIRONMENT.g:3085:3: ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 )*
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolAssignment_2()); 
-            }
-            // InternalENVIRONMENT.g:3086:3: ( rule__GSSEnvironmentProtocols__ProtocolAssignment_2 )*
-            loop26:
-            do {
-                int alt26=2;
-                int LA26_0 = input.LA(1);
-
-                if ( (LA26_0==68) ) {
-                    alt26=1;
-                }
-
-
-                switch (alt26) {
-            	case 1 :
-            	    // InternalENVIRONMENT.g:3086:4: rule__GSSEnvironmentProtocols__ProtocolAssignment_2
-            	    {
-            	    pushFollow(FollowSets000.FOLLOW_24);
-            	    rule__GSSEnvironmentProtocols__ProtocolAssignment_2();
-
-            	    state._fsp--;
-            	    if (state.failed) return ;
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop26;
-                }
-            } while (true);
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolAssignment_2()); 
-            }
-
-            }
-
 
             }
 
@@ -10884,16 +10848,16 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocols__Group__3"
-    // InternalENVIRONMENT.g:3095:1: rule__GSSEnvironmentProtocols__Group__3 : rule__GSSEnvironmentProtocols__Group__3__Impl rule__GSSEnvironmentProtocols__Group__4 ;
+    // InternalENVIRONMENT.g:3088:1: rule__GSSEnvironmentProtocols__Group__3 : rule__GSSEnvironmentProtocols__Group__3__Impl rule__GSSEnvironmentProtocols__Group__4 ;
     public final void rule__GSSEnvironmentProtocols__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3099:1: ( rule__GSSEnvironmentProtocols__Group__3__Impl rule__GSSEnvironmentProtocols__Group__4 )
-            // InternalENVIRONMENT.g:3100:2: rule__GSSEnvironmentProtocols__Group__3__Impl rule__GSSEnvironmentProtocols__Group__4
+            // InternalENVIRONMENT.g:3092:1: ( rule__GSSEnvironmentProtocols__Group__3__Impl rule__GSSEnvironmentProtocols__Group__4 )
+            // InternalENVIRONMENT.g:3093:2: rule__GSSEnvironmentProtocols__Group__3__Impl rule__GSSEnvironmentProtocols__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_7);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSEnvironmentProtocols__Group__3__Impl();
 
             state._fsp--;
@@ -10922,25 +10886,82 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocols__Group__3__Impl"
-    // InternalENVIRONMENT.g:3107:1: rule__GSSEnvironmentProtocols__Group__3__Impl : ( '}' ) ;
+    // InternalENVIRONMENT.g:3100:1: rule__GSSEnvironmentProtocols__Group__3__Impl : ( ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 ) ) ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 )* ) ) ;
     public final void rule__GSSEnvironmentProtocols__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3111:1: ( ( '}' ) )
-            // InternalENVIRONMENT.g:3112:1: ( '}' )
+            // InternalENVIRONMENT.g:3104:1: ( ( ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 ) ) ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 )* ) ) )
+            // InternalENVIRONMENT.g:3105:1: ( ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 ) ) ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 )* ) )
             {
-            // InternalENVIRONMENT.g:3112:1: ( '}' )
-            // InternalENVIRONMENT.g:3113:2: '}'
+            // InternalENVIRONMENT.g:3105:1: ( ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 ) ) ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 )* ) )
+            // InternalENVIRONMENT.g:3106:2: ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 ) ) ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 )* )
+            {
+            // InternalENVIRONMENT.g:3106:2: ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 ) )
+            // InternalENVIRONMENT.g:3107:3: ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getRightCurlyBracketKeyword_3()); 
+               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolAssignment_3()); 
             }
-            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalENVIRONMENT.g:3108:3: ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 )
+            // InternalENVIRONMENT.g:3108:4: rule__GSSEnvironmentProtocols__ProtocolAssignment_3
+            {
+            pushFollow(FollowSets000.FOLLOW_24);
+            rule__GSSEnvironmentProtocols__ProtocolAssignment_3();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getRightCurlyBracketKeyword_3()); 
+               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolAssignment_3()); 
             }
+
+            }
+
+            // InternalENVIRONMENT.g:3111:2: ( ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 )* )
+            // InternalENVIRONMENT.g:3112:3: ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 )*
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolAssignment_3()); 
+            }
+            // InternalENVIRONMENT.g:3113:3: ( rule__GSSEnvironmentProtocols__ProtocolAssignment_3 )*
+            loop27:
+            do {
+                int alt27=2;
+                int LA27_0 = input.LA(1);
+
+                if ( (LA27_0==69) ) {
+                    alt27=1;
+                }
+
+
+                switch (alt27) {
+            	case 1 :
+            	    // InternalENVIRONMENT.g:3113:4: rule__GSSEnvironmentProtocols__ProtocolAssignment_3
+            	    {
+            	    pushFollow(FollowSets000.FOLLOW_24);
+            	    rule__GSSEnvironmentProtocols__ProtocolAssignment_3();
+
+            	    state._fsp--;
+            	    if (state.failed) return ;
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop27;
+                }
+            } while (true);
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolAssignment_3()); 
+            }
+
+            }
+
 
             }
 
@@ -10963,17 +10984,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocols__Group__4"
-    // InternalENVIRONMENT.g:3122:1: rule__GSSEnvironmentProtocols__Group__4 : rule__GSSEnvironmentProtocols__Group__4__Impl ;
+    // InternalENVIRONMENT.g:3122:1: rule__GSSEnvironmentProtocols__Group__4 : rule__GSSEnvironmentProtocols__Group__4__Impl rule__GSSEnvironmentProtocols__Group__5 ;
     public final void rule__GSSEnvironmentProtocols__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3126:1: ( rule__GSSEnvironmentProtocols__Group__4__Impl )
-            // InternalENVIRONMENT.g:3127:2: rule__GSSEnvironmentProtocols__Group__4__Impl
+            // InternalENVIRONMENT.g:3126:1: ( rule__GSSEnvironmentProtocols__Group__4__Impl rule__GSSEnvironmentProtocols__Group__5 )
+            // InternalENVIRONMENT.g:3127:2: rule__GSSEnvironmentProtocols__Group__4__Impl rule__GSSEnvironmentProtocols__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_2);
+            pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentProtocols__Group__4__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSEnvironmentProtocols__Group__5();
 
             state._fsp--;
             if (state.failed) return ;
@@ -10996,24 +11022,24 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocols__Group__4__Impl"
-    // InternalENVIRONMENT.g:3133:1: rule__GSSEnvironmentProtocols__Group__4__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:3134:1: rule__GSSEnvironmentProtocols__Group__4__Impl : ( '}' ) ;
     public final void rule__GSSEnvironmentProtocols__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3137:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:3138:1: ( ';' )
+            // InternalENVIRONMENT.g:3138:1: ( ( '}' ) )
+            // InternalENVIRONMENT.g:3139:1: ( '}' )
             {
-            // InternalENVIRONMENT.g:3138:1: ( ';' )
-            // InternalENVIRONMENT.g:3139:2: ';'
+            // InternalENVIRONMENT.g:3139:1: ( '}' )
+            // InternalENVIRONMENT.g:3140:2: '}'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getSemicolonKeyword_4()); 
+               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getRightCurlyBracketKeyword_4()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getSemicolonKeyword_4()); 
+               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getRightCurlyBracketKeyword_4()); 
             }
 
             }
@@ -11036,15 +11062,410 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__GSSEnvironmentProtocols__Group__4__Impl"
 
 
+    // $ANTLR start "rule__GSSEnvironmentProtocols__Group__5"
+    // InternalENVIRONMENT.g:3149:1: rule__GSSEnvironmentProtocols__Group__5 : rule__GSSEnvironmentProtocols__Group__5__Impl ;
+    public final void rule__GSSEnvironmentProtocols__Group__5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalENVIRONMENT.g:3153:1: ( rule__GSSEnvironmentProtocols__Group__5__Impl )
+            // InternalENVIRONMENT.g:3154:2: rule__GSSEnvironmentProtocols__Group__5__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSEnvironmentProtocols__Group__5__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSEnvironmentProtocols__Group__5"
+
+
+    // $ANTLR start "rule__GSSEnvironmentProtocols__Group__5__Impl"
+    // InternalENVIRONMENT.g:3160:1: rule__GSSEnvironmentProtocols__Group__5__Impl : ( ';' ) ;
+    public final void rule__GSSEnvironmentProtocols__Group__5__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalENVIRONMENT.g:3164:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:3165:1: ( ';' )
+            {
+            // InternalENVIRONMENT.g:3165:1: ( ';' )
+            // InternalENVIRONMENT.g:3166:2: ';'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getSemicolonKeyword_5()); 
+            }
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getSemicolonKeyword_5()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSEnvironmentProtocols__Group__5__Impl"
+
+
+    // $ANTLR start "rule__GSSEnvironmentProtocols__Group_2__0"
+    // InternalENVIRONMENT.g:3176:1: rule__GSSEnvironmentProtocols__Group_2__0 : rule__GSSEnvironmentProtocols__Group_2__0__Impl rule__GSSEnvironmentProtocols__Group_2__1 ;
+    public final void rule__GSSEnvironmentProtocols__Group_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalENVIRONMENT.g:3180:1: ( rule__GSSEnvironmentProtocols__Group_2__0__Impl rule__GSSEnvironmentProtocols__Group_2__1 )
+            // InternalENVIRONMENT.g:3181:2: rule__GSSEnvironmentProtocols__Group_2__0__Impl rule__GSSEnvironmentProtocols__Group_2__1
+            {
+            pushFollow(FollowSets000.FOLLOW_5);
+            rule__GSSEnvironmentProtocols__Group_2__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSEnvironmentProtocols__Group_2__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSEnvironmentProtocols__Group_2__0"
+
+
+    // $ANTLR start "rule__GSSEnvironmentProtocols__Group_2__0__Impl"
+    // InternalENVIRONMENT.g:3188:1: rule__GSSEnvironmentProtocols__Group_2__0__Impl : ( 'ProtocolPacketsFile' ) ;
+    public final void rule__GSSEnvironmentProtocols__Group_2__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalENVIRONMENT.g:3192:1: ( ( 'ProtocolPacketsFile' ) )
+            // InternalENVIRONMENT.g:3193:1: ( 'ProtocolPacketsFile' )
+            {
+            // InternalENVIRONMENT.g:3193:1: ( 'ProtocolPacketsFile' )
+            // InternalENVIRONMENT.g:3194:2: 'ProtocolPacketsFile'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolPacketsFileKeyword_2_0()); 
+            }
+            match(input,47,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolPacketsFileKeyword_2_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSEnvironmentProtocols__Group_2__0__Impl"
+
+
+    // $ANTLR start "rule__GSSEnvironmentProtocols__Group_2__1"
+    // InternalENVIRONMENT.g:3203:1: rule__GSSEnvironmentProtocols__Group_2__1 : rule__GSSEnvironmentProtocols__Group_2__1__Impl rule__GSSEnvironmentProtocols__Group_2__2 ;
+    public final void rule__GSSEnvironmentProtocols__Group_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalENVIRONMENT.g:3207:1: ( rule__GSSEnvironmentProtocols__Group_2__1__Impl rule__GSSEnvironmentProtocols__Group_2__2 )
+            // InternalENVIRONMENT.g:3208:2: rule__GSSEnvironmentProtocols__Group_2__1__Impl rule__GSSEnvironmentProtocols__Group_2__2
+            {
+            pushFollow(FollowSets000.FOLLOW_8);
+            rule__GSSEnvironmentProtocols__Group_2__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSEnvironmentProtocols__Group_2__2();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSEnvironmentProtocols__Group_2__1"
+
+
+    // $ANTLR start "rule__GSSEnvironmentProtocols__Group_2__1__Impl"
+    // InternalENVIRONMENT.g:3215:1: rule__GSSEnvironmentProtocols__Group_2__1__Impl : ( ':=' ) ;
+    public final void rule__GSSEnvironmentProtocols__Group_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalENVIRONMENT.g:3219:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:3220:1: ( ':=' )
+            {
+            // InternalENVIRONMENT.g:3220:1: ( ':=' )
+            // InternalENVIRONMENT.g:3221:2: ':='
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getColonEqualsSignKeyword_2_1()); 
+            }
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getColonEqualsSignKeyword_2_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSEnvironmentProtocols__Group_2__1__Impl"
+
+
+    // $ANTLR start "rule__GSSEnvironmentProtocols__Group_2__2"
+    // InternalENVIRONMENT.g:3230:1: rule__GSSEnvironmentProtocols__Group_2__2 : rule__GSSEnvironmentProtocols__Group_2__2__Impl rule__GSSEnvironmentProtocols__Group_2__3 ;
+    public final void rule__GSSEnvironmentProtocols__Group_2__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalENVIRONMENT.g:3234:1: ( rule__GSSEnvironmentProtocols__Group_2__2__Impl rule__GSSEnvironmentProtocols__Group_2__3 )
+            // InternalENVIRONMENT.g:3235:2: rule__GSSEnvironmentProtocols__Group_2__2__Impl rule__GSSEnvironmentProtocols__Group_2__3
+            {
+            pushFollow(FollowSets000.FOLLOW_7);
+            rule__GSSEnvironmentProtocols__Group_2__2__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSEnvironmentProtocols__Group_2__3();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSEnvironmentProtocols__Group_2__2"
+
+
+    // $ANTLR start "rule__GSSEnvironmentProtocols__Group_2__2__Impl"
+    // InternalENVIRONMENT.g:3242:1: rule__GSSEnvironmentProtocols__Group_2__2__Impl : ( ( rule__GSSEnvironmentProtocols__ProtocolPacketsFileAssignment_2_2 ) ) ;
+    public final void rule__GSSEnvironmentProtocols__Group_2__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalENVIRONMENT.g:3246:1: ( ( ( rule__GSSEnvironmentProtocols__ProtocolPacketsFileAssignment_2_2 ) ) )
+            // InternalENVIRONMENT.g:3247:1: ( ( rule__GSSEnvironmentProtocols__ProtocolPacketsFileAssignment_2_2 ) )
+            {
+            // InternalENVIRONMENT.g:3247:1: ( ( rule__GSSEnvironmentProtocols__ProtocolPacketsFileAssignment_2_2 ) )
+            // InternalENVIRONMENT.g:3248:2: ( rule__GSSEnvironmentProtocols__ProtocolPacketsFileAssignment_2_2 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolPacketsFileAssignment_2_2()); 
+            }
+            // InternalENVIRONMENT.g:3249:2: ( rule__GSSEnvironmentProtocols__ProtocolPacketsFileAssignment_2_2 )
+            // InternalENVIRONMENT.g:3249:3: rule__GSSEnvironmentProtocols__ProtocolPacketsFileAssignment_2_2
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSEnvironmentProtocols__ProtocolPacketsFileAssignment_2_2();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolPacketsFileAssignment_2_2()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSEnvironmentProtocols__Group_2__2__Impl"
+
+
+    // $ANTLR start "rule__GSSEnvironmentProtocols__Group_2__3"
+    // InternalENVIRONMENT.g:3257:1: rule__GSSEnvironmentProtocols__Group_2__3 : rule__GSSEnvironmentProtocols__Group_2__3__Impl ;
+    public final void rule__GSSEnvironmentProtocols__Group_2__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalENVIRONMENT.g:3261:1: ( rule__GSSEnvironmentProtocols__Group_2__3__Impl )
+            // InternalENVIRONMENT.g:3262:2: rule__GSSEnvironmentProtocols__Group_2__3__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSEnvironmentProtocols__Group_2__3__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSEnvironmentProtocols__Group_2__3"
+
+
+    // $ANTLR start "rule__GSSEnvironmentProtocols__Group_2__3__Impl"
+    // InternalENVIRONMENT.g:3268:1: rule__GSSEnvironmentProtocols__Group_2__3__Impl : ( ';' ) ;
+    public final void rule__GSSEnvironmentProtocols__Group_2__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalENVIRONMENT.g:3272:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:3273:1: ( ';' )
+            {
+            // InternalENVIRONMENT.g:3273:1: ( ';' )
+            // InternalENVIRONMENT.g:3274:2: ';'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getSemicolonKeyword_2_3()); 
+            }
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getSemicolonKeyword_2_3()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSEnvironmentProtocols__Group_2__3__Impl"
+
+
     // $ANTLR start "rule__GSSEnvironmentInterfaces__Group__0"
-    // InternalENVIRONMENT.g:3149:1: rule__GSSEnvironmentInterfaces__Group__0 : rule__GSSEnvironmentInterfaces__Group__0__Impl rule__GSSEnvironmentInterfaces__Group__1 ;
+    // InternalENVIRONMENT.g:3284:1: rule__GSSEnvironmentInterfaces__Group__0 : rule__GSSEnvironmentInterfaces__Group__0__Impl rule__GSSEnvironmentInterfaces__Group__1 ;
     public final void rule__GSSEnvironmentInterfaces__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3153:1: ( rule__GSSEnvironmentInterfaces__Group__0__Impl rule__GSSEnvironmentInterfaces__Group__1 )
-            // InternalENVIRONMENT.g:3154:2: rule__GSSEnvironmentInterfaces__Group__0__Impl rule__GSSEnvironmentInterfaces__Group__1
+            // InternalENVIRONMENT.g:3288:1: ( rule__GSSEnvironmentInterfaces__Group__0__Impl rule__GSSEnvironmentInterfaces__Group__1 )
+            // InternalENVIRONMENT.g:3289:2: rule__GSSEnvironmentInterfaces__Group__0__Impl rule__GSSEnvironmentInterfaces__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSEnvironmentInterfaces__Group__0__Impl();
@@ -11075,22 +11496,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentInterfaces__Group__0__Impl"
-    // InternalENVIRONMENT.g:3161:1: rule__GSSEnvironmentInterfaces__Group__0__Impl : ( 'GSSEnvironmentInterfaces' ) ;
+    // InternalENVIRONMENT.g:3296:1: rule__GSSEnvironmentInterfaces__Group__0__Impl : ( 'GSSEnvironmentInterfaces' ) ;
     public final void rule__GSSEnvironmentInterfaces__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3165:1: ( ( 'GSSEnvironmentInterfaces' ) )
-            // InternalENVIRONMENT.g:3166:1: ( 'GSSEnvironmentInterfaces' )
+            // InternalENVIRONMENT.g:3300:1: ( ( 'GSSEnvironmentInterfaces' ) )
+            // InternalENVIRONMENT.g:3301:1: ( 'GSSEnvironmentInterfaces' )
             {
-            // InternalENVIRONMENT.g:3166:1: ( 'GSSEnvironmentInterfaces' )
-            // InternalENVIRONMENT.g:3167:2: 'GSSEnvironmentInterfaces'
+            // InternalENVIRONMENT.g:3301:1: ( 'GSSEnvironmentInterfaces' )
+            // InternalENVIRONMENT.g:3302:2: 'GSSEnvironmentInterfaces'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentInterfacesAccess().getGSSEnvironmentInterfacesKeyword_0()); 
             }
-            match(input,47,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentInterfacesAccess().getGSSEnvironmentInterfacesKeyword_0()); 
             }
@@ -11116,14 +11537,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentInterfaces__Group__1"
-    // InternalENVIRONMENT.g:3176:1: rule__GSSEnvironmentInterfaces__Group__1 : rule__GSSEnvironmentInterfaces__Group__1__Impl rule__GSSEnvironmentInterfaces__Group__2 ;
+    // InternalENVIRONMENT.g:3311:1: rule__GSSEnvironmentInterfaces__Group__1 : rule__GSSEnvironmentInterfaces__Group__1__Impl rule__GSSEnvironmentInterfaces__Group__2 ;
     public final void rule__GSSEnvironmentInterfaces__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3180:1: ( rule__GSSEnvironmentInterfaces__Group__1__Impl rule__GSSEnvironmentInterfaces__Group__2 )
-            // InternalENVIRONMENT.g:3181:2: rule__GSSEnvironmentInterfaces__Group__1__Impl rule__GSSEnvironmentInterfaces__Group__2
+            // InternalENVIRONMENT.g:3315:1: ( rule__GSSEnvironmentInterfaces__Group__1__Impl rule__GSSEnvironmentInterfaces__Group__2 )
+            // InternalENVIRONMENT.g:3316:2: rule__GSSEnvironmentInterfaces__Group__1__Impl rule__GSSEnvironmentInterfaces__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_25);
             rule__GSSEnvironmentInterfaces__Group__1__Impl();
@@ -11154,17 +11575,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentInterfaces__Group__1__Impl"
-    // InternalENVIRONMENT.g:3188:1: rule__GSSEnvironmentInterfaces__Group__1__Impl : ( '{' ) ;
+    // InternalENVIRONMENT.g:3323:1: rule__GSSEnvironmentInterfaces__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSEnvironmentInterfaces__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3192:1: ( ( '{' ) )
-            // InternalENVIRONMENT.g:3193:1: ( '{' )
+            // InternalENVIRONMENT.g:3327:1: ( ( '{' ) )
+            // InternalENVIRONMENT.g:3328:1: ( '{' )
             {
-            // InternalENVIRONMENT.g:3193:1: ( '{' )
-            // InternalENVIRONMENT.g:3194:2: '{'
+            // InternalENVIRONMENT.g:3328:1: ( '{' )
+            // InternalENVIRONMENT.g:3329:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentInterfacesAccess().getLeftCurlyBracketKeyword_1()); 
@@ -11195,14 +11616,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentInterfaces__Group__2"
-    // InternalENVIRONMENT.g:3203:1: rule__GSSEnvironmentInterfaces__Group__2 : rule__GSSEnvironmentInterfaces__Group__2__Impl rule__GSSEnvironmentInterfaces__Group__3 ;
+    // InternalENVIRONMENT.g:3338:1: rule__GSSEnvironmentInterfaces__Group__2 : rule__GSSEnvironmentInterfaces__Group__2__Impl rule__GSSEnvironmentInterfaces__Group__3 ;
     public final void rule__GSSEnvironmentInterfaces__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3207:1: ( rule__GSSEnvironmentInterfaces__Group__2__Impl rule__GSSEnvironmentInterfaces__Group__3 )
-            // InternalENVIRONMENT.g:3208:2: rule__GSSEnvironmentInterfaces__Group__2__Impl rule__GSSEnvironmentInterfaces__Group__3
+            // InternalENVIRONMENT.g:3342:1: ( rule__GSSEnvironmentInterfaces__Group__2__Impl rule__GSSEnvironmentInterfaces__Group__3 )
+            // InternalENVIRONMENT.g:3343:2: rule__GSSEnvironmentInterfaces__Group__2__Impl rule__GSSEnvironmentInterfaces__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_26);
             rule__GSSEnvironmentInterfaces__Group__2__Impl();
@@ -11233,23 +11654,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentInterfaces__Group__2__Impl"
-    // InternalENVIRONMENT.g:3215:1: rule__GSSEnvironmentInterfaces__Group__2__Impl : ( ( rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2 ) ) ;
+    // InternalENVIRONMENT.g:3350:1: rule__GSSEnvironmentInterfaces__Group__2__Impl : ( ( rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2 ) ) ;
     public final void rule__GSSEnvironmentInterfaces__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3219:1: ( ( ( rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2 ) ) )
-            // InternalENVIRONMENT.g:3220:1: ( ( rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2 ) )
+            // InternalENVIRONMENT.g:3354:1: ( ( ( rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2 ) ) )
+            // InternalENVIRONMENT.g:3355:1: ( ( rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2 ) )
             {
-            // InternalENVIRONMENT.g:3220:1: ( ( rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2 ) )
-            // InternalENVIRONMENT.g:3221:2: ( rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2 )
+            // InternalENVIRONMENT.g:3355:1: ( ( rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2 ) )
+            // InternalENVIRONMENT.g:3356:2: ( rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentInterfacesAccess().getMainInterfaceAssignment_2()); 
             }
-            // InternalENVIRONMENT.g:3222:2: ( rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2 )
-            // InternalENVIRONMENT.g:3222:3: rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2
+            // InternalENVIRONMENT.g:3357:2: ( rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2 )
+            // InternalENVIRONMENT.g:3357:3: rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2();
@@ -11284,14 +11705,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentInterfaces__Group__3"
-    // InternalENVIRONMENT.g:3230:1: rule__GSSEnvironmentInterfaces__Group__3 : rule__GSSEnvironmentInterfaces__Group__3__Impl rule__GSSEnvironmentInterfaces__Group__4 ;
+    // InternalENVIRONMENT.g:3365:1: rule__GSSEnvironmentInterfaces__Group__3 : rule__GSSEnvironmentInterfaces__Group__3__Impl rule__GSSEnvironmentInterfaces__Group__4 ;
     public final void rule__GSSEnvironmentInterfaces__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3234:1: ( rule__GSSEnvironmentInterfaces__Group__3__Impl rule__GSSEnvironmentInterfaces__Group__4 )
-            // InternalENVIRONMENT.g:3235:2: rule__GSSEnvironmentInterfaces__Group__3__Impl rule__GSSEnvironmentInterfaces__Group__4
+            // InternalENVIRONMENT.g:3369:1: ( rule__GSSEnvironmentInterfaces__Group__3__Impl rule__GSSEnvironmentInterfaces__Group__4 )
+            // InternalENVIRONMENT.g:3370:2: rule__GSSEnvironmentInterfaces__Group__3__Impl rule__GSSEnvironmentInterfaces__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_26);
             rule__GSSEnvironmentInterfaces__Group__3__Impl();
@@ -11322,35 +11743,35 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentInterfaces__Group__3__Impl"
-    // InternalENVIRONMENT.g:3242:1: rule__GSSEnvironmentInterfaces__Group__3__Impl : ( ( rule__GSSEnvironmentInterfaces__InterfaceAssignment_3 )* ) ;
+    // InternalENVIRONMENT.g:3377:1: rule__GSSEnvironmentInterfaces__Group__3__Impl : ( ( rule__GSSEnvironmentInterfaces__InterfaceAssignment_3 )* ) ;
     public final void rule__GSSEnvironmentInterfaces__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3246:1: ( ( ( rule__GSSEnvironmentInterfaces__InterfaceAssignment_3 )* ) )
-            // InternalENVIRONMENT.g:3247:1: ( ( rule__GSSEnvironmentInterfaces__InterfaceAssignment_3 )* )
+            // InternalENVIRONMENT.g:3381:1: ( ( ( rule__GSSEnvironmentInterfaces__InterfaceAssignment_3 )* ) )
+            // InternalENVIRONMENT.g:3382:1: ( ( rule__GSSEnvironmentInterfaces__InterfaceAssignment_3 )* )
             {
-            // InternalENVIRONMENT.g:3247:1: ( ( rule__GSSEnvironmentInterfaces__InterfaceAssignment_3 )* )
-            // InternalENVIRONMENT.g:3248:2: ( rule__GSSEnvironmentInterfaces__InterfaceAssignment_3 )*
+            // InternalENVIRONMENT.g:3382:1: ( ( rule__GSSEnvironmentInterfaces__InterfaceAssignment_3 )* )
+            // InternalENVIRONMENT.g:3383:2: ( rule__GSSEnvironmentInterfaces__InterfaceAssignment_3 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentInterfacesAccess().getInterfaceAssignment_3()); 
             }
-            // InternalENVIRONMENT.g:3249:2: ( rule__GSSEnvironmentInterfaces__InterfaceAssignment_3 )*
-            loop27:
+            // InternalENVIRONMENT.g:3384:2: ( rule__GSSEnvironmentInterfaces__InterfaceAssignment_3 )*
+            loop28:
             do {
-                int alt27=2;
-                int LA27_0 = input.LA(1);
+                int alt28=2;
+                int LA28_0 = input.LA(1);
 
-                if ( (LA27_0==80) ) {
-                    alt27=1;
+                if ( (LA28_0==80) ) {
+                    alt28=1;
                 }
 
 
-                switch (alt27) {
+                switch (alt28) {
             	case 1 :
-            	    // InternalENVIRONMENT.g:3249:3: rule__GSSEnvironmentInterfaces__InterfaceAssignment_3
+            	    // InternalENVIRONMENT.g:3384:3: rule__GSSEnvironmentInterfaces__InterfaceAssignment_3
             	    {
             	    pushFollow(FollowSets000.FOLLOW_27);
             	    rule__GSSEnvironmentInterfaces__InterfaceAssignment_3();
@@ -11362,7 +11783,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             	    break;
 
             	default :
-            	    break loop27;
+            	    break loop28;
                 }
             } while (true);
 
@@ -11391,14 +11812,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentInterfaces__Group__4"
-    // InternalENVIRONMENT.g:3257:1: rule__GSSEnvironmentInterfaces__Group__4 : rule__GSSEnvironmentInterfaces__Group__4__Impl rule__GSSEnvironmentInterfaces__Group__5 ;
+    // InternalENVIRONMENT.g:3392:1: rule__GSSEnvironmentInterfaces__Group__4 : rule__GSSEnvironmentInterfaces__Group__4__Impl rule__GSSEnvironmentInterfaces__Group__5 ;
     public final void rule__GSSEnvironmentInterfaces__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3261:1: ( rule__GSSEnvironmentInterfaces__Group__4__Impl rule__GSSEnvironmentInterfaces__Group__5 )
-            // InternalENVIRONMENT.g:3262:2: rule__GSSEnvironmentInterfaces__Group__4__Impl rule__GSSEnvironmentInterfaces__Group__5
+            // InternalENVIRONMENT.g:3396:1: ( rule__GSSEnvironmentInterfaces__Group__4__Impl rule__GSSEnvironmentInterfaces__Group__5 )
+            // InternalENVIRONMENT.g:3397:2: rule__GSSEnvironmentInterfaces__Group__4__Impl rule__GSSEnvironmentInterfaces__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentInterfaces__Group__4__Impl();
@@ -11429,17 +11850,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentInterfaces__Group__4__Impl"
-    // InternalENVIRONMENT.g:3269:1: rule__GSSEnvironmentInterfaces__Group__4__Impl : ( '}' ) ;
+    // InternalENVIRONMENT.g:3404:1: rule__GSSEnvironmentInterfaces__Group__4__Impl : ( '}' ) ;
     public final void rule__GSSEnvironmentInterfaces__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3273:1: ( ( '}' ) )
-            // InternalENVIRONMENT.g:3274:1: ( '}' )
+            // InternalENVIRONMENT.g:3408:1: ( ( '}' ) )
+            // InternalENVIRONMENT.g:3409:1: ( '}' )
             {
-            // InternalENVIRONMENT.g:3274:1: ( '}' )
-            // InternalENVIRONMENT.g:3275:2: '}'
+            // InternalENVIRONMENT.g:3409:1: ( '}' )
+            // InternalENVIRONMENT.g:3410:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentInterfacesAccess().getRightCurlyBracketKeyword_4()); 
@@ -11470,14 +11891,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentInterfaces__Group__5"
-    // InternalENVIRONMENT.g:3284:1: rule__GSSEnvironmentInterfaces__Group__5 : rule__GSSEnvironmentInterfaces__Group__5__Impl ;
+    // InternalENVIRONMENT.g:3419:1: rule__GSSEnvironmentInterfaces__Group__5 : rule__GSSEnvironmentInterfaces__Group__5__Impl ;
     public final void rule__GSSEnvironmentInterfaces__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3288:1: ( rule__GSSEnvironmentInterfaces__Group__5__Impl )
-            // InternalENVIRONMENT.g:3289:2: rule__GSSEnvironmentInterfaces__Group__5__Impl
+            // InternalENVIRONMENT.g:3423:1: ( rule__GSSEnvironmentInterfaces__Group__5__Impl )
+            // InternalENVIRONMENT.g:3424:2: rule__GSSEnvironmentInterfaces__Group__5__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentInterfaces__Group__5__Impl();
@@ -11503,17 +11924,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentInterfaces__Group__5__Impl"
-    // InternalENVIRONMENT.g:3295:1: rule__GSSEnvironmentInterfaces__Group__5__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:3430:1: rule__GSSEnvironmentInterfaces__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentInterfaces__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3299:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:3300:1: ( ';' )
+            // InternalENVIRONMENT.g:3434:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:3435:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:3300:1: ( ';' )
-            // InternalENVIRONMENT.g:3301:2: ';'
+            // InternalENVIRONMENT.g:3435:1: ( ';' )
+            // InternalENVIRONMENT.g:3436:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentInterfacesAccess().getSemicolonKeyword_5()); 
@@ -11544,14 +11965,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentSpecialPackets__Group__0"
-    // InternalENVIRONMENT.g:3311:1: rule__GSSEnvironmentSpecialPackets__Group__0 : rule__GSSEnvironmentSpecialPackets__Group__0__Impl rule__GSSEnvironmentSpecialPackets__Group__1 ;
+    // InternalENVIRONMENT.g:3446:1: rule__GSSEnvironmentSpecialPackets__Group__0 : rule__GSSEnvironmentSpecialPackets__Group__0__Impl rule__GSSEnvironmentSpecialPackets__Group__1 ;
     public final void rule__GSSEnvironmentSpecialPackets__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3315:1: ( rule__GSSEnvironmentSpecialPackets__Group__0__Impl rule__GSSEnvironmentSpecialPackets__Group__1 )
-            // InternalENVIRONMENT.g:3316:2: rule__GSSEnvironmentSpecialPackets__Group__0__Impl rule__GSSEnvironmentSpecialPackets__Group__1
+            // InternalENVIRONMENT.g:3450:1: ( rule__GSSEnvironmentSpecialPackets__Group__0__Impl rule__GSSEnvironmentSpecialPackets__Group__1 )
+            // InternalENVIRONMENT.g:3451:2: rule__GSSEnvironmentSpecialPackets__Group__0__Impl rule__GSSEnvironmentSpecialPackets__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSEnvironmentSpecialPackets__Group__0__Impl();
@@ -11582,22 +12003,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentSpecialPackets__Group__0__Impl"
-    // InternalENVIRONMENT.g:3323:1: rule__GSSEnvironmentSpecialPackets__Group__0__Impl : ( 'GSSEnvironmentSpecialPackets' ) ;
+    // InternalENVIRONMENT.g:3458:1: rule__GSSEnvironmentSpecialPackets__Group__0__Impl : ( 'GSSEnvironmentSpecialPackets' ) ;
     public final void rule__GSSEnvironmentSpecialPackets__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3327:1: ( ( 'GSSEnvironmentSpecialPackets' ) )
-            // InternalENVIRONMENT.g:3328:1: ( 'GSSEnvironmentSpecialPackets' )
+            // InternalENVIRONMENT.g:3462:1: ( ( 'GSSEnvironmentSpecialPackets' ) )
+            // InternalENVIRONMENT.g:3463:1: ( 'GSSEnvironmentSpecialPackets' )
             {
-            // InternalENVIRONMENT.g:3328:1: ( 'GSSEnvironmentSpecialPackets' )
-            // InternalENVIRONMENT.g:3329:2: 'GSSEnvironmentSpecialPackets'
+            // InternalENVIRONMENT.g:3463:1: ( 'GSSEnvironmentSpecialPackets' )
+            // InternalENVIRONMENT.g:3464:2: 'GSSEnvironmentSpecialPackets'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getGSSEnvironmentSpecialPacketsKeyword_0()); 
             }
-            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,49,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getGSSEnvironmentSpecialPacketsKeyword_0()); 
             }
@@ -11623,14 +12044,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentSpecialPackets__Group__1"
-    // InternalENVIRONMENT.g:3338:1: rule__GSSEnvironmentSpecialPackets__Group__1 : rule__GSSEnvironmentSpecialPackets__Group__1__Impl rule__GSSEnvironmentSpecialPackets__Group__2 ;
+    // InternalENVIRONMENT.g:3473:1: rule__GSSEnvironmentSpecialPackets__Group__1 : rule__GSSEnvironmentSpecialPackets__Group__1__Impl rule__GSSEnvironmentSpecialPackets__Group__2 ;
     public final void rule__GSSEnvironmentSpecialPackets__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3342:1: ( rule__GSSEnvironmentSpecialPackets__Group__1__Impl rule__GSSEnvironmentSpecialPackets__Group__2 )
-            // InternalENVIRONMENT.g:3343:2: rule__GSSEnvironmentSpecialPackets__Group__1__Impl rule__GSSEnvironmentSpecialPackets__Group__2
+            // InternalENVIRONMENT.g:3477:1: ( rule__GSSEnvironmentSpecialPackets__Group__1__Impl rule__GSSEnvironmentSpecialPackets__Group__2 )
+            // InternalENVIRONMENT.g:3478:2: rule__GSSEnvironmentSpecialPackets__Group__1__Impl rule__GSSEnvironmentSpecialPackets__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_28);
             rule__GSSEnvironmentSpecialPackets__Group__1__Impl();
@@ -11661,17 +12082,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentSpecialPackets__Group__1__Impl"
-    // InternalENVIRONMENT.g:3350:1: rule__GSSEnvironmentSpecialPackets__Group__1__Impl : ( '{' ) ;
+    // InternalENVIRONMENT.g:3485:1: rule__GSSEnvironmentSpecialPackets__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSEnvironmentSpecialPackets__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3354:1: ( ( '{' ) )
-            // InternalENVIRONMENT.g:3355:1: ( '{' )
+            // InternalENVIRONMENT.g:3489:1: ( ( '{' ) )
+            // InternalENVIRONMENT.g:3490:1: ( '{' )
             {
-            // InternalENVIRONMENT.g:3355:1: ( '{' )
-            // InternalENVIRONMENT.g:3356:2: '{'
+            // InternalENVIRONMENT.g:3490:1: ( '{' )
+            // InternalENVIRONMENT.g:3491:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getLeftCurlyBracketKeyword_1()); 
@@ -11702,14 +12123,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentSpecialPackets__Group__2"
-    // InternalENVIRONMENT.g:3365:1: rule__GSSEnvironmentSpecialPackets__Group__2 : rule__GSSEnvironmentSpecialPackets__Group__2__Impl rule__GSSEnvironmentSpecialPackets__Group__3 ;
+    // InternalENVIRONMENT.g:3500:1: rule__GSSEnvironmentSpecialPackets__Group__2 : rule__GSSEnvironmentSpecialPackets__Group__2__Impl rule__GSSEnvironmentSpecialPackets__Group__3 ;
     public final void rule__GSSEnvironmentSpecialPackets__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3369:1: ( rule__GSSEnvironmentSpecialPackets__Group__2__Impl rule__GSSEnvironmentSpecialPackets__Group__3 )
-            // InternalENVIRONMENT.g:3370:2: rule__GSSEnvironmentSpecialPackets__Group__2__Impl rule__GSSEnvironmentSpecialPackets__Group__3
+            // InternalENVIRONMENT.g:3504:1: ( rule__GSSEnvironmentSpecialPackets__Group__2__Impl rule__GSSEnvironmentSpecialPackets__Group__3 )
+            // InternalENVIRONMENT.g:3505:2: rule__GSSEnvironmentSpecialPackets__Group__2__Impl rule__GSSEnvironmentSpecialPackets__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSEnvironmentSpecialPackets__Group__2__Impl();
@@ -11740,23 +12161,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentSpecialPackets__Group__2__Impl"
-    // InternalENVIRONMENT.g:3377:1: rule__GSSEnvironmentSpecialPackets__Group__2__Impl : ( ( rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2 ) ) ;
+    // InternalENVIRONMENT.g:3512:1: rule__GSSEnvironmentSpecialPackets__Group__2__Impl : ( ( rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2 ) ) ;
     public final void rule__GSSEnvironmentSpecialPackets__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3381:1: ( ( ( rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2 ) ) )
-            // InternalENVIRONMENT.g:3382:1: ( ( rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2 ) )
+            // InternalENVIRONMENT.g:3516:1: ( ( ( rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2 ) ) )
+            // InternalENVIRONMENT.g:3517:1: ( ( rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2 ) )
             {
-            // InternalENVIRONMENT.g:3382:1: ( ( rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2 ) )
-            // InternalENVIRONMENT.g:3383:2: ( rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2 )
+            // InternalENVIRONMENT.g:3517:1: ( ( rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2 ) )
+            // InternalENVIRONMENT.g:3518:2: ( rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getSpecialPacketAssignment_2()); 
             }
-            // InternalENVIRONMENT.g:3384:2: ( rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2 )
-            // InternalENVIRONMENT.g:3384:3: rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2
+            // InternalENVIRONMENT.g:3519:2: ( rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2 )
+            // InternalENVIRONMENT.g:3519:3: rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2();
@@ -11791,14 +12212,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentSpecialPackets__Group__3"
-    // InternalENVIRONMENT.g:3392:1: rule__GSSEnvironmentSpecialPackets__Group__3 : rule__GSSEnvironmentSpecialPackets__Group__3__Impl rule__GSSEnvironmentSpecialPackets__Group__4 ;
+    // InternalENVIRONMENT.g:3527:1: rule__GSSEnvironmentSpecialPackets__Group__3 : rule__GSSEnvironmentSpecialPackets__Group__3__Impl rule__GSSEnvironmentSpecialPackets__Group__4 ;
     public final void rule__GSSEnvironmentSpecialPackets__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3396:1: ( rule__GSSEnvironmentSpecialPackets__Group__3__Impl rule__GSSEnvironmentSpecialPackets__Group__4 )
-            // InternalENVIRONMENT.g:3397:2: rule__GSSEnvironmentSpecialPackets__Group__3__Impl rule__GSSEnvironmentSpecialPackets__Group__4
+            // InternalENVIRONMENT.g:3531:1: ( rule__GSSEnvironmentSpecialPackets__Group__3__Impl rule__GSSEnvironmentSpecialPackets__Group__4 )
+            // InternalENVIRONMENT.g:3532:2: rule__GSSEnvironmentSpecialPackets__Group__3__Impl rule__GSSEnvironmentSpecialPackets__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentSpecialPackets__Group__3__Impl();
@@ -11829,17 +12250,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentSpecialPackets__Group__3__Impl"
-    // InternalENVIRONMENT.g:3404:1: rule__GSSEnvironmentSpecialPackets__Group__3__Impl : ( '}' ) ;
+    // InternalENVIRONMENT.g:3539:1: rule__GSSEnvironmentSpecialPackets__Group__3__Impl : ( '}' ) ;
     public final void rule__GSSEnvironmentSpecialPackets__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3408:1: ( ( '}' ) )
-            // InternalENVIRONMENT.g:3409:1: ( '}' )
+            // InternalENVIRONMENT.g:3543:1: ( ( '}' ) )
+            // InternalENVIRONMENT.g:3544:1: ( '}' )
             {
-            // InternalENVIRONMENT.g:3409:1: ( '}' )
-            // InternalENVIRONMENT.g:3410:2: '}'
+            // InternalENVIRONMENT.g:3544:1: ( '}' )
+            // InternalENVIRONMENT.g:3545:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getRightCurlyBracketKeyword_3()); 
@@ -11870,14 +12291,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentSpecialPackets__Group__4"
-    // InternalENVIRONMENT.g:3419:1: rule__GSSEnvironmentSpecialPackets__Group__4 : rule__GSSEnvironmentSpecialPackets__Group__4__Impl ;
+    // InternalENVIRONMENT.g:3554:1: rule__GSSEnvironmentSpecialPackets__Group__4 : rule__GSSEnvironmentSpecialPackets__Group__4__Impl ;
     public final void rule__GSSEnvironmentSpecialPackets__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3423:1: ( rule__GSSEnvironmentSpecialPackets__Group__4__Impl )
-            // InternalENVIRONMENT.g:3424:2: rule__GSSEnvironmentSpecialPackets__Group__4__Impl
+            // InternalENVIRONMENT.g:3558:1: ( rule__GSSEnvironmentSpecialPackets__Group__4__Impl )
+            // InternalENVIRONMENT.g:3559:2: rule__GSSEnvironmentSpecialPackets__Group__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentSpecialPackets__Group__4__Impl();
@@ -11903,17 +12324,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentSpecialPackets__Group__4__Impl"
-    // InternalENVIRONMENT.g:3430:1: rule__GSSEnvironmentSpecialPackets__Group__4__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:3565:1: rule__GSSEnvironmentSpecialPackets__Group__4__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentSpecialPackets__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3434:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:3435:1: ( ';' )
+            // InternalENVIRONMENT.g:3569:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:3570:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:3435:1: ( ';' )
-            // InternalENVIRONMENT.g:3436:2: ';'
+            // InternalENVIRONMENT.g:3570:1: ( ';' )
+            // InternalENVIRONMENT.g:3571:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getSemicolonKeyword_4()); 
@@ -11944,14 +12365,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__Group__0"
-    // InternalENVIRONMENT.g:3446:1: rule__GSSEnvironmentPeriodicTCs__Group__0 : rule__GSSEnvironmentPeriodicTCs__Group__0__Impl rule__GSSEnvironmentPeriodicTCs__Group__1 ;
+    // InternalENVIRONMENT.g:3581:1: rule__GSSEnvironmentPeriodicTCs__Group__0 : rule__GSSEnvironmentPeriodicTCs__Group__0__Impl rule__GSSEnvironmentPeriodicTCs__Group__1 ;
     public final void rule__GSSEnvironmentPeriodicTCs__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3450:1: ( rule__GSSEnvironmentPeriodicTCs__Group__0__Impl rule__GSSEnvironmentPeriodicTCs__Group__1 )
-            // InternalENVIRONMENT.g:3451:2: rule__GSSEnvironmentPeriodicTCs__Group__0__Impl rule__GSSEnvironmentPeriodicTCs__Group__1
+            // InternalENVIRONMENT.g:3585:1: ( rule__GSSEnvironmentPeriodicTCs__Group__0__Impl rule__GSSEnvironmentPeriodicTCs__Group__1 )
+            // InternalENVIRONMENT.g:3586:2: rule__GSSEnvironmentPeriodicTCs__Group__0__Impl rule__GSSEnvironmentPeriodicTCs__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_29);
             rule__GSSEnvironmentPeriodicTCs__Group__0__Impl();
@@ -11982,23 +12403,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__Group__0__Impl"
-    // InternalENVIRONMENT.g:3458:1: rule__GSSEnvironmentPeriodicTCs__Group__0__Impl : ( () ) ;
+    // InternalENVIRONMENT.g:3593:1: rule__GSSEnvironmentPeriodicTCs__Group__0__Impl : ( () ) ;
     public final void rule__GSSEnvironmentPeriodicTCs__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3462:1: ( ( () ) )
-            // InternalENVIRONMENT.g:3463:1: ( () )
+            // InternalENVIRONMENT.g:3597:1: ( ( () ) )
+            // InternalENVIRONMENT.g:3598:1: ( () )
             {
-            // InternalENVIRONMENT.g:3463:1: ( () )
-            // InternalENVIRONMENT.g:3464:2: ()
+            // InternalENVIRONMENT.g:3598:1: ( () )
+            // InternalENVIRONMENT.g:3599:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCsAccess().getGSSEnvironmentPeriodicTCsAction_0()); 
             }
-            // InternalENVIRONMENT.g:3465:2: ()
-            // InternalENVIRONMENT.g:3465:3: 
+            // InternalENVIRONMENT.g:3600:2: ()
+            // InternalENVIRONMENT.g:3600:3: 
             {
             }
 
@@ -12023,14 +12444,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__Group__1"
-    // InternalENVIRONMENT.g:3473:1: rule__GSSEnvironmentPeriodicTCs__Group__1 : rule__GSSEnvironmentPeriodicTCs__Group__1__Impl rule__GSSEnvironmentPeriodicTCs__Group__2 ;
+    // InternalENVIRONMENT.g:3608:1: rule__GSSEnvironmentPeriodicTCs__Group__1 : rule__GSSEnvironmentPeriodicTCs__Group__1__Impl rule__GSSEnvironmentPeriodicTCs__Group__2 ;
     public final void rule__GSSEnvironmentPeriodicTCs__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3477:1: ( rule__GSSEnvironmentPeriodicTCs__Group__1__Impl rule__GSSEnvironmentPeriodicTCs__Group__2 )
-            // InternalENVIRONMENT.g:3478:2: rule__GSSEnvironmentPeriodicTCs__Group__1__Impl rule__GSSEnvironmentPeriodicTCs__Group__2
+            // InternalENVIRONMENT.g:3612:1: ( rule__GSSEnvironmentPeriodicTCs__Group__1__Impl rule__GSSEnvironmentPeriodicTCs__Group__2 )
+            // InternalENVIRONMENT.g:3613:2: rule__GSSEnvironmentPeriodicTCs__Group__1__Impl rule__GSSEnvironmentPeriodicTCs__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSEnvironmentPeriodicTCs__Group__1__Impl();
@@ -12061,22 +12482,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__Group__1__Impl"
-    // InternalENVIRONMENT.g:3485:1: rule__GSSEnvironmentPeriodicTCs__Group__1__Impl : ( 'GSSEnvironmentPeriodicTCs' ) ;
+    // InternalENVIRONMENT.g:3620:1: rule__GSSEnvironmentPeriodicTCs__Group__1__Impl : ( 'GSSEnvironmentPeriodicTCs' ) ;
     public final void rule__GSSEnvironmentPeriodicTCs__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3489:1: ( ( 'GSSEnvironmentPeriodicTCs' ) )
-            // InternalENVIRONMENT.g:3490:1: ( 'GSSEnvironmentPeriodicTCs' )
+            // InternalENVIRONMENT.g:3624:1: ( ( 'GSSEnvironmentPeriodicTCs' ) )
+            // InternalENVIRONMENT.g:3625:1: ( 'GSSEnvironmentPeriodicTCs' )
             {
-            // InternalENVIRONMENT.g:3490:1: ( 'GSSEnvironmentPeriodicTCs' )
-            // InternalENVIRONMENT.g:3491:2: 'GSSEnvironmentPeriodicTCs'
+            // InternalENVIRONMENT.g:3625:1: ( 'GSSEnvironmentPeriodicTCs' )
+            // InternalENVIRONMENT.g:3626:2: 'GSSEnvironmentPeriodicTCs'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCsAccess().getGSSEnvironmentPeriodicTCsKeyword_1()); 
             }
-            match(input,49,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,50,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentPeriodicTCsAccess().getGSSEnvironmentPeriodicTCsKeyword_1()); 
             }
@@ -12102,14 +12523,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__Group__2"
-    // InternalENVIRONMENT.g:3500:1: rule__GSSEnvironmentPeriodicTCs__Group__2 : rule__GSSEnvironmentPeriodicTCs__Group__2__Impl rule__GSSEnvironmentPeriodicTCs__Group__3 ;
+    // InternalENVIRONMENT.g:3635:1: rule__GSSEnvironmentPeriodicTCs__Group__2 : rule__GSSEnvironmentPeriodicTCs__Group__2__Impl rule__GSSEnvironmentPeriodicTCs__Group__3 ;
     public final void rule__GSSEnvironmentPeriodicTCs__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3504:1: ( rule__GSSEnvironmentPeriodicTCs__Group__2__Impl rule__GSSEnvironmentPeriodicTCs__Group__3 )
-            // InternalENVIRONMENT.g:3505:2: rule__GSSEnvironmentPeriodicTCs__Group__2__Impl rule__GSSEnvironmentPeriodicTCs__Group__3
+            // InternalENVIRONMENT.g:3639:1: ( rule__GSSEnvironmentPeriodicTCs__Group__2__Impl rule__GSSEnvironmentPeriodicTCs__Group__3 )
+            // InternalENVIRONMENT.g:3640:2: rule__GSSEnvironmentPeriodicTCs__Group__2__Impl rule__GSSEnvironmentPeriodicTCs__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_30);
             rule__GSSEnvironmentPeriodicTCs__Group__2__Impl();
@@ -12140,17 +12561,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__Group__2__Impl"
-    // InternalENVIRONMENT.g:3512:1: rule__GSSEnvironmentPeriodicTCs__Group__2__Impl : ( '{' ) ;
+    // InternalENVIRONMENT.g:3647:1: rule__GSSEnvironmentPeriodicTCs__Group__2__Impl : ( '{' ) ;
     public final void rule__GSSEnvironmentPeriodicTCs__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3516:1: ( ( '{' ) )
-            // InternalENVIRONMENT.g:3517:1: ( '{' )
+            // InternalENVIRONMENT.g:3651:1: ( ( '{' ) )
+            // InternalENVIRONMENT.g:3652:1: ( '{' )
             {
-            // InternalENVIRONMENT.g:3517:1: ( '{' )
-            // InternalENVIRONMENT.g:3518:2: '{'
+            // InternalENVIRONMENT.g:3652:1: ( '{' )
+            // InternalENVIRONMENT.g:3653:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCsAccess().getLeftCurlyBracketKeyword_2()); 
@@ -12181,14 +12602,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__Group__3"
-    // InternalENVIRONMENT.g:3527:1: rule__GSSEnvironmentPeriodicTCs__Group__3 : rule__GSSEnvironmentPeriodicTCs__Group__3__Impl rule__GSSEnvironmentPeriodicTCs__Group__4 ;
+    // InternalENVIRONMENT.g:3662:1: rule__GSSEnvironmentPeriodicTCs__Group__3 : rule__GSSEnvironmentPeriodicTCs__Group__3__Impl rule__GSSEnvironmentPeriodicTCs__Group__4 ;
     public final void rule__GSSEnvironmentPeriodicTCs__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3531:1: ( rule__GSSEnvironmentPeriodicTCs__Group__3__Impl rule__GSSEnvironmentPeriodicTCs__Group__4 )
-            // InternalENVIRONMENT.g:3532:2: rule__GSSEnvironmentPeriodicTCs__Group__3__Impl rule__GSSEnvironmentPeriodicTCs__Group__4
+            // InternalENVIRONMENT.g:3666:1: ( rule__GSSEnvironmentPeriodicTCs__Group__3__Impl rule__GSSEnvironmentPeriodicTCs__Group__4 )
+            // InternalENVIRONMENT.g:3667:2: rule__GSSEnvironmentPeriodicTCs__Group__3__Impl rule__GSSEnvironmentPeriodicTCs__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_30);
             rule__GSSEnvironmentPeriodicTCs__Group__3__Impl();
@@ -12219,35 +12640,35 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__Group__3__Impl"
-    // InternalENVIRONMENT.g:3539:1: rule__GSSEnvironmentPeriodicTCs__Group__3__Impl : ( ( rule__GSSEnvironmentPeriodicTCs__Alternatives_3 )* ) ;
+    // InternalENVIRONMENT.g:3674:1: rule__GSSEnvironmentPeriodicTCs__Group__3__Impl : ( ( rule__GSSEnvironmentPeriodicTCs__Alternatives_3 )* ) ;
     public final void rule__GSSEnvironmentPeriodicTCs__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3543:1: ( ( ( rule__GSSEnvironmentPeriodicTCs__Alternatives_3 )* ) )
-            // InternalENVIRONMENT.g:3544:1: ( ( rule__GSSEnvironmentPeriodicTCs__Alternatives_3 )* )
+            // InternalENVIRONMENT.g:3678:1: ( ( ( rule__GSSEnvironmentPeriodicTCs__Alternatives_3 )* ) )
+            // InternalENVIRONMENT.g:3679:1: ( ( rule__GSSEnvironmentPeriodicTCs__Alternatives_3 )* )
             {
-            // InternalENVIRONMENT.g:3544:1: ( ( rule__GSSEnvironmentPeriodicTCs__Alternatives_3 )* )
-            // InternalENVIRONMENT.g:3545:2: ( rule__GSSEnvironmentPeriodicTCs__Alternatives_3 )*
+            // InternalENVIRONMENT.g:3679:1: ( ( rule__GSSEnvironmentPeriodicTCs__Alternatives_3 )* )
+            // InternalENVIRONMENT.g:3680:2: ( rule__GSSEnvironmentPeriodicTCs__Alternatives_3 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCsAccess().getAlternatives_3()); 
             }
-            // InternalENVIRONMENT.g:3546:2: ( rule__GSSEnvironmentPeriodicTCs__Alternatives_3 )*
-            loop28:
+            // InternalENVIRONMENT.g:3681:2: ( rule__GSSEnvironmentPeriodicTCs__Alternatives_3 )*
+            loop29:
             do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
+                int alt29=2;
+                int LA29_0 = input.LA(1);
 
-                if ( (LA28_0==111||LA28_0==120||LA28_0==122) ) {
-                    alt28=1;
+                if ( (LA29_0==111||LA29_0==120||LA29_0==122) ) {
+                    alt29=1;
                 }
 
 
-                switch (alt28) {
+                switch (alt29) {
             	case 1 :
-            	    // InternalENVIRONMENT.g:3546:3: rule__GSSEnvironmentPeriodicTCs__Alternatives_3
+            	    // InternalENVIRONMENT.g:3681:3: rule__GSSEnvironmentPeriodicTCs__Alternatives_3
             	    {
             	    pushFollow(FollowSets000.FOLLOW_31);
             	    rule__GSSEnvironmentPeriodicTCs__Alternatives_3();
@@ -12259,7 +12680,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             	    break;
 
             	default :
-            	    break loop28;
+            	    break loop29;
                 }
             } while (true);
 
@@ -12288,14 +12709,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__Group__4"
-    // InternalENVIRONMENT.g:3554:1: rule__GSSEnvironmentPeriodicTCs__Group__4 : rule__GSSEnvironmentPeriodicTCs__Group__4__Impl rule__GSSEnvironmentPeriodicTCs__Group__5 ;
+    // InternalENVIRONMENT.g:3689:1: rule__GSSEnvironmentPeriodicTCs__Group__4 : rule__GSSEnvironmentPeriodicTCs__Group__4__Impl rule__GSSEnvironmentPeriodicTCs__Group__5 ;
     public final void rule__GSSEnvironmentPeriodicTCs__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3558:1: ( rule__GSSEnvironmentPeriodicTCs__Group__4__Impl rule__GSSEnvironmentPeriodicTCs__Group__5 )
-            // InternalENVIRONMENT.g:3559:2: rule__GSSEnvironmentPeriodicTCs__Group__4__Impl rule__GSSEnvironmentPeriodicTCs__Group__5
+            // InternalENVIRONMENT.g:3693:1: ( rule__GSSEnvironmentPeriodicTCs__Group__4__Impl rule__GSSEnvironmentPeriodicTCs__Group__5 )
+            // InternalENVIRONMENT.g:3694:2: rule__GSSEnvironmentPeriodicTCs__Group__4__Impl rule__GSSEnvironmentPeriodicTCs__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentPeriodicTCs__Group__4__Impl();
@@ -12326,17 +12747,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__Group__4__Impl"
-    // InternalENVIRONMENT.g:3566:1: rule__GSSEnvironmentPeriodicTCs__Group__4__Impl : ( '}' ) ;
+    // InternalENVIRONMENT.g:3701:1: rule__GSSEnvironmentPeriodicTCs__Group__4__Impl : ( '}' ) ;
     public final void rule__GSSEnvironmentPeriodicTCs__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3570:1: ( ( '}' ) )
-            // InternalENVIRONMENT.g:3571:1: ( '}' )
+            // InternalENVIRONMENT.g:3705:1: ( ( '}' ) )
+            // InternalENVIRONMENT.g:3706:1: ( '}' )
             {
-            // InternalENVIRONMENT.g:3571:1: ( '}' )
-            // InternalENVIRONMENT.g:3572:2: '}'
+            // InternalENVIRONMENT.g:3706:1: ( '}' )
+            // InternalENVIRONMENT.g:3707:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCsAccess().getRightCurlyBracketKeyword_4()); 
@@ -12367,14 +12788,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__Group__5"
-    // InternalENVIRONMENT.g:3581:1: rule__GSSEnvironmentPeriodicTCs__Group__5 : rule__GSSEnvironmentPeriodicTCs__Group__5__Impl ;
+    // InternalENVIRONMENT.g:3716:1: rule__GSSEnvironmentPeriodicTCs__Group__5 : rule__GSSEnvironmentPeriodicTCs__Group__5__Impl ;
     public final void rule__GSSEnvironmentPeriodicTCs__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3585:1: ( rule__GSSEnvironmentPeriodicTCs__Group__5__Impl )
-            // InternalENVIRONMENT.g:3586:2: rule__GSSEnvironmentPeriodicTCs__Group__5__Impl
+            // InternalENVIRONMENT.g:3720:1: ( rule__GSSEnvironmentPeriodicTCs__Group__5__Impl )
+            // InternalENVIRONMENT.g:3721:2: rule__GSSEnvironmentPeriodicTCs__Group__5__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentPeriodicTCs__Group__5__Impl();
@@ -12400,17 +12821,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__Group__5__Impl"
-    // InternalENVIRONMENT.g:3592:1: rule__GSSEnvironmentPeriodicTCs__Group__5__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:3727:1: rule__GSSEnvironmentPeriodicTCs__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentPeriodicTCs__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3596:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:3597:1: ( ';' )
+            // InternalENVIRONMENT.g:3731:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:3732:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:3597:1: ( ';' )
-            // InternalENVIRONMENT.g:3598:2: ';'
+            // InternalENVIRONMENT.g:3732:1: ( ';' )
+            // InternalENVIRONMENT.g:3733:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCsAccess().getSemicolonKeyword_5()); 
@@ -12441,14 +12862,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGlobalVars__Group__0"
-    // InternalENVIRONMENT.g:3608:1: rule__GSSEnvironmentGlobalVars__Group__0 : rule__GSSEnvironmentGlobalVars__Group__0__Impl rule__GSSEnvironmentGlobalVars__Group__1 ;
+    // InternalENVIRONMENT.g:3743:1: rule__GSSEnvironmentGlobalVars__Group__0 : rule__GSSEnvironmentGlobalVars__Group__0__Impl rule__GSSEnvironmentGlobalVars__Group__1 ;
     public final void rule__GSSEnvironmentGlobalVars__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3612:1: ( rule__GSSEnvironmentGlobalVars__Group__0__Impl rule__GSSEnvironmentGlobalVars__Group__1 )
-            // InternalENVIRONMENT.g:3613:2: rule__GSSEnvironmentGlobalVars__Group__0__Impl rule__GSSEnvironmentGlobalVars__Group__1
+            // InternalENVIRONMENT.g:3747:1: ( rule__GSSEnvironmentGlobalVars__Group__0__Impl rule__GSSEnvironmentGlobalVars__Group__1 )
+            // InternalENVIRONMENT.g:3748:2: rule__GSSEnvironmentGlobalVars__Group__0__Impl rule__GSSEnvironmentGlobalVars__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSEnvironmentGlobalVars__Group__0__Impl();
@@ -12479,22 +12900,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGlobalVars__Group__0__Impl"
-    // InternalENVIRONMENT.g:3620:1: rule__GSSEnvironmentGlobalVars__Group__0__Impl : ( 'GSSEnvironmentGlobalVars' ) ;
+    // InternalENVIRONMENT.g:3755:1: rule__GSSEnvironmentGlobalVars__Group__0__Impl : ( 'GSSEnvironmentGlobalVars' ) ;
     public final void rule__GSSEnvironmentGlobalVars__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3624:1: ( ( 'GSSEnvironmentGlobalVars' ) )
-            // InternalENVIRONMENT.g:3625:1: ( 'GSSEnvironmentGlobalVars' )
+            // InternalENVIRONMENT.g:3759:1: ( ( 'GSSEnvironmentGlobalVars' ) )
+            // InternalENVIRONMENT.g:3760:1: ( 'GSSEnvironmentGlobalVars' )
             {
-            // InternalENVIRONMENT.g:3625:1: ( 'GSSEnvironmentGlobalVars' )
-            // InternalENVIRONMENT.g:3626:2: 'GSSEnvironmentGlobalVars'
+            // InternalENVIRONMENT.g:3760:1: ( 'GSSEnvironmentGlobalVars' )
+            // InternalENVIRONMENT.g:3761:2: 'GSSEnvironmentGlobalVars'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGlobalVarsAccess().getGSSEnvironmentGlobalVarsKeyword_0()); 
             }
-            match(input,50,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,51,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGlobalVarsAccess().getGSSEnvironmentGlobalVarsKeyword_0()); 
             }
@@ -12520,14 +12941,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGlobalVars__Group__1"
-    // InternalENVIRONMENT.g:3635:1: rule__GSSEnvironmentGlobalVars__Group__1 : rule__GSSEnvironmentGlobalVars__Group__1__Impl rule__GSSEnvironmentGlobalVars__Group__2 ;
+    // InternalENVIRONMENT.g:3770:1: rule__GSSEnvironmentGlobalVars__Group__1 : rule__GSSEnvironmentGlobalVars__Group__1__Impl rule__GSSEnvironmentGlobalVars__Group__2 ;
     public final void rule__GSSEnvironmentGlobalVars__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3639:1: ( rule__GSSEnvironmentGlobalVars__Group__1__Impl rule__GSSEnvironmentGlobalVars__Group__2 )
-            // InternalENVIRONMENT.g:3640:2: rule__GSSEnvironmentGlobalVars__Group__1__Impl rule__GSSEnvironmentGlobalVars__Group__2
+            // InternalENVIRONMENT.g:3774:1: ( rule__GSSEnvironmentGlobalVars__Group__1__Impl rule__GSSEnvironmentGlobalVars__Group__2 )
+            // InternalENVIRONMENT.g:3775:2: rule__GSSEnvironmentGlobalVars__Group__1__Impl rule__GSSEnvironmentGlobalVars__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_32);
             rule__GSSEnvironmentGlobalVars__Group__1__Impl();
@@ -12558,17 +12979,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGlobalVars__Group__1__Impl"
-    // InternalENVIRONMENT.g:3647:1: rule__GSSEnvironmentGlobalVars__Group__1__Impl : ( '{' ) ;
+    // InternalENVIRONMENT.g:3782:1: rule__GSSEnvironmentGlobalVars__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSEnvironmentGlobalVars__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3651:1: ( ( '{' ) )
-            // InternalENVIRONMENT.g:3652:1: ( '{' )
+            // InternalENVIRONMENT.g:3786:1: ( ( '{' ) )
+            // InternalENVIRONMENT.g:3787:1: ( '{' )
             {
-            // InternalENVIRONMENT.g:3652:1: ( '{' )
-            // InternalENVIRONMENT.g:3653:2: '{'
+            // InternalENVIRONMENT.g:3787:1: ( '{' )
+            // InternalENVIRONMENT.g:3788:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGlobalVarsAccess().getLeftCurlyBracketKeyword_1()); 
@@ -12599,14 +13020,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGlobalVars__Group__2"
-    // InternalENVIRONMENT.g:3662:1: rule__GSSEnvironmentGlobalVars__Group__2 : rule__GSSEnvironmentGlobalVars__Group__2__Impl rule__GSSEnvironmentGlobalVars__Group__3 ;
+    // InternalENVIRONMENT.g:3797:1: rule__GSSEnvironmentGlobalVars__Group__2 : rule__GSSEnvironmentGlobalVars__Group__2__Impl rule__GSSEnvironmentGlobalVars__Group__3 ;
     public final void rule__GSSEnvironmentGlobalVars__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3666:1: ( rule__GSSEnvironmentGlobalVars__Group__2__Impl rule__GSSEnvironmentGlobalVars__Group__3 )
-            // InternalENVIRONMENT.g:3667:2: rule__GSSEnvironmentGlobalVars__Group__2__Impl rule__GSSEnvironmentGlobalVars__Group__3
+            // InternalENVIRONMENT.g:3801:1: ( rule__GSSEnvironmentGlobalVars__Group__2__Impl rule__GSSEnvironmentGlobalVars__Group__3 )
+            // InternalENVIRONMENT.g:3802:2: rule__GSSEnvironmentGlobalVars__Group__2__Impl rule__GSSEnvironmentGlobalVars__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSEnvironmentGlobalVars__Group__2__Impl();
@@ -12637,26 +13058,26 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGlobalVars__Group__2__Impl"
-    // InternalENVIRONMENT.g:3674:1: rule__GSSEnvironmentGlobalVars__Group__2__Impl : ( ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 ) ) ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )* ) ) ;
+    // InternalENVIRONMENT.g:3809:1: rule__GSSEnvironmentGlobalVars__Group__2__Impl : ( ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 ) ) ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )* ) ) ;
     public final void rule__GSSEnvironmentGlobalVars__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3678:1: ( ( ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 ) ) ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )* ) ) )
-            // InternalENVIRONMENT.g:3679:1: ( ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 ) ) ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )* ) )
+            // InternalENVIRONMENT.g:3813:1: ( ( ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 ) ) ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )* ) ) )
+            // InternalENVIRONMENT.g:3814:1: ( ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 ) ) ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )* ) )
             {
-            // InternalENVIRONMENT.g:3679:1: ( ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 ) ) ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )* ) )
-            // InternalENVIRONMENT.g:3680:2: ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 ) ) ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )* )
+            // InternalENVIRONMENT.g:3814:1: ( ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 ) ) ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )* ) )
+            // InternalENVIRONMENT.g:3815:2: ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 ) ) ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )* )
             {
-            // InternalENVIRONMENT.g:3680:2: ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 ) )
-            // InternalENVIRONMENT.g:3681:3: ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )
+            // InternalENVIRONMENT.g:3815:2: ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 ) )
+            // InternalENVIRONMENT.g:3816:3: ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGlobalVarsAccess().getGlobalVarAssignment_2()); 
             }
-            // InternalENVIRONMENT.g:3682:3: ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )
-            // InternalENVIRONMENT.g:3682:4: rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2
+            // InternalENVIRONMENT.g:3817:3: ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )
+            // InternalENVIRONMENT.g:3817:4: rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2
             {
             pushFollow(FollowSets000.FOLLOW_33);
             rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2();
@@ -12672,26 +13093,26 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
             }
 
-            // InternalENVIRONMENT.g:3685:2: ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )* )
-            // InternalENVIRONMENT.g:3686:3: ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )*
+            // InternalENVIRONMENT.g:3820:2: ( ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )* )
+            // InternalENVIRONMENT.g:3821:3: ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGlobalVarsAccess().getGlobalVarAssignment_2()); 
             }
-            // InternalENVIRONMENT.g:3687:3: ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )*
-            loop29:
+            // InternalENVIRONMENT.g:3822:3: ( rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 )*
+            loop30:
             do {
-                int alt29=2;
-                int LA29_0 = input.LA(1);
+                int alt30=2;
+                int LA30_0 = input.LA(1);
 
-                if ( (LA29_0==124) ) {
-                    alt29=1;
+                if ( (LA30_0==124) ) {
+                    alt30=1;
                 }
 
 
-                switch (alt29) {
+                switch (alt30) {
             	case 1 :
-            	    // InternalENVIRONMENT.g:3687:4: rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2
+            	    // InternalENVIRONMENT.g:3822:4: rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2
             	    {
             	    pushFollow(FollowSets000.FOLLOW_33);
             	    rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2();
@@ -12703,7 +13124,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             	    break;
 
             	default :
-            	    break loop29;
+            	    break loop30;
                 }
             } while (true);
 
@@ -12735,14 +13156,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGlobalVars__Group__3"
-    // InternalENVIRONMENT.g:3696:1: rule__GSSEnvironmentGlobalVars__Group__3 : rule__GSSEnvironmentGlobalVars__Group__3__Impl rule__GSSEnvironmentGlobalVars__Group__4 ;
+    // InternalENVIRONMENT.g:3831:1: rule__GSSEnvironmentGlobalVars__Group__3 : rule__GSSEnvironmentGlobalVars__Group__3__Impl rule__GSSEnvironmentGlobalVars__Group__4 ;
     public final void rule__GSSEnvironmentGlobalVars__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3700:1: ( rule__GSSEnvironmentGlobalVars__Group__3__Impl rule__GSSEnvironmentGlobalVars__Group__4 )
-            // InternalENVIRONMENT.g:3701:2: rule__GSSEnvironmentGlobalVars__Group__3__Impl rule__GSSEnvironmentGlobalVars__Group__4
+            // InternalENVIRONMENT.g:3835:1: ( rule__GSSEnvironmentGlobalVars__Group__3__Impl rule__GSSEnvironmentGlobalVars__Group__4 )
+            // InternalENVIRONMENT.g:3836:2: rule__GSSEnvironmentGlobalVars__Group__3__Impl rule__GSSEnvironmentGlobalVars__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGlobalVars__Group__3__Impl();
@@ -12773,17 +13194,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGlobalVars__Group__3__Impl"
-    // InternalENVIRONMENT.g:3708:1: rule__GSSEnvironmentGlobalVars__Group__3__Impl : ( '}' ) ;
+    // InternalENVIRONMENT.g:3843:1: rule__GSSEnvironmentGlobalVars__Group__3__Impl : ( '}' ) ;
     public final void rule__GSSEnvironmentGlobalVars__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3712:1: ( ( '}' ) )
-            // InternalENVIRONMENT.g:3713:1: ( '}' )
+            // InternalENVIRONMENT.g:3847:1: ( ( '}' ) )
+            // InternalENVIRONMENT.g:3848:1: ( '}' )
             {
-            // InternalENVIRONMENT.g:3713:1: ( '}' )
-            // InternalENVIRONMENT.g:3714:2: '}'
+            // InternalENVIRONMENT.g:3848:1: ( '}' )
+            // InternalENVIRONMENT.g:3849:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGlobalVarsAccess().getRightCurlyBracketKeyword_3()); 
@@ -12814,14 +13235,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGlobalVars__Group__4"
-    // InternalENVIRONMENT.g:3723:1: rule__GSSEnvironmentGlobalVars__Group__4 : rule__GSSEnvironmentGlobalVars__Group__4__Impl ;
+    // InternalENVIRONMENT.g:3858:1: rule__GSSEnvironmentGlobalVars__Group__4 : rule__GSSEnvironmentGlobalVars__Group__4__Impl ;
     public final void rule__GSSEnvironmentGlobalVars__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3727:1: ( rule__GSSEnvironmentGlobalVars__Group__4__Impl )
-            // InternalENVIRONMENT.g:3728:2: rule__GSSEnvironmentGlobalVars__Group__4__Impl
+            // InternalENVIRONMENT.g:3862:1: ( rule__GSSEnvironmentGlobalVars__Group__4__Impl )
+            // InternalENVIRONMENT.g:3863:2: rule__GSSEnvironmentGlobalVars__Group__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGlobalVars__Group__4__Impl();
@@ -12847,17 +13268,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGlobalVars__Group__4__Impl"
-    // InternalENVIRONMENT.g:3734:1: rule__GSSEnvironmentGlobalVars__Group__4__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:3869:1: rule__GSSEnvironmentGlobalVars__Group__4__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGlobalVars__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3738:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:3739:1: ( ';' )
+            // InternalENVIRONMENT.g:3873:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:3874:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:3739:1: ( ';' )
-            // InternalENVIRONMENT.g:3740:2: ';'
+            // InternalENVIRONMENT.g:3874:1: ( ';' )
+            // InternalENVIRONMENT.g:3875:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGlobalVarsAccess().getSemicolonKeyword_4()); 
@@ -12888,14 +13309,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group__0"
-    // InternalENVIRONMENT.g:3750:1: rule__GSSEnvironmentMonitors__Group__0 : rule__GSSEnvironmentMonitors__Group__0__Impl rule__GSSEnvironmentMonitors__Group__1 ;
+    // InternalENVIRONMENT.g:3885:1: rule__GSSEnvironmentMonitors__Group__0 : rule__GSSEnvironmentMonitors__Group__0__Impl rule__GSSEnvironmentMonitors__Group__1 ;
     public final void rule__GSSEnvironmentMonitors__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3754:1: ( rule__GSSEnvironmentMonitors__Group__0__Impl rule__GSSEnvironmentMonitors__Group__1 )
-            // InternalENVIRONMENT.g:3755:2: rule__GSSEnvironmentMonitors__Group__0__Impl rule__GSSEnvironmentMonitors__Group__1
+            // InternalENVIRONMENT.g:3889:1: ( rule__GSSEnvironmentMonitors__Group__0__Impl rule__GSSEnvironmentMonitors__Group__1 )
+            // InternalENVIRONMENT.g:3890:2: rule__GSSEnvironmentMonitors__Group__0__Impl rule__GSSEnvironmentMonitors__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSEnvironmentMonitors__Group__0__Impl();
@@ -12926,22 +13347,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group__0__Impl"
-    // InternalENVIRONMENT.g:3762:1: rule__GSSEnvironmentMonitors__Group__0__Impl : ( 'GSSEnvironmentMonitors' ) ;
+    // InternalENVIRONMENT.g:3897:1: rule__GSSEnvironmentMonitors__Group__0__Impl : ( 'GSSEnvironmentMonitors' ) ;
     public final void rule__GSSEnvironmentMonitors__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3766:1: ( ( 'GSSEnvironmentMonitors' ) )
-            // InternalENVIRONMENT.g:3767:1: ( 'GSSEnvironmentMonitors' )
+            // InternalENVIRONMENT.g:3901:1: ( ( 'GSSEnvironmentMonitors' ) )
+            // InternalENVIRONMENT.g:3902:1: ( 'GSSEnvironmentMonitors' )
             {
-            // InternalENVIRONMENT.g:3767:1: ( 'GSSEnvironmentMonitors' )
-            // InternalENVIRONMENT.g:3768:2: 'GSSEnvironmentMonitors'
+            // InternalENVIRONMENT.g:3902:1: ( 'GSSEnvironmentMonitors' )
+            // InternalENVIRONMENT.g:3903:2: 'GSSEnvironmentMonitors'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getGSSEnvironmentMonitorsKeyword_0()); 
             }
-            match(input,51,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,52,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentMonitorsAccess().getGSSEnvironmentMonitorsKeyword_0()); 
             }
@@ -12967,14 +13388,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group__1"
-    // InternalENVIRONMENT.g:3777:1: rule__GSSEnvironmentMonitors__Group__1 : rule__GSSEnvironmentMonitors__Group__1__Impl rule__GSSEnvironmentMonitors__Group__2 ;
+    // InternalENVIRONMENT.g:3912:1: rule__GSSEnvironmentMonitors__Group__1 : rule__GSSEnvironmentMonitors__Group__1__Impl rule__GSSEnvironmentMonitors__Group__2 ;
     public final void rule__GSSEnvironmentMonitors__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3781:1: ( rule__GSSEnvironmentMonitors__Group__1__Impl rule__GSSEnvironmentMonitors__Group__2 )
-            // InternalENVIRONMENT.g:3782:2: rule__GSSEnvironmentMonitors__Group__1__Impl rule__GSSEnvironmentMonitors__Group__2
+            // InternalENVIRONMENT.g:3916:1: ( rule__GSSEnvironmentMonitors__Group__1__Impl rule__GSSEnvironmentMonitors__Group__2 )
+            // InternalENVIRONMENT.g:3917:2: rule__GSSEnvironmentMonitors__Group__1__Impl rule__GSSEnvironmentMonitors__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_34);
             rule__GSSEnvironmentMonitors__Group__1__Impl();
@@ -13005,17 +13426,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group__1__Impl"
-    // InternalENVIRONMENT.g:3789:1: rule__GSSEnvironmentMonitors__Group__1__Impl : ( '{' ) ;
+    // InternalENVIRONMENT.g:3924:1: rule__GSSEnvironmentMonitors__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSEnvironmentMonitors__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3793:1: ( ( '{' ) )
-            // InternalENVIRONMENT.g:3794:1: ( '{' )
+            // InternalENVIRONMENT.g:3928:1: ( ( '{' ) )
+            // InternalENVIRONMENT.g:3929:1: ( '{' )
             {
-            // InternalENVIRONMENT.g:3794:1: ( '{' )
-            // InternalENVIRONMENT.g:3795:2: '{'
+            // InternalENVIRONMENT.g:3929:1: ( '{' )
+            // InternalENVIRONMENT.g:3930:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getLeftCurlyBracketKeyword_1()); 
@@ -13046,14 +13467,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group__2"
-    // InternalENVIRONMENT.g:3804:1: rule__GSSEnvironmentMonitors__Group__2 : rule__GSSEnvironmentMonitors__Group__2__Impl rule__GSSEnvironmentMonitors__Group__3 ;
+    // InternalENVIRONMENT.g:3939:1: rule__GSSEnvironmentMonitors__Group__2 : rule__GSSEnvironmentMonitors__Group__2__Impl rule__GSSEnvironmentMonitors__Group__3 ;
     public final void rule__GSSEnvironmentMonitors__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3808:1: ( rule__GSSEnvironmentMonitors__Group__2__Impl rule__GSSEnvironmentMonitors__Group__3 )
-            // InternalENVIRONMENT.g:3809:2: rule__GSSEnvironmentMonitors__Group__2__Impl rule__GSSEnvironmentMonitors__Group__3
+            // InternalENVIRONMENT.g:3943:1: ( rule__GSSEnvironmentMonitors__Group__2__Impl rule__GSSEnvironmentMonitors__Group__3 )
+            // InternalENVIRONMENT.g:3944:2: rule__GSSEnvironmentMonitors__Group__2__Impl rule__GSSEnvironmentMonitors__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_34);
             rule__GSSEnvironmentMonitors__Group__2__Impl();
@@ -13084,31 +13505,31 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group__2__Impl"
-    // InternalENVIRONMENT.g:3816:1: rule__GSSEnvironmentMonitors__Group__2__Impl : ( ( rule__GSSEnvironmentMonitors__Group_2__0 )? ) ;
+    // InternalENVIRONMENT.g:3951:1: rule__GSSEnvironmentMonitors__Group__2__Impl : ( ( rule__GSSEnvironmentMonitors__Group_2__0 )? ) ;
     public final void rule__GSSEnvironmentMonitors__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3820:1: ( ( ( rule__GSSEnvironmentMonitors__Group_2__0 )? ) )
-            // InternalENVIRONMENT.g:3821:1: ( ( rule__GSSEnvironmentMonitors__Group_2__0 )? )
+            // InternalENVIRONMENT.g:3955:1: ( ( ( rule__GSSEnvironmentMonitors__Group_2__0 )? ) )
+            // InternalENVIRONMENT.g:3956:1: ( ( rule__GSSEnvironmentMonitors__Group_2__0 )? )
             {
-            // InternalENVIRONMENT.g:3821:1: ( ( rule__GSSEnvironmentMonitors__Group_2__0 )? )
-            // InternalENVIRONMENT.g:3822:2: ( rule__GSSEnvironmentMonitors__Group_2__0 )?
+            // InternalENVIRONMENT.g:3956:1: ( ( rule__GSSEnvironmentMonitors__Group_2__0 )? )
+            // InternalENVIRONMENT.g:3957:2: ( rule__GSSEnvironmentMonitors__Group_2__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getGroup_2()); 
             }
-            // InternalENVIRONMENT.g:3823:2: ( rule__GSSEnvironmentMonitors__Group_2__0 )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // InternalENVIRONMENT.g:3958:2: ( rule__GSSEnvironmentMonitors__Group_2__0 )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA30_0==52) ) {
-                alt30=1;
+            if ( (LA31_0==53) ) {
+                alt31=1;
             }
-            switch (alt30) {
+            switch (alt31) {
                 case 1 :
-                    // InternalENVIRONMENT.g:3823:3: rule__GSSEnvironmentMonitors__Group_2__0
+                    // InternalENVIRONMENT.g:3958:3: rule__GSSEnvironmentMonitors__Group_2__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSEnvironmentMonitors__Group_2__0();
@@ -13146,14 +13567,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group__3"
-    // InternalENVIRONMENT.g:3831:1: rule__GSSEnvironmentMonitors__Group__3 : rule__GSSEnvironmentMonitors__Group__3__Impl rule__GSSEnvironmentMonitors__Group__4 ;
+    // InternalENVIRONMENT.g:3966:1: rule__GSSEnvironmentMonitors__Group__3 : rule__GSSEnvironmentMonitors__Group__3__Impl rule__GSSEnvironmentMonitors__Group__4 ;
     public final void rule__GSSEnvironmentMonitors__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3835:1: ( rule__GSSEnvironmentMonitors__Group__3__Impl rule__GSSEnvironmentMonitors__Group__4 )
-            // InternalENVIRONMENT.g:3836:2: rule__GSSEnvironmentMonitors__Group__3__Impl rule__GSSEnvironmentMonitors__Group__4
+            // InternalENVIRONMENT.g:3970:1: ( rule__GSSEnvironmentMonitors__Group__3__Impl rule__GSSEnvironmentMonitors__Group__4 )
+            // InternalENVIRONMENT.g:3971:2: rule__GSSEnvironmentMonitors__Group__3__Impl rule__GSSEnvironmentMonitors__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSEnvironmentMonitors__Group__3__Impl();
@@ -13184,26 +13605,26 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group__3__Impl"
-    // InternalENVIRONMENT.g:3843:1: rule__GSSEnvironmentMonitors__Group__3__Impl : ( ( ( rule__GSSEnvironmentMonitors__Alternatives_3 ) ) ( ( rule__GSSEnvironmentMonitors__Alternatives_3 )* ) ) ;
+    // InternalENVIRONMENT.g:3978:1: rule__GSSEnvironmentMonitors__Group__3__Impl : ( ( ( rule__GSSEnvironmentMonitors__Alternatives_3 ) ) ( ( rule__GSSEnvironmentMonitors__Alternatives_3 )* ) ) ;
     public final void rule__GSSEnvironmentMonitors__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3847:1: ( ( ( ( rule__GSSEnvironmentMonitors__Alternatives_3 ) ) ( ( rule__GSSEnvironmentMonitors__Alternatives_3 )* ) ) )
-            // InternalENVIRONMENT.g:3848:1: ( ( ( rule__GSSEnvironmentMonitors__Alternatives_3 ) ) ( ( rule__GSSEnvironmentMonitors__Alternatives_3 )* ) )
+            // InternalENVIRONMENT.g:3982:1: ( ( ( ( rule__GSSEnvironmentMonitors__Alternatives_3 ) ) ( ( rule__GSSEnvironmentMonitors__Alternatives_3 )* ) ) )
+            // InternalENVIRONMENT.g:3983:1: ( ( ( rule__GSSEnvironmentMonitors__Alternatives_3 ) ) ( ( rule__GSSEnvironmentMonitors__Alternatives_3 )* ) )
             {
-            // InternalENVIRONMENT.g:3848:1: ( ( ( rule__GSSEnvironmentMonitors__Alternatives_3 ) ) ( ( rule__GSSEnvironmentMonitors__Alternatives_3 )* ) )
-            // InternalENVIRONMENT.g:3849:2: ( ( rule__GSSEnvironmentMonitors__Alternatives_3 ) ) ( ( rule__GSSEnvironmentMonitors__Alternatives_3 )* )
+            // InternalENVIRONMENT.g:3983:1: ( ( ( rule__GSSEnvironmentMonitors__Alternatives_3 ) ) ( ( rule__GSSEnvironmentMonitors__Alternatives_3 )* ) )
+            // InternalENVIRONMENT.g:3984:2: ( ( rule__GSSEnvironmentMonitors__Alternatives_3 ) ) ( ( rule__GSSEnvironmentMonitors__Alternatives_3 )* )
             {
-            // InternalENVIRONMENT.g:3849:2: ( ( rule__GSSEnvironmentMonitors__Alternatives_3 ) )
-            // InternalENVIRONMENT.g:3850:3: ( rule__GSSEnvironmentMonitors__Alternatives_3 )
+            // InternalENVIRONMENT.g:3984:2: ( ( rule__GSSEnvironmentMonitors__Alternatives_3 ) )
+            // InternalENVIRONMENT.g:3985:3: ( rule__GSSEnvironmentMonitors__Alternatives_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getAlternatives_3()); 
             }
-            // InternalENVIRONMENT.g:3851:3: ( rule__GSSEnvironmentMonitors__Alternatives_3 )
-            // InternalENVIRONMENT.g:3851:4: rule__GSSEnvironmentMonitors__Alternatives_3
+            // InternalENVIRONMENT.g:3986:3: ( rule__GSSEnvironmentMonitors__Alternatives_3 )
+            // InternalENVIRONMENT.g:3986:4: rule__GSSEnvironmentMonitors__Alternatives_3
             {
             pushFollow(FollowSets000.FOLLOW_35);
             rule__GSSEnvironmentMonitors__Alternatives_3();
@@ -13219,26 +13640,26 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
             }
 
-            // InternalENVIRONMENT.g:3854:2: ( ( rule__GSSEnvironmentMonitors__Alternatives_3 )* )
-            // InternalENVIRONMENT.g:3855:3: ( rule__GSSEnvironmentMonitors__Alternatives_3 )*
+            // InternalENVIRONMENT.g:3989:2: ( ( rule__GSSEnvironmentMonitors__Alternatives_3 )* )
+            // InternalENVIRONMENT.g:3990:3: ( rule__GSSEnvironmentMonitors__Alternatives_3 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getAlternatives_3()); 
             }
-            // InternalENVIRONMENT.g:3856:3: ( rule__GSSEnvironmentMonitors__Alternatives_3 )*
-            loop31:
+            // InternalENVIRONMENT.g:3991:3: ( rule__GSSEnvironmentMonitors__Alternatives_3 )*
+            loop32:
             do {
-                int alt31=2;
-                int LA31_0 = input.LA(1);
+                int alt32=2;
+                int LA32_0 = input.LA(1);
 
-                if ( (LA31_0==134||LA31_0==136||LA31_0==138||LA31_0==140) ) {
-                    alt31=1;
+                if ( (LA32_0==134||LA32_0==136||LA32_0==138||LA32_0==140) ) {
+                    alt32=1;
                 }
 
 
-                switch (alt31) {
+                switch (alt32) {
             	case 1 :
-            	    // InternalENVIRONMENT.g:3856:4: rule__GSSEnvironmentMonitors__Alternatives_3
+            	    // InternalENVIRONMENT.g:3991:4: rule__GSSEnvironmentMonitors__Alternatives_3
             	    {
             	    pushFollow(FollowSets000.FOLLOW_35);
             	    rule__GSSEnvironmentMonitors__Alternatives_3();
@@ -13250,7 +13671,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             	    break;
 
             	default :
-            	    break loop31;
+            	    break loop32;
                 }
             } while (true);
 
@@ -13282,14 +13703,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group__4"
-    // InternalENVIRONMENT.g:3865:1: rule__GSSEnvironmentMonitors__Group__4 : rule__GSSEnvironmentMonitors__Group__4__Impl rule__GSSEnvironmentMonitors__Group__5 ;
+    // InternalENVIRONMENT.g:4000:1: rule__GSSEnvironmentMonitors__Group__4 : rule__GSSEnvironmentMonitors__Group__4__Impl rule__GSSEnvironmentMonitors__Group__5 ;
     public final void rule__GSSEnvironmentMonitors__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3869:1: ( rule__GSSEnvironmentMonitors__Group__4__Impl rule__GSSEnvironmentMonitors__Group__5 )
-            // InternalENVIRONMENT.g:3870:2: rule__GSSEnvironmentMonitors__Group__4__Impl rule__GSSEnvironmentMonitors__Group__5
+            // InternalENVIRONMENT.g:4004:1: ( rule__GSSEnvironmentMonitors__Group__4__Impl rule__GSSEnvironmentMonitors__Group__5 )
+            // InternalENVIRONMENT.g:4005:2: rule__GSSEnvironmentMonitors__Group__4__Impl rule__GSSEnvironmentMonitors__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentMonitors__Group__4__Impl();
@@ -13320,17 +13741,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group__4__Impl"
-    // InternalENVIRONMENT.g:3877:1: rule__GSSEnvironmentMonitors__Group__4__Impl : ( '}' ) ;
+    // InternalENVIRONMENT.g:4012:1: rule__GSSEnvironmentMonitors__Group__4__Impl : ( '}' ) ;
     public final void rule__GSSEnvironmentMonitors__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3881:1: ( ( '}' ) )
-            // InternalENVIRONMENT.g:3882:1: ( '}' )
+            // InternalENVIRONMENT.g:4016:1: ( ( '}' ) )
+            // InternalENVIRONMENT.g:4017:1: ( '}' )
             {
-            // InternalENVIRONMENT.g:3882:1: ( '}' )
-            // InternalENVIRONMENT.g:3883:2: '}'
+            // InternalENVIRONMENT.g:4017:1: ( '}' )
+            // InternalENVIRONMENT.g:4018:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getRightCurlyBracketKeyword_4()); 
@@ -13361,14 +13782,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group__5"
-    // InternalENVIRONMENT.g:3892:1: rule__GSSEnvironmentMonitors__Group__5 : rule__GSSEnvironmentMonitors__Group__5__Impl ;
+    // InternalENVIRONMENT.g:4027:1: rule__GSSEnvironmentMonitors__Group__5 : rule__GSSEnvironmentMonitors__Group__5__Impl ;
     public final void rule__GSSEnvironmentMonitors__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3896:1: ( rule__GSSEnvironmentMonitors__Group__5__Impl )
-            // InternalENVIRONMENT.g:3897:2: rule__GSSEnvironmentMonitors__Group__5__Impl
+            // InternalENVIRONMENT.g:4031:1: ( rule__GSSEnvironmentMonitors__Group__5__Impl )
+            // InternalENVIRONMENT.g:4032:2: rule__GSSEnvironmentMonitors__Group__5__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentMonitors__Group__5__Impl();
@@ -13394,17 +13815,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group__5__Impl"
-    // InternalENVIRONMENT.g:3903:1: rule__GSSEnvironmentMonitors__Group__5__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:4038:1: rule__GSSEnvironmentMonitors__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentMonitors__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3907:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:3908:1: ( ';' )
+            // InternalENVIRONMENT.g:4042:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:4043:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:3908:1: ( ';' )
-            // InternalENVIRONMENT.g:3909:2: ';'
+            // InternalENVIRONMENT.g:4043:1: ( ';' )
+            // InternalENVIRONMENT.g:4044:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getSemicolonKeyword_5()); 
@@ -13435,14 +13856,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group_2__0"
-    // InternalENVIRONMENT.g:3919:1: rule__GSSEnvironmentMonitors__Group_2__0 : rule__GSSEnvironmentMonitors__Group_2__0__Impl rule__GSSEnvironmentMonitors__Group_2__1 ;
+    // InternalENVIRONMENT.g:4054:1: rule__GSSEnvironmentMonitors__Group_2__0 : rule__GSSEnvironmentMonitors__Group_2__0__Impl rule__GSSEnvironmentMonitors__Group_2__1 ;
     public final void rule__GSSEnvironmentMonitors__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3923:1: ( rule__GSSEnvironmentMonitors__Group_2__0__Impl rule__GSSEnvironmentMonitors__Group_2__1 )
-            // InternalENVIRONMENT.g:3924:2: rule__GSSEnvironmentMonitors__Group_2__0__Impl rule__GSSEnvironmentMonitors__Group_2__1
+            // InternalENVIRONMENT.g:4058:1: ( rule__GSSEnvironmentMonitors__Group_2__0__Impl rule__GSSEnvironmentMonitors__Group_2__1 )
+            // InternalENVIRONMENT.g:4059:2: rule__GSSEnvironmentMonitors__Group_2__0__Impl rule__GSSEnvironmentMonitors__Group_2__1
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentMonitors__Group_2__0__Impl();
@@ -13473,22 +13894,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group_2__0__Impl"
-    // InternalENVIRONMENT.g:3931:1: rule__GSSEnvironmentMonitors__Group_2__0__Impl : ( 'ChartsFile' ) ;
+    // InternalENVIRONMENT.g:4066:1: rule__GSSEnvironmentMonitors__Group_2__0__Impl : ( 'ChartsFile' ) ;
     public final void rule__GSSEnvironmentMonitors__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3935:1: ( ( 'ChartsFile' ) )
-            // InternalENVIRONMENT.g:3936:1: ( 'ChartsFile' )
+            // InternalENVIRONMENT.g:4070:1: ( ( 'ChartsFile' ) )
+            // InternalENVIRONMENT.g:4071:1: ( 'ChartsFile' )
             {
-            // InternalENVIRONMENT.g:3936:1: ( 'ChartsFile' )
-            // InternalENVIRONMENT.g:3937:2: 'ChartsFile'
+            // InternalENVIRONMENT.g:4071:1: ( 'ChartsFile' )
+            // InternalENVIRONMENT.g:4072:2: 'ChartsFile'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getChartsFileKeyword_2_0()); 
             }
-            match(input,52,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,53,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentMonitorsAccess().getChartsFileKeyword_2_0()); 
             }
@@ -13514,14 +13935,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group_2__1"
-    // InternalENVIRONMENT.g:3946:1: rule__GSSEnvironmentMonitors__Group_2__1 : rule__GSSEnvironmentMonitors__Group_2__1__Impl rule__GSSEnvironmentMonitors__Group_2__2 ;
+    // InternalENVIRONMENT.g:4081:1: rule__GSSEnvironmentMonitors__Group_2__1 : rule__GSSEnvironmentMonitors__Group_2__1__Impl rule__GSSEnvironmentMonitors__Group_2__2 ;
     public final void rule__GSSEnvironmentMonitors__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3950:1: ( rule__GSSEnvironmentMonitors__Group_2__1__Impl rule__GSSEnvironmentMonitors__Group_2__2 )
-            // InternalENVIRONMENT.g:3951:2: rule__GSSEnvironmentMonitors__Group_2__1__Impl rule__GSSEnvironmentMonitors__Group_2__2
+            // InternalENVIRONMENT.g:4085:1: ( rule__GSSEnvironmentMonitors__Group_2__1__Impl rule__GSSEnvironmentMonitors__Group_2__2 )
+            // InternalENVIRONMENT.g:4086:2: rule__GSSEnvironmentMonitors__Group_2__1__Impl rule__GSSEnvironmentMonitors__Group_2__2
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSEnvironmentMonitors__Group_2__1__Impl();
@@ -13552,17 +13973,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group_2__1__Impl"
-    // InternalENVIRONMENT.g:3958:1: rule__GSSEnvironmentMonitors__Group_2__1__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:4093:1: rule__GSSEnvironmentMonitors__Group_2__1__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentMonitors__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3962:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:3963:1: ( ':=' )
+            // InternalENVIRONMENT.g:4097:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:4098:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:3963:1: ( ':=' )
-            // InternalENVIRONMENT.g:3964:2: ':='
+            // InternalENVIRONMENT.g:4098:1: ( ':=' )
+            // InternalENVIRONMENT.g:4099:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getColonEqualsSignKeyword_2_1()); 
@@ -13593,14 +14014,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group_2__2"
-    // InternalENVIRONMENT.g:3973:1: rule__GSSEnvironmentMonitors__Group_2__2 : rule__GSSEnvironmentMonitors__Group_2__2__Impl rule__GSSEnvironmentMonitors__Group_2__3 ;
+    // InternalENVIRONMENT.g:4108:1: rule__GSSEnvironmentMonitors__Group_2__2 : rule__GSSEnvironmentMonitors__Group_2__2__Impl rule__GSSEnvironmentMonitors__Group_2__3 ;
     public final void rule__GSSEnvironmentMonitors__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3977:1: ( rule__GSSEnvironmentMonitors__Group_2__2__Impl rule__GSSEnvironmentMonitors__Group_2__3 )
-            // InternalENVIRONMENT.g:3978:2: rule__GSSEnvironmentMonitors__Group_2__2__Impl rule__GSSEnvironmentMonitors__Group_2__3
+            // InternalENVIRONMENT.g:4112:1: ( rule__GSSEnvironmentMonitors__Group_2__2__Impl rule__GSSEnvironmentMonitors__Group_2__3 )
+            // InternalENVIRONMENT.g:4113:2: rule__GSSEnvironmentMonitors__Group_2__2__Impl rule__GSSEnvironmentMonitors__Group_2__3
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentMonitors__Group_2__2__Impl();
@@ -13631,23 +14052,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group_2__2__Impl"
-    // InternalENVIRONMENT.g:3985:1: rule__GSSEnvironmentMonitors__Group_2__2__Impl : ( ( rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2 ) ) ;
+    // InternalENVIRONMENT.g:4120:1: rule__GSSEnvironmentMonitors__Group_2__2__Impl : ( ( rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2 ) ) ;
     public final void rule__GSSEnvironmentMonitors__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:3989:1: ( ( ( rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2 ) ) )
-            // InternalENVIRONMENT.g:3990:1: ( ( rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2 ) )
+            // InternalENVIRONMENT.g:4124:1: ( ( ( rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2 ) ) )
+            // InternalENVIRONMENT.g:4125:1: ( ( rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2 ) )
             {
-            // InternalENVIRONMENT.g:3990:1: ( ( rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2 ) )
-            // InternalENVIRONMENT.g:3991:2: ( rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2 )
+            // InternalENVIRONMENT.g:4125:1: ( ( rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2 ) )
+            // InternalENVIRONMENT.g:4126:2: ( rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getChartsFileAssignment_2_2()); 
             }
-            // InternalENVIRONMENT.g:3992:2: ( rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2 )
-            // InternalENVIRONMENT.g:3992:3: rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2
+            // InternalENVIRONMENT.g:4127:2: ( rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2 )
+            // InternalENVIRONMENT.g:4127:3: rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2();
@@ -13682,14 +14103,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group_2__3"
-    // InternalENVIRONMENT.g:4000:1: rule__GSSEnvironmentMonitors__Group_2__3 : rule__GSSEnvironmentMonitors__Group_2__3__Impl ;
+    // InternalENVIRONMENT.g:4135:1: rule__GSSEnvironmentMonitors__Group_2__3 : rule__GSSEnvironmentMonitors__Group_2__3__Impl ;
     public final void rule__GSSEnvironmentMonitors__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4004:1: ( rule__GSSEnvironmentMonitors__Group_2__3__Impl )
-            // InternalENVIRONMENT.g:4005:2: rule__GSSEnvironmentMonitors__Group_2__3__Impl
+            // InternalENVIRONMENT.g:4139:1: ( rule__GSSEnvironmentMonitors__Group_2__3__Impl )
+            // InternalENVIRONMENT.g:4140:2: rule__GSSEnvironmentMonitors__Group_2__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentMonitors__Group_2__3__Impl();
@@ -13715,17 +14136,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__Group_2__3__Impl"
-    // InternalENVIRONMENT.g:4011:1: rule__GSSEnvironmentMonitors__Group_2__3__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:4146:1: rule__GSSEnvironmentMonitors__Group_2__3__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentMonitors__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4015:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:4016:1: ( ';' )
+            // InternalENVIRONMENT.g:4150:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:4151:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:4016:1: ( ';' )
-            // InternalENVIRONMENT.g:4017:2: ';'
+            // InternalENVIRONMENT.g:4151:1: ( ';' )
+            // InternalENVIRONMENT.g:4152:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getSemicolonKeyword_2_3()); 
@@ -13756,14 +14177,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__0"
-    // InternalENVIRONMENT.g:4027:1: rule__GSSEnvironmentGSSInfo__Group__0 : rule__GSSEnvironmentGSSInfo__Group__0__Impl rule__GSSEnvironmentGSSInfo__Group__1 ;
+    // InternalENVIRONMENT.g:4162:1: rule__GSSEnvironmentGSSInfo__Group__0 : rule__GSSEnvironmentGSSInfo__Group__0__Impl rule__GSSEnvironmentGSSInfo__Group__1 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4031:1: ( rule__GSSEnvironmentGSSInfo__Group__0__Impl rule__GSSEnvironmentGSSInfo__Group__1 )
-            // InternalENVIRONMENT.g:4032:2: rule__GSSEnvironmentGSSInfo__Group__0__Impl rule__GSSEnvironmentGSSInfo__Group__1
+            // InternalENVIRONMENT.g:4166:1: ( rule__GSSEnvironmentGSSInfo__Group__0__Impl rule__GSSEnvironmentGSSInfo__Group__1 )
+            // InternalENVIRONMENT.g:4167:2: rule__GSSEnvironmentGSSInfo__Group__0__Impl rule__GSSEnvironmentGSSInfo__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSEnvironmentGSSInfo__Group__0__Impl();
@@ -13794,22 +14215,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__0__Impl"
-    // InternalENVIRONMENT.g:4039:1: rule__GSSEnvironmentGSSInfo__Group__0__Impl : ( 'GSSEnvironmentInfo' ) ;
+    // InternalENVIRONMENT.g:4174:1: rule__GSSEnvironmentGSSInfo__Group__0__Impl : ( 'GSSEnvironmentInfo' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4043:1: ( ( 'GSSEnvironmentInfo' ) )
-            // InternalENVIRONMENT.g:4044:1: ( 'GSSEnvironmentInfo' )
+            // InternalENVIRONMENT.g:4178:1: ( ( 'GSSEnvironmentInfo' ) )
+            // InternalENVIRONMENT.g:4179:1: ( 'GSSEnvironmentInfo' )
             {
-            // InternalENVIRONMENT.g:4044:1: ( 'GSSEnvironmentInfo' )
-            // InternalENVIRONMENT.g:4045:2: 'GSSEnvironmentInfo'
+            // InternalENVIRONMENT.g:4179:1: ( 'GSSEnvironmentInfo' )
+            // InternalENVIRONMENT.g:4180:2: 'GSSEnvironmentInfo'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getGSSEnvironmentInfoKeyword_0()); 
             }
-            match(input,53,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,54,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGSSInfoAccess().getGSSEnvironmentInfoKeyword_0()); 
             }
@@ -13835,14 +14256,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__1"
-    // InternalENVIRONMENT.g:4054:1: rule__GSSEnvironmentGSSInfo__Group__1 : rule__GSSEnvironmentGSSInfo__Group__1__Impl rule__GSSEnvironmentGSSInfo__Group__2 ;
+    // InternalENVIRONMENT.g:4189:1: rule__GSSEnvironmentGSSInfo__Group__1 : rule__GSSEnvironmentGSSInfo__Group__1__Impl rule__GSSEnvironmentGSSInfo__Group__2 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4058:1: ( rule__GSSEnvironmentGSSInfo__Group__1__Impl rule__GSSEnvironmentGSSInfo__Group__2 )
-            // InternalENVIRONMENT.g:4059:2: rule__GSSEnvironmentGSSInfo__Group__1__Impl rule__GSSEnvironmentGSSInfo__Group__2
+            // InternalENVIRONMENT.g:4193:1: ( rule__GSSEnvironmentGSSInfo__Group__1__Impl rule__GSSEnvironmentGSSInfo__Group__2 )
+            // InternalENVIRONMENT.g:4194:2: rule__GSSEnvironmentGSSInfo__Group__1__Impl rule__GSSEnvironmentGSSInfo__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_36);
             rule__GSSEnvironmentGSSInfo__Group__1__Impl();
@@ -13873,17 +14294,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__1__Impl"
-    // InternalENVIRONMENT.g:4066:1: rule__GSSEnvironmentGSSInfo__Group__1__Impl : ( '{' ) ;
+    // InternalENVIRONMENT.g:4201:1: rule__GSSEnvironmentGSSInfo__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4070:1: ( ( '{' ) )
-            // InternalENVIRONMENT.g:4071:1: ( '{' )
+            // InternalENVIRONMENT.g:4205:1: ( ( '{' ) )
+            // InternalENVIRONMENT.g:4206:1: ( '{' )
             {
-            // InternalENVIRONMENT.g:4071:1: ( '{' )
-            // InternalENVIRONMENT.g:4072:2: '{'
+            // InternalENVIRONMENT.g:4206:1: ( '{' )
+            // InternalENVIRONMENT.g:4207:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getLeftCurlyBracketKeyword_1()); 
@@ -13914,14 +14335,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__2"
-    // InternalENVIRONMENT.g:4081:1: rule__GSSEnvironmentGSSInfo__Group__2 : rule__GSSEnvironmentGSSInfo__Group__2__Impl rule__GSSEnvironmentGSSInfo__Group__3 ;
+    // InternalENVIRONMENT.g:4216:1: rule__GSSEnvironmentGSSInfo__Group__2 : rule__GSSEnvironmentGSSInfo__Group__2__Impl rule__GSSEnvironmentGSSInfo__Group__3 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4085:1: ( rule__GSSEnvironmentGSSInfo__Group__2__Impl rule__GSSEnvironmentGSSInfo__Group__3 )
-            // InternalENVIRONMENT.g:4086:2: rule__GSSEnvironmentGSSInfo__Group__2__Impl rule__GSSEnvironmentGSSInfo__Group__3
+            // InternalENVIRONMENT.g:4220:1: ( rule__GSSEnvironmentGSSInfo__Group__2__Impl rule__GSSEnvironmentGSSInfo__Group__3 )
+            // InternalENVIRONMENT.g:4221:2: rule__GSSEnvironmentGSSInfo__Group__2__Impl rule__GSSEnvironmentGSSInfo__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentGSSInfo__Group__2__Impl();
@@ -13952,22 +14373,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__2__Impl"
-    // InternalENVIRONMENT.g:4093:1: rule__GSSEnvironmentGSSInfo__Group__2__Impl : ( 'test_campaign' ) ;
+    // InternalENVIRONMENT.g:4228:1: rule__GSSEnvironmentGSSInfo__Group__2__Impl : ( 'test_campaign' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4097:1: ( ( 'test_campaign' ) )
-            // InternalENVIRONMENT.g:4098:1: ( 'test_campaign' )
+            // InternalENVIRONMENT.g:4232:1: ( ( 'test_campaign' ) )
+            // InternalENVIRONMENT.g:4233:1: ( 'test_campaign' )
             {
-            // InternalENVIRONMENT.g:4098:1: ( 'test_campaign' )
-            // InternalENVIRONMENT.g:4099:2: 'test_campaign'
+            // InternalENVIRONMENT.g:4233:1: ( 'test_campaign' )
+            // InternalENVIRONMENT.g:4234:2: 'test_campaign'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getTest_campaignKeyword_2()); 
             }
-            match(input,54,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,55,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGSSInfoAccess().getTest_campaignKeyword_2()); 
             }
@@ -13993,14 +14414,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__3"
-    // InternalENVIRONMENT.g:4108:1: rule__GSSEnvironmentGSSInfo__Group__3 : rule__GSSEnvironmentGSSInfo__Group__3__Impl rule__GSSEnvironmentGSSInfo__Group__4 ;
+    // InternalENVIRONMENT.g:4243:1: rule__GSSEnvironmentGSSInfo__Group__3 : rule__GSSEnvironmentGSSInfo__Group__3__Impl rule__GSSEnvironmentGSSInfo__Group__4 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4112:1: ( rule__GSSEnvironmentGSSInfo__Group__3__Impl rule__GSSEnvironmentGSSInfo__Group__4 )
-            // InternalENVIRONMENT.g:4113:2: rule__GSSEnvironmentGSSInfo__Group__3__Impl rule__GSSEnvironmentGSSInfo__Group__4
+            // InternalENVIRONMENT.g:4247:1: ( rule__GSSEnvironmentGSSInfo__Group__3__Impl rule__GSSEnvironmentGSSInfo__Group__4 )
+            // InternalENVIRONMENT.g:4248:2: rule__GSSEnvironmentGSSInfo__Group__3__Impl rule__GSSEnvironmentGSSInfo__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSEnvironmentGSSInfo__Group__3__Impl();
@@ -14031,17 +14452,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__3__Impl"
-    // InternalENVIRONMENT.g:4120:1: rule__GSSEnvironmentGSSInfo__Group__3__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:4255:1: rule__GSSEnvironmentGSSInfo__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4124:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:4125:1: ( ':=' )
+            // InternalENVIRONMENT.g:4259:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:4260:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:4125:1: ( ':=' )
-            // InternalENVIRONMENT.g:4126:2: ':='
+            // InternalENVIRONMENT.g:4260:1: ( ':=' )
+            // InternalENVIRONMENT.g:4261:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getColonEqualsSignKeyword_3()); 
@@ -14072,14 +14493,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__4"
-    // InternalENVIRONMENT.g:4135:1: rule__GSSEnvironmentGSSInfo__Group__4 : rule__GSSEnvironmentGSSInfo__Group__4__Impl rule__GSSEnvironmentGSSInfo__Group__5 ;
+    // InternalENVIRONMENT.g:4270:1: rule__GSSEnvironmentGSSInfo__Group__4 : rule__GSSEnvironmentGSSInfo__Group__4__Impl rule__GSSEnvironmentGSSInfo__Group__5 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4139:1: ( rule__GSSEnvironmentGSSInfo__Group__4__Impl rule__GSSEnvironmentGSSInfo__Group__5 )
-            // InternalENVIRONMENT.g:4140:2: rule__GSSEnvironmentGSSInfo__Group__4__Impl rule__GSSEnvironmentGSSInfo__Group__5
+            // InternalENVIRONMENT.g:4274:1: ( rule__GSSEnvironmentGSSInfo__Group__4__Impl rule__GSSEnvironmentGSSInfo__Group__5 )
+            // InternalENVIRONMENT.g:4275:2: rule__GSSEnvironmentGSSInfo__Group__4__Impl rule__GSSEnvironmentGSSInfo__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGSSInfo__Group__4__Impl();
@@ -14110,23 +14531,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__4__Impl"
-    // InternalENVIRONMENT.g:4147:1: rule__GSSEnvironmentGSSInfo__Group__4__Impl : ( ( rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4 ) ) ;
+    // InternalENVIRONMENT.g:4282:1: rule__GSSEnvironmentGSSInfo__Group__4__Impl : ( ( rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4 ) ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4151:1: ( ( ( rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4 ) ) )
-            // InternalENVIRONMENT.g:4152:1: ( ( rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4 ) )
+            // InternalENVIRONMENT.g:4286:1: ( ( ( rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4 ) ) )
+            // InternalENVIRONMENT.g:4287:1: ( ( rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4 ) )
             {
-            // InternalENVIRONMENT.g:4152:1: ( ( rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4 ) )
-            // InternalENVIRONMENT.g:4153:2: ( rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4 )
+            // InternalENVIRONMENT.g:4287:1: ( ( rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4 ) )
+            // InternalENVIRONMENT.g:4288:2: ( rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getTest_campaignAssignment_4()); 
             }
-            // InternalENVIRONMENT.g:4154:2: ( rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4 )
-            // InternalENVIRONMENT.g:4154:3: rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4
+            // InternalENVIRONMENT.g:4289:2: ( rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4 )
+            // InternalENVIRONMENT.g:4289:3: rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4();
@@ -14161,14 +14582,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__5"
-    // InternalENVIRONMENT.g:4162:1: rule__GSSEnvironmentGSSInfo__Group__5 : rule__GSSEnvironmentGSSInfo__Group__5__Impl rule__GSSEnvironmentGSSInfo__Group__6 ;
+    // InternalENVIRONMENT.g:4297:1: rule__GSSEnvironmentGSSInfo__Group__5 : rule__GSSEnvironmentGSSInfo__Group__5__Impl rule__GSSEnvironmentGSSInfo__Group__6 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4166:1: ( rule__GSSEnvironmentGSSInfo__Group__5__Impl rule__GSSEnvironmentGSSInfo__Group__6 )
-            // InternalENVIRONMENT.g:4167:2: rule__GSSEnvironmentGSSInfo__Group__5__Impl rule__GSSEnvironmentGSSInfo__Group__6
+            // InternalENVIRONMENT.g:4301:1: ( rule__GSSEnvironmentGSSInfo__Group__5__Impl rule__GSSEnvironmentGSSInfo__Group__6 )
+            // InternalENVIRONMENT.g:4302:2: rule__GSSEnvironmentGSSInfo__Group__5__Impl rule__GSSEnvironmentGSSInfo__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_11);
             rule__GSSEnvironmentGSSInfo__Group__5__Impl();
@@ -14199,17 +14620,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__5__Impl"
-    // InternalENVIRONMENT.g:4174:1: rule__GSSEnvironmentGSSInfo__Group__5__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:4309:1: rule__GSSEnvironmentGSSInfo__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4178:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:4179:1: ( ';' )
+            // InternalENVIRONMENT.g:4313:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:4314:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:4179:1: ( ';' )
-            // InternalENVIRONMENT.g:4180:2: ';'
+            // InternalENVIRONMENT.g:4314:1: ( ';' )
+            // InternalENVIRONMENT.g:4315:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getSemicolonKeyword_5()); 
@@ -14240,14 +14661,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__6"
-    // InternalENVIRONMENT.g:4189:1: rule__GSSEnvironmentGSSInfo__Group__6 : rule__GSSEnvironmentGSSInfo__Group__6__Impl rule__GSSEnvironmentGSSInfo__Group__7 ;
+    // InternalENVIRONMENT.g:4324:1: rule__GSSEnvironmentGSSInfo__Group__6 : rule__GSSEnvironmentGSSInfo__Group__6__Impl rule__GSSEnvironmentGSSInfo__Group__7 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4193:1: ( rule__GSSEnvironmentGSSInfo__Group__6__Impl rule__GSSEnvironmentGSSInfo__Group__7 )
-            // InternalENVIRONMENT.g:4194:2: rule__GSSEnvironmentGSSInfo__Group__6__Impl rule__GSSEnvironmentGSSInfo__Group__7
+            // InternalENVIRONMENT.g:4328:1: ( rule__GSSEnvironmentGSSInfo__Group__6__Impl rule__GSSEnvironmentGSSInfo__Group__7 )
+            // InternalENVIRONMENT.g:4329:2: rule__GSSEnvironmentGSSInfo__Group__6__Impl rule__GSSEnvironmentGSSInfo__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentGSSInfo__Group__6__Impl();
@@ -14278,17 +14699,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__6__Impl"
-    // InternalENVIRONMENT.g:4201:1: rule__GSSEnvironmentGSSInfo__Group__6__Impl : ( 'version' ) ;
+    // InternalENVIRONMENT.g:4336:1: rule__GSSEnvironmentGSSInfo__Group__6__Impl : ( 'version' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4205:1: ( ( 'version' ) )
-            // InternalENVIRONMENT.g:4206:1: ( 'version' )
+            // InternalENVIRONMENT.g:4340:1: ( ( 'version' ) )
+            // InternalENVIRONMENT.g:4341:1: ( 'version' )
             {
-            // InternalENVIRONMENT.g:4206:1: ( 'version' )
-            // InternalENVIRONMENT.g:4207:2: 'version'
+            // InternalENVIRONMENT.g:4341:1: ( 'version' )
+            // InternalENVIRONMENT.g:4342:2: 'version'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getVersionKeyword_6()); 
@@ -14319,14 +14740,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__7"
-    // InternalENVIRONMENT.g:4216:1: rule__GSSEnvironmentGSSInfo__Group__7 : rule__GSSEnvironmentGSSInfo__Group__7__Impl rule__GSSEnvironmentGSSInfo__Group__8 ;
+    // InternalENVIRONMENT.g:4351:1: rule__GSSEnvironmentGSSInfo__Group__7 : rule__GSSEnvironmentGSSInfo__Group__7__Impl rule__GSSEnvironmentGSSInfo__Group__8 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4220:1: ( rule__GSSEnvironmentGSSInfo__Group__7__Impl rule__GSSEnvironmentGSSInfo__Group__8 )
-            // InternalENVIRONMENT.g:4221:2: rule__GSSEnvironmentGSSInfo__Group__7__Impl rule__GSSEnvironmentGSSInfo__Group__8
+            // InternalENVIRONMENT.g:4355:1: ( rule__GSSEnvironmentGSSInfo__Group__7__Impl rule__GSSEnvironmentGSSInfo__Group__8 )
+            // InternalENVIRONMENT.g:4356:2: rule__GSSEnvironmentGSSInfo__Group__7__Impl rule__GSSEnvironmentGSSInfo__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSEnvironmentGSSInfo__Group__7__Impl();
@@ -14357,17 +14778,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__7__Impl"
-    // InternalENVIRONMENT.g:4228:1: rule__GSSEnvironmentGSSInfo__Group__7__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:4363:1: rule__GSSEnvironmentGSSInfo__Group__7__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4232:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:4233:1: ( ':=' )
+            // InternalENVIRONMENT.g:4367:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:4368:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:4233:1: ( ':=' )
-            // InternalENVIRONMENT.g:4234:2: ':='
+            // InternalENVIRONMENT.g:4368:1: ( ':=' )
+            // InternalENVIRONMENT.g:4369:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getColonEqualsSignKeyword_7()); 
@@ -14398,14 +14819,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__8"
-    // InternalENVIRONMENT.g:4243:1: rule__GSSEnvironmentGSSInfo__Group__8 : rule__GSSEnvironmentGSSInfo__Group__8__Impl rule__GSSEnvironmentGSSInfo__Group__9 ;
+    // InternalENVIRONMENT.g:4378:1: rule__GSSEnvironmentGSSInfo__Group__8 : rule__GSSEnvironmentGSSInfo__Group__8__Impl rule__GSSEnvironmentGSSInfo__Group__9 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4247:1: ( rule__GSSEnvironmentGSSInfo__Group__8__Impl rule__GSSEnvironmentGSSInfo__Group__9 )
-            // InternalENVIRONMENT.g:4248:2: rule__GSSEnvironmentGSSInfo__Group__8__Impl rule__GSSEnvironmentGSSInfo__Group__9
+            // InternalENVIRONMENT.g:4382:1: ( rule__GSSEnvironmentGSSInfo__Group__8__Impl rule__GSSEnvironmentGSSInfo__Group__9 )
+            // InternalENVIRONMENT.g:4383:2: rule__GSSEnvironmentGSSInfo__Group__8__Impl rule__GSSEnvironmentGSSInfo__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGSSInfo__Group__8__Impl();
@@ -14436,23 +14857,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__8__Impl"
-    // InternalENVIRONMENT.g:4255:1: rule__GSSEnvironmentGSSInfo__Group__8__Impl : ( ( rule__GSSEnvironmentGSSInfo__VersionAssignment_8 ) ) ;
+    // InternalENVIRONMENT.g:4390:1: rule__GSSEnvironmentGSSInfo__Group__8__Impl : ( ( rule__GSSEnvironmentGSSInfo__VersionAssignment_8 ) ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4259:1: ( ( ( rule__GSSEnvironmentGSSInfo__VersionAssignment_8 ) ) )
-            // InternalENVIRONMENT.g:4260:1: ( ( rule__GSSEnvironmentGSSInfo__VersionAssignment_8 ) )
+            // InternalENVIRONMENT.g:4394:1: ( ( ( rule__GSSEnvironmentGSSInfo__VersionAssignment_8 ) ) )
+            // InternalENVIRONMENT.g:4395:1: ( ( rule__GSSEnvironmentGSSInfo__VersionAssignment_8 ) )
             {
-            // InternalENVIRONMENT.g:4260:1: ( ( rule__GSSEnvironmentGSSInfo__VersionAssignment_8 ) )
-            // InternalENVIRONMENT.g:4261:2: ( rule__GSSEnvironmentGSSInfo__VersionAssignment_8 )
+            // InternalENVIRONMENT.g:4395:1: ( ( rule__GSSEnvironmentGSSInfo__VersionAssignment_8 ) )
+            // InternalENVIRONMENT.g:4396:2: ( rule__GSSEnvironmentGSSInfo__VersionAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getVersionAssignment_8()); 
             }
-            // InternalENVIRONMENT.g:4262:2: ( rule__GSSEnvironmentGSSInfo__VersionAssignment_8 )
-            // InternalENVIRONMENT.g:4262:3: rule__GSSEnvironmentGSSInfo__VersionAssignment_8
+            // InternalENVIRONMENT.g:4397:2: ( rule__GSSEnvironmentGSSInfo__VersionAssignment_8 )
+            // InternalENVIRONMENT.g:4397:3: rule__GSSEnvironmentGSSInfo__VersionAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSInfo__VersionAssignment_8();
@@ -14487,14 +14908,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__9"
-    // InternalENVIRONMENT.g:4270:1: rule__GSSEnvironmentGSSInfo__Group__9 : rule__GSSEnvironmentGSSInfo__Group__9__Impl rule__GSSEnvironmentGSSInfo__Group__10 ;
+    // InternalENVIRONMENT.g:4405:1: rule__GSSEnvironmentGSSInfo__Group__9 : rule__GSSEnvironmentGSSInfo__Group__9__Impl rule__GSSEnvironmentGSSInfo__Group__10 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4274:1: ( rule__GSSEnvironmentGSSInfo__Group__9__Impl rule__GSSEnvironmentGSSInfo__Group__10 )
-            // InternalENVIRONMENT.g:4275:2: rule__GSSEnvironmentGSSInfo__Group__9__Impl rule__GSSEnvironmentGSSInfo__Group__10
+            // InternalENVIRONMENT.g:4409:1: ( rule__GSSEnvironmentGSSInfo__Group__9__Impl rule__GSSEnvironmentGSSInfo__Group__10 )
+            // InternalENVIRONMENT.g:4410:2: rule__GSSEnvironmentGSSInfo__Group__9__Impl rule__GSSEnvironmentGSSInfo__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_37);
             rule__GSSEnvironmentGSSInfo__Group__9__Impl();
@@ -14525,17 +14946,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__9__Impl"
-    // InternalENVIRONMENT.g:4282:1: rule__GSSEnvironmentGSSInfo__Group__9__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:4417:1: rule__GSSEnvironmentGSSInfo__Group__9__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4286:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:4287:1: ( ';' )
+            // InternalENVIRONMENT.g:4421:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:4422:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:4287:1: ( ';' )
-            // InternalENVIRONMENT.g:4288:2: ';'
+            // InternalENVIRONMENT.g:4422:1: ( ';' )
+            // InternalENVIRONMENT.g:4423:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getSemicolonKeyword_9()); 
@@ -14566,14 +14987,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__10"
-    // InternalENVIRONMENT.g:4297:1: rule__GSSEnvironmentGSSInfo__Group__10 : rule__GSSEnvironmentGSSInfo__Group__10__Impl rule__GSSEnvironmentGSSInfo__Group__11 ;
+    // InternalENVIRONMENT.g:4432:1: rule__GSSEnvironmentGSSInfo__Group__10 : rule__GSSEnvironmentGSSInfo__Group__10__Impl rule__GSSEnvironmentGSSInfo__Group__11 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4301:1: ( rule__GSSEnvironmentGSSInfo__Group__10__Impl rule__GSSEnvironmentGSSInfo__Group__11 )
-            // InternalENVIRONMENT.g:4302:2: rule__GSSEnvironmentGSSInfo__Group__10__Impl rule__GSSEnvironmentGSSInfo__Group__11
+            // InternalENVIRONMENT.g:4436:1: ( rule__GSSEnvironmentGSSInfo__Group__10__Impl rule__GSSEnvironmentGSSInfo__Group__11 )
+            // InternalENVIRONMENT.g:4437:2: rule__GSSEnvironmentGSSInfo__Group__10__Impl rule__GSSEnvironmentGSSInfo__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentGSSInfo__Group__10__Impl();
@@ -14604,22 +15025,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__10__Impl"
-    // InternalENVIRONMENT.g:4309:1: rule__GSSEnvironmentGSSInfo__Group__10__Impl : ( 'date' ) ;
+    // InternalENVIRONMENT.g:4444:1: rule__GSSEnvironmentGSSInfo__Group__10__Impl : ( 'date' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4313:1: ( ( 'date' ) )
-            // InternalENVIRONMENT.g:4314:1: ( 'date' )
+            // InternalENVIRONMENT.g:4448:1: ( ( 'date' ) )
+            // InternalENVIRONMENT.g:4449:1: ( 'date' )
             {
-            // InternalENVIRONMENT.g:4314:1: ( 'date' )
-            // InternalENVIRONMENT.g:4315:2: 'date'
+            // InternalENVIRONMENT.g:4449:1: ( 'date' )
+            // InternalENVIRONMENT.g:4450:2: 'date'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getDateKeyword_10()); 
             }
-            match(input,55,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,56,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGSSInfoAccess().getDateKeyword_10()); 
             }
@@ -14645,14 +15066,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__11"
-    // InternalENVIRONMENT.g:4324:1: rule__GSSEnvironmentGSSInfo__Group__11 : rule__GSSEnvironmentGSSInfo__Group__11__Impl rule__GSSEnvironmentGSSInfo__Group__12 ;
+    // InternalENVIRONMENT.g:4459:1: rule__GSSEnvironmentGSSInfo__Group__11 : rule__GSSEnvironmentGSSInfo__Group__11__Impl rule__GSSEnvironmentGSSInfo__Group__12 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4328:1: ( rule__GSSEnvironmentGSSInfo__Group__11__Impl rule__GSSEnvironmentGSSInfo__Group__12 )
-            // InternalENVIRONMENT.g:4329:2: rule__GSSEnvironmentGSSInfo__Group__11__Impl rule__GSSEnvironmentGSSInfo__Group__12
+            // InternalENVIRONMENT.g:4463:1: ( rule__GSSEnvironmentGSSInfo__Group__11__Impl rule__GSSEnvironmentGSSInfo__Group__12 )
+            // InternalENVIRONMENT.g:4464:2: rule__GSSEnvironmentGSSInfo__Group__11__Impl rule__GSSEnvironmentGSSInfo__Group__12
             {
             pushFollow(FollowSets000.FOLLOW_38);
             rule__GSSEnvironmentGSSInfo__Group__11__Impl();
@@ -14683,17 +15104,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__11__Impl"
-    // InternalENVIRONMENT.g:4336:1: rule__GSSEnvironmentGSSInfo__Group__11__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:4471:1: rule__GSSEnvironmentGSSInfo__Group__11__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4340:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:4341:1: ( ':=' )
+            // InternalENVIRONMENT.g:4475:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:4476:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:4341:1: ( ':=' )
-            // InternalENVIRONMENT.g:4342:2: ':='
+            // InternalENVIRONMENT.g:4476:1: ( ':=' )
+            // InternalENVIRONMENT.g:4477:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getColonEqualsSignKeyword_11()); 
@@ -14724,14 +15145,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__12"
-    // InternalENVIRONMENT.g:4351:1: rule__GSSEnvironmentGSSInfo__Group__12 : rule__GSSEnvironmentGSSInfo__Group__12__Impl rule__GSSEnvironmentGSSInfo__Group__13 ;
+    // InternalENVIRONMENT.g:4486:1: rule__GSSEnvironmentGSSInfo__Group__12 : rule__GSSEnvironmentGSSInfo__Group__12__Impl rule__GSSEnvironmentGSSInfo__Group__13 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4355:1: ( rule__GSSEnvironmentGSSInfo__Group__12__Impl rule__GSSEnvironmentGSSInfo__Group__13 )
-            // InternalENVIRONMENT.g:4356:2: rule__GSSEnvironmentGSSInfo__Group__12__Impl rule__GSSEnvironmentGSSInfo__Group__13
+            // InternalENVIRONMENT.g:4490:1: ( rule__GSSEnvironmentGSSInfo__Group__12__Impl rule__GSSEnvironmentGSSInfo__Group__13 )
+            // InternalENVIRONMENT.g:4491:2: rule__GSSEnvironmentGSSInfo__Group__12__Impl rule__GSSEnvironmentGSSInfo__Group__13
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGSSInfo__Group__12__Impl();
@@ -14762,23 +15183,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__12__Impl"
-    // InternalENVIRONMENT.g:4363:1: rule__GSSEnvironmentGSSInfo__Group__12__Impl : ( ( rule__GSSEnvironmentGSSInfo__DateAssignment_12 ) ) ;
+    // InternalENVIRONMENT.g:4498:1: rule__GSSEnvironmentGSSInfo__Group__12__Impl : ( ( rule__GSSEnvironmentGSSInfo__DateAssignment_12 ) ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4367:1: ( ( ( rule__GSSEnvironmentGSSInfo__DateAssignment_12 ) ) )
-            // InternalENVIRONMENT.g:4368:1: ( ( rule__GSSEnvironmentGSSInfo__DateAssignment_12 ) )
+            // InternalENVIRONMENT.g:4502:1: ( ( ( rule__GSSEnvironmentGSSInfo__DateAssignment_12 ) ) )
+            // InternalENVIRONMENT.g:4503:1: ( ( rule__GSSEnvironmentGSSInfo__DateAssignment_12 ) )
             {
-            // InternalENVIRONMENT.g:4368:1: ( ( rule__GSSEnvironmentGSSInfo__DateAssignment_12 ) )
-            // InternalENVIRONMENT.g:4369:2: ( rule__GSSEnvironmentGSSInfo__DateAssignment_12 )
+            // InternalENVIRONMENT.g:4503:1: ( ( rule__GSSEnvironmentGSSInfo__DateAssignment_12 ) )
+            // InternalENVIRONMENT.g:4504:2: ( rule__GSSEnvironmentGSSInfo__DateAssignment_12 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getDateAssignment_12()); 
             }
-            // InternalENVIRONMENT.g:4370:2: ( rule__GSSEnvironmentGSSInfo__DateAssignment_12 )
-            // InternalENVIRONMENT.g:4370:3: rule__GSSEnvironmentGSSInfo__DateAssignment_12
+            // InternalENVIRONMENT.g:4505:2: ( rule__GSSEnvironmentGSSInfo__DateAssignment_12 )
+            // InternalENVIRONMENT.g:4505:3: rule__GSSEnvironmentGSSInfo__DateAssignment_12
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSInfo__DateAssignment_12();
@@ -14813,14 +15234,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__13"
-    // InternalENVIRONMENT.g:4378:1: rule__GSSEnvironmentGSSInfo__Group__13 : rule__GSSEnvironmentGSSInfo__Group__13__Impl rule__GSSEnvironmentGSSInfo__Group__14 ;
+    // InternalENVIRONMENT.g:4513:1: rule__GSSEnvironmentGSSInfo__Group__13 : rule__GSSEnvironmentGSSInfo__Group__13__Impl rule__GSSEnvironmentGSSInfo__Group__14 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4382:1: ( rule__GSSEnvironmentGSSInfo__Group__13__Impl rule__GSSEnvironmentGSSInfo__Group__14 )
-            // InternalENVIRONMENT.g:4383:2: rule__GSSEnvironmentGSSInfo__Group__13__Impl rule__GSSEnvironmentGSSInfo__Group__14
+            // InternalENVIRONMENT.g:4517:1: ( rule__GSSEnvironmentGSSInfo__Group__13__Impl rule__GSSEnvironmentGSSInfo__Group__14 )
+            // InternalENVIRONMENT.g:4518:2: rule__GSSEnvironmentGSSInfo__Group__13__Impl rule__GSSEnvironmentGSSInfo__Group__14
             {
             pushFollow(FollowSets000.FOLLOW_39);
             rule__GSSEnvironmentGSSInfo__Group__13__Impl();
@@ -14851,17 +15272,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__13__Impl"
-    // InternalENVIRONMENT.g:4390:1: rule__GSSEnvironmentGSSInfo__Group__13__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:4525:1: rule__GSSEnvironmentGSSInfo__Group__13__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4394:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:4395:1: ( ';' )
+            // InternalENVIRONMENT.g:4529:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:4530:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:4395:1: ( ';' )
-            // InternalENVIRONMENT.g:4396:2: ';'
+            // InternalENVIRONMENT.g:4530:1: ( ';' )
+            // InternalENVIRONMENT.g:4531:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getSemicolonKeyword_13()); 
@@ -14892,14 +15313,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__14"
-    // InternalENVIRONMENT.g:4405:1: rule__GSSEnvironmentGSSInfo__Group__14 : rule__GSSEnvironmentGSSInfo__Group__14__Impl rule__GSSEnvironmentGSSInfo__Group__15 ;
+    // InternalENVIRONMENT.g:4540:1: rule__GSSEnvironmentGSSInfo__Group__14 : rule__GSSEnvironmentGSSInfo__Group__14__Impl rule__GSSEnvironmentGSSInfo__Group__15 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4409:1: ( rule__GSSEnvironmentGSSInfo__Group__14__Impl rule__GSSEnvironmentGSSInfo__Group__15 )
-            // InternalENVIRONMENT.g:4410:2: rule__GSSEnvironmentGSSInfo__Group__14__Impl rule__GSSEnvironmentGSSInfo__Group__15
+            // InternalENVIRONMENT.g:4544:1: ( rule__GSSEnvironmentGSSInfo__Group__14__Impl rule__GSSEnvironmentGSSInfo__Group__15 )
+            // InternalENVIRONMENT.g:4545:2: rule__GSSEnvironmentGSSInfo__Group__14__Impl rule__GSSEnvironmentGSSInfo__Group__15
             {
             pushFollow(FollowSets000.FOLLOW_39);
             rule__GSSEnvironmentGSSInfo__Group__14__Impl();
@@ -14930,31 +15351,31 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__14__Impl"
-    // InternalENVIRONMENT.g:4417:1: rule__GSSEnvironmentGSSInfo__Group__14__Impl : ( ( rule__GSSEnvironmentGSSInfo__Group_14__0 )? ) ;
+    // InternalENVIRONMENT.g:4552:1: rule__GSSEnvironmentGSSInfo__Group__14__Impl : ( ( rule__GSSEnvironmentGSSInfo__Group_14__0 )? ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4421:1: ( ( ( rule__GSSEnvironmentGSSInfo__Group_14__0 )? ) )
-            // InternalENVIRONMENT.g:4422:1: ( ( rule__GSSEnvironmentGSSInfo__Group_14__0 )? )
+            // InternalENVIRONMENT.g:4556:1: ( ( ( rule__GSSEnvironmentGSSInfo__Group_14__0 )? ) )
+            // InternalENVIRONMENT.g:4557:1: ( ( rule__GSSEnvironmentGSSInfo__Group_14__0 )? )
             {
-            // InternalENVIRONMENT.g:4422:1: ( ( rule__GSSEnvironmentGSSInfo__Group_14__0 )? )
-            // InternalENVIRONMENT.g:4423:2: ( rule__GSSEnvironmentGSSInfo__Group_14__0 )?
+            // InternalENVIRONMENT.g:4557:1: ( ( rule__GSSEnvironmentGSSInfo__Group_14__0 )? )
+            // InternalENVIRONMENT.g:4558:2: ( rule__GSSEnvironmentGSSInfo__Group_14__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getGroup_14()); 
             }
-            // InternalENVIRONMENT.g:4424:2: ( rule__GSSEnvironmentGSSInfo__Group_14__0 )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            // InternalENVIRONMENT.g:4559:2: ( rule__GSSEnvironmentGSSInfo__Group_14__0 )?
+            int alt33=2;
+            int LA33_0 = input.LA(1);
 
-            if ( (LA32_0==56) ) {
-                alt32=1;
+            if ( (LA33_0==57) ) {
+                alt33=1;
             }
-            switch (alt32) {
+            switch (alt33) {
                 case 1 :
-                    // InternalENVIRONMENT.g:4424:3: rule__GSSEnvironmentGSSInfo__Group_14__0
+                    // InternalENVIRONMENT.g:4559:3: rule__GSSEnvironmentGSSInfo__Group_14__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSEnvironmentGSSInfo__Group_14__0();
@@ -14992,14 +15413,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__15"
-    // InternalENVIRONMENT.g:4432:1: rule__GSSEnvironmentGSSInfo__Group__15 : rule__GSSEnvironmentGSSInfo__Group__15__Impl rule__GSSEnvironmentGSSInfo__Group__16 ;
+    // InternalENVIRONMENT.g:4567:1: rule__GSSEnvironmentGSSInfo__Group__15 : rule__GSSEnvironmentGSSInfo__Group__15__Impl rule__GSSEnvironmentGSSInfo__Group__16 ;
     public final void rule__GSSEnvironmentGSSInfo__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4436:1: ( rule__GSSEnvironmentGSSInfo__Group__15__Impl rule__GSSEnvironmentGSSInfo__Group__16 )
-            // InternalENVIRONMENT.g:4437:2: rule__GSSEnvironmentGSSInfo__Group__15__Impl rule__GSSEnvironmentGSSInfo__Group__16
+            // InternalENVIRONMENT.g:4571:1: ( rule__GSSEnvironmentGSSInfo__Group__15__Impl rule__GSSEnvironmentGSSInfo__Group__16 )
+            // InternalENVIRONMENT.g:4572:2: rule__GSSEnvironmentGSSInfo__Group__15__Impl rule__GSSEnvironmentGSSInfo__Group__16
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGSSInfo__Group__15__Impl();
@@ -15030,17 +15451,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__15__Impl"
-    // InternalENVIRONMENT.g:4444:1: rule__GSSEnvironmentGSSInfo__Group__15__Impl : ( '}' ) ;
+    // InternalENVIRONMENT.g:4579:1: rule__GSSEnvironmentGSSInfo__Group__15__Impl : ( '}' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4448:1: ( ( '}' ) )
-            // InternalENVIRONMENT.g:4449:1: ( '}' )
+            // InternalENVIRONMENT.g:4583:1: ( ( '}' ) )
+            // InternalENVIRONMENT.g:4584:1: ( '}' )
             {
-            // InternalENVIRONMENT.g:4449:1: ( '}' )
-            // InternalENVIRONMENT.g:4450:2: '}'
+            // InternalENVIRONMENT.g:4584:1: ( '}' )
+            // InternalENVIRONMENT.g:4585:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getRightCurlyBracketKeyword_15()); 
@@ -15071,14 +15492,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__16"
-    // InternalENVIRONMENT.g:4459:1: rule__GSSEnvironmentGSSInfo__Group__16 : rule__GSSEnvironmentGSSInfo__Group__16__Impl ;
+    // InternalENVIRONMENT.g:4594:1: rule__GSSEnvironmentGSSInfo__Group__16 : rule__GSSEnvironmentGSSInfo__Group__16__Impl ;
     public final void rule__GSSEnvironmentGSSInfo__Group__16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4463:1: ( rule__GSSEnvironmentGSSInfo__Group__16__Impl )
-            // InternalENVIRONMENT.g:4464:2: rule__GSSEnvironmentGSSInfo__Group__16__Impl
+            // InternalENVIRONMENT.g:4598:1: ( rule__GSSEnvironmentGSSInfo__Group__16__Impl )
+            // InternalENVIRONMENT.g:4599:2: rule__GSSEnvironmentGSSInfo__Group__16__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSInfo__Group__16__Impl();
@@ -15104,17 +15525,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group__16__Impl"
-    // InternalENVIRONMENT.g:4470:1: rule__GSSEnvironmentGSSInfo__Group__16__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:4605:1: rule__GSSEnvironmentGSSInfo__Group__16__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group__16__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4474:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:4475:1: ( ';' )
+            // InternalENVIRONMENT.g:4609:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:4610:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:4475:1: ( ';' )
-            // InternalENVIRONMENT.g:4476:2: ';'
+            // InternalENVIRONMENT.g:4610:1: ( ';' )
+            // InternalENVIRONMENT.g:4611:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getSemicolonKeyword_16()); 
@@ -15145,14 +15566,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group_14__0"
-    // InternalENVIRONMENT.g:4486:1: rule__GSSEnvironmentGSSInfo__Group_14__0 : rule__GSSEnvironmentGSSInfo__Group_14__0__Impl rule__GSSEnvironmentGSSInfo__Group_14__1 ;
+    // InternalENVIRONMENT.g:4621:1: rule__GSSEnvironmentGSSInfo__Group_14__0 : rule__GSSEnvironmentGSSInfo__Group_14__0__Impl rule__GSSEnvironmentGSSInfo__Group_14__1 ;
     public final void rule__GSSEnvironmentGSSInfo__Group_14__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4490:1: ( rule__GSSEnvironmentGSSInfo__Group_14__0__Impl rule__GSSEnvironmentGSSInfo__Group_14__1 )
-            // InternalENVIRONMENT.g:4491:2: rule__GSSEnvironmentGSSInfo__Group_14__0__Impl rule__GSSEnvironmentGSSInfo__Group_14__1
+            // InternalENVIRONMENT.g:4625:1: ( rule__GSSEnvironmentGSSInfo__Group_14__0__Impl rule__GSSEnvironmentGSSInfo__Group_14__1 )
+            // InternalENVIRONMENT.g:4626:2: rule__GSSEnvironmentGSSInfo__Group_14__0__Impl rule__GSSEnvironmentGSSInfo__Group_14__1
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentGSSInfo__Group_14__0__Impl();
@@ -15183,22 +15604,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group_14__0__Impl"
-    // InternalENVIRONMENT.g:4498:1: rule__GSSEnvironmentGSSInfo__Group_14__0__Impl : ( 'version_control_url' ) ;
+    // InternalENVIRONMENT.g:4633:1: rule__GSSEnvironmentGSSInfo__Group_14__0__Impl : ( 'version_control_url' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group_14__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4502:1: ( ( 'version_control_url' ) )
-            // InternalENVIRONMENT.g:4503:1: ( 'version_control_url' )
+            // InternalENVIRONMENT.g:4637:1: ( ( 'version_control_url' ) )
+            // InternalENVIRONMENT.g:4638:1: ( 'version_control_url' )
             {
-            // InternalENVIRONMENT.g:4503:1: ( 'version_control_url' )
-            // InternalENVIRONMENT.g:4504:2: 'version_control_url'
+            // InternalENVIRONMENT.g:4638:1: ( 'version_control_url' )
+            // InternalENVIRONMENT.g:4639:2: 'version_control_url'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getVersion_control_urlKeyword_14_0()); 
             }
-            match(input,56,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,57,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGSSInfoAccess().getVersion_control_urlKeyword_14_0()); 
             }
@@ -15224,14 +15645,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group_14__1"
-    // InternalENVIRONMENT.g:4513:1: rule__GSSEnvironmentGSSInfo__Group_14__1 : rule__GSSEnvironmentGSSInfo__Group_14__1__Impl rule__GSSEnvironmentGSSInfo__Group_14__2 ;
+    // InternalENVIRONMENT.g:4648:1: rule__GSSEnvironmentGSSInfo__Group_14__1 : rule__GSSEnvironmentGSSInfo__Group_14__1__Impl rule__GSSEnvironmentGSSInfo__Group_14__2 ;
     public final void rule__GSSEnvironmentGSSInfo__Group_14__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4517:1: ( rule__GSSEnvironmentGSSInfo__Group_14__1__Impl rule__GSSEnvironmentGSSInfo__Group_14__2 )
-            // InternalENVIRONMENT.g:4518:2: rule__GSSEnvironmentGSSInfo__Group_14__1__Impl rule__GSSEnvironmentGSSInfo__Group_14__2
+            // InternalENVIRONMENT.g:4652:1: ( rule__GSSEnvironmentGSSInfo__Group_14__1__Impl rule__GSSEnvironmentGSSInfo__Group_14__2 )
+            // InternalENVIRONMENT.g:4653:2: rule__GSSEnvironmentGSSInfo__Group_14__1__Impl rule__GSSEnvironmentGSSInfo__Group_14__2
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSEnvironmentGSSInfo__Group_14__1__Impl();
@@ -15262,17 +15683,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group_14__1__Impl"
-    // InternalENVIRONMENT.g:4525:1: rule__GSSEnvironmentGSSInfo__Group_14__1__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:4660:1: rule__GSSEnvironmentGSSInfo__Group_14__1__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group_14__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4529:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:4530:1: ( ':=' )
+            // InternalENVIRONMENT.g:4664:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:4665:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:4530:1: ( ':=' )
-            // InternalENVIRONMENT.g:4531:2: ':='
+            // InternalENVIRONMENT.g:4665:1: ( ':=' )
+            // InternalENVIRONMENT.g:4666:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getColonEqualsSignKeyword_14_1()); 
@@ -15303,14 +15724,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group_14__2"
-    // InternalENVIRONMENT.g:4540:1: rule__GSSEnvironmentGSSInfo__Group_14__2 : rule__GSSEnvironmentGSSInfo__Group_14__2__Impl rule__GSSEnvironmentGSSInfo__Group_14__3 ;
+    // InternalENVIRONMENT.g:4675:1: rule__GSSEnvironmentGSSInfo__Group_14__2 : rule__GSSEnvironmentGSSInfo__Group_14__2__Impl rule__GSSEnvironmentGSSInfo__Group_14__3 ;
     public final void rule__GSSEnvironmentGSSInfo__Group_14__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4544:1: ( rule__GSSEnvironmentGSSInfo__Group_14__2__Impl rule__GSSEnvironmentGSSInfo__Group_14__3 )
-            // InternalENVIRONMENT.g:4545:2: rule__GSSEnvironmentGSSInfo__Group_14__2__Impl rule__GSSEnvironmentGSSInfo__Group_14__3
+            // InternalENVIRONMENT.g:4679:1: ( rule__GSSEnvironmentGSSInfo__Group_14__2__Impl rule__GSSEnvironmentGSSInfo__Group_14__3 )
+            // InternalENVIRONMENT.g:4680:2: rule__GSSEnvironmentGSSInfo__Group_14__2__Impl rule__GSSEnvironmentGSSInfo__Group_14__3
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGSSInfo__Group_14__2__Impl();
@@ -15341,23 +15762,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group_14__2__Impl"
-    // InternalENVIRONMENT.g:4552:1: rule__GSSEnvironmentGSSInfo__Group_14__2__Impl : ( ( rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2 ) ) ;
+    // InternalENVIRONMENT.g:4687:1: rule__GSSEnvironmentGSSInfo__Group_14__2__Impl : ( ( rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2 ) ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group_14__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4556:1: ( ( ( rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2 ) ) )
-            // InternalENVIRONMENT.g:4557:1: ( ( rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2 ) )
+            // InternalENVIRONMENT.g:4691:1: ( ( ( rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2 ) ) )
+            // InternalENVIRONMENT.g:4692:1: ( ( rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2 ) )
             {
-            // InternalENVIRONMENT.g:4557:1: ( ( rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2 ) )
-            // InternalENVIRONMENT.g:4558:2: ( rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2 )
+            // InternalENVIRONMENT.g:4692:1: ( ( rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2 ) )
+            // InternalENVIRONMENT.g:4693:2: ( rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getVersion_control_urlAssignment_14_2()); 
             }
-            // InternalENVIRONMENT.g:4559:2: ( rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2 )
-            // InternalENVIRONMENT.g:4559:3: rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2
+            // InternalENVIRONMENT.g:4694:2: ( rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2 )
+            // InternalENVIRONMENT.g:4694:3: rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2();
@@ -15392,14 +15813,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group_14__3"
-    // InternalENVIRONMENT.g:4567:1: rule__GSSEnvironmentGSSInfo__Group_14__3 : rule__GSSEnvironmentGSSInfo__Group_14__3__Impl ;
+    // InternalENVIRONMENT.g:4702:1: rule__GSSEnvironmentGSSInfo__Group_14__3 : rule__GSSEnvironmentGSSInfo__Group_14__3__Impl ;
     public final void rule__GSSEnvironmentGSSInfo__Group_14__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4571:1: ( rule__GSSEnvironmentGSSInfo__Group_14__3__Impl )
-            // InternalENVIRONMENT.g:4572:2: rule__GSSEnvironmentGSSInfo__Group_14__3__Impl
+            // InternalENVIRONMENT.g:4706:1: ( rule__GSSEnvironmentGSSInfo__Group_14__3__Impl )
+            // InternalENVIRONMENT.g:4707:2: rule__GSSEnvironmentGSSInfo__Group_14__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSInfo__Group_14__3__Impl();
@@ -15425,17 +15846,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Group_14__3__Impl"
-    // InternalENVIRONMENT.g:4578:1: rule__GSSEnvironmentGSSInfo__Group_14__3__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:4713:1: rule__GSSEnvironmentGSSInfo__Group_14__3__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGSSInfo__Group_14__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4582:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:4583:1: ( ';' )
+            // InternalENVIRONMENT.g:4717:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:4718:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:4583:1: ( ';' )
-            // InternalENVIRONMENT.g:4584:2: ';'
+            // InternalENVIRONMENT.g:4718:1: ( ';' )
+            // InternalENVIRONMENT.g:4719:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getSemicolonKeyword_14_3()); 
@@ -15466,14 +15887,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__0"
-    // InternalENVIRONMENT.g:4594:1: rule__GSSEnvironmentGSSInfoPrint__Group__0 : rule__GSSEnvironmentGSSInfoPrint__Group__0__Impl rule__GSSEnvironmentGSSInfoPrint__Group__1 ;
+    // InternalENVIRONMENT.g:4729:1: rule__GSSEnvironmentGSSInfoPrint__Group__0 : rule__GSSEnvironmentGSSInfoPrint__Group__0__Impl rule__GSSEnvironmentGSSInfoPrint__Group__1 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4598:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__0__Impl rule__GSSEnvironmentGSSInfoPrint__Group__1 )
-            // InternalENVIRONMENT.g:4599:2: rule__GSSEnvironmentGSSInfoPrint__Group__0__Impl rule__GSSEnvironmentGSSInfoPrint__Group__1
+            // InternalENVIRONMENT.g:4733:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__0__Impl rule__GSSEnvironmentGSSInfoPrint__Group__1 )
+            // InternalENVIRONMENT.g:4734:2: rule__GSSEnvironmentGSSInfoPrint__Group__0__Impl rule__GSSEnvironmentGSSInfoPrint__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSEnvironmentGSSInfoPrint__Group__0__Impl();
@@ -15504,22 +15925,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__0__Impl"
-    // InternalENVIRONMENT.g:4606:1: rule__GSSEnvironmentGSSInfoPrint__Group__0__Impl : ( 'GSSEnvironmentInfoPrint' ) ;
+    // InternalENVIRONMENT.g:4741:1: rule__GSSEnvironmentGSSInfoPrint__Group__0__Impl : ( 'GSSEnvironmentInfoPrint' ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4610:1: ( ( 'GSSEnvironmentInfoPrint' ) )
-            // InternalENVIRONMENT.g:4611:1: ( 'GSSEnvironmentInfoPrint' )
+            // InternalENVIRONMENT.g:4745:1: ( ( 'GSSEnvironmentInfoPrint' ) )
+            // InternalENVIRONMENT.g:4746:1: ( 'GSSEnvironmentInfoPrint' )
             {
-            // InternalENVIRONMENT.g:4611:1: ( 'GSSEnvironmentInfoPrint' )
-            // InternalENVIRONMENT.g:4612:2: 'GSSEnvironmentInfoPrint'
+            // InternalENVIRONMENT.g:4746:1: ( 'GSSEnvironmentInfoPrint' )
+            // InternalENVIRONMENT.g:4747:2: 'GSSEnvironmentInfoPrint'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getGSSEnvironmentInfoPrintKeyword_0()); 
             }
-            match(input,57,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,58,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getGSSEnvironmentInfoPrintKeyword_0()); 
             }
@@ -15545,14 +15966,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__1"
-    // InternalENVIRONMENT.g:4621:1: rule__GSSEnvironmentGSSInfoPrint__Group__1 : rule__GSSEnvironmentGSSInfoPrint__Group__1__Impl rule__GSSEnvironmentGSSInfoPrint__Group__2 ;
+    // InternalENVIRONMENT.g:4756:1: rule__GSSEnvironmentGSSInfoPrint__Group__1 : rule__GSSEnvironmentGSSInfoPrint__Group__1__Impl rule__GSSEnvironmentGSSInfoPrint__Group__2 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4625:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__1__Impl rule__GSSEnvironmentGSSInfoPrint__Group__2 )
-            // InternalENVIRONMENT.g:4626:2: rule__GSSEnvironmentGSSInfoPrint__Group__1__Impl rule__GSSEnvironmentGSSInfoPrint__Group__2
+            // InternalENVIRONMENT.g:4760:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__1__Impl rule__GSSEnvironmentGSSInfoPrint__Group__2 )
+            // InternalENVIRONMENT.g:4761:2: rule__GSSEnvironmentGSSInfoPrint__Group__1__Impl rule__GSSEnvironmentGSSInfoPrint__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_40);
             rule__GSSEnvironmentGSSInfoPrint__Group__1__Impl();
@@ -15583,17 +16004,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__1__Impl"
-    // InternalENVIRONMENT.g:4633:1: rule__GSSEnvironmentGSSInfoPrint__Group__1__Impl : ( '{' ) ;
+    // InternalENVIRONMENT.g:4768:1: rule__GSSEnvironmentGSSInfoPrint__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4637:1: ( ( '{' ) )
-            // InternalENVIRONMENT.g:4638:1: ( '{' )
+            // InternalENVIRONMENT.g:4772:1: ( ( '{' ) )
+            // InternalENVIRONMENT.g:4773:1: ( '{' )
             {
-            // InternalENVIRONMENT.g:4638:1: ( '{' )
-            // InternalENVIRONMENT.g:4639:2: '{'
+            // InternalENVIRONMENT.g:4773:1: ( '{' )
+            // InternalENVIRONMENT.g:4774:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getLeftCurlyBracketKeyword_1()); 
@@ -15624,14 +16045,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__2"
-    // InternalENVIRONMENT.g:4648:1: rule__GSSEnvironmentGSSInfoPrint__Group__2 : rule__GSSEnvironmentGSSInfoPrint__Group__2__Impl rule__GSSEnvironmentGSSInfoPrint__Group__3 ;
+    // InternalENVIRONMENT.g:4783:1: rule__GSSEnvironmentGSSInfoPrint__Group__2 : rule__GSSEnvironmentGSSInfoPrint__Group__2__Impl rule__GSSEnvironmentGSSInfoPrint__Group__3 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4652:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__2__Impl rule__GSSEnvironmentGSSInfoPrint__Group__3 )
-            // InternalENVIRONMENT.g:4653:2: rule__GSSEnvironmentGSSInfoPrint__Group__2__Impl rule__GSSEnvironmentGSSInfoPrint__Group__3
+            // InternalENVIRONMENT.g:4787:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__2__Impl rule__GSSEnvironmentGSSInfoPrint__Group__3 )
+            // InternalENVIRONMENT.g:4788:2: rule__GSSEnvironmentGSSInfoPrint__Group__2__Impl rule__GSSEnvironmentGSSInfoPrint__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentGSSInfoPrint__Group__2__Impl();
@@ -15662,22 +16083,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__2__Impl"
-    // InternalENVIRONMENT.g:4660:1: rule__GSSEnvironmentGSSInfoPrint__Group__2__Impl : ( 'mainLog' ) ;
+    // InternalENVIRONMENT.g:4795:1: rule__GSSEnvironmentGSSInfoPrint__Group__2__Impl : ( 'mainLog' ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4664:1: ( ( 'mainLog' ) )
-            // InternalENVIRONMENT.g:4665:1: ( 'mainLog' )
+            // InternalENVIRONMENT.g:4799:1: ( ( 'mainLog' ) )
+            // InternalENVIRONMENT.g:4800:1: ( 'mainLog' )
             {
-            // InternalENVIRONMENT.g:4665:1: ( 'mainLog' )
-            // InternalENVIRONMENT.g:4666:2: 'mainLog'
+            // InternalENVIRONMENT.g:4800:1: ( 'mainLog' )
+            // InternalENVIRONMENT.g:4801:2: 'mainLog'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getMainLogKeyword_2()); 
             }
-            match(input,58,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,59,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getMainLogKeyword_2()); 
             }
@@ -15703,14 +16124,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__3"
-    // InternalENVIRONMENT.g:4675:1: rule__GSSEnvironmentGSSInfoPrint__Group__3 : rule__GSSEnvironmentGSSInfoPrint__Group__3__Impl rule__GSSEnvironmentGSSInfoPrint__Group__4 ;
+    // InternalENVIRONMENT.g:4810:1: rule__GSSEnvironmentGSSInfoPrint__Group__3 : rule__GSSEnvironmentGSSInfoPrint__Group__3__Impl rule__GSSEnvironmentGSSInfoPrint__Group__4 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4679:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__3__Impl rule__GSSEnvironmentGSSInfoPrint__Group__4 )
-            // InternalENVIRONMENT.g:4680:2: rule__GSSEnvironmentGSSInfoPrint__Group__3__Impl rule__GSSEnvironmentGSSInfoPrint__Group__4
+            // InternalENVIRONMENT.g:4814:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__3__Impl rule__GSSEnvironmentGSSInfoPrint__Group__4 )
+            // InternalENVIRONMENT.g:4815:2: rule__GSSEnvironmentGSSInfoPrint__Group__3__Impl rule__GSSEnvironmentGSSInfoPrint__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSEnvironmentGSSInfoPrint__Group__3__Impl();
@@ -15741,17 +16162,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__3__Impl"
-    // InternalENVIRONMENT.g:4687:1: rule__GSSEnvironmentGSSInfoPrint__Group__3__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:4822:1: rule__GSSEnvironmentGSSInfoPrint__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4691:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:4692:1: ( ':=' )
+            // InternalENVIRONMENT.g:4826:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:4827:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:4692:1: ( ':=' )
-            // InternalENVIRONMENT.g:4693:2: ':='
+            // InternalENVIRONMENT.g:4827:1: ( ':=' )
+            // InternalENVIRONMENT.g:4828:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getColonEqualsSignKeyword_3()); 
@@ -15782,14 +16203,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__4"
-    // InternalENVIRONMENT.g:4702:1: rule__GSSEnvironmentGSSInfoPrint__Group__4 : rule__GSSEnvironmentGSSInfoPrint__Group__4__Impl rule__GSSEnvironmentGSSInfoPrint__Group__5 ;
+    // InternalENVIRONMENT.g:4837:1: rule__GSSEnvironmentGSSInfoPrint__Group__4 : rule__GSSEnvironmentGSSInfoPrint__Group__4__Impl rule__GSSEnvironmentGSSInfoPrint__Group__5 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4706:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__4__Impl rule__GSSEnvironmentGSSInfoPrint__Group__5 )
-            // InternalENVIRONMENT.g:4707:2: rule__GSSEnvironmentGSSInfoPrint__Group__4__Impl rule__GSSEnvironmentGSSInfoPrint__Group__5
+            // InternalENVIRONMENT.g:4841:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__4__Impl rule__GSSEnvironmentGSSInfoPrint__Group__5 )
+            // InternalENVIRONMENT.g:4842:2: rule__GSSEnvironmentGSSInfoPrint__Group__4__Impl rule__GSSEnvironmentGSSInfoPrint__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGSSInfoPrint__Group__4__Impl();
@@ -15820,23 +16241,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__4__Impl"
-    // InternalENVIRONMENT.g:4714:1: rule__GSSEnvironmentGSSInfoPrint__Group__4__Impl : ( ( rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4 ) ) ;
+    // InternalENVIRONMENT.g:4849:1: rule__GSSEnvironmentGSSInfoPrint__Group__4__Impl : ( ( rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4 ) ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4718:1: ( ( ( rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4 ) ) )
-            // InternalENVIRONMENT.g:4719:1: ( ( rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4 ) )
+            // InternalENVIRONMENT.g:4853:1: ( ( ( rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4 ) ) )
+            // InternalENVIRONMENT.g:4854:1: ( ( rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4 ) )
             {
-            // InternalENVIRONMENT.g:4719:1: ( ( rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4 ) )
-            // InternalENVIRONMENT.g:4720:2: ( rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4 )
+            // InternalENVIRONMENT.g:4854:1: ( ( rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4 ) )
+            // InternalENVIRONMENT.g:4855:2: ( rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getMainLogAssignment_4()); 
             }
-            // InternalENVIRONMENT.g:4721:2: ( rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4 )
-            // InternalENVIRONMENT.g:4721:3: rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4
+            // InternalENVIRONMENT.g:4856:2: ( rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4 )
+            // InternalENVIRONMENT.g:4856:3: rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4();
@@ -15871,14 +16292,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__5"
-    // InternalENVIRONMENT.g:4729:1: rule__GSSEnvironmentGSSInfoPrint__Group__5 : rule__GSSEnvironmentGSSInfoPrint__Group__5__Impl rule__GSSEnvironmentGSSInfoPrint__Group__6 ;
+    // InternalENVIRONMENT.g:4864:1: rule__GSSEnvironmentGSSInfoPrint__Group__5 : rule__GSSEnvironmentGSSInfoPrint__Group__5__Impl rule__GSSEnvironmentGSSInfoPrint__Group__6 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4733:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__5__Impl rule__GSSEnvironmentGSSInfoPrint__Group__6 )
-            // InternalENVIRONMENT.g:4734:2: rule__GSSEnvironmentGSSInfoPrint__Group__5__Impl rule__GSSEnvironmentGSSInfoPrint__Group__6
+            // InternalENVIRONMENT.g:4868:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__5__Impl rule__GSSEnvironmentGSSInfoPrint__Group__6 )
+            // InternalENVIRONMENT.g:4869:2: rule__GSSEnvironmentGSSInfoPrint__Group__5__Impl rule__GSSEnvironmentGSSInfoPrint__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_42);
             rule__GSSEnvironmentGSSInfoPrint__Group__5__Impl();
@@ -15909,17 +16330,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__5__Impl"
-    // InternalENVIRONMENT.g:4741:1: rule__GSSEnvironmentGSSInfoPrint__Group__5__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:4876:1: rule__GSSEnvironmentGSSInfoPrint__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4745:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:4746:1: ( ';' )
+            // InternalENVIRONMENT.g:4880:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:4881:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:4746:1: ( ';' )
-            // InternalENVIRONMENT.g:4747:2: ';'
+            // InternalENVIRONMENT.g:4881:1: ( ';' )
+            // InternalENVIRONMENT.g:4882:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getSemicolonKeyword_5()); 
@@ -15950,14 +16371,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__6"
-    // InternalENVIRONMENT.g:4756:1: rule__GSSEnvironmentGSSInfoPrint__Group__6 : rule__GSSEnvironmentGSSInfoPrint__Group__6__Impl rule__GSSEnvironmentGSSInfoPrint__Group__7 ;
+    // InternalENVIRONMENT.g:4891:1: rule__GSSEnvironmentGSSInfoPrint__Group__6 : rule__GSSEnvironmentGSSInfoPrint__Group__6__Impl rule__GSSEnvironmentGSSInfoPrint__Group__7 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4760:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__6__Impl rule__GSSEnvironmentGSSInfoPrint__Group__7 )
-            // InternalENVIRONMENT.g:4761:2: rule__GSSEnvironmentGSSInfoPrint__Group__6__Impl rule__GSSEnvironmentGSSInfoPrint__Group__7
+            // InternalENVIRONMENT.g:4895:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__6__Impl rule__GSSEnvironmentGSSInfoPrint__Group__7 )
+            // InternalENVIRONMENT.g:4896:2: rule__GSSEnvironmentGSSInfoPrint__Group__6__Impl rule__GSSEnvironmentGSSInfoPrint__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentGSSInfoPrint__Group__6__Impl();
@@ -15988,22 +16409,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__6__Impl"
-    // InternalENVIRONMENT.g:4768:1: rule__GSSEnvironmentGSSInfoPrint__Group__6__Impl : ( 'portLogs' ) ;
+    // InternalENVIRONMENT.g:4903:1: rule__GSSEnvironmentGSSInfoPrint__Group__6__Impl : ( 'portLogs' ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4772:1: ( ( 'portLogs' ) )
-            // InternalENVIRONMENT.g:4773:1: ( 'portLogs' )
+            // InternalENVIRONMENT.g:4907:1: ( ( 'portLogs' ) )
+            // InternalENVIRONMENT.g:4908:1: ( 'portLogs' )
             {
-            // InternalENVIRONMENT.g:4773:1: ( 'portLogs' )
-            // InternalENVIRONMENT.g:4774:2: 'portLogs'
+            // InternalENVIRONMENT.g:4908:1: ( 'portLogs' )
+            // InternalENVIRONMENT.g:4909:2: 'portLogs'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getPortLogsKeyword_6()); 
             }
-            match(input,59,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,60,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getPortLogsKeyword_6()); 
             }
@@ -16029,14 +16450,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__7"
-    // InternalENVIRONMENT.g:4783:1: rule__GSSEnvironmentGSSInfoPrint__Group__7 : rule__GSSEnvironmentGSSInfoPrint__Group__7__Impl rule__GSSEnvironmentGSSInfoPrint__Group__8 ;
+    // InternalENVIRONMENT.g:4918:1: rule__GSSEnvironmentGSSInfoPrint__Group__7 : rule__GSSEnvironmentGSSInfoPrint__Group__7__Impl rule__GSSEnvironmentGSSInfoPrint__Group__8 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4787:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__7__Impl rule__GSSEnvironmentGSSInfoPrint__Group__8 )
-            // InternalENVIRONMENT.g:4788:2: rule__GSSEnvironmentGSSInfoPrint__Group__7__Impl rule__GSSEnvironmentGSSInfoPrint__Group__8
+            // InternalENVIRONMENT.g:4922:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__7__Impl rule__GSSEnvironmentGSSInfoPrint__Group__8 )
+            // InternalENVIRONMENT.g:4923:2: rule__GSSEnvironmentGSSInfoPrint__Group__7__Impl rule__GSSEnvironmentGSSInfoPrint__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSEnvironmentGSSInfoPrint__Group__7__Impl();
@@ -16067,17 +16488,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__7__Impl"
-    // InternalENVIRONMENT.g:4795:1: rule__GSSEnvironmentGSSInfoPrint__Group__7__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:4930:1: rule__GSSEnvironmentGSSInfoPrint__Group__7__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4799:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:4800:1: ( ':=' )
+            // InternalENVIRONMENT.g:4934:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:4935:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:4800:1: ( ':=' )
-            // InternalENVIRONMENT.g:4801:2: ':='
+            // InternalENVIRONMENT.g:4935:1: ( ':=' )
+            // InternalENVIRONMENT.g:4936:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getColonEqualsSignKeyword_7()); 
@@ -16108,14 +16529,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__8"
-    // InternalENVIRONMENT.g:4810:1: rule__GSSEnvironmentGSSInfoPrint__Group__8 : rule__GSSEnvironmentGSSInfoPrint__Group__8__Impl rule__GSSEnvironmentGSSInfoPrint__Group__9 ;
+    // InternalENVIRONMENT.g:4945:1: rule__GSSEnvironmentGSSInfoPrint__Group__8 : rule__GSSEnvironmentGSSInfoPrint__Group__8__Impl rule__GSSEnvironmentGSSInfoPrint__Group__9 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4814:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__8__Impl rule__GSSEnvironmentGSSInfoPrint__Group__9 )
-            // InternalENVIRONMENT.g:4815:2: rule__GSSEnvironmentGSSInfoPrint__Group__8__Impl rule__GSSEnvironmentGSSInfoPrint__Group__9
+            // InternalENVIRONMENT.g:4949:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__8__Impl rule__GSSEnvironmentGSSInfoPrint__Group__9 )
+            // InternalENVIRONMENT.g:4950:2: rule__GSSEnvironmentGSSInfoPrint__Group__8__Impl rule__GSSEnvironmentGSSInfoPrint__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGSSInfoPrint__Group__8__Impl();
@@ -16146,23 +16567,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__8__Impl"
-    // InternalENVIRONMENT.g:4822:1: rule__GSSEnvironmentGSSInfoPrint__Group__8__Impl : ( ( rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8 ) ) ;
+    // InternalENVIRONMENT.g:4957:1: rule__GSSEnvironmentGSSInfoPrint__Group__8__Impl : ( ( rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8 ) ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4826:1: ( ( ( rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8 ) ) )
-            // InternalENVIRONMENT.g:4827:1: ( ( rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8 ) )
+            // InternalENVIRONMENT.g:4961:1: ( ( ( rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8 ) ) )
+            // InternalENVIRONMENT.g:4962:1: ( ( rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8 ) )
             {
-            // InternalENVIRONMENT.g:4827:1: ( ( rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8 ) )
-            // InternalENVIRONMENT.g:4828:2: ( rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8 )
+            // InternalENVIRONMENT.g:4962:1: ( ( rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8 ) )
+            // InternalENVIRONMENT.g:4963:2: ( rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getPortLogsAssignment_8()); 
             }
-            // InternalENVIRONMENT.g:4829:2: ( rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8 )
-            // InternalENVIRONMENT.g:4829:3: rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8
+            // InternalENVIRONMENT.g:4964:2: ( rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8 )
+            // InternalENVIRONMENT.g:4964:3: rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8();
@@ -16197,14 +16618,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__9"
-    // InternalENVIRONMENT.g:4837:1: rule__GSSEnvironmentGSSInfoPrint__Group__9 : rule__GSSEnvironmentGSSInfoPrint__Group__9__Impl rule__GSSEnvironmentGSSInfoPrint__Group__10 ;
+    // InternalENVIRONMENT.g:4972:1: rule__GSSEnvironmentGSSInfoPrint__Group__9 : rule__GSSEnvironmentGSSInfoPrint__Group__9__Impl rule__GSSEnvironmentGSSInfoPrint__Group__10 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4841:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__9__Impl rule__GSSEnvironmentGSSInfoPrint__Group__10 )
-            // InternalENVIRONMENT.g:4842:2: rule__GSSEnvironmentGSSInfoPrint__Group__9__Impl rule__GSSEnvironmentGSSInfoPrint__Group__10
+            // InternalENVIRONMENT.g:4976:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__9__Impl rule__GSSEnvironmentGSSInfoPrint__Group__10 )
+            // InternalENVIRONMENT.g:4977:2: rule__GSSEnvironmentGSSInfoPrint__Group__9__Impl rule__GSSEnvironmentGSSInfoPrint__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_43);
             rule__GSSEnvironmentGSSInfoPrint__Group__9__Impl();
@@ -16235,17 +16656,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__9__Impl"
-    // InternalENVIRONMENT.g:4849:1: rule__GSSEnvironmentGSSInfoPrint__Group__9__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:4984:1: rule__GSSEnvironmentGSSInfoPrint__Group__9__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4853:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:4854:1: ( ';' )
+            // InternalENVIRONMENT.g:4988:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:4989:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:4854:1: ( ';' )
-            // InternalENVIRONMENT.g:4855:2: ';'
+            // InternalENVIRONMENT.g:4989:1: ( ';' )
+            // InternalENVIRONMENT.g:4990:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getSemicolonKeyword_9()); 
@@ -16276,14 +16697,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__10"
-    // InternalENVIRONMENT.g:4864:1: rule__GSSEnvironmentGSSInfoPrint__Group__10 : rule__GSSEnvironmentGSSInfoPrint__Group__10__Impl rule__GSSEnvironmentGSSInfoPrint__Group__11 ;
+    // InternalENVIRONMENT.g:4999:1: rule__GSSEnvironmentGSSInfoPrint__Group__10 : rule__GSSEnvironmentGSSInfoPrint__Group__10__Impl rule__GSSEnvironmentGSSInfoPrint__Group__11 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4868:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__10__Impl rule__GSSEnvironmentGSSInfoPrint__Group__11 )
-            // InternalENVIRONMENT.g:4869:2: rule__GSSEnvironmentGSSInfoPrint__Group__10__Impl rule__GSSEnvironmentGSSInfoPrint__Group__11
+            // InternalENVIRONMENT.g:5003:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__10__Impl rule__GSSEnvironmentGSSInfoPrint__Group__11 )
+            // InternalENVIRONMENT.g:5004:2: rule__GSSEnvironmentGSSInfoPrint__Group__10__Impl rule__GSSEnvironmentGSSInfoPrint__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentGSSInfoPrint__Group__10__Impl();
@@ -16314,22 +16735,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__10__Impl"
-    // InternalENVIRONMENT.g:4876:1: rule__GSSEnvironmentGSSInfoPrint__Group__10__Impl : ( 'rawLog' ) ;
+    // InternalENVIRONMENT.g:5011:1: rule__GSSEnvironmentGSSInfoPrint__Group__10__Impl : ( 'rawLog' ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4880:1: ( ( 'rawLog' ) )
-            // InternalENVIRONMENT.g:4881:1: ( 'rawLog' )
+            // InternalENVIRONMENT.g:5015:1: ( ( 'rawLog' ) )
+            // InternalENVIRONMENT.g:5016:1: ( 'rawLog' )
             {
-            // InternalENVIRONMENT.g:4881:1: ( 'rawLog' )
-            // InternalENVIRONMENT.g:4882:2: 'rawLog'
+            // InternalENVIRONMENT.g:5016:1: ( 'rawLog' )
+            // InternalENVIRONMENT.g:5017:2: 'rawLog'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getRawLogKeyword_10()); 
             }
-            match(input,60,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,61,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getRawLogKeyword_10()); 
             }
@@ -16355,14 +16776,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__11"
-    // InternalENVIRONMENT.g:4891:1: rule__GSSEnvironmentGSSInfoPrint__Group__11 : rule__GSSEnvironmentGSSInfoPrint__Group__11__Impl rule__GSSEnvironmentGSSInfoPrint__Group__12 ;
+    // InternalENVIRONMENT.g:5026:1: rule__GSSEnvironmentGSSInfoPrint__Group__11 : rule__GSSEnvironmentGSSInfoPrint__Group__11__Impl rule__GSSEnvironmentGSSInfoPrint__Group__12 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4895:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__11__Impl rule__GSSEnvironmentGSSInfoPrint__Group__12 )
-            // InternalENVIRONMENT.g:4896:2: rule__GSSEnvironmentGSSInfoPrint__Group__11__Impl rule__GSSEnvironmentGSSInfoPrint__Group__12
+            // InternalENVIRONMENT.g:5030:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__11__Impl rule__GSSEnvironmentGSSInfoPrint__Group__12 )
+            // InternalENVIRONMENT.g:5031:2: rule__GSSEnvironmentGSSInfoPrint__Group__11__Impl rule__GSSEnvironmentGSSInfoPrint__Group__12
             {
             pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSEnvironmentGSSInfoPrint__Group__11__Impl();
@@ -16393,17 +16814,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__11__Impl"
-    // InternalENVIRONMENT.g:4903:1: rule__GSSEnvironmentGSSInfoPrint__Group__11__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:5038:1: rule__GSSEnvironmentGSSInfoPrint__Group__11__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4907:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:4908:1: ( ':=' )
+            // InternalENVIRONMENT.g:5042:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:5043:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:4908:1: ( ':=' )
-            // InternalENVIRONMENT.g:4909:2: ':='
+            // InternalENVIRONMENT.g:5043:1: ( ':=' )
+            // InternalENVIRONMENT.g:5044:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getColonEqualsSignKeyword_11()); 
@@ -16434,14 +16855,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__12"
-    // InternalENVIRONMENT.g:4918:1: rule__GSSEnvironmentGSSInfoPrint__Group__12 : rule__GSSEnvironmentGSSInfoPrint__Group__12__Impl rule__GSSEnvironmentGSSInfoPrint__Group__13 ;
+    // InternalENVIRONMENT.g:5053:1: rule__GSSEnvironmentGSSInfoPrint__Group__12 : rule__GSSEnvironmentGSSInfoPrint__Group__12__Impl rule__GSSEnvironmentGSSInfoPrint__Group__13 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4922:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__12__Impl rule__GSSEnvironmentGSSInfoPrint__Group__13 )
-            // InternalENVIRONMENT.g:4923:2: rule__GSSEnvironmentGSSInfoPrint__Group__12__Impl rule__GSSEnvironmentGSSInfoPrint__Group__13
+            // InternalENVIRONMENT.g:5057:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__12__Impl rule__GSSEnvironmentGSSInfoPrint__Group__13 )
+            // InternalENVIRONMENT.g:5058:2: rule__GSSEnvironmentGSSInfoPrint__Group__12__Impl rule__GSSEnvironmentGSSInfoPrint__Group__13
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGSSInfoPrint__Group__12__Impl();
@@ -16472,23 +16893,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__12__Impl"
-    // InternalENVIRONMENT.g:4930:1: rule__GSSEnvironmentGSSInfoPrint__Group__12__Impl : ( ( rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12 ) ) ;
+    // InternalENVIRONMENT.g:5065:1: rule__GSSEnvironmentGSSInfoPrint__Group__12__Impl : ( ( rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12 ) ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4934:1: ( ( ( rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12 ) ) )
-            // InternalENVIRONMENT.g:4935:1: ( ( rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12 ) )
+            // InternalENVIRONMENT.g:5069:1: ( ( ( rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12 ) ) )
+            // InternalENVIRONMENT.g:5070:1: ( ( rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12 ) )
             {
-            // InternalENVIRONMENT.g:4935:1: ( ( rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12 ) )
-            // InternalENVIRONMENT.g:4936:2: ( rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12 )
+            // InternalENVIRONMENT.g:5070:1: ( ( rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12 ) )
+            // InternalENVIRONMENT.g:5071:2: ( rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getRawLogAssignment_12()); 
             }
-            // InternalENVIRONMENT.g:4937:2: ( rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12 )
-            // InternalENVIRONMENT.g:4937:3: rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12
+            // InternalENVIRONMENT.g:5072:2: ( rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12 )
+            // InternalENVIRONMENT.g:5072:3: rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12();
@@ -16523,14 +16944,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__13"
-    // InternalENVIRONMENT.g:4945:1: rule__GSSEnvironmentGSSInfoPrint__Group__13 : rule__GSSEnvironmentGSSInfoPrint__Group__13__Impl rule__GSSEnvironmentGSSInfoPrint__Group__14 ;
+    // InternalENVIRONMENT.g:5080:1: rule__GSSEnvironmentGSSInfoPrint__Group__13 : rule__GSSEnvironmentGSSInfoPrint__Group__13__Impl rule__GSSEnvironmentGSSInfoPrint__Group__14 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4949:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__13__Impl rule__GSSEnvironmentGSSInfoPrint__Group__14 )
-            // InternalENVIRONMENT.g:4950:2: rule__GSSEnvironmentGSSInfoPrint__Group__13__Impl rule__GSSEnvironmentGSSInfoPrint__Group__14
+            // InternalENVIRONMENT.g:5084:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__13__Impl rule__GSSEnvironmentGSSInfoPrint__Group__14 )
+            // InternalENVIRONMENT.g:5085:2: rule__GSSEnvironmentGSSInfoPrint__Group__13__Impl rule__GSSEnvironmentGSSInfoPrint__Group__14
             {
             pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSEnvironmentGSSInfoPrint__Group__13__Impl();
@@ -16561,17 +16982,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__13__Impl"
-    // InternalENVIRONMENT.g:4957:1: rule__GSSEnvironmentGSSInfoPrint__Group__13__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:5092:1: rule__GSSEnvironmentGSSInfoPrint__Group__13__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4961:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:4962:1: ( ';' )
+            // InternalENVIRONMENT.g:5096:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:5097:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:4962:1: ( ';' )
-            // InternalENVIRONMENT.g:4963:2: ';'
+            // InternalENVIRONMENT.g:5097:1: ( ';' )
+            // InternalENVIRONMENT.g:5098:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getSemicolonKeyword_13()); 
@@ -16602,14 +17023,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__14"
-    // InternalENVIRONMENT.g:4972:1: rule__GSSEnvironmentGSSInfoPrint__Group__14 : rule__GSSEnvironmentGSSInfoPrint__Group__14__Impl rule__GSSEnvironmentGSSInfoPrint__Group__15 ;
+    // InternalENVIRONMENT.g:5107:1: rule__GSSEnvironmentGSSInfoPrint__Group__14 : rule__GSSEnvironmentGSSInfoPrint__Group__14__Impl rule__GSSEnvironmentGSSInfoPrint__Group__15 ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4976:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__14__Impl rule__GSSEnvironmentGSSInfoPrint__Group__15 )
-            // InternalENVIRONMENT.g:4977:2: rule__GSSEnvironmentGSSInfoPrint__Group__14__Impl rule__GSSEnvironmentGSSInfoPrint__Group__15
+            // InternalENVIRONMENT.g:5111:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__14__Impl rule__GSSEnvironmentGSSInfoPrint__Group__15 )
+            // InternalENVIRONMENT.g:5112:2: rule__GSSEnvironmentGSSInfoPrint__Group__14__Impl rule__GSSEnvironmentGSSInfoPrint__Group__15
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGSSInfoPrint__Group__14__Impl();
@@ -16640,17 +17061,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__14__Impl"
-    // InternalENVIRONMENT.g:4984:1: rule__GSSEnvironmentGSSInfoPrint__Group__14__Impl : ( '}' ) ;
+    // InternalENVIRONMENT.g:5119:1: rule__GSSEnvironmentGSSInfoPrint__Group__14__Impl : ( '}' ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:4988:1: ( ( '}' ) )
-            // InternalENVIRONMENT.g:4989:1: ( '}' )
+            // InternalENVIRONMENT.g:5123:1: ( ( '}' ) )
+            // InternalENVIRONMENT.g:5124:1: ( '}' )
             {
-            // InternalENVIRONMENT.g:4989:1: ( '}' )
-            // InternalENVIRONMENT.g:4990:2: '}'
+            // InternalENVIRONMENT.g:5124:1: ( '}' )
+            // InternalENVIRONMENT.g:5125:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getRightCurlyBracketKeyword_14()); 
@@ -16681,14 +17102,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__15"
-    // InternalENVIRONMENT.g:4999:1: rule__GSSEnvironmentGSSInfoPrint__Group__15 : rule__GSSEnvironmentGSSInfoPrint__Group__15__Impl ;
+    // InternalENVIRONMENT.g:5134:1: rule__GSSEnvironmentGSSInfoPrint__Group__15 : rule__GSSEnvironmentGSSInfoPrint__Group__15__Impl ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5003:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__15__Impl )
-            // InternalENVIRONMENT.g:5004:2: rule__GSSEnvironmentGSSInfoPrint__Group__15__Impl
+            // InternalENVIRONMENT.g:5138:1: ( rule__GSSEnvironmentGSSInfoPrint__Group__15__Impl )
+            // InternalENVIRONMENT.g:5139:2: rule__GSSEnvironmentGSSInfoPrint__Group__15__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSInfoPrint__Group__15__Impl();
@@ -16714,17 +17135,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__Group__15__Impl"
-    // InternalENVIRONMENT.g:5010:1: rule__GSSEnvironmentGSSInfoPrint__Group__15__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:5145:1: rule__GSSEnvironmentGSSInfoPrint__Group__15__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5014:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:5015:1: ( ';' )
+            // InternalENVIRONMENT.g:5149:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:5150:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:5015:1: ( ';' )
-            // InternalENVIRONMENT.g:5016:2: ';'
+            // InternalENVIRONMENT.g:5150:1: ( ';' )
+            // InternalENVIRONMENT.g:5151:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getSemicolonKeyword_15()); 
@@ -16755,14 +17176,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__0"
-    // InternalENVIRONMENT.g:5026:1: rule__GSSEnvironmentPhyHeaderPrint__Group__0 : rule__GSSEnvironmentPhyHeaderPrint__Group__0__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__1 ;
+    // InternalENVIRONMENT.g:5161:1: rule__GSSEnvironmentPhyHeaderPrint__Group__0 : rule__GSSEnvironmentPhyHeaderPrint__Group__0__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__1 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5030:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__0__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__1 )
-            // InternalENVIRONMENT.g:5031:2: rule__GSSEnvironmentPhyHeaderPrint__Group__0__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__1
+            // InternalENVIRONMENT.g:5165:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__0__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__1 )
+            // InternalENVIRONMENT.g:5166:2: rule__GSSEnvironmentPhyHeaderPrint__Group__0__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSEnvironmentPhyHeaderPrint__Group__0__Impl();
@@ -16793,22 +17214,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__0__Impl"
-    // InternalENVIRONMENT.g:5038:1: rule__GSSEnvironmentPhyHeaderPrint__Group__0__Impl : ( 'GSSEnvironmentPhyHeaderPrint' ) ;
+    // InternalENVIRONMENT.g:5173:1: rule__GSSEnvironmentPhyHeaderPrint__Group__0__Impl : ( 'GSSEnvironmentPhyHeaderPrint' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5042:1: ( ( 'GSSEnvironmentPhyHeaderPrint' ) )
-            // InternalENVIRONMENT.g:5043:1: ( 'GSSEnvironmentPhyHeaderPrint' )
+            // InternalENVIRONMENT.g:5177:1: ( ( 'GSSEnvironmentPhyHeaderPrint' ) )
+            // InternalENVIRONMENT.g:5178:1: ( 'GSSEnvironmentPhyHeaderPrint' )
             {
-            // InternalENVIRONMENT.g:5043:1: ( 'GSSEnvironmentPhyHeaderPrint' )
-            // InternalENVIRONMENT.g:5044:2: 'GSSEnvironmentPhyHeaderPrint'
+            // InternalENVIRONMENT.g:5178:1: ( 'GSSEnvironmentPhyHeaderPrint' )
+            // InternalENVIRONMENT.g:5179:2: 'GSSEnvironmentPhyHeaderPrint'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getGSSEnvironmentPhyHeaderPrintKeyword_0()); 
             }
-            match(input,61,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,62,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getGSSEnvironmentPhyHeaderPrintKeyword_0()); 
             }
@@ -16834,14 +17255,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__1"
-    // InternalENVIRONMENT.g:5053:1: rule__GSSEnvironmentPhyHeaderPrint__Group__1 : rule__GSSEnvironmentPhyHeaderPrint__Group__1__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__2 ;
+    // InternalENVIRONMENT.g:5188:1: rule__GSSEnvironmentPhyHeaderPrint__Group__1 : rule__GSSEnvironmentPhyHeaderPrint__Group__1__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__2 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5057:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__1__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__2 )
-            // InternalENVIRONMENT.g:5058:2: rule__GSSEnvironmentPhyHeaderPrint__Group__1__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__2
+            // InternalENVIRONMENT.g:5192:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__1__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__2 )
+            // InternalENVIRONMENT.g:5193:2: rule__GSSEnvironmentPhyHeaderPrint__Group__1__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_40);
             rule__GSSEnvironmentPhyHeaderPrint__Group__1__Impl();
@@ -16872,17 +17293,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__1__Impl"
-    // InternalENVIRONMENT.g:5065:1: rule__GSSEnvironmentPhyHeaderPrint__Group__1__Impl : ( '{' ) ;
+    // InternalENVIRONMENT.g:5200:1: rule__GSSEnvironmentPhyHeaderPrint__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5069:1: ( ( '{' ) )
-            // InternalENVIRONMENT.g:5070:1: ( '{' )
+            // InternalENVIRONMENT.g:5204:1: ( ( '{' ) )
+            // InternalENVIRONMENT.g:5205:1: ( '{' )
             {
-            // InternalENVIRONMENT.g:5070:1: ( '{' )
-            // InternalENVIRONMENT.g:5071:2: '{'
+            // InternalENVIRONMENT.g:5205:1: ( '{' )
+            // InternalENVIRONMENT.g:5206:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getLeftCurlyBracketKeyword_1()); 
@@ -16913,14 +17334,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__2"
-    // InternalENVIRONMENT.g:5080:1: rule__GSSEnvironmentPhyHeaderPrint__Group__2 : rule__GSSEnvironmentPhyHeaderPrint__Group__2__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__3 ;
+    // InternalENVIRONMENT.g:5215:1: rule__GSSEnvironmentPhyHeaderPrint__Group__2 : rule__GSSEnvironmentPhyHeaderPrint__Group__2__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__3 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5084:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__2__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__3 )
-            // InternalENVIRONMENT.g:5085:2: rule__GSSEnvironmentPhyHeaderPrint__Group__2__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__3
+            // InternalENVIRONMENT.g:5219:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__2__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__3 )
+            // InternalENVIRONMENT.g:5220:2: rule__GSSEnvironmentPhyHeaderPrint__Group__2__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentPhyHeaderPrint__Group__2__Impl();
@@ -16951,22 +17372,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__2__Impl"
-    // InternalENVIRONMENT.g:5092:1: rule__GSSEnvironmentPhyHeaderPrint__Group__2__Impl : ( 'mainLog' ) ;
+    // InternalENVIRONMENT.g:5227:1: rule__GSSEnvironmentPhyHeaderPrint__Group__2__Impl : ( 'mainLog' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5096:1: ( ( 'mainLog' ) )
-            // InternalENVIRONMENT.g:5097:1: ( 'mainLog' )
+            // InternalENVIRONMENT.g:5231:1: ( ( 'mainLog' ) )
+            // InternalENVIRONMENT.g:5232:1: ( 'mainLog' )
             {
-            // InternalENVIRONMENT.g:5097:1: ( 'mainLog' )
-            // InternalENVIRONMENT.g:5098:2: 'mainLog'
+            // InternalENVIRONMENT.g:5232:1: ( 'mainLog' )
+            // InternalENVIRONMENT.g:5233:2: 'mainLog'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getMainLogKeyword_2()); 
             }
-            match(input,58,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,59,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getMainLogKeyword_2()); 
             }
@@ -16992,14 +17413,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__3"
-    // InternalENVIRONMENT.g:5107:1: rule__GSSEnvironmentPhyHeaderPrint__Group__3 : rule__GSSEnvironmentPhyHeaderPrint__Group__3__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__4 ;
+    // InternalENVIRONMENT.g:5242:1: rule__GSSEnvironmentPhyHeaderPrint__Group__3 : rule__GSSEnvironmentPhyHeaderPrint__Group__3__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__4 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5111:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__3__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__4 )
-            // InternalENVIRONMENT.g:5112:2: rule__GSSEnvironmentPhyHeaderPrint__Group__3__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__4
+            // InternalENVIRONMENT.g:5246:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__3__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__4 )
+            // InternalENVIRONMENT.g:5247:2: rule__GSSEnvironmentPhyHeaderPrint__Group__3__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSEnvironmentPhyHeaderPrint__Group__3__Impl();
@@ -17030,17 +17451,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__3__Impl"
-    // InternalENVIRONMENT.g:5119:1: rule__GSSEnvironmentPhyHeaderPrint__Group__3__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:5254:1: rule__GSSEnvironmentPhyHeaderPrint__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5123:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:5124:1: ( ':=' )
+            // InternalENVIRONMENT.g:5258:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:5259:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:5124:1: ( ':=' )
-            // InternalENVIRONMENT.g:5125:2: ':='
+            // InternalENVIRONMENT.g:5259:1: ( ':=' )
+            // InternalENVIRONMENT.g:5260:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getColonEqualsSignKeyword_3()); 
@@ -17071,14 +17492,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__4"
-    // InternalENVIRONMENT.g:5134:1: rule__GSSEnvironmentPhyHeaderPrint__Group__4 : rule__GSSEnvironmentPhyHeaderPrint__Group__4__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__5 ;
+    // InternalENVIRONMENT.g:5269:1: rule__GSSEnvironmentPhyHeaderPrint__Group__4 : rule__GSSEnvironmentPhyHeaderPrint__Group__4__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__5 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5138:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__4__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__5 )
-            // InternalENVIRONMENT.g:5139:2: rule__GSSEnvironmentPhyHeaderPrint__Group__4__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__5
+            // InternalENVIRONMENT.g:5273:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__4__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__5 )
+            // InternalENVIRONMENT.g:5274:2: rule__GSSEnvironmentPhyHeaderPrint__Group__4__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentPhyHeaderPrint__Group__4__Impl();
@@ -17109,23 +17530,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__4__Impl"
-    // InternalENVIRONMENT.g:5146:1: rule__GSSEnvironmentPhyHeaderPrint__Group__4__Impl : ( ( rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4 ) ) ;
+    // InternalENVIRONMENT.g:5281:1: rule__GSSEnvironmentPhyHeaderPrint__Group__4__Impl : ( ( rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4 ) ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5150:1: ( ( ( rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4 ) ) )
-            // InternalENVIRONMENT.g:5151:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4 ) )
+            // InternalENVIRONMENT.g:5285:1: ( ( ( rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4 ) ) )
+            // InternalENVIRONMENT.g:5286:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4 ) )
             {
-            // InternalENVIRONMENT.g:5151:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4 ) )
-            // InternalENVIRONMENT.g:5152:2: ( rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4 )
+            // InternalENVIRONMENT.g:5286:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4 ) )
+            // InternalENVIRONMENT.g:5287:2: ( rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getMainLogAssignment_4()); 
             }
-            // InternalENVIRONMENT.g:5153:2: ( rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4 )
-            // InternalENVIRONMENT.g:5153:3: rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4
+            // InternalENVIRONMENT.g:5288:2: ( rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4 )
+            // InternalENVIRONMENT.g:5288:3: rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4();
@@ -17160,14 +17581,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__5"
-    // InternalENVIRONMENT.g:5161:1: rule__GSSEnvironmentPhyHeaderPrint__Group__5 : rule__GSSEnvironmentPhyHeaderPrint__Group__5__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__6 ;
+    // InternalENVIRONMENT.g:5296:1: rule__GSSEnvironmentPhyHeaderPrint__Group__5 : rule__GSSEnvironmentPhyHeaderPrint__Group__5__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__6 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5165:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__5__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__6 )
-            // InternalENVIRONMENT.g:5166:2: rule__GSSEnvironmentPhyHeaderPrint__Group__5__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__6
+            // InternalENVIRONMENT.g:5300:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__5__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__6 )
+            // InternalENVIRONMENT.g:5301:2: rule__GSSEnvironmentPhyHeaderPrint__Group__5__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_42);
             rule__GSSEnvironmentPhyHeaderPrint__Group__5__Impl();
@@ -17198,17 +17619,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__5__Impl"
-    // InternalENVIRONMENT.g:5173:1: rule__GSSEnvironmentPhyHeaderPrint__Group__5__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:5308:1: rule__GSSEnvironmentPhyHeaderPrint__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5177:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:5178:1: ( ';' )
+            // InternalENVIRONMENT.g:5312:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:5313:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:5178:1: ( ';' )
-            // InternalENVIRONMENT.g:5179:2: ';'
+            // InternalENVIRONMENT.g:5313:1: ( ';' )
+            // InternalENVIRONMENT.g:5314:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getSemicolonKeyword_5()); 
@@ -17239,14 +17660,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__6"
-    // InternalENVIRONMENT.g:5188:1: rule__GSSEnvironmentPhyHeaderPrint__Group__6 : rule__GSSEnvironmentPhyHeaderPrint__Group__6__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__7 ;
+    // InternalENVIRONMENT.g:5323:1: rule__GSSEnvironmentPhyHeaderPrint__Group__6 : rule__GSSEnvironmentPhyHeaderPrint__Group__6__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__7 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5192:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__6__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__7 )
-            // InternalENVIRONMENT.g:5193:2: rule__GSSEnvironmentPhyHeaderPrint__Group__6__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__7
+            // InternalENVIRONMENT.g:5327:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__6__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__7 )
+            // InternalENVIRONMENT.g:5328:2: rule__GSSEnvironmentPhyHeaderPrint__Group__6__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentPhyHeaderPrint__Group__6__Impl();
@@ -17277,22 +17698,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__6__Impl"
-    // InternalENVIRONMENT.g:5200:1: rule__GSSEnvironmentPhyHeaderPrint__Group__6__Impl : ( 'portLogs' ) ;
+    // InternalENVIRONMENT.g:5335:1: rule__GSSEnvironmentPhyHeaderPrint__Group__6__Impl : ( 'portLogs' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5204:1: ( ( 'portLogs' ) )
-            // InternalENVIRONMENT.g:5205:1: ( 'portLogs' )
+            // InternalENVIRONMENT.g:5339:1: ( ( 'portLogs' ) )
+            // InternalENVIRONMENT.g:5340:1: ( 'portLogs' )
             {
-            // InternalENVIRONMENT.g:5205:1: ( 'portLogs' )
-            // InternalENVIRONMENT.g:5206:2: 'portLogs'
+            // InternalENVIRONMENT.g:5340:1: ( 'portLogs' )
+            // InternalENVIRONMENT.g:5341:2: 'portLogs'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getPortLogsKeyword_6()); 
             }
-            match(input,59,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,60,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getPortLogsKeyword_6()); 
             }
@@ -17318,14 +17739,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__7"
-    // InternalENVIRONMENT.g:5215:1: rule__GSSEnvironmentPhyHeaderPrint__Group__7 : rule__GSSEnvironmentPhyHeaderPrint__Group__7__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__8 ;
+    // InternalENVIRONMENT.g:5350:1: rule__GSSEnvironmentPhyHeaderPrint__Group__7 : rule__GSSEnvironmentPhyHeaderPrint__Group__7__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__8 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5219:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__7__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__8 )
-            // InternalENVIRONMENT.g:5220:2: rule__GSSEnvironmentPhyHeaderPrint__Group__7__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__8
+            // InternalENVIRONMENT.g:5354:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__7__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__8 )
+            // InternalENVIRONMENT.g:5355:2: rule__GSSEnvironmentPhyHeaderPrint__Group__7__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSEnvironmentPhyHeaderPrint__Group__7__Impl();
@@ -17356,17 +17777,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__7__Impl"
-    // InternalENVIRONMENT.g:5227:1: rule__GSSEnvironmentPhyHeaderPrint__Group__7__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:5362:1: rule__GSSEnvironmentPhyHeaderPrint__Group__7__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5231:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:5232:1: ( ':=' )
+            // InternalENVIRONMENT.g:5366:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:5367:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:5232:1: ( ':=' )
-            // InternalENVIRONMENT.g:5233:2: ':='
+            // InternalENVIRONMENT.g:5367:1: ( ':=' )
+            // InternalENVIRONMENT.g:5368:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getColonEqualsSignKeyword_7()); 
@@ -17397,14 +17818,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__8"
-    // InternalENVIRONMENT.g:5242:1: rule__GSSEnvironmentPhyHeaderPrint__Group__8 : rule__GSSEnvironmentPhyHeaderPrint__Group__8__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__9 ;
+    // InternalENVIRONMENT.g:5377:1: rule__GSSEnvironmentPhyHeaderPrint__Group__8 : rule__GSSEnvironmentPhyHeaderPrint__Group__8__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__9 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5246:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__8__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__9 )
-            // InternalENVIRONMENT.g:5247:2: rule__GSSEnvironmentPhyHeaderPrint__Group__8__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__9
+            // InternalENVIRONMENT.g:5381:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__8__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__9 )
+            // InternalENVIRONMENT.g:5382:2: rule__GSSEnvironmentPhyHeaderPrint__Group__8__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentPhyHeaderPrint__Group__8__Impl();
@@ -17435,23 +17856,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__8__Impl"
-    // InternalENVIRONMENT.g:5254:1: rule__GSSEnvironmentPhyHeaderPrint__Group__8__Impl : ( ( rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8 ) ) ;
+    // InternalENVIRONMENT.g:5389:1: rule__GSSEnvironmentPhyHeaderPrint__Group__8__Impl : ( ( rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8 ) ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5258:1: ( ( ( rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8 ) ) )
-            // InternalENVIRONMENT.g:5259:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8 ) )
+            // InternalENVIRONMENT.g:5393:1: ( ( ( rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8 ) ) )
+            // InternalENVIRONMENT.g:5394:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8 ) )
             {
-            // InternalENVIRONMENT.g:5259:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8 ) )
-            // InternalENVIRONMENT.g:5260:2: ( rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8 )
+            // InternalENVIRONMENT.g:5394:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8 ) )
+            // InternalENVIRONMENT.g:5395:2: ( rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getPortLogsAssignment_8()); 
             }
-            // InternalENVIRONMENT.g:5261:2: ( rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8 )
-            // InternalENVIRONMENT.g:5261:3: rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8
+            // InternalENVIRONMENT.g:5396:2: ( rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8 )
+            // InternalENVIRONMENT.g:5396:3: rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8();
@@ -17486,14 +17907,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__9"
-    // InternalENVIRONMENT.g:5269:1: rule__GSSEnvironmentPhyHeaderPrint__Group__9 : rule__GSSEnvironmentPhyHeaderPrint__Group__9__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__10 ;
+    // InternalENVIRONMENT.g:5404:1: rule__GSSEnvironmentPhyHeaderPrint__Group__9 : rule__GSSEnvironmentPhyHeaderPrint__Group__9__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__10 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5273:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__9__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__10 )
-            // InternalENVIRONMENT.g:5274:2: rule__GSSEnvironmentPhyHeaderPrint__Group__9__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__10
+            // InternalENVIRONMENT.g:5408:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__9__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__10 )
+            // InternalENVIRONMENT.g:5409:2: rule__GSSEnvironmentPhyHeaderPrint__Group__9__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_43);
             rule__GSSEnvironmentPhyHeaderPrint__Group__9__Impl();
@@ -17524,17 +17945,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__9__Impl"
-    // InternalENVIRONMENT.g:5281:1: rule__GSSEnvironmentPhyHeaderPrint__Group__9__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:5416:1: rule__GSSEnvironmentPhyHeaderPrint__Group__9__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5285:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:5286:1: ( ';' )
+            // InternalENVIRONMENT.g:5420:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:5421:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:5286:1: ( ';' )
-            // InternalENVIRONMENT.g:5287:2: ';'
+            // InternalENVIRONMENT.g:5421:1: ( ';' )
+            // InternalENVIRONMENT.g:5422:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getSemicolonKeyword_9()); 
@@ -17565,14 +17986,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__10"
-    // InternalENVIRONMENT.g:5296:1: rule__GSSEnvironmentPhyHeaderPrint__Group__10 : rule__GSSEnvironmentPhyHeaderPrint__Group__10__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__11 ;
+    // InternalENVIRONMENT.g:5431:1: rule__GSSEnvironmentPhyHeaderPrint__Group__10 : rule__GSSEnvironmentPhyHeaderPrint__Group__10__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__11 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5300:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__10__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__11 )
-            // InternalENVIRONMENT.g:5301:2: rule__GSSEnvironmentPhyHeaderPrint__Group__10__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__11
+            // InternalENVIRONMENT.g:5435:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__10__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__11 )
+            // InternalENVIRONMENT.g:5436:2: rule__GSSEnvironmentPhyHeaderPrint__Group__10__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentPhyHeaderPrint__Group__10__Impl();
@@ -17603,22 +18024,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__10__Impl"
-    // InternalENVIRONMENT.g:5308:1: rule__GSSEnvironmentPhyHeaderPrint__Group__10__Impl : ( 'rawLog' ) ;
+    // InternalENVIRONMENT.g:5443:1: rule__GSSEnvironmentPhyHeaderPrint__Group__10__Impl : ( 'rawLog' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5312:1: ( ( 'rawLog' ) )
-            // InternalENVIRONMENT.g:5313:1: ( 'rawLog' )
+            // InternalENVIRONMENT.g:5447:1: ( ( 'rawLog' ) )
+            // InternalENVIRONMENT.g:5448:1: ( 'rawLog' )
             {
-            // InternalENVIRONMENT.g:5313:1: ( 'rawLog' )
-            // InternalENVIRONMENT.g:5314:2: 'rawLog'
+            // InternalENVIRONMENT.g:5448:1: ( 'rawLog' )
+            // InternalENVIRONMENT.g:5449:2: 'rawLog'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getRawLogKeyword_10()); 
             }
-            match(input,60,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,61,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getRawLogKeyword_10()); 
             }
@@ -17644,14 +18065,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__11"
-    // InternalENVIRONMENT.g:5323:1: rule__GSSEnvironmentPhyHeaderPrint__Group__11 : rule__GSSEnvironmentPhyHeaderPrint__Group__11__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__12 ;
+    // InternalENVIRONMENT.g:5458:1: rule__GSSEnvironmentPhyHeaderPrint__Group__11 : rule__GSSEnvironmentPhyHeaderPrint__Group__11__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__12 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5327:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__11__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__12 )
-            // InternalENVIRONMENT.g:5328:2: rule__GSSEnvironmentPhyHeaderPrint__Group__11__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__12
+            // InternalENVIRONMENT.g:5462:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__11__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__12 )
+            // InternalENVIRONMENT.g:5463:2: rule__GSSEnvironmentPhyHeaderPrint__Group__11__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__12
             {
             pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSEnvironmentPhyHeaderPrint__Group__11__Impl();
@@ -17682,17 +18103,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__11__Impl"
-    // InternalENVIRONMENT.g:5335:1: rule__GSSEnvironmentPhyHeaderPrint__Group__11__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:5470:1: rule__GSSEnvironmentPhyHeaderPrint__Group__11__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5339:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:5340:1: ( ':=' )
+            // InternalENVIRONMENT.g:5474:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:5475:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:5340:1: ( ':=' )
-            // InternalENVIRONMENT.g:5341:2: ':='
+            // InternalENVIRONMENT.g:5475:1: ( ':=' )
+            // InternalENVIRONMENT.g:5476:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getColonEqualsSignKeyword_11()); 
@@ -17723,14 +18144,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__12"
-    // InternalENVIRONMENT.g:5350:1: rule__GSSEnvironmentPhyHeaderPrint__Group__12 : rule__GSSEnvironmentPhyHeaderPrint__Group__12__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__13 ;
+    // InternalENVIRONMENT.g:5485:1: rule__GSSEnvironmentPhyHeaderPrint__Group__12 : rule__GSSEnvironmentPhyHeaderPrint__Group__12__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__13 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5354:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__12__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__13 )
-            // InternalENVIRONMENT.g:5355:2: rule__GSSEnvironmentPhyHeaderPrint__Group__12__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__13
+            // InternalENVIRONMENT.g:5489:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__12__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__13 )
+            // InternalENVIRONMENT.g:5490:2: rule__GSSEnvironmentPhyHeaderPrint__Group__12__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__13
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentPhyHeaderPrint__Group__12__Impl();
@@ -17761,23 +18182,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__12__Impl"
-    // InternalENVIRONMENT.g:5362:1: rule__GSSEnvironmentPhyHeaderPrint__Group__12__Impl : ( ( rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12 ) ) ;
+    // InternalENVIRONMENT.g:5497:1: rule__GSSEnvironmentPhyHeaderPrint__Group__12__Impl : ( ( rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12 ) ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5366:1: ( ( ( rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12 ) ) )
-            // InternalENVIRONMENT.g:5367:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12 ) )
+            // InternalENVIRONMENT.g:5501:1: ( ( ( rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12 ) ) )
+            // InternalENVIRONMENT.g:5502:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12 ) )
             {
-            // InternalENVIRONMENT.g:5367:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12 ) )
-            // InternalENVIRONMENT.g:5368:2: ( rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12 )
+            // InternalENVIRONMENT.g:5502:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12 ) )
+            // InternalENVIRONMENT.g:5503:2: ( rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getRawLogAssignment_12()); 
             }
-            // InternalENVIRONMENT.g:5369:2: ( rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12 )
-            // InternalENVIRONMENT.g:5369:3: rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12
+            // InternalENVIRONMENT.g:5504:2: ( rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12 )
+            // InternalENVIRONMENT.g:5504:3: rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12();
@@ -17812,14 +18233,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__13"
-    // InternalENVIRONMENT.g:5377:1: rule__GSSEnvironmentPhyHeaderPrint__Group__13 : rule__GSSEnvironmentPhyHeaderPrint__Group__13__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__14 ;
+    // InternalENVIRONMENT.g:5512:1: rule__GSSEnvironmentPhyHeaderPrint__Group__13 : rule__GSSEnvironmentPhyHeaderPrint__Group__13__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__14 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5381:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__13__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__14 )
-            // InternalENVIRONMENT.g:5382:2: rule__GSSEnvironmentPhyHeaderPrint__Group__13__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__14
+            // InternalENVIRONMENT.g:5516:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__13__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__14 )
+            // InternalENVIRONMENT.g:5517:2: rule__GSSEnvironmentPhyHeaderPrint__Group__13__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__14
             {
             pushFollow(FollowSets000.FOLLOW_44);
             rule__GSSEnvironmentPhyHeaderPrint__Group__13__Impl();
@@ -17850,17 +18271,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__13__Impl"
-    // InternalENVIRONMENT.g:5389:1: rule__GSSEnvironmentPhyHeaderPrint__Group__13__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:5524:1: rule__GSSEnvironmentPhyHeaderPrint__Group__13__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5393:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:5394:1: ( ';' )
+            // InternalENVIRONMENT.g:5528:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:5529:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:5394:1: ( ';' )
-            // InternalENVIRONMENT.g:5395:2: ';'
+            // InternalENVIRONMENT.g:5529:1: ( ';' )
+            // InternalENVIRONMENT.g:5530:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getSemicolonKeyword_13()); 
@@ -17891,14 +18312,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__14"
-    // InternalENVIRONMENT.g:5404:1: rule__GSSEnvironmentPhyHeaderPrint__Group__14 : rule__GSSEnvironmentPhyHeaderPrint__Group__14__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__15 ;
+    // InternalENVIRONMENT.g:5539:1: rule__GSSEnvironmentPhyHeaderPrint__Group__14 : rule__GSSEnvironmentPhyHeaderPrint__Group__14__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__15 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5408:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__14__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__15 )
-            // InternalENVIRONMENT.g:5409:2: rule__GSSEnvironmentPhyHeaderPrint__Group__14__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__15
+            // InternalENVIRONMENT.g:5543:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__14__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__15 )
+            // InternalENVIRONMENT.g:5544:2: rule__GSSEnvironmentPhyHeaderPrint__Group__14__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__15
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentPhyHeaderPrint__Group__14__Impl();
@@ -17929,22 +18350,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__14__Impl"
-    // InternalENVIRONMENT.g:5416:1: rule__GSSEnvironmentPhyHeaderPrint__Group__14__Impl : ( 'gssTabs' ) ;
+    // InternalENVIRONMENT.g:5551:1: rule__GSSEnvironmentPhyHeaderPrint__Group__14__Impl : ( 'gssTabs' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5420:1: ( ( 'gssTabs' ) )
-            // InternalENVIRONMENT.g:5421:1: ( 'gssTabs' )
+            // InternalENVIRONMENT.g:5555:1: ( ( 'gssTabs' ) )
+            // InternalENVIRONMENT.g:5556:1: ( 'gssTabs' )
             {
-            // InternalENVIRONMENT.g:5421:1: ( 'gssTabs' )
-            // InternalENVIRONMENT.g:5422:2: 'gssTabs'
+            // InternalENVIRONMENT.g:5556:1: ( 'gssTabs' )
+            // InternalENVIRONMENT.g:5557:2: 'gssTabs'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getGssTabsKeyword_14()); 
             }
-            match(input,62,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,63,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getGssTabsKeyword_14()); 
             }
@@ -17970,14 +18391,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__15"
-    // InternalENVIRONMENT.g:5431:1: rule__GSSEnvironmentPhyHeaderPrint__Group__15 : rule__GSSEnvironmentPhyHeaderPrint__Group__15__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__16 ;
+    // InternalENVIRONMENT.g:5566:1: rule__GSSEnvironmentPhyHeaderPrint__Group__15 : rule__GSSEnvironmentPhyHeaderPrint__Group__15__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__16 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5435:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__15__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__16 )
-            // InternalENVIRONMENT.g:5436:2: rule__GSSEnvironmentPhyHeaderPrint__Group__15__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__16
+            // InternalENVIRONMENT.g:5570:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__15__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__16 )
+            // InternalENVIRONMENT.g:5571:2: rule__GSSEnvironmentPhyHeaderPrint__Group__15__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__16
             {
             pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSEnvironmentPhyHeaderPrint__Group__15__Impl();
@@ -18008,17 +18429,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__15__Impl"
-    // InternalENVIRONMENT.g:5443:1: rule__GSSEnvironmentPhyHeaderPrint__Group__15__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:5578:1: rule__GSSEnvironmentPhyHeaderPrint__Group__15__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5447:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:5448:1: ( ':=' )
+            // InternalENVIRONMENT.g:5582:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:5583:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:5448:1: ( ':=' )
-            // InternalENVIRONMENT.g:5449:2: ':='
+            // InternalENVIRONMENT.g:5583:1: ( ':=' )
+            // InternalENVIRONMENT.g:5584:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getColonEqualsSignKeyword_15()); 
@@ -18049,14 +18470,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__16"
-    // InternalENVIRONMENT.g:5458:1: rule__GSSEnvironmentPhyHeaderPrint__Group__16 : rule__GSSEnvironmentPhyHeaderPrint__Group__16__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__17 ;
+    // InternalENVIRONMENT.g:5593:1: rule__GSSEnvironmentPhyHeaderPrint__Group__16 : rule__GSSEnvironmentPhyHeaderPrint__Group__16__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__17 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5462:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__16__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__17 )
-            // InternalENVIRONMENT.g:5463:2: rule__GSSEnvironmentPhyHeaderPrint__Group__16__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__17
+            // InternalENVIRONMENT.g:5597:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__16__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__17 )
+            // InternalENVIRONMENT.g:5598:2: rule__GSSEnvironmentPhyHeaderPrint__Group__16__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__17
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentPhyHeaderPrint__Group__16__Impl();
@@ -18087,23 +18508,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__16__Impl"
-    // InternalENVIRONMENT.g:5470:1: rule__GSSEnvironmentPhyHeaderPrint__Group__16__Impl : ( ( rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16 ) ) ;
+    // InternalENVIRONMENT.g:5605:1: rule__GSSEnvironmentPhyHeaderPrint__Group__16__Impl : ( ( rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16 ) ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__16__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5474:1: ( ( ( rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16 ) ) )
-            // InternalENVIRONMENT.g:5475:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16 ) )
+            // InternalENVIRONMENT.g:5609:1: ( ( ( rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16 ) ) )
+            // InternalENVIRONMENT.g:5610:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16 ) )
             {
-            // InternalENVIRONMENT.g:5475:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16 ) )
-            // InternalENVIRONMENT.g:5476:2: ( rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16 )
+            // InternalENVIRONMENT.g:5610:1: ( ( rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16 ) )
+            // InternalENVIRONMENT.g:5611:2: ( rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getGssTabsAssignment_16()); 
             }
-            // InternalENVIRONMENT.g:5477:2: ( rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16 )
-            // InternalENVIRONMENT.g:5477:3: rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16
+            // InternalENVIRONMENT.g:5612:2: ( rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16 )
+            // InternalENVIRONMENT.g:5612:3: rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16();
@@ -18138,14 +18559,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__17"
-    // InternalENVIRONMENT.g:5485:1: rule__GSSEnvironmentPhyHeaderPrint__Group__17 : rule__GSSEnvironmentPhyHeaderPrint__Group__17__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__18 ;
+    // InternalENVIRONMENT.g:5620:1: rule__GSSEnvironmentPhyHeaderPrint__Group__17 : rule__GSSEnvironmentPhyHeaderPrint__Group__17__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__18 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__17() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5489:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__17__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__18 )
-            // InternalENVIRONMENT.g:5490:2: rule__GSSEnvironmentPhyHeaderPrint__Group__17__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__18
+            // InternalENVIRONMENT.g:5624:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__17__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__18 )
+            // InternalENVIRONMENT.g:5625:2: rule__GSSEnvironmentPhyHeaderPrint__Group__17__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__18
             {
             pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSEnvironmentPhyHeaderPrint__Group__17__Impl();
@@ -18176,17 +18597,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__17__Impl"
-    // InternalENVIRONMENT.g:5497:1: rule__GSSEnvironmentPhyHeaderPrint__Group__17__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:5632:1: rule__GSSEnvironmentPhyHeaderPrint__Group__17__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__17__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5501:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:5502:1: ( ';' )
+            // InternalENVIRONMENT.g:5636:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:5637:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:5502:1: ( ';' )
-            // InternalENVIRONMENT.g:5503:2: ';'
+            // InternalENVIRONMENT.g:5637:1: ( ';' )
+            // InternalENVIRONMENT.g:5638:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getSemicolonKeyword_17()); 
@@ -18217,14 +18638,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__18"
-    // InternalENVIRONMENT.g:5512:1: rule__GSSEnvironmentPhyHeaderPrint__Group__18 : rule__GSSEnvironmentPhyHeaderPrint__Group__18__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__19 ;
+    // InternalENVIRONMENT.g:5647:1: rule__GSSEnvironmentPhyHeaderPrint__Group__18 : rule__GSSEnvironmentPhyHeaderPrint__Group__18__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__19 ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__18() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5516:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__18__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__19 )
-            // InternalENVIRONMENT.g:5517:2: rule__GSSEnvironmentPhyHeaderPrint__Group__18__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__19
+            // InternalENVIRONMENT.g:5651:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__18__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__19 )
+            // InternalENVIRONMENT.g:5652:2: rule__GSSEnvironmentPhyHeaderPrint__Group__18__Impl rule__GSSEnvironmentPhyHeaderPrint__Group__19
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentPhyHeaderPrint__Group__18__Impl();
@@ -18255,17 +18676,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__18__Impl"
-    // InternalENVIRONMENT.g:5524:1: rule__GSSEnvironmentPhyHeaderPrint__Group__18__Impl : ( '}' ) ;
+    // InternalENVIRONMENT.g:5659:1: rule__GSSEnvironmentPhyHeaderPrint__Group__18__Impl : ( '}' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__18__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5528:1: ( ( '}' ) )
-            // InternalENVIRONMENT.g:5529:1: ( '}' )
+            // InternalENVIRONMENT.g:5663:1: ( ( '}' ) )
+            // InternalENVIRONMENT.g:5664:1: ( '}' )
             {
-            // InternalENVIRONMENT.g:5529:1: ( '}' )
-            // InternalENVIRONMENT.g:5530:2: '}'
+            // InternalENVIRONMENT.g:5664:1: ( '}' )
+            // InternalENVIRONMENT.g:5665:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getRightCurlyBracketKeyword_18()); 
@@ -18296,14 +18717,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__19"
-    // InternalENVIRONMENT.g:5539:1: rule__GSSEnvironmentPhyHeaderPrint__Group__19 : rule__GSSEnvironmentPhyHeaderPrint__Group__19__Impl ;
+    // InternalENVIRONMENT.g:5674:1: rule__GSSEnvironmentPhyHeaderPrint__Group__19 : rule__GSSEnvironmentPhyHeaderPrint__Group__19__Impl ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__19() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5543:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__19__Impl )
-            // InternalENVIRONMENT.g:5544:2: rule__GSSEnvironmentPhyHeaderPrint__Group__19__Impl
+            // InternalENVIRONMENT.g:5678:1: ( rule__GSSEnvironmentPhyHeaderPrint__Group__19__Impl )
+            // InternalENVIRONMENT.g:5679:2: rule__GSSEnvironmentPhyHeaderPrint__Group__19__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentPhyHeaderPrint__Group__19__Impl();
@@ -18329,17 +18750,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__Group__19__Impl"
-    // InternalENVIRONMENT.g:5550:1: rule__GSSEnvironmentPhyHeaderPrint__Group__19__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:5685:1: rule__GSSEnvironmentPhyHeaderPrint__Group__19__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__Group__19__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5554:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:5555:1: ( ';' )
+            // InternalENVIRONMENT.g:5689:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:5690:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:5555:1: ( ';' )
-            // InternalENVIRONMENT.g:5556:2: ';'
+            // InternalENVIRONMENT.g:5690:1: ( ';' )
+            // InternalENVIRONMENT.g:5691:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getSemicolonKeyword_19()); 
@@ -18370,14 +18791,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0"
-    // InternalENVIRONMENT.g:5566:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1 ;
+    // InternalENVIRONMENT.g:5701:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5570:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1 )
-            // InternalENVIRONMENT.g:5571:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1
+            // InternalENVIRONMENT.g:5705:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1 )
+            // InternalENVIRONMENT.g:5706:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0__Impl();
@@ -18408,22 +18829,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0__Impl"
-    // InternalENVIRONMENT.g:5578:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0__Impl : ( 'GSSEnvironmentDiscardErrorFlags' ) ;
+    // InternalENVIRONMENT.g:5713:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0__Impl : ( 'GSSEnvironmentDiscardErrorFlags' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5582:1: ( ( 'GSSEnvironmentDiscardErrorFlags' ) )
-            // InternalENVIRONMENT.g:5583:1: ( 'GSSEnvironmentDiscardErrorFlags' )
+            // InternalENVIRONMENT.g:5717:1: ( ( 'GSSEnvironmentDiscardErrorFlags' ) )
+            // InternalENVIRONMENT.g:5718:1: ( 'GSSEnvironmentDiscardErrorFlags' )
             {
-            // InternalENVIRONMENT.g:5583:1: ( 'GSSEnvironmentDiscardErrorFlags' )
-            // InternalENVIRONMENT.g:5584:2: 'GSSEnvironmentDiscardErrorFlags'
+            // InternalENVIRONMENT.g:5718:1: ( 'GSSEnvironmentDiscardErrorFlags' )
+            // InternalENVIRONMENT.g:5719:2: 'GSSEnvironmentDiscardErrorFlags'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getGSSEnvironmentDiscardErrorFlagsKeyword_0()); 
             }
-            match(input,63,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,64,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getGSSEnvironmentDiscardErrorFlagsKeyword_0()); 
             }
@@ -18449,14 +18870,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1"
-    // InternalENVIRONMENT.g:5593:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2 ;
+    // InternalENVIRONMENT.g:5728:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5597:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2 )
-            // InternalENVIRONMENT.g:5598:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2
+            // InternalENVIRONMENT.g:5732:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2 )
+            // InternalENVIRONMENT.g:5733:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_45);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1__Impl();
@@ -18487,17 +18908,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1__Impl"
-    // InternalENVIRONMENT.g:5605:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1__Impl : ( '{' ) ;
+    // InternalENVIRONMENT.g:5740:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5609:1: ( ( '{' ) )
-            // InternalENVIRONMENT.g:5610:1: ( '{' )
+            // InternalENVIRONMENT.g:5744:1: ( ( '{' ) )
+            // InternalENVIRONMENT.g:5745:1: ( '{' )
             {
-            // InternalENVIRONMENT.g:5610:1: ( '{' )
-            // InternalENVIRONMENT.g:5611:2: '{'
+            // InternalENVIRONMENT.g:5745:1: ( '{' )
+            // InternalENVIRONMENT.g:5746:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getLeftCurlyBracketKeyword_1()); 
@@ -18528,14 +18949,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2"
-    // InternalENVIRONMENT.g:5620:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3 ;
+    // InternalENVIRONMENT.g:5755:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5624:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3 )
-            // InternalENVIRONMENT.g:5625:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3
+            // InternalENVIRONMENT.g:5759:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3 )
+            // InternalENVIRONMENT.g:5760:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2__Impl();
@@ -18566,22 +18987,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2__Impl"
-    // InternalENVIRONMENT.g:5632:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2__Impl : ( 'txErrors' ) ;
+    // InternalENVIRONMENT.g:5767:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2__Impl : ( 'txErrors' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5636:1: ( ( 'txErrors' ) )
-            // InternalENVIRONMENT.g:5637:1: ( 'txErrors' )
+            // InternalENVIRONMENT.g:5771:1: ( ( 'txErrors' ) )
+            // InternalENVIRONMENT.g:5772:1: ( 'txErrors' )
             {
-            // InternalENVIRONMENT.g:5637:1: ( 'txErrors' )
-            // InternalENVIRONMENT.g:5638:2: 'txErrors'
+            // InternalENVIRONMENT.g:5772:1: ( 'txErrors' )
+            // InternalENVIRONMENT.g:5773:2: 'txErrors'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getTxErrorsKeyword_2()); 
             }
-            match(input,64,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,65,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getTxErrorsKeyword_2()); 
             }
@@ -18607,14 +19028,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3"
-    // InternalENVIRONMENT.g:5647:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4 ;
+    // InternalENVIRONMENT.g:5782:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5651:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4 )
-            // InternalENVIRONMENT.g:5652:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4
+            // InternalENVIRONMENT.g:5786:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4 )
+            // InternalENVIRONMENT.g:5787:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3__Impl();
@@ -18645,17 +19066,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3__Impl"
-    // InternalENVIRONMENT.g:5659:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:5794:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5663:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:5664:1: ( ':=' )
+            // InternalENVIRONMENT.g:5798:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:5799:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:5664:1: ( ':=' )
-            // InternalENVIRONMENT.g:5665:2: ':='
+            // InternalENVIRONMENT.g:5799:1: ( ':=' )
+            // InternalENVIRONMENT.g:5800:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getColonEqualsSignKeyword_3()); 
@@ -18686,14 +19107,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4"
-    // InternalENVIRONMENT.g:5674:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5 ;
+    // InternalENVIRONMENT.g:5809:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5678:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5 )
-            // InternalENVIRONMENT.g:5679:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5
+            // InternalENVIRONMENT.g:5813:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5 )
+            // InternalENVIRONMENT.g:5814:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4__Impl();
@@ -18724,23 +19145,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4__Impl"
-    // InternalENVIRONMENT.g:5686:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4__Impl : ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4 ) ) ;
+    // InternalENVIRONMENT.g:5821:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4__Impl : ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4 ) ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5690:1: ( ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4 ) ) )
-            // InternalENVIRONMENT.g:5691:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4 ) )
+            // InternalENVIRONMENT.g:5825:1: ( ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4 ) ) )
+            // InternalENVIRONMENT.g:5826:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4 ) )
             {
-            // InternalENVIRONMENT.g:5691:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4 ) )
-            // InternalENVIRONMENT.g:5692:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4 )
+            // InternalENVIRONMENT.g:5826:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4 ) )
+            // InternalENVIRONMENT.g:5827:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getTxErrorsAssignment_4()); 
             }
-            // InternalENVIRONMENT.g:5693:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4 )
-            // InternalENVIRONMENT.g:5693:3: rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4
+            // InternalENVIRONMENT.g:5828:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4 )
+            // InternalENVIRONMENT.g:5828:3: rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4();
@@ -18775,14 +19196,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5"
-    // InternalENVIRONMENT.g:5701:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6 ;
+    // InternalENVIRONMENT.g:5836:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5705:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6 )
-            // InternalENVIRONMENT.g:5706:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6
+            // InternalENVIRONMENT.g:5840:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6 )
+            // InternalENVIRONMENT.g:5841:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_46);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5__Impl();
@@ -18813,17 +19234,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5__Impl"
-    // InternalENVIRONMENT.g:5713:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:5848:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5717:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:5718:1: ( ';' )
+            // InternalENVIRONMENT.g:5852:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:5853:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:5718:1: ( ';' )
-            // InternalENVIRONMENT.g:5719:2: ';'
+            // InternalENVIRONMENT.g:5853:1: ( ';' )
+            // InternalENVIRONMENT.g:5854:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getSemicolonKeyword_5()); 
@@ -18854,14 +19275,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6"
-    // InternalENVIRONMENT.g:5728:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7 ;
+    // InternalENVIRONMENT.g:5863:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5732:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7 )
-            // InternalENVIRONMENT.g:5733:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7
+            // InternalENVIRONMENT.g:5867:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7 )
+            // InternalENVIRONMENT.g:5868:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6__Impl();
@@ -18892,22 +19313,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6__Impl"
-    // InternalENVIRONMENT.g:5740:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6__Impl : ( 'notExpectedPackets' ) ;
+    // InternalENVIRONMENT.g:5875:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6__Impl : ( 'notExpectedPackets' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5744:1: ( ( 'notExpectedPackets' ) )
-            // InternalENVIRONMENT.g:5745:1: ( 'notExpectedPackets' )
+            // InternalENVIRONMENT.g:5879:1: ( ( 'notExpectedPackets' ) )
+            // InternalENVIRONMENT.g:5880:1: ( 'notExpectedPackets' )
             {
-            // InternalENVIRONMENT.g:5745:1: ( 'notExpectedPackets' )
-            // InternalENVIRONMENT.g:5746:2: 'notExpectedPackets'
+            // InternalENVIRONMENT.g:5880:1: ( 'notExpectedPackets' )
+            // InternalENVIRONMENT.g:5881:2: 'notExpectedPackets'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getNotExpectedPacketsKeyword_6()); 
             }
-            match(input,65,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,66,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getNotExpectedPacketsKeyword_6()); 
             }
@@ -18933,14 +19354,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7"
-    // InternalENVIRONMENT.g:5755:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8 ;
+    // InternalENVIRONMENT.g:5890:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5759:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8 )
-            // InternalENVIRONMENT.g:5760:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8
+            // InternalENVIRONMENT.g:5894:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8 )
+            // InternalENVIRONMENT.g:5895:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7__Impl();
@@ -18971,17 +19392,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7__Impl"
-    // InternalENVIRONMENT.g:5767:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:5902:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5771:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:5772:1: ( ':=' )
+            // InternalENVIRONMENT.g:5906:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:5907:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:5772:1: ( ':=' )
-            // InternalENVIRONMENT.g:5773:2: ':='
+            // InternalENVIRONMENT.g:5907:1: ( ':=' )
+            // InternalENVIRONMENT.g:5908:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getColonEqualsSignKeyword_7()); 
@@ -19012,14 +19433,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8"
-    // InternalENVIRONMENT.g:5782:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9 ;
+    // InternalENVIRONMENT.g:5917:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5786:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9 )
-            // InternalENVIRONMENT.g:5787:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9
+            // InternalENVIRONMENT.g:5921:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9 )
+            // InternalENVIRONMENT.g:5922:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8__Impl();
@@ -19050,23 +19471,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8__Impl"
-    // InternalENVIRONMENT.g:5794:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8__Impl : ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8 ) ) ;
+    // InternalENVIRONMENT.g:5929:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8__Impl : ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8 ) ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5798:1: ( ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8 ) ) )
-            // InternalENVIRONMENT.g:5799:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8 ) )
+            // InternalENVIRONMENT.g:5933:1: ( ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8 ) ) )
+            // InternalENVIRONMENT.g:5934:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8 ) )
             {
-            // InternalENVIRONMENT.g:5799:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8 ) )
-            // InternalENVIRONMENT.g:5800:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8 )
+            // InternalENVIRONMENT.g:5934:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8 ) )
+            // InternalENVIRONMENT.g:5935:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getNotExpectedPacketsAssignment_8()); 
             }
-            // InternalENVIRONMENT.g:5801:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8 )
-            // InternalENVIRONMENT.g:5801:3: rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8
+            // InternalENVIRONMENT.g:5936:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8 )
+            // InternalENVIRONMENT.g:5936:3: rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8();
@@ -19101,14 +19522,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9"
-    // InternalENVIRONMENT.g:5809:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10 ;
+    // InternalENVIRONMENT.g:5944:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5813:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10 )
-            // InternalENVIRONMENT.g:5814:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10
+            // InternalENVIRONMENT.g:5948:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10 )
+            // InternalENVIRONMENT.g:5949:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_47);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9__Impl();
@@ -19139,17 +19560,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9__Impl"
-    // InternalENVIRONMENT.g:5821:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:5956:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5825:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:5826:1: ( ';' )
+            // InternalENVIRONMENT.g:5960:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:5961:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:5826:1: ( ';' )
-            // InternalENVIRONMENT.g:5827:2: ';'
+            // InternalENVIRONMENT.g:5961:1: ( ';' )
+            // InternalENVIRONMENT.g:5962:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getSemicolonKeyword_9()); 
@@ -19180,14 +19601,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10"
-    // InternalENVIRONMENT.g:5836:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11 ;
+    // InternalENVIRONMENT.g:5971:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5840:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11 )
-            // InternalENVIRONMENT.g:5841:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11
+            // InternalENVIRONMENT.g:5975:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11 )
+            // InternalENVIRONMENT.g:5976:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10__Impl();
@@ -19218,22 +19639,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10__Impl"
-    // InternalENVIRONMENT.g:5848:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10__Impl : ( 'filtersKo' ) ;
+    // InternalENVIRONMENT.g:5983:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10__Impl : ( 'filtersKo' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5852:1: ( ( 'filtersKo' ) )
-            // InternalENVIRONMENT.g:5853:1: ( 'filtersKo' )
+            // InternalENVIRONMENT.g:5987:1: ( ( 'filtersKo' ) )
+            // InternalENVIRONMENT.g:5988:1: ( 'filtersKo' )
             {
-            // InternalENVIRONMENT.g:5853:1: ( 'filtersKo' )
-            // InternalENVIRONMENT.g:5854:2: 'filtersKo'
+            // InternalENVIRONMENT.g:5988:1: ( 'filtersKo' )
+            // InternalENVIRONMENT.g:5989:2: 'filtersKo'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getFiltersKoKeyword_10()); 
             }
-            match(input,66,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,67,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getFiltersKoKeyword_10()); 
             }
@@ -19259,14 +19680,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11"
-    // InternalENVIRONMENT.g:5863:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12 ;
+    // InternalENVIRONMENT.g:5998:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5867:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12 )
-            // InternalENVIRONMENT.g:5868:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12
+            // InternalENVIRONMENT.g:6002:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12 )
+            // InternalENVIRONMENT.g:6003:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12
             {
             pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11__Impl();
@@ -19297,17 +19718,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11__Impl"
-    // InternalENVIRONMENT.g:5875:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:6010:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5879:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:5880:1: ( ':=' )
+            // InternalENVIRONMENT.g:6014:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:6015:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:5880:1: ( ':=' )
-            // InternalENVIRONMENT.g:5881:2: ':='
+            // InternalENVIRONMENT.g:6015:1: ( ':=' )
+            // InternalENVIRONMENT.g:6016:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getColonEqualsSignKeyword_11()); 
@@ -19338,14 +19759,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12"
-    // InternalENVIRONMENT.g:5890:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13 ;
+    // InternalENVIRONMENT.g:6025:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5894:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13 )
-            // InternalENVIRONMENT.g:5895:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13
+            // InternalENVIRONMENT.g:6029:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13 )
+            // InternalENVIRONMENT.g:6030:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12__Impl();
@@ -19376,23 +19797,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12__Impl"
-    // InternalENVIRONMENT.g:5902:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12__Impl : ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12 ) ) ;
+    // InternalENVIRONMENT.g:6037:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12__Impl : ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12 ) ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5906:1: ( ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12 ) ) )
-            // InternalENVIRONMENT.g:5907:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12 ) )
+            // InternalENVIRONMENT.g:6041:1: ( ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12 ) ) )
+            // InternalENVIRONMENT.g:6042:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12 ) )
             {
-            // InternalENVIRONMENT.g:5907:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12 ) )
-            // InternalENVIRONMENT.g:5908:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12 )
+            // InternalENVIRONMENT.g:6042:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12 ) )
+            // InternalENVIRONMENT.g:6043:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getFiltersKoAssignment_12()); 
             }
-            // InternalENVIRONMENT.g:5909:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12 )
-            // InternalENVIRONMENT.g:5909:3: rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12
+            // InternalENVIRONMENT.g:6044:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12 )
+            // InternalENVIRONMENT.g:6044:3: rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12();
@@ -19427,14 +19848,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13"
-    // InternalENVIRONMENT.g:5917:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14 ;
+    // InternalENVIRONMENT.g:6052:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5921:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14 )
-            // InternalENVIRONMENT.g:5922:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14
+            // InternalENVIRONMENT.g:6056:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14 )
+            // InternalENVIRONMENT.g:6057:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14
             {
             pushFollow(FollowSets000.FOLLOW_48);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13__Impl();
@@ -19465,17 +19886,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13__Impl"
-    // InternalENVIRONMENT.g:5929:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:6064:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5933:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:5934:1: ( ';' )
+            // InternalENVIRONMENT.g:6068:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:6069:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:5934:1: ( ';' )
-            // InternalENVIRONMENT.g:5935:2: ';'
+            // InternalENVIRONMENT.g:6069:1: ( ';' )
+            // InternalENVIRONMENT.g:6070:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getSemicolonKeyword_13()); 
@@ -19506,14 +19927,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14"
-    // InternalENVIRONMENT.g:5944:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15 ;
+    // InternalENVIRONMENT.g:6079:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5948:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15 )
-            // InternalENVIRONMENT.g:5949:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15
+            // InternalENVIRONMENT.g:6083:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15 )
+            // InternalENVIRONMENT.g:6084:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14__Impl();
@@ -19544,22 +19965,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14__Impl"
-    // InternalENVIRONMENT.g:5956:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14__Impl : ( 'validTimesKo' ) ;
+    // InternalENVIRONMENT.g:6091:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14__Impl : ( 'validTimesKo' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5960:1: ( ( 'validTimesKo' ) )
-            // InternalENVIRONMENT.g:5961:1: ( 'validTimesKo' )
+            // InternalENVIRONMENT.g:6095:1: ( ( 'validTimesKo' ) )
+            // InternalENVIRONMENT.g:6096:1: ( 'validTimesKo' )
             {
-            // InternalENVIRONMENT.g:5961:1: ( 'validTimesKo' )
-            // InternalENVIRONMENT.g:5962:2: 'validTimesKo'
+            // InternalENVIRONMENT.g:6096:1: ( 'validTimesKo' )
+            // InternalENVIRONMENT.g:6097:2: 'validTimesKo'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getValidTimesKoKeyword_14()); 
             }
-            match(input,67,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,68,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getValidTimesKoKeyword_14()); 
             }
@@ -19585,14 +20006,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15"
-    // InternalENVIRONMENT.g:5971:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16 ;
+    // InternalENVIRONMENT.g:6106:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5975:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16 )
-            // InternalENVIRONMENT.g:5976:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16
+            // InternalENVIRONMENT.g:6110:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16 )
+            // InternalENVIRONMENT.g:6111:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16
             {
             pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15__Impl();
@@ -19623,17 +20044,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15__Impl"
-    // InternalENVIRONMENT.g:5983:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:6118:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:5987:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:5988:1: ( ':=' )
+            // InternalENVIRONMENT.g:6122:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:6123:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:5988:1: ( ':=' )
-            // InternalENVIRONMENT.g:5989:2: ':='
+            // InternalENVIRONMENT.g:6123:1: ( ':=' )
+            // InternalENVIRONMENT.g:6124:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getColonEqualsSignKeyword_15()); 
@@ -19664,14 +20085,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16"
-    // InternalENVIRONMENT.g:5998:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17 ;
+    // InternalENVIRONMENT.g:6133:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6002:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17 )
-            // InternalENVIRONMENT.g:6003:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17
+            // InternalENVIRONMENT.g:6137:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17 )
+            // InternalENVIRONMENT.g:6138:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16__Impl();
@@ -19702,23 +20123,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16__Impl"
-    // InternalENVIRONMENT.g:6010:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16__Impl : ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16 ) ) ;
+    // InternalENVIRONMENT.g:6145:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16__Impl : ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16 ) ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__16__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6014:1: ( ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16 ) ) )
-            // InternalENVIRONMENT.g:6015:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16 ) )
+            // InternalENVIRONMENT.g:6149:1: ( ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16 ) ) )
+            // InternalENVIRONMENT.g:6150:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16 ) )
             {
-            // InternalENVIRONMENT.g:6015:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16 ) )
-            // InternalENVIRONMENT.g:6016:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16 )
+            // InternalENVIRONMENT.g:6150:1: ( ( rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16 ) )
+            // InternalENVIRONMENT.g:6151:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getValidTimesKoAssignment_16()); 
             }
-            // InternalENVIRONMENT.g:6017:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16 )
-            // InternalENVIRONMENT.g:6017:3: rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16
+            // InternalENVIRONMENT.g:6152:2: ( rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16 )
+            // InternalENVIRONMENT.g:6152:3: rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16();
@@ -19753,14 +20174,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17"
-    // InternalENVIRONMENT.g:6025:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18 ;
+    // InternalENVIRONMENT.g:6160:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6029:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18 )
-            // InternalENVIRONMENT.g:6030:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18
+            // InternalENVIRONMENT.g:6164:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18 )
+            // InternalENVIRONMENT.g:6165:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18
             {
             pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17__Impl();
@@ -19791,17 +20212,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17__Impl"
-    // InternalENVIRONMENT.g:6037:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:6172:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__17__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6041:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:6042:1: ( ';' )
+            // InternalENVIRONMENT.g:6176:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:6177:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:6042:1: ( ';' )
-            // InternalENVIRONMENT.g:6043:2: ';'
+            // InternalENVIRONMENT.g:6177:1: ( ';' )
+            // InternalENVIRONMENT.g:6178:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getSemicolonKeyword_17()); 
@@ -19832,14 +20253,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18"
-    // InternalENVIRONMENT.g:6052:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19 ;
+    // InternalENVIRONMENT.g:6187:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19 ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6056:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19 )
-            // InternalENVIRONMENT.g:6057:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19
+            // InternalENVIRONMENT.g:6191:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19 )
+            // InternalENVIRONMENT.g:6192:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18__Impl rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18__Impl();
@@ -19870,17 +20291,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18__Impl"
-    // InternalENVIRONMENT.g:6064:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18__Impl : ( '}' ) ;
+    // InternalENVIRONMENT.g:6199:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18__Impl : ( '}' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__18__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6068:1: ( ( '}' ) )
-            // InternalENVIRONMENT.g:6069:1: ( '}' )
+            // InternalENVIRONMENT.g:6203:1: ( ( '}' ) )
+            // InternalENVIRONMENT.g:6204:1: ( '}' )
             {
-            // InternalENVIRONMENT.g:6069:1: ( '}' )
-            // InternalENVIRONMENT.g:6070:2: '}'
+            // InternalENVIRONMENT.g:6204:1: ( '}' )
+            // InternalENVIRONMENT.g:6205:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getRightCurlyBracketKeyword_18()); 
@@ -19911,14 +20332,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19"
-    // InternalENVIRONMENT.g:6079:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19__Impl ;
+    // InternalENVIRONMENT.g:6214:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19 : rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19__Impl ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6083:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19__Impl )
-            // InternalENVIRONMENT.g:6084:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19__Impl
+            // InternalENVIRONMENT.g:6218:1: ( rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19__Impl )
+            // InternalENVIRONMENT.g:6219:2: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19__Impl();
@@ -19944,17 +20365,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19__Impl"
-    // InternalENVIRONMENT.g:6090:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:6225:1: rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__Group__19__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6094:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:6095:1: ( ';' )
+            // InternalENVIRONMENT.g:6229:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:6230:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:6095:1: ( ';' )
-            // InternalENVIRONMENT.g:6096:2: ';'
+            // InternalENVIRONMENT.g:6230:1: ( ';' )
+            // InternalENVIRONMENT.g:6231:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getSemicolonKeyword_19()); 
@@ -19985,14 +20406,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__0"
-    // InternalENVIRONMENT.g:6106:1: rule__GSSEnvironmentProtocol__Group__0 : rule__GSSEnvironmentProtocol__Group__0__Impl rule__GSSEnvironmentProtocol__Group__1 ;
+    // InternalENVIRONMENT.g:6241:1: rule__GSSEnvironmentProtocol__Group__0 : rule__GSSEnvironmentProtocol__Group__0__Impl rule__GSSEnvironmentProtocol__Group__1 ;
     public final void rule__GSSEnvironmentProtocol__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6110:1: ( rule__GSSEnvironmentProtocol__Group__0__Impl rule__GSSEnvironmentProtocol__Group__1 )
-            // InternalENVIRONMENT.g:6111:2: rule__GSSEnvironmentProtocol__Group__0__Impl rule__GSSEnvironmentProtocol__Group__1
+            // InternalENVIRONMENT.g:6245:1: ( rule__GSSEnvironmentProtocol__Group__0__Impl rule__GSSEnvironmentProtocol__Group__1 )
+            // InternalENVIRONMENT.g:6246:2: rule__GSSEnvironmentProtocol__Group__0__Impl rule__GSSEnvironmentProtocol__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSEnvironmentProtocol__Group__0__Impl();
@@ -20023,22 +20444,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__0__Impl"
-    // InternalENVIRONMENT.g:6118:1: rule__GSSEnvironmentProtocol__Group__0__Impl : ( 'GSSEnvironmentProtocol' ) ;
+    // InternalENVIRONMENT.g:6253:1: rule__GSSEnvironmentProtocol__Group__0__Impl : ( 'GSSEnvironmentProtocol' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6122:1: ( ( 'GSSEnvironmentProtocol' ) )
-            // InternalENVIRONMENT.g:6123:1: ( 'GSSEnvironmentProtocol' )
+            // InternalENVIRONMENT.g:6257:1: ( ( 'GSSEnvironmentProtocol' ) )
+            // InternalENVIRONMENT.g:6258:1: ( 'GSSEnvironmentProtocol' )
             {
-            // InternalENVIRONMENT.g:6123:1: ( 'GSSEnvironmentProtocol' )
-            // InternalENVIRONMENT.g:6124:2: 'GSSEnvironmentProtocol'
+            // InternalENVIRONMENT.g:6258:1: ( 'GSSEnvironmentProtocol' )
+            // InternalENVIRONMENT.g:6259:2: 'GSSEnvironmentProtocol'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getGSSEnvironmentProtocolKeyword_0()); 
             }
-            match(input,68,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentProtocolAccess().getGSSEnvironmentProtocolKeyword_0()); 
             }
@@ -20064,14 +20485,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__1"
-    // InternalENVIRONMENT.g:6133:1: rule__GSSEnvironmentProtocol__Group__1 : rule__GSSEnvironmentProtocol__Group__1__Impl rule__GSSEnvironmentProtocol__Group__2 ;
+    // InternalENVIRONMENT.g:6268:1: rule__GSSEnvironmentProtocol__Group__1 : rule__GSSEnvironmentProtocol__Group__1__Impl rule__GSSEnvironmentProtocol__Group__2 ;
     public final void rule__GSSEnvironmentProtocol__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6137:1: ( rule__GSSEnvironmentProtocol__Group__1__Impl rule__GSSEnvironmentProtocol__Group__2 )
-            // InternalENVIRONMENT.g:6138:2: rule__GSSEnvironmentProtocol__Group__1__Impl rule__GSSEnvironmentProtocol__Group__2
+            // InternalENVIRONMENT.g:6272:1: ( rule__GSSEnvironmentProtocol__Group__1__Impl rule__GSSEnvironmentProtocol__Group__2 )
+            // InternalENVIRONMENT.g:6273:2: rule__GSSEnvironmentProtocol__Group__1__Impl rule__GSSEnvironmentProtocol__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_49);
             rule__GSSEnvironmentProtocol__Group__1__Impl();
@@ -20102,17 +20523,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__1__Impl"
-    // InternalENVIRONMENT.g:6145:1: rule__GSSEnvironmentProtocol__Group__1__Impl : ( '{' ) ;
+    // InternalENVIRONMENT.g:6280:1: rule__GSSEnvironmentProtocol__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6149:1: ( ( '{' ) )
-            // InternalENVIRONMENT.g:6150:1: ( '{' )
+            // InternalENVIRONMENT.g:6284:1: ( ( '{' ) )
+            // InternalENVIRONMENT.g:6285:1: ( '{' )
             {
-            // InternalENVIRONMENT.g:6150:1: ( '{' )
-            // InternalENVIRONMENT.g:6151:2: '{'
+            // InternalENVIRONMENT.g:6285:1: ( '{' )
+            // InternalENVIRONMENT.g:6286:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getLeftCurlyBracketKeyword_1()); 
@@ -20143,14 +20564,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__2"
-    // InternalENVIRONMENT.g:6160:1: rule__GSSEnvironmentProtocol__Group__2 : rule__GSSEnvironmentProtocol__Group__2__Impl rule__GSSEnvironmentProtocol__Group__3 ;
+    // InternalENVIRONMENT.g:6295:1: rule__GSSEnvironmentProtocol__Group__2 : rule__GSSEnvironmentProtocol__Group__2__Impl rule__GSSEnvironmentProtocol__Group__3 ;
     public final void rule__GSSEnvironmentProtocol__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6164:1: ( rule__GSSEnvironmentProtocol__Group__2__Impl rule__GSSEnvironmentProtocol__Group__3 )
-            // InternalENVIRONMENT.g:6165:2: rule__GSSEnvironmentProtocol__Group__2__Impl rule__GSSEnvironmentProtocol__Group__3
+            // InternalENVIRONMENT.g:6299:1: ( rule__GSSEnvironmentProtocol__Group__2__Impl rule__GSSEnvironmentProtocol__Group__3 )
+            // InternalENVIRONMENT.g:6300:2: rule__GSSEnvironmentProtocol__Group__2__Impl rule__GSSEnvironmentProtocol__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentProtocol__Group__2__Impl();
@@ -20181,22 +20602,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__2__Impl"
-    // InternalENVIRONMENT.g:6172:1: rule__GSSEnvironmentProtocol__Group__2__Impl : ( 'id' ) ;
+    // InternalENVIRONMENT.g:6307:1: rule__GSSEnvironmentProtocol__Group__2__Impl : ( 'id' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6176:1: ( ( 'id' ) )
-            // InternalENVIRONMENT.g:6177:1: ( 'id' )
+            // InternalENVIRONMENT.g:6311:1: ( ( 'id' ) )
+            // InternalENVIRONMENT.g:6312:1: ( 'id' )
             {
-            // InternalENVIRONMENT.g:6177:1: ( 'id' )
-            // InternalENVIRONMENT.g:6178:2: 'id'
+            // InternalENVIRONMENT.g:6312:1: ( 'id' )
+            // InternalENVIRONMENT.g:6313:2: 'id'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getIdKeyword_2()); 
             }
-            match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentProtocolAccess().getIdKeyword_2()); 
             }
@@ -20222,14 +20643,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__3"
-    // InternalENVIRONMENT.g:6187:1: rule__GSSEnvironmentProtocol__Group__3 : rule__GSSEnvironmentProtocol__Group__3__Impl rule__GSSEnvironmentProtocol__Group__4 ;
+    // InternalENVIRONMENT.g:6322:1: rule__GSSEnvironmentProtocol__Group__3 : rule__GSSEnvironmentProtocol__Group__3__Impl rule__GSSEnvironmentProtocol__Group__4 ;
     public final void rule__GSSEnvironmentProtocol__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6191:1: ( rule__GSSEnvironmentProtocol__Group__3__Impl rule__GSSEnvironmentProtocol__Group__4 )
-            // InternalENVIRONMENT.g:6192:2: rule__GSSEnvironmentProtocol__Group__3__Impl rule__GSSEnvironmentProtocol__Group__4
+            // InternalENVIRONMENT.g:6326:1: ( rule__GSSEnvironmentProtocol__Group__3__Impl rule__GSSEnvironmentProtocol__Group__4 )
+            // InternalENVIRONMENT.g:6327:2: rule__GSSEnvironmentProtocol__Group__3__Impl rule__GSSEnvironmentProtocol__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_50);
             rule__GSSEnvironmentProtocol__Group__3__Impl();
@@ -20260,17 +20681,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__3__Impl"
-    // InternalENVIRONMENT.g:6199:1: rule__GSSEnvironmentProtocol__Group__3__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:6334:1: rule__GSSEnvironmentProtocol__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6203:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:6204:1: ( ':=' )
+            // InternalENVIRONMENT.g:6338:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:6339:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:6204:1: ( ':=' )
-            // InternalENVIRONMENT.g:6205:2: ':='
+            // InternalENVIRONMENT.g:6339:1: ( ':=' )
+            // InternalENVIRONMENT.g:6340:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getColonEqualsSignKeyword_3()); 
@@ -20301,14 +20722,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__4"
-    // InternalENVIRONMENT.g:6214:1: rule__GSSEnvironmentProtocol__Group__4 : rule__GSSEnvironmentProtocol__Group__4__Impl rule__GSSEnvironmentProtocol__Group__5 ;
+    // InternalENVIRONMENT.g:6349:1: rule__GSSEnvironmentProtocol__Group__4 : rule__GSSEnvironmentProtocol__Group__4__Impl rule__GSSEnvironmentProtocol__Group__5 ;
     public final void rule__GSSEnvironmentProtocol__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6218:1: ( rule__GSSEnvironmentProtocol__Group__4__Impl rule__GSSEnvironmentProtocol__Group__5 )
-            // InternalENVIRONMENT.g:6219:2: rule__GSSEnvironmentProtocol__Group__4__Impl rule__GSSEnvironmentProtocol__Group__5
+            // InternalENVIRONMENT.g:6353:1: ( rule__GSSEnvironmentProtocol__Group__4__Impl rule__GSSEnvironmentProtocol__Group__5 )
+            // InternalENVIRONMENT.g:6354:2: rule__GSSEnvironmentProtocol__Group__4__Impl rule__GSSEnvironmentProtocol__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentProtocol__Group__4__Impl();
@@ -20339,23 +20760,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__4__Impl"
-    // InternalENVIRONMENT.g:6226:1: rule__GSSEnvironmentProtocol__Group__4__Impl : ( ( rule__GSSEnvironmentProtocol__IdAssignment_4 ) ) ;
+    // InternalENVIRONMENT.g:6361:1: rule__GSSEnvironmentProtocol__Group__4__Impl : ( ( rule__GSSEnvironmentProtocol__IdAssignment_4 ) ) ;
     public final void rule__GSSEnvironmentProtocol__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6230:1: ( ( ( rule__GSSEnvironmentProtocol__IdAssignment_4 ) ) )
-            // InternalENVIRONMENT.g:6231:1: ( ( rule__GSSEnvironmentProtocol__IdAssignment_4 ) )
+            // InternalENVIRONMENT.g:6365:1: ( ( ( rule__GSSEnvironmentProtocol__IdAssignment_4 ) ) )
+            // InternalENVIRONMENT.g:6366:1: ( ( rule__GSSEnvironmentProtocol__IdAssignment_4 ) )
             {
-            // InternalENVIRONMENT.g:6231:1: ( ( rule__GSSEnvironmentProtocol__IdAssignment_4 ) )
-            // InternalENVIRONMENT.g:6232:2: ( rule__GSSEnvironmentProtocol__IdAssignment_4 )
+            // InternalENVIRONMENT.g:6366:1: ( ( rule__GSSEnvironmentProtocol__IdAssignment_4 ) )
+            // InternalENVIRONMENT.g:6367:2: ( rule__GSSEnvironmentProtocol__IdAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getIdAssignment_4()); 
             }
-            // InternalENVIRONMENT.g:6233:2: ( rule__GSSEnvironmentProtocol__IdAssignment_4 )
-            // InternalENVIRONMENT.g:6233:3: rule__GSSEnvironmentProtocol__IdAssignment_4
+            // InternalENVIRONMENT.g:6368:2: ( rule__GSSEnvironmentProtocol__IdAssignment_4 )
+            // InternalENVIRONMENT.g:6368:3: rule__GSSEnvironmentProtocol__IdAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentProtocol__IdAssignment_4();
@@ -20390,14 +20811,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__5"
-    // InternalENVIRONMENT.g:6241:1: rule__GSSEnvironmentProtocol__Group__5 : rule__GSSEnvironmentProtocol__Group__5__Impl rule__GSSEnvironmentProtocol__Group__6 ;
+    // InternalENVIRONMENT.g:6376:1: rule__GSSEnvironmentProtocol__Group__5 : rule__GSSEnvironmentProtocol__Group__5__Impl rule__GSSEnvironmentProtocol__Group__6 ;
     public final void rule__GSSEnvironmentProtocol__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6245:1: ( rule__GSSEnvironmentProtocol__Group__5__Impl rule__GSSEnvironmentProtocol__Group__6 )
-            // InternalENVIRONMENT.g:6246:2: rule__GSSEnvironmentProtocol__Group__5__Impl rule__GSSEnvironmentProtocol__Group__6
+            // InternalENVIRONMENT.g:6380:1: ( rule__GSSEnvironmentProtocol__Group__5__Impl rule__GSSEnvironmentProtocol__Group__6 )
+            // InternalENVIRONMENT.g:6381:2: rule__GSSEnvironmentProtocol__Group__5__Impl rule__GSSEnvironmentProtocol__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_51);
             rule__GSSEnvironmentProtocol__Group__5__Impl();
@@ -20428,17 +20849,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__5__Impl"
-    // InternalENVIRONMENT.g:6253:1: rule__GSSEnvironmentProtocol__Group__5__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:6388:1: rule__GSSEnvironmentProtocol__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6257:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:6258:1: ( ';' )
+            // InternalENVIRONMENT.g:6392:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:6393:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:6258:1: ( ';' )
-            // InternalENVIRONMENT.g:6259:2: ';'
+            // InternalENVIRONMENT.g:6393:1: ( ';' )
+            // InternalENVIRONMENT.g:6394:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getSemicolonKeyword_5()); 
@@ -20469,14 +20890,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__6"
-    // InternalENVIRONMENT.g:6268:1: rule__GSSEnvironmentProtocol__Group__6 : rule__GSSEnvironmentProtocol__Group__6__Impl rule__GSSEnvironmentProtocol__Group__7 ;
+    // InternalENVIRONMENT.g:6403:1: rule__GSSEnvironmentProtocol__Group__6 : rule__GSSEnvironmentProtocol__Group__6__Impl rule__GSSEnvironmentProtocol__Group__7 ;
     public final void rule__GSSEnvironmentProtocol__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6272:1: ( rule__GSSEnvironmentProtocol__Group__6__Impl rule__GSSEnvironmentProtocol__Group__7 )
-            // InternalENVIRONMENT.g:6273:2: rule__GSSEnvironmentProtocol__Group__6__Impl rule__GSSEnvironmentProtocol__Group__7
+            // InternalENVIRONMENT.g:6407:1: ( rule__GSSEnvironmentProtocol__Group__6__Impl rule__GSSEnvironmentProtocol__Group__7 )
+            // InternalENVIRONMENT.g:6408:2: rule__GSSEnvironmentProtocol__Group__6__Impl rule__GSSEnvironmentProtocol__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentProtocol__Group__6__Impl();
@@ -20507,22 +20928,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__6__Impl"
-    // InternalENVIRONMENT.g:6280:1: rule__GSSEnvironmentProtocol__Group__6__Impl : ( 'name' ) ;
+    // InternalENVIRONMENT.g:6415:1: rule__GSSEnvironmentProtocol__Group__6__Impl : ( 'name' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6284:1: ( ( 'name' ) )
-            // InternalENVIRONMENT.g:6285:1: ( 'name' )
+            // InternalENVIRONMENT.g:6419:1: ( ( 'name' ) )
+            // InternalENVIRONMENT.g:6420:1: ( 'name' )
             {
-            // InternalENVIRONMENT.g:6285:1: ( 'name' )
-            // InternalENVIRONMENT.g:6286:2: 'name'
+            // InternalENVIRONMENT.g:6420:1: ( 'name' )
+            // InternalENVIRONMENT.g:6421:2: 'name'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getNameKeyword_6()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentProtocolAccess().getNameKeyword_6()); 
             }
@@ -20548,14 +20969,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__7"
-    // InternalENVIRONMENT.g:6295:1: rule__GSSEnvironmentProtocol__Group__7 : rule__GSSEnvironmentProtocol__Group__7__Impl rule__GSSEnvironmentProtocol__Group__8 ;
+    // InternalENVIRONMENT.g:6430:1: rule__GSSEnvironmentProtocol__Group__7 : rule__GSSEnvironmentProtocol__Group__7__Impl rule__GSSEnvironmentProtocol__Group__8 ;
     public final void rule__GSSEnvironmentProtocol__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6299:1: ( rule__GSSEnvironmentProtocol__Group__7__Impl rule__GSSEnvironmentProtocol__Group__8 )
-            // InternalENVIRONMENT.g:6300:2: rule__GSSEnvironmentProtocol__Group__7__Impl rule__GSSEnvironmentProtocol__Group__8
+            // InternalENVIRONMENT.g:6434:1: ( rule__GSSEnvironmentProtocol__Group__7__Impl rule__GSSEnvironmentProtocol__Group__8 )
+            // InternalENVIRONMENT.g:6435:2: rule__GSSEnvironmentProtocol__Group__7__Impl rule__GSSEnvironmentProtocol__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSEnvironmentProtocol__Group__7__Impl();
@@ -20586,17 +21007,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__7__Impl"
-    // InternalENVIRONMENT.g:6307:1: rule__GSSEnvironmentProtocol__Group__7__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:6442:1: rule__GSSEnvironmentProtocol__Group__7__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6311:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:6312:1: ( ':=' )
+            // InternalENVIRONMENT.g:6446:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:6447:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:6312:1: ( ':=' )
-            // InternalENVIRONMENT.g:6313:2: ':='
+            // InternalENVIRONMENT.g:6447:1: ( ':=' )
+            // InternalENVIRONMENT.g:6448:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getColonEqualsSignKeyword_7()); 
@@ -20627,14 +21048,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__8"
-    // InternalENVIRONMENT.g:6322:1: rule__GSSEnvironmentProtocol__Group__8 : rule__GSSEnvironmentProtocol__Group__8__Impl rule__GSSEnvironmentProtocol__Group__9 ;
+    // InternalENVIRONMENT.g:6457:1: rule__GSSEnvironmentProtocol__Group__8 : rule__GSSEnvironmentProtocol__Group__8__Impl rule__GSSEnvironmentProtocol__Group__9 ;
     public final void rule__GSSEnvironmentProtocol__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6326:1: ( rule__GSSEnvironmentProtocol__Group__8__Impl rule__GSSEnvironmentProtocol__Group__9 )
-            // InternalENVIRONMENT.g:6327:2: rule__GSSEnvironmentProtocol__Group__8__Impl rule__GSSEnvironmentProtocol__Group__9
+            // InternalENVIRONMENT.g:6461:1: ( rule__GSSEnvironmentProtocol__Group__8__Impl rule__GSSEnvironmentProtocol__Group__9 )
+            // InternalENVIRONMENT.g:6462:2: rule__GSSEnvironmentProtocol__Group__8__Impl rule__GSSEnvironmentProtocol__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentProtocol__Group__8__Impl();
@@ -20665,23 +21086,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__8__Impl"
-    // InternalENVIRONMENT.g:6334:1: rule__GSSEnvironmentProtocol__Group__8__Impl : ( ( rule__GSSEnvironmentProtocol__NameAssignment_8 ) ) ;
+    // InternalENVIRONMENT.g:6469:1: rule__GSSEnvironmentProtocol__Group__8__Impl : ( ( rule__GSSEnvironmentProtocol__NameAssignment_8 ) ) ;
     public final void rule__GSSEnvironmentProtocol__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6338:1: ( ( ( rule__GSSEnvironmentProtocol__NameAssignment_8 ) ) )
-            // InternalENVIRONMENT.g:6339:1: ( ( rule__GSSEnvironmentProtocol__NameAssignment_8 ) )
+            // InternalENVIRONMENT.g:6473:1: ( ( ( rule__GSSEnvironmentProtocol__NameAssignment_8 ) ) )
+            // InternalENVIRONMENT.g:6474:1: ( ( rule__GSSEnvironmentProtocol__NameAssignment_8 ) )
             {
-            // InternalENVIRONMENT.g:6339:1: ( ( rule__GSSEnvironmentProtocol__NameAssignment_8 ) )
-            // InternalENVIRONMENT.g:6340:2: ( rule__GSSEnvironmentProtocol__NameAssignment_8 )
+            // InternalENVIRONMENT.g:6474:1: ( ( rule__GSSEnvironmentProtocol__NameAssignment_8 ) )
+            // InternalENVIRONMENT.g:6475:2: ( rule__GSSEnvironmentProtocol__NameAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getNameAssignment_8()); 
             }
-            // InternalENVIRONMENT.g:6341:2: ( rule__GSSEnvironmentProtocol__NameAssignment_8 )
-            // InternalENVIRONMENT.g:6341:3: rule__GSSEnvironmentProtocol__NameAssignment_8
+            // InternalENVIRONMENT.g:6476:2: ( rule__GSSEnvironmentProtocol__NameAssignment_8 )
+            // InternalENVIRONMENT.g:6476:3: rule__GSSEnvironmentProtocol__NameAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentProtocol__NameAssignment_8();
@@ -20716,14 +21137,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__9"
-    // InternalENVIRONMENT.g:6349:1: rule__GSSEnvironmentProtocol__Group__9 : rule__GSSEnvironmentProtocol__Group__9__Impl rule__GSSEnvironmentProtocol__Group__10 ;
+    // InternalENVIRONMENT.g:6484:1: rule__GSSEnvironmentProtocol__Group__9 : rule__GSSEnvironmentProtocol__Group__9__Impl rule__GSSEnvironmentProtocol__Group__10 ;
     public final void rule__GSSEnvironmentProtocol__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6353:1: ( rule__GSSEnvironmentProtocol__Group__9__Impl rule__GSSEnvironmentProtocol__Group__10 )
-            // InternalENVIRONMENT.g:6354:2: rule__GSSEnvironmentProtocol__Group__9__Impl rule__GSSEnvironmentProtocol__Group__10
+            // InternalENVIRONMENT.g:6488:1: ( rule__GSSEnvironmentProtocol__Group__9__Impl rule__GSSEnvironmentProtocol__Group__10 )
+            // InternalENVIRONMENT.g:6489:2: rule__GSSEnvironmentProtocol__Group__9__Impl rule__GSSEnvironmentProtocol__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_52);
             rule__GSSEnvironmentProtocol__Group__9__Impl();
@@ -20754,17 +21175,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__9__Impl"
-    // InternalENVIRONMENT.g:6361:1: rule__GSSEnvironmentProtocol__Group__9__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:6496:1: rule__GSSEnvironmentProtocol__Group__9__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6365:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:6366:1: ( ';' )
+            // InternalENVIRONMENT.g:6500:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:6501:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:6366:1: ( ';' )
-            // InternalENVIRONMENT.g:6367:2: ';'
+            // InternalENVIRONMENT.g:6501:1: ( ';' )
+            // InternalENVIRONMENT.g:6502:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getSemicolonKeyword_9()); 
@@ -20795,14 +21216,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__10"
-    // InternalENVIRONMENT.g:6376:1: rule__GSSEnvironmentProtocol__Group__10 : rule__GSSEnvironmentProtocol__Group__10__Impl rule__GSSEnvironmentProtocol__Group__11 ;
+    // InternalENVIRONMENT.g:6511:1: rule__GSSEnvironmentProtocol__Group__10 : rule__GSSEnvironmentProtocol__Group__10__Impl rule__GSSEnvironmentProtocol__Group__11 ;
     public final void rule__GSSEnvironmentProtocol__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6380:1: ( rule__GSSEnvironmentProtocol__Group__10__Impl rule__GSSEnvironmentProtocol__Group__11 )
-            // InternalENVIRONMENT.g:6381:2: rule__GSSEnvironmentProtocol__Group__10__Impl rule__GSSEnvironmentProtocol__Group__11
+            // InternalENVIRONMENT.g:6515:1: ( rule__GSSEnvironmentProtocol__Group__10__Impl rule__GSSEnvironmentProtocol__Group__11 )
+            // InternalENVIRONMENT.g:6516:2: rule__GSSEnvironmentProtocol__Group__10__Impl rule__GSSEnvironmentProtocol__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentProtocol__Group__10__Impl();
@@ -20833,22 +21254,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__10__Impl"
-    // InternalENVIRONMENT.g:6388:1: rule__GSSEnvironmentProtocol__Group__10__Impl : ( 'typeLevel' ) ;
+    // InternalENVIRONMENT.g:6523:1: rule__GSSEnvironmentProtocol__Group__10__Impl : ( 'typeLevel' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6392:1: ( ( 'typeLevel' ) )
-            // InternalENVIRONMENT.g:6393:1: ( 'typeLevel' )
+            // InternalENVIRONMENT.g:6527:1: ( ( 'typeLevel' ) )
+            // InternalENVIRONMENT.g:6528:1: ( 'typeLevel' )
             {
-            // InternalENVIRONMENT.g:6393:1: ( 'typeLevel' )
-            // InternalENVIRONMENT.g:6394:2: 'typeLevel'
+            // InternalENVIRONMENT.g:6528:1: ( 'typeLevel' )
+            // InternalENVIRONMENT.g:6529:2: 'typeLevel'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getTypeLevelKeyword_10()); 
             }
-            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,72,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentProtocolAccess().getTypeLevelKeyword_10()); 
             }
@@ -20874,14 +21295,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__11"
-    // InternalENVIRONMENT.g:6403:1: rule__GSSEnvironmentProtocol__Group__11 : rule__GSSEnvironmentProtocol__Group__11__Impl rule__GSSEnvironmentProtocol__Group__12 ;
+    // InternalENVIRONMENT.g:6538:1: rule__GSSEnvironmentProtocol__Group__11 : rule__GSSEnvironmentProtocol__Group__11__Impl rule__GSSEnvironmentProtocol__Group__12 ;
     public final void rule__GSSEnvironmentProtocol__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6407:1: ( rule__GSSEnvironmentProtocol__Group__11__Impl rule__GSSEnvironmentProtocol__Group__12 )
-            // InternalENVIRONMENT.g:6408:2: rule__GSSEnvironmentProtocol__Group__11__Impl rule__GSSEnvironmentProtocol__Group__12
+            // InternalENVIRONMENT.g:6542:1: ( rule__GSSEnvironmentProtocol__Group__11__Impl rule__GSSEnvironmentProtocol__Group__12 )
+            // InternalENVIRONMENT.g:6543:2: rule__GSSEnvironmentProtocol__Group__11__Impl rule__GSSEnvironmentProtocol__Group__12
             {
             pushFollow(FollowSets000.FOLLOW_50);
             rule__GSSEnvironmentProtocol__Group__11__Impl();
@@ -20912,17 +21333,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__11__Impl"
-    // InternalENVIRONMENT.g:6415:1: rule__GSSEnvironmentProtocol__Group__11__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:6550:1: rule__GSSEnvironmentProtocol__Group__11__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6419:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:6420:1: ( ':=' )
+            // InternalENVIRONMENT.g:6554:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:6555:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:6420:1: ( ':=' )
-            // InternalENVIRONMENT.g:6421:2: ':='
+            // InternalENVIRONMENT.g:6555:1: ( ':=' )
+            // InternalENVIRONMENT.g:6556:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getColonEqualsSignKeyword_11()); 
@@ -20953,14 +21374,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__12"
-    // InternalENVIRONMENT.g:6430:1: rule__GSSEnvironmentProtocol__Group__12 : rule__GSSEnvironmentProtocol__Group__12__Impl rule__GSSEnvironmentProtocol__Group__13 ;
+    // InternalENVIRONMENT.g:6565:1: rule__GSSEnvironmentProtocol__Group__12 : rule__GSSEnvironmentProtocol__Group__12__Impl rule__GSSEnvironmentProtocol__Group__13 ;
     public final void rule__GSSEnvironmentProtocol__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6434:1: ( rule__GSSEnvironmentProtocol__Group__12__Impl rule__GSSEnvironmentProtocol__Group__13 )
-            // InternalENVIRONMENT.g:6435:2: rule__GSSEnvironmentProtocol__Group__12__Impl rule__GSSEnvironmentProtocol__Group__13
+            // InternalENVIRONMENT.g:6569:1: ( rule__GSSEnvironmentProtocol__Group__12__Impl rule__GSSEnvironmentProtocol__Group__13 )
+            // InternalENVIRONMENT.g:6570:2: rule__GSSEnvironmentProtocol__Group__12__Impl rule__GSSEnvironmentProtocol__Group__13
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentProtocol__Group__12__Impl();
@@ -20991,23 +21412,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__12__Impl"
-    // InternalENVIRONMENT.g:6442:1: rule__GSSEnvironmentProtocol__Group__12__Impl : ( ( rule__GSSEnvironmentProtocol__TypeLevelAssignment_12 ) ) ;
+    // InternalENVIRONMENT.g:6577:1: rule__GSSEnvironmentProtocol__Group__12__Impl : ( ( rule__GSSEnvironmentProtocol__TypeLevelAssignment_12 ) ) ;
     public final void rule__GSSEnvironmentProtocol__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6446:1: ( ( ( rule__GSSEnvironmentProtocol__TypeLevelAssignment_12 ) ) )
-            // InternalENVIRONMENT.g:6447:1: ( ( rule__GSSEnvironmentProtocol__TypeLevelAssignment_12 ) )
+            // InternalENVIRONMENT.g:6581:1: ( ( ( rule__GSSEnvironmentProtocol__TypeLevelAssignment_12 ) ) )
+            // InternalENVIRONMENT.g:6582:1: ( ( rule__GSSEnvironmentProtocol__TypeLevelAssignment_12 ) )
             {
-            // InternalENVIRONMENT.g:6447:1: ( ( rule__GSSEnvironmentProtocol__TypeLevelAssignment_12 ) )
-            // InternalENVIRONMENT.g:6448:2: ( rule__GSSEnvironmentProtocol__TypeLevelAssignment_12 )
+            // InternalENVIRONMENT.g:6582:1: ( ( rule__GSSEnvironmentProtocol__TypeLevelAssignment_12 ) )
+            // InternalENVIRONMENT.g:6583:2: ( rule__GSSEnvironmentProtocol__TypeLevelAssignment_12 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getTypeLevelAssignment_12()); 
             }
-            // InternalENVIRONMENT.g:6449:2: ( rule__GSSEnvironmentProtocol__TypeLevelAssignment_12 )
-            // InternalENVIRONMENT.g:6449:3: rule__GSSEnvironmentProtocol__TypeLevelAssignment_12
+            // InternalENVIRONMENT.g:6584:2: ( rule__GSSEnvironmentProtocol__TypeLevelAssignment_12 )
+            // InternalENVIRONMENT.g:6584:3: rule__GSSEnvironmentProtocol__TypeLevelAssignment_12
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentProtocol__TypeLevelAssignment_12();
@@ -21042,14 +21463,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__13"
-    // InternalENVIRONMENT.g:6457:1: rule__GSSEnvironmentProtocol__Group__13 : rule__GSSEnvironmentProtocol__Group__13__Impl rule__GSSEnvironmentProtocol__Group__14 ;
+    // InternalENVIRONMENT.g:6592:1: rule__GSSEnvironmentProtocol__Group__13 : rule__GSSEnvironmentProtocol__Group__13__Impl rule__GSSEnvironmentProtocol__Group__14 ;
     public final void rule__GSSEnvironmentProtocol__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6461:1: ( rule__GSSEnvironmentProtocol__Group__13__Impl rule__GSSEnvironmentProtocol__Group__14 )
-            // InternalENVIRONMENT.g:6462:2: rule__GSSEnvironmentProtocol__Group__13__Impl rule__GSSEnvironmentProtocol__Group__14
+            // InternalENVIRONMENT.g:6596:1: ( rule__GSSEnvironmentProtocol__Group__13__Impl rule__GSSEnvironmentProtocol__Group__14 )
+            // InternalENVIRONMENT.g:6597:2: rule__GSSEnvironmentProtocol__Group__13__Impl rule__GSSEnvironmentProtocol__Group__14
             {
             pushFollow(FollowSets000.FOLLOW_53);
             rule__GSSEnvironmentProtocol__Group__13__Impl();
@@ -21080,17 +21501,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__13__Impl"
-    // InternalENVIRONMENT.g:6469:1: rule__GSSEnvironmentProtocol__Group__13__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:6604:1: rule__GSSEnvironmentProtocol__Group__13__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6473:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:6474:1: ( ';' )
+            // InternalENVIRONMENT.g:6608:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:6609:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:6474:1: ( ';' )
-            // InternalENVIRONMENT.g:6475:2: ';'
+            // InternalENVIRONMENT.g:6609:1: ( ';' )
+            // InternalENVIRONMENT.g:6610:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getSemicolonKeyword_13()); 
@@ -21121,14 +21542,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__14"
-    // InternalENVIRONMENT.g:6484:1: rule__GSSEnvironmentProtocol__Group__14 : rule__GSSEnvironmentProtocol__Group__14__Impl rule__GSSEnvironmentProtocol__Group__15 ;
+    // InternalENVIRONMENT.g:6619:1: rule__GSSEnvironmentProtocol__Group__14 : rule__GSSEnvironmentProtocol__Group__14__Impl rule__GSSEnvironmentProtocol__Group__15 ;
     public final void rule__GSSEnvironmentProtocol__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6488:1: ( rule__GSSEnvironmentProtocol__Group__14__Impl rule__GSSEnvironmentProtocol__Group__15 )
-            // InternalENVIRONMENT.g:6489:2: rule__GSSEnvironmentProtocol__Group__14__Impl rule__GSSEnvironmentProtocol__Group__15
+            // InternalENVIRONMENT.g:6623:1: ( rule__GSSEnvironmentProtocol__Group__14__Impl rule__GSSEnvironmentProtocol__Group__15 )
+            // InternalENVIRONMENT.g:6624:2: rule__GSSEnvironmentProtocol__Group__14__Impl rule__GSSEnvironmentProtocol__Group__15
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentProtocol__Group__14__Impl();
@@ -21159,22 +21580,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__14__Impl"
-    // InternalENVIRONMENT.g:6496:1: rule__GSSEnvironmentProtocol__Group__14__Impl : ( 'typeOffset' ) ;
+    // InternalENVIRONMENT.g:6631:1: rule__GSSEnvironmentProtocol__Group__14__Impl : ( 'typeOffset' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6500:1: ( ( 'typeOffset' ) )
-            // InternalENVIRONMENT.g:6501:1: ( 'typeOffset' )
+            // InternalENVIRONMENT.g:6635:1: ( ( 'typeOffset' ) )
+            // InternalENVIRONMENT.g:6636:1: ( 'typeOffset' )
             {
-            // InternalENVIRONMENT.g:6501:1: ( 'typeOffset' )
-            // InternalENVIRONMENT.g:6502:2: 'typeOffset'
+            // InternalENVIRONMENT.g:6636:1: ( 'typeOffset' )
+            // InternalENVIRONMENT.g:6637:2: 'typeOffset'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getTypeOffsetKeyword_14()); 
             }
-            match(input,72,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,73,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentProtocolAccess().getTypeOffsetKeyword_14()); 
             }
@@ -21200,14 +21621,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__15"
-    // InternalENVIRONMENT.g:6511:1: rule__GSSEnvironmentProtocol__Group__15 : rule__GSSEnvironmentProtocol__Group__15__Impl rule__GSSEnvironmentProtocol__Group__16 ;
+    // InternalENVIRONMENT.g:6646:1: rule__GSSEnvironmentProtocol__Group__15 : rule__GSSEnvironmentProtocol__Group__15__Impl rule__GSSEnvironmentProtocol__Group__16 ;
     public final void rule__GSSEnvironmentProtocol__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6515:1: ( rule__GSSEnvironmentProtocol__Group__15__Impl rule__GSSEnvironmentProtocol__Group__16 )
-            // InternalENVIRONMENT.g:6516:2: rule__GSSEnvironmentProtocol__Group__15__Impl rule__GSSEnvironmentProtocol__Group__16
+            // InternalENVIRONMENT.g:6650:1: ( rule__GSSEnvironmentProtocol__Group__15__Impl rule__GSSEnvironmentProtocol__Group__16 )
+            // InternalENVIRONMENT.g:6651:2: rule__GSSEnvironmentProtocol__Group__15__Impl rule__GSSEnvironmentProtocol__Group__16
             {
             pushFollow(FollowSets000.FOLLOW_50);
             rule__GSSEnvironmentProtocol__Group__15__Impl();
@@ -21238,17 +21659,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__15__Impl"
-    // InternalENVIRONMENT.g:6523:1: rule__GSSEnvironmentProtocol__Group__15__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:6658:1: rule__GSSEnvironmentProtocol__Group__15__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6527:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:6528:1: ( ':=' )
+            // InternalENVIRONMENT.g:6662:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:6663:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:6528:1: ( ':=' )
-            // InternalENVIRONMENT.g:6529:2: ':='
+            // InternalENVIRONMENT.g:6663:1: ( ':=' )
+            // InternalENVIRONMENT.g:6664:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getColonEqualsSignKeyword_15()); 
@@ -21279,14 +21700,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__16"
-    // InternalENVIRONMENT.g:6538:1: rule__GSSEnvironmentProtocol__Group__16 : rule__GSSEnvironmentProtocol__Group__16__Impl rule__GSSEnvironmentProtocol__Group__17 ;
+    // InternalENVIRONMENT.g:6673:1: rule__GSSEnvironmentProtocol__Group__16 : rule__GSSEnvironmentProtocol__Group__16__Impl rule__GSSEnvironmentProtocol__Group__17 ;
     public final void rule__GSSEnvironmentProtocol__Group__16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6542:1: ( rule__GSSEnvironmentProtocol__Group__16__Impl rule__GSSEnvironmentProtocol__Group__17 )
-            // InternalENVIRONMENT.g:6543:2: rule__GSSEnvironmentProtocol__Group__16__Impl rule__GSSEnvironmentProtocol__Group__17
+            // InternalENVIRONMENT.g:6677:1: ( rule__GSSEnvironmentProtocol__Group__16__Impl rule__GSSEnvironmentProtocol__Group__17 )
+            // InternalENVIRONMENT.g:6678:2: rule__GSSEnvironmentProtocol__Group__16__Impl rule__GSSEnvironmentProtocol__Group__17
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentProtocol__Group__16__Impl();
@@ -21317,23 +21738,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__16__Impl"
-    // InternalENVIRONMENT.g:6550:1: rule__GSSEnvironmentProtocol__Group__16__Impl : ( ( rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16 ) ) ;
+    // InternalENVIRONMENT.g:6685:1: rule__GSSEnvironmentProtocol__Group__16__Impl : ( ( rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16 ) ) ;
     public final void rule__GSSEnvironmentProtocol__Group__16__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6554:1: ( ( ( rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16 ) ) )
-            // InternalENVIRONMENT.g:6555:1: ( ( rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16 ) )
+            // InternalENVIRONMENT.g:6689:1: ( ( ( rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16 ) ) )
+            // InternalENVIRONMENT.g:6690:1: ( ( rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16 ) )
             {
-            // InternalENVIRONMENT.g:6555:1: ( ( rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16 ) )
-            // InternalENVIRONMENT.g:6556:2: ( rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16 )
+            // InternalENVIRONMENT.g:6690:1: ( ( rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16 ) )
+            // InternalENVIRONMENT.g:6691:2: ( rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getTypeOffsetAssignment_16()); 
             }
-            // InternalENVIRONMENT.g:6557:2: ( rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16 )
-            // InternalENVIRONMENT.g:6557:3: rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16
+            // InternalENVIRONMENT.g:6692:2: ( rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16 )
+            // InternalENVIRONMENT.g:6692:3: rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16();
@@ -21368,14 +21789,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__17"
-    // InternalENVIRONMENT.g:6565:1: rule__GSSEnvironmentProtocol__Group__17 : rule__GSSEnvironmentProtocol__Group__17__Impl rule__GSSEnvironmentProtocol__Group__18 ;
+    // InternalENVIRONMENT.g:6700:1: rule__GSSEnvironmentProtocol__Group__17 : rule__GSSEnvironmentProtocol__Group__17__Impl rule__GSSEnvironmentProtocol__Group__18 ;
     public final void rule__GSSEnvironmentProtocol__Group__17() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6569:1: ( rule__GSSEnvironmentProtocol__Group__17__Impl rule__GSSEnvironmentProtocol__Group__18 )
-            // InternalENVIRONMENT.g:6570:2: rule__GSSEnvironmentProtocol__Group__17__Impl rule__GSSEnvironmentProtocol__Group__18
+            // InternalENVIRONMENT.g:6704:1: ( rule__GSSEnvironmentProtocol__Group__17__Impl rule__GSSEnvironmentProtocol__Group__18 )
+            // InternalENVIRONMENT.g:6705:2: rule__GSSEnvironmentProtocol__Group__17__Impl rule__GSSEnvironmentProtocol__Group__18
             {
             pushFollow(FollowSets000.FOLLOW_54);
             rule__GSSEnvironmentProtocol__Group__17__Impl();
@@ -21406,17 +21827,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__17__Impl"
-    // InternalENVIRONMENT.g:6577:1: rule__GSSEnvironmentProtocol__Group__17__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:6712:1: rule__GSSEnvironmentProtocol__Group__17__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__17__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6581:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:6582:1: ( ';' )
+            // InternalENVIRONMENT.g:6716:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:6717:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:6582:1: ( ';' )
-            // InternalENVIRONMENT.g:6583:2: ';'
+            // InternalENVIRONMENT.g:6717:1: ( ';' )
+            // InternalENVIRONMENT.g:6718:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getSemicolonKeyword_17()); 
@@ -21447,14 +21868,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__18"
-    // InternalENVIRONMENT.g:6592:1: rule__GSSEnvironmentProtocol__Group__18 : rule__GSSEnvironmentProtocol__Group__18__Impl rule__GSSEnvironmentProtocol__Group__19 ;
+    // InternalENVIRONMENT.g:6727:1: rule__GSSEnvironmentProtocol__Group__18 : rule__GSSEnvironmentProtocol__Group__18__Impl rule__GSSEnvironmentProtocol__Group__19 ;
     public final void rule__GSSEnvironmentProtocol__Group__18() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6596:1: ( rule__GSSEnvironmentProtocol__Group__18__Impl rule__GSSEnvironmentProtocol__Group__19 )
-            // InternalENVIRONMENT.g:6597:2: rule__GSSEnvironmentProtocol__Group__18__Impl rule__GSSEnvironmentProtocol__Group__19
+            // InternalENVIRONMENT.g:6731:1: ( rule__GSSEnvironmentProtocol__Group__18__Impl rule__GSSEnvironmentProtocol__Group__19 )
+            // InternalENVIRONMENT.g:6732:2: rule__GSSEnvironmentProtocol__Group__18__Impl rule__GSSEnvironmentProtocol__Group__19
             {
             pushFollow(FollowSets000.FOLLOW_54);
             rule__GSSEnvironmentProtocol__Group__18__Impl();
@@ -21485,31 +21906,31 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__18__Impl"
-    // InternalENVIRONMENT.g:6604:1: rule__GSSEnvironmentProtocol__Group__18__Impl : ( ( rule__GSSEnvironmentProtocol__Group_18__0 )? ) ;
+    // InternalENVIRONMENT.g:6739:1: rule__GSSEnvironmentProtocol__Group__18__Impl : ( ( rule__GSSEnvironmentProtocol__Group_18__0 )? ) ;
     public final void rule__GSSEnvironmentProtocol__Group__18__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6608:1: ( ( ( rule__GSSEnvironmentProtocol__Group_18__0 )? ) )
-            // InternalENVIRONMENT.g:6609:1: ( ( rule__GSSEnvironmentProtocol__Group_18__0 )? )
+            // InternalENVIRONMENT.g:6743:1: ( ( ( rule__GSSEnvironmentProtocol__Group_18__0 )? ) )
+            // InternalENVIRONMENT.g:6744:1: ( ( rule__GSSEnvironmentProtocol__Group_18__0 )? )
             {
-            // InternalENVIRONMENT.g:6609:1: ( ( rule__GSSEnvironmentProtocol__Group_18__0 )? )
-            // InternalENVIRONMENT.g:6610:2: ( rule__GSSEnvironmentProtocol__Group_18__0 )?
+            // InternalENVIRONMENT.g:6744:1: ( ( rule__GSSEnvironmentProtocol__Group_18__0 )? )
+            // InternalENVIRONMENT.g:6745:2: ( rule__GSSEnvironmentProtocol__Group_18__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getGroup_18()); 
             }
-            // InternalENVIRONMENT.g:6611:2: ( rule__GSSEnvironmentProtocol__Group_18__0 )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // InternalENVIRONMENT.g:6746:2: ( rule__GSSEnvironmentProtocol__Group_18__0 )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( (LA33_0==73) ) {
-                alt33=1;
+            if ( (LA34_0==74) ) {
+                alt34=1;
             }
-            switch (alt33) {
+            switch (alt34) {
                 case 1 :
-                    // InternalENVIRONMENT.g:6611:3: rule__GSSEnvironmentProtocol__Group_18__0
+                    // InternalENVIRONMENT.g:6746:3: rule__GSSEnvironmentProtocol__Group_18__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSEnvironmentProtocol__Group_18__0();
@@ -21547,14 +21968,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__19"
-    // InternalENVIRONMENT.g:6619:1: rule__GSSEnvironmentProtocol__Group__19 : rule__GSSEnvironmentProtocol__Group__19__Impl rule__GSSEnvironmentProtocol__Group__20 ;
+    // InternalENVIRONMENT.g:6754:1: rule__GSSEnvironmentProtocol__Group__19 : rule__GSSEnvironmentProtocol__Group__19__Impl rule__GSSEnvironmentProtocol__Group__20 ;
     public final void rule__GSSEnvironmentProtocol__Group__19() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6623:1: ( rule__GSSEnvironmentProtocol__Group__19__Impl rule__GSSEnvironmentProtocol__Group__20 )
-            // InternalENVIRONMENT.g:6624:2: rule__GSSEnvironmentProtocol__Group__19__Impl rule__GSSEnvironmentProtocol__Group__20
+            // InternalENVIRONMENT.g:6758:1: ( rule__GSSEnvironmentProtocol__Group__19__Impl rule__GSSEnvironmentProtocol__Group__20 )
+            // InternalENVIRONMENT.g:6759:2: rule__GSSEnvironmentProtocol__Group__19__Impl rule__GSSEnvironmentProtocol__Group__20
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentProtocol__Group__19__Impl();
@@ -21585,17 +22006,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__19__Impl"
-    // InternalENVIRONMENT.g:6631:1: rule__GSSEnvironmentProtocol__Group__19__Impl : ( '}' ) ;
+    // InternalENVIRONMENT.g:6766:1: rule__GSSEnvironmentProtocol__Group__19__Impl : ( '}' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__19__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6635:1: ( ( '}' ) )
-            // InternalENVIRONMENT.g:6636:1: ( '}' )
+            // InternalENVIRONMENT.g:6770:1: ( ( '}' ) )
+            // InternalENVIRONMENT.g:6771:1: ( '}' )
             {
-            // InternalENVIRONMENT.g:6636:1: ( '}' )
-            // InternalENVIRONMENT.g:6637:2: '}'
+            // InternalENVIRONMENT.g:6771:1: ( '}' )
+            // InternalENVIRONMENT.g:6772:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getRightCurlyBracketKeyword_19()); 
@@ -21626,14 +22047,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__20"
-    // InternalENVIRONMENT.g:6646:1: rule__GSSEnvironmentProtocol__Group__20 : rule__GSSEnvironmentProtocol__Group__20__Impl ;
+    // InternalENVIRONMENT.g:6781:1: rule__GSSEnvironmentProtocol__Group__20 : rule__GSSEnvironmentProtocol__Group__20__Impl ;
     public final void rule__GSSEnvironmentProtocol__Group__20() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6650:1: ( rule__GSSEnvironmentProtocol__Group__20__Impl )
-            // InternalENVIRONMENT.g:6651:2: rule__GSSEnvironmentProtocol__Group__20__Impl
+            // InternalENVIRONMENT.g:6785:1: ( rule__GSSEnvironmentProtocol__Group__20__Impl )
+            // InternalENVIRONMENT.g:6786:2: rule__GSSEnvironmentProtocol__Group__20__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentProtocol__Group__20__Impl();
@@ -21659,17 +22080,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group__20__Impl"
-    // InternalENVIRONMENT.g:6657:1: rule__GSSEnvironmentProtocol__Group__20__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:6792:1: rule__GSSEnvironmentProtocol__Group__20__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentProtocol__Group__20__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6661:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:6662:1: ( ';' )
+            // InternalENVIRONMENT.g:6796:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:6797:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:6662:1: ( ';' )
-            // InternalENVIRONMENT.g:6663:2: ';'
+            // InternalENVIRONMENT.g:6797:1: ( ';' )
+            // InternalENVIRONMENT.g:6798:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getSemicolonKeyword_20()); 
@@ -21700,14 +22121,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group_18__0"
-    // InternalENVIRONMENT.g:6673:1: rule__GSSEnvironmentProtocol__Group_18__0 : rule__GSSEnvironmentProtocol__Group_18__0__Impl rule__GSSEnvironmentProtocol__Group_18__1 ;
+    // InternalENVIRONMENT.g:6808:1: rule__GSSEnvironmentProtocol__Group_18__0 : rule__GSSEnvironmentProtocol__Group_18__0__Impl rule__GSSEnvironmentProtocol__Group_18__1 ;
     public final void rule__GSSEnvironmentProtocol__Group_18__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6677:1: ( rule__GSSEnvironmentProtocol__Group_18__0__Impl rule__GSSEnvironmentProtocol__Group_18__1 )
-            // InternalENVIRONMENT.g:6678:2: rule__GSSEnvironmentProtocol__Group_18__0__Impl rule__GSSEnvironmentProtocol__Group_18__1
+            // InternalENVIRONMENT.g:6812:1: ( rule__GSSEnvironmentProtocol__Group_18__0__Impl rule__GSSEnvironmentProtocol__Group_18__1 )
+            // InternalENVIRONMENT.g:6813:2: rule__GSSEnvironmentProtocol__Group_18__0__Impl rule__GSSEnvironmentProtocol__Group_18__1
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentProtocol__Group_18__0__Impl();
@@ -21738,22 +22159,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group_18__0__Impl"
-    // InternalENVIRONMENT.g:6685:1: rule__GSSEnvironmentProtocol__Group_18__0__Impl : ( 'subtypeOffset' ) ;
+    // InternalENVIRONMENT.g:6820:1: rule__GSSEnvironmentProtocol__Group_18__0__Impl : ( 'subtypeOffset' ) ;
     public final void rule__GSSEnvironmentProtocol__Group_18__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6689:1: ( ( 'subtypeOffset' ) )
-            // InternalENVIRONMENT.g:6690:1: ( 'subtypeOffset' )
+            // InternalENVIRONMENT.g:6824:1: ( ( 'subtypeOffset' ) )
+            // InternalENVIRONMENT.g:6825:1: ( 'subtypeOffset' )
             {
-            // InternalENVIRONMENT.g:6690:1: ( 'subtypeOffset' )
-            // InternalENVIRONMENT.g:6691:2: 'subtypeOffset'
+            // InternalENVIRONMENT.g:6825:1: ( 'subtypeOffset' )
+            // InternalENVIRONMENT.g:6826:2: 'subtypeOffset'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getSubtypeOffsetKeyword_18_0()); 
             }
-            match(input,73,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,74,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentProtocolAccess().getSubtypeOffsetKeyword_18_0()); 
             }
@@ -21779,14 +22200,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group_18__1"
-    // InternalENVIRONMENT.g:6700:1: rule__GSSEnvironmentProtocol__Group_18__1 : rule__GSSEnvironmentProtocol__Group_18__1__Impl rule__GSSEnvironmentProtocol__Group_18__2 ;
+    // InternalENVIRONMENT.g:6835:1: rule__GSSEnvironmentProtocol__Group_18__1 : rule__GSSEnvironmentProtocol__Group_18__1__Impl rule__GSSEnvironmentProtocol__Group_18__2 ;
     public final void rule__GSSEnvironmentProtocol__Group_18__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6704:1: ( rule__GSSEnvironmentProtocol__Group_18__1__Impl rule__GSSEnvironmentProtocol__Group_18__2 )
-            // InternalENVIRONMENT.g:6705:2: rule__GSSEnvironmentProtocol__Group_18__1__Impl rule__GSSEnvironmentProtocol__Group_18__2
+            // InternalENVIRONMENT.g:6839:1: ( rule__GSSEnvironmentProtocol__Group_18__1__Impl rule__GSSEnvironmentProtocol__Group_18__2 )
+            // InternalENVIRONMENT.g:6840:2: rule__GSSEnvironmentProtocol__Group_18__1__Impl rule__GSSEnvironmentProtocol__Group_18__2
             {
             pushFollow(FollowSets000.FOLLOW_50);
             rule__GSSEnvironmentProtocol__Group_18__1__Impl();
@@ -21817,17 +22238,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group_18__1__Impl"
-    // InternalENVIRONMENT.g:6712:1: rule__GSSEnvironmentProtocol__Group_18__1__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:6847:1: rule__GSSEnvironmentProtocol__Group_18__1__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentProtocol__Group_18__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6716:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:6717:1: ( ':=' )
+            // InternalENVIRONMENT.g:6851:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:6852:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:6717:1: ( ':=' )
-            // InternalENVIRONMENT.g:6718:2: ':='
+            // InternalENVIRONMENT.g:6852:1: ( ':=' )
+            // InternalENVIRONMENT.g:6853:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getColonEqualsSignKeyword_18_1()); 
@@ -21858,14 +22279,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group_18__2"
-    // InternalENVIRONMENT.g:6727:1: rule__GSSEnvironmentProtocol__Group_18__2 : rule__GSSEnvironmentProtocol__Group_18__2__Impl rule__GSSEnvironmentProtocol__Group_18__3 ;
+    // InternalENVIRONMENT.g:6862:1: rule__GSSEnvironmentProtocol__Group_18__2 : rule__GSSEnvironmentProtocol__Group_18__2__Impl rule__GSSEnvironmentProtocol__Group_18__3 ;
     public final void rule__GSSEnvironmentProtocol__Group_18__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6731:1: ( rule__GSSEnvironmentProtocol__Group_18__2__Impl rule__GSSEnvironmentProtocol__Group_18__3 )
-            // InternalENVIRONMENT.g:6732:2: rule__GSSEnvironmentProtocol__Group_18__2__Impl rule__GSSEnvironmentProtocol__Group_18__3
+            // InternalENVIRONMENT.g:6866:1: ( rule__GSSEnvironmentProtocol__Group_18__2__Impl rule__GSSEnvironmentProtocol__Group_18__3 )
+            // InternalENVIRONMENT.g:6867:2: rule__GSSEnvironmentProtocol__Group_18__2__Impl rule__GSSEnvironmentProtocol__Group_18__3
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentProtocol__Group_18__2__Impl();
@@ -21896,23 +22317,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group_18__2__Impl"
-    // InternalENVIRONMENT.g:6739:1: rule__GSSEnvironmentProtocol__Group_18__2__Impl : ( ( rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2 ) ) ;
+    // InternalENVIRONMENT.g:6874:1: rule__GSSEnvironmentProtocol__Group_18__2__Impl : ( ( rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2 ) ) ;
     public final void rule__GSSEnvironmentProtocol__Group_18__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6743:1: ( ( ( rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2 ) ) )
-            // InternalENVIRONMENT.g:6744:1: ( ( rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2 ) )
+            // InternalENVIRONMENT.g:6878:1: ( ( ( rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2 ) ) )
+            // InternalENVIRONMENT.g:6879:1: ( ( rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2 ) )
             {
-            // InternalENVIRONMENT.g:6744:1: ( ( rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2 ) )
-            // InternalENVIRONMENT.g:6745:2: ( rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2 )
+            // InternalENVIRONMENT.g:6879:1: ( ( rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2 ) )
+            // InternalENVIRONMENT.g:6880:2: ( rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getSubtypeOffsetAssignment_18_2()); 
             }
-            // InternalENVIRONMENT.g:6746:2: ( rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2 )
-            // InternalENVIRONMENT.g:6746:3: rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2
+            // InternalENVIRONMENT.g:6881:2: ( rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2 )
+            // InternalENVIRONMENT.g:6881:3: rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2();
@@ -21947,14 +22368,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group_18__3"
-    // InternalENVIRONMENT.g:6754:1: rule__GSSEnvironmentProtocol__Group_18__3 : rule__GSSEnvironmentProtocol__Group_18__3__Impl ;
+    // InternalENVIRONMENT.g:6889:1: rule__GSSEnvironmentProtocol__Group_18__3 : rule__GSSEnvironmentProtocol__Group_18__3__Impl ;
     public final void rule__GSSEnvironmentProtocol__Group_18__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6758:1: ( rule__GSSEnvironmentProtocol__Group_18__3__Impl )
-            // InternalENVIRONMENT.g:6759:2: rule__GSSEnvironmentProtocol__Group_18__3__Impl
+            // InternalENVIRONMENT.g:6893:1: ( rule__GSSEnvironmentProtocol__Group_18__3__Impl )
+            // InternalENVIRONMENT.g:6894:2: rule__GSSEnvironmentProtocol__Group_18__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentProtocol__Group_18__3__Impl();
@@ -21980,17 +22401,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__Group_18__3__Impl"
-    // InternalENVIRONMENT.g:6765:1: rule__GSSEnvironmentProtocol__Group_18__3__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:6900:1: rule__GSSEnvironmentProtocol__Group_18__3__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentProtocol__Group_18__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6769:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:6770:1: ( ';' )
+            // InternalENVIRONMENT.g:6904:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:6905:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:6770:1: ( ';' )
-            // InternalENVIRONMENT.g:6771:2: ';'
+            // InternalENVIRONMENT.g:6905:1: ( ';' )
+            // InternalENVIRONMENT.g:6906:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getSemicolonKeyword_18_3()); 
@@ -22021,14 +22442,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__0"
-    // InternalENVIRONMENT.g:6781:1: rule__GSSEnvironmentMainInterface__Group__0 : rule__GSSEnvironmentMainInterface__Group__0__Impl rule__GSSEnvironmentMainInterface__Group__1 ;
+    // InternalENVIRONMENT.g:6916:1: rule__GSSEnvironmentMainInterface__Group__0 : rule__GSSEnvironmentMainInterface__Group__0__Impl rule__GSSEnvironmentMainInterface__Group__1 ;
     public final void rule__GSSEnvironmentMainInterface__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6785:1: ( rule__GSSEnvironmentMainInterface__Group__0__Impl rule__GSSEnvironmentMainInterface__Group__1 )
-            // InternalENVIRONMENT.g:6786:2: rule__GSSEnvironmentMainInterface__Group__0__Impl rule__GSSEnvironmentMainInterface__Group__1
+            // InternalENVIRONMENT.g:6920:1: ( rule__GSSEnvironmentMainInterface__Group__0__Impl rule__GSSEnvironmentMainInterface__Group__1 )
+            // InternalENVIRONMENT.g:6921:2: rule__GSSEnvironmentMainInterface__Group__0__Impl rule__GSSEnvironmentMainInterface__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSEnvironmentMainInterface__Group__0__Impl();
@@ -22059,22 +22480,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__0__Impl"
-    // InternalENVIRONMENT.g:6793:1: rule__GSSEnvironmentMainInterface__Group__0__Impl : ( 'GSSEnvironmentMainInterface' ) ;
+    // InternalENVIRONMENT.g:6928:1: rule__GSSEnvironmentMainInterface__Group__0__Impl : ( 'GSSEnvironmentMainInterface' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6797:1: ( ( 'GSSEnvironmentMainInterface' ) )
-            // InternalENVIRONMENT.g:6798:1: ( 'GSSEnvironmentMainInterface' )
+            // InternalENVIRONMENT.g:6932:1: ( ( 'GSSEnvironmentMainInterface' ) )
+            // InternalENVIRONMENT.g:6933:1: ( 'GSSEnvironmentMainInterface' )
             {
-            // InternalENVIRONMENT.g:6798:1: ( 'GSSEnvironmentMainInterface' )
-            // InternalENVIRONMENT.g:6799:2: 'GSSEnvironmentMainInterface'
+            // InternalENVIRONMENT.g:6933:1: ( 'GSSEnvironmentMainInterface' )
+            // InternalENVIRONMENT.g:6934:2: 'GSSEnvironmentMainInterface'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getGSSEnvironmentMainInterfaceKeyword_0()); 
             }
-            match(input,74,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,75,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getGSSEnvironmentMainInterfaceKeyword_0()); 
             }
@@ -22100,14 +22521,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__1"
-    // InternalENVIRONMENT.g:6808:1: rule__GSSEnvironmentMainInterface__Group__1 : rule__GSSEnvironmentMainInterface__Group__1__Impl rule__GSSEnvironmentMainInterface__Group__2 ;
+    // InternalENVIRONMENT.g:6943:1: rule__GSSEnvironmentMainInterface__Group__1 : rule__GSSEnvironmentMainInterface__Group__1__Impl rule__GSSEnvironmentMainInterface__Group__2 ;
     public final void rule__GSSEnvironmentMainInterface__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6812:1: ( rule__GSSEnvironmentMainInterface__Group__1__Impl rule__GSSEnvironmentMainInterface__Group__2 )
-            // InternalENVIRONMENT.g:6813:2: rule__GSSEnvironmentMainInterface__Group__1__Impl rule__GSSEnvironmentMainInterface__Group__2
+            // InternalENVIRONMENT.g:6947:1: ( rule__GSSEnvironmentMainInterface__Group__1__Impl rule__GSSEnvironmentMainInterface__Group__2 )
+            // InternalENVIRONMENT.g:6948:2: rule__GSSEnvironmentMainInterface__Group__1__Impl rule__GSSEnvironmentMainInterface__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_49);
             rule__GSSEnvironmentMainInterface__Group__1__Impl();
@@ -22138,17 +22559,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__1__Impl"
-    // InternalENVIRONMENT.g:6820:1: rule__GSSEnvironmentMainInterface__Group__1__Impl : ( '{' ) ;
+    // InternalENVIRONMENT.g:6955:1: rule__GSSEnvironmentMainInterface__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6824:1: ( ( '{' ) )
-            // InternalENVIRONMENT.g:6825:1: ( '{' )
+            // InternalENVIRONMENT.g:6959:1: ( ( '{' ) )
+            // InternalENVIRONMENT.g:6960:1: ( '{' )
             {
-            // InternalENVIRONMENT.g:6825:1: ( '{' )
-            // InternalENVIRONMENT.g:6826:2: '{'
+            // InternalENVIRONMENT.g:6960:1: ( '{' )
+            // InternalENVIRONMENT.g:6961:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLeftCurlyBracketKeyword_1()); 
@@ -22179,14 +22600,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__2"
-    // InternalENVIRONMENT.g:6835:1: rule__GSSEnvironmentMainInterface__Group__2 : rule__GSSEnvironmentMainInterface__Group__2__Impl rule__GSSEnvironmentMainInterface__Group__3 ;
+    // InternalENVIRONMENT.g:6970:1: rule__GSSEnvironmentMainInterface__Group__2 : rule__GSSEnvironmentMainInterface__Group__2__Impl rule__GSSEnvironmentMainInterface__Group__3 ;
     public final void rule__GSSEnvironmentMainInterface__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6839:1: ( rule__GSSEnvironmentMainInterface__Group__2__Impl rule__GSSEnvironmentMainInterface__Group__3 )
-            // InternalENVIRONMENT.g:6840:2: rule__GSSEnvironmentMainInterface__Group__2__Impl rule__GSSEnvironmentMainInterface__Group__3
+            // InternalENVIRONMENT.g:6974:1: ( rule__GSSEnvironmentMainInterface__Group__2__Impl rule__GSSEnvironmentMainInterface__Group__3 )
+            // InternalENVIRONMENT.g:6975:2: rule__GSSEnvironmentMainInterface__Group__2__Impl rule__GSSEnvironmentMainInterface__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentMainInterface__Group__2__Impl();
@@ -22217,22 +22638,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__2__Impl"
-    // InternalENVIRONMENT.g:6847:1: rule__GSSEnvironmentMainInterface__Group__2__Impl : ( 'id' ) ;
+    // InternalENVIRONMENT.g:6982:1: rule__GSSEnvironmentMainInterface__Group__2__Impl : ( 'id' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6851:1: ( ( 'id' ) )
-            // InternalENVIRONMENT.g:6852:1: ( 'id' )
+            // InternalENVIRONMENT.g:6986:1: ( ( 'id' ) )
+            // InternalENVIRONMENT.g:6987:1: ( 'id' )
             {
-            // InternalENVIRONMENT.g:6852:1: ( 'id' )
-            // InternalENVIRONMENT.g:6853:2: 'id'
+            // InternalENVIRONMENT.g:6987:1: ( 'id' )
+            // InternalENVIRONMENT.g:6988:2: 'id'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIdKeyword_2()); 
             }
-            match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIdKeyword_2()); 
             }
@@ -22258,14 +22679,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__3"
-    // InternalENVIRONMENT.g:6862:1: rule__GSSEnvironmentMainInterface__Group__3 : rule__GSSEnvironmentMainInterface__Group__3__Impl rule__GSSEnvironmentMainInterface__Group__4 ;
+    // InternalENVIRONMENT.g:6997:1: rule__GSSEnvironmentMainInterface__Group__3 : rule__GSSEnvironmentMainInterface__Group__3__Impl rule__GSSEnvironmentMainInterface__Group__4 ;
     public final void rule__GSSEnvironmentMainInterface__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6866:1: ( rule__GSSEnvironmentMainInterface__Group__3__Impl rule__GSSEnvironmentMainInterface__Group__4 )
-            // InternalENVIRONMENT.g:6867:2: rule__GSSEnvironmentMainInterface__Group__3__Impl rule__GSSEnvironmentMainInterface__Group__4
+            // InternalENVIRONMENT.g:7001:1: ( rule__GSSEnvironmentMainInterface__Group__3__Impl rule__GSSEnvironmentMainInterface__Group__4 )
+            // InternalENVIRONMENT.g:7002:2: rule__GSSEnvironmentMainInterface__Group__3__Impl rule__GSSEnvironmentMainInterface__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_50);
             rule__GSSEnvironmentMainInterface__Group__3__Impl();
@@ -22296,17 +22717,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__3__Impl"
-    // InternalENVIRONMENT.g:6874:1: rule__GSSEnvironmentMainInterface__Group__3__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:7009:1: rule__GSSEnvironmentMainInterface__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6878:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:6879:1: ( ':=' )
+            // InternalENVIRONMENT.g:7013:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:7014:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:6879:1: ( ':=' )
-            // InternalENVIRONMENT.g:6880:2: ':='
+            // InternalENVIRONMENT.g:7014:1: ( ':=' )
+            // InternalENVIRONMENT.g:7015:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getColonEqualsSignKeyword_3()); 
@@ -22337,14 +22758,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__4"
-    // InternalENVIRONMENT.g:6889:1: rule__GSSEnvironmentMainInterface__Group__4 : rule__GSSEnvironmentMainInterface__Group__4__Impl rule__GSSEnvironmentMainInterface__Group__5 ;
+    // InternalENVIRONMENT.g:7024:1: rule__GSSEnvironmentMainInterface__Group__4 : rule__GSSEnvironmentMainInterface__Group__4__Impl rule__GSSEnvironmentMainInterface__Group__5 ;
     public final void rule__GSSEnvironmentMainInterface__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6893:1: ( rule__GSSEnvironmentMainInterface__Group__4__Impl rule__GSSEnvironmentMainInterface__Group__5 )
-            // InternalENVIRONMENT.g:6894:2: rule__GSSEnvironmentMainInterface__Group__4__Impl rule__GSSEnvironmentMainInterface__Group__5
+            // InternalENVIRONMENT.g:7028:1: ( rule__GSSEnvironmentMainInterface__Group__4__Impl rule__GSSEnvironmentMainInterface__Group__5 )
+            // InternalENVIRONMENT.g:7029:2: rule__GSSEnvironmentMainInterface__Group__4__Impl rule__GSSEnvironmentMainInterface__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentMainInterface__Group__4__Impl();
@@ -22375,23 +22796,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__4__Impl"
-    // InternalENVIRONMENT.g:6901:1: rule__GSSEnvironmentMainInterface__Group__4__Impl : ( ( rule__GSSEnvironmentMainInterface__IdAssignment_4 ) ) ;
+    // InternalENVIRONMENT.g:7036:1: rule__GSSEnvironmentMainInterface__Group__4__Impl : ( ( rule__GSSEnvironmentMainInterface__IdAssignment_4 ) ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6905:1: ( ( ( rule__GSSEnvironmentMainInterface__IdAssignment_4 ) ) )
-            // InternalENVIRONMENT.g:6906:1: ( ( rule__GSSEnvironmentMainInterface__IdAssignment_4 ) )
+            // InternalENVIRONMENT.g:7040:1: ( ( ( rule__GSSEnvironmentMainInterface__IdAssignment_4 ) ) )
+            // InternalENVIRONMENT.g:7041:1: ( ( rule__GSSEnvironmentMainInterface__IdAssignment_4 ) )
             {
-            // InternalENVIRONMENT.g:6906:1: ( ( rule__GSSEnvironmentMainInterface__IdAssignment_4 ) )
-            // InternalENVIRONMENT.g:6907:2: ( rule__GSSEnvironmentMainInterface__IdAssignment_4 )
+            // InternalENVIRONMENT.g:7041:1: ( ( rule__GSSEnvironmentMainInterface__IdAssignment_4 ) )
+            // InternalENVIRONMENT.g:7042:2: ( rule__GSSEnvironmentMainInterface__IdAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIdAssignment_4()); 
             }
-            // InternalENVIRONMENT.g:6908:2: ( rule__GSSEnvironmentMainInterface__IdAssignment_4 )
-            // InternalENVIRONMENT.g:6908:3: rule__GSSEnvironmentMainInterface__IdAssignment_4
+            // InternalENVIRONMENT.g:7043:2: ( rule__GSSEnvironmentMainInterface__IdAssignment_4 )
+            // InternalENVIRONMENT.g:7043:3: rule__GSSEnvironmentMainInterface__IdAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentMainInterface__IdAssignment_4();
@@ -22426,14 +22847,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__5"
-    // InternalENVIRONMENT.g:6916:1: rule__GSSEnvironmentMainInterface__Group__5 : rule__GSSEnvironmentMainInterface__Group__5__Impl rule__GSSEnvironmentMainInterface__Group__6 ;
+    // InternalENVIRONMENT.g:7051:1: rule__GSSEnvironmentMainInterface__Group__5 : rule__GSSEnvironmentMainInterface__Group__5__Impl rule__GSSEnvironmentMainInterface__Group__6 ;
     public final void rule__GSSEnvironmentMainInterface__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6920:1: ( rule__GSSEnvironmentMainInterface__Group__5__Impl rule__GSSEnvironmentMainInterface__Group__6 )
-            // InternalENVIRONMENT.g:6921:2: rule__GSSEnvironmentMainInterface__Group__5__Impl rule__GSSEnvironmentMainInterface__Group__6
+            // InternalENVIRONMENT.g:7055:1: ( rule__GSSEnvironmentMainInterface__Group__5__Impl rule__GSSEnvironmentMainInterface__Group__6 )
+            // InternalENVIRONMENT.g:7056:2: rule__GSSEnvironmentMainInterface__Group__5__Impl rule__GSSEnvironmentMainInterface__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_51);
             rule__GSSEnvironmentMainInterface__Group__5__Impl();
@@ -22464,17 +22885,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__5__Impl"
-    // InternalENVIRONMENT.g:6928:1: rule__GSSEnvironmentMainInterface__Group__5__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:7063:1: rule__GSSEnvironmentMainInterface__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6932:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:6933:1: ( ';' )
+            // InternalENVIRONMENT.g:7067:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:7068:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:6933:1: ( ';' )
-            // InternalENVIRONMENT.g:6934:2: ';'
+            // InternalENVIRONMENT.g:7068:1: ( ';' )
+            // InternalENVIRONMENT.g:7069:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_5()); 
@@ -22505,14 +22926,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__6"
-    // InternalENVIRONMENT.g:6943:1: rule__GSSEnvironmentMainInterface__Group__6 : rule__GSSEnvironmentMainInterface__Group__6__Impl rule__GSSEnvironmentMainInterface__Group__7 ;
+    // InternalENVIRONMENT.g:7078:1: rule__GSSEnvironmentMainInterface__Group__6 : rule__GSSEnvironmentMainInterface__Group__6__Impl rule__GSSEnvironmentMainInterface__Group__7 ;
     public final void rule__GSSEnvironmentMainInterface__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6947:1: ( rule__GSSEnvironmentMainInterface__Group__6__Impl rule__GSSEnvironmentMainInterface__Group__7 )
-            // InternalENVIRONMENT.g:6948:2: rule__GSSEnvironmentMainInterface__Group__6__Impl rule__GSSEnvironmentMainInterface__Group__7
+            // InternalENVIRONMENT.g:7082:1: ( rule__GSSEnvironmentMainInterface__Group__6__Impl rule__GSSEnvironmentMainInterface__Group__7 )
+            // InternalENVIRONMENT.g:7083:2: rule__GSSEnvironmentMainInterface__Group__6__Impl rule__GSSEnvironmentMainInterface__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentMainInterface__Group__6__Impl();
@@ -22543,22 +22964,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__6__Impl"
-    // InternalENVIRONMENT.g:6955:1: rule__GSSEnvironmentMainInterface__Group__6__Impl : ( 'name' ) ;
+    // InternalENVIRONMENT.g:7090:1: rule__GSSEnvironmentMainInterface__Group__6__Impl : ( 'name' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6959:1: ( ( 'name' ) )
-            // InternalENVIRONMENT.g:6960:1: ( 'name' )
+            // InternalENVIRONMENT.g:7094:1: ( ( 'name' ) )
+            // InternalENVIRONMENT.g:7095:1: ( 'name' )
             {
-            // InternalENVIRONMENT.g:6960:1: ( 'name' )
-            // InternalENVIRONMENT.g:6961:2: 'name'
+            // InternalENVIRONMENT.g:7095:1: ( 'name' )
+            // InternalENVIRONMENT.g:7096:2: 'name'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getNameKeyword_6()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getNameKeyword_6()); 
             }
@@ -22584,14 +23005,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__7"
-    // InternalENVIRONMENT.g:6970:1: rule__GSSEnvironmentMainInterface__Group__7 : rule__GSSEnvironmentMainInterface__Group__7__Impl rule__GSSEnvironmentMainInterface__Group__8 ;
+    // InternalENVIRONMENT.g:7105:1: rule__GSSEnvironmentMainInterface__Group__7 : rule__GSSEnvironmentMainInterface__Group__7__Impl rule__GSSEnvironmentMainInterface__Group__8 ;
     public final void rule__GSSEnvironmentMainInterface__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6974:1: ( rule__GSSEnvironmentMainInterface__Group__7__Impl rule__GSSEnvironmentMainInterface__Group__8 )
-            // InternalENVIRONMENT.g:6975:2: rule__GSSEnvironmentMainInterface__Group__7__Impl rule__GSSEnvironmentMainInterface__Group__8
+            // InternalENVIRONMENT.g:7109:1: ( rule__GSSEnvironmentMainInterface__Group__7__Impl rule__GSSEnvironmentMainInterface__Group__8 )
+            // InternalENVIRONMENT.g:7110:2: rule__GSSEnvironmentMainInterface__Group__7__Impl rule__GSSEnvironmentMainInterface__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSEnvironmentMainInterface__Group__7__Impl();
@@ -22622,17 +23043,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__7__Impl"
-    // InternalENVIRONMENT.g:6982:1: rule__GSSEnvironmentMainInterface__Group__7__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:7117:1: rule__GSSEnvironmentMainInterface__Group__7__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:6986:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:6987:1: ( ':=' )
+            // InternalENVIRONMENT.g:7121:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:7122:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:6987:1: ( ':=' )
-            // InternalENVIRONMENT.g:6988:2: ':='
+            // InternalENVIRONMENT.g:7122:1: ( ':=' )
+            // InternalENVIRONMENT.g:7123:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getColonEqualsSignKeyword_7()); 
@@ -22663,14 +23084,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__8"
-    // InternalENVIRONMENT.g:6997:1: rule__GSSEnvironmentMainInterface__Group__8 : rule__GSSEnvironmentMainInterface__Group__8__Impl rule__GSSEnvironmentMainInterface__Group__9 ;
+    // InternalENVIRONMENT.g:7132:1: rule__GSSEnvironmentMainInterface__Group__8 : rule__GSSEnvironmentMainInterface__Group__8__Impl rule__GSSEnvironmentMainInterface__Group__9 ;
     public final void rule__GSSEnvironmentMainInterface__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7001:1: ( rule__GSSEnvironmentMainInterface__Group__8__Impl rule__GSSEnvironmentMainInterface__Group__9 )
-            // InternalENVIRONMENT.g:7002:2: rule__GSSEnvironmentMainInterface__Group__8__Impl rule__GSSEnvironmentMainInterface__Group__9
+            // InternalENVIRONMENT.g:7136:1: ( rule__GSSEnvironmentMainInterface__Group__8__Impl rule__GSSEnvironmentMainInterface__Group__9 )
+            // InternalENVIRONMENT.g:7137:2: rule__GSSEnvironmentMainInterface__Group__8__Impl rule__GSSEnvironmentMainInterface__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentMainInterface__Group__8__Impl();
@@ -22701,23 +23122,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__8__Impl"
-    // InternalENVIRONMENT.g:7009:1: rule__GSSEnvironmentMainInterface__Group__8__Impl : ( ( rule__GSSEnvironmentMainInterface__NameAssignment_8 ) ) ;
+    // InternalENVIRONMENT.g:7144:1: rule__GSSEnvironmentMainInterface__Group__8__Impl : ( ( rule__GSSEnvironmentMainInterface__NameAssignment_8 ) ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7013:1: ( ( ( rule__GSSEnvironmentMainInterface__NameAssignment_8 ) ) )
-            // InternalENVIRONMENT.g:7014:1: ( ( rule__GSSEnvironmentMainInterface__NameAssignment_8 ) )
+            // InternalENVIRONMENT.g:7148:1: ( ( ( rule__GSSEnvironmentMainInterface__NameAssignment_8 ) ) )
+            // InternalENVIRONMENT.g:7149:1: ( ( rule__GSSEnvironmentMainInterface__NameAssignment_8 ) )
             {
-            // InternalENVIRONMENT.g:7014:1: ( ( rule__GSSEnvironmentMainInterface__NameAssignment_8 ) )
-            // InternalENVIRONMENT.g:7015:2: ( rule__GSSEnvironmentMainInterface__NameAssignment_8 )
+            // InternalENVIRONMENT.g:7149:1: ( ( rule__GSSEnvironmentMainInterface__NameAssignment_8 ) )
+            // InternalENVIRONMENT.g:7150:2: ( rule__GSSEnvironmentMainInterface__NameAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getNameAssignment_8()); 
             }
-            // InternalENVIRONMENT.g:7016:2: ( rule__GSSEnvironmentMainInterface__NameAssignment_8 )
-            // InternalENVIRONMENT.g:7016:3: rule__GSSEnvironmentMainInterface__NameAssignment_8
+            // InternalENVIRONMENT.g:7151:2: ( rule__GSSEnvironmentMainInterface__NameAssignment_8 )
+            // InternalENVIRONMENT.g:7151:3: rule__GSSEnvironmentMainInterface__NameAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentMainInterface__NameAssignment_8();
@@ -22752,14 +23173,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__9"
-    // InternalENVIRONMENT.g:7024:1: rule__GSSEnvironmentMainInterface__Group__9 : rule__GSSEnvironmentMainInterface__Group__9__Impl rule__GSSEnvironmentMainInterface__Group__10 ;
+    // InternalENVIRONMENT.g:7159:1: rule__GSSEnvironmentMainInterface__Group__9 : rule__GSSEnvironmentMainInterface__Group__9__Impl rule__GSSEnvironmentMainInterface__Group__10 ;
     public final void rule__GSSEnvironmentMainInterface__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7028:1: ( rule__GSSEnvironmentMainInterface__Group__9__Impl rule__GSSEnvironmentMainInterface__Group__10 )
-            // InternalENVIRONMENT.g:7029:2: rule__GSSEnvironmentMainInterface__Group__9__Impl rule__GSSEnvironmentMainInterface__Group__10
+            // InternalENVIRONMENT.g:7163:1: ( rule__GSSEnvironmentMainInterface__Group__9__Impl rule__GSSEnvironmentMainInterface__Group__10 )
+            // InternalENVIRONMENT.g:7164:2: rule__GSSEnvironmentMainInterface__Group__9__Impl rule__GSSEnvironmentMainInterface__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_55);
             rule__GSSEnvironmentMainInterface__Group__9__Impl();
@@ -22790,17 +23211,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__9__Impl"
-    // InternalENVIRONMENT.g:7036:1: rule__GSSEnvironmentMainInterface__Group__9__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:7171:1: rule__GSSEnvironmentMainInterface__Group__9__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7040:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:7041:1: ( ';' )
+            // InternalENVIRONMENT.g:7175:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:7176:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:7041:1: ( ';' )
-            // InternalENVIRONMENT.g:7042:2: ';'
+            // InternalENVIRONMENT.g:7176:1: ( ';' )
+            // InternalENVIRONMENT.g:7177:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_9()); 
@@ -22831,14 +23252,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__10"
-    // InternalENVIRONMENT.g:7051:1: rule__GSSEnvironmentMainInterface__Group__10 : rule__GSSEnvironmentMainInterface__Group__10__Impl rule__GSSEnvironmentMainInterface__Group__11 ;
+    // InternalENVIRONMENT.g:7186:1: rule__GSSEnvironmentMainInterface__Group__10 : rule__GSSEnvironmentMainInterface__Group__10__Impl rule__GSSEnvironmentMainInterface__Group__11 ;
     public final void rule__GSSEnvironmentMainInterface__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7055:1: ( rule__GSSEnvironmentMainInterface__Group__10__Impl rule__GSSEnvironmentMainInterface__Group__11 )
-            // InternalENVIRONMENT.g:7056:2: rule__GSSEnvironmentMainInterface__Group__10__Impl rule__GSSEnvironmentMainInterface__Group__11
+            // InternalENVIRONMENT.g:7190:1: ( rule__GSSEnvironmentMainInterface__Group__10__Impl rule__GSSEnvironmentMainInterface__Group__11 )
+            // InternalENVIRONMENT.g:7191:2: rule__GSSEnvironmentMainInterface__Group__10__Impl rule__GSSEnvironmentMainInterface__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentMainInterface__Group__10__Impl();
@@ -22869,22 +23290,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__10__Impl"
-    // InternalENVIRONMENT.g:7063:1: rule__GSSEnvironmentMainInterface__Group__10__Impl : ( 'ifType' ) ;
+    // InternalENVIRONMENT.g:7198:1: rule__GSSEnvironmentMainInterface__Group__10__Impl : ( 'ifType' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7067:1: ( ( 'ifType' ) )
-            // InternalENVIRONMENT.g:7068:1: ( 'ifType' )
+            // InternalENVIRONMENT.g:7202:1: ( ( 'ifType' ) )
+            // InternalENVIRONMENT.g:7203:1: ( 'ifType' )
             {
-            // InternalENVIRONMENT.g:7068:1: ( 'ifType' )
-            // InternalENVIRONMENT.g:7069:2: 'ifType'
+            // InternalENVIRONMENT.g:7203:1: ( 'ifType' )
+            // InternalENVIRONMENT.g:7204:2: 'ifType'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIfTypeKeyword_10()); 
             }
-            match(input,75,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,76,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIfTypeKeyword_10()); 
             }
@@ -22910,14 +23331,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__11"
-    // InternalENVIRONMENT.g:7078:1: rule__GSSEnvironmentMainInterface__Group__11 : rule__GSSEnvironmentMainInterface__Group__11__Impl rule__GSSEnvironmentMainInterface__Group__12 ;
+    // InternalENVIRONMENT.g:7213:1: rule__GSSEnvironmentMainInterface__Group__11 : rule__GSSEnvironmentMainInterface__Group__11__Impl rule__GSSEnvironmentMainInterface__Group__12 ;
     public final void rule__GSSEnvironmentMainInterface__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7082:1: ( rule__GSSEnvironmentMainInterface__Group__11__Impl rule__GSSEnvironmentMainInterface__Group__12 )
-            // InternalENVIRONMENT.g:7083:2: rule__GSSEnvironmentMainInterface__Group__11__Impl rule__GSSEnvironmentMainInterface__Group__12
+            // InternalENVIRONMENT.g:7217:1: ( rule__GSSEnvironmentMainInterface__Group__11__Impl rule__GSSEnvironmentMainInterface__Group__12 )
+            // InternalENVIRONMENT.g:7218:2: rule__GSSEnvironmentMainInterface__Group__11__Impl rule__GSSEnvironmentMainInterface__Group__12
             {
             pushFollow(FollowSets000.FOLLOW_56);
             rule__GSSEnvironmentMainInterface__Group__11__Impl();
@@ -22948,17 +23369,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__11__Impl"
-    // InternalENVIRONMENT.g:7090:1: rule__GSSEnvironmentMainInterface__Group__11__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:7225:1: rule__GSSEnvironmentMainInterface__Group__11__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7094:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:7095:1: ( ':=' )
+            // InternalENVIRONMENT.g:7229:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:7230:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:7095:1: ( ':=' )
-            // InternalENVIRONMENT.g:7096:2: ':='
+            // InternalENVIRONMENT.g:7230:1: ( ':=' )
+            // InternalENVIRONMENT.g:7231:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getColonEqualsSignKeyword_11()); 
@@ -22989,14 +23410,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__12"
-    // InternalENVIRONMENT.g:7105:1: rule__GSSEnvironmentMainInterface__Group__12 : rule__GSSEnvironmentMainInterface__Group__12__Impl rule__GSSEnvironmentMainInterface__Group__13 ;
+    // InternalENVIRONMENT.g:7240:1: rule__GSSEnvironmentMainInterface__Group__12 : rule__GSSEnvironmentMainInterface__Group__12__Impl rule__GSSEnvironmentMainInterface__Group__13 ;
     public final void rule__GSSEnvironmentMainInterface__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7109:1: ( rule__GSSEnvironmentMainInterface__Group__12__Impl rule__GSSEnvironmentMainInterface__Group__13 )
-            // InternalENVIRONMENT.g:7110:2: rule__GSSEnvironmentMainInterface__Group__12__Impl rule__GSSEnvironmentMainInterface__Group__13
+            // InternalENVIRONMENT.g:7244:1: ( rule__GSSEnvironmentMainInterface__Group__12__Impl rule__GSSEnvironmentMainInterface__Group__13 )
+            // InternalENVIRONMENT.g:7245:2: rule__GSSEnvironmentMainInterface__Group__12__Impl rule__GSSEnvironmentMainInterface__Group__13
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentMainInterface__Group__12__Impl();
@@ -23027,23 +23448,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__12__Impl"
-    // InternalENVIRONMENT.g:7117:1: rule__GSSEnvironmentMainInterface__Group__12__Impl : ( ( rule__GSSEnvironmentMainInterface__IfTypeAssignment_12 ) ) ;
+    // InternalENVIRONMENT.g:7252:1: rule__GSSEnvironmentMainInterface__Group__12__Impl : ( ( rule__GSSEnvironmentMainInterface__IfTypeAssignment_12 ) ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7121:1: ( ( ( rule__GSSEnvironmentMainInterface__IfTypeAssignment_12 ) ) )
-            // InternalENVIRONMENT.g:7122:1: ( ( rule__GSSEnvironmentMainInterface__IfTypeAssignment_12 ) )
+            // InternalENVIRONMENT.g:7256:1: ( ( ( rule__GSSEnvironmentMainInterface__IfTypeAssignment_12 ) ) )
+            // InternalENVIRONMENT.g:7257:1: ( ( rule__GSSEnvironmentMainInterface__IfTypeAssignment_12 ) )
             {
-            // InternalENVIRONMENT.g:7122:1: ( ( rule__GSSEnvironmentMainInterface__IfTypeAssignment_12 ) )
-            // InternalENVIRONMENT.g:7123:2: ( rule__GSSEnvironmentMainInterface__IfTypeAssignment_12 )
+            // InternalENVIRONMENT.g:7257:1: ( ( rule__GSSEnvironmentMainInterface__IfTypeAssignment_12 ) )
+            // InternalENVIRONMENT.g:7258:2: ( rule__GSSEnvironmentMainInterface__IfTypeAssignment_12 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIfTypeAssignment_12()); 
             }
-            // InternalENVIRONMENT.g:7124:2: ( rule__GSSEnvironmentMainInterface__IfTypeAssignment_12 )
-            // InternalENVIRONMENT.g:7124:3: rule__GSSEnvironmentMainInterface__IfTypeAssignment_12
+            // InternalENVIRONMENT.g:7259:2: ( rule__GSSEnvironmentMainInterface__IfTypeAssignment_12 )
+            // InternalENVIRONMENT.g:7259:3: rule__GSSEnvironmentMainInterface__IfTypeAssignment_12
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentMainInterface__IfTypeAssignment_12();
@@ -23078,14 +23499,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__13"
-    // InternalENVIRONMENT.g:7132:1: rule__GSSEnvironmentMainInterface__Group__13 : rule__GSSEnvironmentMainInterface__Group__13__Impl rule__GSSEnvironmentMainInterface__Group__14 ;
+    // InternalENVIRONMENT.g:7267:1: rule__GSSEnvironmentMainInterface__Group__13 : rule__GSSEnvironmentMainInterface__Group__13__Impl rule__GSSEnvironmentMainInterface__Group__14 ;
     public final void rule__GSSEnvironmentMainInterface__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7136:1: ( rule__GSSEnvironmentMainInterface__Group__13__Impl rule__GSSEnvironmentMainInterface__Group__14 )
-            // InternalENVIRONMENT.g:7137:2: rule__GSSEnvironmentMainInterface__Group__13__Impl rule__GSSEnvironmentMainInterface__Group__14
+            // InternalENVIRONMENT.g:7271:1: ( rule__GSSEnvironmentMainInterface__Group__13__Impl rule__GSSEnvironmentMainInterface__Group__14 )
+            // InternalENVIRONMENT.g:7272:2: rule__GSSEnvironmentMainInterface__Group__13__Impl rule__GSSEnvironmentMainInterface__Group__14
             {
             pushFollow(FollowSets000.FOLLOW_57);
             rule__GSSEnvironmentMainInterface__Group__13__Impl();
@@ -23116,17 +23537,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__13__Impl"
-    // InternalENVIRONMENT.g:7144:1: rule__GSSEnvironmentMainInterface__Group__13__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:7279:1: rule__GSSEnvironmentMainInterface__Group__13__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7148:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:7149:1: ( ';' )
+            // InternalENVIRONMENT.g:7283:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:7284:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:7149:1: ( ';' )
-            // InternalENVIRONMENT.g:7150:2: ';'
+            // InternalENVIRONMENT.g:7284:1: ( ';' )
+            // InternalENVIRONMENT.g:7285:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_13()); 
@@ -23157,14 +23578,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__14"
-    // InternalENVIRONMENT.g:7159:1: rule__GSSEnvironmentMainInterface__Group__14 : rule__GSSEnvironmentMainInterface__Group__14__Impl rule__GSSEnvironmentMainInterface__Group__15 ;
+    // InternalENVIRONMENT.g:7294:1: rule__GSSEnvironmentMainInterface__Group__14 : rule__GSSEnvironmentMainInterface__Group__14__Impl rule__GSSEnvironmentMainInterface__Group__15 ;
     public final void rule__GSSEnvironmentMainInterface__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7163:1: ( rule__GSSEnvironmentMainInterface__Group__14__Impl rule__GSSEnvironmentMainInterface__Group__15 )
-            // InternalENVIRONMENT.g:7164:2: rule__GSSEnvironmentMainInterface__Group__14__Impl rule__GSSEnvironmentMainInterface__Group__15
+            // InternalENVIRONMENT.g:7298:1: ( rule__GSSEnvironmentMainInterface__Group__14__Impl rule__GSSEnvironmentMainInterface__Group__15 )
+            // InternalENVIRONMENT.g:7299:2: rule__GSSEnvironmentMainInterface__Group__14__Impl rule__GSSEnvironmentMainInterface__Group__15
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentMainInterface__Group__14__Impl();
@@ -23195,22 +23616,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__14__Impl"
-    // InternalENVIRONMENT.g:7171:1: rule__GSSEnvironmentMainInterface__Group__14__Impl : ( 'ifConfig' ) ;
+    // InternalENVIRONMENT.g:7306:1: rule__GSSEnvironmentMainInterface__Group__14__Impl : ( 'ifConfig' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7175:1: ( ( 'ifConfig' ) )
-            // InternalENVIRONMENT.g:7176:1: ( 'ifConfig' )
+            // InternalENVIRONMENT.g:7310:1: ( ( 'ifConfig' ) )
+            // InternalENVIRONMENT.g:7311:1: ( 'ifConfig' )
             {
-            // InternalENVIRONMENT.g:7176:1: ( 'ifConfig' )
-            // InternalENVIRONMENT.g:7177:2: 'ifConfig'
+            // InternalENVIRONMENT.g:7311:1: ( 'ifConfig' )
+            // InternalENVIRONMENT.g:7312:2: 'ifConfig'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIfConfigKeyword_14()); 
             }
-            match(input,76,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,77,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIfConfigKeyword_14()); 
             }
@@ -23236,14 +23657,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__15"
-    // InternalENVIRONMENT.g:7186:1: rule__GSSEnvironmentMainInterface__Group__15 : rule__GSSEnvironmentMainInterface__Group__15__Impl rule__GSSEnvironmentMainInterface__Group__16 ;
+    // InternalENVIRONMENT.g:7321:1: rule__GSSEnvironmentMainInterface__Group__15 : rule__GSSEnvironmentMainInterface__Group__15__Impl rule__GSSEnvironmentMainInterface__Group__16 ;
     public final void rule__GSSEnvironmentMainInterface__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7190:1: ( rule__GSSEnvironmentMainInterface__Group__15__Impl rule__GSSEnvironmentMainInterface__Group__16 )
-            // InternalENVIRONMENT.g:7191:2: rule__GSSEnvironmentMainInterface__Group__15__Impl rule__GSSEnvironmentMainInterface__Group__16
+            // InternalENVIRONMENT.g:7325:1: ( rule__GSSEnvironmentMainInterface__Group__15__Impl rule__GSSEnvironmentMainInterface__Group__16 )
+            // InternalENVIRONMENT.g:7326:2: rule__GSSEnvironmentMainInterface__Group__15__Impl rule__GSSEnvironmentMainInterface__Group__16
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSEnvironmentMainInterface__Group__15__Impl();
@@ -23274,17 +23695,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__15__Impl"
-    // InternalENVIRONMENT.g:7198:1: rule__GSSEnvironmentMainInterface__Group__15__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:7333:1: rule__GSSEnvironmentMainInterface__Group__15__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7202:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:7203:1: ( ':=' )
+            // InternalENVIRONMENT.g:7337:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:7338:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:7203:1: ( ':=' )
-            // InternalENVIRONMENT.g:7204:2: ':='
+            // InternalENVIRONMENT.g:7338:1: ( ':=' )
+            // InternalENVIRONMENT.g:7339:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getColonEqualsSignKeyword_15()); 
@@ -23315,14 +23736,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__16"
-    // InternalENVIRONMENT.g:7213:1: rule__GSSEnvironmentMainInterface__Group__16 : rule__GSSEnvironmentMainInterface__Group__16__Impl rule__GSSEnvironmentMainInterface__Group__17 ;
+    // InternalENVIRONMENT.g:7348:1: rule__GSSEnvironmentMainInterface__Group__16 : rule__GSSEnvironmentMainInterface__Group__16__Impl rule__GSSEnvironmentMainInterface__Group__17 ;
     public final void rule__GSSEnvironmentMainInterface__Group__16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7217:1: ( rule__GSSEnvironmentMainInterface__Group__16__Impl rule__GSSEnvironmentMainInterface__Group__17 )
-            // InternalENVIRONMENT.g:7218:2: rule__GSSEnvironmentMainInterface__Group__16__Impl rule__GSSEnvironmentMainInterface__Group__17
+            // InternalENVIRONMENT.g:7352:1: ( rule__GSSEnvironmentMainInterface__Group__16__Impl rule__GSSEnvironmentMainInterface__Group__17 )
+            // InternalENVIRONMENT.g:7353:2: rule__GSSEnvironmentMainInterface__Group__16__Impl rule__GSSEnvironmentMainInterface__Group__17
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentMainInterface__Group__16__Impl();
@@ -23353,23 +23774,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__16__Impl"
-    // InternalENVIRONMENT.g:7225:1: rule__GSSEnvironmentMainInterface__Group__16__Impl : ( ( rule__GSSEnvironmentMainInterface__IfConfigAssignment_16 ) ) ;
+    // InternalENVIRONMENT.g:7360:1: rule__GSSEnvironmentMainInterface__Group__16__Impl : ( ( rule__GSSEnvironmentMainInterface__IfConfigAssignment_16 ) ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__16__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7229:1: ( ( ( rule__GSSEnvironmentMainInterface__IfConfigAssignment_16 ) ) )
-            // InternalENVIRONMENT.g:7230:1: ( ( rule__GSSEnvironmentMainInterface__IfConfigAssignment_16 ) )
+            // InternalENVIRONMENT.g:7364:1: ( ( ( rule__GSSEnvironmentMainInterface__IfConfigAssignment_16 ) ) )
+            // InternalENVIRONMENT.g:7365:1: ( ( rule__GSSEnvironmentMainInterface__IfConfigAssignment_16 ) )
             {
-            // InternalENVIRONMENT.g:7230:1: ( ( rule__GSSEnvironmentMainInterface__IfConfigAssignment_16 ) )
-            // InternalENVIRONMENT.g:7231:2: ( rule__GSSEnvironmentMainInterface__IfConfigAssignment_16 )
+            // InternalENVIRONMENT.g:7365:1: ( ( rule__GSSEnvironmentMainInterface__IfConfigAssignment_16 ) )
+            // InternalENVIRONMENT.g:7366:2: ( rule__GSSEnvironmentMainInterface__IfConfigAssignment_16 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIfConfigAssignment_16()); 
             }
-            // InternalENVIRONMENT.g:7232:2: ( rule__GSSEnvironmentMainInterface__IfConfigAssignment_16 )
-            // InternalENVIRONMENT.g:7232:3: rule__GSSEnvironmentMainInterface__IfConfigAssignment_16
+            // InternalENVIRONMENT.g:7367:2: ( rule__GSSEnvironmentMainInterface__IfConfigAssignment_16 )
+            // InternalENVIRONMENT.g:7367:3: rule__GSSEnvironmentMainInterface__IfConfigAssignment_16
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentMainInterface__IfConfigAssignment_16();
@@ -23404,14 +23825,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__17"
-    // InternalENVIRONMENT.g:7240:1: rule__GSSEnvironmentMainInterface__Group__17 : rule__GSSEnvironmentMainInterface__Group__17__Impl rule__GSSEnvironmentMainInterface__Group__18 ;
+    // InternalENVIRONMENT.g:7375:1: rule__GSSEnvironmentMainInterface__Group__17 : rule__GSSEnvironmentMainInterface__Group__17__Impl rule__GSSEnvironmentMainInterface__Group__18 ;
     public final void rule__GSSEnvironmentMainInterface__Group__17() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7244:1: ( rule__GSSEnvironmentMainInterface__Group__17__Impl rule__GSSEnvironmentMainInterface__Group__18 )
-            // InternalENVIRONMENT.g:7245:2: rule__GSSEnvironmentMainInterface__Group__17__Impl rule__GSSEnvironmentMainInterface__Group__18
+            // InternalENVIRONMENT.g:7379:1: ( rule__GSSEnvironmentMainInterface__Group__17__Impl rule__GSSEnvironmentMainInterface__Group__18 )
+            // InternalENVIRONMENT.g:7380:2: rule__GSSEnvironmentMainInterface__Group__17__Impl rule__GSSEnvironmentMainInterface__Group__18
             {
             pushFollow(FollowSets000.FOLLOW_58);
             rule__GSSEnvironmentMainInterface__Group__17__Impl();
@@ -23442,17 +23863,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__17__Impl"
-    // InternalENVIRONMENT.g:7252:1: rule__GSSEnvironmentMainInterface__Group__17__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:7387:1: rule__GSSEnvironmentMainInterface__Group__17__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__17__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7256:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:7257:1: ( ';' )
+            // InternalENVIRONMENT.g:7391:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:7392:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:7257:1: ( ';' )
-            // InternalENVIRONMENT.g:7258:2: ';'
+            // InternalENVIRONMENT.g:7392:1: ( ';' )
+            // InternalENVIRONMENT.g:7393:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_17()); 
@@ -23483,14 +23904,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__18"
-    // InternalENVIRONMENT.g:7267:1: rule__GSSEnvironmentMainInterface__Group__18 : rule__GSSEnvironmentMainInterface__Group__18__Impl rule__GSSEnvironmentMainInterface__Group__19 ;
+    // InternalENVIRONMENT.g:7402:1: rule__GSSEnvironmentMainInterface__Group__18 : rule__GSSEnvironmentMainInterface__Group__18__Impl rule__GSSEnvironmentMainInterface__Group__19 ;
     public final void rule__GSSEnvironmentMainInterface__Group__18() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7271:1: ( rule__GSSEnvironmentMainInterface__Group__18__Impl rule__GSSEnvironmentMainInterface__Group__19 )
-            // InternalENVIRONMENT.g:7272:2: rule__GSSEnvironmentMainInterface__Group__18__Impl rule__GSSEnvironmentMainInterface__Group__19
+            // InternalENVIRONMENT.g:7406:1: ( rule__GSSEnvironmentMainInterface__Group__18__Impl rule__GSSEnvironmentMainInterface__Group__19 )
+            // InternalENVIRONMENT.g:7407:2: rule__GSSEnvironmentMainInterface__Group__18__Impl rule__GSSEnvironmentMainInterface__Group__19
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentMainInterface__Group__18__Impl();
@@ -23521,22 +23942,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__18__Impl"
-    // InternalENVIRONMENT.g:7279:1: rule__GSSEnvironmentMainInterface__Group__18__Impl : ( 'ioType' ) ;
+    // InternalENVIRONMENT.g:7414:1: rule__GSSEnvironmentMainInterface__Group__18__Impl : ( 'ioType' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__18__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7283:1: ( ( 'ioType' ) )
-            // InternalENVIRONMENT.g:7284:1: ( 'ioType' )
+            // InternalENVIRONMENT.g:7418:1: ( ( 'ioType' ) )
+            // InternalENVIRONMENT.g:7419:1: ( 'ioType' )
             {
-            // InternalENVIRONMENT.g:7284:1: ( 'ioType' )
-            // InternalENVIRONMENT.g:7285:2: 'ioType'
+            // InternalENVIRONMENT.g:7419:1: ( 'ioType' )
+            // InternalENVIRONMENT.g:7420:2: 'ioType'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIoTypeKeyword_18()); 
             }
-            match(input,77,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,78,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIoTypeKeyword_18()); 
             }
@@ -23562,14 +23983,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__19"
-    // InternalENVIRONMENT.g:7294:1: rule__GSSEnvironmentMainInterface__Group__19 : rule__GSSEnvironmentMainInterface__Group__19__Impl rule__GSSEnvironmentMainInterface__Group__20 ;
+    // InternalENVIRONMENT.g:7429:1: rule__GSSEnvironmentMainInterface__Group__19 : rule__GSSEnvironmentMainInterface__Group__19__Impl rule__GSSEnvironmentMainInterface__Group__20 ;
     public final void rule__GSSEnvironmentMainInterface__Group__19() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7298:1: ( rule__GSSEnvironmentMainInterface__Group__19__Impl rule__GSSEnvironmentMainInterface__Group__20 )
-            // InternalENVIRONMENT.g:7299:2: rule__GSSEnvironmentMainInterface__Group__19__Impl rule__GSSEnvironmentMainInterface__Group__20
+            // InternalENVIRONMENT.g:7433:1: ( rule__GSSEnvironmentMainInterface__Group__19__Impl rule__GSSEnvironmentMainInterface__Group__20 )
+            // InternalENVIRONMENT.g:7434:2: rule__GSSEnvironmentMainInterface__Group__19__Impl rule__GSSEnvironmentMainInterface__Group__20
             {
             pushFollow(FollowSets000.FOLLOW_59);
             rule__GSSEnvironmentMainInterface__Group__19__Impl();
@@ -23600,17 +24021,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__19__Impl"
-    // InternalENVIRONMENT.g:7306:1: rule__GSSEnvironmentMainInterface__Group__19__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:7441:1: rule__GSSEnvironmentMainInterface__Group__19__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__19__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7310:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:7311:1: ( ':=' )
+            // InternalENVIRONMENT.g:7445:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:7446:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:7311:1: ( ':=' )
-            // InternalENVIRONMENT.g:7312:2: ':='
+            // InternalENVIRONMENT.g:7446:1: ( ':=' )
+            // InternalENVIRONMENT.g:7447:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getColonEqualsSignKeyword_19()); 
@@ -23641,14 +24062,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__20"
-    // InternalENVIRONMENT.g:7321:1: rule__GSSEnvironmentMainInterface__Group__20 : rule__GSSEnvironmentMainInterface__Group__20__Impl rule__GSSEnvironmentMainInterface__Group__21 ;
+    // InternalENVIRONMENT.g:7456:1: rule__GSSEnvironmentMainInterface__Group__20 : rule__GSSEnvironmentMainInterface__Group__20__Impl rule__GSSEnvironmentMainInterface__Group__21 ;
     public final void rule__GSSEnvironmentMainInterface__Group__20() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7325:1: ( rule__GSSEnvironmentMainInterface__Group__20__Impl rule__GSSEnvironmentMainInterface__Group__21 )
-            // InternalENVIRONMENT.g:7326:2: rule__GSSEnvironmentMainInterface__Group__20__Impl rule__GSSEnvironmentMainInterface__Group__21
+            // InternalENVIRONMENT.g:7460:1: ( rule__GSSEnvironmentMainInterface__Group__20__Impl rule__GSSEnvironmentMainInterface__Group__21 )
+            // InternalENVIRONMENT.g:7461:2: rule__GSSEnvironmentMainInterface__Group__20__Impl rule__GSSEnvironmentMainInterface__Group__21
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentMainInterface__Group__20__Impl();
@@ -23679,23 +24100,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__20__Impl"
-    // InternalENVIRONMENT.g:7333:1: rule__GSSEnvironmentMainInterface__Group__20__Impl : ( ( rule__GSSEnvironmentMainInterface__IoTypeAssignment_20 ) ) ;
+    // InternalENVIRONMENT.g:7468:1: rule__GSSEnvironmentMainInterface__Group__20__Impl : ( ( rule__GSSEnvironmentMainInterface__IoTypeAssignment_20 ) ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__20__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7337:1: ( ( ( rule__GSSEnvironmentMainInterface__IoTypeAssignment_20 ) ) )
-            // InternalENVIRONMENT.g:7338:1: ( ( rule__GSSEnvironmentMainInterface__IoTypeAssignment_20 ) )
+            // InternalENVIRONMENT.g:7472:1: ( ( ( rule__GSSEnvironmentMainInterface__IoTypeAssignment_20 ) ) )
+            // InternalENVIRONMENT.g:7473:1: ( ( rule__GSSEnvironmentMainInterface__IoTypeAssignment_20 ) )
             {
-            // InternalENVIRONMENT.g:7338:1: ( ( rule__GSSEnvironmentMainInterface__IoTypeAssignment_20 ) )
-            // InternalENVIRONMENT.g:7339:2: ( rule__GSSEnvironmentMainInterface__IoTypeAssignment_20 )
+            // InternalENVIRONMENT.g:7473:1: ( ( rule__GSSEnvironmentMainInterface__IoTypeAssignment_20 ) )
+            // InternalENVIRONMENT.g:7474:2: ( rule__GSSEnvironmentMainInterface__IoTypeAssignment_20 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIoTypeAssignment_20()); 
             }
-            // InternalENVIRONMENT.g:7340:2: ( rule__GSSEnvironmentMainInterface__IoTypeAssignment_20 )
-            // InternalENVIRONMENT.g:7340:3: rule__GSSEnvironmentMainInterface__IoTypeAssignment_20
+            // InternalENVIRONMENT.g:7475:2: ( rule__GSSEnvironmentMainInterface__IoTypeAssignment_20 )
+            // InternalENVIRONMENT.g:7475:3: rule__GSSEnvironmentMainInterface__IoTypeAssignment_20
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentMainInterface__IoTypeAssignment_20();
@@ -23730,14 +24151,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__21"
-    // InternalENVIRONMENT.g:7348:1: rule__GSSEnvironmentMainInterface__Group__21 : rule__GSSEnvironmentMainInterface__Group__21__Impl rule__GSSEnvironmentMainInterface__Group__22 ;
+    // InternalENVIRONMENT.g:7483:1: rule__GSSEnvironmentMainInterface__Group__21 : rule__GSSEnvironmentMainInterface__Group__21__Impl rule__GSSEnvironmentMainInterface__Group__22 ;
     public final void rule__GSSEnvironmentMainInterface__Group__21() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7352:1: ( rule__GSSEnvironmentMainInterface__Group__21__Impl rule__GSSEnvironmentMainInterface__Group__22 )
-            // InternalENVIRONMENT.g:7353:2: rule__GSSEnvironmentMainInterface__Group__21__Impl rule__GSSEnvironmentMainInterface__Group__22
+            // InternalENVIRONMENT.g:7487:1: ( rule__GSSEnvironmentMainInterface__Group__21__Impl rule__GSSEnvironmentMainInterface__Group__22 )
+            // InternalENVIRONMENT.g:7488:2: rule__GSSEnvironmentMainInterface__Group__21__Impl rule__GSSEnvironmentMainInterface__Group__22
             {
             pushFollow(FollowSets000.FOLLOW_60);
             rule__GSSEnvironmentMainInterface__Group__21__Impl();
@@ -23768,17 +24189,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__21__Impl"
-    // InternalENVIRONMENT.g:7360:1: rule__GSSEnvironmentMainInterface__Group__21__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:7495:1: rule__GSSEnvironmentMainInterface__Group__21__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__21__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7364:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:7365:1: ( ';' )
+            // InternalENVIRONMENT.g:7499:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:7500:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:7365:1: ( ';' )
-            // InternalENVIRONMENT.g:7366:2: ';'
+            // InternalENVIRONMENT.g:7500:1: ( ';' )
+            // InternalENVIRONMENT.g:7501:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_21()); 
@@ -23809,14 +24230,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__22"
-    // InternalENVIRONMENT.g:7375:1: rule__GSSEnvironmentMainInterface__Group__22 : rule__GSSEnvironmentMainInterface__Group__22__Impl rule__GSSEnvironmentMainInterface__Group__23 ;
+    // InternalENVIRONMENT.g:7510:1: rule__GSSEnvironmentMainInterface__Group__22 : rule__GSSEnvironmentMainInterface__Group__22__Impl rule__GSSEnvironmentMainInterface__Group__23 ;
     public final void rule__GSSEnvironmentMainInterface__Group__22() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7379:1: ( rule__GSSEnvironmentMainInterface__Group__22__Impl rule__GSSEnvironmentMainInterface__Group__23 )
-            // InternalENVIRONMENT.g:7380:2: rule__GSSEnvironmentMainInterface__Group__22__Impl rule__GSSEnvironmentMainInterface__Group__23
+            // InternalENVIRONMENT.g:7514:1: ( rule__GSSEnvironmentMainInterface__Group__22__Impl rule__GSSEnvironmentMainInterface__Group__23 )
+            // InternalENVIRONMENT.g:7515:2: rule__GSSEnvironmentMainInterface__Group__22__Impl rule__GSSEnvironmentMainInterface__Group__23
             {
             pushFollow(FollowSets000.FOLLOW_60);
             rule__GSSEnvironmentMainInterface__Group__22__Impl();
@@ -23847,31 +24268,31 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__22__Impl"
-    // InternalENVIRONMENT.g:7387:1: rule__GSSEnvironmentMainInterface__Group__22__Impl : ( ( rule__GSSEnvironmentMainInterface__Group_22__0 )? ) ;
+    // InternalENVIRONMENT.g:7522:1: rule__GSSEnvironmentMainInterface__Group__22__Impl : ( ( rule__GSSEnvironmentMainInterface__Group_22__0 )? ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__22__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7391:1: ( ( ( rule__GSSEnvironmentMainInterface__Group_22__0 )? ) )
-            // InternalENVIRONMENT.g:7392:1: ( ( rule__GSSEnvironmentMainInterface__Group_22__0 )? )
+            // InternalENVIRONMENT.g:7526:1: ( ( ( rule__GSSEnvironmentMainInterface__Group_22__0 )? ) )
+            // InternalENVIRONMENT.g:7527:1: ( ( rule__GSSEnvironmentMainInterface__Group_22__0 )? )
             {
-            // InternalENVIRONMENT.g:7392:1: ( ( rule__GSSEnvironmentMainInterface__Group_22__0 )? )
-            // InternalENVIRONMENT.g:7393:2: ( rule__GSSEnvironmentMainInterface__Group_22__0 )?
+            // InternalENVIRONMENT.g:7527:1: ( ( rule__GSSEnvironmentMainInterface__Group_22__0 )? )
+            // InternalENVIRONMENT.g:7528:2: ( rule__GSSEnvironmentMainInterface__Group_22__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getGroup_22()); 
             }
-            // InternalENVIRONMENT.g:7394:2: ( rule__GSSEnvironmentMainInterface__Group_22__0 )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // InternalENVIRONMENT.g:7529:2: ( rule__GSSEnvironmentMainInterface__Group_22__0 )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA34_0==78) ) {
-                alt34=1;
+            if ( (LA35_0==79) ) {
+                alt35=1;
             }
-            switch (alt34) {
+            switch (alt35) {
                 case 1 :
-                    // InternalENVIRONMENT.g:7394:3: rule__GSSEnvironmentMainInterface__Group_22__0
+                    // InternalENVIRONMENT.g:7529:3: rule__GSSEnvironmentMainInterface__Group_22__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSEnvironmentMainInterface__Group_22__0();
@@ -23909,16 +24330,16 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__23"
-    // InternalENVIRONMENT.g:7402:1: rule__GSSEnvironmentMainInterface__Group__23 : rule__GSSEnvironmentMainInterface__Group__23__Impl rule__GSSEnvironmentMainInterface__Group__24 ;
+    // InternalENVIRONMENT.g:7537:1: rule__GSSEnvironmentMainInterface__Group__23 : rule__GSSEnvironmentMainInterface__Group__23__Impl rule__GSSEnvironmentMainInterface__Group__24 ;
     public final void rule__GSSEnvironmentMainInterface__Group__23() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7406:1: ( rule__GSSEnvironmentMainInterface__Group__23__Impl rule__GSSEnvironmentMainInterface__Group__24 )
-            // InternalENVIRONMENT.g:7407:2: rule__GSSEnvironmentMainInterface__Group__23__Impl rule__GSSEnvironmentMainInterface__Group__24
+            // InternalENVIRONMENT.g:7541:1: ( rule__GSSEnvironmentMainInterface__Group__23__Impl rule__GSSEnvironmentMainInterface__Group__24 )
+            // InternalENVIRONMENT.g:7542:2: rule__GSSEnvironmentMainInterface__Group__23__Impl rule__GSSEnvironmentMainInterface__Group__24
             {
-            pushFollow(FollowSets000.FOLLOW_60);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSEnvironmentMainInterface__Group__23__Impl();
 
             state._fsp--;
@@ -23947,46 +24368,82 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__23__Impl"
-    // InternalENVIRONMENT.g:7414:1: rule__GSSEnvironmentMainInterface__Group__23__Impl : ( ( rule__GSSEnvironmentMainInterface__Group_23__0 )? ) ;
+    // InternalENVIRONMENT.g:7549:1: rule__GSSEnvironmentMainInterface__Group__23__Impl : ( ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 ) ) ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 )* ) ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__23__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7418:1: ( ( ( rule__GSSEnvironmentMainInterface__Group_23__0 )? ) )
-            // InternalENVIRONMENT.g:7419:1: ( ( rule__GSSEnvironmentMainInterface__Group_23__0 )? )
+            // InternalENVIRONMENT.g:7553:1: ( ( ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 ) ) ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 )* ) ) )
+            // InternalENVIRONMENT.g:7554:1: ( ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 ) ) ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 )* ) )
             {
-            // InternalENVIRONMENT.g:7419:1: ( ( rule__GSSEnvironmentMainInterface__Group_23__0 )? )
-            // InternalENVIRONMENT.g:7420:2: ( rule__GSSEnvironmentMainInterface__Group_23__0 )?
+            // InternalENVIRONMENT.g:7554:1: ( ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 ) ) ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 )* ) )
+            // InternalENVIRONMENT.g:7555:2: ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 ) ) ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 )* )
+            {
+            // InternalENVIRONMENT.g:7555:2: ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 ) )
+            // InternalENVIRONMENT.g:7556:3: ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getGroup_23()); 
+               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutAssignment_23()); 
             }
-            // InternalENVIRONMENT.g:7421:2: ( rule__GSSEnvironmentMainInterface__Group_23__0 )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            // InternalENVIRONMENT.g:7557:3: ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 )
+            // InternalENVIRONMENT.g:7557:4: rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23
+            {
+            pushFollow(FollowSets000.FOLLOW_61);
+            rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23();
 
-            if ( (LA35_0==79) ) {
-                alt35=1;
-            }
-            switch (alt35) {
-                case 1 :
-                    // InternalENVIRONMENT.g:7421:3: rule__GSSEnvironmentMainInterface__Group_23__0
-                    {
-                    pushFollow(FollowSets000.FOLLOW_2);
-                    rule__GSSEnvironmentMainInterface__Group_23__0();
-
-                    state._fsp--;
-                    if (state.failed) return ;
-
-                    }
-                    break;
+            state._fsp--;
+            if (state.failed) return ;
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getGroup_23()); 
+               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutAssignment_23()); 
             }
+
+            }
+
+            // InternalENVIRONMENT.g:7560:2: ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 )* )
+            // InternalENVIRONMENT.g:7561:3: ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 )*
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutAssignment_23()); 
+            }
+            // InternalENVIRONMENT.g:7562:3: ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 )*
+            loop36:
+            do {
+                int alt36=2;
+                int LA36_0 = input.LA(1);
+
+                if ( (LA36_0==81) ) {
+                    alt36=1;
+                }
+
+
+                switch (alt36) {
+            	case 1 :
+            	    // InternalENVIRONMENT.g:7562:4: rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23
+            	    {
+            	    pushFollow(FollowSets000.FOLLOW_61);
+            	    rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23();
+
+            	    state._fsp--;
+            	    if (state.failed) return ;
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop36;
+                }
+            } while (true);
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutAssignment_23()); 
+            }
+
+            }
+
 
             }
 
@@ -24009,16 +24466,16 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__24"
-    // InternalENVIRONMENT.g:7429:1: rule__GSSEnvironmentMainInterface__Group__24 : rule__GSSEnvironmentMainInterface__Group__24__Impl rule__GSSEnvironmentMainInterface__Group__25 ;
+    // InternalENVIRONMENT.g:7571:1: rule__GSSEnvironmentMainInterface__Group__24 : rule__GSSEnvironmentMainInterface__Group__24__Impl rule__GSSEnvironmentMainInterface__Group__25 ;
     public final void rule__GSSEnvironmentMainInterface__Group__24() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7433:1: ( rule__GSSEnvironmentMainInterface__Group__24__Impl rule__GSSEnvironmentMainInterface__Group__25 )
-            // InternalENVIRONMENT.g:7434:2: rule__GSSEnvironmentMainInterface__Group__24__Impl rule__GSSEnvironmentMainInterface__Group__25
+            // InternalENVIRONMENT.g:7575:1: ( rule__GSSEnvironmentMainInterface__Group__24__Impl rule__GSSEnvironmentMainInterface__Group__25 )
+            // InternalENVIRONMENT.g:7576:2: rule__GSSEnvironmentMainInterface__Group__24__Impl rule__GSSEnvironmentMainInterface__Group__25
             {
-            pushFollow(FollowSets000.FOLLOW_14);
+            pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentMainInterface__Group__24__Impl();
 
             state._fsp--;
@@ -24047,82 +24504,25 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__24__Impl"
-    // InternalENVIRONMENT.g:7441:1: rule__GSSEnvironmentMainInterface__Group__24__Impl : ( ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 ) ) ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 )* ) ) ;
+    // InternalENVIRONMENT.g:7583:1: rule__GSSEnvironmentMainInterface__Group__24__Impl : ( '}' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__24__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7445:1: ( ( ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 ) ) ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 )* ) ) )
-            // InternalENVIRONMENT.g:7446:1: ( ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 ) ) ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 )* ) )
+            // InternalENVIRONMENT.g:7587:1: ( ( '}' ) )
+            // InternalENVIRONMENT.g:7588:1: ( '}' )
             {
-            // InternalENVIRONMENT.g:7446:1: ( ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 ) ) ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 )* ) )
-            // InternalENVIRONMENT.g:7447:2: ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 ) ) ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 )* )
-            {
-            // InternalENVIRONMENT.g:7447:2: ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 ) )
-            // InternalENVIRONMENT.g:7448:3: ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 )
+            // InternalENVIRONMENT.g:7588:1: ( '}' )
+            // InternalENVIRONMENT.g:7589:2: '}'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutAssignment_24()); 
+               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getRightCurlyBracketKeyword_24()); 
             }
-            // InternalENVIRONMENT.g:7449:3: ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 )
-            // InternalENVIRONMENT.g:7449:4: rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24
-            {
-            pushFollow(FollowSets000.FOLLOW_61);
-            rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
+            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutAssignment_24()); 
+               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getRightCurlyBracketKeyword_24()); 
             }
-
-            }
-
-            // InternalENVIRONMENT.g:7452:2: ( ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 )* )
-            // InternalENVIRONMENT.g:7453:3: ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 )*
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutAssignment_24()); 
-            }
-            // InternalENVIRONMENT.g:7454:3: ( rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 )*
-            loop36:
-            do {
-                int alt36=2;
-                int LA36_0 = input.LA(1);
-
-                if ( (LA36_0==81) ) {
-                    alt36=1;
-                }
-
-
-                switch (alt36) {
-            	case 1 :
-            	    // InternalENVIRONMENT.g:7454:4: rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24
-            	    {
-            	    pushFollow(FollowSets000.FOLLOW_61);
-            	    rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24();
-
-            	    state._fsp--;
-            	    if (state.failed) return ;
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop36;
-                }
-            } while (true);
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutAssignment_24()); 
-            }
-
-            }
-
 
             }
 
@@ -24145,22 +24545,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__25"
-    // InternalENVIRONMENT.g:7463:1: rule__GSSEnvironmentMainInterface__Group__25 : rule__GSSEnvironmentMainInterface__Group__25__Impl rule__GSSEnvironmentMainInterface__Group__26 ;
+    // InternalENVIRONMENT.g:7598:1: rule__GSSEnvironmentMainInterface__Group__25 : rule__GSSEnvironmentMainInterface__Group__25__Impl ;
     public final void rule__GSSEnvironmentMainInterface__Group__25() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7467:1: ( rule__GSSEnvironmentMainInterface__Group__25__Impl rule__GSSEnvironmentMainInterface__Group__26 )
-            // InternalENVIRONMENT.g:7468:2: rule__GSSEnvironmentMainInterface__Group__25__Impl rule__GSSEnvironmentMainInterface__Group__26
+            // InternalENVIRONMENT.g:7602:1: ( rule__GSSEnvironmentMainInterface__Group__25__Impl )
+            // InternalENVIRONMENT.g:7603:2: rule__GSSEnvironmentMainInterface__Group__25__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_7);
-            rule__GSSEnvironmentMainInterface__Group__25__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSEnvironmentMainInterface__Group__26();
+            rule__GSSEnvironmentMainInterface__Group__25__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -24183,24 +24578,24 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__25__Impl"
-    // InternalENVIRONMENT.g:7475:1: rule__GSSEnvironmentMainInterface__Group__25__Impl : ( '}' ) ;
+    // InternalENVIRONMENT.g:7609:1: rule__GSSEnvironmentMainInterface__Group__25__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group__25__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7479:1: ( ( '}' ) )
-            // InternalENVIRONMENT.g:7480:1: ( '}' )
+            // InternalENVIRONMENT.g:7613:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:7614:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:7480:1: ( '}' )
-            // InternalENVIRONMENT.g:7481:2: '}'
+            // InternalENVIRONMENT.g:7614:1: ( ';' )
+            // InternalENVIRONMENT.g:7615:2: ';'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getRightCurlyBracketKeyword_25()); 
+               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_25()); 
             }
-            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getRightCurlyBracketKeyword_25()); 
+               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_25()); 
             }
 
             }
@@ -24223,89 +24618,15 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__GSSEnvironmentMainInterface__Group__25__Impl"
 
 
-    // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__26"
-    // InternalENVIRONMENT.g:7490:1: rule__GSSEnvironmentMainInterface__Group__26 : rule__GSSEnvironmentMainInterface__Group__26__Impl ;
-    public final void rule__GSSEnvironmentMainInterface__Group__26() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalENVIRONMENT.g:7494:1: ( rule__GSSEnvironmentMainInterface__Group__26__Impl )
-            // InternalENVIRONMENT.g:7495:2: rule__GSSEnvironmentMainInterface__Group__26__Impl
-            {
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSEnvironmentMainInterface__Group__26__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSEnvironmentMainInterface__Group__26"
-
-
-    // $ANTLR start "rule__GSSEnvironmentMainInterface__Group__26__Impl"
-    // InternalENVIRONMENT.g:7501:1: rule__GSSEnvironmentMainInterface__Group__26__Impl : ( ';' ) ;
-    public final void rule__GSSEnvironmentMainInterface__Group__26__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalENVIRONMENT.g:7505:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:7506:1: ( ';' )
-            {
-            // InternalENVIRONMENT.g:7506:1: ( ';' )
-            // InternalENVIRONMENT.g:7507:2: ';'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_26()); 
-            }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_26()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSEnvironmentMainInterface__Group__26__Impl"
-
-
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_22__0"
-    // InternalENVIRONMENT.g:7517:1: rule__GSSEnvironmentMainInterface__Group_22__0 : rule__GSSEnvironmentMainInterface__Group_22__0__Impl rule__GSSEnvironmentMainInterface__Group_22__1 ;
+    // InternalENVIRONMENT.g:7625:1: rule__GSSEnvironmentMainInterface__Group_22__0 : rule__GSSEnvironmentMainInterface__Group_22__0__Impl rule__GSSEnvironmentMainInterface__Group_22__1 ;
     public final void rule__GSSEnvironmentMainInterface__Group_22__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7521:1: ( rule__GSSEnvironmentMainInterface__Group_22__0__Impl rule__GSSEnvironmentMainInterface__Group_22__1 )
-            // InternalENVIRONMENT.g:7522:2: rule__GSSEnvironmentMainInterface__Group_22__0__Impl rule__GSSEnvironmentMainInterface__Group_22__1
+            // InternalENVIRONMENT.g:7629:1: ( rule__GSSEnvironmentMainInterface__Group_22__0__Impl rule__GSSEnvironmentMainInterface__Group_22__1 )
+            // InternalENVIRONMENT.g:7630:2: rule__GSSEnvironmentMainInterface__Group_22__0__Impl rule__GSSEnvironmentMainInterface__Group_22__1
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSEnvironmentMainInterface__Group_22__0__Impl();
@@ -24336,22 +24657,22 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_22__0__Impl"
-    // InternalENVIRONMENT.g:7529:1: rule__GSSEnvironmentMainInterface__Group_22__0__Impl : ( 'protocolID' ) ;
+    // InternalENVIRONMENT.g:7637:1: rule__GSSEnvironmentMainInterface__Group_22__0__Impl : ( 'protocolID' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group_22__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7533:1: ( ( 'protocolID' ) )
-            // InternalENVIRONMENT.g:7534:1: ( 'protocolID' )
+            // InternalENVIRONMENT.g:7641:1: ( ( 'protocolID' ) )
+            // InternalENVIRONMENT.g:7642:1: ( 'protocolID' )
             {
-            // InternalENVIRONMENT.g:7534:1: ( 'protocolID' )
-            // InternalENVIRONMENT.g:7535:2: 'protocolID'
+            // InternalENVIRONMENT.g:7642:1: ( 'protocolID' )
+            // InternalENVIRONMENT.g:7643:2: 'protocolID'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolIDKeyword_22_0()); 
             }
-            match(input,78,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,79,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolIDKeyword_22_0()); 
             }
@@ -24377,14 +24698,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_22__1"
-    // InternalENVIRONMENT.g:7544:1: rule__GSSEnvironmentMainInterface__Group_22__1 : rule__GSSEnvironmentMainInterface__Group_22__1__Impl rule__GSSEnvironmentMainInterface__Group_22__2 ;
+    // InternalENVIRONMENT.g:7652:1: rule__GSSEnvironmentMainInterface__Group_22__1 : rule__GSSEnvironmentMainInterface__Group_22__1__Impl rule__GSSEnvironmentMainInterface__Group_22__2 ;
     public final void rule__GSSEnvironmentMainInterface__Group_22__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7548:1: ( rule__GSSEnvironmentMainInterface__Group_22__1__Impl rule__GSSEnvironmentMainInterface__Group_22__2 )
-            // InternalENVIRONMENT.g:7549:2: rule__GSSEnvironmentMainInterface__Group_22__1__Impl rule__GSSEnvironmentMainInterface__Group_22__2
+            // InternalENVIRONMENT.g:7656:1: ( rule__GSSEnvironmentMainInterface__Group_22__1__Impl rule__GSSEnvironmentMainInterface__Group_22__2 )
+            // InternalENVIRONMENT.g:7657:2: rule__GSSEnvironmentMainInterface__Group_22__1__Impl rule__GSSEnvironmentMainInterface__Group_22__2
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSEnvironmentMainInterface__Group_22__1__Impl();
@@ -24415,17 +24736,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_22__1__Impl"
-    // InternalENVIRONMENT.g:7556:1: rule__GSSEnvironmentMainInterface__Group_22__1__Impl : ( ':=' ) ;
+    // InternalENVIRONMENT.g:7664:1: rule__GSSEnvironmentMainInterface__Group_22__1__Impl : ( ':=' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group_22__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7560:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:7561:1: ( ':=' )
+            // InternalENVIRONMENT.g:7668:1: ( ( ':=' ) )
+            // InternalENVIRONMENT.g:7669:1: ( ':=' )
             {
-            // InternalENVIRONMENT.g:7561:1: ( ':=' )
-            // InternalENVIRONMENT.g:7562:2: ':='
+            // InternalENVIRONMENT.g:7669:1: ( ':=' )
+            // InternalENVIRONMENT.g:7670:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getColonEqualsSignKeyword_22_1()); 
@@ -24456,14 +24777,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_22__2"
-    // InternalENVIRONMENT.g:7571:1: rule__GSSEnvironmentMainInterface__Group_22__2 : rule__GSSEnvironmentMainInterface__Group_22__2__Impl rule__GSSEnvironmentMainInterface__Group_22__3 ;
+    // InternalENVIRONMENT.g:7679:1: rule__GSSEnvironmentMainInterface__Group_22__2 : rule__GSSEnvironmentMainInterface__Group_22__2__Impl rule__GSSEnvironmentMainInterface__Group_22__3 ;
     public final void rule__GSSEnvironmentMainInterface__Group_22__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7575:1: ( rule__GSSEnvironmentMainInterface__Group_22__2__Impl rule__GSSEnvironmentMainInterface__Group_22__3 )
-            // InternalENVIRONMENT.g:7576:2: rule__GSSEnvironmentMainInterface__Group_22__2__Impl rule__GSSEnvironmentMainInterface__Group_22__3
+            // InternalENVIRONMENT.g:7683:1: ( rule__GSSEnvironmentMainInterface__Group_22__2__Impl rule__GSSEnvironmentMainInterface__Group_22__3 )
+            // InternalENVIRONMENT.g:7684:2: rule__GSSEnvironmentMainInterface__Group_22__2__Impl rule__GSSEnvironmentMainInterface__Group_22__3
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSEnvironmentMainInterface__Group_22__2__Impl();
@@ -24494,23 +24815,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_22__2__Impl"
-    // InternalENVIRONMENT.g:7583:1: rule__GSSEnvironmentMainInterface__Group_22__2__Impl : ( ( rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2 ) ) ;
+    // InternalENVIRONMENT.g:7691:1: rule__GSSEnvironmentMainInterface__Group_22__2__Impl : ( ( rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2 ) ) ;
     public final void rule__GSSEnvironmentMainInterface__Group_22__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7587:1: ( ( ( rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2 ) ) )
-            // InternalENVIRONMENT.g:7588:1: ( ( rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2 ) )
+            // InternalENVIRONMENT.g:7695:1: ( ( ( rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2 ) ) )
+            // InternalENVIRONMENT.g:7696:1: ( ( rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2 ) )
             {
-            // InternalENVIRONMENT.g:7588:1: ( ( rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2 ) )
-            // InternalENVIRONMENT.g:7589:2: ( rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2 )
+            // InternalENVIRONMENT.g:7696:1: ( ( rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2 ) )
+            // InternalENVIRONMENT.g:7697:2: ( rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolIDAssignment_22_2()); 
             }
-            // InternalENVIRONMENT.g:7590:2: ( rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2 )
-            // InternalENVIRONMENT.g:7590:3: rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2
+            // InternalENVIRONMENT.g:7698:2: ( rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2 )
+            // InternalENVIRONMENT.g:7698:3: rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2();
@@ -24545,14 +24866,14 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_22__3"
-    // InternalENVIRONMENT.g:7598:1: rule__GSSEnvironmentMainInterface__Group_22__3 : rule__GSSEnvironmentMainInterface__Group_22__3__Impl ;
+    // InternalENVIRONMENT.g:7706:1: rule__GSSEnvironmentMainInterface__Group_22__3 : rule__GSSEnvironmentMainInterface__Group_22__3__Impl ;
     public final void rule__GSSEnvironmentMainInterface__Group_22__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7602:1: ( rule__GSSEnvironmentMainInterface__Group_22__3__Impl )
-            // InternalENVIRONMENT.g:7603:2: rule__GSSEnvironmentMainInterface__Group_22__3__Impl
+            // InternalENVIRONMENT.g:7710:1: ( rule__GSSEnvironmentMainInterface__Group_22__3__Impl )
+            // InternalENVIRONMENT.g:7711:2: rule__GSSEnvironmentMainInterface__Group_22__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSEnvironmentMainInterface__Group_22__3__Impl();
@@ -24578,17 +24899,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_22__3__Impl"
-    // InternalENVIRONMENT.g:7609:1: rule__GSSEnvironmentMainInterface__Group_22__3__Impl : ( ';' ) ;
+    // InternalENVIRONMENT.g:7717:1: rule__GSSEnvironmentMainInterface__Group_22__3__Impl : ( ';' ) ;
     public final void rule__GSSEnvironmentMainInterface__Group_22__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:7613:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:7614:1: ( ';' )
+            // InternalENVIRONMENT.g:7721:1: ( ( ';' ) )
+            // InternalENVIRONMENT.g:7722:1: ( ';' )
             {
-            // InternalENVIRONMENT.g:7614:1: ( ';' )
-            // InternalENVIRONMENT.g:7615:2: ';'
+            // InternalENVIRONMENT.g:7722:1: ( ';' )
+            // InternalENVIRONMENT.g:7723:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_22_3()); 
@@ -24616,327 +24937,6 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
         return ;
     }
     // $ANTLR end "rule__GSSEnvironmentMainInterface__Group_22__3__Impl"
-
-
-    // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_23__0"
-    // InternalENVIRONMENT.g:7625:1: rule__GSSEnvironmentMainInterface__Group_23__0 : rule__GSSEnvironmentMainInterface__Group_23__0__Impl rule__GSSEnvironmentMainInterface__Group_23__1 ;
-    public final void rule__GSSEnvironmentMainInterface__Group_23__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalENVIRONMENT.g:7629:1: ( rule__GSSEnvironmentMainInterface__Group_23__0__Impl rule__GSSEnvironmentMainInterface__Group_23__1 )
-            // InternalENVIRONMENT.g:7630:2: rule__GSSEnvironmentMainInterface__Group_23__0__Impl rule__GSSEnvironmentMainInterface__Group_23__1
-            {
-            pushFollow(FollowSets000.FOLLOW_5);
-            rule__GSSEnvironmentMainInterface__Group_23__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSEnvironmentMainInterface__Group_23__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSEnvironmentMainInterface__Group_23__0"
-
-
-    // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_23__0__Impl"
-    // InternalENVIRONMENT.g:7637:1: rule__GSSEnvironmentMainInterface__Group_23__0__Impl : ( 'ProtocolPacketsFile' ) ;
-    public final void rule__GSSEnvironmentMainInterface__Group_23__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalENVIRONMENT.g:7641:1: ( ( 'ProtocolPacketsFile' ) )
-            // InternalENVIRONMENT.g:7642:1: ( 'ProtocolPacketsFile' )
-            {
-            // InternalENVIRONMENT.g:7642:1: ( 'ProtocolPacketsFile' )
-            // InternalENVIRONMENT.g:7643:2: 'ProtocolPacketsFile'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolPacketsFileKeyword_23_0()); 
-            }
-            match(input,79,FollowSets000.FOLLOW_2); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolPacketsFileKeyword_23_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSEnvironmentMainInterface__Group_23__0__Impl"
-
-
-    // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_23__1"
-    // InternalENVIRONMENT.g:7652:1: rule__GSSEnvironmentMainInterface__Group_23__1 : rule__GSSEnvironmentMainInterface__Group_23__1__Impl rule__GSSEnvironmentMainInterface__Group_23__2 ;
-    public final void rule__GSSEnvironmentMainInterface__Group_23__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalENVIRONMENT.g:7656:1: ( rule__GSSEnvironmentMainInterface__Group_23__1__Impl rule__GSSEnvironmentMainInterface__Group_23__2 )
-            // InternalENVIRONMENT.g:7657:2: rule__GSSEnvironmentMainInterface__Group_23__1__Impl rule__GSSEnvironmentMainInterface__Group_23__2
-            {
-            pushFollow(FollowSets000.FOLLOW_8);
-            rule__GSSEnvironmentMainInterface__Group_23__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSEnvironmentMainInterface__Group_23__2();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSEnvironmentMainInterface__Group_23__1"
-
-
-    // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_23__1__Impl"
-    // InternalENVIRONMENT.g:7664:1: rule__GSSEnvironmentMainInterface__Group_23__1__Impl : ( ':=' ) ;
-    public final void rule__GSSEnvironmentMainInterface__Group_23__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalENVIRONMENT.g:7668:1: ( ( ':=' ) )
-            // InternalENVIRONMENT.g:7669:1: ( ':=' )
-            {
-            // InternalENVIRONMENT.g:7669:1: ( ':=' )
-            // InternalENVIRONMENT.g:7670:2: ':='
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getColonEqualsSignKeyword_23_1()); 
-            }
-            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getColonEqualsSignKeyword_23_1()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSEnvironmentMainInterface__Group_23__1__Impl"
-
-
-    // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_23__2"
-    // InternalENVIRONMENT.g:7679:1: rule__GSSEnvironmentMainInterface__Group_23__2 : rule__GSSEnvironmentMainInterface__Group_23__2__Impl rule__GSSEnvironmentMainInterface__Group_23__3 ;
-    public final void rule__GSSEnvironmentMainInterface__Group_23__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalENVIRONMENT.g:7683:1: ( rule__GSSEnvironmentMainInterface__Group_23__2__Impl rule__GSSEnvironmentMainInterface__Group_23__3 )
-            // InternalENVIRONMENT.g:7684:2: rule__GSSEnvironmentMainInterface__Group_23__2__Impl rule__GSSEnvironmentMainInterface__Group_23__3
-            {
-            pushFollow(FollowSets000.FOLLOW_7);
-            rule__GSSEnvironmentMainInterface__Group_23__2__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSEnvironmentMainInterface__Group_23__3();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSEnvironmentMainInterface__Group_23__2"
-
-
-    // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_23__2__Impl"
-    // InternalENVIRONMENT.g:7691:1: rule__GSSEnvironmentMainInterface__Group_23__2__Impl : ( ( rule__GSSEnvironmentMainInterface__ProtocolPacketsFileAssignment_23_2 ) ) ;
-    public final void rule__GSSEnvironmentMainInterface__Group_23__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalENVIRONMENT.g:7695:1: ( ( ( rule__GSSEnvironmentMainInterface__ProtocolPacketsFileAssignment_23_2 ) ) )
-            // InternalENVIRONMENT.g:7696:1: ( ( rule__GSSEnvironmentMainInterface__ProtocolPacketsFileAssignment_23_2 ) )
-            {
-            // InternalENVIRONMENT.g:7696:1: ( ( rule__GSSEnvironmentMainInterface__ProtocolPacketsFileAssignment_23_2 ) )
-            // InternalENVIRONMENT.g:7697:2: ( rule__GSSEnvironmentMainInterface__ProtocolPacketsFileAssignment_23_2 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolPacketsFileAssignment_23_2()); 
-            }
-            // InternalENVIRONMENT.g:7698:2: ( rule__GSSEnvironmentMainInterface__ProtocolPacketsFileAssignment_23_2 )
-            // InternalENVIRONMENT.g:7698:3: rule__GSSEnvironmentMainInterface__ProtocolPacketsFileAssignment_23_2
-            {
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSEnvironmentMainInterface__ProtocolPacketsFileAssignment_23_2();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolPacketsFileAssignment_23_2()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSEnvironmentMainInterface__Group_23__2__Impl"
-
-
-    // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_23__3"
-    // InternalENVIRONMENT.g:7706:1: rule__GSSEnvironmentMainInterface__Group_23__3 : rule__GSSEnvironmentMainInterface__Group_23__3__Impl ;
-    public final void rule__GSSEnvironmentMainInterface__Group_23__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalENVIRONMENT.g:7710:1: ( rule__GSSEnvironmentMainInterface__Group_23__3__Impl )
-            // InternalENVIRONMENT.g:7711:2: rule__GSSEnvironmentMainInterface__Group_23__3__Impl
-            {
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSEnvironmentMainInterface__Group_23__3__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSEnvironmentMainInterface__Group_23__3"
-
-
-    // $ANTLR start "rule__GSSEnvironmentMainInterface__Group_23__3__Impl"
-    // InternalENVIRONMENT.g:7717:1: rule__GSSEnvironmentMainInterface__Group_23__3__Impl : ( ';' ) ;
-    public final void rule__GSSEnvironmentMainInterface__Group_23__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalENVIRONMENT.g:7721:1: ( ( ';' ) )
-            // InternalENVIRONMENT.g:7722:1: ( ';' )
-            {
-            // InternalENVIRONMENT.g:7722:1: ( ';' )
-            // InternalENVIRONMENT.g:7723:2: ';'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_23_3()); 
-            }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getSemicolonKeyword_23_3()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSEnvironmentMainInterface__Group_23__3__Impl"
 
 
     // $ANTLR start "rule__GSSEnvironmentInterface__Group__0"
@@ -25151,7 +25151,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentInterfaceAccess().getIdKeyword_2()); 
             }
-            match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentInterfaceAccess().getIdKeyword_2()); 
             }
@@ -25477,7 +25477,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentInterfaceAccess().getNameKeyword_6()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentInterfaceAccess().getNameKeyword_6()); 
             }
@@ -25803,7 +25803,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentInterfaceAccess().getIfTypeKeyword_10()); 
             }
-            match(input,75,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,76,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentInterfaceAccess().getIfTypeKeyword_10()); 
             }
@@ -26129,7 +26129,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentInterfaceAccess().getIfConfigKeyword_14()); 
             }
-            match(input,76,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,77,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentInterfaceAccess().getIfConfigKeyword_14()); 
             }
@@ -26455,7 +26455,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentInterfaceAccess().getIoTypeKeyword_18()); 
             }
-            match(input,77,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,78,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentInterfaceAccess().getIoTypeKeyword_18()); 
             }
@@ -26785,7 +26785,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             int alt37=2;
             int LA37_0 = input.LA(1);
 
-            if ( (LA37_0==78) ) {
+            if ( (LA37_0==79) ) {
                 alt37=1;
             }
             switch (alt37) {
@@ -27170,7 +27170,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentInterfaceAccess().getProtocolIDKeyword_22_0()); 
             }
-            match(input,78,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,79,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentInterfaceAccess().getProtocolIDKeyword_22_0()); 
             }
@@ -27649,7 +27649,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentLevelInOutAccess().getIdKeyword_2()); 
             }
-            match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentLevelInOutAccess().getIdKeyword_2()); 
             }
@@ -27975,7 +27975,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentLevelInOutAccess().getNameKeyword_6()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentLevelInOutAccess().getNameKeyword_6()); 
             }
@@ -30432,7 +30432,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentLevelInAccess().getIdKeyword_2()); 
             }
-            match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentLevelInAccess().getIdKeyword_2()); 
             }
@@ -30758,7 +30758,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentLevelInAccess().getNameKeyword_6()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentLevelInAccess().getNameKeyword_6()); 
             }
@@ -32142,7 +32142,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentLevelOutAccess().getIdKeyword_2()); 
             }
-            match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentLevelOutAccess().getIdKeyword_2()); 
             }
@@ -32468,7 +32468,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentLevelOutAccess().getNameKeyword_6()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentLevelOutAccess().getNameKeyword_6()); 
             }
@@ -34504,7 +34504,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentSpecialPacketAccess().getNameKeyword_6()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentSpecialPacketAccess().getNameKeyword_6()); 
             }
@@ -34830,7 +34830,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentSpecialPacketAccess().getIdKeyword_10()); 
             }
-            match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentSpecialPacketAccess().getIdKeyword_10()); 
             }
@@ -44337,7 +44337,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCLevel2Access().getNameKeyword_2()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentPeriodicTCLevel2Access().getNameKeyword_2()); 
             }
@@ -44663,7 +44663,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCLevel2Access().getIdKeyword_6()); 
             }
-            match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentPeriodicTCLevel2Access().getIdKeyword_6()); 
             }
@@ -48709,7 +48709,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCLevel1Access().getNameKeyword_2()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentPeriodicTCLevel1Access().getNameKeyword_2()); 
             }
@@ -49035,7 +49035,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCLevel1Access().getIdKeyword_6()); 
             }
-            match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentPeriodicTCLevel1Access().getIdKeyword_6()); 
             }
@@ -52239,7 +52239,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCLevel0Access().getNameKeyword_2()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentPeriodicTCLevel0Access().getNameKeyword_2()); 
             }
@@ -52565,7 +52565,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCLevel0Access().getIdKeyword_6()); 
             }
-            match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentPeriodicTCLevel0Access().getIdKeyword_6()); 
             }
@@ -54927,7 +54927,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGlobalVarAccess().getNameKeyword_2()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGlobalVarAccess().getNameKeyword_2()); 
             }
@@ -55253,7 +55253,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGlobalVarAccess().getIdKeyword_6()); 
             }
-            match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentGlobalVarAccess().getIdKeyword_6()); 
             }
@@ -62780,7 +62780,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPlotAccess().getNameKeyword_2()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentPlotAccess().getNameKeyword_2()); 
             }
@@ -63832,7 +63832,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentAlarmMsgAccess().getNameKeyword_2()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentAlarmMsgAccess().getNameKeyword_2()); 
             }
@@ -65210,7 +65210,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentModifyAccess().getNameKeyword_2()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentModifyAccess().getNameKeyword_2()); 
             }
@@ -66588,7 +66588,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentAlarmValAccess().getNameKeyword_2()); 
             }
-            match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSEnvironmentAlarmValAccess().getNameKeyword_2()); 
             }
@@ -73405,10 +73405,10 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             int alt72=2;
             int LA72_0 = input.LA(1);
 
-            if ( LA72_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 0) ) {
+            if ( LA72_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 0) ) {
                 alt72=1;
             }
-            else if ( LA72_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 1) ) {
+            else if ( LA72_0 == 52 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 1) ) {
                 alt72=2;
             }
             else {
@@ -73555,10 +73555,10 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             int alt73=2;
             int LA73_0 = input.LA(1);
 
-            if ( LA73_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 0) ) {
+            if ( LA73_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 0) ) {
                 alt73=1;
             }
-            else if ( LA73_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 1) ) {
+            else if ( LA73_0 == 52 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 1) ) {
                 alt73=1;
             }
             switch (alt73) {
@@ -74470,29 +74470,41 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__GSSEnvironmentOptions__DiscardErrorFlagsAssignment_5"
 
 
-    // $ANTLR start "rule__GSSEnvironmentProtocols__ProtocolAssignment_2"
-    // InternalENVIRONMENT.g:24079:1: rule__GSSEnvironmentProtocols__ProtocolAssignment_2 : ( ruleGSSEnvironmentProtocol ) ;
-    public final void rule__GSSEnvironmentProtocols__ProtocolAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__GSSEnvironmentProtocols__ProtocolPacketsFileAssignment_2_2"
+    // InternalENVIRONMENT.g:24079:1: rule__GSSEnvironmentProtocols__ProtocolPacketsFileAssignment_2_2 : ( ( ruleVersionedQualifiedName ) ) ;
+    public final void rule__GSSEnvironmentProtocols__ProtocolPacketsFileAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24083:1: ( ( ruleGSSEnvironmentProtocol ) )
-            // InternalENVIRONMENT.g:24084:2: ( ruleGSSEnvironmentProtocol )
+            // InternalENVIRONMENT.g:24083:1: ( ( ( ruleVersionedQualifiedName ) ) )
+            // InternalENVIRONMENT.g:24084:2: ( ( ruleVersionedQualifiedName ) )
             {
-            // InternalENVIRONMENT.g:24084:2: ( ruleGSSEnvironmentProtocol )
-            // InternalENVIRONMENT.g:24085:3: ruleGSSEnvironmentProtocol
+            // InternalENVIRONMENT.g:24084:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalENVIRONMENT.g:24085:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolGSSEnvironmentProtocolParserRuleCall_2_0()); 
+               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_2_2_0()); 
+            }
+            // InternalENVIRONMENT.g:24086:3: ( ruleVersionedQualifiedName )
+            // InternalENVIRONMENT.g:24087:4: ruleVersionedQualifiedName
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolPacketsFileGSSProtocolPacketsProtocolPacketsVersionedQualifiedNameParserRuleCall_2_2_0_1()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSEnvironmentProtocol();
+            ruleVersionedQualifiedName();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolGSSEnvironmentProtocolParserRuleCall_2_0()); 
+               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolPacketsFileGSSProtocolPacketsProtocolPacketsVersionedQualifiedNameParserRuleCall_2_2_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_2_2_0()); 
             }
 
             }
@@ -74512,21 +74524,66 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__GSSEnvironmentProtocols__ProtocolAssignment_2"
+    // $ANTLR end "rule__GSSEnvironmentProtocols__ProtocolPacketsFileAssignment_2_2"
+
+
+    // $ANTLR start "rule__GSSEnvironmentProtocols__ProtocolAssignment_3"
+    // InternalENVIRONMENT.g:24098:1: rule__GSSEnvironmentProtocols__ProtocolAssignment_3 : ( ruleGSSEnvironmentProtocol ) ;
+    public final void rule__GSSEnvironmentProtocols__ProtocolAssignment_3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalENVIRONMENT.g:24102:1: ( ( ruleGSSEnvironmentProtocol ) )
+            // InternalENVIRONMENT.g:24103:2: ( ruleGSSEnvironmentProtocol )
+            {
+            // InternalENVIRONMENT.g:24103:2: ( ruleGSSEnvironmentProtocol )
+            // InternalENVIRONMENT.g:24104:3: ruleGSSEnvironmentProtocol
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolGSSEnvironmentProtocolParserRuleCall_3_0()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleGSSEnvironmentProtocol();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolGSSEnvironmentProtocolParserRuleCall_3_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSEnvironmentProtocols__ProtocolAssignment_3"
 
 
     // $ANTLR start "rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2"
-    // InternalENVIRONMENT.g:24094:1: rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2 : ( ruleGSSEnvironmentMainInterface ) ;
+    // InternalENVIRONMENT.g:24113:1: rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2 : ( ruleGSSEnvironmentMainInterface ) ;
     public final void rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24098:1: ( ( ruleGSSEnvironmentMainInterface ) )
-            // InternalENVIRONMENT.g:24099:2: ( ruleGSSEnvironmentMainInterface )
+            // InternalENVIRONMENT.g:24117:1: ( ( ruleGSSEnvironmentMainInterface ) )
+            // InternalENVIRONMENT.g:24118:2: ( ruleGSSEnvironmentMainInterface )
             {
-            // InternalENVIRONMENT.g:24099:2: ( ruleGSSEnvironmentMainInterface )
-            // InternalENVIRONMENT.g:24100:3: ruleGSSEnvironmentMainInterface
+            // InternalENVIRONMENT.g:24118:2: ( ruleGSSEnvironmentMainInterface )
+            // InternalENVIRONMENT.g:24119:3: ruleGSSEnvironmentMainInterface
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentInterfacesAccess().getMainInterfaceGSSEnvironmentMainInterfaceParserRuleCall_2_0()); 
@@ -74561,17 +74618,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentInterfaces__InterfaceAssignment_3"
-    // InternalENVIRONMENT.g:24109:1: rule__GSSEnvironmentInterfaces__InterfaceAssignment_3 : ( ruleGSSEnvironmentInterface ) ;
+    // InternalENVIRONMENT.g:24128:1: rule__GSSEnvironmentInterfaces__InterfaceAssignment_3 : ( ruleGSSEnvironmentInterface ) ;
     public final void rule__GSSEnvironmentInterfaces__InterfaceAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24113:1: ( ( ruleGSSEnvironmentInterface ) )
-            // InternalENVIRONMENT.g:24114:2: ( ruleGSSEnvironmentInterface )
+            // InternalENVIRONMENT.g:24132:1: ( ( ruleGSSEnvironmentInterface ) )
+            // InternalENVIRONMENT.g:24133:2: ( ruleGSSEnvironmentInterface )
             {
-            // InternalENVIRONMENT.g:24114:2: ( ruleGSSEnvironmentInterface )
-            // InternalENVIRONMENT.g:24115:3: ruleGSSEnvironmentInterface
+            // InternalENVIRONMENT.g:24133:2: ( ruleGSSEnvironmentInterface )
+            // InternalENVIRONMENT.g:24134:3: ruleGSSEnvironmentInterface
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentInterfacesAccess().getInterfaceGSSEnvironmentInterfaceParserRuleCall_3_0()); 
@@ -74606,17 +74663,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2"
-    // InternalENVIRONMENT.g:24124:1: rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2 : ( ruleGSSEnvironmentSpecialPacket ) ;
+    // InternalENVIRONMENT.g:24143:1: rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2 : ( ruleGSSEnvironmentSpecialPacket ) ;
     public final void rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24128:1: ( ( ruleGSSEnvironmentSpecialPacket ) )
-            // InternalENVIRONMENT.g:24129:2: ( ruleGSSEnvironmentSpecialPacket )
+            // InternalENVIRONMENT.g:24147:1: ( ( ruleGSSEnvironmentSpecialPacket ) )
+            // InternalENVIRONMENT.g:24148:2: ( ruleGSSEnvironmentSpecialPacket )
             {
-            // InternalENVIRONMENT.g:24129:2: ( ruleGSSEnvironmentSpecialPacket )
-            // InternalENVIRONMENT.g:24130:3: ruleGSSEnvironmentSpecialPacket
+            // InternalENVIRONMENT.g:24148:2: ( ruleGSSEnvironmentSpecialPacket )
+            // InternalENVIRONMENT.g:24149:3: ruleGSSEnvironmentSpecialPacket
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getSpecialPacketGSSEnvironmentSpecialPacketParserRuleCall_2_0()); 
@@ -74651,17 +74708,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__PeriodicTC_level_2Assignment_3_0"
-    // InternalENVIRONMENT.g:24139:1: rule__GSSEnvironmentPeriodicTCs__PeriodicTC_level_2Assignment_3_0 : ( ruleGSSEnvironmentPeriodicTCLevel2 ) ;
+    // InternalENVIRONMENT.g:24158:1: rule__GSSEnvironmentPeriodicTCs__PeriodicTC_level_2Assignment_3_0 : ( ruleGSSEnvironmentPeriodicTCLevel2 ) ;
     public final void rule__GSSEnvironmentPeriodicTCs__PeriodicTC_level_2Assignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24143:1: ( ( ruleGSSEnvironmentPeriodicTCLevel2 ) )
-            // InternalENVIRONMENT.g:24144:2: ( ruleGSSEnvironmentPeriodicTCLevel2 )
+            // InternalENVIRONMENT.g:24162:1: ( ( ruleGSSEnvironmentPeriodicTCLevel2 ) )
+            // InternalENVIRONMENT.g:24163:2: ( ruleGSSEnvironmentPeriodicTCLevel2 )
             {
-            // InternalENVIRONMENT.g:24144:2: ( ruleGSSEnvironmentPeriodicTCLevel2 )
-            // InternalENVIRONMENT.g:24145:3: ruleGSSEnvironmentPeriodicTCLevel2
+            // InternalENVIRONMENT.g:24163:2: ( ruleGSSEnvironmentPeriodicTCLevel2 )
+            // InternalENVIRONMENT.g:24164:3: ruleGSSEnvironmentPeriodicTCLevel2
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCsAccess().getPeriodicTC_level_2GSSEnvironmentPeriodicTCLevel2ParserRuleCall_3_0_0()); 
@@ -74696,17 +74753,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__PeriodicTC_level_1Assignment_3_1"
-    // InternalENVIRONMENT.g:24154:1: rule__GSSEnvironmentPeriodicTCs__PeriodicTC_level_1Assignment_3_1 : ( ruleGSSEnvironmentPeriodicTCLevel1 ) ;
+    // InternalENVIRONMENT.g:24173:1: rule__GSSEnvironmentPeriodicTCs__PeriodicTC_level_1Assignment_3_1 : ( ruleGSSEnvironmentPeriodicTCLevel1 ) ;
     public final void rule__GSSEnvironmentPeriodicTCs__PeriodicTC_level_1Assignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24158:1: ( ( ruleGSSEnvironmentPeriodicTCLevel1 ) )
-            // InternalENVIRONMENT.g:24159:2: ( ruleGSSEnvironmentPeriodicTCLevel1 )
+            // InternalENVIRONMENT.g:24177:1: ( ( ruleGSSEnvironmentPeriodicTCLevel1 ) )
+            // InternalENVIRONMENT.g:24178:2: ( ruleGSSEnvironmentPeriodicTCLevel1 )
             {
-            // InternalENVIRONMENT.g:24159:2: ( ruleGSSEnvironmentPeriodicTCLevel1 )
-            // InternalENVIRONMENT.g:24160:3: ruleGSSEnvironmentPeriodicTCLevel1
+            // InternalENVIRONMENT.g:24178:2: ( ruleGSSEnvironmentPeriodicTCLevel1 )
+            // InternalENVIRONMENT.g:24179:3: ruleGSSEnvironmentPeriodicTCLevel1
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCsAccess().getPeriodicTC_level_1GSSEnvironmentPeriodicTCLevel1ParserRuleCall_3_1_0()); 
@@ -74741,17 +74798,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPeriodicTCs__PeriodicTC_level_0Assignment_3_2"
-    // InternalENVIRONMENT.g:24169:1: rule__GSSEnvironmentPeriodicTCs__PeriodicTC_level_0Assignment_3_2 : ( ruleGSSEnvironmentPeriodicTCLevel0 ) ;
+    // InternalENVIRONMENT.g:24188:1: rule__GSSEnvironmentPeriodicTCs__PeriodicTC_level_0Assignment_3_2 : ( ruleGSSEnvironmentPeriodicTCLevel0 ) ;
     public final void rule__GSSEnvironmentPeriodicTCs__PeriodicTC_level_0Assignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24173:1: ( ( ruleGSSEnvironmentPeriodicTCLevel0 ) )
-            // InternalENVIRONMENT.g:24174:2: ( ruleGSSEnvironmentPeriodicTCLevel0 )
+            // InternalENVIRONMENT.g:24192:1: ( ( ruleGSSEnvironmentPeriodicTCLevel0 ) )
+            // InternalENVIRONMENT.g:24193:2: ( ruleGSSEnvironmentPeriodicTCLevel0 )
             {
-            // InternalENVIRONMENT.g:24174:2: ( ruleGSSEnvironmentPeriodicTCLevel0 )
-            // InternalENVIRONMENT.g:24175:3: ruleGSSEnvironmentPeriodicTCLevel0
+            // InternalENVIRONMENT.g:24193:2: ( ruleGSSEnvironmentPeriodicTCLevel0 )
+            // InternalENVIRONMENT.g:24194:3: ruleGSSEnvironmentPeriodicTCLevel0
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPeriodicTCsAccess().getPeriodicTC_level_0GSSEnvironmentPeriodicTCLevel0ParserRuleCall_3_2_0()); 
@@ -74786,17 +74843,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2"
-    // InternalENVIRONMENT.g:24184:1: rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 : ( ruleGSSEnvironmentGlobalVar ) ;
+    // InternalENVIRONMENT.g:24203:1: rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2 : ( ruleGSSEnvironmentGlobalVar ) ;
     public final void rule__GSSEnvironmentGlobalVars__GlobalVarAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24188:1: ( ( ruleGSSEnvironmentGlobalVar ) )
-            // InternalENVIRONMENT.g:24189:2: ( ruleGSSEnvironmentGlobalVar )
+            // InternalENVIRONMENT.g:24207:1: ( ( ruleGSSEnvironmentGlobalVar ) )
+            // InternalENVIRONMENT.g:24208:2: ( ruleGSSEnvironmentGlobalVar )
             {
-            // InternalENVIRONMENT.g:24189:2: ( ruleGSSEnvironmentGlobalVar )
-            // InternalENVIRONMENT.g:24190:3: ruleGSSEnvironmentGlobalVar
+            // InternalENVIRONMENT.g:24208:2: ( ruleGSSEnvironmentGlobalVar )
+            // InternalENVIRONMENT.g:24209:3: ruleGSSEnvironmentGlobalVar
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGlobalVarsAccess().getGlobalVarGSSEnvironmentGlobalVarParserRuleCall_2_0()); 
@@ -74831,23 +74888,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2"
-    // InternalENVIRONMENT.g:24199:1: rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2 : ( ( ruleVersionedQualifiedName ) ) ;
+    // InternalENVIRONMENT.g:24218:1: rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2 : ( ( ruleVersionedQualifiedName ) ) ;
     public final void rule__GSSEnvironmentMonitors__ChartsFileAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24203:1: ( ( ( ruleVersionedQualifiedName ) ) )
-            // InternalENVIRONMENT.g:24204:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalENVIRONMENT.g:24222:1: ( ( ( ruleVersionedQualifiedName ) ) )
+            // InternalENVIRONMENT.g:24223:2: ( ( ruleVersionedQualifiedName ) )
             {
-            // InternalENVIRONMENT.g:24204:2: ( ( ruleVersionedQualifiedName ) )
-            // InternalENVIRONMENT.g:24205:3: ( ruleVersionedQualifiedName )
+            // InternalENVIRONMENT.g:24223:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalENVIRONMENT.g:24224:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getChartsFileGSSChartsChartsCrossReference_2_2_0()); 
             }
-            // InternalENVIRONMENT.g:24206:3: ( ruleVersionedQualifiedName )
-            // InternalENVIRONMENT.g:24207:4: ruleVersionedQualifiedName
+            // InternalENVIRONMENT.g:24225:3: ( ruleVersionedQualifiedName )
+            // InternalENVIRONMENT.g:24226:4: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getChartsFileGSSChartsChartsVersionedQualifiedNameParserRuleCall_2_2_0_1()); 
@@ -74888,17 +74945,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__PlotAssignment_3_0"
-    // InternalENVIRONMENT.g:24218:1: rule__GSSEnvironmentMonitors__PlotAssignment_3_0 : ( ruleGSSEnvironmentPlot ) ;
+    // InternalENVIRONMENT.g:24237:1: rule__GSSEnvironmentMonitors__PlotAssignment_3_0 : ( ruleGSSEnvironmentPlot ) ;
     public final void rule__GSSEnvironmentMonitors__PlotAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24222:1: ( ( ruleGSSEnvironmentPlot ) )
-            // InternalENVIRONMENT.g:24223:2: ( ruleGSSEnvironmentPlot )
+            // InternalENVIRONMENT.g:24241:1: ( ( ruleGSSEnvironmentPlot ) )
+            // InternalENVIRONMENT.g:24242:2: ( ruleGSSEnvironmentPlot )
             {
-            // InternalENVIRONMENT.g:24223:2: ( ruleGSSEnvironmentPlot )
-            // InternalENVIRONMENT.g:24224:3: ruleGSSEnvironmentPlot
+            // InternalENVIRONMENT.g:24242:2: ( ruleGSSEnvironmentPlot )
+            // InternalENVIRONMENT.g:24243:3: ruleGSSEnvironmentPlot
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getPlotGSSEnvironmentPlotParserRuleCall_3_0_0()); 
@@ -74933,17 +74990,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__AlarmMsgAssignment_3_1"
-    // InternalENVIRONMENT.g:24233:1: rule__GSSEnvironmentMonitors__AlarmMsgAssignment_3_1 : ( ruleGSSEnvironmentAlarmMsg ) ;
+    // InternalENVIRONMENT.g:24252:1: rule__GSSEnvironmentMonitors__AlarmMsgAssignment_3_1 : ( ruleGSSEnvironmentAlarmMsg ) ;
     public final void rule__GSSEnvironmentMonitors__AlarmMsgAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24237:1: ( ( ruleGSSEnvironmentAlarmMsg ) )
-            // InternalENVIRONMENT.g:24238:2: ( ruleGSSEnvironmentAlarmMsg )
+            // InternalENVIRONMENT.g:24256:1: ( ( ruleGSSEnvironmentAlarmMsg ) )
+            // InternalENVIRONMENT.g:24257:2: ( ruleGSSEnvironmentAlarmMsg )
             {
-            // InternalENVIRONMENT.g:24238:2: ( ruleGSSEnvironmentAlarmMsg )
-            // InternalENVIRONMENT.g:24239:3: ruleGSSEnvironmentAlarmMsg
+            // InternalENVIRONMENT.g:24257:2: ( ruleGSSEnvironmentAlarmMsg )
+            // InternalENVIRONMENT.g:24258:3: ruleGSSEnvironmentAlarmMsg
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getAlarmMsgGSSEnvironmentAlarmMsgParserRuleCall_3_1_0()); 
@@ -74978,17 +75035,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__ModifyAssignment_3_2"
-    // InternalENVIRONMENT.g:24248:1: rule__GSSEnvironmentMonitors__ModifyAssignment_3_2 : ( ruleGSSEnvironmentModify ) ;
+    // InternalENVIRONMENT.g:24267:1: rule__GSSEnvironmentMonitors__ModifyAssignment_3_2 : ( ruleGSSEnvironmentModify ) ;
     public final void rule__GSSEnvironmentMonitors__ModifyAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24252:1: ( ( ruleGSSEnvironmentModify ) )
-            // InternalENVIRONMENT.g:24253:2: ( ruleGSSEnvironmentModify )
+            // InternalENVIRONMENT.g:24271:1: ( ( ruleGSSEnvironmentModify ) )
+            // InternalENVIRONMENT.g:24272:2: ( ruleGSSEnvironmentModify )
             {
-            // InternalENVIRONMENT.g:24253:2: ( ruleGSSEnvironmentModify )
-            // InternalENVIRONMENT.g:24254:3: ruleGSSEnvironmentModify
+            // InternalENVIRONMENT.g:24272:2: ( ruleGSSEnvironmentModify )
+            // InternalENVIRONMENT.g:24273:3: ruleGSSEnvironmentModify
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getModifyGSSEnvironmentModifyParserRuleCall_3_2_0()); 
@@ -75023,17 +75080,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMonitors__AlarmValAssignment_3_3"
-    // InternalENVIRONMENT.g:24263:1: rule__GSSEnvironmentMonitors__AlarmValAssignment_3_3 : ( ruleGSSEnvironmentAlarmVal ) ;
+    // InternalENVIRONMENT.g:24282:1: rule__GSSEnvironmentMonitors__AlarmValAssignment_3_3 : ( ruleGSSEnvironmentAlarmVal ) ;
     public final void rule__GSSEnvironmentMonitors__AlarmValAssignment_3_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24267:1: ( ( ruleGSSEnvironmentAlarmVal ) )
-            // InternalENVIRONMENT.g:24268:2: ( ruleGSSEnvironmentAlarmVal )
+            // InternalENVIRONMENT.g:24286:1: ( ( ruleGSSEnvironmentAlarmVal ) )
+            // InternalENVIRONMENT.g:24287:2: ( ruleGSSEnvironmentAlarmVal )
             {
-            // InternalENVIRONMENT.g:24268:2: ( ruleGSSEnvironmentAlarmVal )
-            // InternalENVIRONMENT.g:24269:3: ruleGSSEnvironmentAlarmVal
+            // InternalENVIRONMENT.g:24287:2: ( ruleGSSEnvironmentAlarmVal )
+            // InternalENVIRONMENT.g:24288:3: ruleGSSEnvironmentAlarmVal
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMonitorsAccess().getAlarmValGSSEnvironmentAlarmValParserRuleCall_3_3_0()); 
@@ -75068,17 +75125,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4"
-    // InternalENVIRONMENT.g:24278:1: rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4 : ( RULE_STRING ) ;
+    // InternalENVIRONMENT.g:24297:1: rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4 : ( RULE_STRING ) ;
     public final void rule__GSSEnvironmentGSSInfo__Test_campaignAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24282:1: ( ( RULE_STRING ) )
-            // InternalENVIRONMENT.g:24283:2: ( RULE_STRING )
+            // InternalENVIRONMENT.g:24301:1: ( ( RULE_STRING ) )
+            // InternalENVIRONMENT.g:24302:2: ( RULE_STRING )
             {
-            // InternalENVIRONMENT.g:24283:2: ( RULE_STRING )
-            // InternalENVIRONMENT.g:24284:3: RULE_STRING
+            // InternalENVIRONMENT.g:24302:2: ( RULE_STRING )
+            // InternalENVIRONMENT.g:24303:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getTest_campaignSTRINGTerminalRuleCall_4_0()); 
@@ -75109,17 +75166,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__VersionAssignment_8"
-    // InternalENVIRONMENT.g:24293:1: rule__GSSEnvironmentGSSInfo__VersionAssignment_8 : ( ruleVersion ) ;
+    // InternalENVIRONMENT.g:24312:1: rule__GSSEnvironmentGSSInfo__VersionAssignment_8 : ( ruleVersion ) ;
     public final void rule__GSSEnvironmentGSSInfo__VersionAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24297:1: ( ( ruleVersion ) )
-            // InternalENVIRONMENT.g:24298:2: ( ruleVersion )
+            // InternalENVIRONMENT.g:24316:1: ( ( ruleVersion ) )
+            // InternalENVIRONMENT.g:24317:2: ( ruleVersion )
             {
-            // InternalENVIRONMENT.g:24298:2: ( ruleVersion )
-            // InternalENVIRONMENT.g:24299:3: ruleVersion
+            // InternalENVIRONMENT.g:24317:2: ( ruleVersion )
+            // InternalENVIRONMENT.g:24318:3: ruleVersion
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getVersionVersionParserRuleCall_8_0()); 
@@ -75154,17 +75211,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__DateAssignment_12"
-    // InternalENVIRONMENT.g:24308:1: rule__GSSEnvironmentGSSInfo__DateAssignment_12 : ( ruleDATE ) ;
+    // InternalENVIRONMENT.g:24327:1: rule__GSSEnvironmentGSSInfo__DateAssignment_12 : ( ruleDATE ) ;
     public final void rule__GSSEnvironmentGSSInfo__DateAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24312:1: ( ( ruleDATE ) )
-            // InternalENVIRONMENT.g:24313:2: ( ruleDATE )
+            // InternalENVIRONMENT.g:24331:1: ( ( ruleDATE ) )
+            // InternalENVIRONMENT.g:24332:2: ( ruleDATE )
             {
-            // InternalENVIRONMENT.g:24313:2: ( ruleDATE )
-            // InternalENVIRONMENT.g:24314:3: ruleDATE
+            // InternalENVIRONMENT.g:24332:2: ( ruleDATE )
+            // InternalENVIRONMENT.g:24333:3: ruleDATE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getDateDATEParserRuleCall_12_0()); 
@@ -75199,17 +75256,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2"
-    // InternalENVIRONMENT.g:24323:1: rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2 : ( ruleURL ) ;
+    // InternalENVIRONMENT.g:24342:1: rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2 : ( ruleURL ) ;
     public final void rule__GSSEnvironmentGSSInfo__Version_control_urlAssignment_14_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24327:1: ( ( ruleURL ) )
-            // InternalENVIRONMENT.g:24328:2: ( ruleURL )
+            // InternalENVIRONMENT.g:24346:1: ( ( ruleURL ) )
+            // InternalENVIRONMENT.g:24347:2: ( ruleURL )
             {
-            // InternalENVIRONMENT.g:24328:2: ( ruleURL )
-            // InternalENVIRONMENT.g:24329:3: ruleURL
+            // InternalENVIRONMENT.g:24347:2: ( ruleURL )
+            // InternalENVIRONMENT.g:24348:3: ruleURL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoAccess().getVersion_control_urlURLParserRuleCall_14_2_0()); 
@@ -75244,17 +75301,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4"
-    // InternalENVIRONMENT.g:24338:1: rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4 : ( ruleGSSEnvironmentEnableDisable ) ;
+    // InternalENVIRONMENT.g:24357:1: rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4 : ( ruleGSSEnvironmentEnableDisable ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__MainLogAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24342:1: ( ( ruleGSSEnvironmentEnableDisable ) )
-            // InternalENVIRONMENT.g:24343:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24361:1: ( ( ruleGSSEnvironmentEnableDisable ) )
+            // InternalENVIRONMENT.g:24362:2: ( ruleGSSEnvironmentEnableDisable )
             {
-            // InternalENVIRONMENT.g:24343:2: ( ruleGSSEnvironmentEnableDisable )
-            // InternalENVIRONMENT.g:24344:3: ruleGSSEnvironmentEnableDisable
+            // InternalENVIRONMENT.g:24362:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24363:3: ruleGSSEnvironmentEnableDisable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getMainLogGSSEnvironmentEnableDisableEnumRuleCall_4_0()); 
@@ -75289,17 +75346,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8"
-    // InternalENVIRONMENT.g:24353:1: rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8 : ( ruleGSSEnvironmentEnableDisable ) ;
+    // InternalENVIRONMENT.g:24372:1: rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8 : ( ruleGSSEnvironmentEnableDisable ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__PortLogsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24357:1: ( ( ruleGSSEnvironmentEnableDisable ) )
-            // InternalENVIRONMENT.g:24358:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24376:1: ( ( ruleGSSEnvironmentEnableDisable ) )
+            // InternalENVIRONMENT.g:24377:2: ( ruleGSSEnvironmentEnableDisable )
             {
-            // InternalENVIRONMENT.g:24358:2: ( ruleGSSEnvironmentEnableDisable )
-            // InternalENVIRONMENT.g:24359:3: ruleGSSEnvironmentEnableDisable
+            // InternalENVIRONMENT.g:24377:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24378:3: ruleGSSEnvironmentEnableDisable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getPortLogsGSSEnvironmentEnableDisableEnumRuleCall_8_0()); 
@@ -75334,17 +75391,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12"
-    // InternalENVIRONMENT.g:24368:1: rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12 : ( ruleGSSEnvironmentEnableDisable ) ;
+    // InternalENVIRONMENT.g:24387:1: rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12 : ( ruleGSSEnvironmentEnableDisable ) ;
     public final void rule__GSSEnvironmentGSSInfoPrint__RawLogAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24372:1: ( ( ruleGSSEnvironmentEnableDisable ) )
-            // InternalENVIRONMENT.g:24373:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24391:1: ( ( ruleGSSEnvironmentEnableDisable ) )
+            // InternalENVIRONMENT.g:24392:2: ( ruleGSSEnvironmentEnableDisable )
             {
-            // InternalENVIRONMENT.g:24373:2: ( ruleGSSEnvironmentEnableDisable )
-            // InternalENVIRONMENT.g:24374:3: ruleGSSEnvironmentEnableDisable
+            // InternalENVIRONMENT.g:24392:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24393:3: ruleGSSEnvironmentEnableDisable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSInfoPrintAccess().getRawLogGSSEnvironmentEnableDisableEnumRuleCall_12_0()); 
@@ -75379,17 +75436,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4"
-    // InternalENVIRONMENT.g:24383:1: rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4 : ( ruleGSSEnvironmentEnableDisable ) ;
+    // InternalENVIRONMENT.g:24402:1: rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4 : ( ruleGSSEnvironmentEnableDisable ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__MainLogAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24387:1: ( ( ruleGSSEnvironmentEnableDisable ) )
-            // InternalENVIRONMENT.g:24388:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24406:1: ( ( ruleGSSEnvironmentEnableDisable ) )
+            // InternalENVIRONMENT.g:24407:2: ( ruleGSSEnvironmentEnableDisable )
             {
-            // InternalENVIRONMENT.g:24388:2: ( ruleGSSEnvironmentEnableDisable )
-            // InternalENVIRONMENT.g:24389:3: ruleGSSEnvironmentEnableDisable
+            // InternalENVIRONMENT.g:24407:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24408:3: ruleGSSEnvironmentEnableDisable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getMainLogGSSEnvironmentEnableDisableEnumRuleCall_4_0()); 
@@ -75424,17 +75481,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8"
-    // InternalENVIRONMENT.g:24398:1: rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8 : ( ruleGSSEnvironmentEnableDisable ) ;
+    // InternalENVIRONMENT.g:24417:1: rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8 : ( ruleGSSEnvironmentEnableDisable ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__PortLogsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24402:1: ( ( ruleGSSEnvironmentEnableDisable ) )
-            // InternalENVIRONMENT.g:24403:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24421:1: ( ( ruleGSSEnvironmentEnableDisable ) )
+            // InternalENVIRONMENT.g:24422:2: ( ruleGSSEnvironmentEnableDisable )
             {
-            // InternalENVIRONMENT.g:24403:2: ( ruleGSSEnvironmentEnableDisable )
-            // InternalENVIRONMENT.g:24404:3: ruleGSSEnvironmentEnableDisable
+            // InternalENVIRONMENT.g:24422:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24423:3: ruleGSSEnvironmentEnableDisable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getPortLogsGSSEnvironmentEnableDisableEnumRuleCall_8_0()); 
@@ -75469,17 +75526,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12"
-    // InternalENVIRONMENT.g:24413:1: rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12 : ( ruleGSSEnvironmentEnableDisable ) ;
+    // InternalENVIRONMENT.g:24432:1: rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12 : ( ruleGSSEnvironmentEnableDisable ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__RawLogAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24417:1: ( ( ruleGSSEnvironmentEnableDisable ) )
-            // InternalENVIRONMENT.g:24418:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24436:1: ( ( ruleGSSEnvironmentEnableDisable ) )
+            // InternalENVIRONMENT.g:24437:2: ( ruleGSSEnvironmentEnableDisable )
             {
-            // InternalENVIRONMENT.g:24418:2: ( ruleGSSEnvironmentEnableDisable )
-            // InternalENVIRONMENT.g:24419:3: ruleGSSEnvironmentEnableDisable
+            // InternalENVIRONMENT.g:24437:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24438:3: ruleGSSEnvironmentEnableDisable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getRawLogGSSEnvironmentEnableDisableEnumRuleCall_12_0()); 
@@ -75514,17 +75571,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16"
-    // InternalENVIRONMENT.g:24428:1: rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16 : ( ruleGSSEnvironmentEnableDisable ) ;
+    // InternalENVIRONMENT.g:24447:1: rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16 : ( ruleGSSEnvironmentEnableDisable ) ;
     public final void rule__GSSEnvironmentPhyHeaderPrint__GssTabsAssignment_16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24432:1: ( ( ruleGSSEnvironmentEnableDisable ) )
-            // InternalENVIRONMENT.g:24433:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24451:1: ( ( ruleGSSEnvironmentEnableDisable ) )
+            // InternalENVIRONMENT.g:24452:2: ( ruleGSSEnvironmentEnableDisable )
             {
-            // InternalENVIRONMENT.g:24433:2: ( ruleGSSEnvironmentEnableDisable )
-            // InternalENVIRONMENT.g:24434:3: ruleGSSEnvironmentEnableDisable
+            // InternalENVIRONMENT.g:24452:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24453:3: ruleGSSEnvironmentEnableDisable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentPhyHeaderPrintAccess().getGssTabsGSSEnvironmentEnableDisableEnumRuleCall_16_0()); 
@@ -75559,17 +75616,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4"
-    // InternalENVIRONMENT.g:24443:1: rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4 : ( ruleGSSEnvironmentEnableDisable ) ;
+    // InternalENVIRONMENT.g:24462:1: rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4 : ( ruleGSSEnvironmentEnableDisable ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__TxErrorsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24447:1: ( ( ruleGSSEnvironmentEnableDisable ) )
-            // InternalENVIRONMENT.g:24448:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24466:1: ( ( ruleGSSEnvironmentEnableDisable ) )
+            // InternalENVIRONMENT.g:24467:2: ( ruleGSSEnvironmentEnableDisable )
             {
-            // InternalENVIRONMENT.g:24448:2: ( ruleGSSEnvironmentEnableDisable )
-            // InternalENVIRONMENT.g:24449:3: ruleGSSEnvironmentEnableDisable
+            // InternalENVIRONMENT.g:24467:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24468:3: ruleGSSEnvironmentEnableDisable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getTxErrorsGSSEnvironmentEnableDisableEnumRuleCall_4_0()); 
@@ -75604,17 +75661,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8"
-    // InternalENVIRONMENT.g:24458:1: rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8 : ( ruleGSSEnvironmentEnableDisable ) ;
+    // InternalENVIRONMENT.g:24477:1: rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8 : ( ruleGSSEnvironmentEnableDisable ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__NotExpectedPacketsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24462:1: ( ( ruleGSSEnvironmentEnableDisable ) )
-            // InternalENVIRONMENT.g:24463:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24481:1: ( ( ruleGSSEnvironmentEnableDisable ) )
+            // InternalENVIRONMENT.g:24482:2: ( ruleGSSEnvironmentEnableDisable )
             {
-            // InternalENVIRONMENT.g:24463:2: ( ruleGSSEnvironmentEnableDisable )
-            // InternalENVIRONMENT.g:24464:3: ruleGSSEnvironmentEnableDisable
+            // InternalENVIRONMENT.g:24482:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24483:3: ruleGSSEnvironmentEnableDisable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getNotExpectedPacketsGSSEnvironmentEnableDisableEnumRuleCall_8_0()); 
@@ -75649,17 +75706,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12"
-    // InternalENVIRONMENT.g:24473:1: rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12 : ( ruleGSSEnvironmentEnableDisable ) ;
+    // InternalENVIRONMENT.g:24492:1: rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12 : ( ruleGSSEnvironmentEnableDisable ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__FiltersKoAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24477:1: ( ( ruleGSSEnvironmentEnableDisable ) )
-            // InternalENVIRONMENT.g:24478:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24496:1: ( ( ruleGSSEnvironmentEnableDisable ) )
+            // InternalENVIRONMENT.g:24497:2: ( ruleGSSEnvironmentEnableDisable )
             {
-            // InternalENVIRONMENT.g:24478:2: ( ruleGSSEnvironmentEnableDisable )
-            // InternalENVIRONMENT.g:24479:3: ruleGSSEnvironmentEnableDisable
+            // InternalENVIRONMENT.g:24497:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24498:3: ruleGSSEnvironmentEnableDisable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getFiltersKoGSSEnvironmentEnableDisableEnumRuleCall_12_0()); 
@@ -75694,17 +75751,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16"
-    // InternalENVIRONMENT.g:24488:1: rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16 : ( ruleGSSEnvironmentEnableDisable ) ;
+    // InternalENVIRONMENT.g:24507:1: rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16 : ( ruleGSSEnvironmentEnableDisable ) ;
     public final void rule__GSSEnvironmentGSSDiscardErrorFlags__ValidTimesKoAssignment_16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24492:1: ( ( ruleGSSEnvironmentEnableDisable ) )
-            // InternalENVIRONMENT.g:24493:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24511:1: ( ( ruleGSSEnvironmentEnableDisable ) )
+            // InternalENVIRONMENT.g:24512:2: ( ruleGSSEnvironmentEnableDisable )
             {
-            // InternalENVIRONMENT.g:24493:2: ( ruleGSSEnvironmentEnableDisable )
-            // InternalENVIRONMENT.g:24494:3: ruleGSSEnvironmentEnableDisable
+            // InternalENVIRONMENT.g:24512:2: ( ruleGSSEnvironmentEnableDisable )
+            // InternalENVIRONMENT.g:24513:3: ruleGSSEnvironmentEnableDisable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentGSSDiscardErrorFlagsAccess().getValidTimesKoGSSEnvironmentEnableDisableEnumRuleCall_16_0()); 
@@ -75739,17 +75796,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__IdAssignment_4"
-    // InternalENVIRONMENT.g:24503:1: rule__GSSEnvironmentProtocol__IdAssignment_4 : ( ruleINTEGER ) ;
+    // InternalENVIRONMENT.g:24522:1: rule__GSSEnvironmentProtocol__IdAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSEnvironmentProtocol__IdAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24507:1: ( ( ruleINTEGER ) )
-            // InternalENVIRONMENT.g:24508:2: ( ruleINTEGER )
+            // InternalENVIRONMENT.g:24526:1: ( ( ruleINTEGER ) )
+            // InternalENVIRONMENT.g:24527:2: ( ruleINTEGER )
             {
-            // InternalENVIRONMENT.g:24508:2: ( ruleINTEGER )
-            // InternalENVIRONMENT.g:24509:3: ruleINTEGER
+            // InternalENVIRONMENT.g:24527:2: ( ruleINTEGER )
+            // InternalENVIRONMENT.g:24528:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getIdINTEGERParserRuleCall_4_0()); 
@@ -75784,17 +75841,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__NameAssignment_8"
-    // InternalENVIRONMENT.g:24518:1: rule__GSSEnvironmentProtocol__NameAssignment_8 : ( RULE_ID ) ;
+    // InternalENVIRONMENT.g:24537:1: rule__GSSEnvironmentProtocol__NameAssignment_8 : ( RULE_ID ) ;
     public final void rule__GSSEnvironmentProtocol__NameAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24522:1: ( ( RULE_ID ) )
-            // InternalENVIRONMENT.g:24523:2: ( RULE_ID )
+            // InternalENVIRONMENT.g:24541:1: ( ( RULE_ID ) )
+            // InternalENVIRONMENT.g:24542:2: ( RULE_ID )
             {
-            // InternalENVIRONMENT.g:24523:2: ( RULE_ID )
-            // InternalENVIRONMENT.g:24524:3: RULE_ID
+            // InternalENVIRONMENT.g:24542:2: ( RULE_ID )
+            // InternalENVIRONMENT.g:24543:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getNameIDTerminalRuleCall_8_0()); 
@@ -75825,17 +75882,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__TypeLevelAssignment_12"
-    // InternalENVIRONMENT.g:24533:1: rule__GSSEnvironmentProtocol__TypeLevelAssignment_12 : ( ruleINTEGER ) ;
+    // InternalENVIRONMENT.g:24552:1: rule__GSSEnvironmentProtocol__TypeLevelAssignment_12 : ( ruleINTEGER ) ;
     public final void rule__GSSEnvironmentProtocol__TypeLevelAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24537:1: ( ( ruleINTEGER ) )
-            // InternalENVIRONMENT.g:24538:2: ( ruleINTEGER )
+            // InternalENVIRONMENT.g:24556:1: ( ( ruleINTEGER ) )
+            // InternalENVIRONMENT.g:24557:2: ( ruleINTEGER )
             {
-            // InternalENVIRONMENT.g:24538:2: ( ruleINTEGER )
-            // InternalENVIRONMENT.g:24539:3: ruleINTEGER
+            // InternalENVIRONMENT.g:24557:2: ( ruleINTEGER )
+            // InternalENVIRONMENT.g:24558:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getTypeLevelINTEGERParserRuleCall_12_0()); 
@@ -75870,17 +75927,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16"
-    // InternalENVIRONMENT.g:24548:1: rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16 : ( ruleINTEGER ) ;
+    // InternalENVIRONMENT.g:24567:1: rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16 : ( ruleINTEGER ) ;
     public final void rule__GSSEnvironmentProtocol__TypeOffsetAssignment_16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24552:1: ( ( ruleINTEGER ) )
-            // InternalENVIRONMENT.g:24553:2: ( ruleINTEGER )
+            // InternalENVIRONMENT.g:24571:1: ( ( ruleINTEGER ) )
+            // InternalENVIRONMENT.g:24572:2: ( ruleINTEGER )
             {
-            // InternalENVIRONMENT.g:24553:2: ( ruleINTEGER )
-            // InternalENVIRONMENT.g:24554:3: ruleINTEGER
+            // InternalENVIRONMENT.g:24572:2: ( ruleINTEGER )
+            // InternalENVIRONMENT.g:24573:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getTypeOffsetINTEGERParserRuleCall_16_0()); 
@@ -75915,17 +75972,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2"
-    // InternalENVIRONMENT.g:24563:1: rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2 : ( ruleINTEGER ) ;
+    // InternalENVIRONMENT.g:24582:1: rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2 : ( ruleINTEGER ) ;
     public final void rule__GSSEnvironmentProtocol__SubtypeOffsetAssignment_18_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24567:1: ( ( ruleINTEGER ) )
-            // InternalENVIRONMENT.g:24568:2: ( ruleINTEGER )
+            // InternalENVIRONMENT.g:24586:1: ( ( ruleINTEGER ) )
+            // InternalENVIRONMENT.g:24587:2: ( ruleINTEGER )
             {
-            // InternalENVIRONMENT.g:24568:2: ( ruleINTEGER )
-            // InternalENVIRONMENT.g:24569:3: ruleINTEGER
+            // InternalENVIRONMENT.g:24587:2: ( ruleINTEGER )
+            // InternalENVIRONMENT.g:24588:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentProtocolAccess().getSubtypeOffsetINTEGERParserRuleCall_18_2_0()); 
@@ -75960,17 +76017,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__IdAssignment_4"
-    // InternalENVIRONMENT.g:24578:1: rule__GSSEnvironmentMainInterface__IdAssignment_4 : ( ruleINTEGER ) ;
+    // InternalENVIRONMENT.g:24597:1: rule__GSSEnvironmentMainInterface__IdAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSEnvironmentMainInterface__IdAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24582:1: ( ( ruleINTEGER ) )
-            // InternalENVIRONMENT.g:24583:2: ( ruleINTEGER )
+            // InternalENVIRONMENT.g:24601:1: ( ( ruleINTEGER ) )
+            // InternalENVIRONMENT.g:24602:2: ( ruleINTEGER )
             {
-            // InternalENVIRONMENT.g:24583:2: ( ruleINTEGER )
-            // InternalENVIRONMENT.g:24584:3: ruleINTEGER
+            // InternalENVIRONMENT.g:24602:2: ( ruleINTEGER )
+            // InternalENVIRONMENT.g:24603:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIdINTEGERParserRuleCall_4_0()); 
@@ -76005,17 +76062,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__NameAssignment_8"
-    // InternalENVIRONMENT.g:24593:1: rule__GSSEnvironmentMainInterface__NameAssignment_8 : ( RULE_STRING ) ;
+    // InternalENVIRONMENT.g:24612:1: rule__GSSEnvironmentMainInterface__NameAssignment_8 : ( RULE_STRING ) ;
     public final void rule__GSSEnvironmentMainInterface__NameAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24597:1: ( ( RULE_STRING ) )
-            // InternalENVIRONMENT.g:24598:2: ( RULE_STRING )
+            // InternalENVIRONMENT.g:24616:1: ( ( RULE_STRING ) )
+            // InternalENVIRONMENT.g:24617:2: ( RULE_STRING )
             {
-            // InternalENVIRONMENT.g:24598:2: ( RULE_STRING )
-            // InternalENVIRONMENT.g:24599:3: RULE_STRING
+            // InternalENVIRONMENT.g:24617:2: ( RULE_STRING )
+            // InternalENVIRONMENT.g:24618:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getNameSTRINGTerminalRuleCall_8_0()); 
@@ -76046,17 +76103,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__IfTypeAssignment_12"
-    // InternalENVIRONMENT.g:24608:1: rule__GSSEnvironmentMainInterface__IfTypeAssignment_12 : ( ruleGSSEnvironmentInterfaceType ) ;
+    // InternalENVIRONMENT.g:24627:1: rule__GSSEnvironmentMainInterface__IfTypeAssignment_12 : ( ruleGSSEnvironmentInterfaceType ) ;
     public final void rule__GSSEnvironmentMainInterface__IfTypeAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24612:1: ( ( ruleGSSEnvironmentInterfaceType ) )
-            // InternalENVIRONMENT.g:24613:2: ( ruleGSSEnvironmentInterfaceType )
+            // InternalENVIRONMENT.g:24631:1: ( ( ruleGSSEnvironmentInterfaceType ) )
+            // InternalENVIRONMENT.g:24632:2: ( ruleGSSEnvironmentInterfaceType )
             {
-            // InternalENVIRONMENT.g:24613:2: ( ruleGSSEnvironmentInterfaceType )
-            // InternalENVIRONMENT.g:24614:3: ruleGSSEnvironmentInterfaceType
+            // InternalENVIRONMENT.g:24632:2: ( ruleGSSEnvironmentInterfaceType )
+            // InternalENVIRONMENT.g:24633:3: ruleGSSEnvironmentInterfaceType
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIfTypeGSSEnvironmentInterfaceTypeEnumRuleCall_12_0()); 
@@ -76091,23 +76148,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__IfConfigAssignment_16"
-    // InternalENVIRONMENT.g:24623:1: rule__GSSEnvironmentMainInterface__IfConfigAssignment_16 : ( ( ruleVersionedQualifiedName ) ) ;
+    // InternalENVIRONMENT.g:24642:1: rule__GSSEnvironmentMainInterface__IfConfigAssignment_16 : ( ( ruleVersionedQualifiedName ) ) ;
     public final void rule__GSSEnvironmentMainInterface__IfConfigAssignment_16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24627:1: ( ( ( ruleVersionedQualifiedName ) ) )
-            // InternalENVIRONMENT.g:24628:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalENVIRONMENT.g:24646:1: ( ( ( ruleVersionedQualifiedName ) ) )
+            // InternalENVIRONMENT.g:24647:2: ( ( ruleVersionedQualifiedName ) )
             {
-            // InternalENVIRONMENT.g:24628:2: ( ( ruleVersionedQualifiedName ) )
-            // InternalENVIRONMENT.g:24629:3: ( ruleVersionedQualifiedName )
+            // InternalENVIRONMENT.g:24647:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalENVIRONMENT.g:24648:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIfConfigGSSIfacePortConfigCrossReference_16_0()); 
             }
-            // InternalENVIRONMENT.g:24630:3: ( ruleVersionedQualifiedName )
-            // InternalENVIRONMENT.g:24631:4: ruleVersionedQualifiedName
+            // InternalENVIRONMENT.g:24649:3: ( ruleVersionedQualifiedName )
+            // InternalENVIRONMENT.g:24650:4: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIfConfigGSSIfacePortConfigVersionedQualifiedNameParserRuleCall_16_0_1()); 
@@ -76148,17 +76205,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__IoTypeAssignment_20"
-    // InternalENVIRONMENT.g:24642:1: rule__GSSEnvironmentMainInterface__IoTypeAssignment_20 : ( ruleGSSEnvironmentInterfaceIOType ) ;
+    // InternalENVIRONMENT.g:24661:1: rule__GSSEnvironmentMainInterface__IoTypeAssignment_20 : ( ruleGSSEnvironmentInterfaceIOType ) ;
     public final void rule__GSSEnvironmentMainInterface__IoTypeAssignment_20() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24646:1: ( ( ruleGSSEnvironmentInterfaceIOType ) )
-            // InternalENVIRONMENT.g:24647:2: ( ruleGSSEnvironmentInterfaceIOType )
+            // InternalENVIRONMENT.g:24665:1: ( ( ruleGSSEnvironmentInterfaceIOType ) )
+            // InternalENVIRONMENT.g:24666:2: ( ruleGSSEnvironmentInterfaceIOType )
             {
-            // InternalENVIRONMENT.g:24647:2: ( ruleGSSEnvironmentInterfaceIOType )
-            // InternalENVIRONMENT.g:24648:3: ruleGSSEnvironmentInterfaceIOType
+            // InternalENVIRONMENT.g:24666:2: ( ruleGSSEnvironmentInterfaceIOType )
+            // InternalENVIRONMENT.g:24667:3: ruleGSSEnvironmentInterfaceIOType
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIoTypeGSSEnvironmentInterfaceIOTypeEnumRuleCall_20_0()); 
@@ -76193,23 +76250,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2"
-    // InternalENVIRONMENT.g:24657:1: rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
+    // InternalENVIRONMENT.g:24676:1: rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2 : ( ( ruleVersionedQualifiedReferenceName ) ) ;
     public final void rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:24661:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
-            // InternalENVIRONMENT.g:24662:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalENVIRONMENT.g:24680:1: ( ( ( ruleVersionedQualifiedReferenceName ) ) )
+            // InternalENVIRONMENT.g:24681:2: ( ( ruleVersionedQualifiedReferenceName ) )
             {
-            // InternalENVIRONMENT.g:24662:2: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalENVIRONMENT.g:24663:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalENVIRONMENT.g:24681:2: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalENVIRONMENT.g:24682:3: ( ruleVersionedQualifiedReferenceName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolIDGSSEnvironmentProtocolCrossReference_22_2_0()); 
             }
-            // InternalENVIRONMENT.g:24664:3: ( ruleVersionedQualifiedReferenceName )
-            // InternalENVIRONMENT.g:24665:4: ruleVersionedQualifiedReferenceName
+            // InternalENVIRONMENT.g:24683:3: ( ruleVersionedQualifiedReferenceName )
+            // InternalENVIRONMENT.g:24684:4: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolIDGSSEnvironmentProtocolVersionedQualifiedReferenceNameParserRuleCall_22_2_0_1()); 
@@ -76249,66 +76306,9 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2"
 
 
-    // $ANTLR start "rule__GSSEnvironmentMainInterface__ProtocolPacketsFileAssignment_23_2"
-    // InternalENVIRONMENT.g:24676:1: rule__GSSEnvironmentMainInterface__ProtocolPacketsFileAssignment_23_2 : ( ( ruleVersionedQualifiedName ) ) ;
-    public final void rule__GSSEnvironmentMainInterface__ProtocolPacketsFileAssignment_23_2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalENVIRONMENT.g:24680:1: ( ( ( ruleVersionedQualifiedName ) ) )
-            // InternalENVIRONMENT.g:24681:2: ( ( ruleVersionedQualifiedName ) )
-            {
-            // InternalENVIRONMENT.g:24681:2: ( ( ruleVersionedQualifiedName ) )
-            // InternalENVIRONMENT.g:24682:3: ( ruleVersionedQualifiedName )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_23_2_0()); 
-            }
-            // InternalENVIRONMENT.g:24683:3: ( ruleVersionedQualifiedName )
-            // InternalENVIRONMENT.g:24684:4: ruleVersionedQualifiedName
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolPacketsFileGSSProtocolPacketsProtocolPacketsVersionedQualifiedNameParserRuleCall_23_2_0_1()); 
-            }
-            pushFollow(FollowSets000.FOLLOW_2);
-            ruleVersionedQualifiedName();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolPacketsFileGSSProtocolPacketsProtocolPacketsVersionedQualifiedNameParserRuleCall_23_2_0_1()); 
-            }
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_23_2_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSEnvironmentMainInterface__ProtocolPacketsFileAssignment_23_2"
-
-
-    // $ANTLR start "rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24"
-    // InternalENVIRONMENT.g:24695:1: rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24 : ( ruleGSSEnvironmentLevelInOut ) ;
-    public final void rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24() throws RecognitionException {
+    // $ANTLR start "rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23"
+    // InternalENVIRONMENT.g:24695:1: rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23 : ( ruleGSSEnvironmentLevelInOut ) ;
+    public final void rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -76320,7 +76320,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             // InternalENVIRONMENT.g:24701:3: ruleGSSEnvironmentLevelInOut
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutGSSEnvironmentLevelInOutParserRuleCall_24_0()); 
+               before(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutGSSEnvironmentLevelInOutParserRuleCall_23_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleGSSEnvironmentLevelInOut();
@@ -76328,7 +76328,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutGSSEnvironmentLevelInOutParserRuleCall_24_0()); 
+               after(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutGSSEnvironmentLevelInOutParserRuleCall_23_0()); 
             }
 
             }
@@ -76348,7 +76348,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24"
+    // $ANTLR end "rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23"
 
 
     // $ANTLR start "rule__GSSEnvironmentInterface__IdAssignment_4"
@@ -82499,53 +82499,53 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
         public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000040000000000L});
         public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000200000000000L});
         public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000400000000000L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000800000000000L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x000F040000000000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0020000000000000L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0200000000000000L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x2000000000000000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x8000000000000000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000010L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0001000000000000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x001E040000000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0040000000000000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0400000000000000L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x4000000000000000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000800000000000L,0x0000000000000020L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000800000000002L,0x0000000000000020L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
         public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000040000000000L,0x0000000000010000L});
         public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
         public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
-        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0002000000000000L});
+        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0004000000000000L});
         public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000040000000000L,0x0500800000000000L});
         public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000000002L,0x0500800000000000L});
         public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000000000000L,0x1000000000000000L});
         public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000000000002L,0x1000000000000000L});
-        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0010000000000000L,0x0000000000000000L,0x0000000000001540L});
-        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0010000000000002L,0x0000000000000000L,0x0000000000001540L});
-        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0040000000000000L});
-        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0080000000000000L});
+        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0020000000000000L,0x0000000000000000L,0x0000000000001540L});
+        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0020000000000002L,0x0000000000000000L,0x0000000000001540L});
+        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0080000000000000L});
+        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0100000000000000L});
         public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0100040000000000L});
-        public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0400000000000000L});
+        public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0200040000000000L});
+        public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0800000000000000L});
         public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000006000L});
-        public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0800000000000000L});
-        public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x1000000000000000L});
-        public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x4000000000000000L});
-        public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
-        public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-        public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-        public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+        public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x1000000000000000L});
+        public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x2000000000000000L});
+        public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x8000000000000000L});
+        public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
+        public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+        public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+        public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+        public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
         public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000000030L,0x0000000000000000L,0x0000000000200000L});
-        public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
-        public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-        public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-        public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000040000000000L,0x0000000000000200L});
-        public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
+        public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+        public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000200L});
+        public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000040000000000L,0x0000000000000400L});
+        public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
         public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x00000000000F8000L});
-        public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
-        public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
+        public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
+        public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
         public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000700000L});
-        public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000000000000000L,0x000000000002C000L});
-        public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0000000000000002L,0x000000000002C000L});
-        public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x0000000000000000L,0x000000000182C000L});
-        public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x0000000000000002L,0x000000000182C000L});
+        public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000000000000000L,0x0000000000028000L});
+        public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0000000000000002L,0x0000000000028000L});
+        public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x0000000000000000L,0x0000000001828000L});
+        public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x0000000000000002L,0x0000000001828000L});
         public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
         public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
         public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
@@ -82611,7 +82611,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
         public static final BitSet FOLLOW_126 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000001800000L});
         public static final BitSet FOLLOW_127 = new BitSet(new long[]{0x0000000000000042L});
         public static final BitSet FOLLOW_128 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000400000L});
-        public static final BitSet FOLLOW_129 = new BitSet(new long[]{0x000C000000000002L});
+        public static final BitSet FOLLOW_129 = new BitSet(new long[]{0x0018000000000002L});
     }
 
 

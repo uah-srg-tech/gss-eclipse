@@ -73,6 +73,7 @@
         eType="#//GSSEnvironmentEnableDisable" unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSEnvironmentProtocols">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ProtocolPacketsFile" eType="ecore:EClass protocol_packets.ecore#//GSSProtocolPacketsProtocolPackets"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Protocol" lowerBound="1"
         upperBound="2" eType="#//GSSEnvironmentProtocol" containment="true"/>
   </eClassifiers>
@@ -91,9 +92,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Interface" upperBound="7"
         eType="#//GSSEnvironmentInterface" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSEnvironmentMainInterface" eSuperTypes="#//GSSEnvironmentInterface">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ProtocolPacketsFile" eType="ecore:EClass protocol_packets.ecore#//GSSProtocolPacketsProtocolPackets"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSEnvironmentMainInterface" eSuperTypes="#//GSSEnvironmentInterface"/>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSEnvironmentInterfaceType">
     <eLiterals name="SpW"/>
     <eLiterals name="SpW_TC" value="1"/>

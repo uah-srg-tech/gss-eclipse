@@ -562,13 +562,22 @@ public interface environmentPackage extends EPackage {
 	int GSS_ENVIRONMENT_PROTOCOLS = 7;
 
 	/**
+	 * The feature id for the '<em><b>Protocol Packets File</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_ENVIRONMENT_PROTOCOLS__PROTOCOL_PACKETS_FILE = 0;
+
+	/**
 	 * The feature id for the '<em><b>Protocol</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_ENVIRONMENT_PROTOCOLS__PROTOCOL = 0;
+	int GSS_ENVIRONMENT_PROTOCOLS__PROTOCOL = 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Environment Protocols</em>' class.
@@ -577,7 +586,7 @@ public interface environmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_ENVIRONMENT_PROTOCOLS_FEATURE_COUNT = 1;
+	int GSS_ENVIRONMENT_PROTOCOLS_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>GSS Environment Protocols</em>' class.
@@ -908,22 +917,13 @@ public interface environmentPackage extends EPackage {
 	int GSS_ENVIRONMENT_MAIN_INTERFACE__LEVEL_OUT = GSS_ENVIRONMENT_INTERFACE__LEVEL_OUT;
 
 	/**
-	 * The feature id for the '<em><b>Protocol Packets File</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_ENVIRONMENT_MAIN_INTERFACE__PROTOCOL_PACKETS_FILE = GSS_ENVIRONMENT_INTERFACE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>GSS Environment Main Interface</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_ENVIRONMENT_MAIN_INTERFACE_FEATURE_COUNT = GSS_ENVIRONMENT_INTERFACE_FEATURE_COUNT + 1;
+	int GSS_ENVIRONMENT_MAIN_INTERFACE_FEATURE_COUNT = GSS_ENVIRONMENT_INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>GSS Environment Main Interface</em>' class.
@@ -3396,6 +3396,17 @@ public interface environmentPackage extends EPackage {
 	EClass getGSSEnvironmentProtocols();
 
 	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocols#getProtocolPacketsFile <em>Protocol Packets File</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Protocol Packets File</em>'.
+	 * @see es.uah.aut.srg.gss.environment.GSSEnvironmentProtocols#getProtocolPacketsFile()
+	 * @see #getGSSEnvironmentProtocols()
+	 * @generated
+	 */
+	EReference getGSSEnvironmentProtocols_ProtocolPacketsFile();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocols#getProtocol <em>Protocol</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3512,17 +3523,6 @@ public interface environmentPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSEnvironmentMainInterface();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentMainInterface#getProtocolPacketsFile <em>Protocol Packets File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Protocol Packets File</em>'.
-	 * @see es.uah.aut.srg.gss.environment.GSSEnvironmentMainInterface#getProtocolPacketsFile()
-	 * @see #getGSSEnvironmentMainInterface()
-	 * @generated
-	 */
-	EReference getGSSEnvironmentMainInterface_ProtocolPacketsFile();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentInterface <em>GSS Environment Interface</em>}'.
@@ -5628,6 +5628,14 @@ public interface environmentPackage extends EPackage {
 		EClass GSS_ENVIRONMENT_PROTOCOLS = eINSTANCE.getGSSEnvironmentProtocols();
 
 		/**
+		 * The meta object literal for the '<em><b>Protocol Packets File</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_ENVIRONMENT_PROTOCOLS__PROTOCOL_PACKETS_FILE = eINSTANCE.getGSSEnvironmentProtocols_ProtocolPacketsFile();
+
+		/**
 		 * The meta object literal for the '<em><b>Protocol</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5720,14 +5728,6 @@ public interface environmentPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_ENVIRONMENT_MAIN_INTERFACE = eINSTANCE.getGSSEnvironmentMainInterface();
-
-		/**
-		 * The meta object literal for the '<em><b>Protocol Packets File</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_ENVIRONMENT_MAIN_INTERFACE__PROTOCOL_PACKETS_FILE = eINSTANCE.getGSSEnvironmentMainInterface_ProtocolPacketsFile();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentInterfaceImpl <em>GSS Environment Interface</em>}' class.

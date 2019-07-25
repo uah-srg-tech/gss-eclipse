@@ -72,6 +72,7 @@ public class ENVIRONMENTParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSEnvironmentScenarioAccess().getGroup(), "rule__GSSEnvironmentScenario__Group__0");
 					put(grammarAccess.getGSSEnvironmentOptionsAccess().getGroup(), "rule__GSSEnvironmentOptions__Group__0");
 					put(grammarAccess.getGSSEnvironmentProtocolsAccess().getGroup(), "rule__GSSEnvironmentProtocols__Group__0");
+					put(grammarAccess.getGSSEnvironmentProtocolsAccess().getGroup_2(), "rule__GSSEnvironmentProtocols__Group_2__0");
 					put(grammarAccess.getGSSEnvironmentInterfacesAccess().getGroup(), "rule__GSSEnvironmentInterfaces__Group__0");
 					put(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getGroup(), "rule__GSSEnvironmentSpecialPackets__Group__0");
 					put(grammarAccess.getGSSEnvironmentPeriodicTCsAccess().getGroup(), "rule__GSSEnvironmentPeriodicTCs__Group__0");
@@ -87,7 +88,6 @@ public class ENVIRONMENTParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSEnvironmentProtocolAccess().getGroup_18(), "rule__GSSEnvironmentProtocol__Group_18__0");
 					put(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getGroup(), "rule__GSSEnvironmentMainInterface__Group__0");
 					put(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getGroup_22(), "rule__GSSEnvironmentMainInterface__Group_22__0");
-					put(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getGroup_23(), "rule__GSSEnvironmentMainInterface__Group_23__0");
 					put(grammarAccess.getGSSEnvironmentInterfaceAccess().getGroup(), "rule__GSSEnvironmentInterface__Group__0");
 					put(grammarAccess.getGSSEnvironmentInterfaceAccess().getGroup_22(), "rule__GSSEnvironmentInterface__Group_22__0");
 					put(grammarAccess.getGSSEnvironmentLevelInOutAccess().getGroup(), "rule__GSSEnvironmentLevelInOut__Group__0");
@@ -168,7 +168,8 @@ public class ENVIRONMENTParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSEnvironmentOptionsAccess().getGss_info_printAssignment_3(), "rule__GSSEnvironmentOptions__Gss_info_printAssignment_3");
 					put(grammarAccess.getGSSEnvironmentOptionsAccess().getPhy_header_printAssignment_4(), "rule__GSSEnvironmentOptions__Phy_header_printAssignment_4");
 					put(grammarAccess.getGSSEnvironmentOptionsAccess().getDiscardErrorFlagsAssignment_5(), "rule__GSSEnvironmentOptions__DiscardErrorFlagsAssignment_5");
-					put(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolAssignment_2(), "rule__GSSEnvironmentProtocols__ProtocolAssignment_2");
+					put(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolPacketsFileAssignment_2_2(), "rule__GSSEnvironmentProtocols__ProtocolPacketsFileAssignment_2_2");
+					put(grammarAccess.getGSSEnvironmentProtocolsAccess().getProtocolAssignment_3(), "rule__GSSEnvironmentProtocols__ProtocolAssignment_3");
 					put(grammarAccess.getGSSEnvironmentInterfacesAccess().getMainInterfaceAssignment_2(), "rule__GSSEnvironmentInterfaces__MainInterfaceAssignment_2");
 					put(grammarAccess.getGSSEnvironmentInterfacesAccess().getInterfaceAssignment_3(), "rule__GSSEnvironmentInterfaces__InterfaceAssignment_3");
 					put(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getSpecialPacketAssignment_2(), "rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2");
@@ -207,8 +208,7 @@ public class ENVIRONMENTParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIfConfigAssignment_16(), "rule__GSSEnvironmentMainInterface__IfConfigAssignment_16");
 					put(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getIoTypeAssignment_20(), "rule__GSSEnvironmentMainInterface__IoTypeAssignment_20");
 					put(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolIDAssignment_22_2(), "rule__GSSEnvironmentMainInterface__ProtocolIDAssignment_22_2");
-					put(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getProtocolPacketsFileAssignment_23_2(), "rule__GSSEnvironmentMainInterface__ProtocolPacketsFileAssignment_23_2");
-					put(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutAssignment_24(), "rule__GSSEnvironmentMainInterface__LevelInOutAssignment_24");
+					put(grammarAccess.getGSSEnvironmentMainInterfaceAccess().getLevelInOutAssignment_23(), "rule__GSSEnvironmentMainInterface__LevelInOutAssignment_23");
 					put(grammarAccess.getGSSEnvironmentInterfaceAccess().getIdAssignment_4(), "rule__GSSEnvironmentInterface__IdAssignment_4");
 					put(grammarAccess.getGSSEnvironmentInterfaceAccess().getNameAssignment_8(), "rule__GSSEnvironmentInterface__NameAssignment_8");
 					put(grammarAccess.getGSSEnvironmentInterfaceAccess().getIfTypeAssignment_12(), "rule__GSSEnvironmentInterface__IfTypeAssignment_12");
