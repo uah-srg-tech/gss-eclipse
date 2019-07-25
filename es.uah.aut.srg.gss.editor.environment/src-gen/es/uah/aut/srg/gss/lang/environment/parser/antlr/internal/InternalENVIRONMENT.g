@@ -320,7 +320,7 @@ ruleGSSEnvironmentGSSEnvironment returns [EObject current=null]
 // Entry rule entryRuleGSSEnvironmentScenario
 entryRuleGSSEnvironmentScenario returns [EObject current=null]@init {
 	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_12()
+	grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8()
 	);
 }:
 	{ newCompositeNode(grammarAccess.getGSSEnvironmentScenarioRule()); }
@@ -336,7 +336,7 @@ ruleGSSEnvironmentScenario returns [EObject current=null]
 @init {
 	enterRule();
 	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_12()
+	grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8()
 	);
 }
 @after {
@@ -369,43 +369,12 @@ ruleGSSEnvironmentScenario returns [EObject current=null]
 		{
 			newLeafNode(otherlv_2, grammarAccess.getGSSEnvironmentScenarioAccess().getLeftCurlyBracketKeyword_2());
 		}
-		otherlv_3='id'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSEnvironmentScenarioAccess().getIdKeyword_3());
-		}
-		otherlv_4=':='
-		{
-			newLeafNode(otherlv_4, grammarAccess.getGSSEnvironmentScenarioAccess().getColonEqualsSignKeyword_4());
-		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getIdINTEGERParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getGss_optionsGSSEnvironmentOptionsParserRuleCall_3_0());
 				}
-				lv_id_5_0=ruleINTEGER
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSEnvironmentScenarioRule());
-					}
-					set(
-						$current,
-						"id",
-						lv_id_5_0,
-						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.INTEGER");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_6=';'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSEnvironmentScenarioAccess().getSemicolonKeyword_6());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getGss_optionsGSSEnvironmentOptionsParserRuleCall_7_0());
-				}
-				lv_gss_options_7_0=ruleGSSEnvironmentOptions
+				lv_gss_options_3_0=ruleGSSEnvironmentOptions
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSEnvironmentScenarioRule());
@@ -413,7 +382,7 @@ ruleGSSEnvironmentScenario returns [EObject current=null]
 					set(
 						$current,
 						"gss_options",
-						lv_gss_options_7_0,
+						lv_gss_options_3_0,
 						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentOptions");
 					afterParserOrEnumRuleCall();
 				}
@@ -422,9 +391,9 @@ ruleGSSEnvironmentScenario returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getProtocolsGSSEnvironmentProtocolsParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getProtocolsGSSEnvironmentProtocolsParserRuleCall_4_0());
 				}
-				lv_Protocols_8_0=ruleGSSEnvironmentProtocols
+				lv_Protocols_4_0=ruleGSSEnvironmentProtocols
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSEnvironmentScenarioRule());
@@ -432,7 +401,7 @@ ruleGSSEnvironmentScenario returns [EObject current=null]
 					set(
 						$current,
 						"Protocols",
-						lv_Protocols_8_0,
+						lv_Protocols_4_0,
 						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentProtocols");
 					afterParserOrEnumRuleCall();
 				}
@@ -441,9 +410,9 @@ ruleGSSEnvironmentScenario returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getInterfacesGSSEnvironmentInterfacesParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getInterfacesGSSEnvironmentInterfacesParserRuleCall_5_0());
 				}
-				lv_Interfaces_9_0=ruleGSSEnvironmentInterfaces
+				lv_Interfaces_5_0=ruleGSSEnvironmentInterfaces
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSEnvironmentScenarioRule());
@@ -451,7 +420,7 @@ ruleGSSEnvironmentScenario returns [EObject current=null]
 					set(
 						$current,
 						"Interfaces",
-						lv_Interfaces_9_0,
+						lv_Interfaces_5_0,
 						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentInterfaces");
 					afterParserOrEnumRuleCall();
 				}
@@ -460,9 +429,9 @@ ruleGSSEnvironmentScenario returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getSpecialPacketsGSSEnvironmentSpecialPacketsParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getSpecialPacketsGSSEnvironmentSpecialPacketsParserRuleCall_6_0());
 				}
-				lv_SpecialPackets_10_0=ruleGSSEnvironmentSpecialPackets
+				lv_SpecialPackets_6_0=ruleGSSEnvironmentSpecialPackets
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSEnvironmentScenarioRule());
@@ -470,7 +439,7 @@ ruleGSSEnvironmentScenario returns [EObject current=null]
 					set(
 						$current,
 						"SpecialPackets",
-						lv_SpecialPackets_10_0,
+						lv_SpecialPackets_6_0,
 						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentSpecialPackets");
 					afterParserOrEnumRuleCall();
 				}
@@ -479,9 +448,9 @@ ruleGSSEnvironmentScenario returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getPeriodicTCsGSSEnvironmentPeriodicTCsParserRuleCall_11_0());
+					newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getPeriodicTCsGSSEnvironmentPeriodicTCsParserRuleCall_7_0());
 				}
-				lv_PeriodicTCs_11_0=ruleGSSEnvironmentPeriodicTCs
+				lv_PeriodicTCs_7_0=ruleGSSEnvironmentPeriodicTCs
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSEnvironmentScenarioRule());
@@ -489,7 +458,7 @@ ruleGSSEnvironmentScenario returns [EObject current=null]
 					set(
 						$current,
 						"PeriodicTCs",
-						lv_PeriodicTCs_11_0,
+						lv_PeriodicTCs_7_0,
 						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentPeriodicTCs");
 					afterParserOrEnumRuleCall();
 				}
@@ -498,20 +467,20 @@ ruleGSSEnvironmentScenario returns [EObject current=null]
 		(
 			(
 				{ 
-				  getUnorderedGroupHelper().enter(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_12());
+				  getUnorderedGroupHelper().enter(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8());
 				}
 				(
 					(
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_12(), 0)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 0)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_12(), 0);
+						getUnorderedGroupHelper().select(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 0);
 					}
 								({true}?=>((
 									{
-										newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getGlobalVarsGSSEnvironmentGlobalVarsParserRuleCall_12_0_0());
+										newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getGlobalVarsGSSEnvironmentGlobalVarsParserRuleCall_8_0_0());
 									}
-									lv_GlobalVars_13_0=ruleGSSEnvironmentGlobalVars
+									lv_GlobalVars_9_0=ruleGSSEnvironmentGlobalVars
 									{
 										if ($current==null) {
 											$current = createModelElementForParent(grammarAccess.getGSSEnvironmentScenarioRule());
@@ -519,27 +488,27 @@ ruleGSSEnvironmentScenario returns [EObject current=null]
 										set(
 											$current,
 											"GlobalVars",
-											lv_GlobalVars_13_0,
+											lv_GlobalVars_9_0,
 											"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentGlobalVars");
 										afterParserOrEnumRuleCall();
 									}
 								)
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_12());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_12(), 1)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 1)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_12(), 1);
+						getUnorderedGroupHelper().select(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), 1);
 					}
 								({true}?=>((
 									{
-										newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getMonitorsGSSEnvironmentMonitorsParserRuleCall_12_1_0());
+										newCompositeNode(grammarAccess.getGSSEnvironmentScenarioAccess().getMonitorsGSSEnvironmentMonitorsParserRuleCall_8_1_0());
 									}
-									lv_Monitors_14_0=ruleGSSEnvironmentMonitors
+									lv_Monitors_10_0=ruleGSSEnvironmentMonitors
 									{
 										if ($current==null) {
 											$current = createModelElementForParent(grammarAccess.getGSSEnvironmentScenarioRule());
@@ -547,32 +516,32 @@ ruleGSSEnvironmentScenario returns [EObject current=null]
 										set(
 											$current,
 											"Monitors",
-											lv_Monitors_14_0,
+											lv_Monitors_10_0,
 											"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentMonitors");
 										afterParserOrEnumRuleCall();
 									}
 								)
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_12());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8());
 					}
 				)
 			)
 					)+
-					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_12())}?
+					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8())}?
 				)
 			)
 				{ 
-				  getUnorderedGroupHelper().leave(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_12());
+				  getUnorderedGroupHelper().leave(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8());
 				}
 		)?
-		otherlv_15='}'
+		otherlv_11='}'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getGSSEnvironmentScenarioAccess().getRightCurlyBracketKeyword_13());
+			newLeafNode(otherlv_11, grammarAccess.getGSSEnvironmentScenarioAccess().getRightCurlyBracketKeyword_9());
 		}
-		otherlv_16=';'
+		otherlv_12=';'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getGSSEnvironmentScenarioAccess().getSemicolonKeyword_14());
+			newLeafNode(otherlv_12, grammarAccess.getGSSEnvironmentScenarioAccess().getSemicolonKeyword_10());
 		}
 	)
 ;

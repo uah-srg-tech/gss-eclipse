@@ -38,7 +38,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentScenarioImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentScenarioImpl#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentScenarioImpl#getGss_options <em>Gss options</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentScenarioImpl#getProtocols <em>Protocols</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentScenarioImpl#getInterfaces <em>Interfaces</em>}</li>
@@ -70,26 +69,6 @@ public class GSSEnvironmentScenarioImpl extends MinimalEObjectImpl.Container imp
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getGss_options() <em>Gss options</em>}' containment reference.
@@ -199,27 +178,6 @@ public class GSSEnvironmentScenarioImpl extends MinimalEObjectImpl.Container imp
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, environmentPackage.GSS_ENVIRONMENT_SCENARIO__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, environmentPackage.GSS_ENVIRONMENT_SCENARIO__ID, oldId, id));
 	}
 
 	/**
@@ -559,8 +517,6 @@ public class GSSEnvironmentScenarioImpl extends MinimalEObjectImpl.Container imp
 		switch (featureID) {
 			case environmentPackage.GSS_ENVIRONMENT_SCENARIO__NAME:
 				return getName();
-			case environmentPackage.GSS_ENVIRONMENT_SCENARIO__ID:
-				return getId();
 			case environmentPackage.GSS_ENVIRONMENT_SCENARIO__GSS_OPTIONS:
 				return getGss_options();
 			case environmentPackage.GSS_ENVIRONMENT_SCENARIO__PROTOCOLS:
@@ -589,9 +545,6 @@ public class GSSEnvironmentScenarioImpl extends MinimalEObjectImpl.Container imp
 		switch (featureID) {
 			case environmentPackage.GSS_ENVIRONMENT_SCENARIO__NAME:
 				setName((String)newValue);
-				return;
-			case environmentPackage.GSS_ENVIRONMENT_SCENARIO__ID:
-				setId((String)newValue);
 				return;
 			case environmentPackage.GSS_ENVIRONMENT_SCENARIO__GSS_OPTIONS:
 				setGss_options((GSSEnvironmentOptions)newValue);
@@ -629,9 +582,6 @@ public class GSSEnvironmentScenarioImpl extends MinimalEObjectImpl.Container imp
 			case environmentPackage.GSS_ENVIRONMENT_SCENARIO__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case environmentPackage.GSS_ENVIRONMENT_SCENARIO__ID:
-				setId(ID_EDEFAULT);
-				return;
 			case environmentPackage.GSS_ENVIRONMENT_SCENARIO__GSS_OPTIONS:
 				setGss_options((GSSEnvironmentOptions)null);
 				return;
@@ -667,8 +617,6 @@ public class GSSEnvironmentScenarioImpl extends MinimalEObjectImpl.Container imp
 		switch (featureID) {
 			case environmentPackage.GSS_ENVIRONMENT_SCENARIO__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case environmentPackage.GSS_ENVIRONMENT_SCENARIO__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case environmentPackage.GSS_ENVIRONMENT_SCENARIO__GSS_OPTIONS:
 				return gss_options != null;
 			case environmentPackage.GSS_ENVIRONMENT_SCENARIO__PROTOCOLS:
@@ -699,8 +647,6 @@ public class GSSEnvironmentScenarioImpl extends MinimalEObjectImpl.Container imp
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", id: ");
-		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

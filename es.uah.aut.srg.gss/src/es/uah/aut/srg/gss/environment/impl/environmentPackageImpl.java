@@ -553,17 +553,8 @@ public class environmentPackageImpl extends EPackageImpl implements environmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSEnvironmentScenario_Id() {
-		return (EAttribute)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getGSSEnvironmentScenario_Gss_options() {
-		return (EReference)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(2);
+		return (EReference)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -572,7 +563,7 @@ public class environmentPackageImpl extends EPackageImpl implements environmentP
 	 * @generated
 	 */
 	public EReference getGSSEnvironmentScenario_Protocols() {
-		return (EReference)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(3);
+		return (EReference)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -581,7 +572,7 @@ public class environmentPackageImpl extends EPackageImpl implements environmentP
 	 * @generated
 	 */
 	public EReference getGSSEnvironmentScenario_Interfaces() {
-		return (EReference)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(4);
+		return (EReference)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -590,7 +581,7 @@ public class environmentPackageImpl extends EPackageImpl implements environmentP
 	 * @generated
 	 */
 	public EReference getGSSEnvironmentScenario_SpecialPackets() {
-		return (EReference)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(5);
+		return (EReference)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -599,7 +590,7 @@ public class environmentPackageImpl extends EPackageImpl implements environmentP
 	 * @generated
 	 */
 	public EReference getGSSEnvironmentScenario_PeriodicTCs() {
-		return (EReference)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(6);
+		return (EReference)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -608,7 +599,7 @@ public class environmentPackageImpl extends EPackageImpl implements environmentP
 	 * @generated
 	 */
 	public EReference getGSSEnvironmentScenario_GlobalVars() {
-		return (EReference)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(7);
+		return (EReference)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -617,7 +608,7 @@ public class environmentPackageImpl extends EPackageImpl implements environmentP
 	 * @generated
 	 */
 	public EReference getGSSEnvironmentScenario_Monitors() {
-		return (EReference)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(8);
+		return (EReference)gssEnvironmentScenarioEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2471,7 +2462,6 @@ public class environmentPackageImpl extends EPackageImpl implements environmentP
 
 		gssEnvironmentScenarioEClass = createEClass(GSS_ENVIRONMENT_SCENARIO);
 		createEAttribute(gssEnvironmentScenarioEClass, GSS_ENVIRONMENT_SCENARIO__NAME);
-		createEAttribute(gssEnvironmentScenarioEClass, GSS_ENVIRONMENT_SCENARIO__ID);
 		createEReference(gssEnvironmentScenarioEClass, GSS_ENVIRONMENT_SCENARIO__GSS_OPTIONS);
 		createEReference(gssEnvironmentScenarioEClass, GSS_ENVIRONMENT_SCENARIO__PROTOCOLS);
 		createEReference(gssEnvironmentScenarioEClass, GSS_ENVIRONMENT_SCENARIO__INTERFACES);
@@ -2773,7 +2763,6 @@ public class environmentPackageImpl extends EPackageImpl implements environmentP
 
 		initEClass(gssEnvironmentScenarioEClass, GSSEnvironmentScenario.class, "GSSEnvironmentScenario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSEnvironmentScenario_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSEnvironmentScenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSEnvironmentScenario_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSEnvironmentScenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSEnvironmentScenario_Gss_options(), this.getGSSEnvironmentOptions(), null, "gss_options", null, 1, 1, GSSEnvironmentScenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSEnvironmentScenario_Protocols(), this.getGSSEnvironmentProtocols(), null, "Protocols", null, 1, 1, GSSEnvironmentScenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSEnvironmentScenario_Interfaces(), this.getGSSEnvironmentInterfaces(), null, "Interfaces", null, 1, 1, GSSEnvironmentScenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

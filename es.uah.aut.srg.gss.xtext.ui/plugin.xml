@@ -52,7 +52,7 @@
                      </test>
                      <test
                            property="org.eclipse.core.resources.extension"
-                           value="gss_config">
+                           value="gss_campaign">
                      </test>
                      <test
                            property="org.eclipse.core.resources.extension"

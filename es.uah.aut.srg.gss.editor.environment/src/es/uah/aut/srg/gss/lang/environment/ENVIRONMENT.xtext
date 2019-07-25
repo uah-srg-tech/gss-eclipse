@@ -35,7 +35,6 @@ GSSEnvironmentScenario returns GSSEnvironmentScenario:
 	'GSSEnvironmentScenario'
 	name=ID
 	'{'
-		'id' ':=' id=INTEGER ';'
 		gss_options=GSSEnvironmentOptions
 		Protocols=GSSEnvironmentProtocols
 		Interfaces=GSSEnvironmentInterfaces

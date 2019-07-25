@@ -160,22 +160,13 @@ public interface environmentPackage extends EPackage {
 	int GSS_ENVIRONMENT_SCENARIO__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_ENVIRONMENT_SCENARIO__ID = 1;
-
-	/**
 	 * The feature id for the '<em><b>Gss options</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_ENVIRONMENT_SCENARIO__GSS_OPTIONS = 2;
+	int GSS_ENVIRONMENT_SCENARIO__GSS_OPTIONS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Protocols</b></em>' containment reference.
@@ -184,7 +175,7 @@ public interface environmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_ENVIRONMENT_SCENARIO__PROTOCOLS = 3;
+	int GSS_ENVIRONMENT_SCENARIO__PROTOCOLS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference.
@@ -193,7 +184,7 @@ public interface environmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_ENVIRONMENT_SCENARIO__INTERFACES = 4;
+	int GSS_ENVIRONMENT_SCENARIO__INTERFACES = 3;
 
 	/**
 	 * The feature id for the '<em><b>Special Packets</b></em>' containment reference.
@@ -202,7 +193,7 @@ public interface environmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_ENVIRONMENT_SCENARIO__SPECIAL_PACKETS = 5;
+	int GSS_ENVIRONMENT_SCENARIO__SPECIAL_PACKETS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Periodic TCs</b></em>' containment reference.
@@ -211,7 +202,7 @@ public interface environmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_ENVIRONMENT_SCENARIO__PERIODIC_TCS = 6;
+	int GSS_ENVIRONMENT_SCENARIO__PERIODIC_TCS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Global Vars</b></em>' containment reference.
@@ -220,7 +211,7 @@ public interface environmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_ENVIRONMENT_SCENARIO__GLOBAL_VARS = 7;
+	int GSS_ENVIRONMENT_SCENARIO__GLOBAL_VARS = 6;
 
 	/**
 	 * The feature id for the '<em><b>Monitors</b></em>' containment reference.
@@ -229,7 +220,7 @@ public interface environmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_ENVIRONMENT_SCENARIO__MONITORS = 8;
+	int GSS_ENVIRONMENT_SCENARIO__MONITORS = 7;
 
 	/**
 	 * The number of structural features of the '<em>GSS Environment Scenario</em>' class.
@@ -238,7 +229,7 @@ public interface environmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_ENVIRONMENT_SCENARIO_FEATURE_COUNT = 9;
+	int GSS_ENVIRONMENT_SCENARIO_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>GSS Environment Scenario</em>' class.
@@ -3059,17 +3050,6 @@ public interface environmentPackage extends EPackage {
 	EAttribute getGSSEnvironmentScenario_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentScenario#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.gss.environment.GSSEnvironmentScenario#getId()
-	 * @see #getGSSEnvironmentScenario()
-	 * @generated
-	 */
-	EAttribute getGSSEnvironmentScenario_Id();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentScenario#getGss_options <em>Gss options</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5378,14 +5358,6 @@ public interface environmentPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GSS_ENVIRONMENT_SCENARIO__NAME = eINSTANCE.getGSSEnvironmentScenario_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_ENVIRONMENT_SCENARIO__ID = eINSTANCE.getGSSEnvironmentScenario_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Gss options</b></em>' containment reference feature.

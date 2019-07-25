@@ -157,14 +157,13 @@ public class ENVIRONMENTParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSEnvironmentGSSEnvironmentAccess().getVersionAssignment_6(), "rule__GSSEnvironmentGSSEnvironment__VersionAssignment_6");
 					put(grammarAccess.getGSSEnvironmentGSSEnvironmentAccess().getScenarioAssignment_8(), "rule__GSSEnvironmentGSSEnvironment__ScenarioAssignment_8");
 					put(grammarAccess.getGSSEnvironmentScenarioAccess().getNameAssignment_1(), "rule__GSSEnvironmentScenario__NameAssignment_1");
-					put(grammarAccess.getGSSEnvironmentScenarioAccess().getIdAssignment_5(), "rule__GSSEnvironmentScenario__IdAssignment_5");
-					put(grammarAccess.getGSSEnvironmentScenarioAccess().getGss_optionsAssignment_7(), "rule__GSSEnvironmentScenario__Gss_optionsAssignment_7");
-					put(grammarAccess.getGSSEnvironmentScenarioAccess().getProtocolsAssignment_8(), "rule__GSSEnvironmentScenario__ProtocolsAssignment_8");
-					put(grammarAccess.getGSSEnvironmentScenarioAccess().getInterfacesAssignment_9(), "rule__GSSEnvironmentScenario__InterfacesAssignment_9");
-					put(grammarAccess.getGSSEnvironmentScenarioAccess().getSpecialPacketsAssignment_10(), "rule__GSSEnvironmentScenario__SpecialPacketsAssignment_10");
-					put(grammarAccess.getGSSEnvironmentScenarioAccess().getPeriodicTCsAssignment_11(), "rule__GSSEnvironmentScenario__PeriodicTCsAssignment_11");
-					put(grammarAccess.getGSSEnvironmentScenarioAccess().getGlobalVarsAssignment_12_0(), "rule__GSSEnvironmentScenario__GlobalVarsAssignment_12_0");
-					put(grammarAccess.getGSSEnvironmentScenarioAccess().getMonitorsAssignment_12_1(), "rule__GSSEnvironmentScenario__MonitorsAssignment_12_1");
+					put(grammarAccess.getGSSEnvironmentScenarioAccess().getGss_optionsAssignment_3(), "rule__GSSEnvironmentScenario__Gss_optionsAssignment_3");
+					put(grammarAccess.getGSSEnvironmentScenarioAccess().getProtocolsAssignment_4(), "rule__GSSEnvironmentScenario__ProtocolsAssignment_4");
+					put(grammarAccess.getGSSEnvironmentScenarioAccess().getInterfacesAssignment_5(), "rule__GSSEnvironmentScenario__InterfacesAssignment_5");
+					put(grammarAccess.getGSSEnvironmentScenarioAccess().getSpecialPacketsAssignment_6(), "rule__GSSEnvironmentScenario__SpecialPacketsAssignment_6");
+					put(grammarAccess.getGSSEnvironmentScenarioAccess().getPeriodicTCsAssignment_7(), "rule__GSSEnvironmentScenario__PeriodicTCsAssignment_7");
+					put(grammarAccess.getGSSEnvironmentScenarioAccess().getGlobalVarsAssignment_8_0(), "rule__GSSEnvironmentScenario__GlobalVarsAssignment_8_0");
+					put(grammarAccess.getGSSEnvironmentScenarioAccess().getMonitorsAssignment_8_1(), "rule__GSSEnvironmentScenario__MonitorsAssignment_8_1");
 					put(grammarAccess.getGSSEnvironmentOptionsAccess().getGss_infoAssignment_2(), "rule__GSSEnvironmentOptions__Gss_infoAssignment_2");
 					put(grammarAccess.getGSSEnvironmentOptionsAccess().getGss_info_printAssignment_3(), "rule__GSSEnvironmentOptions__Gss_info_printAssignment_3");
 					put(grammarAccess.getGSSEnvironmentOptionsAccess().getPhy_header_printAssignment_4(), "rule__GSSEnvironmentOptions__Phy_header_printAssignment_4");
@@ -336,7 +335,7 @@ public class ENVIRONMENTParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSEnvironmentGVPeriodicAccess().getGlobalVarRefAssignment_4(), "rule__GSSEnvironmentGVPeriodic__GlobalVarRefAssignment_4");
 					put(grammarAccess.getGSSEnvironmentGVPeriodicAccess().getPeriod_valueAssignment_8(), "rule__GSSEnvironmentGVPeriodic__Period_valueAssignment_8");
 					put(grammarAccess.getGSSEnvironmentGVPeriodicAccess().getPeriod_unitAssignment_12(), "rule__GSSEnvironmentGVPeriodic__Period_unitAssignment_12");
-					put(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_12(), "rule__GSSEnvironmentScenario__UnorderedGroup_12");
+					put(grammarAccess.getGSSEnvironmentScenarioAccess().getUnorderedGroup_8(), "rule__GSSEnvironmentScenario__UnorderedGroup_8");
 				}
 			};
 		}
