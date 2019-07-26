@@ -62,4 +62,12 @@
             genModel="model/campaign.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated config -->
+      <package
+            uri="http://srg.aut.uah.es/gss/config"
+            class="es.uah.aut.srg.gss.config.configPackage"
+            genModel="model/config.genmodel"/>
+   </extension>
+
 </plugin>

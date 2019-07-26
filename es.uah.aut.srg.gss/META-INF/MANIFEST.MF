@@ -28,7 +28,10 @@ Export-Package: es.uah.aut.srg.gss.common,
  es.uah.aut.srg.gss.environment.util,
  es.uah.aut.srg.gss.campaign,
  es.uah.aut.srg.gss.campaign.impl,
- es.uah.aut.srg.gss.campaign.util
+ es.uah.aut.srg.gss.campaign.util,
+ es.uah.aut.srg.gss.config,
+ es.uah.aut.srg.gss.config.impl,
+ es.uah.aut.srg.gss.config.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  es.uah.aut.srg.gss;visibility:=reexport,
