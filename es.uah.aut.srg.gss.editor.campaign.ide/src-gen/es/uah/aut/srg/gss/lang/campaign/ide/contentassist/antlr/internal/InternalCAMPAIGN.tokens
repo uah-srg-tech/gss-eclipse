@@ -6,7 +6,7 @@
 ';'=15
 'GSSCampaignCampaign'=16
 'GSSCampaignScenario'=21
-'GSSCampaignTest'=25
+'GSSCampaignTestCase'=25
 'GSSCampaignTests'=24
 '_1'=12
 'environment'=22
@@ -15,7 +15,7 @@
 'procedure'=27
 'req'=28
 'reqAction'=29
-'scenario'=23
+'scenarioId'=23
 'uri'=20
 'version'=18
 '{'=17

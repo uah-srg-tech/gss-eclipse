@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.campaign.GSSCampaignTests#getTest <em>Test</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.campaign.GSSCampaignTests#getTestCase <em>Test Case</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignTests()
@@ -32,19 +32,19 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface GSSCampaignTests extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Test</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.campaign.GSSCampaignTest}.
+	 * Returns the value of the '<em><b>Test Case</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Test</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Test Case</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Test</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignTests_Test()
+	 * @return the value of the '<em>Test Case</em>' containment reference list.
+	 * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignTests_TestCase()
 	 * @model containment="true" required="true" upper="150"
 	 * @generated
 	 */
-	EList<GSSCampaignTest> getTest();
+	EList<GSSCampaignTestCase> getTestCase();
 
 } // GSSCampaignTests

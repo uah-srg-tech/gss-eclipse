@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.gss.campaign.impl;
 
-import es.uah.aut.srg.gss.campaign.GSSCampaignTest;
+import es.uah.aut.srg.gss.campaign.GSSCampaignTestCase;
 import es.uah.aut.srg.gss.campaign.GSSCampaignTestReqAction;
 import es.uah.aut.srg.gss.campaign.campaignPackage;
 
@@ -26,21 +26,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GSS Campaign Test</b></em>'.
+ * An implementation of the model object '<em><b>GSS Campaign Test Case</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestImpl#getProcedure <em>Procedure</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestImpl#getReq <em>Req</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestImpl#getReqAction <em>Req Action</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl#getProcedure <em>Procedure</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl#getReq <em>Req</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl#getReqAction <em>Req Action</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSCampaignTestImpl extends MinimalEObjectImpl.Container implements GSSCampaignTest {
+public class GSSCampaignTestCaseImpl extends MinimalEObjectImpl.Container implements GSSCampaignTestCase {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -125,7 +125,7 @@ public class GSSCampaignTestImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GSSCampaignTestImpl() {
+	protected GSSCampaignTestCaseImpl() {
 		super();
 	}
 
@@ -136,7 +136,7 @@ public class GSSCampaignTestImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return campaignPackage.Literals.GSS_CAMPAIGN_TEST;
+		return campaignPackage.Literals.GSS_CAMPAIGN_TEST_CASE;
 	}
 
 	/**
@@ -157,7 +157,7 @@ public class GSSCampaignTestImpl extends MinimalEObjectImpl.Container implements
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_TEST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_TEST_CASE__NAME, oldName, name));
 	}
 
 	/**
@@ -171,7 +171,7 @@ public class GSSCampaignTestImpl extends MinimalEObjectImpl.Container implements
 			procedure = (GSSTestProcTestProc)eResolveProxy(oldProcedure);
 			if (procedure != oldProcedure) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, campaignPackage.GSS_CAMPAIGN_TEST__PROCEDURE, oldProcedure, procedure));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, campaignPackage.GSS_CAMPAIGN_TEST_CASE__PROCEDURE, oldProcedure, procedure));
 			}
 		}
 		return procedure;
@@ -195,7 +195,7 @@ public class GSSCampaignTestImpl extends MinimalEObjectImpl.Container implements
 		GSSTestProcTestProc oldProcedure = procedure;
 		procedure = newProcedure;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_TEST__PROCEDURE, oldProcedure, procedure));
+			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_TEST_CASE__PROCEDURE, oldProcedure, procedure));
 	}
 
 	/**
@@ -216,7 +216,7 @@ public class GSSCampaignTestImpl extends MinimalEObjectImpl.Container implements
 		String oldReq = req;
 		req = newReq;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_TEST__REQ, oldReq, req));
+			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ, oldReq, req));
 	}
 
 	/**
@@ -239,7 +239,7 @@ public class GSSCampaignTestImpl extends MinimalEObjectImpl.Container implements
 		boolean oldReqActionESet = reqActionESet;
 		reqActionESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_TEST__REQ_ACTION, oldReqAction, reqAction, !oldReqActionESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ_ACTION, oldReqAction, reqAction, !oldReqActionESet));
 	}
 
 	/**
@@ -253,7 +253,7 @@ public class GSSCampaignTestImpl extends MinimalEObjectImpl.Container implements
 		reqAction = REQ_ACTION_EDEFAULT;
 		reqActionESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, campaignPackage.GSS_CAMPAIGN_TEST__REQ_ACTION, oldReqAction, REQ_ACTION_EDEFAULT, oldReqActionESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ_ACTION, oldReqAction, REQ_ACTION_EDEFAULT, oldReqActionESet));
 	}
 
 	/**
@@ -273,14 +273,14 @@ public class GSSCampaignTestImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case campaignPackage.GSS_CAMPAIGN_TEST__NAME:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__NAME:
 				return getName();
-			case campaignPackage.GSS_CAMPAIGN_TEST__PROCEDURE:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PROCEDURE:
 				if (resolve) return getProcedure();
 				return basicGetProcedure();
-			case campaignPackage.GSS_CAMPAIGN_TEST__REQ:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ:
 				return getReq();
-			case campaignPackage.GSS_CAMPAIGN_TEST__REQ_ACTION:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ_ACTION:
 				return getReqAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -294,16 +294,16 @@ public class GSSCampaignTestImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case campaignPackage.GSS_CAMPAIGN_TEST__NAME:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__NAME:
 				setName((String)newValue);
 				return;
-			case campaignPackage.GSS_CAMPAIGN_TEST__PROCEDURE:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PROCEDURE:
 				setProcedure((GSSTestProcTestProc)newValue);
 				return;
-			case campaignPackage.GSS_CAMPAIGN_TEST__REQ:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ:
 				setReq((String)newValue);
 				return;
-			case campaignPackage.GSS_CAMPAIGN_TEST__REQ_ACTION:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ_ACTION:
 				setReqAction((GSSCampaignTestReqAction)newValue);
 				return;
 		}
@@ -318,16 +318,16 @@ public class GSSCampaignTestImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case campaignPackage.GSS_CAMPAIGN_TEST__NAME:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case campaignPackage.GSS_CAMPAIGN_TEST__PROCEDURE:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PROCEDURE:
 				setProcedure((GSSTestProcTestProc)null);
 				return;
-			case campaignPackage.GSS_CAMPAIGN_TEST__REQ:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ:
 				setReq(REQ_EDEFAULT);
 				return;
-			case campaignPackage.GSS_CAMPAIGN_TEST__REQ_ACTION:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ_ACTION:
 				unsetReqAction();
 				return;
 		}
@@ -342,13 +342,13 @@ public class GSSCampaignTestImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case campaignPackage.GSS_CAMPAIGN_TEST__NAME:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case campaignPackage.GSS_CAMPAIGN_TEST__PROCEDURE:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PROCEDURE:
 				return procedure != null;
-			case campaignPackage.GSS_CAMPAIGN_TEST__REQ:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ:
 				return REQ_EDEFAULT == null ? req != null : !REQ_EDEFAULT.equals(req);
-			case campaignPackage.GSS_CAMPAIGN_TEST__REQ_ACTION:
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ_ACTION:
 				return isSetReqAction();
 		}
 		return super.eIsSet(featureID);
@@ -374,4 +374,4 @@ public class GSSCampaignTestImpl extends MinimalEObjectImpl.Container implements
 		return result.toString();
 	}
 
-} //GSSCampaignTestImpl
+} //GSSCampaignTestCaseImpl

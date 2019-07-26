@@ -169,13 +169,13 @@ public interface campaignPackage extends EPackage {
 	int GSS_CAMPAIGN_SCENARIO__ENVIRONMENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Scenario</b></em>' reference.
+	 * The feature id for the '<em><b>Scenario Id</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CAMPAIGN_SCENARIO__SCENARIO = 1;
+	int GSS_CAMPAIGN_SCENARIO__SCENARIO_ID = 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Campaign Scenario</em>' class.
@@ -206,13 +206,13 @@ public interface campaignPackage extends EPackage {
 	int GSS_CAMPAIGN_TESTS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Test</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Test Case</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CAMPAIGN_TESTS__TEST = 0;
+	int GSS_CAMPAIGN_TESTS__TEST_CASE = 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Campaign Tests</em>' class.
@@ -233,14 +233,14 @@ public interface campaignPackage extends EPackage {
 	int GSS_CAMPAIGN_TESTS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestImpl <em>GSS Campaign Test</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl <em>GSS Campaign Test Case</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestImpl
-	 * @see es.uah.aut.srg.gss.campaign.impl.campaignPackageImpl#getGSSCampaignTest()
+	 * @see es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl
+	 * @see es.uah.aut.srg.gss.campaign.impl.campaignPackageImpl#getGSSCampaignTestCase()
 	 * @generated
 	 */
-	int GSS_CAMPAIGN_TEST = 3;
+	int GSS_CAMPAIGN_TEST_CASE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -249,7 +249,7 @@ public interface campaignPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CAMPAIGN_TEST__NAME = 0;
+	int GSS_CAMPAIGN_TEST_CASE__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Procedure</b></em>' reference.
@@ -258,7 +258,7 @@ public interface campaignPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CAMPAIGN_TEST__PROCEDURE = 1;
+	int GSS_CAMPAIGN_TEST_CASE__PROCEDURE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Req</b></em>' attribute.
@@ -267,7 +267,7 @@ public interface campaignPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CAMPAIGN_TEST__REQ = 2;
+	int GSS_CAMPAIGN_TEST_CASE__REQ = 2;
 
 	/**
 	 * The feature id for the '<em><b>Req Action</b></em>' attribute.
@@ -276,25 +276,25 @@ public interface campaignPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CAMPAIGN_TEST__REQ_ACTION = 3;
+	int GSS_CAMPAIGN_TEST_CASE__REQ_ACTION = 3;
 
 	/**
-	 * The number of structural features of the '<em>GSS Campaign Test</em>' class.
+	 * The number of structural features of the '<em>GSS Campaign Test Case</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CAMPAIGN_TEST_FEATURE_COUNT = 4;
+	int GSS_CAMPAIGN_TEST_CASE_FEATURE_COUNT = 4;
 
 	/**
-	 * The number of operations of the '<em>GSS Campaign Test</em>' class.
+	 * The number of operations of the '<em>GSS Campaign Test Case</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CAMPAIGN_TEST_OPERATION_COUNT = 0;
+	int GSS_CAMPAIGN_TEST_CASE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestReqAction <em>GSS Campaign Test Req Action</em>}' enum.
@@ -361,15 +361,15 @@ public interface campaignPackage extends EPackage {
 	EReference getGSSCampaignScenario_Environment();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenario <em>Scenario</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenarioId <em>Scenario Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Scenario</em>'.
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenario()
+	 * @return the meta object for the reference '<em>Scenario Id</em>'.
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenarioId()
 	 * @see #getGSSCampaignScenario()
 	 * @generated
 	 */
-	EReference getGSSCampaignScenario_Scenario();
+	EReference getGSSCampaignScenario_ScenarioId();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTests <em>GSS Campaign Tests</em>}'.
@@ -382,69 +382,69 @@ public interface campaignPackage extends EPackage {
 	EClass getGSSCampaignTests();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTests#getTest <em>Test</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTests#getTestCase <em>Test Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Test</em>'.
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTests#getTest()
+	 * @return the meta object for the containment reference list '<em>Test Case</em>'.
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTests#getTestCase()
 	 * @see #getGSSCampaignTests()
 	 * @generated
 	 */
-	EReference getGSSCampaignTests_Test();
+	EReference getGSSCampaignTests_TestCase();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTest <em>GSS Campaign Test</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase <em>GSS Campaign Test Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Campaign Test</em>'.
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTest
+	 * @return the meta object for class '<em>GSS Campaign Test Case</em>'.
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestCase
 	 * @generated
 	 */
-	EClass getGSSCampaignTest();
+	EClass getGSSCampaignTestCase();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTest#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTest#getName()
-	 * @see #getGSSCampaignTest()
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getName()
+	 * @see #getGSSCampaignTestCase()
 	 * @generated
 	 */
-	EAttribute getGSSCampaignTest_Name();
+	EAttribute getGSSCampaignTestCase_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTest#getProcedure <em>Procedure</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getProcedure <em>Procedure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Procedure</em>'.
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTest#getProcedure()
-	 * @see #getGSSCampaignTest()
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getProcedure()
+	 * @see #getGSSCampaignTestCase()
 	 * @generated
 	 */
-	EReference getGSSCampaignTest_Procedure();
+	EReference getGSSCampaignTestCase_Procedure();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTest#getReq <em>Req</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getReq <em>Req</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Req</em>'.
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTest#getReq()
-	 * @see #getGSSCampaignTest()
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getReq()
+	 * @see #getGSSCampaignTestCase()
 	 * @generated
 	 */
-	EAttribute getGSSCampaignTest_Req();
+	EAttribute getGSSCampaignTestCase_Req();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTest#getReqAction <em>Req Action</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getReqAction <em>Req Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Req Action</em>'.
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTest#getReqAction()
-	 * @see #getGSSCampaignTest()
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getReqAction()
+	 * @see #getGSSCampaignTestCase()
 	 * @generated
 	 */
-	EAttribute getGSSCampaignTest_ReqAction();
+	EAttribute getGSSCampaignTestCase_ReqAction();
 
 	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestReqAction <em>GSS Campaign Test Req Action</em>}'.
@@ -524,12 +524,12 @@ public interface campaignPackage extends EPackage {
 		EReference GSS_CAMPAIGN_SCENARIO__ENVIRONMENT = eINSTANCE.getGSSCampaignScenario_Environment();
 
 		/**
-		 * The meta object literal for the '<em><b>Scenario</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Scenario Id</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_CAMPAIGN_SCENARIO__SCENARIO = eINSTANCE.getGSSCampaignScenario_Scenario();
+		EReference GSS_CAMPAIGN_SCENARIO__SCENARIO_ID = eINSTANCE.getGSSCampaignScenario_ScenarioId();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestsImpl <em>GSS Campaign Tests</em>}' class.
@@ -542,22 +542,22 @@ public interface campaignPackage extends EPackage {
 		EClass GSS_CAMPAIGN_TESTS = eINSTANCE.getGSSCampaignTests();
 
 		/**
-		 * The meta object literal for the '<em><b>Test</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Test Case</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_CAMPAIGN_TESTS__TEST = eINSTANCE.getGSSCampaignTests_Test();
+		EReference GSS_CAMPAIGN_TESTS__TEST_CASE = eINSTANCE.getGSSCampaignTests_TestCase();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestImpl <em>GSS Campaign Test</em>}' class.
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl <em>GSS Campaign Test Case</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestImpl
-		 * @see es.uah.aut.srg.gss.campaign.impl.campaignPackageImpl#getGSSCampaignTest()
+		 * @see es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl
+		 * @see es.uah.aut.srg.gss.campaign.impl.campaignPackageImpl#getGSSCampaignTestCase()
 		 * @generated
 		 */
-		EClass GSS_CAMPAIGN_TEST = eINSTANCE.getGSSCampaignTest();
+		EClass GSS_CAMPAIGN_TEST_CASE = eINSTANCE.getGSSCampaignTestCase();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -565,7 +565,7 @@ public interface campaignPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CAMPAIGN_TEST__NAME = eINSTANCE.getGSSCampaignTest_Name();
+		EAttribute GSS_CAMPAIGN_TEST_CASE__NAME = eINSTANCE.getGSSCampaignTestCase_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Procedure</b></em>' reference feature.
@@ -573,7 +573,7 @@ public interface campaignPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_CAMPAIGN_TEST__PROCEDURE = eINSTANCE.getGSSCampaignTest_Procedure();
+		EReference GSS_CAMPAIGN_TEST_CASE__PROCEDURE = eINSTANCE.getGSSCampaignTestCase_Procedure();
 
 		/**
 		 * The meta object literal for the '<em><b>Req</b></em>' attribute feature.
@@ -581,7 +581,7 @@ public interface campaignPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CAMPAIGN_TEST__REQ = eINSTANCE.getGSSCampaignTest_Req();
+		EAttribute GSS_CAMPAIGN_TEST_CASE__REQ = eINSTANCE.getGSSCampaignTestCase_Req();
 
 		/**
 		 * The meta object literal for the '<em><b>Req Action</b></em>' attribute feature.
@@ -589,7 +589,7 @@ public interface campaignPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CAMPAIGN_TEST__REQ_ACTION = eINSTANCE.getGSSCampaignTest_ReqAction();
+		EAttribute GSS_CAMPAIGN_TEST_CASE__REQ_ACTION = eINSTANCE.getGSSCampaignTestCase_ReqAction();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestReqAction <em>GSS Campaign Test Req Action</em>}' enum.

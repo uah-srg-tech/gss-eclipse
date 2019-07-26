@@ -90,8 +90,8 @@ public class campaignAdapterFactory extends AdapterFactoryImpl {
 				return createGSSCampaignTestsAdapter();
 			}
 			@Override
-			public Adapter caseGSSCampaignTest(GSSCampaignTest object) {
-				return createGSSCampaignTestAdapter();
+			public Adapter caseGSSCampaignTestCase(GSSCampaignTestCase object) {
+				return createGSSCampaignTestCaseAdapter();
 			}
 			@Override
 			public Adapter caseGSSModelElement(GSSModelElement object) {
@@ -160,16 +160,16 @@ public class campaignAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTest <em>GSS Campaign Test</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase <em>GSS Campaign Test Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTest
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestCase
 	 * @generated
 	 */
-	public Adapter createGSSCampaignTestAdapter() {
+	public Adapter createGSSCampaignTestCaseAdapter() {
 		return null;
 	}
 

@@ -53,9 +53,9 @@ public class CAMPAIGNParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSCampaignCampaignAccess().getGroup_3(), "rule__GSSCampaignCampaign__Group_3__0");
 					put(grammarAccess.getGSSCampaignScenarioAccess().getGroup(), "rule__GSSCampaignScenario__Group__0");
 					put(grammarAccess.getGSSCampaignTestsAccess().getGroup(), "rule__GSSCampaignTests__Group__0");
-					put(grammarAccess.getGSSCampaignTestAccess().getGroup(), "rule__GSSCampaignTest__Group__0");
-					put(grammarAccess.getGSSCampaignTestAccess().getGroup_10(), "rule__GSSCampaignTest__Group_10__0");
-					put(grammarAccess.getGSSCampaignTestAccess().getGroup_11(), "rule__GSSCampaignTest__Group_11__0");
+					put(grammarAccess.getGSSCampaignTestCaseAccess().getGroup(), "rule__GSSCampaignTestCase__Group__0");
+					put(grammarAccess.getGSSCampaignTestCaseAccess().getGroup_10(), "rule__GSSCampaignTestCase__Group_10__0");
+					put(grammarAccess.getGSSCampaignTestCaseAccess().getGroup_11(), "rule__GSSCampaignTestCase__Group_11__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getVersionAccess().getGroup(), "rule__Version__Group__0");
@@ -84,12 +84,12 @@ public class CAMPAIGNParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSCampaignCampaignAccess().getScenarioAssignment_8(), "rule__GSSCampaignCampaign__ScenarioAssignment_8");
 					put(grammarAccess.getGSSCampaignCampaignAccess().getTestsAssignment_9(), "rule__GSSCampaignCampaign__TestsAssignment_9");
 					put(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentAssignment_4(), "rule__GSSCampaignScenario__EnvironmentAssignment_4");
-					put(grammarAccess.getGSSCampaignScenarioAccess().getScenarioAssignment_8(), "rule__GSSCampaignScenario__ScenarioAssignment_8");
-					put(grammarAccess.getGSSCampaignTestsAccess().getTestAssignment_2(), "rule__GSSCampaignTests__TestAssignment_2");
-					put(grammarAccess.getGSSCampaignTestAccess().getNameAssignment_4(), "rule__GSSCampaignTest__NameAssignment_4");
-					put(grammarAccess.getGSSCampaignTestAccess().getProcedureAssignment_8(), "rule__GSSCampaignTest__ProcedureAssignment_8");
-					put(grammarAccess.getGSSCampaignTestAccess().getReqAssignment_10_1(), "rule__GSSCampaignTest__ReqAssignment_10_1");
-					put(grammarAccess.getGSSCampaignTestAccess().getReqActionAssignment_11_1(), "rule__GSSCampaignTest__ReqActionAssignment_11_1");
+					put(grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdAssignment_8(), "rule__GSSCampaignScenario__ScenarioIdAssignment_8");
+					put(grammarAccess.getGSSCampaignTestsAccess().getTestCaseAssignment_2(), "rule__GSSCampaignTests__TestCaseAssignment_2");
+					put(grammarAccess.getGSSCampaignTestCaseAccess().getNameAssignment_4(), "rule__GSSCampaignTestCase__NameAssignment_4");
+					put(grammarAccess.getGSSCampaignTestCaseAccess().getProcedureAssignment_8(), "rule__GSSCampaignTestCase__ProcedureAssignment_8");
+					put(grammarAccess.getGSSCampaignTestCaseAccess().getReqAssignment_10_1(), "rule__GSSCampaignTestCase__ReqAssignment_10_1");
+					put(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionAssignment_11_1(), "rule__GSSCampaignTestCase__ReqActionAssignment_11_1");
 				}
 			};
 		}

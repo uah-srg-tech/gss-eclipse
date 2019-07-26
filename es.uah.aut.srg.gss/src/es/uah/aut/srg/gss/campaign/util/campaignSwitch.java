@@ -95,9 +95,9 @@ public class campaignSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case campaignPackage.GSS_CAMPAIGN_TEST: {
-				GSSCampaignTest gssCampaignTest = (GSSCampaignTest)theEObject;
-				T result = caseGSSCampaignTest(gssCampaignTest);
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE: {
+				GSSCampaignTestCase gssCampaignTestCase = (GSSCampaignTestCase)theEObject;
+				T result = caseGSSCampaignTestCase(gssCampaignTestCase);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -151,17 +151,17 @@ public class campaignSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Campaign Test</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Campaign Test Case</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Campaign Test</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Campaign Test Case</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGSSCampaignTest(GSSCampaignTest object) {
+	public T caseGSSCampaignTestCase(GSSCampaignTestCase object) {
 		return null;
 	}
 

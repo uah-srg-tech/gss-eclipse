@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.gss.campaign.impl;
 
-import es.uah.aut.srg.gss.campaign.GSSCampaignTest;
+import es.uah.aut.srg.gss.campaign.GSSCampaignTestCase;
 import es.uah.aut.srg.gss.campaign.GSSCampaignTests;
 import es.uah.aut.srg.gss.campaign.campaignPackage;
 
@@ -36,21 +36,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestsImpl#getTest <em>Test</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestsImpl#getTestCase <em>Test Case</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class GSSCampaignTestsImpl extends MinimalEObjectImpl.Container implements GSSCampaignTests {
 	/**
-	 * The cached value of the '{@link #getTest() <em>Test</em>}' containment reference list.
+	 * The cached value of the '{@link #getTestCase() <em>Test Case</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTest()
+	 * @see #getTestCase()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GSSCampaignTest> test;
+	protected EList<GSSCampaignTestCase> testCase;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,11 +75,11 @@ public class GSSCampaignTestsImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSCampaignTest> getTest() {
-		if (test == null) {
-			test = new EObjectContainmentEList<GSSCampaignTest>(GSSCampaignTest.class, this, campaignPackage.GSS_CAMPAIGN_TESTS__TEST);
+	public EList<GSSCampaignTestCase> getTestCase() {
+		if (testCase == null) {
+			testCase = new EObjectContainmentEList<GSSCampaignTestCase>(GSSCampaignTestCase.class, this, campaignPackage.GSS_CAMPAIGN_TESTS__TEST_CASE);
 		}
-		return test;
+		return testCase;
 	}
 
 	/**
@@ -90,8 +90,8 @@ public class GSSCampaignTestsImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case campaignPackage.GSS_CAMPAIGN_TESTS__TEST:
-				return ((InternalEList<?>)getTest()).basicRemove(otherEnd, msgs);
+			case campaignPackage.GSS_CAMPAIGN_TESTS__TEST_CASE:
+				return ((InternalEList<?>)getTestCase()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -104,8 +104,8 @@ public class GSSCampaignTestsImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case campaignPackage.GSS_CAMPAIGN_TESTS__TEST:
-				return getTest();
+			case campaignPackage.GSS_CAMPAIGN_TESTS__TEST_CASE:
+				return getTestCase();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -119,9 +119,9 @@ public class GSSCampaignTestsImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case campaignPackage.GSS_CAMPAIGN_TESTS__TEST:
-				getTest().clear();
-				getTest().addAll((Collection<? extends GSSCampaignTest>)newValue);
+			case campaignPackage.GSS_CAMPAIGN_TESTS__TEST_CASE:
+				getTestCase().clear();
+				getTestCase().addAll((Collection<? extends GSSCampaignTestCase>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -135,8 +135,8 @@ public class GSSCampaignTestsImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case campaignPackage.GSS_CAMPAIGN_TESTS__TEST:
-				getTest().clear();
+			case campaignPackage.GSS_CAMPAIGN_TESTS__TEST_CASE:
+				getTestCase().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -150,8 +150,8 @@ public class GSSCampaignTestsImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case campaignPackage.GSS_CAMPAIGN_TESTS__TEST:
-				return test != null && !test.isEmpty();
+			case campaignPackage.GSS_CAMPAIGN_TESTS__TEST_CASE:
+				return testCase != null && !testCase.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

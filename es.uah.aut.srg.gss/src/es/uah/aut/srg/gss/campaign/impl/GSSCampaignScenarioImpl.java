@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignScenarioImpl#getEnvironment <em>Environment</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignScenarioImpl#getScenario <em>Scenario</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignScenarioImpl#getScenarioId <em>Scenario Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,14 +50,14 @@ public class GSSCampaignScenarioImpl extends MinimalEObjectImpl.Container implem
 	protected GSSEnvironmentEnvironment environment;
 
 	/**
-	 * The cached value of the '{@link #getScenario() <em>Scenario</em>}' reference.
+	 * The cached value of the '{@link #getScenarioId() <em>Scenario Id</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getScenario()
+	 * @see #getScenarioId()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSEnvironmentScenario scenario;
+	protected GSSEnvironmentScenario scenarioId;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -121,16 +121,16 @@ public class GSSCampaignScenarioImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSEnvironmentScenario getScenario() {
-		if (scenario != null && scenario.eIsProxy()) {
-			InternalEObject oldScenario = (InternalEObject)scenario;
-			scenario = (GSSEnvironmentScenario)eResolveProxy(oldScenario);
-			if (scenario != oldScenario) {
+	public GSSEnvironmentScenario getScenarioId() {
+		if (scenarioId != null && scenarioId.eIsProxy()) {
+			InternalEObject oldScenarioId = (InternalEObject)scenarioId;
+			scenarioId = (GSSEnvironmentScenario)eResolveProxy(oldScenarioId);
+			if (scenarioId != oldScenarioId) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO, oldScenario, scenario));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO_ID, oldScenarioId, scenarioId));
 			}
 		}
-		return scenario;
+		return scenarioId;
 	}
 
 	/**
@@ -138,8 +138,8 @@ public class GSSCampaignScenarioImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSEnvironmentScenario basicGetScenario() {
-		return scenario;
+	public GSSEnvironmentScenario basicGetScenarioId() {
+		return scenarioId;
 	}
 
 	/**
@@ -147,11 +147,11 @@ public class GSSCampaignScenarioImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setScenario(GSSEnvironmentScenario newScenario) {
-		GSSEnvironmentScenario oldScenario = scenario;
-		scenario = newScenario;
+	public void setScenarioId(GSSEnvironmentScenario newScenarioId) {
+		GSSEnvironmentScenario oldScenarioId = scenarioId;
+		scenarioId = newScenarioId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO, oldScenario, scenario));
+			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO_ID, oldScenarioId, scenarioId));
 	}
 
 	/**
@@ -165,9 +165,9 @@ public class GSSCampaignScenarioImpl extends MinimalEObjectImpl.Container implem
 			case campaignPackage.GSS_CAMPAIGN_SCENARIO__ENVIRONMENT:
 				if (resolve) return getEnvironment();
 				return basicGetEnvironment();
-			case campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO:
-				if (resolve) return getScenario();
-				return basicGetScenario();
+			case campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO_ID:
+				if (resolve) return getScenarioId();
+				return basicGetScenarioId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -183,8 +183,8 @@ public class GSSCampaignScenarioImpl extends MinimalEObjectImpl.Container implem
 			case campaignPackage.GSS_CAMPAIGN_SCENARIO__ENVIRONMENT:
 				setEnvironment((GSSEnvironmentEnvironment)newValue);
 				return;
-			case campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO:
-				setScenario((GSSEnvironmentScenario)newValue);
+			case campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO_ID:
+				setScenarioId((GSSEnvironmentScenario)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -201,8 +201,8 @@ public class GSSCampaignScenarioImpl extends MinimalEObjectImpl.Container implem
 			case campaignPackage.GSS_CAMPAIGN_SCENARIO__ENVIRONMENT:
 				setEnvironment((GSSEnvironmentEnvironment)null);
 				return;
-			case campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO:
-				setScenario((GSSEnvironmentScenario)null);
+			case campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO_ID:
+				setScenarioId((GSSEnvironmentScenario)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -218,8 +218,8 @@ public class GSSCampaignScenarioImpl extends MinimalEObjectImpl.Container implem
 		switch (featureID) {
 			case campaignPackage.GSS_CAMPAIGN_SCENARIO__ENVIRONMENT:
 				return environment != null;
-			case campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO:
-				return scenario != null;
+			case campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO_ID:
+				return scenarioId != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -291,15 +291,15 @@ ruleGSSCampaignCampaign returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSCampaignCampaignAccess().getScenarioGSSCampaignScenarioParserRuleCall_8_0());
 				}
-				lv_scenario_11_0=ruleGSSCampaignScenario
+				lv_Scenario_11_0=ruleGSSCampaignScenario
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSCampaignCampaignRule());
 					}
 					set(
 						$current,
-						"scenario",
-						lv_scenario_11_0,
+						"Scenario",
+						lv_Scenario_11_0,
 						"es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSCampaignScenario");
 					afterParserOrEnumRuleCall();
 				}
@@ -310,15 +310,15 @@ ruleGSSCampaignCampaign returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSCampaignCampaignAccess().getTestsGSSCampaignTestsParserRuleCall_9_0());
 				}
-				lv_tests_12_0=ruleGSSCampaignTests
+				lv_Tests_12_0=ruleGSSCampaignTests
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSCampaignCampaignRule());
 					}
 					set(
 						$current,
-						"tests",
-						lv_tests_12_0,
+						"Tests",
+						lv_Tests_12_0,
 						"es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSCampaignTests");
 					afterParserOrEnumRuleCall();
 				}
@@ -390,9 +390,9 @@ ruleGSSCampaignScenario returns [EObject current=null]
 		{
 			newLeafNode(otherlv_5, grammarAccess.getGSSCampaignScenarioAccess().getSemicolonKeyword_5());
 		}
-		otherlv_6='scenario'
+		otherlv_6='scenarioId'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSCampaignScenarioAccess().getScenarioKeyword_6());
+			newLeafNode(otherlv_6, grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdKeyword_6());
 		}
 		otherlv_7=':='
 		{
@@ -409,7 +409,7 @@ ruleGSSCampaignScenario returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioCrossReference_8_0());
+					newCompositeNode(grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdGSSEnvironmentScenarioCrossReference_8_0());
 				}
 				ruleVersionedQualifiedReferenceName
 				{
@@ -459,18 +459,18 @@ ruleGSSCampaignTests returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSCampaignTestsAccess().getTestGSSCampaignTestParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getGSSCampaignTestsAccess().getTestCaseGSSCampaignTestCaseParserRuleCall_2_0());
 				}
-				lv_test_2_0=ruleGSSCampaignTest
+				lv_TestCase_2_0=ruleGSSCampaignTestCase
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSCampaignTestsRule());
 					}
 					add(
 						$current,
-						"test",
-						lv_test_2_0,
-						"es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSCampaignTest");
+						"TestCase",
+						lv_TestCase_2_0,
+						"es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSCampaignTestCase");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -486,15 +486,15 @@ ruleGSSCampaignTests returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleGSSCampaignTest
-entryRuleGSSCampaignTest returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSCampaignTestRule()); }
-	iv_ruleGSSCampaignTest=ruleGSSCampaignTest
-	{ $current=$iv_ruleGSSCampaignTest.current; }
+// Entry rule entryRuleGSSCampaignTestCase
+entryRuleGSSCampaignTestCase returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSCampaignTestCaseRule()); }
+	iv_ruleGSSCampaignTestCase=ruleGSSCampaignTestCase
+	{ $current=$iv_ruleGSSCampaignTestCase.current; }
 	EOF;
 
-// Rule GSSCampaignTest
-ruleGSSCampaignTest returns [EObject current=null]
+// Rule GSSCampaignTestCase
+ruleGSSCampaignTestCase returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -502,31 +502,31 @@ ruleGSSCampaignTest returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='GSSCampaignTest'
+		otherlv_0='GSSCampaignTestCase'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSCampaignTestAccess().getGSSCampaignTestKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getGSSCampaignTestCaseAccess().getGSSCampaignTestCaseKeyword_0());
 		}
 		otherlv_1='{'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSCampaignTestAccess().getLeftCurlyBracketKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getGSSCampaignTestCaseAccess().getLeftCurlyBracketKeyword_1());
 		}
 		otherlv_2='name'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSCampaignTestAccess().getNameKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getGSSCampaignTestCaseAccess().getNameKeyword_2());
 		}
 		otherlv_3=':='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSCampaignTestAccess().getColonEqualsSignKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getGSSCampaignTestCaseAccess().getColonEqualsSignKeyword_3());
 		}
 		(
 			(
 				lv_name_4_0=RULE_STRING
 				{
-					newLeafNode(lv_name_4_0, grammarAccess.getGSSCampaignTestAccess().getNameSTRINGTerminalRuleCall_4_0());
+					newLeafNode(lv_name_4_0, grammarAccess.getGSSCampaignTestCaseAccess().getNameSTRINGTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGSSCampaignTestRule());
+						$current = createModelElement(grammarAccess.getGSSCampaignTestCaseRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -538,15 +538,15 @@ ruleGSSCampaignTest returns [EObject current=null]
 		)
 		otherlv_5=';'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSCampaignTestAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_5());
 		}
 		otherlv_6='procedure'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSCampaignTestAccess().getProcedureKeyword_6());
+			newLeafNode(otherlv_6, grammarAccess.getGSSCampaignTestCaseAccess().getProcedureKeyword_6());
 		}
 		otherlv_7=':='
 		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSCampaignTestAccess().getColonEqualsSignKeyword_7());
+			newLeafNode(otherlv_7, grammarAccess.getGSSCampaignTestCaseAccess().getColonEqualsSignKeyword_7());
 		}
 		(
 			(
@@ -555,11 +555,11 @@ ruleGSSCampaignTest returns [EObject current=null]
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGSSCampaignTestRule());
+						$current = createModelElement(grammarAccess.getGSSCampaignTestCaseRule());
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSCampaignTestAccess().getProcedureGSSTestProcTestProcCrossReference_8_0());
+					newCompositeNode(grammarAccess.getGSSCampaignTestCaseAccess().getProcedureGSSTestProcTestProcCrossReference_8_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -569,22 +569,22 @@ ruleGSSCampaignTest returns [EObject current=null]
 		)
 		otherlv_9=';'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getGSSCampaignTestAccess().getSemicolonKeyword_9());
+			newLeafNode(otherlv_9, grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_9());
 		}
 		(
 			otherlv_10='req'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getGSSCampaignTestAccess().getReqKeyword_10_0());
+				newLeafNode(otherlv_10, grammarAccess.getGSSCampaignTestCaseAccess().getReqKeyword_10_0());
 			}
 			(
 				(
 					lv_req_11_0=RULE_ID
 					{
-						newLeafNode(lv_req_11_0, grammarAccess.getGSSCampaignTestAccess().getReqIDTerminalRuleCall_10_1_0());
+						newLeafNode(lv_req_11_0, grammarAccess.getGSSCampaignTestCaseAccess().getReqIDTerminalRuleCall_10_1_0());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getGSSCampaignTestRule());
+							$current = createModelElement(grammarAccess.getGSSCampaignTestCaseRule());
 						}
 						setWithLastConsumed(
 							$current,
@@ -598,17 +598,17 @@ ruleGSSCampaignTest returns [EObject current=null]
 		(
 			otherlv_12='reqAction'
 			{
-				newLeafNode(otherlv_12, grammarAccess.getGSSCampaignTestAccess().getReqActionKeyword_11_0());
+				newLeafNode(otherlv_12, grammarAccess.getGSSCampaignTestCaseAccess().getReqActionKeyword_11_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSCampaignTestAccess().getReqActionGSSCampaignTestReqActionEnumRuleCall_11_1_0());
+						newCompositeNode(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionGSSCampaignTestReqActionEnumRuleCall_11_1_0());
 					}
 					lv_reqAction_13_0=ruleGSSCampaignTestReqAction
 					{
 						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSCampaignTestRule());
+							$current = createModelElementForParent(grammarAccess.getGSSCampaignTestCaseRule());
 						}
 						set(
 							$current,
@@ -622,11 +622,11 @@ ruleGSSCampaignTest returns [EObject current=null]
 		)?
 		otherlv_14='}'
 		{
-			newLeafNode(otherlv_14, grammarAccess.getGSSCampaignTestAccess().getRightCurlyBracketKeyword_12());
+			newLeafNode(otherlv_14, grammarAccess.getGSSCampaignTestCaseAccess().getRightCurlyBracketKeyword_12());
 		}
 		otherlv_15=';'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getGSSCampaignTestAccess().getSemicolonKeyword_13());
+			newLeafNode(otherlv_15, grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_13());
 		}
 	)
 ;

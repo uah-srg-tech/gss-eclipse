@@ -22,26 +22,26 @@ GSSCampaignCampaign returns GSSCampaignCampaign:
 	'{'
 		('uri' ':=' uri=QualifiedName ';')
 		'version' ':=' version=Version ';'
-		scenario=GSSCampaignScenario
-		tests=GSSCampaignTests
+		Scenario=GSSCampaignScenario
+		Tests=GSSCampaignTests
 	'}' ';'
 ;
 		
 GSSCampaignScenario returns GSSCampaignScenario:
 	'GSSCampaignScenario' '{'
 		'environment' ':=' environment=[environment::GSSEnvironmentEnvironment|VersionedQualifiedName] ';'
-		'scenario' ':=' scenario=[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName] ';'
+		'scenarioId' ':=' scenarioId=[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName] ';'
 	'}' ';'
 ;
 		
 GSSCampaignTests returns GSSCampaignTests:
 	'GSSCampaignTests' '{'
-		(test+=GSSCampaignTest)+ 
+		(TestCase+=GSSCampaignTestCase)+ 
 	'}' ';'
 ;
 
-GSSCampaignTest returns GSSCampaignTest:
-	'GSSCampaignTest' '{'
+GSSCampaignTestCase returns GSSCampaignTestCase:
+	'GSSCampaignTestCase' '{'
 		'name' ':=' name=STRING ';'
 		'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';'
 		('req' req=ID)?

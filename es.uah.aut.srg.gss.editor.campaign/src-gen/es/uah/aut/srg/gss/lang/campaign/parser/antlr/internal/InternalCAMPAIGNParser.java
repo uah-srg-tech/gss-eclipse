@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSCampaignCampaign'", "'{'", "'uri'", "'version'", "'}'", "'GSSCampaignScenario'", "'environment'", "'scenario'", "'GSSCampaignTests'", "'GSSCampaignTest'", "'name'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'", "'::'", "'_1'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSCampaignCampaign'", "'{'", "'uri'", "'version'", "'}'", "'GSSCampaignScenario'", "'environment'", "'scenarioId'", "'GSSCampaignTests'", "'GSSCampaignTestCase'", "'name'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'", "'::'", "'_1'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=9;
@@ -456,7 +456,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSCampaignCampaign"
-    // InternalCAMPAIGN.g:191:1: ruleGSSCampaignCampaign returns [EObject current=null] : (otherlv_0= 'GSSCampaignCampaign' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' ) otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' ( (lv_scenario_11_0= ruleGSSCampaignScenario ) ) ( (lv_tests_12_0= ruleGSSCampaignTests ) ) otherlv_13= '}' otherlv_14= ';' ) ;
+    // InternalCAMPAIGN.g:191:1: ruleGSSCampaignCampaign returns [EObject current=null] : (otherlv_0= 'GSSCampaignCampaign' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' ) otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' ( (lv_Scenario_11_0= ruleGSSCampaignScenario ) ) ( (lv_Tests_12_0= ruleGSSCampaignTests ) ) otherlv_13= '}' otherlv_14= ';' ) ;
     public final EObject ruleGSSCampaignCampaign() throws RecognitionException {
         EObject current = null;
 
@@ -475,20 +475,20 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
         AntlrDatatypeRuleToken lv_version_9_0 = null;
 
-        EObject lv_scenario_11_0 = null;
+        EObject lv_Scenario_11_0 = null;
 
-        EObject lv_tests_12_0 = null;
+        EObject lv_Tests_12_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalCAMPAIGN.g:197:2: ( (otherlv_0= 'GSSCampaignCampaign' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' ) otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' ( (lv_scenario_11_0= ruleGSSCampaignScenario ) ) ( (lv_tests_12_0= ruleGSSCampaignTests ) ) otherlv_13= '}' otherlv_14= ';' ) )
-            // InternalCAMPAIGN.g:198:2: (otherlv_0= 'GSSCampaignCampaign' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' ) otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' ( (lv_scenario_11_0= ruleGSSCampaignScenario ) ) ( (lv_tests_12_0= ruleGSSCampaignTests ) ) otherlv_13= '}' otherlv_14= ';' )
+            // InternalCAMPAIGN.g:197:2: ( (otherlv_0= 'GSSCampaignCampaign' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' ) otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' ( (lv_Scenario_11_0= ruleGSSCampaignScenario ) ) ( (lv_Tests_12_0= ruleGSSCampaignTests ) ) otherlv_13= '}' otherlv_14= ';' ) )
+            // InternalCAMPAIGN.g:198:2: (otherlv_0= 'GSSCampaignCampaign' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' ) otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' ( (lv_Scenario_11_0= ruleGSSCampaignScenario ) ) ( (lv_Tests_12_0= ruleGSSCampaignTests ) ) otherlv_13= '}' otherlv_14= ';' )
             {
-            // InternalCAMPAIGN.g:198:2: (otherlv_0= 'GSSCampaignCampaign' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' ) otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' ( (lv_scenario_11_0= ruleGSSCampaignScenario ) ) ( (lv_tests_12_0= ruleGSSCampaignTests ) ) otherlv_13= '}' otherlv_14= ';' )
-            // InternalCAMPAIGN.g:199:3: otherlv_0= 'GSSCampaignCampaign' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' ) otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' ( (lv_scenario_11_0= ruleGSSCampaignScenario ) ) ( (lv_tests_12_0= ruleGSSCampaignTests ) ) otherlv_13= '}' otherlv_14= ';'
+            // InternalCAMPAIGN.g:198:2: (otherlv_0= 'GSSCampaignCampaign' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' ) otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' ( (lv_Scenario_11_0= ruleGSSCampaignScenario ) ) ( (lv_Tests_12_0= ruleGSSCampaignTests ) ) otherlv_13= '}' otherlv_14= ';' )
+            // InternalCAMPAIGN.g:199:3: otherlv_0= 'GSSCampaignCampaign' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' ) otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' ( (lv_Scenario_11_0= ruleGSSCampaignScenario ) ) ( (lv_Tests_12_0= ruleGSSCampaignTests ) ) otherlv_13= '}' otherlv_14= ';'
             {
             otherlv_0=(Token)match(input,15,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -644,11 +644,11 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSCampaignCampaignAccess().getSemicolonKeyword_7());
               		
             }
-            // InternalCAMPAIGN.g:289:3: ( (lv_scenario_11_0= ruleGSSCampaignScenario ) )
-            // InternalCAMPAIGN.g:290:4: (lv_scenario_11_0= ruleGSSCampaignScenario )
+            // InternalCAMPAIGN.g:289:3: ( (lv_Scenario_11_0= ruleGSSCampaignScenario ) )
+            // InternalCAMPAIGN.g:290:4: (lv_Scenario_11_0= ruleGSSCampaignScenario )
             {
-            // InternalCAMPAIGN.g:290:4: (lv_scenario_11_0= ruleGSSCampaignScenario )
-            // InternalCAMPAIGN.g:291:5: lv_scenario_11_0= ruleGSSCampaignScenario
+            // InternalCAMPAIGN.g:290:4: (lv_Scenario_11_0= ruleGSSCampaignScenario )
+            // InternalCAMPAIGN.g:291:5: lv_Scenario_11_0= ruleGSSCampaignScenario
             {
             if ( state.backtracking==0 ) {
 
@@ -656,7 +656,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
               				
             }
             pushFollow(FollowSets000.FOLLOW_13);
-            lv_scenario_11_0=ruleGSSCampaignScenario();
+            lv_Scenario_11_0=ruleGSSCampaignScenario();
 
             state._fsp--;
             if (state.failed) return current;
@@ -667,8 +667,8 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
               					}
               					set(
               						current,
-              						"scenario",
-              						lv_scenario_11_0,
+              						"Scenario",
+              						lv_Scenario_11_0,
               						"es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSCampaignScenario");
               					afterParserOrEnumRuleCall();
               				
@@ -679,11 +679,11 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCAMPAIGN.g:308:3: ( (lv_tests_12_0= ruleGSSCampaignTests ) )
-            // InternalCAMPAIGN.g:309:4: (lv_tests_12_0= ruleGSSCampaignTests )
+            // InternalCAMPAIGN.g:308:3: ( (lv_Tests_12_0= ruleGSSCampaignTests ) )
+            // InternalCAMPAIGN.g:309:4: (lv_Tests_12_0= ruleGSSCampaignTests )
             {
-            // InternalCAMPAIGN.g:309:4: (lv_tests_12_0= ruleGSSCampaignTests )
-            // InternalCAMPAIGN.g:310:5: lv_tests_12_0= ruleGSSCampaignTests
+            // InternalCAMPAIGN.g:309:4: (lv_Tests_12_0= ruleGSSCampaignTests )
+            // InternalCAMPAIGN.g:310:5: lv_Tests_12_0= ruleGSSCampaignTests
             {
             if ( state.backtracking==0 ) {
 
@@ -691,7 +691,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
               				
             }
             pushFollow(FollowSets000.FOLLOW_14);
-            lv_tests_12_0=ruleGSSCampaignTests();
+            lv_Tests_12_0=ruleGSSCampaignTests();
 
             state._fsp--;
             if (state.failed) return current;
@@ -702,8 +702,8 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
               					}
               					set(
               						current,
-              						"tests",
-              						lv_tests_12_0,
+              						"Tests",
+              						lv_Tests_12_0,
               						"es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSCampaignTests");
               					afterParserOrEnumRuleCall();
               				
@@ -791,7 +791,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSCampaignScenario"
-    // InternalCAMPAIGN.g:346:1: ruleGSSCampaignScenario returns [EObject current=null] : (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalCAMPAIGN.g:346:1: ruleGSSCampaignScenario returns [EObject current=null] : (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenarioId' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
     public final EObject ruleGSSCampaignScenario() throws RecognitionException {
         EObject current = null;
 
@@ -810,11 +810,11 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCAMPAIGN.g:352:2: ( (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalCAMPAIGN.g:353:2: (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalCAMPAIGN.g:352:2: ( (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenarioId' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
+            // InternalCAMPAIGN.g:353:2: (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenarioId' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
             {
-            // InternalCAMPAIGN.g:353:2: (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
-            // InternalCAMPAIGN.g:354:3: otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
+            // InternalCAMPAIGN.g:353:2: (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenarioId' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalCAMPAIGN.g:354:3: otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenarioId' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
             {
             otherlv_0=(Token)match(input,20,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -888,7 +888,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             otherlv_6=(Token)match(input,22,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_6, grammarAccess.getGSSCampaignScenarioAccess().getScenarioKeyword_6());
+              			newLeafNode(otherlv_6, grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdKeyword_6());
               		
             }
             otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
@@ -917,7 +917,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             }
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioCrossReference_8_0());
+              					newCompositeNode(grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdGSSEnvironmentScenarioCrossReference_8_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);
@@ -1019,7 +1019,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSCampaignTests"
-    // InternalCAMPAIGN.g:443:1: ruleGSSCampaignTests returns [EObject current=null] : (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_test_2_0= ruleGSSCampaignTest ) )+ otherlv_3= '}' otherlv_4= ';' ) ;
+    // InternalCAMPAIGN.g:443:1: ruleGSSCampaignTests returns [EObject current=null] : (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';' ) ;
     public final EObject ruleGSSCampaignTests() throws RecognitionException {
         EObject current = null;
 
@@ -1027,18 +1027,18 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         Token otherlv_1=null;
         Token otherlv_3=null;
         Token otherlv_4=null;
-        EObject lv_test_2_0 = null;
+        EObject lv_TestCase_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalCAMPAIGN.g:449:2: ( (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_test_2_0= ruleGSSCampaignTest ) )+ otherlv_3= '}' otherlv_4= ';' ) )
-            // InternalCAMPAIGN.g:450:2: (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_test_2_0= ruleGSSCampaignTest ) )+ otherlv_3= '}' otherlv_4= ';' )
+            // InternalCAMPAIGN.g:449:2: ( (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';' ) )
+            // InternalCAMPAIGN.g:450:2: (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';' )
             {
-            // InternalCAMPAIGN.g:450:2: (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_test_2_0= ruleGSSCampaignTest ) )+ otherlv_3= '}' otherlv_4= ';' )
-            // InternalCAMPAIGN.g:451:3: otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_test_2_0= ruleGSSCampaignTest ) )+ otherlv_3= '}' otherlv_4= ';'
+            // InternalCAMPAIGN.g:450:2: (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';' )
+            // InternalCAMPAIGN.g:451:3: otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';'
             {
             otherlv_0=(Token)match(input,23,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1052,7 +1052,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getGSSCampaignTestsAccess().getLeftCurlyBracketKeyword_1());
               		
             }
-            // InternalCAMPAIGN.g:459:3: ( (lv_test_2_0= ruleGSSCampaignTest ) )+
+            // InternalCAMPAIGN.g:459:3: ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+
             int cnt2=0;
             loop2:
             do {
@@ -1066,18 +1066,18 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalCAMPAIGN.g:460:4: (lv_test_2_0= ruleGSSCampaignTest )
+            	    // InternalCAMPAIGN.g:460:4: (lv_TestCase_2_0= ruleGSSCampaignTestCase )
             	    {
-            	    // InternalCAMPAIGN.g:460:4: (lv_test_2_0= ruleGSSCampaignTest )
-            	    // InternalCAMPAIGN.g:461:5: lv_test_2_0= ruleGSSCampaignTest
+            	    // InternalCAMPAIGN.g:460:4: (lv_TestCase_2_0= ruleGSSCampaignTestCase )
+            	    // InternalCAMPAIGN.g:461:5: lv_TestCase_2_0= ruleGSSCampaignTestCase
             	    {
             	    if ( state.backtracking==0 ) {
 
-            	      					newCompositeNode(grammarAccess.getGSSCampaignTestsAccess().getTestGSSCampaignTestParserRuleCall_2_0());
+            	      					newCompositeNode(grammarAccess.getGSSCampaignTestsAccess().getTestCaseGSSCampaignTestCaseParserRuleCall_2_0());
             	      				
             	    }
             	    pushFollow(FollowSets000.FOLLOW_18);
-            	    lv_test_2_0=ruleGSSCampaignTest();
+            	    lv_TestCase_2_0=ruleGSSCampaignTestCase();
 
             	    state._fsp--;
             	    if (state.failed) return current;
@@ -1088,9 +1088,9 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             	      					}
             	      					add(
             	      						current,
-            	      						"test",
-            	      						lv_test_2_0,
-            	      						"es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSCampaignTest");
+            	      						"TestCase",
+            	      						lv_TestCase_2_0,
+            	      						"es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSCampaignTestCase");
             	      					afterParserOrEnumRuleCall();
             	      				
             	    }
@@ -1147,28 +1147,28 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleGSSCampaignTests"
 
 
-    // $ANTLR start "entryRuleGSSCampaignTest"
-    // InternalCAMPAIGN.g:490:1: entryRuleGSSCampaignTest returns [EObject current=null] : iv_ruleGSSCampaignTest= ruleGSSCampaignTest EOF ;
-    public final EObject entryRuleGSSCampaignTest() throws RecognitionException {
+    // $ANTLR start "entryRuleGSSCampaignTestCase"
+    // InternalCAMPAIGN.g:490:1: entryRuleGSSCampaignTestCase returns [EObject current=null] : iv_ruleGSSCampaignTestCase= ruleGSSCampaignTestCase EOF ;
+    public final EObject entryRuleGSSCampaignTestCase() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleGSSCampaignTest = null;
+        EObject iv_ruleGSSCampaignTestCase = null;
 
 
         try {
-            // InternalCAMPAIGN.g:490:56: (iv_ruleGSSCampaignTest= ruleGSSCampaignTest EOF )
-            // InternalCAMPAIGN.g:491:2: iv_ruleGSSCampaignTest= ruleGSSCampaignTest EOF
+            // InternalCAMPAIGN.g:490:60: (iv_ruleGSSCampaignTestCase= ruleGSSCampaignTestCase EOF )
+            // InternalCAMPAIGN.g:491:2: iv_ruleGSSCampaignTestCase= ruleGSSCampaignTestCase EOF
             {
             if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getGSSCampaignTestRule()); 
+               newCompositeNode(grammarAccess.getGSSCampaignTestCaseRule()); 
             }
             pushFollow(FollowSets000.FOLLOW_1);
-            iv_ruleGSSCampaignTest=ruleGSSCampaignTest();
+            iv_ruleGSSCampaignTestCase=ruleGSSCampaignTestCase();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleGSSCampaignTest; 
+               current =iv_ruleGSSCampaignTestCase; 
             }
             match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return current;
 
@@ -1184,12 +1184,12 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleGSSCampaignTest"
+    // $ANTLR end "entryRuleGSSCampaignTestCase"
 
 
-    // $ANTLR start "ruleGSSCampaignTest"
-    // InternalCAMPAIGN.g:497:1: ruleGSSCampaignTest returns [EObject current=null] : (otherlv_0= 'GSSCampaignTest' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' ) ;
-    public final EObject ruleGSSCampaignTest() throws RecognitionException {
+    // $ANTLR start "ruleGSSCampaignTestCase"
+    // InternalCAMPAIGN.g:497:1: ruleGSSCampaignTestCase returns [EObject current=null] : (otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' ) ;
+    public final EObject ruleGSSCampaignTestCase() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -1213,34 +1213,34 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCAMPAIGN.g:503:2: ( (otherlv_0= 'GSSCampaignTest' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' ) )
-            // InternalCAMPAIGN.g:504:2: (otherlv_0= 'GSSCampaignTest' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' )
+            // InternalCAMPAIGN.g:503:2: ( (otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' ) )
+            // InternalCAMPAIGN.g:504:2: (otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' )
             {
-            // InternalCAMPAIGN.g:504:2: (otherlv_0= 'GSSCampaignTest' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' )
-            // InternalCAMPAIGN.g:505:3: otherlv_0= 'GSSCampaignTest' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';'
+            // InternalCAMPAIGN.g:504:2: (otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' )
+            // InternalCAMPAIGN.g:505:3: otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';'
             {
             otherlv_0=(Token)match(input,24,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_0, grammarAccess.getGSSCampaignTestAccess().getGSSCampaignTestKeyword_0());
+              			newLeafNode(otherlv_0, grammarAccess.getGSSCampaignTestCaseAccess().getGSSCampaignTestCaseKeyword_0());
               		
             }
             otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_1, grammarAccess.getGSSCampaignTestAccess().getLeftCurlyBracketKeyword_1());
+              			newLeafNode(otherlv_1, grammarAccess.getGSSCampaignTestCaseAccess().getLeftCurlyBracketKeyword_1());
               		
             }
             otherlv_2=(Token)match(input,25,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_2, grammarAccess.getGSSCampaignTestAccess().getNameKeyword_2());
+              			newLeafNode(otherlv_2, grammarAccess.getGSSCampaignTestCaseAccess().getNameKeyword_2());
               		
             }
             otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_3, grammarAccess.getGSSCampaignTestAccess().getColonEqualsSignKeyword_3());
+              			newLeafNode(otherlv_3, grammarAccess.getGSSCampaignTestCaseAccess().getColonEqualsSignKeyword_3());
               		
             }
             // InternalCAMPAIGN.g:521:3: ( (lv_name_4_0= RULE_STRING ) )
@@ -1252,13 +1252,13 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             lv_name_4_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_name_4_0, grammarAccess.getGSSCampaignTestAccess().getNameSTRINGTerminalRuleCall_4_0());
+              					newLeafNode(lv_name_4_0, grammarAccess.getGSSCampaignTestCaseAccess().getNameSTRINGTerminalRuleCall_4_0());
               				
             }
             if ( state.backtracking==0 ) {
 
               					if (current==null) {
-              						current = createModelElement(grammarAccess.getGSSCampaignTestRule());
+              						current = createModelElement(grammarAccess.getGSSCampaignTestCaseRule());
               					}
               					setWithLastConsumed(
               						current,
@@ -1276,19 +1276,19 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_5, grammarAccess.getGSSCampaignTestAccess().getSemicolonKeyword_5());
+              			newLeafNode(otherlv_5, grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_5());
               		
             }
             otherlv_6=(Token)match(input,26,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_6, grammarAccess.getGSSCampaignTestAccess().getProcedureKeyword_6());
+              			newLeafNode(otherlv_6, grammarAccess.getGSSCampaignTestCaseAccess().getProcedureKeyword_6());
               		
             }
             otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_7, grammarAccess.getGSSCampaignTestAccess().getColonEqualsSignKeyword_7());
+              			newLeafNode(otherlv_7, grammarAccess.getGSSCampaignTestCaseAccess().getColonEqualsSignKeyword_7());
               		
             }
             // InternalCAMPAIGN.g:551:3: ( ( ruleVersionedQualifiedName ) )
@@ -1305,13 +1305,13 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
 
               					if (current==null) {
-              						current = createModelElement(grammarAccess.getGSSCampaignTestRule());
+              						current = createModelElement(grammarAccess.getGSSCampaignTestCaseRule());
               					}
               				
             }
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSCampaignTestAccess().getProcedureGSSTestProcTestProcCrossReference_8_0());
+              					newCompositeNode(grammarAccess.getGSSCampaignTestCaseAccess().getProcedureGSSTestProcTestProcCrossReference_8_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);
@@ -1333,7 +1333,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_9, grammarAccess.getGSSCampaignTestAccess().getSemicolonKeyword_9());
+              			newLeafNode(otherlv_9, grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_9());
               		
             }
             // InternalCAMPAIGN.g:574:3: (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )?
@@ -1350,7 +1350,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
                     otherlv_10=(Token)match(input,27,FollowSets000.FOLLOW_7); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_10, grammarAccess.getGSSCampaignTestAccess().getReqKeyword_10_0());
+                      				newLeafNode(otherlv_10, grammarAccess.getGSSCampaignTestCaseAccess().getReqKeyword_10_0());
                       			
                     }
                     // InternalCAMPAIGN.g:579:4: ( (lv_req_11_0= RULE_ID ) )
@@ -1362,13 +1362,13 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
                     lv_req_11_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_22); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						newLeafNode(lv_req_11_0, grammarAccess.getGSSCampaignTestAccess().getReqIDTerminalRuleCall_10_1_0());
+                      						newLeafNode(lv_req_11_0, grammarAccess.getGSSCampaignTestCaseAccess().getReqIDTerminalRuleCall_10_1_0());
                       					
                     }
                     if ( state.backtracking==0 ) {
 
                       						if (current==null) {
-                      							current = createModelElement(grammarAccess.getGSSCampaignTestRule());
+                      							current = createModelElement(grammarAccess.getGSSCampaignTestCaseRule());
                       						}
                       						setWithLastConsumed(
                       							current,
@@ -1403,7 +1403,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
                     otherlv_12=(Token)match(input,28,FollowSets000.FOLLOW_23); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_12, grammarAccess.getGSSCampaignTestAccess().getReqActionKeyword_11_0());
+                      				newLeafNode(otherlv_12, grammarAccess.getGSSCampaignTestCaseAccess().getReqActionKeyword_11_0());
                       			
                     }
                     // InternalCAMPAIGN.g:603:4: ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) )
@@ -1414,7 +1414,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getGSSCampaignTestAccess().getReqActionGSSCampaignTestReqActionEnumRuleCall_11_1_0());
+                      						newCompositeNode(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionGSSCampaignTestReqActionEnumRuleCall_11_1_0());
                       					
                     }
                     pushFollow(FollowSets000.FOLLOW_14);
@@ -1425,7 +1425,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
                     if ( state.backtracking==0 ) {
 
                       						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getGSSCampaignTestRule());
+                      							current = createModelElementForParent(grammarAccess.getGSSCampaignTestCaseRule());
                       						}
                       						set(
                       							current,
@@ -1450,13 +1450,13 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             otherlv_14=(Token)match(input,19,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_14, grammarAccess.getGSSCampaignTestAccess().getRightCurlyBracketKeyword_12());
+              			newLeafNode(otherlv_14, grammarAccess.getGSSCampaignTestCaseAccess().getRightCurlyBracketKeyword_12());
               		
             }
             otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_15, grammarAccess.getGSSCampaignTestAccess().getSemicolonKeyword_13());
+              			newLeafNode(otherlv_15, grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_13());
               		
             }
 
@@ -1480,7 +1480,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleGSSCampaignTest"
+    // $ANTLR end "ruleGSSCampaignTestCase"
 
 
     // $ANTLR start "entryRuleQualifiedName"

@@ -57,13 +57,13 @@ public interface campaignFactory extends EFactory {
 	GSSCampaignTests createGSSCampaignTests();
 
 	/**
-	 * Returns a new object of class '<em>GSS Campaign Test</em>'.
+	 * Returns a new object of class '<em>GSS Campaign Test Case</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Campaign Test</em>'.
+	 * @return a new object of class '<em>GSS Campaign Test Case</em>'.
 	 * @generated
 	 */
-	GSSCampaignTest createGSSCampaignTest();
+	GSSCampaignTestCase createGSSCampaignTestCase();
 
 	/**
 	 * Returns the package supported by this factory.
