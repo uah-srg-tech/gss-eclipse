@@ -51,6 +51,7 @@ public class CAMPAIGNParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSModelFileImportAccess().getGroup(), "rule__GSSModelFileImport__Group__0");
 					put(grammarAccess.getGSSCampaignCampaignAccess().getGroup(), "rule__GSSCampaignCampaign__Group__0");
 					put(grammarAccess.getGSSCampaignCampaignAccess().getGroup_3(), "rule__GSSCampaignCampaign__Group_3__0");
+					put(grammarAccess.getGSSCampaignScenarioAccess().getGroup(), "rule__GSSCampaignScenario__Group__0");
 					put(grammarAccess.getGSSCampaignTestsAccess().getGroup(), "rule__GSSCampaignTests__Group__0");
 					put(grammarAccess.getGSSCampaignTestAccess().getGroup(), "rule__GSSCampaignTest__Group__0");
 					put(grammarAccess.getGSSCampaignTestAccess().getGroup_10(), "rule__GSSCampaignTest__Group_10__0");
@@ -80,8 +81,10 @@ public class CAMPAIGNParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSCampaignCampaignAccess().getNameAssignment_1(), "rule__GSSCampaignCampaign__NameAssignment_1");
 					put(grammarAccess.getGSSCampaignCampaignAccess().getUriAssignment_3_2(), "rule__GSSCampaignCampaign__UriAssignment_3_2");
 					put(grammarAccess.getGSSCampaignCampaignAccess().getVersionAssignment_6(), "rule__GSSCampaignCampaign__VersionAssignment_6");
-					put(grammarAccess.getGSSCampaignCampaignAccess().getScenarioAssignment_10(), "rule__GSSCampaignCampaign__ScenarioAssignment_10");
-					put(grammarAccess.getGSSCampaignCampaignAccess().getTestsAssignment_12(), "rule__GSSCampaignCampaign__TestsAssignment_12");
+					put(grammarAccess.getGSSCampaignCampaignAccess().getScenarioAssignment_8(), "rule__GSSCampaignCampaign__ScenarioAssignment_8");
+					put(grammarAccess.getGSSCampaignCampaignAccess().getTestsAssignment_9(), "rule__GSSCampaignCampaign__TestsAssignment_9");
+					put(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentAssignment_4(), "rule__GSSCampaignScenario__EnvironmentAssignment_4");
+					put(grammarAccess.getGSSCampaignScenarioAccess().getScenarioAssignment_8(), "rule__GSSCampaignScenario__ScenarioAssignment_8");
 					put(grammarAccess.getGSSCampaignTestsAccess().getTestAssignment_2(), "rule__GSSCampaignTests__TestAssignment_2");
 					put(grammarAccess.getGSSCampaignTestAccess().getNameAssignment_4(), "rule__GSSCampaignTest__NameAssignment_4");
 					put(grammarAccess.getGSSCampaignTestAccess().getProcedureAssignment_8(), "rule__GSSCampaignTest__ProcedureAssignment_8");

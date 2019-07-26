@@ -12,6 +12,7 @@ package es.uah.aut.srg.gss.lang.campaign.serializer;
 
 import com.google.inject.Inject;
 import es.uah.aut.srg.gss.campaign.GSSCampaignCampaign;
+import es.uah.aut.srg.gss.campaign.GSSCampaignScenario;
 import es.uah.aut.srg.gss.campaign.GSSCampaignTest;
 import es.uah.aut.srg.gss.campaign.GSSCampaignTests;
 import es.uah.aut.srg.gss.campaign.campaignPackage;
@@ -47,6 +48,9 @@ public class CAMPAIGNSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case campaignPackage.GSS_CAMPAIGN_CAMPAIGN:
 				sequence_GSSCampaignCampaign(context, (GSSCampaignCampaign) semanticObject); 
 				return; 
+			case campaignPackage.GSS_CAMPAIGN_SCENARIO:
+				sequence_GSSCampaignScenario(context, (GSSCampaignScenario) semanticObject); 
+				return; 
 			case campaignPackage.GSS_CAMPAIGN_TEST:
 				sequence_GSSCampaignTest(context, (GSSCampaignTest) semanticObject); 
 				return; 
@@ -72,7 +76,7 @@ public class CAMPAIGNSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     GSSCampaignCampaign returns GSSCampaignCampaign
 	 *
 	 * Constraint:
-	 *     (name=ID uri=QualifiedName version=Version scenario=[GSSEnvironmentScenario|VersionedQualifiedReferenceName] tests=GSSCampaignTests)
+	 *     (name=ID uri=QualifiedName version=Version scenario=GSSCampaignScenario tests=GSSCampaignTests)
 	 */
 	protected void sequence_GSSCampaignCampaign(ISerializationContext context, GSSCampaignCampaign semanticObject) {
 		if (errorAcceptor != null) {
@@ -91,8 +95,29 @@ public class CAMPAIGNSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		feeder.accept(grammarAccess.getGSSCampaignCampaignAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getGSSCampaignCampaignAccess().getUriQualifiedNameParserRuleCall_3_2_0(), semanticObject.getUri());
 		feeder.accept(grammarAccess.getGSSCampaignCampaignAccess().getVersionVersionParserRuleCall_6_0(), semanticObject.getVersion());
-		feeder.accept(grammarAccess.getGSSCampaignCampaignAccess().getScenarioGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_10_0_1(), semanticObject.getScenario());
-		feeder.accept(grammarAccess.getGSSCampaignCampaignAccess().getTestsGSSCampaignTestsParserRuleCall_12_0(), semanticObject.getTests());
+		feeder.accept(grammarAccess.getGSSCampaignCampaignAccess().getScenarioGSSCampaignScenarioParserRuleCall_8_0(), semanticObject.getScenario());
+		feeder.accept(grammarAccess.getGSSCampaignCampaignAccess().getTestsGSSCampaignTestsParserRuleCall_9_0(), semanticObject.getTests());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     GSSCampaignScenario returns GSSCampaignScenario
+	 *
+	 * Constraint:
+	 *     (environment=[GSSEnvironmentEnvironment|VersionedQualifiedName] scenario=[GSSEnvironmentScenario|VersionedQualifiedReferenceName])
+	 */
+	protected void sequence_GSSCampaignScenario(ISerializationContext context, GSSCampaignScenario semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__ENVIRONMENT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__ENVIRONMENT));
+			if (transientValues.isValueTransient(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__SCENARIO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__SCENARIO));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentGSSEnvironmentEnvironmentVersionedQualifiedNameParserRuleCall_4_0_1(), semanticObject.getEnvironment());
+		feeder.accept(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1(), semanticObject.getScenario());
 		feeder.finish();
 	}
 	

@@ -11,13 +11,11 @@
 package es.uah.aut.srg.gss.campaign.impl;
 
 import es.uah.aut.srg.gss.campaign.GSSCampaignCampaign;
+import es.uah.aut.srg.gss.campaign.GSSCampaignScenario;
 import es.uah.aut.srg.gss.campaign.GSSCampaignTests;
 import es.uah.aut.srg.gss.campaign.campaignPackage;
 
 import es.uah.aut.srg.gss.common.impl.GSSModelElementImpl;
-
-import es.uah.aut.srg.gss.environment.GSSEnvironmentScenario;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -42,14 +40,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class GSSCampaignCampaignImpl extends GSSModelElementImpl implements GSSCampaignCampaign {
 	/**
-	 * The cached value of the '{@link #getScenario() <em>Scenario</em>}' reference.
+	 * The cached value of the '{@link #getScenario() <em>Scenario</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getScenario()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSEnvironmentScenario scenario;
+	protected GSSCampaignScenario scenario;
 
 	/**
 	 * The cached value of the '{@link #getTests() <em>Tests</em>}' containment reference.
@@ -85,15 +83,7 @@ public class GSSCampaignCampaignImpl extends GSSModelElementImpl implements GSSC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSEnvironmentScenario getScenario() {
-		if (scenario != null && scenario.eIsProxy()) {
-			InternalEObject oldScenario = (InternalEObject)scenario;
-			scenario = (GSSEnvironmentScenario)eResolveProxy(oldScenario);
-			if (scenario != oldScenario) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, campaignPackage.GSS_CAMPAIGN_CAMPAIGN__SCENARIO, oldScenario, scenario));
-			}
-		}
+	public GSSCampaignScenario getScenario() {
 		return scenario;
 	}
 
@@ -102,20 +92,33 @@ public class GSSCampaignCampaignImpl extends GSSModelElementImpl implements GSSC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSEnvironmentScenario basicGetScenario() {
-		return scenario;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setScenario(GSSEnvironmentScenario newScenario) {
-		GSSEnvironmentScenario oldScenario = scenario;
+	public NotificationChain basicSetScenario(GSSCampaignScenario newScenario, NotificationChain msgs) {
+		GSSCampaignScenario oldScenario = scenario;
 		scenario = newScenario;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_CAMPAIGN__SCENARIO, oldScenario, scenario));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_CAMPAIGN__SCENARIO, oldScenario, newScenario);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setScenario(GSSCampaignScenario newScenario) {
+		if (newScenario != scenario) {
+			NotificationChain msgs = null;
+			if (scenario != null)
+				msgs = ((InternalEObject)scenario).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - campaignPackage.GSS_CAMPAIGN_CAMPAIGN__SCENARIO, null, msgs);
+			if (newScenario != null)
+				msgs = ((InternalEObject)newScenario).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - campaignPackage.GSS_CAMPAIGN_CAMPAIGN__SCENARIO, null, msgs);
+			msgs = basicSetScenario(newScenario, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_CAMPAIGN__SCENARIO, newScenario, newScenario));
 	}
 
 	/**
@@ -169,6 +172,8 @@ public class GSSCampaignCampaignImpl extends GSSModelElementImpl implements GSSC
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case campaignPackage.GSS_CAMPAIGN_CAMPAIGN__SCENARIO:
+				return basicSetScenario(null, msgs);
 			case campaignPackage.GSS_CAMPAIGN_CAMPAIGN__TESTS:
 				return basicSetTests(null, msgs);
 		}
@@ -184,8 +189,7 @@ public class GSSCampaignCampaignImpl extends GSSModelElementImpl implements GSSC
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case campaignPackage.GSS_CAMPAIGN_CAMPAIGN__SCENARIO:
-				if (resolve) return getScenario();
-				return basicGetScenario();
+				return getScenario();
 			case campaignPackage.GSS_CAMPAIGN_CAMPAIGN__TESTS:
 				return getTests();
 		}
@@ -201,7 +205,7 @@ public class GSSCampaignCampaignImpl extends GSSModelElementImpl implements GSSC
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case campaignPackage.GSS_CAMPAIGN_CAMPAIGN__SCENARIO:
-				setScenario((GSSEnvironmentScenario)newValue);
+				setScenario((GSSCampaignScenario)newValue);
 				return;
 			case campaignPackage.GSS_CAMPAIGN_CAMPAIGN__TESTS:
 				setTests((GSSCampaignTests)newValue);
@@ -219,7 +223,7 @@ public class GSSCampaignCampaignImpl extends GSSModelElementImpl implements GSSC
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case campaignPackage.GSS_CAMPAIGN_CAMPAIGN__SCENARIO:
-				setScenario((GSSEnvironmentScenario)null);
+				setScenario((GSSCampaignScenario)null);
 				return;
 			case campaignPackage.GSS_CAMPAIGN_CAMPAIGN__TESTS:
 				setTests((GSSCampaignTests)null);

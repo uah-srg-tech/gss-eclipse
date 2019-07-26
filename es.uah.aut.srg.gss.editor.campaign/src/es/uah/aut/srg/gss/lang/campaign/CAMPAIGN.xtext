@@ -22,8 +22,15 @@ GSSCampaignCampaign returns GSSCampaignCampaign:
 	'{'
 		('uri' ':=' uri=QualifiedName ';')
 		'version' ':=' version=Version ';'
-		'scenario' ':=' scenario=[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName] ';'
+		scenario=GSSCampaignScenario
 		tests=GSSCampaignTests
+	'}' ';'
+;
+		
+GSSCampaignScenario returns GSSCampaignScenario:
+	'GSSCampaignScenario' '{'
+		'environment' ':=' environment=[environment::GSSEnvironmentEnvironment|VersionedQualifiedName] ';'
+		'scenario' ':=' scenario=[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName] ';'
 	'}' ';'
 ;
 		

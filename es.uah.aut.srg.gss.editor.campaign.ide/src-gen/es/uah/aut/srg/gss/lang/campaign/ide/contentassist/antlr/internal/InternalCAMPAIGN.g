@@ -132,6 +132,31 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleGSSCampaignScenario
+entryRuleGSSCampaignScenario
+:
+{ before(grammarAccess.getGSSCampaignScenarioRule()); }
+	 ruleGSSCampaignScenario
+{ after(grammarAccess.getGSSCampaignScenarioRule()); } 
+	 EOF 
+;
+
+// Rule GSSCampaignScenario
+ruleGSSCampaignScenario 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getGSSCampaignScenarioAccess().getGroup()); }
+		(rule__GSSCampaignScenario__Group__0)
+		{ after(grammarAccess.getGSSCampaignScenarioAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Entry rule entryRuleGSSCampaignTests
 entryRuleGSSCampaignTests
 :
@@ -736,9 +761,9 @@ rule__GSSCampaignCampaign__Group__8__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSCampaignCampaignAccess().getScenarioKeyword_8()); }
-	'scenario'
-	{ after(grammarAccess.getGSSCampaignCampaignAccess().getScenarioKeyword_8()); }
+	{ before(grammarAccess.getGSSCampaignCampaignAccess().getScenarioAssignment_8()); }
+	(rule__GSSCampaignCampaign__ScenarioAssignment_8)
+	{ after(grammarAccess.getGSSCampaignCampaignAccess().getScenarioAssignment_8()); }
 )
 ;
 finally {
@@ -763,9 +788,9 @@ rule__GSSCampaignCampaign__Group__9__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSCampaignCampaignAccess().getColonEqualsSignKeyword_9()); }
-	':='
-	{ after(grammarAccess.getGSSCampaignCampaignAccess().getColonEqualsSignKeyword_9()); }
+	{ before(grammarAccess.getGSSCampaignCampaignAccess().getTestsAssignment_9()); }
+	(rule__GSSCampaignCampaign__TestsAssignment_9)
+	{ after(grammarAccess.getGSSCampaignCampaignAccess().getTestsAssignment_9()); }
 )
 ;
 finally {
@@ -790,9 +815,9 @@ rule__GSSCampaignCampaign__Group__10__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSCampaignCampaignAccess().getScenarioAssignment_10()); }
-	(rule__GSSCampaignCampaign__ScenarioAssignment_10)
-	{ after(grammarAccess.getGSSCampaignCampaignAccess().getScenarioAssignment_10()); }
+	{ before(grammarAccess.getGSSCampaignCampaignAccess().getRightCurlyBracketKeyword_10()); }
+	'}'
+	{ after(grammarAccess.getGSSCampaignCampaignAccess().getRightCurlyBracketKeyword_10()); }
 )
 ;
 finally {
@@ -805,7 +830,6 @@ rule__GSSCampaignCampaign__Group__11
 	}
 :
 	rule__GSSCampaignCampaign__Group__11__Impl
-	rule__GSSCampaignCampaign__Group__12
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -820,86 +844,6 @@ rule__GSSCampaignCampaign__Group__11__Impl
 	{ before(grammarAccess.getGSSCampaignCampaignAccess().getSemicolonKeyword_11()); }
 	';'
 	{ after(grammarAccess.getGSSCampaignCampaignAccess().getSemicolonKeyword_11()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSCampaignCampaign__Group__12
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSCampaignCampaign__Group__12__Impl
-	rule__GSSCampaignCampaign__Group__13
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSCampaignCampaign__Group__12__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSCampaignCampaignAccess().getTestsAssignment_12()); }
-	(rule__GSSCampaignCampaign__TestsAssignment_12)
-	{ after(grammarAccess.getGSSCampaignCampaignAccess().getTestsAssignment_12()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSCampaignCampaign__Group__13
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSCampaignCampaign__Group__13__Impl
-	rule__GSSCampaignCampaign__Group__14
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSCampaignCampaign__Group__13__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSCampaignCampaignAccess().getRightCurlyBracketKeyword_13()); }
-	'}'
-	{ after(grammarAccess.getGSSCampaignCampaignAccess().getRightCurlyBracketKeyword_13()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSCampaignCampaign__Group__14
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSCampaignCampaign__Group__14__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSCampaignCampaign__Group__14__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSCampaignCampaignAccess().getSemicolonKeyword_14()); }
-	';'
-	{ after(grammarAccess.getGSSCampaignCampaignAccess().getSemicolonKeyword_14()); }
 )
 ;
 finally {
@@ -1008,6 +952,330 @@ rule__GSSCampaignCampaign__Group_3__3__Impl
 	{ before(grammarAccess.getGSSCampaignCampaignAccess().getSemicolonKeyword_3_3()); }
 	';'
 	{ after(grammarAccess.getGSSCampaignCampaignAccess().getSemicolonKeyword_3_3()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__GSSCampaignScenario__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignScenario__Group__0__Impl
+	rule__GSSCampaignScenario__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getGSSCampaignScenarioKeyword_0()); }
+	'GSSCampaignScenario'
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getGSSCampaignScenarioKeyword_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignScenario__Group__1__Impl
+	rule__GSSCampaignScenario__Group__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getLeftCurlyBracketKeyword_1()); }
+	'{'
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getLeftCurlyBracketKeyword_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignScenario__Group__2__Impl
+	rule__GSSCampaignScenario__Group__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentKeyword_2()); }
+	'environment'
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentKeyword_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignScenario__Group__3__Impl
+	rule__GSSCampaignScenario__Group__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__3__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getColonEqualsSignKeyword_3()); }
+	':='
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getColonEqualsSignKeyword_3()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignScenario__Group__4__Impl
+	rule__GSSCampaignScenario__Group__5
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__4__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentAssignment_4()); }
+	(rule__GSSCampaignScenario__EnvironmentAssignment_4)
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentAssignment_4()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__5
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignScenario__Group__5__Impl
+	rule__GSSCampaignScenario__Group__6
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__5__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getSemicolonKeyword_5()); }
+	';'
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getSemicolonKeyword_5()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__6
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignScenario__Group__6__Impl
+	rule__GSSCampaignScenario__Group__7
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__6__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioKeyword_6()); }
+	'scenario'
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioKeyword_6()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__7
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignScenario__Group__7__Impl
+	rule__GSSCampaignScenario__Group__8
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__7__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getColonEqualsSignKeyword_7()); }
+	':='
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getColonEqualsSignKeyword_7()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__8
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignScenario__Group__8__Impl
+	rule__GSSCampaignScenario__Group__9
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__8__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioAssignment_8()); }
+	(rule__GSSCampaignScenario__ScenarioAssignment_8)
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioAssignment_8()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__9
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignScenario__Group__9__Impl
+	rule__GSSCampaignScenario__Group__10
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__9__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getSemicolonKeyword_9()); }
+	';'
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getSemicolonKeyword_9()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__10
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignScenario__Group__10__Impl
+	rule__GSSCampaignScenario__Group__11
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__10__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getRightCurlyBracketKeyword_10()); }
+	'}'
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getRightCurlyBracketKeyword_10()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__11
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignScenario__Group__11__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__Group__11__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getSemicolonKeyword_11()); }
+	';'
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getSemicolonKeyword_11()); }
 )
 ;
 finally {
@@ -2354,34 +2622,68 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSCampaignCampaign__ScenarioAssignment_10
+rule__GSSCampaignCampaign__ScenarioAssignment_8
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSCampaignCampaignAccess().getScenarioGSSEnvironmentScenarioCrossReference_10_0()); }
-		(
-			{ before(grammarAccess.getGSSCampaignCampaignAccess().getScenarioGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_10_0_1()); }
-			ruleVersionedQualifiedReferenceName
-			{ after(grammarAccess.getGSSCampaignCampaignAccess().getScenarioGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_10_0_1()); }
-		)
-		{ after(grammarAccess.getGSSCampaignCampaignAccess().getScenarioGSSEnvironmentScenarioCrossReference_10_0()); }
+		{ before(grammarAccess.getGSSCampaignCampaignAccess().getScenarioGSSCampaignScenarioParserRuleCall_8_0()); }
+		ruleGSSCampaignScenario
+		{ after(grammarAccess.getGSSCampaignCampaignAccess().getScenarioGSSCampaignScenarioParserRuleCall_8_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSCampaignCampaign__TestsAssignment_12
+rule__GSSCampaignCampaign__TestsAssignment_9
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSCampaignCampaignAccess().getTestsGSSCampaignTestsParserRuleCall_12_0()); }
+		{ before(grammarAccess.getGSSCampaignCampaignAccess().getTestsGSSCampaignTestsParserRuleCall_9_0()); }
 		ruleGSSCampaignTests
-		{ after(grammarAccess.getGSSCampaignCampaignAccess().getTestsGSSCampaignTestsParserRuleCall_12_0()); }
+		{ after(grammarAccess.getGSSCampaignCampaignAccess().getTestsGSSCampaignTestsParserRuleCall_9_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__EnvironmentAssignment_4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentGSSEnvironmentEnvironmentCrossReference_4_0()); }
+		(
+			{ before(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentGSSEnvironmentEnvironmentVersionedQualifiedNameParserRuleCall_4_0_1()); }
+			ruleVersionedQualifiedName
+			{ after(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentGSSEnvironmentEnvironmentVersionedQualifiedNameParserRuleCall_4_0_1()); }
+		)
+		{ after(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentGSSEnvironmentEnvironmentCrossReference_4_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignScenario__ScenarioAssignment_8
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioCrossReference_8_0()); }
+		(
+			{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); }
+			ruleVersionedQualifiedReferenceName
+			{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); }
+		)
+		{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioCrossReference_8_0()); }
 	)
 ;
 finally {

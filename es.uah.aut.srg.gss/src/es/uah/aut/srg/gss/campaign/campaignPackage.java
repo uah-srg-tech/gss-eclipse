@@ -114,7 +114,7 @@ public interface campaignPackage extends EPackage {
 	int GSS_CAMPAIGN_CAMPAIGN__DESCRIPTION = commonPackage.GSS_MODEL_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Scenario</b></em>' reference.
+	 * The feature id for the '<em><b>Scenario</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -150,6 +150,52 @@ public interface campaignPackage extends EPackage {
 	int GSS_CAMPAIGN_CAMPAIGN_OPERATION_COUNT = commonPackage.GSS_MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignScenarioImpl <em>GSS Campaign Scenario</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.campaign.impl.GSSCampaignScenarioImpl
+	 * @see es.uah.aut.srg.gss.campaign.impl.campaignPackageImpl#getGSSCampaignScenario()
+	 * @generated
+	 */
+	int GSS_CAMPAIGN_SCENARIO = 1;
+
+	/**
+	 * The feature id for the '<em><b>Environment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CAMPAIGN_SCENARIO__ENVIRONMENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Scenario</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CAMPAIGN_SCENARIO__SCENARIO = 1;
+
+	/**
+	 * The number of structural features of the '<em>GSS Campaign Scenario</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CAMPAIGN_SCENARIO_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>GSS Campaign Scenario</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CAMPAIGN_SCENARIO_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestsImpl <em>GSS Campaign Tests</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -157,7 +203,7 @@ public interface campaignPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.campaign.impl.campaignPackageImpl#getGSSCampaignTests()
 	 * @generated
 	 */
-	int GSS_CAMPAIGN_TESTS = 1;
+	int GSS_CAMPAIGN_TESTS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Test</b></em>' containment reference list.
@@ -194,7 +240,7 @@ public interface campaignPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.campaign.impl.campaignPackageImpl#getGSSCampaignTest()
 	 * @generated
 	 */
-	int GSS_CAMPAIGN_TEST = 2;
+	int GSS_CAMPAIGN_TEST = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -258,7 +304,7 @@ public interface campaignPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.campaign.impl.campaignPackageImpl#getGSSCampaignTestReqAction()
 	 * @generated
 	 */
-	int GSS_CAMPAIGN_TEST_REQ_ACTION = 3;
+	int GSS_CAMPAIGN_TEST_REQ_ACTION = 4;
 
 
 	/**
@@ -272,10 +318,10 @@ public interface campaignPackage extends EPackage {
 	EClass getGSSCampaignCampaign();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.campaign.GSSCampaignCampaign#getScenario <em>Scenario</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.campaign.GSSCampaignCampaign#getScenario <em>Scenario</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Scenario</em>'.
+	 * @return the meta object for the containment reference '<em>Scenario</em>'.
 	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignCampaign#getScenario()
 	 * @see #getGSSCampaignCampaign()
 	 * @generated
@@ -292,6 +338,38 @@ public interface campaignPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGSSCampaignCampaign_Tests();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.campaign.GSSCampaignScenario <em>GSS Campaign Scenario</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Campaign Scenario</em>'.
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignScenario
+	 * @generated
+	 */
+	EClass getGSSCampaignScenario();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getEnvironment <em>Environment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Environment</em>'.
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getEnvironment()
+	 * @see #getGSSCampaignScenario()
+	 * @generated
+	 */
+	EReference getGSSCampaignScenario_Environment();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenario <em>Scenario</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Scenario</em>'.
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenario()
+	 * @see #getGSSCampaignScenario()
+	 * @generated
+	 */
+	EReference getGSSCampaignScenario_Scenario();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTests <em>GSS Campaign Tests</em>}'.
@@ -412,7 +490,7 @@ public interface campaignPackage extends EPackage {
 		EClass GSS_CAMPAIGN_CAMPAIGN = eINSTANCE.getGSSCampaignCampaign();
 
 		/**
-		 * The meta object literal for the '<em><b>Scenario</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Scenario</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -426,6 +504,32 @@ public interface campaignPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GSS_CAMPAIGN_CAMPAIGN__TESTS = eINSTANCE.getGSSCampaignCampaign_Tests();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignScenarioImpl <em>GSS Campaign Scenario</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.campaign.impl.GSSCampaignScenarioImpl
+		 * @see es.uah.aut.srg.gss.campaign.impl.campaignPackageImpl#getGSSCampaignScenario()
+		 * @generated
+		 */
+		EClass GSS_CAMPAIGN_SCENARIO = eINSTANCE.getGSSCampaignScenario();
+
+		/**
+		 * The meta object literal for the '<em><b>Environment</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_CAMPAIGN_SCENARIO__ENVIRONMENT = eINSTANCE.getGSSCampaignScenario_Environment();
+
+		/**
+		 * The meta object literal for the '<em><b>Scenario</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_CAMPAIGN_SCENARIO__SCENARIO = eINSTANCE.getGSSCampaignScenario_Scenario();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestsImpl <em>GSS Campaign Tests</em>}' class.

@@ -3,9 +3,15 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="campaign" nsURI="http://srg.aut.uah.es/gss/campaign" nsPrefix="gss">
   <eClassifiers xsi:type="ecore:EClass" name="GSSCampaignCampaign" eSuperTypes="common.ecore#//GSSModelElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="scenario" lowerBound="1"
-        eType="ecore:EClass environment.ecore#//GSSEnvironmentScenario"/>
+        eType="#//GSSCampaignScenario" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tests" lowerBound="1" eType="#//GSSCampaignTests"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSCampaignScenario">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environment" lowerBound="1"
+        eType="ecore:EClass environment.ecore#//GSSEnvironmentEnvironment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scenario" lowerBound="1"
+        eType="ecore:EClass environment.ecore#//GSSEnvironmentScenario"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSCampaignTests">
     <eStructuralFeatures xsi:type="ecore:EReference" name="test" lowerBound="1" upperBound="150"

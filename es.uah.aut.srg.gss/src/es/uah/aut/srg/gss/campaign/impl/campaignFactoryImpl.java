@@ -66,6 +66,7 @@ public class campaignFactoryImpl extends EFactoryImpl implements campaignFactory
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case campaignPackage.GSS_CAMPAIGN_CAMPAIGN: return createGSSCampaignCampaign();
+			case campaignPackage.GSS_CAMPAIGN_SCENARIO: return createGSSCampaignScenario();
 			case campaignPackage.GSS_CAMPAIGN_TESTS: return createGSSCampaignTests();
 			case campaignPackage.GSS_CAMPAIGN_TEST: return createGSSCampaignTest();
 			default:
@@ -111,6 +112,16 @@ public class campaignFactoryImpl extends EFactoryImpl implements campaignFactory
 	public GSSCampaignCampaign createGSSCampaignCampaign() {
 		GSSCampaignCampaignImpl gssCampaignCampaign = new GSSCampaignCampaignImpl();
 		return gssCampaignCampaign;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSCampaignScenario createGSSCampaignScenario() {
+		GSSCampaignScenarioImpl gssCampaignScenario = new GSSCampaignScenarioImpl();
+		return gssCampaignScenario;
 	}
 
 	/**

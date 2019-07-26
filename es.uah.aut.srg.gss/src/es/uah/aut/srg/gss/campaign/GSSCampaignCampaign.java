@@ -12,8 +12,6 @@ package es.uah.aut.srg.gss.campaign;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
 
-import es.uah.aut.srg.gss.environment.GSSEnvironmentScenario;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Campaign Campaign</b></em>'.
@@ -33,30 +31,30 @@ import es.uah.aut.srg.gss.environment.GSSEnvironmentScenario;
  */
 public interface GSSCampaignCampaign extends GSSModelElement {
 	/**
-	 * Returns the value of the '<em><b>Scenario</b></em>' reference.
+	 * Returns the value of the '<em><b>Scenario</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scenario</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scenario</em>' reference.
-	 * @see #setScenario(GSSEnvironmentScenario)
+	 * @return the value of the '<em>Scenario</em>' containment reference.
+	 * @see #setScenario(GSSCampaignScenario)
 	 * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignCampaign_Scenario()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSEnvironmentScenario getScenario();
+	GSSCampaignScenario getScenario();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignCampaign#getScenario <em>Scenario</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignCampaign#getScenario <em>Scenario</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scenario</em>' reference.
+	 * @param value the new value of the '<em>Scenario</em>' containment reference.
 	 * @see #getScenario()
 	 * @generated
 	 */
-	void setScenario(GSSEnvironmentScenario value);
+	void setScenario(GSSCampaignScenario value);
 
 	/**
 	 * Returns the value of the '<em><b>Tests</b></em>' containment reference.
