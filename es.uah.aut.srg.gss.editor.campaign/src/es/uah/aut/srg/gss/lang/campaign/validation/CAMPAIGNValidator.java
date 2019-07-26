@@ -15,12 +15,14 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EPackage;
 
+import es.uah.aut.srg.gss.xtext.GSSAbstractJavaValidator;
+
 /**
  * This class contains custom validation rules. 
  *
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
-public class CAMPAIGNValidator extends AbstractCAMPAIGNValidator {
+public class CAMPAIGNValidator extends GSSAbstractJavaValidator {
 
 	@Override
 	protected List<EPackage> getEPackages() {
