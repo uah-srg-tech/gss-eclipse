@@ -20,7 +20,7 @@
 'GSSEnvironmentInfo'=54
 'GSSEnvironmentInfoPrint'=58
 'GSSEnvironmentInterface'=80
-'GSSEnvironmentInterfaces'=48
+'GSSEnvironmentInterfaces'=47
 'GSSEnvironmentIntervalRange'=102
 'GSSEnvironmentLevelIn'=87
 'GSSEnvironmentLevelInOut'=81
@@ -49,7 +49,7 @@
 'GSSEnvironmentUpperLevel'=107
 'GSSEnvironmentUpperLevels'=94
 'GlobalVarRef'=142
-'ProtocolPacketsFile'=47
+'ProtocolPacketsFile'=48
 'SpW'=15
 'SpW_Error'=17
 'SpW_TC'=16

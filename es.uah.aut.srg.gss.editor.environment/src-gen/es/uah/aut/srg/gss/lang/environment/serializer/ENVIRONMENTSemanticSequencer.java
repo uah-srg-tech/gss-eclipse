@@ -410,7 +410,11 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     GSSEnvironmentInterfaces returns GSSEnvironmentInterfaces
 	 *
 	 * Constraint:
-	 *     (MainInterface=GSSEnvironmentMainInterface Interface+=GSSEnvironmentInterface*)
+	 *     (
+	 *         ProtocolPacketsFile=[GSSProtocolPacketsProtocolPackets|VersionedQualifiedName]? 
+	 *         MainInterface=GSSEnvironmentMainInterface 
+	 *         Interface+=GSSEnvironmentInterface*
+	 *     )
 	 */
 	protected void sequence_GSSEnvironmentInterfaces(ISerializationContext context, GSSEnvironmentInterfaces semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -754,7 +758,7 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     GSSEnvironmentProtocols returns GSSEnvironmentProtocols
 	 *
 	 * Constraint:
-	 *     (ProtocolPacketsFile=[GSSProtocolPacketsProtocolPackets|VersionedQualifiedName]? Protocol+=GSSEnvironmentProtocol+)
+	 *     Protocol+=GSSEnvironmentProtocol+
 	 */
 	protected void sequence_GSSEnvironmentProtocols(ISerializationContext context, GSSEnvironmentProtocols semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

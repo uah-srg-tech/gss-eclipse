@@ -363,6 +363,43 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cGSSEnvironmentProtocolsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cProtocolAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cProtocolGSSEnvironmentProtocolParserRuleCall_2_0 = (RuleCall)cProtocolAssignment_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//GSSEnvironmentProtocols:
+		//	'GSSEnvironmentProtocols' '{'
+		//	Protocol+=GSSEnvironmentProtocol+
+		//	'}' ';';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'GSSEnvironmentProtocols' '{' Protocol+=GSSEnvironmentProtocol+ '}' ';'
+		public Group getGroup() { return cGroup; }
+		
+		//'GSSEnvironmentProtocols'
+		public Keyword getGSSEnvironmentProtocolsKeyword_0() { return cGSSEnvironmentProtocolsKeyword_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//Protocol+=GSSEnvironmentProtocol+
+		public Assignment getProtocolAssignment_2() { return cProtocolAssignment_2; }
+		
+		//GSSEnvironmentProtocol
+		public RuleCall getProtocolGSSEnvironmentProtocolParserRuleCall_2_0() { return cProtocolGSSEnvironmentProtocolParserRuleCall_2_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
+	}
+	public class GSSEnvironmentInterfacesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentInterfaces");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cGSSEnvironmentInterfacesKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cProtocolPacketsFileKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
@@ -370,25 +407,28 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_2_2_0 = (CrossReference)cProtocolPacketsFileAssignment_2_2.eContents().get(0);
 		private final RuleCall cProtocolPacketsFileGSSProtocolPacketsProtocolPacketsVersionedQualifiedNameParserRuleCall_2_2_0_1 = (RuleCall)cProtocolPacketsFileGSSProtocolPacketsProtocolPacketsCrossReference_2_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
-		private final Assignment cProtocolAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cProtocolGSSEnvironmentProtocolParserRuleCall_3_0 = (RuleCall)cProtocolAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cMainInterfaceAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cMainInterfaceGSSEnvironmentMainInterfaceParserRuleCall_3_0 = (RuleCall)cMainInterfaceAssignment_3.eContents().get(0);
+		private final Assignment cInterfaceAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cInterfaceGSSEnvironmentInterfaceParserRuleCall_4_0 = (RuleCall)cInterfaceAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//GSSEnvironmentProtocols:
-		//	'GSSEnvironmentProtocols' '{' ('ProtocolPacketsFile' ':='
+		//GSSEnvironmentInterfaces:
+		//	'GSSEnvironmentInterfaces' '{' ('ProtocolPacketsFile' ':='
 		//	ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
-		//	Protocol+=GSSEnvironmentProtocol+
+		//	MainInterface=GSSEnvironmentMainInterface
+		//	Interface+=GSSEnvironmentInterface*
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSEnvironmentProtocols' '{' ('ProtocolPacketsFile' ':='
+		//'GSSEnvironmentInterfaces' '{' ('ProtocolPacketsFile' ':='
 		//ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
-		//Protocol+=GSSEnvironmentProtocol+ '}' ';'
+		//MainInterface=GSSEnvironmentMainInterface Interface+=GSSEnvironmentInterface* '}' ';'
 		public Group getGroup() { return cGroup; }
 		
-		//'GSSEnvironmentProtocols'
-		public Keyword getGSSEnvironmentProtocolsKeyword_0() { return cGSSEnvironmentProtocolsKeyword_0; }
+		//'GSSEnvironmentInterfaces'
+		public Keyword getGSSEnvironmentInterfacesKeyword_0() { return cGSSEnvironmentInterfacesKeyword_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
@@ -415,63 +455,23 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_2_3() { return cSemicolonKeyword_2_3; }
 		
-		//Protocol+=GSSEnvironmentProtocol+
-		public Assignment getProtocolAssignment_3() { return cProtocolAssignment_3; }
-		
-		//GSSEnvironmentProtocol
-		public RuleCall getProtocolGSSEnvironmentProtocolParserRuleCall_3_0() { return cProtocolGSSEnvironmentProtocolParserRuleCall_3_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
-	}
-	public class GSSEnvironmentInterfacesElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentInterfaces");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cGSSEnvironmentInterfacesKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cMainInterfaceAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cMainInterfaceGSSEnvironmentMainInterfaceParserRuleCall_2_0 = (RuleCall)cMainInterfaceAssignment_2.eContents().get(0);
-		private final Assignment cInterfaceAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cInterfaceGSSEnvironmentInterfaceParserRuleCall_3_0 = (RuleCall)cInterfaceAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		
-		//GSSEnvironmentInterfaces:
-		//	'GSSEnvironmentInterfaces' '{'
-		//	MainInterface=GSSEnvironmentMainInterface
-		//	Interface+=GSSEnvironmentInterface*
-		//	'}' ';';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'GSSEnvironmentInterfaces' '{' MainInterface=GSSEnvironmentMainInterface Interface+=GSSEnvironmentInterface* '}' ';'
-		public Group getGroup() { return cGroup; }
-		
-		//'GSSEnvironmentInterfaces'
-		public Keyword getGSSEnvironmentInterfacesKeyword_0() { return cGSSEnvironmentInterfacesKeyword_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
-		
 		//MainInterface=GSSEnvironmentMainInterface
-		public Assignment getMainInterfaceAssignment_2() { return cMainInterfaceAssignment_2; }
+		public Assignment getMainInterfaceAssignment_3() { return cMainInterfaceAssignment_3; }
 		
 		//GSSEnvironmentMainInterface
-		public RuleCall getMainInterfaceGSSEnvironmentMainInterfaceParserRuleCall_2_0() { return cMainInterfaceGSSEnvironmentMainInterfaceParserRuleCall_2_0; }
+		public RuleCall getMainInterfaceGSSEnvironmentMainInterfaceParserRuleCall_3_0() { return cMainInterfaceGSSEnvironmentMainInterfaceParserRuleCall_3_0; }
 		
 		//Interface+=GSSEnvironmentInterface*
-		public Assignment getInterfaceAssignment_3() { return cInterfaceAssignment_3; }
+		public Assignment getInterfaceAssignment_4() { return cInterfaceAssignment_4; }
 		
 		//GSSEnvironmentInterface
-		public RuleCall getInterfaceGSSEnvironmentInterfaceParserRuleCall_3_0() { return cInterfaceGSSEnvironmentInterfaceParserRuleCall_3_0; }
+		public RuleCall getInterfaceGSSEnvironmentInterfaceParserRuleCall_4_0() { return cInterfaceGSSEnvironmentInterfaceParserRuleCall_4_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 	}
 	public class GSSEnvironmentSpecialPacketsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentSpecialPackets");
@@ -5718,8 +5718,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//GSSEnvironmentProtocols:
-	//	'GSSEnvironmentProtocols' '{' ('ProtocolPacketsFile' ':='
-	//	ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
+	//	'GSSEnvironmentProtocols' '{'
 	//	Protocol+=GSSEnvironmentProtocol+
 	//	'}' ';';
 	public GSSEnvironmentProtocolsElements getGSSEnvironmentProtocolsAccess() {
@@ -5731,7 +5730,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//GSSEnvironmentInterfaces:
-	//	'GSSEnvironmentInterfaces' '{'
+	//	'GSSEnvironmentInterfaces' '{' ('ProtocolPacketsFile' ':='
+	//	ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
 	//	MainInterface=GSSEnvironmentMainInterface
 	//	Interface+=GSSEnvironmentInterface*
 	//	'}' ';';

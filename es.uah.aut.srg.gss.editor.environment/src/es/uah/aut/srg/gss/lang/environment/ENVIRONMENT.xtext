@@ -56,13 +56,13 @@ GSSEnvironmentOptions returns GSSEnvironmentOptions:
 
 GSSEnvironmentProtocols returns GSSEnvironmentProtocols:
 	'GSSEnvironmentProtocols' '{'
-		('ProtocolPacketsFile' ':=' ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
 		(Protocol+=GSSEnvironmentProtocol)+
 	'}' ';'
 ;
 
 GSSEnvironmentInterfaces returns GSSEnvironmentInterfaces:
 	'GSSEnvironmentInterfaces' '{'
+		('ProtocolPacketsFile' ':=' ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
 		MainInterface=GSSEnvironmentMainInterface
 		(Interface+=GSSEnvironmentInterface)*
 	'}' ';'
