@@ -15,6 +15,7 @@ import es.uah.aut.srg.gss.environment.GSSEnvironmentInterfaces;
 import es.uah.aut.srg.gss.environment.GSSEnvironmentMainInterface;
 import es.uah.aut.srg.gss.environment.environmentPackage;
 
+import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPackets;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -39,6 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentInterfacesImpl#getProtocolPacketsFile <em>Protocol Packets File</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentInterfacesImpl#getMainInterface <em>Main Interface</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentInterfacesImpl#getInterface <em>Interface</em>}</li>
  * </ul>
@@ -46,6 +48,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class GSSEnvironmentInterfacesImpl extends MinimalEObjectImpl.Container implements GSSEnvironmentInterfaces {
+	/**
+	 * The cached value of the '{@link #getProtocolPacketsFile() <em>Protocol Packets File</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProtocolPacketsFile()
+	 * @generated
+	 * @ordered
+	 */
+	protected GSSProtocolPacketsProtocolPackets protocolPacketsFile;
+
 	/**
 	 * The cached value of the '{@link #getMainInterface() <em>Main Interface</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -83,6 +95,44 @@ public class GSSEnvironmentInterfacesImpl extends MinimalEObjectImpl.Container i
 	@Override
 	protected EClass eStaticClass() {
 		return environmentPackage.Literals.GSS_ENVIRONMENT_INTERFACES;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSProtocolPacketsProtocolPackets getProtocolPacketsFile() {
+		if (protocolPacketsFile != null && protocolPacketsFile.eIsProxy()) {
+			InternalEObject oldProtocolPacketsFile = (InternalEObject)protocolPacketsFile;
+			protocolPacketsFile = (GSSProtocolPacketsProtocolPackets)eResolveProxy(oldProtocolPacketsFile);
+			if (protocolPacketsFile != oldProtocolPacketsFile) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, environmentPackage.GSS_ENVIRONMENT_INTERFACES__PROTOCOL_PACKETS_FILE, oldProtocolPacketsFile, protocolPacketsFile));
+			}
+		}
+		return protocolPacketsFile;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSProtocolPacketsProtocolPackets basicGetProtocolPacketsFile() {
+		return protocolPacketsFile;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProtocolPacketsFile(GSSProtocolPacketsProtocolPackets newProtocolPacketsFile) {
+		GSSProtocolPacketsProtocolPackets oldProtocolPacketsFile = protocolPacketsFile;
+		protocolPacketsFile = newProtocolPacketsFile;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, environmentPackage.GSS_ENVIRONMENT_INTERFACES__PROTOCOL_PACKETS_FILE, oldProtocolPacketsFile, protocolPacketsFile));
 	}
 
 	/**
@@ -164,6 +214,9 @@ public class GSSEnvironmentInterfacesImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case environmentPackage.GSS_ENVIRONMENT_INTERFACES__PROTOCOL_PACKETS_FILE:
+				if (resolve) return getProtocolPacketsFile();
+				return basicGetProtocolPacketsFile();
 			case environmentPackage.GSS_ENVIRONMENT_INTERFACES__MAIN_INTERFACE:
 				return getMainInterface();
 			case environmentPackage.GSS_ENVIRONMENT_INTERFACES__INTERFACE:
@@ -181,6 +234,9 @@ public class GSSEnvironmentInterfacesImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case environmentPackage.GSS_ENVIRONMENT_INTERFACES__PROTOCOL_PACKETS_FILE:
+				setProtocolPacketsFile((GSSProtocolPacketsProtocolPackets)newValue);
+				return;
 			case environmentPackage.GSS_ENVIRONMENT_INTERFACES__MAIN_INTERFACE:
 				setMainInterface((GSSEnvironmentMainInterface)newValue);
 				return;
@@ -200,6 +256,9 @@ public class GSSEnvironmentInterfacesImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case environmentPackage.GSS_ENVIRONMENT_INTERFACES__PROTOCOL_PACKETS_FILE:
+				setProtocolPacketsFile((GSSProtocolPacketsProtocolPackets)null);
+				return;
 			case environmentPackage.GSS_ENVIRONMENT_INTERFACES__MAIN_INTERFACE:
 				setMainInterface((GSSEnvironmentMainInterface)null);
 				return;
@@ -218,6 +277,8 @@ public class GSSEnvironmentInterfacesImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case environmentPackage.GSS_ENVIRONMENT_INTERFACES__PROTOCOL_PACKETS_FILE:
+				return protocolPacketsFile != null;
 			case environmentPackage.GSS_ENVIRONMENT_INTERFACES__MAIN_INTERFACE:
 				return mainInterface != null;
 			case environmentPackage.GSS_ENVIRONMENT_INTERFACES__INTERFACE:

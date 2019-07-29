@@ -10,6 +10,7 @@
  ******************************************************************************/
 package es.uah.aut.srg.gss.lang.environment.scoping;
 
+import es.uah.aut.srg.gss.xtext.GSSAbstractScopeProvider;
 
 /**
  * This class contains custom scoping description.
@@ -17,6 +18,6 @@ package es.uah.aut.srg.gss.lang.environment.scoping;
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#scoping
  * on how and when to use it.
  */
-public class ENVIRONMENTScopeProvider extends AbstractENVIRONMENTScopeProvider {
+public class ENVIRONMENTScopeProvider extends GSSAbstractScopeProvider {
 
 }
