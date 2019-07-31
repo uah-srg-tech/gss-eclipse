@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="test_campaign" nsURI="http://srg.aut.uah.es/gss/test_campaign"
+    nsPrefix="gss">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSTestCampaignTestCampaign">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="test_proc" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass test_proc.ecore#//GSSTestProcTestProc"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

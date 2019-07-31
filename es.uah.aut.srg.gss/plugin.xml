@@ -70,4 +70,12 @@
             genModel="model/config.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated test_campaign -->
+      <package
+            uri="http://srg.aut.uah.es/gss/test_campaign"
+            class="test_campaign.Test_campaignPackage"
+            genModel="model/test_campaign.genmodel"/>
+   </extension>
+
 </plugin>

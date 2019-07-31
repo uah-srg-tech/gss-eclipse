@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/es.uah.aut.srg.gss/src" modelPluginID="es.uah.aut.srg.gss"
+    modelName="Test_campaign" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="common.genmodel#//common ../../es.uah.aut.srg.tmtcif/model/common.genmodel#//common ../../es.uah.aut.srg.tmtcif/model/export.genmodel#//export ../../es.uah.aut.srg.tmtcif/model/filter.genmodel#//filter ../../es.uah.aut.srg.tmtcif/model/format.genmodel#//format ../../es.uah.aut.srg.tmtcif/model/import.genmodel#//import test_proc.genmodel#//test_proc"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>test_campaign.ecore</foreignModel>
+  <genPackages prefix="Test_campaign" disposableProviderFactory="true" ecorePackage="test_campaign.ecore#/">
+    <genClasses ecoreClass="test_campaign.ecore#//GSSTestCampaignTestCampaign">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference test_campaign.ecore#//GSSTestCampaignTestCampaign/test_campaign"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
