@@ -913,7 +913,7 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     GSSEnvironmentSpecialPackets returns GSSEnvironmentSpecialPackets
 	 *
 	 * Constraint:
-	 *     SpecialPacket+=GSSEnvironmentSpecialPacket
+	 *     SpecialPacket+=GSSEnvironmentSpecialPacket+
 	 */
 	protected void sequence_GSSEnvironmentSpecialPackets(ISerializationContext context, GSSEnvironmentSpecialPackets semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

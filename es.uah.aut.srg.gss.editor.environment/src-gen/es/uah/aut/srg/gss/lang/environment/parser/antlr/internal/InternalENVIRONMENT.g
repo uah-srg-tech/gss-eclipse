@@ -862,7 +862,7 @@ ruleGSSEnvironmentSpecialPackets returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
+		)+
 		otherlv_3='}'
 		{
 			newLeafNode(otherlv_3, grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getRightCurlyBracketKeyword_3());

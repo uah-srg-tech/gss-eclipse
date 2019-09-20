@@ -70,7 +70,7 @@ GSSEnvironmentInterfaces returns GSSEnvironmentInterfaces:
 
 GSSEnvironmentSpecialPackets returns GSSEnvironmentSpecialPackets:
 	'GSSEnvironmentSpecialPackets' '{'
-		(SpecialPacket+=GSSEnvironmentSpecialPacket)
+		(SpecialPacket+=GSSEnvironmentSpecialPacket)+
 	'}' ';'
 ;
 

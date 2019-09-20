@@ -3515,9 +3515,16 @@ rule__GSSEnvironmentSpecialPackets__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getSpecialPacketAssignment_2()); }
-	(rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2)
-	{ after(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getSpecialPacketAssignment_2()); }
+	(
+		{ before(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getSpecialPacketAssignment_2()); }
+		(rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2)
+		{ after(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getSpecialPacketAssignment_2()); }
+	)
+	(
+		{ before(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getSpecialPacketAssignment_2()); }
+		(rule__GSSEnvironmentSpecialPackets__SpecialPacketAssignment_2)*
+		{ after(grammarAccess.getGSSEnvironmentSpecialPacketsAccess().getSpecialPacketAssignment_2()); }
+	)
 )
 ;
 finally {

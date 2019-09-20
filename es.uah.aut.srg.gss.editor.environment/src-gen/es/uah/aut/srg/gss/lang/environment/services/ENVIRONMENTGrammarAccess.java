@@ -485,10 +485,11 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//GSSEnvironmentSpecialPackets:
 		//	'GSSEnvironmentSpecialPackets' '{'
-		//	SpecialPacket+=GSSEnvironmentSpecialPacket '}' ';';
+		//	SpecialPacket+=GSSEnvironmentSpecialPacket+
+		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSEnvironmentSpecialPackets' '{' SpecialPacket+=GSSEnvironmentSpecialPacket '}' ';'
+		//'GSSEnvironmentSpecialPackets' '{' SpecialPacket+=GSSEnvironmentSpecialPacket+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSEnvironmentSpecialPackets'
@@ -497,7 +498,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//SpecialPacket+=GSSEnvironmentSpecialPacket
+		//SpecialPacket+=GSSEnvironmentSpecialPacket+
 		public Assignment getSpecialPacketAssignment_2() { return cSpecialPacketAssignment_2; }
 		
 		//GSSEnvironmentSpecialPacket
@@ -5745,7 +5746,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSEnvironmentSpecialPackets:
 	//	'GSSEnvironmentSpecialPackets' '{'
-	//	SpecialPacket+=GSSEnvironmentSpecialPacket '}' ';';
+	//	SpecialPacket+=GSSEnvironmentSpecialPacket+
+	//	'}' ';';
 	public GSSEnvironmentSpecialPacketsElements getGSSEnvironmentSpecialPacketsAccess() {
 		return pGSSEnvironmentSpecialPackets;
 	}
