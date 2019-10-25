@@ -4,6 +4,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcTestProc" eSuperTypes="common.ecore#//GSSModelElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="step" lowerBound="1" upperBound="1900"
         eType="#//GSSTestProcStep" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scenarioId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSTestProcMode">
     <eLiterals name="continuous"/>

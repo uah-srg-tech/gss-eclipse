@@ -37,6 +37,7 @@ import es.uah.aut.srg.gss.test_proc.GSSTestProcUnit;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcYesNo;
 import es.uah.aut.srg.gss.test_proc.test_procFactory;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
+import es.uah.aut.srg.tmtcif.export.exportPackage;
 import es.uah.aut.srg.tmtcif.filter.filterPackage;
 import es.uah.aut.srg.tmtcif.format.formatPackage;
 import es.uah.aut.srg.tmtcif.import_.importPackage;
@@ -271,7 +272,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 
 		// Initialize simple dependencies
 		commonPackage.eINSTANCE.eClass();
-		es.uah.aut.srg.tmtcif.export.exportPackage.eINSTANCE.eClass();
+		exportPackage.eINSTANCE.eClass();
 		filterPackage.eINSTANCE.eClass();
 		importPackage.eINSTANCE.eClass();
 
@@ -306,6 +307,15 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 */
 	public EReference getGSSTestProcTestProc_Step() {
 		return (EReference)gssTestProcTestProcEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTestProcTestProc_ScenarioId() {
+		return (EAttribute)gssTestProcTestProcEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1319,6 +1329,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		// Create classes and their features
 		gssTestProcTestProcEClass = createEClass(GSS_TEST_PROC_TEST_PROC);
 		createEReference(gssTestProcTestProcEClass, GSS_TEST_PROC_TEST_PROC__STEP);
+		createEAttribute(gssTestProcTestProcEClass, GSS_TEST_PROC_TEST_PROC__SCENARIO_ID);
 
 		gssTestProcStepEClass = createEClass(GSS_TEST_PROC_STEP);
 		createEAttribute(gssTestProcStepEClass, GSS_TEST_PROC_STEP__ID);
@@ -1477,7 +1488,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		// Obtain other dependent packages
 		commonPackage thecommonPackage = (commonPackage)EPackage.Registry.INSTANCE.getEPackage(commonPackage.eNS_URI);
 		formatPackage theformatPackage = (formatPackage)EPackage.Registry.INSTANCE.getEPackage(formatPackage.eNS_URI);
-		es.uah.aut.srg.tmtcif.export.exportPackage theexportPackage = (es.uah.aut.srg.tmtcif.export.exportPackage)EPackage.Registry.INSTANCE.getEPackage(es.uah.aut.srg.tmtcif.export.exportPackage.eNS_URI);
+		exportPackage theexportPackage = (exportPackage)EPackage.Registry.INSTANCE.getEPackage(exportPackage.eNS_URI);
 		importPackage theimportPackage = (importPackage)EPackage.Registry.INSTANCE.getEPackage(importPackage.eNS_URI);
 		filterPackage thefilterPackage = (filterPackage)EPackage.Registry.INSTANCE.getEPackage(filterPackage.eNS_URI);
 
@@ -1500,6 +1511,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssTestProcTestProcEClass, GSSTestProcTestProc.class, "GSSTestProcTestProc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSTestProcTestProc_Step(), this.getGSSTestProcStep(), null, "step", null, 1, 1900, GSSTestProcTestProc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSTestProcTestProc_ScenarioId(), ecorePackage.getEString(), "scenarioId", null, 0, 1, GSSTestProcTestProc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssTestProcStepEClass, GSSTestProcStep.class, "GSSTestProcStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSTestProcStep_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSTestProcStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
