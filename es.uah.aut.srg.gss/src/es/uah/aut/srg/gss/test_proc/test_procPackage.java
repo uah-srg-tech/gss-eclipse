@@ -287,40 +287,13 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_INPUTS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Input level 3</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Input</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_INPUTS__INPUT_LEVEL_3 = 0;
-
-	/**
-	 * The feature id for the '<em><b>Input level 2</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_INPUTS__INPUT_LEVEL_2 = 1;
-
-	/**
-	 * The feature id for the '<em><b>Input level 1</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_INPUTS__INPUT_LEVEL_1 = 2;
-
-	/**
-	 * The feature id for the '<em><b>Input level 0</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_INPUTS__INPUT_LEVEL_0 = 3;
+	int GSS_TEST_PROC_INPUTS__INPUT = 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Test Proc Inputs</em>' class.
@@ -329,7 +302,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_INPUTS_FEATURE_COUNT = 4;
+	int GSS_TEST_PROC_INPUTS_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Test Proc Inputs</em>' class.
@@ -378,40 +351,13 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_OUTPUTS__VALID_TIME_INTERVAL_UNIT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Output level 3</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Output</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_3 = 3;
-
-	/**
-	 * The feature id for the '<em><b>Output level 2</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_2 = 4;
-
-	/**
-	 * The feature id for the '<em><b>Output level 1</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_1 = 5;
-
-	/**
-	 * The feature id for the '<em><b>Output level 0</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_0 = 6;
+	int GSS_TEST_PROC_OUTPUTS__OUTPUT = 3;
 
 	/**
 	 * The number of structural features of the '<em>GSS Test Proc Outputs</em>' class.
@@ -420,7 +366,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_OUTPUTS_FEATURE_COUNT = 7;
+	int GSS_TEST_PROC_OUTPUTS_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>GSS Test Proc Outputs</em>' class.
@@ -1954,48 +1900,15 @@ public interface test_procPackage extends EPackage {
 	EClass getGSSTestProcInputs();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput_level_3 <em>Input level 3</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput <em>Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Input level 3</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput_level_3()
+	 * @return the meta object for the containment reference list '<em>Input</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput()
 	 * @see #getGSSTestProcInputs()
 	 * @generated
 	 */
-	EReference getGSSTestProcInputs_Input_level_3();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput_level_2 <em>Input level 2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Input level 2</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput_level_2()
-	 * @see #getGSSTestProcInputs()
-	 * @generated
-	 */
-	EReference getGSSTestProcInputs_Input_level_2();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput_level_1 <em>Input level 1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Input level 1</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput_level_1()
-	 * @see #getGSSTestProcInputs()
-	 * @generated
-	 */
-	EReference getGSSTestProcInputs_Input_level_1();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput_level_0 <em>Input level 0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Input level 0</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput_level_0()
-	 * @see #getGSSTestProcInputs()
-	 * @generated
-	 */
-	EReference getGSSTestProcInputs_Input_level_0();
+	EReference getGSSTestProcInputs_Input();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs <em>GSS Test Proc Outputs</em>}'.
@@ -2041,48 +1954,15 @@ public interface test_procPackage extends EPackage {
 	EAttribute getGSSTestProcOutputs_Valid_time_interval_unit();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getOutput_level_3 <em>Output level 3</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getOutput <em>Output</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Output level 3</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getOutput_level_3()
+	 * @return the meta object for the containment reference list '<em>Output</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getOutput()
 	 * @see #getGSSTestProcOutputs()
 	 * @generated
 	 */
-	EReference getGSSTestProcOutputs_Output_level_3();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getOutput_level_2 <em>Output level 2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Output level 2</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getOutput_level_2()
-	 * @see #getGSSTestProcOutputs()
-	 * @generated
-	 */
-	EReference getGSSTestProcOutputs_Output_level_2();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getOutput_level_1 <em>Output level 1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Output level 1</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getOutput_level_1()
-	 * @see #getGSSTestProcOutputs()
-	 * @generated
-	 */
-	EReference getGSSTestProcOutputs_Output_level_1();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getOutput_level_0 <em>Output level 0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Output level 0</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getOutput_level_0()
-	 * @see #getGSSTestProcOutputs()
-	 * @generated
-	 */
-	EReference getGSSTestProcOutputs_Output_level_0();
+	EReference getGSSTestProcOutputs_Output();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcSpecialPackets <em>GSS Test Proc Special Packets</em>}'.
@@ -3152,36 +3032,12 @@ public interface test_procPackage extends EPackage {
 		EClass GSS_TEST_PROC_INPUTS = eINSTANCE.getGSSTestProcInputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Input level 3</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Input</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_TEST_PROC_INPUTS__INPUT_LEVEL_3 = eINSTANCE.getGSSTestProcInputs_Input_level_3();
-
-		/**
-		 * The meta object literal for the '<em><b>Input level 2</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TEST_PROC_INPUTS__INPUT_LEVEL_2 = eINSTANCE.getGSSTestProcInputs_Input_level_2();
-
-		/**
-		 * The meta object literal for the '<em><b>Input level 1</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TEST_PROC_INPUTS__INPUT_LEVEL_1 = eINSTANCE.getGSSTestProcInputs_Input_level_1();
-
-		/**
-		 * The meta object literal for the '<em><b>Input level 0</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TEST_PROC_INPUTS__INPUT_LEVEL_0 = eINSTANCE.getGSSTestProcInputs_Input_level_0();
+		EReference GSS_TEST_PROC_INPUTS__INPUT = eINSTANCE.getGSSTestProcInputs_Input();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcOutputsImpl <em>GSS Test Proc Outputs</em>}' class.
@@ -3218,36 +3074,12 @@ public interface test_procPackage extends EPackage {
 		EAttribute GSS_TEST_PROC_OUTPUTS__VALID_TIME_INTERVAL_UNIT = eINSTANCE.getGSSTestProcOutputs_Valid_time_interval_unit();
 
 		/**
-		 * The meta object literal for the '<em><b>Output level 3</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Output</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_3 = eINSTANCE.getGSSTestProcOutputs_Output_level_3();
-
-		/**
-		 * The meta object literal for the '<em><b>Output level 2</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_2 = eINSTANCE.getGSSTestProcOutputs_Output_level_2();
-
-		/**
-		 * The meta object literal for the '<em><b>Output level 1</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_1 = eINSTANCE.getGSSTestProcOutputs_Output_level_1();
-
-		/**
-		 * The meta object literal for the '<em><b>Output level 0</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_0 = eINSTANCE.getGSSTestProcOutputs_Output_level_0();
+		EReference GSS_TEST_PROC_OUTPUTS__OUTPUT = eINSTANCE.getGSSTestProcOutputs_Output();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcSpecialPacketsImpl <em>GSS Test Proc Special Packets</em>}' class.

@@ -29,14 +29,8 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcInputs">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="input_level_3" upperBound="-1"
-        eType="#//GSSTestProcInputLevel3" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="input_level_2" upperBound="-1"
-        eType="#//GSSTestProcInputLevel2" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="input_level_1" upperBound="-1"
-        eType="#//GSSTestProcInputLevel1" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="input_level_0" upperBound="-1"
-        eType="#//GSSTestProcInputLevel0" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input" lowerBound="1" upperBound="-1"
+        eType="#//GSSTestProcInput" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSTestProcUnit">
     <eLiterals name="miliseconds"/>
@@ -54,14 +48,8 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valid_time_interval_unit"
         lowerBound="1" eType="#//GSSTestProcUnit" unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="output_level_3" upperBound="-1"
-        eType="#//GSSTestProcOutputLevel3" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="output_level_2" upperBound="-1"
-        eType="#//GSSTestProcOutputLevel2" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="output_level_1" upperBound="-1"
-        eType="#//GSSTestProcOutputLevel1" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="output_level_0" upperBound="-1"
-        eType="#//GSSTestProcOutputLevel0" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"
+        upperBound="-1" eType="#//GSSTestProcOutput" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcSpecialPackets">
     <eStructuralFeatures xsi:type="ecore:EReference" name="enable" upperBound="-1"

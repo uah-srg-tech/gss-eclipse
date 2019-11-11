@@ -409,28 +409,19 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Action cGSSTestProcInputsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cGSSTestProcInputsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
-		private final Assignment cInput_level_3Assignment_3_0 = (Assignment)cAlternatives_3.eContents().get(0);
-		private final RuleCall cInput_level_3GSSTestProcInputLevel3ParserRuleCall_3_0_0 = (RuleCall)cInput_level_3Assignment_3_0.eContents().get(0);
-		private final Assignment cInput_level_2Assignment_3_1 = (Assignment)cAlternatives_3.eContents().get(1);
-		private final RuleCall cInput_level_2GSSTestProcInputLevel2ParserRuleCall_3_1_0 = (RuleCall)cInput_level_2Assignment_3_1.eContents().get(0);
-		private final Assignment cInput_level_1Assignment_3_2 = (Assignment)cAlternatives_3.eContents().get(2);
-		private final RuleCall cInput_level_1GSSTestProcInputLevel1ParserRuleCall_3_2_0 = (RuleCall)cInput_level_1Assignment_3_2.eContents().get(0);
-		private final Assignment cInput_level_0Assignment_3_3 = (Assignment)cAlternatives_3.eContents().get(3);
-		private final RuleCall cInput_level_0GSSTestProcInputLevel0ParserRuleCall_3_3_0 = (RuleCall)cInput_level_0Assignment_3_3.eContents().get(0);
+		private final Assignment cInputAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cInputGSSTestProcInputParserRuleCall_3_0 = (RuleCall)cInputAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//GSSTestProcInputs:
 		//	{GSSTestProcInputs}
-		//	'GSSTestProcInputs' '{' (input_level_3+=GSSTestProcInputLevel3 | input_level_2+=GSSTestProcInputLevel2 |
-		//	input_level_1+=GSSTestProcInputLevel1 | input_level_0+=GSSTestProcInputLevel0)+
+		//	'GSSTestProcInputs' '{'
+		//	input+=GSSTestProcInput+
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{GSSTestProcInputs} 'GSSTestProcInputs' '{' (input_level_3+=GSSTestProcInputLevel3 |
-		//input_level_2+=GSSTestProcInputLevel2 | input_level_1+=GSSTestProcInputLevel1 |
-		//input_level_0+=GSSTestProcInputLevel0)+ '}' ';'
+		//{GSSTestProcInputs} 'GSSTestProcInputs' '{' input+=GSSTestProcInput+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//{GSSTestProcInputs}
@@ -442,33 +433,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//(input_level_3+=GSSTestProcInputLevel3 | input_level_2+=GSSTestProcInputLevel2 | input_level_1+=GSSTestProcInputLevel1 |
-		//input_level_0+=GSSTestProcInputLevel0)+
-		public Alternatives getAlternatives_3() { return cAlternatives_3; }
+		//input+=GSSTestProcInput+
+		public Assignment getInputAssignment_3() { return cInputAssignment_3; }
 		
-		//input_level_3+=GSSTestProcInputLevel3
-		public Assignment getInput_level_3Assignment_3_0() { return cInput_level_3Assignment_3_0; }
-		
-		//GSSTestProcInputLevel3
-		public RuleCall getInput_level_3GSSTestProcInputLevel3ParserRuleCall_3_0_0() { return cInput_level_3GSSTestProcInputLevel3ParserRuleCall_3_0_0; }
-		
-		//input_level_2+=GSSTestProcInputLevel2
-		public Assignment getInput_level_2Assignment_3_1() { return cInput_level_2Assignment_3_1; }
-		
-		//GSSTestProcInputLevel2
-		public RuleCall getInput_level_2GSSTestProcInputLevel2ParserRuleCall_3_1_0() { return cInput_level_2GSSTestProcInputLevel2ParserRuleCall_3_1_0; }
-		
-		//input_level_1+=GSSTestProcInputLevel1
-		public Assignment getInput_level_1Assignment_3_2() { return cInput_level_1Assignment_3_2; }
-		
-		//GSSTestProcInputLevel1
-		public RuleCall getInput_level_1GSSTestProcInputLevel1ParserRuleCall_3_2_0() { return cInput_level_1GSSTestProcInputLevel1ParserRuleCall_3_2_0; }
-		
-		//input_level_0+=GSSTestProcInputLevel0
-		public Assignment getInput_level_0Assignment_3_3() { return cInput_level_0Assignment_3_3; }
-		
-		//GSSTestProcInputLevel0
-		public RuleCall getInput_level_0GSSTestProcInputLevel0ParserRuleCall_3_3_0() { return cInput_level_0GSSTestProcInputLevel0ParserRuleCall_3_3_0; }
+		//GSSTestProcInput
+		public RuleCall getInputGSSTestProcInputParserRuleCall_3_0() { return cInputGSSTestProcInputParserRuleCall_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
@@ -496,15 +465,8 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValid_time_interval_unitAssignment_12 = (Assignment)cGroup.eContents().get(12);
 		private final RuleCall cValid_time_interval_unitGSSTestProcUnitEnumRuleCall_12_0 = (RuleCall)cValid_time_interval_unitAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
-		private final Alternatives cAlternatives_14 = (Alternatives)cGroup.eContents().get(14);
-		private final Assignment cOutput_level_3Assignment_14_0 = (Assignment)cAlternatives_14.eContents().get(0);
-		private final RuleCall cOutput_level_3GSSTestProcOutputLevel3ParserRuleCall_14_0_0 = (RuleCall)cOutput_level_3Assignment_14_0.eContents().get(0);
-		private final Assignment cOutput_level_2Assignment_14_1 = (Assignment)cAlternatives_14.eContents().get(1);
-		private final RuleCall cOutput_level_2GSSTestProcOutputLevel2ParserRuleCall_14_1_0 = (RuleCall)cOutput_level_2Assignment_14_1.eContents().get(0);
-		private final Assignment cOutput_level_1Assignment_14_2 = (Assignment)cAlternatives_14.eContents().get(2);
-		private final RuleCall cOutput_level_1GSSTestProcOutputLevel1ParserRuleCall_14_2_0 = (RuleCall)cOutput_level_1Assignment_14_2.eContents().get(0);
-		private final Assignment cOutput_level_0Assignment_14_3 = (Assignment)cAlternatives_14.eContents().get(3);
-		private final RuleCall cOutput_level_0GSSTestProcOutputLevel0ParserRuleCall_14_3_0 = (RuleCall)cOutput_level_0Assignment_14_3.eContents().get(0);
+		private final Assignment cOutputAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cOutputGSSTestProcOutputParserRuleCall_14_0 = (RuleCall)cOutputAssignment_14.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Keyword cSemicolonKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
@@ -512,16 +474,14 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSTestProcOutputs' '{'
 		//	'checkmode' ':=' checkmode=GSSTestProcCheckmode ';'
 		//	'valid_time_interval_value' ':=' valid_time_interval_value=INTEGER ';'
-		//	'valid_time_interval_unit' ':=' valid_time_interval_unit=GSSTestProcUnit ';' (output_level_3+=GSSTestProcOutputLevel3
-		//	| output_level_2+=GSSTestProcOutputLevel2 | output_level_1+=GSSTestProcOutputLevel1 |
-		//	output_level_0+=GSSTestProcOutputLevel0)+
+		//	'valid_time_interval_unit' ':=' valid_time_interval_unit=GSSTestProcUnit ';'
+		//	output+=GSSTestProcOutput+
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTestProcOutputs' '{' 'checkmode' ':=' checkmode=GSSTestProcCheckmode ';' 'valid_time_interval_value' ':='
 		//valid_time_interval_value=INTEGER ';' 'valid_time_interval_unit' ':=' valid_time_interval_unit=GSSTestProcUnit ';'
-		//(output_level_3+=GSSTestProcOutputLevel3 | output_level_2+=GSSTestProcOutputLevel2 |
-		//output_level_1+=GSSTestProcOutputLevel1 | output_level_0+=GSSTestProcOutputLevel0)+ '}' ';'
+		//output+=GSSTestProcOutput+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSTestProcOutputs'
@@ -575,33 +535,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
 		
-		//(output_level_3+=GSSTestProcOutputLevel3 | output_level_2+=GSSTestProcOutputLevel2 |
-		//output_level_1+=GSSTestProcOutputLevel1 | output_level_0+=GSSTestProcOutputLevel0)+
-		public Alternatives getAlternatives_14() { return cAlternatives_14; }
+		//output+=GSSTestProcOutput+
+		public Assignment getOutputAssignment_14() { return cOutputAssignment_14; }
 		
-		//output_level_3+=GSSTestProcOutputLevel3
-		public Assignment getOutput_level_3Assignment_14_0() { return cOutput_level_3Assignment_14_0; }
-		
-		//GSSTestProcOutputLevel3
-		public RuleCall getOutput_level_3GSSTestProcOutputLevel3ParserRuleCall_14_0_0() { return cOutput_level_3GSSTestProcOutputLevel3ParserRuleCall_14_0_0; }
-		
-		//output_level_2+=GSSTestProcOutputLevel2
-		public Assignment getOutput_level_2Assignment_14_1() { return cOutput_level_2Assignment_14_1; }
-		
-		//GSSTestProcOutputLevel2
-		public RuleCall getOutput_level_2GSSTestProcOutputLevel2ParserRuleCall_14_1_0() { return cOutput_level_2GSSTestProcOutputLevel2ParserRuleCall_14_1_0; }
-		
-		//output_level_1+=GSSTestProcOutputLevel1
-		public Assignment getOutput_level_1Assignment_14_2() { return cOutput_level_1Assignment_14_2; }
-		
-		//GSSTestProcOutputLevel1
-		public RuleCall getOutput_level_1GSSTestProcOutputLevel1ParserRuleCall_14_2_0() { return cOutput_level_1GSSTestProcOutputLevel1ParserRuleCall_14_2_0; }
-		
-		//output_level_0+=GSSTestProcOutputLevel0
-		public Assignment getOutput_level_0Assignment_14_3() { return cOutput_level_0Assignment_14_3; }
-		
-		//GSSTestProcOutputLevel0
-		public RuleCall getOutput_level_0GSSTestProcOutputLevel0ParserRuleCall_14_3_0() { return cOutput_level_0GSSTestProcOutputLevel0ParserRuleCall_14_3_0; }
+		//GSSTestProcOutput
+		public RuleCall getOutputGSSTestProcOutputParserRuleCall_14_0() { return cOutputGSSTestProcOutputParserRuleCall_14_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
@@ -740,6 +678,33 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//';'
 		public Keyword getSemicolonKeyword_8() { return cSemicolonKeyword_8; }
+	}
+	public class GSSTestProcInputElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcInput");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cGSSTestProcInputLevel3ParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGSSTestProcInputLevel2ParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cGSSTestProcInputLevel1ParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cGSSTestProcInputLevel0ParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		
+		//GSSTestProcInput:
+		//	GSSTestProcInputLevel3 | GSSTestProcInputLevel2 | GSSTestProcInputLevel1 | GSSTestProcInputLevel0;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//GSSTestProcInputLevel3 | GSSTestProcInputLevel2 | GSSTestProcInputLevel1 | GSSTestProcInputLevel0
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//GSSTestProcInputLevel3
+		public RuleCall getGSSTestProcInputLevel3ParserRuleCall_0() { return cGSSTestProcInputLevel3ParserRuleCall_0; }
+		
+		//GSSTestProcInputLevel2
+		public RuleCall getGSSTestProcInputLevel2ParserRuleCall_1() { return cGSSTestProcInputLevel2ParserRuleCall_1; }
+		
+		//GSSTestProcInputLevel1
+		public RuleCall getGSSTestProcInputLevel1ParserRuleCall_2() { return cGSSTestProcInputLevel1ParserRuleCall_2; }
+		
+		//GSSTestProcInputLevel0
+		public RuleCall getGSSTestProcInputLevel0ParserRuleCall_3() { return cGSSTestProcInputLevel0ParserRuleCall_3; }
 	}
 	public class GSSTestProcInputLevel3Elements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcInputLevel3");
@@ -1776,6 +1741,33 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//';'
 		public Keyword getSemicolonKeyword_24() { return cSemicolonKeyword_24; }
+	}
+	public class GSSTestProcOutputElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcOutput");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cGSSTestProcOutputLevel3ParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGSSTestProcOutputLevel2ParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cGSSTestProcOutputLevel1ParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cGSSTestProcOutputLevel0ParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		
+		//GSSTestProcOutput:
+		//	GSSTestProcOutputLevel3 | GSSTestProcOutputLevel2 | GSSTestProcOutputLevel1 | GSSTestProcOutputLevel0;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//GSSTestProcOutputLevel3 | GSSTestProcOutputLevel2 | GSSTestProcOutputLevel1 | GSSTestProcOutputLevel0
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//GSSTestProcOutputLevel3
+		public RuleCall getGSSTestProcOutputLevel3ParserRuleCall_0() { return cGSSTestProcOutputLevel3ParserRuleCall_0; }
+		
+		//GSSTestProcOutputLevel2
+		public RuleCall getGSSTestProcOutputLevel2ParserRuleCall_1() { return cGSSTestProcOutputLevel2ParserRuleCall_1; }
+		
+		//GSSTestProcOutputLevel1
+		public RuleCall getGSSTestProcOutputLevel1ParserRuleCall_2() { return cGSSTestProcOutputLevel1ParserRuleCall_2; }
+		
+		//GSSTestProcOutputLevel0
+		public RuleCall getGSSTestProcOutputLevel0ParserRuleCall_3() { return cGSSTestProcOutputLevel0ParserRuleCall_3; }
 	}
 	public class GSSTestProcOutputLevel3Elements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcOutputLevel3");
@@ -3693,12 +3685,14 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSTestProcOutputsElements pGSSTestProcOutputs;
 	private final GSSTestProcSpecialPacketsElements pGSSTestProcSpecialPackets;
 	private final GSSTestProcConcurrentStepsElements pGSSTestProcConcurrentSteps;
+	private final GSSTestProcInputElements pGSSTestProcInput;
 	private final GSSTestProcInputLevel3Elements pGSSTestProcInputLevel3;
 	private final GSSTestProcInputLevel2Elements pGSSTestProcInputLevel2;
 	private final GSSTestProcInputLevel1Elements pGSSTestProcInputLevel1;
 	private final GSSTestProcInputLevel0Elements pGSSTestProcInputLevel0;
 	private final GSSTestProcUnitElements eGSSTestProcUnit;
 	private final GSSTestProcCheckmodeElements eGSSTestProcCheckmode;
+	private final GSSTestProcOutputElements pGSSTestProcOutput;
 	private final GSSTestProcOutputLevel3Elements pGSSTestProcOutputLevel3;
 	private final GSSTestProcOutputLevel2Elements pGSSTestProcOutputLevel2;
 	private final GSSTestProcOutputLevel1Elements pGSSTestProcOutputLevel1;
@@ -3739,12 +3733,14 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGSSTestProcOutputs = new GSSTestProcOutputsElements();
 		this.pGSSTestProcSpecialPackets = new GSSTestProcSpecialPacketsElements();
 		this.pGSSTestProcConcurrentSteps = new GSSTestProcConcurrentStepsElements();
+		this.pGSSTestProcInput = new GSSTestProcInputElements();
 		this.pGSSTestProcInputLevel3 = new GSSTestProcInputLevel3Elements();
 		this.pGSSTestProcInputLevel2 = new GSSTestProcInputLevel2Elements();
 		this.pGSSTestProcInputLevel1 = new GSSTestProcInputLevel1Elements();
 		this.pGSSTestProcInputLevel0 = new GSSTestProcInputLevel0Elements();
 		this.eGSSTestProcUnit = new GSSTestProcUnitElements();
 		this.eGSSTestProcCheckmode = new GSSTestProcCheckmodeElements();
+		this.pGSSTestProcOutput = new GSSTestProcOutputElements();
 		this.pGSSTestProcOutputLevel3 = new GSSTestProcOutputLevel3Elements();
 		this.pGSSTestProcOutputLevel2 = new GSSTestProcOutputLevel2Elements();
 		this.pGSSTestProcOutputLevel1 = new GSSTestProcOutputLevel1Elements();
@@ -3862,8 +3858,8 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSTestProcInputs:
 	//	{GSSTestProcInputs}
-	//	'GSSTestProcInputs' '{' (input_level_3+=GSSTestProcInputLevel3 | input_level_2+=GSSTestProcInputLevel2 |
-	//	input_level_1+=GSSTestProcInputLevel1 | input_level_0+=GSSTestProcInputLevel0)+
+	//	'GSSTestProcInputs' '{'
+	//	input+=GSSTestProcInput+
 	//	'}' ';';
 	public GSSTestProcInputsElements getGSSTestProcInputsAccess() {
 		return pGSSTestProcInputs;
@@ -3877,9 +3873,8 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSTestProcOutputs' '{'
 	//	'checkmode' ':=' checkmode=GSSTestProcCheckmode ';'
 	//	'valid_time_interval_value' ':=' valid_time_interval_value=INTEGER ';'
-	//	'valid_time_interval_unit' ':=' valid_time_interval_unit=GSSTestProcUnit ';' (output_level_3+=GSSTestProcOutputLevel3
-	//	| output_level_2+=GSSTestProcOutputLevel2 | output_level_1+=GSSTestProcOutputLevel1 |
-	//	output_level_0+=GSSTestProcOutputLevel0)+
+	//	'valid_time_interval_unit' ':=' valid_time_interval_unit=GSSTestProcUnit ';'
+	//	output+=GSSTestProcOutput+
 	//	'}' ';';
 	public GSSTestProcOutputsElements getGSSTestProcOutputsAccess() {
 		return pGSSTestProcOutputs;
@@ -3913,6 +3908,16 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getGSSTestProcConcurrentStepsRule() {
 		return getGSSTestProcConcurrentStepsAccess().getRule();
+	}
+	
+	//GSSTestProcInput:
+	//	GSSTestProcInputLevel3 | GSSTestProcInputLevel2 | GSSTestProcInputLevel1 | GSSTestProcInputLevel0;
+	public GSSTestProcInputElements getGSSTestProcInputAccess() {
+		return pGSSTestProcInput;
+	}
+	
+	public ParserRule getGSSTestProcInputRule() {
+		return getGSSTestProcInputAccess().getRule();
 	}
 	
 	//GSSTestProcInputLevel3:
@@ -4013,6 +4018,16 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public EnumRule getGSSTestProcCheckmodeRule() {
 		return getGSSTestProcCheckmodeAccess().getRule();
+	}
+	
+	//GSSTestProcOutput:
+	//	GSSTestProcOutputLevel3 | GSSTestProcOutputLevel2 | GSSTestProcOutputLevel1 | GSSTestProcOutputLevel0;
+	public GSSTestProcOutputElements getGSSTestProcOutputAccess() {
+		return pGSSTestProcOutput;
+	}
+	
+	public ParserRule getGSSTestProcOutputRule() {
+		return getGSSTestProcOutputAccess().getRule();
 	}
 	
 	//GSSTestProcOutputLevel3:

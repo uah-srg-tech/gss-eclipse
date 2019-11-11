@@ -52,10 +52,7 @@ enum GSSTestProcMode returns GSSTestProcMode:
 GSSTestProcInputs returns GSSTestProcInputs:
 	{GSSTestProcInputs}
 	'GSSTestProcInputs' '{'
-		((input_level_3+=GSSTestProcInputLevel3) |
-		 (input_level_2+=GSSTestProcInputLevel2) |
-		 (input_level_1+=GSSTestProcInputLevel1) |
-		 (input_level_0+=GSSTestProcInputLevel0))+
+		(input+=GSSTestProcInput)+
 	'}' ';'
 ;
 
@@ -64,10 +61,7 @@ GSSTestProcOutputs returns GSSTestProcOutputs:
 		'checkmode' ':=' checkmode=GSSTestProcCheckmode ';'
 		'valid_time_interval_value' ':=' valid_time_interval_value=INTEGER ';'
 		'valid_time_interval_unit' ':=' valid_time_interval_unit=GSSTestProcUnit ';'
-		((output_level_3+=GSSTestProcOutputLevel3) |
-		 (output_level_2+=GSSTestProcOutputLevel2) |
-		 (output_level_1+=GSSTestProcOutputLevel1) |
-		 (output_level_0+=GSSTestProcOutputLevel0))+
+		(output+=GSSTestProcOutput)+
 	'}' ';'
 ;
 
@@ -87,6 +81,9 @@ GSSTestProcConcurrentSteps returns GSSTestProcConcurrentSteps:
 		(concurrent_step+=GSSTestProcConcurrentStep)+ 
 	'}' ';'
 ;
+
+GSSTestProcInput returns GSSTestProcInput:
+	GSSTestProcInputLevel3 | GSSTestProcInputLevel2 | GSSTestProcInputLevel1 | GSSTestProcInputLevel0;
 
 GSSTestProcInputLevel3 returns GSSTestProcInputLevel3:
 	'GSSTestProcInputLevel3' '{'
@@ -152,6 +149,9 @@ enum GSSTestProcCheckmode returns GSSTestProcCheckmode:
 	all = 'all' | allunsorted = 'allunsorted' | any = 'any'
 ;
 
+GSSTestProcOutput returns GSSTestProcOutput:
+	GSSTestProcOutputLevel3 | GSSTestProcOutputLevel2 | GSSTestProcOutputLevel1 | GSSTestProcOutputLevel0;
+	
 GSSTestProcOutputLevel3 returns GSSTestProcOutputLevel3:
 	'GSSTestProcOutputLevel3' '{'
 		'name' ':=' name=ID ';'

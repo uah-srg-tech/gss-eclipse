@@ -699,92 +699,30 @@ ruleGSSTestProcInputs returns [EObject current=null]
 		}
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSTestProcInputsAccess().getInput_level_3GSSTestProcInputLevel3ParserRuleCall_3_0_0());
+				{
+					newCompositeNode(grammarAccess.getGSSTestProcInputsAccess().getInputGSSTestProcInputParserRuleCall_3_0());
+				}
+				lv_input_3_0=ruleGSSTestProcInput
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTestProcInputsRule());
 					}
-					lv_input_level_3_3_0=ruleGSSTestProcInputLevel3
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSTestProcInputsRule());
-						}
-						add(
-							$current,
-							"input_level_3",
-							lv_input_level_3_3_0,
-							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcInputLevel3");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSTestProcInputsAccess().getInput_level_2GSSTestProcInputLevel2ParserRuleCall_3_1_0());
-					}
-					lv_input_level_2_4_0=ruleGSSTestProcInputLevel2
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSTestProcInputsRule());
-						}
-						add(
-							$current,
-							"input_level_2",
-							lv_input_level_2_4_0,
-							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcInputLevel2");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSTestProcInputsAccess().getInput_level_1GSSTestProcInputLevel1ParserRuleCall_3_2_0());
-					}
-					lv_input_level_1_5_0=ruleGSSTestProcInputLevel1
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSTestProcInputsRule());
-						}
-						add(
-							$current,
-							"input_level_1",
-							lv_input_level_1_5_0,
-							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcInputLevel1");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSTestProcInputsAccess().getInput_level_0GSSTestProcInputLevel0ParserRuleCall_3_3_0());
-					}
-					lv_input_level_0_6_0=ruleGSSTestProcInputLevel0
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSTestProcInputsRule());
-						}
-						add(
-							$current,
-							"input_level_0",
-							lv_input_level_0_6_0,
-							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcInputLevel0");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					add(
+						$current,
+						"input",
+						lv_input_3_0,
+						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcInput");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)+
-		otherlv_7='}'
+		otherlv_4='}'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSTestProcInputsAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_4, grammarAccess.getGSSTestProcInputsAccess().getRightCurlyBracketKeyword_4());
 		}
-		otherlv_8=';'
+		otherlv_5=';'
 		{
-			newLeafNode(otherlv_8, grammarAccess.getGSSTestProcInputsAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getGSSTestProcInputsAccess().getSemicolonKeyword_5());
 		}
 	)
 ;
@@ -908,92 +846,30 @@ ruleGSSTestProcOutputs returns [EObject current=null]
 		}
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_3GSSTestProcOutputLevel3ParserRuleCall_14_0_0());
+				{
+					newCompositeNode(grammarAccess.getGSSTestProcOutputsAccess().getOutputGSSTestProcOutputParserRuleCall_14_0());
+				}
+				lv_output_14_0=ruleGSSTestProcOutput
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTestProcOutputsRule());
 					}
-					lv_output_level_3_14_0=ruleGSSTestProcOutputLevel3
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSTestProcOutputsRule());
-						}
-						add(
-							$current,
-							"output_level_3",
-							lv_output_level_3_14_0,
-							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcOutputLevel3");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_2GSSTestProcOutputLevel2ParserRuleCall_14_1_0());
-					}
-					lv_output_level_2_15_0=ruleGSSTestProcOutputLevel2
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSTestProcOutputsRule());
-						}
-						add(
-							$current,
-							"output_level_2",
-							lv_output_level_2_15_0,
-							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcOutputLevel2");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_1GSSTestProcOutputLevel1ParserRuleCall_14_2_0());
-					}
-					lv_output_level_1_16_0=ruleGSSTestProcOutputLevel1
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSTestProcOutputsRule());
-						}
-						add(
-							$current,
-							"output_level_1",
-							lv_output_level_1_16_0,
-							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcOutputLevel1");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_0GSSTestProcOutputLevel0ParserRuleCall_14_3_0());
-					}
-					lv_output_level_0_17_0=ruleGSSTestProcOutputLevel0
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSTestProcOutputsRule());
-						}
-						add(
-							$current,
-							"output_level_0",
-							lv_output_level_0_17_0,
-							"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcOutputLevel0");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					add(
+						$current,
+						"output",
+						lv_output_14_0,
+						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcOutput");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)+
-		otherlv_18='}'
+		otherlv_15='}'
 		{
-			newLeafNode(otherlv_18, grammarAccess.getGSSTestProcOutputsAccess().getRightCurlyBracketKeyword_15());
+			newLeafNode(otherlv_15, grammarAccess.getGSSTestProcOutputsAccess().getRightCurlyBracketKeyword_15());
 		}
-		otherlv_19=';'
+		otherlv_16=';'
 		{
-			newLeafNode(otherlv_19, grammarAccess.getGSSTestProcOutputsAccess().getSemicolonKeyword_16());
+			newLeafNode(otherlv_16, grammarAccess.getGSSTestProcOutputsAccess().getSemicolonKeyword_16());
 		}
 	)
 ;
@@ -1205,6 +1081,72 @@ ruleGSSTestProcConcurrentSteps returns [EObject current=null]
 		otherlv_8=';'
 		{
 			newLeafNode(otherlv_8, grammarAccess.getGSSTestProcConcurrentStepsAccess().getSemicolonKeyword_8());
+		}
+	)
+;
+
+// Entry rule entryRuleGSSTestProcInput
+entryRuleGSSTestProcInput returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSTestProcInputRule()); }
+	iv_ruleGSSTestProcInput=ruleGSSTestProcInput
+	{ $current=$iv_ruleGSSTestProcInput.current; }
+	EOF;
+
+// Rule GSSTestProcInput
+ruleGSSTestProcInput returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSTestProcInputAccess().getGSSTestProcInputLevel3ParserRuleCall_0());
+		}
+		this_GSSTestProcInputLevel3_0=ruleGSSTestProcInputLevel3
+		{
+			$current = $this_GSSTestProcInputLevel3_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSTestProcInputAccess().getGSSTestProcInputLevel2ParserRuleCall_1());
+		}
+		this_GSSTestProcInputLevel2_1=ruleGSSTestProcInputLevel2
+		{
+			$current = $this_GSSTestProcInputLevel2_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSTestProcInputAccess().getGSSTestProcInputLevel1ParserRuleCall_2());
+		}
+		this_GSSTestProcInputLevel1_2=ruleGSSTestProcInputLevel1
+		{
+			$current = $this_GSSTestProcInputLevel1_2.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSTestProcInputAccess().getGSSTestProcInputLevel0ParserRuleCall_3());
+		}
+		this_GSSTestProcInputLevel0_3=ruleGSSTestProcInputLevel0
+		{
+			$current = $this_GSSTestProcInputLevel0_3.current;
+			afterParserOrEnumRuleCall();
 		}
 	)
 ;
@@ -2489,6 +2431,72 @@ ruleGSSTestProcInputLevel0 returns [EObject current=null]
 		otherlv_27=';'
 		{
 			newLeafNode(otherlv_27, grammarAccess.getGSSTestProcInputLevel0Access().getSemicolonKeyword_24());
+		}
+	)
+;
+
+// Entry rule entryRuleGSSTestProcOutput
+entryRuleGSSTestProcOutput returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSTestProcOutputRule()); }
+	iv_ruleGSSTestProcOutput=ruleGSSTestProcOutput
+	{ $current=$iv_ruleGSSTestProcOutput.current; }
+	EOF;
+
+// Rule GSSTestProcOutput
+ruleGSSTestProcOutput returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSTestProcOutputAccess().getGSSTestProcOutputLevel3ParserRuleCall_0());
+		}
+		this_GSSTestProcOutputLevel3_0=ruleGSSTestProcOutputLevel3
+		{
+			$current = $this_GSSTestProcOutputLevel3_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSTestProcOutputAccess().getGSSTestProcOutputLevel2ParserRuleCall_1());
+		}
+		this_GSSTestProcOutputLevel2_1=ruleGSSTestProcOutputLevel2
+		{
+			$current = $this_GSSTestProcOutputLevel2_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSTestProcOutputAccess().getGSSTestProcOutputLevel1ParserRuleCall_2());
+		}
+		this_GSSTestProcOutputLevel1_2=ruleGSSTestProcOutputLevel1
+		{
+			$current = $this_GSSTestProcOutputLevel1_2.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSTestProcOutputAccess().getGSSTestProcOutputLevel0ParserRuleCall_3());
+		}
+		this_GSSTestProcOutputLevel0_3=ruleGSSTestProcOutputLevel0
+		{
+			$current = $this_GSSTestProcOutputLevel0_3.current;
+			afterParserOrEnumRuleCall();
 		}
 	)
 ;

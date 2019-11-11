@@ -257,6 +257,31 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleGSSTestProcInput
+entryRuleGSSTestProcInput
+:
+{ before(grammarAccess.getGSSTestProcInputRule()); }
+	 ruleGSSTestProcInput
+{ after(grammarAccess.getGSSTestProcInputRule()); } 
+	 EOF 
+;
+
+// Rule GSSTestProcInput
+ruleGSSTestProcInput 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getGSSTestProcInputAccess().getAlternatives()); }
+		(rule__GSSTestProcInput__Alternatives)
+		{ after(grammarAccess.getGSSTestProcInputAccess().getAlternatives()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Entry rule entryRuleGSSTestProcInputLevel3
 entryRuleGSSTestProcInputLevel3
 :
@@ -351,6 +376,31 @@ ruleGSSTestProcInputLevel0
 		{ before(grammarAccess.getGSSTestProcInputLevel0Access().getGroup()); }
 		(rule__GSSTestProcInputLevel0__Group__0)
 		{ after(grammarAccess.getGSSTestProcInputLevel0Access().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleGSSTestProcOutput
+entryRuleGSSTestProcOutput
+:
+{ before(grammarAccess.getGSSTestProcOutputRule()); }
+	 ruleGSSTestProcOutput
+{ after(grammarAccess.getGSSTestProcOutputRule()); } 
+	 EOF 
+;
+
+// Rule GSSTestProcOutput
+ruleGSSTestProcOutput 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getGSSTestProcOutputAccess().getAlternatives()); }
+		(rule__GSSTestProcOutput__Alternatives)
+		{ after(grammarAccess.getGSSTestProcOutputAccess().getAlternatives()); }
 	)
 ;
 finally {
@@ -821,72 +871,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSTestProcInputs__Alternatives_3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSTestProcInputsAccess().getInput_level_3Assignment_3_0()); }
-		(rule__GSSTestProcInputs__Input_level_3Assignment_3_0)
-		{ after(grammarAccess.getGSSTestProcInputsAccess().getInput_level_3Assignment_3_0()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSTestProcInputsAccess().getInput_level_2Assignment_3_1()); }
-		(rule__GSSTestProcInputs__Input_level_2Assignment_3_1)
-		{ after(grammarAccess.getGSSTestProcInputsAccess().getInput_level_2Assignment_3_1()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSTestProcInputsAccess().getInput_level_1Assignment_3_2()); }
-		(rule__GSSTestProcInputs__Input_level_1Assignment_3_2)
-		{ after(grammarAccess.getGSSTestProcInputsAccess().getInput_level_1Assignment_3_2()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSTestProcInputsAccess().getInput_level_0Assignment_3_3()); }
-		(rule__GSSTestProcInputs__Input_level_0Assignment_3_3)
-		{ after(grammarAccess.getGSSTestProcInputsAccess().getInput_level_0Assignment_3_3()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSTestProcOutputs__Alternatives_14
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_3Assignment_14_0()); }
-		(rule__GSSTestProcOutputs__Output_level_3Assignment_14_0)
-		{ after(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_3Assignment_14_0()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_2Assignment_14_1()); }
-		(rule__GSSTestProcOutputs__Output_level_2Assignment_14_1)
-		{ after(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_2Assignment_14_1()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_1Assignment_14_2()); }
-		(rule__GSSTestProcOutputs__Output_level_1Assignment_14_2)
-		{ after(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_1Assignment_14_2()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_0Assignment_14_3()); }
-		(rule__GSSTestProcOutputs__Output_level_0Assignment_14_3)
-		{ after(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_0Assignment_14_3()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 rule__GSSTestProcSpecialPackets__Alternatives_3
 	@init {
 		int stackSize = keepStackSize();
@@ -914,6 +898,72 @@ rule__GSSTestProcSpecialPackets__Alternatives_3
 		{ before(grammarAccess.getGSSTestProcSpecialPacketsAccess().getDisable_printAssignment_3_3()); }
 		(rule__GSSTestProcSpecialPackets__Disable_printAssignment_3_3)
 		{ after(grammarAccess.getGSSTestProcSpecialPacketsAccess().getDisable_printAssignment_3_3()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSTestProcInput__Alternatives
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getGSSTestProcInputAccess().getGSSTestProcInputLevel3ParserRuleCall_0()); }
+		ruleGSSTestProcInputLevel3
+		{ after(grammarAccess.getGSSTestProcInputAccess().getGSSTestProcInputLevel3ParserRuleCall_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSTestProcInputAccess().getGSSTestProcInputLevel2ParserRuleCall_1()); }
+		ruleGSSTestProcInputLevel2
+		{ after(grammarAccess.getGSSTestProcInputAccess().getGSSTestProcInputLevel2ParserRuleCall_1()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSTestProcInputAccess().getGSSTestProcInputLevel1ParserRuleCall_2()); }
+		ruleGSSTestProcInputLevel1
+		{ after(grammarAccess.getGSSTestProcInputAccess().getGSSTestProcInputLevel1ParserRuleCall_2()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSTestProcInputAccess().getGSSTestProcInputLevel0ParserRuleCall_3()); }
+		ruleGSSTestProcInputLevel0
+		{ after(grammarAccess.getGSSTestProcInputAccess().getGSSTestProcInputLevel0ParserRuleCall_3()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSTestProcOutput__Alternatives
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getGSSTestProcOutputAccess().getGSSTestProcOutputLevel3ParserRuleCall_0()); }
+		ruleGSSTestProcOutputLevel3
+		{ after(grammarAccess.getGSSTestProcOutputAccess().getGSSTestProcOutputLevel3ParserRuleCall_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSTestProcOutputAccess().getGSSTestProcOutputLevel2ParserRuleCall_1()); }
+		ruleGSSTestProcOutputLevel2
+		{ after(grammarAccess.getGSSTestProcOutputAccess().getGSSTestProcOutputLevel2ParserRuleCall_1()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSTestProcOutputAccess().getGSSTestProcOutputLevel1ParserRuleCall_2()); }
+		ruleGSSTestProcOutputLevel1
+		{ after(grammarAccess.getGSSTestProcOutputAccess().getGSSTestProcOutputLevel1ParserRuleCall_2()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSTestProcOutputAccess().getGSSTestProcOutputLevel0ParserRuleCall_3()); }
+		ruleGSSTestProcOutputLevel0
+		{ after(grammarAccess.getGSSTestProcOutputAccess().getGSSTestProcOutputLevel0ParserRuleCall_3()); }
 	)
 ;
 finally {
@@ -2671,14 +2721,14 @@ rule__GSSTestProcInputs__Group__3__Impl
 :
 (
 	(
-		{ before(grammarAccess.getGSSTestProcInputsAccess().getAlternatives_3()); }
-		(rule__GSSTestProcInputs__Alternatives_3)
-		{ after(grammarAccess.getGSSTestProcInputsAccess().getAlternatives_3()); }
+		{ before(grammarAccess.getGSSTestProcInputsAccess().getInputAssignment_3()); }
+		(rule__GSSTestProcInputs__InputAssignment_3)
+		{ after(grammarAccess.getGSSTestProcInputsAccess().getInputAssignment_3()); }
 	)
 	(
-		{ before(grammarAccess.getGSSTestProcInputsAccess().getAlternatives_3()); }
-		(rule__GSSTestProcInputs__Alternatives_3)*
-		{ after(grammarAccess.getGSSTestProcInputsAccess().getAlternatives_3()); }
+		{ before(grammarAccess.getGSSTestProcInputsAccess().getInputAssignment_3()); }
+		(rule__GSSTestProcInputs__InputAssignment_3)*
+		{ after(grammarAccess.getGSSTestProcInputsAccess().getInputAssignment_3()); }
 	)
 )
 ;
@@ -3137,14 +3187,14 @@ rule__GSSTestProcOutputs__Group__14__Impl
 :
 (
 	(
-		{ before(grammarAccess.getGSSTestProcOutputsAccess().getAlternatives_14()); }
-		(rule__GSSTestProcOutputs__Alternatives_14)
-		{ after(grammarAccess.getGSSTestProcOutputsAccess().getAlternatives_14()); }
+		{ before(grammarAccess.getGSSTestProcOutputsAccess().getOutputAssignment_14()); }
+		(rule__GSSTestProcOutputs__OutputAssignment_14)
+		{ after(grammarAccess.getGSSTestProcOutputsAccess().getOutputAssignment_14()); }
 	)
 	(
-		{ before(grammarAccess.getGSSTestProcOutputsAccess().getAlternatives_14()); }
-		(rule__GSSTestProcOutputs__Alternatives_14)*
-		{ after(grammarAccess.getGSSTestProcOutputsAccess().getAlternatives_14()); }
+		{ before(grammarAccess.getGSSTestProcOutputsAccess().getOutputAssignment_14()); }
+		(rule__GSSTestProcOutputs__OutputAssignment_14)*
+		{ after(grammarAccess.getGSSTestProcOutputsAccess().getOutputAssignment_14()); }
 	)
 )
 ;
@@ -16256,60 +16306,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSTestProcInputs__Input_level_3Assignment_3_0
+rule__GSSTestProcInputs__InputAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTestProcInputsAccess().getInput_level_3GSSTestProcInputLevel3ParserRuleCall_3_0_0()); }
-		ruleGSSTestProcInputLevel3
-		{ after(grammarAccess.getGSSTestProcInputsAccess().getInput_level_3GSSTestProcInputLevel3ParserRuleCall_3_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSTestProcInputs__Input_level_2Assignment_3_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSTestProcInputsAccess().getInput_level_2GSSTestProcInputLevel2ParserRuleCall_3_1_0()); }
-		ruleGSSTestProcInputLevel2
-		{ after(grammarAccess.getGSSTestProcInputsAccess().getInput_level_2GSSTestProcInputLevel2ParserRuleCall_3_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSTestProcInputs__Input_level_1Assignment_3_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSTestProcInputsAccess().getInput_level_1GSSTestProcInputLevel1ParserRuleCall_3_2_0()); }
-		ruleGSSTestProcInputLevel1
-		{ after(grammarAccess.getGSSTestProcInputsAccess().getInput_level_1GSSTestProcInputLevel1ParserRuleCall_3_2_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSTestProcInputs__Input_level_0Assignment_3_3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSTestProcInputsAccess().getInput_level_0GSSTestProcInputLevel0ParserRuleCall_3_3_0()); }
-		ruleGSSTestProcInputLevel0
-		{ after(grammarAccess.getGSSTestProcInputsAccess().getInput_level_0GSSTestProcInputLevel0ParserRuleCall_3_3_0()); }
+		{ before(grammarAccess.getGSSTestProcInputsAccess().getInputGSSTestProcInputParserRuleCall_3_0()); }
+		ruleGSSTestProcInput
+		{ after(grammarAccess.getGSSTestProcInputsAccess().getInputGSSTestProcInputParserRuleCall_3_0()); }
 	)
 ;
 finally {
@@ -16361,60 +16366,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSTestProcOutputs__Output_level_3Assignment_14_0
+rule__GSSTestProcOutputs__OutputAssignment_14
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_3GSSTestProcOutputLevel3ParserRuleCall_14_0_0()); }
-		ruleGSSTestProcOutputLevel3
-		{ after(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_3GSSTestProcOutputLevel3ParserRuleCall_14_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSTestProcOutputs__Output_level_2Assignment_14_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_2GSSTestProcOutputLevel2ParserRuleCall_14_1_0()); }
-		ruleGSSTestProcOutputLevel2
-		{ after(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_2GSSTestProcOutputLevel2ParserRuleCall_14_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSTestProcOutputs__Output_level_1Assignment_14_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_1GSSTestProcOutputLevel1ParserRuleCall_14_2_0()); }
-		ruleGSSTestProcOutputLevel1
-		{ after(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_1GSSTestProcOutputLevel1ParserRuleCall_14_2_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSTestProcOutputs__Output_level_0Assignment_14_3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_0GSSTestProcOutputLevel0ParserRuleCall_14_3_0()); }
-		ruleGSSTestProcOutputLevel0
-		{ after(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_0GSSTestProcOutputLevel0ParserRuleCall_14_3_0()); }
+		{ before(grammarAccess.getGSSTestProcOutputsAccess().getOutputGSSTestProcOutputParserRuleCall_14_0()); }
+		ruleGSSTestProcOutput
+		{ after(grammarAccess.getGSSTestProcOutputsAccess().getOutputGSSTestProcOutputParserRuleCall_14_0()); }
 	)
 ;
 finally {

@@ -222,6 +222,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     GSSTestProcInput returns GSSTestProcInputLevel0
 	 *     GSSTestProcInputLevel0 returns GSSTestProcInputLevel0
 	 *
 	 * Constraint:
@@ -241,6 +242,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     GSSTestProcInput returns GSSTestProcInputLevel1
 	 *     GSSTestProcInputLevel1 returns GSSTestProcInputLevel1
 	 *
 	 * Constraint:
@@ -262,6 +264,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     GSSTestProcInput returns GSSTestProcInputLevel2
 	 *     GSSTestProcInputLevel2 returns GSSTestProcInputLevel2
 	 *
 	 * Constraint:
@@ -285,6 +288,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     GSSTestProcInput returns GSSTestProcInputLevel3
 	 *     GSSTestProcInputLevel3 returns GSSTestProcInputLevel3
 	 *
 	 * Constraint:
@@ -313,12 +317,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     GSSTestProcInputs returns GSSTestProcInputs
 	 *
 	 * Constraint:
-	 *     (
-	 *         input_level_3+=GSSTestProcInputLevel3 | 
-	 *         input_level_2+=GSSTestProcInputLevel2 | 
-	 *         input_level_1+=GSSTestProcInputLevel1 | 
-	 *         input_level_0+=GSSTestProcInputLevel0
-	 *     )+
+	 *     input+=GSSTestProcInput+
 	 */
 	protected void sequence_GSSTestProcInputs(ISerializationContext context, GSSTestProcInputs semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -396,6 +395,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     GSSTestProcOutput returns GSSTestProcOutputLevel0
 	 *     GSSTestProcOutputLevel0 returns GSSTestProcOutputLevel0
 	 *
 	 * Constraint:
@@ -415,6 +415,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     GSSTestProcOutput returns GSSTestProcOutputLevel1
 	 *     GSSTestProcOutputLevel1 returns GSSTestProcOutputLevel1
 	 *
 	 * Constraint:
@@ -437,6 +438,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     GSSTestProcOutput returns GSSTestProcOutputLevel2
 	 *     GSSTestProcOutputLevel2 returns GSSTestProcOutputLevel2
 	 *
 	 * Constraint:
@@ -462,6 +464,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     GSSTestProcOutput returns GSSTestProcOutputLevel3
 	 *     GSSTestProcOutputLevel3 returns GSSTestProcOutputLevel3
 	 *
 	 * Constraint:
@@ -493,17 +496,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     GSSTestProcOutputs returns GSSTestProcOutputs
 	 *
 	 * Constraint:
-	 *     (
-	 *         checkmode=GSSTestProcCheckmode 
-	 *         valid_time_interval_value=INTEGER 
-	 *         valid_time_interval_unit=GSSTestProcUnit 
-	 *         (
-	 *             output_level_3+=GSSTestProcOutputLevel3 | 
-	 *             output_level_2+=GSSTestProcOutputLevel2 | 
-	 *             output_level_1+=GSSTestProcOutputLevel1 | 
-	 *             output_level_0+=GSSTestProcOutputLevel0
-	 *         )+
-	 *     )
+	 *     (checkmode=GSSTestProcCheckmode valid_time_interval_value=INTEGER valid_time_interval_unit=GSSTestProcUnit output+=GSSTestProcOutput+)
 	 */
 	protected void sequence_GSSTestProcOutputs(ISerializationContext context, GSSTestProcOutputs semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

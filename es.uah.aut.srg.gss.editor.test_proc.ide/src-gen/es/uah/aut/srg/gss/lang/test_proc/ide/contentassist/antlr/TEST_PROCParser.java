@@ -42,9 +42,9 @@ public class TEST_PROCParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getGSSTestProcInputsAccess().getAlternatives_3(), "rule__GSSTestProcInputs__Alternatives_3");
-					put(grammarAccess.getGSSTestProcOutputsAccess().getAlternatives_14(), "rule__GSSTestProcOutputs__Alternatives_14");
 					put(grammarAccess.getGSSTestProcSpecialPacketsAccess().getAlternatives_3(), "rule__GSSTestProcSpecialPackets__Alternatives_3");
+					put(grammarAccess.getGSSTestProcInputAccess().getAlternatives(), "rule__GSSTestProcInput__Alternatives");
+					put(grammarAccess.getGSSTestProcOutputAccess().getAlternatives(), "rule__GSSTestProcOutput__Alternatives");
 					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 					put(grammarAccess.getVersionAccess().getAlternatives_0(), "rule__Version__Alternatives_0");
 					put(grammarAccess.getVersionAccess().getAlternatives_1_1(), "rule__Version__Alternatives_1_1");
@@ -153,17 +153,11 @@ public class TEST_PROCParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSTestProcStepAccess().getOutputsAssignment_18(), "rule__GSSTestProcStep__OutputsAssignment_18");
 					put(grammarAccess.getGSSTestProcStepAccess().getSpecialPacketsAssignment_19(), "rule__GSSTestProcStep__SpecialPacketsAssignment_19");
 					put(grammarAccess.getGSSTestProcStepAccess().getConcurrent_stepsAssignment_20(), "rule__GSSTestProcStep__Concurrent_stepsAssignment_20");
-					put(grammarAccess.getGSSTestProcInputsAccess().getInput_level_3Assignment_3_0(), "rule__GSSTestProcInputs__Input_level_3Assignment_3_0");
-					put(grammarAccess.getGSSTestProcInputsAccess().getInput_level_2Assignment_3_1(), "rule__GSSTestProcInputs__Input_level_2Assignment_3_1");
-					put(grammarAccess.getGSSTestProcInputsAccess().getInput_level_1Assignment_3_2(), "rule__GSSTestProcInputs__Input_level_1Assignment_3_2");
-					put(grammarAccess.getGSSTestProcInputsAccess().getInput_level_0Assignment_3_3(), "rule__GSSTestProcInputs__Input_level_0Assignment_3_3");
+					put(grammarAccess.getGSSTestProcInputsAccess().getInputAssignment_3(), "rule__GSSTestProcInputs__InputAssignment_3");
 					put(grammarAccess.getGSSTestProcOutputsAccess().getCheckmodeAssignment_4(), "rule__GSSTestProcOutputs__CheckmodeAssignment_4");
 					put(grammarAccess.getGSSTestProcOutputsAccess().getValid_time_interval_valueAssignment_8(), "rule__GSSTestProcOutputs__Valid_time_interval_valueAssignment_8");
 					put(grammarAccess.getGSSTestProcOutputsAccess().getValid_time_interval_unitAssignment_12(), "rule__GSSTestProcOutputs__Valid_time_interval_unitAssignment_12");
-					put(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_3Assignment_14_0(), "rule__GSSTestProcOutputs__Output_level_3Assignment_14_0");
-					put(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_2Assignment_14_1(), "rule__GSSTestProcOutputs__Output_level_2Assignment_14_1");
-					put(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_1Assignment_14_2(), "rule__GSSTestProcOutputs__Output_level_1Assignment_14_2");
-					put(grammarAccess.getGSSTestProcOutputsAccess().getOutput_level_0Assignment_14_3(), "rule__GSSTestProcOutputs__Output_level_0Assignment_14_3");
+					put(grammarAccess.getGSSTestProcOutputsAccess().getOutputAssignment_14(), "rule__GSSTestProcOutputs__OutputAssignment_14");
 					put(grammarAccess.getGSSTestProcSpecialPacketsAccess().getEnableAssignment_3_0(), "rule__GSSTestProcSpecialPackets__EnableAssignment_3_0");
 					put(grammarAccess.getGSSTestProcSpecialPacketsAccess().getDisableAssignment_3_1(), "rule__GSSTestProcSpecialPackets__DisableAssignment_3_1");
 					put(grammarAccess.getGSSTestProcSpecialPacketsAccess().getEnable_printAssignment_3_2(), "rule__GSSTestProcSpecialPackets__Enable_printAssignment_3_2");

@@ -23,10 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput_level_3 <em>Input level 3</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput_level_2 <em>Input level 2</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput_level_1 <em>Input level 1</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput_level_0 <em>Input level 0</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputs#getInput <em>Input</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputs()
@@ -35,67 +32,19 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface GSSTestProcInputs extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Input level 3</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel3}.
+	 * Returns the value of the '<em><b>Input</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcInput}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Input level 3</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Input</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input level 3</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputs_Input_level_3()
-	 * @model containment="true"
+	 * @return the value of the '<em>Input</em>' containment reference list.
+	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputs_Input()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<GSSTestProcInputLevel3> getInput_level_3();
-
-	/**
-	 * Returns the value of the '<em><b>Input level 2</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel2}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input level 2</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input level 2</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputs_Input_level_2()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSTestProcInputLevel2> getInput_level_2();
-
-	/**
-	 * Returns the value of the '<em><b>Input level 1</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel1}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input level 1</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input level 1</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputs_Input_level_1()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSTestProcInputLevel1> getInput_level_1();
-
-	/**
-	 * Returns the value of the '<em><b>Input level 0</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputLevel0}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input level 0</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input level 0</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInputs_Input_level_0()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSTestProcInputLevel0> getInput_level_0();
+	EList<GSSTestProcInput> getInput();
 
 } // GSSTestProcInputs

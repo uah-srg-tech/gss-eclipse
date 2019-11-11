@@ -11,10 +11,7 @@
 package es.uah.aut.srg.gss.test_proc.impl;
 
 import es.uah.aut.srg.gss.test_proc.GSSTestProcCheckmode;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel0;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3;
+import es.uah.aut.srg.gss.test_proc.GSSTestProcOutput;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcUnit;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
@@ -46,10 +43,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcOutputsImpl#getCheckmode <em>Checkmode</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcOutputsImpl#getValid_time_interval_value <em>Valid time interval value</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcOutputsImpl#getValid_time_interval_unit <em>Valid time interval unit</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcOutputsImpl#getOutput_level_3 <em>Output level 3</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcOutputsImpl#getOutput_level_2 <em>Output level 2</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcOutputsImpl#getOutput_level_1 <em>Output level 1</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcOutputsImpl#getOutput_level_0 <em>Output level 0</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcOutputsImpl#getOutput <em>Output</em>}</li>
  * </ul>
  *
  * @generated
@@ -134,44 +128,14 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 	protected boolean valid_time_interval_unitESet;
 
 	/**
-	 * The cached value of the '{@link #getOutput_level_3() <em>Output level 3</em>}' containment reference list.
+	 * The cached value of the '{@link #getOutput() <em>Output</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOutput_level_3()
+	 * @see #getOutput()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GSSTestProcOutputLevel3> output_level_3;
-
-	/**
-	 * The cached value of the '{@link #getOutput_level_2() <em>Output level 2</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutput_level_2()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSTestProcOutputLevel2> output_level_2;
-
-	/**
-	 * The cached value of the '{@link #getOutput_level_1() <em>Output level 1</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutput_level_1()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSTestProcOutputLevel1> output_level_1;
-
-	/**
-	 * The cached value of the '{@link #getOutput_level_0() <em>Output level 0</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutput_level_0()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSTestProcOutputLevel0> output_level_0;
+	protected EList<GSSTestProcOutput> output;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -310,47 +274,11 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSTestProcOutputLevel3> getOutput_level_3() {
-		if (output_level_3 == null) {
-			output_level_3 = new EObjectContainmentEList<GSSTestProcOutputLevel3>(GSSTestProcOutputLevel3.class, this, test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_3);
+	public EList<GSSTestProcOutput> getOutput() {
+		if (output == null) {
+			output = new EObjectContainmentEList<GSSTestProcOutput>(GSSTestProcOutput.class, this, test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT);
 		}
-		return output_level_3;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<GSSTestProcOutputLevel2> getOutput_level_2() {
-		if (output_level_2 == null) {
-			output_level_2 = new EObjectContainmentEList<GSSTestProcOutputLevel2>(GSSTestProcOutputLevel2.class, this, test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_2);
-		}
-		return output_level_2;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<GSSTestProcOutputLevel1> getOutput_level_1() {
-		if (output_level_1 == null) {
-			output_level_1 = new EObjectContainmentEList<GSSTestProcOutputLevel1>(GSSTestProcOutputLevel1.class, this, test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_1);
-		}
-		return output_level_1;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<GSSTestProcOutputLevel0> getOutput_level_0() {
-		if (output_level_0 == null) {
-			output_level_0 = new EObjectContainmentEList<GSSTestProcOutputLevel0>(GSSTestProcOutputLevel0.class, this, test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_0);
-		}
-		return output_level_0;
+		return output;
 	}
 
 	/**
@@ -361,14 +289,8 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_3:
-				return ((InternalEList<?>)getOutput_level_3()).basicRemove(otherEnd, msgs);
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_2:
-				return ((InternalEList<?>)getOutput_level_2()).basicRemove(otherEnd, msgs);
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_1:
-				return ((InternalEList<?>)getOutput_level_1()).basicRemove(otherEnd, msgs);
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_0:
-				return ((InternalEList<?>)getOutput_level_0()).basicRemove(otherEnd, msgs);
+			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT:
+				return ((InternalEList<?>)getOutput()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -387,14 +309,8 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 				return getValid_time_interval_value();
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__VALID_TIME_INTERVAL_UNIT:
 				return getValid_time_interval_unit();
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_3:
-				return getOutput_level_3();
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_2:
-				return getOutput_level_2();
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_1:
-				return getOutput_level_1();
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_0:
-				return getOutput_level_0();
+			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT:
+				return getOutput();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -417,21 +333,9 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__VALID_TIME_INTERVAL_UNIT:
 				setValid_time_interval_unit((GSSTestProcUnit)newValue);
 				return;
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_3:
-				getOutput_level_3().clear();
-				getOutput_level_3().addAll((Collection<? extends GSSTestProcOutputLevel3>)newValue);
-				return;
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_2:
-				getOutput_level_2().clear();
-				getOutput_level_2().addAll((Collection<? extends GSSTestProcOutputLevel2>)newValue);
-				return;
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_1:
-				getOutput_level_1().clear();
-				getOutput_level_1().addAll((Collection<? extends GSSTestProcOutputLevel1>)newValue);
-				return;
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_0:
-				getOutput_level_0().clear();
-				getOutput_level_0().addAll((Collection<? extends GSSTestProcOutputLevel0>)newValue);
+			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT:
+				getOutput().clear();
+				getOutput().addAll((Collection<? extends GSSTestProcOutput>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -454,17 +358,8 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__VALID_TIME_INTERVAL_UNIT:
 				unsetValid_time_interval_unit();
 				return;
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_3:
-				getOutput_level_3().clear();
-				return;
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_2:
-				getOutput_level_2().clear();
-				return;
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_1:
-				getOutput_level_1().clear();
-				return;
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_0:
-				getOutput_level_0().clear();
+			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT:
+				getOutput().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -484,14 +379,8 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 				return VALID_TIME_INTERVAL_VALUE_EDEFAULT == null ? valid_time_interval_value != null : !VALID_TIME_INTERVAL_VALUE_EDEFAULT.equals(valid_time_interval_value);
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__VALID_TIME_INTERVAL_UNIT:
 				return isSetValid_time_interval_unit();
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_3:
-				return output_level_3 != null && !output_level_3.isEmpty();
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_2:
-				return output_level_2 != null && !output_level_2.isEmpty();
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_1:
-				return output_level_1 != null && !output_level_1.isEmpty();
-			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT_LEVEL_0:
-				return output_level_0 != null && !output_level_0.isEmpty();
+			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT:
+				return output != null && !output.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

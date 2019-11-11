@@ -69,10 +69,7 @@ public class TEST_PROCScopeProvider extends GSSAbstractScopeProvider {
 		if(currStep.getPrev_step_idref() != null && 
 				currStep.getPrev_step_idref().getOutputs() != null) {
 
-			items.addAll(currStep.getPrev_step_idref().getOutputs().getOutput_level_0());
-			items.addAll(currStep.getPrev_step_idref().getOutputs().getOutput_level_1());
-			items.addAll(currStep.getPrev_step_idref().getOutputs().getOutput_level_2());
-			items.addAll(currStep.getPrev_step_idref().getOutputs().getOutput_level_3());
+			items.addAll(currStep.getPrev_step_idref().getOutputs().getOutput());
 			
 			Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<GSSTestProcOutput, IEObjectDescription>(){
 		
