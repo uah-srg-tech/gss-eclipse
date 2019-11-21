@@ -84,7 +84,7 @@ public class CAMPAIGNParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSCampaignCampaignAccess().getScenarioAssignment_8(), "rule__GSSCampaignCampaign__ScenarioAssignment_8");
 					put(grammarAccess.getGSSCampaignCampaignAccess().getTestsAssignment_9(), "rule__GSSCampaignCampaign__TestsAssignment_9");
 					put(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentAssignment_4(), "rule__GSSCampaignScenario__EnvironmentAssignment_4");
-					put(grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdAssignment_8(), "rule__GSSCampaignScenario__ScenarioIdAssignment_8");
+					put(grammarAccess.getGSSCampaignScenarioAccess().getScenarioAssignment_8(), "rule__GSSCampaignScenario__ScenarioAssignment_8");
 					put(grammarAccess.getGSSCampaignTestsAccess().getTestCaseAssignment_2(), "rule__GSSCampaignTests__TestCaseAssignment_2");
 					put(grammarAccess.getGSSCampaignTestCaseAccess().getNameAssignment_4(), "rule__GSSCampaignTestCase__NameAssignment_4");
 					put(grammarAccess.getGSSCampaignTestCaseAccess().getProcedureAssignment_8(), "rule__GSSCampaignTestCase__ProcedureAssignment_8");

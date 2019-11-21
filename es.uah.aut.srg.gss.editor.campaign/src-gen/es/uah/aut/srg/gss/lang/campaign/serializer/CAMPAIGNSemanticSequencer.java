@@ -106,18 +106,18 @@ public class CAMPAIGNSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     GSSCampaignScenario returns GSSCampaignScenario
 	 *
 	 * Constraint:
-	 *     (environment=[GSSEnvironmentEnvironment|VersionedQualifiedName] scenarioId=[GSSEnvironmentScenario|VersionedQualifiedReferenceName])
+	 *     (environment=[GSSEnvironmentEnvironment|VersionedQualifiedName] scenario=[GSSEnvironmentScenario|VersionedQualifiedReferenceName])
 	 */
 	protected void sequence_GSSCampaignScenario(ISerializationContext context, GSSCampaignScenario semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__ENVIRONMENT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__ENVIRONMENT));
-			if (transientValues.isValueTransient(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__SCENARIO_ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__SCENARIO_ID));
+			if (transientValues.isValueTransient(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__SCENARIO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__SCENARIO));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentGSSEnvironmentEnvironmentVersionedQualifiedNameParserRuleCall_4_0_1(), semanticObject.getEnvironment());
-		feeder.accept(grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1(), semanticObject.getScenarioId());
+		feeder.accept(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1(), semanticObject.getScenario());
 		feeder.finish();
 	}
 	

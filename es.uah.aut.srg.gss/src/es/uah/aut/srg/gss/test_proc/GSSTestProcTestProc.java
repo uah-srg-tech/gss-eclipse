@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc#getStep <em>Step</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc#getScenarioId <em>Scenario Id</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc#getScenario <em>Scenario</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcTestProc()
@@ -49,29 +49,29 @@ public interface GSSTestProcTestProc extends GSSModelElement {
 	EList<GSSTestProcStep> getStep();
 
 	/**
-	 * Returns the value of the '<em><b>Scenario Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>Scenario</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Scenario Id</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Scenario</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scenario Id</em>' attribute.
-	 * @see #setScenarioId(String)
-	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcTestProc_ScenarioId()
+	 * @return the value of the '<em>Scenario</em>' attribute.
+	 * @see #setScenario(String)
+	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcTestProc_Scenario()
 	 * @model
 	 * @generated
 	 */
-	String getScenarioId();
+	String getScenario();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc#getScenarioId <em>Scenario Id</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc#getScenario <em>Scenario</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scenario Id</em>' attribute.
-	 * @see #getScenarioId()
+	 * @param value the new value of the '<em>Scenario</em>' attribute.
+	 * @see #getScenario()
 	 * @generated
 	 */
-	void setScenarioId(String value);
+	void setScenario(String value);
 
 } // GSSTestProcTestProc

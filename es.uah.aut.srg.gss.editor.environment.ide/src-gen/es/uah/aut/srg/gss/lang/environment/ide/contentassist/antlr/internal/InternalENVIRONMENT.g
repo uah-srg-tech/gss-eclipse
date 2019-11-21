@@ -23909,9 +23909,9 @@ rule__GSSEnvironmentScenario__NameAssignment_1
 	}
 :
 	(
-		{ before(grammarAccess.getGSSEnvironmentScenarioAccess().getNameIDTerminalRuleCall_1_0()); }
-		RULE_ID
-		{ after(grammarAccess.getGSSEnvironmentScenarioAccess().getNameIDTerminalRuleCall_1_0()); }
+		{ before(grammarAccess.getGSSEnvironmentScenarioAccess().getNameSTRINGTerminalRuleCall_1_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSEnvironmentScenarioAccess().getNameSTRINGTerminalRuleCall_1_0()); }
 	)
 ;
 finally {

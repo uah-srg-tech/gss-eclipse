@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getEnvironment <em>Environment</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenarioId <em>Scenario Id</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenario <em>Scenario</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignScenario()
@@ -60,29 +60,29 @@ public interface GSSCampaignScenario extends EObject {
 	void setEnvironment(GSSEnvironmentEnvironment value);
 
 	/**
-	 * Returns the value of the '<em><b>Scenario Id</b></em>' reference.
+	 * Returns the value of the '<em><b>Scenario</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Scenario Id</em>' reference isn't clear,
+	 * If the meaning of the '<em>Scenario</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scenario Id</em>' reference.
-	 * @see #setScenarioId(GSSEnvironmentScenario)
-	 * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignScenario_ScenarioId()
+	 * @return the value of the '<em>Scenario</em>' reference.
+	 * @see #setScenario(GSSEnvironmentScenario)
+	 * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignScenario_Scenario()
 	 * @model required="true"
 	 * @generated
 	 */
-	GSSEnvironmentScenario getScenarioId();
+	GSSEnvironmentScenario getScenario();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenarioId <em>Scenario Id</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenario <em>Scenario</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scenario Id</em>' reference.
-	 * @see #getScenarioId()
+	 * @param value the new value of the '<em>Scenario</em>' reference.
+	 * @see #getScenario()
 	 * @generated
 	 */
-	void setScenarioId(GSSEnvironmentScenario value);
+	void setScenario(GSSEnvironmentScenario value);
 
 } // GSSCampaignScenario

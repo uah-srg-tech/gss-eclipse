@@ -8962,7 +8962,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             // InternalENVIRONMENT.g:2498:1: ( rule__GSSEnvironmentScenario__Group__0__Impl rule__GSSEnvironmentScenario__Group__1 )
             // InternalENVIRONMENT.g:2499:2: rule__GSSEnvironmentScenario__Group__0__Impl rule__GSSEnvironmentScenario__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_8);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSEnvironmentScenario__Group__0__Impl();
 
             state._fsp--;
@@ -73982,24 +73982,24 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSEnvironmentScenario__NameAssignment_1"
-    // InternalENVIRONMENT.g:23906:1: rule__GSSEnvironmentScenario__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalENVIRONMENT.g:23906:1: rule__GSSEnvironmentScenario__NameAssignment_1 : ( RULE_STRING ) ;
     public final void rule__GSSEnvironmentScenario__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:23910:1: ( ( RULE_ID ) )
-            // InternalENVIRONMENT.g:23911:2: ( RULE_ID )
+            // InternalENVIRONMENT.g:23910:1: ( ( RULE_STRING ) )
+            // InternalENVIRONMENT.g:23911:2: ( RULE_STRING )
             {
-            // InternalENVIRONMENT.g:23911:2: ( RULE_ID )
-            // InternalENVIRONMENT.g:23912:3: RULE_ID
+            // InternalENVIRONMENT.g:23911:2: ( RULE_STRING )
+            // InternalENVIRONMENT.g:23912:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSEnvironmentScenarioAccess().getNameIDTerminalRuleCall_1_0()); 
+               before(grammarAccess.getGSSEnvironmentScenarioAccess().getNameSTRINGTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSEnvironmentScenarioAccess().getNameIDTerminalRuleCall_1_0()); 
+               after(grammarAccess.getGSSEnvironmentScenarioAccess().getNameSTRINGTerminalRuleCall_1_0()); 
             }
 
             }

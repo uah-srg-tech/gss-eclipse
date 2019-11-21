@@ -314,7 +314,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSTestProcTestProc_ScenarioId() {
+	public EAttribute getGSSTestProcTestProc_Scenario() {
 		return (EAttribute)gssTestProcTestProcEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1275,7 +1275,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		// Create classes and their features
 		gssTestProcTestProcEClass = createEClass(GSS_TEST_PROC_TEST_PROC);
 		createEReference(gssTestProcTestProcEClass, GSS_TEST_PROC_TEST_PROC__STEP);
-		createEAttribute(gssTestProcTestProcEClass, GSS_TEST_PROC_TEST_PROC__SCENARIO_ID);
+		createEAttribute(gssTestProcTestProcEClass, GSS_TEST_PROC_TEST_PROC__SCENARIO);
 
 		gssTestProcStepEClass = createEClass(GSS_TEST_PROC_STEP);
 		createEAttribute(gssTestProcStepEClass, GSS_TEST_PROC_STEP__ID);
@@ -1451,7 +1451,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssTestProcTestProcEClass, GSSTestProcTestProc.class, "GSSTestProcTestProc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSTestProcTestProc_Step(), this.getGSSTestProcStep(), null, "step", null, 1, 1900, GSSTestProcTestProc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSTestProcTestProc_ScenarioId(), ecorePackage.getEString(), "scenarioId", null, 0, 1, GSSTestProcTestProc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSTestProcTestProc_Scenario(), ecorePackage.getEString(), "scenario", null, 0, 1, GSSTestProcTestProc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssTestProcStepEClass, GSSTestProcStep.class, "GSSTestProcStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSTestProcStep_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSTestProcStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

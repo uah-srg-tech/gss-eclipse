@@ -871,7 +871,7 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *
 	 * Constraint:
 	 *     (
-	 *         name=ID 
+	 *         name=STRING 
 	 *         gss_options=GSSEnvironmentOptions 
 	 *         Protocols=GSSEnvironmentProtocols 
 	 *         Interfaces=GSSEnvironmentInterfaces 

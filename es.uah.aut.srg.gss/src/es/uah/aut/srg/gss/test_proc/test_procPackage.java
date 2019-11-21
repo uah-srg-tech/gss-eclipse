@@ -123,13 +123,13 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_TEST_PROC__STEP = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Scenario Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Scenario</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_TEST_PROC__SCENARIO_ID = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int GSS_TEST_PROC_TEST_PROC__SCENARIO = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Test Proc Test Proc</em>' class.
@@ -1770,15 +1770,15 @@ public interface test_procPackage extends EPackage {
 	EReference getGSSTestProcTestProc_Step();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc#getScenarioId <em>Scenario Id</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc#getScenario <em>Scenario</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Scenario Id</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc#getScenarioId()
+	 * @return the meta object for the attribute '<em>Scenario</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc#getScenario()
 	 * @see #getGSSTestProcTestProc()
 	 * @generated
 	 */
-	EAttribute getGSSTestProcTestProc_ScenarioId();
+	EAttribute getGSSTestProcTestProc_Scenario();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcStep <em>GSS Test Proc Step</em>}'.
@@ -2932,12 +2932,12 @@ public interface test_procPackage extends EPackage {
 		EReference GSS_TEST_PROC_TEST_PROC__STEP = eINSTANCE.getGSSTestProcTestProc_Step();
 
 		/**
-		 * The meta object literal for the '<em><b>Scenario Id</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Scenario</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_TEST_PROC_TEST_PROC__SCENARIO_ID = eINSTANCE.getGSSTestProcTestProc_ScenarioId();
+		EAttribute GSS_TEST_PROC_TEST_PROC__SCENARIO = eINSTANCE.getGSSTestProcTestProc_Scenario();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcStepImpl <em>GSS Test Proc Step</em>}' class.

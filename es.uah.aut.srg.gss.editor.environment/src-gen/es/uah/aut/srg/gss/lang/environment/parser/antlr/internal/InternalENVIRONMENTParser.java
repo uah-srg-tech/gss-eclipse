@@ -882,7 +882,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSEnvironmentScenario"
-    // InternalENVIRONMENT.g:335:1: ruleGSSEnvironmentScenario returns [EObject current=null] : (otherlv_0= 'GSSEnvironmentScenario' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_gss_options_3_0= ruleGSSEnvironmentOptions ) ) ( (lv_Protocols_4_0= ruleGSSEnvironmentProtocols ) ) ( (lv_Interfaces_5_0= ruleGSSEnvironmentInterfaces ) ) ( (lv_SpecialPackets_6_0= ruleGSSEnvironmentSpecialPackets ) )? ( (lv_PeriodicTCs_7_0= ruleGSSEnvironmentPeriodicTCs ) )? ( ( ( ( ({...}? => ( ({...}? => ( (lv_GlobalVars_9_0= ruleGSSEnvironmentGlobalVars ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_Monitors_10_0= ruleGSSEnvironmentMonitors ) ) ) ) ) )+ {...}?) ) )? otherlv_11= '}' otherlv_12= ';' ) ;
+    // InternalENVIRONMENT.g:335:1: ruleGSSEnvironmentScenario returns [EObject current=null] : (otherlv_0= 'GSSEnvironmentScenario' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_gss_options_3_0= ruleGSSEnvironmentOptions ) ) ( (lv_Protocols_4_0= ruleGSSEnvironmentProtocols ) ) ( (lv_Interfaces_5_0= ruleGSSEnvironmentInterfaces ) ) ( (lv_SpecialPackets_6_0= ruleGSSEnvironmentSpecialPackets ) )? ( (lv_PeriodicTCs_7_0= ruleGSSEnvironmentPeriodicTCs ) )? ( ( ( ( ({...}? => ( ({...}? => ( (lv_GlobalVars_9_0= ruleGSSEnvironmentGlobalVars ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_Monitors_10_0= ruleGSSEnvironmentMonitors ) ) ) ) ) )+ {...}?) ) )? otherlv_11= '}' otherlv_12= ';' ) ;
     public final EObject ruleGSSEnvironmentScenario() throws RecognitionException {
         EObject current = null;
 
@@ -913,28 +913,28 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         	);
 
         try {
-            // InternalENVIRONMENT.g:344:2: ( (otherlv_0= 'GSSEnvironmentScenario' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_gss_options_3_0= ruleGSSEnvironmentOptions ) ) ( (lv_Protocols_4_0= ruleGSSEnvironmentProtocols ) ) ( (lv_Interfaces_5_0= ruleGSSEnvironmentInterfaces ) ) ( (lv_SpecialPackets_6_0= ruleGSSEnvironmentSpecialPackets ) )? ( (lv_PeriodicTCs_7_0= ruleGSSEnvironmentPeriodicTCs ) )? ( ( ( ( ({...}? => ( ({...}? => ( (lv_GlobalVars_9_0= ruleGSSEnvironmentGlobalVars ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_Monitors_10_0= ruleGSSEnvironmentMonitors ) ) ) ) ) )+ {...}?) ) )? otherlv_11= '}' otherlv_12= ';' ) )
-            // InternalENVIRONMENT.g:345:2: (otherlv_0= 'GSSEnvironmentScenario' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_gss_options_3_0= ruleGSSEnvironmentOptions ) ) ( (lv_Protocols_4_0= ruleGSSEnvironmentProtocols ) ) ( (lv_Interfaces_5_0= ruleGSSEnvironmentInterfaces ) ) ( (lv_SpecialPackets_6_0= ruleGSSEnvironmentSpecialPackets ) )? ( (lv_PeriodicTCs_7_0= ruleGSSEnvironmentPeriodicTCs ) )? ( ( ( ( ({...}? => ( ({...}? => ( (lv_GlobalVars_9_0= ruleGSSEnvironmentGlobalVars ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_Monitors_10_0= ruleGSSEnvironmentMonitors ) ) ) ) ) )+ {...}?) ) )? otherlv_11= '}' otherlv_12= ';' )
+            // InternalENVIRONMENT.g:344:2: ( (otherlv_0= 'GSSEnvironmentScenario' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_gss_options_3_0= ruleGSSEnvironmentOptions ) ) ( (lv_Protocols_4_0= ruleGSSEnvironmentProtocols ) ) ( (lv_Interfaces_5_0= ruleGSSEnvironmentInterfaces ) ) ( (lv_SpecialPackets_6_0= ruleGSSEnvironmentSpecialPackets ) )? ( (lv_PeriodicTCs_7_0= ruleGSSEnvironmentPeriodicTCs ) )? ( ( ( ( ({...}? => ( ({...}? => ( (lv_GlobalVars_9_0= ruleGSSEnvironmentGlobalVars ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_Monitors_10_0= ruleGSSEnvironmentMonitors ) ) ) ) ) )+ {...}?) ) )? otherlv_11= '}' otherlv_12= ';' ) )
+            // InternalENVIRONMENT.g:345:2: (otherlv_0= 'GSSEnvironmentScenario' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_gss_options_3_0= ruleGSSEnvironmentOptions ) ) ( (lv_Protocols_4_0= ruleGSSEnvironmentProtocols ) ) ( (lv_Interfaces_5_0= ruleGSSEnvironmentInterfaces ) ) ( (lv_SpecialPackets_6_0= ruleGSSEnvironmentSpecialPackets ) )? ( (lv_PeriodicTCs_7_0= ruleGSSEnvironmentPeriodicTCs ) )? ( ( ( ( ({...}? => ( ({...}? => ( (lv_GlobalVars_9_0= ruleGSSEnvironmentGlobalVars ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_Monitors_10_0= ruleGSSEnvironmentMonitors ) ) ) ) ) )+ {...}?) ) )? otherlv_11= '}' otherlv_12= ';' )
             {
-            // InternalENVIRONMENT.g:345:2: (otherlv_0= 'GSSEnvironmentScenario' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_gss_options_3_0= ruleGSSEnvironmentOptions ) ) ( (lv_Protocols_4_0= ruleGSSEnvironmentProtocols ) ) ( (lv_Interfaces_5_0= ruleGSSEnvironmentInterfaces ) ) ( (lv_SpecialPackets_6_0= ruleGSSEnvironmentSpecialPackets ) )? ( (lv_PeriodicTCs_7_0= ruleGSSEnvironmentPeriodicTCs ) )? ( ( ( ( ({...}? => ( ({...}? => ( (lv_GlobalVars_9_0= ruleGSSEnvironmentGlobalVars ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_Monitors_10_0= ruleGSSEnvironmentMonitors ) ) ) ) ) )+ {...}?) ) )? otherlv_11= '}' otherlv_12= ';' )
-            // InternalENVIRONMENT.g:346:3: otherlv_0= 'GSSEnvironmentScenario' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_gss_options_3_0= ruleGSSEnvironmentOptions ) ) ( (lv_Protocols_4_0= ruleGSSEnvironmentProtocols ) ) ( (lv_Interfaces_5_0= ruleGSSEnvironmentInterfaces ) ) ( (lv_SpecialPackets_6_0= ruleGSSEnvironmentSpecialPackets ) )? ( (lv_PeriodicTCs_7_0= ruleGSSEnvironmentPeriodicTCs ) )? ( ( ( ( ({...}? => ( ({...}? => ( (lv_GlobalVars_9_0= ruleGSSEnvironmentGlobalVars ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_Monitors_10_0= ruleGSSEnvironmentMonitors ) ) ) ) ) )+ {...}?) ) )? otherlv_11= '}' otherlv_12= ';'
+            // InternalENVIRONMENT.g:345:2: (otherlv_0= 'GSSEnvironmentScenario' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_gss_options_3_0= ruleGSSEnvironmentOptions ) ) ( (lv_Protocols_4_0= ruleGSSEnvironmentProtocols ) ) ( (lv_Interfaces_5_0= ruleGSSEnvironmentInterfaces ) ) ( (lv_SpecialPackets_6_0= ruleGSSEnvironmentSpecialPackets ) )? ( (lv_PeriodicTCs_7_0= ruleGSSEnvironmentPeriodicTCs ) )? ( ( ( ( ({...}? => ( ({...}? => ( (lv_GlobalVars_9_0= ruleGSSEnvironmentGlobalVars ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_Monitors_10_0= ruleGSSEnvironmentMonitors ) ) ) ) ) )+ {...}?) ) )? otherlv_11= '}' otherlv_12= ';' )
+            // InternalENVIRONMENT.g:346:3: otherlv_0= 'GSSEnvironmentScenario' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_gss_options_3_0= ruleGSSEnvironmentOptions ) ) ( (lv_Protocols_4_0= ruleGSSEnvironmentProtocols ) ) ( (lv_Interfaces_5_0= ruleGSSEnvironmentInterfaces ) ) ( (lv_SpecialPackets_6_0= ruleGSSEnvironmentSpecialPackets ) )? ( (lv_PeriodicTCs_7_0= ruleGSSEnvironmentPeriodicTCs ) )? ( ( ( ( ({...}? => ( ({...}? => ( (lv_GlobalVars_9_0= ruleGSSEnvironmentGlobalVars ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_Monitors_10_0= ruleGSSEnvironmentMonitors ) ) ) ) ) )+ {...}?) ) )? otherlv_11= '}' otherlv_12= ';'
             {
-            otherlv_0=(Token)match(input,20,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,20,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSEnvironmentScenarioAccess().getGSSEnvironmentScenarioKeyword_0());
               		
             }
-            // InternalENVIRONMENT.g:350:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalENVIRONMENT.g:351:4: (lv_name_1_0= RULE_ID )
+            // InternalENVIRONMENT.g:350:3: ( (lv_name_1_0= RULE_STRING ) )
+            // InternalENVIRONMENT.g:351:4: (lv_name_1_0= RULE_STRING )
             {
-            // InternalENVIRONMENT.g:351:4: (lv_name_1_0= RULE_ID )
-            // InternalENVIRONMENT.g:352:5: lv_name_1_0= RULE_ID
+            // InternalENVIRONMENT.g:351:4: (lv_name_1_0= RULE_STRING )
+            // InternalENVIRONMENT.g:352:5: lv_name_1_0= RULE_STRING
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_8); if (state.failed) return current;
+            lv_name_1_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_name_1_0, grammarAccess.getGSSEnvironmentScenarioAccess().getNameIDTerminalRuleCall_1_0());
+              					newLeafNode(lv_name_1_0, grammarAccess.getGSSEnvironmentScenarioAccess().getNameSTRINGTerminalRuleCall_1_0());
               				
             }
             if ( state.backtracking==0 ) {
@@ -946,7 +946,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
               						current,
               						"name",
               						lv_name_1_0,
-              						"org.eclipse.xtext.common.Terminals.ID");
+              						"org.eclipse.xtext.common.Terminals.STRING");
               				
             }
 

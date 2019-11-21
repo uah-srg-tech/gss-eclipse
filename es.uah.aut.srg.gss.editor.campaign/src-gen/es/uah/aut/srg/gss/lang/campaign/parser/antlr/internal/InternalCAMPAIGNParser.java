@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSCampaignCampaign'", "'{'", "'uri'", "'version'", "'}'", "'GSSCampaignScenario'", "'environment'", "'scenarioId'", "'GSSCampaignTests'", "'GSSCampaignTestCase'", "'name'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'", "'::'", "'_1'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSCampaignCampaign'", "'{'", "'uri'", "'version'", "'}'", "'GSSCampaignScenario'", "'environment'", "'scenario'", "'GSSCampaignTests'", "'GSSCampaignTestCase'", "'name'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'", "'::'", "'_1'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=9;
@@ -791,7 +791,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSCampaignScenario"
-    // InternalCAMPAIGN.g:346:1: ruleGSSCampaignScenario returns [EObject current=null] : (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenarioId' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalCAMPAIGN.g:346:1: ruleGSSCampaignScenario returns [EObject current=null] : (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
     public final EObject ruleGSSCampaignScenario() throws RecognitionException {
         EObject current = null;
 
@@ -810,11 +810,11 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCAMPAIGN.g:352:2: ( (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenarioId' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalCAMPAIGN.g:353:2: (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenarioId' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalCAMPAIGN.g:352:2: ( (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
+            // InternalCAMPAIGN.g:353:2: (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
             {
-            // InternalCAMPAIGN.g:353:2: (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenarioId' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
-            // InternalCAMPAIGN.g:354:3: otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenarioId' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
+            // InternalCAMPAIGN.g:353:2: (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalCAMPAIGN.g:354:3: otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
             {
             otherlv_0=(Token)match(input,20,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -888,7 +888,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             otherlv_6=(Token)match(input,22,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_6, grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdKeyword_6());
+              			newLeafNode(otherlv_6, grammarAccess.getGSSCampaignScenarioAccess().getScenarioKeyword_6());
               		
             }
             otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
@@ -917,7 +917,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             }
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdGSSEnvironmentScenarioCrossReference_8_0());
+              					newCompositeNode(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioCrossReference_8_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);

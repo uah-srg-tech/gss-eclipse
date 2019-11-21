@@ -192,7 +192,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cGSSEnvironmentScenarioKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameSTRINGTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cGss_optionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cGss_optionsGSSEnvironmentOptionsParserRuleCall_3_0 = (RuleCall)cGss_optionsAssignment_3.eContents().get(0);
@@ -214,7 +214,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//GSSEnvironmentScenario:
 		//	'GSSEnvironmentScenario'
-		//	name=ID
+		//	name=STRING
 		//	'{'
 		//	gss_options=GSSEnvironmentOptions
 		//	Protocols=GSSEnvironmentProtocols
@@ -224,7 +224,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSEnvironmentScenario' name=ID '{' gss_options=GSSEnvironmentOptions Protocols=GSSEnvironmentProtocols
+		//'GSSEnvironmentScenario' name=STRING '{' gss_options=GSSEnvironmentOptions Protocols=GSSEnvironmentProtocols
 		//Interfaces=GSSEnvironmentInterfaces SpecialPackets=GSSEnvironmentSpecialPackets?
 		//PeriodicTCs=GSSEnvironmentPeriodicTCs? (GlobalVars=GSSEnvironmentGlobalVars & Monitors=GSSEnvironmentMonitors)? '}'
 		//';'
@@ -233,11 +233,11 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//'GSSEnvironmentScenario'
 		public Keyword getGSSEnvironmentScenarioKeyword_0() { return cGSSEnvironmentScenarioKeyword_0; }
 		
-		//name=ID
+		//name=STRING
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 		
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_1_0() { return cNameSTRINGTerminalRuleCall_1_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
@@ -5687,7 +5687,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSEnvironmentScenario:
 	//	'GSSEnvironmentScenario'
-	//	name=ID
+	//	name=STRING
 	//	'{'
 	//	gss_options=GSSEnvironmentOptions
 	//	Protocols=GSSEnvironmentProtocols

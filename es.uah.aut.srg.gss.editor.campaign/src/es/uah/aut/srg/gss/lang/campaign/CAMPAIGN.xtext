@@ -30,7 +30,7 @@ GSSCampaignCampaign returns GSSCampaignCampaign:
 GSSCampaignScenario returns GSSCampaignScenario:
 	'GSSCampaignScenario' '{'
 		'environment' ':=' environment=[environment::GSSEnvironmentEnvironment|VersionedQualifiedName] ';'
-		'scenarioId' ':=' scenarioId=[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName] ';'
+		'scenario' ':=' scenario=[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName] ';'
 	'}' ';'
 ;
 		

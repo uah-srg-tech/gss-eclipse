@@ -39,7 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcTestProcImpl#getStep <em>Step</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcTestProcImpl#getScenarioId <em>Scenario Id</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcTestProcImpl#getScenario <em>Scenario</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,24 +56,24 @@ public class GSSTestProcTestProcImpl extends GSSModelElementImpl implements GSST
 	protected EList<GSSTestProcStep> step;
 
 	/**
-	 * The default value of the '{@link #getScenarioId() <em>Scenario Id</em>}' attribute.
+	 * The default value of the '{@link #getScenario() <em>Scenario</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getScenarioId()
+	 * @see #getScenario()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SCENARIO_ID_EDEFAULT = null;
+	protected static final String SCENARIO_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getScenarioId() <em>Scenario Id</em>}' attribute.
+	 * The cached value of the '{@link #getScenario() <em>Scenario</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getScenarioId()
+	 * @see #getScenario()
 	 * @generated
 	 * @ordered
 	 */
-	protected String scenarioId = SCENARIO_ID_EDEFAULT;
+	protected String scenario = SCENARIO_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,8 +111,8 @@ public class GSSTestProcTestProcImpl extends GSSModelElementImpl implements GSST
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getScenarioId() {
-		return scenarioId;
+	public String getScenario() {
+		return scenario;
 	}
 
 	/**
@@ -120,11 +120,11 @@ public class GSSTestProcTestProcImpl extends GSSModelElementImpl implements GSST
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setScenarioId(String newScenarioId) {
-		String oldScenarioId = scenarioId;
-		scenarioId = newScenarioId;
+	public void setScenario(String newScenario) {
+		String oldScenario = scenario;
+		scenario = newScenario;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_TEST_PROC__SCENARIO_ID, oldScenarioId, scenarioId));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_TEST_PROC__SCENARIO, oldScenario, scenario));
 	}
 
 	/**
@@ -151,8 +151,8 @@ public class GSSTestProcTestProcImpl extends GSSModelElementImpl implements GSST
 		switch (featureID) {
 			case test_procPackage.GSS_TEST_PROC_TEST_PROC__STEP:
 				return getStep();
-			case test_procPackage.GSS_TEST_PROC_TEST_PROC__SCENARIO_ID:
-				return getScenarioId();
+			case test_procPackage.GSS_TEST_PROC_TEST_PROC__SCENARIO:
+				return getScenario();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -170,8 +170,8 @@ public class GSSTestProcTestProcImpl extends GSSModelElementImpl implements GSST
 				getStep().clear();
 				getStep().addAll((Collection<? extends GSSTestProcStep>)newValue);
 				return;
-			case test_procPackage.GSS_TEST_PROC_TEST_PROC__SCENARIO_ID:
-				setScenarioId((String)newValue);
+			case test_procPackage.GSS_TEST_PROC_TEST_PROC__SCENARIO:
+				setScenario((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -188,8 +188,8 @@ public class GSSTestProcTestProcImpl extends GSSModelElementImpl implements GSST
 			case test_procPackage.GSS_TEST_PROC_TEST_PROC__STEP:
 				getStep().clear();
 				return;
-			case test_procPackage.GSS_TEST_PROC_TEST_PROC__SCENARIO_ID:
-				setScenarioId(SCENARIO_ID_EDEFAULT);
+			case test_procPackage.GSS_TEST_PROC_TEST_PROC__SCENARIO:
+				setScenario(SCENARIO_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -205,8 +205,8 @@ public class GSSTestProcTestProcImpl extends GSSModelElementImpl implements GSST
 		switch (featureID) {
 			case test_procPackage.GSS_TEST_PROC_TEST_PROC__STEP:
 				return step != null && !step.isEmpty();
-			case test_procPackage.GSS_TEST_PROC_TEST_PROC__SCENARIO_ID:
-				return SCENARIO_ID_EDEFAULT == null ? scenarioId != null : !SCENARIO_ID_EDEFAULT.equals(scenarioId);
+			case test_procPackage.GSS_TEST_PROC_TEST_PROC__SCENARIO:
+				return SCENARIO_EDEFAULT == null ? scenario != null : !SCENARIO_EDEFAULT.equals(scenario);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -221,8 +221,8 @@ public class GSSTestProcTestProcImpl extends GSSModelElementImpl implements GSST
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (scenarioId: ");
-		result.append(scenarioId);
+		result.append(" (scenario: ");
+		result.append(scenario);
 		result.append(')');
 		return result.toString();
 	}

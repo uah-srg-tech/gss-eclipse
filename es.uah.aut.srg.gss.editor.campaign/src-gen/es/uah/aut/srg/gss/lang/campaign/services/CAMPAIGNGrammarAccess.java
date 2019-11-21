@@ -205,11 +205,11 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cEnvironmentGSSEnvironmentEnvironmentCrossReference_4_0 = (CrossReference)cEnvironmentAssignment_4.eContents().get(0);
 		private final RuleCall cEnvironmentGSSEnvironmentEnvironmentVersionedQualifiedNameParserRuleCall_4_0_1 = (RuleCall)cEnvironmentGSSEnvironmentEnvironmentCrossReference_4_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Keyword cScenarioIdKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cScenarioKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cColonEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cScenarioIdAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final CrossReference cScenarioIdGSSEnvironmentScenarioCrossReference_8_0 = (CrossReference)cScenarioIdAssignment_8.eContents().get(0);
-		private final RuleCall cScenarioIdGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1 = (RuleCall)cScenarioIdGSSEnvironmentScenarioCrossReference_8_0.eContents().get(1);
+		private final Assignment cScenarioAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final CrossReference cScenarioGSSEnvironmentScenarioCrossReference_8_0 = (CrossReference)cScenarioAssignment_8.eContents().get(0);
+		private final RuleCall cScenarioGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1 = (RuleCall)cScenarioGSSEnvironmentScenarioCrossReference_8_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
@@ -217,12 +217,12 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSCampaignScenario:
 		//	'GSSCampaignScenario' '{'
 		//	'environment' ':=' environment=[environment::GSSEnvironmentEnvironment|VersionedQualifiedName] ';'
-		//	'scenarioId' ':=' scenarioId=[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName] ';'
+		//	'scenario' ':=' scenario=[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName] ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSCampaignScenario' '{' 'environment' ':=' environment=[environment::GSSEnvironmentEnvironment|VersionedQualifiedName]
-		//';' 'scenarioId' ':=' scenarioId=[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName] ';' '}' ';'
+		//';' 'scenario' ':=' scenario=[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName] ';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSCampaignScenario'
@@ -249,20 +249,20 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 		
-		//'scenarioId'
-		public Keyword getScenarioIdKeyword_6() { return cScenarioIdKeyword_6; }
+		//'scenario'
+		public Keyword getScenarioKeyword_6() { return cScenarioKeyword_6; }
 		
 		//':='
 		public Keyword getColonEqualsSignKeyword_7() { return cColonEqualsSignKeyword_7; }
 		
-		//scenarioId=[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName]
-		public Assignment getScenarioIdAssignment_8() { return cScenarioIdAssignment_8; }
+		//scenario=[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName]
+		public Assignment getScenarioAssignment_8() { return cScenarioAssignment_8; }
 		
 		//[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName]
-		public CrossReference getScenarioIdGSSEnvironmentScenarioCrossReference_8_0() { return cScenarioIdGSSEnvironmentScenarioCrossReference_8_0; }
+		public CrossReference getScenarioGSSEnvironmentScenarioCrossReference_8_0() { return cScenarioGSSEnvironmentScenarioCrossReference_8_0; }
 		
 		//VersionedQualifiedReferenceName
-		public RuleCall getScenarioIdGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1() { return cScenarioIdGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1; }
+		public RuleCall getScenarioGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1() { return cScenarioGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
@@ -909,7 +909,7 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSCampaignScenario:
 	//	'GSSCampaignScenario' '{'
 	//	'environment' ':=' environment=[environment::GSSEnvironmentEnvironment|VersionedQualifiedName] ';'
-	//	'scenarioId' ':=' scenarioId=[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName] ';'
+	//	'scenario' ':=' scenario=[environment::GSSEnvironmentScenario|VersionedQualifiedReferenceName] ';'
 	//	'}' ';';
 	public GSSCampaignScenarioElements getGSSCampaignScenarioAccess() {
 		return pGSSCampaignScenario;

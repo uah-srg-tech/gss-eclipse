@@ -33,7 +33,7 @@ GSSEnvironmentGSSEnvironment returns GSSEnvironmentEnvironment:
 
 GSSEnvironmentScenario returns GSSEnvironmentScenario:
 	'GSSEnvironmentScenario'
-	name=ID
+	name=STRING
 	'{'
 		gss_options=GSSEnvironmentOptions
 		Protocols=GSSEnvironmentProtocols
