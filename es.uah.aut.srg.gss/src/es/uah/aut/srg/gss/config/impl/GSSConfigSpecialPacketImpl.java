@@ -18,8 +18,7 @@ import es.uah.aut.srg.gss.config.GSSConfigSpecialPacket;
 import es.uah.aut.srg.gss.config.GSSConfigUpperLevels;
 import es.uah.aut.srg.gss.config.configPackage;
 
-import es.uah.aut.srg.tmtcif.filter.TMTCIFFilterFilter;
-
+import es.uah.aut.srg.gss.filter.GSSFilterFilter;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -188,7 +187,7 @@ public class GSSConfigSpecialPacketImpl extends MinimalEObjectImpl.Container imp
 	 * @generated
 	 * @ordered
 	 */
-	protected TMTCIFFilterFilter inputFilter;
+	protected GSSFilterFilter inputFilter;
 
 	/**
 	 * The cached value of the '{@link #getUpperLevels() <em>Upper Levels</em>}' containment reference list.
@@ -380,10 +379,10 @@ public class GSSConfigSpecialPacketImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFFilterFilter getInputFilter() {
+	public GSSFilterFilter getInputFilter() {
 		if (inputFilter != null && inputFilter.eIsProxy()) {
 			InternalEObject oldInputFilter = (InternalEObject)inputFilter;
-			inputFilter = (TMTCIFFilterFilter)eResolveProxy(oldInputFilter);
+			inputFilter = (GSSFilterFilter)eResolveProxy(oldInputFilter);
 			if (inputFilter != oldInputFilter) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_SPECIAL_PACKET__INPUT_FILTER, oldInputFilter, inputFilter));
@@ -397,7 +396,7 @@ public class GSSConfigSpecialPacketImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFFilterFilter basicGetInputFilter() {
+	public GSSFilterFilter basicGetInputFilter() {
 		return inputFilter;
 	}
 
@@ -406,8 +405,8 @@ public class GSSConfigSpecialPacketImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputFilter(TMTCIFFilterFilter newInputFilter) {
-		TMTCIFFilterFilter oldInputFilter = inputFilter;
+	public void setInputFilter(GSSFilterFilter newInputFilter) {
+		GSSFilterFilter oldInputFilter = inputFilter;
 		inputFilter = newInputFilter;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_SPECIAL_PACKET__INPUT_FILTER, oldInputFilter, inputFilter));
@@ -637,7 +636,7 @@ public class GSSConfigSpecialPacketImpl extends MinimalEObjectImpl.Container imp
 				setLevelRef((String)newValue);
 				return;
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET__INPUT_FILTER:
-				setInputFilter((TMTCIFFilterFilter)newValue);
+				setInputFilter((GSSFilterFilter)newValue);
 				return;
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET__UPPER_LEVELS:
 				getUpperLevels().clear();
@@ -683,7 +682,7 @@ public class GSSConfigSpecialPacketImpl extends MinimalEObjectImpl.Container imp
 				setLevelRef(LEVEL_REF_EDEFAULT);
 				return;
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET__INPUT_FILTER:
-				setInputFilter((TMTCIFFilterFilter)null);
+				setInputFilter((GSSFilterFilter)null);
 				return;
 			case configPackage.GSS_CONFIG_SPECIAL_PACKET__UPPER_LEVELS:
 				getUpperLevels().clear();

@@ -1,0 +1,190 @@
+grammar es.uah.aut.srg.gss.lang.filter.FILTER with org.eclipse.xtext.common.Terminals
+
+import "http://srg.aut.uah.es/gss/filter" 
+import "http://srg.aut.uah.es/gss/common" as common 
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+import "http://srg.aut.uah.es/gss/format" as format
+
+GSSModelFile returns common::GSSModelFile:
+	(imports+=GSSModelFileImport)*
+	element=GSSFilterFilter
+;
+
+GSSModelFileImport returns common::GSSModelFileImport: 
+	'import' ':=' importURI=STRING ';'
+;
+
+GSSFilterFilter returns GSSFilterFilter:
+	GSSFilterMaxtermFilter | GSSFilterMintermFilter
+;
+
+GSSFilterMaxtermFilter returns GSSFilterMaxtermFilter:
+	'GSSFilterMaxtermFilter'
+	name = ID
+	 '{'
+		(('uri' ':=' uri=QualifiedName ';')
+		& ('version' ':=' version=Version ';')
+		'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';'
+		((BoolVar+=GSSFilterBoolVar) | 
+			(BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem) |
+			(BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem) |
+			(BoolVarFDIC+=GSSFilterBoolVarFDIC))+)
+		Maxterm+=GSSFilterMaxterm+
+	'}' ';'
+;
+
+GSSFilterMintermFilter returns GSSFilterMintermFilter:
+	'GSSFilterMintermFilter'
+	name = ID
+	 '{'
+		(('uri' ':=' uri=QualifiedName ';')
+		& ('version' ':=' version=Version ';')
+		'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';'
+		((BoolVar+=GSSFilterBoolVar) | 
+		 (BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem) |
+		 (BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem) |
+		 (BoolVarFDIC+=GSSFilterBoolVarFDIC))+)
+		Minterm+=GSSFilterMinterm+
+	'}' ';'
+;
+
+GSSFilterBoolVar returns GSSFilterBoolVar:
+	'GSSFilterBoolVar' '{'
+		'id' ':=' id=INTEGER ';'
+		'name' ':=' name=ID ';'
+		'constantType' ':=' constantType=GSSFilterConstantType ';'
+		'FieldRef' ':=' FieldRef=[format::GSSFormatField|VersionedQualifiedReferenceName] ';'
+		Op=GSSFilterFieldOp
+		((Constant=GSSFilterConstant) |
+		 (Select=GSSFilterSelect) |
+		 (SelectLine=GSSFilterSelectLine))
+	'}' ';'
+;
+
+GSSFilterBoolVarFromArrayItem returns GSSFilterBoolVarFromArrayItem:
+	'GSSFilterBoolVarFromArrayItem' '{'
+		'id' ':=' id=INTEGER ';'
+		'name' ':=' name=ID ';'
+		'constantType' ':=' constantType=GSSFilterConstantType ';'
+		'AIFieldRef' ':=' AIFieldRef=[format::GSSFormatAIField|VersionedQualifiedReferenceName] ';'
+		Op=GSSFilterFieldOp
+		((Constant=GSSFilterConstant) |
+		 (Select=GSSFilterSelect) |
+		 (SelectLine=GSSFilterSelectLine))
+	'}' ';'
+;
+
+GSSFilterBoolVarFromGroupedArrayItem returns GSSFilterBoolVarFromGroupedArrayItem:
+	'GSSFilterBoolVarFromGroupedArrayItem' '{'
+		'id' ':=' id=INTEGER ';'
+		'name' ':=' name=ID ';'
+		'constantType' ':=' constantType=GSSFilterConstantType ';'
+		'group' ':=' group=ID ';'
+		'AIFieldRefs' ':=' AIFieldRefs=[format::GSSFormatAField|VersionedQualifiedReferenceName] ';'
+		Op=GSSFilterFieldOp
+		((Constant=GSSFilterConstant) |
+		 (Select=GSSFilterSelect) |
+		 (SelectLine=GSSFilterSelectLine))
+	'}' ';'
+;
+
+GSSFilterBoolVarFDIC returns GSSFilterBoolVarFDIC:
+	'GSSFilterBoolVarFDIC' '{'
+		'id' ':=' id=INTEGER ';'
+		'name' ':=' name=ID ';'
+		'FieldRef' ':=' FieldRef=[format::GSSFormatFDICField|VersionedQualifiedReferenceName] ';'
+		Op=GSSFilterFieldOp
+	'}' ';'
+;
+
+enum GSSFilterConstantType returns GSSFilterConstantType:
+	decimal = 'decimal' | hex = 'hex' |
+	binary = 'binary' | char = 'char' | string = 'string'
+;
+
+GSSFilterFieldOp returns GSSFilterFieldOp:
+	'GSSFilterFieldOp' '{'
+		'type' ':=' type=GSSFilterOPType ';'
+	'}' ';'
+;
+
+GSSFilterConstant returns GSSFilterConstant:
+	'GSSFilterConstant'	'{'
+		'value' ':=' value=INTEGER ';'
+		('mask' ':=' mask=HEXADECIMAL ';')?
+	'}' ';'
+;
+
+GSSFilterSelect returns GSSFilterSelect:
+	'GSSFilterSelect' '{'
+		'fromFile' ':=' fromFile=ID ';'
+		'type' ':=' type=GSSFilterSelectType ';'
+		('offset' ':=' offset=INTEGER ';')?
+		('size' ':=' size=INTEGER ';')?
+		('mask' ':=' mask=HEXADECIMAL ';')?
+	'}' ';'
+;
+
+GSSFilterSelectLine returns GSSFilterSelectLine:
+	'GSSFilterSelectLine'
+	'{'
+		'fromFile' ':=' fromFile=ID ';'
+		'line' ':=' line=INTEGER ';'
+		('leftTrim' ':=' leftTrim=INTEGER ';')?
+		('rightTrim' ':=' rightTrim=INTEGER ';')?
+		('mask' ':=' mask=HEXADECIMAL ';')?
+	'}' ';'
+;
+
+enum GSSFilterOPType returns GSSFilterOPType:
+	equal = 'equal' | different = 'different' |
+	bigger_than = 'bigger_than' |
+	smaller_than = 'smaller_than' |
+	bigger_or_equal = 'bigger_or_equal' |
+	smaller_or_equal = 'smaller_or_equal'
+;
+
+enum GSSFilterSelectType returns GSSFilterSelectType:
+	data = 'data' | size = 'size' | crc = 'crc'
+;
+
+GSSFilterMaxterm returns GSSFilterMaxterm:
+	'GSSFilterMaxterm' '{'
+		'id' ':=' id=INTEGER ';'
+		(BoolVarRef+=GSSFilterBoolVarRef)+  
+	'}' ';'
+;
+
+GSSFilterMinterm returns GSSFilterMinterm:
+	'GSSFilterMinterm' '{'
+		'id' ':=' id=INTEGER ';'
+		(BoolVarRef+=GSSFilterBoolVarRef)+ 
+	'}' ';'
+;
+
+GSSFilterBoolVarRef returns GSSFilterBoolVarRef:
+	'GSSFilterBoolVarRef' '{'
+		'idRef' ':=' idRef=INTEGER ';'
+	'}' ';'
+;
+
+QualifiedName returns ecore::EString:
+	ID ('.' ID)*;
+
+Version returns ecore::EString:
+	(INT | ((INT)? ID)) ('.' (INT | ((INT)? ID)))*
+	;
+
+VersionedQualifiedName returns ecore::EString:
+	QualifiedName '(' Version ')'
+	;
+
+VersionedQualifiedReferenceName returns ecore::EString:
+	(VersionedQualifiedName '::')? ID ('::' ID)*;
+
+terminal HEXADECIMAL returns ecore::EString:
+	('0x' (('0'..'9') | ('a'..'f') | ('A'..'F'))+);
+
+INTEGER returns ecore::EString:
+	('-'? INT | HEXADECIMAL);

@@ -1,0 +1,153 @@
+«IMPORT format»
+
+«DEFINE Serializer(String outputFile) FOR GSSFormatFormat»
+«FILE outputFile -»
+GSSFormatFormat «this.name» {
+	//«this.description»
+	uri := «this.uri»;
+	version := «this.version»;
+	protocol := «this.protocol»;
+	type := «this.type»;
+«EXPAND SerializeVSField FOREACH this.VSField -»
+«EXPAND SerializeCSField FOREACH this.CSField -»
+«EXPAND SerializeAField FOREACH this.AField -»
+«EXPAND SerializeAIField FOREACH this.AIField -»
+«EXPAND SerializeVRFieldSize FOREACH this.VRFieldSize -»
+«EXPAND SerializeFDICField FOREACH this.FDICField -»
+};
+«ENDFILE -»
+«ENDDEFINE»
+
+«DEFINE SerializeCSField FOR GSSFormatCSField -»
+	GSSFormatCSField {
+		fid := «this.fid»;
+		pfid := «this.pfid»;
+		name := "«this.name»";
+«IF this.description != null -»
+		description := "«this.description»";
+«ENDIF -»
+		type := «this.type»;
+		byteOrder := «this.byteOrder»;
+		firstBit := «this.firstBit»;
+«EXPAND SerializeSize FOR this.size -»
+«EXPAND SerializeGlobalOffset FOR this.globalOffset -»
+	};
+«ENDDEFINE»
+
+«DEFINE SerializeVSField FOR GSSFormatVSField -»
+	GSSFormatVSField {
+		fid := «this.fid»;
+		pfid := «this.pfid»;
+		name := "«this.name»";
+«IF this.description != null -»
+		description := "«this.description»";
+«ENDIF -»
+		type := «this.type»;
+		byteOrder := «this.byteOrder»;
+		firstBit := «this.firstBit»;
+		GSSFormatConstSize {
+			bytes := «this.constSize.bytes»;
+			bits := «this.constSize.bits»;
+		};
+		GSSFormatVariableSize {
+			fidRef := «this.variableSize.fidRef»;
+			unit := «this.variableSize.unit»;
+		};
+		GSSFormatMaxSize {
+			bytes := «this.maxSize.bytes»;
+			bits := «this.maxSize.bits»;
+		};
+«EXPAND SerializeGlobalOffset FOR this.globalOffset -»
+	};
+«ENDDEFINE»
+
+«DEFINE SerializeAField FOR GSSFormatAField -»
+	GSSFormatAField {
+		fid := «this.fid»;
+		pfid := «this.pfid»;
+		name := "«this.name»";
+«IF this.description != null -»
+		description := "«this.description»";
+«ENDIF -»
+		type := «this.type»;
+		byteOrder := «this.byteOrder»;
+		firstBit := «this.firstBit»;
+		GSSFormatArrayDimension {
+			fidRef := «this.arrayDimension.fidRef»;
+			maxItems := «this.arrayDimension.maxItems»;
+		};
+«EXPAND SerializeSize FOR this.size -»
+«EXPAND SerializeGlobalOffset FOR this.globalOffset -»
+	};
+«ENDDEFINE»
+
+«DEFINE SerializeAIField FOR GSSFormatAIField -»
+	GSSFormatAIField {
+		fid := «this.fid»;
+		pfid := «this.pfid»;
+		name := "«this.name»";
+«IF this.description != null -»
+		description := "«this.description»";
+«ENDIF -»
+		type := «this.type»;
+		byteOrder := «this.byteOrder»;
+		firstBit := «this.firstBit»;
+		GSSFormatArrayRef {
+			fidRef := «this.arrayRef.fidRef»;
+		};
+«EXPAND SerializeSize FOR this.size -»
+		GSSFormatLocalOffset {
+			bytes := «this.localOffset.bytes»;
+			bits := «this.localOffset.bits»;
+		};
+	};
+«ENDDEFINE»
+
+«DEFINE SerializeFDICField FOR GSSFormatFDICField -»
+	GSSFormatFDICField {
+		fid := «this.fid»;
+		pfid := «this.pfid»;
+		name := "«this.name»";
+«IF this.description != null -»
+		description := "«this.description»";
+«ENDIF -»
+		checkType := «this.checkType»;
+		byteOrder := «this.byteOrder»;
+		firstBit := «this.firstBit»;
+«EXPAND SerializeSize FOR this.size -»
+		GSSFormatFloatingOffset {
+			fidRef := «this.floatingOffset.fidRef»;
+		};
+		GSSFormatSortedFieldsToCheck {
+«EXPAND SerializeSortedFieldsToCheck FOREACH this.sortedFieldsToCheck.fieldToCheck -»
+		};
+	};
+«ENDDEFINE»
+
+«DEFINE SerializeVRFieldSize FOR GSSFormatVRFieldSize -»
+	GSSFormatVRFieldSize {
+		fid := «this.fid»;
+		pfid := «this.pfid»;
+		name := "«this.name»";
+	};
+«ENDDEFINE»
+
+«DEFINE SerializeSize FOR GSSFormatBytesBits -»
+		GSSFormatSize {
+			bytes := «this.bytes»;
+			bits := «this.bits»;
+		};
+«ENDDEFINE»
+
+«DEFINE SerializeGlobalOffset FOR GSSFormatBytesBits -»
+		GSSFormatGlobalOffset {
+			bytes := «this.bytes»;
+			bits := «this.bits»;
+		};
+«ENDDEFINE»
+
+«DEFINE SerializeSortedFieldsToCheck FOR GSSFormatFieldToCheck -»
+			GSSFormatFieldToCheck {
+				fidRef := «this.fidRef»;
+			};
+«ENDDEFINE»

@@ -10,8 +10,7 @@
  */
 package es.uah.aut.srg.gss.environment;
 
-import es.uah.aut.srg.tmtcif.filter.TMTCIFFilterFilter;
-
+import es.uah.aut.srg.gss.filter.GSSFilterFilter;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -211,12 +210,12 @@ public interface GSSEnvironmentSpecialPacket extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input Filter</em>' reference.
-	 * @see #setInputFilter(TMTCIFFilterFilter)
+	 * @see #setInputFilter(GSSFilterFilter)
 	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentSpecialPacket_InputFilter()
 	 * @model required="true"
 	 * @generated
 	 */
-	TMTCIFFilterFilter getInputFilter();
+	GSSFilterFilter getInputFilter();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentSpecialPacket#getInputFilter <em>Input Filter</em>}' reference.
@@ -226,7 +225,7 @@ public interface GSSEnvironmentSpecialPacket extends EObject {
 	 * @see #getInputFilter()
 	 * @generated
 	 */
-	void setInputFilter(TMTCIFFilterFilter value);
+	void setInputFilter(GSSFilterFilter value);
 
 	/**
 	 * Returns the value of the '<em><b>Upper Levels</b></em>' containment reference list.

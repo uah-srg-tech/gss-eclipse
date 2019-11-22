@@ -1,0 +1,263 @@
+grammar es.uah.aut.srg.gss.lang.format.FORMAT with org.eclipse.xtext.common.Terminals
+
+import "http://srg.aut.uah.es/gss/format" 
+import "http://srg.aut.uah.es/gss/common" as common 
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+GSSModelFile returns common::GSSModelFile:
+	(imports+=GSSModelFileImport)*
+	element=GSSFormatFormat
+;
+
+GSSModelFileImport returns common::GSSModelFileImport: 
+	'import' ':=' importURI=STRING ';'
+;
+
+GSSFormatFormat returns GSSFormatFormat:
+	'GSSFormatFormat'
+	name=ID
+	 '{'
+		(('uri' ':=' uri=QualifiedName ';')
+		& ('version' ':=' version=Version ';')
+		& ('protocol' ':=' protocol=ID ';')
+		& ('type' ':=' type=GSSFormatFormatType ';')
+		((CSField+=GSSFormatCSField) |
+		 (CSFormulaField+=GSSFormatCSFormulaField) |
+		 (VSField+=GSSFormatVSField) |
+		 (FDICField+=GSSFormatFDICField) |
+		 (VRFieldSize+=GSSFormatVRFieldSize) |
+		 (AField+=GSSFormatAField) |
+		 (AIField+=GSSFormatAIField))*)
+	'}' ';'
+;
+
+enum GSSFormatFormatType returns GSSFormatFormatType:
+	TM = 'TM' | TC = 'TC'
+;
+
+GSSFormatField returns GSSFormatField:
+	GSSFormatCSField | GSSFormatCSFormulaField |
+	GSSFormatVSField | GSSFormatVRFieldSize| GSSFormatFDICField
+;
+
+GSSFormatCSField returns GSSFormatCSField:
+	'GSSFormatCSField' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
+		'type' ':=' type=GSSFormatFieldType ';'
+		'byteOrder' ':=' byteOrder=GSSFormatFieldByteOrder ';'
+		'firstBit' ':=' firstBit=GSSFormatSFieldFirstBit ';'
+		size=GSSFormatSize
+		globalOffset=GSSFormatGlobalOffset
+	'}' ';'
+;
+
+GSSFormatCSFormulaField returns GSSFormatCSFormulaField:
+	'GSSFormatCSFormulaField' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
+		'type' ':=' type=GSSFormatFieldType ';'
+		'byteOrder' ':=' byteOrder=GSSFormatFieldByteOrder ';'
+		'firstBit' ':=' firstBit=GSSFormatSFieldFirstBit ';'
+		size=GSSFormatSize
+		globalOffset=GSSFormatGlobalOffset
+		formula=GSSFormatFormula
+	'}' ';'
+;
+
+GSSFormatVSField returns GSSFormatVSField:
+	'GSSFormatVSField' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
+		'type' ':=' type=GSSFormatFieldType ';'
+		'byteOrder' ':=' byteOrder=GSSFormatFieldByteOrder ';'
+		'firstBit' ':=' firstBit=GSSFormatSFieldFirstBit ';'
+		constSize=GSSFormatConstSize
+		variableSize=GSSFormatVariableSize
+		maxSize=GSSFormatMaxSize
+		globalOffset=GSSFormatGlobalOffset
+	'}' ';'
+;
+
+GSSFormatVRFieldSize returns GSSFormatVRFieldSize:
+	'GSSFormatVRFieldSize' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=STRING ';'
+	'}' ';'
+;
+
+GSSFormatFDICField returns GSSFormatFDICField:
+	'GSSFormatFDICField' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
+		'checkType' ':=' checkType=GSSFormatCheckType ';'
+		'byteOrder' ':=' byteOrder=GSSFormatFieldByteOrder ';'
+		'firstBit' ':=' firstBit=GSSFormatSFieldFirstBit ';'
+		size=GSSFormatSize
+		floatingOffset=GSSFormatFloatingOffset
+		sortedFieldsToCheck=GSSFormatSortedFieldsToCheck
+	'}' ';'
+;
+
+GSSFormatAField returns GSSFormatAField:
+	'GSSFormatAField' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
+		'type' ':=' type=GSSFormatFieldType ';'
+		'byteOrder' ':=' byteOrder=GSSFormatFieldByteOrder ';'
+		'firstBit' ':=' firstBit=GSSFormatSFieldFirstBit ';'
+		arrayDimension=GSSFormatArrayDimension
+		size=GSSFormatSize
+		globalOffset=GSSFormatGlobalOffset
+	'}' ';'
+;
+
+GSSFormatAIField returns GSSFormatAIField:
+	'GSSFormatAIField' '{'
+		'fid' ':=' fid=INTEGER ';'
+		'pfid' ':=' pfid=INTEGER ';'
+		'name' ':=' name=STRING ';'
+		('description' ':=' description=STRING ';')?
+		'type' ':=' type=GSSFormatFieldType ';'
+		'byteOrder' ':=' byteOrder=GSSFormatFieldByteOrder ';'
+		'firstBit' ':=' firstBit=GSSFormatSFieldFirstBit ';'
+		arrayRef=GSSFormatArrayRef
+		size=GSSFormatSize
+		localOffset=GSSFormatLocalOffset
+	'}' ';'
+;
+
+enum GSSFormatFieldType returns GSSFormatFieldType:
+	structured = 'structured' | uint = 'uint' | flag = 'flag' |
+	enumerated = 'enumerated' | bit_vector = 'bit_vector' |
+	byte_vector = 'byte_vector' | float = 'float' | deduced = 'deduced'
+;
+
+enum GSSFormatFieldByteOrder returns GSSFormatFieldByteOrder:
+	big_endian = 'big_endian' | little_endian = 'little_endian' | na = 'na'
+;
+
+enum GSSFormatSFieldFirstBit returns GSSFormatSFieldFirstBit:
+	MSB = 'MSB' | LSB = 'LSB'
+;
+
+GSSFormatSize returns GSSFormatBytesBits:
+	'GSSFormatSize'
+	'{'
+		'bytes' ':=' bytes=INTEGER ';'
+		'bits' ':=' bits=INTEGER ';'
+	'}' ';'
+;
+
+GSSFormatGlobalOffset returns GSSFormatBytesBits:
+	'GSSFormatGlobalOffset' '{'
+		'bytes' ':=' bytes=INTEGER ';'
+		'bits' ':=' bits=INTEGER ';'
+	'}' ';'
+;
+
+GSSFormatFormula returns GSSFormatFormula:
+	'GSSFormatFormula' '{'
+		'slope' ':=' slope=STRING ';'
+		'intercept' ':=' intercept=STRING ';'
+	'}' ';'
+;
+
+GSSFormatConstSize returns GSSFormatBytesBits:
+	'GSSFormatConstSize' '{'
+		'bytes' ':=' bytes=INTEGER ';'
+		'bits' ':=' bits=INTEGER ';'
+	'}' ';'
+;
+
+GSSFormatMaxSize returns GSSFormatBytesBits:
+	'GSSFormatMaxSize' '{'
+		'bytes' ':=' bytes=INTEGER ';'
+		'bits' ':=' bits=INTEGER ';'
+	'}' ';'
+;
+
+GSSFormatVariableSize returns GSSFormatVariableSize:
+	'GSSFormatVariableSize' '{'
+		'fidRef' ':=' fidRef=INTEGER ';'
+		'unit' ':=' unit=GSSFormatUnit ';'
+		('power' ':=' power=GSSFormatPower ';')?
+	'}' ';'
+;
+
+enum GSSFormatUnit returns GSSFormatUnit:
+	bytes = 'bytes' | bits = 'bits' |
+	halfword = 'halfword' | string10 = 'string10' |
+	string17 = 'string17' | string69 = 'string69'
+;
+
+enum GSSFormatPower returns GSSFormatPower:
+	_2 = '2bits' | _2_with_0 = '2bits_with_0'
+;
+
+enum GSSFormatCheckType returns GSSFormatCheckType:
+	crc16 = 'crc16' | checksum16 = 'checksum16'
+;
+
+GSSFormatFloatingOffset returns GSSFormatFloatingOffset:
+	'GSSFormatFloatingOffset' '{'
+		'fidRef' ':=' fidRef=INTEGER ';'
+	'}' ';'
+;
+
+GSSFormatSortedFieldsToCheck returns GSSFormatSortedFieldsToCheck:
+	{GSSFormatSortedFieldsToCheck}
+	'GSSFormatSortedFieldsToCheck' '{'
+		(fieldToCheck+=GSSFormatFieldToCheck)+
+	'}' ';'
+;
+
+GSSFormatFieldToCheck returns GSSFormatFieldToCheck:
+	'GSSFormatFieldToCheck' '{'
+		'fidRef' ':=' fidRef=INTEGER ';'
+	'}' ';'
+;
+
+GSSFormatArrayDimension returns GSSFormatArrayDimension:
+	'GSSFormatArrayDimension' '{'
+		'fidRef' ':=' fidRef=INTEGER ';'
+		'maxItems' ':=' maxItems=INTEGER ';'
+	'}' ';'
+;
+
+GSSFormatLocalOffset returns GSSFormatBytesBits:
+	'GSSFormatLocalOffset' '{'
+		'bytes' ':=' bytes=INTEGER ';'
+		'bits' ':=' bits=INTEGER ';'
+	'}' ';'
+;
+
+GSSFormatArrayRef returns GSSFormatArrayRef:
+	'GSSFormatArrayRef' '{'
+		'fidRef' ':=' fidRef=INTEGER ';'
+	'}' ';'
+;
+
+QualifiedName returns ecore::EString:
+	ID ('.' ID)*;
+
+Version returns ecore::EString:
+	(INT | ((INT)? ID)) ('.' (INT | ((INT)? ID)))*
+	;
+
+terminal HEXADECIMAL returns ecore::EString:
+	('0x' (('0'..'9') | ('a'..'f') | ('A'..'F'))+);
+
+INTEGER returns ecore::EString:
+	('-'? INT | HEXADECIMAL);

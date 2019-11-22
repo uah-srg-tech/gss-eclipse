@@ -209,14 +209,14 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		private final Keyword cExportKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cColonEqualsSignKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Assignment cExportAssignment_16 = (Assignment)cGroup.eContents().get(16);
-		private final CrossReference cExportTMTCIFExportExportCrossReference_16_0 = (CrossReference)cExportAssignment_16.eContents().get(0);
-		private final RuleCall cExportTMTCIFExportExportVersionedQualifiedNameParserRuleCall_16_0_1 = (RuleCall)cExportTMTCIFExportExportCrossReference_16_0.eContents().get(1);
+		private final CrossReference cExportGSSExportExportCrossReference_16_0 = (CrossReference)cExportAssignment_16.eContents().get(0);
+		private final RuleCall cExportGSSExportExportVersionedQualifiedNameParserRuleCall_16_0_1 = (RuleCall)cExportGSSExportExportCrossReference_16_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_17 = (Keyword)cGroup.eContents().get(17);
 		private final Keyword cFormatKeyword_18 = (Keyword)cGroup.eContents().get(18);
 		private final Keyword cColonEqualsSignKeyword_19 = (Keyword)cGroup.eContents().get(19);
 		private final Assignment cFormatAssignment_20 = (Assignment)cGroup.eContents().get(20);
-		private final CrossReference cFormatTMTCIFFormatFormatCrossReference_20_0 = (CrossReference)cFormatAssignment_20.eContents().get(0);
-		private final RuleCall cFormatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_20_0_1 = (RuleCall)cFormatTMTCIFFormatFormatCrossReference_20_0.eContents().get(1);
+		private final CrossReference cFormatGSSFormatFormatCrossReference_20_0 = (CrossReference)cFormatAssignment_20.eContents().get(0);
+		private final RuleCall cFormatGSSFormatFormatVersionedQualifiedNameParserRuleCall_20_0_1 = (RuleCall)cFormatGSSFormatFormatCrossReference_20_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_21 = (Keyword)cGroup.eContents().get(21);
 		private final Keyword cRightCurlyBracketKeyword_22 = (Keyword)cGroup.eContents().get(22);
 		private final Keyword cSemicolonKeyword_23 = (Keyword)cGroup.eContents().get(23);
@@ -226,14 +226,14 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		//	'name' ':=' name=STRING ';'
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'levelRef' ':=' levelRef=INTEGER ';'
-		//	'export' ':=' export=[export::TMTCIFExportExport|VersionedQualifiedName] ';'
-		//	'format' ':=' format=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
+		//	'export' ':=' export=[export::GSSExportExport|VersionedQualifiedName] ';'
+		//	'format' ':=' format=[format::GSSFormatFormat|VersionedQualifiedName] ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSProtocolPacketsProtocolPacket' '{' 'name' ':=' name=STRING ';' 'ifRef' ':=' ifRef=INTEGER ';' 'levelRef' ':='
-		//levelRef=INTEGER ';' 'export' ':=' export=[export::TMTCIFExportExport|VersionedQualifiedName] ';' 'format' ':='
-		//format=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';' '}' ';'
+		//levelRef=INTEGER ';' 'export' ':=' export=[export::GSSExportExport|VersionedQualifiedName] ';' 'format' ':='
+		//format=[format::GSSFormatFormat|VersionedQualifiedName] ';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSProtocolPacketsProtocolPacket'
@@ -293,14 +293,14 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		//':='
 		public Keyword getColonEqualsSignKeyword_15() { return cColonEqualsSignKeyword_15; }
 		
-		//export=[export::TMTCIFExportExport|VersionedQualifiedName]
+		//export=[export::GSSExportExport|VersionedQualifiedName]
 		public Assignment getExportAssignment_16() { return cExportAssignment_16; }
 		
-		//[export::TMTCIFExportExport|VersionedQualifiedName]
-		public CrossReference getExportTMTCIFExportExportCrossReference_16_0() { return cExportTMTCIFExportExportCrossReference_16_0; }
+		//[export::GSSExportExport|VersionedQualifiedName]
+		public CrossReference getExportGSSExportExportCrossReference_16_0() { return cExportGSSExportExportCrossReference_16_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getExportTMTCIFExportExportVersionedQualifiedNameParserRuleCall_16_0_1() { return cExportTMTCIFExportExportVersionedQualifiedNameParserRuleCall_16_0_1; }
+		public RuleCall getExportGSSExportExportVersionedQualifiedNameParserRuleCall_16_0_1() { return cExportGSSExportExportVersionedQualifiedNameParserRuleCall_16_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_17() { return cSemicolonKeyword_17; }
@@ -311,14 +311,14 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 		//':='
 		public Keyword getColonEqualsSignKeyword_19() { return cColonEqualsSignKeyword_19; }
 		
-		//format=[format::TMTCIFFormatFormat|VersionedQualifiedName]
+		//format=[format::GSSFormatFormat|VersionedQualifiedName]
 		public Assignment getFormatAssignment_20() { return cFormatAssignment_20; }
 		
-		//[format::TMTCIFFormatFormat|VersionedQualifiedName]
-		public CrossReference getFormatTMTCIFFormatFormatCrossReference_20_0() { return cFormatTMTCIFFormatFormatCrossReference_20_0; }
+		//[format::GSSFormatFormat|VersionedQualifiedName]
+		public CrossReference getFormatGSSFormatFormatCrossReference_20_0() { return cFormatGSSFormatFormatCrossReference_20_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getFormatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_20_0_1() { return cFormatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_20_0_1; }
+		public RuleCall getFormatGSSFormatFormatVersionedQualifiedNameParserRuleCall_20_0_1() { return cFormatGSSFormatFormatVersionedQualifiedNameParserRuleCall_20_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
@@ -717,8 +717,8 @@ public class PROTOCOL_PACKETSGrammarAccess extends AbstractGrammarElementFinder 
 	//	'name' ':=' name=STRING ';'
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'levelRef' ':=' levelRef=INTEGER ';'
-	//	'export' ':=' export=[export::TMTCIFExportExport|VersionedQualifiedName] ';'
-	//	'format' ':=' format=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
+	//	'export' ':=' export=[export::GSSExportExport|VersionedQualifiedName] ';'
+	//	'format' ':=' format=[format::GSSFormatFormat|VersionedQualifiedName] ';'
 	//	'}' ';';
 	public GSSProtocolPacketsProtocolPacketElements getGSSProtocolPacketsProtocolPacketAccess() {
 		return pGSSProtocolPacketsProtocolPacket;

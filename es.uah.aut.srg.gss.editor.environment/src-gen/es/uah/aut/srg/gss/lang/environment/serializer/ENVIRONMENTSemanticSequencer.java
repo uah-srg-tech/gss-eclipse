@@ -320,7 +320,7 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     GSSEnvironmentGVFiltered returns GSSEnvironmentGVFiltered
 	 *
 	 * Constraint:
-	 *     (GlobalVarRef=[GSSEnvironmentGlobalVar|STRING] filter=[TMTCIFFilterFilter|VersionedQualifiedName]?)
+	 *     (GlobalVarRef=[GSSEnvironmentGlobalVar|STRING] filter=[GSSFilterFilter|VersionedQualifiedName]?)
 	 */
 	protected void sequence_GSSEnvironmentGVFiltered(ISerializationContext context, GSSEnvironmentGVFiltered semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -456,11 +456,11 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     (
 	 *         id=INTEGER 
 	 *         name=STRING 
-	 *         TMformat=[TMTCIFFormatFormat|VersionedQualifiedName] 
-	 *         TCformat=[TMTCIFFormatFormat|VersionedQualifiedName] 
-	 *         inputFilter=[TMTCIFFilterFilter|VersionedQualifiedName] 
-	 *         export_to_prev_Level=[TMTCIFExportExport|VersionedQualifiedName]? 
-	 *         import_from_prev_Level=[TMTCIFImportImport|VersionedQualifiedName]?
+	 *         TMformat=[GSSFormatFormat|VersionedQualifiedName] 
+	 *         TCformat=[GSSFormatFormat|VersionedQualifiedName] 
+	 *         inputFilter=[GSSFilterFilter|VersionedQualifiedName] 
+	 *         export_to_prev_Level=[GSSExportExport|VersionedQualifiedName]? 
+	 *         import_from_prev_Level=[GSSImportImport|VersionedQualifiedName]?
 	 *     )
 	 */
 	protected void sequence_GSSEnvironmentLevelInOut(ISerializationContext context, GSSEnvironmentLevelInOut semanticObject) {
@@ -473,7 +473,7 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     GSSEnvironmentLevelIn returns GSSEnvironmentLevelIn
 	 *
 	 * Constraint:
-	 *     (id=INTEGER name=STRING TCformat=[TMTCIFFormatFormat|VersionedQualifiedName] export_to_prev_Level=[TMTCIFExportExport|VersionedQualifiedName]?)
+	 *     (id=INTEGER name=STRING TCformat=[GSSFormatFormat|VersionedQualifiedName] export_to_prev_Level=[GSSExportExport|VersionedQualifiedName]?)
 	 */
 	protected void sequence_GSSEnvironmentLevelIn(ISerializationContext context, GSSEnvironmentLevelIn semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -488,9 +488,9 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     (
 	 *         id=INTEGER 
 	 *         name=STRING 
-	 *         TMformat=[TMTCIFFormatFormat|VersionedQualifiedName] 
-	 *         inputFilter=[TMTCIFFilterFilter|VersionedQualifiedName] 
-	 *         import_from_prev_Level=[TMTCIFImportImport|VersionedQualifiedName]?
+	 *         TMformat=[GSSFormatFormat|VersionedQualifiedName] 
+	 *         inputFilter=[GSSFilterFilter|VersionedQualifiedName] 
+	 *         import_from_prev_Level=[GSSImportImport|VersionedQualifiedName]?
 	 *     )
 	 */
 	protected void sequence_GSSEnvironmentLevelOut(ISerializationContext context, GSSEnvironmentLevelOut semanticObject) {
@@ -615,8 +615,8 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *         ifRef=INTEGER 
 	 *         period_value=INTEGER 
 	 *         period_unit=GSSEnvironmentUnit 
-	 *         level0=[TMTCIFFormatFormat|VersionedQualifiedName]? 
-	 *         app_to_level0=[TMTCIFExportExport|VersionedQualifiedName]
+	 *         level0=[GSSFormatFormat|VersionedQualifiedName]? 
+	 *         app_to_level0=[GSSExportExport|VersionedQualifiedName]
 	 *     )
 	 */
 	protected void sequence_GSSEnvironmentPeriodicTCLevel0(ISerializationContext context, GSSEnvironmentPeriodicTCLevel0 semanticObject) {
@@ -635,10 +635,10 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *         ifRef=INTEGER 
 	 *         period_value=INTEGER 
 	 *         period_unit=GSSEnvironmentUnit 
-	 *         level1=[TMTCIFFormatFormat|VersionedQualifiedName]? 
-	 *         app_to_level1=[TMTCIFExportExport|VersionedQualifiedName] 
-	 *         level0=[TMTCIFFormatFormat|VersionedQualifiedName]? 
-	 *         level1_to_level0=[TMTCIFExportExport|VersionedQualifiedName]?
+	 *         level1=[GSSFormatFormat|VersionedQualifiedName]? 
+	 *         app_to_level1=[GSSExportExport|VersionedQualifiedName] 
+	 *         level0=[GSSFormatFormat|VersionedQualifiedName]? 
+	 *         level1_to_level0=[GSSExportExport|VersionedQualifiedName]?
 	 *     )
 	 */
 	protected void sequence_GSSEnvironmentPeriodicTCLevel1(ISerializationContext context, GSSEnvironmentPeriodicTCLevel1 semanticObject) {
@@ -657,12 +657,12 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *         ifRef=INTEGER 
 	 *         period_value=INTEGER 
 	 *         period_unit=GSSEnvironmentUnit 
-	 *         level2=[TMTCIFFormatFormat|VersionedQualifiedName]? 
-	 *         app_to_level2=[TMTCIFExportExport|VersionedQualifiedName] 
-	 *         level1=[TMTCIFFormatFormat|VersionedQualifiedName]? 
-	 *         level2_to_level1=[TMTCIFExportExport|VersionedQualifiedName]? 
-	 *         level0=[TMTCIFFormatFormat|VersionedQualifiedName]? 
-	 *         level1_to_level0=[TMTCIFExportExport|VersionedQualifiedName]?
+	 *         level2=[GSSFormatFormat|VersionedQualifiedName]? 
+	 *         app_to_level2=[GSSExportExport|VersionedQualifiedName] 
+	 *         level1=[GSSFormatFormat|VersionedQualifiedName]? 
+	 *         level2_to_level1=[GSSExportExport|VersionedQualifiedName]? 
+	 *         level0=[GSSFormatFormat|VersionedQualifiedName]? 
+	 *         level1_to_level0=[GSSExportExport|VersionedQualifiedName]?
 	 *     )
 	 */
 	protected void sequence_GSSEnvironmentPeriodicTCLevel2(ISerializationContext context, GSSEnvironmentPeriodicTCLevel2 semanticObject) {
@@ -897,7 +897,7 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *         ifRef=INTEGER 
 	 *         levels=INTEGER 
 	 *         levelRef=INTEGER 
-	 *         inputFilter=[TMTCIFFilterFilter|VersionedQualifiedName] 
+	 *         inputFilter=[GSSFilterFilter|VersionedQualifiedName] 
 	 *         UpperLevels+=GSSEnvironmentUpperLevels? 
 	 *         printingData=GSSEnvironmentPrintingData 
 	 *         (period=GSSEnvironmentPeriod | intervalRange=GSSEnvironmentIntervalRange)?
@@ -948,9 +948,9 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 * Constraint:
 	 *     (
 	 *         level=GSSEnvironmentUpperLevelLevel 
-	 *         TMformat=[TMTCIFFormatFormat|VersionedQualifiedName]? 
-	 *         inputFilter=[TMTCIFFilterFilter|VersionedQualifiedName]? 
-	 *         import_from_prev_Level=[TMTCIFImportImport|VersionedQualifiedName]?
+	 *         TMformat=[GSSFormatFormat|VersionedQualifiedName]? 
+	 *         inputFilter=[GSSFilterFilter|VersionedQualifiedName]? 
+	 *         import_from_prev_Level=[GSSImportImport|VersionedQualifiedName]?
 	 *     )
 	 */
 	protected void sequence_GSSEnvironmentUpperLevel(ISerializationContext context, GSSEnvironmentUpperLevel semanticObject) {

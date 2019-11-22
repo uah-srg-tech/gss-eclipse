@@ -2240,13 +2240,13 @@ rule__GSSProtocolPacketsProtocolPacket__ExportAssignment_16
 	}
 :
 	(
-		{ before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportTMTCIFExportExportCrossReference_16_0()); }
+		{ before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportCrossReference_16_0()); }
 		(
-			{ before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportTMTCIFExportExportVersionedQualifiedNameParserRuleCall_16_0_1()); }
+			{ before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportVersionedQualifiedNameParserRuleCall_16_0_1()); }
 			ruleVersionedQualifiedName
-			{ after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportTMTCIFExportExportVersionedQualifiedNameParserRuleCall_16_0_1()); }
+			{ after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportVersionedQualifiedNameParserRuleCall_16_0_1()); }
 		)
-		{ after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportTMTCIFExportExportCrossReference_16_0()); }
+		{ after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getExportGSSExportExportCrossReference_16_0()); }
 	)
 ;
 finally {
@@ -2259,13 +2259,13 @@ rule__GSSProtocolPacketsProtocolPacket__FormatAssignment_20
 	}
 :
 	(
-		{ before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatTMTCIFFormatFormatCrossReference_20_0()); }
+		{ before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSFormatFormatCrossReference_20_0()); }
 		(
-			{ before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_20_0_1()); }
+			{ before(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSFormatFormatVersionedQualifiedNameParserRuleCall_20_0_1()); }
 			ruleVersionedQualifiedName
-			{ after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_20_0_1()); }
+			{ after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSFormatFormatVersionedQualifiedNameParserRuleCall_20_0_1()); }
 		)
-		{ after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatTMTCIFFormatFormatCrossReference_20_0()); }
+		{ after(grammarAccess.getGSSProtocolPacketsProtocolPacketAccess().getFormatGSSFormatFormatCrossReference_20_0()); }
 	)
 ;
 finally {

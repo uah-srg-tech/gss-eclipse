@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2019 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.gss/src" modelPluginID="es.uah.aut.srg.gss" modelName="Format"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" language="" usedGenPackages="common.genmodel#//common"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>format.ecore</foreignModel>
+  <genPackages prefix="format" basePackage="es.uah.aut.srg.gss" disposableProviderFactory="true"
+      ecorePackage="format.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="format.ecore#//GSSFormatFormatType">
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatFormatType/TM"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatFormatType/TC"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="format.ecore#//GSSFormatFieldType">
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatFieldType/structured"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatFieldType/uint"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatFieldType/flag"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatFieldType/enumerated"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatFieldType/bit_vector"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatFieldType/byte_vector"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatFieldType/float"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatFieldType/deduced"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="format.ecore#//GSSFormatFieldByteOrder">
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatFieldByteOrder/big_endian"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatFieldByteOrder/little_endian"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatFieldByteOrder/na"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="format.ecore#//GSSFormatSFieldFirstBit">
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatSFieldFirstBit/MSB"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatSFieldFirstBit/LSB"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="format.ecore#//GSSFormatCheckType">
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatCheckType/crc16"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatCheckType/checksum16"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="format.ecore#//GSSFormatUnit">
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatUnit/bytes"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatUnit/bits"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatUnit/halfword"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatUnit/string10"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatUnit/string17"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatUnit/string69"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="format.ecore#//GSSFormatPower">
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatPower/_2"/>
+      <genEnumLiterals ecoreEnumLiteral="format.ecore#//GSSFormatPower/_2_with_0"/>
+    </genEnums>
+    <genClasses ecoreClass="format.ecore#//GSSFormatFormat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatFormat/protocol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatFormat/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatFormat/CSField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatFormat/CSFormulaField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatFormat/VSField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatFormat/FDICField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatFormat/VRFieldSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatFormat/AField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatFormat/AIField"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="format.ecore#//GSSFormatField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatField/fid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatField/pfid"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//GSSFormatCSField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatCSField/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatCSField/byteOrder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatCSField/firstBit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatCSField/size"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatCSField/globalOffset"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//GSSFormatCSFormulaField">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatCSFormulaField/formula"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//GSSFormatVSField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatVSField/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatVSField/byteOrder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatVSField/firstBit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatVSField/constSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatVSField/variableSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatVSField/maxSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatVSField/globalOffset"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//GSSFormatVRFieldSize"/>
+    <genClasses ecoreClass="format.ecore#//GSSFormatFDICField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatFDICField/checkType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatFDICField/byteOrder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatFDICField/firstBit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatFDICField/size"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatFDICField/floatingOffset"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatFDICField/sortedFieldsToCheck"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//GSSFormatAField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatAField/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatAField/byteOrder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatAField/firstBit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatAField/arrayDimension"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatAField/size"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatAField/globalOffset"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//GSSFormatAIField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatAIField/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatAIField/byteOrder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatAIField/firstBit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatAIField/arrayRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatAIField/size"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatAIField/localOffset"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//GSSFormatBytesBits">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatBytesBits/bytes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatBytesBits/bits"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//GSSFormatFormula">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatFormula/slope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatFormula/intercept"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//GSSFormatVariableSize">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatVariableSize/fidRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatVariableSize/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatVariableSize/power"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//GSSFormatFloatingOffset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatFloatingOffset/fidRef"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//GSSFormatSortedFieldsToCheck">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference format.ecore#//GSSFormatSortedFieldsToCheck/fieldToCheck"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//GSSFormatFieldToCheck">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatFieldToCheck/fidRef"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//GSSFormatArrayDimension">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatArrayDimension/fidRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatArrayDimension/maxItems"/>
+    </genClasses>
+    <genClasses ecoreClass="format.ecore#//GSSFormatArrayRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute format.ecore#//GSSFormatArrayRef/fidRef"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

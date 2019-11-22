@@ -14,8 +14,7 @@ import es.uah.aut.srg.gss.environment.GSSEnvironmentGVFiltered;
 import es.uah.aut.srg.gss.environment.GSSEnvironmentGlobalVar;
 import es.uah.aut.srg.gss.environment.environmentPackage;
 
-import es.uah.aut.srg.tmtcif.filter.TMTCIFFilterFilter;
-
+import es.uah.aut.srg.gss.filter.GSSFilterFilter;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -57,7 +56,7 @@ public class GSSEnvironmentGVFilteredImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 * @ordered
 	 */
-	protected TMTCIFFilterFilter filter;
+	protected GSSFilterFilter filter;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -121,10 +120,10 @@ public class GSSEnvironmentGVFilteredImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFFilterFilter getFilter() {
+	public GSSFilterFilter getFilter() {
 		if (filter != null && filter.eIsProxy()) {
 			InternalEObject oldFilter = (InternalEObject)filter;
-			filter = (TMTCIFFilterFilter)eResolveProxy(oldFilter);
+			filter = (GSSFilterFilter)eResolveProxy(oldFilter);
 			if (filter != oldFilter) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, environmentPackage.GSS_ENVIRONMENT_GV_FILTERED__FILTER, oldFilter, filter));
@@ -138,7 +137,7 @@ public class GSSEnvironmentGVFilteredImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFFilterFilter basicGetFilter() {
+	public GSSFilterFilter basicGetFilter() {
 		return filter;
 	}
 
@@ -147,8 +146,8 @@ public class GSSEnvironmentGVFilteredImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFilter(TMTCIFFilterFilter newFilter) {
-		TMTCIFFilterFilter oldFilter = filter;
+	public void setFilter(GSSFilterFilter newFilter) {
+		GSSFilterFilter oldFilter = filter;
 		filter = newFilter;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, environmentPackage.GSS_ENVIRONMENT_GV_FILTERED__FILTER, oldFilter, filter));
@@ -184,7 +183,7 @@ public class GSSEnvironmentGVFilteredImpl extends MinimalEObjectImpl.Container i
 				setGlobalVarRef((GSSEnvironmentGlobalVar)newValue);
 				return;
 			case environmentPackage.GSS_ENVIRONMENT_GV_FILTERED__FILTER:
-				setFilter((TMTCIFFilterFilter)newValue);
+				setFilter((GSSFilterFilter)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -202,7 +201,7 @@ public class GSSEnvironmentGVFilteredImpl extends MinimalEObjectImpl.Container i
 				setGlobalVarRef((GSSEnvironmentGlobalVar)null);
 				return;
 			case environmentPackage.GSS_ENVIRONMENT_GV_FILTERED__FILTER:
-				setFilter((TMTCIFFilterFilter)null);
+				setFilter((GSSFilterFilter)null);
 				return;
 		}
 		super.eUnset(featureID);

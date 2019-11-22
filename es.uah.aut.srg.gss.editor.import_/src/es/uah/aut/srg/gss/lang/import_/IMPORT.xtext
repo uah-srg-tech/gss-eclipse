@@ -1,0 +1,70 @@
+grammar es.uah.aut.srg.gss.lang.import_.IMPORT with org.eclipse.xtext.common.Terminals
+
+import "http://srg.aut.uah.es/gss/import" 
+import "http://srg.aut.uah.es/gss/common" as common 
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+import "http://srg.aut.uah.es/gss/format" as format
+
+GSSModelFile returns common::GSSModelFile:
+	(imports+=GSSModelFileImport)*
+	element=GSSImportImport
+;
+
+GSSModelFileImport returns common::GSSModelFileImport: 
+	'import' ':=' importURI=STRING ';'
+;
+
+GSSImportImport returns GSSImportImport:
+	'GSSImportImport'
+	name = ID
+	'{'
+		(('uri' ':=' uri=QualifiedName ';')
+		& ('version' ':=' version=Version ';'))
+		'from' ':=' from=[format::GSSFormatFormat|VersionedQualifiedName] ';'
+		'to' ':=' ('NULL' | to=[format::GSSFormatFormat|VersionedQualifiedName]) ';'
+		(dataSource+=GSSImportDataSource)+ 
+		(virtualSize=GSSImportVirtualSize)?
+	'}' ';'
+;
+
+GSSImportDataSource returns GSSImportDataSource:
+	'GSSImportDataSource' '{'
+		'FieldRef' ':=' FieldRef=[format::GSSFormatField|VersionedQualifiedReferenceName] ';'
+		'leftTrim' ':=' leftTrim=INTEGER ';'
+		'rightTrim' ':=' rightTrim=INTEGER ';'
+	'}' ';'
+;
+
+GSSImportVirtualSize returns GSSImportVirtualSize:
+	'GSSImportVirtualSize' '{'
+		'FieldRef' ':=' FieldRef=[format::GSSFormatField|VersionedQualifiedReferenceName] ';'
+		'to' ':=' to=[format::GSSFormatField|VersionedQualifiedReferenceName] ';'
+		('addSize' ':=' addSize=INTEGER ';')?
+		('unit' ':=' unit=GSSImportUnit ';')?
+	'}' ';'
+;
+
+enum GSSImportUnit returns GSSImportUnit:
+	bits = 'bits' | bytes = 'bytes'
+;
+
+QualifiedName returns ecore::EString:
+	ID ('.' ID)*;
+
+Version returns ecore::EString:
+	(INT | ((INT)? ID)) ('.' (INT | ((INT)? ID)))*
+	;
+
+VersionedQualifiedName returns ecore::EString:
+	QualifiedName '(' Version ')'
+	;
+
+VersionedQualifiedReferenceName returns ecore::EString:
+	(VersionedQualifiedName '::')? ID ('::' ID)*;
+
+terminal HEXADECIMAL returns ecore::EString:
+	('0x' (('0'..'9') | ('a'..'f') | ('A'..'F'))+);
+
+INTEGER returns ecore::EString:
+	('-'? INT | HEXADECIMAL);

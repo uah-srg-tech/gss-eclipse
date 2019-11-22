@@ -10,8 +10,7 @@
  */
 package es.uah.aut.srg.gss.environment;
 
-import es.uah.aut.srg.tmtcif.filter.TMTCIFFilterFilter;
-
+import es.uah.aut.srg.gss.filter.GSSFilterFilter;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -67,12 +66,12 @@ public interface GSSEnvironmentGVFiltered extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Filter</em>' reference.
-	 * @see #setFilter(TMTCIFFilterFilter)
+	 * @see #setFilter(GSSFilterFilter)
 	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentGVFiltered_Filter()
 	 * @model
 	 * @generated
 	 */
-	TMTCIFFilterFilter getFilter();
+	GSSFilterFilter getFilter();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentGVFiltered#getFilter <em>Filter</em>}' reference.
@@ -82,6 +81,6 @@ public interface GSSEnvironmentGVFiltered extends EObject {
 	 * @see #getFilter()
 	 * @generated
 	 */
-	void setFilter(TMTCIFFilterFilter value);
+	void setFilter(GSSFilterFilter value);
 
 } // GSSEnvironmentGVFiltered

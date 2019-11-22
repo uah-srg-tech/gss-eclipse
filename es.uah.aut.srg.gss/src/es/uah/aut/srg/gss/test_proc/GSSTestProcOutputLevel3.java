@@ -10,8 +10,8 @@
  */
 package es.uah.aut.srg.gss.test_proc;
 
-import es.uah.aut.srg.tmtcif.format.TMTCIFFormatFormat;
-import es.uah.aut.srg.tmtcif.import_.TMTCIFImportImport;
+import es.uah.aut.srg.gss.format.GSSFormatFormat;
+import es.uah.aut.srg.gss.import_.GSSImportImport;
 
 /**
  * <!-- begin-user-doc -->
@@ -49,12 +49,12 @@ public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level3</em>' reference.
-	 * @see #setLevel3(TMTCIFFormatFormat)
+	 * @see #setLevel3(GSSFormatFormat)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel3_Level3()
 	 * @model
 	 * @generated
 	 */
-	TMTCIFFormatFormat getLevel3();
+	GSSFormatFormat getLevel3();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel3 <em>Level3</em>}' reference.
@@ -64,7 +64,7 @@ public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
 	 * @see #getLevel3()
 	 * @generated
 	 */
-	void setLevel3(TMTCIFFormatFormat value);
+	void setLevel3(GSSFormatFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Level3 filter</b></em>' containment reference.
@@ -101,12 +101,12 @@ public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level2</em>' reference.
-	 * @see #setLevel2(TMTCIFFormatFormat)
+	 * @see #setLevel2(GSSFormatFormat)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel3_Level2()
 	 * @model
 	 * @generated
 	 */
-	TMTCIFFormatFormat getLevel2();
+	GSSFormatFormat getLevel2();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel2 <em>Level2</em>}' reference.
@@ -116,7 +116,7 @@ public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
 	 * @see #getLevel2()
 	 * @generated
 	 */
-	void setLevel2(TMTCIFFormatFormat value);
+	void setLevel2(GSSFormatFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Level3 from level2</b></em>' reference.
@@ -127,12 +127,12 @@ public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level3 from level2</em>' reference.
-	 * @see #setLevel3_from_level2(TMTCIFImportImport)
+	 * @see #setLevel3_from_level2(GSSImportImport)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel3_Level3_from_level2()
 	 * @model
 	 * @generated
 	 */
-	TMTCIFImportImport getLevel3_from_level2();
+	GSSImportImport getLevel3_from_level2();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel3_from_level2 <em>Level3 from level2</em>}' reference.
@@ -142,7 +142,7 @@ public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
 	 * @see #getLevel3_from_level2()
 	 * @generated
 	 */
-	void setLevel3_from_level2(TMTCIFImportImport value);
+	void setLevel3_from_level2(GSSImportImport value);
 
 	/**
 	 * Returns the value of the '<em><b>Level2 filter</b></em>' containment reference.
@@ -179,12 +179,12 @@ public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level1</em>' reference.
-	 * @see #setLevel1(TMTCIFFormatFormat)
+	 * @see #setLevel1(GSSFormatFormat)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel3_Level1()
 	 * @model
 	 * @generated
 	 */
-	TMTCIFFormatFormat getLevel1();
+	GSSFormatFormat getLevel1();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel1 <em>Level1</em>}' reference.
@@ -194,7 +194,7 @@ public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
 	 * @see #getLevel1()
 	 * @generated
 	 */
-	void setLevel1(TMTCIFFormatFormat value);
+	void setLevel1(GSSFormatFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Level2 from level1</b></em>' reference.
@@ -205,12 +205,12 @@ public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level2 from level1</em>' reference.
-	 * @see #setLevel2_from_level1(TMTCIFImportImport)
+	 * @see #setLevel2_from_level1(GSSImportImport)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel3_Level2_from_level1()
 	 * @model
 	 * @generated
 	 */
-	TMTCIFImportImport getLevel2_from_level1();
+	GSSImportImport getLevel2_from_level1();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel2_from_level1 <em>Level2 from level1</em>}' reference.
@@ -220,7 +220,7 @@ public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
 	 * @see #getLevel2_from_level1()
 	 * @generated
 	 */
-	void setLevel2_from_level1(TMTCIFImportImport value);
+	void setLevel2_from_level1(GSSImportImport value);
 
 	/**
 	 * Returns the value of the '<em><b>Level1 filter</b></em>' containment reference.
@@ -257,12 +257,12 @@ public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level0</em>' reference.
-	 * @see #setLevel0(TMTCIFFormatFormat)
+	 * @see #setLevel0(GSSFormatFormat)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel3_Level0()
 	 * @model
 	 * @generated
 	 */
-	TMTCIFFormatFormat getLevel0();
+	GSSFormatFormat getLevel0();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel0 <em>Level0</em>}' reference.
@@ -272,7 +272,7 @@ public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
 	 * @see #getLevel0()
 	 * @generated
 	 */
-	void setLevel0(TMTCIFFormatFormat value);
+	void setLevel0(GSSFormatFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Level1 from level0</b></em>' reference.
@@ -283,12 +283,12 @@ public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level1 from level0</em>' reference.
-	 * @see #setLevel1_from_level0(TMTCIFImportImport)
+	 * @see #setLevel1_from_level0(GSSImportImport)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputLevel3_Level1_from_level0()
 	 * @model
 	 * @generated
 	 */
-	TMTCIFImportImport getLevel1_from_level0();
+	GSSImportImport getLevel1_from_level0();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3#getLevel1_from_level0 <em>Level1 from level0</em>}' reference.
@@ -298,7 +298,7 @@ public interface GSSTestProcOutputLevel3 extends GSSTestProcOutput {
 	 * @see #getLevel1_from_level0()
 	 * @generated
 	 */
-	void setLevel1_from_level0(TMTCIFImportImport value);
+	void setLevel1_from_level0(GSSImportImport value);
 
 	/**
 	 * Returns the value of the '<em><b>Level0 filter</b></em>' containment reference.

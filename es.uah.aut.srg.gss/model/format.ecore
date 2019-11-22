@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="format" nsURI="http://srg.aut.uah.es/gss/format" nsPrefix="gss">
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSFormatFormatType">
+    <eLiterals name="TM" literal="TM"/>
+    <eLiterals name="TC" value="1" literal="TC"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatFormat" eSuperTypes="common.ecore#//GSSModelElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocol" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSFormatFormatType"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CSField" upperBound="-1"
+        eType="#//GSSFormatCSField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CSFormulaField" upperBound="-1"
+        eType="#//GSSFormatCSFormulaField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="VSField" upperBound="-1"
+        eType="#//GSSFormatVSField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="FDICField" upperBound="-1"
+        eType="#//GSSFormatFDICField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="VRFieldSize" upperBound="-1"
+        eType="#//GSSFormatVRFieldSize" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AField" upperBound="-1"
+        eType="#//GSSFormatAField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AIField" upperBound="-1"
+        eType="#//GSSFormatAIField" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSFormatFieldType">
+    <eLiterals name="structured" literal="structured"/>
+    <eLiterals name="uint" value="1" literal="uint"/>
+    <eLiterals name="flag" value="2" literal="flag"/>
+    <eLiterals name="enumerated" value="3" literal="enumerated"/>
+    <eLiterals name="bit_vector" value="4" literal="bit_vector"/>
+    <eLiterals name="byte_vector" value="5" literal="byte_vector"/>
+    <eLiterals name="float" value="6" literal="float"/>
+    <eLiterals name="deduced" value="7" literal="deduced"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSFormatFieldByteOrder">
+    <eLiterals name="big_endian" literal="big_endian"/>
+    <eLiterals name="little_endian" value="1" literal="little_endian"/>
+    <eLiterals name="na" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSFormatSFieldFirstBit">
+    <eLiterals name="MSB" literal="MSB"/>
+    <eLiterals name="LSB" value="1" literal="LSB"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSFormatCheckType">
+    <eLiterals name="crc16"/>
+    <eLiterals name="checksum16" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatField" abstract="true" eSuperTypes="common.ecore#//GSSModelObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fid" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pfid" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatCSField" eSuperTypes="#//GSSFormatField">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSFormatFieldType"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="byteOrder" lowerBound="1"
+        eType="#//GSSFormatFieldByteOrder" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstBit" lowerBound="1"
+        eType="#//GSSFormatSFieldFirstBit" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="size" lowerBound="1" eType="#//GSSFormatBytesBits"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalOffset" lowerBound="1"
+        eType="#//GSSFormatBytesBits" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatCSFormulaField" eSuperTypes="#//GSSFormatCSField">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formula" lowerBound="1"
+        eType="#//GSSFormatFormula" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatVSField" eSuperTypes="#//GSSFormatField">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSFormatFieldType"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="byteOrder" lowerBound="1"
+        eType="#//GSSFormatFieldByteOrder" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstBit" lowerBound="1"
+        eType="#//GSSFormatSFieldFirstBit" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constSize" lowerBound="1"
+        eType="#//GSSFormatBytesBits" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableSize" lowerBound="1"
+        eType="#//GSSFormatVariableSize" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="maxSize" lowerBound="1"
+        eType="#//GSSFormatBytesBits" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalOffset" lowerBound="1"
+        eType="#//GSSFormatBytesBits" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatVRFieldSize" eSuperTypes="#//GSSFormatField"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatFDICField" eSuperTypes="#//GSSFormatField">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkType" lowerBound="1"
+        eType="#//GSSFormatCheckType" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="byteOrder" lowerBound="1"
+        eType="#//GSSFormatFieldByteOrder" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstBit" lowerBound="1"
+        eType="#//GSSFormatSFieldFirstBit" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="size" lowerBound="1" eType="#//GSSFormatBytesBits"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="floatingOffset" lowerBound="1"
+        eType="#//GSSFormatFloatingOffset" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sortedFieldsToCheck" lowerBound="1"
+        eType="#//GSSFormatSortedFieldsToCheck" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatAField" eSuperTypes="#//GSSFormatField">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSFormatFieldType"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="byteOrder" lowerBound="1"
+        eType="#//GSSFormatFieldByteOrder" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstBit" lowerBound="1"
+        eType="#//GSSFormatSFieldFirstBit" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arrayDimension" lowerBound="1"
+        eType="#//GSSFormatArrayDimension" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="size" lowerBound="1" eType="#//GSSFormatBytesBits"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalOffset" lowerBound="1"
+        eType="#//GSSFormatBytesBits" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatAIField" eSuperTypes="#//GSSFormatField">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSFormatFieldType"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="byteOrder" lowerBound="1"
+        eType="#//GSSFormatFieldByteOrder" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstBit" lowerBound="1"
+        eType="#//GSSFormatSFieldFirstBit" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arrayRef" lowerBound="1"
+        eType="#//GSSFormatArrayRef" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="size" lowerBound="1" eType="#//GSSFormatBytesBits"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="localOffset" lowerBound="1"
+        eType="#//GSSFormatBytesBits" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatBytesBits">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bytes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bits" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatFormula">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="slope" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intercept" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSFormatUnit">
+    <eLiterals name="bytes"/>
+    <eLiterals name="bits" value="1"/>
+    <eLiterals name="halfword" value="2"/>
+    <eLiterals name="string10" value="3"/>
+    <eLiterals name="string17" value="4"/>
+    <eLiterals name="string69" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSFormatPower">
+    <eLiterals name="_2" literal="2"/>
+    <eLiterals name="_2_with_0" value="1" literal="2_with_0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatVariableSize">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fidRef" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" lowerBound="1" eType="#//GSSFormatUnit"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="power" eType="#//GSSFormatPower"
+        unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatFloatingOffset">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fidRef" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatSortedFieldsToCheck">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldToCheck" upperBound="-1"
+        eType="#//GSSFormatFieldToCheck" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatFieldToCheck">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fidRef" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatArrayDimension">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fidRef" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxItems" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFormatArrayRef">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fidRef" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1678,34 +1678,34 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTMformatKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Assignment cTMformatAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final CrossReference cTMformatTMTCIFFormatFormatCrossReference_12_0 = (CrossReference)cTMformatAssignment_12.eContents().get(0);
-		private final RuleCall cTMformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1 = (RuleCall)cTMformatTMTCIFFormatFormatCrossReference_12_0.eContents().get(1);
+		private final CrossReference cTMformatGSSFormatFormatCrossReference_12_0 = (CrossReference)cTMformatAssignment_12.eContents().get(0);
+		private final RuleCall cTMformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1 = (RuleCall)cTMformatGSSFormatFormatCrossReference_12_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Keyword cTCformatKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cColonEqualsSignKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Assignment cTCformatAssignment_16 = (Assignment)cGroup.eContents().get(16);
-		private final CrossReference cTCformatTMTCIFFormatFormatCrossReference_16_0 = (CrossReference)cTCformatAssignment_16.eContents().get(0);
-		private final RuleCall cTCformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_16_0_1 = (RuleCall)cTCformatTMTCIFFormatFormatCrossReference_16_0.eContents().get(1);
+		private final CrossReference cTCformatGSSFormatFormatCrossReference_16_0 = (CrossReference)cTCformatAssignment_16.eContents().get(0);
+		private final RuleCall cTCformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_16_0_1 = (RuleCall)cTCformatGSSFormatFormatCrossReference_16_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_17 = (Keyword)cGroup.eContents().get(17);
 		private final Keyword cInputFilterKeyword_18 = (Keyword)cGroup.eContents().get(18);
 		private final Keyword cColonEqualsSignKeyword_19 = (Keyword)cGroup.eContents().get(19);
 		private final Assignment cInputFilterAssignment_20 = (Assignment)cGroup.eContents().get(20);
-		private final CrossReference cInputFilterTMTCIFFilterFilterCrossReference_20_0 = (CrossReference)cInputFilterAssignment_20.eContents().get(0);
-		private final RuleCall cInputFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_20_0_1 = (RuleCall)cInputFilterTMTCIFFilterFilterCrossReference_20_0.eContents().get(1);
+		private final CrossReference cInputFilterGSSFilterFilterCrossReference_20_0 = (CrossReference)cInputFilterAssignment_20.eContents().get(0);
+		private final RuleCall cInputFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_20_0_1 = (RuleCall)cInputFilterGSSFilterFilterCrossReference_20_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_21 = (Keyword)cGroup.eContents().get(21);
 		private final Group cGroup_22 = (Group)cGroup.eContents().get(22);
 		private final Keyword cExport_to_prev_LevelKeyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_22_1 = (Keyword)cGroup_22.eContents().get(1);
 		private final Assignment cExport_to_prev_LevelAssignment_22_2 = (Assignment)cGroup_22.eContents().get(2);
-		private final CrossReference cExport_to_prev_LevelTMTCIFExportExportCrossReference_22_2_0 = (CrossReference)cExport_to_prev_LevelAssignment_22_2.eContents().get(0);
-		private final RuleCall cExport_to_prev_LevelTMTCIFExportExportVersionedQualifiedNameParserRuleCall_22_2_0_1 = (RuleCall)cExport_to_prev_LevelTMTCIFExportExportCrossReference_22_2_0.eContents().get(1);
+		private final CrossReference cExport_to_prev_LevelGSSExportExportCrossReference_22_2_0 = (CrossReference)cExport_to_prev_LevelAssignment_22_2.eContents().get(0);
+		private final RuleCall cExport_to_prev_LevelGSSExportExportVersionedQualifiedNameParserRuleCall_22_2_0_1 = (RuleCall)cExport_to_prev_LevelGSSExportExportCrossReference_22_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_22_3 = (Keyword)cGroup_22.eContents().get(3);
 		private final Group cGroup_23 = (Group)cGroup.eContents().get(23);
 		private final Keyword cImport_from_prev_LevelKeyword_23_0 = (Keyword)cGroup_23.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_23_1 = (Keyword)cGroup_23.eContents().get(1);
 		private final Assignment cImport_from_prev_LevelAssignment_23_2 = (Assignment)cGroup_23.eContents().get(2);
-		private final CrossReference cImport_from_prev_LevelTMTCIFImportImportCrossReference_23_2_0 = (CrossReference)cImport_from_prev_LevelAssignment_23_2.eContents().get(0);
-		private final RuleCall cImport_from_prev_LevelTMTCIFImportImportVersionedQualifiedNameParserRuleCall_23_2_0_1 = (RuleCall)cImport_from_prev_LevelTMTCIFImportImportCrossReference_23_2_0.eContents().get(1);
+		private final CrossReference cImport_from_prev_LevelGSSImportImportCrossReference_23_2_0 = (CrossReference)cImport_from_prev_LevelAssignment_23_2.eContents().get(0);
+		private final RuleCall cImport_from_prev_LevelGSSImportImportVersionedQualifiedNameParserRuleCall_23_2_0_1 = (RuleCall)cImport_from_prev_LevelGSSImportImportCrossReference_23_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_23_3 = (Keyword)cGroup_23.eContents().get(3);
 		private final Keyword cRightCurlyBracketKeyword_24 = (Keyword)cGroup.eContents().get(24);
 		private final Keyword cSemicolonKeyword_25 = (Keyword)cGroup.eContents().get(25);
@@ -1714,20 +1714,20 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSEnvironmentLevelInOut' '{'
 		//	'id' ':=' id=INTEGER ';'
 		//	'name' ':=' name=STRING ';'
-		//	'TMformat' ':=' TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
-		//	'TCformat' ':=' TCformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
-		//	'inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
-		//	export_to_prev_Level=[export::TMTCIFExportExport|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
-		//	import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
+		//	'TMformat' ':=' TMformat=[format::GSSFormatFormat|VersionedQualifiedName] ';'
+		//	'TCformat' ':=' TCformat=[format::GSSFormatFormat|VersionedQualifiedName] ';'
+		//	'inputFilter' ':=' inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
+		//	export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
+		//	import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName] ';')?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSEnvironmentLevelInOut' '{' 'id' ':=' id=INTEGER ';' 'name' ':=' name=STRING ';' 'TMformat' ':='
-		//TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';' 'TCformat' ':='
-		//TCformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';' 'inputFilter' ':='
-		//inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
-		//export_to_prev_Level=[export::TMTCIFExportExport|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
-		//import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')? '}' ';'
+		//TMformat=[format::GSSFormatFormat|VersionedQualifiedName] ';' 'TCformat' ':='
+		//TCformat=[format::GSSFormatFormat|VersionedQualifiedName] ';' 'inputFilter' ':='
+		//inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
+		//export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
+		//import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName] ';')? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSEnvironmentLevelInOut'
@@ -1772,14 +1772,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
 		
-		//TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName]
+		//TMformat=[format::GSSFormatFormat|VersionedQualifiedName]
 		public Assignment getTMformatAssignment_12() { return cTMformatAssignment_12; }
 		
-		//[format::TMTCIFFormatFormat|VersionedQualifiedName]
-		public CrossReference getTMformatTMTCIFFormatFormatCrossReference_12_0() { return cTMformatTMTCIFFormatFormatCrossReference_12_0; }
+		//[format::GSSFormatFormat|VersionedQualifiedName]
+		public CrossReference getTMformatGSSFormatFormatCrossReference_12_0() { return cTMformatGSSFormatFormatCrossReference_12_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getTMformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1() { return cTMformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1; }
+		public RuleCall getTMformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1() { return cTMformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
@@ -1790,14 +1790,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_15() { return cColonEqualsSignKeyword_15; }
 		
-		//TCformat=[format::TMTCIFFormatFormat|VersionedQualifiedName]
+		//TCformat=[format::GSSFormatFormat|VersionedQualifiedName]
 		public Assignment getTCformatAssignment_16() { return cTCformatAssignment_16; }
 		
-		//[format::TMTCIFFormatFormat|VersionedQualifiedName]
-		public CrossReference getTCformatTMTCIFFormatFormatCrossReference_16_0() { return cTCformatTMTCIFFormatFormatCrossReference_16_0; }
+		//[format::GSSFormatFormat|VersionedQualifiedName]
+		public CrossReference getTCformatGSSFormatFormatCrossReference_16_0() { return cTCformatGSSFormatFormatCrossReference_16_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getTCformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_16_0_1() { return cTCformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_16_0_1; }
+		public RuleCall getTCformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_16_0_1() { return cTCformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_16_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_17() { return cSemicolonKeyword_17; }
@@ -1808,19 +1808,19 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_19() { return cColonEqualsSignKeyword_19; }
 		
-		//inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName]
+		//inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName]
 		public Assignment getInputFilterAssignment_20() { return cInputFilterAssignment_20; }
 		
-		//[filter::TMTCIFFilterFilter|VersionedQualifiedName]
-		public CrossReference getInputFilterTMTCIFFilterFilterCrossReference_20_0() { return cInputFilterTMTCIFFilterFilterCrossReference_20_0; }
+		//[filter::GSSFilterFilter|VersionedQualifiedName]
+		public CrossReference getInputFilterGSSFilterFilterCrossReference_20_0() { return cInputFilterGSSFilterFilterCrossReference_20_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getInputFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_20_0_1() { return cInputFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_20_0_1; }
+		public RuleCall getInputFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_20_0_1() { return cInputFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_20_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
 		
-		//('export_to_prev_Level' ':=' export_to_prev_Level=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+		//('export_to_prev_Level' ':=' export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')?
 		public Group getGroup_22() { return cGroup_22; }
 		
 		//'export_to_prev_Level'
@@ -1829,19 +1829,19 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_22_1() { return cColonEqualsSignKeyword_22_1; }
 		
-		//export_to_prev_Level=[export::TMTCIFExportExport|VersionedQualifiedName]
+		//export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName]
 		public Assignment getExport_to_prev_LevelAssignment_22_2() { return cExport_to_prev_LevelAssignment_22_2; }
 		
-		//[export::TMTCIFExportExport|VersionedQualifiedName]
-		public CrossReference getExport_to_prev_LevelTMTCIFExportExportCrossReference_22_2_0() { return cExport_to_prev_LevelTMTCIFExportExportCrossReference_22_2_0; }
+		//[export::GSSExportExport|VersionedQualifiedName]
+		public CrossReference getExport_to_prev_LevelGSSExportExportCrossReference_22_2_0() { return cExport_to_prev_LevelGSSExportExportCrossReference_22_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getExport_to_prev_LevelTMTCIFExportExportVersionedQualifiedNameParserRuleCall_22_2_0_1() { return cExport_to_prev_LevelTMTCIFExportExportVersionedQualifiedNameParserRuleCall_22_2_0_1; }
+		public RuleCall getExport_to_prev_LevelGSSExportExportVersionedQualifiedNameParserRuleCall_22_2_0_1() { return cExport_to_prev_LevelGSSExportExportVersionedQualifiedNameParserRuleCall_22_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_22_3() { return cSemicolonKeyword_22_3; }
 		
-		//('import_from_prev_Level' ':=' import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
+		//('import_from_prev_Level' ':=' import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName] ';')?
 		public Group getGroup_23() { return cGroup_23; }
 		
 		//'import_from_prev_Level'
@@ -1850,14 +1850,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_23_1() { return cColonEqualsSignKeyword_23_1; }
 		
-		//import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName]
+		//import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName]
 		public Assignment getImport_from_prev_LevelAssignment_23_2() { return cImport_from_prev_LevelAssignment_23_2; }
 		
-		//[import_::TMTCIFImportImport|VersionedQualifiedName]
-		public CrossReference getImport_from_prev_LevelTMTCIFImportImportCrossReference_23_2_0() { return cImport_from_prev_LevelTMTCIFImportImportCrossReference_23_2_0; }
+		//[import_::GSSImportImport|VersionedQualifiedName]
+		public CrossReference getImport_from_prev_LevelGSSImportImportCrossReference_23_2_0() { return cImport_from_prev_LevelGSSImportImportCrossReference_23_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getImport_from_prev_LevelTMTCIFImportImportVersionedQualifiedNameParserRuleCall_23_2_0_1() { return cImport_from_prev_LevelTMTCIFImportImportVersionedQualifiedNameParserRuleCall_23_2_0_1; }
+		public RuleCall getImport_from_prev_LevelGSSImportImportVersionedQualifiedNameParserRuleCall_23_2_0_1() { return cImport_from_prev_LevelGSSImportImportVersionedQualifiedNameParserRuleCall_23_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_23_3() { return cSemicolonKeyword_23_3; }
@@ -1886,15 +1886,15 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTCformatKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Assignment cTCformatAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final CrossReference cTCformatTMTCIFFormatFormatCrossReference_12_0 = (CrossReference)cTCformatAssignment_12.eContents().get(0);
-		private final RuleCall cTCformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1 = (RuleCall)cTCformatTMTCIFFormatFormatCrossReference_12_0.eContents().get(1);
+		private final CrossReference cTCformatGSSFormatFormatCrossReference_12_0 = (CrossReference)cTCformatAssignment_12.eContents().get(0);
+		private final RuleCall cTCformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1 = (RuleCall)cTCformatGSSFormatFormatCrossReference_12_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
 		private final Keyword cExport_to_prev_LevelKeyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_14_1 = (Keyword)cGroup_14.eContents().get(1);
 		private final Assignment cExport_to_prev_LevelAssignment_14_2 = (Assignment)cGroup_14.eContents().get(2);
-		private final CrossReference cExport_to_prev_LevelTMTCIFExportExportCrossReference_14_2_0 = (CrossReference)cExport_to_prev_LevelAssignment_14_2.eContents().get(0);
-		private final RuleCall cExport_to_prev_LevelTMTCIFExportExportVersionedQualifiedNameParserRuleCall_14_2_0_1 = (RuleCall)cExport_to_prev_LevelTMTCIFExportExportCrossReference_14_2_0.eContents().get(1);
+		private final CrossReference cExport_to_prev_LevelGSSExportExportCrossReference_14_2_0 = (CrossReference)cExport_to_prev_LevelAssignment_14_2.eContents().get(0);
+		private final RuleCall cExport_to_prev_LevelGSSExportExportVersionedQualifiedNameParserRuleCall_14_2_0_1 = (RuleCall)cExport_to_prev_LevelGSSExportExportCrossReference_14_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_14_3 = (Keyword)cGroup_14.eContents().get(3);
 		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Keyword cSemicolonKeyword_16 = (Keyword)cGroup.eContents().get(16);
@@ -1903,14 +1903,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSEnvironmentLevelIn' '{'
 		//	'id' ':=' id=INTEGER ';'
 		//	'name' ':=' name=STRING ';'
-		//	'TCformat' ':=' TCformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
-		//	export_to_prev_Level=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+		//	'TCformat' ':=' TCformat=[format::GSSFormatFormat|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
+		//	export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSEnvironmentLevelIn' '{' 'id' ':=' id=INTEGER ';' 'name' ':=' name=STRING ';' 'TCformat' ':='
-		//TCformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
-		//export_to_prev_Level=[export::TMTCIFExportExport|VersionedQualifiedName] ';')? '}' ';'
+		//TCformat=[format::GSSFormatFormat|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
+		//export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSEnvironmentLevelIn'
@@ -1955,19 +1955,19 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
 		
-		//TCformat=[format::TMTCIFFormatFormat|VersionedQualifiedName]
+		//TCformat=[format::GSSFormatFormat|VersionedQualifiedName]
 		public Assignment getTCformatAssignment_12() { return cTCformatAssignment_12; }
 		
-		//[format::TMTCIFFormatFormat|VersionedQualifiedName]
-		public CrossReference getTCformatTMTCIFFormatFormatCrossReference_12_0() { return cTCformatTMTCIFFormatFormatCrossReference_12_0; }
+		//[format::GSSFormatFormat|VersionedQualifiedName]
+		public CrossReference getTCformatGSSFormatFormatCrossReference_12_0() { return cTCformatGSSFormatFormatCrossReference_12_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getTCformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1() { return cTCformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1; }
+		public RuleCall getTCformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1() { return cTCformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
 		
-		//('export_to_prev_Level' ':=' export_to_prev_Level=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+		//('export_to_prev_Level' ':=' export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')?
 		public Group getGroup_14() { return cGroup_14; }
 		
 		//'export_to_prev_Level'
@@ -1976,14 +1976,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_14_1() { return cColonEqualsSignKeyword_14_1; }
 		
-		//export_to_prev_Level=[export::TMTCIFExportExport|VersionedQualifiedName]
+		//export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName]
 		public Assignment getExport_to_prev_LevelAssignment_14_2() { return cExport_to_prev_LevelAssignment_14_2; }
 		
-		//[export::TMTCIFExportExport|VersionedQualifiedName]
-		public CrossReference getExport_to_prev_LevelTMTCIFExportExportCrossReference_14_2_0() { return cExport_to_prev_LevelTMTCIFExportExportCrossReference_14_2_0; }
+		//[export::GSSExportExport|VersionedQualifiedName]
+		public CrossReference getExport_to_prev_LevelGSSExportExportCrossReference_14_2_0() { return cExport_to_prev_LevelGSSExportExportCrossReference_14_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getExport_to_prev_LevelTMTCIFExportExportVersionedQualifiedNameParserRuleCall_14_2_0_1() { return cExport_to_prev_LevelTMTCIFExportExportVersionedQualifiedNameParserRuleCall_14_2_0_1; }
+		public RuleCall getExport_to_prev_LevelGSSExportExportVersionedQualifiedNameParserRuleCall_14_2_0_1() { return cExport_to_prev_LevelGSSExportExportVersionedQualifiedNameParserRuleCall_14_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_14_3() { return cSemicolonKeyword_14_3; }
@@ -2012,21 +2012,21 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTMformatKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Assignment cTMformatAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final CrossReference cTMformatTMTCIFFormatFormatCrossReference_12_0 = (CrossReference)cTMformatAssignment_12.eContents().get(0);
-		private final RuleCall cTMformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1 = (RuleCall)cTMformatTMTCIFFormatFormatCrossReference_12_0.eContents().get(1);
+		private final CrossReference cTMformatGSSFormatFormatCrossReference_12_0 = (CrossReference)cTMformatAssignment_12.eContents().get(0);
+		private final RuleCall cTMformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1 = (RuleCall)cTMformatGSSFormatFormatCrossReference_12_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Keyword cInputFilterKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cColonEqualsSignKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Assignment cInputFilterAssignment_16 = (Assignment)cGroup.eContents().get(16);
-		private final CrossReference cInputFilterTMTCIFFilterFilterCrossReference_16_0 = (CrossReference)cInputFilterAssignment_16.eContents().get(0);
-		private final RuleCall cInputFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_16_0_1 = (RuleCall)cInputFilterTMTCIFFilterFilterCrossReference_16_0.eContents().get(1);
+		private final CrossReference cInputFilterGSSFilterFilterCrossReference_16_0 = (CrossReference)cInputFilterAssignment_16.eContents().get(0);
+		private final RuleCall cInputFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_16_0_1 = (RuleCall)cInputFilterGSSFilterFilterCrossReference_16_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_17 = (Keyword)cGroup.eContents().get(17);
 		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
 		private final Keyword cImport_from_prev_LevelKeyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_18_1 = (Keyword)cGroup_18.eContents().get(1);
 		private final Assignment cImport_from_prev_LevelAssignment_18_2 = (Assignment)cGroup_18.eContents().get(2);
-		private final CrossReference cImport_from_prev_LevelTMTCIFImportImportCrossReference_18_2_0 = (CrossReference)cImport_from_prev_LevelAssignment_18_2.eContents().get(0);
-		private final RuleCall cImport_from_prev_LevelTMTCIFImportImportVersionedQualifiedNameParserRuleCall_18_2_0_1 = (RuleCall)cImport_from_prev_LevelTMTCIFImportImportCrossReference_18_2_0.eContents().get(1);
+		private final CrossReference cImport_from_prev_LevelGSSImportImportCrossReference_18_2_0 = (CrossReference)cImport_from_prev_LevelAssignment_18_2.eContents().get(0);
+		private final RuleCall cImport_from_prev_LevelGSSImportImportVersionedQualifiedNameParserRuleCall_18_2_0_1 = (RuleCall)cImport_from_prev_LevelGSSImportImportCrossReference_18_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_18_3 = (Keyword)cGroup_18.eContents().get(3);
 		private final Keyword cRightCurlyBracketKeyword_19 = (Keyword)cGroup.eContents().get(19);
 		private final Keyword cSemicolonKeyword_20 = (Keyword)cGroup.eContents().get(20);
@@ -2035,16 +2035,16 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSEnvironmentLevelOut' '{'
 		//	'id' ':=' id=INTEGER ';'
 		//	'name' ':=' name=STRING ';'
-		//	'TMformat' ':=' TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
-		//	'inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';' ('import_from_prev_Level' ':='
-		//	import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
+		//	'TMformat' ':=' TMformat=[format::GSSFormatFormat|VersionedQualifiedName] ';'
+		//	'inputFilter' ':=' inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';' ('import_from_prev_Level' ':='
+		//	import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName] ';')?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSEnvironmentLevelOut' '{' 'id' ':=' id=INTEGER ';' 'name' ':=' name=STRING ';' 'TMformat' ':='
-		//TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';' 'inputFilter' ':='
-		//inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';' ('import_from_prev_Level' ':='
-		//import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')? '}' ';'
+		//TMformat=[format::GSSFormatFormat|VersionedQualifiedName] ';' 'inputFilter' ':='
+		//inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';' ('import_from_prev_Level' ':='
+		//import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName] ';')? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSEnvironmentLevelOut'
@@ -2089,14 +2089,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
 		
-		//TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName]
+		//TMformat=[format::GSSFormatFormat|VersionedQualifiedName]
 		public Assignment getTMformatAssignment_12() { return cTMformatAssignment_12; }
 		
-		//[format::TMTCIFFormatFormat|VersionedQualifiedName]
-		public CrossReference getTMformatTMTCIFFormatFormatCrossReference_12_0() { return cTMformatTMTCIFFormatFormatCrossReference_12_0; }
+		//[format::GSSFormatFormat|VersionedQualifiedName]
+		public CrossReference getTMformatGSSFormatFormatCrossReference_12_0() { return cTMformatGSSFormatFormatCrossReference_12_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getTMformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1() { return cTMformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1; }
+		public RuleCall getTMformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1() { return cTMformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_12_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
@@ -2107,19 +2107,19 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_15() { return cColonEqualsSignKeyword_15; }
 		
-		//inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName]
+		//inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName]
 		public Assignment getInputFilterAssignment_16() { return cInputFilterAssignment_16; }
 		
-		//[filter::TMTCIFFilterFilter|VersionedQualifiedName]
-		public CrossReference getInputFilterTMTCIFFilterFilterCrossReference_16_0() { return cInputFilterTMTCIFFilterFilterCrossReference_16_0; }
+		//[filter::GSSFilterFilter|VersionedQualifiedName]
+		public CrossReference getInputFilterGSSFilterFilterCrossReference_16_0() { return cInputFilterGSSFilterFilterCrossReference_16_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getInputFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_16_0_1() { return cInputFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_16_0_1; }
+		public RuleCall getInputFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_16_0_1() { return cInputFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_16_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_17() { return cSemicolonKeyword_17; }
 		
-		//('import_from_prev_Level' ':=' import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
+		//('import_from_prev_Level' ':=' import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName] ';')?
 		public Group getGroup_18() { return cGroup_18; }
 		
 		//'import_from_prev_Level'
@@ -2128,14 +2128,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_18_1() { return cColonEqualsSignKeyword_18_1; }
 		
-		//import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName]
+		//import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName]
 		public Assignment getImport_from_prev_LevelAssignment_18_2() { return cImport_from_prev_LevelAssignment_18_2; }
 		
-		//[import_::TMTCIFImportImport|VersionedQualifiedName]
-		public CrossReference getImport_from_prev_LevelTMTCIFImportImportCrossReference_18_2_0() { return cImport_from_prev_LevelTMTCIFImportImportCrossReference_18_2_0; }
+		//[import_::GSSImportImport|VersionedQualifiedName]
+		public CrossReference getImport_from_prev_LevelGSSImportImportCrossReference_18_2_0() { return cImport_from_prev_LevelGSSImportImportCrossReference_18_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getImport_from_prev_LevelTMTCIFImportImportVersionedQualifiedNameParserRuleCall_18_2_0_1() { return cImport_from_prev_LevelTMTCIFImportImportVersionedQualifiedNameParserRuleCall_18_2_0_1; }
+		public RuleCall getImport_from_prev_LevelGSSImportImportVersionedQualifiedNameParserRuleCall_18_2_0_1() { return cImport_from_prev_LevelGSSImportImportVersionedQualifiedNameParserRuleCall_18_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_18_3() { return cSemicolonKeyword_18_3; }
@@ -2184,8 +2184,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cInputFilterKeyword_26 = (Keyword)cGroup.eContents().get(26);
 		private final Keyword cColonEqualsSignKeyword_27 = (Keyword)cGroup.eContents().get(27);
 		private final Assignment cInputFilterAssignment_28 = (Assignment)cGroup.eContents().get(28);
-		private final CrossReference cInputFilterTMTCIFFilterFilterCrossReference_28_0 = (CrossReference)cInputFilterAssignment_28.eContents().get(0);
-		private final RuleCall cInputFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_28_0_1 = (RuleCall)cInputFilterTMTCIFFilterFilterCrossReference_28_0.eContents().get(1);
+		private final CrossReference cInputFilterGSSFilterFilterCrossReference_28_0 = (CrossReference)cInputFilterAssignment_28.eContents().get(0);
+		private final RuleCall cInputFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_28_0_1 = (RuleCall)cInputFilterGSSFilterFilterCrossReference_28_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_29 = (Keyword)cGroup.eContents().get(29);
 		private final Assignment cUpperLevelsAssignment_30 = (Assignment)cGroup.eContents().get(30);
 		private final RuleCall cUpperLevelsGSSEnvironmentUpperLevelsParserRuleCall_30_0 = (RuleCall)cUpperLevelsAssignment_30.eContents().get(0);
@@ -2207,7 +2207,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'levels' ':=' levels=INTEGER ';'
 		//	'levelRef' ':=' levelRef=INTEGER ';'
-		//	'inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';'
+		//	'inputFilter' ':=' inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';'
 		//	UpperLevels+=GSSEnvironmentUpperLevels?
 		//	printingData=GSSEnvironmentPrintingData (period=GSSEnvironmentPeriod | intervalRange=GSSEnvironmentIntervalRange)?
 		//	'}' ';';
@@ -2215,7 +2215,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'GSSEnvironmentSpecialPacket' '{' 'status' ':=' status=GSSEnvironmentEnableDisable ';' 'name' ':=' name=STRING ';' 'id'
 		//':=' id=INTEGER ';' 'ifRef' ':=' ifRef=INTEGER ';' 'levels' ':=' levels=INTEGER ';' 'levelRef' ':=' levelRef=INTEGER
-		//';' 'inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';'
+		//';' 'inputFilter' ':=' inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';'
 		//UpperLevels+=GSSEnvironmentUpperLevels? printingData=GSSEnvironmentPrintingData (period=GSSEnvironmentPeriod |
 		//intervalRange=GSSEnvironmentIntervalRange)? '}' ';'
 		public Group getGroup() { return cGroup; }
@@ -2322,14 +2322,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_27() { return cColonEqualsSignKeyword_27; }
 		
-		//inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName]
+		//inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName]
 		public Assignment getInputFilterAssignment_28() { return cInputFilterAssignment_28; }
 		
-		//[filter::TMTCIFFilterFilter|VersionedQualifiedName]
-		public CrossReference getInputFilterTMTCIFFilterFilterCrossReference_28_0() { return cInputFilterTMTCIFFilterFilterCrossReference_28_0; }
+		//[filter::GSSFilterFilter|VersionedQualifiedName]
+		public CrossReference getInputFilterGSSFilterFilterCrossReference_28_0() { return cInputFilterGSSFilterFilterCrossReference_28_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getInputFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_28_0_1() { return cInputFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_28_0_1; }
+		public RuleCall getInputFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_28_0_1() { return cInputFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_28_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_29() { return cSemicolonKeyword_29; }
@@ -2703,22 +2703,22 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTMformatKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
 		private final Assignment cTMformatAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
-		private final CrossReference cTMformatTMTCIFFormatFormatCrossReference_6_2_0 = (CrossReference)cTMformatAssignment_6_2.eContents().get(0);
-		private final RuleCall cTMformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_6_2_0_1 = (RuleCall)cTMformatTMTCIFFormatFormatCrossReference_6_2_0.eContents().get(1);
+		private final CrossReference cTMformatGSSFormatFormatCrossReference_6_2_0 = (CrossReference)cTMformatAssignment_6_2.eContents().get(0);
+		private final RuleCall cTMformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_6_2_0_1 = (RuleCall)cTMformatGSSFormatFormatCrossReference_6_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_6_3 = (Keyword)cGroup_6.eContents().get(3);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cInputFilterKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
 		private final Assignment cInputFilterAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
-		private final CrossReference cInputFilterTMTCIFFilterFilterCrossReference_7_2_0 = (CrossReference)cInputFilterAssignment_7_2.eContents().get(0);
-		private final RuleCall cInputFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_7_2_0_1 = (RuleCall)cInputFilterTMTCIFFilterFilterCrossReference_7_2_0.eContents().get(1);
+		private final CrossReference cInputFilterGSSFilterFilterCrossReference_7_2_0 = (CrossReference)cInputFilterAssignment_7_2.eContents().get(0);
+		private final RuleCall cInputFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_7_2_0_1 = (RuleCall)cInputFilterGSSFilterFilterCrossReference_7_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_7_3 = (Keyword)cGroup_7.eContents().get(3);
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
 		private final Keyword cImport_from_prev_LevelKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_8_1 = (Keyword)cGroup_8.eContents().get(1);
 		private final Assignment cImport_from_prev_LevelAssignment_8_2 = (Assignment)cGroup_8.eContents().get(2);
-		private final CrossReference cImport_from_prev_LevelTMTCIFImportImportCrossReference_8_2_0 = (CrossReference)cImport_from_prev_LevelAssignment_8_2.eContents().get(0);
-		private final RuleCall cImport_from_prev_LevelTMTCIFImportImportVersionedQualifiedNameParserRuleCall_8_2_0_1 = (RuleCall)cImport_from_prev_LevelTMTCIFImportImportCrossReference_8_2_0.eContents().get(1);
+		private final CrossReference cImport_from_prev_LevelGSSImportImportCrossReference_8_2_0 = (CrossReference)cImport_from_prev_LevelAssignment_8_2.eContents().get(0);
+		private final RuleCall cImport_from_prev_LevelGSSImportImportVersionedQualifiedNameParserRuleCall_8_2_0_1 = (RuleCall)cImport_from_prev_LevelGSSImportImportCrossReference_8_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_8_3 = (Keyword)cGroup_8.eContents().get(3);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Keyword cSemicolonKeyword_10 = (Keyword)cGroup.eContents().get(10);
@@ -2726,16 +2726,16 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSEnvironmentUpperLevel:
 		//	'GSSEnvironmentUpperLevel' '{'
 		//	'level' ':=' level=GSSEnvironmentUpperLevelLevel ';' ('TMformat' ':='
-		//	TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? ('inputFilter' ':='
-		//	inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
-		//	import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
+		//	TMformat=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('inputFilter' ':='
+		//	inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
+		//	import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName] ';')?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSEnvironmentUpperLevel' '{' 'level' ':=' level=GSSEnvironmentUpperLevelLevel ';' ('TMformat' ':='
-		//TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? ('inputFilter' ':='
-		//inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
-		//import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')? '}' ';'
+		//TMformat=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('inputFilter' ':='
+		//inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
+		//import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName] ';')? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSEnvironmentUpperLevel'
@@ -2759,7 +2759,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 		
-		//('TMformat' ':=' TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		//('TMformat' ':=' TMformat=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		public Group getGroup_6() { return cGroup_6; }
 		
 		//'TMformat'
@@ -2768,19 +2768,19 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_6_1() { return cColonEqualsSignKeyword_6_1; }
 		
-		//TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName]
+		//TMformat=[format::GSSFormatFormat|VersionedQualifiedName]
 		public Assignment getTMformatAssignment_6_2() { return cTMformatAssignment_6_2; }
 		
-		//[format::TMTCIFFormatFormat|VersionedQualifiedName]
-		public CrossReference getTMformatTMTCIFFormatFormatCrossReference_6_2_0() { return cTMformatTMTCIFFormatFormatCrossReference_6_2_0; }
+		//[format::GSSFormatFormat|VersionedQualifiedName]
+		public CrossReference getTMformatGSSFormatFormatCrossReference_6_2_0() { return cTMformatGSSFormatFormatCrossReference_6_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getTMformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_6_2_0_1() { return cTMformatTMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_6_2_0_1; }
+		public RuleCall getTMformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_6_2_0_1() { return cTMformatGSSFormatFormatVersionedQualifiedNameParserRuleCall_6_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_6_3() { return cSemicolonKeyword_6_3; }
 		
-		//('inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')?
+		//('inputFilter' ':=' inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';')?
 		public Group getGroup_7() { return cGroup_7; }
 		
 		//'inputFilter'
@@ -2789,19 +2789,19 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_7_1() { return cColonEqualsSignKeyword_7_1; }
 		
-		//inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName]
+		//inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName]
 		public Assignment getInputFilterAssignment_7_2() { return cInputFilterAssignment_7_2; }
 		
-		//[filter::TMTCIFFilterFilter|VersionedQualifiedName]
-		public CrossReference getInputFilterTMTCIFFilterFilterCrossReference_7_2_0() { return cInputFilterTMTCIFFilterFilterCrossReference_7_2_0; }
+		//[filter::GSSFilterFilter|VersionedQualifiedName]
+		public CrossReference getInputFilterGSSFilterFilterCrossReference_7_2_0() { return cInputFilterGSSFilterFilterCrossReference_7_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getInputFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_7_2_0_1() { return cInputFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_7_2_0_1; }
+		public RuleCall getInputFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_7_2_0_1() { return cInputFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_7_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_7_3() { return cSemicolonKeyword_7_3; }
 		
-		//('import_from_prev_Level' ':=' import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
+		//('import_from_prev_Level' ':=' import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName] ';')?
 		public Group getGroup_8() { return cGroup_8; }
 		
 		//'import_from_prev_Level'
@@ -2810,14 +2810,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_8_1() { return cColonEqualsSignKeyword_8_1; }
 		
-		//import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName]
+		//import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName]
 		public Assignment getImport_from_prev_LevelAssignment_8_2() { return cImport_from_prev_LevelAssignment_8_2; }
 		
-		//[import_::TMTCIFImportImport|VersionedQualifiedName]
-		public CrossReference getImport_from_prev_LevelTMTCIFImportImportCrossReference_8_2_0() { return cImport_from_prev_LevelTMTCIFImportImportCrossReference_8_2_0; }
+		//[import_::GSSImportImport|VersionedQualifiedName]
+		public CrossReference getImport_from_prev_LevelGSSImportImportCrossReference_8_2_0() { return cImport_from_prev_LevelGSSImportImportCrossReference_8_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getImport_from_prev_LevelTMTCIFImportImportVersionedQualifiedNameParserRuleCall_8_2_0_1() { return cImport_from_prev_LevelTMTCIFImportImportVersionedQualifiedNameParserRuleCall_8_2_0_1; }
+		public RuleCall getImport_from_prev_LevelGSSImportImportVersionedQualifiedNameParserRuleCall_8_2_0_1() { return cImport_from_prev_LevelGSSImportImportVersionedQualifiedNameParserRuleCall_8_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_8_3() { return cSemicolonKeyword_8_3; }
@@ -2932,42 +2932,42 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLevel2Keyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_22_1 = (Keyword)cGroup_22.eContents().get(1);
 		private final Assignment cLevel2Assignment_22_2 = (Assignment)cGroup_22.eContents().get(2);
-		private final CrossReference cLevel2TMTCIFFormatFormatCrossReference_22_2_0 = (CrossReference)cLevel2Assignment_22_2.eContents().get(0);
-		private final RuleCall cLevel2TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1 = (RuleCall)cLevel2TMTCIFFormatFormatCrossReference_22_2_0.eContents().get(1);
+		private final CrossReference cLevel2GSSFormatFormatCrossReference_22_2_0 = (CrossReference)cLevel2Assignment_22_2.eContents().get(0);
+		private final RuleCall cLevel2GSSFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1 = (RuleCall)cLevel2GSSFormatFormatCrossReference_22_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_22_3 = (Keyword)cGroup_22.eContents().get(3);
 		private final Keyword cApp_to_level2Keyword_23 = (Keyword)cGroup.eContents().get(23);
 		private final Keyword cColonEqualsSignKeyword_24 = (Keyword)cGroup.eContents().get(24);
 		private final Assignment cApp_to_level2Assignment_25 = (Assignment)cGroup.eContents().get(25);
-		private final CrossReference cApp_to_level2TMTCIFExportExportCrossReference_25_0 = (CrossReference)cApp_to_level2Assignment_25.eContents().get(0);
-		private final RuleCall cApp_to_level2TMTCIFExportExportVersionedQualifiedNameParserRuleCall_25_0_1 = (RuleCall)cApp_to_level2TMTCIFExportExportCrossReference_25_0.eContents().get(1);
+		private final CrossReference cApp_to_level2GSSExportExportCrossReference_25_0 = (CrossReference)cApp_to_level2Assignment_25.eContents().get(0);
+		private final RuleCall cApp_to_level2GSSExportExportVersionedQualifiedNameParserRuleCall_25_0_1 = (RuleCall)cApp_to_level2GSSExportExportCrossReference_25_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_26 = (Keyword)cGroup.eContents().get(26);
 		private final Group cGroup_27 = (Group)cGroup.eContents().get(27);
 		private final Keyword cLevel1Keyword_27_0 = (Keyword)cGroup_27.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_27_1 = (Keyword)cGroup_27.eContents().get(1);
 		private final Assignment cLevel1Assignment_27_2 = (Assignment)cGroup_27.eContents().get(2);
-		private final CrossReference cLevel1TMTCIFFormatFormatCrossReference_27_2_0 = (CrossReference)cLevel1Assignment_27_2.eContents().get(0);
-		private final RuleCall cLevel1TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_27_2_0_1 = (RuleCall)cLevel1TMTCIFFormatFormatCrossReference_27_2_0.eContents().get(1);
+		private final CrossReference cLevel1GSSFormatFormatCrossReference_27_2_0 = (CrossReference)cLevel1Assignment_27_2.eContents().get(0);
+		private final RuleCall cLevel1GSSFormatFormatVersionedQualifiedNameParserRuleCall_27_2_0_1 = (RuleCall)cLevel1GSSFormatFormatCrossReference_27_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_27_3 = (Keyword)cGroup_27.eContents().get(3);
 		private final Group cGroup_28 = (Group)cGroup.eContents().get(28);
 		private final Keyword cLevel2_to_level1Keyword_28_0 = (Keyword)cGroup_28.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_28_1 = (Keyword)cGroup_28.eContents().get(1);
 		private final Assignment cLevel2_to_level1Assignment_28_2 = (Assignment)cGroup_28.eContents().get(2);
-		private final CrossReference cLevel2_to_level1TMTCIFExportExportCrossReference_28_2_0 = (CrossReference)cLevel2_to_level1Assignment_28_2.eContents().get(0);
-		private final RuleCall cLevel2_to_level1TMTCIFExportExportVersionedQualifiedNameParserRuleCall_28_2_0_1 = (RuleCall)cLevel2_to_level1TMTCIFExportExportCrossReference_28_2_0.eContents().get(1);
+		private final CrossReference cLevel2_to_level1GSSExportExportCrossReference_28_2_0 = (CrossReference)cLevel2_to_level1Assignment_28_2.eContents().get(0);
+		private final RuleCall cLevel2_to_level1GSSExportExportVersionedQualifiedNameParserRuleCall_28_2_0_1 = (RuleCall)cLevel2_to_level1GSSExportExportCrossReference_28_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_28_3 = (Keyword)cGroup_28.eContents().get(3);
 		private final Group cGroup_29 = (Group)cGroup.eContents().get(29);
 		private final Keyword cLevel0Keyword_29_0 = (Keyword)cGroup_29.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_29_1 = (Keyword)cGroup_29.eContents().get(1);
 		private final Assignment cLevel0Assignment_29_2 = (Assignment)cGroup_29.eContents().get(2);
-		private final CrossReference cLevel0TMTCIFFormatFormatCrossReference_29_2_0 = (CrossReference)cLevel0Assignment_29_2.eContents().get(0);
-		private final RuleCall cLevel0TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_29_2_0_1 = (RuleCall)cLevel0TMTCIFFormatFormatCrossReference_29_2_0.eContents().get(1);
+		private final CrossReference cLevel0GSSFormatFormatCrossReference_29_2_0 = (CrossReference)cLevel0Assignment_29_2.eContents().get(0);
+		private final RuleCall cLevel0GSSFormatFormatVersionedQualifiedNameParserRuleCall_29_2_0_1 = (RuleCall)cLevel0GSSFormatFormatCrossReference_29_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_29_3 = (Keyword)cGroup_29.eContents().get(3);
 		private final Group cGroup_30 = (Group)cGroup.eContents().get(30);
 		private final Keyword cLevel1_to_level0Keyword_30_0 = (Keyword)cGroup_30.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_30_1 = (Keyword)cGroup_30.eContents().get(1);
 		private final Assignment cLevel1_to_level0Assignment_30_2 = (Assignment)cGroup_30.eContents().get(2);
-		private final CrossReference cLevel1_to_level0TMTCIFExportExportCrossReference_30_2_0 = (CrossReference)cLevel1_to_level0Assignment_30_2.eContents().get(0);
-		private final RuleCall cLevel1_to_level0TMTCIFExportExportVersionedQualifiedNameParserRuleCall_30_2_0_1 = (RuleCall)cLevel1_to_level0TMTCIFExportExportCrossReference_30_2_0.eContents().get(1);
+		private final CrossReference cLevel1_to_level0GSSExportExportCrossReference_30_2_0 = (CrossReference)cLevel1_to_level0Assignment_30_2.eContents().get(0);
+		private final RuleCall cLevel1_to_level0GSSExportExportVersionedQualifiedNameParserRuleCall_30_2_0_1 = (RuleCall)cLevel1_to_level0GSSExportExportCrossReference_30_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_30_3 = (Keyword)cGroup_30.eContents().get(3);
 		private final Keyword cRightCurlyBracketKeyword_31 = (Keyword)cGroup.eContents().get(31);
 		private final Keyword cSemicolonKeyword_32 = (Keyword)cGroup.eContents().get(32);
@@ -2979,23 +2979,23 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'period_value' ':=' period_value=INTEGER ';'
 		//	'period_unit' ':=' period_unit=GSSEnvironmentUnit ';' ('level2' ':='
-		//	level2=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
-		//	'app_to_level2' ':=' app_to_level2=[export::TMTCIFExportExport|VersionedQualifiedName] ';' ('level1' ':='
-		//	level1=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
-		//	level2_to_level1=[export::TMTCIFExportExport|VersionedQualifiedName] ';')? ('level0' ':='
-		//	level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
-		//	level1_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+		//	level2=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
+		//	'app_to_level2' ':=' app_to_level2=[export::GSSExportExport|VersionedQualifiedName] ';' ('level1' ':='
+		//	level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
+		//	level2_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';')? ('level0' ':='
+		//	level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
+		//	level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSEnvironmentPeriodicTCLevel2' '{' 'name' ':=' name=STRING ';' 'id' ':=' id=INTEGER ';' 'ifRef' ':=' ifRef=INTEGER ';'
 		//'period_value' ':=' period_value=INTEGER ';' 'period_unit' ':=' period_unit=GSSEnvironmentUnit ';' ('level2' ':='
-		//level2=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? 'app_to_level2' ':='
-		//app_to_level2=[export::TMTCIFExportExport|VersionedQualifiedName] ';' ('level1' ':='
-		//level1=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
-		//level2_to_level1=[export::TMTCIFExportExport|VersionedQualifiedName] ';')? ('level0' ':='
-		//level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
-		//level1_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';')? '}' ';'
+		//level2=[format::GSSFormatFormat|VersionedQualifiedName] ';')? 'app_to_level2' ':='
+		//app_to_level2=[export::GSSExportExport|VersionedQualifiedName] ';' ('level1' ':='
+		//level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
+		//level2_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';')? ('level0' ':='
+		//level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
+		//level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSEnvironmentPeriodicTCLevel2'
@@ -3079,7 +3079,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
 		
-		//('level2' ':=' level2=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		//('level2' ':=' level2=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		public Group getGroup_22() { return cGroup_22; }
 		
 		//'level2'
@@ -3088,14 +3088,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_22_1() { return cColonEqualsSignKeyword_22_1; }
 		
-		//level2=[format::TMTCIFFormatFormat|VersionedQualifiedName]
+		//level2=[format::GSSFormatFormat|VersionedQualifiedName]
 		public Assignment getLevel2Assignment_22_2() { return cLevel2Assignment_22_2; }
 		
-		//[format::TMTCIFFormatFormat|VersionedQualifiedName]
-		public CrossReference getLevel2TMTCIFFormatFormatCrossReference_22_2_0() { return cLevel2TMTCIFFormatFormatCrossReference_22_2_0; }
+		//[format::GSSFormatFormat|VersionedQualifiedName]
+		public CrossReference getLevel2GSSFormatFormatCrossReference_22_2_0() { return cLevel2GSSFormatFormatCrossReference_22_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel2TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1() { return cLevel2TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1; }
+		public RuleCall getLevel2GSSFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1() { return cLevel2GSSFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_22_3() { return cSemicolonKeyword_22_3; }
@@ -3106,19 +3106,19 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_24() { return cColonEqualsSignKeyword_24; }
 		
-		//app_to_level2=[export::TMTCIFExportExport|VersionedQualifiedName]
+		//app_to_level2=[export::GSSExportExport|VersionedQualifiedName]
 		public Assignment getApp_to_level2Assignment_25() { return cApp_to_level2Assignment_25; }
 		
-		//[export::TMTCIFExportExport|VersionedQualifiedName]
-		public CrossReference getApp_to_level2TMTCIFExportExportCrossReference_25_0() { return cApp_to_level2TMTCIFExportExportCrossReference_25_0; }
+		//[export::GSSExportExport|VersionedQualifiedName]
+		public CrossReference getApp_to_level2GSSExportExportCrossReference_25_0() { return cApp_to_level2GSSExportExportCrossReference_25_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getApp_to_level2TMTCIFExportExportVersionedQualifiedNameParserRuleCall_25_0_1() { return cApp_to_level2TMTCIFExportExportVersionedQualifiedNameParserRuleCall_25_0_1; }
+		public RuleCall getApp_to_level2GSSExportExportVersionedQualifiedNameParserRuleCall_25_0_1() { return cApp_to_level2GSSExportExportVersionedQualifiedNameParserRuleCall_25_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_26() { return cSemicolonKeyword_26; }
 		
-		//('level1' ':=' level1=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		//('level1' ':=' level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		public Group getGroup_27() { return cGroup_27; }
 		
 		//'level1'
@@ -3127,19 +3127,19 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_27_1() { return cColonEqualsSignKeyword_27_1; }
 		
-		//level1=[format::TMTCIFFormatFormat|VersionedQualifiedName]
+		//level1=[format::GSSFormatFormat|VersionedQualifiedName]
 		public Assignment getLevel1Assignment_27_2() { return cLevel1Assignment_27_2; }
 		
-		//[format::TMTCIFFormatFormat|VersionedQualifiedName]
-		public CrossReference getLevel1TMTCIFFormatFormatCrossReference_27_2_0() { return cLevel1TMTCIFFormatFormatCrossReference_27_2_0; }
+		//[format::GSSFormatFormat|VersionedQualifiedName]
+		public CrossReference getLevel1GSSFormatFormatCrossReference_27_2_0() { return cLevel1GSSFormatFormatCrossReference_27_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel1TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_27_2_0_1() { return cLevel1TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_27_2_0_1; }
+		public RuleCall getLevel1GSSFormatFormatVersionedQualifiedNameParserRuleCall_27_2_0_1() { return cLevel1GSSFormatFormatVersionedQualifiedNameParserRuleCall_27_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_27_3() { return cSemicolonKeyword_27_3; }
 		
-		//('level2_to_level1' ':=' level2_to_level1=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+		//('level2_to_level1' ':=' level2_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';')?
 		public Group getGroup_28() { return cGroup_28; }
 		
 		//'level2_to_level1'
@@ -3148,19 +3148,19 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_28_1() { return cColonEqualsSignKeyword_28_1; }
 		
-		//level2_to_level1=[export::TMTCIFExportExport|VersionedQualifiedName]
+		//level2_to_level1=[export::GSSExportExport|VersionedQualifiedName]
 		public Assignment getLevel2_to_level1Assignment_28_2() { return cLevel2_to_level1Assignment_28_2; }
 		
-		//[export::TMTCIFExportExport|VersionedQualifiedName]
-		public CrossReference getLevel2_to_level1TMTCIFExportExportCrossReference_28_2_0() { return cLevel2_to_level1TMTCIFExportExportCrossReference_28_2_0; }
+		//[export::GSSExportExport|VersionedQualifiedName]
+		public CrossReference getLevel2_to_level1GSSExportExportCrossReference_28_2_0() { return cLevel2_to_level1GSSExportExportCrossReference_28_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel2_to_level1TMTCIFExportExportVersionedQualifiedNameParserRuleCall_28_2_0_1() { return cLevel2_to_level1TMTCIFExportExportVersionedQualifiedNameParserRuleCall_28_2_0_1; }
+		public RuleCall getLevel2_to_level1GSSExportExportVersionedQualifiedNameParserRuleCall_28_2_0_1() { return cLevel2_to_level1GSSExportExportVersionedQualifiedNameParserRuleCall_28_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_28_3() { return cSemicolonKeyword_28_3; }
 		
-		//('level0' ':=' level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		//('level0' ':=' level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		public Group getGroup_29() { return cGroup_29; }
 		
 		//'level0'
@@ -3169,19 +3169,19 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_29_1() { return cColonEqualsSignKeyword_29_1; }
 		
-		//level0=[format::TMTCIFFormatFormat|VersionedQualifiedName]
+		//level0=[format::GSSFormatFormat|VersionedQualifiedName]
 		public Assignment getLevel0Assignment_29_2() { return cLevel0Assignment_29_2; }
 		
-		//[format::TMTCIFFormatFormat|VersionedQualifiedName]
-		public CrossReference getLevel0TMTCIFFormatFormatCrossReference_29_2_0() { return cLevel0TMTCIFFormatFormatCrossReference_29_2_0; }
+		//[format::GSSFormatFormat|VersionedQualifiedName]
+		public CrossReference getLevel0GSSFormatFormatCrossReference_29_2_0() { return cLevel0GSSFormatFormatCrossReference_29_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel0TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_29_2_0_1() { return cLevel0TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_29_2_0_1; }
+		public RuleCall getLevel0GSSFormatFormatVersionedQualifiedNameParserRuleCall_29_2_0_1() { return cLevel0GSSFormatFormatVersionedQualifiedNameParserRuleCall_29_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_29_3() { return cSemicolonKeyword_29_3; }
 		
-		//('level1_to_level0' ':=' level1_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+		//('level1_to_level0' ':=' level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
 		public Group getGroup_30() { return cGroup_30; }
 		
 		//'level1_to_level0'
@@ -3190,14 +3190,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_30_1() { return cColonEqualsSignKeyword_30_1; }
 		
-		//level1_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName]
+		//level1_to_level0=[export::GSSExportExport|VersionedQualifiedName]
 		public Assignment getLevel1_to_level0Assignment_30_2() { return cLevel1_to_level0Assignment_30_2; }
 		
-		//[export::TMTCIFExportExport|VersionedQualifiedName]
-		public CrossReference getLevel1_to_level0TMTCIFExportExportCrossReference_30_2_0() { return cLevel1_to_level0TMTCIFExportExportCrossReference_30_2_0; }
+		//[export::GSSExportExport|VersionedQualifiedName]
+		public CrossReference getLevel1_to_level0GSSExportExportCrossReference_30_2_0() { return cLevel1_to_level0GSSExportExportCrossReference_30_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel1_to_level0TMTCIFExportExportVersionedQualifiedNameParserRuleCall_30_2_0_1() { return cLevel1_to_level0TMTCIFExportExportVersionedQualifiedNameParserRuleCall_30_2_0_1; }
+		public RuleCall getLevel1_to_level0GSSExportExportVersionedQualifiedNameParserRuleCall_30_2_0_1() { return cLevel1_to_level0GSSExportExportVersionedQualifiedNameParserRuleCall_30_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_30_3() { return cSemicolonKeyword_30_3; }
@@ -3242,28 +3242,28 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLevel1Keyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_22_1 = (Keyword)cGroup_22.eContents().get(1);
 		private final Assignment cLevel1Assignment_22_2 = (Assignment)cGroup_22.eContents().get(2);
-		private final CrossReference cLevel1TMTCIFFormatFormatCrossReference_22_2_0 = (CrossReference)cLevel1Assignment_22_2.eContents().get(0);
-		private final RuleCall cLevel1TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1 = (RuleCall)cLevel1TMTCIFFormatFormatCrossReference_22_2_0.eContents().get(1);
+		private final CrossReference cLevel1GSSFormatFormatCrossReference_22_2_0 = (CrossReference)cLevel1Assignment_22_2.eContents().get(0);
+		private final RuleCall cLevel1GSSFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1 = (RuleCall)cLevel1GSSFormatFormatCrossReference_22_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_22_3 = (Keyword)cGroup_22.eContents().get(3);
 		private final Keyword cApp_to_level1Keyword_23 = (Keyword)cGroup.eContents().get(23);
 		private final Keyword cColonEqualsSignKeyword_24 = (Keyword)cGroup.eContents().get(24);
 		private final Assignment cApp_to_level1Assignment_25 = (Assignment)cGroup.eContents().get(25);
-		private final CrossReference cApp_to_level1TMTCIFExportExportCrossReference_25_0 = (CrossReference)cApp_to_level1Assignment_25.eContents().get(0);
-		private final RuleCall cApp_to_level1TMTCIFExportExportVersionedQualifiedNameParserRuleCall_25_0_1 = (RuleCall)cApp_to_level1TMTCIFExportExportCrossReference_25_0.eContents().get(1);
+		private final CrossReference cApp_to_level1GSSExportExportCrossReference_25_0 = (CrossReference)cApp_to_level1Assignment_25.eContents().get(0);
+		private final RuleCall cApp_to_level1GSSExportExportVersionedQualifiedNameParserRuleCall_25_0_1 = (RuleCall)cApp_to_level1GSSExportExportCrossReference_25_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_26 = (Keyword)cGroup.eContents().get(26);
 		private final Group cGroup_27 = (Group)cGroup.eContents().get(27);
 		private final Keyword cLevel0Keyword_27_0 = (Keyword)cGroup_27.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_27_1 = (Keyword)cGroup_27.eContents().get(1);
 		private final Assignment cLevel0Assignment_27_2 = (Assignment)cGroup_27.eContents().get(2);
-		private final CrossReference cLevel0TMTCIFFormatFormatCrossReference_27_2_0 = (CrossReference)cLevel0Assignment_27_2.eContents().get(0);
-		private final RuleCall cLevel0TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_27_2_0_1 = (RuleCall)cLevel0TMTCIFFormatFormatCrossReference_27_2_0.eContents().get(1);
+		private final CrossReference cLevel0GSSFormatFormatCrossReference_27_2_0 = (CrossReference)cLevel0Assignment_27_2.eContents().get(0);
+		private final RuleCall cLevel0GSSFormatFormatVersionedQualifiedNameParserRuleCall_27_2_0_1 = (RuleCall)cLevel0GSSFormatFormatCrossReference_27_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_27_3 = (Keyword)cGroup_27.eContents().get(3);
 		private final Group cGroup_28 = (Group)cGroup.eContents().get(28);
 		private final Keyword cLevel1_to_level0Keyword_28_0 = (Keyword)cGroup_28.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_28_1 = (Keyword)cGroup_28.eContents().get(1);
 		private final Assignment cLevel1_to_level0Assignment_28_2 = (Assignment)cGroup_28.eContents().get(2);
-		private final CrossReference cLevel1_to_level0TMTCIFExportExportCrossReference_28_2_0 = (CrossReference)cLevel1_to_level0Assignment_28_2.eContents().get(0);
-		private final RuleCall cLevel1_to_level0TMTCIFExportExportVersionedQualifiedNameParserRuleCall_28_2_0_1 = (RuleCall)cLevel1_to_level0TMTCIFExportExportCrossReference_28_2_0.eContents().get(1);
+		private final CrossReference cLevel1_to_level0GSSExportExportCrossReference_28_2_0 = (CrossReference)cLevel1_to_level0Assignment_28_2.eContents().get(0);
+		private final RuleCall cLevel1_to_level0GSSExportExportVersionedQualifiedNameParserRuleCall_28_2_0_1 = (RuleCall)cLevel1_to_level0GSSExportExportCrossReference_28_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_28_3 = (Keyword)cGroup_28.eContents().get(3);
 		private final Keyword cRightCurlyBracketKeyword_29 = (Keyword)cGroup.eContents().get(29);
 		private final Keyword cSemicolonKeyword_30 = (Keyword)cGroup.eContents().get(30);
@@ -3275,19 +3275,19 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'period_value' ':=' period_value=INTEGER ';'
 		//	'period_unit' ':=' period_unit=GSSEnvironmentUnit ';' ('level1' ':='
-		//	level1=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
-		//	'app_to_level1' ':=' app_to_level1=[export::TMTCIFExportExport|VersionedQualifiedName] ';' ('level0' ':='
-		//	level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
-		//	level1_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+		//	level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
+		//	'app_to_level1' ':=' app_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';' ('level0' ':='
+		//	level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
+		//	level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSEnvironmentPeriodicTCLevel1' '{' 'name' ':=' name=STRING ';' 'id' ':=' id=INTEGER ';' 'ifRef' ':=' ifRef=INTEGER ';'
 		//'period_value' ':=' period_value=INTEGER ';' 'period_unit' ':=' period_unit=GSSEnvironmentUnit ';' ('level1' ':='
-		//level1=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? 'app_to_level1' ':='
-		//app_to_level1=[export::TMTCIFExportExport|VersionedQualifiedName] ';' ('level0' ':='
-		//level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
-		//level1_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';')? '}' ';'
+		//level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')? 'app_to_level1' ':='
+		//app_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';' ('level0' ':='
+		//level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
+		//level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSEnvironmentPeriodicTCLevel1'
@@ -3371,7 +3371,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
 		
-		//('level1' ':=' level1=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		//('level1' ':=' level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		public Group getGroup_22() { return cGroup_22; }
 		
 		//'level1'
@@ -3380,14 +3380,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_22_1() { return cColonEqualsSignKeyword_22_1; }
 		
-		//level1=[format::TMTCIFFormatFormat|VersionedQualifiedName]
+		//level1=[format::GSSFormatFormat|VersionedQualifiedName]
 		public Assignment getLevel1Assignment_22_2() { return cLevel1Assignment_22_2; }
 		
-		//[format::TMTCIFFormatFormat|VersionedQualifiedName]
-		public CrossReference getLevel1TMTCIFFormatFormatCrossReference_22_2_0() { return cLevel1TMTCIFFormatFormatCrossReference_22_2_0; }
+		//[format::GSSFormatFormat|VersionedQualifiedName]
+		public CrossReference getLevel1GSSFormatFormatCrossReference_22_2_0() { return cLevel1GSSFormatFormatCrossReference_22_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel1TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1() { return cLevel1TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1; }
+		public RuleCall getLevel1GSSFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1() { return cLevel1GSSFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_22_3() { return cSemicolonKeyword_22_3; }
@@ -3398,19 +3398,19 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_24() { return cColonEqualsSignKeyword_24; }
 		
-		//app_to_level1=[export::TMTCIFExportExport|VersionedQualifiedName]
+		//app_to_level1=[export::GSSExportExport|VersionedQualifiedName]
 		public Assignment getApp_to_level1Assignment_25() { return cApp_to_level1Assignment_25; }
 		
-		//[export::TMTCIFExportExport|VersionedQualifiedName]
-		public CrossReference getApp_to_level1TMTCIFExportExportCrossReference_25_0() { return cApp_to_level1TMTCIFExportExportCrossReference_25_0; }
+		//[export::GSSExportExport|VersionedQualifiedName]
+		public CrossReference getApp_to_level1GSSExportExportCrossReference_25_0() { return cApp_to_level1GSSExportExportCrossReference_25_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getApp_to_level1TMTCIFExportExportVersionedQualifiedNameParserRuleCall_25_0_1() { return cApp_to_level1TMTCIFExportExportVersionedQualifiedNameParserRuleCall_25_0_1; }
+		public RuleCall getApp_to_level1GSSExportExportVersionedQualifiedNameParserRuleCall_25_0_1() { return cApp_to_level1GSSExportExportVersionedQualifiedNameParserRuleCall_25_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_26() { return cSemicolonKeyword_26; }
 		
-		//('level0' ':=' level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		//('level0' ':=' level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		public Group getGroup_27() { return cGroup_27; }
 		
 		//'level0'
@@ -3419,19 +3419,19 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_27_1() { return cColonEqualsSignKeyword_27_1; }
 		
-		//level0=[format::TMTCIFFormatFormat|VersionedQualifiedName]
+		//level0=[format::GSSFormatFormat|VersionedQualifiedName]
 		public Assignment getLevel0Assignment_27_2() { return cLevel0Assignment_27_2; }
 		
-		//[format::TMTCIFFormatFormat|VersionedQualifiedName]
-		public CrossReference getLevel0TMTCIFFormatFormatCrossReference_27_2_0() { return cLevel0TMTCIFFormatFormatCrossReference_27_2_0; }
+		//[format::GSSFormatFormat|VersionedQualifiedName]
+		public CrossReference getLevel0GSSFormatFormatCrossReference_27_2_0() { return cLevel0GSSFormatFormatCrossReference_27_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel0TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_27_2_0_1() { return cLevel0TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_27_2_0_1; }
+		public RuleCall getLevel0GSSFormatFormatVersionedQualifiedNameParserRuleCall_27_2_0_1() { return cLevel0GSSFormatFormatVersionedQualifiedNameParserRuleCall_27_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_27_3() { return cSemicolonKeyword_27_3; }
 		
-		//('level1_to_level0' ':=' level1_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+		//('level1_to_level0' ':=' level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
 		public Group getGroup_28() { return cGroup_28; }
 		
 		//'level1_to_level0'
@@ -3440,14 +3440,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_28_1() { return cColonEqualsSignKeyword_28_1; }
 		
-		//level1_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName]
+		//level1_to_level0=[export::GSSExportExport|VersionedQualifiedName]
 		public Assignment getLevel1_to_level0Assignment_28_2() { return cLevel1_to_level0Assignment_28_2; }
 		
-		//[export::TMTCIFExportExport|VersionedQualifiedName]
-		public CrossReference getLevel1_to_level0TMTCIFExportExportCrossReference_28_2_0() { return cLevel1_to_level0TMTCIFExportExportCrossReference_28_2_0; }
+		//[export::GSSExportExport|VersionedQualifiedName]
+		public CrossReference getLevel1_to_level0GSSExportExportCrossReference_28_2_0() { return cLevel1_to_level0GSSExportExportCrossReference_28_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel1_to_level0TMTCIFExportExportVersionedQualifiedNameParserRuleCall_28_2_0_1() { return cLevel1_to_level0TMTCIFExportExportVersionedQualifiedNameParserRuleCall_28_2_0_1; }
+		public RuleCall getLevel1_to_level0GSSExportExportVersionedQualifiedNameParserRuleCall_28_2_0_1() { return cLevel1_to_level0GSSExportExportVersionedQualifiedNameParserRuleCall_28_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_28_3() { return cSemicolonKeyword_28_3; }
@@ -3492,14 +3492,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLevel0Keyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_22_1 = (Keyword)cGroup_22.eContents().get(1);
 		private final Assignment cLevel0Assignment_22_2 = (Assignment)cGroup_22.eContents().get(2);
-		private final CrossReference cLevel0TMTCIFFormatFormatCrossReference_22_2_0 = (CrossReference)cLevel0Assignment_22_2.eContents().get(0);
-		private final RuleCall cLevel0TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1 = (RuleCall)cLevel0TMTCIFFormatFormatCrossReference_22_2_0.eContents().get(1);
+		private final CrossReference cLevel0GSSFormatFormatCrossReference_22_2_0 = (CrossReference)cLevel0Assignment_22_2.eContents().get(0);
+		private final RuleCall cLevel0GSSFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1 = (RuleCall)cLevel0GSSFormatFormatCrossReference_22_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_22_3 = (Keyword)cGroup_22.eContents().get(3);
 		private final Keyword cApp_to_level0Keyword_23 = (Keyword)cGroup.eContents().get(23);
 		private final Keyword cColonEqualsSignKeyword_24 = (Keyword)cGroup.eContents().get(24);
 		private final Assignment cApp_to_level0Assignment_25 = (Assignment)cGroup.eContents().get(25);
-		private final CrossReference cApp_to_level0TMTCIFExportExportCrossReference_25_0 = (CrossReference)cApp_to_level0Assignment_25.eContents().get(0);
-		private final RuleCall cApp_to_level0TMTCIFExportExportVersionedQualifiedNameParserRuleCall_25_0_1 = (RuleCall)cApp_to_level0TMTCIFExportExportCrossReference_25_0.eContents().get(1);
+		private final CrossReference cApp_to_level0GSSExportExportCrossReference_25_0 = (CrossReference)cApp_to_level0Assignment_25.eContents().get(0);
+		private final RuleCall cApp_to_level0GSSExportExportVersionedQualifiedNameParserRuleCall_25_0_1 = (RuleCall)cApp_to_level0GSSExportExportCrossReference_25_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_26 = (Keyword)cGroup.eContents().get(26);
 		private final Keyword cRightCurlyBracketKeyword_27 = (Keyword)cGroup.eContents().get(27);
 		private final Keyword cSemicolonKeyword_28 = (Keyword)cGroup.eContents().get(28);
@@ -3511,15 +3511,15 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'period_value' ':=' period_value=INTEGER ';'
 		//	'period_unit' ':=' period_unit=GSSEnvironmentUnit ';' ('level0' ':='
-		//	level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
-		//	'app_to_level0' ':=' app_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';'
+		//	level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
+		//	'app_to_level0' ':=' app_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSEnvironmentPeriodicTCLevel0' '{' 'name' ':=' name=STRING ';' 'id' ':=' id=INTEGER ';' 'ifRef' ':=' ifRef=INTEGER ';'
 		//'period_value' ':=' period_value=INTEGER ';' 'period_unit' ':=' period_unit=GSSEnvironmentUnit ';' ('level0' ':='
-		//level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? 'app_to_level0' ':='
-		//app_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';' '}' ';'
+		//level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')? 'app_to_level0' ':='
+		//app_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSEnvironmentPeriodicTCLevel0'
@@ -3603,7 +3603,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
 		
-		//('level0' ':=' level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
+		//('level0' ':=' level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		public Group getGroup_22() { return cGroup_22; }
 		
 		//'level0'
@@ -3612,14 +3612,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_22_1() { return cColonEqualsSignKeyword_22_1; }
 		
-		//level0=[format::TMTCIFFormatFormat|VersionedQualifiedName]
+		//level0=[format::GSSFormatFormat|VersionedQualifiedName]
 		public Assignment getLevel0Assignment_22_2() { return cLevel0Assignment_22_2; }
 		
-		//[format::TMTCIFFormatFormat|VersionedQualifiedName]
-		public CrossReference getLevel0TMTCIFFormatFormatCrossReference_22_2_0() { return cLevel0TMTCIFFormatFormatCrossReference_22_2_0; }
+		//[format::GSSFormatFormat|VersionedQualifiedName]
+		public CrossReference getLevel0GSSFormatFormatCrossReference_22_2_0() { return cLevel0GSSFormatFormatCrossReference_22_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getLevel0TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1() { return cLevel0TMTCIFFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1; }
+		public RuleCall getLevel0GSSFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1() { return cLevel0GSSFormatFormatVersionedQualifiedNameParserRuleCall_22_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_22_3() { return cSemicolonKeyword_22_3; }
@@ -3630,14 +3630,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_24() { return cColonEqualsSignKeyword_24; }
 		
-		//app_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName]
+		//app_to_level0=[export::GSSExportExport|VersionedQualifiedName]
 		public Assignment getApp_to_level0Assignment_25() { return cApp_to_level0Assignment_25; }
 		
-		//[export::TMTCIFExportExport|VersionedQualifiedName]
-		public CrossReference getApp_to_level0TMTCIFExportExportCrossReference_25_0() { return cApp_to_level0TMTCIFExportExportCrossReference_25_0; }
+		//[export::GSSExportExport|VersionedQualifiedName]
+		public CrossReference getApp_to_level0GSSExportExportCrossReference_25_0() { return cApp_to_level0GSSExportExportCrossReference_25_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getApp_to_level0TMTCIFExportExportVersionedQualifiedNameParserRuleCall_25_0_1() { return cApp_to_level0TMTCIFExportExportVersionedQualifiedNameParserRuleCall_25_0_1; }
+		public RuleCall getApp_to_level0GSSExportExportVersionedQualifiedNameParserRuleCall_25_0_1() { return cApp_to_level0GSSExportExportVersionedQualifiedNameParserRuleCall_25_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_26() { return cSemicolonKeyword_26; }
@@ -4655,8 +4655,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cFilterKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
 		private final Assignment cFilterAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
-		private final CrossReference cFilterTMTCIFFilterFilterCrossReference_6_2_0 = (CrossReference)cFilterAssignment_6_2.eContents().get(0);
-		private final RuleCall cFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_6_2_0_1 = (RuleCall)cFilterTMTCIFFilterFilterCrossReference_6_2_0.eContents().get(1);
+		private final CrossReference cFilterGSSFilterFilterCrossReference_6_2_0 = (CrossReference)cFilterAssignment_6_2.eContents().get(0);
+		private final RuleCall cFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_6_2_0_1 = (RuleCall)cFilterGSSFilterFilterCrossReference_6_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_6_3 = (Keyword)cGroup_6.eContents().get(3);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
@@ -4664,12 +4664,12 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSEnvironmentGVFiltered:
 		//	'GSSEnvironmentGVFiltered' '{'
 		//	'GlobalVarRef' ':=' GlobalVarRef=[GSSEnvironmentGlobalVar|STRING] ';' ('filter' ':='
-		//	filter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')?
+		//	filter=[filter::GSSFilterFilter|VersionedQualifiedName] ';')?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSEnvironmentGVFiltered' '{' 'GlobalVarRef' ':=' GlobalVarRef=[GSSEnvironmentGlobalVar|STRING] ';' ('filter' ':='
-		//filter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')? '}' ';'
+		//filter=[filter::GSSFilterFilter|VersionedQualifiedName] ';')? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSEnvironmentGVFiltered'
@@ -4696,7 +4696,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 		
-		//('filter' ':=' filter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')?
+		//('filter' ':=' filter=[filter::GSSFilterFilter|VersionedQualifiedName] ';')?
 		public Group getGroup_6() { return cGroup_6; }
 		
 		//'filter'
@@ -4705,14 +4705,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_6_1() { return cColonEqualsSignKeyword_6_1; }
 		
-		//filter=[filter::TMTCIFFilterFilter|VersionedQualifiedName]
+		//filter=[filter::GSSFilterFilter|VersionedQualifiedName]
 		public Assignment getFilterAssignment_6_2() { return cFilterAssignment_6_2; }
 		
-		//[filter::TMTCIFFilterFilter|VersionedQualifiedName]
-		public CrossReference getFilterTMTCIFFilterFilterCrossReference_6_2_0() { return cFilterTMTCIFFilterFilterCrossReference_6_2_0; }
+		//[filter::GSSFilterFilter|VersionedQualifiedName]
+		public CrossReference getFilterGSSFilterFilterCrossReference_6_2_0() { return cFilterGSSFilterFilterCrossReference_6_2_0; }
 		
 		//VersionedQualifiedName
-		public RuleCall getFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_6_2_0_1() { return cFilterTMTCIFFilterFilterVersionedQualifiedNameParserRuleCall_6_2_0_1; }
+		public RuleCall getFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_6_2_0_1() { return cFilterGSSFilterFilterVersionedQualifiedNameParserRuleCall_6_2_0_1; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_6_3() { return cSemicolonKeyword_6_3; }
@@ -5918,11 +5918,11 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSEnvironmentLevelInOut' '{'
 	//	'id' ':=' id=INTEGER ';'
 	//	'name' ':=' name=STRING ';'
-	//	'TMformat' ':=' TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
-	//	'TCformat' ':=' TCformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
-	//	'inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
-	//	export_to_prev_Level=[export::TMTCIFExportExport|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
-	//	import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
+	//	'TMformat' ':=' TMformat=[format::GSSFormatFormat|VersionedQualifiedName] ';'
+	//	'TCformat' ':=' TCformat=[format::GSSFormatFormat|VersionedQualifiedName] ';'
+	//	'inputFilter' ':=' inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
+	//	export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
+	//	import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName] ';')?
 	//	'}' ';';
 	public GSSEnvironmentLevelInOutElements getGSSEnvironmentLevelInOutAccess() {
 		return pGSSEnvironmentLevelInOut;
@@ -5936,8 +5936,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSEnvironmentLevelIn' '{'
 	//	'id' ':=' id=INTEGER ';'
 	//	'name' ':=' name=STRING ';'
-	//	'TCformat' ':=' TCformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
-	//	export_to_prev_Level=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+	//	'TCformat' ':=' TCformat=[format::GSSFormatFormat|VersionedQualifiedName] ';' ('export_to_prev_Level' ':='
+	//	export_to_prev_Level=[export::GSSExportExport|VersionedQualifiedName] ';')?
 	//	'}' ';';
 	public GSSEnvironmentLevelInElements getGSSEnvironmentLevelInAccess() {
 		return pGSSEnvironmentLevelIn;
@@ -5951,9 +5951,9 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSEnvironmentLevelOut' '{'
 	//	'id' ':=' id=INTEGER ';'
 	//	'name' ':=' name=STRING ';'
-	//	'TMformat' ':=' TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';'
-	//	'inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';' ('import_from_prev_Level' ':='
-	//	import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
+	//	'TMformat' ':=' TMformat=[format::GSSFormatFormat|VersionedQualifiedName] ';'
+	//	'inputFilter' ':=' inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';' ('import_from_prev_Level' ':='
+	//	import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName] ';')?
 	//	'}' ';';
 	public GSSEnvironmentLevelOutElements getGSSEnvironmentLevelOutAccess() {
 		return pGSSEnvironmentLevelOut;
@@ -5992,7 +5992,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'levels' ':=' levels=INTEGER ';'
 	//	'levelRef' ':=' levelRef=INTEGER ';'
-	//	'inputFilter' ':=' inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';'
+	//	'inputFilter' ':=' inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';'
 	//	UpperLevels+=GSSEnvironmentUpperLevels?
 	//	printingData=GSSEnvironmentPrintingData (period=GSSEnvironmentPeriod | intervalRange=GSSEnvironmentIntervalRange)?
 	//	'}' ';';
@@ -6062,9 +6062,9 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSEnvironmentUpperLevel:
 	//	'GSSEnvironmentUpperLevel' '{'
 	//	'level' ':=' level=GSSEnvironmentUpperLevelLevel ';' ('TMformat' ':='
-	//	TMformat=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? ('inputFilter' ':='
-	//	inputFilter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
-	//	import_from_prev_Level=[import_::TMTCIFImportImport|VersionedQualifiedName] ';')?
+	//	TMformat=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('inputFilter' ':='
+	//	inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';')? ('import_from_prev_Level' ':='
+	//	import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName] ';')?
 	//	'}' ';';
 	public GSSEnvironmentUpperLevelElements getGSSEnvironmentUpperLevelAccess() {
 		return pGSSEnvironmentUpperLevel;
@@ -6114,12 +6114,12 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'period_value' ':=' period_value=INTEGER ';'
 	//	'period_unit' ':=' period_unit=GSSEnvironmentUnit ';' ('level2' ':='
-	//	level2=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
-	//	'app_to_level2' ':=' app_to_level2=[export::TMTCIFExportExport|VersionedQualifiedName] ';' ('level1' ':='
-	//	level1=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
-	//	level2_to_level1=[export::TMTCIFExportExport|VersionedQualifiedName] ';')? ('level0' ':='
-	//	level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
-	//	level1_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+	//	level2=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
+	//	'app_to_level2' ':=' app_to_level2=[export::GSSExportExport|VersionedQualifiedName] ';' ('level1' ':='
+	//	level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
+	//	level2_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';')? ('level0' ':='
+	//	level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
+	//	level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
 	//	'}' ';';
 	public GSSEnvironmentPeriodicTCLevel2Elements getGSSEnvironmentPeriodicTCLevel2Access() {
 		return pGSSEnvironmentPeriodicTCLevel2;
@@ -6136,10 +6136,10 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'period_value' ':=' period_value=INTEGER ';'
 	//	'period_unit' ':=' period_unit=GSSEnvironmentUnit ';' ('level1' ':='
-	//	level1=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
-	//	'app_to_level1' ':=' app_to_level1=[export::TMTCIFExportExport|VersionedQualifiedName] ';' ('level0' ':='
-	//	level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
-	//	level1_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';')?
+	//	level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
+	//	'app_to_level1' ':=' app_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';' ('level0' ':='
+	//	level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
+	//	level1_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';')?
 	//	'}' ';';
 	public GSSEnvironmentPeriodicTCLevel1Elements getGSSEnvironmentPeriodicTCLevel1Access() {
 		return pGSSEnvironmentPeriodicTCLevel1;
@@ -6156,8 +6156,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'period_value' ':=' period_value=INTEGER ';'
 	//	'period_unit' ':=' period_unit=GSSEnvironmentUnit ';' ('level0' ':='
-	//	level0=[format::TMTCIFFormatFormat|VersionedQualifiedName] ';')?
-	//	'app_to_level0' ':=' app_to_level0=[export::TMTCIFExportExport|VersionedQualifiedName] ';'
+	//	level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
+	//	'app_to_level0' ':=' app_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';'
 	//	'}' ';';
 	public GSSEnvironmentPeriodicTCLevel0Elements getGSSEnvironmentPeriodicTCLevel0Access() {
 		return pGSSEnvironmentPeriodicTCLevel0;
@@ -6311,7 +6311,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSEnvironmentGVFiltered:
 	//	'GSSEnvironmentGVFiltered' '{'
 	//	'GlobalVarRef' ':=' GlobalVarRef=[GSSEnvironmentGlobalVar|STRING] ';' ('filter' ':='
-	//	filter=[filter::TMTCIFFilterFilter|VersionedQualifiedName] ';')?
+	//	filter=[filter::GSSFilterFilter|VersionedQualifiedName] ';')?
 	//	'}' ';';
 	public GSSEnvironmentGVFilteredElements getGSSEnvironmentGVFilteredAccess() {
 		return pGSSEnvironmentGVFiltered;

@@ -10,9 +10,8 @@
  */
 package es.uah.aut.srg.gss.environment;
 
-import es.uah.aut.srg.tmtcif.export.TMTCIFExportExport;
-
-import es.uah.aut.srg.tmtcif.format.TMTCIFFormatFormat;
+import es.uah.aut.srg.gss.export.GSSExportExport;
+import es.uah.aut.srg.gss.format.GSSFormatFormat;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,12 +40,12 @@ public interface GSSEnvironmentPeriodicTCLevel0 extends GSSEnvironmentPeriodicTC
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level0</em>' reference.
-	 * @see #setLevel0(TMTCIFFormatFormat)
+	 * @see #setLevel0(GSSFormatFormat)
 	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentPeriodicTCLevel0_Level0()
 	 * @model
 	 * @generated
 	 */
-	TMTCIFFormatFormat getLevel0();
+	GSSFormatFormat getLevel0();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentPeriodicTCLevel0#getLevel0 <em>Level0</em>}' reference.
@@ -56,7 +55,7 @@ public interface GSSEnvironmentPeriodicTCLevel0 extends GSSEnvironmentPeriodicTC
 	 * @see #getLevel0()
 	 * @generated
 	 */
-	void setLevel0(TMTCIFFormatFormat value);
+	void setLevel0(GSSFormatFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>App to level0</b></em>' reference.
@@ -67,12 +66,12 @@ public interface GSSEnvironmentPeriodicTCLevel0 extends GSSEnvironmentPeriodicTC
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>App to level0</em>' reference.
-	 * @see #setApp_to_level0(TMTCIFExportExport)
+	 * @see #setApp_to_level0(GSSExportExport)
 	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentPeriodicTCLevel0_App_to_level0()
 	 * @model required="true"
 	 * @generated
 	 */
-	TMTCIFExportExport getApp_to_level0();
+	GSSExportExport getApp_to_level0();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentPeriodicTCLevel0#getApp_to_level0 <em>App to level0</em>}' reference.
@@ -82,6 +81,6 @@ public interface GSSEnvironmentPeriodicTCLevel0 extends GSSEnvironmentPeriodicTC
 	 * @see #getApp_to_level0()
 	 * @generated
 	 */
-	void setApp_to_level0(TMTCIFExportExport value);
+	void setApp_to_level0(GSSExportExport value);
 
 } // GSSEnvironmentPeriodicTCLevel0

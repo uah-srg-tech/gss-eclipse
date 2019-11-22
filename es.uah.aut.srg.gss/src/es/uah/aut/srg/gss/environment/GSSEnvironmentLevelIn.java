@@ -10,10 +10,8 @@
  */
 package es.uah.aut.srg.gss.environment;
 
-import es.uah.aut.srg.tmtcif.export.TMTCIFExportExport;
-
-import es.uah.aut.srg.tmtcif.format.TMTCIFFormatFormat;
-
+import es.uah.aut.srg.gss.export.GSSExportExport;
+import es.uah.aut.srg.gss.format.GSSFormatFormat;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -124,12 +122,12 @@ public interface GSSEnvironmentLevelIn extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>TCformat</em>' reference.
-	 * @see #setTCformat(TMTCIFFormatFormat)
+	 * @see #setTCformat(GSSFormatFormat)
 	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentLevelIn_TCformat()
 	 * @model required="true"
 	 * @generated
 	 */
-	TMTCIFFormatFormat getTCformat();
+	GSSFormatFormat getTCformat();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentLevelIn#getTCformat <em>TCformat</em>}' reference.
@@ -139,7 +137,7 @@ public interface GSSEnvironmentLevelIn extends EObject {
 	 * @see #getTCformat()
 	 * @generated
 	 */
-	void setTCformat(TMTCIFFormatFormat value);
+	void setTCformat(GSSFormatFormat value);
 
 	/**
 	 * Returns the value of the '<em><b>Export to prev Level</b></em>' reference.
@@ -150,12 +148,12 @@ public interface GSSEnvironmentLevelIn extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Export to prev Level</em>' reference.
-	 * @see #setExport_to_prev_Level(TMTCIFExportExport)
+	 * @see #setExport_to_prev_Level(GSSExportExport)
 	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentLevelIn_Export_to_prev_Level()
 	 * @model
 	 * @generated
 	 */
-	TMTCIFExportExport getExport_to_prev_Level();
+	GSSExportExport getExport_to_prev_Level();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentLevelIn#getExport_to_prev_Level <em>Export to prev Level</em>}' reference.
@@ -165,6 +163,6 @@ public interface GSSEnvironmentLevelIn extends EObject {
 	 * @see #getExport_to_prev_Level()
 	 * @generated
 	 */
-	void setExport_to_prev_Level(TMTCIFExportExport value);
+	void setExport_to_prev_Level(GSSExportExport value);
 
 } // GSSEnvironmentLevelIn

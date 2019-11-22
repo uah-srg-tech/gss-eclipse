@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: es.uah.aut.srg.gss.editor.format.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: es.uah.aut.srg.gss.editor.format.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: es.uah.aut.srg.gss.editor.format,
+ es.uah.aut.srg.gss,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: es.uah.aut.srg.gss.lang.format.ide.contentassist.antlr.internal,
+ es.uah.aut.srg.gss.lang.format.ide.contentassist.antlr
+

@@ -3,11 +3,12 @@
 package es.uah.aut.srg.gss.protocol_packets.impl;
 
 import es.uah.aut.srg.gss.common.commonPackage;
+import es.uah.aut.srg.gss.export.exportPackage;
+import es.uah.aut.srg.gss.format.formatPackage;
 import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket;
 import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPackets;
 import es.uah.aut.srg.gss.protocol_packets.protocol_packetsFactory;
 import es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage;
-import es.uah.aut.srg.tmtcif.format.formatPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -83,8 +84,7 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 		isInited = true;
 
 		// Initialize simple dependencies
-		commonPackage.eINSTANCE.eClass();
-		es.uah.aut.srg.tmtcif.export.exportPackage.eINSTANCE.eClass();
+		exportPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theprotocol_packetsPackage.createPackageContents();
@@ -227,7 +227,7 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 
 		// Obtain other dependent packages
 		commonPackage thecommonPackage = (commonPackage)EPackage.Registry.INSTANCE.getEPackage(commonPackage.eNS_URI);
-		es.uah.aut.srg.tmtcif.export.exportPackage theexportPackage = (es.uah.aut.srg.tmtcif.export.exportPackage)EPackage.Registry.INSTANCE.getEPackage(es.uah.aut.srg.tmtcif.export.exportPackage.eNS_URI);
+		exportPackage theexportPackage = (exportPackage)EPackage.Registry.INSTANCE.getEPackage(exportPackage.eNS_URI);
 		formatPackage theformatPackage = (formatPackage)EPackage.Registry.INSTANCE.getEPackage(formatPackage.eNS_URI);
 
 		// Create type parameters
@@ -245,8 +245,8 @@ public class protocol_packetsPackageImpl extends EPackageImpl implements protoco
 		initEClass(gssProtocolPacketsProtocolPacketEClass, GSSProtocolPacketsProtocolPacket.class, "GSSProtocolPacketsProtocolPacket", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSProtocolPacketsProtocolPacket_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSProtocolPacketsProtocolPacket_LevelRef(), ecorePackage.getEString(), "levelRef", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSProtocolPacketsProtocolPacket_Export(), theexportPackage.getTMTCIFExportExport(), null, "export", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSProtocolPacketsProtocolPacket_Format(), theformatPackage.getTMTCIFFormatFormat(), null, "format", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSProtocolPacketsProtocolPacket_Export(), theexportPackage.getGSSExportExport(), null, "export", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSProtocolPacketsProtocolPacket_Format(), theformatPackage.getGSSFormatFormat(), null, "format", null, 1, 1, GSSProtocolPacketsProtocolPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

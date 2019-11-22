@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2019 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.gss/src" modelPluginID="es.uah.aut.srg.gss" modelName="Filter"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="common.genmodel#//common format.genmodel#//format"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>filter.ecore</foreignModel>
+  <genPackages prefix="filter" basePackage="es.uah.aut.srg.gss" disposableProviderFactory="true"
+      ecorePackage="filter.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="filter.ecore#//GSSFilterConstantType">
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//GSSFilterConstantType/decimal"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//GSSFilterConstantType/hex"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//GSSFilterConstantType/binary"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//GSSFilterConstantType/char"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//GSSFilterConstantType/string"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="filter.ecore#//GSSFilterOPType">
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//GSSFilterOPType/equal"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//GSSFilterOPType/different"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//GSSFilterOPType/bigger_than"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//GSSFilterOPType/smaller_than"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//GSSFilterOPType/bigger_or_equal"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//GSSFilterOPType/smaller_or_equal"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="filter.ecore#//GSSFilterSelectType">
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//GSSFilterSelectType/data"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//GSSFilterSelectType/size"/>
+      <genEnumLiterals ecoreEnumLiteral="filter.ecore#//GSSFilterSelectType/crc"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="filter.ecore#//GSSFilterFilter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterFilter/formatFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterFilter/BoolVar"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterFilter/BoolVarFromArrayItem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterFilter/BoolVarFromGroupedArrayItem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterFilter/BoolVarFDIC"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//GSSFilterMaxtermFilter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterMaxtermFilter/Maxterm"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//GSSFilterMintermFilter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterMintermFilter/Minterm"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//GSSFilterBoolVar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterBoolVar/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterBoolVar/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterBoolVar/constantType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVar/FieldRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVar/Op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVar/Constant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVar/Select"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVar/SelectLine"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//GSSFilterFieldOp">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterFieldOp/type"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//GSSFilterConstant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterConstant/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterConstant/mask"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//GSSFilterSelect">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterSelect/fromFile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterSelect/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterSelect/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterSelect/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterSelect/mask"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//GSSFilterSelectLine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterSelectLine/fromFile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterSelectLine/line"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterSelectLine/leftTrim"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterSelectLine/rightTrim"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterSelectLine/mask"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//GSSFilterBoolVarFromArrayItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterBoolVarFromArrayItem/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterBoolVarFromArrayItem/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterBoolVarFromArrayItem/constantType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVarFromArrayItem/AIFieldRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVarFromArrayItem/Op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVarFromArrayItem/Constant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVarFromArrayItem/Select"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVarFromArrayItem/SelectLine"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//GSSFilterBoolVarFromGroupedArrayItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterBoolVarFromGroupedArrayItem/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterBoolVarFromGroupedArrayItem/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterBoolVarFromGroupedArrayItem/constantType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterBoolVarFromGroupedArrayItem/group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVarFromGroupedArrayItem/AIFieldRefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVarFromGroupedArrayItem/Op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVarFromGroupedArrayItem/Constant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVarFromGroupedArrayItem/Select"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVarFromGroupedArrayItem/SelectLine"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//GSSFilterBoolVarFDIC">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterBoolVarFDIC/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterBoolVarFDIC/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVarFDIC/FieldRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterBoolVarFDIC/Op"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//GSSFilterMaxterm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterMaxterm/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterMaxterm/BoolVarRef"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//GSSFilterMinterm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterMinterm/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference filter.ecore#//GSSFilterMinterm/BoolVarRef"/>
+    </genClasses>
+    <genClasses ecoreClass="filter.ecore#//GSSFilterBoolVarRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute filter.ecore#//GSSFilterBoolVarRef/idRef"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

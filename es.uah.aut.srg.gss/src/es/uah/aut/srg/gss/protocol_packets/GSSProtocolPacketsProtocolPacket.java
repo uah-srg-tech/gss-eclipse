@@ -3,8 +3,8 @@
 package es.uah.aut.srg.gss.protocol_packets;
 
 import es.uah.aut.srg.gss.common.GSSModelObject;
-import es.uah.aut.srg.tmtcif.export.TMTCIFExportExport;
-import es.uah.aut.srg.tmtcif.format.TMTCIFFormatFormat;
+import es.uah.aut.srg.gss.export.GSSExportExport;
+import es.uah.aut.srg.gss.format.GSSFormatFormat;
 
 /**
  * <!-- begin-user-doc -->
@@ -87,12 +87,12 @@ public interface GSSProtocolPacketsProtocolPacket extends GSSModelObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Export</em>' reference.
-	 * @see #setExport(TMTCIFExportExport)
+	 * @see #setExport(GSSExportExport)
 	 * @see es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage#getGSSProtocolPacketsProtocolPacket_Export()
 	 * @model required="true"
 	 * @generated
 	 */
-	TMTCIFExportExport getExport();
+	GSSExportExport getExport();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getExport <em>Export</em>}' reference.
@@ -102,7 +102,7 @@ public interface GSSProtocolPacketsProtocolPacket extends GSSModelObject {
 	 * @see #getExport()
 	 * @generated
 	 */
-	void setExport(TMTCIFExportExport value);
+	void setExport(GSSExportExport value);
 
 	/**
 	 * Returns the value of the '<em><b>Format</b></em>' reference.
@@ -113,12 +113,12 @@ public interface GSSProtocolPacketsProtocolPacket extends GSSModelObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Format</em>' reference.
-	 * @see #setFormat(TMTCIFFormatFormat)
+	 * @see #setFormat(GSSFormatFormat)
 	 * @see es.uah.aut.srg.gss.protocol_packets.protocol_packetsPackage#getGSSProtocolPacketsProtocolPacket_Format()
 	 * @model required="true"
 	 * @generated
 	 */
-	TMTCIFFormatFormat getFormat();
+	GSSFormatFormat getFormat();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPacket#getFormat <em>Format</em>}' reference.
@@ -128,6 +128,6 @@ public interface GSSProtocolPacketsProtocolPacket extends GSSModelObject {
 	 * @see #getFormat()
 	 * @generated
 	 */
-	void setFormat(TMTCIFFormatFormat value);
+	void setFormat(GSSFormatFormat value);
 
 } // GSSProtocolPacketsProtocolPacket

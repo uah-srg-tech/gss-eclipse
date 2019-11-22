@@ -10,11 +10,11 @@
  */
 package es.uah.aut.srg.gss.test_proc.impl;
 
+import es.uah.aut.srg.gss.format.GSSFormatFormat;
+import es.uah.aut.srg.gss.import_.GSSImportImport;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcFilter;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
-import es.uah.aut.srg.tmtcif.format.TMTCIFFormatFormat;
-import es.uah.aut.srg.tmtcif.import_.TMTCIFImportImport;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -52,7 +52,7 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * @generated
 	 * @ordered
 	 */
-	protected TMTCIFFormatFormat level2;
+	protected GSSFormatFormat level2;
 
 	/**
 	 * The cached value of the '{@link #getLevel2_filter() <em>Level2 filter</em>}' containment reference.
@@ -72,7 +72,7 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * @generated
 	 * @ordered
 	 */
-	protected TMTCIFFormatFormat level1;
+	protected GSSFormatFormat level1;
 
 	/**
 	 * The cached value of the '{@link #getLevel2_from_level1() <em>Level2 from level1</em>}' reference.
@@ -82,7 +82,7 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * @generated
 	 * @ordered
 	 */
-	protected TMTCIFImportImport level2_from_level1;
+	protected GSSImportImport level2_from_level1;
 
 	/**
 	 * The cached value of the '{@link #getLevel1_filter() <em>Level1 filter</em>}' containment reference.
@@ -102,7 +102,7 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * @generated
 	 * @ordered
 	 */
-	protected TMTCIFFormatFormat level0;
+	protected GSSFormatFormat level0;
 
 	/**
 	 * The cached value of the '{@link #getLevel1_from_level0() <em>Level1 from level0</em>}' reference.
@@ -112,7 +112,7 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * @generated
 	 * @ordered
 	 */
-	protected TMTCIFImportImport level1_from_level0;
+	protected GSSImportImport level1_from_level0;
 
 	/**
 	 * The cached value of the '{@link #getLevel0_filter() <em>Level0 filter</em>}' containment reference.
@@ -148,10 +148,10 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFFormatFormat getLevel2() {
+	public GSSFormatFormat getLevel2() {
 		if (level2 != null && level2.eIsProxy()) {
 			InternalEObject oldLevel2 = (InternalEObject)level2;
-			level2 = (TMTCIFFormatFormat)eResolveProxy(oldLevel2);
+			level2 = (GSSFormatFormat)eResolveProxy(oldLevel2);
 			if (level2 != oldLevel2) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2, oldLevel2, level2));
@@ -165,7 +165,7 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFFormatFormat basicGetLevel2() {
+	public GSSFormatFormat basicGetLevel2() {
 		return level2;
 	}
 
@@ -174,8 +174,8 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel2(TMTCIFFormatFormat newLevel2) {
-		TMTCIFFormatFormat oldLevel2 = level2;
+	public void setLevel2(GSSFormatFormat newLevel2) {
+		GSSFormatFormat oldLevel2 = level2;
 		level2 = newLevel2;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2, oldLevel2, level2));
@@ -229,10 +229,10 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFFormatFormat getLevel1() {
+	public GSSFormatFormat getLevel1() {
 		if (level1 != null && level1.eIsProxy()) {
 			InternalEObject oldLevel1 = (InternalEObject)level1;
-			level1 = (TMTCIFFormatFormat)eResolveProxy(oldLevel1);
+			level1 = (GSSFormatFormat)eResolveProxy(oldLevel1);
 			if (level1 != oldLevel1) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1, oldLevel1, level1));
@@ -246,7 +246,7 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFFormatFormat basicGetLevel1() {
+	public GSSFormatFormat basicGetLevel1() {
 		return level1;
 	}
 
@@ -255,8 +255,8 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel1(TMTCIFFormatFormat newLevel1) {
-		TMTCIFFormatFormat oldLevel1 = level1;
+	public void setLevel1(GSSFormatFormat newLevel1) {
+		GSSFormatFormat oldLevel1 = level1;
 		level1 = newLevel1;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1, oldLevel1, level1));
@@ -267,10 +267,10 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFImportImport getLevel2_from_level1() {
+	public GSSImportImport getLevel2_from_level1() {
 		if (level2_from_level1 != null && level2_from_level1.eIsProxy()) {
 			InternalEObject oldLevel2_from_level1 = (InternalEObject)level2_from_level1;
-			level2_from_level1 = (TMTCIFImportImport)eResolveProxy(oldLevel2_from_level1);
+			level2_from_level1 = (GSSImportImport)eResolveProxy(oldLevel2_from_level1);
 			if (level2_from_level1 != oldLevel2_from_level1) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2_FROM_LEVEL1, oldLevel2_from_level1, level2_from_level1));
@@ -284,7 +284,7 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFImportImport basicGetLevel2_from_level1() {
+	public GSSImportImport basicGetLevel2_from_level1() {
 		return level2_from_level1;
 	}
 
@@ -293,8 +293,8 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel2_from_level1(TMTCIFImportImport newLevel2_from_level1) {
-		TMTCIFImportImport oldLevel2_from_level1 = level2_from_level1;
+	public void setLevel2_from_level1(GSSImportImport newLevel2_from_level1) {
+		GSSImportImport oldLevel2_from_level1 = level2_from_level1;
 		level2_from_level1 = newLevel2_from_level1;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2_FROM_LEVEL1, oldLevel2_from_level1, level2_from_level1));
@@ -348,10 +348,10 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFFormatFormat getLevel0() {
+	public GSSFormatFormat getLevel0() {
 		if (level0 != null && level0.eIsProxy()) {
 			InternalEObject oldLevel0 = (InternalEObject)level0;
-			level0 = (TMTCIFFormatFormat)eResolveProxy(oldLevel0);
+			level0 = (GSSFormatFormat)eResolveProxy(oldLevel0);
 			if (level0 != oldLevel0) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL0, oldLevel0, level0));
@@ -365,7 +365,7 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFFormatFormat basicGetLevel0() {
+	public GSSFormatFormat basicGetLevel0() {
 		return level0;
 	}
 
@@ -374,8 +374,8 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel0(TMTCIFFormatFormat newLevel0) {
-		TMTCIFFormatFormat oldLevel0 = level0;
+	public void setLevel0(GSSFormatFormat newLevel0) {
+		GSSFormatFormat oldLevel0 = level0;
 		level0 = newLevel0;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL0, oldLevel0, level0));
@@ -386,10 +386,10 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFImportImport getLevel1_from_level0() {
+	public GSSImportImport getLevel1_from_level0() {
 		if (level1_from_level0 != null && level1_from_level0.eIsProxy()) {
 			InternalEObject oldLevel1_from_level0 = (InternalEObject)level1_from_level0;
-			level1_from_level0 = (TMTCIFImportImport)eResolveProxy(oldLevel1_from_level0);
+			level1_from_level0 = (GSSImportImport)eResolveProxy(oldLevel1_from_level0);
 			if (level1_from_level0 != oldLevel1_from_level0) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1_FROM_LEVEL0, oldLevel1_from_level0, level1_from_level0));
@@ -403,7 +403,7 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFImportImport basicGetLevel1_from_level0() {
+	public GSSImportImport basicGetLevel1_from_level0() {
 		return level1_from_level0;
 	}
 
@@ -412,8 +412,8 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel1_from_level0(TMTCIFImportImport newLevel1_from_level0) {
-		TMTCIFImportImport oldLevel1_from_level0 = level1_from_level0;
+	public void setLevel1_from_level0(GSSImportImport newLevel1_from_level0) {
+		GSSImportImport oldLevel1_from_level0 = level1_from_level0;
 		level1_from_level0 = newLevel1_from_level0;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1_FROM_LEVEL0, oldLevel1_from_level0, level1_from_level0));
@@ -522,25 +522,25 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2:
-				setLevel2((TMTCIFFormatFormat)newValue);
+				setLevel2((GSSFormatFormat)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2_FILTER:
 				setLevel2_filter((GSSTestProcFilter)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1:
-				setLevel1((TMTCIFFormatFormat)newValue);
+				setLevel1((GSSFormatFormat)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2_FROM_LEVEL1:
-				setLevel2_from_level1((TMTCIFImportImport)newValue);
+				setLevel2_from_level1((GSSImportImport)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1_FILTER:
 				setLevel1_filter((GSSTestProcFilter)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL0:
-				setLevel0((TMTCIFFormatFormat)newValue);
+				setLevel0((GSSFormatFormat)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1_FROM_LEVEL0:
-				setLevel1_from_level0((TMTCIFImportImport)newValue);
+				setLevel1_from_level0((GSSImportImport)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL0_FILTER:
 				setLevel0_filter((GSSTestProcFilter)newValue);
@@ -558,25 +558,25 @@ public class GSSTestProcOutputLevel2Impl extends GSSTestProcOutputImpl implement
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2:
-				setLevel2((TMTCIFFormatFormat)null);
+				setLevel2((GSSFormatFormat)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2_FILTER:
 				setLevel2_filter((GSSTestProcFilter)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1:
-				setLevel1((TMTCIFFormatFormat)null);
+				setLevel1((GSSFormatFormat)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL2_FROM_LEVEL1:
-				setLevel2_from_level1((TMTCIFImportImport)null);
+				setLevel2_from_level1((GSSImportImport)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1_FILTER:
 				setLevel1_filter((GSSTestProcFilter)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL0:
-				setLevel0((TMTCIFFormatFormat)null);
+				setLevel0((GSSFormatFormat)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL1_FROM_LEVEL0:
-				setLevel1_from_level0((TMTCIFImportImport)null);
+				setLevel1_from_level0((GSSImportImport)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUT_LEVEL2__LEVEL0_FILTER:
 				setLevel0_filter((GSSTestProcFilter)null);
