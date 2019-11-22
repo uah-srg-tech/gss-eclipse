@@ -211,41 +211,41 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cPrev_step_idrefGSSTestProcStepCrossReference_10_2_0 = (CrossReference)cPrev_step_idrefAssignment_10_2.eContents().get(0);
 		private final RuleCall cPrev_step_idrefGSSTestProcStepVersionedQualifiedReferenceNameParserRuleCall_10_2_0_1 = (RuleCall)cPrev_step_idrefGSSTestProcStepCrossReference_10_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_10_3 = (Keyword)cGroup_10.eContents().get(3);
-		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
-		private final Keyword cOutput_idref_from_prev_stepKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_11_1 = (Keyword)cGroup_11.eContents().get(1);
-		private final Assignment cOutput_idref_from_prev_stepAssignment_11_2 = (Assignment)cGroup_11.eContents().get(2);
-		private final CrossReference cOutput_idref_from_prev_stepGSSTestProcOutputCrossReference_11_2_0 = (CrossReference)cOutput_idref_from_prev_stepAssignment_11_2.eContents().get(0);
-		private final RuleCall cOutput_idref_from_prev_stepGSSTestProcOutputVersionedQualifiedReferenceNameParserRuleCall_11_2_0_1 = (RuleCall)cOutput_idref_from_prev_stepGSSTestProcOutputCrossReference_11_2_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_11_3 = (Keyword)cGroup_11.eContents().get(3);
-		private final Keyword cModeKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final Keyword cColonEqualsSignKeyword_13 = (Keyword)cGroup.eContents().get(13);
-		private final Assignment cModeAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final RuleCall cModeGSSTestProcModeEnumRuleCall_14_0 = (RuleCall)cModeAssignment_14.eContents().get(0);
-		private final Keyword cSemicolonKeyword_15 = (Keyword)cGroup.eContents().get(15);
-		private final Group cGroup_16 = (Group)cGroup.eContents().get(16);
-		private final Keyword cReplaysKeyword_16_0 = (Keyword)cGroup_16.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_16_1 = (Keyword)cGroup_16.eContents().get(1);
-		private final Assignment cReplaysAssignment_16_2 = (Assignment)cGroup_16.eContents().get(2);
-		private final RuleCall cReplaysINTEGERParserRuleCall_16_2_0 = (RuleCall)cReplaysAssignment_16_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_16_3 = (Keyword)cGroup_16.eContents().get(3);
-		private final Assignment cInputsAssignment_17 = (Assignment)cGroup.eContents().get(17);
-		private final RuleCall cInputsGSSTestProcInputsParserRuleCall_17_0 = (RuleCall)cInputsAssignment_17.eContents().get(0);
-		private final Assignment cOutputsAssignment_18 = (Assignment)cGroup.eContents().get(18);
-		private final RuleCall cOutputsGSSTestProcOutputsParserRuleCall_18_0 = (RuleCall)cOutputsAssignment_18.eContents().get(0);
-		private final Assignment cSpecialPacketsAssignment_19 = (Assignment)cGroup.eContents().get(19);
-		private final RuleCall cSpecialPacketsGSSTestProcSpecialPacketsParserRuleCall_19_0 = (RuleCall)cSpecialPacketsAssignment_19.eContents().get(0);
-		private final Assignment cConcurrent_stepsAssignment_20 = (Assignment)cGroup.eContents().get(20);
-		private final RuleCall cConcurrent_stepsGSSTestProcConcurrentStepsParserRuleCall_20_0 = (RuleCall)cConcurrent_stepsAssignment_20.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_21 = (Keyword)cGroup.eContents().get(21);
-		private final Keyword cSemicolonKeyword_22 = (Keyword)cGroup.eContents().get(22);
+		private final Keyword cOutput_idref_from_prev_stepKeyword_10_4 = (Keyword)cGroup_10.eContents().get(4);
+		private final Keyword cColonEqualsSignKeyword_10_5 = (Keyword)cGroup_10.eContents().get(5);
+		private final Assignment cOutput_idref_from_prev_stepAssignment_10_6 = (Assignment)cGroup_10.eContents().get(6);
+		private final CrossReference cOutput_idref_from_prev_stepGSSTestProcOutputCrossReference_10_6_0 = (CrossReference)cOutput_idref_from_prev_stepAssignment_10_6.eContents().get(0);
+		private final RuleCall cOutput_idref_from_prev_stepGSSTestProcOutputVersionedQualifiedReferenceNameParserRuleCall_10_6_0_1 = (RuleCall)cOutput_idref_from_prev_stepGSSTestProcOutputCrossReference_10_6_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_10_7 = (Keyword)cGroup_10.eContents().get(7);
+		private final Keyword cModeKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Keyword cColonEqualsSignKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		private final Assignment cModeAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final RuleCall cModeGSSTestProcModeEnumRuleCall_13_0 = (RuleCall)cModeAssignment_13.eContents().get(0);
+		private final Keyword cSemicolonKeyword_14 = (Keyword)cGroup.eContents().get(14);
+		private final Group cGroup_15 = (Group)cGroup.eContents().get(15);
+		private final Keyword cReplaysKeyword_15_0 = (Keyword)cGroup_15.eContents().get(0);
+		private final Keyword cColonEqualsSignKeyword_15_1 = (Keyword)cGroup_15.eContents().get(1);
+		private final Assignment cReplaysAssignment_15_2 = (Assignment)cGroup_15.eContents().get(2);
+		private final RuleCall cReplaysINTEGERParserRuleCall_15_2_0 = (RuleCall)cReplaysAssignment_15_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_15_3 = (Keyword)cGroup_15.eContents().get(3);
+		private final Assignment cInputsAssignment_16 = (Assignment)cGroup.eContents().get(16);
+		private final RuleCall cInputsGSSTestProcInputsParserRuleCall_16_0 = (RuleCall)cInputsAssignment_16.eContents().get(0);
+		private final Assignment cOutputsAssignment_17 = (Assignment)cGroup.eContents().get(17);
+		private final RuleCall cOutputsGSSTestProcOutputsParserRuleCall_17_0 = (RuleCall)cOutputsAssignment_17.eContents().get(0);
+		private final Assignment cSpecialPacketsAssignment_18 = (Assignment)cGroup.eContents().get(18);
+		private final RuleCall cSpecialPacketsGSSTestProcSpecialPacketsParserRuleCall_18_0 = (RuleCall)cSpecialPacketsAssignment_18.eContents().get(0);
+		private final Assignment cConcurrent_stepsAssignment_19 = (Assignment)cGroup.eContents().get(19);
+		private final RuleCall cConcurrent_stepsGSSTestProcConcurrentStepsParserRuleCall_19_0 = (RuleCall)cConcurrent_stepsAssignment_19.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_20 = (Keyword)cGroup.eContents().get(20);
+		private final Keyword cSemicolonKeyword_21 = (Keyword)cGroup.eContents().get(21);
 		
 		//GSSTestProcStep:
 		//	'GSSTestProcStep' '{'
 		//	'name' ':=' name=ID ';'
 		//	'id' ':=' id=INTEGER ';' ('prev_step_idref' ':=' prev_step_idref=[GSSTestProcStep|VersionedQualifiedReferenceName]
-		//	';')? ('output_idref_from_prev_step' ':='
-		//	output_idref_from_prev_step=[GSSTestProcOutput|VersionedQualifiedReferenceName] ';')?
+		//	';'
+		//	'output_idref_from_prev_step' ':=' output_idref_from_prev_step=[GSSTestProcOutput|VersionedQualifiedReferenceName]
+		//	';')?
 		//	'mode' ':=' mode=GSSTestProcMode ';' ('replays' ':=' replays=INTEGER ';')?
 		//	inputs=GSSTestProcInputs
 		//	outputs=GSSTestProcOutputs?
@@ -255,7 +255,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTestProcStep' '{' 'name' ':=' name=ID ';' 'id' ':=' id=INTEGER ';' ('prev_step_idref' ':='
-		//prev_step_idref=[GSSTestProcStep|VersionedQualifiedReferenceName] ';')? ('output_idref_from_prev_step' ':='
+		//prev_step_idref=[GSSTestProcStep|VersionedQualifiedReferenceName] ';' 'output_idref_from_prev_step' ':='
 		//output_idref_from_prev_step=[GSSTestProcOutput|VersionedQualifiedReferenceName] ';')? 'mode' ':=' mode=GSSTestProcMode
 		//';' ('replays' ':=' replays=INTEGER ';')? inputs=GSSTestProcInputs outputs=GSSTestProcOutputs?
 		//specialPackets=GSSTestProcSpecialPackets? concurrent_steps=GSSTestProcConcurrentSteps? '}' ';'
@@ -297,7 +297,9 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
-		//('prev_step_idref' ':=' prev_step_idref=[GSSTestProcStep|VersionedQualifiedReferenceName] ';')?
+		//('prev_step_idref' ':=' prev_step_idref=[GSSTestProcStep|VersionedQualifiedReferenceName] ';'
+		//'output_idref_from_prev_step' ':=' output_idref_from_prev_step=[GSSTestProcOutput|VersionedQualifiedReferenceName]
+		//';')?
 		public Group getGroup_10() { return cGroup_10; }
 		
 		//'prev_step_idref'
@@ -318,90 +320,86 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_10_3() { return cSemicolonKeyword_10_3; }
 		
-		//('output_idref_from_prev_step' ':=' output_idref_from_prev_step=[GSSTestProcOutput|VersionedQualifiedReferenceName]
-		//';')?
-		public Group getGroup_11() { return cGroup_11; }
-		
 		//'output_idref_from_prev_step'
-		public Keyword getOutput_idref_from_prev_stepKeyword_11_0() { return cOutput_idref_from_prev_stepKeyword_11_0; }
+		public Keyword getOutput_idref_from_prev_stepKeyword_10_4() { return cOutput_idref_from_prev_stepKeyword_10_4; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_11_1() { return cColonEqualsSignKeyword_11_1; }
+		public Keyword getColonEqualsSignKeyword_10_5() { return cColonEqualsSignKeyword_10_5; }
 		
 		//output_idref_from_prev_step=[GSSTestProcOutput|VersionedQualifiedReferenceName]
-		public Assignment getOutput_idref_from_prev_stepAssignment_11_2() { return cOutput_idref_from_prev_stepAssignment_11_2; }
+		public Assignment getOutput_idref_from_prev_stepAssignment_10_6() { return cOutput_idref_from_prev_stepAssignment_10_6; }
 		
 		//[GSSTestProcOutput|VersionedQualifiedReferenceName]
-		public CrossReference getOutput_idref_from_prev_stepGSSTestProcOutputCrossReference_11_2_0() { return cOutput_idref_from_prev_stepGSSTestProcOutputCrossReference_11_2_0; }
+		public CrossReference getOutput_idref_from_prev_stepGSSTestProcOutputCrossReference_10_6_0() { return cOutput_idref_from_prev_stepGSSTestProcOutputCrossReference_10_6_0; }
 		
 		//VersionedQualifiedReferenceName
-		public RuleCall getOutput_idref_from_prev_stepGSSTestProcOutputVersionedQualifiedReferenceNameParserRuleCall_11_2_0_1() { return cOutput_idref_from_prev_stepGSSTestProcOutputVersionedQualifiedReferenceNameParserRuleCall_11_2_0_1; }
+		public RuleCall getOutput_idref_from_prev_stepGSSTestProcOutputVersionedQualifiedReferenceNameParserRuleCall_10_6_0_1() { return cOutput_idref_from_prev_stepGSSTestProcOutputVersionedQualifiedReferenceNameParserRuleCall_10_6_0_1; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_11_3() { return cSemicolonKeyword_11_3; }
+		public Keyword getSemicolonKeyword_10_7() { return cSemicolonKeyword_10_7; }
 		
 		//'mode'
-		public Keyword getModeKeyword_12() { return cModeKeyword_12; }
+		public Keyword getModeKeyword_11() { return cModeKeyword_11; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_13() { return cColonEqualsSignKeyword_13; }
+		public Keyword getColonEqualsSignKeyword_12() { return cColonEqualsSignKeyword_12; }
 		
 		//mode=GSSTestProcMode
-		public Assignment getModeAssignment_14() { return cModeAssignment_14; }
+		public Assignment getModeAssignment_13() { return cModeAssignment_13; }
 		
 		//GSSTestProcMode
-		public RuleCall getModeGSSTestProcModeEnumRuleCall_14_0() { return cModeGSSTestProcModeEnumRuleCall_14_0; }
+		public RuleCall getModeGSSTestProcModeEnumRuleCall_13_0() { return cModeGSSTestProcModeEnumRuleCall_13_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_15() { return cSemicolonKeyword_15; }
+		public Keyword getSemicolonKeyword_14() { return cSemicolonKeyword_14; }
 		
 		//('replays' ':=' replays=INTEGER ';')?
-		public Group getGroup_16() { return cGroup_16; }
+		public Group getGroup_15() { return cGroup_15; }
 		
 		//'replays'
-		public Keyword getReplaysKeyword_16_0() { return cReplaysKeyword_16_0; }
+		public Keyword getReplaysKeyword_15_0() { return cReplaysKeyword_15_0; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_16_1() { return cColonEqualsSignKeyword_16_1; }
+		public Keyword getColonEqualsSignKeyword_15_1() { return cColonEqualsSignKeyword_15_1; }
 		
 		//replays=INTEGER
-		public Assignment getReplaysAssignment_16_2() { return cReplaysAssignment_16_2; }
+		public Assignment getReplaysAssignment_15_2() { return cReplaysAssignment_15_2; }
 		
 		//INTEGER
-		public RuleCall getReplaysINTEGERParserRuleCall_16_2_0() { return cReplaysINTEGERParserRuleCall_16_2_0; }
+		public RuleCall getReplaysINTEGERParserRuleCall_15_2_0() { return cReplaysINTEGERParserRuleCall_15_2_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_16_3() { return cSemicolonKeyword_16_3; }
+		public Keyword getSemicolonKeyword_15_3() { return cSemicolonKeyword_15_3; }
 		
 		//inputs=GSSTestProcInputs
-		public Assignment getInputsAssignment_17() { return cInputsAssignment_17; }
+		public Assignment getInputsAssignment_16() { return cInputsAssignment_16; }
 		
 		//GSSTestProcInputs
-		public RuleCall getInputsGSSTestProcInputsParserRuleCall_17_0() { return cInputsGSSTestProcInputsParserRuleCall_17_0; }
+		public RuleCall getInputsGSSTestProcInputsParserRuleCall_16_0() { return cInputsGSSTestProcInputsParserRuleCall_16_0; }
 		
 		//outputs=GSSTestProcOutputs?
-		public Assignment getOutputsAssignment_18() { return cOutputsAssignment_18; }
+		public Assignment getOutputsAssignment_17() { return cOutputsAssignment_17; }
 		
 		//GSSTestProcOutputs
-		public RuleCall getOutputsGSSTestProcOutputsParserRuleCall_18_0() { return cOutputsGSSTestProcOutputsParserRuleCall_18_0; }
+		public RuleCall getOutputsGSSTestProcOutputsParserRuleCall_17_0() { return cOutputsGSSTestProcOutputsParserRuleCall_17_0; }
 		
 		//specialPackets=GSSTestProcSpecialPackets?
-		public Assignment getSpecialPacketsAssignment_19() { return cSpecialPacketsAssignment_19; }
+		public Assignment getSpecialPacketsAssignment_18() { return cSpecialPacketsAssignment_18; }
 		
 		//GSSTestProcSpecialPackets
-		public RuleCall getSpecialPacketsGSSTestProcSpecialPacketsParserRuleCall_19_0() { return cSpecialPacketsGSSTestProcSpecialPacketsParserRuleCall_19_0; }
+		public RuleCall getSpecialPacketsGSSTestProcSpecialPacketsParserRuleCall_18_0() { return cSpecialPacketsGSSTestProcSpecialPacketsParserRuleCall_18_0; }
 		
 		//concurrent_steps=GSSTestProcConcurrentSteps?
-		public Assignment getConcurrent_stepsAssignment_20() { return cConcurrent_stepsAssignment_20; }
+		public Assignment getConcurrent_stepsAssignment_19() { return cConcurrent_stepsAssignment_19; }
 		
 		//GSSTestProcConcurrentSteps
-		public RuleCall getConcurrent_stepsGSSTestProcConcurrentStepsParserRuleCall_20_0() { return cConcurrent_stepsGSSTestProcConcurrentStepsParserRuleCall_20_0; }
+		public RuleCall getConcurrent_stepsGSSTestProcConcurrentStepsParserRuleCall_19_0() { return cConcurrent_stepsGSSTestProcConcurrentStepsParserRuleCall_19_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_21() { return cRightCurlyBracketKeyword_21; }
+		public Keyword getRightCurlyBracketKeyword_20() { return cRightCurlyBracketKeyword_20; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_22() { return cSemicolonKeyword_22; }
+		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
 	}
 	public class GSSTestProcInputsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcInputs");
@@ -3829,8 +3827,9 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSTestProcStep' '{'
 	//	'name' ':=' name=ID ';'
 	//	'id' ':=' id=INTEGER ';' ('prev_step_idref' ':=' prev_step_idref=[GSSTestProcStep|VersionedQualifiedReferenceName]
-	//	';')? ('output_idref_from_prev_step' ':='
-	//	output_idref_from_prev_step=[GSSTestProcOutput|VersionedQualifiedReferenceName] ';')?
+	//	';'
+	//	'output_idref_from_prev_step' ':=' output_idref_from_prev_step=[GSSTestProcOutput|VersionedQualifiedReferenceName]
+	//	';')?
 	//	'mode' ':=' mode=GSSTestProcMode ';' ('replays' ':=' replays=INTEGER ';')?
 	//	inputs=GSSTestProcInputs
 	//	outputs=GSSTestProcOutputs?

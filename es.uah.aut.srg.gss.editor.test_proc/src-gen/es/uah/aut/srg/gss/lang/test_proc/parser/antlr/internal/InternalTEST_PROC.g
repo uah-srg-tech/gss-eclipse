@@ -478,15 +478,13 @@ ruleGSSTestProcStep returns [EObject current=null]
 			{
 				newLeafNode(otherlv_13, grammarAccess.getGSSTestProcStepAccess().getSemicolonKeyword_10_3());
 			}
-		)?
-		(
 			otherlv_14='output_idref_from_prev_step'
 			{
-				newLeafNode(otherlv_14, grammarAccess.getGSSTestProcStepAccess().getOutput_idref_from_prev_stepKeyword_11_0());
+				newLeafNode(otherlv_14, grammarAccess.getGSSTestProcStepAccess().getOutput_idref_from_prev_stepKeyword_10_4());
 			}
 			otherlv_15=':='
 			{
-				newLeafNode(otherlv_15, grammarAccess.getGSSTestProcStepAccess().getColonEqualsSignKeyword_11_1());
+				newLeafNode(otherlv_15, grammarAccess.getGSSTestProcStepAccess().getColonEqualsSignKeyword_10_5());
 			}
 			(
 				(
@@ -499,7 +497,7 @@ ruleGSSTestProcStep returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getOutput_idref_from_prev_stepGSSTestProcOutputCrossReference_11_2_0());
+						newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getOutput_idref_from_prev_stepGSSTestProcOutputCrossReference_10_6_0());
 					}
 					ruleVersionedQualifiedReferenceName
 					{
@@ -509,21 +507,21 @@ ruleGSSTestProcStep returns [EObject current=null]
 			)
 			otherlv_17=';'
 			{
-				newLeafNode(otherlv_17, grammarAccess.getGSSTestProcStepAccess().getSemicolonKeyword_11_3());
+				newLeafNode(otherlv_17, grammarAccess.getGSSTestProcStepAccess().getSemicolonKeyword_10_7());
 			}
 		)?
 		otherlv_18='mode'
 		{
-			newLeafNode(otherlv_18, grammarAccess.getGSSTestProcStepAccess().getModeKeyword_12());
+			newLeafNode(otherlv_18, grammarAccess.getGSSTestProcStepAccess().getModeKeyword_11());
 		}
 		otherlv_19=':='
 		{
-			newLeafNode(otherlv_19, grammarAccess.getGSSTestProcStepAccess().getColonEqualsSignKeyword_13());
+			newLeafNode(otherlv_19, grammarAccess.getGSSTestProcStepAccess().getColonEqualsSignKeyword_12());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getModeGSSTestProcModeEnumRuleCall_14_0());
+					newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getModeGSSTestProcModeEnumRuleCall_13_0());
 				}
 				lv_mode_20_0=ruleGSSTestProcMode
 				{
@@ -541,21 +539,21 @@ ruleGSSTestProcStep returns [EObject current=null]
 		)
 		otherlv_21=';'
 		{
-			newLeafNode(otherlv_21, grammarAccess.getGSSTestProcStepAccess().getSemicolonKeyword_15());
+			newLeafNode(otherlv_21, grammarAccess.getGSSTestProcStepAccess().getSemicolonKeyword_14());
 		}
 		(
 			otherlv_22='replays'
 			{
-				newLeafNode(otherlv_22, grammarAccess.getGSSTestProcStepAccess().getReplaysKeyword_16_0());
+				newLeafNode(otherlv_22, grammarAccess.getGSSTestProcStepAccess().getReplaysKeyword_15_0());
 			}
 			otherlv_23=':='
 			{
-				newLeafNode(otherlv_23, grammarAccess.getGSSTestProcStepAccess().getColonEqualsSignKeyword_16_1());
+				newLeafNode(otherlv_23, grammarAccess.getGSSTestProcStepAccess().getColonEqualsSignKeyword_15_1());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getReplaysINTEGERParserRuleCall_16_2_0());
+						newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getReplaysINTEGERParserRuleCall_15_2_0());
 					}
 					lv_replays_24_0=ruleINTEGER
 					{
@@ -573,13 +571,13 @@ ruleGSSTestProcStep returns [EObject current=null]
 			)
 			otherlv_25=';'
 			{
-				newLeafNode(otherlv_25, grammarAccess.getGSSTestProcStepAccess().getSemicolonKeyword_16_3());
+				newLeafNode(otherlv_25, grammarAccess.getGSSTestProcStepAccess().getSemicolonKeyword_15_3());
 			}
 		)?
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getInputsGSSTestProcInputsParserRuleCall_17_0());
+					newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getInputsGSSTestProcInputsParserRuleCall_16_0());
 				}
 				lv_inputs_26_0=ruleGSSTestProcInputs
 				{
@@ -598,7 +596,7 @@ ruleGSSTestProcStep returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getOutputsGSSTestProcOutputsParserRuleCall_18_0());
+					newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getOutputsGSSTestProcOutputsParserRuleCall_17_0());
 				}
 				lv_outputs_27_0=ruleGSSTestProcOutputs
 				{
@@ -617,7 +615,7 @@ ruleGSSTestProcStep returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getSpecialPacketsGSSTestProcSpecialPacketsParserRuleCall_19_0());
+					newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getSpecialPacketsGSSTestProcSpecialPacketsParserRuleCall_18_0());
 				}
 				lv_specialPackets_28_0=ruleGSSTestProcSpecialPackets
 				{
@@ -636,7 +634,7 @@ ruleGSSTestProcStep returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getConcurrent_stepsGSSTestProcConcurrentStepsParserRuleCall_20_0());
+					newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getConcurrent_stepsGSSTestProcConcurrentStepsParserRuleCall_19_0());
 				}
 				lv_concurrent_steps_29_0=ruleGSSTestProcConcurrentSteps
 				{
@@ -654,11 +652,11 @@ ruleGSSTestProcStep returns [EObject current=null]
 		)?
 		otherlv_30='}'
 		{
-			newLeafNode(otherlv_30, grammarAccess.getGSSTestProcStepAccess().getRightCurlyBracketKeyword_21());
+			newLeafNode(otherlv_30, grammarAccess.getGSSTestProcStepAccess().getRightCurlyBracketKeyword_20());
 		}
 		otherlv_31=';'
 		{
-			newLeafNode(otherlv_31, grammarAccess.getGSSTestProcStepAccess().getSemicolonKeyword_22());
+			newLeafNode(otherlv_31, grammarAccess.getGSSTestProcStepAccess().getSemicolonKeyword_21());
 		}
 	)
 ;

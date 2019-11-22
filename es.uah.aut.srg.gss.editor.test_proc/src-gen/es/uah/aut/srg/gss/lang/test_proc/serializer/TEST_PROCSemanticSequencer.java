@@ -528,8 +528,10 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     (
 	 *         name=ID 
 	 *         id=INTEGER 
-	 *         prev_step_idref=[GSSTestProcStep|VersionedQualifiedReferenceName]? 
-	 *         output_idref_from_prev_step=[GSSTestProcOutput|VersionedQualifiedReferenceName]? 
+	 *         (
+	 *             prev_step_idref=[GSSTestProcStep|VersionedQualifiedReferenceName] 
+	 *             output_idref_from_prev_step=[GSSTestProcOutput|VersionedQualifiedReferenceName]
+	 *         )? 
 	 *         mode=GSSTestProcMode 
 	 *         replays=INTEGER? 
 	 *         inputs=GSSTestProcInputs 
