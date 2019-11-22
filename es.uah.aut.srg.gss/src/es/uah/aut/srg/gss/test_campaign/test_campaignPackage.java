@@ -1,6 +1,14 @@
 /**
+ * Copyright (c) 2019 UAH Space Research Group.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ * 
+ * Contributors:
+ *     SRG Team - Initial API and implementation
  */
-package test_campaign;
+package es.uah.aut.srg.gss.test_campaign;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -19,11 +27,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see test_campaign.Test_campaignFactory
+ * @see es.uah.aut.srg.gss.test_campaign.test_campaignFactory
  * @model kind="package"
  * @generated
  */
-public interface Test_campaignPackage extends EPackage {
+public interface test_campaignPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -54,14 +62,14 @@ public interface Test_campaignPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Test_campaignPackage eINSTANCE = test_campaign.impl.Test_campaignPackageImpl.init();
+	test_campaignPackage eINSTANCE = es.uah.aut.srg.gss.test_campaign.impl.test_campaignPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link test_campaign.impl.GSSTestCampaignTestCampaignImpl <em>GSS Test Campaign Test Campaign</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_campaign.impl.GSSTestCampaignTestCampaignImpl <em>GSS Test Campaign Test Campaign</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see test_campaign.impl.GSSTestCampaignTestCampaignImpl
-	 * @see test_campaign.impl.Test_campaignPackageImpl#getGSSTestCampaignTestCampaign()
+	 * @see es.uah.aut.srg.gss.test_campaign.impl.GSSTestCampaignTestCampaignImpl
+	 * @see es.uah.aut.srg.gss.test_campaign.impl.test_campaignPackageImpl#getGSSTestCampaignTestCampaign()
 	 * @generated
 	 */
 	int GSS_TEST_CAMPAIGN_TEST_CAMPAIGN = 0;
@@ -104,32 +112,32 @@ public interface Test_campaignPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link test_campaign.GSSTestCampaignTestCampaign <em>GSS Test Campaign Test Campaign</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign <em>GSS Test Campaign Test Campaign</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>GSS Test Campaign Test Campaign</em>'.
-	 * @see test_campaign.GSSTestCampaignTestCampaign
+	 * @see es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign
 	 * @generated
 	 */
 	EClass getGSSTestCampaignTestCampaign();
 
 	/**
-	 * Returns the meta object for the attribute '{@link test_campaign.GSSTestCampaignTestCampaign#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see test_campaign.GSSTestCampaignTestCampaign#getName()
+	 * @see es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign#getName()
 	 * @see #getGSSTestCampaignTestCampaign()
 	 * @generated
 	 */
 	EAttribute getGSSTestCampaignTestCampaign_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link test_campaign.GSSTestCampaignTestCampaign#getTest_proc <em>Test proc</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign#getTest_proc <em>Test proc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Test proc</em>'.
-	 * @see test_campaign.GSSTestCampaignTestCampaign#getTest_proc()
+	 * @see es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign#getTest_proc()
 	 * @see #getGSSTestCampaignTestCampaign()
 	 * @generated
 	 */
@@ -142,7 +150,7 @@ public interface Test_campaignPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Test_campaignFactory getTest_campaignFactory();
+	test_campaignFactory gettest_campaignFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,11 +167,11 @@ public interface Test_campaignPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link test_campaign.impl.GSSTestCampaignTestCampaignImpl <em>GSS Test Campaign Test Campaign</em>}' class.
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_campaign.impl.GSSTestCampaignTestCampaignImpl <em>GSS Test Campaign Test Campaign</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see test_campaign.impl.GSSTestCampaignTestCampaignImpl
-		 * @see test_campaign.impl.Test_campaignPackageImpl#getGSSTestCampaignTestCampaign()
+		 * @see es.uah.aut.srg.gss.test_campaign.impl.GSSTestCampaignTestCampaignImpl
+		 * @see es.uah.aut.srg.gss.test_campaign.impl.test_campaignPackageImpl#getGSSTestCampaignTestCampaign()
 		 * @generated
 		 */
 		EClass GSS_TEST_CAMPAIGN_TEST_CAMPAIGN = eINSTANCE.getGSSTestCampaignTestCampaign();
@@ -186,4 +194,4 @@ public interface Test_campaignPackage extends EPackage {
 
 	}
 
-} //Test_campaignPackage
+} //test_campaignPackage

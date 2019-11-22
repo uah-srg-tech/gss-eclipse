@@ -1,6 +1,16 @@
 /**
+ * Copyright (c) 2019 UAH Space Research Group.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ * 
+ * Contributors:
+ *     SRG Team - Initial API and implementation
  */
-package test_campaign.util;
+package es.uah.aut.srg.gss.test_campaign.util;
+
+import es.uah.aut.srg.gss.test_campaign.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -9,24 +19,22 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import test_campaign.*;
-
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see test_campaign.Test_campaignPackage
+ * @see es.uah.aut.srg.gss.test_campaign.test_campaignPackage
  * @generated
  */
-public class Test_campaignAdapterFactory extends AdapterFactoryImpl {
+public class test_campaignAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Test_campaignPackage modelPackage;
+	protected static test_campaignPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +42,9 @@ public class Test_campaignAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Test_campaignAdapterFactory() {
+	public test_campaignAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = Test_campaignPackage.eINSTANCE;
+			modelPackage = test_campaignPackage.eINSTANCE;
 		}
 	}
 
@@ -65,8 +73,8 @@ public class Test_campaignAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Test_campaignSwitch<Adapter> modelSwitch =
-		new Test_campaignSwitch<Adapter>() {
+	protected test_campaignSwitch<Adapter> modelSwitch =
+		new test_campaignSwitch<Adapter>() {
 			@Override
 			public Adapter caseGSSTestCampaignTestCampaign(GSSTestCampaignTestCampaign object) {
 				return createGSSTestCampaignTestCampaignAdapter();
@@ -92,13 +100,13 @@ public class Test_campaignAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link test_campaign.GSSTestCampaignTestCampaign <em>GSS Test Campaign Test Campaign</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign <em>GSS Test Campaign Test Campaign</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see test_campaign.GSSTestCampaignTestCampaign
+	 * @see es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign
 	 * @generated
 	 */
 	public Adapter createGSSTestCampaignTestCampaignAdapter() {
@@ -117,4 +125,4 @@ public class Test_campaignAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //Test_campaignAdapterFactory
+} //test_campaignAdapterFactory

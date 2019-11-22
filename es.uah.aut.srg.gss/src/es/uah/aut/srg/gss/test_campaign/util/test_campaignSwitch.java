@@ -1,13 +1,21 @@
 /**
+ * Copyright (c) 2019 UAH Space Research Group.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ * 
+ * Contributors:
+ *     SRG Team - Initial API and implementation
  */
-package test_campaign.util;
+package es.uah.aut.srg.gss.test_campaign.util;
+
+import es.uah.aut.srg.gss.test_campaign.*;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
-
-import test_campaign.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,17 +27,17 @@ import test_campaign.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see test_campaign.Test_campaignPackage
+ * @see es.uah.aut.srg.gss.test_campaign.test_campaignPackage
  * @generated
  */
-public class Test_campaignSwitch<T> extends Switch<T> {
+public class test_campaignSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Test_campaignPackage modelPackage;
+	protected static test_campaignPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +45,9 @@ public class Test_campaignSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Test_campaignSwitch() {
+	public test_campaignSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Test_campaignPackage.eINSTANCE;
+			modelPackage = test_campaignPackage.eINSTANCE;
 		}
 	}
 
@@ -66,7 +74,7 @@ public class Test_campaignSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN: {
+			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN: {
 				GSSTestCampaignTestCampaign gssTestCampaignTestCampaign = (GSSTestCampaignTestCampaign)theEObject;
 				T result = caseGSSTestCampaignTestCampaign(gssTestCampaignTestCampaign);
 				if (result == null) result = defaultCase(theEObject);
@@ -107,4 +115,4 @@ public class Test_campaignSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Test_campaignSwitch
+} //test_campaignSwitch

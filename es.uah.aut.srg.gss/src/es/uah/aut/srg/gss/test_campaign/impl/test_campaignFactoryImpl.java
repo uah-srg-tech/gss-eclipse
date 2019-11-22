@@ -1,6 +1,16 @@
 /**
+ * Copyright (c) 2019 UAH Space Research Group.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ * 
+ * Contributors:
+ *     SRG Team - Initial API and implementation
  */
-package test_campaign.impl;
+package es.uah.aut.srg.gss.test_campaign.impl;
+
+import es.uah.aut.srg.gss.test_campaign.*;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -10,32 +20,30 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import test_campaign.*;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
  * @generated
  */
-public class Test_campaignFactoryImpl extends EFactoryImpl implements Test_campaignFactory {
+public class test_campaignFactoryImpl extends EFactoryImpl implements test_campaignFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Test_campaignFactory init() {
+	public static test_campaignFactory init() {
 		try {
-			Test_campaignFactory theTest_campaignFactory = (Test_campaignFactory)EPackage.Registry.INSTANCE.getEFactory(Test_campaignPackage.eNS_URI);
-			if (theTest_campaignFactory != null) {
-				return theTest_campaignFactory;
+			test_campaignFactory thetest_campaignFactory = (test_campaignFactory)EPackage.Registry.INSTANCE.getEFactory(test_campaignPackage.eNS_URI);
+			if (thetest_campaignFactory != null) {
+				return thetest_campaignFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Test_campaignFactoryImpl();
+		return new test_campaignFactoryImpl();
 	}
 
 	/**
@@ -44,7 +52,7 @@ public class Test_campaignFactoryImpl extends EFactoryImpl implements Test_campa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Test_campaignFactoryImpl() {
+	public test_campaignFactoryImpl() {
 		super();
 	}
 
@@ -56,7 +64,7 @@ public class Test_campaignFactoryImpl extends EFactoryImpl implements Test_campa
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN: return createGSSTestCampaignTestCampaign();
+			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN: return createGSSTestCampaignTestCampaign();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -77,8 +85,8 @@ public class Test_campaignFactoryImpl extends EFactoryImpl implements Test_campa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Test_campaignPackage getTest_campaignPackage() {
-		return (Test_campaignPackage)getEPackage();
+	public test_campaignPackage gettest_campaignPackage() {
+		return (test_campaignPackage)getEPackage();
 	}
 
 	/**
@@ -88,8 +96,8 @@ public class Test_campaignFactoryImpl extends EFactoryImpl implements Test_campa
 	 * @generated
 	 */
 	@Deprecated
-	public static Test_campaignPackage getPackage() {
-		return Test_campaignPackage.eINSTANCE;
+	public static test_campaignPackage getPackage() {
+		return test_campaignPackage.eINSTANCE;
 	}
 
-} //Test_campaignFactoryImpl
+} //test_campaignFactoryImpl

@@ -1,6 +1,14 @@
 /**
+ * Copyright (c) 2019 UAH Space Research Group.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ * 
+ * Contributors:
+ *     SRG Team - Initial API and implementation
  */
-package test_campaign;
+package es.uah.aut.srg.gss.test_campaign;
 
 import es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc;
 
@@ -17,11 +25,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link test_campaign.GSSTestCampaignTestCampaign#getName <em>Name</em>}</li>
- *   <li>{@link test_campaign.GSSTestCampaignTestCampaign#getTest_proc <em>Test proc</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign#getTest_proc <em>Test proc</em>}</li>
  * </ul>
  *
- * @see test_campaign.Test_campaignPackage#getGSSTestCampaignTestCampaign()
+ * @see es.uah.aut.srg.gss.test_campaign.test_campaignPackage#getGSSTestCampaignTestCampaign()
  * @model
  * @generated
  */
@@ -36,14 +44,14 @@ public interface GSSTestCampaignTestCampaign extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see test_campaign.Test_campaignPackage#getGSSTestCampaignTestCampaign_Name()
+	 * @see es.uah.aut.srg.gss.test_campaign.test_campaignPackage#getGSSTestCampaignTestCampaign_Name()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link test_campaign.GSSTestCampaignTestCampaign#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -62,7 +70,7 @@ public interface GSSTestCampaignTestCampaign extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Test proc</em>' containment reference list.
-	 * @see test_campaign.Test_campaignPackage#getGSSTestCampaignTestCampaign_Test_proc()
+	 * @see es.uah.aut.srg.gss.test_campaign.test_campaignPackage#getGSSTestCampaignTestCampaign_Test_proc()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

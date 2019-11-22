@@ -1,6 +1,18 @@
 /**
+ * Copyright (c) 2019 UAH Space Research Group.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ * 
+ * Contributors:
+ *     SRG Team - Initial API and implementation
  */
-package test_campaign.impl;
+package es.uah.aut.srg.gss.test_campaign.impl;
+
+import es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign;
+import es.uah.aut.srg.gss.test_campaign.test_campaignFactory;
+import es.uah.aut.srg.gss.test_campaign.test_campaignPackage;
 
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
 
@@ -11,17 +23,13 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import test_campaign.GSSTestCampaignTestCampaign;
-import test_campaign.Test_campaignFactory;
-import test_campaign.Test_campaignPackage;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Package</b>.
  * <!-- end-user-doc -->
  * @generated
  */
-public class Test_campaignPackageImpl extends EPackageImpl implements Test_campaignPackage {
+public class test_campaignPackageImpl extends EPackageImpl implements test_campaignPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -40,12 +48,12 @@ public class Test_campaignPackageImpl extends EPackageImpl implements Test_campa
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see test_campaign.Test_campaignPackage#eNS_URI
+	 * @see es.uah.aut.srg.gss.test_campaign.test_campaignPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Test_campaignPackageImpl() {
-		super(eNS_URI, Test_campaignFactory.eINSTANCE);
+	private test_campaignPackageImpl() {
+		super(eNS_URI, test_campaignFactory.eINSTANCE);
 	}
 
 	/**
@@ -58,7 +66,7 @@ public class Test_campaignPackageImpl extends EPackageImpl implements Test_campa
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Test_campaignPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link test_campaignPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,11 +75,11 @@ public class Test_campaignPackageImpl extends EPackageImpl implements Test_campa
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Test_campaignPackage init() {
-		if (isInited) return (Test_campaignPackage)EPackage.Registry.INSTANCE.getEPackage(Test_campaignPackage.eNS_URI);
+	public static test_campaignPackage init() {
+		if (isInited) return (test_campaignPackage)EPackage.Registry.INSTANCE.getEPackage(test_campaignPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Test_campaignPackageImpl theTest_campaignPackage = (Test_campaignPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Test_campaignPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Test_campaignPackageImpl());
+		test_campaignPackageImpl thetest_campaignPackage = (test_campaignPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof test_campaignPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new test_campaignPackageImpl());
 
 		isInited = true;
 
@@ -79,18 +87,18 @@ public class Test_campaignPackageImpl extends EPackageImpl implements Test_campa
 		test_procPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theTest_campaignPackage.createPackageContents();
+		thetest_campaignPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theTest_campaignPackage.initializePackageContents();
+		thetest_campaignPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theTest_campaignPackage.freeze();
+		thetest_campaignPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Test_campaignPackage.eNS_URI, theTest_campaignPackage);
-		return theTest_campaignPackage;
+		EPackage.Registry.INSTANCE.put(test_campaignPackage.eNS_URI, thetest_campaignPackage);
+		return thetest_campaignPackage;
 	}
 
 	/**
@@ -125,8 +133,8 @@ public class Test_campaignPackageImpl extends EPackageImpl implements Test_campa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Test_campaignFactory getTest_campaignFactory() {
-		return (Test_campaignFactory)getEFactoryInstance();
+	public test_campaignFactory gettest_campaignFactory() {
+		return (test_campaignFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -194,4 +202,4 @@ public class Test_campaignPackageImpl extends EPackageImpl implements Test_campa
 		createResource(eNS_URI);
 	}
 
-} //Test_campaignPackageImpl
+} //test_campaignPackageImpl
