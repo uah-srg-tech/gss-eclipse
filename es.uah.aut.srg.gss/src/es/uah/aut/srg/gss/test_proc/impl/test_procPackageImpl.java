@@ -1492,7 +1492,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		initEClass(gssTestProcConcurrentStepEClass, GSSTestProcConcurrentStep.class, "GSSTestProcConcurrentStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSTestProcConcurrentStep_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSTestProcConcurrentStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(gssTestProcInputEClass, GSSTestProcInput.class, "GSSTestProcInput", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(gssTestProcInputEClass, GSSTestProcInput.class, "GSSTestProcInput", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSTestProcInput_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSTestProcInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSTestProcInput_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSTestProcInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSTestProcInput_Delay_value(), ecorePackage.getEString(), "delay_value", null, 1, 1, GSSTestProcInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1573,7 +1573,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		// Initialize enums and add enum literals
 		initEEnum(gssTestProcModeEEnum, GSSTestProcMode.class, "GSSTestProcMode");
 		addEEnumLiteral(gssTestProcModeEEnum, GSSTestProcMode.CONTINUOUS);
-		addEEnumLiteral(gssTestProcModeEEnum, GSSTestProcMode.MANUAL);
+		addEEnumLiteral(gssTestProcModeEEnum, GSSTestProcMode.ACTION);
 		addEEnumLiteral(gssTestProcModeEEnum, GSSTestProcMode.CONCURRENT);
 
 		initEEnum(gssTestProcUnitEEnum, GSSTestProcUnit.class, "GSSTestProcUnit");

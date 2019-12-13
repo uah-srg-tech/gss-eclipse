@@ -74,7 +74,6 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 			case test_procPackage.GSS_TEST_PROC_CONCURRENT_STEPS: return createGSSTestProcConcurrentSteps();
 			case test_procPackage.GSS_TEST_PROC_NEXT_STEP: return createGSSTestProcNextStep();
 			case test_procPackage.GSS_TEST_PROC_CONCURRENT_STEP: return createGSSTestProcConcurrentStep();
-			case test_procPackage.GSS_TEST_PROC_INPUT: return createGSSTestProcInput();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL3: return createGSSTestProcInputLevel3();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL2: return createGSSTestProcInputLevel2();
 			case test_procPackage.GSS_TEST_PROC_INPUT_LEVEL1: return createGSSTestProcInputLevel1();
@@ -219,16 +218,6 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 	public GSSTestProcConcurrentStep createGSSTestProcConcurrentStep() {
 		GSSTestProcConcurrentStepImpl gssTestProcConcurrentStep = new GSSTestProcConcurrentStepImpl();
 		return gssTestProcConcurrentStep;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSTestProcInput createGSSTestProcInput() {
-		GSSTestProcInputImpl gssTestProcInput = new GSSTestProcInputImpl();
-		return gssTestProcInput;
 	}
 
 	/**

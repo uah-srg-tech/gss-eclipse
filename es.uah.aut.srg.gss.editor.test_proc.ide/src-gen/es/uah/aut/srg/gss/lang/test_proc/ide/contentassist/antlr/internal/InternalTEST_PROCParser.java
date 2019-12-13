@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalTEST_PROCParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'continuous'", "'manual'", "'concurrent'", "'miliseconds'", "'seconds'", "'all'", "'allunsorted'", "'any'", "'yes'", "'no'", "'import'", "';'", "'GSSTestProcTestProc'", "'{'", "'}'", "'uri'", "':='", "'version'", "'GSSTestProcStep'", "'name'", "'id'", "'mode'", "'prev_step_idref'", "'output_idref_from_prev_step'", "'replays'", "'GSSTestProcInputs'", "'GSSTestProcOutputs'", "'checkmode'", "'valid_time_interval_value'", "'valid_time_interval_unit'", "'GSSTestProcSpecialPackets'", "'GSSTestProcConcurrentSteps'", "'nextStep'", "'GSSTestProcInputLevel3'", "'ifRef'", "'delay_value'", "'delay_unit'", "'app_to_level3'", "'level3'", "'level2'", "'level3_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSTestProcInputLevel2'", "'app_to_level2'", "'GSSTestProcInputLevel1'", "'app_to_level1'", "'GSSTestProcInputLevel0'", "'app_to_level0'", "'GSSTestProcOutputLevel3'", "'optional'", "'level3_from_level2'", "'level2_from_level1'", "'level1_from_level0'", "'GSSTestProcOutputLevel2'", "'GSSTestProcOutputLevel1'", "'GSSTestProcOutputLevel0'", "'GSSTestProcLevel3Filter'", "'apply_def_filter'", "'extra_filter'", "'GSSTestProcLevel2Filter'", "'GSSTestProcLevel1Filter'", "'GSSTestProcLevel0Filter'", "'GSSTestProcEnable'", "'GSSTestProcNextStep'", "'isConcurrent'", "'GSSTestProcConcurrentStep'", "'.'", "'('", "')'", "'::'", "'-'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'continuous'", "'action'", "'concurrent'", "'miliseconds'", "'seconds'", "'all'", "'allunsorted'", "'any'", "'yes'", "'no'", "'import'", "';'", "'GSSTestProcTestProc'", "'{'", "'}'", "'uri'", "':='", "'version'", "'GSSTestProcStep'", "'name'", "'id'", "'mode'", "'prev_step_idref'", "'output_idref_from_prev_step'", "'replays'", "'GSSTestProcInputs'", "'GSSTestProcOutputs'", "'checkmode'", "'valid_time_interval_value'", "'valid_time_interval_unit'", "'GSSTestProcSpecialPackets'", "'GSSTestProcConcurrentSteps'", "'nextStep'", "'GSSTestProcInputLevel3'", "'ifRef'", "'delay_value'", "'delay_unit'", "'app_to_level3'", "'level3'", "'level2'", "'level3_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSTestProcInputLevel2'", "'app_to_level2'", "'GSSTestProcInputLevel1'", "'app_to_level1'", "'GSSTestProcInputLevel0'", "'app_to_level0'", "'GSSTestProcOutputLevel3'", "'optional'", "'level3_from_level2'", "'level2_from_level1'", "'level1_from_level0'", "'GSSTestProcOutputLevel2'", "'GSSTestProcOutputLevel1'", "'GSSTestProcOutputLevel0'", "'GSSTestProcLevel3Filter'", "'apply_def_filter'", "'extra_filter'", "'GSSTestProcLevel2Filter'", "'GSSTestProcLevel1Filter'", "'GSSTestProcLevel0Filter'", "'GSSTestProcEnable'", "'GSSTestProcNextStep'", "'isConcurrent'", "'GSSTestProcConcurrentStep'", "'.'", "'('", "')'", "'::'", "'-'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -3647,13 +3647,13 @@ public class InternalTEST_PROCParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__GSSTestProcMode__Alternatives"
-    // InternalTEST_PROC.g:1036:1: rule__GSSTestProcMode__Alternatives : ( ( ( 'continuous' ) ) | ( ( 'manual' ) ) | ( ( 'concurrent' ) ) );
+    // InternalTEST_PROC.g:1036:1: rule__GSSTestProcMode__Alternatives : ( ( ( 'continuous' ) ) | ( ( 'action' ) ) | ( ( 'concurrent' ) ) );
     public final void rule__GSSTestProcMode__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTEST_PROC.g:1040:1: ( ( ( 'continuous' ) ) | ( ( 'manual' ) ) | ( ( 'concurrent' ) ) )
+            // InternalTEST_PROC.g:1040:1: ( ( ( 'continuous' ) ) | ( ( 'action' ) ) | ( ( 'concurrent' ) ) )
             int alt7=3;
             switch ( input.LA(1) ) {
             case 12:
@@ -3706,23 +3706,23 @@ public class InternalTEST_PROCParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 2 :
-                    // InternalTEST_PROC.g:1047:2: ( ( 'manual' ) )
+                    // InternalTEST_PROC.g:1047:2: ( ( 'action' ) )
                     {
-                    // InternalTEST_PROC.g:1047:2: ( ( 'manual' ) )
-                    // InternalTEST_PROC.g:1048:3: ( 'manual' )
+                    // InternalTEST_PROC.g:1047:2: ( ( 'action' ) )
+                    // InternalTEST_PROC.g:1048:3: ( 'action' )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getGSSTestProcModeAccess().getManualEnumLiteralDeclaration_1()); 
+                       before(grammarAccess.getGSSTestProcModeAccess().getActionEnumLiteralDeclaration_1()); 
                     }
-                    // InternalTEST_PROC.g:1049:3: ( 'manual' )
-                    // InternalTEST_PROC.g:1049:4: 'manual'
+                    // InternalTEST_PROC.g:1049:3: ( 'action' )
+                    // InternalTEST_PROC.g:1049:4: 'action'
                     {
                     match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getGSSTestProcModeAccess().getManualEnumLiteralDeclaration_1()); 
+                       after(grammarAccess.getGSSTestProcModeAccess().getActionEnumLiteralDeclaration_1()); 
                     }
 
                     }

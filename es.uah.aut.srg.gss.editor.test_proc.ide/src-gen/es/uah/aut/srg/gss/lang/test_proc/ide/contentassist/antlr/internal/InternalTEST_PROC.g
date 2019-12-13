@@ -1045,9 +1045,9 @@ rule__GSSTestProcMode__Alternatives
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSTestProcModeAccess().getManualEnumLiteralDeclaration_1()); }
-		('manual')
-		{ after(grammarAccess.getGSSTestProcModeAccess().getManualEnumLiteralDeclaration_1()); }
+		{ before(grammarAccess.getGSSTestProcModeAccess().getActionEnumLiteralDeclaration_1()); }
+		('action')
+		{ after(grammarAccess.getGSSTestProcModeAccess().getActionEnumLiteralDeclaration_1()); }
 	)
 	|
 	(

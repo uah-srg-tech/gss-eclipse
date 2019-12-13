@@ -4771,10 +4771,10 @@ ruleGSSTestProcMode returns [Enumerator current=null]
 		)
 		    |
 		(
-			enumLiteral_1='manual'
+			enumLiteral_1='action'
 			{
-				$current = grammarAccess.getGSSTestProcModeAccess().getManualEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getGSSTestProcModeAccess().getManualEnumLiteralDeclaration_1());
+				$current = grammarAccess.getGSSTestProcModeAccess().getActionEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getGSSTestProcModeAccess().getActionEnumLiteralDeclaration_1());
 			}
 		)
 		    |

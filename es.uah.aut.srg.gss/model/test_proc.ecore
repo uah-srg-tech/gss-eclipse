@@ -8,7 +8,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSTestProcMode">
     <eLiterals name="continuous"/>
-    <eLiterals name="manual" value="1"/>
+    <eLiterals name="action" value="1"/>
     <eLiterals name="concurrent" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcStep" eSuperTypes="common.ecore#//GSSModelObject">
@@ -82,7 +82,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcConcurrentStep">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcInput">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcInput" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_value" lowerBound="1"
@@ -91,32 +91,32 @@
         eType="#//GSSTestProcUnit" unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcInputLevel3" eSuperTypes="#//GSSTestProcInput">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level3" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level3" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/export.ecore#//GSSExportExport"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level3_to_level2" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/export.ecore#//GSSExportExport"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_to_level1" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/export.ecore#//GSSExportExport"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_to_level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level3" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level3" eType="ecore:EClass export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level3_to_level2" eType="ecore:EClass export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_to_level1" eType="ecore:EClass export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_to_level0" eType="ecore:EClass export.ecore#//GSSExportExport"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcInputLevel2" eSuperTypes="#//GSSTestProcInput">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level2" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/export.ecore#//GSSExportExport"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_to_level1" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/export.ecore#//GSSExportExport"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_to_level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level2" eType="ecore:EClass export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_to_level1" eType="ecore:EClass export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_to_level0" eType="ecore:EClass export.ecore#//GSSExportExport"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcInputLevel1" eSuperTypes="#//GSSTestProcInput">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level1" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/export.ecore#//GSSExportExport"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_to_level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level1" eType="ecore:EClass export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_to_level0" eType="ecore:EClass export.ecore#//GSSExportExport"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcInputLevel0" eSuperTypes="#//GSSTestProcInput">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/export.ecore#//GSSExportExport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="app_to_level0" eType="ecore:EClass export.ecore#//GSSExportExport"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcOutput" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -125,52 +125,52 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="optional" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcOutputLevel3" eSuperTypes="#//GSSTestProcOutput">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level3" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level3" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level3_filter" lowerBound="1"
         eType="#//GSSTestProcFilter" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level3_from_level2" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/import.ecore#//GSSImportImport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level3_from_level2" eType="ecore:EClass import.ecore#//GSSImportImport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level2_filter" lowerBound="1"
         eType="#//GSSTestProcFilter" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_from_level1" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/import.ecore#//GSSImportImport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_from_level1" eType="ecore:EClass import.ecore#//GSSImportImport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level1_filter" lowerBound="1"
         eType="#//GSSTestProcFilter" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_from_level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/import.ecore#//GSSImportImport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_from_level0" eType="ecore:EClass import.ecore#//GSSImportImport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0_filter" lowerBound="1"
         eType="#//GSSTestProcFilter" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcOutputLevel2" eSuperTypes="#//GSSTestProcOutput">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level2_filter" lowerBound="1"
         eType="#//GSSTestProcFilter" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_from_level1" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/import.ecore#//GSSImportImport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_from_level1" eType="ecore:EClass import.ecore#//GSSImportImport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level1_filter" lowerBound="1"
         eType="#//GSSTestProcFilter" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_from_level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/import.ecore#//GSSImportImport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_from_level0" eType="ecore:EClass import.ecore#//GSSImportImport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0_filter" lowerBound="1"
         eType="#//GSSTestProcFilter" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcOutputLevel1" eSuperTypes="#//GSSTestProcOutput">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level1_filter" lowerBound="1"
         eType="#//GSSTestProcFilter" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_from_level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/import.ecore#//GSSImportImport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_from_level0" eType="ecore:EClass import.ecore#//GSSImportImport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0_filter" lowerBound="1"
         eType="#//GSSTestProcFilter" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcOutputLevel0" eSuperTypes="#//GSSTestProcOutput">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0_filter" lowerBound="1"
         eType="#//GSSTestProcFilter" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcFilter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="apply_def_filter" lowerBound="1"
         eType="#//GSSTestProcYesNo" unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="extra_filter" eType="ecore:EClass ../../es.uah.aut.srg.gss/model/filter.ecore#//GSSFilterFilter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extra_filter" eType="ecore:EClass filter.ecore#//GSSFilterFilter"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -111,15 +111,6 @@ public interface test_procFactory extends EFactory {
 	GSSTestProcConcurrentStep createGSSTestProcConcurrentStep();
 
 	/**
-	 * Returns a new object of class '<em>GSS Test Proc Input</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Test Proc Input</em>'.
-	 * @generated
-	 */
-	GSSTestProcInput createGSSTestProcInput();
-
-	/**
 	 * Returns a new object of class '<em>GSS Test Proc Input Level3</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -26,6 +26,7 @@
 'GSSTestProcSpecialPackets'=42
 'GSSTestProcStep'=30
 'GSSTestProcTestProc'=24
+'action'=13
 'all'=17
 'allunsorted'=18
 'any'=19
@@ -54,7 +55,6 @@
 'level3'=50
 'level3_from_level2'=65
 'level3_to_level2'=52
-'manual'=13
 'miliseconds'=15
 'mode'=33
 'name'=31

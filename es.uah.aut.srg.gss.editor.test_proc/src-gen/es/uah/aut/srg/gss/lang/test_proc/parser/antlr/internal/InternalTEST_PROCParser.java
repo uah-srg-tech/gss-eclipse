@@ -34,7 +34,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "';'", "'GSSTestProcTestProc'", "'{'", "'uri'", "':='", "'version'", "'}'", "'GSSTestProcStep'", "'name'", "'id'", "'prev_step_idref'", "'output_idref_from_prev_step'", "'mode'", "'replays'", "'GSSTestProcInputs'", "'GSSTestProcOutputs'", "'checkmode'", "'valid_time_interval_value'", "'valid_time_interval_unit'", "'GSSTestProcSpecialPackets'", "'GSSTestProcConcurrentSteps'", "'nextStep'", "'GSSTestProcInputLevel3'", "'ifRef'", "'delay_value'", "'delay_unit'", "'level3'", "'app_to_level3'", "'level2'", "'level3_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSTestProcInputLevel2'", "'app_to_level2'", "'GSSTestProcInputLevel1'", "'app_to_level1'", "'GSSTestProcInputLevel0'", "'app_to_level0'", "'GSSTestProcOutputLevel3'", "'optional'", "'level3_from_level2'", "'level2_from_level1'", "'level1_from_level0'", "'GSSTestProcOutputLevel2'", "'GSSTestProcOutputLevel1'", "'GSSTestProcOutputLevel0'", "'GSSTestProcLevel3Filter'", "'apply_def_filter'", "'extra_filter'", "'GSSTestProcLevel2Filter'", "'GSSTestProcLevel1Filter'", "'GSSTestProcLevel0Filter'", "'GSSTestProcEnable'", "'GSSTestProcNextStep'", "'isConcurrent'", "'GSSTestProcConcurrentStep'", "'.'", "'('", "')'", "'::'", "'-'", "'continuous'", "'manual'", "'concurrent'", "'miliseconds'", "'seconds'", "'all'", "'allunsorted'", "'any'", "'yes'", "'no'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "';'", "'GSSTestProcTestProc'", "'{'", "'uri'", "':='", "'version'", "'}'", "'GSSTestProcStep'", "'name'", "'id'", "'prev_step_idref'", "'output_idref_from_prev_step'", "'mode'", "'replays'", "'GSSTestProcInputs'", "'GSSTestProcOutputs'", "'checkmode'", "'valid_time_interval_value'", "'valid_time_interval_unit'", "'GSSTestProcSpecialPackets'", "'GSSTestProcConcurrentSteps'", "'nextStep'", "'GSSTestProcInputLevel3'", "'ifRef'", "'delay_value'", "'delay_unit'", "'level3'", "'app_to_level3'", "'level2'", "'level3_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSTestProcInputLevel2'", "'app_to_level2'", "'GSSTestProcInputLevel1'", "'app_to_level1'", "'GSSTestProcInputLevel0'", "'app_to_level0'", "'GSSTestProcOutputLevel3'", "'optional'", "'level3_from_level2'", "'level2_from_level1'", "'level1_from_level0'", "'GSSTestProcOutputLevel2'", "'GSSTestProcOutputLevel1'", "'GSSTestProcOutputLevel0'", "'GSSTestProcLevel3Filter'", "'apply_def_filter'", "'extra_filter'", "'GSSTestProcLevel2Filter'", "'GSSTestProcLevel1Filter'", "'GSSTestProcLevel0Filter'", "'GSSTestProcEnable'", "'GSSTestProcNextStep'", "'isConcurrent'", "'GSSTestProcConcurrentStep'", "'.'", "'('", "')'", "'::'", "'-'", "'continuous'", "'action'", "'concurrent'", "'miliseconds'", "'seconds'", "'all'", "'allunsorted'", "'any'", "'yes'", "'no'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -11404,7 +11404,7 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSTestProcMode"
-    // InternalTEST_PROC.g:4757:1: ruleGSSTestProcMode returns [Enumerator current=null] : ( (enumLiteral_0= 'continuous' ) | (enumLiteral_1= 'manual' ) | (enumLiteral_2= 'concurrent' ) ) ;
+    // InternalTEST_PROC.g:4757:1: ruleGSSTestProcMode returns [Enumerator current=null] : ( (enumLiteral_0= 'continuous' ) | (enumLiteral_1= 'action' ) | (enumLiteral_2= 'concurrent' ) ) ;
     public final Enumerator ruleGSSTestProcMode() throws RecognitionException {
         Enumerator current = null;
 
@@ -11416,10 +11416,10 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTEST_PROC.g:4763:2: ( ( (enumLiteral_0= 'continuous' ) | (enumLiteral_1= 'manual' ) | (enumLiteral_2= 'concurrent' ) ) )
-            // InternalTEST_PROC.g:4764:2: ( (enumLiteral_0= 'continuous' ) | (enumLiteral_1= 'manual' ) | (enumLiteral_2= 'concurrent' ) )
+            // InternalTEST_PROC.g:4763:2: ( ( (enumLiteral_0= 'continuous' ) | (enumLiteral_1= 'action' ) | (enumLiteral_2= 'concurrent' ) ) )
+            // InternalTEST_PROC.g:4764:2: ( (enumLiteral_0= 'continuous' ) | (enumLiteral_1= 'action' ) | (enumLiteral_2= 'concurrent' ) )
             {
-            // InternalTEST_PROC.g:4764:2: ( (enumLiteral_0= 'continuous' ) | (enumLiteral_1= 'manual' ) | (enumLiteral_2= 'concurrent' ) )
+            // InternalTEST_PROC.g:4764:2: ( (enumLiteral_0= 'continuous' ) | (enumLiteral_1= 'action' ) | (enumLiteral_2= 'concurrent' ) )
             int alt65=3;
             switch ( input.LA(1) ) {
             case 76:
@@ -11466,16 +11466,16 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTEST_PROC.g:4773:3: (enumLiteral_1= 'manual' )
+                    // InternalTEST_PROC.g:4773:3: (enumLiteral_1= 'action' )
                     {
-                    // InternalTEST_PROC.g:4773:3: (enumLiteral_1= 'manual' )
-                    // InternalTEST_PROC.g:4774:4: enumLiteral_1= 'manual'
+                    // InternalTEST_PROC.g:4773:3: (enumLiteral_1= 'action' )
+                    // InternalTEST_PROC.g:4774:4: enumLiteral_1= 'action'
                     {
                     enumLiteral_1=(Token)match(input,77,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				current = grammarAccess.getGSSTestProcModeAccess().getManualEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                      				newLeafNode(enumLiteral_1, grammarAccess.getGSSTestProcModeAccess().getManualEnumLiteralDeclaration_1());
+                      				current = grammarAccess.getGSSTestProcModeAccess().getActionEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_1, grammarAccess.getGSSTestProcModeAccess().getActionEnumLiteralDeclaration_1());
                       			
                     }
 

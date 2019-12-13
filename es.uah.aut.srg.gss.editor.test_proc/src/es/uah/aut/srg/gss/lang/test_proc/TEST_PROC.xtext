@@ -45,9 +45,7 @@ GSSTestProcStep returns GSSTestProcStep:
 ;
 
 enum GSSTestProcMode returns GSSTestProcMode:
-	continuous = 'continuous' | manual = 'manual' |
-	concurrent = 'concurrent'
-;
+	continuous = 'continuous' | action = 'action' | concurrent = 'concurrent';
 
 GSSTestProcInputs returns GSSTestProcInputs:
 	{GSSTestProcInputs}

@@ -3553,17 +3553,16 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cContinuousEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cContinuousContinuousKeyword_0_0 = (Keyword)cContinuousEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cManualEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cManualManualKeyword_1_0 = (Keyword)cManualEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cActionEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cActionActionKeyword_1_0 = (Keyword)cActionEnumLiteralDeclaration_1.eContents().get(0);
 		private final EnumLiteralDeclaration cConcurrentEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
 		private final Keyword cConcurrentConcurrentKeyword_2_0 = (Keyword)cConcurrentEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum GSSTestProcMode:
-		//	continuous | manual |
-		//	concurrent;
+		//	continuous | action | concurrent;
 		public EnumRule getRule() { return rule; }
 		
-		//continuous | manual | concurrent
+		//continuous | action | concurrent
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//continuous
@@ -3572,11 +3571,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//'continuous'
 		public Keyword getContinuousContinuousKeyword_0_0() { return cContinuousContinuousKeyword_0_0; }
 		
-		//manual
-		public EnumLiteralDeclaration getManualEnumLiteralDeclaration_1() { return cManualEnumLiteralDeclaration_1; }
+		//action
+		public EnumLiteralDeclaration getActionEnumLiteralDeclaration_1() { return cActionEnumLiteralDeclaration_1; }
 		
-		//'manual'
-		public Keyword getManualManualKeyword_1_0() { return cManualManualKeyword_1_0; }
+		//'action'
+		public Keyword getActionActionKeyword_1_0() { return cActionActionKeyword_1_0; }
 		
 		//concurrent
 		public EnumLiteralDeclaration getConcurrentEnumLiteralDeclaration_2() { return cConcurrentEnumLiteralDeclaration_2; }
@@ -3845,8 +3844,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum GSSTestProcMode:
-	//	continuous | manual |
-	//	concurrent;
+	//	continuous | action | concurrent;
 	public GSSTestProcModeElements getGSSTestProcModeAccess() {
 		return eGSSTestProcMode;
 	}

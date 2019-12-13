@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInput()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface GSSTestProcInput extends EObject {

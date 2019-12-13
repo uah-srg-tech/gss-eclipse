@@ -37,16 +37,14 @@ public enum GSSTestProcMode implements Enumerator {
 	CONTINUOUS(0, "continuous", "continuous"),
 
 	/**
-	 * The '<em><b>Manual</b></em>' literal object.
+	 * The '<em><b>Action</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #MANUAL_VALUE
+	 * @see #ACTION_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	MANUAL(1, "manual", "manual"),
-
-	/**
+	ACTION(1, "action", "action"), /**
 	 * The '<em><b>Concurrent</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -72,19 +70,19 @@ public enum GSSTestProcMode implements Enumerator {
 	public static final int CONTINUOUS_VALUE = 0;
 
 	/**
-	 * The '<em><b>Manual</b></em>' literal value.
+	 * The '<em><b>Action</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Manual</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Action</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #MANUAL
-	 * @model name="manual"
+	 * @see #ACTION
+	 * @model name="action"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MANUAL_VALUE = 1;
+	public static final int ACTION_VALUE = 1;
 
 	/**
 	 * The '<em><b>Concurrent</b></em>' literal value.
@@ -110,7 +108,7 @@ public enum GSSTestProcMode implements Enumerator {
 	private static final GSSTestProcMode[] VALUES_ARRAY =
 		new GSSTestProcMode[] {
 			CONTINUOUS,
-			MANUAL,
+			ACTION,
 			CONCURRENT,
 		};
 
@@ -169,7 +167,7 @@ public enum GSSTestProcMode implements Enumerator {
 	public static GSSTestProcMode get(int value) {
 		switch (value) {
 			case CONTINUOUS_VALUE: return CONTINUOUS;
-			case MANUAL_VALUE: return MANUAL;
+			case ACTION_VALUE: return ACTION;
 			case CONCURRENT_VALUE: return CONCURRENT;
 		}
 		return null;
