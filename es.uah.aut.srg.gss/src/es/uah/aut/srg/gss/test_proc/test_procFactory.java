@@ -48,6 +48,15 @@ public interface test_procFactory extends EFactory {
 	GSSTestProcStep createGSSTestProcStep();
 
 	/**
+	 * Returns a new object of class '<em>GSS Test Proc Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Test Proc Action</em>'.
+	 * @generated
+	 */
+	GSSTestProcAction createGSSTestProcAction();
+
+	/**
 	 * Returns a new object of class '<em>GSS Test Proc Inputs</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

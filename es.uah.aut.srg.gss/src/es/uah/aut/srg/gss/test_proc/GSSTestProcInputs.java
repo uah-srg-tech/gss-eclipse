@@ -12,8 +12,6 @@ package es.uah.aut.srg.gss.test_proc;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Test Proc Inputs</b></em>'.
@@ -30,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GSSTestProcInputs extends EObject {
+public interface GSSTestProcInputs extends GSSTestProcAbstractInputs {
 	/**
 	 * Returns the value of the '<em><b>Input</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcInput}.

@@ -109,4 +109,37 @@
             class="es.uah.aut.srg.gss.filter.filterPackage"
             genModel="model/filter.genmodel"/>
    </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tcinput -->
+      <package
+            uri="http://srg.aut.uah.es/gss/tcinput"
+            class="es.uah.aut.srg.gss.tcinput.tcinputPackage"
+            genModel="model/tcinput.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tmoutput -->
+      <package
+            uri="http://srg.aut.uah.es/gss/tmoutput"
+            class="es.uah.aut.srg.gss.tmoutput.tmoutputPackage"
+            genModel="model/tmoutput.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tcheaderinput -->
+      <package
+            uri="http://srg.aut.uah.es/gss/tcheaderinput"
+            class="es.uah.aut.srg.gss.tcheaderinput.tcheaderinputPackage"
+            genModel="model/tcheaderinput.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tmheaderoutput -->
+      <package
+            uri="http://srg.aut.uah.es/gss/tmheaderoutput"
+            class="es.uah.aut.srg.gss.tmheaderoutput.tmheaderoutputPackage"
+            genModel="model/tmheaderoutput.genmodel"/>
+   </extension>
+
 </plugin>

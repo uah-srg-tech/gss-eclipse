@@ -1,0 +1,24 @@
+«IMPORT tmoutput»
+«IMPORT tm»
+
+«DEFINE Serializer(String outputFile) FOR GSSTMOutput»
+«FILE outputFile -»
+<GSSTMOutput name="«this.name»" type="«this.type»" subtype="«this.subtype»" «IF this.pi1_val != null -»pi1_val="«this.pi1_val»"«ENDIF -» levels="«this.levels»">
+«IF this.level1_format != null -»
+	<level1_format file="«this.level1_format.name»(«this.level1_format.version»)"/>
+«IF this.level1_filter != null -»
+	<level1_filter file="«this.level1_filter.name»(«this.level1_filter.version»)"/>
+«ENDIF -»
+	<from_level0_import file="«this.from_level0_import.name»(«this.from_level0_import.version»)"/>
+«ENDIF -»
+	<level0_filter file="«this.level0_filter.name»(«this.level0_filter.version»)"/>
+«IF this.fields.size != 0 -»
+	<fields>
+«FOREACH this.gssFields AS field -»
+		<OutputField name="«field.name»" gssField="«this.level1_format.name»(«this.level1_format.version»).«field.gssField.name»"/>
+«ENDFOREACH -»
+	</fields>
+«ENDIF -»
+</GSSTMOutput>
+«ENDFILE -»
+«ENDDEFINE»

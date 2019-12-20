@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: es.uah.aut.srg.gss.editor.tcheaderinput
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: es.uah.aut.srg.gss.editor.tcheaderinput; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: es.uah.aut.srg.gss,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: es.uah.aut.srg.gss.lang.tcheaderinput.serializer,
+ es.uah.aut.srg.gss.lang.tcheaderinput.scoping,
+ es.uah.aut.srg.gss.lang.tcheaderinput,
+ es.uah.aut.srg.gss.lang.tcheaderinput.validation,
+ es.uah.aut.srg.gss.lang.tcheaderinput.services,
+ es.uah.aut.srg.gss.lang.tcheaderinput.parser.antlr,
+ es.uah.aut.srg.gss.lang.tcheaderinput.parser.antlr.internal
+Import-Package: org.apache.log4j

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tmoutput" nsURI="http://srg.aut.uah.es/gss/tmoutput" nsPrefix="gss">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSTMOutput" eSuperTypes="../../es.uah.aut.srg.tmtcif/model/tm.ecore#//TMTCIFTM">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="levels" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level3_filter" eType="ecore:EClass filter.ecore#//GSSFilterFilter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level3_format" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from_level2_import" eType="ecore:EClass import.ecore#//GSSImportImport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_filter" eType="ecore:EClass filter.ecore#//GSSFilterFilter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level2_format" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from_level1_import" eType="ecore:EClass import.ecore#//GSSImportImport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_filter" eType="ecore:EClass filter.ecore#//GSSFilterFilter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level1_format" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from_level0_import" eType="ecore:EClass import.ecore#//GSSImportImport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0_filter" eType="ecore:EClass filter.ecore#//GSSFilterFilter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level0_format" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gssFields" upperBound="-1"
+        eType="#//GSSTMOutputField" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSTMOutputField" eSuperTypes="../../es.uah.aut.srg.tmtcif/model/tm.ecore#//TMTCIFTMField">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gssField" lowerBound="1"
+        eType="ecore:EClass format.ecore#//GSSFormatField"/>
+  </eClassifiers>
+</ecore:EPackage>

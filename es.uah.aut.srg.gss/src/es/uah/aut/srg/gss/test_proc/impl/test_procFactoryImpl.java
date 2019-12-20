@@ -67,6 +67,7 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 		switch (eClass.getClassifierID()) {
 			case test_procPackage.GSS_TEST_PROC_TEST_PROC: return createGSSTestProcTestProc();
 			case test_procPackage.GSS_TEST_PROC_STEP: return createGSSTestProcStep();
+			case test_procPackage.GSS_TEST_PROC_ACTION: return createGSSTestProcAction();
 			case test_procPackage.GSS_TEST_PROC_INPUTS: return createGSSTestProcInputs();
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS: return createGSSTestProcOutputs();
 			case test_procPackage.GSS_TEST_PROC_SPECIAL_PACKETS: return createGSSTestProcSpecialPackets();
@@ -98,8 +99,10 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 		switch (eDataType.getClassifierID()) {
 			case test_procPackage.GSS_TEST_PROC_MODE:
 				return createGSSTestProcModeFromString(eDataType, initialValue);
-			case test_procPackage.GSS_TEST_PROC_UNIT:
-				return createGSSTestProcUnitFromString(eDataType, initialValue);
+			case test_procPackage.GSS_TEST_PROC_ACTION_TYPE:
+				return createGSSTestProcActionTypeFromString(eDataType, initialValue);
+			case test_procPackage.GSS_TEST_PROC_TIME_UNIT:
+				return createGSSTestProcTimeUnitFromString(eDataType, initialValue);
 			case test_procPackage.GSS_TEST_PROC_CHECKMODE:
 				return createGSSTestProcCheckmodeFromString(eDataType, initialValue);
 			case test_procPackage.GSS_TEST_PROC_YES_NO:
@@ -119,8 +122,10 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 		switch (eDataType.getClassifierID()) {
 			case test_procPackage.GSS_TEST_PROC_MODE:
 				return convertGSSTestProcModeToString(eDataType, instanceValue);
-			case test_procPackage.GSS_TEST_PROC_UNIT:
-				return convertGSSTestProcUnitToString(eDataType, instanceValue);
+			case test_procPackage.GSS_TEST_PROC_ACTION_TYPE:
+				return convertGSSTestProcActionTypeToString(eDataType, instanceValue);
+			case test_procPackage.GSS_TEST_PROC_TIME_UNIT:
+				return convertGSSTestProcTimeUnitToString(eDataType, instanceValue);
 			case test_procPackage.GSS_TEST_PROC_CHECKMODE:
 				return convertGSSTestProcCheckmodeToString(eDataType, instanceValue);
 			case test_procPackage.GSS_TEST_PROC_YES_NO:
@@ -148,6 +153,16 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 	public GSSTestProcStep createGSSTestProcStep() {
 		GSSTestProcStepImpl gssTestProcStep = new GSSTestProcStepImpl();
 		return gssTestProcStep;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTestProcAction createGSSTestProcAction() {
+		GSSTestProcActionImpl gssTestProcAction = new GSSTestProcActionImpl();
+		return gssTestProcAction;
 	}
 
 	/**
@@ -335,8 +350,8 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcUnit createGSSTestProcUnitFromString(EDataType eDataType, String initialValue) {
-		GSSTestProcUnit result = GSSTestProcUnit.get(initialValue);
+	public GSSTestProcActionType createGSSTestProcActionTypeFromString(EDataType eDataType, String initialValue) {
+		GSSTestProcActionType result = GSSTestProcActionType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -346,7 +361,27 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertGSSTestProcUnitToString(EDataType eDataType, Object instanceValue) {
+	public String convertGSSTestProcActionTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTestProcTimeUnit createGSSTestProcTimeUnitFromString(EDataType eDataType, String initialValue) {
+		GSSTestProcTimeUnit result = GSSTestProcTimeUnit.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGSSTestProcTimeUnitToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

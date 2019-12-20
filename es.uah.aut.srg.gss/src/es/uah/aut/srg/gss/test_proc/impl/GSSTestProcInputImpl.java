@@ -11,7 +11,7 @@
 package es.uah.aut.srg.gss.test_proc.impl;
 
 import es.uah.aut.srg.gss.test_proc.GSSTestProcInput;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcUnit;
+import es.uah.aut.srg.gss.test_proc.GSSTestProcTimeUnit;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -115,7 +115,7 @@ public abstract class GSSTestProcInputImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final GSSTestProcUnit DELAY_UNIT_EDEFAULT = GSSTestProcUnit.MILISECONDS;
+	protected static final GSSTestProcTimeUnit DELAY_UNIT_EDEFAULT = GSSTestProcTimeUnit.MILISECONDS;
 
 	/**
 	 * The cached value of the '{@link #getDelay_unit() <em>Delay unit</em>}' attribute.
@@ -125,7 +125,7 @@ public abstract class GSSTestProcInputImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcUnit delay_unit = DELAY_UNIT_EDEFAULT;
+	protected GSSTestProcTimeUnit delay_unit = DELAY_UNIT_EDEFAULT;
 
 	/**
 	 * This is true if the Delay unit attribute has been set.
@@ -248,7 +248,7 @@ public abstract class GSSTestProcInputImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcUnit getDelay_unit() {
+	public GSSTestProcTimeUnit getDelay_unit() {
 		return delay_unit;
 	}
 
@@ -257,8 +257,8 @@ public abstract class GSSTestProcInputImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDelay_unit(GSSTestProcUnit newDelay_unit) {
-		GSSTestProcUnit oldDelay_unit = delay_unit;
+	public void setDelay_unit(GSSTestProcTimeUnit newDelay_unit) {
+		GSSTestProcTimeUnit oldDelay_unit = delay_unit;
 		delay_unit = newDelay_unit == null ? DELAY_UNIT_EDEFAULT : newDelay_unit;
 		boolean oldDelay_unitESet = delay_unitESet;
 		delay_unitESet = true;
@@ -272,7 +272,7 @@ public abstract class GSSTestProcInputImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	public void unsetDelay_unit() {
-		GSSTestProcUnit oldDelay_unit = delay_unit;
+		GSSTestProcTimeUnit oldDelay_unit = delay_unit;
 		boolean oldDelay_unitESet = delay_unitESet;
 		delay_unit = DELAY_UNIT_EDEFAULT;
 		delay_unitESet = false;
@@ -327,7 +327,7 @@ public abstract class GSSTestProcInputImpl extends MinimalEObjectImpl.Container 
 				setDelay_value((String)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_INPUT__DELAY_UNIT:
-				setDelay_unit((GSSTestProcUnit)newValue);
+				setDelay_unit((GSSTestProcTimeUnit)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

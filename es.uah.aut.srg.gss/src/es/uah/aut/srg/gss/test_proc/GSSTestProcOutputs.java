@@ -118,7 +118,7 @@ public interface GSSTestProcOutputs extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Valid time interval unit</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.test_proc.GSSTestProcUnit}.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.test_proc.GSSTestProcTimeUnit}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Valid time interval unit</em>' attribute isn't clear,
@@ -126,28 +126,28 @@ public interface GSSTestProcOutputs extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Valid time interval unit</em>' attribute.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcTimeUnit
 	 * @see #isSetValid_time_interval_unit()
 	 * @see #unsetValid_time_interval_unit()
-	 * @see #setValid_time_interval_unit(GSSTestProcUnit)
+	 * @see #setValid_time_interval_unit(GSSTestProcTimeUnit)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcOutputs_Valid_time_interval_unit()
 	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
-	GSSTestProcUnit getValid_time_interval_unit();
+	GSSTestProcTimeUnit getValid_time_interval_unit();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getValid_time_interval_unit <em>Valid time interval unit</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Valid time interval unit</em>' attribute.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcTimeUnit
 	 * @see #isSetValid_time_interval_unit()
 	 * @see #unsetValid_time_interval_unit()
 	 * @see #getValid_time_interval_unit()
 	 * @generated
 	 */
-	void setValid_time_interval_unit(GSSTestProcUnit value);
+	void setValid_time_interval_unit(GSSTestProcTimeUnit value);
 
 	/**
 	 * Unsets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs#getValid_time_interval_unit <em>Valid time interval unit</em>}' attribute.
@@ -155,7 +155,7 @@ public interface GSSTestProcOutputs extends EObject {
 	 * <!-- end-user-doc -->
 	 * @see #isSetValid_time_interval_unit()
 	 * @see #getValid_time_interval_unit()
-	 * @see #setValid_time_interval_unit(GSSTestProcUnit)
+	 * @see #setValid_time_interval_unit(GSSTestProcTimeUnit)
 	 * @generated
 	 */
 	void unsetValid_time_interval_unit();
@@ -167,7 +167,7 @@ public interface GSSTestProcOutputs extends EObject {
 	 * @return whether the value of the '<em>Valid time interval unit</em>' attribute is set.
 	 * @see #unsetValid_time_interval_unit()
 	 * @see #getValid_time_interval_unit()
-	 * @see #setValid_time_interval_unit(GSSTestProcUnit)
+	 * @see #setValid_time_interval_unit(GSSTestProcTimeUnit)
 	 * @generated
 	 */
 	boolean isSetValid_time_interval_unit();

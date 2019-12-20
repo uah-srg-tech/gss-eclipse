@@ -15,6 +15,7 @@ import es.uah.aut.srg.gss.common.GSSModelFile;
 import es.uah.aut.srg.gss.common.GSSModelFileImport;
 import es.uah.aut.srg.gss.common.commonPackage;
 import es.uah.aut.srg.gss.lang.test_proc.services.TEST_PROCGrammarAccess;
+import es.uah.aut.srg.gss.test_proc.GSSTestProcAction;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcConcurrentStep;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcConcurrentSteps;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcEnableDisable;
@@ -68,6 +69,9 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 			}
 		else if (epackage == test_procPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case test_procPackage.GSS_TEST_PROC_ACTION:
+				sequence_GSSTestProcAction(context, (GSSTestProcAction) semanticObject); 
+				return; 
 			case test_procPackage.GSS_TEST_PROC_CONCURRENT_STEP:
 				sequence_GSSTestProcConcurrentStep(context, (GSSTestProcConcurrentStep) semanticObject); 
 				return; 
@@ -174,6 +178,47 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     GSSTestProcAbstractInputs returns GSSTestProcAction
+	 *     GSSTestProcAction returns GSSTestProcAction
+	 *
+	 * Constraint:
+	 *     (
+	 *         message=STRING 
+	 *         actionType=GSSTestProcActionType 
+	 *         delay_value=INTEGER 
+	 *         delay_unit=GSSTestProcTimeUnit 
+	 *         span_value=INTEGER 
+	 *         span_unit=GSSTestProcTimeUnit
+	 *     )
+	 */
+	protected void sequence_GSSTestProcAction(ISerializationContext context, GSSTestProcAction semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ACTION__MESSAGE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ACTION__MESSAGE));
+			if (transientValues.isValueTransient(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ACTION__ACTION_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ACTION__ACTION_TYPE));
+			if (transientValues.isValueTransient(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ACTION__DELAY_VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ACTION__DELAY_VALUE));
+			if (transientValues.isValueTransient(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ACTION__DELAY_UNIT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ACTION__DELAY_UNIT));
+			if (transientValues.isValueTransient(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ACTION__SPAN_VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ACTION__SPAN_VALUE));
+			if (transientValues.isValueTransient(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ACTION__SPAN_UNIT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, test_procPackage.Literals.GSS_TEST_PROC_ACTION__SPAN_UNIT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGSSTestProcActionAccess().getMessageSTRINGTerminalRuleCall_4_0(), semanticObject.getMessage());
+		feeder.accept(grammarAccess.getGSSTestProcActionAccess().getActionTypeGSSTestProcActionTypeEnumRuleCall_8_0(), semanticObject.getActionType());
+		feeder.accept(grammarAccess.getGSSTestProcActionAccess().getDelay_valueINTEGERParserRuleCall_12_0(), semanticObject.getDelay_value());
+		feeder.accept(grammarAccess.getGSSTestProcActionAccess().getDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0(), semanticObject.getDelay_unit());
+		feeder.accept(grammarAccess.getGSSTestProcActionAccess().getSpan_valueINTEGERParserRuleCall_20_0(), semanticObject.getSpan_value());
+		feeder.accept(grammarAccess.getGSSTestProcActionAccess().getSpan_unitGSSTestProcTimeUnitEnumRuleCall_24_0(), semanticObject.getSpan_unit());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     GSSTestProcConcurrentStep returns GSSTestProcConcurrentStep
 	 *
 	 * Constraint:
@@ -230,7 +275,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         name=ID 
 	 *         ifRef=INTEGER 
 	 *         delay_value=INTEGER 
-	 *         delay_unit=GSSTestProcUnit 
+	 *         delay_unit=GSSTestProcTimeUnit 
 	 *         level0=[GSSFormatFormat|VersionedQualifiedName]? 
 	 *         app_to_level0=[GSSExportExport|VersionedQualifiedName]
 	 *     )
@@ -250,7 +295,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         name=ID 
 	 *         ifRef=INTEGER 
 	 *         delay_value=INTEGER 
-	 *         delay_unit=GSSTestProcUnit 
+	 *         delay_unit=GSSTestProcTimeUnit 
 	 *         level1=[GSSFormatFormat|VersionedQualifiedName]? 
 	 *         app_to_level1=[GSSExportExport|VersionedQualifiedName] 
 	 *         level0=[GSSFormatFormat|VersionedQualifiedName]? 
@@ -272,7 +317,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         name=ID 
 	 *         ifRef=INTEGER 
 	 *         delay_value=INTEGER 
-	 *         delay_unit=GSSTestProcUnit 
+	 *         delay_unit=GSSTestProcTimeUnit 
 	 *         level2=[GSSFormatFormat|VersionedQualifiedName]? 
 	 *         app_to_level2=[GSSExportExport|VersionedQualifiedName] 
 	 *         level1=[GSSFormatFormat|VersionedQualifiedName]? 
@@ -296,7 +341,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         name=ID 
 	 *         ifRef=INTEGER 
 	 *         delay_value=INTEGER 
-	 *         delay_unit=GSSTestProcUnit 
+	 *         delay_unit=GSSTestProcTimeUnit 
 	 *         level3=[GSSFormatFormat|VersionedQualifiedName]? 
 	 *         app_to_level3=[GSSExportExport|VersionedQualifiedName] 
 	 *         level2=[GSSFormatFormat|VersionedQualifiedName]? 
@@ -314,6 +359,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     GSSTestProcAbstractInputs returns GSSTestProcInputs
 	 *     GSSTestProcInputs returns GSSTestProcInputs
 	 *
 	 * Constraint:
@@ -496,7 +542,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     GSSTestProcOutputs returns GSSTestProcOutputs
 	 *
 	 * Constraint:
-	 *     (checkmode=GSSTestProcCheckmode valid_time_interval_value=INTEGER valid_time_interval_unit=GSSTestProcUnit output+=GSSTestProcOutput+)
+	 *     (checkmode=GSSTestProcCheckmode valid_time_interval_value=INTEGER valid_time_interval_unit=GSSTestProcTimeUnit output+=GSSTestProcOutput+)
 	 */
 	protected void sequence_GSSTestProcOutputs(ISerializationContext context, GSSTestProcOutputs semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -534,7 +580,7 @@ public class TEST_PROCSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         )? 
 	 *         mode=GSSTestProcMode 
 	 *         replays=INTEGER? 
-	 *         inputs=GSSTestProcInputs 
+	 *         inputs=GSSTestProcAbstractInputs 
 	 *         outputs=GSSTestProcOutputs? 
 	 *         specialPackets=GSSTestProcSpecialPackets? 
 	 *         concurrent_steps=GSSTestProcConcurrentSteps?

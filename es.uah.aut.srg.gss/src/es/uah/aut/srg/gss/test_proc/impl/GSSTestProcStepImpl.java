@@ -12,8 +12,8 @@ package es.uah.aut.srg.gss.test_proc.impl;
 
 import es.uah.aut.srg.gss.common.impl.GSSModelObjectImpl;
 
+import es.uah.aut.srg.gss.test_proc.GSSTestProcAbstractInputs;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcConcurrentSteps;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcInputs;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcMode;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcOutput;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs;
@@ -148,7 +148,7 @@ public class GSSTestProcStepImpl extends GSSModelObjectImpl implements GSSTestPr
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcInputs inputs;
+	protected GSSTestProcAbstractInputs inputs;
 
 	/**
 	 * The cached value of the '{@link #getOutputs() <em>Outputs</em>}' containment reference.
@@ -368,7 +368,7 @@ public class GSSTestProcStepImpl extends GSSModelObjectImpl implements GSSTestPr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcInputs getInputs() {
+	public GSSTestProcAbstractInputs getInputs() {
 		return inputs;
 	}
 
@@ -377,8 +377,8 @@ public class GSSTestProcStepImpl extends GSSModelObjectImpl implements GSSTestPr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetInputs(GSSTestProcInputs newInputs, NotificationChain msgs) {
-		GSSTestProcInputs oldInputs = inputs;
+	public NotificationChain basicSetInputs(GSSTestProcAbstractInputs newInputs, NotificationChain msgs) {
+		GSSTestProcAbstractInputs oldInputs = inputs;
 		inputs = newInputs;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, test_procPackage.GSS_TEST_PROC_STEP__INPUTS, oldInputs, newInputs);
@@ -392,7 +392,7 @@ public class GSSTestProcStepImpl extends GSSModelObjectImpl implements GSSTestPr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputs(GSSTestProcInputs newInputs) {
+	public void setInputs(GSSTestProcAbstractInputs newInputs) {
 		if (newInputs != inputs) {
 			NotificationChain msgs = null;
 			if (inputs != null)
@@ -611,7 +611,7 @@ public class GSSTestProcStepImpl extends GSSModelObjectImpl implements GSSTestPr
 				setOutput_idref_from_prev_step((GSSTestProcOutput)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_STEP__INPUTS:
-				setInputs((GSSTestProcInputs)newValue);
+				setInputs((GSSTestProcAbstractInputs)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_STEP__OUTPUTS:
 				setOutputs((GSSTestProcOutputs)newValue);
@@ -650,7 +650,7 @@ public class GSSTestProcStepImpl extends GSSModelObjectImpl implements GSSTestPr
 				setOutput_idref_from_prev_step((GSSTestProcOutput)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_STEP__INPUTS:
-				setInputs((GSSTestProcInputs)null);
+				setInputs((GSSTestProcAbstractInputs)null);
 				return;
 			case test_procPackage.GSS_TEST_PROC_STEP__OUTPUTS:
 				setOutputs((GSSTestProcOutputs)null);

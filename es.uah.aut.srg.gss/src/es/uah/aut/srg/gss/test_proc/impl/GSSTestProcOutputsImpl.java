@@ -13,7 +13,7 @@ package es.uah.aut.srg.gss.test_proc.impl;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcCheckmode;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcOutput;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs;
-import es.uah.aut.srg.gss.test_proc.GSSTestProcUnit;
+import es.uah.aut.srg.gss.test_proc.GSSTestProcTimeUnit;
 import es.uah.aut.srg.gss.test_proc.test_procPackage;
 
 import java.util.Collection;
@@ -106,7 +106,7 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected static final GSSTestProcUnit VALID_TIME_INTERVAL_UNIT_EDEFAULT = GSSTestProcUnit.MILISECONDS;
+	protected static final GSSTestProcTimeUnit VALID_TIME_INTERVAL_UNIT_EDEFAULT = GSSTestProcTimeUnit.MILISECONDS;
 
 	/**
 	 * The cached value of the '{@link #getValid_time_interval_unit() <em>Valid time interval unit</em>}' attribute.
@@ -116,7 +116,7 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcUnit valid_time_interval_unit = VALID_TIME_INTERVAL_UNIT_EDEFAULT;
+	protected GSSTestProcTimeUnit valid_time_interval_unit = VALID_TIME_INTERVAL_UNIT_EDEFAULT;
 
 	/**
 	 * This is true if the Valid time interval unit attribute has been set.
@@ -228,7 +228,7 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcUnit getValid_time_interval_unit() {
+	public GSSTestProcTimeUnit getValid_time_interval_unit() {
 		return valid_time_interval_unit;
 	}
 
@@ -237,8 +237,8 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValid_time_interval_unit(GSSTestProcUnit newValid_time_interval_unit) {
-		GSSTestProcUnit oldValid_time_interval_unit = valid_time_interval_unit;
+	public void setValid_time_interval_unit(GSSTestProcTimeUnit newValid_time_interval_unit) {
+		GSSTestProcTimeUnit oldValid_time_interval_unit = valid_time_interval_unit;
 		valid_time_interval_unit = newValid_time_interval_unit == null ? VALID_TIME_INTERVAL_UNIT_EDEFAULT : newValid_time_interval_unit;
 		boolean oldValid_time_interval_unitESet = valid_time_interval_unitESet;
 		valid_time_interval_unitESet = true;
@@ -252,7 +252,7 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	public void unsetValid_time_interval_unit() {
-		GSSTestProcUnit oldValid_time_interval_unit = valid_time_interval_unit;
+		GSSTestProcTimeUnit oldValid_time_interval_unit = valid_time_interval_unit;
 		boolean oldValid_time_interval_unitESet = valid_time_interval_unitESet;
 		valid_time_interval_unit = VALID_TIME_INTERVAL_UNIT_EDEFAULT;
 		valid_time_interval_unitESet = false;
@@ -331,7 +331,7 @@ public class GSSTestProcOutputsImpl extends MinimalEObjectImpl.Container impleme
 				setValid_time_interval_value((String)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__VALID_TIME_INTERVAL_UNIT:
-				setValid_time_interval_unit((GSSTestProcUnit)newValue);
+				setValid_time_interval_unit((GSSTestProcTimeUnit)newValue);
 				return;
 			case test_procPackage.GSS_TEST_PROC_OUTPUTS__OUTPUT:
 				getOutput().clear();

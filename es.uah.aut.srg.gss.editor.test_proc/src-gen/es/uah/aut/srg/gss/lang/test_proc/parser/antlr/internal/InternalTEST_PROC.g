@@ -577,9 +577,9 @@ ruleGSSTestProcStep returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getInputsGSSTestProcInputsParserRuleCall_16_0());
+					newCompositeNode(grammarAccess.getGSSTestProcStepAccess().getInputsGSSTestProcAbstractInputsParserRuleCall_16_0());
 				}
-				lv_inputs_26_0=ruleGSSTestProcInputs
+				lv_inputs_26_0=ruleGSSTestProcAbstractInputs
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTestProcStepRule());
@@ -588,7 +588,7 @@ ruleGSSTestProcStep returns [EObject current=null]
 						$current,
 						"inputs",
 						lv_inputs_26_0,
-						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcInputs");
+						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcAbstractInputs");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -657,6 +657,268 @@ ruleGSSTestProcStep returns [EObject current=null]
 		otherlv_31=';'
 		{
 			newLeafNode(otherlv_31, grammarAccess.getGSSTestProcStepAccess().getSemicolonKeyword_21());
+		}
+	)
+;
+
+// Entry rule entryRuleGSSTestProcAbstractInputs
+entryRuleGSSTestProcAbstractInputs returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSTestProcAbstractInputsRule()); }
+	iv_ruleGSSTestProcAbstractInputs=ruleGSSTestProcAbstractInputs
+	{ $current=$iv_ruleGSSTestProcAbstractInputs.current; }
+	EOF;
+
+// Rule GSSTestProcAbstractInputs
+ruleGSSTestProcAbstractInputs returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSTestProcAbstractInputsAccess().getGSSTestProcInputsParserRuleCall_0());
+		}
+		this_GSSTestProcInputs_0=ruleGSSTestProcInputs
+		{
+			$current = $this_GSSTestProcInputs_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSTestProcAbstractInputsAccess().getGSSTestProcActionParserRuleCall_1());
+		}
+		this_GSSTestProcAction_1=ruleGSSTestProcAction
+		{
+			$current = $this_GSSTestProcAction_1.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleGSSTestProcAction
+entryRuleGSSTestProcAction returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSTestProcActionRule()); }
+	iv_ruleGSSTestProcAction=ruleGSSTestProcAction
+	{ $current=$iv_ruleGSSTestProcAction.current; }
+	EOF;
+
+// Rule GSSTestProcAction
+ruleGSSTestProcAction returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='GSSTestProcAction'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getGSSTestProcActionAccess().getGSSTestProcActionKeyword_0());
+		}
+		otherlv_1='{'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getGSSTestProcActionAccess().getLeftCurlyBracketKeyword_1());
+		}
+		otherlv_2='message'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSTestProcActionAccess().getMessageKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSTestProcActionAccess().getColonEqualsSignKeyword_3());
+		}
+		(
+			(
+				lv_message_4_0=RULE_STRING
+				{
+					newLeafNode(lv_message_4_0, grammarAccess.getGSSTestProcActionAccess().getMessageSTRINGTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getGSSTestProcActionRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"message",
+						lv_message_4_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_5=';'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getGSSTestProcActionAccess().getSemicolonKeyword_5());
+		}
+		otherlv_6='actionType'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getGSSTestProcActionAccess().getActionTypeKeyword_6());
+		}
+		otherlv_7=':='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSTestProcActionAccess().getColonEqualsSignKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTestProcActionAccess().getActionTypeGSSTestProcActionTypeEnumRuleCall_8_0());
+				}
+				lv_actionType_8_0=ruleGSSTestProcActionType
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTestProcActionRule());
+					}
+					set(
+						$current,
+						"actionType",
+						lv_actionType_8_0,
+						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcActionType");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9=';'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getGSSTestProcActionAccess().getSemicolonKeyword_9());
+		}
+		otherlv_10='delay_value'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getGSSTestProcActionAccess().getDelay_valueKeyword_10());
+		}
+		otherlv_11=':='
+		{
+			newLeafNode(otherlv_11, grammarAccess.getGSSTestProcActionAccess().getColonEqualsSignKeyword_11());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTestProcActionAccess().getDelay_valueINTEGERParserRuleCall_12_0());
+				}
+				lv_delay_value_12_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTestProcActionRule());
+					}
+					set(
+						$current,
+						"delay_value",
+						lv_delay_value_12_0,
+						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_13=';'
+		{
+			newLeafNode(otherlv_13, grammarAccess.getGSSTestProcActionAccess().getSemicolonKeyword_13());
+		}
+		otherlv_14='delay_unit'
+		{
+			newLeafNode(otherlv_14, grammarAccess.getGSSTestProcActionAccess().getDelay_unitKeyword_14());
+		}
+		otherlv_15=':='
+		{
+			newLeafNode(otherlv_15, grammarAccess.getGSSTestProcActionAccess().getColonEqualsSignKeyword_15());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTestProcActionAccess().getDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0());
+				}
+				lv_delay_unit_16_0=ruleGSSTestProcTimeUnit
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTestProcActionRule());
+					}
+					set(
+						$current,
+						"delay_unit",
+						lv_delay_unit_16_0,
+						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcTimeUnit");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_17=';'
+		{
+			newLeafNode(otherlv_17, grammarAccess.getGSSTestProcActionAccess().getSemicolonKeyword_17());
+		}
+		otherlv_18='span_value'
+		{
+			newLeafNode(otherlv_18, grammarAccess.getGSSTestProcActionAccess().getSpan_valueKeyword_18());
+		}
+		otherlv_19=':='
+		{
+			newLeafNode(otherlv_19, grammarAccess.getGSSTestProcActionAccess().getColonEqualsSignKeyword_19());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTestProcActionAccess().getSpan_valueINTEGERParserRuleCall_20_0());
+				}
+				lv_span_value_20_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTestProcActionRule());
+					}
+					set(
+						$current,
+						"span_value",
+						lv_span_value_20_0,
+						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_21=';'
+		{
+			newLeafNode(otherlv_21, grammarAccess.getGSSTestProcActionAccess().getSemicolonKeyword_21());
+		}
+		otherlv_22='span_unit'
+		{
+			newLeafNode(otherlv_22, grammarAccess.getGSSTestProcActionAccess().getSpan_unitKeyword_22());
+		}
+		otherlv_23=':='
+		{
+			newLeafNode(otherlv_23, grammarAccess.getGSSTestProcActionAccess().getColonEqualsSignKeyword_23());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSTestProcActionAccess().getSpan_unitGSSTestProcTimeUnitEnumRuleCall_24_0());
+				}
+				lv_span_unit_24_0=ruleGSSTestProcTimeUnit
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSTestProcActionRule());
+					}
+					set(
+						$current,
+						"span_unit",
+						lv_span_unit_24_0,
+						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcTimeUnit");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_25=';'
+		{
+			newLeafNode(otherlv_25, grammarAccess.getGSSTestProcActionAccess().getSemicolonKeyword_25());
+		}
+		otherlv_26='}'
+		{
+			newLeafNode(otherlv_26, grammarAccess.getGSSTestProcActionAccess().getRightCurlyBracketKeyword_26());
+		}
+		otherlv_27=';'
+		{
+			newLeafNode(otherlv_27, grammarAccess.getGSSTestProcActionAccess().getSemicolonKeyword_27());
 		}
 	)
 ;
@@ -822,9 +1084,9 @@ ruleGSSTestProcOutputs returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTestProcOutputsAccess().getValid_time_interval_unitGSSTestProcUnitEnumRuleCall_12_0());
+					newCompositeNode(grammarAccess.getGSSTestProcOutputsAccess().getValid_time_interval_unitGSSTestProcTimeUnitEnumRuleCall_12_0());
 				}
-				lv_valid_time_interval_unit_12_0=ruleGSSTestProcUnit
+				lv_valid_time_interval_unit_12_0=ruleGSSTestProcTimeUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTestProcOutputsRule());
@@ -833,7 +1095,7 @@ ruleGSSTestProcOutputs returns [EObject current=null]
 						$current,
 						"valid_time_interval_unit",
 						lv_valid_time_interval_unit_12_0,
-						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcUnit");
+						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcTimeUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1276,9 +1538,9 @@ ruleGSSTestProcInputLevel3 returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTestProcInputLevel3Access().getDelay_unitGSSTestProcUnitEnumRuleCall_16_0());
+					newCompositeNode(grammarAccess.getGSSTestProcInputLevel3Access().getDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0());
 				}
-				lv_delay_unit_16_0=ruleGSSTestProcUnit
+				lv_delay_unit_16_0=ruleGSSTestProcTimeUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTestProcInputLevel3Rule());
@@ -1287,7 +1549,7 @@ ruleGSSTestProcInputLevel3 returns [EObject current=null]
 						$current,
 						"delay_unit",
 						lv_delay_unit_16_0,
-						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcUnit");
+						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcTimeUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1696,9 +1958,9 @@ ruleGSSTestProcInputLevel2 returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTestProcInputLevel2Access().getDelay_unitGSSTestProcUnitEnumRuleCall_16_0());
+					newCompositeNode(grammarAccess.getGSSTestProcInputLevel2Access().getDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0());
 				}
-				lv_delay_unit_16_0=ruleGSSTestProcUnit
+				lv_delay_unit_16_0=ruleGSSTestProcTimeUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTestProcInputLevel2Rule());
@@ -1707,7 +1969,7 @@ ruleGSSTestProcInputLevel2 returns [EObject current=null]
 						$current,
 						"delay_unit",
 						lv_delay_unit_16_0,
-						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcUnit");
+						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcTimeUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2050,9 +2312,9 @@ ruleGSSTestProcInputLevel1 returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTestProcInputLevel1Access().getDelay_unitGSSTestProcUnitEnumRuleCall_16_0());
+					newCompositeNode(grammarAccess.getGSSTestProcInputLevel1Access().getDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0());
 				}
-				lv_delay_unit_16_0=ruleGSSTestProcUnit
+				lv_delay_unit_16_0=ruleGSSTestProcTimeUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTestProcInputLevel1Rule());
@@ -2061,7 +2323,7 @@ ruleGSSTestProcInputLevel1 returns [EObject current=null]
 						$current,
 						"delay_unit",
 						lv_delay_unit_16_0,
-						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcUnit");
+						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcTimeUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2338,9 +2600,9 @@ ruleGSSTestProcInputLevel0 returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTestProcInputLevel0Access().getDelay_unitGSSTestProcUnitEnumRuleCall_16_0());
+					newCompositeNode(grammarAccess.getGSSTestProcInputLevel0Access().getDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0());
 				}
-				lv_delay_unit_16_0=ruleGSSTestProcUnit
+				lv_delay_unit_16_0=ruleGSSTestProcTimeUnit
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTestProcInputLevel0Rule());
@@ -2349,7 +2611,7 @@ ruleGSSTestProcInputLevel0 returns [EObject current=null]
 						$current,
 						"delay_unit",
 						lv_delay_unit_16_0,
-						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcUnit");
+						"es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcTimeUnit");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -4771,10 +5033,10 @@ ruleGSSTestProcMode returns [Enumerator current=null]
 		)
 		    |
 		(
-			enumLiteral_1='action'
+			enumLiteral_1='manual'
 			{
-				$current = grammarAccess.getGSSTestProcModeAccess().getActionEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getGSSTestProcModeAccess().getActionEnumLiteralDeclaration_1());
+				$current = grammarAccess.getGSSTestProcModeAccess().getManualEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getGSSTestProcModeAccess().getManualEnumLiteralDeclaration_1());
 			}
 		)
 		    |
@@ -4785,11 +5047,46 @@ ruleGSSTestProcMode returns [Enumerator current=null]
 				newLeafNode(enumLiteral_2, grammarAccess.getGSSTestProcModeAccess().getConcurrentEnumLiteralDeclaration_2());
 			}
 		)
+		    |
+		(
+			enumLiteral_3='action'
+			{
+				$current = grammarAccess.getGSSTestProcModeAccess().getActionEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_3, grammarAccess.getGSSTestProcModeAccess().getActionEnumLiteralDeclaration_3());
+			}
+		)
 	)
 ;
 
-// Rule GSSTestProcUnit
-ruleGSSTestProcUnit returns [Enumerator current=null]
+// Rule GSSTestProcActionType
+ruleGSSTestProcActionType returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='checking'
+			{
+				$current = grammarAccess.getGSSTestProcActionTypeAccess().getCheckingEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getGSSTestProcActionTypeAccess().getCheckingEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='instruction'
+			{
+				$current = grammarAccess.getGSSTestProcActionTypeAccess().getInstructionEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getGSSTestProcActionTypeAccess().getInstructionEnumLiteralDeclaration_1());
+			}
+		)
+	)
+;
+
+// Rule GSSTestProcTimeUnit
+ruleGSSTestProcTimeUnit returns [Enumerator current=null]
 @init {
 	enterRule();
 }
@@ -4800,16 +5097,16 @@ ruleGSSTestProcUnit returns [Enumerator current=null]
 		(
 			enumLiteral_0='miliseconds'
 			{
-				$current = grammarAccess.getGSSTestProcUnitAccess().getMilisecondsEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getGSSTestProcUnitAccess().getMilisecondsEnumLiteralDeclaration_0());
+				$current = grammarAccess.getGSSTestProcTimeUnitAccess().getMilisecondsEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getGSSTestProcTimeUnitAccess().getMilisecondsEnumLiteralDeclaration_0());
 			}
 		)
 		    |
 		(
 			enumLiteral_1='seconds'
 			{
-				$current = grammarAccess.getGSSTestProcUnitAccess().getSecondsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getGSSTestProcUnitAccess().getSecondsEnumLiteralDeclaration_1());
+				$current = grammarAccess.getGSSTestProcTimeUnitAccess().getSecondsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getGSSTestProcTimeUnitAccess().getSecondsEnumLiteralDeclaration_1());
 			}
 		)
 	)

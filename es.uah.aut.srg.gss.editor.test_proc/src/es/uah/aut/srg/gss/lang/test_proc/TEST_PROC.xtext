@@ -37,7 +37,7 @@ GSSTestProcStep returns GSSTestProcStep:
 		'output_idref_from_prev_step' ':=' output_idref_from_prev_step=[GSSTestProcOutput|VersionedQualifiedReferenceName] ';')?
 		'mode' ':=' mode=GSSTestProcMode ';'
 		('replays' ':=' replays=INTEGER ';')?
-		inputs=GSSTestProcInputs
+		inputs=GSSTestProcAbstractInputs
 		(outputs=GSSTestProcOutputs)?
 		(specialPackets=GSSTestProcSpecialPackets)?
 		(concurrent_steps=GSSTestProcConcurrentSteps)?
@@ -45,8 +45,25 @@ GSSTestProcStep returns GSSTestProcStep:
 ;
 
 enum GSSTestProcMode returns GSSTestProcMode:
-	continuous = 'continuous' | action = 'action' | concurrent = 'concurrent';
+	continuous = 'continuous' | manual = 'manual' | concurrent = 'concurrent' | action = 'action';
 
+GSSTestProcAbstractInputs returns GSSTestProcAbstractInputs:
+	GSSTestProcInputs | GSSTestProcAction;
+	
+GSSTestProcAction returns GSSTestProcAction:
+	'GSSTestProcAction' '{'
+		'message' ':=' message=STRING ';'
+		'actionType' ':=' actionType=GSSTestProcActionType ';'
+		'delay_value' ':=' delay_value=INTEGER ';'
+		'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';'
+		'span_value' ':=' span_value=INTEGER ';'
+		'span_unit' ':=' span_unit=GSSTestProcTimeUnit ';'
+	'}' ';'
+;
+
+enum GSSTestProcActionType returns GSSTestProcActionType:
+	checking = 'checking' | instruction = 'instruction';
+	
 GSSTestProcInputs returns GSSTestProcInputs:
 	{GSSTestProcInputs}
 	'GSSTestProcInputs' '{'
@@ -54,11 +71,15 @@ GSSTestProcInputs returns GSSTestProcInputs:
 	'}' ';'
 ;
 
+enum GSSTestProcTimeUnit returns GSSTestProcTimeUnit:
+	miliseconds = 'miliseconds' | seconds = 'seconds'
+;
+
 GSSTestProcOutputs returns GSSTestProcOutputs:
 	'GSSTestProcOutputs' '{'
 		'checkmode' ':=' checkmode=GSSTestProcCheckmode ';'
 		'valid_time_interval_value' ':=' valid_time_interval_value=INTEGER ';'
-		'valid_time_interval_unit' ':=' valid_time_interval_unit=GSSTestProcUnit ';'
+		'valid_time_interval_unit' ':=' valid_time_interval_unit=GSSTestProcTimeUnit ';'
 		(output+=GSSTestProcOutput)+
 	'}' ';'
 ;
@@ -88,7 +109,7 @@ GSSTestProcInputLevel3 returns GSSTestProcInputLevel3:
 		'name' ':=' name=ID ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'delay_value' ':=' delay_value=INTEGER ';'
-		'delay_unit' ':=' delay_unit=GSSTestProcUnit ';'
+		'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';'
 		('level3' ':=' level3=[format::GSSFormatFormat|VersionedQualifiedName] ';')? 
 		'app_to_level3' ':=' app_to_level3=[export::GSSExportExport|VersionedQualifiedName] ';'
 		('level2' ':=' level2=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
@@ -105,7 +126,7 @@ GSSTestProcInputLevel2 returns GSSTestProcInputLevel2:
 		'name' ':=' name=ID ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'delay_value' ':=' delay_value=INTEGER ';'
-		'delay_unit' ':=' delay_unit=GSSTestProcUnit ';'
+		'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';'
 		('level2' ':=' level2=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		'app_to_level2' ':=' app_to_level2=[export::GSSExportExport|VersionedQualifiedName] ';'
 		('level1' ':=' level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
@@ -120,7 +141,7 @@ GSSTestProcInputLevel1 returns GSSTestProcInputLevel1:
 		'name' ':=' name=ID ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'delay_value' ':=' delay_value=INTEGER ';'
-		'delay_unit' ':=' delay_unit=GSSTestProcUnit ';'
+		'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';'
 		('level1' ':=' level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		'app_to_level1' ':=' app_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';'
 		('level0' ':=' level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
@@ -133,14 +154,10 @@ GSSTestProcInputLevel0 returns GSSTestProcInputLevel0:
 		'name' ':=' name=ID ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'delay_value' ':=' delay_value=INTEGER ';'
-		'delay_unit' ':=' delay_unit=GSSTestProcUnit ';'
+		'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';'
 		('level0' ':=' level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		'app_to_level0' ':=' app_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';'
 	'}' ';'
-;
-
-enum GSSTestProcUnit returns GSSTestProcUnit:
-	miliseconds = 'miliseconds' | seconds = 'seconds'
 ;
 
 enum GSSTestProcCheckmode returns GSSTestProcCheckmode:

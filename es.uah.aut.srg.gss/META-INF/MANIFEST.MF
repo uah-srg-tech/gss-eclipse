@@ -46,8 +46,21 @@ Export-Package: es.uah.aut.srg.gss.campaign,
  es.uah.aut.srg.gss.test_proc,
  es.uah.aut.srg.gss.test_proc.impl,
  es.uah.aut.srg.gss.test_proc.util,
- es.uah.aut.srg.gss.util
+ es.uah.aut.srg.gss.util,
+ es.uah.aut.srg.gss.tcinput,
+ es.uah.aut.srg.gss.tcinput.impl,
+ es.uah.aut.srg.gss.tcinput.util,
+ es.uah.aut.srg.gss.tmoutput,
+ es.uah.aut.srg.gss.tmoutput.impl,
+ es.uah.aut.srg.gss.tmoutput.util,
+ es.uah.aut.srg.gss.tcheaderinput,
+ es.uah.aut.srg.gss.tcheaderinput.impl,
+ es.uah.aut.srg.gss.tcheaderinput.util,
+ es.uah.aut.srg.gss.tmheaderoutput,
+ es.uah.aut.srg.gss.tmheaderoutput.impl,
+ es.uah.aut.srg.gss.tmheaderoutput.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
+ es.uah.aut.srg.tmtcif;visibility:=reexport,
  es.uah.aut.srg.gss;visibility:=reexport
 Bundle-ActivationPolicy: lazy

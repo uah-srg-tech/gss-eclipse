@@ -206,12 +206,12 @@ public interface GSSTestProcStep extends GSSModelObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Inputs</em>' containment reference.
-	 * @see #setInputs(GSSTestProcInputs)
+	 * @see #setInputs(GSSTestProcAbstractInputs)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcStep_Inputs()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSTestProcInputs getInputs();
+	GSSTestProcAbstractInputs getInputs();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcStep#getInputs <em>Inputs</em>}' containment reference.
@@ -221,7 +221,7 @@ public interface GSSTestProcStep extends GSSModelObject {
 	 * @see #getInputs()
 	 * @generated
 	 */
-	void setInputs(GSSTestProcInputs value);
+	void setInputs(GSSTestProcAbstractInputs value);
 
 	/**
 	 * Returns the value of the '<em><b>Outputs</b></em>' containment reference.

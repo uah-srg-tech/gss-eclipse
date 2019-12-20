@@ -18,10 +18,18 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.xtend.typesystem.emf.EmfRegistryMetaModel;
 
+import es.uah.aut.srg.gss.format.formatPackage;
 import es.uah.aut.srg.gss.export.exportPackage;
 import es.uah.aut.srg.gss.filter.filterPackage;
 import es.uah.aut.srg.gss.import_.importPackage;
-import es.uah.aut.srg.gss.format.formatPackage;
+import es.uah.aut.srg.gss.tcinput.tcinputPackage;
+import es.uah.aut.srg.gss.tcheaderinput.tcheaderinputPackage;
+import es.uah.aut.srg.gss.tmoutput.tmoutputPackage;
+import es.uah.aut.srg.gss.tmheaderoutput.tmheaderoutputPackage;
+import es.uah.aut.srg.tmtcif.tc.tcPackage;
+import es.uah.aut.srg.tmtcif.tcheader.tcheaderPackage;
+import es.uah.aut.srg.tmtcif.tm.tmPackage;
+import es.uah.aut.srg.tmtcif.tmheader.tmheaderPackage;
 
 import org.eclipse.internal.xpand2.pr.ProtectedRegionResolverImpl;
 import org.eclipse.xpand2.XpandExecutionContextImpl;
@@ -52,6 +60,14 @@ public class XpandGeneratorUtil {
 				exportPackage.eINSTANCE,
 				filterPackage.eINSTANCE,
 				importPackage.eINSTANCE,
+				tcinputPackage.eINSTANCE,
+				tcPackage.eINSTANCE,
+				tcheaderinputPackage.eINSTANCE,
+				tcheaderPackage.eINSTANCE,
+				tmoutputPackage.eINSTANCE,
+				tmPackage.eINSTANCE,
+				tmheaderoutputPackage.eINSTANCE,
+				tmheaderPackage.eINSTANCE,
 			};
 		}
 		

@@ -8,8 +8,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSTestProcMode">
     <eLiterals name="continuous"/>
-    <eLiterals name="action" value="1"/>
+    <eLiterals name="manual" value="1"/>
     <eLiterals name="concurrent" value="2"/>
+    <eLiterals name="action" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcStep" eSuperTypes="common.ecore#//GSSModelObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -20,7 +21,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="output_idref_from_prev_step"
         eType="#//GSSTestProcOutput"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" lowerBound="1"
-        eType="#//GSSTestProcInputs" containment="true"/>
+        eType="#//GSSTestProcAbstractInputs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" eType="#//GSSTestProcOutputs"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="specialPackets" eType="#//GSSTestProcSpecialPackets"
@@ -28,11 +29,30 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="concurrent_steps" eType="#//GSSTestProcConcurrentSteps"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcInputs">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcAbstractInputs" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSTestProcActionType">
+    <eLiterals name="instruction" literal="instruction"/>
+    <eLiterals name="checking" value="1" literal="checking"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcAction" eSuperTypes="#//GSSTestProcAbstractInputs">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionType" lowerBound="1"
+        eType="#//GSSTestProcActionType" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_value" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_unit" lowerBound="1"
+        eType="#//GSSTestProcTimeUnit" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="span_value" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="span_unit" lowerBound="1"
+        eType="#//GSSTestProcTimeUnit" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcInputs" eSuperTypes="#//GSSTestProcAbstractInputs">
     <eStructuralFeatures xsi:type="ecore:EReference" name="input" lowerBound="1" upperBound="-1"
         eType="#//GSSTestProcInput" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="GSSTestProcUnit">
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSTestProcTimeUnit">
     <eLiterals name="miliseconds"/>
     <eLiterals name="seconds" value="1"/>
   </eClassifiers>
@@ -47,7 +67,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valid_time_interval_value"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valid_time_interval_unit"
-        lowerBound="1" eType="#//GSSTestProcUnit" unsettable="true"/>
+        lowerBound="1" eType="#//GSSTestProcTimeUnit" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"
         upperBound="-1" eType="#//GSSTestProcOutput" containment="true"/>
   </eClassifiers>
@@ -88,7 +108,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_value" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_unit" lowerBound="1"
-        eType="#//GSSTestProcUnit" unsettable="true"/>
+        eType="#//GSSTestProcTimeUnit" unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcInputLevel3" eSuperTypes="#//GSSTestProcInput">
     <eStructuralFeatures xsi:type="ecore:EReference" name="level3" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>

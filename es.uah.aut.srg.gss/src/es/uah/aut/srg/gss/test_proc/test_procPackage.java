@@ -277,6 +277,116 @@ public interface test_procPackage extends EPackage {
 	int GSS_TEST_PROC_STEP_OPERATION_COUNT = commonPackage.GSS_MODEL_OBJECT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAbstractInputsImpl <em>GSS Test Proc Abstract Inputs</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAbstractInputsImpl
+	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcAbstractInputs()
+	 * @generated
+	 */
+	int GSS_TEST_PROC_ABSTRACT_INPUTS = 2;
+
+	/**
+	 * The number of structural features of the '<em>GSS Test Proc Abstract Inputs</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_PROC_ABSTRACT_INPUTS_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>GSS Test Proc Abstract Inputs</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_PROC_ABSTRACT_INPUTS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcActionImpl <em>GSS Test Proc Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcActionImpl
+	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcAction()
+	 * @generated
+	 */
+	int GSS_TEST_PROC_ACTION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_PROC_ACTION__MESSAGE = GSS_TEST_PROC_ABSTRACT_INPUTS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Action Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_PROC_ACTION__ACTION_TYPE = GSS_TEST_PROC_ABSTRACT_INPUTS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Delay value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_PROC_ACTION__DELAY_VALUE = GSS_TEST_PROC_ABSTRACT_INPUTS_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Delay unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_PROC_ACTION__DELAY_UNIT = GSS_TEST_PROC_ABSTRACT_INPUTS_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Span value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_PROC_ACTION__SPAN_VALUE = GSS_TEST_PROC_ABSTRACT_INPUTS_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Span unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_PROC_ACTION__SPAN_UNIT = GSS_TEST_PROC_ABSTRACT_INPUTS_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>GSS Test Proc Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_PROC_ACTION_FEATURE_COUNT = GSS_TEST_PROC_ABSTRACT_INPUTS_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>GSS Test Proc Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_PROC_ACTION_OPERATION_COUNT = GSS_TEST_PROC_ABSTRACT_INPUTS_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcInputsImpl <em>GSS Test Proc Inputs</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -284,7 +394,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcInputs()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_INPUTS = 2;
+	int GSS_TEST_PROC_INPUTS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' containment reference list.
@@ -293,7 +403,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_INPUTS__INPUT = 0;
+	int GSS_TEST_PROC_INPUTS__INPUT = GSS_TEST_PROC_ABSTRACT_INPUTS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Test Proc Inputs</em>' class.
@@ -302,7 +412,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_INPUTS_FEATURE_COUNT = 1;
+	int GSS_TEST_PROC_INPUTS_FEATURE_COUNT = GSS_TEST_PROC_ABSTRACT_INPUTS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Test Proc Inputs</em>' class.
@@ -311,7 +421,7 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_PROC_INPUTS_OPERATION_COUNT = 0;
+	int GSS_TEST_PROC_INPUTS_OPERATION_COUNT = GSS_TEST_PROC_ABSTRACT_INPUTS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcOutputsImpl <em>GSS Test Proc Outputs</em>}' class.
@@ -321,7 +431,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcOutputs()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_OUTPUTS = 3;
+	int GSS_TEST_PROC_OUTPUTS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Checkmode</b></em>' attribute.
@@ -385,7 +495,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcSpecialPackets()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_SPECIAL_PACKETS = 4;
+	int GSS_TEST_PROC_SPECIAL_PACKETS = 6;
 
 	/**
 	 * The feature id for the '<em><b>Enable</b></em>' containment reference list.
@@ -449,7 +559,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcEnableDisable()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_ENABLE_DISABLE = 5;
+	int GSS_TEST_PROC_ENABLE_DISABLE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -486,7 +596,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcConcurrentSteps()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_CONCURRENT_STEPS = 6;
+	int GSS_TEST_PROC_CONCURRENT_STEPS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Next Step</b></em>' containment reference.
@@ -532,7 +642,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcNextStep()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_NEXT_STEP = 7;
+	int GSS_TEST_PROC_NEXT_STEP = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -578,7 +688,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcConcurrentStep()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_CONCURRENT_STEP = 8;
+	int GSS_TEST_PROC_CONCURRENT_STEP = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -615,7 +725,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcInput()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_INPUT = 9;
+	int GSS_TEST_PROC_INPUT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -679,7 +789,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcInputLevel3()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_INPUT_LEVEL3 = 10;
+	int GSS_TEST_PROC_INPUT_LEVEL3 = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -815,7 +925,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcInputLevel2()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_INPUT_LEVEL2 = 11;
+	int GSS_TEST_PROC_INPUT_LEVEL2 = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -933,7 +1043,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcInputLevel1()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_INPUT_LEVEL1 = 12;
+	int GSS_TEST_PROC_INPUT_LEVEL1 = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1033,7 +1143,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcInputLevel0()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_INPUT_LEVEL0 = 13;
+	int GSS_TEST_PROC_INPUT_LEVEL0 = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1115,7 +1225,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcOutput()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_OUTPUT = 14;
+	int GSS_TEST_PROC_OUTPUT = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1179,7 +1289,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcOutputLevel3()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL3 = 15;
+	int GSS_TEST_PROC_OUTPUT_LEVEL3 = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1342,7 +1452,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcOutputLevel2()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL2 = 16;
+	int GSS_TEST_PROC_OUTPUT_LEVEL2 = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1478,7 +1588,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcOutputLevel1()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL1 = 17;
+	int GSS_TEST_PROC_OUTPUT_LEVEL1 = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1587,7 +1697,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcOutputLevel0()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_OUTPUT_LEVEL0 = 18;
+	int GSS_TEST_PROC_OUTPUT_LEVEL0 = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1669,7 +1779,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcFilter()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_FILTER = 19;
+	int GSS_TEST_PROC_FILTER = 21;
 
 	/**
 	 * The feature id for the '<em><b>Apply def filter</b></em>' attribute.
@@ -1715,17 +1825,27 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcMode()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_MODE = 20;
+	int GSS_TEST_PROC_MODE = 22;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcUnit <em>GSS Test Proc Unit</em>}' enum.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcActionType <em>GSS Test Proc Action Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcUnit()
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcActionType
+	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcActionType()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_UNIT = 21;
+	int GSS_TEST_PROC_ACTION_TYPE = 23;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcTimeUnit <em>GSS Test Proc Time Unit</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcTimeUnit
+	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcTimeUnit()
+	 * @generated
+	 */
+	int GSS_TEST_PROC_TIME_UNIT = 24;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcCheckmode <em>GSS Test Proc Checkmode</em>}' enum.
@@ -1735,7 +1855,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcCheckmode()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_CHECKMODE = 22;
+	int GSS_TEST_PROC_CHECKMODE = 25;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcYesNo <em>GSS Test Proc Yes No</em>}' enum.
@@ -1745,7 +1865,7 @@ public interface test_procPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcYesNo()
 	 * @generated
 	 */
-	int GSS_TEST_PROC_YES_NO = 23;
+	int GSS_TEST_PROC_YES_NO = 26;
 
 
 	/**
@@ -1888,6 +2008,92 @@ public interface test_procPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGSSTestProcStep_Concurrent_steps();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAbstractInputs <em>GSS Test Proc Abstract Inputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Test Proc Abstract Inputs</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAbstractInputs
+	 * @generated
+	 */
+	EClass getGSSTestProcAbstractInputs();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAction <em>GSS Test Proc Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Test Proc Action</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAction
+	 * @generated
+	 */
+	EClass getGSSTestProcAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAction#getMessage <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Message</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAction#getMessage()
+	 * @see #getGSSTestProcAction()
+	 * @generated
+	 */
+	EAttribute getGSSTestProcAction_Message();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAction#getActionType <em>Action Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Action Type</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAction#getActionType()
+	 * @see #getGSSTestProcAction()
+	 * @generated
+	 */
+	EAttribute getGSSTestProcAction_ActionType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAction#getDelay_value <em>Delay value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Delay value</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAction#getDelay_value()
+	 * @see #getGSSTestProcAction()
+	 * @generated
+	 */
+	EAttribute getGSSTestProcAction_Delay_value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAction#getDelay_unit <em>Delay unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Delay unit</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAction#getDelay_unit()
+	 * @see #getGSSTestProcAction()
+	 * @generated
+	 */
+	EAttribute getGSSTestProcAction_Delay_unit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAction#getSpan_value <em>Span value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Span value</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAction#getSpan_value()
+	 * @see #getGSSTestProcAction()
+	 * @generated
+	 */
+	EAttribute getGSSTestProcAction_Span_value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAction#getSpan_unit <em>Span unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Span unit</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAction#getSpan_unit()
+	 * @see #getGSSTestProcAction()
+	 * @generated
+	 */
+	EAttribute getGSSTestProcAction_Span_unit();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInputs <em>GSS Test Proc Inputs</em>}'.
@@ -2861,14 +3067,24 @@ public interface test_procPackage extends EPackage {
 	EEnum getGSSTestProcMode();
 
 	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcUnit <em>GSS Test Proc Unit</em>}'.
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcActionType <em>GSS Test Proc Action Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>GSS Test Proc Unit</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
+	 * @return the meta object for enum '<em>GSS Test Proc Action Type</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcActionType
 	 * @generated
 	 */
-	EEnum getGSSTestProcUnit();
+	EEnum getGSSTestProcActionType();
+
+	/**
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcTimeUnit <em>GSS Test Proc Time Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>GSS Test Proc Time Unit</em>'.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcTimeUnit
+	 * @generated
+	 */
+	EEnum getGSSTestProcTimeUnit();
 
 	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcCheckmode <em>GSS Test Proc Checkmode</em>}'.
@@ -3020,6 +3236,74 @@ public interface test_procPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GSS_TEST_PROC_STEP__CONCURRENT_STEPS = eINSTANCE.getGSSTestProcStep_Concurrent_steps();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAbstractInputsImpl <em>GSS Test Proc Abstract Inputs</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcAbstractInputsImpl
+		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcAbstractInputs()
+		 * @generated
+		 */
+		EClass GSS_TEST_PROC_ABSTRACT_INPUTS = eINSTANCE.getGSSTestProcAbstractInputs();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcActionImpl <em>GSS Test Proc Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.test_proc.impl.GSSTestProcActionImpl
+		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcAction()
+		 * @generated
+		 */
+		EClass GSS_TEST_PROC_ACTION = eINSTANCE.getGSSTestProcAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Message</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TEST_PROC_ACTION__MESSAGE = eINSTANCE.getGSSTestProcAction_Message();
+
+		/**
+		 * The meta object literal for the '<em><b>Action Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TEST_PROC_ACTION__ACTION_TYPE = eINSTANCE.getGSSTestProcAction_ActionType();
+
+		/**
+		 * The meta object literal for the '<em><b>Delay value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TEST_PROC_ACTION__DELAY_VALUE = eINSTANCE.getGSSTestProcAction_Delay_value();
+
+		/**
+		 * The meta object literal for the '<em><b>Delay unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TEST_PROC_ACTION__DELAY_UNIT = eINSTANCE.getGSSTestProcAction_Delay_unit();
+
+		/**
+		 * The meta object literal for the '<em><b>Span value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TEST_PROC_ACTION__SPAN_VALUE = eINSTANCE.getGSSTestProcAction_Span_value();
+
+		/**
+		 * The meta object literal for the '<em><b>Span unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TEST_PROC_ACTION__SPAN_UNIT = eINSTANCE.getGSSTestProcAction_Span_unit();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.impl.GSSTestProcInputsImpl <em>GSS Test Proc Inputs</em>}' class.
@@ -3780,14 +4064,24 @@ public interface test_procPackage extends EPackage {
 		EEnum GSS_TEST_PROC_MODE = eINSTANCE.getGSSTestProcMode();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcUnit <em>GSS Test Proc Unit</em>}' enum.
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcActionType <em>GSS Test Proc Action Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcUnit()
+		 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcActionType
+		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcActionType()
 		 * @generated
 		 */
-		EEnum GSS_TEST_PROC_UNIT = eINSTANCE.getGSSTestProcUnit();
+		EEnum GSS_TEST_PROC_ACTION_TYPE = eINSTANCE.getGSSTestProcActionType();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcTimeUnit <em>GSS Test Proc Time Unit</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcTimeUnit
+		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcTimeUnit()
+		 * @generated
+		 */
+		EEnum GSS_TEST_PROC_TIME_UNIT = eINSTANCE.getGSSTestProcTimeUnit();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcCheckmode <em>GSS Test Proc Checkmode</em>}' enum.

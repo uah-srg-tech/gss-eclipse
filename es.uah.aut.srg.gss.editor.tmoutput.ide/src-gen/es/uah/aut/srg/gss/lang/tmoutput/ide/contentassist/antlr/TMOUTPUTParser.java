@@ -1,0 +1,108 @@
+/*******************************************************************************
+ * Copyright (c) 2019 UAH Space Research Group.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     SRG Team - Initial API and implementation
+ ******************************************************************************/
+package es.uah.aut.srg.gss.lang.tmoutput.ide.contentassist.antlr;
+
+import com.google.inject.Inject;
+import es.uah.aut.srg.gss.lang.tmoutput.ide.contentassist.antlr.internal.InternalTMOUTPUTParser;
+import es.uah.aut.srg.gss.lang.tmoutput.services.TMOUTPUTGrammarAccess;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import org.antlr.runtime.RecognitionException;
+import org.eclipse.xtext.AbstractElement;
+import org.eclipse.xtext.ide.editor.contentassist.antlr.AbstractContentAssistParser;
+import org.eclipse.xtext.ide.editor.contentassist.antlr.FollowElement;
+import org.eclipse.xtext.ide.editor.contentassist.antlr.internal.AbstractInternalContentAssistParser;
+
+public class TMOUTPUTParser extends AbstractContentAssistParser {
+
+	@Inject
+	private TMOUTPUTGrammarAccess grammarAccess;
+
+	private Map<AbstractElement, String> nameMappings;
+
+	@Override
+	protected InternalTMOUTPUTParser createParser() {
+		InternalTMOUTPUTParser result = new InternalTMOUTPUTParser(null);
+		result.setGrammarAccess(grammarAccess);
+		return result;
+	}
+
+	@Override
+	protected String getRuleName(AbstractElement element) {
+		if (nameMappings == null) {
+			nameMappings = new HashMap<AbstractElement, String>() {
+				private static final long serialVersionUID = 1L;
+				{
+					put(grammarAccess.getGSSTMOutputAccess().getGroup(), "rule__GSSTMOutput__Group__0");
+					put(grammarAccess.getGSSTMOutputAccess().getGroup_7(), "rule__GSSTMOutput__Group_7__0");
+					put(grammarAccess.getGSSTMOutputAccess().getGroup_11(), "rule__GSSTMOutput__Group_11__0");
+					put(grammarAccess.getGSSTMOutputAccess().getGroup_12(), "rule__GSSTMOutput__Group_12__0");
+					put(grammarAccess.getGSSTMOutputAccess().getGroup_13(), "rule__GSSTMOutput__Group_13__0");
+					put(grammarAccess.getGSSTMOutputAccess().getGroup_14(), "rule__GSSTMOutput__Group_14__0");
+					put(grammarAccess.getGSSTMOutputAccess().getGroup_15(), "rule__GSSTMOutput__Group_15__0");
+					put(grammarAccess.getGSSTMOutputAccess().getGroup_16(), "rule__GSSTMOutput__Group_16__0");
+					put(grammarAccess.getGSSTMOutputAccess().getGroup_17(), "rule__GSSTMOutput__Group_17__0");
+					put(grammarAccess.getGSSTMOutputAccess().getGroup_18(), "rule__GSSTMOutput__Group_18__0");
+					put(grammarAccess.getGSSTMOutputAccess().getGroup_19(), "rule__GSSTMOutput__Group_19__0");
+					put(grammarAccess.getGSSTMOutputAccess().getGroup_20(), "rule__GSSTMOutput__Group_20__0");
+					put(grammarAccess.getGSSTMOutputAccess().getGroup_21(), "rule__GSSTMOutput__Group_21__0");
+					put(grammarAccess.getGSSTMOutputAccess().getGroup_22(), "rule__GSSTMOutput__Group_22__0");
+					put(grammarAccess.getGSSTMOutputFieldAccess().getGroup(), "rule__GSSTMOutputField__Group__0");
+					put(grammarAccess.getGSSTMOutputAccess().getNameAssignment_2(), "rule__GSSTMOutput__NameAssignment_2");
+					put(grammarAccess.getGSSTMOutputAccess().getTypeAssignment_4(), "rule__GSSTMOutput__TypeAssignment_4");
+					put(grammarAccess.getGSSTMOutputAccess().getSubtypeAssignment_6(), "rule__GSSTMOutput__SubtypeAssignment_6");
+					put(grammarAccess.getGSSTMOutputAccess().getPi1_valAssignment_7_1(), "rule__GSSTMOutput__Pi1_valAssignment_7_1");
+					put(grammarAccess.getGSSTMOutputAccess().getLevelsAssignment_9(), "rule__GSSTMOutput__LevelsAssignment_9");
+					put(grammarAccess.getGSSTMOutputAccess().getLevel3_formatAssignment_11_2(), "rule__GSSTMOutput__Level3_formatAssignment_11_2");
+					put(grammarAccess.getGSSTMOutputAccess().getLevel3_filterAssignment_12_2(), "rule__GSSTMOutput__Level3_filterAssignment_12_2");
+					put(grammarAccess.getGSSTMOutputAccess().getFrom_level2_importAssignment_13_2(), "rule__GSSTMOutput__From_level2_importAssignment_13_2");
+					put(grammarAccess.getGSSTMOutputAccess().getLevel2_formatAssignment_14_2(), "rule__GSSTMOutput__Level2_formatAssignment_14_2");
+					put(grammarAccess.getGSSTMOutputAccess().getLevel2_filterAssignment_15_2(), "rule__GSSTMOutput__Level2_filterAssignment_15_2");
+					put(grammarAccess.getGSSTMOutputAccess().getFrom_level1_importAssignment_16_2(), "rule__GSSTMOutput__From_level1_importAssignment_16_2");
+					put(grammarAccess.getGSSTMOutputAccess().getLevel1_formatAssignment_17_2(), "rule__GSSTMOutput__Level1_formatAssignment_17_2");
+					put(grammarAccess.getGSSTMOutputAccess().getLevel1_filterAssignment_18_2(), "rule__GSSTMOutput__Level1_filterAssignment_18_2");
+					put(grammarAccess.getGSSTMOutputAccess().getFrom_level0_importAssignment_19_2(), "rule__GSSTMOutput__From_level0_importAssignment_19_2");
+					put(grammarAccess.getGSSTMOutputAccess().getLevel0_formatAssignment_20_2(), "rule__GSSTMOutput__Level0_formatAssignment_20_2");
+					put(grammarAccess.getGSSTMOutputAccess().getLevel0_filterAssignment_21_2(), "rule__GSSTMOutput__Level0_filterAssignment_21_2");
+					put(grammarAccess.getGSSTMOutputAccess().getGssFieldsAssignment_22_1(), "rule__GSSTMOutput__GssFieldsAssignment_22_1");
+					put(grammarAccess.getGSSTMOutputFieldAccess().getNameAssignment_2(), "rule__GSSTMOutputField__NameAssignment_2");
+					put(grammarAccess.getGSSTMOutputFieldAccess().getGssFieldAssignment_4(), "rule__GSSTMOutputField__GssFieldAssignment_4");
+				}
+			};
+		}
+		return nameMappings.get(element);
+	}
+
+	@Override
+	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
+		try {
+			InternalTMOUTPUTParser typedParser = (InternalTMOUTPUTParser) parser;
+			typedParser.entryRuleGSSTMOutput();
+			return typedParser.getFollowElements();
+		} catch(RecognitionException ex) {
+			throw new RuntimeException(ex);
+		}
+	}
+
+	@Override
+	protected String[] getInitialHiddenTokens() {
+		return new String[] { "RULE_WS", "RULE_ML_COMMENT", "RULE_SL_COMMENT" };
+	}
+
+	public TMOUTPUTGrammarAccess getGrammarAccess() {
+		return this.grammarAccess;
+	}
+
+	public void setGrammarAccess(TMOUTPUTGrammarAccess grammarAccess) {
+		this.grammarAccess = grammarAccess;
+	}
+}

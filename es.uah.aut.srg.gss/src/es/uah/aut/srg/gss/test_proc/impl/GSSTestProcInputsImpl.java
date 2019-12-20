@@ -22,9 +22,6 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -41,7 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class GSSTestProcInputsImpl extends MinimalEObjectImpl.Container implements GSSTestProcInputs {
+public class GSSTestProcInputsImpl extends GSSTestProcAbstractInputsImpl implements GSSTestProcInputs {
 	/**
 	 * The cached value of the '{@link #getInput() <em>Input</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -51,7 +48,6 @@ public class GSSTestProcInputsImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected EList<GSSTestProcInput> input;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

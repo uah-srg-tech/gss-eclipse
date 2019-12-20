@@ -229,7 +229,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cReplaysINTEGERParserRuleCall_15_2_0 = (RuleCall)cReplaysAssignment_15_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_15_3 = (Keyword)cGroup_15.eContents().get(3);
 		private final Assignment cInputsAssignment_16 = (Assignment)cGroup.eContents().get(16);
-		private final RuleCall cInputsGSSTestProcInputsParserRuleCall_16_0 = (RuleCall)cInputsAssignment_16.eContents().get(0);
+		private final RuleCall cInputsGSSTestProcAbstractInputsParserRuleCall_16_0 = (RuleCall)cInputsAssignment_16.eContents().get(0);
 		private final Assignment cOutputsAssignment_17 = (Assignment)cGroup.eContents().get(17);
 		private final RuleCall cOutputsGSSTestProcOutputsParserRuleCall_17_0 = (RuleCall)cOutputsAssignment_17.eContents().get(0);
 		private final Assignment cSpecialPacketsAssignment_18 = (Assignment)cGroup.eContents().get(18);
@@ -247,7 +247,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//	'output_idref_from_prev_step' ':=' output_idref_from_prev_step=[GSSTestProcOutput|VersionedQualifiedReferenceName]
 		//	';')?
 		//	'mode' ':=' mode=GSSTestProcMode ';' ('replays' ':=' replays=INTEGER ';')?
-		//	inputs=GSSTestProcInputs
+		//	inputs=GSSTestProcAbstractInputs
 		//	outputs=GSSTestProcOutputs?
 		//	specialPackets=GSSTestProcSpecialPackets?
 		//	concurrent_steps=GSSTestProcConcurrentSteps?
@@ -257,7 +257,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//'GSSTestProcStep' '{' 'name' ':=' name=ID ';' 'id' ':=' id=INTEGER ';' ('prev_step_idref' ':='
 		//prev_step_idref=[GSSTestProcStep|VersionedQualifiedReferenceName] ';' 'output_idref_from_prev_step' ':='
 		//output_idref_from_prev_step=[GSSTestProcOutput|VersionedQualifiedReferenceName] ';')? 'mode' ':=' mode=GSSTestProcMode
-		//';' ('replays' ':=' replays=INTEGER ';')? inputs=GSSTestProcInputs outputs=GSSTestProcOutputs?
+		//';' ('replays' ':=' replays=INTEGER ';')? inputs=GSSTestProcAbstractInputs outputs=GSSTestProcOutputs?
 		//specialPackets=GSSTestProcSpecialPackets? concurrent_steps=GSSTestProcConcurrentSteps? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
@@ -371,11 +371,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_15_3() { return cSemicolonKeyword_15_3; }
 		
-		//inputs=GSSTestProcInputs
+		//inputs=GSSTestProcAbstractInputs
 		public Assignment getInputsAssignment_16() { return cInputsAssignment_16; }
 		
-		//GSSTestProcInputs
-		public RuleCall getInputsGSSTestProcInputsParserRuleCall_16_0() { return cInputsGSSTestProcInputsParserRuleCall_16_0; }
+		//GSSTestProcAbstractInputs
+		public RuleCall getInputsGSSTestProcAbstractInputsParserRuleCall_16_0() { return cInputsGSSTestProcAbstractInputsParserRuleCall_16_0; }
 		
 		//outputs=GSSTestProcOutputs?
 		public Assignment getOutputsAssignment_17() { return cOutputsAssignment_17; }
@@ -400,6 +400,181 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//';'
 		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
+	}
+	public class GSSTestProcAbstractInputsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcAbstractInputs");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cGSSTestProcInputsParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGSSTestProcActionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//GSSTestProcAbstractInputs:
+		//	GSSTestProcInputs | GSSTestProcAction;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//GSSTestProcInputs | GSSTestProcAction
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//GSSTestProcInputs
+		public RuleCall getGSSTestProcInputsParserRuleCall_0() { return cGSSTestProcInputsParserRuleCall_0; }
+		
+		//GSSTestProcAction
+		public RuleCall getGSSTestProcActionParserRuleCall_1() { return cGSSTestProcActionParserRuleCall_1; }
+	}
+	public class GSSTestProcActionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcAction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cGSSTestProcActionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cMessageKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cMessageAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cMessageSTRINGTerminalRuleCall_4_0 = (RuleCall)cMessageAssignment_4.eContents().get(0);
+		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cActionTypeKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cColonEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cActionTypeAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cActionTypeGSSTestProcActionTypeEnumRuleCall_8_0 = (RuleCall)cActionTypeAssignment_8.eContents().get(0);
+		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Keyword cDelay_valueKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cDelay_valueAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cDelay_valueINTEGERParserRuleCall_12_0 = (RuleCall)cDelay_valueAssignment_12.eContents().get(0);
+		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Keyword cDelay_unitKeyword_14 = (Keyword)cGroup.eContents().get(14);
+		private final Keyword cColonEqualsSignKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Assignment cDelay_unitAssignment_16 = (Assignment)cGroup.eContents().get(16);
+		private final RuleCall cDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0 = (RuleCall)cDelay_unitAssignment_16.eContents().get(0);
+		private final Keyword cSemicolonKeyword_17 = (Keyword)cGroup.eContents().get(17);
+		private final Keyword cSpan_valueKeyword_18 = (Keyword)cGroup.eContents().get(18);
+		private final Keyword cColonEqualsSignKeyword_19 = (Keyword)cGroup.eContents().get(19);
+		private final Assignment cSpan_valueAssignment_20 = (Assignment)cGroup.eContents().get(20);
+		private final RuleCall cSpan_valueINTEGERParserRuleCall_20_0 = (RuleCall)cSpan_valueAssignment_20.eContents().get(0);
+		private final Keyword cSemicolonKeyword_21 = (Keyword)cGroup.eContents().get(21);
+		private final Keyword cSpan_unitKeyword_22 = (Keyword)cGroup.eContents().get(22);
+		private final Keyword cColonEqualsSignKeyword_23 = (Keyword)cGroup.eContents().get(23);
+		private final Assignment cSpan_unitAssignment_24 = (Assignment)cGroup.eContents().get(24);
+		private final RuleCall cSpan_unitGSSTestProcTimeUnitEnumRuleCall_24_0 = (RuleCall)cSpan_unitAssignment_24.eContents().get(0);
+		private final Keyword cSemicolonKeyword_25 = (Keyword)cGroup.eContents().get(25);
+		private final Keyword cRightCurlyBracketKeyword_26 = (Keyword)cGroup.eContents().get(26);
+		private final Keyword cSemicolonKeyword_27 = (Keyword)cGroup.eContents().get(27);
+		
+		//GSSTestProcAction:
+		//	'GSSTestProcAction' '{'
+		//	'message' ':=' message=STRING ';'
+		//	'actionType' ':=' actionType=GSSTestProcActionType ';'
+		//	'delay_value' ':=' delay_value=INTEGER ';'
+		//	'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';'
+		//	'span_value' ':=' span_value=INTEGER ';'
+		//	'span_unit' ':=' span_unit=GSSTestProcTimeUnit ';'
+		//	'}' ';';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'GSSTestProcAction' '{' 'message' ':=' message=STRING ';' 'actionType' ':=' actionType=GSSTestProcActionType ';'
+		//'delay_value' ':=' delay_value=INTEGER ';' 'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';' 'span_value' ':='
+		//span_value=INTEGER ';' 'span_unit' ':=' span_unit=GSSTestProcTimeUnit ';' '}' ';'
+		public Group getGroup() { return cGroup; }
+		
+		//'GSSTestProcAction'
+		public Keyword getGSSTestProcActionKeyword_0() { return cGSSTestProcActionKeyword_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//'message'
+		public Keyword getMessageKeyword_2() { return cMessageKeyword_2; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
+		
+		//message=STRING
+		public Assignment getMessageAssignment_4() { return cMessageAssignment_4; }
+		
+		//STRING
+		public RuleCall getMessageSTRINGTerminalRuleCall_4_0() { return cMessageSTRINGTerminalRuleCall_4_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		
+		//'actionType'
+		public Keyword getActionTypeKeyword_6() { return cActionTypeKeyword_6; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_7() { return cColonEqualsSignKeyword_7; }
+		
+		//actionType=GSSTestProcActionType
+		public Assignment getActionTypeAssignment_8() { return cActionTypeAssignment_8; }
+		
+		//GSSTestProcActionType
+		public RuleCall getActionTypeGSSTestProcActionTypeEnumRuleCall_8_0() { return cActionTypeGSSTestProcActionTypeEnumRuleCall_8_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
+		
+		//'delay_value'
+		public Keyword getDelay_valueKeyword_10() { return cDelay_valueKeyword_10; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
+		
+		//delay_value=INTEGER
+		public Assignment getDelay_valueAssignment_12() { return cDelay_valueAssignment_12; }
+		
+		//INTEGER
+		public RuleCall getDelay_valueINTEGERParserRuleCall_12_0() { return cDelay_valueINTEGERParserRuleCall_12_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
+		
+		//'delay_unit'
+		public Keyword getDelay_unitKeyword_14() { return cDelay_unitKeyword_14; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_15() { return cColonEqualsSignKeyword_15; }
+		
+		//delay_unit=GSSTestProcTimeUnit
+		public Assignment getDelay_unitAssignment_16() { return cDelay_unitAssignment_16; }
+		
+		//GSSTestProcTimeUnit
+		public RuleCall getDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0() { return cDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_17() { return cSemicolonKeyword_17; }
+		
+		//'span_value'
+		public Keyword getSpan_valueKeyword_18() { return cSpan_valueKeyword_18; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_19() { return cColonEqualsSignKeyword_19; }
+		
+		//span_value=INTEGER
+		public Assignment getSpan_valueAssignment_20() { return cSpan_valueAssignment_20; }
+		
+		//INTEGER
+		public RuleCall getSpan_valueINTEGERParserRuleCall_20_0() { return cSpan_valueINTEGERParserRuleCall_20_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
+		
+		//'span_unit'
+		public Keyword getSpan_unitKeyword_22() { return cSpan_unitKeyword_22; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_23() { return cColonEqualsSignKeyword_23; }
+		
+		//span_unit=GSSTestProcTimeUnit
+		public Assignment getSpan_unitAssignment_24() { return cSpan_unitAssignment_24; }
+		
+		//GSSTestProcTimeUnit
+		public RuleCall getSpan_unitGSSTestProcTimeUnitEnumRuleCall_24_0() { return cSpan_unitGSSTestProcTimeUnitEnumRuleCall_24_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_25() { return cSemicolonKeyword_25; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_26() { return cRightCurlyBracketKeyword_26; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_27() { return cSemicolonKeyword_27; }
 	}
 	public class GSSTestProcInputsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcInputs");
@@ -461,7 +636,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cValid_time_interval_unitKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cColonEqualsSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Assignment cValid_time_interval_unitAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cValid_time_interval_unitGSSTestProcUnitEnumRuleCall_12_0 = (RuleCall)cValid_time_interval_unitAssignment_12.eContents().get(0);
+		private final RuleCall cValid_time_interval_unitGSSTestProcTimeUnitEnumRuleCall_12_0 = (RuleCall)cValid_time_interval_unitAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Assignment cOutputAssignment_14 = (Assignment)cGroup.eContents().get(14);
 		private final RuleCall cOutputGSSTestProcOutputParserRuleCall_14_0 = (RuleCall)cOutputAssignment_14.eContents().get(0);
@@ -472,13 +647,13 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSTestProcOutputs' '{'
 		//	'checkmode' ':=' checkmode=GSSTestProcCheckmode ';'
 		//	'valid_time_interval_value' ':=' valid_time_interval_value=INTEGER ';'
-		//	'valid_time_interval_unit' ':=' valid_time_interval_unit=GSSTestProcUnit ';'
+		//	'valid_time_interval_unit' ':=' valid_time_interval_unit=GSSTestProcTimeUnit ';'
 		//	output+=GSSTestProcOutput+
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTestProcOutputs' '{' 'checkmode' ':=' checkmode=GSSTestProcCheckmode ';' 'valid_time_interval_value' ':='
-		//valid_time_interval_value=INTEGER ';' 'valid_time_interval_unit' ':=' valid_time_interval_unit=GSSTestProcUnit ';'
+		//valid_time_interval_value=INTEGER ';' 'valid_time_interval_unit' ':=' valid_time_interval_unit=GSSTestProcTimeUnit ';'
 		//output+=GSSTestProcOutput+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
@@ -524,11 +699,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_11() { return cColonEqualsSignKeyword_11; }
 		
-		//valid_time_interval_unit=GSSTestProcUnit
+		//valid_time_interval_unit=GSSTestProcTimeUnit
 		public Assignment getValid_time_interval_unitAssignment_12() { return cValid_time_interval_unitAssignment_12; }
 		
-		//GSSTestProcUnit
-		public RuleCall getValid_time_interval_unitGSSTestProcUnitEnumRuleCall_12_0() { return cValid_time_interval_unitGSSTestProcUnitEnumRuleCall_12_0; }
+		//GSSTestProcTimeUnit
+		public RuleCall getValid_time_interval_unitGSSTestProcTimeUnitEnumRuleCall_12_0() { return cValid_time_interval_unitGSSTestProcTimeUnitEnumRuleCall_12_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
@@ -727,7 +902,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDelay_unitKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cColonEqualsSignKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Assignment cDelay_unitAssignment_16 = (Assignment)cGroup.eContents().get(16);
-		private final RuleCall cDelay_unitGSSTestProcUnitEnumRuleCall_16_0 = (RuleCall)cDelay_unitAssignment_16.eContents().get(0);
+		private final RuleCall cDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0 = (RuleCall)cDelay_unitAssignment_16.eContents().get(0);
 		private final Keyword cSemicolonKeyword_17 = (Keyword)cGroup.eContents().get(17);
 		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
 		private final Keyword cLevel3Keyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
@@ -792,7 +967,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//	'name' ':=' name=ID ';'
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'delay_value' ':=' delay_value=INTEGER ';'
-		//	'delay_unit' ':=' delay_unit=GSSTestProcUnit ';' ('level3' ':='
+		//	'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';' ('level3' ':='
 		//	level3=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		//	'app_to_level3' ':=' app_to_level3=[export::GSSExportExport|VersionedQualifiedName] ';' ('level2' ':='
 		//	level2=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level3_to_level2' ':='
@@ -805,7 +980,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTestProcInputLevel3' '{' 'name' ':=' name=ID ';' 'ifRef' ':=' ifRef=INTEGER ';' 'delay_value' ':='
-		//delay_value=INTEGER ';' 'delay_unit' ':=' delay_unit=GSSTestProcUnit ';' ('level3' ':='
+		//delay_value=INTEGER ';' 'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';' ('level3' ':='
 		//level3=[format::GSSFormatFormat|VersionedQualifiedName] ';')? 'app_to_level3' ':='
 		//app_to_level3=[export::GSSExportExport|VersionedQualifiedName] ';' ('level2' ':='
 		//level2=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level3_to_level2' ':='
@@ -873,11 +1048,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_15() { return cColonEqualsSignKeyword_15; }
 		
-		//delay_unit=GSSTestProcUnit
+		//delay_unit=GSSTestProcTimeUnit
 		public Assignment getDelay_unitAssignment_16() { return cDelay_unitAssignment_16; }
 		
-		//GSSTestProcUnit
-		public RuleCall getDelay_unitGSSTestProcUnitEnumRuleCall_16_0() { return cDelay_unitGSSTestProcUnitEnumRuleCall_16_0; }
+		//GSSTestProcTimeUnit
+		public RuleCall getDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0() { return cDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_17() { return cSemicolonKeyword_17; }
@@ -1076,7 +1251,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDelay_unitKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cColonEqualsSignKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Assignment cDelay_unitAssignment_16 = (Assignment)cGroup.eContents().get(16);
-		private final RuleCall cDelay_unitGSSTestProcUnitEnumRuleCall_16_0 = (RuleCall)cDelay_unitAssignment_16.eContents().get(0);
+		private final RuleCall cDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0 = (RuleCall)cDelay_unitAssignment_16.eContents().get(0);
 		private final Keyword cSemicolonKeyword_17 = (Keyword)cGroup.eContents().get(17);
 		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
 		private final Keyword cLevel2Keyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
@@ -1127,7 +1302,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//	'name' ':=' name=ID ';'
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'delay_value' ':=' delay_value=INTEGER ';'
-		//	'delay_unit' ':=' delay_unit=GSSTestProcUnit ';' ('level2' ':='
+		//	'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';' ('level2' ':='
 		//	level2=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		//	'app_to_level2' ':=' app_to_level2=[export::GSSExportExport|VersionedQualifiedName] ';' ('level1' ':='
 		//	level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
@@ -1138,7 +1313,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTestProcInputLevel2' '{' 'name' ':=' name=ID ';' 'ifRef' ':=' ifRef=INTEGER ';' 'delay_value' ':='
-		//delay_value=INTEGER ';' 'delay_unit' ':=' delay_unit=GSSTestProcUnit ';' ('level2' ':='
+		//delay_value=INTEGER ';' 'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';' ('level2' ':='
 		//level2=[format::GSSFormatFormat|VersionedQualifiedName] ';')? 'app_to_level2' ':='
 		//app_to_level2=[export::GSSExportExport|VersionedQualifiedName] ';' ('level1' ':='
 		//level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
@@ -1204,11 +1379,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_15() { return cColonEqualsSignKeyword_15; }
 		
-		//delay_unit=GSSTestProcUnit
+		//delay_unit=GSSTestProcTimeUnit
 		public Assignment getDelay_unitAssignment_16() { return cDelay_unitAssignment_16; }
 		
-		//GSSTestProcUnit
-		public RuleCall getDelay_unitGSSTestProcUnitEnumRuleCall_16_0() { return cDelay_unitGSSTestProcUnitEnumRuleCall_16_0; }
+		//GSSTestProcTimeUnit
+		public RuleCall getDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0() { return cDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_17() { return cSemicolonKeyword_17; }
@@ -1365,7 +1540,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDelay_unitKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cColonEqualsSignKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Assignment cDelay_unitAssignment_16 = (Assignment)cGroup.eContents().get(16);
-		private final RuleCall cDelay_unitGSSTestProcUnitEnumRuleCall_16_0 = (RuleCall)cDelay_unitAssignment_16.eContents().get(0);
+		private final RuleCall cDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0 = (RuleCall)cDelay_unitAssignment_16.eContents().get(0);
 		private final Keyword cSemicolonKeyword_17 = (Keyword)cGroup.eContents().get(17);
 		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
 		private final Keyword cLevel1Keyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
@@ -1402,7 +1577,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//	'name' ':=' name=ID ';'
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'delay_value' ':=' delay_value=INTEGER ';'
-		//	'delay_unit' ':=' delay_unit=GSSTestProcUnit ';' ('level1' ':='
+		//	'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';' ('level1' ':='
 		//	level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		//	'app_to_level1' ':=' app_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';' ('level0' ':='
 		//	level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
@@ -1411,7 +1586,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTestProcInputLevel1' '{' 'name' ':=' name=ID ';' 'ifRef' ':=' ifRef=INTEGER ';' 'delay_value' ':='
-		//delay_value=INTEGER ';' 'delay_unit' ':=' delay_unit=GSSTestProcUnit ';' ('level1' ':='
+		//delay_value=INTEGER ';' 'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';' ('level1' ':='
 		//level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')? 'app_to_level1' ':='
 		//app_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';' ('level0' ':='
 		//level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
@@ -1475,11 +1650,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_15() { return cColonEqualsSignKeyword_15; }
 		
-		//delay_unit=GSSTestProcUnit
+		//delay_unit=GSSTestProcTimeUnit
 		public Assignment getDelay_unitAssignment_16() { return cDelay_unitAssignment_16; }
 		
-		//GSSTestProcUnit
-		public RuleCall getDelay_unitGSSTestProcUnitEnumRuleCall_16_0() { return cDelay_unitGSSTestProcUnitEnumRuleCall_16_0; }
+		//GSSTestProcTimeUnit
+		public RuleCall getDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0() { return cDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_17() { return cSemicolonKeyword_17; }
@@ -1594,7 +1769,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDelay_unitKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cColonEqualsSignKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Assignment cDelay_unitAssignment_16 = (Assignment)cGroup.eContents().get(16);
-		private final RuleCall cDelay_unitGSSTestProcUnitEnumRuleCall_16_0 = (RuleCall)cDelay_unitAssignment_16.eContents().get(0);
+		private final RuleCall cDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0 = (RuleCall)cDelay_unitAssignment_16.eContents().get(0);
 		private final Keyword cSemicolonKeyword_17 = (Keyword)cGroup.eContents().get(17);
 		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
 		private final Keyword cLevel0Keyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
@@ -1617,14 +1792,14 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//	'name' ':=' name=ID ';'
 		//	'ifRef' ':=' ifRef=INTEGER ';'
 		//	'delay_value' ':=' delay_value=INTEGER ';'
-		//	'delay_unit' ':=' delay_unit=GSSTestProcUnit ';' ('level0' ':='
+		//	'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';' ('level0' ':='
 		//	level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		//	'app_to_level0' ':=' app_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSTestProcInputLevel0' '{' 'name' ':=' name=ID ';' 'ifRef' ':=' ifRef=INTEGER ';' 'delay_value' ':='
-		//delay_value=INTEGER ';' 'delay_unit' ':=' delay_unit=GSSTestProcUnit ';' ('level0' ':='
+		//delay_value=INTEGER ';' 'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';' ('level0' ':='
 		//level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')? 'app_to_level0' ':='
 		//app_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';' '}' ';'
 		public Group getGroup() { return cGroup; }
@@ -1686,11 +1861,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_15() { return cColonEqualsSignKeyword_15; }
 		
-		//delay_unit=GSSTestProcUnit
+		//delay_unit=GSSTestProcTimeUnit
 		public Assignment getDelay_unitAssignment_16() { return cDelay_unitAssignment_16; }
 		
-		//GSSTestProcUnit
-		public RuleCall getDelay_unitGSSTestProcUnitEnumRuleCall_16_0() { return cDelay_unitGSSTestProcUnitEnumRuleCall_16_0; }
+		//GSSTestProcTimeUnit
+		public RuleCall getDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0() { return cDelay_unitGSSTestProcTimeUnitEnumRuleCall_16_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_17() { return cSemicolonKeyword_17; }
@@ -3553,16 +3728,18 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cContinuousEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cContinuousContinuousKeyword_0_0 = (Keyword)cContinuousEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cActionEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cActionActionKeyword_1_0 = (Keyword)cActionEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cManualEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cManualManualKeyword_1_0 = (Keyword)cManualEnumLiteralDeclaration_1.eContents().get(0);
 		private final EnumLiteralDeclaration cConcurrentEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
 		private final Keyword cConcurrentConcurrentKeyword_2_0 = (Keyword)cConcurrentEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cActionEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cActionActionKeyword_3_0 = (Keyword)cActionEnumLiteralDeclaration_3.eContents().get(0);
 		
 		//enum GSSTestProcMode:
-		//	continuous | action | concurrent;
+		//	continuous | manual | concurrent | action;
 		public EnumRule getRule() { return rule; }
 		
-		//continuous | action | concurrent
+		//continuous | manual | concurrent | action
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//continuous
@@ -3571,27 +3748,60 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//'continuous'
 		public Keyword getContinuousContinuousKeyword_0_0() { return cContinuousContinuousKeyword_0_0; }
 		
-		//action
-		public EnumLiteralDeclaration getActionEnumLiteralDeclaration_1() { return cActionEnumLiteralDeclaration_1; }
+		//manual
+		public EnumLiteralDeclaration getManualEnumLiteralDeclaration_1() { return cManualEnumLiteralDeclaration_1; }
 		
-		//'action'
-		public Keyword getActionActionKeyword_1_0() { return cActionActionKeyword_1_0; }
+		//'manual'
+		public Keyword getManualManualKeyword_1_0() { return cManualManualKeyword_1_0; }
 		
 		//concurrent
 		public EnumLiteralDeclaration getConcurrentEnumLiteralDeclaration_2() { return cConcurrentEnumLiteralDeclaration_2; }
 		
 		//'concurrent'
 		public Keyword getConcurrentConcurrentKeyword_2_0() { return cConcurrentConcurrentKeyword_2_0; }
+		
+		//action
+		public EnumLiteralDeclaration getActionEnumLiteralDeclaration_3() { return cActionEnumLiteralDeclaration_3; }
+		
+		//'action'
+		public Keyword getActionActionKeyword_3_0() { return cActionActionKeyword_3_0; }
 	}
-	public class GSSTestProcUnitElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcUnit");
+	public class GSSTestProcActionTypeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcActionType");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cCheckingEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cCheckingCheckingKeyword_0_0 = (Keyword)cCheckingEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cInstructionEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cInstructionInstructionKeyword_1_0 = (Keyword)cInstructionEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum GSSTestProcActionType:
+		//	checking | instruction;
+		public EnumRule getRule() { return rule; }
+		
+		//checking | instruction
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//checking
+		public EnumLiteralDeclaration getCheckingEnumLiteralDeclaration_0() { return cCheckingEnumLiteralDeclaration_0; }
+		
+		//'checking'
+		public Keyword getCheckingCheckingKeyword_0_0() { return cCheckingCheckingKeyword_0_0; }
+		
+		//instruction
+		public EnumLiteralDeclaration getInstructionEnumLiteralDeclaration_1() { return cInstructionEnumLiteralDeclaration_1; }
+		
+		//'instruction'
+		public Keyword getInstructionInstructionKeyword_1_0() { return cInstructionInstructionKeyword_1_0; }
+	}
+	public class GSSTestProcTimeUnitElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcTimeUnit");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cMilisecondsEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cMilisecondsMilisecondsKeyword_0_0 = (Keyword)cMilisecondsEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cSecondsEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cSecondsSecondsKeyword_1_0 = (Keyword)cSecondsEnumLiteralDeclaration_1.eContents().get(0);
 		
-		//enum GSSTestProcUnit:
+		//enum GSSTestProcTimeUnit:
 		//	miliseconds | seconds;
 		public EnumRule getRule() { return rule; }
 		
@@ -3678,7 +3888,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSTestProcTestProcElements pGSSTestProcTestProc;
 	private final GSSTestProcStepElements pGSSTestProcStep;
 	private final GSSTestProcModeElements eGSSTestProcMode;
+	private final GSSTestProcAbstractInputsElements pGSSTestProcAbstractInputs;
+	private final GSSTestProcActionElements pGSSTestProcAction;
+	private final GSSTestProcActionTypeElements eGSSTestProcActionType;
 	private final GSSTestProcInputsElements pGSSTestProcInputs;
+	private final GSSTestProcTimeUnitElements eGSSTestProcTimeUnit;
 	private final GSSTestProcOutputsElements pGSSTestProcOutputs;
 	private final GSSTestProcSpecialPacketsElements pGSSTestProcSpecialPackets;
 	private final GSSTestProcConcurrentStepsElements pGSSTestProcConcurrentSteps;
@@ -3687,7 +3901,6 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSTestProcInputLevel2Elements pGSSTestProcInputLevel2;
 	private final GSSTestProcInputLevel1Elements pGSSTestProcInputLevel1;
 	private final GSSTestProcInputLevel0Elements pGSSTestProcInputLevel0;
-	private final GSSTestProcUnitElements eGSSTestProcUnit;
 	private final GSSTestProcCheckmodeElements eGSSTestProcCheckmode;
 	private final GSSTestProcOutputElements pGSSTestProcOutput;
 	private final GSSTestProcOutputLevel3Elements pGSSTestProcOutputLevel3;
@@ -3726,7 +3939,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGSSTestProcTestProc = new GSSTestProcTestProcElements();
 		this.pGSSTestProcStep = new GSSTestProcStepElements();
 		this.eGSSTestProcMode = new GSSTestProcModeElements();
+		this.pGSSTestProcAbstractInputs = new GSSTestProcAbstractInputsElements();
+		this.pGSSTestProcAction = new GSSTestProcActionElements();
+		this.eGSSTestProcActionType = new GSSTestProcActionTypeElements();
 		this.pGSSTestProcInputs = new GSSTestProcInputsElements();
+		this.eGSSTestProcTimeUnit = new GSSTestProcTimeUnitElements();
 		this.pGSSTestProcOutputs = new GSSTestProcOutputsElements();
 		this.pGSSTestProcSpecialPackets = new GSSTestProcSpecialPacketsElements();
 		this.pGSSTestProcConcurrentSteps = new GSSTestProcConcurrentStepsElements();
@@ -3735,7 +3952,6 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGSSTestProcInputLevel2 = new GSSTestProcInputLevel2Elements();
 		this.pGSSTestProcInputLevel1 = new GSSTestProcInputLevel1Elements();
 		this.pGSSTestProcInputLevel0 = new GSSTestProcInputLevel0Elements();
-		this.eGSSTestProcUnit = new GSSTestProcUnitElements();
 		this.eGSSTestProcCheckmode = new GSSTestProcCheckmodeElements();
 		this.pGSSTestProcOutput = new GSSTestProcOutputElements();
 		this.pGSSTestProcOutputLevel3 = new GSSTestProcOutputLevel3Elements();
@@ -3830,7 +4046,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	//	'output_idref_from_prev_step' ':=' output_idref_from_prev_step=[GSSTestProcOutput|VersionedQualifiedReferenceName]
 	//	';')?
 	//	'mode' ':=' mode=GSSTestProcMode ';' ('replays' ':=' replays=INTEGER ';')?
-	//	inputs=GSSTestProcInputs
+	//	inputs=GSSTestProcAbstractInputs
 	//	outputs=GSSTestProcOutputs?
 	//	specialPackets=GSSTestProcSpecialPackets?
 	//	concurrent_steps=GSSTestProcConcurrentSteps?
@@ -3844,13 +4060,50 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum GSSTestProcMode:
-	//	continuous | action | concurrent;
+	//	continuous | manual | concurrent | action;
 	public GSSTestProcModeElements getGSSTestProcModeAccess() {
 		return eGSSTestProcMode;
 	}
 	
 	public EnumRule getGSSTestProcModeRule() {
 		return getGSSTestProcModeAccess().getRule();
+	}
+	
+	//GSSTestProcAbstractInputs:
+	//	GSSTestProcInputs | GSSTestProcAction;
+	public GSSTestProcAbstractInputsElements getGSSTestProcAbstractInputsAccess() {
+		return pGSSTestProcAbstractInputs;
+	}
+	
+	public ParserRule getGSSTestProcAbstractInputsRule() {
+		return getGSSTestProcAbstractInputsAccess().getRule();
+	}
+	
+	//GSSTestProcAction:
+	//	'GSSTestProcAction' '{'
+	//	'message' ':=' message=STRING ';'
+	//	'actionType' ':=' actionType=GSSTestProcActionType ';'
+	//	'delay_value' ':=' delay_value=INTEGER ';'
+	//	'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';'
+	//	'span_value' ':=' span_value=INTEGER ';'
+	//	'span_unit' ':=' span_unit=GSSTestProcTimeUnit ';'
+	//	'}' ';';
+	public GSSTestProcActionElements getGSSTestProcActionAccess() {
+		return pGSSTestProcAction;
+	}
+	
+	public ParserRule getGSSTestProcActionRule() {
+		return getGSSTestProcActionAccess().getRule();
+	}
+	
+	//enum GSSTestProcActionType:
+	//	checking | instruction;
+	public GSSTestProcActionTypeElements getGSSTestProcActionTypeAccess() {
+		return eGSSTestProcActionType;
+	}
+	
+	public EnumRule getGSSTestProcActionTypeRule() {
+		return getGSSTestProcActionTypeAccess().getRule();
 	}
 	
 	//GSSTestProcInputs:
@@ -3866,11 +4119,21 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSTestProcInputsAccess().getRule();
 	}
 	
+	//enum GSSTestProcTimeUnit:
+	//	miliseconds | seconds;
+	public GSSTestProcTimeUnitElements getGSSTestProcTimeUnitAccess() {
+		return eGSSTestProcTimeUnit;
+	}
+	
+	public EnumRule getGSSTestProcTimeUnitRule() {
+		return getGSSTestProcTimeUnitAccess().getRule();
+	}
+	
 	//GSSTestProcOutputs:
 	//	'GSSTestProcOutputs' '{'
 	//	'checkmode' ':=' checkmode=GSSTestProcCheckmode ';'
 	//	'valid_time_interval_value' ':=' valid_time_interval_value=INTEGER ';'
-	//	'valid_time_interval_unit' ':=' valid_time_interval_unit=GSSTestProcUnit ';'
+	//	'valid_time_interval_unit' ':=' valid_time_interval_unit=GSSTestProcTimeUnit ';'
 	//	output+=GSSTestProcOutput+
 	//	'}' ';';
 	public GSSTestProcOutputsElements getGSSTestProcOutputsAccess() {
@@ -3922,7 +4185,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name' ':=' name=ID ';'
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'delay_value' ':=' delay_value=INTEGER ';'
-	//	'delay_unit' ':=' delay_unit=GSSTestProcUnit ';' ('level3' ':='
+	//	'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';' ('level3' ':='
 	//	level3=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 	//	'app_to_level3' ':=' app_to_level3=[export::GSSExportExport|VersionedQualifiedName] ';' ('level2' ':='
 	//	level2=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level3_to_level2' ':='
@@ -3945,7 +4208,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name' ':=' name=ID ';'
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'delay_value' ':=' delay_value=INTEGER ';'
-	//	'delay_unit' ':=' delay_unit=GSSTestProcUnit ';' ('level2' ':='
+	//	'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';' ('level2' ':='
 	//	level2=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 	//	'app_to_level2' ':=' app_to_level2=[export::GSSExportExport|VersionedQualifiedName] ';' ('level1' ':='
 	//	level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level2_to_level1' ':='
@@ -3966,7 +4229,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name' ':=' name=ID ';'
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'delay_value' ':=' delay_value=INTEGER ';'
-	//	'delay_unit' ':=' delay_unit=GSSTestProcUnit ';' ('level1' ':='
+	//	'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';' ('level1' ':='
 	//	level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 	//	'app_to_level1' ':=' app_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';' ('level0' ':='
 	//	level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')? ('level1_to_level0' ':='
@@ -3985,7 +4248,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name' ':=' name=ID ';'
 	//	'ifRef' ':=' ifRef=INTEGER ';'
 	//	'delay_value' ':=' delay_value=INTEGER ';'
-	//	'delay_unit' ':=' delay_unit=GSSTestProcUnit ';' ('level0' ':='
+	//	'delay_unit' ':=' delay_unit=GSSTestProcTimeUnit ';' ('level0' ':='
 	//	level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 	//	'app_to_level0' ':=' app_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';'
 	//	'}' ';';
@@ -3995,16 +4258,6 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getGSSTestProcInputLevel0Rule() {
 		return getGSSTestProcInputLevel0Access().getRule();
-	}
-	
-	//enum GSSTestProcUnit:
-	//	miliseconds | seconds;
-	public GSSTestProcUnitElements getGSSTestProcUnitAccess() {
-		return eGSSTestProcUnit;
-	}
-	
-	public EnumRule getGSSTestProcUnitRule() {
-		return getGSSTestProcUnitAccess().getRule();
 	}
 	
 	//enum GSSTestProcCheckmode:

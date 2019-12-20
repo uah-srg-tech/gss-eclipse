@@ -87,6 +87,14 @@ public class test_procAdapterFactory extends AdapterFactoryImpl {
 				return createGSSTestProcStepAdapter();
 			}
 			@Override
+			public Adapter caseGSSTestProcAbstractInputs(GSSTestProcAbstractInputs object) {
+				return createGSSTestProcAbstractInputsAdapter();
+			}
+			@Override
+			public Adapter caseGSSTestProcAction(GSSTestProcAction object) {
+				return createGSSTestProcActionAdapter();
+			}
+			@Override
 			public Adapter caseGSSTestProcInputs(GSSTestProcInputs object) {
 				return createGSSTestProcInputsAdapter();
 			}
@@ -211,6 +219,34 @@ public class test_procAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSTestProcStepAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAbstractInputs <em>GSS Test Proc Abstract Inputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAbstractInputs
+	 * @generated
+	 */
+	public Adapter createGSSTestProcAbstractInputsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcAction <em>GSS Test Proc Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcAction
+	 * @generated
+	 */
+	public Adapter createGSSTestProcActionAdapter() {
 		return null;
 	}
 

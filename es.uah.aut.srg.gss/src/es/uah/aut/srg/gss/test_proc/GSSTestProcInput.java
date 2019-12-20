@@ -139,7 +139,7 @@ public interface GSSTestProcInput extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Delay unit</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.test_proc.GSSTestProcUnit}.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.test_proc.GSSTestProcTimeUnit}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Delay unit</em>' attribute isn't clear,
@@ -147,28 +147,28 @@ public interface GSSTestProcInput extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Delay unit</em>' attribute.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcTimeUnit
 	 * @see #isSetDelay_unit()
 	 * @see #unsetDelay_unit()
-	 * @see #setDelay_unit(GSSTestProcUnit)
+	 * @see #setDelay_unit(GSSTestProcTimeUnit)
 	 * @see es.uah.aut.srg.gss.test_proc.test_procPackage#getGSSTestProcInput_Delay_unit()
 	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
-	GSSTestProcUnit getDelay_unit();
+	GSSTestProcTimeUnit getDelay_unit();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInput#getDelay_unit <em>Delay unit</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Delay unit</em>' attribute.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcUnit
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcTimeUnit
 	 * @see #isSetDelay_unit()
 	 * @see #unsetDelay_unit()
 	 * @see #getDelay_unit()
 	 * @generated
 	 */
-	void setDelay_unit(GSSTestProcUnit value);
+	void setDelay_unit(GSSTestProcTimeUnit value);
 
 	/**
 	 * Unsets the value of the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcInput#getDelay_unit <em>Delay unit</em>}' attribute.
@@ -176,7 +176,7 @@ public interface GSSTestProcInput extends EObject {
 	 * <!-- end-user-doc -->
 	 * @see #isSetDelay_unit()
 	 * @see #getDelay_unit()
-	 * @see #setDelay_unit(GSSTestProcUnit)
+	 * @see #setDelay_unit(GSSTestProcTimeUnit)
 	 * @generated
 	 */
 	void unsetDelay_unit();
@@ -188,7 +188,7 @@ public interface GSSTestProcInput extends EObject {
 	 * @return whether the value of the '<em>Delay unit</em>' attribute is set.
 	 * @see #unsetDelay_unit()
 	 * @see #getDelay_unit()
-	 * @see #setDelay_unit(GSSTestProcUnit)
+	 * @see #setDelay_unit(GSSTestProcTimeUnit)
 	 * @generated
 	 */
 	boolean isSetDelay_unit();

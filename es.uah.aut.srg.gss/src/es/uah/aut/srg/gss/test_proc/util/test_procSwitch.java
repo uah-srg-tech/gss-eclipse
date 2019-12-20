@@ -91,9 +91,23 @@ public class test_procSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case test_procPackage.GSS_TEST_PROC_ABSTRACT_INPUTS: {
+				GSSTestProcAbstractInputs gssTestProcAbstractInputs = (GSSTestProcAbstractInputs)theEObject;
+				T result = caseGSSTestProcAbstractInputs(gssTestProcAbstractInputs);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case test_procPackage.GSS_TEST_PROC_ACTION: {
+				GSSTestProcAction gssTestProcAction = (GSSTestProcAction)theEObject;
+				T result = caseGSSTestProcAction(gssTestProcAction);
+				if (result == null) result = caseGSSTestProcAbstractInputs(gssTestProcAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case test_procPackage.GSS_TEST_PROC_INPUTS: {
 				GSSTestProcInputs gssTestProcInputs = (GSSTestProcInputs)theEObject;
 				T result = caseGSSTestProcInputs(gssTestProcInputs);
+				if (result == null) result = caseGSSTestProcAbstractInputs(gssTestProcInputs);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -238,6 +252,36 @@ public class test_procSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSTestProcStep(GSSTestProcStep object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Proc Abstract Inputs</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Test Proc Abstract Inputs</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSTestProcAbstractInputs(GSSTestProcAbstractInputs object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Proc Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Test Proc Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSTestProcAction(GSSTestProcAction object) {
 		return null;
 	}
 
