@@ -915,8 +915,8 @@ public class GSSGenerator {
 		epdPusDataDataTmFormat.setVersion("v1");
 		epdPusDataDataTmFormat.setProtocol("PUS_DATA");
 		epdPusDataDataTmFormat.setType(GSSFormatFormatType.TM);
-		createVSField(epdPusDataDataTmFormat, 0, 0, "SourceData", null, 0, 1, 8, 4096*8, 10*8);
-		createVRFieldSize(epdPusDataDataTmFormat, 1, 0, "SourceDataLength");
+		createVSField(epdPusDataDataTmFormat, 0, 0, "Source_Data", null, 0, 1, 8, 4096*8, 10*8);
+		createVRFieldSize(epdPusDataDataTmFormat, 1, 0, "Source_Data_Length");
 		tmFormats.put("EPD_PUS_TM_DATA",epdPusDataDataTmFormat);
 		
 		GSSImportImport epdPusDataFromCcsdsImport = importFactory.eINSTANCE.createGSSImportImport();
@@ -926,8 +926,13 @@ public class GSSGenerator {
 		epdPusDataFromCcsdsImport.setVersion("v1");
 		epdPusDataFromCcsdsImport.setFrom(tmFormats.get("CCSDS_TM"));
 		epdPusDataFromCcsdsImport.setTo(epdPusDataDataTmFormat);
-		createImportDataSource(epdPusDataFromCcsdsImport,
-				tmFormats.get("CCSDS_TM").getVSField().get(0), "0", "0");//SourceData
+
+		for(GSSFormatVSField vsField : tmFormats.get("CCSDS_TM").getVSField()) {
+			if(vsField.getName().compareTo("Source_Data") == 0) {
+				createImportDataSource(epdPusDataFromCcsdsImport, vsField, "0", "0");
+				break;
+			}
+		}
 		epdPusDataFromCcsdsImport.setVirtualSize(null);
 		
 		imports.add(epdPusDataFromCcsdsImport);
