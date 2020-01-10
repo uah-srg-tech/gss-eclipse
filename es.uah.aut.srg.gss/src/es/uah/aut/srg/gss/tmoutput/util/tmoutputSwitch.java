@@ -12,6 +12,7 @@ package es.uah.aut.srg.gss.tmoutput.util;
 
 import es.uah.aut.srg.gss.tmoutput.*;
 
+import es.uah.aut.srg.tmtcif.tm.TMTCIFPI1;
 import es.uah.aut.srg.tmtcif.tm.TMTCIFTM;
 
 import es.uah.aut.srg.tmtcif.tm.TMTCIFTMField;
@@ -84,6 +85,13 @@ public class tmoutputSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case tmoutputPackage.GSSTM_OUTPUT_PI1: {
+				GSSTMOutputPi1 gsstmOutputPi1 = (GSSTMOutputPi1)theEObject;
+				T result = caseGSSTMOutputPi1(gsstmOutputPi1);
+				if (result == null) result = caseTMTCIFPI1(gsstmOutputPi1);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case tmoutputPackage.GSSTM_OUTPUT_FIELD: {
 				GSSTMOutputField gsstmOutputField = (GSSTMOutputField)theEObject;
 				T result = caseGSSTMOutputField(gsstmOutputField);
@@ -107,6 +115,21 @@ public class tmoutputSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSTMOutput(GSSTMOutput object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSSTM Output Pi1</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSSTM Output Pi1</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSTMOutputPi1(GSSTMOutputPi1 object) {
 		return null;
 	}
 
@@ -137,6 +160,21 @@ public class tmoutputSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTMTCIFTM(TMTCIFTM object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>TMTCIFPI1</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>TMTCIFPI1</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTMTCIFPI1(TMTCIFPI1 object) {
 		return null;
 	}
 

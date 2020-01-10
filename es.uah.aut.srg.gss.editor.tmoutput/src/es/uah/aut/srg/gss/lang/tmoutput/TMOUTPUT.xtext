@@ -13,7 +13,6 @@ GSSTMOutput returns GSSTMOutput:
 		'name=' name=STRING
 		'type=' type=UINT_STRING
 		'subtype=' subtype=UINT_STRING
-		('pi1_val=' pi1_val=UINT_STRING)?
 		'levels=' levels=UINT_STRING
 		'>'
 		('<level3_format' 'file=' level3_format=[format::GSSFormatFormat|STRING] '/>')?
@@ -27,8 +26,16 @@ GSSTMOutput returns GSSTMOutput:
 		('<from_level0_import' 'file=' from_level0_import=[import_::GSSImportImport|STRING] '/>')?
 		('<level0_format' 'file=' level0_format=[format::GSSFormatFormat|STRING] '/>')?
 		('<level0_filter' 'file=' level0_filter=[filter::GSSFilterFilter|STRING] '/>')?
+		(gssPi1=GSSTMOutputPi1)?
 		('<fields>' (gssFields+=GSSTMOutputField)+ '</fields>')?
 	'</GSSTMOutput>';
+
+GSSTMOutputPi1 returns GSSTMOutputPi1:
+	'<OutputPI1'
+		'name=' name=STRING
+		'val=' val=UINT_STRING
+		'gssField=' gssField=[format::GSSFormatField|STRING]
+	'/>';
 
 GSSTMOutputField returns GSSTMOutputField:
 	'<OutputField'

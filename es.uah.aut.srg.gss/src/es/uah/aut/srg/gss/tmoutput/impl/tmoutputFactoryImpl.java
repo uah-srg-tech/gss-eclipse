@@ -65,6 +65,7 @@ public class tmoutputFactoryImpl extends EFactoryImpl implements tmoutputFactory
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case tmoutputPackage.GSSTM_OUTPUT: return createGSSTMOutput();
+			case tmoutputPackage.GSSTM_OUTPUT_PI1: return createGSSTMOutputPi1();
 			case tmoutputPackage.GSSTM_OUTPUT_FIELD: return createGSSTMOutputField();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -79,6 +80,16 @@ public class tmoutputFactoryImpl extends EFactoryImpl implements tmoutputFactory
 	public GSSTMOutput createGSSTMOutput() {
 		GSSTMOutputImpl gsstmOutput = new GSSTMOutputImpl();
 		return gsstmOutput;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTMOutputPi1 createGSSTMOutputPi1() {
+		GSSTMOutputPi1Impl gsstmOutputPi1 = new GSSTMOutputPi1Impl();
+		return gsstmOutputPi1;
 	}
 
 	/**

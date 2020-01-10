@@ -3,7 +3,7 @@
 
 «DEFINE Serializer(String outputFile) FOR GSSTMOutput»
 «FILE outputFile -»
-<GSSTMOutput name="«this.name»" type="«this.type»" subtype="«this.subtype»" «IF this.pi1_val != null -»pi1_val="«this.pi1_val»"«ENDIF -» levels="«this.levels»">
+<GSSTMOutput name="«this.name»" type="«this.type»" subtype="«this.subtype»" levels="«this.levels»">
 «IF this.level1_format != null -»
 	<level1_format file="«this.level1_format.name»(«this.level1_format.version»)"/>
 «IF this.level1_filter != null -»
@@ -12,6 +12,9 @@
 	<from_level0_import file="«this.from_level0_import.name»(«this.from_level0_import.version»)"/>
 «ENDIF -»
 	<level0_filter file="«this.level0_filter.name»(«this.level0_filter.version»)"/>
+«IF this.gssPi1 != null -»
+	<OutputPI1 name="«this.gssPi1.name»" val="«this.gssPi1.val»" gssField="«this.level1_format.name»(«this.level1_format.version»).«this.gssPi1.gssField.name»"/>
+«ENDIF -»
 «IF this.fields.size != 0 -»
 	<fields>
 «FOREACH this.gssFields AS field -»

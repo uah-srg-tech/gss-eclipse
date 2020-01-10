@@ -12,6 +12,7 @@ package es.uah.aut.srg.gss.tmoutput.util;
 
 import es.uah.aut.srg.gss.tmoutput.*;
 
+import es.uah.aut.srg.tmtcif.tm.TMTCIFPI1;
 import es.uah.aut.srg.tmtcif.tm.TMTCIFTM;
 
 import es.uah.aut.srg.tmtcif.tm.TMTCIFTMField;
@@ -83,12 +84,20 @@ public class tmoutputAdapterFactory extends AdapterFactoryImpl {
 				return createGSSTMOutputAdapter();
 			}
 			@Override
+			public Adapter caseGSSTMOutputPi1(GSSTMOutputPi1 object) {
+				return createGSSTMOutputPi1Adapter();
+			}
+			@Override
 			public Adapter caseGSSTMOutputField(GSSTMOutputField object) {
 				return createGSSTMOutputFieldAdapter();
 			}
 			@Override
 			public Adapter caseTMTCIFTM(TMTCIFTM object) {
 				return createTMTCIFTMAdapter();
+			}
+			@Override
+			public Adapter caseTMTCIFPI1(TMTCIFPI1 object) {
+				return createTMTCIFPI1Adapter();
 			}
 			@Override
 			public Adapter caseTMTCIFTMField(TMTCIFTMField object) {
@@ -129,6 +138,20 @@ public class tmoutputAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tmoutput.GSSTMOutputPi1 <em>GSSTM Output Pi1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.tmoutput.GSSTMOutputPi1
+	 * @generated
+	 */
+	public Adapter createGSSTMOutputPi1Adapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.tmoutput.GSSTMOutputField <em>GSSTM Output Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -153,6 +176,20 @@ public class tmoutputAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTMTCIFTMAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.tmtcif.tm.TMTCIFPI1 <em>TMTCIFPI1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.tmtcif.tm.TMTCIFPI1
+	 * @generated
+	 */
+	public Adapter createTMTCIFPI1Adapter() {
 		return null;
 	}
 

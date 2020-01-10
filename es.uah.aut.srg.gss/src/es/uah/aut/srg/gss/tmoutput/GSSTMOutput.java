@@ -40,6 +40,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link es.uah.aut.srg.gss.tmoutput.GSSTMOutput#getFrom_level0_import <em>From level0 import</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tmoutput.GSSTMOutput#getLevel0_filter <em>Level0 filter</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tmoutput.GSSTMOutput#getLevel0_format <em>Level0 format</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.tmoutput.GSSTMOutput#getGssPi1 <em>Gss Pi1</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tmoutput.GSSTMOutput#getGssFields <em>Gss Fields</em>}</li>
  * </ul>
  *
@@ -359,6 +360,32 @@ public interface GSSTMOutput extends TMTCIFTM {
 	 * @generated
 	 */
 	void setLevel0_format(GSSFormatFormat value);
+
+	/**
+	 * Returns the value of the '<em><b>Gss Pi1</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Gss Pi1</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Gss Pi1</em>' containment reference.
+	 * @see #setGssPi1(GSSTMOutputPi1)
+	 * @see es.uah.aut.srg.gss.tmoutput.tmoutputPackage#getGSSTMOutput_GssPi1()
+	 * @model containment="true"
+	 * @generated
+	 */
+	GSSTMOutputPi1 getGssPi1();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.tmoutput.GSSTMOutput#getGssPi1 <em>Gss Pi1</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Gss Pi1</em>' containment reference.
+	 * @see #getGssPi1()
+	 * @generated
+	 */
+	void setGssPi1(GSSTMOutputPi1 value);
 
 	/**
 	 * Returns the value of the '<em><b>Gss Fields</b></em>' containment reference list.

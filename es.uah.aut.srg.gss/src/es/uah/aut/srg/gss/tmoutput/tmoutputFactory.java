@@ -39,6 +39,15 @@ public interface tmoutputFactory extends EFactory {
 	GSSTMOutput createGSSTMOutput();
 
 	/**
+	 * Returns a new object of class '<em>GSSTM Output Pi1</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSSTM Output Pi1</em>'.
+	 * @generated
+	 */
+	GSSTMOutputPi1 createGSSTMOutputPi1();
+
+	/**
 	 * Returns a new object of class '<em>GSSTM Output Field</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

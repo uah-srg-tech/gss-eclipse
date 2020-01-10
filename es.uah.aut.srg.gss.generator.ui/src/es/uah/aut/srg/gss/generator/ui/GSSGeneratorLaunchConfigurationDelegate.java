@@ -40,6 +40,7 @@ import es.uah.aut.srg.gss.tcinput.tcinputFactory;
 import es.uah.aut.srg.gss.tmheaderoutput.GSSTMHeaderOutput;
 import es.uah.aut.srg.gss.tmoutput.GSSTMOutput;
 import es.uah.aut.srg.gss.tmoutput.GSSTMOutputField;
+import es.uah.aut.srg.gss.tmoutput.GSSTMOutputPi1;
 import es.uah.aut.srg.gss.tmoutput.tmoutputFactory;
 import es.uah.aut.srg.gss.format.GSSFormatAField;
 import es.uah.aut.srg.gss.format.GSSFormatAIField;
@@ -628,6 +629,8 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				if(filterBottomLevel.getName().compareTo("EPD_CCSDS_TM") == 0) {
 					continue;
 				}
+				String pi1_name = "", pi1_val = "";
+				
 				//get type and subtype
 				StringTokenizer filterNameTokens = new StringTokenizer(filterBottomLevel.getName(), "_");
 				String gssTmOutputName = filterNameTokens.nextToken();//"tm"
@@ -635,22 +638,21 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				gssTmOutput.setType(filterNameTokens.nextToken());
 				gssTmOutput.setSubtype(filterNameTokens.nextToken());
 				gssTmOutputName += gssTmOutput.getType() + "_" + gssTmOutput.getSubtype();
-				String pi1_val_str = filterNameTokens.nextToken();
-				if(pi1_val_str.compareTo("asw") == 0) {//exception for TM SIS 129.224
-					gssTmOutputName += "_" + pi1_val_str;
-				} else if(pi1_val_str.compareTo("filter") != 0) {
-					gssTmOutput.setPi1_val(pi1_val_str);
-					gssTmOutputName += "_" + gssTmOutput.getPi1_val();
+				String final_str = filterNameTokens.nextToken();
+				if(final_str.compareTo("asw") == 0) {//exception for TM SIS 129.224
+					gssTmOutputName += "_" + final_str;
+				} else if(final_str.compareTo("filter") != 0) {
+					gssTmOutputName += "_" + final_str;
+					pi1_val = final_str;
 				}
 				gssTmOutput.setName(gssTmOutputName);
 				gssTmOutput.setLevel0_filter(filterBottomLevel);
 				gssTmOutput.setFrom_level0_import(ccsdsImport);
 
-				//get pi1_val
-				String Pi1_val_name = "";
+				//get pi1_name
 				GSSFilterMintermFilter filterTopLevel = filtersTopLevel.get(YID_tm_type_inverse.get(gssTmOutputName));
 				if(filterTopLevel != null) {
-					Pi1_val_name = filterTopLevel.getBoolVar().get(0).getFieldRef().getName();
+					pi1_name = filterTopLevel.getBoolVar().get(0).getFieldRef().getName();
 					gssTmOutput.setLevel1_filter(filterTopLevel);
 				};
 				
@@ -658,18 +660,30 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				GSSFormatFormat tmFormat = tmFormats.get(YID_tm_type_inverse.get(gssTmOutputName));
 				gssTmOutput.setLevel1_format(tmFormat);
 				for(GSSFormatCSField GSSFormatCSField : tmFormat.getCSField()) {
-					if((GSSFormatCSField.getName().compareTo("SourceData") == 0) ||
-							(GSSFormatCSField.getName().compareTo(Pi1_val_name) == 0)){
+					if(GSSFormatCSField.getName().compareTo("SourceData") == 0){
 						continue;
 					}
-					GSSTMOutputField gssTmOutputField = tmoutputFactory.eINSTANCE.createGSSTMOutputField();
-					gssTmOutputField.setGssField(GSSFormatCSField);
-					if(GSSFormatCSField.getDescription() != null) {
-						gssTmOutputField.setName(GSSFormatCSField.getDescription());
-					} else {
-						gssTmOutputField.setName(GSSFormatCSField.getName());
+					else if(GSSFormatCSField.getName().compareTo(pi1_name) == 0) {
+						GSSTMOutputPi1 gssTmOutputPi1 = tmoutputFactory.eINSTANCE.createGSSTMOutputPi1();
+						gssTmOutputPi1.setVal(pi1_val);
+						gssTmOutputPi1.setGssField(GSSFormatCSField);
+						if(GSSFormatCSField.getDescription() != null) {
+							gssTmOutputPi1.setName(GSSFormatCSField.getDescription());
+						} else {
+							gssTmOutputPi1.setName(GSSFormatCSField.getName());
+						}
+						gssTmOutput.setGssPi1(gssTmOutputPi1);
 					}
-					gssTmOutput.getGssFields().add(gssTmOutputField);
+					else {
+						GSSTMOutputField gssTmOutputField = tmoutputFactory.eINSTANCE.createGSSTMOutputField();
+						gssTmOutputField.setGssField(GSSFormatCSField);
+						if(GSSFormatCSField.getDescription() != null) {
+							gssTmOutputField.setName(GSSFormatCSField.getDescription());
+						} else {
+							gssTmOutputField.setName(GSSFormatCSField.getName());
+						}
+						gssTmOutput.getGssFields().add(gssTmOutputField);
+					}
 				}
 				for(GSSFormatVSField GSSFormatVSField : tmFormat.getVSField()) {
 					if(GSSFormatVSField.getName().compareTo("SourceData") == 0) {
