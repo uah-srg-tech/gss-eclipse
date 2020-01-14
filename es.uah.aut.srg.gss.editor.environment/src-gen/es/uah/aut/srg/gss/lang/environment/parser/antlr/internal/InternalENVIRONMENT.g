@@ -1905,77 +1905,243 @@ ruleGSSEnvironmentProtocol returns [EObject current=null]
 		{
 			newLeafNode(otherlv_13, grammarAccess.getGSSEnvironmentProtocolAccess().getSemicolonKeyword_13());
 		}
-		otherlv_14='typeOffset'
-		{
-			newLeafNode(otherlv_14, grammarAccess.getGSSEnvironmentProtocolAccess().getTypeOffsetKeyword_14());
-		}
-		otherlv_15=':='
-		{
-			newLeafNode(otherlv_15, grammarAccess.getGSSEnvironmentProtocolAccess().getColonEqualsSignKeyword_15());
-		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSEnvironmentProtocolAccess().getTypeOffsetINTEGERParserRuleCall_16_0());
+					newCompositeNode(grammarAccess.getGSSEnvironmentProtocolAccess().getTypeGSSEnvironmentProtocolTypeParserRuleCall_14_0());
 				}
-				lv_typeOffset_16_0=ruleINTEGER
+				lv_type_14_0=ruleGSSEnvironmentProtocolType
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSEnvironmentProtocolRule());
 					}
 					set(
 						$current,
-						"typeOffset",
-						lv_typeOffset_16_0,
+						"type",
+						lv_type_14_0,
+						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentProtocolType");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSEnvironmentProtocolAccess().getSubtypeGSSEnvironmentProtocolSubtypeParserRuleCall_15_0());
+				}
+				lv_subtype_15_0=ruleGSSEnvironmentProtocolSubtype
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSEnvironmentProtocolRule());
+					}
+					set(
+						$current,
+						"subtype",
+						lv_subtype_15_0,
+						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentProtocolSubtype");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		otherlv_16='}'
+		{
+			newLeafNode(otherlv_16, grammarAccess.getGSSEnvironmentProtocolAccess().getRightCurlyBracketKeyword_16());
+		}
+		otherlv_17=';'
+		{
+			newLeafNode(otherlv_17, grammarAccess.getGSSEnvironmentProtocolAccess().getSemicolonKeyword_17());
+		}
+	)
+;
+
+// Entry rule entryRuleGSSEnvironmentProtocolType
+entryRuleGSSEnvironmentProtocolType returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSEnvironmentProtocolTypeRule()); }
+	iv_ruleGSSEnvironmentProtocolType=ruleGSSEnvironmentProtocolType
+	{ $current=$iv_ruleGSSEnvironmentProtocolType.current; }
+	EOF;
+
+// Rule GSSEnvironmentProtocolType
+ruleGSSEnvironmentProtocolType returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='GSSEnvironmentProtocolType'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getGSSEnvironmentProtocolTypeAccess().getGSSEnvironmentProtocolTypeKeyword_0());
+		}
+		otherlv_1='{'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getGSSEnvironmentProtocolTypeAccess().getLeftCurlyBracketKeyword_1());
+		}
+		otherlv_2='name'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSEnvironmentProtocolTypeAccess().getNameKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSEnvironmentProtocolTypeAccess().getColonEqualsSignKeyword_3());
+		}
+		(
+			(
+				lv_name_4_0=RULE_STRING
+				{
+					newLeafNode(lv_name_4_0, grammarAccess.getGSSEnvironmentProtocolTypeAccess().getNameSTRINGTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getGSSEnvironmentProtocolTypeRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_4_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_5=';'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getGSSEnvironmentProtocolTypeAccess().getSemicolonKeyword_5());
+		}
+		otherlv_6='offset'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getGSSEnvironmentProtocolTypeAccess().getOffsetKeyword_6());
+		}
+		otherlv_7=':='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSEnvironmentProtocolTypeAccess().getColonEqualsSignKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSEnvironmentProtocolTypeAccess().getOffsetINTEGERParserRuleCall_8_0());
+				}
+				lv_offset_8_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSEnvironmentProtocolTypeRule());
+					}
+					set(
+						$current,
+						"offset",
+						lv_offset_8_0,
 						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.INTEGER");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_17=';'
+		otherlv_9=';'
 		{
-			newLeafNode(otherlv_17, grammarAccess.getGSSEnvironmentProtocolAccess().getSemicolonKeyword_17());
+			newLeafNode(otherlv_9, grammarAccess.getGSSEnvironmentProtocolTypeAccess().getSemicolonKeyword_9());
+		}
+		otherlv_10='}'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getGSSEnvironmentProtocolTypeAccess().getRightCurlyBracketKeyword_10());
+		}
+		otherlv_11=';'
+		{
+			newLeafNode(otherlv_11, grammarAccess.getGSSEnvironmentProtocolTypeAccess().getSemicolonKeyword_11());
+		}
+	)
+;
+
+// Entry rule entryRuleGSSEnvironmentProtocolSubtype
+entryRuleGSSEnvironmentProtocolSubtype returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSEnvironmentProtocolSubtypeRule()); }
+	iv_ruleGSSEnvironmentProtocolSubtype=ruleGSSEnvironmentProtocolSubtype
+	{ $current=$iv_ruleGSSEnvironmentProtocolSubtype.current; }
+	EOF;
+
+// Rule GSSEnvironmentProtocolSubtype
+ruleGSSEnvironmentProtocolSubtype returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='GSSEnvironmentProtocolSubtype'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getGSSEnvironmentProtocolSubtypeAccess().getGSSEnvironmentProtocolSubtypeKeyword_0());
+		}
+		otherlv_1='{'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getGSSEnvironmentProtocolSubtypeAccess().getLeftCurlyBracketKeyword_1());
+		}
+		otherlv_2='name'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSEnvironmentProtocolSubtypeAccess().getNameKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSEnvironmentProtocolSubtypeAccess().getColonEqualsSignKeyword_3());
 		}
 		(
-			otherlv_18='subtypeOffset'
-			{
-				newLeafNode(otherlv_18, grammarAccess.getGSSEnvironmentProtocolAccess().getSubtypeOffsetKeyword_18_0());
-			}
-			otherlv_19=':='
-			{
-				newLeafNode(otherlv_19, grammarAccess.getGSSEnvironmentProtocolAccess().getColonEqualsSignKeyword_18_1());
-			}
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSEnvironmentProtocolAccess().getSubtypeOffsetINTEGERParserRuleCall_18_2_0());
+				lv_name_4_0=RULE_STRING
+				{
+					newLeafNode(lv_name_4_0, grammarAccess.getGSSEnvironmentProtocolSubtypeAccess().getNameSTRINGTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getGSSEnvironmentProtocolSubtypeRule());
 					}
-					lv_subtypeOffset_20_0=ruleINTEGER
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSEnvironmentProtocolRule());
-						}
-						set(
-							$current,
-							"subtypeOffset",
-							lv_subtypeOffset_20_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.INTEGER");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_4_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
 			)
-			otherlv_21=';'
-			{
-				newLeafNode(otherlv_21, grammarAccess.getGSSEnvironmentProtocolAccess().getSemicolonKeyword_18_3());
-			}
-		)?
-		otherlv_22='}'
+		)
+		otherlv_5=';'
 		{
-			newLeafNode(otherlv_22, grammarAccess.getGSSEnvironmentProtocolAccess().getRightCurlyBracketKeyword_19());
+			newLeafNode(otherlv_5, grammarAccess.getGSSEnvironmentProtocolSubtypeAccess().getSemicolonKeyword_5());
 		}
-		otherlv_23=';'
+		otherlv_6='offset'
 		{
-			newLeafNode(otherlv_23, grammarAccess.getGSSEnvironmentProtocolAccess().getSemicolonKeyword_20());
+			newLeafNode(otherlv_6, grammarAccess.getGSSEnvironmentProtocolSubtypeAccess().getOffsetKeyword_6());
+		}
+		otherlv_7=':='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSEnvironmentProtocolSubtypeAccess().getColonEqualsSignKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSEnvironmentProtocolSubtypeAccess().getOffsetINTEGERParserRuleCall_8_0());
+				}
+				lv_offset_8_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSEnvironmentProtocolSubtypeRule());
+					}
+					set(
+						$current,
+						"offset",
+						lv_offset_8_0,
+						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9=';'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getGSSEnvironmentProtocolSubtypeAccess().getSemicolonKeyword_9());
+		}
+		otherlv_10='}'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getGSSEnvironmentProtocolSubtypeAccess().getRightCurlyBracketKeyword_10());
+		}
+		otherlv_11=';'
+		{
+			newLeafNode(otherlv_11, grammarAccess.getGSSEnvironmentProtocolSubtypeAccess().getSemicolonKeyword_11());
 		}
 	)
 ;

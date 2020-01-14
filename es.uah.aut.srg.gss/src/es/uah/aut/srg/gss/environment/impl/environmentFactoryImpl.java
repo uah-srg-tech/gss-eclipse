@@ -74,6 +74,7 @@ public class environmentFactoryImpl extends EFactoryImpl implements environmentF
 			case environmentPackage.GSS_ENVIRONMENT_DISCARD_ERROR_FLAGS: return createGSSEnvironmentDiscardErrorFlags();
 			case environmentPackage.GSS_ENVIRONMENT_PROTOCOLS: return createGSSEnvironmentProtocols();
 			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL: return createGSSEnvironmentProtocol();
+			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL_TYPE: return createGSSEnvironmentProtocolType();
 			case environmentPackage.GSS_ENVIRONMENT_INTERFACES: return createGSSEnvironmentInterfaces();
 			case environmentPackage.GSS_ENVIRONMENT_MAIN_INTERFACE: return createGSSEnvironmentMainInterface();
 			case environmentPackage.GSS_ENVIRONMENT_INTERFACE: return createGSSEnvironmentInterface();
@@ -264,6 +265,16 @@ public class environmentFactoryImpl extends EFactoryImpl implements environmentF
 	public GSSEnvironmentProtocol createGSSEnvironmentProtocol() {
 		GSSEnvironmentProtocolImpl gssEnvironmentProtocol = new GSSEnvironmentProtocolImpl();
 		return gssEnvironmentProtocol;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSEnvironmentProtocolType createGSSEnvironmentProtocolType() {
+		GSSEnvironmentProtocolTypeImpl gssEnvironmentProtocolType = new GSSEnvironmentProtocolTypeImpl();
+		return gssEnvironmentProtocolType;
 	}
 
 	/**

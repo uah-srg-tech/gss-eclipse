@@ -114,6 +114,10 @@ public class environmentAdapterFactory extends AdapterFactoryImpl {
 				return createGSSEnvironmentProtocolAdapter();
 			}
 			@Override
+			public Adapter caseGSSEnvironmentProtocolType(GSSEnvironmentProtocolType object) {
+				return createGSSEnvironmentProtocolTypeAdapter();
+			}
+			@Override
 			public Adapter caseGSSEnvironmentInterfaces(GSSEnvironmentInterfaces object) {
 				return createGSSEnvironmentInterfacesAdapter();
 			}
@@ -384,6 +388,20 @@ public class environmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSEnvironmentProtocolAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocolType <em>GSS Environment Protocol Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.environment.GSSEnvironmentProtocolType
+	 * @generated
+	 */
+	public Adapter createGSSEnvironmentProtocolTypeAdapter() {
 		return null;
 	}
 

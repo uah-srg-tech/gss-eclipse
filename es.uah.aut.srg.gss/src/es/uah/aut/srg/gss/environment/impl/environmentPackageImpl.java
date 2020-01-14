@@ -51,6 +51,7 @@ import es.uah.aut.srg.gss.environment.GSSEnvironmentPhyHeaderPrint;
 import es.uah.aut.srg.gss.environment.GSSEnvironmentPlot;
 import es.uah.aut.srg.gss.environment.GSSEnvironmentPrintingData;
 import es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol;
+import es.uah.aut.srg.gss.environment.GSSEnvironmentProtocolType;
 import es.uah.aut.srg.gss.environment.GSSEnvironmentProtocols;
 import es.uah.aut.srg.gss.environment.GSSEnvironmentReferenceField;
 import es.uah.aut.srg.gss.environment.GSSEnvironmentReferenceFieldType;
@@ -151,6 +152,13 @@ public class environmentPackageImpl extends EPackageImpl implements environmentP
 	 * @generated
 	 */
 	private EClass gssEnvironmentProtocolEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gssEnvironmentProtocolTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -881,8 +889,8 @@ public class environmentPackageImpl extends EPackageImpl implements environmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSEnvironmentProtocol_TypeOffset() {
-		return (EAttribute)gssEnvironmentProtocolEClass.getEStructuralFeatures().get(3);
+	public EReference getGSSEnvironmentProtocol_Type() {
+		return (EReference)gssEnvironmentProtocolEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -890,8 +898,35 @@ public class environmentPackageImpl extends EPackageImpl implements environmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSEnvironmentProtocol_SubtypeOffset() {
-		return (EAttribute)gssEnvironmentProtocolEClass.getEStructuralFeatures().get(4);
+	public EReference getGSSEnvironmentProtocol_Subtype() {
+		return (EReference)gssEnvironmentProtocolEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGSSEnvironmentProtocolType() {
+		return gssEnvironmentProtocolTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSEnvironmentProtocolType_Offset() {
+		return (EAttribute)gssEnvironmentProtocolTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSEnvironmentProtocolType_Name() {
+		return (EAttribute)gssEnvironmentProtocolTypeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2501,8 +2536,12 @@ public class environmentPackageImpl extends EPackageImpl implements environmentP
 		createEAttribute(gssEnvironmentProtocolEClass, GSS_ENVIRONMENT_PROTOCOL__ID);
 		createEAttribute(gssEnvironmentProtocolEClass, GSS_ENVIRONMENT_PROTOCOL__NAME);
 		createEAttribute(gssEnvironmentProtocolEClass, GSS_ENVIRONMENT_PROTOCOL__TYPE_LEVEL);
-		createEAttribute(gssEnvironmentProtocolEClass, GSS_ENVIRONMENT_PROTOCOL__TYPE_OFFSET);
-		createEAttribute(gssEnvironmentProtocolEClass, GSS_ENVIRONMENT_PROTOCOL__SUBTYPE_OFFSET);
+		createEReference(gssEnvironmentProtocolEClass, GSS_ENVIRONMENT_PROTOCOL__TYPE);
+		createEReference(gssEnvironmentProtocolEClass, GSS_ENVIRONMENT_PROTOCOL__SUBTYPE);
+
+		gssEnvironmentProtocolTypeEClass = createEClass(GSS_ENVIRONMENT_PROTOCOL_TYPE);
+		createEAttribute(gssEnvironmentProtocolTypeEClass, GSS_ENVIRONMENT_PROTOCOL_TYPE__OFFSET);
+		createEAttribute(gssEnvironmentProtocolTypeEClass, GSS_ENVIRONMENT_PROTOCOL_TYPE__NAME);
 
 		gssEnvironmentInterfacesEClass = createEClass(GSS_ENVIRONMENT_INTERFACES);
 		createEReference(gssEnvironmentInterfacesEClass, GSS_ENVIRONMENT_INTERFACES__PROTOCOL_PACKETS_FILE);
@@ -2802,8 +2841,12 @@ public class environmentPackageImpl extends EPackageImpl implements environmentP
 		initEAttribute(getGSSEnvironmentProtocol_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSEnvironmentProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSEnvironmentProtocol_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSEnvironmentProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSEnvironmentProtocol_TypeLevel(), ecorePackage.getEString(), "typeLevel", null, 1, 1, GSSEnvironmentProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSEnvironmentProtocol_TypeOffset(), ecorePackage.getEString(), "typeOffset", null, 1, 1, GSSEnvironmentProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSEnvironmentProtocol_SubtypeOffset(), ecorePackage.getEString(), "subtypeOffset", null, 0, 1, GSSEnvironmentProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSEnvironmentProtocol_Type(), this.getGSSEnvironmentProtocolType(), null, "type", null, 1, 1, GSSEnvironmentProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSEnvironmentProtocol_Subtype(), this.getGSSEnvironmentProtocolType(), null, "subtype", null, 0, 1, GSSEnvironmentProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(gssEnvironmentProtocolTypeEClass, GSSEnvironmentProtocolType.class, "GSSEnvironmentProtocolType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGSSEnvironmentProtocolType_Offset(), ecorePackage.getEString(), "offset", null, 1, 1, GSSEnvironmentProtocolType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSEnvironmentProtocolType_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSEnvironmentProtocolType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssEnvironmentInterfacesEClass, GSSEnvironmentInterfaces.class, "GSSEnvironmentInterfaces", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSEnvironmentInterfaces_ProtocolPacketsFile(), theprotocol_packetsPackage.getGSSProtocolPacketsProtocolPackets(), null, "ProtocolPacketsFile", null, 0, 1, GSSEnvironmentInterfaces.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

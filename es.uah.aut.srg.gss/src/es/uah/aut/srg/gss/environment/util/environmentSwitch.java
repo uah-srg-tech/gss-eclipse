@@ -131,6 +131,12 @@ public class environmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL_TYPE: {
+				GSSEnvironmentProtocolType gssEnvironmentProtocolType = (GSSEnvironmentProtocolType)theEObject;
+				T result = caseGSSEnvironmentProtocolType(gssEnvironmentProtocolType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case environmentPackage.GSS_ENVIRONMENT_INTERFACES: {
 				GSSEnvironmentInterfaces gssEnvironmentInterfaces = (GSSEnvironmentInterfaces)theEObject;
 				T result = caseGSSEnvironmentInterfaces(gssEnvironmentInterfaces);
@@ -457,6 +463,21 @@ public class environmentSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSEnvironmentProtocol(GSSEnvironmentProtocol object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Environment Protocol Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Environment Protocol Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSEnvironmentProtocolType(GSSEnvironmentProtocolType object) {
 		return null;
 	}
 

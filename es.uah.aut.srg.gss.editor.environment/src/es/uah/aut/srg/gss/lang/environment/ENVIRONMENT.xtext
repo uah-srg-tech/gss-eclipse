@@ -144,8 +144,22 @@ GSSEnvironmentProtocol returns GSSEnvironmentProtocol:
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=ID ';'
 		'typeLevel' ':=' typeLevel=INTEGER ';'
-		'typeOffset' ':=' typeOffset=INTEGER ';'
-		('subtypeOffset' ':=' subtypeOffset=INTEGER ';')?
+		type=GSSEnvironmentProtocolType
+		(subtype=GSSEnvironmentProtocolSubtype)?
+	'}' ';'
+;
+
+GSSEnvironmentProtocolType returns GSSEnvironmentProtocolType:
+	'GSSEnvironmentProtocolType' '{'
+		'name' ':=' name=STRING ';'
+		'offset' ':=' offset=INTEGER ';'
+	'}' ';'
+;
+
+GSSEnvironmentProtocolSubtype returns GSSEnvironmentProtocolType:
+	'GSSEnvironmentProtocolSubtype' '{'
+		'name' ':=' name=STRING ';'
+		'offset' ':=' offset=INTEGER ';'
 	'}' ';'
 ;
 

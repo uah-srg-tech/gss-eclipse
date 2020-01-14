@@ -1165,31 +1165,25 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTypeLevelAssignment_12 = (Assignment)cGroup.eContents().get(12);
 		private final RuleCall cTypeLevelINTEGERParserRuleCall_12_0 = (RuleCall)cTypeLevelAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
-		private final Keyword cTypeOffsetKeyword_14 = (Keyword)cGroup.eContents().get(14);
-		private final Keyword cColonEqualsSignKeyword_15 = (Keyword)cGroup.eContents().get(15);
-		private final Assignment cTypeOffsetAssignment_16 = (Assignment)cGroup.eContents().get(16);
-		private final RuleCall cTypeOffsetINTEGERParserRuleCall_16_0 = (RuleCall)cTypeOffsetAssignment_16.eContents().get(0);
+		private final Assignment cTypeAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cTypeGSSEnvironmentProtocolTypeParserRuleCall_14_0 = (RuleCall)cTypeAssignment_14.eContents().get(0);
+		private final Assignment cSubtypeAssignment_15 = (Assignment)cGroup.eContents().get(15);
+		private final RuleCall cSubtypeGSSEnvironmentProtocolSubtypeParserRuleCall_15_0 = (RuleCall)cSubtypeAssignment_15.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		private final Keyword cSemicolonKeyword_17 = (Keyword)cGroup.eContents().get(17);
-		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
-		private final Keyword cSubtypeOffsetKeyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_18_1 = (Keyword)cGroup_18.eContents().get(1);
-		private final Assignment cSubtypeOffsetAssignment_18_2 = (Assignment)cGroup_18.eContents().get(2);
-		private final RuleCall cSubtypeOffsetINTEGERParserRuleCall_18_2_0 = (RuleCall)cSubtypeOffsetAssignment_18_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_18_3 = (Keyword)cGroup_18.eContents().get(3);
-		private final Keyword cRightCurlyBracketKeyword_19 = (Keyword)cGroup.eContents().get(19);
-		private final Keyword cSemicolonKeyword_20 = (Keyword)cGroup.eContents().get(20);
 		
 		//GSSEnvironmentProtocol:
 		//	'GSSEnvironmentProtocol' '{'
 		//	'id' ':=' id=INTEGER ';'
 		//	'name' ':=' name=ID ';'
 		//	'typeLevel' ':=' typeLevel=INTEGER ';'
-		//	'typeOffset' ':=' typeOffset=INTEGER ';' ('subtypeOffset' ':=' subtypeOffset=INTEGER ';')?
+		//	type=GSSEnvironmentProtocolType
+		//	subtype=GSSEnvironmentProtocolSubtype?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSEnvironmentProtocol' '{' 'id' ':=' id=INTEGER ';' 'name' ':=' name=ID ';' 'typeLevel' ':=' typeLevel=INTEGER ';'
-		//'typeOffset' ':=' typeOffset=INTEGER ';' ('subtypeOffset' ':=' subtypeOffset=INTEGER ';')? '}' ';'
+		//type=GSSEnvironmentProtocolType subtype=GSSEnvironmentProtocolSubtype? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSEnvironmentProtocol'
@@ -1243,44 +1237,163 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
 		
-		//'typeOffset'
-		public Keyword getTypeOffsetKeyword_14() { return cTypeOffsetKeyword_14; }
+		//type=GSSEnvironmentProtocolType
+		public Assignment getTypeAssignment_14() { return cTypeAssignment_14; }
 		
-		//':='
-		public Keyword getColonEqualsSignKeyword_15() { return cColonEqualsSignKeyword_15; }
+		//GSSEnvironmentProtocolType
+		public RuleCall getTypeGSSEnvironmentProtocolTypeParserRuleCall_14_0() { return cTypeGSSEnvironmentProtocolTypeParserRuleCall_14_0; }
 		
-		//typeOffset=INTEGER
-		public Assignment getTypeOffsetAssignment_16() { return cTypeOffsetAssignment_16; }
+		//subtype=GSSEnvironmentProtocolSubtype?
+		public Assignment getSubtypeAssignment_15() { return cSubtypeAssignment_15; }
 		
-		//INTEGER
-		public RuleCall getTypeOffsetINTEGERParserRuleCall_16_0() { return cTypeOffsetINTEGERParserRuleCall_16_0; }
+		//GSSEnvironmentProtocolSubtype
+		public RuleCall getSubtypeGSSEnvironmentProtocolSubtypeParserRuleCall_15_0() { return cSubtypeGSSEnvironmentProtocolSubtypeParserRuleCall_15_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_16() { return cRightCurlyBracketKeyword_16; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_17() { return cSemicolonKeyword_17; }
+	}
+	public class GSSEnvironmentProtocolTypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentProtocolType");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cGSSEnvironmentProtocolTypeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cNameKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cNameSTRINGTerminalRuleCall_4_0 = (RuleCall)cNameAssignment_4.eContents().get(0);
+		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cOffsetKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cColonEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cOffsetAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cOffsetINTEGERParserRuleCall_8_0 = (RuleCall)cOffsetAssignment_8.eContents().get(0);
+		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//('subtypeOffset' ':=' subtypeOffset=INTEGER ';')?
-		public Group getGroup_18() { return cGroup_18; }
+		//GSSEnvironmentProtocolType:
+		//	'GSSEnvironmentProtocolType' '{'
+		//	'name' ':=' name=STRING ';'
+		//	'offset' ':=' offset=INTEGER ';'
+		//	'}' ';';
+		@Override public ParserRule getRule() { return rule; }
 		
-		//'subtypeOffset'
-		public Keyword getSubtypeOffsetKeyword_18_0() { return cSubtypeOffsetKeyword_18_0; }
+		//'GSSEnvironmentProtocolType' '{' 'name' ':=' name=STRING ';' 'offset' ':=' offset=INTEGER ';' '}' ';'
+		public Group getGroup() { return cGroup; }
+		
+		//'GSSEnvironmentProtocolType'
+		public Keyword getGSSEnvironmentProtocolTypeKeyword_0() { return cGSSEnvironmentProtocolTypeKeyword_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//'name'
+		public Keyword getNameKeyword_2() { return cNameKeyword_2; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_18_1() { return cColonEqualsSignKeyword_18_1; }
+		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
 		
-		//subtypeOffset=INTEGER
-		public Assignment getSubtypeOffsetAssignment_18_2() { return cSubtypeOffsetAssignment_18_2; }
+		//name=STRING
+		public Assignment getNameAssignment_4() { return cNameAssignment_4; }
+		
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_4_0() { return cNameSTRINGTerminalRuleCall_4_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		
+		//'offset'
+		public Keyword getOffsetKeyword_6() { return cOffsetKeyword_6; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_7() { return cColonEqualsSignKeyword_7; }
+		
+		//offset=INTEGER
+		public Assignment getOffsetAssignment_8() { return cOffsetAssignment_8; }
 		
 		//INTEGER
-		public RuleCall getSubtypeOffsetINTEGERParserRuleCall_18_2_0() { return cSubtypeOffsetINTEGERParserRuleCall_18_2_0; }
+		public RuleCall getOffsetINTEGERParserRuleCall_8_0() { return cOffsetINTEGERParserRuleCall_8_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_18_3() { return cSemicolonKeyword_18_3; }
+		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_19() { return cRightCurlyBracketKeyword_19; }
+		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_20() { return cSemicolonKeyword_20; }
+		public Keyword getSemicolonKeyword_11() { return cSemicolonKeyword_11; }
+	}
+	public class GSSEnvironmentProtocolSubtypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentProtocolSubtype");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cGSSEnvironmentProtocolSubtypeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cNameKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cNameSTRINGTerminalRuleCall_4_0 = (RuleCall)cNameAssignment_4.eContents().get(0);
+		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cOffsetKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cColonEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cOffsetAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cOffsetINTEGERParserRuleCall_8_0 = (RuleCall)cOffsetAssignment_8.eContents().get(0);
+		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		
+		//GSSEnvironmentProtocolSubtype GSSEnvironmentProtocolType:
+		//	'GSSEnvironmentProtocolSubtype' '{'
+		//	'name' ':=' name=STRING ';'
+		//	'offset' ':=' offset=INTEGER ';'
+		//	'}' ';'
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'GSSEnvironmentProtocolSubtype' '{' 'name' ':=' name=STRING ';' 'offset' ':=' offset=INTEGER ';' '}' ';'
+		public Group getGroup() { return cGroup; }
+		
+		//'GSSEnvironmentProtocolSubtype'
+		public Keyword getGSSEnvironmentProtocolSubtypeKeyword_0() { return cGSSEnvironmentProtocolSubtypeKeyword_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//'name'
+		public Keyword getNameKeyword_2() { return cNameKeyword_2; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
+		
+		//name=STRING
+		public Assignment getNameAssignment_4() { return cNameAssignment_4; }
+		
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_4_0() { return cNameSTRINGTerminalRuleCall_4_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		
+		//'offset'
+		public Keyword getOffsetKeyword_6() { return cOffsetKeyword_6; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_7() { return cColonEqualsSignKeyword_7; }
+		
+		//offset=INTEGER
+		public Assignment getOffsetAssignment_8() { return cOffsetAssignment_8; }
+		
+		//INTEGER
+		public RuleCall getOffsetINTEGERParserRuleCall_8_0() { return cOffsetINTEGERParserRuleCall_8_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_11() { return cSemicolonKeyword_11; }
 	}
 	public class GSSEnvironmentMainInterfaceElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSEnvironmentMainInterface");
@@ -5503,6 +5616,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSEnvironmentGSSDiscardErrorFlagsElements pGSSEnvironmentGSSDiscardErrorFlags;
 	private final GSSEnvironmentEnableDisableElements eGSSEnvironmentEnableDisable;
 	private final GSSEnvironmentProtocolElements pGSSEnvironmentProtocol;
+	private final GSSEnvironmentProtocolTypeElements pGSSEnvironmentProtocolType;
+	private final GSSEnvironmentProtocolSubtypeElements pGSSEnvironmentProtocolSubtype;
 	private final GSSEnvironmentMainInterfaceElements pGSSEnvironmentMainInterface;
 	private final GSSEnvironmentInterfaceElements pGSSEnvironmentInterface;
 	private final GSSEnvironmentLevelInOutElements pGSSEnvironmentLevelInOut;
@@ -5575,6 +5690,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGSSEnvironmentGSSDiscardErrorFlags = new GSSEnvironmentGSSDiscardErrorFlagsElements();
 		this.eGSSEnvironmentEnableDisable = new GSSEnvironmentEnableDisableElements();
 		this.pGSSEnvironmentProtocol = new GSSEnvironmentProtocolElements();
+		this.pGSSEnvironmentProtocolType = new GSSEnvironmentProtocolTypeElements();
+		this.pGSSEnvironmentProtocolSubtype = new GSSEnvironmentProtocolSubtypeElements();
 		this.pGSSEnvironmentMainInterface = new GSSEnvironmentMainInterfaceElements();
 		this.pGSSEnvironmentInterface = new GSSEnvironmentInterfaceElements();
 		this.pGSSEnvironmentLevelInOut = new GSSEnvironmentLevelInOutElements();
@@ -5868,7 +5985,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'id' ':=' id=INTEGER ';'
 	//	'name' ':=' name=ID ';'
 	//	'typeLevel' ':=' typeLevel=INTEGER ';'
-	//	'typeOffset' ':=' typeOffset=INTEGER ';' ('subtypeOffset' ':=' subtypeOffset=INTEGER ';')?
+	//	type=GSSEnvironmentProtocolType
+	//	subtype=GSSEnvironmentProtocolSubtype?
 	//	'}' ';';
 	public GSSEnvironmentProtocolElements getGSSEnvironmentProtocolAccess() {
 		return pGSSEnvironmentProtocol;
@@ -5876,6 +5994,32 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getGSSEnvironmentProtocolRule() {
 		return getGSSEnvironmentProtocolAccess().getRule();
+	}
+	
+	//GSSEnvironmentProtocolType:
+	//	'GSSEnvironmentProtocolType' '{'
+	//	'name' ':=' name=STRING ';'
+	//	'offset' ':=' offset=INTEGER ';'
+	//	'}' ';';
+	public GSSEnvironmentProtocolTypeElements getGSSEnvironmentProtocolTypeAccess() {
+		return pGSSEnvironmentProtocolType;
+	}
+	
+	public ParserRule getGSSEnvironmentProtocolTypeRule() {
+		return getGSSEnvironmentProtocolTypeAccess().getRule();
+	}
+	
+	//GSSEnvironmentProtocolSubtype GSSEnvironmentProtocolType:
+	//	'GSSEnvironmentProtocolSubtype' '{'
+	//	'name' ':=' name=STRING ';'
+	//	'offset' ':=' offset=INTEGER ';'
+	//	'}' ';'
+	public GSSEnvironmentProtocolSubtypeElements getGSSEnvironmentProtocolSubtypeAccess() {
+		return pGSSEnvironmentProtocolSubtype;
+	}
+	
+	public ParserRule getGSSEnvironmentProtocolSubtypeRule() {
+		return getGSSEnvironmentProtocolSubtypeAccess().getRule();
 	}
 	
 	//GSSEnvironmentMainInterface:

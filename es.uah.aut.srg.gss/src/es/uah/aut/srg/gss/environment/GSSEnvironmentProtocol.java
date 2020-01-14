@@ -24,8 +24,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getTypeLevel <em>Type Level</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getTypeOffset <em>Type Offset</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getSubtypeOffset <em>Subtype Offset</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getType <em>Type</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getSubtype <em>Subtype</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentProtocol()
@@ -112,55 +112,55 @@ public interface GSSEnvironmentProtocol extends EObject {
 	void setTypeLevel(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Type Offset</b></em>' attribute.
+	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Type Offset</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type Offset</em>' attribute.
-	 * @see #setTypeOffset(String)
-	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentProtocol_TypeOffset()
-	 * @model required="true"
+	 * @return the value of the '<em>Type</em>' containment reference.
+	 * @see #setType(GSSEnvironmentProtocolType)
+	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentProtocol_Type()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	String getTypeOffset();
+	GSSEnvironmentProtocolType getType();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getTypeOffset <em>Type Offset</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getType <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type Offset</em>' attribute.
-	 * @see #getTypeOffset()
+	 * @param value the new value of the '<em>Type</em>' containment reference.
+	 * @see #getType()
 	 * @generated
 	 */
-	void setTypeOffset(String value);
+	void setType(GSSEnvironmentProtocolType value);
 
 	/**
-	 * Returns the value of the '<em><b>Subtype Offset</b></em>' attribute.
+	 * Returns the value of the '<em><b>Subtype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Subtype Offset</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Subtype</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Subtype Offset</em>' attribute.
-	 * @see #setSubtypeOffset(String)
-	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentProtocol_SubtypeOffset()
-	 * @model
+	 * @return the value of the '<em>Subtype</em>' containment reference.
+	 * @see #setSubtype(GSSEnvironmentProtocolType)
+	 * @see es.uah.aut.srg.gss.environment.environmentPackage#getGSSEnvironmentProtocol_Subtype()
+	 * @model containment="true"
 	 * @generated
 	 */
-	String getSubtypeOffset();
+	GSSEnvironmentProtocolType getSubtype();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getSubtypeOffset <em>Subtype Offset</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getSubtype <em>Subtype</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Subtype Offset</em>' attribute.
-	 * @see #getSubtypeOffset()
+	 * @param value the new value of the '<em>Subtype</em>' containment reference.
+	 * @see #getSubtype()
 	 * @generated
 	 */
-	void setSubtypeOffset(String value);
+	void setSubtype(GSSEnvironmentProtocolType value);
 
 } // GSSEnvironmentProtocol

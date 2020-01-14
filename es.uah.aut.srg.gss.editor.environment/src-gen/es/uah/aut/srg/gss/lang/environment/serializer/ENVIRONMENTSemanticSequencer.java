@@ -43,6 +43,7 @@ import es.uah.aut.srg.gss.environment.GSSEnvironmentPhyHeaderPrint;
 import es.uah.aut.srg.gss.environment.GSSEnvironmentPlot;
 import es.uah.aut.srg.gss.environment.GSSEnvironmentPrintingData;
 import es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol;
+import es.uah.aut.srg.gss.environment.GSSEnvironmentProtocolType;
 import es.uah.aut.srg.gss.environment.GSSEnvironmentProtocols;
 import es.uah.aut.srg.gss.environment.GSSEnvironmentReferenceField;
 import es.uah.aut.srg.gss.environment.GSSEnvironmentReferencePeriodicTC;
@@ -176,6 +177,16 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL:
 				sequence_GSSEnvironmentProtocol(context, (GSSEnvironmentProtocol) semanticObject); 
 				return; 
+			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL_TYPE:
+				if (rule == grammarAccess.getGSSEnvironmentProtocolSubtypeRule()) {
+					sequence_GSSEnvironmentProtocolSubtype(context, (GSSEnvironmentProtocolType) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getGSSEnvironmentProtocolTypeRule()) {
+					sequence_GSSEnvironmentProtocolType(context, (GSSEnvironmentProtocolType) semanticObject); 
+					return; 
+				}
+				else break;
 			case environmentPackage.GSS_ENVIRONMENT_PROTOCOLS:
 				sequence_GSSEnvironmentProtocols(context, (GSSEnvironmentProtocols) semanticObject); 
 				return; 
@@ -743,10 +754,52 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Contexts:
+	 *     GSSEnvironmentProtocolSubtype returns GSSEnvironmentProtocolType
+	 *
+	 * Constraint:
+	 *     (name=STRING offset=INTEGER)
+	 */
+	protected void sequence_GSSEnvironmentProtocolSubtype(ISerializationContext context, GSSEnvironmentProtocolType semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, environmentPackage.Literals.GSS_ENVIRONMENT_PROTOCOL_TYPE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, environmentPackage.Literals.GSS_ENVIRONMENT_PROTOCOL_TYPE__NAME));
+			if (transientValues.isValueTransient(semanticObject, environmentPackage.Literals.GSS_ENVIRONMENT_PROTOCOL_TYPE__OFFSET) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, environmentPackage.Literals.GSS_ENVIRONMENT_PROTOCOL_TYPE__OFFSET));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGSSEnvironmentProtocolSubtypeAccess().getNameSTRINGTerminalRuleCall_4_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGSSEnvironmentProtocolSubtypeAccess().getOffsetINTEGERParserRuleCall_8_0(), semanticObject.getOffset());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     GSSEnvironmentProtocolType returns GSSEnvironmentProtocolType
+	 *
+	 * Constraint:
+	 *     (name=STRING offset=INTEGER)
+	 */
+	protected void sequence_GSSEnvironmentProtocolType(ISerializationContext context, GSSEnvironmentProtocolType semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, environmentPackage.Literals.GSS_ENVIRONMENT_PROTOCOL_TYPE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, environmentPackage.Literals.GSS_ENVIRONMENT_PROTOCOL_TYPE__NAME));
+			if (transientValues.isValueTransient(semanticObject, environmentPackage.Literals.GSS_ENVIRONMENT_PROTOCOL_TYPE__OFFSET) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, environmentPackage.Literals.GSS_ENVIRONMENT_PROTOCOL_TYPE__OFFSET));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGSSEnvironmentProtocolTypeAccess().getNameSTRINGTerminalRuleCall_4_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGSSEnvironmentProtocolTypeAccess().getOffsetINTEGERParserRuleCall_8_0(), semanticObject.getOffset());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     GSSEnvironmentProtocol returns GSSEnvironmentProtocol
 	 *
 	 * Constraint:
-	 *     (id=INTEGER name=ID typeLevel=INTEGER typeOffset=INTEGER subtypeOffset=INTEGER?)
+	 *     (id=INTEGER name=ID typeLevel=INTEGER type=GSSEnvironmentProtocolType subtype=GSSEnvironmentProtocolSubtype?)
 	 */
 	protected void sequence_GSSEnvironmentProtocol(ISerializationContext context, GSSEnvironmentProtocol semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

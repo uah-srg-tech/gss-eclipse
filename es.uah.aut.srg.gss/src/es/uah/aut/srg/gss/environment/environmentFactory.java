@@ -111,6 +111,15 @@ public interface environmentFactory extends EFactory {
 	GSSEnvironmentProtocol createGSSEnvironmentProtocol();
 
 	/**
+	 * Returns a new object of class '<em>GSS Environment Protocol Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Environment Protocol Type</em>'.
+	 * @generated
+	 */
+	GSSEnvironmentProtocolType createGSSEnvironmentProtocolType();
+
+	/**
 	 * Returns a new object of class '<em>GSS Environment Interfaces</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

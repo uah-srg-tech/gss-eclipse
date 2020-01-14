@@ -11,12 +11,15 @@
 package es.uah.aut.srg.gss.environment.impl;
 
 import es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol;
+import es.uah.aut.srg.gss.environment.GSSEnvironmentProtocolType;
 import es.uah.aut.srg.gss.environment.environmentPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -31,8 +34,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentProtocolImpl#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentProtocolImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentProtocolImpl#getTypeLevel <em>Type Level</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentProtocolImpl#getTypeOffset <em>Type Offset</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentProtocolImpl#getSubtypeOffset <em>Subtype Offset</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentProtocolImpl#getType <em>Type</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentProtocolImpl#getSubtype <em>Subtype</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,44 +102,24 @@ public class GSSEnvironmentProtocolImpl extends MinimalEObjectImpl.Container imp
 	protected String typeLevel = TYPE_LEVEL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTypeOffset() <em>Type Offset</em>}' attribute.
+	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTypeOffset()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_OFFSET_EDEFAULT = null;
+	protected GSSEnvironmentProtocolType type;
 
 	/**
-	 * The cached value of the '{@link #getTypeOffset() <em>Type Offset</em>}' attribute.
+	 * The cached value of the '{@link #getSubtype() <em>Subtype</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTypeOffset()
+	 * @see #getSubtype()
 	 * @generated
 	 * @ordered
 	 */
-	protected String typeOffset = TYPE_OFFSET_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getSubtypeOffset() <em>Subtype Offset</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubtypeOffset()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SUBTYPE_OFFSET_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSubtypeOffset() <em>Subtype Offset</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubtypeOffset()
-	 * @generated
-	 * @ordered
-	 */
-	protected String subtypeOffset = SUBTYPE_OFFSET_EDEFAULT;
+	protected GSSEnvironmentProtocolType subtype;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -225,8 +208,8 @@ public class GSSEnvironmentProtocolImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTypeOffset() {
-		return typeOffset;
+	public GSSEnvironmentProtocolType getType() {
+		return type;
 	}
 
 	/**
@@ -234,11 +217,14 @@ public class GSSEnvironmentProtocolImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTypeOffset(String newTypeOffset) {
-		String oldTypeOffset = typeOffset;
-		typeOffset = newTypeOffset;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE_OFFSET, oldTypeOffset, typeOffset));
+	public NotificationChain basicSetType(GSSEnvironmentProtocolType newType, NotificationChain msgs) {
+		GSSEnvironmentProtocolType oldType = type;
+		type = newType;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE, oldType, newType);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -246,8 +232,18 @@ public class GSSEnvironmentProtocolImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSubtypeOffset() {
-		return subtypeOffset;
+	public void setType(GSSEnvironmentProtocolType newType) {
+		if (newType != type) {
+			NotificationChain msgs = null;
+			if (type != null)
+				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE, null, msgs);
+			if (newType != null)
+				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE, null, msgs);
+			msgs = basicSetType(newType, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE, newType, newType));
 	}
 
 	/**
@@ -255,11 +251,58 @@ public class GSSEnvironmentProtocolImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSubtypeOffset(String newSubtypeOffset) {
-		String oldSubtypeOffset = subtypeOffset;
-		subtypeOffset = newSubtypeOffset;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, environmentPackage.GSS_ENVIRONMENT_PROTOCOL__SUBTYPE_OFFSET, oldSubtypeOffset, subtypeOffset));
+	public GSSEnvironmentProtocolType getSubtype() {
+		return subtype;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSubtype(GSSEnvironmentProtocolType newSubtype, NotificationChain msgs) {
+		GSSEnvironmentProtocolType oldSubtype = subtype;
+		subtype = newSubtype;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, environmentPackage.GSS_ENVIRONMENT_PROTOCOL__SUBTYPE, oldSubtype, newSubtype);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSubtype(GSSEnvironmentProtocolType newSubtype) {
+		if (newSubtype != subtype) {
+			NotificationChain msgs = null;
+			if (subtype != null)
+				msgs = ((InternalEObject)subtype).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - environmentPackage.GSS_ENVIRONMENT_PROTOCOL__SUBTYPE, null, msgs);
+			if (newSubtype != null)
+				msgs = ((InternalEObject)newSubtype).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - environmentPackage.GSS_ENVIRONMENT_PROTOCOL__SUBTYPE, null, msgs);
+			msgs = basicSetSubtype(newSubtype, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, environmentPackage.GSS_ENVIRONMENT_PROTOCOL__SUBTYPE, newSubtype, newSubtype));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE:
+				return basicSetType(null, msgs);
+			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__SUBTYPE:
+				return basicSetSubtype(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -276,10 +319,10 @@ public class GSSEnvironmentProtocolImpl extends MinimalEObjectImpl.Container imp
 				return getName();
 			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE_LEVEL:
 				return getTypeLevel();
-			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE_OFFSET:
-				return getTypeOffset();
-			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__SUBTYPE_OFFSET:
-				return getSubtypeOffset();
+			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE:
+				return getType();
+			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__SUBTYPE:
+				return getSubtype();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -301,11 +344,11 @@ public class GSSEnvironmentProtocolImpl extends MinimalEObjectImpl.Container imp
 			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE_LEVEL:
 				setTypeLevel((String)newValue);
 				return;
-			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE_OFFSET:
-				setTypeOffset((String)newValue);
+			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE:
+				setType((GSSEnvironmentProtocolType)newValue);
 				return;
-			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__SUBTYPE_OFFSET:
-				setSubtypeOffset((String)newValue);
+			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__SUBTYPE:
+				setSubtype((GSSEnvironmentProtocolType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -328,11 +371,11 @@ public class GSSEnvironmentProtocolImpl extends MinimalEObjectImpl.Container imp
 			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE_LEVEL:
 				setTypeLevel(TYPE_LEVEL_EDEFAULT);
 				return;
-			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE_OFFSET:
-				setTypeOffset(TYPE_OFFSET_EDEFAULT);
+			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE:
+				setType((GSSEnvironmentProtocolType)null);
 				return;
-			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__SUBTYPE_OFFSET:
-				setSubtypeOffset(SUBTYPE_OFFSET_EDEFAULT);
+			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__SUBTYPE:
+				setSubtype((GSSEnvironmentProtocolType)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -352,10 +395,10 @@ public class GSSEnvironmentProtocolImpl extends MinimalEObjectImpl.Container imp
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE_LEVEL:
 				return TYPE_LEVEL_EDEFAULT == null ? typeLevel != null : !TYPE_LEVEL_EDEFAULT.equals(typeLevel);
-			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE_OFFSET:
-				return TYPE_OFFSET_EDEFAULT == null ? typeOffset != null : !TYPE_OFFSET_EDEFAULT.equals(typeOffset);
-			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__SUBTYPE_OFFSET:
-				return SUBTYPE_OFFSET_EDEFAULT == null ? subtypeOffset != null : !SUBTYPE_OFFSET_EDEFAULT.equals(subtypeOffset);
+			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__TYPE:
+				return type != null;
+			case environmentPackage.GSS_ENVIRONMENT_PROTOCOL__SUBTYPE:
+				return subtype != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -376,10 +419,6 @@ public class GSSEnvironmentProtocolImpl extends MinimalEObjectImpl.Container imp
 		result.append(name);
 		result.append(", typeLevel: ");
 		result.append(typeLevel);
-		result.append(", typeOffset: ");
-		result.append(typeOffset);
-		result.append(", subtypeOffset: ");
-		result.append(subtypeOffset);
 		result.append(')');
 		return result.toString();
 	}

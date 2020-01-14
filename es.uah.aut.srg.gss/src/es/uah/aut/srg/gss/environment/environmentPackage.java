@@ -626,22 +626,22 @@ public interface environmentPackage extends EPackage {
 	int GSS_ENVIRONMENT_PROTOCOL__TYPE_LEVEL = 2;
 
 	/**
-	 * The feature id for the '<em><b>Type Offset</b></em>' attribute.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_ENVIRONMENT_PROTOCOL__TYPE_OFFSET = 3;
+	int GSS_ENVIRONMENT_PROTOCOL__TYPE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Subtype Offset</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_ENVIRONMENT_PROTOCOL__SUBTYPE_OFFSET = 4;
+	int GSS_ENVIRONMENT_PROTOCOL__SUBTYPE = 4;
 
 	/**
 	 * The number of structural features of the '<em>GSS Environment Protocol</em>' class.
@@ -662,6 +662,52 @@ public interface environmentPackage extends EPackage {
 	int GSS_ENVIRONMENT_PROTOCOL_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentProtocolTypeImpl <em>GSS Environment Protocol Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.environment.impl.GSSEnvironmentProtocolTypeImpl
+	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentProtocolType()
+	 * @generated
+	 */
+	int GSS_ENVIRONMENT_PROTOCOL_TYPE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_ENVIRONMENT_PROTOCOL_TYPE__OFFSET = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_ENVIRONMENT_PROTOCOL_TYPE__NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>GSS Environment Protocol Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_ENVIRONMENT_PROTOCOL_TYPE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>GSS Environment Protocol Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_ENVIRONMENT_PROTOCOL_TYPE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentInterfacesImpl <em>GSS Environment Interfaces</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -669,7 +715,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentInterfaces()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_INTERFACES = 9;
+	int GSS_ENVIRONMENT_INTERFACES = 10;
 
 	/**
 	 * The feature id for the '<em><b>Protocol Packets File</b></em>' reference.
@@ -724,7 +770,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentInterface()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_INTERFACE = 11;
+	int GSS_ENVIRONMENT_INTERFACE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -833,7 +879,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentMainInterface()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_MAIN_INTERFACE = 10;
+	int GSS_ENVIRONMENT_MAIN_INTERFACE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -942,7 +988,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentLevelInOut()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_LEVEL_IN_OUT = 12;
+	int GSS_ENVIRONMENT_LEVEL_IN_OUT = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1033,7 +1079,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentLevelIn()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_LEVEL_IN = 13;
+	int GSS_ENVIRONMENT_LEVEL_IN = 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1097,7 +1143,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentLevelOut()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_LEVEL_OUT = 14;
+	int GSS_ENVIRONMENT_LEVEL_OUT = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1170,7 +1216,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentSpecialPackets()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_SPECIAL_PACKETS = 15;
+	int GSS_ENVIRONMENT_SPECIAL_PACKETS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Special Packet</b></em>' containment reference list.
@@ -1207,7 +1253,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentSpecialPacket()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_SPECIAL_PACKET = 16;
+	int GSS_ENVIRONMENT_SPECIAL_PACKET = 17;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -1334,7 +1380,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentUpperLevels()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_UPPER_LEVELS = 17;
+	int GSS_ENVIRONMENT_UPPER_LEVELS = 18;
 
 	/**
 	 * The feature id for the '<em><b>Upper Level</b></em>' containment reference list.
@@ -1371,7 +1417,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentUpperLevel()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_UPPER_LEVEL = 18;
+	int GSS_ENVIRONMENT_UPPER_LEVEL = 19;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -1435,7 +1481,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentPrintingData()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_PRINTING_DATA = 19;
+	int GSS_ENVIRONMENT_PRINTING_DATA = 20;
 
 	/**
 	 * The feature id for the '<em><b>Print Status</b></em>' attribute.
@@ -1481,7 +1527,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentStructuredData()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_STRUCTURED_DATA = 20;
+	int GSS_ENVIRONMENT_STRUCTURED_DATA = 21;
 
 	/**
 	 * The feature id for the '<em><b>Level Ref</b></em>' attribute.
@@ -1527,7 +1573,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentPeriod()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_PERIOD = 21;
+	int GSS_ENVIRONMENT_PERIOD = 22;
 
 	/**
 	 * The feature id for the '<em><b>Min value</b></em>' attribute.
@@ -1591,7 +1637,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentIntervalRange()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_INTERVAL_RANGE = 22;
+	int GSS_ENVIRONMENT_INTERVAL_RANGE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' attribute.
@@ -1655,7 +1701,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentPeriodicTCs()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_PERIODIC_TCS = 23;
+	int GSS_ENVIRONMENT_PERIODIC_TCS = 24;
 
 	/**
 	 * The feature id for the '<em><b>Periodic TC level 2</b></em>' containment reference list.
@@ -1710,7 +1756,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentPeriodicTC()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_PERIODIC_TC = 24;
+	int GSS_ENVIRONMENT_PERIODIC_TC = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1783,7 +1829,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentPeriodicTCLevel2()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_PERIODIC_TC_LEVEL2 = 25;
+	int GSS_ENVIRONMENT_PERIODIC_TC_LEVEL2 = 26;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1910,7 +1956,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentPeriodicTCLevel1()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_PERIODIC_TC_LEVEL1 = 26;
+	int GSS_ENVIRONMENT_PERIODIC_TC_LEVEL1 = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2019,7 +2065,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentPeriodicTCLevel0()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_PERIODIC_TC_LEVEL0 = 27;
+	int GSS_ENVIRONMENT_PERIODIC_TC_LEVEL0 = 28;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2110,7 +2156,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentGlobalVars()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_GLOBAL_VARS = 28;
+	int GSS_ENVIRONMENT_GLOBAL_VARS = 29;
 
 	/**
 	 * The feature id for the '<em><b>Global Var</b></em>' containment reference list.
@@ -2147,7 +2193,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentGlobalVar()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_GLOBAL_VAR = 29;
+	int GSS_ENVIRONMENT_GLOBAL_VAR = 30;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2238,7 +2284,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentReferenceField()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_REFERENCE_FIELD = 30;
+	int GSS_ENVIRONMENT_REFERENCE_FIELD = 31;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2320,7 +2366,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentReferencePeriodicTC()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_REFERENCE_PERIODIC_TC = 31;
+	int GSS_ENVIRONMENT_REFERENCE_PERIODIC_TC = 32;
 
 	/**
 	 * The feature id for the '<em><b>Id Ref</b></em>' reference.
@@ -2393,7 +2439,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentReferenceSpecialPacket()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_REFERENCE_SPECIAL_PACKET = 32;
+	int GSS_ENVIRONMENT_REFERENCE_SPECIAL_PACKET = 33;
 
 	/**
 	 * The feature id for the '<em><b>Id Ref</b></em>' reference.
@@ -2466,7 +2512,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentMonitors()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_MONITORS = 33;
+	int GSS_ENVIRONMENT_MONITORS = 34;
 
 	/**
 	 * The feature id for the '<em><b>Charts File</b></em>' reference.
@@ -2539,7 +2585,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentPlot()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_PLOT = 34;
+	int GSS_ENVIRONMENT_PLOT = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2603,7 +2649,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentAlarmMsg()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_ALARM_MSG = 35;
+	int GSS_ENVIRONMENT_ALARM_MSG = 36;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2676,7 +2722,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentModify()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_MODIFY = 36;
+	int GSS_ENVIRONMENT_MODIFY = 37;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2749,7 +2795,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentAlarmVal()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_ALARM_VAL = 37;
+	int GSS_ENVIRONMENT_ALARM_VAL = 38;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2813,7 +2859,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentGVFiltered()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_GV_FILTERED = 38;
+	int GSS_ENVIRONMENT_GV_FILTERED = 39;
 
 	/**
 	 * The feature id for the '<em><b>Global Var Ref</b></em>' reference.
@@ -2859,7 +2905,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentGVPeriodic()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_GV_PERIODIC = 39;
+	int GSS_ENVIRONMENT_GV_PERIODIC = 40;
 
 	/**
 	 * The feature id for the '<em><b>Global Var Ref</b></em>' reference.
@@ -2914,7 +2960,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentEnableDisable()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_ENABLE_DISABLE = 40;
+	int GSS_ENVIRONMENT_ENABLE_DISABLE = 41;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentInterfaceType <em>GSS Environment Interface Type</em>}' enum.
@@ -2924,7 +2970,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentInterfaceType()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_INTERFACE_TYPE = 41;
+	int GSS_ENVIRONMENT_INTERFACE_TYPE = 42;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentInterfaceIOType <em>GSS Environment Interface IO Type</em>}' enum.
@@ -2934,7 +2980,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentInterfaceIOType()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_INTERFACE_IO_TYPE = 42;
+	int GSS_ENVIRONMENT_INTERFACE_IO_TYPE = 43;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentUpperLevelLevel <em>GSS Environment Upper Level Level</em>}' enum.
@@ -2944,7 +2990,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentUpperLevelLevel()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_UPPER_LEVEL_LEVEL = 43;
+	int GSS_ENVIRONMENT_UPPER_LEVEL_LEVEL = 44;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentUnit <em>GSS Environment Unit</em>}' enum.
@@ -2954,7 +3000,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentUnit()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_UNIT = 44;
+	int GSS_ENVIRONMENT_UNIT = 45;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentGlobalVarType <em>GSS Environment Global Var Type</em>}' enum.
@@ -2964,7 +3010,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentGlobalVarType()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_GLOBAL_VAR_TYPE = 45;
+	int GSS_ENVIRONMENT_GLOBAL_VAR_TYPE = 46;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentReferenceFieldType <em>GSS Environment Reference Field Type</em>}' enum.
@@ -2974,7 +3020,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentReferenceFieldType()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_REFERENCE_FIELD_TYPE = 46;
+	int GSS_ENVIRONMENT_REFERENCE_FIELD_TYPE = 47;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentAlarmMsgType <em>GSS Environment Alarm Msg Type</em>}' enum.
@@ -2984,7 +3030,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentAlarmMsgType()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_ALARM_MSG_TYPE = 47;
+	int GSS_ENVIRONMENT_ALARM_MSG_TYPE = 48;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentModifyType <em>GSS Environment Modify Type</em>}' enum.
@@ -2994,7 +3040,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentModifyType()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_MODIFY_TYPE = 48;
+	int GSS_ENVIRONMENT_MODIFY_TYPE = 49;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentAlarmValType <em>GSS Environment Alarm Val Type</em>}' enum.
@@ -3004,7 +3050,7 @@ public interface environmentPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentAlarmValType()
 	 * @generated
 	 */
-	int GSS_ENVIRONMENT_ALARM_VAL_TYPE = 49;
+	int GSS_ENVIRONMENT_ALARM_VAL_TYPE = 50;
 
 
 	/**
@@ -3450,26 +3496,58 @@ public interface environmentPackage extends EPackage {
 	EAttribute getGSSEnvironmentProtocol_TypeLevel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getTypeOffset <em>Type Offset</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type Offset</em>'.
-	 * @see es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getTypeOffset()
+	 * @return the meta object for the containment reference '<em>Type</em>'.
+	 * @see es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getType()
 	 * @see #getGSSEnvironmentProtocol()
 	 * @generated
 	 */
-	EAttribute getGSSEnvironmentProtocol_TypeOffset();
+	EReference getGSSEnvironmentProtocol_Type();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getSubtypeOffset <em>Subtype Offset</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getSubtype <em>Subtype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Subtype Offset</em>'.
-	 * @see es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getSubtypeOffset()
+	 * @return the meta object for the containment reference '<em>Subtype</em>'.
+	 * @see es.uah.aut.srg.gss.environment.GSSEnvironmentProtocol#getSubtype()
 	 * @see #getGSSEnvironmentProtocol()
 	 * @generated
 	 */
-	EAttribute getGSSEnvironmentProtocol_SubtypeOffset();
+	EReference getGSSEnvironmentProtocol_Subtype();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocolType <em>GSS Environment Protocol Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Environment Protocol Type</em>'.
+	 * @see es.uah.aut.srg.gss.environment.GSSEnvironmentProtocolType
+	 * @generated
+	 */
+	EClass getGSSEnvironmentProtocolType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocolType#getOffset <em>Offset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Offset</em>'.
+	 * @see es.uah.aut.srg.gss.environment.GSSEnvironmentProtocolType#getOffset()
+	 * @see #getGSSEnvironmentProtocolType()
+	 * @generated
+	 */
+	EAttribute getGSSEnvironmentProtocolType_Offset();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentProtocolType#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.gss.environment.GSSEnvironmentProtocolType#getName()
+	 * @see #getGSSEnvironmentProtocolType()
+	 * @generated
+	 */
+	EAttribute getGSSEnvironmentProtocolType_Name();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.environment.GSSEnvironmentInterfaces <em>GSS Environment Interfaces</em>}'.
@@ -5670,20 +5748,46 @@ public interface environmentPackage extends EPackage {
 		EAttribute GSS_ENVIRONMENT_PROTOCOL__TYPE_LEVEL = eINSTANCE.getGSSEnvironmentProtocol_TypeLevel();
 
 		/**
-		 * The meta object literal for the '<em><b>Type Offset</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_ENVIRONMENT_PROTOCOL__TYPE_OFFSET = eINSTANCE.getGSSEnvironmentProtocol_TypeOffset();
+		EReference GSS_ENVIRONMENT_PROTOCOL__TYPE = eINSTANCE.getGSSEnvironmentProtocol_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>Subtype Offset</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Subtype</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_ENVIRONMENT_PROTOCOL__SUBTYPE_OFFSET = eINSTANCE.getGSSEnvironmentProtocol_SubtypeOffset();
+		EReference GSS_ENVIRONMENT_PROTOCOL__SUBTYPE = eINSTANCE.getGSSEnvironmentProtocol_Subtype();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentProtocolTypeImpl <em>GSS Environment Protocol Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.environment.impl.GSSEnvironmentProtocolTypeImpl
+		 * @see es.uah.aut.srg.gss.environment.impl.environmentPackageImpl#getGSSEnvironmentProtocolType()
+		 * @generated
+		 */
+		EClass GSS_ENVIRONMENT_PROTOCOL_TYPE = eINSTANCE.getGSSEnvironmentProtocolType();
+
+		/**
+		 * The meta object literal for the '<em><b>Offset</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_ENVIRONMENT_PROTOCOL_TYPE__OFFSET = eINSTANCE.getGSSEnvironmentProtocolType_Offset();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_ENVIRONMENT_PROTOCOL_TYPE__NAME = eINSTANCE.getGSSEnvironmentProtocolType_Name();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.environment.impl.GSSEnvironmentInterfacesImpl <em>GSS Environment Interfaces</em>}' class.
