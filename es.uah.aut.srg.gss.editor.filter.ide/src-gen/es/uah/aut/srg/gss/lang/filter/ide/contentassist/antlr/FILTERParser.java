@@ -45,7 +45,7 @@ public class FILTERParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSFilterFilterAccess().getAlternatives(), "rule__GSSFilterFilter__Alternatives");
 					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getAlternatives_3_1_5(), "rule__GSSFilterMaxtermFilter__Alternatives_3_1_5");
 					put(grammarAccess.getGSSFilterMintermFilterAccess().getAlternatives_3_1_5(), "rule__GSSFilterMintermFilter__Alternatives_3_1_5");
-					put(grammarAccess.getGSSFilterBoolVarAccess().getAlternatives_19(), "rule__GSSFilterBoolVar__Alternatives_19");
+					put(grammarAccess.getGSSFilterValueAccess().getAlternatives(), "rule__GSSFilterValue__Alternatives");
 					put(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAlternatives_19(), "rule__GSSFilterBoolVarFromArrayItem__Alternatives_19");
 					put(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAlternatives_23(), "rule__GSSFilterBoolVarFromGroupedArrayItem__Alternatives_23");
 					put(grammarAccess.getVersionAccess().getAlternatives_0(), "rule__Version__Alternatives_0");
@@ -119,9 +119,7 @@ public class FILTERParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSFilterBoolVarAccess().getConstantTypeAssignment_12(), "rule__GSSFilterBoolVar__ConstantTypeAssignment_12");
 					put(grammarAccess.getGSSFilterBoolVarAccess().getFieldRefAssignment_16(), "rule__GSSFilterBoolVar__FieldRefAssignment_16");
 					put(grammarAccess.getGSSFilterBoolVarAccess().getOpAssignment_18(), "rule__GSSFilterBoolVar__OpAssignment_18");
-					put(grammarAccess.getGSSFilterBoolVarAccess().getConstantAssignment_19_0(), "rule__GSSFilterBoolVar__ConstantAssignment_19_0");
-					put(grammarAccess.getGSSFilterBoolVarAccess().getSelectAssignment_19_1(), "rule__GSSFilterBoolVar__SelectAssignment_19_1");
-					put(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineAssignment_19_2(), "rule__GSSFilterBoolVar__SelectLineAssignment_19_2");
+					put(grammarAccess.getGSSFilterBoolVarAccess().getValueAssignment_19(), "rule__GSSFilterBoolVar__ValueAssignment_19");
 					put(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getIdAssignment_4(), "rule__GSSFilterBoolVarFromArrayItem__IdAssignment_4");
 					put(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getNameAssignment_8(), "rule__GSSFilterBoolVarFromArrayItem__NameAssignment_8");
 					put(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantTypeAssignment_12(), "rule__GSSFilterBoolVarFromArrayItem__ConstantTypeAssignment_12");

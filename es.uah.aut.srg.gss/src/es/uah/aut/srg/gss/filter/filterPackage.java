@@ -468,31 +468,13 @@ public interface filterPackage extends EPackage {
 	int GSS_FILTER_BOOL_VAR__OP = 4;
 
 	/**
-	 * The feature id for the '<em><b>Constant</b></em>' containment reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_BOOL_VAR__CONSTANT = 5;
-
-	/**
-	 * The feature id for the '<em><b>Select</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_BOOL_VAR__SELECT = 6;
-
-	/**
-	 * The feature id for the '<em><b>Select Line</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_BOOL_VAR__SELECT_LINE = 7;
+	int GSS_FILTER_BOOL_VAR__VALUE = 5;
 
 	/**
 	 * The number of structural features of the '<em>GSS Filter Bool Var</em>' class.
@@ -501,7 +483,7 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_BOOL_VAR_FEATURE_COUNT = 8;
+	int GSS_FILTER_BOOL_VAR_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>GSS Filter Bool Var</em>' class.
@@ -550,23 +532,14 @@ public interface filterPackage extends EPackage {
 	int GSS_FILTER_FIELD_OP_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterConstantImpl <em>GSS Filter Constant</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterValueImpl <em>GSS Filter Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.filter.impl.GSSFilterConstantImpl
-	 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterConstant()
+	 * @see es.uah.aut.srg.gss.filter.impl.GSSFilterValueImpl
+	 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterValue()
 	 * @generated
 	 */
-	int GSS_FILTER_CONSTANT = 5;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_CONSTANT__VALUE = 0;
+	int GSS_FILTER_VALUE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Mask</b></em>' attribute.
@@ -575,7 +548,53 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_CONSTANT__MASK = 1;
+	int GSS_FILTER_VALUE__MASK = 0;
+
+	/**
+	 * The number of structural features of the '<em>GSS Filter Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_VALUE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>GSS Filter Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_VALUE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterConstantImpl <em>GSS Filter Constant</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.filter.impl.GSSFilterConstantImpl
+	 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterConstant()
+	 * @generated
+	 */
+	int GSS_FILTER_CONSTANT = 6;
+
+	/**
+	 * The feature id for the '<em><b>Mask</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_CONSTANT__MASK = GSS_FILTER_VALUE__MASK;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_CONSTANT__VALUE = GSS_FILTER_VALUE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Filter Constant</em>' class.
@@ -584,7 +603,7 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_CONSTANT_FEATURE_COUNT = 2;
+	int GSS_FILTER_CONSTANT_FEATURE_COUNT = GSS_FILTER_VALUE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Filter Constant</em>' class.
@@ -593,7 +612,7 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_CONSTANT_OPERATION_COUNT = 0;
+	int GSS_FILTER_CONSTANT_OPERATION_COUNT = GSS_FILTER_VALUE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterSelectImpl <em>GSS Filter Select</em>}' class.
@@ -603,43 +622,7 @@ public interface filterPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterSelect()
 	 * @generated
 	 */
-	int GSS_FILTER_SELECT = 6;
-
-	/**
-	 * The feature id for the '<em><b>From File</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_SELECT__FROM_FILE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_SELECT__TYPE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Offset</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_SELECT__OFFSET = 2;
-
-	/**
-	 * The feature id for the '<em><b>Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_SELECT__SIZE = 3;
+	int GSS_FILTER_SELECT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Mask</b></em>' attribute.
@@ -648,7 +631,43 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_SELECT__MASK = 4;
+	int GSS_FILTER_SELECT__MASK = GSS_FILTER_VALUE__MASK;
+
+	/**
+	 * The feature id for the '<em><b>From File</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_SELECT__FROM_FILE = GSS_FILTER_VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_SELECT__TYPE = GSS_FILTER_VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_SELECT__OFFSET = GSS_FILTER_VALUE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_SELECT__SIZE = GSS_FILTER_VALUE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>GSS Filter Select</em>' class.
@@ -657,7 +676,7 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_SELECT_FEATURE_COUNT = 5;
+	int GSS_FILTER_SELECT_FEATURE_COUNT = GSS_FILTER_VALUE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>GSS Filter Select</em>' class.
@@ -666,7 +685,7 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_SELECT_OPERATION_COUNT = 0;
+	int GSS_FILTER_SELECT_OPERATION_COUNT = GSS_FILTER_VALUE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterSelectLineImpl <em>GSS Filter Select Line</em>}' class.
@@ -676,43 +695,7 @@ public interface filterPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterSelectLine()
 	 * @generated
 	 */
-	int GSS_FILTER_SELECT_LINE = 7;
-
-	/**
-	 * The feature id for the '<em><b>From File</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_SELECT_LINE__FROM_FILE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Line</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_SELECT_LINE__LINE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Left Trim</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_SELECT_LINE__LEFT_TRIM = 2;
-
-	/**
-	 * The feature id for the '<em><b>Right Trim</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_SELECT_LINE__RIGHT_TRIM = 3;
+	int GSS_FILTER_SELECT_LINE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Mask</b></em>' attribute.
@@ -721,7 +704,43 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_SELECT_LINE__MASK = 4;
+	int GSS_FILTER_SELECT_LINE__MASK = GSS_FILTER_VALUE__MASK;
+
+	/**
+	 * The feature id for the '<em><b>From File</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_SELECT_LINE__FROM_FILE = GSS_FILTER_VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Line</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_SELECT_LINE__LINE = GSS_FILTER_VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Left Trim</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_SELECT_LINE__LEFT_TRIM = GSS_FILTER_VALUE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Right Trim</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_SELECT_LINE__RIGHT_TRIM = GSS_FILTER_VALUE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>GSS Filter Select Line</em>' class.
@@ -730,7 +749,7 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_SELECT_LINE_FEATURE_COUNT = 5;
+	int GSS_FILTER_SELECT_LINE_FEATURE_COUNT = GSS_FILTER_VALUE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>GSS Filter Select Line</em>' class.
@@ -739,7 +758,7 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_SELECT_LINE_OPERATION_COUNT = 0;
+	int GSS_FILTER_SELECT_LINE_OPERATION_COUNT = GSS_FILTER_VALUE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl <em>GSS Filter Bool Var From Array Item</em>}' class.
@@ -749,7 +768,7 @@ public interface filterPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterBoolVarFromArrayItem()
 	 * @generated
 	 */
-	int GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM = 8;
+	int GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -849,7 +868,7 @@ public interface filterPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterBoolVarFromGroupedArrayItem()
 	 * @generated
 	 */
-	int GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM = 9;
+	int GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -958,7 +977,7 @@ public interface filterPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterBoolVarFDIC()
 	 * @generated
 	 */
-	int GSS_FILTER_BOOL_VAR_FDIC = 10;
+	int GSS_FILTER_BOOL_VAR_FDIC = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1022,7 +1041,7 @@ public interface filterPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterMaxterm()
 	 * @generated
 	 */
-	int GSS_FILTER_MAXTERM = 11;
+	int GSS_FILTER_MAXTERM = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1068,7 +1087,7 @@ public interface filterPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterMinterm()
 	 * @generated
 	 */
-	int GSS_FILTER_MINTERM = 12;
+	int GSS_FILTER_MINTERM = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1114,7 +1133,7 @@ public interface filterPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterBoolVarRef()
 	 * @generated
 	 */
-	int GSS_FILTER_BOOL_VAR_REF = 13;
+	int GSS_FILTER_BOOL_VAR_REF = 14;
 
 	/**
 	 * The feature id for the '<em><b>Id Ref</b></em>' attribute.
@@ -1151,7 +1170,7 @@ public interface filterPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterConstantType()
 	 * @generated
 	 */
-	int GSS_FILTER_CONSTANT_TYPE = 14;
+	int GSS_FILTER_CONSTANT_TYPE = 15;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.filter.GSSFilterOPType <em>GSS Filter OP Type</em>}' enum.
@@ -1161,7 +1180,7 @@ public interface filterPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterOPType()
 	 * @generated
 	 */
-	int GSS_FILTER_OP_TYPE = 15;
+	int GSS_FILTER_OP_TYPE = 16;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.filter.GSSFilterSelectType <em>GSS Filter Select Type</em>}' enum.
@@ -1171,7 +1190,7 @@ public interface filterPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterSelectType()
 	 * @generated
 	 */
-	int GSS_FILTER_SELECT_TYPE = 16;
+	int GSS_FILTER_SELECT_TYPE = 17;
 
 
 	/**
@@ -1347,37 +1366,15 @@ public interface filterPackage extends EPackage {
 	EReference getGSSFilterBoolVar_Op();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getConstant <em>Constant</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Constant</em>'.
-	 * @see es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getConstant()
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getValue()
 	 * @see #getGSSFilterBoolVar()
 	 * @generated
 	 */
-	EReference getGSSFilterBoolVar_Constant();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getSelect <em>Select</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Select</em>'.
-	 * @see es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getSelect()
-	 * @see #getGSSFilterBoolVar()
-	 * @generated
-	 */
-	EReference getGSSFilterBoolVar_Select();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getSelectLine <em>Select Line</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Select Line</em>'.
-	 * @see es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getSelectLine()
-	 * @see #getGSSFilterBoolVar()
-	 * @generated
-	 */
-	EReference getGSSFilterBoolVar_SelectLine();
+	EReference getGSSFilterBoolVar_Value();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.filter.GSSFilterFieldOp <em>GSS Filter Field Op</em>}'.
@@ -1401,6 +1398,27 @@ public interface filterPackage extends EPackage {
 	EAttribute getGSSFilterFieldOp_Type();
 
 	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.filter.GSSFilterValue <em>GSS Filter Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Filter Value</em>'.
+	 * @see es.uah.aut.srg.gss.filter.GSSFilterValue
+	 * @generated
+	 */
+	EClass getGSSFilterValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.filter.GSSFilterValue#getMask <em>Mask</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mask</em>'.
+	 * @see es.uah.aut.srg.gss.filter.GSSFilterValue#getMask()
+	 * @see #getGSSFilterValue()
+	 * @generated
+	 */
+	EAttribute getGSSFilterValue_Mask();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.filter.GSSFilterConstant <em>GSS Filter Constant</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1420,17 +1438,6 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGSSFilterConstant_Value();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.filter.GSSFilterConstant#getMask <em>Mask</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Mask</em>'.
-	 * @see es.uah.aut.srg.gss.filter.GSSFilterConstant#getMask()
-	 * @see #getGSSFilterConstant()
-	 * @generated
-	 */
-	EAttribute getGSSFilterConstant_Mask();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.filter.GSSFilterSelect <em>GSS Filter Select</em>}'.
@@ -1487,17 +1494,6 @@ public interface filterPackage extends EPackage {
 	EAttribute getGSSFilterSelect_Size();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.filter.GSSFilterSelect#getMask <em>Mask</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Mask</em>'.
-	 * @see es.uah.aut.srg.gss.filter.GSSFilterSelect#getMask()
-	 * @see #getGSSFilterSelect()
-	 * @generated
-	 */
-	EAttribute getGSSFilterSelect_Mask();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.filter.GSSFilterSelectLine <em>GSS Filter Select Line</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1550,17 +1546,6 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGSSFilterSelectLine_RightTrim();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.filter.GSSFilterSelectLine#getMask <em>Mask</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Mask</em>'.
-	 * @see es.uah.aut.srg.gss.filter.GSSFilterSelectLine#getMask()
-	 * @see #getGSSFilterSelectLine()
-	 * @generated
-	 */
-	EAttribute getGSSFilterSelectLine_Mask();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromArrayItem <em>GSS Filter Bool Var From Array Item</em>}'.
@@ -2098,28 +2083,12 @@ public interface filterPackage extends EPackage {
 		EReference GSS_FILTER_BOOL_VAR__OP = eINSTANCE.getGSSFilterBoolVar_Op();
 
 		/**
-		 * The meta object literal for the '<em><b>Constant</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_FILTER_BOOL_VAR__CONSTANT = eINSTANCE.getGSSFilterBoolVar_Constant();
-
-		/**
-		 * The meta object literal for the '<em><b>Select</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_BOOL_VAR__SELECT = eINSTANCE.getGSSFilterBoolVar_Select();
-
-		/**
-		 * The meta object literal for the '<em><b>Select Line</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_BOOL_VAR__SELECT_LINE = eINSTANCE.getGSSFilterBoolVar_SelectLine();
+		EReference GSS_FILTER_BOOL_VAR__VALUE = eINSTANCE.getGSSFilterBoolVar_Value();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterFieldOpImpl <em>GSS Filter Field Op</em>}' class.
@@ -2140,6 +2109,24 @@ public interface filterPackage extends EPackage {
 		EAttribute GSS_FILTER_FIELD_OP__TYPE = eINSTANCE.getGSSFilterFieldOp_Type();
 
 		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterValueImpl <em>GSS Filter Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.filter.impl.GSSFilterValueImpl
+		 * @see es.uah.aut.srg.gss.filter.impl.filterPackageImpl#getGSSFilterValue()
+		 * @generated
+		 */
+		EClass GSS_FILTER_VALUE = eINSTANCE.getGSSFilterValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Mask</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_FILTER_VALUE__MASK = eINSTANCE.getGSSFilterValue_Mask();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterConstantImpl <em>GSS Filter Constant</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2156,14 +2143,6 @@ public interface filterPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GSS_FILTER_CONSTANT__VALUE = eINSTANCE.getGSSFilterConstant_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Mask</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_FILTER_CONSTANT__MASK = eINSTANCE.getGSSFilterConstant_Mask();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterSelectImpl <em>GSS Filter Select</em>}' class.
@@ -2208,14 +2187,6 @@ public interface filterPackage extends EPackage {
 		EAttribute GSS_FILTER_SELECT__SIZE = eINSTANCE.getGSSFilterSelect_Size();
 
 		/**
-		 * The meta object literal for the '<em><b>Mask</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_FILTER_SELECT__MASK = eINSTANCE.getGSSFilterSelect_Mask();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterSelectLineImpl <em>GSS Filter Select Line</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2256,14 +2227,6 @@ public interface filterPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GSS_FILTER_SELECT_LINE__RIGHT_TRIM = eINSTANCE.getGSSFilterSelectLine_RightTrim();
-
-		/**
-		 * The meta object literal for the '<em><b>Mask</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_FILTER_SELECT_LINE__MASK = eINSTANCE.getGSSFilterSelectLine_Mask();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl <em>GSS Filter Bool Var From Array Item</em>}' class.

@@ -19,7 +19,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,12 +32,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterSelectImpl#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterSelectImpl#getOffset <em>Offset</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterSelectImpl#getSize <em>Size</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterSelectImpl#getMask <em>Mask</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSFilterSelectImpl extends MinimalEObjectImpl.Container implements GSSFilterSelect {
+public class GSSFilterSelectImpl extends GSSFilterValueImpl implements GSSFilterSelect {
 	/**
 	 * The default value of the '{@link #getFromFile() <em>From File</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -127,26 +125,6 @@ public class GSSFilterSelectImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String size = SIZE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getMask() <em>Mask</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMask()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String MASK_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getMask() <em>Mask</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMask()
-	 * @generated
-	 * @ordered
-	 */
-	protected String mask = MASK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -281,27 +259,6 @@ public class GSSFilterSelectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMask() {
-		return mask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMask(String newMask) {
-		String oldMask = mask;
-		mask = newMask;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_SELECT__MASK, oldMask, mask));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -313,8 +270,6 @@ public class GSSFilterSelectImpl extends MinimalEObjectImpl.Container implements
 				return getOffset();
 			case filterPackage.GSS_FILTER_SELECT__SIZE:
 				return getSize();
-			case filterPackage.GSS_FILTER_SELECT__MASK:
-				return getMask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -338,9 +293,6 @@ public class GSSFilterSelectImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case filterPackage.GSS_FILTER_SELECT__SIZE:
 				setSize((String)newValue);
-				return;
-			case filterPackage.GSS_FILTER_SELECT__MASK:
-				setMask((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -366,9 +318,6 @@ public class GSSFilterSelectImpl extends MinimalEObjectImpl.Container implements
 			case filterPackage.GSS_FILTER_SELECT__SIZE:
 				setSize(SIZE_EDEFAULT);
 				return;
-			case filterPackage.GSS_FILTER_SELECT__MASK:
-				setMask(MASK_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -389,8 +338,6 @@ public class GSSFilterSelectImpl extends MinimalEObjectImpl.Container implements
 				return OFFSET_EDEFAULT == null ? offset != null : !OFFSET_EDEFAULT.equals(offset);
 			case filterPackage.GSS_FILTER_SELECT__SIZE:
 				return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
-			case filterPackage.GSS_FILTER_SELECT__MASK:
-				return MASK_EDEFAULT == null ? mask != null : !MASK_EDEFAULT.equals(mask);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -413,8 +360,6 @@ public class GSSFilterSelectImpl extends MinimalEObjectImpl.Container implements
 		result.append(offset);
 		result.append(", size: ");
 		result.append(size);
-		result.append(", mask: ");
-		result.append(mask);
 		result.append(')');
 		return result.toString();
 	}

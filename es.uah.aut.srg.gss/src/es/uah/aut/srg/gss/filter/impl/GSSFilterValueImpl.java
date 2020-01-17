@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.gss.filter.impl;
 
-import es.uah.aut.srg.gss.filter.GSSFilterConstant;
+import es.uah.aut.srg.gss.filter.GSSFilterValue;
 import es.uah.aut.srg.gss.filter.filterPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -18,47 +18,48 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GSS Filter Constant</b></em>'.
+ * An implementation of the model object '<em><b>GSS Filter Value</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterConstantImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterValueImpl#getMask <em>Mask</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSFilterConstantImpl extends GSSFilterValueImpl implements GSSFilterConstant {
+public class GSSFilterValueImpl extends MinimalEObjectImpl.Container implements GSSFilterValue {
 	/**
-	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * The default value of the '{@link #getMask() <em>Mask</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #getMask()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALUE_EDEFAULT = null;
+	protected static final String MASK_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * The cached value of the '{@link #getMask() <em>Mask</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #getMask()
 	 * @generated
 	 * @ordered
 	 */
-	protected String value = VALUE_EDEFAULT;
+	protected String mask = MASK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GSSFilterConstantImpl() {
+	protected GSSFilterValueImpl() {
 		super();
 	}
 
@@ -69,7 +70,7 @@ public class GSSFilterConstantImpl extends GSSFilterValueImpl implements GSSFilt
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return filterPackage.Literals.GSS_FILTER_CONSTANT;
+		return filterPackage.Literals.GSS_FILTER_VALUE;
 	}
 
 	/**
@@ -77,8 +78,8 @@ public class GSSFilterConstantImpl extends GSSFilterValueImpl implements GSSFilt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getValue() {
-		return value;
+	public String getMask() {
+		return mask;
 	}
 
 	/**
@@ -86,11 +87,11 @@ public class GSSFilterConstantImpl extends GSSFilterValueImpl implements GSSFilt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(String newValue) {
-		String oldValue = value;
-		value = newValue;
+	public void setMask(String newMask) {
+		String oldMask = mask;
+		mask = newMask;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_CONSTANT__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_VALUE__MASK, oldMask, mask));
 	}
 
 	/**
@@ -101,8 +102,8 @@ public class GSSFilterConstantImpl extends GSSFilterValueImpl implements GSSFilt
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case filterPackage.GSS_FILTER_CONSTANT__VALUE:
-				return getValue();
+			case filterPackage.GSS_FILTER_VALUE__MASK:
+				return getMask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -115,8 +116,8 @@ public class GSSFilterConstantImpl extends GSSFilterValueImpl implements GSSFilt
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case filterPackage.GSS_FILTER_CONSTANT__VALUE:
-				setValue((String)newValue);
+			case filterPackage.GSS_FILTER_VALUE__MASK:
+				setMask((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -130,8 +131,8 @@ public class GSSFilterConstantImpl extends GSSFilterValueImpl implements GSSFilt
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case filterPackage.GSS_FILTER_CONSTANT__VALUE:
-				setValue(VALUE_EDEFAULT);
+			case filterPackage.GSS_FILTER_VALUE__MASK:
+				setMask(MASK_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -145,8 +146,8 @@ public class GSSFilterConstantImpl extends GSSFilterValueImpl implements GSSFilt
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case filterPackage.GSS_FILTER_CONSTANT__VALUE:
-				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			case filterPackage.GSS_FILTER_VALUE__MASK:
+				return MASK_EDEFAULT == null ? mask != null : !MASK_EDEFAULT.equals(mask);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -161,10 +162,10 @@ public class GSSFilterConstantImpl extends GSSFilterValueImpl implements GSSFilt
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (value: ");
-		result.append(value);
+		result.append(" (mask: ");
+		result.append(mask);
 		result.append(')');
 		return result.toString();
 	}
 
-} //GSSFilterConstantImpl
+} //GSSFilterValueImpl

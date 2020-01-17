@@ -18,7 +18,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,12 +31,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterSelectLineImpl#getLine <em>Line</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterSelectLineImpl#getLeftTrim <em>Left Trim</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterSelectLineImpl#getRightTrim <em>Right Trim</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterSelectLineImpl#getMask <em>Mask</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSFilterSelectLineImpl extends MinimalEObjectImpl.Container implements GSSFilterSelectLine {
+public class GSSFilterSelectLineImpl extends GSSFilterValueImpl implements GSSFilterSelectLine {
 	/**
 	 * The default value of the '{@link #getFromFile() <em>From File</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -117,26 +115,6 @@ public class GSSFilterSelectLineImpl extends MinimalEObjectImpl.Container implem
 	 * @ordered
 	 */
 	protected String rightTrim = RIGHT_TRIM_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getMask() <em>Mask</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMask()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String MASK_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getMask() <em>Mask</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMask()
-	 * @generated
-	 * @ordered
-	 */
-	protected String mask = MASK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -246,27 +224,6 @@ public class GSSFilterSelectLineImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMask() {
-		return mask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMask(String newMask) {
-		String oldMask = mask;
-		mask = newMask;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_SELECT_LINE__MASK, oldMask, mask));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -278,8 +235,6 @@ public class GSSFilterSelectLineImpl extends MinimalEObjectImpl.Container implem
 				return getLeftTrim();
 			case filterPackage.GSS_FILTER_SELECT_LINE__RIGHT_TRIM:
 				return getRightTrim();
-			case filterPackage.GSS_FILTER_SELECT_LINE__MASK:
-				return getMask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -303,9 +258,6 @@ public class GSSFilterSelectLineImpl extends MinimalEObjectImpl.Container implem
 				return;
 			case filterPackage.GSS_FILTER_SELECT_LINE__RIGHT_TRIM:
 				setRightTrim((String)newValue);
-				return;
-			case filterPackage.GSS_FILTER_SELECT_LINE__MASK:
-				setMask((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -331,9 +283,6 @@ public class GSSFilterSelectLineImpl extends MinimalEObjectImpl.Container implem
 			case filterPackage.GSS_FILTER_SELECT_LINE__RIGHT_TRIM:
 				setRightTrim(RIGHT_TRIM_EDEFAULT);
 				return;
-			case filterPackage.GSS_FILTER_SELECT_LINE__MASK:
-				setMask(MASK_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -354,8 +303,6 @@ public class GSSFilterSelectLineImpl extends MinimalEObjectImpl.Container implem
 				return LEFT_TRIM_EDEFAULT == null ? leftTrim != null : !LEFT_TRIM_EDEFAULT.equals(leftTrim);
 			case filterPackage.GSS_FILTER_SELECT_LINE__RIGHT_TRIM:
 				return RIGHT_TRIM_EDEFAULT == null ? rightTrim != null : !RIGHT_TRIM_EDEFAULT.equals(rightTrim);
-			case filterPackage.GSS_FILTER_SELECT_LINE__MASK:
-				return MASK_EDEFAULT == null ? mask != null : !MASK_EDEFAULT.equals(mask);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -378,8 +325,6 @@ public class GSSFilterSelectLineImpl extends MinimalEObjectImpl.Container implem
 		result.append(leftTrim);
 		result.append(", rightTrim: ");
 		result.append(rightTrim);
-		result.append(", mask: ");
-		result.append(mask);
 		result.append(')');
 		return result.toString();
 	}

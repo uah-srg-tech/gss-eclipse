@@ -56,12 +56,13 @@ GSSFilterBoolVar returns GSSFilterBoolVar:
 		'constantType' ':=' constantType=GSSFilterConstantType ';'
 		'FieldRef' ':=' FieldRef=[format::GSSFormatField|VersionedQualifiedReferenceName] ';'
 		Op=GSSFilterFieldOp
-		((Constant=GSSFilterConstant) |
-		 (Select=GSSFilterSelect) |
-		 (SelectLine=GSSFilterSelectLine))
+		(Value=GSSFilterValue)
 	'}' ';'
 ;
 
+GSSFilterValue returns GSSFilterValue:
+	GSSFilterConstant | GSSFilterSelect | GSSFilterSelectLine;
+	
 GSSFilterBoolVarFromArrayItem returns GSSFilterBoolVarFromArrayItem:
 	'GSSFilterBoolVarFromArrayItem' '{'
 		'id' ':=' id=INTEGER ';'

@@ -207,6 +207,31 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleGSSFilterValue
+entryRuleGSSFilterValue
+:
+{ before(grammarAccess.getGSSFilterValueRule()); }
+	 ruleGSSFilterValue
+{ after(grammarAccess.getGSSFilterValueRule()); } 
+	 EOF 
+;
+
+// Rule GSSFilterValue
+ruleGSSFilterValue 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getGSSFilterValueAccess().getAlternatives()); }
+		(rule__GSSFilterValue__Alternatives)
+		{ after(grammarAccess.getGSSFilterValueAccess().getAlternatives()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Entry rule entryRuleGSSFilterBoolVarFromArrayItem
 entryRuleGSSFilterBoolVarFromArrayItem
 :
@@ -717,27 +742,27 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVar__Alternatives_19
+rule__GSSFilterValue__Alternatives
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarAccess().getConstantAssignment_19_0()); }
-		(rule__GSSFilterBoolVar__ConstantAssignment_19_0)
-		{ after(grammarAccess.getGSSFilterBoolVarAccess().getConstantAssignment_19_0()); }
+		{ before(grammarAccess.getGSSFilterValueAccess().getGSSFilterConstantParserRuleCall_0()); }
+		ruleGSSFilterConstant
+		{ after(grammarAccess.getGSSFilterValueAccess().getGSSFilterConstantParserRuleCall_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarAccess().getSelectAssignment_19_1()); }
-		(rule__GSSFilterBoolVar__SelectAssignment_19_1)
-		{ after(grammarAccess.getGSSFilterBoolVarAccess().getSelectAssignment_19_1()); }
+		{ before(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectParserRuleCall_1()); }
+		ruleGSSFilterSelect
+		{ after(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectParserRuleCall_1()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineAssignment_19_2()); }
-		(rule__GSSFilterBoolVar__SelectLineAssignment_19_2)
-		{ after(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineAssignment_19_2()); }
+		{ before(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectLineParserRuleCall_2()); }
+		ruleGSSFilterSelectLine
+		{ after(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectLineParserRuleCall_2()); }
 	)
 ;
 finally {
@@ -2827,9 +2852,9 @@ rule__GSSFilterBoolVar__Group__19__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarAccess().getAlternatives_19()); }
-	(rule__GSSFilterBoolVar__Alternatives_19)
-	{ after(grammarAccess.getGSSFilterBoolVarAccess().getAlternatives_19()); }
+	{ before(grammarAccess.getGSSFilterBoolVarAccess().getValueAssignment_19()); }
+	(rule__GSSFilterBoolVar__ValueAssignment_19)
+	{ after(grammarAccess.getGSSFilterBoolVarAccess().getValueAssignment_19()); }
 )
 ;
 finally {
@@ -8629,45 +8654,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVar__ConstantAssignment_19_0
+rule__GSSFilterBoolVar__ValueAssignment_19
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarAccess().getConstantGSSFilterConstantParserRuleCall_19_0_0()); }
-		ruleGSSFilterConstant
-		{ after(grammarAccess.getGSSFilterBoolVarAccess().getConstantGSSFilterConstantParserRuleCall_19_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterBoolVar__SelectAssignment_19_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterBoolVarAccess().getSelectGSSFilterSelectParserRuleCall_19_1_0()); }
-		ruleGSSFilterSelect
-		{ after(grammarAccess.getGSSFilterBoolVarAccess().getSelectGSSFilterSelectParserRuleCall_19_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterBoolVar__SelectLineAssignment_19_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineGSSFilterSelectLineParserRuleCall_19_2_0()); }
-		ruleGSSFilterSelectLine
-		{ after(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineGSSFilterSelectLineParserRuleCall_19_2_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarAccess().getValueGSSFilterValueParserRuleCall_19_0()); }
+		ruleGSSFilterValue
+		{ after(grammarAccess.getGSSFilterBoolVarAccess().getValueGSSFilterValueParserRuleCall_19_0()); }
 	)
 ;
 finally {

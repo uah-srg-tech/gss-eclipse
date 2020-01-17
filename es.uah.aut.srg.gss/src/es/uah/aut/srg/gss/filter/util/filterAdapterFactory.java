@@ -98,6 +98,10 @@ public class filterAdapterFactory extends AdapterFactoryImpl {
 				return createGSSFilterFieldOpAdapter();
 			}
 			@Override
+			public Adapter caseGSSFilterValue(GSSFilterValue object) {
+				return createGSSFilterValueAdapter();
+			}
+			@Override
 			public Adapter caseGSSFilterConstant(GSSFilterConstant object) {
 				return createGSSFilterConstantAdapter();
 			}
@@ -224,6 +228,20 @@ public class filterAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSFilterFieldOpAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.filter.GSSFilterValue <em>GSS Filter Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.filter.GSSFilterValue
+	 * @generated
+	 */
+	public Adapter createGSSFilterValueAdapter() {
 		return null;
 	}
 

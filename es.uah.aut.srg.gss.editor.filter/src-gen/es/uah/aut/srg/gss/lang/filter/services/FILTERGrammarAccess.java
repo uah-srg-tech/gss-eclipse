@@ -492,13 +492,8 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_17 = (Keyword)cGroup.eContents().get(17);
 		private final Assignment cOpAssignment_18 = (Assignment)cGroup.eContents().get(18);
 		private final RuleCall cOpGSSFilterFieldOpParserRuleCall_18_0 = (RuleCall)cOpAssignment_18.eContents().get(0);
-		private final Alternatives cAlternatives_19 = (Alternatives)cGroup.eContents().get(19);
-		private final Assignment cConstantAssignment_19_0 = (Assignment)cAlternatives_19.eContents().get(0);
-		private final RuleCall cConstantGSSFilterConstantParserRuleCall_19_0_0 = (RuleCall)cConstantAssignment_19_0.eContents().get(0);
-		private final Assignment cSelectAssignment_19_1 = (Assignment)cAlternatives_19.eContents().get(1);
-		private final RuleCall cSelectGSSFilterSelectParserRuleCall_19_1_0 = (RuleCall)cSelectAssignment_19_1.eContents().get(0);
-		private final Assignment cSelectLineAssignment_19_2 = (Assignment)cAlternatives_19.eContents().get(2);
-		private final RuleCall cSelectLineGSSFilterSelectLineParserRuleCall_19_2_0 = (RuleCall)cSelectLineAssignment_19_2.eContents().get(0);
+		private final Assignment cValueAssignment_19 = (Assignment)cGroup.eContents().get(19);
+		private final RuleCall cValueGSSFilterValueParserRuleCall_19_0 = (RuleCall)cValueAssignment_19.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_20 = (Keyword)cGroup.eContents().get(20);
 		private final Keyword cSemicolonKeyword_21 = (Keyword)cGroup.eContents().get(21);
 		
@@ -508,14 +503,13 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 		//	'name' ':=' name=ID ';'
 		//	'constantType' ':=' constantType=GSSFilterConstantType ';'
 		//	'FieldRef' ':=' FieldRef=[format::GSSFormatField|VersionedQualifiedReferenceName] ';'
-		//	Op=GSSFilterFieldOp (Constant=GSSFilterConstant | Select=GSSFilterSelect | SelectLine=GSSFilterSelectLine)
-		//	'}' ';';
+		//	Op=GSSFilterFieldOp
+		//	Value=GSSFilterValue '}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSFilterBoolVar' '{' 'id' ':=' id=INTEGER ';' 'name' ':=' name=ID ';' 'constantType' ':='
 		//constantType=GSSFilterConstantType ';' 'FieldRef' ':='
-		//FieldRef=[format::GSSFormatField|VersionedQualifiedReferenceName] ';' Op=GSSFilterFieldOp (Constant=GSSFilterConstant
-		//| Select=GSSFilterSelect | SelectLine=GSSFilterSelectLine) '}' ';'
+		//FieldRef=[format::GSSFormatField|VersionedQualifiedReferenceName] ';' Op=GSSFilterFieldOp Value=GSSFilterValue '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSFilterBoolVar'
@@ -593,32 +587,40 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSFilterFieldOp
 		public RuleCall getOpGSSFilterFieldOpParserRuleCall_18_0() { return cOpGSSFilterFieldOpParserRuleCall_18_0; }
 		
-		//(Constant=GSSFilterConstant | Select=GSSFilterSelect | SelectLine=GSSFilterSelectLine)
-		public Alternatives getAlternatives_19() { return cAlternatives_19; }
+		//Value=GSSFilterValue
+		public Assignment getValueAssignment_19() { return cValueAssignment_19; }
 		
-		//Constant=GSSFilterConstant
-		public Assignment getConstantAssignment_19_0() { return cConstantAssignment_19_0; }
-		
-		//GSSFilterConstant
-		public RuleCall getConstantGSSFilterConstantParserRuleCall_19_0_0() { return cConstantGSSFilterConstantParserRuleCall_19_0_0; }
-		
-		//Select=GSSFilterSelect
-		public Assignment getSelectAssignment_19_1() { return cSelectAssignment_19_1; }
-		
-		//GSSFilterSelect
-		public RuleCall getSelectGSSFilterSelectParserRuleCall_19_1_0() { return cSelectGSSFilterSelectParserRuleCall_19_1_0; }
-		
-		//SelectLine=GSSFilterSelectLine
-		public Assignment getSelectLineAssignment_19_2() { return cSelectLineAssignment_19_2; }
-		
-		//GSSFilterSelectLine
-		public RuleCall getSelectLineGSSFilterSelectLineParserRuleCall_19_2_0() { return cSelectLineGSSFilterSelectLineParserRuleCall_19_2_0; }
+		//GSSFilterValue
+		public RuleCall getValueGSSFilterValueParserRuleCall_19_0() { return cValueGSSFilterValueParserRuleCall_19_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_20() { return cRightCurlyBracketKeyword_20; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
+	}
+	public class GSSFilterValueElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterValue");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cGSSFilterConstantParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGSSFilterSelectParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cGSSFilterSelectLineParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//GSSFilterValue:
+		//	GSSFilterConstant | GSSFilterSelect | GSSFilterSelectLine;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//GSSFilterConstant | GSSFilterSelect | GSSFilterSelectLine
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//GSSFilterConstant
+		public RuleCall getGSSFilterConstantParserRuleCall_0() { return cGSSFilterConstantParserRuleCall_0; }
+		
+		//GSSFilterSelect
+		public RuleCall getGSSFilterSelectParserRuleCall_1() { return cGSSFilterSelectParserRuleCall_1; }
+		
+		//GSSFilterSelectLine
+		public RuleCall getGSSFilterSelectLineParserRuleCall_2() { return cGSSFilterSelectLineParserRuleCall_2; }
 	}
 	public class GSSFilterBoolVarFromArrayItemElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterBoolVarFromArrayItem");
@@ -1971,6 +1973,7 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSFilterMaxtermFilterElements pGSSFilterMaxtermFilter;
 	private final GSSFilterMintermFilterElements pGSSFilterMintermFilter;
 	private final GSSFilterBoolVarElements pGSSFilterBoolVar;
+	private final GSSFilterValueElements pGSSFilterValue;
 	private final GSSFilterBoolVarFromArrayItemElements pGSSFilterBoolVarFromArrayItem;
 	private final GSSFilterBoolVarFromGroupedArrayItemElements pGSSFilterBoolVarFromGroupedArrayItem;
 	private final GSSFilterBoolVarFDICElements pGSSFilterBoolVarFDIC;
@@ -2006,6 +2009,7 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGSSFilterMaxtermFilter = new GSSFilterMaxtermFilterElements();
 		this.pGSSFilterMintermFilter = new GSSFilterMintermFilterElements();
 		this.pGSSFilterBoolVar = new GSSFilterBoolVarElements();
+		this.pGSSFilterValue = new GSSFilterValueElements();
 		this.pGSSFilterBoolVarFromArrayItem = new GSSFilterBoolVarFromArrayItemElements();
 		this.pGSSFilterBoolVarFromGroupedArrayItem = new GSSFilterBoolVarFromGroupedArrayItemElements();
 		this.pGSSFilterBoolVarFDIC = new GSSFilterBoolVarFDICElements();
@@ -2125,14 +2129,24 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name' ':=' name=ID ';'
 	//	'constantType' ':=' constantType=GSSFilterConstantType ';'
 	//	'FieldRef' ':=' FieldRef=[format::GSSFormatField|VersionedQualifiedReferenceName] ';'
-	//	Op=GSSFilterFieldOp (Constant=GSSFilterConstant | Select=GSSFilterSelect | SelectLine=GSSFilterSelectLine)
-	//	'}' ';';
+	//	Op=GSSFilterFieldOp
+	//	Value=GSSFilterValue '}' ';';
 	public GSSFilterBoolVarElements getGSSFilterBoolVarAccess() {
 		return pGSSFilterBoolVar;
 	}
 	
 	public ParserRule getGSSFilterBoolVarRule() {
 		return getGSSFilterBoolVarAccess().getRule();
+	}
+	
+	//GSSFilterValue:
+	//	GSSFilterConstant | GSSFilterSelect | GSSFilterSelectLine;
+	public GSSFilterValueElements getGSSFilterValueAccess() {
+		return pGSSFilterValue;
+	}
+	
+	public ParserRule getGSSFilterValueRule() {
+		return getGSSFilterValueAccess().getRule();
 	}
 	
 	//GSSFilterBoolVarFromArrayItem:

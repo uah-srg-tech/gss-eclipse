@@ -29,6 +29,7 @@ import es.uah.aut.srg.gss.filter.GSSFilterOPType;
 import es.uah.aut.srg.gss.filter.GSSFilterSelect;
 import es.uah.aut.srg.gss.filter.GSSFilterSelectLine;
 import es.uah.aut.srg.gss.filter.GSSFilterSelectType;
+import es.uah.aut.srg.gss.filter.GSSFilterValue;
 import es.uah.aut.srg.gss.filter.filterFactory;
 import es.uah.aut.srg.gss.filter.filterPackage;
 
@@ -83,6 +84,13 @@ public class filterPackageImpl extends EPackageImpl implements filterPackage {
 	 * @generated
 	 */
 	private EClass gssFilterFieldOpEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gssFilterValueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -381,26 +389,8 @@ public class filterPackageImpl extends EPackageImpl implements filterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSFilterBoolVar_Constant() {
+	public EReference getGSSFilterBoolVar_Value() {
 		return (EReference)gssFilterBoolVarEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSFilterBoolVar_Select() {
-		return (EReference)gssFilterBoolVarEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSFilterBoolVar_SelectLine() {
-		return (EReference)gssFilterBoolVarEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -426,6 +416,24 @@ public class filterPackageImpl extends EPackageImpl implements filterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getGSSFilterValue() {
+		return gssFilterValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSFilterValue_Mask() {
+		return (EAttribute)gssFilterValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGSSFilterConstant() {
 		return gssFilterConstantEClass;
 	}
@@ -437,15 +445,6 @@ public class filterPackageImpl extends EPackageImpl implements filterPackage {
 	 */
 	public EAttribute getGSSFilterConstant_Value() {
 		return (EAttribute)gssFilterConstantEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSFilterConstant_Mask() {
-		return (EAttribute)gssFilterConstantEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -498,15 +497,6 @@ public class filterPackageImpl extends EPackageImpl implements filterPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSFilterSelect_Mask() {
-		return (EAttribute)gssFilterSelectEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getGSSFilterSelectLine() {
 		return gssFilterSelectLineEClass;
 	}
@@ -545,15 +535,6 @@ public class filterPackageImpl extends EPackageImpl implements filterPackage {
 	 */
 	public EAttribute getGSSFilterSelectLine_RightTrim() {
 		return (EAttribute)gssFilterSelectLineEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSFilterSelectLine_Mask() {
-		return (EAttribute)gssFilterSelectLineEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -918,30 +899,28 @@ public class filterPackageImpl extends EPackageImpl implements filterPackage {
 		createEAttribute(gssFilterBoolVarEClass, GSS_FILTER_BOOL_VAR__CONSTANT_TYPE);
 		createEReference(gssFilterBoolVarEClass, GSS_FILTER_BOOL_VAR__FIELD_REF);
 		createEReference(gssFilterBoolVarEClass, GSS_FILTER_BOOL_VAR__OP);
-		createEReference(gssFilterBoolVarEClass, GSS_FILTER_BOOL_VAR__CONSTANT);
-		createEReference(gssFilterBoolVarEClass, GSS_FILTER_BOOL_VAR__SELECT);
-		createEReference(gssFilterBoolVarEClass, GSS_FILTER_BOOL_VAR__SELECT_LINE);
+		createEReference(gssFilterBoolVarEClass, GSS_FILTER_BOOL_VAR__VALUE);
 
 		gssFilterFieldOpEClass = createEClass(GSS_FILTER_FIELD_OP);
 		createEAttribute(gssFilterFieldOpEClass, GSS_FILTER_FIELD_OP__TYPE);
 
+		gssFilterValueEClass = createEClass(GSS_FILTER_VALUE);
+		createEAttribute(gssFilterValueEClass, GSS_FILTER_VALUE__MASK);
+
 		gssFilterConstantEClass = createEClass(GSS_FILTER_CONSTANT);
 		createEAttribute(gssFilterConstantEClass, GSS_FILTER_CONSTANT__VALUE);
-		createEAttribute(gssFilterConstantEClass, GSS_FILTER_CONSTANT__MASK);
 
 		gssFilterSelectEClass = createEClass(GSS_FILTER_SELECT);
 		createEAttribute(gssFilterSelectEClass, GSS_FILTER_SELECT__FROM_FILE);
 		createEAttribute(gssFilterSelectEClass, GSS_FILTER_SELECT__TYPE);
 		createEAttribute(gssFilterSelectEClass, GSS_FILTER_SELECT__OFFSET);
 		createEAttribute(gssFilterSelectEClass, GSS_FILTER_SELECT__SIZE);
-		createEAttribute(gssFilterSelectEClass, GSS_FILTER_SELECT__MASK);
 
 		gssFilterSelectLineEClass = createEClass(GSS_FILTER_SELECT_LINE);
 		createEAttribute(gssFilterSelectLineEClass, GSS_FILTER_SELECT_LINE__FROM_FILE);
 		createEAttribute(gssFilterSelectLineEClass, GSS_FILTER_SELECT_LINE__LINE);
 		createEAttribute(gssFilterSelectLineEClass, GSS_FILTER_SELECT_LINE__LEFT_TRIM);
 		createEAttribute(gssFilterSelectLineEClass, GSS_FILTER_SELECT_LINE__RIGHT_TRIM);
-		createEAttribute(gssFilterSelectLineEClass, GSS_FILTER_SELECT_LINE__MASK);
 
 		gssFilterBoolVarFromArrayItemEClass = createEClass(GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM);
 		createEAttribute(gssFilterBoolVarFromArrayItemEClass, GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__ID);
@@ -1022,6 +1001,9 @@ public class filterPackageImpl extends EPackageImpl implements filterPackage {
 		gssFilterFilterEClass.getESuperTypes().add(thecommonPackage.getGSSModelElement());
 		gssFilterMaxtermFilterEClass.getESuperTypes().add(this.getGSSFilterFilter());
 		gssFilterMintermFilterEClass.getESuperTypes().add(this.getGSSFilterFilter());
+		gssFilterConstantEClass.getESuperTypes().add(this.getGSSFilterValue());
+		gssFilterSelectEClass.getESuperTypes().add(this.getGSSFilterValue());
+		gssFilterSelectLineEClass.getESuperTypes().add(this.getGSSFilterValue());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssFilterFilterEClass, GSSFilterFilter.class, "GSSFilterFilter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1043,30 +1025,28 @@ public class filterPackageImpl extends EPackageImpl implements filterPackage {
 		initEAttribute(getGSSFilterBoolVar_ConstantType(), this.getGSSFilterConstantType(), "constantType", null, 1, 1, GSSFilterBoolVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSFilterBoolVar_FieldRef(), theformatPackage.getGSSFormatField(), null, "FieldRef", null, 1, 1, GSSFilterBoolVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSFilterBoolVar_Op(), this.getGSSFilterFieldOp(), null, "Op", null, 1, 1, GSSFilterBoolVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSFilterBoolVar_Constant(), this.getGSSFilterConstant(), null, "Constant", null, 0, 1, GSSFilterBoolVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSFilterBoolVar_Select(), this.getGSSFilterSelect(), null, "Select", null, 0, 1, GSSFilterBoolVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSFilterBoolVar_SelectLine(), this.getGSSFilterSelectLine(), null, "SelectLine", null, 0, 1, GSSFilterBoolVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSFilterBoolVar_Value(), this.getGSSFilterValue(), null, "Value", null, 0, 1, GSSFilterBoolVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssFilterFieldOpEClass, GSSFilterFieldOp.class, "GSSFilterFieldOp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSFilterFieldOp_Type(), this.getGSSFilterOPType(), "type", null, 1, 1, GSSFilterFieldOp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(gssFilterValueEClass, GSSFilterValue.class, "GSSFilterValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGSSFilterValue_Mask(), ecorePackage.getEString(), "mask", null, 0, 1, GSSFilterValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(gssFilterConstantEClass, GSSFilterConstant.class, "GSSFilterConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSFilterConstant_Value(), ecorePackage.getEString(), "value", null, 1, 1, GSSFilterConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSFilterConstant_Mask(), ecorePackage.getEString(), "mask", null, 0, 1, GSSFilterConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSFilterConstant_Value(), ecorePackage.getEString(), "value", null, 0, 1, GSSFilterConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssFilterSelectEClass, GSSFilterSelect.class, "GSSFilterSelect", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSFilterSelect_FromFile(), ecorePackage.getEString(), "fromFile", null, 1, 1, GSSFilterSelect.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSFilterSelect_Type(), this.getGSSFilterSelectType(), "type", null, 1, 1, GSSFilterSelect.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSFilterSelect_Offset(), ecorePackage.getEString(), "offset", null, 0, 1, GSSFilterSelect.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSFilterSelect_Size(), ecorePackage.getEString(), "size", null, 0, 1, GSSFilterSelect.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSFilterSelect_Mask(), ecorePackage.getEString(), "mask", null, 0, 1, GSSFilterSelect.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssFilterSelectLineEClass, GSSFilterSelectLine.class, "GSSFilterSelectLine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSFilterSelectLine_FromFile(), ecorePackage.getEString(), "fromFile", null, 1, 1, GSSFilterSelectLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSFilterSelectLine_Line(), ecorePackage.getEString(), "line", null, 1, 1, GSSFilterSelectLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSFilterSelectLine_LeftTrim(), ecorePackage.getEString(), "leftTrim", null, 0, 1, GSSFilterSelectLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSFilterSelectLine_RightTrim(), ecorePackage.getEString(), "rightTrim", null, 0, 1, GSSFilterSelectLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSFilterSelectLine_Mask(), ecorePackage.getEString(), "mask", null, 0, 1, GSSFilterSelectLine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssFilterBoolVarFromArrayItemEClass, GSSFilterBoolVarFromArrayItem.class, "GSSFilterBoolVarFromArrayItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSFilterBoolVarFromArrayItem_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSFilterBoolVarFromArrayItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

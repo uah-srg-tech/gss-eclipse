@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.gss.filter;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Filter Select</b></em>'.
@@ -25,14 +23,13 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uah.aut.srg.gss.filter.GSSFilterSelect#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.GSSFilterSelect#getOffset <em>Offset</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.GSSFilterSelect#getSize <em>Size</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.filter.GSSFilterSelect#getMask <em>Mask</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.filter.filterPackage#getGSSFilterSelect()
  * @model
  * @generated
  */
-public interface GSSFilterSelect extends EObject {
+public interface GSSFilterSelect extends GSSFilterValue {
 	/**
 	 * Returns the value of the '<em><b>From File</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -166,31 +163,5 @@ public interface GSSFilterSelect extends EObject {
 	 * @generated
 	 */
 	void setSize(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Mask</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Mask</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mask</em>' attribute.
-	 * @see #setMask(String)
-	 * @see es.uah.aut.srg.gss.filter.filterPackage#getGSSFilterSelect_Mask()
-	 * @model
-	 * @generated
-	 */
-	String getMask();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.filter.GSSFilterSelect#getMask <em>Mask</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mask</em>' attribute.
-	 * @see #getMask()
-	 * @generated
-	 */
-	void setMask(String value);
 
 } // GSSFilterSelect

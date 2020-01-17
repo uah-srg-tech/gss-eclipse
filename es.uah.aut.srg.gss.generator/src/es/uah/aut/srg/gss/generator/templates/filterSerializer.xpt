@@ -24,10 +24,33 @@ GSSFilterMintermFilter «this.name» {
 		GSSFilterFieldOp {
 			type := «this.Op.type»;
 		};
-		GSSFilterConstant {
-			value := «this.Constant.value»;
-		};
+«IF (this.Value.metaType.name == "GSSFilterConstant") -»
+«EXPAND SerializeConstant FOR (GSSFilterConstant)(this.Value) -»
+«ELSEIF (this.Value.metaType.name == "GSSFilterSelect") -»
+«EXPAND SerializeSelect FOR (GSSFilterSelect)(this.Value) -»
+«ELSEIF (this.Value.metaType.name == "GSSFilterSelectLie") -»
+«EXPAND SerializeSelectLine FOR (GSSFilterSelectLine)(this.Value) -»
+«ENDIF»
 	};
+«ENDDEFINE»
+
+«DEFINE SerializeConstant FOR GSSFilterConstant -»
+		GSSFilterConstant {
+			value := «this.value»;
+		};
+«ENDDEFINE»
+
+«DEFINE SerializeSelect FOR GSSFilterSelect -»
+		GSSFilterSelect {
+			fromFile := «this.fromFile»;
+		};
+«ENDDEFINE»
+
+«DEFINE SerializeSelectLine FOR GSSFilterSelectLine -»
+		GSSFilterSelect {
+			fromFile := «this.fromFile»;
+			line := «this.line»;
+		};
 «ENDDEFINE»
 
 «DEFINE GSSFilterBoolVarFDIC FOR GSSFilterBoolVarFDIC -»

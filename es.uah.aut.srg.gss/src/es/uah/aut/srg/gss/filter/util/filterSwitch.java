@@ -111,21 +111,30 @@ public class filterSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case filterPackage.GSS_FILTER_VALUE: {
+				GSSFilterValue gssFilterValue = (GSSFilterValue)theEObject;
+				T result = caseGSSFilterValue(gssFilterValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case filterPackage.GSS_FILTER_CONSTANT: {
 				GSSFilterConstant gssFilterConstant = (GSSFilterConstant)theEObject;
 				T result = caseGSSFilterConstant(gssFilterConstant);
+				if (result == null) result = caseGSSFilterValue(gssFilterConstant);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case filterPackage.GSS_FILTER_SELECT: {
 				GSSFilterSelect gssFilterSelect = (GSSFilterSelect)theEObject;
 				T result = caseGSSFilterSelect(gssFilterSelect);
+				if (result == null) result = caseGSSFilterValue(gssFilterSelect);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case filterPackage.GSS_FILTER_SELECT_LINE: {
 				GSSFilterSelectLine gssFilterSelectLine = (GSSFilterSelectLine)theEObject;
 				T result = caseGSSFilterSelectLine(gssFilterSelectLine);
+				if (result == null) result = caseGSSFilterValue(gssFilterSelectLine);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -241,6 +250,21 @@ public class filterSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSFilterFieldOp(GSSFilterFieldOp object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Filter Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Filter Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSFilterValue(GSSFilterValue object) {
 		return null;
 	}
 

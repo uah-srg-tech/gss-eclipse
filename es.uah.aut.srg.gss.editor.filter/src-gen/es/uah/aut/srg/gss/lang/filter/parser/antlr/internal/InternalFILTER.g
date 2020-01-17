@@ -987,72 +987,84 @@ ruleGSSFilterBoolVar returns [EObject current=null]
 		)
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getConstantGSSFilterConstantParserRuleCall_19_0_0());
+				{
+					newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getValueGSSFilterValueParserRuleCall_19_0());
+				}
+				lv_Value_19_0=ruleGSSFilterValue
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarRule());
 					}
-					lv_Constant_19_0=ruleGSSFilterConstant
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarRule());
-						}
-						set(
-							$current,
-							"Constant",
-							lv_Constant_19_0,
-							"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterConstant");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getSelectGSSFilterSelectParserRuleCall_19_1_0());
-					}
-					lv_Select_20_0=ruleGSSFilterSelect
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarRule());
-						}
-						set(
-							$current,
-							"Select",
-							lv_Select_20_0,
-							"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterSelect");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getSelectLineGSSFilterSelectLineParserRuleCall_19_2_0());
-					}
-					lv_SelectLine_21_0=ruleGSSFilterSelectLine
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarRule());
-						}
-						set(
-							$current,
-							"SelectLine",
-							lv_SelectLine_21_0,
-							"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterSelectLine");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"Value",
+						lv_Value_19_0,
+						"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterValue");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)
-		otherlv_22='}'
+		otherlv_20='}'
 		{
-			newLeafNode(otherlv_22, grammarAccess.getGSSFilterBoolVarAccess().getRightCurlyBracketKeyword_20());
+			newLeafNode(otherlv_20, grammarAccess.getGSSFilterBoolVarAccess().getRightCurlyBracketKeyword_20());
 		}
-		otherlv_23=';'
+		otherlv_21=';'
 		{
-			newLeafNode(otherlv_23, grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_21());
+			newLeafNode(otherlv_21, grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_21());
+		}
+	)
+;
+
+// Entry rule entryRuleGSSFilterValue
+entryRuleGSSFilterValue returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSFilterValueRule()); }
+	iv_ruleGSSFilterValue=ruleGSSFilterValue
+	{ $current=$iv_ruleGSSFilterValue.current; }
+	EOF;
+
+// Rule GSSFilterValue
+ruleGSSFilterValue returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSFilterValueAccess().getGSSFilterConstantParserRuleCall_0());
+		}
+		this_GSSFilterConstant_0=ruleGSSFilterConstant
+		{
+			$current = $this_GSSFilterConstant_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectParserRuleCall_1());
+		}
+		this_GSSFilterSelect_1=ruleGSSFilterSelect
+		{
+			$current = $this_GSSFilterSelect_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectLineParserRuleCall_2());
+		}
+		this_GSSFilterSelectLine_2=ruleGSSFilterSelectLine
+		{
+			$current = $this_GSSFilterSelectLine_2.current;
+			afterParserOrEnumRuleCall();
 		}
 	)
 ;

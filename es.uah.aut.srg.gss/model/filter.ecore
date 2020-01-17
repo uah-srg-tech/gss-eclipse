@@ -37,11 +37,7 @@
         eType="ecore:EClass format.ecore#//GSSFormatField"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Op" lowerBound="1" eType="#//GSSFilterFieldOp"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Constant" eType="#//GSSFilterConstant"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Select" eType="#//GSSFilterSelect"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="SelectLine" eType="#//GSSFilterSelectLine"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Value" eType="#//GSSFilterValue"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSFilterOPType">
@@ -56,31 +52,31 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSFilterOPType"
         unsettable="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterConstant">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterConstant" eSuperTypes="#//GSSFilterValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSFilterSelectType">
     <eLiterals name="data"/>
     <eLiterals name="size" value="1"/>
     <eLiterals name="crc" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterSelect">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterSelect" eSuperTypes="#//GSSFilterValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromFile" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSFilterSelectType"
         unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterSelectLine">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSFilterSelectLine" eSuperTypes="#//GSSFilterValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromFile" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="line" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="leftTrim" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rightTrim" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mask" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSFilterBoolVarFromArrayItem">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

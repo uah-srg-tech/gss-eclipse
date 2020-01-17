@@ -69,6 +69,7 @@ public class filterFactoryImpl extends EFactoryImpl implements filterFactory {
 			case filterPackage.GSS_FILTER_MINTERM_FILTER: return createGSSFilterMintermFilter();
 			case filterPackage.GSS_FILTER_BOOL_VAR: return createGSSFilterBoolVar();
 			case filterPackage.GSS_FILTER_FIELD_OP: return createGSSFilterFieldOp();
+			case filterPackage.GSS_FILTER_VALUE: return createGSSFilterValue();
 			case filterPackage.GSS_FILTER_CONSTANT: return createGSSFilterConstant();
 			case filterPackage.GSS_FILTER_SELECT: return createGSSFilterSelect();
 			case filterPackage.GSS_FILTER_SELECT_LINE: return createGSSFilterSelectLine();
@@ -159,6 +160,16 @@ public class filterFactoryImpl extends EFactoryImpl implements filterFactory {
 	public GSSFilterFieldOp createGSSFilterFieldOp() {
 		GSSFilterFieldOpImpl gssFilterFieldOp = new GSSFilterFieldOpImpl();
 		return gssFilterFieldOp;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSFilterValue createGSSFilterValue() {
+		GSSFilterValueImpl gssFilterValue = new GSSFilterValueImpl();
+		return gssFilterValue;
 	}
 
 	/**
