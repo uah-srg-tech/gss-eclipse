@@ -22,6 +22,7 @@ import es.uah.aut.srg.gss.tmoutput.GSSTMOutputPi1;
 import es.uah.aut.srg.gss.tmoutput.tmoutputFactory;
 import es.uah.aut.srg.gss.tmoutput.tmoutputPackage;
 
+import es.uah.aut.srg.tmtcif.enum_.enumPackage;
 import es.uah.aut.srg.tmtcif.tm.tmPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -106,6 +107,7 @@ public class tmoutputPackageImpl extends EPackageImpl implements tmoutputPackage
 		isInited = true;
 
 		// Initialize simple dependencies
+		enumPackage.eINSTANCE.eClass();
 		filterPackage.eINSTANCE.eClass();
 		importPackage.eINSTANCE.eClass();
 		tmPackage.eINSTANCE.eClass();

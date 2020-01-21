@@ -32,7 +32,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalTMOUTPUTParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<GSSTMOutput'", "'name='", "'type='", "'subtype='", "'levels='", "'>'", "'<level3_format'", "'file='", "'/>'", "'<level3_filter'", "'<from_level2_import'", "'<level2_format'", "'<level2_filter'", "'<from_level1_import'", "'<level1_format'", "'<level1_filter'", "'<from_level0_import'", "'<level0_format'", "'<level0_filter'", "'<fields>'", "'</fields>'", "'</GSSTMOutput>'", "'<OutputPI1'", "'val='", "'gssField='", "'<OutputField'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<GSSTMOutput'", "'name='", "'type='", "'subtype='", "'levels='", "'>'", "'<level3_format'", "'file='", "'/>'", "'<level3_filter'", "'<from_level2_import'", "'<level2_format'", "'<level2_filter'", "'<from_level1_import'", "'<level1_format'", "'<level1_filter'", "'<from_level0_import'", "'<level0_format'", "'<level0_filter'", "'<fields>'", "'</fields>'", "'</GSSTMOutput>'", "'<OutputPI1'", "'val='", "'gssField='", "'<OutputField'", "'enumRef='"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_UINT_STRING=5;
@@ -41,6 +41,7 @@ public class InternalTMOUTPUTParser extends AbstractInternalAntlrParser {
     public static final int T__15=15;
     public static final int T__37=37;
     public static final int T__16=16;
+    public static final int T__38=38;
     public static final int T__17=17;
     public static final int T__18=18;
     public static final int T__33=33;
@@ -1515,7 +1516,7 @@ public class InternalTMOUTPUTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSTMOutputField"
-    // InternalTMOUTPUT.g:672:1: ruleGSSTMOutputField returns [EObject current=null] : (otherlv_0= '<OutputField' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'gssField=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= '/>' ) ;
+    // InternalTMOUTPUT.g:672:1: ruleGSSTMOutputField returns [EObject current=null] : (otherlv_0= '<OutputField' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'gssField=' ( (otherlv_4= RULE_STRING ) ) (otherlv_5= 'enumRef=' ( (otherlv_6= RULE_STRING ) ) )? otherlv_7= '/>' ) ;
     public final EObject ruleGSSTMOutputField() throws RecognitionException {
         EObject current = null;
 
@@ -1525,16 +1526,18 @@ public class InternalTMOUTPUTParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         Token otherlv_4=null;
         Token otherlv_5=null;
+        Token otherlv_6=null;
+        Token otherlv_7=null;
 
 
         	enterRule();
 
         try {
-            // InternalTMOUTPUT.g:678:2: ( (otherlv_0= '<OutputField' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'gssField=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= '/>' ) )
-            // InternalTMOUTPUT.g:679:2: (otherlv_0= '<OutputField' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'gssField=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= '/>' )
+            // InternalTMOUTPUT.g:678:2: ( (otherlv_0= '<OutputField' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'gssField=' ( (otherlv_4= RULE_STRING ) ) (otherlv_5= 'enumRef=' ( (otherlv_6= RULE_STRING ) ) )? otherlv_7= '/>' ) )
+            // InternalTMOUTPUT.g:679:2: (otherlv_0= '<OutputField' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'gssField=' ( (otherlv_4= RULE_STRING ) ) (otherlv_5= 'enumRef=' ( (otherlv_6= RULE_STRING ) ) )? otherlv_7= '/>' )
             {
-            // InternalTMOUTPUT.g:679:2: (otherlv_0= '<OutputField' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'gssField=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= '/>' )
-            // InternalTMOUTPUT.g:680:3: otherlv_0= '<OutputField' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'gssField=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= '/>'
+            // InternalTMOUTPUT.g:679:2: (otherlv_0= '<OutputField' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'gssField=' ( (otherlv_4= RULE_STRING ) ) (otherlv_5= 'enumRef=' ( (otherlv_6= RULE_STRING ) ) )? otherlv_7= '/>' )
+            // InternalTMOUTPUT.g:680:3: otherlv_0= '<OutputField' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'gssField=' ( (otherlv_4= RULE_STRING ) ) (otherlv_5= 'enumRef=' ( (otherlv_6= RULE_STRING ) ) )? otherlv_7= '/>'
             {
             otherlv_0=(Token)match(input,37,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1602,7 +1605,7 @@ public class InternalTMOUTPUTParser extends AbstractInternalAntlrParser {
               					}
               				
             }
-            otherlv_4=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_12); if (state.failed) return current;
+            otherlv_4=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_30); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(otherlv_4, grammarAccess.getGSSTMOutputFieldAccess().getGssFieldGSSFormatFieldCrossReference_4_0());
@@ -1614,10 +1617,63 @@ public class InternalTMOUTPUTParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            // InternalTMOUTPUT.g:726:3: (otherlv_5= 'enumRef=' ( (otherlv_6= RULE_STRING ) ) )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
+
+            if ( (LA15_0==38) ) {
+                alt15=1;
+            }
+            switch (alt15) {
+                case 1 :
+                    // InternalTMOUTPUT.g:727:4: otherlv_5= 'enumRef=' ( (otherlv_6= RULE_STRING ) )
+                    {
+                    otherlv_5=(Token)match(input,38,FollowSets000.FOLLOW_4); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				newLeafNode(otherlv_5, grammarAccess.getGSSTMOutputFieldAccess().getEnumRefKeyword_5_0());
+                      			
+                    }
+                    // InternalTMOUTPUT.g:731:4: ( (otherlv_6= RULE_STRING ) )
+                    // InternalTMOUTPUT.g:732:5: (otherlv_6= RULE_STRING )
+                    {
+                    // InternalTMOUTPUT.g:732:5: (otherlv_6= RULE_STRING )
+                    // InternalTMOUTPUT.g:733:6: otherlv_6= RULE_STRING
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      						/* */
+                      					
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      						if (current==null) {
+                      							current = createModelElement(grammarAccess.getGSSTMOutputFieldRule());
+                      						}
+                      					
+                    }
+                    otherlv_6=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_12); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      						newLeafNode(otherlv_6, grammarAccess.getGSSTMOutputFieldAccess().getEnumRefTMTCIFEnumCrossReference_5_1_0());
+                      					
+                    }
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            otherlv_7=(Token)match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_5, grammarAccess.getGSSTMOutputFieldAccess().getSolidusGreaterThanSignKeyword_5());
+              			newLeafNode(otherlv_7, grammarAccess.getGSSTMOutputFieldAccess().getSolidusGreaterThanSignKeyword_6());
               		
             }
 
@@ -1679,6 +1735,7 @@ public class InternalTMOUTPUTParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000200000000L});
         public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000800000000L});
         public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000001000000000L});
+        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000004000100000L});
     }
 
 

@@ -341,6 +341,15 @@ public interface tmoutputPackage extends EPackage {
 	int GSSTM_OUTPUT_FIELD__NAME = tmPackage.TMTCIFTM_FIELD__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Enum Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSSTM_OUTPUT_FIELD__ENUM_REF = tmPackage.TMTCIFTM_FIELD__ENUM_REF;
+
+	/**
 	 * The feature id for the '<em><b>Gss Field</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

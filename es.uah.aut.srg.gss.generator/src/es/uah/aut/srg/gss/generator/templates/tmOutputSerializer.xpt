@@ -18,7 +18,11 @@
 «IF this.fields.size != 0 -»
 	<fields>
 «FOREACH this.gssFields AS field -»
+«IF field.enumRef == null -»
 		<OutputField name="«field.name»" gssField="«this.level1_format.name»(«this.level1_format.version»).«field.gssField.name»"/>
+«ELSE -»
+		<OutputField name="«field.name»" gssField="«this.level1_format.name»(«this.level1_format.version»).«field.gssField.name»" enumRef="«field.enumRef.name»"/>
+«ENDIF -»
 «ENDFOREACH -»
 	</fields>
 «ENDIF -»

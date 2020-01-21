@@ -61,19 +61,10 @@ public class TMOUTPUTSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     GSSTMOutputField returns GSSTMOutputField
 	 *
 	 * Constraint:
-	 *     (name=STRING gssField=[GSSFormatField|STRING])
+	 *     (name=STRING gssField=[GSSFormatField|STRING] enumRef=[TMTCIFEnum|STRING]?)
 	 */
 	protected void sequence_GSSTMOutputField(ISerializationContext context, GSSTMOutputField semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, tmPackage.Literals.TMTCIFTM_FIELD__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tmPackage.Literals.TMTCIFTM_FIELD__NAME));
-			if (transientValues.isValueTransient(semanticObject, tmoutputPackage.Literals.GSSTM_OUTPUT_FIELD__GSS_FIELD) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tmoutputPackage.Literals.GSSTM_OUTPUT_FIELD__GSS_FIELD));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGSSTMOutputFieldAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getGSSTMOutputFieldAccess().getGssFieldGSSFormatFieldSTRINGTerminalRuleCall_4_0_1(), semanticObject.getGssField());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

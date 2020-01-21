@@ -47,6 +47,9 @@ import es.uah.aut.srg.gss.tcheaderinput.tcheaderinputFactory;
 import es.uah.aut.srg.gss.tmheaderoutput.GSSTMHeaderOutput;
 import es.uah.aut.srg.gss.tmheaderoutput.GSSTMHeaderOutputField;
 import es.uah.aut.srg.gss.tmheaderoutput.tmheaderoutputFactory;
+import es.uah.aut.srg.tmtcif.enum_.TMTCIFEnum;
+import es.uah.aut.srg.tmtcif.enum_.TMTCIFEnumValue;
+import es.uah.aut.srg.tmtcif.enum_.enumFactory;
 import es.uah.aut.srg.tmtcif.fieldvalue.TMTCIFFieldValueRaw;
 import es.uah.aut.srg.tmtcif.fieldvalue.fieldvalueFactory;
 import es.uah.aut.srg.gss.format.GSSFormatAField;
@@ -84,6 +87,120 @@ public class GSSGenerator {
 	public static final String CNAME_CRC = "NID00048";
 	public static final String CNAME_CRC_HK = "NID00198";
 	public static final String CNAME_CHECKSUM = "NID10413";
+	
+	public static Map<String, String> getTCParamEnum(String database) throws IOException {
+
+		Map<String, String> tcParamEnums = new HashMap<String, String>();
+		//read TC Parameters PNAME and PAFREF from CPC table
+		BufferedReader cpc = new BufferedReader(
+		        new InputStreamReader(new FileInputStream(database + "\\cpc.dat")));
+	    String cpc_line;
+	    while ((cpc_line = cpc.readLine()) != null) {
+	    	
+	    	String[] cpc_rows = cpc_line.split("\t");
+	    	tcParamEnums.put(cpc_rows[0], cpc_rows[10]);// PNAME, PAFREF
+	    }
+	    cpc.close();
+	    return tcParamEnums;
+	}
+
+	public static Map<String, TMTCIFEnum> getTCEnum(String database) throws IOException {
+
+		Map<String, TMTCIFEnum> tcEnums = new HashMap<String, TMTCIFEnum>();
+		
+		//read TC enum names from PAF table
+		BufferedReader paf = new BufferedReader(
+		        new InputStreamReader(new FileInputStream(database + "\\paf.dat")));
+	    String paf_line;
+	    while ((paf_line = paf.readLine()) != null) {
+	    	
+	    	String[] paf_rows = paf_line.split("\t");
+
+	    	TMTCIFEnum tcEnum = enumFactory.eINSTANCE.createTMTCIFEnum();
+	    	tcEnum.setName(paf_rows[0]);//NUMBR
+	    	tcEnums.put(paf_rows[0], tcEnum);
+	    }
+	    paf.close();
+	    
+		//read TC enum name, options and values from PAS table
+		BufferedReader pas = new BufferedReader(
+		        new InputStreamReader(new FileInputStream(database + "\\pas.dat")));
+	    String pas_line;
+	    while ((pas_line = pas.readLine()) != null) {
+	    	
+	    	String[] pas_rows = pas_line.split("\t");
+	    	
+	    	//create new enum value and put it into enum
+	    	TMTCIFEnum tcEnum = tcEnums.get(pas_rows[0]); 		
+    		if(tcEnum != null) {
+
+		    	TMTCIFEnumValue tcEnumValue = enumFactory.eINSTANCE.createTMTCIFEnumValue();
+		    	tcEnumValue.setName(pas_rows[1]);//ALTXT
+		    	tcEnumValue.setRaw(pas_rows[2]);//ALVAL
+		    	tcEnum.getValues().add(tcEnumValue);
+		    	tcEnums.put(pas_rows[0], tcEnum);//NUMBR
+    		}
+	    }
+	    pas.close();
+		return tcEnums;
+	}
+
+	public static Map<String, String> getTMParamEnum(String database) throws IOException {
+
+		Map<String, String> tmParamEnums = new HashMap<String, String>();
+		//read TM Parameters NAME and CURTX from PCF table
+		BufferedReader pcf = new BufferedReader(
+		        new InputStreamReader(new FileInputStream(database + "\\pcf.dat")));
+	    String pcf_line;
+	    while ((pcf_line = pcf.readLine()) != null) {
+	    	
+	    	String[] pcf_rows = pcf_line.split("\t");
+	    	tmParamEnums.put(pcf_rows[0], pcf_rows[11]);// NAME, CURTX
+	    }
+	    pcf.close();
+	    return tmParamEnums;
+	}
+
+	public static Map<String, TMTCIFEnum> getTMEnum(String database) throws IOException {
+
+		Map<String, TMTCIFEnum> tmEnums = new HashMap<String, TMTCIFEnum>();
+		
+		//read TM enum names from TXF table
+		BufferedReader txf = new BufferedReader(
+		        new InputStreamReader(new FileInputStream(database + "\\txf.dat")));
+	    String txf_line;
+	    while ((txf_line = txf.readLine()) != null) {
+	    	
+	    	String[] txf_rows = txf_line.split("\t");
+
+	    	TMTCIFEnum tmEnum = enumFactory.eINSTANCE.createTMTCIFEnum();
+	    	tmEnum.setName(txf_rows[0]);//NUMBR
+	    	tmEnums.put(txf_rows[0], tmEnum);
+	    }
+	    txf.close();
+	    
+		//read TM enum name, options and values from TXP table
+		BufferedReader txp = new BufferedReader(
+		        new InputStreamReader(new FileInputStream(database + "\\txp.dat")));
+	    String txp_line;
+	    while ((txp_line = txp.readLine()) != null) {
+	    	
+	    	String[] txp_rows = txp_line.split("\t");
+	    	
+	    	//create new enum value and put it into enum
+	    	TMTCIFEnum tmEnum = tmEnums.get(txp_rows[0]); 		
+    		if(tmEnum != null) {
+
+		    	TMTCIFEnumValue tmEnumValue = enumFactory.eINSTANCE.createTMTCIFEnumValue();
+		    	tmEnumValue.setName(txp_rows[3]);//ALTXT
+		    	tmEnumValue.setRaw(txp_rows[1]);//FROM
+		    	tmEnum.getValues().add(tmEnumValue);
+		    	tmEnums.put(txp_rows[0], tmEnum);//NUMBR
+    		}
+	    }
+	    txp.close();
+		return tmEnums;
+	}
 	
 	public static Map<String, GSSFormatFormat> getTcFormats(String database) throws IOException {
 
@@ -1338,7 +1455,7 @@ public class GSSGenerator {
     	
     	GSSFilterConstant constant = filterFactory.eINSTANCE.createGSSFilterConstant();
     	constant.setValue(value);
-    	boolvar.setConstant(constant);
+    	boolvar.setValue(constant);
     	
     	filter.getBoolVar().add(boolvar);
 	}

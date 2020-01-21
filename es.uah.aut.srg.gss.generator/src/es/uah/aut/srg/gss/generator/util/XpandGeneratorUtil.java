@@ -26,6 +26,7 @@ import es.uah.aut.srg.gss.tcinput.tcinputPackage;
 import es.uah.aut.srg.gss.tcheaderinput.tcheaderinputPackage;
 import es.uah.aut.srg.gss.tmoutput.tmoutputPackage;
 import es.uah.aut.srg.gss.tmheaderoutput.tmheaderoutputPackage;
+import es.uah.aut.srg.tmtcif.enum_.enumPackage;
 import es.uah.aut.srg.tmtcif.tc.tcPackage;
 import es.uah.aut.srg.tmtcif.tcheader.tcheaderPackage;
 import es.uah.aut.srg.tmtcif.tm.tmPackage;
@@ -68,6 +69,7 @@ public class XpandGeneratorUtil {
 				tmPackage.eINSTANCE,
 				tmheaderoutputPackage.eINSTANCE,
 				tmheaderPackage.eINSTANCE,
+				enumPackage.eINSTANCE,
 			};
 		}
 		

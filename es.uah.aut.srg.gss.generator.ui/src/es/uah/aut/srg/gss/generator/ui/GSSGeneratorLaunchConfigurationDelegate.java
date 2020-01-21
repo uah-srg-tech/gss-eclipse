@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import es.uah.aut.srg.gss.common.GSSModelFile;
 import es.uah.aut.srg.gss.export.GSSExportExport;
 import es.uah.aut.srg.gss.export.GSSExportSettingFromConst;
+import es.uah.aut.srg.gss.filter.GSSFilterConstant;
 import es.uah.aut.srg.gss.filter.GSSFilterMintermFilter;
 import es.uah.aut.srg.gss.generator.GSSGenerator;
 import es.uah.aut.srg.gss.generator.util.XpandGeneratorUtil;
@@ -48,6 +49,7 @@ import es.uah.aut.srg.gss.format.GSSFormatCSField;
 import es.uah.aut.srg.gss.format.GSSFormatFormat;
 import es.uah.aut.srg.gss.format.GSSFormatVSField;
 import es.uah.aut.srg.gss.xtext.xml.XMLGeneratorUtil;
+import es.uah.aut.srg.tmtcif.enum_.TMTCIFEnum;
 
 public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigurationDelegate {
 
@@ -152,7 +154,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			Map<String, String> PI1_Val = new HashMap<String, String>();
 			for (GSSFilterMintermFilter filterTopLevel : filtersTopLevel.values()) {
 				PI1_Val.put(filterTopLevel.getName(),
-						filterTopLevel.getBoolVar().get(0).getConstant().getValue());
+						((GSSFilterConstant)filterTopLevel.getBoolVar().get(0).getValue()).getValue());
 			}
 			for (GSSFilterMintermFilter filterBottomLevel : filtersBottomLevel) {
 				if(filterBottomLevel.getName().substring(0, 3).compareTo("EPD") == 0) {
@@ -164,8 +166,8 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				} else {
 					typeSubtype += "sis_";
 				}
-				typeSubtype += filterBottomLevel.getBoolVar().get(1).getConstant().getValue() + "_"
-						 + filterBottomLevel.getBoolVar().get(2).getConstant().getValue();
+				typeSubtype += ((GSSFilterConstant)filterBottomLevel.getBoolVar().get(1).getValue()).getValue() + "_"
+						 + ((GSSFilterConstant)filterBottomLevel.getBoolVar().get(2).getValue()).getValue();
 				if(PI1_Val.get(filterBottomLevel.getName()) != null) {
 					typeSubtype += "_" + PI1_Val.get(filterBottomLevel.getName());
 				}
@@ -508,6 +510,33 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		}
 
 		if((useTypeInsteadOfId) && (createTmTcInOuts)) {
+
+			//create tc enum
+			Map<String, String> tcParamEnum = null;
+			Map<String, TMTCIFEnum> tcEnums = null;
+			try {
+				tcParamEnum = GSSGenerator.getTCParamEnum(database);
+			} catch (IOException e) {
+				throw new CoreException(new Status(
+					IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
+			}
+			try {
+				tcEnums = GSSGenerator.getTCEnum(database);
+			} catch (IOException e) {
+				throw new CoreException(new Status(
+					IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
+			}
+
+			for (TMTCIFEnum tcEnum : tcEnums.values()) {
+				String tcEnumName = "tcEnums\\" + tcEnum.getName() + ".tmtcif_enum";
+	
+				XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), tcEnum,
+						"es::uah::aut::srg::gss::generator::templates::enumSerializer::Serializer", 
+						false, tcEnumName);
+				
+				folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
+			}
+			
 			//create tc inputs
 			for (GSSExportExport export : tcExports) {
 				GSSTCInput gssTcInput = tcinputFactory.eINSTANCE.createGSSTCInput();
@@ -548,6 +577,9 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 							gssTcInputField.setName(GSSFormatCSField.getDescription());
 						} else {
 							gssTcInputField.setName(GSSFormatCSField.getName());
+						}
+						if(tcParamEnum.get((GSSFormatCSField.getName())) != null) {
+							gssTcInputField.setEnumRef(tcEnums.get(tcParamEnum.get(GSSFormatCSField.getName())));
 						}
 						gssTcInput.getGssFields().add(gssTcInputField);
 					}
@@ -614,6 +646,32 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 					false, tcHeaderName);
 			
 			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
+
+			//create tm enum
+			Map<String, String> tmParamEnum = null;
+			Map<String, TMTCIFEnum> tmEnums = null;
+			try {
+				tmParamEnum = GSSGenerator.getTMParamEnum(database);
+			} catch (IOException e) {
+				throw new CoreException(new Status(
+					IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
+			}
+			try {
+				tmEnums = GSSGenerator.getTMEnum(database);
+			} catch (IOException e) {
+				throw new CoreException(new Status(
+					IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
+			}
+
+			for (TMTCIFEnum tmEnum : tmEnums.values()) {
+				String tmEnumName = "tmEnums\\" + tmEnum.getName() + ".tmtcif_enum";
+	
+				XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), tmEnum,
+						"es::uah::aut::srg::gss::generator::templates::enumSerializer::Serializer", 
+						false, tmEnumName);
+				
+				folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
+			}
 			
 			//create tm outputs
 			GSSImportImport ccsdsImport = null;
@@ -681,6 +739,9 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 							gssTmOutputField.setName(GSSFormatCSField.getDescription());
 						} else {
 							gssTmOutputField.setName(GSSFormatCSField.getName());
+						}
+						if(tmParamEnum.get((GSSFormatCSField.getName())) != null) {
+							gssTmOutputField.setEnumRef(tmEnums.get(tmParamEnum.get(GSSFormatCSField.getName())));
 						}
 						gssTmOutput.getGssFields().add(gssTmOutputField);
 					}

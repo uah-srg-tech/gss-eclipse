@@ -723,9 +723,31 @@ ruleGSSTMOutputField returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_5='/>'
+		(
+			otherlv_5='enumRef='
+			{
+				newLeafNode(otherlv_5, grammarAccess.getGSSTMOutputFieldAccess().getEnumRefKeyword_5_0());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getGSSTMOutputFieldRule());
+						}
+					}
+					otherlv_6=RULE_STRING
+					{
+						newLeafNode(otherlv_6, grammarAccess.getGSSTMOutputFieldAccess().getEnumRefTMTCIFEnumCrossReference_5_1_0());
+					}
+				)
+			)
+		)?
+		otherlv_7='/>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSTMOutputFieldAccess().getSolidusGreaterThanSignKeyword_5());
+			newLeafNode(otherlv_7, grammarAccess.getGSSTMOutputFieldAccess().getSolidusGreaterThanSignKeyword_6());
 		}
 	)
 ;

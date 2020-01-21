@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<GSSTMOutput'", "'name='", "'type='", "'subtype='", "'levels='", "'>'", "'</GSSTMOutput>'", "'<level3_format'", "'file='", "'/>'", "'<level3_filter'", "'<from_level2_import'", "'<level2_format'", "'<level2_filter'", "'<from_level1_import'", "'<level1_format'", "'<level1_filter'", "'<from_level0_import'", "'<level0_format'", "'<level0_filter'", "'<fields>'", "'</fields>'", "'<OutputPI1'", "'val='", "'gssField='", "'<OutputField'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<GSSTMOutput'", "'name='", "'type='", "'subtype='", "'levels='", "'>'", "'</GSSTMOutput>'", "'<level3_format'", "'file='", "'/>'", "'<level3_filter'", "'<from_level2_import'", "'<level2_format'", "'<level2_filter'", "'<from_level1_import'", "'<level1_format'", "'<level1_filter'", "'<from_level0_import'", "'<level0_format'", "'<level0_filter'", "'<fields>'", "'</fields>'", "'<OutputPI1'", "'val='", "'gssField='", "'<OutputField'", "'enumRef='"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_UINT_STRING=5;
@@ -42,6 +42,7 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
     public static final int T__15=15;
     public static final int T__37=37;
     public static final int T__16=16;
+    public static final int T__38=38;
     public static final int T__17=17;
     public static final int T__18=18;
     public static final int T__33=33;
@@ -7378,7 +7379,7 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
             // InternalTMOUTPUT.g:2387:1: ( rule__GSSTMOutputField__Group__4__Impl rule__GSSTMOutputField__Group__5 )
             // InternalTMOUTPUT.g:2388:2: rule__GSSTMOutputField__Group__4__Impl rule__GSSTMOutputField__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_12);
+            pushFollow(FollowSets000.FOLLOW_18);
             rule__GSSTMOutputField__Group__4__Impl();
 
             state._fsp--;
@@ -7458,17 +7459,22 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutputField__Group__5"
-    // InternalTMOUTPUT.g:2410:1: rule__GSSTMOutputField__Group__5 : rule__GSSTMOutputField__Group__5__Impl ;
+    // InternalTMOUTPUT.g:2410:1: rule__GSSTMOutputField__Group__5 : rule__GSSTMOutputField__Group__5__Impl rule__GSSTMOutputField__Group__6 ;
     public final void rule__GSSTMOutputField__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2414:1: ( rule__GSSTMOutputField__Group__5__Impl )
-            // InternalTMOUTPUT.g:2415:2: rule__GSSTMOutputField__Group__5__Impl
+            // InternalTMOUTPUT.g:2414:1: ( rule__GSSTMOutputField__Group__5__Impl rule__GSSTMOutputField__Group__6 )
+            // InternalTMOUTPUT.g:2415:2: rule__GSSTMOutputField__Group__5__Impl rule__GSSTMOutputField__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_2);
+            pushFollow(FollowSets000.FOLLOW_18);
             rule__GSSTMOutputField__Group__5__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSTMOutputField__Group__6();
 
             state._fsp--;
             if (state.failed) return ;
@@ -7491,24 +7497,45 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutputField__Group__5__Impl"
-    // InternalTMOUTPUT.g:2421:1: rule__GSSTMOutputField__Group__5__Impl : ( '/>' ) ;
+    // InternalTMOUTPUT.g:2422:1: rule__GSSTMOutputField__Group__5__Impl : ( ( rule__GSSTMOutputField__Group_5__0 )? ) ;
     public final void rule__GSSTMOutputField__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2425:1: ( ( '/>' ) )
-            // InternalTMOUTPUT.g:2426:1: ( '/>' )
+            // InternalTMOUTPUT.g:2426:1: ( ( ( rule__GSSTMOutputField__Group_5__0 )? ) )
+            // InternalTMOUTPUT.g:2427:1: ( ( rule__GSSTMOutputField__Group_5__0 )? )
             {
-            // InternalTMOUTPUT.g:2426:1: ( '/>' )
-            // InternalTMOUTPUT.g:2427:2: '/>'
+            // InternalTMOUTPUT.g:2427:1: ( ( rule__GSSTMOutputField__Group_5__0 )? )
+            // InternalTMOUTPUT.g:2428:2: ( rule__GSSTMOutputField__Group_5__0 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTMOutputFieldAccess().getSolidusGreaterThanSignKeyword_5()); 
+               before(grammarAccess.getGSSTMOutputFieldAccess().getGroup_5()); 
             }
-            match(input,21,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalTMOUTPUT.g:2429:2: ( rule__GSSTMOutputField__Group_5__0 )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
+
+            if ( (LA15_0==38) ) {
+                alt15=1;
+            }
+            switch (alt15) {
+                case 1 :
+                    // InternalTMOUTPUT.g:2429:3: rule__GSSTMOutputField__Group_5__0
+                    {
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    rule__GSSTMOutputField__Group_5__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTMOutputFieldAccess().getSolidusGreaterThanSignKeyword_5()); 
+               after(grammarAccess.getGSSTMOutputFieldAccess().getGroup_5()); 
             }
 
             }
@@ -7531,18 +7558,255 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__GSSTMOutputField__Group__5__Impl"
 
 
+    // $ANTLR start "rule__GSSTMOutputField__Group__6"
+    // InternalTMOUTPUT.g:2437:1: rule__GSSTMOutputField__Group__6 : rule__GSSTMOutputField__Group__6__Impl ;
+    public final void rule__GSSTMOutputField__Group__6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTMOUTPUT.g:2441:1: ( rule__GSSTMOutputField__Group__6__Impl )
+            // InternalTMOUTPUT.g:2442:2: rule__GSSTMOutputField__Group__6__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSTMOutputField__Group__6__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSTMOutputField__Group__6"
+
+
+    // $ANTLR start "rule__GSSTMOutputField__Group__6__Impl"
+    // InternalTMOUTPUT.g:2448:1: rule__GSSTMOutputField__Group__6__Impl : ( '/>' ) ;
+    public final void rule__GSSTMOutputField__Group__6__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTMOUTPUT.g:2452:1: ( ( '/>' ) )
+            // InternalTMOUTPUT.g:2453:1: ( '/>' )
+            {
+            // InternalTMOUTPUT.g:2453:1: ( '/>' )
+            // InternalTMOUTPUT.g:2454:2: '/>'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSTMOutputFieldAccess().getSolidusGreaterThanSignKeyword_6()); 
+            }
+            match(input,21,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSTMOutputFieldAccess().getSolidusGreaterThanSignKeyword_6()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSTMOutputField__Group__6__Impl"
+
+
+    // $ANTLR start "rule__GSSTMOutputField__Group_5__0"
+    // InternalTMOUTPUT.g:2464:1: rule__GSSTMOutputField__Group_5__0 : rule__GSSTMOutputField__Group_5__0__Impl rule__GSSTMOutputField__Group_5__1 ;
+    public final void rule__GSSTMOutputField__Group_5__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTMOUTPUT.g:2468:1: ( rule__GSSTMOutputField__Group_5__0__Impl rule__GSSTMOutputField__Group_5__1 )
+            // InternalTMOUTPUT.g:2469:2: rule__GSSTMOutputField__Group_5__0__Impl rule__GSSTMOutputField__Group_5__1
+            {
+            pushFollow(FollowSets000.FOLLOW_4);
+            rule__GSSTMOutputField__Group_5__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSTMOutputField__Group_5__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSTMOutputField__Group_5__0"
+
+
+    // $ANTLR start "rule__GSSTMOutputField__Group_5__0__Impl"
+    // InternalTMOUTPUT.g:2476:1: rule__GSSTMOutputField__Group_5__0__Impl : ( 'enumRef=' ) ;
+    public final void rule__GSSTMOutputField__Group_5__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTMOUTPUT.g:2480:1: ( ( 'enumRef=' ) )
+            // InternalTMOUTPUT.g:2481:1: ( 'enumRef=' )
+            {
+            // InternalTMOUTPUT.g:2481:1: ( 'enumRef=' )
+            // InternalTMOUTPUT.g:2482:2: 'enumRef='
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefKeyword_5_0()); 
+            }
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefKeyword_5_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSTMOutputField__Group_5__0__Impl"
+
+
+    // $ANTLR start "rule__GSSTMOutputField__Group_5__1"
+    // InternalTMOUTPUT.g:2491:1: rule__GSSTMOutputField__Group_5__1 : rule__GSSTMOutputField__Group_5__1__Impl ;
+    public final void rule__GSSTMOutputField__Group_5__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTMOUTPUT.g:2495:1: ( rule__GSSTMOutputField__Group_5__1__Impl )
+            // InternalTMOUTPUT.g:2496:2: rule__GSSTMOutputField__Group_5__1__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSTMOutputField__Group_5__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSTMOutputField__Group_5__1"
+
+
+    // $ANTLR start "rule__GSSTMOutputField__Group_5__1__Impl"
+    // InternalTMOUTPUT.g:2502:1: rule__GSSTMOutputField__Group_5__1__Impl : ( ( rule__GSSTMOutputField__EnumRefAssignment_5_1 ) ) ;
+    public final void rule__GSSTMOutputField__Group_5__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTMOUTPUT.g:2506:1: ( ( ( rule__GSSTMOutputField__EnumRefAssignment_5_1 ) ) )
+            // InternalTMOUTPUT.g:2507:1: ( ( rule__GSSTMOutputField__EnumRefAssignment_5_1 ) )
+            {
+            // InternalTMOUTPUT.g:2507:1: ( ( rule__GSSTMOutputField__EnumRefAssignment_5_1 ) )
+            // InternalTMOUTPUT.g:2508:2: ( rule__GSSTMOutputField__EnumRefAssignment_5_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefAssignment_5_1()); 
+            }
+            // InternalTMOUTPUT.g:2509:2: ( rule__GSSTMOutputField__EnumRefAssignment_5_1 )
+            // InternalTMOUTPUT.g:2509:3: rule__GSSTMOutputField__EnumRefAssignment_5_1
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSTMOutputField__EnumRefAssignment_5_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefAssignment_5_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSTMOutputField__Group_5__1__Impl"
+
+
     // $ANTLR start "rule__GSSTMOutput__NameAssignment_2"
-    // InternalTMOUTPUT.g:2437:1: rule__GSSTMOutput__NameAssignment_2 : ( RULE_STRING ) ;
+    // InternalTMOUTPUT.g:2518:1: rule__GSSTMOutput__NameAssignment_2 : ( RULE_STRING ) ;
     public final void rule__GSSTMOutput__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2441:1: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2442:2: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2522:1: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2523:2: ( RULE_STRING )
             {
-            // InternalTMOUTPUT.g:2442:2: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2443:3: RULE_STRING
+            // InternalTMOUTPUT.g:2523:2: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2524:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getNameSTRINGTerminalRuleCall_2_0()); 
@@ -7573,17 +7837,17 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__TypeAssignment_4"
-    // InternalTMOUTPUT.g:2452:1: rule__GSSTMOutput__TypeAssignment_4 : ( RULE_UINT_STRING ) ;
+    // InternalTMOUTPUT.g:2533:1: rule__GSSTMOutput__TypeAssignment_4 : ( RULE_UINT_STRING ) ;
     public final void rule__GSSTMOutput__TypeAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2456:1: ( ( RULE_UINT_STRING ) )
-            // InternalTMOUTPUT.g:2457:2: ( RULE_UINT_STRING )
+            // InternalTMOUTPUT.g:2537:1: ( ( RULE_UINT_STRING ) )
+            // InternalTMOUTPUT.g:2538:2: ( RULE_UINT_STRING )
             {
-            // InternalTMOUTPUT.g:2457:2: ( RULE_UINT_STRING )
-            // InternalTMOUTPUT.g:2458:3: RULE_UINT_STRING
+            // InternalTMOUTPUT.g:2538:2: ( RULE_UINT_STRING )
+            // InternalTMOUTPUT.g:2539:3: RULE_UINT_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getTypeUINT_STRINGTerminalRuleCall_4_0()); 
@@ -7614,17 +7878,17 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__SubtypeAssignment_6"
-    // InternalTMOUTPUT.g:2467:1: rule__GSSTMOutput__SubtypeAssignment_6 : ( RULE_UINT_STRING ) ;
+    // InternalTMOUTPUT.g:2548:1: rule__GSSTMOutput__SubtypeAssignment_6 : ( RULE_UINT_STRING ) ;
     public final void rule__GSSTMOutput__SubtypeAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2471:1: ( ( RULE_UINT_STRING ) )
-            // InternalTMOUTPUT.g:2472:2: ( RULE_UINT_STRING )
+            // InternalTMOUTPUT.g:2552:1: ( ( RULE_UINT_STRING ) )
+            // InternalTMOUTPUT.g:2553:2: ( RULE_UINT_STRING )
             {
-            // InternalTMOUTPUT.g:2472:2: ( RULE_UINT_STRING )
-            // InternalTMOUTPUT.g:2473:3: RULE_UINT_STRING
+            // InternalTMOUTPUT.g:2553:2: ( RULE_UINT_STRING )
+            // InternalTMOUTPUT.g:2554:3: RULE_UINT_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getSubtypeUINT_STRINGTerminalRuleCall_6_0()); 
@@ -7655,17 +7919,17 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__LevelsAssignment_8"
-    // InternalTMOUTPUT.g:2482:1: rule__GSSTMOutput__LevelsAssignment_8 : ( RULE_UINT_STRING ) ;
+    // InternalTMOUTPUT.g:2563:1: rule__GSSTMOutput__LevelsAssignment_8 : ( RULE_UINT_STRING ) ;
     public final void rule__GSSTMOutput__LevelsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2486:1: ( ( RULE_UINT_STRING ) )
-            // InternalTMOUTPUT.g:2487:2: ( RULE_UINT_STRING )
+            // InternalTMOUTPUT.g:2567:1: ( ( RULE_UINT_STRING ) )
+            // InternalTMOUTPUT.g:2568:2: ( RULE_UINT_STRING )
             {
-            // InternalTMOUTPUT.g:2487:2: ( RULE_UINT_STRING )
-            // InternalTMOUTPUT.g:2488:3: RULE_UINT_STRING
+            // InternalTMOUTPUT.g:2568:2: ( RULE_UINT_STRING )
+            // InternalTMOUTPUT.g:2569:3: RULE_UINT_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevelsUINT_STRINGTerminalRuleCall_8_0()); 
@@ -7696,23 +7960,23 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__Level3_formatAssignment_10_2"
-    // InternalTMOUTPUT.g:2497:1: rule__GSSTMOutput__Level3_formatAssignment_10_2 : ( ( RULE_STRING ) ) ;
+    // InternalTMOUTPUT.g:2578:1: rule__GSSTMOutput__Level3_formatAssignment_10_2 : ( ( RULE_STRING ) ) ;
     public final void rule__GSSTMOutput__Level3_formatAssignment_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2501:1: ( ( ( RULE_STRING ) ) )
-            // InternalTMOUTPUT.g:2502:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2582:1: ( ( ( RULE_STRING ) ) )
+            // InternalTMOUTPUT.g:2583:2: ( ( RULE_STRING ) )
             {
-            // InternalTMOUTPUT.g:2502:2: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2503:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2583:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2584:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel3_formatGSSFormatFormatCrossReference_10_2_0()); 
             }
-            // InternalTMOUTPUT.g:2504:3: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2505:4: RULE_STRING
+            // InternalTMOUTPUT.g:2585:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2586:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel3_formatGSSFormatFormatSTRINGTerminalRuleCall_10_2_0_1()); 
@@ -7749,23 +8013,23 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__Level3_filterAssignment_11_2"
-    // InternalTMOUTPUT.g:2516:1: rule__GSSTMOutput__Level3_filterAssignment_11_2 : ( ( RULE_STRING ) ) ;
+    // InternalTMOUTPUT.g:2597:1: rule__GSSTMOutput__Level3_filterAssignment_11_2 : ( ( RULE_STRING ) ) ;
     public final void rule__GSSTMOutput__Level3_filterAssignment_11_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2520:1: ( ( ( RULE_STRING ) ) )
-            // InternalTMOUTPUT.g:2521:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2601:1: ( ( ( RULE_STRING ) ) )
+            // InternalTMOUTPUT.g:2602:2: ( ( RULE_STRING ) )
             {
-            // InternalTMOUTPUT.g:2521:2: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2522:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2602:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2603:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel3_filterGSSFilterFilterCrossReference_11_2_0()); 
             }
-            // InternalTMOUTPUT.g:2523:3: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2524:4: RULE_STRING
+            // InternalTMOUTPUT.g:2604:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2605:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel3_filterGSSFilterFilterSTRINGTerminalRuleCall_11_2_0_1()); 
@@ -7802,23 +8066,23 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__From_level2_importAssignment_12_2"
-    // InternalTMOUTPUT.g:2535:1: rule__GSSTMOutput__From_level2_importAssignment_12_2 : ( ( RULE_STRING ) ) ;
+    // InternalTMOUTPUT.g:2616:1: rule__GSSTMOutput__From_level2_importAssignment_12_2 : ( ( RULE_STRING ) ) ;
     public final void rule__GSSTMOutput__From_level2_importAssignment_12_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2539:1: ( ( ( RULE_STRING ) ) )
-            // InternalTMOUTPUT.g:2540:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2620:1: ( ( ( RULE_STRING ) ) )
+            // InternalTMOUTPUT.g:2621:2: ( ( RULE_STRING ) )
             {
-            // InternalTMOUTPUT.g:2540:2: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2541:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2621:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2622:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getFrom_level2_importGSSImportImportCrossReference_12_2_0()); 
             }
-            // InternalTMOUTPUT.g:2542:3: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2543:4: RULE_STRING
+            // InternalTMOUTPUT.g:2623:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2624:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getFrom_level2_importGSSImportImportSTRINGTerminalRuleCall_12_2_0_1()); 
@@ -7855,23 +8119,23 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__Level2_formatAssignment_13_2"
-    // InternalTMOUTPUT.g:2554:1: rule__GSSTMOutput__Level2_formatAssignment_13_2 : ( ( RULE_STRING ) ) ;
+    // InternalTMOUTPUT.g:2635:1: rule__GSSTMOutput__Level2_formatAssignment_13_2 : ( ( RULE_STRING ) ) ;
     public final void rule__GSSTMOutput__Level2_formatAssignment_13_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2558:1: ( ( ( RULE_STRING ) ) )
-            // InternalTMOUTPUT.g:2559:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2639:1: ( ( ( RULE_STRING ) ) )
+            // InternalTMOUTPUT.g:2640:2: ( ( RULE_STRING ) )
             {
-            // InternalTMOUTPUT.g:2559:2: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2560:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2640:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2641:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel2_formatGSSFormatFormatCrossReference_13_2_0()); 
             }
-            // InternalTMOUTPUT.g:2561:3: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2562:4: RULE_STRING
+            // InternalTMOUTPUT.g:2642:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2643:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel2_formatGSSFormatFormatSTRINGTerminalRuleCall_13_2_0_1()); 
@@ -7908,23 +8172,23 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__Level2_filterAssignment_14_2"
-    // InternalTMOUTPUT.g:2573:1: rule__GSSTMOutput__Level2_filterAssignment_14_2 : ( ( RULE_STRING ) ) ;
+    // InternalTMOUTPUT.g:2654:1: rule__GSSTMOutput__Level2_filterAssignment_14_2 : ( ( RULE_STRING ) ) ;
     public final void rule__GSSTMOutput__Level2_filterAssignment_14_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2577:1: ( ( ( RULE_STRING ) ) )
-            // InternalTMOUTPUT.g:2578:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2658:1: ( ( ( RULE_STRING ) ) )
+            // InternalTMOUTPUT.g:2659:2: ( ( RULE_STRING ) )
             {
-            // InternalTMOUTPUT.g:2578:2: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2579:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2659:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2660:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel2_filterGSSFilterFilterCrossReference_14_2_0()); 
             }
-            // InternalTMOUTPUT.g:2580:3: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2581:4: RULE_STRING
+            // InternalTMOUTPUT.g:2661:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2662:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel2_filterGSSFilterFilterSTRINGTerminalRuleCall_14_2_0_1()); 
@@ -7961,23 +8225,23 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__From_level1_importAssignment_15_2"
-    // InternalTMOUTPUT.g:2592:1: rule__GSSTMOutput__From_level1_importAssignment_15_2 : ( ( RULE_STRING ) ) ;
+    // InternalTMOUTPUT.g:2673:1: rule__GSSTMOutput__From_level1_importAssignment_15_2 : ( ( RULE_STRING ) ) ;
     public final void rule__GSSTMOutput__From_level1_importAssignment_15_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2596:1: ( ( ( RULE_STRING ) ) )
-            // InternalTMOUTPUT.g:2597:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2677:1: ( ( ( RULE_STRING ) ) )
+            // InternalTMOUTPUT.g:2678:2: ( ( RULE_STRING ) )
             {
-            // InternalTMOUTPUT.g:2597:2: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2598:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2678:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2679:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getFrom_level1_importGSSImportImportCrossReference_15_2_0()); 
             }
-            // InternalTMOUTPUT.g:2599:3: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2600:4: RULE_STRING
+            // InternalTMOUTPUT.g:2680:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2681:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getFrom_level1_importGSSImportImportSTRINGTerminalRuleCall_15_2_0_1()); 
@@ -8014,23 +8278,23 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__Level1_formatAssignment_16_2"
-    // InternalTMOUTPUT.g:2611:1: rule__GSSTMOutput__Level1_formatAssignment_16_2 : ( ( RULE_STRING ) ) ;
+    // InternalTMOUTPUT.g:2692:1: rule__GSSTMOutput__Level1_formatAssignment_16_2 : ( ( RULE_STRING ) ) ;
     public final void rule__GSSTMOutput__Level1_formatAssignment_16_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2615:1: ( ( ( RULE_STRING ) ) )
-            // InternalTMOUTPUT.g:2616:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2696:1: ( ( ( RULE_STRING ) ) )
+            // InternalTMOUTPUT.g:2697:2: ( ( RULE_STRING ) )
             {
-            // InternalTMOUTPUT.g:2616:2: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2617:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2697:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2698:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel1_formatGSSFormatFormatCrossReference_16_2_0()); 
             }
-            // InternalTMOUTPUT.g:2618:3: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2619:4: RULE_STRING
+            // InternalTMOUTPUT.g:2699:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2700:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel1_formatGSSFormatFormatSTRINGTerminalRuleCall_16_2_0_1()); 
@@ -8067,23 +8331,23 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__Level1_filterAssignment_17_2"
-    // InternalTMOUTPUT.g:2630:1: rule__GSSTMOutput__Level1_filterAssignment_17_2 : ( ( RULE_STRING ) ) ;
+    // InternalTMOUTPUT.g:2711:1: rule__GSSTMOutput__Level1_filterAssignment_17_2 : ( ( RULE_STRING ) ) ;
     public final void rule__GSSTMOutput__Level1_filterAssignment_17_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2634:1: ( ( ( RULE_STRING ) ) )
-            // InternalTMOUTPUT.g:2635:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2715:1: ( ( ( RULE_STRING ) ) )
+            // InternalTMOUTPUT.g:2716:2: ( ( RULE_STRING ) )
             {
-            // InternalTMOUTPUT.g:2635:2: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2636:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2716:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2717:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel1_filterGSSFilterFilterCrossReference_17_2_0()); 
             }
-            // InternalTMOUTPUT.g:2637:3: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2638:4: RULE_STRING
+            // InternalTMOUTPUT.g:2718:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2719:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel1_filterGSSFilterFilterSTRINGTerminalRuleCall_17_2_0_1()); 
@@ -8120,23 +8384,23 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__From_level0_importAssignment_18_2"
-    // InternalTMOUTPUT.g:2649:1: rule__GSSTMOutput__From_level0_importAssignment_18_2 : ( ( RULE_STRING ) ) ;
+    // InternalTMOUTPUT.g:2730:1: rule__GSSTMOutput__From_level0_importAssignment_18_2 : ( ( RULE_STRING ) ) ;
     public final void rule__GSSTMOutput__From_level0_importAssignment_18_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2653:1: ( ( ( RULE_STRING ) ) )
-            // InternalTMOUTPUT.g:2654:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2734:1: ( ( ( RULE_STRING ) ) )
+            // InternalTMOUTPUT.g:2735:2: ( ( RULE_STRING ) )
             {
-            // InternalTMOUTPUT.g:2654:2: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2655:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2735:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2736:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getFrom_level0_importGSSImportImportCrossReference_18_2_0()); 
             }
-            // InternalTMOUTPUT.g:2656:3: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2657:4: RULE_STRING
+            // InternalTMOUTPUT.g:2737:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2738:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getFrom_level0_importGSSImportImportSTRINGTerminalRuleCall_18_2_0_1()); 
@@ -8173,23 +8437,23 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__Level0_formatAssignment_19_2"
-    // InternalTMOUTPUT.g:2668:1: rule__GSSTMOutput__Level0_formatAssignment_19_2 : ( ( RULE_STRING ) ) ;
+    // InternalTMOUTPUT.g:2749:1: rule__GSSTMOutput__Level0_formatAssignment_19_2 : ( ( RULE_STRING ) ) ;
     public final void rule__GSSTMOutput__Level0_formatAssignment_19_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2672:1: ( ( ( RULE_STRING ) ) )
-            // InternalTMOUTPUT.g:2673:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2753:1: ( ( ( RULE_STRING ) ) )
+            // InternalTMOUTPUT.g:2754:2: ( ( RULE_STRING ) )
             {
-            // InternalTMOUTPUT.g:2673:2: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2674:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2754:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2755:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel0_formatGSSFormatFormatCrossReference_19_2_0()); 
             }
-            // InternalTMOUTPUT.g:2675:3: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2676:4: RULE_STRING
+            // InternalTMOUTPUT.g:2756:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2757:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel0_formatGSSFormatFormatSTRINGTerminalRuleCall_19_2_0_1()); 
@@ -8226,23 +8490,23 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__Level0_filterAssignment_20_2"
-    // InternalTMOUTPUT.g:2687:1: rule__GSSTMOutput__Level0_filterAssignment_20_2 : ( ( RULE_STRING ) ) ;
+    // InternalTMOUTPUT.g:2768:1: rule__GSSTMOutput__Level0_filterAssignment_20_2 : ( ( RULE_STRING ) ) ;
     public final void rule__GSSTMOutput__Level0_filterAssignment_20_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2691:1: ( ( ( RULE_STRING ) ) )
-            // InternalTMOUTPUT.g:2692:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2772:1: ( ( ( RULE_STRING ) ) )
+            // InternalTMOUTPUT.g:2773:2: ( ( RULE_STRING ) )
             {
-            // InternalTMOUTPUT.g:2692:2: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2693:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2773:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2774:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel0_filterGSSFilterFilterCrossReference_20_2_0()); 
             }
-            // InternalTMOUTPUT.g:2694:3: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2695:4: RULE_STRING
+            // InternalTMOUTPUT.g:2775:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2776:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getLevel0_filterGSSFilterFilterSTRINGTerminalRuleCall_20_2_0_1()); 
@@ -8279,17 +8543,17 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__GssPi1Assignment_21"
-    // InternalTMOUTPUT.g:2706:1: rule__GSSTMOutput__GssPi1Assignment_21 : ( ruleGSSTMOutputPi1 ) ;
+    // InternalTMOUTPUT.g:2787:1: rule__GSSTMOutput__GssPi1Assignment_21 : ( ruleGSSTMOutputPi1 ) ;
     public final void rule__GSSTMOutput__GssPi1Assignment_21() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2710:1: ( ( ruleGSSTMOutputPi1 ) )
-            // InternalTMOUTPUT.g:2711:2: ( ruleGSSTMOutputPi1 )
+            // InternalTMOUTPUT.g:2791:1: ( ( ruleGSSTMOutputPi1 ) )
+            // InternalTMOUTPUT.g:2792:2: ( ruleGSSTMOutputPi1 )
             {
-            // InternalTMOUTPUT.g:2711:2: ( ruleGSSTMOutputPi1 )
-            // InternalTMOUTPUT.g:2712:3: ruleGSSTMOutputPi1
+            // InternalTMOUTPUT.g:2792:2: ( ruleGSSTMOutputPi1 )
+            // InternalTMOUTPUT.g:2793:3: ruleGSSTMOutputPi1
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getGssPi1GSSTMOutputPi1ParserRuleCall_21_0()); 
@@ -8324,17 +8588,17 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutput__GssFieldsAssignment_22_1"
-    // InternalTMOUTPUT.g:2721:1: rule__GSSTMOutput__GssFieldsAssignment_22_1 : ( ruleGSSTMOutputField ) ;
+    // InternalTMOUTPUT.g:2802:1: rule__GSSTMOutput__GssFieldsAssignment_22_1 : ( ruleGSSTMOutputField ) ;
     public final void rule__GSSTMOutput__GssFieldsAssignment_22_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2725:1: ( ( ruleGSSTMOutputField ) )
-            // InternalTMOUTPUT.g:2726:2: ( ruleGSSTMOutputField )
+            // InternalTMOUTPUT.g:2806:1: ( ( ruleGSSTMOutputField ) )
+            // InternalTMOUTPUT.g:2807:2: ( ruleGSSTMOutputField )
             {
-            // InternalTMOUTPUT.g:2726:2: ( ruleGSSTMOutputField )
-            // InternalTMOUTPUT.g:2727:3: ruleGSSTMOutputField
+            // InternalTMOUTPUT.g:2807:2: ( ruleGSSTMOutputField )
+            // InternalTMOUTPUT.g:2808:3: ruleGSSTMOutputField
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputAccess().getGssFieldsGSSTMOutputFieldParserRuleCall_22_1_0()); 
@@ -8369,17 +8633,17 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutputPi1__NameAssignment_2"
-    // InternalTMOUTPUT.g:2736:1: rule__GSSTMOutputPi1__NameAssignment_2 : ( RULE_STRING ) ;
+    // InternalTMOUTPUT.g:2817:1: rule__GSSTMOutputPi1__NameAssignment_2 : ( RULE_STRING ) ;
     public final void rule__GSSTMOutputPi1__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2740:1: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2741:2: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2821:1: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2822:2: ( RULE_STRING )
             {
-            // InternalTMOUTPUT.g:2741:2: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2742:3: RULE_STRING
+            // InternalTMOUTPUT.g:2822:2: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2823:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputPi1Access().getNameSTRINGTerminalRuleCall_2_0()); 
@@ -8410,17 +8674,17 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutputPi1__ValAssignment_4"
-    // InternalTMOUTPUT.g:2751:1: rule__GSSTMOutputPi1__ValAssignment_4 : ( RULE_UINT_STRING ) ;
+    // InternalTMOUTPUT.g:2832:1: rule__GSSTMOutputPi1__ValAssignment_4 : ( RULE_UINT_STRING ) ;
     public final void rule__GSSTMOutputPi1__ValAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2755:1: ( ( RULE_UINT_STRING ) )
-            // InternalTMOUTPUT.g:2756:2: ( RULE_UINT_STRING )
+            // InternalTMOUTPUT.g:2836:1: ( ( RULE_UINT_STRING ) )
+            // InternalTMOUTPUT.g:2837:2: ( RULE_UINT_STRING )
             {
-            // InternalTMOUTPUT.g:2756:2: ( RULE_UINT_STRING )
-            // InternalTMOUTPUT.g:2757:3: RULE_UINT_STRING
+            // InternalTMOUTPUT.g:2837:2: ( RULE_UINT_STRING )
+            // InternalTMOUTPUT.g:2838:3: RULE_UINT_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputPi1Access().getValUINT_STRINGTerminalRuleCall_4_0()); 
@@ -8451,23 +8715,23 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutputPi1__GssFieldAssignment_6"
-    // InternalTMOUTPUT.g:2766:1: rule__GSSTMOutputPi1__GssFieldAssignment_6 : ( ( RULE_STRING ) ) ;
+    // InternalTMOUTPUT.g:2847:1: rule__GSSTMOutputPi1__GssFieldAssignment_6 : ( ( RULE_STRING ) ) ;
     public final void rule__GSSTMOutputPi1__GssFieldAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2770:1: ( ( ( RULE_STRING ) ) )
-            // InternalTMOUTPUT.g:2771:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2851:1: ( ( ( RULE_STRING ) ) )
+            // InternalTMOUTPUT.g:2852:2: ( ( RULE_STRING ) )
             {
-            // InternalTMOUTPUT.g:2771:2: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2772:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2852:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2853:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputPi1Access().getGssFieldGSSFormatFieldCrossReference_6_0()); 
             }
-            // InternalTMOUTPUT.g:2773:3: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2774:4: RULE_STRING
+            // InternalTMOUTPUT.g:2854:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2855:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputPi1Access().getGssFieldGSSFormatFieldSTRINGTerminalRuleCall_6_0_1()); 
@@ -8504,17 +8768,17 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutputField__NameAssignment_2"
-    // InternalTMOUTPUT.g:2785:1: rule__GSSTMOutputField__NameAssignment_2 : ( RULE_STRING ) ;
+    // InternalTMOUTPUT.g:2866:1: rule__GSSTMOutputField__NameAssignment_2 : ( RULE_STRING ) ;
     public final void rule__GSSTMOutputField__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2789:1: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2790:2: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2870:1: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2871:2: ( RULE_STRING )
             {
-            // InternalTMOUTPUT.g:2790:2: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2791:3: RULE_STRING
+            // InternalTMOUTPUT.g:2871:2: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2872:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputFieldAccess().getNameSTRINGTerminalRuleCall_2_0()); 
@@ -8545,23 +8809,23 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTMOutputField__GssFieldAssignment_4"
-    // InternalTMOUTPUT.g:2800:1: rule__GSSTMOutputField__GssFieldAssignment_4 : ( ( RULE_STRING ) ) ;
+    // InternalTMOUTPUT.g:2881:1: rule__GSSTMOutputField__GssFieldAssignment_4 : ( ( RULE_STRING ) ) ;
     public final void rule__GSSTMOutputField__GssFieldAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMOUTPUT.g:2804:1: ( ( ( RULE_STRING ) ) )
-            // InternalTMOUTPUT.g:2805:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2885:1: ( ( ( RULE_STRING ) ) )
+            // InternalTMOUTPUT.g:2886:2: ( ( RULE_STRING ) )
             {
-            // InternalTMOUTPUT.g:2805:2: ( ( RULE_STRING ) )
-            // InternalTMOUTPUT.g:2806:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2886:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2887:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputFieldAccess().getGssFieldGSSFormatFieldCrossReference_4_0()); 
             }
-            // InternalTMOUTPUT.g:2807:3: ( RULE_STRING )
-            // InternalTMOUTPUT.g:2808:4: RULE_STRING
+            // InternalTMOUTPUT.g:2888:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2889:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSTMOutputFieldAccess().getGssFieldGSSFormatFieldSTRINGTerminalRuleCall_4_0_1()); 
@@ -8596,6 +8860,59 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
     }
     // $ANTLR end "rule__GSSTMOutputField__GssFieldAssignment_4"
 
+
+    // $ANTLR start "rule__GSSTMOutputField__EnumRefAssignment_5_1"
+    // InternalTMOUTPUT.g:2900:1: rule__GSSTMOutputField__EnumRefAssignment_5_1 : ( ( RULE_STRING ) ) ;
+    public final void rule__GSSTMOutputField__EnumRefAssignment_5_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTMOUTPUT.g:2904:1: ( ( ( RULE_STRING ) ) )
+            // InternalTMOUTPUT.g:2905:2: ( ( RULE_STRING ) )
+            {
+            // InternalTMOUTPUT.g:2905:2: ( ( RULE_STRING ) )
+            // InternalTMOUTPUT.g:2906:3: ( RULE_STRING )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefTMTCIFEnumCrossReference_5_1_0()); 
+            }
+            // InternalTMOUTPUT.g:2907:3: ( RULE_STRING )
+            // InternalTMOUTPUT.g:2908:4: RULE_STRING
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefTMTCIFEnumSTRINGTerminalRuleCall_5_1_0_1()); 
+            }
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefTMTCIFEnumSTRINGTerminalRuleCall_5_1_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefTMTCIFEnumCrossReference_5_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSTMOutputField__EnumRefAssignment_5_1"
+
     // Delegated rules
 
 
@@ -8620,6 +8937,7 @@ public class InternalTMOUTPUTParser extends AbstractInternalContentAssistParser 
         public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000002000000002L});
         public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000800000000L});
         public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000001000000000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000004000200000L});
     }
 
 

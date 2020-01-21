@@ -24,11 +24,11 @@ GSSFilterMintermFilter «this.name» {
 		GSSFilterFieldOp {
 			type := «this.Op.type»;
 		};
-«IF (this.Value.metaType.name == "GSSFilterConstant") -»
+«IF (this.Value.metaType.name == "filter::GSSFilterConstant") -»
 «EXPAND SerializeConstant FOR (GSSFilterConstant)(this.Value) -»
-«ELSEIF (this.Value.metaType.name == "GSSFilterSelect") -»
+«ELSEIF (this.Value.metaType.name == "filter::GSSFilterSelect") -»
 «EXPAND SerializeSelect FOR (GSSFilterSelect)(this.Value) -»
-«ELSEIF (this.Value.metaType.name == "GSSFilterSelectLie") -»
+«ELSEIF (this.Value.metaType.name == "filter::GSSFilterSelectLine") -»
 «EXPAND SerializeSelectLine FOR (GSSFilterSelectLine)(this.Value) -»
 «ENDIF»
 	};

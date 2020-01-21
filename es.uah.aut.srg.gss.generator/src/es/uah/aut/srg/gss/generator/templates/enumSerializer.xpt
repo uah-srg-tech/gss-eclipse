@@ -1,0 +1,11 @@
+«IMPORT enum»
+
+«DEFINE Serializer(String outputFile) FOR TMTCIFEnum»
+«FILE outputFile -»
+<Enum name="«this.name»">
+«FOREACH this.values AS value -»
+	<Value name="«value.name»">«value.raw»</Value>
+«ENDFOREACH -»
+</Enum>
+«ENDFILE -»
+«ENDDEFINE»

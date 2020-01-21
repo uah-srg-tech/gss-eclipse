@@ -57,6 +57,7 @@ public class TMOUTPUTParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSTMOutputAccess().getGroup_22(), "rule__GSSTMOutput__Group_22__0");
 					put(grammarAccess.getGSSTMOutputPi1Access().getGroup(), "rule__GSSTMOutputPi1__Group__0");
 					put(grammarAccess.getGSSTMOutputFieldAccess().getGroup(), "rule__GSSTMOutputField__Group__0");
+					put(grammarAccess.getGSSTMOutputFieldAccess().getGroup_5(), "rule__GSSTMOutputField__Group_5__0");
 					put(grammarAccess.getGSSTMOutputAccess().getNameAssignment_2(), "rule__GSSTMOutput__NameAssignment_2");
 					put(grammarAccess.getGSSTMOutputAccess().getTypeAssignment_4(), "rule__GSSTMOutput__TypeAssignment_4");
 					put(grammarAccess.getGSSTMOutputAccess().getSubtypeAssignment_6(), "rule__GSSTMOutput__SubtypeAssignment_6");
@@ -79,6 +80,7 @@ public class TMOUTPUTParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSTMOutputPi1Access().getGssFieldAssignment_6(), "rule__GSSTMOutputPi1__GssFieldAssignment_6");
 					put(grammarAccess.getGSSTMOutputFieldAccess().getNameAssignment_2(), "rule__GSSTMOutputField__NameAssignment_2");
 					put(grammarAccess.getGSSTMOutputFieldAccess().getGssFieldAssignment_4(), "rule__GSSTMOutputField__GssFieldAssignment_4");
+					put(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefAssignment_5_1(), "rule__GSSTMOutputField__EnumRefAssignment_5_1");
 				}
 			};
 		}

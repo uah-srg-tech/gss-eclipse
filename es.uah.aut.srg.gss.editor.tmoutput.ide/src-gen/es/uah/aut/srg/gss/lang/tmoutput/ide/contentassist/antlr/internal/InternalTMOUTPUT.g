@@ -2413,6 +2413,7 @@ rule__GSSTMOutputField__Group__5
 	}
 :
 	rule__GSSTMOutputField__Group__5__Impl
+	rule__GSSTMOutputField__Group__6
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2424,9 +2425,89 @@ rule__GSSTMOutputField__Group__5__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSTMOutputFieldAccess().getSolidusGreaterThanSignKeyword_5()); }
+	{ before(grammarAccess.getGSSTMOutputFieldAccess().getGroup_5()); }
+	(rule__GSSTMOutputField__Group_5__0)?
+	{ after(grammarAccess.getGSSTMOutputFieldAccess().getGroup_5()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSTMOutputField__Group__6
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSTMOutputField__Group__6__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSTMOutputField__Group__6__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSTMOutputFieldAccess().getSolidusGreaterThanSignKeyword_6()); }
 	'/>'
-	{ after(grammarAccess.getGSSTMOutputFieldAccess().getSolidusGreaterThanSignKeyword_5()); }
+	{ after(grammarAccess.getGSSTMOutputFieldAccess().getSolidusGreaterThanSignKeyword_6()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__GSSTMOutputField__Group_5__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSTMOutputField__Group_5__0__Impl
+	rule__GSSTMOutputField__Group_5__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSTMOutputField__Group_5__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefKeyword_5_0()); }
+	'enumRef='
+	{ after(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefKeyword_5_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSTMOutputField__Group_5__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSTMOutputField__Group_5__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSTMOutputField__Group_5__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefAssignment_5_1()); }
+	(rule__GSSTMOutputField__EnumRefAssignment_5_1)
+	{ after(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefAssignment_5_1()); }
 )
 ;
 finally {
@@ -2810,6 +2891,25 @@ rule__GSSTMOutputField__GssFieldAssignment_4
 			{ after(grammarAccess.getGSSTMOutputFieldAccess().getGssFieldGSSFormatFieldSTRINGTerminalRuleCall_4_0_1()); }
 		)
 		{ after(grammarAccess.getGSSTMOutputFieldAccess().getGssFieldGSSFormatFieldCrossReference_4_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSTMOutputField__EnumRefAssignment_5_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefTMTCIFEnumCrossReference_5_1_0()); }
+		(
+			{ before(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefTMTCIFEnumSTRINGTerminalRuleCall_5_1_0_1()); }
+			RULE_STRING
+			{ after(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefTMTCIFEnumSTRINGTerminalRuleCall_5_1_0_1()); }
+		)
+		{ after(grammarAccess.getGSSTMOutputFieldAccess().getEnumRefTMTCIFEnumCrossReference_5_1_0()); }
 	)
 ;
 finally {

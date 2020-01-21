@@ -539,16 +539,22 @@ public class TMOUTPUTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cGssFieldAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final CrossReference cGssFieldGSSFormatFieldCrossReference_4_0 = (CrossReference)cGssFieldAssignment_4.eContents().get(0);
 		private final RuleCall cGssFieldGSSFormatFieldSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cGssFieldGSSFormatFieldCrossReference_4_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cEnumRefKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cEnumRefAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final CrossReference cEnumRefTMTCIFEnumCrossReference_5_1_0 = (CrossReference)cEnumRefAssignment_5_1.eContents().get(0);
+		private final RuleCall cEnumRefTMTCIFEnumSTRINGTerminalRuleCall_5_1_0_1 = (RuleCall)cEnumRefTMTCIFEnumCrossReference_5_1_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//GSSTMOutputField:
 		//	'<OutputField'
 		//	'name=' name=STRING
-		//	'gssField=' gssField=[format::GSSFormatField|STRING]
+		//	'gssField=' gssField=[format::GSSFormatField|STRING] ('enumRef=' enumRef=[enum_::TMTCIFEnum|STRING])?
 		//	'/>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<OutputField' 'name=' name=STRING 'gssField=' gssField=[format::GSSFormatField|STRING] '/>'
+		//'<OutputField' 'name=' name=STRING 'gssField=' gssField=[format::GSSFormatField|STRING] ('enumRef='
+		//enumRef=[enum_::TMTCIFEnum|STRING])? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<OutputField'
@@ -575,8 +581,23 @@ public class TMOUTPUTGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getGssFieldGSSFormatFieldSTRINGTerminalRuleCall_4_0_1() { return cGssFieldGSSFormatFieldSTRINGTerminalRuleCall_4_0_1; }
 		
+		//('enumRef=' enumRef=[enum_::TMTCIFEnum|STRING])?
+		public Group getGroup_5() { return cGroup_5; }
+		
+		//'enumRef='
+		public Keyword getEnumRefKeyword_5_0() { return cEnumRefKeyword_5_0; }
+		
+		//enumRef=[enum_::TMTCIFEnum|STRING]
+		public Assignment getEnumRefAssignment_5_1() { return cEnumRefAssignment_5_1; }
+		
+		//[enum_::TMTCIFEnum|STRING]
+		public CrossReference getEnumRefTMTCIFEnumCrossReference_5_1_0() { return cEnumRefTMTCIFEnumCrossReference_5_1_0; }
+		
+		//STRING
+		public RuleCall getEnumRefTMTCIFEnumSTRINGTerminalRuleCall_5_1_0_1() { return cEnumRefTMTCIFEnumSTRINGTerminalRuleCall_5_1_0_1; }
+		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_5() { return cSolidusGreaterThanSignKeyword_5; }
+		public Keyword getSolidusGreaterThanSignKeyword_6() { return cSolidusGreaterThanSignKeyword_6; }
 	}
 	
 	
@@ -671,7 +692,7 @@ public class TMOUTPUTGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSTMOutputField:
 	//	'<OutputField'
 	//	'name=' name=STRING
-	//	'gssField=' gssField=[format::GSSFormatField|STRING]
+	//	'gssField=' gssField=[format::GSSFormatField|STRING] ('enumRef=' enumRef=[enum_::TMTCIFEnum|STRING])?
 	//	'/>';
 	public GSSTMOutputFieldElements getGSSTMOutputFieldAccess() {
 		return pGSSTMOutputField;
