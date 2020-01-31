@@ -111,35 +111,43 @@
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated tcinput -->
+      <!-- @generated scenario -->
       <package
-            uri="http://srg.aut.uah.es/gss/tcinput"
-            class="es.uah.aut.srg.gss.tcinput.tcinputPackage"
-            genModel="model/tcinput.genmodel"/>
+            uri="http://srg.aut.uah.es/gss/scenario"
+            class="es.uah.aut.srg.gss.scenario.scenarioPackage"
+            genModel="model/scenario.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated tmoutput -->
+      <!-- @generated tc -->
       <package
-            uri="http://srg.aut.uah.es/gss/tmoutput"
-            class="es.uah.aut.srg.gss.tmoutput.tmoutputPackage"
-            genModel="model/tmoutput.genmodel"/>
+            uri="http://srg.aut.uah.es/gss/tc"
+            class="es.uah.aut.srg.gss.tc.tcPackage"
+            genModel="model/tc.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated tcheaderinput -->
+      <!-- @generated tcheader -->
       <package
-            uri="http://srg.aut.uah.es/gss/tcheaderinput"
-            class="es.uah.aut.srg.gss.tcheaderinput.tcheaderinputPackage"
-            genModel="model/tcheaderinput.genmodel"/>
+            uri="http://srg.aut.uah.es/gss/tcheader"
+            class="es.uah.aut.srg.gss.tcheader.tcheaderPackage"
+            genModel="model/tcheader.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated tmheaderoutput -->
+      <!-- @generated tm -->
       <package
-            uri="http://srg.aut.uah.es/gss/tmheaderoutput"
-            class="es.uah.aut.srg.gss.tmheaderoutput.tmheaderoutputPackage"
-            genModel="model/tmheaderoutput.genmodel"/>
+            uri="http://srg.aut.uah.es/gss/tm"
+            class="es.uah.aut.srg.gss.tm.tmPackage"
+            genModel="model/tm.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tmheader -->
+      <package
+            uri="http://srg.aut.uah.es/gss/tmheader"
+            class="es.uah.aut.srg.gss.tmheader.tmheaderPackage"
+            genModel="model/tmheader.genmodel"/>
    </extension>
 
 </plugin>

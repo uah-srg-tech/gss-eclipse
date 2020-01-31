@@ -4,6 +4,7 @@ import "http://srg.aut.uah.es/gss/environment"
 import "http://srg.aut.uah.es/gss/common" as common 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
+import "http://srg.aut.uah.es/gss/scenario" as scenario
 import "http://srg.aut.uah.es/gss/format" as format
 import "http://srg.aut.uah.es/gss/export" as export
 import "http://srg.aut.uah.es/gss/filter" as filter
@@ -14,93 +15,94 @@ import "http://srg.aut.uah.es/gss/iface" as iface
 
 GSSModelFile returns common::GSSModelFile:
 	(imports+=GSSModelFileImport)*
-	element=GSSEnvironmentGSSEnvironment
+	element=GSSEnvironmentEnvironment
 ;
 
 GSSModelFileImport returns common::GSSModelFileImport: 
 	'import' ':=' importURI=STRING ';'
 ;
 
-GSSEnvironmentGSSEnvironment returns GSSEnvironmentEnvironment:
+GSSEnvironmentEnvironment returns GSSEnvironmentEnvironment:
 	'GSSEnvironmentEnvironment'
 	name=ID
 	'{'
 		('uri' ':=' uri=QualifiedName ';')
 		'version' ':=' version=Version ';'
-		scenario+=GSSEnvironmentScenario
+		(scenario+=GSSScenarioScenario)+
 	'}' ';'
 ;
 
-GSSEnvironmentScenario returns GSSEnvironmentScenario:
-	'GSSEnvironmentScenario'
+GSSScenarioScenario returns scenario::GSSScenarioScenario:
+	'GSSScenarioScenario'
 	name=STRING
 	'{'
-		gss_options=GSSEnvironmentOptions
-		Protocols=GSSEnvironmentProtocols
-		Interfaces=GSSEnvironmentInterfaces
-		(SpecialPackets=GSSEnvironmentSpecialPackets)?
-		(PeriodicTCs=GSSEnvironmentPeriodicTCs)?
-		((GlobalVars=GSSEnvironmentGlobalVars) &
-		 (Monitors=GSSEnvironmentMonitors))?
+		gss_options=GSSScenarioOptions
+		Protocols=GSSScenarioProtocols
+		Interfaces=GSSScenarioInterfaces
+		(SpecialPackets=GSSScenarioSpecialPackets)?
+		(PeriodicTCs=GSSScenarioPeriodicTCs)?
+		((GlobalVars=GSSScenarioGlobalVars) &
+		 (Monitors=GSSScenarioMonitors))?
 	'}' ';'
 ;
 
-GSSEnvironmentOptions returns GSSEnvironmentOptions:
-	'GSSEnvironmentOptions' '{'
-		gss_info=GSSEnvironmentGSSInfo
-		gss_info_print=GSSEnvironmentGSSInfoPrint
-		phy_header_print=GSSEnvironmentPhyHeaderPrint
-		discardErrorFlags=GSSEnvironmentGSSDiscardErrorFlags
+GSSScenarioOptions returns scenario::GSSScenarioOptions:
+	'GSSScenarioOptions' '{'
+		gss_info=GSSScenarioGSSInfo
+		gss_info_print=GSSScenarioGSSInfoPrint
+		phy_header_print=GSSScenarioPhyHeaderPrint
+		discardErrorFlags=GSSScenarioGSSDiscardErrorFlags
 	'}' ';'
 ;
 
-GSSEnvironmentProtocols returns GSSEnvironmentProtocols:
-	'GSSEnvironmentProtocols' '{'
-		(Protocol+=GSSEnvironmentProtocol)+
+GSSScenarioProtocols returns scenario::GSSScenarioProtocols:
+	{scenario::GSSScenarioProtocols}
+	'GSSScenarioProtocols' '{'
+		(Protocol+=GSSScenarioProtocol)*
 	'}' ';'
 ;
 
-GSSEnvironmentInterfaces returns GSSEnvironmentInterfaces:
-	'GSSEnvironmentInterfaces' '{'
+GSSScenarioInterfaces returns scenario::GSSScenarioInterfaces:
+	'GSSScenarioInterfaces' '{'
 		('ProtocolPacketsFile' ':=' ProtocolPacketsFile=[protocol_packets::GSSProtocolPacketsProtocolPackets|VersionedQualifiedName] ';')?
-		MainInterface=GSSEnvironmentMainInterface
-		(Interface+=GSSEnvironmentInterface)*
+		MainInterface=GSSScenarioMainInterface
+		(Interface+=GSSScenarioInterface)*
 	'}' ';'
 ;
 
-GSSEnvironmentSpecialPackets returns GSSEnvironmentSpecialPackets:
-	'GSSEnvironmentSpecialPackets' '{'
-		(SpecialPacket+=GSSEnvironmentSpecialPacket)+
+GSSScenarioSpecialPackets returns scenario::GSSScenarioSpecialPackets:
+	'GSSScenarioSpecialPackets' '{'
+		(SpecialPacket+=GSSScenarioSpecialPacket)+
 	'}' ';'
 ;
 
-GSSEnvironmentPeriodicTCs returns GSSEnvironmentPeriodicTCs:
-	{GSSEnvironmentPeriodicTCs}
-	'GSSEnvironmentPeriodicTCs' '{'
-		((PeriodicTC_level_2+=GSSEnvironmentPeriodicTCLevel2) |
-		 (PeriodicTC_level_1+=GSSEnvironmentPeriodicTCLevel1) |
-		 (PeriodicTC_level_0+=GSSEnvironmentPeriodicTCLevel0))*
+GSSScenarioPeriodicTCs returns scenario::GSSScenarioPeriodicTCs:
+	{scenario::GSSScenarioPeriodicTCs}
+	'GSSScenarioPeriodicTCs' '{'
+		((PeriodicTC_level_2+=GSSScenarioPeriodicTCLevel2) |
+		 (PeriodicTC_level_1+=GSSScenarioPeriodicTCLevel1) |
+		 (PeriodicTC_level_0+=GSSScenarioPeriodicTCLevel0))*
 	'}' ';'
 ;
 
-GSSEnvironmentGlobalVars returns GSSEnvironmentGlobalVars:
-	'GSSEnvironmentGlobalVars' '{'
-		(GlobalVar+=GSSEnvironmentGlobalVar)+ 
+GSSScenarioGlobalVars returns scenario::GSSScenarioGlobalVars:
+	'GSSScenarioGlobalVars' '{'
+		(GlobalVar+=GSSScenarioGlobalVar)+ 
 	'}' ';'
 ;
 
-GSSEnvironmentMonitors returns GSSEnvironmentMonitors:
-	'GSSEnvironmentMonitors' '{'
+GSSScenarioMonitors returns scenario::GSSScenarioMonitors:
+	'GSSScenarioMonitors' '{'
 		('ChartsFile' ':=' ChartsFile=[charts::GSSChartsCharts|VersionedQualifiedName] ';')?
-		((plot+=GSSEnvironmentPlot) |
-		 (alarmMsg+=GSSEnvironmentAlarmMsg) |
-		 (modify+=GSSEnvironmentModify) |
-		 (alarmVal+=GSSEnvironmentAlarmVal))+
+		((plot+=GSSScenarioPlot) |
+		 (alarmMsg+=GSSScenarioAlarmMsg) |
+		 (modify+=GSSScenarioModify) |
+		 (alarmVal+=GSSScenarioAlarmVal))+
 	'}' ';'
 ;
 
-GSSEnvironmentGSSInfo returns GSSEnvironmentInfo:
-	'GSSEnvironmentInfo' '{'
+GSSScenarioGSSInfo returns scenario::GSSScenarioInfo:
+	'GSSScenarioInfo' '{'
 		'test_campaign' ':=' test_campaign=STRING ';'
 		'version' ':=' version=Version ';'
 		'date' ':=' date=DATE ';'
@@ -108,89 +110,89 @@ GSSEnvironmentGSSInfo returns GSSEnvironmentInfo:
 	'}' ';'
 ;
 
-GSSEnvironmentGSSInfoPrint returns GSSEnvironmentInfoPrint:
-	'GSSEnvironmentInfoPrint'
+GSSScenarioGSSInfoPrint returns scenario::GSSScenarioInfoPrint:
+	'GSSScenarioInfoPrint'
 	'{'
-		'mainLog' ':=' mainLog=GSSEnvironmentEnableDisable ';'
-		'portLogs' ':=' portLogs=GSSEnvironmentEnableDisable ';'
-		'rawLog' ':=' rawLog=GSSEnvironmentEnableDisable ';'
+		'mainLog' ':=' mainLog=GSSScenarioEnableDisable ';'
+		'portLogs' ':=' portLogs=GSSScenarioEnableDisable ';'
+		'rawLog' ':=' rawLog=GSSScenarioEnableDisable ';'
 	'}' ';'
 ;
 
-GSSEnvironmentPhyHeaderPrint returns GSSEnvironmentPhyHeaderPrint:
-	'GSSEnvironmentPhyHeaderPrint' '{'
-		'mainLog' ':=' mainLog=GSSEnvironmentEnableDisable ';'
-		'portLogs' ':=' portLogs=GSSEnvironmentEnableDisable ';'
-		'rawLog' ':=' rawLog=GSSEnvironmentEnableDisable ';'
-		'gssTabs' ':=' gssTabs=GSSEnvironmentEnableDisable ';'
+GSSScenarioPhyHeaderPrint returns scenario::GSSScenarioPhyHeaderPrint:
+	'GSSScenarioPhyHeaderPrint' '{'
+		'mainLog' ':=' mainLog=GSSScenarioEnableDisable ';'
+		'portLogs' ':=' portLogs=GSSScenarioEnableDisable ';'
+		'rawLog' ':=' rawLog=GSSScenarioEnableDisable ';'
+		'gssTabs' ':=' gssTabs=GSSScenarioEnableDisable ';'
 	'}' ';'
 ;
 
-GSSEnvironmentGSSDiscardErrorFlags returns GSSEnvironmentDiscardErrorFlags:
-	'GSSEnvironmentDiscardErrorFlags' '{'
-		'txErrors' ':=' txErrors=GSSEnvironmentEnableDisable ';'
-		'notExpectedPackets' ':=' notExpectedPackets=GSSEnvironmentEnableDisable ';'
-		'filtersKo' ':=' filtersKo=GSSEnvironmentEnableDisable ';'
-		'validTimesKo' ':=' validTimesKo=GSSEnvironmentEnableDisable ';'
+GSSScenarioGSSDiscardErrorFlags returns scenario::GSSScenarioDiscardErrorFlags:
+	'GSSScenarioDiscardErrorFlags' '{'
+		'txErrors' ':=' txErrors=GSSScenarioEnableDisable ';'
+		'notExpectedPackets' ':=' notExpectedPackets=GSSScenarioEnableDisable ';'
+		'filtersKo' ':=' filtersKo=GSSScenarioEnableDisable ';'
+		'validTimesKo' ':=' validTimesKo=GSSScenarioEnableDisable ';'
 	'}' ';'
 ;
 
-enum GSSEnvironmentEnableDisable returns GSSEnvironmentEnableDisable:
+enum GSSScenarioEnableDisable returns scenario::GSSScenarioEnableDisable:
 	disabled = 'disabled' | enabled = 'enabled'
 ;
 
-GSSEnvironmentProtocol returns GSSEnvironmentProtocol:
-	'GSSEnvironmentProtocol' '{'
+GSSScenarioProtocol returns scenario::GSSScenarioProtocol:
+	'GSSScenarioProtocol' '{'
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=ID ';'
 		'typeLevel' ':=' typeLevel=INTEGER ';'
-		type=GSSEnvironmentProtocolType
-		(subtype=GSSEnvironmentProtocolSubtype)?
+		type=GSSScenarioProtocolType
+		(subtype=GSSScenarioProtocolSubtype)?
 	'}' ';'
 ;
 
-GSSEnvironmentProtocolType returns GSSEnvironmentProtocolType:
-	'GSSEnvironmentProtocolType' '{'
+GSSScenarioProtocolType returns scenario::GSSScenarioProtocolType:
+	'GSSScenarioProtocolType' '{'
 		'name' ':=' name=STRING ';'
 		'offset' ':=' offset=INTEGER ';'
 	'}' ';'
 ;
 
-GSSEnvironmentProtocolSubtype returns GSSEnvironmentProtocolType:
-	'GSSEnvironmentProtocolSubtype' '{'
+GSSScenarioProtocolSubtype returns scenario::GSSScenarioProtocolType:
+	'GSSScenarioProtocolSubtype' '{'
 		'name' ':=' name=STRING ';'
 		'offset' ':=' offset=INTEGER ';'
 	'}' ';'
 ;
 
-GSSEnvironmentMainInterface returns GSSEnvironmentMainInterface:
-	'GSSEnvironmentMainInterface' '{'
+GSSScenarioMainInterface returns scenario::GSSScenarioMainInterface:
+	'GSSScenarioMainInterface' '{'
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=STRING ';'
-		'ifType' ':=' ifType=GSSEnvironmentInterfaceType ';'
+		'ifType' ':=' ifType=GSSScenarioInterfaceType ';'
 		'ifConfig' ':=' ifConfig=[iface::GSSIfacePortConfig|VersionedQualifiedName] ';' 
-		'ioType' ':=' ioType=GSSEnvironmentInterfaceIOType ';'
-		('protocolID' ':=' protocolID=[GSSEnvironmentProtocol|VersionedQualifiedReferenceName] ';')?
-		(LevelInOut+=GSSEnvironmentLevelInOut)+ 
+		'ioType' ':=' ioType=GSSScenarioInterfaceIOType ';'
+		('protocolID' ':=' protocolID=[scenario::GSSScenarioProtocol|VersionedQualifiedReferenceName] ';')?
+		(LevelInOut+=GSSScenarioLevelInOut)+ 
 	'}' ';'
 ;
 
-GSSEnvironmentInterface returns GSSEnvironmentInterface:
-	'GSSEnvironmentInterface' '{'
+GSSScenarioInterface returns scenario::GSSScenarioInterface:
+	'GSSScenarioInterface' '{'
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=STRING ';'
-		'ifType' ':=' ifType=GSSEnvironmentInterfaceType ';'
+		'ifType' ':=' ifType=GSSScenarioInterfaceType ';'
 		'ifConfig' ':=' ifConfig=[iface::GSSIfacePortConfig|VersionedQualifiedName] ';'
-		'ioType' ':=' ioType=GSSEnvironmentInterfaceIOType ';'
-		('protocolID' ':=' protocolID=[GSSEnvironmentProtocol|VersionedQualifiedReferenceName] ';')?
-		((LevelInOut+=GSSEnvironmentLevelInOut) |
-		 (LevelIn+=GSSEnvironmentLevelIn) |
-		 (LevelOut+=GSSEnvironmentLevelOut))+ 
+		'ioType' ':=' ioType=GSSScenarioInterfaceIOType ';'
+		('protocolID' ':=' protocolID=[scenario::GSSScenarioProtocol|VersionedQualifiedReferenceName] ';')?
+		((LevelInOut+=GSSScenarioLevelInOut) |
+		 (LevelIn+=GSSScenarioLevelIn) |
+		 (LevelOut+=GSSScenarioLevelOut))+ 
 	'}' ';'
 ;
 
-GSSEnvironmentLevelInOut returns GSSEnvironmentLevelInOut:
-	'GSSEnvironmentLevelInOut' '{'
+GSSScenarioLevelInOut returns scenario::GSSScenarioLevelInOut:
+	'GSSScenarioLevelInOut' '{'
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=STRING ';'
 		'TMformat' ':=' TMformat=[format::GSSFormatFormat|VersionedQualifiedName] ';'
@@ -201,8 +203,8 @@ GSSEnvironmentLevelInOut returns GSSEnvironmentLevelInOut:
 	'}' ';'
 ;
 
-GSSEnvironmentLevelIn returns GSSEnvironmentLevelIn:
-	'GSSEnvironmentLevelIn' '{'
+GSSScenarioLevelIn returns scenario::GSSScenarioLevelIn:
+	'GSSScenarioLevelIn' '{'
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=STRING ';'
 		'TCformat' ':=' TCformat=[format::GSSFormatFormat|VersionedQualifiedName] ';'
@@ -210,8 +212,8 @@ GSSEnvironmentLevelIn returns GSSEnvironmentLevelIn:
 	'}' ';'
 ;
 
-GSSEnvironmentLevelOut returns GSSEnvironmentLevelOut:
-	'GSSEnvironmentLevelOut' '{'
+GSSScenarioLevelOut returns scenario::GSSScenarioLevelOut:
+	'GSSScenarioLevelOut' '{'
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=STRING ';'
 		'TMformat' ':=' TMformat=[format::GSSFormatFormat|VersionedQualifiedName] ';'
@@ -221,93 +223,93 @@ GSSEnvironmentLevelOut returns GSSEnvironmentLevelOut:
 ;
 
 
-enum GSSEnvironmentInterfaceType returns GSSEnvironmentInterfaceType:
+enum GSSScenarioInterfaceType returns scenario::GSSScenarioInterfaceType:
 	SpW = 'SpW' | SpW_TC = 'SpW_TC' | SpW_Error = 'SpW_Error' |
 	uart = 'uart' | dummy = 'dummy'
 ;
 
-enum GSSEnvironmentInterfaceIOType returns GSSEnvironmentInterfaceIOType:
+enum GSSScenarioInterfaceIOType returns scenario::GSSScenarioInterfaceIOType:
 	in_out = 'in_out' | in = 'in' | out = 'out'
 ;
 
-GSSEnvironmentSpecialPacket returns GSSEnvironmentSpecialPacket:
-	'GSSEnvironmentSpecialPacket' '{'
-		'status' ':=' status=GSSEnvironmentEnableDisable ';'
+GSSScenarioSpecialPacket returns scenario::GSSScenarioSpecialPacket:
+	'GSSScenarioSpecialPacket' '{'
+		'status' ':=' status=GSSScenarioEnableDisable ';'
 		'name' ':=' name=STRING ';'
 		'id' ':=' id=INTEGER ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'levels' ':=' levels=INTEGER ';'
 		'levelRef' ':=' levelRef=INTEGER ';'
 		'inputFilter' ':=' inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';'
-		(UpperLevels+=GSSEnvironmentUpperLevels)?
-		printingData=GSSEnvironmentPrintingData
-		((period=GSSEnvironmentPeriod) |
-		 (intervalRange=GSSEnvironmentIntervalRange))?
+		(UpperLevels+=GSSScenarioUpperLevels)?
+		printingData=GSSScenarioPrintingData
+		((period=GSSScenarioPeriod) |
+		 (intervalRange=GSSScenarioIntervalRange))?
 	'}' ';'
 ;
 
-GSSEnvironmentUpperLevels returns GSSEnvironmentUpperLevels:
-	'GSSEnvironmentUpperLevels' '{'
-		(UpperLevel+=GSSEnvironmentUpperLevel)+
+GSSScenarioUpperLevels returns scenario::GSSScenarioUpperLevels:
+	'GSSScenarioUpperLevels' '{'
+		(UpperLevel+=GSSScenarioUpperLevel)+
 	'}' ';'
 ;
 
-GSSEnvironmentPrintingData returns GSSEnvironmentPrintingData:
-	'GSSEnvironmentPrintingData' '{'
-		'printStatus' ':=' printStatus=GSSEnvironmentEnableDisable ';'
-		(structuredData=GSSEnvironmentStructuredData)?
+GSSScenarioPrintingData returns scenario::GSSScenarioPrintingData:
+	'GSSScenarioPrintingData' '{'
+		'printStatus' ':=' printStatus=GSSScenarioEnableDisable ';'
+		(structuredData=GSSScenarioStructuredData)?
 	'}' ';'
 ;
 
-GSSEnvironmentPeriod returns GSSEnvironmentPeriod:
-	'GSSEnvironmentPeriod' '{'
+GSSScenarioPeriod returns scenario::GSSScenarioPeriod:
+	'GSSScenarioPeriod' '{'
 		'min_value' ':=' min_value=INTEGER ';'
-		'min_unit' ':=' min_unit=GSSEnvironmentUnit ';'
+		'min_unit' ':=' min_unit=GSSScenarioUnit ';'
 		'max_value' ':=' max_value=INTEGER ';'
-		'max_unit' ':=' max_unit=GSSEnvironmentUnit ';'
+		'max_unit' ':=' max_unit=GSSScenarioUnit ';'
 	'}' ';'
 ;
 
-GSSEnvironmentIntervalRange returns GSSEnvironmentIntervalRange:
-	'GSSEnvironmentIntervalRange' '{'
+GSSScenarioIntervalRange returns scenario::GSSScenarioIntervalRange:
+	'GSSScenarioIntervalRange' '{'
 		'min' ':=' min=INTEGER ';'
 		'max' ':=' max=INTEGER ';'
 		'interval_value' ':=' interval_value=INTEGER ';'
-		'interval_unit' ':=' interval_unit=GSSEnvironmentUnit ';'
+		'interval_unit' ':=' interval_unit=GSSScenarioUnit ';'
 	'}' ';'
 ;
 
-GSSEnvironmentUpperLevel returns GSSEnvironmentUpperLevel:
-	'GSSEnvironmentUpperLevel' '{'
-		'level' ':=' level=GSSEnvironmentUpperLevelLevel ';' 
+GSSScenarioUpperLevel returns scenario::GSSScenarioUpperLevel:
+	'GSSScenarioUpperLevel' '{'
+		'level' ':=' level=GSSScenarioUpperLevelLevel ';' 
 		('TMformat' ':=' TMformat=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		('inputFilter' ':=' inputFilter=[filter::GSSFilterFilter|VersionedQualifiedName] ';')?
 		('import_from_prev_Level' ':=' import_from_prev_Level=[import_::GSSImportImport|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
-enum GSSEnvironmentUpperLevelLevel returns GSSEnvironmentUpperLevelLevel:
+enum GSSScenarioUpperLevelLevel returns scenario::GSSScenarioUpperLevelLevel:
 	_1 = '_1' | _2 = '_2' | _3 = '_3'
 ;
 
-GSSEnvironmentStructuredData returns GSSEnvironmentStructuredData:
-	'GSSEnvironmentStructuredData' '{'
+GSSScenarioStructuredData returns scenario::GSSScenarioStructuredData:
+	'GSSScenarioStructuredData' '{'
 		'levelRef' ':=' levelRef=INTEGER ';'
 		'firstField' ':=' firstField=INTEGER ';'
 	'}' ';'
 ;
 
-enum GSSEnvironmentUnit returns GSSEnvironmentUnit:
+enum GSSScenarioUnit returns scenario::GSSScenarioUnit:
 	miliseconds = 'miliseconds' | seconds = 'seconds'
 ;
 
-GSSEnvironmentPeriodicTCLevel2 returns GSSEnvironmentPeriodicTCLevel2:
-	'GSSEnvironmentPeriodicTCLevel2' '{'
+GSSScenarioPeriodicTCLevel2 returns scenario::GSSScenarioPeriodicTCLevel2:
+	'GSSScenarioPeriodicTCLevel2' '{'
 		'name' ':=' name=STRING ';'
 		'id' ':=' id=INTEGER ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'period_value' ':=' period_value=INTEGER ';'
-		'period_unit' ':=' period_unit=GSSEnvironmentUnit ';'
+		'period_unit' ':=' period_unit=GSSScenarioUnit ';'
 		('level2' ':=' level2=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		'app_to_level2' ':=' app_to_level2=[export::GSSExportExport|VersionedQualifiedName] ';'
 		('level1' ':=' level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
@@ -317,13 +319,13 @@ GSSEnvironmentPeriodicTCLevel2 returns GSSEnvironmentPeriodicTCLevel2:
 	'}' ';'
 ;
 
-GSSEnvironmentPeriodicTCLevel1 returns GSSEnvironmentPeriodicTCLevel1:
-	'GSSEnvironmentPeriodicTCLevel1' '{'
+GSSScenarioPeriodicTCLevel1 returns scenario::GSSScenarioPeriodicTCLevel1:
+	'GSSScenarioPeriodicTCLevel1' '{'
 		'name' ':=' name=STRING ';'
 		'id' ':=' id=INTEGER ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'period_value' ':=' period_value=INTEGER ';'
-		'period_unit' ':=' period_unit=GSSEnvironmentUnit ';'
+		'period_unit' ':=' period_unit=GSSScenarioUnit ';'
 		('level1' ':=' level1=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		'app_to_level1' ':=' app_to_level1=[export::GSSExportExport|VersionedQualifiedName] ';'
 		('level0' ':=' level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
@@ -331,37 +333,37 @@ GSSEnvironmentPeriodicTCLevel1 returns GSSEnvironmentPeriodicTCLevel1:
 	'}' ';'
 ;
 
-GSSEnvironmentPeriodicTCLevel0 returns GSSEnvironmentPeriodicTCLevel0:
-	'GSSEnvironmentPeriodicTCLevel0' '{'
+GSSScenarioPeriodicTCLevel0 returns scenario::GSSScenarioPeriodicTCLevel0:
+	'GSSScenarioPeriodicTCLevel0' '{'
 		'name' ':=' name=STRING ';'
 		'id' ':=' id=INTEGER ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'period_value' ':=' period_value=INTEGER ';'
-		'period_unit' ':=' period_unit=GSSEnvironmentUnit ';'
+		'period_unit' ':=' period_unit=GSSScenarioUnit ';'
 		('level0' ':=' level0=[format::GSSFormatFormat|VersionedQualifiedName] ';')?
 		'app_to_level0' ':=' app_to_level0=[export::GSSExportExport|VersionedQualifiedName] ';'
 	'}' ';'
 ;
 
-GSSEnvironmentGlobalVar returns GSSEnvironmentGlobalVar:
-	'GSSEnvironmentGlobalVar' '{'
+GSSScenarioGlobalVar returns scenario::GSSScenarioGlobalVar:
+	'GSSScenarioGlobalVar' '{'
 		'name' ':=' name=STRING ';'
 		'id' ':=' id=INTEGER ';'
-		'type' ':=' type=GSSEnvironmentGlobalVarType ';'
+		'type' ':=' type=GSSScenarioGlobalVarType ';'
 		'initial_value' ':=' initial_value=INTEGER ';'
-		 ((referenceField=GSSEnvironmentReferenceField) |
-		 (referencePeriodicTC=GSSEnvironmentReferencePeriodicTC) |
-		 (referenceSpecialPacket=GSSEnvironmentReferenceSpecialPacket))
+		 ((referenceField=GSSScenarioReferenceField) |
+		 (referencePeriodicTC=GSSScenarioReferencePeriodicTC) |
+		 (referenceSpecialPacket=GSSScenarioReferenceSpecialPacket))
 	'}' ';'
 ;
 
-enum GSSEnvironmentGlobalVarType returns GSSEnvironmentGlobalVarType:
+enum GSSScenarioGlobalVarType returns scenario::GSSScenarioGlobalVarType:
 	uint = 'uint' | formula = 'formula'
 ;
 
-GSSEnvironmentReferenceField returns GSSEnvironmentReferenceField:
-	'GSSEnvironmentReferenceField' '{'
-		'type' ':=' type=GSSEnvironmentReferenceFieldType ';'
+GSSScenarioReferenceField returns scenario::GSSScenarioReferenceField:
+	'GSSScenarioReferenceField' '{'
+		'type' ':=' type=GSSScenarioReferenceFieldType ';'
 		'ifRef' ':=' ifRef=INTEGER ';'
 		'level' ':=' level=INTEGER ';'
 		'fieldRef' ':=' fieldRef=INTEGER ';'
@@ -370,9 +372,9 @@ GSSEnvironmentReferenceField returns GSSEnvironmentReferenceField:
 	'}' ';'
 ;
 
-GSSEnvironmentReferencePeriodicTC returns GSSEnvironmentReferencePeriodicTC:
-	'GSSEnvironmentReferencePeriodicTC' '{'
-		'idRef' ':=' idRef=[GSSEnvironmentPeriodicTC|STRING] ';'
+GSSScenarioReferencePeriodicTC returns scenario::GSSScenarioReferencePeriodicTC:
+	'GSSScenarioReferencePeriodicTC' '{'
+		'idRef' ':=' idRef=[scenario::GSSScenarioPeriodicTC|STRING] ';'
 		'level' ':=' level=INTEGER ';'
 		'fieldRef' ':=' fieldRef=INTEGER ';'
 		'offset' ':=' offset=INTEGER ';'
@@ -380,9 +382,9 @@ GSSEnvironmentReferencePeriodicTC returns GSSEnvironmentReferencePeriodicTC:
 	'}' ';'
 ;
 
-GSSEnvironmentReferenceSpecialPacket returns GSSEnvironmentReferenceSpecialPacket:
-	'GSSEnvironmentReferenceSpecialPacket' '{'
-		'idRef' ':=' idRef=[GSSEnvironmentSpecialPacket|STRING] ';'
+GSSScenarioReferenceSpecialPacket returns scenario::GSSScenarioReferenceSpecialPacket:
+	'GSSScenarioReferenceSpecialPacket' '{'
+		'idRef' ':=' idRef=[scenario::GSSScenarioSpecialPacket|STRING] ';'
 		'level' ':=' level=INTEGER ';'
 		'fieldRef' ':=' fieldRef=INTEGER ';'
 		'offset' ':=' offset=INTEGER ';'
@@ -390,72 +392,72 @@ GSSEnvironmentReferenceSpecialPacket returns GSSEnvironmentReferenceSpecialPacke
 	'}' ';'
 ;
 
-enum GSSEnvironmentReferenceFieldType returns GSSEnvironmentReferenceFieldType:
+enum GSSScenarioReferenceFieldType returns scenario::GSSScenarioReferenceFieldType:
 	tm = 'tm' | tc = 'tc'
 ;
 
-GSSEnvironmentPlot returns GSSEnvironmentPlot:
-	'GSSEnvironmentPlot' '{'
+GSSScenarioPlot returns scenario::GSSScenarioPlot:
+	'GSSScenarioPlot' '{'
 		'name' ':=' name=STRING ';'
 		'chartRef' ':=' chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';'
-		((GVFiltered=GSSEnvironmentGVFiltered) |
-		 (GVPeriodic=GSSEnvironmentGVPeriodic))
+		((GVFiltered=GSSScenarioGVFiltered) |
+		 (GVPeriodic=GSSScenarioGVPeriodic))
 	'}' ';'
 ;
 
-GSSEnvironmentAlarmMsg returns GSSEnvironmentAlarmMsg:
-	'GSSEnvironmentAlarmMsg' '{'
+GSSScenarioAlarmMsg returns scenario::GSSScenarioAlarmMsg:
+	'GSSScenarioAlarmMsg' '{'
 		'name' ':=' name=STRING ';'
-		'type' ':=' type=GSSEnvironmentAlarmMsgType ';'
+		'type' ':=' type=GSSScenarioAlarmMsgType ';'
 		'text' ':=' text=STRING ';'
-		((GVFiltered=GSSEnvironmentGVFiltered) |
-		 (GVPeriodic=GSSEnvironmentGVPeriodic))
+		((GVFiltered=GSSScenarioGVFiltered) |
+		 (GVPeriodic=GSSScenarioGVPeriodic))
 	'}' ';'
 ;
 
-GSSEnvironmentModify returns GSSEnvironmentModify:
-	'GSSEnvironmentModify' '{'
+GSSScenarioModify returns scenario::GSSScenarioModify:
+	'GSSScenarioModify' '{'
 		'name' ':=' name=STRING ';'
-		'type' ':=' type=GSSEnvironmentModifyType ';'
+		'type' ':=' type=GSSScenarioModifyType ';'
 		'value' ':=' value=INTEGER ';'
-		((GVFiltered=GSSEnvironmentGVFiltered) |
-		 (GVPeriodic=GSSEnvironmentGVPeriodic))
+		((GVFiltered=GSSScenarioGVFiltered) |
+		 (GVPeriodic=GSSScenarioGVPeriodic))
 	'}' ';'
 ;
 
-GSSEnvironmentAlarmVal returns GSSEnvironmentAlarmVal:
-	'GSSEnvironmentAlarmVal' '{'
+GSSScenarioAlarmVal returns scenario::GSSScenarioAlarmVal:
+	'GSSScenarioAlarmVal' '{'
 		'name' ':=' name=STRING ';'
-		'type' ':=' type=GSSEnvironmentAlarmValType ';'
-		((GVFiltered=GSSEnvironmentGVFiltered) |
-		 (GVPeriodic=GSSEnvironmentGVPeriodic))
+		'type' ':=' type=GSSScenarioAlarmValType ';'
+		((GVFiltered=GSSScenarioGVFiltered) |
+		 (GVPeriodic=GSSScenarioGVPeriodic))
 	'}' ';'
 ;
 
-GSSEnvironmentGVFiltered returns GSSEnvironmentGVFiltered:
-	'GSSEnvironmentGVFiltered' '{'
-		'GlobalVarRef' ':=' GlobalVarRef=[GSSEnvironmentGlobalVar|STRING] ';'
+GSSScenarioGVFiltered returns scenario::GSSScenarioGVFiltered:
+	'GSSScenarioGVFiltered' '{'
+		'GlobalVarRef' ':=' GlobalVarRef=[scenario::GSSScenarioGlobalVar|STRING] ';'
 		('filter' ':=' filter=[filter::GSSFilterFilter|VersionedQualifiedName] ';')?
 	'}' ';'
 ;
 
-GSSEnvironmentGVPeriodic returns GSSEnvironmentGVPeriodic:
-	'GSSEnvironmentGVPeriodic' '{'
-		'GlobalVarRef' ':=' GlobalVarRef=[GSSEnvironmentGlobalVar|STRING] ';'
+GSSScenarioGVPeriodic returns scenario::GSSScenarioGVPeriodic:
+	'GSSScenarioGVPeriodic' '{'
+		'GlobalVarRef' ':=' GlobalVarRef=[scenario::GSSScenarioGlobalVar|STRING] ';'
 		'period_value' ':=' period_value=INTEGER ';'
-		'period_unit' ':=' period_unit=GSSEnvironmentUnit ';'
+		'period_unit' ':=' period_unit=GSSScenarioUnit ';'
 	'}' ';'
 ;
 
-enum GSSEnvironmentAlarmMsgType returns GSSEnvironmentAlarmMsgType:
+enum GSSScenarioAlarmMsgType returns scenario::GSSScenarioAlarmMsgType:
 	alarm1 = 'alarm1' | alarm2 = 'alarm2' | alarm3 = 'alarm3'
 ;
 
-enum GSSEnvironmentModifyType returns GSSEnvironmentModifyType:
+enum GSSScenarioModifyType returns scenario::GSSScenarioModifyType:
 	increment = 'increment' | increment1wrap = 'increment1wrap'
 ;
 
-enum GSSEnvironmentAlarmValType returns GSSEnvironmentAlarmValType:
+enum GSSScenarioAlarmValType returns scenario::GSSScenarioAlarmValType:
 	alarm1 = 'alarm1'
 ;
 

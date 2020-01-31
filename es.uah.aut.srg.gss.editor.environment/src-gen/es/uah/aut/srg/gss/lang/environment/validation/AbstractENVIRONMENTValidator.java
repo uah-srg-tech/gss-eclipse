@@ -25,6 +25,7 @@ public abstract class AbstractENVIRONMENTValidator extends AbstractDeclarativeVa
 		List<EPackage> result = new ArrayList<EPackage>();
 		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/gss/common"));
 		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/gss/environment"));
+		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/gss/scenario"));
 		return result;
 	}
 	

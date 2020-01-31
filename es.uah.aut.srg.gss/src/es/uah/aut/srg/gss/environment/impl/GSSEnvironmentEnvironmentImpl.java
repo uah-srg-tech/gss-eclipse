@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2019 UAH Space Research Group.
+ * Copyright (c) 2020 UAH Space Research Group.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -13,8 +13,9 @@ package es.uah.aut.srg.gss.environment.impl;
 import es.uah.aut.srg.gss.common.impl.GSSModelElementImpl;
 
 import es.uah.aut.srg.gss.environment.GSSEnvironmentEnvironment;
-import es.uah.aut.srg.gss.environment.GSSEnvironmentScenario;
 import es.uah.aut.srg.gss.environment.environmentPackage;
+
+import es.uah.aut.srg.gss.scenario.GSSScenarioScenario;
 
 import java.util.Collection;
 
@@ -50,7 +51,7 @@ public class GSSEnvironmentEnvironmentImpl extends GSSModelElementImpl implement
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GSSEnvironmentScenario> scenario;
+	protected EList<GSSScenarioScenario> scenario;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,9 +77,9 @@ public class GSSEnvironmentEnvironmentImpl extends GSSModelElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSEnvironmentScenario> getScenario() {
+	public EList<GSSScenarioScenario> getScenario() {
 		if (scenario == null) {
-			scenario = new EObjectContainmentEList<GSSEnvironmentScenario>(GSSEnvironmentScenario.class, this, environmentPackage.GSS_ENVIRONMENT_ENVIRONMENT__SCENARIO);
+			scenario = new EObjectContainmentEList<GSSScenarioScenario>(GSSScenarioScenario.class, this, environmentPackage.GSS_ENVIRONMENT_ENVIRONMENT__SCENARIO);
 		}
 		return scenario;
 	}
@@ -122,7 +123,7 @@ public class GSSEnvironmentEnvironmentImpl extends GSSModelElementImpl implement
 		switch (featureID) {
 			case environmentPackage.GSS_ENVIRONMENT_ENVIRONMENT__SCENARIO:
 				getScenario().clear();
-				getScenario().addAll((Collection<? extends GSSEnvironmentScenario>)newValue);
+				getScenario().addAll((Collection<? extends GSSScenarioScenario>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

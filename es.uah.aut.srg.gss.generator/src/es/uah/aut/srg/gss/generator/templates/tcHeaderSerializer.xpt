@@ -1,0 +1,20 @@
+«IMPORT tcheader»
+
+«DEFINE Serializer(String outputFile) FOR GSSTCHeader»
+«FILE outputFile -»
+<GSSTCHeader name="«this.name»">
+	<format file="«this.format.name»(«this.format.version»)"/>
+	<fields>
+«FOREACH this.gssHeaderFields AS field -»
+«IF field.fieldValue == null -»
+		<HeaderField name="«field.name»" gssHeaderField="«this.format.name»(«this.format.version»).«field.gssHeaderField.name»"/>
+«ELSE -»
+		<HeaderField name="«field.name»" gssHeaderField="«this.format.name»(«this.format.version»).«field.gssHeaderField.name»">
+			<FieldValueRaw value="«field.fieldValue.value»"/>
+		</HeaderField>
+«ENDIF -»
+«ENDFOREACH -»
+	</fields>
+</GSSTCHeader>
+«ENDFILE -»
+«ENDDEFINE»

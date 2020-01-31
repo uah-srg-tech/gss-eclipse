@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2020 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.gss/src" modelPluginID="es.uah.aut.srg.gss" modelName="Scenario"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="charts.genmodel#//charts common.genmodel#//common export.genmodel#//export filter.genmodel#//filter format.genmodel#//format iface.genmodel#//iface import.genmodel#//import protocol_packets.genmodel#//protocol_packets ../../es.uah.aut.srg.tmtcif/model/scenario.genmodel#//scenario"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>scenario.ecore</foreignModel>
+  <genPackages prefix="scenario" basePackage="es.uah.aut.srg.gss" disposableProviderFactory="true"
+      ecorePackage="scenario.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="scenario.ecore#//GSSScenarioEnableDisable">
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioEnableDisable/disabled"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioEnableDisable/enabled"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="scenario.ecore#//GSSScenarioInterfaceType">
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioInterfaceType/SpW"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioInterfaceType/SpW_TC"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioInterfaceType/SpW_Error"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioInterfaceType/uart"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioInterfaceType/dummy"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="scenario.ecore#//GSSScenarioInterfaceIOType">
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioInterfaceIOType/in_out"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioInterfaceIOType/in"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioInterfaceIOType/out"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="scenario.ecore#//GSSScenarioUpperLevelLevel">
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioUpperLevelLevel/_1"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioUpperLevelLevel/_2"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioUpperLevelLevel/_3"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="scenario.ecore#//GSSScenarioUnit">
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioUnit/miliseconds"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioUnit/seconds"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="scenario.ecore#//GSSScenarioGlobalVarType">
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioGlobalVarType/uint"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioGlobalVarType/formula"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="scenario.ecore#//GSSScenarioReferenceFieldType">
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioReferenceFieldType/tm"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioReferenceFieldType/tc"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="scenario.ecore#//GSSScenarioAlarmMsgType">
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioAlarmMsgType/alarm1"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioAlarmMsgType/alarm2"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioAlarmMsgType/alarm3"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="scenario.ecore#//GSSScenarioModifyType">
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioModifyType/increment"/>
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioModifyType/increment1wrap"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="scenario.ecore#//GSSScenarioAlarmValType">
+      <genEnumLiterals ecoreEnumLiteral="scenario.ecore#//GSSScenarioAlarmValType/alarm1"/>
+    </genEnums>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioScenario">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioScenario/gss_options"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioScenario/Protocols"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioScenario/gssInterfaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioScenario/SpecialPackets"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioScenario/PeriodicTCs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioScenario/GlobalVars"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioScenario/Monitors"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioOptions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioOptions/gss_info"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioOptions/gss_info_print"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioOptions/phy_header_print"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioOptions/discardErrorFlags"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioInfo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioInfo/test_campaign"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioInfo/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioInfo/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioInfo/version_control_url"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioInfoPrint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioInfoPrint/mainLog"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioInfoPrint/portLogs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioInfoPrint/rawLog"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioPhyHeaderPrint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPhyHeaderPrint/mainLog"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPhyHeaderPrint/portLogs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPhyHeaderPrint/rawLog"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPhyHeaderPrint/gssTabs"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioDiscardErrorFlags">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioDiscardErrorFlags/txErrors"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioDiscardErrorFlags/notExpectedPackets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioDiscardErrorFlags/filtersKo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioDiscardErrorFlags/validTimesKo"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioProtocols">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioProtocols/Protocol"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioProtocol">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioProtocol/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioProtocol/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioProtocol/typeLevel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioProtocol/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioProtocol/subtype"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioProtocolType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioProtocolType/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioProtocolType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioInterfaces">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioInterfaces/ProtocolPacketsFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioInterfaces/MainInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioInterfaces/Interface"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioMainInterface"/>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioInterface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioInterface/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioInterface/ifType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioInterface/ifConfig"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioInterface/ioType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioInterface/protocolID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioInterface/LevelInOut"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioInterface/LevelIn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioInterface/LevelOut"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioLevelInOut">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioLevelInOut/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioLevelInOut/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioLevelInOut/TMformat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioLevelInOut/TCformat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioLevelInOut/inputFilter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioLevelInOut/export_to_prev_Level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioLevelInOut/import_from_prev_Level"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioLevelIn">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioLevelIn/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioLevelIn/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioLevelIn/TCformat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioLevelIn/export_to_prev_Level"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioLevelOut">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioLevelOut/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioLevelOut/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioLevelOut/TMformat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioLevelOut/inputFilter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioLevelOut/import_from_prev_Level"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioSpecialPackets">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioSpecialPackets/SpecialPacket"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioSpecialPacket">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioSpecialPacket/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioSpecialPacket/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioSpecialPacket/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioSpecialPacket/ifRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioSpecialPacket/levels"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioSpecialPacket/levelRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioSpecialPacket/inputFilter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioSpecialPacket/UpperLevels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioSpecialPacket/printingData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioSpecialPacket/period"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioSpecialPacket/intervalRange"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioUpperLevels">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioUpperLevels/UpperLevel"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioUpperLevel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioUpperLevel/level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioUpperLevel/TMformat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioUpperLevel/inputFilter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioUpperLevel/import_from_prev_Level"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioPrintingData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPrintingData/printStatus"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPrintingData/structuredData"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioStructuredData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioStructuredData/levelRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioStructuredData/firstField"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioPeriod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPeriod/min_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPeriod/min_unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPeriod/max_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPeriod/max_unit"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioIntervalRange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioIntervalRange/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioIntervalRange/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioIntervalRange/interval_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioIntervalRange/interval_unit"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioPeriodicTCs">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCs/PeriodicTC_level_2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCs/PeriodicTC_level_1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCs/PeriodicTC_level_0"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioPeriodicTC">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPeriodicTC/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPeriodicTC/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPeriodicTC/ifRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPeriodicTC/period_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPeriodicTC/period_unit"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioPeriodicTCLevel2">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCLevel2/level2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCLevel2/app_to_level2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCLevel2/level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCLevel2/level2_to_level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCLevel2/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCLevel2/level1_to_level0"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioPeriodicTCLevel1">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCLevel1/level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCLevel1/app_to_level1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCLevel1/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCLevel1/level1_to_level0"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioPeriodicTCLevel0">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCLevel0/level0"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPeriodicTCLevel0/app_to_level0"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioGlobalVars">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioGlobalVars/GlobalVar"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioGlobalVar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioGlobalVar/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioGlobalVar/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioGlobalVar/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioGlobalVar/initial_value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioGlobalVar/referenceField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioGlobalVar/referencePeriodicTC"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioGlobalVar/referenceSpecialPacket"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioReferenceField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioReferenceField/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioReferenceField/ifRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioReferenceField/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioReferenceField/fieldRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioReferenceField/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioReferenceField/size"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioReferencePeriodicTC">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioReferencePeriodicTC/idRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioReferencePeriodicTC/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioReferencePeriodicTC/fieldRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioReferencePeriodicTC/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioReferencePeriodicTC/size"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioReferenceSpecialPacket">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioReferenceSpecialPacket/idRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioReferenceSpecialPacket/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioReferenceSpecialPacket/fieldRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioReferenceSpecialPacket/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioReferenceSpecialPacket/size"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioMonitors">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioMonitors/ChartsFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioMonitors/plot"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioMonitors/alarmMsg"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioMonitors/modify"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioMonitors/alarmVal"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioPlot">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioPlot/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPlot/chartRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPlot/GVFiltered"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioPlot/GVPeriodic"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioAlarmMsg">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioAlarmMsg/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioAlarmMsg/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioAlarmMsg/text"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioAlarmMsg/GVFiltered"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioAlarmMsg/GVPeriodic"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioModify">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioModify/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioModify/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioModify/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioModify/GVFiltered"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioModify/GVPeriodic"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioAlarmVal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioAlarmVal/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioAlarmVal/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioAlarmVal/GVFiltered"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioAlarmVal/GVPeriodic"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioGVFiltered">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioGVFiltered/GlobalVarRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioGVFiltered/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="scenario.ecore#//GSSScenarioGVPeriodic">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scenario.ecore#//GSSScenarioGVPeriodic/GlobalVarRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioGVPeriodic/period_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scenario.ecore#//GSSScenarioGVPeriodic/period_unit"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

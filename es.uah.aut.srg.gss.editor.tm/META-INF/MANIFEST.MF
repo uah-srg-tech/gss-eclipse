@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: es.uah.aut.srg.gss.editor.tm
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: es.uah.aut.srg.gss.editor.tm; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: es.uah.aut.srg.gss,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: es.uah.aut.srg.gss.lang.tm.parser.antlr,
+ es.uah.aut.srg.gss.lang.tm.services,
+ es.uah.aut.srg.gss.lang.tm.scoping,
+ es.uah.aut.srg.gss.lang.tm.parser.antlr.internal,
+ es.uah.aut.srg.gss.lang.tm.serializer,
+ es.uah.aut.srg.gss.lang.tm,
+ es.uah.aut.srg.gss.lang.tm.validation
+Import-Package: org.apache.log4j

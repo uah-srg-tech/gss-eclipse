@@ -11,8 +11,7 @@
 package es.uah.aut.srg.gss.campaign;
 
 import es.uah.aut.srg.gss.environment.GSSEnvironmentEnvironment;
-import es.uah.aut.srg.gss.environment.GSSEnvironmentScenario;
-
+import es.uah.aut.srg.gss.scenario.GSSScenarioScenario;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -68,12 +67,12 @@ public interface GSSCampaignScenario extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scenario</em>' reference.
-	 * @see #setScenario(GSSEnvironmentScenario)
+	 * @see #setScenario(GSSScenarioScenario)
 	 * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignScenario_Scenario()
 	 * @model required="true"
 	 * @generated
 	 */
-	GSSEnvironmentScenario getScenario();
+	GSSScenarioScenario getScenario();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenario <em>Scenario</em>}' reference.
@@ -83,6 +82,6 @@ public interface GSSCampaignScenario extends EObject {
 	 * @see #getScenario()
 	 * @generated
 	 */
-	void setScenario(GSSEnvironmentScenario value);
+	void setScenario(GSSScenarioScenario value);
 
 } // GSSCampaignScenario

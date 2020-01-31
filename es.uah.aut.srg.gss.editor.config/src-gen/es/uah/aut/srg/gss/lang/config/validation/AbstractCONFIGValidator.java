@@ -25,6 +25,7 @@ public abstract class AbstractCONFIGValidator extends AbstractDeclarativeValidat
 		List<EPackage> result = new ArrayList<EPackage>();
 		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/gss/common"));
 		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/gss/config"));
+		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/gss/scenario"));
 		return result;
 	}
 	

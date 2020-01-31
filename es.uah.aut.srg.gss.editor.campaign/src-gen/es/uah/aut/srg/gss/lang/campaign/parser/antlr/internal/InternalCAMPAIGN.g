@@ -409,7 +409,7 @@ ruleGSSCampaignScenario returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioCrossReference_8_0());
+					newCompositeNode(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0());
 				}
 				ruleVersionedQualifiedReferenceName
 				{

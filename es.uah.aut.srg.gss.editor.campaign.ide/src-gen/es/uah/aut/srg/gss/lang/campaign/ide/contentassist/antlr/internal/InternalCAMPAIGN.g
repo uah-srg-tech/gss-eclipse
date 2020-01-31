@@ -2677,13 +2677,13 @@ rule__GSSCampaignScenario__ScenarioAssignment_8
 	}
 :
 	(
-		{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioCrossReference_8_0()); }
+		{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0()); }
 		(
-			{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); }
+			{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); }
 			ruleVersionedQualifiedReferenceName
-			{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); }
+			{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); }
 		)
-		{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioCrossReference_8_0()); }
+		{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0()); }
 	)
 ;
 finally {

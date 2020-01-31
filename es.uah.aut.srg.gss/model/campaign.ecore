@@ -11,7 +11,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="environment" lowerBound="1"
         eType="ecore:EClass environment.ecore#//GSSEnvironmentEnvironment"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scenario" lowerBound="1"
-        eType="ecore:EClass environment.ecore#//GSSEnvironmentScenario"/>
+        eType="ecore:EClass scenario.ecore#//GSSScenarioScenario"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSCampaignTests">
     <eStructuralFeatures xsi:type="ecore:EReference" name="TestCase" lowerBound="1"

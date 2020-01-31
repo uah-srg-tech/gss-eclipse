@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2019 UAH Space Research Group.
+ * Copyright (c) 2020 UAH Space Research Group.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -11,6 +11,8 @@
 package es.uah.aut.srg.gss.environment;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
+
+import es.uah.aut.srg.gss.scenario.GSSScenarioScenario;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -33,10 +35,10 @@ import org.eclipse.emf.common.util.EList;
 public interface GSSEnvironmentEnvironment extends GSSModelElement {
 	/**
 	 * Returns the value of the '<em><b>Scenario</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.environment.GSSEnvironmentScenario}.
+	 * The list contents are of type {@link es.uah.aut.srg.gss.scenario.GSSScenarioScenario}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Scenario</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Scenario</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -45,6 +47,6 @@ public interface GSSEnvironmentEnvironment extends GSSModelElement {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<GSSEnvironmentScenario> getScenario();
+	EList<GSSScenarioScenario> getScenario();
 
 } // GSSEnvironmentEnvironment

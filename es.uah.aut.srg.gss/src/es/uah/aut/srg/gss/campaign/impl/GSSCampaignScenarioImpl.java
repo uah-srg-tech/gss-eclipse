@@ -14,8 +14,7 @@ import es.uah.aut.srg.gss.campaign.GSSCampaignScenario;
 import es.uah.aut.srg.gss.campaign.campaignPackage;
 
 import es.uah.aut.srg.gss.environment.GSSEnvironmentEnvironment;
-import es.uah.aut.srg.gss.environment.GSSEnvironmentScenario;
-
+import es.uah.aut.srg.gss.scenario.GSSScenarioScenario;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -57,7 +56,7 @@ public class GSSCampaignScenarioImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSEnvironmentScenario scenario;
+	protected GSSScenarioScenario scenario;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -121,10 +120,10 @@ public class GSSCampaignScenarioImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSEnvironmentScenario getScenario() {
+	public GSSScenarioScenario getScenario() {
 		if (scenario != null && scenario.eIsProxy()) {
 			InternalEObject oldScenario = (InternalEObject)scenario;
-			scenario = (GSSEnvironmentScenario)eResolveProxy(oldScenario);
+			scenario = (GSSScenarioScenario)eResolveProxy(oldScenario);
 			if (scenario != oldScenario) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO, oldScenario, scenario));
@@ -138,7 +137,7 @@ public class GSSCampaignScenarioImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSEnvironmentScenario basicGetScenario() {
+	public GSSScenarioScenario basicGetScenario() {
 		return scenario;
 	}
 
@@ -147,8 +146,8 @@ public class GSSCampaignScenarioImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setScenario(GSSEnvironmentScenario newScenario) {
-		GSSEnvironmentScenario oldScenario = scenario;
+	public void setScenario(GSSScenarioScenario newScenario) {
+		GSSScenarioScenario oldScenario = scenario;
 		scenario = newScenario;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO, oldScenario, scenario));
@@ -184,7 +183,7 @@ public class GSSCampaignScenarioImpl extends MinimalEObjectImpl.Container implem
 				setEnvironment((GSSEnvironmentEnvironment)newValue);
 				return;
 			case campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO:
-				setScenario((GSSEnvironmentScenario)newValue);
+				setScenario((GSSScenarioScenario)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -202,7 +201,7 @@ public class GSSCampaignScenarioImpl extends MinimalEObjectImpl.Container implem
 				setEnvironment((GSSEnvironmentEnvironment)null);
 				return;
 			case campaignPackage.GSS_CAMPAIGN_SCENARIO__SCENARIO:
-				setScenario((GSSEnvironmentScenario)null);
+				setScenario((GSSScenarioScenario)null);
 				return;
 		}
 		super.eUnset(featureID);

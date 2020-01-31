@@ -8297,13 +8297,13 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             // InternalCAMPAIGN.g:2680:3: ( ruleVersionedQualifiedReferenceName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioCrossReference_8_0()); 
+               before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0()); 
             }
             // InternalCAMPAIGN.g:2681:3: ( ruleVersionedQualifiedReferenceName )
             // InternalCAMPAIGN.g:2682:4: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); 
+               before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleVersionedQualifiedReferenceName();
@@ -8311,13 +8311,13 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); 
+               after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioCrossReference_8_0()); 
+               after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0()); 
             }
 
             }

@@ -41,12 +41,12 @@ import es.uah.aut.srg.gss.import_.GSSImportImport;
 import es.uah.aut.srg.gss.import_.GSSImportUnit;
 import es.uah.aut.srg.gss.import_.GSSImportVirtualSize;
 import es.uah.aut.srg.gss.import_.importFactory;
-import es.uah.aut.srg.gss.tcheaderinput.GSSTCHeaderInput;
-import es.uah.aut.srg.gss.tcheaderinput.GSSTCHeaderInputField;
-import es.uah.aut.srg.gss.tcheaderinput.tcheaderinputFactory;
-import es.uah.aut.srg.gss.tmheaderoutput.GSSTMHeaderOutput;
-import es.uah.aut.srg.gss.tmheaderoutput.GSSTMHeaderOutputField;
-import es.uah.aut.srg.gss.tmheaderoutput.tmheaderoutputFactory;
+import es.uah.aut.srg.gss.tcheader.GSSTCHeader;
+import es.uah.aut.srg.gss.tcheader.GSSTCHeaderField;
+import es.uah.aut.srg.gss.tcheader.tcheaderFactory;
+import es.uah.aut.srg.gss.tmheader.GSSTMHeader;
+import es.uah.aut.srg.gss.tmheader.GSSTMHeaderField;
+import es.uah.aut.srg.gss.tmheader.tmheaderFactory;
 import es.uah.aut.srg.tmtcif.enum_.TMTCIFEnum;
 import es.uah.aut.srg.tmtcif.enum_.TMTCIFEnumValue;
 import es.uah.aut.srg.tmtcif.enum_.enumFactory;
@@ -1056,8 +1056,8 @@ public class GSSGenerator {
 		return imports;
 	}
 
-	public static GSSTCHeaderInput createTcHeader(String database, GSSFormatFormat tcFormatHeader) throws IOException {
-		GSSTCHeaderInput tcHeader = tcheaderinputFactory.eINSTANCE.createGSSTCHeaderInput();
+	public static GSSTCHeader createTcHeader(String database, GSSFormatFormat tcFormatHeader) throws IOException {
+		GSSTCHeader tcHeader = tcheaderFactory.eINSTANCE.createGSSTCHeader();
 		tcHeader.setName("CCSDS_TC");
 		tcHeader.setFormat(tcFormatHeader);
 		
@@ -1073,7 +1073,7 @@ public class GSSGenerator {
 	    	
 	    	String[] pcdf_rows = pcdf_line.split("\t");
 	    	
-	    	GSSTCHeaderInputField tcHeaderField = tcheaderinputFactory.eINSTANCE.createGSSTCHeaderInputField();
+	    	GSSTCHeaderField tcHeaderField = tcheaderFactory.eINSTANCE.createGSSTCHeaderField();
 			tcHeaderField.setName(pcdf_rows[1].replace(" ", "_"));
 			tcHeaderField.setGssHeaderField(tcFormatFields.get(tcHeaderField.getName()));
 			
@@ -1086,19 +1086,19 @@ public class GSSGenerator {
 	    }
 	    pcdf.close();
 	    //add fields not found in TC
-	    GSSTCHeaderInputField appDataField = tcheaderinputFactory.eINSTANCE.createGSSTCHeaderInputField();
+	    GSSTCHeaderField appDataField = tcheaderFactory.eINSTANCE.createGSSTCHeaderField();
 		appDataField.setName("Application_Data");
 		appDataField.setGssHeaderField(tcFormatHeader.getVSField().get(0));
 		tcHeader.getGssHeaderFields().add(appDataField);
-		GSSTCHeaderInputField crcField = tcheaderinputFactory.eINSTANCE.createGSSTCHeaderInputField();
+		GSSTCHeaderField crcField = tcheaderFactory.eINSTANCE.createGSSTCHeaderField();
 		crcField.setName("CRC");
 		crcField.setGssHeaderField(tcFormatHeader.getFDICField().get(0));
 		tcHeader.getGssHeaderFields().add(crcField);
 	    return tcHeader;
 	}
 
-	public static GSSTMHeaderOutput createTmHeader(String database, GSSFormatFormat tmFormatHeader) throws IOException {
-		GSSTMHeaderOutput tmHeader = tmheaderoutputFactory.eINSTANCE.createGSSTMHeaderOutput();
+	public static GSSTMHeader createTmHeader(String database, GSSFormatFormat tmFormatHeader) throws IOException {
+		GSSTMHeader tmHeader = tmheaderFactory.eINSTANCE.createGSSTMHeader();
 		tmHeader.setName("CCSDS_TM");
 		tmHeader.setFormat(tmFormatHeader);
 		
@@ -1114,7 +1114,7 @@ public class GSSGenerator {
 	    	
 	    	String[] pcdf_rows = pcdf_line.split("\t");
 	    	
-	    	GSSTMHeaderOutputField tmHeaderField = tmheaderoutputFactory.eINSTANCE.createGSSTMHeaderOutputField();
+	    	GSSTMHeaderField tmHeaderField = tmheaderFactory.eINSTANCE.createGSSTMHeaderField();
 			tmHeaderField.setName(pcdf_rows[1].replace(" ", "_"));
 			tmHeaderField.setGssHeaderField(tmFormatFields.get(tmHeaderField.getName()));
 
@@ -1143,27 +1143,27 @@ public class GSSGenerator {
 	    }
 	    pcdf.close();
 	    //add fields not found in TC
-    	GSSTMHeaderOutputField scTimeField = tmheaderoutputFactory.eINSTANCE.createGSSTMHeaderOutputField();
+	    GSSTMHeaderField scTimeField = tmheaderFactory.eINSTANCE.createGSSTMHeaderField();
 		scTimeField.setName("SCTime");
 		scTimeField.setGssHeaderField(tmFormatFields.get("SCTime"));
 		tmHeader.getGssHeaderFields().add(scTimeField);
-		GSSTMHeaderOutputField syncField = tmheaderoutputFactory.eINSTANCE.createGSSTMHeaderOutputField();
+		GSSTMHeaderField syncField = tmheaderFactory.eINSTANCE.createGSSTMHeaderField();
 		syncField.setName("Sync");
 		syncField.setGssHeaderField(tmFormatFields.get("Sync"));
 		tmHeader.getGssHeaderFields().add(syncField);
-		GSSTMHeaderOutputField secondsField = tmheaderoutputFactory.eINSTANCE.createGSSTMHeaderOutputField();
+		GSSTMHeaderField secondsField = tmheaderFactory.eINSTANCE.createGSSTMHeaderField();
 	    secondsField.setName("Seconds");
 	    secondsField.setGssHeaderField(tmFormatFields.get("Seconds"));
 		tmHeader.getGssHeaderFields().add(secondsField);
-		GSSTMHeaderOutputField subsecondsField = tmheaderoutputFactory.eINSTANCE.createGSSTMHeaderOutputField();;
+		GSSTMHeaderField subsecondsField = tmheaderFactory.eINSTANCE.createGSSTMHeaderField();;
 		subsecondsField.setName("Subseconds");
 		subsecondsField.setGssHeaderField(tmFormatFields.get("Subseconds"));
 		tmHeader.getGssHeaderFields().add(subsecondsField);
-		GSSTMHeaderOutputField srcDataField = tmheaderoutputFactory.eINSTANCE.createGSSTMHeaderOutputField();
+		GSSTMHeaderField srcDataField = tmheaderFactory.eINSTANCE.createGSSTMHeaderField();
 		srcDataField.setName("Source_Data");
 		srcDataField.setGssHeaderField(tmFormatHeader.getVSField().get(0));
 		tmHeader.getGssHeaderFields().add(srcDataField);
-		GSSTMHeaderOutputField crcField = tmheaderoutputFactory.eINSTANCE.createGSSTMHeaderOutputField();
+		GSSTMHeaderField crcField = tmheaderFactory.eINSTANCE.createGSSTMHeaderField();
 		crcField.setName("CRC");
 		crcField.setGssHeaderField(tmFormatHeader.getFDICField().get(0));
 		tmHeader.getGssHeaderFields().add(crcField);

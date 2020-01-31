@@ -917,7 +917,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             }
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSEnvironmentScenarioCrossReference_8_0());
+              					newCompositeNode(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_6);

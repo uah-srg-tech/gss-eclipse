@@ -1,0 +1,30 @@
+«IMPORT tm»
+
+«DEFINE Serializer(String outputFile) FOR GSSTM»
+«FILE outputFile -»
+<GSSTM name="«this.name»" type="«this.type»" subtype="«this.subtype»" levels="«this.levels»">
+«IF this.level1_format != null -»
+	<level1_format file="«this.level1_format.name»(«this.level1_format.version»)"/>
+«IF this.level1_filter != null -»
+	<level1_filter file="«this.level1_filter.name»(«this.level1_filter.version»)"/>
+«ENDIF -»
+	<from_level0_import file="«this.from_level0_import.name»(«this.from_level0_import.version»)"/>
+«ENDIF -»
+	<level0_filter file="«this.level0_filter.name»(«this.level0_filter.version»)"/>
+«IF this.gssPi1 != null -»
+	<PI1 name="«this.gssPi1.name»" val="«this.gssPi1.val»" gssField="«this.level1_format.name»(«this.level1_format.version»).«this.gssPi1.gssField.name»"/>
+«ENDIF -»
+«IF this.fields.size != 0 -»
+	<fields>
+«FOREACH this.gssFields AS field -»
+«IF field.enumRef == null -»
+		<Field name="«field.name»" gssField="«this.level1_format.name»(«this.level1_format.version»).«field.gssField.name»"/>
+«ELSE -»
+		<Field name="«field.name»" gssField="«this.level1_format.name»(«this.level1_format.version»).«field.gssField.name»" enumRef="«field.enumRef.name»"/>
+«ENDIF -»
+«ENDFOREACH -»
+	</fields>
+«ENDIF -»
+</GSSTM>
+«ENDFILE -»
+«ENDDEFINE»

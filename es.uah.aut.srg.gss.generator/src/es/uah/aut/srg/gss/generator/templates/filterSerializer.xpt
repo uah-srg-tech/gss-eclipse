@@ -30,8 +30,7 @@ GSSFilterMintermFilter «this.name» {
 «EXPAND SerializeSelect FOR (GSSFilterSelect)(this.Value) -»
 «ELSEIF (this.Value.metaType.name == "filter::GSSFilterSelectLine") -»
 «EXPAND SerializeSelectLine FOR (GSSFilterSelectLine)(this.Value) -»
-«ENDIF»
-	};
+«ENDIF»	};
 «ENDDEFINE»
 
 «DEFINE SerializeConstant FOR GSSFilterConstant -»

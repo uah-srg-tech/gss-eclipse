@@ -34,15 +34,15 @@ import es.uah.aut.srg.gss.filter.GSSFilterMintermFilter;
 import es.uah.aut.srg.gss.generator.GSSGenerator;
 import es.uah.aut.srg.gss.generator.util.XpandGeneratorUtil;
 import es.uah.aut.srg.gss.import_.GSSImportImport;
-import es.uah.aut.srg.gss.tcheaderinput.GSSTCHeaderInput;
-import es.uah.aut.srg.gss.tcinput.GSSTCInput;
-import es.uah.aut.srg.gss.tcinput.GSSTCInputField;
-import es.uah.aut.srg.gss.tcinput.tcinputFactory;
-import es.uah.aut.srg.gss.tmheaderoutput.GSSTMHeaderOutput;
-import es.uah.aut.srg.gss.tmoutput.GSSTMOutput;
-import es.uah.aut.srg.gss.tmoutput.GSSTMOutputField;
-import es.uah.aut.srg.gss.tmoutput.GSSTMOutputPi1;
-import es.uah.aut.srg.gss.tmoutput.tmoutputFactory;
+import es.uah.aut.srg.gss.tcheader.GSSTCHeader;
+import es.uah.aut.srg.gss.tc.GSSTC;
+import es.uah.aut.srg.gss.tc.GSSTCField;
+import es.uah.aut.srg.gss.tc.tcFactory;
+import es.uah.aut.srg.gss.tmheader.GSSTMHeader;
+import es.uah.aut.srg.gss.tm.GSSTM;
+import es.uah.aut.srg.gss.tm.GSSTMField;
+import es.uah.aut.srg.gss.tm.GSSTMPi1;
+import es.uah.aut.srg.gss.tm.tmFactory;
 import es.uah.aut.srg.gss.format.GSSFormatAField;
 import es.uah.aut.srg.gss.format.GSSFormatAIField;
 import es.uah.aut.srg.gss.format.GSSFormatCSField;
@@ -539,15 +539,15 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 			
 			//create tc inputs
 			for (GSSExportExport export : tcExports) {
-				GSSTCInput gssTcInput = tcinputFactory.eINSTANCE.createGSSTCInput();
+				GSSTC gssTc = tcFactory.eINSTANCE.createGSSTC();
 				
 				//get type and subtype
 				StringTokenizer exportNameTokens = new StringTokenizer(export.getName(), "_");
 				String gssTcInputName = exportNameTokens.nextToken();//"tc"
 				gssTcInputName += "_" + exportNameTokens.nextToken() + "_";//"epd" OR "sis"
-				gssTcInput.setType(exportNameTokens.nextToken());
-				gssTcInput.setSubtype(exportNameTokens.nextToken());
-				gssTcInputName += gssTcInput.getType() + "_" + gssTcInput.getSubtype();
+				gssTc.setType(exportNameTokens.nextToken());
+				gssTc.setSubtype(exportNameTokens.nextToken());
+				gssTcInputName += gssTc.getType() + "_" + gssTc.getSubtype();
 				//check ack
 				String exportNameSuffix = exportNameTokens.nextToken();//"export" or TC modifier (for SIS)
 				if(exportNameSuffix.compareTo("export") != 0) {
@@ -557,81 +557,81 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				while(exportNameTokens.hasMoreTokens()) { //"{X}"; "ack"
 					gssTcInputName += "_" + exportNameTokens.nextToken();
 				}
-				gssTcInput.setName(gssTcInputName);
-				gssTcInput.setTo_level0_export(export);
+				gssTc.setName(gssTcInputName);
+				gssTc.setTo_level0_export(export);
 				
 				//get fields
 				GSSFormatFormat tcFormat = export.getFrom();
 				if((tcFormat.getCSField().size() != 0) || (tcFormat.getVSField().size() != 0) ||
 						(tcFormat.getAField().size() != 0)) {
-					gssTcInput.setLevels("2");
-					gssTcInput.setLevel1_format(tcFormat);
+					gssTc.setLevels("2");
+					gssTc.setLevel1_format(tcFormat);
 					
 					for(GSSFormatCSField GSSFormatCSField : tcFormat.getCSField()) {
 						if(GSSFormatCSField.getName().compareTo("ApplicationData") == 0) {
 							continue;
 						}
-						GSSTCInputField gssTcInputField = tcinputFactory.eINSTANCE.createGSSTCInputField();
-						gssTcInputField.setGssField(GSSFormatCSField);
+						GSSTCField gssTcCSField = tcFactory.eINSTANCE.createGSSTCField();
+						gssTcCSField.setGssField(GSSFormatCSField);
 						if(GSSFormatCSField.getDescription() != null) {
-							gssTcInputField.setName(GSSFormatCSField.getDescription());
+							gssTcCSField.setName(GSSFormatCSField.getDescription());
 						} else {
-							gssTcInputField.setName(GSSFormatCSField.getName());
+							gssTcCSField.setName(GSSFormatCSField.getName());
 						}
 						if(tcParamEnum.get((GSSFormatCSField.getName())) != null) {
-							gssTcInputField.setEnumRef(tcEnums.get(tcParamEnum.get(GSSFormatCSField.getName())));
+							gssTcCSField.setEnumRef(tcEnums.get(tcParamEnum.get(GSSFormatCSField.getName())));
 						}
-						gssTcInput.getGssFields().add(gssTcInputField);
+						gssTc.getGssFields().add(gssTcCSField);
 					}
 					for(GSSFormatVSField GSSFormatVSField : tcFormat.getVSField()) {
 						if(GSSFormatVSField.getName().compareTo("ApplicationData") == 0) {
 							continue;
 						}
-						GSSTCInputField gssTcInputField = tcinputFactory.eINSTANCE.createGSSTCInputField();
-						gssTcInputField.setGssField(GSSFormatVSField);
+						GSSTCField gssTcVSField = tcFactory.eINSTANCE.createGSSTCField();
+						gssTcVSField.setGssField(GSSFormatVSField);
 						if(GSSFormatVSField.getDescription() != null) {
-							gssTcInputField.setName(GSSFormatVSField.getDescription());
+							gssTcVSField.setName(GSSFormatVSField.getDescription());
 						} else {
-							gssTcInputField.setName(GSSFormatVSField.getName());
+							gssTcVSField.setName(GSSFormatVSField.getName());
 						}
-						gssTcInput.getGssFields().add(gssTcInputField);
+						gssTc.getGssFields().add(gssTcVSField);
 					}
 					for(GSSFormatAField GSSFormatAField : tcFormat.getAField()) {
-						GSSTCInputField gssTcInputField = tcinputFactory.eINSTANCE.createGSSTCInputField();
-						gssTcInputField.setGssField(GSSFormatAField);
+						GSSTCField gssTcAField = tcFactory.eINSTANCE.createGSSTCField();
+						gssTcAField.setGssField(GSSFormatAField);
 						if(GSSFormatAField.getDescription() != null) {
-							gssTcInputField.setName(GSSFormatAField.getDescription());
+							gssTcAField.setName(GSSFormatAField.getDescription());
 						} else {
-							gssTcInputField.setName(GSSFormatAField.getName());
+							gssTcAField.setName(GSSFormatAField.getName());
 						}
-						gssTcInput.getGssFields().add(gssTcInputField);
+						gssTc.getGssFields().add(gssTcAField);
 					}
 					for(GSSFormatAIField GSSFormatAIField : tcFormat.getAIField()) {
-						GSSTCInputField gssTcInputField = tcinputFactory.eINSTANCE.createGSSTCInputField();
-						gssTcInputField.setGssField(GSSFormatAIField);
+						GSSTCField gssTcAIField = tcFactory.eINSTANCE.createGSSTCField();
+						gssTcAIField.setGssField(GSSFormatAIField);
 						if(GSSFormatAIField.getDescription() != null) {
-							gssTcInputField.setName(GSSFormatAIField.getDescription());
+							gssTcAIField.setName(GSSFormatAIField.getDescription());
 						} else {
-							gssTcInputField.setName(GSSFormatAIField.getName());
+							gssTcAIField.setName(GSSFormatAIField.getName());
 						}
-						gssTcInput.getGssFields().add(gssTcInputField);
+						gssTc.getGssFields().add(gssTcAIField);
 					}
 				}
 				else {
-					gssTcInput.setLevels("1");
+					gssTc.setLevels("1");
 				}
 			
-				String inputName = "tcInputs\\" + gssTcInput.getName() + ".gss_tcinput";
+				String inputName = "tc\\" + gssTc.getName() + ".gss_tc";
 
-				XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssTcInput,
-						"es::uah::aut::srg::gss::generator::templates::tcInputSerializer::Serializer", 
+				XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssTc,
+						"es::uah::aut::srg::gss::generator::templates::tcSerializer::Serializer", 
 						false, inputName);
 				
 				folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
 			}
 			
 			//create tc header
-			GSSTCHeaderInput tcHeader = null;
+			GSSTCHeader tcHeader = null;
 			try {
 				tcHeader = GSSGenerator.createTcHeader(database, tcFormats.get("CCSDS_TC"));
 			} catch (IOException e) {
@@ -639,10 +639,10 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 					IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
 			}
 			
-			String tcHeaderName = "tcInputs\\" + tcHeader.getName() + ".gss_tcheaderinput";
+			String tcHeaderName = "tc\\" + tcHeader.getName() + ".gss_tcheader";
 
 			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), tcHeader,
-					"es::uah::aut::srg::gss::generator::templates::tcHeaderInputSerializer::Serializer", 
+					"es::uah::aut::srg::gss::generator::templates::tcHeaderSerializer::Serializer", 
 					false, tcHeaderName);
 			
 			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
@@ -682,7 +682,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				}
 			}
 			for (GSSFilterMintermFilter filterBottomLevel : filtersBottomLevel) {
-				GSSTMOutput gssTmOutput = tmoutputFactory.eINSTANCE.createGSSTMOutput();
+				GSSTM gssTm = tmFactory.eINSTANCE.createGSSTM();
 
 				if(filterBottomLevel.getName().compareTo("EPD_CCSDS_TM") == 0) {
 					continue;
@@ -693,9 +693,9 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				StringTokenizer filterNameTokens = new StringTokenizer(filterBottomLevel.getName(), "_");
 				String gssTmOutputName = filterNameTokens.nextToken();//"tm"
 				gssTmOutputName += "_" + filterNameTokens.nextToken() + "_";//"epd" OR "sis"
-				gssTmOutput.setType(filterNameTokens.nextToken());
-				gssTmOutput.setSubtype(filterNameTokens.nextToken());
-				gssTmOutputName += gssTmOutput.getType() + "_" + gssTmOutput.getSubtype();
+				gssTm.setType(filterNameTokens.nextToken());
+				gssTm.setSubtype(filterNameTokens.nextToken());
+				gssTmOutputName += gssTm.getType() + "_" + gssTm.getSubtype();
 				String final_str = filterNameTokens.nextToken();
 				if(final_str.compareTo("asw") == 0) {//exception for TM SIS 129.224
 					gssTmOutputName += "_" + final_str;
@@ -703,100 +703,100 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 					gssTmOutputName += "_" + final_str;
 					pi1_val = final_str;
 				}
-				gssTmOutput.setName(gssTmOutputName);
-				gssTmOutput.setLevel0_filter(filterBottomLevel);
-				gssTmOutput.setFrom_level0_import(ccsdsImport);
+				gssTm.setName(gssTmOutputName);
+				gssTm.setLevel0_filter(filterBottomLevel);
+				gssTm.setFrom_level0_import(ccsdsImport);
 
 				//get pi1_name
 				GSSFilterMintermFilter filterTopLevel = filtersTopLevel.get(YID_tm_type_inverse.get(gssTmOutputName));
 				if(filterTopLevel != null) {
 					pi1_name = filterTopLevel.getBoolVar().get(0).getFieldRef().getName();
-					gssTmOutput.setLevel1_filter(filterTopLevel);
+					gssTm.setLevel1_filter(filterTopLevel);
 				};
 				
 				//get fields
 				GSSFormatFormat tmFormat = tmFormats.get(YID_tm_type_inverse.get(gssTmOutputName));
-				gssTmOutput.setLevel1_format(tmFormat);
+				gssTm.setLevel1_format(tmFormat);
 				for(GSSFormatCSField GSSFormatCSField : tmFormat.getCSField()) {
 					if(GSSFormatCSField.getName().compareTo("SourceData") == 0){
 						continue;
 					}
 					else if(GSSFormatCSField.getName().compareTo(pi1_name) == 0) {
-						GSSTMOutputPi1 gssTmOutputPi1 = tmoutputFactory.eINSTANCE.createGSSTMOutputPi1();
-						gssTmOutputPi1.setVal(pi1_val);
-						gssTmOutputPi1.setGssField(GSSFormatCSField);
+						GSSTMPi1 gssTmPi1 = tmFactory.eINSTANCE.createGSSTMPi1();
+						gssTmPi1.setVal(pi1_val);
+						gssTmPi1.setGssField(GSSFormatCSField);
 						if(GSSFormatCSField.getDescription() != null) {
-							gssTmOutputPi1.setName(GSSFormatCSField.getDescription());
+							gssTmPi1.setName(GSSFormatCSField.getDescription());
 						} else {
-							gssTmOutputPi1.setName(GSSFormatCSField.getName());
+							gssTmPi1.setName(GSSFormatCSField.getName());
 						}
-						gssTmOutput.setGssPi1(gssTmOutputPi1);
+						gssTm.setGssPi1(gssTmPi1);
 					}
 					else {
-						GSSTMOutputField gssTmOutputField = tmoutputFactory.eINSTANCE.createGSSTMOutputField();
-						gssTmOutputField.setGssField(GSSFormatCSField);
+						GSSTMField gssTmCSField = tmFactory.eINSTANCE.createGSSTMField();
+						gssTmCSField.setGssField(GSSFormatCSField);
 						if(GSSFormatCSField.getDescription() != null) {
-							gssTmOutputField.setName(GSSFormatCSField.getDescription());
+							gssTmCSField.setName(GSSFormatCSField.getDescription());
 						} else {
-							gssTmOutputField.setName(GSSFormatCSField.getName());
+							gssTmCSField.setName(GSSFormatCSField.getName());
 						}
 						if(tmParamEnum.get((GSSFormatCSField.getName())) != null) {
-							gssTmOutputField.setEnumRef(tmEnums.get(tmParamEnum.get(GSSFormatCSField.getName())));
+							gssTmCSField.setEnumRef(tmEnums.get(tmParamEnum.get(GSSFormatCSField.getName())));
 						}
-						gssTmOutput.getGssFields().add(gssTmOutputField);
+						gssTm.getGssFields().add(gssTmCSField);
 					}
 				}
 				for(GSSFormatVSField GSSFormatVSField : tmFormat.getVSField()) {
 					if(GSSFormatVSField.getName().compareTo("SourceData") == 0) {
 						continue;
 					}
-					GSSTMOutputField gssTmOutputField = tmoutputFactory.eINSTANCE.createGSSTMOutputField();
-					gssTmOutputField.setGssField(GSSFormatVSField);
+					GSSTMField gssTmVSField = tmFactory.eINSTANCE.createGSSTMField();
+					gssTmVSField.setGssField(GSSFormatVSField);
 					if(GSSFormatVSField.getDescription() != null) {
-						gssTmOutputField.setName(GSSFormatVSField.getDescription());
+						gssTmVSField.setName(GSSFormatVSField.getDescription());
 					} else {
-						gssTmOutputField.setName(GSSFormatVSField.getName());
+						gssTmVSField.setName(GSSFormatVSField.getName());
 					}
-					gssTmOutput.getGssFields().add(gssTmOutputField);
+					gssTm.getGssFields().add(gssTmVSField);
 				}
 				for(GSSFormatAField GSSFormatAField : tmFormat.getAField()) {
-					GSSTMOutputField gssTmOutputField = tmoutputFactory.eINSTANCE.createGSSTMOutputField();
-					gssTmOutputField.setGssField(GSSFormatAField);
+					GSSTMField gssTmAField = tmFactory.eINSTANCE.createGSSTMField();
+					gssTmAField.setGssField(GSSFormatAField);
 					if(GSSFormatAField.getDescription() != null) {
-						gssTmOutputField.setName(GSSFormatAField.getDescription());
+						gssTmAField.setName(GSSFormatAField.getDescription());
 					} else {
-						gssTmOutputField.setName(GSSFormatAField.getName());
+						gssTmAField.setName(GSSFormatAField.getName());
 					}
-					gssTmOutput.getGssFields().add(gssTmOutputField);
+					gssTm.getGssFields().add(gssTmAField);
 				}
 				for(GSSFormatAIField GSSFormatAIField : tmFormat.getAIField()) {
-					GSSTMOutputField gssTmOutputField = tmoutputFactory.eINSTANCE.createGSSTMOutputField();
-					gssTmOutputField.setGssField(GSSFormatAIField);
+					GSSTMField gssTmAIField = tmFactory.eINSTANCE.createGSSTMField();
+					gssTmAIField.setGssField(GSSFormatAIField);
 					if(GSSFormatAIField.getDescription() != null) {
-						gssTmOutputField.setName(GSSFormatAIField.getDescription());
+						gssTmAIField.setName(GSSFormatAIField.getDescription());
 					} else {
-						gssTmOutputField.setName(GSSFormatAIField.getName());
+						gssTmAIField.setName(GSSFormatAIField.getName());
 					}
-					gssTmOutput.getGssFields().add(gssTmOutputField);
+					gssTm.getGssFields().add(gssTmAIField);
 				}
 				if((tmFormat.getCSField().size() != 0) || (tmFormat.getVSField().size() != 0) ||
 						(tmFormat.getAField().size() != 0)) {
-					gssTmOutput.setLevels("2");
+					gssTm.setLevels("2");
 				} else {
-					gssTmOutput.setLevels("1");
+					gssTm.setLevels("1");
 				}
 			
-				String outputName = "tmOutputs\\" + gssTmOutput.getName() + ".gss_tmoutput";
+				String outputName = "tm\\" + gssTm.getName() + ".gss_tm";
 
-				XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssTmOutput,
-						"es::uah::aut::srg::gss::generator::templates::tmOutputSerializer::Serializer", 
+				XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), gssTm,
+						"es::uah::aut::srg::gss::generator::templates::tmSerializer::Serializer", 
 						false, outputName);
 				
 				folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());
 			}
 			
 			//create tm header
-			GSSTMHeaderOutput tmHeader = null;
+			GSSTMHeader tmHeader = null;
 			try {
 				tmHeader = GSSGenerator.createTmHeader(database, tmFormats.get("CCSDS_TM"));
 			} catch (IOException e) {
@@ -804,10 +804,10 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 					IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e));
 			}
 			
-			String tmHeaderName = "tmOutputs\\" + tmHeader.getName() + ".gss_tmheaderoutput";
+			String tmHeaderName = "tm\\" + tmHeader.getName() + ".gss_tmheader";
 
 			XpandGeneratorUtil.generate(folder.getLocation().toPortableString(), tmHeader,
-					"es::uah::aut::srg::gss::generator::templates::tmHeaderOutputSerializer::Serializer", 
+					"es::uah::aut::srg::gss::generator::templates::tmHeaderSerializer::Serializer", 
 					false, tmHeaderName);
 			
 			folder.getProject().refreshLocal(IProject.DEPTH_INFINITE, new NullProgressMonitor());

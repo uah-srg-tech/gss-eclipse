@@ -22,15 +22,11 @@ import es.uah.aut.srg.gss.format.formatPackage;
 import es.uah.aut.srg.gss.export.exportPackage;
 import es.uah.aut.srg.gss.filter.filterPackage;
 import es.uah.aut.srg.gss.import_.importPackage;
-import es.uah.aut.srg.gss.tcinput.tcinputPackage;
-import es.uah.aut.srg.gss.tcheaderinput.tcheaderinputPackage;
-import es.uah.aut.srg.gss.tmoutput.tmoutputPackage;
-import es.uah.aut.srg.gss.tmheaderoutput.tmheaderoutputPackage;
+import es.uah.aut.srg.gss.tc.tcPackage;
+import es.uah.aut.srg.gss.tcheader.tcheaderPackage;
+import es.uah.aut.srg.gss.tm.tmPackage;
+import es.uah.aut.srg.gss.tmheader.tmheaderPackage;
 import es.uah.aut.srg.tmtcif.enum_.enumPackage;
-import es.uah.aut.srg.tmtcif.tc.tcPackage;
-import es.uah.aut.srg.tmtcif.tcheader.tcheaderPackage;
-import es.uah.aut.srg.tmtcif.tm.tmPackage;
-import es.uah.aut.srg.tmtcif.tmheader.tmheaderPackage;
 
 import org.eclipse.internal.xpand2.pr.ProtectedRegionResolverImpl;
 import org.eclipse.xpand2.XpandExecutionContextImpl;
@@ -51,7 +47,7 @@ public class XpandGeneratorUtil {
 	public XpandGeneratorUtil() {
 
 	}
-	
+
 	protected static EmfRegistryMetaModel metaModel = new EmfRegistryMetaModel(){
 
 		@Override
@@ -61,13 +57,13 @@ public class XpandGeneratorUtil {
 				exportPackage.eINSTANCE,
 				filterPackage.eINSTANCE,
 				importPackage.eINSTANCE,
-				tcinputPackage.eINSTANCE,
+				es.uah.aut.srg.tmtcif.tc.tcPackage.eINSTANCE,
 				tcPackage.eINSTANCE,
-				tcheaderinputPackage.eINSTANCE,
+				es.uah.aut.srg.tmtcif.tcheader.tcheaderPackage.eINSTANCE,
 				tcheaderPackage.eINSTANCE,
-				tmoutputPackage.eINSTANCE,
+				es.uah.aut.srg.tmtcif.tm.tmPackage.eINSTANCE,
 				tmPackage.eINSTANCE,
-				tmheaderoutputPackage.eINSTANCE,
+				es.uah.aut.srg.tmtcif.tmheader.tmheaderPackage.eINSTANCE,
 				tmheaderPackage.eINSTANCE,
 				enumPackage.eINSTANCE,
 			};
