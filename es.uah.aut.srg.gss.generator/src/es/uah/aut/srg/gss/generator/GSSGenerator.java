@@ -965,7 +965,8 @@ public class GSSGenerator {
 	    	
 	    	String[] pid_rows = pid_line.split("\t");
 	    	
-	    	if(picTypeSubtype.get(pid_rows[0] + "_" + pid_rows[1]).compareTo("-1") == 0) {
+	    	String pic_off = picTypeSubtype.get(pid_rows[0] + "_" + pid_rows[1]);
+	    	if(pic_off.compareTo("-1") == 0) {
 	    		continue;
 	    	}
 
@@ -977,7 +978,12 @@ public class GSSGenerator {
 	    	}
 	    	else if(tmFormats.get("YID" + pid_rows[5]).getVSField().size() == 0) {
 	    		//only csfields: get second csfield
-	    		fieldRefPI1_val = tmFormats.get("YID" + pid_rows[5]).getCSField().get(1);
+	    		if(pic_off.compareTo("20") == 0) {
+	    			//it is TM 1.2 or 1.8, get 4th field NID00003 / NID00066
+	    			fieldRefPI1_val = tmFormats.get("YID" + pid_rows[5]).getCSField().get(3);
+	    		} else {
+	    			fieldRefPI1_val = tmFormats.get("YID" + pid_rows[5]).getCSField().get(1);
+	    		}
 	    	}
 	    	else {
 	    		//csfields and vsfields: get first csfield
