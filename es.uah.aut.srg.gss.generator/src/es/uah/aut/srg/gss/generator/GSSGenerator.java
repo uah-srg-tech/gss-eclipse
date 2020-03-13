@@ -553,34 +553,6 @@ public class GSSGenerator {
 	    	cssdsDic.setDICRef("CRC");
 	    	activateDICs.getDIC().add(cssdsDic);
 	    	export.setActivateDICs(activateDICs);
-
-	    	//before adding, copy export for creating different ack versions
-	    	/*GSSExportExport export_variant1 = copyExportToLevel1(export);
-	    	GSSExportExport export_variant2 = copyExportToLevel1(export);
-	    	GSSExportExport export_variant3 = copyExportToLevel1(export);
-	    	if(export.getSettings().getSettingFromConst().get(2).getValue().compareTo("9") == 0) {
-	    		export_variant1.getSettings().getSettingFromConst().get(2).setValue("8");
-	    		export_variant2.getSettings().getSettingFromConst().get(2).setValue("1");
-	    		export_variant3.getSettings().getSettingFromConst().get(2).setValue("0");
-	    	}
-	    	else if(export.getSettings().getSettingFromConst().get(2).getValue().compareTo("8") == 0) {
-	    		export_variant1.getSettings().getSettingFromConst().get(2).setValue("9");
-	    		export_variant2.getSettings().getSettingFromConst().get(2).setValue("1");
-	    		export_variant3.getSettings().getSettingFromConst().get(2).setValue("0");
-	    	}
-	    	else if(export.getSettings().getSettingFromConst().get(2).getValue().compareTo("1") == 0) {
-	    		export_variant1.getSettings().getSettingFromConst().get(2).setValue("9");
-	    		export_variant2.getSettings().getSettingFromConst().get(2).setValue("8");
-	    		export_variant3.getSettings().getSettingFromConst().get(2).setValue("0");
-	    	}
-	    	else if(export.getSettings().getSettingFromConst().get(2).getValue().compareTo("0") == 0) {
-	    		export_variant1.getSettings().getSettingFromConst().get(2).setValue("9");
-	    		export_variant2.getSettings().getSettingFromConst().get(2).setValue("8");
-	    		export_variant3.getSettings().getSettingFromConst().get(2).setValue("1");
-	    	}
-	    	exports.add(export_variant1);
-	    	exports.add(export_variant2);
-	    	exports.add(export_variant3);*/
 	    	exports.add(export);
 	    }
 		ccf.close();
@@ -601,7 +573,14 @@ public class GSSGenerator {
     	createExportSettingFromConst(settings, "0", ccsdsTcFormatFields.get(TYPE));
     	createExportSettingFromConst(settings, "0", ccsdsTcFormatFields.get(SUBTYPE));
     	createExportSettingFromConst(settings, "9", ccsdsTcFormatFields.get(ACK));
+		createExportSettingFromConst(settings, Integer.toString(SECOND_HEADER_LENGTH_BYTES+CRC_LEN_BYTES-1), appDataLengthField);
     	export.setSettings(settings);
+    	GSSExportActivateDICs activateDICs = exportFactory.eINSTANCE.createGSSExportActivateDICs();
+    	GSSExportDIC cssdsDic = exportFactory.eINSTANCE.createGSSExportDIC();
+    	cssdsDic.setId("0");
+    	cssdsDic.setDICRef("CRC");
+    	activateDICs.getDIC().add(cssdsDic);
+    	export.setActivateDICs(activateDICs);
     	exports.add(export);
     	
 		return exports;
