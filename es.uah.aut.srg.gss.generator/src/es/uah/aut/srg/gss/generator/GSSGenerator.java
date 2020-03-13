@@ -506,7 +506,7 @@ public class GSSGenerator {
 	    	
 	    	//set size and ApplicationData if necessary
 	    	GSSExportSizeInBits sizeInBits = null;
-    		Integer appDataLengthValue = SECOND_HEADER_LENGTH_BYTES+1;
+    		Integer appDataLengthValue = SECOND_HEADER_LENGTH_BYTES+CRC_LEN_BYTES-1;
 	    	if(tcFormats.get(ccf_rows[0]).getVSField().size() != 0) {
 	    		//csfields, vsfields, (maybe afields)
 		    	if(tcFormats.get(ccf_rows[0]).getAField().size() == 0) {
@@ -514,16 +514,16 @@ public class GSSGenerator {
 			    	sizeInBits = exportFactory.eINSTANCE.createGSSExportSizeInBits();
     				sizeInBits.setFrom("PID00075");
     				appDataLengthValue += Integer.parseInt(tcFormats.get(ccf_rows[0]).getVSField().get(0).getConstSize().getBytes());
-    				sizeInBits.setAddSize(Integer.toString(appDataLengthValue));
     				//ApplicationData
 		    	}
 		    	else {
 		    		//csfields, vsfields and afields
 			    	sizeInBits = exportFactory.eINSTANCE.createGSSExportSizeInBits();
 					sizeInBits.setFrom("ApplicationData");
-    				sizeInBits.setAddSize(Integer.toString(SECOND_HEADER_LENGTH_BYTES));
 		    	}
+		    	
 		    	if(sizeInBits != null) {
+		    		sizeInBits.setAddSize(Integer.toString(appDataLengthValue));
 		    		sizeInBits.setId("0");
 		    		sizeInBits.setUnit(GSSExportUnit.BYTES);
 		    		
