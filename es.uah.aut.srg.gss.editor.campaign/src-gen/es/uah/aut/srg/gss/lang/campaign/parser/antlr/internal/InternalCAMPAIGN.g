@@ -390,9 +390,9 @@ ruleGSSCampaignScenario returns [EObject current=null]
 		{
 			newLeafNode(otherlv_5, grammarAccess.getGSSCampaignScenarioAccess().getSemicolonKeyword_5());
 		}
-		otherlv_6='scenarioId'
+		otherlv_6='scenarioRef'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdKeyword_6());
+			newLeafNode(otherlv_6, grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefKeyword_6());
 		}
 		otherlv_7=':='
 		{
@@ -410,7 +410,7 @@ ruleGSSCampaignScenario returns [EObject current=null]
 				}
 				otherlv_8=RULE_STRING
 				{
-					newLeafNode(otherlv_8, grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0());
+					newLeafNode(otherlv_8, grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefGSSScenarioScenarioCrossReference_8_0());
 				}
 			)
 		)

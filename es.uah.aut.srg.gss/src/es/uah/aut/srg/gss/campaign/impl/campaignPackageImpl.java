@@ -190,7 +190,7 @@ public class campaignPackageImpl extends EPackageImpl implements campaignPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSCampaignScenario_Scenario() {
+	public EReference getGSSCampaignScenario_ScenarioRef() {
 		return (EReference)gssCampaignScenarioEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -300,7 +300,7 @@ public class campaignPackageImpl extends EPackageImpl implements campaignPackage
 
 		gssCampaignScenarioEClass = createEClass(GSS_CAMPAIGN_SCENARIO);
 		createEReference(gssCampaignScenarioEClass, GSS_CAMPAIGN_SCENARIO__ENVIRONMENT);
-		createEReference(gssCampaignScenarioEClass, GSS_CAMPAIGN_SCENARIO__SCENARIO);
+		createEReference(gssCampaignScenarioEClass, GSS_CAMPAIGN_SCENARIO__SCENARIO_REF);
 
 		gssCampaignTestsEClass = createEClass(GSS_CAMPAIGN_TESTS);
 		createEReference(gssCampaignTestsEClass, GSS_CAMPAIGN_TESTS__TEST_CASE);
@@ -358,7 +358,7 @@ public class campaignPackageImpl extends EPackageImpl implements campaignPackage
 
 		initEClass(gssCampaignScenarioEClass, GSSCampaignScenario.class, "GSSCampaignScenario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSCampaignScenario_Environment(), theenvironmentPackage.getGSSEnvironmentEnvironment(), null, "environment", null, 1, 1, GSSCampaignScenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSCampaignScenario_Scenario(), thescenarioPackage.getGSSScenarioScenario(), null, "scenario", null, 1, 1, GSSCampaignScenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSCampaignScenario_ScenarioRef(), thescenarioPackage.getGSSScenarioScenario(), null, "scenarioRef", null, 1, 1, GSSCampaignScenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssCampaignTestsEClass, GSSCampaignTests.class, "GSSCampaignTests", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSCampaignTests_TestCase(), this.getGSSCampaignTestCase(), null, "TestCase", null, 1, 150, GSSCampaignTests.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

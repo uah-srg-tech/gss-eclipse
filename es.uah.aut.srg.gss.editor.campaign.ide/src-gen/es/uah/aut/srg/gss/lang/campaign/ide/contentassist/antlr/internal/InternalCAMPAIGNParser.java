@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'_1'", "'import'", "':='", "';'", "'GSSCampaignCampaign'", "'{'", "'version'", "'}'", "'uri'", "'GSSCampaignScenario'", "'environment'", "'scenarioId'", "'GSSCampaignTests'", "'GSSCampaignTestCase'", "'name'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'_1'", "'import'", "':='", "';'", "'GSSCampaignCampaign'", "'{'", "'version'", "'}'", "'uri'", "'GSSCampaignScenario'", "'environment'", "'scenarioRef'", "'GSSCampaignTests'", "'GSSCampaignTestCase'", "'name'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'"
     };
     public static final int RULE_STRING=6;
     public static final int RULE_SL_COMMENT=9;
@@ -3470,24 +3470,24 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignScenario__Group__6__Impl"
-    // InternalCAMPAIGN.g:1111:1: rule__GSSCampaignScenario__Group__6__Impl : ( 'scenarioId' ) ;
+    // InternalCAMPAIGN.g:1111:1: rule__GSSCampaignScenario__Group__6__Impl : ( 'scenarioRef' ) ;
     public final void rule__GSSCampaignScenario__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1115:1: ( ( 'scenarioId' ) )
-            // InternalCAMPAIGN.g:1116:1: ( 'scenarioId' )
+            // InternalCAMPAIGN.g:1115:1: ( ( 'scenarioRef' ) )
+            // InternalCAMPAIGN.g:1116:1: ( 'scenarioRef' )
             {
-            // InternalCAMPAIGN.g:1116:1: ( 'scenarioId' )
-            // InternalCAMPAIGN.g:1117:2: 'scenarioId'
+            // InternalCAMPAIGN.g:1116:1: ( 'scenarioRef' )
+            // InternalCAMPAIGN.g:1117:2: 'scenarioRef'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdKeyword_6()); 
+               before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefKeyword_6()); 
             }
             match(input,23,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdKeyword_6()); 
+               after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefKeyword_6()); 
             }
 
             }
@@ -3628,26 +3628,26 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignScenario__Group__8__Impl"
-    // InternalCAMPAIGN.g:1165:1: rule__GSSCampaignScenario__Group__8__Impl : ( ( rule__GSSCampaignScenario__ScenarioAssignment_8 ) ) ;
+    // InternalCAMPAIGN.g:1165:1: rule__GSSCampaignScenario__Group__8__Impl : ( ( rule__GSSCampaignScenario__ScenarioRefAssignment_8 ) ) ;
     public final void rule__GSSCampaignScenario__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1169:1: ( ( ( rule__GSSCampaignScenario__ScenarioAssignment_8 ) ) )
-            // InternalCAMPAIGN.g:1170:1: ( ( rule__GSSCampaignScenario__ScenarioAssignment_8 ) )
+            // InternalCAMPAIGN.g:1169:1: ( ( ( rule__GSSCampaignScenario__ScenarioRefAssignment_8 ) ) )
+            // InternalCAMPAIGN.g:1170:1: ( ( rule__GSSCampaignScenario__ScenarioRefAssignment_8 ) )
             {
-            // InternalCAMPAIGN.g:1170:1: ( ( rule__GSSCampaignScenario__ScenarioAssignment_8 ) )
-            // InternalCAMPAIGN.g:1171:2: ( rule__GSSCampaignScenario__ScenarioAssignment_8 )
+            // InternalCAMPAIGN.g:1170:1: ( ( rule__GSSCampaignScenario__ScenarioRefAssignment_8 ) )
+            // InternalCAMPAIGN.g:1171:2: ( rule__GSSCampaignScenario__ScenarioRefAssignment_8 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioAssignment_8()); 
+               before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefAssignment_8()); 
             }
-            // InternalCAMPAIGN.g:1172:2: ( rule__GSSCampaignScenario__ScenarioAssignment_8 )
-            // InternalCAMPAIGN.g:1172:3: rule__GSSCampaignScenario__ScenarioAssignment_8
+            // InternalCAMPAIGN.g:1172:2: ( rule__GSSCampaignScenario__ScenarioRefAssignment_8 )
+            // InternalCAMPAIGN.g:1172:3: rule__GSSCampaignScenario__ScenarioRefAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSCampaignScenario__ScenarioAssignment_8();
+            rule__GSSCampaignScenario__ScenarioRefAssignment_8();
 
             state._fsp--;
             if (state.failed) return ;
@@ -3655,7 +3655,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioAssignment_8()); 
+               after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefAssignment_8()); 
             }
 
             }
@@ -7602,9 +7602,9 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__GSSCampaignScenario__EnvironmentAssignment_4"
 
 
-    // $ANTLR start "rule__GSSCampaignScenario__ScenarioAssignment_8"
-    // InternalCAMPAIGN.g:2460:1: rule__GSSCampaignScenario__ScenarioAssignment_8 : ( ( RULE_STRING ) ) ;
-    public final void rule__GSSCampaignScenario__ScenarioAssignment_8() throws RecognitionException {
+    // $ANTLR start "rule__GSSCampaignScenario__ScenarioRefAssignment_8"
+    // InternalCAMPAIGN.g:2460:1: rule__GSSCampaignScenario__ScenarioRefAssignment_8 : ( ( RULE_STRING ) ) ;
+    public final void rule__GSSCampaignScenario__ScenarioRefAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -7616,23 +7616,23 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             // InternalCAMPAIGN.g:2466:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0()); 
+               before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefGSSScenarioScenarioCrossReference_8_0()); 
             }
             // InternalCAMPAIGN.g:2467:3: ( RULE_STRING )
             // InternalCAMPAIGN.g:2468:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioSTRINGTerminalRuleCall_8_0_1()); 
+               before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefGSSScenarioScenarioSTRINGTerminalRuleCall_8_0_1()); 
             }
             match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioSTRINGTerminalRuleCall_8_0_1()); 
+               after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefGSSScenarioScenarioSTRINGTerminalRuleCall_8_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0()); 
+               after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefGSSScenarioScenarioCrossReference_8_0()); 
             }
 
             }
@@ -7652,7 +7652,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__GSSCampaignScenario__ScenarioAssignment_8"
+    // $ANTLR end "rule__GSSCampaignScenario__ScenarioRefAssignment_8"
 
 
     // $ANTLR start "rule__GSSCampaignTests__TestCaseAssignment_2"

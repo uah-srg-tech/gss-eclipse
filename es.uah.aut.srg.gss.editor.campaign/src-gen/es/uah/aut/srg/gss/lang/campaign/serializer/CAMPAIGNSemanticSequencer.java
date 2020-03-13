@@ -106,18 +106,18 @@ public class CAMPAIGNSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     GSSCampaignScenario returns GSSCampaignScenario
 	 *
 	 * Constraint:
-	 *     (environment=[GSSEnvironmentEnvironment|VersionedQualifiedName] scenario=[GSSScenarioScenario|STRING])
+	 *     (environment=[GSSEnvironmentEnvironment|VersionedQualifiedName] scenarioRef=[GSSScenarioScenario|STRING])
 	 */
 	protected void sequence_GSSCampaignScenario(ISerializationContext context, GSSCampaignScenario semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__ENVIRONMENT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__ENVIRONMENT));
-			if (transientValues.isValueTransient(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__SCENARIO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__SCENARIO));
+			if (transientValues.isValueTransient(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__SCENARIO_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, campaignPackage.Literals.GSS_CAMPAIGN_SCENARIO__SCENARIO_REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentGSSEnvironmentEnvironmentVersionedQualifiedNameParserRuleCall_4_0_1(), semanticObject.getEnvironment());
-		feeder.accept(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioSTRINGTerminalRuleCall_8_0_1(), semanticObject.getScenario());
+		feeder.accept(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefGSSScenarioScenarioSTRINGTerminalRuleCall_8_0_1(), semanticObject.getScenarioRef());
 		feeder.finish();
 	}
 	

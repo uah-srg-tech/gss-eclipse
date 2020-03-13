@@ -169,13 +169,13 @@ public interface campaignPackage extends EPackage {
 	int GSS_CAMPAIGN_SCENARIO__ENVIRONMENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Scenario</b></em>' reference.
+	 * The feature id for the '<em><b>Scenario Ref</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CAMPAIGN_SCENARIO__SCENARIO = 1;
+	int GSS_CAMPAIGN_SCENARIO__SCENARIO_REF = 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Campaign Scenario</em>' class.
@@ -361,15 +361,15 @@ public interface campaignPackage extends EPackage {
 	EReference getGSSCampaignScenario_Environment();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenario <em>Scenario</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenarioRef <em>Scenario Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Scenario</em>'.
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenario()
+	 * @return the meta object for the reference '<em>Scenario Ref</em>'.
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignScenario#getScenarioRef()
 	 * @see #getGSSCampaignScenario()
 	 * @generated
 	 */
-	EReference getGSSCampaignScenario_Scenario();
+	EReference getGSSCampaignScenario_ScenarioRef();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTests <em>GSS Campaign Tests</em>}'.
@@ -524,12 +524,12 @@ public interface campaignPackage extends EPackage {
 		EReference GSS_CAMPAIGN_SCENARIO__ENVIRONMENT = eINSTANCE.getGSSCampaignScenario_Environment();
 
 		/**
-		 * The meta object literal for the '<em><b>Scenario</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Scenario Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_CAMPAIGN_SCENARIO__SCENARIO = eINSTANCE.getGSSCampaignScenario_Scenario();
+		EReference GSS_CAMPAIGN_SCENARIO__SCENARIO_REF = eINSTANCE.getGSSCampaignScenario_ScenarioRef();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestsImpl <em>GSS Campaign Tests</em>}' class.

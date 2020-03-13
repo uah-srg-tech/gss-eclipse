@@ -1114,9 +1114,9 @@ rule__GSSCampaignScenario__Group__6__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdKeyword_6()); }
-	'scenarioId'
-	{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdKeyword_6()); }
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefKeyword_6()); }
+	'scenarioRef'
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefKeyword_6()); }
 )
 ;
 finally {
@@ -1168,9 +1168,9 @@ rule__GSSCampaignScenario__Group__8__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioAssignment_8()); }
-	(rule__GSSCampaignScenario__ScenarioAssignment_8)
-	{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioAssignment_8()); }
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefAssignment_8()); }
+	(rule__GSSCampaignScenario__ScenarioRefAssignment_8)
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefAssignment_8()); }
 )
 ;
 finally {
@@ -2457,19 +2457,19 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSCampaignScenario__ScenarioAssignment_8
+rule__GSSCampaignScenario__ScenarioRefAssignment_8
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0()); }
+		{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefGSSScenarioScenarioCrossReference_8_0()); }
 		(
-			{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioSTRINGTerminalRuleCall_8_0_1()); }
+			{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefGSSScenarioScenarioSTRINGTerminalRuleCall_8_0_1()); }
 			RULE_STRING
-			{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioSTRINGTerminalRuleCall_8_0_1()); }
+			{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefGSSScenarioScenarioSTRINGTerminalRuleCall_8_0_1()); }
 		)
-		{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0()); }
+		{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefGSSScenarioScenarioCrossReference_8_0()); }
 	)
 ;
 finally {

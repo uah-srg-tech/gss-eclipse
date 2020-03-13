@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2019 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
     modelDirectory="/es.uah.aut.srg.gss/src" modelPluginID="es.uah.aut.srg.gss" modelName="Campaign"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" usedGenPackages="charts.genmodel#//charts common.genmodel#//common common.genmodel#//common environment.genmodel#//environment export.genmodel#//export filter.genmodel#//filter format.genmodel#//format iface.genmodel#//iface import.genmodel#//import protocol_packets.genmodel#//protocol_packets test_proc.genmodel#//test_proc"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="charts.genmodel#//charts common.genmodel#//common environment.genmodel#//environment export.genmodel#//export filter.genmodel#//filter format.genmodel#//format iface.genmodel#//iface import.genmodel#//import protocol_packets.genmodel#//protocol_packets test_proc.genmodel#//test_proc scenario.genmodel#//scenario ../../es.uah.aut.srg.tmtcif/model/scenario.genmodel#//scenario"
     operationReflection="true" importOrganizing="true">
   <foreignModel>campaign.ecore</foreignModel>
   <genPackages prefix="campaign" basePackage="es.uah.aut.srg.gss" disposableProviderFactory="true"
@@ -12,17 +12,21 @@
       <genEnumLiterals ecoreEnumLiteral="campaign.ecore#//GSSCampaignTestReqAction/_1"/>
     </genEnums>
     <genClasses ecoreClass="campaign.ecore#//GSSCampaignCampaign">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference campaign.ecore#//GSSCampaignCampaign/scenario"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference campaign.ecore#//GSSCampaignCampaign/Scenario"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference campaign.ecore#//GSSCampaignCampaign/Tests"/>
+    </genClasses>
+    <genClasses ecoreClass="campaign.ecore#//GSSCampaignScenario">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference campaign.ecore#//GSSCampaignScenario/environment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference campaign.ecore#//GSSCampaignScenario/scenarioRef"/>
     </genClasses>
     <genClasses ecoreClass="campaign.ecore#//GSSCampaignTests">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference campaign.ecore#//GSSCampaignTests/TestCase"/>
     </genClasses>
-    <genClasses ecoreClass="campaign.ecore#//GSSCampaignTest">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute campaign.ecore#//GSSCampaignTest/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference campaign.ecore#//GSSCampaignTest/procedure"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute campaign.ecore#//GSSCampaignTest/req"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute campaign.ecore#//GSSCampaignTest/reqAction"/>
+    <genClasses ecoreClass="campaign.ecore#//GSSCampaignTestCase">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute campaign.ecore#//GSSCampaignTestCase/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference campaign.ecore#//GSSCampaignTestCase/procedure"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute campaign.ecore#//GSSCampaignTestCase/req"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute campaign.ecore#//GSSCampaignTestCase/reqAction"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
