@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'_1'", "'import'", "':='", "';'", "'GSSCampaignCampaign'", "'{'", "'version'", "'}'", "'uri'", "'GSSCampaignScenario'", "'environment'", "'scenario'", "'GSSCampaignTests'", "'GSSCampaignTestCase'", "'name'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'_1'", "'import'", "':='", "';'", "'GSSCampaignCampaign'", "'{'", "'version'", "'}'", "'uri'", "'GSSCampaignScenario'", "'environment'", "'scenarioId'", "'GSSCampaignTests'", "'GSSCampaignTestCase'", "'name'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'"
     };
     public static final int RULE_STRING=6;
     public static final int RULE_SL_COMMENT=9;
@@ -3470,24 +3470,24 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignScenario__Group__6__Impl"
-    // InternalCAMPAIGN.g:1111:1: rule__GSSCampaignScenario__Group__6__Impl : ( 'scenario' ) ;
+    // InternalCAMPAIGN.g:1111:1: rule__GSSCampaignScenario__Group__6__Impl : ( 'scenarioId' ) ;
     public final void rule__GSSCampaignScenario__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1115:1: ( ( 'scenario' ) )
-            // InternalCAMPAIGN.g:1116:1: ( 'scenario' )
+            // InternalCAMPAIGN.g:1115:1: ( ( 'scenarioId' ) )
+            // InternalCAMPAIGN.g:1116:1: ( 'scenarioId' )
             {
-            // InternalCAMPAIGN.g:1116:1: ( 'scenario' )
-            // InternalCAMPAIGN.g:1117:2: 'scenario'
+            // InternalCAMPAIGN.g:1116:1: ( 'scenarioId' )
+            // InternalCAMPAIGN.g:1117:2: 'scenarioId'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioKeyword_6()); 
+               before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdKeyword_6()); 
             }
             match(input,23,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioKeyword_6()); 
+               after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdKeyword_6()); 
             }
 
             }

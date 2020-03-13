@@ -1114,9 +1114,9 @@ rule__GSSCampaignScenario__Group__6__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioKeyword_6()); }
-	'scenario'
-	{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioKeyword_6()); }
+	{ before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdKeyword_6()); }
+	'scenarioId'
+	{ after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioIdKeyword_6()); }
 )
 ;
 finally {

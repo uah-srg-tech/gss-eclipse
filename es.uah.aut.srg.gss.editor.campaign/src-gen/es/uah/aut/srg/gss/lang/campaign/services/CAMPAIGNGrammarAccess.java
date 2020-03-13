@@ -205,7 +205,7 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cEnvironmentGSSEnvironmentEnvironmentCrossReference_4_0 = (CrossReference)cEnvironmentAssignment_4.eContents().get(0);
 		private final RuleCall cEnvironmentGSSEnvironmentEnvironmentVersionedQualifiedNameParserRuleCall_4_0_1 = (RuleCall)cEnvironmentGSSEnvironmentEnvironmentCrossReference_4_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Keyword cScenarioKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cScenarioIdKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cColonEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cScenarioAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final CrossReference cScenarioGSSScenarioScenarioCrossReference_8_0 = (CrossReference)cScenarioAssignment_8.eContents().get(0);
@@ -217,12 +217,12 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSCampaignScenario:
 		//	'GSSCampaignScenario' '{'
 		//	'environment' ':=' environment=[environment::GSSEnvironmentEnvironment|VersionedQualifiedName] ';'
-		//	'scenario' ':=' scenario=[scenario::GSSScenarioScenario|STRING] ';'
+		//	'scenarioId' ':=' scenario=[scenario::GSSScenarioScenario|STRING] ';'
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSCampaignScenario' '{' 'environment' ':=' environment=[environment::GSSEnvironmentEnvironment|VersionedQualifiedName]
-		//';' 'scenario' ':=' scenario=[scenario::GSSScenarioScenario|STRING] ';' '}' ';'
+		//';' 'scenarioId' ':=' scenario=[scenario::GSSScenarioScenario|STRING] ';' '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSCampaignScenario'
@@ -249,8 +249,8 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 		
-		//'scenario'
-		public Keyword getScenarioKeyword_6() { return cScenarioKeyword_6; }
+		//'scenarioId'
+		public Keyword getScenarioIdKeyword_6() { return cScenarioIdKeyword_6; }
 		
 		//':='
 		public Keyword getColonEqualsSignKeyword_7() { return cColonEqualsSignKeyword_7; }
@@ -909,7 +909,7 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSCampaignScenario:
 	//	'GSSCampaignScenario' '{'
 	//	'environment' ':=' environment=[environment::GSSEnvironmentEnvironment|VersionedQualifiedName] ';'
-	//	'scenario' ':=' scenario=[scenario::GSSScenarioScenario|STRING] ';'
+	//	'scenarioId' ':=' scenario=[scenario::GSSScenarioScenario|STRING] ';'
 	//	'}' ';';
 	public GSSCampaignScenarioElements getGSSCampaignScenarioAccess() {
 		return pGSSCampaignScenario;
