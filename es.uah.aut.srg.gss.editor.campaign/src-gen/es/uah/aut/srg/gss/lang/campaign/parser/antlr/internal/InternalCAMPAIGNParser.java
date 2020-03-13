@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSCampaignCampaign'", "'{'", "'uri'", "'version'", "'}'", "'GSSCampaignScenario'", "'environment'", "'scenario'", "'GSSCampaignTests'", "'GSSCampaignTestCase'", "'name'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'", "'::'", "'_1'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSCampaignCampaign'", "'{'", "'uri'", "'version'", "'}'", "'GSSCampaignScenario'", "'environment'", "'scenario'", "'GSSCampaignTests'", "'GSSCampaignTestCase'", "'name'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'", "'_1'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=9;
@@ -42,7 +42,6 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
-    public static final int T__33=33;
     public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
@@ -791,7 +790,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSCampaignScenario"
-    // InternalCAMPAIGN.g:346:1: ruleGSSCampaignScenario returns [EObject current=null] : (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalCAMPAIGN.g:346:1: ruleGSSCampaignScenario returns [EObject current=null] : (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( (otherlv_8= RULE_STRING ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
     public final EObject ruleGSSCampaignScenario() throws RecognitionException {
         EObject current = null;
 
@@ -802,6 +801,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         Token otherlv_5=null;
         Token otherlv_6=null;
         Token otherlv_7=null;
+        Token otherlv_8=null;
         Token otherlv_9=null;
         Token otherlv_10=null;
         Token otherlv_11=null;
@@ -810,11 +810,11 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCAMPAIGN.g:352:2: ( (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalCAMPAIGN.g:353:2: (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalCAMPAIGN.g:352:2: ( (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( (otherlv_8= RULE_STRING ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
+            // InternalCAMPAIGN.g:353:2: (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( (otherlv_8= RULE_STRING ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
             {
-            // InternalCAMPAIGN.g:353:2: (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
-            // InternalCAMPAIGN.g:354:3: otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
+            // InternalCAMPAIGN.g:353:2: (otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( (otherlv_8= RULE_STRING ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalCAMPAIGN.g:354:3: otherlv_0= 'GSSCampaignScenario' otherlv_1= '{' otherlv_2= 'environment' otherlv_3= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_5= ';' otherlv_6= 'scenario' otherlv_7= ':=' ( (otherlv_8= RULE_STRING ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
             {
             otherlv_0=(Token)match(input,20,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -891,17 +891,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSCampaignScenarioAccess().getScenarioKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSCampaignScenarioAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalCAMPAIGN.g:401:3: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalCAMPAIGN.g:402:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalCAMPAIGN.g:401:3: ( (otherlv_8= RULE_STRING ) )
+            // InternalCAMPAIGN.g:402:4: (otherlv_8= RULE_STRING )
             {
-            // InternalCAMPAIGN.g:402:4: ( ruleVersionedQualifiedReferenceName )
-            // InternalCAMPAIGN.g:403:5: ruleVersionedQualifiedReferenceName
+            // InternalCAMPAIGN.g:402:4: (otherlv_8= RULE_STRING )
+            // InternalCAMPAIGN.g:403:5: otherlv_8= RULE_STRING
             {
             if ( state.backtracking==0 ) {
 
@@ -915,19 +915,10 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
               					}
               				
             }
+            otherlv_8=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0());
-              				
-            }
-            pushFollow(FollowSets000.FOLLOW_6);
-            ruleVersionedQualifiedReferenceName();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              					afterParserOrEnumRuleCall();
+              					newLeafNode(otherlv_8, grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0());
               				
             }
 
@@ -979,7 +970,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSCampaignTests"
-    // InternalCAMPAIGN.g:436:1: entryRuleGSSCampaignTests returns [EObject current=null] : iv_ruleGSSCampaignTests= ruleGSSCampaignTests EOF ;
+    // InternalCAMPAIGN.g:433:1: entryRuleGSSCampaignTests returns [EObject current=null] : iv_ruleGSSCampaignTests= ruleGSSCampaignTests EOF ;
     public final EObject entryRuleGSSCampaignTests() throws RecognitionException {
         EObject current = null;
 
@@ -987,8 +978,8 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCAMPAIGN.g:436:57: (iv_ruleGSSCampaignTests= ruleGSSCampaignTests EOF )
-            // InternalCAMPAIGN.g:437:2: iv_ruleGSSCampaignTests= ruleGSSCampaignTests EOF
+            // InternalCAMPAIGN.g:433:57: (iv_ruleGSSCampaignTests= ruleGSSCampaignTests EOF )
+            // InternalCAMPAIGN.g:434:2: iv_ruleGSSCampaignTests= ruleGSSCampaignTests EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSCampaignTestsRule()); 
@@ -1019,7 +1010,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSCampaignTests"
-    // InternalCAMPAIGN.g:443:1: ruleGSSCampaignTests returns [EObject current=null] : (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';' ) ;
+    // InternalCAMPAIGN.g:440:1: ruleGSSCampaignTests returns [EObject current=null] : (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';' ) ;
     public final EObject ruleGSSCampaignTests() throws RecognitionException {
         EObject current = null;
 
@@ -1034,11 +1025,11 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCAMPAIGN.g:449:2: ( (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';' ) )
-            // InternalCAMPAIGN.g:450:2: (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';' )
+            // InternalCAMPAIGN.g:446:2: ( (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';' ) )
+            // InternalCAMPAIGN.g:447:2: (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';' )
             {
-            // InternalCAMPAIGN.g:450:2: (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';' )
-            // InternalCAMPAIGN.g:451:3: otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';'
+            // InternalCAMPAIGN.g:447:2: (otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';' )
+            // InternalCAMPAIGN.g:448:3: otherlv_0= 'GSSCampaignTests' otherlv_1= '{' ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+ otherlv_3= '}' otherlv_4= ';'
             {
             otherlv_0=(Token)match(input,23,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1052,7 +1043,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getGSSCampaignTestsAccess().getLeftCurlyBracketKeyword_1());
               		
             }
-            // InternalCAMPAIGN.g:459:3: ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+
+            // InternalCAMPAIGN.g:456:3: ( (lv_TestCase_2_0= ruleGSSCampaignTestCase ) )+
             int cnt2=0;
             loop2:
             do {
@@ -1066,10 +1057,10 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalCAMPAIGN.g:460:4: (lv_TestCase_2_0= ruleGSSCampaignTestCase )
+            	    // InternalCAMPAIGN.g:457:4: (lv_TestCase_2_0= ruleGSSCampaignTestCase )
             	    {
-            	    // InternalCAMPAIGN.g:460:4: (lv_TestCase_2_0= ruleGSSCampaignTestCase )
-            	    // InternalCAMPAIGN.g:461:5: lv_TestCase_2_0= ruleGSSCampaignTestCase
+            	    // InternalCAMPAIGN.g:457:4: (lv_TestCase_2_0= ruleGSSCampaignTestCase )
+            	    // InternalCAMPAIGN.g:458:5: lv_TestCase_2_0= ruleGSSCampaignTestCase
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -1148,7 +1139,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSCampaignTestCase"
-    // InternalCAMPAIGN.g:490:1: entryRuleGSSCampaignTestCase returns [EObject current=null] : iv_ruleGSSCampaignTestCase= ruleGSSCampaignTestCase EOF ;
+    // InternalCAMPAIGN.g:487:1: entryRuleGSSCampaignTestCase returns [EObject current=null] : iv_ruleGSSCampaignTestCase= ruleGSSCampaignTestCase EOF ;
     public final EObject entryRuleGSSCampaignTestCase() throws RecognitionException {
         EObject current = null;
 
@@ -1156,8 +1147,8 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCAMPAIGN.g:490:60: (iv_ruleGSSCampaignTestCase= ruleGSSCampaignTestCase EOF )
-            // InternalCAMPAIGN.g:491:2: iv_ruleGSSCampaignTestCase= ruleGSSCampaignTestCase EOF
+            // InternalCAMPAIGN.g:487:60: (iv_ruleGSSCampaignTestCase= ruleGSSCampaignTestCase EOF )
+            // InternalCAMPAIGN.g:488:2: iv_ruleGSSCampaignTestCase= ruleGSSCampaignTestCase EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSCampaignTestCaseRule()); 
@@ -1188,7 +1179,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSCampaignTestCase"
-    // InternalCAMPAIGN.g:497:1: ruleGSSCampaignTestCase returns [EObject current=null] : (otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' ) ;
+    // InternalCAMPAIGN.g:494:1: ruleGSSCampaignTestCase returns [EObject current=null] : (otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' ) ;
     public final EObject ruleGSSCampaignTestCase() throws RecognitionException {
         EObject current = null;
 
@@ -1213,11 +1204,11 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCAMPAIGN.g:503:2: ( (otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' ) )
-            // InternalCAMPAIGN.g:504:2: (otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' )
+            // InternalCAMPAIGN.g:500:2: ( (otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' ) )
+            // InternalCAMPAIGN.g:501:2: (otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' )
             {
-            // InternalCAMPAIGN.g:504:2: (otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' )
-            // InternalCAMPAIGN.g:505:3: otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';'
+            // InternalCAMPAIGN.g:501:2: (otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';' )
+            // InternalCAMPAIGN.g:502:3: otherlv_0= 'GSSCampaignTestCase' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'procedure' otherlv_7= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_9= ';' (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )? (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )? otherlv_14= '}' otherlv_15= ';'
             {
             otherlv_0=(Token)match(input,24,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1243,11 +1234,11 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSCampaignTestCaseAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalCAMPAIGN.g:521:3: ( (lv_name_4_0= RULE_STRING ) )
-            // InternalCAMPAIGN.g:522:4: (lv_name_4_0= RULE_STRING )
+            // InternalCAMPAIGN.g:518:3: ( (lv_name_4_0= RULE_STRING ) )
+            // InternalCAMPAIGN.g:519:4: (lv_name_4_0= RULE_STRING )
             {
-            // InternalCAMPAIGN.g:522:4: (lv_name_4_0= RULE_STRING )
-            // InternalCAMPAIGN.g:523:5: lv_name_4_0= RULE_STRING
+            // InternalCAMPAIGN.g:519:4: (lv_name_4_0= RULE_STRING )
+            // InternalCAMPAIGN.g:520:5: lv_name_4_0= RULE_STRING
             {
             lv_name_4_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1291,11 +1282,11 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSCampaignTestCaseAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalCAMPAIGN.g:551:3: ( ( ruleVersionedQualifiedName ) )
-            // InternalCAMPAIGN.g:552:4: ( ruleVersionedQualifiedName )
+            // InternalCAMPAIGN.g:548:3: ( ( ruleVersionedQualifiedName ) )
+            // InternalCAMPAIGN.g:549:4: ( ruleVersionedQualifiedName )
             {
-            // InternalCAMPAIGN.g:552:4: ( ruleVersionedQualifiedName )
-            // InternalCAMPAIGN.g:553:5: ruleVersionedQualifiedName
+            // InternalCAMPAIGN.g:549:4: ( ruleVersionedQualifiedName )
+            // InternalCAMPAIGN.g:550:5: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -1336,7 +1327,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_9, grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_9());
               		
             }
-            // InternalCAMPAIGN.g:574:3: (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )?
+            // InternalCAMPAIGN.g:571:3: (otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1345,7 +1336,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             }
             switch (alt3) {
                 case 1 :
-                    // InternalCAMPAIGN.g:575:4: otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) )
+                    // InternalCAMPAIGN.g:572:4: otherlv_10= 'req' ( (lv_req_11_0= RULE_ID ) )
                     {
                     otherlv_10=(Token)match(input,27,FollowSets000.FOLLOW_7); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1353,11 +1344,11 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_10, grammarAccess.getGSSCampaignTestCaseAccess().getReqKeyword_10_0());
                       			
                     }
-                    // InternalCAMPAIGN.g:579:4: ( (lv_req_11_0= RULE_ID ) )
-                    // InternalCAMPAIGN.g:580:5: (lv_req_11_0= RULE_ID )
+                    // InternalCAMPAIGN.g:576:4: ( (lv_req_11_0= RULE_ID ) )
+                    // InternalCAMPAIGN.g:577:5: (lv_req_11_0= RULE_ID )
                     {
-                    // InternalCAMPAIGN.g:580:5: (lv_req_11_0= RULE_ID )
-                    // InternalCAMPAIGN.g:581:6: lv_req_11_0= RULE_ID
+                    // InternalCAMPAIGN.g:577:5: (lv_req_11_0= RULE_ID )
+                    // InternalCAMPAIGN.g:578:6: lv_req_11_0= RULE_ID
                     {
                     lv_req_11_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_22); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1389,7 +1380,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCAMPAIGN.g:598:3: (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )?
+            // InternalCAMPAIGN.g:595:3: (otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1398,7 +1389,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             }
             switch (alt4) {
                 case 1 :
-                    // InternalCAMPAIGN.g:599:4: otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) )
+                    // InternalCAMPAIGN.g:596:4: otherlv_12= 'reqAction' ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) )
                     {
                     otherlv_12=(Token)match(input,28,FollowSets000.FOLLOW_23); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1406,11 +1397,11 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_12, grammarAccess.getGSSCampaignTestCaseAccess().getReqActionKeyword_11_0());
                       			
                     }
-                    // InternalCAMPAIGN.g:603:4: ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) )
-                    // InternalCAMPAIGN.g:604:5: (lv_reqAction_13_0= ruleGSSCampaignTestReqAction )
+                    // InternalCAMPAIGN.g:600:4: ( (lv_reqAction_13_0= ruleGSSCampaignTestReqAction ) )
+                    // InternalCAMPAIGN.g:601:5: (lv_reqAction_13_0= ruleGSSCampaignTestReqAction )
                     {
-                    // InternalCAMPAIGN.g:604:5: (lv_reqAction_13_0= ruleGSSCampaignTestReqAction )
-                    // InternalCAMPAIGN.g:605:6: lv_reqAction_13_0= ruleGSSCampaignTestReqAction
+                    // InternalCAMPAIGN.g:601:5: (lv_reqAction_13_0= ruleGSSCampaignTestReqAction )
+                    // InternalCAMPAIGN.g:602:6: lv_reqAction_13_0= ruleGSSCampaignTestReqAction
                     {
                     if ( state.backtracking==0 ) {
 
@@ -1484,7 +1475,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalCAMPAIGN.g:635:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalCAMPAIGN.g:632:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -1492,8 +1483,8 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCAMPAIGN.g:635:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalCAMPAIGN.g:636:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalCAMPAIGN.g:632:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalCAMPAIGN.g:633:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameRule()); 
@@ -1524,7 +1515,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalCAMPAIGN.g:642:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalCAMPAIGN.g:639:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1536,11 +1527,11 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCAMPAIGN.g:648:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // InternalCAMPAIGN.g:649:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalCAMPAIGN.g:645:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalCAMPAIGN.g:646:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // InternalCAMPAIGN.g:649:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // InternalCAMPAIGN.g:650:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // InternalCAMPAIGN.g:646:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalCAMPAIGN.g:647:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_24); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1553,7 +1544,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
               		
             }
-            // InternalCAMPAIGN.g:657:3: (kw= '.' this_ID_2= RULE_ID )*
+            // InternalCAMPAIGN.g:654:3: (kw= '.' this_ID_2= RULE_ID )*
             loop5:
             do {
                 int alt5=2;
@@ -1566,7 +1557,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
                 switch (alt5) {
             	case 1 :
-            	    // InternalCAMPAIGN.g:658:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalCAMPAIGN.g:655:4: kw= '.' this_ID_2= RULE_ID
             	    {
             	    kw=(Token)match(input,29,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -1620,7 +1611,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersion"
-    // InternalCAMPAIGN.g:675:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
+    // InternalCAMPAIGN.g:672:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
     public final String entryRuleVersion() throws RecognitionException {
         String current = null;
 
@@ -1628,8 +1619,8 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCAMPAIGN.g:675:47: (iv_ruleVersion= ruleVersion EOF )
-            // InternalCAMPAIGN.g:676:2: iv_ruleVersion= ruleVersion EOF
+            // InternalCAMPAIGN.g:672:47: (iv_ruleVersion= ruleVersion EOF )
+            // InternalCAMPAIGN.g:673:2: iv_ruleVersion= ruleVersion EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionRule()); 
@@ -1660,7 +1651,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersion"
-    // InternalCAMPAIGN.g:682:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
+    // InternalCAMPAIGN.g:679:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
     public final AntlrDatatypeRuleToken ruleVersion() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1676,24 +1667,24 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCAMPAIGN.g:688:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
-            // InternalCAMPAIGN.g:689:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalCAMPAIGN.g:685:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
+            // InternalCAMPAIGN.g:686:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
             {
-            // InternalCAMPAIGN.g:689:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
-            // InternalCAMPAIGN.g:690:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalCAMPAIGN.g:686:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalCAMPAIGN.g:687:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             {
-            // InternalCAMPAIGN.g:690:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
+            // InternalCAMPAIGN.g:687:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
             if ( (LA7_0==RULE_INT) ) {
                 int LA7_1 = input.LA(2);
 
-                if ( (LA7_1==RULE_ID) ) {
-                    alt7=2;
-                }
-                else if ( (LA7_1==EOF||LA7_1==14||LA7_1==29||LA7_1==31) ) {
+                if ( (LA7_1==EOF||LA7_1==14||LA7_1==29||LA7_1==31) ) {
                     alt7=1;
+                }
+                else if ( (LA7_1==RULE_ID) ) {
+                    alt7=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -1715,7 +1706,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             }
             switch (alt7) {
                 case 1 :
-                    // InternalCAMPAIGN.g:691:4: this_INT_0= RULE_INT
+                    // InternalCAMPAIGN.g:688:4: this_INT_0= RULE_INT
                     {
                     this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_24); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1732,12 +1723,12 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCAMPAIGN.g:699:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalCAMPAIGN.g:696:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
                     {
-                    // InternalCAMPAIGN.g:699:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
-                    // InternalCAMPAIGN.g:700:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
+                    // InternalCAMPAIGN.g:696:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalCAMPAIGN.g:697:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
                     {
-                    // InternalCAMPAIGN.g:700:5: (this_INT_1= RULE_INT )?
+                    // InternalCAMPAIGN.g:697:5: (this_INT_1= RULE_INT )?
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
@@ -1746,7 +1737,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt6) {
                         case 1 :
-                            // InternalCAMPAIGN.g:701:6: this_INT_1= RULE_INT
+                            // InternalCAMPAIGN.g:698:6: this_INT_1= RULE_INT
                             {
                             this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_7); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -1785,7 +1776,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCAMPAIGN.g:718:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalCAMPAIGN.g:715:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             loop10:
             do {
                 int alt10=2;
@@ -1798,7 +1789,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
                 switch (alt10) {
             	case 1 :
-            	    // InternalCAMPAIGN.g:719:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalCAMPAIGN.g:716:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    {
             	    kw=(Token)match(input,29,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -1807,18 +1798,18 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(kw, grammarAccess.getVersionAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    // InternalCAMPAIGN.g:724:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalCAMPAIGN.g:721:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    int alt9=2;
             	    int LA9_0 = input.LA(1);
 
             	    if ( (LA9_0==RULE_INT) ) {
             	        int LA9_1 = input.LA(2);
 
-            	        if ( (LA9_1==EOF||LA9_1==14||LA9_1==29||LA9_1==31) ) {
-            	            alt9=1;
-            	        }
-            	        else if ( (LA9_1==RULE_ID) ) {
+            	        if ( (LA9_1==RULE_ID) ) {
             	            alt9=2;
+            	        }
+            	        else if ( (LA9_1==EOF||LA9_1==14||LA9_1==29||LA9_1==31) ) {
+            	            alt9=1;
             	        }
             	        else {
             	            if (state.backtracking>0) {state.failed=true; return current;}
@@ -1840,7 +1831,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt9) {
             	        case 1 :
-            	            // InternalCAMPAIGN.g:725:5: this_INT_4= RULE_INT
+            	            // InternalCAMPAIGN.g:722:5: this_INT_4= RULE_INT
             	            {
             	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_24); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -1857,12 +1848,12 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalCAMPAIGN.g:733:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalCAMPAIGN.g:730:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
             	            {
-            	            // InternalCAMPAIGN.g:733:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
-            	            // InternalCAMPAIGN.g:734:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
+            	            // InternalCAMPAIGN.g:730:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalCAMPAIGN.g:731:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
             	            {
-            	            // InternalCAMPAIGN.g:734:6: (this_INT_5= RULE_INT )?
+            	            // InternalCAMPAIGN.g:731:6: (this_INT_5= RULE_INT )?
             	            int alt8=2;
             	            int LA8_0 = input.LA(1);
 
@@ -1871,7 +1862,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
             	            }
             	            switch (alt8) {
             	                case 1 :
-            	                    // InternalCAMPAIGN.g:735:7: this_INT_5= RULE_INT
+            	                    // InternalCAMPAIGN.g:732:7: this_INT_5= RULE_INT
             	                    {
             	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	                    if ( state.backtracking==0 ) {
@@ -1944,7 +1935,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersionedQualifiedName"
-    // InternalCAMPAIGN.g:757:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
+    // InternalCAMPAIGN.g:754:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
     public final String entryRuleVersionedQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -1952,8 +1943,8 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCAMPAIGN.g:757:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
-            // InternalCAMPAIGN.g:758:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
+            // InternalCAMPAIGN.g:754:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
+            // InternalCAMPAIGN.g:755:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionedQualifiedNameRule()); 
@@ -1984,7 +1975,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersionedQualifiedName"
-    // InternalCAMPAIGN.g:764:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
+    // InternalCAMPAIGN.g:761:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
     public final AntlrDatatypeRuleToken ruleVersionedQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1998,11 +1989,11 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCAMPAIGN.g:770:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
-            // InternalCAMPAIGN.g:771:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalCAMPAIGN.g:767:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
+            // InternalCAMPAIGN.g:768:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
             {
-            // InternalCAMPAIGN.g:771:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
-            // InternalCAMPAIGN.g:772:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
+            // InternalCAMPAIGN.g:768:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalCAMPAIGN.g:769:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
             {
             if ( state.backtracking==0 ) {
 
@@ -2082,194 +2073,8 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleVersionedQualifiedName"
 
 
-    // $ANTLR start "entryRuleVersionedQualifiedReferenceName"
-    // InternalCAMPAIGN.g:806:1: entryRuleVersionedQualifiedReferenceName returns [String current=null] : iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF ;
-    public final String entryRuleVersionedQualifiedReferenceName() throws RecognitionException {
-        String current = null;
-
-        AntlrDatatypeRuleToken iv_ruleVersionedQualifiedReferenceName = null;
-
-
-        try {
-            // InternalCAMPAIGN.g:806:71: (iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF )
-            // InternalCAMPAIGN.g:807:2: iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF
-            {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameRule()); 
-            }
-            pushFollow(FollowSets000.FOLLOW_1);
-            iv_ruleVersionedQualifiedReferenceName=ruleVersionedQualifiedReferenceName();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleVersionedQualifiedReferenceName.getText(); 
-            }
-            match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return current;
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleVersionedQualifiedReferenceName"
-
-
-    // $ANTLR start "ruleVersionedQualifiedReferenceName"
-    // InternalCAMPAIGN.g:813:1: ruleVersionedQualifiedReferenceName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* ) ;
-    public final AntlrDatatypeRuleToken ruleVersionedQualifiedReferenceName() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
-
-        Token kw=null;
-        Token this_ID_2=null;
-        Token this_ID_4=null;
-        AntlrDatatypeRuleToken this_VersionedQualifiedName_0 = null;
-
-
-
-        	enterRule();
-
-        try {
-            // InternalCAMPAIGN.g:819:2: ( ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* ) )
-            // InternalCAMPAIGN.g:820:2: ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* )
-            {
-            // InternalCAMPAIGN.g:820:2: ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* )
-            // InternalCAMPAIGN.g:821:3: (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )*
-            {
-            // InternalCAMPAIGN.g:821:3: (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
-
-            if ( (LA11_0==RULE_ID) ) {
-                int LA11_1 = input.LA(2);
-
-                if ( ((LA11_1>=29 && LA11_1<=30)) ) {
-                    alt11=1;
-                }
-            }
-            switch (alt11) {
-                case 1 :
-                    // InternalCAMPAIGN.g:822:4: this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::'
-                    {
-                    if ( state.backtracking==0 ) {
-
-                      				newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameAccess().getVersionedQualifiedNameParserRuleCall_0_0());
-                      			
-                    }
-                    pushFollow(FollowSets000.FOLLOW_27);
-                    this_VersionedQualifiedName_0=ruleVersionedQualifiedName();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      				current.merge(this_VersionedQualifiedName_0);
-                      			
-                    }
-                    if ( state.backtracking==0 ) {
-
-                      				afterParserOrEnumRuleCall();
-                      			
-                    }
-                    kw=(Token)match(input,32,FollowSets000.FOLLOW_7); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      				current.merge(kw);
-                      				newLeafNode(kw, grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_0_1());
-                      			
-                    }
-
-                    }
-                    break;
-
-            }
-
-            this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_28); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              			current.merge(this_ID_2);
-              		
-            }
-            if ( state.backtracking==0 ) {
-
-              			newLeafNode(this_ID_2, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_1());
-              		
-            }
-            // InternalCAMPAIGN.g:845:3: (kw= '::' this_ID_4= RULE_ID )*
-            loop12:
-            do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
-
-                if ( (LA12_0==32) ) {
-                    alt12=1;
-                }
-
-
-                switch (alt12) {
-            	case 1 :
-            	    // InternalCAMPAIGN.g:846:4: kw= '::' this_ID_4= RULE_ID
-            	    {
-            	    kw=(Token)match(input,32,FollowSets000.FOLLOW_7); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      				current.merge(kw);
-            	      				newLeafNode(kw, grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_2_0());
-            	      			
-            	    }
-            	    this_ID_4=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_28); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      				current.merge(this_ID_4);
-            	      			
-            	    }
-            	    if ( state.backtracking==0 ) {
-
-            	      				newLeafNode(this_ID_4, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_2_1());
-            	      			
-            	    }
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop12;
-                }
-            } while (true);
-
-
-            }
-
-
-            }
-
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleVersionedQualifiedReferenceName"
-
-
     // $ANTLR start "ruleGSSCampaignTestReqAction"
-    // InternalCAMPAIGN.g:863:1: ruleGSSCampaignTestReqAction returns [Enumerator current=null] : (enumLiteral_0= '_1' ) ;
+    // InternalCAMPAIGN.g:803:1: ruleGSSCampaignTestReqAction returns [Enumerator current=null] : (enumLiteral_0= '_1' ) ;
     public final Enumerator ruleGSSCampaignTestReqAction() throws RecognitionException {
         Enumerator current = null;
 
@@ -2279,13 +2084,13 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCAMPAIGN.g:869:2: ( (enumLiteral_0= '_1' ) )
-            // InternalCAMPAIGN.g:870:2: (enumLiteral_0= '_1' )
+            // InternalCAMPAIGN.g:809:2: ( (enumLiteral_0= '_1' ) )
+            // InternalCAMPAIGN.g:810:2: (enumLiteral_0= '_1' )
             {
-            // InternalCAMPAIGN.g:870:2: (enumLiteral_0= '_1' )
-            // InternalCAMPAIGN.g:871:3: enumLiteral_0= '_1'
+            // InternalCAMPAIGN.g:810:2: (enumLiteral_0= '_1' )
+            // InternalCAMPAIGN.g:811:3: enumLiteral_0= '_1'
             {
-            enumLiteral_0=(Token)match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,32,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current = grammarAccess.getGSSCampaignTestReqActionAccess().get_1EnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -2344,12 +2149,10 @@ public class InternalCAMPAIGNParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000004000000L});
         public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000018080000L});
         public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000010080000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000200000000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000100000000L});
         public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000020000002L});
         public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000040000000L});
         public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000100000000L});
-        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000100000002L});
     }
 
 

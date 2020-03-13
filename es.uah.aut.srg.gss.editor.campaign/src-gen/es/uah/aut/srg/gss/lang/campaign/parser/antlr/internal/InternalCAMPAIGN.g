@@ -408,12 +408,9 @@ ruleGSSCampaignScenario returns [EObject current=null]
 						$current = createModelElement(grammarAccess.getGSSCampaignScenarioRule());
 					}
 				}
+				otherlv_8=RULE_STRING
 				{
-					newCompositeNode(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0());
-				}
-				ruleVersionedQualifiedReferenceName
-				{
-					afterParserOrEnumRuleCall();
+					newLeafNode(otherlv_8, grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioCrossReference_8_0());
 				}
 			)
 		)
@@ -799,63 +796,6 @@ ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrData
 			$current.merge(kw);
 			newLeafNode(kw, grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3());
 		}
-	)
-;
-
-// Entry rule entryRuleVersionedQualifiedReferenceName
-entryRuleVersionedQualifiedReferenceName returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameRule()); }
-	iv_ruleVersionedQualifiedReferenceName=ruleVersionedQualifiedReferenceName
-	{ $current=$iv_ruleVersionedQualifiedReferenceName.current.getText(); }
-	EOF;
-
-// Rule VersionedQualifiedReferenceName
-ruleVersionedQualifiedReferenceName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameAccess().getVersionedQualifiedNameParserRuleCall_0_0());
-			}
-			this_VersionedQualifiedName_0=ruleVersionedQualifiedName
-			{
-				$current.merge(this_VersionedQualifiedName_0);
-			}
-			{
-				afterParserOrEnumRuleCall();
-			}
-			kw='::'
-			{
-				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_0_1());
-			}
-		)?
-		this_ID_2=RULE_ID
-		{
-			$current.merge(this_ID_2);
-		}
-		{
-			newLeafNode(this_ID_2, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_1());
-		}
-		(
-			kw='::'
-			{
-				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_2_0());
-			}
-			this_ID_4=RULE_ID
-			{
-				$current.merge(this_ID_4);
-			}
-			{
-				newLeafNode(this_ID_4, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_2_1());
-			}
-		)*
 	)
 ;
 

@@ -1,14 +1,13 @@
 '('=30
 ')'=31
 '.'=29
-'::'=32
 ':='=13
 ';'=14
 'GSSCampaignCampaign'=15
 'GSSCampaignScenario'=20
 'GSSCampaignTestCase'=24
 'GSSCampaignTests'=23
-'_1'=33
+'_1'=32
 'environment'=21
 'import'=12
 'name'=25
@@ -49,4 +48,3 @@ T__29=29
 T__30=30
 T__31=31
 T__32=32
-T__33=33

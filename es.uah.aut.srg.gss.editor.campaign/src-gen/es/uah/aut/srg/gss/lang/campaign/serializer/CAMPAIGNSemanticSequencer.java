@@ -106,7 +106,7 @@ public class CAMPAIGNSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     GSSCampaignScenario returns GSSCampaignScenario
 	 *
 	 * Constraint:
-	 *     (environment=[GSSEnvironmentEnvironment|VersionedQualifiedName] scenario=[GSSScenarioScenario|VersionedQualifiedReferenceName])
+	 *     (environment=[GSSEnvironmentEnvironment|VersionedQualifiedName] scenario=[GSSScenarioScenario|STRING])
 	 */
 	protected void sequence_GSSCampaignScenario(ISerializationContext context, GSSCampaignScenario semanticObject) {
 		if (errorAcceptor != null) {
@@ -117,7 +117,7 @@ public class CAMPAIGNSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentGSSEnvironmentEnvironmentVersionedQualifiedNameParserRuleCall_4_0_1(), semanticObject.getEnvironment());
-		feeder.accept(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioVersionedQualifiedReferenceNameParserRuleCall_8_0_1(), semanticObject.getScenario());
+		feeder.accept(grammarAccess.getGSSCampaignScenarioAccess().getScenarioGSSScenarioScenarioSTRINGTerminalRuleCall_8_0_1(), semanticObject.getScenario());
 		feeder.finish();
 	}
 	
