@@ -14,7 +14,6 @@ import es.uah.aut.srg.gss.common.commonPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -261,22 +260,31 @@ public interface campaignPackage extends EPackage {
 	int GSS_CAMPAIGN_TEST_CASE__PROCEDURE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Req</b></em>' attribute.
+	 * The feature id for the '<em><b>Prev Msg</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CAMPAIGN_TEST_CASE__REQ = 2;
+	int GSS_CAMPAIGN_TEST_CASE__PREV_MSG = 2;
 
 	/**
-	 * The feature id for the '<em><b>Req Action</b></em>' attribute.
+	 * The feature id for the '<em><b>Prev Action</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CAMPAIGN_TEST_CASE__REQ_ACTION = 3;
+	int GSS_CAMPAIGN_TEST_CASE__PREV_ACTION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Prev Action Param</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CAMPAIGN_TEST_CASE__PREV_ACTION_PARAM = 4;
 
 	/**
 	 * The number of structural features of the '<em>GSS Campaign Test Case</em>' class.
@@ -285,7 +293,7 @@ public interface campaignPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CAMPAIGN_TEST_CASE_FEATURE_COUNT = 4;
+	int GSS_CAMPAIGN_TEST_CASE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>GSS Campaign Test Case</em>' class.
@@ -295,17 +303,6 @@ public interface campaignPackage extends EPackage {
 	 * @ordered
 	 */
 	int GSS_CAMPAIGN_TEST_CASE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestReqAction <em>GSS Campaign Test Req Action</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestReqAction
-	 * @see es.uah.aut.srg.gss.campaign.impl.campaignPackageImpl#getGSSCampaignTestReqAction()
-	 * @generated
-	 */
-	int GSS_CAMPAIGN_TEST_REQ_ACTION = 4;
-
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.campaign.GSSCampaignCampaign <em>GSS Campaign Campaign</em>}'.
@@ -425,36 +422,37 @@ public interface campaignPackage extends EPackage {
 	EReference getGSSCampaignTestCase_Procedure();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getReq <em>Req</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getPrevMsg <em>Prev Msg</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Req</em>'.
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getReq()
+	 * @return the meta object for the attribute '<em>Prev Msg</em>'.
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getPrevMsg()
 	 * @see #getGSSCampaignTestCase()
 	 * @generated
 	 */
-	EAttribute getGSSCampaignTestCase_Req();
+	EAttribute getGSSCampaignTestCase_PrevMsg();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getReqAction <em>Req Action</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getPrevAction <em>Prev Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Req Action</em>'.
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getReqAction()
+	 * @return the meta object for the attribute '<em>Prev Action</em>'.
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getPrevAction()
 	 * @see #getGSSCampaignTestCase()
 	 * @generated
 	 */
-	EAttribute getGSSCampaignTestCase_ReqAction();
+	EAttribute getGSSCampaignTestCase_PrevAction();
 
 	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestReqAction <em>GSS Campaign Test Req Action</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getPrevActionParam <em>Prev Action Param</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>GSS Campaign Test Req Action</em>'.
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestReqAction
+	 * @return the meta object for the attribute '<em>Prev Action Param</em>'.
+	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getPrevActionParam()
+	 * @see #getGSSCampaignTestCase()
 	 * @generated
 	 */
-	EEnum getGSSCampaignTestReqAction();
+	EAttribute getGSSCampaignTestCase_PrevActionParam();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -576,30 +574,28 @@ public interface campaignPackage extends EPackage {
 		EReference GSS_CAMPAIGN_TEST_CASE__PROCEDURE = eINSTANCE.getGSSCampaignTestCase_Procedure();
 
 		/**
-		 * The meta object literal for the '<em><b>Req</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Prev Msg</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CAMPAIGN_TEST_CASE__REQ = eINSTANCE.getGSSCampaignTestCase_Req();
+		EAttribute GSS_CAMPAIGN_TEST_CASE__PREV_MSG = eINSTANCE.getGSSCampaignTestCase_PrevMsg();
 
 		/**
-		 * The meta object literal for the '<em><b>Req Action</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Prev Action</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CAMPAIGN_TEST_CASE__REQ_ACTION = eINSTANCE.getGSSCampaignTestCase_ReqAction();
+		EAttribute GSS_CAMPAIGN_TEST_CASE__PREV_ACTION = eINSTANCE.getGSSCampaignTestCase_PrevAction();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestReqAction <em>GSS Campaign Test Req Action</em>}' enum.
+		 * The meta object literal for the '<em><b>Prev Action Param</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestReqAction
-		 * @see es.uah.aut.srg.gss.campaign.impl.campaignPackageImpl#getGSSCampaignTestReqAction()
 		 * @generated
 		 */
-		EEnum GSS_CAMPAIGN_TEST_REQ_ACTION = eINSTANCE.getGSSCampaignTestReqAction();
+		EAttribute GSS_CAMPAIGN_TEST_CASE__PREV_ACTION_PARAM = eINSTANCE.getGSSCampaignTestCase_PrevActionParam();
 
 	}
 

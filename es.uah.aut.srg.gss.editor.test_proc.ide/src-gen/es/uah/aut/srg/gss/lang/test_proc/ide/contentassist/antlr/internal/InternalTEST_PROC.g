@@ -1159,15 +1159,21 @@ rule__GSSTestProcActionType__Alternatives
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTestProcActionTypeAccess().getCheckingEnumLiteralDeclaration_0()); }
-		('checking')
-		{ after(grammarAccess.getGSSTestProcActionTypeAccess().getCheckingEnumLiteralDeclaration_0()); }
+		{ before(grammarAccess.getGSSTestProcActionTypeAccess().getInstructionEnumLiteralDeclaration_0()); }
+		('"instruction"')
+		{ after(grammarAccess.getGSSTestProcActionTypeAccess().getInstructionEnumLiteralDeclaration_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSTestProcActionTypeAccess().getInstructionEnumLiteralDeclaration_1()); }
-		('instruction')
-		{ after(grammarAccess.getGSSTestProcActionTypeAccess().getInstructionEnumLiteralDeclaration_1()); }
+		{ before(grammarAccess.getGSSTestProcActionTypeAccess().getTmtc_checkingEnumLiteralDeclaration_1()); }
+		('"TMTC checking"')
+		{ after(grammarAccess.getGSSTestProcActionTypeAccess().getTmtc_checkingEnumLiteralDeclaration_1()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSTestProcActionTypeAccess().getCheckingEnumLiteralDeclaration_2()); }
+		('"checking"')
+		{ after(grammarAccess.getGSSTestProcActionTypeAccess().getCheckingEnumLiteralDeclaration_2()); }
 	)
 ;
 finally {

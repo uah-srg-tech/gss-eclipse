@@ -7095,15 +7095,15 @@ ruleGSSConfigTestCase returns [EObject current=null]
 			newLeafNode(otherlv_9, grammarAccess.getGSSConfigTestCaseAccess().getSemicolonKeyword_9());
 		}
 		(
-			otherlv_10='req'
+			otherlv_10='prevMsg'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getGSSConfigTestCaseAccess().getReqKeyword_10_0());
+				newLeafNode(otherlv_10, grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgKeyword_10_0());
 			}
 			(
 				(
-					lv_req_11_0=RULE_ID
+					lv_prevMsg_11_0=RULE_ID
 					{
-						newLeafNode(lv_req_11_0, grammarAccess.getGSSConfigTestCaseAccess().getReqIDTerminalRuleCall_10_1_0());
+						newLeafNode(lv_prevMsg_11_0, grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0());
 					}
 					{
 						if ($current==null) {
@@ -7111,45 +7111,69 @@ ruleGSSConfigTestCase returns [EObject current=null]
 						}
 						setWithLastConsumed(
 							$current,
-							"req",
-							lv_req_11_0,
+							"prevMsg",
+							lv_prevMsg_11_0,
 							"org.eclipse.xtext.common.Terminals.ID");
 					}
 				)
 			)
 		)?
 		(
-			otherlv_12='reqAction'
+			otherlv_12='prevAction'
 			{
-				newLeafNode(otherlv_12, grammarAccess.getGSSConfigTestCaseAccess().getReqActionKeyword_11_0());
+				newLeafNode(otherlv_12, grammarAccess.getGSSConfigTestCaseAccess().getPrevActionKeyword_11_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSConfigTestCaseAccess().getReqActionGSSConfigReqActionEnumRuleCall_11_1_0());
+						newCompositeNode(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0());
 					}
-					lv_reqAction_13_0=ruleGSSConfigReqAction
+					lv_prevAction_13_0=ruleGSSTestProcPrevAction
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSConfigTestCaseRule());
 						}
 						set(
 							$current,
-							"reqAction",
-							lv_reqAction_13_0,
-							"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigReqAction");
+							"prevAction",
+							lv_prevAction_13_0,
+							"es.uah.aut.srg.gss.lang.config.CONFIG.GSSTestProcPrevAction");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
+			(
+				otherlv_14='prevActionParam'
+				{
+					newLeafNode(otherlv_14, grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamKeyword_11_2_0());
+				}
+				(
+					(
+						lv_prevActionParam_15_0=RULE_STRING
+						{
+							newLeafNode(lv_prevActionParam_15_0, grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getGSSConfigTestCaseRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"prevActionParam",
+								lv_prevActionParam_15_0,
+								"org.eclipse.xtext.common.Terminals.STRING");
+						}
+					)
+				)
+			)?
 		)?
-		otherlv_14='}'
+		otherlv_16='}'
 		{
-			newLeafNode(otherlv_14, grammarAccess.getGSSConfigTestCaseAccess().getRightCurlyBracketKeyword_12());
+			newLeafNode(otherlv_16, grammarAccess.getGSSConfigTestCaseAccess().getRightCurlyBracketKeyword_12());
 		}
-		otherlv_15=';'
+		otherlv_17=';'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getGSSConfigTestCaseAccess().getSemicolonKeyword_13());
+			newLeafNode(otherlv_17, grammarAccess.getGSSConfigTestCaseAccess().getSemicolonKeyword_13());
 		}
 	)
 ;
@@ -7865,8 +7889,8 @@ ruleGSSScenarioAlarmValType returns [Enumerator current=null]
 	)
 ;
 
-// Rule GSSConfigReqAction
-ruleGSSConfigReqAction returns [Enumerator current=null]
+// Rule GSSTestProcPrevAction
+ruleGSSTestProcPrevAction returns [Enumerator current=null]
 @init {
 	enterRule();
 }
@@ -7874,10 +7898,10 @@ ruleGSSConfigReqAction returns [Enumerator current=null]
 	leaveRule();
 }:
 	(
-		enumLiteral_0='_1'
+		enumLiteral_0='reset'
 		{
-			$current = grammarAccess.getGSSConfigReqActionAccess().get_1EnumLiteralDeclaration().getEnumLiteral().getInstance();
-			newLeafNode(enumLiteral_0, grammarAccess.getGSSConfigReqActionAccess().get_1EnumLiteralDeclaration());
+			$current = grammarAccess.getGSSTestProcPrevActionAccess().getResetEnumLiteralDeclaration().getEnumLiteral().getInstance();
+			newLeafNode(enumLiteral_0, grammarAccess.getGSSTestProcPrevActionAccess().getResetEnumLiteralDeclaration());
 		}
 	)
 ;

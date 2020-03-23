@@ -94,6 +94,15 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_SCENARIO__SCENARIO_INTERFACES = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO__SCENARIO_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Scenario Variables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_SCENARIO__SCENARIO_VARIABLES = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO__SCENARIO_VARIABLES;
+
+	/**
 	 * The feature id for the '<em><b>Gss options</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2136,7 +2145,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GLOBAL_VAR__NAME = 0;
+	int GSS_SCENARIO_GLOBAL_VAR__NAME = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2145,7 +2154,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GLOBAL_VAR__ID = 1;
+	int GSS_SCENARIO_GLOBAL_VAR__ID = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2154,7 +2163,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GLOBAL_VAR__TYPE = 2;
+	int GSS_SCENARIO_GLOBAL_VAR__TYPE = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Initial value</b></em>' attribute.
@@ -2163,7 +2172,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GLOBAL_VAR__INITIAL_VALUE = 3;
+	int GSS_SCENARIO_GLOBAL_VAR__INITIAL_VALUE = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Reference Field</b></em>' containment reference.
@@ -2172,7 +2181,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GLOBAL_VAR__REFERENCE_FIELD = 4;
+	int GSS_SCENARIO_GLOBAL_VAR__REFERENCE_FIELD = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Reference Periodic TC</b></em>' containment reference.
@@ -2181,7 +2190,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GLOBAL_VAR__REFERENCE_PERIODIC_TC = 5;
+	int GSS_SCENARIO_GLOBAL_VAR__REFERENCE_PERIODIC_TC = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Reference Special Packet</b></em>' containment reference.
@@ -2190,7 +2199,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GLOBAL_VAR__REFERENCE_SPECIAL_PACKET = 6;
+	int GSS_SCENARIO_GLOBAL_VAR__REFERENCE_SPECIAL_PACKET = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario Global Var</em>' class.
@@ -2199,7 +2208,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GLOBAL_VAR_FEATURE_COUNT = 7;
+	int GSS_SCENARIO_GLOBAL_VAR_FEATURE_COUNT = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario Global Var</em>' class.
@@ -2208,7 +2217,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GLOBAL_VAR_OPERATION_COUNT = 0;
+	int GSS_SCENARIO_GLOBAL_VAR_OPERATION_COUNT = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceFieldImpl <em>GSS Scenario Reference Field</em>}' class.
@@ -4509,17 +4518,6 @@ public interface scenarioPackage extends EPackage {
 	EClass getGSSScenarioGlobalVar();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getName()
-	 * @see #getGSSScenarioGlobalVar()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioGlobalVar_Name();
-
-	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6479,14 +6477,6 @@ public interface scenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_SCENARIO_GLOBAL_VAR = eINSTANCE.getGSSScenarioGlobalVar();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_GLOBAL_VAR__NAME = eINSTANCE.getGSSScenarioGlobalVar_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.

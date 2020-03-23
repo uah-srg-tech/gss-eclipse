@@ -33,15 +33,16 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'_1'", "'import'", "':='", "';'", "'GSSCampaignCampaign'", "'{'", "'version'", "'}'", "'uri'", "'GSSCampaignScenario'", "'environment'", "'scenarioRef'", "'GSSCampaignTests'", "'GSSCampaignTestCase'", "'name'", "'procedure'", "'req'", "'reqAction'", "'.'", "'('", "')'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'1'", "'import'", "':='", "';'", "'GSSCampaignCampaign'", "'{'", "'version'", "'}'", "'uri'", "'GSSCampaignScenario'", "'environment'", "'scenarioRef'", "'GSSCampaignTests'", "'GSSCampaignTestCase'", "'name'", "'procedure'", "'prevMsg'", "'prevAction'", "'prevActionParam'", "'.'", "'('", "')'"
     };
     public static final int RULE_STRING=6;
-    public static final int RULE_SL_COMMENT=9;
+    public static final int RULE_SL_COMMENT=8;
     public static final int T__19=19;
     public static final int T__15=15;
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
+    public static final int T__11=11;
     public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
@@ -50,17 +51,16 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
     public static final int T__31=31;
     public static final int T__32=32;
     public static final int RULE_ID=5;
-    public static final int RULE_WS=10;
-    public static final int RULE_ANY_OTHER=11;
+    public static final int RULE_WS=9;
+    public static final int RULE_ANY_OTHER=10;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
     public static final int RULE_INT=4;
     public static final int T__29=29;
     public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=8;
+    public static final int RULE_ML_COMMENT=7;
     public static final int T__23=23;
-    public static final int RULE_HEXADECIMAL=7;
     public static final int T__24=24;
     public static final int T__25=25;
     public static final int T__20=20;
@@ -866,31 +866,31 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "ruleVersionedQualifiedName"
 
 
-    // $ANTLR start "ruleGSSCampaignTestReqAction"
-    // InternalCAMPAIGN.g:286:1: ruleGSSCampaignTestReqAction : ( ( '_1' ) ) ;
-    public final void ruleGSSCampaignTestReqAction() throws RecognitionException {
+    // $ANTLR start "ruleGSSTestProcPrevAction"
+    // InternalCAMPAIGN.g:286:1: ruleGSSTestProcPrevAction : ( ( '1' ) ) ;
+    public final void ruleGSSTestProcPrevAction() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:290:1: ( ( ( '_1' ) ) )
-            // InternalCAMPAIGN.g:291:2: ( ( '_1' ) )
+            // InternalCAMPAIGN.g:290:1: ( ( ( '1' ) ) )
+            // InternalCAMPAIGN.g:291:2: ( ( '1' ) )
             {
-            // InternalCAMPAIGN.g:291:2: ( ( '_1' ) )
-            // InternalCAMPAIGN.g:292:3: ( '_1' )
+            // InternalCAMPAIGN.g:291:2: ( ( '1' ) )
+            // InternalCAMPAIGN.g:292:3: ( '1' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSCampaignTestReqActionAccess().get_1EnumLiteralDeclaration()); 
+               before(grammarAccess.getGSSTestProcPrevActionAccess().getResetEnumLiteralDeclaration()); 
             }
-            // InternalCAMPAIGN.g:293:3: ( '_1' )
-            // InternalCAMPAIGN.g:293:4: '_1'
+            // InternalCAMPAIGN.g:293:3: ( '1' )
+            // InternalCAMPAIGN.g:293:4: '1'
             {
-            match(input,12,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,11,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSCampaignTestReqActionAccess().get_1EnumLiteralDeclaration()); 
+               after(grammarAccess.getGSSTestProcPrevActionAccess().getResetEnumLiteralDeclaration()); 
             }
 
             }
@@ -910,7 +910,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "ruleGSSCampaignTestReqAction"
+    // $ANTLR end "ruleGSSTestProcPrevAction"
 
 
     // $ANTLR start "rule__Version__Alternatives_0"
@@ -927,7 +927,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( (LA1_0==RULE_INT) ) {
                 int LA1_1 = input.LA(2);
 
-                if ( (LA1_1==EOF||LA1_1==15||LA1_1==30||LA1_1==32) ) {
+                if ( (LA1_1==EOF||LA1_1==14||LA1_1==30||LA1_1==32) ) {
                     alt1=1;
                 }
                 else if ( (LA1_1==RULE_ID) ) {
@@ -1031,11 +1031,11 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( (LA2_0==RULE_INT) ) {
                 int LA2_1 = input.LA(2);
 
-                if ( (LA2_1==RULE_ID) ) {
-                    alt2=2;
-                }
-                else if ( (LA2_1==EOF||LA2_1==15||LA2_1==30||LA2_1==32) ) {
+                if ( (LA2_1==EOF||LA2_1==14||LA2_1==30||LA2_1==32) ) {
                     alt2=1;
+                }
+                else if ( (LA2_1==RULE_ID) ) {
+                    alt2=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -1181,7 +1181,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==13) ) {
+                if ( (LA3_0==12) ) {
                     alt3=1;
                 }
 
@@ -1366,7 +1366,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileImportAccess().getImportKeyword_0()); 
             }
-            match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,12,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSModelFileImportAccess().getImportKeyword_0()); 
             }
@@ -1445,7 +1445,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1()); 
             }
-            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1()); 
             }
@@ -1608,7 +1608,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_3()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_3()); 
             }
@@ -1687,7 +1687,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getGSSCampaignCampaignKeyword_0()); 
             }
-            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignCampaignAccess().getGSSCampaignCampaignKeyword_0()); 
             }
@@ -1855,7 +1855,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getLeftCurlyBracketKeyword_2()); 
             }
-            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignCampaignAccess().getLeftCurlyBracketKeyword_2()); 
             }
@@ -2023,7 +2023,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getVersionKeyword_4()); 
             }
-            match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignCampaignAccess().getVersionKeyword_4()); 
             }
@@ -2102,7 +2102,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getColonEqualsSignKeyword_5()); 
             }
-            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignCampaignAccess().getColonEqualsSignKeyword_5()); 
             }
@@ -2270,7 +2270,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getSemicolonKeyword_7()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignCampaignAccess().getSemicolonKeyword_7()); 
             }
@@ -2527,7 +2527,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getRightCurlyBracketKeyword_10()); 
             }
-            match(input,19,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignCampaignAccess().getRightCurlyBracketKeyword_10()); 
             }
@@ -2601,7 +2601,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getSemicolonKeyword_11()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignCampaignAccess().getSemicolonKeyword_11()); 
             }
@@ -2680,7 +2680,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getUriKeyword_3_0()); 
             }
-            match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,19,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignCampaignAccess().getUriKeyword_3_0()); 
             }
@@ -2759,7 +2759,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getColonEqualsSignKeyword_3_1()); 
             }
-            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignCampaignAccess().getColonEqualsSignKeyword_3_1()); 
             }
@@ -2922,7 +2922,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getSemicolonKeyword_3_3()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignCampaignAccess().getSemicolonKeyword_3_3()); 
             }
@@ -3001,7 +3001,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignScenarioAccess().getGSSCampaignScenarioKeyword_0()); 
             }
-            match(input,21,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignScenarioAccess().getGSSCampaignScenarioKeyword_0()); 
             }
@@ -3080,7 +3080,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignScenarioAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignScenarioAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -3159,7 +3159,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentKeyword_2()); 
             }
-            match(input,22,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,21,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentKeyword_2()); 
             }
@@ -3238,7 +3238,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignScenarioAccess().getColonEqualsSignKeyword_3()); 
             }
-            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignScenarioAccess().getColonEqualsSignKeyword_3()); 
             }
@@ -3406,7 +3406,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignScenarioAccess().getSemicolonKeyword_5()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignScenarioAccess().getSemicolonKeyword_5()); 
             }
@@ -3485,7 +3485,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefKeyword_6()); 
             }
-            match(input,23,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,22,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefKeyword_6()); 
             }
@@ -3564,7 +3564,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignScenarioAccess().getColonEqualsSignKeyword_7()); 
             }
-            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignScenarioAccess().getColonEqualsSignKeyword_7()); 
             }
@@ -3732,7 +3732,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignScenarioAccess().getSemicolonKeyword_9()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignScenarioAccess().getSemicolonKeyword_9()); 
             }
@@ -3811,7 +3811,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignScenarioAccess().getRightCurlyBracketKeyword_10()); 
             }
-            match(input,19,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignScenarioAccess().getRightCurlyBracketKeyword_10()); 
             }
@@ -3885,7 +3885,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignScenarioAccess().getSemicolonKeyword_11()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignScenarioAccess().getSemicolonKeyword_11()); 
             }
@@ -3964,7 +3964,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestsAccess().getGSSCampaignTestsKeyword_0()); 
             }
-            match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,23,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignTestsAccess().getGSSCampaignTestsKeyword_0()); 
             }
@@ -4043,7 +4043,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestsAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignTestsAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -4154,7 +4154,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
                 int alt4=2;
                 int LA4_0 = input.LA(1);
 
-                if ( (LA4_0==25) ) {
+                if ( (LA4_0==24) ) {
                     alt4=1;
                 }
 
@@ -4258,7 +4258,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestsAccess().getRightCurlyBracketKeyword_3()); 
             }
-            match(input,19,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignTestsAccess().getRightCurlyBracketKeyword_3()); 
             }
@@ -4332,7 +4332,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestsAccess().getSemicolonKeyword_4()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignTestsAccess().getSemicolonKeyword_4()); 
             }
@@ -4411,7 +4411,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestCaseAccess().getGSSCampaignTestCaseKeyword_0()); 
             }
-            match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignTestCaseAccess().getGSSCampaignTestCaseKeyword_0()); 
             }
@@ -4490,7 +4490,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestCaseAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignTestCaseAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -4569,7 +4569,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestCaseAccess().getNameKeyword_2()); 
             }
-            match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignTestCaseAccess().getNameKeyword_2()); 
             }
@@ -4648,7 +4648,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestCaseAccess().getColonEqualsSignKeyword_3()); 
             }
-            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignTestCaseAccess().getColonEqualsSignKeyword_3()); 
             }
@@ -4816,7 +4816,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_5()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_5()); 
             }
@@ -4895,7 +4895,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestCaseAccess().getProcedureKeyword_6()); 
             }
-            match(input,27,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignTestCaseAccess().getProcedureKeyword_6()); 
             }
@@ -4974,7 +4974,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestCaseAccess().getColonEqualsSignKeyword_7()); 
             }
-            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignTestCaseAccess().getColonEqualsSignKeyword_7()); 
             }
@@ -5142,7 +5142,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_9()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_9()); 
             }
@@ -5225,7 +5225,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==28) ) {
+            if ( (LA5_0==27) ) {
                 alt5=1;
             }
             switch (alt5) {
@@ -5325,7 +5325,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==29) ) {
+            if ( (LA6_0==28) ) {
                 alt6=1;
             }
             switch (alt6) {
@@ -5421,7 +5421,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestCaseAccess().getRightCurlyBracketKeyword_12()); 
             }
-            match(input,19,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignTestCaseAccess().getRightCurlyBracketKeyword_12()); 
             }
@@ -5495,7 +5495,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_13()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_13()); 
             }
@@ -5559,24 +5559,24 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignTestCase__Group_10__0__Impl"
-    // InternalCAMPAIGN.g:1793:1: rule__GSSCampaignTestCase__Group_10__0__Impl : ( 'req' ) ;
+    // InternalCAMPAIGN.g:1793:1: rule__GSSCampaignTestCase__Group_10__0__Impl : ( 'prevMsg' ) ;
     public final void rule__GSSCampaignTestCase__Group_10__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1797:1: ( ( 'req' ) )
-            // InternalCAMPAIGN.g:1798:1: ( 'req' )
+            // InternalCAMPAIGN.g:1797:1: ( ( 'prevMsg' ) )
+            // InternalCAMPAIGN.g:1798:1: ( 'prevMsg' )
             {
-            // InternalCAMPAIGN.g:1798:1: ( 'req' )
-            // InternalCAMPAIGN.g:1799:2: 'req'
+            // InternalCAMPAIGN.g:1798:1: ( 'prevMsg' )
+            // InternalCAMPAIGN.g:1799:2: 'prevMsg'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSCampaignTestCaseAccess().getReqKeyword_10_0()); 
+               before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgKeyword_10_0()); 
             }
-            match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,27,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSCampaignTestCaseAccess().getReqKeyword_10_0()); 
+               after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgKeyword_10_0()); 
             }
 
             }
@@ -5633,26 +5633,26 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignTestCase__Group_10__1__Impl"
-    // InternalCAMPAIGN.g:1819:1: rule__GSSCampaignTestCase__Group_10__1__Impl : ( ( rule__GSSCampaignTestCase__ReqAssignment_10_1 ) ) ;
+    // InternalCAMPAIGN.g:1819:1: rule__GSSCampaignTestCase__Group_10__1__Impl : ( ( rule__GSSCampaignTestCase__PrevMsgAssignment_10_1 ) ) ;
     public final void rule__GSSCampaignTestCase__Group_10__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1823:1: ( ( ( rule__GSSCampaignTestCase__ReqAssignment_10_1 ) ) )
-            // InternalCAMPAIGN.g:1824:1: ( ( rule__GSSCampaignTestCase__ReqAssignment_10_1 ) )
+            // InternalCAMPAIGN.g:1823:1: ( ( ( rule__GSSCampaignTestCase__PrevMsgAssignment_10_1 ) ) )
+            // InternalCAMPAIGN.g:1824:1: ( ( rule__GSSCampaignTestCase__PrevMsgAssignment_10_1 ) )
             {
-            // InternalCAMPAIGN.g:1824:1: ( ( rule__GSSCampaignTestCase__ReqAssignment_10_1 ) )
-            // InternalCAMPAIGN.g:1825:2: ( rule__GSSCampaignTestCase__ReqAssignment_10_1 )
+            // InternalCAMPAIGN.g:1824:1: ( ( rule__GSSCampaignTestCase__PrevMsgAssignment_10_1 ) )
+            // InternalCAMPAIGN.g:1825:2: ( rule__GSSCampaignTestCase__PrevMsgAssignment_10_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSCampaignTestCaseAccess().getReqAssignment_10_1()); 
+               before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgAssignment_10_1()); 
             }
-            // InternalCAMPAIGN.g:1826:2: ( rule__GSSCampaignTestCase__ReqAssignment_10_1 )
-            // InternalCAMPAIGN.g:1826:3: rule__GSSCampaignTestCase__ReqAssignment_10_1
+            // InternalCAMPAIGN.g:1826:2: ( rule__GSSCampaignTestCase__PrevMsgAssignment_10_1 )
+            // InternalCAMPAIGN.g:1826:3: rule__GSSCampaignTestCase__PrevMsgAssignment_10_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSCampaignTestCase__ReqAssignment_10_1();
+            rule__GSSCampaignTestCase__PrevMsgAssignment_10_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -5660,7 +5660,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSCampaignTestCaseAccess().getReqAssignment_10_1()); 
+               after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgAssignment_10_1()); 
             }
 
             }
@@ -5722,24 +5722,24 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignTestCase__Group_11__0__Impl"
-    // InternalCAMPAIGN.g:1847:1: rule__GSSCampaignTestCase__Group_11__0__Impl : ( 'reqAction' ) ;
+    // InternalCAMPAIGN.g:1847:1: rule__GSSCampaignTestCase__Group_11__0__Impl : ( 'prevAction' ) ;
     public final void rule__GSSCampaignTestCase__Group_11__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1851:1: ( ( 'reqAction' ) )
-            // InternalCAMPAIGN.g:1852:1: ( 'reqAction' )
+            // InternalCAMPAIGN.g:1851:1: ( ( 'prevAction' ) )
+            // InternalCAMPAIGN.g:1852:1: ( 'prevAction' )
             {
-            // InternalCAMPAIGN.g:1852:1: ( 'reqAction' )
-            // InternalCAMPAIGN.g:1853:2: 'reqAction'
+            // InternalCAMPAIGN.g:1852:1: ( 'prevAction' )
+            // InternalCAMPAIGN.g:1853:2: 'prevAction'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionKeyword_11_0()); 
+               before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionKeyword_11_0()); 
             }
-            match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionKeyword_11_0()); 
+               after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionKeyword_11_0()); 
             }
 
             }
@@ -5763,17 +5763,22 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignTestCase__Group_11__1"
-    // InternalCAMPAIGN.g:1862:1: rule__GSSCampaignTestCase__Group_11__1 : rule__GSSCampaignTestCase__Group_11__1__Impl ;
+    // InternalCAMPAIGN.g:1862:1: rule__GSSCampaignTestCase__Group_11__1 : rule__GSSCampaignTestCase__Group_11__1__Impl rule__GSSCampaignTestCase__Group_11__2 ;
     public final void rule__GSSCampaignTestCase__Group_11__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1866:1: ( rule__GSSCampaignTestCase__Group_11__1__Impl )
-            // InternalCAMPAIGN.g:1867:2: rule__GSSCampaignTestCase__Group_11__1__Impl
+            // InternalCAMPAIGN.g:1866:1: ( rule__GSSCampaignTestCase__Group_11__1__Impl rule__GSSCampaignTestCase__Group_11__2 )
+            // InternalCAMPAIGN.g:1867:2: rule__GSSCampaignTestCase__Group_11__1__Impl rule__GSSCampaignTestCase__Group_11__2
             {
-            pushFollow(FollowSets000.FOLLOW_2);
+            pushFollow(FollowSets000.FOLLOW_24);
             rule__GSSCampaignTestCase__Group_11__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSCampaignTestCase__Group_11__2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -5796,26 +5801,26 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignTestCase__Group_11__1__Impl"
-    // InternalCAMPAIGN.g:1873:1: rule__GSSCampaignTestCase__Group_11__1__Impl : ( ( rule__GSSCampaignTestCase__ReqActionAssignment_11_1 ) ) ;
+    // InternalCAMPAIGN.g:1874:1: rule__GSSCampaignTestCase__Group_11__1__Impl : ( ( rule__GSSCampaignTestCase__PrevActionAssignment_11_1 ) ) ;
     public final void rule__GSSCampaignTestCase__Group_11__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1877:1: ( ( ( rule__GSSCampaignTestCase__ReqActionAssignment_11_1 ) ) )
-            // InternalCAMPAIGN.g:1878:1: ( ( rule__GSSCampaignTestCase__ReqActionAssignment_11_1 ) )
+            // InternalCAMPAIGN.g:1878:1: ( ( ( rule__GSSCampaignTestCase__PrevActionAssignment_11_1 ) ) )
+            // InternalCAMPAIGN.g:1879:1: ( ( rule__GSSCampaignTestCase__PrevActionAssignment_11_1 ) )
             {
-            // InternalCAMPAIGN.g:1878:1: ( ( rule__GSSCampaignTestCase__ReqActionAssignment_11_1 ) )
-            // InternalCAMPAIGN.g:1879:2: ( rule__GSSCampaignTestCase__ReqActionAssignment_11_1 )
+            // InternalCAMPAIGN.g:1879:1: ( ( rule__GSSCampaignTestCase__PrevActionAssignment_11_1 ) )
+            // InternalCAMPAIGN.g:1880:2: ( rule__GSSCampaignTestCase__PrevActionAssignment_11_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionAssignment_11_1()); 
+               before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionAssignment_11_1()); 
             }
-            // InternalCAMPAIGN.g:1880:2: ( rule__GSSCampaignTestCase__ReqActionAssignment_11_1 )
-            // InternalCAMPAIGN.g:1880:3: rule__GSSCampaignTestCase__ReqActionAssignment_11_1
+            // InternalCAMPAIGN.g:1881:2: ( rule__GSSCampaignTestCase__PrevActionAssignment_11_1 )
+            // InternalCAMPAIGN.g:1881:3: rule__GSSCampaignTestCase__PrevActionAssignment_11_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSCampaignTestCase__ReqActionAssignment_11_1();
+            rule__GSSCampaignTestCase__PrevActionAssignment_11_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -5823,7 +5828,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionAssignment_11_1()); 
+               after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionAssignment_11_1()); 
             }
 
             }
@@ -5846,17 +5851,275 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__GSSCampaignTestCase__Group_11__1__Impl"
 
 
+    // $ANTLR start "rule__GSSCampaignTestCase__Group_11__2"
+    // InternalCAMPAIGN.g:1889:1: rule__GSSCampaignTestCase__Group_11__2 : rule__GSSCampaignTestCase__Group_11__2__Impl ;
+    public final void rule__GSSCampaignTestCase__Group_11__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalCAMPAIGN.g:1893:1: ( rule__GSSCampaignTestCase__Group_11__2__Impl )
+            // InternalCAMPAIGN.g:1894:2: rule__GSSCampaignTestCase__Group_11__2__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSCampaignTestCase__Group_11__2__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSCampaignTestCase__Group_11__2"
+
+
+    // $ANTLR start "rule__GSSCampaignTestCase__Group_11__2__Impl"
+    // InternalCAMPAIGN.g:1900:1: rule__GSSCampaignTestCase__Group_11__2__Impl : ( ( rule__GSSCampaignTestCase__Group_11_2__0 )? ) ;
+    public final void rule__GSSCampaignTestCase__Group_11__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalCAMPAIGN.g:1904:1: ( ( ( rule__GSSCampaignTestCase__Group_11_2__0 )? ) )
+            // InternalCAMPAIGN.g:1905:1: ( ( rule__GSSCampaignTestCase__Group_11_2__0 )? )
+            {
+            // InternalCAMPAIGN.g:1905:1: ( ( rule__GSSCampaignTestCase__Group_11_2__0 )? )
+            // InternalCAMPAIGN.g:1906:2: ( rule__GSSCampaignTestCase__Group_11_2__0 )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSCampaignTestCaseAccess().getGroup_11_2()); 
+            }
+            // InternalCAMPAIGN.g:1907:2: ( rule__GSSCampaignTestCase__Group_11_2__0 )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
+
+            if ( (LA7_0==29) ) {
+                alt7=1;
+            }
+            switch (alt7) {
+                case 1 :
+                    // InternalCAMPAIGN.g:1907:3: rule__GSSCampaignTestCase__Group_11_2__0
+                    {
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    rule__GSSCampaignTestCase__Group_11_2__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSCampaignTestCaseAccess().getGroup_11_2()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSCampaignTestCase__Group_11__2__Impl"
+
+
+    // $ANTLR start "rule__GSSCampaignTestCase__Group_11_2__0"
+    // InternalCAMPAIGN.g:1916:1: rule__GSSCampaignTestCase__Group_11_2__0 : rule__GSSCampaignTestCase__Group_11_2__0__Impl rule__GSSCampaignTestCase__Group_11_2__1 ;
+    public final void rule__GSSCampaignTestCase__Group_11_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalCAMPAIGN.g:1920:1: ( rule__GSSCampaignTestCase__Group_11_2__0__Impl rule__GSSCampaignTestCase__Group_11_2__1 )
+            // InternalCAMPAIGN.g:1921:2: rule__GSSCampaignTestCase__Group_11_2__0__Impl rule__GSSCampaignTestCase__Group_11_2__1
+            {
+            pushFollow(FollowSets000.FOLLOW_6);
+            rule__GSSCampaignTestCase__Group_11_2__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSCampaignTestCase__Group_11_2__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSCampaignTestCase__Group_11_2__0"
+
+
+    // $ANTLR start "rule__GSSCampaignTestCase__Group_11_2__0__Impl"
+    // InternalCAMPAIGN.g:1928:1: rule__GSSCampaignTestCase__Group_11_2__0__Impl : ( 'prevActionParam' ) ;
+    public final void rule__GSSCampaignTestCase__Group_11_2__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalCAMPAIGN.g:1932:1: ( ( 'prevActionParam' ) )
+            // InternalCAMPAIGN.g:1933:1: ( 'prevActionParam' )
+            {
+            // InternalCAMPAIGN.g:1933:1: ( 'prevActionParam' )
+            // InternalCAMPAIGN.g:1934:2: 'prevActionParam'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamKeyword_11_2_0()); 
+            }
+            match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamKeyword_11_2_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSCampaignTestCase__Group_11_2__0__Impl"
+
+
+    // $ANTLR start "rule__GSSCampaignTestCase__Group_11_2__1"
+    // InternalCAMPAIGN.g:1943:1: rule__GSSCampaignTestCase__Group_11_2__1 : rule__GSSCampaignTestCase__Group_11_2__1__Impl ;
+    public final void rule__GSSCampaignTestCase__Group_11_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalCAMPAIGN.g:1947:1: ( rule__GSSCampaignTestCase__Group_11_2__1__Impl )
+            // InternalCAMPAIGN.g:1948:2: rule__GSSCampaignTestCase__Group_11_2__1__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSCampaignTestCase__Group_11_2__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSCampaignTestCase__Group_11_2__1"
+
+
+    // $ANTLR start "rule__GSSCampaignTestCase__Group_11_2__1__Impl"
+    // InternalCAMPAIGN.g:1954:1: rule__GSSCampaignTestCase__Group_11_2__1__Impl : ( ( rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1 ) ) ;
+    public final void rule__GSSCampaignTestCase__Group_11_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalCAMPAIGN.g:1958:1: ( ( ( rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1 ) ) )
+            // InternalCAMPAIGN.g:1959:1: ( ( rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1 ) )
+            {
+            // InternalCAMPAIGN.g:1959:1: ( ( rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1 ) )
+            // InternalCAMPAIGN.g:1960:2: ( rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamAssignment_11_2_1()); 
+            }
+            // InternalCAMPAIGN.g:1961:2: ( rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1 )
+            // InternalCAMPAIGN.g:1961:3: rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamAssignment_11_2_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSCampaignTestCase__Group_11_2__1__Impl"
+
+
     // $ANTLR start "rule__QualifiedName__Group__0"
-    // InternalCAMPAIGN.g:1889:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
+    // InternalCAMPAIGN.g:1970:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
     public final void rule__QualifiedName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1893:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
-            // InternalCAMPAIGN.g:1894:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
+            // InternalCAMPAIGN.g:1974:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
+            // InternalCAMPAIGN.g:1975:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             rule__QualifiedName__Group__0__Impl();
 
             state._fsp--;
@@ -5885,17 +6148,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group__0__Impl"
-    // InternalCAMPAIGN.g:1901:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
+    // InternalCAMPAIGN.g:1982:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1905:1: ( ( RULE_ID ) )
-            // InternalCAMPAIGN.g:1906:1: ( RULE_ID )
+            // InternalCAMPAIGN.g:1986:1: ( ( RULE_ID ) )
+            // InternalCAMPAIGN.g:1987:1: ( RULE_ID )
             {
-            // InternalCAMPAIGN.g:1906:1: ( RULE_ID )
-            // InternalCAMPAIGN.g:1907:2: RULE_ID
+            // InternalCAMPAIGN.g:1987:1: ( RULE_ID )
+            // InternalCAMPAIGN.g:1988:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
@@ -5926,14 +6189,14 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group__1"
-    // InternalCAMPAIGN.g:1916:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
+    // InternalCAMPAIGN.g:1997:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
     public final void rule__QualifiedName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1920:1: ( rule__QualifiedName__Group__1__Impl )
-            // InternalCAMPAIGN.g:1921:2: rule__QualifiedName__Group__1__Impl
+            // InternalCAMPAIGN.g:2001:1: ( rule__QualifiedName__Group__1__Impl )
+            // InternalCAMPAIGN.g:2002:2: rule__QualifiedName__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__QualifiedName__Group__1__Impl();
@@ -5959,37 +6222,37 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group__1__Impl"
-    // InternalCAMPAIGN.g:1927:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
+    // InternalCAMPAIGN.g:2008:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
     public final void rule__QualifiedName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1931:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
-            // InternalCAMPAIGN.g:1932:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // InternalCAMPAIGN.g:2012:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
+            // InternalCAMPAIGN.g:2013:1: ( ( rule__QualifiedName__Group_1__0 )* )
             {
-            // InternalCAMPAIGN.g:1932:1: ( ( rule__QualifiedName__Group_1__0 )* )
-            // InternalCAMPAIGN.g:1933:2: ( rule__QualifiedName__Group_1__0 )*
+            // InternalCAMPAIGN.g:2013:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // InternalCAMPAIGN.g:2014:2: ( rule__QualifiedName__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getGroup_1()); 
             }
-            // InternalCAMPAIGN.g:1934:2: ( rule__QualifiedName__Group_1__0 )*
-            loop7:
+            // InternalCAMPAIGN.g:2015:2: ( rule__QualifiedName__Group_1__0 )*
+            loop8:
             do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+                int alt8=2;
+                int LA8_0 = input.LA(1);
 
-                if ( (LA7_0==30) ) {
-                    alt7=1;
+                if ( (LA8_0==30) ) {
+                    alt8=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt8) {
             	case 1 :
-            	    // InternalCAMPAIGN.g:1934:3: rule__QualifiedName__Group_1__0
+            	    // InternalCAMPAIGN.g:2015:3: rule__QualifiedName__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_25);
+            	    pushFollow(FollowSets000.FOLLOW_26);
             	    rule__QualifiedName__Group_1__0();
 
             	    state._fsp--;
@@ -5999,7 +6262,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop8;
                 }
             } while (true);
 
@@ -6028,14 +6291,14 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0"
-    // InternalCAMPAIGN.g:1943:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
+    // InternalCAMPAIGN.g:2024:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
     public final void rule__QualifiedName__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1947:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
-            // InternalCAMPAIGN.g:1948:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
+            // InternalCAMPAIGN.g:2028:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
+            // InternalCAMPAIGN.g:2029:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__QualifiedName__Group_1__0__Impl();
@@ -6066,17 +6329,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0__Impl"
-    // InternalCAMPAIGN.g:1955:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
+    // InternalCAMPAIGN.g:2036:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
     public final void rule__QualifiedName__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1959:1: ( ( '.' ) )
-            // InternalCAMPAIGN.g:1960:1: ( '.' )
+            // InternalCAMPAIGN.g:2040:1: ( ( '.' ) )
+            // InternalCAMPAIGN.g:2041:1: ( '.' )
             {
-            // InternalCAMPAIGN.g:1960:1: ( '.' )
-            // InternalCAMPAIGN.g:1961:2: '.'
+            // InternalCAMPAIGN.g:2041:1: ( '.' )
+            // InternalCAMPAIGN.g:2042:2: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
@@ -6107,14 +6370,14 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1"
-    // InternalCAMPAIGN.g:1970:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
+    // InternalCAMPAIGN.g:2051:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
     public final void rule__QualifiedName__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1974:1: ( rule__QualifiedName__Group_1__1__Impl )
-            // InternalCAMPAIGN.g:1975:2: rule__QualifiedName__Group_1__1__Impl
+            // InternalCAMPAIGN.g:2055:1: ( rule__QualifiedName__Group_1__1__Impl )
+            // InternalCAMPAIGN.g:2056:2: rule__QualifiedName__Group_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__QualifiedName__Group_1__1__Impl();
@@ -6140,17 +6403,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1__Impl"
-    // InternalCAMPAIGN.g:1981:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
+    // InternalCAMPAIGN.g:2062:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:1985:1: ( ( RULE_ID ) )
-            // InternalCAMPAIGN.g:1986:1: ( RULE_ID )
+            // InternalCAMPAIGN.g:2066:1: ( ( RULE_ID ) )
+            // InternalCAMPAIGN.g:2067:1: ( RULE_ID )
             {
-            // InternalCAMPAIGN.g:1986:1: ( RULE_ID )
-            // InternalCAMPAIGN.g:1987:2: RULE_ID
+            // InternalCAMPAIGN.g:2067:1: ( RULE_ID )
+            // InternalCAMPAIGN.g:2068:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
@@ -6181,16 +6444,16 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group__0"
-    // InternalCAMPAIGN.g:1997:1: rule__Version__Group__0 : rule__Version__Group__0__Impl rule__Version__Group__1 ;
+    // InternalCAMPAIGN.g:2078:1: rule__Version__Group__0 : rule__Version__Group__0__Impl rule__Version__Group__1 ;
     public final void rule__Version__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2001:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
-            // InternalCAMPAIGN.g:2002:2: rule__Version__Group__0__Impl rule__Version__Group__1
+            // InternalCAMPAIGN.g:2082:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
+            // InternalCAMPAIGN.g:2083:2: rule__Version__Group__0__Impl rule__Version__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             rule__Version__Group__0__Impl();
 
             state._fsp--;
@@ -6219,23 +6482,23 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group__0__Impl"
-    // InternalCAMPAIGN.g:2009:1: rule__Version__Group__0__Impl : ( ( rule__Version__Alternatives_0 ) ) ;
+    // InternalCAMPAIGN.g:2090:1: rule__Version__Group__0__Impl : ( ( rule__Version__Alternatives_0 ) ) ;
     public final void rule__Version__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2013:1: ( ( ( rule__Version__Alternatives_0 ) ) )
-            // InternalCAMPAIGN.g:2014:1: ( ( rule__Version__Alternatives_0 ) )
+            // InternalCAMPAIGN.g:2094:1: ( ( ( rule__Version__Alternatives_0 ) ) )
+            // InternalCAMPAIGN.g:2095:1: ( ( rule__Version__Alternatives_0 ) )
             {
-            // InternalCAMPAIGN.g:2014:1: ( ( rule__Version__Alternatives_0 ) )
-            // InternalCAMPAIGN.g:2015:2: ( rule__Version__Alternatives_0 )
+            // InternalCAMPAIGN.g:2095:1: ( ( rule__Version__Alternatives_0 ) )
+            // InternalCAMPAIGN.g:2096:2: ( rule__Version__Alternatives_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getAlternatives_0()); 
             }
-            // InternalCAMPAIGN.g:2016:2: ( rule__Version__Alternatives_0 )
-            // InternalCAMPAIGN.g:2016:3: rule__Version__Alternatives_0
+            // InternalCAMPAIGN.g:2097:2: ( rule__Version__Alternatives_0 )
+            // InternalCAMPAIGN.g:2097:3: rule__Version__Alternatives_0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Alternatives_0();
@@ -6270,14 +6533,14 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group__1"
-    // InternalCAMPAIGN.g:2024:1: rule__Version__Group__1 : rule__Version__Group__1__Impl ;
+    // InternalCAMPAIGN.g:2105:1: rule__Version__Group__1 : rule__Version__Group__1__Impl ;
     public final void rule__Version__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2028:1: ( rule__Version__Group__1__Impl )
-            // InternalCAMPAIGN.g:2029:2: rule__Version__Group__1__Impl
+            // InternalCAMPAIGN.g:2109:1: ( rule__Version__Group__1__Impl )
+            // InternalCAMPAIGN.g:2110:2: rule__Version__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group__1__Impl();
@@ -6303,37 +6566,37 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group__1__Impl"
-    // InternalCAMPAIGN.g:2035:1: rule__Version__Group__1__Impl : ( ( rule__Version__Group_1__0 )* ) ;
+    // InternalCAMPAIGN.g:2116:1: rule__Version__Group__1__Impl : ( ( rule__Version__Group_1__0 )* ) ;
     public final void rule__Version__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2039:1: ( ( ( rule__Version__Group_1__0 )* ) )
-            // InternalCAMPAIGN.g:2040:1: ( ( rule__Version__Group_1__0 )* )
+            // InternalCAMPAIGN.g:2120:1: ( ( ( rule__Version__Group_1__0 )* ) )
+            // InternalCAMPAIGN.g:2121:1: ( ( rule__Version__Group_1__0 )* )
             {
-            // InternalCAMPAIGN.g:2040:1: ( ( rule__Version__Group_1__0 )* )
-            // InternalCAMPAIGN.g:2041:2: ( rule__Version__Group_1__0 )*
+            // InternalCAMPAIGN.g:2121:1: ( ( rule__Version__Group_1__0 )* )
+            // InternalCAMPAIGN.g:2122:2: ( rule__Version__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getGroup_1()); 
             }
-            // InternalCAMPAIGN.g:2042:2: ( rule__Version__Group_1__0 )*
-            loop8:
+            // InternalCAMPAIGN.g:2123:2: ( rule__Version__Group_1__0 )*
+            loop9:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA8_0==30) ) {
-                    alt8=1;
+                if ( (LA9_0==30) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt9) {
             	case 1 :
-            	    // InternalCAMPAIGN.g:2042:3: rule__Version__Group_1__0
+            	    // InternalCAMPAIGN.g:2123:3: rule__Version__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_25);
+            	    pushFollow(FollowSets000.FOLLOW_26);
             	    rule__Version__Group_1__0();
 
             	    state._fsp--;
@@ -6343,7 +6606,7 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop9;
                 }
             } while (true);
 
@@ -6372,14 +6635,14 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group_0_1__0"
-    // InternalCAMPAIGN.g:2051:1: rule__Version__Group_0_1__0 : rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 ;
+    // InternalCAMPAIGN.g:2132:1: rule__Version__Group_0_1__0 : rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 ;
     public final void rule__Version__Group_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2055:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
-            // InternalCAMPAIGN.g:2056:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
+            // InternalCAMPAIGN.g:2136:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
+            // InternalCAMPAIGN.g:2137:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__Version__Group_0_1__0__Impl();
@@ -6410,31 +6673,31 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group_0_1__0__Impl"
-    // InternalCAMPAIGN.g:2063:1: rule__Version__Group_0_1__0__Impl : ( ( RULE_INT )? ) ;
+    // InternalCAMPAIGN.g:2144:1: rule__Version__Group_0_1__0__Impl : ( ( RULE_INT )? ) ;
     public final void rule__Version__Group_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2067:1: ( ( ( RULE_INT )? ) )
-            // InternalCAMPAIGN.g:2068:1: ( ( RULE_INT )? )
+            // InternalCAMPAIGN.g:2148:1: ( ( ( RULE_INT )? ) )
+            // InternalCAMPAIGN.g:2149:1: ( ( RULE_INT )? )
             {
-            // InternalCAMPAIGN.g:2068:1: ( ( RULE_INT )? )
-            // InternalCAMPAIGN.g:2069:2: ( RULE_INT )?
+            // InternalCAMPAIGN.g:2149:1: ( ( RULE_INT )? )
+            // InternalCAMPAIGN.g:2150:2: ( RULE_INT )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_0_1_0()); 
             }
-            // InternalCAMPAIGN.g:2070:2: ( RULE_INT )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // InternalCAMPAIGN.g:2151:2: ( RULE_INT )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA9_0==RULE_INT) ) {
-                alt9=1;
+            if ( (LA10_0==RULE_INT) ) {
+                alt10=1;
             }
-            switch (alt9) {
+            switch (alt10) {
                 case 1 :
-                    // InternalCAMPAIGN.g:2070:3: RULE_INT
+                    // InternalCAMPAIGN.g:2151:3: RULE_INT
                     {
                     match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -6468,14 +6731,14 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group_0_1__1"
-    // InternalCAMPAIGN.g:2078:1: rule__Version__Group_0_1__1 : rule__Version__Group_0_1__1__Impl ;
+    // InternalCAMPAIGN.g:2159:1: rule__Version__Group_0_1__1 : rule__Version__Group_0_1__1__Impl ;
     public final void rule__Version__Group_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2082:1: ( rule__Version__Group_0_1__1__Impl )
-            // InternalCAMPAIGN.g:2083:2: rule__Version__Group_0_1__1__Impl
+            // InternalCAMPAIGN.g:2163:1: ( rule__Version__Group_0_1__1__Impl )
+            // InternalCAMPAIGN.g:2164:2: rule__Version__Group_0_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_0_1__1__Impl();
@@ -6501,17 +6764,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group_0_1__1__Impl"
-    // InternalCAMPAIGN.g:2089:1: rule__Version__Group_0_1__1__Impl : ( RULE_ID ) ;
+    // InternalCAMPAIGN.g:2170:1: rule__Version__Group_0_1__1__Impl : ( RULE_ID ) ;
     public final void rule__Version__Group_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2093:1: ( ( RULE_ID ) )
-            // InternalCAMPAIGN.g:2094:1: ( RULE_ID )
+            // InternalCAMPAIGN.g:2174:1: ( ( RULE_ID ) )
+            // InternalCAMPAIGN.g:2175:1: ( RULE_ID )
             {
-            // InternalCAMPAIGN.g:2094:1: ( RULE_ID )
-            // InternalCAMPAIGN.g:2095:2: RULE_ID
+            // InternalCAMPAIGN.g:2175:1: ( RULE_ID )
+            // InternalCAMPAIGN.g:2176:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getIDTerminalRuleCall_0_1_1()); 
@@ -6542,14 +6805,14 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group_1__0"
-    // InternalCAMPAIGN.g:2105:1: rule__Version__Group_1__0 : rule__Version__Group_1__0__Impl rule__Version__Group_1__1 ;
+    // InternalCAMPAIGN.g:2186:1: rule__Version__Group_1__0 : rule__Version__Group_1__0__Impl rule__Version__Group_1__1 ;
     public final void rule__Version__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2109:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
-            // InternalCAMPAIGN.g:2110:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
+            // InternalCAMPAIGN.g:2190:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
+            // InternalCAMPAIGN.g:2191:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__Version__Group_1__0__Impl();
@@ -6580,17 +6843,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group_1__0__Impl"
-    // InternalCAMPAIGN.g:2117:1: rule__Version__Group_1__0__Impl : ( '.' ) ;
+    // InternalCAMPAIGN.g:2198:1: rule__Version__Group_1__0__Impl : ( '.' ) ;
     public final void rule__Version__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2121:1: ( ( '.' ) )
-            // InternalCAMPAIGN.g:2122:1: ( '.' )
+            // InternalCAMPAIGN.g:2202:1: ( ( '.' ) )
+            // InternalCAMPAIGN.g:2203:1: ( '.' )
             {
-            // InternalCAMPAIGN.g:2122:1: ( '.' )
-            // InternalCAMPAIGN.g:2123:2: '.'
+            // InternalCAMPAIGN.g:2203:1: ( '.' )
+            // InternalCAMPAIGN.g:2204:2: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getFullStopKeyword_1_0()); 
@@ -6621,14 +6884,14 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group_1__1"
-    // InternalCAMPAIGN.g:2132:1: rule__Version__Group_1__1 : rule__Version__Group_1__1__Impl ;
+    // InternalCAMPAIGN.g:2213:1: rule__Version__Group_1__1 : rule__Version__Group_1__1__Impl ;
     public final void rule__Version__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2136:1: ( rule__Version__Group_1__1__Impl )
-            // InternalCAMPAIGN.g:2137:2: rule__Version__Group_1__1__Impl
+            // InternalCAMPAIGN.g:2217:1: ( rule__Version__Group_1__1__Impl )
+            // InternalCAMPAIGN.g:2218:2: rule__Version__Group_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_1__1__Impl();
@@ -6654,23 +6917,23 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group_1__1__Impl"
-    // InternalCAMPAIGN.g:2143:1: rule__Version__Group_1__1__Impl : ( ( rule__Version__Alternatives_1_1 ) ) ;
+    // InternalCAMPAIGN.g:2224:1: rule__Version__Group_1__1__Impl : ( ( rule__Version__Alternatives_1_1 ) ) ;
     public final void rule__Version__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2147:1: ( ( ( rule__Version__Alternatives_1_1 ) ) )
-            // InternalCAMPAIGN.g:2148:1: ( ( rule__Version__Alternatives_1_1 ) )
+            // InternalCAMPAIGN.g:2228:1: ( ( ( rule__Version__Alternatives_1_1 ) ) )
+            // InternalCAMPAIGN.g:2229:1: ( ( rule__Version__Alternatives_1_1 ) )
             {
-            // InternalCAMPAIGN.g:2148:1: ( ( rule__Version__Alternatives_1_1 ) )
-            // InternalCAMPAIGN.g:2149:2: ( rule__Version__Alternatives_1_1 )
+            // InternalCAMPAIGN.g:2229:1: ( ( rule__Version__Alternatives_1_1 ) )
+            // InternalCAMPAIGN.g:2230:2: ( rule__Version__Alternatives_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getAlternatives_1_1()); 
             }
-            // InternalCAMPAIGN.g:2150:2: ( rule__Version__Alternatives_1_1 )
-            // InternalCAMPAIGN.g:2150:3: rule__Version__Alternatives_1_1
+            // InternalCAMPAIGN.g:2231:2: ( rule__Version__Alternatives_1_1 )
+            // InternalCAMPAIGN.g:2231:3: rule__Version__Alternatives_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Alternatives_1_1();
@@ -6705,14 +6968,14 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__0"
-    // InternalCAMPAIGN.g:2159:1: rule__Version__Group_1_1_1__0 : rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 ;
+    // InternalCAMPAIGN.g:2240:1: rule__Version__Group_1_1_1__0 : rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 ;
     public final void rule__Version__Group_1_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2163:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
-            // InternalCAMPAIGN.g:2164:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
+            // InternalCAMPAIGN.g:2244:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
+            // InternalCAMPAIGN.g:2245:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__Version__Group_1_1_1__0__Impl();
@@ -6743,31 +7006,31 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__0__Impl"
-    // InternalCAMPAIGN.g:2171:1: rule__Version__Group_1_1_1__0__Impl : ( ( RULE_INT )? ) ;
+    // InternalCAMPAIGN.g:2252:1: rule__Version__Group_1_1_1__0__Impl : ( ( RULE_INT )? ) ;
     public final void rule__Version__Group_1_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2175:1: ( ( ( RULE_INT )? ) )
-            // InternalCAMPAIGN.g:2176:1: ( ( RULE_INT )? )
+            // InternalCAMPAIGN.g:2256:1: ( ( ( RULE_INT )? ) )
+            // InternalCAMPAIGN.g:2257:1: ( ( RULE_INT )? )
             {
-            // InternalCAMPAIGN.g:2176:1: ( ( RULE_INT )? )
-            // InternalCAMPAIGN.g:2177:2: ( RULE_INT )?
+            // InternalCAMPAIGN.g:2257:1: ( ( RULE_INT )? )
+            // InternalCAMPAIGN.g:2258:2: ( RULE_INT )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_1_1_1_0()); 
             }
-            // InternalCAMPAIGN.g:2178:2: ( RULE_INT )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // InternalCAMPAIGN.g:2259:2: ( RULE_INT )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA10_0==RULE_INT) ) {
-                alt10=1;
+            if ( (LA11_0==RULE_INT) ) {
+                alt11=1;
             }
-            switch (alt10) {
+            switch (alt11) {
                 case 1 :
-                    // InternalCAMPAIGN.g:2178:3: RULE_INT
+                    // InternalCAMPAIGN.g:2259:3: RULE_INT
                     {
                     match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -6801,14 +7064,14 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__1"
-    // InternalCAMPAIGN.g:2186:1: rule__Version__Group_1_1_1__1 : rule__Version__Group_1_1_1__1__Impl ;
+    // InternalCAMPAIGN.g:2267:1: rule__Version__Group_1_1_1__1 : rule__Version__Group_1_1_1__1__Impl ;
     public final void rule__Version__Group_1_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2190:1: ( rule__Version__Group_1_1_1__1__Impl )
-            // InternalCAMPAIGN.g:2191:2: rule__Version__Group_1_1_1__1__Impl
+            // InternalCAMPAIGN.g:2271:1: ( rule__Version__Group_1_1_1__1__Impl )
+            // InternalCAMPAIGN.g:2272:2: rule__Version__Group_1_1_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_1_1_1__1__Impl();
@@ -6834,17 +7097,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__1__Impl"
-    // InternalCAMPAIGN.g:2197:1: rule__Version__Group_1_1_1__1__Impl : ( RULE_ID ) ;
+    // InternalCAMPAIGN.g:2278:1: rule__Version__Group_1_1_1__1__Impl : ( RULE_ID ) ;
     public final void rule__Version__Group_1_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2201:1: ( ( RULE_ID ) )
-            // InternalCAMPAIGN.g:2202:1: ( RULE_ID )
+            // InternalCAMPAIGN.g:2282:1: ( ( RULE_ID ) )
+            // InternalCAMPAIGN.g:2283:1: ( RULE_ID )
             {
-            // InternalCAMPAIGN.g:2202:1: ( RULE_ID )
-            // InternalCAMPAIGN.g:2203:2: RULE_ID
+            // InternalCAMPAIGN.g:2283:1: ( RULE_ID )
+            // InternalCAMPAIGN.g:2284:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getIDTerminalRuleCall_1_1_1_1()); 
@@ -6875,16 +7138,16 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__0"
-    // InternalCAMPAIGN.g:2213:1: rule__VersionedQualifiedName__Group__0 : rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 ;
+    // InternalCAMPAIGN.g:2294:1: rule__VersionedQualifiedName__Group__0 : rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 ;
     public final void rule__VersionedQualifiedName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2217:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
-            // InternalCAMPAIGN.g:2218:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
+            // InternalCAMPAIGN.g:2298:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
+            // InternalCAMPAIGN.g:2299:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_27);
             rule__VersionedQualifiedName__Group__0__Impl();
 
             state._fsp--;
@@ -6913,17 +7176,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__0__Impl"
-    // InternalCAMPAIGN.g:2225:1: rule__VersionedQualifiedName__Group__0__Impl : ( ruleQualifiedName ) ;
+    // InternalCAMPAIGN.g:2306:1: rule__VersionedQualifiedName__Group__0__Impl : ( ruleQualifiedName ) ;
     public final void rule__VersionedQualifiedName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2229:1: ( ( ruleQualifiedName ) )
-            // InternalCAMPAIGN.g:2230:1: ( ruleQualifiedName )
+            // InternalCAMPAIGN.g:2310:1: ( ( ruleQualifiedName ) )
+            // InternalCAMPAIGN.g:2311:1: ( ruleQualifiedName )
             {
-            // InternalCAMPAIGN.g:2230:1: ( ruleQualifiedName )
-            // InternalCAMPAIGN.g:2231:2: ruleQualifiedName
+            // InternalCAMPAIGN.g:2311:1: ( ruleQualifiedName )
+            // InternalCAMPAIGN.g:2312:2: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0()); 
@@ -6958,14 +7221,14 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__1"
-    // InternalCAMPAIGN.g:2240:1: rule__VersionedQualifiedName__Group__1 : rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 ;
+    // InternalCAMPAIGN.g:2321:1: rule__VersionedQualifiedName__Group__1 : rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 ;
     public final void rule__VersionedQualifiedName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2244:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
-            // InternalCAMPAIGN.g:2245:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
+            // InternalCAMPAIGN.g:2325:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
+            // InternalCAMPAIGN.g:2326:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__VersionedQualifiedName__Group__1__Impl();
@@ -6996,17 +7259,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__1__Impl"
-    // InternalCAMPAIGN.g:2252:1: rule__VersionedQualifiedName__Group__1__Impl : ( '(' ) ;
+    // InternalCAMPAIGN.g:2333:1: rule__VersionedQualifiedName__Group__1__Impl : ( '(' ) ;
     public final void rule__VersionedQualifiedName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2256:1: ( ( '(' ) )
-            // InternalCAMPAIGN.g:2257:1: ( '(' )
+            // InternalCAMPAIGN.g:2337:1: ( ( '(' ) )
+            // InternalCAMPAIGN.g:2338:1: ( '(' )
             {
-            // InternalCAMPAIGN.g:2257:1: ( '(' )
-            // InternalCAMPAIGN.g:2258:2: '('
+            // InternalCAMPAIGN.g:2338:1: ( '(' )
+            // InternalCAMPAIGN.g:2339:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getLeftParenthesisKeyword_1()); 
@@ -7037,16 +7300,16 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__2"
-    // InternalCAMPAIGN.g:2267:1: rule__VersionedQualifiedName__Group__2 : rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 ;
+    // InternalCAMPAIGN.g:2348:1: rule__VersionedQualifiedName__Group__2 : rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 ;
     public final void rule__VersionedQualifiedName__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2271:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
-            // InternalCAMPAIGN.g:2272:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
+            // InternalCAMPAIGN.g:2352:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
+            // InternalCAMPAIGN.g:2353:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_27);
+            pushFollow(FollowSets000.FOLLOW_28);
             rule__VersionedQualifiedName__Group__2__Impl();
 
             state._fsp--;
@@ -7075,17 +7338,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__2__Impl"
-    // InternalCAMPAIGN.g:2279:1: rule__VersionedQualifiedName__Group__2__Impl : ( ruleVersion ) ;
+    // InternalCAMPAIGN.g:2360:1: rule__VersionedQualifiedName__Group__2__Impl : ( ruleVersion ) ;
     public final void rule__VersionedQualifiedName__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2283:1: ( ( ruleVersion ) )
-            // InternalCAMPAIGN.g:2284:1: ( ruleVersion )
+            // InternalCAMPAIGN.g:2364:1: ( ( ruleVersion ) )
+            // InternalCAMPAIGN.g:2365:1: ( ruleVersion )
             {
-            // InternalCAMPAIGN.g:2284:1: ( ruleVersion )
-            // InternalCAMPAIGN.g:2285:2: ruleVersion
+            // InternalCAMPAIGN.g:2365:1: ( ruleVersion )
+            // InternalCAMPAIGN.g:2366:2: ruleVersion
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2()); 
@@ -7120,14 +7383,14 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__3"
-    // InternalCAMPAIGN.g:2294:1: rule__VersionedQualifiedName__Group__3 : rule__VersionedQualifiedName__Group__3__Impl ;
+    // InternalCAMPAIGN.g:2375:1: rule__VersionedQualifiedName__Group__3 : rule__VersionedQualifiedName__Group__3__Impl ;
     public final void rule__VersionedQualifiedName__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2298:1: ( rule__VersionedQualifiedName__Group__3__Impl )
-            // InternalCAMPAIGN.g:2299:2: rule__VersionedQualifiedName__Group__3__Impl
+            // InternalCAMPAIGN.g:2379:1: ( rule__VersionedQualifiedName__Group__3__Impl )
+            // InternalCAMPAIGN.g:2380:2: rule__VersionedQualifiedName__Group__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__VersionedQualifiedName__Group__3__Impl();
@@ -7153,17 +7416,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__3__Impl"
-    // InternalCAMPAIGN.g:2305:1: rule__VersionedQualifiedName__Group__3__Impl : ( ')' ) ;
+    // InternalCAMPAIGN.g:2386:1: rule__VersionedQualifiedName__Group__3__Impl : ( ')' ) ;
     public final void rule__VersionedQualifiedName__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2309:1: ( ( ')' ) )
-            // InternalCAMPAIGN.g:2310:1: ( ')' )
+            // InternalCAMPAIGN.g:2390:1: ( ( ')' ) )
+            // InternalCAMPAIGN.g:2391:1: ( ')' )
             {
-            // InternalCAMPAIGN.g:2310:1: ( ')' )
-            // InternalCAMPAIGN.g:2311:2: ')'
+            // InternalCAMPAIGN.g:2391:1: ( ')' )
+            // InternalCAMPAIGN.g:2392:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3()); 
@@ -7194,17 +7457,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSModelFile__ImportsAssignment_0"
-    // InternalCAMPAIGN.g:2321:1: rule__GSSModelFile__ImportsAssignment_0 : ( ruleGSSModelFileImport ) ;
+    // InternalCAMPAIGN.g:2402:1: rule__GSSModelFile__ImportsAssignment_0 : ( ruleGSSModelFileImport ) ;
     public final void rule__GSSModelFile__ImportsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2325:1: ( ( ruleGSSModelFileImport ) )
-            // InternalCAMPAIGN.g:2326:2: ( ruleGSSModelFileImport )
+            // InternalCAMPAIGN.g:2406:1: ( ( ruleGSSModelFileImport ) )
+            // InternalCAMPAIGN.g:2407:2: ( ruleGSSModelFileImport )
             {
-            // InternalCAMPAIGN.g:2326:2: ( ruleGSSModelFileImport )
-            // InternalCAMPAIGN.g:2327:3: ruleGSSModelFileImport
+            // InternalCAMPAIGN.g:2407:2: ( ruleGSSModelFileImport )
+            // InternalCAMPAIGN.g:2408:3: ruleGSSModelFileImport
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileAccess().getImportsGSSModelFileImportParserRuleCall_0_0()); 
@@ -7239,17 +7502,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSModelFile__ElementAssignment_1"
-    // InternalCAMPAIGN.g:2336:1: rule__GSSModelFile__ElementAssignment_1 : ( ruleGSSCampaignCampaign ) ;
+    // InternalCAMPAIGN.g:2417:1: rule__GSSModelFile__ElementAssignment_1 : ( ruleGSSCampaignCampaign ) ;
     public final void rule__GSSModelFile__ElementAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2340:1: ( ( ruleGSSCampaignCampaign ) )
-            // InternalCAMPAIGN.g:2341:2: ( ruleGSSCampaignCampaign )
+            // InternalCAMPAIGN.g:2421:1: ( ( ruleGSSCampaignCampaign ) )
+            // InternalCAMPAIGN.g:2422:2: ( ruleGSSCampaignCampaign )
             {
-            // InternalCAMPAIGN.g:2341:2: ( ruleGSSCampaignCampaign )
-            // InternalCAMPAIGN.g:2342:3: ruleGSSCampaignCampaign
+            // InternalCAMPAIGN.g:2422:2: ( ruleGSSCampaignCampaign )
+            // InternalCAMPAIGN.g:2423:3: ruleGSSCampaignCampaign
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileAccess().getElementGSSCampaignCampaignParserRuleCall_1_0()); 
@@ -7284,17 +7547,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSModelFileImport__ImportURIAssignment_2"
-    // InternalCAMPAIGN.g:2351:1: rule__GSSModelFileImport__ImportURIAssignment_2 : ( RULE_STRING ) ;
+    // InternalCAMPAIGN.g:2432:1: rule__GSSModelFileImport__ImportURIAssignment_2 : ( RULE_STRING ) ;
     public final void rule__GSSModelFileImport__ImportURIAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2355:1: ( ( RULE_STRING ) )
-            // InternalCAMPAIGN.g:2356:2: ( RULE_STRING )
+            // InternalCAMPAIGN.g:2436:1: ( ( RULE_STRING ) )
+            // InternalCAMPAIGN.g:2437:2: ( RULE_STRING )
             {
-            // InternalCAMPAIGN.g:2356:2: ( RULE_STRING )
-            // InternalCAMPAIGN.g:2357:3: RULE_STRING
+            // InternalCAMPAIGN.g:2437:2: ( RULE_STRING )
+            // InternalCAMPAIGN.g:2438:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
@@ -7325,17 +7588,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignCampaign__NameAssignment_1"
-    // InternalCAMPAIGN.g:2366:1: rule__GSSCampaignCampaign__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalCAMPAIGN.g:2447:1: rule__GSSCampaignCampaign__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__GSSCampaignCampaign__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2370:1: ( ( RULE_ID ) )
-            // InternalCAMPAIGN.g:2371:2: ( RULE_ID )
+            // InternalCAMPAIGN.g:2451:1: ( ( RULE_ID ) )
+            // InternalCAMPAIGN.g:2452:2: ( RULE_ID )
             {
-            // InternalCAMPAIGN.g:2371:2: ( RULE_ID )
-            // InternalCAMPAIGN.g:2372:3: RULE_ID
+            // InternalCAMPAIGN.g:2452:2: ( RULE_ID )
+            // InternalCAMPAIGN.g:2453:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getNameIDTerminalRuleCall_1_0()); 
@@ -7366,17 +7629,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignCampaign__UriAssignment_3_2"
-    // InternalCAMPAIGN.g:2381:1: rule__GSSCampaignCampaign__UriAssignment_3_2 : ( ruleQualifiedName ) ;
+    // InternalCAMPAIGN.g:2462:1: rule__GSSCampaignCampaign__UriAssignment_3_2 : ( ruleQualifiedName ) ;
     public final void rule__GSSCampaignCampaign__UriAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2385:1: ( ( ruleQualifiedName ) )
-            // InternalCAMPAIGN.g:2386:2: ( ruleQualifiedName )
+            // InternalCAMPAIGN.g:2466:1: ( ( ruleQualifiedName ) )
+            // InternalCAMPAIGN.g:2467:2: ( ruleQualifiedName )
             {
-            // InternalCAMPAIGN.g:2386:2: ( ruleQualifiedName )
-            // InternalCAMPAIGN.g:2387:3: ruleQualifiedName
+            // InternalCAMPAIGN.g:2467:2: ( ruleQualifiedName )
+            // InternalCAMPAIGN.g:2468:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getUriQualifiedNameParserRuleCall_3_2_0()); 
@@ -7411,17 +7674,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignCampaign__VersionAssignment_6"
-    // InternalCAMPAIGN.g:2396:1: rule__GSSCampaignCampaign__VersionAssignment_6 : ( ruleVersion ) ;
+    // InternalCAMPAIGN.g:2477:1: rule__GSSCampaignCampaign__VersionAssignment_6 : ( ruleVersion ) ;
     public final void rule__GSSCampaignCampaign__VersionAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2400:1: ( ( ruleVersion ) )
-            // InternalCAMPAIGN.g:2401:2: ( ruleVersion )
+            // InternalCAMPAIGN.g:2481:1: ( ( ruleVersion ) )
+            // InternalCAMPAIGN.g:2482:2: ( ruleVersion )
             {
-            // InternalCAMPAIGN.g:2401:2: ( ruleVersion )
-            // InternalCAMPAIGN.g:2402:3: ruleVersion
+            // InternalCAMPAIGN.g:2482:2: ( ruleVersion )
+            // InternalCAMPAIGN.g:2483:3: ruleVersion
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getVersionVersionParserRuleCall_6_0()); 
@@ -7456,17 +7719,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignCampaign__ScenarioAssignment_8"
-    // InternalCAMPAIGN.g:2411:1: rule__GSSCampaignCampaign__ScenarioAssignment_8 : ( ruleGSSCampaignScenario ) ;
+    // InternalCAMPAIGN.g:2492:1: rule__GSSCampaignCampaign__ScenarioAssignment_8 : ( ruleGSSCampaignScenario ) ;
     public final void rule__GSSCampaignCampaign__ScenarioAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2415:1: ( ( ruleGSSCampaignScenario ) )
-            // InternalCAMPAIGN.g:2416:2: ( ruleGSSCampaignScenario )
+            // InternalCAMPAIGN.g:2496:1: ( ( ruleGSSCampaignScenario ) )
+            // InternalCAMPAIGN.g:2497:2: ( ruleGSSCampaignScenario )
             {
-            // InternalCAMPAIGN.g:2416:2: ( ruleGSSCampaignScenario )
-            // InternalCAMPAIGN.g:2417:3: ruleGSSCampaignScenario
+            // InternalCAMPAIGN.g:2497:2: ( ruleGSSCampaignScenario )
+            // InternalCAMPAIGN.g:2498:3: ruleGSSCampaignScenario
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getScenarioGSSCampaignScenarioParserRuleCall_8_0()); 
@@ -7501,17 +7764,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignCampaign__TestsAssignment_9"
-    // InternalCAMPAIGN.g:2426:1: rule__GSSCampaignCampaign__TestsAssignment_9 : ( ruleGSSCampaignTests ) ;
+    // InternalCAMPAIGN.g:2507:1: rule__GSSCampaignCampaign__TestsAssignment_9 : ( ruleGSSCampaignTests ) ;
     public final void rule__GSSCampaignCampaign__TestsAssignment_9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2430:1: ( ( ruleGSSCampaignTests ) )
-            // InternalCAMPAIGN.g:2431:2: ( ruleGSSCampaignTests )
+            // InternalCAMPAIGN.g:2511:1: ( ( ruleGSSCampaignTests ) )
+            // InternalCAMPAIGN.g:2512:2: ( ruleGSSCampaignTests )
             {
-            // InternalCAMPAIGN.g:2431:2: ( ruleGSSCampaignTests )
-            // InternalCAMPAIGN.g:2432:3: ruleGSSCampaignTests
+            // InternalCAMPAIGN.g:2512:2: ( ruleGSSCampaignTests )
+            // InternalCAMPAIGN.g:2513:3: ruleGSSCampaignTests
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignCampaignAccess().getTestsGSSCampaignTestsParserRuleCall_9_0()); 
@@ -7546,23 +7809,23 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignScenario__EnvironmentAssignment_4"
-    // InternalCAMPAIGN.g:2441:1: rule__GSSCampaignScenario__EnvironmentAssignment_4 : ( ( ruleVersionedQualifiedName ) ) ;
+    // InternalCAMPAIGN.g:2522:1: rule__GSSCampaignScenario__EnvironmentAssignment_4 : ( ( ruleVersionedQualifiedName ) ) ;
     public final void rule__GSSCampaignScenario__EnvironmentAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2445:1: ( ( ( ruleVersionedQualifiedName ) ) )
-            // InternalCAMPAIGN.g:2446:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalCAMPAIGN.g:2526:1: ( ( ( ruleVersionedQualifiedName ) ) )
+            // InternalCAMPAIGN.g:2527:2: ( ( ruleVersionedQualifiedName ) )
             {
-            // InternalCAMPAIGN.g:2446:2: ( ( ruleVersionedQualifiedName ) )
-            // InternalCAMPAIGN.g:2447:3: ( ruleVersionedQualifiedName )
+            // InternalCAMPAIGN.g:2527:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalCAMPAIGN.g:2528:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentGSSEnvironmentEnvironmentCrossReference_4_0()); 
             }
-            // InternalCAMPAIGN.g:2448:3: ( ruleVersionedQualifiedName )
-            // InternalCAMPAIGN.g:2449:4: ruleVersionedQualifiedName
+            // InternalCAMPAIGN.g:2529:3: ( ruleVersionedQualifiedName )
+            // InternalCAMPAIGN.g:2530:4: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentGSSEnvironmentEnvironmentVersionedQualifiedNameParserRuleCall_4_0_1()); 
@@ -7603,23 +7866,23 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignScenario__ScenarioRefAssignment_8"
-    // InternalCAMPAIGN.g:2460:1: rule__GSSCampaignScenario__ScenarioRefAssignment_8 : ( ( RULE_STRING ) ) ;
+    // InternalCAMPAIGN.g:2541:1: rule__GSSCampaignScenario__ScenarioRefAssignment_8 : ( ( RULE_STRING ) ) ;
     public final void rule__GSSCampaignScenario__ScenarioRefAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2464:1: ( ( ( RULE_STRING ) ) )
-            // InternalCAMPAIGN.g:2465:2: ( ( RULE_STRING ) )
+            // InternalCAMPAIGN.g:2545:1: ( ( ( RULE_STRING ) ) )
+            // InternalCAMPAIGN.g:2546:2: ( ( RULE_STRING ) )
             {
-            // InternalCAMPAIGN.g:2465:2: ( ( RULE_STRING ) )
-            // InternalCAMPAIGN.g:2466:3: ( RULE_STRING )
+            // InternalCAMPAIGN.g:2546:2: ( ( RULE_STRING ) )
+            // InternalCAMPAIGN.g:2547:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefGSSScenarioScenarioCrossReference_8_0()); 
             }
-            // InternalCAMPAIGN.g:2467:3: ( RULE_STRING )
-            // InternalCAMPAIGN.g:2468:4: RULE_STRING
+            // InternalCAMPAIGN.g:2548:3: ( RULE_STRING )
+            // InternalCAMPAIGN.g:2549:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefGSSScenarioScenarioSTRINGTerminalRuleCall_8_0_1()); 
@@ -7656,17 +7919,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignTests__TestCaseAssignment_2"
-    // InternalCAMPAIGN.g:2479:1: rule__GSSCampaignTests__TestCaseAssignment_2 : ( ruleGSSCampaignTestCase ) ;
+    // InternalCAMPAIGN.g:2560:1: rule__GSSCampaignTests__TestCaseAssignment_2 : ( ruleGSSCampaignTestCase ) ;
     public final void rule__GSSCampaignTests__TestCaseAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2483:1: ( ( ruleGSSCampaignTestCase ) )
-            // InternalCAMPAIGN.g:2484:2: ( ruleGSSCampaignTestCase )
+            // InternalCAMPAIGN.g:2564:1: ( ( ruleGSSCampaignTestCase ) )
+            // InternalCAMPAIGN.g:2565:2: ( ruleGSSCampaignTestCase )
             {
-            // InternalCAMPAIGN.g:2484:2: ( ruleGSSCampaignTestCase )
-            // InternalCAMPAIGN.g:2485:3: ruleGSSCampaignTestCase
+            // InternalCAMPAIGN.g:2565:2: ( ruleGSSCampaignTestCase )
+            // InternalCAMPAIGN.g:2566:3: ruleGSSCampaignTestCase
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestsAccess().getTestCaseGSSCampaignTestCaseParserRuleCall_2_0()); 
@@ -7701,17 +7964,17 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignTestCase__NameAssignment_4"
-    // InternalCAMPAIGN.g:2494:1: rule__GSSCampaignTestCase__NameAssignment_4 : ( RULE_STRING ) ;
+    // InternalCAMPAIGN.g:2575:1: rule__GSSCampaignTestCase__NameAssignment_4 : ( RULE_STRING ) ;
     public final void rule__GSSCampaignTestCase__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2498:1: ( ( RULE_STRING ) )
-            // InternalCAMPAIGN.g:2499:2: ( RULE_STRING )
+            // InternalCAMPAIGN.g:2579:1: ( ( RULE_STRING ) )
+            // InternalCAMPAIGN.g:2580:2: ( RULE_STRING )
             {
-            // InternalCAMPAIGN.g:2499:2: ( RULE_STRING )
-            // InternalCAMPAIGN.g:2500:3: RULE_STRING
+            // InternalCAMPAIGN.g:2580:2: ( RULE_STRING )
+            // InternalCAMPAIGN.g:2581:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestCaseAccess().getNameSTRINGTerminalRuleCall_4_0()); 
@@ -7742,23 +8005,23 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSCampaignTestCase__ProcedureAssignment_8"
-    // InternalCAMPAIGN.g:2509:1: rule__GSSCampaignTestCase__ProcedureAssignment_8 : ( ( ruleVersionedQualifiedName ) ) ;
+    // InternalCAMPAIGN.g:2590:1: rule__GSSCampaignTestCase__ProcedureAssignment_8 : ( ( ruleVersionedQualifiedName ) ) ;
     public final void rule__GSSCampaignTestCase__ProcedureAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2513:1: ( ( ( ruleVersionedQualifiedName ) ) )
-            // InternalCAMPAIGN.g:2514:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalCAMPAIGN.g:2594:1: ( ( ( ruleVersionedQualifiedName ) ) )
+            // InternalCAMPAIGN.g:2595:2: ( ( ruleVersionedQualifiedName ) )
             {
-            // InternalCAMPAIGN.g:2514:2: ( ( ruleVersionedQualifiedName ) )
-            // InternalCAMPAIGN.g:2515:3: ( ruleVersionedQualifiedName )
+            // InternalCAMPAIGN.g:2595:2: ( ( ruleVersionedQualifiedName ) )
+            // InternalCAMPAIGN.g:2596:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestCaseAccess().getProcedureGSSTestProcTestProcCrossReference_8_0()); 
             }
-            // InternalCAMPAIGN.g:2516:3: ( ruleVersionedQualifiedName )
-            // InternalCAMPAIGN.g:2517:4: ruleVersionedQualifiedName
+            // InternalCAMPAIGN.g:2597:3: ( ruleVersionedQualifiedName )
+            // InternalCAMPAIGN.g:2598:4: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSCampaignTestCaseAccess().getProcedureGSSTestProcTestProcVersionedQualifiedNameParserRuleCall_8_0_1()); 
@@ -7798,25 +8061,25 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__GSSCampaignTestCase__ProcedureAssignment_8"
 
 
-    // $ANTLR start "rule__GSSCampaignTestCase__ReqAssignment_10_1"
-    // InternalCAMPAIGN.g:2528:1: rule__GSSCampaignTestCase__ReqAssignment_10_1 : ( RULE_ID ) ;
-    public final void rule__GSSCampaignTestCase__ReqAssignment_10_1() throws RecognitionException {
+    // $ANTLR start "rule__GSSCampaignTestCase__PrevMsgAssignment_10_1"
+    // InternalCAMPAIGN.g:2609:1: rule__GSSCampaignTestCase__PrevMsgAssignment_10_1 : ( RULE_ID ) ;
+    public final void rule__GSSCampaignTestCase__PrevMsgAssignment_10_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2532:1: ( ( RULE_ID ) )
-            // InternalCAMPAIGN.g:2533:2: ( RULE_ID )
+            // InternalCAMPAIGN.g:2613:1: ( ( RULE_ID ) )
+            // InternalCAMPAIGN.g:2614:2: ( RULE_ID )
             {
-            // InternalCAMPAIGN.g:2533:2: ( RULE_ID )
-            // InternalCAMPAIGN.g:2534:3: RULE_ID
+            // InternalCAMPAIGN.g:2614:2: ( RULE_ID )
+            // InternalCAMPAIGN.g:2615:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSCampaignTestCaseAccess().getReqIDTerminalRuleCall_10_1_0()); 
+               before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0()); 
             }
             match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSCampaignTestCaseAccess().getReqIDTerminalRuleCall_10_1_0()); 
+               after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0()); 
             }
 
             }
@@ -7836,32 +8099,32 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__GSSCampaignTestCase__ReqAssignment_10_1"
+    // $ANTLR end "rule__GSSCampaignTestCase__PrevMsgAssignment_10_1"
 
 
-    // $ANTLR start "rule__GSSCampaignTestCase__ReqActionAssignment_11_1"
-    // InternalCAMPAIGN.g:2543:1: rule__GSSCampaignTestCase__ReqActionAssignment_11_1 : ( ruleGSSCampaignTestReqAction ) ;
-    public final void rule__GSSCampaignTestCase__ReqActionAssignment_11_1() throws RecognitionException {
+    // $ANTLR start "rule__GSSCampaignTestCase__PrevActionAssignment_11_1"
+    // InternalCAMPAIGN.g:2624:1: rule__GSSCampaignTestCase__PrevActionAssignment_11_1 : ( ruleGSSTestProcPrevAction ) ;
+    public final void rule__GSSCampaignTestCase__PrevActionAssignment_11_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCAMPAIGN.g:2547:1: ( ( ruleGSSCampaignTestReqAction ) )
-            // InternalCAMPAIGN.g:2548:2: ( ruleGSSCampaignTestReqAction )
+            // InternalCAMPAIGN.g:2628:1: ( ( ruleGSSTestProcPrevAction ) )
+            // InternalCAMPAIGN.g:2629:2: ( ruleGSSTestProcPrevAction )
             {
-            // InternalCAMPAIGN.g:2548:2: ( ruleGSSCampaignTestReqAction )
-            // InternalCAMPAIGN.g:2549:3: ruleGSSCampaignTestReqAction
+            // InternalCAMPAIGN.g:2629:2: ( ruleGSSTestProcPrevAction )
+            // InternalCAMPAIGN.g:2630:3: ruleGSSTestProcPrevAction
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionGSSCampaignTestReqActionEnumRuleCall_11_1_0()); 
+               before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSCampaignTestReqAction();
+            ruleGSSTestProcPrevAction();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionGSSCampaignTestReqActionEnumRuleCall_11_1_0()); 
+               after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0()); 
             }
 
             }
@@ -7881,7 +8144,48 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__GSSCampaignTestCase__ReqActionAssignment_11_1"
+    // $ANTLR end "rule__GSSCampaignTestCase__PrevActionAssignment_11_1"
+
+
+    // $ANTLR start "rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1"
+    // InternalCAMPAIGN.g:2639:1: rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1 : ( RULE_STRING ) ;
+    public final void rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalCAMPAIGN.g:2643:1: ( ( RULE_STRING ) )
+            // InternalCAMPAIGN.g:2644:2: ( RULE_STRING )
+            {
+            // InternalCAMPAIGN.g:2644:2: ( RULE_STRING )
+            // InternalCAMPAIGN.g:2645:3: RULE_STRING
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0()); 
+            }
+            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1"
 
     // Delegated rules
 
@@ -7892,31 +8196,32 @@ public class InternalCAMPAIGNParser extends AbstractInternalContentAssistParser 
     private static class FollowSets000 {
         public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000002002L});
-        public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000001002L});
+        public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000002000L});
         public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000004000L});
         public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000100000L});
-        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000010000L});
+        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000020000L});
         public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000400000L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000002000002L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000030080000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000040000000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000040000002L});
-        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000100000000L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000100000L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000200000L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000400000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000001000002L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000004000000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000018040000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000800L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000040000002L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000080000000L});
+        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000100000000L});
     }
 
 

@@ -42,11 +42,8 @@ public class CAMPAIGNParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 					put(grammarAccess.getVersionAccess().getAlternatives_0(), "rule__Version__Alternatives_0");
 					put(grammarAccess.getVersionAccess().getAlternatives_1_1(), "rule__Version__Alternatives_1_1");
-					put(grammarAccess.getINTEGERAccess().getAlternatives(), "rule__INTEGER__Alternatives");
-					put(grammarAccess.getEBooleanAccess().getAlternatives(), "rule__EBoolean__Alternatives");
 					put(grammarAccess.getGSSModelFileAccess().getGroup(), "rule__GSSModelFile__Group__0");
 					put(grammarAccess.getGSSModelFileImportAccess().getGroup(), "rule__GSSModelFileImport__Group__0");
 					put(grammarAccess.getGSSCampaignCampaignAccess().getGroup(), "rule__GSSCampaignCampaign__Group__0");
@@ -56,6 +53,7 @@ public class CAMPAIGNParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSCampaignTestCaseAccess().getGroup(), "rule__GSSCampaignTestCase__Group__0");
 					put(grammarAccess.getGSSCampaignTestCaseAccess().getGroup_10(), "rule__GSSCampaignTestCase__Group_10__0");
 					put(grammarAccess.getGSSCampaignTestCaseAccess().getGroup_11(), "rule__GSSCampaignTestCase__Group_11__0");
+					put(grammarAccess.getGSSCampaignTestCaseAccess().getGroup_11_2(), "rule__GSSCampaignTestCase__Group_11_2__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getVersionAccess().getGroup(), "rule__Version__Group__0");
@@ -63,18 +61,6 @@ public class CAMPAIGNParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVersionAccess().getGroup_1(), "rule__Version__Group_1__0");
 					put(grammarAccess.getVersionAccess().getGroup_1_1_1(), "rule__Version__Group_1_1_1__0");
 					put(grammarAccess.getVersionedQualifiedNameAccess().getGroup(), "rule__VersionedQualifiedName__Group__0");
-					put(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup(), "rule__VersionedQualifiedReferenceName__Group__0");
-					put(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup_0(), "rule__VersionedQualifiedReferenceName__Group_0__0");
-					put(grammarAccess.getVersionedQualifiedReferenceNameAccess().getGroup_2(), "rule__VersionedQualifiedReferenceName__Group_2__0");
-					put(grammarAccess.getINTEGERAccess().getGroup_0(), "rule__INTEGER__Group_0__0");
-					put(grammarAccess.getREALAccess().getGroup(), "rule__REAL__Group__0");
-					put(grammarAccess.getREALAccess().getGroup_1(), "rule__REAL__Group_1__0");
-					put(grammarAccess.getREALAccess().getGroup_2(), "rule__REAL__Group_2__0");
-					put(grammarAccess.getDATEAccess().getGroup(), "rule__DATE__Group__0");
-					put(grammarAccess.getURLAccess().getGroup(), "rule__URL__Group__0");
-					put(grammarAccess.getURLAccess().getGroup_1(), "rule__URL__Group_1__0");
-					put(grammarAccess.getURLAccess().getGroup_3(), "rule__URL__Group_3__0");
-					put(grammarAccess.getURLAccess().getGroup_4(), "rule__URL__Group_4__0");
 					put(grammarAccess.getGSSModelFileAccess().getImportsAssignment_0(), "rule__GSSModelFile__ImportsAssignment_0");
 					put(grammarAccess.getGSSModelFileAccess().getElementAssignment_1(), "rule__GSSModelFile__ElementAssignment_1");
 					put(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_2(), "rule__GSSModelFileImport__ImportURIAssignment_2");
@@ -88,8 +74,9 @@ public class CAMPAIGNParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSCampaignTestsAccess().getTestCaseAssignment_2(), "rule__GSSCampaignTests__TestCaseAssignment_2");
 					put(grammarAccess.getGSSCampaignTestCaseAccess().getNameAssignment_4(), "rule__GSSCampaignTestCase__NameAssignment_4");
 					put(grammarAccess.getGSSCampaignTestCaseAccess().getProcedureAssignment_8(), "rule__GSSCampaignTestCase__ProcedureAssignment_8");
-					put(grammarAccess.getGSSCampaignTestCaseAccess().getReqAssignment_10_1(), "rule__GSSCampaignTestCase__ReqAssignment_10_1");
-					put(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionAssignment_11_1(), "rule__GSSCampaignTestCase__ReqActionAssignment_11_1");
+					put(grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgAssignment_10_1(), "rule__GSSCampaignTestCase__PrevMsgAssignment_10_1");
+					put(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionAssignment_11_1(), "rule__GSSCampaignTestCase__PrevActionAssignment_11_1");
+					put(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamAssignment_11_2_1(), "rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1");
 				}
 			};
 		}

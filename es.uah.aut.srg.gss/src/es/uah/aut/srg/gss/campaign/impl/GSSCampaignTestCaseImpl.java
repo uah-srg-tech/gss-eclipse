@@ -11,9 +11,9 @@
 package es.uah.aut.srg.gss.campaign.impl;
 
 import es.uah.aut.srg.gss.campaign.GSSCampaignTestCase;
-import es.uah.aut.srg.gss.campaign.GSSCampaignTestReqAction;
 import es.uah.aut.srg.gss.campaign.campaignPackage;
 
+import es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -34,8 +34,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl#getProcedure <em>Procedure</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl#getReq <em>Req</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl#getReqAction <em>Req Action</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl#getPrevMsg <em>Prev Msg</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl#getPrevAction <em>Prev Action</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.campaign.impl.GSSCampaignTestCaseImpl#getPrevActionParam <em>Prev Action Param</em>}</li>
  * </ul>
  *
  * @generated
@@ -72,53 +73,64 @@ public class GSSCampaignTestCaseImpl extends MinimalEObjectImpl.Container implem
 	protected GSSTestProcTestProc procedure;
 
 	/**
-	 * The default value of the '{@link #getReq() <em>Req</em>}' attribute.
+	 * The default value of the '{@link #getPrevMsg() <em>Prev Msg</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReq()
+	 * @see #getPrevMsg()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REQ_EDEFAULT = null;
+	protected static final String PREV_MSG_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getReq() <em>Req</em>}' attribute.
+	 * The cached value of the '{@link #getPrevMsg() <em>Prev Msg</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReq()
+	 * @see #getPrevMsg()
 	 * @generated
 	 * @ordered
 	 */
-	protected String req = REQ_EDEFAULT;
+	protected String prevMsg = PREV_MSG_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getReqAction() <em>Req Action</em>}' attribute.
+	 * The default value of the '{@link #getPrevAction() <em>Prev Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReqAction()
+	 * @see #getPrevAction()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final GSSCampaignTestReqAction REQ_ACTION_EDEFAULT = GSSCampaignTestReqAction._1;
+	protected static final GSSTestProcPrevAction PREV_ACTION_EDEFAULT = GSSTestProcPrevAction.RESET;
 
 	/**
-	 * The cached value of the '{@link #getReqAction() <em>Req Action</em>}' attribute.
+	 * The cached value of the '{@link #getPrevAction() <em>Prev Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReqAction()
+	 * @see #getPrevAction()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSCampaignTestReqAction reqAction = REQ_ACTION_EDEFAULT;
+	protected GSSTestProcPrevAction prevAction = PREV_ACTION_EDEFAULT;
 
 	/**
-	 * This is true if the Req Action attribute has been set.
+	 * The default value of the '{@link #getPrevActionParam() <em>Prev Action Param</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see #getPrevActionParam()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean reqActionESet;
+	protected static final String PREV_ACTION_PARAM_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPrevActionParam() <em>Prev Action Param</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrevActionParam()
+	 * @generated
+	 * @ordered
+	 */
+	protected String prevActionParam = PREV_ACTION_PARAM_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -203,8 +215,8 @@ public class GSSCampaignTestCaseImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getReq() {
-		return req;
+	public String getPrevMsg() {
+		return prevMsg;
 	}
 
 	/**
@@ -212,11 +224,11 @@ public class GSSCampaignTestCaseImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReq(String newReq) {
-		String oldReq = req;
-		req = newReq;
+	public void setPrevMsg(String newPrevMsg) {
+		String oldPrevMsg = prevMsg;
+		prevMsg = newPrevMsg;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ, oldReq, req));
+			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_MSG, oldPrevMsg, prevMsg));
 	}
 
 	/**
@@ -224,8 +236,8 @@ public class GSSCampaignTestCaseImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSCampaignTestReqAction getReqAction() {
-		return reqAction;
+	public GSSTestProcPrevAction getPrevAction() {
+		return prevAction;
 	}
 
 	/**
@@ -233,13 +245,11 @@ public class GSSCampaignTestCaseImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReqAction(GSSCampaignTestReqAction newReqAction) {
-		GSSCampaignTestReqAction oldReqAction = reqAction;
-		reqAction = newReqAction == null ? REQ_ACTION_EDEFAULT : newReqAction;
-		boolean oldReqActionESet = reqActionESet;
-		reqActionESet = true;
+	public void setPrevAction(GSSTestProcPrevAction newPrevAction) {
+		GSSTestProcPrevAction oldPrevAction = prevAction;
+		prevAction = newPrevAction == null ? PREV_ACTION_EDEFAULT : newPrevAction;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ_ACTION, oldReqAction, reqAction, !oldReqActionESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_ACTION, oldPrevAction, prevAction));
 	}
 
 	/**
@@ -247,22 +257,20 @@ public class GSSCampaignTestCaseImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void unsetReqAction() {
-		GSSCampaignTestReqAction oldReqAction = reqAction;
-		boolean oldReqActionESet = reqActionESet;
-		reqAction = REQ_ACTION_EDEFAULT;
-		reqActionESet = false;
+	public String getPrevActionParam() {
+		return prevActionParam;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPrevActionParam(String newPrevActionParam) {
+		String oldPrevActionParam = prevActionParam;
+		prevActionParam = newPrevActionParam;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ_ACTION, oldReqAction, REQ_ACTION_EDEFAULT, oldReqActionESet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetReqAction() {
-		return reqActionESet;
+			eNotify(new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_ACTION_PARAM, oldPrevActionParam, prevActionParam));
 	}
 
 	/**
@@ -278,10 +286,12 @@ public class GSSCampaignTestCaseImpl extends MinimalEObjectImpl.Container implem
 			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PROCEDURE:
 				if (resolve) return getProcedure();
 				return basicGetProcedure();
-			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ:
-				return getReq();
-			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ_ACTION:
-				return getReqAction();
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_MSG:
+				return getPrevMsg();
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_ACTION:
+				return getPrevAction();
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_ACTION_PARAM:
+				return getPrevActionParam();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -300,11 +310,14 @@ public class GSSCampaignTestCaseImpl extends MinimalEObjectImpl.Container implem
 			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PROCEDURE:
 				setProcedure((GSSTestProcTestProc)newValue);
 				return;
-			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ:
-				setReq((String)newValue);
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_MSG:
+				setPrevMsg((String)newValue);
 				return;
-			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ_ACTION:
-				setReqAction((GSSCampaignTestReqAction)newValue);
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_ACTION:
+				setPrevAction((GSSTestProcPrevAction)newValue);
+				return;
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_ACTION_PARAM:
+				setPrevActionParam((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -324,11 +337,14 @@ public class GSSCampaignTestCaseImpl extends MinimalEObjectImpl.Container implem
 			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PROCEDURE:
 				setProcedure((GSSTestProcTestProc)null);
 				return;
-			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ:
-				setReq(REQ_EDEFAULT);
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_MSG:
+				setPrevMsg(PREV_MSG_EDEFAULT);
 				return;
-			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ_ACTION:
-				unsetReqAction();
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_ACTION:
+				setPrevAction(PREV_ACTION_EDEFAULT);
+				return;
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_ACTION_PARAM:
+				setPrevActionParam(PREV_ACTION_PARAM_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -346,10 +362,12 @@ public class GSSCampaignTestCaseImpl extends MinimalEObjectImpl.Container implem
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PROCEDURE:
 				return procedure != null;
-			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ:
-				return REQ_EDEFAULT == null ? req != null : !REQ_EDEFAULT.equals(req);
-			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__REQ_ACTION:
-				return isSetReqAction();
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_MSG:
+				return PREV_MSG_EDEFAULT == null ? prevMsg != null : !PREV_MSG_EDEFAULT.equals(prevMsg);
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_ACTION:
+				return prevAction != PREV_ACTION_EDEFAULT;
+			case campaignPackage.GSS_CAMPAIGN_TEST_CASE__PREV_ACTION_PARAM:
+				return PREV_ACTION_PARAM_EDEFAULT == null ? prevActionParam != null : !PREV_ACTION_PARAM_EDEFAULT.equals(prevActionParam);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -366,10 +384,12 @@ public class GSSCampaignTestCaseImpl extends MinimalEObjectImpl.Container implem
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", req: ");
-		result.append(req);
-		result.append(", reqAction: ");
-		if (reqActionESet) result.append(reqAction); else result.append("<unset>");
+		result.append(", prevMsg: ");
+		result.append(prevMsg);
+		result.append(", prevAction: ");
+		result.append(prevAction);
+		result.append(", prevActionParam: ");
+		result.append(prevActionParam);
 		result.append(')');
 		return result.toString();
 	}

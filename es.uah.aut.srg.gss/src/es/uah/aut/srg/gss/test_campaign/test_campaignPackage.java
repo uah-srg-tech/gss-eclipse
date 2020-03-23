@@ -84,13 +84,13 @@ public interface test_campaignPackage extends EPackage {
 	int GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Test proc</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Test</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST_PROC = 1;
+	int GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST = 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Test Campaign Test Campaign</em>' class.
@@ -109,6 +109,80 @@ public interface test_campaignPackage extends EPackage {
 	 * @ordered
 	 */
 	int GSS_TEST_CAMPAIGN_TEST_CAMPAIGN_OPERATION_COUNT = 0;
+
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_campaign.impl.GSSTestCampaignTestImpl <em>GSS Test Campaign Test</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.test_campaign.impl.GSSTestCampaignTestImpl
+	 * @see es.uah.aut.srg.gss.test_campaign.impl.test_campaignPackageImpl#getGSSTestCampaignTest()
+	 * @generated
+	 */
+	int GSS_TEST_CAMPAIGN_TEST = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_CAMPAIGN_TEST__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Procedure</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_CAMPAIGN_TEST__PROCEDURE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Prev Msg</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_CAMPAIGN_TEST__PREV_MSG = 2;
+
+	/**
+	 * The feature id for the '<em><b>Prev Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_CAMPAIGN_TEST__PREV_ACTION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Prev Action Param</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_CAMPAIGN_TEST__PREV_ACTION_PARAM = 4;
+
+	/**
+	 * The number of structural features of the '<em>GSS Test Campaign Test</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_CAMPAIGN_TEST_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>GSS Test Campaign Test</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_TEST_CAMPAIGN_TEST_OPERATION_COUNT = 0;
 
 
 	/**
@@ -133,15 +207,80 @@ public interface test_campaignPackage extends EPackage {
 	EAttribute getGSSTestCampaignTestCampaign_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign#getTest_proc <em>Test proc</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign#getTest <em>Test</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Test proc</em>'.
-	 * @see es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign#getTest_proc()
+	 * @return the meta object for the containment reference list '<em>Test</em>'.
+	 * @see es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign#getTest()
 	 * @see #getGSSTestCampaignTestCampaign()
 	 * @generated
 	 */
-	EReference getGSSTestCampaignTestCampaign_Test_proc();
+	EReference getGSSTestCampaignTestCampaign_Test();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest <em>GSS Test Campaign Test</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Test Campaign Test</em>'.
+	 * @see es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest
+	 * @generated
+	 */
+	EClass getGSSTestCampaignTest();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest#getName()
+	 * @see #getGSSTestCampaignTest()
+	 * @generated
+	 */
+	EAttribute getGSSTestCampaignTest_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest#getProcedure <em>Procedure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Procedure</em>'.
+	 * @see es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest#getProcedure()
+	 * @see #getGSSTestCampaignTest()
+	 * @generated
+	 */
+	EReference getGSSTestCampaignTest_Procedure();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest#getPrevMsg <em>Prev Msg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Prev Msg</em>'.
+	 * @see es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest#getPrevMsg()
+	 * @see #getGSSTestCampaignTest()
+	 * @generated
+	 */
+	EAttribute getGSSTestCampaignTest_PrevMsg();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest#getPrevAction <em>Prev Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Prev Action</em>'.
+	 * @see es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest#getPrevAction()
+	 * @see #getGSSTestCampaignTest()
+	 * @generated
+	 */
+	EAttribute getGSSTestCampaignTest_PrevAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest#getPrevActionParam <em>Prev Action Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Prev Action Param</em>'.
+	 * @see es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest#getPrevActionParam()
+	 * @see #getGSSTestCampaignTest()
+	 * @generated
+	 */
+	EAttribute getGSSTestCampaignTest_PrevActionParam();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -185,12 +324,62 @@ public interface test_campaignPackage extends EPackage {
 		EAttribute GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__NAME = eINSTANCE.getGSSTestCampaignTestCampaign_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Test proc</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Test</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST_PROC = eINSTANCE.getGSSTestCampaignTestCampaign_Test_proc();
+		EReference GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST = eINSTANCE.getGSSTestCampaignTestCampaign_Test();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_campaign.impl.GSSTestCampaignTestImpl <em>GSS Test Campaign Test</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.test_campaign.impl.GSSTestCampaignTestImpl
+		 * @see es.uah.aut.srg.gss.test_campaign.impl.test_campaignPackageImpl#getGSSTestCampaignTest()
+		 * @generated
+		 */
+		EClass GSS_TEST_CAMPAIGN_TEST = eINSTANCE.getGSSTestCampaignTest();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TEST_CAMPAIGN_TEST__NAME = eINSTANCE.getGSSTestCampaignTest_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Procedure</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_TEST_CAMPAIGN_TEST__PROCEDURE = eINSTANCE.getGSSTestCampaignTest_Procedure();
+
+		/**
+		 * The meta object literal for the '<em><b>Prev Msg</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TEST_CAMPAIGN_TEST__PREV_MSG = eINSTANCE.getGSSTestCampaignTest_PrevMsg();
+
+		/**
+		 * The meta object literal for the '<em><b>Prev Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TEST_CAMPAIGN_TEST__PREV_ACTION = eINSTANCE.getGSSTestCampaignTest_PrevAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Prev Action Param</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_TEST_CAMPAIGN_TEST__PREV_ACTION_PARAM = eINSTANCE.getGSSTestCampaignTest_PrevActionParam();
 
 	}
 

@@ -13,7 +13,6 @@ package es.uah.aut.srg.gss.campaign.impl;
 import es.uah.aut.srg.gss.campaign.*;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -79,36 +78,6 @@ public class campaignFactoryImpl extends EFactoryImpl implements campaignFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Object createFromString(EDataType eDataType, String initialValue) {
-		switch (eDataType.getClassifierID()) {
-			case campaignPackage.GSS_CAMPAIGN_TEST_REQ_ACTION:
-				return createGSSCampaignTestReqActionFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String convertToString(EDataType eDataType, Object instanceValue) {
-		switch (eDataType.getClassifierID()) {
-			case campaignPackage.GSS_CAMPAIGN_TEST_REQ_ACTION:
-				return convertGSSCampaignTestReqActionToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public GSSCampaignCampaign createGSSCampaignCampaign() {
 		GSSCampaignCampaignImpl gssCampaignCampaign = new GSSCampaignCampaignImpl();
 		return gssCampaignCampaign;
@@ -142,26 +111,6 @@ public class campaignFactoryImpl extends EFactoryImpl implements campaignFactory
 	public GSSCampaignTestCase createGSSCampaignTestCase() {
 		GSSCampaignTestCaseImpl gssCampaignTestCase = new GSSCampaignTestCaseImpl();
 		return gssCampaignTestCase;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSCampaignTestReqAction createGSSCampaignTestReqActionFromString(EDataType eDataType, String initialValue) {
-		GSSCampaignTestReqAction result = GSSCampaignTestReqAction.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertGSSCampaignTestReqActionToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.gss.scenario;
 
-import org.eclipse.emf.ecore.EObject;
+import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getInitial_value <em>Initial value</em>}</li>
@@ -34,33 +33,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GSSScenarioGlobalVar extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioGlobalVar_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
+public interface GSSScenarioGlobalVar extends TMTCIFScenarioVariable {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->

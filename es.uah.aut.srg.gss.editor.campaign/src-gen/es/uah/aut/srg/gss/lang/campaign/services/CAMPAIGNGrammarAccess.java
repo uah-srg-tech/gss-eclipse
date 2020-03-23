@@ -327,27 +327,31 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cProcedureGSSTestProcTestProcVersionedQualifiedNameParserRuleCall_8_0_1 = (RuleCall)cProcedureGSSTestProcTestProcCrossReference_8_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Keyword cReqKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Assignment cReqAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
-		private final RuleCall cReqIDTerminalRuleCall_10_1_0 = (RuleCall)cReqAssignment_10_1.eContents().get(0);
+		private final Keyword cPrevMsgKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Assignment cPrevMsgAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
+		private final RuleCall cPrevMsgIDTerminalRuleCall_10_1_0 = (RuleCall)cPrevMsgAssignment_10_1.eContents().get(0);
 		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
-		private final Keyword cReqActionKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Assignment cReqActionAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
-		private final RuleCall cReqActionGSSCampaignTestReqActionEnumRuleCall_11_1_0 = (RuleCall)cReqActionAssignment_11_1.eContents().get(0);
+		private final Keyword cPrevActionKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
+		private final Assignment cPrevActionAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
+		private final RuleCall cPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0 = (RuleCall)cPrevActionAssignment_11_1.eContents().get(0);
+		private final Group cGroup_11_2 = (Group)cGroup_11.eContents().get(2);
+		private final Keyword cPrevActionParamKeyword_11_2_0 = (Keyword)cGroup_11_2.eContents().get(0);
+		private final Assignment cPrevActionParamAssignment_11_2_1 = (Assignment)cGroup_11_2.eContents().get(1);
+		private final RuleCall cPrevActionParamSTRINGTerminalRuleCall_11_2_1_0 = (RuleCall)cPrevActionParamAssignment_11_2_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
 		//GSSCampaignTestCase:
 		//	'GSSCampaignTestCase' '{'
 		//	'name' ':=' name=STRING ';'
-		//	'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('req' req=ID)? ('reqAction'
-		//	reqAction=GSSCampaignTestReqAction)?
+		//	'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('prevMsg' prevMsg=ID)?
+		//	('prevAction' prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSCampaignTestCase' '{' 'name' ':=' name=STRING ';' 'procedure' ':='
-		//procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('req' req=ID)? ('reqAction'
-		//reqAction=GSSCampaignTestReqAction)? '}' ';'
+		//procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('prevMsg' prevMsg=ID)? ('prevAction'
+		//prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSCampaignTestCase'
@@ -389,54 +393,47 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
-		//('req' req=ID)?
+		//('prevMsg' prevMsg=ID)?
 		public Group getGroup_10() { return cGroup_10; }
 		
-		//'req'
-		public Keyword getReqKeyword_10_0() { return cReqKeyword_10_0; }
+		//'prevMsg'
+		public Keyword getPrevMsgKeyword_10_0() { return cPrevMsgKeyword_10_0; }
 		
-		//req=ID
-		public Assignment getReqAssignment_10_1() { return cReqAssignment_10_1; }
+		//prevMsg=ID
+		public Assignment getPrevMsgAssignment_10_1() { return cPrevMsgAssignment_10_1; }
 		
 		//ID
-		public RuleCall getReqIDTerminalRuleCall_10_1_0() { return cReqIDTerminalRuleCall_10_1_0; }
+		public RuleCall getPrevMsgIDTerminalRuleCall_10_1_0() { return cPrevMsgIDTerminalRuleCall_10_1_0; }
 		
-		//('reqAction' reqAction=GSSCampaignTestReqAction)?
+		//('prevAction' prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)?
 		public Group getGroup_11() { return cGroup_11; }
 		
-		//'reqAction'
-		public Keyword getReqActionKeyword_11_0() { return cReqActionKeyword_11_0; }
+		//'prevAction'
+		public Keyword getPrevActionKeyword_11_0() { return cPrevActionKeyword_11_0; }
 		
-		//reqAction=GSSCampaignTestReqAction
-		public Assignment getReqActionAssignment_11_1() { return cReqActionAssignment_11_1; }
+		//prevAction=GSSTestProcPrevAction
+		public Assignment getPrevActionAssignment_11_1() { return cPrevActionAssignment_11_1; }
 		
-		//GSSCampaignTestReqAction
-		public RuleCall getReqActionGSSCampaignTestReqActionEnumRuleCall_11_1_0() { return cReqActionGSSCampaignTestReqActionEnumRuleCall_11_1_0; }
+		//GSSTestProcPrevAction
+		public RuleCall getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0() { return cPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0; }
+		
+		//('prevActionParam' prevActionParam=STRING)?
+		public Group getGroup_11_2() { return cGroup_11_2; }
+		
+		//'prevActionParam'
+		public Keyword getPrevActionParamKeyword_11_2_0() { return cPrevActionParamKeyword_11_2_0; }
+		
+		//prevActionParam=STRING
+		public Assignment getPrevActionParamAssignment_11_2_1() { return cPrevActionParamAssignment_11_2_1; }
+		
+		//STRING
+		public RuleCall getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0() { return cPrevActionParamSTRINGTerminalRuleCall_11_2_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
-	}
-	public class EStringElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.EString");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cSTRINGTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		
-		//EString:
-		//	STRING | ID;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//STRING | ID
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_0() { return cSTRINGTerminalRuleCall_0; }
-		
-		//ID
-		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
 	}
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.QualifiedName");
@@ -551,247 +548,21 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		//')'
 		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
 	}
-	public class VersionedQualifiedReferenceNameElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.VersionedQualifiedReferenceName");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final RuleCall cVersionedQualifiedNameParserRuleCall_0_0 = (RuleCall)cGroup_0.eContents().get(0);
-		private final Keyword cColonColonKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cColonColonKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
-		
-		//VersionedQualifiedReferenceName:
-		//	(VersionedQualifiedName '::')? ID ('::' ID)*;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//(VersionedQualifiedName '::')? ID ('::' ID)*
-		public Group getGroup() { return cGroup; }
-		
-		//(VersionedQualifiedName '::')?
-		public Group getGroup_0() { return cGroup_0; }
-		
-		//VersionedQualifiedName
-		public RuleCall getVersionedQualifiedNameParserRuleCall_0_0() { return cVersionedQualifiedNameParserRuleCall_0_0; }
-		
-		//'::'
-		public Keyword getColonColonKeyword_0_1() { return cColonColonKeyword_0_1; }
-		
-		//ID
-		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
-		
-		//('::' ID)*
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//'::'
-		public Keyword getColonColonKeyword_2_0() { return cColonColonKeyword_2_0; }
-		
-		//ID
-		public RuleCall getIDTerminalRuleCall_2_1() { return cIDTerminalRuleCall_2_1; }
-	}
-	public class INTEGERElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.INTEGER");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cHyphenMinusKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
-		private final RuleCall cHEXADECIMALTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		
-		//INTEGER:
-		//	'-'? INT | HEXADECIMAL;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'-'? INT | HEXADECIMAL
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//'-'? INT
-		public Group getGroup_0() { return cGroup_0; }
-		
-		//'-'?
-		public Keyword getHyphenMinusKeyword_0_0() { return cHyphenMinusKeyword_0_0; }
-		
-		//INT
-		public RuleCall getINTTerminalRuleCall_0_1() { return cINTTerminalRuleCall_0_1; }
-		
-		//HEXADECIMAL
-		public RuleCall getHEXADECIMALTerminalRuleCall_1() { return cHEXADECIMALTerminalRuleCall_1; }
-	}
-	public class EBooleanElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.EBoolean");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Keyword cTrueKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
-		private final Keyword cFalseKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
-		
-		//EBoolean ecore::EBoolean:
-		//	'true' | 'false'
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'true' | 'false'
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//'true'
-		public Keyword getTrueKeyword_0() { return cTrueKeyword_0; }
-		
-		//'false'
-		public Keyword getFalseKeyword_1() { return cFalseKeyword_1; }
-	}
-	public class REALElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.REAL");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
-		private final Keyword cFullStopKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final Keyword cColonEqualsSignKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
-		private final RuleCall cINTTerminalRuleCall_1_3 = (RuleCall)cGroup_1.eContents().get(3);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cEKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Keyword cHyphenMinusKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_2_2 = (RuleCall)cGroup_2.eContents().get(2);
-		
-		//REAL:
-		//	'-'? (INT '.' ':=' INT) ('e' '-'? INT)?;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'-'? (INT '.' ':=' INT) ('e' '-'? INT)?
-		public Group getGroup() { return cGroup; }
-		
-		//'-'?
-		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
-		
-		//(INT '.' ':=' INT)
-		public Group getGroup_1() { return cGroup_1; }
-		
-		//INT
-		public RuleCall getINTTerminalRuleCall_1_0() { return cINTTerminalRuleCall_1_0; }
-		
-		//'.'
-		public Keyword getFullStopKeyword_1_1() { return cFullStopKeyword_1_1; }
-		
-		//':='
-		public Keyword getColonEqualsSignKeyword_1_2() { return cColonEqualsSignKeyword_1_2; }
-		
-		//INT
-		public RuleCall getINTTerminalRuleCall_1_3() { return cINTTerminalRuleCall_1_3; }
-		
-		//('e' '-'? INT)?
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//'e'
-		public Keyword getEKeyword_2_0() { return cEKeyword_2_0; }
-		
-		//'-'?
-		public Keyword getHyphenMinusKeyword_2_1() { return cHyphenMinusKeyword_2_1; }
-		
-		//INT
-		public RuleCall getINTTerminalRuleCall_2_2() { return cINTTerminalRuleCall_2_2; }
-	}
-	public class DATEElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.DATE");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Keyword cSolidusKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		private final Keyword cSolidusKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final RuleCall cINTTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
-		
-		//DATE:
-		//	INT '/' INT '/' INT;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//INT '/' INT '/' INT
-		public Group getGroup() { return cGroup; }
-		
-		//INT
-		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
-		
-		//'/'
-		public Keyword getSolidusKeyword_1() { return cSolidusKeyword_1; }
-		
-		//INT
-		public RuleCall getINTTerminalRuleCall_2() { return cINTTerminalRuleCall_2; }
-		
-		//'/'
-		public Keyword getSolidusKeyword_3() { return cSolidusKeyword_3; }
-		
-		//INT
-		public RuleCall getINTTerminalRuleCall_4() { return cINTTerminalRuleCall_4; }
-	}
-	public class URLElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.URL");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cPlusSignKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
-		private final Keyword cColonSolidusSolidusKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final RuleCall cIDTerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
-		private final Keyword cFullStopKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cSolidusKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_4_1 = (RuleCall)cGroup_4.eContents().get(1);
-		private final Keyword cSolidusKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		
-		//URL:
-		//	ID ('+' ID)? '://' (ID '.'?)+ ('/' ID)* '/'?;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//ID ('+' ID)? '://' (ID '.'?)+ ('/' ID)* '/'?
-		public Group getGroup() { return cGroup; }
-		
-		//ID
-		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
-		
-		//('+' ID)?
-		public Group getGroup_1() { return cGroup_1; }
-		
-		//'+'
-		public Keyword getPlusSignKeyword_1_0() { return cPlusSignKeyword_1_0; }
-		
-		//ID
-		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
-		
-		//'://'
-		public Keyword getColonSolidusSolidusKeyword_2() { return cColonSolidusSolidusKeyword_2; }
-		
-		//(ID '.'?)+
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//ID
-		public RuleCall getIDTerminalRuleCall_3_0() { return cIDTerminalRuleCall_3_0; }
-		
-		//'.'?
-		public Keyword getFullStopKeyword_3_1() { return cFullStopKeyword_3_1; }
-		
-		//('/' ID)*
-		public Group getGroup_4() { return cGroup_4; }
-		
-		//'/'
-		public Keyword getSolidusKeyword_4_0() { return cSolidusKeyword_4_0; }
-		
-		//ID
-		public RuleCall getIDTerminalRuleCall_4_1() { return cIDTerminalRuleCall_4_1; }
-		
-		//'/'?
-		public Keyword getSolidusKeyword_5() { return cSolidusKeyword_5; }
-	}
 	
-	public class GSSCampaignTestReqActionElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSCampaignTestReqAction");
-		private final EnumLiteralDeclaration c_1EnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
-		private final Keyword c_1_1Keyword_0 = (Keyword)c_1EnumLiteralDeclaration.eContents().get(0);
+	public class GSSTestProcPrevActionElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSTestProcPrevAction");
+		private final EnumLiteralDeclaration cResetEnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
+		private final Keyword cReset1Keyword_0 = (Keyword)cResetEnumLiteralDeclaration.eContents().get(0);
 		
-		//enum GSSCampaignTestReqAction:
-		//	_1;
+		//enum GSSTestProcPrevAction returns test_proc::GSSTestProcPrevAction:
+		//	reset='1';
 		public EnumRule getRule() { return rule; }
 		
-		//_1
-		public EnumLiteralDeclaration get_1EnumLiteralDeclaration() { return c_1EnumLiteralDeclaration; }
+		//reset='1'
+		public EnumLiteralDeclaration getResetEnumLiteralDeclaration() { return cResetEnumLiteralDeclaration; }
 		
-		//'_1'
-		public Keyword get_1_1Keyword_0() { return c_1_1Keyword_0; }
+		//'1'
+		public Keyword getReset1Keyword_0() { return cReset1Keyword_0; }
 	}
 	
 	private final GSSModelFileElements pGSSModelFile;
@@ -800,18 +571,10 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSCampaignScenarioElements pGSSCampaignScenario;
 	private final GSSCampaignTestsElements pGSSCampaignTests;
 	private final GSSCampaignTestCaseElements pGSSCampaignTestCase;
-	private final GSSCampaignTestReqActionElements eGSSCampaignTestReqAction;
-	private final EStringElements pEString;
+	private final GSSTestProcPrevActionElements eGSSTestProcPrevAction;
 	private final QualifiedNameElements pQualifiedName;
 	private final VersionElements pVersion;
 	private final VersionedQualifiedNameElements pVersionedQualifiedName;
-	private final VersionedQualifiedReferenceNameElements pVersionedQualifiedReferenceName;
-	private final TerminalRule tHEXADECIMAL;
-	private final INTEGERElements pINTEGER;
-	private final EBooleanElements pEBoolean;
-	private final REALElements pREAL;
-	private final DATEElements pDATE;
-	private final URLElements pURL;
 	
 	private final Grammar grammar;
 	
@@ -828,18 +591,10 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGSSCampaignScenario = new GSSCampaignScenarioElements();
 		this.pGSSCampaignTests = new GSSCampaignTestsElements();
 		this.pGSSCampaignTestCase = new GSSCampaignTestCaseElements();
-		this.eGSSCampaignTestReqAction = new GSSCampaignTestReqActionElements();
-		this.pEString = new EStringElements();
+		this.eGSSTestProcPrevAction = new GSSTestProcPrevActionElements();
 		this.pQualifiedName = new QualifiedNameElements();
 		this.pVersion = new VersionElements();
 		this.pVersionedQualifiedName = new VersionedQualifiedNameElements();
-		this.pVersionedQualifiedReferenceName = new VersionedQualifiedReferenceNameElements();
-		this.tHEXADECIMAL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.HEXADECIMAL");
-		this.pINTEGER = new INTEGERElements();
-		this.pEBoolean = new EBooleanElements();
-		this.pREAL = new REALElements();
-		this.pDATE = new DATEElements();
-		this.pURL = new URLElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -934,8 +689,8 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSCampaignTestCase:
 	//	'GSSCampaignTestCase' '{'
 	//	'name' ':=' name=STRING ';'
-	//	'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('req' req=ID)? ('reqAction'
-	//	reqAction=GSSCampaignTestReqAction)?
+	//	'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('prevMsg' prevMsg=ID)?
+	//	('prevAction' prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)?
 	//	'}' ';';
 	public GSSCampaignTestCaseElements getGSSCampaignTestCaseAccess() {
 		return pGSSCampaignTestCase;
@@ -945,24 +700,14 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSCampaignTestCaseAccess().getRule();
 	}
 	
-	//enum GSSCampaignTestReqAction:
-	//	_1;
-	public GSSCampaignTestReqActionElements getGSSCampaignTestReqActionAccess() {
-		return eGSSCampaignTestReqAction;
+	//enum GSSTestProcPrevAction returns test_proc::GSSTestProcPrevAction:
+	//	reset='1';
+	public GSSTestProcPrevActionElements getGSSTestProcPrevActionAccess() {
+		return eGSSTestProcPrevAction;
 	}
 	
-	public EnumRule getGSSCampaignTestReqActionRule() {
-		return getGSSCampaignTestReqActionAccess().getRule();
-	}
-	
-	//EString:
-	//	STRING | ID;
-	public EStringElements getEStringAccess() {
-		return pEString;
-	}
-	
-	public ParserRule getEStringRule() {
-		return getEStringAccess().getRule();
+	public EnumRule getGSSTestProcPrevActionRule() {
+		return getGSSTestProcPrevActionAccess().getRule();
 	}
 	
 	//QualifiedName:
@@ -993,72 +738,6 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getVersionedQualifiedNameRule() {
 		return getVersionedQualifiedNameAccess().getRule();
-	}
-	
-	//VersionedQualifiedReferenceName:
-	//	(VersionedQualifiedName '::')? ID ('::' ID)*;
-	public VersionedQualifiedReferenceNameElements getVersionedQualifiedReferenceNameAccess() {
-		return pVersionedQualifiedReferenceName;
-	}
-	
-	public ParserRule getVersionedQualifiedReferenceNameRule() {
-		return getVersionedQualifiedReferenceNameAccess().getRule();
-	}
-	
-	//terminal HEXADECIMAL:
-	//	'0x' ('0'..'9' | 'a'..'f' | 'A'..'F')+;
-	public TerminalRule getHEXADECIMALRule() {
-		return tHEXADECIMAL;
-	}
-	
-	//INTEGER:
-	//	'-'? INT | HEXADECIMAL;
-	public INTEGERElements getINTEGERAccess() {
-		return pINTEGER;
-	}
-	
-	public ParserRule getINTEGERRule() {
-		return getINTEGERAccess().getRule();
-	}
-	
-	//EBoolean ecore::EBoolean:
-	//	'true' | 'false'
-	public EBooleanElements getEBooleanAccess() {
-		return pEBoolean;
-	}
-	
-	public ParserRule getEBooleanRule() {
-		return getEBooleanAccess().getRule();
-	}
-	
-	//REAL:
-	//	'-'? (INT '.' ':=' INT) ('e' '-'? INT)?;
-	public REALElements getREALAccess() {
-		return pREAL;
-	}
-	
-	public ParserRule getREALRule() {
-		return getREALAccess().getRule();
-	}
-	
-	//DATE:
-	//	INT '/' INT '/' INT;
-	public DATEElements getDATEAccess() {
-		return pDATE;
-	}
-	
-	public ParserRule getDATERule() {
-		return getDATEAccess().getRule();
-	}
-	
-	//URL:
-	//	ID ('+' ID)? '://' (ID '.'?)+ ('/' ID)* '/'?;
-	public URLElements getURLAccess() {
-		return pURL;
-	}
-	
-	public ParserRule getURLRule() {
-		return getURLAccess().getRule();
 	}
 	
 	//terminal ID:

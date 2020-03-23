@@ -10,11 +10,9 @@
  */
 package es.uah.aut.srg.gss.test_campaign.impl;
 
+import es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest;
 import es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign;
 import es.uah.aut.srg.gss.test_campaign.test_campaignPackage;
-
-import es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -40,7 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.test_campaign.impl.GSSTestCampaignTestCampaignImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_campaign.impl.GSSTestCampaignTestCampaignImpl#getTest_proc <em>Test proc</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_campaign.impl.GSSTestCampaignTestCampaignImpl#getTest <em>Test</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,14 +65,14 @@ public class GSSTestCampaignTestCampaignImpl extends MinimalEObjectImpl.Containe
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTest_proc() <em>Test proc</em>}' containment reference list.
+	 * The cached value of the '{@link #getTest() <em>Test</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTest_proc()
+	 * @see #getTest()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GSSTestProcTestProc> test_proc;
+	protected EList<GSSTestCampaignTest> test;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -121,11 +119,11 @@ public class GSSTestCampaignTestCampaignImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSTestProcTestProc> getTest_proc() {
-		if (test_proc == null) {
-			test_proc = new EObjectContainmentEList<GSSTestProcTestProc>(GSSTestProcTestProc.class, this, test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST_PROC);
+	public EList<GSSTestCampaignTest> getTest() {
+		if (test == null) {
+			test = new EObjectContainmentEList<GSSTestCampaignTest>(GSSTestCampaignTest.class, this, test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST);
 		}
-		return test_proc;
+		return test;
 	}
 
 	/**
@@ -136,8 +134,8 @@ public class GSSTestCampaignTestCampaignImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST_PROC:
-				return ((InternalEList<?>)getTest_proc()).basicRemove(otherEnd, msgs);
+			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST:
+				return ((InternalEList<?>)getTest()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -152,8 +150,8 @@ public class GSSTestCampaignTestCampaignImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__NAME:
 				return getName();
-			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST_PROC:
-				return getTest_proc();
+			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST:
+				return getTest();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -170,9 +168,9 @@ public class GSSTestCampaignTestCampaignImpl extends MinimalEObjectImpl.Containe
 			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__NAME:
 				setName((String)newValue);
 				return;
-			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST_PROC:
-				getTest_proc().clear();
-				getTest_proc().addAll((Collection<? extends GSSTestProcTestProc>)newValue);
+			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST:
+				getTest().clear();
+				getTest().addAll((Collection<? extends GSSTestCampaignTest>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -189,8 +187,8 @@ public class GSSTestCampaignTestCampaignImpl extends MinimalEObjectImpl.Containe
 			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST_PROC:
-				getTest_proc().clear();
+			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST:
+				getTest().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -206,8 +204,8 @@ public class GSSTestCampaignTestCampaignImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST_PROC:
-				return test_proc != null && !test_proc.isEmpty();
+			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST:
+				return test != null && !test.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

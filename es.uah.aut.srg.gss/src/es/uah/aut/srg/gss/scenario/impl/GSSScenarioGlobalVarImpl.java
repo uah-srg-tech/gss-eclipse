@@ -17,6 +17,7 @@ import es.uah.aut.srg.gss.scenario.GSSScenarioReferencePeriodicTC;
 import es.uah.aut.srg.gss.scenario.GSSScenarioReferenceSpecialPacket;
 import es.uah.aut.srg.gss.scenario.scenarioPackage;
 
+import es.uah.aut.srg.tmtcif.scenario.impl.TMTCIFScenarioVariableImpl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -24,7 +25,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGlobalVarImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGlobalVarImpl#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGlobalVarImpl#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGlobalVarImpl#getInitial_value <em>Initial value</em>}</li>
@@ -45,27 +44,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class GSSScenarioGlobalVarImpl extends MinimalEObjectImpl.Container implements GSSScenarioGlobalVar {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
+public class GSSScenarioGlobalVarImpl extends TMTCIFScenarioVariableImpl implements GSSScenarioGlobalVar {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -182,27 +161,6 @@ public class GSSScenarioGlobalVarImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	protected EClass eStaticClass() {
 		return scenarioPackage.Literals.GSS_SCENARIO_GLOBAL_VAR;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__NAME, oldName, name));
 	}
 
 	/**
@@ -448,8 +406,6 @@ public class GSSScenarioGlobalVarImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__NAME:
-				return getName();
 			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__ID:
 				return getId();
 			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__TYPE:
@@ -474,9 +430,6 @@ public class GSSScenarioGlobalVarImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__NAME:
-				setName((String)newValue);
-				return;
 			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__ID:
 				setId((String)newValue);
 				return;
@@ -507,9 +460,6 @@ public class GSSScenarioGlobalVarImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__ID:
 				setId(ID_EDEFAULT);
 				return;
@@ -540,8 +490,6 @@ public class GSSScenarioGlobalVarImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__TYPE:
@@ -568,9 +516,7 @@ public class GSSScenarioGlobalVarImpl extends MinimalEObjectImpl.Container imple
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", id: ");
+		result.append(" (id: ");
 		result.append(id);
 		result.append(", type: ");
 		if (typeESet) result.append(type); else result.append("<unset>");

@@ -13,7 +13,6 @@ package es.uah.aut.srg.gss.config.impl;
 import es.uah.aut.srg.gss.common.commonPackage;
 
 import es.uah.aut.srg.gss.config.GSSConfigGSSConfig;
-import es.uah.aut.srg.gss.config.GSSConfigReqAction;
 import es.uah.aut.srg.gss.config.GSSConfigTestCase;
 import es.uah.aut.srg.gss.config.GSSConfigTests;
 import es.uah.aut.srg.gss.config.configFactory;
@@ -25,7 +24,6 @@ import es.uah.aut.srg.gss.test_proc.test_procPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -58,13 +56,6 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * @generated
 	 */
 	private EClass gssConfigTestCaseEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum gssConfigReqActionEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -208,7 +199,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigTestCase_Req() {
+	public EAttribute getGSSConfigTestCase_PrevMsg() {
 		return (EAttribute)gssConfigTestCaseEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -217,7 +208,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSConfigTestCase_ReqAction() {
+	public EAttribute getGSSConfigTestCase_PrevAction() {
 		return (EAttribute)gssConfigTestCaseEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -226,8 +217,8 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getGSSConfigReqAction() {
-		return gssConfigReqActionEEnum;
+	public EAttribute getGSSConfigTestCase_PrevActionParam() {
+		return (EAttribute)gssConfigTestCaseEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -268,11 +259,9 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		gssConfigTestCaseEClass = createEClass(GSS_CONFIG_TEST_CASE);
 		createEAttribute(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__NAME);
 		createEReference(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__PROCEDURE);
-		createEAttribute(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__REQ);
-		createEAttribute(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__REQ_ACTION);
-
-		// Create enums
-		gssConfigReqActionEEnum = createEEnum(GSS_CONFIG_REQ_ACTION);
+		createEAttribute(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__PREV_MSG);
+		createEAttribute(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__PREV_ACTION);
+		createEAttribute(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__PREV_ACTION_PARAM);
 	}
 
 	/**
@@ -321,12 +310,9 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		initEClass(gssConfigTestCaseEClass, GSSConfigTestCase.class, "GSSConfigTestCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSConfigTestCase_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSConfigTestCase_Procedure(), thetest_procPackage.getGSSTestProcTestProc(), null, "procedure", null, 1, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigTestCase_Req(), ecorePackage.getEString(), "req", null, 0, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigTestCase_ReqAction(), this.getGSSConfigReqAction(), "reqAction", null, 0, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		// Initialize enums and add enum literals
-		initEEnum(gssConfigReqActionEEnum, GSSConfigReqAction.class, "GSSConfigReqAction");
-		addEEnumLiteral(gssConfigReqActionEEnum, GSSConfigReqAction._1);
+		initEAttribute(getGSSConfigTestCase_PrevMsg(), ecorePackage.getEString(), "prevMsg", null, 0, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSConfigTestCase_PrevAction(), thetest_procPackage.getGSSTestProcPrevAction(), "prevAction", null, 0, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSConfigTestCase_PrevActionParam(), ecorePackage.getEString(), "prevActionParam", null, 0, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

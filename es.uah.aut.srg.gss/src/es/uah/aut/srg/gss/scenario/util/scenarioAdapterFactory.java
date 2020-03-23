@@ -14,6 +14,7 @@ import es.uah.aut.srg.gss.scenario.*;
 
 import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario;
 import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioInterface;
+import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -244,6 +245,10 @@ public class scenarioAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTMTCIFScenarioInterface(TMTCIFScenarioInterface object) {
 				return createTMTCIFScenarioInterfaceAdapter();
+			}
+			@Override
+			public Adapter caseTMTCIFScenarioVariable(TMTCIFScenarioVariable object) {
+				return createTMTCIFScenarioVariableAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -850,6 +855,20 @@ public class scenarioAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTMTCIFScenarioInterfaceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable <em>TMTCIF Scenario Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable
+	 * @generated
+	 */
+	public Adapter createTMTCIFScenarioVariableAdapter() {
 		return null;
 	}
 

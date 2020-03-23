@@ -51,7 +51,6 @@ public class CONFIGParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSScenarioAlarmMsgAccess().getAlternatives_14(), "rule__GSSScenarioAlarmMsg__Alternatives_14");
 					put(grammarAccess.getGSSScenarioModifyAccess().getAlternatives_14(), "rule__GSSScenarioModify__Alternatives_14");
 					put(grammarAccess.getGSSScenarioAlarmValAccess().getAlternatives_10(), "rule__GSSScenarioAlarmVal__Alternatives_10");
-					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 					put(grammarAccess.getVersionAccess().getAlternatives_0(), "rule__Version__Alternatives_0");
 					put(grammarAccess.getVersionAccess().getAlternatives_1_1(), "rule__Version__Alternatives_1_1");
 					put(grammarAccess.getINTEGERAccess().getAlternatives(), "rule__INTEGER__Alternatives");
@@ -135,6 +134,7 @@ public class CONFIGParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSConfigTestCaseAccess().getGroup(), "rule__GSSConfigTestCase__Group__0");
 					put(grammarAccess.getGSSConfigTestCaseAccess().getGroup_10(), "rule__GSSConfigTestCase__Group_10__0");
 					put(grammarAccess.getGSSConfigTestCaseAccess().getGroup_11(), "rule__GSSConfigTestCase__Group_11__0");
+					put(grammarAccess.getGSSConfigTestCaseAccess().getGroup_11_2(), "rule__GSSConfigTestCase__Group_11_2__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getVersionAccess().getGroup(), "rule__Version__Group__0");
@@ -348,8 +348,9 @@ public class CONFIGParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSConfigTestsAccess().getTestCaseAssignment_2(), "rule__GSSConfigTests__TestCaseAssignment_2");
 					put(grammarAccess.getGSSConfigTestCaseAccess().getNameAssignment_4(), "rule__GSSConfigTestCase__NameAssignment_4");
 					put(grammarAccess.getGSSConfigTestCaseAccess().getProcedureAssignment_8(), "rule__GSSConfigTestCase__ProcedureAssignment_8");
-					put(grammarAccess.getGSSConfigTestCaseAccess().getReqAssignment_10_1(), "rule__GSSConfigTestCase__ReqAssignment_10_1");
-					put(grammarAccess.getGSSConfigTestCaseAccess().getReqActionAssignment_11_1(), "rule__GSSConfigTestCase__ReqActionAssignment_11_1");
+					put(grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgAssignment_10_1(), "rule__GSSConfigTestCase__PrevMsgAssignment_10_1");
+					put(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionAssignment_11_1(), "rule__GSSConfigTestCase__PrevActionAssignment_11_1");
+					put(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamAssignment_11_2_1(), "rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1");
 					put(grammarAccess.getGSSScenarioScenarioAccess().getUnorderedGroup_8(), "rule__GSSScenarioScenario__UnorderedGroup_8");
 				}
 			};

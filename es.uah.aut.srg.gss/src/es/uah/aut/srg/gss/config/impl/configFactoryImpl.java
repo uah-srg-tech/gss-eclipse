@@ -13,7 +13,6 @@ package es.uah.aut.srg.gss.config.impl;
 import es.uah.aut.srg.gss.config.*;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -78,36 +77,6 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Object createFromString(EDataType eDataType, String initialValue) {
-		switch (eDataType.getClassifierID()) {
-			case configPackage.GSS_CONFIG_REQ_ACTION:
-				return createGSSConfigReqActionFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String convertToString(EDataType eDataType, Object instanceValue) {
-		switch (eDataType.getClassifierID()) {
-			case configPackage.GSS_CONFIG_REQ_ACTION:
-				return convertGSSConfigReqActionToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public GSSConfigGSSConfig createGSSConfigGSSConfig() {
 		GSSConfigGSSConfigImpl gssConfigGSSConfig = new GSSConfigGSSConfigImpl();
 		return gssConfigGSSConfig;
@@ -131,26 +100,6 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 	public GSSConfigTestCase createGSSConfigTestCase() {
 		GSSConfigTestCaseImpl gssConfigTestCase = new GSSConfigTestCaseImpl();
 		return gssConfigTestCase;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigReqAction createGSSConfigReqActionFromString(EDataType eDataType, String initialValue) {
-		GSSConfigReqAction result = GSSConfigReqAction.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertGSSConfigReqActionToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

@@ -34,7 +34,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "';'", "'GSSTestProcTestProc'", "'{'", "'uri'", "':='", "'version'", "'}'", "'GSSTestProcStep'", "'name'", "'id'", "'prev_step_idref'", "'output_idref_from_prev_step'", "'mode'", "'replays'", "'GSSTestProcAction'", "'message'", "'actionType'", "'delay_value'", "'delay_unit'", "'span_value'", "'span_unit'", "'GSSTestProcInputs'", "'GSSTestProcOutputs'", "'checkmode'", "'valid_time_interval_value'", "'valid_time_interval_unit'", "'GSSTestProcSpecialPackets'", "'GSSTestProcConcurrentSteps'", "'nextStep'", "'GSSTestProcInputLevel3'", "'ifRef'", "'level3'", "'app_to_level3'", "'level2'", "'level3_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSTestProcInputLevel2'", "'app_to_level2'", "'GSSTestProcInputLevel1'", "'app_to_level1'", "'GSSTestProcInputLevel0'", "'app_to_level0'", "'GSSTestProcOutputLevel3'", "'optional'", "'level3_from_level2'", "'level2_from_level1'", "'level1_from_level0'", "'GSSTestProcOutputLevel2'", "'GSSTestProcOutputLevel1'", "'GSSTestProcOutputLevel0'", "'GSSTestProcLevel3Filter'", "'apply_def_filter'", "'extra_filter'", "'GSSTestProcLevel2Filter'", "'GSSTestProcLevel1Filter'", "'GSSTestProcLevel0Filter'", "'GSSTestProcEnable'", "'GSSTestProcNextStep'", "'isConcurrent'", "'GSSTestProcConcurrentStep'", "'.'", "'('", "')'", "'::'", "'-'", "'continuous'", "'manual'", "'concurrent'", "'action'", "'checking'", "'instruction'", "'miliseconds'", "'seconds'", "'all'", "'allunsorted'", "'any'", "'yes'", "'no'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "';'", "'GSSTestProcTestProc'", "'{'", "'uri'", "':='", "'version'", "'}'", "'GSSTestProcStep'", "'name'", "'id'", "'prev_step_idref'", "'output_idref_from_prev_step'", "'mode'", "'replays'", "'GSSTestProcAction'", "'message'", "'actionType'", "'delay_value'", "'delay_unit'", "'span_value'", "'span_unit'", "'GSSTestProcInputs'", "'GSSTestProcOutputs'", "'checkmode'", "'valid_time_interval_value'", "'valid_time_interval_unit'", "'GSSTestProcSpecialPackets'", "'GSSTestProcConcurrentSteps'", "'nextStep'", "'GSSTestProcInputLevel3'", "'ifRef'", "'level3'", "'app_to_level3'", "'level2'", "'level3_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSTestProcInputLevel2'", "'app_to_level2'", "'GSSTestProcInputLevel1'", "'app_to_level1'", "'GSSTestProcInputLevel0'", "'app_to_level0'", "'GSSTestProcOutputLevel3'", "'optional'", "'level3_from_level2'", "'level2_from_level1'", "'level1_from_level0'", "'GSSTestProcOutputLevel2'", "'GSSTestProcOutputLevel1'", "'GSSTestProcOutputLevel0'", "'GSSTestProcLevel3Filter'", "'apply_def_filter'", "'extra_filter'", "'GSSTestProcLevel2Filter'", "'GSSTestProcLevel1Filter'", "'GSSTestProcLevel0Filter'", "'GSSTestProcEnable'", "'GSSTestProcNextStep'", "'isConcurrent'", "'GSSTestProcConcurrentStep'", "'.'", "'('", "')'", "'::'", "'-'", "'continuous'", "'manual'", "'concurrent'", "'action'", "'\"instruction\"'", "'\"TMTC checking\"'", "'\"checking\"'", "'miliseconds'", "'seconds'", "'all'", "'allunsorted'", "'any'", "'yes'", "'no'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -83,6 +83,7 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
     public static final int T__91=91;
     public static final int T__92=92;
     public static final int T__93=93;
+    public static final int T__94=94;
     public static final int T__90=90;
     public static final int T__19=19;
     public static final int T__15=15;
@@ -11398,11 +11399,11 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
             	    if ( (LA60_0==RULE_INT) ) {
             	        int LA60_1 = input.LA(2);
 
-            	        if ( (LA60_1==RULE_ID) ) {
-            	            alt60=2;
-            	        }
-            	        else if ( (LA60_1==EOF||LA60_1==13||LA60_1==76||LA60_1==78) ) {
+            	        if ( (LA60_1==EOF||LA60_1==13||LA60_1==76||LA60_1==78) ) {
             	            alt60=1;
+            	        }
+            	        else if ( (LA60_1==RULE_ID) ) {
+            	            alt60=2;
             	        }
             	        else {
             	            if (state.backtracking>0) {state.failed=true; return current;}
@@ -12164,49 +12165,59 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSTestProcActionType"
-    // InternalTEST_PROC.g:5062:1: ruleGSSTestProcActionType returns [Enumerator current=null] : ( (enumLiteral_0= 'checking' ) | (enumLiteral_1= 'instruction' ) ) ;
+    // InternalTEST_PROC.g:5062:1: ruleGSSTestProcActionType returns [Enumerator current=null] : ( (enumLiteral_0= '\"instruction\"' ) | (enumLiteral_1= '\"TMTC checking\"' ) | (enumLiteral_2= '\"checking\"' ) ) ;
     public final Enumerator ruleGSSTestProcActionType() throws RecognitionException {
         Enumerator current = null;
 
         Token enumLiteral_0=null;
         Token enumLiteral_1=null;
+        Token enumLiteral_2=null;
 
 
         	enterRule();
 
         try {
-            // InternalTEST_PROC.g:5068:2: ( ( (enumLiteral_0= 'checking' ) | (enumLiteral_1= 'instruction' ) ) )
-            // InternalTEST_PROC.g:5069:2: ( (enumLiteral_0= 'checking' ) | (enumLiteral_1= 'instruction' ) )
+            // InternalTEST_PROC.g:5068:2: ( ( (enumLiteral_0= '\"instruction\"' ) | (enumLiteral_1= '\"TMTC checking\"' ) | (enumLiteral_2= '\"checking\"' ) ) )
+            // InternalTEST_PROC.g:5069:2: ( (enumLiteral_0= '\"instruction\"' ) | (enumLiteral_1= '\"TMTC checking\"' ) | (enumLiteral_2= '\"checking\"' ) )
             {
-            // InternalTEST_PROC.g:5069:2: ( (enumLiteral_0= 'checking' ) | (enumLiteral_1= 'instruction' ) )
-            int alt67=2;
-            int LA67_0 = input.LA(1);
-
-            if ( (LA67_0==85) ) {
+            // InternalTEST_PROC.g:5069:2: ( (enumLiteral_0= '\"instruction\"' ) | (enumLiteral_1= '\"TMTC checking\"' ) | (enumLiteral_2= '\"checking\"' ) )
+            int alt67=3;
+            switch ( input.LA(1) ) {
+            case 85:
+                {
                 alt67=1;
-            }
-            else if ( (LA67_0==86) ) {
+                }
+                break;
+            case 86:
+                {
                 alt67=2;
-            }
-            else {
+                }
+                break;
+            case 87:
+                {
+                alt67=3;
+                }
+                break;
+            default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
                     new NoViableAltException("", 67, 0, input);
 
                 throw nvae;
             }
+
             switch (alt67) {
                 case 1 :
-                    // InternalTEST_PROC.g:5070:3: (enumLiteral_0= 'checking' )
+                    // InternalTEST_PROC.g:5070:3: (enumLiteral_0= '\"instruction\"' )
                     {
-                    // InternalTEST_PROC.g:5070:3: (enumLiteral_0= 'checking' )
-                    // InternalTEST_PROC.g:5071:4: enumLiteral_0= 'checking'
+                    // InternalTEST_PROC.g:5070:3: (enumLiteral_0= '\"instruction\"' )
+                    // InternalTEST_PROC.g:5071:4: enumLiteral_0= '\"instruction\"'
                     {
                     enumLiteral_0=(Token)match(input,85,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				current = grammarAccess.getGSSTestProcActionTypeAccess().getCheckingEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                      				newLeafNode(enumLiteral_0, grammarAccess.getGSSTestProcActionTypeAccess().getCheckingEnumLiteralDeclaration_0());
+                      				current = grammarAccess.getGSSTestProcActionTypeAccess().getInstructionEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_0, grammarAccess.getGSSTestProcActionTypeAccess().getInstructionEnumLiteralDeclaration_0());
                       			
                     }
 
@@ -12216,16 +12227,35 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTEST_PROC.g:5078:3: (enumLiteral_1= 'instruction' )
+                    // InternalTEST_PROC.g:5078:3: (enumLiteral_1= '\"TMTC checking\"' )
                     {
-                    // InternalTEST_PROC.g:5078:3: (enumLiteral_1= 'instruction' )
-                    // InternalTEST_PROC.g:5079:4: enumLiteral_1= 'instruction'
+                    // InternalTEST_PROC.g:5078:3: (enumLiteral_1= '\"TMTC checking\"' )
+                    // InternalTEST_PROC.g:5079:4: enumLiteral_1= '\"TMTC checking\"'
                     {
                     enumLiteral_1=(Token)match(input,86,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				current = grammarAccess.getGSSTestProcActionTypeAccess().getInstructionEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                      				newLeafNode(enumLiteral_1, grammarAccess.getGSSTestProcActionTypeAccess().getInstructionEnumLiteralDeclaration_1());
+                      				current = grammarAccess.getGSSTestProcActionTypeAccess().getTmtc_checkingEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_1, grammarAccess.getGSSTestProcActionTypeAccess().getTmtc_checkingEnumLiteralDeclaration_1());
+                      			
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // InternalTEST_PROC.g:5086:3: (enumLiteral_2= '\"checking\"' )
+                    {
+                    // InternalTEST_PROC.g:5086:3: (enumLiteral_2= '\"checking\"' )
+                    // InternalTEST_PROC.g:5087:4: enumLiteral_2= '\"checking\"'
+                    {
+                    enumLiteral_2=(Token)match(input,87,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				current = grammarAccess.getGSSTestProcActionTypeAccess().getCheckingEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_2, grammarAccess.getGSSTestProcActionTypeAccess().getCheckingEnumLiteralDeclaration_2());
                       			
                     }
 
@@ -12259,7 +12289,7 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSTestProcTimeUnit"
-    // InternalTEST_PROC.g:5089:1: ruleGSSTestProcTimeUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) ;
+    // InternalTEST_PROC.g:5097:1: ruleGSSTestProcTimeUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) ;
     public final Enumerator ruleGSSTestProcTimeUnit() throws RecognitionException {
         Enumerator current = null;
 
@@ -12270,17 +12300,17 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTEST_PROC.g:5095:2: ( ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) )
-            // InternalTEST_PROC.g:5096:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
+            // InternalTEST_PROC.g:5103:2: ( ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) )
+            // InternalTEST_PROC.g:5104:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
             {
-            // InternalTEST_PROC.g:5096:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
+            // InternalTEST_PROC.g:5104:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
             int alt68=2;
             int LA68_0 = input.LA(1);
 
-            if ( (LA68_0==87) ) {
+            if ( (LA68_0==88) ) {
                 alt68=1;
             }
-            else if ( (LA68_0==88) ) {
+            else if ( (LA68_0==89) ) {
                 alt68=2;
             }
             else {
@@ -12292,12 +12322,12 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
             }
             switch (alt68) {
                 case 1 :
-                    // InternalTEST_PROC.g:5097:3: (enumLiteral_0= 'miliseconds' )
+                    // InternalTEST_PROC.g:5105:3: (enumLiteral_0= 'miliseconds' )
                     {
-                    // InternalTEST_PROC.g:5097:3: (enumLiteral_0= 'miliseconds' )
-                    // InternalTEST_PROC.g:5098:4: enumLiteral_0= 'miliseconds'
+                    // InternalTEST_PROC.g:5105:3: (enumLiteral_0= 'miliseconds' )
+                    // InternalTEST_PROC.g:5106:4: enumLiteral_0= 'miliseconds'
                     {
-                    enumLiteral_0=(Token)match(input,87,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,88,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSTestProcTimeUnitAccess().getMilisecondsEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -12311,12 +12341,12 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTEST_PROC.g:5105:3: (enumLiteral_1= 'seconds' )
+                    // InternalTEST_PROC.g:5113:3: (enumLiteral_1= 'seconds' )
                     {
-                    // InternalTEST_PROC.g:5105:3: (enumLiteral_1= 'seconds' )
-                    // InternalTEST_PROC.g:5106:4: enumLiteral_1= 'seconds'
+                    // InternalTEST_PROC.g:5113:3: (enumLiteral_1= 'seconds' )
+                    // InternalTEST_PROC.g:5114:4: enumLiteral_1= 'seconds'
                     {
-                    enumLiteral_1=(Token)match(input,88,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,89,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSTestProcTimeUnitAccess().getSecondsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -12354,7 +12384,7 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSTestProcCheckmode"
-    // InternalTEST_PROC.g:5116:1: ruleGSSTestProcCheckmode returns [Enumerator current=null] : ( (enumLiteral_0= 'all' ) | (enumLiteral_1= 'allunsorted' ) | (enumLiteral_2= 'any' ) ) ;
+    // InternalTEST_PROC.g:5124:1: ruleGSSTestProcCheckmode returns [Enumerator current=null] : ( (enumLiteral_0= 'all' ) | (enumLiteral_1= 'allunsorted' ) | (enumLiteral_2= 'any' ) ) ;
     public final Enumerator ruleGSSTestProcCheckmode() throws RecognitionException {
         Enumerator current = null;
 
@@ -12366,23 +12396,23 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTEST_PROC.g:5122:2: ( ( (enumLiteral_0= 'all' ) | (enumLiteral_1= 'allunsorted' ) | (enumLiteral_2= 'any' ) ) )
-            // InternalTEST_PROC.g:5123:2: ( (enumLiteral_0= 'all' ) | (enumLiteral_1= 'allunsorted' ) | (enumLiteral_2= 'any' ) )
+            // InternalTEST_PROC.g:5130:2: ( ( (enumLiteral_0= 'all' ) | (enumLiteral_1= 'allunsorted' ) | (enumLiteral_2= 'any' ) ) )
+            // InternalTEST_PROC.g:5131:2: ( (enumLiteral_0= 'all' ) | (enumLiteral_1= 'allunsorted' ) | (enumLiteral_2= 'any' ) )
             {
-            // InternalTEST_PROC.g:5123:2: ( (enumLiteral_0= 'all' ) | (enumLiteral_1= 'allunsorted' ) | (enumLiteral_2= 'any' ) )
+            // InternalTEST_PROC.g:5131:2: ( (enumLiteral_0= 'all' ) | (enumLiteral_1= 'allunsorted' ) | (enumLiteral_2= 'any' ) )
             int alt69=3;
             switch ( input.LA(1) ) {
-            case 89:
+            case 90:
                 {
                 alt69=1;
                 }
                 break;
-            case 90:
+            case 91:
                 {
                 alt69=2;
                 }
                 break;
-            case 91:
+            case 92:
                 {
                 alt69=3;
                 }
@@ -12397,12 +12427,12 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
 
             switch (alt69) {
                 case 1 :
-                    // InternalTEST_PROC.g:5124:3: (enumLiteral_0= 'all' )
+                    // InternalTEST_PROC.g:5132:3: (enumLiteral_0= 'all' )
                     {
-                    // InternalTEST_PROC.g:5124:3: (enumLiteral_0= 'all' )
-                    // InternalTEST_PROC.g:5125:4: enumLiteral_0= 'all'
+                    // InternalTEST_PROC.g:5132:3: (enumLiteral_0= 'all' )
+                    // InternalTEST_PROC.g:5133:4: enumLiteral_0= 'all'
                     {
-                    enumLiteral_0=(Token)match(input,89,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,90,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSTestProcCheckmodeAccess().getAllEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -12416,12 +12446,12 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTEST_PROC.g:5132:3: (enumLiteral_1= 'allunsorted' )
+                    // InternalTEST_PROC.g:5140:3: (enumLiteral_1= 'allunsorted' )
                     {
-                    // InternalTEST_PROC.g:5132:3: (enumLiteral_1= 'allunsorted' )
-                    // InternalTEST_PROC.g:5133:4: enumLiteral_1= 'allunsorted'
+                    // InternalTEST_PROC.g:5140:3: (enumLiteral_1= 'allunsorted' )
+                    // InternalTEST_PROC.g:5141:4: enumLiteral_1= 'allunsorted'
                     {
-                    enumLiteral_1=(Token)match(input,90,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,91,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSTestProcCheckmodeAccess().getAllunsortedEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -12435,12 +12465,12 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalTEST_PROC.g:5140:3: (enumLiteral_2= 'any' )
+                    // InternalTEST_PROC.g:5148:3: (enumLiteral_2= 'any' )
                     {
-                    // InternalTEST_PROC.g:5140:3: (enumLiteral_2= 'any' )
-                    // InternalTEST_PROC.g:5141:4: enumLiteral_2= 'any'
+                    // InternalTEST_PROC.g:5148:3: (enumLiteral_2= 'any' )
+                    // InternalTEST_PROC.g:5149:4: enumLiteral_2= 'any'
                     {
-                    enumLiteral_2=(Token)match(input,91,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,92,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSTestProcCheckmodeAccess().getAnyEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -12478,7 +12508,7 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSTestProcYesNo"
-    // InternalTEST_PROC.g:5151:1: ruleGSSTestProcYesNo returns [Enumerator current=null] : ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) ) ;
+    // InternalTEST_PROC.g:5159:1: ruleGSSTestProcYesNo returns [Enumerator current=null] : ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) ) ;
     public final Enumerator ruleGSSTestProcYesNo() throws RecognitionException {
         Enumerator current = null;
 
@@ -12489,17 +12519,17 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTEST_PROC.g:5157:2: ( ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) ) )
-            // InternalTEST_PROC.g:5158:2: ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) )
+            // InternalTEST_PROC.g:5165:2: ( ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) ) )
+            // InternalTEST_PROC.g:5166:2: ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) )
             {
-            // InternalTEST_PROC.g:5158:2: ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) )
+            // InternalTEST_PROC.g:5166:2: ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) )
             int alt70=2;
             int LA70_0 = input.LA(1);
 
-            if ( (LA70_0==92) ) {
+            if ( (LA70_0==93) ) {
                 alt70=1;
             }
-            else if ( (LA70_0==93) ) {
+            else if ( (LA70_0==94) ) {
                 alt70=2;
             }
             else {
@@ -12511,12 +12541,12 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
             }
             switch (alt70) {
                 case 1 :
-                    // InternalTEST_PROC.g:5159:3: (enumLiteral_0= 'yes' )
+                    // InternalTEST_PROC.g:5167:3: (enumLiteral_0= 'yes' )
                     {
-                    // InternalTEST_PROC.g:5159:3: (enumLiteral_0= 'yes' )
-                    // InternalTEST_PROC.g:5160:4: enumLiteral_0= 'yes'
+                    // InternalTEST_PROC.g:5167:3: (enumLiteral_0= 'yes' )
+                    // InternalTEST_PROC.g:5168:4: enumLiteral_0= 'yes'
                     {
-                    enumLiteral_0=(Token)match(input,92,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,93,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSTestProcYesNoAccess().getYesEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -12530,12 +12560,12 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTEST_PROC.g:5167:3: (enumLiteral_1= 'no' )
+                    // InternalTEST_PROC.g:5175:3: (enumLiteral_1= 'no' )
                     {
-                    // InternalTEST_PROC.g:5167:3: (enumLiteral_1= 'no' )
-                    // InternalTEST_PROC.g:5168:4: enumLiteral_1= 'no'
+                    // InternalTEST_PROC.g:5175:3: (enumLiteral_1= 'no' )
+                    // InternalTEST_PROC.g:5176:4: enumLiteral_1= 'no'
                     {
-                    enumLiteral_1=(Token)match(input,93,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,94,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSTestProcYesNoAccess().getNoEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -13056,16 +13086,16 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000080000L});
         public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000010000000L});
         public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000020000000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000000000L,0x0000000000600000L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000000000L,0x0000000000E00000L});
         public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000040000000L});
         public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000000000L,0x0000000001800000L});
+        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000000000L,0x0000000003000000L});
         public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000100000000L});
         public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000200000000L});
         public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0150040000000000L});
         public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0150040000080000L});
         public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000001000000000L});
-        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000000000000L,0x000000000E000000L});
+        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000000000000L,0x000000001C000000L});
         public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000002000000000L});
         public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000004000000000L});
         public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x8400000000000000L,0x0000000000000003L});
@@ -13099,7 +13129,7 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x2801000000000000L,0x0000000000000040L});
         public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x4804000000000000L,0x0000000000000080L});
         public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-        public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000000000000000L,0x0000000030000000L});
+        public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000000000000000L,0x0000000060000000L});
         public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0000000000080000L,0x0000000000000010L});
         public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
         public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x0000000000000002L,0x0000000000001000L});

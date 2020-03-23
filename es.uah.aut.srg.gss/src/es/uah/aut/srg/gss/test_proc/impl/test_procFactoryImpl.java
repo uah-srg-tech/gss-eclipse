@@ -107,6 +107,8 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 				return createGSSTestProcCheckmodeFromString(eDataType, initialValue);
 			case test_procPackage.GSS_TEST_PROC_YES_NO:
 				return createGSSTestProcYesNoFromString(eDataType, initialValue);
+			case test_procPackage.GSS_TEST_PROC_PREV_ACTION:
+				return createGSSTestProcPrevActionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -130,6 +132,8 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 				return convertGSSTestProcCheckmodeToString(eDataType, instanceValue);
 			case test_procPackage.GSS_TEST_PROC_YES_NO:
 				return convertGSSTestProcYesNoToString(eDataType, instanceValue);
+			case test_procPackage.GSS_TEST_PROC_PREV_ACTION:
+				return convertGSSTestProcPrevActionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -422,6 +426,26 @@ public class test_procFactoryImpl extends EFactoryImpl implements test_procFacto
 	 * @generated
 	 */
 	public String convertGSSTestProcYesNoToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTestProcPrevAction createGSSTestProcPrevActionFromString(EDataType eDataType, String initialValue) {
+		GSSTestProcPrevAction result = GSSTestProcPrevAction.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGSSTestProcPrevActionToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

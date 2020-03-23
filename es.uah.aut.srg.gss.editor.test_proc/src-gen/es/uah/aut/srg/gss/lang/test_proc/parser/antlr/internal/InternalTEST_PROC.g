@@ -5068,18 +5068,26 @@ ruleGSSTestProcActionType returns [Enumerator current=null]
 }:
 	(
 		(
-			enumLiteral_0='checking'
+			enumLiteral_0='"instruction"'
 			{
-				$current = grammarAccess.getGSSTestProcActionTypeAccess().getCheckingEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getGSSTestProcActionTypeAccess().getCheckingEnumLiteralDeclaration_0());
+				$current = grammarAccess.getGSSTestProcActionTypeAccess().getInstructionEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getGSSTestProcActionTypeAccess().getInstructionEnumLiteralDeclaration_0());
 			}
 		)
 		    |
 		(
-			enumLiteral_1='instruction'
+			enumLiteral_1='"TMTC checking"'
 			{
-				$current = grammarAccess.getGSSTestProcActionTypeAccess().getInstructionEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getGSSTestProcActionTypeAccess().getInstructionEnumLiteralDeclaration_1());
+				$current = grammarAccess.getGSSTestProcActionTypeAccess().getTmtc_checkingEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getGSSTestProcActionTypeAccess().getTmtc_checkingEnumLiteralDeclaration_1());
+			}
+		)
+		    |
+		(
+			enumLiteral_2='"checking"'
+			{
+				$current = grammarAccess.getGSSTestProcActionTypeAccess().getCheckingEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getGSSTestProcActionTypeAccess().getCheckingEnumLiteralDeclaration_2());
 			}
 		)
 	)

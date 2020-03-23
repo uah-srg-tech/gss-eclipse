@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.scenario.impl;
 
+import es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar;
 import es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVars;
 import es.uah.aut.srg.gss.scenario.GSSScenarioInterfaces;
 import es.uah.aut.srg.gss.scenario.GSSScenarioMonitors;
@@ -21,10 +22,12 @@ import es.uah.aut.srg.gss.scenario.GSSScenarioSpecialPackets;
 import es.uah.aut.srg.gss.scenario.GSSScenarioInterface;
 import es.uah.aut.srg.gss.scenario.scenarioPackage;
 import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioInterface;
+import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable;
 import es.uah.aut.srg.tmtcif.scenario.impl.TMTCIFScenarioImpl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -593,5 +596,18 @@ public class GSSScenarioScenarioImpl extends TMTCIFScenarioImpl implements GSSSc
 			interfs.add((TMTCIFScenarioInterface) interf);
 		};
 		return interfs;
+	}
+
+	@Override
+	public EList<TMTCIFScenarioVariable> getScenarioVariables() {
+		if(getGlobalVars() == null) {
+			return ECollections.emptyEList();
+		} else {
+			EList<TMTCIFScenarioVariable> vbles = new BasicEList<TMTCIFScenarioVariable>();
+			for(GSSScenarioGlobalVar vble : getGlobalVars().getGlobalVar()) {
+				vbles.add((TMTCIFScenarioVariable) vble);
+			};
+			return vbles;
+		}
 	}
 } //GSSScenarioScenarioImpl

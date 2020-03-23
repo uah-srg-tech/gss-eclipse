@@ -4996,27 +4996,31 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cProcedureGSSTestProcTestProcVersionedQualifiedNameParserRuleCall_8_0_1 = (RuleCall)cProcedureGSSTestProcTestProcCrossReference_8_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Keyword cReqKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Assignment cReqAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
-		private final RuleCall cReqIDTerminalRuleCall_10_1_0 = (RuleCall)cReqAssignment_10_1.eContents().get(0);
+		private final Keyword cPrevMsgKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Assignment cPrevMsgAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
+		private final RuleCall cPrevMsgIDTerminalRuleCall_10_1_0 = (RuleCall)cPrevMsgAssignment_10_1.eContents().get(0);
 		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
-		private final Keyword cReqActionKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Assignment cReqActionAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
-		private final RuleCall cReqActionGSSConfigReqActionEnumRuleCall_11_1_0 = (RuleCall)cReqActionAssignment_11_1.eContents().get(0);
+		private final Keyword cPrevActionKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
+		private final Assignment cPrevActionAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
+		private final RuleCall cPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0 = (RuleCall)cPrevActionAssignment_11_1.eContents().get(0);
+		private final Group cGroup_11_2 = (Group)cGroup_11.eContents().get(2);
+		private final Keyword cPrevActionParamKeyword_11_2_0 = (Keyword)cGroup_11_2.eContents().get(0);
+		private final Assignment cPrevActionParamAssignment_11_2_1 = (Assignment)cGroup_11_2.eContents().get(1);
+		private final RuleCall cPrevActionParamSTRINGTerminalRuleCall_11_2_1_0 = (RuleCall)cPrevActionParamAssignment_11_2_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
 		//GSSConfigTestCase:
 		//	'GSSScenarioTestCase' '{'
 		//	'name' ':=' name=STRING ';'
-		//	'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('req' req=ID)? ('reqAction'
-		//	reqAction=GSSConfigReqAction)?
+		//	'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('prevMsg' prevMsg=ID)?
+		//	('prevAction' prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)?
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSScenarioTestCase' '{' 'name' ':=' name=STRING ';' 'procedure' ':='
-		//procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('req' req=ID)? ('reqAction'
-		//reqAction=GSSConfigReqAction)? '}' ';'
+		//procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('prevMsg' prevMsg=ID)? ('prevAction'
+		//prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioTestCase'
@@ -5058,54 +5062,47 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
-		//('req' req=ID)?
+		//('prevMsg' prevMsg=ID)?
 		public Group getGroup_10() { return cGroup_10; }
 		
-		//'req'
-		public Keyword getReqKeyword_10_0() { return cReqKeyword_10_0; }
+		//'prevMsg'
+		public Keyword getPrevMsgKeyword_10_0() { return cPrevMsgKeyword_10_0; }
 		
-		//req=ID
-		public Assignment getReqAssignment_10_1() { return cReqAssignment_10_1; }
+		//prevMsg=ID
+		public Assignment getPrevMsgAssignment_10_1() { return cPrevMsgAssignment_10_1; }
 		
 		//ID
-		public RuleCall getReqIDTerminalRuleCall_10_1_0() { return cReqIDTerminalRuleCall_10_1_0; }
+		public RuleCall getPrevMsgIDTerminalRuleCall_10_1_0() { return cPrevMsgIDTerminalRuleCall_10_1_0; }
 		
-		//('reqAction' reqAction=GSSConfigReqAction)?
+		//('prevAction' prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)?
 		public Group getGroup_11() { return cGroup_11; }
 		
-		//'reqAction'
-		public Keyword getReqActionKeyword_11_0() { return cReqActionKeyword_11_0; }
+		//'prevAction'
+		public Keyword getPrevActionKeyword_11_0() { return cPrevActionKeyword_11_0; }
 		
-		//reqAction=GSSConfigReqAction
-		public Assignment getReqActionAssignment_11_1() { return cReqActionAssignment_11_1; }
+		//prevAction=GSSTestProcPrevAction
+		public Assignment getPrevActionAssignment_11_1() { return cPrevActionAssignment_11_1; }
 		
-		//GSSConfigReqAction
-		public RuleCall getReqActionGSSConfigReqActionEnumRuleCall_11_1_0() { return cReqActionGSSConfigReqActionEnumRuleCall_11_1_0; }
+		//GSSTestProcPrevAction
+		public RuleCall getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0() { return cPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0; }
+		
+		//('prevActionParam' prevActionParam=STRING)?
+		public Group getGroup_11_2() { return cGroup_11_2; }
+		
+		//'prevActionParam'
+		public Keyword getPrevActionParamKeyword_11_2_0() { return cPrevActionParamKeyword_11_2_0; }
+		
+		//prevActionParam=STRING
+		public Assignment getPrevActionParamAssignment_11_2_1() { return cPrevActionParamAssignment_11_2_1; }
+		
+		//STRING
+		public RuleCall getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0() { return cPrevActionParamSTRINGTerminalRuleCall_11_2_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
-	}
-	public class EStringElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.EString");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cSTRINGTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		
-		//EString:
-		//	STRING | ID;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//STRING | ID
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_0() { return cSTRINGTerminalRuleCall_0; }
-		
-		//ID
-		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
 	}
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.QualifiedName");
@@ -5754,20 +5751,20 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//'alarm1'
 		public Keyword getAlarm1Alarm1Keyword_0() { return cAlarm1Alarm1Keyword_0; }
 	}
-	public class GSSConfigReqActionElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigReqAction");
-		private final EnumLiteralDeclaration c_1EnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
-		private final Keyword c_1_1Keyword_0 = (Keyword)c_1EnumLiteralDeclaration.eContents().get(0);
+	public class GSSTestProcPrevActionElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSTestProcPrevAction");
+		private final EnumLiteralDeclaration cResetEnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
+		private final Keyword cResetResetKeyword_0 = (Keyword)cResetEnumLiteralDeclaration.eContents().get(0);
 		
-		//enum GSSConfigReqAction:
-		//	_1;
+		//enum GSSTestProcPrevAction returns test_proc::GSSTestProcPrevAction:
+		//	reset;
 		public EnumRule getRule() { return rule; }
 		
-		//_1
-		public EnumLiteralDeclaration get_1EnumLiteralDeclaration() { return c_1EnumLiteralDeclaration; }
+		//reset
+		public EnumLiteralDeclaration getResetEnumLiteralDeclaration() { return cResetEnumLiteralDeclaration; }
 		
-		//'_1'
-		public Keyword get_1_1Keyword_0() { return c_1_1Keyword_0; }
+		//'reset'
+		public Keyword getResetResetKeyword_0() { return cResetResetKeyword_0; }
 	}
 	
 	private final GSSModelFileElements pGSSModelFile;
@@ -5825,8 +5822,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSScenarioAlarmValTypeElements eGSSScenarioAlarmValType;
 	private final GSSConfigTestsElements pGSSConfigTests;
 	private final GSSConfigTestCaseElements pGSSConfigTestCase;
-	private final GSSConfigReqActionElements eGSSConfigReqAction;
-	private final EStringElements pEString;
+	private final GSSTestProcPrevActionElements eGSSTestProcPrevAction;
 	private final QualifiedNameElements pQualifiedName;
 	private final VersionElements pVersion;
 	private final VersionedQualifiedNameElements pVersionedQualifiedName;
@@ -5902,8 +5898,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		this.eGSSScenarioAlarmValType = new GSSScenarioAlarmValTypeElements();
 		this.pGSSConfigTests = new GSSConfigTestsElements();
 		this.pGSSConfigTestCase = new GSSConfigTestCaseElements();
-		this.eGSSConfigReqAction = new GSSConfigReqActionElements();
-		this.pEString = new EStringElements();
+		this.eGSSTestProcPrevAction = new GSSTestProcPrevActionElements();
 		this.pQualifiedName = new QualifiedNameElements();
 		this.pVersion = new VersionElements();
 		this.pVersionedQualifiedName = new VersionedQualifiedNameElements();
@@ -6701,8 +6696,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSConfigTestCase:
 	//	'GSSScenarioTestCase' '{'
 	//	'name' ':=' name=STRING ';'
-	//	'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('req' req=ID)? ('reqAction'
-	//	reqAction=GSSConfigReqAction)?
+	//	'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('prevMsg' prevMsg=ID)?
+	//	('prevAction' prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)?
 	//	'}' ';';
 	public GSSConfigTestCaseElements getGSSConfigTestCaseAccess() {
 		return pGSSConfigTestCase;
@@ -6712,24 +6707,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSConfigTestCaseAccess().getRule();
 	}
 	
-	//enum GSSConfigReqAction:
-	//	_1;
-	public GSSConfigReqActionElements getGSSConfigReqActionAccess() {
-		return eGSSConfigReqAction;
+	//enum GSSTestProcPrevAction returns test_proc::GSSTestProcPrevAction:
+	//	reset;
+	public GSSTestProcPrevActionElements getGSSTestProcPrevActionAccess() {
+		return eGSSTestProcPrevAction;
 	}
 	
-	public EnumRule getGSSConfigReqActionRule() {
-		return getGSSConfigReqActionAccess().getRule();
-	}
-	
-	//EString:
-	//	STRING | ID;
-	public EStringElements getEStringAccess() {
-		return pEString;
-	}
-	
-	public ParserRule getEStringRule() {
-		return getEStringAccess().getRule();
+	public EnumRule getGSSTestProcPrevActionRule() {
+		return getGSSTestProcPrevActionAccess().getRule();
 	}
 	
 	//QualifiedName:

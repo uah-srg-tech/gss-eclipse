@@ -17,15 +17,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="TestCase" lowerBound="1"
         upperBound="150" eType="#//GSSCampaignTestCase" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="GSSCampaignTestReqAction">
-    <eLiterals name="_1"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSCampaignTestCase">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="procedure" lowerBound="1"
         eType="ecore:EClass test_proc.ecore#//GSSTestProcTestProc"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="req" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reqAction" eType="#//GSSCampaignTestReqAction"
-        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prevMsg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prevAction" eType="ecore:EEnum test_proc.ecore#//GSSTestProcPrevAction"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prevActionParam" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -1517,16 +1517,16 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Rule GSSConfigReqAction
-ruleGSSConfigReqAction
+// Rule GSSTestProcPrevAction
+ruleGSSTestProcPrevAction
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSConfigReqActionAccess().get_1EnumLiteralDeclaration()); }
-		('_1')
-		{ after(grammarAccess.getGSSConfigReqActionAccess().get_1EnumLiteralDeclaration()); }
+		{ before(grammarAccess.getGSSTestProcPrevActionAccess().getResetEnumLiteralDeclaration()); }
+		('reset')
+		{ after(grammarAccess.getGSSTestProcPrevActionAccess().getResetEnumLiteralDeclaration()); }
 	)
 ;
 finally {
@@ -23734,9 +23734,9 @@ rule__GSSConfigTestCase__Group_10__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSConfigTestCaseAccess().getReqKeyword_10_0()); }
-	'req'
-	{ after(grammarAccess.getGSSConfigTestCaseAccess().getReqKeyword_10_0()); }
+	{ before(grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgKeyword_10_0()); }
+	'prevMsg'
+	{ after(grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgKeyword_10_0()); }
 )
 ;
 finally {
@@ -23760,9 +23760,9 @@ rule__GSSConfigTestCase__Group_10__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSConfigTestCaseAccess().getReqAssignment_10_1()); }
-	(rule__GSSConfigTestCase__ReqAssignment_10_1)
-	{ after(grammarAccess.getGSSConfigTestCaseAccess().getReqAssignment_10_1()); }
+	{ before(grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgAssignment_10_1()); }
+	(rule__GSSConfigTestCase__PrevMsgAssignment_10_1)
+	{ after(grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgAssignment_10_1()); }
 )
 ;
 finally {
@@ -23788,9 +23788,9 @@ rule__GSSConfigTestCase__Group_11__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSConfigTestCaseAccess().getReqActionKeyword_11_0()); }
-	'reqAction'
-	{ after(grammarAccess.getGSSConfigTestCaseAccess().getReqActionKeyword_11_0()); }
+	{ before(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionKeyword_11_0()); }
+	'prevAction'
+	{ after(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionKeyword_11_0()); }
 )
 ;
 finally {
@@ -23803,6 +23803,7 @@ rule__GSSConfigTestCase__Group_11__1
 	}
 :
 	rule__GSSConfigTestCase__Group_11__1__Impl
+	rule__GSSConfigTestCase__Group_11__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -23814,9 +23815,89 @@ rule__GSSConfigTestCase__Group_11__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSConfigTestCaseAccess().getReqActionAssignment_11_1()); }
-	(rule__GSSConfigTestCase__ReqActionAssignment_11_1)
-	{ after(grammarAccess.getGSSConfigTestCaseAccess().getReqActionAssignment_11_1()); }
+	{ before(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionAssignment_11_1()); }
+	(rule__GSSConfigTestCase__PrevActionAssignment_11_1)
+	{ after(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionAssignment_11_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigTestCase__Group_11__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSConfigTestCase__Group_11__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigTestCase__Group_11__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSConfigTestCaseAccess().getGroup_11_2()); }
+	(rule__GSSConfigTestCase__Group_11_2__0)?
+	{ after(grammarAccess.getGSSConfigTestCaseAccess().getGroup_11_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__GSSConfigTestCase__Group_11_2__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSConfigTestCase__Group_11_2__0__Impl
+	rule__GSSConfigTestCase__Group_11_2__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigTestCase__Group_11_2__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamKeyword_11_2_0()); }
+	'prevActionParam'
+	{ after(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamKeyword_11_2_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigTestCase__Group_11_2__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSConfigTestCase__Group_11_2__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigTestCase__Group_11_2__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamAssignment_11_2_1()); }
+	(rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1)
+	{ after(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamAssignment_11_2_1()); }
 )
 ;
 finally {
@@ -28114,30 +28195,45 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSConfigTestCase__ReqAssignment_10_1
+rule__GSSConfigTestCase__PrevMsgAssignment_10_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSConfigTestCaseAccess().getReqIDTerminalRuleCall_10_1_0()); }
+		{ before(grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0()); }
 		RULE_ID
-		{ after(grammarAccess.getGSSConfigTestCaseAccess().getReqIDTerminalRuleCall_10_1_0()); }
+		{ after(grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSConfigTestCase__ReqActionAssignment_11_1
+rule__GSSConfigTestCase__PrevActionAssignment_11_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSConfigTestCaseAccess().getReqActionGSSConfigReqActionEnumRuleCall_11_1_0()); }
-		ruleGSSConfigReqAction
-		{ after(grammarAccess.getGSSConfigTestCaseAccess().getReqActionGSSConfigReqActionEnumRuleCall_11_1_0()); }
+		{ before(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0()); }
+		ruleGSSTestProcPrevAction
+		{ after(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0()); }
 	)
 ;
 finally {

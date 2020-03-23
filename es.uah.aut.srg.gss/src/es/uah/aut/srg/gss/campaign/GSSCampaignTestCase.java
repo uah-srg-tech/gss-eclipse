@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.campaign;
 
+import es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc;
 
 import org.eclipse.emf.ecore.EObject;
@@ -25,8 +26,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getProcedure <em>Procedure</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getReq <em>Req</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getReqAction <em>Req Action</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getPrevMsg <em>Prev Msg</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getPrevAction <em>Prev Action</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getPrevActionParam <em>Prev Action Param</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignTestCase()
@@ -87,85 +89,84 @@ public interface GSSCampaignTestCase extends EObject {
 	void setProcedure(GSSTestProcTestProc value);
 
 	/**
-	 * Returns the value of the '<em><b>Req</b></em>' attribute.
+	 * Returns the value of the '<em><b>Prev Msg</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Req</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Prev Msg</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Req</em>' attribute.
-	 * @see #setReq(String)
-	 * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignTestCase_Req()
+	 * @return the value of the '<em>Prev Msg</em>' attribute.
+	 * @see #setPrevMsg(String)
+	 * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignTestCase_PrevMsg()
 	 * @model
 	 * @generated
 	 */
-	String getReq();
+	String getPrevMsg();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getReq <em>Req</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getPrevMsg <em>Prev Msg</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Req</em>' attribute.
-	 * @see #getReq()
+	 * @param value the new value of the '<em>Prev Msg</em>' attribute.
+	 * @see #getPrevMsg()
 	 * @generated
 	 */
-	void setReq(String value);
+	void setPrevMsg(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Req Action</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.campaign.GSSCampaignTestReqAction}.
+	 * Returns the value of the '<em><b>Prev Action</b></em>' attribute.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Req Action</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Prev Action</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Req Action</em>' attribute.
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestReqAction
-	 * @see #isSetReqAction()
-	 * @see #unsetReqAction()
-	 * @see #setReqAction(GSSCampaignTestReqAction)
-	 * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignTestCase_ReqAction()
-	 * @model unsettable="true"
+	 * @return the value of the '<em>Prev Action</em>' attribute.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction
+	 * @see #setPrevAction(GSSTestProcPrevAction)
+	 * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignTestCase_PrevAction()
+	 * @model
 	 * @generated
 	 */
-	GSSCampaignTestReqAction getReqAction();
+	GSSTestProcPrevAction getPrevAction();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getReqAction <em>Req Action</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getPrevAction <em>Prev Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Req Action</em>' attribute.
-	 * @see es.uah.aut.srg.gss.campaign.GSSCampaignTestReqAction
-	 * @see #isSetReqAction()
-	 * @see #unsetReqAction()
-	 * @see #getReqAction()
+	 * @param value the new value of the '<em>Prev Action</em>' attribute.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction
+	 * @see #getPrevAction()
 	 * @generated
 	 */
-	void setReqAction(GSSCampaignTestReqAction value);
+	void setPrevAction(GSSTestProcPrevAction value);
 
 	/**
-	 * Unsets the value of the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getReqAction <em>Req Action</em>}' attribute.
+	 * Returns the value of the '<em><b>Prev Action Param</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Prev Action Param</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #isSetReqAction()
-	 * @see #getReqAction()
-	 * @see #setReqAction(GSSCampaignTestReqAction)
+	 * @return the value of the '<em>Prev Action Param</em>' attribute.
+	 * @see #setPrevActionParam(String)
+	 * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignTestCase_PrevActionParam()
+	 * @model
 	 * @generated
 	 */
-	void unsetReqAction();
+	String getPrevActionParam();
 
 	/**
-	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getReqAction <em>Req Action</em>}' attribute is set.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignTestCase#getPrevActionParam <em>Prev Action Param</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Req Action</em>' attribute is set.
-	 * @see #unsetReqAction()
-	 * @see #getReqAction()
-	 * @see #setReqAction(GSSCampaignTestReqAction)
+	 * @param value the new value of the '<em>Prev Action Param</em>' attribute.
+	 * @see #getPrevActionParam()
 	 * @generated
 	 */
-	boolean isSetReqAction();
+	void setPrevActionParam(String value);
 
 } // GSSCampaignTestCase

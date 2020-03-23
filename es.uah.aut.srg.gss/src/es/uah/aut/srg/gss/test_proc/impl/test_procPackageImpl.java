@@ -37,6 +37,7 @@ import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel1;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel2;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputLevel3;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcOutputs;
+import es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcSpecialPackets;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcStep;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc;
@@ -247,6 +248,13 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * @generated
 	 */
 	private EEnum gssTestProcYesNoEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum gssTestProcPrevActionEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1354,6 +1362,15 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getGSSTestProcPrevAction() {
+		return gssTestProcPrevActionEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public test_procFactory gettest_procFactory() {
 		return (test_procFactory)getEFactoryInstance();
 	}
@@ -1515,6 +1532,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		gssTestProcTimeUnitEEnum = createEEnum(GSS_TEST_PROC_TIME_UNIT);
 		gssTestProcCheckmodeEEnum = createEEnum(GSS_TEST_PROC_CHECKMODE);
 		gssTestProcYesNoEEnum = createEEnum(GSS_TEST_PROC_YES_NO);
+		gssTestProcPrevActionEEnum = createEEnum(GSS_TEST_PROC_PREV_ACTION);
 	}
 
 	/**
@@ -1707,6 +1725,7 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 
 		initEEnum(gssTestProcActionTypeEEnum, GSSTestProcActionType.class, "GSSTestProcActionType");
 		addEEnumLiteral(gssTestProcActionTypeEEnum, GSSTestProcActionType.INSTRUCTION);
+		addEEnumLiteral(gssTestProcActionTypeEEnum, GSSTestProcActionType.TMTC_CHECKING);
 		addEEnumLiteral(gssTestProcActionTypeEEnum, GSSTestProcActionType.CHECKING);
 
 		initEEnum(gssTestProcTimeUnitEEnum, GSSTestProcTimeUnit.class, "GSSTestProcTimeUnit");
@@ -1721,6 +1740,10 @@ public class test_procPackageImpl extends EPackageImpl implements test_procPacka
 		initEEnum(gssTestProcYesNoEEnum, GSSTestProcYesNo.class, "GSSTestProcYesNo");
 		addEEnumLiteral(gssTestProcYesNoEEnum, GSSTestProcYesNo.YES);
 		addEEnumLiteral(gssTestProcYesNoEEnum, GSSTestProcYesNo.NO);
+
+		initEEnum(gssTestProcPrevActionEEnum, GSSTestProcPrevAction.class, "GSSTestProcPrevAction");
+		addEEnumLiteral(gssTestProcPrevActionEEnum, GSSTestProcPrevAction.NONE);
+		addEEnumLiteral(gssTestProcPrevActionEEnum, GSSTestProcPrevAction.RESET);
 
 		// Create resource
 		createResource(eNS_URI);

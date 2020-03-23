@@ -14,7 +14,6 @@ import es.uah.aut.srg.gss.common.commonPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -215,22 +214,31 @@ public interface configPackage extends EPackage {
 	int GSS_CONFIG_TEST_CASE__PROCEDURE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Req</b></em>' attribute.
+	 * The feature id for the '<em><b>Prev Msg</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_TEST_CASE__REQ = 2;
+	int GSS_CONFIG_TEST_CASE__PREV_MSG = 2;
 
 	/**
-	 * The feature id for the '<em><b>Req Action</b></em>' attribute.
+	 * The feature id for the '<em><b>Prev Action</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_TEST_CASE__REQ_ACTION = 3;
+	int GSS_CONFIG_TEST_CASE__PREV_ACTION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Prev Action Param</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_CONFIG_TEST_CASE__PREV_ACTION_PARAM = 4;
 
 	/**
 	 * The number of structural features of the '<em>GSS Config Test Case</em>' class.
@@ -239,7 +247,7 @@ public interface configPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_CONFIG_TEST_CASE_FEATURE_COUNT = 4;
+	int GSS_CONFIG_TEST_CASE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>GSS Config Test Case</em>' class.
@@ -249,17 +257,6 @@ public interface configPackage extends EPackage {
 	 * @ordered
 	 */
 	int GSS_CONFIG_TEST_CASE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.config.GSSConfigReqAction <em>GSS Config Req Action</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.config.GSSConfigReqAction
-	 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigReqAction()
-	 * @generated
-	 */
-	int GSS_CONFIG_REQ_ACTION = 3;
-
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.config.GSSConfigGSSConfig <em>GSS Config GSS Config</em>}'.
@@ -347,36 +344,37 @@ public interface configPackage extends EPackage {
 	EReference getGSSConfigTestCase_Procedure();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getReq <em>Req</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getPrevMsg <em>Prev Msg</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Req</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigTestCase#getReq()
+	 * @return the meta object for the attribute '<em>Prev Msg</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigTestCase#getPrevMsg()
 	 * @see #getGSSConfigTestCase()
 	 * @generated
 	 */
-	EAttribute getGSSConfigTestCase_Req();
+	EAttribute getGSSConfigTestCase_PrevMsg();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getReqAction <em>Req Action</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getPrevAction <em>Prev Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Req Action</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigTestCase#getReqAction()
+	 * @return the meta object for the attribute '<em>Prev Action</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigTestCase#getPrevAction()
 	 * @see #getGSSConfigTestCase()
 	 * @generated
 	 */
-	EAttribute getGSSConfigTestCase_ReqAction();
+	EAttribute getGSSConfigTestCase_PrevAction();
 
 	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.config.GSSConfigReqAction <em>GSS Config Req Action</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getPrevActionParam <em>Prev Action Param</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>GSS Config Req Action</em>'.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigReqAction
+	 * @return the meta object for the attribute '<em>Prev Action Param</em>'.
+	 * @see es.uah.aut.srg.gss.config.GSSConfigTestCase#getPrevActionParam()
+	 * @see #getGSSConfigTestCase()
 	 * @generated
 	 */
-	EEnum getGSSConfigReqAction();
+	EAttribute getGSSConfigTestCase_PrevActionParam();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -472,30 +470,28 @@ public interface configPackage extends EPackage {
 		EReference GSS_CONFIG_TEST_CASE__PROCEDURE = eINSTANCE.getGSSConfigTestCase_Procedure();
 
 		/**
-		 * The meta object literal for the '<em><b>Req</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Prev Msg</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_TEST_CASE__REQ = eINSTANCE.getGSSConfigTestCase_Req();
+		EAttribute GSS_CONFIG_TEST_CASE__PREV_MSG = eINSTANCE.getGSSConfigTestCase_PrevMsg();
 
 		/**
-		 * The meta object literal for the '<em><b>Req Action</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Prev Action</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_CONFIG_TEST_CASE__REQ_ACTION = eINSTANCE.getGSSConfigTestCase_ReqAction();
+		EAttribute GSS_CONFIG_TEST_CASE__PREV_ACTION = eINSTANCE.getGSSConfigTestCase_PrevAction();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.config.GSSConfigReqAction <em>GSS Config Req Action</em>}' enum.
+		 * The meta object literal for the '<em><b>Prev Action Param</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.config.GSSConfigReqAction
-		 * @see es.uah.aut.srg.gss.config.impl.configPackageImpl#getGSSConfigReqAction()
 		 * @generated
 		 */
-		EEnum GSS_CONFIG_REQ_ACTION = eINSTANCE.getGSSConfigReqAction();
+		EAttribute GSS_CONFIG_TEST_CASE__PREV_ACTION_PARAM = eINSTANCE.getGSSConfigTestCase_PrevActionParam();
 
 	}
 

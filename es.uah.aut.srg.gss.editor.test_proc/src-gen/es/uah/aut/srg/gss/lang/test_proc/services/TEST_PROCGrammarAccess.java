@@ -3769,29 +3769,37 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	public class GSSTestProcActionTypeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcActionType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cCheckingEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cCheckingCheckingKeyword_0_0 = (Keyword)cCheckingEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cInstructionEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cInstructionInstructionKeyword_1_0 = (Keyword)cInstructionEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cInstructionEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cInstructionInstructionKeyword_0_0 = (Keyword)cInstructionEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cTmtc_checkingEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cTmtc_checkingTMTCCheckingKeyword_1_0 = (Keyword)cTmtc_checkingEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cCheckingEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cCheckingCheckingKeyword_2_0 = (Keyword)cCheckingEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum GSSTestProcActionType:
-		//	checking | instruction;
+		//	instruction='"instruction"' | tmtc_checking='"TMTC checking"' | checking='"checking"';
 		public EnumRule getRule() { return rule; }
 		
-		//checking | instruction
+		//instruction='"instruction"' | tmtc_checking='"TMTC checking"' | checking='"checking"'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//checking
-		public EnumLiteralDeclaration getCheckingEnumLiteralDeclaration_0() { return cCheckingEnumLiteralDeclaration_0; }
+		//instruction='"instruction"'
+		public EnumLiteralDeclaration getInstructionEnumLiteralDeclaration_0() { return cInstructionEnumLiteralDeclaration_0; }
 		
-		//'checking'
-		public Keyword getCheckingCheckingKeyword_0_0() { return cCheckingCheckingKeyword_0_0; }
+		//'"instruction"'
+		public Keyword getInstructionInstructionKeyword_0_0() { return cInstructionInstructionKeyword_0_0; }
 		
-		//instruction
-		public EnumLiteralDeclaration getInstructionEnumLiteralDeclaration_1() { return cInstructionEnumLiteralDeclaration_1; }
+		//tmtc_checking='"TMTC checking"'
+		public EnumLiteralDeclaration getTmtc_checkingEnumLiteralDeclaration_1() { return cTmtc_checkingEnumLiteralDeclaration_1; }
 		
-		//'instruction'
-		public Keyword getInstructionInstructionKeyword_1_0() { return cInstructionInstructionKeyword_1_0; }
+		//'"TMTC checking"'
+		public Keyword getTmtc_checkingTMTCCheckingKeyword_1_0() { return cTmtc_checkingTMTCCheckingKeyword_1_0; }
+		
+		//checking='"checking"'
+		public EnumLiteralDeclaration getCheckingEnumLiteralDeclaration_2() { return cCheckingEnumLiteralDeclaration_2; }
+		
+		//'"checking"'
+		public Keyword getCheckingCheckingKeyword_2_0() { return cCheckingCheckingKeyword_2_0; }
 	}
 	public class GSSTestProcTimeUnitElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.test_proc.TEST_PROC.GSSTestProcTimeUnit");
@@ -4097,7 +4105,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum GSSTestProcActionType:
-	//	checking | instruction;
+	//	instruction='"instruction"' | tmtc_checking='"TMTC checking"' | checking='"checking"';
 	public GSSTestProcActionTypeElements getGSSTestProcActionTypeAccess() {
 		return eGSSTestProcActionType;
 	}

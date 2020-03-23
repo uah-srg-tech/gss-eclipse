@@ -269,7 +269,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigTestCase returns GSSConfigTestCase
 	 *
 	 * Constraint:
-	 *     (name=STRING procedure=[GSSTestProcTestProc|VersionedQualifiedName] req=ID? reqAction=GSSConfigReqAction?)
+	 *     (name=STRING procedure=[GSSTestProcTestProc|VersionedQualifiedName] prevMsg=ID? (prevAction=GSSTestProcPrevAction prevActionParam=STRING?)?)
 	 */
 	protected void sequence_GSSConfigTestCase(ISerializationContext context, GSSConfigTestCase semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -62,7 +62,7 @@ GSSTestProcAction returns GSSTestProcAction:
 ;
 
 enum GSSTestProcActionType returns GSSTestProcActionType:
-	checking = 'checking' | instruction = 'instruction';
+	instruction = '"instruction"' | tmtc_checking = '"tmtc_checking"' | checking = '"checking"';
 	
 GSSTestProcInputs returns GSSTestProcInputs:
 	{GSSTestProcInputs}

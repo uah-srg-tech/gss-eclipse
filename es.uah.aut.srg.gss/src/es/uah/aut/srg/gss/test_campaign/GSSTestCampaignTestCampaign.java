@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.gss.test_campaign;
 
-import es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -26,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign#getTest_proc <em>Test proc</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign#getTest <em>Test</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.test_campaign.test_campaignPackage#getGSSTestCampaignTestCampaign()
@@ -61,19 +59,19 @@ public interface GSSTestCampaignTestCampaign extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Test proc</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc}.
+	 * Returns the value of the '<em><b>Test</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Test proc</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Test</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Test proc</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.test_campaign.test_campaignPackage#getGSSTestCampaignTestCampaign_Test_proc()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Test</em>' containment reference list.
+	 * @see es.uah.aut.srg.gss.test_campaign.test_campaignPackage#getGSSTestCampaignTestCampaign_Test()
+	 * @model containment="true" required="true" upper="150"
 	 * @generated
 	 */
-	EList<GSSTestProcTestProc> getTest_proc();
+	EList<GSSTestCampaignTest> getTest();
 
 } // GSSTestCampaignTestCampaign

@@ -32,7 +32,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcAbstractInputs" abstract="true"/>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSTestProcActionType">
     <eLiterals name="instruction" literal="instruction"/>
-    <eLiterals name="checking" value="1" literal="checking"/>
+    <eLiterals name="tmtc_checking" value="1" literal="tmtc_checking"/>
+    <eLiterals name="checking" value="2" literal="checking"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTestProcAction" eSuperTypes="#//GSSTestProcAbstractInputs">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" lowerBound="1"
@@ -192,5 +193,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="apply_def_filter" lowerBound="1"
         eType="#//GSSTestProcYesNo" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extra_filter" eType="ecore:EClass filter.ecore#//GSSFilterFilter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSTestProcPrevAction">
+    <eLiterals name="none"/>
+    <eLiterals name="reset" value="1"/>
   </eClassifiers>
 </ecore:EPackage>

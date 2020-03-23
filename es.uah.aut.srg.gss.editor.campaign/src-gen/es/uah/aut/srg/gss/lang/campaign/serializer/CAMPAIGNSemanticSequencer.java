@@ -127,7 +127,7 @@ public class CAMPAIGNSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     GSSCampaignTestCase returns GSSCampaignTestCase
 	 *
 	 * Constraint:
-	 *     (name=STRING procedure=[GSSTestProcTestProc|VersionedQualifiedName] req=ID? reqAction=GSSCampaignTestReqAction?)
+	 *     (name=STRING procedure=[GSSTestProcTestProc|VersionedQualifiedName] prevMsg=ID? (prevAction=GSSTestProcPrevAction prevActionParam=STRING?)?)
 	 */
 	protected void sequence_GSSCampaignTestCase(ISerializationContext context, GSSCampaignTestCase semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

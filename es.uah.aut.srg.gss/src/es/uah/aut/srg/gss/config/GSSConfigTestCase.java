@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.config;
 
+import es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc;
 
 import org.eclipse.emf.ecore.EObject;
@@ -25,8 +26,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getProcedure <em>Procedure</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getReq <em>Req</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getReqAction <em>Req Action</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getPrevMsg <em>Prev Msg</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getPrevAction <em>Prev Action</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getPrevActionParam <em>Prev Action Param</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigTestCase()
@@ -87,85 +89,111 @@ public interface GSSConfigTestCase extends EObject {
 	void setProcedure(GSSTestProcTestProc value);
 
 	/**
-	 * Returns the value of the '<em><b>Req</b></em>' attribute.
+	 * Returns the value of the '<em><b>Prev Msg</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Req</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Prev Msg</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Req</em>' attribute.
-	 * @see #setReq(String)
-	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigTestCase_Req()
+	 * @return the value of the '<em>Prev Msg</em>' attribute.
+	 * @see #setPrevMsg(String)
+	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigTestCase_PrevMsg()
 	 * @model
 	 * @generated
 	 */
-	String getReq();
+	String getPrevMsg();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getReq <em>Req</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getPrevMsg <em>Prev Msg</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Req</em>' attribute.
-	 * @see #getReq()
+	 * @param value the new value of the '<em>Prev Msg</em>' attribute.
+	 * @see #getPrevMsg()
 	 * @generated
 	 */
-	void setReq(String value);
+	void setPrevMsg(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Req Action</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.config.GSSConfigReqAction}.
+	 * Returns the value of the '<em><b>Prev Action</b></em>' attribute.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Req Action</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Prev Action</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Req Action</em>' attribute.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigReqAction
-	 * @see #isSetReqAction()
-	 * @see #unsetReqAction()
-	 * @see #setReqAction(GSSConfigReqAction)
-	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigTestCase_ReqAction()
+	 * @return the value of the '<em>Prev Action</em>' attribute.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction
+	 * @see #isSetPrevAction()
+	 * @see #unsetPrevAction()
+	 * @see #setPrevAction(GSSTestProcPrevAction)
+	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigTestCase_PrevAction()
 	 * @model unsettable="true"
 	 * @generated
 	 */
-	GSSConfigReqAction getReqAction();
+	GSSTestProcPrevAction getPrevAction();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getReqAction <em>Req Action</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getPrevAction <em>Prev Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Req Action</em>' attribute.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigReqAction
-	 * @see #isSetReqAction()
-	 * @see #unsetReqAction()
-	 * @see #getReqAction()
+	 * @param value the new value of the '<em>Prev Action</em>' attribute.
+	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction
+	 * @see #isSetPrevAction()
+	 * @see #unsetPrevAction()
+	 * @see #getPrevAction()
 	 * @generated
 	 */
-	void setReqAction(GSSConfigReqAction value);
+	void setPrevAction(GSSTestProcPrevAction value);
 
 	/**
-	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getReqAction <em>Req Action</em>}' attribute.
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getPrevAction <em>Prev Action</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isSetReqAction()
-	 * @see #getReqAction()
-	 * @see #setReqAction(GSSConfigReqAction)
+	 * @see #isSetPrevAction()
+	 * @see #getPrevAction()
+	 * @see #setPrevAction(GSSTestProcPrevAction)
 	 * @generated
 	 */
-	void unsetReqAction();
+	void unsetPrevAction();
 
 	/**
-	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getReqAction <em>Req Action</em>}' attribute is set.
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getPrevAction <em>Prev Action</em>}' attribute is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Req Action</em>' attribute is set.
-	 * @see #unsetReqAction()
-	 * @see #getReqAction()
-	 * @see #setReqAction(GSSConfigReqAction)
+	 * @return whether the value of the '<em>Prev Action</em>' attribute is set.
+	 * @see #unsetPrevAction()
+	 * @see #getPrevAction()
+	 * @see #setPrevAction(GSSTestProcPrevAction)
 	 * @generated
 	 */
-	boolean isSetReqAction();
+	boolean isSetPrevAction();
+
+	/**
+	 * Returns the value of the '<em><b>Prev Action Param</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Prev Action Param</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prev Action Param</em>' attribute.
+	 * @see #setPrevActionParam(String)
+	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigTestCase_PrevActionParam()
+	 * @model
+	 * @generated
+	 */
+	String getPrevActionParam();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase#getPrevActionParam <em>Prev Action Param</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Prev Action Param</em>' attribute.
+	 * @see #getPrevActionParam()
+	 * @generated
+	 */
+	void setPrevActionParam(String value);
 
 } // GSSConfigTestCase

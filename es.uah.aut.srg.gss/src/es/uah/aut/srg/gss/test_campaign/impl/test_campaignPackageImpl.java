@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.gss.test_campaign.impl;
 
+import es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest;
 import es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign;
 import es.uah.aut.srg.gss.test_campaign.test_campaignFactory;
 import es.uah.aut.srg.gss.test_campaign.test_campaignPackage;
@@ -36,6 +37,13 @@ public class test_campaignPackageImpl extends EPackageImpl implements test_campa
 	 * @generated
 	 */
 	private EClass gssTestCampaignTestCampaignEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gssTestCampaignTestEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -124,8 +132,62 @@ public class test_campaignPackageImpl extends EPackageImpl implements test_campa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTestCampaignTestCampaign_Test_proc() {
+	public EReference getGSSTestCampaignTestCampaign_Test() {
 		return (EReference)gssTestCampaignTestCampaignEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGSSTestCampaignTest() {
+		return gssTestCampaignTestEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTestCampaignTest_Name() {
+		return (EAttribute)gssTestCampaignTestEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSTestCampaignTest_Procedure() {
+		return (EReference)gssTestCampaignTestEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTestCampaignTest_PrevMsg() {
+		return (EAttribute)gssTestCampaignTestEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTestCampaignTest_PrevAction() {
+		return (EAttribute)gssTestCampaignTestEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSTestCampaignTest_PrevActionParam() {
+		return (EAttribute)gssTestCampaignTestEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -158,7 +220,14 @@ public class test_campaignPackageImpl extends EPackageImpl implements test_campa
 		// Create classes and their features
 		gssTestCampaignTestCampaignEClass = createEClass(GSS_TEST_CAMPAIGN_TEST_CAMPAIGN);
 		createEAttribute(gssTestCampaignTestCampaignEClass, GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__NAME);
-		createEReference(gssTestCampaignTestCampaignEClass, GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST_PROC);
+		createEReference(gssTestCampaignTestCampaignEClass, GSS_TEST_CAMPAIGN_TEST_CAMPAIGN__TEST);
+
+		gssTestCampaignTestEClass = createEClass(GSS_TEST_CAMPAIGN_TEST);
+		createEAttribute(gssTestCampaignTestEClass, GSS_TEST_CAMPAIGN_TEST__NAME);
+		createEReference(gssTestCampaignTestEClass, GSS_TEST_CAMPAIGN_TEST__PROCEDURE);
+		createEAttribute(gssTestCampaignTestEClass, GSS_TEST_CAMPAIGN_TEST__PREV_MSG);
+		createEAttribute(gssTestCampaignTestEClass, GSS_TEST_CAMPAIGN_TEST__PREV_ACTION);
+		createEAttribute(gssTestCampaignTestEClass, GSS_TEST_CAMPAIGN_TEST__PREV_ACTION_PARAM);
 	}
 
 	/**
@@ -196,7 +265,14 @@ public class test_campaignPackageImpl extends EPackageImpl implements test_campa
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssTestCampaignTestCampaignEClass, GSSTestCampaignTestCampaign.class, "GSSTestCampaignTestCampaign", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSTestCampaignTestCampaign_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSTestCampaignTestCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTestCampaignTestCampaign_Test_proc(), thetest_procPackage.getGSSTestProcTestProc(), null, "test_proc", null, 1, -1, GSSTestCampaignTestCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTestCampaignTestCampaign_Test(), this.getGSSTestCampaignTest(), null, "test", null, 1, 150, GSSTestCampaignTestCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(gssTestCampaignTestEClass, GSSTestCampaignTest.class, "GSSTestCampaignTest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGSSTestCampaignTest_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSTestCampaignTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSTestCampaignTest_Procedure(), thetest_procPackage.getGSSTestProcTestProc(), null, "procedure", null, 1, 1, GSSTestCampaignTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSTestCampaignTest_PrevMsg(), ecorePackage.getEString(), "prevMsg", null, 0, 1, GSSTestCampaignTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSTestCampaignTest_PrevAction(), thetest_procPackage.getGSSTestProcPrevAction(), "prevAction", null, 0, 1, GSSTestCampaignTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSTestCampaignTest_PrevActionParam(), ecorePackage.getEString(), "prevActionParam", null, 0, 1, GSSTestCampaignTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

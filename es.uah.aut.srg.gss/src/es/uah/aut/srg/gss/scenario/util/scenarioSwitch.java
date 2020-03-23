@@ -14,6 +14,7 @@ import es.uah.aut.srg.gss.scenario.*;
 
 import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario;
 import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioInterface;
+import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -260,6 +261,7 @@ public class scenarioSwitch<T> extends Switch<T> {
 			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR: {
 				GSSScenarioGlobalVar gssScenarioGlobalVar = (GSSScenarioGlobalVar)theEObject;
 				T result = caseGSSScenarioGlobalVar(gssScenarioGlobalVar);
+				if (result == null) result = caseTMTCIFScenarioVariable(gssScenarioGlobalVar);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -954,6 +956,21 @@ public class scenarioSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTMTCIFScenarioInterface(TMTCIFScenarioInterface object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>TMTCIF Scenario Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>TMTCIF Scenario Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTMTCIFScenarioVariable(TMTCIFScenarioVariable object) {
 		return null;
 	}
 

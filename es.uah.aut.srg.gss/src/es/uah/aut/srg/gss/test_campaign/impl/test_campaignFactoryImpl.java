@@ -65,6 +65,7 @@ public class test_campaignFactoryImpl extends EFactoryImpl implements test_campa
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN: return createGSSTestCampaignTestCampaign();
+			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST: return createGSSTestCampaignTest();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -78,6 +79,16 @@ public class test_campaignFactoryImpl extends EFactoryImpl implements test_campa
 	public GSSTestCampaignTestCampaign createGSSTestCampaignTestCampaign() {
 		GSSTestCampaignTestCampaignImpl gssTestCampaignTestCampaign = new GSSTestCampaignTestCampaignImpl();
 		return gssTestCampaignTestCampaign;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSTestCampaignTest createGSSTestCampaignTest() {
+		GSSTestCampaignTestImpl gssTestCampaignTest = new GSSTestCampaignTestImpl();
+		return gssTestCampaignTest;
 	}
 
 	/**

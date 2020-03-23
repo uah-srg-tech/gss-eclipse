@@ -282,16 +282,16 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Rule GSSCampaignTestReqAction
-ruleGSSCampaignTestReqAction
+// Rule GSSTestProcPrevAction
+ruleGSSTestProcPrevAction
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSCampaignTestReqActionAccess().get_1EnumLiteralDeclaration()); }
-		('_1')
-		{ after(grammarAccess.getGSSCampaignTestReqActionAccess().get_1EnumLiteralDeclaration()); }
+		{ before(grammarAccess.getGSSTestProcPrevActionAccess().getResetEnumLiteralDeclaration()); }
+		('1')
+		{ after(grammarAccess.getGSSTestProcPrevActionAccess().getResetEnumLiteralDeclaration()); }
 	)
 ;
 finally {
@@ -1796,9 +1796,9 @@ rule__GSSCampaignTestCase__Group_10__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSCampaignTestCaseAccess().getReqKeyword_10_0()); }
-	'req'
-	{ after(grammarAccess.getGSSCampaignTestCaseAccess().getReqKeyword_10_0()); }
+	{ before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgKeyword_10_0()); }
+	'prevMsg'
+	{ after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgKeyword_10_0()); }
 )
 ;
 finally {
@@ -1822,9 +1822,9 @@ rule__GSSCampaignTestCase__Group_10__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSCampaignTestCaseAccess().getReqAssignment_10_1()); }
-	(rule__GSSCampaignTestCase__ReqAssignment_10_1)
-	{ after(grammarAccess.getGSSCampaignTestCaseAccess().getReqAssignment_10_1()); }
+	{ before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgAssignment_10_1()); }
+	(rule__GSSCampaignTestCase__PrevMsgAssignment_10_1)
+	{ after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgAssignment_10_1()); }
 )
 ;
 finally {
@@ -1850,9 +1850,9 @@ rule__GSSCampaignTestCase__Group_11__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionKeyword_11_0()); }
-	'reqAction'
-	{ after(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionKeyword_11_0()); }
+	{ before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionKeyword_11_0()); }
+	'prevAction'
+	{ after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionKeyword_11_0()); }
 )
 ;
 finally {
@@ -1865,6 +1865,7 @@ rule__GSSCampaignTestCase__Group_11__1
 	}
 :
 	rule__GSSCampaignTestCase__Group_11__1__Impl
+	rule__GSSCampaignTestCase__Group_11__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1876,9 +1877,89 @@ rule__GSSCampaignTestCase__Group_11__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionAssignment_11_1()); }
-	(rule__GSSCampaignTestCase__ReqActionAssignment_11_1)
-	{ after(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionAssignment_11_1()); }
+	{ before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionAssignment_11_1()); }
+	(rule__GSSCampaignTestCase__PrevActionAssignment_11_1)
+	{ after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionAssignment_11_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignTestCase__Group_11__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignTestCase__Group_11__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignTestCase__Group_11__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignTestCaseAccess().getGroup_11_2()); }
+	(rule__GSSCampaignTestCase__Group_11_2__0)?
+	{ after(grammarAccess.getGSSCampaignTestCaseAccess().getGroup_11_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__GSSCampaignTestCase__Group_11_2__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignTestCase__Group_11_2__0__Impl
+	rule__GSSCampaignTestCase__Group_11_2__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignTestCase__Group_11_2__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamKeyword_11_2_0()); }
+	'prevActionParam'
+	{ after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamKeyword_11_2_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignTestCase__Group_11_2__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSCampaignTestCase__Group_11_2__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSCampaignTestCase__Group_11_2__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamAssignment_11_2_1()); }
+	(rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1)
+	{ after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamAssignment_11_2_1()); }
 )
 ;
 finally {
@@ -2525,37 +2606,50 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSCampaignTestCase__ReqAssignment_10_1
+rule__GSSCampaignTestCase__PrevMsgAssignment_10_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSCampaignTestCaseAccess().getReqIDTerminalRuleCall_10_1_0()); }
+		{ before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0()); }
 		RULE_ID
-		{ after(grammarAccess.getGSSCampaignTestCaseAccess().getReqIDTerminalRuleCall_10_1_0()); }
+		{ after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSCampaignTestCase__ReqActionAssignment_11_1
+rule__GSSCampaignTestCase__PrevActionAssignment_11_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionGSSCampaignTestReqActionEnumRuleCall_11_1_0()); }
-		ruleGSSCampaignTestReqAction
-		{ after(grammarAccess.getGSSCampaignTestCaseAccess().getReqActionGSSCampaignTestReqActionEnumRuleCall_11_1_0()); }
+		{ before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0()); }
+		ruleGSSTestProcPrevAction
+		{ after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-RULE_HEXADECIMAL : '0x' ('0'..'9'|'a'..'f'|'A'..'F')+;
+rule__GSSCampaignTestCase__PrevActionParamAssignment_11_2_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

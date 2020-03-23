@@ -45,17 +45,15 @@ GSSCampaignTestCase returns GSSCampaignTestCase:
 	'GSSCampaignTestCase' '{'
 		'name' ':=' name=STRING ';'
 		'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';'
-		('req' req=ID)?
-		('reqAction' reqAction=GSSCampaignTestReqAction)?
+		('prevMsg' prevMsg=ID)?
+		('prevAction' prevAction=GSSTestProcPrevAction
+			('prevActionParam' prevActionParam=STRING)?
+		)?
 	'}' ';'
 ;
 
-enum GSSCampaignTestReqAction returns GSSCampaignTestReqAction:
-	_1 = '_1'
-;
-
-EString returns ecore::EString:
-	STRING | ID;
+enum GSSTestProcPrevAction returns test_proc::GSSTestProcPrevAction:
+	reset = '1';
 
 QualifiedName returns ecore::EString:
 	ID ('.' ID)*;
@@ -67,24 +65,3 @@ Version returns ecore::EString:
 VersionedQualifiedName returns ecore::EString:
 	QualifiedName '(' Version ')'
 	;
-
-VersionedQualifiedReferenceName returns ecore::EString:
-	(VersionedQualifiedName '::')? ID ('::' ID)*;
-
-terminal HEXADECIMAL returns ecore::EString:
-	('0x' (('0'..'9') | ('a'..'f') | ('A'..'F'))+);
-
-INTEGER returns ecore::EString:
-	('-'? INT | HEXADECIMAL);
-
-EBoolean returns ecore::EBoolean:
-	'true' | 'false'; 
-	
-REAL returns ecore::EString:
-	'-'? (INT '.' ':=' INT) ('e' ('-')? INT)?;
-
-DATE returns ecore::EString:
-	INT ('/') INT ('/') INT;
-
-URL returns ecore::EString:
-	ID ('+' ID)? '://' (ID ('.')?)+ ('/' ID)* ('/')?;

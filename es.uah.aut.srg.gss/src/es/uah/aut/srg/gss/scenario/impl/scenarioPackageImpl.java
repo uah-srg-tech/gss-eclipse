@@ -1784,7 +1784,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSScenarioGlobalVar_Name() {
+	public EAttribute getGSSScenarioGlobalVar_Id() {
 		return (EAttribute)gssScenarioGlobalVarEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1793,7 +1793,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSScenarioGlobalVar_Id() {
+	public EAttribute getGSSScenarioGlobalVar_Type() {
 		return (EAttribute)gssScenarioGlobalVarEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1802,7 +1802,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSScenarioGlobalVar_Type() {
+	public EAttribute getGSSScenarioGlobalVar_Initial_value() {
 		return (EAttribute)gssScenarioGlobalVarEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1811,17 +1811,8 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSScenarioGlobalVar_Initial_value() {
-		return (EAttribute)gssScenarioGlobalVarEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getGSSScenarioGlobalVar_ReferenceField() {
-		return (EReference)gssScenarioGlobalVarEClass.getEStructuralFeatures().get(4);
+		return (EReference)gssScenarioGlobalVarEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1830,7 +1821,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * @generated
 	 */
 	public EReference getGSSScenarioGlobalVar_ReferencePeriodicTC() {
-		return (EReference)gssScenarioGlobalVarEClass.getEStructuralFeatures().get(5);
+		return (EReference)gssScenarioGlobalVarEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1839,7 +1830,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * @generated
 	 */
 	public EReference getGSSScenarioGlobalVar_ReferenceSpecialPacket() {
-		return (EReference)gssScenarioGlobalVarEClass.getEStructuralFeatures().get(6);
+		return (EReference)gssScenarioGlobalVarEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2616,7 +2607,6 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 		createEReference(gssScenarioGlobalVarsEClass, GSS_SCENARIO_GLOBAL_VARS__GLOBAL_VAR);
 
 		gssScenarioGlobalVarEClass = createEClass(GSS_SCENARIO_GLOBAL_VAR);
-		createEAttribute(gssScenarioGlobalVarEClass, GSS_SCENARIO_GLOBAL_VAR__NAME);
 		createEAttribute(gssScenarioGlobalVarEClass, GSS_SCENARIO_GLOBAL_VAR__ID);
 		createEAttribute(gssScenarioGlobalVarEClass, GSS_SCENARIO_GLOBAL_VAR__TYPE);
 		createEAttribute(gssScenarioGlobalVarEClass, GSS_SCENARIO_GLOBAL_VAR__INITIAL_VALUE);
@@ -2745,6 +2735,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 		gssScenarioPeriodicTCLevel2EClass.getESuperTypes().add(this.getGSSScenarioPeriodicTC());
 		gssScenarioPeriodicTCLevel1EClass.getESuperTypes().add(this.getGSSScenarioPeriodicTC());
 		gssScenarioPeriodicTCLevel0EClass.getESuperTypes().add(this.getGSSScenarioPeriodicTC());
+		gssScenarioGlobalVarEClass.getESuperTypes().add(thescenarioPackage_1.getTMTCIFScenarioVariable());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssScenarioScenarioEClass, GSSScenarioScenario.class, "GSSScenarioScenario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2917,7 +2908,6 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 		initEReference(getGSSScenarioGlobalVars_GlobalVar(), this.getGSSScenarioGlobalVar(), null, "GlobalVar", null, 1, 10, GSSScenarioGlobalVars.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssScenarioGlobalVarEClass, GSSScenarioGlobalVar.class, "GSSScenarioGlobalVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSScenarioGlobalVar_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSScenarioGlobalVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSScenarioGlobalVar_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSScenarioGlobalVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSScenarioGlobalVar_Type(), this.getGSSScenarioGlobalVarType(), "type", null, 1, 1, GSSScenarioGlobalVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSScenarioGlobalVar_Initial_value(), ecorePackage.getEString(), "initial_value", null, 1, 1, GSSScenarioGlobalVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
