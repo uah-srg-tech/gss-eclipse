@@ -26,10 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getChartsFile <em>Charts File</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getPlot <em>Plot</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getAlarmMsg <em>Alarm Msg</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getModify <em>Modify</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getAlarmVal <em>Alarm Val</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getMonitor <em>Monitor</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioMonitors()
@@ -64,67 +61,19 @@ public interface GSSScenarioMonitors extends EObject {
 	void setChartsFile(GSSChartsCharts value);
 
 	/**
-	 * Returns the value of the '<em><b>Plot</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.scenario.GSSScenarioPlot}.
+	 * Returns the value of the '<em><b>Monitor</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitor}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Plot</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Monitor</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Plot</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioMonitors_Plot()
+	 * @return the value of the '<em>Monitor</em>' containment reference list.
+	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioMonitors_Monitor()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<GSSScenarioPlot> getPlot();
-
-	/**
-	 * Returns the value of the '<em><b>Alarm Msg</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmMsg}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Alarm Msg</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Alarm Msg</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioMonitors_AlarmMsg()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSScenarioAlarmMsg> getAlarmMsg();
-
-	/**
-	 * Returns the value of the '<em><b>Modify</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.scenario.GSSScenarioModify}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Modify</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Modify</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioMonitors_Modify()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSScenarioModify> getModify();
-
-	/**
-	 * Returns the value of the '<em><b>Alarm Val</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmVal}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Alarm Val</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Alarm Val</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioMonitors_AlarmVal()
-	 * @model containment="true" upper="3"
-	 * @generated
-	 */
-	EList<GSSScenarioAlarmVal> getAlarmVal();
+	EList<GSSScenarioMonitor> getMonitor();
 
 } // GSSScenarioMonitors

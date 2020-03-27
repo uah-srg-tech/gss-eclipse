@@ -920,72 +920,30 @@ ruleGSSScenarioPeriodicTCs returns [EObject current=null]
 		}
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_2GSSScenarioPeriodicTCLevel2ParserRuleCall_3_0_0());
+				{
+					newCompositeNode(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTCGSSScenarioPeriodicTCParserRuleCall_3_0());
+				}
+				lv_PeriodicTC_3_0=ruleGSSScenarioPeriodicTC
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSScenarioPeriodicTCsRule());
 					}
-					lv_PeriodicTC_level_2_3_0=ruleGSSScenarioPeriodicTCLevel2
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioPeriodicTCsRule());
-						}
-						add(
-							$current,
-							"PeriodicTC_level_2",
-							lv_PeriodicTC_level_2_3_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioPeriodicTCLevel2");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_1GSSScenarioPeriodicTCLevel1ParserRuleCall_3_1_0());
-					}
-					lv_PeriodicTC_level_1_4_0=ruleGSSScenarioPeriodicTCLevel1
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioPeriodicTCsRule());
-						}
-						add(
-							$current,
-							"PeriodicTC_level_1",
-							lv_PeriodicTC_level_1_4_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioPeriodicTCLevel1");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_0GSSScenarioPeriodicTCLevel0ParserRuleCall_3_2_0());
-					}
-					lv_PeriodicTC_level_0_5_0=ruleGSSScenarioPeriodicTCLevel0
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioPeriodicTCsRule());
-						}
-						add(
-							$current,
-							"PeriodicTC_level_0",
-							lv_PeriodicTC_level_0_5_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioPeriodicTCLevel0");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					add(
+						$current,
+						"PeriodicTC",
+						lv_PeriodicTC_3_0,
+						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioPeriodicTC");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)*
-		otherlv_6='}'
+		otherlv_4='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSScenarioPeriodicTCsAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_4, grammarAccess.getGSSScenarioPeriodicTCsAccess().getRightCurlyBracketKeyword_4());
 		}
-		otherlv_7=';'
+		otherlv_5=';'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSScenarioPeriodicTCsAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getGSSScenarioPeriodicTCsAccess().getSemicolonKeyword_5());
 		}
 	)
 ;
@@ -1103,92 +1061,30 @@ ruleGSSScenarioMonitors returns [EObject current=null]
 		)?
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioMonitorsAccess().getPlotGSSScenarioPlotParserRuleCall_3_0_0());
+				{
+					newCompositeNode(grammarAccess.getGSSScenarioMonitorsAccess().getMonitorGSSScenarioMonitorParserRuleCall_3_0());
+				}
+				lv_monitor_6_0=ruleGSSScenarioMonitor
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSScenarioMonitorsRule());
 					}
-					lv_plot_6_0=ruleGSSScenarioPlot
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioMonitorsRule());
-						}
-						add(
-							$current,
-							"plot",
-							lv_plot_6_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioPlot");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioMonitorsAccess().getAlarmMsgGSSScenarioAlarmMsgParserRuleCall_3_1_0());
-					}
-					lv_alarmMsg_7_0=ruleGSSScenarioAlarmMsg
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioMonitorsRule());
-						}
-						add(
-							$current,
-							"alarmMsg",
-							lv_alarmMsg_7_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioAlarmMsg");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioMonitorsAccess().getModifyGSSScenarioModifyParserRuleCall_3_2_0());
-					}
-					lv_modify_8_0=ruleGSSScenarioModify
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioMonitorsRule());
-						}
-						add(
-							$current,
-							"modify",
-							lv_modify_8_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioModify");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioMonitorsAccess().getAlarmValGSSScenarioAlarmValParserRuleCall_3_3_0());
-					}
-					lv_alarmVal_9_0=ruleGSSScenarioAlarmVal
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioMonitorsRule());
-						}
-						add(
-							$current,
-							"alarmVal",
-							lv_alarmVal_9_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioAlarmVal");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					add(
+						$current,
+						"monitor",
+						lv_monitor_6_0,
+						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioMonitor");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)+
-		otherlv_10='}'
+		otherlv_7='}'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getGSSScenarioMonitorsAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_7, grammarAccess.getGSSScenarioMonitorsAccess().getRightCurlyBracketKeyword_4());
 		}
-		otherlv_11=';'
+		otherlv_8=';'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getGSSScenarioMonitorsAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_8, grammarAccess.getGSSScenarioMonitorsAccess().getSemicolonKeyword_5());
 		}
 	)
 ;
@@ -4335,6 +4231,60 @@ ruleGSSScenarioStructuredData returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleGSSScenarioPeriodicTC
+entryRuleGSSScenarioPeriodicTC returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSScenarioPeriodicTCRule()); }
+	iv_ruleGSSScenarioPeriodicTC=ruleGSSScenarioPeriodicTC
+	{ $current=$iv_ruleGSSScenarioPeriodicTC.current; }
+	EOF;
+
+// Rule GSSScenarioPeriodicTC
+ruleGSSScenarioPeriodicTC returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSScenarioPeriodicTCAccess().getGSSScenarioPeriodicTCLevel2ParserRuleCall_0());
+		}
+		this_GSSScenarioPeriodicTCLevel2_0=ruleGSSScenarioPeriodicTCLevel2
+		{
+			$current = $this_GSSScenarioPeriodicTCLevel2_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSScenarioPeriodicTCAccess().getGSSScenarioPeriodicTCLevel1ParserRuleCall_1());
+		}
+		this_GSSScenarioPeriodicTCLevel1_1=ruleGSSScenarioPeriodicTCLevel1
+		{
+			$current = $this_GSSScenarioPeriodicTCLevel1_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSScenarioPeriodicTCAccess().getGSSScenarioPeriodicTCLevel0ParserRuleCall_2());
+		}
+		this_GSSScenarioPeriodicTCLevel0_2=ruleGSSScenarioPeriodicTCLevel0
+		{
+			$current = $this_GSSScenarioPeriodicTCLevel0_2.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
 // Entry rule entryRuleGSSScenarioPeriodicTCLevel2
 entryRuleGSSScenarioPeriodicTCLevel2 returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getGSSScenarioPeriodicTCLevel2Rule()); }
@@ -5441,72 +5391,84 @@ ruleGSSScenarioGlobalVar returns [EObject current=null]
 		}
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceFieldGSSScenarioReferenceFieldParserRuleCall_18_0_0());
+				{
+					newCompositeNode(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceGSSScenarioReferenceParserRuleCall_18_0());
+				}
+				lv_reference_18_0=ruleGSSScenarioReference
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSScenarioGlobalVarRule());
 					}
-					lv_referenceField_18_0=ruleGSSScenarioReferenceField
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioGlobalVarRule());
-						}
-						set(
-							$current,
-							"referenceField",
-							lv_referenceField_18_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioReferenceField");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioGlobalVarAccess().getReferencePeriodicTCGSSScenarioReferencePeriodicTCParserRuleCall_18_1_0());
-					}
-					lv_referencePeriodicTC_19_0=ruleGSSScenarioReferencePeriodicTC
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioGlobalVarRule());
-						}
-						set(
-							$current,
-							"referencePeriodicTC",
-							lv_referencePeriodicTC_19_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioReferencePeriodicTC");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceSpecialPacketGSSScenarioReferenceSpecialPacketParserRuleCall_18_2_0());
-					}
-					lv_referenceSpecialPacket_20_0=ruleGSSScenarioReferenceSpecialPacket
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioGlobalVarRule());
-						}
-						set(
-							$current,
-							"referenceSpecialPacket",
-							lv_referenceSpecialPacket_20_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioReferenceSpecialPacket");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"reference",
+						lv_reference_18_0,
+						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioReference");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)
-		otherlv_21='}'
+		otherlv_19='}'
 		{
-			newLeafNode(otherlv_21, grammarAccess.getGSSScenarioGlobalVarAccess().getRightCurlyBracketKeyword_19());
+			newLeafNode(otherlv_19, grammarAccess.getGSSScenarioGlobalVarAccess().getRightCurlyBracketKeyword_19());
 		}
-		otherlv_22=';'
+		otherlv_20=';'
 		{
-			newLeafNode(otherlv_22, grammarAccess.getGSSScenarioGlobalVarAccess().getSemicolonKeyword_20());
+			newLeafNode(otherlv_20, grammarAccess.getGSSScenarioGlobalVarAccess().getSemicolonKeyword_20());
+		}
+	)
+;
+
+// Entry rule entryRuleGSSScenarioReference
+entryRuleGSSScenarioReference returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSScenarioReferenceRule()); }
+	iv_ruleGSSScenarioReference=ruleGSSScenarioReference
+	{ $current=$iv_ruleGSSScenarioReference.current; }
+	EOF;
+
+// Rule GSSScenarioReference
+ruleGSSScenarioReference returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSScenarioReferenceAccess().getGSSScenarioReferenceFieldParserRuleCall_0());
+		}
+		this_GSSScenarioReferenceField_0=ruleGSSScenarioReferenceField
+		{
+			$current = $this_GSSScenarioReferenceField_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSScenarioReferenceAccess().getGSSScenarioReferencePeriodicTCParserRuleCall_1());
+		}
+		this_GSSScenarioReferencePeriodicTC_1=ruleGSSScenarioReferencePeriodicTC
+		{
+			$current = $this_GSSScenarioReferencePeriodicTC_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSScenarioReferenceAccess().getGSSScenarioReferenceSpecialPacketParserRuleCall_2());
+		}
+		this_GSSScenarioReferenceSpecialPacket_2=ruleGSSScenarioReferenceSpecialPacket
+		{
+			$current = $this_GSSScenarioReferenceSpecialPacket_2.current;
+			afterParserOrEnumRuleCall();
 		}
 	)
 ;
@@ -6106,6 +6068,72 @@ ruleGSSScenarioReferenceSpecialPacket returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleGSSScenarioMonitor
+entryRuleGSSScenarioMonitor returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSScenarioMonitorRule()); }
+	iv_ruleGSSScenarioMonitor=ruleGSSScenarioMonitor
+	{ $current=$iv_ruleGSSScenarioMonitor.current; }
+	EOF;
+
+// Rule GSSScenarioMonitor
+ruleGSSScenarioMonitor returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSScenarioMonitorAccess().getGSSScenarioPlotParserRuleCall_0());
+		}
+		this_GSSScenarioPlot_0=ruleGSSScenarioPlot
+		{
+			$current = $this_GSSScenarioPlot_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSScenarioMonitorAccess().getGSSScenarioAlarmMsgParserRuleCall_1());
+		}
+		this_GSSScenarioAlarmMsg_1=ruleGSSScenarioAlarmMsg
+		{
+			$current = $this_GSSScenarioAlarmMsg_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSScenarioMonitorAccess().getGSSScenarioModifyParserRuleCall_2());
+		}
+		this_GSSScenarioModify_2=ruleGSSScenarioModify
+		{
+			$current = $this_GSSScenarioModify_2.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSScenarioMonitorAccess().getGSSScenarioAlarmValParserRuleCall_3());
+		}
+		this_GSSScenarioAlarmVal_3=ruleGSSScenarioAlarmVal
+		{
+			$current = $this_GSSScenarioAlarmVal_3.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
 // Entry rule entryRuleGSSScenarioPlot
 entryRuleGSSScenarioPlot returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getGSSScenarioPlotRule()); }
@@ -6193,52 +6221,30 @@ ruleGSSScenarioPlot returns [EObject current=null]
 		}
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioPlotAccess().getGVFilteredGSSScenarioGVFilteredParserRuleCall_10_0_0());
+				{
+					newCompositeNode(grammarAccess.getGSSScenarioPlotAccess().getGVGSSScenarioGVParserRuleCall_10_0());
+				}
+				lv_GV_10_0=ruleGSSScenarioGV
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSScenarioPlotRule());
 					}
-					lv_GVFiltered_10_0=ruleGSSScenarioGVFiltered
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioPlotRule());
-						}
-						set(
-							$current,
-							"GVFiltered",
-							lv_GVFiltered_10_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVFiltered");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioPlotAccess().getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_10_1_0());
-					}
-					lv_GVPeriodic_11_0=ruleGSSScenarioGVPeriodic
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioPlotRule());
-						}
-						set(
-							$current,
-							"GVPeriodic",
-							lv_GVPeriodic_11_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVPeriodic");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"GV",
+						lv_GV_10_0,
+						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGV");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)
-		otherlv_12='}'
+		otherlv_11='}'
 		{
-			newLeafNode(otherlv_12, grammarAccess.getGSSScenarioPlotAccess().getRightCurlyBracketKeyword_11());
+			newLeafNode(otherlv_11, grammarAccess.getGSSScenarioPlotAccess().getRightCurlyBracketKeyword_11());
 		}
-		otherlv_13=';'
+		otherlv_12=';'
 		{
-			newLeafNode(otherlv_13, grammarAccess.getGSSScenarioPlotAccess().getSemicolonKeyword_12());
+			newLeafNode(otherlv_12, grammarAccess.getGSSScenarioPlotAccess().getSemicolonKeyword_12());
 		}
 	)
 ;
@@ -6360,52 +6366,30 @@ ruleGSSScenarioAlarmMsg returns [EObject current=null]
 		}
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVFilteredGSSScenarioGVFilteredParserRuleCall_14_0_0());
+				{
+					newCompositeNode(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVGSSScenarioGVParserRuleCall_14_0());
+				}
+				lv_GV_14_0=ruleGSSScenarioGV
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSScenarioAlarmMsgRule());
 					}
-					lv_GVFiltered_14_0=ruleGSSScenarioGVFiltered
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioAlarmMsgRule());
-						}
-						set(
-							$current,
-							"GVFiltered",
-							lv_GVFiltered_14_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVFiltered");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_14_1_0());
-					}
-					lv_GVPeriodic_15_0=ruleGSSScenarioGVPeriodic
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioAlarmMsgRule());
-						}
-						set(
-							$current,
-							"GVPeriodic",
-							lv_GVPeriodic_15_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVPeriodic");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"GV",
+						lv_GV_14_0,
+						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGV");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)
-		otherlv_16='}'
+		otherlv_15='}'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getGSSScenarioAlarmMsgAccess().getRightCurlyBracketKeyword_15());
+			newLeafNode(otherlv_15, grammarAccess.getGSSScenarioAlarmMsgAccess().getRightCurlyBracketKeyword_15());
 		}
-		otherlv_17=';'
+		otherlv_16=';'
 		{
-			newLeafNode(otherlv_17, grammarAccess.getGSSScenarioAlarmMsgAccess().getSemicolonKeyword_16());
+			newLeafNode(otherlv_16, grammarAccess.getGSSScenarioAlarmMsgAccess().getSemicolonKeyword_16());
 		}
 	)
 ;
@@ -6528,52 +6512,30 @@ ruleGSSScenarioModify returns [EObject current=null]
 		}
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioModifyAccess().getGVFilteredGSSScenarioGVFilteredParserRuleCall_14_0_0());
+				{
+					newCompositeNode(grammarAccess.getGSSScenarioModifyAccess().getGVGSSScenarioGVParserRuleCall_14_0());
+				}
+				lv_GV_14_0=ruleGSSScenarioGV
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSScenarioModifyRule());
 					}
-					lv_GVFiltered_14_0=ruleGSSScenarioGVFiltered
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioModifyRule());
-						}
-						set(
-							$current,
-							"GVFiltered",
-							lv_GVFiltered_14_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVFiltered");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioModifyAccess().getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_14_1_0());
-					}
-					lv_GVPeriodic_15_0=ruleGSSScenarioGVPeriodic
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioModifyRule());
-						}
-						set(
-							$current,
-							"GVPeriodic",
-							lv_GVPeriodic_15_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVPeriodic");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"GV",
+						lv_GV_14_0,
+						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGV");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)
-		otherlv_16='}'
+		otherlv_15='}'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getGSSScenarioModifyAccess().getRightCurlyBracketKeyword_15());
+			newLeafNode(otherlv_15, grammarAccess.getGSSScenarioModifyAccess().getRightCurlyBracketKeyword_15());
 		}
-		otherlv_17=';'
+		otherlv_16=';'
 		{
-			newLeafNode(otherlv_17, grammarAccess.getGSSScenarioModifyAccess().getSemicolonKeyword_16());
+			newLeafNode(otherlv_16, grammarAccess.getGSSScenarioModifyAccess().getSemicolonKeyword_16());
 		}
 	)
 ;
@@ -6665,52 +6627,72 @@ ruleGSSScenarioAlarmVal returns [EObject current=null]
 		}
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioAlarmValAccess().getGVFilteredGSSScenarioGVFilteredParserRuleCall_10_0_0());
+				{
+					newCompositeNode(grammarAccess.getGSSScenarioAlarmValAccess().getGVGSSScenarioGVParserRuleCall_10_0());
+				}
+				lv_GV_10_0=ruleGSSScenarioGV
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSScenarioAlarmValRule());
 					}
-					lv_GVFiltered_10_0=ruleGSSScenarioGVFiltered
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioAlarmValRule());
-						}
-						set(
-							$current,
-							"GVFiltered",
-							lv_GVFiltered_10_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVFiltered");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSScenarioAlarmValAccess().getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_10_1_0());
-					}
-					lv_GVPeriodic_11_0=ruleGSSScenarioGVPeriodic
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSScenarioAlarmValRule());
-						}
-						set(
-							$current,
-							"GVPeriodic",
-							lv_GVPeriodic_11_0,
-							"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVPeriodic");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"GV",
+						lv_GV_10_0,
+						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGV");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)
-		otherlv_12='}'
+		otherlv_11='}'
 		{
-			newLeafNode(otherlv_12, grammarAccess.getGSSScenarioAlarmValAccess().getRightCurlyBracketKeyword_11());
+			newLeafNode(otherlv_11, grammarAccess.getGSSScenarioAlarmValAccess().getRightCurlyBracketKeyword_11());
 		}
-		otherlv_13=';'
+		otherlv_12=';'
 		{
-			newLeafNode(otherlv_13, grammarAccess.getGSSScenarioAlarmValAccess().getSemicolonKeyword_12());
+			newLeafNode(otherlv_12, grammarAccess.getGSSScenarioAlarmValAccess().getSemicolonKeyword_12());
+		}
+	)
+;
+
+// Entry rule entryRuleGSSScenarioGV
+entryRuleGSSScenarioGV returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSScenarioGVRule()); }
+	iv_ruleGSSScenarioGV=ruleGSSScenarioGV
+	{ $current=$iv_ruleGSSScenarioGV.current; }
+	EOF;
+
+// Rule GSSScenarioGV
+ruleGSSScenarioGV returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVFilteredParserRuleCall_0());
+		}
+		this_GSSScenarioGVFiltered_0=ruleGSSScenarioGVFiltered
+		{
+			$current = $this_GSSScenarioGVFiltered_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVPeriodicParserRuleCall_1());
+		}
+		this_GSSScenarioGVPeriodic_1=ruleGSSScenarioGVPeriodic
+		{
+			$current = $this_GSSScenarioGVPeriodic_1.current;
+			afterParserOrEnumRuleCall();
 		}
 	)
 ;

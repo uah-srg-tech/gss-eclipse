@@ -12,9 +12,7 @@ package es.uah.aut.srg.gss.scenario.impl;
 
 import es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar;
 import es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVarType;
-import es.uah.aut.srg.gss.scenario.GSSScenarioReferenceField;
-import es.uah.aut.srg.gss.scenario.GSSScenarioReferencePeriodicTC;
-import es.uah.aut.srg.gss.scenario.GSSScenarioReferenceSpecialPacket;
+import es.uah.aut.srg.gss.scenario.GSSScenarioReference;
 import es.uah.aut.srg.gss.scenario.scenarioPackage;
 
 import es.uah.aut.srg.tmtcif.scenario.impl.TMTCIFScenarioVariableImpl;
@@ -37,9 +35,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGlobalVarImpl#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGlobalVarImpl#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGlobalVarImpl#getInitial_value <em>Initial value</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGlobalVarImpl#getReferenceField <em>Reference Field</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGlobalVarImpl#getReferencePeriodicTC <em>Reference Periodic TC</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGlobalVarImpl#getReferenceSpecialPacket <em>Reference Special Packet</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGlobalVarImpl#getReference <em>Reference</em>}</li>
  * </ul>
  *
  * @generated
@@ -115,34 +111,14 @@ public class GSSScenarioGlobalVarImpl extends TMTCIFScenarioVariableImpl impleme
 	protected String initial_value = INITIAL_VALUE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getReferenceField() <em>Reference Field</em>}' containment reference.
+	 * The cached value of the '{@link #getReference() <em>Reference</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReferenceField()
+	 * @see #getReference()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSScenarioReferenceField referenceField;
-
-	/**
-	 * The cached value of the '{@link #getReferencePeriodicTC() <em>Reference Periodic TC</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReferencePeriodicTC()
-	 * @generated
-	 * @ordered
-	 */
-	protected GSSScenarioReferencePeriodicTC referencePeriodicTC;
-
-	/**
-	 * The cached value of the '{@link #getReferenceSpecialPacket() <em>Reference Special Packet</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReferenceSpecialPacket()
-	 * @generated
-	 * @ordered
-	 */
-	protected GSSScenarioReferenceSpecialPacket referenceSpecialPacket;
+	protected GSSScenarioReference reference;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -256,8 +232,8 @@ public class GSSScenarioGlobalVarImpl extends TMTCIFScenarioVariableImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSScenarioReferenceField getReferenceField() {
-		return referenceField;
+	public GSSScenarioReference getReference() {
+		return reference;
 	}
 
 	/**
@@ -265,11 +241,11 @@ public class GSSScenarioGlobalVarImpl extends TMTCIFScenarioVariableImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetReferenceField(GSSScenarioReferenceField newReferenceField, NotificationChain msgs) {
-		GSSScenarioReferenceField oldReferenceField = referenceField;
-		referenceField = newReferenceField;
+	public NotificationChain basicSetReference(GSSScenarioReference newReference, NotificationChain msgs) {
+		GSSScenarioReference oldReference = reference;
+		reference = newReference;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_FIELD, oldReferenceField, newReferenceField);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE, oldReference, newReference);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -280,104 +256,18 @@ public class GSSScenarioGlobalVarImpl extends TMTCIFScenarioVariableImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReferenceField(GSSScenarioReferenceField newReferenceField) {
-		if (newReferenceField != referenceField) {
+	public void setReference(GSSScenarioReference newReference) {
+		if (newReference != reference) {
 			NotificationChain msgs = null;
-			if (referenceField != null)
-				msgs = ((InternalEObject)referenceField).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_FIELD, null, msgs);
-			if (newReferenceField != null)
-				msgs = ((InternalEObject)newReferenceField).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_FIELD, null, msgs);
-			msgs = basicSetReferenceField(newReferenceField, msgs);
+			if (reference != null)
+				msgs = ((InternalEObject)reference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE, null, msgs);
+			if (newReference != null)
+				msgs = ((InternalEObject)newReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE, null, msgs);
+			msgs = basicSetReference(newReference, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_FIELD, newReferenceField, newReferenceField));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSScenarioReferencePeriodicTC getReferencePeriodicTC() {
-		return referencePeriodicTC;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetReferencePeriodicTC(GSSScenarioReferencePeriodicTC newReferencePeriodicTC, NotificationChain msgs) {
-		GSSScenarioReferencePeriodicTC oldReferencePeriodicTC = referencePeriodicTC;
-		referencePeriodicTC = newReferencePeriodicTC;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_PERIODIC_TC, oldReferencePeriodicTC, newReferencePeriodicTC);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setReferencePeriodicTC(GSSScenarioReferencePeriodicTC newReferencePeriodicTC) {
-		if (newReferencePeriodicTC != referencePeriodicTC) {
-			NotificationChain msgs = null;
-			if (referencePeriodicTC != null)
-				msgs = ((InternalEObject)referencePeriodicTC).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_PERIODIC_TC, null, msgs);
-			if (newReferencePeriodicTC != null)
-				msgs = ((InternalEObject)newReferencePeriodicTC).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_PERIODIC_TC, null, msgs);
-			msgs = basicSetReferencePeriodicTC(newReferencePeriodicTC, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_PERIODIC_TC, newReferencePeriodicTC, newReferencePeriodicTC));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSScenarioReferenceSpecialPacket getReferenceSpecialPacket() {
-		return referenceSpecialPacket;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetReferenceSpecialPacket(GSSScenarioReferenceSpecialPacket newReferenceSpecialPacket, NotificationChain msgs) {
-		GSSScenarioReferenceSpecialPacket oldReferenceSpecialPacket = referenceSpecialPacket;
-		referenceSpecialPacket = newReferenceSpecialPacket;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_SPECIAL_PACKET, oldReferenceSpecialPacket, newReferenceSpecialPacket);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setReferenceSpecialPacket(GSSScenarioReferenceSpecialPacket newReferenceSpecialPacket) {
-		if (newReferenceSpecialPacket != referenceSpecialPacket) {
-			NotificationChain msgs = null;
-			if (referenceSpecialPacket != null)
-				msgs = ((InternalEObject)referenceSpecialPacket).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_SPECIAL_PACKET, null, msgs);
-			if (newReferenceSpecialPacket != null)
-				msgs = ((InternalEObject)newReferenceSpecialPacket).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_SPECIAL_PACKET, null, msgs);
-			msgs = basicSetReferenceSpecialPacket(newReferenceSpecialPacket, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_SPECIAL_PACKET, newReferenceSpecialPacket, newReferenceSpecialPacket));
+			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE, newReference, newReference));
 	}
 
 	/**
@@ -388,12 +278,8 @@ public class GSSScenarioGlobalVarImpl extends TMTCIFScenarioVariableImpl impleme
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_FIELD:
-				return basicSetReferenceField(null, msgs);
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_PERIODIC_TC:
-				return basicSetReferencePeriodicTC(null, msgs);
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_SPECIAL_PACKET:
-				return basicSetReferenceSpecialPacket(null, msgs);
+			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE:
+				return basicSetReference(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -412,12 +298,8 @@ public class GSSScenarioGlobalVarImpl extends TMTCIFScenarioVariableImpl impleme
 				return getType();
 			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__INITIAL_VALUE:
 				return getInitial_value();
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_FIELD:
-				return getReferenceField();
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_PERIODIC_TC:
-				return getReferencePeriodicTC();
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_SPECIAL_PACKET:
-				return getReferenceSpecialPacket();
+			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE:
+				return getReference();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -439,14 +321,8 @@ public class GSSScenarioGlobalVarImpl extends TMTCIFScenarioVariableImpl impleme
 			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__INITIAL_VALUE:
 				setInitial_value((String)newValue);
 				return;
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_FIELD:
-				setReferenceField((GSSScenarioReferenceField)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_PERIODIC_TC:
-				setReferencePeriodicTC((GSSScenarioReferencePeriodicTC)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_SPECIAL_PACKET:
-				setReferenceSpecialPacket((GSSScenarioReferenceSpecialPacket)newValue);
+			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE:
+				setReference((GSSScenarioReference)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -469,14 +345,8 @@ public class GSSScenarioGlobalVarImpl extends TMTCIFScenarioVariableImpl impleme
 			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__INITIAL_VALUE:
 				setInitial_value(INITIAL_VALUE_EDEFAULT);
 				return;
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_FIELD:
-				setReferenceField((GSSScenarioReferenceField)null);
-				return;
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_PERIODIC_TC:
-				setReferencePeriodicTC((GSSScenarioReferencePeriodicTC)null);
-				return;
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_SPECIAL_PACKET:
-				setReferenceSpecialPacket((GSSScenarioReferenceSpecialPacket)null);
+			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE:
+				setReference((GSSScenarioReference)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -496,12 +366,8 @@ public class GSSScenarioGlobalVarImpl extends TMTCIFScenarioVariableImpl impleme
 				return isSetType();
 			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__INITIAL_VALUE:
 				return INITIAL_VALUE_EDEFAULT == null ? initial_value != null : !INITIAL_VALUE_EDEFAULT.equals(initial_value);
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_FIELD:
-				return referenceField != null;
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_PERIODIC_TC:
-				return referencePeriodicTC != null;
-			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE_SPECIAL_PACKET:
-				return referenceSpecialPacket != null;
+			case scenarioPackage.GSS_SCENARIO_GLOBAL_VAR__REFERENCE:
+				return reference != null;
 		}
 		return super.eIsSet(featureID);
 	}

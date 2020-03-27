@@ -28,12 +28,33 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterValueImpl#getValue <em>Value</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterValueImpl#getMask <em>Mask</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class GSSFilterValueImpl extends MinimalEObjectImpl.Container implements GSSFilterValue {
+	/**
+	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VALUE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected String value = VALUE_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getMask() <em>Mask</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -78,6 +99,27 @@ public class GSSFilterValueImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValue(String newValue) {
+		String oldValue = value;
+		value = newValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_VALUE__VALUE, oldValue, value));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getMask() {
 		return mask;
 	}
@@ -102,6 +144,8 @@ public class GSSFilterValueImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case filterPackage.GSS_FILTER_VALUE__VALUE:
+				return getValue();
 			case filterPackage.GSS_FILTER_VALUE__MASK:
 				return getMask();
 		}
@@ -116,6 +160,9 @@ public class GSSFilterValueImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case filterPackage.GSS_FILTER_VALUE__VALUE:
+				setValue((String)newValue);
+				return;
 			case filterPackage.GSS_FILTER_VALUE__MASK:
 				setMask((String)newValue);
 				return;
@@ -131,6 +178,9 @@ public class GSSFilterValueImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case filterPackage.GSS_FILTER_VALUE__VALUE:
+				setValue(VALUE_EDEFAULT);
+				return;
 			case filterPackage.GSS_FILTER_VALUE__MASK:
 				setMask(MASK_EDEFAULT);
 				return;
@@ -146,6 +196,8 @@ public class GSSFilterValueImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case filterPackage.GSS_FILTER_VALUE__VALUE:
+				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case filterPackage.GSS_FILTER_VALUE__MASK:
 				return MASK_EDEFAULT == null ? mask != null : !MASK_EDEFAULT.equals(mask);
 		}
@@ -162,7 +214,9 @@ public class GSSFilterValueImpl extends MinimalEObjectImpl.Container implements 
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (mask: ");
+		result.append(" (value: ");
+		result.append(value);
+		result.append(", mask: ");
 		result.append(mask);
 		result.append(')');
 		return result.toString();

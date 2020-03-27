@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,15 +30,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferencePeriodicTCImpl#getIdRef <em>Id Ref</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferencePeriodicTCImpl#getLevel <em>Level</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferencePeriodicTCImpl#getFieldRef <em>Field Ref</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferencePeriodicTCImpl#getOffset <em>Offset</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferencePeriodicTCImpl#getSize <em>Size</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSScenarioReferencePeriodicTCImpl extends MinimalEObjectImpl.Container implements GSSScenarioReferencePeriodicTC {
+public class GSSScenarioReferencePeriodicTCImpl extends GSSScenarioReferenceImpl implements GSSScenarioReferencePeriodicTC {
 	/**
 	 * The cached value of the '{@link #getIdRef() <em>Id Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -49,86 +44,6 @@ public class GSSScenarioReferencePeriodicTCImpl extends MinimalEObjectImpl.Conta
 	 * @ordered
 	 */
 	protected GSSScenarioPeriodicTC idRef;
-
-	/**
-	 * The default value of the '{@link #getLevel() <em>Level</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLevel()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LEVEL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLevel() <em>Level</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLevel()
-	 * @generated
-	 * @ordered
-	 */
-	protected String level = LEVEL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFieldRef() <em>Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FIELD_REF_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getFieldRef() <em>Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected String fieldRef = FIELD_REF_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getOffset() <em>Offset</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOffset()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String OFFSET_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getOffset() <em>Offset</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOffset()
-	 * @generated
-	 * @ordered
-	 */
-	protected String offset = OFFSET_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSize()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SIZE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSize()
-	 * @generated
-	 * @ordered
-	 */
-	protected String size = SIZE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -192,104 +107,12 @@ public class GSSScenarioReferencePeriodicTCImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLevel() {
-		return level;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLevel(String newLevel) {
-		String oldLevel = level;
-		level = newLevel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__LEVEL, oldLevel, level));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getFieldRef() {
-		return fieldRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFieldRef(String newFieldRef) {
-		String oldFieldRef = fieldRef;
-		fieldRef = newFieldRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__FIELD_REF, oldFieldRef, fieldRef));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getOffset() {
-		return offset;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOffset(String newOffset) {
-		String oldOffset = offset;
-		offset = newOffset;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__OFFSET, oldOffset, offset));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getSize() {
-		return size;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSize(String newSize) {
-		String oldSize = size;
-		size = newSize;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__SIZE, oldSize, size));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__ID_REF:
 				if (resolve) return getIdRef();
 				return basicGetIdRef();
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__LEVEL:
-				return getLevel();
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__FIELD_REF:
-				return getFieldRef();
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__OFFSET:
-				return getOffset();
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__SIZE:
-				return getSize();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -304,18 +127,6 @@ public class GSSScenarioReferencePeriodicTCImpl extends MinimalEObjectImpl.Conta
 		switch (featureID) {
 			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__ID_REF:
 				setIdRef((GSSScenarioPeriodicTC)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__LEVEL:
-				setLevel((String)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__FIELD_REF:
-				setFieldRef((String)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__OFFSET:
-				setOffset((String)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__SIZE:
-				setSize((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -332,18 +143,6 @@ public class GSSScenarioReferencePeriodicTCImpl extends MinimalEObjectImpl.Conta
 			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__ID_REF:
 				setIdRef((GSSScenarioPeriodicTC)null);
 				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__LEVEL:
-				setLevel(LEVEL_EDEFAULT);
-				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__FIELD_REF:
-				setFieldRef(FIELD_REF_EDEFAULT);
-				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__OFFSET:
-				setOffset(OFFSET_EDEFAULT);
-				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__SIZE:
-				setSize(SIZE_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -358,38 +157,8 @@ public class GSSScenarioReferencePeriodicTCImpl extends MinimalEObjectImpl.Conta
 		switch (featureID) {
 			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__ID_REF:
 				return idRef != null;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__LEVEL:
-				return LEVEL_EDEFAULT == null ? level != null : !LEVEL_EDEFAULT.equals(level);
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__FIELD_REF:
-				return FIELD_REF_EDEFAULT == null ? fieldRef != null : !FIELD_REF_EDEFAULT.equals(fieldRef);
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__OFFSET:
-				return OFFSET_EDEFAULT == null ? offset != null : !OFFSET_EDEFAULT.equals(offset);
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC__SIZE:
-				return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (level: ");
-		result.append(level);
-		result.append(", fieldRef: ");
-		result.append(fieldRef);
-		result.append(", offset: ");
-		result.append(offset);
-		result.append(", size: ");
-		result.append(size);
-		result.append(')');
-		return result.toString();
 	}
 
 } //GSSScenarioReferencePeriodicTCImpl

@@ -35,7 +35,6 @@ import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
-import org.eclipse.xtext.parser.antlr.IUnorderedGroupHelper.UnorderedGroupState;
 import org.eclipse.xtext.parser.antlr.AntlrDatatypeRuleToken;
 import es.uah.aut.srg.gss.lang.format.services.FORMATGrammarAccess;
 
@@ -182,26 +181,16 @@ ruleGSSModelFileImport returns [EObject current=null]
 ;
 
 // Entry rule entryRuleGSSFormatFormat
-entryRuleGSSFormatFormat returns [EObject current=null]@init {
-	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3()
-	);
-}:
+entryRuleGSSFormatFormat returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getGSSFormatFormatRule()); }
 	iv_ruleGSSFormatFormat=ruleGSSFormatFormat
 	{ $current=$iv_ruleGSSFormatFormat.current; }
 	EOF;
-finally {
-	myUnorderedGroupState.restore();
-}
 
 // Rule GSSFormatFormat
 ruleGSSFormatFormat returns [EObject current=null]
 @init {
 	enterRule();
-	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-	grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3()
-	);
 }
 @after {
 	leaveRule();
@@ -233,344 +222,260 @@ ruleGSSFormatFormat returns [EObject current=null]
 		{
 			newLeafNode(otherlv_2, grammarAccess.getGSSFormatFormatAccess().getLeftCurlyBracketKeyword_2());
 		}
+		otherlv_3='uri'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSFormatFormatAccess().getUriKeyword_3());
+		}
+		otherlv_4=':='
+		{
+			newLeafNode(otherlv_4, grammarAccess.getGSSFormatFormatAccess().getColonEqualsSignKeyword_4());
+		}
 		(
 			(
-				{ 
-				  getUnorderedGroupHelper().enter(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3());
+				{
+					newCompositeNode(grammarAccess.getGSSFormatFormatAccess().getUriQualifiedNameParserRuleCall_5_0());
 				}
-				(
-					(
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3(), 0)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3(), 0);
+				lv_uri_5_0=ruleQualifiedName
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSFormatFormatRule());
 					}
-								({true}?=>(otherlv_4='uri'
-								{
-									newLeafNode(otherlv_4, grammarAccess.getGSSFormatFormatAccess().getUriKeyword_3_0_0());
-								}
-								otherlv_5=':='
-								{
-									newLeafNode(otherlv_5, grammarAccess.getGSSFormatFormatAccess().getColonEqualsSignKeyword_3_0_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSFormatFormatAccess().getUriQualifiedNameParserRuleCall_3_0_2_0());
-										}
-										lv_uri_6_0=ruleQualifiedName
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSFormatFormatRule());
-											}
-											set(
-												$current,
-												"uri",
-												lv_uri_6_0,
-												"es.uah.aut.srg.gss.lang.format.FORMAT.QualifiedName");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_7=';'
-								{
-									newLeafNode(otherlv_7, grammarAccess.getGSSFormatFormatAccess().getSemicolonKeyword_3_0_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3(), 1)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3(), 1);
-					}
-								({true}?=>(otherlv_8='version'
-								{
-									newLeafNode(otherlv_8, grammarAccess.getGSSFormatFormatAccess().getVersionKeyword_3_1_0());
-								}
-								otherlv_9=':='
-								{
-									newLeafNode(otherlv_9, grammarAccess.getGSSFormatFormatAccess().getColonEqualsSignKeyword_3_1_1());
-								}
-								(
-									(
-										{
-											newCompositeNode(grammarAccess.getGSSFormatFormatAccess().getVersionVersionParserRuleCall_3_1_2_0());
-										}
-										lv_version_10_0=ruleVersion
-										{
-											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getGSSFormatFormatRule());
-											}
-											set(
-												$current,
-												"version",
-												lv_version_10_0,
-												"es.uah.aut.srg.gss.lang.format.FORMAT.Version");
-											afterParserOrEnumRuleCall();
-										}
-									)
-								)
-								otherlv_11=';'
-								{
-									newLeafNode(otherlv_11, grammarAccess.getGSSFormatFormatAccess().getSemicolonKeyword_3_1_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3(), 2)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3(), 2);
-					}
-								({true}?=>(otherlv_12='protocol'
-								{
-									newLeafNode(otherlv_12, grammarAccess.getGSSFormatFormatAccess().getProtocolKeyword_3_2_0());
-								}
-								otherlv_13=':='
-								{
-									newLeafNode(otherlv_13, grammarAccess.getGSSFormatFormatAccess().getColonEqualsSignKeyword_3_2_1());
-								}
-								(
-									(
-										lv_protocol_14_0=RULE_ID
-										{
-											newLeafNode(lv_protocol_14_0, grammarAccess.getGSSFormatFormatAccess().getProtocolIDTerminalRuleCall_3_2_2_0());
-										}
-										{
-											if ($current==null) {
-												$current = createModelElement(grammarAccess.getGSSFormatFormatRule());
-											}
-											setWithLastConsumed(
-												$current,
-												"protocol",
-												lv_protocol_14_0,
-												"org.eclipse.xtext.common.Terminals.ID");
-										}
-									)
-								)
-								otherlv_15=';'
-								{
-									newLeafNode(otherlv_15, grammarAccess.getGSSFormatFormatAccess().getSemicolonKeyword_3_2_3());
-								}
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3());
-					}
-				)
-			)|
-			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3(), 3)}?=>(
-					{
-						getUnorderedGroupHelper().select(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3(), 3);
-					}
-								({true}?=>((
-									otherlv_16='type'
-									{
-										newLeafNode(otherlv_16, grammarAccess.getGSSFormatFormatAccess().getTypeKeyword_3_3_0_0());
-									}
-									otherlv_17=':='
-									{
-										newLeafNode(otherlv_17, grammarAccess.getGSSFormatFormatAccess().getColonEqualsSignKeyword_3_3_0_1());
-									}
-									(
-										(
-											{
-												newCompositeNode(grammarAccess.getGSSFormatFormatAccess().getTypeGSSFormatFormatTypeEnumRuleCall_3_3_0_2_0());
-											}
-											lv_type_18_0=ruleGSSFormatFormatType
-											{
-												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSFormatFormatRule());
-												}
-												set(
-													$current,
-													"type",
-													lv_type_18_0,
-													"es.uah.aut.srg.gss.lang.format.FORMAT.GSSFormatFormatType");
-												afterParserOrEnumRuleCall();
-											}
-										)
-									)
-									otherlv_19=';'
-									{
-										newLeafNode(otherlv_19, grammarAccess.getGSSFormatFormatAccess().getSemicolonKeyword_3_3_0_3());
-									}
-								)
-								(
-									(
-										(
-											{
-												newCompositeNode(grammarAccess.getGSSFormatFormatAccess().getCSFieldGSSFormatCSFieldParserRuleCall_3_3_1_0_0());
-											}
-											lv_CSField_20_0=ruleGSSFormatCSField
-											{
-												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSFormatFormatRule());
-												}
-												add(
-													$current,
-													"CSField",
-													lv_CSField_20_0,
-													"es.uah.aut.srg.gss.lang.format.FORMAT.GSSFormatCSField");
-												afterParserOrEnumRuleCall();
-											}
-										)
-									)
-									    |
-									(
-										(
-											{
-												newCompositeNode(grammarAccess.getGSSFormatFormatAccess().getCSFormulaFieldGSSFormatCSFormulaFieldParserRuleCall_3_3_1_1_0());
-											}
-											lv_CSFormulaField_21_0=ruleGSSFormatCSFormulaField
-											{
-												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSFormatFormatRule());
-												}
-												add(
-													$current,
-													"CSFormulaField",
-													lv_CSFormulaField_21_0,
-													"es.uah.aut.srg.gss.lang.format.FORMAT.GSSFormatCSFormulaField");
-												afterParserOrEnumRuleCall();
-											}
-										)
-									)
-									    |
-									(
-										(
-											{
-												newCompositeNode(grammarAccess.getGSSFormatFormatAccess().getVSFieldGSSFormatVSFieldParserRuleCall_3_3_1_2_0());
-											}
-											lv_VSField_22_0=ruleGSSFormatVSField
-											{
-												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSFormatFormatRule());
-												}
-												add(
-													$current,
-													"VSField",
-													lv_VSField_22_0,
-													"es.uah.aut.srg.gss.lang.format.FORMAT.GSSFormatVSField");
-												afterParserOrEnumRuleCall();
-											}
-										)
-									)
-									    |
-									(
-										(
-											{
-												newCompositeNode(grammarAccess.getGSSFormatFormatAccess().getFDICFieldGSSFormatFDICFieldParserRuleCall_3_3_1_3_0());
-											}
-											lv_FDICField_23_0=ruleGSSFormatFDICField
-											{
-												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSFormatFormatRule());
-												}
-												add(
-													$current,
-													"FDICField",
-													lv_FDICField_23_0,
-													"es.uah.aut.srg.gss.lang.format.FORMAT.GSSFormatFDICField");
-												afterParserOrEnumRuleCall();
-											}
-										)
-									)
-									    |
-									(
-										(
-											{
-												newCompositeNode(grammarAccess.getGSSFormatFormatAccess().getVRFieldSizeGSSFormatVRFieldSizeParserRuleCall_3_3_1_4_0());
-											}
-											lv_VRFieldSize_24_0=ruleGSSFormatVRFieldSize
-											{
-												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSFormatFormatRule());
-												}
-												add(
-													$current,
-													"VRFieldSize",
-													lv_VRFieldSize_24_0,
-													"es.uah.aut.srg.gss.lang.format.FORMAT.GSSFormatVRFieldSize");
-												afterParserOrEnumRuleCall();
-											}
-										)
-									)
-									    |
-									(
-										(
-											{
-												newCompositeNode(grammarAccess.getGSSFormatFormatAccess().getAFieldGSSFormatAFieldParserRuleCall_3_3_1_5_0());
-											}
-											lv_AField_25_0=ruleGSSFormatAField
-											{
-												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSFormatFormatRule());
-												}
-												add(
-													$current,
-													"AField",
-													lv_AField_25_0,
-													"es.uah.aut.srg.gss.lang.format.FORMAT.GSSFormatAField");
-												afterParserOrEnumRuleCall();
-											}
-										)
-									)
-									    |
-									(
-										(
-											{
-												newCompositeNode(grammarAccess.getGSSFormatFormatAccess().getAIFieldGSSFormatAIFieldParserRuleCall_3_3_1_6_0());
-											}
-											lv_AIField_26_0=ruleGSSFormatAIField
-											{
-												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getGSSFormatFormatRule());
-												}
-												add(
-													$current,
-													"AIField",
-													lv_AIField_26_0,
-													"es.uah.aut.srg.gss.lang.format.FORMAT.GSSFormatAIField");
-												afterParserOrEnumRuleCall();
-											}
-										)
-									)
-								)*
-								))
-					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3());
-					}
-				)
-			)
-					)+
-					{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3())}?
-				)
-			)
-				{ 
-				  getUnorderedGroupHelper().leave(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3());
+					set(
+						$current,
+						"uri",
+						lv_uri_5_0,
+						"es.uah.aut.srg.gss.lang.format.FORMAT.QualifiedName");
+					afterParserOrEnumRuleCall();
 				}
+			)
 		)
-		otherlv_27='}'
+		otherlv_6=';'
 		{
-			newLeafNode(otherlv_27, grammarAccess.getGSSFormatFormatAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_6, grammarAccess.getGSSFormatFormatAccess().getSemicolonKeyword_6());
 		}
-		otherlv_28=';'
+		otherlv_7='version'
 		{
-			newLeafNode(otherlv_28, grammarAccess.getGSSFormatFormatAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_7, grammarAccess.getGSSFormatFormatAccess().getVersionKeyword_7());
+		}
+		otherlv_8=':='
+		{
+			newLeafNode(otherlv_8, grammarAccess.getGSSFormatFormatAccess().getColonEqualsSignKeyword_8());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSFormatFormatAccess().getVersionVersionParserRuleCall_9_0());
+				}
+				lv_version_9_0=ruleVersion
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSFormatFormatRule());
+					}
+					set(
+						$current,
+						"version",
+						lv_version_9_0,
+						"es.uah.aut.srg.gss.lang.format.FORMAT.Version");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_10=';'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getGSSFormatFormatAccess().getSemicolonKeyword_10());
+		}
+		otherlv_11='protocol'
+		{
+			newLeafNode(otherlv_11, grammarAccess.getGSSFormatFormatAccess().getProtocolKeyword_11());
+		}
+		otherlv_12=':='
+		{
+			newLeafNode(otherlv_12, grammarAccess.getGSSFormatFormatAccess().getColonEqualsSignKeyword_12());
+		}
+		(
+			(
+				lv_protocol_13_0=RULE_ID
+				{
+					newLeafNode(lv_protocol_13_0, grammarAccess.getGSSFormatFormatAccess().getProtocolIDTerminalRuleCall_13_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getGSSFormatFormatRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"protocol",
+						lv_protocol_13_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_14=';'
+		{
+			newLeafNode(otherlv_14, grammarAccess.getGSSFormatFormatAccess().getSemicolonKeyword_14());
+		}
+		otherlv_15='type'
+		{
+			newLeafNode(otherlv_15, grammarAccess.getGSSFormatFormatAccess().getTypeKeyword_15());
+		}
+		otherlv_16=':='
+		{
+			newLeafNode(otherlv_16, grammarAccess.getGSSFormatFormatAccess().getColonEqualsSignKeyword_16());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSFormatFormatAccess().getTypeGSSFormatFormatTypeEnumRuleCall_17_0());
+				}
+				lv_type_17_0=ruleGSSFormatFormatType
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSFormatFormatRule());
+					}
+					set(
+						$current,
+						"type",
+						lv_type_17_0,
+						"es.uah.aut.srg.gss.lang.format.FORMAT.GSSFormatFormatType");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_18=';'
+		{
+			newLeafNode(otherlv_18, grammarAccess.getGSSFormatFormatAccess().getSemicolonKeyword_18());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSFormatFormatAccess().getFieldGSSFormatFieldParserRuleCall_19_0());
+				}
+				lv_Field_19_0=ruleGSSFormatField
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSFormatFormatRule());
+					}
+					add(
+						$current,
+						"Field",
+						lv_Field_19_0,
+						"es.uah.aut.srg.gss.lang.format.FORMAT.GSSFormatField");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_20='}'
+		{
+			newLeafNode(otherlv_20, grammarAccess.getGSSFormatFormatAccess().getRightCurlyBracketKeyword_20());
+		}
+		otherlv_21=';'
+		{
+			newLeafNode(otherlv_21, grammarAccess.getGSSFormatFormatAccess().getSemicolonKeyword_21());
 		}
 	)
 ;
-finally {
-	myUnorderedGroupState.restore();
+
+// Entry rule entryRuleGSSFormatField
+entryRuleGSSFormatField returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSFormatFieldRule()); }
+	iv_ruleGSSFormatField=ruleGSSFormatField
+	{ $current=$iv_ruleGSSFormatField.current; }
+	EOF;
+
+// Rule GSSFormatField
+ruleGSSFormatField returns [EObject current=null]
+@init {
+	enterRule();
 }
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSFormatFieldAccess().getGSSFormatCSFieldParserRuleCall_0());
+		}
+		this_GSSFormatCSField_0=ruleGSSFormatCSField
+		{
+			$current = $this_GSSFormatCSField_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSFormatFieldAccess().getGSSFormatCSFormulaFieldParserRuleCall_1());
+		}
+		this_GSSFormatCSFormulaField_1=ruleGSSFormatCSFormulaField
+		{
+			$current = $this_GSSFormatCSFormulaField_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSFormatFieldAccess().getGSSFormatVSFieldParserRuleCall_2());
+		}
+		this_GSSFormatVSField_2=ruleGSSFormatVSField
+		{
+			$current = $this_GSSFormatVSField_2.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSFormatFieldAccess().getGSSFormatFDICFieldParserRuleCall_3());
+		}
+		this_GSSFormatFDICField_3=ruleGSSFormatFDICField
+		{
+			$current = $this_GSSFormatFDICField_3.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSFormatFieldAccess().getGSSFormatVRFieldSizeParserRuleCall_4());
+		}
+		this_GSSFormatVRFieldSize_4=ruleGSSFormatVRFieldSize
+		{
+			$current = $this_GSSFormatVRFieldSize_4.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSFormatFieldAccess().getGSSFormatAFieldParserRuleCall_5());
+		}
+		this_GSSFormatAField_5=ruleGSSFormatAField
+		{
+			$current = $this_GSSFormatAField_5.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSFormatFieldAccess().getGSSFormatAIFieldParserRuleCall_6());
+		}
+		this_GSSFormatAIField_6=ruleGSSFormatAIField
+		{
+			$current = $this_GSSFormatAIField_6.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
 
 // Entry rule entryRuleGSSFormatCSField
 entryRuleGSSFormatCSField returns [EObject current=null]:

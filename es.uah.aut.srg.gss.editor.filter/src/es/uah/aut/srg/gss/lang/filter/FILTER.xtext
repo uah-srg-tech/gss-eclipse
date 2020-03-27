@@ -23,28 +23,27 @@ GSSFilterMaxtermFilter returns GSSFilterMaxtermFilter:
 	'GSSFilterMaxtermFilter'
 	name = ID
 	 '{'
-		(('uri' ':=' uri=QualifiedName ';')
-		& ('version' ':=' version=Version ';')
+		'uri' ':=' uri=QualifiedName ';'
+		'version' ':=' version=Version ';'
 		'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';'
-		((BoolVar+=GSSFilterBoolVar) | 
-			(BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem) |
-			(BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem) |
-			(BoolVarFDIC+=GSSFilterBoolVarFDIC))+)
+		(BoolVar+=GSSFilterAbstractBoolVar)+
 		Maxterm+=GSSFilterMaxterm+
 	'}' ';'
+;
+
+GSSFilterAbstractBoolVar returns GSSFilterAbstractBoolVar:
+	GSSFilterBoolVar | GSSFilterBoolVarFromArrayItem |
+	GSSFilterBoolVarFromGroupedArrayItem | GSSFilterBoolVarFDIC
 ;
 
 GSSFilterMintermFilter returns GSSFilterMintermFilter:
 	'GSSFilterMintermFilter'
 	name = ID
 	 '{'
-		(('uri' ':=' uri=QualifiedName ';')
-		& ('version' ':=' version=Version ';')
+		'uri' ':=' uri=QualifiedName ';'
+		'version' ':=' version=Version ';'
 		'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';'
-		((BoolVar+=GSSFilterBoolVar) | 
-		 (BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem) |
-		 (BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem) |
-		 (BoolVarFDIC+=GSSFilterBoolVarFDIC))+)
+		(BoolVar+=GSSFilterAbstractBoolVar)+
 		Minterm+=GSSFilterMinterm+
 	'}' ';'
 ;
@@ -59,9 +58,6 @@ GSSFilterBoolVar returns GSSFilterBoolVar:
 		(Value=GSSFilterValue)
 	'}' ';'
 ;
-
-GSSFilterValue returns GSSFilterValue:
-	GSSFilterConstant | GSSFilterSelect | GSSFilterSelectLine;
 	
 GSSFilterBoolVarFromArrayItem returns GSSFilterBoolVarFromArrayItem:
 	'GSSFilterBoolVarFromArrayItem' '{'
@@ -98,6 +94,9 @@ GSSFilterBoolVarFDIC returns GSSFilterBoolVarFDIC:
 		Op=GSSFilterFieldOp
 	'}' ';'
 ;
+
+GSSFilterValue returns GSSFilterValue:
+	GSSFilterConstant | GSSFilterSelect | GSSFilterSelectLine;
 
 enum GSSFilterConstantType returns GSSFilterConstantType:
 	decimal = 'decimal' | hex = 'hex' |

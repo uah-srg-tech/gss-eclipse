@@ -9,7 +9,6 @@ import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
-import org.eclipse.xtext.parser.antlr.IUnorderedGroupHelper.UnorderedGroupState;
 import org.eclipse.xtext.parser.antlr.AntlrDatatypeRuleToken;
 import es.uah.aut.srg.gss.lang.filter.services.FILTERGrammarAccess;
 
@@ -147,7 +146,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSModelFile"
-    // InternalFILTER.g:79:1: entryRuleGSSModelFile returns [EObject current=null] : iv_ruleGSSModelFile= ruleGSSModelFile EOF ;
+    // InternalFILTER.g:78:1: entryRuleGSSModelFile returns [EObject current=null] : iv_ruleGSSModelFile= ruleGSSModelFile EOF ;
     public final EObject entryRuleGSSModelFile() throws RecognitionException {
         EObject current = null;
 
@@ -155,8 +154,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:79:53: (iv_ruleGSSModelFile= ruleGSSModelFile EOF )
-            // InternalFILTER.g:80:2: iv_ruleGSSModelFile= ruleGSSModelFile EOF
+            // InternalFILTER.g:78:53: (iv_ruleGSSModelFile= ruleGSSModelFile EOF )
+            // InternalFILTER.g:79:2: iv_ruleGSSModelFile= ruleGSSModelFile EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSModelFileRule()); 
@@ -187,7 +186,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSModelFile"
-    // InternalFILTER.g:86:1: ruleGSSModelFile returns [EObject current=null] : ( ( (lv_imports_0_0= ruleGSSModelFileImport ) )* ( (lv_element_1_0= ruleGSSFilterFilter ) ) ) ;
+    // InternalFILTER.g:85:1: ruleGSSModelFile returns [EObject current=null] : ( ( (lv_imports_0_0= ruleGSSModelFileImport ) )* ( (lv_element_1_0= ruleGSSFilterFilter ) ) ) ;
     public final EObject ruleGSSModelFile() throws RecognitionException {
         EObject current = null;
 
@@ -200,13 +199,13 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:92:2: ( ( ( (lv_imports_0_0= ruleGSSModelFileImport ) )* ( (lv_element_1_0= ruleGSSFilterFilter ) ) ) )
-            // InternalFILTER.g:93:2: ( ( (lv_imports_0_0= ruleGSSModelFileImport ) )* ( (lv_element_1_0= ruleGSSFilterFilter ) ) )
+            // InternalFILTER.g:91:2: ( ( ( (lv_imports_0_0= ruleGSSModelFileImport ) )* ( (lv_element_1_0= ruleGSSFilterFilter ) ) ) )
+            // InternalFILTER.g:92:2: ( ( (lv_imports_0_0= ruleGSSModelFileImport ) )* ( (lv_element_1_0= ruleGSSFilterFilter ) ) )
             {
-            // InternalFILTER.g:93:2: ( ( (lv_imports_0_0= ruleGSSModelFileImport ) )* ( (lv_element_1_0= ruleGSSFilterFilter ) ) )
-            // InternalFILTER.g:94:3: ( (lv_imports_0_0= ruleGSSModelFileImport ) )* ( (lv_element_1_0= ruleGSSFilterFilter ) )
+            // InternalFILTER.g:92:2: ( ( (lv_imports_0_0= ruleGSSModelFileImport ) )* ( (lv_element_1_0= ruleGSSFilterFilter ) ) )
+            // InternalFILTER.g:93:3: ( (lv_imports_0_0= ruleGSSModelFileImport ) )* ( (lv_element_1_0= ruleGSSFilterFilter ) )
             {
-            // InternalFILTER.g:94:3: ( (lv_imports_0_0= ruleGSSModelFileImport ) )*
+            // InternalFILTER.g:93:3: ( (lv_imports_0_0= ruleGSSModelFileImport ) )*
             loop1:
             do {
                 int alt1=2;
@@ -219,10 +218,10 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalFILTER.g:95:4: (lv_imports_0_0= ruleGSSModelFileImport )
+            	    // InternalFILTER.g:94:4: (lv_imports_0_0= ruleGSSModelFileImport )
             	    {
-            	    // InternalFILTER.g:95:4: (lv_imports_0_0= ruleGSSModelFileImport )
-            	    // InternalFILTER.g:96:5: lv_imports_0_0= ruleGSSModelFileImport
+            	    // InternalFILTER.g:94:4: (lv_imports_0_0= ruleGSSModelFileImport )
+            	    // InternalFILTER.g:95:5: lv_imports_0_0= ruleGSSModelFileImport
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -259,11 +258,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalFILTER.g:113:3: ( (lv_element_1_0= ruleGSSFilterFilter ) )
-            // InternalFILTER.g:114:4: (lv_element_1_0= ruleGSSFilterFilter )
+            // InternalFILTER.g:112:3: ( (lv_element_1_0= ruleGSSFilterFilter ) )
+            // InternalFILTER.g:113:4: (lv_element_1_0= ruleGSSFilterFilter )
             {
-            // InternalFILTER.g:114:4: (lv_element_1_0= ruleGSSFilterFilter )
-            // InternalFILTER.g:115:5: lv_element_1_0= ruleGSSFilterFilter
+            // InternalFILTER.g:113:4: (lv_element_1_0= ruleGSSFilterFilter )
+            // InternalFILTER.g:114:5: lv_element_1_0= ruleGSSFilterFilter
             {
             if ( state.backtracking==0 ) {
 
@@ -319,7 +318,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSModelFileImport"
-    // InternalFILTER.g:136:1: entryRuleGSSModelFileImport returns [EObject current=null] : iv_ruleGSSModelFileImport= ruleGSSModelFileImport EOF ;
+    // InternalFILTER.g:135:1: entryRuleGSSModelFileImport returns [EObject current=null] : iv_ruleGSSModelFileImport= ruleGSSModelFileImport EOF ;
     public final EObject entryRuleGSSModelFileImport() throws RecognitionException {
         EObject current = null;
 
@@ -327,8 +326,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:136:59: (iv_ruleGSSModelFileImport= ruleGSSModelFileImport EOF )
-            // InternalFILTER.g:137:2: iv_ruleGSSModelFileImport= ruleGSSModelFileImport EOF
+            // InternalFILTER.g:135:59: (iv_ruleGSSModelFileImport= ruleGSSModelFileImport EOF )
+            // InternalFILTER.g:136:2: iv_ruleGSSModelFileImport= ruleGSSModelFileImport EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSModelFileImportRule()); 
@@ -359,7 +358,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSModelFileImport"
-    // InternalFILTER.g:143:1: ruleGSSModelFileImport returns [EObject current=null] : (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' ) ;
+    // InternalFILTER.g:142:1: ruleGSSModelFileImport returns [EObject current=null] : (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' ) ;
     public final EObject ruleGSSModelFileImport() throws RecognitionException {
         EObject current = null;
 
@@ -372,11 +371,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:149:2: ( (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' ) )
-            // InternalFILTER.g:150:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' )
+            // InternalFILTER.g:148:2: ( (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' ) )
+            // InternalFILTER.g:149:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' )
             {
-            // InternalFILTER.g:150:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' )
-            // InternalFILTER.g:151:3: otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';'
+            // InternalFILTER.g:149:2: (otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';' )
+            // InternalFILTER.g:150:3: otherlv_0= 'import' otherlv_1= ':=' ( (lv_importURI_2_0= RULE_STRING ) ) otherlv_3= ';'
             {
             otherlv_0=(Token)match(input,12,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -390,11 +389,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getGSSModelFileImportAccess().getColonEqualsSignKeyword_1());
               		
             }
-            // InternalFILTER.g:159:3: ( (lv_importURI_2_0= RULE_STRING ) )
-            // InternalFILTER.g:160:4: (lv_importURI_2_0= RULE_STRING )
+            // InternalFILTER.g:158:3: ( (lv_importURI_2_0= RULE_STRING ) )
+            // InternalFILTER.g:159:4: (lv_importURI_2_0= RULE_STRING )
             {
-            // InternalFILTER.g:160:4: (lv_importURI_2_0= RULE_STRING )
-            // InternalFILTER.g:161:5: lv_importURI_2_0= RULE_STRING
+            // InternalFILTER.g:159:4: (lv_importURI_2_0= RULE_STRING )
+            // InternalFILTER.g:160:5: lv_importURI_2_0= RULE_STRING
             {
             lv_importURI_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -451,7 +450,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSFilterFilter"
-    // InternalFILTER.g:185:1: entryRuleGSSFilterFilter returns [EObject current=null] : iv_ruleGSSFilterFilter= ruleGSSFilterFilter EOF ;
+    // InternalFILTER.g:184:1: entryRuleGSSFilterFilter returns [EObject current=null] : iv_ruleGSSFilterFilter= ruleGSSFilterFilter EOF ;
     public final EObject entryRuleGSSFilterFilter() throws RecognitionException {
         EObject current = null;
 
@@ -459,8 +458,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:185:56: (iv_ruleGSSFilterFilter= ruleGSSFilterFilter EOF )
-            // InternalFILTER.g:186:2: iv_ruleGSSFilterFilter= ruleGSSFilterFilter EOF
+            // InternalFILTER.g:184:56: (iv_ruleGSSFilterFilter= ruleGSSFilterFilter EOF )
+            // InternalFILTER.g:185:2: iv_ruleGSSFilterFilter= ruleGSSFilterFilter EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterFilterRule()); 
@@ -491,7 +490,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterFilter"
-    // InternalFILTER.g:192:1: ruleGSSFilterFilter returns [EObject current=null] : (this_GSSFilterMaxtermFilter_0= ruleGSSFilterMaxtermFilter | this_GSSFilterMintermFilter_1= ruleGSSFilterMintermFilter ) ;
+    // InternalFILTER.g:191:1: ruleGSSFilterFilter returns [EObject current=null] : (this_GSSFilterMaxtermFilter_0= ruleGSSFilterMaxtermFilter | this_GSSFilterMintermFilter_1= ruleGSSFilterMintermFilter ) ;
     public final EObject ruleGSSFilterFilter() throws RecognitionException {
         EObject current = null;
 
@@ -504,10 +503,10 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:198:2: ( (this_GSSFilterMaxtermFilter_0= ruleGSSFilterMaxtermFilter | this_GSSFilterMintermFilter_1= ruleGSSFilterMintermFilter ) )
-            // InternalFILTER.g:199:2: (this_GSSFilterMaxtermFilter_0= ruleGSSFilterMaxtermFilter | this_GSSFilterMintermFilter_1= ruleGSSFilterMintermFilter )
+            // InternalFILTER.g:197:2: ( (this_GSSFilterMaxtermFilter_0= ruleGSSFilterMaxtermFilter | this_GSSFilterMintermFilter_1= ruleGSSFilterMintermFilter ) )
+            // InternalFILTER.g:198:2: (this_GSSFilterMaxtermFilter_0= ruleGSSFilterMaxtermFilter | this_GSSFilterMintermFilter_1= ruleGSSFilterMintermFilter )
             {
-            // InternalFILTER.g:199:2: (this_GSSFilterMaxtermFilter_0= ruleGSSFilterMaxtermFilter | this_GSSFilterMintermFilter_1= ruleGSSFilterMintermFilter )
+            // InternalFILTER.g:198:2: (this_GSSFilterMaxtermFilter_0= ruleGSSFilterMaxtermFilter | this_GSSFilterMintermFilter_1= ruleGSSFilterMintermFilter )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -526,7 +525,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalFILTER.g:200:3: this_GSSFilterMaxtermFilter_0= ruleGSSFilterMaxtermFilter
+                    // InternalFILTER.g:199:3: this_GSSFilterMaxtermFilter_0= ruleGSSFilterMaxtermFilter
                     {
                     if ( state.backtracking==0 ) {
 
@@ -553,7 +552,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTER.g:212:3: this_GSSFilterMintermFilter_1= ruleGSSFilterMintermFilter
+                    // InternalFILTER.g:211:3: this_GSSFilterMintermFilter_1= ruleGSSFilterMintermFilter
                     {
                     if ( state.backtracking==0 ) {
 
@@ -604,21 +603,16 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSFilterMaxtermFilter"
-    // InternalFILTER.g:227:1: entryRuleGSSFilterMaxtermFilter returns [EObject current=null] : iv_ruleGSSFilterMaxtermFilter= ruleGSSFilterMaxtermFilter EOF ;
+    // InternalFILTER.g:226:1: entryRuleGSSFilterMaxtermFilter returns [EObject current=null] : iv_ruleGSSFilterMaxtermFilter= ruleGSSFilterMaxtermFilter EOF ;
     public final EObject entryRuleGSSFilterMaxtermFilter() throws RecognitionException {
         EObject current = null;
 
         EObject iv_ruleGSSFilterMaxtermFilter = null;
 
 
-
-        	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-        	grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3()
-        	);
-
         try {
-            // InternalFILTER.g:231:2: (iv_ruleGSSFilterMaxtermFilter= ruleGSSFilterMaxtermFilter EOF )
-            // InternalFILTER.g:232:2: iv_ruleGSSFilterMaxtermFilter= ruleGSSFilterMaxtermFilter EOF
+            // InternalFILTER.g:226:63: (iv_ruleGSSFilterMaxtermFilter= ruleGSSFilterMaxtermFilter EOF )
+            // InternalFILTER.g:227:2: iv_ruleGSSFilterMaxtermFilter= ruleGSSFilterMaxtermFilter EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterRule()); 
@@ -642,9 +636,6 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                 appendSkippedTokens();
             }
         finally {
-
-            	myUnorderedGroupState.restore();
-
         }
         return current;
     }
@@ -652,51 +643,42 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterMaxtermFilter"
-    // InternalFILTER.g:241:1: ruleGSSFilterMaxtermFilter returns [EObject current=null] : (otherlv_0= 'GSSFilterMaxtermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) ) ( (lv_Maxterm_20_0= ruleGSSFilterMaxterm ) )+ otherlv_21= '}' otherlv_22= ';' ) ;
+    // InternalFILTER.g:233:1: ruleGSSFilterMaxtermFilter returns [EObject current=null] : (otherlv_0= 'GSSFilterMaxtermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' otherlv_11= 'formatFile' otherlv_12= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_14= ';' ( (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar ) )+ ( (lv_Maxterm_16_0= ruleGSSFilterMaxterm ) )+ otherlv_17= '}' otherlv_18= ';' ) ;
     public final EObject ruleGSSFilterMaxtermFilter() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_name_1_0=null;
         Token otherlv_2=null;
+        Token otherlv_3=null;
         Token otherlv_4=null;
-        Token otherlv_5=null;
+        Token otherlv_6=null;
         Token otherlv_7=null;
         Token otherlv_8=null;
-        Token otherlv_9=null;
+        Token otherlv_10=null;
         Token otherlv_11=null;
         Token otherlv_12=null;
-        Token otherlv_13=null;
-        Token otherlv_15=null;
-        Token otherlv_21=null;
-        Token otherlv_22=null;
-        AntlrDatatypeRuleToken lv_uri_6_0 = null;
+        Token otherlv_14=null;
+        Token otherlv_17=null;
+        Token otherlv_18=null;
+        AntlrDatatypeRuleToken lv_uri_5_0 = null;
 
-        AntlrDatatypeRuleToken lv_version_10_0 = null;
+        AntlrDatatypeRuleToken lv_version_9_0 = null;
 
-        EObject lv_BoolVar_16_0 = null;
+        EObject lv_BoolVar_15_0 = null;
 
-        EObject lv_BoolVarFromArrayItem_17_0 = null;
-
-        EObject lv_BoolVarFromGroupedArrayItem_18_0 = null;
-
-        EObject lv_BoolVarFDIC_19_0 = null;
-
-        EObject lv_Maxterm_20_0 = null;
+        EObject lv_Maxterm_16_0 = null;
 
 
 
         	enterRule();
-        	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-        	grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3()
-        	);
 
         try {
-            // InternalFILTER.g:250:2: ( (otherlv_0= 'GSSFilterMaxtermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) ) ( (lv_Maxterm_20_0= ruleGSSFilterMaxterm ) )+ otherlv_21= '}' otherlv_22= ';' ) )
-            // InternalFILTER.g:251:2: (otherlv_0= 'GSSFilterMaxtermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) ) ( (lv_Maxterm_20_0= ruleGSSFilterMaxterm ) )+ otherlv_21= '}' otherlv_22= ';' )
+            // InternalFILTER.g:239:2: ( (otherlv_0= 'GSSFilterMaxtermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' otherlv_11= 'formatFile' otherlv_12= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_14= ';' ( (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar ) )+ ( (lv_Maxterm_16_0= ruleGSSFilterMaxterm ) )+ otherlv_17= '}' otherlv_18= ';' ) )
+            // InternalFILTER.g:240:2: (otherlv_0= 'GSSFilterMaxtermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' otherlv_11= 'formatFile' otherlv_12= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_14= ';' ( (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar ) )+ ( (lv_Maxterm_16_0= ruleGSSFilterMaxterm ) )+ otherlv_17= '}' otherlv_18= ';' )
             {
-            // InternalFILTER.g:251:2: (otherlv_0= 'GSSFilterMaxtermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) ) ( (lv_Maxterm_20_0= ruleGSSFilterMaxterm ) )+ otherlv_21= '}' otherlv_22= ';' )
-            // InternalFILTER.g:252:3: otherlv_0= 'GSSFilterMaxtermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) ) ( (lv_Maxterm_20_0= ruleGSSFilterMaxterm ) )+ otherlv_21= '}' otherlv_22= ';'
+            // InternalFILTER.g:240:2: (otherlv_0= 'GSSFilterMaxtermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' otherlv_11= 'formatFile' otherlv_12= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_14= ';' ( (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar ) )+ ( (lv_Maxterm_16_0= ruleGSSFilterMaxterm ) )+ otherlv_17= '}' otherlv_18= ';' )
+            // InternalFILTER.g:241:3: otherlv_0= 'GSSFilterMaxtermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' otherlv_11= 'formatFile' otherlv_12= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_14= ';' ( (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar ) )+ ( (lv_Maxterm_16_0= ruleGSSFilterMaxterm ) )+ otherlv_17= '}' otherlv_18= ';'
             {
             otherlv_0=(Token)match(input,15,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -704,11 +686,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterMaxtermFilterAccess().getGSSFilterMaxtermFilterKeyword_0());
               		
             }
-            // InternalFILTER.g:256:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalFILTER.g:257:4: (lv_name_1_0= RULE_ID )
+            // InternalFILTER.g:245:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalFILTER.g:246:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalFILTER.g:257:4: (lv_name_1_0= RULE_ID )
-            // InternalFILTER.g:258:5: lv_name_1_0= RULE_ID
+            // InternalFILTER.g:246:4: (lv_name_1_0= RULE_ID )
+            // InternalFILTER.g:247:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -740,480 +722,270 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterMaxtermFilterAccess().getLeftCurlyBracketKeyword_2());
               		
             }
-            // InternalFILTER.g:278:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) )
-            // InternalFILTER.g:279:4: ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) )
+            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_3, grammarAccess.getGSSFilterMaxtermFilterAccess().getUriKeyword_3());
+              		
+            }
+            otherlv_4=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_4, grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_4());
+              		
+            }
+            // InternalFILTER.g:275:3: ( (lv_uri_5_0= ruleQualifiedName ) )
+            // InternalFILTER.g:276:4: (lv_uri_5_0= ruleQualifiedName )
             {
-            // InternalFILTER.g:279:4: ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) )
-            // InternalFILTER.g:280:5: ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?)
+            // InternalFILTER.g:276:4: (lv_uri_5_0= ruleQualifiedName )
+            // InternalFILTER.g:277:5: lv_uri_5_0= ruleQualifiedName
             {
-            getUnorderedGroupHelper().enter(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3());
-            // InternalFILTER.g:283:5: ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?)
-            // InternalFILTER.g:284:6: ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriQualifiedNameParserRuleCall_5_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_6);
+            lv_uri_5_0=ruleQualifiedName();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getGSSFilterMaxtermFilterRule());
+              					}
+              					set(
+              						current,
+              						"uri",
+              						lv_uri_5_0,
+              						"es.uah.aut.srg.gss.lang.filter.FILTER.QualifiedName");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_6=(Token)match(input,14,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_6, grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_6());
+              		
+            }
+            otherlv_7=(Token)match(input,18,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_7, grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionKeyword_7());
+              		
+            }
+            otherlv_8=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_8, grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_8());
+              		
+            }
+            // InternalFILTER.g:306:3: ( (lv_version_9_0= ruleVersion ) )
+            // InternalFILTER.g:307:4: (lv_version_9_0= ruleVersion )
             {
-            // InternalFILTER.g:284:6: ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+
-            int cnt4=0;
-            loop4:
+            // InternalFILTER.g:307:4: (lv_version_9_0= ruleVersion )
+            // InternalFILTER.g:308:5: lv_version_9_0= ruleVersion
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionVersionParserRuleCall_9_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_6);
+            lv_version_9_0=ruleVersion();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getGSSFilterMaxtermFilterRule());
+              					}
+              					set(
+              						current,
+              						"version",
+              						lv_version_9_0,
+              						"es.uah.aut.srg.gss.lang.filter.FILTER.Version");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_10=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_10, grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_10());
+              		
+            }
+            otherlv_11=(Token)match(input,19,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_11, grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileKeyword_11());
+              		
+            }
+            otherlv_12=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_12, grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_12());
+              		
+            }
+            // InternalFILTER.g:337:3: ( ( ruleVersionedQualifiedName ) )
+            // InternalFILTER.g:338:4: ( ruleVersionedQualifiedName )
+            {
+            // InternalFILTER.g:338:4: ( ruleVersionedQualifiedName )
+            // InternalFILTER.g:339:5: ruleVersionedQualifiedName
+            {
+            if ( state.backtracking==0 ) {
+
+              					/* */
+              				
+            }
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElement(grammarAccess.getGSSFilterMaxtermFilterRule());
+              					}
+              				
+            }
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSFormatFormatCrossReference_13_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_6);
+            ruleVersionedQualifiedName();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_14=(Token)match(input,14,FollowSets000.FOLLOW_13); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_14, grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_14());
+              		
+            }
+            // InternalFILTER.g:360:3: ( (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar ) )+
+            int cnt3=0;
+            loop3:
             do {
-                int alt4=3;
-                int LA4_0 = input.LA(1);
+                int alt3=2;
+                int LA3_0 = input.LA(1);
 
-                if ( LA4_0 == 17 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0) ) {
-                    alt4=1;
-                }
-                else if ( LA4_0 == 18 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 1) ) {
-                    alt4=2;
+                if ( (LA3_0==22||LA3_0==27||LA3_0==29||LA3_0==32) ) {
+                    alt3=1;
                 }
 
 
-                switch (alt4) {
+                switch (alt3) {
             	case 1 :
-            	    // InternalFILTER.g:285:4: ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) )
+            	    // InternalFILTER.g:361:4: (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar )
             	    {
-            	    // InternalFILTER.g:285:4: ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) )
-            	    // InternalFILTER.g:286:5: {...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) )
-            	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleGSSFilterMaxtermFilter", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0)");
-            	    }
-            	    // InternalFILTER.g:286:119: ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) )
-            	    // InternalFILTER.g:287:6: ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) )
-            	    {
-            	    getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0);
-            	    // InternalFILTER.g:290:9: ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) )
-            	    // InternalFILTER.g:290:10: {...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' )
-            	    {
-            	    if ( !((true)) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleGSSFilterMaxtermFilter", "true");
-            	    }
-            	    // InternalFILTER.g:290:19: (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' )
-            	    // InternalFILTER.g:290:20: otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';'
-            	    {
-            	    otherlv_4=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_4, grammarAccess.getGSSFilterMaxtermFilterAccess().getUriKeyword_3_0_0());
-            	      								
-            	    }
-            	    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_5, grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_3_0_1());
-            	      								
-            	    }
-            	    // InternalFILTER.g:298:9: ( (lv_uri_6_0= ruleQualifiedName ) )
-            	    // InternalFILTER.g:299:10: (lv_uri_6_0= ruleQualifiedName )
-            	    {
-            	    // InternalFILTER.g:299:10: (lv_uri_6_0= ruleQualifiedName )
-            	    // InternalFILTER.g:300:11: lv_uri_6_0= ruleQualifiedName
+            	    // InternalFILTER.g:361:4: (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar )
+            	    // InternalFILTER.g:362:5: lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar
             	    {
             	    if ( state.backtracking==0 ) {
 
-            	      											newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriQualifiedNameParserRuleCall_3_0_2_0());
-            	      										
+            	      					newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarGSSFilterAbstractBoolVarParserRuleCall_15_0());
+            	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_6);
-            	    lv_uri_6_0=ruleQualifiedName();
+            	    pushFollow(FollowSets000.FOLLOW_14);
+            	    lv_BoolVar_15_0=ruleGSSFilterAbstractBoolVar();
 
             	    state._fsp--;
             	    if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      											if (current==null) {
-            	      												current = createModelElementForParent(grammarAccess.getGSSFilterMaxtermFilterRule());
-            	      											}
-            	      											set(
-            	      												current,
-            	      												"uri",
-            	      												lv_uri_6_0,
-            	      												"es.uah.aut.srg.gss.lang.filter.FILTER.QualifiedName");
-            	      											afterParserOrEnumRuleCall();
-            	      										
+            	      					if (current==null) {
+            	      						current = createModelElementForParent(grammarAccess.getGSSFilterMaxtermFilterRule());
+            	      					}
+            	      					add(
+            	      						current,
+            	      						"BoolVar",
+            	      						lv_BoolVar_15_0,
+            	      						"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterAbstractBoolVar");
+            	      					afterParserOrEnumRuleCall();
+            	      				
             	    }
-
-            	    }
-
-
-            	    }
-
-            	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_10); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_7, grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_3_0_3());
-            	      								
-            	    }
-
-            	    }
-
-
-            	    }
-
-            	    getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3());
-
-            	    }
-
 
             	    }
 
 
             	    }
             	    break;
-            	case 2 :
-            	    // InternalFILTER.g:327:4: ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) )
-            	    {
-            	    // InternalFILTER.g:327:4: ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) )
-            	    // InternalFILTER.g:328:5: {...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) )
-            	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 1) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleGSSFilterMaxtermFilter", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 1)");
-            	    }
-            	    // InternalFILTER.g:328:119: ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) )
-            	    // InternalFILTER.g:329:6: ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) )
-            	    {
-            	    getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 1);
-            	    // InternalFILTER.g:332:9: ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) )
-            	    // InternalFILTER.g:332:10: {...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ )
-            	    {
-            	    if ( !((true)) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleGSSFilterMaxtermFilter", "true");
-            	    }
-            	    // InternalFILTER.g:332:19: ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ )
-            	    // InternalFILTER.g:332:20: (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+
-            	    {
-            	    // InternalFILTER.g:332:20: (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' )
-            	    // InternalFILTER.g:333:10: otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';'
-            	    {
-            	    otherlv_8=(Token)match(input,18,FollowSets000.FOLLOW_4); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
 
-            	      										newLeafNode(otherlv_8, grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionKeyword_3_1_0_0());
-            	      									
-            	    }
-            	    otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
+            	default :
+            	    if ( cnt3 >= 1 ) break loop3;
+            	    if (state.backtracking>0) {state.failed=true; return current;}
+                        EarlyExitException eee =
+                            new EarlyExitException(3, input);
+                        throw eee;
+                }
+                cnt3++;
+            } while (true);
 
-            	      										newLeafNode(otherlv_9, grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_3_1_0_1());
-            	      									
-            	    }
-            	    // InternalFILTER.g:341:10: ( (lv_version_10_0= ruleVersion ) )
-            	    // InternalFILTER.g:342:11: (lv_version_10_0= ruleVersion )
+            // InternalFILTER.g:379:3: ( (lv_Maxterm_16_0= ruleGSSFilterMaxterm ) )+
+            int cnt4=0;
+            loop4:
+            do {
+                int alt4=2;
+                int LA4_0 = input.LA(1);
+
+                if ( (LA4_0==46) ) {
+                    alt4=1;
+                }
+
+
+                switch (alt4) {
+            	case 1 :
+            	    // InternalFILTER.g:380:4: (lv_Maxterm_16_0= ruleGSSFilterMaxterm )
             	    {
-            	    // InternalFILTER.g:342:11: (lv_version_10_0= ruleVersion )
-            	    // InternalFILTER.g:343:12: lv_version_10_0= ruleVersion
+            	    // InternalFILTER.g:380:4: (lv_Maxterm_16_0= ruleGSSFilterMaxterm )
+            	    // InternalFILTER.g:381:5: lv_Maxterm_16_0= ruleGSSFilterMaxterm
             	    {
             	    if ( state.backtracking==0 ) {
 
-            	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionVersionParserRuleCall_3_1_0_2_0());
-            	      											
+            	      					newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermGSSFilterMaxtermParserRuleCall_16_0());
+            	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_6);
-            	    lv_version_10_0=ruleVersion();
+            	    pushFollow(FollowSets000.FOLLOW_15);
+            	    lv_Maxterm_16_0=ruleGSSFilterMaxterm();
 
             	    state._fsp--;
             	    if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      												if (current==null) {
-            	      													current = createModelElementForParent(grammarAccess.getGSSFilterMaxtermFilterRule());
-            	      												}
-            	      												set(
-            	      													current,
-            	      													"version",
-            	      													lv_version_10_0,
-            	      													"es.uah.aut.srg.gss.lang.filter.FILTER.Version");
-            	      												afterParserOrEnumRuleCall();
-            	      											
+            	      					if (current==null) {
+            	      						current = createModelElementForParent(grammarAccess.getGSSFilterMaxtermFilterRule());
+            	      					}
+            	      					add(
+            	      						current,
+            	      						"Maxterm",
+            	      						lv_Maxterm_16_0,
+            	      						"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterMaxterm");
+            	      					afterParserOrEnumRuleCall();
+            	      				
             	    }
-
-            	    }
-
-
-            	    }
-
-            	    otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      										newLeafNode(otherlv_11, grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_3_1_0_3());
-            	      									
-            	    }
-
-            	    }
-
-            	    otherlv_12=(Token)match(input,19,FollowSets000.FOLLOW_4); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_12, grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileKeyword_3_1_1());
-            	      								
-            	    }
-            	    otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_13, grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_3_1_2());
-            	      								
-            	    }
-            	    // InternalFILTER.g:373:9: ( ( ruleVersionedQualifiedName ) )
-            	    // InternalFILTER.g:374:10: ( ruleVersionedQualifiedName )
-            	    {
-            	    // InternalFILTER.g:374:10: ( ruleVersionedQualifiedName )
-            	    // InternalFILTER.g:375:11: ruleVersionedQualifiedName
-            	    {
-            	    if ( state.backtracking==0 ) {
-
-            	      											/* */
-            	      										
-            	    }
-            	    if ( state.backtracking==0 ) {
-
-            	      											if (current==null) {
-            	      												current = createModelElement(grammarAccess.getGSSFilterMaxtermFilterRule());
-            	      											}
-            	      										
-            	    }
-            	    if ( state.backtracking==0 ) {
-
-            	      											newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSFormatFormatCrossReference_3_1_3_0());
-            	      										
-            	    }
-            	    pushFollow(FollowSets000.FOLLOW_6);
-            	    ruleVersionedQualifiedName();
-
-            	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      											afterParserOrEnumRuleCall();
-            	      										
-            	    }
-
-            	    }
-
-
-            	    }
-
-            	    otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_13); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_15, grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_3_1_4());
-            	      								
-            	    }
-            	    // InternalFILTER.g:396:9: ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+
-            	    int cnt3=0;
-            	    loop3:
-            	    do {
-            	        int alt3=5;
-            	        switch ( input.LA(1) ) {
-            	        case 22:
-            	            {
-            	            alt3=1;
-            	            }
-            	            break;
-            	        case 27:
-            	            {
-            	            alt3=2;
-            	            }
-            	            break;
-            	        case 29:
-            	            {
-            	            alt3=3;
-            	            }
-            	            break;
-            	        case 32:
-            	            {
-            	            alt3=4;
-            	            }
-            	            break;
-
-            	        }
-
-            	        switch (alt3) {
-            	    	case 1 :
-            	    	    // InternalFILTER.g:397:10: ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) )
-            	    	    {
-            	    	    // InternalFILTER.g:397:10: ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) )
-            	    	    // InternalFILTER.g:398:11: (lv_BoolVar_16_0= ruleGSSFilterBoolVar )
-            	    	    {
-            	    	    // InternalFILTER.g:398:11: (lv_BoolVar_16_0= ruleGSSFilterBoolVar )
-            	    	    // InternalFILTER.g:399:12: lv_BoolVar_16_0= ruleGSSFilterBoolVar
-            	    	    {
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0());
-            	    	      											
-            	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_14);
-            	    	    lv_BoolVar_16_0=ruleGSSFilterBoolVar();
-
-            	    	    state._fsp--;
-            	    	    if (state.failed) return current;
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												if (current==null) {
-            	    	      													current = createModelElementForParent(grammarAccess.getGSSFilterMaxtermFilterRule());
-            	    	      												}
-            	    	      												add(
-            	    	      													current,
-            	    	      													"BoolVar",
-            	    	      													lv_BoolVar_16_0,
-            	    	      													"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterBoolVar");
-            	    	      												afterParserOrEnumRuleCall();
-            	    	      											
-            	    	    }
-
-            	    	    }
-
-
-            	    	    }
-
-
-            	    	    }
-            	    	    break;
-            	    	case 2 :
-            	    	    // InternalFILTER.g:417:10: ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) )
-            	    	    {
-            	    	    // InternalFILTER.g:417:10: ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) )
-            	    	    // InternalFILTER.g:418:11: (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem )
-            	    	    {
-            	    	    // InternalFILTER.g:418:11: (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem )
-            	    	    // InternalFILTER.g:419:12: lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem
-            	    	    {
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0());
-            	    	      											
-            	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_14);
-            	    	    lv_BoolVarFromArrayItem_17_0=ruleGSSFilterBoolVarFromArrayItem();
-
-            	    	    state._fsp--;
-            	    	    if (state.failed) return current;
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												if (current==null) {
-            	    	      													current = createModelElementForParent(grammarAccess.getGSSFilterMaxtermFilterRule());
-            	    	      												}
-            	    	      												add(
-            	    	      													current,
-            	    	      													"BoolVarFromArrayItem",
-            	    	      													lv_BoolVarFromArrayItem_17_0,
-            	    	      													"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterBoolVarFromArrayItem");
-            	    	      												afterParserOrEnumRuleCall();
-            	    	      											
-            	    	    }
-
-            	    	    }
-
-
-            	    	    }
-
-
-            	    	    }
-            	    	    break;
-            	    	case 3 :
-            	    	    // InternalFILTER.g:437:10: ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) )
-            	    	    {
-            	    	    // InternalFILTER.g:437:10: ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) )
-            	    	    // InternalFILTER.g:438:11: (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem )
-            	    	    {
-            	    	    // InternalFILTER.g:438:11: (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem )
-            	    	    // InternalFILTER.g:439:12: lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem
-            	    	    {
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0());
-            	    	      											
-            	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_14);
-            	    	    lv_BoolVarFromGroupedArrayItem_18_0=ruleGSSFilterBoolVarFromGroupedArrayItem();
-
-            	    	    state._fsp--;
-            	    	    if (state.failed) return current;
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												if (current==null) {
-            	    	      													current = createModelElementForParent(grammarAccess.getGSSFilterMaxtermFilterRule());
-            	    	      												}
-            	    	      												add(
-            	    	      													current,
-            	    	      													"BoolVarFromGroupedArrayItem",
-            	    	      													lv_BoolVarFromGroupedArrayItem_18_0,
-            	    	      													"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterBoolVarFromGroupedArrayItem");
-            	    	      												afterParserOrEnumRuleCall();
-            	    	      											
-            	    	    }
-
-            	    	    }
-
-
-            	    	    }
-
-
-            	    	    }
-            	    	    break;
-            	    	case 4 :
-            	    	    // InternalFILTER.g:457:10: ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) )
-            	    	    {
-            	    	    // InternalFILTER.g:457:10: ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) )
-            	    	    // InternalFILTER.g:458:11: (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC )
-            	    	    {
-            	    	    // InternalFILTER.g:458:11: (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC )
-            	    	    // InternalFILTER.g:459:12: lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC
-            	    	    {
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0());
-            	    	      											
-            	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_14);
-            	    	    lv_BoolVarFDIC_19_0=ruleGSSFilterBoolVarFDIC();
-
-            	    	    state._fsp--;
-            	    	    if (state.failed) return current;
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												if (current==null) {
-            	    	      													current = createModelElementForParent(grammarAccess.getGSSFilterMaxtermFilterRule());
-            	    	      												}
-            	    	      												add(
-            	    	      													current,
-            	    	      													"BoolVarFDIC",
-            	    	      													lv_BoolVarFDIC_19_0,
-            	    	      													"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterBoolVarFDIC");
-            	    	      												afterParserOrEnumRuleCall();
-            	    	      											
-            	    	    }
-
-            	    	    }
-
-
-            	    	    }
-
-
-            	    	    }
-            	    	    break;
-
-            	    	default :
-            	    	    if ( cnt3 >= 1 ) break loop3;
-            	    	    if (state.backtracking>0) {state.failed=true; return current;}
-            	                EarlyExitException eee =
-            	                    new EarlyExitException(3, input);
-            	                throw eee;
-            	        }
-            	        cnt3++;
-            	    } while (true);
-
-
-            	    }
-
-
-            	    }
-
-            	    getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3());
-
-            	    }
-
 
             	    }
 
@@ -1231,89 +1003,16 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                 cnt4++;
             } while (true);
 
-            if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3()) ) {
-                if (state.backtracking>0) {state.failed=true; return current;}
-                throw new FailedPredicateException(input, "ruleGSSFilterMaxtermFilter", "getUnorderedGroupHelper().canLeave(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3())");
-            }
-
-            }
-
-
-            }
-
-            getUnorderedGroupHelper().leave(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3());
-
-            }
-
-            // InternalFILTER.g:491:3: ( (lv_Maxterm_20_0= ruleGSSFilterMaxterm ) )+
-            int cnt5=0;
-            loop5:
-            do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
-
-                if ( (LA5_0==46) ) {
-                    alt5=1;
-                }
-
-
-                switch (alt5) {
-            	case 1 :
-            	    // InternalFILTER.g:492:4: (lv_Maxterm_20_0= ruleGSSFilterMaxterm )
-            	    {
-            	    // InternalFILTER.g:492:4: (lv_Maxterm_20_0= ruleGSSFilterMaxterm )
-            	    // InternalFILTER.g:493:5: lv_Maxterm_20_0= ruleGSSFilterMaxterm
-            	    {
-            	    if ( state.backtracking==0 ) {
-
-            	      					newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermGSSFilterMaxtermParserRuleCall_4_0());
-            	      				
-            	    }
-            	    pushFollow(FollowSets000.FOLLOW_15);
-            	    lv_Maxterm_20_0=ruleGSSFilterMaxterm();
-
-            	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      					if (current==null) {
-            	      						current = createModelElementForParent(grammarAccess.getGSSFilterMaxtermFilterRule());
-            	      					}
-            	      					add(
-            	      						current,
-            	      						"Maxterm",
-            	      						lv_Maxterm_20_0,
-            	      						"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterMaxterm");
-            	      					afterParserOrEnumRuleCall();
-            	      				
-            	    }
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt5 >= 1 ) break loop5;
-            	    if (state.backtracking>0) {state.failed=true; return current;}
-                        EarlyExitException eee =
-                            new EarlyExitException(5, input);
-                        throw eee;
-                }
-                cnt5++;
-            } while (true);
-
-            otherlv_21=(Token)match(input,20,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            otherlv_17=(Token)match(input,20,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_21, grammarAccess.getGSSFilterMaxtermFilterAccess().getRightCurlyBracketKeyword_5());
+              			newLeafNode(otherlv_17, grammarAccess.getGSSFilterMaxtermFilterAccess().getRightCurlyBracketKeyword_17());
               		
             }
-            otherlv_22=(Token)match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_18=(Token)match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_22, grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_6());
+              			newLeafNode(otherlv_18, grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_18());
               		
             }
 
@@ -1334,31 +1033,248 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                 appendSkippedTokens();
             }
         finally {
-
-            	myUnorderedGroupState.restore();
-
         }
         return current;
     }
     // $ANTLR end "ruleGSSFilterMaxtermFilter"
 
 
+    // $ANTLR start "entryRuleGSSFilterAbstractBoolVar"
+    // InternalFILTER.g:410:1: entryRuleGSSFilterAbstractBoolVar returns [EObject current=null] : iv_ruleGSSFilterAbstractBoolVar= ruleGSSFilterAbstractBoolVar EOF ;
+    public final EObject entryRuleGSSFilterAbstractBoolVar() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleGSSFilterAbstractBoolVar = null;
+
+
+        try {
+            // InternalFILTER.g:410:65: (iv_ruleGSSFilterAbstractBoolVar= ruleGSSFilterAbstractBoolVar EOF )
+            // InternalFILTER.g:411:2: iv_ruleGSSFilterAbstractBoolVar= ruleGSSFilterAbstractBoolVar EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getGSSFilterAbstractBoolVarRule()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_1);
+            iv_ruleGSSFilterAbstractBoolVar=ruleGSSFilterAbstractBoolVar();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleGSSFilterAbstractBoolVar; 
+            }
+            match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return current;
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleGSSFilterAbstractBoolVar"
+
+
+    // $ANTLR start "ruleGSSFilterAbstractBoolVar"
+    // InternalFILTER.g:417:1: ruleGSSFilterAbstractBoolVar returns [EObject current=null] : (this_GSSFilterBoolVar_0= ruleGSSFilterBoolVar | this_GSSFilterBoolVarFromArrayItem_1= ruleGSSFilterBoolVarFromArrayItem | this_GSSFilterBoolVarFromGroupedArrayItem_2= ruleGSSFilterBoolVarFromGroupedArrayItem | this_GSSFilterBoolVarFDIC_3= ruleGSSFilterBoolVarFDIC ) ;
+    public final EObject ruleGSSFilterAbstractBoolVar() throws RecognitionException {
+        EObject current = null;
+
+        EObject this_GSSFilterBoolVar_0 = null;
+
+        EObject this_GSSFilterBoolVarFromArrayItem_1 = null;
+
+        EObject this_GSSFilterBoolVarFromGroupedArrayItem_2 = null;
+
+        EObject this_GSSFilterBoolVarFDIC_3 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalFILTER.g:423:2: ( (this_GSSFilterBoolVar_0= ruleGSSFilterBoolVar | this_GSSFilterBoolVarFromArrayItem_1= ruleGSSFilterBoolVarFromArrayItem | this_GSSFilterBoolVarFromGroupedArrayItem_2= ruleGSSFilterBoolVarFromGroupedArrayItem | this_GSSFilterBoolVarFDIC_3= ruleGSSFilterBoolVarFDIC ) )
+            // InternalFILTER.g:424:2: (this_GSSFilterBoolVar_0= ruleGSSFilterBoolVar | this_GSSFilterBoolVarFromArrayItem_1= ruleGSSFilterBoolVarFromArrayItem | this_GSSFilterBoolVarFromGroupedArrayItem_2= ruleGSSFilterBoolVarFromGroupedArrayItem | this_GSSFilterBoolVarFDIC_3= ruleGSSFilterBoolVarFDIC )
+            {
+            // InternalFILTER.g:424:2: (this_GSSFilterBoolVar_0= ruleGSSFilterBoolVar | this_GSSFilterBoolVarFromArrayItem_1= ruleGSSFilterBoolVarFromArrayItem | this_GSSFilterBoolVarFromGroupedArrayItem_2= ruleGSSFilterBoolVarFromGroupedArrayItem | this_GSSFilterBoolVarFDIC_3= ruleGSSFilterBoolVarFDIC )
+            int alt5=4;
+            switch ( input.LA(1) ) {
+            case 22:
+                {
+                alt5=1;
+                }
+                break;
+            case 27:
+                {
+                alt5=2;
+                }
+                break;
+            case 29:
+                {
+                alt5=3;
+                }
+                break;
+            case 32:
+                {
+                alt5=4;
+                }
+                break;
+            default:
+                if (state.backtracking>0) {state.failed=true; return current;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 5, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt5) {
+                case 1 :
+                    // InternalFILTER.g:425:3: this_GSSFilterBoolVar_0= ruleGSSFilterBoolVar
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getGSSFilterAbstractBoolVarAccess().getGSSFilterBoolVarParserRuleCall_0());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_GSSFilterBoolVar_0=ruleGSSFilterBoolVar();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_GSSFilterBoolVar_0;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+                case 2 :
+                    // InternalFILTER.g:437:3: this_GSSFilterBoolVarFromArrayItem_1= ruleGSSFilterBoolVarFromArrayItem
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getGSSFilterAbstractBoolVarAccess().getGSSFilterBoolVarFromArrayItemParserRuleCall_1());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_GSSFilterBoolVarFromArrayItem_1=ruleGSSFilterBoolVarFromArrayItem();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_GSSFilterBoolVarFromArrayItem_1;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+                case 3 :
+                    // InternalFILTER.g:449:3: this_GSSFilterBoolVarFromGroupedArrayItem_2= ruleGSSFilterBoolVarFromGroupedArrayItem
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getGSSFilterAbstractBoolVarAccess().getGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_2());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_GSSFilterBoolVarFromGroupedArrayItem_2=ruleGSSFilterBoolVarFromGroupedArrayItem();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_GSSFilterBoolVarFromGroupedArrayItem_2;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+                case 4 :
+                    // InternalFILTER.g:461:3: this_GSSFilterBoolVarFDIC_3= ruleGSSFilterBoolVarFDIC
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getGSSFilterAbstractBoolVarAccess().getGSSFilterBoolVarFDICParserRuleCall_3());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_GSSFilterBoolVarFDIC_3=ruleGSSFilterBoolVarFDIC();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_GSSFilterBoolVarFDIC_3;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+
+              	leaveRule();
+
+            }
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleGSSFilterAbstractBoolVar"
+
+
     // $ANTLR start "entryRuleGSSFilterMintermFilter"
-    // InternalFILTER.g:525:1: entryRuleGSSFilterMintermFilter returns [EObject current=null] : iv_ruleGSSFilterMintermFilter= ruleGSSFilterMintermFilter EOF ;
+    // InternalFILTER.g:476:1: entryRuleGSSFilterMintermFilter returns [EObject current=null] : iv_ruleGSSFilterMintermFilter= ruleGSSFilterMintermFilter EOF ;
     public final EObject entryRuleGSSFilterMintermFilter() throws RecognitionException {
         EObject current = null;
 
         EObject iv_ruleGSSFilterMintermFilter = null;
 
 
-
-        	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-        	grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3()
-        	);
-
         try {
-            // InternalFILTER.g:529:2: (iv_ruleGSSFilterMintermFilter= ruleGSSFilterMintermFilter EOF )
-            // InternalFILTER.g:530:2: iv_ruleGSSFilterMintermFilter= ruleGSSFilterMintermFilter EOF
+            // InternalFILTER.g:476:63: (iv_ruleGSSFilterMintermFilter= ruleGSSFilterMintermFilter EOF )
+            // InternalFILTER.g:477:2: iv_ruleGSSFilterMintermFilter= ruleGSSFilterMintermFilter EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterMintermFilterRule()); 
@@ -1382,9 +1298,6 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                 appendSkippedTokens();
             }
         finally {
-
-            	myUnorderedGroupState.restore();
-
         }
         return current;
     }
@@ -1392,51 +1305,42 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterMintermFilter"
-    // InternalFILTER.g:539:1: ruleGSSFilterMintermFilter returns [EObject current=null] : (otherlv_0= 'GSSFilterMintermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) ) ( (lv_Minterm_20_0= ruleGSSFilterMinterm ) )+ otherlv_21= '}' otherlv_22= ';' ) ;
+    // InternalFILTER.g:483:1: ruleGSSFilterMintermFilter returns [EObject current=null] : (otherlv_0= 'GSSFilterMintermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' otherlv_11= 'formatFile' otherlv_12= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_14= ';' ( (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar ) )+ ( (lv_Minterm_16_0= ruleGSSFilterMinterm ) )+ otherlv_17= '}' otherlv_18= ';' ) ;
     public final EObject ruleGSSFilterMintermFilter() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_name_1_0=null;
         Token otherlv_2=null;
+        Token otherlv_3=null;
         Token otherlv_4=null;
-        Token otherlv_5=null;
+        Token otherlv_6=null;
         Token otherlv_7=null;
         Token otherlv_8=null;
-        Token otherlv_9=null;
+        Token otherlv_10=null;
         Token otherlv_11=null;
         Token otherlv_12=null;
-        Token otherlv_13=null;
-        Token otherlv_15=null;
-        Token otherlv_21=null;
-        Token otherlv_22=null;
-        AntlrDatatypeRuleToken lv_uri_6_0 = null;
+        Token otherlv_14=null;
+        Token otherlv_17=null;
+        Token otherlv_18=null;
+        AntlrDatatypeRuleToken lv_uri_5_0 = null;
 
-        AntlrDatatypeRuleToken lv_version_10_0 = null;
+        AntlrDatatypeRuleToken lv_version_9_0 = null;
 
-        EObject lv_BoolVar_16_0 = null;
+        EObject lv_BoolVar_15_0 = null;
 
-        EObject lv_BoolVarFromArrayItem_17_0 = null;
-
-        EObject lv_BoolVarFromGroupedArrayItem_18_0 = null;
-
-        EObject lv_BoolVarFDIC_19_0 = null;
-
-        EObject lv_Minterm_20_0 = null;
+        EObject lv_Minterm_16_0 = null;
 
 
 
         	enterRule();
-        	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
-        	grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3()
-        	);
 
         try {
-            // InternalFILTER.g:548:2: ( (otherlv_0= 'GSSFilterMintermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) ) ( (lv_Minterm_20_0= ruleGSSFilterMinterm ) )+ otherlv_21= '}' otherlv_22= ';' ) )
-            // InternalFILTER.g:549:2: (otherlv_0= 'GSSFilterMintermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) ) ( (lv_Minterm_20_0= ruleGSSFilterMinterm ) )+ otherlv_21= '}' otherlv_22= ';' )
+            // InternalFILTER.g:489:2: ( (otherlv_0= 'GSSFilterMintermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' otherlv_11= 'formatFile' otherlv_12= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_14= ';' ( (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar ) )+ ( (lv_Minterm_16_0= ruleGSSFilterMinterm ) )+ otherlv_17= '}' otherlv_18= ';' ) )
+            // InternalFILTER.g:490:2: (otherlv_0= 'GSSFilterMintermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' otherlv_11= 'formatFile' otherlv_12= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_14= ';' ( (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar ) )+ ( (lv_Minterm_16_0= ruleGSSFilterMinterm ) )+ otherlv_17= '}' otherlv_18= ';' )
             {
-            // InternalFILTER.g:549:2: (otherlv_0= 'GSSFilterMintermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) ) ( (lv_Minterm_20_0= ruleGSSFilterMinterm ) )+ otherlv_21= '}' otherlv_22= ';' )
-            // InternalFILTER.g:550:3: otherlv_0= 'GSSFilterMintermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) ) ( (lv_Minterm_20_0= ruleGSSFilterMinterm ) )+ otherlv_21= '}' otherlv_22= ';'
+            // InternalFILTER.g:490:2: (otherlv_0= 'GSSFilterMintermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' otherlv_11= 'formatFile' otherlv_12= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_14= ';' ( (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar ) )+ ( (lv_Minterm_16_0= ruleGSSFilterMinterm ) )+ otherlv_17= '}' otherlv_18= ';' )
+            // InternalFILTER.g:491:3: otherlv_0= 'GSSFilterMintermFilter' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'uri' otherlv_4= ':=' ( (lv_uri_5_0= ruleQualifiedName ) ) otherlv_6= ';' otherlv_7= 'version' otherlv_8= ':=' ( (lv_version_9_0= ruleVersion ) ) otherlv_10= ';' otherlv_11= 'formatFile' otherlv_12= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_14= ';' ( (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar ) )+ ( (lv_Minterm_16_0= ruleGSSFilterMinterm ) )+ otherlv_17= '}' otherlv_18= ';'
             {
             otherlv_0=(Token)match(input,21,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1444,11 +1348,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterMintermFilterAccess().getGSSFilterMintermFilterKeyword_0());
               		
             }
-            // InternalFILTER.g:554:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalFILTER.g:555:4: (lv_name_1_0= RULE_ID )
+            // InternalFILTER.g:495:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalFILTER.g:496:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalFILTER.g:555:4: (lv_name_1_0= RULE_ID )
-            // InternalFILTER.g:556:5: lv_name_1_0= RULE_ID
+            // InternalFILTER.g:496:4: (lv_name_1_0= RULE_ID )
+            // InternalFILTER.g:497:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1480,480 +1384,270 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterMintermFilterAccess().getLeftCurlyBracketKeyword_2());
               		
             }
-            // InternalFILTER.g:576:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) ) )
-            // InternalFILTER.g:577:4: ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) )
+            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_3, grammarAccess.getGSSFilterMintermFilterAccess().getUriKeyword_3());
+              		
+            }
+            otherlv_4=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_4, grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_4());
+              		
+            }
+            // InternalFILTER.g:525:3: ( (lv_uri_5_0= ruleQualifiedName ) )
+            // InternalFILTER.g:526:4: (lv_uri_5_0= ruleQualifiedName )
             {
-            // InternalFILTER.g:577:4: ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?) )
-            // InternalFILTER.g:578:5: ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?)
+            // InternalFILTER.g:526:4: (lv_uri_5_0= ruleQualifiedName )
+            // InternalFILTER.g:527:5: lv_uri_5_0= ruleQualifiedName
             {
-            getUnorderedGroupHelper().enter(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3());
-            // InternalFILTER.g:581:5: ( ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?)
-            // InternalFILTER.g:582:6: ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+ {...}?
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getUriQualifiedNameParserRuleCall_5_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_6);
+            lv_uri_5_0=ruleQualifiedName();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getGSSFilterMintermFilterRule());
+              					}
+              					set(
+              						current,
+              						"uri",
+              						lv_uri_5_0,
+              						"es.uah.aut.srg.gss.lang.filter.FILTER.QualifiedName");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_6=(Token)match(input,14,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_6, grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_6());
+              		
+            }
+            otherlv_7=(Token)match(input,18,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_7, grammarAccess.getGSSFilterMintermFilterAccess().getVersionKeyword_7());
+              		
+            }
+            otherlv_8=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_8, grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_8());
+              		
+            }
+            // InternalFILTER.g:556:3: ( (lv_version_9_0= ruleVersion ) )
+            // InternalFILTER.g:557:4: (lv_version_9_0= ruleVersion )
             {
-            // InternalFILTER.g:582:6: ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )+
-            int cnt7=0;
-            loop7:
+            // InternalFILTER.g:557:4: (lv_version_9_0= ruleVersion )
+            // InternalFILTER.g:558:5: lv_version_9_0= ruleVersion
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getVersionVersionParserRuleCall_9_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_6);
+            lv_version_9_0=ruleVersion();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getGSSFilterMintermFilterRule());
+              					}
+              					set(
+              						current,
+              						"version",
+              						lv_version_9_0,
+              						"es.uah.aut.srg.gss.lang.filter.FILTER.Version");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_10=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_10, grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_10());
+              		
+            }
+            otherlv_11=(Token)match(input,19,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_11, grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileKeyword_11());
+              		
+            }
+            otherlv_12=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_12, grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_12());
+              		
+            }
+            // InternalFILTER.g:587:3: ( ( ruleVersionedQualifiedName ) )
+            // InternalFILTER.g:588:4: ( ruleVersionedQualifiedName )
+            {
+            // InternalFILTER.g:588:4: ( ruleVersionedQualifiedName )
+            // InternalFILTER.g:589:5: ruleVersionedQualifiedName
+            {
+            if ( state.backtracking==0 ) {
+
+              					/* */
+              				
+            }
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElement(grammarAccess.getGSSFilterMintermFilterRule());
+              					}
+              				
+            }
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSFormatFormatCrossReference_13_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_6);
+            ruleVersionedQualifiedName();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_14=(Token)match(input,14,FollowSets000.FOLLOW_13); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_14, grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_14());
+              		
+            }
+            // InternalFILTER.g:610:3: ( (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar ) )+
+            int cnt6=0;
+            loop6:
             do {
-                int alt7=3;
-                int LA7_0 = input.LA(1);
+                int alt6=2;
+                int LA6_0 = input.LA(1);
 
-                if ( LA7_0 == 17 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0) ) {
-                    alt7=1;
-                }
-                else if ( LA7_0 == 18 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 1) ) {
-                    alt7=2;
+                if ( (LA6_0==22||LA6_0==27||LA6_0==29||LA6_0==32) ) {
+                    alt6=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt6) {
             	case 1 :
-            	    // InternalFILTER.g:583:4: ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) )
+            	    // InternalFILTER.g:611:4: (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar )
             	    {
-            	    // InternalFILTER.g:583:4: ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) )
-            	    // InternalFILTER.g:584:5: {...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) )
-            	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleGSSFilterMintermFilter", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0)");
-            	    }
-            	    // InternalFILTER.g:584:119: ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) )
-            	    // InternalFILTER.g:585:6: ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) )
-            	    {
-            	    getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0);
-            	    // InternalFILTER.g:588:9: ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) )
-            	    // InternalFILTER.g:588:10: {...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' )
-            	    {
-            	    if ( !((true)) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleGSSFilterMintermFilter", "true");
-            	    }
-            	    // InternalFILTER.g:588:19: (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' )
-            	    // InternalFILTER.g:588:20: otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';'
-            	    {
-            	    otherlv_4=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_4, grammarAccess.getGSSFilterMintermFilterAccess().getUriKeyword_3_0_0());
-            	      								
-            	    }
-            	    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_5, grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_3_0_1());
-            	      								
-            	    }
-            	    // InternalFILTER.g:596:9: ( (lv_uri_6_0= ruleQualifiedName ) )
-            	    // InternalFILTER.g:597:10: (lv_uri_6_0= ruleQualifiedName )
-            	    {
-            	    // InternalFILTER.g:597:10: (lv_uri_6_0= ruleQualifiedName )
-            	    // InternalFILTER.g:598:11: lv_uri_6_0= ruleQualifiedName
+            	    // InternalFILTER.g:611:4: (lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar )
+            	    // InternalFILTER.g:612:5: lv_BoolVar_15_0= ruleGSSFilterAbstractBoolVar
             	    {
             	    if ( state.backtracking==0 ) {
 
-            	      											newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getUriQualifiedNameParserRuleCall_3_0_2_0());
-            	      										
+            	      					newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarGSSFilterAbstractBoolVarParserRuleCall_15_0());
+            	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_6);
-            	    lv_uri_6_0=ruleQualifiedName();
+            	    pushFollow(FollowSets000.FOLLOW_16);
+            	    lv_BoolVar_15_0=ruleGSSFilterAbstractBoolVar();
 
             	    state._fsp--;
             	    if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      											if (current==null) {
-            	      												current = createModelElementForParent(grammarAccess.getGSSFilterMintermFilterRule());
-            	      											}
-            	      											set(
-            	      												current,
-            	      												"uri",
-            	      												lv_uri_6_0,
-            	      												"es.uah.aut.srg.gss.lang.filter.FILTER.QualifiedName");
-            	      											afterParserOrEnumRuleCall();
-            	      										
+            	      					if (current==null) {
+            	      						current = createModelElementForParent(grammarAccess.getGSSFilterMintermFilterRule());
+            	      					}
+            	      					add(
+            	      						current,
+            	      						"BoolVar",
+            	      						lv_BoolVar_15_0,
+            	      						"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterAbstractBoolVar");
+            	      					afterParserOrEnumRuleCall();
+            	      				
             	    }
-
-            	    }
-
-
-            	    }
-
-            	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_16); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_7, grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_3_0_3());
-            	      								
-            	    }
-
-            	    }
-
-
-            	    }
-
-            	    getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3());
-
-            	    }
-
 
             	    }
 
 
             	    }
             	    break;
-            	case 2 :
-            	    // InternalFILTER.g:625:4: ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) )
-            	    {
-            	    // InternalFILTER.g:625:4: ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) )
-            	    // InternalFILTER.g:626:5: {...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) )
-            	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 1) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleGSSFilterMintermFilter", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 1)");
-            	    }
-            	    // InternalFILTER.g:626:119: ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) )
-            	    // InternalFILTER.g:627:6: ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) )
-            	    {
-            	    getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 1);
-            	    // InternalFILTER.g:630:9: ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) )
-            	    // InternalFILTER.g:630:10: {...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ )
-            	    {
-            	    if ( !((true)) ) {
-            	        if (state.backtracking>0) {state.failed=true; return current;}
-            	        throw new FailedPredicateException(input, "ruleGSSFilterMintermFilter", "true");
-            	    }
-            	    // InternalFILTER.g:630:19: ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ )
-            	    // InternalFILTER.g:630:20: (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+
-            	    {
-            	    // InternalFILTER.g:630:20: (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' )
-            	    // InternalFILTER.g:631:10: otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';'
-            	    {
-            	    otherlv_8=(Token)match(input,18,FollowSets000.FOLLOW_4); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
 
-            	      										newLeafNode(otherlv_8, grammarAccess.getGSSFilterMintermFilterAccess().getVersionKeyword_3_1_0_0());
-            	      									
-            	    }
-            	    otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
+            	default :
+            	    if ( cnt6 >= 1 ) break loop6;
+            	    if (state.backtracking>0) {state.failed=true; return current;}
+                        EarlyExitException eee =
+                            new EarlyExitException(6, input);
+                        throw eee;
+                }
+                cnt6++;
+            } while (true);
 
-            	      										newLeafNode(otherlv_9, grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_3_1_0_1());
-            	      									
-            	    }
-            	    // InternalFILTER.g:639:10: ( (lv_version_10_0= ruleVersion ) )
-            	    // InternalFILTER.g:640:11: (lv_version_10_0= ruleVersion )
+            // InternalFILTER.g:629:3: ( (lv_Minterm_16_0= ruleGSSFilterMinterm ) )+
+            int cnt7=0;
+            loop7:
+            do {
+                int alt7=2;
+                int LA7_0 = input.LA(1);
+
+                if ( (LA7_0==47) ) {
+                    alt7=1;
+                }
+
+
+                switch (alt7) {
+            	case 1 :
+            	    // InternalFILTER.g:630:4: (lv_Minterm_16_0= ruleGSSFilterMinterm )
             	    {
-            	    // InternalFILTER.g:640:11: (lv_version_10_0= ruleVersion )
-            	    // InternalFILTER.g:641:12: lv_version_10_0= ruleVersion
+            	    // InternalFILTER.g:630:4: (lv_Minterm_16_0= ruleGSSFilterMinterm )
+            	    // InternalFILTER.g:631:5: lv_Minterm_16_0= ruleGSSFilterMinterm
             	    {
             	    if ( state.backtracking==0 ) {
 
-            	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getVersionVersionParserRuleCall_3_1_0_2_0());
-            	      											
+            	      					newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getMintermGSSFilterMintermParserRuleCall_16_0());
+            	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_6);
-            	    lv_version_10_0=ruleVersion();
+            	    pushFollow(FollowSets000.FOLLOW_17);
+            	    lv_Minterm_16_0=ruleGSSFilterMinterm();
 
             	    state._fsp--;
             	    if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      												if (current==null) {
-            	      													current = createModelElementForParent(grammarAccess.getGSSFilterMintermFilterRule());
-            	      												}
-            	      												set(
-            	      													current,
-            	      													"version",
-            	      													lv_version_10_0,
-            	      													"es.uah.aut.srg.gss.lang.filter.FILTER.Version");
-            	      												afterParserOrEnumRuleCall();
-            	      											
+            	      					if (current==null) {
+            	      						current = createModelElementForParent(grammarAccess.getGSSFilterMintermFilterRule());
+            	      					}
+            	      					add(
+            	      						current,
+            	      						"Minterm",
+            	      						lv_Minterm_16_0,
+            	      						"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterMinterm");
+            	      					afterParserOrEnumRuleCall();
+            	      				
             	    }
-
-            	    }
-
-
-            	    }
-
-            	    otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      										newLeafNode(otherlv_11, grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_3_1_0_3());
-            	      									
-            	    }
-
-            	    }
-
-            	    otherlv_12=(Token)match(input,19,FollowSets000.FOLLOW_4); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_12, grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileKeyword_3_1_1());
-            	      								
-            	    }
-            	    otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_13, grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_3_1_2());
-            	      								
-            	    }
-            	    // InternalFILTER.g:671:9: ( ( ruleVersionedQualifiedName ) )
-            	    // InternalFILTER.g:672:10: ( ruleVersionedQualifiedName )
-            	    {
-            	    // InternalFILTER.g:672:10: ( ruleVersionedQualifiedName )
-            	    // InternalFILTER.g:673:11: ruleVersionedQualifiedName
-            	    {
-            	    if ( state.backtracking==0 ) {
-
-            	      											/* */
-            	      										
-            	    }
-            	    if ( state.backtracking==0 ) {
-
-            	      											if (current==null) {
-            	      												current = createModelElement(grammarAccess.getGSSFilterMintermFilterRule());
-            	      											}
-            	      										
-            	    }
-            	    if ( state.backtracking==0 ) {
-
-            	      											newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSFormatFormatCrossReference_3_1_3_0());
-            	      										
-            	    }
-            	    pushFollow(FollowSets000.FOLLOW_6);
-            	    ruleVersionedQualifiedName();
-
-            	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      											afterParserOrEnumRuleCall();
-            	      										
-            	    }
-
-            	    }
-
-
-            	    }
-
-            	    otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_13); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      									newLeafNode(otherlv_15, grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_3_1_4());
-            	      								
-            	    }
-            	    // InternalFILTER.g:694:9: ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+
-            	    int cnt6=0;
-            	    loop6:
-            	    do {
-            	        int alt6=5;
-            	        switch ( input.LA(1) ) {
-            	        case 22:
-            	            {
-            	            alt6=1;
-            	            }
-            	            break;
-            	        case 27:
-            	            {
-            	            alt6=2;
-            	            }
-            	            break;
-            	        case 29:
-            	            {
-            	            alt6=3;
-            	            }
-            	            break;
-            	        case 32:
-            	            {
-            	            alt6=4;
-            	            }
-            	            break;
-
-            	        }
-
-            	        switch (alt6) {
-            	    	case 1 :
-            	    	    // InternalFILTER.g:695:10: ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) )
-            	    	    {
-            	    	    // InternalFILTER.g:695:10: ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) )
-            	    	    // InternalFILTER.g:696:11: (lv_BoolVar_16_0= ruleGSSFilterBoolVar )
-            	    	    {
-            	    	    // InternalFILTER.g:696:11: (lv_BoolVar_16_0= ruleGSSFilterBoolVar )
-            	    	    // InternalFILTER.g:697:12: lv_BoolVar_16_0= ruleGSSFilterBoolVar
-            	    	    {
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0());
-            	    	      											
-            	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_17);
-            	    	    lv_BoolVar_16_0=ruleGSSFilterBoolVar();
-
-            	    	    state._fsp--;
-            	    	    if (state.failed) return current;
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												if (current==null) {
-            	    	      													current = createModelElementForParent(grammarAccess.getGSSFilterMintermFilterRule());
-            	    	      												}
-            	    	      												add(
-            	    	      													current,
-            	    	      													"BoolVar",
-            	    	      													lv_BoolVar_16_0,
-            	    	      													"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterBoolVar");
-            	    	      												afterParserOrEnumRuleCall();
-            	    	      											
-            	    	    }
-
-            	    	    }
-
-
-            	    	    }
-
-
-            	    	    }
-            	    	    break;
-            	    	case 2 :
-            	    	    // InternalFILTER.g:715:10: ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) )
-            	    	    {
-            	    	    // InternalFILTER.g:715:10: ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) )
-            	    	    // InternalFILTER.g:716:11: (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem )
-            	    	    {
-            	    	    // InternalFILTER.g:716:11: (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem )
-            	    	    // InternalFILTER.g:717:12: lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem
-            	    	    {
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0());
-            	    	      											
-            	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_17);
-            	    	    lv_BoolVarFromArrayItem_17_0=ruleGSSFilterBoolVarFromArrayItem();
-
-            	    	    state._fsp--;
-            	    	    if (state.failed) return current;
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												if (current==null) {
-            	    	      													current = createModelElementForParent(grammarAccess.getGSSFilterMintermFilterRule());
-            	    	      												}
-            	    	      												add(
-            	    	      													current,
-            	    	      													"BoolVarFromArrayItem",
-            	    	      													lv_BoolVarFromArrayItem_17_0,
-            	    	      													"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterBoolVarFromArrayItem");
-            	    	      												afterParserOrEnumRuleCall();
-            	    	      											
-            	    	    }
-
-            	    	    }
-
-
-            	    	    }
-
-
-            	    	    }
-            	    	    break;
-            	    	case 3 :
-            	    	    // InternalFILTER.g:735:10: ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) )
-            	    	    {
-            	    	    // InternalFILTER.g:735:10: ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) )
-            	    	    // InternalFILTER.g:736:11: (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem )
-            	    	    {
-            	    	    // InternalFILTER.g:736:11: (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem )
-            	    	    // InternalFILTER.g:737:12: lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem
-            	    	    {
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0());
-            	    	      											
-            	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_17);
-            	    	    lv_BoolVarFromGroupedArrayItem_18_0=ruleGSSFilterBoolVarFromGroupedArrayItem();
-
-            	    	    state._fsp--;
-            	    	    if (state.failed) return current;
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												if (current==null) {
-            	    	      													current = createModelElementForParent(grammarAccess.getGSSFilterMintermFilterRule());
-            	    	      												}
-            	    	      												add(
-            	    	      													current,
-            	    	      													"BoolVarFromGroupedArrayItem",
-            	    	      													lv_BoolVarFromGroupedArrayItem_18_0,
-            	    	      													"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterBoolVarFromGroupedArrayItem");
-            	    	      												afterParserOrEnumRuleCall();
-            	    	      											
-            	    	    }
-
-            	    	    }
-
-
-            	    	    }
-
-
-            	    	    }
-            	    	    break;
-            	    	case 4 :
-            	    	    // InternalFILTER.g:755:10: ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) )
-            	    	    {
-            	    	    // InternalFILTER.g:755:10: ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) )
-            	    	    // InternalFILTER.g:756:11: (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC )
-            	    	    {
-            	    	    // InternalFILTER.g:756:11: (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC )
-            	    	    // InternalFILTER.g:757:12: lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC
-            	    	    {
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0());
-            	    	      											
-            	    	    }
-            	    	    pushFollow(FollowSets000.FOLLOW_17);
-            	    	    lv_BoolVarFDIC_19_0=ruleGSSFilterBoolVarFDIC();
-
-            	    	    state._fsp--;
-            	    	    if (state.failed) return current;
-            	    	    if ( state.backtracking==0 ) {
-
-            	    	      												if (current==null) {
-            	    	      													current = createModelElementForParent(grammarAccess.getGSSFilterMintermFilterRule());
-            	    	      												}
-            	    	      												add(
-            	    	      													current,
-            	    	      													"BoolVarFDIC",
-            	    	      													lv_BoolVarFDIC_19_0,
-            	    	      													"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterBoolVarFDIC");
-            	    	      												afterParserOrEnumRuleCall();
-            	    	      											
-            	    	    }
-
-            	    	    }
-
-
-            	    	    }
-
-
-            	    	    }
-            	    	    break;
-
-            	    	default :
-            	    	    if ( cnt6 >= 1 ) break loop6;
-            	    	    if (state.backtracking>0) {state.failed=true; return current;}
-            	                EarlyExitException eee =
-            	                    new EarlyExitException(6, input);
-            	                throw eee;
-            	        }
-            	        cnt6++;
-            	    } while (true);
-
-
-            	    }
-
-
-            	    }
-
-            	    getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3());
-
-            	    }
-
 
             	    }
 
@@ -1971,89 +1665,16 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                 cnt7++;
             } while (true);
 
-            if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3()) ) {
-                if (state.backtracking>0) {state.failed=true; return current;}
-                throw new FailedPredicateException(input, "ruleGSSFilterMintermFilter", "getUnorderedGroupHelper().canLeave(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3())");
-            }
-
-            }
-
-
-            }
-
-            getUnorderedGroupHelper().leave(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3());
-
-            }
-
-            // InternalFILTER.g:789:3: ( (lv_Minterm_20_0= ruleGSSFilterMinterm ) )+
-            int cnt8=0;
-            loop8:
-            do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
-
-                if ( (LA8_0==47) ) {
-                    alt8=1;
-                }
-
-
-                switch (alt8) {
-            	case 1 :
-            	    // InternalFILTER.g:790:4: (lv_Minterm_20_0= ruleGSSFilterMinterm )
-            	    {
-            	    // InternalFILTER.g:790:4: (lv_Minterm_20_0= ruleGSSFilterMinterm )
-            	    // InternalFILTER.g:791:5: lv_Minterm_20_0= ruleGSSFilterMinterm
-            	    {
-            	    if ( state.backtracking==0 ) {
-
-            	      					newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getMintermGSSFilterMintermParserRuleCall_4_0());
-            	      				
-            	    }
-            	    pushFollow(FollowSets000.FOLLOW_18);
-            	    lv_Minterm_20_0=ruleGSSFilterMinterm();
-
-            	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      					if (current==null) {
-            	      						current = createModelElementForParent(grammarAccess.getGSSFilterMintermFilterRule());
-            	      					}
-            	      					add(
-            	      						current,
-            	      						"Minterm",
-            	      						lv_Minterm_20_0,
-            	      						"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterMinterm");
-            	      					afterParserOrEnumRuleCall();
-            	      				
-            	    }
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt8 >= 1 ) break loop8;
-            	    if (state.backtracking>0) {state.failed=true; return current;}
-                        EarlyExitException eee =
-                            new EarlyExitException(8, input);
-                        throw eee;
-                }
-                cnt8++;
-            } while (true);
-
-            otherlv_21=(Token)match(input,20,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            otherlv_17=(Token)match(input,20,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_21, grammarAccess.getGSSFilterMintermFilterAccess().getRightCurlyBracketKeyword_5());
+              			newLeafNode(otherlv_17, grammarAccess.getGSSFilterMintermFilterAccess().getRightCurlyBracketKeyword_17());
               		
             }
-            otherlv_22=(Token)match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_18=(Token)match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_22, grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_6());
+              			newLeafNode(otherlv_18, grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_18());
               		
             }
 
@@ -2074,9 +1695,6 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                 appendSkippedTokens();
             }
         finally {
-
-            	myUnorderedGroupState.restore();
-
         }
         return current;
     }
@@ -2084,7 +1702,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSFilterBoolVar"
-    // InternalFILTER.g:823:1: entryRuleGSSFilterBoolVar returns [EObject current=null] : iv_ruleGSSFilterBoolVar= ruleGSSFilterBoolVar EOF ;
+    // InternalFILTER.g:660:1: entryRuleGSSFilterBoolVar returns [EObject current=null] : iv_ruleGSSFilterBoolVar= ruleGSSFilterBoolVar EOF ;
     public final EObject entryRuleGSSFilterBoolVar() throws RecognitionException {
         EObject current = null;
 
@@ -2092,8 +1710,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:823:57: (iv_ruleGSSFilterBoolVar= ruleGSSFilterBoolVar EOF )
-            // InternalFILTER.g:824:2: iv_ruleGSSFilterBoolVar= ruleGSSFilterBoolVar EOF
+            // InternalFILTER.g:660:57: (iv_ruleGSSFilterBoolVar= ruleGSSFilterBoolVar EOF )
+            // InternalFILTER.g:661:2: iv_ruleGSSFilterBoolVar= ruleGSSFilterBoolVar EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterBoolVarRule()); 
@@ -2124,7 +1742,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterBoolVar"
-    // InternalFILTER.g:830:1: ruleGSSFilterBoolVar returns [EObject current=null] : (otherlv_0= 'GSSFilterBoolVar' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'FieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( (lv_Value_19_0= ruleGSSFilterValue ) ) otherlv_20= '}' otherlv_21= ';' ) ;
+    // InternalFILTER.g:667:1: ruleGSSFilterBoolVar returns [EObject current=null] : (otherlv_0= 'GSSFilterBoolVar' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'FieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( (lv_Value_19_0= ruleGSSFilterValue ) ) otherlv_20= '}' otherlv_21= ';' ) ;
     public final EObject ruleGSSFilterBoolVar() throws RecognitionException {
         EObject current = null;
 
@@ -2158,11 +1776,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:836:2: ( (otherlv_0= 'GSSFilterBoolVar' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'FieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( (lv_Value_19_0= ruleGSSFilterValue ) ) otherlv_20= '}' otherlv_21= ';' ) )
-            // InternalFILTER.g:837:2: (otherlv_0= 'GSSFilterBoolVar' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'FieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( (lv_Value_19_0= ruleGSSFilterValue ) ) otherlv_20= '}' otherlv_21= ';' )
+            // InternalFILTER.g:673:2: ( (otherlv_0= 'GSSFilterBoolVar' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'FieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( (lv_Value_19_0= ruleGSSFilterValue ) ) otherlv_20= '}' otherlv_21= ';' ) )
+            // InternalFILTER.g:674:2: (otherlv_0= 'GSSFilterBoolVar' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'FieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( (lv_Value_19_0= ruleGSSFilterValue ) ) otherlv_20= '}' otherlv_21= ';' )
             {
-            // InternalFILTER.g:837:2: (otherlv_0= 'GSSFilterBoolVar' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'FieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( (lv_Value_19_0= ruleGSSFilterValue ) ) otherlv_20= '}' otherlv_21= ';' )
-            // InternalFILTER.g:838:3: otherlv_0= 'GSSFilterBoolVar' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'FieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( (lv_Value_19_0= ruleGSSFilterValue ) ) otherlv_20= '}' otherlv_21= ';'
+            // InternalFILTER.g:674:2: (otherlv_0= 'GSSFilterBoolVar' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'FieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( (lv_Value_19_0= ruleGSSFilterValue ) ) otherlv_20= '}' otherlv_21= ';' )
+            // InternalFILTER.g:675:3: otherlv_0= 'GSSFilterBoolVar' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'FieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( (lv_Value_19_0= ruleGSSFilterValue ) ) otherlv_20= '}' otherlv_21= ';'
             {
             otherlv_0=(Token)match(input,22,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2170,7 +1788,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterBoolVarAccess().getGSSFilterBoolVarKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterBoolVarAccess().getLeftCurlyBracketKeyword_1());
@@ -2182,17 +1800,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterBoolVarAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterBoolVarAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalFILTER.g:854:3: ( (lv_id_4_0= ruleINTEGER ) )
-            // InternalFILTER.g:855:4: (lv_id_4_0= ruleINTEGER )
+            // InternalFILTER.g:691:3: ( (lv_id_4_0= ruleINTEGER ) )
+            // InternalFILTER.g:692:4: (lv_id_4_0= ruleINTEGER )
             {
-            // InternalFILTER.g:855:4: (lv_id_4_0= ruleINTEGER )
-            // InternalFILTER.g:856:5: lv_id_4_0= ruleINTEGER
+            // InternalFILTER.g:692:4: (lv_id_4_0= ruleINTEGER )
+            // InternalFILTER.g:693:5: lv_id_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -2223,7 +1841,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_5());
@@ -2241,11 +1859,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSFilterBoolVarAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalFILTER.g:885:3: ( (lv_name_8_0= RULE_ID ) )
-            // InternalFILTER.g:886:4: (lv_name_8_0= RULE_ID )
+            // InternalFILTER.g:722:3: ( (lv_name_8_0= RULE_ID ) )
+            // InternalFILTER.g:723:4: (lv_name_8_0= RULE_ID )
             {
-            // InternalFILTER.g:886:4: (lv_name_8_0= RULE_ID )
-            // InternalFILTER.g:887:5: lv_name_8_0= RULE_ID
+            // InternalFILTER.g:723:4: (lv_name_8_0= RULE_ID )
+            // InternalFILTER.g:724:5: lv_name_8_0= RULE_ID
             {
             lv_name_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2271,7 +1889,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_22); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_9());
@@ -2283,17 +1901,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSFilterBoolVarAccess().getConstantTypeKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_23); if (state.failed) return current;
+            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_22); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSFilterBoolVarAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalFILTER.g:915:3: ( (lv_constantType_12_0= ruleGSSFilterConstantType ) )
-            // InternalFILTER.g:916:4: (lv_constantType_12_0= ruleGSSFilterConstantType )
+            // InternalFILTER.g:752:3: ( (lv_constantType_12_0= ruleGSSFilterConstantType ) )
+            // InternalFILTER.g:753:4: (lv_constantType_12_0= ruleGSSFilterConstantType )
             {
-            // InternalFILTER.g:916:4: (lv_constantType_12_0= ruleGSSFilterConstantType )
-            // InternalFILTER.g:917:5: lv_constantType_12_0= ruleGSSFilterConstantType
+            // InternalFILTER.g:753:4: (lv_constantType_12_0= ruleGSSFilterConstantType )
+            // InternalFILTER.g:754:5: lv_constantType_12_0= ruleGSSFilterConstantType
             {
             if ( state.backtracking==0 ) {
 
@@ -2324,7 +1942,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_24); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_23); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_13());
@@ -2342,11 +1960,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_15, grammarAccess.getGSSFilterBoolVarAccess().getColonEqualsSignKeyword_15());
               		
             }
-            // InternalFILTER.g:946:3: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalFILTER.g:947:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalFILTER.g:783:3: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalFILTER.g:784:4: ( ruleVersionedQualifiedReferenceName )
             {
-            // InternalFILTER.g:947:4: ( ruleVersionedQualifiedReferenceName )
-            // InternalFILTER.g:948:5: ruleVersionedQualifiedReferenceName
+            // InternalFILTER.g:784:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalFILTER.g:785:5: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
 
@@ -2381,24 +1999,24 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_25); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_24); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSFilterBoolVarAccess().getSemicolonKeyword_17());
               		
             }
-            // InternalFILTER.g:969:3: ( (lv_Op_18_0= ruleGSSFilterFieldOp ) )
-            // InternalFILTER.g:970:4: (lv_Op_18_0= ruleGSSFilterFieldOp )
+            // InternalFILTER.g:806:3: ( (lv_Op_18_0= ruleGSSFilterFieldOp ) )
+            // InternalFILTER.g:807:4: (lv_Op_18_0= ruleGSSFilterFieldOp )
             {
-            // InternalFILTER.g:970:4: (lv_Op_18_0= ruleGSSFilterFieldOp )
-            // InternalFILTER.g:971:5: lv_Op_18_0= ruleGSSFilterFieldOp
+            // InternalFILTER.g:807:4: (lv_Op_18_0= ruleGSSFilterFieldOp )
+            // InternalFILTER.g:808:5: lv_Op_18_0= ruleGSSFilterFieldOp
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getOpGSSFilterFieldOpParserRuleCall_18_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_25);
             lv_Op_18_0=ruleGSSFilterFieldOp();
 
             state._fsp--;
@@ -2422,18 +2040,18 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFILTER.g:988:3: ( (lv_Value_19_0= ruleGSSFilterValue ) )
-            // InternalFILTER.g:989:4: (lv_Value_19_0= ruleGSSFilterValue )
+            // InternalFILTER.g:825:3: ( (lv_Value_19_0= ruleGSSFilterValue ) )
+            // InternalFILTER.g:826:4: (lv_Value_19_0= ruleGSSFilterValue )
             {
-            // InternalFILTER.g:989:4: (lv_Value_19_0= ruleGSSFilterValue )
-            // InternalFILTER.g:990:5: lv_Value_19_0= ruleGSSFilterValue
+            // InternalFILTER.g:826:4: (lv_Value_19_0= ruleGSSFilterValue )
+            // InternalFILTER.g:827:5: lv_Value_19_0= ruleGSSFilterValue
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getValueGSSFilterValueParserRuleCall_19_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_27);
+            pushFollow(FollowSets000.FOLLOW_26);
             lv_Value_19_0=ruleGSSFilterValue();
 
             state._fsp--;
@@ -2493,199 +2111,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleGSSFilterBoolVar"
 
 
-    // $ANTLR start "entryRuleGSSFilterValue"
-    // InternalFILTER.g:1019:1: entryRuleGSSFilterValue returns [EObject current=null] : iv_ruleGSSFilterValue= ruleGSSFilterValue EOF ;
-    public final EObject entryRuleGSSFilterValue() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleGSSFilterValue = null;
-
-
-        try {
-            // InternalFILTER.g:1019:55: (iv_ruleGSSFilterValue= ruleGSSFilterValue EOF )
-            // InternalFILTER.g:1020:2: iv_ruleGSSFilterValue= ruleGSSFilterValue EOF
-            {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getGSSFilterValueRule()); 
-            }
-            pushFollow(FollowSets000.FOLLOW_1);
-            iv_ruleGSSFilterValue=ruleGSSFilterValue();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleGSSFilterValue; 
-            }
-            match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return current;
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleGSSFilterValue"
-
-
-    // $ANTLR start "ruleGSSFilterValue"
-    // InternalFILTER.g:1026:1: ruleGSSFilterValue returns [EObject current=null] : (this_GSSFilterConstant_0= ruleGSSFilterConstant | this_GSSFilterSelect_1= ruleGSSFilterSelect | this_GSSFilterSelectLine_2= ruleGSSFilterSelectLine ) ;
-    public final EObject ruleGSSFilterValue() throws RecognitionException {
-        EObject current = null;
-
-        EObject this_GSSFilterConstant_0 = null;
-
-        EObject this_GSSFilterSelect_1 = null;
-
-        EObject this_GSSFilterSelectLine_2 = null;
-
-
-
-        	enterRule();
-
-        try {
-            // InternalFILTER.g:1032:2: ( (this_GSSFilterConstant_0= ruleGSSFilterConstant | this_GSSFilterSelect_1= ruleGSSFilterSelect | this_GSSFilterSelectLine_2= ruleGSSFilterSelectLine ) )
-            // InternalFILTER.g:1033:2: (this_GSSFilterConstant_0= ruleGSSFilterConstant | this_GSSFilterSelect_1= ruleGSSFilterSelect | this_GSSFilterSelectLine_2= ruleGSSFilterSelectLine )
-            {
-            // InternalFILTER.g:1033:2: (this_GSSFilterConstant_0= ruleGSSFilterConstant | this_GSSFilterSelect_1= ruleGSSFilterSelect | this_GSSFilterSelectLine_2= ruleGSSFilterSelectLine )
-            int alt9=3;
-            switch ( input.LA(1) ) {
-            case 35:
-                {
-                alt9=1;
-                }
-                break;
-            case 38:
-                {
-                alt9=2;
-                }
-                break;
-            case 42:
-                {
-                alt9=3;
-                }
-                break;
-            default:
-                if (state.backtracking>0) {state.failed=true; return current;}
-                NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
-
-                throw nvae;
-            }
-
-            switch (alt9) {
-                case 1 :
-                    // InternalFILTER.g:1034:3: this_GSSFilterConstant_0= ruleGSSFilterConstant
-                    {
-                    if ( state.backtracking==0 ) {
-
-                      			/* */
-                      		
-                    }
-                    if ( state.backtracking==0 ) {
-
-                      			newCompositeNode(grammarAccess.getGSSFilterValueAccess().getGSSFilterConstantParserRuleCall_0());
-                      		
-                    }
-                    pushFollow(FollowSets000.FOLLOW_2);
-                    this_GSSFilterConstant_0=ruleGSSFilterConstant();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      			current = this_GSSFilterConstant_0;
-                      			afterParserOrEnumRuleCall();
-                      		
-                    }
-
-                    }
-                    break;
-                case 2 :
-                    // InternalFILTER.g:1046:3: this_GSSFilterSelect_1= ruleGSSFilterSelect
-                    {
-                    if ( state.backtracking==0 ) {
-
-                      			/* */
-                      		
-                    }
-                    if ( state.backtracking==0 ) {
-
-                      			newCompositeNode(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectParserRuleCall_1());
-                      		
-                    }
-                    pushFollow(FollowSets000.FOLLOW_2);
-                    this_GSSFilterSelect_1=ruleGSSFilterSelect();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      			current = this_GSSFilterSelect_1;
-                      			afterParserOrEnumRuleCall();
-                      		
-                    }
-
-                    }
-                    break;
-                case 3 :
-                    // InternalFILTER.g:1058:3: this_GSSFilterSelectLine_2= ruleGSSFilterSelectLine
-                    {
-                    if ( state.backtracking==0 ) {
-
-                      			/* */
-                      		
-                    }
-                    if ( state.backtracking==0 ) {
-
-                      			newCompositeNode(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectLineParserRuleCall_2());
-                      		
-                    }
-                    pushFollow(FollowSets000.FOLLOW_2);
-                    this_GSSFilterSelectLine_2=ruleGSSFilterSelectLine();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      			current = this_GSSFilterSelectLine_2;
-                      			afterParserOrEnumRuleCall();
-                      		
-                    }
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleGSSFilterValue"
-
-
     // $ANTLR start "entryRuleGSSFilterBoolVarFromArrayItem"
-    // InternalFILTER.g:1073:1: entryRuleGSSFilterBoolVarFromArrayItem returns [EObject current=null] : iv_ruleGSSFilterBoolVarFromArrayItem= ruleGSSFilterBoolVarFromArrayItem EOF ;
+    // InternalFILTER.g:856:1: entryRuleGSSFilterBoolVarFromArrayItem returns [EObject current=null] : iv_ruleGSSFilterBoolVarFromArrayItem= ruleGSSFilterBoolVarFromArrayItem EOF ;
     public final EObject entryRuleGSSFilterBoolVarFromArrayItem() throws RecognitionException {
         EObject current = null;
 
@@ -2693,8 +2120,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:1073:70: (iv_ruleGSSFilterBoolVarFromArrayItem= ruleGSSFilterBoolVarFromArrayItem EOF )
-            // InternalFILTER.g:1074:2: iv_ruleGSSFilterBoolVarFromArrayItem= ruleGSSFilterBoolVarFromArrayItem EOF
+            // InternalFILTER.g:856:70: (iv_ruleGSSFilterBoolVarFromArrayItem= ruleGSSFilterBoolVarFromArrayItem EOF )
+            // InternalFILTER.g:857:2: iv_ruleGSSFilterBoolVarFromArrayItem= ruleGSSFilterBoolVarFromArrayItem EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemRule()); 
@@ -2725,7 +2152,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterBoolVarFromArrayItem"
-    // InternalFILTER.g:1080:1: ruleGSSFilterBoolVarFromArrayItem returns [EObject current=null] : (otherlv_0= 'GSSFilterBoolVarFromArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'AIFieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_19_0= ruleGSSFilterConstant ) ) | ( (lv_Select_20_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) ) ) otherlv_22= '}' otherlv_23= ';' ) ;
+    // InternalFILTER.g:863:1: ruleGSSFilterBoolVarFromArrayItem returns [EObject current=null] : (otherlv_0= 'GSSFilterBoolVarFromArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'AIFieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_19_0= ruleGSSFilterConstant ) ) | ( (lv_Select_20_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) ) ) otherlv_22= '}' otherlv_23= ';' ) ;
     public final EObject ruleGSSFilterBoolVarFromArrayItem() throws RecognitionException {
         EObject current = null;
 
@@ -2763,11 +2190,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:1086:2: ( (otherlv_0= 'GSSFilterBoolVarFromArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'AIFieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_19_0= ruleGSSFilterConstant ) ) | ( (lv_Select_20_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) ) ) otherlv_22= '}' otherlv_23= ';' ) )
-            // InternalFILTER.g:1087:2: (otherlv_0= 'GSSFilterBoolVarFromArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'AIFieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_19_0= ruleGSSFilterConstant ) ) | ( (lv_Select_20_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) ) ) otherlv_22= '}' otherlv_23= ';' )
+            // InternalFILTER.g:869:2: ( (otherlv_0= 'GSSFilterBoolVarFromArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'AIFieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_19_0= ruleGSSFilterConstant ) ) | ( (lv_Select_20_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) ) ) otherlv_22= '}' otherlv_23= ';' ) )
+            // InternalFILTER.g:870:2: (otherlv_0= 'GSSFilterBoolVarFromArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'AIFieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_19_0= ruleGSSFilterConstant ) ) | ( (lv_Select_20_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) ) ) otherlv_22= '}' otherlv_23= ';' )
             {
-            // InternalFILTER.g:1087:2: (otherlv_0= 'GSSFilterBoolVarFromArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'AIFieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_19_0= ruleGSSFilterConstant ) ) | ( (lv_Select_20_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) ) ) otherlv_22= '}' otherlv_23= ';' )
-            // InternalFILTER.g:1088:3: otherlv_0= 'GSSFilterBoolVarFromArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'AIFieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_19_0= ruleGSSFilterConstant ) ) | ( (lv_Select_20_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) ) ) otherlv_22= '}' otherlv_23= ';'
+            // InternalFILTER.g:870:2: (otherlv_0= 'GSSFilterBoolVarFromArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'AIFieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_19_0= ruleGSSFilterConstant ) ) | ( (lv_Select_20_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) ) ) otherlv_22= '}' otherlv_23= ';' )
+            // InternalFILTER.g:871:3: otherlv_0= 'GSSFilterBoolVarFromArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'AIFieldRef' otherlv_15= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_17= ';' ( (lv_Op_18_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_19_0= ruleGSSFilterConstant ) ) | ( (lv_Select_20_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) ) ) otherlv_22= '}' otherlv_23= ';'
             {
             otherlv_0=(Token)match(input,27,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2775,7 +2202,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getGSSFilterBoolVarFromArrayItemKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getLeftCurlyBracketKeyword_1());
@@ -2787,17 +2214,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalFILTER.g:1104:3: ( (lv_id_4_0= ruleINTEGER ) )
-            // InternalFILTER.g:1105:4: (lv_id_4_0= ruleINTEGER )
+            // InternalFILTER.g:887:3: ( (lv_id_4_0= ruleINTEGER ) )
+            // InternalFILTER.g:888:4: (lv_id_4_0= ruleINTEGER )
             {
-            // InternalFILTER.g:1105:4: (lv_id_4_0= ruleINTEGER )
-            // InternalFILTER.g:1106:5: lv_id_4_0= ruleINTEGER
+            // InternalFILTER.g:888:4: (lv_id_4_0= ruleINTEGER )
+            // InternalFILTER.g:889:5: lv_id_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -2828,7 +2255,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_5());
@@ -2846,11 +2273,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalFILTER.g:1135:3: ( (lv_name_8_0= RULE_ID ) )
-            // InternalFILTER.g:1136:4: (lv_name_8_0= RULE_ID )
+            // InternalFILTER.g:918:3: ( (lv_name_8_0= RULE_ID ) )
+            // InternalFILTER.g:919:4: (lv_name_8_0= RULE_ID )
             {
-            // InternalFILTER.g:1136:4: (lv_name_8_0= RULE_ID )
-            // InternalFILTER.g:1137:5: lv_name_8_0= RULE_ID
+            // InternalFILTER.g:919:4: (lv_name_8_0= RULE_ID )
+            // InternalFILTER.g:920:5: lv_name_8_0= RULE_ID
             {
             lv_name_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2876,7 +2303,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_22); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_9());
@@ -2888,17 +2315,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantTypeKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_23); if (state.failed) return current;
+            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_22); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalFILTER.g:1165:3: ( (lv_constantType_12_0= ruleGSSFilterConstantType ) )
-            // InternalFILTER.g:1166:4: (lv_constantType_12_0= ruleGSSFilterConstantType )
+            // InternalFILTER.g:948:3: ( (lv_constantType_12_0= ruleGSSFilterConstantType ) )
+            // InternalFILTER.g:949:4: (lv_constantType_12_0= ruleGSSFilterConstantType )
             {
-            // InternalFILTER.g:1166:4: (lv_constantType_12_0= ruleGSSFilterConstantType )
-            // InternalFILTER.g:1167:5: lv_constantType_12_0= ruleGSSFilterConstantType
+            // InternalFILTER.g:949:4: (lv_constantType_12_0= ruleGSSFilterConstantType )
+            // InternalFILTER.g:950:5: lv_constantType_12_0= ruleGSSFilterConstantType
             {
             if ( state.backtracking==0 ) {
 
@@ -2929,7 +2356,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_28); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_13());
@@ -2947,11 +2374,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_15, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getColonEqualsSignKeyword_15());
               		
             }
-            // InternalFILTER.g:1196:3: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalFILTER.g:1197:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalFILTER.g:979:3: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalFILTER.g:980:4: ( ruleVersionedQualifiedReferenceName )
             {
-            // InternalFILTER.g:1197:4: ( ruleVersionedQualifiedReferenceName )
-            // InternalFILTER.g:1198:5: ruleVersionedQualifiedReferenceName
+            // InternalFILTER.g:980:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalFILTER.g:981:5: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
 
@@ -2986,24 +2413,24 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_25); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_24); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_17());
               		
             }
-            // InternalFILTER.g:1219:3: ( (lv_Op_18_0= ruleGSSFilterFieldOp ) )
-            // InternalFILTER.g:1220:4: (lv_Op_18_0= ruleGSSFilterFieldOp )
+            // InternalFILTER.g:1002:3: ( (lv_Op_18_0= ruleGSSFilterFieldOp ) )
+            // InternalFILTER.g:1003:4: (lv_Op_18_0= ruleGSSFilterFieldOp )
             {
-            // InternalFILTER.g:1220:4: (lv_Op_18_0= ruleGSSFilterFieldOp )
-            // InternalFILTER.g:1221:5: lv_Op_18_0= ruleGSSFilterFieldOp
+            // InternalFILTER.g:1003:4: (lv_Op_18_0= ruleGSSFilterFieldOp )
+            // InternalFILTER.g:1004:5: lv_Op_18_0= ruleGSSFilterFieldOp
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_18_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_25);
             lv_Op_18_0=ruleGSSFilterFieldOp();
 
             state._fsp--;
@@ -3027,48 +2454,48 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFILTER.g:1238:3: ( ( (lv_Constant_19_0= ruleGSSFilterConstant ) ) | ( (lv_Select_20_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) ) )
-            int alt10=3;
+            // InternalFILTER.g:1021:3: ( ( (lv_Constant_19_0= ruleGSSFilterConstant ) ) | ( (lv_Select_20_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) ) )
+            int alt8=3;
             switch ( input.LA(1) ) {
             case 35:
                 {
-                alt10=1;
+                alt8=1;
                 }
                 break;
             case 38:
                 {
-                alt10=2;
+                alt8=2;
                 }
                 break;
             case 42:
                 {
-                alt10=3;
+                alt8=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 10, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt10) {
+            switch (alt8) {
                 case 1 :
-                    // InternalFILTER.g:1239:4: ( (lv_Constant_19_0= ruleGSSFilterConstant ) )
+                    // InternalFILTER.g:1022:4: ( (lv_Constant_19_0= ruleGSSFilterConstant ) )
                     {
-                    // InternalFILTER.g:1239:4: ( (lv_Constant_19_0= ruleGSSFilterConstant ) )
-                    // InternalFILTER.g:1240:5: (lv_Constant_19_0= ruleGSSFilterConstant )
+                    // InternalFILTER.g:1022:4: ( (lv_Constant_19_0= ruleGSSFilterConstant ) )
+                    // InternalFILTER.g:1023:5: (lv_Constant_19_0= ruleGSSFilterConstant )
                     {
-                    // InternalFILTER.g:1240:5: (lv_Constant_19_0= ruleGSSFilterConstant )
-                    // InternalFILTER.g:1241:6: lv_Constant_19_0= ruleGSSFilterConstant
+                    // InternalFILTER.g:1023:5: (lv_Constant_19_0= ruleGSSFilterConstant )
+                    // InternalFILTER.g:1024:6: lv_Constant_19_0= ruleGSSFilterConstant
                     {
                     if ( state.backtracking==0 ) {
 
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_19_0_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_27);
+                    pushFollow(FollowSets000.FOLLOW_26);
                     lv_Constant_19_0=ruleGSSFilterConstant();
 
                     state._fsp--;
@@ -3096,20 +2523,20 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTER.g:1259:4: ( (lv_Select_20_0= ruleGSSFilterSelect ) )
+                    // InternalFILTER.g:1042:4: ( (lv_Select_20_0= ruleGSSFilterSelect ) )
                     {
-                    // InternalFILTER.g:1259:4: ( (lv_Select_20_0= ruleGSSFilterSelect ) )
-                    // InternalFILTER.g:1260:5: (lv_Select_20_0= ruleGSSFilterSelect )
+                    // InternalFILTER.g:1042:4: ( (lv_Select_20_0= ruleGSSFilterSelect ) )
+                    // InternalFILTER.g:1043:5: (lv_Select_20_0= ruleGSSFilterSelect )
                     {
-                    // InternalFILTER.g:1260:5: (lv_Select_20_0= ruleGSSFilterSelect )
-                    // InternalFILTER.g:1261:6: lv_Select_20_0= ruleGSSFilterSelect
+                    // InternalFILTER.g:1043:5: (lv_Select_20_0= ruleGSSFilterSelect )
+                    // InternalFILTER.g:1044:6: lv_Select_20_0= ruleGSSFilterSelect
                     {
                     if ( state.backtracking==0 ) {
 
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_19_1_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_27);
+                    pushFollow(FollowSets000.FOLLOW_26);
                     lv_Select_20_0=ruleGSSFilterSelect();
 
                     state._fsp--;
@@ -3137,20 +2564,20 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalFILTER.g:1279:4: ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) )
+                    // InternalFILTER.g:1062:4: ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) )
                     {
-                    // InternalFILTER.g:1279:4: ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) )
-                    // InternalFILTER.g:1280:5: (lv_SelectLine_21_0= ruleGSSFilterSelectLine )
+                    // InternalFILTER.g:1062:4: ( (lv_SelectLine_21_0= ruleGSSFilterSelectLine ) )
+                    // InternalFILTER.g:1063:5: (lv_SelectLine_21_0= ruleGSSFilterSelectLine )
                     {
-                    // InternalFILTER.g:1280:5: (lv_SelectLine_21_0= ruleGSSFilterSelectLine )
-                    // InternalFILTER.g:1281:6: lv_SelectLine_21_0= ruleGSSFilterSelectLine
+                    // InternalFILTER.g:1063:5: (lv_SelectLine_21_0= ruleGSSFilterSelectLine )
+                    // InternalFILTER.g:1064:6: lv_SelectLine_21_0= ruleGSSFilterSelectLine
                     {
                     if ( state.backtracking==0 ) {
 
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_19_2_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_27);
+                    pushFollow(FollowSets000.FOLLOW_26);
                     lv_SelectLine_21_0=ruleGSSFilterSelectLine();
 
                     state._fsp--;
@@ -3217,7 +2644,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSFilterBoolVarFromGroupedArrayItem"
-    // InternalFILTER.g:1311:1: entryRuleGSSFilterBoolVarFromGroupedArrayItem returns [EObject current=null] : iv_ruleGSSFilterBoolVarFromGroupedArrayItem= ruleGSSFilterBoolVarFromGroupedArrayItem EOF ;
+    // InternalFILTER.g:1094:1: entryRuleGSSFilterBoolVarFromGroupedArrayItem returns [EObject current=null] : iv_ruleGSSFilterBoolVarFromGroupedArrayItem= ruleGSSFilterBoolVarFromGroupedArrayItem EOF ;
     public final EObject entryRuleGSSFilterBoolVarFromGroupedArrayItem() throws RecognitionException {
         EObject current = null;
 
@@ -3225,8 +2652,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:1311:77: (iv_ruleGSSFilterBoolVarFromGroupedArrayItem= ruleGSSFilterBoolVarFromGroupedArrayItem EOF )
-            // InternalFILTER.g:1312:2: iv_ruleGSSFilterBoolVarFromGroupedArrayItem= ruleGSSFilterBoolVarFromGroupedArrayItem EOF
+            // InternalFILTER.g:1094:77: (iv_ruleGSSFilterBoolVarFromGroupedArrayItem= ruleGSSFilterBoolVarFromGroupedArrayItem EOF )
+            // InternalFILTER.g:1095:2: iv_ruleGSSFilterBoolVarFromGroupedArrayItem= ruleGSSFilterBoolVarFromGroupedArrayItem EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemRule()); 
@@ -3257,7 +2684,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterBoolVarFromGroupedArrayItem"
-    // InternalFILTER.g:1318:1: ruleGSSFilterBoolVarFromGroupedArrayItem returns [EObject current=null] : (otherlv_0= 'GSSFilterBoolVarFromGroupedArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'group' otherlv_15= ':=' ( (lv_group_16_0= RULE_ID ) ) otherlv_17= ';' otherlv_18= 'AIFieldRefs' otherlv_19= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_21= ';' ( (lv_Op_22_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_23_0= ruleGSSFilterConstant ) ) | ( (lv_Select_24_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) ) ) otherlv_26= '}' otherlv_27= ';' ) ;
+    // InternalFILTER.g:1101:1: ruleGSSFilterBoolVarFromGroupedArrayItem returns [EObject current=null] : (otherlv_0= 'GSSFilterBoolVarFromGroupedArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'group' otherlv_15= ':=' ( (lv_group_16_0= RULE_ID ) ) otherlv_17= ';' otherlv_18= 'AIFieldRefs' otherlv_19= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_21= ';' ( (lv_Op_22_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_23_0= ruleGSSFilterConstant ) ) | ( (lv_Select_24_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) ) ) otherlv_26= '}' otherlv_27= ';' ) ;
     public final EObject ruleGSSFilterBoolVarFromGroupedArrayItem() throws RecognitionException {
         EObject current = null;
 
@@ -3299,11 +2726,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:1324:2: ( (otherlv_0= 'GSSFilterBoolVarFromGroupedArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'group' otherlv_15= ':=' ( (lv_group_16_0= RULE_ID ) ) otherlv_17= ';' otherlv_18= 'AIFieldRefs' otherlv_19= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_21= ';' ( (lv_Op_22_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_23_0= ruleGSSFilterConstant ) ) | ( (lv_Select_24_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) ) ) otherlv_26= '}' otherlv_27= ';' ) )
-            // InternalFILTER.g:1325:2: (otherlv_0= 'GSSFilterBoolVarFromGroupedArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'group' otherlv_15= ':=' ( (lv_group_16_0= RULE_ID ) ) otherlv_17= ';' otherlv_18= 'AIFieldRefs' otherlv_19= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_21= ';' ( (lv_Op_22_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_23_0= ruleGSSFilterConstant ) ) | ( (lv_Select_24_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) ) ) otherlv_26= '}' otherlv_27= ';' )
+            // InternalFILTER.g:1107:2: ( (otherlv_0= 'GSSFilterBoolVarFromGroupedArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'group' otherlv_15= ':=' ( (lv_group_16_0= RULE_ID ) ) otherlv_17= ';' otherlv_18= 'AIFieldRefs' otherlv_19= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_21= ';' ( (lv_Op_22_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_23_0= ruleGSSFilterConstant ) ) | ( (lv_Select_24_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) ) ) otherlv_26= '}' otherlv_27= ';' ) )
+            // InternalFILTER.g:1108:2: (otherlv_0= 'GSSFilterBoolVarFromGroupedArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'group' otherlv_15= ':=' ( (lv_group_16_0= RULE_ID ) ) otherlv_17= ';' otherlv_18= 'AIFieldRefs' otherlv_19= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_21= ';' ( (lv_Op_22_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_23_0= ruleGSSFilterConstant ) ) | ( (lv_Select_24_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) ) ) otherlv_26= '}' otherlv_27= ';' )
             {
-            // InternalFILTER.g:1325:2: (otherlv_0= 'GSSFilterBoolVarFromGroupedArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'group' otherlv_15= ':=' ( (lv_group_16_0= RULE_ID ) ) otherlv_17= ';' otherlv_18= 'AIFieldRefs' otherlv_19= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_21= ';' ( (lv_Op_22_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_23_0= ruleGSSFilterConstant ) ) | ( (lv_Select_24_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) ) ) otherlv_26= '}' otherlv_27= ';' )
-            // InternalFILTER.g:1326:3: otherlv_0= 'GSSFilterBoolVarFromGroupedArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'group' otherlv_15= ':=' ( (lv_group_16_0= RULE_ID ) ) otherlv_17= ';' otherlv_18= 'AIFieldRefs' otherlv_19= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_21= ';' ( (lv_Op_22_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_23_0= ruleGSSFilterConstant ) ) | ( (lv_Select_24_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) ) ) otherlv_26= '}' otherlv_27= ';'
+            // InternalFILTER.g:1108:2: (otherlv_0= 'GSSFilterBoolVarFromGroupedArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'group' otherlv_15= ':=' ( (lv_group_16_0= RULE_ID ) ) otherlv_17= ';' otherlv_18= 'AIFieldRefs' otherlv_19= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_21= ';' ( (lv_Op_22_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_23_0= ruleGSSFilterConstant ) ) | ( (lv_Select_24_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) ) ) otherlv_26= '}' otherlv_27= ';' )
+            // InternalFILTER.g:1109:3: otherlv_0= 'GSSFilterBoolVarFromGroupedArrayItem' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'constantType' otherlv_11= ':=' ( (lv_constantType_12_0= ruleGSSFilterConstantType ) ) otherlv_13= ';' otherlv_14= 'group' otherlv_15= ':=' ( (lv_group_16_0= RULE_ID ) ) otherlv_17= ';' otherlv_18= 'AIFieldRefs' otherlv_19= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_21= ';' ( (lv_Op_22_0= ruleGSSFilterFieldOp ) ) ( ( (lv_Constant_23_0= ruleGSSFilterConstant ) ) | ( (lv_Select_24_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) ) ) otherlv_26= '}' otherlv_27= ';'
             {
             otherlv_0=(Token)match(input,29,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3311,7 +2738,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getGSSFilterBoolVarFromGroupedArrayItemKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getLeftCurlyBracketKeyword_1());
@@ -3323,17 +2750,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalFILTER.g:1342:3: ( (lv_id_4_0= ruleINTEGER ) )
-            // InternalFILTER.g:1343:4: (lv_id_4_0= ruleINTEGER )
+            // InternalFILTER.g:1125:3: ( (lv_id_4_0= ruleINTEGER ) )
+            // InternalFILTER.g:1126:4: (lv_id_4_0= ruleINTEGER )
             {
-            // InternalFILTER.g:1343:4: (lv_id_4_0= ruleINTEGER )
-            // InternalFILTER.g:1344:5: lv_id_4_0= ruleINTEGER
+            // InternalFILTER.g:1126:4: (lv_id_4_0= ruleINTEGER )
+            // InternalFILTER.g:1127:5: lv_id_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -3364,7 +2791,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_5());
@@ -3382,11 +2809,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalFILTER.g:1373:3: ( (lv_name_8_0= RULE_ID ) )
-            // InternalFILTER.g:1374:4: (lv_name_8_0= RULE_ID )
+            // InternalFILTER.g:1156:3: ( (lv_name_8_0= RULE_ID ) )
+            // InternalFILTER.g:1157:4: (lv_name_8_0= RULE_ID )
             {
-            // InternalFILTER.g:1374:4: (lv_name_8_0= RULE_ID )
-            // InternalFILTER.g:1375:5: lv_name_8_0= RULE_ID
+            // InternalFILTER.g:1157:4: (lv_name_8_0= RULE_ID )
+            // InternalFILTER.g:1158:5: lv_name_8_0= RULE_ID
             {
             lv_name_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3412,7 +2839,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_22); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_9());
@@ -3424,17 +2851,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_10, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantTypeKeyword_10());
               		
             }
-            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_23); if (state.failed) return current;
+            otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_22); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalFILTER.g:1403:3: ( (lv_constantType_12_0= ruleGSSFilterConstantType ) )
-            // InternalFILTER.g:1404:4: (lv_constantType_12_0= ruleGSSFilterConstantType )
+            // InternalFILTER.g:1186:3: ( (lv_constantType_12_0= ruleGSSFilterConstantType ) )
+            // InternalFILTER.g:1187:4: (lv_constantType_12_0= ruleGSSFilterConstantType )
             {
-            // InternalFILTER.g:1404:4: (lv_constantType_12_0= ruleGSSFilterConstantType )
-            // InternalFILTER.g:1405:5: lv_constantType_12_0= ruleGSSFilterConstantType
+            // InternalFILTER.g:1187:4: (lv_constantType_12_0= ruleGSSFilterConstantType )
+            // InternalFILTER.g:1188:5: lv_constantType_12_0= ruleGSSFilterConstantType
             {
             if ( state.backtracking==0 ) {
 
@@ -3465,7 +2892,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_29); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_28); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_13());
@@ -3483,11 +2910,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_15, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getColonEqualsSignKeyword_15());
               		
             }
-            // InternalFILTER.g:1434:3: ( (lv_group_16_0= RULE_ID ) )
-            // InternalFILTER.g:1435:4: (lv_group_16_0= RULE_ID )
+            // InternalFILTER.g:1217:3: ( (lv_group_16_0= RULE_ID ) )
+            // InternalFILTER.g:1218:4: (lv_group_16_0= RULE_ID )
             {
-            // InternalFILTER.g:1435:4: (lv_group_16_0= RULE_ID )
-            // InternalFILTER.g:1436:5: lv_group_16_0= RULE_ID
+            // InternalFILTER.g:1218:4: (lv_group_16_0= RULE_ID )
+            // InternalFILTER.g:1219:5: lv_group_16_0= RULE_ID
             {
             lv_group_16_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3513,7 +2940,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_30); if (state.failed) return current;
+            otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_29); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_17, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_17());
@@ -3531,11 +2958,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_19, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getColonEqualsSignKeyword_19());
               		
             }
-            // InternalFILTER.g:1464:3: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalFILTER.g:1465:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalFILTER.g:1247:3: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalFILTER.g:1248:4: ( ruleVersionedQualifiedReferenceName )
             {
-            // InternalFILTER.g:1465:4: ( ruleVersionedQualifiedReferenceName )
-            // InternalFILTER.g:1466:5: ruleVersionedQualifiedReferenceName
+            // InternalFILTER.g:1248:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalFILTER.g:1249:5: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
 
@@ -3570,24 +2997,24 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_25); if (state.failed) return current;
+            otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_24); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_21, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_21());
               		
             }
-            // InternalFILTER.g:1487:3: ( (lv_Op_22_0= ruleGSSFilterFieldOp ) )
-            // InternalFILTER.g:1488:4: (lv_Op_22_0= ruleGSSFilterFieldOp )
+            // InternalFILTER.g:1270:3: ( (lv_Op_22_0= ruleGSSFilterFieldOp ) )
+            // InternalFILTER.g:1271:4: (lv_Op_22_0= ruleGSSFilterFieldOp )
             {
-            // InternalFILTER.g:1488:4: (lv_Op_22_0= ruleGSSFilterFieldOp )
-            // InternalFILTER.g:1489:5: lv_Op_22_0= ruleGSSFilterFieldOp
+            // InternalFILTER.g:1271:4: (lv_Op_22_0= ruleGSSFilterFieldOp )
+            // InternalFILTER.g:1272:5: lv_Op_22_0= ruleGSSFilterFieldOp
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_22_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_25);
             lv_Op_22_0=ruleGSSFilterFieldOp();
 
             state._fsp--;
@@ -3611,48 +3038,48 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFILTER.g:1506:3: ( ( (lv_Constant_23_0= ruleGSSFilterConstant ) ) | ( (lv_Select_24_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) ) )
-            int alt11=3;
+            // InternalFILTER.g:1289:3: ( ( (lv_Constant_23_0= ruleGSSFilterConstant ) ) | ( (lv_Select_24_0= ruleGSSFilterSelect ) ) | ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) ) )
+            int alt9=3;
             switch ( input.LA(1) ) {
             case 35:
                 {
-                alt11=1;
+                alt9=1;
                 }
                 break;
             case 38:
                 {
-                alt11=2;
+                alt9=2;
                 }
                 break;
             case 42:
                 {
-                alt11=3;
+                alt9=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 9, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt11) {
+            switch (alt9) {
                 case 1 :
-                    // InternalFILTER.g:1507:4: ( (lv_Constant_23_0= ruleGSSFilterConstant ) )
+                    // InternalFILTER.g:1290:4: ( (lv_Constant_23_0= ruleGSSFilterConstant ) )
                     {
-                    // InternalFILTER.g:1507:4: ( (lv_Constant_23_0= ruleGSSFilterConstant ) )
-                    // InternalFILTER.g:1508:5: (lv_Constant_23_0= ruleGSSFilterConstant )
+                    // InternalFILTER.g:1290:4: ( (lv_Constant_23_0= ruleGSSFilterConstant ) )
+                    // InternalFILTER.g:1291:5: (lv_Constant_23_0= ruleGSSFilterConstant )
                     {
-                    // InternalFILTER.g:1508:5: (lv_Constant_23_0= ruleGSSFilterConstant )
-                    // InternalFILTER.g:1509:6: lv_Constant_23_0= ruleGSSFilterConstant
+                    // InternalFILTER.g:1291:5: (lv_Constant_23_0= ruleGSSFilterConstant )
+                    // InternalFILTER.g:1292:6: lv_Constant_23_0= ruleGSSFilterConstant
                     {
                     if ( state.backtracking==0 ) {
 
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_23_0_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_27);
+                    pushFollow(FollowSets000.FOLLOW_26);
                     lv_Constant_23_0=ruleGSSFilterConstant();
 
                     state._fsp--;
@@ -3680,20 +3107,20 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTER.g:1527:4: ( (lv_Select_24_0= ruleGSSFilterSelect ) )
+                    // InternalFILTER.g:1310:4: ( (lv_Select_24_0= ruleGSSFilterSelect ) )
                     {
-                    // InternalFILTER.g:1527:4: ( (lv_Select_24_0= ruleGSSFilterSelect ) )
-                    // InternalFILTER.g:1528:5: (lv_Select_24_0= ruleGSSFilterSelect )
+                    // InternalFILTER.g:1310:4: ( (lv_Select_24_0= ruleGSSFilterSelect ) )
+                    // InternalFILTER.g:1311:5: (lv_Select_24_0= ruleGSSFilterSelect )
                     {
-                    // InternalFILTER.g:1528:5: (lv_Select_24_0= ruleGSSFilterSelect )
-                    // InternalFILTER.g:1529:6: lv_Select_24_0= ruleGSSFilterSelect
+                    // InternalFILTER.g:1311:5: (lv_Select_24_0= ruleGSSFilterSelect )
+                    // InternalFILTER.g:1312:6: lv_Select_24_0= ruleGSSFilterSelect
                     {
                     if ( state.backtracking==0 ) {
 
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_23_1_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_27);
+                    pushFollow(FollowSets000.FOLLOW_26);
                     lv_Select_24_0=ruleGSSFilterSelect();
 
                     state._fsp--;
@@ -3721,20 +3148,20 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalFILTER.g:1547:4: ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) )
+                    // InternalFILTER.g:1330:4: ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) )
                     {
-                    // InternalFILTER.g:1547:4: ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) )
-                    // InternalFILTER.g:1548:5: (lv_SelectLine_25_0= ruleGSSFilterSelectLine )
+                    // InternalFILTER.g:1330:4: ( (lv_SelectLine_25_0= ruleGSSFilterSelectLine ) )
+                    // InternalFILTER.g:1331:5: (lv_SelectLine_25_0= ruleGSSFilterSelectLine )
                     {
-                    // InternalFILTER.g:1548:5: (lv_SelectLine_25_0= ruleGSSFilterSelectLine )
-                    // InternalFILTER.g:1549:6: lv_SelectLine_25_0= ruleGSSFilterSelectLine
+                    // InternalFILTER.g:1331:5: (lv_SelectLine_25_0= ruleGSSFilterSelectLine )
+                    // InternalFILTER.g:1332:6: lv_SelectLine_25_0= ruleGSSFilterSelectLine
                     {
                     if ( state.backtracking==0 ) {
 
                       						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_23_2_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_27);
+                    pushFollow(FollowSets000.FOLLOW_26);
                     lv_SelectLine_25_0=ruleGSSFilterSelectLine();
 
                     state._fsp--;
@@ -3801,7 +3228,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSFilterBoolVarFDIC"
-    // InternalFILTER.g:1579:1: entryRuleGSSFilterBoolVarFDIC returns [EObject current=null] : iv_ruleGSSFilterBoolVarFDIC= ruleGSSFilterBoolVarFDIC EOF ;
+    // InternalFILTER.g:1362:1: entryRuleGSSFilterBoolVarFDIC returns [EObject current=null] : iv_ruleGSSFilterBoolVarFDIC= ruleGSSFilterBoolVarFDIC EOF ;
     public final EObject entryRuleGSSFilterBoolVarFDIC() throws RecognitionException {
         EObject current = null;
 
@@ -3809,8 +3236,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:1579:61: (iv_ruleGSSFilterBoolVarFDIC= ruleGSSFilterBoolVarFDIC EOF )
-            // InternalFILTER.g:1580:2: iv_ruleGSSFilterBoolVarFDIC= ruleGSSFilterBoolVarFDIC EOF
+            // InternalFILTER.g:1362:61: (iv_ruleGSSFilterBoolVarFDIC= ruleGSSFilterBoolVarFDIC EOF )
+            // InternalFILTER.g:1363:2: iv_ruleGSSFilterBoolVarFDIC= ruleGSSFilterBoolVarFDIC EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterBoolVarFDICRule()); 
@@ -3841,7 +3268,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterBoolVarFDIC"
-    // InternalFILTER.g:1586:1: ruleGSSFilterBoolVarFDIC returns [EObject current=null] : (otherlv_0= 'GSSFilterBoolVarFDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'FieldRef' otherlv_11= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_13= ';' ( (lv_Op_14_0= ruleGSSFilterFieldOp ) ) otherlv_15= '}' otherlv_16= ';' ) ;
+    // InternalFILTER.g:1369:1: ruleGSSFilterBoolVarFDIC returns [EObject current=null] : (otherlv_0= 'GSSFilterBoolVarFDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'FieldRef' otherlv_11= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_13= ';' ( (lv_Op_14_0= ruleGSSFilterFieldOp ) ) otherlv_15= '}' otherlv_16= ';' ) ;
     public final EObject ruleGSSFilterBoolVarFDIC() throws RecognitionException {
         EObject current = null;
 
@@ -3868,11 +3295,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:1592:2: ( (otherlv_0= 'GSSFilterBoolVarFDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'FieldRef' otherlv_11= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_13= ';' ( (lv_Op_14_0= ruleGSSFilterFieldOp ) ) otherlv_15= '}' otherlv_16= ';' ) )
-            // InternalFILTER.g:1593:2: (otherlv_0= 'GSSFilterBoolVarFDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'FieldRef' otherlv_11= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_13= ';' ( (lv_Op_14_0= ruleGSSFilterFieldOp ) ) otherlv_15= '}' otherlv_16= ';' )
+            // InternalFILTER.g:1375:2: ( (otherlv_0= 'GSSFilterBoolVarFDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'FieldRef' otherlv_11= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_13= ';' ( (lv_Op_14_0= ruleGSSFilterFieldOp ) ) otherlv_15= '}' otherlv_16= ';' ) )
+            // InternalFILTER.g:1376:2: (otherlv_0= 'GSSFilterBoolVarFDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'FieldRef' otherlv_11= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_13= ';' ( (lv_Op_14_0= ruleGSSFilterFieldOp ) ) otherlv_15= '}' otherlv_16= ';' )
             {
-            // InternalFILTER.g:1593:2: (otherlv_0= 'GSSFilterBoolVarFDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'FieldRef' otherlv_11= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_13= ';' ( (lv_Op_14_0= ruleGSSFilterFieldOp ) ) otherlv_15= '}' otherlv_16= ';' )
-            // InternalFILTER.g:1594:3: otherlv_0= 'GSSFilterBoolVarFDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'FieldRef' otherlv_11= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_13= ';' ( (lv_Op_14_0= ruleGSSFilterFieldOp ) ) otherlv_15= '}' otherlv_16= ';'
+            // InternalFILTER.g:1376:2: (otherlv_0= 'GSSFilterBoolVarFDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'FieldRef' otherlv_11= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_13= ';' ( (lv_Op_14_0= ruleGSSFilterFieldOp ) ) otherlv_15= '}' otherlv_16= ';' )
+            // InternalFILTER.g:1377:3: otherlv_0= 'GSSFilterBoolVarFDIC' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'name' otherlv_7= ':=' ( (lv_name_8_0= RULE_ID ) ) otherlv_9= ';' otherlv_10= 'FieldRef' otherlv_11= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_13= ';' ( (lv_Op_14_0= ruleGSSFilterFieldOp ) ) otherlv_15= '}' otherlv_16= ';'
             {
             otherlv_0=(Token)match(input,32,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3880,7 +3307,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterBoolVarFDICAccess().getGSSFilterBoolVarFDICKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterBoolVarFDICAccess().getLeftCurlyBracketKeyword_1());
@@ -3892,17 +3319,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterBoolVarFDICAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterBoolVarFDICAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalFILTER.g:1610:3: ( (lv_id_4_0= ruleINTEGER ) )
-            // InternalFILTER.g:1611:4: (lv_id_4_0= ruleINTEGER )
+            // InternalFILTER.g:1393:3: ( (lv_id_4_0= ruleINTEGER ) )
+            // InternalFILTER.g:1394:4: (lv_id_4_0= ruleINTEGER )
             {
-            // InternalFILTER.g:1611:4: (lv_id_4_0= ruleINTEGER )
-            // InternalFILTER.g:1612:5: lv_id_4_0= ruleINTEGER
+            // InternalFILTER.g:1394:4: (lv_id_4_0= ruleINTEGER )
+            // InternalFILTER.g:1395:5: lv_id_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -3933,7 +3360,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_21); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterBoolVarFDICAccess().getSemicolonKeyword_5());
@@ -3951,11 +3378,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSFilterBoolVarFDICAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalFILTER.g:1641:3: ( (lv_name_8_0= RULE_ID ) )
-            // InternalFILTER.g:1642:4: (lv_name_8_0= RULE_ID )
+            // InternalFILTER.g:1424:3: ( (lv_name_8_0= RULE_ID ) )
+            // InternalFILTER.g:1425:4: (lv_name_8_0= RULE_ID )
             {
-            // InternalFILTER.g:1642:4: (lv_name_8_0= RULE_ID )
-            // InternalFILTER.g:1643:5: lv_name_8_0= RULE_ID
+            // InternalFILTER.g:1425:4: (lv_name_8_0= RULE_ID )
+            // InternalFILTER.g:1426:5: lv_name_8_0= RULE_ID
             {
             lv_name_8_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3981,7 +3408,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_24); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_23); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSFilterBoolVarFDICAccess().getSemicolonKeyword_9());
@@ -3999,11 +3426,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_11, grammarAccess.getGSSFilterBoolVarFDICAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalFILTER.g:1671:3: ( ( ruleVersionedQualifiedReferenceName ) )
-            // InternalFILTER.g:1672:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalFILTER.g:1454:3: ( ( ruleVersionedQualifiedReferenceName ) )
+            // InternalFILTER.g:1455:4: ( ruleVersionedQualifiedReferenceName )
             {
-            // InternalFILTER.g:1672:4: ( ruleVersionedQualifiedReferenceName )
-            // InternalFILTER.g:1673:5: ruleVersionedQualifiedReferenceName
+            // InternalFILTER.g:1455:4: ( ruleVersionedQualifiedReferenceName )
+            // InternalFILTER.g:1456:5: ruleVersionedQualifiedReferenceName
             {
             if ( state.backtracking==0 ) {
 
@@ -4038,24 +3465,24 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_25); if (state.failed) return current;
+            otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_24); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_13, grammarAccess.getGSSFilterBoolVarFDICAccess().getSemicolonKeyword_13());
               		
             }
-            // InternalFILTER.g:1694:3: ( (lv_Op_14_0= ruleGSSFilterFieldOp ) )
-            // InternalFILTER.g:1695:4: (lv_Op_14_0= ruleGSSFilterFieldOp )
+            // InternalFILTER.g:1477:3: ( (lv_Op_14_0= ruleGSSFilterFieldOp ) )
+            // InternalFILTER.g:1478:4: (lv_Op_14_0= ruleGSSFilterFieldOp )
             {
-            // InternalFILTER.g:1695:4: (lv_Op_14_0= ruleGSSFilterFieldOp )
-            // InternalFILTER.g:1696:5: lv_Op_14_0= ruleGSSFilterFieldOp
+            // InternalFILTER.g:1478:4: (lv_Op_14_0= ruleGSSFilterFieldOp )
+            // InternalFILTER.g:1479:5: lv_Op_14_0= ruleGSSFilterFieldOp
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getGSSFilterBoolVarFDICAccess().getOpGSSFilterFieldOpParserRuleCall_14_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_27);
+            pushFollow(FollowSets000.FOLLOW_26);
             lv_Op_14_0=ruleGSSFilterFieldOp();
 
             state._fsp--;
@@ -4115,8 +3542,199 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleGSSFilterBoolVarFDIC"
 
 
+    // $ANTLR start "entryRuleGSSFilterValue"
+    // InternalFILTER.g:1508:1: entryRuleGSSFilterValue returns [EObject current=null] : iv_ruleGSSFilterValue= ruleGSSFilterValue EOF ;
+    public final EObject entryRuleGSSFilterValue() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleGSSFilterValue = null;
+
+
+        try {
+            // InternalFILTER.g:1508:55: (iv_ruleGSSFilterValue= ruleGSSFilterValue EOF )
+            // InternalFILTER.g:1509:2: iv_ruleGSSFilterValue= ruleGSSFilterValue EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getGSSFilterValueRule()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_1);
+            iv_ruleGSSFilterValue=ruleGSSFilterValue();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleGSSFilterValue; 
+            }
+            match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return current;
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleGSSFilterValue"
+
+
+    // $ANTLR start "ruleGSSFilterValue"
+    // InternalFILTER.g:1515:1: ruleGSSFilterValue returns [EObject current=null] : (this_GSSFilterConstant_0= ruleGSSFilterConstant | this_GSSFilterSelect_1= ruleGSSFilterSelect | this_GSSFilterSelectLine_2= ruleGSSFilterSelectLine ) ;
+    public final EObject ruleGSSFilterValue() throws RecognitionException {
+        EObject current = null;
+
+        EObject this_GSSFilterConstant_0 = null;
+
+        EObject this_GSSFilterSelect_1 = null;
+
+        EObject this_GSSFilterSelectLine_2 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalFILTER.g:1521:2: ( (this_GSSFilterConstant_0= ruleGSSFilterConstant | this_GSSFilterSelect_1= ruleGSSFilterSelect | this_GSSFilterSelectLine_2= ruleGSSFilterSelectLine ) )
+            // InternalFILTER.g:1522:2: (this_GSSFilterConstant_0= ruleGSSFilterConstant | this_GSSFilterSelect_1= ruleGSSFilterSelect | this_GSSFilterSelectLine_2= ruleGSSFilterSelectLine )
+            {
+            // InternalFILTER.g:1522:2: (this_GSSFilterConstant_0= ruleGSSFilterConstant | this_GSSFilterSelect_1= ruleGSSFilterSelect | this_GSSFilterSelectLine_2= ruleGSSFilterSelectLine )
+            int alt10=3;
+            switch ( input.LA(1) ) {
+            case 35:
+                {
+                alt10=1;
+                }
+                break;
+            case 38:
+                {
+                alt10=2;
+                }
+                break;
+            case 42:
+                {
+                alt10=3;
+                }
+                break;
+            default:
+                if (state.backtracking>0) {state.failed=true; return current;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 10, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt10) {
+                case 1 :
+                    // InternalFILTER.g:1523:3: this_GSSFilterConstant_0= ruleGSSFilterConstant
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getGSSFilterValueAccess().getGSSFilterConstantParserRuleCall_0());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_GSSFilterConstant_0=ruleGSSFilterConstant();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_GSSFilterConstant_0;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+                case 2 :
+                    // InternalFILTER.g:1535:3: this_GSSFilterSelect_1= ruleGSSFilterSelect
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectParserRuleCall_1());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_GSSFilterSelect_1=ruleGSSFilterSelect();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_GSSFilterSelect_1;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+                case 3 :
+                    // InternalFILTER.g:1547:3: this_GSSFilterSelectLine_2= ruleGSSFilterSelectLine
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectLineParserRuleCall_2());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_GSSFilterSelectLine_2=ruleGSSFilterSelectLine();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_GSSFilterSelectLine_2;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+
+              	leaveRule();
+
+            }
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleGSSFilterValue"
+
+
     // $ANTLR start "entryRuleGSSFilterFieldOp"
-    // InternalFILTER.g:1725:1: entryRuleGSSFilterFieldOp returns [EObject current=null] : iv_ruleGSSFilterFieldOp= ruleGSSFilterFieldOp EOF ;
+    // InternalFILTER.g:1562:1: entryRuleGSSFilterFieldOp returns [EObject current=null] : iv_ruleGSSFilterFieldOp= ruleGSSFilterFieldOp EOF ;
     public final EObject entryRuleGSSFilterFieldOp() throws RecognitionException {
         EObject current = null;
 
@@ -4124,8 +3742,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:1725:57: (iv_ruleGSSFilterFieldOp= ruleGSSFilterFieldOp EOF )
-            // InternalFILTER.g:1726:2: iv_ruleGSSFilterFieldOp= ruleGSSFilterFieldOp EOF
+            // InternalFILTER.g:1562:57: (iv_ruleGSSFilterFieldOp= ruleGSSFilterFieldOp EOF )
+            // InternalFILTER.g:1563:2: iv_ruleGSSFilterFieldOp= ruleGSSFilterFieldOp EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterFieldOpRule()); 
@@ -4156,7 +3774,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterFieldOp"
-    // InternalFILTER.g:1732:1: ruleGSSFilterFieldOp returns [EObject current=null] : (otherlv_0= 'GSSFilterFieldOp' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSFilterOPType ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) ;
+    // InternalFILTER.g:1569:1: ruleGSSFilterFieldOp returns [EObject current=null] : (otherlv_0= 'GSSFilterFieldOp' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSFilterOPType ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) ;
     public final EObject ruleGSSFilterFieldOp() throws RecognitionException {
         EObject current = null;
 
@@ -4174,11 +3792,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:1738:2: ( (otherlv_0= 'GSSFilterFieldOp' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSFilterOPType ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) )
-            // InternalFILTER.g:1739:2: (otherlv_0= 'GSSFilterFieldOp' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSFilterOPType ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
+            // InternalFILTER.g:1575:2: ( (otherlv_0= 'GSSFilterFieldOp' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSFilterOPType ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) )
+            // InternalFILTER.g:1576:2: (otherlv_0= 'GSSFilterFieldOp' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSFilterOPType ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
             {
-            // InternalFILTER.g:1739:2: (otherlv_0= 'GSSFilterFieldOp' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSFilterOPType ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
-            // InternalFILTER.g:1740:3: otherlv_0= 'GSSFilterFieldOp' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSFilterOPType ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
+            // InternalFILTER.g:1576:2: (otherlv_0= 'GSSFilterFieldOp' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSFilterOPType ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
+            // InternalFILTER.g:1577:3: otherlv_0= 'GSSFilterFieldOp' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSFilterOPType ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
             {
             otherlv_0=(Token)match(input,33,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4186,7 +3804,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterFieldOpAccess().getGSSFilterFieldOpKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_31); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_30); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterFieldOpAccess().getLeftCurlyBracketKeyword_1());
@@ -4198,17 +3816,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterFieldOpAccess().getTypeKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_32); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_31); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterFieldOpAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalFILTER.g:1756:3: ( (lv_type_4_0= ruleGSSFilterOPType ) )
-            // InternalFILTER.g:1757:4: (lv_type_4_0= ruleGSSFilterOPType )
+            // InternalFILTER.g:1593:3: ( (lv_type_4_0= ruleGSSFilterOPType ) )
+            // InternalFILTER.g:1594:4: (lv_type_4_0= ruleGSSFilterOPType )
             {
-            // InternalFILTER.g:1757:4: (lv_type_4_0= ruleGSSFilterOPType )
-            // InternalFILTER.g:1758:5: lv_type_4_0= ruleGSSFilterOPType
+            // InternalFILTER.g:1594:4: (lv_type_4_0= ruleGSSFilterOPType )
+            // InternalFILTER.g:1595:5: lv_type_4_0= ruleGSSFilterOPType
             {
             if ( state.backtracking==0 ) {
 
@@ -4239,7 +3857,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_26); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterFieldOpAccess().getSemicolonKeyword_5());
@@ -4282,7 +3900,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSFilterConstant"
-    // InternalFILTER.g:1791:1: entryRuleGSSFilterConstant returns [EObject current=null] : iv_ruleGSSFilterConstant= ruleGSSFilterConstant EOF ;
+    // InternalFILTER.g:1628:1: entryRuleGSSFilterConstant returns [EObject current=null] : iv_ruleGSSFilterConstant= ruleGSSFilterConstant EOF ;
     public final EObject entryRuleGSSFilterConstant() throws RecognitionException {
         EObject current = null;
 
@@ -4290,8 +3908,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:1791:58: (iv_ruleGSSFilterConstant= ruleGSSFilterConstant EOF )
-            // InternalFILTER.g:1792:2: iv_ruleGSSFilterConstant= ruleGSSFilterConstant EOF
+            // InternalFILTER.g:1628:58: (iv_ruleGSSFilterConstant= ruleGSSFilterConstant EOF )
+            // InternalFILTER.g:1629:2: iv_ruleGSSFilterConstant= ruleGSSFilterConstant EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterConstantRule()); 
@@ -4322,7 +3940,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterConstant"
-    // InternalFILTER.g:1798:1: ruleGSSFilterConstant returns [EObject current=null] : (otherlv_0= 'GSSFilterConstant' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' (otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalFILTER.g:1635:1: ruleGSSFilterConstant returns [EObject current=null] : (otherlv_0= 'GSSFilterConstant' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' (otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' ) ;
     public final EObject ruleGSSFilterConstant() throws RecognitionException {
         EObject current = null;
 
@@ -4344,11 +3962,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:1804:2: ( (otherlv_0= 'GSSFilterConstant' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' (otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalFILTER.g:1805:2: (otherlv_0= 'GSSFilterConstant' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' (otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' )
+            // InternalFILTER.g:1641:2: ( (otherlv_0= 'GSSFilterConstant' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' (otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' ) )
+            // InternalFILTER.g:1642:2: (otherlv_0= 'GSSFilterConstant' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' (otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' )
             {
-            // InternalFILTER.g:1805:2: (otherlv_0= 'GSSFilterConstant' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' (otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' )
-            // InternalFILTER.g:1806:3: otherlv_0= 'GSSFilterConstant' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' (otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';'
+            // InternalFILTER.g:1642:2: (otherlv_0= 'GSSFilterConstant' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' (otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';' )
+            // InternalFILTER.g:1643:3: otherlv_0= 'GSSFilterConstant' otherlv_1= '{' otherlv_2= 'value' otherlv_3= ':=' ( (lv_value_4_0= ruleINTEGER ) ) otherlv_5= ';' (otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';' )? otherlv_10= '}' otherlv_11= ';'
             {
             otherlv_0=(Token)match(input,35,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4356,7 +3974,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterConstantAccess().getGSSFilterConstantKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_33); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_32); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterConstantAccess().getLeftCurlyBracketKeyword_1());
@@ -4368,17 +3986,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterConstantAccess().getValueKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterConstantAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalFILTER.g:1822:3: ( (lv_value_4_0= ruleINTEGER ) )
-            // InternalFILTER.g:1823:4: (lv_value_4_0= ruleINTEGER )
+            // InternalFILTER.g:1659:3: ( (lv_value_4_0= ruleINTEGER ) )
+            // InternalFILTER.g:1660:4: (lv_value_4_0= ruleINTEGER )
             {
-            // InternalFILTER.g:1823:4: (lv_value_4_0= ruleINTEGER )
-            // InternalFILTER.g:1824:5: lv_value_4_0= ruleINTEGER
+            // InternalFILTER.g:1660:4: (lv_value_4_0= ruleINTEGER )
+            // InternalFILTER.g:1661:5: lv_value_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -4409,22 +4027,22 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_34); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_33); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterConstantAccess().getSemicolonKeyword_5());
               		
             }
-            // InternalFILTER.g:1845:3: (otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';' )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // InternalFILTER.g:1682:3: (otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';' )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA12_0==37) ) {
-                alt12=1;
+            if ( (LA11_0==37) ) {
+                alt11=1;
             }
-            switch (alt12) {
+            switch (alt11) {
                 case 1 :
-                    // InternalFILTER.g:1846:4: otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';'
+                    // InternalFILTER.g:1683:4: otherlv_6= 'mask' otherlv_7= ':=' ( (lv_mask_8_0= RULE_HEXADECIMAL ) ) otherlv_9= ';'
                     {
                     otherlv_6=(Token)match(input,37,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4432,17 +4050,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_6, grammarAccess.getGSSFilterConstantAccess().getMaskKeyword_6_0());
                       			
                     }
-                    otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_35); if (state.failed) return current;
+                    otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_34); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_7, grammarAccess.getGSSFilterConstantAccess().getColonEqualsSignKeyword_6_1());
                       			
                     }
-                    // InternalFILTER.g:1854:4: ( (lv_mask_8_0= RULE_HEXADECIMAL ) )
-                    // InternalFILTER.g:1855:5: (lv_mask_8_0= RULE_HEXADECIMAL )
+                    // InternalFILTER.g:1691:4: ( (lv_mask_8_0= RULE_HEXADECIMAL ) )
+                    // InternalFILTER.g:1692:5: (lv_mask_8_0= RULE_HEXADECIMAL )
                     {
-                    // InternalFILTER.g:1855:5: (lv_mask_8_0= RULE_HEXADECIMAL )
-                    // InternalFILTER.g:1856:6: lv_mask_8_0= RULE_HEXADECIMAL
+                    // InternalFILTER.g:1692:5: (lv_mask_8_0= RULE_HEXADECIMAL )
+                    // InternalFILTER.g:1693:6: lv_mask_8_0= RULE_HEXADECIMAL
                     {
                     lv_mask_8_0=(Token)match(input,RULE_HEXADECIMAL,FollowSets000.FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4468,7 +4086,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
+                    otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_9, grammarAccess.getGSSFilterConstantAccess().getSemicolonKeyword_6_3());
@@ -4517,7 +4135,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSFilterSelect"
-    // InternalFILTER.g:1889:1: entryRuleGSSFilterSelect returns [EObject current=null] : iv_ruleGSSFilterSelect= ruleGSSFilterSelect EOF ;
+    // InternalFILTER.g:1726:1: entryRuleGSSFilterSelect returns [EObject current=null] : iv_ruleGSSFilterSelect= ruleGSSFilterSelect EOF ;
     public final EObject entryRuleGSSFilterSelect() throws RecognitionException {
         EObject current = null;
 
@@ -4525,8 +4143,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:1889:56: (iv_ruleGSSFilterSelect= ruleGSSFilterSelect EOF )
-            // InternalFILTER.g:1890:2: iv_ruleGSSFilterSelect= ruleGSSFilterSelect EOF
+            // InternalFILTER.g:1726:56: (iv_ruleGSSFilterSelect= ruleGSSFilterSelect EOF )
+            // InternalFILTER.g:1727:2: iv_ruleGSSFilterSelect= ruleGSSFilterSelect EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterSelectRule()); 
@@ -4557,7 +4175,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterSelect"
-    // InternalFILTER.g:1896:1: ruleGSSFilterSelect returns [EObject current=null] : (otherlv_0= 'GSSFilterSelect' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSFilterSelectType ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) ;
+    // InternalFILTER.g:1733:1: ruleGSSFilterSelect returns [EObject current=null] : (otherlv_0= 'GSSFilterSelect' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSFilterSelectType ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) ;
     public final EObject ruleGSSFilterSelect() throws RecognitionException {
         EObject current = null;
 
@@ -4593,11 +4211,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:1902:2: ( (otherlv_0= 'GSSFilterSelect' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSFilterSelectType ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) )
-            // InternalFILTER.g:1903:2: (otherlv_0= 'GSSFilterSelect' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSFilterSelectType ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
+            // InternalFILTER.g:1739:2: ( (otherlv_0= 'GSSFilterSelect' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSFilterSelectType ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) )
+            // InternalFILTER.g:1740:2: (otherlv_0= 'GSSFilterSelect' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSFilterSelectType ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
             {
-            // InternalFILTER.g:1903:2: (otherlv_0= 'GSSFilterSelect' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSFilterSelectType ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
-            // InternalFILTER.g:1904:3: otherlv_0= 'GSSFilterSelect' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSFilterSelectType ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';'
+            // InternalFILTER.g:1740:2: (otherlv_0= 'GSSFilterSelect' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSFilterSelectType ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
+            // InternalFILTER.g:1741:3: otherlv_0= 'GSSFilterSelect' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSFilterSelectType ) ) otherlv_9= ';' (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';'
             {
             otherlv_0=(Token)match(input,38,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4605,7 +4223,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterSelectAccess().getGSSFilterSelectKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_36); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_35); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterSelectAccess().getLeftCurlyBracketKeyword_1());
@@ -4623,11 +4241,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterSelectAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalFILTER.g:1920:3: ( (lv_fromFile_4_0= RULE_ID ) )
-            // InternalFILTER.g:1921:4: (lv_fromFile_4_0= RULE_ID )
+            // InternalFILTER.g:1757:3: ( (lv_fromFile_4_0= RULE_ID ) )
+            // InternalFILTER.g:1758:4: (lv_fromFile_4_0= RULE_ID )
             {
-            // InternalFILTER.g:1921:4: (lv_fromFile_4_0= RULE_ID )
-            // InternalFILTER.g:1922:5: lv_fromFile_4_0= RULE_ID
+            // InternalFILTER.g:1758:4: (lv_fromFile_4_0= RULE_ID )
+            // InternalFILTER.g:1759:5: lv_fromFile_4_0= RULE_ID
             {
             lv_fromFile_4_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4653,7 +4271,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_31); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_30); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterSelectAccess().getSemicolonKeyword_5());
@@ -4665,17 +4283,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSFilterSelectAccess().getTypeKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_37); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_36); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSFilterSelectAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalFILTER.g:1950:3: ( (lv_type_8_0= ruleGSSFilterSelectType ) )
-            // InternalFILTER.g:1951:4: (lv_type_8_0= ruleGSSFilterSelectType )
+            // InternalFILTER.g:1787:3: ( (lv_type_8_0= ruleGSSFilterSelectType ) )
+            // InternalFILTER.g:1788:4: (lv_type_8_0= ruleGSSFilterSelectType )
             {
-            // InternalFILTER.g:1951:4: (lv_type_8_0= ruleGSSFilterSelectType )
-            // InternalFILTER.g:1952:5: lv_type_8_0= ruleGSSFilterSelectType
+            // InternalFILTER.g:1788:4: (lv_type_8_0= ruleGSSFilterSelectType )
+            // InternalFILTER.g:1789:5: lv_type_8_0= ruleGSSFilterSelectType
             {
             if ( state.backtracking==0 ) {
 
@@ -4706,22 +4324,22 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_38); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_37); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSFilterSelectAccess().getSemicolonKeyword_9());
               		
             }
-            // InternalFILTER.g:1973:3: (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // InternalFILTER.g:1810:3: (otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';' )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA13_0==40) ) {
-                alt13=1;
+            if ( (LA12_0==40) ) {
+                alt12=1;
             }
-            switch (alt13) {
+            switch (alt12) {
                 case 1 :
-                    // InternalFILTER.g:1974:4: otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';'
+                    // InternalFILTER.g:1811:4: otherlv_10= 'offset' otherlv_11= ':=' ( (lv_offset_12_0= ruleINTEGER ) ) otherlv_13= ';'
                     {
                     otherlv_10=(Token)match(input,40,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4729,17 +4347,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_10, grammarAccess.getGSSFilterSelectAccess().getOffsetKeyword_10_0());
                       			
                     }
-                    otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+                    otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_11, grammarAccess.getGSSFilterSelectAccess().getColonEqualsSignKeyword_10_1());
                       			
                     }
-                    // InternalFILTER.g:1982:4: ( (lv_offset_12_0= ruleINTEGER ) )
-                    // InternalFILTER.g:1983:5: (lv_offset_12_0= ruleINTEGER )
+                    // InternalFILTER.g:1819:4: ( (lv_offset_12_0= ruleINTEGER ) )
+                    // InternalFILTER.g:1820:5: (lv_offset_12_0= ruleINTEGER )
                     {
-                    // InternalFILTER.g:1983:5: (lv_offset_12_0= ruleINTEGER )
-                    // InternalFILTER.g:1984:6: lv_offset_12_0= ruleINTEGER
+                    // InternalFILTER.g:1820:5: (lv_offset_12_0= ruleINTEGER )
+                    // InternalFILTER.g:1821:6: lv_offset_12_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4770,7 +4388,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_39); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_38); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_13, grammarAccess.getGSSFilterSelectAccess().getSemicolonKeyword_10_3());
@@ -4782,16 +4400,16 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFILTER.g:2006:3: (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // InternalFILTER.g:1843:3: (otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';' )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA14_0==41) ) {
-                alt14=1;
+            if ( (LA13_0==41) ) {
+                alt13=1;
             }
-            switch (alt14) {
+            switch (alt13) {
                 case 1 :
-                    // InternalFILTER.g:2007:4: otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';'
+                    // InternalFILTER.g:1844:4: otherlv_14= 'size' otherlv_15= ':=' ( (lv_size_16_0= ruleINTEGER ) ) otherlv_17= ';'
                     {
                     otherlv_14=(Token)match(input,41,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4799,17 +4417,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_14, grammarAccess.getGSSFilterSelectAccess().getSizeKeyword_11_0());
                       			
                     }
-                    otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_15, grammarAccess.getGSSFilterSelectAccess().getColonEqualsSignKeyword_11_1());
                       			
                     }
-                    // InternalFILTER.g:2015:4: ( (lv_size_16_0= ruleINTEGER ) )
-                    // InternalFILTER.g:2016:5: (lv_size_16_0= ruleINTEGER )
+                    // InternalFILTER.g:1852:4: ( (lv_size_16_0= ruleINTEGER ) )
+                    // InternalFILTER.g:1853:5: (lv_size_16_0= ruleINTEGER )
                     {
-                    // InternalFILTER.g:2016:5: (lv_size_16_0= ruleINTEGER )
-                    // InternalFILTER.g:2017:6: lv_size_16_0= ruleINTEGER
+                    // InternalFILTER.g:1853:5: (lv_size_16_0= ruleINTEGER )
+                    // InternalFILTER.g:1854:6: lv_size_16_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4840,7 +4458,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_34); if (state.failed) return current;
+                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_33); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_17, grammarAccess.getGSSFilterSelectAccess().getSemicolonKeyword_11_3());
@@ -4852,16 +4470,16 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFILTER.g:2039:3: (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // InternalFILTER.g:1876:3: (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA15_0==37) ) {
-                alt15=1;
+            if ( (LA14_0==37) ) {
+                alt14=1;
             }
-            switch (alt15) {
+            switch (alt14) {
                 case 1 :
-                    // InternalFILTER.g:2040:4: otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';'
+                    // InternalFILTER.g:1877:4: otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';'
                     {
                     otherlv_18=(Token)match(input,37,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4869,17 +4487,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_18, grammarAccess.getGSSFilterSelectAccess().getMaskKeyword_12_0());
                       			
                     }
-                    otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_35); if (state.failed) return current;
+                    otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_34); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_19, grammarAccess.getGSSFilterSelectAccess().getColonEqualsSignKeyword_12_1());
                       			
                     }
-                    // InternalFILTER.g:2048:4: ( (lv_mask_20_0= RULE_HEXADECIMAL ) )
-                    // InternalFILTER.g:2049:5: (lv_mask_20_0= RULE_HEXADECIMAL )
+                    // InternalFILTER.g:1885:4: ( (lv_mask_20_0= RULE_HEXADECIMAL ) )
+                    // InternalFILTER.g:1886:5: (lv_mask_20_0= RULE_HEXADECIMAL )
                     {
-                    // InternalFILTER.g:2049:5: (lv_mask_20_0= RULE_HEXADECIMAL )
-                    // InternalFILTER.g:2050:6: lv_mask_20_0= RULE_HEXADECIMAL
+                    // InternalFILTER.g:1886:5: (lv_mask_20_0= RULE_HEXADECIMAL )
+                    // InternalFILTER.g:1887:6: lv_mask_20_0= RULE_HEXADECIMAL
                     {
                     lv_mask_20_0=(Token)match(input,RULE_HEXADECIMAL,FollowSets000.FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4905,7 +4523,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
+                    otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_21, grammarAccess.getGSSFilterSelectAccess().getSemicolonKeyword_12_3());
@@ -4954,7 +4572,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSFilterSelectLine"
-    // InternalFILTER.g:2083:1: entryRuleGSSFilterSelectLine returns [EObject current=null] : iv_ruleGSSFilterSelectLine= ruleGSSFilterSelectLine EOF ;
+    // InternalFILTER.g:1920:1: entryRuleGSSFilterSelectLine returns [EObject current=null] : iv_ruleGSSFilterSelectLine= ruleGSSFilterSelectLine EOF ;
     public final EObject entryRuleGSSFilterSelectLine() throws RecognitionException {
         EObject current = null;
 
@@ -4962,8 +4580,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:2083:60: (iv_ruleGSSFilterSelectLine= ruleGSSFilterSelectLine EOF )
-            // InternalFILTER.g:2084:2: iv_ruleGSSFilterSelectLine= ruleGSSFilterSelectLine EOF
+            // InternalFILTER.g:1920:60: (iv_ruleGSSFilterSelectLine= ruleGSSFilterSelectLine EOF )
+            // InternalFILTER.g:1921:2: iv_ruleGSSFilterSelectLine= ruleGSSFilterSelectLine EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterSelectLineRule()); 
@@ -4994,7 +4612,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterSelectLine"
-    // InternalFILTER.g:2090:1: ruleGSSFilterSelectLine returns [EObject current=null] : (otherlv_0= 'GSSFilterSelectLine' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'line' otherlv_7= ':=' ( (lv_line_8_0= ruleINTEGER ) ) otherlv_9= ';' (otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) ;
+    // InternalFILTER.g:1927:1: ruleGSSFilterSelectLine returns [EObject current=null] : (otherlv_0= 'GSSFilterSelectLine' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'line' otherlv_7= ':=' ( (lv_line_8_0= ruleINTEGER ) ) otherlv_9= ';' (otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) ;
     public final EObject ruleGSSFilterSelectLine() throws RecognitionException {
         EObject current = null;
 
@@ -5030,11 +4648,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:2096:2: ( (otherlv_0= 'GSSFilterSelectLine' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'line' otherlv_7= ':=' ( (lv_line_8_0= ruleINTEGER ) ) otherlv_9= ';' (otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) )
-            // InternalFILTER.g:2097:2: (otherlv_0= 'GSSFilterSelectLine' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'line' otherlv_7= ':=' ( (lv_line_8_0= ruleINTEGER ) ) otherlv_9= ';' (otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
+            // InternalFILTER.g:1933:2: ( (otherlv_0= 'GSSFilterSelectLine' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'line' otherlv_7= ':=' ( (lv_line_8_0= ruleINTEGER ) ) otherlv_9= ';' (otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' ) )
+            // InternalFILTER.g:1934:2: (otherlv_0= 'GSSFilterSelectLine' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'line' otherlv_7= ':=' ( (lv_line_8_0= ruleINTEGER ) ) otherlv_9= ';' (otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
             {
-            // InternalFILTER.g:2097:2: (otherlv_0= 'GSSFilterSelectLine' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'line' otherlv_7= ':=' ( (lv_line_8_0= ruleINTEGER ) ) otherlv_9= ';' (otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
-            // InternalFILTER.g:2098:3: otherlv_0= 'GSSFilterSelectLine' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'line' otherlv_7= ':=' ( (lv_line_8_0= ruleINTEGER ) ) otherlv_9= ';' (otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';'
+            // InternalFILTER.g:1934:2: (otherlv_0= 'GSSFilterSelectLine' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'line' otherlv_7= ':=' ( (lv_line_8_0= ruleINTEGER ) ) otherlv_9= ';' (otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';' )
+            // InternalFILTER.g:1935:3: otherlv_0= 'GSSFilterSelectLine' otherlv_1= '{' otherlv_2= 'fromFile' otherlv_3= ':=' ( (lv_fromFile_4_0= RULE_ID ) ) otherlv_5= ';' otherlv_6= 'line' otherlv_7= ':=' ( (lv_line_8_0= ruleINTEGER ) ) otherlv_9= ';' (otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';' )? (otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';' )? (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )? otherlv_22= '}' otherlv_23= ';'
             {
             otherlv_0=(Token)match(input,42,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5042,7 +4660,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterSelectLineAccess().getGSSFilterSelectLineKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_36); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_35); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterSelectLineAccess().getLeftCurlyBracketKeyword_1());
@@ -5060,11 +4678,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterSelectLineAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalFILTER.g:2114:3: ( (lv_fromFile_4_0= RULE_ID ) )
-            // InternalFILTER.g:2115:4: (lv_fromFile_4_0= RULE_ID )
+            // InternalFILTER.g:1951:3: ( (lv_fromFile_4_0= RULE_ID ) )
+            // InternalFILTER.g:1952:4: (lv_fromFile_4_0= RULE_ID )
             {
-            // InternalFILTER.g:2115:4: (lv_fromFile_4_0= RULE_ID )
-            // InternalFILTER.g:2116:5: lv_fromFile_4_0= RULE_ID
+            // InternalFILTER.g:1952:4: (lv_fromFile_4_0= RULE_ID )
+            // InternalFILTER.g:1953:5: lv_fromFile_4_0= RULE_ID
             {
             lv_fromFile_4_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5090,7 +4708,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_40); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_39); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterSelectLineAccess().getSemicolonKeyword_5());
@@ -5102,17 +4720,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_6, grammarAccess.getGSSFilterSelectLineAccess().getLineKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getGSSFilterSelectLineAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalFILTER.g:2144:3: ( (lv_line_8_0= ruleINTEGER ) )
-            // InternalFILTER.g:2145:4: (lv_line_8_0= ruleINTEGER )
+            // InternalFILTER.g:1981:3: ( (lv_line_8_0= ruleINTEGER ) )
+            // InternalFILTER.g:1982:4: (lv_line_8_0= ruleINTEGER )
             {
-            // InternalFILTER.g:2145:4: (lv_line_8_0= ruleINTEGER )
-            // InternalFILTER.g:2146:5: lv_line_8_0= ruleINTEGER
+            // InternalFILTER.g:1982:4: (lv_line_8_0= ruleINTEGER )
+            // InternalFILTER.g:1983:5: lv_line_8_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -5143,22 +4761,22 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_41); if (state.failed) return current;
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_40); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getGSSFilterSelectLineAccess().getSemicolonKeyword_9());
               		
             }
-            // InternalFILTER.g:2167:3: (otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';' )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // InternalFILTER.g:2004:3: (otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';' )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA16_0==44) ) {
-                alt16=1;
+            if ( (LA15_0==44) ) {
+                alt15=1;
             }
-            switch (alt16) {
+            switch (alt15) {
                 case 1 :
-                    // InternalFILTER.g:2168:4: otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';'
+                    // InternalFILTER.g:2005:4: otherlv_10= 'leftTrim' otherlv_11= ':=' ( (lv_leftTrim_12_0= ruleINTEGER ) ) otherlv_13= ';'
                     {
                     otherlv_10=(Token)match(input,44,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5166,17 +4784,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_10, grammarAccess.getGSSFilterSelectLineAccess().getLeftTrimKeyword_10_0());
                       			
                     }
-                    otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+                    otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_11, grammarAccess.getGSSFilterSelectLineAccess().getColonEqualsSignKeyword_10_1());
                       			
                     }
-                    // InternalFILTER.g:2176:4: ( (lv_leftTrim_12_0= ruleINTEGER ) )
-                    // InternalFILTER.g:2177:5: (lv_leftTrim_12_0= ruleINTEGER )
+                    // InternalFILTER.g:2013:4: ( (lv_leftTrim_12_0= ruleINTEGER ) )
+                    // InternalFILTER.g:2014:5: (lv_leftTrim_12_0= ruleINTEGER )
                     {
-                    // InternalFILTER.g:2177:5: (lv_leftTrim_12_0= ruleINTEGER )
-                    // InternalFILTER.g:2178:6: lv_leftTrim_12_0= ruleINTEGER
+                    // InternalFILTER.g:2014:5: (lv_leftTrim_12_0= ruleINTEGER )
+                    // InternalFILTER.g:2015:6: lv_leftTrim_12_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5207,7 +4825,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_42); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_41); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_13, grammarAccess.getGSSFilterSelectLineAccess().getSemicolonKeyword_10_3());
@@ -5219,16 +4837,16 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFILTER.g:2200:3: (otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';' )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // InternalFILTER.g:2037:3: (otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';' )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA17_0==45) ) {
-                alt17=1;
+            if ( (LA16_0==45) ) {
+                alt16=1;
             }
-            switch (alt17) {
+            switch (alt16) {
                 case 1 :
-                    // InternalFILTER.g:2201:4: otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';'
+                    // InternalFILTER.g:2038:4: otherlv_14= 'rightTrim' otherlv_15= ':=' ( (lv_rightTrim_16_0= ruleINTEGER ) ) otherlv_17= ';'
                     {
                     otherlv_14=(Token)match(input,45,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5236,17 +4854,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_14, grammarAccess.getGSSFilterSelectLineAccess().getRightTrimKeyword_11_0());
                       			
                     }
-                    otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_15, grammarAccess.getGSSFilterSelectLineAccess().getColonEqualsSignKeyword_11_1());
                       			
                     }
-                    // InternalFILTER.g:2209:4: ( (lv_rightTrim_16_0= ruleINTEGER ) )
-                    // InternalFILTER.g:2210:5: (lv_rightTrim_16_0= ruleINTEGER )
+                    // InternalFILTER.g:2046:4: ( (lv_rightTrim_16_0= ruleINTEGER ) )
+                    // InternalFILTER.g:2047:5: (lv_rightTrim_16_0= ruleINTEGER )
                     {
-                    // InternalFILTER.g:2210:5: (lv_rightTrim_16_0= ruleINTEGER )
-                    // InternalFILTER.g:2211:6: lv_rightTrim_16_0= ruleINTEGER
+                    // InternalFILTER.g:2047:5: (lv_rightTrim_16_0= ruleINTEGER )
+                    // InternalFILTER.g:2048:6: lv_rightTrim_16_0= ruleINTEGER
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5277,7 +4895,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_34); if (state.failed) return current;
+                    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_33); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_17, grammarAccess.getGSSFilterSelectLineAccess().getSemicolonKeyword_11_3());
@@ -5289,16 +4907,16 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFILTER.g:2233:3: (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // InternalFILTER.g:2070:3: (otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';' )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA18_0==37) ) {
-                alt18=1;
+            if ( (LA17_0==37) ) {
+                alt17=1;
             }
-            switch (alt18) {
+            switch (alt17) {
                 case 1 :
-                    // InternalFILTER.g:2234:4: otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';'
+                    // InternalFILTER.g:2071:4: otherlv_18= 'mask' otherlv_19= ':=' ( (lv_mask_20_0= RULE_HEXADECIMAL ) ) otherlv_21= ';'
                     {
                     otherlv_18=(Token)match(input,37,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5306,17 +4924,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_18, grammarAccess.getGSSFilterSelectLineAccess().getMaskKeyword_12_0());
                       			
                     }
-                    otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_35); if (state.failed) return current;
+                    otherlv_19=(Token)match(input,13,FollowSets000.FOLLOW_34); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_19, grammarAccess.getGSSFilterSelectLineAccess().getColonEqualsSignKeyword_12_1());
                       			
                     }
-                    // InternalFILTER.g:2242:4: ( (lv_mask_20_0= RULE_HEXADECIMAL ) )
-                    // InternalFILTER.g:2243:5: (lv_mask_20_0= RULE_HEXADECIMAL )
+                    // InternalFILTER.g:2079:4: ( (lv_mask_20_0= RULE_HEXADECIMAL ) )
+                    // InternalFILTER.g:2080:5: (lv_mask_20_0= RULE_HEXADECIMAL )
                     {
-                    // InternalFILTER.g:2243:5: (lv_mask_20_0= RULE_HEXADECIMAL )
-                    // InternalFILTER.g:2244:6: lv_mask_20_0= RULE_HEXADECIMAL
+                    // InternalFILTER.g:2080:5: (lv_mask_20_0= RULE_HEXADECIMAL )
+                    // InternalFILTER.g:2081:6: lv_mask_20_0= RULE_HEXADECIMAL
                     {
                     lv_mask_20_0=(Token)match(input,RULE_HEXADECIMAL,FollowSets000.FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5342,7 +4960,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
+                    otherlv_21=(Token)match(input,14,FollowSets000.FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_21, grammarAccess.getGSSFilterSelectLineAccess().getSemicolonKeyword_12_3());
@@ -5391,7 +5009,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSFilterMaxterm"
-    // InternalFILTER.g:2277:1: entryRuleGSSFilterMaxterm returns [EObject current=null] : iv_ruleGSSFilterMaxterm= ruleGSSFilterMaxterm EOF ;
+    // InternalFILTER.g:2114:1: entryRuleGSSFilterMaxterm returns [EObject current=null] : iv_ruleGSSFilterMaxterm= ruleGSSFilterMaxterm EOF ;
     public final EObject entryRuleGSSFilterMaxterm() throws RecognitionException {
         EObject current = null;
 
@@ -5399,8 +5017,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:2277:57: (iv_ruleGSSFilterMaxterm= ruleGSSFilterMaxterm EOF )
-            // InternalFILTER.g:2278:2: iv_ruleGSSFilterMaxterm= ruleGSSFilterMaxterm EOF
+            // InternalFILTER.g:2114:57: (iv_ruleGSSFilterMaxterm= ruleGSSFilterMaxterm EOF )
+            // InternalFILTER.g:2115:2: iv_ruleGSSFilterMaxterm= ruleGSSFilterMaxterm EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterMaxtermRule()); 
@@ -5431,7 +5049,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterMaxterm"
-    // InternalFILTER.g:2284:1: ruleGSSFilterMaxterm returns [EObject current=null] : (otherlv_0= 'GSSFilterMaxterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' ) ;
+    // InternalFILTER.g:2121:1: ruleGSSFilterMaxterm returns [EObject current=null] : (otherlv_0= 'GSSFilterMaxterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' ) ;
     public final EObject ruleGSSFilterMaxterm() throws RecognitionException {
         EObject current = null;
 
@@ -5451,11 +5069,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:2290:2: ( (otherlv_0= 'GSSFilterMaxterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' ) )
-            // InternalFILTER.g:2291:2: (otherlv_0= 'GSSFilterMaxterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' )
+            // InternalFILTER.g:2127:2: ( (otherlv_0= 'GSSFilterMaxterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' ) )
+            // InternalFILTER.g:2128:2: (otherlv_0= 'GSSFilterMaxterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' )
             {
-            // InternalFILTER.g:2291:2: (otherlv_0= 'GSSFilterMaxterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' )
-            // InternalFILTER.g:2292:3: otherlv_0= 'GSSFilterMaxterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';'
+            // InternalFILTER.g:2128:2: (otherlv_0= 'GSSFilterMaxterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' )
+            // InternalFILTER.g:2129:3: otherlv_0= 'GSSFilterMaxterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';'
             {
             otherlv_0=(Token)match(input,46,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5463,7 +5081,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterMaxtermAccess().getGSSFilterMaxtermKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterMaxtermAccess().getLeftCurlyBracketKeyword_1());
@@ -5475,17 +5093,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterMaxtermAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterMaxtermAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalFILTER.g:2308:3: ( (lv_id_4_0= ruleINTEGER ) )
-            // InternalFILTER.g:2309:4: (lv_id_4_0= ruleINTEGER )
+            // InternalFILTER.g:2145:3: ( (lv_id_4_0= ruleINTEGER ) )
+            // InternalFILTER.g:2146:4: (lv_id_4_0= ruleINTEGER )
             {
-            // InternalFILTER.g:2309:4: (lv_id_4_0= ruleINTEGER )
-            // InternalFILTER.g:2310:5: lv_id_4_0= ruleINTEGER
+            // InternalFILTER.g:2146:4: (lv_id_4_0= ruleINTEGER )
+            // InternalFILTER.g:2147:5: lv_id_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -5516,37 +5134,37 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_43); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_42); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterMaxtermAccess().getSemicolonKeyword_5());
               		
             }
-            // InternalFILTER.g:2331:3: ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+
-            int cnt19=0;
-            loop19:
+            // InternalFILTER.g:2168:3: ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+
+            int cnt18=0;
+            loop18:
             do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
+                int alt18=2;
+                int LA18_0 = input.LA(1);
 
-                if ( (LA19_0==48) ) {
-                    alt19=1;
+                if ( (LA18_0==48) ) {
+                    alt18=1;
                 }
 
 
-                switch (alt19) {
+                switch (alt18) {
             	case 1 :
-            	    // InternalFILTER.g:2332:4: (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef )
+            	    // InternalFILTER.g:2169:4: (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef )
             	    {
-            	    // InternalFILTER.g:2332:4: (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef )
-            	    // InternalFILTER.g:2333:5: lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef
+            	    // InternalFILTER.g:2169:4: (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef )
+            	    // InternalFILTER.g:2170:5: lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef
             	    {
             	    if ( state.backtracking==0 ) {
 
             	      					newCompositeNode(grammarAccess.getGSSFilterMaxtermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_6_0());
             	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_44);
+            	    pushFollow(FollowSets000.FOLLOW_43);
             	    lv_BoolVarRef_6_0=ruleGSSFilterBoolVarRef();
 
             	    state._fsp--;
@@ -5572,13 +5190,13 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt19 >= 1 ) break loop19;
+            	    if ( cnt18 >= 1 ) break loop18;
             	    if (state.backtracking>0) {state.failed=true; return current;}
                         EarlyExitException eee =
-                            new EarlyExitException(19, input);
+                            new EarlyExitException(18, input);
                         throw eee;
                 }
-                cnt19++;
+                cnt18++;
             } while (true);
 
             otherlv_7=(Token)match(input,20,FollowSets000.FOLLOW_6); if (state.failed) return current;
@@ -5618,7 +5236,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSFilterMinterm"
-    // InternalFILTER.g:2362:1: entryRuleGSSFilterMinterm returns [EObject current=null] : iv_ruleGSSFilterMinterm= ruleGSSFilterMinterm EOF ;
+    // InternalFILTER.g:2199:1: entryRuleGSSFilterMinterm returns [EObject current=null] : iv_ruleGSSFilterMinterm= ruleGSSFilterMinterm EOF ;
     public final EObject entryRuleGSSFilterMinterm() throws RecognitionException {
         EObject current = null;
 
@@ -5626,8 +5244,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:2362:57: (iv_ruleGSSFilterMinterm= ruleGSSFilterMinterm EOF )
-            // InternalFILTER.g:2363:2: iv_ruleGSSFilterMinterm= ruleGSSFilterMinterm EOF
+            // InternalFILTER.g:2199:57: (iv_ruleGSSFilterMinterm= ruleGSSFilterMinterm EOF )
+            // InternalFILTER.g:2200:2: iv_ruleGSSFilterMinterm= ruleGSSFilterMinterm EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterMintermRule()); 
@@ -5658,7 +5276,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterMinterm"
-    // InternalFILTER.g:2369:1: ruleGSSFilterMinterm returns [EObject current=null] : (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' ) ;
+    // InternalFILTER.g:2206:1: ruleGSSFilterMinterm returns [EObject current=null] : (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' ) ;
     public final EObject ruleGSSFilterMinterm() throws RecognitionException {
         EObject current = null;
 
@@ -5678,11 +5296,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:2375:2: ( (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' ) )
-            // InternalFILTER.g:2376:2: (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' )
+            // InternalFILTER.g:2212:2: ( (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' ) )
+            // InternalFILTER.g:2213:2: (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' )
             {
-            // InternalFILTER.g:2376:2: (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' )
-            // InternalFILTER.g:2377:3: otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';'
+            // InternalFILTER.g:2213:2: (otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';' )
+            // InternalFILTER.g:2214:3: otherlv_0= 'GSSFilterMinterm' otherlv_1= '{' otherlv_2= 'id' otherlv_3= ':=' ( (lv_id_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+ otherlv_7= '}' otherlv_8= ';'
             {
             otherlv_0=(Token)match(input,47,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5690,7 +5308,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterMintermAccess().getGSSFilterMintermKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterMintermAccess().getLeftCurlyBracketKeyword_1());
@@ -5702,17 +5320,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterMintermAccess().getIdKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterMintermAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalFILTER.g:2393:3: ( (lv_id_4_0= ruleINTEGER ) )
-            // InternalFILTER.g:2394:4: (lv_id_4_0= ruleINTEGER )
+            // InternalFILTER.g:2230:3: ( (lv_id_4_0= ruleINTEGER ) )
+            // InternalFILTER.g:2231:4: (lv_id_4_0= ruleINTEGER )
             {
-            // InternalFILTER.g:2394:4: (lv_id_4_0= ruleINTEGER )
-            // InternalFILTER.g:2395:5: lv_id_4_0= ruleINTEGER
+            // InternalFILTER.g:2231:4: (lv_id_4_0= ruleINTEGER )
+            // InternalFILTER.g:2232:5: lv_id_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -5743,37 +5361,37 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_43); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_42); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterMintermAccess().getSemicolonKeyword_5());
               		
             }
-            // InternalFILTER.g:2416:3: ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+
-            int cnt20=0;
-            loop20:
+            // InternalFILTER.g:2253:3: ( (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef ) )+
+            int cnt19=0;
+            loop19:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                if ( (LA20_0==48) ) {
-                    alt20=1;
+                if ( (LA19_0==48) ) {
+                    alt19=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt19) {
             	case 1 :
-            	    // InternalFILTER.g:2417:4: (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef )
+            	    // InternalFILTER.g:2254:4: (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef )
             	    {
-            	    // InternalFILTER.g:2417:4: (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef )
-            	    // InternalFILTER.g:2418:5: lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef
+            	    // InternalFILTER.g:2254:4: (lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef )
+            	    // InternalFILTER.g:2255:5: lv_BoolVarRef_6_0= ruleGSSFilterBoolVarRef
             	    {
             	    if ( state.backtracking==0 ) {
 
             	      					newCompositeNode(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefGSSFilterBoolVarRefParserRuleCall_6_0());
             	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_44);
+            	    pushFollow(FollowSets000.FOLLOW_43);
             	    lv_BoolVarRef_6_0=ruleGSSFilterBoolVarRef();
 
             	    state._fsp--;
@@ -5799,13 +5417,13 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt20 >= 1 ) break loop20;
+            	    if ( cnt19 >= 1 ) break loop19;
             	    if (state.backtracking>0) {state.failed=true; return current;}
                         EarlyExitException eee =
-                            new EarlyExitException(20, input);
+                            new EarlyExitException(19, input);
                         throw eee;
                 }
-                cnt20++;
+                cnt19++;
             } while (true);
 
             otherlv_7=(Token)match(input,20,FollowSets000.FOLLOW_6); if (state.failed) return current;
@@ -5845,7 +5463,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSFilterBoolVarRef"
-    // InternalFILTER.g:2447:1: entryRuleGSSFilterBoolVarRef returns [EObject current=null] : iv_ruleGSSFilterBoolVarRef= ruleGSSFilterBoolVarRef EOF ;
+    // InternalFILTER.g:2284:1: entryRuleGSSFilterBoolVarRef returns [EObject current=null] : iv_ruleGSSFilterBoolVarRef= ruleGSSFilterBoolVarRef EOF ;
     public final EObject entryRuleGSSFilterBoolVarRef() throws RecognitionException {
         EObject current = null;
 
@@ -5853,8 +5471,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:2447:60: (iv_ruleGSSFilterBoolVarRef= ruleGSSFilterBoolVarRef EOF )
-            // InternalFILTER.g:2448:2: iv_ruleGSSFilterBoolVarRef= ruleGSSFilterBoolVarRef EOF
+            // InternalFILTER.g:2284:60: (iv_ruleGSSFilterBoolVarRef= ruleGSSFilterBoolVarRef EOF )
+            // InternalFILTER.g:2285:2: iv_ruleGSSFilterBoolVarRef= ruleGSSFilterBoolVarRef EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSFilterBoolVarRefRule()); 
@@ -5885,7 +5503,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterBoolVarRef"
-    // InternalFILTER.g:2454:1: ruleGSSFilterBoolVarRef returns [EObject current=null] : (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) ;
+    // InternalFILTER.g:2291:1: ruleGSSFilterBoolVarRef returns [EObject current=null] : (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) ;
     public final EObject ruleGSSFilterBoolVarRef() throws RecognitionException {
         EObject current = null;
 
@@ -5903,11 +5521,11 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:2460:2: ( (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) )
-            // InternalFILTER.g:2461:2: (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
+            // InternalFILTER.g:2297:2: ( (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) )
+            // InternalFILTER.g:2298:2: (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
             {
-            // InternalFILTER.g:2461:2: (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
-            // InternalFILTER.g:2462:3: otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
+            // InternalFILTER.g:2298:2: (otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
+            // InternalFILTER.g:2299:3: otherlv_0= 'GSSFilterBoolVarRef' otherlv_1= '{' otherlv_2= 'idRef' otherlv_3= ':=' ( (lv_idRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
             {
             otherlv_0=(Token)match(input,48,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5915,7 +5533,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getGSSFilterBoolVarRefAccess().getGSSFilterBoolVarRefKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_45); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FollowSets000.FOLLOW_44); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSFilterBoolVarRefAccess().getLeftCurlyBracketKeyword_1());
@@ -5927,17 +5545,17 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_2, grammarAccess.getGSSFilterBoolVarRefAccess().getIdRefKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSFilterBoolVarRefAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalFILTER.g:2478:3: ( (lv_idRef_4_0= ruleINTEGER ) )
-            // InternalFILTER.g:2479:4: (lv_idRef_4_0= ruleINTEGER )
+            // InternalFILTER.g:2315:3: ( (lv_idRef_4_0= ruleINTEGER ) )
+            // InternalFILTER.g:2316:4: (lv_idRef_4_0= ruleINTEGER )
             {
-            // InternalFILTER.g:2479:4: (lv_idRef_4_0= ruleINTEGER )
-            // InternalFILTER.g:2480:5: lv_idRef_4_0= ruleINTEGER
+            // InternalFILTER.g:2316:4: (lv_idRef_4_0= ruleINTEGER )
+            // InternalFILTER.g:2317:5: lv_idRef_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -5968,7 +5586,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_27); if (state.failed) return current;
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_26); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSFilterBoolVarRefAccess().getSemicolonKeyword_5());
@@ -6011,7 +5629,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalFILTER.g:2513:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalFILTER.g:2350:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -6019,8 +5637,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:2513:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalFILTER.g:2514:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalFILTER.g:2350:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalFILTER.g:2351:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameRule()); 
@@ -6051,7 +5669,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalFILTER.g:2520:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalFILTER.g:2357:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6063,13 +5681,13 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:2526:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // InternalFILTER.g:2527:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalFILTER.g:2363:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalFILTER.g:2364:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // InternalFILTER.g:2527:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // InternalFILTER.g:2528:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // InternalFILTER.g:2364:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalFILTER.g:2365:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_46); if (state.failed) return current;
+            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_45); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_ID_0);
@@ -6080,20 +5698,20 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
               		
             }
-            // InternalFILTER.g:2535:3: (kw= '.' this_ID_2= RULE_ID )*
-            loop21:
+            // InternalFILTER.g:2372:3: (kw= '.' this_ID_2= RULE_ID )*
+            loop20:
             do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
+                int alt20=2;
+                int LA20_0 = input.LA(1);
 
-                if ( (LA21_0==50) ) {
-                    alt21=1;
+                if ( (LA20_0==50) ) {
+                    alt20=1;
                 }
 
 
-                switch (alt21) {
+                switch (alt20) {
             	case 1 :
-            	    // InternalFILTER.g:2536:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalFILTER.g:2373:4: kw= '.' this_ID_2= RULE_ID
             	    {
             	    kw=(Token)match(input,50,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -6102,7 +5720,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_46); if (state.failed) return current;
+            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_45); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_ID_2);
@@ -6118,7 +5736,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop21;
+            	    break loop20;
                 }
             } while (true);
 
@@ -6147,7 +5765,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersion"
-    // InternalFILTER.g:2553:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
+    // InternalFILTER.g:2390:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
     public final String entryRuleVersion() throws RecognitionException {
         String current = null;
 
@@ -6155,8 +5773,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:2553:47: (iv_ruleVersion= ruleVersion EOF )
-            // InternalFILTER.g:2554:2: iv_ruleVersion= ruleVersion EOF
+            // InternalFILTER.g:2390:47: (iv_ruleVersion= ruleVersion EOF )
+            // InternalFILTER.g:2391:2: iv_ruleVersion= ruleVersion EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionRule()); 
@@ -6187,7 +5805,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersion"
-    // InternalFILTER.g:2560:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
+    // InternalFILTER.g:2397:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
     public final AntlrDatatypeRuleToken ruleVersion() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6203,48 +5821,48 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:2566:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
-            // InternalFILTER.g:2567:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalFILTER.g:2403:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
+            // InternalFILTER.g:2404:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
             {
-            // InternalFILTER.g:2567:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
-            // InternalFILTER.g:2568:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalFILTER.g:2404:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalFILTER.g:2405:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             {
-            // InternalFILTER.g:2568:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // InternalFILTER.g:2405:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA23_0==RULE_INT) ) {
-                int LA23_1 = input.LA(2);
+            if ( (LA22_0==RULE_INT) ) {
+                int LA22_1 = input.LA(2);
 
-                if ( (LA23_1==RULE_ID) ) {
-                    alt23=2;
+                if ( (LA22_1==RULE_ID) ) {
+                    alt22=2;
                 }
-                else if ( (LA23_1==EOF||LA23_1==14||LA23_1==50||LA23_1==52) ) {
-                    alt23=1;
+                else if ( (LA22_1==EOF||LA22_1==14||LA22_1==50||LA22_1==52) ) {
+                    alt22=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 23, 1, input);
+                        new NoViableAltException("", 22, 1, input);
 
                     throw nvae;
                 }
             }
-            else if ( (LA23_0==RULE_ID) ) {
-                alt23=2;
+            else if ( (LA22_0==RULE_ID) ) {
+                alt22=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 23, 0, input);
+                    new NoViableAltException("", 22, 0, input);
 
                 throw nvae;
             }
-            switch (alt23) {
+            switch (alt22) {
                 case 1 :
-                    // InternalFILTER.g:2569:4: this_INT_0= RULE_INT
+                    // InternalFILTER.g:2406:4: this_INT_0= RULE_INT
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_46); if (state.failed) return current;
+                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_45); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current.merge(this_INT_0);
@@ -6259,21 +5877,21 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTER.g:2577:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalFILTER.g:2414:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
                     {
-                    // InternalFILTER.g:2577:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
-                    // InternalFILTER.g:2578:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
+                    // InternalFILTER.g:2414:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalFILTER.g:2415:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
                     {
-                    // InternalFILTER.g:2578:5: (this_INT_1= RULE_INT )?
-                    int alt22=2;
-                    int LA22_0 = input.LA(1);
+                    // InternalFILTER.g:2415:5: (this_INT_1= RULE_INT )?
+                    int alt21=2;
+                    int LA21_0 = input.LA(1);
 
-                    if ( (LA22_0==RULE_INT) ) {
-                        alt22=1;
+                    if ( (LA21_0==RULE_INT) ) {
+                        alt21=1;
                     }
-                    switch (alt22) {
+                    switch (alt21) {
                         case 1 :
-                            // InternalFILTER.g:2579:6: this_INT_1= RULE_INT
+                            // InternalFILTER.g:2416:6: this_INT_1= RULE_INT
                             {
                             this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_7); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -6292,7 +5910,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_46); if (state.failed) return current;
+                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_45); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					current.merge(this_ID_2);
@@ -6312,20 +5930,20 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFILTER.g:2596:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
-            loop26:
+            // InternalFILTER.g:2433:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            loop25:
             do {
-                int alt26=2;
-                int LA26_0 = input.LA(1);
+                int alt25=2;
+                int LA25_0 = input.LA(1);
 
-                if ( (LA26_0==50) ) {
-                    alt26=1;
+                if ( (LA25_0==50) ) {
+                    alt25=1;
                 }
 
 
-                switch (alt26) {
+                switch (alt25) {
             	case 1 :
-            	    // InternalFILTER.g:2597:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalFILTER.g:2434:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    {
             	    kw=(Token)match(input,50,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -6334,42 +5952,42 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(kw, grammarAccess.getVersionAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    // InternalFILTER.g:2602:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
-            	    int alt25=2;
-            	    int LA25_0 = input.LA(1);
+            	    // InternalFILTER.g:2439:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    int alt24=2;
+            	    int LA24_0 = input.LA(1);
 
-            	    if ( (LA25_0==RULE_INT) ) {
-            	        int LA25_1 = input.LA(2);
+            	    if ( (LA24_0==RULE_INT) ) {
+            	        int LA24_1 = input.LA(2);
 
-            	        if ( (LA25_1==EOF||LA25_1==14||LA25_1==50||LA25_1==52) ) {
-            	            alt25=1;
+            	        if ( (LA24_1==RULE_ID) ) {
+            	            alt24=2;
             	        }
-            	        else if ( (LA25_1==RULE_ID) ) {
-            	            alt25=2;
+            	        else if ( (LA24_1==EOF||LA24_1==14||LA24_1==50||LA24_1==52) ) {
+            	            alt24=1;
             	        }
             	        else {
             	            if (state.backtracking>0) {state.failed=true; return current;}
             	            NoViableAltException nvae =
-            	                new NoViableAltException("", 25, 1, input);
+            	                new NoViableAltException("", 24, 1, input);
 
             	            throw nvae;
             	        }
             	    }
-            	    else if ( (LA25_0==RULE_ID) ) {
-            	        alt25=2;
+            	    else if ( (LA24_0==RULE_ID) ) {
+            	        alt24=2;
             	    }
             	    else {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 25, 0, input);
+            	            new NoViableAltException("", 24, 0, input);
 
             	        throw nvae;
             	    }
-            	    switch (alt25) {
+            	    switch (alt24) {
             	        case 1 :
-            	            // InternalFILTER.g:2603:5: this_INT_4= RULE_INT
+            	            // InternalFILTER.g:2440:5: this_INT_4= RULE_INT
             	            {
-            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_46); if (state.failed) return current;
+            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_45); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              					current.merge(this_INT_4);
@@ -6384,21 +6002,21 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalFILTER.g:2611:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalFILTER.g:2448:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
             	            {
-            	            // InternalFILTER.g:2611:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
-            	            // InternalFILTER.g:2612:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
+            	            // InternalFILTER.g:2448:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalFILTER.g:2449:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
             	            {
-            	            // InternalFILTER.g:2612:6: (this_INT_5= RULE_INT )?
-            	            int alt24=2;
-            	            int LA24_0 = input.LA(1);
+            	            // InternalFILTER.g:2449:6: (this_INT_5= RULE_INT )?
+            	            int alt23=2;
+            	            int LA23_0 = input.LA(1);
 
-            	            if ( (LA24_0==RULE_INT) ) {
-            	                alt24=1;
+            	            if ( (LA23_0==RULE_INT) ) {
+            	                alt23=1;
             	            }
-            	            switch (alt24) {
+            	            switch (alt23) {
             	                case 1 :
-            	                    // InternalFILTER.g:2613:7: this_INT_5= RULE_INT
+            	                    // InternalFILTER.g:2450:7: this_INT_5= RULE_INT
             	                    {
             	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	                    if ( state.backtracking==0 ) {
@@ -6417,7 +6035,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             	            }
 
-            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_46); if (state.failed) return current;
+            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_45); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              						current.merge(this_ID_6);
@@ -6442,7 +6060,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop26;
+            	    break loop25;
                 }
             } while (true);
 
@@ -6471,7 +6089,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersionedQualifiedName"
-    // InternalFILTER.g:2635:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
+    // InternalFILTER.g:2472:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
     public final String entryRuleVersionedQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -6479,8 +6097,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:2635:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
-            // InternalFILTER.g:2636:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
+            // InternalFILTER.g:2472:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
+            // InternalFILTER.g:2473:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionedQualifiedNameRule()); 
@@ -6511,7 +6129,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersionedQualifiedName"
-    // InternalFILTER.g:2642:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
+    // InternalFILTER.g:2479:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
     public final AntlrDatatypeRuleToken ruleVersionedQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6525,18 +6143,18 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:2648:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
-            // InternalFILTER.g:2649:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalFILTER.g:2485:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
+            // InternalFILTER.g:2486:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
             {
-            // InternalFILTER.g:2649:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
-            // InternalFILTER.g:2650:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
+            // InternalFILTER.g:2486:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalFILTER.g:2487:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
             {
             if ( state.backtracking==0 ) {
 
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_47);
+            pushFollow(FollowSets000.FOLLOW_46);
             this_QualifiedName_0=ruleQualifiedName();
 
             state._fsp--;
@@ -6563,7 +6181,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_48);
+            pushFollow(FollowSets000.FOLLOW_47);
             this_Version_2=ruleVersion();
 
             state._fsp--;
@@ -6610,7 +6228,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersionedQualifiedReferenceName"
-    // InternalFILTER.g:2684:1: entryRuleVersionedQualifiedReferenceName returns [String current=null] : iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF ;
+    // InternalFILTER.g:2521:1: entryRuleVersionedQualifiedReferenceName returns [String current=null] : iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF ;
     public final String entryRuleVersionedQualifiedReferenceName() throws RecognitionException {
         String current = null;
 
@@ -6618,8 +6236,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:2684:71: (iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF )
-            // InternalFILTER.g:2685:2: iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF
+            // InternalFILTER.g:2521:71: (iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF )
+            // InternalFILTER.g:2522:2: iv_ruleVersionedQualifiedReferenceName= ruleVersionedQualifiedReferenceName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameRule()); 
@@ -6650,7 +6268,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersionedQualifiedReferenceName"
-    // InternalFILTER.g:2691:1: ruleVersionedQualifiedReferenceName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* ) ;
+    // InternalFILTER.g:2528:1: ruleVersionedQualifiedReferenceName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleVersionedQualifiedReferenceName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6664,33 +6282,33 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:2697:2: ( ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* ) )
-            // InternalFILTER.g:2698:2: ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* )
+            // InternalFILTER.g:2534:2: ( ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* ) )
+            // InternalFILTER.g:2535:2: ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* )
             {
-            // InternalFILTER.g:2698:2: ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* )
-            // InternalFILTER.g:2699:3: (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )*
+            // InternalFILTER.g:2535:2: ( (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )* )
+            // InternalFILTER.g:2536:3: (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )? this_ID_2= RULE_ID (kw= '::' this_ID_4= RULE_ID )*
             {
-            // InternalFILTER.g:2699:3: (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // InternalFILTER.g:2536:3: (this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::' )?
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA27_0==RULE_ID) ) {
-                int LA27_1 = input.LA(2);
+            if ( (LA26_0==RULE_ID) ) {
+                int LA26_1 = input.LA(2);
 
-                if ( ((LA27_1>=50 && LA27_1<=51)) ) {
-                    alt27=1;
+                if ( ((LA26_1>=50 && LA26_1<=51)) ) {
+                    alt26=1;
                 }
             }
-            switch (alt27) {
+            switch (alt26) {
                 case 1 :
-                    // InternalFILTER.g:2700:4: this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::'
+                    // InternalFILTER.g:2537:4: this_VersionedQualifiedName_0= ruleVersionedQualifiedName kw= '::'
                     {
                     if ( state.backtracking==0 ) {
 
                       				newCompositeNode(grammarAccess.getVersionedQualifiedReferenceNameAccess().getVersionedQualifiedNameParserRuleCall_0_0());
                       			
                     }
-                    pushFollow(FollowSets000.FOLLOW_49);
+                    pushFollow(FollowSets000.FOLLOW_48);
                     this_VersionedQualifiedName_0=ruleVersionedQualifiedName();
 
                     state._fsp--;
@@ -6718,7 +6336,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_50); if (state.failed) return current;
+            this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_49); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_ID_2);
@@ -6729,20 +6347,20 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_ID_2, grammarAccess.getVersionedQualifiedReferenceNameAccess().getIDTerminalRuleCall_1());
               		
             }
-            // InternalFILTER.g:2723:3: (kw= '::' this_ID_4= RULE_ID )*
-            loop28:
+            // InternalFILTER.g:2560:3: (kw= '::' this_ID_4= RULE_ID )*
+            loop27:
             do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
+                int alt27=2;
+                int LA27_0 = input.LA(1);
 
-                if ( (LA28_0==53) ) {
-                    alt28=1;
+                if ( (LA27_0==53) ) {
+                    alt27=1;
                 }
 
 
-                switch (alt28) {
+                switch (alt27) {
             	case 1 :
-            	    // InternalFILTER.g:2724:4: kw= '::' this_ID_4= RULE_ID
+            	    // InternalFILTER.g:2561:4: kw= '::' this_ID_4= RULE_ID
             	    {
             	    kw=(Token)match(input,53,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -6751,7 +6369,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(kw, grammarAccess.getVersionedQualifiedReferenceNameAccess().getColonColonKeyword_2_0());
             	      			
             	    }
-            	    this_ID_4=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_50); if (state.failed) return current;
+            	    this_ID_4=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_49); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_ID_4);
@@ -6767,7 +6385,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop28;
+            	    break loop27;
                 }
             } while (true);
 
@@ -6796,7 +6414,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleINTEGER"
-    // InternalFILTER.g:2741:1: entryRuleINTEGER returns [String current=null] : iv_ruleINTEGER= ruleINTEGER EOF ;
+    // InternalFILTER.g:2578:1: entryRuleINTEGER returns [String current=null] : iv_ruleINTEGER= ruleINTEGER EOF ;
     public final String entryRuleINTEGER() throws RecognitionException {
         String current = null;
 
@@ -6804,8 +6422,8 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalFILTER.g:2741:47: (iv_ruleINTEGER= ruleINTEGER EOF )
-            // InternalFILTER.g:2742:2: iv_ruleINTEGER= ruleINTEGER EOF
+            // InternalFILTER.g:2578:47: (iv_ruleINTEGER= ruleINTEGER EOF )
+            // InternalFILTER.g:2579:2: iv_ruleINTEGER= ruleINTEGER EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getINTEGERRule()); 
@@ -6836,7 +6454,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleINTEGER"
-    // InternalFILTER.g:2748:1: ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) ;
+    // InternalFILTER.g:2585:1: ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) ;
     public final AntlrDatatypeRuleToken ruleINTEGER() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6848,45 +6466,45 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:2754:2: ( ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) )
-            // InternalFILTER.g:2755:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
+            // InternalFILTER.g:2591:2: ( ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) )
+            // InternalFILTER.g:2592:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
             {
-            // InternalFILTER.g:2755:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // InternalFILTER.g:2592:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA30_0==RULE_INT||LA30_0==54) ) {
-                alt30=1;
+            if ( (LA29_0==RULE_INT||LA29_0==54) ) {
+                alt29=1;
             }
-            else if ( (LA30_0==RULE_HEXADECIMAL) ) {
-                alt30=2;
+            else if ( (LA29_0==RULE_HEXADECIMAL) ) {
+                alt29=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 30, 0, input);
+                    new NoViableAltException("", 29, 0, input);
 
                 throw nvae;
             }
-            switch (alt30) {
+            switch (alt29) {
                 case 1 :
-                    // InternalFILTER.g:2756:3: ( (kw= '-' )? this_INT_1= RULE_INT )
+                    // InternalFILTER.g:2593:3: ( (kw= '-' )? this_INT_1= RULE_INT )
                     {
-                    // InternalFILTER.g:2756:3: ( (kw= '-' )? this_INT_1= RULE_INT )
-                    // InternalFILTER.g:2757:4: (kw= '-' )? this_INT_1= RULE_INT
+                    // InternalFILTER.g:2593:3: ( (kw= '-' )? this_INT_1= RULE_INT )
+                    // InternalFILTER.g:2594:4: (kw= '-' )? this_INT_1= RULE_INT
                     {
-                    // InternalFILTER.g:2757:4: (kw= '-' )?
-                    int alt29=2;
-                    int LA29_0 = input.LA(1);
+                    // InternalFILTER.g:2594:4: (kw= '-' )?
+                    int alt28=2;
+                    int LA28_0 = input.LA(1);
 
-                    if ( (LA29_0==54) ) {
-                        alt29=1;
+                    if ( (LA28_0==54) ) {
+                        alt28=1;
                     }
-                    switch (alt29) {
+                    switch (alt28) {
                         case 1 :
-                            // InternalFILTER.g:2758:5: kw= '-'
+                            // InternalFILTER.g:2595:5: kw= '-'
                             {
-                            kw=(Token)match(input,54,FollowSets000.FOLLOW_51); if (state.failed) return current;
+                            kw=(Token)match(input,54,FollowSets000.FOLLOW_50); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               					current.merge(kw);
@@ -6917,7 +6535,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTER.g:2773:3: this_HEXADECIMAL_2= RULE_HEXADECIMAL
+                    // InternalFILTER.g:2610:3: this_HEXADECIMAL_2= RULE_HEXADECIMAL
                     {
                     this_HEXADECIMAL_2=(Token)match(input,RULE_HEXADECIMAL,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -6958,7 +6576,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterConstantType"
-    // InternalFILTER.g:2784:1: ruleGSSFilterConstantType returns [Enumerator current=null] : ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) ) ;
+    // InternalFILTER.g:2621:1: ruleGSSFilterConstantType returns [Enumerator current=null] : ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) ) ;
     public final Enumerator ruleGSSFilterConstantType() throws RecognitionException {
         Enumerator current = null;
 
@@ -6972,51 +6590,51 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:2790:2: ( ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) ) )
-            // InternalFILTER.g:2791:2: ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) )
+            // InternalFILTER.g:2627:2: ( ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) ) )
+            // InternalFILTER.g:2628:2: ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) )
             {
-            // InternalFILTER.g:2791:2: ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) )
-            int alt31=5;
+            // InternalFILTER.g:2628:2: ( (enumLiteral_0= 'decimal' ) | (enumLiteral_1= 'hex' ) | (enumLiteral_2= 'binary' ) | (enumLiteral_3= 'char' ) | (enumLiteral_4= 'string' ) )
+            int alt30=5;
             switch ( input.LA(1) ) {
             case 55:
                 {
-                alt31=1;
+                alt30=1;
                 }
                 break;
             case 56:
                 {
-                alt31=2;
+                alt30=2;
                 }
                 break;
             case 57:
                 {
-                alt31=3;
+                alt30=3;
                 }
                 break;
             case 58:
                 {
-                alt31=4;
+                alt30=4;
                 }
                 break;
             case 59:
                 {
-                alt31=5;
+                alt30=5;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 31, 0, input);
+                    new NoViableAltException("", 30, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt31) {
+            switch (alt30) {
                 case 1 :
-                    // InternalFILTER.g:2792:3: (enumLiteral_0= 'decimal' )
+                    // InternalFILTER.g:2629:3: (enumLiteral_0= 'decimal' )
                     {
-                    // InternalFILTER.g:2792:3: (enumLiteral_0= 'decimal' )
-                    // InternalFILTER.g:2793:4: enumLiteral_0= 'decimal'
+                    // InternalFILTER.g:2629:3: (enumLiteral_0= 'decimal' )
+                    // InternalFILTER.g:2630:4: enumLiteral_0= 'decimal'
                     {
                     enumLiteral_0=(Token)match(input,55,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7032,10 +6650,10 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTER.g:2800:3: (enumLiteral_1= 'hex' )
+                    // InternalFILTER.g:2637:3: (enumLiteral_1= 'hex' )
                     {
-                    // InternalFILTER.g:2800:3: (enumLiteral_1= 'hex' )
-                    // InternalFILTER.g:2801:4: enumLiteral_1= 'hex'
+                    // InternalFILTER.g:2637:3: (enumLiteral_1= 'hex' )
+                    // InternalFILTER.g:2638:4: enumLiteral_1= 'hex'
                     {
                     enumLiteral_1=(Token)match(input,56,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7051,10 +6669,10 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalFILTER.g:2808:3: (enumLiteral_2= 'binary' )
+                    // InternalFILTER.g:2645:3: (enumLiteral_2= 'binary' )
                     {
-                    // InternalFILTER.g:2808:3: (enumLiteral_2= 'binary' )
-                    // InternalFILTER.g:2809:4: enumLiteral_2= 'binary'
+                    // InternalFILTER.g:2645:3: (enumLiteral_2= 'binary' )
+                    // InternalFILTER.g:2646:4: enumLiteral_2= 'binary'
                     {
                     enumLiteral_2=(Token)match(input,57,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7070,10 +6688,10 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalFILTER.g:2816:3: (enumLiteral_3= 'char' )
+                    // InternalFILTER.g:2653:3: (enumLiteral_3= 'char' )
                     {
-                    // InternalFILTER.g:2816:3: (enumLiteral_3= 'char' )
-                    // InternalFILTER.g:2817:4: enumLiteral_3= 'char'
+                    // InternalFILTER.g:2653:3: (enumLiteral_3= 'char' )
+                    // InternalFILTER.g:2654:4: enumLiteral_3= 'char'
                     {
                     enumLiteral_3=(Token)match(input,58,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7089,10 +6707,10 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalFILTER.g:2824:3: (enumLiteral_4= 'string' )
+                    // InternalFILTER.g:2661:3: (enumLiteral_4= 'string' )
                     {
-                    // InternalFILTER.g:2824:3: (enumLiteral_4= 'string' )
-                    // InternalFILTER.g:2825:4: enumLiteral_4= 'string'
+                    // InternalFILTER.g:2661:3: (enumLiteral_4= 'string' )
+                    // InternalFILTER.g:2662:4: enumLiteral_4= 'string'
                     {
                     enumLiteral_4=(Token)match(input,59,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7132,7 +6750,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterOPType"
-    // InternalFILTER.g:2835:1: ruleGSSFilterOPType returns [Enumerator current=null] : ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) ) ;
+    // InternalFILTER.g:2672:1: ruleGSSFilterOPType returns [Enumerator current=null] : ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) ) ;
     public final Enumerator ruleGSSFilterOPType() throws RecognitionException {
         Enumerator current = null;
 
@@ -7147,56 +6765,56 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:2841:2: ( ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) ) )
-            // InternalFILTER.g:2842:2: ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) )
+            // InternalFILTER.g:2678:2: ( ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) ) )
+            // InternalFILTER.g:2679:2: ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) )
             {
-            // InternalFILTER.g:2842:2: ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) )
-            int alt32=6;
+            // InternalFILTER.g:2679:2: ( (enumLiteral_0= 'equal' ) | (enumLiteral_1= 'different' ) | (enumLiteral_2= 'bigger_than' ) | (enumLiteral_3= 'smaller_than' ) | (enumLiteral_4= 'bigger_or_equal' ) | (enumLiteral_5= 'smaller_or_equal' ) )
+            int alt31=6;
             switch ( input.LA(1) ) {
             case 60:
                 {
-                alt32=1;
+                alt31=1;
                 }
                 break;
             case 61:
                 {
-                alt32=2;
+                alt31=2;
                 }
                 break;
             case 62:
                 {
-                alt32=3;
+                alt31=3;
                 }
                 break;
             case 63:
                 {
-                alt32=4;
+                alt31=4;
                 }
                 break;
             case 64:
                 {
-                alt32=5;
+                alt31=5;
                 }
                 break;
             case 65:
                 {
-                alt32=6;
+                alt31=6;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 32, 0, input);
+                    new NoViableAltException("", 31, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt32) {
+            switch (alt31) {
                 case 1 :
-                    // InternalFILTER.g:2843:3: (enumLiteral_0= 'equal' )
+                    // InternalFILTER.g:2680:3: (enumLiteral_0= 'equal' )
                     {
-                    // InternalFILTER.g:2843:3: (enumLiteral_0= 'equal' )
-                    // InternalFILTER.g:2844:4: enumLiteral_0= 'equal'
+                    // InternalFILTER.g:2680:3: (enumLiteral_0= 'equal' )
+                    // InternalFILTER.g:2681:4: enumLiteral_0= 'equal'
                     {
                     enumLiteral_0=(Token)match(input,60,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7212,10 +6830,10 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTER.g:2851:3: (enumLiteral_1= 'different' )
+                    // InternalFILTER.g:2688:3: (enumLiteral_1= 'different' )
                     {
-                    // InternalFILTER.g:2851:3: (enumLiteral_1= 'different' )
-                    // InternalFILTER.g:2852:4: enumLiteral_1= 'different'
+                    // InternalFILTER.g:2688:3: (enumLiteral_1= 'different' )
+                    // InternalFILTER.g:2689:4: enumLiteral_1= 'different'
                     {
                     enumLiteral_1=(Token)match(input,61,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7231,10 +6849,10 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalFILTER.g:2859:3: (enumLiteral_2= 'bigger_than' )
+                    // InternalFILTER.g:2696:3: (enumLiteral_2= 'bigger_than' )
                     {
-                    // InternalFILTER.g:2859:3: (enumLiteral_2= 'bigger_than' )
-                    // InternalFILTER.g:2860:4: enumLiteral_2= 'bigger_than'
+                    // InternalFILTER.g:2696:3: (enumLiteral_2= 'bigger_than' )
+                    // InternalFILTER.g:2697:4: enumLiteral_2= 'bigger_than'
                     {
                     enumLiteral_2=(Token)match(input,62,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7250,10 +6868,10 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalFILTER.g:2867:3: (enumLiteral_3= 'smaller_than' )
+                    // InternalFILTER.g:2704:3: (enumLiteral_3= 'smaller_than' )
                     {
-                    // InternalFILTER.g:2867:3: (enumLiteral_3= 'smaller_than' )
-                    // InternalFILTER.g:2868:4: enumLiteral_3= 'smaller_than'
+                    // InternalFILTER.g:2704:3: (enumLiteral_3= 'smaller_than' )
+                    // InternalFILTER.g:2705:4: enumLiteral_3= 'smaller_than'
                     {
                     enumLiteral_3=(Token)match(input,63,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7269,10 +6887,10 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalFILTER.g:2875:3: (enumLiteral_4= 'bigger_or_equal' )
+                    // InternalFILTER.g:2712:3: (enumLiteral_4= 'bigger_or_equal' )
                     {
-                    // InternalFILTER.g:2875:3: (enumLiteral_4= 'bigger_or_equal' )
-                    // InternalFILTER.g:2876:4: enumLiteral_4= 'bigger_or_equal'
+                    // InternalFILTER.g:2712:3: (enumLiteral_4= 'bigger_or_equal' )
+                    // InternalFILTER.g:2713:4: enumLiteral_4= 'bigger_or_equal'
                     {
                     enumLiteral_4=(Token)match(input,64,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7288,10 +6906,10 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalFILTER.g:2883:3: (enumLiteral_5= 'smaller_or_equal' )
+                    // InternalFILTER.g:2720:3: (enumLiteral_5= 'smaller_or_equal' )
                     {
-                    // InternalFILTER.g:2883:3: (enumLiteral_5= 'smaller_or_equal' )
-                    // InternalFILTER.g:2884:4: enumLiteral_5= 'smaller_or_equal'
+                    // InternalFILTER.g:2720:3: (enumLiteral_5= 'smaller_or_equal' )
+                    // InternalFILTER.g:2721:4: enumLiteral_5= 'smaller_or_equal'
                     {
                     enumLiteral_5=(Token)match(input,65,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7331,7 +6949,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSFilterSelectType"
-    // InternalFILTER.g:2894:1: ruleGSSFilterSelectType returns [Enumerator current=null] : ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) ) ;
+    // InternalFILTER.g:2731:1: ruleGSSFilterSelectType returns [Enumerator current=null] : ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) ) ;
     public final Enumerator ruleGSSFilterSelectType() throws RecognitionException {
         Enumerator current = null;
 
@@ -7343,41 +6961,41 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalFILTER.g:2900:2: ( ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) ) )
-            // InternalFILTER.g:2901:2: ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) )
+            // InternalFILTER.g:2737:2: ( ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) ) )
+            // InternalFILTER.g:2738:2: ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) )
             {
-            // InternalFILTER.g:2901:2: ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) )
-            int alt33=3;
+            // InternalFILTER.g:2738:2: ( (enumLiteral_0= 'data' ) | (enumLiteral_1= 'size' ) | (enumLiteral_2= 'crc' ) )
+            int alt32=3;
             switch ( input.LA(1) ) {
             case 66:
                 {
-                alt33=1;
+                alt32=1;
                 }
                 break;
             case 41:
                 {
-                alt33=2;
+                alt32=2;
                 }
                 break;
             case 67:
                 {
-                alt33=3;
+                alt32=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 33, 0, input);
+                    new NoViableAltException("", 32, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt33) {
+            switch (alt32) {
                 case 1 :
-                    // InternalFILTER.g:2902:3: (enumLiteral_0= 'data' )
+                    // InternalFILTER.g:2739:3: (enumLiteral_0= 'data' )
                     {
-                    // InternalFILTER.g:2902:3: (enumLiteral_0= 'data' )
-                    // InternalFILTER.g:2903:4: enumLiteral_0= 'data'
+                    // InternalFILTER.g:2739:3: (enumLiteral_0= 'data' )
+                    // InternalFILTER.g:2740:4: enumLiteral_0= 'data'
                     {
                     enumLiteral_0=(Token)match(input,66,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7393,10 +7011,10 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalFILTER.g:2910:3: (enumLiteral_1= 'size' )
+                    // InternalFILTER.g:2747:3: (enumLiteral_1= 'size' )
                     {
-                    // InternalFILTER.g:2910:3: (enumLiteral_1= 'size' )
-                    // InternalFILTER.g:2911:4: enumLiteral_1= 'size'
+                    // InternalFILTER.g:2747:3: (enumLiteral_1= 'size' )
+                    // InternalFILTER.g:2748:4: enumLiteral_1= 'size'
                     {
                     enumLiteral_1=(Token)match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7412,10 +7030,10 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalFILTER.g:2918:3: (enumLiteral_2= 'crc' )
+                    // InternalFILTER.g:2755:3: (enumLiteral_2= 'crc' )
                     {
-                    // InternalFILTER.g:2918:3: (enumLiteral_2= 'crc' )
-                    // InternalFILTER.g:2919:4: enumLiteral_2= 'crc'
+                    // InternalFILTER.g:2755:3: (enumLiteral_2= 'crc' )
+                    // InternalFILTER.g:2756:4: enumLiteral_2= 'crc'
                     {
                     enumLiteral_2=(Token)match(input,67,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7453,750 +7071,7 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
     }
     // $ANTLR end "ruleGSSFilterSelectType"
 
-    // $ANTLR start synpred3_InternalFILTER
-    public final void synpred3_InternalFILTER_fragment() throws RecognitionException {   
-        Token otherlv_4=null;
-        Token otherlv_5=null;
-        Token otherlv_7=null;
-        AntlrDatatypeRuleToken lv_uri_6_0 = null;
-
-
-        // InternalFILTER.g:285:4: ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) )
-        // InternalFILTER.g:285:4: ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) )
-        {
-        // InternalFILTER.g:285:4: ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) )
-        // InternalFILTER.g:286:5: {...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) )
-        {
-        if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0) ) {
-            if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred3_InternalFILTER", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0)");
-        }
-        // InternalFILTER.g:286:119: ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) )
-        // InternalFILTER.g:287:6: ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) )
-        {
-        getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0);
-        // InternalFILTER.g:290:9: ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) )
-        // InternalFILTER.g:290:10: {...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' )
-        {
-        if ( !((true)) ) {
-            if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred3_InternalFILTER", "true");
-        }
-        // InternalFILTER.g:290:19: (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' )
-        // InternalFILTER.g:290:20: otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';'
-        {
-        otherlv_4=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return ;
-        // InternalFILTER.g:298:9: ( (lv_uri_6_0= ruleQualifiedName ) )
-        // InternalFILTER.g:299:10: (lv_uri_6_0= ruleQualifiedName )
-        {
-        // InternalFILTER.g:299:10: (lv_uri_6_0= ruleQualifiedName )
-        // InternalFILTER.g:300:11: lv_uri_6_0= ruleQualifiedName
-        {
-        if ( state.backtracking==0 ) {
-
-          											newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriQualifiedNameParserRuleCall_3_0_2_0());
-          										
-        }
-        pushFollow(FollowSets000.FOLLOW_6);
-        lv_uri_6_0=ruleQualifiedName();
-
-        state._fsp--;
-        if (state.failed) return ;
-
-        }
-
-
-        }
-
-        otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
-
-        }
-
-
-        }
-
-
-        }
-
-
-        }
-
-
-        }
-    }
-    // $ANTLR end synpred3_InternalFILTER
-
-    // $ANTLR start synpred8_InternalFILTER
-    public final void synpred8_InternalFILTER_fragment() throws RecognitionException {   
-        Token otherlv_8=null;
-        Token otherlv_9=null;
-        Token otherlv_11=null;
-        Token otherlv_12=null;
-        Token otherlv_13=null;
-        Token otherlv_15=null;
-        AntlrDatatypeRuleToken lv_version_10_0 = null;
-
-        EObject lv_BoolVar_16_0 = null;
-
-        EObject lv_BoolVarFromArrayItem_17_0 = null;
-
-        EObject lv_BoolVarFromGroupedArrayItem_18_0 = null;
-
-        EObject lv_BoolVarFDIC_19_0 = null;
-
-
-        // InternalFILTER.g:327:4: ( ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )
-        // InternalFILTER.g:327:4: ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) )
-        {
-        // InternalFILTER.g:327:4: ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) )
-        // InternalFILTER.g:328:5: {...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) )
-        {
-        if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 1) ) {
-            if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred8_InternalFILTER", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 1)");
-        }
-        // InternalFILTER.g:328:119: ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) )
-        // InternalFILTER.g:329:6: ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) )
-        {
-        getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 1);
-        // InternalFILTER.g:332:9: ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) )
-        // InternalFILTER.g:332:10: {...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ )
-        {
-        if ( !((true)) ) {
-            if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred8_InternalFILTER", "true");
-        }
-        // InternalFILTER.g:332:19: ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ )
-        // InternalFILTER.g:332:20: (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+
-        {
-        // InternalFILTER.g:332:20: (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' )
-        // InternalFILTER.g:333:10: otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';'
-        {
-        otherlv_8=(Token)match(input,18,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return ;
-        // InternalFILTER.g:341:10: ( (lv_version_10_0= ruleVersion ) )
-        // InternalFILTER.g:342:11: (lv_version_10_0= ruleVersion )
-        {
-        // InternalFILTER.g:342:11: (lv_version_10_0= ruleVersion )
-        // InternalFILTER.g:343:12: lv_version_10_0= ruleVersion
-        {
-        if ( state.backtracking==0 ) {
-
-          												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionVersionParserRuleCall_3_1_0_2_0());
-          											
-        }
-        pushFollow(FollowSets000.FOLLOW_6);
-        lv_version_10_0=ruleVersion();
-
-        state._fsp--;
-        if (state.failed) return ;
-
-        }
-
-
-        }
-
-        otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return ;
-
-        }
-
-        otherlv_12=(Token)match(input,19,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return ;
-        // InternalFILTER.g:373:9: ( ( ruleVersionedQualifiedName ) )
-        // InternalFILTER.g:374:10: ( ruleVersionedQualifiedName )
-        {
-        // InternalFILTER.g:374:10: ( ruleVersionedQualifiedName )
-        // InternalFILTER.g:375:11: ruleVersionedQualifiedName
-        {
-        if ( state.backtracking==0 ) {
-
-          											/* */
-          										
-        }
-        pushFollow(FollowSets000.FOLLOW_6);
-        ruleVersionedQualifiedName();
-
-        state._fsp--;
-        if (state.failed) return ;
-
-        }
-
-
-        }
-
-        otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_13); if (state.failed) return ;
-        // InternalFILTER.g:396:9: ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+
-        int cnt34=0;
-        loop34:
-        do {
-            int alt34=5;
-            switch ( input.LA(1) ) {
-            case 22:
-                {
-                alt34=1;
-                }
-                break;
-            case 27:
-                {
-                alt34=2;
-                }
-                break;
-            case 29:
-                {
-                alt34=3;
-                }
-                break;
-            case 32:
-                {
-                alt34=4;
-                }
-                break;
-
-            }
-
-            switch (alt34) {
-        	case 1 :
-        	    // InternalFILTER.g:397:10: ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) )
-        	    {
-        	    // InternalFILTER.g:397:10: ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) )
-        	    // InternalFILTER.g:398:11: (lv_BoolVar_16_0= ruleGSSFilterBoolVar )
-        	    {
-        	    // InternalFILTER.g:398:11: (lv_BoolVar_16_0= ruleGSSFilterBoolVar )
-        	    // InternalFILTER.g:399:12: lv_BoolVar_16_0= ruleGSSFilterBoolVar
-        	    {
-        	    if ( state.backtracking==0 ) {
-
-        	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0());
-        	      											
-        	    }
-        	    pushFollow(FollowSets000.FOLLOW_52);
-        	    lv_BoolVar_16_0=ruleGSSFilterBoolVar();
-
-        	    state._fsp--;
-        	    if (state.failed) return ;
-
-        	    }
-
-
-        	    }
-
-
-        	    }
-        	    break;
-        	case 2 :
-        	    // InternalFILTER.g:417:10: ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) )
-        	    {
-        	    // InternalFILTER.g:417:10: ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) )
-        	    // InternalFILTER.g:418:11: (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem )
-        	    {
-        	    // InternalFILTER.g:418:11: (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem )
-        	    // InternalFILTER.g:419:12: lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem
-        	    {
-        	    if ( state.backtracking==0 ) {
-
-        	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0());
-        	      											
-        	    }
-        	    pushFollow(FollowSets000.FOLLOW_52);
-        	    lv_BoolVarFromArrayItem_17_0=ruleGSSFilterBoolVarFromArrayItem();
-
-        	    state._fsp--;
-        	    if (state.failed) return ;
-
-        	    }
-
-
-        	    }
-
-
-        	    }
-        	    break;
-        	case 3 :
-        	    // InternalFILTER.g:437:10: ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) )
-        	    {
-        	    // InternalFILTER.g:437:10: ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) )
-        	    // InternalFILTER.g:438:11: (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem )
-        	    {
-        	    // InternalFILTER.g:438:11: (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem )
-        	    // InternalFILTER.g:439:12: lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem
-        	    {
-        	    if ( state.backtracking==0 ) {
-
-        	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0());
-        	      											
-        	    }
-        	    pushFollow(FollowSets000.FOLLOW_52);
-        	    lv_BoolVarFromGroupedArrayItem_18_0=ruleGSSFilterBoolVarFromGroupedArrayItem();
-
-        	    state._fsp--;
-        	    if (state.failed) return ;
-
-        	    }
-
-
-        	    }
-
-
-        	    }
-        	    break;
-        	case 4 :
-        	    // InternalFILTER.g:457:10: ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) )
-        	    {
-        	    // InternalFILTER.g:457:10: ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) )
-        	    // InternalFILTER.g:458:11: (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC )
-        	    {
-        	    // InternalFILTER.g:458:11: (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC )
-        	    // InternalFILTER.g:459:12: lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC
-        	    {
-        	    if ( state.backtracking==0 ) {
-
-        	      												newCompositeNode(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0());
-        	      											
-        	    }
-        	    pushFollow(FollowSets000.FOLLOW_52);
-        	    lv_BoolVarFDIC_19_0=ruleGSSFilterBoolVarFDIC();
-
-        	    state._fsp--;
-        	    if (state.failed) return ;
-
-        	    }
-
-
-        	    }
-
-
-        	    }
-        	    break;
-
-        	default :
-        	    if ( cnt34 >= 1 ) break loop34;
-        	    if (state.backtracking>0) {state.failed=true; return ;}
-                    EarlyExitException eee =
-                        new EarlyExitException(34, input);
-                    throw eee;
-            }
-            cnt34++;
-        } while (true);
-
-
-        }
-
-
-        }
-
-
-        }
-
-
-        }
-
-
-        }
-    }
-    // $ANTLR end synpred8_InternalFILTER
-
-    // $ANTLR start synpred10_InternalFILTER
-    public final void synpred10_InternalFILTER_fragment() throws RecognitionException {   
-        Token otherlv_4=null;
-        Token otherlv_5=null;
-        Token otherlv_7=null;
-        AntlrDatatypeRuleToken lv_uri_6_0 = null;
-
-
-        // InternalFILTER.g:583:4: ( ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) ) )
-        // InternalFILTER.g:583:4: ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) )
-        {
-        // InternalFILTER.g:583:4: ({...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) ) )
-        // InternalFILTER.g:584:5: {...}? => ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) )
-        {
-        if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0) ) {
-            if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred10_InternalFILTER", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0)");
-        }
-        // InternalFILTER.g:584:119: ( ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) ) )
-        // InternalFILTER.g:585:6: ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) )
-        {
-        getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0);
-        // InternalFILTER.g:588:9: ({...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' ) )
-        // InternalFILTER.g:588:10: {...}? => (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' )
-        {
-        if ( !((true)) ) {
-            if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred10_InternalFILTER", "true");
-        }
-        // InternalFILTER.g:588:19: (otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';' )
-        // InternalFILTER.g:588:20: otherlv_4= 'uri' otherlv_5= ':=' ( (lv_uri_6_0= ruleQualifiedName ) ) otherlv_7= ';'
-        {
-        otherlv_4=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return ;
-        // InternalFILTER.g:596:9: ( (lv_uri_6_0= ruleQualifiedName ) )
-        // InternalFILTER.g:597:10: (lv_uri_6_0= ruleQualifiedName )
-        {
-        // InternalFILTER.g:597:10: (lv_uri_6_0= ruleQualifiedName )
-        // InternalFILTER.g:598:11: lv_uri_6_0= ruleQualifiedName
-        {
-        if ( state.backtracking==0 ) {
-
-          											newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getUriQualifiedNameParserRuleCall_3_0_2_0());
-          										
-        }
-        pushFollow(FollowSets000.FOLLOW_6);
-        lv_uri_6_0=ruleQualifiedName();
-
-        state._fsp--;
-        if (state.failed) return ;
-
-        }
-
-
-        }
-
-        otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
-
-        }
-
-
-        }
-
-
-        }
-
-
-        }
-
-
-        }
-    }
-    // $ANTLR end synpred10_InternalFILTER
-
-    // $ANTLR start synpred15_InternalFILTER
-    public final void synpred15_InternalFILTER_fragment() throws RecognitionException {   
-        Token otherlv_8=null;
-        Token otherlv_9=null;
-        Token otherlv_11=null;
-        Token otherlv_12=null;
-        Token otherlv_13=null;
-        Token otherlv_15=null;
-        AntlrDatatypeRuleToken lv_version_10_0 = null;
-
-        EObject lv_BoolVar_16_0 = null;
-
-        EObject lv_BoolVarFromArrayItem_17_0 = null;
-
-        EObject lv_BoolVarFromGroupedArrayItem_18_0 = null;
-
-        EObject lv_BoolVarFDIC_19_0 = null;
-
-
-        // InternalFILTER.g:625:4: ( ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) ) )
-        // InternalFILTER.g:625:4: ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) )
-        {
-        // InternalFILTER.g:625:4: ({...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) ) )
-        // InternalFILTER.g:626:5: {...}? => ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) )
-        {
-        if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 1) ) {
-            if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred15_InternalFILTER", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 1)");
-        }
-        // InternalFILTER.g:626:119: ( ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) ) )
-        // InternalFILTER.g:627:6: ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) )
-        {
-        getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 1);
-        // InternalFILTER.g:630:9: ({...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ ) )
-        // InternalFILTER.g:630:10: {...}? => ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ )
-        {
-        if ( !((true)) ) {
-            if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred15_InternalFILTER", "true");
-        }
-        // InternalFILTER.g:630:19: ( (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+ )
-        // InternalFILTER.g:630:20: (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' ) otherlv_12= 'formatFile' otherlv_13= ':=' ( ( ruleVersionedQualifiedName ) ) otherlv_15= ';' ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+
-        {
-        // InternalFILTER.g:630:20: (otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';' )
-        // InternalFILTER.g:631:10: otherlv_8= 'version' otherlv_9= ':=' ( (lv_version_10_0= ruleVersion ) ) otherlv_11= ';'
-        {
-        otherlv_8=(Token)match(input,18,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_11); if (state.failed) return ;
-        // InternalFILTER.g:639:10: ( (lv_version_10_0= ruleVersion ) )
-        // InternalFILTER.g:640:11: (lv_version_10_0= ruleVersion )
-        {
-        // InternalFILTER.g:640:11: (lv_version_10_0= ruleVersion )
-        // InternalFILTER.g:641:12: lv_version_10_0= ruleVersion
-        {
-        if ( state.backtracking==0 ) {
-
-          												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getVersionVersionParserRuleCall_3_1_0_2_0());
-          											
-        }
-        pushFollow(FollowSets000.FOLLOW_6);
-        lv_version_10_0=ruleVersion();
-
-        state._fsp--;
-        if (state.failed) return ;
-
-        }
-
-
-        }
-
-        otherlv_11=(Token)match(input,14,FollowSets000.FOLLOW_12); if (state.failed) return ;
-
-        }
-
-        otherlv_12=(Token)match(input,19,FollowSets000.FOLLOW_4); if (state.failed) return ;
-        otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_7); if (state.failed) return ;
-        // InternalFILTER.g:671:9: ( ( ruleVersionedQualifiedName ) )
-        // InternalFILTER.g:672:10: ( ruleVersionedQualifiedName )
-        {
-        // InternalFILTER.g:672:10: ( ruleVersionedQualifiedName )
-        // InternalFILTER.g:673:11: ruleVersionedQualifiedName
-        {
-        if ( state.backtracking==0 ) {
-
-          											/* */
-          										
-        }
-        pushFollow(FollowSets000.FOLLOW_6);
-        ruleVersionedQualifiedName();
-
-        state._fsp--;
-        if (state.failed) return ;
-
-        }
-
-
-        }
-
-        otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_13); if (state.failed) return ;
-        // InternalFILTER.g:694:9: ( ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) ) | ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) ) | ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) ) | ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) ) )+
-        int cnt35=0;
-        loop35:
-        do {
-            int alt35=5;
-            switch ( input.LA(1) ) {
-            case 22:
-                {
-                alt35=1;
-                }
-                break;
-            case 27:
-                {
-                alt35=2;
-                }
-                break;
-            case 29:
-                {
-                alt35=3;
-                }
-                break;
-            case 32:
-                {
-                alt35=4;
-                }
-                break;
-
-            }
-
-            switch (alt35) {
-        	case 1 :
-        	    // InternalFILTER.g:695:10: ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) )
-        	    {
-        	    // InternalFILTER.g:695:10: ( (lv_BoolVar_16_0= ruleGSSFilterBoolVar ) )
-        	    // InternalFILTER.g:696:11: (lv_BoolVar_16_0= ruleGSSFilterBoolVar )
-        	    {
-        	    // InternalFILTER.g:696:11: (lv_BoolVar_16_0= ruleGSSFilterBoolVar )
-        	    // InternalFILTER.g:697:12: lv_BoolVar_16_0= ruleGSSFilterBoolVar
-        	    {
-        	    if ( state.backtracking==0 ) {
-
-        	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0());
-        	      											
-        	    }
-        	    pushFollow(FollowSets000.FOLLOW_52);
-        	    lv_BoolVar_16_0=ruleGSSFilterBoolVar();
-
-        	    state._fsp--;
-        	    if (state.failed) return ;
-
-        	    }
-
-
-        	    }
-
-
-        	    }
-        	    break;
-        	case 2 :
-        	    // InternalFILTER.g:715:10: ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) )
-        	    {
-        	    // InternalFILTER.g:715:10: ( (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem ) )
-        	    // InternalFILTER.g:716:11: (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem )
-        	    {
-        	    // InternalFILTER.g:716:11: (lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem )
-        	    // InternalFILTER.g:717:12: lv_BoolVarFromArrayItem_17_0= ruleGSSFilterBoolVarFromArrayItem
-        	    {
-        	    if ( state.backtracking==0 ) {
-
-        	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0());
-        	      											
-        	    }
-        	    pushFollow(FollowSets000.FOLLOW_52);
-        	    lv_BoolVarFromArrayItem_17_0=ruleGSSFilterBoolVarFromArrayItem();
-
-        	    state._fsp--;
-        	    if (state.failed) return ;
-
-        	    }
-
-
-        	    }
-
-
-        	    }
-        	    break;
-        	case 3 :
-        	    // InternalFILTER.g:735:10: ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) )
-        	    {
-        	    // InternalFILTER.g:735:10: ( (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem ) )
-        	    // InternalFILTER.g:736:11: (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem )
-        	    {
-        	    // InternalFILTER.g:736:11: (lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem )
-        	    // InternalFILTER.g:737:12: lv_BoolVarFromGroupedArrayItem_18_0= ruleGSSFilterBoolVarFromGroupedArrayItem
-        	    {
-        	    if ( state.backtracking==0 ) {
-
-        	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0());
-        	      											
-        	    }
-        	    pushFollow(FollowSets000.FOLLOW_52);
-        	    lv_BoolVarFromGroupedArrayItem_18_0=ruleGSSFilterBoolVarFromGroupedArrayItem();
-
-        	    state._fsp--;
-        	    if (state.failed) return ;
-
-        	    }
-
-
-        	    }
-
-
-        	    }
-        	    break;
-        	case 4 :
-        	    // InternalFILTER.g:755:10: ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) )
-        	    {
-        	    // InternalFILTER.g:755:10: ( (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC ) )
-        	    // InternalFILTER.g:756:11: (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC )
-        	    {
-        	    // InternalFILTER.g:756:11: (lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC )
-        	    // InternalFILTER.g:757:12: lv_BoolVarFDIC_19_0= ruleGSSFilterBoolVarFDIC
-        	    {
-        	    if ( state.backtracking==0 ) {
-
-        	      												newCompositeNode(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0());
-        	      											
-        	    }
-        	    pushFollow(FollowSets000.FOLLOW_52);
-        	    lv_BoolVarFDIC_19_0=ruleGSSFilterBoolVarFDIC();
-
-        	    state._fsp--;
-        	    if (state.failed) return ;
-
-        	    }
-
-
-        	    }
-
-
-        	    }
-        	    break;
-
-        	default :
-        	    if ( cnt35 >= 1 ) break loop35;
-        	    if (state.backtracking>0) {state.failed=true; return ;}
-                    EarlyExitException eee =
-                        new EarlyExitException(35, input);
-                    throw eee;
-            }
-            cnt35++;
-        } while (true);
-
-
-        }
-
-
-        }
-
-
-        }
-
-
-        }
-
-
-        }
-    }
-    // $ANTLR end synpred15_InternalFILTER
-
     // Delegated rules
-
-    public final boolean synpred8_InternalFILTER() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred8_InternalFILTER_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred10_InternalFILTER() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred10_InternalFILTER_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred15_InternalFILTER() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred15_InternalFILTER_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred3_InternalFILTER() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred3_InternalFILTER_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
 
 
  
@@ -8211,50 +7086,48 @@ public class InternalFILTERParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
         public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000020L});
         public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000060000L});
-        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000400000060000L});
+        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000040000L});
         public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x00000000000000A0L});
         public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000080000L});
         public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000128400000L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000400128460000L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000400128400000L});
         public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000400000100000L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000800000060000L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000800128460000L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000800000100000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x00400000000000C0L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0F80000000000000L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000200000000L});
-        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000044800000000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000100000L});
-        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000040000000L});
-        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000400000000L});
-        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0xF000000000000000L,0x0000000000000003L});
-        public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000001000000000L});
-        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000002000100000L});
-        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000008000000000L});
-        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000020000000000L,0x000000000000000CL});
-        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000032000100000L});
-        public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000022000100000L});
-        public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000080000000000L});
-        public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000302000100000L});
-        public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000202000100000L});
-        public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0001000000000000L});
-        public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0001000000100000L});
-        public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0002000000000000L});
-        public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0004000000000002L});
-        public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0008000000000000L});
-        public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0010000000000000L});
-        public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0020000000000000L});
-        public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0020000000000002L});
-        public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000000000000080L});
-        public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000000128400002L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000800128400000L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000800000100000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x00400000000000C0L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0F80000000000000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000004000000L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000200000000L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000044800000000L});
+        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000100000L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000080000000L});
+        public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000400000000L});
+        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0xF000000000000000L,0x0000000000000003L});
+        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000001000000000L});
+        public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000002000100000L});
+        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000008000000000L});
+        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000020000000000L,0x000000000000000CL});
+        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000032000100000L});
+        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000022000100000L});
+        public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000080000000000L});
+        public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000302000100000L});
+        public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000202000100000L});
+        public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0001000000000000L});
+        public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0001000000100000L});
+        public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0002000000000000L});
+        public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0004000000000002L});
+        public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0008000000000000L});
+        public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0010000000000000L});
+        public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0020000000000000L});
+        public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0020000000000002L});
+        public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000000080L});
     }
 
 

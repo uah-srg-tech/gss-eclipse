@@ -34,7 +34,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "';'", "'GSSTestProcTestProc'", "'{'", "'uri'", "':='", "'version'", "'}'", "'GSSTestProcStep'", "'name'", "'id'", "'prev_step_idref'", "'output_idref_from_prev_step'", "'mode'", "'replays'", "'GSSTestProcAction'", "'message'", "'actionType'", "'delay_value'", "'delay_unit'", "'span_value'", "'span_unit'", "'GSSTestProcInputs'", "'GSSTestProcOutputs'", "'checkmode'", "'valid_time_interval_value'", "'valid_time_interval_unit'", "'GSSTestProcSpecialPackets'", "'GSSTestProcConcurrentSteps'", "'nextStep'", "'GSSTestProcInputLevel3'", "'ifRef'", "'level3'", "'app_to_level3'", "'level2'", "'level3_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSTestProcInputLevel2'", "'app_to_level2'", "'GSSTestProcInputLevel1'", "'app_to_level1'", "'GSSTestProcInputLevel0'", "'app_to_level0'", "'GSSTestProcOutputLevel3'", "'optional'", "'level3_from_level2'", "'level2_from_level1'", "'level1_from_level0'", "'GSSTestProcOutputLevel2'", "'GSSTestProcOutputLevel1'", "'GSSTestProcOutputLevel0'", "'GSSTestProcLevel3Filter'", "'apply_def_filter'", "'extra_filter'", "'GSSTestProcLevel2Filter'", "'GSSTestProcLevel1Filter'", "'GSSTestProcLevel0Filter'", "'GSSTestProcEnable'", "'GSSTestProcNextStep'", "'isConcurrent'", "'GSSTestProcConcurrentStep'", "'.'", "'('", "')'", "'::'", "'-'", "'continuous'", "'manual'", "'concurrent'", "'action'", "'\"instruction\"'", "'\"TMTC checking\"'", "'\"checking\"'", "'miliseconds'", "'seconds'", "'all'", "'allunsorted'", "'any'", "'yes'", "'no'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "';'", "'GSSTestProcTestProc'", "'{'", "'uri'", "':='", "'version'", "'}'", "'GSSTestProcStep'", "'name'", "'id'", "'prev_step_idref'", "'output_idref_from_prev_step'", "'mode'", "'replays'", "'GSSTestProcAction'", "'message'", "'actionType'", "'delay_value'", "'delay_unit'", "'span_value'", "'span_unit'", "'GSSTestProcInputs'", "'GSSTestProcOutputs'", "'checkmode'", "'valid_time_interval_value'", "'valid_time_interval_unit'", "'GSSTestProcSpecialPackets'", "'GSSTestProcConcurrentSteps'", "'nextStep'", "'GSSTestProcInputLevel3'", "'ifRef'", "'level3'", "'app_to_level3'", "'level2'", "'level3_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSTestProcInputLevel2'", "'app_to_level2'", "'GSSTestProcInputLevel1'", "'app_to_level1'", "'GSSTestProcInputLevel0'", "'app_to_level0'", "'GSSTestProcOutputLevel3'", "'optional'", "'level3_from_level2'", "'level2_from_level1'", "'level1_from_level0'", "'GSSTestProcOutputLevel2'", "'GSSTestProcOutputLevel1'", "'GSSTestProcOutputLevel0'", "'GSSTestProcLevel3Filter'", "'apply_def_filter'", "'extra_filter'", "'GSSTestProcLevel2Filter'", "'GSSTestProcLevel1Filter'", "'GSSTestProcLevel0Filter'", "'GSSTestProcEnable'", "'GSSTestProcNextStep'", "'isConcurrent'", "'GSSTestProcConcurrentStep'", "'.'", "'('", "')'", "'::'", "'-'", "'continuous'", "'manual'", "'concurrent'", "'action'", "'\"instruction\"'", "'\"tmtc_checking\"'", "'\"checking\"'", "'miliseconds'", "'seconds'", "'all'", "'allunsorted'", "'any'", "'yes'", "'no'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -12165,7 +12165,7 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSTestProcActionType"
-    // InternalTEST_PROC.g:5062:1: ruleGSSTestProcActionType returns [Enumerator current=null] : ( (enumLiteral_0= '\"instruction\"' ) | (enumLiteral_1= '\"TMTC checking\"' ) | (enumLiteral_2= '\"checking\"' ) ) ;
+    // InternalTEST_PROC.g:5062:1: ruleGSSTestProcActionType returns [Enumerator current=null] : ( (enumLiteral_0= '\"instruction\"' ) | (enumLiteral_1= '\"tmtc_checking\"' ) | (enumLiteral_2= '\"checking\"' ) ) ;
     public final Enumerator ruleGSSTestProcActionType() throws RecognitionException {
         Enumerator current = null;
 
@@ -12177,10 +12177,10 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTEST_PROC.g:5068:2: ( ( (enumLiteral_0= '\"instruction\"' ) | (enumLiteral_1= '\"TMTC checking\"' ) | (enumLiteral_2= '\"checking\"' ) ) )
-            // InternalTEST_PROC.g:5069:2: ( (enumLiteral_0= '\"instruction\"' ) | (enumLiteral_1= '\"TMTC checking\"' ) | (enumLiteral_2= '\"checking\"' ) )
+            // InternalTEST_PROC.g:5068:2: ( ( (enumLiteral_0= '\"instruction\"' ) | (enumLiteral_1= '\"tmtc_checking\"' ) | (enumLiteral_2= '\"checking\"' ) ) )
+            // InternalTEST_PROC.g:5069:2: ( (enumLiteral_0= '\"instruction\"' ) | (enumLiteral_1= '\"tmtc_checking\"' ) | (enumLiteral_2= '\"checking\"' ) )
             {
-            // InternalTEST_PROC.g:5069:2: ( (enumLiteral_0= '\"instruction\"' ) | (enumLiteral_1= '\"TMTC checking\"' ) | (enumLiteral_2= '\"checking\"' ) )
+            // InternalTEST_PROC.g:5069:2: ( (enumLiteral_0= '\"instruction\"' ) | (enumLiteral_1= '\"tmtc_checking\"' ) | (enumLiteral_2= '\"checking\"' ) )
             int alt67=3;
             switch ( input.LA(1) ) {
             case 85:
@@ -12227,10 +12227,10 @@ public class InternalTEST_PROCParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTEST_PROC.g:5078:3: (enumLiteral_1= '\"TMTC checking\"' )
+                    // InternalTEST_PROC.g:5078:3: (enumLiteral_1= '\"tmtc_checking\"' )
                     {
-                    // InternalTEST_PROC.g:5078:3: (enumLiteral_1= '\"TMTC checking\"' )
-                    // InternalTEST_PROC.g:5079:4: enumLiteral_1= '\"TMTC checking\"'
+                    // InternalTEST_PROC.g:5078:3: (enumLiteral_1= '\"tmtc_checking\"' )
+                    // InternalTEST_PROC.g:5079:4: enumLiteral_1= '\"tmtc_checking\"'
                     {
                     enumLiteral_1=(Token)match(input,86,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {

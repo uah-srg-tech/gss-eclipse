@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class GSSExportSettingAIFromFileImpl extends GSSExportSettingAIImpl implements GSSExportSettingAIFromFile {
+public class GSSExportSettingAIFromFileImpl extends GSSExportSettingImpl implements GSSExportSettingAIFromFile {
 	/**
 	 * The default value of the '{@link #getFile() <em>File</em>}' attribute.
 	 * <!-- begin-user-doc -->

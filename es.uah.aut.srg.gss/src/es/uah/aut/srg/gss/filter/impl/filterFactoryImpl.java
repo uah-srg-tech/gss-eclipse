@@ -68,14 +68,14 @@ public class filterFactoryImpl extends EFactoryImpl implements filterFactory {
 			case filterPackage.GSS_FILTER_MAXTERM_FILTER: return createGSSFilterMaxtermFilter();
 			case filterPackage.GSS_FILTER_MINTERM_FILTER: return createGSSFilterMintermFilter();
 			case filterPackage.GSS_FILTER_BOOL_VAR: return createGSSFilterBoolVar();
+			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM: return createGSSFilterBoolVarFromArrayItem();
+			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM: return createGSSFilterBoolVarFromGroupedArrayItem();
+			case filterPackage.GSS_FILTER_BOOL_VAR_FDIC: return createGSSFilterBoolVarFDIC();
 			case filterPackage.GSS_FILTER_FIELD_OP: return createGSSFilterFieldOp();
 			case filterPackage.GSS_FILTER_VALUE: return createGSSFilterValue();
 			case filterPackage.GSS_FILTER_CONSTANT: return createGSSFilterConstant();
 			case filterPackage.GSS_FILTER_SELECT: return createGSSFilterSelect();
 			case filterPackage.GSS_FILTER_SELECT_LINE: return createGSSFilterSelectLine();
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM: return createGSSFilterBoolVarFromArrayItem();
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM: return createGSSFilterBoolVarFromGroupedArrayItem();
-			case filterPackage.GSS_FILTER_BOOL_VAR_FDIC: return createGSSFilterBoolVarFDIC();
 			case filterPackage.GSS_FILTER_MAXTERM: return createGSSFilterMaxterm();
 			case filterPackage.GSS_FILTER_MINTERM: return createGSSFilterMinterm();
 			case filterPackage.GSS_FILTER_BOOL_VAR_REF: return createGSSFilterBoolVarRef();

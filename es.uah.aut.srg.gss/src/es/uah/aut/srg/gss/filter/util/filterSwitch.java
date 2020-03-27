@@ -99,9 +99,37 @@ public class filterSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case filterPackage.GSS_FILTER_ABSTRACT_BOOL_VAR: {
+				GSSFilterAbstractBoolVar gssFilterAbstractBoolVar = (GSSFilterAbstractBoolVar)theEObject;
+				T result = caseGSSFilterAbstractBoolVar(gssFilterAbstractBoolVar);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case filterPackage.GSS_FILTER_BOOL_VAR: {
 				GSSFilterBoolVar gssFilterBoolVar = (GSSFilterBoolVar)theEObject;
 				T result = caseGSSFilterBoolVar(gssFilterBoolVar);
+				if (result == null) result = caseGSSFilterAbstractBoolVar(gssFilterBoolVar);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM: {
+				GSSFilterBoolVarFromArrayItem gssFilterBoolVarFromArrayItem = (GSSFilterBoolVarFromArrayItem)theEObject;
+				T result = caseGSSFilterBoolVarFromArrayItem(gssFilterBoolVarFromArrayItem);
+				if (result == null) result = caseGSSFilterAbstractBoolVar(gssFilterBoolVarFromArrayItem);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM: {
+				GSSFilterBoolVarFromGroupedArrayItem gssFilterBoolVarFromGroupedArrayItem = (GSSFilterBoolVarFromGroupedArrayItem)theEObject;
+				T result = caseGSSFilterBoolVarFromGroupedArrayItem(gssFilterBoolVarFromGroupedArrayItem);
+				if (result == null) result = caseGSSFilterAbstractBoolVar(gssFilterBoolVarFromGroupedArrayItem);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case filterPackage.GSS_FILTER_BOOL_VAR_FDIC: {
+				GSSFilterBoolVarFDIC gssFilterBoolVarFDIC = (GSSFilterBoolVarFDIC)theEObject;
+				T result = caseGSSFilterBoolVarFDIC(gssFilterBoolVarFDIC);
+				if (result == null) result = caseGSSFilterAbstractBoolVar(gssFilterBoolVarFDIC);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -135,24 +163,6 @@ public class filterSwitch<T> extends Switch<T> {
 				GSSFilterSelectLine gssFilterSelectLine = (GSSFilterSelectLine)theEObject;
 				T result = caseGSSFilterSelectLine(gssFilterSelectLine);
 				if (result == null) result = caseGSSFilterValue(gssFilterSelectLine);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM: {
-				GSSFilterBoolVarFromArrayItem gssFilterBoolVarFromArrayItem = (GSSFilterBoolVarFromArrayItem)theEObject;
-				T result = caseGSSFilterBoolVarFromArrayItem(gssFilterBoolVarFromArrayItem);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM: {
-				GSSFilterBoolVarFromGroupedArrayItem gssFilterBoolVarFromGroupedArrayItem = (GSSFilterBoolVarFromGroupedArrayItem)theEObject;
-				T result = caseGSSFilterBoolVarFromGroupedArrayItem(gssFilterBoolVarFromGroupedArrayItem);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case filterPackage.GSS_FILTER_BOOL_VAR_FDIC: {
-				GSSFilterBoolVarFDIC gssFilterBoolVarFDIC = (GSSFilterBoolVarFDIC)theEObject;
-				T result = caseGSSFilterBoolVarFDIC(gssFilterBoolVarFDIC);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -220,6 +230,21 @@ public class filterSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSFilterMintermFilter(GSSFilterMintermFilter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Filter Abstract Bool Var</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Filter Abstract Bool Var</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSFilterAbstractBoolVar(GSSFilterAbstractBoolVar object) {
 		return null;
 	}
 

@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportSize()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface GSSExportSize extends EObject {

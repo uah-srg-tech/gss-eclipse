@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class GSSExportSettingAIFromConstImpl extends GSSExportSettingAIImpl implements GSSExportSettingAIFromConst {
+public class GSSExportSettingAIFromConstImpl extends GSSExportSettingImpl implements GSSExportSettingAIFromConst {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

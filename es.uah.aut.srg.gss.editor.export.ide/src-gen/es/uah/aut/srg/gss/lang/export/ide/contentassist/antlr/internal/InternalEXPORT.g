@@ -157,6 +157,31 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleGSSExportSize
+entryRuleGSSExportSize
+:
+{ before(grammarAccess.getGSSExportSizeRule()); }
+	 ruleGSSExportSize
+{ after(grammarAccess.getGSSExportSizeRule()); } 
+	 EOF 
+;
+
+// Rule GSSExportSize
+ruleGSSExportSize 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getGSSExportSizeAccess().getAlternatives()); }
+		(rule__GSSExportSize__Alternatives)
+		{ after(grammarAccess.getGSSExportSizeAccess().getAlternatives()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Entry rule entryRuleGSSExportSizeFromFileLength
 entryRuleGSSExportSizeFromFileLength
 :
@@ -251,6 +276,31 @@ ruleGSSExportSettings
 		{ before(grammarAccess.getGSSExportSettingsAccess().getGroup()); }
 		(rule__GSSExportSettings__Group__0)
 		{ after(grammarAccess.getGSSExportSettingsAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleGSSExportSetting
+entryRuleGSSExportSetting
+:
+{ before(grammarAccess.getGSSExportSettingRule()); }
+	 ruleGSSExportSetting
+{ after(grammarAccess.getGSSExportSettingRule()); } 
+	 EOF 
+;
+
+// Rule GSSExportSetting
+ruleGSSExportSetting 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getGSSExportSettingAccess().getAlternatives()); }
+		(rule__GSSExportSetting__Alternatives)
+		{ after(grammarAccess.getGSSExportSettingAccess().getAlternatives()); }
 	)
 ;
 finally {
@@ -619,72 +669,72 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSExportSizes__Alternatives_3
+rule__GSSExportSize__Alternatives
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLengthAssignment_3_0()); }
-		(rule__GSSExportSizes__SizeFromFileLengthAssignment_3_0)
-		{ after(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLengthAssignment_3_0()); }
+		{ before(grammarAccess.getGSSExportSizeAccess().getGSSExportSizeFromFileLengthParserRuleCall_0()); }
+		ruleGSSExportSizeFromFileLength
+		{ after(grammarAccess.getGSSExportSizeAccess().getGSSExportSizeFromFileLengthParserRuleCall_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLineAssignment_3_1()); }
-		(rule__GSSExportSizes__SizeFromFileLineAssignment_3_1)
-		{ after(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLineAssignment_3_1()); }
+		{ before(grammarAccess.getGSSExportSizeAccess().getGSSExportSizeFromFileLineParserRuleCall_1()); }
+		ruleGSSExportSizeFromFileLine
+		{ after(grammarAccess.getGSSExportSizeAccess().getGSSExportSizeFromFileLineParserRuleCall_1()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSExportSizesAccess().getSizeInBitsAssignment_3_2()); }
-		(rule__GSSExportSizes__SizeInBitsAssignment_3_2)
-		{ after(grammarAccess.getGSSExportSizesAccess().getSizeInBitsAssignment_3_2()); }
+		{ before(grammarAccess.getGSSExportSizeAccess().getGSSExportSizeInBitsParserRuleCall_2()); }
+		ruleGSSExportSizeInBits
+		{ after(grammarAccess.getGSSExportSizeAccess().getGSSExportSizeInBitsParserRuleCall_2()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSExportSettings__Alternatives_3
+rule__GSSExportSetting__Alternatives
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSExportSettingsAccess().getSettingFromConstAssignment_3_0()); }
-		(rule__GSSExportSettings__SettingFromConstAssignment_3_0)
-		{ after(grammarAccess.getGSSExportSettingsAccess().getSettingFromConstAssignment_3_0()); }
+		{ before(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingFromConstParserRuleCall_0()); }
+		ruleGSSExportSettingFromConst
+		{ after(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingFromConstParserRuleCall_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSExportSettingsAccess().getSettingFromSizeAssignment_3_1()); }
-		(rule__GSSExportSettings__SettingFromSizeAssignment_3_1)
-		{ after(grammarAccess.getGSSExportSettingsAccess().getSettingFromSizeAssignment_3_1()); }
+		{ before(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingFromSizeParserRuleCall_1()); }
+		ruleGSSExportSettingFromSize
+		{ after(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingFromSizeParserRuleCall_1()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSExportSettingsAccess().getSettingFromFileAssignment_3_2()); }
-		(rule__GSSExportSettings__SettingFromFileAssignment_3_2)
-		{ after(grammarAccess.getGSSExportSettingsAccess().getSettingFromFileAssignment_3_2()); }
+		{ before(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingFromFileParserRuleCall_2()); }
+		ruleGSSExportSettingFromFile
+		{ after(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingFromFileParserRuleCall_2()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSExportSettingsAccess().getSettingFromFieldAssignment_3_3()); }
-		(rule__GSSExportSettings__SettingFromFieldAssignment_3_3)
-		{ after(grammarAccess.getGSSExportSettingsAccess().getSettingFromFieldAssignment_3_3()); }
+		{ before(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingFromFieldParserRuleCall_3()); }
+		ruleGSSExportSettingFromField
+		{ after(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingFromFieldParserRuleCall_3()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSExportSettingsAccess().getSettingAIFromConstAssignment_3_4()); }
-		(rule__GSSExportSettings__SettingAIFromConstAssignment_3_4)
-		{ after(grammarAccess.getGSSExportSettingsAccess().getSettingAIFromConstAssignment_3_4()); }
+		{ before(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingAIFromConstParserRuleCall_4()); }
+		ruleGSSExportSettingAIFromConst
+		{ after(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingAIFromConstParserRuleCall_4()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSExportSettingsAccess().getSettingAIFromFileAssignment_3_5()); }
-		(rule__GSSExportSettings__SettingAIFromFileAssignment_3_5)
-		{ after(grammarAccess.getGSSExportSettingsAccess().getSettingAIFromFileAssignment_3_5()); }
+		{ before(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingAIFromFileParserRuleCall_5()); }
+		ruleGSSExportSettingAIFromFile
+		{ after(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingAIFromFileParserRuleCall_5()); }
 	)
 ;
 finally {
@@ -1712,14 +1762,14 @@ rule__GSSExportSizes__Group__3__Impl
 :
 (
 	(
-		{ before(grammarAccess.getGSSExportSizesAccess().getAlternatives_3()); }
-		(rule__GSSExportSizes__Alternatives_3)
-		{ after(grammarAccess.getGSSExportSizesAccess().getAlternatives_3()); }
+		{ before(grammarAccess.getGSSExportSizesAccess().getSizeAssignment_3()); }
+		(rule__GSSExportSizes__SizeAssignment_3)
+		{ after(grammarAccess.getGSSExportSizesAccess().getSizeAssignment_3()); }
 	)
 	(
-		{ before(grammarAccess.getGSSExportSizesAccess().getAlternatives_3()); }
-		(rule__GSSExportSizes__Alternatives_3)*
-		{ after(grammarAccess.getGSSExportSizesAccess().getAlternatives_3()); }
+		{ before(grammarAccess.getGSSExportSizesAccess().getSizeAssignment_3()); }
+		(rule__GSSExportSizes__SizeAssignment_3)*
+		{ after(grammarAccess.getGSSExportSizesAccess().getSizeAssignment_3()); }
 	)
 )
 ;
@@ -3770,9 +3820,9 @@ rule__GSSExportSettings__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSExportSettingsAccess().getAlternatives_3()); }
-	(rule__GSSExportSettings__Alternatives_3)*
-	{ after(grammarAccess.getGSSExportSettingsAccess().getAlternatives_3()); }
+	{ before(grammarAccess.getGSSExportSettingsAccess().getSettingAssignment_3()); }
+	(rule__GSSExportSettings__SettingAssignment_3)*
+	{ after(grammarAccess.getGSSExportSettingsAccess().getSettingAssignment_3()); }
 )
 ;
 finally {
@@ -8227,45 +8277,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSExportSizes__SizeFromFileLengthAssignment_3_0
+rule__GSSExportSizes__SizeAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLengthGSSExportSizeFromFileLengthParserRuleCall_3_0_0()); }
-		ruleGSSExportSizeFromFileLength
-		{ after(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLengthGSSExportSizeFromFileLengthParserRuleCall_3_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSExportSizes__SizeFromFileLineAssignment_3_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLineGSSExportSizeFromFileLineParserRuleCall_3_1_0()); }
-		ruleGSSExportSizeFromFileLine
-		{ after(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLineGSSExportSizeFromFileLineParserRuleCall_3_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSExportSizes__SizeInBitsAssignment_3_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSExportSizesAccess().getSizeInBitsGSSExportSizeInBitsParserRuleCall_3_2_0()); }
-		ruleGSSExportSizeInBits
-		{ after(grammarAccess.getGSSExportSizesAccess().getSizeInBitsGSSExportSizeInBitsParserRuleCall_3_2_0()); }
+		{ before(grammarAccess.getGSSExportSizesAccess().getSizeGSSExportSizeParserRuleCall_3_0()); }
+		ruleGSSExportSize
+		{ after(grammarAccess.getGSSExportSizesAccess().getSizeGSSExportSizeParserRuleCall_3_0()); }
 	)
 ;
 finally {
@@ -8467,90 +8487,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSExportSettings__SettingFromConstAssignment_3_0
+rule__GSSExportSettings__SettingAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSExportSettingsAccess().getSettingFromConstGSSExportSettingFromConstParserRuleCall_3_0_0()); }
-		ruleGSSExportSettingFromConst
-		{ after(grammarAccess.getGSSExportSettingsAccess().getSettingFromConstGSSExportSettingFromConstParserRuleCall_3_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSExportSettings__SettingFromSizeAssignment_3_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSExportSettingsAccess().getSettingFromSizeGSSExportSettingFromSizeParserRuleCall_3_1_0()); }
-		ruleGSSExportSettingFromSize
-		{ after(grammarAccess.getGSSExportSettingsAccess().getSettingFromSizeGSSExportSettingFromSizeParserRuleCall_3_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSExportSettings__SettingFromFileAssignment_3_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSExportSettingsAccess().getSettingFromFileGSSExportSettingFromFileParserRuleCall_3_2_0()); }
-		ruleGSSExportSettingFromFile
-		{ after(grammarAccess.getGSSExportSettingsAccess().getSettingFromFileGSSExportSettingFromFileParserRuleCall_3_2_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSExportSettings__SettingFromFieldAssignment_3_3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSExportSettingsAccess().getSettingFromFieldGSSExportSettingFromFieldParserRuleCall_3_3_0()); }
-		ruleGSSExportSettingFromField
-		{ after(grammarAccess.getGSSExportSettingsAccess().getSettingFromFieldGSSExportSettingFromFieldParserRuleCall_3_3_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSExportSettings__SettingAIFromConstAssignment_3_4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSExportSettingsAccess().getSettingAIFromConstGSSExportSettingAIFromConstParserRuleCall_3_4_0()); }
-		ruleGSSExportSettingAIFromConst
-		{ after(grammarAccess.getGSSExportSettingsAccess().getSettingAIFromConstGSSExportSettingAIFromConstParserRuleCall_3_4_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSExportSettings__SettingAIFromFileAssignment_3_5
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSExportSettingsAccess().getSettingAIFromFileGSSExportSettingAIFromFileParserRuleCall_3_5_0()); }
-		ruleGSSExportSettingAIFromFile
-		{ after(grammarAccess.getGSSExportSettingsAccess().getSettingAIFromFileGSSExportSettingAIFromFileParserRuleCall_3_5_0()); }
+		{ before(grammarAccess.getGSSExportSettingsAccess().getSettingGSSExportSettingParserRuleCall_3_0()); }
+		ruleGSSExportSetting
+		{ after(grammarAccess.getGSSExportSettingsAccess().getSettingGSSExportSettingParserRuleCall_3_0()); }
 	)
 ;
 finally {

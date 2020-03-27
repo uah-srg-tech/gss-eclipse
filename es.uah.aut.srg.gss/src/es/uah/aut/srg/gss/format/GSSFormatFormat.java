@@ -25,13 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getProtocol <em>Protocol</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getType <em>Type</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getCSField <em>CS Field</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getCSFormulaField <em>CS Formula Field</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getVSField <em>VS Field</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getFDICField <em>FDIC Field</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getVRFieldSize <em>VR Field Size</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getAField <em>AField</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getAIField <em>AI Field</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getField <em>Field</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.format.formatPackage#getGSSFormatFormat()
@@ -122,115 +116,23 @@ public interface GSSFormatFormat extends GSSModelElement {
 	boolean isSetType();
 
 	/**
-	 * Returns the value of the '<em><b>CS Field</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.format.GSSFormatCSField}.
+	 * Returns the value of the '<em><b>Field</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.gss.format.GSSFormatField}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>CS Field</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Field</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>CS Field</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.format.formatPackage#getGSSFormatFormat_CSField()
+	 * @return the value of the '<em>Field</em>' containment reference list.
+	 * @see es.uah.aut.srg.gss.format.formatPackage#getGSSFormatFormat_Field()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<GSSFormatCSField> getCSField();
+	EList<GSSFormatField> getField();
 
-	/**
-	 * Returns the value of the '<em><b>CS Formula Field</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.format.GSSFormatCSFormulaField}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>CS Formula Field</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>CS Formula Field</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.format.formatPackage#getGSSFormatFormat_CSFormulaField()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSFormatCSFormulaField> getCSFormulaField();
-
-	/**
-	 * Returns the value of the '<em><b>VS Field</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.format.GSSFormatVSField}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>VS Field</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>VS Field</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.format.formatPackage#getGSSFormatFormat_VSField()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSFormatVSField> getVSField();
-
-	/**
-	 * Returns the value of the '<em><b>FDIC Field</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.format.GSSFormatFDICField}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>FDIC Field</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>FDIC Field</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.format.formatPackage#getGSSFormatFormat_FDICField()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSFormatFDICField> getFDICField();
-
-	/**
-	 * Returns the value of the '<em><b>VR Field Size</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.format.GSSFormatVRFieldSize}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>VR Field Size</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>VR Field Size</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.format.formatPackage#getGSSFormatFormat_VRFieldSize()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSFormatVRFieldSize> getVRFieldSize();
-
-	/**
-	 * Returns the value of the '<em><b>AField</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.format.GSSFormatAField}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>AField</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>AField</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.format.formatPackage#getGSSFormatFormat_AField()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSFormatAField> getAField();
-
-	/**
-	 * Returns the value of the '<em><b>AI Field</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.format.GSSFormatAIField}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>AI Field</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>AI Field</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.format.formatPackage#getGSSFormatFormat_AIField()
-	 * @model containment="true"
-	 * @generated
-	 */
 	EList<GSSFormatAIField> getAIField();
+
+	EList<GSSFormatFDICField> getFDICField();
 
 } // GSSFormatFormat

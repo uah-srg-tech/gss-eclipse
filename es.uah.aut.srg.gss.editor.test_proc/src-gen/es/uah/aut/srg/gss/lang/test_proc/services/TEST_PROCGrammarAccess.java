@@ -3772,15 +3772,15 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cInstructionEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cInstructionInstructionKeyword_0_0 = (Keyword)cInstructionEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cTmtc_checkingEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cTmtc_checkingTMTCCheckingKeyword_1_0 = (Keyword)cTmtc_checkingEnumLiteralDeclaration_1.eContents().get(0);
+		private final Keyword cTmtc_checkingTmtc_checkingKeyword_1_0 = (Keyword)cTmtc_checkingEnumLiteralDeclaration_1.eContents().get(0);
 		private final EnumLiteralDeclaration cCheckingEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
 		private final Keyword cCheckingCheckingKeyword_2_0 = (Keyword)cCheckingEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum GSSTestProcActionType:
-		//	instruction='"instruction"' | tmtc_checking='"TMTC checking"' | checking='"checking"';
+		//	instruction='"instruction"' | tmtc_checking='"tmtc_checking"' | checking='"checking"';
 		public EnumRule getRule() { return rule; }
 		
-		//instruction='"instruction"' | tmtc_checking='"TMTC checking"' | checking='"checking"'
+		//instruction='"instruction"' | tmtc_checking='"tmtc_checking"' | checking='"checking"'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//instruction='"instruction"'
@@ -3789,11 +3789,11 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 		//'"instruction"'
 		public Keyword getInstructionInstructionKeyword_0_0() { return cInstructionInstructionKeyword_0_0; }
 		
-		//tmtc_checking='"TMTC checking"'
+		//tmtc_checking='"tmtc_checking"'
 		public EnumLiteralDeclaration getTmtc_checkingEnumLiteralDeclaration_1() { return cTmtc_checkingEnumLiteralDeclaration_1; }
 		
-		//'"TMTC checking"'
-		public Keyword getTmtc_checkingTMTCCheckingKeyword_1_0() { return cTmtc_checkingTMTCCheckingKeyword_1_0; }
+		//'"tmtc_checking"'
+		public Keyword getTmtc_checkingTmtc_checkingKeyword_1_0() { return cTmtc_checkingTmtc_checkingKeyword_1_0; }
 		
 		//checking='"checking"'
 		public EnumLiteralDeclaration getCheckingEnumLiteralDeclaration_2() { return cCheckingEnumLiteralDeclaration_2; }
@@ -4105,7 +4105,7 @@ public class TEST_PROCGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum GSSTestProcActionType:
-	//	instruction='"instruction"' | tmtc_checking='"TMTC checking"' | checking='"checking"';
+	//	instruction='"instruction"' | tmtc_checking='"tmtc_checking"' | checking='"checking"';
 	public GSSTestProcActionTypeElements getGSSTestProcActionTypeAccess() {
 		return eGSSTestProcActionType;
 	}

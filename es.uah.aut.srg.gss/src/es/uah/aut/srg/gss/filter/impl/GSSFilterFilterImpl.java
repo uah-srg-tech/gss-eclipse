@@ -12,10 +12,7 @@ package es.uah.aut.srg.gss.filter.impl;
 
 import es.uah.aut.srg.gss.common.impl.GSSModelElementImpl;
 
-import es.uah.aut.srg.gss.filter.GSSFilterBoolVar;
-import es.uah.aut.srg.gss.filter.GSSFilterBoolVarFDIC;
-import es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromArrayItem;
-import es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromGroupedArrayItem;
+import es.uah.aut.srg.gss.filter.GSSFilterAbstractBoolVar;
 import es.uah.aut.srg.gss.filter.GSSFilterFilter;
 import es.uah.aut.srg.gss.filter.filterPackage;
 
@@ -46,9 +43,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterFilterImpl#getFormatFile <em>Format File</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterFilterImpl#getBoolVar <em>Bool Var</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterFilterImpl#getBoolVarFromArrayItem <em>Bool Var From Array Item</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterFilterImpl#getBoolVarFromGroupedArrayItem <em>Bool Var From Grouped Array Item</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterFilterImpl#getBoolVarFDIC <em>Bool Var FDIC</em>}</li>
  * </ul>
  *
  * @generated
@@ -72,37 +66,7 @@ public abstract class GSSFilterFilterImpl extends GSSModelElementImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GSSFilterBoolVar> boolVar;
-
-	/**
-	 * The cached value of the '{@link #getBoolVarFromArrayItem() <em>Bool Var From Array Item</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBoolVarFromArrayItem()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSFilterBoolVarFromArrayItem> boolVarFromArrayItem;
-
-	/**
-	 * The cached value of the '{@link #getBoolVarFromGroupedArrayItem() <em>Bool Var From Grouped Array Item</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBoolVarFromGroupedArrayItem()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSFilterBoolVarFromGroupedArrayItem> boolVarFromGroupedArrayItem;
-
-	/**
-	 * The cached value of the '{@link #getBoolVarFDIC() <em>Bool Var FDIC</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBoolVarFDIC()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSFilterBoolVarFDIC> boolVarFDIC;
+	protected EList<GSSFilterAbstractBoolVar> boolVar;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -166,47 +130,11 @@ public abstract class GSSFilterFilterImpl extends GSSModelElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSFilterBoolVar> getBoolVar() {
+	public EList<GSSFilterAbstractBoolVar> getBoolVar() {
 		if (boolVar == null) {
-			boolVar = new EObjectContainmentEList<GSSFilterBoolVar>(GSSFilterBoolVar.class, this, filterPackage.GSS_FILTER_FILTER__BOOL_VAR);
+			boolVar = new EObjectContainmentEList<GSSFilterAbstractBoolVar>(GSSFilterAbstractBoolVar.class, this, filterPackage.GSS_FILTER_FILTER__BOOL_VAR);
 		}
 		return boolVar;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<GSSFilterBoolVarFromArrayItem> getBoolVarFromArrayItem() {
-		if (boolVarFromArrayItem == null) {
-			boolVarFromArrayItem = new EObjectContainmentEList<GSSFilterBoolVarFromArrayItem>(GSSFilterBoolVarFromArrayItem.class, this, filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FROM_ARRAY_ITEM);
-		}
-		return boolVarFromArrayItem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<GSSFilterBoolVarFromGroupedArrayItem> getBoolVarFromGroupedArrayItem() {
-		if (boolVarFromGroupedArrayItem == null) {
-			boolVarFromGroupedArrayItem = new EObjectContainmentEList<GSSFilterBoolVarFromGroupedArrayItem>(GSSFilterBoolVarFromGroupedArrayItem.class, this, filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM);
-		}
-		return boolVarFromGroupedArrayItem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<GSSFilterBoolVarFDIC> getBoolVarFDIC() {
-		if (boolVarFDIC == null) {
-			boolVarFDIC = new EObjectContainmentEList<GSSFilterBoolVarFDIC>(GSSFilterBoolVarFDIC.class, this, filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FDIC);
-		}
-		return boolVarFDIC;
 	}
 
 	/**
@@ -219,12 +147,6 @@ public abstract class GSSFilterFilterImpl extends GSSModelElementImpl implements
 		switch (featureID) {
 			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR:
 				return ((InternalEList<?>)getBoolVar()).basicRemove(otherEnd, msgs);
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FROM_ARRAY_ITEM:
-				return ((InternalEList<?>)getBoolVarFromArrayItem()).basicRemove(otherEnd, msgs);
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM:
-				return ((InternalEList<?>)getBoolVarFromGroupedArrayItem()).basicRemove(otherEnd, msgs);
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FDIC:
-				return ((InternalEList<?>)getBoolVarFDIC()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -242,12 +164,6 @@ public abstract class GSSFilterFilterImpl extends GSSModelElementImpl implements
 				return basicGetFormatFile();
 			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR:
 				return getBoolVar();
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FROM_ARRAY_ITEM:
-				return getBoolVarFromArrayItem();
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM:
-				return getBoolVarFromGroupedArrayItem();
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FDIC:
-				return getBoolVarFDIC();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -266,19 +182,7 @@ public abstract class GSSFilterFilterImpl extends GSSModelElementImpl implements
 				return;
 			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR:
 				getBoolVar().clear();
-				getBoolVar().addAll((Collection<? extends GSSFilterBoolVar>)newValue);
-				return;
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FROM_ARRAY_ITEM:
-				getBoolVarFromArrayItem().clear();
-				getBoolVarFromArrayItem().addAll((Collection<? extends GSSFilterBoolVarFromArrayItem>)newValue);
-				return;
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM:
-				getBoolVarFromGroupedArrayItem().clear();
-				getBoolVarFromGroupedArrayItem().addAll((Collection<? extends GSSFilterBoolVarFromGroupedArrayItem>)newValue);
-				return;
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FDIC:
-				getBoolVarFDIC().clear();
-				getBoolVarFDIC().addAll((Collection<? extends GSSFilterBoolVarFDIC>)newValue);
+				getBoolVar().addAll((Collection<? extends GSSFilterAbstractBoolVar>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -298,15 +202,6 @@ public abstract class GSSFilterFilterImpl extends GSSModelElementImpl implements
 			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR:
 				getBoolVar().clear();
 				return;
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FROM_ARRAY_ITEM:
-				getBoolVarFromArrayItem().clear();
-				return;
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM:
-				getBoolVarFromGroupedArrayItem().clear();
-				return;
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FDIC:
-				getBoolVarFDIC().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -323,12 +218,6 @@ public abstract class GSSFilterFilterImpl extends GSSModelElementImpl implements
 				return formatFile != null;
 			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR:
 				return boolVar != null && !boolVar.isEmpty();
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FROM_ARRAY_ITEM:
-				return boolVarFromArrayItem != null && !boolVarFromArrayItem.isEmpty();
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FROM_GROUPED_ARRAY_ITEM:
-				return boolVarFromGroupedArrayItem != null && !boolVarFromGroupedArrayItem.isEmpty();
-			case filterPackage.GSS_FILTER_FILTER__BOOL_VAR_FDIC:
-				return boolVarFDIC != null && !boolVarFDIC.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

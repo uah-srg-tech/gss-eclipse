@@ -36,12 +36,7 @@ public class IMPORTScopeProvider extends GSSAbstractScopeProvider  {
 			if (imports.getFrom() == null) {
 				return IScope.NULLSCOPE;
 			}
-			
-			fields.addAll(imports.getFrom().getCSField());
-			fields.addAll(imports.getFrom().getCSFormulaField());
-			fields.addAll(imports.getFrom().getFDICField());
-			fields.addAll(imports.getFrom().getVRFieldSize());
-			fields.addAll(imports.getFrom().getVSField());
+			fields.addAll(imports.getFrom().getField());
 			
 		} else {
 
@@ -49,11 +44,7 @@ public class IMPORTScopeProvider extends GSSAbstractScopeProvider  {
 				return IScope.NULLSCOPE;
 			}
 			
-			fields.addAll(imports.getTo().getCSField());
-			fields.addAll(imports.getTo().getCSFormulaField());
-			fields.addAll(imports.getTo().getFDICField());
-			fields.addAll(imports.getTo().getVRFieldSize());
-			fields.addAll(imports.getTo().getVSField());
+			fields.addAll(imports.getTo().getField());
 		}
 		return getSimpleObjectScope(fields);
 	}

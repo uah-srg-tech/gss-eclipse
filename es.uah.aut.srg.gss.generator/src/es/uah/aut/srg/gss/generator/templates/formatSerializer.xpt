@@ -8,14 +8,25 @@ GSSFormatFormat «this.name» {
 	version := «this.version»;
 	protocol := «this.protocol»;
 	type := «this.type»;
-«EXPAND SerializeVSField FOREACH this.VSField -»
-«EXPAND SerializeCSField FOREACH this.CSField -»
-«EXPAND SerializeAField FOREACH this.AField -»
-«EXPAND SerializeAIField FOREACH this.AIField -»
-«EXPAND SerializeVRFieldSize FOREACH this.VRFieldSize -»
-«EXPAND SerializeFDICField FOREACH this.FDICField -»
+«EXPAND SerializeField FOREACH this.Field -»
 };
 «ENDFILE -»
+«ENDDEFINE»
+
+«DEFINE SerializeField FOR GSSFormatField -»
+«IF(this.metaType.name == "format::GSSFormatCSField") -»
+«EXPAND SerializeCSField FOR (GSSFormatCSField)this -»
+«ELSEIF(this.metaType.name == "format::GSSFormatVSField") -»
+«EXPAND SerializeVSField FOR (GSSFormatVSField)this -»
+«ELSEIF(this.metaType.name == "format::GSSFormatAField") -»
+«EXPAND SerializeAField FOR (GSSFormatAField)this -»
+«ELSEIF(this.metaType.name == "format::GSSFormatAIField") -»
+«EXPAND SerializeAIField FOR (GSSFormatAIField)this -»
+«ELSEIF(this.metaType.name == "format::GSSFormatVRFieldSize") -»
+«EXPAND SerializeVRFieldSize FOR (GSSFormatVRFieldSize)this -»
+«ELSEIF(this.metaType.name == "format::GSSFormatFDICField") -»
+«EXPAND SerializeFDICField FOR (GSSFormatFDICField)this -»
+«ENDIF -»
 «ENDDEFINE»
 
 «DEFINE SerializeCSField FOR GSSFormatCSField -»

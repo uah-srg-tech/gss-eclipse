@@ -187,31 +187,13 @@ public interface exportPackage extends EPackage {
 	int GSS_EXPORT_SIZES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Size From File Length</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Size</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SIZES__SIZE_FROM_FILE_LENGTH = 0;
-
-	/**
-	 * The feature id for the '<em><b>Size From File Line</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_EXPORT_SIZES__SIZE_FROM_FILE_LINE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Size In Bits</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_EXPORT_SIZES__SIZE_IN_BITS = 2;
+	int GSS_EXPORT_SIZES__SIZE = 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Export Sizes</em>' class.
@@ -220,7 +202,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SIZES_FEATURE_COUNT = 3;
+	int GSS_EXPORT_SIZES_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Export Sizes</em>' class.
@@ -498,58 +480,13 @@ public interface exportPackage extends EPackage {
 	int GSS_EXPORT_SETTINGS = 6;
 
 	/**
-	 * The feature id for the '<em><b>Setting From Const</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Setting</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTINGS__SETTING_FROM_CONST = 0;
-
-	/**
-	 * The feature id for the '<em><b>Setting From Size</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_EXPORT_SETTINGS__SETTING_FROM_SIZE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Setting From File</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_EXPORT_SETTINGS__SETTING_FROM_FILE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Setting From Field</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_EXPORT_SETTINGS__SETTING_FROM_FIELD = 3;
-
-	/**
-	 * The feature id for the '<em><b>Setting AI From Const</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_EXPORT_SETTINGS__SETTING_AI_FROM_CONST = 4;
-
-	/**
-	 * The feature id for the '<em><b>Setting AI From File</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_EXPORT_SETTINGS__SETTING_AI_FROM_FILE = 5;
+	int GSS_EXPORT_SETTINGS__SETTING = 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Export Settings</em>' class.
@@ -558,7 +495,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTINGS_FEATURE_COUNT = 6;
+	int GSS_EXPORT_SETTINGS_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Export Settings</em>' class.
@@ -818,43 +755,6 @@ public interface exportPackage extends EPackage {
 	int GSS_EXPORT_SETTING_FROM_FIELD_OPERATION_COUNT = GSS_EXPORT_SETTING_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIImpl <em>GSS Export Setting AI</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.export.impl.GSSExportSettingAIImpl
-	 * @see es.uah.aut.srg.gss.export.impl.exportPackageImpl#getGSSExportSettingAI()
-	 * @generated
-	 */
-	int GSS_EXPORT_SETTING_AI = 12;
-
-	/**
-	 * The feature id for the '<em><b>To Field Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_EXPORT_SETTING_AI__TO_FIELD_REF = 0;
-
-	/**
-	 * The number of structural features of the '<em>GSS Export Setting AI</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_EXPORT_SETTING_AI_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>GSS Export Setting AI</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_EXPORT_SETTING_AI_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromConstImpl <em>GSS Export Setting AI From Const</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -862,7 +762,7 @@ public interface exportPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.export.impl.exportPackageImpl#getGSSExportSettingAIFromConst()
 	 * @generated
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_CONST = 13;
+	int GSS_EXPORT_SETTING_AI_FROM_CONST = 12;
 
 	/**
 	 * The feature id for the '<em><b>To Field Ref</b></em>' reference.
@@ -871,7 +771,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF = GSS_EXPORT_SETTING_AI__TO_FIELD_REF;
+	int GSS_EXPORT_SETTING_AI_FROM_CONST__TO_FIELD_REF = GSS_EXPORT_SETTING__TO_FIELD_REF;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -880,7 +780,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE = GSS_EXPORT_SETTING_AI_FEATURE_COUNT + 0;
+	int GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE = GSS_EXPORT_SETTING_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>To Array Index</b></em>' attribute.
@@ -889,7 +789,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX = GSS_EXPORT_SETTING_AI_FEATURE_COUNT + 1;
+	int GSS_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX = GSS_EXPORT_SETTING_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Export Setting AI From Const</em>' class.
@@ -898,7 +798,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_CONST_FEATURE_COUNT = GSS_EXPORT_SETTING_AI_FEATURE_COUNT + 2;
+	int GSS_EXPORT_SETTING_AI_FROM_CONST_FEATURE_COUNT = GSS_EXPORT_SETTING_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>GSS Export Setting AI From Const</em>' class.
@@ -907,7 +807,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_CONST_OPERATION_COUNT = GSS_EXPORT_SETTING_AI_OPERATION_COUNT + 0;
+	int GSS_EXPORT_SETTING_AI_FROM_CONST_OPERATION_COUNT = GSS_EXPORT_SETTING_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromFileImpl <em>GSS Export Setting AI From File</em>}' class.
@@ -917,7 +817,7 @@ public interface exportPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.export.impl.exportPackageImpl#getGSSExportSettingAIFromFile()
 	 * @generated
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_FILE = 14;
+	int GSS_EXPORT_SETTING_AI_FROM_FILE = 13;
 
 	/**
 	 * The feature id for the '<em><b>To Field Ref</b></em>' reference.
@@ -926,7 +826,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF = GSS_EXPORT_SETTING_AI__TO_FIELD_REF;
+	int GSS_EXPORT_SETTING_AI_FROM_FILE__TO_FIELD_REF = GSS_EXPORT_SETTING__TO_FIELD_REF;
 
 	/**
 	 * The feature id for the '<em><b>File</b></em>' attribute.
@@ -935,7 +835,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_FILE__FILE = GSS_EXPORT_SETTING_AI_FEATURE_COUNT + 0;
+	int GSS_EXPORT_SETTING_AI_FROM_FILE__FILE = GSS_EXPORT_SETTING_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>To Array Index</b></em>' attribute.
@@ -944,7 +844,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_FILE__TO_ARRAY_INDEX = GSS_EXPORT_SETTING_AI_FEATURE_COUNT + 1;
+	int GSS_EXPORT_SETTING_AI_FROM_FILE__TO_ARRAY_INDEX = GSS_EXPORT_SETTING_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Offset</b></em>' attribute.
@@ -953,7 +853,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_FILE__OFFSET = GSS_EXPORT_SETTING_AI_FEATURE_COUNT + 2;
+	int GSS_EXPORT_SETTING_AI_FROM_FILE__OFFSET = GSS_EXPORT_SETTING_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -962,7 +862,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_FILE__SIZE = GSS_EXPORT_SETTING_AI_FEATURE_COUNT + 3;
+	int GSS_EXPORT_SETTING_AI_FROM_FILE__SIZE = GSS_EXPORT_SETTING_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Line</b></em>' attribute.
@@ -971,7 +871,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_FILE__LINE = GSS_EXPORT_SETTING_AI_FEATURE_COUNT + 4;
+	int GSS_EXPORT_SETTING_AI_FROM_FILE__LINE = GSS_EXPORT_SETTING_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>GSS Export Setting AI From File</em>' class.
@@ -980,7 +880,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_FILE_FEATURE_COUNT = GSS_EXPORT_SETTING_AI_FEATURE_COUNT + 5;
+	int GSS_EXPORT_SETTING_AI_FROM_FILE_FEATURE_COUNT = GSS_EXPORT_SETTING_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>GSS Export Setting AI From File</em>' class.
@@ -989,7 +889,7 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_EXPORT_SETTING_AI_FROM_FILE_OPERATION_COUNT = GSS_EXPORT_SETTING_AI_OPERATION_COUNT + 0;
+	int GSS_EXPORT_SETTING_AI_FROM_FILE_OPERATION_COUNT = GSS_EXPORT_SETTING_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportActivateDICsImpl <em>GSS Export Activate DI Cs</em>}' class.
@@ -999,7 +899,7 @@ public interface exportPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.export.impl.exportPackageImpl#getGSSExportActivateDICs()
 	 * @generated
 	 */
-	int GSS_EXPORT_ACTIVATE_DI_CS = 15;
+	int GSS_EXPORT_ACTIVATE_DI_CS = 14;
 
 	/**
 	 * The feature id for the '<em><b>DIC</b></em>' containment reference list.
@@ -1036,7 +936,7 @@ public interface exportPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.export.impl.exportPackageImpl#getGSSExportDIC()
 	 * @generated
 	 */
-	int GSS_EXPORT_DIC = 16;
+	int GSS_EXPORT_DIC = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1082,7 +982,7 @@ public interface exportPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.export.impl.exportPackageImpl#getGSSExportUnit()
 	 * @generated
 	 */
-	int GSS_EXPORT_UNIT = 17;
+	int GSS_EXPORT_UNIT = 16;
 
 
 	/**
@@ -1161,37 +1061,15 @@ public interface exportPackage extends EPackage {
 	EClass getGSSExportSizes();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.export.GSSExportSizes#getSizeFromFileLength <em>Size From File Length</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.export.GSSExportSizes#getSize <em>Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Size From File Length</em>'.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSizes#getSizeFromFileLength()
+	 * @return the meta object for the containment reference list '<em>Size</em>'.
+	 * @see es.uah.aut.srg.gss.export.GSSExportSizes#getSize()
 	 * @see #getGSSExportSizes()
 	 * @generated
 	 */
-	EReference getGSSExportSizes_SizeFromFileLength();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.export.GSSExportSizes#getSizeFromFileLine <em>Size From File Line</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Size From File Line</em>'.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSizes#getSizeFromFileLine()
-	 * @see #getGSSExportSizes()
-	 * @generated
-	 */
-	EReference getGSSExportSizes_SizeFromFileLine();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.export.GSSExportSizes#getSizeInBits <em>Size In Bits</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Size In Bits</em>'.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSizes#getSizeInBits()
-	 * @see #getGSSExportSizes()
-	 * @generated
-	 */
-	EReference getGSSExportSizes_SizeInBits();
+	EReference getGSSExportSizes_Size();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.export.GSSExportSize <em>GSS Export Size</em>}'.
@@ -1321,70 +1199,15 @@ public interface exportPackage extends EPackage {
 	EClass getGSSExportSettings();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.export.GSSExportSettings#getSettingFromConst <em>Setting From Const</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.export.GSSExportSettings#getSetting <em>Setting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Setting From Const</em>'.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSettings#getSettingFromConst()
+	 * @return the meta object for the containment reference list '<em>Setting</em>'.
+	 * @see es.uah.aut.srg.gss.export.GSSExportSettings#getSetting()
 	 * @see #getGSSExportSettings()
 	 * @generated
 	 */
-	EReference getGSSExportSettings_SettingFromConst();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.export.GSSExportSettings#getSettingFromSize <em>Setting From Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Setting From Size</em>'.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSettings#getSettingFromSize()
-	 * @see #getGSSExportSettings()
-	 * @generated
-	 */
-	EReference getGSSExportSettings_SettingFromSize();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.export.GSSExportSettings#getSettingFromFile <em>Setting From File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Setting From File</em>'.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSettings#getSettingFromFile()
-	 * @see #getGSSExportSettings()
-	 * @generated
-	 */
-	EReference getGSSExportSettings_SettingFromFile();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.export.GSSExportSettings#getSettingFromField <em>Setting From Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Setting From Field</em>'.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSettings#getSettingFromField()
-	 * @see #getGSSExportSettings()
-	 * @generated
-	 */
-	EReference getGSSExportSettings_SettingFromField();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.export.GSSExportSettings#getSettingAIFromConst <em>Setting AI From Const</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Setting AI From Const</em>'.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSettings#getSettingAIFromConst()
-	 * @see #getGSSExportSettings()
-	 * @generated
-	 */
-	EReference getGSSExportSettings_SettingAIFromConst();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.export.GSSExportSettings#getSettingAIFromFile <em>Setting AI From File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Setting AI From File</em>'.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSettings#getSettingAIFromFile()
-	 * @see #getGSSExportSettings()
-	 * @generated
-	 */
-	EReference getGSSExportSettings_SettingAIFromFile();
+	EReference getGSSExportSettings_Setting();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.export.GSSExportSetting <em>GSS Export Setting</em>}'.
@@ -1523,27 +1346,6 @@ public interface exportPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGSSExportSettingFromField_FieldRef();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.export.GSSExportSettingAI <em>GSS Export Setting AI</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Export Setting AI</em>'.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSettingAI
-	 * @generated
-	 */
-	EClass getGSSExportSettingAI();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.export.GSSExportSettingAI#getToFieldRef <em>To Field Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>To Field Ref</em>'.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSettingAI#getToFieldRef()
-	 * @see #getGSSExportSettingAI()
-	 * @generated
-	 */
-	EReference getGSSExportSettingAI_ToFieldRef();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.export.GSSExportSettingAIFromConst <em>GSS Export Setting AI From Const</em>}'.
@@ -1789,28 +1591,12 @@ public interface exportPackage extends EPackage {
 		EClass GSS_EXPORT_SIZES = eINSTANCE.getGSSExportSizes();
 
 		/**
-		 * The meta object literal for the '<em><b>Size From File Length</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Size</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_EXPORT_SIZES__SIZE_FROM_FILE_LENGTH = eINSTANCE.getGSSExportSizes_SizeFromFileLength();
-
-		/**
-		 * The meta object literal for the '<em><b>Size From File Line</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_EXPORT_SIZES__SIZE_FROM_FILE_LINE = eINSTANCE.getGSSExportSizes_SizeFromFileLine();
-
-		/**
-		 * The meta object literal for the '<em><b>Size In Bits</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_EXPORT_SIZES__SIZE_IN_BITS = eINSTANCE.getGSSExportSizes_SizeInBits();
+		EReference GSS_EXPORT_SIZES__SIZE = eINSTANCE.getGSSExportSizes_Size();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSizeImpl <em>GSS Export Size</em>}' class.
@@ -1919,52 +1705,12 @@ public interface exportPackage extends EPackage {
 		EClass GSS_EXPORT_SETTINGS = eINSTANCE.getGSSExportSettings();
 
 		/**
-		 * The meta object literal for the '<em><b>Setting From Const</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Setting</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_EXPORT_SETTINGS__SETTING_FROM_CONST = eINSTANCE.getGSSExportSettings_SettingFromConst();
-
-		/**
-		 * The meta object literal for the '<em><b>Setting From Size</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_EXPORT_SETTINGS__SETTING_FROM_SIZE = eINSTANCE.getGSSExportSettings_SettingFromSize();
-
-		/**
-		 * The meta object literal for the '<em><b>Setting From File</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_EXPORT_SETTINGS__SETTING_FROM_FILE = eINSTANCE.getGSSExportSettings_SettingFromFile();
-
-		/**
-		 * The meta object literal for the '<em><b>Setting From Field</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_EXPORT_SETTINGS__SETTING_FROM_FIELD = eINSTANCE.getGSSExportSettings_SettingFromField();
-
-		/**
-		 * The meta object literal for the '<em><b>Setting AI From Const</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_EXPORT_SETTINGS__SETTING_AI_FROM_CONST = eINSTANCE.getGSSExportSettings_SettingAIFromConst();
-
-		/**
-		 * The meta object literal for the '<em><b>Setting AI From File</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_EXPORT_SETTINGS__SETTING_AI_FROM_FILE = eINSTANCE.getGSSExportSettings_SettingAIFromFile();
+		EReference GSS_EXPORT_SETTINGS__SETTING = eINSTANCE.getGSSExportSettings_Setting();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingImpl <em>GSS Export Setting</em>}' class.
@@ -2079,24 +1825,6 @@ public interface exportPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GSS_EXPORT_SETTING_FROM_FIELD__FIELD_REF = eINSTANCE.getGSSExportSettingFromField_FieldRef();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIImpl <em>GSS Export Setting AI</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.export.impl.GSSExportSettingAIImpl
-		 * @see es.uah.aut.srg.gss.export.impl.exportPackageImpl#getGSSExportSettingAI()
-		 * @generated
-		 */
-		EClass GSS_EXPORT_SETTING_AI = eINSTANCE.getGSSExportSettingAI();
-
-		/**
-		 * The meta object literal for the '<em><b>To Field Ref</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_EXPORT_SETTING_AI__TO_FIELD_REF = eINSTANCE.getGSSExportSettingAI_ToFieldRef();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIFromConstImpl <em>GSS Export Setting AI From Const</em>}' class.

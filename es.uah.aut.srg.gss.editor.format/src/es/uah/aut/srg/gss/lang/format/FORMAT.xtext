@@ -17,17 +17,11 @@ GSSFormatFormat returns GSSFormatFormat:
 	'GSSFormatFormat'
 	name=ID
 	 '{'
-		(('uri' ':=' uri=QualifiedName ';')
-		& ('version' ':=' version=Version ';')
-		& ('protocol' ':=' protocol=ID ';')
-		& ('type' ':=' type=GSSFormatFormatType ';')
-		((CSField+=GSSFormatCSField) |
-		 (CSFormulaField+=GSSFormatCSFormulaField) |
-		 (VSField+=GSSFormatVSField) |
-		 (FDICField+=GSSFormatFDICField) |
-		 (VRFieldSize+=GSSFormatVRFieldSize) |
-		 (AField+=GSSFormatAField) |
-		 (AIField+=GSSFormatAIField))*)
+		'uri' ':=' uri=QualifiedName ';'
+		'version' ':=' version=Version ';'
+		'protocol' ':=' protocol=ID ';'
+		'type' ':=' type=GSSFormatFormatType ';'
+		(Field+=GSSFormatField)*
 	'}' ';'
 ;
 
@@ -37,7 +31,8 @@ enum GSSFormatFormatType returns GSSFormatFormatType:
 
 GSSFormatField returns GSSFormatField:
 	GSSFormatCSField | GSSFormatCSFormulaField |
-	GSSFormatVSField | GSSFormatVRFieldSize| GSSFormatFDICField
+	GSSFormatVSField | GSSFormatFDICField |
+	GSSFormatVRFieldSize | GSSFormatAField | GSSFormatAIField
 ;
 
 GSSFormatCSField returns GSSFormatCSField:

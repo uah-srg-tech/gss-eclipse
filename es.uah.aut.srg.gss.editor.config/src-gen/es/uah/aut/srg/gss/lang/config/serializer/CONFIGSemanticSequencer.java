@@ -320,25 +320,54 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSScenarioMonitor returns GSSScenarioAlarmMsg
 	 *     GSSScenarioAlarmMsg returns GSSScenarioAlarmMsg
 	 *
 	 * Constraint:
-	 *     (name=STRING type=GSSScenarioAlarmMsgType text=STRING (GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic))
+	 *     (name=STRING type=GSSScenarioAlarmMsgType text=STRING GV=GSSScenarioGV)
 	 */
 	protected void sequence_GSSScenarioAlarmMsg(ISerializationContext context, GSSScenarioAlarmMsg semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__NAME));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_ALARM_MSG__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_ALARM_MSG__TYPE));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_ALARM_MSG__TEXT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_ALARM_MSG__TEXT));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGSSScenarioAlarmMsgAccess().getNameSTRINGTerminalRuleCall_4_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGSSScenarioAlarmMsgAccess().getTypeGSSScenarioAlarmMsgTypeEnumRuleCall_8_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getGSSScenarioAlarmMsgAccess().getTextSTRINGTerminalRuleCall_12_0(), semanticObject.getText());
+		feeder.accept(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVGSSScenarioGVParserRuleCall_14_0(), semanticObject.getGV());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
+	 *     GSSScenarioMonitor returns GSSScenarioAlarmVal
 	 *     GSSScenarioAlarmVal returns GSSScenarioAlarmVal
 	 *
 	 * Constraint:
-	 *     (name=STRING type=GSSScenarioAlarmValType (GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic))
+	 *     (name=STRING type=GSSScenarioAlarmValType GV=GSSScenarioGV)
 	 */
 	protected void sequence_GSSScenarioAlarmVal(ISerializationContext context, GSSScenarioAlarmVal semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__NAME));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_ALARM_VAL__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_ALARM_VAL__TYPE));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGSSScenarioAlarmValAccess().getNameSTRINGTerminalRuleCall_4_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGSSScenarioAlarmValAccess().getTypeGSSScenarioAlarmValTypeEnumRuleCall_8_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getGSSScenarioAlarmValAccess().getGVGSSScenarioGVParserRuleCall_10_0(), semanticObject.getGV());
+		feeder.finish();
 	}
 	
 	
@@ -412,6 +441,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSScenarioGV returns GSSScenarioGVFiltered
 	 *     GSSScenarioGVFiltered returns GSSScenarioGVFiltered
 	 *
 	 * Constraint:
@@ -424,6 +454,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSScenarioGV returns GSSScenarioGVPeriodic
 	 *     GSSScenarioGVPeriodic returns GSSScenarioGVPeriodic
 	 *
 	 * Constraint:
@@ -431,8 +462,8 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 */
 	protected void sequence_GSSScenarioGVPeriodic(ISerializationContext context, GSSScenarioGVPeriodic semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GV_PERIODIC__GLOBAL_VAR_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GV_PERIODIC__GLOBAL_VAR_REF));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GV__GLOBAL_VAR_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GV__GLOBAL_VAR_REF));
 			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GV_PERIODIC__PERIOD_VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GV_PERIODIC__PERIOD_VALUE));
 			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GV_PERIODIC__PERIOD_UNIT) == ValueTransient.YES)
@@ -451,20 +482,28 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSScenarioGlobalVar returns GSSScenarioGlobalVar
 	 *
 	 * Constraint:
-	 *     (
-	 *         name=STRING 
-	 *         id=INTEGER 
-	 *         type=GSSScenarioGlobalVarType 
-	 *         initial_value=INTEGER 
-	 *         (
-	 *             referenceField=GSSScenarioReferenceField | 
-	 *             referencePeriodicTC=GSSScenarioReferencePeriodicTC | 
-	 *             referenceSpecialPacket=GSSScenarioReferenceSpecialPacket
-	 *         )
-	 *     )
+	 *     (name=STRING id=INTEGER type=GSSScenarioGlobalVarType initial_value=INTEGER reference=GSSScenarioReference)
 	 */
 	protected void sequence_GSSScenarioGlobalVar(ISerializationContext context, GSSScenarioGlobalVar semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, es.uah.aut.srg.tmtcif.scenario.scenarioPackage.Literals.TMTCIF_SCENARIO_VARIABLE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, es.uah.aut.srg.tmtcif.scenario.scenarioPackage.Literals.TMTCIF_SCENARIO_VARIABLE__NAME));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GLOBAL_VAR__ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GLOBAL_VAR__ID));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GLOBAL_VAR__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GLOBAL_VAR__TYPE));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GLOBAL_VAR__INITIAL_VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GLOBAL_VAR__INITIAL_VALUE));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GLOBAL_VAR__REFERENCE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GLOBAL_VAR__REFERENCE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGSSScenarioGlobalVarAccess().getNameSTRINGTerminalRuleCall_4_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGSSScenarioGlobalVarAccess().getIdINTEGERParserRuleCall_8_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getGSSScenarioGlobalVarAccess().getTypeGSSScenarioGlobalVarTypeEnumRuleCall_12_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getGSSScenarioGlobalVarAccess().getInitial_valueINTEGERParserRuleCall_16_0(), semanticObject.getInitial_value());
+		feeder.accept(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceGSSScenarioReferenceParserRuleCall_18_0(), semanticObject.getReference());
+		feeder.finish();
 	}
 	
 	
@@ -615,13 +654,29 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSScenarioMonitor returns GSSScenarioModify
 	 *     GSSScenarioModify returns GSSScenarioModify
 	 *
 	 * Constraint:
-	 *     (name=STRING type=GSSScenarioModifyType value=INTEGER (GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic))
+	 *     (name=STRING type=GSSScenarioModifyType value=INTEGER GV=GSSScenarioGV)
 	 */
 	protected void sequence_GSSScenarioModify(ISerializationContext context, GSSScenarioModify semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__NAME));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MODIFY__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MODIFY__TYPE));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MODIFY__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MODIFY__VALUE));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGSSScenarioModifyAccess().getNameSTRINGTerminalRuleCall_4_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGSSScenarioModifyAccess().getTypeGSSScenarioModifyTypeEnumRuleCall_8_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getGSSScenarioModifyAccess().getValueINTEGERParserRuleCall_12_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getGSSScenarioModifyAccess().getGVGSSScenarioGVParserRuleCall_14_0(), semanticObject.getGV());
+		feeder.finish();
 	}
 	
 	
@@ -630,10 +685,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSScenarioMonitors returns GSSScenarioMonitors
 	 *
 	 * Constraint:
-	 *     (
-	 *         ChartsFile=[GSSChartsCharts|VersionedQualifiedName]? 
-	 *         (plot+=GSSScenarioPlot | alarmMsg+=GSSScenarioAlarmMsg | modify+=GSSScenarioModify | alarmVal+=GSSScenarioAlarmVal)+
-	 *     )
+	 *     (ChartsFile=[GSSChartsCharts|VersionedQualifiedName]? monitor+=GSSScenarioMonitor+)
 	 */
 	protected void sequence_GSSScenarioMonitors(ISerializationContext context, GSSScenarioMonitors semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -701,6 +753,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSScenarioPeriodicTC returns GSSScenarioPeriodicTCLevel0
 	 *     GSSScenarioPeriodicTCLevel0 returns GSSScenarioPeriodicTCLevel0
 	 *
 	 * Constraint:
@@ -721,6 +774,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSScenarioPeriodicTC returns GSSScenarioPeriodicTCLevel1
 	 *     GSSScenarioPeriodicTCLevel1 returns GSSScenarioPeriodicTCLevel1
 	 *
 	 * Constraint:
@@ -743,6 +797,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSScenarioPeriodicTC returns GSSScenarioPeriodicTCLevel2
 	 *     GSSScenarioPeriodicTCLevel2 returns GSSScenarioPeriodicTCLevel2
 	 *
 	 * Constraint:
@@ -770,11 +825,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSScenarioPeriodicTCs returns GSSScenarioPeriodicTCs
 	 *
 	 * Constraint:
-	 *     (
-	 *         PeriodicTC_level_2+=GSSScenarioPeriodicTCLevel2 | 
-	 *         PeriodicTC_level_1+=GSSScenarioPeriodicTCLevel1 | 
-	 *         PeriodicTC_level_0+=GSSScenarioPeriodicTCLevel0
-	 *     )*
+	 *     PeriodicTC+=GSSScenarioPeriodicTC*
 	 */
 	protected void sequence_GSSScenarioPeriodicTCs(ISerializationContext context, GSSScenarioPeriodicTCs semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -810,13 +861,26 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSScenarioMonitor returns GSSScenarioPlot
 	 *     GSSScenarioPlot returns GSSScenarioPlot
 	 *
 	 * Constraint:
-	 *     (name=STRING chartRef=[GSSChartsChart|VersionedQualifiedReferenceName] (GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic))
+	 *     (name=STRING chartRef=[GSSChartsChart|VersionedQualifiedReferenceName] GV=GSSScenarioGV)
 	 */
 	protected void sequence_GSSScenarioPlot(ISerializationContext context, GSSScenarioPlot semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__NAME));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_PLOT__CHART_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_PLOT__CHART_REF));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGSSScenarioPlotAccess().getNameSTRINGTerminalRuleCall_4_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGSSScenarioPlotAccess().getChartRefGSSChartsChartVersionedQualifiedReferenceNameParserRuleCall_8_0_1(), semanticObject.getChartRef());
+		feeder.accept(grammarAccess.getGSSScenarioPlotAccess().getGVGSSScenarioGVParserRuleCall_10_0(), semanticObject.getGV());
+		feeder.finish();
 	}
 	
 	
@@ -900,6 +964,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSScenarioReference returns GSSScenarioReferenceField
 	 *     GSSScenarioReferenceField returns GSSScenarioReferenceField
 	 *
 	 * Constraint:
@@ -918,14 +983,14 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_FIELD__TYPE));
 			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_FIELD__IF_REF) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_FIELD__IF_REF));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_FIELD__LEVEL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_FIELD__LEVEL));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_FIELD__FIELD_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_FIELD__FIELD_REF));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_FIELD__OFFSET) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_FIELD__OFFSET));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_FIELD__SIZE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_FIELD__SIZE));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__LEVEL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__LEVEL));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__FIELD_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__OFFSET) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__OFFSET));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__SIZE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__SIZE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSScenarioReferenceFieldAccess().getTypeGSSScenarioReferenceFieldTypeEnumRuleCall_4_0(), semanticObject.getType());
@@ -940,6 +1005,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSScenarioReference returns GSSScenarioReferencePeriodicTC
 	 *     GSSScenarioReferencePeriodicTC returns GSSScenarioReferencePeriodicTC
 	 *
 	 * Constraint:
@@ -949,14 +1015,14 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_PERIODIC_TC__ID_REF) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_PERIODIC_TC__ID_REF));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_PERIODIC_TC__LEVEL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_PERIODIC_TC__LEVEL));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_PERIODIC_TC__FIELD_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_PERIODIC_TC__FIELD_REF));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_PERIODIC_TC__OFFSET) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_PERIODIC_TC__OFFSET));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_PERIODIC_TC__SIZE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_PERIODIC_TC__SIZE));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__LEVEL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__LEVEL));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__FIELD_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__OFFSET) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__OFFSET));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__SIZE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__SIZE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSScenarioReferencePeriodicTCAccess().getIdRefGSSScenarioPeriodicTCSTRINGTerminalRuleCall_4_0_1(), semanticObject.getIdRef());
@@ -970,6 +1036,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSScenarioReference returns GSSScenarioReferenceSpecialPacket
 	 *     GSSScenarioReferenceSpecialPacket returns GSSScenarioReferenceSpecialPacket
 	 *
 	 * Constraint:
@@ -979,14 +1046,14 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__ID_REF) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__ID_REF));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__LEVEL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__LEVEL));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__FIELD_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__FIELD_REF));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__OFFSET) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__OFFSET));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__SIZE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__SIZE));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__LEVEL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__LEVEL));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__FIELD_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__OFFSET) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__OFFSET));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__SIZE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_REFERENCE__SIZE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSScenarioReferenceSpecialPacketAccess().getIdRefGSSScenarioSpecialPacketSTRINGTerminalRuleCall_4_0_1(), semanticObject.getIdRef());

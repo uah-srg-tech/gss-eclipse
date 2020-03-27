@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class GSSExportSizeImpl extends MinimalEObjectImpl.Container implements GSSExportSize {
+public abstract class GSSExportSizeImpl extends MinimalEObjectImpl.Container implements GSSExportSize {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->

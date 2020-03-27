@@ -246,15 +246,6 @@ public interface scenarioFactory extends EFactory {
 	GSSScenarioPeriodicTCs createGSSScenarioPeriodicTCs();
 
 	/**
-	 * Returns a new object of class '<em>GSS Scenario Periodic TC</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Scenario Periodic TC</em>'.
-	 * @generated
-	 */
-	GSSScenarioPeriodicTC createGSSScenarioPeriodicTC();
-
-	/**
 	 * Returns a new object of class '<em>GSS Scenario Periodic TC Level2</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -90,8 +90,24 @@ public class filterAdapterFactory extends AdapterFactoryImpl {
 				return createGSSFilterMintermFilterAdapter();
 			}
 			@Override
+			public Adapter caseGSSFilterAbstractBoolVar(GSSFilterAbstractBoolVar object) {
+				return createGSSFilterAbstractBoolVarAdapter();
+			}
+			@Override
 			public Adapter caseGSSFilterBoolVar(GSSFilterBoolVar object) {
 				return createGSSFilterBoolVarAdapter();
+			}
+			@Override
+			public Adapter caseGSSFilterBoolVarFromArrayItem(GSSFilterBoolVarFromArrayItem object) {
+				return createGSSFilterBoolVarFromArrayItemAdapter();
+			}
+			@Override
+			public Adapter caseGSSFilterBoolVarFromGroupedArrayItem(GSSFilterBoolVarFromGroupedArrayItem object) {
+				return createGSSFilterBoolVarFromGroupedArrayItemAdapter();
+			}
+			@Override
+			public Adapter caseGSSFilterBoolVarFDIC(GSSFilterBoolVarFDIC object) {
+				return createGSSFilterBoolVarFDICAdapter();
 			}
 			@Override
 			public Adapter caseGSSFilterFieldOp(GSSFilterFieldOp object) {
@@ -112,18 +128,6 @@ public class filterAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGSSFilterSelectLine(GSSFilterSelectLine object) {
 				return createGSSFilterSelectLineAdapter();
-			}
-			@Override
-			public Adapter caseGSSFilterBoolVarFromArrayItem(GSSFilterBoolVarFromArrayItem object) {
-				return createGSSFilterBoolVarFromArrayItemAdapter();
-			}
-			@Override
-			public Adapter caseGSSFilterBoolVarFromGroupedArrayItem(GSSFilterBoolVarFromGroupedArrayItem object) {
-				return createGSSFilterBoolVarFromGroupedArrayItemAdapter();
-			}
-			@Override
-			public Adapter caseGSSFilterBoolVarFDIC(GSSFilterBoolVarFDIC object) {
-				return createGSSFilterBoolVarFDICAdapter();
 			}
 			@Override
 			public Adapter caseGSSFilterMaxterm(GSSFilterMaxterm object) {
@@ -200,6 +204,20 @@ public class filterAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSFilterMintermFilterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.filter.GSSFilterAbstractBoolVar <em>GSS Filter Abstract Bool Var</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.filter.GSSFilterAbstractBoolVar
+	 * @generated
+	 */
+	public Adapter createGSSFilterAbstractBoolVarAdapter() {
 		return null;
 	}
 

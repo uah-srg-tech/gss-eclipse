@@ -5076,7 +5076,7 @@ ruleGSSTestProcActionType returns [Enumerator current=null]
 		)
 		    |
 		(
-			enumLiteral_1='"TMTC checking"'
+			enumLiteral_1='"tmtc_checking"'
 			{
 				$current = grammarAccess.getGSSTestProcActionTypeAccess().getTmtc_checkingEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_1, grammarAccess.getGSSTestProcActionTypeAccess().getTmtc_checkingEnumLiteralDeclaration_1());

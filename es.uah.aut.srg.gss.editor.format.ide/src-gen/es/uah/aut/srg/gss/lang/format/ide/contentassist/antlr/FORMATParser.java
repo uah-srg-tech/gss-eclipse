@@ -42,7 +42,6 @@ public class FORMATParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getGSSFormatFormatAccess().getAlternatives_3_3_1(), "rule__GSSFormatFormat__Alternatives_3_3_1");
 					put(grammarAccess.getGSSFormatFieldAccess().getAlternatives(), "rule__GSSFormatField__Alternatives");
 					put(grammarAccess.getVersionAccess().getAlternatives_0(), "rule__Version__Alternatives_0");
 					put(grammarAccess.getVersionAccess().getAlternatives_1_1(), "rule__Version__Alternatives_1_1");
@@ -57,11 +56,6 @@ public class FORMATParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSModelFileAccess().getGroup(), "rule__GSSModelFile__Group__0");
 					put(grammarAccess.getGSSModelFileImportAccess().getGroup(), "rule__GSSModelFileImport__Group__0");
 					put(grammarAccess.getGSSFormatFormatAccess().getGroup(), "rule__GSSFormatFormat__Group__0");
-					put(grammarAccess.getGSSFormatFormatAccess().getGroup_3_0(), "rule__GSSFormatFormat__Group_3_0__0");
-					put(grammarAccess.getGSSFormatFormatAccess().getGroup_3_1(), "rule__GSSFormatFormat__Group_3_1__0");
-					put(grammarAccess.getGSSFormatFormatAccess().getGroup_3_2(), "rule__GSSFormatFormat__Group_3_2__0");
-					put(grammarAccess.getGSSFormatFormatAccess().getGroup_3_3(), "rule__GSSFormatFormat__Group_3_3__0");
-					put(grammarAccess.getGSSFormatFormatAccess().getGroup_3_3_0(), "rule__GSSFormatFormat__Group_3_3_0__0");
 					put(grammarAccess.getGSSFormatCSFieldAccess().getGroup(), "rule__GSSFormatCSField__Group__0");
 					put(grammarAccess.getGSSFormatCSFieldAccess().getGroup_14(), "rule__GSSFormatCSField__Group_14__0");
 					put(grammarAccess.getGSSFormatCSFormulaFieldAccess().getGroup(), "rule__GSSFormatCSFormulaField__Group__0");
@@ -99,17 +93,11 @@ public class FORMATParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSModelFileAccess().getElementAssignment_1(), "rule__GSSModelFile__ElementAssignment_1");
 					put(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_2(), "rule__GSSModelFileImport__ImportURIAssignment_2");
 					put(grammarAccess.getGSSFormatFormatAccess().getNameAssignment_1(), "rule__GSSFormatFormat__NameAssignment_1");
-					put(grammarAccess.getGSSFormatFormatAccess().getUriAssignment_3_0_2(), "rule__GSSFormatFormat__UriAssignment_3_0_2");
-					put(grammarAccess.getGSSFormatFormatAccess().getVersionAssignment_3_1_2(), "rule__GSSFormatFormat__VersionAssignment_3_1_2");
-					put(grammarAccess.getGSSFormatFormatAccess().getProtocolAssignment_3_2_2(), "rule__GSSFormatFormat__ProtocolAssignment_3_2_2");
-					put(grammarAccess.getGSSFormatFormatAccess().getTypeAssignment_3_3_0_2(), "rule__GSSFormatFormat__TypeAssignment_3_3_0_2");
-					put(grammarAccess.getGSSFormatFormatAccess().getCSFieldAssignment_3_3_1_0(), "rule__GSSFormatFormat__CSFieldAssignment_3_3_1_0");
-					put(grammarAccess.getGSSFormatFormatAccess().getCSFormulaFieldAssignment_3_3_1_1(), "rule__GSSFormatFormat__CSFormulaFieldAssignment_3_3_1_1");
-					put(grammarAccess.getGSSFormatFormatAccess().getVSFieldAssignment_3_3_1_2(), "rule__GSSFormatFormat__VSFieldAssignment_3_3_1_2");
-					put(grammarAccess.getGSSFormatFormatAccess().getFDICFieldAssignment_3_3_1_3(), "rule__GSSFormatFormat__FDICFieldAssignment_3_3_1_3");
-					put(grammarAccess.getGSSFormatFormatAccess().getVRFieldSizeAssignment_3_3_1_4(), "rule__GSSFormatFormat__VRFieldSizeAssignment_3_3_1_4");
-					put(grammarAccess.getGSSFormatFormatAccess().getAFieldAssignment_3_3_1_5(), "rule__GSSFormatFormat__AFieldAssignment_3_3_1_5");
-					put(grammarAccess.getGSSFormatFormatAccess().getAIFieldAssignment_3_3_1_6(), "rule__GSSFormatFormat__AIFieldAssignment_3_3_1_6");
+					put(grammarAccess.getGSSFormatFormatAccess().getUriAssignment_5(), "rule__GSSFormatFormat__UriAssignment_5");
+					put(grammarAccess.getGSSFormatFormatAccess().getVersionAssignment_9(), "rule__GSSFormatFormat__VersionAssignment_9");
+					put(grammarAccess.getGSSFormatFormatAccess().getProtocolAssignment_13(), "rule__GSSFormatFormat__ProtocolAssignment_13");
+					put(grammarAccess.getGSSFormatFormatAccess().getTypeAssignment_17(), "rule__GSSFormatFormat__TypeAssignment_17");
+					put(grammarAccess.getGSSFormatFormatAccess().getFieldAssignment_19(), "rule__GSSFormatFormat__FieldAssignment_19");
 					put(grammarAccess.getGSSFormatCSFieldAccess().getFidAssignment_4(), "rule__GSSFormatCSField__FidAssignment_4");
 					put(grammarAccess.getGSSFormatCSFieldAccess().getPfidAssignment_8(), "rule__GSSFormatCSField__PfidAssignment_8");
 					put(grammarAccess.getGSSFormatCSFieldAccess().getNameAssignment_12(), "rule__GSSFormatCSField__NameAssignment_12");
@@ -194,7 +182,6 @@ public class FORMATParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSFormatLocalOffsetAccess().getBytesAssignment_4(), "rule__GSSFormatLocalOffset__BytesAssignment_4");
 					put(grammarAccess.getGSSFormatLocalOffsetAccess().getBitsAssignment_8(), "rule__GSSFormatLocalOffset__BitsAssignment_8");
 					put(grammarAccess.getGSSFormatArrayRefAccess().getFidRefAssignment_4(), "rule__GSSFormatArrayRef__FidRefAssignment_4");
-					put(grammarAccess.getGSSFormatFormatAccess().getUnorderedGroup_3(), "rule__GSSFormatFormat__UnorderedGroup_3");
 				}
 			};
 		}

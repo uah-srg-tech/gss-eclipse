@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.gss.scenario;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Scenario GV Periodic</b></em>'.
@@ -21,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioGVPeriodic#getGlobalVarRef <em>Global Var Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioGVPeriodic#getPeriod_value <em>Period value</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioGVPeriodic#getPeriod_unit <em>Period unit</em>}</li>
  * </ul>
@@ -30,33 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GSSScenarioGVPeriodic extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Global Var Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Global Var Ref</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Global Var Ref</em>' reference.
-	 * @see #setGlobalVarRef(GSSScenarioGlobalVar)
-	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioGVPeriodic_GlobalVarRef()
-	 * @model required="true"
-	 * @generated
-	 */
-	GSSScenarioGlobalVar getGlobalVarRef();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGVPeriodic#getGlobalVarRef <em>Global Var Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Global Var Ref</em>' reference.
-	 * @see #getGlobalVarRef()
-	 * @generated
-	 */
-	void setGlobalVarRef(GSSScenarioGlobalVar value);
-
+public interface GSSScenarioGVPeriodic extends GSSScenarioGV {
 	/**
 	 * Returns the value of the '<em><b>Period value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

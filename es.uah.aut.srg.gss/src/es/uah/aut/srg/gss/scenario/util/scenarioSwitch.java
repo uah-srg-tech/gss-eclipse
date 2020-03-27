@@ -265,21 +265,30 @@ public class scenarioSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case scenarioPackage.GSS_SCENARIO_REFERENCE: {
+				GSSScenarioReference gssScenarioReference = (GSSScenarioReference)theEObject;
+				T result = caseGSSScenarioReference(gssScenarioReference);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD: {
 				GSSScenarioReferenceField gssScenarioReferenceField = (GSSScenarioReferenceField)theEObject;
 				T result = caseGSSScenarioReferenceField(gssScenarioReferenceField);
+				if (result == null) result = caseGSSScenarioReference(gssScenarioReferenceField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case scenarioPackage.GSS_SCENARIO_REFERENCE_PERIODIC_TC: {
 				GSSScenarioReferencePeriodicTC gssScenarioReferencePeriodicTC = (GSSScenarioReferencePeriodicTC)theEObject;
 				T result = caseGSSScenarioReferencePeriodicTC(gssScenarioReferencePeriodicTC);
+				if (result == null) result = caseGSSScenarioReference(gssScenarioReferencePeriodicTC);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case scenarioPackage.GSS_SCENARIO_REFERENCE_SPECIAL_PACKET: {
 				GSSScenarioReferenceSpecialPacket gssScenarioReferenceSpecialPacket = (GSSScenarioReferenceSpecialPacket)theEObject;
 				T result = caseGSSScenarioReferenceSpecialPacket(gssScenarioReferenceSpecialPacket);
+				if (result == null) result = caseGSSScenarioReference(gssScenarioReferenceSpecialPacket);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -289,39 +298,57 @@ public class scenarioSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case scenarioPackage.GSS_SCENARIO_MONITOR: {
+				GSSScenarioMonitor gssScenarioMonitor = (GSSScenarioMonitor)theEObject;
+				T result = caseGSSScenarioMonitor(gssScenarioMonitor);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case scenarioPackage.GSS_SCENARIO_PLOT: {
 				GSSScenarioPlot gssScenarioPlot = (GSSScenarioPlot)theEObject;
 				T result = caseGSSScenarioPlot(gssScenarioPlot);
+				if (result == null) result = caseGSSScenarioMonitor(gssScenarioPlot);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case scenarioPackage.GSS_SCENARIO_ALARM_MSG: {
 				GSSScenarioAlarmMsg gssScenarioAlarmMsg = (GSSScenarioAlarmMsg)theEObject;
 				T result = caseGSSScenarioAlarmMsg(gssScenarioAlarmMsg);
+				if (result == null) result = caseGSSScenarioMonitor(gssScenarioAlarmMsg);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case scenarioPackage.GSS_SCENARIO_MODIFY: {
 				GSSScenarioModify gssScenarioModify = (GSSScenarioModify)theEObject;
 				T result = caseGSSScenarioModify(gssScenarioModify);
+				if (result == null) result = caseGSSScenarioMonitor(gssScenarioModify);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case scenarioPackage.GSS_SCENARIO_ALARM_VAL: {
 				GSSScenarioAlarmVal gssScenarioAlarmVal = (GSSScenarioAlarmVal)theEObject;
 				T result = caseGSSScenarioAlarmVal(gssScenarioAlarmVal);
+				if (result == null) result = caseGSSScenarioMonitor(gssScenarioAlarmVal);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case scenarioPackage.GSS_SCENARIO_GV: {
+				GSSScenarioGV gssScenarioGV = (GSSScenarioGV)theEObject;
+				T result = caseGSSScenarioGV(gssScenarioGV);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case scenarioPackage.GSS_SCENARIO_GV_FILTERED: {
 				GSSScenarioGVFiltered gssScenarioGVFiltered = (GSSScenarioGVFiltered)theEObject;
 				T result = caseGSSScenarioGVFiltered(gssScenarioGVFiltered);
+				if (result == null) result = caseGSSScenarioGV(gssScenarioGVFiltered);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case scenarioPackage.GSS_SCENARIO_GV_PERIODIC: {
 				GSSScenarioGVPeriodic gssScenarioGVPeriodic = (GSSScenarioGVPeriodic)theEObject;
 				T result = caseGSSScenarioGVPeriodic(gssScenarioGVPeriodic);
+				if (result == null) result = caseGSSScenarioGV(gssScenarioGVPeriodic);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -780,6 +807,21 @@ public class scenarioSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Scenario Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Scenario Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSScenarioReference(GSSScenarioReference object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>GSS Scenario Reference Field</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -840,6 +882,21 @@ public class scenarioSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Scenario Monitor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Scenario Monitor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSScenarioMonitor(GSSScenarioMonitor object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>GSS Scenario Plot</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -896,6 +953,21 @@ public class scenarioSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSScenarioAlarmVal(GSSScenarioAlarmVal object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Scenario GV</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Scenario GV</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSScenarioGV(GSSScenarioGV object) {
 		return null;
 	}
 

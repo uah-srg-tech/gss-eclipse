@@ -140,6 +140,7 @@ public class FORMATSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSFormatField returns GSSFormatAField
 	 *     GSSFormatAField returns GSSFormatAField
 	 *
 	 * Constraint:
@@ -163,6 +164,7 @@ public class FORMATSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSFormatField returns GSSFormatAIField
 	 *     GSSFormatAIField returns GSSFormatAIField
 	 *
 	 * Constraint:
@@ -358,26 +360,11 @@ public class FORMATSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         (
-	 *             ((uri=QualifiedName | version=Version | protocol=ID) (type=GSSFormatFormatType CSField+=GSSFormatCSField?)?)+ | 
-	 *             (
-	 *                 type=GSSFormatFormatType 
-	 *                 CSField+=GSSFormatCSField? 
-	 *                 (
-	 *                     (
-	 *                         type=GSSFormatFormatType | 
-	 *                         CSFormulaField+=GSSFormatCSFormulaField | 
-	 *                         VSField+=GSSFormatVSField | 
-	 *                         FDICField+=GSSFormatFDICField | 
-	 *                         VRFieldSize+=GSSFormatVRFieldSize | 
-	 *                         AField+=GSSFormatAField | 
-	 *                         AIField+=GSSFormatAIField
-	 *                     )? 
-	 *                     CSField+=GSSFormatCSField?
-	 *                 )* 
-	 *                 ((uri=QualifiedName | version=Version | protocol=ID) (type=GSSFormatFormatType CSField+=GSSFormatCSField?)?)+
-	 *             )
-	 *         )?
+	 *         uri=QualifiedName 
+	 *         version=Version 
+	 *         protocol=ID 
+	 *         type=GSSFormatFormatType 
+	 *         Field+=GSSFormatField*
 	 *     )
 	 */
 	protected void sequence_GSSFormatFormat(ISerializationContext context, GSSFormatFormat semanticObject) {

@@ -11,17 +11,13 @@
 package es.uah.aut.srg.gss.scenario.impl;
 
 import es.uah.aut.srg.gss.scenario.GSSScenarioGVPeriodic;
-import es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar;
 import es.uah.aut.srg.gss.scenario.GSSScenarioUnit;
 import es.uah.aut.srg.gss.scenario.scenarioPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,24 +27,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVPeriodicImpl#getGlobalVarRef <em>Global Var Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVPeriodicImpl#getPeriod_value <em>Period value</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVPeriodicImpl#getPeriod_unit <em>Period unit</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSScenarioGVPeriodicImpl extends MinimalEObjectImpl.Container implements GSSScenarioGVPeriodic {
-	/**
-	 * The cached value of the '{@link #getGlobalVarRef() <em>Global Var Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGlobalVarRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected GSSScenarioGlobalVar globalVarRef;
-
+public class GSSScenarioGVPeriodicImpl extends GSSScenarioGVImpl implements GSSScenarioGVPeriodic {
 	/**
 	 * The default value of the '{@link #getPeriod_value() <em>Period value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -113,44 +98,6 @@ public class GSSScenarioGVPeriodicImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSScenarioGlobalVar getGlobalVarRef() {
-		if (globalVarRef != null && globalVarRef.eIsProxy()) {
-			InternalEObject oldGlobalVarRef = (InternalEObject)globalVarRef;
-			globalVarRef = (GSSScenarioGlobalVar)eResolveProxy(oldGlobalVarRef);
-			if (globalVarRef != oldGlobalVarRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, scenarioPackage.GSS_SCENARIO_GV_PERIODIC__GLOBAL_VAR_REF, oldGlobalVarRef, globalVarRef));
-			}
-		}
-		return globalVarRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSScenarioGlobalVar basicGetGlobalVarRef() {
-		return globalVarRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setGlobalVarRef(GSSScenarioGlobalVar newGlobalVarRef) {
-		GSSScenarioGlobalVar oldGlobalVarRef = globalVarRef;
-		globalVarRef = newGlobalVarRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_GV_PERIODIC__GLOBAL_VAR_REF, oldGlobalVarRef, globalVarRef));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getPeriod_value() {
 		return period_value;
 	}
@@ -196,9 +143,6 @@ public class GSSScenarioGVPeriodicImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_GV_PERIODIC__GLOBAL_VAR_REF:
-				if (resolve) return getGlobalVarRef();
-				return basicGetGlobalVarRef();
 			case scenarioPackage.GSS_SCENARIO_GV_PERIODIC__PERIOD_VALUE:
 				return getPeriod_value();
 			case scenarioPackage.GSS_SCENARIO_GV_PERIODIC__PERIOD_UNIT:
@@ -215,9 +159,6 @@ public class GSSScenarioGVPeriodicImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_GV_PERIODIC__GLOBAL_VAR_REF:
-				setGlobalVarRef((GSSScenarioGlobalVar)newValue);
-				return;
 			case scenarioPackage.GSS_SCENARIO_GV_PERIODIC__PERIOD_VALUE:
 				setPeriod_value((String)newValue);
 				return;
@@ -236,9 +177,6 @@ public class GSSScenarioGVPeriodicImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_GV_PERIODIC__GLOBAL_VAR_REF:
-				setGlobalVarRef((GSSScenarioGlobalVar)null);
-				return;
 			case scenarioPackage.GSS_SCENARIO_GV_PERIODIC__PERIOD_VALUE:
 				setPeriod_value(PERIOD_VALUE_EDEFAULT);
 				return;
@@ -257,8 +195,6 @@ public class GSSScenarioGVPeriodicImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_GV_PERIODIC__GLOBAL_VAR_REF:
-				return globalVarRef != null;
 			case scenarioPackage.GSS_SCENARIO_GV_PERIODIC__PERIOD_VALUE:
 				return PERIOD_VALUE_EDEFAULT == null ? period_value != null : !PERIOD_VALUE_EDEFAULT.equals(period_value);
 			case scenarioPackage.GSS_SCENARIO_GV_PERIODIC__PERIOD_UNIT:

@@ -19,7 +19,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,15 +30,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceFieldImpl#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceFieldImpl#getIfRef <em>If Ref</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceFieldImpl#getLevel <em>Level</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceFieldImpl#getFieldRef <em>Field Ref</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceFieldImpl#getOffset <em>Offset</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceFieldImpl#getSize <em>Size</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSScenarioReferenceFieldImpl extends MinimalEObjectImpl.Container implements GSSScenarioReferenceField {
+public class GSSScenarioReferenceFieldImpl extends GSSScenarioReferenceImpl implements GSSScenarioReferenceField {
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -88,86 +83,6 @@ public class GSSScenarioReferenceFieldImpl extends MinimalEObjectImpl.Container 
 	 * @ordered
 	 */
 	protected String ifRef = IF_REF_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLevel() <em>Level</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLevel()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LEVEL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLevel() <em>Level</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLevel()
-	 * @generated
-	 * @ordered
-	 */
-	protected String level = LEVEL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFieldRef() <em>Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FIELD_REF_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getFieldRef() <em>Field Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFieldRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected String fieldRef = FIELD_REF_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getOffset() <em>Offset</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOffset()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String OFFSET_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getOffset() <em>Offset</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOffset()
-	 * @generated
-	 * @ordered
-	 */
-	protected String offset = OFFSET_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSize()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SIZE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSize()
-	 * @generated
-	 * @ordered
-	 */
-	protected String size = SIZE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -260,90 +175,6 @@ public class GSSScenarioReferenceFieldImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLevel() {
-		return level;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLevel(String newLevel) {
-		String oldLevel = level;
-		level = newLevel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__LEVEL, oldLevel, level));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getFieldRef() {
-		return fieldRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFieldRef(String newFieldRef) {
-		String oldFieldRef = fieldRef;
-		fieldRef = newFieldRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__FIELD_REF, oldFieldRef, fieldRef));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getOffset() {
-		return offset;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOffset(String newOffset) {
-		String oldOffset = offset;
-		offset = newOffset;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__OFFSET, oldOffset, offset));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getSize() {
-		return size;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSize(String newSize) {
-		String oldSize = size;
-		size = newSize;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__SIZE, oldSize, size));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -351,14 +182,6 @@ public class GSSScenarioReferenceFieldImpl extends MinimalEObjectImpl.Container 
 				return getType();
 			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__IF_REF:
 				return getIfRef();
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__LEVEL:
-				return getLevel();
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__FIELD_REF:
-				return getFieldRef();
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__OFFSET:
-				return getOffset();
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__SIZE:
-				return getSize();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -376,18 +199,6 @@ public class GSSScenarioReferenceFieldImpl extends MinimalEObjectImpl.Container 
 				return;
 			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__IF_REF:
 				setIfRef((String)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__LEVEL:
-				setLevel((String)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__FIELD_REF:
-				setFieldRef((String)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__OFFSET:
-				setOffset((String)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__SIZE:
-				setSize((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -407,18 +218,6 @@ public class GSSScenarioReferenceFieldImpl extends MinimalEObjectImpl.Container 
 			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__IF_REF:
 				setIfRef(IF_REF_EDEFAULT);
 				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__LEVEL:
-				setLevel(LEVEL_EDEFAULT);
-				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__FIELD_REF:
-				setFieldRef(FIELD_REF_EDEFAULT);
-				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__OFFSET:
-				setOffset(OFFSET_EDEFAULT);
-				return;
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__SIZE:
-				setSize(SIZE_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -435,14 +234,6 @@ public class GSSScenarioReferenceFieldImpl extends MinimalEObjectImpl.Container 
 				return isSetType();
 			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__IF_REF:
 				return IF_REF_EDEFAULT == null ? ifRef != null : !IF_REF_EDEFAULT.equals(ifRef);
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__LEVEL:
-				return LEVEL_EDEFAULT == null ? level != null : !LEVEL_EDEFAULT.equals(level);
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__FIELD_REF:
-				return FIELD_REF_EDEFAULT == null ? fieldRef != null : !FIELD_REF_EDEFAULT.equals(fieldRef);
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__OFFSET:
-				return OFFSET_EDEFAULT == null ? offset != null : !OFFSET_EDEFAULT.equals(offset);
-			case scenarioPackage.GSS_SCENARIO_REFERENCE_FIELD__SIZE:
-				return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -461,14 +252,6 @@ public class GSSScenarioReferenceFieldImpl extends MinimalEObjectImpl.Container 
 		if (typeESet) result.append(type); else result.append("<unset>");
 		result.append(", ifRef: ");
 		result.append(ifRef);
-		result.append(", level: ");
-		result.append(level);
-		result.append(", fieldRef: ");
-		result.append(fieldRef);
-		result.append(", offset: ");
-		result.append(offset);
-		result.append(", size: ");
-		result.append(size);
 		result.append(')');
 		return result.toString();
 	}

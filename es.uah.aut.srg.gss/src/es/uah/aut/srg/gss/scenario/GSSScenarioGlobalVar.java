@@ -24,9 +24,7 @@ import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable;
  *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getInitial_value <em>Initial value</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReferenceField <em>Reference Field</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReferencePeriodicTC <em>Reference Periodic TC</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReferenceSpecialPacket <em>Reference Special Packet</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReference <em>Reference</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioGlobalVar()
@@ -143,81 +141,29 @@ public interface GSSScenarioGlobalVar extends TMTCIFScenarioVariable {
 	void setInitial_value(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Reference Field</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Reference</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Reference Field</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Reference</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reference Field</em>' containment reference.
-	 * @see #setReferenceField(GSSScenarioReferenceField)
-	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioGlobalVar_ReferenceField()
-	 * @model containment="true"
+	 * @return the value of the '<em>Reference</em>' containment reference.
+	 * @see #setReference(GSSScenarioReference)
+	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioGlobalVar_Reference()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSScenarioReferenceField getReferenceField();
+	GSSScenarioReference getReference();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReferenceField <em>Reference Field</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReference <em>Reference</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reference Field</em>' containment reference.
-	 * @see #getReferenceField()
+	 * @param value the new value of the '<em>Reference</em>' containment reference.
+	 * @see #getReference()
 	 * @generated
 	 */
-	void setReferenceField(GSSScenarioReferenceField value);
-
-	/**
-	 * Returns the value of the '<em><b>Reference Periodic TC</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Reference Periodic TC</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reference Periodic TC</em>' containment reference.
-	 * @see #setReferencePeriodicTC(GSSScenarioReferencePeriodicTC)
-	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioGlobalVar_ReferencePeriodicTC()
-	 * @model containment="true"
-	 * @generated
-	 */
-	GSSScenarioReferencePeriodicTC getReferencePeriodicTC();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReferencePeriodicTC <em>Reference Periodic TC</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reference Periodic TC</em>' containment reference.
-	 * @see #getReferencePeriodicTC()
-	 * @generated
-	 */
-	void setReferencePeriodicTC(GSSScenarioReferencePeriodicTC value);
-
-	/**
-	 * Returns the value of the '<em><b>Reference Special Packet</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Reference Special Packet</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reference Special Packet</em>' containment reference.
-	 * @see #setReferenceSpecialPacket(GSSScenarioReferenceSpecialPacket)
-	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioGlobalVar_ReferenceSpecialPacket()
-	 * @model containment="true"
-	 * @generated
-	 */
-	GSSScenarioReferenceSpecialPacket getReferenceSpecialPacket();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReferenceSpecialPacket <em>Reference Special Packet</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reference Special Packet</em>' containment reference.
-	 * @see #getReferenceSpecialPacket()
-	 * @generated
-	 */
-	void setReferenceSpecialPacket(GSSScenarioReferenceSpecialPacket value);
+	void setReference(GSSScenarioReference value);
 
 } // GSSScenarioGlobalVar

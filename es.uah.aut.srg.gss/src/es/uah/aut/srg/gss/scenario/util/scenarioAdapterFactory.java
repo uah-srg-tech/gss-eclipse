@@ -199,6 +199,10 @@ public class scenarioAdapterFactory extends AdapterFactoryImpl {
 				return createGSSScenarioGlobalVarAdapter();
 			}
 			@Override
+			public Adapter caseGSSScenarioReference(GSSScenarioReference object) {
+				return createGSSScenarioReferenceAdapter();
+			}
+			@Override
 			public Adapter caseGSSScenarioReferenceField(GSSScenarioReferenceField object) {
 				return createGSSScenarioReferenceFieldAdapter();
 			}
@@ -215,6 +219,10 @@ public class scenarioAdapterFactory extends AdapterFactoryImpl {
 				return createGSSScenarioMonitorsAdapter();
 			}
 			@Override
+			public Adapter caseGSSScenarioMonitor(GSSScenarioMonitor object) {
+				return createGSSScenarioMonitorAdapter();
+			}
+			@Override
 			public Adapter caseGSSScenarioPlot(GSSScenarioPlot object) {
 				return createGSSScenarioPlotAdapter();
 			}
@@ -229,6 +237,10 @@ public class scenarioAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGSSScenarioAlarmVal(GSSScenarioAlarmVal object) {
 				return createGSSScenarioAlarmValAdapter();
+			}
+			@Override
+			public Adapter caseGSSScenarioGV(GSSScenarioGV object) {
+				return createGSSScenarioGVAdapter();
 			}
 			@Override
 			public Adapter caseGSSScenarioGVFiltered(GSSScenarioGVFiltered object) {
@@ -691,6 +703,20 @@ public class scenarioAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReference <em>GSS Scenario Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReference
+	 * @generated
+	 */
+	public Adapter createGSSScenarioReferenceAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferenceField <em>GSS Scenario Reference Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -747,6 +773,20 @@ public class scenarioAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitor <em>GSS Scenario Monitor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioMonitor
+	 * @generated
+	 */
+	public Adapter createGSSScenarioMonitorAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioPlot <em>GSS Scenario Plot</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -799,6 +839,20 @@ public class scenarioAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSScenarioAlarmValAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGV <em>GSS Scenario GV</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGV
+	 * @generated
+	 */
+	public Adapter createGSSScenarioGVAdapter() {
 		return null;
 	}
 

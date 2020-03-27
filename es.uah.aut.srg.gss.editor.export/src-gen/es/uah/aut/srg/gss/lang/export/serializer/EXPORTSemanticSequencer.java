@@ -166,6 +166,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSExportSetting returns GSSExportSettingAIFromConst
 	 *     GSSExportSettingAIFromConst returns GSSExportSettingAIFromConst
 	 *
 	 * Constraint:
@@ -175,8 +176,8 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_AI_FROM_CONST__VALUE));
-			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_AI__TO_FIELD_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_AI__TO_FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING__TO_FIELD_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING__TO_FIELD_REF));
 			if (transientValues.isValueTransient(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, exportPackage.Literals.GSS_EXPORT_SETTING_AI_FROM_CONST__TO_ARRAY_INDEX));
 		}
@@ -190,6 +191,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSExportSetting returns GSSExportSettingAIFromFile
 	 *     GSSExportSettingAIFromFile returns GSSExportSettingAIFromFile
 	 *
 	 * Constraint:
@@ -209,6 +211,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSExportSetting returns GSSExportSettingFromConst
 	 *     GSSExportSettingFromConst returns GSSExportSettingFromConst
 	 *
 	 * Constraint:
@@ -230,6 +233,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSExportSetting returns GSSExportSettingFromField
 	 *     GSSExportSettingFromField returns GSSExportSettingFromField
 	 *
 	 * Constraint:
@@ -251,6 +255,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSExportSetting returns GSSExportSettingFromFile
 	 *     GSSExportSettingFromFile returns GSSExportSettingFromFile
 	 *
 	 * Constraint:
@@ -263,6 +268,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSExportSetting returns GSSExportSettingFromSize
 	 *     GSSExportSettingFromSize returns GSSExportSettingFromSize
 	 *
 	 * Constraint:
@@ -287,14 +293,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSExportSettings returns GSSExportSettings
 	 *
 	 * Constraint:
-	 *     (
-	 *         settingFromConst+=GSSExportSettingFromConst | 
-	 *         settingFromSize+=GSSExportSettingFromSize | 
-	 *         settingFromFile+=GSSExportSettingFromFile | 
-	 *         settingFromField+=GSSExportSettingFromField | 
-	 *         settingAIFromConst+=GSSExportSettingAIFromConst | 
-	 *         settingAIFromFile+=GSSExportSettingAIFromFile
-	 *     )*
+	 *     setting+=GSSExportSetting*
 	 */
 	protected void sequence_GSSExportSettings(ISerializationContext context, GSSExportSettings semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -303,6 +302,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSExportSize returns GSSExportSizeFromFileLength
 	 *     GSSExportSizeFromFileLength returns GSSExportSizeFromFileLength
 	 *
 	 * Constraint:
@@ -315,6 +315,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSExportSize returns GSSExportSizeFromFileLine
 	 *     GSSExportSizeFromFileLine returns GSSExportSizeFromFileLine
 	 *
 	 * Constraint:
@@ -327,6 +328,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSExportSize returns GSSExportSizeInBits
 	 *     GSSExportSizeInBits returns GSSExportSizeInBits
 	 *
 	 * Constraint:
@@ -342,7 +344,7 @@ public class EXPORTSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSExportSizes returns GSSExportSizes
 	 *
 	 * Constraint:
-	 *     (sizeFromFileLength+=GSSExportSizeFromFileLength | sizeFromFileLine+=GSSExportSizeFromFileLine | sizeInBits+=GSSExportSizeInBits)+
+	 *     size+=GSSExportSize+
 	 */
 	protected void sequence_GSSExportSizes(ISerializationContext context, GSSExportSizes semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

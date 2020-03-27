@@ -318,62 +318,8 @@ public class formatPackageImpl extends EPackageImpl implements formatPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSFormatFormat_CSField() {
+	public EReference getGSSFormatFormat_Field() {
 		return (EReference)gssFormatFormatEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSFormatFormat_CSFormulaField() {
-		return (EReference)gssFormatFormatEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSFormatFormat_VSField() {
-		return (EReference)gssFormatFormatEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSFormatFormat_FDICField() {
-		return (EReference)gssFormatFormatEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSFormatFormat_VRFieldSize() {
-		return (EReference)gssFormatFormatEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSFormatFormat_AField() {
-		return (EReference)gssFormatFormatEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSFormatFormat_AIField() {
-		return (EReference)gssFormatFormatEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1028,13 +974,7 @@ public class formatPackageImpl extends EPackageImpl implements formatPackage {
 		gssFormatFormatEClass = createEClass(GSS_FORMAT_FORMAT);
 		createEAttribute(gssFormatFormatEClass, GSS_FORMAT_FORMAT__PROTOCOL);
 		createEAttribute(gssFormatFormatEClass, GSS_FORMAT_FORMAT__TYPE);
-		createEReference(gssFormatFormatEClass, GSS_FORMAT_FORMAT__CS_FIELD);
-		createEReference(gssFormatFormatEClass, GSS_FORMAT_FORMAT__CS_FORMULA_FIELD);
-		createEReference(gssFormatFormatEClass, GSS_FORMAT_FORMAT__VS_FIELD);
-		createEReference(gssFormatFormatEClass, GSS_FORMAT_FORMAT__FDIC_FIELD);
-		createEReference(gssFormatFormatEClass, GSS_FORMAT_FORMAT__VR_FIELD_SIZE);
-		createEReference(gssFormatFormatEClass, GSS_FORMAT_FORMAT__AFIELD);
-		createEReference(gssFormatFormatEClass, GSS_FORMAT_FORMAT__AI_FIELD);
+		createEReference(gssFormatFormatEClass, GSS_FORMAT_FORMAT__FIELD);
 
 		gssFormatFieldEClass = createEClass(GSS_FORMAT_FIELD);
 		createEAttribute(gssFormatFieldEClass, GSS_FORMAT_FIELD__FID);
@@ -1169,13 +1109,7 @@ public class formatPackageImpl extends EPackageImpl implements formatPackage {
 		initEClass(gssFormatFormatEClass, GSSFormatFormat.class, "GSSFormatFormat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSFormatFormat_Protocol(), ecorePackage.getEString(), "protocol", null, 1, 1, GSSFormatFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSFormatFormat_Type(), this.getGSSFormatFormatType(), "type", null, 1, 1, GSSFormatFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSFormatFormat_CSField(), this.getGSSFormatCSField(), null, "CSField", null, 0, -1, GSSFormatFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSFormatFormat_CSFormulaField(), this.getGSSFormatCSFormulaField(), null, "CSFormulaField", null, 0, -1, GSSFormatFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSFormatFormat_VSField(), this.getGSSFormatVSField(), null, "VSField", null, 0, -1, GSSFormatFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSFormatFormat_FDICField(), this.getGSSFormatFDICField(), null, "FDICField", null, 0, -1, GSSFormatFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSFormatFormat_VRFieldSize(), this.getGSSFormatVRFieldSize(), null, "VRFieldSize", null, 0, -1, GSSFormatFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSFormatFormat_AField(), this.getGSSFormatAField(), null, "AField", null, 0, -1, GSSFormatFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSFormatFormat_AIField(), this.getGSSFormatAIField(), null, "AIField", null, 0, -1, GSSFormatFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSFormatFormat_Field(), this.getGSSFormatField(), null, "Field", null, 0, -1, GSSFormatFormat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssFormatFieldEClass, GSSFormatField.class, "GSSFormatField", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSFormatField_Fid(), ecorePackage.getEString(), "fid", null, 1, 1, GSSFormatField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

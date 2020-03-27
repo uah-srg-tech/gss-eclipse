@@ -126,10 +126,6 @@ public class exportAdapterFactory extends AdapterFactoryImpl {
 				return createGSSExportSettingFromFieldAdapter();
 			}
 			@Override
-			public Adapter caseGSSExportSettingAI(GSSExportSettingAI object) {
-				return createGSSExportSettingAIAdapter();
-			}
-			@Override
 			public Adapter caseGSSExportSettingAIFromConst(GSSExportSettingAIFromConst object) {
 				return createGSSExportSettingAIFromConstAdapter();
 			}
@@ -334,20 +330,6 @@ public class exportAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSExportSettingFromFieldAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.export.GSSExportSettingAI <em>GSS Export Setting AI</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.export.GSSExportSettingAI
-	 * @generated
-	 */
-	public Adapter createGSSExportSettingAIAdapter() {
 		return null;
 	}
 

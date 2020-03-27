@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.gss.scenario;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Scenario Modify</b></em>'.
@@ -21,44 +19,15 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioModify#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioModify#getType <em>Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioModify#getValue <em>Value</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioModify#getGVFiltered <em>GV Filtered</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioModify#getGVPeriodic <em>GV Periodic</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioModify()
  * @model
  * @generated
  */
-public interface GSSScenarioModify extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioModify_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioModify#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
+public interface GSSScenarioModify extends GSSScenarioMonitor {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.scenario.GSSScenarioModifyType}.
@@ -140,57 +109,5 @@ public interface GSSScenarioModify extends EObject {
 	 * @generated
 	 */
 	void setValue(String value);
-
-	/**
-	 * Returns the value of the '<em><b>GV Filtered</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>GV Filtered</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>GV Filtered</em>' containment reference.
-	 * @see #setGVFiltered(GSSScenarioGVFiltered)
-	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioModify_GVFiltered()
-	 * @model containment="true"
-	 * @generated
-	 */
-	GSSScenarioGVFiltered getGVFiltered();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioModify#getGVFiltered <em>GV Filtered</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>GV Filtered</em>' containment reference.
-	 * @see #getGVFiltered()
-	 * @generated
-	 */
-	void setGVFiltered(GSSScenarioGVFiltered value);
-
-	/**
-	 * Returns the value of the '<em><b>GV Periodic</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>GV Periodic</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>GV Periodic</em>' containment reference.
-	 * @see #setGVPeriodic(GSSScenarioGVPeriodic)
-	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioModify_GVPeriodic()
-	 * @model containment="true"
-	 * @generated
-	 */
-	GSSScenarioGVPeriodic getGVPeriodic();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioModify#getGVPeriodic <em>GV Periodic</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>GV Periodic</em>' containment reference.
-	 * @see #getGVPeriodic()
-	 * @generated
-	 */
-	void setGVPeriodic(GSSScenarioGVPeriodic value);
 
 } // GSSScenarioModify

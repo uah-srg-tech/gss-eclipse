@@ -10,9 +10,7 @@
  */
 package es.uah.aut.srg.gss.export.impl;
 
-import es.uah.aut.srg.gss.export.GSSExportSizeFromFileLength;
-import es.uah.aut.srg.gss.export.GSSExportSizeFromFileLine;
-import es.uah.aut.srg.gss.export.GSSExportSizeInBits;
+import es.uah.aut.srg.gss.export.GSSExportSize;
 import es.uah.aut.srg.gss.export.GSSExportSizes;
 import es.uah.aut.srg.gss.export.exportPackage;
 
@@ -38,43 +36,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSizesImpl#getSizeFromFileLength <em>Size From File Length</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSizesImpl#getSizeFromFileLine <em>Size From File Line</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSizesImpl#getSizeInBits <em>Size In Bits</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSizesImpl#getSize <em>Size</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class GSSExportSizesImpl extends MinimalEObjectImpl.Container implements GSSExportSizes {
 	/**
-	 * The cached value of the '{@link #getSizeFromFileLength() <em>Size From File Length</em>}' containment reference list.
+	 * The cached value of the '{@link #getSize() <em>Size</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSizeFromFileLength()
+	 * @see #getSize()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GSSExportSizeFromFileLength> sizeFromFileLength;
-
-	/**
-	 * The cached value of the '{@link #getSizeFromFileLine() <em>Size From File Line</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSizeFromFileLine()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSExportSizeFromFileLine> sizeFromFileLine;
-
-	/**
-	 * The cached value of the '{@link #getSizeInBits() <em>Size In Bits</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSizeInBits()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSExportSizeInBits> sizeInBits;
+	protected EList<GSSExportSize> size;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -100,35 +76,11 @@ public class GSSExportSizesImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSExportSizeFromFileLength> getSizeFromFileLength() {
-		if (sizeFromFileLength == null) {
-			sizeFromFileLength = new EObjectContainmentEList<GSSExportSizeFromFileLength>(GSSExportSizeFromFileLength.class, this, exportPackage.GSS_EXPORT_SIZES__SIZE_FROM_FILE_LENGTH);
+	public EList<GSSExportSize> getSize() {
+		if (size == null) {
+			size = new EObjectContainmentEList<GSSExportSize>(GSSExportSize.class, this, exportPackage.GSS_EXPORT_SIZES__SIZE);
 		}
-		return sizeFromFileLength;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<GSSExportSizeFromFileLine> getSizeFromFileLine() {
-		if (sizeFromFileLine == null) {
-			sizeFromFileLine = new EObjectContainmentEList<GSSExportSizeFromFileLine>(GSSExportSizeFromFileLine.class, this, exportPackage.GSS_EXPORT_SIZES__SIZE_FROM_FILE_LINE);
-		}
-		return sizeFromFileLine;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<GSSExportSizeInBits> getSizeInBits() {
-		if (sizeInBits == null) {
-			sizeInBits = new EObjectContainmentEList<GSSExportSizeInBits>(GSSExportSizeInBits.class, this, exportPackage.GSS_EXPORT_SIZES__SIZE_IN_BITS);
-		}
-		return sizeInBits;
+		return size;
 	}
 
 	/**
@@ -139,12 +91,8 @@ public class GSSExportSizesImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_FROM_FILE_LENGTH:
-				return ((InternalEList<?>)getSizeFromFileLength()).basicRemove(otherEnd, msgs);
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_FROM_FILE_LINE:
-				return ((InternalEList<?>)getSizeFromFileLine()).basicRemove(otherEnd, msgs);
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_IN_BITS:
-				return ((InternalEList<?>)getSizeInBits()).basicRemove(otherEnd, msgs);
+			case exportPackage.GSS_EXPORT_SIZES__SIZE:
+				return ((InternalEList<?>)getSize()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -157,12 +105,8 @@ public class GSSExportSizesImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_FROM_FILE_LENGTH:
-				return getSizeFromFileLength();
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_FROM_FILE_LINE:
-				return getSizeFromFileLine();
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_IN_BITS:
-				return getSizeInBits();
+			case exportPackage.GSS_EXPORT_SIZES__SIZE:
+				return getSize();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -176,17 +120,9 @@ public class GSSExportSizesImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_FROM_FILE_LENGTH:
-				getSizeFromFileLength().clear();
-				getSizeFromFileLength().addAll((Collection<? extends GSSExportSizeFromFileLength>)newValue);
-				return;
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_FROM_FILE_LINE:
-				getSizeFromFileLine().clear();
-				getSizeFromFileLine().addAll((Collection<? extends GSSExportSizeFromFileLine>)newValue);
-				return;
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_IN_BITS:
-				getSizeInBits().clear();
-				getSizeInBits().addAll((Collection<? extends GSSExportSizeInBits>)newValue);
+			case exportPackage.GSS_EXPORT_SIZES__SIZE:
+				getSize().clear();
+				getSize().addAll((Collection<? extends GSSExportSize>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -200,14 +136,8 @@ public class GSSExportSizesImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_FROM_FILE_LENGTH:
-				getSizeFromFileLength().clear();
-				return;
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_FROM_FILE_LINE:
-				getSizeFromFileLine().clear();
-				return;
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_IN_BITS:
-				getSizeInBits().clear();
+			case exportPackage.GSS_EXPORT_SIZES__SIZE:
+				getSize().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -221,12 +151,8 @@ public class GSSExportSizesImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_FROM_FILE_LENGTH:
-				return sizeFromFileLength != null && !sizeFromFileLength.isEmpty();
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_FROM_FILE_LINE:
-				return sizeFromFileLine != null && !sizeFromFileLine.isEmpty();
-			case exportPackage.GSS_EXPORT_SIZES__SIZE_IN_BITS:
-				return sizeInBits != null && !sizeInBits.isEmpty();
+			case exportPackage.GSS_EXPORT_SIZES__SIZE:
+				return size != null && !size.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

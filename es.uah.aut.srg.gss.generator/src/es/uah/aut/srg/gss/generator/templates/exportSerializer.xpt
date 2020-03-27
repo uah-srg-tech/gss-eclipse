@@ -10,13 +10,11 @@ GSSExportExport «this.name» {
 	to := «this.to.name»(«this.to.version»);
 «IF this.Sizes != null -»
 	GSSExportSizes {
-«EXPAND SerializeSizeInBits FOREACH this.Sizes.sizeInBits -»
+«EXPAND SerializeSize FOREACH this.Sizes.size -»
 	};
 «ENDIF -»
 	GSSExportSettings {
-«EXPAND SerializeSettingFromField FOREACH this.settings.settingFromField -»
-«EXPAND SerializeSettingFromConst FOREACH this.settings.settingFromConst -»
-«EXPAND SerializeSettingFromSize FOREACH this.settings.settingFromSize -»
+«EXPAND SerializeSetting FOREACH this.settings.setting -»
 	};
 «IF this.activateDICs != null -»
 	GSSExportActivateDICs {
@@ -27,6 +25,12 @@ GSSExportExport «this.name» {
 «ENDFILE -»
 «ENDDEFINE»
 
+«DEFINE SerializeSize FOR GSSExportSize -»
+«IF(this.metaType.name == "export::GSSExportSizeInBits") -»
+«EXPAND SerializeSizeInBits FOR (GSSExportSizeInBits)this -»
+«ENDIF -»
+«ENDDEFINE»
+
 «DEFINE SerializeSizeInBits FOR GSSExportSizeInBits -»
 		GSSExportSizeInBits {
 			id := «this.id»;
@@ -34,6 +38,16 @@ GSSExportExport «this.name» {
 			addSize := «this.addSize»;
 			unit := «this.unit»;
 		};
+«ENDDEFINE»
+
+«DEFINE SerializeSetting FOR GSSExportSetting -»
+«IF(this.metaType.name == "export::GSSExportSettingFromField") -»
+«EXPAND SerializeSettingFromField FOR (GSSExportSettingFromField)this -»
+«ELSEIF(this.metaType.name == "export::GSSExportSettingFromConst") -»
+«EXPAND SerializeSettingFromConst FOR (GSSExportSettingFromConst)this -»
+«ELSEIF(this.metaType.name == "export::GSSExportSettingFromSize") -»
+«EXPAND SerializeSettingFromSize FOR (GSSExportSettingFromSize)this -»
+«ENDIF -»
 «ENDDEFINE»
 
 «DEFINE SerializeSettingFromField FOR GSSExportSettingFromField -»

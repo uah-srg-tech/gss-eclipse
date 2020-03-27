@@ -36,13 +36,7 @@ public class FILTERScopeProvider extends GSSAbstractScopeProvider {
 		}
 		
 		Set<GSSFormatField> fields = new HashSet<GSSFormatField>();
-		
-		fields.addAll(filter.getFormatFile().getCSField());
-		fields.addAll(filter.getFormatFile().getCSFormulaField());
-		fields.addAll(filter.getFormatFile().getFDICField());
-		fields.addAll(filter.getFormatFile().getVRFieldSize());
-		fields.addAll(filter.getFormatFile().getVSField());
-		
+		fields.addAll(filter.getFormatFile().getField());
 		return getSimpleObjectScope(fields);
 	}
 
@@ -53,13 +47,7 @@ public class FILTERScopeProvider extends GSSAbstractScopeProvider {
 		}
 		
 		Set<GSSFormatField> fields = new HashSet<GSSFormatField>();
-		
-		fields.addAll(filter.getFormatFile().getCSField());
-		fields.addAll(filter.getFormatFile().getCSFormulaField());
-		fields.addAll(filter.getFormatFile().getFDICField());
-		fields.addAll(filter.getFormatFile().getVRFieldSize());
-		fields.addAll(filter.getFormatFile().getVSField());
-		
+		fields.addAll(filter.getFormatFile().getField());
 		return getSimpleObjectScope(fields);
 	}
 	

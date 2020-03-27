@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioPeriodicTC()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface GSSScenarioPeriodicTC extends EObject {

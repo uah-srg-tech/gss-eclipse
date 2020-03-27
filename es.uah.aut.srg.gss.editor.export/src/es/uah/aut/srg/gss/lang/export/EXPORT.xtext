@@ -32,15 +32,17 @@ GSSExportExport returns GSSExportExport:
 GSSExportSizes returns GSSExportSizes:
 	{GSSExportSizes}
 	'GSSExportSizes' '{'
-		((sizeFromFileLength+=GSSExportSizeFromFileLength) |
-			(sizeFromFileLine+=GSSExportSizeFromFileLine) |
-			(sizeInBits+=GSSExportSizeInBits))+
+		(size+=GSSExportSize)+
 	'}' ';'
 ;
 
 enum GSSExportUnit returns GSSExportUnit:
 	bits = 'bits' | bytes = 'bytes'
 ;
+
+GSSExportSize returns GSSExportSize :
+	GSSExportSizeFromFileLength | GSSExportSizeFromFileLine |
+	GSSExportSizeInBits;
 
 GSSExportSizeFromFileLength returns GSSExportSizeFromFileLength:
 	'GSSExportSizeFromFileLength' '{'
@@ -73,14 +75,14 @@ GSSExportSizeInBits returns GSSExportSizeInBits:
 GSSExportSettings returns GSSExportSettings:
 	{GSSExportSettings}
 	'GSSExportSettings' '{'
-		((settingFromConst+=GSSExportSettingFromConst) |
-		(settingFromSize+=GSSExportSettingFromSize) |
-		(settingFromFile+=GSSExportSettingFromFile) |
-		(settingFromField+=GSSExportSettingFromField) |
-		(settingAIFromConst+=GSSExportSettingAIFromConst) |
-		(settingAIFromFile+=GSSExportSettingAIFromFile))*
+		(setting+=GSSExportSetting)*
 	'}' ';'
 ;
+
+GSSExportSetting returns GSSExportSetting:
+	GSSExportSettingFromConst | GSSExportSettingFromSize |
+	GSSExportSettingFromFile | GSSExportSettingFromField |
+	GSSExportSettingAIFromConst | GSSExportSettingAIFromFile;
 
 GSSExportSettingFromConst returns GSSExportSettingFromConst:
 	'GSSExportSettingFromConst' '{'

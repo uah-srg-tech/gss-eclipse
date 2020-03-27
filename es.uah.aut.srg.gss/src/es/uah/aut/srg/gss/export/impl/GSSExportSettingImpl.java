@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class GSSExportSettingImpl extends MinimalEObjectImpl.Container implements GSSExportSetting {
+public abstract class GSSExportSettingImpl extends MinimalEObjectImpl.Container implements GSSExportSetting {
 	/**
 	 * The cached value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' reference.
 	 * <!-- begin-user-doc -->

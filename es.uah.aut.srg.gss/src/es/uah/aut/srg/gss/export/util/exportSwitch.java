@@ -156,23 +156,17 @@ public class exportSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case exportPackage.GSS_EXPORT_SETTING_AI: {
-				GSSExportSettingAI gssExportSettingAI = (GSSExportSettingAI)theEObject;
-				T result = caseGSSExportSettingAI(gssExportSettingAI);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_CONST: {
 				GSSExportSettingAIFromConst gssExportSettingAIFromConst = (GSSExportSettingAIFromConst)theEObject;
 				T result = caseGSSExportSettingAIFromConst(gssExportSettingAIFromConst);
-				if (result == null) result = caseGSSExportSettingAI(gssExportSettingAIFromConst);
+				if (result == null) result = caseGSSExportSetting(gssExportSettingAIFromConst);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case exportPackage.GSS_EXPORT_SETTING_AI_FROM_FILE: {
 				GSSExportSettingAIFromFile gssExportSettingAIFromFile = (GSSExportSettingAIFromFile)theEObject;
 				T result = caseGSSExportSettingAIFromFile(gssExportSettingAIFromFile);
-				if (result == null) result = caseGSSExportSettingAI(gssExportSettingAIFromFile);
+				if (result == null) result = caseGSSExportSetting(gssExportSettingAIFromFile);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -369,21 +363,6 @@ public class exportSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSExportSettingFromField(GSSExportSettingFromField object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Export Setting AI</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Export Setting AI</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSExportSettingAI(GSSExportSettingAI object) {
 		return null;
 	}
 

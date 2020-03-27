@@ -89,7 +89,6 @@ public class scenarioFactoryImpl extends EFactoryImpl implements scenarioFactory
 			case scenarioPackage.GSS_SCENARIO_PERIOD: return createGSSScenarioPeriod();
 			case scenarioPackage.GSS_SCENARIO_INTERVAL_RANGE: return createGSSScenarioIntervalRange();
 			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS: return createGSSScenarioPeriodicTCs();
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TC: return createGSSScenarioPeriodicTC();
 			case scenarioPackage.GSS_SCENARIO_PERIODIC_TC_LEVEL2: return createGSSScenarioPeriodicTCLevel2();
 			case scenarioPackage.GSS_SCENARIO_PERIODIC_TC_LEVEL1: return createGSSScenarioPeriodicTCLevel1();
 			case scenarioPackage.GSS_SCENARIO_PERIODIC_TC_LEVEL0: return createGSSScenarioPeriodicTCLevel0();
@@ -414,16 +413,6 @@ public class scenarioFactoryImpl extends EFactoryImpl implements scenarioFactory
 	public GSSScenarioPeriodicTCs createGSSScenarioPeriodicTCs() {
 		GSSScenarioPeriodicTCsImpl gssScenarioPeriodicTCs = new GSSScenarioPeriodicTCsImpl();
 		return gssScenarioPeriodicTCs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSScenarioPeriodicTC createGSSScenarioPeriodicTC() {
-		GSSScenarioPeriodicTCImpl gssScenarioPeriodicTC = new GSSScenarioPeriodicTCImpl();
-		return gssScenarioPeriodicTC;
 	}
 
 	/**

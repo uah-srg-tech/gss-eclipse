@@ -31,7 +31,7 @@ package es.uah.aut.srg.gss.export;
  * @model
  * @generated
  */
-public interface GSSExportSettingAIFromFile extends GSSExportSettingAI {
+public interface GSSExportSettingAIFromFile extends GSSExportSetting {
 	/**
 	 * Returns the value of the '<em><b>File</b></em>' attribute.
 	 * <!-- begin-user-doc -->

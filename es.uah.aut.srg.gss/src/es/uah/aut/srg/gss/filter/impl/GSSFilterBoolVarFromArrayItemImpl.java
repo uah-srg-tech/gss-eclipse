@@ -13,7 +13,6 @@ package es.uah.aut.srg.gss.filter.impl;
 import es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromArrayItem;
 import es.uah.aut.srg.gss.filter.GSSFilterConstant;
 import es.uah.aut.srg.gss.filter.GSSFilterConstantType;
-import es.uah.aut.srg.gss.filter.GSSFilterFieldOp;
 import es.uah.aut.srg.gss.filter.GSSFilterSelect;
 import es.uah.aut.srg.gss.filter.GSSFilterSelectLine;
 import es.uah.aut.srg.gss.filter.filterPackage;
@@ -27,7 +26,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,11 +35,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl#getId <em>Id</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl#getConstantType <em>Constant Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl#getAIFieldRef <em>AI Field Ref</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl#getOp <em>Op</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl#getConstant <em>Constant</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl#getSelect <em>Select</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl#getSelectLine <em>Select Line</em>}</li>
@@ -49,47 +44,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Container implements GSSFilterBoolVarFromArrayItem {
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
+public class GSSFilterBoolVarFromArrayItemImpl extends GSSFilterAbstractBoolVarImpl implements GSSFilterBoolVarFromArrayItem {
 	/**
 	 * The default value of the '{@link #getConstantType() <em>Constant Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -119,16 +74,6 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 	 * @ordered
 	 */
 	protected GSSFormatAIField aiFieldRef;
-
-	/**
-	 * The cached value of the '{@link #getOp() <em>Op</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOp()
-	 * @generated
-	 * @ordered
-	 */
-	protected GSSFilterFieldOp op;
 
 	/**
 	 * The cached value of the '{@link #getConstant() <em>Constant</em>}' containment reference.
@@ -177,48 +122,6 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 	@Override
 	protected EClass eStaticClass() {
 		return filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__NAME, oldName, name));
 	}
 
 	/**
@@ -278,49 +181,6 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 		aiFieldRef = newAIFieldRef;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF, oldAIFieldRef, aiFieldRef));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSFilterFieldOp getOp() {
-		return op;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetOp(GSSFilterFieldOp newOp, NotificationChain msgs) {
-		GSSFilterFieldOp oldOp = op;
-		op = newOp;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__OP, oldOp, newOp);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOp(GSSFilterFieldOp newOp) {
-		if (newOp != op) {
-			NotificationChain msgs = null;
-			if (op != null)
-				msgs = ((InternalEObject)op).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__OP, null, msgs);
-			if (newOp != null)
-				msgs = ((InternalEObject)newOp).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__OP, null, msgs);
-			msgs = basicSetOp(newOp, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__OP, newOp, newOp));
 	}
 
 	/**
@@ -460,8 +320,6 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__OP:
-				return basicSetOp(null, msgs);
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT:
 				return basicSetConstant(null, msgs);
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT:
@@ -480,17 +338,11 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__ID:
-				return getId();
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__NAME:
-				return getName();
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT_TYPE:
 				return getConstantType();
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF:
 				if (resolve) return getAIFieldRef();
 				return basicGetAIFieldRef();
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__OP:
-				return getOp();
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT:
 				return getConstant();
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT:
@@ -509,20 +361,11 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__ID:
-				setId((String)newValue);
-				return;
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__NAME:
-				setName((String)newValue);
-				return;
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT_TYPE:
 				setConstantType((GSSFilterConstantType)newValue);
 				return;
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF:
 				setAIFieldRef((GSSFormatAIField)newValue);
-				return;
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__OP:
-				setOp((GSSFilterFieldOp)newValue);
 				return;
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT:
 				setConstant((GSSFilterConstant)newValue);
@@ -545,20 +388,11 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__ID:
-				setId(ID_EDEFAULT);
-				return;
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT_TYPE:
 				setConstantType(CONSTANT_TYPE_EDEFAULT);
 				return;
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF:
 				setAIFieldRef((GSSFormatAIField)null);
-				return;
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__OP:
-				setOp((GSSFilterFieldOp)null);
 				return;
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT:
 				setConstant((GSSFilterConstant)null);
@@ -581,16 +415,10 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT_TYPE:
 				return constantType != CONSTANT_TYPE_EDEFAULT;
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF:
 				return aiFieldRef != null;
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__OP:
-				return op != null;
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT:
 				return constant != null;
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT:
@@ -611,11 +439,7 @@ public class GSSFilterBoolVarFromArrayItemImpl extends MinimalEObjectImpl.Contai
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
-		result.append(", name: ");
-		result.append(name);
-		result.append(", constantType: ");
+		result.append(" (constantType: ");
 		result.append(constantType);
 		result.append(')');
 		return result.toString();

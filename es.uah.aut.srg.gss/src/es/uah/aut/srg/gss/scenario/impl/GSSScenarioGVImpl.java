@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2019 UAH Space Research Group.
+ * Copyright (c) 2020 UAH Space Research Group.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -8,12 +8,11 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.gss.export.impl;
+package es.uah.aut.srg.gss.scenario.impl;
 
-import es.uah.aut.srg.gss.export.GSSExportSettingAI;
-import es.uah.aut.srg.gss.export.exportPackage;
-
-import es.uah.aut.srg.gss.format.GSSFormatAIField;
+import es.uah.aut.srg.gss.scenario.GSSScenarioGV;
+import es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar;
+import es.uah.aut.srg.gss.scenario.scenarioPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -25,34 +24,34 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GSS Export Setting AI</b></em>'.
+ * An implementation of the model object '<em><b>GSS Scenario GV</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.export.impl.GSSExportSettingAIImpl#getToFieldRef <em>To Field Ref</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVImpl#getGlobalVarRef <em>Global Var Ref</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSExportSettingAIImpl extends MinimalEObjectImpl.Container implements GSSExportSettingAI {
+public abstract class GSSScenarioGVImpl extends MinimalEObjectImpl.Container implements GSSScenarioGV {
 	/**
-	 * The cached value of the '{@link #getToFieldRef() <em>To Field Ref</em>}' reference.
+	 * The cached value of the '{@link #getGlobalVarRef() <em>Global Var Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getToFieldRef()
+	 * @see #getGlobalVarRef()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSFormatAIField toFieldRef;
+	protected GSSScenarioGlobalVar globalVarRef;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GSSExportSettingAIImpl() {
+	protected GSSScenarioGVImpl() {
 		super();
 	}
 
@@ -63,7 +62,7 @@ public class GSSExportSettingAIImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return exportPackage.Literals.GSS_EXPORT_SETTING_AI;
+		return scenarioPackage.Literals.GSS_SCENARIO_GV;
 	}
 
 	/**
@@ -71,16 +70,16 @@ public class GSSExportSettingAIImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFormatAIField getToFieldRef() {
-		if (toFieldRef != null && toFieldRef.eIsProxy()) {
-			InternalEObject oldToFieldRef = (InternalEObject)toFieldRef;
-			toFieldRef = (GSSFormatAIField)eResolveProxy(oldToFieldRef);
-			if (toFieldRef != oldToFieldRef) {
+	public GSSScenarioGlobalVar getGlobalVarRef() {
+		if (globalVarRef != null && globalVarRef.eIsProxy()) {
+			InternalEObject oldGlobalVarRef = (InternalEObject)globalVarRef;
+			globalVarRef = (GSSScenarioGlobalVar)eResolveProxy(oldGlobalVarRef);
+			if (globalVarRef != oldGlobalVarRef) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, exportPackage.GSS_EXPORT_SETTING_AI__TO_FIELD_REF, oldToFieldRef, toFieldRef));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, scenarioPackage.GSS_SCENARIO_GV__GLOBAL_VAR_REF, oldGlobalVarRef, globalVarRef));
 			}
 		}
-		return toFieldRef;
+		return globalVarRef;
 	}
 
 	/**
@@ -88,8 +87,8 @@ public class GSSExportSettingAIImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFormatAIField basicGetToFieldRef() {
-		return toFieldRef;
+	public GSSScenarioGlobalVar basicGetGlobalVarRef() {
+		return globalVarRef;
 	}
 
 	/**
@@ -97,11 +96,11 @@ public class GSSExportSettingAIImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setToFieldRef(GSSFormatAIField newToFieldRef) {
-		GSSFormatAIField oldToFieldRef = toFieldRef;
-		toFieldRef = newToFieldRef;
+	public void setGlobalVarRef(GSSScenarioGlobalVar newGlobalVarRef) {
+		GSSScenarioGlobalVar oldGlobalVarRef = globalVarRef;
+		globalVarRef = newGlobalVarRef;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, exportPackage.GSS_EXPORT_SETTING_AI__TO_FIELD_REF, oldToFieldRef, toFieldRef));
+			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_GV__GLOBAL_VAR_REF, oldGlobalVarRef, globalVarRef));
 	}
 
 	/**
@@ -112,9 +111,9 @@ public class GSSExportSettingAIImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case exportPackage.GSS_EXPORT_SETTING_AI__TO_FIELD_REF:
-				if (resolve) return getToFieldRef();
-				return basicGetToFieldRef();
+			case scenarioPackage.GSS_SCENARIO_GV__GLOBAL_VAR_REF:
+				if (resolve) return getGlobalVarRef();
+				return basicGetGlobalVarRef();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -127,8 +126,8 @@ public class GSSExportSettingAIImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case exportPackage.GSS_EXPORT_SETTING_AI__TO_FIELD_REF:
-				setToFieldRef((GSSFormatAIField)newValue);
+			case scenarioPackage.GSS_SCENARIO_GV__GLOBAL_VAR_REF:
+				setGlobalVarRef((GSSScenarioGlobalVar)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -142,8 +141,8 @@ public class GSSExportSettingAIImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case exportPackage.GSS_EXPORT_SETTING_AI__TO_FIELD_REF:
-				setToFieldRef((GSSFormatAIField)null);
+			case scenarioPackage.GSS_SCENARIO_GV__GLOBAL_VAR_REF:
+				setGlobalVarRef((GSSScenarioGlobalVar)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -157,10 +156,10 @@ public class GSSExportSettingAIImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case exportPackage.GSS_EXPORT_SETTING_AI__TO_FIELD_REF:
-				return toFieldRef != null;
+			case scenarioPackage.GSS_SCENARIO_GV__GLOBAL_VAR_REF:
+				return globalVarRef != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //GSSExportSettingAIImpl
+} //GSSScenarioGVImpl

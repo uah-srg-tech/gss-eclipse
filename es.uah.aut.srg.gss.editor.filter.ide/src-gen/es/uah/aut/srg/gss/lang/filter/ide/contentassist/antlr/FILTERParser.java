@@ -43,11 +43,10 @@ public class FILTERParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getGSSFilterFilterAccess().getAlternatives(), "rule__GSSFilterFilter__Alternatives");
-					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getAlternatives_3_1_5(), "rule__GSSFilterMaxtermFilter__Alternatives_3_1_5");
-					put(grammarAccess.getGSSFilterMintermFilterAccess().getAlternatives_3_1_5(), "rule__GSSFilterMintermFilter__Alternatives_3_1_5");
-					put(grammarAccess.getGSSFilterValueAccess().getAlternatives(), "rule__GSSFilterValue__Alternatives");
+					put(grammarAccess.getGSSFilterAbstractBoolVarAccess().getAlternatives(), "rule__GSSFilterAbstractBoolVar__Alternatives");
 					put(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAlternatives_19(), "rule__GSSFilterBoolVarFromArrayItem__Alternatives_19");
 					put(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAlternatives_23(), "rule__GSSFilterBoolVarFromGroupedArrayItem__Alternatives_23");
+					put(grammarAccess.getGSSFilterValueAccess().getAlternatives(), "rule__GSSFilterValue__Alternatives");
 					put(grammarAccess.getVersionAccess().getAlternatives_0(), "rule__Version__Alternatives_0");
 					put(grammarAccess.getVersionAccess().getAlternatives_1_1(), "rule__Version__Alternatives_1_1");
 					put(grammarAccess.getINTEGERAccess().getAlternatives(), "rule__INTEGER__Alternatives");
@@ -57,13 +56,7 @@ public class FILTERParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSModelFileAccess().getGroup(), "rule__GSSModelFile__Group__0");
 					put(grammarAccess.getGSSModelFileImportAccess().getGroup(), "rule__GSSModelFileImport__Group__0");
 					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getGroup(), "rule__GSSFilterMaxtermFilter__Group__0");
-					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getGroup_3_0(), "rule__GSSFilterMaxtermFilter__Group_3_0__0");
-					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getGroup_3_1(), "rule__GSSFilterMaxtermFilter__Group_3_1__0");
-					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getGroup_3_1_0(), "rule__GSSFilterMaxtermFilter__Group_3_1_0__0");
 					put(grammarAccess.getGSSFilterMintermFilterAccess().getGroup(), "rule__GSSFilterMintermFilter__Group__0");
-					put(grammarAccess.getGSSFilterMintermFilterAccess().getGroup_3_0(), "rule__GSSFilterMintermFilter__Group_3_0__0");
-					put(grammarAccess.getGSSFilterMintermFilterAccess().getGroup_3_1(), "rule__GSSFilterMintermFilter__Group_3_1__0");
-					put(grammarAccess.getGSSFilterMintermFilterAccess().getGroup_3_1_0(), "rule__GSSFilterMintermFilter__Group_3_1_0__0");
 					put(grammarAccess.getGSSFilterBoolVarAccess().getGroup(), "rule__GSSFilterBoolVar__Group__0");
 					put(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getGroup(), "rule__GSSFilterBoolVarFromArrayItem__Group__0");
 					put(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getGroup(), "rule__GSSFilterBoolVarFromGroupedArrayItem__Group__0");
@@ -97,23 +90,17 @@ public class FILTERParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSModelFileAccess().getElementAssignment_1(), "rule__GSSModelFile__ElementAssignment_1");
 					put(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_2(), "rule__GSSModelFileImport__ImportURIAssignment_2");
 					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getNameAssignment_1(), "rule__GSSFilterMaxtermFilter__NameAssignment_1");
-					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriAssignment_3_0_2(), "rule__GSSFilterMaxtermFilter__UriAssignment_3_0_2");
-					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionAssignment_3_1_0_2(), "rule__GSSFilterMaxtermFilter__VersionAssignment_3_1_0_2");
-					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileAssignment_3_1_3(), "rule__GSSFilterMaxtermFilter__FormatFileAssignment_3_1_3");
-					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarAssignment_3_1_5_0(), "rule__GSSFilterMaxtermFilter__BoolVarAssignment_3_1_5_0");
-					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromArrayItemAssignment_3_1_5_1(), "rule__GSSFilterMaxtermFilter__BoolVarFromArrayItemAssignment_3_1_5_1");
-					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromGroupedArrayItemAssignment_3_1_5_2(), "rule__GSSFilterMaxtermFilter__BoolVarFromGroupedArrayItemAssignment_3_1_5_2");
-					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFDICAssignment_3_1_5_3(), "rule__GSSFilterMaxtermFilter__BoolVarFDICAssignment_3_1_5_3");
-					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermAssignment_4(), "rule__GSSFilterMaxtermFilter__MaxtermAssignment_4");
+					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriAssignment_5(), "rule__GSSFilterMaxtermFilter__UriAssignment_5");
+					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionAssignment_9(), "rule__GSSFilterMaxtermFilter__VersionAssignment_9");
+					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileAssignment_13(), "rule__GSSFilterMaxtermFilter__FormatFileAssignment_13");
+					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarAssignment_15(), "rule__GSSFilterMaxtermFilter__BoolVarAssignment_15");
+					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermAssignment_16(), "rule__GSSFilterMaxtermFilter__MaxtermAssignment_16");
 					put(grammarAccess.getGSSFilterMintermFilterAccess().getNameAssignment_1(), "rule__GSSFilterMintermFilter__NameAssignment_1");
-					put(grammarAccess.getGSSFilterMintermFilterAccess().getUriAssignment_3_0_2(), "rule__GSSFilterMintermFilter__UriAssignment_3_0_2");
-					put(grammarAccess.getGSSFilterMintermFilterAccess().getVersionAssignment_3_1_0_2(), "rule__GSSFilterMintermFilter__VersionAssignment_3_1_0_2");
-					put(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileAssignment_3_1_3(), "rule__GSSFilterMintermFilter__FormatFileAssignment_3_1_3");
-					put(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarAssignment_3_1_5_0(), "rule__GSSFilterMintermFilter__BoolVarAssignment_3_1_5_0");
-					put(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromArrayItemAssignment_3_1_5_1(), "rule__GSSFilterMintermFilter__BoolVarFromArrayItemAssignment_3_1_5_1");
-					put(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromGroupedArrayItemAssignment_3_1_5_2(), "rule__GSSFilterMintermFilter__BoolVarFromGroupedArrayItemAssignment_3_1_5_2");
-					put(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFDICAssignment_3_1_5_3(), "rule__GSSFilterMintermFilter__BoolVarFDICAssignment_3_1_5_3");
-					put(grammarAccess.getGSSFilterMintermFilterAccess().getMintermAssignment_4(), "rule__GSSFilterMintermFilter__MintermAssignment_4");
+					put(grammarAccess.getGSSFilterMintermFilterAccess().getUriAssignment_5(), "rule__GSSFilterMintermFilter__UriAssignment_5");
+					put(grammarAccess.getGSSFilterMintermFilterAccess().getVersionAssignment_9(), "rule__GSSFilterMintermFilter__VersionAssignment_9");
+					put(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileAssignment_13(), "rule__GSSFilterMintermFilter__FormatFileAssignment_13");
+					put(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarAssignment_15(), "rule__GSSFilterMintermFilter__BoolVarAssignment_15");
+					put(grammarAccess.getGSSFilterMintermFilterAccess().getMintermAssignment_16(), "rule__GSSFilterMintermFilter__MintermAssignment_16");
 					put(grammarAccess.getGSSFilterBoolVarAccess().getIdAssignment_4(), "rule__GSSFilterBoolVar__IdAssignment_4");
 					put(grammarAccess.getGSSFilterBoolVarAccess().getNameAssignment_8(), "rule__GSSFilterBoolVar__NameAssignment_8");
 					put(grammarAccess.getGSSFilterBoolVarAccess().getConstantTypeAssignment_12(), "rule__GSSFilterBoolVar__ConstantTypeAssignment_12");
@@ -159,8 +146,6 @@ public class FILTERParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSFilterMintermAccess().getIdAssignment_4(), "rule__GSSFilterMinterm__IdAssignment_4");
 					put(grammarAccess.getGSSFilterMintermAccess().getBoolVarRefAssignment_6(), "rule__GSSFilterMinterm__BoolVarRefAssignment_6");
 					put(grammarAccess.getGSSFilterBoolVarRefAccess().getIdRefAssignment_4(), "rule__GSSFilterBoolVarRef__IdRefAssignment_4");
-					put(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), "rule__GSSFilterMaxtermFilter__UnorderedGroup_3");
-					put(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), "rule__GSSFilterMintermFilter__UnorderedGroup_3");
 				}
 			};
 		}

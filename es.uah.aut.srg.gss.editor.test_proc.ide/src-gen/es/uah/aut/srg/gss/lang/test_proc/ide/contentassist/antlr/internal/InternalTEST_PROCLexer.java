@@ -228,10 +228,10 @@ public class InternalTEST_PROCLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTEST_PROC.g:16:7: ( '\"TMTC checking\"' )
-            // InternalTEST_PROC.g:16:9: '\"TMTC checking\"'
+            // InternalTEST_PROC.g:16:7: ( '\"tmtc_checking\"' )
+            // InternalTEST_PROC.g:16:9: '\"tmtc_checking\"'
             {
-            match("\"TMTC checking\""); 
+            match("\"tmtc_checking\""); 
 
 
             }
@@ -3077,7 +3077,7 @@ public class InternalTEST_PROCLexer extends Lexer {
             "\1\43\6\uffff\1\42",
             "\1\45\3\uffff\1\50\3\uffff\1\46\5\uffff\1\47",
             "\1\51\10\uffff\1\52\1\uffff\1\53\1\uffff\1\54",
-            "\124\60\1\56\16\60\1\57\5\60\1\55\uff96\60",
+            "\143\60\1\57\5\60\1\55\12\60\1\56\uff8b\60",
             "\1\61\12\uffff\1\62",
             "\1\63",
             "\1\65\3\uffff\1\66\11\uffff\1\64",
@@ -3119,7 +3119,7 @@ public class InternalTEST_PROCLexer extends Lexer {
             "\1\134",
             "\1\135",
             "\156\60\1\136\uff91\60",
-            "\115\60\1\137\uffb2\60",
+            "\155\60\1\137\uff92\60",
             "\150\60\1\140\uff97\60",
             "",
             "\1\141",
@@ -3168,7 +3168,7 @@ public class InternalTEST_PROCLexer extends Lexer {
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\1\u0081\14\uffff\1\u0082",
             "\163\60\1\u0083\uff8c\60",
-            "\124\60\1\u0084\uffab\60",
+            "\164\60\1\u0084\uff8b\60",
             "\145\60\1\u0085\uff9a\60",
             "\1\u0086",
             "\1\u0087",
@@ -3205,7 +3205,7 @@ public class InternalTEST_PROCLexer extends Lexer {
             "\1\u00a2",
             "\1\u00a3",
             "\164\60\1\u00a4\uff8b\60",
-            "\103\60\1\u00a5\uffbc\60",
+            "\143\60\1\u00a5\uff9c\60",
             "\143\60\1\u00a6\uff9c\60",
             "\1\u00a7",
             "\1\u00a8",
@@ -3238,7 +3238,7 @@ public class InternalTEST_PROCLexer extends Lexer {
             "\1\u00c0",
             "\1\u00c1",
             "\162\60\1\u00c2\uff8d\60",
-            "\40\60\1\u00c3\uffdf\60",
+            "\137\60\1\u00c3\uffa0\60",
             "\153\60\1\u00c4\uff94\60",
             "\1\u00c5",
             "\1\u00c7\1\u00c6",
@@ -3935,9 +3935,9 @@ public class InternalTEST_PROCLexer extends Lexer {
                         int LA13_46 = input.LA(1);
 
                         s = -1;
-                        if ( (LA13_46=='M') ) {s = 95;}
+                        if ( (LA13_46=='m') ) {s = 95;}
 
-                        else if ( ((LA13_46>='\u0000' && LA13_46<='L')||(LA13_46>='N' && LA13_46<='\uFFFF')) ) {s = 48;}
+                        else if ( ((LA13_46>='\u0000' && LA13_46<='l')||(LA13_46>='n' && LA13_46<='\uFFFF')) ) {s = 48;}
 
                         if ( s>=0 ) return s;
                         break;
@@ -3945,9 +3945,9 @@ public class InternalTEST_PROCLexer extends Lexer {
                         int LA13_95 = input.LA(1);
 
                         s = -1;
-                        if ( (LA13_95=='T') ) {s = 132;}
+                        if ( (LA13_95=='t') ) {s = 132;}
 
-                        else if ( ((LA13_95>='\u0000' && LA13_95<='S')||(LA13_95>='U' && LA13_95<='\uFFFF')) ) {s = 48;}
+                        else if ( ((LA13_95>='\u0000' && LA13_95<='s')||(LA13_95>='u' && LA13_95<='\uFFFF')) ) {s = 48;}
 
                         if ( s>=0 ) return s;
                         break;
@@ -3955,9 +3955,9 @@ public class InternalTEST_PROCLexer extends Lexer {
                         int LA13_132 = input.LA(1);
 
                         s = -1;
-                        if ( (LA13_132=='C') ) {s = 165;}
+                        if ( (LA13_132=='c') ) {s = 165;}
 
-                        else if ( ((LA13_132>='\u0000' && LA13_132<='B')||(LA13_132>='D' && LA13_132<='\uFFFF')) ) {s = 48;}
+                        else if ( ((LA13_132>='\u0000' && LA13_132<='b')||(LA13_132>='d' && LA13_132<='\uFFFF')) ) {s = 48;}
 
                         if ( s>=0 ) return s;
                         break;
@@ -3965,9 +3965,9 @@ public class InternalTEST_PROCLexer extends Lexer {
                         int LA13_165 = input.LA(1);
 
                         s = -1;
-                        if ( (LA13_165==' ') ) {s = 195;}
+                        if ( (LA13_165=='_') ) {s = 195;}
 
-                        else if ( ((LA13_165>='\u0000' && LA13_165<='\u001F')||(LA13_165>='!' && LA13_165<='\uFFFF')) ) {s = 48;}
+                        else if ( ((LA13_165>='\u0000' && LA13_165<='^')||(LA13_165>='`' && LA13_165<='\uFFFF')) ) {s = 48;}
 
                         if ( s>=0 ) return s;
                         break;
@@ -4147,11 +4147,11 @@ public class InternalTEST_PROCLexer extends Lexer {
                         s = -1;
                         if ( (LA13_4=='i') ) {s = 45;}
 
-                        else if ( (LA13_4=='T') ) {s = 46;}
+                        else if ( (LA13_4=='t') ) {s = 46;}
 
                         else if ( (LA13_4=='c') ) {s = 47;}
 
-                        else if ( ((LA13_4>='\u0000' && LA13_4<='S')||(LA13_4>='U' && LA13_4<='b')||(LA13_4>='d' && LA13_4<='h')||(LA13_4>='j' && LA13_4<='\uFFFF')) ) {s = 48;}
+                        else if ( ((LA13_4>='\u0000' && LA13_4<='b')||(LA13_4>='d' && LA13_4<='h')||(LA13_4>='j' && LA13_4<='s')||(LA13_4>='u' && LA13_4<='\uFFFF')) ) {s = 48;}
 
                         else s = 33;
 

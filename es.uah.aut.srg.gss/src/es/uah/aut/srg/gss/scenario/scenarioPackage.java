@@ -1647,31 +1647,13 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_PERIODIC_TCS = 23;
 
 	/**
-	 * The feature id for the '<em><b>Periodic TC level 2</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Periodic TC</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_2 = 0;
-
-	/**
-	 * The feature id for the '<em><b>Periodic TC level 1</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_1 = 1;
-
-	/**
-	 * The feature id for the '<em><b>Periodic TC level 0</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_0 = 2;
+	int GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC = 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario Periodic TCs</em>' class.
@@ -1680,7 +1662,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_PERIODIC_TCS_FEATURE_COUNT = 3;
+	int GSS_SCENARIO_PERIODIC_TCS_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario Periodic TCs</em>' class.
@@ -2175,31 +2157,13 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_GLOBAL_VAR__INITIAL_VALUE = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Reference Field</b></em>' containment reference.
+	 * The feature id for the '<em><b>Reference</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GLOBAL_VAR__REFERENCE_FIELD = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Reference Periodic TC</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_GLOBAL_VAR__REFERENCE_PERIODIC_TC = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Reference Special Packet</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_GLOBAL_VAR__REFERENCE_SPECIAL_PACKET = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_FEATURE_COUNT + 5;
+	int GSS_SCENARIO_GLOBAL_VAR__REFERENCE = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario Global Var</em>' class.
@@ -2208,7 +2172,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GLOBAL_VAR_FEATURE_COUNT = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_FEATURE_COUNT + 6;
+	int GSS_SCENARIO_GLOBAL_VAR_FEATURE_COUNT = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario Global Var</em>' class.
@@ -2220,32 +2184,14 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_GLOBAL_VAR_OPERATION_COUNT = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_VARIABLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceFieldImpl <em>GSS Scenario Reference Field</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceImpl <em>GSS Scenario Reference</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceFieldImpl
-	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioReferenceField()
+	 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceImpl
+	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioReference()
 	 * @generated
 	 */
-	int GSS_SCENARIO_REFERENCE_FIELD = 30;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_REFERENCE_FIELD__TYPE = 0;
-
-	/**
-	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_REFERENCE_FIELD__IF_REF = 1;
+	int GSS_SCENARIO_REFERENCE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -2254,7 +2200,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_FIELD__LEVEL = 2;
+	int GSS_SCENARIO_REFERENCE__LEVEL = 0;
 
 	/**
 	 * The feature id for the '<em><b>Field Ref</b></em>' attribute.
@@ -2263,7 +2209,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_FIELD__FIELD_REF = 3;
+	int GSS_SCENARIO_REFERENCE__FIELD_REF = 1;
 
 	/**
 	 * The feature id for the '<em><b>Offset</b></em>' attribute.
@@ -2272,7 +2218,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_FIELD__OFFSET = 4;
+	int GSS_SCENARIO_REFERENCE__OFFSET = 2;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -2281,7 +2227,89 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_FIELD__SIZE = 5;
+	int GSS_SCENARIO_REFERENCE__SIZE = 3;
+
+	/**
+	 * The number of structural features of the '<em>GSS Scenario Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_REFERENCE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>GSS Scenario Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_REFERENCE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceFieldImpl <em>GSS Scenario Reference Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceFieldImpl
+	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioReferenceField()
+	 * @generated
+	 */
+	int GSS_SCENARIO_REFERENCE_FIELD = 31;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_REFERENCE_FIELD__LEVEL = GSS_SCENARIO_REFERENCE__LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Field Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_REFERENCE_FIELD__FIELD_REF = GSS_SCENARIO_REFERENCE__FIELD_REF;
+
+	/**
+	 * The feature id for the '<em><b>Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_REFERENCE_FIELD__OFFSET = GSS_SCENARIO_REFERENCE__OFFSET;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_REFERENCE_FIELD__SIZE = GSS_SCENARIO_REFERENCE__SIZE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_REFERENCE_FIELD__TYPE = GSS_SCENARIO_REFERENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_REFERENCE_FIELD__IF_REF = GSS_SCENARIO_REFERENCE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario Reference Field</em>' class.
@@ -2290,7 +2318,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_FIELD_FEATURE_COUNT = 6;
+	int GSS_SCENARIO_REFERENCE_FIELD_FEATURE_COUNT = GSS_SCENARIO_REFERENCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario Reference Field</em>' class.
@@ -2299,7 +2327,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_FIELD_OPERATION_COUNT = 0;
+	int GSS_SCENARIO_REFERENCE_FIELD_OPERATION_COUNT = GSS_SCENARIO_REFERENCE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferencePeriodicTCImpl <em>GSS Scenario Reference Periodic TC</em>}' class.
@@ -2309,16 +2337,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioReferencePeriodicTC()
 	 * @generated
 	 */
-	int GSS_SCENARIO_REFERENCE_PERIODIC_TC = 31;
-
-	/**
-	 * The feature id for the '<em><b>Id Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_REFERENCE_PERIODIC_TC__ID_REF = 0;
+	int GSS_SCENARIO_REFERENCE_PERIODIC_TC = 32;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -2327,7 +2346,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_PERIODIC_TC__LEVEL = 1;
+	int GSS_SCENARIO_REFERENCE_PERIODIC_TC__LEVEL = GSS_SCENARIO_REFERENCE__LEVEL;
 
 	/**
 	 * The feature id for the '<em><b>Field Ref</b></em>' attribute.
@@ -2336,7 +2355,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_PERIODIC_TC__FIELD_REF = 2;
+	int GSS_SCENARIO_REFERENCE_PERIODIC_TC__FIELD_REF = GSS_SCENARIO_REFERENCE__FIELD_REF;
 
 	/**
 	 * The feature id for the '<em><b>Offset</b></em>' attribute.
@@ -2345,7 +2364,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_PERIODIC_TC__OFFSET = 3;
+	int GSS_SCENARIO_REFERENCE_PERIODIC_TC__OFFSET = GSS_SCENARIO_REFERENCE__OFFSET;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -2354,7 +2373,16 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_PERIODIC_TC__SIZE = 4;
+	int GSS_SCENARIO_REFERENCE_PERIODIC_TC__SIZE = GSS_SCENARIO_REFERENCE__SIZE;
+
+	/**
+	 * The feature id for the '<em><b>Id Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_REFERENCE_PERIODIC_TC__ID_REF = GSS_SCENARIO_REFERENCE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario Reference Periodic TC</em>' class.
@@ -2363,7 +2391,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_PERIODIC_TC_FEATURE_COUNT = 5;
+	int GSS_SCENARIO_REFERENCE_PERIODIC_TC_FEATURE_COUNT = GSS_SCENARIO_REFERENCE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario Reference Periodic TC</em>' class.
@@ -2372,7 +2400,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_PERIODIC_TC_OPERATION_COUNT = 0;
+	int GSS_SCENARIO_REFERENCE_PERIODIC_TC_OPERATION_COUNT = GSS_SCENARIO_REFERENCE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceSpecialPacketImpl <em>GSS Scenario Reference Special Packet</em>}' class.
@@ -2382,16 +2410,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioReferenceSpecialPacket()
 	 * @generated
 	 */
-	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET = 32;
-
-	/**
-	 * The feature id for the '<em><b>Id Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__ID_REF = 0;
+	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET = 33;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -2400,7 +2419,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__LEVEL = 1;
+	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__LEVEL = GSS_SCENARIO_REFERENCE__LEVEL;
 
 	/**
 	 * The feature id for the '<em><b>Field Ref</b></em>' attribute.
@@ -2409,7 +2428,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__FIELD_REF = 2;
+	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__FIELD_REF = GSS_SCENARIO_REFERENCE__FIELD_REF;
 
 	/**
 	 * The feature id for the '<em><b>Offset</b></em>' attribute.
@@ -2418,7 +2437,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__OFFSET = 3;
+	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__OFFSET = GSS_SCENARIO_REFERENCE__OFFSET;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -2427,7 +2446,16 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__SIZE = 4;
+	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__SIZE = GSS_SCENARIO_REFERENCE__SIZE;
+
+	/**
+	 * The feature id for the '<em><b>Id Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__ID_REF = GSS_SCENARIO_REFERENCE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario Reference Special Packet</em>' class.
@@ -2436,7 +2464,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET_FEATURE_COUNT = 5;
+	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET_FEATURE_COUNT = GSS_SCENARIO_REFERENCE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario Reference Special Packet</em>' class.
@@ -2445,7 +2473,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET_OPERATION_COUNT = 0;
+	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET_OPERATION_COUNT = GSS_SCENARIO_REFERENCE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorsImpl <em>GSS Scenario Monitors</em>}' class.
@@ -2455,7 +2483,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioMonitors()
 	 * @generated
 	 */
-	int GSS_SCENARIO_MONITORS = 33;
+	int GSS_SCENARIO_MONITORS = 34;
 
 	/**
 	 * The feature id for the '<em><b>Charts File</b></em>' reference.
@@ -2467,40 +2495,13 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_MONITORS__CHARTS_FILE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Plot</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Monitor</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_MONITORS__PLOT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Alarm Msg</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MONITORS__ALARM_MSG = 2;
-
-	/**
-	 * The feature id for the '<em><b>Modify</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MONITORS__MODIFY = 3;
-
-	/**
-	 * The feature id for the '<em><b>Alarm Val</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MONITORS__ALARM_VAL = 4;
+	int GSS_SCENARIO_MONITORS__MONITOR = 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario Monitors</em>' class.
@@ -2509,7 +2510,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_MONITORS_FEATURE_COUNT = 5;
+	int GSS_SCENARIO_MONITORS_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario Monitors</em>' class.
@@ -2521,14 +2522,14 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_MONITORS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioPlotImpl <em>GSS Scenario Plot</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorImpl <em>GSS Scenario Monitor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioPlotImpl
-	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioPlot()
+	 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorImpl
+	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioMonitor()
 	 * @generated
 	 */
-	int GSS_SCENARIO_PLOT = 34;
+	int GSS_SCENARIO_MONITOR = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2537,7 +2538,62 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_PLOT__NAME = 0;
+	int GSS_SCENARIO_MONITOR__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>GV</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_MONITOR__GV = 1;
+
+	/**
+	 * The number of structural features of the '<em>GSS Scenario Monitor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_MONITOR_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>GSS Scenario Monitor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_MONITOR_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioPlotImpl <em>GSS Scenario Plot</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioPlotImpl
+	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioPlot()
+	 * @generated
+	 */
+	int GSS_SCENARIO_PLOT = 36;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_PLOT__NAME = GSS_SCENARIO_MONITOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>GV</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_PLOT__GV = GSS_SCENARIO_MONITOR__GV;
 
 	/**
 	 * The feature id for the '<em><b>Chart Ref</b></em>' reference.
@@ -2546,25 +2602,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_PLOT__CHART_REF = 1;
-
-	/**
-	 * The feature id for the '<em><b>GV Filtered</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_PLOT__GV_FILTERED = 2;
-
-	/**
-	 * The feature id for the '<em><b>GV Periodic</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_PLOT__GV_PERIODIC = 3;
+	int GSS_SCENARIO_PLOT__CHART_REF = GSS_SCENARIO_MONITOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario Plot</em>' class.
@@ -2573,7 +2611,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_PLOT_FEATURE_COUNT = 4;
+	int GSS_SCENARIO_PLOT_FEATURE_COUNT = GSS_SCENARIO_MONITOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario Plot</em>' class.
@@ -2582,7 +2620,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_PLOT_OPERATION_COUNT = 0;
+	int GSS_SCENARIO_PLOT_OPERATION_COUNT = GSS_SCENARIO_MONITOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioAlarmMsgImpl <em>GSS Scenario Alarm Msg</em>}' class.
@@ -2592,7 +2630,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioAlarmMsg()
 	 * @generated
 	 */
-	int GSS_SCENARIO_ALARM_MSG = 35;
+	int GSS_SCENARIO_ALARM_MSG = 37;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2601,7 +2639,16 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_ALARM_MSG__NAME = 0;
+	int GSS_SCENARIO_ALARM_MSG__NAME = GSS_SCENARIO_MONITOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>GV</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_ALARM_MSG__GV = GSS_SCENARIO_MONITOR__GV;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2610,7 +2657,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_ALARM_MSG__TYPE = 1;
+	int GSS_SCENARIO_ALARM_MSG__TYPE = GSS_SCENARIO_MONITOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -2619,25 +2666,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_ALARM_MSG__TEXT = 2;
-
-	/**
-	 * The feature id for the '<em><b>GV Filtered</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_ALARM_MSG__GV_FILTERED = 3;
-
-	/**
-	 * The feature id for the '<em><b>GV Periodic</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_ALARM_MSG__GV_PERIODIC = 4;
+	int GSS_SCENARIO_ALARM_MSG__TEXT = GSS_SCENARIO_MONITOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario Alarm Msg</em>' class.
@@ -2646,7 +2675,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_ALARM_MSG_FEATURE_COUNT = 5;
+	int GSS_SCENARIO_ALARM_MSG_FEATURE_COUNT = GSS_SCENARIO_MONITOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario Alarm Msg</em>' class.
@@ -2655,7 +2684,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_ALARM_MSG_OPERATION_COUNT = 0;
+	int GSS_SCENARIO_ALARM_MSG_OPERATION_COUNT = GSS_SCENARIO_MONITOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioModifyImpl <em>GSS Scenario Modify</em>}' class.
@@ -2665,7 +2694,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioModify()
 	 * @generated
 	 */
-	int GSS_SCENARIO_MODIFY = 36;
+	int GSS_SCENARIO_MODIFY = 38;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2674,7 +2703,16 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_MODIFY__NAME = 0;
+	int GSS_SCENARIO_MODIFY__NAME = GSS_SCENARIO_MONITOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>GV</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_MODIFY__GV = GSS_SCENARIO_MONITOR__GV;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2683,7 +2721,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_MODIFY__TYPE = 1;
+	int GSS_SCENARIO_MODIFY__TYPE = GSS_SCENARIO_MONITOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2692,25 +2730,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_MODIFY__VALUE = 2;
-
-	/**
-	 * The feature id for the '<em><b>GV Filtered</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MODIFY__GV_FILTERED = 3;
-
-	/**
-	 * The feature id for the '<em><b>GV Periodic</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MODIFY__GV_PERIODIC = 4;
+	int GSS_SCENARIO_MODIFY__VALUE = GSS_SCENARIO_MONITOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario Modify</em>' class.
@@ -2719,7 +2739,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_MODIFY_FEATURE_COUNT = 5;
+	int GSS_SCENARIO_MODIFY_FEATURE_COUNT = GSS_SCENARIO_MONITOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario Modify</em>' class.
@@ -2728,7 +2748,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_MODIFY_OPERATION_COUNT = 0;
+	int GSS_SCENARIO_MODIFY_OPERATION_COUNT = GSS_SCENARIO_MONITOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioAlarmValImpl <em>GSS Scenario Alarm Val</em>}' class.
@@ -2738,7 +2758,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioAlarmVal()
 	 * @generated
 	 */
-	int GSS_SCENARIO_ALARM_VAL = 37;
+	int GSS_SCENARIO_ALARM_VAL = 39;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2747,7 +2767,16 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_ALARM_VAL__NAME = 0;
+	int GSS_SCENARIO_ALARM_VAL__NAME = GSS_SCENARIO_MONITOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>GV</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_ALARM_VAL__GV = GSS_SCENARIO_MONITOR__GV;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2756,25 +2785,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_ALARM_VAL__TYPE = 1;
-
-	/**
-	 * The feature id for the '<em><b>GV Filtered</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_ALARM_VAL__GV_FILTERED = 2;
-
-	/**
-	 * The feature id for the '<em><b>GV Periodic</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_ALARM_VAL__GV_PERIODIC = 3;
+	int GSS_SCENARIO_ALARM_VAL__TYPE = GSS_SCENARIO_MONITOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario Alarm Val</em>' class.
@@ -2783,7 +2794,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_ALARM_VAL_FEATURE_COUNT = 4;
+	int GSS_SCENARIO_ALARM_VAL_FEATURE_COUNT = GSS_SCENARIO_MONITOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario Alarm Val</em>' class.
@@ -2792,7 +2803,44 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_ALARM_VAL_OPERATION_COUNT = 0;
+	int GSS_SCENARIO_ALARM_VAL_OPERATION_COUNT = GSS_SCENARIO_MONITOR_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVImpl <em>GSS Scenario GV</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVImpl
+	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGV()
+	 * @generated
+	 */
+	int GSS_SCENARIO_GV = 40;
+
+	/**
+	 * The feature id for the '<em><b>Global Var Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_GV__GLOBAL_VAR_REF = 0;
+
+	/**
+	 * The number of structural features of the '<em>GSS Scenario GV</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_GV_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>GSS Scenario GV</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_GV_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVFilteredImpl <em>GSS Scenario GV Filtered</em>}' class.
@@ -2802,7 +2850,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGVFiltered()
 	 * @generated
 	 */
-	int GSS_SCENARIO_GV_FILTERED = 38;
+	int GSS_SCENARIO_GV_FILTERED = 41;
 
 	/**
 	 * The feature id for the '<em><b>Global Var Ref</b></em>' reference.
@@ -2811,7 +2859,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_FILTERED__GLOBAL_VAR_REF = 0;
+	int GSS_SCENARIO_GV_FILTERED__GLOBAL_VAR_REF = GSS_SCENARIO_GV__GLOBAL_VAR_REF;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
@@ -2820,7 +2868,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_FILTERED__FILTER = 1;
+	int GSS_SCENARIO_GV_FILTERED__FILTER = GSS_SCENARIO_GV_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario GV Filtered</em>' class.
@@ -2829,7 +2877,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_FILTERED_FEATURE_COUNT = 2;
+	int GSS_SCENARIO_GV_FILTERED_FEATURE_COUNT = GSS_SCENARIO_GV_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario GV Filtered</em>' class.
@@ -2838,7 +2886,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_FILTERED_OPERATION_COUNT = 0;
+	int GSS_SCENARIO_GV_FILTERED_OPERATION_COUNT = GSS_SCENARIO_GV_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVPeriodicImpl <em>GSS Scenario GV Periodic</em>}' class.
@@ -2848,7 +2896,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGVPeriodic()
 	 * @generated
 	 */
-	int GSS_SCENARIO_GV_PERIODIC = 39;
+	int GSS_SCENARIO_GV_PERIODIC = 42;
 
 	/**
 	 * The feature id for the '<em><b>Global Var Ref</b></em>' reference.
@@ -2857,7 +2905,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_PERIODIC__GLOBAL_VAR_REF = 0;
+	int GSS_SCENARIO_GV_PERIODIC__GLOBAL_VAR_REF = GSS_SCENARIO_GV__GLOBAL_VAR_REF;
 
 	/**
 	 * The feature id for the '<em><b>Period value</b></em>' attribute.
@@ -2866,7 +2914,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_PERIODIC__PERIOD_VALUE = 1;
+	int GSS_SCENARIO_GV_PERIODIC__PERIOD_VALUE = GSS_SCENARIO_GV_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Period unit</b></em>' attribute.
@@ -2875,7 +2923,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_PERIODIC__PERIOD_UNIT = 2;
+	int GSS_SCENARIO_GV_PERIODIC__PERIOD_UNIT = GSS_SCENARIO_GV_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario GV Periodic</em>' class.
@@ -2884,7 +2932,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_PERIODIC_FEATURE_COUNT = 3;
+	int GSS_SCENARIO_GV_PERIODIC_FEATURE_COUNT = GSS_SCENARIO_GV_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario GV Periodic</em>' class.
@@ -2893,7 +2941,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_PERIODIC_OPERATION_COUNT = 0;
+	int GSS_SCENARIO_GV_PERIODIC_OPERATION_COUNT = GSS_SCENARIO_GV_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioEnableDisable <em>GSS Scenario Enable Disable</em>}' enum.
@@ -2903,7 +2951,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioEnableDisable()
 	 * @generated
 	 */
-	int GSS_SCENARIO_ENABLE_DISABLE = 40;
+	int GSS_SCENARIO_ENABLE_DISABLE = 43;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioInterfaceType <em>GSS Scenario Interface Type</em>}' enum.
@@ -2913,7 +2961,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioInterfaceType()
 	 * @generated
 	 */
-	int GSS_SCENARIO_INTERFACE_TYPE = 41;
+	int GSS_SCENARIO_INTERFACE_TYPE = 44;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioInterfaceIOType <em>GSS Scenario Interface IO Type</em>}' enum.
@@ -2923,7 +2971,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioInterfaceIOType()
 	 * @generated
 	 */
-	int GSS_SCENARIO_INTERFACE_IO_TYPE = 42;
+	int GSS_SCENARIO_INTERFACE_IO_TYPE = 45;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioUpperLevelLevel <em>GSS Scenario Upper Level Level</em>}' enum.
@@ -2933,7 +2981,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioUpperLevelLevel()
 	 * @generated
 	 */
-	int GSS_SCENARIO_UPPER_LEVEL_LEVEL = 43;
+	int GSS_SCENARIO_UPPER_LEVEL_LEVEL = 46;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioUnit <em>GSS Scenario Unit</em>}' enum.
@@ -2943,7 +2991,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioUnit()
 	 * @generated
 	 */
-	int GSS_SCENARIO_UNIT = 44;
+	int GSS_SCENARIO_UNIT = 47;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVarType <em>GSS Scenario Global Var Type</em>}' enum.
@@ -2953,7 +3001,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGlobalVarType()
 	 * @generated
 	 */
-	int GSS_SCENARIO_GLOBAL_VAR_TYPE = 45;
+	int GSS_SCENARIO_GLOBAL_VAR_TYPE = 48;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferenceFieldType <em>GSS Scenario Reference Field Type</em>}' enum.
@@ -2963,7 +3011,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioReferenceFieldType()
 	 * @generated
 	 */
-	int GSS_SCENARIO_REFERENCE_FIELD_TYPE = 46;
+	int GSS_SCENARIO_REFERENCE_FIELD_TYPE = 49;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmMsgType <em>GSS Scenario Alarm Msg Type</em>}' enum.
@@ -2973,7 +3021,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioAlarmMsgType()
 	 * @generated
 	 */
-	int GSS_SCENARIO_ALARM_MSG_TYPE = 47;
+	int GSS_SCENARIO_ALARM_MSG_TYPE = 50;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioModifyType <em>GSS Scenario Modify Type</em>}' enum.
@@ -2983,7 +3031,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioModifyType()
 	 * @generated
 	 */
-	int GSS_SCENARIO_MODIFY_TYPE = 48;
+	int GSS_SCENARIO_MODIFY_TYPE = 51;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmValType <em>GSS Scenario Alarm Val Type</em>}' enum.
@@ -2993,7 +3041,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioAlarmValType()
 	 * @generated
 	 */
-	int GSS_SCENARIO_ALARM_VAL_TYPE = 49;
+	int GSS_SCENARIO_ALARM_VAL_TYPE = 52;
 
 
 	/**
@@ -4227,37 +4275,15 @@ public interface scenarioPackage extends EPackage {
 	EClass getGSSScenarioPeriodicTCs();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTCs#getPeriodicTC_level_2 <em>Periodic TC level 2</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTCs#getPeriodicTC <em>Periodic TC</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Periodic TC level 2</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTCs#getPeriodicTC_level_2()
+	 * @return the meta object for the containment reference list '<em>Periodic TC</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTCs#getPeriodicTC()
 	 * @see #getGSSScenarioPeriodicTCs()
 	 * @generated
 	 */
-	EReference getGSSScenarioPeriodicTCs_PeriodicTC_level_2();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTCs#getPeriodicTC_level_1 <em>Periodic TC level 1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Periodic TC level 1</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTCs#getPeriodicTC_level_1()
-	 * @see #getGSSScenarioPeriodicTCs()
-	 * @generated
-	 */
-	EReference getGSSScenarioPeriodicTCs_PeriodicTC_level_1();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTCs#getPeriodicTC_level_0 <em>Periodic TC level 0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Periodic TC level 0</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTCs#getPeriodicTC_level_0()
-	 * @see #getGSSScenarioPeriodicTCs()
-	 * @generated
-	 */
-	EReference getGSSScenarioPeriodicTCs_PeriodicTC_level_0();
+	EReference getGSSScenarioPeriodicTCs_PeriodicTC();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTC <em>GSS Scenario Periodic TC</em>}'.
@@ -4551,37 +4577,69 @@ public interface scenarioPackage extends EPackage {
 	EAttribute getGSSScenarioGlobalVar_Initial_value();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReferenceField <em>Reference Field</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReference <em>Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Reference Field</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReferenceField()
+	 * @return the meta object for the containment reference '<em>Reference</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReference()
 	 * @see #getGSSScenarioGlobalVar()
 	 * @generated
 	 */
-	EReference getGSSScenarioGlobalVar_ReferenceField();
+	EReference getGSSScenarioGlobalVar_Reference();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReferencePeriodicTC <em>Reference Periodic TC</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReference <em>GSS Scenario Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Reference Periodic TC</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReferencePeriodicTC()
-	 * @see #getGSSScenarioGlobalVar()
+	 * @return the meta object for class '<em>GSS Scenario Reference</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReference
 	 * @generated
 	 */
-	EReference getGSSScenarioGlobalVar_ReferencePeriodicTC();
+	EClass getGSSScenarioReference();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReferenceSpecialPacket <em>Reference Special Packet</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReference#getLevel <em>Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Reference Special Packet</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar#getReferenceSpecialPacket()
-	 * @see #getGSSScenarioGlobalVar()
+	 * @return the meta object for the attribute '<em>Level</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReference#getLevel()
+	 * @see #getGSSScenarioReference()
 	 * @generated
 	 */
-	EReference getGSSScenarioGlobalVar_ReferenceSpecialPacket();
+	EAttribute getGSSScenarioReference_Level();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReference#getFieldRef <em>Field Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Field Ref</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReference#getFieldRef()
+	 * @see #getGSSScenarioReference()
+	 * @generated
+	 */
+	EAttribute getGSSScenarioReference_FieldRef();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReference#getOffset <em>Offset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Offset</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReference#getOffset()
+	 * @see #getGSSScenarioReference()
+	 * @generated
+	 */
+	EAttribute getGSSScenarioReference_Offset();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReference#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Size</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReference#getSize()
+	 * @see #getGSSScenarioReference()
+	 * @generated
+	 */
+	EAttribute getGSSScenarioReference_Size();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferenceField <em>GSS Scenario Reference Field</em>}'.
@@ -4616,50 +4674,6 @@ public interface scenarioPackage extends EPackage {
 	EAttribute getGSSScenarioReferenceField_IfRef();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferenceField#getLevel <em>Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Level</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReferenceField#getLevel()
-	 * @see #getGSSScenarioReferenceField()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioReferenceField_Level();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferenceField#getFieldRef <em>Field Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Field Ref</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReferenceField#getFieldRef()
-	 * @see #getGSSScenarioReferenceField()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioReferenceField_FieldRef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferenceField#getOffset <em>Offset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Offset</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReferenceField#getOffset()
-	 * @see #getGSSScenarioReferenceField()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioReferenceField_Offset();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferenceField#getSize <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReferenceField#getSize()
-	 * @see #getGSSScenarioReferenceField()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioReferenceField_Size();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferencePeriodicTC <em>GSS Scenario Reference Periodic TC</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4679,50 +4693,6 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGSSScenarioReferencePeriodicTC_IdRef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferencePeriodicTC#getLevel <em>Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Level</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReferencePeriodicTC#getLevel()
-	 * @see #getGSSScenarioReferencePeriodicTC()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioReferencePeriodicTC_Level();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferencePeriodicTC#getFieldRef <em>Field Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Field Ref</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReferencePeriodicTC#getFieldRef()
-	 * @see #getGSSScenarioReferencePeriodicTC()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioReferencePeriodicTC_FieldRef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferencePeriodicTC#getOffset <em>Offset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Offset</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReferencePeriodicTC#getOffset()
-	 * @see #getGSSScenarioReferencePeriodicTC()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioReferencePeriodicTC_Offset();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferencePeriodicTC#getSize <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReferencePeriodicTC#getSize()
-	 * @see #getGSSScenarioReferencePeriodicTC()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioReferencePeriodicTC_Size();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferenceSpecialPacket <em>GSS Scenario Reference Special Packet</em>}'.
@@ -4746,50 +4716,6 @@ public interface scenarioPackage extends EPackage {
 	EReference getGSSScenarioReferenceSpecialPacket_IdRef();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferenceSpecialPacket#getLevel <em>Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Level</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReferenceSpecialPacket#getLevel()
-	 * @see #getGSSScenarioReferenceSpecialPacket()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioReferenceSpecialPacket_Level();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferenceSpecialPacket#getFieldRef <em>Field Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Field Ref</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReferenceSpecialPacket#getFieldRef()
-	 * @see #getGSSScenarioReferenceSpecialPacket()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioReferenceSpecialPacket_FieldRef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferenceSpecialPacket#getOffset <em>Offset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Offset</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReferenceSpecialPacket#getOffset()
-	 * @see #getGSSScenarioReferenceSpecialPacket()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioReferenceSpecialPacket_Offset();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferenceSpecialPacket#getSize <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioReferenceSpecialPacket#getSize()
-	 * @see #getGSSScenarioReferenceSpecialPacket()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioReferenceSpecialPacket_Size();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitors <em>GSS Scenario Monitors</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4811,48 +4737,47 @@ public interface scenarioPackage extends EPackage {
 	EReference getGSSScenarioMonitors_ChartsFile();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getPlot <em>Plot</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getMonitor <em>Monitor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Plot</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getPlot()
+	 * @return the meta object for the containment reference list '<em>Monitor</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getMonitor()
 	 * @see #getGSSScenarioMonitors()
 	 * @generated
 	 */
-	EReference getGSSScenarioMonitors_Plot();
+	EReference getGSSScenarioMonitors_Monitor();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getAlarmMsg <em>Alarm Msg</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitor <em>GSS Scenario Monitor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Alarm Msg</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getAlarmMsg()
-	 * @see #getGSSScenarioMonitors()
+	 * @return the meta object for class '<em>GSS Scenario Monitor</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioMonitor
 	 * @generated
 	 */
-	EReference getGSSScenarioMonitors_AlarmMsg();
+	EClass getGSSScenarioMonitor();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getModify <em>Modify</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitor#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Modify</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getModify()
-	 * @see #getGSSScenarioMonitors()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioMonitor#getName()
+	 * @see #getGSSScenarioMonitor()
 	 * @generated
 	 */
-	EReference getGSSScenarioMonitors_Modify();
+	EAttribute getGSSScenarioMonitor_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getAlarmVal <em>Alarm Val</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitor#getGV <em>GV</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Alarm Val</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioMonitors#getAlarmVal()
-	 * @see #getGSSScenarioMonitors()
+	 * @return the meta object for the containment reference '<em>GV</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioMonitor#getGV()
+	 * @see #getGSSScenarioMonitor()
 	 * @generated
 	 */
-	EReference getGSSScenarioMonitors_AlarmVal();
+	EReference getGSSScenarioMonitor_GV();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioPlot <em>GSS Scenario Plot</em>}'.
@@ -4863,17 +4788,6 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSScenarioPlot();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioPlot#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioPlot#getName()
-	 * @see #getGSSScenarioPlot()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioPlot_Name();
 
 	/**
 	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioPlot#getChartRef <em>Chart Ref</em>}'.
@@ -4887,28 +4801,6 @@ public interface scenarioPackage extends EPackage {
 	EReference getGSSScenarioPlot_ChartRef();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioPlot#getGVFiltered <em>GV Filtered</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>GV Filtered</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioPlot#getGVFiltered()
-	 * @see #getGSSScenarioPlot()
-	 * @generated
-	 */
-	EReference getGSSScenarioPlot_GVFiltered();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioPlot#getGVPeriodic <em>GV Periodic</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>GV Periodic</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioPlot#getGVPeriodic()
-	 * @see #getGSSScenarioPlot()
-	 * @generated
-	 */
-	EReference getGSSScenarioPlot_GVPeriodic();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmMsg <em>GSS Scenario Alarm Msg</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4917,17 +4809,6 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSScenarioAlarmMsg();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmMsg#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioAlarmMsg#getName()
-	 * @see #getGSSScenarioAlarmMsg()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioAlarmMsg_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmMsg#getType <em>Type</em>}'.
@@ -4952,28 +4833,6 @@ public interface scenarioPackage extends EPackage {
 	EAttribute getGSSScenarioAlarmMsg_Text();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmMsg#getGVFiltered <em>GV Filtered</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>GV Filtered</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioAlarmMsg#getGVFiltered()
-	 * @see #getGSSScenarioAlarmMsg()
-	 * @generated
-	 */
-	EReference getGSSScenarioAlarmMsg_GVFiltered();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmMsg#getGVPeriodic <em>GV Periodic</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>GV Periodic</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioAlarmMsg#getGVPeriodic()
-	 * @see #getGSSScenarioAlarmMsg()
-	 * @generated
-	 */
-	EReference getGSSScenarioAlarmMsg_GVPeriodic();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioModify <em>GSS Scenario Modify</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4982,17 +4841,6 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSScenarioModify();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioModify#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioModify#getName()
-	 * @see #getGSSScenarioModify()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioModify_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioModify#getType <em>Type</em>}'.
@@ -5017,28 +4865,6 @@ public interface scenarioPackage extends EPackage {
 	EAttribute getGSSScenarioModify_Value();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioModify#getGVFiltered <em>GV Filtered</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>GV Filtered</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioModify#getGVFiltered()
-	 * @see #getGSSScenarioModify()
-	 * @generated
-	 */
-	EReference getGSSScenarioModify_GVFiltered();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioModify#getGVPeriodic <em>GV Periodic</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>GV Periodic</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioModify#getGVPeriodic()
-	 * @see #getGSSScenarioModify()
-	 * @generated
-	 */
-	EReference getGSSScenarioModify_GVPeriodic();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmVal <em>GSS Scenario Alarm Val</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5047,17 +4873,6 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSScenarioAlarmVal();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmVal#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioAlarmVal#getName()
-	 * @see #getGSSScenarioAlarmVal()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioAlarmVal_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmVal#getType <em>Type</em>}'.
@@ -5071,26 +4886,25 @@ public interface scenarioPackage extends EPackage {
 	EAttribute getGSSScenarioAlarmVal_Type();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmVal#getGVFiltered <em>GV Filtered</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGV <em>GSS Scenario GV</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>GV Filtered</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioAlarmVal#getGVFiltered()
-	 * @see #getGSSScenarioAlarmVal()
+	 * @return the meta object for class '<em>GSS Scenario GV</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGV
 	 * @generated
 	 */
-	EReference getGSSScenarioAlarmVal_GVFiltered();
+	EClass getGSSScenarioGV();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmVal#getGVPeriodic <em>GV Periodic</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGV#getGlobalVarRef <em>Global Var Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>GV Periodic</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioAlarmVal#getGVPeriodic()
-	 * @see #getGSSScenarioAlarmVal()
+	 * @return the meta object for the reference '<em>Global Var Ref</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGV#getGlobalVarRef()
+	 * @see #getGSSScenarioGV()
 	 * @generated
 	 */
-	EReference getGSSScenarioAlarmVal_GVPeriodic();
+	EReference getGSSScenarioGV_GlobalVarRef();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGVFiltered <em>GSS Scenario GV Filtered</em>}'.
@@ -5101,17 +4915,6 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSScenarioGVFiltered();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGVFiltered#getGlobalVarRef <em>Global Var Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Global Var Ref</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGVFiltered#getGlobalVarRef()
-	 * @see #getGSSScenarioGVFiltered()
-	 * @generated
-	 */
-	EReference getGSSScenarioGVFiltered_GlobalVarRef();
 
 	/**
 	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGVFiltered#getFilter <em>Filter</em>}'.
@@ -5133,17 +4936,6 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSScenarioGVPeriodic();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGVPeriodic#getGlobalVarRef <em>Global Var Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Global Var Ref</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGVPeriodic#getGlobalVarRef()
-	 * @see #getGSSScenarioGVPeriodic()
-	 * @generated
-	 */
-	EReference getGSSScenarioGVPeriodic_GlobalVarRef();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGVPeriodic#getPeriod_value <em>Period value</em>}'.
@@ -6251,28 +6043,12 @@ public interface scenarioPackage extends EPackage {
 		EClass GSS_SCENARIO_PERIODIC_TCS = eINSTANCE.getGSSScenarioPeriodicTCs();
 
 		/**
-		 * The meta object literal for the '<em><b>Periodic TC level 2</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Periodic TC</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_2 = eINSTANCE.getGSSScenarioPeriodicTCs_PeriodicTC_level_2();
-
-		/**
-		 * The meta object literal for the '<em><b>Periodic TC level 1</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_1 = eINSTANCE.getGSSScenarioPeriodicTCs_PeriodicTC_level_1();
-
-		/**
-		 * The meta object literal for the '<em><b>Periodic TC level 0</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_0 = eINSTANCE.getGSSScenarioPeriodicTCs_PeriodicTC_level_0();
+		EReference GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC = eINSTANCE.getGSSScenarioPeriodicTCs_PeriodicTC();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioPeriodicTCImpl <em>GSS Scenario Periodic TC</em>}' class.
@@ -6503,28 +6279,54 @@ public interface scenarioPackage extends EPackage {
 		EAttribute GSS_SCENARIO_GLOBAL_VAR__INITIAL_VALUE = eINSTANCE.getGSSScenarioGlobalVar_Initial_value();
 
 		/**
-		 * The meta object literal for the '<em><b>Reference Field</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Reference</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_SCENARIO_GLOBAL_VAR__REFERENCE_FIELD = eINSTANCE.getGSSScenarioGlobalVar_ReferenceField();
+		EReference GSS_SCENARIO_GLOBAL_VAR__REFERENCE = eINSTANCE.getGSSScenarioGlobalVar_Reference();
 
 		/**
-		 * The meta object literal for the '<em><b>Reference Periodic TC</b></em>' containment reference feature.
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceImpl <em>GSS Scenario Reference</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceImpl
+		 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioReference()
 		 * @generated
 		 */
-		EReference GSS_SCENARIO_GLOBAL_VAR__REFERENCE_PERIODIC_TC = eINSTANCE.getGSSScenarioGlobalVar_ReferencePeriodicTC();
+		EClass GSS_SCENARIO_REFERENCE = eINSTANCE.getGSSScenarioReference();
 
 		/**
-		 * The meta object literal for the '<em><b>Reference Special Packet</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_SCENARIO_GLOBAL_VAR__REFERENCE_SPECIAL_PACKET = eINSTANCE.getGSSScenarioGlobalVar_ReferenceSpecialPacket();
+		EAttribute GSS_SCENARIO_REFERENCE__LEVEL = eINSTANCE.getGSSScenarioReference_Level();
+
+		/**
+		 * The meta object literal for the '<em><b>Field Ref</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_SCENARIO_REFERENCE__FIELD_REF = eINSTANCE.getGSSScenarioReference_FieldRef();
+
+		/**
+		 * The meta object literal for the '<em><b>Offset</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_SCENARIO_REFERENCE__OFFSET = eINSTANCE.getGSSScenarioReference_Offset();
+
+		/**
+		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_SCENARIO_REFERENCE__SIZE = eINSTANCE.getGSSScenarioReference_Size();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceFieldImpl <em>GSS Scenario Reference Field</em>}' class.
@@ -6553,38 +6355,6 @@ public interface scenarioPackage extends EPackage {
 		EAttribute GSS_SCENARIO_REFERENCE_FIELD__IF_REF = eINSTANCE.getGSSScenarioReferenceField_IfRef();
 
 		/**
-		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_REFERENCE_FIELD__LEVEL = eINSTANCE.getGSSScenarioReferenceField_Level();
-
-		/**
-		 * The meta object literal for the '<em><b>Field Ref</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_REFERENCE_FIELD__FIELD_REF = eINSTANCE.getGSSScenarioReferenceField_FieldRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Offset</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_REFERENCE_FIELD__OFFSET = eINSTANCE.getGSSScenarioReferenceField_Offset();
-
-		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_REFERENCE_FIELD__SIZE = eINSTANCE.getGSSScenarioReferenceField_Size();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferencePeriodicTCImpl <em>GSS Scenario Reference Periodic TC</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6601,38 +6371,6 @@ public interface scenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GSS_SCENARIO_REFERENCE_PERIODIC_TC__ID_REF = eINSTANCE.getGSSScenarioReferencePeriodicTC_IdRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_REFERENCE_PERIODIC_TC__LEVEL = eINSTANCE.getGSSScenarioReferencePeriodicTC_Level();
-
-		/**
-		 * The meta object literal for the '<em><b>Field Ref</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_REFERENCE_PERIODIC_TC__FIELD_REF = eINSTANCE.getGSSScenarioReferencePeriodicTC_FieldRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Offset</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_REFERENCE_PERIODIC_TC__OFFSET = eINSTANCE.getGSSScenarioReferencePeriodicTC_Offset();
-
-		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_REFERENCE_PERIODIC_TC__SIZE = eINSTANCE.getGSSScenarioReferencePeriodicTC_Size();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioReferenceSpecialPacketImpl <em>GSS Scenario Reference Special Packet</em>}' class.
@@ -6653,38 +6391,6 @@ public interface scenarioPackage extends EPackage {
 		EReference GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__ID_REF = eINSTANCE.getGSSScenarioReferenceSpecialPacket_IdRef();
 
 		/**
-		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__LEVEL = eINSTANCE.getGSSScenarioReferenceSpecialPacket_Level();
-
-		/**
-		 * The meta object literal for the '<em><b>Field Ref</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__FIELD_REF = eINSTANCE.getGSSScenarioReferenceSpecialPacket_FieldRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Offset</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__OFFSET = eINSTANCE.getGSSScenarioReferenceSpecialPacket_Offset();
-
-		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_REFERENCE_SPECIAL_PACKET__SIZE = eINSTANCE.getGSSScenarioReferenceSpecialPacket_Size();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorsImpl <em>GSS Scenario Monitors</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6703,36 +6409,38 @@ public interface scenarioPackage extends EPackage {
 		EReference GSS_SCENARIO_MONITORS__CHARTS_FILE = eINSTANCE.getGSSScenarioMonitors_ChartsFile();
 
 		/**
-		 * The meta object literal for the '<em><b>Plot</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Monitor</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_SCENARIO_MONITORS__PLOT = eINSTANCE.getGSSScenarioMonitors_Plot();
+		EReference GSS_SCENARIO_MONITORS__MONITOR = eINSTANCE.getGSSScenarioMonitors_Monitor();
 
 		/**
-		 * The meta object literal for the '<em><b>Alarm Msg</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorImpl <em>GSS Scenario Monitor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorImpl
+		 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioMonitor()
 		 * @generated
 		 */
-		EReference GSS_SCENARIO_MONITORS__ALARM_MSG = eINSTANCE.getGSSScenarioMonitors_AlarmMsg();
+		EClass GSS_SCENARIO_MONITOR = eINSTANCE.getGSSScenarioMonitor();
 
 		/**
-		 * The meta object literal for the '<em><b>Modify</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_SCENARIO_MONITORS__MODIFY = eINSTANCE.getGSSScenarioMonitors_Modify();
+		EAttribute GSS_SCENARIO_MONITOR__NAME = eINSTANCE.getGSSScenarioMonitor_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Alarm Val</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>GV</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_SCENARIO_MONITORS__ALARM_VAL = eINSTANCE.getGSSScenarioMonitors_AlarmVal();
+		EReference GSS_SCENARIO_MONITOR__GV = eINSTANCE.getGSSScenarioMonitor_GV();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioPlotImpl <em>GSS Scenario Plot</em>}' class.
@@ -6745,36 +6453,12 @@ public interface scenarioPackage extends EPackage {
 		EClass GSS_SCENARIO_PLOT = eINSTANCE.getGSSScenarioPlot();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_PLOT__NAME = eINSTANCE.getGSSScenarioPlot_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Chart Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference GSS_SCENARIO_PLOT__CHART_REF = eINSTANCE.getGSSScenarioPlot_ChartRef();
-
-		/**
-		 * The meta object literal for the '<em><b>GV Filtered</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_SCENARIO_PLOT__GV_FILTERED = eINSTANCE.getGSSScenarioPlot_GVFiltered();
-
-		/**
-		 * The meta object literal for the '<em><b>GV Periodic</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_SCENARIO_PLOT__GV_PERIODIC = eINSTANCE.getGSSScenarioPlot_GVPeriodic();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioAlarmMsgImpl <em>GSS Scenario Alarm Msg</em>}' class.
@@ -6785,14 +6469,6 @@ public interface scenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_SCENARIO_ALARM_MSG = eINSTANCE.getGSSScenarioAlarmMsg();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_ALARM_MSG__NAME = eINSTANCE.getGSSScenarioAlarmMsg_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -6811,22 +6487,6 @@ public interface scenarioPackage extends EPackage {
 		EAttribute GSS_SCENARIO_ALARM_MSG__TEXT = eINSTANCE.getGSSScenarioAlarmMsg_Text();
 
 		/**
-		 * The meta object literal for the '<em><b>GV Filtered</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_SCENARIO_ALARM_MSG__GV_FILTERED = eINSTANCE.getGSSScenarioAlarmMsg_GVFiltered();
-
-		/**
-		 * The meta object literal for the '<em><b>GV Periodic</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_SCENARIO_ALARM_MSG__GV_PERIODIC = eINSTANCE.getGSSScenarioAlarmMsg_GVPeriodic();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioModifyImpl <em>GSS Scenario Modify</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6835,14 +6495,6 @@ public interface scenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_SCENARIO_MODIFY = eINSTANCE.getGSSScenarioModify();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_MODIFY__NAME = eINSTANCE.getGSSScenarioModify_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -6861,22 +6513,6 @@ public interface scenarioPackage extends EPackage {
 		EAttribute GSS_SCENARIO_MODIFY__VALUE = eINSTANCE.getGSSScenarioModify_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>GV Filtered</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_SCENARIO_MODIFY__GV_FILTERED = eINSTANCE.getGSSScenarioModify_GVFiltered();
-
-		/**
-		 * The meta object literal for the '<em><b>GV Periodic</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_SCENARIO_MODIFY__GV_PERIODIC = eINSTANCE.getGSSScenarioModify_GVPeriodic();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioAlarmValImpl <em>GSS Scenario Alarm Val</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6887,14 +6523,6 @@ public interface scenarioPackage extends EPackage {
 		EClass GSS_SCENARIO_ALARM_VAL = eINSTANCE.getGSSScenarioAlarmVal();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_ALARM_VAL__NAME = eINSTANCE.getGSSScenarioAlarmVal_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6903,20 +6531,22 @@ public interface scenarioPackage extends EPackage {
 		EAttribute GSS_SCENARIO_ALARM_VAL__TYPE = eINSTANCE.getGSSScenarioAlarmVal_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>GV Filtered</b></em>' containment reference feature.
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVImpl <em>GSS Scenario GV</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVImpl
+		 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGV()
 		 * @generated
 		 */
-		EReference GSS_SCENARIO_ALARM_VAL__GV_FILTERED = eINSTANCE.getGSSScenarioAlarmVal_GVFiltered();
+		EClass GSS_SCENARIO_GV = eINSTANCE.getGSSScenarioGV();
 
 		/**
-		 * The meta object literal for the '<em><b>GV Periodic</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Global Var Ref</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_SCENARIO_ALARM_VAL__GV_PERIODIC = eINSTANCE.getGSSScenarioAlarmVal_GVPeriodic();
+		EReference GSS_SCENARIO_GV__GLOBAL_VAR_REF = eINSTANCE.getGSSScenarioGV_GlobalVarRef();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVFilteredImpl <em>GSS Scenario GV Filtered</em>}' class.
@@ -6927,14 +6557,6 @@ public interface scenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_SCENARIO_GV_FILTERED = eINSTANCE.getGSSScenarioGVFiltered();
-
-		/**
-		 * The meta object literal for the '<em><b>Global Var Ref</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_SCENARIO_GV_FILTERED__GLOBAL_VAR_REF = eINSTANCE.getGSSScenarioGVFiltered_GlobalVarRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Filter</b></em>' reference feature.
@@ -6953,14 +6575,6 @@ public interface scenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_SCENARIO_GV_PERIODIC = eINSTANCE.getGSSScenarioGVPeriodic();
-
-		/**
-		 * The meta object literal for the '<em><b>Global Var Ref</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_SCENARIO_GV_PERIODIC__GLOBAL_VAR_REF = eINSTANCE.getGSSScenarioGVPeriodic_GlobalVarRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Period value</b></em>' attribute feature.

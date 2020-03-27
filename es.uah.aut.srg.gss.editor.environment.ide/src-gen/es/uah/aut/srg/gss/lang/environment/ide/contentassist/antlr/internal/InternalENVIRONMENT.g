@@ -807,6 +807,31 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleGSSScenarioPeriodicTC
+entryRuleGSSScenarioPeriodicTC
+:
+{ before(grammarAccess.getGSSScenarioPeriodicTCRule()); }
+	 ruleGSSScenarioPeriodicTC
+{ after(grammarAccess.getGSSScenarioPeriodicTCRule()); } 
+	 EOF 
+;
+
+// Rule GSSScenarioPeriodicTC
+ruleGSSScenarioPeriodicTC 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getGSSScenarioPeriodicTCAccess().getAlternatives()); }
+		(rule__GSSScenarioPeriodicTC__Alternatives)
+		{ after(grammarAccess.getGSSScenarioPeriodicTCAccess().getAlternatives()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Entry rule entryRuleGSSScenarioPeriodicTCLevel2
 entryRuleGSSScenarioPeriodicTCLevel2
 :
@@ -907,6 +932,31 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleGSSScenarioReference
+entryRuleGSSScenarioReference
+:
+{ before(grammarAccess.getGSSScenarioReferenceRule()); }
+	 ruleGSSScenarioReference
+{ after(grammarAccess.getGSSScenarioReferenceRule()); } 
+	 EOF 
+;
+
+// Rule GSSScenarioReference
+ruleGSSScenarioReference 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getGSSScenarioReferenceAccess().getAlternatives()); }
+		(rule__GSSScenarioReference__Alternatives)
+		{ after(grammarAccess.getGSSScenarioReferenceAccess().getAlternatives()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Entry rule entryRuleGSSScenarioReferenceField
 entryRuleGSSScenarioReferenceField
 :
@@ -976,6 +1026,31 @@ ruleGSSScenarioReferenceSpecialPacket
 		{ before(grammarAccess.getGSSScenarioReferenceSpecialPacketAccess().getGroup()); }
 		(rule__GSSScenarioReferenceSpecialPacket__Group__0)
 		{ after(grammarAccess.getGSSScenarioReferenceSpecialPacketAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleGSSScenarioMonitor
+entryRuleGSSScenarioMonitor
+:
+{ before(grammarAccess.getGSSScenarioMonitorRule()); }
+	 ruleGSSScenarioMonitor
+{ after(grammarAccess.getGSSScenarioMonitorRule()); } 
+	 EOF 
+;
+
+// Rule GSSScenarioMonitor
+ruleGSSScenarioMonitor 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getGSSScenarioMonitorAccess().getAlternatives()); }
+		(rule__GSSScenarioMonitor__Alternatives)
+		{ after(grammarAccess.getGSSScenarioMonitorAccess().getAlternatives()); }
 	)
 ;
 finally {
@@ -1076,6 +1151,31 @@ ruleGSSScenarioAlarmVal
 		{ before(grammarAccess.getGSSScenarioAlarmValAccess().getGroup()); }
 		(rule__GSSScenarioAlarmVal__Group__0)
 		{ after(grammarAccess.getGSSScenarioAlarmValAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleGSSScenarioGV
+entryRuleGSSScenarioGV
+:
+{ before(grammarAccess.getGSSScenarioGVRule()); }
+	 ruleGSSScenarioGV
+{ after(grammarAccess.getGSSScenarioGVRule()); } 
+	 EOF 
+;
+
+// Rule GSSScenarioGV
+ruleGSSScenarioGV 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getGSSScenarioGVAccess().getAlternatives()); }
+		(rule__GSSScenarioGV__Alternatives)
+		{ after(grammarAccess.getGSSScenarioGVAccess().getAlternatives()); }
 	)
 ;
 finally {
@@ -1467,66 +1567,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSScenarioPeriodicTCs__Alternatives_3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_2Assignment_3_0()); }
-		(rule__GSSScenarioPeriodicTCs__PeriodicTC_level_2Assignment_3_0)
-		{ after(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_2Assignment_3_0()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_1Assignment_3_1()); }
-		(rule__GSSScenarioPeriodicTCs__PeriodicTC_level_1Assignment_3_1)
-		{ after(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_1Assignment_3_1()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_0Assignment_3_2()); }
-		(rule__GSSScenarioPeriodicTCs__PeriodicTC_level_0Assignment_3_2)
-		{ after(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_0Assignment_3_2()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSScenarioMonitors__Alternatives_3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSScenarioMonitorsAccess().getPlotAssignment_3_0()); }
-		(rule__GSSScenarioMonitors__PlotAssignment_3_0)
-		{ after(grammarAccess.getGSSScenarioMonitorsAccess().getPlotAssignment_3_0()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSScenarioMonitorsAccess().getAlarmMsgAssignment_3_1()); }
-		(rule__GSSScenarioMonitors__AlarmMsgAssignment_3_1)
-		{ after(grammarAccess.getGSSScenarioMonitorsAccess().getAlarmMsgAssignment_3_1()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSScenarioMonitorsAccess().getModifyAssignment_3_2()); }
-		(rule__GSSScenarioMonitors__ModifyAssignment_3_2)
-		{ after(grammarAccess.getGSSScenarioMonitorsAccess().getModifyAssignment_3_2()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSScenarioMonitorsAccess().getAlarmValAssignment_3_3()); }
-		(rule__GSSScenarioMonitors__AlarmValAssignment_3_3)
-		{ after(grammarAccess.getGSSScenarioMonitorsAccess().getAlarmValAssignment_3_3()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 rule__GSSScenarioInterface__Alternatives_23
 	@init {
 		int stackSize = keepStackSize();
@@ -1575,111 +1615,108 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSScenarioGlobalVar__Alternatives_18
+rule__GSSScenarioPeriodicTC__Alternatives
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceFieldAssignment_18_0()); }
-		(rule__GSSScenarioGlobalVar__ReferenceFieldAssignment_18_0)
-		{ after(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceFieldAssignment_18_0()); }
+		{ before(grammarAccess.getGSSScenarioPeriodicTCAccess().getGSSScenarioPeriodicTCLevel2ParserRuleCall_0()); }
+		ruleGSSScenarioPeriodicTCLevel2
+		{ after(grammarAccess.getGSSScenarioPeriodicTCAccess().getGSSScenarioPeriodicTCLevel2ParserRuleCall_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSScenarioGlobalVarAccess().getReferencePeriodicTCAssignment_18_1()); }
-		(rule__GSSScenarioGlobalVar__ReferencePeriodicTCAssignment_18_1)
-		{ after(grammarAccess.getGSSScenarioGlobalVarAccess().getReferencePeriodicTCAssignment_18_1()); }
+		{ before(grammarAccess.getGSSScenarioPeriodicTCAccess().getGSSScenarioPeriodicTCLevel1ParserRuleCall_1()); }
+		ruleGSSScenarioPeriodicTCLevel1
+		{ after(grammarAccess.getGSSScenarioPeriodicTCAccess().getGSSScenarioPeriodicTCLevel1ParserRuleCall_1()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceSpecialPacketAssignment_18_2()); }
-		(rule__GSSScenarioGlobalVar__ReferenceSpecialPacketAssignment_18_2)
-		{ after(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceSpecialPacketAssignment_18_2()); }
+		{ before(grammarAccess.getGSSScenarioPeriodicTCAccess().getGSSScenarioPeriodicTCLevel0ParserRuleCall_2()); }
+		ruleGSSScenarioPeriodicTCLevel0
+		{ after(grammarAccess.getGSSScenarioPeriodicTCAccess().getGSSScenarioPeriodicTCLevel0ParserRuleCall_2()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSScenarioPlot__Alternatives_10
+rule__GSSScenarioReference__Alternatives
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSScenarioPlotAccess().getGVFilteredAssignment_10_0()); }
-		(rule__GSSScenarioPlot__GVFilteredAssignment_10_0)
-		{ after(grammarAccess.getGSSScenarioPlotAccess().getGVFilteredAssignment_10_0()); }
+		{ before(grammarAccess.getGSSScenarioReferenceAccess().getGSSScenarioReferenceFieldParserRuleCall_0()); }
+		ruleGSSScenarioReferenceField
+		{ after(grammarAccess.getGSSScenarioReferenceAccess().getGSSScenarioReferenceFieldParserRuleCall_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSScenarioPlotAccess().getGVPeriodicAssignment_10_1()); }
-		(rule__GSSScenarioPlot__GVPeriodicAssignment_10_1)
-		{ after(grammarAccess.getGSSScenarioPlotAccess().getGVPeriodicAssignment_10_1()); }
+		{ before(grammarAccess.getGSSScenarioReferenceAccess().getGSSScenarioReferencePeriodicTCParserRuleCall_1()); }
+		ruleGSSScenarioReferencePeriodicTC
+		{ after(grammarAccess.getGSSScenarioReferenceAccess().getGSSScenarioReferencePeriodicTCParserRuleCall_1()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSScenarioReferenceAccess().getGSSScenarioReferenceSpecialPacketParserRuleCall_2()); }
+		ruleGSSScenarioReferenceSpecialPacket
+		{ after(grammarAccess.getGSSScenarioReferenceAccess().getGSSScenarioReferenceSpecialPacketParserRuleCall_2()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSScenarioAlarmMsg__Alternatives_14
+rule__GSSScenarioMonitor__Alternatives
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVFilteredAssignment_14_0()); }
-		(rule__GSSScenarioAlarmMsg__GVFilteredAssignment_14_0)
-		{ after(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVFilteredAssignment_14_0()); }
+		{ before(grammarAccess.getGSSScenarioMonitorAccess().getGSSScenarioPlotParserRuleCall_0()); }
+		ruleGSSScenarioPlot
+		{ after(grammarAccess.getGSSScenarioMonitorAccess().getGSSScenarioPlotParserRuleCall_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVPeriodicAssignment_14_1()); }
-		(rule__GSSScenarioAlarmMsg__GVPeriodicAssignment_14_1)
-		{ after(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVPeriodicAssignment_14_1()); }
+		{ before(grammarAccess.getGSSScenarioMonitorAccess().getGSSScenarioAlarmMsgParserRuleCall_1()); }
+		ruleGSSScenarioAlarmMsg
+		{ after(grammarAccess.getGSSScenarioMonitorAccess().getGSSScenarioAlarmMsgParserRuleCall_1()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSScenarioMonitorAccess().getGSSScenarioModifyParserRuleCall_2()); }
+		ruleGSSScenarioModify
+		{ after(grammarAccess.getGSSScenarioMonitorAccess().getGSSScenarioModifyParserRuleCall_2()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSScenarioMonitorAccess().getGSSScenarioAlarmValParserRuleCall_3()); }
+		ruleGSSScenarioAlarmVal
+		{ after(grammarAccess.getGSSScenarioMonitorAccess().getGSSScenarioAlarmValParserRuleCall_3()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSScenarioModify__Alternatives_14
+rule__GSSScenarioGV__Alternatives
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSScenarioModifyAccess().getGVFilteredAssignment_14_0()); }
-		(rule__GSSScenarioModify__GVFilteredAssignment_14_0)
-		{ after(grammarAccess.getGSSScenarioModifyAccess().getGVFilteredAssignment_14_0()); }
+		{ before(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVFilteredParserRuleCall_0()); }
+		ruleGSSScenarioGVFiltered
+		{ after(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVFilteredParserRuleCall_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSScenarioModifyAccess().getGVPeriodicAssignment_14_1()); }
-		(rule__GSSScenarioModify__GVPeriodicAssignment_14_1)
-		{ after(grammarAccess.getGSSScenarioModifyAccess().getGVPeriodicAssignment_14_1()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSScenarioAlarmVal__Alternatives_10
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSScenarioAlarmValAccess().getGVFilteredAssignment_10_0()); }
-		(rule__GSSScenarioAlarmVal__GVFilteredAssignment_10_0)
-		{ after(grammarAccess.getGSSScenarioAlarmValAccess().getGVFilteredAssignment_10_0()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSScenarioAlarmValAccess().getGVPeriodicAssignment_10_1()); }
-		(rule__GSSScenarioAlarmVal__GVPeriodicAssignment_10_1)
-		{ after(grammarAccess.getGSSScenarioAlarmValAccess().getGVPeriodicAssignment_10_1()); }
+		{ before(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVPeriodicParserRuleCall_1()); }
+		ruleGSSScenarioGVPeriodic
+		{ after(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVPeriodicParserRuleCall_1()); }
 	)
 ;
 finally {
@@ -3761,9 +3798,9 @@ rule__GSSScenarioPeriodicTCs__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSScenarioPeriodicTCsAccess().getAlternatives_3()); }
-	(rule__GSSScenarioPeriodicTCs__Alternatives_3)*
-	{ after(grammarAccess.getGSSScenarioPeriodicTCsAccess().getAlternatives_3()); }
+	{ before(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTCAssignment_3()); }
+	(rule__GSSScenarioPeriodicTCs__PeriodicTCAssignment_3)*
+	{ after(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTCAssignment_3()); }
 )
 ;
 finally {
@@ -4066,14 +4103,14 @@ rule__GSSScenarioMonitors__Group__3__Impl
 :
 (
 	(
-		{ before(grammarAccess.getGSSScenarioMonitorsAccess().getAlternatives_3()); }
-		(rule__GSSScenarioMonitors__Alternatives_3)
-		{ after(grammarAccess.getGSSScenarioMonitorsAccess().getAlternatives_3()); }
+		{ before(grammarAccess.getGSSScenarioMonitorsAccess().getMonitorAssignment_3()); }
+		(rule__GSSScenarioMonitors__MonitorAssignment_3)
+		{ after(grammarAccess.getGSSScenarioMonitorsAccess().getMonitorAssignment_3()); }
 	)
 	(
-		{ before(grammarAccess.getGSSScenarioMonitorsAccess().getAlternatives_3()); }
-		(rule__GSSScenarioMonitors__Alternatives_3)*
-		{ after(grammarAccess.getGSSScenarioMonitorsAccess().getAlternatives_3()); }
+		{ before(grammarAccess.getGSSScenarioMonitorsAccess().getMonitorAssignment_3()); }
+		(rule__GSSScenarioMonitors__MonitorAssignment_3)*
+		{ after(grammarAccess.getGSSScenarioMonitorsAccess().getMonitorAssignment_3()); }
 	)
 )
 ;
@@ -18592,9 +18629,9 @@ rule__GSSScenarioGlobalVar__Group__18__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSScenarioGlobalVarAccess().getAlternatives_18()); }
-	(rule__GSSScenarioGlobalVar__Alternatives_18)
-	{ after(grammarAccess.getGSSScenarioGlobalVarAccess().getAlternatives_18()); }
+	{ before(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceAssignment_18()); }
+	(rule__GSSScenarioGlobalVar__ReferenceAssignment_18)
+	{ after(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceAssignment_18()); }
 )
 ;
 finally {
@@ -20995,9 +21032,9 @@ rule__GSSScenarioPlot__Group__10__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSScenarioPlotAccess().getAlternatives_10()); }
-	(rule__GSSScenarioPlot__Alternatives_10)
-	{ after(grammarAccess.getGSSScenarioPlotAccess().getAlternatives_10()); }
+	{ before(grammarAccess.getGSSScenarioPlotAccess().getGVAssignment_10()); }
+	(rule__GSSScenarioPlot__GVAssignment_10)
+	{ after(grammarAccess.getGSSScenarioPlotAccess().getGVAssignment_10()); }
 )
 ;
 finally {
@@ -21454,9 +21491,9 @@ rule__GSSScenarioAlarmMsg__Group__14__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSScenarioAlarmMsgAccess().getAlternatives_14()); }
-	(rule__GSSScenarioAlarmMsg__Alternatives_14)
-	{ after(grammarAccess.getGSSScenarioAlarmMsgAccess().getAlternatives_14()); }
+	{ before(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVAssignment_14()); }
+	(rule__GSSScenarioAlarmMsg__GVAssignment_14)
+	{ after(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVAssignment_14()); }
 )
 ;
 finally {
@@ -21913,9 +21950,9 @@ rule__GSSScenarioModify__Group__14__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSScenarioModifyAccess().getAlternatives_14()); }
-	(rule__GSSScenarioModify__Alternatives_14)
-	{ after(grammarAccess.getGSSScenarioModifyAccess().getAlternatives_14()); }
+	{ before(grammarAccess.getGSSScenarioModifyAccess().getGVAssignment_14()); }
+	(rule__GSSScenarioModify__GVAssignment_14)
+	{ after(grammarAccess.getGSSScenarioModifyAccess().getGVAssignment_14()); }
 )
 ;
 finally {
@@ -22264,9 +22301,9 @@ rule__GSSScenarioAlarmVal__Group__10__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSScenarioAlarmValAccess().getAlternatives_10()); }
-	(rule__GSSScenarioAlarmVal__Alternatives_10)
-	{ after(grammarAccess.getGSSScenarioAlarmValAccess().getAlternatives_10()); }
+	{ before(grammarAccess.getGSSScenarioAlarmValAccess().getGVAssignment_10()); }
+	(rule__GSSScenarioAlarmVal__GVAssignment_10)
+	{ after(grammarAccess.getGSSScenarioAlarmValAccess().getGVAssignment_10()); }
 )
 ;
 finally {
@@ -24698,45 +24735,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSScenarioPeriodicTCs__PeriodicTC_level_2Assignment_3_0
+rule__GSSScenarioPeriodicTCs__PeriodicTCAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_2GSSScenarioPeriodicTCLevel2ParserRuleCall_3_0_0()); }
-		ruleGSSScenarioPeriodicTCLevel2
-		{ after(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_2GSSScenarioPeriodicTCLevel2ParserRuleCall_3_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSScenarioPeriodicTCs__PeriodicTC_level_1Assignment_3_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_1GSSScenarioPeriodicTCLevel1ParserRuleCall_3_1_0()); }
-		ruleGSSScenarioPeriodicTCLevel1
-		{ after(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_1GSSScenarioPeriodicTCLevel1ParserRuleCall_3_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSScenarioPeriodicTCs__PeriodicTC_level_0Assignment_3_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_0GSSScenarioPeriodicTCLevel0ParserRuleCall_3_2_0()); }
-		ruleGSSScenarioPeriodicTCLevel0
-		{ after(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTC_level_0GSSScenarioPeriodicTCLevel0ParserRuleCall_3_2_0()); }
+		{ before(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTCGSSScenarioPeriodicTCParserRuleCall_3_0()); }
+		ruleGSSScenarioPeriodicTC
+		{ after(grammarAccess.getGSSScenarioPeriodicTCsAccess().getPeriodicTCGSSScenarioPeriodicTCParserRuleCall_3_0()); }
 	)
 ;
 finally {
@@ -24777,60 +24784,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSScenarioMonitors__PlotAssignment_3_0
+rule__GSSScenarioMonitors__MonitorAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSScenarioMonitorsAccess().getPlotGSSScenarioPlotParserRuleCall_3_0_0()); }
-		ruleGSSScenarioPlot
-		{ after(grammarAccess.getGSSScenarioMonitorsAccess().getPlotGSSScenarioPlotParserRuleCall_3_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSScenarioMonitors__AlarmMsgAssignment_3_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSScenarioMonitorsAccess().getAlarmMsgGSSScenarioAlarmMsgParserRuleCall_3_1_0()); }
-		ruleGSSScenarioAlarmMsg
-		{ after(grammarAccess.getGSSScenarioMonitorsAccess().getAlarmMsgGSSScenarioAlarmMsgParserRuleCall_3_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSScenarioMonitors__ModifyAssignment_3_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSScenarioMonitorsAccess().getModifyGSSScenarioModifyParserRuleCall_3_2_0()); }
-		ruleGSSScenarioModify
-		{ after(grammarAccess.getGSSScenarioMonitorsAccess().getModifyGSSScenarioModifyParserRuleCall_3_2_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSScenarioMonitors__AlarmValAssignment_3_3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSScenarioMonitorsAccess().getAlarmValGSSScenarioAlarmValParserRuleCall_3_3_0()); }
-		ruleGSSScenarioAlarmVal
-		{ after(grammarAccess.getGSSScenarioMonitorsAccess().getAlarmValGSSScenarioAlarmValParserRuleCall_3_3_0()); }
+		{ before(grammarAccess.getGSSScenarioMonitorsAccess().getMonitorGSSScenarioMonitorParserRuleCall_3_0()); }
+		ruleGSSScenarioMonitor
+		{ after(grammarAccess.getGSSScenarioMonitorsAccess().getMonitorGSSScenarioMonitorParserRuleCall_3_0()); }
 	)
 ;
 finally {
@@ -26682,45 +26644,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSScenarioGlobalVar__ReferenceFieldAssignment_18_0
+rule__GSSScenarioGlobalVar__ReferenceAssignment_18
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceFieldGSSScenarioReferenceFieldParserRuleCall_18_0_0()); }
-		ruleGSSScenarioReferenceField
-		{ after(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceFieldGSSScenarioReferenceFieldParserRuleCall_18_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSScenarioGlobalVar__ReferencePeriodicTCAssignment_18_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSScenarioGlobalVarAccess().getReferencePeriodicTCGSSScenarioReferencePeriodicTCParserRuleCall_18_1_0()); }
-		ruleGSSScenarioReferencePeriodicTC
-		{ after(grammarAccess.getGSSScenarioGlobalVarAccess().getReferencePeriodicTCGSSScenarioReferencePeriodicTCParserRuleCall_18_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSScenarioGlobalVar__ReferenceSpecialPacketAssignment_18_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceSpecialPacketGSSScenarioReferenceSpecialPacketParserRuleCall_18_2_0()); }
-		ruleGSSScenarioReferenceSpecialPacket
-		{ after(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceSpecialPacketGSSScenarioReferenceSpecialPacketParserRuleCall_18_2_0()); }
+		{ before(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceGSSScenarioReferenceParserRuleCall_18_0()); }
+		ruleGSSScenarioReference
+		{ after(grammarAccess.getGSSScenarioGlobalVarAccess().getReferenceGSSScenarioReferenceParserRuleCall_18_0()); }
 	)
 ;
 finally {
@@ -27009,30 +26941,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSScenarioPlot__GVFilteredAssignment_10_0
+rule__GSSScenarioPlot__GVAssignment_10
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSScenarioPlotAccess().getGVFilteredGSSScenarioGVFilteredParserRuleCall_10_0_0()); }
-		ruleGSSScenarioGVFiltered
-		{ after(grammarAccess.getGSSScenarioPlotAccess().getGVFilteredGSSScenarioGVFilteredParserRuleCall_10_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSScenarioPlot__GVPeriodicAssignment_10_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSScenarioPlotAccess().getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_10_1_0()); }
-		ruleGSSScenarioGVPeriodic
-		{ after(grammarAccess.getGSSScenarioPlotAccess().getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_10_1_0()); }
+		{ before(grammarAccess.getGSSScenarioPlotAccess().getGVGSSScenarioGVParserRuleCall_10_0()); }
+		ruleGSSScenarioGV
+		{ after(grammarAccess.getGSSScenarioPlotAccess().getGVGSSScenarioGVParserRuleCall_10_0()); }
 	)
 ;
 finally {
@@ -27084,30 +27001,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSScenarioAlarmMsg__GVFilteredAssignment_14_0
+rule__GSSScenarioAlarmMsg__GVAssignment_14
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVFilteredGSSScenarioGVFilteredParserRuleCall_14_0_0()); }
-		ruleGSSScenarioGVFiltered
-		{ after(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVFilteredGSSScenarioGVFilteredParserRuleCall_14_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSScenarioAlarmMsg__GVPeriodicAssignment_14_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_14_1_0()); }
-		ruleGSSScenarioGVPeriodic
-		{ after(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_14_1_0()); }
+		{ before(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVGSSScenarioGVParserRuleCall_14_0()); }
+		ruleGSSScenarioGV
+		{ after(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVGSSScenarioGVParserRuleCall_14_0()); }
 	)
 ;
 finally {
@@ -27159,30 +27061,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSScenarioModify__GVFilteredAssignment_14_0
+rule__GSSScenarioModify__GVAssignment_14
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSScenarioModifyAccess().getGVFilteredGSSScenarioGVFilteredParserRuleCall_14_0_0()); }
-		ruleGSSScenarioGVFiltered
-		{ after(grammarAccess.getGSSScenarioModifyAccess().getGVFilteredGSSScenarioGVFilteredParserRuleCall_14_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSScenarioModify__GVPeriodicAssignment_14_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSScenarioModifyAccess().getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_14_1_0()); }
-		ruleGSSScenarioGVPeriodic
-		{ after(grammarAccess.getGSSScenarioModifyAccess().getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_14_1_0()); }
+		{ before(grammarAccess.getGSSScenarioModifyAccess().getGVGSSScenarioGVParserRuleCall_14_0()); }
+		ruleGSSScenarioGV
+		{ after(grammarAccess.getGSSScenarioModifyAccess().getGVGSSScenarioGVParserRuleCall_14_0()); }
 	)
 ;
 finally {
@@ -27219,30 +27106,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSScenarioAlarmVal__GVFilteredAssignment_10_0
+rule__GSSScenarioAlarmVal__GVAssignment_10
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSScenarioAlarmValAccess().getGVFilteredGSSScenarioGVFilteredParserRuleCall_10_0_0()); }
-		ruleGSSScenarioGVFiltered
-		{ after(grammarAccess.getGSSScenarioAlarmValAccess().getGVFilteredGSSScenarioGVFilteredParserRuleCall_10_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSScenarioAlarmVal__GVPeriodicAssignment_10_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSScenarioAlarmValAccess().getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_10_1_0()); }
-		ruleGSSScenarioGVPeriodic
-		{ after(grammarAccess.getGSSScenarioAlarmValAccess().getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_10_1_0()); }
+		{ before(grammarAccess.getGSSScenarioAlarmValAccess().getGVGSSScenarioGVParserRuleCall_10_0()); }
+		ruleGSSScenarioGV
+		{ after(grammarAccess.getGSSScenarioAlarmValAccess().getGVGSSScenarioGVParserRuleCall_10_0()); }
 	)
 ;
 finally {

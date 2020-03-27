@@ -25,7 +25,6 @@ import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.TerminalRule;
-import org.eclipse.xtext.UnorderedGroup;
 import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 import org.eclipse.xtext.service.AbstractElementFinder.AbstractEnumRuleElementFinder;
 import org.eclipse.xtext.service.AbstractElementFinder.AbstractGrammarElementFinder;
@@ -100,64 +99,45 @@ public class FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final UnorderedGroup cUnorderedGroup_3 = (UnorderedGroup)cGroup.eContents().get(3);
-		private final Group cGroup_3_0 = (Group)cUnorderedGroup_3.eContents().get(0);
-		private final Keyword cUriKeyword_3_0_0 = (Keyword)cGroup_3_0.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_0_1 = (Keyword)cGroup_3_0.eContents().get(1);
-		private final Assignment cUriAssignment_3_0_2 = (Assignment)cGroup_3_0.eContents().get(2);
-		private final RuleCall cUriQualifiedNameParserRuleCall_3_0_2_0 = (RuleCall)cUriAssignment_3_0_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_0_3 = (Keyword)cGroup_3_0.eContents().get(3);
-		private final Group cGroup_3_1 = (Group)cUnorderedGroup_3.eContents().get(1);
-		private final Keyword cVersionKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_1_1 = (Keyword)cGroup_3_1.eContents().get(1);
-		private final Assignment cVersionAssignment_3_1_2 = (Assignment)cGroup_3_1.eContents().get(2);
-		private final RuleCall cVersionVersionParserRuleCall_3_1_2_0 = (RuleCall)cVersionAssignment_3_1_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_1_3 = (Keyword)cGroup_3_1.eContents().get(3);
-		private final Group cGroup_3_2 = (Group)cUnorderedGroup_3.eContents().get(2);
-		private final Keyword cProtocolKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_2_1 = (Keyword)cGroup_3_2.eContents().get(1);
-		private final Assignment cProtocolAssignment_3_2_2 = (Assignment)cGroup_3_2.eContents().get(2);
-		private final RuleCall cProtocolIDTerminalRuleCall_3_2_2_0 = (RuleCall)cProtocolAssignment_3_2_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_2_3 = (Keyword)cGroup_3_2.eContents().get(3);
-		private final Group cGroup_3_3 = (Group)cUnorderedGroup_3.eContents().get(3);
-		private final Group cGroup_3_3_0 = (Group)cGroup_3_3.eContents().get(0);
-		private final Keyword cTypeKeyword_3_3_0_0 = (Keyword)cGroup_3_3_0.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_3_0_1 = (Keyword)cGroup_3_3_0.eContents().get(1);
-		private final Assignment cTypeAssignment_3_3_0_2 = (Assignment)cGroup_3_3_0.eContents().get(2);
-		private final RuleCall cTypeGSSFormatFormatTypeEnumRuleCall_3_3_0_2_0 = (RuleCall)cTypeAssignment_3_3_0_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_3_0_3 = (Keyword)cGroup_3_3_0.eContents().get(3);
-		private final Alternatives cAlternatives_3_3_1 = (Alternatives)cGroup_3_3.eContents().get(1);
-		private final Assignment cCSFieldAssignment_3_3_1_0 = (Assignment)cAlternatives_3_3_1.eContents().get(0);
-		private final RuleCall cCSFieldGSSFormatCSFieldParserRuleCall_3_3_1_0_0 = (RuleCall)cCSFieldAssignment_3_3_1_0.eContents().get(0);
-		private final Assignment cCSFormulaFieldAssignment_3_3_1_1 = (Assignment)cAlternatives_3_3_1.eContents().get(1);
-		private final RuleCall cCSFormulaFieldGSSFormatCSFormulaFieldParserRuleCall_3_3_1_1_0 = (RuleCall)cCSFormulaFieldAssignment_3_3_1_1.eContents().get(0);
-		private final Assignment cVSFieldAssignment_3_3_1_2 = (Assignment)cAlternatives_3_3_1.eContents().get(2);
-		private final RuleCall cVSFieldGSSFormatVSFieldParserRuleCall_3_3_1_2_0 = (RuleCall)cVSFieldAssignment_3_3_1_2.eContents().get(0);
-		private final Assignment cFDICFieldAssignment_3_3_1_3 = (Assignment)cAlternatives_3_3_1.eContents().get(3);
-		private final RuleCall cFDICFieldGSSFormatFDICFieldParserRuleCall_3_3_1_3_0 = (RuleCall)cFDICFieldAssignment_3_3_1_3.eContents().get(0);
-		private final Assignment cVRFieldSizeAssignment_3_3_1_4 = (Assignment)cAlternatives_3_3_1.eContents().get(4);
-		private final RuleCall cVRFieldSizeGSSFormatVRFieldSizeParserRuleCall_3_3_1_4_0 = (RuleCall)cVRFieldSizeAssignment_3_3_1_4.eContents().get(0);
-		private final Assignment cAFieldAssignment_3_3_1_5 = (Assignment)cAlternatives_3_3_1.eContents().get(5);
-		private final RuleCall cAFieldGSSFormatAFieldParserRuleCall_3_3_1_5_0 = (RuleCall)cAFieldAssignment_3_3_1_5.eContents().get(0);
-		private final Assignment cAIFieldAssignment_3_3_1_6 = (Assignment)cAlternatives_3_3_1.eContents().get(6);
-		private final RuleCall cAIFieldGSSFormatAIFieldParserRuleCall_3_3_1_6_0 = (RuleCall)cAIFieldAssignment_3_3_1_6.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cUriKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cColonEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cUriAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cUriQualifiedNameParserRuleCall_5_0 = (RuleCall)cUriAssignment_5.eContents().get(0);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cVersionKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cColonEqualsSignKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cVersionAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cVersionVersionParserRuleCall_9_0 = (RuleCall)cVersionAssignment_9.eContents().get(0);
+		private final Keyword cSemicolonKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cProtocolKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Keyword cColonEqualsSignKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		private final Assignment cProtocolAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final RuleCall cProtocolIDTerminalRuleCall_13_0 = (RuleCall)cProtocolAssignment_13.eContents().get(0);
+		private final Keyword cSemicolonKeyword_14 = (Keyword)cGroup.eContents().get(14);
+		private final Keyword cTypeKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Keyword cColonEqualsSignKeyword_16 = (Keyword)cGroup.eContents().get(16);
+		private final Assignment cTypeAssignment_17 = (Assignment)cGroup.eContents().get(17);
+		private final RuleCall cTypeGSSFormatFormatTypeEnumRuleCall_17_0 = (RuleCall)cTypeAssignment_17.eContents().get(0);
+		private final Keyword cSemicolonKeyword_18 = (Keyword)cGroup.eContents().get(18);
+		private final Assignment cFieldAssignment_19 = (Assignment)cGroup.eContents().get(19);
+		private final RuleCall cFieldGSSFormatFieldParserRuleCall_19_0 = (RuleCall)cFieldAssignment_19.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_20 = (Keyword)cGroup.eContents().get(20);
+		private final Keyword cSemicolonKeyword_21 = (Keyword)cGroup.eContents().get(21);
 		
 		//GSSFormatFormat:
 		//	'GSSFormatFormat'
 		//	name=ID
-		//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'protocol' ':=' protocol=ID ';' &
-		//	('type' ':=' type=GSSFormatFormatType ';') (CSField+=GSSFormatCSField | CSFormulaField+=GSSFormatCSFormulaField |
-		//	VSField+=GSSFormatVSField | FDICField+=GSSFormatFDICField | VRFieldSize+=GSSFormatVRFieldSize |
-		//	AField+=GSSFormatAField | AIField+=GSSFormatAIField)*)
+		//	'{'
+		//	'uri' ':=' uri=QualifiedName ';'
+		//	'version' ':=' version=Version ';'
+		//	'protocol' ':=' protocol=ID ';'
+		//	'type' ':=' type=GSSFormatFormatType ';'
+		//	Field+=GSSFormatField*
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSFormatFormat' name=ID '{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'protocol' ':='
-		//protocol=ID ';' & ('type' ':=' type=GSSFormatFormatType ';') (CSField+=GSSFormatCSField |
-		//CSFormulaField+=GSSFormatCSFormulaField | VSField+=GSSFormatVSField | FDICField+=GSSFormatFDICField |
-		//VRFieldSize+=GSSFormatVRFieldSize | AField+=GSSFormatAField | AIField+=GSSFormatAIField)*) '}' ';'
+		//'GSSFormatFormat' name=ID '{' 'uri' ':=' uri=QualifiedName ';' 'version' ':=' version=Version ';' 'protocol' ':='
+		//protocol=ID ';' 'type' ':=' type=GSSFormatFormatType ';' Field+=GSSFormatField* '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSFormatFormat'
@@ -172,141 +152,77 @@ public class FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'protocol' ':=' protocol=ID ';' & ('type' ':='
-		//type=GSSFormatFormatType ';') (CSField+=GSSFormatCSField | CSFormulaField+=GSSFormatCSFormulaField |
-		//VSField+=GSSFormatVSField | FDICField+=GSSFormatFDICField | VRFieldSize+=GSSFormatVRFieldSize |
-		//AField+=GSSFormatAField | AIField+=GSSFormatAIField)*)
-		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
-		
-		//'uri' ':=' uri=QualifiedName ';'
-		public Group getGroup_3_0() { return cGroup_3_0; }
-		
 		//'uri'
-		public Keyword getUriKeyword_3_0_0() { return cUriKeyword_3_0_0; }
+		public Keyword getUriKeyword_3() { return cUriKeyword_3; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_3_0_1() { return cColonEqualsSignKeyword_3_0_1; }
+		public Keyword getColonEqualsSignKeyword_4() { return cColonEqualsSignKeyword_4; }
 		
 		//uri=QualifiedName
-		public Assignment getUriAssignment_3_0_2() { return cUriAssignment_3_0_2; }
+		public Assignment getUriAssignment_5() { return cUriAssignment_5; }
 		
 		//QualifiedName
-		public RuleCall getUriQualifiedNameParserRuleCall_3_0_2_0() { return cUriQualifiedNameParserRuleCall_3_0_2_0; }
+		public RuleCall getUriQualifiedNameParserRuleCall_5_0() { return cUriQualifiedNameParserRuleCall_5_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_3_0_3() { return cSemicolonKeyword_3_0_3; }
-		
-		//'version' ':=' version=Version ';'
-		public Group getGroup_3_1() { return cGroup_3_1; }
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 		
 		//'version'
-		public Keyword getVersionKeyword_3_1_0() { return cVersionKeyword_3_1_0; }
+		public Keyword getVersionKeyword_7() { return cVersionKeyword_7; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_3_1_1() { return cColonEqualsSignKeyword_3_1_1; }
+		public Keyword getColonEqualsSignKeyword_8() { return cColonEqualsSignKeyword_8; }
 		
 		//version=Version
-		public Assignment getVersionAssignment_3_1_2() { return cVersionAssignment_3_1_2; }
+		public Assignment getVersionAssignment_9() { return cVersionAssignment_9; }
 		
 		//Version
-		public RuleCall getVersionVersionParserRuleCall_3_1_2_0() { return cVersionVersionParserRuleCall_3_1_2_0; }
+		public RuleCall getVersionVersionParserRuleCall_9_0() { return cVersionVersionParserRuleCall_9_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_3_1_3() { return cSemicolonKeyword_3_1_3; }
-		
-		//'protocol' ':=' protocol=ID ';'
-		public Group getGroup_3_2() { return cGroup_3_2; }
+		public Keyword getSemicolonKeyword_10() { return cSemicolonKeyword_10; }
 		
 		//'protocol'
-		public Keyword getProtocolKeyword_3_2_0() { return cProtocolKeyword_3_2_0; }
+		public Keyword getProtocolKeyword_11() { return cProtocolKeyword_11; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_3_2_1() { return cColonEqualsSignKeyword_3_2_1; }
+		public Keyword getColonEqualsSignKeyword_12() { return cColonEqualsSignKeyword_12; }
 		
 		//protocol=ID
-		public Assignment getProtocolAssignment_3_2_2() { return cProtocolAssignment_3_2_2; }
+		public Assignment getProtocolAssignment_13() { return cProtocolAssignment_13; }
 		
 		//ID
-		public RuleCall getProtocolIDTerminalRuleCall_3_2_2_0() { return cProtocolIDTerminalRuleCall_3_2_2_0; }
+		public RuleCall getProtocolIDTerminalRuleCall_13_0() { return cProtocolIDTerminalRuleCall_13_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_3_2_3() { return cSemicolonKeyword_3_2_3; }
-		
-		//('type' ':=' type=GSSFormatFormatType ';') (CSField+=GSSFormatCSField | CSFormulaField+=GSSFormatCSFormulaField |
-		//VSField+=GSSFormatVSField | FDICField+=GSSFormatFDICField | VRFieldSize+=GSSFormatVRFieldSize |
-		//AField+=GSSFormatAField | AIField+=GSSFormatAIField)*
-		public Group getGroup_3_3() { return cGroup_3_3; }
-		
-		//('type' ':=' type=GSSFormatFormatType ';')
-		public Group getGroup_3_3_0() { return cGroup_3_3_0; }
+		public Keyword getSemicolonKeyword_14() { return cSemicolonKeyword_14; }
 		
 		//'type'
-		public Keyword getTypeKeyword_3_3_0_0() { return cTypeKeyword_3_3_0_0; }
+		public Keyword getTypeKeyword_15() { return cTypeKeyword_15; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_3_3_0_1() { return cColonEqualsSignKeyword_3_3_0_1; }
+		public Keyword getColonEqualsSignKeyword_16() { return cColonEqualsSignKeyword_16; }
 		
 		//type=GSSFormatFormatType
-		public Assignment getTypeAssignment_3_3_0_2() { return cTypeAssignment_3_3_0_2; }
+		public Assignment getTypeAssignment_17() { return cTypeAssignment_17; }
 		
 		//GSSFormatFormatType
-		public RuleCall getTypeGSSFormatFormatTypeEnumRuleCall_3_3_0_2_0() { return cTypeGSSFormatFormatTypeEnumRuleCall_3_3_0_2_0; }
+		public RuleCall getTypeGSSFormatFormatTypeEnumRuleCall_17_0() { return cTypeGSSFormatFormatTypeEnumRuleCall_17_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_3_3_0_3() { return cSemicolonKeyword_3_3_0_3; }
+		public Keyword getSemicolonKeyword_18() { return cSemicolonKeyword_18; }
 		
-		//(CSField+=GSSFormatCSField | CSFormulaField+=GSSFormatCSFormulaField | VSField+=GSSFormatVSField |
-		//FDICField+=GSSFormatFDICField | VRFieldSize+=GSSFormatVRFieldSize | AField+=GSSFormatAField |
-		//AIField+=GSSFormatAIField)*
-		public Alternatives getAlternatives_3_3_1() { return cAlternatives_3_3_1; }
+		//Field+=GSSFormatField*
+		public Assignment getFieldAssignment_19() { return cFieldAssignment_19; }
 		
-		//CSField+=GSSFormatCSField
-		public Assignment getCSFieldAssignment_3_3_1_0() { return cCSFieldAssignment_3_3_1_0; }
-		
-		//GSSFormatCSField
-		public RuleCall getCSFieldGSSFormatCSFieldParserRuleCall_3_3_1_0_0() { return cCSFieldGSSFormatCSFieldParserRuleCall_3_3_1_0_0; }
-		
-		//CSFormulaField+=GSSFormatCSFormulaField
-		public Assignment getCSFormulaFieldAssignment_3_3_1_1() { return cCSFormulaFieldAssignment_3_3_1_1; }
-		
-		//GSSFormatCSFormulaField
-		public RuleCall getCSFormulaFieldGSSFormatCSFormulaFieldParserRuleCall_3_3_1_1_0() { return cCSFormulaFieldGSSFormatCSFormulaFieldParserRuleCall_3_3_1_1_0; }
-		
-		//VSField+=GSSFormatVSField
-		public Assignment getVSFieldAssignment_3_3_1_2() { return cVSFieldAssignment_3_3_1_2; }
-		
-		//GSSFormatVSField
-		public RuleCall getVSFieldGSSFormatVSFieldParserRuleCall_3_3_1_2_0() { return cVSFieldGSSFormatVSFieldParserRuleCall_3_3_1_2_0; }
-		
-		//FDICField+=GSSFormatFDICField
-		public Assignment getFDICFieldAssignment_3_3_1_3() { return cFDICFieldAssignment_3_3_1_3; }
-		
-		//GSSFormatFDICField
-		public RuleCall getFDICFieldGSSFormatFDICFieldParserRuleCall_3_3_1_3_0() { return cFDICFieldGSSFormatFDICFieldParserRuleCall_3_3_1_3_0; }
-		
-		//VRFieldSize+=GSSFormatVRFieldSize
-		public Assignment getVRFieldSizeAssignment_3_3_1_4() { return cVRFieldSizeAssignment_3_3_1_4; }
-		
-		//GSSFormatVRFieldSize
-		public RuleCall getVRFieldSizeGSSFormatVRFieldSizeParserRuleCall_3_3_1_4_0() { return cVRFieldSizeGSSFormatVRFieldSizeParserRuleCall_3_3_1_4_0; }
-		
-		//AField+=GSSFormatAField
-		public Assignment getAFieldAssignment_3_3_1_5() { return cAFieldAssignment_3_3_1_5; }
-		
-		//GSSFormatAField
-		public RuleCall getAFieldGSSFormatAFieldParserRuleCall_3_3_1_5_0() { return cAFieldGSSFormatAFieldParserRuleCall_3_3_1_5_0; }
-		
-		//AIField+=GSSFormatAIField
-		public Assignment getAIFieldAssignment_3_3_1_6() { return cAIFieldAssignment_3_3_1_6; }
-		
-		//GSSFormatAIField
-		public RuleCall getAIFieldGSSFormatAIFieldParserRuleCall_3_3_1_6_0() { return cAIFieldGSSFormatAIFieldParserRuleCall_3_3_1_6_0; }
+		//GSSFormatField
+		public RuleCall getFieldGSSFormatFieldParserRuleCall_19_0() { return cFieldGSSFormatFieldParserRuleCall_19_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_20() { return cRightCurlyBracketKeyword_20; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
 	}
 	public class GSSFormatFieldElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.format.FORMAT.GSSFormatField");
@@ -314,14 +230,18 @@ public class FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cGSSFormatCSFieldParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cGSSFormatCSFormulaFieldParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cGSSFormatVSFieldParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cGSSFormatVRFieldSizeParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cGSSFormatFDICFieldParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cGSSFormatFDICFieldParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cGSSFormatVRFieldSizeParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cGSSFormatAFieldParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cGSSFormatAIFieldParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		
 		//GSSFormatField:
-		//	GSSFormatCSField | GSSFormatCSFormulaField | GSSFormatVSField | GSSFormatVRFieldSize | GSSFormatFDICField;
+		//	GSSFormatCSField | GSSFormatCSFormulaField | GSSFormatVSField | GSSFormatFDICField | GSSFormatVRFieldSize |
+		//	GSSFormatAField | GSSFormatAIField;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//GSSFormatCSField | GSSFormatCSFormulaField | GSSFormatVSField | GSSFormatVRFieldSize | GSSFormatFDICField
+		//GSSFormatCSField | GSSFormatCSFormulaField | GSSFormatVSField | GSSFormatFDICField | GSSFormatVRFieldSize |
+		//GSSFormatAField | GSSFormatAIField
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//GSSFormatCSField
@@ -333,11 +253,17 @@ public class FORMATGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSFormatVSField
 		public RuleCall getGSSFormatVSFieldParserRuleCall_2() { return cGSSFormatVSFieldParserRuleCall_2; }
 		
-		//GSSFormatVRFieldSize
-		public RuleCall getGSSFormatVRFieldSizeParserRuleCall_3() { return cGSSFormatVRFieldSizeParserRuleCall_3; }
-		
 		//GSSFormatFDICField
-		public RuleCall getGSSFormatFDICFieldParserRuleCall_4() { return cGSSFormatFDICFieldParserRuleCall_4; }
+		public RuleCall getGSSFormatFDICFieldParserRuleCall_3() { return cGSSFormatFDICFieldParserRuleCall_3; }
+		
+		//GSSFormatVRFieldSize
+		public RuleCall getGSSFormatVRFieldSizeParserRuleCall_4() { return cGSSFormatVRFieldSizeParserRuleCall_4; }
+		
+		//GSSFormatAField
+		public RuleCall getGSSFormatAFieldParserRuleCall_5() { return cGSSFormatAFieldParserRuleCall_5; }
+		
+		//GSSFormatAIField
+		public RuleCall getGSSFormatAIFieldParserRuleCall_6() { return cGSSFormatAIFieldParserRuleCall_6; }
 	}
 	public class GSSFormatCSFieldElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.format.FORMAT.GSSFormatCSField");
@@ -2981,10 +2907,12 @@ public class FORMATGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSFormatFormat:
 	//	'GSSFormatFormat'
 	//	name=ID
-	//	'{' ('uri' ':=' uri=QualifiedName ';' & 'version' ':=' version=Version ';' & 'protocol' ':=' protocol=ID ';' &
-	//	('type' ':=' type=GSSFormatFormatType ';') (CSField+=GSSFormatCSField | CSFormulaField+=GSSFormatCSFormulaField |
-	//	VSField+=GSSFormatVSField | FDICField+=GSSFormatFDICField | VRFieldSize+=GSSFormatVRFieldSize |
-	//	AField+=GSSFormatAField | AIField+=GSSFormatAIField)*)
+	//	'{'
+	//	'uri' ':=' uri=QualifiedName ';'
+	//	'version' ':=' version=Version ';'
+	//	'protocol' ':=' protocol=ID ';'
+	//	'type' ':=' type=GSSFormatFormatType ';'
+	//	Field+=GSSFormatField*
 	//	'}' ';';
 	public GSSFormatFormatElements getGSSFormatFormatAccess() {
 		return pGSSFormatFormat;
@@ -3005,7 +2933,8 @@ public class FORMATGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//GSSFormatField:
-	//	GSSFormatCSField | GSSFormatCSFormulaField | GSSFormatVSField | GSSFormatVRFieldSize | GSSFormatFDICField;
+	//	GSSFormatCSField | GSSFormatCSFormulaField | GSSFormatVSField | GSSFormatFDICField | GSSFormatVRFieldSize |
+	//	GSSFormatAField | GSSFormatAIField;
 	public GSSFormatFieldElements getGSSFormatFieldAccess() {
 		return pGSSFormatField;
 	}

@@ -28,7 +28,7 @@ package es.uah.aut.srg.gss.export;
  * @model
  * @generated
  */
-public interface GSSExportSettingAIFromConst extends GSSExportSettingAI {
+public interface GSSExportSettingAIFromConst extends GSSExportSetting {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

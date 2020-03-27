@@ -12,8 +12,6 @@ package es.uah.aut.srg.gss.filter;
 
 import es.uah.aut.srg.gss.format.GSSFormatField;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSS Filter Bool Var</b></em>'.
@@ -23,11 +21,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getId <em>Id</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getConstantType <em>Constant Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getFieldRef <em>Field Ref</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getOp <em>Op</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getValue <em>Value</em>}</li>
  * </ul>
  *
@@ -35,59 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GSSFilterBoolVar extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see es.uah.aut.srg.gss.filter.filterPackage#getGSSFilterBoolVar_Id()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getId();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see es.uah.aut.srg.gss.filter.filterPackage#getGSSFilterBoolVar_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
+public interface GSSFilterBoolVar extends GSSFilterAbstractBoolVar {
 	/**
 	 * Returns the value of the '<em><b>Constant Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.filter.GSSFilterConstantType}.
@@ -169,32 +112,6 @@ public interface GSSFilterBoolVar extends EObject {
 	 * @generated
 	 */
 	void setFieldRef(GSSFormatField value);
-
-	/**
-	 * Returns the value of the '<em><b>Op</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Op</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Op</em>' containment reference.
-	 * @see #setOp(GSSFilterFieldOp)
-	 * @see es.uah.aut.srg.gss.filter.filterPackage#getGSSFilterBoolVar_Op()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	GSSFilterFieldOp getOp();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVar#getOp <em>Op</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Op</em>' containment reference.
-	 * @see #getOp()
-	 * @generated
-	 */
-	void setOp(GSSFilterFieldOp value);
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' containment reference.

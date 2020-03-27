@@ -234,14 +234,10 @@
         eType="#//GSSScenarioUnit" unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioPeriodicTCs">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="PeriodicTC_level_2" upperBound="-1"
-        eType="#//GSSScenarioPeriodicTCLevel2" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="PeriodicTC_level_1" upperBound="-1"
-        eType="#//GSSScenarioPeriodicTCLevel1" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="PeriodicTC_level_0" upperBound="-1"
-        eType="#//GSSScenarioPeriodicTCLevel0" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="PeriodicTC" upperBound="-1"
+        eType="#//GSSScenarioPeriodicTC" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioPeriodicTC">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioPeriodicTC" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -285,115 +281,80 @@
         unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initial_value" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceField" eType="#//GSSScenarioReferenceField"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="referencePeriodicTC" eType="#//GSSScenarioReferencePeriodicTC"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceSpecialPacket"
-        eType="#//GSSScenarioReferenceSpecialPacket" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" lowerBound="1"
+        eType="#//GSSScenarioReference" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioReference" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldRef" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSScenarioReferenceFieldType">
     <eLiterals name="tm"/>
     <eLiterals name="tc" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioReferenceField">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioReferenceField" eSuperTypes="#//GSSScenarioReference">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSScenarioReferenceFieldType"
         unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldRef" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioReferencePeriodicTC">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioReferencePeriodicTC" eSuperTypes="#//GSSScenarioReference">
     <eStructuralFeatures xsi:type="ecore:EReference" name="idRef" lowerBound="1" eType="#//GSSScenarioPeriodicTC"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldRef" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioReferenceSpecialPacket">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioReferenceSpecialPacket" eSuperTypes="#//GSSScenarioReference">
     <eStructuralFeatures xsi:type="ecore:EReference" name="idRef" lowerBound="1" eType="#//GSSScenarioSpecialPacket"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldRef" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioMonitors">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ChartsFile" eType="ecore:EClass charts.ecore#//GSSChartsCharts"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="plot" upperBound="-1" eType="#//GSSScenarioPlot"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="alarmMsg" upperBound="-1"
-        eType="#//GSSScenarioAlarmMsg" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="modify" upperBound="-1"
-        eType="#//GSSScenarioModify" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="alarmVal" upperBound="3"
-        eType="#//GSSScenarioAlarmVal" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="monitor" upperBound="-1"
+        eType="#//GSSScenarioMonitor" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioPlot">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioMonitor" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="GV" lowerBound="1" eType="#//GSSScenarioGV"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioPlot" eSuperTypes="#//GSSScenarioMonitor">
     <eStructuralFeatures xsi:type="ecore:EReference" name="chartRef" lowerBound="1"
         eType="ecore:EClass charts.ecore#//GSSChartsChart"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="GVFiltered" eType="#//GSSScenarioGVFiltered"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="GVPeriodic" eType="#//GSSScenarioGVPeriodic"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSScenarioAlarmMsgType">
     <eLiterals name="alarm1"/>
     <eLiterals name="alarm2" value="1"/>
     <eLiterals name="alarm3" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioAlarmMsg">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioAlarmMsg" eSuperTypes="#//GSSScenarioMonitor">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSScenarioAlarmMsgType"
         unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="GVFiltered" eType="#//GSSScenarioGVFiltered"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="GVPeriodic" eType="#//GSSScenarioGVPeriodic"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSScenarioModifyType">
     <eLiterals name="increment"/>
     <eLiterals name="increment1wrap" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioModify">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioModify" eSuperTypes="#//GSSScenarioMonitor">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSScenarioModifyType"
         unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="GVFiltered" eType="#//GSSScenarioGVFiltered"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="GVPeriodic" eType="#//GSSScenarioGVPeriodic"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSScenarioAlarmValType">
     <eLiterals name="alarm1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioAlarmVal">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioAlarmVal" eSuperTypes="#//GSSScenarioMonitor">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSScenarioAlarmValType"
         unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="GVFiltered" eType="#//GSSScenarioGVFiltered"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="GVPeriodic" eType="#//GSSScenarioGVPeriodic"
-        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioGVFiltered">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioGV" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="GlobalVarRef" lowerBound="1"
         eType="#//GSSScenarioGlobalVar"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioGVFiltered" eSuperTypes="#//GSSScenarioGV">
     <eStructuralFeatures xsi:type="ecore:EReference" name="filter" eType="ecore:EClass filter.ecore#//GSSFilterFilter"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioGVPeriodic">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="GlobalVarRef" lowerBound="1"
-        eType="#//GSSScenarioGlobalVar"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioGVPeriodic" eSuperTypes="#//GSSScenarioGV">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="period_value" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="period_unit" lowerBound="1"

@@ -508,72 +508,84 @@ ruleGSSExportSizes returns [EObject current=null]
 		}
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLengthGSSExportSizeFromFileLengthParserRuleCall_3_0_0());
+				{
+					newCompositeNode(grammarAccess.getGSSExportSizesAccess().getSizeGSSExportSizeParserRuleCall_3_0());
+				}
+				lv_size_3_0=ruleGSSExportSize
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSExportSizesRule());
 					}
-					lv_sizeFromFileLength_3_0=ruleGSSExportSizeFromFileLength
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSExportSizesRule());
-						}
-						add(
-							$current,
-							"sizeFromFileLength",
-							lv_sizeFromFileLength_3_0,
-							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSizeFromFileLength");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSExportSizesAccess().getSizeFromFileLineGSSExportSizeFromFileLineParserRuleCall_3_1_0());
-					}
-					lv_sizeFromFileLine_4_0=ruleGSSExportSizeFromFileLine
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSExportSizesRule());
-						}
-						add(
-							$current,
-							"sizeFromFileLine",
-							lv_sizeFromFileLine_4_0,
-							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSizeFromFileLine");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSExportSizesAccess().getSizeInBitsGSSExportSizeInBitsParserRuleCall_3_2_0());
-					}
-					lv_sizeInBits_5_0=ruleGSSExportSizeInBits
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSExportSizesRule());
-						}
-						add(
-							$current,
-							"sizeInBits",
-							lv_sizeInBits_5_0,
-							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSizeInBits");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					add(
+						$current,
+						"size",
+						lv_size_3_0,
+						"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSize");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)+
-		otherlv_6='}'
+		otherlv_4='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSExportSizesAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_4, grammarAccess.getGSSExportSizesAccess().getRightCurlyBracketKeyword_4());
 		}
-		otherlv_7=';'
+		otherlv_5=';'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSExportSizesAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getGSSExportSizesAccess().getSemicolonKeyword_5());
+		}
+	)
+;
+
+// Entry rule entryRuleGSSExportSize
+entryRuleGSSExportSize returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSExportSizeRule()); }
+	iv_ruleGSSExportSize=ruleGSSExportSize
+	{ $current=$iv_ruleGSSExportSize.current; }
+	EOF;
+
+// Rule GSSExportSize
+ruleGSSExportSize returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSExportSizeAccess().getGSSExportSizeFromFileLengthParserRuleCall_0());
+		}
+		this_GSSExportSizeFromFileLength_0=ruleGSSExportSizeFromFileLength
+		{
+			$current = $this_GSSExportSizeFromFileLength_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSExportSizeAccess().getGSSExportSizeFromFileLineParserRuleCall_1());
+		}
+		this_GSSExportSizeFromFileLine_1=ruleGSSExportSizeFromFileLine
+		{
+			$current = $this_GSSExportSizeFromFileLine_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSExportSizeAccess().getGSSExportSizeInBitsParserRuleCall_2());
+		}
+		this_GSSExportSizeInBits_2=ruleGSSExportSizeInBits
+		{
+			$current = $this_GSSExportSizeInBits_2.current;
+			afterParserOrEnumRuleCall();
 		}
 	)
 ;
@@ -1131,132 +1143,120 @@ ruleGSSExportSettings returns [EObject current=null]
 		}
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSExportSettingsAccess().getSettingFromConstGSSExportSettingFromConstParserRuleCall_3_0_0());
+				{
+					newCompositeNode(grammarAccess.getGSSExportSettingsAccess().getSettingGSSExportSettingParserRuleCall_3_0());
+				}
+				lv_setting_3_0=ruleGSSExportSetting
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSExportSettingsRule());
 					}
-					lv_settingFromConst_3_0=ruleGSSExportSettingFromConst
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSExportSettingsRule());
-						}
-						add(
-							$current,
-							"settingFromConst",
-							lv_settingFromConst_3_0,
-							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSettingFromConst");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSExportSettingsAccess().getSettingFromSizeGSSExportSettingFromSizeParserRuleCall_3_1_0());
-					}
-					lv_settingFromSize_4_0=ruleGSSExportSettingFromSize
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSExportSettingsRule());
-						}
-						add(
-							$current,
-							"settingFromSize",
-							lv_settingFromSize_4_0,
-							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSettingFromSize");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSExportSettingsAccess().getSettingFromFileGSSExportSettingFromFileParserRuleCall_3_2_0());
-					}
-					lv_settingFromFile_5_0=ruleGSSExportSettingFromFile
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSExportSettingsRule());
-						}
-						add(
-							$current,
-							"settingFromFile",
-							lv_settingFromFile_5_0,
-							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSettingFromFile");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSExportSettingsAccess().getSettingFromFieldGSSExportSettingFromFieldParserRuleCall_3_3_0());
-					}
-					lv_settingFromField_6_0=ruleGSSExportSettingFromField
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSExportSettingsRule());
-						}
-						add(
-							$current,
-							"settingFromField",
-							lv_settingFromField_6_0,
-							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSettingFromField");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSExportSettingsAccess().getSettingAIFromConstGSSExportSettingAIFromConstParserRuleCall_3_4_0());
-					}
-					lv_settingAIFromConst_7_0=ruleGSSExportSettingAIFromConst
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSExportSettingsRule());
-						}
-						add(
-							$current,
-							"settingAIFromConst",
-							lv_settingAIFromConst_7_0,
-							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSettingAIFromConst");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSExportSettingsAccess().getSettingAIFromFileGSSExportSettingAIFromFileParserRuleCall_3_5_0());
-					}
-					lv_settingAIFromFile_8_0=ruleGSSExportSettingAIFromFile
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSExportSettingsRule());
-						}
-						add(
-							$current,
-							"settingAIFromFile",
-							lv_settingAIFromFile_8_0,
-							"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSettingAIFromFile");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					add(
+						$current,
+						"setting",
+						lv_setting_3_0,
+						"es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSetting");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)*
-		otherlv_9='}'
+		otherlv_4='}'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getGSSExportSettingsAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_4, grammarAccess.getGSSExportSettingsAccess().getRightCurlyBracketKeyword_4());
 		}
-		otherlv_10=';'
+		otherlv_5=';'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getGSSExportSettingsAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getGSSExportSettingsAccess().getSemicolonKeyword_5());
+		}
+	)
+;
+
+// Entry rule entryRuleGSSExportSetting
+entryRuleGSSExportSetting returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSExportSettingRule()); }
+	iv_ruleGSSExportSetting=ruleGSSExportSetting
+	{ $current=$iv_ruleGSSExportSetting.current; }
+	EOF;
+
+// Rule GSSExportSetting
+ruleGSSExportSetting returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingFromConstParserRuleCall_0());
+		}
+		this_GSSExportSettingFromConst_0=ruleGSSExportSettingFromConst
+		{
+			$current = $this_GSSExportSettingFromConst_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingFromSizeParserRuleCall_1());
+		}
+		this_GSSExportSettingFromSize_1=ruleGSSExportSettingFromSize
+		{
+			$current = $this_GSSExportSettingFromSize_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingFromFileParserRuleCall_2());
+		}
+		this_GSSExportSettingFromFile_2=ruleGSSExportSettingFromFile
+		{
+			$current = $this_GSSExportSettingFromFile_2.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingFromFieldParserRuleCall_3());
+		}
+		this_GSSExportSettingFromField_3=ruleGSSExportSettingFromField
+		{
+			$current = $this_GSSExportSettingFromField_3.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingAIFromConstParserRuleCall_4());
+		}
+		this_GSSExportSettingAIFromConst_4=ruleGSSExportSettingAIFromConst
+		{
+			$current = $this_GSSExportSettingAIFromConst_4.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSExportSettingAccess().getGSSExportSettingAIFromFileParserRuleCall_5());
+		}
+		this_GSSExportSettingAIFromFile_5=ruleGSSExportSettingAIFromFile
+		{
+			$current = $this_GSSExportSettingAIFromFile_5.current;
+			afterParserOrEnumRuleCall();
 		}
 	)
 ;

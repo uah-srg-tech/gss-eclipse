@@ -132,67 +132,13 @@ public interface formatPackage extends EPackage {
 	int GSS_FORMAT_FORMAT__TYPE = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>CS Field</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Field</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FORMAT_FORMAT__CS_FIELD = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>CS Formula Field</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FORMAT_FORMAT__CS_FORMULA_FIELD = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>VS Field</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FORMAT_FORMAT__VS_FIELD = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>FDIC Field</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FORMAT_FORMAT__FDIC_FIELD = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>VR Field Size</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FORMAT_FORMAT__VR_FIELD_SIZE = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>AField</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FORMAT_FORMAT__AFIELD = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>AI Field</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FORMAT_FORMAT__AI_FIELD = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 8;
+	int GSS_FORMAT_FORMAT__FIELD = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>GSS Format Format</em>' class.
@@ -201,7 +147,7 @@ public interface formatPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FORMAT_FORMAT_FEATURE_COUNT = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 9;
+	int GSS_FORMAT_FORMAT_FEATURE_COUNT = commonPackage.GSS_MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>GSS Format Format</em>' class.
@@ -1493,81 +1439,15 @@ public interface formatPackage extends EPackage {
 	EAttribute getGSSFormatFormat_Type();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getCSField <em>CS Field</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getField <em>Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>CS Field</em>'.
-	 * @see es.uah.aut.srg.gss.format.GSSFormatFormat#getCSField()
+	 * @return the meta object for the containment reference list '<em>Field</em>'.
+	 * @see es.uah.aut.srg.gss.format.GSSFormatFormat#getField()
 	 * @see #getGSSFormatFormat()
 	 * @generated
 	 */
-	EReference getGSSFormatFormat_CSField();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getCSFormulaField <em>CS Formula Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>CS Formula Field</em>'.
-	 * @see es.uah.aut.srg.gss.format.GSSFormatFormat#getCSFormulaField()
-	 * @see #getGSSFormatFormat()
-	 * @generated
-	 */
-	EReference getGSSFormatFormat_CSFormulaField();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getVSField <em>VS Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>VS Field</em>'.
-	 * @see es.uah.aut.srg.gss.format.GSSFormatFormat#getVSField()
-	 * @see #getGSSFormatFormat()
-	 * @generated
-	 */
-	EReference getGSSFormatFormat_VSField();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getFDICField <em>FDIC Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>FDIC Field</em>'.
-	 * @see es.uah.aut.srg.gss.format.GSSFormatFormat#getFDICField()
-	 * @see #getGSSFormatFormat()
-	 * @generated
-	 */
-	EReference getGSSFormatFormat_FDICField();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getVRFieldSize <em>VR Field Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>VR Field Size</em>'.
-	 * @see es.uah.aut.srg.gss.format.GSSFormatFormat#getVRFieldSize()
-	 * @see #getGSSFormatFormat()
-	 * @generated
-	 */
-	EReference getGSSFormatFormat_VRFieldSize();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getAField <em>AField</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>AField</em>'.
-	 * @see es.uah.aut.srg.gss.format.GSSFormatFormat#getAField()
-	 * @see #getGSSFormatFormat()
-	 * @generated
-	 */
-	EReference getGSSFormatFormat_AField();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.format.GSSFormatFormat#getAIField <em>AI Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>AI Field</em>'.
-	 * @see es.uah.aut.srg.gss.format.GSSFormatFormat#getAIField()
-	 * @see #getGSSFormatFormat()
-	 * @generated
-	 */
-	EReference getGSSFormatFormat_AIField();
+	EReference getGSSFormatFormat_Field();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.format.GSSFormatField <em>GSS Format Field</em>}'.
@@ -2355,60 +2235,12 @@ public interface formatPackage extends EPackage {
 		EAttribute GSS_FORMAT_FORMAT__TYPE = eINSTANCE.getGSSFormatFormat_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>CS Field</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Field</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_FORMAT_FORMAT__CS_FIELD = eINSTANCE.getGSSFormatFormat_CSField();
-
-		/**
-		 * The meta object literal for the '<em><b>CS Formula Field</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FORMAT_FORMAT__CS_FORMULA_FIELD = eINSTANCE.getGSSFormatFormat_CSFormulaField();
-
-		/**
-		 * The meta object literal for the '<em><b>VS Field</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FORMAT_FORMAT__VS_FIELD = eINSTANCE.getGSSFormatFormat_VSField();
-
-		/**
-		 * The meta object literal for the '<em><b>FDIC Field</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FORMAT_FORMAT__FDIC_FIELD = eINSTANCE.getGSSFormatFormat_FDICField();
-
-		/**
-		 * The meta object literal for the '<em><b>VR Field Size</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FORMAT_FORMAT__VR_FIELD_SIZE = eINSTANCE.getGSSFormatFormat_VRFieldSize();
-
-		/**
-		 * The meta object literal for the '<em><b>AField</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FORMAT_FORMAT__AFIELD = eINSTANCE.getGSSFormatFormat_AField();
-
-		/**
-		 * The meta object literal for the '<em><b>AI Field</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FORMAT_FORMAT__AI_FIELD = eINSTANCE.getGSSFormatFormat_AIField();
+		EReference GSS_FORMAT_FORMAT__FIELD = eINSTANCE.getGSSFormatFormat_Field();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.format.impl.GSSFormatFieldImpl <em>GSS Format Field</em>}' class.

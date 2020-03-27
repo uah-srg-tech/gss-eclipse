@@ -11,12 +11,8 @@
 package es.uah.aut.srg.gss.scenario.impl;
 
 import es.uah.aut.srg.gss.charts.GSSChartsCharts;
-
-import es.uah.aut.srg.gss.scenario.GSSScenarioAlarmMsg;
-import es.uah.aut.srg.gss.scenario.GSSScenarioAlarmVal;
-import es.uah.aut.srg.gss.scenario.GSSScenarioModify;
+import es.uah.aut.srg.gss.scenario.GSSScenarioMonitor;
 import es.uah.aut.srg.gss.scenario.GSSScenarioMonitors;
-import es.uah.aut.srg.gss.scenario.GSSScenarioPlot;
 import es.uah.aut.srg.gss.scenario.scenarioPackage;
 
 import java.util.Collection;
@@ -44,10 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorsImpl#getChartsFile <em>Charts File</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorsImpl#getPlot <em>Plot</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorsImpl#getAlarmMsg <em>Alarm Msg</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorsImpl#getModify <em>Modify</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorsImpl#getAlarmVal <em>Alarm Val</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorsImpl#getMonitor <em>Monitor</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,44 +57,14 @@ public class GSSScenarioMonitorsImpl extends MinimalEObjectImpl.Container implem
 	protected GSSChartsCharts chartsFile;
 
 	/**
-	 * The cached value of the '{@link #getPlot() <em>Plot</em>}' containment reference list.
+	 * The cached value of the '{@link #getMonitor() <em>Monitor</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPlot()
+	 * @see #getMonitor()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GSSScenarioPlot> plot;
-
-	/**
-	 * The cached value of the '{@link #getAlarmMsg() <em>Alarm Msg</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAlarmMsg()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSScenarioAlarmMsg> alarmMsg;
-
-	/**
-	 * The cached value of the '{@link #getModify() <em>Modify</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getModify()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSScenarioModify> modify;
-
-	/**
-	 * The cached value of the '{@link #getAlarmVal() <em>Alarm Val</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAlarmVal()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSScenarioAlarmVal> alarmVal;
+	protected EList<GSSScenarioMonitor> monitor;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -165,47 +128,11 @@ public class GSSScenarioMonitorsImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSScenarioPlot> getPlot() {
-		if (plot == null) {
-			plot = new EObjectContainmentEList<GSSScenarioPlot>(GSSScenarioPlot.class, this, scenarioPackage.GSS_SCENARIO_MONITORS__PLOT);
+	public EList<GSSScenarioMonitor> getMonitor() {
+		if (monitor == null) {
+			monitor = new EObjectContainmentEList<GSSScenarioMonitor>(GSSScenarioMonitor.class, this, scenarioPackage.GSS_SCENARIO_MONITORS__MONITOR);
 		}
-		return plot;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<GSSScenarioAlarmMsg> getAlarmMsg() {
-		if (alarmMsg == null) {
-			alarmMsg = new EObjectContainmentEList<GSSScenarioAlarmMsg>(GSSScenarioAlarmMsg.class, this, scenarioPackage.GSS_SCENARIO_MONITORS__ALARM_MSG);
-		}
-		return alarmMsg;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<GSSScenarioModify> getModify() {
-		if (modify == null) {
-			modify = new EObjectContainmentEList<GSSScenarioModify>(GSSScenarioModify.class, this, scenarioPackage.GSS_SCENARIO_MONITORS__MODIFY);
-		}
-		return modify;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<GSSScenarioAlarmVal> getAlarmVal() {
-		if (alarmVal == null) {
-			alarmVal = new EObjectContainmentEList<GSSScenarioAlarmVal>(GSSScenarioAlarmVal.class, this, scenarioPackage.GSS_SCENARIO_MONITORS__ALARM_VAL);
-		}
-		return alarmVal;
+		return monitor;
 	}
 
 	/**
@@ -216,14 +143,8 @@ public class GSSScenarioMonitorsImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_MONITORS__PLOT:
-				return ((InternalEList<?>)getPlot()).basicRemove(otherEnd, msgs);
-			case scenarioPackage.GSS_SCENARIO_MONITORS__ALARM_MSG:
-				return ((InternalEList<?>)getAlarmMsg()).basicRemove(otherEnd, msgs);
-			case scenarioPackage.GSS_SCENARIO_MONITORS__MODIFY:
-				return ((InternalEList<?>)getModify()).basicRemove(otherEnd, msgs);
-			case scenarioPackage.GSS_SCENARIO_MONITORS__ALARM_VAL:
-				return ((InternalEList<?>)getAlarmVal()).basicRemove(otherEnd, msgs);
+			case scenarioPackage.GSS_SCENARIO_MONITORS__MONITOR:
+				return ((InternalEList<?>)getMonitor()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -239,14 +160,8 @@ public class GSSScenarioMonitorsImpl extends MinimalEObjectImpl.Container implem
 			case scenarioPackage.GSS_SCENARIO_MONITORS__CHARTS_FILE:
 				if (resolve) return getChartsFile();
 				return basicGetChartsFile();
-			case scenarioPackage.GSS_SCENARIO_MONITORS__PLOT:
-				return getPlot();
-			case scenarioPackage.GSS_SCENARIO_MONITORS__ALARM_MSG:
-				return getAlarmMsg();
-			case scenarioPackage.GSS_SCENARIO_MONITORS__MODIFY:
-				return getModify();
-			case scenarioPackage.GSS_SCENARIO_MONITORS__ALARM_VAL:
-				return getAlarmVal();
+			case scenarioPackage.GSS_SCENARIO_MONITORS__MONITOR:
+				return getMonitor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -263,21 +178,9 @@ public class GSSScenarioMonitorsImpl extends MinimalEObjectImpl.Container implem
 			case scenarioPackage.GSS_SCENARIO_MONITORS__CHARTS_FILE:
 				setChartsFile((GSSChartsCharts)newValue);
 				return;
-			case scenarioPackage.GSS_SCENARIO_MONITORS__PLOT:
-				getPlot().clear();
-				getPlot().addAll((Collection<? extends GSSScenarioPlot>)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_MONITORS__ALARM_MSG:
-				getAlarmMsg().clear();
-				getAlarmMsg().addAll((Collection<? extends GSSScenarioAlarmMsg>)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_MONITORS__MODIFY:
-				getModify().clear();
-				getModify().addAll((Collection<? extends GSSScenarioModify>)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_MONITORS__ALARM_VAL:
-				getAlarmVal().clear();
-				getAlarmVal().addAll((Collection<? extends GSSScenarioAlarmVal>)newValue);
+			case scenarioPackage.GSS_SCENARIO_MONITORS__MONITOR:
+				getMonitor().clear();
+				getMonitor().addAll((Collection<? extends GSSScenarioMonitor>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -294,17 +197,8 @@ public class GSSScenarioMonitorsImpl extends MinimalEObjectImpl.Container implem
 			case scenarioPackage.GSS_SCENARIO_MONITORS__CHARTS_FILE:
 				setChartsFile((GSSChartsCharts)null);
 				return;
-			case scenarioPackage.GSS_SCENARIO_MONITORS__PLOT:
-				getPlot().clear();
-				return;
-			case scenarioPackage.GSS_SCENARIO_MONITORS__ALARM_MSG:
-				getAlarmMsg().clear();
-				return;
-			case scenarioPackage.GSS_SCENARIO_MONITORS__MODIFY:
-				getModify().clear();
-				return;
-			case scenarioPackage.GSS_SCENARIO_MONITORS__ALARM_VAL:
-				getAlarmVal().clear();
+			case scenarioPackage.GSS_SCENARIO_MONITORS__MONITOR:
+				getMonitor().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -320,14 +214,8 @@ public class GSSScenarioMonitorsImpl extends MinimalEObjectImpl.Container implem
 		switch (featureID) {
 			case scenarioPackage.GSS_SCENARIO_MONITORS__CHARTS_FILE:
 				return chartsFile != null;
-			case scenarioPackage.GSS_SCENARIO_MONITORS__PLOT:
-				return plot != null && !plot.isEmpty();
-			case scenarioPackage.GSS_SCENARIO_MONITORS__ALARM_MSG:
-				return alarmMsg != null && !alarmMsg.isEmpty();
-			case scenarioPackage.GSS_SCENARIO_MONITORS__MODIFY:
-				return modify != null && !modify.isEmpty();
-			case scenarioPackage.GSS_SCENARIO_MONITORS__ALARM_VAL:
-				return alarmVal != null && !alarmVal.isEmpty();
+			case scenarioPackage.GSS_SCENARIO_MONITORS__MONITOR:
+				return monitor != null && !monitor.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

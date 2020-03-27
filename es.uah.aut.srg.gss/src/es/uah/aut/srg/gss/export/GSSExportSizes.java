@@ -23,9 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSizes#getSizeFromFileLength <em>Size From File Length</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSizes#getSizeFromFileLine <em>Size From File Line</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSizes#getSizeInBits <em>Size In Bits</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.export.GSSExportSizes#getSize <em>Size</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportSizes()
@@ -34,51 +32,19 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface GSSExportSizes extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Size From File Length</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.export.GSSExportSizeFromFileLength}.
+	 * Returns the value of the '<em><b>Size</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.gss.export.GSSExportSize}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Size From File Length</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Size</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Size From File Length</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportSizes_SizeFromFileLength()
+	 * @return the value of the '<em>Size</em>' containment reference list.
+	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportSizes_Size()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<GSSExportSizeFromFileLength> getSizeFromFileLength();
-
-	/**
-	 * Returns the value of the '<em><b>Size From File Line</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.export.GSSExportSizeFromFileLine}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Size From File Line</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Size From File Line</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportSizes_SizeFromFileLine()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSExportSizeFromFileLine> getSizeFromFileLine();
-
-	/**
-	 * Returns the value of the '<em><b>Size In Bits</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.export.GSSExportSizeInBits}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Size In Bits</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Size In Bits</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.export.exportPackage#getGSSExportSizes_SizeInBits()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSExportSizeInBits> getSizeInBits();
+	EList<GSSExportSize> getSize();
 
 } // GSSExportSizes

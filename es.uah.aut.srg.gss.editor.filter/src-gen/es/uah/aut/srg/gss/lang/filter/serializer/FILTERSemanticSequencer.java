@@ -109,6 +109,7 @@ public class FILTERSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSFilterAbstractBoolVar returns GSSFilterBoolVarFDIC
 	 *     GSSFilterBoolVarFDIC returns GSSFilterBoolVarFDIC
 	 *
 	 * Constraint:
@@ -116,14 +117,14 @@ public class FILTERSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 */
 	protected void sequence_GSSFilterBoolVarFDIC(ISerializationContext context, GSSFilterBoolVarFDIC semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FDIC__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FDIC__ID));
-			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FDIC__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FDIC__NAME));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__ID));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__NAME));
 			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FDIC__FIELD_REF) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FDIC__FIELD_REF));
-			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FDIC__OP) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FDIC__OP));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__OP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__OP));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSFilterBoolVarFDICAccess().getIdINTEGERParserRuleCall_4_0(), semanticObject.getId());
@@ -136,6 +137,7 @@ public class FILTERSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSFilterAbstractBoolVar returns GSSFilterBoolVarFromArrayItem
 	 *     GSSFilterBoolVarFromArrayItem returns GSSFilterBoolVarFromArrayItem
 	 *
 	 * Constraint:
@@ -155,6 +157,7 @@ public class FILTERSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSFilterAbstractBoolVar returns GSSFilterBoolVarFromGroupedArrayItem
 	 *     GSSFilterBoolVarFromGroupedArrayItem returns GSSFilterBoolVarFromGroupedArrayItem
 	 *
 	 * Constraint:
@@ -193,6 +196,7 @@ public class FILTERSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GSSFilterAbstractBoolVar returns GSSFilterBoolVar
 	 *     GSSFilterBoolVar returns GSSFilterBoolVar
 	 *
 	 * Constraint:
@@ -207,16 +211,16 @@ public class FILTERSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 */
 	protected void sequence_GSSFilterBoolVar(ISerializationContext context, GSSFilterBoolVar semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR__ID));
-			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR__NAME));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__ID));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__NAME));
 			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR__CONSTANT_TYPE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR__CONSTANT_TYPE));
 			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR__FIELD_REF) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR__FIELD_REF));
-			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR__OP) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR__OP));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__OP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__OP));
 			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR__VALUE));
 		}
@@ -270,19 +274,10 @@ public class FILTERSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         (
-	 *             uri=QualifiedName | 
-	 *             (
-	 *                 version=Version 
-	 *                 formatFile=[GSSFormatFormat|VersionedQualifiedName] 
-	 *                 (
-	 *                     BoolVar+=GSSFilterBoolVar | 
-	 *                     BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem | 
-	 *                     BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem | 
-	 *                     BoolVarFDIC+=GSSFilterBoolVarFDIC
-	 *                 )+
-	 *             )
-	 *         )+ 
+	 *         uri=QualifiedName 
+	 *         version=Version 
+	 *         formatFile=[GSSFormatFormat|VersionedQualifiedName] 
+	 *         BoolVar+=GSSFilterAbstractBoolVar+ 
 	 *         Maxterm+=GSSFilterMaxterm+
 	 *     )
 	 */
@@ -311,19 +306,10 @@ public class FILTERSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         (
-	 *             uri=QualifiedName | 
-	 *             (
-	 *                 version=Version 
-	 *                 formatFile=[GSSFormatFormat|VersionedQualifiedName] 
-	 *                 (
-	 *                     BoolVar+=GSSFilterBoolVar | 
-	 *                     BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem | 
-	 *                     BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem | 
-	 *                     BoolVarFDIC+=GSSFilterBoolVarFDIC
-	 *                 )+
-	 *             )
-	 *         )+ 
+	 *         uri=QualifiedName 
+	 *         version=Version 
+	 *         formatFile=[GSSFormatFormat|VersionedQualifiedName] 
+	 *         BoolVar+=GSSFilterAbstractBoolVar+ 
 	 *         Minterm+=GSSFilterMinterm+
 	 *     )
 	 */

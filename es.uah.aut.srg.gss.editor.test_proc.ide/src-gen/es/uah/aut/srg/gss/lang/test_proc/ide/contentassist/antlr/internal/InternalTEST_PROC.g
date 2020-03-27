@@ -1166,7 +1166,7 @@ rule__GSSTestProcActionType__Alternatives
 	|
 	(
 		{ before(grammarAccess.getGSSTestProcActionTypeAccess().getTmtc_checkingEnumLiteralDeclaration_1()); }
-		('"TMTC checking"')
+		('"tmtc_checking"')
 		{ after(grammarAccess.getGSSTestProcActionTypeAccess().getTmtc_checkingEnumLiteralDeclaration_1()); }
 	)
 	|

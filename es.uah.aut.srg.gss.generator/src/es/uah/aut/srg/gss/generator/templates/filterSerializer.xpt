@@ -7,12 +7,19 @@ GSSFilterMintermFilter «this.name» {
 	uri := «this.uri»;
 	version := «this.version»;
 	formatFile := «this.formatFile.name»(«this.formatFile.version»);
-	
-«EXPAND SerializeBoolVar FOREACH this.BoolVar -»
-«EXPAND GSSFilterBoolVarFDIC FOREACH this.BoolVarFDIC -»
+
+«EXPAND SerializeAbstractBoolVar FOREACH this.BoolVar -»
 «EXPAND SerializeMinterm FOREACH this.Minterm -»
 };
 «ENDFILE -»
+«ENDDEFINE»
+
+«DEFINE SerializeAbstractBoolVar FOR GSSFilterAbstractBoolVar -»
+«IF(this.metaType.name == "filter::GSSFilterBoolVar")-»
+«EXPAND SerializeBoolVar FOR (GSSFilterBoolVar)this -»
+«ELSEIF(this.metaType.name == "filter::GSSFilterBoolVarFDIC") -»
+«EXPAND SerializeBoolVarFDIC FOR (GSSFilterBoolVarFDIC)this -»
+«ENDIF -»
 «ENDDEFINE»
 
 «DEFINE SerializeBoolVar FOR GSSFilterBoolVar -»
@@ -33,6 +40,17 @@ GSSFilterMintermFilter «this.name» {
 «ENDIF»	};
 «ENDDEFINE»
 
+«DEFINE SerializeBoolVarFDIC FOR GSSFilterBoolVarFDIC -»
+	GSSFilterBoolVarFDIC {
+		id := «this.id»;
+		name := «this.name»;
+		FieldRef := «this.FieldRef.name»;
+		GSSFilterFieldOp {
+			type := «this.Op.type»;
+		};
+	};
+«ENDDEFINE»
+
 «DEFINE SerializeConstant FOR GSSFilterConstant -»
 		GSSFilterConstant {
 			value := «this.value»;
@@ -50,17 +68,6 @@ GSSFilterMintermFilter «this.name» {
 			fromFile := «this.fromFile»;
 			line := «this.line»;
 		};
-«ENDDEFINE»
-
-«DEFINE GSSFilterBoolVarFDIC FOR GSSFilterBoolVarFDIC -»
-	GSSFilterBoolVarFDIC {
-		id := «this.id»;
-		name := «this.name»;
-		FieldRef := «this.FieldRef.name»;
-		GSSFilterFieldOp {
-			type := «this.Op.type»;
-		};
-	};
 «ENDDEFINE»
 	
 «DEFINE SerializeMinterm FOR GSSFilterMinterm -»

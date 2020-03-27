@@ -10,20 +10,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSFormatFormatType"
         unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CSField" upperBound="-1"
-        eType="#//GSSFormatCSField" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CSFormulaField" upperBound="-1"
-        eType="#//GSSFormatCSFormulaField" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="VSField" upperBound="-1"
-        eType="#//GSSFormatVSField" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="FDICField" upperBound="-1"
-        eType="#//GSSFormatFDICField" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="VRFieldSize" upperBound="-1"
-        eType="#//GSSFormatVRFieldSize" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="AField" upperBound="-1"
-        eType="#//GSSFormatAField" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="AIField" upperBound="-1"
-        eType="#//GSSFormatAIField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Field" upperBound="-1"
+        eType="#//GSSFormatField" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSFormatFieldType">
     <eLiterals name="structured" literal="structured"/>

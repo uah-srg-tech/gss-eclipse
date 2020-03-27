@@ -28,7 +28,9 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import es.uah.aut.srg.gss.common.GSSModelFile;
 import es.uah.aut.srg.gss.export.GSSExportExport;
+import es.uah.aut.srg.gss.export.GSSExportSetting;
 import es.uah.aut.srg.gss.export.GSSExportSettingFromConst;
+import es.uah.aut.srg.gss.filter.GSSFilterBoolVar;
 import es.uah.aut.srg.gss.filter.GSSFilterConstant;
 import es.uah.aut.srg.gss.filter.GSSFilterMintermFilter;
 import es.uah.aut.srg.gss.generator.GSSGenerator;
@@ -44,8 +46,8 @@ import es.uah.aut.srg.gss.tm.GSSTMField;
 import es.uah.aut.srg.gss.tm.GSSTMPi1;
 import es.uah.aut.srg.gss.tm.tmFactory;
 import es.uah.aut.srg.gss.format.GSSFormatAField;
-import es.uah.aut.srg.gss.format.GSSFormatAIField;
 import es.uah.aut.srg.gss.format.GSSFormatCSField;
+import es.uah.aut.srg.gss.format.GSSFormatField;
 import es.uah.aut.srg.gss.format.GSSFormatFormat;
 import es.uah.aut.srg.gss.format.GSSFormatVSField;
 import es.uah.aut.srg.gss.xtext.xml.XMLGeneratorUtil;
@@ -127,34 +129,42 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 		Map<String, String> YID_tm_type_inverse = new HashMap<String, String>();
 		if(useTypeInsteadOfId) {
 			for (GSSExportExport export : tcExports) {
-				String typeSubtype = "tc_";
+				String tcName = "tc_";
 				if(export.getName().compareTo("WrongPacket") == 0) {
-					typeSubtype += "epd_0_0";
+					tcName += "epd_0_0";
 				}
 				else {
 					if(Integer.parseInt(export.getName().substring(5, 8)) >= 500) {
-						typeSubtype += "epd_";
+						tcName += "epd_";
 					} else {
-						typeSubtype += "sis_";
+						tcName += "sis_";
 					}
-					typeSubtype += export.getSettings().getSettingFromConst().get(8).getValue() + "_"
-							 + export.getSettings().getSettingFromConst().get(9).getValue();
+					String type = null, subtype = null; 
+					for(GSSExportSetting setting : export.getSettings().getSetting()) {
+						if(setting.getToFieldRef().getName().compareTo("Packet_Type") == 0) {
+							type = ((GSSExportSettingFromConst)setting).getValue();
+						}
+						else if(setting.getToFieldRef().getName().compareTo("Packet_Subtype") == 0) {
+							subtype = ((GSSExportSettingFromConst)setting).getValue();
+						}
+					}
+					tcName += type + "_" + subtype;
 					//warning! SIS has several same type+subtype for different tcs
 					//change the name of one at least
 					if(export.getName().compareTo("ZID52377") == 0) {//tc 129.152 1W
-						typeSubtype += "_w";
+						tcName += "_w";
 					}
 					else if(export.getName().compareTo("ZID52378") == 0) {//tc 129.152 1L
-						typeSubtype += "_l";
+						tcName += "_l";
 					}
 				}
-				ZID_tc_type.put(export.getName(), typeSubtype);
+				ZID_tc_type.put(export.getName(), tcName);
 			}
 
 			Map<String, String> PI1_Val = new HashMap<String, String>();
 			for (GSSFilterMintermFilter filterTopLevel : filtersTopLevel.values()) {
 				PI1_Val.put(filterTopLevel.getName(),
-						((GSSFilterConstant)filterTopLevel.getBoolVar().get(0).getValue()).getValue());
+						((GSSFilterConstant)((GSSFilterBoolVar)filterTopLevel.getBoolVar().get(0)).getValue()).getValue());
 			}
 			for (GSSFilterMintermFilter filterBottomLevel : filtersBottomLevel) {
 				if(filterBottomLevel.getName().substring(0, 3).compareTo("EPD") == 0) {
@@ -166,8 +176,8 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				} else {
 					typeSubtype += "sis_";
 				}
-				typeSubtype += ((GSSFilterConstant)filterBottomLevel.getBoolVar().get(1).getValue()).getValue() + "_"
-						 + ((GSSFilterConstant)filterBottomLevel.getBoolVar().get(2).getValue()).getValue();
+				typeSubtype += ((GSSFilterConstant)((GSSFilterBoolVar)filterBottomLevel.getBoolVar().get(1)).getValue()).getValue() + "_"
+						 + ((GSSFilterConstant)((GSSFilterBoolVar)filterBottomLevel.getBoolVar().get(2)).getValue()).getValue();
 				if(PI1_Val.get(filterBottomLevel.getName()) != null) {
 					typeSubtype += "_" + PI1_Val.get(filterBottomLevel.getName());
 				}
@@ -240,9 +250,9 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				export.setName(ZID_tc_type.get(export.getName())); 
 			    	
 			String ACK = null;
-			for(GSSExportSettingFromConst setting : export.getSettings().getSettingFromConst()) {
+			for(GSSExportSetting setting : export.getSettings().getSetting()) {
 				if(setting.getToFieldRef().getName().compareTo("ACK") == 0) {
-					ACK = setting.getValue();
+					ACK = ((GSSExportSettingFromConst)setting).getValue();
 				}
 			}
 	    	if(ACK.compareTo("9") == 0) {
@@ -562,59 +572,39 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				
 				//get fields
 				GSSFormatFormat tcFormat = export.getFrom();
-				if((tcFormat.getCSField().size() != 0) || (tcFormat.getVSField().size() != 0) ||
-						(tcFormat.getAField().size() != 0)) {
+				int cFields = 0, vFields = 0, aFields = 0;
+				for(GSSFormatField field : tcFormat.getField()) {
+					if(field instanceof GSSFormatCSField) {
+						cFields++;
+					}
+					else if(field instanceof GSSFormatVSField) {
+						vFields++;
+					}
+					else if(field instanceof GSSFormatAField) {
+						aFields++;
+					}
+				}
+				if((cFields != 0) || (vFields != 0) || (aFields != 0)) {
 					gssTc.setLevels("2");
 					gssTc.setLevel1_format(tcFormat);
-					
-					for(GSSFormatCSField GSSFormatCSField : tcFormat.getCSField()) {
-						if(GSSFormatCSField.getName().compareTo("ApplicationData") == 0) {
+
+					for(GSSFormatField field : tcFormat.getField()) {
+						if(field.getName().compareTo("ApplicationData") == 0) {
 							continue;
 						}
-						GSSTCField gssTcCSField = tcFactory.eINSTANCE.createGSSTCField();
-						gssTcCSField.setGssField(GSSFormatCSField);
-						if(GSSFormatCSField.getDescription() != null) {
-							gssTcCSField.setName(GSSFormatCSField.getDescription());
+						GSSTCField gssTcField = tcFactory.eINSTANCE.createGSSTCField();
+						gssTcField.setGssField(field);
+						if(field.getDescription() != null) {
+							gssTcField.setName(field.getDescription());
 						} else {
-							gssTcCSField.setName(GSSFormatCSField.getName());
+							gssTcField.setName(field.getName());
 						}
-						if(tcParamEnum.get((GSSFormatCSField.getName())) != null) {
-							gssTcCSField.setEnumRef(tcEnums.get(tcParamEnum.get(GSSFormatCSField.getName())));
+						if(field instanceof GSSFormatCSField) {
+							if(tcParamEnum.get((field.getName())) != null) {
+								gssTcField.setEnumRef(tcEnums.get(tcParamEnum.get(field.getName())));
+							}
 						}
-						gssTc.getGssFields().add(gssTcCSField);
-					}
-					for(GSSFormatVSField GSSFormatVSField : tcFormat.getVSField()) {
-						if(GSSFormatVSField.getName().compareTo("ApplicationData") == 0) {
-							continue;
-						}
-						GSSTCField gssTcVSField = tcFactory.eINSTANCE.createGSSTCField();
-						gssTcVSField.setGssField(GSSFormatVSField);
-						if(GSSFormatVSField.getDescription() != null) {
-							gssTcVSField.setName(GSSFormatVSField.getDescription());
-						} else {
-							gssTcVSField.setName(GSSFormatVSField.getName());
-						}
-						gssTc.getGssFields().add(gssTcVSField);
-					}
-					for(GSSFormatAField GSSFormatAField : tcFormat.getAField()) {
-						GSSTCField gssTcAField = tcFactory.eINSTANCE.createGSSTCField();
-						gssTcAField.setGssField(GSSFormatAField);
-						if(GSSFormatAField.getDescription() != null) {
-							gssTcAField.setName(GSSFormatAField.getDescription());
-						} else {
-							gssTcAField.setName(GSSFormatAField.getName());
-						}
-						gssTc.getGssFields().add(gssTcAField);
-					}
-					for(GSSFormatAIField GSSFormatAIField : tcFormat.getAIField()) {
-						GSSTCField gssTcAIField = tcFactory.eINSTANCE.createGSSTCField();
-						gssTcAIField.setGssField(GSSFormatAIField);
-						if(GSSFormatAIField.getDescription() != null) {
-							gssTcAIField.setName(GSSFormatAIField.getDescription());
-						} else {
-							gssTcAIField.setName(GSSFormatAIField.getName());
-						}
-						gssTc.getGssFields().add(gssTcAIField);
+						gssTc.getGssFields().add(gssTcField);
 					}
 				}
 				else {
@@ -710,77 +700,55 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 				//get pi1_name
 				GSSFilterMintermFilter filterTopLevel = filtersTopLevel.get(YID_tm_type_inverse.get(gssTmOutputName));
 				if(filterTopLevel != null) {
-					pi1_name = filterTopLevel.getBoolVar().get(0).getFieldRef().getName();
+					pi1_name = ((GSSFilterBoolVar)filterTopLevel.getBoolVar().get(0)).getFieldRef().getName();
 					gssTm.setLevel1_filter(filterTopLevel);
 				};
 				
 				//get fields
 				GSSFormatFormat tmFormat = tmFormats.get(YID_tm_type_inverse.get(gssTmOutputName));
 				gssTm.setLevel1_format(tmFormat);
-				for(GSSFormatCSField GSSFormatCSField : tmFormat.getCSField()) {
-					if(GSSFormatCSField.getName().compareTo("SourceData") == 0){
+				int cFields = 0, vFields = 0, aFields = 0;
+				for(GSSFormatField field : tmFormat.getField()) {
+					if(field instanceof GSSFormatCSField) {
+						cFields++;
+					}
+					else if(field instanceof GSSFormatVSField) {
+						vFields++;
+					}
+					else if(field instanceof GSSFormatAField) {
+						aFields++;
+					}
+					if(field.getName().compareTo("SourceData") == 0){
 						continue;
 					}
-					else if(GSSFormatCSField.getName().compareTo(pi1_name) == 0) {
+					else if(field.getName().compareTo(pi1_name) == 0) {
 						GSSTMPi1 gssTmPi1 = tmFactory.eINSTANCE.createGSSTMPi1();
 						gssTmPi1.setVal(pi1_val);
-						gssTmPi1.setGssField(GSSFormatCSField);
-						if(GSSFormatCSField.getDescription() != null) {
-							gssTmPi1.setName(GSSFormatCSField.getDescription());
+						gssTmPi1.setGssField(field);
+						if(field.getDescription() != null) {
+							gssTmPi1.setName(field.getDescription());
 						} else {
-							gssTmPi1.setName(GSSFormatCSField.getName());
+							gssTmPi1.setName(field.getName());
 						}
 						gssTm.setGssPi1(gssTmPi1);
 					}
 					else {
 						GSSTMField gssTmCSField = tmFactory.eINSTANCE.createGSSTMField();
-						gssTmCSField.setGssField(GSSFormatCSField);
-						if(GSSFormatCSField.getDescription() != null) {
-							gssTmCSField.setName(GSSFormatCSField.getDescription());
+						gssTmCSField.setGssField(field);
+						if(field.getDescription() != null) {
+							gssTmCSField.setName(field.getDescription());
 						} else {
-							gssTmCSField.setName(GSSFormatCSField.getName());
+							gssTmCSField.setName(field.getName());
 						}
-						if(tmParamEnum.get((GSSFormatCSField.getName())) != null) {
-							gssTmCSField.setEnumRef(tmEnums.get(tmParamEnum.get(GSSFormatCSField.getName())));
+						if(field instanceof GSSFormatCSField) {
+							if(tmParamEnum.get((field.getName())) != null) {
+								gssTmCSField.setEnumRef(tmEnums.get(tmParamEnum.get(field.getName())));
+							}
 						}
 						gssTm.getGssFields().add(gssTmCSField);
 					}
 				}
-				for(GSSFormatVSField GSSFormatVSField : tmFormat.getVSField()) {
-					if(GSSFormatVSField.getName().compareTo("SourceData") == 0) {
-						continue;
-					}
-					GSSTMField gssTmVSField = tmFactory.eINSTANCE.createGSSTMField();
-					gssTmVSField.setGssField(GSSFormatVSField);
-					if(GSSFormatVSField.getDescription() != null) {
-						gssTmVSField.setName(GSSFormatVSField.getDescription());
-					} else {
-						gssTmVSField.setName(GSSFormatVSField.getName());
-					}
-					gssTm.getGssFields().add(gssTmVSField);
-				}
-				for(GSSFormatAField GSSFormatAField : tmFormat.getAField()) {
-					GSSTMField gssTmAField = tmFactory.eINSTANCE.createGSSTMField();
-					gssTmAField.setGssField(GSSFormatAField);
-					if(GSSFormatAField.getDescription() != null) {
-						gssTmAField.setName(GSSFormatAField.getDescription());
-					} else {
-						gssTmAField.setName(GSSFormatAField.getName());
-					}
-					gssTm.getGssFields().add(gssTmAField);
-				}
-				for(GSSFormatAIField GSSFormatAIField : tmFormat.getAIField()) {
-					GSSTMField gssTmAIField = tmFactory.eINSTANCE.createGSSTMField();
-					gssTmAIField.setGssField(GSSFormatAIField);
-					if(GSSFormatAIField.getDescription() != null) {
-						gssTmAIField.setName(GSSFormatAIField.getDescription());
-					} else {
-						gssTmAIField.setName(GSSFormatAIField.getName());
-					}
-					gssTm.getGssFields().add(gssTmAIField);
-				}
-				if((tmFormat.getCSField().size() != 0) || (tmFormat.getVSField().size() != 0) ||
-						(tmFormat.getAField().size() != 0)) {
+				if((cFields != 0) || (vFields != 0) || (aFields != 0)) {
 					gssTm.setLevels("2");
 				} else {
 					gssTm.setLevels("1");

@@ -278,25 +278,19 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Action cGSSExportSizesAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cGSSExportSizesKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
-		private final Assignment cSizeFromFileLengthAssignment_3_0 = (Assignment)cAlternatives_3.eContents().get(0);
-		private final RuleCall cSizeFromFileLengthGSSExportSizeFromFileLengthParserRuleCall_3_0_0 = (RuleCall)cSizeFromFileLengthAssignment_3_0.eContents().get(0);
-		private final Assignment cSizeFromFileLineAssignment_3_1 = (Assignment)cAlternatives_3.eContents().get(1);
-		private final RuleCall cSizeFromFileLineGSSExportSizeFromFileLineParserRuleCall_3_1_0 = (RuleCall)cSizeFromFileLineAssignment_3_1.eContents().get(0);
-		private final Assignment cSizeInBitsAssignment_3_2 = (Assignment)cAlternatives_3.eContents().get(2);
-		private final RuleCall cSizeInBitsGSSExportSizeInBitsParserRuleCall_3_2_0 = (RuleCall)cSizeInBitsAssignment_3_2.eContents().get(0);
+		private final Assignment cSizeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSizeGSSExportSizeParserRuleCall_3_0 = (RuleCall)cSizeAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//GSSExportSizes:
 		//	{GSSExportSizes}
-		//	'GSSExportSizes' '{' (sizeFromFileLength+=GSSExportSizeFromFileLength | sizeFromFileLine+=GSSExportSizeFromFileLine |
-		//	sizeInBits+=GSSExportSizeInBits)+
+		//	'GSSExportSizes' '{'
+		//	size+=GSSExportSize+
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{GSSExportSizes} 'GSSExportSizes' '{' (sizeFromFileLength+=GSSExportSizeFromFileLength |
-		//sizeFromFileLine+=GSSExportSizeFromFileLine | sizeInBits+=GSSExportSizeInBits)+ '}' ';'
+		//{GSSExportSizes} 'GSSExportSizes' '{' size+=GSSExportSize+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//{GSSExportSizes}
@@ -308,33 +302,40 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//(sizeFromFileLength+=GSSExportSizeFromFileLength | sizeFromFileLine+=GSSExportSizeFromFileLine |
-		//sizeInBits+=GSSExportSizeInBits)+
-		public Alternatives getAlternatives_3() { return cAlternatives_3; }
+		//size+=GSSExportSize+
+		public Assignment getSizeAssignment_3() { return cSizeAssignment_3; }
 		
-		//sizeFromFileLength+=GSSExportSizeFromFileLength
-		public Assignment getSizeFromFileLengthAssignment_3_0() { return cSizeFromFileLengthAssignment_3_0; }
-		
-		//GSSExportSizeFromFileLength
-		public RuleCall getSizeFromFileLengthGSSExportSizeFromFileLengthParserRuleCall_3_0_0() { return cSizeFromFileLengthGSSExportSizeFromFileLengthParserRuleCall_3_0_0; }
-		
-		//sizeFromFileLine+=GSSExportSizeFromFileLine
-		public Assignment getSizeFromFileLineAssignment_3_1() { return cSizeFromFileLineAssignment_3_1; }
-		
-		//GSSExportSizeFromFileLine
-		public RuleCall getSizeFromFileLineGSSExportSizeFromFileLineParserRuleCall_3_1_0() { return cSizeFromFileLineGSSExportSizeFromFileLineParserRuleCall_3_1_0; }
-		
-		//sizeInBits+=GSSExportSizeInBits
-		public Assignment getSizeInBitsAssignment_3_2() { return cSizeInBitsAssignment_3_2; }
-		
-		//GSSExportSizeInBits
-		public RuleCall getSizeInBitsGSSExportSizeInBitsParserRuleCall_3_2_0() { return cSizeInBitsGSSExportSizeInBitsParserRuleCall_3_2_0; }
+		//GSSExportSize
+		public RuleCall getSizeGSSExportSizeParserRuleCall_3_0() { return cSizeGSSExportSizeParserRuleCall_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+	}
+	public class GSSExportSizeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSize");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cGSSExportSizeFromFileLengthParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGSSExportSizeFromFileLineParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cGSSExportSizeInBitsParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//GSSExportSize:
+		//	GSSExportSizeFromFileLength | GSSExportSizeFromFileLine | GSSExportSizeInBits;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//GSSExportSizeFromFileLength | GSSExportSizeFromFileLine | GSSExportSizeInBits
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//GSSExportSizeFromFileLength
+		public RuleCall getGSSExportSizeFromFileLengthParserRuleCall_0() { return cGSSExportSizeFromFileLengthParserRuleCall_0; }
+		
+		//GSSExportSizeFromFileLine
+		public RuleCall getGSSExportSizeFromFileLineParserRuleCall_1() { return cGSSExportSizeFromFileLineParserRuleCall_1; }
+		
+		//GSSExportSizeInBits
+		public RuleCall getGSSExportSizeInBitsParserRuleCall_2() { return cGSSExportSizeInBitsParserRuleCall_2; }
 	}
 	public class GSSExportSizeFromFileLengthElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSizeFromFileLength");
@@ -720,34 +721,19 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Action cGSSExportSettingsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cGSSExportSettingsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
-		private final Assignment cSettingFromConstAssignment_3_0 = (Assignment)cAlternatives_3.eContents().get(0);
-		private final RuleCall cSettingFromConstGSSExportSettingFromConstParserRuleCall_3_0_0 = (RuleCall)cSettingFromConstAssignment_3_0.eContents().get(0);
-		private final Assignment cSettingFromSizeAssignment_3_1 = (Assignment)cAlternatives_3.eContents().get(1);
-		private final RuleCall cSettingFromSizeGSSExportSettingFromSizeParserRuleCall_3_1_0 = (RuleCall)cSettingFromSizeAssignment_3_1.eContents().get(0);
-		private final Assignment cSettingFromFileAssignment_3_2 = (Assignment)cAlternatives_3.eContents().get(2);
-		private final RuleCall cSettingFromFileGSSExportSettingFromFileParserRuleCall_3_2_0 = (RuleCall)cSettingFromFileAssignment_3_2.eContents().get(0);
-		private final Assignment cSettingFromFieldAssignment_3_3 = (Assignment)cAlternatives_3.eContents().get(3);
-		private final RuleCall cSettingFromFieldGSSExportSettingFromFieldParserRuleCall_3_3_0 = (RuleCall)cSettingFromFieldAssignment_3_3.eContents().get(0);
-		private final Assignment cSettingAIFromConstAssignment_3_4 = (Assignment)cAlternatives_3.eContents().get(4);
-		private final RuleCall cSettingAIFromConstGSSExportSettingAIFromConstParserRuleCall_3_4_0 = (RuleCall)cSettingAIFromConstAssignment_3_4.eContents().get(0);
-		private final Assignment cSettingAIFromFileAssignment_3_5 = (Assignment)cAlternatives_3.eContents().get(5);
-		private final RuleCall cSettingAIFromFileGSSExportSettingAIFromFileParserRuleCall_3_5_0 = (RuleCall)cSettingAIFromFileAssignment_3_5.eContents().get(0);
+		private final Assignment cSettingAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSettingGSSExportSettingParserRuleCall_3_0 = (RuleCall)cSettingAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//GSSExportSettings:
 		//	{GSSExportSettings}
-		//	'GSSExportSettings' '{' (settingFromConst+=GSSExportSettingFromConst | settingFromSize+=GSSExportSettingFromSize |
-		//	settingFromFile+=GSSExportSettingFromFile | settingFromField+=GSSExportSettingFromField |
-		//	settingAIFromConst+=GSSExportSettingAIFromConst | settingAIFromFile+=GSSExportSettingAIFromFile)*
+		//	'GSSExportSettings' '{'
+		//	setting+=GSSExportSetting*
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{GSSExportSettings} 'GSSExportSettings' '{' (settingFromConst+=GSSExportSettingFromConst |
-		//settingFromSize+=GSSExportSettingFromSize | settingFromFile+=GSSExportSettingFromFile |
-		//settingFromField+=GSSExportSettingFromField | settingAIFromConst+=GSSExportSettingAIFromConst |
-		//settingAIFromFile+=GSSExportSettingAIFromFile)* '}' ';'
+		//{GSSExportSettings} 'GSSExportSettings' '{' setting+=GSSExportSetting* '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//{GSSExportSettings}
@@ -759,52 +745,54 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//(settingFromConst+=GSSExportSettingFromConst | settingFromSize+=GSSExportSettingFromSize |
-		//settingFromFile+=GSSExportSettingFromFile | settingFromField+=GSSExportSettingFromField |
-		//settingAIFromConst+=GSSExportSettingAIFromConst | settingAIFromFile+=GSSExportSettingAIFromFile)*
-		public Alternatives getAlternatives_3() { return cAlternatives_3; }
+		//setting+=GSSExportSetting*
+		public Assignment getSettingAssignment_3() { return cSettingAssignment_3; }
 		
-		//settingFromConst+=GSSExportSettingFromConst
-		public Assignment getSettingFromConstAssignment_3_0() { return cSettingFromConstAssignment_3_0; }
-		
-		//GSSExportSettingFromConst
-		public RuleCall getSettingFromConstGSSExportSettingFromConstParserRuleCall_3_0_0() { return cSettingFromConstGSSExportSettingFromConstParserRuleCall_3_0_0; }
-		
-		//settingFromSize+=GSSExportSettingFromSize
-		public Assignment getSettingFromSizeAssignment_3_1() { return cSettingFromSizeAssignment_3_1; }
-		
-		//GSSExportSettingFromSize
-		public RuleCall getSettingFromSizeGSSExportSettingFromSizeParserRuleCall_3_1_0() { return cSettingFromSizeGSSExportSettingFromSizeParserRuleCall_3_1_0; }
-		
-		//settingFromFile+=GSSExportSettingFromFile
-		public Assignment getSettingFromFileAssignment_3_2() { return cSettingFromFileAssignment_3_2; }
-		
-		//GSSExportSettingFromFile
-		public RuleCall getSettingFromFileGSSExportSettingFromFileParserRuleCall_3_2_0() { return cSettingFromFileGSSExportSettingFromFileParserRuleCall_3_2_0; }
-		
-		//settingFromField+=GSSExportSettingFromField
-		public Assignment getSettingFromFieldAssignment_3_3() { return cSettingFromFieldAssignment_3_3; }
-		
-		//GSSExportSettingFromField
-		public RuleCall getSettingFromFieldGSSExportSettingFromFieldParserRuleCall_3_3_0() { return cSettingFromFieldGSSExportSettingFromFieldParserRuleCall_3_3_0; }
-		
-		//settingAIFromConst+=GSSExportSettingAIFromConst
-		public Assignment getSettingAIFromConstAssignment_3_4() { return cSettingAIFromConstAssignment_3_4; }
-		
-		//GSSExportSettingAIFromConst
-		public RuleCall getSettingAIFromConstGSSExportSettingAIFromConstParserRuleCall_3_4_0() { return cSettingAIFromConstGSSExportSettingAIFromConstParserRuleCall_3_4_0; }
-		
-		//settingAIFromFile+=GSSExportSettingAIFromFile
-		public Assignment getSettingAIFromFileAssignment_3_5() { return cSettingAIFromFileAssignment_3_5; }
-		
-		//GSSExportSettingAIFromFile
-		public RuleCall getSettingAIFromFileGSSExportSettingAIFromFileParserRuleCall_3_5_0() { return cSettingAIFromFileGSSExportSettingAIFromFileParserRuleCall_3_5_0; }
+		//GSSExportSetting
+		public RuleCall getSettingGSSExportSettingParserRuleCall_3_0() { return cSettingGSSExportSettingParserRuleCall_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+	}
+	public class GSSExportSettingElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSetting");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cGSSExportSettingFromConstParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGSSExportSettingFromSizeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cGSSExportSettingFromFileParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cGSSExportSettingFromFieldParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cGSSExportSettingAIFromConstParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cGSSExportSettingAIFromFileParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		
+		//GSSExportSetting:
+		//	GSSExportSettingFromConst | GSSExportSettingFromSize | GSSExportSettingFromFile | GSSExportSettingFromField |
+		//	GSSExportSettingAIFromConst | GSSExportSettingAIFromFile;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//GSSExportSettingFromConst | GSSExportSettingFromSize | GSSExportSettingFromFile | GSSExportSettingFromField |
+		//GSSExportSettingAIFromConst | GSSExportSettingAIFromFile
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//GSSExportSettingFromConst
+		public RuleCall getGSSExportSettingFromConstParserRuleCall_0() { return cGSSExportSettingFromConstParserRuleCall_0; }
+		
+		//GSSExportSettingFromSize
+		public RuleCall getGSSExportSettingFromSizeParserRuleCall_1() { return cGSSExportSettingFromSizeParserRuleCall_1; }
+		
+		//GSSExportSettingFromFile
+		public RuleCall getGSSExportSettingFromFileParserRuleCall_2() { return cGSSExportSettingFromFileParserRuleCall_2; }
+		
+		//GSSExportSettingFromField
+		public RuleCall getGSSExportSettingFromFieldParserRuleCall_3() { return cGSSExportSettingFromFieldParserRuleCall_3; }
+		
+		//GSSExportSettingAIFromConst
+		public RuleCall getGSSExportSettingAIFromConstParserRuleCall_4() { return cGSSExportSettingAIFromConstParserRuleCall_4; }
+		
+		//GSSExportSettingAIFromFile
+		public RuleCall getGSSExportSettingAIFromFileParserRuleCall_5() { return cGSSExportSettingAIFromFileParserRuleCall_5; }
 	}
 	public class GSSExportSettingFromConstElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.export.EXPORT.GSSExportSettingFromConst");
@@ -1776,10 +1764,12 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSExportExportElements pGSSExportExport;
 	private final GSSExportSizesElements pGSSExportSizes;
 	private final GSSExportUnitElements eGSSExportUnit;
+	private final GSSExportSizeElements pGSSExportSize;
 	private final GSSExportSizeFromFileLengthElements pGSSExportSizeFromFileLength;
 	private final GSSExportSizeFromFileLineElements pGSSExportSizeFromFileLine;
 	private final GSSExportSizeInBitsElements pGSSExportSizeInBits;
 	private final GSSExportSettingsElements pGSSExportSettings;
+	private final GSSExportSettingElements pGSSExportSetting;
 	private final GSSExportSettingFromConstElements pGSSExportSettingFromConst;
 	private final GSSExportSettingFromSizeElements pGSSExportSettingFromSize;
 	private final GSSExportSettingFromFileElements pGSSExportSettingFromFile;
@@ -1809,10 +1799,12 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGSSExportExport = new GSSExportExportElements();
 		this.pGSSExportSizes = new GSSExportSizesElements();
 		this.eGSSExportUnit = new GSSExportUnitElements();
+		this.pGSSExportSize = new GSSExportSizeElements();
 		this.pGSSExportSizeFromFileLength = new GSSExportSizeFromFileLengthElements();
 		this.pGSSExportSizeFromFileLine = new GSSExportSizeFromFileLineElements();
 		this.pGSSExportSizeInBits = new GSSExportSizeInBitsElements();
 		this.pGSSExportSettings = new GSSExportSettingsElements();
+		this.pGSSExportSetting = new GSSExportSettingElements();
 		this.pGSSExportSettingFromConst = new GSSExportSettingFromConstElements();
 		this.pGSSExportSettingFromSize = new GSSExportSettingFromSizeElements();
 		this.pGSSExportSettingFromFile = new GSSExportSettingFromFileElements();
@@ -1897,8 +1889,8 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSExportSizes:
 	//	{GSSExportSizes}
-	//	'GSSExportSizes' '{' (sizeFromFileLength+=GSSExportSizeFromFileLength | sizeFromFileLine+=GSSExportSizeFromFileLine |
-	//	sizeInBits+=GSSExportSizeInBits)+
+	//	'GSSExportSizes' '{'
+	//	size+=GSSExportSize+
 	//	'}' ';';
 	public GSSExportSizesElements getGSSExportSizesAccess() {
 		return pGSSExportSizes;
@@ -1916,6 +1908,16 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public EnumRule getGSSExportUnitRule() {
 		return getGSSExportUnitAccess().getRule();
+	}
+	
+	//GSSExportSize:
+	//	GSSExportSizeFromFileLength | GSSExportSizeFromFileLine | GSSExportSizeInBits;
+	public GSSExportSizeElements getGSSExportSizeAccess() {
+		return pGSSExportSize;
+	}
+	
+	public ParserRule getGSSExportSizeRule() {
+		return getGSSExportSizeAccess().getRule();
 	}
 	
 	//GSSExportSizeFromFileLength:
@@ -1960,9 +1962,8 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSExportSettings:
 	//	{GSSExportSettings}
-	//	'GSSExportSettings' '{' (settingFromConst+=GSSExportSettingFromConst | settingFromSize+=GSSExportSettingFromSize |
-	//	settingFromFile+=GSSExportSettingFromFile | settingFromField+=GSSExportSettingFromField |
-	//	settingAIFromConst+=GSSExportSettingAIFromConst | settingAIFromFile+=GSSExportSettingAIFromFile)*
+	//	'GSSExportSettings' '{'
+	//	setting+=GSSExportSetting*
 	//	'}' ';';
 	public GSSExportSettingsElements getGSSExportSettingsAccess() {
 		return pGSSExportSettings;
@@ -1970,6 +1971,17 @@ public class EXPORTGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getGSSExportSettingsRule() {
 		return getGSSExportSettingsAccess().getRule();
+	}
+	
+	//GSSExportSetting:
+	//	GSSExportSettingFromConst | GSSExportSettingFromSize | GSSExportSettingFromFile | GSSExportSettingFromField |
+	//	GSSExportSettingAIFromConst | GSSExportSettingAIFromFile;
+	public GSSExportSettingElements getGSSExportSettingAccess() {
+		return pGSSExportSetting;
+	}
+	
+	public ParserRule getGSSExportSettingRule() {
+		return getGSSExportSettingAccess().getRule();
 	}
 	
 	//GSSExportSettingFromConst:

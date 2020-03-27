@@ -157,6 +157,31 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleGSSFilterAbstractBoolVar
+entryRuleGSSFilterAbstractBoolVar
+:
+{ before(grammarAccess.getGSSFilterAbstractBoolVarRule()); }
+	 ruleGSSFilterAbstractBoolVar
+{ after(grammarAccess.getGSSFilterAbstractBoolVarRule()); } 
+	 EOF 
+;
+
+// Rule GSSFilterAbstractBoolVar
+ruleGSSFilterAbstractBoolVar 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getGSSFilterAbstractBoolVarAccess().getAlternatives()); }
+		(rule__GSSFilterAbstractBoolVar__Alternatives)
+		{ after(grammarAccess.getGSSFilterAbstractBoolVarAccess().getAlternatives()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Entry rule entryRuleGSSFilterMintermFilter
 entryRuleGSSFilterMintermFilter
 :
@@ -201,31 +226,6 @@ ruleGSSFilterBoolVar
 		{ before(grammarAccess.getGSSFilterBoolVarAccess().getGroup()); }
 		(rule__GSSFilterBoolVar__Group__0)
 		{ after(grammarAccess.getGSSFilterBoolVarAccess().getGroup()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-// Entry rule entryRuleGSSFilterValue
-entryRuleGSSFilterValue
-:
-{ before(grammarAccess.getGSSFilterValueRule()); }
-	 ruleGSSFilterValue
-{ after(grammarAccess.getGSSFilterValueRule()); } 
-	 EOF 
-;
-
-// Rule GSSFilterValue
-ruleGSSFilterValue 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getGSSFilterValueAccess().getAlternatives()); }
-		(rule__GSSFilterValue__Alternatives)
-		{ after(grammarAccess.getGSSFilterValueAccess().getAlternatives()); }
 	)
 ;
 finally {
@@ -301,6 +301,31 @@ ruleGSSFilterBoolVarFDIC
 		{ before(grammarAccess.getGSSFilterBoolVarFDICAccess().getGroup()); }
 		(rule__GSSFilterBoolVarFDIC__Group__0)
 		{ after(grammarAccess.getGSSFilterBoolVarFDICAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleGSSFilterValue
+entryRuleGSSFilterValue
+:
+{ before(grammarAccess.getGSSFilterValueRule()); }
+	 ruleGSSFilterValue
+{ after(grammarAccess.getGSSFilterValueRule()); } 
+	 EOF 
+;
+
+// Rule GSSFilterValue
+ruleGSSFilterValue 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getGSSFilterValueAccess().getAlternatives()); }
+		(rule__GSSFilterValue__Alternatives)
+		{ after(grammarAccess.getGSSFilterValueAccess().getAlternatives()); }
 	)
 ;
 finally {
@@ -676,93 +701,33 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMaxtermFilter__Alternatives_3_1_5
+rule__GSSFilterAbstractBoolVar__Alternatives
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarAssignment_3_1_5_0()); }
-		(rule__GSSFilterMaxtermFilter__BoolVarAssignment_3_1_5_0)
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarAssignment_3_1_5_0()); }
+		{ before(grammarAccess.getGSSFilterAbstractBoolVarAccess().getGSSFilterBoolVarParserRuleCall_0()); }
+		ruleGSSFilterBoolVar
+		{ after(grammarAccess.getGSSFilterAbstractBoolVarAccess().getGSSFilterBoolVarParserRuleCall_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromArrayItemAssignment_3_1_5_1()); }
-		(rule__GSSFilterMaxtermFilter__BoolVarFromArrayItemAssignment_3_1_5_1)
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromArrayItemAssignment_3_1_5_1()); }
+		{ before(grammarAccess.getGSSFilterAbstractBoolVarAccess().getGSSFilterBoolVarFromArrayItemParserRuleCall_1()); }
+		ruleGSSFilterBoolVarFromArrayItem
+		{ after(grammarAccess.getGSSFilterAbstractBoolVarAccess().getGSSFilterBoolVarFromArrayItemParserRuleCall_1()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromGroupedArrayItemAssignment_3_1_5_2()); }
-		(rule__GSSFilterMaxtermFilter__BoolVarFromGroupedArrayItemAssignment_3_1_5_2)
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromGroupedArrayItemAssignment_3_1_5_2()); }
+		{ before(grammarAccess.getGSSFilterAbstractBoolVarAccess().getGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_2()); }
+		ruleGSSFilterBoolVarFromGroupedArrayItem
+		{ after(grammarAccess.getGSSFilterAbstractBoolVarAccess().getGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_2()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFDICAssignment_3_1_5_3()); }
-		(rule__GSSFilterMaxtermFilter__BoolVarFDICAssignment_3_1_5_3)
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFDICAssignment_3_1_5_3()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Alternatives_3_1_5
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarAssignment_3_1_5_0()); }
-		(rule__GSSFilterMintermFilter__BoolVarAssignment_3_1_5_0)
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarAssignment_3_1_5_0()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromArrayItemAssignment_3_1_5_1()); }
-		(rule__GSSFilterMintermFilter__BoolVarFromArrayItemAssignment_3_1_5_1)
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromArrayItemAssignment_3_1_5_1()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromGroupedArrayItemAssignment_3_1_5_2()); }
-		(rule__GSSFilterMintermFilter__BoolVarFromGroupedArrayItemAssignment_3_1_5_2)
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromGroupedArrayItemAssignment_3_1_5_2()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFDICAssignment_3_1_5_3()); }
-		(rule__GSSFilterMintermFilter__BoolVarFDICAssignment_3_1_5_3)
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFDICAssignment_3_1_5_3()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterValue__Alternatives
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterValueAccess().getGSSFilterConstantParserRuleCall_0()); }
-		ruleGSSFilterConstant
-		{ after(grammarAccess.getGSSFilterValueAccess().getGSSFilterConstantParserRuleCall_0()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectParserRuleCall_1()); }
-		ruleGSSFilterSelect
-		{ after(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectParserRuleCall_1()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectLineParserRuleCall_2()); }
-		ruleGSSFilterSelectLine
-		{ after(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectLineParserRuleCall_2()); }
+		{ before(grammarAccess.getGSSFilterAbstractBoolVarAccess().getGSSFilterBoolVarFDICParserRuleCall_3()); }
+		ruleGSSFilterBoolVarFDIC
+		{ after(grammarAccess.getGSSFilterAbstractBoolVarAccess().getGSSFilterBoolVarFDICParserRuleCall_3()); }
 	)
 ;
 finally {
@@ -817,6 +782,33 @@ rule__GSSFilterBoolVarFromGroupedArrayItem__Alternatives_23
 		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineAssignment_23_2()); }
 		(rule__GSSFilterBoolVarFromGroupedArrayItem__SelectLineAssignment_23_2)
 		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineAssignment_23_2()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterValue__Alternatives
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getGSSFilterValueAccess().getGSSFilterConstantParserRuleCall_0()); }
+		ruleGSSFilterConstant
+		{ after(grammarAccess.getGSSFilterValueAccess().getGSSFilterConstantParserRuleCall_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectParserRuleCall_1()); }
+		ruleGSSFilterSelect
+		{ after(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectParserRuleCall_1()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectLineParserRuleCall_2()); }
+		ruleGSSFilterSelectLine
+		{ after(grammarAccess.getGSSFilterValueAccess().getGSSFilterSelectLineParserRuleCall_2()); }
 	)
 ;
 finally {
@@ -1258,9 +1250,9 @@ rule__GSSFilterMaxtermFilter__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3()); }
-	(rule__GSSFilterMaxtermFilter__UnorderedGroup_3)
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3()); }
+	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriKeyword_3()); }
+	'uri'
+	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriKeyword_3()); }
 )
 ;
 finally {
@@ -1285,16 +1277,9 @@ rule__GSSFilterMaxtermFilter__Group__4__Impl
 	}
 :
 (
-	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermAssignment_4()); }
-		(rule__GSSFilterMaxtermFilter__MaxtermAssignment_4)
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermAssignment_4()); }
-	)
-	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermAssignment_4()); }
-		(rule__GSSFilterMaxtermFilter__MaxtermAssignment_4)*
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermAssignment_4()); }
-	)
+	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_4()); }
+	':='
+	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_4()); }
 )
 ;
 finally {
@@ -1319,9 +1304,9 @@ rule__GSSFilterMaxtermFilter__Group__5__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getRightCurlyBracketKeyword_5()); }
-	'}'
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getRightCurlyBracketKeyword_5()); }
+	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriAssignment_5()); }
+	(rule__GSSFilterMaxtermFilter__UriAssignment_5)
+	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriAssignment_5()); }
 )
 ;
 finally {
@@ -1334,6 +1319,7 @@ rule__GSSFilterMaxtermFilter__Group__6
 	}
 :
 	rule__GSSFilterMaxtermFilter__Group__6__Impl
+	rule__GSSFilterMaxtermFilter__Group__7
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1354,385 +1340,337 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-
-rule__GSSFilterMaxtermFilter__Group_3_0__0
+rule__GSSFilterMaxtermFilter__Group__7
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__GSSFilterMaxtermFilter__Group_3_0__0__Impl
-	rule__GSSFilterMaxtermFilter__Group_3_0__1
+	rule__GSSFilterMaxtermFilter__Group__7__Impl
+	rule__GSSFilterMaxtermFilter__Group__8
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMaxtermFilter__Group_3_0__0__Impl
+rule__GSSFilterMaxtermFilter__Group__7__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriKeyword_3_0_0()); }
-	'uri'
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriKeyword_3_0_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_0__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMaxtermFilter__Group_3_0__1__Impl
-	rule__GSSFilterMaxtermFilter__Group_3_0__2
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_0__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_3_0_1()); }
-	':='
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_3_0_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_0__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMaxtermFilter__Group_3_0__2__Impl
-	rule__GSSFilterMaxtermFilter__Group_3_0__3
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_0__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriAssignment_3_0_2()); }
-	(rule__GSSFilterMaxtermFilter__UriAssignment_3_0_2)
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriAssignment_3_0_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_0__3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMaxtermFilter__Group_3_0__3__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_0__3__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_3_0_3()); }
-	';'
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_3_0_3()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__GSSFilterMaxtermFilter__Group_3_1__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMaxtermFilter__Group_3_1__0__Impl
-	rule__GSSFilterMaxtermFilter__Group_3_1__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_1__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getGroup_3_1_0()); }
-	(rule__GSSFilterMaxtermFilter__Group_3_1_0__0)
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getGroup_3_1_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_1__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMaxtermFilter__Group_3_1__1__Impl
-	rule__GSSFilterMaxtermFilter__Group_3_1__2
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_1__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileKeyword_3_1_1()); }
-	'formatFile'
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileKeyword_3_1_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_1__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMaxtermFilter__Group_3_1__2__Impl
-	rule__GSSFilterMaxtermFilter__Group_3_1__3
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_1__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_3_1_2()); }
-	':='
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_3_1_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_1__3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMaxtermFilter__Group_3_1__3__Impl
-	rule__GSSFilterMaxtermFilter__Group_3_1__4
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_1__3__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileAssignment_3_1_3()); }
-	(rule__GSSFilterMaxtermFilter__FormatFileAssignment_3_1_3)
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileAssignment_3_1_3()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_1__4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMaxtermFilter__Group_3_1__4__Impl
-	rule__GSSFilterMaxtermFilter__Group_3_1__5
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_1__4__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_3_1_4()); }
-	';'
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_3_1_4()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_1__5
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMaxtermFilter__Group_3_1__5__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_1__5__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getAlternatives_3_1_5()); }
-		(rule__GSSFilterMaxtermFilter__Alternatives_3_1_5)
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getAlternatives_3_1_5()); }
-	)
-	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getAlternatives_3_1_5()); }
-		(rule__GSSFilterMaxtermFilter__Alternatives_3_1_5)*
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getAlternatives_3_1_5()); }
-	)
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__GSSFilterMaxtermFilter__Group_3_1_0__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMaxtermFilter__Group_3_1_0__0__Impl
-	rule__GSSFilterMaxtermFilter__Group_3_1_0__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__Group_3_1_0__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionKeyword_3_1_0_0()); }
+	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionKeyword_7()); }
 	'version'
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionKeyword_3_1_0_0()); }
+	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionKeyword_7()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMaxtermFilter__Group_3_1_0__1
+rule__GSSFilterMaxtermFilter__Group__8
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__GSSFilterMaxtermFilter__Group_3_1_0__1__Impl
-	rule__GSSFilterMaxtermFilter__Group_3_1_0__2
+	rule__GSSFilterMaxtermFilter__Group__8__Impl
+	rule__GSSFilterMaxtermFilter__Group__9
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMaxtermFilter__Group_3_1_0__1__Impl
+rule__GSSFilterMaxtermFilter__Group__8__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_3_1_0_1()); }
+	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_8()); }
 	':='
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_3_1_0_1()); }
+	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_8()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMaxtermFilter__Group_3_1_0__2
+rule__GSSFilterMaxtermFilter__Group__9
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__GSSFilterMaxtermFilter__Group_3_1_0__2__Impl
-	rule__GSSFilterMaxtermFilter__Group_3_1_0__3
+	rule__GSSFilterMaxtermFilter__Group__9__Impl
+	rule__GSSFilterMaxtermFilter__Group__10
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMaxtermFilter__Group_3_1_0__2__Impl
+rule__GSSFilterMaxtermFilter__Group__9__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionAssignment_3_1_0_2()); }
-	(rule__GSSFilterMaxtermFilter__VersionAssignment_3_1_0_2)
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionAssignment_3_1_0_2()); }
+	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionAssignment_9()); }
+	(rule__GSSFilterMaxtermFilter__VersionAssignment_9)
+	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionAssignment_9()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMaxtermFilter__Group_3_1_0__3
+rule__GSSFilterMaxtermFilter__Group__10
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__GSSFilterMaxtermFilter__Group_3_1_0__3__Impl
+	rule__GSSFilterMaxtermFilter__Group__10__Impl
+	rule__GSSFilterMaxtermFilter__Group__11
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMaxtermFilter__Group_3_1_0__3__Impl
+rule__GSSFilterMaxtermFilter__Group__10__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_3_1_0_3()); }
+	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_10()); }
 	';'
-	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_3_1_0_3()); }
+	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_10()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__11
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMaxtermFilter__Group__11__Impl
+	rule__GSSFilterMaxtermFilter__Group__12
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__11__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileKeyword_11()); }
+	'formatFile'
+	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileKeyword_11()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__12
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMaxtermFilter__Group__12__Impl
+	rule__GSSFilterMaxtermFilter__Group__13
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__12__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_12()); }
+	':='
+	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getColonEqualsSignKeyword_12()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__13
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMaxtermFilter__Group__13__Impl
+	rule__GSSFilterMaxtermFilter__Group__14
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__13__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileAssignment_13()); }
+	(rule__GSSFilterMaxtermFilter__FormatFileAssignment_13)
+	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileAssignment_13()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__14
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMaxtermFilter__Group__14__Impl
+	rule__GSSFilterMaxtermFilter__Group__15
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__14__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_14()); }
+	';'
+	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_14()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__15
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMaxtermFilter__Group__15__Impl
+	rule__GSSFilterMaxtermFilter__Group__16
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__15__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	(
+		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarAssignment_15()); }
+		(rule__GSSFilterMaxtermFilter__BoolVarAssignment_15)
+		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarAssignment_15()); }
+	)
+	(
+		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarAssignment_15()); }
+		(rule__GSSFilterMaxtermFilter__BoolVarAssignment_15)*
+		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarAssignment_15()); }
+	)
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__16
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMaxtermFilter__Group__16__Impl
+	rule__GSSFilterMaxtermFilter__Group__17
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__16__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	(
+		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermAssignment_16()); }
+		(rule__GSSFilterMaxtermFilter__MaxtermAssignment_16)
+		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermAssignment_16()); }
+	)
+	(
+		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermAssignment_16()); }
+		(rule__GSSFilterMaxtermFilter__MaxtermAssignment_16)*
+		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermAssignment_16()); }
+	)
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__17
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMaxtermFilter__Group__17__Impl
+	rule__GSSFilterMaxtermFilter__Group__18
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__17__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getRightCurlyBracketKeyword_17()); }
+	'}'
+	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getRightCurlyBracketKeyword_17()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__18
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMaxtermFilter__Group__18__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMaxtermFilter__Group__18__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_18()); }
+	';'
+	{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getSemicolonKeyword_18()); }
 )
 ;
 finally {
@@ -1839,9 +1777,9 @@ rule__GSSFilterMintermFilter__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3()); }
-	(rule__GSSFilterMintermFilter__UnorderedGroup_3)
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3()); }
+	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getUriKeyword_3()); }
+	'uri'
+	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getUriKeyword_3()); }
 )
 ;
 finally {
@@ -1866,16 +1804,9 @@ rule__GSSFilterMintermFilter__Group__4__Impl
 	}
 :
 (
-	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getMintermAssignment_4()); }
-		(rule__GSSFilterMintermFilter__MintermAssignment_4)
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getMintermAssignment_4()); }
-	)
-	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getMintermAssignment_4()); }
-		(rule__GSSFilterMintermFilter__MintermAssignment_4)*
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getMintermAssignment_4()); }
-	)
+	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_4()); }
+	':='
+	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_4()); }
 )
 ;
 finally {
@@ -1900,9 +1831,9 @@ rule__GSSFilterMintermFilter__Group__5__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getRightCurlyBracketKeyword_5()); }
-	'}'
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getRightCurlyBracketKeyword_5()); }
+	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getUriAssignment_5()); }
+	(rule__GSSFilterMintermFilter__UriAssignment_5)
+	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getUriAssignment_5()); }
 )
 ;
 finally {
@@ -1915,6 +1846,7 @@ rule__GSSFilterMintermFilter__Group__6
 	}
 :
 	rule__GSSFilterMintermFilter__Group__6__Impl
+	rule__GSSFilterMintermFilter__Group__7
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1935,385 +1867,337 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-
-rule__GSSFilterMintermFilter__Group_3_0__0
+rule__GSSFilterMintermFilter__Group__7
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__GSSFilterMintermFilter__Group_3_0__0__Impl
-	rule__GSSFilterMintermFilter__Group_3_0__1
+	rule__GSSFilterMintermFilter__Group__7__Impl
+	rule__GSSFilterMintermFilter__Group__8
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMintermFilter__Group_3_0__0__Impl
+rule__GSSFilterMintermFilter__Group__7__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getUriKeyword_3_0_0()); }
-	'uri'
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getUriKeyword_3_0_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_0__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMintermFilter__Group_3_0__1__Impl
-	rule__GSSFilterMintermFilter__Group_3_0__2
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_0__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_3_0_1()); }
-	':='
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_3_0_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_0__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMintermFilter__Group_3_0__2__Impl
-	rule__GSSFilterMintermFilter__Group_3_0__3
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_0__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getUriAssignment_3_0_2()); }
-	(rule__GSSFilterMintermFilter__UriAssignment_3_0_2)
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getUriAssignment_3_0_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_0__3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMintermFilter__Group_3_0__3__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_0__3__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_3_0_3()); }
-	';'
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_3_0_3()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__GSSFilterMintermFilter__Group_3_1__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMintermFilter__Group_3_1__0__Impl
-	rule__GSSFilterMintermFilter__Group_3_1__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_1__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getGroup_3_1_0()); }
-	(rule__GSSFilterMintermFilter__Group_3_1_0__0)
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getGroup_3_1_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_1__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMintermFilter__Group_3_1__1__Impl
-	rule__GSSFilterMintermFilter__Group_3_1__2
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_1__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileKeyword_3_1_1()); }
-	'formatFile'
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileKeyword_3_1_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_1__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMintermFilter__Group_3_1__2__Impl
-	rule__GSSFilterMintermFilter__Group_3_1__3
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_1__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_3_1_2()); }
-	':='
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_3_1_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_1__3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMintermFilter__Group_3_1__3__Impl
-	rule__GSSFilterMintermFilter__Group_3_1__4
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_1__3__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileAssignment_3_1_3()); }
-	(rule__GSSFilterMintermFilter__FormatFileAssignment_3_1_3)
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileAssignment_3_1_3()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_1__4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMintermFilter__Group_3_1__4__Impl
-	rule__GSSFilterMintermFilter__Group_3_1__5
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_1__4__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_3_1_4()); }
-	';'
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_3_1_4()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_1__5
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMintermFilter__Group_3_1__5__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_1__5__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getAlternatives_3_1_5()); }
-		(rule__GSSFilterMintermFilter__Alternatives_3_1_5)
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getAlternatives_3_1_5()); }
-	)
-	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getAlternatives_3_1_5()); }
-		(rule__GSSFilterMintermFilter__Alternatives_3_1_5)*
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getAlternatives_3_1_5()); }
-	)
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__GSSFilterMintermFilter__Group_3_1_0__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMintermFilter__Group_3_1_0__0__Impl
-	rule__GSSFilterMintermFilter__Group_3_1_0__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__Group_3_1_0__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getVersionKeyword_3_1_0_0()); }
+	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getVersionKeyword_7()); }
 	'version'
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getVersionKeyword_3_1_0_0()); }
+	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getVersionKeyword_7()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMintermFilter__Group_3_1_0__1
+rule__GSSFilterMintermFilter__Group__8
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__GSSFilterMintermFilter__Group_3_1_0__1__Impl
-	rule__GSSFilterMintermFilter__Group_3_1_0__2
+	rule__GSSFilterMintermFilter__Group__8__Impl
+	rule__GSSFilterMintermFilter__Group__9
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMintermFilter__Group_3_1_0__1__Impl
+rule__GSSFilterMintermFilter__Group__8__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_3_1_0_1()); }
+	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_8()); }
 	':='
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_3_1_0_1()); }
+	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_8()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMintermFilter__Group_3_1_0__2
+rule__GSSFilterMintermFilter__Group__9
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__GSSFilterMintermFilter__Group_3_1_0__2__Impl
-	rule__GSSFilterMintermFilter__Group_3_1_0__3
+	rule__GSSFilterMintermFilter__Group__9__Impl
+	rule__GSSFilterMintermFilter__Group__10
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMintermFilter__Group_3_1_0__2__Impl
+rule__GSSFilterMintermFilter__Group__9__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getVersionAssignment_3_1_0_2()); }
-	(rule__GSSFilterMintermFilter__VersionAssignment_3_1_0_2)
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getVersionAssignment_3_1_0_2()); }
+	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getVersionAssignment_9()); }
+	(rule__GSSFilterMintermFilter__VersionAssignment_9)
+	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getVersionAssignment_9()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMintermFilter__Group_3_1_0__3
+rule__GSSFilterMintermFilter__Group__10
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__GSSFilterMintermFilter__Group_3_1_0__3__Impl
+	rule__GSSFilterMintermFilter__Group__10__Impl
+	rule__GSSFilterMintermFilter__Group__11
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMintermFilter__Group_3_1_0__3__Impl
+rule__GSSFilterMintermFilter__Group__10__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_3_1_0_3()); }
+	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_10()); }
 	';'
-	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_3_1_0_3()); }
+	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_10()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__11
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMintermFilter__Group__11__Impl
+	rule__GSSFilterMintermFilter__Group__12
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__11__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileKeyword_11()); }
+	'formatFile'
+	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileKeyword_11()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__12
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMintermFilter__Group__12__Impl
+	rule__GSSFilterMintermFilter__Group__13
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__12__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_12()); }
+	':='
+	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getColonEqualsSignKeyword_12()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__13
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMintermFilter__Group__13__Impl
+	rule__GSSFilterMintermFilter__Group__14
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__13__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileAssignment_13()); }
+	(rule__GSSFilterMintermFilter__FormatFileAssignment_13)
+	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileAssignment_13()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__14
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMintermFilter__Group__14__Impl
+	rule__GSSFilterMintermFilter__Group__15
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__14__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_14()); }
+	';'
+	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_14()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__15
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMintermFilter__Group__15__Impl
+	rule__GSSFilterMintermFilter__Group__16
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__15__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	(
+		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarAssignment_15()); }
+		(rule__GSSFilterMintermFilter__BoolVarAssignment_15)
+		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarAssignment_15()); }
+	)
+	(
+		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarAssignment_15()); }
+		(rule__GSSFilterMintermFilter__BoolVarAssignment_15)*
+		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarAssignment_15()); }
+	)
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__16
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMintermFilter__Group__16__Impl
+	rule__GSSFilterMintermFilter__Group__17
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__16__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	(
+		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getMintermAssignment_16()); }
+		(rule__GSSFilterMintermFilter__MintermAssignment_16)
+		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getMintermAssignment_16()); }
+	)
+	(
+		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getMintermAssignment_16()); }
+		(rule__GSSFilterMintermFilter__MintermAssignment_16)*
+		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getMintermAssignment_16()); }
+	)
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__17
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMintermFilter__Group__17__Impl
+	rule__GSSFilterMintermFilter__Group__18
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__17__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getRightCurlyBracketKeyword_17()); }
+	'}'
+	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getRightCurlyBracketKeyword_17()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__18
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__GSSFilterMintermFilter__Group__18__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSFilterMintermFilter__Group__18__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_18()); }
+	';'
+	{ after(grammarAccess.getGSSFilterMintermFilterAccess().getSemicolonKeyword_18()); }
 )
 ;
 finally {
@@ -8086,172 +7970,6 @@ finally {
 }
 
 
-rule__GSSFilterMaxtermFilter__UnorderedGroup_3
-	@init {
-		int stackSize = keepStackSize();
-		getUnorderedGroupHelper().enter(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3());
-	}
-:
-	rule__GSSFilterMaxtermFilter__UnorderedGroup_3__0
-	{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3())}?
-;
-finally {
-	getUnorderedGroupHelper().leave(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3());
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl
-	@init {
-		int stackSize = keepStackSize();
-		boolean selected = false;
-	}
-:
-		(
-		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0)}?=>(
-				{
-					getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 0);
-				}
-				{
-					selected = true;
-				}
-				(
-					{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getGroup_3_0()); }
-					(rule__GSSFilterMaxtermFilter__Group_3_0__0)
-					{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getGroup_3_0()); }
-				)
-			)
-		)|
-		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 1)}?=>(
-				{
-					getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3(), 1);
-				}
-				{
-					selected = true;
-				}
-				(
-					{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getGroup_3_1()); }
-					(rule__GSSFilterMaxtermFilter__Group_3_1__0)
-					{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getGroup_3_1()); }
-				)
-			)
-		)
-		)
-;
-finally {
-	if (selected)
-		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSFilterMaxtermFilterAccess().getUnorderedGroup_3());
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__UnorderedGroup_3__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl
-	rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1?
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__UnorderedGroup_3__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMaxtermFilter__UnorderedGroup_3__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__GSSFilterMintermFilter__UnorderedGroup_3
-	@init {
-		int stackSize = keepStackSize();
-		getUnorderedGroupHelper().enter(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3());
-	}
-:
-	rule__GSSFilterMintermFilter__UnorderedGroup_3__0
-	{getUnorderedGroupHelper().canLeave(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3())}?
-;
-finally {
-	getUnorderedGroupHelper().leave(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3());
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl
-	@init {
-		int stackSize = keepStackSize();
-		boolean selected = false;
-	}
-:
-		(
-		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0)}?=>(
-				{
-					getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 0);
-				}
-				{
-					selected = true;
-				}
-				(
-					{ before(grammarAccess.getGSSFilterMintermFilterAccess().getGroup_3_0()); }
-					(rule__GSSFilterMintermFilter__Group_3_0__0)
-					{ after(grammarAccess.getGSSFilterMintermFilterAccess().getGroup_3_0()); }
-				)
-			)
-		)|
-		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 1)}?=>(
-				{
-					getUnorderedGroupHelper().select(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3(), 1);
-				}
-				{
-					selected = true;
-				}
-				(
-					{ before(grammarAccess.getGSSFilterMintermFilterAccess().getGroup_3_1()); }
-					(rule__GSSFilterMintermFilter__Group_3_1__0)
-					{ after(grammarAccess.getGSSFilterMintermFilterAccess().getGroup_3_1()); }
-				)
-			)
-		)
-		)
-;
-finally {
-	if (selected)
-		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getGSSFilterMintermFilterAccess().getUnorderedGroup_3());
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__UnorderedGroup_3__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl
-	rule__GSSFilterMintermFilter__UnorderedGroup_3__1?
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__UnorderedGroup_3__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSFilterMintermFilter__UnorderedGroup_3__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
 rule__GSSModelFile__ImportsAssignment_0
 	@init {
 		int stackSize = keepStackSize();
@@ -8312,124 +8030,79 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMaxtermFilter__UriAssignment_3_0_2
+rule__GSSFilterMaxtermFilter__UriAssignment_5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriQualifiedNameParserRuleCall_3_0_2_0()); }
+		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriQualifiedNameParserRuleCall_5_0()); }
 		ruleQualifiedName
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriQualifiedNameParserRuleCall_3_0_2_0()); }
+		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getUriQualifiedNameParserRuleCall_5_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMaxtermFilter__VersionAssignment_3_1_0_2
+rule__GSSFilterMaxtermFilter__VersionAssignment_9
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionVersionParserRuleCall_3_1_0_2_0()); }
+		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionVersionParserRuleCall_9_0()); }
 		ruleVersion
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionVersionParserRuleCall_3_1_0_2_0()); }
+		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getVersionVersionParserRuleCall_9_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMaxtermFilter__FormatFileAssignment_3_1_3
+rule__GSSFilterMaxtermFilter__FormatFileAssignment_13
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSFormatFormatCrossReference_3_1_3_0()); }
+		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSFormatFormatCrossReference_13_0()); }
 		(
-			{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_3_1_3_0_1()); }
+			{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_13_0_1()); }
 			ruleVersionedQualifiedName
-			{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_3_1_3_0_1()); }
+			{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_13_0_1()); }
 		)
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSFormatFormatCrossReference_3_1_3_0()); }
+		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getFormatFileGSSFormatFormatCrossReference_13_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMaxtermFilter__BoolVarAssignment_3_1_5_0
+rule__GSSFilterMaxtermFilter__BoolVarAssignment_15
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0()); }
-		ruleGSSFilterBoolVar
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0()); }
+		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarGSSFilterAbstractBoolVarParserRuleCall_15_0()); }
+		ruleGSSFilterAbstractBoolVar
+		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarGSSFilterAbstractBoolVarParserRuleCall_15_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMaxtermFilter__BoolVarFromArrayItemAssignment_3_1_5_1
+rule__GSSFilterMaxtermFilter__MaxtermAssignment_16
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0()); }
-		ruleGSSFilterBoolVarFromArrayItem
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__BoolVarFromGroupedArrayItemAssignment_3_1_5_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0()); }
-		ruleGSSFilterBoolVarFromGroupedArrayItem
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__BoolVarFDICAssignment_3_1_5_3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0()); }
-		ruleGSSFilterBoolVarFDIC
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMaxtermFilter__MaxtermAssignment_4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermGSSFilterMaxtermParserRuleCall_4_0()); }
+		{ before(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermGSSFilterMaxtermParserRuleCall_16_0()); }
 		ruleGSSFilterMaxterm
-		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermGSSFilterMaxtermParserRuleCall_4_0()); }
+		{ after(grammarAccess.getGSSFilterMaxtermFilterAccess().getMaxtermGSSFilterMaxtermParserRuleCall_16_0()); }
 	)
 ;
 finally {
@@ -8451,124 +8124,79 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMintermFilter__UriAssignment_3_0_2
+rule__GSSFilterMintermFilter__UriAssignment_5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getUriQualifiedNameParserRuleCall_3_0_2_0()); }
+		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getUriQualifiedNameParserRuleCall_5_0()); }
 		ruleQualifiedName
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getUriQualifiedNameParserRuleCall_3_0_2_0()); }
+		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getUriQualifiedNameParserRuleCall_5_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMintermFilter__VersionAssignment_3_1_0_2
+rule__GSSFilterMintermFilter__VersionAssignment_9
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getVersionVersionParserRuleCall_3_1_0_2_0()); }
+		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getVersionVersionParserRuleCall_9_0()); }
 		ruleVersion
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getVersionVersionParserRuleCall_3_1_0_2_0()); }
+		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getVersionVersionParserRuleCall_9_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMintermFilter__FormatFileAssignment_3_1_3
+rule__GSSFilterMintermFilter__FormatFileAssignment_13
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSFormatFormatCrossReference_3_1_3_0()); }
+		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSFormatFormatCrossReference_13_0()); }
 		(
-			{ before(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_3_1_3_0_1()); }
+			{ before(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_13_0_1()); }
 			ruleVersionedQualifiedName
-			{ after(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_3_1_3_0_1()); }
+			{ after(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_13_0_1()); }
 		)
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSFormatFormatCrossReference_3_1_3_0()); }
+		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getFormatFileGSSFormatFormatCrossReference_13_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMintermFilter__BoolVarAssignment_3_1_5_0
+rule__GSSFilterMintermFilter__BoolVarAssignment_15
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0()); }
-		ruleGSSFilterBoolVar
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0()); }
+		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarGSSFilterAbstractBoolVarParserRuleCall_15_0()); }
+		ruleGSSFilterAbstractBoolVar
+		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarGSSFilterAbstractBoolVarParserRuleCall_15_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterMintermFilter__BoolVarFromArrayItemAssignment_3_1_5_1
+rule__GSSFilterMintermFilter__MintermAssignment_16
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0()); }
-		ruleGSSFilterBoolVarFromArrayItem
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__BoolVarFromGroupedArrayItemAssignment_3_1_5_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0()); }
-		ruleGSSFilterBoolVarFromGroupedArrayItem
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__BoolVarFDICAssignment_3_1_5_3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0()); }
-		ruleGSSFilterBoolVarFDIC
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterMintermFilter__MintermAssignment_4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getMintermGSSFilterMintermParserRuleCall_4_0()); }
+		{ before(grammarAccess.getGSSFilterMintermFilterAccess().getMintermGSSFilterMintermParserRuleCall_16_0()); }
 		ruleGSSFilterMinterm
-		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getMintermGSSFilterMintermParserRuleCall_4_0()); }
+		{ after(grammarAccess.getGSSFilterMintermFilterAccess().getMintermGSSFilterMintermParserRuleCall_16_0()); }
 	)
 ;
 finally {

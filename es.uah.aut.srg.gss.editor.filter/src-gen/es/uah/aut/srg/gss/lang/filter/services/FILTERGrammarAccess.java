@@ -25,7 +25,6 @@ import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.TerminalRule;
-import org.eclipse.xtext.UnorderedGroup;
 import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 import org.eclipse.xtext.service.AbstractElementFinder.AbstractEnumRuleElementFinder;
 import org.eclipse.xtext.service.AbstractElementFinder.AbstractGrammarElementFinder;
@@ -119,55 +118,43 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final UnorderedGroup cUnorderedGroup_3 = (UnorderedGroup)cGroup.eContents().get(3);
-		private final Group cGroup_3_0 = (Group)cUnorderedGroup_3.eContents().get(0);
-		private final Keyword cUriKeyword_3_0_0 = (Keyword)cGroup_3_0.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_0_1 = (Keyword)cGroup_3_0.eContents().get(1);
-		private final Assignment cUriAssignment_3_0_2 = (Assignment)cGroup_3_0.eContents().get(2);
-		private final RuleCall cUriQualifiedNameParserRuleCall_3_0_2_0 = (RuleCall)cUriAssignment_3_0_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_0_3 = (Keyword)cGroup_3_0.eContents().get(3);
-		private final Group cGroup_3_1 = (Group)cUnorderedGroup_3.eContents().get(1);
-		private final Group cGroup_3_1_0 = (Group)cGroup_3_1.eContents().get(0);
-		private final Keyword cVersionKeyword_3_1_0_0 = (Keyword)cGroup_3_1_0.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_1_0_1 = (Keyword)cGroup_3_1_0.eContents().get(1);
-		private final Assignment cVersionAssignment_3_1_0_2 = (Assignment)cGroup_3_1_0.eContents().get(2);
-		private final RuleCall cVersionVersionParserRuleCall_3_1_0_2_0 = (RuleCall)cVersionAssignment_3_1_0_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_1_0_3 = (Keyword)cGroup_3_1_0.eContents().get(3);
-		private final Keyword cFormatFileKeyword_3_1_1 = (Keyword)cGroup_3_1.eContents().get(1);
-		private final Keyword cColonEqualsSignKeyword_3_1_2 = (Keyword)cGroup_3_1.eContents().get(2);
-		private final Assignment cFormatFileAssignment_3_1_3 = (Assignment)cGroup_3_1.eContents().get(3);
-		private final CrossReference cFormatFileGSSFormatFormatCrossReference_3_1_3_0 = (CrossReference)cFormatFileAssignment_3_1_3.eContents().get(0);
-		private final RuleCall cFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_3_1_3_0_1 = (RuleCall)cFormatFileGSSFormatFormatCrossReference_3_1_3_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_3_1_4 = (Keyword)cGroup_3_1.eContents().get(4);
-		private final Alternatives cAlternatives_3_1_5 = (Alternatives)cGroup_3_1.eContents().get(5);
-		private final Assignment cBoolVarAssignment_3_1_5_0 = (Assignment)cAlternatives_3_1_5.eContents().get(0);
-		private final RuleCall cBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0 = (RuleCall)cBoolVarAssignment_3_1_5_0.eContents().get(0);
-		private final Assignment cBoolVarFromArrayItemAssignment_3_1_5_1 = (Assignment)cAlternatives_3_1_5.eContents().get(1);
-		private final RuleCall cBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0 = (RuleCall)cBoolVarFromArrayItemAssignment_3_1_5_1.eContents().get(0);
-		private final Assignment cBoolVarFromGroupedArrayItemAssignment_3_1_5_2 = (Assignment)cAlternatives_3_1_5.eContents().get(2);
-		private final RuleCall cBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0 = (RuleCall)cBoolVarFromGroupedArrayItemAssignment_3_1_5_2.eContents().get(0);
-		private final Assignment cBoolVarFDICAssignment_3_1_5_3 = (Assignment)cAlternatives_3_1_5.eContents().get(3);
-		private final RuleCall cBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0 = (RuleCall)cBoolVarFDICAssignment_3_1_5_3.eContents().get(0);
-		private final Assignment cMaxtermAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cMaxtermGSSFilterMaxtermParserRuleCall_4_0 = (RuleCall)cMaxtermAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cUriKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cColonEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cUriAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cUriQualifiedNameParserRuleCall_5_0 = (RuleCall)cUriAssignment_5.eContents().get(0);
 		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cVersionKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cColonEqualsSignKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cVersionAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cVersionVersionParserRuleCall_9_0 = (RuleCall)cVersionAssignment_9.eContents().get(0);
+		private final Keyword cSemicolonKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cFormatFileKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Keyword cColonEqualsSignKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		private final Assignment cFormatFileAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final CrossReference cFormatFileGSSFormatFormatCrossReference_13_0 = (CrossReference)cFormatFileAssignment_13.eContents().get(0);
+		private final RuleCall cFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_13_0_1 = (RuleCall)cFormatFileGSSFormatFormatCrossReference_13_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_14 = (Keyword)cGroup.eContents().get(14);
+		private final Assignment cBoolVarAssignment_15 = (Assignment)cGroup.eContents().get(15);
+		private final RuleCall cBoolVarGSSFilterAbstractBoolVarParserRuleCall_15_0 = (RuleCall)cBoolVarAssignment_15.eContents().get(0);
+		private final Assignment cMaxtermAssignment_16 = (Assignment)cGroup.eContents().get(16);
+		private final RuleCall cMaxtermGSSFilterMaxtermParserRuleCall_16_0 = (RuleCall)cMaxtermAssignment_16.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_17 = (Keyword)cGroup.eContents().get(17);
+		private final Keyword cSemicolonKeyword_18 = (Keyword)cGroup.eContents().get(18);
 		
 		//GSSFilterMaxtermFilter:
 		//	'GSSFilterMaxtermFilter'
 		//	name=ID
-		//	'{' ('uri' ':=' uri=QualifiedName ';' & ('version' ':=' version=Version ';')
-		//	'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';' (BoolVar+=GSSFilterBoolVar |
-		//	BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem |
-		//	BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem | BoolVarFDIC+=GSSFilterBoolVarFDIC)+)
+		//	'{'
+		//	'uri' ':=' uri=QualifiedName ';'
+		//	'version' ':=' version=Version ';'
+		//	'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';'
+		//	BoolVar+=GSSFilterAbstractBoolVar+
 		//	Maxterm+=GSSFilterMaxterm+
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSFilterMaxtermFilter' name=ID '{' ('uri' ':=' uri=QualifiedName ';' & ('version' ':=' version=Version ';')
-		//'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';' (BoolVar+=GSSFilterBoolVar |
-		//BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem |
-		//BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem | BoolVarFDIC+=GSSFilterBoolVarFDIC)+)
+		//'GSSFilterMaxtermFilter' name=ID '{' 'uri' ':=' uri=QualifiedName ';' 'version' ':=' version=Version ';' 'formatFile'
+		//':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';' BoolVar+=GSSFilterAbstractBoolVar+
 		//Maxterm+=GSSFilterMaxterm+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
@@ -183,110 +170,98 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//('uri' ':=' uri=QualifiedName ';' & ('version' ':=' version=Version ';') 'formatFile' ':='
-		//formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';' (BoolVar+=GSSFilterBoolVar |
-		//BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem |
-		//BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem | BoolVarFDIC+=GSSFilterBoolVarFDIC)+)
-		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
-		
-		//'uri' ':=' uri=QualifiedName ';'
-		public Group getGroup_3_0() { return cGroup_3_0; }
-		
 		//'uri'
-		public Keyword getUriKeyword_3_0_0() { return cUriKeyword_3_0_0; }
+		public Keyword getUriKeyword_3() { return cUriKeyword_3; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_3_0_1() { return cColonEqualsSignKeyword_3_0_1; }
+		public Keyword getColonEqualsSignKeyword_4() { return cColonEqualsSignKeyword_4; }
 		
 		//uri=QualifiedName
-		public Assignment getUriAssignment_3_0_2() { return cUriAssignment_3_0_2; }
+		public Assignment getUriAssignment_5() { return cUriAssignment_5; }
 		
 		//QualifiedName
-		public RuleCall getUriQualifiedNameParserRuleCall_3_0_2_0() { return cUriQualifiedNameParserRuleCall_3_0_2_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_3_0_3() { return cSemicolonKeyword_3_0_3; }
-		
-		//('version' ':=' version=Version ';') 'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';'
-		//(BoolVar+=GSSFilterBoolVar | BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem |
-		//BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem | BoolVarFDIC+=GSSFilterBoolVarFDIC)+
-		public Group getGroup_3_1() { return cGroup_3_1; }
-		
-		//('version' ':=' version=Version ';')
-		public Group getGroup_3_1_0() { return cGroup_3_1_0; }
-		
-		//'version'
-		public Keyword getVersionKeyword_3_1_0_0() { return cVersionKeyword_3_1_0_0; }
-		
-		//':='
-		public Keyword getColonEqualsSignKeyword_3_1_0_1() { return cColonEqualsSignKeyword_3_1_0_1; }
-		
-		//version=Version
-		public Assignment getVersionAssignment_3_1_0_2() { return cVersionAssignment_3_1_0_2; }
-		
-		//Version
-		public RuleCall getVersionVersionParserRuleCall_3_1_0_2_0() { return cVersionVersionParserRuleCall_3_1_0_2_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_3_1_0_3() { return cSemicolonKeyword_3_1_0_3; }
-		
-		//'formatFile'
-		public Keyword getFormatFileKeyword_3_1_1() { return cFormatFileKeyword_3_1_1; }
-		
-		//':='
-		public Keyword getColonEqualsSignKeyword_3_1_2() { return cColonEqualsSignKeyword_3_1_2; }
-		
-		//formatFile=[format::GSSFormatFormat|VersionedQualifiedName]
-		public Assignment getFormatFileAssignment_3_1_3() { return cFormatFileAssignment_3_1_3; }
-		
-		//[format::GSSFormatFormat|VersionedQualifiedName]
-		public CrossReference getFormatFileGSSFormatFormatCrossReference_3_1_3_0() { return cFormatFileGSSFormatFormatCrossReference_3_1_3_0; }
-		
-		//VersionedQualifiedName
-		public RuleCall getFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_3_1_3_0_1() { return cFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_3_1_3_0_1; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_3_1_4() { return cSemicolonKeyword_3_1_4; }
-		
-		//(BoolVar+=GSSFilterBoolVar | BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem |
-		//BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem | BoolVarFDIC+=GSSFilterBoolVarFDIC)+
-		public Alternatives getAlternatives_3_1_5() { return cAlternatives_3_1_5; }
-		
-		//BoolVar+=GSSFilterBoolVar
-		public Assignment getBoolVarAssignment_3_1_5_0() { return cBoolVarAssignment_3_1_5_0; }
-		
-		//GSSFilterBoolVar
-		public RuleCall getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0() { return cBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0; }
-		
-		//BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem
-		public Assignment getBoolVarFromArrayItemAssignment_3_1_5_1() { return cBoolVarFromArrayItemAssignment_3_1_5_1; }
-		
-		//GSSFilterBoolVarFromArrayItem
-		public RuleCall getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0() { return cBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0; }
-		
-		//BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem
-		public Assignment getBoolVarFromGroupedArrayItemAssignment_3_1_5_2() { return cBoolVarFromGroupedArrayItemAssignment_3_1_5_2; }
-		
-		//GSSFilterBoolVarFromGroupedArrayItem
-		public RuleCall getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0() { return cBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0; }
-		
-		//BoolVarFDIC+=GSSFilterBoolVarFDIC
-		public Assignment getBoolVarFDICAssignment_3_1_5_3() { return cBoolVarFDICAssignment_3_1_5_3; }
-		
-		//GSSFilterBoolVarFDIC
-		public RuleCall getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0() { return cBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0; }
-		
-		//Maxterm+=GSSFilterMaxterm+
-		public Assignment getMaxtermAssignment_4() { return cMaxtermAssignment_4; }
-		
-		//GSSFilterMaxterm
-		public RuleCall getMaxtermGSSFilterMaxtermParserRuleCall_4_0() { return cMaxtermGSSFilterMaxtermParserRuleCall_4_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public RuleCall getUriQualifiedNameParserRuleCall_5_0() { return cUriQualifiedNameParserRuleCall_5_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
+		
+		//'version'
+		public Keyword getVersionKeyword_7() { return cVersionKeyword_7; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_8() { return cColonEqualsSignKeyword_8; }
+		
+		//version=Version
+		public Assignment getVersionAssignment_9() { return cVersionAssignment_9; }
+		
+		//Version
+		public RuleCall getVersionVersionParserRuleCall_9_0() { return cVersionVersionParserRuleCall_9_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_10() { return cSemicolonKeyword_10; }
+		
+		//'formatFile'
+		public Keyword getFormatFileKeyword_11() { return cFormatFileKeyword_11; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_12() { return cColonEqualsSignKeyword_12; }
+		
+		//formatFile=[format::GSSFormatFormat|VersionedQualifiedName]
+		public Assignment getFormatFileAssignment_13() { return cFormatFileAssignment_13; }
+		
+		//[format::GSSFormatFormat|VersionedQualifiedName]
+		public CrossReference getFormatFileGSSFormatFormatCrossReference_13_0() { return cFormatFileGSSFormatFormatCrossReference_13_0; }
+		
+		//VersionedQualifiedName
+		public RuleCall getFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_13_0_1() { return cFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_13_0_1; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_14() { return cSemicolonKeyword_14; }
+		
+		//BoolVar+=GSSFilterAbstractBoolVar+
+		public Assignment getBoolVarAssignment_15() { return cBoolVarAssignment_15; }
+		
+		//GSSFilterAbstractBoolVar
+		public RuleCall getBoolVarGSSFilterAbstractBoolVarParserRuleCall_15_0() { return cBoolVarGSSFilterAbstractBoolVarParserRuleCall_15_0; }
+		
+		//Maxterm+=GSSFilterMaxterm+
+		public Assignment getMaxtermAssignment_16() { return cMaxtermAssignment_16; }
+		
+		//GSSFilterMaxterm
+		public RuleCall getMaxtermGSSFilterMaxtermParserRuleCall_16_0() { return cMaxtermGSSFilterMaxtermParserRuleCall_16_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_17() { return cRightCurlyBracketKeyword_17; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_18() { return cSemicolonKeyword_18; }
+	}
+	public class GSSFilterAbstractBoolVarElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterAbstractBoolVar");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cGSSFilterBoolVarParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGSSFilterBoolVarFromArrayItemParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cGSSFilterBoolVarFDICParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		
+		//GSSFilterAbstractBoolVar:
+		//	GSSFilterBoolVar | GSSFilterBoolVarFromArrayItem | GSSFilterBoolVarFromGroupedArrayItem | GSSFilterBoolVarFDIC;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//GSSFilterBoolVar | GSSFilterBoolVarFromArrayItem | GSSFilterBoolVarFromGroupedArrayItem | GSSFilterBoolVarFDIC
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//GSSFilterBoolVar
+		public RuleCall getGSSFilterBoolVarParserRuleCall_0() { return cGSSFilterBoolVarParserRuleCall_0; }
+		
+		//GSSFilterBoolVarFromArrayItem
+		public RuleCall getGSSFilterBoolVarFromArrayItemParserRuleCall_1() { return cGSSFilterBoolVarFromArrayItemParserRuleCall_1; }
+		
+		//GSSFilterBoolVarFromGroupedArrayItem
+		public RuleCall getGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_2() { return cGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_2; }
+		
+		//GSSFilterBoolVarFDIC
+		public RuleCall getGSSFilterBoolVarFDICParserRuleCall_3() { return cGSSFilterBoolVarFDICParserRuleCall_3; }
 	}
 	public class GSSFilterMintermFilterElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterMintermFilter");
@@ -295,55 +270,43 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final UnorderedGroup cUnorderedGroup_3 = (UnorderedGroup)cGroup.eContents().get(3);
-		private final Group cGroup_3_0 = (Group)cUnorderedGroup_3.eContents().get(0);
-		private final Keyword cUriKeyword_3_0_0 = (Keyword)cGroup_3_0.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_0_1 = (Keyword)cGroup_3_0.eContents().get(1);
-		private final Assignment cUriAssignment_3_0_2 = (Assignment)cGroup_3_0.eContents().get(2);
-		private final RuleCall cUriQualifiedNameParserRuleCall_3_0_2_0 = (RuleCall)cUriAssignment_3_0_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_0_3 = (Keyword)cGroup_3_0.eContents().get(3);
-		private final Group cGroup_3_1 = (Group)cUnorderedGroup_3.eContents().get(1);
-		private final Group cGroup_3_1_0 = (Group)cGroup_3_1.eContents().get(0);
-		private final Keyword cVersionKeyword_3_1_0_0 = (Keyword)cGroup_3_1_0.eContents().get(0);
-		private final Keyword cColonEqualsSignKeyword_3_1_0_1 = (Keyword)cGroup_3_1_0.eContents().get(1);
-		private final Assignment cVersionAssignment_3_1_0_2 = (Assignment)cGroup_3_1_0.eContents().get(2);
-		private final RuleCall cVersionVersionParserRuleCall_3_1_0_2_0 = (RuleCall)cVersionAssignment_3_1_0_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_1_0_3 = (Keyword)cGroup_3_1_0.eContents().get(3);
-		private final Keyword cFormatFileKeyword_3_1_1 = (Keyword)cGroup_3_1.eContents().get(1);
-		private final Keyword cColonEqualsSignKeyword_3_1_2 = (Keyword)cGroup_3_1.eContents().get(2);
-		private final Assignment cFormatFileAssignment_3_1_3 = (Assignment)cGroup_3_1.eContents().get(3);
-		private final CrossReference cFormatFileGSSFormatFormatCrossReference_3_1_3_0 = (CrossReference)cFormatFileAssignment_3_1_3.eContents().get(0);
-		private final RuleCall cFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_3_1_3_0_1 = (RuleCall)cFormatFileGSSFormatFormatCrossReference_3_1_3_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_3_1_4 = (Keyword)cGroup_3_1.eContents().get(4);
-		private final Alternatives cAlternatives_3_1_5 = (Alternatives)cGroup_3_1.eContents().get(5);
-		private final Assignment cBoolVarAssignment_3_1_5_0 = (Assignment)cAlternatives_3_1_5.eContents().get(0);
-		private final RuleCall cBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0 = (RuleCall)cBoolVarAssignment_3_1_5_0.eContents().get(0);
-		private final Assignment cBoolVarFromArrayItemAssignment_3_1_5_1 = (Assignment)cAlternatives_3_1_5.eContents().get(1);
-		private final RuleCall cBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0 = (RuleCall)cBoolVarFromArrayItemAssignment_3_1_5_1.eContents().get(0);
-		private final Assignment cBoolVarFromGroupedArrayItemAssignment_3_1_5_2 = (Assignment)cAlternatives_3_1_5.eContents().get(2);
-		private final RuleCall cBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0 = (RuleCall)cBoolVarFromGroupedArrayItemAssignment_3_1_5_2.eContents().get(0);
-		private final Assignment cBoolVarFDICAssignment_3_1_5_3 = (Assignment)cAlternatives_3_1_5.eContents().get(3);
-		private final RuleCall cBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0 = (RuleCall)cBoolVarFDICAssignment_3_1_5_3.eContents().get(0);
-		private final Assignment cMintermAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cMintermGSSFilterMintermParserRuleCall_4_0 = (RuleCall)cMintermAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cUriKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cColonEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cUriAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cUriQualifiedNameParserRuleCall_5_0 = (RuleCall)cUriAssignment_5.eContents().get(0);
 		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cVersionKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cColonEqualsSignKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cVersionAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cVersionVersionParserRuleCall_9_0 = (RuleCall)cVersionAssignment_9.eContents().get(0);
+		private final Keyword cSemicolonKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cFormatFileKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Keyword cColonEqualsSignKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		private final Assignment cFormatFileAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final CrossReference cFormatFileGSSFormatFormatCrossReference_13_0 = (CrossReference)cFormatFileAssignment_13.eContents().get(0);
+		private final RuleCall cFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_13_0_1 = (RuleCall)cFormatFileGSSFormatFormatCrossReference_13_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_14 = (Keyword)cGroup.eContents().get(14);
+		private final Assignment cBoolVarAssignment_15 = (Assignment)cGroup.eContents().get(15);
+		private final RuleCall cBoolVarGSSFilterAbstractBoolVarParserRuleCall_15_0 = (RuleCall)cBoolVarAssignment_15.eContents().get(0);
+		private final Assignment cMintermAssignment_16 = (Assignment)cGroup.eContents().get(16);
+		private final RuleCall cMintermGSSFilterMintermParserRuleCall_16_0 = (RuleCall)cMintermAssignment_16.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_17 = (Keyword)cGroup.eContents().get(17);
+		private final Keyword cSemicolonKeyword_18 = (Keyword)cGroup.eContents().get(18);
 		
 		//GSSFilterMintermFilter:
 		//	'GSSFilterMintermFilter'
 		//	name=ID
-		//	'{' ('uri' ':=' uri=QualifiedName ';' & ('version' ':=' version=Version ';')
-		//	'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';' (BoolVar+=GSSFilterBoolVar |
-		//	BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem |
-		//	BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem | BoolVarFDIC+=GSSFilterBoolVarFDIC)+)
+		//	'{'
+		//	'uri' ':=' uri=QualifiedName ';'
+		//	'version' ':=' version=Version ';'
+		//	'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';'
+		//	BoolVar+=GSSFilterAbstractBoolVar+
 		//	Minterm+=GSSFilterMinterm+
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSFilterMintermFilter' name=ID '{' ('uri' ':=' uri=QualifiedName ';' & ('version' ':=' version=Version ';')
-		//'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';' (BoolVar+=GSSFilterBoolVar |
-		//BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem |
-		//BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem | BoolVarFDIC+=GSSFilterBoolVarFDIC)+)
+		//'GSSFilterMintermFilter' name=ID '{' 'uri' ':=' uri=QualifiedName ';' 'version' ':=' version=Version ';' 'formatFile'
+		//':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';' BoolVar+=GSSFilterAbstractBoolVar+
 		//Minterm+=GSSFilterMinterm+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
@@ -359,110 +322,71 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//('uri' ':=' uri=QualifiedName ';' & ('version' ':=' version=Version ';') 'formatFile' ':='
-		//formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';' (BoolVar+=GSSFilterBoolVar |
-		//BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem |
-		//BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem | BoolVarFDIC+=GSSFilterBoolVarFDIC)+)
-		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
-		
-		//'uri' ':=' uri=QualifiedName ';'
-		public Group getGroup_3_0() { return cGroup_3_0; }
-		
 		//'uri'
-		public Keyword getUriKeyword_3_0_0() { return cUriKeyword_3_0_0; }
+		public Keyword getUriKeyword_3() { return cUriKeyword_3; }
 		
 		//':='
-		public Keyword getColonEqualsSignKeyword_3_0_1() { return cColonEqualsSignKeyword_3_0_1; }
+		public Keyword getColonEqualsSignKeyword_4() { return cColonEqualsSignKeyword_4; }
 		
 		//uri=QualifiedName
-		public Assignment getUriAssignment_3_0_2() { return cUriAssignment_3_0_2; }
+		public Assignment getUriAssignment_5() { return cUriAssignment_5; }
 		
 		//QualifiedName
-		public RuleCall getUriQualifiedNameParserRuleCall_3_0_2_0() { return cUriQualifiedNameParserRuleCall_3_0_2_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_3_0_3() { return cSemicolonKeyword_3_0_3; }
-		
-		//('version' ':=' version=Version ';') 'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';'
-		//(BoolVar+=GSSFilterBoolVar | BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem |
-		//BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem | BoolVarFDIC+=GSSFilterBoolVarFDIC)+
-		public Group getGroup_3_1() { return cGroup_3_1; }
-		
-		//('version' ':=' version=Version ';')
-		public Group getGroup_3_1_0() { return cGroup_3_1_0; }
-		
-		//'version'
-		public Keyword getVersionKeyword_3_1_0_0() { return cVersionKeyword_3_1_0_0; }
-		
-		//':='
-		public Keyword getColonEqualsSignKeyword_3_1_0_1() { return cColonEqualsSignKeyword_3_1_0_1; }
-		
-		//version=Version
-		public Assignment getVersionAssignment_3_1_0_2() { return cVersionAssignment_3_1_0_2; }
-		
-		//Version
-		public RuleCall getVersionVersionParserRuleCall_3_1_0_2_0() { return cVersionVersionParserRuleCall_3_1_0_2_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_3_1_0_3() { return cSemicolonKeyword_3_1_0_3; }
-		
-		//'formatFile'
-		public Keyword getFormatFileKeyword_3_1_1() { return cFormatFileKeyword_3_1_1; }
-		
-		//':='
-		public Keyword getColonEqualsSignKeyword_3_1_2() { return cColonEqualsSignKeyword_3_1_2; }
-		
-		//formatFile=[format::GSSFormatFormat|VersionedQualifiedName]
-		public Assignment getFormatFileAssignment_3_1_3() { return cFormatFileAssignment_3_1_3; }
-		
-		//[format::GSSFormatFormat|VersionedQualifiedName]
-		public CrossReference getFormatFileGSSFormatFormatCrossReference_3_1_3_0() { return cFormatFileGSSFormatFormatCrossReference_3_1_3_0; }
-		
-		//VersionedQualifiedName
-		public RuleCall getFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_3_1_3_0_1() { return cFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_3_1_3_0_1; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_3_1_4() { return cSemicolonKeyword_3_1_4; }
-		
-		//(BoolVar+=GSSFilterBoolVar | BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem |
-		//BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem | BoolVarFDIC+=GSSFilterBoolVarFDIC)+
-		public Alternatives getAlternatives_3_1_5() { return cAlternatives_3_1_5; }
-		
-		//BoolVar+=GSSFilterBoolVar
-		public Assignment getBoolVarAssignment_3_1_5_0() { return cBoolVarAssignment_3_1_5_0; }
-		
-		//GSSFilterBoolVar
-		public RuleCall getBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0() { return cBoolVarGSSFilterBoolVarParserRuleCall_3_1_5_0_0; }
-		
-		//BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem
-		public Assignment getBoolVarFromArrayItemAssignment_3_1_5_1() { return cBoolVarFromArrayItemAssignment_3_1_5_1; }
-		
-		//GSSFilterBoolVarFromArrayItem
-		public RuleCall getBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0() { return cBoolVarFromArrayItemGSSFilterBoolVarFromArrayItemParserRuleCall_3_1_5_1_0; }
-		
-		//BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem
-		public Assignment getBoolVarFromGroupedArrayItemAssignment_3_1_5_2() { return cBoolVarFromGroupedArrayItemAssignment_3_1_5_2; }
-		
-		//GSSFilterBoolVarFromGroupedArrayItem
-		public RuleCall getBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0() { return cBoolVarFromGroupedArrayItemGSSFilterBoolVarFromGroupedArrayItemParserRuleCall_3_1_5_2_0; }
-		
-		//BoolVarFDIC+=GSSFilterBoolVarFDIC
-		public Assignment getBoolVarFDICAssignment_3_1_5_3() { return cBoolVarFDICAssignment_3_1_5_3; }
-		
-		//GSSFilterBoolVarFDIC
-		public RuleCall getBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0() { return cBoolVarFDICGSSFilterBoolVarFDICParserRuleCall_3_1_5_3_0; }
-		
-		//Minterm+=GSSFilterMinterm+
-		public Assignment getMintermAssignment_4() { return cMintermAssignment_4; }
-		
-		//GSSFilterMinterm
-		public RuleCall getMintermGSSFilterMintermParserRuleCall_4_0() { return cMintermGSSFilterMintermParserRuleCall_4_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public RuleCall getUriQualifiedNameParserRuleCall_5_0() { return cUriQualifiedNameParserRuleCall_5_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
+		
+		//'version'
+		public Keyword getVersionKeyword_7() { return cVersionKeyword_7; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_8() { return cColonEqualsSignKeyword_8; }
+		
+		//version=Version
+		public Assignment getVersionAssignment_9() { return cVersionAssignment_9; }
+		
+		//Version
+		public RuleCall getVersionVersionParserRuleCall_9_0() { return cVersionVersionParserRuleCall_9_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_10() { return cSemicolonKeyword_10; }
+		
+		//'formatFile'
+		public Keyword getFormatFileKeyword_11() { return cFormatFileKeyword_11; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_12() { return cColonEqualsSignKeyword_12; }
+		
+		//formatFile=[format::GSSFormatFormat|VersionedQualifiedName]
+		public Assignment getFormatFileAssignment_13() { return cFormatFileAssignment_13; }
+		
+		//[format::GSSFormatFormat|VersionedQualifiedName]
+		public CrossReference getFormatFileGSSFormatFormatCrossReference_13_0() { return cFormatFileGSSFormatFormatCrossReference_13_0; }
+		
+		//VersionedQualifiedName
+		public RuleCall getFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_13_0_1() { return cFormatFileGSSFormatFormatVersionedQualifiedNameParserRuleCall_13_0_1; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_14() { return cSemicolonKeyword_14; }
+		
+		//BoolVar+=GSSFilterAbstractBoolVar+
+		public Assignment getBoolVarAssignment_15() { return cBoolVarAssignment_15; }
+		
+		//GSSFilterAbstractBoolVar
+		public RuleCall getBoolVarGSSFilterAbstractBoolVarParserRuleCall_15_0() { return cBoolVarGSSFilterAbstractBoolVarParserRuleCall_15_0; }
+		
+		//Minterm+=GSSFilterMinterm+
+		public Assignment getMintermAssignment_16() { return cMintermAssignment_16; }
+		
+		//GSSFilterMinterm
+		public RuleCall getMintermGSSFilterMintermParserRuleCall_16_0() { return cMintermGSSFilterMintermParserRuleCall_16_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_17() { return cRightCurlyBracketKeyword_17; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_18() { return cSemicolonKeyword_18; }
 	}
 	public class GSSFilterBoolVarElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterBoolVar");
@@ -598,29 +522,6 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//';'
 		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
-	}
-	public class GSSFilterValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterValue");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cGSSFilterConstantParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cGSSFilterSelectParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cGSSFilterSelectLineParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		
-		//GSSFilterValue:
-		//	GSSFilterConstant | GSSFilterSelect | GSSFilterSelectLine;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//GSSFilterConstant | GSSFilterSelect | GSSFilterSelectLine
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//GSSFilterConstant
-		public RuleCall getGSSFilterConstantParserRuleCall_0() { return cGSSFilterConstantParserRuleCall_0; }
-		
-		//GSSFilterSelect
-		public RuleCall getGSSFilterSelectParserRuleCall_1() { return cGSSFilterSelectParserRuleCall_1; }
-		
-		//GSSFilterSelectLine
-		public RuleCall getGSSFilterSelectLineParserRuleCall_2() { return cGSSFilterSelectLineParserRuleCall_2; }
 	}
 	public class GSSFilterBoolVarFromArrayItemElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterBoolVarFromArrayItem");
@@ -1059,6 +960,29 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//';'
 		public Keyword getSemicolonKeyword_16() { return cSemicolonKeyword_16; }
+	}
+	public class GSSFilterValueElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterValue");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cGSSFilterConstantParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGSSFilterSelectParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cGSSFilterSelectLineParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//GSSFilterValue:
+		//	GSSFilterConstant | GSSFilterSelect | GSSFilterSelectLine;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//GSSFilterConstant | GSSFilterSelect | GSSFilterSelectLine
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//GSSFilterConstant
+		public RuleCall getGSSFilterConstantParserRuleCall_0() { return cGSSFilterConstantParserRuleCall_0; }
+		
+		//GSSFilterSelect
+		public RuleCall getGSSFilterSelectParserRuleCall_1() { return cGSSFilterSelectParserRuleCall_1; }
+		
+		//GSSFilterSelectLine
+		public RuleCall getGSSFilterSelectLineParserRuleCall_2() { return cGSSFilterSelectLineParserRuleCall_2; }
 	}
 	public class GSSFilterFieldOpElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterFieldOp");
@@ -1971,12 +1895,13 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSModelFileImportElements pGSSModelFileImport;
 	private final GSSFilterFilterElements pGSSFilterFilter;
 	private final GSSFilterMaxtermFilterElements pGSSFilterMaxtermFilter;
+	private final GSSFilterAbstractBoolVarElements pGSSFilterAbstractBoolVar;
 	private final GSSFilterMintermFilterElements pGSSFilterMintermFilter;
 	private final GSSFilterBoolVarElements pGSSFilterBoolVar;
-	private final GSSFilterValueElements pGSSFilterValue;
 	private final GSSFilterBoolVarFromArrayItemElements pGSSFilterBoolVarFromArrayItem;
 	private final GSSFilterBoolVarFromGroupedArrayItemElements pGSSFilterBoolVarFromGroupedArrayItem;
 	private final GSSFilterBoolVarFDICElements pGSSFilterBoolVarFDIC;
+	private final GSSFilterValueElements pGSSFilterValue;
 	private final GSSFilterConstantTypeElements eGSSFilterConstantType;
 	private final GSSFilterFieldOpElements pGSSFilterFieldOp;
 	private final GSSFilterConstantElements pGSSFilterConstant;
@@ -2007,12 +1932,13 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGSSModelFileImport = new GSSModelFileImportElements();
 		this.pGSSFilterFilter = new GSSFilterFilterElements();
 		this.pGSSFilterMaxtermFilter = new GSSFilterMaxtermFilterElements();
+		this.pGSSFilterAbstractBoolVar = new GSSFilterAbstractBoolVarElements();
 		this.pGSSFilterMintermFilter = new GSSFilterMintermFilterElements();
 		this.pGSSFilterBoolVar = new GSSFilterBoolVarElements();
-		this.pGSSFilterValue = new GSSFilterValueElements();
 		this.pGSSFilterBoolVarFromArrayItem = new GSSFilterBoolVarFromArrayItemElements();
 		this.pGSSFilterBoolVarFromGroupedArrayItem = new GSSFilterBoolVarFromGroupedArrayItemElements();
 		this.pGSSFilterBoolVarFDIC = new GSSFilterBoolVarFDICElements();
+		this.pGSSFilterValue = new GSSFilterValueElements();
 		this.eGSSFilterConstantType = new GSSFilterConstantTypeElements();
 		this.pGSSFilterFieldOp = new GSSFilterFieldOpElements();
 		this.pGSSFilterConstant = new GSSFilterConstantElements();
@@ -2092,10 +2018,11 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSFilterMaxtermFilter:
 	//	'GSSFilterMaxtermFilter'
 	//	name=ID
-	//	'{' ('uri' ':=' uri=QualifiedName ';' & ('version' ':=' version=Version ';')
-	//	'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';' (BoolVar+=GSSFilterBoolVar |
-	//	BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem |
-	//	BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem | BoolVarFDIC+=GSSFilterBoolVarFDIC)+)
+	//	'{'
+	//	'uri' ':=' uri=QualifiedName ';'
+	//	'version' ':=' version=Version ';'
+	//	'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';'
+	//	BoolVar+=GSSFilterAbstractBoolVar+
 	//	Maxterm+=GSSFilterMaxterm+
 	//	'}' ';';
 	public GSSFilterMaxtermFilterElements getGSSFilterMaxtermFilterAccess() {
@@ -2106,13 +2033,24 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSFilterMaxtermFilterAccess().getRule();
 	}
 	
+	//GSSFilterAbstractBoolVar:
+	//	GSSFilterBoolVar | GSSFilterBoolVarFromArrayItem | GSSFilterBoolVarFromGroupedArrayItem | GSSFilterBoolVarFDIC;
+	public GSSFilterAbstractBoolVarElements getGSSFilterAbstractBoolVarAccess() {
+		return pGSSFilterAbstractBoolVar;
+	}
+	
+	public ParserRule getGSSFilterAbstractBoolVarRule() {
+		return getGSSFilterAbstractBoolVarAccess().getRule();
+	}
+	
 	//GSSFilterMintermFilter:
 	//	'GSSFilterMintermFilter'
 	//	name=ID
-	//	'{' ('uri' ':=' uri=QualifiedName ';' & ('version' ':=' version=Version ';')
-	//	'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';' (BoolVar+=GSSFilterBoolVar |
-	//	BoolVarFromArrayItem+=GSSFilterBoolVarFromArrayItem |
-	//	BoolVarFromGroupedArrayItem+=GSSFilterBoolVarFromGroupedArrayItem | BoolVarFDIC+=GSSFilterBoolVarFDIC)+)
+	//	'{'
+	//	'uri' ':=' uri=QualifiedName ';'
+	//	'version' ':=' version=Version ';'
+	//	'formatFile' ':=' formatFile=[format::GSSFormatFormat|VersionedQualifiedName] ';'
+	//	BoolVar+=GSSFilterAbstractBoolVar+
 	//	Minterm+=GSSFilterMinterm+
 	//	'}' ';';
 	public GSSFilterMintermFilterElements getGSSFilterMintermFilterAccess() {
@@ -2137,16 +2075,6 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getGSSFilterBoolVarRule() {
 		return getGSSFilterBoolVarAccess().getRule();
-	}
-	
-	//GSSFilterValue:
-	//	GSSFilterConstant | GSSFilterSelect | GSSFilterSelectLine;
-	public GSSFilterValueElements getGSSFilterValueAccess() {
-		return pGSSFilterValue;
-	}
-	
-	public ParserRule getGSSFilterValueRule() {
-		return getGSSFilterValueAccess().getRule();
 	}
 	
 	//GSSFilterBoolVarFromArrayItem:
@@ -2195,6 +2123,16 @@ public class FILTERGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getGSSFilterBoolVarFDICRule() {
 		return getGSSFilterBoolVarFDICAccess().getRule();
+	}
+	
+	//GSSFilterValue:
+	//	GSSFilterConstant | GSSFilterSelect | GSSFilterSelectLine;
+	public GSSFilterValueElements getGSSFilterValueAccess() {
+		return pGSSFilterValue;
+	}
+	
+	public ParserRule getGSSFilterValueRule() {
+		return getGSSFilterValueAccess().getRule();
 	}
 	
 	//enum GSSFilterConstantType:

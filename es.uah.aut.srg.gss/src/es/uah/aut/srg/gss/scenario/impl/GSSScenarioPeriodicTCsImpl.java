@@ -10,9 +10,7 @@
  */
 package es.uah.aut.srg.gss.scenario.impl;
 
-import es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTCLevel0;
-import es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTCLevel1;
-import es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTCLevel2;
+import es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTC;
 import es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTCs;
 import es.uah.aut.srg.gss.scenario.scenarioPackage;
 
@@ -38,43 +36,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioPeriodicTCsImpl#getPeriodicTC_level_2 <em>Periodic TC level 2</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioPeriodicTCsImpl#getPeriodicTC_level_1 <em>Periodic TC level 1</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioPeriodicTCsImpl#getPeriodicTC_level_0 <em>Periodic TC level 0</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioPeriodicTCsImpl#getPeriodicTC <em>Periodic TC</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class GSSScenarioPeriodicTCsImpl extends MinimalEObjectImpl.Container implements GSSScenarioPeriodicTCs {
 	/**
-	 * The cached value of the '{@link #getPeriodicTC_level_2() <em>Periodic TC level 2</em>}' containment reference list.
+	 * The cached value of the '{@link #getPeriodicTC() <em>Periodic TC</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPeriodicTC_level_2()
+	 * @see #getPeriodicTC()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GSSScenarioPeriodicTCLevel2> periodicTC_level_2;
-
-	/**
-	 * The cached value of the '{@link #getPeriodicTC_level_1() <em>Periodic TC level 1</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPeriodicTC_level_1()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSScenarioPeriodicTCLevel1> periodicTC_level_1;
-
-	/**
-	 * The cached value of the '{@link #getPeriodicTC_level_0() <em>Periodic TC level 0</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPeriodicTC_level_0()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSScenarioPeriodicTCLevel0> periodicTC_level_0;
+	protected EList<GSSScenarioPeriodicTC> periodicTC;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -100,35 +76,11 @@ public class GSSScenarioPeriodicTCsImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSScenarioPeriodicTCLevel2> getPeriodicTC_level_2() {
-		if (periodicTC_level_2 == null) {
-			periodicTC_level_2 = new EObjectContainmentEList<GSSScenarioPeriodicTCLevel2>(GSSScenarioPeriodicTCLevel2.class, this, scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_2);
+	public EList<GSSScenarioPeriodicTC> getPeriodicTC() {
+		if (periodicTC == null) {
+			periodicTC = new EObjectContainmentEList<GSSScenarioPeriodicTC>(GSSScenarioPeriodicTC.class, this, scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC);
 		}
-		return periodicTC_level_2;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<GSSScenarioPeriodicTCLevel1> getPeriodicTC_level_1() {
-		if (periodicTC_level_1 == null) {
-			periodicTC_level_1 = new EObjectContainmentEList<GSSScenarioPeriodicTCLevel1>(GSSScenarioPeriodicTCLevel1.class, this, scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_1);
-		}
-		return periodicTC_level_1;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<GSSScenarioPeriodicTCLevel0> getPeriodicTC_level_0() {
-		if (periodicTC_level_0 == null) {
-			periodicTC_level_0 = new EObjectContainmentEList<GSSScenarioPeriodicTCLevel0>(GSSScenarioPeriodicTCLevel0.class, this, scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_0);
-		}
-		return periodicTC_level_0;
+		return periodicTC;
 	}
 
 	/**
@@ -139,12 +91,8 @@ public class GSSScenarioPeriodicTCsImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_2:
-				return ((InternalEList<?>)getPeriodicTC_level_2()).basicRemove(otherEnd, msgs);
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_1:
-				return ((InternalEList<?>)getPeriodicTC_level_1()).basicRemove(otherEnd, msgs);
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_0:
-				return ((InternalEList<?>)getPeriodicTC_level_0()).basicRemove(otherEnd, msgs);
+			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC:
+				return ((InternalEList<?>)getPeriodicTC()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -157,12 +105,8 @@ public class GSSScenarioPeriodicTCsImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_2:
-				return getPeriodicTC_level_2();
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_1:
-				return getPeriodicTC_level_1();
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_0:
-				return getPeriodicTC_level_0();
+			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC:
+				return getPeriodicTC();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -176,17 +120,9 @@ public class GSSScenarioPeriodicTCsImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_2:
-				getPeriodicTC_level_2().clear();
-				getPeriodicTC_level_2().addAll((Collection<? extends GSSScenarioPeriodicTCLevel2>)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_1:
-				getPeriodicTC_level_1().clear();
-				getPeriodicTC_level_1().addAll((Collection<? extends GSSScenarioPeriodicTCLevel1>)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_0:
-				getPeriodicTC_level_0().clear();
-				getPeriodicTC_level_0().addAll((Collection<? extends GSSScenarioPeriodicTCLevel0>)newValue);
+			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC:
+				getPeriodicTC().clear();
+				getPeriodicTC().addAll((Collection<? extends GSSScenarioPeriodicTC>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -200,14 +136,8 @@ public class GSSScenarioPeriodicTCsImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_2:
-				getPeriodicTC_level_2().clear();
-				return;
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_1:
-				getPeriodicTC_level_1().clear();
-				return;
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_0:
-				getPeriodicTC_level_0().clear();
+			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC:
+				getPeriodicTC().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -221,12 +151,8 @@ public class GSSScenarioPeriodicTCsImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_2:
-				return periodicTC_level_2 != null && !periodicTC_level_2.isEmpty();
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_1:
-				return periodicTC_level_1 != null && !periodicTC_level_1.isEmpty();
-			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC_LEVEL_0:
-				return periodicTC_level_0 != null && !periodicTC_level_0.isEmpty();
+			case scenarioPackage.GSS_SCENARIO_PERIODIC_TCS__PERIODIC_TC:
+				return periodicTC != null && !periodicTC.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

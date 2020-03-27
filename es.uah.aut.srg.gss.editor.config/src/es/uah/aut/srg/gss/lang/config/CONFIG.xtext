@@ -81,9 +81,7 @@ GSSScenarioSpecialPackets returns scenario::GSSScenarioSpecialPackets:
 GSSScenarioPeriodicTCs returns scenario::GSSScenarioPeriodicTCs:
 	{scenario::GSSScenarioPeriodicTCs}
 	'GSSScenarioPeriodicTCs' '{'
-		((PeriodicTC_level_2+=GSSScenarioPeriodicTCLevel2) |
-		 (PeriodicTC_level_1+=GSSScenarioPeriodicTCLevel1) |
-		 (PeriodicTC_level_0+=GSSScenarioPeriodicTCLevel0))*
+		(PeriodicTC+=GSSScenarioPeriodicTC)*
 	'}' ';'
 ;
 
@@ -96,10 +94,7 @@ GSSScenarioGlobalVars returns scenario::GSSScenarioGlobalVars:
 GSSScenarioMonitors returns scenario::GSSScenarioMonitors:
 	'GSSScenarioMonitors' '{'
 		('ChartsFile' ':=' ChartsFile=[charts::GSSChartsCharts|VersionedQualifiedName] ';')?
-		((plot+=GSSScenarioPlot) |
-		 (alarmMsg+=GSSScenarioAlarmMsg) |
-		 (modify+=GSSScenarioModify) |
-		 (alarmVal+=GSSScenarioAlarmVal))+
+		(monitor+=GSSScenarioMonitor)+
 	'}' ';'
 ;
 
@@ -305,6 +300,9 @@ enum GSSScenarioUnit returns scenario::GSSScenarioUnit:
 	miliseconds = 'miliseconds' | seconds = 'seconds'
 ;
 
+GSSScenarioPeriodicTC returns scenario::GSSScenarioPeriodicTC:
+	GSSScenarioPeriodicTCLevel2 | GSSScenarioPeriodicTCLevel1 | GSSScenarioPeriodicTCLevel0;
+
 GSSScenarioPeriodicTCLevel2 returns scenario::GSSScenarioPeriodicTCLevel2:
 	'GSSScenarioPeriodicTCLevel2' '{'
 		'name' ':=' name=STRING ';'
@@ -353,11 +351,13 @@ GSSScenarioGlobalVar returns scenario::GSSScenarioGlobalVar:
 		'id' ':=' id=INTEGER ';'
 		'type' ':=' type=GSSScenarioGlobalVarType ';'
 		'initial_value' ':=' initial_value=INTEGER ';'
-		 ((referenceField=GSSScenarioReferenceField) |
-		 (referencePeriodicTC=GSSScenarioReferencePeriodicTC) |
-		 (referenceSpecialPacket=GSSScenarioReferenceSpecialPacket))
+		 reference=GSSScenarioReference
 	'}' ';'
 ;
+
+GSSScenarioReference returns scenario::GSSScenarioReference:
+	GSSScenarioReferenceField | GSSScenarioReferencePeriodicTC |
+	GSSScenarioReferenceSpecialPacket;
 
 enum GSSScenarioGlobalVarType returns scenario::GSSScenarioGlobalVarType:
 	uint = 'uint' | formula = 'formula'
@@ -395,15 +395,16 @@ GSSScenarioReferenceSpecialPacket returns scenario::GSSScenarioReferenceSpecialP
 ;
 
 enum GSSScenarioReferenceFieldType returns scenario::GSSScenarioReferenceFieldType:
-	tm = 'tm' | tc = 'tc'
-;
+	tm = 'tm' | tc = 'tc';
+
+GSSScenarioMonitor returns scenario::GSSScenarioMonitor:
+	GSSScenarioPlot | GSSScenarioAlarmMsg | GSSScenarioModify | GSSScenarioAlarmVal;
 
 GSSScenarioPlot returns scenario::GSSScenarioPlot:
 	'GSSScenarioPlot' '{'
 		'name' ':=' name=STRING ';'
 		'chartRef' ':=' chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';'
-		((GVFiltered=GSSScenarioGVFiltered) |
-		 (GVPeriodic=GSSScenarioGVPeriodic))
+		GV=GSSScenarioGV
 	'}' ';'
 ;
 
@@ -412,8 +413,7 @@ GSSScenarioAlarmMsg returns scenario::GSSScenarioAlarmMsg:
 		'name' ':=' name=STRING ';'
 		'type' ':=' type=GSSScenarioAlarmMsgType ';'
 		'text' ':=' text=STRING ';'
-		((GVFiltered=GSSScenarioGVFiltered) |
-		 (GVPeriodic=GSSScenarioGVPeriodic))
+		GV=GSSScenarioGV
 	'}' ';'
 ;
 
@@ -422,8 +422,7 @@ GSSScenarioModify returns scenario::GSSScenarioModify:
 		'name' ':=' name=STRING ';'
 		'type' ':=' type=GSSScenarioModifyType ';'
 		'value' ':=' value=INTEGER ';'
-		((GVFiltered=GSSScenarioGVFiltered) |
-		 (GVPeriodic=GSSScenarioGVPeriodic))
+		GV=GSSScenarioGV
 	'}' ';'
 ;
 
@@ -431,10 +430,12 @@ GSSScenarioAlarmVal returns scenario::GSSScenarioAlarmVal:
 	'GSSScenarioAlarmVal' '{'
 		'name' ':=' name=STRING ';'
 		'type' ':=' type=GSSScenarioAlarmValType ';'
-		((GVFiltered=GSSScenarioGVFiltered) |
-		 (GVPeriodic=GSSScenarioGVPeriodic))
+		GV=GSSScenarioGV
 	'}' ';'
 ;
+
+GSSScenarioGV returns scenario::GSSScenarioGV:
+	GSSScenarioGVFiltered | GSSScenarioGVPeriodic;
 
 GSSScenarioGVFiltered returns scenario::GSSScenarioGVFiltered:
 	'GSSScenarioGVFiltered' '{'

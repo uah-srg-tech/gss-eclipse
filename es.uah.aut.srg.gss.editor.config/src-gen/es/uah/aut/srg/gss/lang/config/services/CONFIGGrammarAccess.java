@@ -529,25 +529,19 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Action cGSSScenarioPeriodicTCsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cGSSScenarioPeriodicTCsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
-		private final Assignment cPeriodicTC_level_2Assignment_3_0 = (Assignment)cAlternatives_3.eContents().get(0);
-		private final RuleCall cPeriodicTC_level_2GSSScenarioPeriodicTCLevel2ParserRuleCall_3_0_0 = (RuleCall)cPeriodicTC_level_2Assignment_3_0.eContents().get(0);
-		private final Assignment cPeriodicTC_level_1Assignment_3_1 = (Assignment)cAlternatives_3.eContents().get(1);
-		private final RuleCall cPeriodicTC_level_1GSSScenarioPeriodicTCLevel1ParserRuleCall_3_1_0 = (RuleCall)cPeriodicTC_level_1Assignment_3_1.eContents().get(0);
-		private final Assignment cPeriodicTC_level_0Assignment_3_2 = (Assignment)cAlternatives_3.eContents().get(2);
-		private final RuleCall cPeriodicTC_level_0GSSScenarioPeriodicTCLevel0ParserRuleCall_3_2_0 = (RuleCall)cPeriodicTC_level_0Assignment_3_2.eContents().get(0);
+		private final Assignment cPeriodicTCAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPeriodicTCGSSScenarioPeriodicTCParserRuleCall_3_0 = (RuleCall)cPeriodicTCAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//GSSScenarioPeriodicTCs scenario::GSSScenarioPeriodicTCs:
 		//	{scenario::GSSScenarioPeriodicTCs}
-		//	'GSSScenarioPeriodicTCs' '{' (PeriodicTC_level_2+=GSSScenarioPeriodicTCLevel2 |
-		//	PeriodicTC_level_1+=GSSScenarioPeriodicTCLevel1 | PeriodicTC_level_0+=GSSScenarioPeriodicTCLevel0)*
+		//	'GSSScenarioPeriodicTCs' '{'
+		//	PeriodicTC+=GSSScenarioPeriodicTC*
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{scenario::GSSScenarioPeriodicTCs} 'GSSScenarioPeriodicTCs' '{' (PeriodicTC_level_2+=GSSScenarioPeriodicTCLevel2 |
-		//PeriodicTC_level_1+=GSSScenarioPeriodicTCLevel1 | PeriodicTC_level_0+=GSSScenarioPeriodicTCLevel0)* '}' ';'
+		//{scenario::GSSScenarioPeriodicTCs} 'GSSScenarioPeriodicTCs' '{' PeriodicTC+=GSSScenarioPeriodicTC* '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//{scenario::GSSScenarioPeriodicTCs}
@@ -559,27 +553,11 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//(PeriodicTC_level_2+=GSSScenarioPeriodicTCLevel2 | PeriodicTC_level_1+=GSSScenarioPeriodicTCLevel1 |
-		//PeriodicTC_level_0+=GSSScenarioPeriodicTCLevel0)*
-		public Alternatives getAlternatives_3() { return cAlternatives_3; }
+		//PeriodicTC+=GSSScenarioPeriodicTC*
+		public Assignment getPeriodicTCAssignment_3() { return cPeriodicTCAssignment_3; }
 		
-		//PeriodicTC_level_2+=GSSScenarioPeriodicTCLevel2
-		public Assignment getPeriodicTC_level_2Assignment_3_0() { return cPeriodicTC_level_2Assignment_3_0; }
-		
-		//GSSScenarioPeriodicTCLevel2
-		public RuleCall getPeriodicTC_level_2GSSScenarioPeriodicTCLevel2ParserRuleCall_3_0_0() { return cPeriodicTC_level_2GSSScenarioPeriodicTCLevel2ParserRuleCall_3_0_0; }
-		
-		//PeriodicTC_level_1+=GSSScenarioPeriodicTCLevel1
-		public Assignment getPeriodicTC_level_1Assignment_3_1() { return cPeriodicTC_level_1Assignment_3_1; }
-		
-		//GSSScenarioPeriodicTCLevel1
-		public RuleCall getPeriodicTC_level_1GSSScenarioPeriodicTCLevel1ParserRuleCall_3_1_0() { return cPeriodicTC_level_1GSSScenarioPeriodicTCLevel1ParserRuleCall_3_1_0; }
-		
-		//PeriodicTC_level_0+=GSSScenarioPeriodicTCLevel0
-		public Assignment getPeriodicTC_level_0Assignment_3_2() { return cPeriodicTC_level_0Assignment_3_2; }
-		
-		//GSSScenarioPeriodicTCLevel0
-		public RuleCall getPeriodicTC_level_0GSSScenarioPeriodicTCLevel0ParserRuleCall_3_2_0() { return cPeriodicTC_level_0GSSScenarioPeriodicTCLevel0ParserRuleCall_3_2_0; }
+		//GSSScenarioPeriodicTC
+		public RuleCall getPeriodicTCGSSScenarioPeriodicTCParserRuleCall_3_0() { return cPeriodicTCGSSScenarioPeriodicTCParserRuleCall_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
@@ -636,27 +614,19 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cChartsFileGSSChartsChartsCrossReference_2_2_0 = (CrossReference)cChartsFileAssignment_2_2.eContents().get(0);
 		private final RuleCall cChartsFileGSSChartsChartsVersionedQualifiedNameParserRuleCall_2_2_0_1 = (RuleCall)cChartsFileGSSChartsChartsCrossReference_2_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
-		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
-		private final Assignment cPlotAssignment_3_0 = (Assignment)cAlternatives_3.eContents().get(0);
-		private final RuleCall cPlotGSSScenarioPlotParserRuleCall_3_0_0 = (RuleCall)cPlotAssignment_3_0.eContents().get(0);
-		private final Assignment cAlarmMsgAssignment_3_1 = (Assignment)cAlternatives_3.eContents().get(1);
-		private final RuleCall cAlarmMsgGSSScenarioAlarmMsgParserRuleCall_3_1_0 = (RuleCall)cAlarmMsgAssignment_3_1.eContents().get(0);
-		private final Assignment cModifyAssignment_3_2 = (Assignment)cAlternatives_3.eContents().get(2);
-		private final RuleCall cModifyGSSScenarioModifyParserRuleCall_3_2_0 = (RuleCall)cModifyAssignment_3_2.eContents().get(0);
-		private final Assignment cAlarmValAssignment_3_3 = (Assignment)cAlternatives_3.eContents().get(3);
-		private final RuleCall cAlarmValGSSScenarioAlarmValParserRuleCall_3_3_0 = (RuleCall)cAlarmValAssignment_3_3.eContents().get(0);
+		private final Assignment cMonitorAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cMonitorGSSScenarioMonitorParserRuleCall_3_0 = (RuleCall)cMonitorAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//GSSScenarioMonitors scenario::GSSScenarioMonitors:
 		//	'GSSScenarioMonitors' '{' ('ChartsFile' ':=' ChartsFile=[charts::GSSChartsCharts|VersionedQualifiedName] ';')?
-		//	(plot+=GSSScenarioPlot | alarmMsg+=GSSScenarioAlarmMsg | modify+=GSSScenarioModify | alarmVal+=GSSScenarioAlarmVal)+
+		//	monitor+=GSSScenarioMonitor+
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSScenarioMonitors' '{' ('ChartsFile' ':=' ChartsFile=[charts::GSSChartsCharts|VersionedQualifiedName] ';')?
-		//(plot+=GSSScenarioPlot | alarmMsg+=GSSScenarioAlarmMsg | modify+=GSSScenarioModify | alarmVal+=GSSScenarioAlarmVal)+
-		//'}' ';'
+		//monitor+=GSSScenarioMonitor+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioMonitors'
@@ -686,32 +656,11 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_2_3() { return cSemicolonKeyword_2_3; }
 		
-		//(plot+=GSSScenarioPlot | alarmMsg+=GSSScenarioAlarmMsg | modify+=GSSScenarioModify | alarmVal+=GSSScenarioAlarmVal)+
-		public Alternatives getAlternatives_3() { return cAlternatives_3; }
+		//monitor+=GSSScenarioMonitor+
+		public Assignment getMonitorAssignment_3() { return cMonitorAssignment_3; }
 		
-		//plot+=GSSScenarioPlot
-		public Assignment getPlotAssignment_3_0() { return cPlotAssignment_3_0; }
-		
-		//GSSScenarioPlot
-		public RuleCall getPlotGSSScenarioPlotParserRuleCall_3_0_0() { return cPlotGSSScenarioPlotParserRuleCall_3_0_0; }
-		
-		//alarmMsg+=GSSScenarioAlarmMsg
-		public Assignment getAlarmMsgAssignment_3_1() { return cAlarmMsgAssignment_3_1; }
-		
-		//GSSScenarioAlarmMsg
-		public RuleCall getAlarmMsgGSSScenarioAlarmMsgParserRuleCall_3_1_0() { return cAlarmMsgGSSScenarioAlarmMsgParserRuleCall_3_1_0; }
-		
-		//modify+=GSSScenarioModify
-		public Assignment getModifyAssignment_3_2() { return cModifyAssignment_3_2; }
-		
-		//GSSScenarioModify
-		public RuleCall getModifyGSSScenarioModifyParserRuleCall_3_2_0() { return cModifyGSSScenarioModifyParserRuleCall_3_2_0; }
-		
-		//alarmVal+=GSSScenarioAlarmVal
-		public Assignment getAlarmValAssignment_3_3() { return cAlarmValAssignment_3_3; }
-		
-		//GSSScenarioAlarmVal
-		public RuleCall getAlarmValGSSScenarioAlarmValParserRuleCall_3_3_0() { return cAlarmValGSSScenarioAlarmValParserRuleCall_3_3_0; }
+		//GSSScenarioMonitor
+		public RuleCall getMonitorGSSScenarioMonitorParserRuleCall_3_0() { return cMonitorGSSScenarioMonitorParserRuleCall_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
@@ -3022,6 +2971,29 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_11() { return cSemicolonKeyword_11; }
 	}
+	public class GSSScenarioPeriodicTCElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioPeriodicTC");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cGSSScenarioPeriodicTCLevel2ParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGSSScenarioPeriodicTCLevel1ParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cGSSScenarioPeriodicTCLevel0ParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//GSSScenarioPeriodicTC scenario::GSSScenarioPeriodicTC:
+		//	GSSScenarioPeriodicTCLevel2 | GSSScenarioPeriodicTCLevel1 | GSSScenarioPeriodicTCLevel0
+		@Override public ParserRule getRule() { return rule; }
+		
+		//GSSScenarioPeriodicTCLevel2 | GSSScenarioPeriodicTCLevel1 | GSSScenarioPeriodicTCLevel0
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//GSSScenarioPeriodicTCLevel2
+		public RuleCall getGSSScenarioPeriodicTCLevel2ParserRuleCall_0() { return cGSSScenarioPeriodicTCLevel2ParserRuleCall_0; }
+		
+		//GSSScenarioPeriodicTCLevel1
+		public RuleCall getGSSScenarioPeriodicTCLevel1ParserRuleCall_1() { return cGSSScenarioPeriodicTCLevel1ParserRuleCall_1; }
+		
+		//GSSScenarioPeriodicTCLevel0
+		public RuleCall getGSSScenarioPeriodicTCLevel0ParserRuleCall_2() { return cGSSScenarioPeriodicTCLevel0ParserRuleCall_2; }
+	}
 	public class GSSScenarioPeriodicTCLevel2Elements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioPeriodicTCLevel2");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -3797,13 +3769,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cInitial_valueAssignment_16 = (Assignment)cGroup.eContents().get(16);
 		private final RuleCall cInitial_valueINTEGERParserRuleCall_16_0 = (RuleCall)cInitial_valueAssignment_16.eContents().get(0);
 		private final Keyword cSemicolonKeyword_17 = (Keyword)cGroup.eContents().get(17);
-		private final Alternatives cAlternatives_18 = (Alternatives)cGroup.eContents().get(18);
-		private final Assignment cReferenceFieldAssignment_18_0 = (Assignment)cAlternatives_18.eContents().get(0);
-		private final RuleCall cReferenceFieldGSSScenarioReferenceFieldParserRuleCall_18_0_0 = (RuleCall)cReferenceFieldAssignment_18_0.eContents().get(0);
-		private final Assignment cReferencePeriodicTCAssignment_18_1 = (Assignment)cAlternatives_18.eContents().get(1);
-		private final RuleCall cReferencePeriodicTCGSSScenarioReferencePeriodicTCParserRuleCall_18_1_0 = (RuleCall)cReferencePeriodicTCAssignment_18_1.eContents().get(0);
-		private final Assignment cReferenceSpecialPacketAssignment_18_2 = (Assignment)cAlternatives_18.eContents().get(2);
-		private final RuleCall cReferenceSpecialPacketGSSScenarioReferenceSpecialPacketParserRuleCall_18_2_0 = (RuleCall)cReferenceSpecialPacketAssignment_18_2.eContents().get(0);
+		private final Assignment cReferenceAssignment_18 = (Assignment)cGroup.eContents().get(18);
+		private final RuleCall cReferenceGSSScenarioReferenceParserRuleCall_18_0 = (RuleCall)cReferenceAssignment_18.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_19 = (Keyword)cGroup.eContents().get(19);
 		private final Keyword cSemicolonKeyword_20 = (Keyword)cGroup.eContents().get(20);
 		
@@ -3812,15 +3779,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'name' ':=' name=STRING ';'
 		//	'id' ':=' id=INTEGER ';'
 		//	'type' ':=' type=GSSScenarioGlobalVarType ';'
-		//	'initial_value' ':=' initial_value=INTEGER ';' (referenceField=GSSScenarioReferenceField |
-		//	referencePeriodicTC=GSSScenarioReferencePeriodicTC | referenceSpecialPacket=GSSScenarioReferenceSpecialPacket)
+		//	'initial_value' ':=' initial_value=INTEGER ';'
+		//	reference=GSSScenarioReference
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSScenarioGlobalVar' '{' 'name' ':=' name=STRING ';' 'id' ':=' id=INTEGER ';' 'type' ':='
-		//type=GSSScenarioGlobalVarType ';' 'initial_value' ':=' initial_value=INTEGER ';'
-		//(referenceField=GSSScenarioReferenceField | referencePeriodicTC=GSSScenarioReferencePeriodicTC |
-		//referenceSpecialPacket=GSSScenarioReferenceSpecialPacket) '}' ';'
+		//type=GSSScenarioGlobalVarType ';' 'initial_value' ':=' initial_value=INTEGER ';' reference=GSSScenarioReference '}'
+		//';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioGlobalVar'
@@ -3889,33 +3855,40 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_17() { return cSemicolonKeyword_17; }
 		
-		//(referenceField=GSSScenarioReferenceField | referencePeriodicTC=GSSScenarioReferencePeriodicTC |
-		//referenceSpecialPacket=GSSScenarioReferenceSpecialPacket)
-		public Alternatives getAlternatives_18() { return cAlternatives_18; }
+		//reference=GSSScenarioReference
+		public Assignment getReferenceAssignment_18() { return cReferenceAssignment_18; }
 		
-		//referenceField=GSSScenarioReferenceField
-		public Assignment getReferenceFieldAssignment_18_0() { return cReferenceFieldAssignment_18_0; }
-		
-		//GSSScenarioReferenceField
-		public RuleCall getReferenceFieldGSSScenarioReferenceFieldParserRuleCall_18_0_0() { return cReferenceFieldGSSScenarioReferenceFieldParserRuleCall_18_0_0; }
-		
-		//referencePeriodicTC=GSSScenarioReferencePeriodicTC
-		public Assignment getReferencePeriodicTCAssignment_18_1() { return cReferencePeriodicTCAssignment_18_1; }
-		
-		//GSSScenarioReferencePeriodicTC
-		public RuleCall getReferencePeriodicTCGSSScenarioReferencePeriodicTCParserRuleCall_18_1_0() { return cReferencePeriodicTCGSSScenarioReferencePeriodicTCParserRuleCall_18_1_0; }
-		
-		//referenceSpecialPacket=GSSScenarioReferenceSpecialPacket
-		public Assignment getReferenceSpecialPacketAssignment_18_2() { return cReferenceSpecialPacketAssignment_18_2; }
-		
-		//GSSScenarioReferenceSpecialPacket
-		public RuleCall getReferenceSpecialPacketGSSScenarioReferenceSpecialPacketParserRuleCall_18_2_0() { return cReferenceSpecialPacketGSSScenarioReferenceSpecialPacketParserRuleCall_18_2_0; }
+		//GSSScenarioReference
+		public RuleCall getReferenceGSSScenarioReferenceParserRuleCall_18_0() { return cReferenceGSSScenarioReferenceParserRuleCall_18_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_19() { return cRightCurlyBracketKeyword_19; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_20() { return cSemicolonKeyword_20; }
+	}
+	public class GSSScenarioReferenceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioReference");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cGSSScenarioReferenceFieldParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGSSScenarioReferencePeriodicTCParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cGSSScenarioReferenceSpecialPacketParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//GSSScenarioReference scenario::GSSScenarioReference:
+		//	GSSScenarioReferenceField | GSSScenarioReferencePeriodicTC | GSSScenarioReferenceSpecialPacket
+		@Override public ParserRule getRule() { return rule; }
+		
+		//GSSScenarioReferenceField | GSSScenarioReferencePeriodicTC | GSSScenarioReferenceSpecialPacket
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//GSSScenarioReferenceField
+		public RuleCall getGSSScenarioReferenceFieldParserRuleCall_0() { return cGSSScenarioReferenceFieldParserRuleCall_0; }
+		
+		//GSSScenarioReferencePeriodicTC
+		public RuleCall getGSSScenarioReferencePeriodicTCParserRuleCall_1() { return cGSSScenarioReferencePeriodicTCParserRuleCall_1; }
+		
+		//GSSScenarioReferenceSpecialPacket
+		public RuleCall getGSSScenarioReferenceSpecialPacketParserRuleCall_2() { return cGSSScenarioReferenceSpecialPacketParserRuleCall_2; }
 	}
 	public class GSSScenarioReferenceFieldElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioReferenceField");
@@ -4351,6 +4324,33 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_23() { return cSemicolonKeyword_23; }
 	}
+	public class GSSScenarioMonitorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioMonitor");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cGSSScenarioPlotParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGSSScenarioAlarmMsgParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cGSSScenarioModifyParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cGSSScenarioAlarmValParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		
+		//GSSScenarioMonitor scenario::GSSScenarioMonitor:
+		//	GSSScenarioPlot | GSSScenarioAlarmMsg | GSSScenarioModify | GSSScenarioAlarmVal
+		@Override public ParserRule getRule() { return rule; }
+		
+		//GSSScenarioPlot | GSSScenarioAlarmMsg | GSSScenarioModify | GSSScenarioAlarmVal
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//GSSScenarioPlot
+		public RuleCall getGSSScenarioPlotParserRuleCall_0() { return cGSSScenarioPlotParserRuleCall_0; }
+		
+		//GSSScenarioAlarmMsg
+		public RuleCall getGSSScenarioAlarmMsgParserRuleCall_1() { return cGSSScenarioAlarmMsgParserRuleCall_1; }
+		
+		//GSSScenarioModify
+		public RuleCall getGSSScenarioModifyParserRuleCall_2() { return cGSSScenarioModifyParserRuleCall_2; }
+		
+		//GSSScenarioAlarmVal
+		public RuleCall getGSSScenarioAlarmValParserRuleCall_3() { return cGSSScenarioAlarmValParserRuleCall_3; }
+	}
 	public class GSSScenarioPlotElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioPlot");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -4367,11 +4367,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cChartRefGSSChartsChartCrossReference_8_0 = (CrossReference)cChartRefAssignment_8.eContents().get(0);
 		private final RuleCall cChartRefGSSChartsChartVersionedQualifiedReferenceNameParserRuleCall_8_0_1 = (RuleCall)cChartRefGSSChartsChartCrossReference_8_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Alternatives cAlternatives_10 = (Alternatives)cGroup.eContents().get(10);
-		private final Assignment cGVFilteredAssignment_10_0 = (Assignment)cAlternatives_10.eContents().get(0);
-		private final RuleCall cGVFilteredGSSScenarioGVFilteredParserRuleCall_10_0_0 = (RuleCall)cGVFilteredAssignment_10_0.eContents().get(0);
-		private final Assignment cGVPeriodicAssignment_10_1 = (Assignment)cAlternatives_10.eContents().get(1);
-		private final RuleCall cGVPeriodicGSSScenarioGVPeriodicParserRuleCall_10_1_0 = (RuleCall)cGVPeriodicAssignment_10_1.eContents().get(0);
+		private final Assignment cGVAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cGVGSSScenarioGVParserRuleCall_10_0 = (RuleCall)cGVAssignment_10.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Keyword cSemicolonKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
@@ -4379,13 +4376,12 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSScenarioPlot' '{'
 		//	'name' ':=' name=STRING ';'
 		//	'chartRef' ':=' chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';'
-		//	(GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic)
+		//	GV=GSSScenarioGV
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSScenarioPlot' '{' 'name' ':=' name=STRING ';' 'chartRef' ':='
-		//chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';' (GVFiltered=GSSScenarioGVFiltered |
-		//GVPeriodic=GSSScenarioGVPeriodic) '}' ';'
+		//chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';' GV=GSSScenarioGV '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioPlot'
@@ -4427,20 +4423,11 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
-		//(GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic)
-		public Alternatives getAlternatives_10() { return cAlternatives_10; }
+		//GV=GSSScenarioGV
+		public Assignment getGVAssignment_10() { return cGVAssignment_10; }
 		
-		//GVFiltered=GSSScenarioGVFiltered
-		public Assignment getGVFilteredAssignment_10_0() { return cGVFilteredAssignment_10_0; }
-		
-		//GSSScenarioGVFiltered
-		public RuleCall getGVFilteredGSSScenarioGVFilteredParserRuleCall_10_0_0() { return cGVFilteredGSSScenarioGVFilteredParserRuleCall_10_0_0; }
-		
-		//GVPeriodic=GSSScenarioGVPeriodic
-		public Assignment getGVPeriodicAssignment_10_1() { return cGVPeriodicAssignment_10_1; }
-		
-		//GSSScenarioGVPeriodic
-		public RuleCall getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_10_1_0() { return cGVPeriodicGSSScenarioGVPeriodicParserRuleCall_10_1_0; }
+		//GSSScenarioGV
+		public RuleCall getGVGSSScenarioGVParserRuleCall_10_0() { return cGVGSSScenarioGVParserRuleCall_10_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
@@ -4468,11 +4455,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTextAssignment_12 = (Assignment)cGroup.eContents().get(12);
 		private final RuleCall cTextSTRINGTerminalRuleCall_12_0 = (RuleCall)cTextAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
-		private final Alternatives cAlternatives_14 = (Alternatives)cGroup.eContents().get(14);
-		private final Assignment cGVFilteredAssignment_14_0 = (Assignment)cAlternatives_14.eContents().get(0);
-		private final RuleCall cGVFilteredGSSScenarioGVFilteredParserRuleCall_14_0_0 = (RuleCall)cGVFilteredAssignment_14_0.eContents().get(0);
-		private final Assignment cGVPeriodicAssignment_14_1 = (Assignment)cAlternatives_14.eContents().get(1);
-		private final RuleCall cGVPeriodicGSSScenarioGVPeriodicParserRuleCall_14_1_0 = (RuleCall)cGVPeriodicAssignment_14_1.eContents().get(0);
+		private final Assignment cGVAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cGVGSSScenarioGVParserRuleCall_14_0 = (RuleCall)cGVAssignment_14.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Keyword cSemicolonKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
@@ -4480,12 +4464,13 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSScenarioAlarmMsg' '{'
 		//	'name' ':=' name=STRING ';'
 		//	'type' ':=' type=GSSScenarioAlarmMsgType ';'
-		//	'text' ':=' text=STRING ';' (GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic)
+		//	'text' ':=' text=STRING ';'
+		//	GV=GSSScenarioGV
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSScenarioAlarmMsg' '{' 'name' ':=' name=STRING ';' 'type' ':=' type=GSSScenarioAlarmMsgType ';' 'text' ':='
-		//text=STRING ';' (GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic) '}' ';'
+		//text=STRING ';' GV=GSSScenarioGV '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioAlarmMsg'
@@ -4539,20 +4524,11 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
 		
-		//(GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic)
-		public Alternatives getAlternatives_14() { return cAlternatives_14; }
+		//GV=GSSScenarioGV
+		public Assignment getGVAssignment_14() { return cGVAssignment_14; }
 		
-		//GVFiltered=GSSScenarioGVFiltered
-		public Assignment getGVFilteredAssignment_14_0() { return cGVFilteredAssignment_14_0; }
-		
-		//GSSScenarioGVFiltered
-		public RuleCall getGVFilteredGSSScenarioGVFilteredParserRuleCall_14_0_0() { return cGVFilteredGSSScenarioGVFilteredParserRuleCall_14_0_0; }
-		
-		//GVPeriodic=GSSScenarioGVPeriodic
-		public Assignment getGVPeriodicAssignment_14_1() { return cGVPeriodicAssignment_14_1; }
-		
-		//GSSScenarioGVPeriodic
-		public RuleCall getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_14_1_0() { return cGVPeriodicGSSScenarioGVPeriodicParserRuleCall_14_1_0; }
+		//GSSScenarioGV
+		public RuleCall getGVGSSScenarioGVParserRuleCall_14_0() { return cGVGSSScenarioGVParserRuleCall_14_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
@@ -4580,11 +4556,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment_12 = (Assignment)cGroup.eContents().get(12);
 		private final RuleCall cValueINTEGERParserRuleCall_12_0 = (RuleCall)cValueAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
-		private final Alternatives cAlternatives_14 = (Alternatives)cGroup.eContents().get(14);
-		private final Assignment cGVFilteredAssignment_14_0 = (Assignment)cAlternatives_14.eContents().get(0);
-		private final RuleCall cGVFilteredGSSScenarioGVFilteredParserRuleCall_14_0_0 = (RuleCall)cGVFilteredAssignment_14_0.eContents().get(0);
-		private final Assignment cGVPeriodicAssignment_14_1 = (Assignment)cAlternatives_14.eContents().get(1);
-		private final RuleCall cGVPeriodicGSSScenarioGVPeriodicParserRuleCall_14_1_0 = (RuleCall)cGVPeriodicAssignment_14_1.eContents().get(0);
+		private final Assignment cGVAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cGVGSSScenarioGVParserRuleCall_14_0 = (RuleCall)cGVAssignment_14.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Keyword cSemicolonKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
@@ -4592,12 +4565,13 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSScenarioModify' '{'
 		//	'name' ':=' name=STRING ';'
 		//	'type' ':=' type=GSSScenarioModifyType ';'
-		//	'value' ':=' value=INTEGER ';' (GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic)
+		//	'value' ':=' value=INTEGER ';'
+		//	GV=GSSScenarioGV
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSScenarioModify' '{' 'name' ':=' name=STRING ';' 'type' ':=' type=GSSScenarioModifyType ';' 'value' ':='
-		//value=INTEGER ';' (GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic) '}' ';'
+		//value=INTEGER ';' GV=GSSScenarioGV '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioModify'
@@ -4651,20 +4625,11 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
 		
-		//(GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic)
-		public Alternatives getAlternatives_14() { return cAlternatives_14; }
+		//GV=GSSScenarioGV
+		public Assignment getGVAssignment_14() { return cGVAssignment_14; }
 		
-		//GVFiltered=GSSScenarioGVFiltered
-		public Assignment getGVFilteredAssignment_14_0() { return cGVFilteredAssignment_14_0; }
-		
-		//GSSScenarioGVFiltered
-		public RuleCall getGVFilteredGSSScenarioGVFilteredParserRuleCall_14_0_0() { return cGVFilteredGSSScenarioGVFilteredParserRuleCall_14_0_0; }
-		
-		//GVPeriodic=GSSScenarioGVPeriodic
-		public Assignment getGVPeriodicAssignment_14_1() { return cGVPeriodicAssignment_14_1; }
-		
-		//GSSScenarioGVPeriodic
-		public RuleCall getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_14_1_0() { return cGVPeriodicGSSScenarioGVPeriodicParserRuleCall_14_1_0; }
+		//GSSScenarioGV
+		public RuleCall getGVGSSScenarioGVParserRuleCall_14_0() { return cGVGSSScenarioGVParserRuleCall_14_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
@@ -4687,23 +4652,21 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTypeAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cTypeGSSScenarioAlarmValTypeEnumRuleCall_8_0 = (RuleCall)cTypeAssignment_8.eContents().get(0);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Alternatives cAlternatives_10 = (Alternatives)cGroup.eContents().get(10);
-		private final Assignment cGVFilteredAssignment_10_0 = (Assignment)cAlternatives_10.eContents().get(0);
-		private final RuleCall cGVFilteredGSSScenarioGVFilteredParserRuleCall_10_0_0 = (RuleCall)cGVFilteredAssignment_10_0.eContents().get(0);
-		private final Assignment cGVPeriodicAssignment_10_1 = (Assignment)cAlternatives_10.eContents().get(1);
-		private final RuleCall cGVPeriodicGSSScenarioGVPeriodicParserRuleCall_10_1_0 = (RuleCall)cGVPeriodicAssignment_10_1.eContents().get(0);
+		private final Assignment cGVAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cGVGSSScenarioGVParserRuleCall_10_0 = (RuleCall)cGVAssignment_10.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Keyword cSemicolonKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
 		//GSSScenarioAlarmVal scenario::GSSScenarioAlarmVal:
 		//	'GSSScenarioAlarmVal' '{'
 		//	'name' ':=' name=STRING ';'
-		//	'type' ':=' type=GSSScenarioAlarmValType ';' (GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic)
+		//	'type' ':=' type=GSSScenarioAlarmValType ';'
+		//	GV=GSSScenarioGV
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSScenarioAlarmVal' '{' 'name' ':=' name=STRING ';' 'type' ':=' type=GSSScenarioAlarmValType ';'
-		//(GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic) '}' ';'
+		//'GSSScenarioAlarmVal' '{' 'name' ':=' name=STRING ';' 'type' ':=' type=GSSScenarioAlarmValType ';' GV=GSSScenarioGV '}'
+		//';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioAlarmVal'
@@ -4742,26 +4705,36 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
-		//(GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic)
-		public Alternatives getAlternatives_10() { return cAlternatives_10; }
+		//GV=GSSScenarioGV
+		public Assignment getGVAssignment_10() { return cGVAssignment_10; }
 		
-		//GVFiltered=GSSScenarioGVFiltered
-		public Assignment getGVFilteredAssignment_10_0() { return cGVFilteredAssignment_10_0; }
-		
-		//GSSScenarioGVFiltered
-		public RuleCall getGVFilteredGSSScenarioGVFilteredParserRuleCall_10_0_0() { return cGVFilteredGSSScenarioGVFilteredParserRuleCall_10_0_0; }
-		
-		//GVPeriodic=GSSScenarioGVPeriodic
-		public Assignment getGVPeriodicAssignment_10_1() { return cGVPeriodicAssignment_10_1; }
-		
-		//GSSScenarioGVPeriodic
-		public RuleCall getGVPeriodicGSSScenarioGVPeriodicParserRuleCall_10_1_0() { return cGVPeriodicGSSScenarioGVPeriodicParserRuleCall_10_1_0; }
+		//GSSScenarioGV
+		public RuleCall getGVGSSScenarioGVParserRuleCall_10_0() { return cGVGSSScenarioGVParserRuleCall_10_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_12() { return cSemicolonKeyword_12; }
+	}
+	public class GSSScenarioGVElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioGV");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cGSSScenarioGVFilteredParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGSSScenarioGVPeriodicParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//GSSScenarioGV scenario::GSSScenarioGV:
+		//	GSSScenarioGVFiltered | GSSScenarioGVPeriodic
+		@Override public ParserRule getRule() { return rule; }
+		
+		//GSSScenarioGVFiltered | GSSScenarioGVPeriodic
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//GSSScenarioGVFiltered
+		public RuleCall getGSSScenarioGVFilteredParserRuleCall_0() { return cGSSScenarioGVFilteredParserRuleCall_0; }
+		
+		//GSSScenarioGVPeriodic
+		public RuleCall getGSSScenarioGVPeriodicParserRuleCall_1() { return cGSSScenarioGVPeriodicParserRuleCall_1; }
 	}
 	public class GSSScenarioGVFilteredElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioGVFiltered");
@@ -5802,19 +5775,23 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSScenarioUpperLevelLevelElements eGSSScenarioUpperLevelLevel;
 	private final GSSScenarioStructuredDataElements pGSSScenarioStructuredData;
 	private final GSSScenarioUnitElements eGSSScenarioUnit;
+	private final GSSScenarioPeriodicTCElements pGSSScenarioPeriodicTC;
 	private final GSSScenarioPeriodicTCLevel2Elements pGSSScenarioPeriodicTCLevel2;
 	private final GSSScenarioPeriodicTCLevel1Elements pGSSScenarioPeriodicTCLevel1;
 	private final GSSScenarioPeriodicTCLevel0Elements pGSSScenarioPeriodicTCLevel0;
 	private final GSSScenarioGlobalVarElements pGSSScenarioGlobalVar;
+	private final GSSScenarioReferenceElements pGSSScenarioReference;
 	private final GSSScenarioGlobalVarTypeElements eGSSScenarioGlobalVarType;
 	private final GSSScenarioReferenceFieldElements pGSSScenarioReferenceField;
 	private final GSSScenarioReferencePeriodicTCElements pGSSScenarioReferencePeriodicTC;
 	private final GSSScenarioReferenceSpecialPacketElements pGSSScenarioReferenceSpecialPacket;
 	private final GSSScenarioReferenceFieldTypeElements eGSSScenarioReferenceFieldType;
+	private final GSSScenarioMonitorElements pGSSScenarioMonitor;
 	private final GSSScenarioPlotElements pGSSScenarioPlot;
 	private final GSSScenarioAlarmMsgElements pGSSScenarioAlarmMsg;
 	private final GSSScenarioModifyElements pGSSScenarioModify;
 	private final GSSScenarioAlarmValElements pGSSScenarioAlarmVal;
+	private final GSSScenarioGVElements pGSSScenarioGV;
 	private final GSSScenarioGVFilteredElements pGSSScenarioGVFiltered;
 	private final GSSScenarioGVPeriodicElements pGSSScenarioGVPeriodic;
 	private final GSSScenarioAlarmMsgTypeElements eGSSScenarioAlarmMsgType;
@@ -5878,19 +5855,23 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		this.eGSSScenarioUpperLevelLevel = new GSSScenarioUpperLevelLevelElements();
 		this.pGSSScenarioStructuredData = new GSSScenarioStructuredDataElements();
 		this.eGSSScenarioUnit = new GSSScenarioUnitElements();
+		this.pGSSScenarioPeriodicTC = new GSSScenarioPeriodicTCElements();
 		this.pGSSScenarioPeriodicTCLevel2 = new GSSScenarioPeriodicTCLevel2Elements();
 		this.pGSSScenarioPeriodicTCLevel1 = new GSSScenarioPeriodicTCLevel1Elements();
 		this.pGSSScenarioPeriodicTCLevel0 = new GSSScenarioPeriodicTCLevel0Elements();
 		this.pGSSScenarioGlobalVar = new GSSScenarioGlobalVarElements();
+		this.pGSSScenarioReference = new GSSScenarioReferenceElements();
 		this.eGSSScenarioGlobalVarType = new GSSScenarioGlobalVarTypeElements();
 		this.pGSSScenarioReferenceField = new GSSScenarioReferenceFieldElements();
 		this.pGSSScenarioReferencePeriodicTC = new GSSScenarioReferencePeriodicTCElements();
 		this.pGSSScenarioReferenceSpecialPacket = new GSSScenarioReferenceSpecialPacketElements();
 		this.eGSSScenarioReferenceFieldType = new GSSScenarioReferenceFieldTypeElements();
+		this.pGSSScenarioMonitor = new GSSScenarioMonitorElements();
 		this.pGSSScenarioPlot = new GSSScenarioPlotElements();
 		this.pGSSScenarioAlarmMsg = new GSSScenarioAlarmMsgElements();
 		this.pGSSScenarioModify = new GSSScenarioModifyElements();
 		this.pGSSScenarioAlarmVal = new GSSScenarioAlarmValElements();
+		this.pGSSScenarioGV = new GSSScenarioGVElements();
 		this.pGSSScenarioGVFiltered = new GSSScenarioGVFilteredElements();
 		this.pGSSScenarioGVPeriodic = new GSSScenarioGVPeriodicElements();
 		this.eGSSScenarioAlarmMsgType = new GSSScenarioAlarmMsgTypeElements();
@@ -6049,8 +6030,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSScenarioPeriodicTCs scenario::GSSScenarioPeriodicTCs:
 	//	{scenario::GSSScenarioPeriodicTCs}
-	//	'GSSScenarioPeriodicTCs' '{' (PeriodicTC_level_2+=GSSScenarioPeriodicTCLevel2 |
-	//	PeriodicTC_level_1+=GSSScenarioPeriodicTCLevel1 | PeriodicTC_level_0+=GSSScenarioPeriodicTCLevel0)*
+	//	'GSSScenarioPeriodicTCs' '{'
+	//	PeriodicTC+=GSSScenarioPeriodicTC*
 	//	'}' ';'
 	public GSSScenarioPeriodicTCsElements getGSSScenarioPeriodicTCsAccess() {
 		return pGSSScenarioPeriodicTCs;
@@ -6074,7 +6055,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//GSSScenarioMonitors scenario::GSSScenarioMonitors:
 	//	'GSSScenarioMonitors' '{' ('ChartsFile' ':=' ChartsFile=[charts::GSSChartsCharts|VersionedQualifiedName] ';')?
-	//	(plot+=GSSScenarioPlot | alarmMsg+=GSSScenarioAlarmMsg | modify+=GSSScenarioModify | alarmVal+=GSSScenarioAlarmVal)+
+	//	monitor+=GSSScenarioMonitor+
 	//	'}' ';'
 	public GSSScenarioMonitorsElements getGSSScenarioMonitorsAccess() {
 		return pGSSScenarioMonitors;
@@ -6424,6 +6405,16 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSScenarioUnitAccess().getRule();
 	}
 	
+	//GSSScenarioPeriodicTC scenario::GSSScenarioPeriodicTC:
+	//	GSSScenarioPeriodicTCLevel2 | GSSScenarioPeriodicTCLevel1 | GSSScenarioPeriodicTCLevel0
+	public GSSScenarioPeriodicTCElements getGSSScenarioPeriodicTCAccess() {
+		return pGSSScenarioPeriodicTC;
+	}
+	
+	public ParserRule getGSSScenarioPeriodicTCRule() {
+		return getGSSScenarioPeriodicTCAccess().getRule();
+	}
+	
 	//GSSScenarioPeriodicTCLevel2 scenario::GSSScenarioPeriodicTCLevel2:
 	//	'GSSScenarioPeriodicTCLevel2' '{'
 	//	'name' ':=' name=STRING ';'
@@ -6489,8 +6480,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name' ':=' name=STRING ';'
 	//	'id' ':=' id=INTEGER ';'
 	//	'type' ':=' type=GSSScenarioGlobalVarType ';'
-	//	'initial_value' ':=' initial_value=INTEGER ';' (referenceField=GSSScenarioReferenceField |
-	//	referencePeriodicTC=GSSScenarioReferencePeriodicTC | referenceSpecialPacket=GSSScenarioReferenceSpecialPacket)
+	//	'initial_value' ':=' initial_value=INTEGER ';'
+	//	reference=GSSScenarioReference
 	//	'}' ';'
 	public GSSScenarioGlobalVarElements getGSSScenarioGlobalVarAccess() {
 		return pGSSScenarioGlobalVar;
@@ -6498,6 +6489,16 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getGSSScenarioGlobalVarRule() {
 		return getGSSScenarioGlobalVarAccess().getRule();
+	}
+	
+	//GSSScenarioReference scenario::GSSScenarioReference:
+	//	GSSScenarioReferenceField | GSSScenarioReferencePeriodicTC | GSSScenarioReferenceSpecialPacket
+	public GSSScenarioReferenceElements getGSSScenarioReferenceAccess() {
+		return pGSSScenarioReference;
+	}
+	
+	public ParserRule getGSSScenarioReferenceRule() {
+		return getGSSScenarioReferenceAccess().getRule();
 	}
 	
 	//enum GSSScenarioGlobalVarType returns scenario::GSSScenarioGlobalVarType:
@@ -6569,11 +6570,21 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSScenarioReferenceFieldTypeAccess().getRule();
 	}
 	
+	//GSSScenarioMonitor scenario::GSSScenarioMonitor:
+	//	GSSScenarioPlot | GSSScenarioAlarmMsg | GSSScenarioModify | GSSScenarioAlarmVal
+	public GSSScenarioMonitorElements getGSSScenarioMonitorAccess() {
+		return pGSSScenarioMonitor;
+	}
+	
+	public ParserRule getGSSScenarioMonitorRule() {
+		return getGSSScenarioMonitorAccess().getRule();
+	}
+	
 	//GSSScenarioPlot scenario::GSSScenarioPlot:
 	//	'GSSScenarioPlot' '{'
 	//	'name' ':=' name=STRING ';'
 	//	'chartRef' ':=' chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';'
-	//	(GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic)
+	//	GV=GSSScenarioGV
 	//	'}' ';'
 	public GSSScenarioPlotElements getGSSScenarioPlotAccess() {
 		return pGSSScenarioPlot;
@@ -6587,7 +6598,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSScenarioAlarmMsg' '{'
 	//	'name' ':=' name=STRING ';'
 	//	'type' ':=' type=GSSScenarioAlarmMsgType ';'
-	//	'text' ':=' text=STRING ';' (GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic)
+	//	'text' ':=' text=STRING ';'
+	//	GV=GSSScenarioGV
 	//	'}' ';'
 	public GSSScenarioAlarmMsgElements getGSSScenarioAlarmMsgAccess() {
 		return pGSSScenarioAlarmMsg;
@@ -6601,7 +6613,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSScenarioModify' '{'
 	//	'name' ':=' name=STRING ';'
 	//	'type' ':=' type=GSSScenarioModifyType ';'
-	//	'value' ':=' value=INTEGER ';' (GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic)
+	//	'value' ':=' value=INTEGER ';'
+	//	GV=GSSScenarioGV
 	//	'}' ';'
 	public GSSScenarioModifyElements getGSSScenarioModifyAccess() {
 		return pGSSScenarioModify;
@@ -6614,7 +6627,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//GSSScenarioAlarmVal scenario::GSSScenarioAlarmVal:
 	//	'GSSScenarioAlarmVal' '{'
 	//	'name' ':=' name=STRING ';'
-	//	'type' ':=' type=GSSScenarioAlarmValType ';' (GVFiltered=GSSScenarioGVFiltered | GVPeriodic=GSSScenarioGVPeriodic)
+	//	'type' ':=' type=GSSScenarioAlarmValType ';'
+	//	GV=GSSScenarioGV
 	//	'}' ';'
 	public GSSScenarioAlarmValElements getGSSScenarioAlarmValAccess() {
 		return pGSSScenarioAlarmVal;
@@ -6622,6 +6636,16 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getGSSScenarioAlarmValRule() {
 		return getGSSScenarioAlarmValAccess().getRule();
+	}
+	
+	//GSSScenarioGV scenario::GSSScenarioGV:
+	//	GSSScenarioGVFiltered | GSSScenarioGVPeriodic
+	public GSSScenarioGVElements getGSSScenarioGVAccess() {
+		return pGSSScenarioGV;
+	}
+	
+	public ParserRule getGSSScenarioGVRule() {
+		return getGSSScenarioGVAccess().getRule();
 	}
 	
 	//GSSScenarioGVFiltered scenario::GSSScenarioGVFiltered:

@@ -49,11 +49,11 @@
 'smaller_than'=20
 'string'=16
 'type'=48
-'uri'=32
+'uri'=31
 'value'=50
-'version'=34
+'version'=32
 '{'=30
-'}'=31
+'}'=34
 RULE_ANY_OTHER=11
 RULE_HEXADECIMAL=5
 RULE_ID=6

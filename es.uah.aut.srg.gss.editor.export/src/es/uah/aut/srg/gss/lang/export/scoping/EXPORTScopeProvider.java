@@ -37,20 +37,11 @@ public class EXPORTScopeProvider extends GSSAbstractScopeProvider {
 			if (export.getTo() == null) {
 				return IScope.NULLSCOPE;
 			}
-			
-			fields.addAll(export.getTo().getCSField());
-			fields.addAll(export.getTo().getCSFormulaField());
-			fields.addAll(export.getTo().getFDICField());
-			fields.addAll(export.getTo().getVRFieldSize());
-			fields.addAll(export.getTo().getVSField());
+			fields.addAll(export.getTo().getField());
 			
 		} else {
 
-			fields.addAll(export.getFrom().getCSField());
-			fields.addAll(export.getFrom().getCSFormulaField());
-			fields.addAll(export.getFrom().getFDICField());
-			fields.addAll(export.getFrom().getVRFieldSize());
-			fields.addAll(export.getFrom().getVSField());
+			fields.addAll(export.getFrom().getField());
 		}
 		return getSimpleObjectScope(fields);
 		

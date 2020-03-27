@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalTEST_PROCParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'continuous'", "'manual'", "'concurrent'", "'action'", "'\"instruction\"'", "'\"TMTC checking\"'", "'\"checking\"'", "'miliseconds'", "'seconds'", "'all'", "'allunsorted'", "'any'", "'yes'", "'no'", "'import'", "';'", "'GSSTestProcTestProc'", "'{'", "'}'", "'uri'", "':='", "'version'", "'GSSTestProcStep'", "'name'", "'id'", "'mode'", "'prev_step_idref'", "'output_idref_from_prev_step'", "'replays'", "'GSSTestProcAction'", "'message'", "'actionType'", "'delay_value'", "'delay_unit'", "'span_value'", "'span_unit'", "'GSSTestProcInputs'", "'GSSTestProcOutputs'", "'checkmode'", "'valid_time_interval_value'", "'valid_time_interval_unit'", "'GSSTestProcSpecialPackets'", "'GSSTestProcConcurrentSteps'", "'nextStep'", "'GSSTestProcInputLevel3'", "'ifRef'", "'app_to_level3'", "'level3'", "'level2'", "'level3_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSTestProcInputLevel2'", "'app_to_level2'", "'GSSTestProcInputLevel1'", "'app_to_level1'", "'GSSTestProcInputLevel0'", "'app_to_level0'", "'GSSTestProcOutputLevel3'", "'optional'", "'level3_from_level2'", "'level2_from_level1'", "'level1_from_level0'", "'GSSTestProcOutputLevel2'", "'GSSTestProcOutputLevel1'", "'GSSTestProcOutputLevel0'", "'GSSTestProcLevel3Filter'", "'apply_def_filter'", "'extra_filter'", "'GSSTestProcLevel2Filter'", "'GSSTestProcLevel1Filter'", "'GSSTestProcLevel0Filter'", "'GSSTestProcEnable'", "'GSSTestProcNextStep'", "'isConcurrent'", "'GSSTestProcConcurrentStep'", "'.'", "'('", "')'", "'::'", "'-'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'continuous'", "'manual'", "'concurrent'", "'action'", "'\"instruction\"'", "'\"tmtc_checking\"'", "'\"checking\"'", "'miliseconds'", "'seconds'", "'all'", "'allunsorted'", "'any'", "'yes'", "'no'", "'import'", "';'", "'GSSTestProcTestProc'", "'{'", "'}'", "'uri'", "':='", "'version'", "'GSSTestProcStep'", "'name'", "'id'", "'mode'", "'prev_step_idref'", "'output_idref_from_prev_step'", "'replays'", "'GSSTestProcAction'", "'message'", "'actionType'", "'delay_value'", "'delay_unit'", "'span_value'", "'span_unit'", "'GSSTestProcInputs'", "'GSSTestProcOutputs'", "'checkmode'", "'valid_time_interval_value'", "'valid_time_interval_unit'", "'GSSTestProcSpecialPackets'", "'GSSTestProcConcurrentSteps'", "'nextStep'", "'GSSTestProcInputLevel3'", "'ifRef'", "'app_to_level3'", "'level3'", "'level2'", "'level3_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSTestProcInputLevel2'", "'app_to_level2'", "'GSSTestProcInputLevel1'", "'app_to_level1'", "'GSSTestProcInputLevel0'", "'app_to_level0'", "'GSSTestProcOutputLevel3'", "'optional'", "'level3_from_level2'", "'level2_from_level1'", "'level1_from_level0'", "'GSSTestProcOutputLevel2'", "'GSSTestProcOutputLevel1'", "'GSSTestProcOutputLevel0'", "'GSSTestProcLevel3Filter'", "'apply_def_filter'", "'extra_filter'", "'GSSTestProcLevel2Filter'", "'GSSTestProcLevel1Filter'", "'GSSTestProcLevel0Filter'", "'GSSTestProcEnable'", "'GSSTestProcNextStep'", "'isConcurrent'", "'GSSTestProcConcurrentStep'", "'.'", "'('", "')'", "'::'", "'-'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -4121,13 +4121,13 @@ public class InternalTEST_PROCParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__GSSTestProcActionType__Alternatives"
-    // InternalTEST_PROC.g:1156:1: rule__GSSTestProcActionType__Alternatives : ( ( ( '\"instruction\"' ) ) | ( ( '\"TMTC checking\"' ) ) | ( ( '\"checking\"' ) ) );
+    // InternalTEST_PROC.g:1156:1: rule__GSSTestProcActionType__Alternatives : ( ( ( '\"instruction\"' ) ) | ( ( '\"tmtc_checking\"' ) ) | ( ( '\"checking\"' ) ) );
     public final void rule__GSSTestProcActionType__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTEST_PROC.g:1160:1: ( ( ( '\"instruction\"' ) ) | ( ( '\"TMTC checking\"' ) ) | ( ( '\"checking\"' ) ) )
+            // InternalTEST_PROC.g:1160:1: ( ( ( '\"instruction\"' ) ) | ( ( '\"tmtc_checking\"' ) ) | ( ( '\"checking\"' ) ) )
             int alt9=3;
             switch ( input.LA(1) ) {
             case 16:
@@ -4180,16 +4180,16 @@ public class InternalTEST_PROCParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 2 :
-                    // InternalTEST_PROC.g:1167:2: ( ( '\"TMTC checking\"' ) )
+                    // InternalTEST_PROC.g:1167:2: ( ( '\"tmtc_checking\"' ) )
                     {
-                    // InternalTEST_PROC.g:1167:2: ( ( '\"TMTC checking\"' ) )
-                    // InternalTEST_PROC.g:1168:3: ( '\"TMTC checking\"' )
+                    // InternalTEST_PROC.g:1167:2: ( ( '\"tmtc_checking\"' ) )
+                    // InternalTEST_PROC.g:1168:3: ( '\"tmtc_checking\"' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSTestProcActionTypeAccess().getTmtc_checkingEnumLiteralDeclaration_1()); 
                     }
-                    // InternalTEST_PROC.g:1169:3: ( '\"TMTC checking\"' )
-                    // InternalTEST_PROC.g:1169:4: '\"TMTC checking\"'
+                    // InternalTEST_PROC.g:1169:3: ( '\"tmtc_checking\"' )
+                    // InternalTEST_PROC.g:1169:4: '\"tmtc_checking\"'
                     {
                     match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
