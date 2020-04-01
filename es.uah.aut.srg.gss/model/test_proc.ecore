@@ -194,8 +194,4 @@
         eType="#//GSSTestProcYesNo" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extra_filter" eType="ecore:EClass filter.ecore#//GSSFilterFilter"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="GSSTestProcPrevAction">
-    <eLiterals name="none"/>
-    <eLiterals name="reset" value="1"/>
-  </eClassifiers>
 </ecore:EPackage>

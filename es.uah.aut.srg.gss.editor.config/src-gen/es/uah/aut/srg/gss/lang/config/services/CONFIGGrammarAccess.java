@@ -115,7 +115,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cScenarioAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cScenarioGSSScenarioScenarioParserRuleCall_8_0 = (RuleCall)cScenarioAssignment_8.eContents().get(0);
 		private final Assignment cTestsAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cTestsGSSConfigTestsParserRuleCall_9_0 = (RuleCall)cTestsAssignment_9.eContents().get(0);
+		private final RuleCall cTestsGSSTestListTestListParserRuleCall_9_0 = (RuleCall)cTestsAssignment_9.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
@@ -125,12 +125,12 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'{' ('uri' ':=' uri=QualifiedName ';')
 		//	'version' ':=' version=Version ';'
 		//	scenario=GSSScenarioScenario
-		//	Tests=GSSConfigTests
+		//	Tests=GSSTestListTestList
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSConfigGSSConfig' name=ID '{' ('uri' ':=' uri=QualifiedName ';') 'version' ':=' version=Version ';'
-		//scenario=GSSScenarioScenario Tests=GSSConfigTests '}' ';'
+		//scenario=GSSScenarioScenario Tests=GSSTestListTestList '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSConfigGSSConfig'
@@ -184,11 +184,11 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSScenarioScenario
 		public RuleCall getScenarioGSSScenarioScenarioParserRuleCall_8_0() { return cScenarioGSSScenarioScenarioParserRuleCall_8_0; }
 		
-		//Tests=GSSConfigTests
+		//Tests=GSSTestListTestList
 		public Assignment getTestsAssignment_9() { return cTestsAssignment_9; }
 		
-		//GSSConfigTests
-		public RuleCall getTestsGSSConfigTestsParserRuleCall_9_0() { return cTestsGSSConfigTestsParserRuleCall_9_0; }
+		//GSSTestListTestList
+		public RuleCall getTestsGSSTestListTestListParserRuleCall_9_0() { return cTestsGSSTestListTestListParserRuleCall_9_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
@@ -4367,8 +4367,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cChartRefGSSChartsChartCrossReference_8_0 = (CrossReference)cChartRefAssignment_8.eContents().get(0);
 		private final RuleCall cChartRefGSSChartsChartVersionedQualifiedReferenceNameParserRuleCall_8_0_1 = (RuleCall)cChartRefGSSChartsChartCrossReference_8_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Assignment cGVAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cGVGSSScenarioGVParserRuleCall_10_0 = (RuleCall)cGVAssignment_10.eContents().get(0);
+		private final Assignment cGVRefAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cGVRefGSSScenarioGVRefParserRuleCall_10_0 = (RuleCall)cGVRefAssignment_10.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Keyword cSemicolonKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
@@ -4376,12 +4376,12 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSScenarioPlot' '{'
 		//	'name' ':=' name=STRING ';'
 		//	'chartRef' ':=' chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';'
-		//	GV=GSSScenarioGV
+		//	GVRef=GSSScenarioGVRef
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSScenarioPlot' '{' 'name' ':=' name=STRING ';' 'chartRef' ':='
-		//chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';' GV=GSSScenarioGV '}' ';'
+		//chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';' GVRef=GSSScenarioGVRef '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioPlot'
@@ -4423,11 +4423,11 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
-		//GV=GSSScenarioGV
-		public Assignment getGVAssignment_10() { return cGVAssignment_10; }
+		//GVRef=GSSScenarioGVRef
+		public Assignment getGVRefAssignment_10() { return cGVRefAssignment_10; }
 		
-		//GSSScenarioGV
-		public RuleCall getGVGSSScenarioGVParserRuleCall_10_0() { return cGVGSSScenarioGVParserRuleCall_10_0; }
+		//GSSScenarioGVRef
+		public RuleCall getGVRefGSSScenarioGVRefParserRuleCall_10_0() { return cGVRefGSSScenarioGVRefParserRuleCall_10_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
@@ -4455,8 +4455,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTextAssignment_12 = (Assignment)cGroup.eContents().get(12);
 		private final RuleCall cTextSTRINGTerminalRuleCall_12_0 = (RuleCall)cTextAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
-		private final Assignment cGVAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final RuleCall cGVGSSScenarioGVParserRuleCall_14_0 = (RuleCall)cGVAssignment_14.eContents().get(0);
+		private final Assignment cGVRefAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cGVRefGSSScenarioGVRefParserRuleCall_14_0 = (RuleCall)cGVRefAssignment_14.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Keyword cSemicolonKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
@@ -4465,12 +4465,12 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'name' ':=' name=STRING ';'
 		//	'type' ':=' type=GSSScenarioAlarmMsgType ';'
 		//	'text' ':=' text=STRING ';'
-		//	GV=GSSScenarioGV
+		//	GVRef=GSSScenarioGVRef
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSScenarioAlarmMsg' '{' 'name' ':=' name=STRING ';' 'type' ':=' type=GSSScenarioAlarmMsgType ';' 'text' ':='
-		//text=STRING ';' GV=GSSScenarioGV '}' ';'
+		//text=STRING ';' GVRef=GSSScenarioGVRef '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioAlarmMsg'
@@ -4524,11 +4524,11 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
 		
-		//GV=GSSScenarioGV
-		public Assignment getGVAssignment_14() { return cGVAssignment_14; }
+		//GVRef=GSSScenarioGVRef
+		public Assignment getGVRefAssignment_14() { return cGVRefAssignment_14; }
 		
-		//GSSScenarioGV
-		public RuleCall getGVGSSScenarioGVParserRuleCall_14_0() { return cGVGSSScenarioGVParserRuleCall_14_0; }
+		//GSSScenarioGVRef
+		public RuleCall getGVRefGSSScenarioGVRefParserRuleCall_14_0() { return cGVRefGSSScenarioGVRefParserRuleCall_14_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
@@ -4556,8 +4556,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment_12 = (Assignment)cGroup.eContents().get(12);
 		private final RuleCall cValueINTEGERParserRuleCall_12_0 = (RuleCall)cValueAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
-		private final Assignment cGVAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final RuleCall cGVGSSScenarioGVParserRuleCall_14_0 = (RuleCall)cGVAssignment_14.eContents().get(0);
+		private final Assignment cGVRefAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cGVRefGSSScenarioGVRefParserRuleCall_14_0 = (RuleCall)cGVRefAssignment_14.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Keyword cSemicolonKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
@@ -4566,12 +4566,12 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'name' ':=' name=STRING ';'
 		//	'type' ':=' type=GSSScenarioModifyType ';'
 		//	'value' ':=' value=INTEGER ';'
-		//	GV=GSSScenarioGV
+		//	GVRef=GSSScenarioGVRef
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSScenarioModify' '{' 'name' ':=' name=STRING ';' 'type' ':=' type=GSSScenarioModifyType ';' 'value' ':='
-		//value=INTEGER ';' GV=GSSScenarioGV '}' ';'
+		//value=INTEGER ';' GVRef=GSSScenarioGVRef '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioModify'
@@ -4625,11 +4625,11 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
 		
-		//GV=GSSScenarioGV
-		public Assignment getGVAssignment_14() { return cGVAssignment_14; }
+		//GVRef=GSSScenarioGVRef
+		public Assignment getGVRefAssignment_14() { return cGVRefAssignment_14; }
 		
-		//GSSScenarioGV
-		public RuleCall getGVGSSScenarioGVParserRuleCall_14_0() { return cGVGSSScenarioGVParserRuleCall_14_0; }
+		//GSSScenarioGVRef
+		public RuleCall getGVRefGSSScenarioGVRefParserRuleCall_14_0() { return cGVRefGSSScenarioGVRefParserRuleCall_14_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
@@ -4652,8 +4652,8 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTypeAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cTypeGSSScenarioAlarmValTypeEnumRuleCall_8_0 = (RuleCall)cTypeAssignment_8.eContents().get(0);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Assignment cGVAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cGVGSSScenarioGVParserRuleCall_10_0 = (RuleCall)cGVAssignment_10.eContents().get(0);
+		private final Assignment cGVRefAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cGVRefGSSScenarioGVRefParserRuleCall_10_0 = (RuleCall)cGVRefAssignment_10.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Keyword cSemicolonKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
@@ -4661,12 +4661,12 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSScenarioAlarmVal' '{'
 		//	'name' ':=' name=STRING ';'
 		//	'type' ':=' type=GSSScenarioAlarmValType ';'
-		//	GV=GSSScenarioGV
+		//	GVRef=GSSScenarioGVRef
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSScenarioAlarmVal' '{' 'name' ':=' name=STRING ';' 'type' ':=' type=GSSScenarioAlarmValType ';' GV=GSSScenarioGV '}'
-		//';'
+		//'GSSScenarioAlarmVal' '{' 'name' ':=' name=STRING ';' 'type' ':=' type=GSSScenarioAlarmValType ';'
+		//GVRef=GSSScenarioGVRef '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioAlarmVal'
@@ -4705,11 +4705,11 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
-		//GV=GSSScenarioGV
-		public Assignment getGVAssignment_10() { return cGVAssignment_10; }
+		//GVRef=GSSScenarioGVRef
+		public Assignment getGVRefAssignment_10() { return cGVRefAssignment_10; }
 		
-		//GSSScenarioGV
-		public RuleCall getGVGSSScenarioGVParserRuleCall_10_0() { return cGVGSSScenarioGVParserRuleCall_10_0; }
+		//GSSScenarioGVRef
+		public RuleCall getGVRefGSSScenarioGVRefParserRuleCall_10_0() { return cGVRefGSSScenarioGVRefParserRuleCall_10_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
@@ -4717,13 +4717,13 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_12() { return cSemicolonKeyword_12; }
 	}
-	public class GSSScenarioGVElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioGV");
+	public class GSSScenarioGVRefElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioGVRef");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cGSSScenarioGVFilteredParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cGSSScenarioGVPeriodicParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//GSSScenarioGV scenario::GSSScenarioGV:
+		//GSSScenarioGVRef scenario::GSSScenarioGVRef:
 		//	GSSScenarioGVFiltered | GSSScenarioGVPeriodic
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -4915,36 +4915,36 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_15() { return cSemicolonKeyword_15; }
 	}
-	public class GSSConfigTestsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigTests");
+	public class GSSTestListTestListElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSTestListTestList");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cGSSScenarioTestsKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cGSSTestListTestListKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cTestCaseAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTestCaseGSSConfigTestCaseParserRuleCall_2_0 = (RuleCall)cTestCaseAssignment_2.eContents().get(0);
+		private final RuleCall cTestCaseGSSTestListTestCaseParserRuleCall_2_0 = (RuleCall)cTestCaseAssignment_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//GSSConfigTests:
-		//	'GSSScenarioTests' '{'
-		//	TestCase+=GSSConfigTestCase+
-		//	'}' ';';
+		//GSSTestListTestList test_list::GSSTestListTestList:
+		//	'GSSTestListTestList' '{'
+		//	TestCase+=GSSTestListTestCase+
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSScenarioTests' '{' TestCase+=GSSConfigTestCase+ '}' ';'
+		//'GSSTestListTestList' '{' TestCase+=GSSTestListTestCase+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
-		//'GSSScenarioTests'
-		public Keyword getGSSScenarioTestsKeyword_0() { return cGSSScenarioTestsKeyword_0; }
+		//'GSSTestListTestList'
+		public Keyword getGSSTestListTestListKeyword_0() { return cGSSTestListTestListKeyword_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//TestCase+=GSSConfigTestCase+
+		//TestCase+=GSSTestListTestCase+
 		public Assignment getTestCaseAssignment_2() { return cTestCaseAssignment_2; }
 		
-		//GSSConfigTestCase
-		public RuleCall getTestCaseGSSConfigTestCaseParserRuleCall_2_0() { return cTestCaseGSSConfigTestCaseParserRuleCall_2_0; }
+		//GSSTestListTestCase
+		public RuleCall getTestCaseGSSTestListTestCaseParserRuleCall_2_0() { return cTestCaseGSSTestListTestCaseParserRuleCall_2_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
@@ -4952,10 +4952,10 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
 	}
-	public class GSSConfigTestCaseElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigTestCase");
+	public class GSSTestListTestCaseElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSTestListTestCase");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cGSSScenarioTestCaseKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cGSSTestListTestCaseKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cNameKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
@@ -4975,7 +4975,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
 		private final Keyword cPrevActionKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
 		private final Assignment cPrevActionAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
-		private final RuleCall cPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0 = (RuleCall)cPrevActionAssignment_11_1.eContents().get(0);
+		private final RuleCall cPrevActionGSSTestListPrevActionEnumRuleCall_11_1_0 = (RuleCall)cPrevActionAssignment_11_1.eContents().get(0);
 		private final Group cGroup_11_2 = (Group)cGroup_11.eContents().get(2);
 		private final Keyword cPrevActionParamKeyword_11_2_0 = (Keyword)cGroup_11_2.eContents().get(0);
 		private final Assignment cPrevActionParamAssignment_11_2_1 = (Assignment)cGroup_11_2.eContents().get(1);
@@ -4983,21 +4983,21 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
-		//GSSConfigTestCase:
-		//	'GSSScenarioTestCase' '{'
+		//GSSTestListTestCase test_list::GSSTestListTestCase:
+		//	'GSSTestListTestCase' '{'
 		//	'name' ':=' name=STRING ';'
 		//	'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('prevMsg' prevMsg=ID)?
-		//	('prevAction' prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)?
-		//	'}' ';';
+		//	('prevAction' prevAction=GSSTestListPrevAction ('prevActionParam' prevActionParam=STRING)?)?
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSScenarioTestCase' '{' 'name' ':=' name=STRING ';' 'procedure' ':='
+		//'GSSTestListTestCase' '{' 'name' ':=' name=STRING ';' 'procedure' ':='
 		//procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('prevMsg' prevMsg=ID)? ('prevAction'
-		//prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)? '}' ';'
+		//prevAction=GSSTestListPrevAction ('prevActionParam' prevActionParam=STRING)?)? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
-		//'GSSScenarioTestCase'
-		public Keyword getGSSScenarioTestCaseKeyword_0() { return cGSSScenarioTestCaseKeyword_0; }
+		//'GSSTestListTestCase'
+		public Keyword getGSSTestListTestCaseKeyword_0() { return cGSSTestListTestCaseKeyword_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
@@ -5047,17 +5047,17 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getPrevMsgIDTerminalRuleCall_10_1_0() { return cPrevMsgIDTerminalRuleCall_10_1_0; }
 		
-		//('prevAction' prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)?
+		//('prevAction' prevAction=GSSTestListPrevAction ('prevActionParam' prevActionParam=STRING)?)?
 		public Group getGroup_11() { return cGroup_11; }
 		
 		//'prevAction'
 		public Keyword getPrevActionKeyword_11_0() { return cPrevActionKeyword_11_0; }
 		
-		//prevAction=GSSTestProcPrevAction
+		//prevAction=GSSTestListPrevAction
 		public Assignment getPrevActionAssignment_11_1() { return cPrevActionAssignment_11_1; }
 		
-		//GSSTestProcPrevAction
-		public RuleCall getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0() { return cPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0; }
+		//GSSTestListPrevAction
+		public RuleCall getPrevActionGSSTestListPrevActionEnumRuleCall_11_1_0() { return cPrevActionGSSTestListPrevActionEnumRuleCall_11_1_0; }
 		
 		//('prevActionParam' prevActionParam=STRING)?
 		public Group getGroup_11_2() { return cGroup_11_2; }
@@ -5724,20 +5724,20 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//'alarm1'
 		public Keyword getAlarm1Alarm1Keyword_0() { return cAlarm1Alarm1Keyword_0; }
 	}
-	public class GSSTestProcPrevActionElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSTestProcPrevAction");
+	public class GSSTestListPrevActionElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSTestListPrevAction");
 		private final EnumLiteralDeclaration cResetEnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
-		private final Keyword cResetResetKeyword_0 = (Keyword)cResetEnumLiteralDeclaration.eContents().get(0);
+		private final Keyword cReset1Keyword_0 = (Keyword)cResetEnumLiteralDeclaration.eContents().get(0);
 		
-		//enum GSSTestProcPrevAction returns test_proc::GSSTestProcPrevAction:
-		//	reset;
+		//enum GSSTestListPrevAction returns test_list::GSSTestListPrevAction:
+		//	reset='1';
 		public EnumRule getRule() { return rule; }
 		
-		//reset
+		//reset='1'
 		public EnumLiteralDeclaration getResetEnumLiteralDeclaration() { return cResetEnumLiteralDeclaration; }
 		
-		//'reset'
-		public Keyword getResetResetKeyword_0() { return cResetResetKeyword_0; }
+		//'1'
+		public Keyword getReset1Keyword_0() { return cReset1Keyword_0; }
 	}
 	
 	private final GSSModelFileElements pGSSModelFile;
@@ -5791,15 +5791,15 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSScenarioAlarmMsgElements pGSSScenarioAlarmMsg;
 	private final GSSScenarioModifyElements pGSSScenarioModify;
 	private final GSSScenarioAlarmValElements pGSSScenarioAlarmVal;
-	private final GSSScenarioGVElements pGSSScenarioGV;
+	private final GSSScenarioGVRefElements pGSSScenarioGVRef;
 	private final GSSScenarioGVFilteredElements pGSSScenarioGVFiltered;
 	private final GSSScenarioGVPeriodicElements pGSSScenarioGVPeriodic;
 	private final GSSScenarioAlarmMsgTypeElements eGSSScenarioAlarmMsgType;
 	private final GSSScenarioModifyTypeElements eGSSScenarioModifyType;
 	private final GSSScenarioAlarmValTypeElements eGSSScenarioAlarmValType;
-	private final GSSConfigTestsElements pGSSConfigTests;
-	private final GSSConfigTestCaseElements pGSSConfigTestCase;
-	private final GSSTestProcPrevActionElements eGSSTestProcPrevAction;
+	private final GSSTestListTestListElements pGSSTestListTestList;
+	private final GSSTestListTestCaseElements pGSSTestListTestCase;
+	private final GSSTestListPrevActionElements eGSSTestListPrevAction;
 	private final QualifiedNameElements pQualifiedName;
 	private final VersionElements pVersion;
 	private final VersionedQualifiedNameElements pVersionedQualifiedName;
@@ -5871,15 +5871,15 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGSSScenarioAlarmMsg = new GSSScenarioAlarmMsgElements();
 		this.pGSSScenarioModify = new GSSScenarioModifyElements();
 		this.pGSSScenarioAlarmVal = new GSSScenarioAlarmValElements();
-		this.pGSSScenarioGV = new GSSScenarioGVElements();
+		this.pGSSScenarioGVRef = new GSSScenarioGVRefElements();
 		this.pGSSScenarioGVFiltered = new GSSScenarioGVFilteredElements();
 		this.pGSSScenarioGVPeriodic = new GSSScenarioGVPeriodicElements();
 		this.eGSSScenarioAlarmMsgType = new GSSScenarioAlarmMsgTypeElements();
 		this.eGSSScenarioModifyType = new GSSScenarioModifyTypeElements();
 		this.eGSSScenarioAlarmValType = new GSSScenarioAlarmValTypeElements();
-		this.pGSSConfigTests = new GSSConfigTestsElements();
-		this.pGSSConfigTestCase = new GSSConfigTestCaseElements();
-		this.eGSSTestProcPrevAction = new GSSTestProcPrevActionElements();
+		this.pGSSTestListTestList = new GSSTestListTestListElements();
+		this.pGSSTestListTestCase = new GSSTestListTestCaseElements();
+		this.eGSSTestListPrevAction = new GSSTestListPrevActionElements();
 		this.pQualifiedName = new QualifiedNameElements();
 		this.pVersion = new VersionElements();
 		this.pVersionedQualifiedName = new VersionedQualifiedNameElements();
@@ -5946,7 +5946,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'{' ('uri' ':=' uri=QualifiedName ';')
 	//	'version' ':=' version=Version ';'
 	//	scenario=GSSScenarioScenario
-	//	Tests=GSSConfigTests
+	//	Tests=GSSTestListTestList
 	//	'}' ';';
 	public GSSConfigGSSConfigElements getGSSConfigGSSConfigAccess() {
 		return pGSSConfigGSSConfig;
@@ -6584,7 +6584,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSScenarioPlot' '{'
 	//	'name' ':=' name=STRING ';'
 	//	'chartRef' ':=' chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';'
-	//	GV=GSSScenarioGV
+	//	GVRef=GSSScenarioGVRef
 	//	'}' ';'
 	public GSSScenarioPlotElements getGSSScenarioPlotAccess() {
 		return pGSSScenarioPlot;
@@ -6599,7 +6599,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name' ':=' name=STRING ';'
 	//	'type' ':=' type=GSSScenarioAlarmMsgType ';'
 	//	'text' ':=' text=STRING ';'
-	//	GV=GSSScenarioGV
+	//	GVRef=GSSScenarioGVRef
 	//	'}' ';'
 	public GSSScenarioAlarmMsgElements getGSSScenarioAlarmMsgAccess() {
 		return pGSSScenarioAlarmMsg;
@@ -6614,7 +6614,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name' ':=' name=STRING ';'
 	//	'type' ':=' type=GSSScenarioModifyType ';'
 	//	'value' ':=' value=INTEGER ';'
-	//	GV=GSSScenarioGV
+	//	GVRef=GSSScenarioGVRef
 	//	'}' ';'
 	public GSSScenarioModifyElements getGSSScenarioModifyAccess() {
 		return pGSSScenarioModify;
@@ -6628,7 +6628,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSScenarioAlarmVal' '{'
 	//	'name' ':=' name=STRING ';'
 	//	'type' ':=' type=GSSScenarioAlarmValType ';'
-	//	GV=GSSScenarioGV
+	//	GVRef=GSSScenarioGVRef
 	//	'}' ';'
 	public GSSScenarioAlarmValElements getGSSScenarioAlarmValAccess() {
 		return pGSSScenarioAlarmVal;
@@ -6638,14 +6638,14 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSScenarioAlarmValAccess().getRule();
 	}
 	
-	//GSSScenarioGV scenario::GSSScenarioGV:
+	//GSSScenarioGVRef scenario::GSSScenarioGVRef:
 	//	GSSScenarioGVFiltered | GSSScenarioGVPeriodic
-	public GSSScenarioGVElements getGSSScenarioGVAccess() {
-		return pGSSScenarioGV;
+	public GSSScenarioGVRefElements getGSSScenarioGVRefAccess() {
+		return pGSSScenarioGVRef;
 	}
 	
-	public ParserRule getGSSScenarioGVRule() {
-		return getGSSScenarioGVAccess().getRule();
+	public ParserRule getGSSScenarioGVRefRule() {
+		return getGSSScenarioGVRefAccess().getRule();
 	}
 	
 	//GSSScenarioGVFiltered scenario::GSSScenarioGVFiltered:
@@ -6705,40 +6705,40 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSScenarioAlarmValTypeAccess().getRule();
 	}
 	
-	//GSSConfigTests:
-	//	'GSSScenarioTests' '{'
-	//	TestCase+=GSSConfigTestCase+
-	//	'}' ';';
-	public GSSConfigTestsElements getGSSConfigTestsAccess() {
-		return pGSSConfigTests;
+	//GSSTestListTestList test_list::GSSTestListTestList:
+	//	'GSSTestListTestList' '{'
+	//	TestCase+=GSSTestListTestCase+
+	//	'}' ';'
+	public GSSTestListTestListElements getGSSTestListTestListAccess() {
+		return pGSSTestListTestList;
 	}
 	
-	public ParserRule getGSSConfigTestsRule() {
-		return getGSSConfigTestsAccess().getRule();
+	public ParserRule getGSSTestListTestListRule() {
+		return getGSSTestListTestListAccess().getRule();
 	}
 	
-	//GSSConfigTestCase:
-	//	'GSSScenarioTestCase' '{'
+	//GSSTestListTestCase test_list::GSSTestListTestCase:
+	//	'GSSTestListTestCase' '{'
 	//	'name' ':=' name=STRING ';'
 	//	'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('prevMsg' prevMsg=ID)?
-	//	('prevAction' prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)?
-	//	'}' ';';
-	public GSSConfigTestCaseElements getGSSConfigTestCaseAccess() {
-		return pGSSConfigTestCase;
+	//	('prevAction' prevAction=GSSTestListPrevAction ('prevActionParam' prevActionParam=STRING)?)?
+	//	'}' ';'
+	public GSSTestListTestCaseElements getGSSTestListTestCaseAccess() {
+		return pGSSTestListTestCase;
 	}
 	
-	public ParserRule getGSSConfigTestCaseRule() {
-		return getGSSConfigTestCaseAccess().getRule();
+	public ParserRule getGSSTestListTestCaseRule() {
+		return getGSSTestListTestCaseAccess().getRule();
 	}
 	
-	//enum GSSTestProcPrevAction returns test_proc::GSSTestProcPrevAction:
-	//	reset;
-	public GSSTestProcPrevActionElements getGSSTestProcPrevActionAccess() {
-		return eGSSTestProcPrevAction;
+	//enum GSSTestListPrevAction returns test_list::GSSTestListPrevAction:
+	//	reset='1';
+	public GSSTestListPrevActionElements getGSSTestListPrevActionAccess() {
+		return eGSSTestListPrevAction;
 	}
 	
-	public EnumRule getGSSTestProcPrevActionRule() {
-		return getGSSTestProcPrevActionAccess().getRule();
+	public EnumRule getGSSTestListPrevActionRule() {
+		return getGSSTestListPrevActionAccess().getRule();
 	}
 	
 	//QualifiedName:

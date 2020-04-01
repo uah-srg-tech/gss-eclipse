@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.gss.scenario.impl;
 
-import es.uah.aut.srg.gss.scenario.GSSScenarioGV;
+import es.uah.aut.srg.gss.scenario.GSSScenarioGVRef;
 import es.uah.aut.srg.gss.scenario.GSSScenarioMonitor;
 import es.uah.aut.srg.gss.scenario.scenarioPackage;
 
@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorImpl#getGV <em>GV</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMonitorImpl#getGVRef <em>GV Ref</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,14 +59,14 @@ public abstract class GSSScenarioMonitorImpl extends MinimalEObjectImpl.Containe
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getGV() <em>GV</em>}' containment reference.
+	 * The cached value of the '{@link #getGVRef() <em>GV Ref</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGV()
+	 * @see #getGVRef()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSScenarioGV gv;
+	protected GSSScenarioGVRef gvRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,8 +113,8 @@ public abstract class GSSScenarioMonitorImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSScenarioGV getGV() {
-		return gv;
+	public GSSScenarioGVRef getGVRef() {
+		return gvRef;
 	}
 
 	/**
@@ -122,11 +122,11 @@ public abstract class GSSScenarioMonitorImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetGV(GSSScenarioGV newGV, NotificationChain msgs) {
-		GSSScenarioGV oldGV = gv;
-		gv = newGV;
+	public NotificationChain basicSetGVRef(GSSScenarioGVRef newGVRef, NotificationChain msgs) {
+		GSSScenarioGVRef oldGVRef = gvRef;
+		gvRef = newGVRef;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_MONITOR__GV, oldGV, newGV);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_MONITOR__GV_REF, oldGVRef, newGVRef);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -137,18 +137,18 @@ public abstract class GSSScenarioMonitorImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGV(GSSScenarioGV newGV) {
-		if (newGV != gv) {
+	public void setGVRef(GSSScenarioGVRef newGVRef) {
+		if (newGVRef != gvRef) {
 			NotificationChain msgs = null;
-			if (gv != null)
-				msgs = ((InternalEObject)gv).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - scenarioPackage.GSS_SCENARIO_MONITOR__GV, null, msgs);
-			if (newGV != null)
-				msgs = ((InternalEObject)newGV).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - scenarioPackage.GSS_SCENARIO_MONITOR__GV, null, msgs);
-			msgs = basicSetGV(newGV, msgs);
+			if (gvRef != null)
+				msgs = ((InternalEObject)gvRef).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - scenarioPackage.GSS_SCENARIO_MONITOR__GV_REF, null, msgs);
+			if (newGVRef != null)
+				msgs = ((InternalEObject)newGVRef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - scenarioPackage.GSS_SCENARIO_MONITOR__GV_REF, null, msgs);
+			msgs = basicSetGVRef(newGVRef, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_MONITOR__GV, newGV, newGV));
+			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_MONITOR__GV_REF, newGVRef, newGVRef));
 	}
 
 	/**
@@ -159,8 +159,8 @@ public abstract class GSSScenarioMonitorImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_MONITOR__GV:
-				return basicSetGV(null, msgs);
+			case scenarioPackage.GSS_SCENARIO_MONITOR__GV_REF:
+				return basicSetGVRef(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -175,8 +175,8 @@ public abstract class GSSScenarioMonitorImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case scenarioPackage.GSS_SCENARIO_MONITOR__NAME:
 				return getName();
-			case scenarioPackage.GSS_SCENARIO_MONITOR__GV:
-				return getGV();
+			case scenarioPackage.GSS_SCENARIO_MONITOR__GV_REF:
+				return getGVRef();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -192,8 +192,8 @@ public abstract class GSSScenarioMonitorImpl extends MinimalEObjectImpl.Containe
 			case scenarioPackage.GSS_SCENARIO_MONITOR__NAME:
 				setName((String)newValue);
 				return;
-			case scenarioPackage.GSS_SCENARIO_MONITOR__GV:
-				setGV((GSSScenarioGV)newValue);
+			case scenarioPackage.GSS_SCENARIO_MONITOR__GV_REF:
+				setGVRef((GSSScenarioGVRef)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -210,8 +210,8 @@ public abstract class GSSScenarioMonitorImpl extends MinimalEObjectImpl.Containe
 			case scenarioPackage.GSS_SCENARIO_MONITOR__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case scenarioPackage.GSS_SCENARIO_MONITOR__GV:
-				setGV((GSSScenarioGV)null);
+			case scenarioPackage.GSS_SCENARIO_MONITOR__GV_REF:
+				setGVRef((GSSScenarioGVRef)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -227,8 +227,8 @@ public abstract class GSSScenarioMonitorImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case scenarioPackage.GSS_SCENARIO_MONITOR__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case scenarioPackage.GSS_SCENARIO_MONITOR__GV:
-				return gv != null;
+			case scenarioPackage.GSS_SCENARIO_MONITOR__GV_REF:
+				return gvRef != null;
 		}
 		return super.eIsSet(featureID);
 	}

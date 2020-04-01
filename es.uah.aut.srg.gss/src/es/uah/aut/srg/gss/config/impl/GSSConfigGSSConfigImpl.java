@@ -13,11 +13,11 @@ package es.uah.aut.srg.gss.config.impl;
 import es.uah.aut.srg.gss.common.impl.GSSModelElementImpl;
 
 import es.uah.aut.srg.gss.config.GSSConfigGSSConfig;
-import es.uah.aut.srg.gss.config.GSSConfigTests;
 import es.uah.aut.srg.gss.config.configPackage;
 
 import es.uah.aut.srg.gss.scenario.GSSScenarioScenario;
 
+import es.uah.aut.srg.gss.test_list.GSSTestListTestList;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -59,7 +59,7 @@ public class GSSConfigGSSConfigImpl extends GSSModelElementImpl implements GSSCo
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSConfigTests tests;
+	protected GSSTestListTestList tests;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -128,7 +128,7 @@ public class GSSConfigGSSConfigImpl extends GSSModelElementImpl implements GSSCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSConfigTests getTests() {
+	public GSSTestListTestList getTests() {
 		return tests;
 	}
 
@@ -137,8 +137,8 @@ public class GSSConfigGSSConfigImpl extends GSSModelElementImpl implements GSSCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTests(GSSConfigTests newTests, NotificationChain msgs) {
-		GSSConfigTests oldTests = tests;
+	public NotificationChain basicSetTests(GSSTestListTestList newTests, NotificationChain msgs) {
+		GSSTestListTestList oldTests = tests;
 		tests = newTests;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_GSS_CONFIG__TESTS, oldTests, newTests);
@@ -152,7 +152,7 @@ public class GSSConfigGSSConfigImpl extends GSSModelElementImpl implements GSSCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTests(GSSConfigTests newTests) {
+	public void setTests(GSSTestListTestList newTests) {
 		if (newTests != tests) {
 			NotificationChain msgs = null;
 			if (tests != null)
@@ -210,7 +210,7 @@ public class GSSConfigGSSConfigImpl extends GSSModelElementImpl implements GSSCo
 				setScenario((GSSScenarioScenario)newValue);
 				return;
 			case configPackage.GSS_CONFIG_GSS_CONFIG__TESTS:
-				setTests((GSSConfigTests)newValue);
+				setTests((GSSTestListTestList)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -228,7 +228,7 @@ public class GSSConfigGSSConfigImpl extends GSSModelElementImpl implements GSSCo
 				setScenario((GSSScenarioScenario)null);
 				return;
 			case configPackage.GSS_CONFIG_GSS_CONFIG__TESTS:
-				setTests((GSSConfigTests)null);
+				setTests((GSSTestListTestList)null);
 				return;
 		}
 		super.eUnset(featureID);

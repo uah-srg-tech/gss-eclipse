@@ -574,31 +574,13 @@ public interface filterPackage extends EPackage {
 	int GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF = GSS_FILTER_ABSTRACT_BOOL_VAR_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Constant</b></em>' containment reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT = GSS_FILTER_ABSTRACT_BOOL_VAR_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Select</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT = GSS_FILTER_ABSTRACT_BOOL_VAR_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Select Line</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT_LINE = GSS_FILTER_ABSTRACT_BOOL_VAR_FEATURE_COUNT + 4;
+	int GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__VALUE = GSS_FILTER_ABSTRACT_BOOL_VAR_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>GSS Filter Bool Var From Array Item</em>' class.
@@ -607,7 +589,7 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM_FEATURE_COUNT = GSS_FILTER_ABSTRACT_BOOL_VAR_FEATURE_COUNT + 5;
+	int GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM_FEATURE_COUNT = GSS_FILTER_ABSTRACT_BOOL_VAR_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>GSS Filter Bool Var From Array Item</em>' class.
@@ -683,31 +665,13 @@ public interface filterPackage extends EPackage {
 	int GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__AI_FIELD_REFS = GSS_FILTER_ABSTRACT_BOOL_VAR_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Constant</b></em>' containment reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__CONSTANT = GSS_FILTER_ABSTRACT_BOOL_VAR_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Select</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__SELECT = GSS_FILTER_ABSTRACT_BOOL_VAR_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Select Line</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__SELECT_LINE = GSS_FILTER_ABSTRACT_BOOL_VAR_FEATURE_COUNT + 5;
+	int GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__VALUE = GSS_FILTER_ABSTRACT_BOOL_VAR_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>GSS Filter Bool Var From Grouped Array Item</em>' class.
@@ -716,7 +680,7 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM_FEATURE_COUNT = GSS_FILTER_ABSTRACT_BOOL_VAR_FEATURE_COUNT + 6;
+	int GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM_FEATURE_COUNT = GSS_FILTER_ABSTRACT_BOOL_VAR_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>GSS Filter Bool Var From Grouped Array Item</em>' class.
@@ -819,22 +783,13 @@ public interface filterPackage extends EPackage {
 	int GSS_FILTER_FIELD_OP_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_VALUE__VALUE = 0;
-
-	/**
 	 * The feature id for the '<em><b>Mask</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_VALUE__MASK = 1;
+	int GSS_FILTER_VALUE__MASK = 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Filter Value</em>' class.
@@ -843,7 +798,7 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_VALUE_FEATURE_COUNT = 2;
+	int GSS_FILTER_VALUE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Filter Value</em>' class.
@@ -855,15 +810,6 @@ public interface filterPackage extends EPackage {
 	int GSS_FILTER_VALUE_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_CONSTANT__VALUE = GSS_FILTER_VALUE__VALUE;
-
-	/**
 	 * The feature id for the '<em><b>Mask</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -873,13 +819,22 @@ public interface filterPackage extends EPackage {
 	int GSS_FILTER_CONSTANT__MASK = GSS_FILTER_VALUE__MASK;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_FILTER_CONSTANT__VALUE = GSS_FILTER_VALUE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>GSS Filter Constant</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_FILTER_CONSTANT_FEATURE_COUNT = GSS_FILTER_VALUE_FEATURE_COUNT + 0;
+	int GSS_FILTER_CONSTANT_FEATURE_COUNT = GSS_FILTER_VALUE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Filter Constant</em>' class.
@@ -889,15 +844,6 @@ public interface filterPackage extends EPackage {
 	 * @ordered
 	 */
 	int GSS_FILTER_CONSTANT_OPERATION_COUNT = GSS_FILTER_VALUE_OPERATION_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_SELECT__VALUE = GSS_FILTER_VALUE__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Mask</b></em>' attribute.
@@ -961,15 +907,6 @@ public interface filterPackage extends EPackage {
 	 * @ordered
 	 */
 	int GSS_FILTER_SELECT_OPERATION_COUNT = GSS_FILTER_VALUE_OPERATION_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_FILTER_SELECT_LINE__VALUE = GSS_FILTER_VALUE__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Mask</b></em>' attribute.
@@ -1386,17 +1323,6 @@ public interface filterPackage extends EPackage {
 	EClass getGSSFilterValue();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.filter.GSSFilterValue#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see es.uah.aut.srg.gss.filter.GSSFilterValue#getValue()
-	 * @see #getGSSFilterValue()
-	 * @generated
-	 */
-	EAttribute getGSSFilterValue_Value();
-
-	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.filter.GSSFilterValue#getMask <em>Mask</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1416,6 +1342,17 @@ public interface filterPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGSSFilterConstant();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.filter.GSSFilterConstant#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see es.uah.aut.srg.gss.filter.GSSFilterConstant#getValue()
+	 * @see #getGSSFilterConstant()
+	 * @generated
+	 */
+	EAttribute getGSSFilterConstant_Value();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.filter.GSSFilterSelect <em>GSS Filter Select</em>}'.
@@ -1558,37 +1495,15 @@ public interface filterPackage extends EPackage {
 	EReference getGSSFilterBoolVarFromArrayItem_AIFieldRef();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromArrayItem#getConstant <em>Constant</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromArrayItem#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Constant</em>'.
-	 * @see es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromArrayItem#getConstant()
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromArrayItem#getValue()
 	 * @see #getGSSFilterBoolVarFromArrayItem()
 	 * @generated
 	 */
-	EReference getGSSFilterBoolVarFromArrayItem_Constant();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromArrayItem#getSelect <em>Select</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Select</em>'.
-	 * @see es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromArrayItem#getSelect()
-	 * @see #getGSSFilterBoolVarFromArrayItem()
-	 * @generated
-	 */
-	EReference getGSSFilterBoolVarFromArrayItem_Select();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromArrayItem#getSelectLine <em>Select Line</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Select Line</em>'.
-	 * @see es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromArrayItem#getSelectLine()
-	 * @see #getGSSFilterBoolVarFromArrayItem()
-	 * @generated
-	 */
-	EReference getGSSFilterBoolVarFromArrayItem_SelectLine();
+	EReference getGSSFilterBoolVarFromArrayItem_Value();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromGroupedArrayItem <em>GSS Filter Bool Var From Grouped Array Item</em>}'.
@@ -1634,37 +1549,15 @@ public interface filterPackage extends EPackage {
 	EReference getGSSFilterBoolVarFromGroupedArrayItem_AIFieldRefs();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromGroupedArrayItem#getConstant <em>Constant</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromGroupedArrayItem#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Constant</em>'.
-	 * @see es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromGroupedArrayItem#getConstant()
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromGroupedArrayItem#getValue()
 	 * @see #getGSSFilterBoolVarFromGroupedArrayItem()
 	 * @generated
 	 */
-	EReference getGSSFilterBoolVarFromGroupedArrayItem_Constant();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromGroupedArrayItem#getSelect <em>Select</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Select</em>'.
-	 * @see es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromGroupedArrayItem#getSelect()
-	 * @see #getGSSFilterBoolVarFromGroupedArrayItem()
-	 * @generated
-	 */
-	EReference getGSSFilterBoolVarFromGroupedArrayItem_Select();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromGroupedArrayItem#getSelectLine <em>Select Line</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Select Line</em>'.
-	 * @see es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromGroupedArrayItem#getSelectLine()
-	 * @see #getGSSFilterBoolVarFromGroupedArrayItem()
-	 * @generated
-	 */
-	EReference getGSSFilterBoolVarFromGroupedArrayItem_SelectLine();
+	EReference getGSSFilterBoolVarFromGroupedArrayItem_Value();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.filter.GSSFilterBoolVarFDIC <em>GSS Filter Bool Var FDIC</em>}'.
@@ -1984,14 +1877,6 @@ public interface filterPackage extends EPackage {
 		EClass GSS_FILTER_VALUE = eINSTANCE.getGSSFilterValue();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_FILTER_VALUE__VALUE = eINSTANCE.getGSSFilterValue_Value();
-
-		/**
 		 * The meta object literal for the '<em><b>Mask</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2008,6 +1893,14 @@ public interface filterPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GSS_FILTER_CONSTANT = eINSTANCE.getGSSFilterConstant();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_FILTER_CONSTANT__VALUE = eINSTANCE.getGSSFilterConstant_Value();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterSelectImpl <em>GSS Filter Select</em>}' class.
@@ -2120,28 +2013,12 @@ public interface filterPackage extends EPackage {
 		EReference GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF = eINSTANCE.getGSSFilterBoolVarFromArrayItem_AIFieldRef();
 
 		/**
-		 * The meta object literal for the '<em><b>Constant</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT = eINSTANCE.getGSSFilterBoolVarFromArrayItem_Constant();
-
-		/**
-		 * The meta object literal for the '<em><b>Select</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT = eINSTANCE.getGSSFilterBoolVarFromArrayItem_Select();
-
-		/**
-		 * The meta object literal for the '<em><b>Select Line</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT_LINE = eINSTANCE.getGSSFilterBoolVarFromArrayItem_SelectLine();
+		EReference GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__VALUE = eINSTANCE.getGSSFilterBoolVarFromArrayItem_Value();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromGroupedArrayItemImpl <em>GSS Filter Bool Var From Grouped Array Item</em>}' class.
@@ -2178,28 +2055,12 @@ public interface filterPackage extends EPackage {
 		EReference GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__AI_FIELD_REFS = eINSTANCE.getGSSFilterBoolVarFromGroupedArrayItem_AIFieldRefs();
 
 		/**
-		 * The meta object literal for the '<em><b>Constant</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__CONSTANT = eINSTANCE.getGSSFilterBoolVarFromGroupedArrayItem_Constant();
-
-		/**
-		 * The meta object literal for the '<em><b>Select</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__SELECT = eINSTANCE.getGSSFilterBoolVarFromGroupedArrayItem_Select();
-
-		/**
-		 * The meta object literal for the '<em><b>Select Line</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__SELECT_LINE = eINSTANCE.getGSSFilterBoolVarFromGroupedArrayItem_SelectLine();
+		EReference GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__VALUE = eINSTANCE.getGSSFilterBoolVarFromGroupedArrayItem_Value();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFDICImpl <em>GSS Filter Bool Var FDIC</em>}' class.

@@ -332,23 +332,23 @@ public class scenarioSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case scenarioPackage.GSS_SCENARIO_GV: {
-				GSSScenarioGV gssScenarioGV = (GSSScenarioGV)theEObject;
-				T result = caseGSSScenarioGV(gssScenarioGV);
+			case scenarioPackage.GSS_SCENARIO_GV_REF: {
+				GSSScenarioGVRef gssScenarioGVRef = (GSSScenarioGVRef)theEObject;
+				T result = caseGSSScenarioGVRef(gssScenarioGVRef);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case scenarioPackage.GSS_SCENARIO_GV_FILTERED: {
 				GSSScenarioGVFiltered gssScenarioGVFiltered = (GSSScenarioGVFiltered)theEObject;
 				T result = caseGSSScenarioGVFiltered(gssScenarioGVFiltered);
-				if (result == null) result = caseGSSScenarioGV(gssScenarioGVFiltered);
+				if (result == null) result = caseGSSScenarioGVRef(gssScenarioGVFiltered);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case scenarioPackage.GSS_SCENARIO_GV_PERIODIC: {
 				GSSScenarioGVPeriodic gssScenarioGVPeriodic = (GSSScenarioGVPeriodic)theEObject;
 				T result = caseGSSScenarioGVPeriodic(gssScenarioGVPeriodic);
-				if (result == null) result = caseGSSScenarioGV(gssScenarioGVPeriodic);
+				if (result == null) result = caseGSSScenarioGVRef(gssScenarioGVPeriodic);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -957,17 +957,17 @@ public class scenarioSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Scenario GV</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Scenario GV Ref</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Scenario GV</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Scenario GV Ref</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGSSScenarioGV(GSSScenarioGV object) {
+	public T caseGSSScenarioGVRef(GSSScenarioGVRef object) {
 		return null;
 	}
 

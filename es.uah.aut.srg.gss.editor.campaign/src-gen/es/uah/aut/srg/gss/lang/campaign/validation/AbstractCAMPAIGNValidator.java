@@ -25,6 +25,7 @@ public abstract class AbstractCAMPAIGNValidator extends AbstractDeclarativeValid
 		List<EPackage> result = new ArrayList<EPackage>();
 		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/gss/common"));
 		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/gss/campaign"));
+		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/gss/test_list"));
 		return result;
 	}
 	

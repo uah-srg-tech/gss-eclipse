@@ -11,10 +11,8 @@
 package es.uah.aut.srg.gss.filter.impl;
 
 import es.uah.aut.srg.gss.filter.GSSFilterBoolVarFromArrayItem;
-import es.uah.aut.srg.gss.filter.GSSFilterConstant;
 import es.uah.aut.srg.gss.filter.GSSFilterConstantType;
-import es.uah.aut.srg.gss.filter.GSSFilterSelect;
-import es.uah.aut.srg.gss.filter.GSSFilterSelectLine;
+import es.uah.aut.srg.gss.filter.GSSFilterValue;
 import es.uah.aut.srg.gss.filter.filterPackage;
 
 import es.uah.aut.srg.gss.format.GSSFormatAIField;
@@ -37,9 +35,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl#getConstantType <em>Constant Type</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl#getAIFieldRef <em>AI Field Ref</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl#getConstant <em>Constant</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl#getSelect <em>Select</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl#getSelectLine <em>Select Line</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.filter.impl.GSSFilterBoolVarFromArrayItemImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -76,34 +72,14 @@ public class GSSFilterBoolVarFromArrayItemImpl extends GSSFilterAbstractBoolVarI
 	protected GSSFormatAIField aiFieldRef;
 
 	/**
-	 * The cached value of the '{@link #getConstant() <em>Constant</em>}' containment reference.
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConstant()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSFilterConstant constant;
-
-	/**
-	 * The cached value of the '{@link #getSelect() <em>Select</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSelect()
-	 * @generated
-	 * @ordered
-	 */
-	protected GSSFilterSelect select;
-
-	/**
-	 * The cached value of the '{@link #getSelectLine() <em>Select Line</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSelectLine()
-	 * @generated
-	 * @ordered
-	 */
-	protected GSSFilterSelectLine selectLine;
+	protected GSSFilterValue value;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -188,8 +164,8 @@ public class GSSFilterBoolVarFromArrayItemImpl extends GSSFilterAbstractBoolVarI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSFilterConstant getConstant() {
-		return constant;
+	public GSSFilterValue getValue() {
+		return value;
 	}
 
 	/**
@@ -197,11 +173,11 @@ public class GSSFilterBoolVarFromArrayItemImpl extends GSSFilterAbstractBoolVarI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetConstant(GSSFilterConstant newConstant, NotificationChain msgs) {
-		GSSFilterConstant oldConstant = constant;
-		constant = newConstant;
+	public NotificationChain basicSetValue(GSSFilterValue newValue, NotificationChain msgs) {
+		GSSFilterValue oldValue = value;
+		value = newValue;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT, oldConstant, newConstant);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -212,104 +188,18 @@ public class GSSFilterBoolVarFromArrayItemImpl extends GSSFilterAbstractBoolVarI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConstant(GSSFilterConstant newConstant) {
-		if (newConstant != constant) {
+	public void setValue(GSSFilterValue newValue) {
+		if (newValue != value) {
 			NotificationChain msgs = null;
-			if (constant != null)
-				msgs = ((InternalEObject)constant).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT, null, msgs);
-			if (newConstant != null)
-				msgs = ((InternalEObject)newConstant).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT, null, msgs);
-			msgs = basicSetConstant(newConstant, msgs);
+			if (value != null)
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__VALUE, null, msgs);
+			if (newValue != null)
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__VALUE, null, msgs);
+			msgs = basicSetValue(newValue, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT, newConstant, newConstant));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSFilterSelect getSelect() {
-		return select;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSelect(GSSFilterSelect newSelect, NotificationChain msgs) {
-		GSSFilterSelect oldSelect = select;
-		select = newSelect;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT, oldSelect, newSelect);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSelect(GSSFilterSelect newSelect) {
-		if (newSelect != select) {
-			NotificationChain msgs = null;
-			if (select != null)
-				msgs = ((InternalEObject)select).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT, null, msgs);
-			if (newSelect != null)
-				msgs = ((InternalEObject)newSelect).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT, null, msgs);
-			msgs = basicSetSelect(newSelect, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT, newSelect, newSelect));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSFilterSelectLine getSelectLine() {
-		return selectLine;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSelectLine(GSSFilterSelectLine newSelectLine, NotificationChain msgs) {
-		GSSFilterSelectLine oldSelectLine = selectLine;
-		selectLine = newSelectLine;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT_LINE, oldSelectLine, newSelectLine);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSelectLine(GSSFilterSelectLine newSelectLine) {
-		if (newSelectLine != selectLine) {
-			NotificationChain msgs = null;
-			if (selectLine != null)
-				msgs = ((InternalEObject)selectLine).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT_LINE, null, msgs);
-			if (newSelectLine != null)
-				msgs = ((InternalEObject)newSelectLine).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT_LINE, null, msgs);
-			msgs = basicSetSelectLine(newSelectLine, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT_LINE, newSelectLine, newSelectLine));
+			eNotify(new ENotificationImpl(this, Notification.SET, filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__VALUE, newValue, newValue));
 	}
 
 	/**
@@ -320,12 +210,8 @@ public class GSSFilterBoolVarFromArrayItemImpl extends GSSFilterAbstractBoolVarI
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT:
-				return basicSetConstant(null, msgs);
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT:
-				return basicSetSelect(null, msgs);
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT_LINE:
-				return basicSetSelectLine(null, msgs);
+			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__VALUE:
+				return basicSetValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -343,12 +229,8 @@ public class GSSFilterBoolVarFromArrayItemImpl extends GSSFilterAbstractBoolVarI
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF:
 				if (resolve) return getAIFieldRef();
 				return basicGetAIFieldRef();
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT:
-				return getConstant();
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT:
-				return getSelect();
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT_LINE:
-				return getSelectLine();
+			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -367,14 +249,8 @@ public class GSSFilterBoolVarFromArrayItemImpl extends GSSFilterAbstractBoolVarI
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF:
 				setAIFieldRef((GSSFormatAIField)newValue);
 				return;
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT:
-				setConstant((GSSFilterConstant)newValue);
-				return;
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT:
-				setSelect((GSSFilterSelect)newValue);
-				return;
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT_LINE:
-				setSelectLine((GSSFilterSelectLine)newValue);
+			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__VALUE:
+				setValue((GSSFilterValue)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -394,14 +270,8 @@ public class GSSFilterBoolVarFromArrayItemImpl extends GSSFilterAbstractBoolVarI
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF:
 				setAIFieldRef((GSSFormatAIField)null);
 				return;
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT:
-				setConstant((GSSFilterConstant)null);
-				return;
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT:
-				setSelect((GSSFilterSelect)null);
-				return;
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT_LINE:
-				setSelectLine((GSSFilterSelectLine)null);
+			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__VALUE:
+				setValue((GSSFilterValue)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -419,12 +289,8 @@ public class GSSFilterBoolVarFromArrayItemImpl extends GSSFilterAbstractBoolVarI
 				return constantType != CONSTANT_TYPE_EDEFAULT;
 			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF:
 				return aiFieldRef != null;
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT:
-				return constant != null;
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT:
-				return select != null;
-			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__SELECT_LINE:
-				return selectLine != null;
+			case filterPackage.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__VALUE:
+				return value != null;
 		}
 		return super.eIsSet(featureID);
 	}

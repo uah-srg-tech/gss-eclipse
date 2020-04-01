@@ -13,6 +13,7 @@ package es.uah.aut.srg.gss.config;
 import es.uah.aut.srg.gss.common.GSSModelElement;
 
 import es.uah.aut.srg.gss.scenario.GSSScenarioScenario;
+import es.uah.aut.srg.gss.test_list.GSSTestListTestList;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,12 +68,12 @@ public interface GSSConfigGSSConfig extends GSSModelElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tests</em>' containment reference.
-	 * @see #setTests(GSSConfigTests)
+	 * @see #setTests(GSSTestListTestList)
 	 * @see es.uah.aut.srg.gss.config.configPackage#getGSSConfigGSSConfig_Tests()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSConfigTests getTests();
+	GSSTestListTestList getTests();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.config.GSSConfigGSSConfig#getTests <em>Tests</em>}' containment reference.
@@ -82,6 +83,6 @@ public interface GSSConfigGSSConfig extends GSSModelElement {
 	 * @see #getTests()
 	 * @generated
 	 */
-	void setTests(GSSConfigTests value);
+	void setTests(GSSTestListTestList value);
 
 } // GSSConfigGSSConfig

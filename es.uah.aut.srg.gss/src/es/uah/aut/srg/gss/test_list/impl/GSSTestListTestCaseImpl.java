@@ -8,12 +8,12 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.gss.config.impl;
+package es.uah.aut.srg.gss.test_list.impl;
 
-import es.uah.aut.srg.gss.config.GSSConfigTestCase;
-import es.uah.aut.srg.gss.config.configPackage;
+import es.uah.aut.srg.gss.test_list.GSSTestListPrevAction;
+import es.uah.aut.srg.gss.test_list.GSSTestListTestCase;
+import es.uah.aut.srg.gss.test_list.test_listPackage;
 
-import es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction;
 import es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -26,22 +26,22 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GSS Config Test Case</b></em>'.
+ * An implementation of the model object '<em><b>GSS Test List Test Case</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigTestCaseImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigTestCaseImpl#getProcedure <em>Procedure</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigTestCaseImpl#getPrevMsg <em>Prev Msg</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigTestCaseImpl#getPrevAction <em>Prev Action</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigTestCaseImpl#getPrevActionParam <em>Prev Action Param</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_list.impl.GSSTestListTestCaseImpl#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_list.impl.GSSTestListTestCaseImpl#getProcedure <em>Procedure</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_list.impl.GSSTestListTestCaseImpl#getPrevMsg <em>Prev Msg</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_list.impl.GSSTestListTestCaseImpl#getPrevAction <em>Prev Action</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_list.impl.GSSTestListTestCaseImpl#getPrevActionParam <em>Prev Action Param</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implements GSSConfigTestCase {
+public class GSSTestListTestCaseImpl extends MinimalEObjectImpl.Container implements GSSTestListTestCase {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -100,7 +100,7 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final GSSTestProcPrevAction PREV_ACTION_EDEFAULT = GSSTestProcPrevAction.RESET;
+	protected static final GSSTestListPrevAction PREV_ACTION_EDEFAULT = GSSTestListPrevAction.NONE;
 
 	/**
 	 * The cached value of the '{@link #getPrevAction() <em>Prev Action</em>}' attribute.
@@ -110,7 +110,7 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSTestProcPrevAction prevAction = PREV_ACTION_EDEFAULT;
+	protected GSSTestListPrevAction prevAction = PREV_ACTION_EDEFAULT;
 
 	/**
 	 * This is true if the Prev Action attribute has been set.
@@ -146,7 +146,7 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GSSConfigTestCaseImpl() {
+	protected GSSTestListTestCaseImpl() {
 		super();
 	}
 
@@ -157,7 +157,7 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return configPackage.Literals.GSS_CONFIG_TEST_CASE;
+		return test_listPackage.Literals.GSS_TEST_LIST_TEST_CASE;
 	}
 
 	/**
@@ -178,7 +178,7 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_TEST_CASE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_listPackage.GSS_TEST_LIST_TEST_CASE__NAME, oldName, name));
 	}
 
 	/**
@@ -192,7 +192,7 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 			procedure = (GSSTestProcTestProc)eResolveProxy(oldProcedure);
 			if (procedure != oldProcedure) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, configPackage.GSS_CONFIG_TEST_CASE__PROCEDURE, oldProcedure, procedure));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, test_listPackage.GSS_TEST_LIST_TEST_CASE__PROCEDURE, oldProcedure, procedure));
 			}
 		}
 		return procedure;
@@ -216,7 +216,7 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 		GSSTestProcTestProc oldProcedure = procedure;
 		procedure = newProcedure;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_TEST_CASE__PROCEDURE, oldProcedure, procedure));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_listPackage.GSS_TEST_LIST_TEST_CASE__PROCEDURE, oldProcedure, procedure));
 	}
 
 	/**
@@ -237,7 +237,7 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 		String oldPrevMsg = prevMsg;
 		prevMsg = newPrevMsg;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_TEST_CASE__PREV_MSG, oldPrevMsg, prevMsg));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_MSG, oldPrevMsg, prevMsg));
 	}
 
 	/**
@@ -245,7 +245,7 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTestProcPrevAction getPrevAction() {
+	public GSSTestListPrevAction getPrevAction() {
 		return prevAction;
 	}
 
@@ -254,13 +254,13 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrevAction(GSSTestProcPrevAction newPrevAction) {
-		GSSTestProcPrevAction oldPrevAction = prevAction;
+	public void setPrevAction(GSSTestListPrevAction newPrevAction) {
+		GSSTestListPrevAction oldPrevAction = prevAction;
 		prevAction = newPrevAction == null ? PREV_ACTION_EDEFAULT : newPrevAction;
 		boolean oldPrevActionESet = prevActionESet;
 		prevActionESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_TEST_CASE__PREV_ACTION, oldPrevAction, prevAction, !oldPrevActionESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_ACTION, oldPrevAction, prevAction, !oldPrevActionESet));
 	}
 
 	/**
@@ -269,12 +269,12 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public void unsetPrevAction() {
-		GSSTestProcPrevAction oldPrevAction = prevAction;
+		GSSTestListPrevAction oldPrevAction = prevAction;
 		boolean oldPrevActionESet = prevActionESet;
 		prevAction = PREV_ACTION_EDEFAULT;
 		prevActionESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, configPackage.GSS_CONFIG_TEST_CASE__PREV_ACTION, oldPrevAction, PREV_ACTION_EDEFAULT, oldPrevActionESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_ACTION, oldPrevAction, PREV_ACTION_EDEFAULT, oldPrevActionESet));
 	}
 
 	/**
@@ -304,7 +304,7 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 		String oldPrevActionParam = prevActionParam;
 		prevActionParam = newPrevActionParam;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, configPackage.GSS_CONFIG_TEST_CASE__PREV_ACTION_PARAM, oldPrevActionParam, prevActionParam));
+			eNotify(new ENotificationImpl(this, Notification.SET, test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_ACTION_PARAM, oldPrevActionParam, prevActionParam));
 	}
 
 	/**
@@ -315,16 +315,16 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case configPackage.GSS_CONFIG_TEST_CASE__NAME:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__NAME:
 				return getName();
-			case configPackage.GSS_CONFIG_TEST_CASE__PROCEDURE:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PROCEDURE:
 				if (resolve) return getProcedure();
 				return basicGetProcedure();
-			case configPackage.GSS_CONFIG_TEST_CASE__PREV_MSG:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_MSG:
 				return getPrevMsg();
-			case configPackage.GSS_CONFIG_TEST_CASE__PREV_ACTION:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_ACTION:
 				return getPrevAction();
-			case configPackage.GSS_CONFIG_TEST_CASE__PREV_ACTION_PARAM:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_ACTION_PARAM:
 				return getPrevActionParam();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -338,19 +338,19 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case configPackage.GSS_CONFIG_TEST_CASE__NAME:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__NAME:
 				setName((String)newValue);
 				return;
-			case configPackage.GSS_CONFIG_TEST_CASE__PROCEDURE:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PROCEDURE:
 				setProcedure((GSSTestProcTestProc)newValue);
 				return;
-			case configPackage.GSS_CONFIG_TEST_CASE__PREV_MSG:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_MSG:
 				setPrevMsg((String)newValue);
 				return;
-			case configPackage.GSS_CONFIG_TEST_CASE__PREV_ACTION:
-				setPrevAction((GSSTestProcPrevAction)newValue);
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_ACTION:
+				setPrevAction((GSSTestListPrevAction)newValue);
 				return;
-			case configPackage.GSS_CONFIG_TEST_CASE__PREV_ACTION_PARAM:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_ACTION_PARAM:
 				setPrevActionParam((String)newValue);
 				return;
 		}
@@ -365,19 +365,19 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case configPackage.GSS_CONFIG_TEST_CASE__NAME:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case configPackage.GSS_CONFIG_TEST_CASE__PROCEDURE:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PROCEDURE:
 				setProcedure((GSSTestProcTestProc)null);
 				return;
-			case configPackage.GSS_CONFIG_TEST_CASE__PREV_MSG:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_MSG:
 				setPrevMsg(PREV_MSG_EDEFAULT);
 				return;
-			case configPackage.GSS_CONFIG_TEST_CASE__PREV_ACTION:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_ACTION:
 				unsetPrevAction();
 				return;
-			case configPackage.GSS_CONFIG_TEST_CASE__PREV_ACTION_PARAM:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_ACTION_PARAM:
 				setPrevActionParam(PREV_ACTION_PARAM_EDEFAULT);
 				return;
 		}
@@ -392,15 +392,15 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case configPackage.GSS_CONFIG_TEST_CASE__NAME:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case configPackage.GSS_CONFIG_TEST_CASE__PROCEDURE:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PROCEDURE:
 				return procedure != null;
-			case configPackage.GSS_CONFIG_TEST_CASE__PREV_MSG:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_MSG:
 				return PREV_MSG_EDEFAULT == null ? prevMsg != null : !PREV_MSG_EDEFAULT.equals(prevMsg);
-			case configPackage.GSS_CONFIG_TEST_CASE__PREV_ACTION:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_ACTION:
 				return isSetPrevAction();
-			case configPackage.GSS_CONFIG_TEST_CASE__PREV_ACTION_PARAM:
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE__PREV_ACTION_PARAM:
 				return PREV_ACTION_PARAM_EDEFAULT == null ? prevActionParam != null : !PREV_ACTION_PARAM_EDEFAULT.equals(prevActionParam);
 		}
 		return super.eIsSet(featureID);
@@ -428,4 +428,4 @@ public class GSSConfigTestCaseImpl extends MinimalEObjectImpl.Container implemen
 		return result.toString();
 	}
 
-} //GSSConfigTestCaseImpl
+} //GSSTestListTestCaseImpl

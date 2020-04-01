@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2019 UAH Space Research Group.
+ * Copyright (c) 2020 UAH Space Research Group.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -8,9 +8,9 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.gss.test_campaign.util;
+package es.uah.aut.srg.gss.test_list.util;
 
-import es.uah.aut.srg.gss.test_campaign.*;
+import es.uah.aut.srg.gss.test_list.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -24,17 +24,17 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see es.uah.aut.srg.gss.test_campaign.test_campaignPackage
+ * @see es.uah.aut.srg.gss.test_list.test_listPackage
  * @generated
  */
-public class test_campaignAdapterFactory extends AdapterFactoryImpl {
+public class test_listAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static test_campaignPackage modelPackage;
+	protected static test_listPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -42,9 +42,9 @@ public class test_campaignAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public test_campaignAdapterFactory() {
+	public test_listAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = test_campaignPackage.eINSTANCE;
+			modelPackage = test_listPackage.eINSTANCE;
 		}
 	}
 
@@ -73,15 +73,15 @@ public class test_campaignAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected test_campaignSwitch<Adapter> modelSwitch =
-		new test_campaignSwitch<Adapter>() {
+	protected test_listSwitch<Adapter> modelSwitch =
+		new test_listSwitch<Adapter>() {
 			@Override
-			public Adapter caseGSSTestCampaignTestCampaign(GSSTestCampaignTestCampaign object) {
-				return createGSSTestCampaignTestCampaignAdapter();
+			public Adapter caseGSSTestListTestList(GSSTestListTestList object) {
+				return createGSSTestListTestListAdapter();
 			}
 			@Override
-			public Adapter caseGSSTestCampaignTest(GSSTestCampaignTest object) {
-				return createGSSTestCampaignTestAdapter();
+			public Adapter caseGSSTestListTestCase(GSSTestListTestCase object) {
+				return createGSSTestListTestCaseAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -104,30 +104,30 @@ public class test_campaignAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign <em>GSS Test Campaign Test Campaign</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_list.GSSTestListTestList <em>GSS Test List Test List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTestCampaign
+	 * @see es.uah.aut.srg.gss.test_list.GSSTestListTestList
 	 * @generated
 	 */
-	public Adapter createGSSTestCampaignTestCampaignAdapter() {
+	public Adapter createGSSTestListTestListAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest <em>GSS Test Campaign Test</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.test_list.GSSTestListTestCase <em>GSS Test List Test Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.test_campaign.GSSTestCampaignTest
+	 * @see es.uah.aut.srg.gss.test_list.GSSTestListTestCase
 	 * @generated
 	 */
-	public Adapter createGSSTestCampaignTestAdapter() {
+	public Adapter createGSSTestListTestCaseAdapter() {
 		return null;
 	}
 
@@ -143,4 +143,4 @@ public class test_campaignAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //test_campaignAdapterFactory
+} //test_listAdapterFactory

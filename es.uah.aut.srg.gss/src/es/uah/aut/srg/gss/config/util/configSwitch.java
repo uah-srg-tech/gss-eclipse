@@ -83,18 +83,6 @@ public class configSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case configPackage.GSS_CONFIG_TESTS: {
-				GSSConfigTests gssConfigTests = (GSSConfigTests)theEObject;
-				T result = caseGSSConfigTests(gssConfigTests);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case configPackage.GSS_CONFIG_TEST_CASE: {
-				GSSConfigTestCase gssConfigTestCase = (GSSConfigTestCase)theEObject;
-				T result = caseGSSConfigTestCase(gssConfigTestCase);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -111,36 +99,6 @@ public class configSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSConfigGSSConfig(GSSConfigGSSConfig object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Tests</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config Tests</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigTests(GSSConfigTests object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Config Test Case</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Config Test Case</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSConfigTestCase(GSSConfigTestCase object) {
 		return null;
 	}
 

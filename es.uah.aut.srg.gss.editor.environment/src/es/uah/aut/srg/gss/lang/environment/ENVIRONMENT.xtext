@@ -402,7 +402,7 @@ GSSScenarioPlot returns scenario::GSSScenarioPlot:
 	'GSSScenarioPlot' '{'
 		'name' ':=' name=STRING ';'
 		'chartRef' ':=' chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';'
-		GV=GSSScenarioGV
+		GVRef=GSSScenarioGVRef
 	'}' ';'
 ;
 
@@ -411,7 +411,7 @@ GSSScenarioAlarmMsg returns scenario::GSSScenarioAlarmMsg:
 		'name' ':=' name=STRING ';'
 		'type' ':=' type=GSSScenarioAlarmMsgType ';'
 		'text' ':=' text=STRING ';'
-		GV=GSSScenarioGV
+		GVRef=GSSScenarioGVRef
 	'}' ';'
 ;
 
@@ -420,7 +420,7 @@ GSSScenarioModify returns scenario::GSSScenarioModify:
 		'name' ':=' name=STRING ';'
 		'type' ':=' type=GSSScenarioModifyType ';'
 		'value' ':=' value=INTEGER ';'
-		GV=GSSScenarioGV
+		GVRef=GSSScenarioGVRef
 	'}' ';'
 ;
 
@@ -428,11 +428,11 @@ GSSScenarioAlarmVal returns scenario::GSSScenarioAlarmVal:
 	'GSSScenarioAlarmVal' '{'
 		'name' ':=' name=STRING ';'
 		'type' ':=' type=GSSScenarioAlarmValType ';'
-		GV=GSSScenarioGV
+		GVRef=GSSScenarioGVRef
 	'}' ';'
 ;
 
-GSSScenarioGV returns scenario::GSSScenarioGV:
+GSSScenarioGVRef returns scenario::GSSScenarioGVRef:
 	GSSScenarioGVFiltered | GSSScenarioGVPeriodic;
 
 GSSScenarioGVFiltered returns scenario::GSSScenarioGVFiltered:

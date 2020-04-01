@@ -13,16 +13,12 @@ package es.uah.aut.srg.gss.config.impl;
 import es.uah.aut.srg.gss.common.commonPackage;
 
 import es.uah.aut.srg.gss.config.GSSConfigGSSConfig;
-import es.uah.aut.srg.gss.config.GSSConfigTestCase;
-import es.uah.aut.srg.gss.config.GSSConfigTests;
 import es.uah.aut.srg.gss.config.configFactory;
 import es.uah.aut.srg.gss.config.configPackage;
 
 import es.uah.aut.srg.gss.scenario.scenarioPackage;
 
-import es.uah.aut.srg.gss.test_proc.test_procPackage;
-
-import org.eclipse.emf.ecore.EAttribute;
+import es.uah.aut.srg.gss.test_list.test_listPackage;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -42,20 +38,6 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * @generated
 	 */
 	private EClass gssConfigGSSConfigEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigTestsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssConfigTestCaseEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -105,7 +87,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 
 		// Initialize simple dependencies
 		scenarioPackage.eINSTANCE.eClass();
-		test_procPackage.eINSTANCE.eClass();
+		test_listPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theconfigPackage.createPackageContents();
@@ -154,78 +136,6 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGSSConfigTests() {
-		return gssConfigTestsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSConfigTests_TestCase() {
-		return (EReference)gssConfigTestsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSConfigTestCase() {
-		return gssConfigTestCaseEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigTestCase_Name() {
-		return (EAttribute)gssConfigTestCaseEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSConfigTestCase_Procedure() {
-		return (EReference)gssConfigTestCaseEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigTestCase_PrevMsg() {
-		return (EAttribute)gssConfigTestCaseEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigTestCase_PrevAction() {
-		return (EAttribute)gssConfigTestCaseEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSConfigTestCase_PrevActionParam() {
-		return (EAttribute)gssConfigTestCaseEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public configFactory getconfigFactory() {
 		return (configFactory)getEFactoryInstance();
 	}
@@ -252,16 +162,6 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		gssConfigGSSConfigEClass = createEClass(GSS_CONFIG_GSS_CONFIG);
 		createEReference(gssConfigGSSConfigEClass, GSS_CONFIG_GSS_CONFIG__SCENARIO);
 		createEReference(gssConfigGSSConfigEClass, GSS_CONFIG_GSS_CONFIG__TESTS);
-
-		gssConfigTestsEClass = createEClass(GSS_CONFIG_TESTS);
-		createEReference(gssConfigTestsEClass, GSS_CONFIG_TESTS__TEST_CASE);
-
-		gssConfigTestCaseEClass = createEClass(GSS_CONFIG_TEST_CASE);
-		createEAttribute(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__NAME);
-		createEReference(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__PROCEDURE);
-		createEAttribute(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__PREV_MSG);
-		createEAttribute(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__PREV_ACTION);
-		createEAttribute(gssConfigTestCaseEClass, GSS_CONFIG_TEST_CASE__PREV_ACTION_PARAM);
 	}
 
 	/**
@@ -290,7 +190,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		// Obtain other dependent packages
 		commonPackage thecommonPackage = (commonPackage)EPackage.Registry.INSTANCE.getEPackage(commonPackage.eNS_URI);
 		scenarioPackage thescenarioPackage = (scenarioPackage)EPackage.Registry.INSTANCE.getEPackage(scenarioPackage.eNS_URI);
-		test_procPackage thetest_procPackage = (test_procPackage)EPackage.Registry.INSTANCE.getEPackage(test_procPackage.eNS_URI);
+		test_listPackage thetest_listPackage = (test_listPackage)EPackage.Registry.INSTANCE.getEPackage(test_listPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -302,17 +202,7 @@ public class configPackageImpl extends EPackageImpl implements configPackage {
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssConfigGSSConfigEClass, GSSConfigGSSConfig.class, "GSSConfigGSSConfig", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSConfigGSSConfig_Scenario(), thescenarioPackage.getGSSScenarioScenario(), null, "scenario", null, 1, 1, GSSConfigGSSConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigGSSConfig_Tests(), this.getGSSConfigTests(), null, "Tests", null, 1, 1, GSSConfigGSSConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigTestsEClass, GSSConfigTests.class, "GSSConfigTests", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGSSConfigTests_TestCase(), this.getGSSConfigTestCase(), null, "TestCase", null, 1, 150, GSSConfigTests.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssConfigTestCaseEClass, GSSConfigTestCase.class, "GSSConfigTestCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSConfigTestCase_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSConfigTestCase_Procedure(), thetest_procPackage.getGSSTestProcTestProc(), null, "procedure", null, 1, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigTestCase_PrevMsg(), ecorePackage.getEString(), "prevMsg", null, 0, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigTestCase_PrevAction(), thetest_procPackage.getGSSTestProcPrevAction(), "prevAction", null, 0, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSConfigTestCase_PrevActionParam(), ecorePackage.getEString(), "prevActionParam", null, 0, 1, GSSConfigTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSConfigGSSConfig_Tests(), thetest_listPackage.getGSSTestListTestList(), null, "Tests", null, 1, 1, GSSConfigGSSConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

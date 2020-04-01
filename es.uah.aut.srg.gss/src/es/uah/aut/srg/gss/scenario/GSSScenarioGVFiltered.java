@@ -28,7 +28,7 @@ import es.uah.aut.srg.gss.filter.GSSFilterFilter;
  * @model
  * @generated
  */
-public interface GSSScenarioGVFiltered extends GSSScenarioGV {
+public interface GSSScenarioGVFiltered extends GSSScenarioGVRef {
 	/**
 	 * Returns the value of the '<em><b>Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->

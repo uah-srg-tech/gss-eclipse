@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.gss.scenario.impl;
 
-import es.uah.aut.srg.gss.scenario.GSSScenarioGV;
+import es.uah.aut.srg.gss.scenario.GSSScenarioGVRef;
 import es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar;
 import es.uah.aut.srg.gss.scenario.scenarioPackage;
 
@@ -24,18 +24,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GSS Scenario GV</b></em>'.
+ * An implementation of the model object '<em><b>GSS Scenario GV Ref</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVImpl#getGlobalVarRef <em>Global Var Ref</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVRefImpl#getGlobalVarRef <em>Global Var Ref</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class GSSScenarioGVImpl extends MinimalEObjectImpl.Container implements GSSScenarioGV {
+public abstract class GSSScenarioGVRefImpl extends MinimalEObjectImpl.Container implements GSSScenarioGVRef {
 	/**
 	 * The cached value of the '{@link #getGlobalVarRef() <em>Global Var Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -51,7 +51,7 @@ public abstract class GSSScenarioGVImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GSSScenarioGVImpl() {
+	protected GSSScenarioGVRefImpl() {
 		super();
 	}
 
@@ -62,7 +62,7 @@ public abstract class GSSScenarioGVImpl extends MinimalEObjectImpl.Container imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return scenarioPackage.Literals.GSS_SCENARIO_GV;
+		return scenarioPackage.Literals.GSS_SCENARIO_GV_REF;
 	}
 
 	/**
@@ -76,7 +76,7 @@ public abstract class GSSScenarioGVImpl extends MinimalEObjectImpl.Container imp
 			globalVarRef = (GSSScenarioGlobalVar)eResolveProxy(oldGlobalVarRef);
 			if (globalVarRef != oldGlobalVarRef) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, scenarioPackage.GSS_SCENARIO_GV__GLOBAL_VAR_REF, oldGlobalVarRef, globalVarRef));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, scenarioPackage.GSS_SCENARIO_GV_REF__GLOBAL_VAR_REF, oldGlobalVarRef, globalVarRef));
 			}
 		}
 		return globalVarRef;
@@ -100,7 +100,7 @@ public abstract class GSSScenarioGVImpl extends MinimalEObjectImpl.Container imp
 		GSSScenarioGlobalVar oldGlobalVarRef = globalVarRef;
 		globalVarRef = newGlobalVarRef;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_GV__GLOBAL_VAR_REF, oldGlobalVarRef, globalVarRef));
+			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_GV_REF__GLOBAL_VAR_REF, oldGlobalVarRef, globalVarRef));
 	}
 
 	/**
@@ -111,7 +111,7 @@ public abstract class GSSScenarioGVImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_GV__GLOBAL_VAR_REF:
+			case scenarioPackage.GSS_SCENARIO_GV_REF__GLOBAL_VAR_REF:
 				if (resolve) return getGlobalVarRef();
 				return basicGetGlobalVarRef();
 		}
@@ -126,7 +126,7 @@ public abstract class GSSScenarioGVImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_GV__GLOBAL_VAR_REF:
+			case scenarioPackage.GSS_SCENARIO_GV_REF__GLOBAL_VAR_REF:
 				setGlobalVarRef((GSSScenarioGlobalVar)newValue);
 				return;
 		}
@@ -141,7 +141,7 @@ public abstract class GSSScenarioGVImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_GV__GLOBAL_VAR_REF:
+			case scenarioPackage.GSS_SCENARIO_GV_REF__GLOBAL_VAR_REF:
 				setGlobalVarRef((GSSScenarioGlobalVar)null);
 				return;
 		}
@@ -156,10 +156,10 @@ public abstract class GSSScenarioGVImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case scenarioPackage.GSS_SCENARIO_GV__GLOBAL_VAR_REF:
+			case scenarioPackage.GSS_SCENARIO_GV_REF__GLOBAL_VAR_REF:
 				return globalVarRef != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //GSSScenarioGVImpl
+} //GSSScenarioGVRefImpl

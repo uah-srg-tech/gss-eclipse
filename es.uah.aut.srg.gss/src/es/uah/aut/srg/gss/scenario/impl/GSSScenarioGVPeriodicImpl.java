@@ -17,6 +17,7 @@ import es.uah.aut.srg.gss.scenario.scenarioPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -33,7 +34,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class GSSScenarioGVPeriodicImpl extends GSSScenarioGVImpl implements GSSScenarioGVPeriodic {
+public class GSSScenarioGVPeriodicImpl extends GSSScenarioGVRefImpl implements GSSScenarioGVPeriodic {
 	/**
 	 * The default value of the '{@link #getPeriod_value() <em>Period value</em>}' attribute.
 	 * <!-- begin-user-doc -->

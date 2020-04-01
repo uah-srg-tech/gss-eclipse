@@ -55,7 +55,7 @@ GSSFilterBoolVar returns GSSFilterBoolVar:
 		'constantType' ':=' constantType=GSSFilterConstantType ';'
 		'FieldRef' ':=' FieldRef=[format::GSSFormatField|VersionedQualifiedReferenceName] ';'
 		Op=GSSFilterFieldOp
-		(Value=GSSFilterValue)
+		value=GSSFilterValue
 	'}' ';'
 ;
 	
@@ -66,9 +66,7 @@ GSSFilterBoolVarFromArrayItem returns GSSFilterBoolVarFromArrayItem:
 		'constantType' ':=' constantType=GSSFilterConstantType ';'
 		'AIFieldRef' ':=' AIFieldRef=[format::GSSFormatAIField|VersionedQualifiedReferenceName] ';'
 		Op=GSSFilterFieldOp
-		((Constant=GSSFilterConstant) |
-		 (Select=GSSFilterSelect) |
-		 (SelectLine=GSSFilterSelectLine))
+		value=GSSFilterValue
 	'}' ';'
 ;
 
@@ -80,9 +78,7 @@ GSSFilterBoolVarFromGroupedArrayItem returns GSSFilterBoolVarFromGroupedArrayIte
 		'group' ':=' group=ID ';'
 		'AIFieldRefs' ':=' AIFieldRefs=[format::GSSFormatAField|VersionedQualifiedReferenceName] ';'
 		Op=GSSFilterFieldOp
-		((Constant=GSSFilterConstant) |
-		 (Select=GSSFilterSelect) |
-		 (SelectLine=GSSFilterSelectLine))
+		value=GSSFilterValue
 	'}' ';'
 ;
 

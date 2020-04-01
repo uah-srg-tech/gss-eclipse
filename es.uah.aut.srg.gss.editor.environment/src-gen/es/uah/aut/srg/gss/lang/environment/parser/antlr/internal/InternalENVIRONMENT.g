@@ -6222,18 +6222,18 @@ ruleGSSScenarioPlot returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSScenarioPlotAccess().getGVGSSScenarioGVParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getGSSScenarioPlotAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0());
 				}
-				lv_GV_10_0=ruleGSSScenarioGV
+				lv_GVRef_10_0=ruleGSSScenarioGVRef
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSScenarioPlotRule());
 					}
 					set(
 						$current,
-						"GV",
-						lv_GV_10_0,
-						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGV");
+						"GVRef",
+						lv_GVRef_10_0,
+						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVRef");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -6367,18 +6367,18 @@ ruleGSSScenarioAlarmMsg returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVGSSScenarioGVParserRuleCall_14_0());
+					newCompositeNode(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0());
 				}
-				lv_GV_14_0=ruleGSSScenarioGV
+				lv_GVRef_14_0=ruleGSSScenarioGVRef
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSScenarioAlarmMsgRule());
 					}
 					set(
 						$current,
-						"GV",
-						lv_GV_14_0,
-						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGV");
+						"GVRef",
+						lv_GVRef_14_0,
+						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVRef");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -6513,18 +6513,18 @@ ruleGSSScenarioModify returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSScenarioModifyAccess().getGVGSSScenarioGVParserRuleCall_14_0());
+					newCompositeNode(grammarAccess.getGSSScenarioModifyAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0());
 				}
-				lv_GV_14_0=ruleGSSScenarioGV
+				lv_GVRef_14_0=ruleGSSScenarioGVRef
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSScenarioModifyRule());
 					}
 					set(
 						$current,
-						"GV",
-						lv_GV_14_0,
-						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGV");
+						"GVRef",
+						lv_GVRef_14_0,
+						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVRef");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -6628,18 +6628,18 @@ ruleGSSScenarioAlarmVal returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSScenarioAlarmValAccess().getGVGSSScenarioGVParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getGSSScenarioAlarmValAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0());
 				}
-				lv_GV_10_0=ruleGSSScenarioGV
+				lv_GVRef_10_0=ruleGSSScenarioGVRef
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSScenarioAlarmValRule());
 					}
 					set(
 						$current,
-						"GV",
-						lv_GV_10_0,
-						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGV");
+						"GVRef",
+						lv_GVRef_10_0,
+						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVRef");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -6655,15 +6655,15 @@ ruleGSSScenarioAlarmVal returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleGSSScenarioGV
-entryRuleGSSScenarioGV returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSScenarioGVRule()); }
-	iv_ruleGSSScenarioGV=ruleGSSScenarioGV
-	{ $current=$iv_ruleGSSScenarioGV.current; }
+// Entry rule entryRuleGSSScenarioGVRef
+entryRuleGSSScenarioGVRef returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSScenarioGVRefRule()); }
+	iv_ruleGSSScenarioGVRef=ruleGSSScenarioGVRef
+	{ $current=$iv_ruleGSSScenarioGVRef.current; }
 	EOF;
 
-// Rule GSSScenarioGV
-ruleGSSScenarioGV returns [EObject current=null]
+// Rule GSSScenarioGVRef
+ruleGSSScenarioGVRef returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -6675,7 +6675,7 @@ ruleGSSScenarioGV returns [EObject current=null]
 			/* */
 		}
 		{
-			newCompositeNode(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVFilteredParserRuleCall_0());
+			newCompositeNode(grammarAccess.getGSSScenarioGVRefAccess().getGSSScenarioGVFilteredParserRuleCall_0());
 		}
 		this_GSSScenarioGVFiltered_0=ruleGSSScenarioGVFiltered
 		{
@@ -6687,7 +6687,7 @@ ruleGSSScenarioGV returns [EObject current=null]
 			/* */
 		}
 		{
-			newCompositeNode(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVPeriodicParserRuleCall_1());
+			newCompositeNode(grammarAccess.getGSSScenarioGVRefAccess().getGSSScenarioGVPeriodicParserRuleCall_1());
 		}
 		this_GSSScenarioGVPeriodic_1=ruleGSSScenarioGVPeriodic
 		{

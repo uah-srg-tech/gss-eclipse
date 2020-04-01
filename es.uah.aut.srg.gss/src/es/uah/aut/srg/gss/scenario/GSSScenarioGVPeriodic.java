@@ -27,7 +27,7 @@ package es.uah.aut.srg.gss.scenario;
  * @model
  * @generated
  */
-public interface GSSScenarioGVPeriodic extends GSSScenarioGV {
+public interface GSSScenarioGVPeriodic extends GSSScenarioGVRef {
 	/**
 	 * Returns the value of the '<em><b>Period value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

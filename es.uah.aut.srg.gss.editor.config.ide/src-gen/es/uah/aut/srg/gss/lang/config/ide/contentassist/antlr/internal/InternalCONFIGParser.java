@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'alarm1'", "'reset'", "'disabled'", "'enabled'", "'SpW'", "'SpW_TC'", "'SpW_Error'", "'uart'", "'dummy'", "'in_out'", "'in'", "'out'", "'_1'", "'_2'", "'_3'", "'miliseconds'", "'seconds'", "'uint'", "'formula'", "'tm'", "'tc'", "'alarm2'", "'alarm3'", "'increment'", "'increment1wrap'", "'import'", "':='", "';'", "'GSSConfigGSSConfig'", "'{'", "'version'", "'}'", "'uri'", "'GSSScenarioScenario'", "'GSSScenarioOptions'", "'GSSScenarioProtocols'", "'GSSScenarioInterfaces'", "'ProtocolPacketsFile'", "'GSSScenarioSpecialPackets'", "'GSSScenarioPeriodicTCs'", "'GSSScenarioGlobalVars'", "'GSSScenarioMonitors'", "'ChartsFile'", "'GSSScenarioInfo'", "'test_campaign'", "'date'", "'version_control_url'", "'GSSScenarioInfoPrint'", "'mainLog'", "'portLogs'", "'rawLog'", "'GSSScenarioPhyHeaderPrint'", "'gssTabs'", "'GSSScenarioDiscardErrorFlags'", "'txErrors'", "'notExpectedPackets'", "'filtersKo'", "'validTimesKo'", "'GSSScenarioProtocol'", "'id'", "'name'", "'typeLevel'", "'GSSScenarioProtocolType'", "'offset'", "'GSSScenarioProtocolSubtype'", "'GSSScenarioMainInterface'", "'ifType'", "'ifConfig'", "'ioType'", "'protocolID'", "'GSSScenarioInterface'", "'GSSScenarioLevelInOut'", "'TMformat'", "'TCformat'", "'inputFilter'", "'export_to_prev_Level'", "'import_from_prev_Level'", "'GSSScenarioLevelIn'", "'GSSScenarioLevelOut'", "'GSSScenarioSpecialPacket'", "'status'", "'ifRef'", "'levels'", "'levelRef'", "'GSSScenarioUpperLevels'", "'GSSScenarioPrintingData'", "'printStatus'", "'GSSScenarioPeriod'", "'min_value'", "'min_unit'", "'max_value'", "'max_unit'", "'GSSScenarioIntervalRange'", "'min'", "'max'", "'interval_value'", "'interval_unit'", "'GSSScenarioUpperLevel'", "'level'", "'GSSScenarioStructuredData'", "'firstField'", "'GSSScenarioPeriodicTCLevel2'", "'period_value'", "'period_unit'", "'app_to_level2'", "'level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSScenarioPeriodicTCLevel1'", "'app_to_level1'", "'GSSScenarioPeriodicTCLevel0'", "'app_to_level0'", "'GSSScenarioGlobalVar'", "'type'", "'initial_value'", "'GSSScenarioReferenceField'", "'fieldRef'", "'size'", "'GSSScenarioReferencePeriodicTC'", "'idRef'", "'GSSScenarioReferenceSpecialPacket'", "'GSSScenarioPlot'", "'chartRef'", "'GSSScenarioAlarmMsg'", "'text'", "'GSSScenarioModify'", "'value'", "'GSSScenarioAlarmVal'", "'GSSScenarioGVFiltered'", "'GlobalVarRef'", "'filter'", "'GSSScenarioGVPeriodic'", "'GSSScenarioTests'", "'GSSScenarioTestCase'", "'procedure'", "'prevMsg'", "'prevAction'", "'prevActionParam'", "'.'", "'('", "')'", "'::'", "'-'", "'/'", "'://'", "'+'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'alarm1'", "'1'", "'disabled'", "'enabled'", "'SpW'", "'SpW_TC'", "'SpW_Error'", "'uart'", "'dummy'", "'in_out'", "'in'", "'out'", "'_1'", "'_2'", "'_3'", "'miliseconds'", "'seconds'", "'uint'", "'formula'", "'tm'", "'tc'", "'alarm2'", "'alarm3'", "'increment'", "'increment1wrap'", "'import'", "':='", "';'", "'GSSConfigGSSConfig'", "'{'", "'version'", "'}'", "'uri'", "'GSSScenarioScenario'", "'GSSScenarioOptions'", "'GSSScenarioProtocols'", "'GSSScenarioInterfaces'", "'ProtocolPacketsFile'", "'GSSScenarioSpecialPackets'", "'GSSScenarioPeriodicTCs'", "'GSSScenarioGlobalVars'", "'GSSScenarioMonitors'", "'ChartsFile'", "'GSSScenarioInfo'", "'test_campaign'", "'date'", "'version_control_url'", "'GSSScenarioInfoPrint'", "'mainLog'", "'portLogs'", "'rawLog'", "'GSSScenarioPhyHeaderPrint'", "'gssTabs'", "'GSSScenarioDiscardErrorFlags'", "'txErrors'", "'notExpectedPackets'", "'filtersKo'", "'validTimesKo'", "'GSSScenarioProtocol'", "'id'", "'name'", "'typeLevel'", "'GSSScenarioProtocolType'", "'offset'", "'GSSScenarioProtocolSubtype'", "'GSSScenarioMainInterface'", "'ifType'", "'ifConfig'", "'ioType'", "'protocolID'", "'GSSScenarioInterface'", "'GSSScenarioLevelInOut'", "'TMformat'", "'TCformat'", "'inputFilter'", "'export_to_prev_Level'", "'import_from_prev_Level'", "'GSSScenarioLevelIn'", "'GSSScenarioLevelOut'", "'GSSScenarioSpecialPacket'", "'status'", "'ifRef'", "'levels'", "'levelRef'", "'GSSScenarioUpperLevels'", "'GSSScenarioPrintingData'", "'printStatus'", "'GSSScenarioPeriod'", "'min_value'", "'min_unit'", "'max_value'", "'max_unit'", "'GSSScenarioIntervalRange'", "'min'", "'max'", "'interval_value'", "'interval_unit'", "'GSSScenarioUpperLevel'", "'level'", "'GSSScenarioStructuredData'", "'firstField'", "'GSSScenarioPeriodicTCLevel2'", "'period_value'", "'period_unit'", "'app_to_level2'", "'level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSScenarioPeriodicTCLevel1'", "'app_to_level1'", "'GSSScenarioPeriodicTCLevel0'", "'app_to_level0'", "'GSSScenarioGlobalVar'", "'type'", "'initial_value'", "'GSSScenarioReferenceField'", "'fieldRef'", "'size'", "'GSSScenarioReferencePeriodicTC'", "'idRef'", "'GSSScenarioReferenceSpecialPacket'", "'GSSScenarioPlot'", "'chartRef'", "'GSSScenarioAlarmMsg'", "'text'", "'GSSScenarioModify'", "'value'", "'GSSScenarioAlarmVal'", "'GSSScenarioGVFiltered'", "'GlobalVarRef'", "'filter'", "'GSSScenarioGVPeriodic'", "'GSSTestListTestList'", "'GSSTestListTestCase'", "'procedure'", "'prevMsg'", "'prevAction'", "'prevActionParam'", "'.'", "'('", "')'", "'::'", "'-'", "'/'", "'://'", "'+'"
     };
     public static final int T__144=144;
     public static final int T__143=143;
@@ -3968,23 +3968,23 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleGSSScenarioAlarmVal"
 
 
-    // $ANTLR start "entryRuleGSSScenarioGV"
-    // InternalCONFIG.g:1161:1: entryRuleGSSScenarioGV : ruleGSSScenarioGV EOF ;
-    public final void entryRuleGSSScenarioGV() throws RecognitionException {
+    // $ANTLR start "entryRuleGSSScenarioGVRef"
+    // InternalCONFIG.g:1161:1: entryRuleGSSScenarioGVRef : ruleGSSScenarioGVRef EOF ;
+    public final void entryRuleGSSScenarioGVRef() throws RecognitionException {
         try {
-            // InternalCONFIG.g:1162:1: ( ruleGSSScenarioGV EOF )
-            // InternalCONFIG.g:1163:1: ruleGSSScenarioGV EOF
+            // InternalCONFIG.g:1162:1: ( ruleGSSScenarioGVRef EOF )
+            // InternalCONFIG.g:1163:1: ruleGSSScenarioGVRef EOF
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioGVRule()); 
+               before(grammarAccess.getGSSScenarioGVRefRule()); 
             }
             pushFollow(FollowSets000.FOLLOW_1);
-            ruleGSSScenarioGV();
+            ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioGVRule()); 
+               after(grammarAccess.getGSSScenarioGVRefRule()); 
             }
             match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -3999,30 +3999,30 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleGSSScenarioGV"
+    // $ANTLR end "entryRuleGSSScenarioGVRef"
 
 
-    // $ANTLR start "ruleGSSScenarioGV"
-    // InternalCONFIG.g:1170:1: ruleGSSScenarioGV : ( ( rule__GSSScenarioGV__Alternatives ) ) ;
-    public final void ruleGSSScenarioGV() throws RecognitionException {
+    // $ANTLR start "ruleGSSScenarioGVRef"
+    // InternalCONFIG.g:1170:1: ruleGSSScenarioGVRef : ( ( rule__GSSScenarioGVRef__Alternatives ) ) ;
+    public final void ruleGSSScenarioGVRef() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:1174:2: ( ( ( rule__GSSScenarioGV__Alternatives ) ) )
-            // InternalCONFIG.g:1175:2: ( ( rule__GSSScenarioGV__Alternatives ) )
+            // InternalCONFIG.g:1174:2: ( ( ( rule__GSSScenarioGVRef__Alternatives ) ) )
+            // InternalCONFIG.g:1175:2: ( ( rule__GSSScenarioGVRef__Alternatives ) )
             {
-            // InternalCONFIG.g:1175:2: ( ( rule__GSSScenarioGV__Alternatives ) )
-            // InternalCONFIG.g:1176:3: ( rule__GSSScenarioGV__Alternatives )
+            // InternalCONFIG.g:1175:2: ( ( rule__GSSScenarioGVRef__Alternatives ) )
+            // InternalCONFIG.g:1176:3: ( rule__GSSScenarioGVRef__Alternatives )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioGVAccess().getAlternatives()); 
+               before(grammarAccess.getGSSScenarioGVRefAccess().getAlternatives()); 
             }
-            // InternalCONFIG.g:1177:3: ( rule__GSSScenarioGV__Alternatives )
-            // InternalCONFIG.g:1177:4: rule__GSSScenarioGV__Alternatives
+            // InternalCONFIG.g:1177:3: ( rule__GSSScenarioGVRef__Alternatives )
+            // InternalCONFIG.g:1177:4: rule__GSSScenarioGVRef__Alternatives
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSScenarioGV__Alternatives();
+            rule__GSSScenarioGVRef__Alternatives();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4030,7 +4030,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioGVAccess().getAlternatives()); 
+               after(grammarAccess.getGSSScenarioGVRefAccess().getAlternatives()); 
             }
 
             }
@@ -4050,7 +4050,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleGSSScenarioGV"
+    // $ANTLR end "ruleGSSScenarioGVRef"
 
 
     // $ANTLR start "entryRuleGSSScenarioGVFiltered"
@@ -4223,23 +4223,23 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleGSSScenarioGVPeriodic"
 
 
-    // $ANTLR start "entryRuleGSSConfigTests"
-    // InternalCONFIG.g:1236:1: entryRuleGSSConfigTests : ruleGSSConfigTests EOF ;
-    public final void entryRuleGSSConfigTests() throws RecognitionException {
+    // $ANTLR start "entryRuleGSSTestListTestList"
+    // InternalCONFIG.g:1236:1: entryRuleGSSTestListTestList : ruleGSSTestListTestList EOF ;
+    public final void entryRuleGSSTestListTestList() throws RecognitionException {
         try {
-            // InternalCONFIG.g:1237:1: ( ruleGSSConfigTests EOF )
-            // InternalCONFIG.g:1238:1: ruleGSSConfigTests EOF
+            // InternalCONFIG.g:1237:1: ( ruleGSSTestListTestList EOF )
+            // InternalCONFIG.g:1238:1: ruleGSSTestListTestList EOF
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestsRule()); 
+               before(grammarAccess.getGSSTestListTestListRule()); 
             }
             pushFollow(FollowSets000.FOLLOW_1);
-            ruleGSSConfigTests();
+            ruleGSSTestListTestList();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestsRule()); 
+               after(grammarAccess.getGSSTestListTestListRule()); 
             }
             match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -4254,30 +4254,30 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleGSSConfigTests"
+    // $ANTLR end "entryRuleGSSTestListTestList"
 
 
-    // $ANTLR start "ruleGSSConfigTests"
-    // InternalCONFIG.g:1245:1: ruleGSSConfigTests : ( ( rule__GSSConfigTests__Group__0 ) ) ;
-    public final void ruleGSSConfigTests() throws RecognitionException {
+    // $ANTLR start "ruleGSSTestListTestList"
+    // InternalCONFIG.g:1245:1: ruleGSSTestListTestList : ( ( rule__GSSTestListTestList__Group__0 ) ) ;
+    public final void ruleGSSTestListTestList() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:1249:2: ( ( ( rule__GSSConfigTests__Group__0 ) ) )
-            // InternalCONFIG.g:1250:2: ( ( rule__GSSConfigTests__Group__0 ) )
+            // InternalCONFIG.g:1249:2: ( ( ( rule__GSSTestListTestList__Group__0 ) ) )
+            // InternalCONFIG.g:1250:2: ( ( rule__GSSTestListTestList__Group__0 ) )
             {
-            // InternalCONFIG.g:1250:2: ( ( rule__GSSConfigTests__Group__0 ) )
-            // InternalCONFIG.g:1251:3: ( rule__GSSConfigTests__Group__0 )
+            // InternalCONFIG.g:1250:2: ( ( rule__GSSTestListTestList__Group__0 ) )
+            // InternalCONFIG.g:1251:3: ( rule__GSSTestListTestList__Group__0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestsAccess().getGroup()); 
+               before(grammarAccess.getGSSTestListTestListAccess().getGroup()); 
             }
-            // InternalCONFIG.g:1252:3: ( rule__GSSConfigTests__Group__0 )
-            // InternalCONFIG.g:1252:4: rule__GSSConfigTests__Group__0
+            // InternalCONFIG.g:1252:3: ( rule__GSSTestListTestList__Group__0 )
+            // InternalCONFIG.g:1252:4: rule__GSSTestListTestList__Group__0
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTests__Group__0();
+            rule__GSSTestListTestList__Group__0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4285,7 +4285,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestsAccess().getGroup()); 
+               after(grammarAccess.getGSSTestListTestListAccess().getGroup()); 
             }
 
             }
@@ -4305,26 +4305,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleGSSConfigTests"
+    // $ANTLR end "ruleGSSTestListTestList"
 
 
-    // $ANTLR start "entryRuleGSSConfigTestCase"
-    // InternalCONFIG.g:1261:1: entryRuleGSSConfigTestCase : ruleGSSConfigTestCase EOF ;
-    public final void entryRuleGSSConfigTestCase() throws RecognitionException {
+    // $ANTLR start "entryRuleGSSTestListTestCase"
+    // InternalCONFIG.g:1261:1: entryRuleGSSTestListTestCase : ruleGSSTestListTestCase EOF ;
+    public final void entryRuleGSSTestListTestCase() throws RecognitionException {
         try {
-            // InternalCONFIG.g:1262:1: ( ruleGSSConfigTestCase EOF )
-            // InternalCONFIG.g:1263:1: ruleGSSConfigTestCase EOF
+            // InternalCONFIG.g:1262:1: ( ruleGSSTestListTestCase EOF )
+            // InternalCONFIG.g:1263:1: ruleGSSTestListTestCase EOF
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseRule()); 
+               before(grammarAccess.getGSSTestListTestCaseRule()); 
             }
             pushFollow(FollowSets000.FOLLOW_1);
-            ruleGSSConfigTestCase();
+            ruleGSSTestListTestCase();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseRule()); 
+               after(grammarAccess.getGSSTestListTestCaseRule()); 
             }
             match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -4339,30 +4339,30 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleGSSConfigTestCase"
+    // $ANTLR end "entryRuleGSSTestListTestCase"
 
 
-    // $ANTLR start "ruleGSSConfigTestCase"
-    // InternalCONFIG.g:1270:1: ruleGSSConfigTestCase : ( ( rule__GSSConfigTestCase__Group__0 ) ) ;
-    public final void ruleGSSConfigTestCase() throws RecognitionException {
+    // $ANTLR start "ruleGSSTestListTestCase"
+    // InternalCONFIG.g:1270:1: ruleGSSTestListTestCase : ( ( rule__GSSTestListTestCase__Group__0 ) ) ;
+    public final void ruleGSSTestListTestCase() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:1274:2: ( ( ( rule__GSSConfigTestCase__Group__0 ) ) )
-            // InternalCONFIG.g:1275:2: ( ( rule__GSSConfigTestCase__Group__0 ) )
+            // InternalCONFIG.g:1274:2: ( ( ( rule__GSSTestListTestCase__Group__0 ) ) )
+            // InternalCONFIG.g:1275:2: ( ( rule__GSSTestListTestCase__Group__0 ) )
             {
-            // InternalCONFIG.g:1275:2: ( ( rule__GSSConfigTestCase__Group__0 ) )
-            // InternalCONFIG.g:1276:3: ( rule__GSSConfigTestCase__Group__0 )
+            // InternalCONFIG.g:1275:2: ( ( rule__GSSTestListTestCase__Group__0 ) )
+            // InternalCONFIG.g:1276:3: ( rule__GSSTestListTestCase__Group__0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getGroup()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getGroup()); 
             }
-            // InternalCONFIG.g:1277:3: ( rule__GSSConfigTestCase__Group__0 )
-            // InternalCONFIG.g:1277:4: rule__GSSConfigTestCase__Group__0
+            // InternalCONFIG.g:1277:3: ( rule__GSSTestListTestCase__Group__0 )
+            // InternalCONFIG.g:1277:4: rule__GSSTestListTestCase__Group__0
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__0();
+            rule__GSSTestListTestCase__Group__0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4370,7 +4370,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getGroup()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getGroup()); 
             }
 
             }
@@ -4390,7 +4390,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleGSSConfigTestCase"
+    // $ANTLR end "ruleGSSTestListTestCase"
 
 
     // $ANTLR start "entryRuleQualifiedName"
@@ -5494,31 +5494,31 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleGSSScenarioAlarmValType"
 
 
-    // $ANTLR start "ruleGSSTestProcPrevAction"
-    // InternalCONFIG.g:1621:1: ruleGSSTestProcPrevAction : ( ( 'reset' ) ) ;
-    public final void ruleGSSTestProcPrevAction() throws RecognitionException {
+    // $ANTLR start "ruleGSSTestListPrevAction"
+    // InternalCONFIG.g:1621:1: ruleGSSTestListPrevAction : ( ( '1' ) ) ;
+    public final void ruleGSSTestListPrevAction() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:1625:1: ( ( ( 'reset' ) ) )
-            // InternalCONFIG.g:1626:2: ( ( 'reset' ) )
+            // InternalCONFIG.g:1625:1: ( ( ( '1' ) ) )
+            // InternalCONFIG.g:1626:2: ( ( '1' ) )
             {
-            // InternalCONFIG.g:1626:2: ( ( 'reset' ) )
-            // InternalCONFIG.g:1627:3: ( 'reset' )
+            // InternalCONFIG.g:1626:2: ( ( '1' ) )
+            // InternalCONFIG.g:1627:3: ( '1' )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTestProcPrevActionAccess().getResetEnumLiteralDeclaration()); 
+               before(grammarAccess.getGSSTestListPrevActionAccess().getResetEnumLiteralDeclaration()); 
             }
-            // InternalCONFIG.g:1628:3: ( 'reset' )
-            // InternalCONFIG.g:1628:4: 'reset'
+            // InternalCONFIG.g:1628:3: ( '1' )
+            // InternalCONFIG.g:1628:4: '1'
             {
             match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTestProcPrevActionAccess().getResetEnumLiteralDeclaration()); 
+               after(grammarAccess.getGSSTestListPrevActionAccess().getResetEnumLiteralDeclaration()); 
             }
 
             }
@@ -5538,7 +5538,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleGSSTestProcPrevAction"
+    // $ANTLR end "ruleGSSTestListPrevAction"
 
 
     // $ANTLR start "rule__GSSScenarioInterface__Alternatives_23"
@@ -6167,9 +6167,9 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSScenarioMonitor__Alternatives"
 
 
-    // $ANTLR start "rule__GSSScenarioGV__Alternatives"
-    // InternalCONFIG.g:1771:1: rule__GSSScenarioGV__Alternatives : ( ( ruleGSSScenarioGVFiltered ) | ( ruleGSSScenarioGVPeriodic ) );
-    public final void rule__GSSScenarioGV__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__GSSScenarioGVRef__Alternatives"
+    // InternalCONFIG.g:1771:1: rule__GSSScenarioGVRef__Alternatives : ( ( ruleGSSScenarioGVFiltered ) | ( ruleGSSScenarioGVPeriodic ) );
+    public final void rule__GSSScenarioGVRef__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6199,7 +6199,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
                     // InternalCONFIG.g:1777:3: ruleGSSScenarioGVFiltered
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVFilteredParserRuleCall_0()); 
+                       before(grammarAccess.getGSSScenarioGVRefAccess().getGSSScenarioGVFilteredParserRuleCall_0()); 
                     }
                     pushFollow(FollowSets000.FOLLOW_2);
                     ruleGSSScenarioGVFiltered();
@@ -6207,7 +6207,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
                     state._fsp--;
                     if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVFilteredParserRuleCall_0()); 
+                       after(grammarAccess.getGSSScenarioGVRefAccess().getGSSScenarioGVFilteredParserRuleCall_0()); 
                     }
 
                     }
@@ -6222,7 +6222,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
                     // InternalCONFIG.g:1783:3: ruleGSSScenarioGVPeriodic
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVPeriodicParserRuleCall_1()); 
+                       before(grammarAccess.getGSSScenarioGVRefAccess().getGSSScenarioGVPeriodicParserRuleCall_1()); 
                     }
                     pushFollow(FollowSets000.FOLLOW_2);
                     ruleGSSScenarioGVPeriodic();
@@ -6230,7 +6230,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
                     state._fsp--;
                     if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVPeriodicParserRuleCall_1()); 
+                       after(grammarAccess.getGSSScenarioGVRefAccess().getGSSScenarioGVPeriodicParserRuleCall_1()); 
                     }
 
                     }
@@ -6252,7 +6252,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSScenarioGV__Alternatives"
+    // $ANTLR end "rule__GSSScenarioGVRef__Alternatives"
 
 
     // $ANTLR start "rule__Version__Alternatives_0"
@@ -65333,26 +65333,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSScenarioPlot__Group__10__Impl"
-    // InternalCONFIG.g:21115:1: rule__GSSScenarioPlot__Group__10__Impl : ( ( rule__GSSScenarioPlot__GVAssignment_10 ) ) ;
+    // InternalCONFIG.g:21115:1: rule__GSSScenarioPlot__Group__10__Impl : ( ( rule__GSSScenarioPlot__GVRefAssignment_10 ) ) ;
     public final void rule__GSSScenarioPlot__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:21119:1: ( ( ( rule__GSSScenarioPlot__GVAssignment_10 ) ) )
-            // InternalCONFIG.g:21120:1: ( ( rule__GSSScenarioPlot__GVAssignment_10 ) )
+            // InternalCONFIG.g:21119:1: ( ( ( rule__GSSScenarioPlot__GVRefAssignment_10 ) ) )
+            // InternalCONFIG.g:21120:1: ( ( rule__GSSScenarioPlot__GVRefAssignment_10 ) )
             {
-            // InternalCONFIG.g:21120:1: ( ( rule__GSSScenarioPlot__GVAssignment_10 ) )
-            // InternalCONFIG.g:21121:2: ( rule__GSSScenarioPlot__GVAssignment_10 )
+            // InternalCONFIG.g:21120:1: ( ( rule__GSSScenarioPlot__GVRefAssignment_10 ) )
+            // InternalCONFIG.g:21121:2: ( rule__GSSScenarioPlot__GVRefAssignment_10 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioPlotAccess().getGVAssignment_10()); 
+               before(grammarAccess.getGSSScenarioPlotAccess().getGVRefAssignment_10()); 
             }
-            // InternalCONFIG.g:21122:2: ( rule__GSSScenarioPlot__GVAssignment_10 )
-            // InternalCONFIG.g:21122:3: rule__GSSScenarioPlot__GVAssignment_10
+            // InternalCONFIG.g:21122:2: ( rule__GSSScenarioPlot__GVRefAssignment_10 )
+            // InternalCONFIG.g:21122:3: rule__GSSScenarioPlot__GVRefAssignment_10
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSScenarioPlot__GVAssignment_10();
+            rule__GSSScenarioPlot__GVRefAssignment_10();
 
             state._fsp--;
             if (state.failed) return ;
@@ -65360,7 +65360,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioPlotAccess().getGVAssignment_10()); 
+               after(grammarAccess.getGSSScenarioPlotAccess().getGVRefAssignment_10()); 
             }
 
             }
@@ -66711,26 +66711,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSScenarioAlarmMsg__Group__14__Impl"
-    // InternalCONFIG.g:21574:1: rule__GSSScenarioAlarmMsg__Group__14__Impl : ( ( rule__GSSScenarioAlarmMsg__GVAssignment_14 ) ) ;
+    // InternalCONFIG.g:21574:1: rule__GSSScenarioAlarmMsg__Group__14__Impl : ( ( rule__GSSScenarioAlarmMsg__GVRefAssignment_14 ) ) ;
     public final void rule__GSSScenarioAlarmMsg__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:21578:1: ( ( ( rule__GSSScenarioAlarmMsg__GVAssignment_14 ) ) )
-            // InternalCONFIG.g:21579:1: ( ( rule__GSSScenarioAlarmMsg__GVAssignment_14 ) )
+            // InternalCONFIG.g:21578:1: ( ( ( rule__GSSScenarioAlarmMsg__GVRefAssignment_14 ) ) )
+            // InternalCONFIG.g:21579:1: ( ( rule__GSSScenarioAlarmMsg__GVRefAssignment_14 ) )
             {
-            // InternalCONFIG.g:21579:1: ( ( rule__GSSScenarioAlarmMsg__GVAssignment_14 ) )
-            // InternalCONFIG.g:21580:2: ( rule__GSSScenarioAlarmMsg__GVAssignment_14 )
+            // InternalCONFIG.g:21579:1: ( ( rule__GSSScenarioAlarmMsg__GVRefAssignment_14 ) )
+            // InternalCONFIG.g:21580:2: ( rule__GSSScenarioAlarmMsg__GVRefAssignment_14 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVAssignment_14()); 
+               before(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVRefAssignment_14()); 
             }
-            // InternalCONFIG.g:21581:2: ( rule__GSSScenarioAlarmMsg__GVAssignment_14 )
-            // InternalCONFIG.g:21581:3: rule__GSSScenarioAlarmMsg__GVAssignment_14
+            // InternalCONFIG.g:21581:2: ( rule__GSSScenarioAlarmMsg__GVRefAssignment_14 )
+            // InternalCONFIG.g:21581:3: rule__GSSScenarioAlarmMsg__GVRefAssignment_14
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSScenarioAlarmMsg__GVAssignment_14();
+            rule__GSSScenarioAlarmMsg__GVRefAssignment_14();
 
             state._fsp--;
             if (state.failed) return ;
@@ -66738,7 +66738,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVAssignment_14()); 
+               after(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVRefAssignment_14()); 
             }
 
             }
@@ -68089,26 +68089,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSScenarioModify__Group__14__Impl"
-    // InternalCONFIG.g:22033:1: rule__GSSScenarioModify__Group__14__Impl : ( ( rule__GSSScenarioModify__GVAssignment_14 ) ) ;
+    // InternalCONFIG.g:22033:1: rule__GSSScenarioModify__Group__14__Impl : ( ( rule__GSSScenarioModify__GVRefAssignment_14 ) ) ;
     public final void rule__GSSScenarioModify__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:22037:1: ( ( ( rule__GSSScenarioModify__GVAssignment_14 ) ) )
-            // InternalCONFIG.g:22038:1: ( ( rule__GSSScenarioModify__GVAssignment_14 ) )
+            // InternalCONFIG.g:22037:1: ( ( ( rule__GSSScenarioModify__GVRefAssignment_14 ) ) )
+            // InternalCONFIG.g:22038:1: ( ( rule__GSSScenarioModify__GVRefAssignment_14 ) )
             {
-            // InternalCONFIG.g:22038:1: ( ( rule__GSSScenarioModify__GVAssignment_14 ) )
-            // InternalCONFIG.g:22039:2: ( rule__GSSScenarioModify__GVAssignment_14 )
+            // InternalCONFIG.g:22038:1: ( ( rule__GSSScenarioModify__GVRefAssignment_14 ) )
+            // InternalCONFIG.g:22039:2: ( rule__GSSScenarioModify__GVRefAssignment_14 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioModifyAccess().getGVAssignment_14()); 
+               before(grammarAccess.getGSSScenarioModifyAccess().getGVRefAssignment_14()); 
             }
-            // InternalCONFIG.g:22040:2: ( rule__GSSScenarioModify__GVAssignment_14 )
-            // InternalCONFIG.g:22040:3: rule__GSSScenarioModify__GVAssignment_14
+            // InternalCONFIG.g:22040:2: ( rule__GSSScenarioModify__GVRefAssignment_14 )
+            // InternalCONFIG.g:22040:3: rule__GSSScenarioModify__GVRefAssignment_14
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSScenarioModify__GVAssignment_14();
+            rule__GSSScenarioModify__GVRefAssignment_14();
 
             state._fsp--;
             if (state.failed) return ;
@@ -68116,7 +68116,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioModifyAccess().getGVAssignment_14()); 
+               after(grammarAccess.getGSSScenarioModifyAccess().getGVRefAssignment_14()); 
             }
 
             }
@@ -69141,26 +69141,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSScenarioAlarmVal__Group__10__Impl"
-    // InternalCONFIG.g:22384:1: rule__GSSScenarioAlarmVal__Group__10__Impl : ( ( rule__GSSScenarioAlarmVal__GVAssignment_10 ) ) ;
+    // InternalCONFIG.g:22384:1: rule__GSSScenarioAlarmVal__Group__10__Impl : ( ( rule__GSSScenarioAlarmVal__GVRefAssignment_10 ) ) ;
     public final void rule__GSSScenarioAlarmVal__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:22388:1: ( ( ( rule__GSSScenarioAlarmVal__GVAssignment_10 ) ) )
-            // InternalCONFIG.g:22389:1: ( ( rule__GSSScenarioAlarmVal__GVAssignment_10 ) )
+            // InternalCONFIG.g:22388:1: ( ( ( rule__GSSScenarioAlarmVal__GVRefAssignment_10 ) ) )
+            // InternalCONFIG.g:22389:1: ( ( rule__GSSScenarioAlarmVal__GVRefAssignment_10 ) )
             {
-            // InternalCONFIG.g:22389:1: ( ( rule__GSSScenarioAlarmVal__GVAssignment_10 ) )
-            // InternalCONFIG.g:22390:2: ( rule__GSSScenarioAlarmVal__GVAssignment_10 )
+            // InternalCONFIG.g:22389:1: ( ( rule__GSSScenarioAlarmVal__GVRefAssignment_10 ) )
+            // InternalCONFIG.g:22390:2: ( rule__GSSScenarioAlarmVal__GVRefAssignment_10 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioAlarmValAccess().getGVAssignment_10()); 
+               before(grammarAccess.getGSSScenarioAlarmValAccess().getGVRefAssignment_10()); 
             }
-            // InternalCONFIG.g:22391:2: ( rule__GSSScenarioAlarmVal__GVAssignment_10 )
-            // InternalCONFIG.g:22391:3: rule__GSSScenarioAlarmVal__GVAssignment_10
+            // InternalCONFIG.g:22391:2: ( rule__GSSScenarioAlarmVal__GVRefAssignment_10 )
+            // InternalCONFIG.g:22391:3: rule__GSSScenarioAlarmVal__GVRefAssignment_10
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSScenarioAlarmVal__GVAssignment_10();
+            rule__GSSScenarioAlarmVal__GVRefAssignment_10();
 
             state._fsp--;
             if (state.failed) return ;
@@ -69168,7 +69168,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioAlarmValAccess().getGVAssignment_10()); 
+               after(grammarAccess.getGSSScenarioAlarmValAccess().getGVRefAssignment_10()); 
             }
 
             }
@@ -71691,23 +71691,23 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSScenarioGVPeriodic__Group__15__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTests__Group__0"
-    // InternalCONFIG.g:23236:1: rule__GSSConfigTests__Group__0 : rule__GSSConfigTests__Group__0__Impl rule__GSSConfigTests__Group__1 ;
-    public final void rule__GSSConfigTests__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestList__Group__0"
+    // InternalCONFIG.g:23236:1: rule__GSSTestListTestList__Group__0 : rule__GSSTestListTestList__Group__0__Impl rule__GSSTestListTestList__Group__1 ;
+    public final void rule__GSSTestListTestList__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23240:1: ( rule__GSSConfigTests__Group__0__Impl rule__GSSConfigTests__Group__1 )
-            // InternalCONFIG.g:23241:2: rule__GSSConfigTests__Group__0__Impl rule__GSSConfigTests__Group__1
+            // InternalCONFIG.g:23240:1: ( rule__GSSTestListTestList__Group__0__Impl rule__GSSTestListTestList__Group__1 )
+            // InternalCONFIG.g:23241:2: rule__GSSTestListTestList__Group__0__Impl rule__GSSTestListTestList__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
-            rule__GSSConfigTests__Group__0__Impl();
+            rule__GSSTestListTestList__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTests__Group__1();
+            rule__GSSTestListTestList__Group__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -71726,28 +71726,28 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTests__Group__0"
+    // $ANTLR end "rule__GSSTestListTestList__Group__0"
 
 
-    // $ANTLR start "rule__GSSConfigTests__Group__0__Impl"
-    // InternalCONFIG.g:23248:1: rule__GSSConfigTests__Group__0__Impl : ( 'GSSScenarioTests' ) ;
-    public final void rule__GSSConfigTests__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestList__Group__0__Impl"
+    // InternalCONFIG.g:23248:1: rule__GSSTestListTestList__Group__0__Impl : ( 'GSSTestListTestList' ) ;
+    public final void rule__GSSTestListTestList__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23252:1: ( ( 'GSSScenarioTests' ) )
-            // InternalCONFIG.g:23253:1: ( 'GSSScenarioTests' )
+            // InternalCONFIG.g:23252:1: ( ( 'GSSTestListTestList' ) )
+            // InternalCONFIG.g:23253:1: ( 'GSSTestListTestList' )
             {
-            // InternalCONFIG.g:23253:1: ( 'GSSScenarioTests' )
-            // InternalCONFIG.g:23254:2: 'GSSScenarioTests'
+            // InternalCONFIG.g:23253:1: ( 'GSSTestListTestList' )
+            // InternalCONFIG.g:23254:2: 'GSSTestListTestList'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestsAccess().getGSSScenarioTestsKeyword_0()); 
+               before(grammarAccess.getGSSTestListTestListAccess().getGSSTestListTestListKeyword_0()); 
             }
             match(input,146,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestsAccess().getGSSScenarioTestsKeyword_0()); 
+               after(grammarAccess.getGSSTestListTestListAccess().getGSSTestListTestListKeyword_0()); 
             }
 
             }
@@ -71767,26 +71767,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTests__Group__0__Impl"
+    // $ANTLR end "rule__GSSTestListTestList__Group__0__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTests__Group__1"
-    // InternalCONFIG.g:23263:1: rule__GSSConfigTests__Group__1 : rule__GSSConfigTests__Group__1__Impl rule__GSSConfigTests__Group__2 ;
-    public final void rule__GSSConfigTests__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestList__Group__1"
+    // InternalCONFIG.g:23263:1: rule__GSSTestListTestList__Group__1 : rule__GSSTestListTestList__Group__1__Impl rule__GSSTestListTestList__Group__2 ;
+    public final void rule__GSSTestListTestList__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23267:1: ( rule__GSSConfigTests__Group__1__Impl rule__GSSConfigTests__Group__2 )
-            // InternalCONFIG.g:23268:2: rule__GSSConfigTests__Group__1__Impl rule__GSSConfigTests__Group__2
+            // InternalCONFIG.g:23267:1: ( rule__GSSTestListTestList__Group__1__Impl rule__GSSTestListTestList__Group__2 )
+            // InternalCONFIG.g:23268:2: rule__GSSTestListTestList__Group__1__Impl rule__GSSTestListTestList__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_120);
-            rule__GSSConfigTests__Group__1__Impl();
+            rule__GSSTestListTestList__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTests__Group__2();
+            rule__GSSTestListTestList__Group__2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -71805,12 +71805,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTests__Group__1"
+    // $ANTLR end "rule__GSSTestListTestList__Group__1"
 
 
-    // $ANTLR start "rule__GSSConfigTests__Group__1__Impl"
-    // InternalCONFIG.g:23275:1: rule__GSSConfigTests__Group__1__Impl : ( '{' ) ;
-    public final void rule__GSSConfigTests__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestList__Group__1__Impl"
+    // InternalCONFIG.g:23275:1: rule__GSSTestListTestList__Group__1__Impl : ( '{' ) ;
+    public final void rule__GSSTestListTestList__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -71822,11 +71822,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23281:2: '{'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestsAccess().getLeftCurlyBracketKeyword_1()); 
+               before(grammarAccess.getGSSTestListTestListAccess().getLeftCurlyBracketKeyword_1()); 
             }
             match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestsAccess().getLeftCurlyBracketKeyword_1()); 
+               after(grammarAccess.getGSSTestListTestListAccess().getLeftCurlyBracketKeyword_1()); 
             }
 
             }
@@ -71846,26 +71846,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTests__Group__1__Impl"
+    // $ANTLR end "rule__GSSTestListTestList__Group__1__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTests__Group__2"
-    // InternalCONFIG.g:23290:1: rule__GSSConfigTests__Group__2 : rule__GSSConfigTests__Group__2__Impl rule__GSSConfigTests__Group__3 ;
-    public final void rule__GSSConfigTests__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestList__Group__2"
+    // InternalCONFIG.g:23290:1: rule__GSSTestListTestList__Group__2 : rule__GSSTestListTestList__Group__2__Impl rule__GSSTestListTestList__Group__3 ;
+    public final void rule__GSSTestListTestList__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23294:1: ( rule__GSSConfigTests__Group__2__Impl rule__GSSConfigTests__Group__3 )
-            // InternalCONFIG.g:23295:2: rule__GSSConfigTests__Group__2__Impl rule__GSSConfigTests__Group__3
+            // InternalCONFIG.g:23294:1: ( rule__GSSTestListTestList__Group__2__Impl rule__GSSTestListTestList__Group__3 )
+            // InternalCONFIG.g:23295:2: rule__GSSTestListTestList__Group__2__Impl rule__GSSTestListTestList__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_15);
-            rule__GSSConfigTests__Group__2__Impl();
+            rule__GSSTestListTestList__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTests__Group__3();
+            rule__GSSTestListTestList__Group__3();
 
             state._fsp--;
             if (state.failed) return ;
@@ -71884,33 +71884,33 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTests__Group__2"
+    // $ANTLR end "rule__GSSTestListTestList__Group__2"
 
 
-    // $ANTLR start "rule__GSSConfigTests__Group__2__Impl"
-    // InternalCONFIG.g:23302:1: rule__GSSConfigTests__Group__2__Impl : ( ( ( rule__GSSConfigTests__TestCaseAssignment_2 ) ) ( ( rule__GSSConfigTests__TestCaseAssignment_2 )* ) ) ;
-    public final void rule__GSSConfigTests__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestList__Group__2__Impl"
+    // InternalCONFIG.g:23302:1: rule__GSSTestListTestList__Group__2__Impl : ( ( ( rule__GSSTestListTestList__TestCaseAssignment_2 ) ) ( ( rule__GSSTestListTestList__TestCaseAssignment_2 )* ) ) ;
+    public final void rule__GSSTestListTestList__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23306:1: ( ( ( ( rule__GSSConfigTests__TestCaseAssignment_2 ) ) ( ( rule__GSSConfigTests__TestCaseAssignment_2 )* ) ) )
-            // InternalCONFIG.g:23307:1: ( ( ( rule__GSSConfigTests__TestCaseAssignment_2 ) ) ( ( rule__GSSConfigTests__TestCaseAssignment_2 )* ) )
+            // InternalCONFIG.g:23306:1: ( ( ( ( rule__GSSTestListTestList__TestCaseAssignment_2 ) ) ( ( rule__GSSTestListTestList__TestCaseAssignment_2 )* ) ) )
+            // InternalCONFIG.g:23307:1: ( ( ( rule__GSSTestListTestList__TestCaseAssignment_2 ) ) ( ( rule__GSSTestListTestList__TestCaseAssignment_2 )* ) )
             {
-            // InternalCONFIG.g:23307:1: ( ( ( rule__GSSConfigTests__TestCaseAssignment_2 ) ) ( ( rule__GSSConfigTests__TestCaseAssignment_2 )* ) )
-            // InternalCONFIG.g:23308:2: ( ( rule__GSSConfigTests__TestCaseAssignment_2 ) ) ( ( rule__GSSConfigTests__TestCaseAssignment_2 )* )
+            // InternalCONFIG.g:23307:1: ( ( ( rule__GSSTestListTestList__TestCaseAssignment_2 ) ) ( ( rule__GSSTestListTestList__TestCaseAssignment_2 )* ) )
+            // InternalCONFIG.g:23308:2: ( ( rule__GSSTestListTestList__TestCaseAssignment_2 ) ) ( ( rule__GSSTestListTestList__TestCaseAssignment_2 )* )
             {
-            // InternalCONFIG.g:23308:2: ( ( rule__GSSConfigTests__TestCaseAssignment_2 ) )
-            // InternalCONFIG.g:23309:3: ( rule__GSSConfigTests__TestCaseAssignment_2 )
+            // InternalCONFIG.g:23308:2: ( ( rule__GSSTestListTestList__TestCaseAssignment_2 ) )
+            // InternalCONFIG.g:23309:3: ( rule__GSSTestListTestList__TestCaseAssignment_2 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestsAccess().getTestCaseAssignment_2()); 
+               before(grammarAccess.getGSSTestListTestListAccess().getTestCaseAssignment_2()); 
             }
-            // InternalCONFIG.g:23310:3: ( rule__GSSConfigTests__TestCaseAssignment_2 )
-            // InternalCONFIG.g:23310:4: rule__GSSConfigTests__TestCaseAssignment_2
+            // InternalCONFIG.g:23310:3: ( rule__GSSTestListTestList__TestCaseAssignment_2 )
+            // InternalCONFIG.g:23310:4: rule__GSSTestListTestList__TestCaseAssignment_2
             {
             pushFollow(FollowSets000.FOLLOW_121);
-            rule__GSSConfigTests__TestCaseAssignment_2();
+            rule__GSSTestListTestList__TestCaseAssignment_2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -71918,18 +71918,18 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestsAccess().getTestCaseAssignment_2()); 
+               after(grammarAccess.getGSSTestListTestListAccess().getTestCaseAssignment_2()); 
             }
 
             }
 
-            // InternalCONFIG.g:23313:2: ( ( rule__GSSConfigTests__TestCaseAssignment_2 )* )
-            // InternalCONFIG.g:23314:3: ( rule__GSSConfigTests__TestCaseAssignment_2 )*
+            // InternalCONFIG.g:23313:2: ( ( rule__GSSTestListTestList__TestCaseAssignment_2 )* )
+            // InternalCONFIG.g:23314:3: ( rule__GSSTestListTestList__TestCaseAssignment_2 )*
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestsAccess().getTestCaseAssignment_2()); 
+               before(grammarAccess.getGSSTestListTestListAccess().getTestCaseAssignment_2()); 
             }
-            // InternalCONFIG.g:23315:3: ( rule__GSSConfigTests__TestCaseAssignment_2 )*
+            // InternalCONFIG.g:23315:3: ( rule__GSSTestListTestList__TestCaseAssignment_2 )*
             loop58:
             do {
                 int alt58=2;
@@ -71942,10 +71942,10 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
 
                 switch (alt58) {
             	case 1 :
-            	    // InternalCONFIG.g:23315:4: rule__GSSConfigTests__TestCaseAssignment_2
+            	    // InternalCONFIG.g:23315:4: rule__GSSTestListTestList__TestCaseAssignment_2
             	    {
             	    pushFollow(FollowSets000.FOLLOW_121);
-            	    rule__GSSConfigTests__TestCaseAssignment_2();
+            	    rule__GSSTestListTestList__TestCaseAssignment_2();
 
             	    state._fsp--;
             	    if (state.failed) return ;
@@ -71959,7 +71959,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             } while (true);
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestsAccess().getTestCaseAssignment_2()); 
+               after(grammarAccess.getGSSTestListTestListAccess().getTestCaseAssignment_2()); 
             }
 
             }
@@ -71982,26 +71982,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTests__Group__2__Impl"
+    // $ANTLR end "rule__GSSTestListTestList__Group__2__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTests__Group__3"
-    // InternalCONFIG.g:23324:1: rule__GSSConfigTests__Group__3 : rule__GSSConfigTests__Group__3__Impl rule__GSSConfigTests__Group__4 ;
-    public final void rule__GSSConfigTests__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestList__Group__3"
+    // InternalCONFIG.g:23324:1: rule__GSSTestListTestList__Group__3 : rule__GSSTestListTestList__Group__3__Impl rule__GSSTestListTestList__Group__4 ;
+    public final void rule__GSSTestListTestList__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23328:1: ( rule__GSSConfigTests__Group__3__Impl rule__GSSConfigTests__Group__4 )
-            // InternalCONFIG.g:23329:2: rule__GSSConfigTests__Group__3__Impl rule__GSSConfigTests__Group__4
+            // InternalCONFIG.g:23328:1: ( rule__GSSTestListTestList__Group__3__Impl rule__GSSTestListTestList__Group__4 )
+            // InternalCONFIG.g:23329:2: rule__GSSTestListTestList__Group__3__Impl rule__GSSTestListTestList__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_7);
-            rule__GSSConfigTests__Group__3__Impl();
+            rule__GSSTestListTestList__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTests__Group__4();
+            rule__GSSTestListTestList__Group__4();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72020,12 +72020,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTests__Group__3"
+    // $ANTLR end "rule__GSSTestListTestList__Group__3"
 
 
-    // $ANTLR start "rule__GSSConfigTests__Group__3__Impl"
-    // InternalCONFIG.g:23336:1: rule__GSSConfigTests__Group__3__Impl : ( '}' ) ;
-    public final void rule__GSSConfigTests__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestList__Group__3__Impl"
+    // InternalCONFIG.g:23336:1: rule__GSSTestListTestList__Group__3__Impl : ( '}' ) ;
+    public final void rule__GSSTestListTestList__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -72037,11 +72037,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23342:2: '}'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestsAccess().getRightCurlyBracketKeyword_3()); 
+               before(grammarAccess.getGSSTestListTestListAccess().getRightCurlyBracketKeyword_3()); 
             }
             match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestsAccess().getRightCurlyBracketKeyword_3()); 
+               after(grammarAccess.getGSSTestListTestListAccess().getRightCurlyBracketKeyword_3()); 
             }
 
             }
@@ -72061,21 +72061,21 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTests__Group__3__Impl"
+    // $ANTLR end "rule__GSSTestListTestList__Group__3__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTests__Group__4"
-    // InternalCONFIG.g:23351:1: rule__GSSConfigTests__Group__4 : rule__GSSConfigTests__Group__4__Impl ;
-    public final void rule__GSSConfigTests__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestList__Group__4"
+    // InternalCONFIG.g:23351:1: rule__GSSTestListTestList__Group__4 : rule__GSSTestListTestList__Group__4__Impl ;
+    public final void rule__GSSTestListTestList__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23355:1: ( rule__GSSConfigTests__Group__4__Impl )
-            // InternalCONFIG.g:23356:2: rule__GSSConfigTests__Group__4__Impl
+            // InternalCONFIG.g:23355:1: ( rule__GSSTestListTestList__Group__4__Impl )
+            // InternalCONFIG.g:23356:2: rule__GSSTestListTestList__Group__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTests__Group__4__Impl();
+            rule__GSSTestListTestList__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72094,12 +72094,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTests__Group__4"
+    // $ANTLR end "rule__GSSTestListTestList__Group__4"
 
 
-    // $ANTLR start "rule__GSSConfigTests__Group__4__Impl"
-    // InternalCONFIG.g:23362:1: rule__GSSConfigTests__Group__4__Impl : ( ';' ) ;
-    public final void rule__GSSConfigTests__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestList__Group__4__Impl"
+    // InternalCONFIG.g:23362:1: rule__GSSTestListTestList__Group__4__Impl : ( ';' ) ;
+    public final void rule__GSSTestListTestList__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -72111,11 +72111,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23368:2: ';'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestsAccess().getSemicolonKeyword_4()); 
+               before(grammarAccess.getGSSTestListTestListAccess().getSemicolonKeyword_4()); 
             }
             match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestsAccess().getSemicolonKeyword_4()); 
+               after(grammarAccess.getGSSTestListTestListAccess().getSemicolonKeyword_4()); 
             }
 
             }
@@ -72135,26 +72135,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTests__Group__4__Impl"
+    // $ANTLR end "rule__GSSTestListTestList__Group__4__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__0"
-    // InternalCONFIG.g:23378:1: rule__GSSConfigTestCase__Group__0 : rule__GSSConfigTestCase__Group__0__Impl rule__GSSConfigTestCase__Group__1 ;
-    public final void rule__GSSConfigTestCase__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__0"
+    // InternalCONFIG.g:23378:1: rule__GSSTestListTestCase__Group__0 : rule__GSSTestListTestCase__Group__0__Impl rule__GSSTestListTestCase__Group__1 ;
+    public final void rule__GSSTestListTestCase__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23382:1: ( rule__GSSConfigTestCase__Group__0__Impl rule__GSSConfigTestCase__Group__1 )
-            // InternalCONFIG.g:23383:2: rule__GSSConfigTestCase__Group__0__Impl rule__GSSConfigTestCase__Group__1
+            // InternalCONFIG.g:23382:1: ( rule__GSSTestListTestCase__Group__0__Impl rule__GSSTestListTestCase__Group__1 )
+            // InternalCONFIG.g:23383:2: rule__GSSTestListTestCase__Group__0__Impl rule__GSSTestListTestCase__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_9);
-            rule__GSSConfigTestCase__Group__0__Impl();
+            rule__GSSTestListTestCase__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__1();
+            rule__GSSTestListTestCase__Group__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72173,28 +72173,28 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__0"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__0"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__0__Impl"
-    // InternalCONFIG.g:23390:1: rule__GSSConfigTestCase__Group__0__Impl : ( 'GSSScenarioTestCase' ) ;
-    public final void rule__GSSConfigTestCase__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__0__Impl"
+    // InternalCONFIG.g:23390:1: rule__GSSTestListTestCase__Group__0__Impl : ( 'GSSTestListTestCase' ) ;
+    public final void rule__GSSTestListTestCase__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23394:1: ( ( 'GSSScenarioTestCase' ) )
-            // InternalCONFIG.g:23395:1: ( 'GSSScenarioTestCase' )
+            // InternalCONFIG.g:23394:1: ( ( 'GSSTestListTestCase' ) )
+            // InternalCONFIG.g:23395:1: ( 'GSSTestListTestCase' )
             {
-            // InternalCONFIG.g:23395:1: ( 'GSSScenarioTestCase' )
-            // InternalCONFIG.g:23396:2: 'GSSScenarioTestCase'
+            // InternalCONFIG.g:23395:1: ( 'GSSTestListTestCase' )
+            // InternalCONFIG.g:23396:2: 'GSSTestListTestCase'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getGSSScenarioTestCaseKeyword_0()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getGSSTestListTestCaseKeyword_0()); 
             }
             match(input,147,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getGSSScenarioTestCaseKeyword_0()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getGSSTestListTestCaseKeyword_0()); 
             }
 
             }
@@ -72214,26 +72214,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__0__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__0__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__1"
-    // InternalCONFIG.g:23405:1: rule__GSSConfigTestCase__Group__1 : rule__GSSConfigTestCase__Group__1__Impl rule__GSSConfigTestCase__Group__2 ;
-    public final void rule__GSSConfigTestCase__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__1"
+    // InternalCONFIG.g:23405:1: rule__GSSTestListTestCase__Group__1 : rule__GSSTestListTestCase__Group__1__Impl rule__GSSTestListTestCase__Group__2 ;
+    public final void rule__GSSTestListTestCase__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23409:1: ( rule__GSSConfigTestCase__Group__1__Impl rule__GSSConfigTestCase__Group__2 )
-            // InternalCONFIG.g:23410:2: rule__GSSConfigTestCase__Group__1__Impl rule__GSSConfigTestCase__Group__2
+            // InternalCONFIG.g:23409:1: ( rule__GSSTestListTestCase__Group__1__Impl rule__GSSTestListTestCase__Group__2 )
+            // InternalCONFIG.g:23410:2: rule__GSSTestListTestCase__Group__1__Impl rule__GSSTestListTestCase__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_53);
-            rule__GSSConfigTestCase__Group__1__Impl();
+            rule__GSSTestListTestCase__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__2();
+            rule__GSSTestListTestCase__Group__2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72252,12 +72252,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__1"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__1"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__1__Impl"
-    // InternalCONFIG.g:23417:1: rule__GSSConfigTestCase__Group__1__Impl : ( '{' ) ;
-    public final void rule__GSSConfigTestCase__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__1__Impl"
+    // InternalCONFIG.g:23417:1: rule__GSSTestListTestCase__Group__1__Impl : ( '{' ) ;
+    public final void rule__GSSTestListTestCase__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -72269,11 +72269,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23423:2: '{'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getLeftCurlyBracketKeyword_1()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getLeftCurlyBracketKeyword_1()); 
             }
             match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getLeftCurlyBracketKeyword_1()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getLeftCurlyBracketKeyword_1()); 
             }
 
             }
@@ -72293,26 +72293,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__1__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__1__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__2"
-    // InternalCONFIG.g:23432:1: rule__GSSConfigTestCase__Group__2 : rule__GSSConfigTestCase__Group__2__Impl rule__GSSConfigTestCase__Group__3 ;
-    public final void rule__GSSConfigTestCase__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__2"
+    // InternalCONFIG.g:23432:1: rule__GSSTestListTestCase__Group__2 : rule__GSSTestListTestCase__Group__2__Impl rule__GSSTestListTestCase__Group__3 ;
+    public final void rule__GSSTestListTestCase__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23436:1: ( rule__GSSConfigTestCase__Group__2__Impl rule__GSSConfigTestCase__Group__3 )
-            // InternalCONFIG.g:23437:2: rule__GSSConfigTestCase__Group__2__Impl rule__GSSConfigTestCase__Group__3
+            // InternalCONFIG.g:23436:1: ( rule__GSSTestListTestCase__Group__2__Impl rule__GSSTestListTestCase__Group__3 )
+            // InternalCONFIG.g:23437:2: rule__GSSTestListTestCase__Group__2__Impl rule__GSSTestListTestCase__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_5);
-            rule__GSSConfigTestCase__Group__2__Impl();
+            rule__GSSTestListTestCase__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__3();
+            rule__GSSTestListTestCase__Group__3();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72331,12 +72331,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__2"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__2"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__2__Impl"
-    // InternalCONFIG.g:23444:1: rule__GSSConfigTestCase__Group__2__Impl : ( 'name' ) ;
-    public final void rule__GSSConfigTestCase__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__2__Impl"
+    // InternalCONFIG.g:23444:1: rule__GSSTestListTestCase__Group__2__Impl : ( 'name' ) ;
+    public final void rule__GSSTestListTestCase__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -72348,11 +72348,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23450:2: 'name'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getNameKeyword_2()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getNameKeyword_2()); 
             }
             match(input,72,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getNameKeyword_2()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getNameKeyword_2()); 
             }
 
             }
@@ -72372,26 +72372,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__2__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__2__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__3"
-    // InternalCONFIG.g:23459:1: rule__GSSConfigTestCase__Group__3 : rule__GSSConfigTestCase__Group__3__Impl rule__GSSConfigTestCase__Group__4 ;
-    public final void rule__GSSConfigTestCase__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__3"
+    // InternalCONFIG.g:23459:1: rule__GSSTestListTestCase__Group__3 : rule__GSSTestListTestCase__Group__3__Impl rule__GSSTestListTestCase__Group__4 ;
+    public final void rule__GSSTestListTestCase__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23463:1: ( rule__GSSConfigTestCase__Group__3__Impl rule__GSSConfigTestCase__Group__4 )
-            // InternalCONFIG.g:23464:2: rule__GSSConfigTestCase__Group__3__Impl rule__GSSConfigTestCase__Group__4
+            // InternalCONFIG.g:23463:1: ( rule__GSSTestListTestCase__Group__3__Impl rule__GSSTestListTestCase__Group__4 )
+            // InternalCONFIG.g:23464:2: rule__GSSTestListTestCase__Group__3__Impl rule__GSSTestListTestCase__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_6);
-            rule__GSSConfigTestCase__Group__3__Impl();
+            rule__GSSTestListTestCase__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__4();
+            rule__GSSTestListTestCase__Group__4();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72410,12 +72410,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__3"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__3"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__3__Impl"
-    // InternalCONFIG.g:23471:1: rule__GSSConfigTestCase__Group__3__Impl : ( ':=' ) ;
-    public final void rule__GSSConfigTestCase__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__3__Impl"
+    // InternalCONFIG.g:23471:1: rule__GSSTestListTestCase__Group__3__Impl : ( ':=' ) ;
+    public final void rule__GSSTestListTestCase__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -72427,11 +72427,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23477:2: ':='
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getColonEqualsSignKeyword_3()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getColonEqualsSignKeyword_3()); 
             }
             match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getColonEqualsSignKeyword_3()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getColonEqualsSignKeyword_3()); 
             }
 
             }
@@ -72451,26 +72451,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__3__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__3__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__4"
-    // InternalCONFIG.g:23486:1: rule__GSSConfigTestCase__Group__4 : rule__GSSConfigTestCase__Group__4__Impl rule__GSSConfigTestCase__Group__5 ;
-    public final void rule__GSSConfigTestCase__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__4"
+    // InternalCONFIG.g:23486:1: rule__GSSTestListTestCase__Group__4 : rule__GSSTestListTestCase__Group__4__Impl rule__GSSTestListTestCase__Group__5 ;
+    public final void rule__GSSTestListTestCase__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23490:1: ( rule__GSSConfigTestCase__Group__4__Impl rule__GSSConfigTestCase__Group__5 )
-            // InternalCONFIG.g:23491:2: rule__GSSConfigTestCase__Group__4__Impl rule__GSSConfigTestCase__Group__5
+            // InternalCONFIG.g:23490:1: ( rule__GSSTestListTestCase__Group__4__Impl rule__GSSTestListTestCase__Group__5 )
+            // InternalCONFIG.g:23491:2: rule__GSSTestListTestCase__Group__4__Impl rule__GSSTestListTestCase__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_7);
-            rule__GSSConfigTestCase__Group__4__Impl();
+            rule__GSSTestListTestCase__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__5();
+            rule__GSSTestListTestCase__Group__5();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72489,30 +72489,30 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__4"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__4"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__4__Impl"
-    // InternalCONFIG.g:23498:1: rule__GSSConfigTestCase__Group__4__Impl : ( ( rule__GSSConfigTestCase__NameAssignment_4 ) ) ;
-    public final void rule__GSSConfigTestCase__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__4__Impl"
+    // InternalCONFIG.g:23498:1: rule__GSSTestListTestCase__Group__4__Impl : ( ( rule__GSSTestListTestCase__NameAssignment_4 ) ) ;
+    public final void rule__GSSTestListTestCase__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23502:1: ( ( ( rule__GSSConfigTestCase__NameAssignment_4 ) ) )
-            // InternalCONFIG.g:23503:1: ( ( rule__GSSConfigTestCase__NameAssignment_4 ) )
+            // InternalCONFIG.g:23502:1: ( ( ( rule__GSSTestListTestCase__NameAssignment_4 ) ) )
+            // InternalCONFIG.g:23503:1: ( ( rule__GSSTestListTestCase__NameAssignment_4 ) )
             {
-            // InternalCONFIG.g:23503:1: ( ( rule__GSSConfigTestCase__NameAssignment_4 ) )
-            // InternalCONFIG.g:23504:2: ( rule__GSSConfigTestCase__NameAssignment_4 )
+            // InternalCONFIG.g:23503:1: ( ( rule__GSSTestListTestCase__NameAssignment_4 ) )
+            // InternalCONFIG.g:23504:2: ( rule__GSSTestListTestCase__NameAssignment_4 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getNameAssignment_4()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getNameAssignment_4()); 
             }
-            // InternalCONFIG.g:23505:2: ( rule__GSSConfigTestCase__NameAssignment_4 )
-            // InternalCONFIG.g:23505:3: rule__GSSConfigTestCase__NameAssignment_4
+            // InternalCONFIG.g:23505:2: ( rule__GSSTestListTestCase__NameAssignment_4 )
+            // InternalCONFIG.g:23505:3: rule__GSSTestListTestCase__NameAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__NameAssignment_4();
+            rule__GSSTestListTestCase__NameAssignment_4();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72520,7 +72520,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getNameAssignment_4()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getNameAssignment_4()); 
             }
 
             }
@@ -72540,26 +72540,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__4__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__4__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__5"
-    // InternalCONFIG.g:23513:1: rule__GSSConfigTestCase__Group__5 : rule__GSSConfigTestCase__Group__5__Impl rule__GSSConfigTestCase__Group__6 ;
-    public final void rule__GSSConfigTestCase__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__5"
+    // InternalCONFIG.g:23513:1: rule__GSSTestListTestCase__Group__5 : rule__GSSTestListTestCase__Group__5__Impl rule__GSSTestListTestCase__Group__6 ;
+    public final void rule__GSSTestListTestCase__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23517:1: ( rule__GSSConfigTestCase__Group__5__Impl rule__GSSConfigTestCase__Group__6 )
-            // InternalCONFIG.g:23518:2: rule__GSSConfigTestCase__Group__5__Impl rule__GSSConfigTestCase__Group__6
+            // InternalCONFIG.g:23517:1: ( rule__GSSTestListTestCase__Group__5__Impl rule__GSSTestListTestCase__Group__6 )
+            // InternalCONFIG.g:23518:2: rule__GSSTestListTestCase__Group__5__Impl rule__GSSTestListTestCase__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_122);
-            rule__GSSConfigTestCase__Group__5__Impl();
+            rule__GSSTestListTestCase__Group__5__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__6();
+            rule__GSSTestListTestCase__Group__6();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72578,12 +72578,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__5"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__5"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__5__Impl"
-    // InternalCONFIG.g:23525:1: rule__GSSConfigTestCase__Group__5__Impl : ( ';' ) ;
-    public final void rule__GSSConfigTestCase__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__5__Impl"
+    // InternalCONFIG.g:23525:1: rule__GSSTestListTestCase__Group__5__Impl : ( ';' ) ;
+    public final void rule__GSSTestListTestCase__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -72595,11 +72595,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23531:2: ';'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getSemicolonKeyword_5()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getSemicolonKeyword_5()); 
             }
             match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getSemicolonKeyword_5()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getSemicolonKeyword_5()); 
             }
 
             }
@@ -72619,26 +72619,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__5__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__5__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__6"
-    // InternalCONFIG.g:23540:1: rule__GSSConfigTestCase__Group__6 : rule__GSSConfigTestCase__Group__6__Impl rule__GSSConfigTestCase__Group__7 ;
-    public final void rule__GSSConfigTestCase__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__6"
+    // InternalCONFIG.g:23540:1: rule__GSSTestListTestCase__Group__6 : rule__GSSTestListTestCase__Group__6__Impl rule__GSSTestListTestCase__Group__7 ;
+    public final void rule__GSSTestListTestCase__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23544:1: ( rule__GSSConfigTestCase__Group__6__Impl rule__GSSConfigTestCase__Group__7 )
-            // InternalCONFIG.g:23545:2: rule__GSSConfigTestCase__Group__6__Impl rule__GSSConfigTestCase__Group__7
+            // InternalCONFIG.g:23544:1: ( rule__GSSTestListTestCase__Group__6__Impl rule__GSSTestListTestCase__Group__7 )
+            // InternalCONFIG.g:23545:2: rule__GSSTestListTestCase__Group__6__Impl rule__GSSTestListTestCase__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_5);
-            rule__GSSConfigTestCase__Group__6__Impl();
+            rule__GSSTestListTestCase__Group__6__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__7();
+            rule__GSSTestListTestCase__Group__7();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72657,12 +72657,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__6"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__6"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__6__Impl"
-    // InternalCONFIG.g:23552:1: rule__GSSConfigTestCase__Group__6__Impl : ( 'procedure' ) ;
-    public final void rule__GSSConfigTestCase__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__6__Impl"
+    // InternalCONFIG.g:23552:1: rule__GSSTestListTestCase__Group__6__Impl : ( 'procedure' ) ;
+    public final void rule__GSSTestListTestCase__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -72674,11 +72674,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23558:2: 'procedure'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getProcedureKeyword_6()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getProcedureKeyword_6()); 
             }
             match(input,148,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getProcedureKeyword_6()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getProcedureKeyword_6()); 
             }
 
             }
@@ -72698,26 +72698,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__6__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__6__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__7"
-    // InternalCONFIG.g:23567:1: rule__GSSConfigTestCase__Group__7 : rule__GSSConfigTestCase__Group__7__Impl rule__GSSConfigTestCase__Group__8 ;
-    public final void rule__GSSConfigTestCase__Group__7() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__7"
+    // InternalCONFIG.g:23567:1: rule__GSSTestListTestCase__Group__7 : rule__GSSTestListTestCase__Group__7__Impl rule__GSSTestListTestCase__Group__8 ;
+    public final void rule__GSSTestListTestCase__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23571:1: ( rule__GSSConfigTestCase__Group__7__Impl rule__GSSConfigTestCase__Group__8 )
-            // InternalCONFIG.g:23572:2: rule__GSSConfigTestCase__Group__7__Impl rule__GSSConfigTestCase__Group__8
+            // InternalCONFIG.g:23571:1: ( rule__GSSTestListTestCase__Group__7__Impl rule__GSSTestListTestCase__Group__8 )
+            // InternalCONFIG.g:23572:2: rule__GSSTestListTestCase__Group__7__Impl rule__GSSTestListTestCase__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_8);
-            rule__GSSConfigTestCase__Group__7__Impl();
+            rule__GSSTestListTestCase__Group__7__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__8();
+            rule__GSSTestListTestCase__Group__8();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72736,12 +72736,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__7"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__7"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__7__Impl"
-    // InternalCONFIG.g:23579:1: rule__GSSConfigTestCase__Group__7__Impl : ( ':=' ) ;
-    public final void rule__GSSConfigTestCase__Group__7__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__7__Impl"
+    // InternalCONFIG.g:23579:1: rule__GSSTestListTestCase__Group__7__Impl : ( ':=' ) ;
+    public final void rule__GSSTestListTestCase__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -72753,11 +72753,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23585:2: ':='
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getColonEqualsSignKeyword_7()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getColonEqualsSignKeyword_7()); 
             }
             match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getColonEqualsSignKeyword_7()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getColonEqualsSignKeyword_7()); 
             }
 
             }
@@ -72777,26 +72777,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__7__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__7__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__8"
-    // InternalCONFIG.g:23594:1: rule__GSSConfigTestCase__Group__8 : rule__GSSConfigTestCase__Group__8__Impl rule__GSSConfigTestCase__Group__9 ;
-    public final void rule__GSSConfigTestCase__Group__8() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__8"
+    // InternalCONFIG.g:23594:1: rule__GSSTestListTestCase__Group__8 : rule__GSSTestListTestCase__Group__8__Impl rule__GSSTestListTestCase__Group__9 ;
+    public final void rule__GSSTestListTestCase__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23598:1: ( rule__GSSConfigTestCase__Group__8__Impl rule__GSSConfigTestCase__Group__9 )
-            // InternalCONFIG.g:23599:2: rule__GSSConfigTestCase__Group__8__Impl rule__GSSConfigTestCase__Group__9
+            // InternalCONFIG.g:23598:1: ( rule__GSSTestListTestCase__Group__8__Impl rule__GSSTestListTestCase__Group__9 )
+            // InternalCONFIG.g:23599:2: rule__GSSTestListTestCase__Group__8__Impl rule__GSSTestListTestCase__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_7);
-            rule__GSSConfigTestCase__Group__8__Impl();
+            rule__GSSTestListTestCase__Group__8__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__9();
+            rule__GSSTestListTestCase__Group__9();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72815,30 +72815,30 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__8"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__8"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__8__Impl"
-    // InternalCONFIG.g:23606:1: rule__GSSConfigTestCase__Group__8__Impl : ( ( rule__GSSConfigTestCase__ProcedureAssignment_8 ) ) ;
-    public final void rule__GSSConfigTestCase__Group__8__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__8__Impl"
+    // InternalCONFIG.g:23606:1: rule__GSSTestListTestCase__Group__8__Impl : ( ( rule__GSSTestListTestCase__ProcedureAssignment_8 ) ) ;
+    public final void rule__GSSTestListTestCase__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23610:1: ( ( ( rule__GSSConfigTestCase__ProcedureAssignment_8 ) ) )
-            // InternalCONFIG.g:23611:1: ( ( rule__GSSConfigTestCase__ProcedureAssignment_8 ) )
+            // InternalCONFIG.g:23610:1: ( ( ( rule__GSSTestListTestCase__ProcedureAssignment_8 ) ) )
+            // InternalCONFIG.g:23611:1: ( ( rule__GSSTestListTestCase__ProcedureAssignment_8 ) )
             {
-            // InternalCONFIG.g:23611:1: ( ( rule__GSSConfigTestCase__ProcedureAssignment_8 ) )
-            // InternalCONFIG.g:23612:2: ( rule__GSSConfigTestCase__ProcedureAssignment_8 )
+            // InternalCONFIG.g:23611:1: ( ( rule__GSSTestListTestCase__ProcedureAssignment_8 ) )
+            // InternalCONFIG.g:23612:2: ( rule__GSSTestListTestCase__ProcedureAssignment_8 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getProcedureAssignment_8()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getProcedureAssignment_8()); 
             }
-            // InternalCONFIG.g:23613:2: ( rule__GSSConfigTestCase__ProcedureAssignment_8 )
-            // InternalCONFIG.g:23613:3: rule__GSSConfigTestCase__ProcedureAssignment_8
+            // InternalCONFIG.g:23613:2: ( rule__GSSTestListTestCase__ProcedureAssignment_8 )
+            // InternalCONFIG.g:23613:3: rule__GSSTestListTestCase__ProcedureAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__ProcedureAssignment_8();
+            rule__GSSTestListTestCase__ProcedureAssignment_8();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72846,7 +72846,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getProcedureAssignment_8()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getProcedureAssignment_8()); 
             }
 
             }
@@ -72866,26 +72866,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__8__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__8__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__9"
-    // InternalCONFIG.g:23621:1: rule__GSSConfigTestCase__Group__9 : rule__GSSConfigTestCase__Group__9__Impl rule__GSSConfigTestCase__Group__10 ;
-    public final void rule__GSSConfigTestCase__Group__9() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__9"
+    // InternalCONFIG.g:23621:1: rule__GSSTestListTestCase__Group__9 : rule__GSSTestListTestCase__Group__9__Impl rule__GSSTestListTestCase__Group__10 ;
+    public final void rule__GSSTestListTestCase__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23625:1: ( rule__GSSConfigTestCase__Group__9__Impl rule__GSSConfigTestCase__Group__10 )
-            // InternalCONFIG.g:23626:2: rule__GSSConfigTestCase__Group__9__Impl rule__GSSConfigTestCase__Group__10
+            // InternalCONFIG.g:23625:1: ( rule__GSSTestListTestCase__Group__9__Impl rule__GSSTestListTestCase__Group__10 )
+            // InternalCONFIG.g:23626:2: rule__GSSTestListTestCase__Group__9__Impl rule__GSSTestListTestCase__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_123);
-            rule__GSSConfigTestCase__Group__9__Impl();
+            rule__GSSTestListTestCase__Group__9__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__10();
+            rule__GSSTestListTestCase__Group__10();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72904,12 +72904,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__9"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__9"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__9__Impl"
-    // InternalCONFIG.g:23633:1: rule__GSSConfigTestCase__Group__9__Impl : ( ';' ) ;
-    public final void rule__GSSConfigTestCase__Group__9__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__9__Impl"
+    // InternalCONFIG.g:23633:1: rule__GSSTestListTestCase__Group__9__Impl : ( ';' ) ;
+    public final void rule__GSSTestListTestCase__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -72921,11 +72921,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23639:2: ';'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getSemicolonKeyword_9()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getSemicolonKeyword_9()); 
             }
             match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getSemicolonKeyword_9()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getSemicolonKeyword_9()); 
             }
 
             }
@@ -72945,26 +72945,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__9__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__9__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__10"
-    // InternalCONFIG.g:23648:1: rule__GSSConfigTestCase__Group__10 : rule__GSSConfigTestCase__Group__10__Impl rule__GSSConfigTestCase__Group__11 ;
-    public final void rule__GSSConfigTestCase__Group__10() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__10"
+    // InternalCONFIG.g:23648:1: rule__GSSTestListTestCase__Group__10 : rule__GSSTestListTestCase__Group__10__Impl rule__GSSTestListTestCase__Group__11 ;
+    public final void rule__GSSTestListTestCase__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23652:1: ( rule__GSSConfigTestCase__Group__10__Impl rule__GSSConfigTestCase__Group__11 )
-            // InternalCONFIG.g:23653:2: rule__GSSConfigTestCase__Group__10__Impl rule__GSSConfigTestCase__Group__11
+            // InternalCONFIG.g:23652:1: ( rule__GSSTestListTestCase__Group__10__Impl rule__GSSTestListTestCase__Group__11 )
+            // InternalCONFIG.g:23653:2: rule__GSSTestListTestCase__Group__10__Impl rule__GSSTestListTestCase__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_123);
-            rule__GSSConfigTestCase__Group__10__Impl();
+            rule__GSSTestListTestCase__Group__10__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__11();
+            rule__GSSTestListTestCase__Group__11();
 
             state._fsp--;
             if (state.failed) return ;
@@ -72983,26 +72983,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__10"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__10"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__10__Impl"
-    // InternalCONFIG.g:23660:1: rule__GSSConfigTestCase__Group__10__Impl : ( ( rule__GSSConfigTestCase__Group_10__0 )? ) ;
-    public final void rule__GSSConfigTestCase__Group__10__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__10__Impl"
+    // InternalCONFIG.g:23660:1: rule__GSSTestListTestCase__Group__10__Impl : ( ( rule__GSSTestListTestCase__Group_10__0 )? ) ;
+    public final void rule__GSSTestListTestCase__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23664:1: ( ( ( rule__GSSConfigTestCase__Group_10__0 )? ) )
-            // InternalCONFIG.g:23665:1: ( ( rule__GSSConfigTestCase__Group_10__0 )? )
+            // InternalCONFIG.g:23664:1: ( ( ( rule__GSSTestListTestCase__Group_10__0 )? ) )
+            // InternalCONFIG.g:23665:1: ( ( rule__GSSTestListTestCase__Group_10__0 )? )
             {
-            // InternalCONFIG.g:23665:1: ( ( rule__GSSConfigTestCase__Group_10__0 )? )
-            // InternalCONFIG.g:23666:2: ( rule__GSSConfigTestCase__Group_10__0 )?
+            // InternalCONFIG.g:23665:1: ( ( rule__GSSTestListTestCase__Group_10__0 )? )
+            // InternalCONFIG.g:23666:2: ( rule__GSSTestListTestCase__Group_10__0 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getGroup_10()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getGroup_10()); 
             }
-            // InternalCONFIG.g:23667:2: ( rule__GSSConfigTestCase__Group_10__0 )?
+            // InternalCONFIG.g:23667:2: ( rule__GSSTestListTestCase__Group_10__0 )?
             int alt59=2;
             int LA59_0 = input.LA(1);
 
@@ -73011,10 +73011,10 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
             switch (alt59) {
                 case 1 :
-                    // InternalCONFIG.g:23667:3: rule__GSSConfigTestCase__Group_10__0
+                    // InternalCONFIG.g:23667:3: rule__GSSTestListTestCase__Group_10__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
-                    rule__GSSConfigTestCase__Group_10__0();
+                    rule__GSSTestListTestCase__Group_10__0();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -73025,7 +73025,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getGroup_10()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getGroup_10()); 
             }
 
             }
@@ -73045,26 +73045,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__10__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__10__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__11"
-    // InternalCONFIG.g:23675:1: rule__GSSConfigTestCase__Group__11 : rule__GSSConfigTestCase__Group__11__Impl rule__GSSConfigTestCase__Group__12 ;
-    public final void rule__GSSConfigTestCase__Group__11() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__11"
+    // InternalCONFIG.g:23675:1: rule__GSSTestListTestCase__Group__11 : rule__GSSTestListTestCase__Group__11__Impl rule__GSSTestListTestCase__Group__12 ;
+    public final void rule__GSSTestListTestCase__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23679:1: ( rule__GSSConfigTestCase__Group__11__Impl rule__GSSConfigTestCase__Group__12 )
-            // InternalCONFIG.g:23680:2: rule__GSSConfigTestCase__Group__11__Impl rule__GSSConfigTestCase__Group__12
+            // InternalCONFIG.g:23679:1: ( rule__GSSTestListTestCase__Group__11__Impl rule__GSSTestListTestCase__Group__12 )
+            // InternalCONFIG.g:23680:2: rule__GSSTestListTestCase__Group__11__Impl rule__GSSTestListTestCase__Group__12
             {
             pushFollow(FollowSets000.FOLLOW_123);
-            rule__GSSConfigTestCase__Group__11__Impl();
+            rule__GSSTestListTestCase__Group__11__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__12();
+            rule__GSSTestListTestCase__Group__12();
 
             state._fsp--;
             if (state.failed) return ;
@@ -73083,26 +73083,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__11"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__11"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__11__Impl"
-    // InternalCONFIG.g:23687:1: rule__GSSConfigTestCase__Group__11__Impl : ( ( rule__GSSConfigTestCase__Group_11__0 )? ) ;
-    public final void rule__GSSConfigTestCase__Group__11__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__11__Impl"
+    // InternalCONFIG.g:23687:1: rule__GSSTestListTestCase__Group__11__Impl : ( ( rule__GSSTestListTestCase__Group_11__0 )? ) ;
+    public final void rule__GSSTestListTestCase__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23691:1: ( ( ( rule__GSSConfigTestCase__Group_11__0 )? ) )
-            // InternalCONFIG.g:23692:1: ( ( rule__GSSConfigTestCase__Group_11__0 )? )
+            // InternalCONFIG.g:23691:1: ( ( ( rule__GSSTestListTestCase__Group_11__0 )? ) )
+            // InternalCONFIG.g:23692:1: ( ( rule__GSSTestListTestCase__Group_11__0 )? )
             {
-            // InternalCONFIG.g:23692:1: ( ( rule__GSSConfigTestCase__Group_11__0 )? )
-            // InternalCONFIG.g:23693:2: ( rule__GSSConfigTestCase__Group_11__0 )?
+            // InternalCONFIG.g:23692:1: ( ( rule__GSSTestListTestCase__Group_11__0 )? )
+            // InternalCONFIG.g:23693:2: ( rule__GSSTestListTestCase__Group_11__0 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getGroup_11()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getGroup_11()); 
             }
-            // InternalCONFIG.g:23694:2: ( rule__GSSConfigTestCase__Group_11__0 )?
+            // InternalCONFIG.g:23694:2: ( rule__GSSTestListTestCase__Group_11__0 )?
             int alt60=2;
             int LA60_0 = input.LA(1);
 
@@ -73111,10 +73111,10 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
             switch (alt60) {
                 case 1 :
-                    // InternalCONFIG.g:23694:3: rule__GSSConfigTestCase__Group_11__0
+                    // InternalCONFIG.g:23694:3: rule__GSSTestListTestCase__Group_11__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
-                    rule__GSSConfigTestCase__Group_11__0();
+                    rule__GSSTestListTestCase__Group_11__0();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -73125,7 +73125,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getGroup_11()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getGroup_11()); 
             }
 
             }
@@ -73145,26 +73145,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__11__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__11__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__12"
-    // InternalCONFIG.g:23702:1: rule__GSSConfigTestCase__Group__12 : rule__GSSConfigTestCase__Group__12__Impl rule__GSSConfigTestCase__Group__13 ;
-    public final void rule__GSSConfigTestCase__Group__12() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__12"
+    // InternalCONFIG.g:23702:1: rule__GSSTestListTestCase__Group__12 : rule__GSSTestListTestCase__Group__12__Impl rule__GSSTestListTestCase__Group__13 ;
+    public final void rule__GSSTestListTestCase__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23706:1: ( rule__GSSConfigTestCase__Group__12__Impl rule__GSSConfigTestCase__Group__13 )
-            // InternalCONFIG.g:23707:2: rule__GSSConfigTestCase__Group__12__Impl rule__GSSConfigTestCase__Group__13
+            // InternalCONFIG.g:23706:1: ( rule__GSSTestListTestCase__Group__12__Impl rule__GSSTestListTestCase__Group__13 )
+            // InternalCONFIG.g:23707:2: rule__GSSTestListTestCase__Group__12__Impl rule__GSSTestListTestCase__Group__13
             {
             pushFollow(FollowSets000.FOLLOW_7);
-            rule__GSSConfigTestCase__Group__12__Impl();
+            rule__GSSTestListTestCase__Group__12__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__13();
+            rule__GSSTestListTestCase__Group__13();
 
             state._fsp--;
             if (state.failed) return ;
@@ -73183,12 +73183,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__12"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__12"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__12__Impl"
-    // InternalCONFIG.g:23714:1: rule__GSSConfigTestCase__Group__12__Impl : ( '}' ) ;
-    public final void rule__GSSConfigTestCase__Group__12__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__12__Impl"
+    // InternalCONFIG.g:23714:1: rule__GSSTestListTestCase__Group__12__Impl : ( '}' ) ;
+    public final void rule__GSSTestListTestCase__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -73200,11 +73200,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23720:2: '}'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getRightCurlyBracketKeyword_12()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getRightCurlyBracketKeyword_12()); 
             }
             match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getRightCurlyBracketKeyword_12()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getRightCurlyBracketKeyword_12()); 
             }
 
             }
@@ -73224,21 +73224,21 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__12__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__12__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__13"
-    // InternalCONFIG.g:23729:1: rule__GSSConfigTestCase__Group__13 : rule__GSSConfigTestCase__Group__13__Impl ;
-    public final void rule__GSSConfigTestCase__Group__13() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__13"
+    // InternalCONFIG.g:23729:1: rule__GSSTestListTestCase__Group__13 : rule__GSSTestListTestCase__Group__13__Impl ;
+    public final void rule__GSSTestListTestCase__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23733:1: ( rule__GSSConfigTestCase__Group__13__Impl )
-            // InternalCONFIG.g:23734:2: rule__GSSConfigTestCase__Group__13__Impl
+            // InternalCONFIG.g:23733:1: ( rule__GSSTestListTestCase__Group__13__Impl )
+            // InternalCONFIG.g:23734:2: rule__GSSTestListTestCase__Group__13__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group__13__Impl();
+            rule__GSSTestListTestCase__Group__13__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -73257,12 +73257,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__13"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__13"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group__13__Impl"
-    // InternalCONFIG.g:23740:1: rule__GSSConfigTestCase__Group__13__Impl : ( ';' ) ;
-    public final void rule__GSSConfigTestCase__Group__13__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group__13__Impl"
+    // InternalCONFIG.g:23740:1: rule__GSSTestListTestCase__Group__13__Impl : ( ';' ) ;
+    public final void rule__GSSTestListTestCase__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -73274,11 +73274,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23746:2: ';'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getSemicolonKeyword_13()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getSemicolonKeyword_13()); 
             }
             match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getSemicolonKeyword_13()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getSemicolonKeyword_13()); 
             }
 
             }
@@ -73298,26 +73298,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group__13__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group__13__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group_10__0"
-    // InternalCONFIG.g:23756:1: rule__GSSConfigTestCase__Group_10__0 : rule__GSSConfigTestCase__Group_10__0__Impl rule__GSSConfigTestCase__Group_10__1 ;
-    public final void rule__GSSConfigTestCase__Group_10__0() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group_10__0"
+    // InternalCONFIG.g:23756:1: rule__GSSTestListTestCase__Group_10__0 : rule__GSSTestListTestCase__Group_10__0__Impl rule__GSSTestListTestCase__Group_10__1 ;
+    public final void rule__GSSTestListTestCase__Group_10__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23760:1: ( rule__GSSConfigTestCase__Group_10__0__Impl rule__GSSConfigTestCase__Group_10__1 )
-            // InternalCONFIG.g:23761:2: rule__GSSConfigTestCase__Group_10__0__Impl rule__GSSConfigTestCase__Group_10__1
+            // InternalCONFIG.g:23760:1: ( rule__GSSTestListTestCase__Group_10__0__Impl rule__GSSTestListTestCase__Group_10__1 )
+            // InternalCONFIG.g:23761:2: rule__GSSTestListTestCase__Group_10__0__Impl rule__GSSTestListTestCase__Group_10__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
-            rule__GSSConfigTestCase__Group_10__0__Impl();
+            rule__GSSTestListTestCase__Group_10__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group_10__1();
+            rule__GSSTestListTestCase__Group_10__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -73336,12 +73336,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group_10__0"
+    // $ANTLR end "rule__GSSTestListTestCase__Group_10__0"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group_10__0__Impl"
-    // InternalCONFIG.g:23768:1: rule__GSSConfigTestCase__Group_10__0__Impl : ( 'prevMsg' ) ;
-    public final void rule__GSSConfigTestCase__Group_10__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group_10__0__Impl"
+    // InternalCONFIG.g:23768:1: rule__GSSTestListTestCase__Group_10__0__Impl : ( 'prevMsg' ) ;
+    public final void rule__GSSTestListTestCase__Group_10__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -73353,11 +73353,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23774:2: 'prevMsg'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgKeyword_10_0()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getPrevMsgKeyword_10_0()); 
             }
             match(input,149,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgKeyword_10_0()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getPrevMsgKeyword_10_0()); 
             }
 
             }
@@ -73377,21 +73377,21 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group_10__0__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group_10__0__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group_10__1"
-    // InternalCONFIG.g:23783:1: rule__GSSConfigTestCase__Group_10__1 : rule__GSSConfigTestCase__Group_10__1__Impl ;
-    public final void rule__GSSConfigTestCase__Group_10__1() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group_10__1"
+    // InternalCONFIG.g:23783:1: rule__GSSTestListTestCase__Group_10__1 : rule__GSSTestListTestCase__Group_10__1__Impl ;
+    public final void rule__GSSTestListTestCase__Group_10__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23787:1: ( rule__GSSConfigTestCase__Group_10__1__Impl )
-            // InternalCONFIG.g:23788:2: rule__GSSConfigTestCase__Group_10__1__Impl
+            // InternalCONFIG.g:23787:1: ( rule__GSSTestListTestCase__Group_10__1__Impl )
+            // InternalCONFIG.g:23788:2: rule__GSSTestListTestCase__Group_10__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group_10__1__Impl();
+            rule__GSSTestListTestCase__Group_10__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -73410,30 +73410,30 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group_10__1"
+    // $ANTLR end "rule__GSSTestListTestCase__Group_10__1"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group_10__1__Impl"
-    // InternalCONFIG.g:23794:1: rule__GSSConfigTestCase__Group_10__1__Impl : ( ( rule__GSSConfigTestCase__PrevMsgAssignment_10_1 ) ) ;
-    public final void rule__GSSConfigTestCase__Group_10__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group_10__1__Impl"
+    // InternalCONFIG.g:23794:1: rule__GSSTestListTestCase__Group_10__1__Impl : ( ( rule__GSSTestListTestCase__PrevMsgAssignment_10_1 ) ) ;
+    public final void rule__GSSTestListTestCase__Group_10__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23798:1: ( ( ( rule__GSSConfigTestCase__PrevMsgAssignment_10_1 ) ) )
-            // InternalCONFIG.g:23799:1: ( ( rule__GSSConfigTestCase__PrevMsgAssignment_10_1 ) )
+            // InternalCONFIG.g:23798:1: ( ( ( rule__GSSTestListTestCase__PrevMsgAssignment_10_1 ) ) )
+            // InternalCONFIG.g:23799:1: ( ( rule__GSSTestListTestCase__PrevMsgAssignment_10_1 ) )
             {
-            // InternalCONFIG.g:23799:1: ( ( rule__GSSConfigTestCase__PrevMsgAssignment_10_1 ) )
-            // InternalCONFIG.g:23800:2: ( rule__GSSConfigTestCase__PrevMsgAssignment_10_1 )
+            // InternalCONFIG.g:23799:1: ( ( rule__GSSTestListTestCase__PrevMsgAssignment_10_1 ) )
+            // InternalCONFIG.g:23800:2: ( rule__GSSTestListTestCase__PrevMsgAssignment_10_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgAssignment_10_1()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getPrevMsgAssignment_10_1()); 
             }
-            // InternalCONFIG.g:23801:2: ( rule__GSSConfigTestCase__PrevMsgAssignment_10_1 )
-            // InternalCONFIG.g:23801:3: rule__GSSConfigTestCase__PrevMsgAssignment_10_1
+            // InternalCONFIG.g:23801:2: ( rule__GSSTestListTestCase__PrevMsgAssignment_10_1 )
+            // InternalCONFIG.g:23801:3: rule__GSSTestListTestCase__PrevMsgAssignment_10_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__PrevMsgAssignment_10_1();
+            rule__GSSTestListTestCase__PrevMsgAssignment_10_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -73441,7 +73441,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgAssignment_10_1()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getPrevMsgAssignment_10_1()); 
             }
 
             }
@@ -73461,26 +73461,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group_10__1__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group_10__1__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group_11__0"
-    // InternalCONFIG.g:23810:1: rule__GSSConfigTestCase__Group_11__0 : rule__GSSConfigTestCase__Group_11__0__Impl rule__GSSConfigTestCase__Group_11__1 ;
-    public final void rule__GSSConfigTestCase__Group_11__0() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group_11__0"
+    // InternalCONFIG.g:23810:1: rule__GSSTestListTestCase__Group_11__0 : rule__GSSTestListTestCase__Group_11__0__Impl rule__GSSTestListTestCase__Group_11__1 ;
+    public final void rule__GSSTestListTestCase__Group_11__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23814:1: ( rule__GSSConfigTestCase__Group_11__0__Impl rule__GSSConfigTestCase__Group_11__1 )
-            // InternalCONFIG.g:23815:2: rule__GSSConfigTestCase__Group_11__0__Impl rule__GSSConfigTestCase__Group_11__1
+            // InternalCONFIG.g:23814:1: ( rule__GSSTestListTestCase__Group_11__0__Impl rule__GSSTestListTestCase__Group_11__1 )
+            // InternalCONFIG.g:23815:2: rule__GSSTestListTestCase__Group_11__0__Impl rule__GSSTestListTestCase__Group_11__1
             {
             pushFollow(FollowSets000.FOLLOW_124);
-            rule__GSSConfigTestCase__Group_11__0__Impl();
+            rule__GSSTestListTestCase__Group_11__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group_11__1();
+            rule__GSSTestListTestCase__Group_11__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -73499,12 +73499,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group_11__0"
+    // $ANTLR end "rule__GSSTestListTestCase__Group_11__0"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group_11__0__Impl"
-    // InternalCONFIG.g:23822:1: rule__GSSConfigTestCase__Group_11__0__Impl : ( 'prevAction' ) ;
-    public final void rule__GSSConfigTestCase__Group_11__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group_11__0__Impl"
+    // InternalCONFIG.g:23822:1: rule__GSSTestListTestCase__Group_11__0__Impl : ( 'prevAction' ) ;
+    public final void rule__GSSTestListTestCase__Group_11__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -73516,11 +73516,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23828:2: 'prevAction'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionKeyword_11_0()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getPrevActionKeyword_11_0()); 
             }
             match(input,150,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionKeyword_11_0()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getPrevActionKeyword_11_0()); 
             }
 
             }
@@ -73540,26 +73540,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group_11__0__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group_11__0__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group_11__1"
-    // InternalCONFIG.g:23837:1: rule__GSSConfigTestCase__Group_11__1 : rule__GSSConfigTestCase__Group_11__1__Impl rule__GSSConfigTestCase__Group_11__2 ;
-    public final void rule__GSSConfigTestCase__Group_11__1() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group_11__1"
+    // InternalCONFIG.g:23837:1: rule__GSSTestListTestCase__Group_11__1 : rule__GSSTestListTestCase__Group_11__1__Impl rule__GSSTestListTestCase__Group_11__2 ;
+    public final void rule__GSSTestListTestCase__Group_11__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23841:1: ( rule__GSSConfigTestCase__Group_11__1__Impl rule__GSSConfigTestCase__Group_11__2 )
-            // InternalCONFIG.g:23842:2: rule__GSSConfigTestCase__Group_11__1__Impl rule__GSSConfigTestCase__Group_11__2
+            // InternalCONFIG.g:23841:1: ( rule__GSSTestListTestCase__Group_11__1__Impl rule__GSSTestListTestCase__Group_11__2 )
+            // InternalCONFIG.g:23842:2: rule__GSSTestListTestCase__Group_11__1__Impl rule__GSSTestListTestCase__Group_11__2
             {
             pushFollow(FollowSets000.FOLLOW_125);
-            rule__GSSConfigTestCase__Group_11__1__Impl();
+            rule__GSSTestListTestCase__Group_11__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group_11__2();
+            rule__GSSTestListTestCase__Group_11__2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -73578,30 +73578,30 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group_11__1"
+    // $ANTLR end "rule__GSSTestListTestCase__Group_11__1"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group_11__1__Impl"
-    // InternalCONFIG.g:23849:1: rule__GSSConfigTestCase__Group_11__1__Impl : ( ( rule__GSSConfigTestCase__PrevActionAssignment_11_1 ) ) ;
-    public final void rule__GSSConfigTestCase__Group_11__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group_11__1__Impl"
+    // InternalCONFIG.g:23849:1: rule__GSSTestListTestCase__Group_11__1__Impl : ( ( rule__GSSTestListTestCase__PrevActionAssignment_11_1 ) ) ;
+    public final void rule__GSSTestListTestCase__Group_11__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23853:1: ( ( ( rule__GSSConfigTestCase__PrevActionAssignment_11_1 ) ) )
-            // InternalCONFIG.g:23854:1: ( ( rule__GSSConfigTestCase__PrevActionAssignment_11_1 ) )
+            // InternalCONFIG.g:23853:1: ( ( ( rule__GSSTestListTestCase__PrevActionAssignment_11_1 ) ) )
+            // InternalCONFIG.g:23854:1: ( ( rule__GSSTestListTestCase__PrevActionAssignment_11_1 ) )
             {
-            // InternalCONFIG.g:23854:1: ( ( rule__GSSConfigTestCase__PrevActionAssignment_11_1 ) )
-            // InternalCONFIG.g:23855:2: ( rule__GSSConfigTestCase__PrevActionAssignment_11_1 )
+            // InternalCONFIG.g:23854:1: ( ( rule__GSSTestListTestCase__PrevActionAssignment_11_1 ) )
+            // InternalCONFIG.g:23855:2: ( rule__GSSTestListTestCase__PrevActionAssignment_11_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionAssignment_11_1()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getPrevActionAssignment_11_1()); 
             }
-            // InternalCONFIG.g:23856:2: ( rule__GSSConfigTestCase__PrevActionAssignment_11_1 )
-            // InternalCONFIG.g:23856:3: rule__GSSConfigTestCase__PrevActionAssignment_11_1
+            // InternalCONFIG.g:23856:2: ( rule__GSSTestListTestCase__PrevActionAssignment_11_1 )
+            // InternalCONFIG.g:23856:3: rule__GSSTestListTestCase__PrevActionAssignment_11_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__PrevActionAssignment_11_1();
+            rule__GSSTestListTestCase__PrevActionAssignment_11_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -73609,7 +73609,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionAssignment_11_1()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getPrevActionAssignment_11_1()); 
             }
 
             }
@@ -73629,21 +73629,21 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group_11__1__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group_11__1__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group_11__2"
-    // InternalCONFIG.g:23864:1: rule__GSSConfigTestCase__Group_11__2 : rule__GSSConfigTestCase__Group_11__2__Impl ;
-    public final void rule__GSSConfigTestCase__Group_11__2() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group_11__2"
+    // InternalCONFIG.g:23864:1: rule__GSSTestListTestCase__Group_11__2 : rule__GSSTestListTestCase__Group_11__2__Impl ;
+    public final void rule__GSSTestListTestCase__Group_11__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23868:1: ( rule__GSSConfigTestCase__Group_11__2__Impl )
-            // InternalCONFIG.g:23869:2: rule__GSSConfigTestCase__Group_11__2__Impl
+            // InternalCONFIG.g:23868:1: ( rule__GSSTestListTestCase__Group_11__2__Impl )
+            // InternalCONFIG.g:23869:2: rule__GSSTestListTestCase__Group_11__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group_11__2__Impl();
+            rule__GSSTestListTestCase__Group_11__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -73662,26 +73662,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group_11__2"
+    // $ANTLR end "rule__GSSTestListTestCase__Group_11__2"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group_11__2__Impl"
-    // InternalCONFIG.g:23875:1: rule__GSSConfigTestCase__Group_11__2__Impl : ( ( rule__GSSConfigTestCase__Group_11_2__0 )? ) ;
-    public final void rule__GSSConfigTestCase__Group_11__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group_11__2__Impl"
+    // InternalCONFIG.g:23875:1: rule__GSSTestListTestCase__Group_11__2__Impl : ( ( rule__GSSTestListTestCase__Group_11_2__0 )? ) ;
+    public final void rule__GSSTestListTestCase__Group_11__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23879:1: ( ( ( rule__GSSConfigTestCase__Group_11_2__0 )? ) )
-            // InternalCONFIG.g:23880:1: ( ( rule__GSSConfigTestCase__Group_11_2__0 )? )
+            // InternalCONFIG.g:23879:1: ( ( ( rule__GSSTestListTestCase__Group_11_2__0 )? ) )
+            // InternalCONFIG.g:23880:1: ( ( rule__GSSTestListTestCase__Group_11_2__0 )? )
             {
-            // InternalCONFIG.g:23880:1: ( ( rule__GSSConfigTestCase__Group_11_2__0 )? )
-            // InternalCONFIG.g:23881:2: ( rule__GSSConfigTestCase__Group_11_2__0 )?
+            // InternalCONFIG.g:23880:1: ( ( rule__GSSTestListTestCase__Group_11_2__0 )? )
+            // InternalCONFIG.g:23881:2: ( rule__GSSTestListTestCase__Group_11_2__0 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getGroup_11_2()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getGroup_11_2()); 
             }
-            // InternalCONFIG.g:23882:2: ( rule__GSSConfigTestCase__Group_11_2__0 )?
+            // InternalCONFIG.g:23882:2: ( rule__GSSTestListTestCase__Group_11_2__0 )?
             int alt61=2;
             int LA61_0 = input.LA(1);
 
@@ -73690,10 +73690,10 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
             switch (alt61) {
                 case 1 :
-                    // InternalCONFIG.g:23882:3: rule__GSSConfigTestCase__Group_11_2__0
+                    // InternalCONFIG.g:23882:3: rule__GSSTestListTestCase__Group_11_2__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
-                    rule__GSSConfigTestCase__Group_11_2__0();
+                    rule__GSSTestListTestCase__Group_11_2__0();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -73704,7 +73704,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getGroup_11_2()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getGroup_11_2()); 
             }
 
             }
@@ -73724,26 +73724,26 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group_11__2__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group_11__2__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group_11_2__0"
-    // InternalCONFIG.g:23891:1: rule__GSSConfigTestCase__Group_11_2__0 : rule__GSSConfigTestCase__Group_11_2__0__Impl rule__GSSConfigTestCase__Group_11_2__1 ;
-    public final void rule__GSSConfigTestCase__Group_11_2__0() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group_11_2__0"
+    // InternalCONFIG.g:23891:1: rule__GSSTestListTestCase__Group_11_2__0 : rule__GSSTestListTestCase__Group_11_2__0__Impl rule__GSSTestListTestCase__Group_11_2__1 ;
+    public final void rule__GSSTestListTestCase__Group_11_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23895:1: ( rule__GSSConfigTestCase__Group_11_2__0__Impl rule__GSSConfigTestCase__Group_11_2__1 )
-            // InternalCONFIG.g:23896:2: rule__GSSConfigTestCase__Group_11_2__0__Impl rule__GSSConfigTestCase__Group_11_2__1
+            // InternalCONFIG.g:23895:1: ( rule__GSSTestListTestCase__Group_11_2__0__Impl rule__GSSTestListTestCase__Group_11_2__1 )
+            // InternalCONFIG.g:23896:2: rule__GSSTestListTestCase__Group_11_2__0__Impl rule__GSSTestListTestCase__Group_11_2__1
             {
             pushFollow(FollowSets000.FOLLOW_6);
-            rule__GSSConfigTestCase__Group_11_2__0__Impl();
+            rule__GSSTestListTestCase__Group_11_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group_11_2__1();
+            rule__GSSTestListTestCase__Group_11_2__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -73762,12 +73762,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group_11_2__0"
+    // $ANTLR end "rule__GSSTestListTestCase__Group_11_2__0"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group_11_2__0__Impl"
-    // InternalCONFIG.g:23903:1: rule__GSSConfigTestCase__Group_11_2__0__Impl : ( 'prevActionParam' ) ;
-    public final void rule__GSSConfigTestCase__Group_11_2__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group_11_2__0__Impl"
+    // InternalCONFIG.g:23903:1: rule__GSSTestListTestCase__Group_11_2__0__Impl : ( 'prevActionParam' ) ;
+    public final void rule__GSSTestListTestCase__Group_11_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -73779,11 +73779,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:23909:2: 'prevActionParam'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamKeyword_11_2_0()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getPrevActionParamKeyword_11_2_0()); 
             }
             match(input,151,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamKeyword_11_2_0()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getPrevActionParamKeyword_11_2_0()); 
             }
 
             }
@@ -73803,21 +73803,21 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group_11_2__0__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group_11_2__0__Impl"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group_11_2__1"
-    // InternalCONFIG.g:23918:1: rule__GSSConfigTestCase__Group_11_2__1 : rule__GSSConfigTestCase__Group_11_2__1__Impl ;
-    public final void rule__GSSConfigTestCase__Group_11_2__1() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group_11_2__1"
+    // InternalCONFIG.g:23918:1: rule__GSSTestListTestCase__Group_11_2__1 : rule__GSSTestListTestCase__Group_11_2__1__Impl ;
+    public final void rule__GSSTestListTestCase__Group_11_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23922:1: ( rule__GSSConfigTestCase__Group_11_2__1__Impl )
-            // InternalCONFIG.g:23923:2: rule__GSSConfigTestCase__Group_11_2__1__Impl
+            // InternalCONFIG.g:23922:1: ( rule__GSSTestListTestCase__Group_11_2__1__Impl )
+            // InternalCONFIG.g:23923:2: rule__GSSTestListTestCase__Group_11_2__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__Group_11_2__1__Impl();
+            rule__GSSTestListTestCase__Group_11_2__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -73836,30 +73836,30 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group_11_2__1"
+    // $ANTLR end "rule__GSSTestListTestCase__Group_11_2__1"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__Group_11_2__1__Impl"
-    // InternalCONFIG.g:23929:1: rule__GSSConfigTestCase__Group_11_2__1__Impl : ( ( rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1 ) ) ;
-    public final void rule__GSSConfigTestCase__Group_11_2__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__Group_11_2__1__Impl"
+    // InternalCONFIG.g:23929:1: rule__GSSTestListTestCase__Group_11_2__1__Impl : ( ( rule__GSSTestListTestCase__PrevActionParamAssignment_11_2_1 ) ) ;
+    public final void rule__GSSTestListTestCase__Group_11_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:23933:1: ( ( ( rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1 ) ) )
-            // InternalCONFIG.g:23934:1: ( ( rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1 ) )
+            // InternalCONFIG.g:23933:1: ( ( ( rule__GSSTestListTestCase__PrevActionParamAssignment_11_2_1 ) ) )
+            // InternalCONFIG.g:23934:1: ( ( rule__GSSTestListTestCase__PrevActionParamAssignment_11_2_1 ) )
             {
-            // InternalCONFIG.g:23934:1: ( ( rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1 ) )
-            // InternalCONFIG.g:23935:2: ( rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1 )
+            // InternalCONFIG.g:23934:1: ( ( rule__GSSTestListTestCase__PrevActionParamAssignment_11_2_1 ) )
+            // InternalCONFIG.g:23935:2: ( rule__GSSTestListTestCase__PrevActionParamAssignment_11_2_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamAssignment_11_2_1()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getPrevActionParamAssignment_11_2_1()); 
             }
-            // InternalCONFIG.g:23936:2: ( rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1 )
-            // InternalCONFIG.g:23936:3: rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1
+            // InternalCONFIG.g:23936:2: ( rule__GSSTestListTestCase__PrevActionParamAssignment_11_2_1 )
+            // InternalCONFIG.g:23936:3: rule__GSSTestListTestCase__PrevActionParamAssignment_11_2_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1();
+            rule__GSSTestListTestCase__PrevActionParamAssignment_11_2_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -73867,7 +73867,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamAssignment_11_2_1()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getPrevActionParamAssignment_11_2_1()); 
             }
 
             }
@@ -73887,7 +73887,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__Group_11_2__1__Impl"
+    // $ANTLR end "rule__GSSTestListTestCase__Group_11_2__1__Impl"
 
 
     // $ANTLR start "rule__QualifiedName__Group__0"
@@ -78050,28 +78050,28 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSConfigGSSConfig__TestsAssignment_9"
-    // InternalCONFIG.g:25274:1: rule__GSSConfigGSSConfig__TestsAssignment_9 : ( ruleGSSConfigTests ) ;
+    // InternalCONFIG.g:25274:1: rule__GSSConfigGSSConfig__TestsAssignment_9 : ( ruleGSSTestListTestList ) ;
     public final void rule__GSSConfigGSSConfig__TestsAssignment_9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:25278:1: ( ( ruleGSSConfigTests ) )
-            // InternalCONFIG.g:25279:2: ( ruleGSSConfigTests )
+            // InternalCONFIG.g:25278:1: ( ( ruleGSSTestListTestList ) )
+            // InternalCONFIG.g:25279:2: ( ruleGSSTestListTestList )
             {
-            // InternalCONFIG.g:25279:2: ( ruleGSSConfigTests )
-            // InternalCONFIG.g:25280:3: ruleGSSConfigTests
+            // InternalCONFIG.g:25279:2: ( ruleGSSTestListTestList )
+            // InternalCONFIG.g:25280:3: ruleGSSTestListTestList
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigGSSConfigAccess().getTestsGSSConfigTestsParserRuleCall_9_0()); 
+               before(grammarAccess.getGSSConfigGSSConfigAccess().getTestsGSSTestListTestListParserRuleCall_9_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSConfigTests();
+            ruleGSSTestListTestList();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigGSSConfigAccess().getTestsGSSConfigTestsParserRuleCall_9_0()); 
+               after(grammarAccess.getGSSConfigGSSConfigAccess().getTestsGSSTestListTestListParserRuleCall_9_0()); 
             }
 
             }
@@ -85417,29 +85417,29 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSScenarioPlot__ChartRefAssignment_8"
 
 
-    // $ANTLR start "rule__GSSScenarioPlot__GVAssignment_10"
-    // InternalCONFIG.g:27754:1: rule__GSSScenarioPlot__GVAssignment_10 : ( ruleGSSScenarioGV ) ;
-    public final void rule__GSSScenarioPlot__GVAssignment_10() throws RecognitionException {
+    // $ANTLR start "rule__GSSScenarioPlot__GVRefAssignment_10"
+    // InternalCONFIG.g:27754:1: rule__GSSScenarioPlot__GVRefAssignment_10 : ( ruleGSSScenarioGVRef ) ;
+    public final void rule__GSSScenarioPlot__GVRefAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:27758:1: ( ( ruleGSSScenarioGV ) )
-            // InternalCONFIG.g:27759:2: ( ruleGSSScenarioGV )
+            // InternalCONFIG.g:27758:1: ( ( ruleGSSScenarioGVRef ) )
+            // InternalCONFIG.g:27759:2: ( ruleGSSScenarioGVRef )
             {
-            // InternalCONFIG.g:27759:2: ( ruleGSSScenarioGV )
-            // InternalCONFIG.g:27760:3: ruleGSSScenarioGV
+            // InternalCONFIG.g:27759:2: ( ruleGSSScenarioGVRef )
+            // InternalCONFIG.g:27760:3: ruleGSSScenarioGVRef
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioPlotAccess().getGVGSSScenarioGVParserRuleCall_10_0()); 
+               before(grammarAccess.getGSSScenarioPlotAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSScenarioGV();
+            ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioPlotAccess().getGVGSSScenarioGVParserRuleCall_10_0()); 
+               after(grammarAccess.getGSSScenarioPlotAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0()); 
             }
 
             }
@@ -85459,7 +85459,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSScenarioPlot__GVAssignment_10"
+    // $ANTLR end "rule__GSSScenarioPlot__GVRefAssignment_10"
 
 
     // $ANTLR start "rule__GSSScenarioAlarmMsg__NameAssignment_4"
@@ -85589,29 +85589,29 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSScenarioAlarmMsg__TextAssignment_12"
 
 
-    // $ANTLR start "rule__GSSScenarioAlarmMsg__GVAssignment_14"
-    // InternalCONFIG.g:27814:1: rule__GSSScenarioAlarmMsg__GVAssignment_14 : ( ruleGSSScenarioGV ) ;
-    public final void rule__GSSScenarioAlarmMsg__GVAssignment_14() throws RecognitionException {
+    // $ANTLR start "rule__GSSScenarioAlarmMsg__GVRefAssignment_14"
+    // InternalCONFIG.g:27814:1: rule__GSSScenarioAlarmMsg__GVRefAssignment_14 : ( ruleGSSScenarioGVRef ) ;
+    public final void rule__GSSScenarioAlarmMsg__GVRefAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:27818:1: ( ( ruleGSSScenarioGV ) )
-            // InternalCONFIG.g:27819:2: ( ruleGSSScenarioGV )
+            // InternalCONFIG.g:27818:1: ( ( ruleGSSScenarioGVRef ) )
+            // InternalCONFIG.g:27819:2: ( ruleGSSScenarioGVRef )
             {
-            // InternalCONFIG.g:27819:2: ( ruleGSSScenarioGV )
-            // InternalCONFIG.g:27820:3: ruleGSSScenarioGV
+            // InternalCONFIG.g:27819:2: ( ruleGSSScenarioGVRef )
+            // InternalCONFIG.g:27820:3: ruleGSSScenarioGVRef
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVGSSScenarioGVParserRuleCall_14_0()); 
+               before(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSScenarioGV();
+            ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVGSSScenarioGVParserRuleCall_14_0()); 
+               after(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0()); 
             }
 
             }
@@ -85631,7 +85631,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSScenarioAlarmMsg__GVAssignment_14"
+    // $ANTLR end "rule__GSSScenarioAlarmMsg__GVRefAssignment_14"
 
 
     // $ANTLR start "rule__GSSScenarioModify__NameAssignment_4"
@@ -85765,29 +85765,29 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSScenarioModify__ValueAssignment_12"
 
 
-    // $ANTLR start "rule__GSSScenarioModify__GVAssignment_14"
-    // InternalCONFIG.g:27874:1: rule__GSSScenarioModify__GVAssignment_14 : ( ruleGSSScenarioGV ) ;
-    public final void rule__GSSScenarioModify__GVAssignment_14() throws RecognitionException {
+    // $ANTLR start "rule__GSSScenarioModify__GVRefAssignment_14"
+    // InternalCONFIG.g:27874:1: rule__GSSScenarioModify__GVRefAssignment_14 : ( ruleGSSScenarioGVRef ) ;
+    public final void rule__GSSScenarioModify__GVRefAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:27878:1: ( ( ruleGSSScenarioGV ) )
-            // InternalCONFIG.g:27879:2: ( ruleGSSScenarioGV )
+            // InternalCONFIG.g:27878:1: ( ( ruleGSSScenarioGVRef ) )
+            // InternalCONFIG.g:27879:2: ( ruleGSSScenarioGVRef )
             {
-            // InternalCONFIG.g:27879:2: ( ruleGSSScenarioGV )
-            // InternalCONFIG.g:27880:3: ruleGSSScenarioGV
+            // InternalCONFIG.g:27879:2: ( ruleGSSScenarioGVRef )
+            // InternalCONFIG.g:27880:3: ruleGSSScenarioGVRef
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioModifyAccess().getGVGSSScenarioGVParserRuleCall_14_0()); 
+               before(grammarAccess.getGSSScenarioModifyAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSScenarioGV();
+            ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioModifyAccess().getGVGSSScenarioGVParserRuleCall_14_0()); 
+               after(grammarAccess.getGSSScenarioModifyAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0()); 
             }
 
             }
@@ -85807,7 +85807,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSScenarioModify__GVAssignment_14"
+    // $ANTLR end "rule__GSSScenarioModify__GVRefAssignment_14"
 
 
     // $ANTLR start "rule__GSSScenarioAlarmVal__NameAssignment_4"
@@ -85896,29 +85896,29 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSScenarioAlarmVal__TypeAssignment_8"
 
 
-    // $ANTLR start "rule__GSSScenarioAlarmVal__GVAssignment_10"
-    // InternalCONFIG.g:27919:1: rule__GSSScenarioAlarmVal__GVAssignment_10 : ( ruleGSSScenarioGV ) ;
-    public final void rule__GSSScenarioAlarmVal__GVAssignment_10() throws RecognitionException {
+    // $ANTLR start "rule__GSSScenarioAlarmVal__GVRefAssignment_10"
+    // InternalCONFIG.g:27919:1: rule__GSSScenarioAlarmVal__GVRefAssignment_10 : ( ruleGSSScenarioGVRef ) ;
+    public final void rule__GSSScenarioAlarmVal__GVRefAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:27923:1: ( ( ruleGSSScenarioGV ) )
-            // InternalCONFIG.g:27924:2: ( ruleGSSScenarioGV )
+            // InternalCONFIG.g:27923:1: ( ( ruleGSSScenarioGVRef ) )
+            // InternalCONFIG.g:27924:2: ( ruleGSSScenarioGVRef )
             {
-            // InternalCONFIG.g:27924:2: ( ruleGSSScenarioGV )
-            // InternalCONFIG.g:27925:3: ruleGSSScenarioGV
+            // InternalCONFIG.g:27924:2: ( ruleGSSScenarioGVRef )
+            // InternalCONFIG.g:27925:3: ruleGSSScenarioGVRef
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioAlarmValAccess().getGVGSSScenarioGVParserRuleCall_10_0()); 
+               before(grammarAccess.getGSSScenarioAlarmValAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSScenarioGV();
+            ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioAlarmValAccess().getGVGSSScenarioGVParserRuleCall_10_0()); 
+               after(grammarAccess.getGSSScenarioAlarmValAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0()); 
             }
 
             }
@@ -85938,7 +85938,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSScenarioAlarmVal__GVAssignment_10"
+    // $ANTLR end "rule__GSSScenarioAlarmVal__GVRefAssignment_10"
 
 
     // $ANTLR start "rule__GSSScenarioGVFiltered__GlobalVarRefAssignment_4"
@@ -86194,29 +86194,29 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSScenarioGVPeriodic__Period_unitAssignment_12"
 
 
-    // $ANTLR start "rule__GSSConfigTests__TestCaseAssignment_2"
-    // InternalCONFIG.g:28021:1: rule__GSSConfigTests__TestCaseAssignment_2 : ( ruleGSSConfigTestCase ) ;
-    public final void rule__GSSConfigTests__TestCaseAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestList__TestCaseAssignment_2"
+    // InternalCONFIG.g:28021:1: rule__GSSTestListTestList__TestCaseAssignment_2 : ( ruleGSSTestListTestCase ) ;
+    public final void rule__GSSTestListTestList__TestCaseAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:28025:1: ( ( ruleGSSConfigTestCase ) )
-            // InternalCONFIG.g:28026:2: ( ruleGSSConfigTestCase )
+            // InternalCONFIG.g:28025:1: ( ( ruleGSSTestListTestCase ) )
+            // InternalCONFIG.g:28026:2: ( ruleGSSTestListTestCase )
             {
-            // InternalCONFIG.g:28026:2: ( ruleGSSConfigTestCase )
-            // InternalCONFIG.g:28027:3: ruleGSSConfigTestCase
+            // InternalCONFIG.g:28026:2: ( ruleGSSTestListTestCase )
+            // InternalCONFIG.g:28027:3: ruleGSSTestListTestCase
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestsAccess().getTestCaseGSSConfigTestCaseParserRuleCall_2_0()); 
+               before(grammarAccess.getGSSTestListTestListAccess().getTestCaseGSSTestListTestCaseParserRuleCall_2_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSConfigTestCase();
+            ruleGSSTestListTestCase();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestsAccess().getTestCaseGSSConfigTestCaseParserRuleCall_2_0()); 
+               after(grammarAccess.getGSSTestListTestListAccess().getTestCaseGSSTestListTestCaseParserRuleCall_2_0()); 
             }
 
             }
@@ -86236,12 +86236,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTests__TestCaseAssignment_2"
+    // $ANTLR end "rule__GSSTestListTestList__TestCaseAssignment_2"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__NameAssignment_4"
-    // InternalCONFIG.g:28036:1: rule__GSSConfigTestCase__NameAssignment_4 : ( RULE_STRING ) ;
-    public final void rule__GSSConfigTestCase__NameAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__NameAssignment_4"
+    // InternalCONFIG.g:28036:1: rule__GSSTestListTestCase__NameAssignment_4 : ( RULE_STRING ) ;
+    public final void rule__GSSTestListTestCase__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -86253,11 +86253,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:28042:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getNameSTRINGTerminalRuleCall_4_0()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getNameSTRINGTerminalRuleCall_4_0()); 
             }
             match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getNameSTRINGTerminalRuleCall_4_0()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getNameSTRINGTerminalRuleCall_4_0()); 
             }
 
             }
@@ -86277,12 +86277,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__NameAssignment_4"
+    // $ANTLR end "rule__GSSTestListTestCase__NameAssignment_4"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__ProcedureAssignment_8"
-    // InternalCONFIG.g:28051:1: rule__GSSConfigTestCase__ProcedureAssignment_8 : ( ( ruleVersionedQualifiedName ) ) ;
-    public final void rule__GSSConfigTestCase__ProcedureAssignment_8() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__ProcedureAssignment_8"
+    // InternalCONFIG.g:28051:1: rule__GSSTestListTestCase__ProcedureAssignment_8 : ( ( ruleVersionedQualifiedName ) ) ;
+    public final void rule__GSSTestListTestCase__ProcedureAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -86294,13 +86294,13 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:28057:3: ( ruleVersionedQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getProcedureGSSTestProcTestProcCrossReference_8_0()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getProcedureGSSTestProcTestProcCrossReference_8_0()); 
             }
             // InternalCONFIG.g:28058:3: ( ruleVersionedQualifiedName )
             // InternalCONFIG.g:28059:4: ruleVersionedQualifiedName
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getProcedureGSSTestProcTestProcVersionedQualifiedNameParserRuleCall_8_0_1()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getProcedureGSSTestProcTestProcVersionedQualifiedNameParserRuleCall_8_0_1()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleVersionedQualifiedName();
@@ -86308,13 +86308,13 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getProcedureGSSTestProcTestProcVersionedQualifiedNameParserRuleCall_8_0_1()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getProcedureGSSTestProcTestProcVersionedQualifiedNameParserRuleCall_8_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getProcedureGSSTestProcTestProcCrossReference_8_0()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getProcedureGSSTestProcTestProcCrossReference_8_0()); 
             }
 
             }
@@ -86334,12 +86334,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__ProcedureAssignment_8"
+    // $ANTLR end "rule__GSSTestListTestCase__ProcedureAssignment_8"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__PrevMsgAssignment_10_1"
-    // InternalCONFIG.g:28070:1: rule__GSSConfigTestCase__PrevMsgAssignment_10_1 : ( RULE_ID ) ;
-    public final void rule__GSSConfigTestCase__PrevMsgAssignment_10_1() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__PrevMsgAssignment_10_1"
+    // InternalCONFIG.g:28070:1: rule__GSSTestListTestCase__PrevMsgAssignment_10_1 : ( RULE_ID ) ;
+    public final void rule__GSSTestListTestCase__PrevMsgAssignment_10_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -86351,11 +86351,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:28076:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0()); 
             }
             match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0()); 
             }
 
             }
@@ -86375,32 +86375,32 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__PrevMsgAssignment_10_1"
+    // $ANTLR end "rule__GSSTestListTestCase__PrevMsgAssignment_10_1"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__PrevActionAssignment_11_1"
-    // InternalCONFIG.g:28085:1: rule__GSSConfigTestCase__PrevActionAssignment_11_1 : ( ruleGSSTestProcPrevAction ) ;
-    public final void rule__GSSConfigTestCase__PrevActionAssignment_11_1() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__PrevActionAssignment_11_1"
+    // InternalCONFIG.g:28085:1: rule__GSSTestListTestCase__PrevActionAssignment_11_1 : ( ruleGSSTestListPrevAction ) ;
+    public final void rule__GSSTestListTestCase__PrevActionAssignment_11_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCONFIG.g:28089:1: ( ( ruleGSSTestProcPrevAction ) )
-            // InternalCONFIG.g:28090:2: ( ruleGSSTestProcPrevAction )
+            // InternalCONFIG.g:28089:1: ( ( ruleGSSTestListPrevAction ) )
+            // InternalCONFIG.g:28090:2: ( ruleGSSTestListPrevAction )
             {
-            // InternalCONFIG.g:28090:2: ( ruleGSSTestProcPrevAction )
-            // InternalCONFIG.g:28091:3: ruleGSSTestProcPrevAction
+            // InternalCONFIG.g:28090:2: ( ruleGSSTestListPrevAction )
+            // InternalCONFIG.g:28091:3: ruleGSSTestListPrevAction
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getPrevActionGSSTestListPrevActionEnumRuleCall_11_1_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSTestProcPrevAction();
+            ruleGSSTestListPrevAction();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getPrevActionGSSTestListPrevActionEnumRuleCall_11_1_0()); 
             }
 
             }
@@ -86420,12 +86420,12 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__PrevActionAssignment_11_1"
+    // $ANTLR end "rule__GSSTestListTestCase__PrevActionAssignment_11_1"
 
 
-    // $ANTLR start "rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1"
-    // InternalCONFIG.g:28100:1: rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1 : ( RULE_STRING ) ;
-    public final void rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1() throws RecognitionException {
+    // $ANTLR start "rule__GSSTestListTestCase__PrevActionParamAssignment_11_2_1"
+    // InternalCONFIG.g:28100:1: rule__GSSTestListTestCase__PrevActionParamAssignment_11_2_1 : ( RULE_STRING ) ;
+    public final void rule__GSSTestListTestCase__PrevActionParamAssignment_11_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -86437,11 +86437,11 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
             // InternalCONFIG.g:28106:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0()); 
+               before(grammarAccess.getGSSTestListTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0()); 
             }
             match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0()); 
+               after(grammarAccess.getGSSTestListTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0()); 
             }
 
             }
@@ -86461,7 +86461,7 @@ public class InternalCONFIGParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSConfigTestCase__PrevActionParamAssignment_11_2_1"
+    // $ANTLR end "rule__GSSTestListTestCase__PrevActionParamAssignment_11_2_1"
 
     // $ANTLR start synpred33_InternalCONFIG
     public final void synpred33_InternalCONFIG_fragment() throws RecognitionException {   

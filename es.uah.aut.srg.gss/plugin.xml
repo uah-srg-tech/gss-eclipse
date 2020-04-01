@@ -150,4 +150,12 @@
             genModel="model/tmheader.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated test_list -->
+      <package
+            uri="http://srg.aut.uah.es/gss/test_list"
+            class="es.uah.aut.srg.gss.test_list.test_listPackage"
+            genModel="model/test_list.genmodel"/>
+   </extension>
+
 </plugin>

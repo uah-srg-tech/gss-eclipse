@@ -30,9 +30,9 @@ import es.uah.aut.srg.gss.scenario.GSSScenarioAlarmVal;
 import es.uah.aut.srg.gss.scenario.GSSScenarioAlarmValType;
 import es.uah.aut.srg.gss.scenario.GSSScenarioDiscardErrorFlags;
 import es.uah.aut.srg.gss.scenario.GSSScenarioEnableDisable;
-import es.uah.aut.srg.gss.scenario.GSSScenarioGV;
 import es.uah.aut.srg.gss.scenario.GSSScenarioGVFiltered;
 import es.uah.aut.srg.gss.scenario.GSSScenarioGVPeriodic;
+import es.uah.aut.srg.gss.scenario.GSSScenarioGVRef;
 import es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVar;
 import es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVarType;
 import es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVars;
@@ -379,7 +379,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass gssScenarioGVEClass = null;
+	private EClass gssScenarioGVRefEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1979,7 +1979,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSScenarioMonitor_GV() {
+	public EReference getGSSScenarioMonitor_GVRef() {
 		return (EReference)gssScenarioMonitorEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2078,8 +2078,8 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGSSScenarioGV() {
-		return gssScenarioGVEClass;
+	public EClass getGSSScenarioGVRef() {
+		return gssScenarioGVRefEClass;
 	}
 
 	/**
@@ -2087,8 +2087,8 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSScenarioGV_GlobalVarRef() {
-		return (EReference)gssScenarioGVEClass.getEStructuralFeatures().get(0);
+	public EReference getGSSScenarioGVRef_GlobalVarRef() {
+		return (EReference)gssScenarioGVRefEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2449,7 +2449,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 
 		gssScenarioMonitorEClass = createEClass(GSS_SCENARIO_MONITOR);
 		createEAttribute(gssScenarioMonitorEClass, GSS_SCENARIO_MONITOR__NAME);
-		createEReference(gssScenarioMonitorEClass, GSS_SCENARIO_MONITOR__GV);
+		createEReference(gssScenarioMonitorEClass, GSS_SCENARIO_MONITOR__GV_REF);
 
 		gssScenarioPlotEClass = createEClass(GSS_SCENARIO_PLOT);
 		createEReference(gssScenarioPlotEClass, GSS_SCENARIO_PLOT__CHART_REF);
@@ -2465,8 +2465,8 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 		gssScenarioAlarmValEClass = createEClass(GSS_SCENARIO_ALARM_VAL);
 		createEAttribute(gssScenarioAlarmValEClass, GSS_SCENARIO_ALARM_VAL__TYPE);
 
-		gssScenarioGVEClass = createEClass(GSS_SCENARIO_GV);
-		createEReference(gssScenarioGVEClass, GSS_SCENARIO_GV__GLOBAL_VAR_REF);
+		gssScenarioGVRefEClass = createEClass(GSS_SCENARIO_GV_REF);
+		createEReference(gssScenarioGVRefEClass, GSS_SCENARIO_GV_REF__GLOBAL_VAR_REF);
 
 		gssScenarioGVFilteredEClass = createEClass(GSS_SCENARIO_GV_FILTERED);
 		createEReference(gssScenarioGVFilteredEClass, GSS_SCENARIO_GV_FILTERED__FILTER);
@@ -2540,8 +2540,8 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 		gssScenarioAlarmMsgEClass.getESuperTypes().add(this.getGSSScenarioMonitor());
 		gssScenarioModifyEClass.getESuperTypes().add(this.getGSSScenarioMonitor());
 		gssScenarioAlarmValEClass.getESuperTypes().add(this.getGSSScenarioMonitor());
-		gssScenarioGVFilteredEClass.getESuperTypes().add(this.getGSSScenarioGV());
-		gssScenarioGVPeriodicEClass.getESuperTypes().add(this.getGSSScenarioGV());
+		gssScenarioGVFilteredEClass.getESuperTypes().add(this.getGSSScenarioGVRef());
+		gssScenarioGVPeriodicEClass.getESuperTypes().add(this.getGSSScenarioGVRef());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gssScenarioScenarioEClass, GSSScenarioScenario.class, "GSSScenarioScenario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2739,7 +2739,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 
 		initEClass(gssScenarioMonitorEClass, GSSScenarioMonitor.class, "GSSScenarioMonitor", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSScenarioMonitor_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSScenarioMonitor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSScenarioMonitor_GV(), this.getGSSScenarioGV(), null, "GV", null, 1, 1, GSSScenarioMonitor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSScenarioMonitor_GVRef(), this.getGSSScenarioGVRef(), null, "GVRef", null, 1, 1, GSSScenarioMonitor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssScenarioPlotEClass, GSSScenarioPlot.class, "GSSScenarioPlot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSScenarioPlot_ChartRef(), thechartsPackage.getGSSChartsChart(), null, "chartRef", null, 1, 1, GSSScenarioPlot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2755,8 +2755,8 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 		initEClass(gssScenarioAlarmValEClass, GSSScenarioAlarmVal.class, "GSSScenarioAlarmVal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSScenarioAlarmVal_Type(), this.getGSSScenarioAlarmValType(), "type", null, 1, 1, GSSScenarioAlarmVal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(gssScenarioGVEClass, GSSScenarioGV.class, "GSSScenarioGV", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGSSScenarioGV_GlobalVarRef(), this.getGSSScenarioGlobalVar(), null, "GlobalVarRef", null, 1, 1, GSSScenarioGV.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(gssScenarioGVRefEClass, GSSScenarioGVRef.class, "GSSScenarioGVRef", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGSSScenarioGVRef_GlobalVarRef(), this.getGSSScenarioGlobalVar(), null, "GlobalVarRef", null, 1, 1, GSSScenarioGVRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssScenarioGVFilteredEClass, GSSScenarioGVFiltered.class, "GSSScenarioGVFiltered", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSScenarioGVFiltered_Filter(), thefilterPackage.getGSSFilterFilter(), null, "filter", null, 0, 1, GSSScenarioGVFiltered.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

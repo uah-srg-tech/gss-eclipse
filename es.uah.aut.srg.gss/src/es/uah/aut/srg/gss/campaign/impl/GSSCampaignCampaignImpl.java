@@ -12,10 +12,10 @@ package es.uah.aut.srg.gss.campaign.impl;
 
 import es.uah.aut.srg.gss.campaign.GSSCampaignCampaign;
 import es.uah.aut.srg.gss.campaign.GSSCampaignScenario;
-import es.uah.aut.srg.gss.campaign.GSSCampaignTests;
 import es.uah.aut.srg.gss.campaign.campaignPackage;
 
 import es.uah.aut.srg.gss.common.impl.GSSModelElementImpl;
+import es.uah.aut.srg.gss.test_list.GSSTestListTestList;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -57,7 +57,7 @@ public class GSSCampaignCampaignImpl extends GSSModelElementImpl implements GSSC
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSCampaignTests tests;
+	protected GSSTestListTestList tests;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,7 +126,7 @@ public class GSSCampaignCampaignImpl extends GSSModelElementImpl implements GSSC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSCampaignTests getTests() {
+	public GSSTestListTestList getTests() {
 		return tests;
 	}
 
@@ -135,8 +135,8 @@ public class GSSCampaignCampaignImpl extends GSSModelElementImpl implements GSSC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTests(GSSCampaignTests newTests, NotificationChain msgs) {
-		GSSCampaignTests oldTests = tests;
+	public NotificationChain basicSetTests(GSSTestListTestList newTests, NotificationChain msgs) {
+		GSSTestListTestList oldTests = tests;
 		tests = newTests;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, campaignPackage.GSS_CAMPAIGN_CAMPAIGN__TESTS, oldTests, newTests);
@@ -150,7 +150,7 @@ public class GSSCampaignCampaignImpl extends GSSModelElementImpl implements GSSC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTests(GSSCampaignTests newTests) {
+	public void setTests(GSSTestListTestList newTests) {
 		if (newTests != tests) {
 			NotificationChain msgs = null;
 			if (tests != null)
@@ -208,7 +208,7 @@ public class GSSCampaignCampaignImpl extends GSSModelElementImpl implements GSSC
 				setScenario((GSSCampaignScenario)newValue);
 				return;
 			case campaignPackage.GSS_CAMPAIGN_CAMPAIGN__TESTS:
-				setTests((GSSCampaignTests)newValue);
+				setTests((GSSTestListTestList)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,7 +226,7 @@ public class GSSCampaignCampaignImpl extends GSSModelElementImpl implements GSSC
 				setScenario((GSSCampaignScenario)null);
 				return;
 			case campaignPackage.GSS_CAMPAIGN_CAMPAIGN__TESTS:
-				setTests((GSSCampaignTests)null);
+				setTests((GSSTestListTestList)null);
 				return;
 		}
 		super.eUnset(featureID);

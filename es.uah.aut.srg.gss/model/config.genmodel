@@ -3,26 +3,14 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2020 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
     modelDirectory="/es.uah.aut.srg.gss/src" modelPluginID="es.uah.aut.srg.gss" modelName="Config"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" usedGenPackages="charts.genmodel#//charts common.genmodel#//common export.genmodel#//export filter.genmodel#//filter format.genmodel#//format iface.genmodel#//iface import.genmodel#//import protocol_packets.genmodel#//protocol_packets scenario.genmodel#//scenario test_proc.genmodel#//test_proc ../../es.uah.aut.srg.tmtcif/model/scenario.genmodel#//scenario"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="charts.genmodel#//charts common.genmodel#//common export.genmodel#//export filter.genmodel#//filter format.genmodel#//format iface.genmodel#//iface import.genmodel#//import protocol_packets.genmodel#//protocol_packets scenario.genmodel#//scenario ../../es.uah.aut.srg.tmtcif/model/scenario.genmodel#//scenario test_list.genmodel#//test_list test_proc.genmodel#//test_proc"
     operationReflection="true" importOrganizing="true">
   <foreignModel>config.ecore</foreignModel>
   <genPackages prefix="config" basePackage="es.uah.aut.srg.gss" disposableProviderFactory="true"
       ecorePackage="config.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="config.ecore#//GSSConfigReqAction">
-      <genEnumLiterals ecoreEnumLiteral="config.ecore#//GSSConfigReqAction/_1"/>
-    </genEnums>
     <genClasses ecoreClass="config.ecore#//GSSConfigGSSConfig">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigGSSConfig/scenario"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigGSSConfig/Tests"/>
-    </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigTests">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigTests/TestCase"/>
-    </genClasses>
-    <genClasses ecoreClass="config.ecore#//GSSConfigTestCase">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigTestCase/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference config.ecore#//GSSConfigTestCase/procedure"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigTestCase/req"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//GSSConfigTestCase/reqAction"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

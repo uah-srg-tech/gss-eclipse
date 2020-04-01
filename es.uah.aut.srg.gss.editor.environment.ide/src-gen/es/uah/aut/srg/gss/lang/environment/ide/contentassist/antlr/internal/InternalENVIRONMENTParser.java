@@ -3961,23 +3961,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
     // $ANTLR end "ruleGSSScenarioAlarmVal"
 
 
-    // $ANTLR start "entryRuleGSSScenarioGV"
-    // InternalENVIRONMENT.g:1161:1: entryRuleGSSScenarioGV : ruleGSSScenarioGV EOF ;
-    public final void entryRuleGSSScenarioGV() throws RecognitionException {
+    // $ANTLR start "entryRuleGSSScenarioGVRef"
+    // InternalENVIRONMENT.g:1161:1: entryRuleGSSScenarioGVRef : ruleGSSScenarioGVRef EOF ;
+    public final void entryRuleGSSScenarioGVRef() throws RecognitionException {
         try {
-            // InternalENVIRONMENT.g:1162:1: ( ruleGSSScenarioGV EOF )
-            // InternalENVIRONMENT.g:1163:1: ruleGSSScenarioGV EOF
+            // InternalENVIRONMENT.g:1162:1: ( ruleGSSScenarioGVRef EOF )
+            // InternalENVIRONMENT.g:1163:1: ruleGSSScenarioGVRef EOF
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioGVRule()); 
+               before(grammarAccess.getGSSScenarioGVRefRule()); 
             }
             pushFollow(FollowSets000.FOLLOW_1);
-            ruleGSSScenarioGV();
+            ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioGVRule()); 
+               after(grammarAccess.getGSSScenarioGVRefRule()); 
             }
             match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -3992,30 +3992,30 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "entryRuleGSSScenarioGV"
+    // $ANTLR end "entryRuleGSSScenarioGVRef"
 
 
-    // $ANTLR start "ruleGSSScenarioGV"
-    // InternalENVIRONMENT.g:1170:1: ruleGSSScenarioGV : ( ( rule__GSSScenarioGV__Alternatives ) ) ;
-    public final void ruleGSSScenarioGV() throws RecognitionException {
+    // $ANTLR start "ruleGSSScenarioGVRef"
+    // InternalENVIRONMENT.g:1170:1: ruleGSSScenarioGVRef : ( ( rule__GSSScenarioGVRef__Alternatives ) ) ;
+    public final void ruleGSSScenarioGVRef() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:1174:2: ( ( ( rule__GSSScenarioGV__Alternatives ) ) )
-            // InternalENVIRONMENT.g:1175:2: ( ( rule__GSSScenarioGV__Alternatives ) )
+            // InternalENVIRONMENT.g:1174:2: ( ( ( rule__GSSScenarioGVRef__Alternatives ) ) )
+            // InternalENVIRONMENT.g:1175:2: ( ( rule__GSSScenarioGVRef__Alternatives ) )
             {
-            // InternalENVIRONMENT.g:1175:2: ( ( rule__GSSScenarioGV__Alternatives ) )
-            // InternalENVIRONMENT.g:1176:3: ( rule__GSSScenarioGV__Alternatives )
+            // InternalENVIRONMENT.g:1175:2: ( ( rule__GSSScenarioGVRef__Alternatives ) )
+            // InternalENVIRONMENT.g:1176:3: ( rule__GSSScenarioGVRef__Alternatives )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioGVAccess().getAlternatives()); 
+               before(grammarAccess.getGSSScenarioGVRefAccess().getAlternatives()); 
             }
-            // InternalENVIRONMENT.g:1177:3: ( rule__GSSScenarioGV__Alternatives )
-            // InternalENVIRONMENT.g:1177:4: rule__GSSScenarioGV__Alternatives
+            // InternalENVIRONMENT.g:1177:3: ( rule__GSSScenarioGVRef__Alternatives )
+            // InternalENVIRONMENT.g:1177:4: rule__GSSScenarioGVRef__Alternatives
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSScenarioGV__Alternatives();
+            rule__GSSScenarioGVRef__Alternatives();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4023,7 +4023,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioGVAccess().getAlternatives()); 
+               after(grammarAccess.getGSSScenarioGVRefAccess().getAlternatives()); 
             }
 
             }
@@ -4043,7 +4043,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "ruleGSSScenarioGV"
+    // $ANTLR end "ruleGSSScenarioGVRef"
 
 
     // $ANTLR start "entryRuleGSSScenarioGVFiltered"
@@ -5943,9 +5943,9 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__GSSScenarioMonitor__Alternatives"
 
 
-    // $ANTLR start "rule__GSSScenarioGV__Alternatives"
-    // InternalENVIRONMENT.g:1705:1: rule__GSSScenarioGV__Alternatives : ( ( ruleGSSScenarioGVFiltered ) | ( ruleGSSScenarioGVPeriodic ) );
-    public final void rule__GSSScenarioGV__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__GSSScenarioGVRef__Alternatives"
+    // InternalENVIRONMENT.g:1705:1: rule__GSSScenarioGVRef__Alternatives : ( ( ruleGSSScenarioGVFiltered ) | ( ruleGSSScenarioGVPeriodic ) );
+    public final void rule__GSSScenarioGVRef__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -5975,7 +5975,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
                     // InternalENVIRONMENT.g:1711:3: ruleGSSScenarioGVFiltered
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVFilteredParserRuleCall_0()); 
+                       before(grammarAccess.getGSSScenarioGVRefAccess().getGSSScenarioGVFilteredParserRuleCall_0()); 
                     }
                     pushFollow(FollowSets000.FOLLOW_2);
                     ruleGSSScenarioGVFiltered();
@@ -5983,7 +5983,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
                     state._fsp--;
                     if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVFilteredParserRuleCall_0()); 
+                       after(grammarAccess.getGSSScenarioGVRefAccess().getGSSScenarioGVFilteredParserRuleCall_0()); 
                     }
 
                     }
@@ -5998,7 +5998,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
                     // InternalENVIRONMENT.g:1717:3: ruleGSSScenarioGVPeriodic
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVPeriodicParserRuleCall_1()); 
+                       before(grammarAccess.getGSSScenarioGVRefAccess().getGSSScenarioGVPeriodicParserRuleCall_1()); 
                     }
                     pushFollow(FollowSets000.FOLLOW_2);
                     ruleGSSScenarioGVPeriodic();
@@ -6006,7 +6006,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
                     state._fsp--;
                     if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVPeriodicParserRuleCall_1()); 
+                       after(grammarAccess.getGSSScenarioGVRefAccess().getGSSScenarioGVPeriodicParserRuleCall_1()); 
                     }
 
                     }
@@ -6028,7 +6028,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__GSSScenarioGV__Alternatives"
+    // $ANTLR end "rule__GSSScenarioGVRef__Alternatives"
 
 
     // $ANTLR start "rule__Version__Alternatives_0"
@@ -65067,26 +65067,26 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSScenarioPlot__Group__10__Impl"
-    // InternalENVIRONMENT.g:21029:1: rule__GSSScenarioPlot__Group__10__Impl : ( ( rule__GSSScenarioPlot__GVAssignment_10 ) ) ;
+    // InternalENVIRONMENT.g:21029:1: rule__GSSScenarioPlot__Group__10__Impl : ( ( rule__GSSScenarioPlot__GVRefAssignment_10 ) ) ;
     public final void rule__GSSScenarioPlot__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:21033:1: ( ( ( rule__GSSScenarioPlot__GVAssignment_10 ) ) )
-            // InternalENVIRONMENT.g:21034:1: ( ( rule__GSSScenarioPlot__GVAssignment_10 ) )
+            // InternalENVIRONMENT.g:21033:1: ( ( ( rule__GSSScenarioPlot__GVRefAssignment_10 ) ) )
+            // InternalENVIRONMENT.g:21034:1: ( ( rule__GSSScenarioPlot__GVRefAssignment_10 ) )
             {
-            // InternalENVIRONMENT.g:21034:1: ( ( rule__GSSScenarioPlot__GVAssignment_10 ) )
-            // InternalENVIRONMENT.g:21035:2: ( rule__GSSScenarioPlot__GVAssignment_10 )
+            // InternalENVIRONMENT.g:21034:1: ( ( rule__GSSScenarioPlot__GVRefAssignment_10 ) )
+            // InternalENVIRONMENT.g:21035:2: ( rule__GSSScenarioPlot__GVRefAssignment_10 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioPlotAccess().getGVAssignment_10()); 
+               before(grammarAccess.getGSSScenarioPlotAccess().getGVRefAssignment_10()); 
             }
-            // InternalENVIRONMENT.g:21036:2: ( rule__GSSScenarioPlot__GVAssignment_10 )
-            // InternalENVIRONMENT.g:21036:3: rule__GSSScenarioPlot__GVAssignment_10
+            // InternalENVIRONMENT.g:21036:2: ( rule__GSSScenarioPlot__GVRefAssignment_10 )
+            // InternalENVIRONMENT.g:21036:3: rule__GSSScenarioPlot__GVRefAssignment_10
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSScenarioPlot__GVAssignment_10();
+            rule__GSSScenarioPlot__GVRefAssignment_10();
 
             state._fsp--;
             if (state.failed) return ;
@@ -65094,7 +65094,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioPlotAccess().getGVAssignment_10()); 
+               after(grammarAccess.getGSSScenarioPlotAccess().getGVRefAssignment_10()); 
             }
 
             }
@@ -66445,26 +66445,26 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSScenarioAlarmMsg__Group__14__Impl"
-    // InternalENVIRONMENT.g:21488:1: rule__GSSScenarioAlarmMsg__Group__14__Impl : ( ( rule__GSSScenarioAlarmMsg__GVAssignment_14 ) ) ;
+    // InternalENVIRONMENT.g:21488:1: rule__GSSScenarioAlarmMsg__Group__14__Impl : ( ( rule__GSSScenarioAlarmMsg__GVRefAssignment_14 ) ) ;
     public final void rule__GSSScenarioAlarmMsg__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:21492:1: ( ( ( rule__GSSScenarioAlarmMsg__GVAssignment_14 ) ) )
-            // InternalENVIRONMENT.g:21493:1: ( ( rule__GSSScenarioAlarmMsg__GVAssignment_14 ) )
+            // InternalENVIRONMENT.g:21492:1: ( ( ( rule__GSSScenarioAlarmMsg__GVRefAssignment_14 ) ) )
+            // InternalENVIRONMENT.g:21493:1: ( ( rule__GSSScenarioAlarmMsg__GVRefAssignment_14 ) )
             {
-            // InternalENVIRONMENT.g:21493:1: ( ( rule__GSSScenarioAlarmMsg__GVAssignment_14 ) )
-            // InternalENVIRONMENT.g:21494:2: ( rule__GSSScenarioAlarmMsg__GVAssignment_14 )
+            // InternalENVIRONMENT.g:21493:1: ( ( rule__GSSScenarioAlarmMsg__GVRefAssignment_14 ) )
+            // InternalENVIRONMENT.g:21494:2: ( rule__GSSScenarioAlarmMsg__GVRefAssignment_14 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVAssignment_14()); 
+               before(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVRefAssignment_14()); 
             }
-            // InternalENVIRONMENT.g:21495:2: ( rule__GSSScenarioAlarmMsg__GVAssignment_14 )
-            // InternalENVIRONMENT.g:21495:3: rule__GSSScenarioAlarmMsg__GVAssignment_14
+            // InternalENVIRONMENT.g:21495:2: ( rule__GSSScenarioAlarmMsg__GVRefAssignment_14 )
+            // InternalENVIRONMENT.g:21495:3: rule__GSSScenarioAlarmMsg__GVRefAssignment_14
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSScenarioAlarmMsg__GVAssignment_14();
+            rule__GSSScenarioAlarmMsg__GVRefAssignment_14();
 
             state._fsp--;
             if (state.failed) return ;
@@ -66472,7 +66472,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVAssignment_14()); 
+               after(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVRefAssignment_14()); 
             }
 
             }
@@ -67823,26 +67823,26 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSScenarioModify__Group__14__Impl"
-    // InternalENVIRONMENT.g:21947:1: rule__GSSScenarioModify__Group__14__Impl : ( ( rule__GSSScenarioModify__GVAssignment_14 ) ) ;
+    // InternalENVIRONMENT.g:21947:1: rule__GSSScenarioModify__Group__14__Impl : ( ( rule__GSSScenarioModify__GVRefAssignment_14 ) ) ;
     public final void rule__GSSScenarioModify__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:21951:1: ( ( ( rule__GSSScenarioModify__GVAssignment_14 ) ) )
-            // InternalENVIRONMENT.g:21952:1: ( ( rule__GSSScenarioModify__GVAssignment_14 ) )
+            // InternalENVIRONMENT.g:21951:1: ( ( ( rule__GSSScenarioModify__GVRefAssignment_14 ) ) )
+            // InternalENVIRONMENT.g:21952:1: ( ( rule__GSSScenarioModify__GVRefAssignment_14 ) )
             {
-            // InternalENVIRONMENT.g:21952:1: ( ( rule__GSSScenarioModify__GVAssignment_14 ) )
-            // InternalENVIRONMENT.g:21953:2: ( rule__GSSScenarioModify__GVAssignment_14 )
+            // InternalENVIRONMENT.g:21952:1: ( ( rule__GSSScenarioModify__GVRefAssignment_14 ) )
+            // InternalENVIRONMENT.g:21953:2: ( rule__GSSScenarioModify__GVRefAssignment_14 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioModifyAccess().getGVAssignment_14()); 
+               before(grammarAccess.getGSSScenarioModifyAccess().getGVRefAssignment_14()); 
             }
-            // InternalENVIRONMENT.g:21954:2: ( rule__GSSScenarioModify__GVAssignment_14 )
-            // InternalENVIRONMENT.g:21954:3: rule__GSSScenarioModify__GVAssignment_14
+            // InternalENVIRONMENT.g:21954:2: ( rule__GSSScenarioModify__GVRefAssignment_14 )
+            // InternalENVIRONMENT.g:21954:3: rule__GSSScenarioModify__GVRefAssignment_14
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSScenarioModify__GVAssignment_14();
+            rule__GSSScenarioModify__GVRefAssignment_14();
 
             state._fsp--;
             if (state.failed) return ;
@@ -67850,7 +67850,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioModifyAccess().getGVAssignment_14()); 
+               after(grammarAccess.getGSSScenarioModifyAccess().getGVRefAssignment_14()); 
             }
 
             }
@@ -68875,26 +68875,26 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GSSScenarioAlarmVal__Group__10__Impl"
-    // InternalENVIRONMENT.g:22298:1: rule__GSSScenarioAlarmVal__Group__10__Impl : ( ( rule__GSSScenarioAlarmVal__GVAssignment_10 ) ) ;
+    // InternalENVIRONMENT.g:22298:1: rule__GSSScenarioAlarmVal__Group__10__Impl : ( ( rule__GSSScenarioAlarmVal__GVRefAssignment_10 ) ) ;
     public final void rule__GSSScenarioAlarmVal__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:22302:1: ( ( ( rule__GSSScenarioAlarmVal__GVAssignment_10 ) ) )
-            // InternalENVIRONMENT.g:22303:1: ( ( rule__GSSScenarioAlarmVal__GVAssignment_10 ) )
+            // InternalENVIRONMENT.g:22302:1: ( ( ( rule__GSSScenarioAlarmVal__GVRefAssignment_10 ) ) )
+            // InternalENVIRONMENT.g:22303:1: ( ( rule__GSSScenarioAlarmVal__GVRefAssignment_10 ) )
             {
-            // InternalENVIRONMENT.g:22303:1: ( ( rule__GSSScenarioAlarmVal__GVAssignment_10 ) )
-            // InternalENVIRONMENT.g:22304:2: ( rule__GSSScenarioAlarmVal__GVAssignment_10 )
+            // InternalENVIRONMENT.g:22303:1: ( ( rule__GSSScenarioAlarmVal__GVRefAssignment_10 ) )
+            // InternalENVIRONMENT.g:22304:2: ( rule__GSSScenarioAlarmVal__GVRefAssignment_10 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioAlarmValAccess().getGVAssignment_10()); 
+               before(grammarAccess.getGSSScenarioAlarmValAccess().getGVRefAssignment_10()); 
             }
-            // InternalENVIRONMENT.g:22305:2: ( rule__GSSScenarioAlarmVal__GVAssignment_10 )
-            // InternalENVIRONMENT.g:22305:3: rule__GSSScenarioAlarmVal__GVAssignment_10
+            // InternalENVIRONMENT.g:22305:2: ( rule__GSSScenarioAlarmVal__GVRefAssignment_10 )
+            // InternalENVIRONMENT.g:22305:3: rule__GSSScenarioAlarmVal__GVRefAssignment_10
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSScenarioAlarmVal__GVAssignment_10();
+            rule__GSSScenarioAlarmVal__GVRefAssignment_10();
 
             state._fsp--;
             if (state.failed) return ;
@@ -68902,7 +68902,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioAlarmValAccess().getGVAssignment_10()); 
+               after(grammarAccess.getGSSScenarioAlarmValAccess().getGVRefAssignment_10()); 
             }
 
             }
@@ -82907,29 +82907,29 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__GSSScenarioPlot__ChartRefAssignment_8"
 
 
-    // $ANTLR start "rule__GSSScenarioPlot__GVAssignment_10"
-    // InternalENVIRONMENT.g:26944:1: rule__GSSScenarioPlot__GVAssignment_10 : ( ruleGSSScenarioGV ) ;
-    public final void rule__GSSScenarioPlot__GVAssignment_10() throws RecognitionException {
+    // $ANTLR start "rule__GSSScenarioPlot__GVRefAssignment_10"
+    // InternalENVIRONMENT.g:26944:1: rule__GSSScenarioPlot__GVRefAssignment_10 : ( ruleGSSScenarioGVRef ) ;
+    public final void rule__GSSScenarioPlot__GVRefAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:26948:1: ( ( ruleGSSScenarioGV ) )
-            // InternalENVIRONMENT.g:26949:2: ( ruleGSSScenarioGV )
+            // InternalENVIRONMENT.g:26948:1: ( ( ruleGSSScenarioGVRef ) )
+            // InternalENVIRONMENT.g:26949:2: ( ruleGSSScenarioGVRef )
             {
-            // InternalENVIRONMENT.g:26949:2: ( ruleGSSScenarioGV )
-            // InternalENVIRONMENT.g:26950:3: ruleGSSScenarioGV
+            // InternalENVIRONMENT.g:26949:2: ( ruleGSSScenarioGVRef )
+            // InternalENVIRONMENT.g:26950:3: ruleGSSScenarioGVRef
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioPlotAccess().getGVGSSScenarioGVParserRuleCall_10_0()); 
+               before(grammarAccess.getGSSScenarioPlotAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSScenarioGV();
+            ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioPlotAccess().getGVGSSScenarioGVParserRuleCall_10_0()); 
+               after(grammarAccess.getGSSScenarioPlotAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0()); 
             }
 
             }
@@ -82949,7 +82949,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__GSSScenarioPlot__GVAssignment_10"
+    // $ANTLR end "rule__GSSScenarioPlot__GVRefAssignment_10"
 
 
     // $ANTLR start "rule__GSSScenarioAlarmMsg__NameAssignment_4"
@@ -83079,29 +83079,29 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__GSSScenarioAlarmMsg__TextAssignment_12"
 
 
-    // $ANTLR start "rule__GSSScenarioAlarmMsg__GVAssignment_14"
-    // InternalENVIRONMENT.g:27004:1: rule__GSSScenarioAlarmMsg__GVAssignment_14 : ( ruleGSSScenarioGV ) ;
-    public final void rule__GSSScenarioAlarmMsg__GVAssignment_14() throws RecognitionException {
+    // $ANTLR start "rule__GSSScenarioAlarmMsg__GVRefAssignment_14"
+    // InternalENVIRONMENT.g:27004:1: rule__GSSScenarioAlarmMsg__GVRefAssignment_14 : ( ruleGSSScenarioGVRef ) ;
+    public final void rule__GSSScenarioAlarmMsg__GVRefAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:27008:1: ( ( ruleGSSScenarioGV ) )
-            // InternalENVIRONMENT.g:27009:2: ( ruleGSSScenarioGV )
+            // InternalENVIRONMENT.g:27008:1: ( ( ruleGSSScenarioGVRef ) )
+            // InternalENVIRONMENT.g:27009:2: ( ruleGSSScenarioGVRef )
             {
-            // InternalENVIRONMENT.g:27009:2: ( ruleGSSScenarioGV )
-            // InternalENVIRONMENT.g:27010:3: ruleGSSScenarioGV
+            // InternalENVIRONMENT.g:27009:2: ( ruleGSSScenarioGVRef )
+            // InternalENVIRONMENT.g:27010:3: ruleGSSScenarioGVRef
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVGSSScenarioGVParserRuleCall_14_0()); 
+               before(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSScenarioGV();
+            ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVGSSScenarioGVParserRuleCall_14_0()); 
+               after(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0()); 
             }
 
             }
@@ -83121,7 +83121,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__GSSScenarioAlarmMsg__GVAssignment_14"
+    // $ANTLR end "rule__GSSScenarioAlarmMsg__GVRefAssignment_14"
 
 
     // $ANTLR start "rule__GSSScenarioModify__NameAssignment_4"
@@ -83255,29 +83255,29 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__GSSScenarioModify__ValueAssignment_12"
 
 
-    // $ANTLR start "rule__GSSScenarioModify__GVAssignment_14"
-    // InternalENVIRONMENT.g:27064:1: rule__GSSScenarioModify__GVAssignment_14 : ( ruleGSSScenarioGV ) ;
-    public final void rule__GSSScenarioModify__GVAssignment_14() throws RecognitionException {
+    // $ANTLR start "rule__GSSScenarioModify__GVRefAssignment_14"
+    // InternalENVIRONMENT.g:27064:1: rule__GSSScenarioModify__GVRefAssignment_14 : ( ruleGSSScenarioGVRef ) ;
+    public final void rule__GSSScenarioModify__GVRefAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:27068:1: ( ( ruleGSSScenarioGV ) )
-            // InternalENVIRONMENT.g:27069:2: ( ruleGSSScenarioGV )
+            // InternalENVIRONMENT.g:27068:1: ( ( ruleGSSScenarioGVRef ) )
+            // InternalENVIRONMENT.g:27069:2: ( ruleGSSScenarioGVRef )
             {
-            // InternalENVIRONMENT.g:27069:2: ( ruleGSSScenarioGV )
-            // InternalENVIRONMENT.g:27070:3: ruleGSSScenarioGV
+            // InternalENVIRONMENT.g:27069:2: ( ruleGSSScenarioGVRef )
+            // InternalENVIRONMENT.g:27070:3: ruleGSSScenarioGVRef
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioModifyAccess().getGVGSSScenarioGVParserRuleCall_14_0()); 
+               before(grammarAccess.getGSSScenarioModifyAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSScenarioGV();
+            ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioModifyAccess().getGVGSSScenarioGVParserRuleCall_14_0()); 
+               after(grammarAccess.getGSSScenarioModifyAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0()); 
             }
 
             }
@@ -83297,7 +83297,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__GSSScenarioModify__GVAssignment_14"
+    // $ANTLR end "rule__GSSScenarioModify__GVRefAssignment_14"
 
 
     // $ANTLR start "rule__GSSScenarioAlarmVal__NameAssignment_4"
@@ -83386,29 +83386,29 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__GSSScenarioAlarmVal__TypeAssignment_8"
 
 
-    // $ANTLR start "rule__GSSScenarioAlarmVal__GVAssignment_10"
-    // InternalENVIRONMENT.g:27109:1: rule__GSSScenarioAlarmVal__GVAssignment_10 : ( ruleGSSScenarioGV ) ;
-    public final void rule__GSSScenarioAlarmVal__GVAssignment_10() throws RecognitionException {
+    // $ANTLR start "rule__GSSScenarioAlarmVal__GVRefAssignment_10"
+    // InternalENVIRONMENT.g:27109:1: rule__GSSScenarioAlarmVal__GVRefAssignment_10 : ( ruleGSSScenarioGVRef ) ;
+    public final void rule__GSSScenarioAlarmVal__GVRefAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalENVIRONMENT.g:27113:1: ( ( ruleGSSScenarioGV ) )
-            // InternalENVIRONMENT.g:27114:2: ( ruleGSSScenarioGV )
+            // InternalENVIRONMENT.g:27113:1: ( ( ruleGSSScenarioGVRef ) )
+            // InternalENVIRONMENT.g:27114:2: ( ruleGSSScenarioGVRef )
             {
-            // InternalENVIRONMENT.g:27114:2: ( ruleGSSScenarioGV )
-            // InternalENVIRONMENT.g:27115:3: ruleGSSScenarioGV
+            // InternalENVIRONMENT.g:27114:2: ( ruleGSSScenarioGVRef )
+            // InternalENVIRONMENT.g:27115:3: ruleGSSScenarioGVRef
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSScenarioAlarmValAccess().getGVGSSScenarioGVParserRuleCall_10_0()); 
+               before(grammarAccess.getGSSScenarioAlarmValAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleGSSScenarioGV();
+            ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSScenarioAlarmValAccess().getGVGSSScenarioGVParserRuleCall_10_0()); 
+               after(grammarAccess.getGSSScenarioAlarmValAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0()); 
             }
 
             }
@@ -83428,7 +83428,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__GSSScenarioAlarmVal__GVAssignment_10"
+    // $ANTLR end "rule__GSSScenarioAlarmVal__GVRefAssignment_10"
 
 
     // $ANTLR start "rule__GSSScenarioGVFiltered__GlobalVarRefAssignment_4"

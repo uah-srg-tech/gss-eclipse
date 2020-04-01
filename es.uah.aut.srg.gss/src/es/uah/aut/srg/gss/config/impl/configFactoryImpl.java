@@ -65,8 +65,6 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case configPackage.GSS_CONFIG_GSS_CONFIG: return createGSSConfigGSSConfig();
-			case configPackage.GSS_CONFIG_TESTS: return createGSSConfigTests();
-			case configPackage.GSS_CONFIG_TEST_CASE: return createGSSConfigTestCase();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -80,26 +78,6 @@ public class configFactoryImpl extends EFactoryImpl implements configFactory {
 	public GSSConfigGSSConfig createGSSConfigGSSConfig() {
 		GSSConfigGSSConfigImpl gssConfigGSSConfig = new GSSConfigGSSConfigImpl();
 		return gssConfigGSSConfig;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigTests createGSSConfigTests() {
-		GSSConfigTestsImpl gssConfigTests = new GSSConfigTestsImpl();
-		return gssConfigTests;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSConfigTestCase createGSSConfigTestCase() {
-		GSSConfigTestCaseImpl gssConfigTestCase = new GSSConfigTestCaseImpl();
-		return gssConfigTestCase;
 	}
 
 	/**

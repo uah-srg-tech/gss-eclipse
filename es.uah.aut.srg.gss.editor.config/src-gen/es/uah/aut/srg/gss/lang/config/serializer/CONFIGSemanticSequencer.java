@@ -15,8 +15,6 @@ import es.uah.aut.srg.gss.common.GSSModelFile;
 import es.uah.aut.srg.gss.common.GSSModelFileImport;
 import es.uah.aut.srg.gss.common.commonPackage;
 import es.uah.aut.srg.gss.config.GSSConfigGSSConfig;
-import es.uah.aut.srg.gss.config.GSSConfigTestCase;
-import es.uah.aut.srg.gss.config.GSSConfigTests;
 import es.uah.aut.srg.gss.config.configPackage;
 import es.uah.aut.srg.gss.lang.config.services.CONFIGGrammarAccess;
 import es.uah.aut.srg.gss.scenario.GSSScenarioAlarmMsg;
@@ -59,6 +57,9 @@ import es.uah.aut.srg.gss.scenario.GSSScenarioStructuredData;
 import es.uah.aut.srg.gss.scenario.GSSScenarioUpperLevel;
 import es.uah.aut.srg.gss.scenario.GSSScenarioUpperLevels;
 import es.uah.aut.srg.gss.scenario.scenarioPackage;
+import es.uah.aut.srg.gss.test_list.GSSTestListTestCase;
+import es.uah.aut.srg.gss.test_list.GSSTestListTestList;
+import es.uah.aut.srg.gss.test_list.test_listPackage;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -95,12 +96,6 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			switch (semanticObject.eClass().getClassifierID()) {
 			case configPackage.GSS_CONFIG_GSS_CONFIG:
 				sequence_GSSConfigGSSConfig(context, (GSSConfigGSSConfig) semanticObject); 
-				return; 
-			case configPackage.GSS_CONFIG_TEST_CASE:
-				sequence_GSSConfigTestCase(context, (GSSConfigTestCase) semanticObject); 
-				return; 
-			case configPackage.GSS_CONFIG_TESTS:
-				sequence_GSSConfigTests(context, (GSSConfigTests) semanticObject); 
 				return; 
 			}
 		else if (epackage == scenarioPackage.eINSTANCE)
@@ -230,6 +225,15 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				sequence_GSSScenarioUpperLevels(context, (GSSScenarioUpperLevels) semanticObject); 
 				return; 
 			}
+		else if (epackage == test_listPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE:
+				sequence_GSSTestListTestCase(context, (GSSTestListTestCase) semanticObject); 
+				return; 
+			case test_listPackage.GSS_TEST_LIST_TEST_LIST:
+				sequence_GSSTestListTestList(context, (GSSTestListTestList) semanticObject); 
+				return; 
+			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
@@ -239,7 +243,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSConfigGSSConfig returns GSSConfigGSSConfig
 	 *
 	 * Constraint:
-	 *     (name=ID uri=QualifiedName version=Version scenario=GSSScenarioScenario Tests=GSSConfigTests)
+	 *     (name=ID uri=QualifiedName version=Version scenario=GSSScenarioScenario Tests=GSSTestListTestList)
 	 */
 	protected void sequence_GSSConfigGSSConfig(ISerializationContext context, GSSConfigGSSConfig semanticObject) {
 		if (errorAcceptor != null) {
@@ -259,32 +263,8 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		feeder.accept(grammarAccess.getGSSConfigGSSConfigAccess().getUriQualifiedNameParserRuleCall_3_2_0(), semanticObject.getUri());
 		feeder.accept(grammarAccess.getGSSConfigGSSConfigAccess().getVersionVersionParserRuleCall_6_0(), semanticObject.getVersion());
 		feeder.accept(grammarAccess.getGSSConfigGSSConfigAccess().getScenarioGSSScenarioScenarioParserRuleCall_8_0(), semanticObject.getScenario());
-		feeder.accept(grammarAccess.getGSSConfigGSSConfigAccess().getTestsGSSConfigTestsParserRuleCall_9_0(), semanticObject.getTests());
+		feeder.accept(grammarAccess.getGSSConfigGSSConfigAccess().getTestsGSSTestListTestListParserRuleCall_9_0(), semanticObject.getTests());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSConfigTestCase returns GSSConfigTestCase
-	 *
-	 * Constraint:
-	 *     (name=STRING procedure=[GSSTestProcTestProc|VersionedQualifiedName] prevMsg=ID? (prevAction=GSSTestProcPrevAction prevActionParam=STRING?)?)
-	 */
-	protected void sequence_GSSConfigTestCase(ISerializationContext context, GSSConfigTestCase semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSConfigTests returns GSSConfigTests
-	 *
-	 * Constraint:
-	 *     TestCase+=GSSConfigTestCase+
-	 */
-	protected void sequence_GSSConfigTests(ISerializationContext context, GSSConfigTests semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -324,7 +304,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSScenarioAlarmMsg returns GSSScenarioAlarmMsg
 	 *
 	 * Constraint:
-	 *     (name=STRING type=GSSScenarioAlarmMsgType text=STRING GV=GSSScenarioGV)
+	 *     (name=STRING type=GSSScenarioAlarmMsgType text=STRING GVRef=GSSScenarioGVRef)
 	 */
 	protected void sequence_GSSScenarioAlarmMsg(ISerializationContext context, GSSScenarioAlarmMsg semanticObject) {
 		if (errorAcceptor != null) {
@@ -334,14 +314,14 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_ALARM_MSG__TYPE));
 			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_ALARM_MSG__TEXT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_ALARM_MSG__TEXT));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV_REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSScenarioAlarmMsgAccess().getNameSTRINGTerminalRuleCall_4_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getGSSScenarioAlarmMsgAccess().getTypeGSSScenarioAlarmMsgTypeEnumRuleCall_8_0(), semanticObject.getType());
 		feeder.accept(grammarAccess.getGSSScenarioAlarmMsgAccess().getTextSTRINGTerminalRuleCall_12_0(), semanticObject.getText());
-		feeder.accept(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVGSSScenarioGVParserRuleCall_14_0(), semanticObject.getGV());
+		feeder.accept(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0(), semanticObject.getGVRef());
 		feeder.finish();
 	}
 	
@@ -352,7 +332,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSScenarioAlarmVal returns GSSScenarioAlarmVal
 	 *
 	 * Constraint:
-	 *     (name=STRING type=GSSScenarioAlarmValType GV=GSSScenarioGV)
+	 *     (name=STRING type=GSSScenarioAlarmValType GVRef=GSSScenarioGVRef)
 	 */
 	protected void sequence_GSSScenarioAlarmVal(ISerializationContext context, GSSScenarioAlarmVal semanticObject) {
 		if (errorAcceptor != null) {
@@ -360,13 +340,13 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__NAME));
 			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_ALARM_VAL__TYPE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_ALARM_VAL__TYPE));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV_REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSScenarioAlarmValAccess().getNameSTRINGTerminalRuleCall_4_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getGSSScenarioAlarmValAccess().getTypeGSSScenarioAlarmValTypeEnumRuleCall_8_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getGSSScenarioAlarmValAccess().getGVGSSScenarioGVParserRuleCall_10_0(), semanticObject.getGV());
+		feeder.accept(grammarAccess.getGSSScenarioAlarmValAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0(), semanticObject.getGVRef());
 		feeder.finish();
 	}
 	
@@ -441,7 +421,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     GSSScenarioGV returns GSSScenarioGVFiltered
+	 *     GSSScenarioGVRef returns GSSScenarioGVFiltered
 	 *     GSSScenarioGVFiltered returns GSSScenarioGVFiltered
 	 *
 	 * Constraint:
@@ -454,7 +434,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     GSSScenarioGV returns GSSScenarioGVPeriodic
+	 *     GSSScenarioGVRef returns GSSScenarioGVPeriodic
 	 *     GSSScenarioGVPeriodic returns GSSScenarioGVPeriodic
 	 *
 	 * Constraint:
@@ -462,8 +442,8 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 */
 	protected void sequence_GSSScenarioGVPeriodic(ISerializationContext context, GSSScenarioGVPeriodic semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GV__GLOBAL_VAR_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GV__GLOBAL_VAR_REF));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GV_REF__GLOBAL_VAR_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GV_REF__GLOBAL_VAR_REF));
 			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GV_PERIODIC__PERIOD_VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GV_PERIODIC__PERIOD_VALUE));
 			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_GV_PERIODIC__PERIOD_UNIT) == ValueTransient.YES)
@@ -658,7 +638,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSScenarioModify returns GSSScenarioModify
 	 *
 	 * Constraint:
-	 *     (name=STRING type=GSSScenarioModifyType value=INTEGER GV=GSSScenarioGV)
+	 *     (name=STRING type=GSSScenarioModifyType value=INTEGER GVRef=GSSScenarioGVRef)
 	 */
 	protected void sequence_GSSScenarioModify(ISerializationContext context, GSSScenarioModify semanticObject) {
 		if (errorAcceptor != null) {
@@ -668,14 +648,14 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MODIFY__TYPE));
 			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MODIFY__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MODIFY__VALUE));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV_REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSScenarioModifyAccess().getNameSTRINGTerminalRuleCall_4_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getGSSScenarioModifyAccess().getTypeGSSScenarioModifyTypeEnumRuleCall_8_0(), semanticObject.getType());
 		feeder.accept(grammarAccess.getGSSScenarioModifyAccess().getValueINTEGERParserRuleCall_12_0(), semanticObject.getValue());
-		feeder.accept(grammarAccess.getGSSScenarioModifyAccess().getGVGSSScenarioGVParserRuleCall_14_0(), semanticObject.getGV());
+		feeder.accept(grammarAccess.getGSSScenarioModifyAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0(), semanticObject.getGVRef());
 		feeder.finish();
 	}
 	
@@ -865,7 +845,7 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     GSSScenarioPlot returns GSSScenarioPlot
 	 *
 	 * Constraint:
-	 *     (name=STRING chartRef=[GSSChartsChart|VersionedQualifiedReferenceName] GV=GSSScenarioGV)
+	 *     (name=STRING chartRef=[GSSChartsChart|VersionedQualifiedReferenceName] GVRef=GSSScenarioGVRef)
 	 */
 	protected void sequence_GSSScenarioPlot(ISerializationContext context, GSSScenarioPlot semanticObject) {
 		if (errorAcceptor != null) {
@@ -873,13 +853,13 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__NAME));
 			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_PLOT__CHART_REF) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_PLOT__CHART_REF));
-			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV));
+			if (transientValues.isValueTransient(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, scenarioPackage.Literals.GSS_SCENARIO_MONITOR__GV_REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSScenarioPlotAccess().getNameSTRINGTerminalRuleCall_4_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getGSSScenarioPlotAccess().getChartRefGSSChartsChartVersionedQualifiedReferenceNameParserRuleCall_8_0_1(), semanticObject.getChartRef());
-		feeder.accept(grammarAccess.getGSSScenarioPlotAccess().getGVGSSScenarioGVParserRuleCall_10_0(), semanticObject.getGV());
+		feeder.accept(grammarAccess.getGSSScenarioPlotAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0(), semanticObject.getGVRef());
 		feeder.finish();
 	}
 	
@@ -1166,6 +1146,30 @@ public class CONFIGSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     UpperLevel+=GSSScenarioUpperLevel+
 	 */
 	protected void sequence_GSSScenarioUpperLevels(ISerializationContext context, GSSScenarioUpperLevels semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     GSSTestListTestCase returns GSSTestListTestCase
+	 *
+	 * Constraint:
+	 *     (name=STRING procedure=[GSSTestProcTestProc|VersionedQualifiedName] prevMsg=ID? (prevAction=GSSTestListPrevAction prevActionParam=STRING?)?)
+	 */
+	protected void sequence_GSSTestListTestCase(ISerializationContext context, GSSTestListTestCase semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     GSSTestListTestList returns GSSTestListTestList
+	 *
+	 * Constraint:
+	 *     TestCase+=GSSTestListTestCase+
+	 */
+	protected void sequence_GSSTestListTestList(ISerializationContext context, GSSTestListTestList semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

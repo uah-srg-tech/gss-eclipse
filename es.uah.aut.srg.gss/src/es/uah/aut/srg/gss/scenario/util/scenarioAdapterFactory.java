@@ -239,8 +239,8 @@ public class scenarioAdapterFactory extends AdapterFactoryImpl {
 				return createGSSScenarioAlarmValAdapter();
 			}
 			@Override
-			public Adapter caseGSSScenarioGV(GSSScenarioGV object) {
-				return createGSSScenarioGVAdapter();
+			public Adapter caseGSSScenarioGVRef(GSSScenarioGVRef object) {
+				return createGSSScenarioGVRefAdapter();
 			}
 			@Override
 			public Adapter caseGSSScenarioGVFiltered(GSSScenarioGVFiltered object) {
@@ -843,16 +843,16 @@ public class scenarioAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGV <em>GSS Scenario GV</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGVRef <em>GSS Scenario GV Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGV
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGVRef
 	 * @generated
 	 */
-	public Adapter createGSSScenarioGVAdapter() {
+	public Adapter createGSSScenarioGVRefAdapter() {
 		return null;
 	}
 

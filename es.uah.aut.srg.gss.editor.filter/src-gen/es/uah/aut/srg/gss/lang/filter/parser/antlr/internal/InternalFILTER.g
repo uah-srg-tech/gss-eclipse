@@ -827,15 +827,15 @@ ruleGSSFilterBoolVar returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getGSSFilterBoolVarAccess().getValueGSSFilterValueParserRuleCall_19_0());
 				}
-				lv_Value_19_0=ruleGSSFilterValue
+				lv_value_19_0=ruleGSSFilterValue
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarRule());
 					}
 					set(
 						$current,
-						"Value",
-						lv_Value_19_0,
+						"value",
+						lv_value_19_0,
 						"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterValue");
 					afterParserOrEnumRuleCall();
 				}
@@ -1020,72 +1020,30 @@ ruleGSSFilterBoolVarFromArrayItem returns [EObject current=null]
 		)
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_19_0_0());
+				{
+					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getValueGSSFilterValueParserRuleCall_19_0());
+				}
+				lv_value_19_0=ruleGSSFilterValue
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromArrayItemRule());
 					}
-					lv_Constant_19_0=ruleGSSFilterConstant
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromArrayItemRule());
-						}
-						set(
-							$current,
-							"Constant",
-							lv_Constant_19_0,
-							"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterConstant");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_19_1_0());
-					}
-					lv_Select_20_0=ruleGSSFilterSelect
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromArrayItemRule());
-						}
-						set(
-							$current,
-							"Select",
-							lv_Select_20_0,
-							"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterSelect");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_19_2_0());
-					}
-					lv_SelectLine_21_0=ruleGSSFilterSelectLine
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromArrayItemRule());
-						}
-						set(
-							$current,
-							"SelectLine",
-							lv_SelectLine_21_0,
-							"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterSelectLine");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"value",
+						lv_value_19_0,
+						"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterValue");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)
-		otherlv_22='}'
+		otherlv_20='}'
 		{
-			newLeafNode(otherlv_22, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getRightCurlyBracketKeyword_20());
+			newLeafNode(otherlv_20, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getRightCurlyBracketKeyword_20());
 		}
-		otherlv_23=';'
+		otherlv_21=';'
 		{
-			newLeafNode(otherlv_23, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_21());
+			newLeafNode(otherlv_21, grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSemicolonKeyword_21());
 		}
 	)
 ;
@@ -1288,72 +1246,30 @@ ruleGSSFilterBoolVarFromGroupedArrayItem returns [EObject current=null]
 		)
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_23_0_0());
+				{
+					newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getValueGSSFilterValueParserRuleCall_23_0());
+				}
+				lv_value_23_0=ruleGSSFilterValue
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemRule());
 					}
-					lv_Constant_23_0=ruleGSSFilterConstant
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemRule());
-						}
-						set(
-							$current,
-							"Constant",
-							lv_Constant_23_0,
-							"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterConstant");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_23_1_0());
-					}
-					lv_Select_24_0=ruleGSSFilterSelect
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemRule());
-						}
-						set(
-							$current,
-							"Select",
-							lv_Select_24_0,
-							"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterSelect");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_23_2_0());
-					}
-					lv_SelectLine_25_0=ruleGSSFilterSelectLine
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemRule());
-						}
-						set(
-							$current,
-							"SelectLine",
-							lv_SelectLine_25_0,
-							"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterSelectLine");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"value",
+						lv_value_23_0,
+						"es.uah.aut.srg.gss.lang.filter.FILTER.GSSFilterValue");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)
-		otherlv_26='}'
+		otherlv_24='}'
 		{
-			newLeafNode(otherlv_26, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getRightCurlyBracketKeyword_24());
+			newLeafNode(otherlv_24, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getRightCurlyBracketKeyword_24());
 		}
-		otherlv_27=';'
+		otherlv_25=';'
 		{
-			newLeafNode(otherlv_27, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_25());
+			newLeafNode(otherlv_25, grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSemicolonKeyword_25());
 		}
 	)
 ;

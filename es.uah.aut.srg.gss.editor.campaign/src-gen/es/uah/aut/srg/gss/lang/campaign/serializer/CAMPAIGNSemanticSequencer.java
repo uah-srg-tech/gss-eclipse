@@ -13,13 +13,14 @@ package es.uah.aut.srg.gss.lang.campaign.serializer;
 import com.google.inject.Inject;
 import es.uah.aut.srg.gss.campaign.GSSCampaignCampaign;
 import es.uah.aut.srg.gss.campaign.GSSCampaignScenario;
-import es.uah.aut.srg.gss.campaign.GSSCampaignTestCase;
-import es.uah.aut.srg.gss.campaign.GSSCampaignTests;
 import es.uah.aut.srg.gss.campaign.campaignPackage;
 import es.uah.aut.srg.gss.common.GSSModelFile;
 import es.uah.aut.srg.gss.common.GSSModelFileImport;
 import es.uah.aut.srg.gss.common.commonPackage;
 import es.uah.aut.srg.gss.lang.campaign.services.CAMPAIGNGrammarAccess;
+import es.uah.aut.srg.gss.test_list.GSSTestListTestCase;
+import es.uah.aut.srg.gss.test_list.GSSTestListTestList;
+import es.uah.aut.srg.gss.test_list.test_listPackage;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -51,12 +52,6 @@ public class CAMPAIGNSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case campaignPackage.GSS_CAMPAIGN_SCENARIO:
 				sequence_GSSCampaignScenario(context, (GSSCampaignScenario) semanticObject); 
 				return; 
-			case campaignPackage.GSS_CAMPAIGN_TEST_CASE:
-				sequence_GSSCampaignTestCase(context, (GSSCampaignTestCase) semanticObject); 
-				return; 
-			case campaignPackage.GSS_CAMPAIGN_TESTS:
-				sequence_GSSCampaignTests(context, (GSSCampaignTests) semanticObject); 
-				return; 
 			}
 		else if (epackage == commonPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
@@ -65,6 +60,15 @@ public class CAMPAIGNSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case commonPackage.GSS_MODEL_FILE_IMPORT:
 				sequence_GSSModelFileImport(context, (GSSModelFileImport) semanticObject); 
+				return; 
+			}
+		else if (epackage == test_listPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE:
+				sequence_GSSTestListTestCase(context, (GSSTestListTestCase) semanticObject); 
+				return; 
+			case test_listPackage.GSS_TEST_LIST_TEST_LIST:
+				sequence_GSSTestListTestList(context, (GSSTestListTestList) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -76,7 +80,7 @@ public class CAMPAIGNSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     GSSCampaignCampaign returns GSSCampaignCampaign
 	 *
 	 * Constraint:
-	 *     (name=ID uri=QualifiedName version=Version Scenario=GSSCampaignScenario Tests=GSSCampaignTests)
+	 *     (name=ID uri=QualifiedName version=Version Scenario=GSSCampaignScenario Tests=GSSTestListTestList)
 	 */
 	protected void sequence_GSSCampaignCampaign(ISerializationContext context, GSSCampaignCampaign semanticObject) {
 		if (errorAcceptor != null) {
@@ -96,7 +100,7 @@ public class CAMPAIGNSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		feeder.accept(grammarAccess.getGSSCampaignCampaignAccess().getUriQualifiedNameParserRuleCall_3_2_0(), semanticObject.getUri());
 		feeder.accept(grammarAccess.getGSSCampaignCampaignAccess().getVersionVersionParserRuleCall_6_0(), semanticObject.getVersion());
 		feeder.accept(grammarAccess.getGSSCampaignCampaignAccess().getScenarioGSSCampaignScenarioParserRuleCall_8_0(), semanticObject.getScenario());
-		feeder.accept(grammarAccess.getGSSCampaignCampaignAccess().getTestsGSSCampaignTestsParserRuleCall_9_0(), semanticObject.getTests());
+		feeder.accept(grammarAccess.getGSSCampaignCampaignAccess().getTestsGSSTestListTestListParserRuleCall_9_0(), semanticObject.getTests());
 		feeder.finish();
 	}
 	
@@ -119,30 +123,6 @@ public class CAMPAIGNSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		feeder.accept(grammarAccess.getGSSCampaignScenarioAccess().getEnvironmentGSSEnvironmentEnvironmentVersionedQualifiedNameParserRuleCall_4_0_1(), semanticObject.getEnvironment());
 		feeder.accept(grammarAccess.getGSSCampaignScenarioAccess().getScenarioRefGSSScenarioScenarioSTRINGTerminalRuleCall_8_0_1(), semanticObject.getScenarioRef());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSCampaignTestCase returns GSSCampaignTestCase
-	 *
-	 * Constraint:
-	 *     (name=STRING procedure=[GSSTestProcTestProc|VersionedQualifiedName] prevMsg=ID? (prevAction=GSSTestProcPrevAction prevActionParam=STRING?)?)
-	 */
-	protected void sequence_GSSCampaignTestCase(ISerializationContext context, GSSCampaignTestCase semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSCampaignTests returns GSSCampaignTests
-	 *
-	 * Constraint:
-	 *     TestCase+=GSSCampaignTestCase+
-	 */
-	protected void sequence_GSSCampaignTests(ISerializationContext context, GSSCampaignTests semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -172,6 +152,30 @@ public class CAMPAIGNSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     (imports+=GSSModelFileImport* element=GSSCampaignCampaign)
 	 */
 	protected void sequence_GSSModelFile(ISerializationContext context, GSSModelFile semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     GSSTestListTestCase returns GSSTestListTestCase
+	 *
+	 * Constraint:
+	 *     (name=STRING procedure=[GSSTestProcTestProc|VersionedQualifiedName] prevMsg=ID? (prevAction=GSSTestListPrevAction prevActionParam=STRING?)?)
+	 */
+	protected void sequence_GSSTestListTestCase(ISerializationContext context, GSSTestListTestCase semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     GSSTestListTestList returns GSSTestListTestList
+	 *
+	 * Constraint:
+	 *     TestCase+=GSSTestListTestCase+
+	 */
+	protected void sequence_GSSTestListTestList(ISerializationContext context, GSSTestListTestList semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

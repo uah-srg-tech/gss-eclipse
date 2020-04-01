@@ -35,7 +35,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class GSSScenarioGVFilteredImpl extends GSSScenarioGVImpl implements GSSScenarioGVFiltered {
+public class GSSScenarioGVFilteredImpl extends GSSScenarioGVRefImpl implements GSSScenarioGVFiltered {
 	/**
 	 * The cached value of the '{@link #getFilter() <em>Filter</em>}' reference.
 	 * <!-- begin-user-doc -->

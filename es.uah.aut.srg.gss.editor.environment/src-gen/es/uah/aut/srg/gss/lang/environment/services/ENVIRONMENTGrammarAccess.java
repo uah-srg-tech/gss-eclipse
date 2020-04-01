@@ -4358,8 +4358,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cChartRefGSSChartsChartCrossReference_8_0 = (CrossReference)cChartRefAssignment_8.eContents().get(0);
 		private final RuleCall cChartRefGSSChartsChartVersionedQualifiedReferenceNameParserRuleCall_8_0_1 = (RuleCall)cChartRefGSSChartsChartCrossReference_8_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Assignment cGVAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cGVGSSScenarioGVParserRuleCall_10_0 = (RuleCall)cGVAssignment_10.eContents().get(0);
+		private final Assignment cGVRefAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cGVRefGSSScenarioGVRefParserRuleCall_10_0 = (RuleCall)cGVRefAssignment_10.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Keyword cSemicolonKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
@@ -4367,12 +4367,12 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSScenarioPlot' '{'
 		//	'name' ':=' name=STRING ';'
 		//	'chartRef' ':=' chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';'
-		//	GV=GSSScenarioGV
+		//	GVRef=GSSScenarioGVRef
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSScenarioPlot' '{' 'name' ':=' name=STRING ';' 'chartRef' ':='
-		//chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';' GV=GSSScenarioGV '}' ';'
+		//chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';' GVRef=GSSScenarioGVRef '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioPlot'
@@ -4414,11 +4414,11 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
-		//GV=GSSScenarioGV
-		public Assignment getGVAssignment_10() { return cGVAssignment_10; }
+		//GVRef=GSSScenarioGVRef
+		public Assignment getGVRefAssignment_10() { return cGVRefAssignment_10; }
 		
-		//GSSScenarioGV
-		public RuleCall getGVGSSScenarioGVParserRuleCall_10_0() { return cGVGSSScenarioGVParserRuleCall_10_0; }
+		//GSSScenarioGVRef
+		public RuleCall getGVRefGSSScenarioGVRefParserRuleCall_10_0() { return cGVRefGSSScenarioGVRefParserRuleCall_10_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
@@ -4446,8 +4446,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTextAssignment_12 = (Assignment)cGroup.eContents().get(12);
 		private final RuleCall cTextSTRINGTerminalRuleCall_12_0 = (RuleCall)cTextAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
-		private final Assignment cGVAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final RuleCall cGVGSSScenarioGVParserRuleCall_14_0 = (RuleCall)cGVAssignment_14.eContents().get(0);
+		private final Assignment cGVRefAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cGVRefGSSScenarioGVRefParserRuleCall_14_0 = (RuleCall)cGVRefAssignment_14.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Keyword cSemicolonKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
@@ -4456,12 +4456,12 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//	'name' ':=' name=STRING ';'
 		//	'type' ':=' type=GSSScenarioAlarmMsgType ';'
 		//	'text' ':=' text=STRING ';'
-		//	GV=GSSScenarioGV
+		//	GVRef=GSSScenarioGVRef
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSScenarioAlarmMsg' '{' 'name' ':=' name=STRING ';' 'type' ':=' type=GSSScenarioAlarmMsgType ';' 'text' ':='
-		//text=STRING ';' GV=GSSScenarioGV '}' ';'
+		//text=STRING ';' GVRef=GSSScenarioGVRef '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioAlarmMsg'
@@ -4515,11 +4515,11 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
 		
-		//GV=GSSScenarioGV
-		public Assignment getGVAssignment_14() { return cGVAssignment_14; }
+		//GVRef=GSSScenarioGVRef
+		public Assignment getGVRefAssignment_14() { return cGVRefAssignment_14; }
 		
-		//GSSScenarioGV
-		public RuleCall getGVGSSScenarioGVParserRuleCall_14_0() { return cGVGSSScenarioGVParserRuleCall_14_0; }
+		//GSSScenarioGVRef
+		public RuleCall getGVRefGSSScenarioGVRefParserRuleCall_14_0() { return cGVRefGSSScenarioGVRefParserRuleCall_14_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
@@ -4547,8 +4547,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment_12 = (Assignment)cGroup.eContents().get(12);
 		private final RuleCall cValueINTEGERParserRuleCall_12_0 = (RuleCall)cValueAssignment_12.eContents().get(0);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
-		private final Assignment cGVAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final RuleCall cGVGSSScenarioGVParserRuleCall_14_0 = (RuleCall)cGVAssignment_14.eContents().get(0);
+		private final Assignment cGVRefAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cGVRefGSSScenarioGVRefParserRuleCall_14_0 = (RuleCall)cGVRefAssignment_14.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Keyword cSemicolonKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
@@ -4557,12 +4557,12 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//	'name' ':=' name=STRING ';'
 		//	'type' ':=' type=GSSScenarioModifyType ';'
 		//	'value' ':=' value=INTEGER ';'
-		//	GV=GSSScenarioGV
+		//	GVRef=GSSScenarioGVRef
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSScenarioModify' '{' 'name' ':=' name=STRING ';' 'type' ':=' type=GSSScenarioModifyType ';' 'value' ':='
-		//value=INTEGER ';' GV=GSSScenarioGV '}' ';'
+		//value=INTEGER ';' GVRef=GSSScenarioGVRef '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioModify'
@@ -4616,11 +4616,11 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_13() { return cSemicolonKeyword_13; }
 		
-		//GV=GSSScenarioGV
-		public Assignment getGVAssignment_14() { return cGVAssignment_14; }
+		//GVRef=GSSScenarioGVRef
+		public Assignment getGVRefAssignment_14() { return cGVRefAssignment_14; }
 		
-		//GSSScenarioGV
-		public RuleCall getGVGSSScenarioGVParserRuleCall_14_0() { return cGVGSSScenarioGVParserRuleCall_14_0; }
+		//GSSScenarioGVRef
+		public RuleCall getGVRefGSSScenarioGVRefParserRuleCall_14_0() { return cGVRefGSSScenarioGVRefParserRuleCall_14_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
@@ -4643,8 +4643,8 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTypeAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cTypeGSSScenarioAlarmValTypeEnumRuleCall_8_0 = (RuleCall)cTypeAssignment_8.eContents().get(0);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Assignment cGVAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cGVGSSScenarioGVParserRuleCall_10_0 = (RuleCall)cGVAssignment_10.eContents().get(0);
+		private final Assignment cGVRefAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cGVRefGSSScenarioGVRefParserRuleCall_10_0 = (RuleCall)cGVRefAssignment_10.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Keyword cSemicolonKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
@@ -4652,12 +4652,12 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//	'GSSScenarioAlarmVal' '{'
 		//	'name' ':=' name=STRING ';'
 		//	'type' ':=' type=GSSScenarioAlarmValType ';'
-		//	GV=GSSScenarioGV
+		//	GVRef=GSSScenarioGVRef
 		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSScenarioAlarmVal' '{' 'name' ':=' name=STRING ';' 'type' ':=' type=GSSScenarioAlarmValType ';' GV=GSSScenarioGV '}'
-		//';'
+		//'GSSScenarioAlarmVal' '{' 'name' ':=' name=STRING ';' 'type' ':=' type=GSSScenarioAlarmValType ';'
+		//GVRef=GSSScenarioGVRef '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSScenarioAlarmVal'
@@ -4696,11 +4696,11 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 		
-		//GV=GSSScenarioGV
-		public Assignment getGVAssignment_10() { return cGVAssignment_10; }
+		//GVRef=GSSScenarioGVRef
+		public Assignment getGVRefAssignment_10() { return cGVRefAssignment_10; }
 		
-		//GSSScenarioGV
-		public RuleCall getGVGSSScenarioGVParserRuleCall_10_0() { return cGVGSSScenarioGVParserRuleCall_10_0; }
+		//GSSScenarioGVRef
+		public RuleCall getGVRefGSSScenarioGVRefParserRuleCall_10_0() { return cGVRefGSSScenarioGVRefParserRuleCall_10_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
@@ -4708,13 +4708,13 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_12() { return cSemicolonKeyword_12; }
 	}
-	public class GSSScenarioGVElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGV");
+	public class GSSScenarioGVRefElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVRef");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cGSSScenarioGVFilteredParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cGSSScenarioGVPeriodicParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//GSSScenarioGV scenario::GSSScenarioGV:
+		//GSSScenarioGVRef scenario::GSSScenarioGVRef:
 		//	GSSScenarioGVFiltered | GSSScenarioGVPeriodic
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -5624,7 +5624,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSScenarioAlarmMsgElements pGSSScenarioAlarmMsg;
 	private final GSSScenarioModifyElements pGSSScenarioModify;
 	private final GSSScenarioAlarmValElements pGSSScenarioAlarmVal;
-	private final GSSScenarioGVElements pGSSScenarioGV;
+	private final GSSScenarioGVRefElements pGSSScenarioGVRef;
 	private final GSSScenarioGVFilteredElements pGSSScenarioGVFiltered;
 	private final GSSScenarioGVPeriodicElements pGSSScenarioGVPeriodic;
 	private final GSSScenarioAlarmMsgTypeElements eGSSScenarioAlarmMsgType;
@@ -5702,7 +5702,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGSSScenarioAlarmMsg = new GSSScenarioAlarmMsgElements();
 		this.pGSSScenarioModify = new GSSScenarioModifyElements();
 		this.pGSSScenarioAlarmVal = new GSSScenarioAlarmValElements();
-		this.pGSSScenarioGV = new GSSScenarioGVElements();
+		this.pGSSScenarioGVRef = new GSSScenarioGVRefElements();
 		this.pGSSScenarioGVFiltered = new GSSScenarioGVFilteredElements();
 		this.pGSSScenarioGVPeriodic = new GSSScenarioGVPeriodicElements();
 		this.eGSSScenarioAlarmMsgType = new GSSScenarioAlarmMsgTypeElements();
@@ -6412,7 +6412,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSScenarioPlot' '{'
 	//	'name' ':=' name=STRING ';'
 	//	'chartRef' ':=' chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';'
-	//	GV=GSSScenarioGV
+	//	GVRef=GSSScenarioGVRef
 	//	'}' ';'
 	public GSSScenarioPlotElements getGSSScenarioPlotAccess() {
 		return pGSSScenarioPlot;
@@ -6427,7 +6427,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name' ':=' name=STRING ';'
 	//	'type' ':=' type=GSSScenarioAlarmMsgType ';'
 	//	'text' ':=' text=STRING ';'
-	//	GV=GSSScenarioGV
+	//	GVRef=GSSScenarioGVRef
 	//	'}' ';'
 	public GSSScenarioAlarmMsgElements getGSSScenarioAlarmMsgAccess() {
 		return pGSSScenarioAlarmMsg;
@@ -6442,7 +6442,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name' ':=' name=STRING ';'
 	//	'type' ':=' type=GSSScenarioModifyType ';'
 	//	'value' ':=' value=INTEGER ';'
-	//	GV=GSSScenarioGV
+	//	GVRef=GSSScenarioGVRef
 	//	'}' ';'
 	public GSSScenarioModifyElements getGSSScenarioModifyAccess() {
 		return pGSSScenarioModify;
@@ -6456,7 +6456,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 	//	'GSSScenarioAlarmVal' '{'
 	//	'name' ':=' name=STRING ';'
 	//	'type' ':=' type=GSSScenarioAlarmValType ';'
-	//	GV=GSSScenarioGV
+	//	GVRef=GSSScenarioGVRef
 	//	'}' ';'
 	public GSSScenarioAlarmValElements getGSSScenarioAlarmValAccess() {
 		return pGSSScenarioAlarmVal;
@@ -6466,14 +6466,14 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSScenarioAlarmValAccess().getRule();
 	}
 	
-	//GSSScenarioGV scenario::GSSScenarioGV:
+	//GSSScenarioGVRef scenario::GSSScenarioGVRef:
 	//	GSSScenarioGVFiltered | GSSScenarioGVPeriodic
-	public GSSScenarioGVElements getGSSScenarioGVAccess() {
-		return pGSSScenarioGV;
+	public GSSScenarioGVRefElements getGSSScenarioGVRefAccess() {
+		return pGSSScenarioGVRef;
 	}
 	
-	public ParserRule getGSSScenarioGVRule() {
-		return getGSSScenarioGVAccess().getRule();
+	public ParserRule getGSSScenarioGVRefRule() {
+		return getGSSScenarioGVRefAccess().getRule();
 	}
 	
 	//GSSScenarioGVFiltered scenario::GSSScenarioGVFiltered:

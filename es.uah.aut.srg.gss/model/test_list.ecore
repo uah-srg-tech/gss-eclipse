@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="test_list" nsURI="http://srg.aut.uah.es/gss/test_list" nsPrefix="gss">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSTestListTestList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TestCase" lowerBound="1"
+        upperBound="150" eType="#//GSSTestListTestCase" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSTestListTestCase">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="procedure" lowerBound="1"
+        eType="ecore:EClass test_proc.ecore#//GSSTestProcTestProc"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prevMsg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prevAction" eType="#//GSSTestListPrevAction"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prevActionParam" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSTestListPrevAction">
+    <eLiterals name="none"/>
+    <eLiterals name="reset" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>

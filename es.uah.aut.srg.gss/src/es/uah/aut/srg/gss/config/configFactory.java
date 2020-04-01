@@ -39,24 +39,6 @@ public interface configFactory extends EFactory {
 	GSSConfigGSSConfig createGSSConfigGSSConfig();
 
 	/**
-	 * Returns a new object of class '<em>GSS Config Tests</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config Tests</em>'.
-	 * @generated
-	 */
-	GSSConfigTests createGSSConfigTests();
-
-	/**
-	 * Returns a new object of class '<em>GSS Config Test Case</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Config Test Case</em>'.
-	 * @generated
-	 */
-	GSSConfigTestCase createGSSConfigTestCase();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -82,14 +82,6 @@ public class configAdapterFactory extends AdapterFactoryImpl {
 				return createGSSConfigGSSConfigAdapter();
 			}
 			@Override
-			public Adapter caseGSSConfigTests(GSSConfigTests object) {
-				return createGSSConfigTestsAdapter();
-			}
-			@Override
-			public Adapter caseGSSConfigTestCase(GSSConfigTestCase object) {
-				return createGSSConfigTestCaseAdapter();
-			}
-			@Override
 			public Adapter caseGSSModelElement(GSSModelElement object) {
 				return createGSSModelElementAdapter();
 			}
@@ -124,34 +116,6 @@ public class configAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSConfigGSSConfigAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigTests <em>GSS Config Tests</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigTests
-	 * @generated
-	 */
-	public Adapter createGSSConfigTestsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.config.GSSConfigTestCase <em>GSS Config Test Case</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.config.GSSConfigTestCase
-	 * @generated
-	 */
-	public Adapter createGSSConfigTestCaseAdapter() {
 		return null;
 	}
 

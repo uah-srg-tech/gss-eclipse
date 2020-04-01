@@ -147,11 +147,32 @@ public class FILTERSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *         constantType=GSSFilterConstantType 
 	 *         AIFieldRef=[GSSFormatAIField|VersionedQualifiedReferenceName] 
 	 *         Op=GSSFilterFieldOp 
-	 *         (Constant=GSSFilterConstant | Select=GSSFilterSelect | SelectLine=GSSFilterSelectLine)
+	 *         value=GSSFilterValue
 	 *     )
 	 */
 	protected void sequence_GSSFilterBoolVarFromArrayItem(ISerializationContext context, GSSFilterBoolVarFromArrayItem semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__ID));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__NAME));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__CONSTANT_TYPE));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__AI_FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__OP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__OP));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_ARRAY_ITEM__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getIdINTEGERParserRuleCall_4_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getNameIDTerminalRuleCall_8_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantTypeGSSFilterConstantTypeEnumRuleCall_12_0(), semanticObject.getConstantType());
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAIFieldRefGSSFormatAIFieldVersionedQualifiedReferenceNameParserRuleCall_16_0_1(), semanticObject.getAIFieldRef());
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_18_0(), semanticObject.getOp());
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getValueGSSFilterValueParserRuleCall_19_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	
@@ -168,11 +189,35 @@ public class FILTERSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *         group=ID 
 	 *         AIFieldRefs=[GSSFormatAField|VersionedQualifiedReferenceName] 
 	 *         Op=GSSFilterFieldOp 
-	 *         (Constant=GSSFilterConstant | Select=GSSFilterSelect | SelectLine=GSSFilterSelectLine)
+	 *         value=GSSFilterValue
 	 *     )
 	 */
 	protected void sequence_GSSFilterBoolVarFromGroupedArrayItem(ISerializationContext context, GSSFilterBoolVarFromGroupedArrayItem semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__ID));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__NAME));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__CONSTANT_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__CONSTANT_TYPE));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__GROUP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__GROUP));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__AI_FIELD_REFS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__AI_FIELD_REFS));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__OP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_ABSTRACT_BOOL_VAR__OP));
+			if (transientValues.isValueTransient(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, filterPackage.Literals.GSS_FILTER_BOOL_VAR_FROM_GROUPED_ARRAY_ITEM__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getIdINTEGERParserRuleCall_4_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getNameIDTerminalRuleCall_8_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantTypeGSSFilterConstantTypeEnumRuleCall_12_0(), semanticObject.getConstantType());
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getGroupIDTerminalRuleCall_16_0(), semanticObject.getGroup());
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAIFieldRefsGSSFormatAFieldVersionedQualifiedReferenceNameParserRuleCall_20_0_1(), semanticObject.getAIFieldRefs());
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getOpGSSFilterFieldOpParserRuleCall_22_0(), semanticObject.getOp());
+		feeder.accept(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getValueGSSFilterValueParserRuleCall_23_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	
@@ -206,7 +251,7 @@ public class FILTERSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *         constantType=GSSFilterConstantType 
 	 *         FieldRef=[GSSFormatField|VersionedQualifiedReferenceName] 
 	 *         Op=GSSFilterFieldOp 
-	 *         Value=GSSFilterValue
+	 *         value=GSSFilterValue
 	 *     )
 	 */
 	protected void sequence_GSSFilterBoolVar(ISerializationContext context, GSSFilterBoolVar semanticObject) {

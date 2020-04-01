@@ -2541,13 +2541,13 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_MONITOR__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>GV</b></em>' containment reference.
+	 * The feature id for the '<em><b>GV Ref</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_MONITOR__GV = 1;
+	int GSS_SCENARIO_MONITOR__GV_REF = 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario Monitor</em>' class.
@@ -2587,13 +2587,13 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_PLOT__NAME = GSS_SCENARIO_MONITOR__NAME;
 
 	/**
-	 * The feature id for the '<em><b>GV</b></em>' containment reference.
+	 * The feature id for the '<em><b>GV Ref</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_PLOT__GV = GSS_SCENARIO_MONITOR__GV;
+	int GSS_SCENARIO_PLOT__GV_REF = GSS_SCENARIO_MONITOR__GV_REF;
 
 	/**
 	 * The feature id for the '<em><b>Chart Ref</b></em>' reference.
@@ -2642,13 +2642,13 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_ALARM_MSG__NAME = GSS_SCENARIO_MONITOR__NAME;
 
 	/**
-	 * The feature id for the '<em><b>GV</b></em>' containment reference.
+	 * The feature id for the '<em><b>GV Ref</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_ALARM_MSG__GV = GSS_SCENARIO_MONITOR__GV;
+	int GSS_SCENARIO_ALARM_MSG__GV_REF = GSS_SCENARIO_MONITOR__GV_REF;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2706,13 +2706,13 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_MODIFY__NAME = GSS_SCENARIO_MONITOR__NAME;
 
 	/**
-	 * The feature id for the '<em><b>GV</b></em>' containment reference.
+	 * The feature id for the '<em><b>GV Ref</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_MODIFY__GV = GSS_SCENARIO_MONITOR__GV;
+	int GSS_SCENARIO_MODIFY__GV_REF = GSS_SCENARIO_MONITOR__GV_REF;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2770,13 +2770,13 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_ALARM_VAL__NAME = GSS_SCENARIO_MONITOR__NAME;
 
 	/**
-	 * The feature id for the '<em><b>GV</b></em>' containment reference.
+	 * The feature id for the '<em><b>GV Ref</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_ALARM_VAL__GV = GSS_SCENARIO_MONITOR__GV;
+	int GSS_SCENARIO_ALARM_VAL__GV_REF = GSS_SCENARIO_MONITOR__GV_REF;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2806,14 +2806,14 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_ALARM_VAL_OPERATION_COUNT = GSS_SCENARIO_MONITOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVImpl <em>GSS Scenario GV</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVRefImpl <em>GSS Scenario GV Ref</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVImpl
-	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGV()
+	 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVRefImpl
+	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGVRef()
 	 * @generated
 	 */
-	int GSS_SCENARIO_GV = 40;
+	int GSS_SCENARIO_GV_REF = 40;
 
 	/**
 	 * The feature id for the '<em><b>Global Var Ref</b></em>' reference.
@@ -2822,25 +2822,25 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV__GLOBAL_VAR_REF = 0;
+	int GSS_SCENARIO_GV_REF__GLOBAL_VAR_REF = 0;
 
 	/**
-	 * The number of structural features of the '<em>GSS Scenario GV</em>' class.
+	 * The number of structural features of the '<em>GSS Scenario GV Ref</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_FEATURE_COUNT = 1;
+	int GSS_SCENARIO_GV_REF_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>GSS Scenario GV</em>' class.
+	 * The number of operations of the '<em>GSS Scenario GV Ref</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_OPERATION_COUNT = 0;
+	int GSS_SCENARIO_GV_REF_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVFilteredImpl <em>GSS Scenario GV Filtered</em>}' class.
@@ -2859,7 +2859,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_FILTERED__GLOBAL_VAR_REF = GSS_SCENARIO_GV__GLOBAL_VAR_REF;
+	int GSS_SCENARIO_GV_FILTERED__GLOBAL_VAR_REF = GSS_SCENARIO_GV_REF__GLOBAL_VAR_REF;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
@@ -2868,7 +2868,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_FILTERED__FILTER = GSS_SCENARIO_GV_FEATURE_COUNT + 0;
+	int GSS_SCENARIO_GV_FILTERED__FILTER = GSS_SCENARIO_GV_REF_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario GV Filtered</em>' class.
@@ -2877,7 +2877,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_FILTERED_FEATURE_COUNT = GSS_SCENARIO_GV_FEATURE_COUNT + 1;
+	int GSS_SCENARIO_GV_FILTERED_FEATURE_COUNT = GSS_SCENARIO_GV_REF_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario GV Filtered</em>' class.
@@ -2886,7 +2886,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_FILTERED_OPERATION_COUNT = GSS_SCENARIO_GV_OPERATION_COUNT + 0;
+	int GSS_SCENARIO_GV_FILTERED_OPERATION_COUNT = GSS_SCENARIO_GV_REF_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVPeriodicImpl <em>GSS Scenario GV Periodic</em>}' class.
@@ -2905,7 +2905,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_PERIODIC__GLOBAL_VAR_REF = GSS_SCENARIO_GV__GLOBAL_VAR_REF;
+	int GSS_SCENARIO_GV_PERIODIC__GLOBAL_VAR_REF = GSS_SCENARIO_GV_REF__GLOBAL_VAR_REF;
 
 	/**
 	 * The feature id for the '<em><b>Period value</b></em>' attribute.
@@ -2914,7 +2914,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_PERIODIC__PERIOD_VALUE = GSS_SCENARIO_GV_FEATURE_COUNT + 0;
+	int GSS_SCENARIO_GV_PERIODIC__PERIOD_VALUE = GSS_SCENARIO_GV_REF_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Period unit</b></em>' attribute.
@@ -2923,7 +2923,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_PERIODIC__PERIOD_UNIT = GSS_SCENARIO_GV_FEATURE_COUNT + 1;
+	int GSS_SCENARIO_GV_PERIODIC__PERIOD_UNIT = GSS_SCENARIO_GV_REF_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario GV Periodic</em>' class.
@@ -2932,7 +2932,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_PERIODIC_FEATURE_COUNT = GSS_SCENARIO_GV_FEATURE_COUNT + 2;
+	int GSS_SCENARIO_GV_PERIODIC_FEATURE_COUNT = GSS_SCENARIO_GV_REF_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario GV Periodic</em>' class.
@@ -2941,7 +2941,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_GV_PERIODIC_OPERATION_COUNT = GSS_SCENARIO_GV_OPERATION_COUNT + 0;
+	int GSS_SCENARIO_GV_PERIODIC_OPERATION_COUNT = GSS_SCENARIO_GV_REF_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioEnableDisable <em>GSS Scenario Enable Disable</em>}' enum.
@@ -4769,15 +4769,15 @@ public interface scenarioPackage extends EPackage {
 	EAttribute getGSSScenarioMonitor_Name();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitor#getGV <em>GV</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitor#getGVRef <em>GV Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>GV</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioMonitor#getGV()
+	 * @return the meta object for the containment reference '<em>GV Ref</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioMonitor#getGVRef()
 	 * @see #getGSSScenarioMonitor()
 	 * @generated
 	 */
-	EReference getGSSScenarioMonitor_GV();
+	EReference getGSSScenarioMonitor_GVRef();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioPlot <em>GSS Scenario Plot</em>}'.
@@ -4886,25 +4886,25 @@ public interface scenarioPackage extends EPackage {
 	EAttribute getGSSScenarioAlarmVal_Type();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGV <em>GSS Scenario GV</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGVRef <em>GSS Scenario GV Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Scenario GV</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGV
+	 * @return the meta object for class '<em>GSS Scenario GV Ref</em>'.
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGVRef
 	 * @generated
 	 */
-	EClass getGSSScenarioGV();
+	EClass getGSSScenarioGVRef();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGV#getGlobalVarRef <em>Global Var Ref</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGVRef#getGlobalVarRef <em>Global Var Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Global Var Ref</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGV#getGlobalVarRef()
-	 * @see #getGSSScenarioGV()
+	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioGVRef#getGlobalVarRef()
+	 * @see #getGSSScenarioGVRef()
 	 * @generated
 	 */
-	EReference getGSSScenarioGV_GlobalVarRef();
+	EReference getGSSScenarioGVRef_GlobalVarRef();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGVFiltered <em>GSS Scenario GV Filtered</em>}'.
@@ -6435,12 +6435,12 @@ public interface scenarioPackage extends EPackage {
 		EAttribute GSS_SCENARIO_MONITOR__NAME = eINSTANCE.getGSSScenarioMonitor_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>GV</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>GV Ref</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_SCENARIO_MONITOR__GV = eINSTANCE.getGSSScenarioMonitor_GV();
+		EReference GSS_SCENARIO_MONITOR__GV_REF = eINSTANCE.getGSSScenarioMonitor_GVRef();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioPlotImpl <em>GSS Scenario Plot</em>}' class.
@@ -6531,14 +6531,14 @@ public interface scenarioPackage extends EPackage {
 		EAttribute GSS_SCENARIO_ALARM_VAL__TYPE = eINSTANCE.getGSSScenarioAlarmVal_Type();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVImpl <em>GSS Scenario GV</em>}' class.
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVRefImpl <em>GSS Scenario GV Ref</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVImpl
-		 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGV()
+		 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVRefImpl
+		 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGVRef()
 		 * @generated
 		 */
-		EClass GSS_SCENARIO_GV = eINSTANCE.getGSSScenarioGV();
+		EClass GSS_SCENARIO_GV_REF = eINSTANCE.getGSSScenarioGVRef();
 
 		/**
 		 * The meta object literal for the '<em><b>Global Var Ref</b></em>' reference feature.
@@ -6546,7 +6546,7 @@ public interface scenarioPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_SCENARIO_GV__GLOBAL_VAR_REF = eINSTANCE.getGSSScenarioGV_GlobalVarRef();
+		EReference GSS_SCENARIO_GV_REF__GLOBAL_VAR_REF = eINSTANCE.getGSSScenarioGVRef_GlobalVarRef();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioGVFilteredImpl <em>GSS Scenario GV Filtered</em>}' class.

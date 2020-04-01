@@ -314,7 +314,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioMonitor" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="GV" lowerBound="1" eType="#//GSSScenarioGV"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="GVRef" lowerBound="1" eType="#//GSSScenarioGVRef"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioPlot" eSuperTypes="#//GSSScenarioMonitor">
@@ -347,14 +347,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//GSSScenarioAlarmValType"
         unsettable="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioGV" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioGVRef" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="GlobalVarRef" lowerBound="1"
         eType="#//GSSScenarioGlobalVar"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioGVFiltered" eSuperTypes="#//GSSScenarioGV">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioGVFiltered" eSuperTypes="#//GSSScenarioGVRef">
     <eStructuralFeatures xsi:type="ecore:EReference" name="filter" eType="ecore:EClass filter.ecore#//GSSFilterFilter"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioGVPeriodic" eSuperTypes="#//GSSScenarioGV">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioGVPeriodic" eSuperTypes="#//GSSScenarioGVRef">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="period_value" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="period_unit" lowerBound="1"

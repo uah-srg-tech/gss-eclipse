@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitor#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitor#getGV <em>GV</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitor#getGVRef <em>GV Ref</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioMonitor()
@@ -57,29 +57,29 @@ public interface GSSScenarioMonitor extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>GV</b></em>' containment reference.
+	 * Returns the value of the '<em><b>GV Ref</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>GV</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>GV Ref</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>GV</em>' containment reference.
-	 * @see #setGV(GSSScenarioGV)
-	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioMonitor_GV()
+	 * @return the value of the '<em>GV Ref</em>' containment reference.
+	 * @see #setGVRef(GSSScenarioGVRef)
+	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioMonitor_GVRef()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSScenarioGV getGV();
+	GSSScenarioGVRef getGVRef();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitor#getGV <em>GV</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMonitor#getGVRef <em>GV Ref</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>GV</em>' containment reference.
-	 * @see #getGV()
+	 * @param value the new value of the '<em>GV Ref</em>' containment reference.
+	 * @see #getGVRef()
 	 * @generated
 	 */
-	void setGV(GSSScenarioGV value);
+	void setGVRef(GSSScenarioGVRef value);
 
 } // GSSScenarioMonitor

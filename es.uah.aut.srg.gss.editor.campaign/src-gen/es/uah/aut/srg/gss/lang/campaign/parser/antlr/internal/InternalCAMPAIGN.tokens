@@ -6,8 +6,8 @@
 ';'=13
 'GSSCampaignCampaign'=14
 'GSSCampaignScenario'=19
-'GSSCampaignTestCase'=23
-'GSSCampaignTests'=22
+'GSSTestListTestCase'=23
+'GSSTestListTestList'=22
 'environment'=20
 'import'=11
 'name'=24

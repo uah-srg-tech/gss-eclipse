@@ -4,6 +4,7 @@
 '-'=156
 '.'=152
 '/'=157
+'1'=13
 '://'=158
 '::'=155
 ':='=38
@@ -48,10 +49,10 @@
 'GSSScenarioSpecialPacket'=91
 'GSSScenarioSpecialPackets'=50
 'GSSScenarioStructuredData'=111
-'GSSScenarioTestCase'=147
-'GSSScenarioTests'=146
 'GSSScenarioUpperLevel'=109
 'GSSScenarioUpperLevels'=96
+'GSSTestListTestCase'=147
+'GSSTestListTestList'=146
 'GlobalVarRef'=143
 'ProtocolPacketsFile'=49
 'SpW'=16
@@ -126,7 +127,6 @@
 'procedure'=148
 'protocolID'=81
 'rawLog'=62
-'reset'=13
 'seconds'=28
 'size'=131
 'status'=92

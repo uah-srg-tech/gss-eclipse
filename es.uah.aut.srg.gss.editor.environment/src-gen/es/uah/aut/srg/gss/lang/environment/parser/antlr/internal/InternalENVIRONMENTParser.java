@@ -14187,7 +14187,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioPlot"
-    // InternalENVIRONMENT.g:6145:1: ruleGSSScenarioPlot returns [EObject current=null] : (otherlv_0= 'GSSScenarioPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( (lv_GV_10_0= ruleGSSScenarioGV ) ) otherlv_11= '}' otherlv_12= ';' ) ;
+    // InternalENVIRONMENT.g:6145:1: ruleGSSScenarioPlot returns [EObject current=null] : (otherlv_0= 'GSSScenarioPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( (lv_GVRef_10_0= ruleGSSScenarioGVRef ) ) otherlv_11= '}' otherlv_12= ';' ) ;
     public final EObject ruleGSSScenarioPlot() throws RecognitionException {
         EObject current = null;
 
@@ -14202,18 +14202,18 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         Token otherlv_9=null;
         Token otherlv_11=null;
         Token otherlv_12=null;
-        EObject lv_GV_10_0 = null;
+        EObject lv_GVRef_10_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalENVIRONMENT.g:6151:2: ( (otherlv_0= 'GSSScenarioPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( (lv_GV_10_0= ruleGSSScenarioGV ) ) otherlv_11= '}' otherlv_12= ';' ) )
-            // InternalENVIRONMENT.g:6152:2: (otherlv_0= 'GSSScenarioPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( (lv_GV_10_0= ruleGSSScenarioGV ) ) otherlv_11= '}' otherlv_12= ';' )
+            // InternalENVIRONMENT.g:6151:2: ( (otherlv_0= 'GSSScenarioPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( (lv_GVRef_10_0= ruleGSSScenarioGVRef ) ) otherlv_11= '}' otherlv_12= ';' ) )
+            // InternalENVIRONMENT.g:6152:2: (otherlv_0= 'GSSScenarioPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( (lv_GVRef_10_0= ruleGSSScenarioGVRef ) ) otherlv_11= '}' otherlv_12= ';' )
             {
-            // InternalENVIRONMENT.g:6152:2: (otherlv_0= 'GSSScenarioPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( (lv_GV_10_0= ruleGSSScenarioGV ) ) otherlv_11= '}' otherlv_12= ';' )
-            // InternalENVIRONMENT.g:6153:3: otherlv_0= 'GSSScenarioPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( (lv_GV_10_0= ruleGSSScenarioGV ) ) otherlv_11= '}' otherlv_12= ';'
+            // InternalENVIRONMENT.g:6152:2: (otherlv_0= 'GSSScenarioPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( (lv_GVRef_10_0= ruleGSSScenarioGVRef ) ) otherlv_11= '}' otherlv_12= ';' )
+            // InternalENVIRONMENT.g:6153:3: otherlv_0= 'GSSScenarioPlot' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'chartRef' otherlv_7= ':=' ( ( ruleVersionedQualifiedReferenceName ) ) otherlv_9= ';' ( (lv_GVRef_10_0= ruleGSSScenarioGVRef ) ) otherlv_11= '}' otherlv_12= ';'
             {
             otherlv_0=(Token)match(input,110,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14332,19 +14332,19 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_9, grammarAccess.getGSSScenarioPlotAccess().getSemicolonKeyword_9());
               		
             }
-            // InternalENVIRONMENT.g:6222:3: ( (lv_GV_10_0= ruleGSSScenarioGV ) )
-            // InternalENVIRONMENT.g:6223:4: (lv_GV_10_0= ruleGSSScenarioGV )
+            // InternalENVIRONMENT.g:6222:3: ( (lv_GVRef_10_0= ruleGSSScenarioGVRef ) )
+            // InternalENVIRONMENT.g:6223:4: (lv_GVRef_10_0= ruleGSSScenarioGVRef )
             {
-            // InternalENVIRONMENT.g:6223:4: (lv_GV_10_0= ruleGSSScenarioGV )
-            // InternalENVIRONMENT.g:6224:5: lv_GV_10_0= ruleGSSScenarioGV
+            // InternalENVIRONMENT.g:6223:4: (lv_GVRef_10_0= ruleGSSScenarioGVRef )
+            // InternalENVIRONMENT.g:6224:5: lv_GVRef_10_0= ruleGSSScenarioGVRef
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSScenarioPlotAccess().getGVGSSScenarioGVParserRuleCall_10_0());
+              					newCompositeNode(grammarAccess.getGSSScenarioPlotAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_24);
-            lv_GV_10_0=ruleGSSScenarioGV();
+            lv_GVRef_10_0=ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return current;
@@ -14355,9 +14355,9 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
               					}
               					set(
               						current,
-              						"GV",
-              						lv_GV_10_0,
-              						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGV");
+              						"GVRef",
+              						lv_GVRef_10_0,
+              						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVRef");
               					afterParserOrEnumRuleCall();
               				
             }
@@ -14444,7 +14444,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioAlarmMsg"
-    // InternalENVIRONMENT.g:6260:1: ruleGSSScenarioAlarmMsg returns [EObject current=null] : (otherlv_0= 'GSSScenarioAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( (lv_GV_14_0= ruleGSSScenarioGV ) ) otherlv_15= '}' otherlv_16= ';' ) ;
+    // InternalENVIRONMENT.g:6260:1: ruleGSSScenarioAlarmMsg returns [EObject current=null] : (otherlv_0= 'GSSScenarioAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( (lv_GVRef_14_0= ruleGSSScenarioGVRef ) ) otherlv_15= '}' otherlv_16= ';' ) ;
     public final EObject ruleGSSScenarioAlarmMsg() throws RecognitionException {
         EObject current = null;
 
@@ -14465,18 +14465,18 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         Token otherlv_16=null;
         Enumerator lv_type_8_0 = null;
 
-        EObject lv_GV_14_0 = null;
+        EObject lv_GVRef_14_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalENVIRONMENT.g:6266:2: ( (otherlv_0= 'GSSScenarioAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( (lv_GV_14_0= ruleGSSScenarioGV ) ) otherlv_15= '}' otherlv_16= ';' ) )
-            // InternalENVIRONMENT.g:6267:2: (otherlv_0= 'GSSScenarioAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( (lv_GV_14_0= ruleGSSScenarioGV ) ) otherlv_15= '}' otherlv_16= ';' )
+            // InternalENVIRONMENT.g:6266:2: ( (otherlv_0= 'GSSScenarioAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( (lv_GVRef_14_0= ruleGSSScenarioGVRef ) ) otherlv_15= '}' otherlv_16= ';' ) )
+            // InternalENVIRONMENT.g:6267:2: (otherlv_0= 'GSSScenarioAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( (lv_GVRef_14_0= ruleGSSScenarioGVRef ) ) otherlv_15= '}' otherlv_16= ';' )
             {
-            // InternalENVIRONMENT.g:6267:2: (otherlv_0= 'GSSScenarioAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( (lv_GV_14_0= ruleGSSScenarioGV ) ) otherlv_15= '}' otherlv_16= ';' )
-            // InternalENVIRONMENT.g:6268:3: otherlv_0= 'GSSScenarioAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( (lv_GV_14_0= ruleGSSScenarioGV ) ) otherlv_15= '}' otherlv_16= ';'
+            // InternalENVIRONMENT.g:6267:2: (otherlv_0= 'GSSScenarioAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( (lv_GVRef_14_0= ruleGSSScenarioGVRef ) ) otherlv_15= '}' otherlv_16= ';' )
+            // InternalENVIRONMENT.g:6268:3: otherlv_0= 'GSSScenarioAlarmMsg' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmMsgType ) ) otherlv_9= ';' otherlv_10= 'text' otherlv_11= ':=' ( (lv_text_12_0= RULE_STRING ) ) otherlv_13= ';' ( (lv_GVRef_14_0= ruleGSSScenarioGVRef ) ) otherlv_15= '}' otherlv_16= ';'
             {
             otherlv_0=(Token)match(input,112,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14639,19 +14639,19 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_13, grammarAccess.getGSSScenarioAlarmMsgAccess().getSemicolonKeyword_13());
               		
             }
-            // InternalENVIRONMENT.g:6367:3: ( (lv_GV_14_0= ruleGSSScenarioGV ) )
-            // InternalENVIRONMENT.g:6368:4: (lv_GV_14_0= ruleGSSScenarioGV )
+            // InternalENVIRONMENT.g:6367:3: ( (lv_GVRef_14_0= ruleGSSScenarioGVRef ) )
+            // InternalENVIRONMENT.g:6368:4: (lv_GVRef_14_0= ruleGSSScenarioGVRef )
             {
-            // InternalENVIRONMENT.g:6368:4: (lv_GV_14_0= ruleGSSScenarioGV )
-            // InternalENVIRONMENT.g:6369:5: lv_GV_14_0= ruleGSSScenarioGV
+            // InternalENVIRONMENT.g:6368:4: (lv_GVRef_14_0= ruleGSSScenarioGVRef )
+            // InternalENVIRONMENT.g:6369:5: lv_GVRef_14_0= ruleGSSScenarioGVRef
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVGSSScenarioGVParserRuleCall_14_0());
+              					newCompositeNode(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_24);
-            lv_GV_14_0=ruleGSSScenarioGV();
+            lv_GVRef_14_0=ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return current;
@@ -14662,9 +14662,9 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
               					}
               					set(
               						current,
-              						"GV",
-              						lv_GV_14_0,
-              						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGV");
+              						"GVRef",
+              						lv_GVRef_14_0,
+              						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVRef");
               					afterParserOrEnumRuleCall();
               				
             }
@@ -14751,7 +14751,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioModify"
-    // InternalENVIRONMENT.g:6405:1: ruleGSSScenarioModify returns [EObject current=null] : (otherlv_0= 'GSSScenarioModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_GV_14_0= ruleGSSScenarioGV ) ) otherlv_15= '}' otherlv_16= ';' ) ;
+    // InternalENVIRONMENT.g:6405:1: ruleGSSScenarioModify returns [EObject current=null] : (otherlv_0= 'GSSScenarioModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_GVRef_14_0= ruleGSSScenarioGVRef ) ) otherlv_15= '}' otherlv_16= ';' ) ;
     public final EObject ruleGSSScenarioModify() throws RecognitionException {
         EObject current = null;
 
@@ -14773,18 +14773,18 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
         AntlrDatatypeRuleToken lv_value_12_0 = null;
 
-        EObject lv_GV_14_0 = null;
+        EObject lv_GVRef_14_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalENVIRONMENT.g:6411:2: ( (otherlv_0= 'GSSScenarioModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_GV_14_0= ruleGSSScenarioGV ) ) otherlv_15= '}' otherlv_16= ';' ) )
-            // InternalENVIRONMENT.g:6412:2: (otherlv_0= 'GSSScenarioModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_GV_14_0= ruleGSSScenarioGV ) ) otherlv_15= '}' otherlv_16= ';' )
+            // InternalENVIRONMENT.g:6411:2: ( (otherlv_0= 'GSSScenarioModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_GVRef_14_0= ruleGSSScenarioGVRef ) ) otherlv_15= '}' otherlv_16= ';' ) )
+            // InternalENVIRONMENT.g:6412:2: (otherlv_0= 'GSSScenarioModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_GVRef_14_0= ruleGSSScenarioGVRef ) ) otherlv_15= '}' otherlv_16= ';' )
             {
-            // InternalENVIRONMENT.g:6412:2: (otherlv_0= 'GSSScenarioModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_GV_14_0= ruleGSSScenarioGV ) ) otherlv_15= '}' otherlv_16= ';' )
-            // InternalENVIRONMENT.g:6413:3: otherlv_0= 'GSSScenarioModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_GV_14_0= ruleGSSScenarioGV ) ) otherlv_15= '}' otherlv_16= ';'
+            // InternalENVIRONMENT.g:6412:2: (otherlv_0= 'GSSScenarioModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_GVRef_14_0= ruleGSSScenarioGVRef ) ) otherlv_15= '}' otherlv_16= ';' )
+            // InternalENVIRONMENT.g:6413:3: otherlv_0= 'GSSScenarioModify' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioModifyType ) ) otherlv_9= ';' otherlv_10= 'value' otherlv_11= ':=' ( (lv_value_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_GVRef_14_0= ruleGSSScenarioGVRef ) ) otherlv_15= '}' otherlv_16= ';'
             {
             otherlv_0=(Token)match(input,114,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14952,19 +14952,19 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_13, grammarAccess.getGSSScenarioModifyAccess().getSemicolonKeyword_13());
               		
             }
-            // InternalENVIRONMENT.g:6513:3: ( (lv_GV_14_0= ruleGSSScenarioGV ) )
-            // InternalENVIRONMENT.g:6514:4: (lv_GV_14_0= ruleGSSScenarioGV )
+            // InternalENVIRONMENT.g:6513:3: ( (lv_GVRef_14_0= ruleGSSScenarioGVRef ) )
+            // InternalENVIRONMENT.g:6514:4: (lv_GVRef_14_0= ruleGSSScenarioGVRef )
             {
-            // InternalENVIRONMENT.g:6514:4: (lv_GV_14_0= ruleGSSScenarioGV )
-            // InternalENVIRONMENT.g:6515:5: lv_GV_14_0= ruleGSSScenarioGV
+            // InternalENVIRONMENT.g:6514:4: (lv_GVRef_14_0= ruleGSSScenarioGVRef )
+            // InternalENVIRONMENT.g:6515:5: lv_GVRef_14_0= ruleGSSScenarioGVRef
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSScenarioModifyAccess().getGVGSSScenarioGVParserRuleCall_14_0());
+              					newCompositeNode(grammarAccess.getGSSScenarioModifyAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_24);
-            lv_GV_14_0=ruleGSSScenarioGV();
+            lv_GVRef_14_0=ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return current;
@@ -14975,9 +14975,9 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
               					}
               					set(
               						current,
-              						"GV",
-              						lv_GV_14_0,
-              						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGV");
+              						"GVRef",
+              						lv_GVRef_14_0,
+              						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVRef");
               					afterParserOrEnumRuleCall();
               				
             }
@@ -15064,7 +15064,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioAlarmVal"
-    // InternalENVIRONMENT.g:6551:1: ruleGSSScenarioAlarmVal returns [EObject current=null] : (otherlv_0= 'GSSScenarioAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmValType ) ) otherlv_9= ';' ( (lv_GV_10_0= ruleGSSScenarioGV ) ) otherlv_11= '}' otherlv_12= ';' ) ;
+    // InternalENVIRONMENT.g:6551:1: ruleGSSScenarioAlarmVal returns [EObject current=null] : (otherlv_0= 'GSSScenarioAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmValType ) ) otherlv_9= ';' ( (lv_GVRef_10_0= ruleGSSScenarioGVRef ) ) otherlv_11= '}' otherlv_12= ';' ) ;
     public final EObject ruleGSSScenarioAlarmVal() throws RecognitionException {
         EObject current = null;
 
@@ -15081,18 +15081,18 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         Token otherlv_12=null;
         Enumerator lv_type_8_0 = null;
 
-        EObject lv_GV_10_0 = null;
+        EObject lv_GVRef_10_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalENVIRONMENT.g:6557:2: ( (otherlv_0= 'GSSScenarioAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmValType ) ) otherlv_9= ';' ( (lv_GV_10_0= ruleGSSScenarioGV ) ) otherlv_11= '}' otherlv_12= ';' ) )
-            // InternalENVIRONMENT.g:6558:2: (otherlv_0= 'GSSScenarioAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmValType ) ) otherlv_9= ';' ( (lv_GV_10_0= ruleGSSScenarioGV ) ) otherlv_11= '}' otherlv_12= ';' )
+            // InternalENVIRONMENT.g:6557:2: ( (otherlv_0= 'GSSScenarioAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmValType ) ) otherlv_9= ';' ( (lv_GVRef_10_0= ruleGSSScenarioGVRef ) ) otherlv_11= '}' otherlv_12= ';' ) )
+            // InternalENVIRONMENT.g:6558:2: (otherlv_0= 'GSSScenarioAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmValType ) ) otherlv_9= ';' ( (lv_GVRef_10_0= ruleGSSScenarioGVRef ) ) otherlv_11= '}' otherlv_12= ';' )
             {
-            // InternalENVIRONMENT.g:6558:2: (otherlv_0= 'GSSScenarioAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmValType ) ) otherlv_9= ';' ( (lv_GV_10_0= ruleGSSScenarioGV ) ) otherlv_11= '}' otherlv_12= ';' )
-            // InternalENVIRONMENT.g:6559:3: otherlv_0= 'GSSScenarioAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmValType ) ) otherlv_9= ';' ( (lv_GV_10_0= ruleGSSScenarioGV ) ) otherlv_11= '}' otherlv_12= ';'
+            // InternalENVIRONMENT.g:6558:2: (otherlv_0= 'GSSScenarioAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmValType ) ) otherlv_9= ';' ( (lv_GVRef_10_0= ruleGSSScenarioGVRef ) ) otherlv_11= '}' otherlv_12= ';' )
+            // InternalENVIRONMENT.g:6559:3: otherlv_0= 'GSSScenarioAlarmVal' otherlv_1= '{' otherlv_2= 'name' otherlv_3= ':=' ( (lv_name_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'type' otherlv_7= ':=' ( (lv_type_8_0= ruleGSSScenarioAlarmValType ) ) otherlv_9= ';' ( (lv_GVRef_10_0= ruleGSSScenarioGVRef ) ) otherlv_11= '}' otherlv_12= ';'
             {
             otherlv_0=(Token)match(input,116,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -15207,19 +15207,19 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_9, grammarAccess.getGSSScenarioAlarmValAccess().getSemicolonKeyword_9());
               		
             }
-            // InternalENVIRONMENT.g:6628:3: ( (lv_GV_10_0= ruleGSSScenarioGV ) )
-            // InternalENVIRONMENT.g:6629:4: (lv_GV_10_0= ruleGSSScenarioGV )
+            // InternalENVIRONMENT.g:6628:3: ( (lv_GVRef_10_0= ruleGSSScenarioGVRef ) )
+            // InternalENVIRONMENT.g:6629:4: (lv_GVRef_10_0= ruleGSSScenarioGVRef )
             {
-            // InternalENVIRONMENT.g:6629:4: (lv_GV_10_0= ruleGSSScenarioGV )
-            // InternalENVIRONMENT.g:6630:5: lv_GV_10_0= ruleGSSScenarioGV
+            // InternalENVIRONMENT.g:6629:4: (lv_GVRef_10_0= ruleGSSScenarioGVRef )
+            // InternalENVIRONMENT.g:6630:5: lv_GVRef_10_0= ruleGSSScenarioGVRef
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSScenarioAlarmValAccess().getGVGSSScenarioGVParserRuleCall_10_0());
+              					newCompositeNode(grammarAccess.getGSSScenarioAlarmValAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_24);
-            lv_GV_10_0=ruleGSSScenarioGV();
+            lv_GVRef_10_0=ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return current;
@@ -15230,9 +15230,9 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
               					}
               					set(
               						current,
-              						"GV",
-              						lv_GV_10_0,
-              						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGV");
+              						"GVRef",
+              						lv_GVRef_10_0,
+              						"es.uah.aut.srg.gss.lang.environment.ENVIRONMENT.GSSScenarioGVRef");
               					afterParserOrEnumRuleCall();
               				
             }
@@ -15278,28 +15278,28 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleGSSScenarioAlarmVal"
 
 
-    // $ANTLR start "entryRuleGSSScenarioGV"
-    // InternalENVIRONMENT.g:6659:1: entryRuleGSSScenarioGV returns [EObject current=null] : iv_ruleGSSScenarioGV= ruleGSSScenarioGV EOF ;
-    public final EObject entryRuleGSSScenarioGV() throws RecognitionException {
+    // $ANTLR start "entryRuleGSSScenarioGVRef"
+    // InternalENVIRONMENT.g:6659:1: entryRuleGSSScenarioGVRef returns [EObject current=null] : iv_ruleGSSScenarioGVRef= ruleGSSScenarioGVRef EOF ;
+    public final EObject entryRuleGSSScenarioGVRef() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleGSSScenarioGV = null;
+        EObject iv_ruleGSSScenarioGVRef = null;
 
 
         try {
-            // InternalENVIRONMENT.g:6659:54: (iv_ruleGSSScenarioGV= ruleGSSScenarioGV EOF )
-            // InternalENVIRONMENT.g:6660:2: iv_ruleGSSScenarioGV= ruleGSSScenarioGV EOF
+            // InternalENVIRONMENT.g:6659:57: (iv_ruleGSSScenarioGVRef= ruleGSSScenarioGVRef EOF )
+            // InternalENVIRONMENT.g:6660:2: iv_ruleGSSScenarioGVRef= ruleGSSScenarioGVRef EOF
             {
             if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getGSSScenarioGVRule()); 
+               newCompositeNode(grammarAccess.getGSSScenarioGVRefRule()); 
             }
             pushFollow(FollowSets000.FOLLOW_1);
-            iv_ruleGSSScenarioGV=ruleGSSScenarioGV();
+            iv_ruleGSSScenarioGVRef=ruleGSSScenarioGVRef();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleGSSScenarioGV; 
+               current =iv_ruleGSSScenarioGVRef; 
             }
             match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return current;
 
@@ -15315,12 +15315,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleGSSScenarioGV"
+    // $ANTLR end "entryRuleGSSScenarioGVRef"
 
 
-    // $ANTLR start "ruleGSSScenarioGV"
-    // InternalENVIRONMENT.g:6666:1: ruleGSSScenarioGV returns [EObject current=null] : (this_GSSScenarioGVFiltered_0= ruleGSSScenarioGVFiltered | this_GSSScenarioGVPeriodic_1= ruleGSSScenarioGVPeriodic ) ;
-    public final EObject ruleGSSScenarioGV() throws RecognitionException {
+    // $ANTLR start "ruleGSSScenarioGVRef"
+    // InternalENVIRONMENT.g:6666:1: ruleGSSScenarioGVRef returns [EObject current=null] : (this_GSSScenarioGVFiltered_0= ruleGSSScenarioGVFiltered | this_GSSScenarioGVPeriodic_1= ruleGSSScenarioGVPeriodic ) ;
+    public final EObject ruleGSSScenarioGVRef() throws RecognitionException {
         EObject current = null;
 
         EObject this_GSSScenarioGVFiltered_0 = null;
@@ -15363,7 +15363,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
                     }
                     if ( state.backtracking==0 ) {
 
-                      			newCompositeNode(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVFilteredParserRuleCall_0());
+                      			newCompositeNode(grammarAccess.getGSSScenarioGVRefAccess().getGSSScenarioGVFilteredParserRuleCall_0());
                       		
                     }
                     pushFollow(FollowSets000.FOLLOW_2);
@@ -15390,7 +15390,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
                     }
                     if ( state.backtracking==0 ) {
 
-                      			newCompositeNode(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVPeriodicParserRuleCall_1());
+                      			newCompositeNode(grammarAccess.getGSSScenarioGVRefAccess().getGSSScenarioGVPeriodicParserRuleCall_1());
                       		
                     }
                     pushFollow(FollowSets000.FOLLOW_2);
@@ -15428,7 +15428,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleGSSScenarioGV"
+    // $ANTLR end "ruleGSSScenarioGVRef"
 
 
     // $ANTLR start "entryRuleGSSScenarioGVFiltered"

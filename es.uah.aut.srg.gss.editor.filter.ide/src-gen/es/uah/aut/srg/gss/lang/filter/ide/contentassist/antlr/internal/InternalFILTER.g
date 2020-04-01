@@ -734,60 +734,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromArrayItem__Alternatives_19
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantAssignment_19_0()); }
-		(rule__GSSFilterBoolVarFromArrayItem__ConstantAssignment_19_0)
-		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantAssignment_19_0()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectAssignment_19_1()); }
-		(rule__GSSFilterBoolVarFromArrayItem__SelectAssignment_19_1)
-		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectAssignment_19_1()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineAssignment_19_2()); }
-		(rule__GSSFilterBoolVarFromArrayItem__SelectLineAssignment_19_2)
-		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineAssignment_19_2()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterBoolVarFromGroupedArrayItem__Alternatives_23
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantAssignment_23_0()); }
-		(rule__GSSFilterBoolVarFromGroupedArrayItem__ConstantAssignment_23_0)
-		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantAssignment_23_0()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectAssignment_23_1()); }
-		(rule__GSSFilterBoolVarFromGroupedArrayItem__SelectAssignment_23_1)
-		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectAssignment_23_1()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineAssignment_23_2()); }
-		(rule__GSSFilterBoolVarFromGroupedArrayItem__SelectLineAssignment_23_2)
-		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineAssignment_23_2()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 rule__GSSFilterValue__Alternatives
 	@init {
 		int stackSize = keepStackSize();
@@ -3330,9 +3276,9 @@ rule__GSSFilterBoolVarFromArrayItem__Group__19__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAlternatives_19()); }
-	(rule__GSSFilterBoolVarFromArrayItem__Alternatives_19)
-	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getAlternatives_19()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getValueAssignment_19()); }
+	(rule__GSSFilterBoolVarFromArrayItem__ValueAssignment_19)
+	{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getValueAssignment_19()); }
 )
 ;
 finally {
@@ -4032,9 +3978,9 @@ rule__GSSFilterBoolVarFromGroupedArrayItem__Group__23__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAlternatives_23()); }
-	(rule__GSSFilterBoolVarFromGroupedArrayItem__Alternatives_23)
-	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getAlternatives_23()); }
+	{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getValueAssignment_23()); }
+	(rule__GSSFilterBoolVarFromGroupedArrayItem__ValueAssignment_23)
+	{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getValueAssignment_23()); }
 )
 ;
 finally {
@@ -8376,45 +8322,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromArrayItem__ConstantAssignment_19_0
+rule__GSSFilterBoolVarFromArrayItem__ValueAssignment_19
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_19_0_0()); }
-		ruleGSSFilterConstant
-		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_19_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterBoolVarFromArrayItem__SelectAssignment_19_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_19_1_0()); }
-		ruleGSSFilterSelect
-		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_19_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterBoolVarFromArrayItem__SelectLineAssignment_19_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_19_2_0()); }
-		ruleGSSFilterSelectLine
-		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_19_2_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getValueGSSFilterValueParserRuleCall_19_0()); }
+		ruleGSSFilterValue
+		{ after(grammarAccess.getGSSFilterBoolVarFromArrayItemAccess().getValueGSSFilterValueParserRuleCall_19_0()); }
 	)
 ;
 finally {
@@ -8515,45 +8431,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSFilterBoolVarFromGroupedArrayItem__ConstantAssignment_23_0
+rule__GSSFilterBoolVarFromGroupedArrayItem__ValueAssignment_23
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_23_0_0()); }
-		ruleGSSFilterConstant
-		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getConstantGSSFilterConstantParserRuleCall_23_0_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterBoolVarFromGroupedArrayItem__SelectAssignment_23_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_23_1_0()); }
-		ruleGSSFilterSelect
-		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectGSSFilterSelectParserRuleCall_23_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSFilterBoolVarFromGroupedArrayItem__SelectLineAssignment_23_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_23_2_0()); }
-		ruleGSSFilterSelectLine
-		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getSelectLineGSSFilterSelectLineParserRuleCall_23_2_0()); }
+		{ before(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getValueGSSFilterValueParserRuleCall_23_0()); }
+		ruleGSSFilterValue
+		{ after(grammarAccess.getGSSFilterBoolVarFromGroupedArrayItemAccess().getValueGSSFilterValueParserRuleCall_23_0()); }
 	)
 ;
 finally {

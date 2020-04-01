@@ -4,7 +4,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="GSSCampaignCampaign" eSuperTypes="common.ecore#//GSSModelElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Scenario" lowerBound="1"
         eType="#//GSSCampaignScenario" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Tests" lowerBound="1" eType="#//GSSCampaignTests"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Tests" lowerBound="1" eType="ecore:EClass test_list.ecore#//GSSTestListTestList"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSCampaignScenario">
@@ -12,17 +12,5 @@
         eType="ecore:EClass environment.ecore#//GSSEnvironmentEnvironment"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scenarioRef" lowerBound="1"
         eType="ecore:EClass scenario.ecore#//GSSScenarioScenario"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSCampaignTests">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="TestCase" lowerBound="1"
-        upperBound="150" eType="#//GSSCampaignTestCase" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSCampaignTestCase">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="procedure" lowerBound="1"
-        eType="ecore:EClass test_proc.ecore#//GSSTestProcTestProc"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prevMsg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prevAction" eType="ecore:EEnum test_proc.ecore#//GSSTestProcPrevAction"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prevActionParam" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -308,9 +308,9 @@ ruleGSSCampaignCampaign returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSCampaignCampaignAccess().getTestsGSSCampaignTestsParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getGSSCampaignCampaignAccess().getTestsGSSTestListTestListParserRuleCall_9_0());
 				}
-				lv_Tests_12_0=ruleGSSCampaignTests
+				lv_Tests_12_0=ruleGSSTestListTestList
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSCampaignCampaignRule());
@@ -319,7 +319,7 @@ ruleGSSCampaignCampaign returns [EObject current=null]
 						$current,
 						"Tests",
 						lv_Tests_12_0,
-						"es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSCampaignTests");
+						"es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSTestListTestList");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -429,15 +429,15 @@ ruleGSSCampaignScenario returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleGSSCampaignTests
-entryRuleGSSCampaignTests returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSCampaignTestsRule()); }
-	iv_ruleGSSCampaignTests=ruleGSSCampaignTests
-	{ $current=$iv_ruleGSSCampaignTests.current; }
+// Entry rule entryRuleGSSTestListTestList
+entryRuleGSSTestListTestList returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSTestListTestListRule()); }
+	iv_ruleGSSTestListTestList=ruleGSSTestListTestList
+	{ $current=$iv_ruleGSSTestListTestList.current; }
 	EOF;
 
-// Rule GSSCampaignTests
-ruleGSSCampaignTests returns [EObject current=null]
+// Rule GSSTestListTestList
+ruleGSSTestListTestList returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -445,53 +445,53 @@ ruleGSSCampaignTests returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='GSSCampaignTests'
+		otherlv_0='GSSTestListTestList'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSCampaignTestsAccess().getGSSCampaignTestsKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getGSSTestListTestListAccess().getGSSTestListTestListKeyword_0());
 		}
 		otherlv_1='{'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSCampaignTestsAccess().getLeftCurlyBracketKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getGSSTestListTestListAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSCampaignTestsAccess().getTestCaseGSSCampaignTestCaseParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getGSSTestListTestListAccess().getTestCaseGSSTestListTestCaseParserRuleCall_2_0());
 				}
-				lv_TestCase_2_0=ruleGSSCampaignTestCase
+				lv_TestCase_2_0=ruleGSSTestListTestCase
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSCampaignTestsRule());
+						$current = createModelElementForParent(grammarAccess.getGSSTestListTestListRule());
 					}
 					add(
 						$current,
 						"TestCase",
 						lv_TestCase_2_0,
-						"es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSCampaignTestCase");
+						"es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSTestListTestCase");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
 		otherlv_3='}'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSCampaignTestsAccess().getRightCurlyBracketKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getGSSTestListTestListAccess().getRightCurlyBracketKeyword_3());
 		}
 		otherlv_4=';'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getGSSCampaignTestsAccess().getSemicolonKeyword_4());
+			newLeafNode(otherlv_4, grammarAccess.getGSSTestListTestListAccess().getSemicolonKeyword_4());
 		}
 	)
 ;
 
-// Entry rule entryRuleGSSCampaignTestCase
-entryRuleGSSCampaignTestCase returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSCampaignTestCaseRule()); }
-	iv_ruleGSSCampaignTestCase=ruleGSSCampaignTestCase
-	{ $current=$iv_ruleGSSCampaignTestCase.current; }
+// Entry rule entryRuleGSSTestListTestCase
+entryRuleGSSTestListTestCase returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSTestListTestCaseRule()); }
+	iv_ruleGSSTestListTestCase=ruleGSSTestListTestCase
+	{ $current=$iv_ruleGSSTestListTestCase.current; }
 	EOF;
 
-// Rule GSSCampaignTestCase
-ruleGSSCampaignTestCase returns [EObject current=null]
+// Rule GSSTestListTestCase
+ruleGSSTestListTestCase returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -499,31 +499,31 @@ ruleGSSCampaignTestCase returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='GSSCampaignTestCase'
+		otherlv_0='GSSTestListTestCase'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSCampaignTestCaseAccess().getGSSCampaignTestCaseKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getGSSTestListTestCaseAccess().getGSSTestListTestCaseKeyword_0());
 		}
 		otherlv_1='{'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSCampaignTestCaseAccess().getLeftCurlyBracketKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getGSSTestListTestCaseAccess().getLeftCurlyBracketKeyword_1());
 		}
 		otherlv_2='name'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSCampaignTestCaseAccess().getNameKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getGSSTestListTestCaseAccess().getNameKeyword_2());
 		}
 		otherlv_3=':='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSCampaignTestCaseAccess().getColonEqualsSignKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getGSSTestListTestCaseAccess().getColonEqualsSignKeyword_3());
 		}
 		(
 			(
 				lv_name_4_0=RULE_STRING
 				{
-					newLeafNode(lv_name_4_0, grammarAccess.getGSSCampaignTestCaseAccess().getNameSTRINGTerminalRuleCall_4_0());
+					newLeafNode(lv_name_4_0, grammarAccess.getGSSTestListTestCaseAccess().getNameSTRINGTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGSSCampaignTestCaseRule());
+						$current = createModelElement(grammarAccess.getGSSTestListTestCaseRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -535,15 +535,15 @@ ruleGSSCampaignTestCase returns [EObject current=null]
 		)
 		otherlv_5=';'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getGSSTestListTestCaseAccess().getSemicolonKeyword_5());
 		}
 		otherlv_6='procedure'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSCampaignTestCaseAccess().getProcedureKeyword_6());
+			newLeafNode(otherlv_6, grammarAccess.getGSSTestListTestCaseAccess().getProcedureKeyword_6());
 		}
 		otherlv_7=':='
 		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSCampaignTestCaseAccess().getColonEqualsSignKeyword_7());
+			newLeafNode(otherlv_7, grammarAccess.getGSSTestListTestCaseAccess().getColonEqualsSignKeyword_7());
 		}
 		(
 			(
@@ -552,11 +552,11 @@ ruleGSSCampaignTestCase returns [EObject current=null]
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGSSCampaignTestCaseRule());
+						$current = createModelElement(grammarAccess.getGSSTestListTestCaseRule());
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSCampaignTestCaseAccess().getProcedureGSSTestProcTestProcCrossReference_8_0());
+					newCompositeNode(grammarAccess.getGSSTestListTestCaseAccess().getProcedureGSSTestProcTestProcCrossReference_8_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -566,22 +566,22 @@ ruleGSSCampaignTestCase returns [EObject current=null]
 		)
 		otherlv_9=';'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_9());
+			newLeafNode(otherlv_9, grammarAccess.getGSSTestListTestCaseAccess().getSemicolonKeyword_9());
 		}
 		(
 			otherlv_10='prevMsg'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgKeyword_10_0());
+				newLeafNode(otherlv_10, grammarAccess.getGSSTestListTestCaseAccess().getPrevMsgKeyword_10_0());
 			}
 			(
 				(
 					lv_prevMsg_11_0=RULE_ID
 					{
-						newLeafNode(lv_prevMsg_11_0, grammarAccess.getGSSCampaignTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0());
+						newLeafNode(lv_prevMsg_11_0, grammarAccess.getGSSTestListTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getGSSCampaignTestCaseRule());
+							$current = createModelElement(grammarAccess.getGSSTestListTestCaseRule());
 						}
 						setWithLastConsumed(
 							$current,
@@ -595,23 +595,23 @@ ruleGSSCampaignTestCase returns [EObject current=null]
 		(
 			otherlv_12='prevAction'
 			{
-				newLeafNode(otherlv_12, grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionKeyword_11_0());
+				newLeafNode(otherlv_12, grammarAccess.getGSSTestListTestCaseAccess().getPrevActionKeyword_11_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0());
+						newCompositeNode(grammarAccess.getGSSTestListTestCaseAccess().getPrevActionGSSTestListPrevActionEnumRuleCall_11_1_0());
 					}
-					lv_prevAction_13_0=ruleGSSTestProcPrevAction
+					lv_prevAction_13_0=ruleGSSTestListPrevAction
 					{
 						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSCampaignTestCaseRule());
+							$current = createModelElementForParent(grammarAccess.getGSSTestListTestCaseRule());
 						}
 						set(
 							$current,
 							"prevAction",
 							lv_prevAction_13_0,
-							"es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSTestProcPrevAction");
+							"es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSTestListPrevAction");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -619,17 +619,17 @@ ruleGSSCampaignTestCase returns [EObject current=null]
 			(
 				otherlv_14='prevActionParam'
 				{
-					newLeafNode(otherlv_14, grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamKeyword_11_2_0());
+					newLeafNode(otherlv_14, grammarAccess.getGSSTestListTestCaseAccess().getPrevActionParamKeyword_11_2_0());
 				}
 				(
 					(
 						lv_prevActionParam_15_0=RULE_STRING
 						{
-							newLeafNode(lv_prevActionParam_15_0, grammarAccess.getGSSCampaignTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0());
+							newLeafNode(lv_prevActionParam_15_0, grammarAccess.getGSSTestListTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0());
 						}
 						{
 							if ($current==null) {
-								$current = createModelElement(grammarAccess.getGSSCampaignTestCaseRule());
+								$current = createModelElement(grammarAccess.getGSSTestListTestCaseRule());
 							}
 							setWithLastConsumed(
 								$current,
@@ -643,11 +643,11 @@ ruleGSSCampaignTestCase returns [EObject current=null]
 		)?
 		otherlv_16='}'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getGSSCampaignTestCaseAccess().getRightCurlyBracketKeyword_12());
+			newLeafNode(otherlv_16, grammarAccess.getGSSTestListTestCaseAccess().getRightCurlyBracketKeyword_12());
 		}
 		otherlv_17=';'
 		{
-			newLeafNode(otherlv_17, grammarAccess.getGSSCampaignTestCaseAccess().getSemicolonKeyword_13());
+			newLeafNode(otherlv_17, grammarAccess.getGSSTestListTestCaseAccess().getSemicolonKeyword_13());
 		}
 	)
 ;
@@ -823,8 +823,8 @@ ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrData
 	)
 ;
 
-// Rule GSSTestProcPrevAction
-ruleGSSTestProcPrevAction returns [Enumerator current=null]
+// Rule GSSTestListPrevAction
+ruleGSSTestListPrevAction returns [Enumerator current=null]
 @init {
 	enterRule();
 }
@@ -834,8 +834,8 @@ ruleGSSTestProcPrevAction returns [Enumerator current=null]
 	(
 		enumLiteral_0='1'
 		{
-			$current = grammarAccess.getGSSTestProcPrevActionAccess().getResetEnumLiteralDeclaration().getEnumLiteral().getInstance();
-			newLeafNode(enumLiteral_0, grammarAccess.getGSSTestProcPrevActionAccess().getResetEnumLiteralDeclaration());
+			$current = grammarAccess.getGSSTestListPrevActionAccess().getResetEnumLiteralDeclaration().getEnumLiteral().getInstance();
+			newLeafNode(enumLiteral_0, grammarAccess.getGSSTestListPrevActionAccess().getResetEnumLiteralDeclaration());
 		}
 	)
 ;

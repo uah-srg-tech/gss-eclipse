@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2019 UAH Space Research Group.
+ * Copyright (c) 2020 UAH Space Research Group.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -8,9 +8,9 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.gss.test_campaign.util;
+package es.uah.aut.srg.gss.test_list.util;
 
-import es.uah.aut.srg.gss.test_campaign.*;
+import es.uah.aut.srg.gss.test_list.*;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -27,17 +27,17 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see es.uah.aut.srg.gss.test_campaign.test_campaignPackage
+ * @see es.uah.aut.srg.gss.test_list.test_listPackage
  * @generated
  */
-public class test_campaignSwitch<T> extends Switch<T> {
+public class test_listSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static test_campaignPackage modelPackage;
+	protected static test_listPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -45,9 +45,9 @@ public class test_campaignSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public test_campaignSwitch() {
+	public test_listSwitch() {
 		if (modelPackage == null) {
-			modelPackage = test_campaignPackage.eINSTANCE;
+			modelPackage = test_listPackage.eINSTANCE;
 		}
 	}
 
@@ -74,15 +74,15 @@ public class test_campaignSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST_CAMPAIGN: {
-				GSSTestCampaignTestCampaign gssTestCampaignTestCampaign = (GSSTestCampaignTestCampaign)theEObject;
-				T result = caseGSSTestCampaignTestCampaign(gssTestCampaignTestCampaign);
+			case test_listPackage.GSS_TEST_LIST_TEST_LIST: {
+				GSSTestListTestList gssTestListTestList = (GSSTestListTestList)theEObject;
+				T result = caseGSSTestListTestList(gssTestListTestList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case test_campaignPackage.GSS_TEST_CAMPAIGN_TEST: {
-				GSSTestCampaignTest gssTestCampaignTest = (GSSTestCampaignTest)theEObject;
-				T result = caseGSSTestCampaignTest(gssTestCampaignTest);
+			case test_listPackage.GSS_TEST_LIST_TEST_CASE: {
+				GSSTestListTestCase gssTestListTestCase = (GSSTestListTestCase)theEObject;
+				T result = caseGSSTestListTestCase(gssTestListTestCase);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -91,32 +91,32 @@ public class test_campaignSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Campaign Test Campaign</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Test List Test List</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Test Campaign Test Campaign</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Test List Test List</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGSSTestCampaignTestCampaign(GSSTestCampaignTestCampaign object) {
+	public T caseGSSTestListTestList(GSSTestListTestList object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Test Campaign Test</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Test List Test Case</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Test Campaign Test</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Test List Test Case</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGSSTestCampaignTest(GSSTestCampaignTest object) {
+	public T caseGSSTestListTestCase(GSSTestListTestCase object) {
 		return null;
 	}
 
@@ -136,4 +136,4 @@ public class test_campaignSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //test_campaignSwitch
+} //test_listSwitch

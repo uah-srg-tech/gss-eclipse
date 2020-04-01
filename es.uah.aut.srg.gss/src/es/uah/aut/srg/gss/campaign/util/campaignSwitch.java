@@ -89,18 +89,6 @@ public class campaignSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case campaignPackage.GSS_CAMPAIGN_TESTS: {
-				GSSCampaignTests gssCampaignTests = (GSSCampaignTests)theEObject;
-				T result = caseGSSCampaignTests(gssCampaignTests);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case campaignPackage.GSS_CAMPAIGN_TEST_CASE: {
-				GSSCampaignTestCase gssCampaignTestCase = (GSSCampaignTestCase)theEObject;
-				T result = caseGSSCampaignTestCase(gssCampaignTestCase);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -132,36 +120,6 @@ public class campaignSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSCampaignScenario(GSSCampaignScenario object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Campaign Tests</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Campaign Tests</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSCampaignTests(GSSCampaignTests object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Campaign Test Case</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Campaign Test Case</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSCampaignTestCase(GSSCampaignTestCase object) {
 		return null;
 	}
 

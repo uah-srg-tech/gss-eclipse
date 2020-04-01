@@ -113,7 +113,7 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cScenarioAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cScenarioGSSCampaignScenarioParserRuleCall_8_0 = (RuleCall)cScenarioAssignment_8.eContents().get(0);
 		private final Assignment cTestsAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cTestsGSSCampaignTestsParserRuleCall_9_0 = (RuleCall)cTestsAssignment_9.eContents().get(0);
+		private final RuleCall cTestsGSSTestListTestListParserRuleCall_9_0 = (RuleCall)cTestsAssignment_9.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
@@ -123,12 +123,12 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		//	'{' ('uri' ':=' uri=QualifiedName ';')
 		//	'version' ':=' version=Version ';'
 		//	Scenario=GSSCampaignScenario
-		//	Tests=GSSCampaignTests
+		//	Tests=GSSTestListTestList
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'GSSCampaignCampaign' name=ID '{' ('uri' ':=' uri=QualifiedName ';') 'version' ':=' version=Version ';'
-		//Scenario=GSSCampaignScenario Tests=GSSCampaignTests '}' ';'
+		//Scenario=GSSCampaignScenario Tests=GSSTestListTestList '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'GSSCampaignCampaign'
@@ -182,11 +182,11 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSCampaignScenario
 		public RuleCall getScenarioGSSCampaignScenarioParserRuleCall_8_0() { return cScenarioGSSCampaignScenarioParserRuleCall_8_0; }
 		
-		//Tests=GSSCampaignTests
+		//Tests=GSSTestListTestList
 		public Assignment getTestsAssignment_9() { return cTestsAssignment_9; }
 		
-		//GSSCampaignTests
-		public RuleCall getTestsGSSCampaignTestsParserRuleCall_9_0() { return cTestsGSSCampaignTestsParserRuleCall_9_0; }
+		//GSSTestListTestList
+		public RuleCall getTestsGSSTestListTestListParserRuleCall_9_0() { return cTestsGSSTestListTestListParserRuleCall_9_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
@@ -273,36 +273,36 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_11() { return cSemicolonKeyword_11; }
 	}
-	public class GSSCampaignTestsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSCampaignTests");
+	public class GSSTestListTestListElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSTestListTestList");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cGSSCampaignTestsKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cGSSTestListTestListKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cTestCaseAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTestCaseGSSCampaignTestCaseParserRuleCall_2_0 = (RuleCall)cTestCaseAssignment_2.eContents().get(0);
+		private final RuleCall cTestCaseGSSTestListTestCaseParserRuleCall_2_0 = (RuleCall)cTestCaseAssignment_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//GSSCampaignTests:
-		//	'GSSCampaignTests' '{'
-		//	TestCase+=GSSCampaignTestCase+
-		//	'}' ';';
+		//GSSTestListTestList test_list::GSSTestListTestList:
+		//	'GSSTestListTestList' '{'
+		//	TestCase+=GSSTestListTestCase+
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSCampaignTests' '{' TestCase+=GSSCampaignTestCase+ '}' ';'
+		//'GSSTestListTestList' '{' TestCase+=GSSTestListTestCase+ '}' ';'
 		public Group getGroup() { return cGroup; }
 		
-		//'GSSCampaignTests'
-		public Keyword getGSSCampaignTestsKeyword_0() { return cGSSCampaignTestsKeyword_0; }
+		//'GSSTestListTestList'
+		public Keyword getGSSTestListTestListKeyword_0() { return cGSSTestListTestListKeyword_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//TestCase+=GSSCampaignTestCase+
+		//TestCase+=GSSTestListTestCase+
 		public Assignment getTestCaseAssignment_2() { return cTestCaseAssignment_2; }
 		
-		//GSSCampaignTestCase
-		public RuleCall getTestCaseGSSCampaignTestCaseParserRuleCall_2_0() { return cTestCaseGSSCampaignTestCaseParserRuleCall_2_0; }
+		//GSSTestListTestCase
+		public RuleCall getTestCaseGSSTestListTestCaseParserRuleCall_2_0() { return cTestCaseGSSTestListTestCaseParserRuleCall_2_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
@@ -310,10 +310,10 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
 	}
-	public class GSSCampaignTestCaseElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSCampaignTestCase");
+	public class GSSTestListTestCaseElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSTestListTestCase");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cGSSCampaignTestCaseKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cGSSTestListTestCaseKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cNameKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
@@ -333,7 +333,7 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
 		private final Keyword cPrevActionKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
 		private final Assignment cPrevActionAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
-		private final RuleCall cPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0 = (RuleCall)cPrevActionAssignment_11_1.eContents().get(0);
+		private final RuleCall cPrevActionGSSTestListPrevActionEnumRuleCall_11_1_0 = (RuleCall)cPrevActionAssignment_11_1.eContents().get(0);
 		private final Group cGroup_11_2 = (Group)cGroup_11.eContents().get(2);
 		private final Keyword cPrevActionParamKeyword_11_2_0 = (Keyword)cGroup_11_2.eContents().get(0);
 		private final Assignment cPrevActionParamAssignment_11_2_1 = (Assignment)cGroup_11_2.eContents().get(1);
@@ -341,21 +341,21 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		private final Keyword cSemicolonKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
-		//GSSCampaignTestCase:
-		//	'GSSCampaignTestCase' '{'
+		//GSSTestListTestCase test_list::GSSTestListTestCase:
+		//	'GSSTestListTestCase' '{'
 		//	'name' ':=' name=STRING ';'
 		//	'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('prevMsg' prevMsg=ID)?
-		//	('prevAction' prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)?
-		//	'}' ';';
+		//	('prevAction' prevAction=GSSTestListPrevAction ('prevActionParam' prevActionParam=STRING)?)?
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GSSCampaignTestCase' '{' 'name' ':=' name=STRING ';' 'procedure' ':='
+		//'GSSTestListTestCase' '{' 'name' ':=' name=STRING ';' 'procedure' ':='
 		//procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('prevMsg' prevMsg=ID)? ('prevAction'
-		//prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)? '}' ';'
+		//prevAction=GSSTestListPrevAction ('prevActionParam' prevActionParam=STRING)?)? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
-		//'GSSCampaignTestCase'
-		public Keyword getGSSCampaignTestCaseKeyword_0() { return cGSSCampaignTestCaseKeyword_0; }
+		//'GSSTestListTestCase'
+		public Keyword getGSSTestListTestCaseKeyword_0() { return cGSSTestListTestCaseKeyword_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
@@ -405,17 +405,17 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getPrevMsgIDTerminalRuleCall_10_1_0() { return cPrevMsgIDTerminalRuleCall_10_1_0; }
 		
-		//('prevAction' prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)?
+		//('prevAction' prevAction=GSSTestListPrevAction ('prevActionParam' prevActionParam=STRING)?)?
 		public Group getGroup_11() { return cGroup_11; }
 		
 		//'prevAction'
 		public Keyword getPrevActionKeyword_11_0() { return cPrevActionKeyword_11_0; }
 		
-		//prevAction=GSSTestProcPrevAction
+		//prevAction=GSSTestListPrevAction
 		public Assignment getPrevActionAssignment_11_1() { return cPrevActionAssignment_11_1; }
 		
-		//GSSTestProcPrevAction
-		public RuleCall getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0() { return cPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0; }
+		//GSSTestListPrevAction
+		public RuleCall getPrevActionGSSTestListPrevActionEnumRuleCall_11_1_0() { return cPrevActionGSSTestListPrevActionEnumRuleCall_11_1_0; }
 		
 		//('prevActionParam' prevActionParam=STRING)?
 		public Group getGroup_11_2() { return cGroup_11_2; }
@@ -549,12 +549,12 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
 	}
 	
-	public class GSSTestProcPrevActionElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSTestProcPrevAction");
+	public class GSSTestListPrevActionElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.campaign.CAMPAIGN.GSSTestListPrevAction");
 		private final EnumLiteralDeclaration cResetEnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
 		private final Keyword cReset1Keyword_0 = (Keyword)cResetEnumLiteralDeclaration.eContents().get(0);
 		
-		//enum GSSTestProcPrevAction returns test_proc::GSSTestProcPrevAction:
+		//enum GSSTestListPrevAction returns test_list::GSSTestListPrevAction:
 		//	reset='1';
 		public EnumRule getRule() { return rule; }
 		
@@ -569,9 +569,9 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSModelFileImportElements pGSSModelFileImport;
 	private final GSSCampaignCampaignElements pGSSCampaignCampaign;
 	private final GSSCampaignScenarioElements pGSSCampaignScenario;
-	private final GSSCampaignTestsElements pGSSCampaignTests;
-	private final GSSCampaignTestCaseElements pGSSCampaignTestCase;
-	private final GSSTestProcPrevActionElements eGSSTestProcPrevAction;
+	private final GSSTestListTestListElements pGSSTestListTestList;
+	private final GSSTestListTestCaseElements pGSSTestListTestCase;
+	private final GSSTestListPrevActionElements eGSSTestListPrevAction;
 	private final QualifiedNameElements pQualifiedName;
 	private final VersionElements pVersion;
 	private final VersionedQualifiedNameElements pVersionedQualifiedName;
@@ -589,9 +589,9 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGSSModelFileImport = new GSSModelFileImportElements();
 		this.pGSSCampaignCampaign = new GSSCampaignCampaignElements();
 		this.pGSSCampaignScenario = new GSSCampaignScenarioElements();
-		this.pGSSCampaignTests = new GSSCampaignTestsElements();
-		this.pGSSCampaignTestCase = new GSSCampaignTestCaseElements();
-		this.eGSSTestProcPrevAction = new GSSTestProcPrevActionElements();
+		this.pGSSTestListTestList = new GSSTestListTestListElements();
+		this.pGSSTestListTestCase = new GSSTestListTestCaseElements();
+		this.eGSSTestListPrevAction = new GSSTestListPrevActionElements();
 		this.pQualifiedName = new QualifiedNameElements();
 		this.pVersion = new VersionElements();
 		this.pVersionedQualifiedName = new VersionedQualifiedNameElements();
@@ -651,7 +651,7 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 	//	'{' ('uri' ':=' uri=QualifiedName ';')
 	//	'version' ':=' version=Version ';'
 	//	Scenario=GSSCampaignScenario
-	//	Tests=GSSCampaignTests
+	//	Tests=GSSTestListTestList
 	//	'}' ';';
 	public GSSCampaignCampaignElements getGSSCampaignCampaignAccess() {
 		return pGSSCampaignCampaign;
@@ -674,40 +674,40 @@ public class CAMPAIGNGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSCampaignScenarioAccess().getRule();
 	}
 	
-	//GSSCampaignTests:
-	//	'GSSCampaignTests' '{'
-	//	TestCase+=GSSCampaignTestCase+
-	//	'}' ';';
-	public GSSCampaignTestsElements getGSSCampaignTestsAccess() {
-		return pGSSCampaignTests;
+	//GSSTestListTestList test_list::GSSTestListTestList:
+	//	'GSSTestListTestList' '{'
+	//	TestCase+=GSSTestListTestCase+
+	//	'}' ';'
+	public GSSTestListTestListElements getGSSTestListTestListAccess() {
+		return pGSSTestListTestList;
 	}
 	
-	public ParserRule getGSSCampaignTestsRule() {
-		return getGSSCampaignTestsAccess().getRule();
+	public ParserRule getGSSTestListTestListRule() {
+		return getGSSTestListTestListAccess().getRule();
 	}
 	
-	//GSSCampaignTestCase:
-	//	'GSSCampaignTestCase' '{'
+	//GSSTestListTestCase test_list::GSSTestListTestCase:
+	//	'GSSTestListTestCase' '{'
 	//	'name' ':=' name=STRING ';'
 	//	'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';' ('prevMsg' prevMsg=ID)?
-	//	('prevAction' prevAction=GSSTestProcPrevAction ('prevActionParam' prevActionParam=STRING)?)?
-	//	'}' ';';
-	public GSSCampaignTestCaseElements getGSSCampaignTestCaseAccess() {
-		return pGSSCampaignTestCase;
+	//	('prevAction' prevAction=GSSTestListPrevAction ('prevActionParam' prevActionParam=STRING)?)?
+	//	'}' ';'
+	public GSSTestListTestCaseElements getGSSTestListTestCaseAccess() {
+		return pGSSTestListTestCase;
 	}
 	
-	public ParserRule getGSSCampaignTestCaseRule() {
-		return getGSSCampaignTestCaseAccess().getRule();
+	public ParserRule getGSSTestListTestCaseRule() {
+		return getGSSTestListTestCaseAccess().getRule();
 	}
 	
-	//enum GSSTestProcPrevAction returns test_proc::GSSTestProcPrevAction:
+	//enum GSSTestListPrevAction returns test_list::GSSTestListPrevAction:
 	//	reset='1';
-	public GSSTestProcPrevActionElements getGSSTestProcPrevActionAccess() {
-		return eGSSTestProcPrevAction;
+	public GSSTestListPrevActionElements getGSSTestListPrevActionAccess() {
+		return eGSSTestListPrevAction;
 	}
 	
-	public EnumRule getGSSTestProcPrevActionRule() {
-		return getGSSTestProcPrevActionAccess().getRule();
+	public EnumRule getGSSTestListPrevActionRule() {
+		return getGSSTestListPrevActionAccess().getRule();
 	}
 	
 	//QualifiedName:

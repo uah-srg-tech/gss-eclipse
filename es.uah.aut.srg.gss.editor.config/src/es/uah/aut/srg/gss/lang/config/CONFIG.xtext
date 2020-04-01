@@ -12,6 +12,7 @@ import "http://srg.aut.uah.es/gss/import" as import_
 import "http://srg.aut.uah.es/gss/charts" as charts
 import "http://srg.aut.uah.es/gss/protocol_packets" as protocol_packets
 import "http://srg.aut.uah.es/gss/iface" as iface
+import "http://srg.aut.uah.es/gss/test_list" as test_list
 import "http://srg.aut.uah.es/gss/test_proc" as test_proc
 
 GSSModelFile returns common::GSSModelFile:
@@ -30,7 +31,7 @@ GSSConfigGSSConfig returns GSSConfigGSSConfig:
 		('uri' ':=' uri=QualifiedName ';')
 		'version' ':=' version=Version ';'
 		scenario=GSSScenarioScenario
-		Tests=GSSConfigTests
+		Tests=GSSTestListTestList
 	'}' ';'
 ;
 
@@ -404,7 +405,7 @@ GSSScenarioPlot returns scenario::GSSScenarioPlot:
 	'GSSScenarioPlot' '{'
 		'name' ':=' name=STRING ';'
 		'chartRef' ':=' chartRef=[charts::GSSChartsChart|VersionedQualifiedReferenceName] ';'
-		GV=GSSScenarioGV
+		GVRef=GSSScenarioGVRef
 	'}' ';'
 ;
 
@@ -413,7 +414,7 @@ GSSScenarioAlarmMsg returns scenario::GSSScenarioAlarmMsg:
 		'name' ':=' name=STRING ';'
 		'type' ':=' type=GSSScenarioAlarmMsgType ';'
 		'text' ':=' text=STRING ';'
-		GV=GSSScenarioGV
+		GVRef=GSSScenarioGVRef
 	'}' ';'
 ;
 
@@ -422,7 +423,7 @@ GSSScenarioModify returns scenario::GSSScenarioModify:
 		'name' ':=' name=STRING ';'
 		'type' ':=' type=GSSScenarioModifyType ';'
 		'value' ':=' value=INTEGER ';'
-		GV=GSSScenarioGV
+		GVRef=GSSScenarioGVRef
 	'}' ';'
 ;
 
@@ -430,11 +431,11 @@ GSSScenarioAlarmVal returns scenario::GSSScenarioAlarmVal:
 	'GSSScenarioAlarmVal' '{'
 		'name' ':=' name=STRING ';'
 		'type' ':=' type=GSSScenarioAlarmValType ';'
-		GV=GSSScenarioGV
+		GVRef=GSSScenarioGVRef
 	'}' ';'
 ;
 
-GSSScenarioGV returns scenario::GSSScenarioGV:
+GSSScenarioGVRef returns scenario::GSSScenarioGVRef:
 	GSSScenarioGVFiltered | GSSScenarioGVPeriodic;
 
 GSSScenarioGVFiltered returns scenario::GSSScenarioGVFiltered:
@@ -464,25 +465,25 @@ enum GSSScenarioAlarmValType returns scenario::GSSScenarioAlarmValType:
 	alarm1 = 'alarm1'
 ;
 		
-GSSConfigTests returns GSSConfigTests:
-	'GSSScenarioTests' '{'
-		(TestCase+=GSSConfigTestCase)+ 
+GSSTestListTestList returns test_list::GSSTestListTestList:
+	'GSSTestListTestList' '{'
+		(TestCase+=GSSTestListTestCase)+ 
 	'}' ';'
 ;
 
-GSSConfigTestCase returns GSSConfigTestCase:
-	'GSSScenarioTestCase' '{'
+GSSTestListTestCase returns test_list::GSSTestListTestCase:
+	'GSSTestListTestCase' '{'
 		'name' ':=' name=STRING ';'
 		'procedure' ':=' procedure=[test_proc::GSSTestProcTestProc|VersionedQualifiedName] ';'
 		('prevMsg' prevMsg=ID)?
-		('prevAction' prevAction=GSSTestProcPrevAction
+		('prevAction' prevAction=GSSTestListPrevAction
 			('prevActionParam' prevActionParam=STRING)?
 		)?
 	'}' ';'
 ;
 
-enum GSSTestProcPrevAction returns test_proc::GSSTestProcPrevAction:
-	reset = 'reset';
+enum GSSTestListPrevAction returns test_list::GSSTestListPrevAction:
+	reset = '1';
 
 QualifiedName returns ecore::EString:
 	ID ('.' ID)*;

@@ -1869,17 +1869,6 @@ public interface test_procPackage extends EPackage {
 
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction <em>GSS Test Proc Prev Action</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction
-	 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcPrevAction()
-	 * @generated
-	 */
-	int GSS_TEST_PROC_PREV_ACTION = 27;
-
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcTestProc <em>GSS Test Proc Test Proc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3118,16 +3107,6 @@ public interface test_procPackage extends EPackage {
 	EEnum getGSSTestProcYesNo();
 
 	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction <em>GSS Test Proc Prev Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>GSS Test Proc Prev Action</em>'.
-	 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction
-	 * @generated
-	 */
-	EEnum getGSSTestProcPrevAction();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4123,16 +4102,6 @@ public interface test_procPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum GSS_TEST_PROC_YES_NO = eINSTANCE.getGSSTestProcYesNo();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction <em>GSS Test Proc Prev Action</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.test_proc.GSSTestProcPrevAction
-		 * @see es.uah.aut.srg.gss.test_proc.impl.test_procPackageImpl#getGSSTestProcPrevAction()
-		 * @generated
-		 */
-		EEnum GSS_TEST_PROC_PREV_ACTION = eINSTANCE.getGSSTestProcPrevAction();
 
 	}
 

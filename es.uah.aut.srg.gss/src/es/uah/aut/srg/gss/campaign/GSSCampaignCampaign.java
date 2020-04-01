@@ -11,6 +11,7 @@
 package es.uah.aut.srg.gss.campaign;
 
 import es.uah.aut.srg.gss.common.GSSModelElement;
+import es.uah.aut.srg.gss.test_list.GSSTestListTestList;
 
 /**
  * <!-- begin-user-doc -->
@@ -65,12 +66,12 @@ public interface GSSCampaignCampaign extends GSSModelElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tests</em>' containment reference.
-	 * @see #setTests(GSSCampaignTests)
+	 * @see #setTests(GSSTestListTestList)
 	 * @see es.uah.aut.srg.gss.campaign.campaignPackage#getGSSCampaignCampaign_Tests()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSCampaignTests getTests();
+	GSSTestListTestList getTests();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.campaign.GSSCampaignCampaign#getTests <em>Tests</em>}' containment reference.
@@ -80,6 +81,6 @@ public interface GSSCampaignCampaign extends GSSModelElement {
 	 * @see #getTests()
 	 * @generated
 	 */
-	void setTests(GSSCampaignTests value);
+	void setTests(GSSTestListTestList value);
 
 } // GSSCampaignCampaign

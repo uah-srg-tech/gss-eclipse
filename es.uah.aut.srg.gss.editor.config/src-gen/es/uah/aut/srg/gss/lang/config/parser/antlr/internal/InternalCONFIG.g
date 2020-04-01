@@ -309,9 +309,9 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getTestsGSSConfigTestsParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getGSSConfigGSSConfigAccess().getTestsGSSTestListTestListParserRuleCall_9_0());
 				}
-				lv_Tests_12_0=ruleGSSConfigTests
+				lv_Tests_12_0=ruleGSSTestListTestList
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSConfigGSSConfigRule());
@@ -320,7 +320,7 @@ ruleGSSConfigGSSConfig returns [EObject current=null]
 						$current,
 						"Tests",
 						lv_Tests_12_0,
-						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigTests");
+						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSTestListTestList");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -6241,18 +6241,18 @@ ruleGSSScenarioPlot returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSScenarioPlotAccess().getGVGSSScenarioGVParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getGSSScenarioPlotAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0());
 				}
-				lv_GV_10_0=ruleGSSScenarioGV
+				lv_GVRef_10_0=ruleGSSScenarioGVRef
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSScenarioPlotRule());
 					}
 					set(
 						$current,
-						"GV",
-						lv_GV_10_0,
-						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioGV");
+						"GVRef",
+						lv_GVRef_10_0,
+						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioGVRef");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -6386,18 +6386,18 @@ ruleGSSScenarioAlarmMsg returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVGSSScenarioGVParserRuleCall_14_0());
+					newCompositeNode(grammarAccess.getGSSScenarioAlarmMsgAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0());
 				}
-				lv_GV_14_0=ruleGSSScenarioGV
+				lv_GVRef_14_0=ruleGSSScenarioGVRef
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSScenarioAlarmMsgRule());
 					}
 					set(
 						$current,
-						"GV",
-						lv_GV_14_0,
-						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioGV");
+						"GVRef",
+						lv_GVRef_14_0,
+						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioGVRef");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -6532,18 +6532,18 @@ ruleGSSScenarioModify returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSScenarioModifyAccess().getGVGSSScenarioGVParserRuleCall_14_0());
+					newCompositeNode(grammarAccess.getGSSScenarioModifyAccess().getGVRefGSSScenarioGVRefParserRuleCall_14_0());
 				}
-				lv_GV_14_0=ruleGSSScenarioGV
+				lv_GVRef_14_0=ruleGSSScenarioGVRef
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSScenarioModifyRule());
 					}
 					set(
 						$current,
-						"GV",
-						lv_GV_14_0,
-						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioGV");
+						"GVRef",
+						lv_GVRef_14_0,
+						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioGVRef");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -6647,18 +6647,18 @@ ruleGSSScenarioAlarmVal returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSScenarioAlarmValAccess().getGVGSSScenarioGVParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getGSSScenarioAlarmValAccess().getGVRefGSSScenarioGVRefParserRuleCall_10_0());
 				}
-				lv_GV_10_0=ruleGSSScenarioGV
+				lv_GVRef_10_0=ruleGSSScenarioGVRef
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSScenarioAlarmValRule());
 					}
 					set(
 						$current,
-						"GV",
-						lv_GV_10_0,
-						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioGV");
+						"GVRef",
+						lv_GVRef_10_0,
+						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioGVRef");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -6674,15 +6674,15 @@ ruleGSSScenarioAlarmVal returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleGSSScenarioGV
-entryRuleGSSScenarioGV returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSScenarioGVRule()); }
-	iv_ruleGSSScenarioGV=ruleGSSScenarioGV
-	{ $current=$iv_ruleGSSScenarioGV.current; }
+// Entry rule entryRuleGSSScenarioGVRef
+entryRuleGSSScenarioGVRef returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSScenarioGVRefRule()); }
+	iv_ruleGSSScenarioGVRef=ruleGSSScenarioGVRef
+	{ $current=$iv_ruleGSSScenarioGVRef.current; }
 	EOF;
 
-// Rule GSSScenarioGV
-ruleGSSScenarioGV returns [EObject current=null]
+// Rule GSSScenarioGVRef
+ruleGSSScenarioGVRef returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -6694,7 +6694,7 @@ ruleGSSScenarioGV returns [EObject current=null]
 			/* */
 		}
 		{
-			newCompositeNode(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVFilteredParserRuleCall_0());
+			newCompositeNode(grammarAccess.getGSSScenarioGVRefAccess().getGSSScenarioGVFilteredParserRuleCall_0());
 		}
 		this_GSSScenarioGVFiltered_0=ruleGSSScenarioGVFiltered
 		{
@@ -6706,7 +6706,7 @@ ruleGSSScenarioGV returns [EObject current=null]
 			/* */
 		}
 		{
-			newCompositeNode(grammarAccess.getGSSScenarioGVAccess().getGSSScenarioGVPeriodicParserRuleCall_1());
+			newCompositeNode(grammarAccess.getGSSScenarioGVRefAccess().getGSSScenarioGVPeriodicParserRuleCall_1());
 		}
 		this_GSSScenarioGVPeriodic_1=ruleGSSScenarioGVPeriodic
 		{
@@ -6937,15 +6937,15 @@ ruleGSSScenarioGVPeriodic returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleGSSConfigTests
-entryRuleGSSConfigTests returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSConfigTestsRule()); }
-	iv_ruleGSSConfigTests=ruleGSSConfigTests
-	{ $current=$iv_ruleGSSConfigTests.current; }
+// Entry rule entryRuleGSSTestListTestList
+entryRuleGSSTestListTestList returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSTestListTestListRule()); }
+	iv_ruleGSSTestListTestList=ruleGSSTestListTestList
+	{ $current=$iv_ruleGSSTestListTestList.current; }
 	EOF;
 
-// Rule GSSConfigTests
-ruleGSSConfigTests returns [EObject current=null]
+// Rule GSSTestListTestList
+ruleGSSTestListTestList returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -6953,53 +6953,53 @@ ruleGSSConfigTests returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='GSSScenarioTests'
+		otherlv_0='GSSTestListTestList'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSConfigTestsAccess().getGSSScenarioTestsKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getGSSTestListTestListAccess().getGSSTestListTestListKeyword_0());
 		}
 		otherlv_1='{'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSConfigTestsAccess().getLeftCurlyBracketKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getGSSTestListTestListAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSConfigTestsAccess().getTestCaseGSSConfigTestCaseParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getGSSTestListTestListAccess().getTestCaseGSSTestListTestCaseParserRuleCall_2_0());
 				}
-				lv_TestCase_2_0=ruleGSSConfigTestCase
+				lv_TestCase_2_0=ruleGSSTestListTestCase
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSConfigTestsRule());
+						$current = createModelElementForParent(grammarAccess.getGSSTestListTestListRule());
 					}
 					add(
 						$current,
 						"TestCase",
 						lv_TestCase_2_0,
-						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSConfigTestCase");
+						"es.uah.aut.srg.gss.lang.config.CONFIG.GSSTestListTestCase");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
 		otherlv_3='}'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSConfigTestsAccess().getRightCurlyBracketKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getGSSTestListTestListAccess().getRightCurlyBracketKeyword_3());
 		}
 		otherlv_4=';'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getGSSConfigTestsAccess().getSemicolonKeyword_4());
+			newLeafNode(otherlv_4, grammarAccess.getGSSTestListTestListAccess().getSemicolonKeyword_4());
 		}
 	)
 ;
 
-// Entry rule entryRuleGSSConfigTestCase
-entryRuleGSSConfigTestCase returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSConfigTestCaseRule()); }
-	iv_ruleGSSConfigTestCase=ruleGSSConfigTestCase
-	{ $current=$iv_ruleGSSConfigTestCase.current; }
+// Entry rule entryRuleGSSTestListTestCase
+entryRuleGSSTestListTestCase returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSTestListTestCaseRule()); }
+	iv_ruleGSSTestListTestCase=ruleGSSTestListTestCase
+	{ $current=$iv_ruleGSSTestListTestCase.current; }
 	EOF;
 
-// Rule GSSConfigTestCase
-ruleGSSConfigTestCase returns [EObject current=null]
+// Rule GSSTestListTestCase
+ruleGSSTestListTestCase returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -7007,31 +7007,31 @@ ruleGSSConfigTestCase returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='GSSScenarioTestCase'
+		otherlv_0='GSSTestListTestCase'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSConfigTestCaseAccess().getGSSScenarioTestCaseKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getGSSTestListTestCaseAccess().getGSSTestListTestCaseKeyword_0());
 		}
 		otherlv_1='{'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSConfigTestCaseAccess().getLeftCurlyBracketKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getGSSTestListTestCaseAccess().getLeftCurlyBracketKeyword_1());
 		}
 		otherlv_2='name'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSConfigTestCaseAccess().getNameKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getGSSTestListTestCaseAccess().getNameKeyword_2());
 		}
 		otherlv_3=':='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSConfigTestCaseAccess().getColonEqualsSignKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getGSSTestListTestCaseAccess().getColonEqualsSignKeyword_3());
 		}
 		(
 			(
 				lv_name_4_0=RULE_STRING
 				{
-					newLeafNode(lv_name_4_0, grammarAccess.getGSSConfigTestCaseAccess().getNameSTRINGTerminalRuleCall_4_0());
+					newLeafNode(lv_name_4_0, grammarAccess.getGSSTestListTestCaseAccess().getNameSTRINGTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGSSConfigTestCaseRule());
+						$current = createModelElement(grammarAccess.getGSSTestListTestCaseRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -7043,15 +7043,15 @@ ruleGSSConfigTestCase returns [EObject current=null]
 		)
 		otherlv_5=';'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSConfigTestCaseAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getGSSTestListTestCaseAccess().getSemicolonKeyword_5());
 		}
 		otherlv_6='procedure'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSConfigTestCaseAccess().getProcedureKeyword_6());
+			newLeafNode(otherlv_6, grammarAccess.getGSSTestListTestCaseAccess().getProcedureKeyword_6());
 		}
 		otherlv_7=':='
 		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSConfigTestCaseAccess().getColonEqualsSignKeyword_7());
+			newLeafNode(otherlv_7, grammarAccess.getGSSTestListTestCaseAccess().getColonEqualsSignKeyword_7());
 		}
 		(
 			(
@@ -7060,11 +7060,11 @@ ruleGSSConfigTestCase returns [EObject current=null]
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGSSConfigTestCaseRule());
+						$current = createModelElement(grammarAccess.getGSSTestListTestCaseRule());
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getGSSConfigTestCaseAccess().getProcedureGSSTestProcTestProcCrossReference_8_0());
+					newCompositeNode(grammarAccess.getGSSTestListTestCaseAccess().getProcedureGSSTestProcTestProcCrossReference_8_0());
 				}
 				ruleVersionedQualifiedName
 				{
@@ -7074,22 +7074,22 @@ ruleGSSConfigTestCase returns [EObject current=null]
 		)
 		otherlv_9=';'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getGSSConfigTestCaseAccess().getSemicolonKeyword_9());
+			newLeafNode(otherlv_9, grammarAccess.getGSSTestListTestCaseAccess().getSemicolonKeyword_9());
 		}
 		(
 			otherlv_10='prevMsg'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgKeyword_10_0());
+				newLeafNode(otherlv_10, grammarAccess.getGSSTestListTestCaseAccess().getPrevMsgKeyword_10_0());
 			}
 			(
 				(
 					lv_prevMsg_11_0=RULE_ID
 					{
-						newLeafNode(lv_prevMsg_11_0, grammarAccess.getGSSConfigTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0());
+						newLeafNode(lv_prevMsg_11_0, grammarAccess.getGSSTestListTestCaseAccess().getPrevMsgIDTerminalRuleCall_10_1_0());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getGSSConfigTestCaseRule());
+							$current = createModelElement(grammarAccess.getGSSTestListTestCaseRule());
 						}
 						setWithLastConsumed(
 							$current,
@@ -7103,23 +7103,23 @@ ruleGSSConfigTestCase returns [EObject current=null]
 		(
 			otherlv_12='prevAction'
 			{
-				newLeafNode(otherlv_12, grammarAccess.getGSSConfigTestCaseAccess().getPrevActionKeyword_11_0());
+				newLeafNode(otherlv_12, grammarAccess.getGSSTestListTestCaseAccess().getPrevActionKeyword_11_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSConfigTestCaseAccess().getPrevActionGSSTestProcPrevActionEnumRuleCall_11_1_0());
+						newCompositeNode(grammarAccess.getGSSTestListTestCaseAccess().getPrevActionGSSTestListPrevActionEnumRuleCall_11_1_0());
 					}
-					lv_prevAction_13_0=ruleGSSTestProcPrevAction
+					lv_prevAction_13_0=ruleGSSTestListPrevAction
 					{
 						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGSSConfigTestCaseRule());
+							$current = createModelElementForParent(grammarAccess.getGSSTestListTestCaseRule());
 						}
 						set(
 							$current,
 							"prevAction",
 							lv_prevAction_13_0,
-							"es.uah.aut.srg.gss.lang.config.CONFIG.GSSTestProcPrevAction");
+							"es.uah.aut.srg.gss.lang.config.CONFIG.GSSTestListPrevAction");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -7127,17 +7127,17 @@ ruleGSSConfigTestCase returns [EObject current=null]
 			(
 				otherlv_14='prevActionParam'
 				{
-					newLeafNode(otherlv_14, grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamKeyword_11_2_0());
+					newLeafNode(otherlv_14, grammarAccess.getGSSTestListTestCaseAccess().getPrevActionParamKeyword_11_2_0());
 				}
 				(
 					(
 						lv_prevActionParam_15_0=RULE_STRING
 						{
-							newLeafNode(lv_prevActionParam_15_0, grammarAccess.getGSSConfigTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0());
+							newLeafNode(lv_prevActionParam_15_0, grammarAccess.getGSSTestListTestCaseAccess().getPrevActionParamSTRINGTerminalRuleCall_11_2_1_0());
 						}
 						{
 							if ($current==null) {
-								$current = createModelElement(grammarAccess.getGSSConfigTestCaseRule());
+								$current = createModelElement(grammarAccess.getGSSTestListTestCaseRule());
 							}
 							setWithLastConsumed(
 								$current,
@@ -7151,11 +7151,11 @@ ruleGSSConfigTestCase returns [EObject current=null]
 		)?
 		otherlv_16='}'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getGSSConfigTestCaseAccess().getRightCurlyBracketKeyword_12());
+			newLeafNode(otherlv_16, grammarAccess.getGSSTestListTestCaseAccess().getRightCurlyBracketKeyword_12());
 		}
 		otherlv_17=';'
 		{
-			newLeafNode(otherlv_17, grammarAccess.getGSSConfigTestCaseAccess().getSemicolonKeyword_13());
+			newLeafNode(otherlv_17, grammarAccess.getGSSTestListTestCaseAccess().getSemicolonKeyword_13());
 		}
 	)
 ;
@@ -7871,8 +7871,8 @@ ruleGSSScenarioAlarmValType returns [Enumerator current=null]
 	)
 ;
 
-// Rule GSSTestProcPrevAction
-ruleGSSTestProcPrevAction returns [Enumerator current=null]
+// Rule GSSTestListPrevAction
+ruleGSSTestListPrevAction returns [Enumerator current=null]
 @init {
 	enterRule();
 }
@@ -7880,10 +7880,10 @@ ruleGSSTestProcPrevAction returns [Enumerator current=null]
 	leaveRule();
 }:
 	(
-		enumLiteral_0='reset'
+		enumLiteral_0='1'
 		{
-			$current = grammarAccess.getGSSTestProcPrevActionAccess().getResetEnumLiteralDeclaration().getEnumLiteral().getInstance();
-			newLeafNode(enumLiteral_0, grammarAccess.getGSSTestProcPrevActionAccess().getResetEnumLiteralDeclaration());
+			$current = grammarAccess.getGSSTestListPrevActionAccess().getResetEnumLiteralDeclaration().getEnumLiteral().getInstance();
+			newLeafNode(enumLiteral_0, grammarAccess.getGSSTestListPrevActionAccess().getResetEnumLiteralDeclaration());
 		}
 	)
 ;

@@ -31,14 +31,17 @@ GSSFilterMintermFilter «this.name» {
 		GSSFilterFieldOp {
 			type := «this.Op.type»;
 		};
-«IF (this.Value.metaType.name == "filter::GSSFilterConstant") -»
-«EXPAND SerializeConstant FOR (GSSFilterConstant)(this.Value) -»
-«ELSEIF (this.Value.metaType.name == "filter::GSSFilterSelect") -»
-«EXPAND SerializeSelect FOR (GSSFilterSelect)(this.Value) -»
-«ELSEIF (this.Value.metaType.name == "filter::GSSFilterSelectLine") -»
-«EXPAND SerializeSelectLine FOR (GSSFilterSelectLine)(this.Value) -»
-«ENDIF»	};
+«EXPAND SerializeValue FOR this.value -»	};
 «ENDDEFINE»
+
+«DEFINE SerializeValue FOR GSSFilterValue -»
+«IF (this.metaType.name == "filter::GSSFilterConstant") -»
+«EXPAND SerializeConstant FOR (GSSFilterConstant)this -»
+«ELSEIF (this.metaType.name == "filter::GSSFilterSelect") -»
+«EXPAND SerializeSelect FOR (GSSFilterSelect)this -»
+«ELSEIF (this.metaType.name == "filter::GSSFilterSelectLine") -»
+«EXPAND SerializeSelectLine FOR (GSSFilterSelectLine)this -»
+«ENDIF» «ENDDEFINE»
 
 «DEFINE SerializeBoolVarFDIC FOR GSSFilterBoolVarFDIC -»
 	GSSFilterBoolVarFDIC {

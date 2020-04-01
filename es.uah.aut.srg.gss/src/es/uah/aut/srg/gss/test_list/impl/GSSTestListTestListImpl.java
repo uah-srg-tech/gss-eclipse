@@ -8,11 +8,11 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.gss.config.impl;
+package es.uah.aut.srg.gss.test_list.impl;
 
-import es.uah.aut.srg.gss.config.GSSConfigTestCase;
-import es.uah.aut.srg.gss.config.GSSConfigTests;
-import es.uah.aut.srg.gss.config.configPackage;
+import es.uah.aut.srg.gss.test_list.GSSTestListTestCase;
+import es.uah.aut.srg.gss.test_list.GSSTestListTestList;
+import es.uah.aut.srg.gss.test_list.test_listPackage;
 
 import java.util.Collection;
 
@@ -30,18 +30,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GSS Config Tests</b></em>'.
+ * An implementation of the model object '<em><b>GSS Test List Test List</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.config.impl.GSSConfigTestsImpl#getTestCase <em>Test Case</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.test_list.impl.GSSTestListTestListImpl#getTestCase <em>Test Case</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements GSSConfigTests {
+public class GSSTestListTestListImpl extends MinimalEObjectImpl.Container implements GSSTestListTestList {
 	/**
 	 * The cached value of the '{@link #getTestCase() <em>Test Case</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -50,14 +50,14 @@ public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GSSConfigTestCase> testCase;
+	protected EList<GSSTestListTestCase> testCase;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GSSConfigTestsImpl() {
+	protected GSSTestListTestListImpl() {
 		super();
 	}
 
@@ -68,7 +68,7 @@ public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return configPackage.Literals.GSS_CONFIG_TESTS;
+		return test_listPackage.Literals.GSS_TEST_LIST_TEST_LIST;
 	}
 
 	/**
@@ -76,9 +76,9 @@ public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSConfigTestCase> getTestCase() {
+	public EList<GSSTestListTestCase> getTestCase() {
 		if (testCase == null) {
-			testCase = new EObjectContainmentEList<GSSConfigTestCase>(GSSConfigTestCase.class, this, configPackage.GSS_CONFIG_TESTS__TEST_CASE);
+			testCase = new EObjectContainmentEList<GSSTestListTestCase>(GSSTestListTestCase.class, this, test_listPackage.GSS_TEST_LIST_TEST_LIST__TEST_CASE);
 		}
 		return testCase;
 	}
@@ -91,7 +91,7 @@ public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case configPackage.GSS_CONFIG_TESTS__TEST_CASE:
+			case test_listPackage.GSS_TEST_LIST_TEST_LIST__TEST_CASE:
 				return ((InternalEList<?>)getTestCase()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -105,7 +105,7 @@ public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case configPackage.GSS_CONFIG_TESTS__TEST_CASE:
+			case test_listPackage.GSS_TEST_LIST_TEST_LIST__TEST_CASE:
 				return getTestCase();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -120,9 +120,9 @@ public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case configPackage.GSS_CONFIG_TESTS__TEST_CASE:
+			case test_listPackage.GSS_TEST_LIST_TEST_LIST__TEST_CASE:
 				getTestCase().clear();
-				getTestCase().addAll((Collection<? extends GSSConfigTestCase>)newValue);
+				getTestCase().addAll((Collection<? extends GSSTestListTestCase>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -136,7 +136,7 @@ public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case configPackage.GSS_CONFIG_TESTS__TEST_CASE:
+			case test_listPackage.GSS_TEST_LIST_TEST_LIST__TEST_CASE:
 				getTestCase().clear();
 				return;
 		}
@@ -151,10 +151,10 @@ public class GSSConfigTestsImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case configPackage.GSS_CONFIG_TESTS__TEST_CASE:
+			case test_listPackage.GSS_TEST_LIST_TEST_LIST__TEST_CASE:
 				return testCase != null && !testCase.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //GSSConfigTestsImpl
+} //GSSTestListTestListImpl

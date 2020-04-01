@@ -66,15 +66,6 @@ public interface filterFactory extends EFactory {
 	GSSFilterFieldOp createGSSFilterFieldOp();
 
 	/**
-	 * Returns a new object of class '<em>GSS Filter Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Filter Value</em>'.
-	 * @generated
-	 */
-	GSSFilterValue createGSSFilterValue();
-
-	/**
 	 * Returns a new object of class '<em>GSS Filter Constant</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
