@@ -71,14 +71,6 @@
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated test_campaign -->
-      <package
-            uri="http://srg.aut.uah.es/gss/test_campaign"
-            class="es.uah.aut.srg.gss.test_campaign.test_campaignPackage"
-            genModel="model/test_campaign.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated import -->
       <package
             uri="http://srg.aut.uah.es/gss/import"
