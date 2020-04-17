@@ -17,27 +17,15 @@ import es.uah.aut.srg.gss.format.GSSFormatFormat;
 import es.uah.aut.srg.gss.import_.GSSImportImport;
 
 import es.uah.aut.srg.gss.tm.GSSTM;
-import es.uah.aut.srg.gss.tm.GSSTMField;
-import es.uah.aut.srg.gss.tm.GSSTMPi1;
 import es.uah.aut.srg.gss.tm.tmPackage;
-import es.uah.aut.srg.tmtcif.tm.TMTCIFPI1;
-import es.uah.aut.srg.tmtcif.tm.TMTCIFTMField;
+
 import es.uah.aut.srg.tmtcif.tm.impl.TMTCIFTMImpl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.BasicEList;
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -59,8 +47,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link es.uah.aut.srg.gss.tm.impl.GSSTMImpl#getFrom_level0_import <em>From level0 import</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm.impl.GSSTMImpl#getLevel0_filter <em>Level0 filter</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm.impl.GSSTMImpl#getLevel0_format <em>Level0 format</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm.impl.GSSTMImpl#getGssPi1 <em>Gss Pi1</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm.impl.GSSTMImpl#getGssFields <em>Gss Fields</em>}</li>
  * </ul>
  *
  * @generated
@@ -195,26 +181,6 @@ public class GSSTMImpl extends TMTCIFTMImpl implements GSSTM {
 	 * @ordered
 	 */
 	protected GSSFormatFormat level0_format;
-
-	/**
-	 * The cached value of the '{@link #getGssPi1() <em>Gss Pi1</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGssPi1()
-	 * @generated
-	 * @ordered
-	 */
-	protected GSSTMPi1 gssPi1;
-
-	/**
-	 * The cached value of the '{@link #getGssFields() <em>Gss Fields</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGssFields()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSTMField> gssFields;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -679,77 +645,6 @@ public class GSSTMImpl extends TMTCIFTMImpl implements GSSTM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSTMPi1 getGssPi1() {
-		return gssPi1;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetGssPi1(GSSTMPi1 newGssPi1, NotificationChain msgs) {
-		GSSTMPi1 oldGssPi1 = gssPi1;
-		gssPi1 = newGssPi1;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, tmPackage.GSSTM__GSS_PI1, oldGssPi1, newGssPi1);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setGssPi1(GSSTMPi1 newGssPi1) {
-		if (newGssPi1 != gssPi1) {
-			NotificationChain msgs = null;
-			if (gssPi1 != null)
-				msgs = ((InternalEObject)gssPi1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - tmPackage.GSSTM__GSS_PI1, null, msgs);
-			if (newGssPi1 != null)
-				msgs = ((InternalEObject)newGssPi1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - tmPackage.GSSTM__GSS_PI1, null, msgs);
-			msgs = basicSetGssPi1(newGssPi1, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tmPackage.GSSTM__GSS_PI1, newGssPi1, newGssPi1));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<GSSTMField> getGssFields() {
-		if (gssFields == null) {
-			gssFields = new EObjectContainmentEList<GSSTMField>(GSSTMField.class, this, tmPackage.GSSTM__GSS_FIELDS);
-		}
-		return gssFields;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case tmPackage.GSSTM__GSS_PI1:
-				return basicSetGssPi1(null, msgs);
-			case tmPackage.GSSTM__GSS_FIELDS:
-				return ((InternalEList<?>)getGssFields()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -788,10 +683,6 @@ public class GSSTMImpl extends TMTCIFTMImpl implements GSSTM {
 			case tmPackage.GSSTM__LEVEL0_FORMAT:
 				if (resolve) return getLevel0_format();
 				return basicGetLevel0_format();
-			case tmPackage.GSSTM__GSS_PI1:
-				return getGssPi1();
-			case tmPackage.GSSTM__GSS_FIELDS:
-				return getGssFields();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -801,7 +692,6 @@ public class GSSTMImpl extends TMTCIFTMImpl implements GSSTM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -840,13 +730,6 @@ public class GSSTMImpl extends TMTCIFTMImpl implements GSSTM {
 				return;
 			case tmPackage.GSSTM__LEVEL0_FORMAT:
 				setLevel0_format((GSSFormatFormat)newValue);
-				return;
-			case tmPackage.GSSTM__GSS_PI1:
-				setGssPi1((GSSTMPi1)newValue);
-				return;
-			case tmPackage.GSSTM__GSS_FIELDS:
-				getGssFields().clear();
-				getGssFields().addAll((Collection<? extends GSSTMField>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -896,12 +779,6 @@ public class GSSTMImpl extends TMTCIFTMImpl implements GSSTM {
 			case tmPackage.GSSTM__LEVEL0_FORMAT:
 				setLevel0_format((GSSFormatFormat)null);
 				return;
-			case tmPackage.GSSTM__GSS_PI1:
-				setGssPi1((GSSTMPi1)null);
-				return;
-			case tmPackage.GSSTM__GSS_FIELDS:
-				getGssFields().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -938,10 +815,6 @@ public class GSSTMImpl extends TMTCIFTMImpl implements GSSTM {
 				return level0_filter != null;
 			case tmPackage.GSSTM__LEVEL0_FORMAT:
 				return level0_format != null;
-			case tmPackage.GSSTM__GSS_PI1:
-				return gssPi1 != null;
-			case tmPackage.GSSTM__GSS_FIELDS:
-				return gssFields != null && !gssFields.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -962,17 +835,4 @@ public class GSSTMImpl extends TMTCIFTMImpl implements GSSTM {
 		return result.toString();
 	}
 
-	@Override
-	public TMTCIFPI1 basicGetPi1() {
-		return (TMTCIFPI1)getGssPi1();
-	}
-
-	@Override
-	public EList<TMTCIFTMField> getFields() {
-		EList<TMTCIFTMField> fields = new BasicEList<TMTCIFTMField>();
-		for(GSSTMField gssField : getGssFields()) {
-			fields.add((TMTCIFTMField) gssField);
-		};
-		return fields;
-	}
 } //GSSTMImpl

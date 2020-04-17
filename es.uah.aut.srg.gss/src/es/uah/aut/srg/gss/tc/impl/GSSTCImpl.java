@@ -15,25 +15,16 @@ import es.uah.aut.srg.gss.export.GSSExportExport;
 import es.uah.aut.srg.gss.format.GSSFormatFormat;
 
 import es.uah.aut.srg.gss.tc.GSSTC;
-import es.uah.aut.srg.gss.tc.GSSTCField;
 import es.uah.aut.srg.gss.tc.tcPackage;
-import es.uah.aut.srg.tmtcif.tc.TMTCIFTCField;
+
 import es.uah.aut.srg.tmtcif.tc.impl.TMTCIFTCImpl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.BasicEList;
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,7 +43,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link es.uah.aut.srg.gss.tc.impl.GSSTCImpl#getLevel1_format <em>Level1 format</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tc.impl.GSSTCImpl#getTo_level0_export <em>To level0 export</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tc.impl.GSSTCImpl#getLevel0_format <em>Level0 format</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tc.impl.GSSTCImpl#getGssFields <em>Gss Fields</em>}</li>
  * </ul>
  *
  * @generated
@@ -157,16 +147,6 @@ public class GSSTCImpl extends TMTCIFTCImpl implements GSSTC {
 	 * @ordered
 	 */
 	protected GSSFormatFormat level0_format;
-
-	/**
-	 * The cached value of the '{@link #getGssFields() <em>Gss Fields</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGssFields()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GSSTCField> gssFields;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -517,32 +497,6 @@ public class GSSTCImpl extends TMTCIFTCImpl implements GSSTC {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GSSTCField> getGssFields() {
-		if (gssFields == null) {
-			gssFields = new EObjectContainmentEList<GSSTCField>(GSSTCField.class, this, tcPackage.GSSTC__GSS_FIELDS);
-		}
-		return gssFields;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case tcPackage.GSSTC__GSS_FIELDS:
-				return ((InternalEList<?>)getGssFields()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -572,8 +526,6 @@ public class GSSTCImpl extends TMTCIFTCImpl implements GSSTC {
 			case tcPackage.GSSTC__LEVEL0_FORMAT:
 				if (resolve) return getLevel0_format();
 				return basicGetLevel0_format();
-			case tcPackage.GSSTC__GSS_FIELDS:
-				return getGssFields();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -583,7 +535,6 @@ public class GSSTCImpl extends TMTCIFTCImpl implements GSSTC {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -613,10 +564,6 @@ public class GSSTCImpl extends TMTCIFTCImpl implements GSSTC {
 				return;
 			case tcPackage.GSSTC__LEVEL0_FORMAT:
 				setLevel0_format((GSSFormatFormat)newValue);
-				return;
-			case tcPackage.GSSTC__GSS_FIELDS:
-				getGssFields().clear();
-				getGssFields().addAll((Collection<? extends GSSTCField>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -657,9 +604,6 @@ public class GSSTCImpl extends TMTCIFTCImpl implements GSSTC {
 			case tcPackage.GSSTC__LEVEL0_FORMAT:
 				setLevel0_format((GSSFormatFormat)null);
 				return;
-			case tcPackage.GSSTC__GSS_FIELDS:
-				getGssFields().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -690,8 +634,6 @@ public class GSSTCImpl extends TMTCIFTCImpl implements GSSTC {
 				return to_level0_export != null;
 			case tcPackage.GSSTC__LEVEL0_FORMAT:
 				return level0_format != null;
-			case tcPackage.GSSTC__GSS_FIELDS:
-				return gssFields != null && !gssFields.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -712,12 +654,4 @@ public class GSSTCImpl extends TMTCIFTCImpl implements GSSTC {
 		return result.toString();
 	}
 
-	@Override
-	public EList<TMTCIFTCField> getFields() {
-		EList<TMTCIFTCField> fields = new BasicEList<TMTCIFTCField>();
-		for(GSSTCField gssField : getGssFields()) {
-			fields.add((TMTCIFTCField) gssField);
-		};
-		return fields;
-	}
 } //GSSTCImpl

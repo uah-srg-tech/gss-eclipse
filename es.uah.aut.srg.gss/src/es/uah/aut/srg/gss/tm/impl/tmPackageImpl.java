@@ -244,24 +244,6 @@ public class tmPackageImpl extends EPackageImpl implements tmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTM_GssPi1() {
-		return (EReference)gsstmEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSTM_GssFields() {
-		return (EReference)gsstmEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getGSSTMPi1() {
 		return gsstmPi1EClass;
 	}
@@ -334,8 +316,6 @@ public class tmPackageImpl extends EPackageImpl implements tmPackage {
 		createEReference(gsstmEClass, GSSTM__FROM_LEVEL0_IMPORT);
 		createEReference(gsstmEClass, GSSTM__LEVEL0_FILTER);
 		createEReference(gsstmEClass, GSSTM__LEVEL0_FORMAT);
-		createEReference(gsstmEClass, GSSTM__GSS_PI1);
-		createEReference(gsstmEClass, GSSTM__GSS_FIELDS);
 
 		gsstmPi1EClass = createEClass(GSSTM_PI1);
 		createEReference(gsstmPi1EClass, GSSTM_PI1__GSS_FIELD);
@@ -396,8 +376,6 @@ public class tmPackageImpl extends EPackageImpl implements tmPackage {
 		initEReference(getGSSTM_From_level0_import(), theimportPackage.getGSSImportImport(), null, "from_level0_import", null, 0, 1, es.uah.aut.srg.gss.tm.GSSTM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTM_Level0_filter(), thefilterPackage.getGSSFilterFilter(), null, "level0_filter", null, 0, 1, es.uah.aut.srg.gss.tm.GSSTM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTM_Level0_format(), theformatPackage.getGSSFormatFormat(), null, "level0_format", null, 0, 1, es.uah.aut.srg.gss.tm.GSSTM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTM_GssPi1(), this.getGSSTMPi1(), null, "gssPi1", null, 0, 1, es.uah.aut.srg.gss.tm.GSSTM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTM_GssFields(), this.getGSSTMField(), null, "gssFields", null, 0, -1, es.uah.aut.srg.gss.tm.GSSTM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gsstmPi1EClass, GSSTMPi1.class, "GSSTMPi1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSTMPi1_GssField(), theformatPackage.getGSSFormatField(), null, "gssField", null, 1, 1, GSSTMPi1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

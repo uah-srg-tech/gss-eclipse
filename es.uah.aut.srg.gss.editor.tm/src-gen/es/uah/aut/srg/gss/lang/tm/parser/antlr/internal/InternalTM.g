@@ -518,17 +518,17 @@ ruleGSSTM returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSTMAccess().getGssPi1GSSTMPi1ParserRuleCall_21_0());
+					newCompositeNode(grammarAccess.getGSSTMAccess().getPi1GSSTMPi1ParserRuleCall_21_0());
 				}
-				lv_gssPi1_54_0=ruleGSSTMPi1
+				lv_pi1_54_0=ruleGSSTMPi1
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSTMRule());
 					}
 					set(
 						$current,
-						"gssPi1",
-						lv_gssPi1_54_0,
+						"pi1",
+						lv_pi1_54_0,
 						"es.uah.aut.srg.gss.lang.tm.TM.GSSTMPi1");
 					afterParserOrEnumRuleCall();
 				}
@@ -542,17 +542,17 @@ ruleGSSTM returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSTMAccess().getGssFieldsGSSTMFieldParserRuleCall_22_1_0());
+						newCompositeNode(grammarAccess.getGSSTMAccess().getFieldsGSSTMFieldParserRuleCall_22_1_0());
 					}
-					lv_gssFields_56_0=ruleGSSTMField
+					lv_fields_56_0=ruleGSSTMField
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSTMRule());
 						}
 						add(
 							$current,
-							"gssFields",
-							lv_gssFields_56_0,
+							"fields",
+							lv_fields_56_0,
 							"es.uah.aut.srg.gss.lang.tm.TM.GSSTMField");
 						afterParserOrEnumRuleCall();
 					}

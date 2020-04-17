@@ -15,10 +15,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="from_level0_import" eType="ecore:EClass import.ecore#//GSSImportImport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0_filter" eType="ecore:EClass filter.ecore#//GSSFilterFilter"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0_format" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gssPi1" eType="#//GSSTMPi1"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gssFields" upperBound="-1"
-        eType="#//GSSTMField" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTMPi1" eSuperTypes="../../es.uah.aut.srg.tmtcif/model/tm.ecore#//TMTCIFPI1">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gssField" lowerBound="1"

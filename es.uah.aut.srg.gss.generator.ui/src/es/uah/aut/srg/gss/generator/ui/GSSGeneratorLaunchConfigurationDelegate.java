@@ -604,7 +604,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 								gssTcField.setEnumRef(tcEnums.get(tcParamEnum.get(field.getName())));
 							}
 						}
-						gssTc.getGssFields().add(gssTcField);
+						gssTc.getFields().add(gssTcField);
 					}
 				}
 				else {
@@ -730,7 +730,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 						} else {
 							gssTmPi1.setName(field.getName());
 						}
-						gssTm.setGssPi1(gssTmPi1);
+						gssTm.setPi1(gssTmPi1);
 					}
 					else {
 						GSSTMField gssTmCSField = tmFactory.eINSTANCE.createGSSTMField();
@@ -745,7 +745,7 @@ public class GSSGeneratorLaunchConfigurationDelegate implements ILaunchConfigura
 								gssTmCSField.setEnumRef(tmEnums.get(tmParamEnum.get(field.getName())));
 							}
 						}
-						gssTm.getGssFields().add(gssTmCSField);
+						gssTm.getFields().add(gssTmCSField);
 					}
 				}
 				if((cFields != 0) || (vFields != 0) || (aFields != 0)) {

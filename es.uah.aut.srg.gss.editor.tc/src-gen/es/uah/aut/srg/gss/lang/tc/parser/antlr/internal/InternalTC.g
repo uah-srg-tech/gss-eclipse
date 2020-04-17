@@ -433,17 +433,17 @@ ruleGSSTC returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSTCAccess().getGssFieldsGSSTCFieldParserRuleCall_18_1_0());
+						newCompositeNode(grammarAccess.getGSSTCAccess().getFieldsGSSTCFieldParserRuleCall_18_1_0());
 					}
-					lv_gssFields_43_0=ruleGSSTCField
+					lv_fields_43_0=ruleGSSTCField
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSTCRule());
 						}
 						add(
 							$current,
-							"gssFields",
-							lv_gssFields_43_0,
+							"fields",
+							lv_fields_43_0,
 							"es.uah.aut.srg.gss.lang.tc.TC.GSSTCField");
 						afterParserOrEnumRuleCall();
 					}

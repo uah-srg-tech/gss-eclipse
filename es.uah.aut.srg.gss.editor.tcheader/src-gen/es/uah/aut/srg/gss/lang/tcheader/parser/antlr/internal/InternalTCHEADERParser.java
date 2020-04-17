@@ -144,7 +144,7 @@ public class InternalTCHEADERParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSTCHeader"
-    // InternalTCHEADER.g:84:1: ruleGSSTCHeader returns [EObject current=null] : (otherlv_0= '<GSSTCHeader' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<format' otherlv_5= 'file=' ( (otherlv_6= RULE_STRING ) ) otherlv_7= '/>' (otherlv_8= '<fields>' ( (lv_gssHeaderFields_9_0= ruleGSSTCHeaderField ) )+ otherlv_10= '</fields>' )? otherlv_11= '</GSSTCHeader>' ) ;
+    // InternalTCHEADER.g:84:1: ruleGSSTCHeader returns [EObject current=null] : (otherlv_0= '<GSSTCHeader' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<format' otherlv_5= 'file=' ( (otherlv_6= RULE_STRING ) ) otherlv_7= '/>' (otherlv_8= '<fields>' ( (lv_fields_9_0= ruleGSSTCHeaderField ) )+ otherlv_10= '</fields>' )? otherlv_11= '</GSSTCHeader>' ) ;
     public final EObject ruleGSSTCHeader() throws RecognitionException {
         EObject current = null;
 
@@ -159,18 +159,18 @@ public class InternalTCHEADERParser extends AbstractInternalAntlrParser {
         Token otherlv_8=null;
         Token otherlv_10=null;
         Token otherlv_11=null;
-        EObject lv_gssHeaderFields_9_0 = null;
+        EObject lv_fields_9_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalTCHEADER.g:90:2: ( (otherlv_0= '<GSSTCHeader' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<format' otherlv_5= 'file=' ( (otherlv_6= RULE_STRING ) ) otherlv_7= '/>' (otherlv_8= '<fields>' ( (lv_gssHeaderFields_9_0= ruleGSSTCHeaderField ) )+ otherlv_10= '</fields>' )? otherlv_11= '</GSSTCHeader>' ) )
-            // InternalTCHEADER.g:91:2: (otherlv_0= '<GSSTCHeader' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<format' otherlv_5= 'file=' ( (otherlv_6= RULE_STRING ) ) otherlv_7= '/>' (otherlv_8= '<fields>' ( (lv_gssHeaderFields_9_0= ruleGSSTCHeaderField ) )+ otherlv_10= '</fields>' )? otherlv_11= '</GSSTCHeader>' )
+            // InternalTCHEADER.g:90:2: ( (otherlv_0= '<GSSTCHeader' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<format' otherlv_5= 'file=' ( (otherlv_6= RULE_STRING ) ) otherlv_7= '/>' (otherlv_8= '<fields>' ( (lv_fields_9_0= ruleGSSTCHeaderField ) )+ otherlv_10= '</fields>' )? otherlv_11= '</GSSTCHeader>' ) )
+            // InternalTCHEADER.g:91:2: (otherlv_0= '<GSSTCHeader' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<format' otherlv_5= 'file=' ( (otherlv_6= RULE_STRING ) ) otherlv_7= '/>' (otherlv_8= '<fields>' ( (lv_fields_9_0= ruleGSSTCHeaderField ) )+ otherlv_10= '</fields>' )? otherlv_11= '</GSSTCHeader>' )
             {
-            // InternalTCHEADER.g:91:2: (otherlv_0= '<GSSTCHeader' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<format' otherlv_5= 'file=' ( (otherlv_6= RULE_STRING ) ) otherlv_7= '/>' (otherlv_8= '<fields>' ( (lv_gssHeaderFields_9_0= ruleGSSTCHeaderField ) )+ otherlv_10= '</fields>' )? otherlv_11= '</GSSTCHeader>' )
-            // InternalTCHEADER.g:92:3: otherlv_0= '<GSSTCHeader' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<format' otherlv_5= 'file=' ( (otherlv_6= RULE_STRING ) ) otherlv_7= '/>' (otherlv_8= '<fields>' ( (lv_gssHeaderFields_9_0= ruleGSSTCHeaderField ) )+ otherlv_10= '</fields>' )? otherlv_11= '</GSSTCHeader>'
+            // InternalTCHEADER.g:91:2: (otherlv_0= '<GSSTCHeader' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<format' otherlv_5= 'file=' ( (otherlv_6= RULE_STRING ) ) otherlv_7= '/>' (otherlv_8= '<fields>' ( (lv_fields_9_0= ruleGSSTCHeaderField ) )+ otherlv_10= '</fields>' )? otherlv_11= '</GSSTCHeader>' )
+            // InternalTCHEADER.g:92:3: otherlv_0= '<GSSTCHeader' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<format' otherlv_5= 'file=' ( (otherlv_6= RULE_STRING ) ) otherlv_7= '/>' (otherlv_8= '<fields>' ( (lv_fields_9_0= ruleGSSTCHeaderField ) )+ otherlv_10= '</fields>' )? otherlv_11= '</GSSTCHeader>'
             {
             otherlv_0=(Token)match(input,13,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -268,7 +268,7 @@ public class InternalTCHEADERParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSTCHeaderAccess().getSolidusGreaterThanSignKeyword_7());
               		
             }
-            // InternalTCHEADER.g:150:3: (otherlv_8= '<fields>' ( (lv_gssHeaderFields_9_0= ruleGSSTCHeaderField ) )+ otherlv_10= '</fields>' )?
+            // InternalTCHEADER.g:150:3: (otherlv_8= '<fields>' ( (lv_fields_9_0= ruleGSSTCHeaderField ) )+ otherlv_10= '</fields>' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -277,7 +277,7 @@ public class InternalTCHEADERParser extends AbstractInternalAntlrParser {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalTCHEADER.g:151:4: otherlv_8= '<fields>' ( (lv_gssHeaderFields_9_0= ruleGSSTCHeaderField ) )+ otherlv_10= '</fields>'
+                    // InternalTCHEADER.g:151:4: otherlv_8= '<fields>' ( (lv_fields_9_0= ruleGSSTCHeaderField ) )+ otherlv_10= '</fields>'
                     {
                     otherlv_8=(Token)match(input,19,FollowSets000.FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -285,7 +285,7 @@ public class InternalTCHEADERParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_8, grammarAccess.getGSSTCHeaderAccess().getFieldsKeyword_8_0());
                       			
                     }
-                    // InternalTCHEADER.g:155:4: ( (lv_gssHeaderFields_9_0= ruleGSSTCHeaderField ) )+
+                    // InternalTCHEADER.g:155:4: ( (lv_fields_9_0= ruleGSSTCHeaderField ) )+
                     int cnt1=0;
                     loop1:
                     do {
@@ -299,18 +299,18 @@ public class InternalTCHEADERParser extends AbstractInternalAntlrParser {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // InternalTCHEADER.g:156:5: (lv_gssHeaderFields_9_0= ruleGSSTCHeaderField )
+                    	    // InternalTCHEADER.g:156:5: (lv_fields_9_0= ruleGSSTCHeaderField )
                     	    {
-                    	    // InternalTCHEADER.g:156:5: (lv_gssHeaderFields_9_0= ruleGSSTCHeaderField )
-                    	    // InternalTCHEADER.g:157:6: lv_gssHeaderFields_9_0= ruleGSSTCHeaderField
+                    	    // InternalTCHEADER.g:156:5: (lv_fields_9_0= ruleGSSTCHeaderField )
+                    	    // InternalTCHEADER.g:157:6: lv_fields_9_0= ruleGSSTCHeaderField
                     	    {
                     	    if ( state.backtracking==0 ) {
 
-                    	      						newCompositeNode(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsGSSTCHeaderFieldParserRuleCall_8_1_0());
+                    	      						newCompositeNode(grammarAccess.getGSSTCHeaderAccess().getFieldsGSSTCHeaderFieldParserRuleCall_8_1_0());
                     	      					
                     	    }
                     	    pushFollow(FollowSets000.FOLLOW_11);
-                    	    lv_gssHeaderFields_9_0=ruleGSSTCHeaderField();
+                    	    lv_fields_9_0=ruleGSSTCHeaderField();
 
                     	    state._fsp--;
                     	    if (state.failed) return current;
@@ -321,8 +321,8 @@ public class InternalTCHEADERParser extends AbstractInternalAntlrParser {
                     	      						}
                     	      						add(
                     	      							current,
-                    	      							"gssHeaderFields",
-                    	      							lv_gssHeaderFields_9_0,
+                    	      							"fields",
+                    	      							lv_fields_9_0,
                     	      							"es.uah.aut.srg.gss.lang.tcheader.TCHEADER.GSSTCHeaderField");
                     	      						afterParserOrEnumRuleCall();
                     	      					

@@ -11,16 +11,16 @@
 	<from_level0_import file="«this.from_level0_import.name»(«this.from_level0_import.version»)"/>
 «ENDIF -»
 	<level0_filter file="«this.level0_filter.name»(«this.level0_filter.version»)"/>
-«IF this.gssPi1 != null -»
-	<PI1 name="«this.gssPi1.name»" val="«this.gssPi1.val»" gssField="«this.level1_format.name»(«this.level1_format.version»).«this.gssPi1.gssField.name»"/>
+«IF this.pi1 != null -»
+	<PI1 name="«this.pi1.name»" val="«this.pi1.val»" gssField="«this.level1_format.name»(«this.level1_format.version»).«EXPAND SerializeGSSTMPi1Field FOR (GSSTMPi1)this.pi1»"/>
 «ENDIF -»
 «IF this.fields.size != 0 -»
 	<fields>
-«FOREACH this.gssFields AS field -»
+«FOREACH this.fields AS field -»
 «IF field.enumRef == null -»
-		<Field name="«field.name»" gssField="«this.level1_format.name»(«this.level1_format.version»).«field.gssField.name»"/>
+		<Field name="«field.name»" gssField="«this.level1_format.name»(«this.level1_format.version»).«EXPAND SerializeGSSTMField FOR (GSSTMField)field»"/>
 «ELSE -»
-		<Field name="«field.name»" gssField="«this.level1_format.name»(«this.level1_format.version»).«field.gssField.name»" enumRef="«field.enumRef.name»"/>
+		<Field name="«field.name»" gssField="«this.level1_format.name»(«this.level1_format.version»).«EXPAND SerializeGSSTMField FOR (GSSTMField)field»" enumRef="«field.enumRef.name»"/>
 «ENDIF -»
 «ENDFOREACH -»
 	</fields>
@@ -28,3 +28,7 @@
 </GSSTM>
 «ENDFILE -»
 «ENDDEFINE»
+
+«DEFINE SerializeGSSTMField FOR GSSTMField»«this.gssField.name»«ENDDEFINE»
+
+«DEFINE SerializeGSSTMPi1Field FOR GSSTMPi1»«this.gssField.name»«ENDDEFINE»

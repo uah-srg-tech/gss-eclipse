@@ -20,6 +20,7 @@ import es.uah.aut.srg.gss.scenario.GSSScenarioSpecialPacket;
 import es.uah.aut.srg.gss.scenario.GSSScenarioUpperLevels;
 import es.uah.aut.srg.gss.scenario.scenarioPackage;
 
+import es.uah.aut.srg.tmtcif.scenario.impl.TMTCIFScenarioPacketConfigImpl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -31,8 +32,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -45,7 +44,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioSpecialPacketImpl#getStatus <em>Status</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioSpecialPacketImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioSpecialPacketImpl#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioSpecialPacketImpl#getIfRef <em>If Ref</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioSpecialPacketImpl#getLevels <em>Levels</em>}</li>
@@ -59,7 +57,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class GSSScenarioSpecialPacketImpl extends MinimalEObjectImpl.Container implements GSSScenarioSpecialPacket {
+public class GSSScenarioSpecialPacketImpl extends TMTCIFScenarioPacketConfigImpl implements GSSScenarioSpecialPacket {
 	/**
 	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -79,26 +77,6 @@ public class GSSScenarioSpecialPacketImpl extends MinimalEObjectImpl.Container i
 	 * @ordered
 	 */
 	protected GSSScenarioEnableDisable status = STATUS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -268,27 +246,6 @@ public class GSSScenarioSpecialPacketImpl extends MinimalEObjectImpl.Container i
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__STATUS, oldStatus, status));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__NAME, oldName, name));
 	}
 
 	/**
@@ -584,8 +541,6 @@ public class GSSScenarioSpecialPacketImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__STATUS:
 				return getStatus();
-			case scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__NAME:
-				return getName();
 			case scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__ID:
 				return getId();
 			case scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__IF_REF:
@@ -620,9 +575,6 @@ public class GSSScenarioSpecialPacketImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__STATUS:
 				setStatus((GSSScenarioEnableDisable)newValue);
-				return;
-			case scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__NAME:
-				setName((String)newValue);
 				return;
 			case scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__ID:
 				setId((String)newValue);
@@ -667,9 +619,6 @@ public class GSSScenarioSpecialPacketImpl extends MinimalEObjectImpl.Container i
 			case scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
-			case scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__ID:
 				setId(ID_EDEFAULT);
 				return;
@@ -711,8 +660,6 @@ public class GSSScenarioSpecialPacketImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__STATUS:
 				return status != STATUS_EDEFAULT;
-			case scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case scenarioPackage.GSS_SCENARIO_SPECIAL_PACKET__IF_REF:
@@ -747,8 +694,6 @@ public class GSSScenarioSpecialPacketImpl extends MinimalEObjectImpl.Container i
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (status: ");
 		result.append(status);
-		result.append(", name: ");
-		result.append(name);
 		result.append(", id: ");
 		result.append(id);
 		result.append(", ifRef: ");

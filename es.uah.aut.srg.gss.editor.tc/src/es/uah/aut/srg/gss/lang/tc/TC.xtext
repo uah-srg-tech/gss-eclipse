@@ -21,7 +21,7 @@ GSSTC returns GSSTC:
 		('<level1_format' 'file=' level1_format=[format::GSSFormatFormat|STRING] '/>')?
 		('<to_level0_export' 'file=' to_level0_export=[export::GSSExportExport|STRING]  '/>')?
 		('<level0_format' 'file=' level0_format=[format::GSSFormatFormat|STRING] '/>')?
-		('<fields>' (gssFields+=GSSTCField)+ '</fields>')?
+		('<fields>' (fields+=GSSTCField)+ '</fields>')?
 	'</GSSTC>';
 	
 GSSTCField returns GSSTCField:

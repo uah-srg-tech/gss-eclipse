@@ -102,7 +102,7 @@ public interface tcPackage extends EPackage {
 	int GSSTC__SUBTYPE = es.uah.aut.srg.tmtcif.tc.tcPackage.TMTCIFTC__SUBTYPE;
 
 	/**
-	 * The feature id for the '<em><b>Fields</b></em>' reference list.
+	 * The feature id for the '<em><b>Fields</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -192,22 +192,13 @@ public interface tcPackage extends EPackage {
 	int GSSTC__LEVEL0_FORMAT = es.uah.aut.srg.tmtcif.tc.tcPackage.TMTCIFTC_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Gss Fields</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSSTC__GSS_FIELDS = es.uah.aut.srg.tmtcif.tc.tcPackage.TMTCIFTC_FEATURE_COUNT + 9;
-
-	/**
 	 * The number of structural features of the '<em>GSSTC</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSSTC_FEATURE_COUNT = es.uah.aut.srg.tmtcif.tc.tcPackage.TMTCIFTC_FEATURE_COUNT + 10;
+	int GSSTC_FEATURE_COUNT = es.uah.aut.srg.tmtcif.tc.tcPackage.TMTCIFTC_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>GSSTC</em>' class.
@@ -384,17 +375,6 @@ public interface tcPackage extends EPackage {
 	EReference getGSSTC_Level0_format();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tc.GSSTC#getGssFields <em>Gss Fields</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Gss Fields</em>'.
-	 * @see es.uah.aut.srg.gss.tc.GSSTC#getGssFields()
-	 * @see #getGSSTC()
-	 * @generated
-	 */
-	EReference getGSSTC_GssFields();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tc.GSSTCField <em>GSSTC Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -519,14 +499,6 @@ public interface tcPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GSSTC__LEVEL0_FORMAT = eINSTANCE.getGSSTC_Level0_format();
-
-		/**
-		 * The meta object literal for the '<em><b>Gss Fields</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSSTC__GSS_FIELDS = eINSTANCE.getGSSTC_GssFields();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tc.impl.GSSTCFieldImpl <em>GSSTC Field</em>}' class.

@@ -10,7 +10,7 @@ GSSTCHeader returns GSSTCHeader:
 		'name=' name=STRING
 		'>'
 		'<format' 'file=' format=[format::GSSFormatFormat|STRING] '/>'
-		('<fields>' (gssHeaderFields+=GSSTCHeaderField)+ '</fields>')?
+		('<fields>' (fields+=GSSTCHeaderField)+ '</fields>')?
 	'</GSSTCHeader>';
 	
 GSSTCHeaderField returns GSSTCHeaderField:

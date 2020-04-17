@@ -151,7 +151,7 @@ public class InternalTCParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSTC"
-    // InternalTC.g:84:1: ruleGSSTC returns [EObject current=null] : (otherlv_0= '<GSSTC' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'type=' ( (lv_type_4_0= RULE_UINT_STRING ) ) otherlv_5= 'subtype=' ( (lv_subtype_6_0= RULE_UINT_STRING ) ) otherlv_7= 'levels=' ( (lv_levels_8_0= RULE_UINT_STRING ) ) otherlv_9= '>' (otherlv_10= '<to_level3_export' otherlv_11= 'file=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? (otherlv_14= '<level3_format' otherlv_15= 'file=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' )? (otherlv_18= '<to_level2_export' otherlv_19= 'file=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_format' otherlv_23= 'file=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<to_level1_export' otherlv_27= 'file=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_format' otherlv_31= 'file=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? (otherlv_34= '<to_level0_export' otherlv_35= 'file=' ( (otherlv_36= RULE_STRING ) ) otherlv_37= '/>' )? (otherlv_38= '<level0_format' otherlv_39= 'file=' ( (otherlv_40= RULE_STRING ) ) otherlv_41= '/>' )? (otherlv_42= '<fields>' ( (lv_gssFields_43_0= ruleGSSTCField ) )+ otherlv_44= '</fields>' )? otherlv_45= '</GSSTC>' ) ;
+    // InternalTC.g:84:1: ruleGSSTC returns [EObject current=null] : (otherlv_0= '<GSSTC' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'type=' ( (lv_type_4_0= RULE_UINT_STRING ) ) otherlv_5= 'subtype=' ( (lv_subtype_6_0= RULE_UINT_STRING ) ) otherlv_7= 'levels=' ( (lv_levels_8_0= RULE_UINT_STRING ) ) otherlv_9= '>' (otherlv_10= '<to_level3_export' otherlv_11= 'file=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? (otherlv_14= '<level3_format' otherlv_15= 'file=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' )? (otherlv_18= '<to_level2_export' otherlv_19= 'file=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_format' otherlv_23= 'file=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<to_level1_export' otherlv_27= 'file=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_format' otherlv_31= 'file=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? (otherlv_34= '<to_level0_export' otherlv_35= 'file=' ( (otherlv_36= RULE_STRING ) ) otherlv_37= '/>' )? (otherlv_38= '<level0_format' otherlv_39= 'file=' ( (otherlv_40= RULE_STRING ) ) otherlv_41= '/>' )? (otherlv_42= '<fields>' ( (lv_fields_43_0= ruleGSSTCField ) )+ otherlv_44= '</fields>' )? otherlv_45= '</GSSTC>' ) ;
     public final EObject ruleGSSTC() throws RecognitionException {
         EObject current = null;
 
@@ -200,18 +200,18 @@ public class InternalTCParser extends AbstractInternalAntlrParser {
         Token otherlv_42=null;
         Token otherlv_44=null;
         Token otherlv_45=null;
-        EObject lv_gssFields_43_0 = null;
+        EObject lv_fields_43_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalTC.g:90:2: ( (otherlv_0= '<GSSTC' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'type=' ( (lv_type_4_0= RULE_UINT_STRING ) ) otherlv_5= 'subtype=' ( (lv_subtype_6_0= RULE_UINT_STRING ) ) otherlv_7= 'levels=' ( (lv_levels_8_0= RULE_UINT_STRING ) ) otherlv_9= '>' (otherlv_10= '<to_level3_export' otherlv_11= 'file=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? (otherlv_14= '<level3_format' otherlv_15= 'file=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' )? (otherlv_18= '<to_level2_export' otherlv_19= 'file=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_format' otherlv_23= 'file=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<to_level1_export' otherlv_27= 'file=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_format' otherlv_31= 'file=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? (otherlv_34= '<to_level0_export' otherlv_35= 'file=' ( (otherlv_36= RULE_STRING ) ) otherlv_37= '/>' )? (otherlv_38= '<level0_format' otherlv_39= 'file=' ( (otherlv_40= RULE_STRING ) ) otherlv_41= '/>' )? (otherlv_42= '<fields>' ( (lv_gssFields_43_0= ruleGSSTCField ) )+ otherlv_44= '</fields>' )? otherlv_45= '</GSSTC>' ) )
-            // InternalTC.g:91:2: (otherlv_0= '<GSSTC' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'type=' ( (lv_type_4_0= RULE_UINT_STRING ) ) otherlv_5= 'subtype=' ( (lv_subtype_6_0= RULE_UINT_STRING ) ) otherlv_7= 'levels=' ( (lv_levels_8_0= RULE_UINT_STRING ) ) otherlv_9= '>' (otherlv_10= '<to_level3_export' otherlv_11= 'file=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? (otherlv_14= '<level3_format' otherlv_15= 'file=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' )? (otherlv_18= '<to_level2_export' otherlv_19= 'file=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_format' otherlv_23= 'file=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<to_level1_export' otherlv_27= 'file=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_format' otherlv_31= 'file=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? (otherlv_34= '<to_level0_export' otherlv_35= 'file=' ( (otherlv_36= RULE_STRING ) ) otherlv_37= '/>' )? (otherlv_38= '<level0_format' otherlv_39= 'file=' ( (otherlv_40= RULE_STRING ) ) otherlv_41= '/>' )? (otherlv_42= '<fields>' ( (lv_gssFields_43_0= ruleGSSTCField ) )+ otherlv_44= '</fields>' )? otherlv_45= '</GSSTC>' )
+            // InternalTC.g:90:2: ( (otherlv_0= '<GSSTC' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'type=' ( (lv_type_4_0= RULE_UINT_STRING ) ) otherlv_5= 'subtype=' ( (lv_subtype_6_0= RULE_UINT_STRING ) ) otherlv_7= 'levels=' ( (lv_levels_8_0= RULE_UINT_STRING ) ) otherlv_9= '>' (otherlv_10= '<to_level3_export' otherlv_11= 'file=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? (otherlv_14= '<level3_format' otherlv_15= 'file=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' )? (otherlv_18= '<to_level2_export' otherlv_19= 'file=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_format' otherlv_23= 'file=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<to_level1_export' otherlv_27= 'file=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_format' otherlv_31= 'file=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? (otherlv_34= '<to_level0_export' otherlv_35= 'file=' ( (otherlv_36= RULE_STRING ) ) otherlv_37= '/>' )? (otherlv_38= '<level0_format' otherlv_39= 'file=' ( (otherlv_40= RULE_STRING ) ) otherlv_41= '/>' )? (otherlv_42= '<fields>' ( (lv_fields_43_0= ruleGSSTCField ) )+ otherlv_44= '</fields>' )? otherlv_45= '</GSSTC>' ) )
+            // InternalTC.g:91:2: (otherlv_0= '<GSSTC' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'type=' ( (lv_type_4_0= RULE_UINT_STRING ) ) otherlv_5= 'subtype=' ( (lv_subtype_6_0= RULE_UINT_STRING ) ) otherlv_7= 'levels=' ( (lv_levels_8_0= RULE_UINT_STRING ) ) otherlv_9= '>' (otherlv_10= '<to_level3_export' otherlv_11= 'file=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? (otherlv_14= '<level3_format' otherlv_15= 'file=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' )? (otherlv_18= '<to_level2_export' otherlv_19= 'file=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_format' otherlv_23= 'file=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<to_level1_export' otherlv_27= 'file=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_format' otherlv_31= 'file=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? (otherlv_34= '<to_level0_export' otherlv_35= 'file=' ( (otherlv_36= RULE_STRING ) ) otherlv_37= '/>' )? (otherlv_38= '<level0_format' otherlv_39= 'file=' ( (otherlv_40= RULE_STRING ) ) otherlv_41= '/>' )? (otherlv_42= '<fields>' ( (lv_fields_43_0= ruleGSSTCField ) )+ otherlv_44= '</fields>' )? otherlv_45= '</GSSTC>' )
             {
-            // InternalTC.g:91:2: (otherlv_0= '<GSSTC' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'type=' ( (lv_type_4_0= RULE_UINT_STRING ) ) otherlv_5= 'subtype=' ( (lv_subtype_6_0= RULE_UINT_STRING ) ) otherlv_7= 'levels=' ( (lv_levels_8_0= RULE_UINT_STRING ) ) otherlv_9= '>' (otherlv_10= '<to_level3_export' otherlv_11= 'file=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? (otherlv_14= '<level3_format' otherlv_15= 'file=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' )? (otherlv_18= '<to_level2_export' otherlv_19= 'file=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_format' otherlv_23= 'file=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<to_level1_export' otherlv_27= 'file=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_format' otherlv_31= 'file=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? (otherlv_34= '<to_level0_export' otherlv_35= 'file=' ( (otherlv_36= RULE_STRING ) ) otherlv_37= '/>' )? (otherlv_38= '<level0_format' otherlv_39= 'file=' ( (otherlv_40= RULE_STRING ) ) otherlv_41= '/>' )? (otherlv_42= '<fields>' ( (lv_gssFields_43_0= ruleGSSTCField ) )+ otherlv_44= '</fields>' )? otherlv_45= '</GSSTC>' )
-            // InternalTC.g:92:3: otherlv_0= '<GSSTC' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'type=' ( (lv_type_4_0= RULE_UINT_STRING ) ) otherlv_5= 'subtype=' ( (lv_subtype_6_0= RULE_UINT_STRING ) ) otherlv_7= 'levels=' ( (lv_levels_8_0= RULE_UINT_STRING ) ) otherlv_9= '>' (otherlv_10= '<to_level3_export' otherlv_11= 'file=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? (otherlv_14= '<level3_format' otherlv_15= 'file=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' )? (otherlv_18= '<to_level2_export' otherlv_19= 'file=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_format' otherlv_23= 'file=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<to_level1_export' otherlv_27= 'file=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_format' otherlv_31= 'file=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? (otherlv_34= '<to_level0_export' otherlv_35= 'file=' ( (otherlv_36= RULE_STRING ) ) otherlv_37= '/>' )? (otherlv_38= '<level0_format' otherlv_39= 'file=' ( (otherlv_40= RULE_STRING ) ) otherlv_41= '/>' )? (otherlv_42= '<fields>' ( (lv_gssFields_43_0= ruleGSSTCField ) )+ otherlv_44= '</fields>' )? otherlv_45= '</GSSTC>'
+            // InternalTC.g:91:2: (otherlv_0= '<GSSTC' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'type=' ( (lv_type_4_0= RULE_UINT_STRING ) ) otherlv_5= 'subtype=' ( (lv_subtype_6_0= RULE_UINT_STRING ) ) otherlv_7= 'levels=' ( (lv_levels_8_0= RULE_UINT_STRING ) ) otherlv_9= '>' (otherlv_10= '<to_level3_export' otherlv_11= 'file=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? (otherlv_14= '<level3_format' otherlv_15= 'file=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' )? (otherlv_18= '<to_level2_export' otherlv_19= 'file=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_format' otherlv_23= 'file=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<to_level1_export' otherlv_27= 'file=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_format' otherlv_31= 'file=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? (otherlv_34= '<to_level0_export' otherlv_35= 'file=' ( (otherlv_36= RULE_STRING ) ) otherlv_37= '/>' )? (otherlv_38= '<level0_format' otherlv_39= 'file=' ( (otherlv_40= RULE_STRING ) ) otherlv_41= '/>' )? (otherlv_42= '<fields>' ( (lv_fields_43_0= ruleGSSTCField ) )+ otherlv_44= '</fields>' )? otherlv_45= '</GSSTC>' )
+            // InternalTC.g:92:3: otherlv_0= '<GSSTC' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'type=' ( (lv_type_4_0= RULE_UINT_STRING ) ) otherlv_5= 'subtype=' ( (lv_subtype_6_0= RULE_UINT_STRING ) ) otherlv_7= 'levels=' ( (lv_levels_8_0= RULE_UINT_STRING ) ) otherlv_9= '>' (otherlv_10= '<to_level3_export' otherlv_11= 'file=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? (otherlv_14= '<level3_format' otherlv_15= 'file=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' )? (otherlv_18= '<to_level2_export' otherlv_19= 'file=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_format' otherlv_23= 'file=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<to_level1_export' otherlv_27= 'file=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_format' otherlv_31= 'file=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? (otherlv_34= '<to_level0_export' otherlv_35= 'file=' ( (otherlv_36= RULE_STRING ) ) otherlv_37= '/>' )? (otherlv_38= '<level0_format' otherlv_39= 'file=' ( (otherlv_40= RULE_STRING ) ) otherlv_41= '/>' )? (otherlv_42= '<fields>' ( (lv_fields_43_0= ruleGSSTCField ) )+ otherlv_44= '</fields>' )? otherlv_45= '</GSSTC>'
             {
             otherlv_0=(Token)match(input,12,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -889,7 +889,7 @@ public class InternalTCParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalTC.g:428:3: (otherlv_42= '<fields>' ( (lv_gssFields_43_0= ruleGSSTCField ) )+ otherlv_44= '</fields>' )?
+            // InternalTC.g:428:3: (otherlv_42= '<fields>' ( (lv_fields_43_0= ruleGSSTCField ) )+ otherlv_44= '</fields>' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -898,7 +898,7 @@ public class InternalTCParser extends AbstractInternalAntlrParser {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalTC.g:429:4: otherlv_42= '<fields>' ( (lv_gssFields_43_0= ruleGSSTCField ) )+ otherlv_44= '</fields>'
+                    // InternalTC.g:429:4: otherlv_42= '<fields>' ( (lv_fields_43_0= ruleGSSTCField ) )+ otherlv_44= '</fields>'
                     {
                     otherlv_42=(Token)match(input,28,FollowSets000.FOLLOW_21); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -906,7 +906,7 @@ public class InternalTCParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_42, grammarAccess.getGSSTCAccess().getFieldsKeyword_18_0());
                       			
                     }
-                    // InternalTC.g:433:4: ( (lv_gssFields_43_0= ruleGSSTCField ) )+
+                    // InternalTC.g:433:4: ( (lv_fields_43_0= ruleGSSTCField ) )+
                     int cnt9=0;
                     loop9:
                     do {
@@ -920,18 +920,18 @@ public class InternalTCParser extends AbstractInternalAntlrParser {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // InternalTC.g:434:5: (lv_gssFields_43_0= ruleGSSTCField )
+                    	    // InternalTC.g:434:5: (lv_fields_43_0= ruleGSSTCField )
                     	    {
-                    	    // InternalTC.g:434:5: (lv_gssFields_43_0= ruleGSSTCField )
-                    	    // InternalTC.g:435:6: lv_gssFields_43_0= ruleGSSTCField
+                    	    // InternalTC.g:434:5: (lv_fields_43_0= ruleGSSTCField )
+                    	    // InternalTC.g:435:6: lv_fields_43_0= ruleGSSTCField
                     	    {
                     	    if ( state.backtracking==0 ) {
 
-                    	      						newCompositeNode(grammarAccess.getGSSTCAccess().getGssFieldsGSSTCFieldParserRuleCall_18_1_0());
+                    	      						newCompositeNode(grammarAccess.getGSSTCAccess().getFieldsGSSTCFieldParserRuleCall_18_1_0());
                     	      					
                     	    }
                     	    pushFollow(FollowSets000.FOLLOW_22);
-                    	    lv_gssFields_43_0=ruleGSSTCField();
+                    	    lv_fields_43_0=ruleGSSTCField();
 
                     	    state._fsp--;
                     	    if (state.failed) return current;
@@ -942,8 +942,8 @@ public class InternalTCParser extends AbstractInternalAntlrParser {
                     	      						}
                     	      						add(
                     	      							current,
-                    	      							"gssFields",
-                    	      							lv_gssFields_43_0,
+                    	      							"fields",
+                    	      							lv_fields_43_0,
                     	      							"es.uah.aut.srg.gss.lang.tc.TC.GSSTCField");
                     	      						afterParserOrEnumRuleCall();
                     	      					

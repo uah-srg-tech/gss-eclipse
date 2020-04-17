@@ -490,14 +490,14 @@ rule__GSSTCHeader__Group_8__1__Impl
 :
 (
 	(
-		{ before(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsAssignment_8_1()); }
-		(rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1)
-		{ after(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsAssignment_8_1()); }
+		{ before(grammarAccess.getGSSTCHeaderAccess().getFieldsAssignment_8_1()); }
+		(rule__GSSTCHeader__FieldsAssignment_8_1)
+		{ after(grammarAccess.getGSSTCHeaderAccess().getFieldsAssignment_8_1()); }
 	)
 	(
-		{ before(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsAssignment_8_1()); }
-		(rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1)*
-		{ after(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsAssignment_8_1()); }
+		{ before(grammarAccess.getGSSTCHeaderAccess().getFieldsAssignment_8_1()); }
+		(rule__GSSTCHeader__FieldsAssignment_8_1)*
+		{ after(grammarAccess.getGSSTCHeaderAccess().getFieldsAssignment_8_1()); }
 	)
 )
 ;
@@ -917,15 +917,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1
+rule__GSSTCHeader__FieldsAssignment_8_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsGSSTCHeaderFieldParserRuleCall_8_1_0()); }
+		{ before(grammarAccess.getGSSTCHeaderAccess().getFieldsGSSTCHeaderFieldParserRuleCall_8_1_0()); }
 		ruleGSSTCHeaderField
-		{ after(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsGSSTCHeaderFieldParserRuleCall_8_1_0()); }
+		{ after(grammarAccess.getGSSTCHeaderAccess().getFieldsGSSTCHeaderFieldParserRuleCall_8_1_0()); }
 	)
 ;
 finally {

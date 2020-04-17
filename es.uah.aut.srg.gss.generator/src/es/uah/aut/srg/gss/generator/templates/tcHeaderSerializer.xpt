@@ -5,11 +5,11 @@
 <GSSTCHeader name="«this.name»">
 	<format file="«this.format.name»(«this.format.version»)"/>
 	<fields>
-«FOREACH this.gssHeaderFields AS field -»
+«FOREACH this.fields AS field -»
 «IF field.fieldValue == null -»
-		<HeaderField name="«field.name»" gssHeaderField="«this.format.name»(«this.format.version»).«field.gssHeaderField.name»"/>
+		<HeaderField name="«field.name»" gssHeaderField="«this.format.name»(«this.format.version»).«EXPAND SerializeGSSTCHeaderField FOR (GSSTCHeaderField)field»"/>
 «ELSE -»
-		<HeaderField name="«field.name»" gssHeaderField="«this.format.name»(«this.format.version»).«field.gssHeaderField.name»">
+		<HeaderField name="«field.name»" gssHeaderField="«this.format.name»(«this.format.version»).«EXPAND SerializeGSSTCHeaderField FOR (GSSTCHeaderField)field»">
 			<FieldValueRaw value="«field.fieldValue.value»"/>
 		</HeaderField>
 «ENDIF -»
@@ -18,3 +18,5 @@
 </GSSTCHeader>
 «ENDFILE -»
 «ENDDEFINE»
+
+«DEFINE SerializeGSSTCHeaderField FOR GSSTCHeaderField»«this.gssHeaderField.name»«ENDDEFINE»

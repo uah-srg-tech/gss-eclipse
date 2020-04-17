@@ -74,7 +74,7 @@ public class TCHEADERSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     GSSTCHeader returns GSSTCHeader
 	 *
 	 * Constraint:
-	 *     (name=STRING format=[GSSFormatFormat|STRING] gssHeaderFields+=GSSTCHeaderField*)
+	 *     (name=STRING format=[GSSFormatFormat|STRING] fields+=GSSTCHeaderField*)
 	 */
 	protected void sequence_GSSTCHeader(ISerializationContext context, GSSTCHeader semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

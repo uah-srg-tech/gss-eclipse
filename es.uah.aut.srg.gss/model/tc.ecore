@@ -12,8 +12,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="level1_format" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="to_level0_export" eType="ecore:EClass export.ecore#//GSSExportExport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="level0_format" eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gssFields" upperBound="-1"
-        eType="#//GSSTCField" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTCField" eSuperTypes="../../es.uah.aut.srg.tmtcif/model/tc.ecore#//TMTCIFTCField">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gssField" lowerBound="1"

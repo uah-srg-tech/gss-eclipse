@@ -4762,29 +4762,29 @@ public class InternalTCParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSTC__Group_18__1__Impl"
-    // InternalTC.g:1553:1: rule__GSSTC__Group_18__1__Impl : ( ( ( rule__GSSTC__GssFieldsAssignment_18_1 ) ) ( ( rule__GSSTC__GssFieldsAssignment_18_1 )* ) ) ;
+    // InternalTC.g:1553:1: rule__GSSTC__Group_18__1__Impl : ( ( ( rule__GSSTC__FieldsAssignment_18_1 ) ) ( ( rule__GSSTC__FieldsAssignment_18_1 )* ) ) ;
     public final void rule__GSSTC__Group_18__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTC.g:1557:1: ( ( ( ( rule__GSSTC__GssFieldsAssignment_18_1 ) ) ( ( rule__GSSTC__GssFieldsAssignment_18_1 )* ) ) )
-            // InternalTC.g:1558:1: ( ( ( rule__GSSTC__GssFieldsAssignment_18_1 ) ) ( ( rule__GSSTC__GssFieldsAssignment_18_1 )* ) )
+            // InternalTC.g:1557:1: ( ( ( ( rule__GSSTC__FieldsAssignment_18_1 ) ) ( ( rule__GSSTC__FieldsAssignment_18_1 )* ) ) )
+            // InternalTC.g:1558:1: ( ( ( rule__GSSTC__FieldsAssignment_18_1 ) ) ( ( rule__GSSTC__FieldsAssignment_18_1 )* ) )
             {
-            // InternalTC.g:1558:1: ( ( ( rule__GSSTC__GssFieldsAssignment_18_1 ) ) ( ( rule__GSSTC__GssFieldsAssignment_18_1 )* ) )
-            // InternalTC.g:1559:2: ( ( rule__GSSTC__GssFieldsAssignment_18_1 ) ) ( ( rule__GSSTC__GssFieldsAssignment_18_1 )* )
+            // InternalTC.g:1558:1: ( ( ( rule__GSSTC__FieldsAssignment_18_1 ) ) ( ( rule__GSSTC__FieldsAssignment_18_1 )* ) )
+            // InternalTC.g:1559:2: ( ( rule__GSSTC__FieldsAssignment_18_1 ) ) ( ( rule__GSSTC__FieldsAssignment_18_1 )* )
             {
-            // InternalTC.g:1559:2: ( ( rule__GSSTC__GssFieldsAssignment_18_1 ) )
-            // InternalTC.g:1560:3: ( rule__GSSTC__GssFieldsAssignment_18_1 )
+            // InternalTC.g:1559:2: ( ( rule__GSSTC__FieldsAssignment_18_1 ) )
+            // InternalTC.g:1560:3: ( rule__GSSTC__FieldsAssignment_18_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTCAccess().getGssFieldsAssignment_18_1()); 
+               before(grammarAccess.getGSSTCAccess().getFieldsAssignment_18_1()); 
             }
-            // InternalTC.g:1561:3: ( rule__GSSTC__GssFieldsAssignment_18_1 )
-            // InternalTC.g:1561:4: rule__GSSTC__GssFieldsAssignment_18_1
+            // InternalTC.g:1561:3: ( rule__GSSTC__FieldsAssignment_18_1 )
+            // InternalTC.g:1561:4: rule__GSSTC__FieldsAssignment_18_1
             {
             pushFollow(FollowSets000.FOLLOW_15);
-            rule__GSSTC__GssFieldsAssignment_18_1();
+            rule__GSSTC__FieldsAssignment_18_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4792,18 +4792,18 @@ public class InternalTCParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTCAccess().getGssFieldsAssignment_18_1()); 
+               after(grammarAccess.getGSSTCAccess().getFieldsAssignment_18_1()); 
             }
 
             }
 
-            // InternalTC.g:1564:2: ( ( rule__GSSTC__GssFieldsAssignment_18_1 )* )
-            // InternalTC.g:1565:3: ( rule__GSSTC__GssFieldsAssignment_18_1 )*
+            // InternalTC.g:1564:2: ( ( rule__GSSTC__FieldsAssignment_18_1 )* )
+            // InternalTC.g:1565:3: ( rule__GSSTC__FieldsAssignment_18_1 )*
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTCAccess().getGssFieldsAssignment_18_1()); 
+               before(grammarAccess.getGSSTCAccess().getFieldsAssignment_18_1()); 
             }
-            // InternalTC.g:1566:3: ( rule__GSSTC__GssFieldsAssignment_18_1 )*
+            // InternalTC.g:1566:3: ( rule__GSSTC__FieldsAssignment_18_1 )*
             loop10:
             do {
                 int alt10=2;
@@ -4816,10 +4816,10 @@ public class InternalTCParser extends AbstractInternalContentAssistParser {
 
                 switch (alt10) {
             	case 1 :
-            	    // InternalTC.g:1566:4: rule__GSSTC__GssFieldsAssignment_18_1
+            	    // InternalTC.g:1566:4: rule__GSSTC__FieldsAssignment_18_1
             	    {
             	    pushFollow(FollowSets000.FOLLOW_15);
-            	    rule__GSSTC__GssFieldsAssignment_18_1();
+            	    rule__GSSTC__FieldsAssignment_18_1();
 
             	    state._fsp--;
             	    if (state.failed) return ;
@@ -4833,7 +4833,7 @@ public class InternalTCParser extends AbstractInternalContentAssistParser {
             } while (true);
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTCAccess().getGssFieldsAssignment_18_1()); 
+               after(grammarAccess.getGSSTCAccess().getFieldsAssignment_18_1()); 
             }
 
             }
@@ -6273,9 +6273,9 @@ public class InternalTCParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSTC__Level0_formatAssignment_17_2"
 
 
-    // $ANTLR start "rule__GSSTC__GssFieldsAssignment_18_1"
-    // InternalTC.g:2057:1: rule__GSSTC__GssFieldsAssignment_18_1 : ( ruleGSSTCField ) ;
-    public final void rule__GSSTC__GssFieldsAssignment_18_1() throws RecognitionException {
+    // $ANTLR start "rule__GSSTC__FieldsAssignment_18_1"
+    // InternalTC.g:2057:1: rule__GSSTC__FieldsAssignment_18_1 : ( ruleGSSTCField ) ;
+    public final void rule__GSSTC__FieldsAssignment_18_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -6287,7 +6287,7 @@ public class InternalTCParser extends AbstractInternalContentAssistParser {
             // InternalTC.g:2063:3: ruleGSSTCField
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTCAccess().getGssFieldsGSSTCFieldParserRuleCall_18_1_0()); 
+               before(grammarAccess.getGSSTCAccess().getFieldsGSSTCFieldParserRuleCall_18_1_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleGSSTCField();
@@ -6295,7 +6295,7 @@ public class InternalTCParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTCAccess().getGssFieldsGSSTCFieldParserRuleCall_18_1_0()); 
+               after(grammarAccess.getGSSTCAccess().getFieldsGSSTCFieldParserRuleCall_18_1_0()); 
             }
 
             }
@@ -6315,7 +6315,7 @@ public class InternalTCParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSTC__GssFieldsAssignment_18_1"
+    // $ANTLR end "rule__GSSTC__FieldsAssignment_18_1"
 
 
     // $ANTLR start "rule__GSSTCField__NameAssignment_2"

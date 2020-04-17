@@ -46,8 +46,8 @@ public class TMHEADERGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSolidusGreaterThanSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
 		private final Keyword cFieldsKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
-		private final Assignment cGssHeaderFieldsAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
-		private final RuleCall cGssHeaderFieldsGSSTMHeaderFieldParserRuleCall_8_1_0 = (RuleCall)cGssHeaderFieldsAssignment_8_1.eContents().get(0);
+		private final Assignment cFieldsAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
+		private final RuleCall cFieldsGSSTMHeaderFieldParserRuleCall_8_1_0 = (RuleCall)cFieldsAssignment_8_1.eContents().get(0);
 		private final Keyword cFieldsKeyword_8_2 = (Keyword)cGroup_8.eContents().get(2);
 		private final Keyword cGSSTMHeaderKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
@@ -55,13 +55,12 @@ public class TMHEADERGrammarAccess extends AbstractGrammarElementFinder {
 		//	'<GSSTMHeader'
 		//	'name=' name=STRING
 		//	'>'
-		//	'<format' 'file=' format=[format::GSSFormatFormat|STRING] '/>' ('<fields>' gssHeaderFields+=GSSTMHeaderField+
-		//	'</fields>')?
+		//	'<format' 'file=' format=[format::GSSFormatFormat|STRING] '/>' ('<fields>' fields+=GSSTMHeaderField+ '</fields>')?
 		//	'</GSSTMHeader>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<GSSTMHeader' 'name=' name=STRING '>' '<format' 'file=' format=[format::GSSFormatFormat|STRING] '/>' ('<fields>'
-		//gssHeaderFields+=GSSTMHeaderField+ '</fields>')? '</GSSTMHeader>'
+		//fields+=GSSTMHeaderField+ '</fields>')? '</GSSTMHeader>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<GSSTMHeader'
@@ -97,17 +96,17 @@ public class TMHEADERGrammarAccess extends AbstractGrammarElementFinder {
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_7() { return cSolidusGreaterThanSignKeyword_7; }
 		
-		//('<fields>' gssHeaderFields+=GSSTMHeaderField+ '</fields>')?
+		//('<fields>' fields+=GSSTMHeaderField+ '</fields>')?
 		public Group getGroup_8() { return cGroup_8; }
 		
 		//'<fields>'
 		public Keyword getFieldsKeyword_8_0() { return cFieldsKeyword_8_0; }
 		
-		//gssHeaderFields+=GSSTMHeaderField+
-		public Assignment getGssHeaderFieldsAssignment_8_1() { return cGssHeaderFieldsAssignment_8_1; }
+		//fields+=GSSTMHeaderField+
+		public Assignment getFieldsAssignment_8_1() { return cFieldsAssignment_8_1; }
 		
 		//GSSTMHeaderField
-		public RuleCall getGssHeaderFieldsGSSTMHeaderFieldParserRuleCall_8_1_0() { return cGssHeaderFieldsGSSTMHeaderFieldParserRuleCall_8_1_0; }
+		public RuleCall getFieldsGSSTMHeaderFieldParserRuleCall_8_1_0() { return cFieldsGSSTMHeaderFieldParserRuleCall_8_1_0; }
 		
 		//'</fields>'
 		public Keyword getFieldsKeyword_8_2() { return cFieldsKeyword_8_2; }
@@ -284,8 +283,7 @@ public class TMHEADERGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<GSSTMHeader'
 	//	'name=' name=STRING
 	//	'>'
-	//	'<format' 'file=' format=[format::GSSFormatFormat|STRING] '/>' ('<fields>' gssHeaderFields+=GSSTMHeaderField+
-	//	'</fields>')?
+	//	'<format' 'file=' format=[format::GSSFormatFormat|STRING] '/>' ('<fields>' fields+=GSSTMHeaderField+ '</fields>')?
 	//	'</GSSTMHeader>';
 	public GSSTMHeaderElements getGSSTMHeaderAccess() {
 		return pGSSTMHeader;

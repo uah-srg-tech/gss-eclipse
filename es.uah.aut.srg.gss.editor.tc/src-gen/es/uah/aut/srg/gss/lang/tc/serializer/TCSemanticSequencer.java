@@ -79,7 +79,7 @@ public class TCSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         level1_format=[GSSFormatFormat|STRING]? 
 	 *         to_level0_export=[GSSExportExport|STRING]? 
 	 *         level0_format=[GSSFormatFormat|STRING]? 
-	 *         gssFields+=GSSTCField*
+	 *         fields+=GSSTCField*
 	 *     )
 	 */
 	protected void sequence_GSSTC(ISerializationContext context, GSSTC semanticObject) {

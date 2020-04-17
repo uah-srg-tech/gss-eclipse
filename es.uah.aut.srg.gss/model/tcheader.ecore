@@ -4,8 +4,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="GSSTCHeader" eSuperTypes="../../es.uah.aut.srg.tmtcif/model/tcheader.ecore#//TMTCIFTCHeader">
     <eStructuralFeatures xsi:type="ecore:EReference" name="format" lowerBound="1"
         eType="ecore:EClass format.ecore#//GSSFormatFormat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gssHeaderFields" upperBound="-1"
-        eType="#//GSSTCHeaderField" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSTCHeaderField" eSuperTypes="../../es.uah.aut.srg.tmtcif/model/tcheader.ecore#//TMTCIFTCHeaderField">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gssHeaderField" lowerBound="1"

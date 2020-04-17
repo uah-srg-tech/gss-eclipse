@@ -18,8 +18,6 @@ import es.uah.aut.srg.gss.import_.GSSImportImport;
 
 import es.uah.aut.srg.tmtcif.tm.TMTCIFTM;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSSTM</b></em>'.
@@ -41,8 +39,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link es.uah.aut.srg.gss.tm.GSSTM#getFrom_level0_import <em>From level0 import</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm.GSSTM#getLevel0_filter <em>Level0 filter</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tm.GSSTM#getLevel0_format <em>Level0 format</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm.GSSTM#getGssPi1 <em>Gss Pi1</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tm.GSSTM#getGssFields <em>Gss Fields</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.tm.tmPackage#getGSSTM()
@@ -361,47 +357,5 @@ public interface GSSTM extends TMTCIFTM {
 	 * @generated
 	 */
 	void setLevel0_format(GSSFormatFormat value);
-
-	/**
-	 * Returns the value of the '<em><b>Gss Pi1</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Gss Pi1</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Gss Pi1</em>' containment reference.
-	 * @see #setGssPi1(GSSTMPi1)
-	 * @see es.uah.aut.srg.gss.tm.tmPackage#getGSSTM_GssPi1()
-	 * @model containment="true"
-	 * @generated
-	 */
-	GSSTMPi1 getGssPi1();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.tm.GSSTM#getGssPi1 <em>Gss Pi1</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Gss Pi1</em>' containment reference.
-	 * @see #getGssPi1()
-	 * @generated
-	 */
-	void setGssPi1(GSSTMPi1 value);
-
-	/**
-	 * Returns the value of the '<em><b>Gss Fields</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.tm.GSSTMField}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Gss Fields</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Gss Fields</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.tm.tmPackage#getGSSTM_GssFields()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSTMField> getGssFields();
 
 } // GSSTM

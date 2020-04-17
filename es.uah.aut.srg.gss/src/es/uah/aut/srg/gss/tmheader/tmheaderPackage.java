@@ -83,7 +83,7 @@ public interface tmheaderPackage extends EPackage {
 	int GSSTM_HEADER__NAME = es.uah.aut.srg.tmtcif.tmheader.tmheaderPackage.TMTCIFTM_HEADER__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Fields</b></em>' reference list.
+	 * The feature id for the '<em><b>Fields</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -101,22 +101,13 @@ public interface tmheaderPackage extends EPackage {
 	int GSSTM_HEADER__FORMAT = es.uah.aut.srg.tmtcif.tmheader.tmheaderPackage.TMTCIFTM_HEADER_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Gss Header Fields</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSSTM_HEADER__GSS_HEADER_FIELDS = es.uah.aut.srg.tmtcif.tmheader.tmheaderPackage.TMTCIFTM_HEADER_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>GSSTM Header</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSSTM_HEADER_FEATURE_COUNT = es.uah.aut.srg.tmtcif.tmheader.tmheaderPackage.TMTCIFTM_HEADER_FEATURE_COUNT + 2;
+	int GSSTM_HEADER_FEATURE_COUNT = es.uah.aut.srg.tmtcif.tmheader.tmheaderPackage.TMTCIFTM_HEADER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>GSSTM Header</em>' class.
@@ -205,17 +196,6 @@ public interface tmheaderPackage extends EPackage {
 	EReference getGSSTMHeader_Format();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tmheader.GSSTMHeader#getGssHeaderFields <em>Gss Header Fields</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Gss Header Fields</em>'.
-	 * @see es.uah.aut.srg.gss.tmheader.GSSTMHeader#getGssHeaderFields()
-	 * @see #getGSSTMHeader()
-	 * @generated
-	 */
-	EReference getGSSTMHeader_GssHeaderFields();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tmheader.GSSTMHeaderField <em>GSSTM Header Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -276,14 +256,6 @@ public interface tmheaderPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GSSTM_HEADER__FORMAT = eINSTANCE.getGSSTMHeader_Format();
-
-		/**
-		 * The meta object literal for the '<em><b>Gss Header Fields</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSSTM_HEADER__GSS_HEADER_FIELDS = eINSTANCE.getGSSTMHeader_GssHeaderFields();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tmheader.impl.GSSTMHeaderFieldImpl <em>GSSTM Header Field</em>}' class.

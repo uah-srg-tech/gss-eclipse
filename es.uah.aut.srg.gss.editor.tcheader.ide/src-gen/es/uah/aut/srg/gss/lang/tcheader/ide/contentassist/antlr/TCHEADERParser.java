@@ -51,7 +51,7 @@ public class TCHEADERParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTMTCIFFieldValueRawAccess().getGroup(), "rule__TMTCIFFieldValueRaw__Group__0");
 					put(grammarAccess.getGSSTCHeaderAccess().getNameAssignment_2(), "rule__GSSTCHeader__NameAssignment_2");
 					put(grammarAccess.getGSSTCHeaderAccess().getFormatAssignment_6(), "rule__GSSTCHeader__FormatAssignment_6");
-					put(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsAssignment_8_1(), "rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1");
+					put(grammarAccess.getGSSTCHeaderAccess().getFieldsAssignment_8_1(), "rule__GSSTCHeader__FieldsAssignment_8_1");
 					put(grammarAccess.getGSSTCHeaderFieldAccess().getNameAssignment_2(), "rule__GSSTCHeaderField__NameAssignment_2");
 					put(grammarAccess.getGSSTCHeaderFieldAccess().getGssHeaderFieldAssignment_4(), "rule__GSSTCHeaderField__GssHeaderFieldAssignment_4");
 					put(grammarAccess.getGSSTCHeaderFieldAccess().getFieldValueAssignment_5_0_1(), "rule__GSSTCHeaderField__FieldValueAssignment_5_0_1");

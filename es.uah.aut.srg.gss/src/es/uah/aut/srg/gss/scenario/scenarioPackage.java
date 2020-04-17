@@ -103,6 +103,15 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_SCENARIO__SCENARIO_VARIABLES = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO__SCENARIO_VARIABLES;
 
 	/**
+	 * The feature id for the '<em><b>Scenario Packet Configs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_SCENARIO__SCENARIO_PACKET_CONFIGS = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO__SCENARIO_PACKET_CONFIGS;
+
+	/**
 	 * The feature id for the '<em><b>Gss options</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1199,22 +1208,22 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_SPECIAL_PACKET = 16;
 
 	/**
-	 * The feature id for the '<em><b>Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_SPECIAL_PACKET__STATUS = 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_SPECIAL_PACKET__NAME = 1;
+	int GSS_SCENARIO_SPECIAL_PACKET__NAME = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_SCENARIO_SPECIAL_PACKET__STATUS = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1223,7 +1232,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_SPECIAL_PACKET__ID = 2;
+	int GSS_SCENARIO_SPECIAL_PACKET__ID = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
@@ -1232,7 +1241,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_SPECIAL_PACKET__IF_REF = 3;
+	int GSS_SCENARIO_SPECIAL_PACKET__IF_REF = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Levels</b></em>' attribute.
@@ -1241,7 +1250,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_SPECIAL_PACKET__LEVELS = 4;
+	int GSS_SCENARIO_SPECIAL_PACKET__LEVELS = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Level Ref</b></em>' attribute.
@@ -1250,7 +1259,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_SPECIAL_PACKET__LEVEL_REF = 5;
+	int GSS_SCENARIO_SPECIAL_PACKET__LEVEL_REF = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Input Filter</b></em>' reference.
@@ -1259,7 +1268,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_SPECIAL_PACKET__INPUT_FILTER = 6;
+	int GSS_SCENARIO_SPECIAL_PACKET__INPUT_FILTER = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Upper Levels</b></em>' containment reference list.
@@ -1268,7 +1277,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_SPECIAL_PACKET__UPPER_LEVELS = 7;
+	int GSS_SCENARIO_SPECIAL_PACKET__UPPER_LEVELS = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Printing Data</b></em>' containment reference.
@@ -1277,7 +1286,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_SPECIAL_PACKET__PRINTING_DATA = 8;
+	int GSS_SCENARIO_SPECIAL_PACKET__PRINTING_DATA = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Period</b></em>' containment reference.
@@ -1286,7 +1295,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_SPECIAL_PACKET__PERIOD = 9;
+	int GSS_SCENARIO_SPECIAL_PACKET__PERIOD = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Interval Range</b></em>' containment reference.
@@ -1295,7 +1304,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_SPECIAL_PACKET__INTERVAL_RANGE = 10;
+	int GSS_SCENARIO_SPECIAL_PACKET__INTERVAL_RANGE = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>GSS Scenario Special Packet</em>' class.
@@ -1304,7 +1313,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_SPECIAL_PACKET_FEATURE_COUNT = 11;
+	int GSS_SCENARIO_SPECIAL_PACKET_FEATURE_COUNT = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>GSS Scenario Special Packet</em>' class.
@@ -1313,7 +1322,7 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_SCENARIO_SPECIAL_PACKET_OPERATION_COUNT = 0;
+	int GSS_SCENARIO_SPECIAL_PACKET_OPERATION_COUNT = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_PACKET_CONFIG_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioUpperLevelsImpl <em>GSS Scenario Upper Levels</em>}' class.
@@ -3908,17 +3917,6 @@ public interface scenarioPackage extends EPackage {
 	EAttribute getGSSScenarioSpecialPacket_Status();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioSpecialPacket#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioSpecialPacket#getName()
-	 * @see #getGSSScenarioSpecialPacket()
-	 * @generated
-	 */
-	EAttribute getGSSScenarioSpecialPacket_Name();
-
-	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.scenario.GSSScenarioSpecialPacket#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5755,14 +5753,6 @@ public interface scenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GSS_SCENARIO_SPECIAL_PACKET__STATUS = eINSTANCE.getGSSScenarioSpecialPacket_Status();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_SCENARIO_SPECIAL_PACKET__NAME = eINSTANCE.getGSSScenarioSpecialPacket_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.

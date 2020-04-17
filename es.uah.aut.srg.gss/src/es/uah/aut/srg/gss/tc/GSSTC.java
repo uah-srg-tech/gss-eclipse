@@ -16,8 +16,6 @@ import es.uah.aut.srg.gss.format.GSSFormatFormat;
 
 import es.uah.aut.srg.tmtcif.tc.TMTCIFTC;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSSTC</b></em>'.
@@ -36,7 +34,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link es.uah.aut.srg.gss.tc.GSSTC#getLevel1_format <em>Level1 format</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tc.GSSTC#getTo_level0_export <em>To level0 export</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.tc.GSSTC#getLevel0_format <em>Level0 format</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tc.GSSTC#getGssFields <em>Gss Fields</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.tc.tcPackage#getGSSTC()
@@ -277,21 +274,5 @@ public interface GSSTC extends TMTCIFTC {
 	 * @generated
 	 */
 	void setLevel0_format(GSSFormatFormat value);
-
-	/**
-	 * Returns the value of the '<em><b>Gss Fields</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.tc.GSSTCField}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Gss Fields</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Gss Fields</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.tc.tcPackage#getGSSTC_GssFields()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSTCField> getGssFields();
 
 } // GSSTC

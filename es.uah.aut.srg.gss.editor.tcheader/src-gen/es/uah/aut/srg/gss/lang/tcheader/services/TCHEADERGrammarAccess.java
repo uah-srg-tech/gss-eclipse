@@ -46,8 +46,8 @@ public class TCHEADERGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSolidusGreaterThanSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
 		private final Keyword cFieldsKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
-		private final Assignment cGssHeaderFieldsAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
-		private final RuleCall cGssHeaderFieldsGSSTCHeaderFieldParserRuleCall_8_1_0 = (RuleCall)cGssHeaderFieldsAssignment_8_1.eContents().get(0);
+		private final Assignment cFieldsAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
+		private final RuleCall cFieldsGSSTCHeaderFieldParserRuleCall_8_1_0 = (RuleCall)cFieldsAssignment_8_1.eContents().get(0);
 		private final Keyword cFieldsKeyword_8_2 = (Keyword)cGroup_8.eContents().get(2);
 		private final Keyword cGSSTCHeaderKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
@@ -55,13 +55,12 @@ public class TCHEADERGrammarAccess extends AbstractGrammarElementFinder {
 		//	'<GSSTCHeader'
 		//	'name=' name=STRING
 		//	'>'
-		//	'<format' 'file=' format=[format::GSSFormatFormat|STRING] '/>' ('<fields>' gssHeaderFields+=GSSTCHeaderField+
-		//	'</fields>')?
+		//	'<format' 'file=' format=[format::GSSFormatFormat|STRING] '/>' ('<fields>' fields+=GSSTCHeaderField+ '</fields>')?
 		//	'</GSSTCHeader>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<GSSTCHeader' 'name=' name=STRING '>' '<format' 'file=' format=[format::GSSFormatFormat|STRING] '/>' ('<fields>'
-		//gssHeaderFields+=GSSTCHeaderField+ '</fields>')? '</GSSTCHeader>'
+		//fields+=GSSTCHeaderField+ '</fields>')? '</GSSTCHeader>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<GSSTCHeader'
@@ -97,17 +96,17 @@ public class TCHEADERGrammarAccess extends AbstractGrammarElementFinder {
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_7() { return cSolidusGreaterThanSignKeyword_7; }
 		
-		//('<fields>' gssHeaderFields+=GSSTCHeaderField+ '</fields>')?
+		//('<fields>' fields+=GSSTCHeaderField+ '</fields>')?
 		public Group getGroup_8() { return cGroup_8; }
 		
 		//'<fields>'
 		public Keyword getFieldsKeyword_8_0() { return cFieldsKeyword_8_0; }
 		
-		//gssHeaderFields+=GSSTCHeaderField+
-		public Assignment getGssHeaderFieldsAssignment_8_1() { return cGssHeaderFieldsAssignment_8_1; }
+		//fields+=GSSTCHeaderField+
+		public Assignment getFieldsAssignment_8_1() { return cFieldsAssignment_8_1; }
 		
 		//GSSTCHeaderField
-		public RuleCall getGssHeaderFieldsGSSTCHeaderFieldParserRuleCall_8_1_0() { return cGssHeaderFieldsGSSTCHeaderFieldParserRuleCall_8_1_0; }
+		public RuleCall getFieldsGSSTCHeaderFieldParserRuleCall_8_1_0() { return cFieldsGSSTCHeaderFieldParserRuleCall_8_1_0; }
 		
 		//'</fields>'
 		public Keyword getFieldsKeyword_8_2() { return cFieldsKeyword_8_2; }
@@ -284,8 +283,7 @@ public class TCHEADERGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<GSSTCHeader'
 	//	'name=' name=STRING
 	//	'>'
-	//	'<format' 'file=' format=[format::GSSFormatFormat|STRING] '/>' ('<fields>' gssHeaderFields+=GSSTCHeaderField+
-	//	'</fields>')?
+	//	'<format' 'file=' format=[format::GSSFormatFormat|STRING] '/>' ('<fields>' fields+=GSSTCHeaderField+ '</fields>')?
 	//	'</GSSTCHeader>';
 	public GSSTCHeaderElements getGSSTCHeaderAccess() {
 		return pGSSTCHeader;

@@ -14,8 +14,6 @@ import es.uah.aut.srg.gss.format.GSSFormatFormat;
 
 import es.uah.aut.srg.tmtcif.tmheader.TMTCIFTMHeader;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>GSSTM Header</b></em>'.
@@ -26,7 +24,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.gss.tmheader.GSSTMHeader#getFormat <em>Format</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.tmheader.GSSTMHeader#getGssHeaderFields <em>Gss Header Fields</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.tmheader.tmheaderPackage#getGSSTMHeader()
@@ -59,21 +56,5 @@ public interface GSSTMHeader extends TMTCIFTMHeader {
 	 * @generated
 	 */
 	void setFormat(GSSFormatFormat value);
-
-	/**
-	 * Returns the value of the '<em><b>Gss Header Fields</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.gss.tmheader.GSSTMHeaderField}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Gss Header Fields</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Gss Header Fields</em>' containment reference list.
-	 * @see es.uah.aut.srg.gss.tmheader.tmheaderPackage#getGSSTMHeader_GssHeaderFields()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<GSSTMHeaderField> getGssHeaderFields();
 
 } // GSSTMHeader

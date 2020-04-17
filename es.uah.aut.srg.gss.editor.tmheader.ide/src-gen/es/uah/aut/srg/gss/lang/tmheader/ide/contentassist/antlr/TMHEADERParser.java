@@ -51,7 +51,7 @@ public class TMHEADERParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTMTCIFFieldValueRawAccess().getGroup(), "rule__TMTCIFFieldValueRaw__Group__0");
 					put(grammarAccess.getGSSTMHeaderAccess().getNameAssignment_2(), "rule__GSSTMHeader__NameAssignment_2");
 					put(grammarAccess.getGSSTMHeaderAccess().getFormatAssignment_6(), "rule__GSSTMHeader__FormatAssignment_6");
-					put(grammarAccess.getGSSTMHeaderAccess().getGssHeaderFieldsAssignment_8_1(), "rule__GSSTMHeader__GssHeaderFieldsAssignment_8_1");
+					put(grammarAccess.getGSSTMHeaderAccess().getFieldsAssignment_8_1(), "rule__GSSTMHeader__FieldsAssignment_8_1");
 					put(grammarAccess.getGSSTMHeaderFieldAccess().getNameAssignment_2(), "rule__GSSTMHeaderField__NameAssignment_2");
 					put(grammarAccess.getGSSTMHeaderFieldAccess().getGssHeaderFieldAssignment_4(), "rule__GSSTMHeaderField__GssHeaderFieldAssignment_4");
 					put(grammarAccess.getGSSTMHeaderFieldAccess().getFieldValueAssignment_5_0_1(), "rule__GSSTMHeaderField__FieldValueAssignment_5_0_1");

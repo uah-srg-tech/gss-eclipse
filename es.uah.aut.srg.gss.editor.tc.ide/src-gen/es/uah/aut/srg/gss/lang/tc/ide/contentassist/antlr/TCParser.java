@@ -66,7 +66,7 @@ public class TCParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSTCAccess().getLevel1_formatAssignment_15_2(), "rule__GSSTC__Level1_formatAssignment_15_2");
 					put(grammarAccess.getGSSTCAccess().getTo_level0_exportAssignment_16_2(), "rule__GSSTC__To_level0_exportAssignment_16_2");
 					put(grammarAccess.getGSSTCAccess().getLevel0_formatAssignment_17_2(), "rule__GSSTC__Level0_formatAssignment_17_2");
-					put(grammarAccess.getGSSTCAccess().getGssFieldsAssignment_18_1(), "rule__GSSTC__GssFieldsAssignment_18_1");
+					put(grammarAccess.getGSSTCAccess().getFieldsAssignment_18_1(), "rule__GSSTC__FieldsAssignment_18_1");
 					put(grammarAccess.getGSSTCFieldAccess().getNameAssignment_2(), "rule__GSSTCField__NameAssignment_2");
 					put(grammarAccess.getGSSTCFieldAccess().getGssFieldAssignment_4(), "rule__GSSTCField__GssFieldAssignment_4");
 					put(grammarAccess.getGSSTCFieldAccess().getEnumRefAssignment_5_1(), "rule__GSSTCField__EnumRefAssignment_5_1");

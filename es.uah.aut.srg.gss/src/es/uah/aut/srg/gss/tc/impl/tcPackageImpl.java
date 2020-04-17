@@ -206,15 +206,6 @@ public class tcPackageImpl extends EPackageImpl implements tcPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTC_GssFields() {
-		return (EReference)gsstcEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getGSSTCField() {
 		return gsstcFieldEClass;
 	}
@@ -266,7 +257,6 @@ public class tcPackageImpl extends EPackageImpl implements tcPackage {
 		createEReference(gsstcEClass, GSSTC__LEVEL1_FORMAT);
 		createEReference(gsstcEClass, GSSTC__TO_LEVEL0_EXPORT);
 		createEReference(gsstcEClass, GSSTC__LEVEL0_FORMAT);
-		createEReference(gsstcEClass, GSSTC__GSS_FIELDS);
 
 		gsstcFieldEClass = createEClass(GSSTC_FIELD);
 		createEReference(gsstcFieldEClass, GSSTC_FIELD__GSS_FIELD);
@@ -319,7 +309,6 @@ public class tcPackageImpl extends EPackageImpl implements tcPackage {
 		initEReference(getGSSTC_Level1_format(), theformatPackage.getGSSFormatFormat(), null, "level1_format", null, 0, 1, es.uah.aut.srg.gss.tc.GSSTC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTC_To_level0_export(), theexportPackage.getGSSExportExport(), null, "to_level0_export", null, 0, 1, es.uah.aut.srg.gss.tc.GSSTC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSTC_Level0_format(), theformatPackage.getGSSFormatFormat(), null, "level0_format", null, 0, 1, es.uah.aut.srg.gss.tc.GSSTC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTC_GssFields(), this.getGSSTCField(), null, "gssFields", null, 0, -1, es.uah.aut.srg.gss.tc.GSSTC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gsstcFieldEClass, GSSTCField.class, "GSSTCField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSTCField_GssField(), theformatPackage.getGSSFormatField(), null, "gssField", null, 1, 1, GSSTCField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

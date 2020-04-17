@@ -1259,7 +1259,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSScenarioSpecialPacket_Name() {
+	public EAttribute getGSSScenarioSpecialPacket_Id() {
 		return (EAttribute)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1268,7 +1268,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSScenarioSpecialPacket_Id() {
+	public EAttribute getGSSScenarioSpecialPacket_IfRef() {
 		return (EAttribute)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1277,7 +1277,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSScenarioSpecialPacket_IfRef() {
+	public EAttribute getGSSScenarioSpecialPacket_Levels() {
 		return (EAttribute)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1286,7 +1286,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSScenarioSpecialPacket_Levels() {
+	public EAttribute getGSSScenarioSpecialPacket_LevelRef() {
 		return (EAttribute)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1295,17 +1295,8 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSScenarioSpecialPacket_LevelRef() {
-		return (EAttribute)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getGSSScenarioSpecialPacket_InputFilter() {
-		return (EReference)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(6);
+		return (EReference)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1314,7 +1305,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * @generated
 	 */
 	public EReference getGSSScenarioSpecialPacket_UpperLevels() {
-		return (EReference)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(7);
+		return (EReference)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1323,7 +1314,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * @generated
 	 */
 	public EReference getGSSScenarioSpecialPacket_PrintingData() {
-		return (EReference)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(8);
+		return (EReference)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1332,7 +1323,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * @generated
 	 */
 	public EReference getGSSScenarioSpecialPacket_Period() {
-		return (EReference)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(9);
+		return (EReference)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1341,7 +1332,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * @generated
 	 */
 	public EReference getGSSScenarioSpecialPacket_IntervalRange() {
-		return (EReference)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(10);
+		return (EReference)gssScenarioSpecialPacketEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -2350,7 +2341,6 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 
 		gssScenarioSpecialPacketEClass = createEClass(GSS_SCENARIO_SPECIAL_PACKET);
 		createEAttribute(gssScenarioSpecialPacketEClass, GSS_SCENARIO_SPECIAL_PACKET__STATUS);
-		createEAttribute(gssScenarioSpecialPacketEClass, GSS_SCENARIO_SPECIAL_PACKET__NAME);
 		createEAttribute(gssScenarioSpecialPacketEClass, GSS_SCENARIO_SPECIAL_PACKET__ID);
 		createEAttribute(gssScenarioSpecialPacketEClass, GSS_SCENARIO_SPECIAL_PACKET__IF_REF);
 		createEAttribute(gssScenarioSpecialPacketEClass, GSS_SCENARIO_SPECIAL_PACKET__LEVELS);
@@ -2529,6 +2519,7 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 		gssScenarioScenarioEClass.getESuperTypes().add(thescenarioPackage_1.getTMTCIFScenario());
 		gssScenarioMainInterfaceEClass.getESuperTypes().add(this.getGSSScenarioInterface());
 		gssScenarioInterfaceEClass.getESuperTypes().add(thescenarioPackage_1.getTMTCIFScenarioInterface());
+		gssScenarioSpecialPacketEClass.getESuperTypes().add(thescenarioPackage_1.getTMTCIFScenarioPacketConfig());
 		gssScenarioPeriodicTCLevel2EClass.getESuperTypes().add(this.getGSSScenarioPeriodicTC());
 		gssScenarioPeriodicTCLevel1EClass.getESuperTypes().add(this.getGSSScenarioPeriodicTC());
 		gssScenarioPeriodicTCLevel0EClass.getESuperTypes().add(this.getGSSScenarioPeriodicTC());
@@ -2640,7 +2631,6 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 
 		initEClass(gssScenarioSpecialPacketEClass, GSSScenarioSpecialPacket.class, "GSSScenarioSpecialPacket", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSScenarioSpecialPacket_Status(), this.getGSSScenarioEnableDisable(), "status", null, 1, 1, GSSScenarioSpecialPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSScenarioSpecialPacket_Name(), ecorePackage.getEString(), "name", null, 1, 1, GSSScenarioSpecialPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSScenarioSpecialPacket_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSScenarioSpecialPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSScenarioSpecialPacket_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, GSSScenarioSpecialPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSScenarioSpecialPacket_Levels(), ecorePackage.getEString(), "levels", null, 1, 1, GSSScenarioSpecialPacket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

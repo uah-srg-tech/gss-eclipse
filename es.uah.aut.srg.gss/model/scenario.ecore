@@ -160,10 +160,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="SpecialPacket" lowerBound="1"
         upperBound="17" eType="#//GSSScenarioSpecialPacket" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioSpecialPacket">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioSpecialPacket" eSuperTypes="../../es.uah.aut.srg.tmtcif/model/scenario.ecore#//TMTCIFScenarioPacketConfig">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" lowerBound="1"
         eType="#//GSSScenarioEnableDisable"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifRef" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="levels" lowerBound="1"

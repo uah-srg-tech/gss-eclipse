@@ -11,7 +11,7 @@ GSSTMHeader returns GSSTMHeader:
 		'name=' name=STRING
 		'>'
 		'<format' 'file=' format=[format::GSSFormatFormat|STRING] '/>'
-		('<fields>' (gssHeaderFields+=GSSTMHeaderField)+ '</fields>')?
+		('<fields>' (fields+=GSSTMHeaderField)+ '</fields>')?
 	'</GSSTMHeader>';
 	
 GSSTMHeaderField returns GSSTMHeaderField:

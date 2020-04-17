@@ -717,9 +717,9 @@ rule__GSSTM__Group__21__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSTMAccess().getGssPi1Assignment_21()); }
-	(rule__GSSTM__GssPi1Assignment_21)?
-	{ after(grammarAccess.getGSSTMAccess().getGssPi1Assignment_21()); }
+	{ before(grammarAccess.getGSSTMAccess().getPi1Assignment_21()); }
+	(rule__GSSTM__Pi1Assignment_21)?
+	{ after(grammarAccess.getGSSTMAccess().getPi1Assignment_21()); }
 )
 ;
 finally {
@@ -2014,14 +2014,14 @@ rule__GSSTM__Group_22__1__Impl
 :
 (
 	(
-		{ before(grammarAccess.getGSSTMAccess().getGssFieldsAssignment_22_1()); }
-		(rule__GSSTM__GssFieldsAssignment_22_1)
-		{ after(grammarAccess.getGSSTMAccess().getGssFieldsAssignment_22_1()); }
+		{ before(grammarAccess.getGSSTMAccess().getFieldsAssignment_22_1()); }
+		(rule__GSSTM__FieldsAssignment_22_1)
+		{ after(grammarAccess.getGSSTMAccess().getFieldsAssignment_22_1()); }
 	)
 	(
-		{ before(grammarAccess.getGSSTMAccess().getGssFieldsAssignment_22_1()); }
-		(rule__GSSTM__GssFieldsAssignment_22_1)*
-		{ after(grammarAccess.getGSSTMAccess().getGssFieldsAssignment_22_1()); }
+		{ before(grammarAccess.getGSSTMAccess().getFieldsAssignment_22_1()); }
+		(rule__GSSTM__FieldsAssignment_22_1)*
+		{ after(grammarAccess.getGSSTMAccess().getFieldsAssignment_22_1()); }
 	)
 )
 ;
@@ -2784,30 +2784,30 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSTM__GssPi1Assignment_21
+rule__GSSTM__Pi1Assignment_21
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTMAccess().getGssPi1GSSTMPi1ParserRuleCall_21_0()); }
+		{ before(grammarAccess.getGSSTMAccess().getPi1GSSTMPi1ParserRuleCall_21_0()); }
 		ruleGSSTMPi1
-		{ after(grammarAccess.getGSSTMAccess().getGssPi1GSSTMPi1ParserRuleCall_21_0()); }
+		{ after(grammarAccess.getGSSTMAccess().getPi1GSSTMPi1ParserRuleCall_21_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSTM__GssFieldsAssignment_22_1
+rule__GSSTM__FieldsAssignment_22_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSTMAccess().getGssFieldsGSSTMFieldParserRuleCall_22_1_0()); }
+		{ before(grammarAccess.getGSSTMAccess().getFieldsGSSTMFieldParserRuleCall_22_1_0()); }
 		ruleGSSTMField
-		{ after(grammarAccess.getGSSTMAccess().getGssFieldsGSSTMFieldParserRuleCall_22_1_0()); }
+		{ after(grammarAccess.getGSSTMAccess().getFieldsGSSTMFieldParserRuleCall_22_1_0()); }
 	)
 ;
 finally {

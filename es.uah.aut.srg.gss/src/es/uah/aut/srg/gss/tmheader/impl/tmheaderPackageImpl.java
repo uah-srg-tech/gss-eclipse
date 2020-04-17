@@ -132,15 +132,6 @@ public class tmheaderPackageImpl extends EPackageImpl implements tmheaderPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGSSTMHeader_GssHeaderFields() {
-		return (EReference)gsstmHeaderEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getGSSTMHeaderField() {
 		return gsstmHeaderFieldEClass;
 	}
@@ -184,7 +175,6 @@ public class tmheaderPackageImpl extends EPackageImpl implements tmheaderPackage
 		// Create classes and their features
 		gsstmHeaderEClass = createEClass(GSSTM_HEADER);
 		createEReference(gsstmHeaderEClass, GSSTM_HEADER__FORMAT);
-		createEReference(gsstmHeaderEClass, GSSTM_HEADER__GSS_HEADER_FIELDS);
 
 		gsstmHeaderFieldEClass = createEClass(GSSTM_HEADER_FIELD);
 		createEReference(gsstmHeaderFieldEClass, GSSTM_HEADER_FIELD__GSS_HEADER_FIELD);
@@ -228,7 +218,6 @@ public class tmheaderPackageImpl extends EPackageImpl implements tmheaderPackage
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gsstmHeaderEClass, GSSTMHeader.class, "GSSTMHeader", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSTMHeader_Format(), theformatPackage.getGSSFormatFormat(), null, "format", null, 1, 1, GSSTMHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSTMHeader_GssHeaderFields(), this.getGSSTMHeaderField(), null, "gssHeaderFields", null, 0, -1, GSSTMHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gsstmHeaderFieldEClass, GSSTMHeaderField.class, "GSSTMHeaderField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSTMHeaderField_GssHeaderField(), theformatPackage.getGSSFormatField(), null, "gssHeaderField", null, 1, 1, GSSTMHeaderField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

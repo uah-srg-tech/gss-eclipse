@@ -9,11 +9,11 @@
 	<to_level0_export file="«this.to_level0_export.name»(«this.to_level0_export.version»)"/>
 «IF this.fields.size != 0 -»
 	<fields>
-«FOREACH this.gssFields AS field -»
+«FOREACH this.fields AS field -»
 «IF field.enumRef == null -»
-		<Field name="«field.name»" gssField="«this.level1_format.name»(«this.level1_format.version»).«field.gssField.name»"/>
+		<Field name="«field.name»" gssField="«this.level1_format.name»(«this.level1_format.version»).«EXPAND SerializeGSSTCField FOR (GSSTCField)field»"/>
 «ELSE -»
-		<Field name="«field.name»" gssField="«this.level1_format.name»(«this.level1_format.version»).«field.gssField.name»" enumRef="«field.enumRef.name»"/>
+		<Field name="«field.name»" gssField="«this.level1_format.name»(«this.level1_format.version»).«EXPAND SerializeGSSTCField FOR (GSSTCField)field»" enumRef="«field.enumRef.name»"/>
 «ENDIF -»
 «ENDFOREACH -»
 	</fields>
@@ -21,3 +21,5 @@
 </GSSTC>
 «ENDFILE -»
 «ENDDEFINE»
+
+«DEFINE SerializeGSSTCField FOR GSSTCField»«this.gssField.name»«ENDDEFINE»

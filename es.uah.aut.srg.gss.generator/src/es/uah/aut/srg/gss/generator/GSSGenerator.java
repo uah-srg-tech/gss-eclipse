@@ -1100,18 +1100,18 @@ public class GSSGenerator {
 				fieldValueRaw.setValue(pcdf_rows[6]);
 				tcHeaderField.setFieldValue(fieldValueRaw);
 	    	}
-			tcHeader.getGssHeaderFields().add(tcHeaderField);
+			tcHeader.getFields().add(tcHeaderField);
 	    }
 	    pcdf.close();
 	    //add fields not found in TC
 	    GSSTCHeaderField appDataField = tcheaderFactory.eINSTANCE.createGSSTCHeaderField();
 		appDataField.setName("Application_Data");
 		appDataField.setGssHeaderField(tcHeaderAppDataField);
-		tcHeader.getGssHeaderFields().add(appDataField);
+		tcHeader.getFields().add(appDataField);
 		GSSTCHeaderField crcField = tcheaderFactory.eINSTANCE.createGSSTCHeaderField();
 		crcField.setName("CRC");
 		crcField.setGssHeaderField(tcFormatHeader.getFDICField().get(0));
-		tcHeader.getGssHeaderFields().add(crcField);
+		tcHeader.getFields().add(crcField);
 	    return tcHeader;
 	}
 
@@ -1163,34 +1163,34 @@ public class GSSGenerator {
 				fieldValueRaw.setValue(pcdf_rows[6]);
 				tmHeaderField.setFieldValue(fieldValueRaw);
 	    	}
-			tmHeader.getGssHeaderFields().add(tmHeaderField);
+			tmHeader.getFields().add(tmHeaderField);
 	    }
 	    pcdf.close();
 	    //add fields not found in TC
 	    GSSTMHeaderField scTimeField = tmheaderFactory.eINSTANCE.createGSSTMHeaderField();
 		scTimeField.setName("SCTime");
 		scTimeField.setGssHeaderField(tmFormatFields.get("SCTime"));
-		tmHeader.getGssHeaderFields().add(scTimeField);
+		tmHeader.getFields().add(scTimeField);
 		GSSTMHeaderField syncField = tmheaderFactory.eINSTANCE.createGSSTMHeaderField();
 		syncField.setName("Sync");
 		syncField.setGssHeaderField(tmFormatFields.get("Sync"));
-		tmHeader.getGssHeaderFields().add(syncField);
+		tmHeader.getFields().add(syncField);
 		GSSTMHeaderField secondsField = tmheaderFactory.eINSTANCE.createGSSTMHeaderField();
 	    secondsField.setName("Seconds");
 	    secondsField.setGssHeaderField(tmFormatFields.get("Seconds"));
-		tmHeader.getGssHeaderFields().add(secondsField);
+		tmHeader.getFields().add(secondsField);
 		GSSTMHeaderField subsecondsField = tmheaderFactory.eINSTANCE.createGSSTMHeaderField();;
 		subsecondsField.setName("Subseconds");
 		subsecondsField.setGssHeaderField(tmFormatFields.get("Subseconds"));
-		tmHeader.getGssHeaderFields().add(subsecondsField);
+		tmHeader.getFields().add(subsecondsField);
 		GSSTMHeaderField srcDataField = tmheaderFactory.eINSTANCE.createGSSTMHeaderField();
 		srcDataField.setName("Source_Data");
 		srcDataField.setGssHeaderField(tmHeaderSrcDataField);
-		tmHeader.getGssHeaderFields().add(srcDataField);
+		tmHeader.getFields().add(srcDataField);
 		GSSTMHeaderField crcField = tmheaderFactory.eINSTANCE.createGSSTMHeaderField();
 		crcField.setName("CRC");
 		crcField.setGssHeaderField(tmFormatHeader.getFDICField().get(0));
-		tmHeader.getGssHeaderFields().add(crcField);
+		tmHeader.getFields().add(crcField);
 	    return tmHeader;
 	}
 	

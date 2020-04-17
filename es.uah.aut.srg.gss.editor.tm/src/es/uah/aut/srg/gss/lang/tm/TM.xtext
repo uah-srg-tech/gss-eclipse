@@ -25,8 +25,8 @@ GSSTM returns GSSTM:
 		('<from_level0_import' 'file=' from_level0_import=[import_::GSSImportImport|STRING] '/>')?
 		('<level0_format' 'file=' level0_format=[format::GSSFormatFormat|STRING] '/>')?
 		('<level0_filter' 'file=' level0_filter=[filter::GSSFilterFilter|STRING] '/>')?
-		(gssPi1=GSSTMPi1)?
-		('<fields>' (gssFields+=GSSTMField)+ '</fields>')?
+		(pi1=GSSTMPi1)?
+		('<fields>' (fields+=GSSTMField)+ '</fields>')?
 	'</GSSTM>';
 
 GSSTMPi1 returns GSSTMPi1:

@@ -1464,29 +1464,29 @@ public class InternalTCHEADERParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__GSSTCHeader__Group_8__1__Impl"
-    // InternalTCHEADER.g:486:1: rule__GSSTCHeader__Group_8__1__Impl : ( ( ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 ) ) ( ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 )* ) ) ;
+    // InternalTCHEADER.g:486:1: rule__GSSTCHeader__Group_8__1__Impl : ( ( ( rule__GSSTCHeader__FieldsAssignment_8_1 ) ) ( ( rule__GSSTCHeader__FieldsAssignment_8_1 )* ) ) ;
     public final void rule__GSSTCHeader__Group_8__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCHEADER.g:490:1: ( ( ( ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 ) ) ( ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 )* ) ) )
-            // InternalTCHEADER.g:491:1: ( ( ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 ) ) ( ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 )* ) )
+            // InternalTCHEADER.g:490:1: ( ( ( ( rule__GSSTCHeader__FieldsAssignment_8_1 ) ) ( ( rule__GSSTCHeader__FieldsAssignment_8_1 )* ) ) )
+            // InternalTCHEADER.g:491:1: ( ( ( rule__GSSTCHeader__FieldsAssignment_8_1 ) ) ( ( rule__GSSTCHeader__FieldsAssignment_8_1 )* ) )
             {
-            // InternalTCHEADER.g:491:1: ( ( ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 ) ) ( ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 )* ) )
-            // InternalTCHEADER.g:492:2: ( ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 ) ) ( ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 )* )
+            // InternalTCHEADER.g:491:1: ( ( ( rule__GSSTCHeader__FieldsAssignment_8_1 ) ) ( ( rule__GSSTCHeader__FieldsAssignment_8_1 )* ) )
+            // InternalTCHEADER.g:492:2: ( ( rule__GSSTCHeader__FieldsAssignment_8_1 ) ) ( ( rule__GSSTCHeader__FieldsAssignment_8_1 )* )
             {
-            // InternalTCHEADER.g:492:2: ( ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 ) )
-            // InternalTCHEADER.g:493:3: ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 )
+            // InternalTCHEADER.g:492:2: ( ( rule__GSSTCHeader__FieldsAssignment_8_1 ) )
+            // InternalTCHEADER.g:493:3: ( rule__GSSTCHeader__FieldsAssignment_8_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsAssignment_8_1()); 
+               before(grammarAccess.getGSSTCHeaderAccess().getFieldsAssignment_8_1()); 
             }
-            // InternalTCHEADER.g:494:3: ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 )
-            // InternalTCHEADER.g:494:4: rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1
+            // InternalTCHEADER.g:494:3: ( rule__GSSTCHeader__FieldsAssignment_8_1 )
+            // InternalTCHEADER.g:494:4: rule__GSSTCHeader__FieldsAssignment_8_1
             {
             pushFollow(FollowSets000.FOLLOW_12);
-            rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1();
+            rule__GSSTCHeader__FieldsAssignment_8_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -1494,18 +1494,18 @@ public class InternalTCHEADERParser extends AbstractInternalContentAssistParser 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsAssignment_8_1()); 
+               after(grammarAccess.getGSSTCHeaderAccess().getFieldsAssignment_8_1()); 
             }
 
             }
 
-            // InternalTCHEADER.g:497:2: ( ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 )* )
-            // InternalTCHEADER.g:498:3: ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 )*
+            // InternalTCHEADER.g:497:2: ( ( rule__GSSTCHeader__FieldsAssignment_8_1 )* )
+            // InternalTCHEADER.g:498:3: ( rule__GSSTCHeader__FieldsAssignment_8_1 )*
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsAssignment_8_1()); 
+               before(grammarAccess.getGSSTCHeaderAccess().getFieldsAssignment_8_1()); 
             }
-            // InternalTCHEADER.g:499:3: ( rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 )*
+            // InternalTCHEADER.g:499:3: ( rule__GSSTCHeader__FieldsAssignment_8_1 )*
             loop4:
             do {
                 int alt4=2;
@@ -1518,10 +1518,10 @@ public class InternalTCHEADERParser extends AbstractInternalContentAssistParser 
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalTCHEADER.g:499:4: rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1
+            	    // InternalTCHEADER.g:499:4: rule__GSSTCHeader__FieldsAssignment_8_1
             	    {
             	    pushFollow(FollowSets000.FOLLOW_12);
-            	    rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1();
+            	    rule__GSSTCHeader__FieldsAssignment_8_1();
 
             	    state._fsp--;
             	    if (state.failed) return ;
@@ -1535,7 +1535,7 @@ public class InternalTCHEADERParser extends AbstractInternalContentAssistParser 
             } while (true);
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsAssignment_8_1()); 
+               after(grammarAccess.getGSSTCHeaderAccess().getFieldsAssignment_8_1()); 
             }
 
             }
@@ -2791,9 +2791,9 @@ public class InternalTCHEADERParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__GSSTCHeader__FormatAssignment_6"
 
 
-    // $ANTLR start "rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1"
-    // InternalTCHEADER.g:920:1: rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1 : ( ruleGSSTCHeaderField ) ;
-    public final void rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1() throws RecognitionException {
+    // $ANTLR start "rule__GSSTCHeader__FieldsAssignment_8_1"
+    // InternalTCHEADER.g:920:1: rule__GSSTCHeader__FieldsAssignment_8_1 : ( ruleGSSTCHeaderField ) ;
+    public final void rule__GSSTCHeader__FieldsAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -2805,7 +2805,7 @@ public class InternalTCHEADERParser extends AbstractInternalContentAssistParser 
             // InternalTCHEADER.g:926:3: ruleGSSTCHeaderField
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsGSSTCHeaderFieldParserRuleCall_8_1_0()); 
+               before(grammarAccess.getGSSTCHeaderAccess().getFieldsGSSTCHeaderFieldParserRuleCall_8_1_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleGSSTCHeaderField();
@@ -2813,7 +2813,7 @@ public class InternalTCHEADERParser extends AbstractInternalContentAssistParser 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsGSSTCHeaderFieldParserRuleCall_8_1_0()); 
+               after(grammarAccess.getGSSTCHeaderAccess().getFieldsGSSTCHeaderFieldParserRuleCall_8_1_0()); 
             }
 
             }
@@ -2833,7 +2833,7 @@ public class InternalTCHEADERParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__GSSTCHeader__GssHeaderFieldsAssignment_8_1"
+    // $ANTLR end "rule__GSSTCHeader__FieldsAssignment_8_1"
 
 
     // $ANTLR start "rule__GSSTCHeaderField__NameAssignment_2"

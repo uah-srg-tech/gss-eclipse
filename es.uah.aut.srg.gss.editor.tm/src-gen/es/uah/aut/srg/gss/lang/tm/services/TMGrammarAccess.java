@@ -123,12 +123,12 @@ public class TMGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cLevel0_filterGSSFilterFilterCrossReference_20_2_0 = (CrossReference)cLevel0_filterAssignment_20_2.eContents().get(0);
 		private final RuleCall cLevel0_filterGSSFilterFilterSTRINGTerminalRuleCall_20_2_0_1 = (RuleCall)cLevel0_filterGSSFilterFilterCrossReference_20_2_0.eContents().get(1);
 		private final Keyword cSolidusGreaterThanSignKeyword_20_3 = (Keyword)cGroup_20.eContents().get(3);
-		private final Assignment cGssPi1Assignment_21 = (Assignment)cGroup.eContents().get(21);
-		private final RuleCall cGssPi1GSSTMPi1ParserRuleCall_21_0 = (RuleCall)cGssPi1Assignment_21.eContents().get(0);
+		private final Assignment cPi1Assignment_21 = (Assignment)cGroup.eContents().get(21);
+		private final RuleCall cPi1GSSTMPi1ParserRuleCall_21_0 = (RuleCall)cPi1Assignment_21.eContents().get(0);
 		private final Group cGroup_22 = (Group)cGroup.eContents().get(22);
 		private final Keyword cFieldsKeyword_22_0 = (Keyword)cGroup_22.eContents().get(0);
-		private final Assignment cGssFieldsAssignment_22_1 = (Assignment)cGroup_22.eContents().get(1);
-		private final RuleCall cGssFieldsGSSTMFieldParserRuleCall_22_1_0 = (RuleCall)cGssFieldsAssignment_22_1.eContents().get(0);
+		private final Assignment cFieldsAssignment_22_1 = (Assignment)cGroup_22.eContents().get(1);
+		private final RuleCall cFieldsGSSTMFieldParserRuleCall_22_1_0 = (RuleCall)cFieldsAssignment_22_1.eContents().get(0);
 		private final Keyword cFieldsKeyword_22_2 = (Keyword)cGroup_22.eContents().get(2);
 		private final Keyword cGSSTMKeyword_23 = (Keyword)cGroup.eContents().get(23);
 		
@@ -149,7 +149,7 @@ public class TMGrammarAccess extends AbstractGrammarElementFinder {
 		//	from_level0_import=[import_::GSSImportImport|STRING] '/>')? ('<level0_format' 'file='
 		//	level0_format=[format::GSSFormatFormat|STRING] '/>')? ('<level0_filter' 'file='
 		//	level0_filter=[filter::GSSFilterFilter|STRING] '/>')?
-		//	gssPi1=GSSTMPi1? ('<fields>' gssFields+=GSSTMField+ '</fields>')?
+		//	pi1=GSSTMPi1? ('<fields>' fields+=GSSTMField+ '</fields>')?
 		//	'</GSSTM>';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -164,8 +164,8 @@ public class TMGrammarAccess extends AbstractGrammarElementFinder {
 		//level1_filter=[filter::GSSFilterFilter|STRING] '/>')? ('<from_level0_import' 'file='
 		//from_level0_import=[import_::GSSImportImport|STRING] '/>')? ('<level0_format' 'file='
 		//level0_format=[format::GSSFormatFormat|STRING] '/>')? ('<level0_filter' 'file='
-		//level0_filter=[filter::GSSFilterFilter|STRING] '/>')? gssPi1=GSSTMPi1? ('<fields>' gssFields+=GSSTMField+
-		//'</fields>')? '</GSSTM>'
+		//level0_filter=[filter::GSSFilterFilter|STRING] '/>')? pi1=GSSTMPi1? ('<fields>' fields+=GSSTMField+ '</fields>')?
+		//'</GSSTM>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<GSSTM'
@@ -441,23 +441,23 @@ public class TMGrammarAccess extends AbstractGrammarElementFinder {
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_20_3() { return cSolidusGreaterThanSignKeyword_20_3; }
 		
-		//gssPi1=GSSTMPi1?
-		public Assignment getGssPi1Assignment_21() { return cGssPi1Assignment_21; }
+		//pi1=GSSTMPi1?
+		public Assignment getPi1Assignment_21() { return cPi1Assignment_21; }
 		
 		//GSSTMPi1
-		public RuleCall getGssPi1GSSTMPi1ParserRuleCall_21_0() { return cGssPi1GSSTMPi1ParserRuleCall_21_0; }
+		public RuleCall getPi1GSSTMPi1ParserRuleCall_21_0() { return cPi1GSSTMPi1ParserRuleCall_21_0; }
 		
-		//('<fields>' gssFields+=GSSTMField+ '</fields>')?
+		//('<fields>' fields+=GSSTMField+ '</fields>')?
 		public Group getGroup_22() { return cGroup_22; }
 		
 		//'<fields>'
 		public Keyword getFieldsKeyword_22_0() { return cFieldsKeyword_22_0; }
 		
-		//gssFields+=GSSTMField+
-		public Assignment getGssFieldsAssignment_22_1() { return cGssFieldsAssignment_22_1; }
+		//fields+=GSSTMField+
+		public Assignment getFieldsAssignment_22_1() { return cFieldsAssignment_22_1; }
 		
 		//GSSTMField
-		public RuleCall getGssFieldsGSSTMFieldParserRuleCall_22_1_0() { return cGssFieldsGSSTMFieldParserRuleCall_22_1_0; }
+		public RuleCall getFieldsGSSTMFieldParserRuleCall_22_1_0() { return cFieldsGSSTMFieldParserRuleCall_22_1_0; }
 		
 		//'</fields>'
 		public Keyword getFieldsKeyword_22_2() { return cFieldsKeyword_22_2; }
@@ -665,7 +665,7 @@ public class TMGrammarAccess extends AbstractGrammarElementFinder {
 	//	from_level0_import=[import_::GSSImportImport|STRING] '/>')? ('<level0_format' 'file='
 	//	level0_format=[format::GSSFormatFormat|STRING] '/>')? ('<level0_filter' 'file='
 	//	level0_filter=[filter::GSSFilterFilter|STRING] '/>')?
-	//	gssPi1=GSSTMPi1? ('<fields>' gssFields+=GSSTMField+ '</fields>')?
+	//	pi1=GSSTMPi1? ('<fields>' fields+=GSSTMField+ '</fields>')?
 	//	'</GSSTM>';
 	public GSSTMElements getGSSTMAccess() {
 		return pGSSTM;

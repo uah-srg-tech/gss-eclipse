@@ -102,7 +102,7 @@ public interface tmPackage extends EPackage {
 	int GSSTM__SUBTYPE = es.uah.aut.srg.tmtcif.tm.tmPackage.TMTCIFTM__SUBTYPE;
 
 	/**
-	 * The feature id for the '<em><b>Pi1</b></em>' reference.
+	 * The feature id for the '<em><b>Pi1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -111,7 +111,7 @@ public interface tmPackage extends EPackage {
 	int GSSTM__PI1 = es.uah.aut.srg.tmtcif.tm.tmPackage.TMTCIFTM__PI1;
 
 	/**
-	 * The feature id for the '<em><b>Fields</b></em>' reference list.
+	 * The feature id for the '<em><b>Fields</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -228,31 +228,13 @@ public interface tmPackage extends EPackage {
 	int GSSTM__LEVEL0_FORMAT = es.uah.aut.srg.tmtcif.tm.tmPackage.TMTCIFTM_FEATURE_COUNT + 11;
 
 	/**
-	 * The feature id for the '<em><b>Gss Pi1</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSSTM__GSS_PI1 = es.uah.aut.srg.tmtcif.tm.tmPackage.TMTCIFTM_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Gss Fields</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSSTM__GSS_FIELDS = es.uah.aut.srg.tmtcif.tm.tmPackage.TMTCIFTM_FEATURE_COUNT + 13;
-
-	/**
 	 * The number of structural features of the '<em>GSSTM</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSSTM_FEATURE_COUNT = es.uah.aut.srg.tmtcif.tm.tmPackage.TMTCIFTM_FEATURE_COUNT + 14;
+	int GSSTM_FEATURE_COUNT = es.uah.aut.srg.tmtcif.tm.tmPackage.TMTCIFTM_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of operations of the '<em>GSSTM</em>' class.
@@ -517,28 +499,6 @@ public interface tmPackage extends EPackage {
 	EReference getGSSTM_Level0_format();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.tm.GSSTM#getGssPi1 <em>Gss Pi1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Gss Pi1</em>'.
-	 * @see es.uah.aut.srg.gss.tm.GSSTM#getGssPi1()
-	 * @see #getGSSTM()
-	 * @generated
-	 */
-	EReference getGSSTM_GssPi1();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.gss.tm.GSSTM#getGssFields <em>Gss Fields</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Gss Fields</em>'.
-	 * @see es.uah.aut.srg.gss.tm.GSSTM#getGssFields()
-	 * @see #getGSSTM()
-	 * @generated
-	 */
-	EReference getGSSTM_GssFields();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.tm.GSSTMPi1 <em>GSSTM Pi1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -708,22 +668,6 @@ public interface tmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GSSTM__LEVEL0_FORMAT = eINSTANCE.getGSSTM_Level0_format();
-
-		/**
-		 * The meta object literal for the '<em><b>Gss Pi1</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSSTM__GSS_PI1 = eINSTANCE.getGSSTM_GssPi1();
-
-		/**
-		 * The meta object literal for the '<em><b>Gss Fields</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSSTM__GSS_FIELDS = eINSTANCE.getGSSTM_GssFields();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.tm.impl.GSSTMPi1Impl <em>GSSTM Pi1</em>}' class.

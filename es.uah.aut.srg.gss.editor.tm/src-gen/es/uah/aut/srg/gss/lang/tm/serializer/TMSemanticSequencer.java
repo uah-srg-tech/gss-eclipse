@@ -112,8 +112,8 @@ public class TMSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         from_level0_import=[GSSImportImport|STRING]? 
 	 *         level0_format=[GSSFormatFormat|STRING]? 
 	 *         level0_filter=[GSSFilterFilter|STRING]? 
-	 *         gssPi1=GSSTMPi1? 
-	 *         gssFields+=GSSTMField*
+	 *         pi1=GSSTMPi1? 
+	 *         fields+=GSSTMField*
 	 *     )
 	 */
 	protected void sequence_GSSTM(ISerializationContext context, GSSTM semanticObject) {

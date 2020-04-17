@@ -73,8 +73,8 @@ public class TMParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSTMAccess().getFrom_level0_importAssignment_18_2(), "rule__GSSTM__From_level0_importAssignment_18_2");
 					put(grammarAccess.getGSSTMAccess().getLevel0_formatAssignment_19_2(), "rule__GSSTM__Level0_formatAssignment_19_2");
 					put(grammarAccess.getGSSTMAccess().getLevel0_filterAssignment_20_2(), "rule__GSSTM__Level0_filterAssignment_20_2");
-					put(grammarAccess.getGSSTMAccess().getGssPi1Assignment_21(), "rule__GSSTM__GssPi1Assignment_21");
-					put(grammarAccess.getGSSTMAccess().getGssFieldsAssignment_22_1(), "rule__GSSTM__GssFieldsAssignment_22_1");
+					put(grammarAccess.getGSSTMAccess().getPi1Assignment_21(), "rule__GSSTM__Pi1Assignment_21");
+					put(grammarAccess.getGSSTMAccess().getFieldsAssignment_22_1(), "rule__GSSTM__FieldsAssignment_22_1");
 					put(grammarAccess.getGSSTMPi1Access().getNameAssignment_2(), "rule__GSSTMPi1__NameAssignment_2");
 					put(grammarAccess.getGSSTMPi1Access().getValAssignment_4(), "rule__GSSTMPi1__ValAssignment_4");
 					put(grammarAccess.getGSSTMPi1Access().getGssFieldAssignment_6(), "rule__GSSTMPi1__GssFieldAssignment_6");

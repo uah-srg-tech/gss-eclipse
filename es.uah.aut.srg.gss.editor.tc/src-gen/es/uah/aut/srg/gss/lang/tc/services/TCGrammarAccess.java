@@ -104,8 +104,8 @@ public class TCGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSolidusGreaterThanSignKeyword_17_3 = (Keyword)cGroup_17.eContents().get(3);
 		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
 		private final Keyword cFieldsKeyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
-		private final Assignment cGssFieldsAssignment_18_1 = (Assignment)cGroup_18.eContents().get(1);
-		private final RuleCall cGssFieldsGSSTCFieldParserRuleCall_18_1_0 = (RuleCall)cGssFieldsAssignment_18_1.eContents().get(0);
+		private final Assignment cFieldsAssignment_18_1 = (Assignment)cGroup_18.eContents().get(1);
+		private final RuleCall cFieldsGSSTCFieldParserRuleCall_18_1_0 = (RuleCall)cFieldsAssignment_18_1.eContents().get(0);
 		private final Keyword cFieldsKeyword_18_2 = (Keyword)cGroup_18.eContents().get(2);
 		private final Keyword cGSSTCKeyword_19 = (Keyword)cGroup.eContents().get(19);
 		
@@ -122,7 +122,7 @@ public class TCGrammarAccess extends AbstractGrammarElementFinder {
 		//	to_level1_export=[export::GSSExportExport|STRING] '/>')? ('<level1_format' 'file='
 		//	level1_format=[format::GSSFormatFormat|STRING] '/>')? ('<to_level0_export' 'file='
 		//	to_level0_export=[export::GSSExportExport|STRING] '/>')? ('<level0_format' 'file='
-		//	level0_format=[format::GSSFormatFormat|STRING] '/>')? ('<fields>' gssFields+=GSSTCField+ '</fields>')?
+		//	level0_format=[format::GSSFormatFormat|STRING] '/>')? ('<fields>' fields+=GSSTCField+ '</fields>')?
 		//	'</GSSTC>';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -134,7 +134,7 @@ public class TCGrammarAccess extends AbstractGrammarElementFinder {
 		//to_level1_export=[export::GSSExportExport|STRING] '/>')? ('<level1_format' 'file='
 		//level1_format=[format::GSSFormatFormat|STRING] '/>')? ('<to_level0_export' 'file='
 		//to_level0_export=[export::GSSExportExport|STRING] '/>')? ('<level0_format' 'file='
-		//level0_format=[format::GSSFormatFormat|STRING] '/>')? ('<fields>' gssFields+=GSSTCField+ '</fields>')? '</GSSTC>'
+		//level0_format=[format::GSSFormatFormat|STRING] '/>')? ('<fields>' fields+=GSSTCField+ '</fields>')? '</GSSTC>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<GSSTC'
@@ -347,17 +347,17 @@ public class TCGrammarAccess extends AbstractGrammarElementFinder {
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_17_3() { return cSolidusGreaterThanSignKeyword_17_3; }
 		
-		//('<fields>' gssFields+=GSSTCField+ '</fields>')?
+		//('<fields>' fields+=GSSTCField+ '</fields>')?
 		public Group getGroup_18() { return cGroup_18; }
 		
 		//'<fields>'
 		public Keyword getFieldsKeyword_18_0() { return cFieldsKeyword_18_0; }
 		
-		//gssFields+=GSSTCField+
-		public Assignment getGssFieldsAssignment_18_1() { return cGssFieldsAssignment_18_1; }
+		//fields+=GSSTCField+
+		public Assignment getFieldsAssignment_18_1() { return cFieldsAssignment_18_1; }
 		
 		//GSSTCField
-		public RuleCall getGssFieldsGSSTCFieldParserRuleCall_18_1_0() { return cGssFieldsGSSTCFieldParserRuleCall_18_1_0; }
+		public RuleCall getFieldsGSSTCFieldParserRuleCall_18_1_0() { return cFieldsGSSTCFieldParserRuleCall_18_1_0; }
 		
 		//'</fields>'
 		public Keyword getFieldsKeyword_18_2() { return cFieldsKeyword_18_2; }
@@ -496,7 +496,7 @@ public class TCGrammarAccess extends AbstractGrammarElementFinder {
 	//	to_level1_export=[export::GSSExportExport|STRING] '/>')? ('<level1_format' 'file='
 	//	level1_format=[format::GSSFormatFormat|STRING] '/>')? ('<to_level0_export' 'file='
 	//	to_level0_export=[export::GSSExportExport|STRING] '/>')? ('<level0_format' 'file='
-	//	level0_format=[format::GSSFormatFormat|STRING] '/>')? ('<fields>' gssFields+=GSSTCField+ '</fields>')?
+	//	level0_format=[format::GSSFormatFormat|STRING] '/>')? ('<fields>' fields+=GSSTCField+ '</fields>')?
 	//	'</GSSTC>';
 	public GSSTCElements getGSSTCAccess() {
 		return pGSSTC;

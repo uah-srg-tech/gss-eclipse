@@ -18,10 +18,12 @@ import es.uah.aut.srg.gss.scenario.GSSScenarioOptions;
 import es.uah.aut.srg.gss.scenario.GSSScenarioPeriodicTCs;
 import es.uah.aut.srg.gss.scenario.GSSScenarioProtocols;
 import es.uah.aut.srg.gss.scenario.GSSScenarioScenario;
+import es.uah.aut.srg.gss.scenario.GSSScenarioSpecialPacket;
 import es.uah.aut.srg.gss.scenario.GSSScenarioSpecialPackets;
 import es.uah.aut.srg.gss.scenario.GSSScenarioInterface;
 import es.uah.aut.srg.gss.scenario.scenarioPackage;
 import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioInterface;
+import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioPacketConfig;
 import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable;
 import es.uah.aut.srg.tmtcif.scenario.impl.TMTCIFScenarioImpl;
 import org.eclipse.emf.common.notify.Notification;
@@ -608,6 +610,19 @@ public class GSSScenarioScenarioImpl extends TMTCIFScenarioImpl implements GSSSc
 				vbles.add((TMTCIFScenarioVariable) vble);
 			};
 			return vbles;
+		}
+	}
+
+	@Override
+	public EList<TMTCIFScenarioPacketConfig> getScenarioPacketConfigs() {
+		if(getSpecialPackets() == null) {
+			return ECollections.emptyEList();
+		} else {
+			EList<TMTCIFScenarioPacketConfig> specialPkts = new BasicEList<TMTCIFScenarioPacketConfig>();
+			for(GSSScenarioSpecialPacket specialPkt : getSpecialPackets().getSpecialPacket()) {
+				specialPkts.add((TMTCIFScenarioPacketConfig) specialPkt);
+			};
+			return specialPkts;
 		}
 	}
 } //GSSScenarioScenarioImpl

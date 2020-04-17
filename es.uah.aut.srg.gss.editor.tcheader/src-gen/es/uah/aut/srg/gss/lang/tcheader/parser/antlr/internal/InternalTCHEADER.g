@@ -155,17 +155,17 @@ ruleGSSTCHeader returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGSSTCHeaderAccess().getGssHeaderFieldsGSSTCHeaderFieldParserRuleCall_8_1_0());
+						newCompositeNode(grammarAccess.getGSSTCHeaderAccess().getFieldsGSSTCHeaderFieldParserRuleCall_8_1_0());
 					}
-					lv_gssHeaderFields_9_0=ruleGSSTCHeaderField
+					lv_fields_9_0=ruleGSSTCHeaderField
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGSSTCHeaderRule());
 						}
 						add(
 							$current,
-							"gssHeaderFields",
-							lv_gssHeaderFields_9_0,
+							"fields",
+							lv_fields_9_0,
 							"es.uah.aut.srg.gss.lang.tcheader.TCHEADER.GSSTCHeaderField");
 						afterParserOrEnumRuleCall();
 					}
