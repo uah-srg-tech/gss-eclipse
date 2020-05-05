@@ -345,22 +345,13 @@ public interface ifacePackage extends EPackage {
 	int GSS_IFACE_UART_PORT__STOP_BITS = GSS_IFACE_PORT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Input Queue Size</b></em>' attribute.
+	 * The feature id for the '<em><b>Flow Control</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_UART_PORT__INPUT_QUEUE_SIZE = GSS_IFACE_PORT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Output Queue Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_UART_PORT__OUTPUT_QUEUE_SIZE = GSS_IFACE_PORT_FEATURE_COUNT + 6;
+	int GSS_IFACE_UART_PORT__FLOW_CONTROL = GSS_IFACE_PORT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Uart Protocol</b></em>' containment reference.
@@ -369,7 +360,7 @@ public interface ifacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_UART_PORT__UART_PROTOCOL = GSS_IFACE_PORT_FEATURE_COUNT + 7;
+	int GSS_IFACE_UART_PORT__UART_PROTOCOL = GSS_IFACE_PORT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>GSS Iface Uart Port</em>' class.
@@ -378,7 +369,7 @@ public interface ifacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_UART_PORT_FEATURE_COUNT = GSS_IFACE_PORT_FEATURE_COUNT + 8;
+	int GSS_IFACE_UART_PORT_FEATURE_COUNT = GSS_IFACE_PORT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>GSS Iface Uart Port</em>' class.
@@ -742,6 +733,16 @@ public interface ifacePackage extends EPackage {
 	int GSS_IFACE_UART_PORT_STOP_BITS = 16;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPortFlowControl <em>GSS Iface Uart Port Flow Control</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPortFlowControl
+	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartPortFlowControl()
+	 * @generated
+	 */
+	int GSS_IFACE_UART_PORT_FLOW_CONTROL = 17;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolUnit <em>GSS Iface Uart Protocol Unit</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -749,7 +750,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartProtocolUnit()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PROTOCOL_UNIT = 17;
+	int GSS_IFACE_UART_PROTOCOL_UNIT = 18;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolPower <em>GSS Iface Uart Protocol Power</em>}' enum.
@@ -759,7 +760,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartProtocolPower()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PROTOCOL_POWER = 18;
+	int GSS_IFACE_UART_PROTOCOL_POWER = 19;
 
 
 	/**
@@ -913,26 +914,15 @@ public interface ifacePackage extends EPackage {
 	EAttribute getGSSIfaceUartPort_StopBits();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getInputQueueSize <em>Input Queue Size</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getFlowControl <em>Flow Control</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input Queue Size</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getInputQueueSize()
+	 * @return the meta object for the attribute '<em>Flow Control</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getFlowControl()
 	 * @see #getGSSIfaceUartPort()
 	 * @generated
 	 */
-	EAttribute getGSSIfaceUartPort_InputQueueSize();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getOutputQueueSize <em>Output Queue Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Output Queue Size</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getOutputQueueSize()
-	 * @see #getGSSIfaceUartPort()
-	 * @generated
-	 */
-	EAttribute getGSSIfaceUartPort_OutputQueueSize();
+	EAttribute getGSSIfaceUartPort_FlowControl();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getUartProtocol <em>Uart Protocol</em>}'.
@@ -1241,6 +1231,16 @@ public interface ifacePackage extends EPackage {
 	EEnum getGSSIfaceUartPortStopBits();
 
 	/**
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPortFlowControl <em>GSS Iface Uart Port Flow Control</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>GSS Iface Uart Port Flow Control</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPortFlowControl
+	 * @generated
+	 */
+	EEnum getGSSIfaceUartPortFlowControl();
+
+	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolUnit <em>GSS Iface Uart Protocol Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1404,20 +1404,12 @@ public interface ifacePackage extends EPackage {
 		EAttribute GSS_IFACE_UART_PORT__STOP_BITS = eINSTANCE.getGSSIfaceUartPort_StopBits();
 
 		/**
-		 * The meta object literal for the '<em><b>Input Queue Size</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Flow Control</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_IFACE_UART_PORT__INPUT_QUEUE_SIZE = eINSTANCE.getGSSIfaceUartPort_InputQueueSize();
-
-		/**
-		 * The meta object literal for the '<em><b>Output Queue Size</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_IFACE_UART_PORT__OUTPUT_QUEUE_SIZE = eINSTANCE.getGSSIfaceUartPort_OutputQueueSize();
+		EAttribute GSS_IFACE_UART_PORT__FLOW_CONTROL = eINSTANCE.getGSSIfaceUartPort_FlowControl();
 
 		/**
 		 * The meta object literal for the '<em><b>Uart Protocol</b></em>' containment reference feature.
@@ -1676,6 +1668,16 @@ public interface ifacePackage extends EPackage {
 		 * @generated
 		 */
 		EEnum GSS_IFACE_UART_PORT_STOP_BITS = eINSTANCE.getGSSIfaceUartPortStopBits();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPortFlowControl <em>GSS Iface Uart Port Flow Control</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPortFlowControl
+		 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartPortFlowControl()
+		 * @generated
+		 */
+		EEnum GSS_IFACE_UART_PORT_FLOW_CONTROL = eINSTANCE.getGSSIfaceUartPortFlowControl();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolUnit <em>GSS Iface Uart Protocol Unit</em>}' enum.

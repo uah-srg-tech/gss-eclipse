@@ -267,8 +267,7 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         parity=GSSIfaceUartPortParity 
 	 *         dataBits=GSSIfaceUartPortDataBits 
 	 *         stopBits=GSSIfaceUartPortStopBits 
-	 *         inputQueueSize=INTEGER 
-	 *         outputQueueSize=INTEGER 
+	 *         flowControl=GSSIfaceUartPortFlowControl 
 	 *         uartProtocol=GSSIfaceUartProtocol
 	 *     )
 	 */
@@ -284,10 +283,8 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__DATA_BITS));
 			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__STOP_BITS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__STOP_BITS));
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__INPUT_QUEUE_SIZE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__INPUT_QUEUE_SIZE));
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__OUTPUT_QUEUE_SIZE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__OUTPUT_QUEUE_SIZE));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__FLOW_CONTROL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__FLOW_CONTROL));
 			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__UART_PROTOCOL) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__UART_PROTOCOL));
 		}
@@ -297,9 +294,8 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		feeder.accept(grammarAccess.getGSSIfaceUartPortAccess().getParityGSSIfaceUartPortParityEnumRuleCall_12_0(), semanticObject.getParity());
 		feeder.accept(grammarAccess.getGSSIfaceUartPortAccess().getDataBitsGSSIfaceUartPortDataBitsEnumRuleCall_16_0(), semanticObject.getDataBits());
 		feeder.accept(grammarAccess.getGSSIfaceUartPortAccess().getStopBitsGSSIfaceUartPortStopBitsEnumRuleCall_20_0(), semanticObject.getStopBits());
-		feeder.accept(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeINTEGERParserRuleCall_24_0(), semanticObject.getInputQueueSize());
-		feeder.accept(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeINTEGERParserRuleCall_28_0(), semanticObject.getOutputQueueSize());
-		feeder.accept(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_30_0(), semanticObject.getUartProtocol());
+		feeder.accept(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlGSSIfaceUartPortFlowControlEnumRuleCall_24_0(), semanticObject.getFlowControl());
+		feeder.accept(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0(), semanticObject.getUartProtocol());
 		feeder.finish();
 	}
 	

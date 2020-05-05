@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalIFACEParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'usb'", "'mk2'", "'pci'", "'38400bauds'", "'115200bauds'", "'NO'", "'ODD'", "'EVEN'", "'MARK'", "'SPACE'", "'5bits'", "'6bits'", "'7bits'", "'8bits'", "'1bit'", "'2bits'", "'bytes'", "'bits'", "'no'", "'2_with_0'", "'import'", "';'", "'portConfig'", "'{'", "'}'", "'uri'", "':='", "'version'", "'spwPort'", "'type'", "'link'", "'writingPort'", "'readingPort'", "'port'", "'uartPort'", "'number'", "'baudRate'", "'parity'", "'dataBits'", "'stopBits'", "'inputQueueSize'", "'outputQueueSize'", "'uartProtocol'", "'unit'", "'power'", "'constSize'", "'sizeFieldOffset'", "'sizeFieldTrim'", "'syncPattern'", "'hexValue'", "'spwTCPort'", "'spwPortRef'", "'dummyPort'", "'.'", "'('", "')'", "'-'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'usb'", "'mk2'", "'pci'", "'38400bauds'", "'115200bauds'", "'NO'", "'ODD'", "'EVEN'", "'MARK'", "'SPACE'", "'5bits'", "'6bits'", "'7bits'", "'8bits'", "'1bit'", "'2bits'", "'rts_cts'", "'xon_xoff'", "'bytes'", "'bits'", "'no'", "'2_with_0'", "'import'", "';'", "'portConfig'", "'{'", "'}'", "'uri'", "':='", "'version'", "'spwPort'", "'type'", "'link'", "'writingPort'", "'readingPort'", "'port'", "'uartPort'", "'number'", "'baudRate'", "'parity'", "'dataBits'", "'stopBits'", "'flowControl'", "'uartProtocol'", "'unit'", "'power'", "'constSize'", "'sizeFieldOffset'", "'sizeFieldTrim'", "'syncPattern'", "'hexValue'", "'spwTCPort'", "'spwPortRef'", "'dummyPort'", "'.'", "'('", "')'", "'-'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -70,6 +70,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
     public static final int T__24=24;
     public static final int T__68=68;
     public static final int T__25=25;
+    public static final int T__69=69;
     public static final int T__62=62;
     public static final int T__63=63;
     public static final int T__20=20;
@@ -1922,24 +1923,75 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleGSSIfaceUartPortStopBits"
 
 
+    // $ANTLR start "ruleGSSIfaceUartPortFlowControl"
+    // InternalIFACE.g:591:1: ruleGSSIfaceUartPortFlowControl : ( ( rule__GSSIfaceUartPortFlowControl__Alternatives ) ) ;
+    public final void ruleGSSIfaceUartPortFlowControl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIFACE.g:595:1: ( ( ( rule__GSSIfaceUartPortFlowControl__Alternatives ) ) )
+            // InternalIFACE.g:596:2: ( ( rule__GSSIfaceUartPortFlowControl__Alternatives ) )
+            {
+            // InternalIFACE.g:596:2: ( ( rule__GSSIfaceUartPortFlowControl__Alternatives ) )
+            // InternalIFACE.g:597:3: ( rule__GSSIfaceUartPortFlowControl__Alternatives )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGSSIfaceUartPortFlowControlAccess().getAlternatives()); 
+            }
+            // InternalIFACE.g:598:3: ( rule__GSSIfaceUartPortFlowControl__Alternatives )
+            // InternalIFACE.g:598:4: rule__GSSIfaceUartPortFlowControl__Alternatives
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSIfaceUartPortFlowControl__Alternatives();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getGSSIfaceUartPortFlowControlAccess().getAlternatives()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleGSSIfaceUartPortFlowControl"
+
+
     // $ANTLR start "ruleGSSIfaceUartProtocolUnit"
-    // InternalIFACE.g:591:1: ruleGSSIfaceUartProtocolUnit : ( ( rule__GSSIfaceUartProtocolUnit__Alternatives ) ) ;
+    // InternalIFACE.g:607:1: ruleGSSIfaceUartProtocolUnit : ( ( rule__GSSIfaceUartProtocolUnit__Alternatives ) ) ;
     public final void ruleGSSIfaceUartProtocolUnit() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:595:1: ( ( ( rule__GSSIfaceUartProtocolUnit__Alternatives ) ) )
-            // InternalIFACE.g:596:2: ( ( rule__GSSIfaceUartProtocolUnit__Alternatives ) )
+            // InternalIFACE.g:611:1: ( ( ( rule__GSSIfaceUartProtocolUnit__Alternatives ) ) )
+            // InternalIFACE.g:612:2: ( ( rule__GSSIfaceUartProtocolUnit__Alternatives ) )
             {
-            // InternalIFACE.g:596:2: ( ( rule__GSSIfaceUartProtocolUnit__Alternatives ) )
-            // InternalIFACE.g:597:3: ( rule__GSSIfaceUartProtocolUnit__Alternatives )
+            // InternalIFACE.g:612:2: ( ( rule__GSSIfaceUartProtocolUnit__Alternatives ) )
+            // InternalIFACE.g:613:3: ( rule__GSSIfaceUartProtocolUnit__Alternatives )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolUnitAccess().getAlternatives()); 
             }
-            // InternalIFACE.g:598:3: ( rule__GSSIfaceUartProtocolUnit__Alternatives )
-            // InternalIFACE.g:598:4: rule__GSSIfaceUartProtocolUnit__Alternatives
+            // InternalIFACE.g:614:3: ( rule__GSSIfaceUartProtocolUnit__Alternatives )
+            // InternalIFACE.g:614:4: rule__GSSIfaceUartProtocolUnit__Alternatives
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceUartProtocolUnit__Alternatives();
@@ -1974,23 +2026,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleGSSIfaceUartProtocolPower"
-    // InternalIFACE.g:607:1: ruleGSSIfaceUartProtocolPower : ( ( rule__GSSIfaceUartProtocolPower__Alternatives ) ) ;
+    // InternalIFACE.g:623:1: ruleGSSIfaceUartProtocolPower : ( ( rule__GSSIfaceUartProtocolPower__Alternatives ) ) ;
     public final void ruleGSSIfaceUartProtocolPower() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:611:1: ( ( ( rule__GSSIfaceUartProtocolPower__Alternatives ) ) )
-            // InternalIFACE.g:612:2: ( ( rule__GSSIfaceUartProtocolPower__Alternatives ) )
+            // InternalIFACE.g:627:1: ( ( ( rule__GSSIfaceUartProtocolPower__Alternatives ) ) )
+            // InternalIFACE.g:628:2: ( ( rule__GSSIfaceUartProtocolPower__Alternatives ) )
             {
-            // InternalIFACE.g:612:2: ( ( rule__GSSIfaceUartProtocolPower__Alternatives ) )
-            // InternalIFACE.g:613:3: ( rule__GSSIfaceUartProtocolPower__Alternatives )
+            // InternalIFACE.g:628:2: ( ( rule__GSSIfaceUartProtocolPower__Alternatives ) )
+            // InternalIFACE.g:629:3: ( rule__GSSIfaceUartProtocolPower__Alternatives )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolPowerAccess().getAlternatives()); 
             }
-            // InternalIFACE.g:614:3: ( rule__GSSIfaceUartProtocolPower__Alternatives )
-            // InternalIFACE.g:614:4: rule__GSSIfaceUartProtocolPower__Alternatives
+            // InternalIFACE.g:630:3: ( rule__GSSIfaceUartProtocolPower__Alternatives )
+            // InternalIFACE.g:630:4: rule__GSSIfaceUartProtocolPower__Alternatives
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceUartProtocolPower__Alternatives();
@@ -2025,31 +2077,31 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePort__Alternatives"
-    // InternalIFACE.g:622:1: rule__GSSIfacePort__Alternatives : ( ( ruleGSSIfaceSpWPort ) | ( ruleGSSIfaceUartPort ) | ( ruleGSSIfaceSpWTCPort ) | ( ruleGSSIfaceDummyPort ) );
+    // InternalIFACE.g:638:1: rule__GSSIfacePort__Alternatives : ( ( ruleGSSIfaceSpWPort ) | ( ruleGSSIfaceUartPort ) | ( ruleGSSIfaceSpWTCPort ) | ( ruleGSSIfaceDummyPort ) );
     public final void rule__GSSIfacePort__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:626:1: ( ( ruleGSSIfaceSpWPort ) | ( ruleGSSIfaceUartPort ) | ( ruleGSSIfaceSpWTCPort ) | ( ruleGSSIfaceDummyPort ) )
+            // InternalIFACE.g:642:1: ( ( ruleGSSIfaceSpWPort ) | ( ruleGSSIfaceUartPort ) | ( ruleGSSIfaceSpWTCPort ) | ( ruleGSSIfaceDummyPort ) )
             int alt1=4;
             switch ( input.LA(1) ) {
-            case 40:
+            case 42:
                 {
                 alt1=1;
                 }
                 break;
-            case 46:
+            case 48:
                 {
                 alt1=2;
                 }
                 break;
-            case 62:
+            case 63:
                 {
                 alt1=3;
                 }
                 break;
-            case 64:
+            case 65:
                 {
                 alt1=4;
                 }
@@ -2064,10 +2116,10 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
             switch (alt1) {
                 case 1 :
-                    // InternalIFACE.g:627:2: ( ruleGSSIfaceSpWPort )
+                    // InternalIFACE.g:643:2: ( ruleGSSIfaceSpWPort )
                     {
-                    // InternalIFACE.g:627:2: ( ruleGSSIfaceSpWPort )
-                    // InternalIFACE.g:628:3: ruleGSSIfaceSpWPort
+                    // InternalIFACE.g:643:2: ( ruleGSSIfaceSpWPort )
+                    // InternalIFACE.g:644:3: ruleGSSIfaceSpWPort
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfacePortAccess().getGSSIfaceSpWPortParserRuleCall_0()); 
@@ -2087,10 +2139,10 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:633:2: ( ruleGSSIfaceUartPort )
+                    // InternalIFACE.g:649:2: ( ruleGSSIfaceUartPort )
                     {
-                    // InternalIFACE.g:633:2: ( ruleGSSIfaceUartPort )
-                    // InternalIFACE.g:634:3: ruleGSSIfaceUartPort
+                    // InternalIFACE.g:649:2: ( ruleGSSIfaceUartPort )
+                    // InternalIFACE.g:650:3: ruleGSSIfaceUartPort
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfacePortAccess().getGSSIfaceUartPortParserRuleCall_1()); 
@@ -2110,10 +2162,10 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalIFACE.g:639:2: ( ruleGSSIfaceSpWTCPort )
+                    // InternalIFACE.g:655:2: ( ruleGSSIfaceSpWTCPort )
                     {
-                    // InternalIFACE.g:639:2: ( ruleGSSIfaceSpWTCPort )
-                    // InternalIFACE.g:640:3: ruleGSSIfaceSpWTCPort
+                    // InternalIFACE.g:655:2: ( ruleGSSIfaceSpWTCPort )
+                    // InternalIFACE.g:656:3: ruleGSSIfaceSpWTCPort
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfacePortAccess().getGSSIfaceSpWTCPortParserRuleCall_2()); 
@@ -2133,10 +2185,10 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalIFACE.g:645:2: ( ruleGSSIfaceDummyPort )
+                    // InternalIFACE.g:661:2: ( ruleGSSIfaceDummyPort )
                     {
-                    // InternalIFACE.g:645:2: ( ruleGSSIfaceDummyPort )
-                    // InternalIFACE.g:646:3: ruleGSSIfaceDummyPort
+                    // InternalIFACE.g:661:2: ( ruleGSSIfaceDummyPort )
+                    // InternalIFACE.g:662:3: ruleGSSIfaceDummyPort
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfacePortAccess().getGSSIfaceDummyPortParserRuleCall_3()); 
@@ -2173,24 +2225,24 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Alternatives_0"
-    // InternalIFACE.g:655:1: rule__Version__Alternatives_0 : ( ( RULE_INT ) | ( ( rule__Version__Group_0_1__0 ) ) );
+    // InternalIFACE.g:671:1: rule__Version__Alternatives_0 : ( ( RULE_INT ) | ( ( rule__Version__Group_0_1__0 ) ) );
     public final void rule__Version__Alternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:659:1: ( ( RULE_INT ) | ( ( rule__Version__Group_0_1__0 ) ) )
+            // InternalIFACE.g:675:1: ( ( RULE_INT ) | ( ( rule__Version__Group_0_1__0 ) ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
             if ( (LA2_0==RULE_INT) ) {
                 int LA2_1 = input.LA(2);
 
-                if ( (LA2_1==EOF||LA2_1==33||LA2_1==65||LA2_1==67) ) {
-                    alt2=1;
-                }
-                else if ( (LA2_1==RULE_ID) ) {
+                if ( (LA2_1==RULE_ID) ) {
                     alt2=2;
+                }
+                else if ( (LA2_1==EOF||LA2_1==35||LA2_1==66||LA2_1==68) ) {
+                    alt2=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -2212,10 +2264,10 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalIFACE.g:660:2: ( RULE_INT )
+                    // InternalIFACE.g:676:2: ( RULE_INT )
                     {
-                    // InternalIFACE.g:660:2: ( RULE_INT )
-                    // InternalIFACE.g:661:3: RULE_INT
+                    // InternalIFACE.g:676:2: ( RULE_INT )
+                    // InternalIFACE.g:677:3: RULE_INT
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_0_0()); 
@@ -2231,16 +2283,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:666:2: ( ( rule__Version__Group_0_1__0 ) )
+                    // InternalIFACE.g:682:2: ( ( rule__Version__Group_0_1__0 ) )
                     {
-                    // InternalIFACE.g:666:2: ( ( rule__Version__Group_0_1__0 ) )
-                    // InternalIFACE.g:667:3: ( rule__Version__Group_0_1__0 )
+                    // InternalIFACE.g:682:2: ( ( rule__Version__Group_0_1__0 ) )
+                    // InternalIFACE.g:683:3: ( rule__Version__Group_0_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVersionAccess().getGroup_0_1()); 
                     }
-                    // InternalIFACE.g:668:3: ( rule__Version__Group_0_1__0 )
-                    // InternalIFACE.g:668:4: rule__Version__Group_0_1__0
+                    // InternalIFACE.g:684:3: ( rule__Version__Group_0_1__0 )
+                    // InternalIFACE.g:684:4: rule__Version__Group_0_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__Version__Group_0_1__0();
@@ -2277,24 +2329,24 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Alternatives_1_1"
-    // InternalIFACE.g:676:1: rule__Version__Alternatives_1_1 : ( ( RULE_INT ) | ( ( rule__Version__Group_1_1_1__0 ) ) );
+    // InternalIFACE.g:692:1: rule__Version__Alternatives_1_1 : ( ( RULE_INT ) | ( ( rule__Version__Group_1_1_1__0 ) ) );
     public final void rule__Version__Alternatives_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:680:1: ( ( RULE_INT ) | ( ( rule__Version__Group_1_1_1__0 ) ) )
+            // InternalIFACE.g:696:1: ( ( RULE_INT ) | ( ( rule__Version__Group_1_1_1__0 ) ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
             if ( (LA3_0==RULE_INT) ) {
                 int LA3_1 = input.LA(2);
 
-                if ( (LA3_1==EOF||LA3_1==33||LA3_1==65||LA3_1==67) ) {
-                    alt3=1;
-                }
-                else if ( (LA3_1==RULE_ID) ) {
+                if ( (LA3_1==RULE_ID) ) {
                     alt3=2;
+                }
+                else if ( (LA3_1==EOF||LA3_1==35||LA3_1==66||LA3_1==68) ) {
+                    alt3=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -2316,10 +2368,10 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             }
             switch (alt3) {
                 case 1 :
-                    // InternalIFACE.g:681:2: ( RULE_INT )
+                    // InternalIFACE.g:697:2: ( RULE_INT )
                     {
-                    // InternalIFACE.g:681:2: ( RULE_INT )
-                    // InternalIFACE.g:682:3: RULE_INT
+                    // InternalIFACE.g:697:2: ( RULE_INT )
+                    // InternalIFACE.g:698:3: RULE_INT
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_1_1_0()); 
@@ -2335,16 +2387,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:687:2: ( ( rule__Version__Group_1_1_1__0 ) )
+                    // InternalIFACE.g:703:2: ( ( rule__Version__Group_1_1_1__0 ) )
                     {
-                    // InternalIFACE.g:687:2: ( ( rule__Version__Group_1_1_1__0 ) )
-                    // InternalIFACE.g:688:3: ( rule__Version__Group_1_1_1__0 )
+                    // InternalIFACE.g:703:2: ( ( rule__Version__Group_1_1_1__0 ) )
+                    // InternalIFACE.g:704:3: ( rule__Version__Group_1_1_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVersionAccess().getGroup_1_1_1()); 
                     }
-                    // InternalIFACE.g:689:3: ( rule__Version__Group_1_1_1__0 )
-                    // InternalIFACE.g:689:4: rule__Version__Group_1_1_1__0
+                    // InternalIFACE.g:705:3: ( rule__Version__Group_1_1_1__0 )
+                    // InternalIFACE.g:705:4: rule__Version__Group_1_1_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__Version__Group_1_1_1__0();
@@ -2381,17 +2433,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Alternatives"
-    // InternalIFACE.g:697:1: rule__INTEGER__Alternatives : ( ( ( rule__INTEGER__Group_0__0 ) ) | ( RULE_HEXADECIMAL ) );
+    // InternalIFACE.g:713:1: rule__INTEGER__Alternatives : ( ( ( rule__INTEGER__Group_0__0 ) ) | ( RULE_HEXADECIMAL ) );
     public final void rule__INTEGER__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:701:1: ( ( ( rule__INTEGER__Group_0__0 ) ) | ( RULE_HEXADECIMAL ) )
+            // InternalIFACE.g:717:1: ( ( ( rule__INTEGER__Group_0__0 ) ) | ( RULE_HEXADECIMAL ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==RULE_INT||LA4_0==68) ) {
+            if ( (LA4_0==RULE_INT||LA4_0==69) ) {
                 alt4=1;
             }
             else if ( (LA4_0==RULE_HEXADECIMAL) ) {
@@ -2406,16 +2458,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             }
             switch (alt4) {
                 case 1 :
-                    // InternalIFACE.g:702:2: ( ( rule__INTEGER__Group_0__0 ) )
+                    // InternalIFACE.g:718:2: ( ( rule__INTEGER__Group_0__0 ) )
                     {
-                    // InternalIFACE.g:702:2: ( ( rule__INTEGER__Group_0__0 ) )
-                    // InternalIFACE.g:703:3: ( rule__INTEGER__Group_0__0 )
+                    // InternalIFACE.g:718:2: ( ( rule__INTEGER__Group_0__0 ) )
+                    // InternalIFACE.g:719:3: ( rule__INTEGER__Group_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getINTEGERAccess().getGroup_0()); 
                     }
-                    // InternalIFACE.g:704:3: ( rule__INTEGER__Group_0__0 )
-                    // InternalIFACE.g:704:4: rule__INTEGER__Group_0__0
+                    // InternalIFACE.g:720:3: ( rule__INTEGER__Group_0__0 )
+                    // InternalIFACE.g:720:4: rule__INTEGER__Group_0__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__INTEGER__Group_0__0();
@@ -2435,10 +2487,10 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:708:2: ( RULE_HEXADECIMAL )
+                    // InternalIFACE.g:724:2: ( RULE_HEXADECIMAL )
                     {
-                    // InternalIFACE.g:708:2: ( RULE_HEXADECIMAL )
-                    // InternalIFACE.g:709:3: RULE_HEXADECIMAL
+                    // InternalIFACE.g:724:2: ( RULE_HEXADECIMAL )
+                    // InternalIFACE.g:725:3: RULE_HEXADECIMAL
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getINTEGERAccess().getHEXADECIMALTerminalRuleCall_1()); 
@@ -2471,13 +2523,13 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPortType__Alternatives"
-    // InternalIFACE.g:718:1: rule__GSSIfaceSpWPortType__Alternatives : ( ( ( 'usb' ) ) | ( ( 'mk2' ) ) | ( ( 'pci' ) ) );
+    // InternalIFACE.g:734:1: rule__GSSIfaceSpWPortType__Alternatives : ( ( ( 'usb' ) ) | ( ( 'mk2' ) ) | ( ( 'pci' ) ) );
     public final void rule__GSSIfaceSpWPortType__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:722:1: ( ( ( 'usb' ) ) | ( ( 'mk2' ) ) | ( ( 'pci' ) ) )
+            // InternalIFACE.g:738:1: ( ( ( 'usb' ) ) | ( ( 'mk2' ) ) | ( ( 'pci' ) ) )
             int alt5=3;
             switch ( input.LA(1) ) {
             case 12:
@@ -2505,16 +2557,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
             switch (alt5) {
                 case 1 :
-                    // InternalIFACE.g:723:2: ( ( 'usb' ) )
+                    // InternalIFACE.g:739:2: ( ( 'usb' ) )
                     {
-                    // InternalIFACE.g:723:2: ( ( 'usb' ) )
-                    // InternalIFACE.g:724:3: ( 'usb' )
+                    // InternalIFACE.g:739:2: ( ( 'usb' ) )
+                    // InternalIFACE.g:740:3: ( 'usb' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceSpWPortTypeAccess().getUsbEnumLiteralDeclaration_0()); 
                     }
-                    // InternalIFACE.g:725:3: ( 'usb' )
-                    // InternalIFACE.g:725:4: 'usb'
+                    // InternalIFACE.g:741:3: ( 'usb' )
+                    // InternalIFACE.g:741:4: 'usb'
                     {
                     match(input,12,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -2530,16 +2582,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:729:2: ( ( 'mk2' ) )
+                    // InternalIFACE.g:745:2: ( ( 'mk2' ) )
                     {
-                    // InternalIFACE.g:729:2: ( ( 'mk2' ) )
-                    // InternalIFACE.g:730:3: ( 'mk2' )
+                    // InternalIFACE.g:745:2: ( ( 'mk2' ) )
+                    // InternalIFACE.g:746:3: ( 'mk2' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceSpWPortTypeAccess().getMk2EnumLiteralDeclaration_1()); 
                     }
-                    // InternalIFACE.g:731:3: ( 'mk2' )
-                    // InternalIFACE.g:731:4: 'mk2'
+                    // InternalIFACE.g:747:3: ( 'mk2' )
+                    // InternalIFACE.g:747:4: 'mk2'
                     {
                     match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -2555,16 +2607,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalIFACE.g:735:2: ( ( 'pci' ) )
+                    // InternalIFACE.g:751:2: ( ( 'pci' ) )
                     {
-                    // InternalIFACE.g:735:2: ( ( 'pci' ) )
-                    // InternalIFACE.g:736:3: ( 'pci' )
+                    // InternalIFACE.g:751:2: ( ( 'pci' ) )
+                    // InternalIFACE.g:752:3: ( 'pci' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceSpWPortTypeAccess().getPciEnumLiteralDeclaration_2()); 
                     }
-                    // InternalIFACE.g:737:3: ( 'pci' )
-                    // InternalIFACE.g:737:4: 'pci'
+                    // InternalIFACE.g:753:3: ( 'pci' )
+                    // InternalIFACE.g:753:4: 'pci'
                     {
                     match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -2597,13 +2649,13 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPortBaudRate__Alternatives"
-    // InternalIFACE.g:745:1: rule__GSSIfaceUartPortBaudRate__Alternatives : ( ( ( '38400bauds' ) ) | ( ( '115200bauds' ) ) );
+    // InternalIFACE.g:761:1: rule__GSSIfaceUartPortBaudRate__Alternatives : ( ( ( '38400bauds' ) ) | ( ( '115200bauds' ) ) );
     public final void rule__GSSIfaceUartPortBaudRate__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:749:1: ( ( ( '38400bauds' ) ) | ( ( '115200bauds' ) ) )
+            // InternalIFACE.g:765:1: ( ( ( '38400bauds' ) ) | ( ( '115200bauds' ) ) )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -2622,16 +2674,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalIFACE.g:750:2: ( ( '38400bauds' ) )
+                    // InternalIFACE.g:766:2: ( ( '38400bauds' ) )
                     {
-                    // InternalIFACE.g:750:2: ( ( '38400bauds' ) )
-                    // InternalIFACE.g:751:3: ( '38400bauds' )
+                    // InternalIFACE.g:766:2: ( ( '38400bauds' ) )
+                    // InternalIFACE.g:767:3: ( '38400bauds' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartPortBaudRateAccess().get_38400EnumLiteralDeclaration_0()); 
                     }
-                    // InternalIFACE.g:752:3: ( '38400bauds' )
-                    // InternalIFACE.g:752:4: '38400bauds'
+                    // InternalIFACE.g:768:3: ( '38400bauds' )
+                    // InternalIFACE.g:768:4: '38400bauds'
                     {
                     match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -2647,16 +2699,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:756:2: ( ( '115200bauds' ) )
+                    // InternalIFACE.g:772:2: ( ( '115200bauds' ) )
                     {
-                    // InternalIFACE.g:756:2: ( ( '115200bauds' ) )
-                    // InternalIFACE.g:757:3: ( '115200bauds' )
+                    // InternalIFACE.g:772:2: ( ( '115200bauds' ) )
+                    // InternalIFACE.g:773:3: ( '115200bauds' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartPortBaudRateAccess().get_115200EnumLiteralDeclaration_1()); 
                     }
-                    // InternalIFACE.g:758:3: ( '115200bauds' )
-                    // InternalIFACE.g:758:4: '115200bauds'
+                    // InternalIFACE.g:774:3: ( '115200bauds' )
+                    // InternalIFACE.g:774:4: '115200bauds'
                     {
                     match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -2689,13 +2741,13 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPortParity__Alternatives"
-    // InternalIFACE.g:766:1: rule__GSSIfaceUartPortParity__Alternatives : ( ( ( 'NO' ) ) | ( ( 'ODD' ) ) | ( ( 'EVEN' ) ) | ( ( 'MARK' ) ) | ( ( 'SPACE' ) ) );
+    // InternalIFACE.g:782:1: rule__GSSIfaceUartPortParity__Alternatives : ( ( ( 'NO' ) ) | ( ( 'ODD' ) ) | ( ( 'EVEN' ) ) | ( ( 'MARK' ) ) | ( ( 'SPACE' ) ) );
     public final void rule__GSSIfaceUartPortParity__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:770:1: ( ( ( 'NO' ) ) | ( ( 'ODD' ) ) | ( ( 'EVEN' ) ) | ( ( 'MARK' ) ) | ( ( 'SPACE' ) ) )
+            // InternalIFACE.g:786:1: ( ( ( 'NO' ) ) | ( ( 'ODD' ) ) | ( ( 'EVEN' ) ) | ( ( 'MARK' ) ) | ( ( 'SPACE' ) ) )
             int alt7=5;
             switch ( input.LA(1) ) {
             case 17:
@@ -2733,16 +2785,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
             switch (alt7) {
                 case 1 :
-                    // InternalIFACE.g:771:2: ( ( 'NO' ) )
+                    // InternalIFACE.g:787:2: ( ( 'NO' ) )
                     {
-                    // InternalIFACE.g:771:2: ( ( 'NO' ) )
-                    // InternalIFACE.g:772:3: ( 'NO' )
+                    // InternalIFACE.g:787:2: ( ( 'NO' ) )
+                    // InternalIFACE.g:788:3: ( 'NO' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartPortParityAccess().getNOEnumLiteralDeclaration_0()); 
                     }
-                    // InternalIFACE.g:773:3: ( 'NO' )
-                    // InternalIFACE.g:773:4: 'NO'
+                    // InternalIFACE.g:789:3: ( 'NO' )
+                    // InternalIFACE.g:789:4: 'NO'
                     {
                     match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -2758,16 +2810,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:777:2: ( ( 'ODD' ) )
+                    // InternalIFACE.g:793:2: ( ( 'ODD' ) )
                     {
-                    // InternalIFACE.g:777:2: ( ( 'ODD' ) )
-                    // InternalIFACE.g:778:3: ( 'ODD' )
+                    // InternalIFACE.g:793:2: ( ( 'ODD' ) )
+                    // InternalIFACE.g:794:3: ( 'ODD' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartPortParityAccess().getODDEnumLiteralDeclaration_1()); 
                     }
-                    // InternalIFACE.g:779:3: ( 'ODD' )
-                    // InternalIFACE.g:779:4: 'ODD'
+                    // InternalIFACE.g:795:3: ( 'ODD' )
+                    // InternalIFACE.g:795:4: 'ODD'
                     {
                     match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -2783,16 +2835,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalIFACE.g:783:2: ( ( 'EVEN' ) )
+                    // InternalIFACE.g:799:2: ( ( 'EVEN' ) )
                     {
-                    // InternalIFACE.g:783:2: ( ( 'EVEN' ) )
-                    // InternalIFACE.g:784:3: ( 'EVEN' )
+                    // InternalIFACE.g:799:2: ( ( 'EVEN' ) )
+                    // InternalIFACE.g:800:3: ( 'EVEN' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartPortParityAccess().getEVENEnumLiteralDeclaration_2()); 
                     }
-                    // InternalIFACE.g:785:3: ( 'EVEN' )
-                    // InternalIFACE.g:785:4: 'EVEN'
+                    // InternalIFACE.g:801:3: ( 'EVEN' )
+                    // InternalIFACE.g:801:4: 'EVEN'
                     {
                     match(input,19,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -2808,16 +2860,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalIFACE.g:789:2: ( ( 'MARK' ) )
+                    // InternalIFACE.g:805:2: ( ( 'MARK' ) )
                     {
-                    // InternalIFACE.g:789:2: ( ( 'MARK' ) )
-                    // InternalIFACE.g:790:3: ( 'MARK' )
+                    // InternalIFACE.g:805:2: ( ( 'MARK' ) )
+                    // InternalIFACE.g:806:3: ( 'MARK' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartPortParityAccess().getMARKEnumLiteralDeclaration_3()); 
                     }
-                    // InternalIFACE.g:791:3: ( 'MARK' )
-                    // InternalIFACE.g:791:4: 'MARK'
+                    // InternalIFACE.g:807:3: ( 'MARK' )
+                    // InternalIFACE.g:807:4: 'MARK'
                     {
                     match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -2833,16 +2885,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalIFACE.g:795:2: ( ( 'SPACE' ) )
+                    // InternalIFACE.g:811:2: ( ( 'SPACE' ) )
                     {
-                    // InternalIFACE.g:795:2: ( ( 'SPACE' ) )
-                    // InternalIFACE.g:796:3: ( 'SPACE' )
+                    // InternalIFACE.g:811:2: ( ( 'SPACE' ) )
+                    // InternalIFACE.g:812:3: ( 'SPACE' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartPortParityAccess().getSPACEEnumLiteralDeclaration_4()); 
                     }
-                    // InternalIFACE.g:797:3: ( 'SPACE' )
-                    // InternalIFACE.g:797:4: 'SPACE'
+                    // InternalIFACE.g:813:3: ( 'SPACE' )
+                    // InternalIFACE.g:813:4: 'SPACE'
                     {
                     match(input,21,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -2875,13 +2927,13 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPortDataBits__Alternatives"
-    // InternalIFACE.g:805:1: rule__GSSIfaceUartPortDataBits__Alternatives : ( ( ( '5bits' ) ) | ( ( '6bits' ) ) | ( ( '7bits' ) ) | ( ( '8bits' ) ) );
+    // InternalIFACE.g:821:1: rule__GSSIfaceUartPortDataBits__Alternatives : ( ( ( '5bits' ) ) | ( ( '6bits' ) ) | ( ( '7bits' ) ) | ( ( '8bits' ) ) );
     public final void rule__GSSIfaceUartPortDataBits__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:809:1: ( ( ( '5bits' ) ) | ( ( '6bits' ) ) | ( ( '7bits' ) ) | ( ( '8bits' ) ) )
+            // InternalIFACE.g:825:1: ( ( ( '5bits' ) ) | ( ( '6bits' ) ) | ( ( '7bits' ) ) | ( ( '8bits' ) ) )
             int alt8=4;
             switch ( input.LA(1) ) {
             case 22:
@@ -2914,16 +2966,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
             switch (alt8) {
                 case 1 :
-                    // InternalIFACE.g:810:2: ( ( '5bits' ) )
+                    // InternalIFACE.g:826:2: ( ( '5bits' ) )
                     {
-                    // InternalIFACE.g:810:2: ( ( '5bits' ) )
-                    // InternalIFACE.g:811:3: ( '5bits' )
+                    // InternalIFACE.g:826:2: ( ( '5bits' ) )
+                    // InternalIFACE.g:827:3: ( '5bits' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartPortDataBitsAccess().get_5EnumLiteralDeclaration_0()); 
                     }
-                    // InternalIFACE.g:812:3: ( '5bits' )
-                    // InternalIFACE.g:812:4: '5bits'
+                    // InternalIFACE.g:828:3: ( '5bits' )
+                    // InternalIFACE.g:828:4: '5bits'
                     {
                     match(input,22,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -2939,16 +2991,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:816:2: ( ( '6bits' ) )
+                    // InternalIFACE.g:832:2: ( ( '6bits' ) )
                     {
-                    // InternalIFACE.g:816:2: ( ( '6bits' ) )
-                    // InternalIFACE.g:817:3: ( '6bits' )
+                    // InternalIFACE.g:832:2: ( ( '6bits' ) )
+                    // InternalIFACE.g:833:3: ( '6bits' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartPortDataBitsAccess().get_6EnumLiteralDeclaration_1()); 
                     }
-                    // InternalIFACE.g:818:3: ( '6bits' )
-                    // InternalIFACE.g:818:4: '6bits'
+                    // InternalIFACE.g:834:3: ( '6bits' )
+                    // InternalIFACE.g:834:4: '6bits'
                     {
                     match(input,23,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -2964,16 +3016,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalIFACE.g:822:2: ( ( '7bits' ) )
+                    // InternalIFACE.g:838:2: ( ( '7bits' ) )
                     {
-                    // InternalIFACE.g:822:2: ( ( '7bits' ) )
-                    // InternalIFACE.g:823:3: ( '7bits' )
+                    // InternalIFACE.g:838:2: ( ( '7bits' ) )
+                    // InternalIFACE.g:839:3: ( '7bits' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartPortDataBitsAccess().get_7EnumLiteralDeclaration_2()); 
                     }
-                    // InternalIFACE.g:824:3: ( '7bits' )
-                    // InternalIFACE.g:824:4: '7bits'
+                    // InternalIFACE.g:840:3: ( '7bits' )
+                    // InternalIFACE.g:840:4: '7bits'
                     {
                     match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -2989,16 +3041,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalIFACE.g:828:2: ( ( '8bits' ) )
+                    // InternalIFACE.g:844:2: ( ( '8bits' ) )
                     {
-                    // InternalIFACE.g:828:2: ( ( '8bits' ) )
-                    // InternalIFACE.g:829:3: ( '8bits' )
+                    // InternalIFACE.g:844:2: ( ( '8bits' ) )
+                    // InternalIFACE.g:845:3: ( '8bits' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartPortDataBitsAccess().get_8EnumLiteralDeclaration_3()); 
                     }
-                    // InternalIFACE.g:830:3: ( '8bits' )
-                    // InternalIFACE.g:830:4: '8bits'
+                    // InternalIFACE.g:846:3: ( '8bits' )
+                    // InternalIFACE.g:846:4: '8bits'
                     {
                     match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -3031,13 +3083,13 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPortStopBits__Alternatives"
-    // InternalIFACE.g:838:1: rule__GSSIfaceUartPortStopBits__Alternatives : ( ( ( '1bit' ) ) | ( ( '2bits' ) ) );
+    // InternalIFACE.g:854:1: rule__GSSIfaceUartPortStopBits__Alternatives : ( ( ( '1bit' ) ) | ( ( '2bits' ) ) );
     public final void rule__GSSIfaceUartPortStopBits__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:842:1: ( ( ( '1bit' ) ) | ( ( '2bits' ) ) )
+            // InternalIFACE.g:858:1: ( ( ( '1bit' ) ) | ( ( '2bits' ) ) )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -3056,16 +3108,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             }
             switch (alt9) {
                 case 1 :
-                    // InternalIFACE.g:843:2: ( ( '1bit' ) )
+                    // InternalIFACE.g:859:2: ( ( '1bit' ) )
                     {
-                    // InternalIFACE.g:843:2: ( ( '1bit' ) )
-                    // InternalIFACE.g:844:3: ( '1bit' )
+                    // InternalIFACE.g:859:2: ( ( '1bit' ) )
+                    // InternalIFACE.g:860:3: ( '1bit' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartPortStopBitsAccess().get_1EnumLiteralDeclaration_0()); 
                     }
-                    // InternalIFACE.g:845:3: ( '1bit' )
-                    // InternalIFACE.g:845:4: '1bit'
+                    // InternalIFACE.g:861:3: ( '1bit' )
+                    // InternalIFACE.g:861:4: '1bit'
                     {
                     match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -3081,16 +3133,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:849:2: ( ( '2bits' ) )
+                    // InternalIFACE.g:865:2: ( ( '2bits' ) )
                     {
-                    // InternalIFACE.g:849:2: ( ( '2bits' ) )
-                    // InternalIFACE.g:850:3: ( '2bits' )
+                    // InternalIFACE.g:865:2: ( ( '2bits' ) )
+                    // InternalIFACE.g:866:3: ( '2bits' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartPortStopBitsAccess().get_2EnumLiteralDeclaration_1()); 
                     }
-                    // InternalIFACE.g:851:3: ( '2bits' )
-                    // InternalIFACE.g:851:4: '2bits'
+                    // InternalIFACE.g:867:3: ( '2bits' )
+                    // InternalIFACE.g:867:4: '2bits'
                     {
                     match(input,27,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -3122,14 +3174,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSIfaceUartPortStopBits__Alternatives"
 
 
-    // $ANTLR start "rule__GSSIfaceUartProtocolUnit__Alternatives"
-    // InternalIFACE.g:859:1: rule__GSSIfaceUartProtocolUnit__Alternatives : ( ( ( 'bytes' ) ) | ( ( 'bits' ) ) );
-    public final void rule__GSSIfaceUartProtocolUnit__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__GSSIfaceUartPortFlowControl__Alternatives"
+    // InternalIFACE.g:875:1: rule__GSSIfaceUartPortFlowControl__Alternatives : ( ( ( 'rts_cts' ) ) | ( ( 'xon_xoff' ) ) );
+    public final void rule__GSSIfaceUartPortFlowControl__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:863:1: ( ( ( 'bytes' ) ) | ( ( 'bits' ) ) )
+            // InternalIFACE.g:879:1: ( ( ( 'rts_cts' ) ) | ( ( 'xon_xoff' ) ) )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -3148,18 +3200,110 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalIFACE.g:864:2: ( ( 'bytes' ) )
+                    // InternalIFACE.g:880:2: ( ( 'rts_cts' ) )
                     {
-                    // InternalIFACE.g:864:2: ( ( 'bytes' ) )
-                    // InternalIFACE.g:865:3: ( 'bytes' )
+                    // InternalIFACE.g:880:2: ( ( 'rts_cts' ) )
+                    // InternalIFACE.g:881:3: ( 'rts_cts' )
+                    {
+                    if ( state.backtracking==0 ) {
+                       before(grammarAccess.getGSSIfaceUartPortFlowControlAccess().getRts_ctsEnumLiteralDeclaration_0()); 
+                    }
+                    // InternalIFACE.g:882:3: ( 'rts_cts' )
+                    // InternalIFACE.g:882:4: 'rts_cts'
+                    {
+                    match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
+
+                    }
+
+                    if ( state.backtracking==0 ) {
+                       after(grammarAccess.getGSSIfaceUartPortFlowControlAccess().getRts_ctsEnumLiteralDeclaration_0()); 
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // InternalIFACE.g:886:2: ( ( 'xon_xoff' ) )
+                    {
+                    // InternalIFACE.g:886:2: ( ( 'xon_xoff' ) )
+                    // InternalIFACE.g:887:3: ( 'xon_xoff' )
+                    {
+                    if ( state.backtracking==0 ) {
+                       before(grammarAccess.getGSSIfaceUartPortFlowControlAccess().getXon_xoffEnumLiteralDeclaration_1()); 
+                    }
+                    // InternalIFACE.g:888:3: ( 'xon_xoff' )
+                    // InternalIFACE.g:888:4: 'xon_xoff'
+                    {
+                    match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
+
+                    }
+
+                    if ( state.backtracking==0 ) {
+                       after(grammarAccess.getGSSIfaceUartPortFlowControlAccess().getXon_xoffEnumLiteralDeclaration_1()); 
+                    }
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__GSSIfaceUartPortFlowControl__Alternatives"
+
+
+    // $ANTLR start "rule__GSSIfaceUartProtocolUnit__Alternatives"
+    // InternalIFACE.g:896:1: rule__GSSIfaceUartProtocolUnit__Alternatives : ( ( ( 'bytes' ) ) | ( ( 'bits' ) ) );
+    public final void rule__GSSIfaceUartProtocolUnit__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalIFACE.g:900:1: ( ( ( 'bytes' ) ) | ( ( 'bits' ) ) )
+            int alt11=2;
+            int LA11_0 = input.LA(1);
+
+            if ( (LA11_0==30) ) {
+                alt11=1;
+            }
+            else if ( (LA11_0==31) ) {
+                alt11=2;
+            }
+            else {
+                if (state.backtracking>0) {state.failed=true; return ;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 11, 0, input);
+
+                throw nvae;
+            }
+            switch (alt11) {
+                case 1 :
+                    // InternalIFACE.g:901:2: ( ( 'bytes' ) )
+                    {
+                    // InternalIFACE.g:901:2: ( ( 'bytes' ) )
+                    // InternalIFACE.g:902:3: ( 'bytes' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartProtocolUnitAccess().getBytesEnumLiteralDeclaration_0()); 
                     }
-                    // InternalIFACE.g:866:3: ( 'bytes' )
-                    // InternalIFACE.g:866:4: 'bytes'
+                    // InternalIFACE.g:903:3: ( 'bytes' )
+                    // InternalIFACE.g:903:4: 'bytes'
                     {
-                    match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -3173,18 +3317,18 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:870:2: ( ( 'bits' ) )
+                    // InternalIFACE.g:907:2: ( ( 'bits' ) )
                     {
-                    // InternalIFACE.g:870:2: ( ( 'bits' ) )
-                    // InternalIFACE.g:871:3: ( 'bits' )
+                    // InternalIFACE.g:907:2: ( ( 'bits' ) )
+                    // InternalIFACE.g:908:3: ( 'bits' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartProtocolUnitAccess().getBitsEnumLiteralDeclaration_1()); 
                     }
-                    // InternalIFACE.g:872:3: ( 'bits' )
-                    // InternalIFACE.g:872:4: 'bits'
+                    // InternalIFACE.g:909:3: ( 'bits' )
+                    // InternalIFACE.g:909:4: 'bits'
                     {
-                    match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -3215,52 +3359,52 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocolPower__Alternatives"
-    // InternalIFACE.g:880:1: rule__GSSIfaceUartProtocolPower__Alternatives : ( ( ( 'no' ) ) | ( ( '2bits' ) ) | ( ( '2_with_0' ) ) );
+    // InternalIFACE.g:917:1: rule__GSSIfaceUartProtocolPower__Alternatives : ( ( ( 'no' ) ) | ( ( '2bits' ) ) | ( ( '2_with_0' ) ) );
     public final void rule__GSSIfaceUartProtocolPower__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:884:1: ( ( ( 'no' ) ) | ( ( '2bits' ) ) | ( ( '2_with_0' ) ) )
-            int alt11=3;
+            // InternalIFACE.g:921:1: ( ( ( 'no' ) ) | ( ( '2bits' ) ) | ( ( '2_with_0' ) ) )
+            int alt12=3;
             switch ( input.LA(1) ) {
-            case 30:
+            case 32:
                 {
-                alt11=1;
+                alt12=1;
                 }
                 break;
             case 27:
                 {
-                alt11=2;
+                alt12=2;
                 }
                 break;
-            case 31:
+            case 33:
                 {
-                alt11=3;
+                alt12=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt11) {
+            switch (alt12) {
                 case 1 :
-                    // InternalIFACE.g:885:2: ( ( 'no' ) )
+                    // InternalIFACE.g:922:2: ( ( 'no' ) )
                     {
-                    // InternalIFACE.g:885:2: ( ( 'no' ) )
-                    // InternalIFACE.g:886:3: ( 'no' )
+                    // InternalIFACE.g:922:2: ( ( 'no' ) )
+                    // InternalIFACE.g:923:3: ( 'no' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartProtocolPowerAccess().getNoEnumLiteralDeclaration_0()); 
                     }
-                    // InternalIFACE.g:887:3: ( 'no' )
-                    // InternalIFACE.g:887:4: 'no'
+                    // InternalIFACE.g:924:3: ( 'no' )
+                    // InternalIFACE.g:924:4: 'no'
                     {
-                    match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,32,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -3274,16 +3418,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:891:2: ( ( '2bits' ) )
+                    // InternalIFACE.g:928:2: ( ( '2bits' ) )
                     {
-                    // InternalIFACE.g:891:2: ( ( '2bits' ) )
-                    // InternalIFACE.g:892:3: ( '2bits' )
+                    // InternalIFACE.g:928:2: ( ( '2bits' ) )
+                    // InternalIFACE.g:929:3: ( '2bits' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartProtocolPowerAccess().get_2EnumLiteralDeclaration_1()); 
                     }
-                    // InternalIFACE.g:893:3: ( '2bits' )
-                    // InternalIFACE.g:893:4: '2bits'
+                    // InternalIFACE.g:930:3: ( '2bits' )
+                    // InternalIFACE.g:930:4: '2bits'
                     {
                     match(input,27,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -3299,18 +3443,18 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalIFACE.g:897:2: ( ( '2_with_0' ) )
+                    // InternalIFACE.g:934:2: ( ( '2_with_0' ) )
                     {
-                    // InternalIFACE.g:897:2: ( ( '2_with_0' ) )
-                    // InternalIFACE.g:898:3: ( '2_with_0' )
+                    // InternalIFACE.g:934:2: ( ( '2_with_0' ) )
+                    // InternalIFACE.g:935:3: ( '2_with_0' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfaceUartProtocolPowerAccess().get_2_with_0EnumLiteralDeclaration_2()); 
                     }
-                    // InternalIFACE.g:899:3: ( '2_with_0' )
-                    // InternalIFACE.g:899:4: '2_with_0'
+                    // InternalIFACE.g:936:3: ( '2_with_0' )
+                    // InternalIFACE.g:936:4: '2_with_0'
                     {
-                    match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
 
@@ -3341,14 +3485,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFile__Group__0"
-    // InternalIFACE.g:907:1: rule__GSSModelFile__Group__0 : rule__GSSModelFile__Group__0__Impl rule__GSSModelFile__Group__1 ;
+    // InternalIFACE.g:944:1: rule__GSSModelFile__Group__0 : rule__GSSModelFile__Group__0__Impl rule__GSSModelFile__Group__1 ;
     public final void rule__GSSModelFile__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:911:1: ( rule__GSSModelFile__Group__0__Impl rule__GSSModelFile__Group__1 )
-            // InternalIFACE.g:912:2: rule__GSSModelFile__Group__0__Impl rule__GSSModelFile__Group__1
+            // InternalIFACE.g:948:1: ( rule__GSSModelFile__Group__0__Impl rule__GSSModelFile__Group__1 )
+            // InternalIFACE.g:949:2: rule__GSSModelFile__Group__0__Impl rule__GSSModelFile__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_3);
             rule__GSSModelFile__Group__0__Impl();
@@ -3379,35 +3523,35 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFile__Group__0__Impl"
-    // InternalIFACE.g:919:1: rule__GSSModelFile__Group__0__Impl : ( ( rule__GSSModelFile__ImportsAssignment_0 )* ) ;
+    // InternalIFACE.g:956:1: rule__GSSModelFile__Group__0__Impl : ( ( rule__GSSModelFile__ImportsAssignment_0 )* ) ;
     public final void rule__GSSModelFile__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:923:1: ( ( ( rule__GSSModelFile__ImportsAssignment_0 )* ) )
-            // InternalIFACE.g:924:1: ( ( rule__GSSModelFile__ImportsAssignment_0 )* )
+            // InternalIFACE.g:960:1: ( ( ( rule__GSSModelFile__ImportsAssignment_0 )* ) )
+            // InternalIFACE.g:961:1: ( ( rule__GSSModelFile__ImportsAssignment_0 )* )
             {
-            // InternalIFACE.g:924:1: ( ( rule__GSSModelFile__ImportsAssignment_0 )* )
-            // InternalIFACE.g:925:2: ( rule__GSSModelFile__ImportsAssignment_0 )*
+            // InternalIFACE.g:961:1: ( ( rule__GSSModelFile__ImportsAssignment_0 )* )
+            // InternalIFACE.g:962:2: ( rule__GSSModelFile__ImportsAssignment_0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileAccess().getImportsAssignment_0()); 
             }
-            // InternalIFACE.g:926:2: ( rule__GSSModelFile__ImportsAssignment_0 )*
-            loop12:
+            // InternalIFACE.g:963:2: ( rule__GSSModelFile__ImportsAssignment_0 )*
+            loop13:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA12_0==32) ) {
-                    alt12=1;
+                if ( (LA13_0==34) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt13) {
             	case 1 :
-            	    // InternalIFACE.g:926:3: rule__GSSModelFile__ImportsAssignment_0
+            	    // InternalIFACE.g:963:3: rule__GSSModelFile__ImportsAssignment_0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_4);
             	    rule__GSSModelFile__ImportsAssignment_0();
@@ -3419,7 +3563,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop13;
                 }
             } while (true);
 
@@ -3448,14 +3592,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFile__Group__1"
-    // InternalIFACE.g:934:1: rule__GSSModelFile__Group__1 : rule__GSSModelFile__Group__1__Impl ;
+    // InternalIFACE.g:971:1: rule__GSSModelFile__Group__1 : rule__GSSModelFile__Group__1__Impl ;
     public final void rule__GSSModelFile__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:938:1: ( rule__GSSModelFile__Group__1__Impl )
-            // InternalIFACE.g:939:2: rule__GSSModelFile__Group__1__Impl
+            // InternalIFACE.g:975:1: ( rule__GSSModelFile__Group__1__Impl )
+            // InternalIFACE.g:976:2: rule__GSSModelFile__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSModelFile__Group__1__Impl();
@@ -3481,23 +3625,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFile__Group__1__Impl"
-    // InternalIFACE.g:945:1: rule__GSSModelFile__Group__1__Impl : ( ( rule__GSSModelFile__ElementAssignment_1 ) ) ;
+    // InternalIFACE.g:982:1: rule__GSSModelFile__Group__1__Impl : ( ( rule__GSSModelFile__ElementAssignment_1 ) ) ;
     public final void rule__GSSModelFile__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:949:1: ( ( ( rule__GSSModelFile__ElementAssignment_1 ) ) )
-            // InternalIFACE.g:950:1: ( ( rule__GSSModelFile__ElementAssignment_1 ) )
+            // InternalIFACE.g:986:1: ( ( ( rule__GSSModelFile__ElementAssignment_1 ) ) )
+            // InternalIFACE.g:987:1: ( ( rule__GSSModelFile__ElementAssignment_1 ) )
             {
-            // InternalIFACE.g:950:1: ( ( rule__GSSModelFile__ElementAssignment_1 ) )
-            // InternalIFACE.g:951:2: ( rule__GSSModelFile__ElementAssignment_1 )
+            // InternalIFACE.g:987:1: ( ( rule__GSSModelFile__ElementAssignment_1 ) )
+            // InternalIFACE.g:988:2: ( rule__GSSModelFile__ElementAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileAccess().getElementAssignment_1()); 
             }
-            // InternalIFACE.g:952:2: ( rule__GSSModelFile__ElementAssignment_1 )
-            // InternalIFACE.g:952:3: rule__GSSModelFile__ElementAssignment_1
+            // InternalIFACE.g:989:2: ( rule__GSSModelFile__ElementAssignment_1 )
+            // InternalIFACE.g:989:3: rule__GSSModelFile__ElementAssignment_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSModelFile__ElementAssignment_1();
@@ -3532,14 +3676,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFileImport__Group__0"
-    // InternalIFACE.g:961:1: rule__GSSModelFileImport__Group__0 : rule__GSSModelFileImport__Group__0__Impl rule__GSSModelFileImport__Group__1 ;
+    // InternalIFACE.g:998:1: rule__GSSModelFileImport__Group__0 : rule__GSSModelFileImport__Group__0__Impl rule__GSSModelFileImport__Group__1 ;
     public final void rule__GSSModelFileImport__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:965:1: ( rule__GSSModelFileImport__Group__0__Impl rule__GSSModelFileImport__Group__1 )
-            // InternalIFACE.g:966:2: rule__GSSModelFileImport__Group__0__Impl rule__GSSModelFileImport__Group__1
+            // InternalIFACE.g:1002:1: ( rule__GSSModelFileImport__Group__0__Impl rule__GSSModelFileImport__Group__1 )
+            // InternalIFACE.g:1003:2: rule__GSSModelFileImport__Group__0__Impl rule__GSSModelFileImport__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_5);
             rule__GSSModelFileImport__Group__0__Impl();
@@ -3570,22 +3714,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFileImport__Group__0__Impl"
-    // InternalIFACE.g:973:1: rule__GSSModelFileImport__Group__0__Impl : ( 'import' ) ;
+    // InternalIFACE.g:1010:1: rule__GSSModelFileImport__Group__0__Impl : ( 'import' ) ;
     public final void rule__GSSModelFileImport__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:977:1: ( ( 'import' ) )
-            // InternalIFACE.g:978:1: ( 'import' )
+            // InternalIFACE.g:1014:1: ( ( 'import' ) )
+            // InternalIFACE.g:1015:1: ( 'import' )
             {
-            // InternalIFACE.g:978:1: ( 'import' )
-            // InternalIFACE.g:979:2: 'import'
+            // InternalIFACE.g:1015:1: ( 'import' )
+            // InternalIFACE.g:1016:2: 'import'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileImportAccess().getImportKeyword_0()); 
             }
-            match(input,32,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,34,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSModelFileImportAccess().getImportKeyword_0()); 
             }
@@ -3611,14 +3755,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFileImport__Group__1"
-    // InternalIFACE.g:988:1: rule__GSSModelFileImport__Group__1 : rule__GSSModelFileImport__Group__1__Impl rule__GSSModelFileImport__Group__2 ;
+    // InternalIFACE.g:1025:1: rule__GSSModelFileImport__Group__1 : rule__GSSModelFileImport__Group__1__Impl rule__GSSModelFileImport__Group__2 ;
     public final void rule__GSSModelFileImport__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:992:1: ( rule__GSSModelFileImport__Group__1__Impl rule__GSSModelFileImport__Group__2 )
-            // InternalIFACE.g:993:2: rule__GSSModelFileImport__Group__1__Impl rule__GSSModelFileImport__Group__2
+            // InternalIFACE.g:1029:1: ( rule__GSSModelFileImport__Group__1__Impl rule__GSSModelFileImport__Group__2 )
+            // InternalIFACE.g:1030:2: rule__GSSModelFileImport__Group__1__Impl rule__GSSModelFileImport__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSModelFileImport__Group__1__Impl();
@@ -3649,23 +3793,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFileImport__Group__1__Impl"
-    // InternalIFACE.g:1000:1: rule__GSSModelFileImport__Group__1__Impl : ( ( rule__GSSModelFileImport__ImportURIAssignment_1 ) ) ;
+    // InternalIFACE.g:1037:1: rule__GSSModelFileImport__Group__1__Impl : ( ( rule__GSSModelFileImport__ImportURIAssignment_1 ) ) ;
     public final void rule__GSSModelFileImport__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1004:1: ( ( ( rule__GSSModelFileImport__ImportURIAssignment_1 ) ) )
-            // InternalIFACE.g:1005:1: ( ( rule__GSSModelFileImport__ImportURIAssignment_1 ) )
+            // InternalIFACE.g:1041:1: ( ( ( rule__GSSModelFileImport__ImportURIAssignment_1 ) ) )
+            // InternalIFACE.g:1042:1: ( ( rule__GSSModelFileImport__ImportURIAssignment_1 ) )
             {
-            // InternalIFACE.g:1005:1: ( ( rule__GSSModelFileImport__ImportURIAssignment_1 ) )
-            // InternalIFACE.g:1006:2: ( rule__GSSModelFileImport__ImportURIAssignment_1 )
+            // InternalIFACE.g:1042:1: ( ( rule__GSSModelFileImport__ImportURIAssignment_1 ) )
+            // InternalIFACE.g:1043:2: ( rule__GSSModelFileImport__ImportURIAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileImportAccess().getImportURIAssignment_1()); 
             }
-            // InternalIFACE.g:1007:2: ( rule__GSSModelFileImport__ImportURIAssignment_1 )
-            // InternalIFACE.g:1007:3: rule__GSSModelFileImport__ImportURIAssignment_1
+            // InternalIFACE.g:1044:2: ( rule__GSSModelFileImport__ImportURIAssignment_1 )
+            // InternalIFACE.g:1044:3: rule__GSSModelFileImport__ImportURIAssignment_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSModelFileImport__ImportURIAssignment_1();
@@ -3700,14 +3844,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFileImport__Group__2"
-    // InternalIFACE.g:1015:1: rule__GSSModelFileImport__Group__2 : rule__GSSModelFileImport__Group__2__Impl ;
+    // InternalIFACE.g:1052:1: rule__GSSModelFileImport__Group__2 : rule__GSSModelFileImport__Group__2__Impl ;
     public final void rule__GSSModelFileImport__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1019:1: ( rule__GSSModelFileImport__Group__2__Impl )
-            // InternalIFACE.g:1020:2: rule__GSSModelFileImport__Group__2__Impl
+            // InternalIFACE.g:1056:1: ( rule__GSSModelFileImport__Group__2__Impl )
+            // InternalIFACE.g:1057:2: rule__GSSModelFileImport__Group__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSModelFileImport__Group__2__Impl();
@@ -3733,22 +3877,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFileImport__Group__2__Impl"
-    // InternalIFACE.g:1026:1: rule__GSSModelFileImport__Group__2__Impl : ( ';' ) ;
+    // InternalIFACE.g:1063:1: rule__GSSModelFileImport__Group__2__Impl : ( ';' ) ;
     public final void rule__GSSModelFileImport__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1030:1: ( ( ';' ) )
-            // InternalIFACE.g:1031:1: ( ';' )
+            // InternalIFACE.g:1067:1: ( ( ';' ) )
+            // InternalIFACE.g:1068:1: ( ';' )
             {
-            // InternalIFACE.g:1031:1: ( ';' )
-            // InternalIFACE.g:1032:2: ';'
+            // InternalIFACE.g:1068:1: ( ';' )
+            // InternalIFACE.g:1069:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_2()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSModelFileImportAccess().getSemicolonKeyword_2()); 
             }
@@ -3774,14 +3918,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__0"
-    // InternalIFACE.g:1042:1: rule__GSSIfacePortConfig__Group__0 : rule__GSSIfacePortConfig__Group__0__Impl rule__GSSIfacePortConfig__Group__1 ;
+    // InternalIFACE.g:1079:1: rule__GSSIfacePortConfig__Group__0 : rule__GSSIfacePortConfig__Group__0__Impl rule__GSSIfacePortConfig__Group__1 ;
     public final void rule__GSSIfacePortConfig__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1046:1: ( rule__GSSIfacePortConfig__Group__0__Impl rule__GSSIfacePortConfig__Group__1 )
-            // InternalIFACE.g:1047:2: rule__GSSIfacePortConfig__Group__0__Impl rule__GSSIfacePortConfig__Group__1
+            // InternalIFACE.g:1083:1: ( rule__GSSIfacePortConfig__Group__0__Impl rule__GSSIfacePortConfig__Group__1 )
+            // InternalIFACE.g:1084:2: rule__GSSIfacePortConfig__Group__0__Impl rule__GSSIfacePortConfig__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSIfacePortConfig__Group__0__Impl();
@@ -3812,22 +3956,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__0__Impl"
-    // InternalIFACE.g:1054:1: rule__GSSIfacePortConfig__Group__0__Impl : ( 'portConfig' ) ;
+    // InternalIFACE.g:1091:1: rule__GSSIfacePortConfig__Group__0__Impl : ( 'portConfig' ) ;
     public final void rule__GSSIfacePortConfig__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1058:1: ( ( 'portConfig' ) )
-            // InternalIFACE.g:1059:1: ( 'portConfig' )
+            // InternalIFACE.g:1095:1: ( ( 'portConfig' ) )
+            // InternalIFACE.g:1096:1: ( 'portConfig' )
             {
-            // InternalIFACE.g:1059:1: ( 'portConfig' )
-            // InternalIFACE.g:1060:2: 'portConfig'
+            // InternalIFACE.g:1096:1: ( 'portConfig' )
+            // InternalIFACE.g:1097:2: 'portConfig'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigKeyword_0()); 
             }
-            match(input,34,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigKeyword_0()); 
             }
@@ -3853,14 +3997,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__1"
-    // InternalIFACE.g:1069:1: rule__GSSIfacePortConfig__Group__1 : rule__GSSIfacePortConfig__Group__1__Impl rule__GSSIfacePortConfig__Group__2 ;
+    // InternalIFACE.g:1106:1: rule__GSSIfacePortConfig__Group__1 : rule__GSSIfacePortConfig__Group__1__Impl rule__GSSIfacePortConfig__Group__2 ;
     public final void rule__GSSIfacePortConfig__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1073:1: ( rule__GSSIfacePortConfig__Group__1__Impl rule__GSSIfacePortConfig__Group__2 )
-            // InternalIFACE.g:1074:2: rule__GSSIfacePortConfig__Group__1__Impl rule__GSSIfacePortConfig__Group__2
+            // InternalIFACE.g:1110:1: ( rule__GSSIfacePortConfig__Group__1__Impl rule__GSSIfacePortConfig__Group__2 )
+            // InternalIFACE.g:1111:2: rule__GSSIfacePortConfig__Group__1__Impl rule__GSSIfacePortConfig__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSIfacePortConfig__Group__1__Impl();
@@ -3891,23 +4035,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__1__Impl"
-    // InternalIFACE.g:1081:1: rule__GSSIfacePortConfig__Group__1__Impl : ( ( rule__GSSIfacePortConfig__NameAssignment_1 ) ) ;
+    // InternalIFACE.g:1118:1: rule__GSSIfacePortConfig__Group__1__Impl : ( ( rule__GSSIfacePortConfig__NameAssignment_1 ) ) ;
     public final void rule__GSSIfacePortConfig__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1085:1: ( ( ( rule__GSSIfacePortConfig__NameAssignment_1 ) ) )
-            // InternalIFACE.g:1086:1: ( ( rule__GSSIfacePortConfig__NameAssignment_1 ) )
+            // InternalIFACE.g:1122:1: ( ( ( rule__GSSIfacePortConfig__NameAssignment_1 ) ) )
+            // InternalIFACE.g:1123:1: ( ( rule__GSSIfacePortConfig__NameAssignment_1 ) )
             {
-            // InternalIFACE.g:1086:1: ( ( rule__GSSIfacePortConfig__NameAssignment_1 ) )
-            // InternalIFACE.g:1087:2: ( rule__GSSIfacePortConfig__NameAssignment_1 )
+            // InternalIFACE.g:1123:1: ( ( rule__GSSIfacePortConfig__NameAssignment_1 ) )
+            // InternalIFACE.g:1124:2: ( rule__GSSIfacePortConfig__NameAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getNameAssignment_1()); 
             }
-            // InternalIFACE.g:1088:2: ( rule__GSSIfacePortConfig__NameAssignment_1 )
-            // InternalIFACE.g:1088:3: rule__GSSIfacePortConfig__NameAssignment_1
+            // InternalIFACE.g:1125:2: ( rule__GSSIfacePortConfig__NameAssignment_1 )
+            // InternalIFACE.g:1125:3: rule__GSSIfacePortConfig__NameAssignment_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfacePortConfig__NameAssignment_1();
@@ -3942,14 +4086,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__2"
-    // InternalIFACE.g:1096:1: rule__GSSIfacePortConfig__Group__2 : rule__GSSIfacePortConfig__Group__2__Impl rule__GSSIfacePortConfig__Group__3 ;
+    // InternalIFACE.g:1133:1: rule__GSSIfacePortConfig__Group__2 : rule__GSSIfacePortConfig__Group__2__Impl rule__GSSIfacePortConfig__Group__3 ;
     public final void rule__GSSIfacePortConfig__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1100:1: ( rule__GSSIfacePortConfig__Group__2__Impl rule__GSSIfacePortConfig__Group__3 )
-            // InternalIFACE.g:1101:2: rule__GSSIfacePortConfig__Group__2__Impl rule__GSSIfacePortConfig__Group__3
+            // InternalIFACE.g:1137:1: ( rule__GSSIfacePortConfig__Group__2__Impl rule__GSSIfacePortConfig__Group__3 )
+            // InternalIFACE.g:1138:2: rule__GSSIfacePortConfig__Group__2__Impl rule__GSSIfacePortConfig__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_9);
             rule__GSSIfacePortConfig__Group__2__Impl();
@@ -3980,22 +4124,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__2__Impl"
-    // InternalIFACE.g:1108:1: rule__GSSIfacePortConfig__Group__2__Impl : ( '{' ) ;
+    // InternalIFACE.g:1145:1: rule__GSSIfacePortConfig__Group__2__Impl : ( '{' ) ;
     public final void rule__GSSIfacePortConfig__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1112:1: ( ( '{' ) )
-            // InternalIFACE.g:1113:1: ( '{' )
+            // InternalIFACE.g:1149:1: ( ( '{' ) )
+            // InternalIFACE.g:1150:1: ( '{' )
             {
-            // InternalIFACE.g:1113:1: ( '{' )
-            // InternalIFACE.g:1114:2: '{'
+            // InternalIFACE.g:1150:1: ( '{' )
+            // InternalIFACE.g:1151:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getLeftCurlyBracketKeyword_2()); 
             }
-            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfacePortConfigAccess().getLeftCurlyBracketKeyword_2()); 
             }
@@ -4021,14 +4165,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__3"
-    // InternalIFACE.g:1123:1: rule__GSSIfacePortConfig__Group__3 : rule__GSSIfacePortConfig__Group__3__Impl rule__GSSIfacePortConfig__Group__4 ;
+    // InternalIFACE.g:1160:1: rule__GSSIfacePortConfig__Group__3 : rule__GSSIfacePortConfig__Group__3__Impl rule__GSSIfacePortConfig__Group__4 ;
     public final void rule__GSSIfacePortConfig__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1127:1: ( rule__GSSIfacePortConfig__Group__3__Impl rule__GSSIfacePortConfig__Group__4 )
-            // InternalIFACE.g:1128:2: rule__GSSIfacePortConfig__Group__3__Impl rule__GSSIfacePortConfig__Group__4
+            // InternalIFACE.g:1164:1: ( rule__GSSIfacePortConfig__Group__3__Impl rule__GSSIfacePortConfig__Group__4 )
+            // InternalIFACE.g:1165:2: rule__GSSIfacePortConfig__Group__3__Impl rule__GSSIfacePortConfig__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_10);
             rule__GSSIfacePortConfig__Group__3__Impl();
@@ -4059,23 +4203,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__3__Impl"
-    // InternalIFACE.g:1135:1: rule__GSSIfacePortConfig__Group__3__Impl : ( ( rule__GSSIfacePortConfig__UnorderedGroup_3 ) ) ;
+    // InternalIFACE.g:1172:1: rule__GSSIfacePortConfig__Group__3__Impl : ( ( rule__GSSIfacePortConfig__UnorderedGroup_3 ) ) ;
     public final void rule__GSSIfacePortConfig__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1139:1: ( ( ( rule__GSSIfacePortConfig__UnorderedGroup_3 ) ) )
-            // InternalIFACE.g:1140:1: ( ( rule__GSSIfacePortConfig__UnorderedGroup_3 ) )
+            // InternalIFACE.g:1176:1: ( ( ( rule__GSSIfacePortConfig__UnorderedGroup_3 ) ) )
+            // InternalIFACE.g:1177:1: ( ( rule__GSSIfacePortConfig__UnorderedGroup_3 ) )
             {
-            // InternalIFACE.g:1140:1: ( ( rule__GSSIfacePortConfig__UnorderedGroup_3 ) )
-            // InternalIFACE.g:1141:2: ( rule__GSSIfacePortConfig__UnorderedGroup_3 )
+            // InternalIFACE.g:1177:1: ( ( rule__GSSIfacePortConfig__UnorderedGroup_3 ) )
+            // InternalIFACE.g:1178:2: ( rule__GSSIfacePortConfig__UnorderedGroup_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3()); 
             }
-            // InternalIFACE.g:1142:2: ( rule__GSSIfacePortConfig__UnorderedGroup_3 )
-            // InternalIFACE.g:1142:3: rule__GSSIfacePortConfig__UnorderedGroup_3
+            // InternalIFACE.g:1179:2: ( rule__GSSIfacePortConfig__UnorderedGroup_3 )
+            // InternalIFACE.g:1179:3: rule__GSSIfacePortConfig__UnorderedGroup_3
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfacePortConfig__UnorderedGroup_3();
@@ -4110,14 +4254,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__4"
-    // InternalIFACE.g:1150:1: rule__GSSIfacePortConfig__Group__4 : rule__GSSIfacePortConfig__Group__4__Impl rule__GSSIfacePortConfig__Group__5 ;
+    // InternalIFACE.g:1187:1: rule__GSSIfacePortConfig__Group__4 : rule__GSSIfacePortConfig__Group__4__Impl rule__GSSIfacePortConfig__Group__5 ;
     public final void rule__GSSIfacePortConfig__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1154:1: ( rule__GSSIfacePortConfig__Group__4__Impl rule__GSSIfacePortConfig__Group__5 )
-            // InternalIFACE.g:1155:2: rule__GSSIfacePortConfig__Group__4__Impl rule__GSSIfacePortConfig__Group__5
+            // InternalIFACE.g:1191:1: ( rule__GSSIfacePortConfig__Group__4__Impl rule__GSSIfacePortConfig__Group__5 )
+            // InternalIFACE.g:1192:2: rule__GSSIfacePortConfig__Group__4__Impl rule__GSSIfacePortConfig__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_11);
             rule__GSSIfacePortConfig__Group__4__Impl();
@@ -4148,23 +4292,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__4__Impl"
-    // InternalIFACE.g:1162:1: rule__GSSIfacePortConfig__Group__4__Impl : ( ( rule__GSSIfacePortConfig__PortConfigAssignment_4 ) ) ;
+    // InternalIFACE.g:1199:1: rule__GSSIfacePortConfig__Group__4__Impl : ( ( rule__GSSIfacePortConfig__PortConfigAssignment_4 ) ) ;
     public final void rule__GSSIfacePortConfig__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1166:1: ( ( ( rule__GSSIfacePortConfig__PortConfigAssignment_4 ) ) )
-            // InternalIFACE.g:1167:1: ( ( rule__GSSIfacePortConfig__PortConfigAssignment_4 ) )
+            // InternalIFACE.g:1203:1: ( ( ( rule__GSSIfacePortConfig__PortConfigAssignment_4 ) ) )
+            // InternalIFACE.g:1204:1: ( ( rule__GSSIfacePortConfig__PortConfigAssignment_4 ) )
             {
-            // InternalIFACE.g:1167:1: ( ( rule__GSSIfacePortConfig__PortConfigAssignment_4 ) )
-            // InternalIFACE.g:1168:2: ( rule__GSSIfacePortConfig__PortConfigAssignment_4 )
+            // InternalIFACE.g:1204:1: ( ( rule__GSSIfacePortConfig__PortConfigAssignment_4 ) )
+            // InternalIFACE.g:1205:2: ( rule__GSSIfacePortConfig__PortConfigAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigAssignment_4()); 
             }
-            // InternalIFACE.g:1169:2: ( rule__GSSIfacePortConfig__PortConfigAssignment_4 )
-            // InternalIFACE.g:1169:3: rule__GSSIfacePortConfig__PortConfigAssignment_4
+            // InternalIFACE.g:1206:2: ( rule__GSSIfacePortConfig__PortConfigAssignment_4 )
+            // InternalIFACE.g:1206:3: rule__GSSIfacePortConfig__PortConfigAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfacePortConfig__PortConfigAssignment_4();
@@ -4199,14 +4343,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__5"
-    // InternalIFACE.g:1177:1: rule__GSSIfacePortConfig__Group__5 : rule__GSSIfacePortConfig__Group__5__Impl rule__GSSIfacePortConfig__Group__6 ;
+    // InternalIFACE.g:1214:1: rule__GSSIfacePortConfig__Group__5 : rule__GSSIfacePortConfig__Group__5__Impl rule__GSSIfacePortConfig__Group__6 ;
     public final void rule__GSSIfacePortConfig__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1181:1: ( rule__GSSIfacePortConfig__Group__5__Impl rule__GSSIfacePortConfig__Group__6 )
-            // InternalIFACE.g:1182:2: rule__GSSIfacePortConfig__Group__5__Impl rule__GSSIfacePortConfig__Group__6
+            // InternalIFACE.g:1218:1: ( rule__GSSIfacePortConfig__Group__5__Impl rule__GSSIfacePortConfig__Group__6 )
+            // InternalIFACE.g:1219:2: rule__GSSIfacePortConfig__Group__5__Impl rule__GSSIfacePortConfig__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfacePortConfig__Group__5__Impl();
@@ -4237,22 +4381,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__5__Impl"
-    // InternalIFACE.g:1189:1: rule__GSSIfacePortConfig__Group__5__Impl : ( '}' ) ;
+    // InternalIFACE.g:1226:1: rule__GSSIfacePortConfig__Group__5__Impl : ( '}' ) ;
     public final void rule__GSSIfacePortConfig__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1193:1: ( ( '}' ) )
-            // InternalIFACE.g:1194:1: ( '}' )
+            // InternalIFACE.g:1230:1: ( ( '}' ) )
+            // InternalIFACE.g:1231:1: ( '}' )
             {
-            // InternalIFACE.g:1194:1: ( '}' )
-            // InternalIFACE.g:1195:2: '}'
+            // InternalIFACE.g:1231:1: ( '}' )
+            // InternalIFACE.g:1232:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getRightCurlyBracketKeyword_5()); 
             }
-            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfacePortConfigAccess().getRightCurlyBracketKeyword_5()); 
             }
@@ -4278,14 +4422,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__6"
-    // InternalIFACE.g:1204:1: rule__GSSIfacePortConfig__Group__6 : rule__GSSIfacePortConfig__Group__6__Impl ;
+    // InternalIFACE.g:1241:1: rule__GSSIfacePortConfig__Group__6 : rule__GSSIfacePortConfig__Group__6__Impl ;
     public final void rule__GSSIfacePortConfig__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1208:1: ( rule__GSSIfacePortConfig__Group__6__Impl )
-            // InternalIFACE.g:1209:2: rule__GSSIfacePortConfig__Group__6__Impl
+            // InternalIFACE.g:1245:1: ( rule__GSSIfacePortConfig__Group__6__Impl )
+            // InternalIFACE.g:1246:2: rule__GSSIfacePortConfig__Group__6__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfacePortConfig__Group__6__Impl();
@@ -4311,22 +4455,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group__6__Impl"
-    // InternalIFACE.g:1215:1: rule__GSSIfacePortConfig__Group__6__Impl : ( ';' ) ;
+    // InternalIFACE.g:1252:1: rule__GSSIfacePortConfig__Group__6__Impl : ( ';' ) ;
     public final void rule__GSSIfacePortConfig__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1219:1: ( ( ';' ) )
-            // InternalIFACE.g:1220:1: ( ';' )
+            // InternalIFACE.g:1256:1: ( ( ';' ) )
+            // InternalIFACE.g:1257:1: ( ';' )
             {
-            // InternalIFACE.g:1220:1: ( ';' )
-            // InternalIFACE.g:1221:2: ';'
+            // InternalIFACE.g:1257:1: ( ';' )
+            // InternalIFACE.g:1258:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getSemicolonKeyword_6()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfacePortConfigAccess().getSemicolonKeyword_6()); 
             }
@@ -4352,14 +4496,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_0__0"
-    // InternalIFACE.g:1231:1: rule__GSSIfacePortConfig__Group_3_0__0 : rule__GSSIfacePortConfig__Group_3_0__0__Impl rule__GSSIfacePortConfig__Group_3_0__1 ;
+    // InternalIFACE.g:1268:1: rule__GSSIfacePortConfig__Group_3_0__0 : rule__GSSIfacePortConfig__Group_3_0__0__Impl rule__GSSIfacePortConfig__Group_3_0__1 ;
     public final void rule__GSSIfacePortConfig__Group_3_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1235:1: ( rule__GSSIfacePortConfig__Group_3_0__0__Impl rule__GSSIfacePortConfig__Group_3_0__1 )
-            // InternalIFACE.g:1236:2: rule__GSSIfacePortConfig__Group_3_0__0__Impl rule__GSSIfacePortConfig__Group_3_0__1
+            // InternalIFACE.g:1272:1: ( rule__GSSIfacePortConfig__Group_3_0__0__Impl rule__GSSIfacePortConfig__Group_3_0__1 )
+            // InternalIFACE.g:1273:2: rule__GSSIfacePortConfig__Group_3_0__0__Impl rule__GSSIfacePortConfig__Group_3_0__1
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfacePortConfig__Group_3_0__0__Impl();
@@ -4390,22 +4534,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_0__0__Impl"
-    // InternalIFACE.g:1243:1: rule__GSSIfacePortConfig__Group_3_0__0__Impl : ( 'uri' ) ;
+    // InternalIFACE.g:1280:1: rule__GSSIfacePortConfig__Group_3_0__0__Impl : ( 'uri' ) ;
     public final void rule__GSSIfacePortConfig__Group_3_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1247:1: ( ( 'uri' ) )
-            // InternalIFACE.g:1248:1: ( 'uri' )
+            // InternalIFACE.g:1284:1: ( ( 'uri' ) )
+            // InternalIFACE.g:1285:1: ( 'uri' )
             {
-            // InternalIFACE.g:1248:1: ( 'uri' )
-            // InternalIFACE.g:1249:2: 'uri'
+            // InternalIFACE.g:1285:1: ( 'uri' )
+            // InternalIFACE.g:1286:2: 'uri'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getUriKeyword_3_0_0()); 
             }
-            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfacePortConfigAccess().getUriKeyword_3_0_0()); 
             }
@@ -4431,14 +4575,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_0__1"
-    // InternalIFACE.g:1258:1: rule__GSSIfacePortConfig__Group_3_0__1 : rule__GSSIfacePortConfig__Group_3_0__1__Impl rule__GSSIfacePortConfig__Group_3_0__2 ;
+    // InternalIFACE.g:1295:1: rule__GSSIfacePortConfig__Group_3_0__1 : rule__GSSIfacePortConfig__Group_3_0__1__Impl rule__GSSIfacePortConfig__Group_3_0__2 ;
     public final void rule__GSSIfacePortConfig__Group_3_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1262:1: ( rule__GSSIfacePortConfig__Group_3_0__1__Impl rule__GSSIfacePortConfig__Group_3_0__2 )
-            // InternalIFACE.g:1263:2: rule__GSSIfacePortConfig__Group_3_0__1__Impl rule__GSSIfacePortConfig__Group_3_0__2
+            // InternalIFACE.g:1299:1: ( rule__GSSIfacePortConfig__Group_3_0__1__Impl rule__GSSIfacePortConfig__Group_3_0__2 )
+            // InternalIFACE.g:1300:2: rule__GSSIfacePortConfig__Group_3_0__1__Impl rule__GSSIfacePortConfig__Group_3_0__2
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__GSSIfacePortConfig__Group_3_0__1__Impl();
@@ -4469,22 +4613,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_0__1__Impl"
-    // InternalIFACE.g:1270:1: rule__GSSIfacePortConfig__Group_3_0__1__Impl : ( ':=' ) ;
+    // InternalIFACE.g:1307:1: rule__GSSIfacePortConfig__Group_3_0__1__Impl : ( ':=' ) ;
     public final void rule__GSSIfacePortConfig__Group_3_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1274:1: ( ( ':=' ) )
-            // InternalIFACE.g:1275:1: ( ':=' )
+            // InternalIFACE.g:1311:1: ( ( ':=' ) )
+            // InternalIFACE.g:1312:1: ( ':=' )
             {
-            // InternalIFACE.g:1275:1: ( ':=' )
-            // InternalIFACE.g:1276:2: ':='
+            // InternalIFACE.g:1312:1: ( ':=' )
+            // InternalIFACE.g:1313:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getColonEqualsSignKeyword_3_0_1()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfacePortConfigAccess().getColonEqualsSignKeyword_3_0_1()); 
             }
@@ -4510,14 +4654,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_0__2"
-    // InternalIFACE.g:1285:1: rule__GSSIfacePortConfig__Group_3_0__2 : rule__GSSIfacePortConfig__Group_3_0__2__Impl rule__GSSIfacePortConfig__Group_3_0__3 ;
+    // InternalIFACE.g:1322:1: rule__GSSIfacePortConfig__Group_3_0__2 : rule__GSSIfacePortConfig__Group_3_0__2__Impl rule__GSSIfacePortConfig__Group_3_0__3 ;
     public final void rule__GSSIfacePortConfig__Group_3_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1289:1: ( rule__GSSIfacePortConfig__Group_3_0__2__Impl rule__GSSIfacePortConfig__Group_3_0__3 )
-            // InternalIFACE.g:1290:2: rule__GSSIfacePortConfig__Group_3_0__2__Impl rule__GSSIfacePortConfig__Group_3_0__3
+            // InternalIFACE.g:1326:1: ( rule__GSSIfacePortConfig__Group_3_0__2__Impl rule__GSSIfacePortConfig__Group_3_0__3 )
+            // InternalIFACE.g:1327:2: rule__GSSIfacePortConfig__Group_3_0__2__Impl rule__GSSIfacePortConfig__Group_3_0__3
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfacePortConfig__Group_3_0__2__Impl();
@@ -4548,23 +4692,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_0__2__Impl"
-    // InternalIFACE.g:1297:1: rule__GSSIfacePortConfig__Group_3_0__2__Impl : ( ( rule__GSSIfacePortConfig__UriAssignment_3_0_2 ) ) ;
+    // InternalIFACE.g:1334:1: rule__GSSIfacePortConfig__Group_3_0__2__Impl : ( ( rule__GSSIfacePortConfig__UriAssignment_3_0_2 ) ) ;
     public final void rule__GSSIfacePortConfig__Group_3_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1301:1: ( ( ( rule__GSSIfacePortConfig__UriAssignment_3_0_2 ) ) )
-            // InternalIFACE.g:1302:1: ( ( rule__GSSIfacePortConfig__UriAssignment_3_0_2 ) )
+            // InternalIFACE.g:1338:1: ( ( ( rule__GSSIfacePortConfig__UriAssignment_3_0_2 ) ) )
+            // InternalIFACE.g:1339:1: ( ( rule__GSSIfacePortConfig__UriAssignment_3_0_2 ) )
             {
-            // InternalIFACE.g:1302:1: ( ( rule__GSSIfacePortConfig__UriAssignment_3_0_2 ) )
-            // InternalIFACE.g:1303:2: ( rule__GSSIfacePortConfig__UriAssignment_3_0_2 )
+            // InternalIFACE.g:1339:1: ( ( rule__GSSIfacePortConfig__UriAssignment_3_0_2 ) )
+            // InternalIFACE.g:1340:2: ( rule__GSSIfacePortConfig__UriAssignment_3_0_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getUriAssignment_3_0_2()); 
             }
-            // InternalIFACE.g:1304:2: ( rule__GSSIfacePortConfig__UriAssignment_3_0_2 )
-            // InternalIFACE.g:1304:3: rule__GSSIfacePortConfig__UriAssignment_3_0_2
+            // InternalIFACE.g:1341:2: ( rule__GSSIfacePortConfig__UriAssignment_3_0_2 )
+            // InternalIFACE.g:1341:3: rule__GSSIfacePortConfig__UriAssignment_3_0_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfacePortConfig__UriAssignment_3_0_2();
@@ -4599,14 +4743,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_0__3"
-    // InternalIFACE.g:1312:1: rule__GSSIfacePortConfig__Group_3_0__3 : rule__GSSIfacePortConfig__Group_3_0__3__Impl ;
+    // InternalIFACE.g:1349:1: rule__GSSIfacePortConfig__Group_3_0__3 : rule__GSSIfacePortConfig__Group_3_0__3__Impl ;
     public final void rule__GSSIfacePortConfig__Group_3_0__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1316:1: ( rule__GSSIfacePortConfig__Group_3_0__3__Impl )
-            // InternalIFACE.g:1317:2: rule__GSSIfacePortConfig__Group_3_0__3__Impl
+            // InternalIFACE.g:1353:1: ( rule__GSSIfacePortConfig__Group_3_0__3__Impl )
+            // InternalIFACE.g:1354:2: rule__GSSIfacePortConfig__Group_3_0__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfacePortConfig__Group_3_0__3__Impl();
@@ -4632,22 +4776,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_0__3__Impl"
-    // InternalIFACE.g:1323:1: rule__GSSIfacePortConfig__Group_3_0__3__Impl : ( ';' ) ;
+    // InternalIFACE.g:1360:1: rule__GSSIfacePortConfig__Group_3_0__3__Impl : ( ';' ) ;
     public final void rule__GSSIfacePortConfig__Group_3_0__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1327:1: ( ( ';' ) )
-            // InternalIFACE.g:1328:1: ( ';' )
+            // InternalIFACE.g:1364:1: ( ( ';' ) )
+            // InternalIFACE.g:1365:1: ( ';' )
             {
-            // InternalIFACE.g:1328:1: ( ';' )
-            // InternalIFACE.g:1329:2: ';'
+            // InternalIFACE.g:1365:1: ( ';' )
+            // InternalIFACE.g:1366:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getSemicolonKeyword_3_0_3()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfacePortConfigAccess().getSemicolonKeyword_3_0_3()); 
             }
@@ -4673,14 +4817,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_1__0"
-    // InternalIFACE.g:1339:1: rule__GSSIfacePortConfig__Group_3_1__0 : rule__GSSIfacePortConfig__Group_3_1__0__Impl rule__GSSIfacePortConfig__Group_3_1__1 ;
+    // InternalIFACE.g:1376:1: rule__GSSIfacePortConfig__Group_3_1__0 : rule__GSSIfacePortConfig__Group_3_1__0__Impl rule__GSSIfacePortConfig__Group_3_1__1 ;
     public final void rule__GSSIfacePortConfig__Group_3_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1343:1: ( rule__GSSIfacePortConfig__Group_3_1__0__Impl rule__GSSIfacePortConfig__Group_3_1__1 )
-            // InternalIFACE.g:1344:2: rule__GSSIfacePortConfig__Group_3_1__0__Impl rule__GSSIfacePortConfig__Group_3_1__1
+            // InternalIFACE.g:1380:1: ( rule__GSSIfacePortConfig__Group_3_1__0__Impl rule__GSSIfacePortConfig__Group_3_1__1 )
+            // InternalIFACE.g:1381:2: rule__GSSIfacePortConfig__Group_3_1__0__Impl rule__GSSIfacePortConfig__Group_3_1__1
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfacePortConfig__Group_3_1__0__Impl();
@@ -4711,22 +4855,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_1__0__Impl"
-    // InternalIFACE.g:1351:1: rule__GSSIfacePortConfig__Group_3_1__0__Impl : ( 'version' ) ;
+    // InternalIFACE.g:1388:1: rule__GSSIfacePortConfig__Group_3_1__0__Impl : ( 'version' ) ;
     public final void rule__GSSIfacePortConfig__Group_3_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1355:1: ( ( 'version' ) )
-            // InternalIFACE.g:1356:1: ( 'version' )
+            // InternalIFACE.g:1392:1: ( ( 'version' ) )
+            // InternalIFACE.g:1393:1: ( 'version' )
             {
-            // InternalIFACE.g:1356:1: ( 'version' )
-            // InternalIFACE.g:1357:2: 'version'
+            // InternalIFACE.g:1393:1: ( 'version' )
+            // InternalIFACE.g:1394:2: 'version'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getVersionKeyword_3_1_0()); 
             }
-            match(input,39,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfacePortConfigAccess().getVersionKeyword_3_1_0()); 
             }
@@ -4752,14 +4896,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_1__1"
-    // InternalIFACE.g:1366:1: rule__GSSIfacePortConfig__Group_3_1__1 : rule__GSSIfacePortConfig__Group_3_1__1__Impl rule__GSSIfacePortConfig__Group_3_1__2 ;
+    // InternalIFACE.g:1403:1: rule__GSSIfacePortConfig__Group_3_1__1 : rule__GSSIfacePortConfig__Group_3_1__1__Impl rule__GSSIfacePortConfig__Group_3_1__2 ;
     public final void rule__GSSIfacePortConfig__Group_3_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1370:1: ( rule__GSSIfacePortConfig__Group_3_1__1__Impl rule__GSSIfacePortConfig__Group_3_1__2 )
-            // InternalIFACE.g:1371:2: rule__GSSIfacePortConfig__Group_3_1__1__Impl rule__GSSIfacePortConfig__Group_3_1__2
+            // InternalIFACE.g:1407:1: ( rule__GSSIfacePortConfig__Group_3_1__1__Impl rule__GSSIfacePortConfig__Group_3_1__2 )
+            // InternalIFACE.g:1408:2: rule__GSSIfacePortConfig__Group_3_1__1__Impl rule__GSSIfacePortConfig__Group_3_1__2
             {
             pushFollow(FollowSets000.FOLLOW_13);
             rule__GSSIfacePortConfig__Group_3_1__1__Impl();
@@ -4790,22 +4934,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_1__1__Impl"
-    // InternalIFACE.g:1378:1: rule__GSSIfacePortConfig__Group_3_1__1__Impl : ( ':=' ) ;
+    // InternalIFACE.g:1415:1: rule__GSSIfacePortConfig__Group_3_1__1__Impl : ( ':=' ) ;
     public final void rule__GSSIfacePortConfig__Group_3_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1382:1: ( ( ':=' ) )
-            // InternalIFACE.g:1383:1: ( ':=' )
+            // InternalIFACE.g:1419:1: ( ( ':=' ) )
+            // InternalIFACE.g:1420:1: ( ':=' )
             {
-            // InternalIFACE.g:1383:1: ( ':=' )
-            // InternalIFACE.g:1384:2: ':='
+            // InternalIFACE.g:1420:1: ( ':=' )
+            // InternalIFACE.g:1421:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getColonEqualsSignKeyword_3_1_1()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfacePortConfigAccess().getColonEqualsSignKeyword_3_1_1()); 
             }
@@ -4831,14 +4975,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_1__2"
-    // InternalIFACE.g:1393:1: rule__GSSIfacePortConfig__Group_3_1__2 : rule__GSSIfacePortConfig__Group_3_1__2__Impl rule__GSSIfacePortConfig__Group_3_1__3 ;
+    // InternalIFACE.g:1430:1: rule__GSSIfacePortConfig__Group_3_1__2 : rule__GSSIfacePortConfig__Group_3_1__2__Impl rule__GSSIfacePortConfig__Group_3_1__3 ;
     public final void rule__GSSIfacePortConfig__Group_3_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1397:1: ( rule__GSSIfacePortConfig__Group_3_1__2__Impl rule__GSSIfacePortConfig__Group_3_1__3 )
-            // InternalIFACE.g:1398:2: rule__GSSIfacePortConfig__Group_3_1__2__Impl rule__GSSIfacePortConfig__Group_3_1__3
+            // InternalIFACE.g:1434:1: ( rule__GSSIfacePortConfig__Group_3_1__2__Impl rule__GSSIfacePortConfig__Group_3_1__3 )
+            // InternalIFACE.g:1435:2: rule__GSSIfacePortConfig__Group_3_1__2__Impl rule__GSSIfacePortConfig__Group_3_1__3
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfacePortConfig__Group_3_1__2__Impl();
@@ -4869,23 +5013,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_1__2__Impl"
-    // InternalIFACE.g:1405:1: rule__GSSIfacePortConfig__Group_3_1__2__Impl : ( ( rule__GSSIfacePortConfig__VersionAssignment_3_1_2 ) ) ;
+    // InternalIFACE.g:1442:1: rule__GSSIfacePortConfig__Group_3_1__2__Impl : ( ( rule__GSSIfacePortConfig__VersionAssignment_3_1_2 ) ) ;
     public final void rule__GSSIfacePortConfig__Group_3_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1409:1: ( ( ( rule__GSSIfacePortConfig__VersionAssignment_3_1_2 ) ) )
-            // InternalIFACE.g:1410:1: ( ( rule__GSSIfacePortConfig__VersionAssignment_3_1_2 ) )
+            // InternalIFACE.g:1446:1: ( ( ( rule__GSSIfacePortConfig__VersionAssignment_3_1_2 ) ) )
+            // InternalIFACE.g:1447:1: ( ( rule__GSSIfacePortConfig__VersionAssignment_3_1_2 ) )
             {
-            // InternalIFACE.g:1410:1: ( ( rule__GSSIfacePortConfig__VersionAssignment_3_1_2 ) )
-            // InternalIFACE.g:1411:2: ( rule__GSSIfacePortConfig__VersionAssignment_3_1_2 )
+            // InternalIFACE.g:1447:1: ( ( rule__GSSIfacePortConfig__VersionAssignment_3_1_2 ) )
+            // InternalIFACE.g:1448:2: ( rule__GSSIfacePortConfig__VersionAssignment_3_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getVersionAssignment_3_1_2()); 
             }
-            // InternalIFACE.g:1412:2: ( rule__GSSIfacePortConfig__VersionAssignment_3_1_2 )
-            // InternalIFACE.g:1412:3: rule__GSSIfacePortConfig__VersionAssignment_3_1_2
+            // InternalIFACE.g:1449:2: ( rule__GSSIfacePortConfig__VersionAssignment_3_1_2 )
+            // InternalIFACE.g:1449:3: rule__GSSIfacePortConfig__VersionAssignment_3_1_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfacePortConfig__VersionAssignment_3_1_2();
@@ -4920,14 +5064,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_1__3"
-    // InternalIFACE.g:1420:1: rule__GSSIfacePortConfig__Group_3_1__3 : rule__GSSIfacePortConfig__Group_3_1__3__Impl ;
+    // InternalIFACE.g:1457:1: rule__GSSIfacePortConfig__Group_3_1__3 : rule__GSSIfacePortConfig__Group_3_1__3__Impl ;
     public final void rule__GSSIfacePortConfig__Group_3_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1424:1: ( rule__GSSIfacePortConfig__Group_3_1__3__Impl )
-            // InternalIFACE.g:1425:2: rule__GSSIfacePortConfig__Group_3_1__3__Impl
+            // InternalIFACE.g:1461:1: ( rule__GSSIfacePortConfig__Group_3_1__3__Impl )
+            // InternalIFACE.g:1462:2: rule__GSSIfacePortConfig__Group_3_1__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfacePortConfig__Group_3_1__3__Impl();
@@ -4953,22 +5097,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__Group_3_1__3__Impl"
-    // InternalIFACE.g:1431:1: rule__GSSIfacePortConfig__Group_3_1__3__Impl : ( ';' ) ;
+    // InternalIFACE.g:1468:1: rule__GSSIfacePortConfig__Group_3_1__3__Impl : ( ';' ) ;
     public final void rule__GSSIfacePortConfig__Group_3_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1435:1: ( ( ';' ) )
-            // InternalIFACE.g:1436:1: ( ';' )
+            // InternalIFACE.g:1472:1: ( ( ';' ) )
+            // InternalIFACE.g:1473:1: ( ';' )
             {
-            // InternalIFACE.g:1436:1: ( ';' )
-            // InternalIFACE.g:1437:2: ';'
+            // InternalIFACE.g:1473:1: ( ';' )
+            // InternalIFACE.g:1474:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getSemicolonKeyword_3_1_3()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfacePortConfigAccess().getSemicolonKeyword_3_1_3()); 
             }
@@ -4994,14 +5138,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__0"
-    // InternalIFACE.g:1447:1: rule__GSSIfaceSpWPort__Group__0 : rule__GSSIfaceSpWPort__Group__0__Impl rule__GSSIfaceSpWPort__Group__1 ;
+    // InternalIFACE.g:1484:1: rule__GSSIfaceSpWPort__Group__0 : rule__GSSIfaceSpWPort__Group__0__Impl rule__GSSIfaceSpWPort__Group__1 ;
     public final void rule__GSSIfaceSpWPort__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1451:1: ( rule__GSSIfaceSpWPort__Group__0__Impl rule__GSSIfaceSpWPort__Group__1 )
-            // InternalIFACE.g:1452:2: rule__GSSIfaceSpWPort__Group__0__Impl rule__GSSIfaceSpWPort__Group__1
+            // InternalIFACE.g:1488:1: ( rule__GSSIfaceSpWPort__Group__0__Impl rule__GSSIfaceSpWPort__Group__1 )
+            // InternalIFACE.g:1489:2: rule__GSSIfaceSpWPort__Group__0__Impl rule__GSSIfaceSpWPort__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSIfaceSpWPort__Group__0__Impl();
@@ -5032,22 +5176,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__0__Impl"
-    // InternalIFACE.g:1459:1: rule__GSSIfaceSpWPort__Group__0__Impl : ( 'spwPort' ) ;
+    // InternalIFACE.g:1496:1: rule__GSSIfaceSpWPort__Group__0__Impl : ( 'spwPort' ) ;
     public final void rule__GSSIfaceSpWPort__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1463:1: ( ( 'spwPort' ) )
-            // InternalIFACE.g:1464:1: ( 'spwPort' )
+            // InternalIFACE.g:1500:1: ( ( 'spwPort' ) )
+            // InternalIFACE.g:1501:1: ( 'spwPort' )
             {
-            // InternalIFACE.g:1464:1: ( 'spwPort' )
-            // InternalIFACE.g:1465:2: 'spwPort'
+            // InternalIFACE.g:1501:1: ( 'spwPort' )
+            // InternalIFACE.g:1502:2: 'spwPort'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getSpwPortKeyword_0()); 
             }
-            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWPortAccess().getSpwPortKeyword_0()); 
             }
@@ -5073,14 +5217,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__1"
-    // InternalIFACE.g:1474:1: rule__GSSIfaceSpWPort__Group__1 : rule__GSSIfaceSpWPort__Group__1__Impl rule__GSSIfaceSpWPort__Group__2 ;
+    // InternalIFACE.g:1511:1: rule__GSSIfaceSpWPort__Group__1 : rule__GSSIfaceSpWPort__Group__1__Impl rule__GSSIfaceSpWPort__Group__2 ;
     public final void rule__GSSIfaceSpWPort__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1478:1: ( rule__GSSIfaceSpWPort__Group__1__Impl rule__GSSIfaceSpWPort__Group__2 )
-            // InternalIFACE.g:1479:2: rule__GSSIfaceSpWPort__Group__1__Impl rule__GSSIfaceSpWPort__Group__2
+            // InternalIFACE.g:1515:1: ( rule__GSSIfaceSpWPort__Group__1__Impl rule__GSSIfaceSpWPort__Group__2 )
+            // InternalIFACE.g:1516:2: rule__GSSIfaceSpWPort__Group__1__Impl rule__GSSIfaceSpWPort__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_14);
             rule__GSSIfaceSpWPort__Group__1__Impl();
@@ -5111,22 +5255,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__1__Impl"
-    // InternalIFACE.g:1486:1: rule__GSSIfaceSpWPort__Group__1__Impl : ( '{' ) ;
+    // InternalIFACE.g:1523:1: rule__GSSIfaceSpWPort__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSIfaceSpWPort__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1490:1: ( ( '{' ) )
-            // InternalIFACE.g:1491:1: ( '{' )
+            // InternalIFACE.g:1527:1: ( ( '{' ) )
+            // InternalIFACE.g:1528:1: ( '{' )
             {
-            // InternalIFACE.g:1491:1: ( '{' )
-            // InternalIFACE.g:1492:2: '{'
+            // InternalIFACE.g:1528:1: ( '{' )
+            // InternalIFACE.g:1529:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWPortAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -5152,14 +5296,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__2"
-    // InternalIFACE.g:1501:1: rule__GSSIfaceSpWPort__Group__2 : rule__GSSIfaceSpWPort__Group__2__Impl rule__GSSIfaceSpWPort__Group__3 ;
+    // InternalIFACE.g:1538:1: rule__GSSIfaceSpWPort__Group__2 : rule__GSSIfaceSpWPort__Group__2__Impl rule__GSSIfaceSpWPort__Group__3 ;
     public final void rule__GSSIfaceSpWPort__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1505:1: ( rule__GSSIfaceSpWPort__Group__2__Impl rule__GSSIfaceSpWPort__Group__3 )
-            // InternalIFACE.g:1506:2: rule__GSSIfaceSpWPort__Group__2__Impl rule__GSSIfaceSpWPort__Group__3
+            // InternalIFACE.g:1542:1: ( rule__GSSIfaceSpWPort__Group__2__Impl rule__GSSIfaceSpWPort__Group__3 )
+            // InternalIFACE.g:1543:2: rule__GSSIfaceSpWPort__Group__2__Impl rule__GSSIfaceSpWPort__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceSpWPort__Group__2__Impl();
@@ -5190,22 +5334,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__2__Impl"
-    // InternalIFACE.g:1513:1: rule__GSSIfaceSpWPort__Group__2__Impl : ( 'type' ) ;
+    // InternalIFACE.g:1550:1: rule__GSSIfaceSpWPort__Group__2__Impl : ( 'type' ) ;
     public final void rule__GSSIfaceSpWPort__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1517:1: ( ( 'type' ) )
-            // InternalIFACE.g:1518:1: ( 'type' )
+            // InternalIFACE.g:1554:1: ( ( 'type' ) )
+            // InternalIFACE.g:1555:1: ( 'type' )
             {
-            // InternalIFACE.g:1518:1: ( 'type' )
-            // InternalIFACE.g:1519:2: 'type'
+            // InternalIFACE.g:1555:1: ( 'type' )
+            // InternalIFACE.g:1556:2: 'type'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getTypeKeyword_2()); 
             }
-            match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWPortAccess().getTypeKeyword_2()); 
             }
@@ -5231,14 +5375,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__3"
-    // InternalIFACE.g:1528:1: rule__GSSIfaceSpWPort__Group__3 : rule__GSSIfaceSpWPort__Group__3__Impl rule__GSSIfaceSpWPort__Group__4 ;
+    // InternalIFACE.g:1565:1: rule__GSSIfaceSpWPort__Group__3 : rule__GSSIfaceSpWPort__Group__3__Impl rule__GSSIfaceSpWPort__Group__4 ;
     public final void rule__GSSIfaceSpWPort__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1532:1: ( rule__GSSIfaceSpWPort__Group__3__Impl rule__GSSIfaceSpWPort__Group__4 )
-            // InternalIFACE.g:1533:2: rule__GSSIfaceSpWPort__Group__3__Impl rule__GSSIfaceSpWPort__Group__4
+            // InternalIFACE.g:1569:1: ( rule__GSSIfaceSpWPort__Group__3__Impl rule__GSSIfaceSpWPort__Group__4 )
+            // InternalIFACE.g:1570:2: rule__GSSIfaceSpWPort__Group__3__Impl rule__GSSIfaceSpWPort__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_15);
             rule__GSSIfaceSpWPort__Group__3__Impl();
@@ -5269,22 +5413,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__3__Impl"
-    // InternalIFACE.g:1540:1: rule__GSSIfaceSpWPort__Group__3__Impl : ( ':=' ) ;
+    // InternalIFACE.g:1577:1: rule__GSSIfaceSpWPort__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceSpWPort__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1544:1: ( ( ':=' ) )
-            // InternalIFACE.g:1545:1: ( ':=' )
+            // InternalIFACE.g:1581:1: ( ( ':=' ) )
+            // InternalIFACE.g:1582:1: ( ':=' )
             {
-            // InternalIFACE.g:1545:1: ( ':=' )
-            // InternalIFACE.g:1546:2: ':='
+            // InternalIFACE.g:1582:1: ( ':=' )
+            // InternalIFACE.g:1583:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_3()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_3()); 
             }
@@ -5310,14 +5454,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__4"
-    // InternalIFACE.g:1555:1: rule__GSSIfaceSpWPort__Group__4 : rule__GSSIfaceSpWPort__Group__4__Impl rule__GSSIfaceSpWPort__Group__5 ;
+    // InternalIFACE.g:1592:1: rule__GSSIfaceSpWPort__Group__4 : rule__GSSIfaceSpWPort__Group__4__Impl rule__GSSIfaceSpWPort__Group__5 ;
     public final void rule__GSSIfaceSpWPort__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1559:1: ( rule__GSSIfaceSpWPort__Group__4__Impl rule__GSSIfaceSpWPort__Group__5 )
-            // InternalIFACE.g:1560:2: rule__GSSIfaceSpWPort__Group__4__Impl rule__GSSIfaceSpWPort__Group__5
+            // InternalIFACE.g:1596:1: ( rule__GSSIfaceSpWPort__Group__4__Impl rule__GSSIfaceSpWPort__Group__5 )
+            // InternalIFACE.g:1597:2: rule__GSSIfaceSpWPort__Group__4__Impl rule__GSSIfaceSpWPort__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceSpWPort__Group__4__Impl();
@@ -5348,23 +5492,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__4__Impl"
-    // InternalIFACE.g:1567:1: rule__GSSIfaceSpWPort__Group__4__Impl : ( ( rule__GSSIfaceSpWPort__TypeAssignment_4 ) ) ;
+    // InternalIFACE.g:1604:1: rule__GSSIfaceSpWPort__Group__4__Impl : ( ( rule__GSSIfaceSpWPort__TypeAssignment_4 ) ) ;
     public final void rule__GSSIfaceSpWPort__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1571:1: ( ( ( rule__GSSIfaceSpWPort__TypeAssignment_4 ) ) )
-            // InternalIFACE.g:1572:1: ( ( rule__GSSIfaceSpWPort__TypeAssignment_4 ) )
+            // InternalIFACE.g:1608:1: ( ( ( rule__GSSIfaceSpWPort__TypeAssignment_4 ) ) )
+            // InternalIFACE.g:1609:1: ( ( rule__GSSIfaceSpWPort__TypeAssignment_4 ) )
             {
-            // InternalIFACE.g:1572:1: ( ( rule__GSSIfaceSpWPort__TypeAssignment_4 ) )
-            // InternalIFACE.g:1573:2: ( rule__GSSIfaceSpWPort__TypeAssignment_4 )
+            // InternalIFACE.g:1609:1: ( ( rule__GSSIfaceSpWPort__TypeAssignment_4 ) )
+            // InternalIFACE.g:1610:2: ( rule__GSSIfaceSpWPort__TypeAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getTypeAssignment_4()); 
             }
-            // InternalIFACE.g:1574:2: ( rule__GSSIfaceSpWPort__TypeAssignment_4 )
-            // InternalIFACE.g:1574:3: rule__GSSIfaceSpWPort__TypeAssignment_4
+            // InternalIFACE.g:1611:2: ( rule__GSSIfaceSpWPort__TypeAssignment_4 )
+            // InternalIFACE.g:1611:3: rule__GSSIfaceSpWPort__TypeAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceSpWPort__TypeAssignment_4();
@@ -5399,14 +5543,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__5"
-    // InternalIFACE.g:1582:1: rule__GSSIfaceSpWPort__Group__5 : rule__GSSIfaceSpWPort__Group__5__Impl rule__GSSIfaceSpWPort__Group__6 ;
+    // InternalIFACE.g:1619:1: rule__GSSIfaceSpWPort__Group__5 : rule__GSSIfaceSpWPort__Group__5__Impl rule__GSSIfaceSpWPort__Group__6 ;
     public final void rule__GSSIfaceSpWPort__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1586:1: ( rule__GSSIfaceSpWPort__Group__5__Impl rule__GSSIfaceSpWPort__Group__6 )
-            // InternalIFACE.g:1587:2: rule__GSSIfaceSpWPort__Group__5__Impl rule__GSSIfaceSpWPort__Group__6
+            // InternalIFACE.g:1623:1: ( rule__GSSIfaceSpWPort__Group__5__Impl rule__GSSIfaceSpWPort__Group__6 )
+            // InternalIFACE.g:1624:2: rule__GSSIfaceSpWPort__Group__5__Impl rule__GSSIfaceSpWPort__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_16);
             rule__GSSIfaceSpWPort__Group__5__Impl();
@@ -5437,22 +5581,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__5__Impl"
-    // InternalIFACE.g:1594:1: rule__GSSIfaceSpWPort__Group__5__Impl : ( ';' ) ;
+    // InternalIFACE.g:1631:1: rule__GSSIfaceSpWPort__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSIfaceSpWPort__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1598:1: ( ( ';' ) )
-            // InternalIFACE.g:1599:1: ( ';' )
+            // InternalIFACE.g:1635:1: ( ( ';' ) )
+            // InternalIFACE.g:1636:1: ( ';' )
             {
-            // InternalIFACE.g:1599:1: ( ';' )
-            // InternalIFACE.g:1600:2: ';'
+            // InternalIFACE.g:1636:1: ( ';' )
+            // InternalIFACE.g:1637:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_5()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_5()); 
             }
@@ -5478,14 +5622,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__6"
-    // InternalIFACE.g:1609:1: rule__GSSIfaceSpWPort__Group__6 : rule__GSSIfaceSpWPort__Group__6__Impl rule__GSSIfaceSpWPort__Group__7 ;
+    // InternalIFACE.g:1646:1: rule__GSSIfaceSpWPort__Group__6 : rule__GSSIfaceSpWPort__Group__6__Impl rule__GSSIfaceSpWPort__Group__7 ;
     public final void rule__GSSIfaceSpWPort__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1613:1: ( rule__GSSIfaceSpWPort__Group__6__Impl rule__GSSIfaceSpWPort__Group__7 )
-            // InternalIFACE.g:1614:2: rule__GSSIfaceSpWPort__Group__6__Impl rule__GSSIfaceSpWPort__Group__7
+            // InternalIFACE.g:1650:1: ( rule__GSSIfaceSpWPort__Group__6__Impl rule__GSSIfaceSpWPort__Group__7 )
+            // InternalIFACE.g:1651:2: rule__GSSIfaceSpWPort__Group__6__Impl rule__GSSIfaceSpWPort__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceSpWPort__Group__6__Impl();
@@ -5516,22 +5660,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__6__Impl"
-    // InternalIFACE.g:1621:1: rule__GSSIfaceSpWPort__Group__6__Impl : ( 'link' ) ;
+    // InternalIFACE.g:1658:1: rule__GSSIfaceSpWPort__Group__6__Impl : ( 'link' ) ;
     public final void rule__GSSIfaceSpWPort__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1625:1: ( ( 'link' ) )
-            // InternalIFACE.g:1626:1: ( 'link' )
+            // InternalIFACE.g:1662:1: ( ( 'link' ) )
+            // InternalIFACE.g:1663:1: ( 'link' )
             {
-            // InternalIFACE.g:1626:1: ( 'link' )
-            // InternalIFACE.g:1627:2: 'link'
+            // InternalIFACE.g:1663:1: ( 'link' )
+            // InternalIFACE.g:1664:2: 'link'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getLinkKeyword_6()); 
             }
-            match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWPortAccess().getLinkKeyword_6()); 
             }
@@ -5557,14 +5701,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__7"
-    // InternalIFACE.g:1636:1: rule__GSSIfaceSpWPort__Group__7 : rule__GSSIfaceSpWPort__Group__7__Impl rule__GSSIfaceSpWPort__Group__8 ;
+    // InternalIFACE.g:1673:1: rule__GSSIfaceSpWPort__Group__7 : rule__GSSIfaceSpWPort__Group__7__Impl rule__GSSIfaceSpWPort__Group__8 ;
     public final void rule__GSSIfaceSpWPort__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1640:1: ( rule__GSSIfaceSpWPort__Group__7__Impl rule__GSSIfaceSpWPort__Group__8 )
-            // InternalIFACE.g:1641:2: rule__GSSIfaceSpWPort__Group__7__Impl rule__GSSIfaceSpWPort__Group__8
+            // InternalIFACE.g:1677:1: ( rule__GSSIfaceSpWPort__Group__7__Impl rule__GSSIfaceSpWPort__Group__8 )
+            // InternalIFACE.g:1678:2: rule__GSSIfaceSpWPort__Group__7__Impl rule__GSSIfaceSpWPort__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSIfaceSpWPort__Group__7__Impl();
@@ -5595,22 +5739,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__7__Impl"
-    // InternalIFACE.g:1648:1: rule__GSSIfaceSpWPort__Group__7__Impl : ( ':=' ) ;
+    // InternalIFACE.g:1685:1: rule__GSSIfaceSpWPort__Group__7__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceSpWPort__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1652:1: ( ( ':=' ) )
-            // InternalIFACE.g:1653:1: ( ':=' )
+            // InternalIFACE.g:1689:1: ( ( ':=' ) )
+            // InternalIFACE.g:1690:1: ( ':=' )
             {
-            // InternalIFACE.g:1653:1: ( ':=' )
-            // InternalIFACE.g:1654:2: ':='
+            // InternalIFACE.g:1690:1: ( ':=' )
+            // InternalIFACE.g:1691:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_7()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_7()); 
             }
@@ -5636,14 +5780,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__8"
-    // InternalIFACE.g:1663:1: rule__GSSIfaceSpWPort__Group__8 : rule__GSSIfaceSpWPort__Group__8__Impl rule__GSSIfaceSpWPort__Group__9 ;
+    // InternalIFACE.g:1700:1: rule__GSSIfaceSpWPort__Group__8 : rule__GSSIfaceSpWPort__Group__8__Impl rule__GSSIfaceSpWPort__Group__9 ;
     public final void rule__GSSIfaceSpWPort__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1667:1: ( rule__GSSIfaceSpWPort__Group__8__Impl rule__GSSIfaceSpWPort__Group__9 )
-            // InternalIFACE.g:1668:2: rule__GSSIfaceSpWPort__Group__8__Impl rule__GSSIfaceSpWPort__Group__9
+            // InternalIFACE.g:1704:1: ( rule__GSSIfaceSpWPort__Group__8__Impl rule__GSSIfaceSpWPort__Group__9 )
+            // InternalIFACE.g:1705:2: rule__GSSIfaceSpWPort__Group__8__Impl rule__GSSIfaceSpWPort__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceSpWPort__Group__8__Impl();
@@ -5674,23 +5818,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__8__Impl"
-    // InternalIFACE.g:1675:1: rule__GSSIfaceSpWPort__Group__8__Impl : ( ( rule__GSSIfaceSpWPort__LinkAssignment_8 ) ) ;
+    // InternalIFACE.g:1712:1: rule__GSSIfaceSpWPort__Group__8__Impl : ( ( rule__GSSIfaceSpWPort__LinkAssignment_8 ) ) ;
     public final void rule__GSSIfaceSpWPort__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1679:1: ( ( ( rule__GSSIfaceSpWPort__LinkAssignment_8 ) ) )
-            // InternalIFACE.g:1680:1: ( ( rule__GSSIfaceSpWPort__LinkAssignment_8 ) )
+            // InternalIFACE.g:1716:1: ( ( ( rule__GSSIfaceSpWPort__LinkAssignment_8 ) ) )
+            // InternalIFACE.g:1717:1: ( ( rule__GSSIfaceSpWPort__LinkAssignment_8 ) )
             {
-            // InternalIFACE.g:1680:1: ( ( rule__GSSIfaceSpWPort__LinkAssignment_8 ) )
-            // InternalIFACE.g:1681:2: ( rule__GSSIfaceSpWPort__LinkAssignment_8 )
+            // InternalIFACE.g:1717:1: ( ( rule__GSSIfaceSpWPort__LinkAssignment_8 ) )
+            // InternalIFACE.g:1718:2: ( rule__GSSIfaceSpWPort__LinkAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getLinkAssignment_8()); 
             }
-            // InternalIFACE.g:1682:2: ( rule__GSSIfaceSpWPort__LinkAssignment_8 )
-            // InternalIFACE.g:1682:3: rule__GSSIfaceSpWPort__LinkAssignment_8
+            // InternalIFACE.g:1719:2: ( rule__GSSIfaceSpWPort__LinkAssignment_8 )
+            // InternalIFACE.g:1719:3: rule__GSSIfaceSpWPort__LinkAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceSpWPort__LinkAssignment_8();
@@ -5725,14 +5869,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__9"
-    // InternalIFACE.g:1690:1: rule__GSSIfaceSpWPort__Group__9 : rule__GSSIfaceSpWPort__Group__9__Impl rule__GSSIfaceSpWPort__Group__10 ;
+    // InternalIFACE.g:1727:1: rule__GSSIfaceSpWPort__Group__9 : rule__GSSIfaceSpWPort__Group__9__Impl rule__GSSIfaceSpWPort__Group__10 ;
     public final void rule__GSSIfaceSpWPort__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1694:1: ( rule__GSSIfaceSpWPort__Group__9__Impl rule__GSSIfaceSpWPort__Group__10 )
-            // InternalIFACE.g:1695:2: rule__GSSIfaceSpWPort__Group__9__Impl rule__GSSIfaceSpWPort__Group__10
+            // InternalIFACE.g:1731:1: ( rule__GSSIfaceSpWPort__Group__9__Impl rule__GSSIfaceSpWPort__Group__10 )
+            // InternalIFACE.g:1732:2: rule__GSSIfaceSpWPort__Group__9__Impl rule__GSSIfaceSpWPort__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_18);
             rule__GSSIfaceSpWPort__Group__9__Impl();
@@ -5763,22 +5907,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__9__Impl"
-    // InternalIFACE.g:1702:1: rule__GSSIfaceSpWPort__Group__9__Impl : ( ';' ) ;
+    // InternalIFACE.g:1739:1: rule__GSSIfaceSpWPort__Group__9__Impl : ( ';' ) ;
     public final void rule__GSSIfaceSpWPort__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1706:1: ( ( ';' ) )
-            // InternalIFACE.g:1707:1: ( ';' )
+            // InternalIFACE.g:1743:1: ( ( ';' ) )
+            // InternalIFACE.g:1744:1: ( ';' )
             {
-            // InternalIFACE.g:1707:1: ( ';' )
-            // InternalIFACE.g:1708:2: ';'
+            // InternalIFACE.g:1744:1: ( ';' )
+            // InternalIFACE.g:1745:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_9()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_9()); 
             }
@@ -5804,14 +5948,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__10"
-    // InternalIFACE.g:1717:1: rule__GSSIfaceSpWPort__Group__10 : rule__GSSIfaceSpWPort__Group__10__Impl rule__GSSIfaceSpWPort__Group__11 ;
+    // InternalIFACE.g:1754:1: rule__GSSIfaceSpWPort__Group__10 : rule__GSSIfaceSpWPort__Group__10__Impl rule__GSSIfaceSpWPort__Group__11 ;
     public final void rule__GSSIfaceSpWPort__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1721:1: ( rule__GSSIfaceSpWPort__Group__10__Impl rule__GSSIfaceSpWPort__Group__11 )
-            // InternalIFACE.g:1722:2: rule__GSSIfaceSpWPort__Group__10__Impl rule__GSSIfaceSpWPort__Group__11
+            // InternalIFACE.g:1758:1: ( rule__GSSIfaceSpWPort__Group__10__Impl rule__GSSIfaceSpWPort__Group__11 )
+            // InternalIFACE.g:1759:2: rule__GSSIfaceSpWPort__Group__10__Impl rule__GSSIfaceSpWPort__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceSpWPort__Group__10__Impl();
@@ -5842,22 +5986,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__10__Impl"
-    // InternalIFACE.g:1729:1: rule__GSSIfaceSpWPort__Group__10__Impl : ( 'writingPort' ) ;
+    // InternalIFACE.g:1766:1: rule__GSSIfaceSpWPort__Group__10__Impl : ( 'writingPort' ) ;
     public final void rule__GSSIfaceSpWPort__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1733:1: ( ( 'writingPort' ) )
-            // InternalIFACE.g:1734:1: ( 'writingPort' )
+            // InternalIFACE.g:1770:1: ( ( 'writingPort' ) )
+            // InternalIFACE.g:1771:1: ( 'writingPort' )
             {
-            // InternalIFACE.g:1734:1: ( 'writingPort' )
-            // InternalIFACE.g:1735:2: 'writingPort'
+            // InternalIFACE.g:1771:1: ( 'writingPort' )
+            // InternalIFACE.g:1772:2: 'writingPort'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getWritingPortKeyword_10()); 
             }
-            match(input,43,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWPortAccess().getWritingPortKeyword_10()); 
             }
@@ -5883,14 +6027,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__11"
-    // InternalIFACE.g:1744:1: rule__GSSIfaceSpWPort__Group__11 : rule__GSSIfaceSpWPort__Group__11__Impl rule__GSSIfaceSpWPort__Group__12 ;
+    // InternalIFACE.g:1781:1: rule__GSSIfaceSpWPort__Group__11 : rule__GSSIfaceSpWPort__Group__11__Impl rule__GSSIfaceSpWPort__Group__12 ;
     public final void rule__GSSIfaceSpWPort__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1748:1: ( rule__GSSIfaceSpWPort__Group__11__Impl rule__GSSIfaceSpWPort__Group__12 )
-            // InternalIFACE.g:1749:2: rule__GSSIfaceSpWPort__Group__11__Impl rule__GSSIfaceSpWPort__Group__12
+            // InternalIFACE.g:1785:1: ( rule__GSSIfaceSpWPort__Group__11__Impl rule__GSSIfaceSpWPort__Group__12 )
+            // InternalIFACE.g:1786:2: rule__GSSIfaceSpWPort__Group__11__Impl rule__GSSIfaceSpWPort__Group__12
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSIfaceSpWPort__Group__11__Impl();
@@ -5921,22 +6065,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__11__Impl"
-    // InternalIFACE.g:1756:1: rule__GSSIfaceSpWPort__Group__11__Impl : ( ':=' ) ;
+    // InternalIFACE.g:1793:1: rule__GSSIfaceSpWPort__Group__11__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceSpWPort__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1760:1: ( ( ':=' ) )
-            // InternalIFACE.g:1761:1: ( ':=' )
+            // InternalIFACE.g:1797:1: ( ( ':=' ) )
+            // InternalIFACE.g:1798:1: ( ':=' )
             {
-            // InternalIFACE.g:1761:1: ( ':=' )
-            // InternalIFACE.g:1762:2: ':='
+            // InternalIFACE.g:1798:1: ( ':=' )
+            // InternalIFACE.g:1799:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_11()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_11()); 
             }
@@ -5962,14 +6106,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__12"
-    // InternalIFACE.g:1771:1: rule__GSSIfaceSpWPort__Group__12 : rule__GSSIfaceSpWPort__Group__12__Impl rule__GSSIfaceSpWPort__Group__13 ;
+    // InternalIFACE.g:1808:1: rule__GSSIfaceSpWPort__Group__12 : rule__GSSIfaceSpWPort__Group__12__Impl rule__GSSIfaceSpWPort__Group__13 ;
     public final void rule__GSSIfaceSpWPort__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1775:1: ( rule__GSSIfaceSpWPort__Group__12__Impl rule__GSSIfaceSpWPort__Group__13 )
-            // InternalIFACE.g:1776:2: rule__GSSIfaceSpWPort__Group__12__Impl rule__GSSIfaceSpWPort__Group__13
+            // InternalIFACE.g:1812:1: ( rule__GSSIfaceSpWPort__Group__12__Impl rule__GSSIfaceSpWPort__Group__13 )
+            // InternalIFACE.g:1813:2: rule__GSSIfaceSpWPort__Group__12__Impl rule__GSSIfaceSpWPort__Group__13
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceSpWPort__Group__12__Impl();
@@ -6000,23 +6144,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__12__Impl"
-    // InternalIFACE.g:1783:1: rule__GSSIfaceSpWPort__Group__12__Impl : ( ( rule__GSSIfaceSpWPort__WritingPortAssignment_12 ) ) ;
+    // InternalIFACE.g:1820:1: rule__GSSIfaceSpWPort__Group__12__Impl : ( ( rule__GSSIfaceSpWPort__WritingPortAssignment_12 ) ) ;
     public final void rule__GSSIfaceSpWPort__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1787:1: ( ( ( rule__GSSIfaceSpWPort__WritingPortAssignment_12 ) ) )
-            // InternalIFACE.g:1788:1: ( ( rule__GSSIfaceSpWPort__WritingPortAssignment_12 ) )
+            // InternalIFACE.g:1824:1: ( ( ( rule__GSSIfaceSpWPort__WritingPortAssignment_12 ) ) )
+            // InternalIFACE.g:1825:1: ( ( rule__GSSIfaceSpWPort__WritingPortAssignment_12 ) )
             {
-            // InternalIFACE.g:1788:1: ( ( rule__GSSIfaceSpWPort__WritingPortAssignment_12 ) )
-            // InternalIFACE.g:1789:2: ( rule__GSSIfaceSpWPort__WritingPortAssignment_12 )
+            // InternalIFACE.g:1825:1: ( ( rule__GSSIfaceSpWPort__WritingPortAssignment_12 ) )
+            // InternalIFACE.g:1826:2: ( rule__GSSIfaceSpWPort__WritingPortAssignment_12 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getWritingPortAssignment_12()); 
             }
-            // InternalIFACE.g:1790:2: ( rule__GSSIfaceSpWPort__WritingPortAssignment_12 )
-            // InternalIFACE.g:1790:3: rule__GSSIfaceSpWPort__WritingPortAssignment_12
+            // InternalIFACE.g:1827:2: ( rule__GSSIfaceSpWPort__WritingPortAssignment_12 )
+            // InternalIFACE.g:1827:3: rule__GSSIfaceSpWPort__WritingPortAssignment_12
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceSpWPort__WritingPortAssignment_12();
@@ -6051,14 +6195,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__13"
-    // InternalIFACE.g:1798:1: rule__GSSIfaceSpWPort__Group__13 : rule__GSSIfaceSpWPort__Group__13__Impl rule__GSSIfaceSpWPort__Group__14 ;
+    // InternalIFACE.g:1835:1: rule__GSSIfaceSpWPort__Group__13 : rule__GSSIfaceSpWPort__Group__13__Impl rule__GSSIfaceSpWPort__Group__14 ;
     public final void rule__GSSIfaceSpWPort__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1802:1: ( rule__GSSIfaceSpWPort__Group__13__Impl rule__GSSIfaceSpWPort__Group__14 )
-            // InternalIFACE.g:1803:2: rule__GSSIfaceSpWPort__Group__13__Impl rule__GSSIfaceSpWPort__Group__14
+            // InternalIFACE.g:1839:1: ( rule__GSSIfaceSpWPort__Group__13__Impl rule__GSSIfaceSpWPort__Group__14 )
+            // InternalIFACE.g:1840:2: rule__GSSIfaceSpWPort__Group__13__Impl rule__GSSIfaceSpWPort__Group__14
             {
             pushFollow(FollowSets000.FOLLOW_19);
             rule__GSSIfaceSpWPort__Group__13__Impl();
@@ -6089,22 +6233,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__13__Impl"
-    // InternalIFACE.g:1810:1: rule__GSSIfaceSpWPort__Group__13__Impl : ( ';' ) ;
+    // InternalIFACE.g:1847:1: rule__GSSIfaceSpWPort__Group__13__Impl : ( ';' ) ;
     public final void rule__GSSIfaceSpWPort__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1814:1: ( ( ';' ) )
-            // InternalIFACE.g:1815:1: ( ';' )
+            // InternalIFACE.g:1851:1: ( ( ';' ) )
+            // InternalIFACE.g:1852:1: ( ';' )
             {
-            // InternalIFACE.g:1815:1: ( ';' )
-            // InternalIFACE.g:1816:2: ';'
+            // InternalIFACE.g:1852:1: ( ';' )
+            // InternalIFACE.g:1853:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_13()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_13()); 
             }
@@ -6130,14 +6274,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__14"
-    // InternalIFACE.g:1825:1: rule__GSSIfaceSpWPort__Group__14 : rule__GSSIfaceSpWPort__Group__14__Impl rule__GSSIfaceSpWPort__Group__15 ;
+    // InternalIFACE.g:1862:1: rule__GSSIfaceSpWPort__Group__14 : rule__GSSIfaceSpWPort__Group__14__Impl rule__GSSIfaceSpWPort__Group__15 ;
     public final void rule__GSSIfaceSpWPort__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1829:1: ( rule__GSSIfaceSpWPort__Group__14__Impl rule__GSSIfaceSpWPort__Group__15 )
-            // InternalIFACE.g:1830:2: rule__GSSIfaceSpWPort__Group__14__Impl rule__GSSIfaceSpWPort__Group__15
+            // InternalIFACE.g:1866:1: ( rule__GSSIfaceSpWPort__Group__14__Impl rule__GSSIfaceSpWPort__Group__15 )
+            // InternalIFACE.g:1867:2: rule__GSSIfaceSpWPort__Group__14__Impl rule__GSSIfaceSpWPort__Group__15
             {
             pushFollow(FollowSets000.FOLLOW_11);
             rule__GSSIfaceSpWPort__Group__14__Impl();
@@ -6168,26 +6312,26 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__14__Impl"
-    // InternalIFACE.g:1837:1: rule__GSSIfaceSpWPort__Group__14__Impl : ( ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 ) ) ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )* ) ) ;
+    // InternalIFACE.g:1874:1: rule__GSSIfaceSpWPort__Group__14__Impl : ( ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 ) ) ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )* ) ) ;
     public final void rule__GSSIfaceSpWPort__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1841:1: ( ( ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 ) ) ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )* ) ) )
-            // InternalIFACE.g:1842:1: ( ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 ) ) ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )* ) )
+            // InternalIFACE.g:1878:1: ( ( ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 ) ) ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )* ) ) )
+            // InternalIFACE.g:1879:1: ( ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 ) ) ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )* ) )
             {
-            // InternalIFACE.g:1842:1: ( ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 ) ) ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )* ) )
-            // InternalIFACE.g:1843:2: ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 ) ) ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )* )
+            // InternalIFACE.g:1879:1: ( ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 ) ) ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )* ) )
+            // InternalIFACE.g:1880:2: ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 ) ) ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )* )
             {
-            // InternalIFACE.g:1843:2: ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 ) )
-            // InternalIFACE.g:1844:3: ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )
+            // InternalIFACE.g:1880:2: ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 ) )
+            // InternalIFACE.g:1881:3: ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getReadingPortAssignment_14()); 
             }
-            // InternalIFACE.g:1845:3: ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )
-            // InternalIFACE.g:1845:4: rule__GSSIfaceSpWPort__ReadingPortAssignment_14
+            // InternalIFACE.g:1882:3: ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )
+            // InternalIFACE.g:1882:4: rule__GSSIfaceSpWPort__ReadingPortAssignment_14
             {
             pushFollow(FollowSets000.FOLLOW_20);
             rule__GSSIfaceSpWPort__ReadingPortAssignment_14();
@@ -6203,26 +6347,26 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // InternalIFACE.g:1848:2: ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )* )
-            // InternalIFACE.g:1849:3: ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )*
+            // InternalIFACE.g:1885:2: ( ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )* )
+            // InternalIFACE.g:1886:3: ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getReadingPortAssignment_14()); 
             }
-            // InternalIFACE.g:1850:3: ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )*
-            loop13:
+            // InternalIFACE.g:1887:3: ( rule__GSSIfaceSpWPort__ReadingPortAssignment_14 )*
+            loop14:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( (LA13_0==44) ) {
-                    alt13=1;
+                if ( (LA14_0==46) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt14) {
             	case 1 :
-            	    // InternalIFACE.g:1850:4: rule__GSSIfaceSpWPort__ReadingPortAssignment_14
+            	    // InternalIFACE.g:1887:4: rule__GSSIfaceSpWPort__ReadingPortAssignment_14
             	    {
             	    pushFollow(FollowSets000.FOLLOW_20);
             	    rule__GSSIfaceSpWPort__ReadingPortAssignment_14();
@@ -6234,7 +6378,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop14;
                 }
             } while (true);
 
@@ -6266,14 +6410,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__15"
-    // InternalIFACE.g:1859:1: rule__GSSIfaceSpWPort__Group__15 : rule__GSSIfaceSpWPort__Group__15__Impl rule__GSSIfaceSpWPort__Group__16 ;
+    // InternalIFACE.g:1896:1: rule__GSSIfaceSpWPort__Group__15 : rule__GSSIfaceSpWPort__Group__15__Impl rule__GSSIfaceSpWPort__Group__16 ;
     public final void rule__GSSIfaceSpWPort__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1863:1: ( rule__GSSIfaceSpWPort__Group__15__Impl rule__GSSIfaceSpWPort__Group__16 )
-            // InternalIFACE.g:1864:2: rule__GSSIfaceSpWPort__Group__15__Impl rule__GSSIfaceSpWPort__Group__16
+            // InternalIFACE.g:1900:1: ( rule__GSSIfaceSpWPort__Group__15__Impl rule__GSSIfaceSpWPort__Group__16 )
+            // InternalIFACE.g:1901:2: rule__GSSIfaceSpWPort__Group__15__Impl rule__GSSIfaceSpWPort__Group__16
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceSpWPort__Group__15__Impl();
@@ -6304,22 +6448,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__15__Impl"
-    // InternalIFACE.g:1871:1: rule__GSSIfaceSpWPort__Group__15__Impl : ( '}' ) ;
+    // InternalIFACE.g:1908:1: rule__GSSIfaceSpWPort__Group__15__Impl : ( '}' ) ;
     public final void rule__GSSIfaceSpWPort__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1875:1: ( ( '}' ) )
-            // InternalIFACE.g:1876:1: ( '}' )
+            // InternalIFACE.g:1912:1: ( ( '}' ) )
+            // InternalIFACE.g:1913:1: ( '}' )
             {
-            // InternalIFACE.g:1876:1: ( '}' )
-            // InternalIFACE.g:1877:2: '}'
+            // InternalIFACE.g:1913:1: ( '}' )
+            // InternalIFACE.g:1914:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getRightCurlyBracketKeyword_15()); 
             }
-            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWPortAccess().getRightCurlyBracketKeyword_15()); 
             }
@@ -6345,14 +6489,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__16"
-    // InternalIFACE.g:1886:1: rule__GSSIfaceSpWPort__Group__16 : rule__GSSIfaceSpWPort__Group__16__Impl ;
+    // InternalIFACE.g:1923:1: rule__GSSIfaceSpWPort__Group__16 : rule__GSSIfaceSpWPort__Group__16__Impl ;
     public final void rule__GSSIfaceSpWPort__Group__16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1890:1: ( rule__GSSIfaceSpWPort__Group__16__Impl )
-            // InternalIFACE.g:1891:2: rule__GSSIfaceSpWPort__Group__16__Impl
+            // InternalIFACE.g:1927:1: ( rule__GSSIfaceSpWPort__Group__16__Impl )
+            // InternalIFACE.g:1928:2: rule__GSSIfaceSpWPort__Group__16__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceSpWPort__Group__16__Impl();
@@ -6378,22 +6522,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__Group__16__Impl"
-    // InternalIFACE.g:1897:1: rule__GSSIfaceSpWPort__Group__16__Impl : ( ';' ) ;
+    // InternalIFACE.g:1934:1: rule__GSSIfaceSpWPort__Group__16__Impl : ( ';' ) ;
     public final void rule__GSSIfaceSpWPort__Group__16__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1901:1: ( ( ';' ) )
-            // InternalIFACE.g:1902:1: ( ';' )
+            // InternalIFACE.g:1938:1: ( ( ';' ) )
+            // InternalIFACE.g:1939:1: ( ';' )
             {
-            // InternalIFACE.g:1902:1: ( ';' )
-            // InternalIFACE.g:1903:2: ';'
+            // InternalIFACE.g:1939:1: ( ';' )
+            // InternalIFACE.g:1940:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_16()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_16()); 
             }
@@ -6419,14 +6563,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__0"
-    // InternalIFACE.g:1913:1: rule__GSSIfaceReadingPort__Group__0 : rule__GSSIfaceReadingPort__Group__0__Impl rule__GSSIfaceReadingPort__Group__1 ;
+    // InternalIFACE.g:1950:1: rule__GSSIfaceReadingPort__Group__0 : rule__GSSIfaceReadingPort__Group__0__Impl rule__GSSIfaceReadingPort__Group__1 ;
     public final void rule__GSSIfaceReadingPort__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1917:1: ( rule__GSSIfaceReadingPort__Group__0__Impl rule__GSSIfaceReadingPort__Group__1 )
-            // InternalIFACE.g:1918:2: rule__GSSIfaceReadingPort__Group__0__Impl rule__GSSIfaceReadingPort__Group__1
+            // InternalIFACE.g:1954:1: ( rule__GSSIfaceReadingPort__Group__0__Impl rule__GSSIfaceReadingPort__Group__1 )
+            // InternalIFACE.g:1955:2: rule__GSSIfaceReadingPort__Group__0__Impl rule__GSSIfaceReadingPort__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSIfaceReadingPort__Group__0__Impl();
@@ -6457,22 +6601,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__0__Impl"
-    // InternalIFACE.g:1925:1: rule__GSSIfaceReadingPort__Group__0__Impl : ( 'readingPort' ) ;
+    // InternalIFACE.g:1962:1: rule__GSSIfaceReadingPort__Group__0__Impl : ( 'readingPort' ) ;
     public final void rule__GSSIfaceReadingPort__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1929:1: ( ( 'readingPort' ) )
-            // InternalIFACE.g:1930:1: ( 'readingPort' )
+            // InternalIFACE.g:1966:1: ( ( 'readingPort' ) )
+            // InternalIFACE.g:1967:1: ( 'readingPort' )
             {
-            // InternalIFACE.g:1930:1: ( 'readingPort' )
-            // InternalIFACE.g:1931:2: 'readingPort'
+            // InternalIFACE.g:1967:1: ( 'readingPort' )
+            // InternalIFACE.g:1968:2: 'readingPort'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceReadingPortAccess().getReadingPortKeyword_0()); 
             }
-            match(input,44,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,46,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceReadingPortAccess().getReadingPortKeyword_0()); 
             }
@@ -6498,14 +6642,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__1"
-    // InternalIFACE.g:1940:1: rule__GSSIfaceReadingPort__Group__1 : rule__GSSIfaceReadingPort__Group__1__Impl rule__GSSIfaceReadingPort__Group__2 ;
+    // InternalIFACE.g:1977:1: rule__GSSIfaceReadingPort__Group__1 : rule__GSSIfaceReadingPort__Group__1__Impl rule__GSSIfaceReadingPort__Group__2 ;
     public final void rule__GSSIfaceReadingPort__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1944:1: ( rule__GSSIfaceReadingPort__Group__1__Impl rule__GSSIfaceReadingPort__Group__2 )
-            // InternalIFACE.g:1945:2: rule__GSSIfaceReadingPort__Group__1__Impl rule__GSSIfaceReadingPort__Group__2
+            // InternalIFACE.g:1981:1: ( rule__GSSIfaceReadingPort__Group__1__Impl rule__GSSIfaceReadingPort__Group__2 )
+            // InternalIFACE.g:1982:2: rule__GSSIfaceReadingPort__Group__1__Impl rule__GSSIfaceReadingPort__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_21);
             rule__GSSIfaceReadingPort__Group__1__Impl();
@@ -6536,22 +6680,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__1__Impl"
-    // InternalIFACE.g:1952:1: rule__GSSIfaceReadingPort__Group__1__Impl : ( '{' ) ;
+    // InternalIFACE.g:1989:1: rule__GSSIfaceReadingPort__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSIfaceReadingPort__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1956:1: ( ( '{' ) )
-            // InternalIFACE.g:1957:1: ( '{' )
+            // InternalIFACE.g:1993:1: ( ( '{' ) )
+            // InternalIFACE.g:1994:1: ( '{' )
             {
-            // InternalIFACE.g:1957:1: ( '{' )
-            // InternalIFACE.g:1958:2: '{'
+            // InternalIFACE.g:1994:1: ( '{' )
+            // InternalIFACE.g:1995:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceReadingPortAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceReadingPortAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -6577,14 +6721,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__2"
-    // InternalIFACE.g:1967:1: rule__GSSIfaceReadingPort__Group__2 : rule__GSSIfaceReadingPort__Group__2__Impl rule__GSSIfaceReadingPort__Group__3 ;
+    // InternalIFACE.g:2004:1: rule__GSSIfaceReadingPort__Group__2 : rule__GSSIfaceReadingPort__Group__2__Impl rule__GSSIfaceReadingPort__Group__3 ;
     public final void rule__GSSIfaceReadingPort__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1971:1: ( rule__GSSIfaceReadingPort__Group__2__Impl rule__GSSIfaceReadingPort__Group__3 )
-            // InternalIFACE.g:1972:2: rule__GSSIfaceReadingPort__Group__2__Impl rule__GSSIfaceReadingPort__Group__3
+            // InternalIFACE.g:2008:1: ( rule__GSSIfaceReadingPort__Group__2__Impl rule__GSSIfaceReadingPort__Group__3 )
+            // InternalIFACE.g:2009:2: rule__GSSIfaceReadingPort__Group__2__Impl rule__GSSIfaceReadingPort__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceReadingPort__Group__2__Impl();
@@ -6615,22 +6759,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__2__Impl"
-    // InternalIFACE.g:1979:1: rule__GSSIfaceReadingPort__Group__2__Impl : ( 'port' ) ;
+    // InternalIFACE.g:2016:1: rule__GSSIfaceReadingPort__Group__2__Impl : ( 'port' ) ;
     public final void rule__GSSIfaceReadingPort__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1983:1: ( ( 'port' ) )
-            // InternalIFACE.g:1984:1: ( 'port' )
+            // InternalIFACE.g:2020:1: ( ( 'port' ) )
+            // InternalIFACE.g:2021:1: ( 'port' )
             {
-            // InternalIFACE.g:1984:1: ( 'port' )
-            // InternalIFACE.g:1985:2: 'port'
+            // InternalIFACE.g:2021:1: ( 'port' )
+            // InternalIFACE.g:2022:2: 'port'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceReadingPortAccess().getPortKeyword_2()); 
             }
-            match(input,45,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,47,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceReadingPortAccess().getPortKeyword_2()); 
             }
@@ -6656,14 +6800,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__3"
-    // InternalIFACE.g:1994:1: rule__GSSIfaceReadingPort__Group__3 : rule__GSSIfaceReadingPort__Group__3__Impl rule__GSSIfaceReadingPort__Group__4 ;
+    // InternalIFACE.g:2031:1: rule__GSSIfaceReadingPort__Group__3 : rule__GSSIfaceReadingPort__Group__3__Impl rule__GSSIfaceReadingPort__Group__4 ;
     public final void rule__GSSIfaceReadingPort__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:1998:1: ( rule__GSSIfaceReadingPort__Group__3__Impl rule__GSSIfaceReadingPort__Group__4 )
-            // InternalIFACE.g:1999:2: rule__GSSIfaceReadingPort__Group__3__Impl rule__GSSIfaceReadingPort__Group__4
+            // InternalIFACE.g:2035:1: ( rule__GSSIfaceReadingPort__Group__3__Impl rule__GSSIfaceReadingPort__Group__4 )
+            // InternalIFACE.g:2036:2: rule__GSSIfaceReadingPort__Group__3__Impl rule__GSSIfaceReadingPort__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSIfaceReadingPort__Group__3__Impl();
@@ -6694,22 +6838,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__3__Impl"
-    // InternalIFACE.g:2006:1: rule__GSSIfaceReadingPort__Group__3__Impl : ( ':=' ) ;
+    // InternalIFACE.g:2043:1: rule__GSSIfaceReadingPort__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceReadingPort__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2010:1: ( ( ':=' ) )
-            // InternalIFACE.g:2011:1: ( ':=' )
+            // InternalIFACE.g:2047:1: ( ( ':=' ) )
+            // InternalIFACE.g:2048:1: ( ':=' )
             {
-            // InternalIFACE.g:2011:1: ( ':=' )
-            // InternalIFACE.g:2012:2: ':='
+            // InternalIFACE.g:2048:1: ( ':=' )
+            // InternalIFACE.g:2049:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceReadingPortAccess().getColonEqualsSignKeyword_3()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceReadingPortAccess().getColonEqualsSignKeyword_3()); 
             }
@@ -6735,14 +6879,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__4"
-    // InternalIFACE.g:2021:1: rule__GSSIfaceReadingPort__Group__4 : rule__GSSIfaceReadingPort__Group__4__Impl rule__GSSIfaceReadingPort__Group__5 ;
+    // InternalIFACE.g:2058:1: rule__GSSIfaceReadingPort__Group__4 : rule__GSSIfaceReadingPort__Group__4__Impl rule__GSSIfaceReadingPort__Group__5 ;
     public final void rule__GSSIfaceReadingPort__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2025:1: ( rule__GSSIfaceReadingPort__Group__4__Impl rule__GSSIfaceReadingPort__Group__5 )
-            // InternalIFACE.g:2026:2: rule__GSSIfaceReadingPort__Group__4__Impl rule__GSSIfaceReadingPort__Group__5
+            // InternalIFACE.g:2062:1: ( rule__GSSIfaceReadingPort__Group__4__Impl rule__GSSIfaceReadingPort__Group__5 )
+            // InternalIFACE.g:2063:2: rule__GSSIfaceReadingPort__Group__4__Impl rule__GSSIfaceReadingPort__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceReadingPort__Group__4__Impl();
@@ -6773,23 +6917,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__4__Impl"
-    // InternalIFACE.g:2033:1: rule__GSSIfaceReadingPort__Group__4__Impl : ( ( rule__GSSIfaceReadingPort__PortAssignment_4 ) ) ;
+    // InternalIFACE.g:2070:1: rule__GSSIfaceReadingPort__Group__4__Impl : ( ( rule__GSSIfaceReadingPort__PortAssignment_4 ) ) ;
     public final void rule__GSSIfaceReadingPort__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2037:1: ( ( ( rule__GSSIfaceReadingPort__PortAssignment_4 ) ) )
-            // InternalIFACE.g:2038:1: ( ( rule__GSSIfaceReadingPort__PortAssignment_4 ) )
+            // InternalIFACE.g:2074:1: ( ( ( rule__GSSIfaceReadingPort__PortAssignment_4 ) ) )
+            // InternalIFACE.g:2075:1: ( ( rule__GSSIfaceReadingPort__PortAssignment_4 ) )
             {
-            // InternalIFACE.g:2038:1: ( ( rule__GSSIfaceReadingPort__PortAssignment_4 ) )
-            // InternalIFACE.g:2039:2: ( rule__GSSIfaceReadingPort__PortAssignment_4 )
+            // InternalIFACE.g:2075:1: ( ( rule__GSSIfaceReadingPort__PortAssignment_4 ) )
+            // InternalIFACE.g:2076:2: ( rule__GSSIfaceReadingPort__PortAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceReadingPortAccess().getPortAssignment_4()); 
             }
-            // InternalIFACE.g:2040:2: ( rule__GSSIfaceReadingPort__PortAssignment_4 )
-            // InternalIFACE.g:2040:3: rule__GSSIfaceReadingPort__PortAssignment_4
+            // InternalIFACE.g:2077:2: ( rule__GSSIfaceReadingPort__PortAssignment_4 )
+            // InternalIFACE.g:2077:3: rule__GSSIfaceReadingPort__PortAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceReadingPort__PortAssignment_4();
@@ -6824,14 +6968,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__5"
-    // InternalIFACE.g:2048:1: rule__GSSIfaceReadingPort__Group__5 : rule__GSSIfaceReadingPort__Group__5__Impl rule__GSSIfaceReadingPort__Group__6 ;
+    // InternalIFACE.g:2085:1: rule__GSSIfaceReadingPort__Group__5 : rule__GSSIfaceReadingPort__Group__5__Impl rule__GSSIfaceReadingPort__Group__6 ;
     public final void rule__GSSIfaceReadingPort__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2052:1: ( rule__GSSIfaceReadingPort__Group__5__Impl rule__GSSIfaceReadingPort__Group__6 )
-            // InternalIFACE.g:2053:2: rule__GSSIfaceReadingPort__Group__5__Impl rule__GSSIfaceReadingPort__Group__6
+            // InternalIFACE.g:2089:1: ( rule__GSSIfaceReadingPort__Group__5__Impl rule__GSSIfaceReadingPort__Group__6 )
+            // InternalIFACE.g:2090:2: rule__GSSIfaceReadingPort__Group__5__Impl rule__GSSIfaceReadingPort__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_11);
             rule__GSSIfaceReadingPort__Group__5__Impl();
@@ -6862,22 +7006,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__5__Impl"
-    // InternalIFACE.g:2060:1: rule__GSSIfaceReadingPort__Group__5__Impl : ( ';' ) ;
+    // InternalIFACE.g:2097:1: rule__GSSIfaceReadingPort__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSIfaceReadingPort__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2064:1: ( ( ';' ) )
-            // InternalIFACE.g:2065:1: ( ';' )
+            // InternalIFACE.g:2101:1: ( ( ';' ) )
+            // InternalIFACE.g:2102:1: ( ';' )
             {
-            // InternalIFACE.g:2065:1: ( ';' )
-            // InternalIFACE.g:2066:2: ';'
+            // InternalIFACE.g:2102:1: ( ';' )
+            // InternalIFACE.g:2103:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceReadingPortAccess().getSemicolonKeyword_5()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceReadingPortAccess().getSemicolonKeyword_5()); 
             }
@@ -6903,14 +7047,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__6"
-    // InternalIFACE.g:2075:1: rule__GSSIfaceReadingPort__Group__6 : rule__GSSIfaceReadingPort__Group__6__Impl rule__GSSIfaceReadingPort__Group__7 ;
+    // InternalIFACE.g:2112:1: rule__GSSIfaceReadingPort__Group__6 : rule__GSSIfaceReadingPort__Group__6__Impl rule__GSSIfaceReadingPort__Group__7 ;
     public final void rule__GSSIfaceReadingPort__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2079:1: ( rule__GSSIfaceReadingPort__Group__6__Impl rule__GSSIfaceReadingPort__Group__7 )
-            // InternalIFACE.g:2080:2: rule__GSSIfaceReadingPort__Group__6__Impl rule__GSSIfaceReadingPort__Group__7
+            // InternalIFACE.g:2116:1: ( rule__GSSIfaceReadingPort__Group__6__Impl rule__GSSIfaceReadingPort__Group__7 )
+            // InternalIFACE.g:2117:2: rule__GSSIfaceReadingPort__Group__6__Impl rule__GSSIfaceReadingPort__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceReadingPort__Group__6__Impl();
@@ -6941,22 +7085,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__6__Impl"
-    // InternalIFACE.g:2087:1: rule__GSSIfaceReadingPort__Group__6__Impl : ( '}' ) ;
+    // InternalIFACE.g:2124:1: rule__GSSIfaceReadingPort__Group__6__Impl : ( '}' ) ;
     public final void rule__GSSIfaceReadingPort__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2091:1: ( ( '}' ) )
-            // InternalIFACE.g:2092:1: ( '}' )
+            // InternalIFACE.g:2128:1: ( ( '}' ) )
+            // InternalIFACE.g:2129:1: ( '}' )
             {
-            // InternalIFACE.g:2092:1: ( '}' )
-            // InternalIFACE.g:2093:2: '}'
+            // InternalIFACE.g:2129:1: ( '}' )
+            // InternalIFACE.g:2130:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceReadingPortAccess().getRightCurlyBracketKeyword_6()); 
             }
-            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceReadingPortAccess().getRightCurlyBracketKeyword_6()); 
             }
@@ -6982,14 +7126,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__7"
-    // InternalIFACE.g:2102:1: rule__GSSIfaceReadingPort__Group__7 : rule__GSSIfaceReadingPort__Group__7__Impl ;
+    // InternalIFACE.g:2139:1: rule__GSSIfaceReadingPort__Group__7 : rule__GSSIfaceReadingPort__Group__7__Impl ;
     public final void rule__GSSIfaceReadingPort__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2106:1: ( rule__GSSIfaceReadingPort__Group__7__Impl )
-            // InternalIFACE.g:2107:2: rule__GSSIfaceReadingPort__Group__7__Impl
+            // InternalIFACE.g:2143:1: ( rule__GSSIfaceReadingPort__Group__7__Impl )
+            // InternalIFACE.g:2144:2: rule__GSSIfaceReadingPort__Group__7__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceReadingPort__Group__7__Impl();
@@ -7015,22 +7159,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__Group__7__Impl"
-    // InternalIFACE.g:2113:1: rule__GSSIfaceReadingPort__Group__7__Impl : ( ';' ) ;
+    // InternalIFACE.g:2150:1: rule__GSSIfaceReadingPort__Group__7__Impl : ( ';' ) ;
     public final void rule__GSSIfaceReadingPort__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2117:1: ( ( ';' ) )
-            // InternalIFACE.g:2118:1: ( ';' )
+            // InternalIFACE.g:2154:1: ( ( ';' ) )
+            // InternalIFACE.g:2155:1: ( ';' )
             {
-            // InternalIFACE.g:2118:1: ( ';' )
-            // InternalIFACE.g:2119:2: ';'
+            // InternalIFACE.g:2155:1: ( ';' )
+            // InternalIFACE.g:2156:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceReadingPortAccess().getSemicolonKeyword_7()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceReadingPortAccess().getSemicolonKeyword_7()); 
             }
@@ -7056,14 +7200,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__0"
-    // InternalIFACE.g:2129:1: rule__GSSIfaceUartPort__Group__0 : rule__GSSIfaceUartPort__Group__0__Impl rule__GSSIfaceUartPort__Group__1 ;
+    // InternalIFACE.g:2166:1: rule__GSSIfaceUartPort__Group__0 : rule__GSSIfaceUartPort__Group__0__Impl rule__GSSIfaceUartPort__Group__1 ;
     public final void rule__GSSIfaceUartPort__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2133:1: ( rule__GSSIfaceUartPort__Group__0__Impl rule__GSSIfaceUartPort__Group__1 )
-            // InternalIFACE.g:2134:2: rule__GSSIfaceUartPort__Group__0__Impl rule__GSSIfaceUartPort__Group__1
+            // InternalIFACE.g:2170:1: ( rule__GSSIfaceUartPort__Group__0__Impl rule__GSSIfaceUartPort__Group__1 )
+            // InternalIFACE.g:2171:2: rule__GSSIfaceUartPort__Group__0__Impl rule__GSSIfaceUartPort__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSIfaceUartPort__Group__0__Impl();
@@ -7094,22 +7238,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__0__Impl"
-    // InternalIFACE.g:2141:1: rule__GSSIfaceUartPort__Group__0__Impl : ( 'uartPort' ) ;
+    // InternalIFACE.g:2178:1: rule__GSSIfaceUartPort__Group__0__Impl : ( 'uartPort' ) ;
     public final void rule__GSSIfaceUartPort__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2145:1: ( ( 'uartPort' ) )
-            // InternalIFACE.g:2146:1: ( 'uartPort' )
+            // InternalIFACE.g:2182:1: ( ( 'uartPort' ) )
+            // InternalIFACE.g:2183:1: ( 'uartPort' )
             {
-            // InternalIFACE.g:2146:1: ( 'uartPort' )
-            // InternalIFACE.g:2147:2: 'uartPort'
+            // InternalIFACE.g:2183:1: ( 'uartPort' )
+            // InternalIFACE.g:2184:2: 'uartPort'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getUartPortKeyword_0()); 
             }
-            match(input,46,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getUartPortKeyword_0()); 
             }
@@ -7135,14 +7279,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__1"
-    // InternalIFACE.g:2156:1: rule__GSSIfaceUartPort__Group__1 : rule__GSSIfaceUartPort__Group__1__Impl rule__GSSIfaceUartPort__Group__2 ;
+    // InternalIFACE.g:2193:1: rule__GSSIfaceUartPort__Group__1 : rule__GSSIfaceUartPort__Group__1__Impl rule__GSSIfaceUartPort__Group__2 ;
     public final void rule__GSSIfaceUartPort__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2160:1: ( rule__GSSIfaceUartPort__Group__1__Impl rule__GSSIfaceUartPort__Group__2 )
-            // InternalIFACE.g:2161:2: rule__GSSIfaceUartPort__Group__1__Impl rule__GSSIfaceUartPort__Group__2
+            // InternalIFACE.g:2197:1: ( rule__GSSIfaceUartPort__Group__1__Impl rule__GSSIfaceUartPort__Group__2 )
+            // InternalIFACE.g:2198:2: rule__GSSIfaceUartPort__Group__1__Impl rule__GSSIfaceUartPort__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_22);
             rule__GSSIfaceUartPort__Group__1__Impl();
@@ -7173,22 +7317,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__1__Impl"
-    // InternalIFACE.g:2168:1: rule__GSSIfaceUartPort__Group__1__Impl : ( '{' ) ;
+    // InternalIFACE.g:2205:1: rule__GSSIfaceUartPort__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSIfaceUartPort__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2172:1: ( ( '{' ) )
-            // InternalIFACE.g:2173:1: ( '{' )
+            // InternalIFACE.g:2209:1: ( ( '{' ) )
+            // InternalIFACE.g:2210:1: ( '{' )
             {
-            // InternalIFACE.g:2173:1: ( '{' )
-            // InternalIFACE.g:2174:2: '{'
+            // InternalIFACE.g:2210:1: ( '{' )
+            // InternalIFACE.g:2211:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -7214,14 +7358,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__2"
-    // InternalIFACE.g:2183:1: rule__GSSIfaceUartPort__Group__2 : rule__GSSIfaceUartPort__Group__2__Impl rule__GSSIfaceUartPort__Group__3 ;
+    // InternalIFACE.g:2220:1: rule__GSSIfaceUartPort__Group__2 : rule__GSSIfaceUartPort__Group__2__Impl rule__GSSIfaceUartPort__Group__3 ;
     public final void rule__GSSIfaceUartPort__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2187:1: ( rule__GSSIfaceUartPort__Group__2__Impl rule__GSSIfaceUartPort__Group__3 )
-            // InternalIFACE.g:2188:2: rule__GSSIfaceUartPort__Group__2__Impl rule__GSSIfaceUartPort__Group__3
+            // InternalIFACE.g:2224:1: ( rule__GSSIfaceUartPort__Group__2__Impl rule__GSSIfaceUartPort__Group__3 )
+            // InternalIFACE.g:2225:2: rule__GSSIfaceUartPort__Group__2__Impl rule__GSSIfaceUartPort__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceUartPort__Group__2__Impl();
@@ -7252,22 +7396,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__2__Impl"
-    // InternalIFACE.g:2195:1: rule__GSSIfaceUartPort__Group__2__Impl : ( 'number' ) ;
+    // InternalIFACE.g:2232:1: rule__GSSIfaceUartPort__Group__2__Impl : ( 'number' ) ;
     public final void rule__GSSIfaceUartPort__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2199:1: ( ( 'number' ) )
-            // InternalIFACE.g:2200:1: ( 'number' )
+            // InternalIFACE.g:2236:1: ( ( 'number' ) )
+            // InternalIFACE.g:2237:1: ( 'number' )
             {
-            // InternalIFACE.g:2200:1: ( 'number' )
-            // InternalIFACE.g:2201:2: 'number'
+            // InternalIFACE.g:2237:1: ( 'number' )
+            // InternalIFACE.g:2238:2: 'number'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getNumberKeyword_2()); 
             }
-            match(input,47,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,49,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getNumberKeyword_2()); 
             }
@@ -7293,14 +7437,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__3"
-    // InternalIFACE.g:2210:1: rule__GSSIfaceUartPort__Group__3 : rule__GSSIfaceUartPort__Group__3__Impl rule__GSSIfaceUartPort__Group__4 ;
+    // InternalIFACE.g:2247:1: rule__GSSIfaceUartPort__Group__3 : rule__GSSIfaceUartPort__Group__3__Impl rule__GSSIfaceUartPort__Group__4 ;
     public final void rule__GSSIfaceUartPort__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2214:1: ( rule__GSSIfaceUartPort__Group__3__Impl rule__GSSIfaceUartPort__Group__4 )
-            // InternalIFACE.g:2215:2: rule__GSSIfaceUartPort__Group__3__Impl rule__GSSIfaceUartPort__Group__4
+            // InternalIFACE.g:2251:1: ( rule__GSSIfaceUartPort__Group__3__Impl rule__GSSIfaceUartPort__Group__4 )
+            // InternalIFACE.g:2252:2: rule__GSSIfaceUartPort__Group__3__Impl rule__GSSIfaceUartPort__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSIfaceUartPort__Group__3__Impl();
@@ -7331,22 +7475,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__3__Impl"
-    // InternalIFACE.g:2222:1: rule__GSSIfaceUartPort__Group__3__Impl : ( ':=' ) ;
+    // InternalIFACE.g:2259:1: rule__GSSIfaceUartPort__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceUartPort__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2226:1: ( ( ':=' ) )
-            // InternalIFACE.g:2227:1: ( ':=' )
+            // InternalIFACE.g:2263:1: ( ( ':=' ) )
+            // InternalIFACE.g:2264:1: ( ':=' )
             {
-            // InternalIFACE.g:2227:1: ( ':=' )
-            // InternalIFACE.g:2228:2: ':='
+            // InternalIFACE.g:2264:1: ( ':=' )
+            // InternalIFACE.g:2265:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_3()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_3()); 
             }
@@ -7372,14 +7516,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__4"
-    // InternalIFACE.g:2237:1: rule__GSSIfaceUartPort__Group__4 : rule__GSSIfaceUartPort__Group__4__Impl rule__GSSIfaceUartPort__Group__5 ;
+    // InternalIFACE.g:2274:1: rule__GSSIfaceUartPort__Group__4 : rule__GSSIfaceUartPort__Group__4__Impl rule__GSSIfaceUartPort__Group__5 ;
     public final void rule__GSSIfaceUartPort__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2241:1: ( rule__GSSIfaceUartPort__Group__4__Impl rule__GSSIfaceUartPort__Group__5 )
-            // InternalIFACE.g:2242:2: rule__GSSIfaceUartPort__Group__4__Impl rule__GSSIfaceUartPort__Group__5
+            // InternalIFACE.g:2278:1: ( rule__GSSIfaceUartPort__Group__4__Impl rule__GSSIfaceUartPort__Group__5 )
+            // InternalIFACE.g:2279:2: rule__GSSIfaceUartPort__Group__4__Impl rule__GSSIfaceUartPort__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceUartPort__Group__4__Impl();
@@ -7410,23 +7554,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__4__Impl"
-    // InternalIFACE.g:2249:1: rule__GSSIfaceUartPort__Group__4__Impl : ( ( rule__GSSIfaceUartPort__NumberAssignment_4 ) ) ;
+    // InternalIFACE.g:2286:1: rule__GSSIfaceUartPort__Group__4__Impl : ( ( rule__GSSIfaceUartPort__NumberAssignment_4 ) ) ;
     public final void rule__GSSIfaceUartPort__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2253:1: ( ( ( rule__GSSIfaceUartPort__NumberAssignment_4 ) ) )
-            // InternalIFACE.g:2254:1: ( ( rule__GSSIfaceUartPort__NumberAssignment_4 ) )
+            // InternalIFACE.g:2290:1: ( ( ( rule__GSSIfaceUartPort__NumberAssignment_4 ) ) )
+            // InternalIFACE.g:2291:1: ( ( rule__GSSIfaceUartPort__NumberAssignment_4 ) )
             {
-            // InternalIFACE.g:2254:1: ( ( rule__GSSIfaceUartPort__NumberAssignment_4 ) )
-            // InternalIFACE.g:2255:2: ( rule__GSSIfaceUartPort__NumberAssignment_4 )
+            // InternalIFACE.g:2291:1: ( ( rule__GSSIfaceUartPort__NumberAssignment_4 ) )
+            // InternalIFACE.g:2292:2: ( rule__GSSIfaceUartPort__NumberAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getNumberAssignment_4()); 
             }
-            // InternalIFACE.g:2256:2: ( rule__GSSIfaceUartPort__NumberAssignment_4 )
-            // InternalIFACE.g:2256:3: rule__GSSIfaceUartPort__NumberAssignment_4
+            // InternalIFACE.g:2293:2: ( rule__GSSIfaceUartPort__NumberAssignment_4 )
+            // InternalIFACE.g:2293:3: rule__GSSIfaceUartPort__NumberAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceUartPort__NumberAssignment_4();
@@ -7461,14 +7605,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__5"
-    // InternalIFACE.g:2264:1: rule__GSSIfaceUartPort__Group__5 : rule__GSSIfaceUartPort__Group__5__Impl rule__GSSIfaceUartPort__Group__6 ;
+    // InternalIFACE.g:2301:1: rule__GSSIfaceUartPort__Group__5 : rule__GSSIfaceUartPort__Group__5__Impl rule__GSSIfaceUartPort__Group__6 ;
     public final void rule__GSSIfaceUartPort__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2268:1: ( rule__GSSIfaceUartPort__Group__5__Impl rule__GSSIfaceUartPort__Group__6 )
-            // InternalIFACE.g:2269:2: rule__GSSIfaceUartPort__Group__5__Impl rule__GSSIfaceUartPort__Group__6
+            // InternalIFACE.g:2305:1: ( rule__GSSIfaceUartPort__Group__5__Impl rule__GSSIfaceUartPort__Group__6 )
+            // InternalIFACE.g:2306:2: rule__GSSIfaceUartPort__Group__5__Impl rule__GSSIfaceUartPort__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_23);
             rule__GSSIfaceUartPort__Group__5__Impl();
@@ -7499,22 +7643,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__5__Impl"
-    // InternalIFACE.g:2276:1: rule__GSSIfaceUartPort__Group__5__Impl : ( ';' ) ;
+    // InternalIFACE.g:2313:1: rule__GSSIfaceUartPort__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSIfaceUartPort__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2280:1: ( ( ';' ) )
-            // InternalIFACE.g:2281:1: ( ';' )
+            // InternalIFACE.g:2317:1: ( ( ';' ) )
+            // InternalIFACE.g:2318:1: ( ';' )
             {
-            // InternalIFACE.g:2281:1: ( ';' )
-            // InternalIFACE.g:2282:2: ';'
+            // InternalIFACE.g:2318:1: ( ';' )
+            // InternalIFACE.g:2319:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_5()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_5()); 
             }
@@ -7540,14 +7684,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__6"
-    // InternalIFACE.g:2291:1: rule__GSSIfaceUartPort__Group__6 : rule__GSSIfaceUartPort__Group__6__Impl rule__GSSIfaceUartPort__Group__7 ;
+    // InternalIFACE.g:2328:1: rule__GSSIfaceUartPort__Group__6 : rule__GSSIfaceUartPort__Group__6__Impl rule__GSSIfaceUartPort__Group__7 ;
     public final void rule__GSSIfaceUartPort__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2295:1: ( rule__GSSIfaceUartPort__Group__6__Impl rule__GSSIfaceUartPort__Group__7 )
-            // InternalIFACE.g:2296:2: rule__GSSIfaceUartPort__Group__6__Impl rule__GSSIfaceUartPort__Group__7
+            // InternalIFACE.g:2332:1: ( rule__GSSIfaceUartPort__Group__6__Impl rule__GSSIfaceUartPort__Group__7 )
+            // InternalIFACE.g:2333:2: rule__GSSIfaceUartPort__Group__6__Impl rule__GSSIfaceUartPort__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceUartPort__Group__6__Impl();
@@ -7578,22 +7722,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__6__Impl"
-    // InternalIFACE.g:2303:1: rule__GSSIfaceUartPort__Group__6__Impl : ( 'baudRate' ) ;
+    // InternalIFACE.g:2340:1: rule__GSSIfaceUartPort__Group__6__Impl : ( 'baudRate' ) ;
     public final void rule__GSSIfaceUartPort__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2307:1: ( ( 'baudRate' ) )
-            // InternalIFACE.g:2308:1: ( 'baudRate' )
+            // InternalIFACE.g:2344:1: ( ( 'baudRate' ) )
+            // InternalIFACE.g:2345:1: ( 'baudRate' )
             {
-            // InternalIFACE.g:2308:1: ( 'baudRate' )
-            // InternalIFACE.g:2309:2: 'baudRate'
+            // InternalIFACE.g:2345:1: ( 'baudRate' )
+            // InternalIFACE.g:2346:2: 'baudRate'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getBaudRateKeyword_6()); 
             }
-            match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,50,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getBaudRateKeyword_6()); 
             }
@@ -7619,14 +7763,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__7"
-    // InternalIFACE.g:2318:1: rule__GSSIfaceUartPort__Group__7 : rule__GSSIfaceUartPort__Group__7__Impl rule__GSSIfaceUartPort__Group__8 ;
+    // InternalIFACE.g:2355:1: rule__GSSIfaceUartPort__Group__7 : rule__GSSIfaceUartPort__Group__7__Impl rule__GSSIfaceUartPort__Group__8 ;
     public final void rule__GSSIfaceUartPort__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2322:1: ( rule__GSSIfaceUartPort__Group__7__Impl rule__GSSIfaceUartPort__Group__8 )
-            // InternalIFACE.g:2323:2: rule__GSSIfaceUartPort__Group__7__Impl rule__GSSIfaceUartPort__Group__8
+            // InternalIFACE.g:2359:1: ( rule__GSSIfaceUartPort__Group__7__Impl rule__GSSIfaceUartPort__Group__8 )
+            // InternalIFACE.g:2360:2: rule__GSSIfaceUartPort__Group__7__Impl rule__GSSIfaceUartPort__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_24);
             rule__GSSIfaceUartPort__Group__7__Impl();
@@ -7657,22 +7801,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__7__Impl"
-    // InternalIFACE.g:2330:1: rule__GSSIfaceUartPort__Group__7__Impl : ( ':=' ) ;
+    // InternalIFACE.g:2367:1: rule__GSSIfaceUartPort__Group__7__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceUartPort__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2334:1: ( ( ':=' ) )
-            // InternalIFACE.g:2335:1: ( ':=' )
+            // InternalIFACE.g:2371:1: ( ( ':=' ) )
+            // InternalIFACE.g:2372:1: ( ':=' )
             {
-            // InternalIFACE.g:2335:1: ( ':=' )
-            // InternalIFACE.g:2336:2: ':='
+            // InternalIFACE.g:2372:1: ( ':=' )
+            // InternalIFACE.g:2373:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_7()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_7()); 
             }
@@ -7698,14 +7842,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__8"
-    // InternalIFACE.g:2345:1: rule__GSSIfaceUartPort__Group__8 : rule__GSSIfaceUartPort__Group__8__Impl rule__GSSIfaceUartPort__Group__9 ;
+    // InternalIFACE.g:2382:1: rule__GSSIfaceUartPort__Group__8 : rule__GSSIfaceUartPort__Group__8__Impl rule__GSSIfaceUartPort__Group__9 ;
     public final void rule__GSSIfaceUartPort__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2349:1: ( rule__GSSIfaceUartPort__Group__8__Impl rule__GSSIfaceUartPort__Group__9 )
-            // InternalIFACE.g:2350:2: rule__GSSIfaceUartPort__Group__8__Impl rule__GSSIfaceUartPort__Group__9
+            // InternalIFACE.g:2386:1: ( rule__GSSIfaceUartPort__Group__8__Impl rule__GSSIfaceUartPort__Group__9 )
+            // InternalIFACE.g:2387:2: rule__GSSIfaceUartPort__Group__8__Impl rule__GSSIfaceUartPort__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceUartPort__Group__8__Impl();
@@ -7736,23 +7880,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__8__Impl"
-    // InternalIFACE.g:2357:1: rule__GSSIfaceUartPort__Group__8__Impl : ( ( rule__GSSIfaceUartPort__BaudRateAssignment_8 ) ) ;
+    // InternalIFACE.g:2394:1: rule__GSSIfaceUartPort__Group__8__Impl : ( ( rule__GSSIfaceUartPort__BaudRateAssignment_8 ) ) ;
     public final void rule__GSSIfaceUartPort__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2361:1: ( ( ( rule__GSSIfaceUartPort__BaudRateAssignment_8 ) ) )
-            // InternalIFACE.g:2362:1: ( ( rule__GSSIfaceUartPort__BaudRateAssignment_8 ) )
+            // InternalIFACE.g:2398:1: ( ( ( rule__GSSIfaceUartPort__BaudRateAssignment_8 ) ) )
+            // InternalIFACE.g:2399:1: ( ( rule__GSSIfaceUartPort__BaudRateAssignment_8 ) )
             {
-            // InternalIFACE.g:2362:1: ( ( rule__GSSIfaceUartPort__BaudRateAssignment_8 ) )
-            // InternalIFACE.g:2363:2: ( rule__GSSIfaceUartPort__BaudRateAssignment_8 )
+            // InternalIFACE.g:2399:1: ( ( rule__GSSIfaceUartPort__BaudRateAssignment_8 ) )
+            // InternalIFACE.g:2400:2: ( rule__GSSIfaceUartPort__BaudRateAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getBaudRateAssignment_8()); 
             }
-            // InternalIFACE.g:2364:2: ( rule__GSSIfaceUartPort__BaudRateAssignment_8 )
-            // InternalIFACE.g:2364:3: rule__GSSIfaceUartPort__BaudRateAssignment_8
+            // InternalIFACE.g:2401:2: ( rule__GSSIfaceUartPort__BaudRateAssignment_8 )
+            // InternalIFACE.g:2401:3: rule__GSSIfaceUartPort__BaudRateAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceUartPort__BaudRateAssignment_8();
@@ -7787,14 +7931,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__9"
-    // InternalIFACE.g:2372:1: rule__GSSIfaceUartPort__Group__9 : rule__GSSIfaceUartPort__Group__9__Impl rule__GSSIfaceUartPort__Group__10 ;
+    // InternalIFACE.g:2409:1: rule__GSSIfaceUartPort__Group__9 : rule__GSSIfaceUartPort__Group__9__Impl rule__GSSIfaceUartPort__Group__10 ;
     public final void rule__GSSIfaceUartPort__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2376:1: ( rule__GSSIfaceUartPort__Group__9__Impl rule__GSSIfaceUartPort__Group__10 )
-            // InternalIFACE.g:2377:2: rule__GSSIfaceUartPort__Group__9__Impl rule__GSSIfaceUartPort__Group__10
+            // InternalIFACE.g:2413:1: ( rule__GSSIfaceUartPort__Group__9__Impl rule__GSSIfaceUartPort__Group__10 )
+            // InternalIFACE.g:2414:2: rule__GSSIfaceUartPort__Group__9__Impl rule__GSSIfaceUartPort__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_25);
             rule__GSSIfaceUartPort__Group__9__Impl();
@@ -7825,22 +7969,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__9__Impl"
-    // InternalIFACE.g:2384:1: rule__GSSIfaceUartPort__Group__9__Impl : ( ';' ) ;
+    // InternalIFACE.g:2421:1: rule__GSSIfaceUartPort__Group__9__Impl : ( ';' ) ;
     public final void rule__GSSIfaceUartPort__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2388:1: ( ( ';' ) )
-            // InternalIFACE.g:2389:1: ( ';' )
+            // InternalIFACE.g:2425:1: ( ( ';' ) )
+            // InternalIFACE.g:2426:1: ( ';' )
             {
-            // InternalIFACE.g:2389:1: ( ';' )
-            // InternalIFACE.g:2390:2: ';'
+            // InternalIFACE.g:2426:1: ( ';' )
+            // InternalIFACE.g:2427:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_9()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_9()); 
             }
@@ -7866,14 +8010,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__10"
-    // InternalIFACE.g:2399:1: rule__GSSIfaceUartPort__Group__10 : rule__GSSIfaceUartPort__Group__10__Impl rule__GSSIfaceUartPort__Group__11 ;
+    // InternalIFACE.g:2436:1: rule__GSSIfaceUartPort__Group__10 : rule__GSSIfaceUartPort__Group__10__Impl rule__GSSIfaceUartPort__Group__11 ;
     public final void rule__GSSIfaceUartPort__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2403:1: ( rule__GSSIfaceUartPort__Group__10__Impl rule__GSSIfaceUartPort__Group__11 )
-            // InternalIFACE.g:2404:2: rule__GSSIfaceUartPort__Group__10__Impl rule__GSSIfaceUartPort__Group__11
+            // InternalIFACE.g:2440:1: ( rule__GSSIfaceUartPort__Group__10__Impl rule__GSSIfaceUartPort__Group__11 )
+            // InternalIFACE.g:2441:2: rule__GSSIfaceUartPort__Group__10__Impl rule__GSSIfaceUartPort__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceUartPort__Group__10__Impl();
@@ -7904,22 +8048,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__10__Impl"
-    // InternalIFACE.g:2411:1: rule__GSSIfaceUartPort__Group__10__Impl : ( 'parity' ) ;
+    // InternalIFACE.g:2448:1: rule__GSSIfaceUartPort__Group__10__Impl : ( 'parity' ) ;
     public final void rule__GSSIfaceUartPort__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2415:1: ( ( 'parity' ) )
-            // InternalIFACE.g:2416:1: ( 'parity' )
+            // InternalIFACE.g:2452:1: ( ( 'parity' ) )
+            // InternalIFACE.g:2453:1: ( 'parity' )
             {
-            // InternalIFACE.g:2416:1: ( 'parity' )
-            // InternalIFACE.g:2417:2: 'parity'
+            // InternalIFACE.g:2453:1: ( 'parity' )
+            // InternalIFACE.g:2454:2: 'parity'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getParityKeyword_10()); 
             }
-            match(input,49,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,51,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getParityKeyword_10()); 
             }
@@ -7945,14 +8089,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__11"
-    // InternalIFACE.g:2426:1: rule__GSSIfaceUartPort__Group__11 : rule__GSSIfaceUartPort__Group__11__Impl rule__GSSIfaceUartPort__Group__12 ;
+    // InternalIFACE.g:2463:1: rule__GSSIfaceUartPort__Group__11 : rule__GSSIfaceUartPort__Group__11__Impl rule__GSSIfaceUartPort__Group__12 ;
     public final void rule__GSSIfaceUartPort__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2430:1: ( rule__GSSIfaceUartPort__Group__11__Impl rule__GSSIfaceUartPort__Group__12 )
-            // InternalIFACE.g:2431:2: rule__GSSIfaceUartPort__Group__11__Impl rule__GSSIfaceUartPort__Group__12
+            // InternalIFACE.g:2467:1: ( rule__GSSIfaceUartPort__Group__11__Impl rule__GSSIfaceUartPort__Group__12 )
+            // InternalIFACE.g:2468:2: rule__GSSIfaceUartPort__Group__11__Impl rule__GSSIfaceUartPort__Group__12
             {
             pushFollow(FollowSets000.FOLLOW_26);
             rule__GSSIfaceUartPort__Group__11__Impl();
@@ -7983,22 +8127,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__11__Impl"
-    // InternalIFACE.g:2438:1: rule__GSSIfaceUartPort__Group__11__Impl : ( ':=' ) ;
+    // InternalIFACE.g:2475:1: rule__GSSIfaceUartPort__Group__11__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceUartPort__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2442:1: ( ( ':=' ) )
-            // InternalIFACE.g:2443:1: ( ':=' )
+            // InternalIFACE.g:2479:1: ( ( ':=' ) )
+            // InternalIFACE.g:2480:1: ( ':=' )
             {
-            // InternalIFACE.g:2443:1: ( ':=' )
-            // InternalIFACE.g:2444:2: ':='
+            // InternalIFACE.g:2480:1: ( ':=' )
+            // InternalIFACE.g:2481:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_11()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_11()); 
             }
@@ -8024,14 +8168,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__12"
-    // InternalIFACE.g:2453:1: rule__GSSIfaceUartPort__Group__12 : rule__GSSIfaceUartPort__Group__12__Impl rule__GSSIfaceUartPort__Group__13 ;
+    // InternalIFACE.g:2490:1: rule__GSSIfaceUartPort__Group__12 : rule__GSSIfaceUartPort__Group__12__Impl rule__GSSIfaceUartPort__Group__13 ;
     public final void rule__GSSIfaceUartPort__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2457:1: ( rule__GSSIfaceUartPort__Group__12__Impl rule__GSSIfaceUartPort__Group__13 )
-            // InternalIFACE.g:2458:2: rule__GSSIfaceUartPort__Group__12__Impl rule__GSSIfaceUartPort__Group__13
+            // InternalIFACE.g:2494:1: ( rule__GSSIfaceUartPort__Group__12__Impl rule__GSSIfaceUartPort__Group__13 )
+            // InternalIFACE.g:2495:2: rule__GSSIfaceUartPort__Group__12__Impl rule__GSSIfaceUartPort__Group__13
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceUartPort__Group__12__Impl();
@@ -8062,23 +8206,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__12__Impl"
-    // InternalIFACE.g:2465:1: rule__GSSIfaceUartPort__Group__12__Impl : ( ( rule__GSSIfaceUartPort__ParityAssignment_12 ) ) ;
+    // InternalIFACE.g:2502:1: rule__GSSIfaceUartPort__Group__12__Impl : ( ( rule__GSSIfaceUartPort__ParityAssignment_12 ) ) ;
     public final void rule__GSSIfaceUartPort__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2469:1: ( ( ( rule__GSSIfaceUartPort__ParityAssignment_12 ) ) )
-            // InternalIFACE.g:2470:1: ( ( rule__GSSIfaceUartPort__ParityAssignment_12 ) )
+            // InternalIFACE.g:2506:1: ( ( ( rule__GSSIfaceUartPort__ParityAssignment_12 ) ) )
+            // InternalIFACE.g:2507:1: ( ( rule__GSSIfaceUartPort__ParityAssignment_12 ) )
             {
-            // InternalIFACE.g:2470:1: ( ( rule__GSSIfaceUartPort__ParityAssignment_12 ) )
-            // InternalIFACE.g:2471:2: ( rule__GSSIfaceUartPort__ParityAssignment_12 )
+            // InternalIFACE.g:2507:1: ( ( rule__GSSIfaceUartPort__ParityAssignment_12 ) )
+            // InternalIFACE.g:2508:2: ( rule__GSSIfaceUartPort__ParityAssignment_12 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getParityAssignment_12()); 
             }
-            // InternalIFACE.g:2472:2: ( rule__GSSIfaceUartPort__ParityAssignment_12 )
-            // InternalIFACE.g:2472:3: rule__GSSIfaceUartPort__ParityAssignment_12
+            // InternalIFACE.g:2509:2: ( rule__GSSIfaceUartPort__ParityAssignment_12 )
+            // InternalIFACE.g:2509:3: rule__GSSIfaceUartPort__ParityAssignment_12
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceUartPort__ParityAssignment_12();
@@ -8113,14 +8257,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__13"
-    // InternalIFACE.g:2480:1: rule__GSSIfaceUartPort__Group__13 : rule__GSSIfaceUartPort__Group__13__Impl rule__GSSIfaceUartPort__Group__14 ;
+    // InternalIFACE.g:2517:1: rule__GSSIfaceUartPort__Group__13 : rule__GSSIfaceUartPort__Group__13__Impl rule__GSSIfaceUartPort__Group__14 ;
     public final void rule__GSSIfaceUartPort__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2484:1: ( rule__GSSIfaceUartPort__Group__13__Impl rule__GSSIfaceUartPort__Group__14 )
-            // InternalIFACE.g:2485:2: rule__GSSIfaceUartPort__Group__13__Impl rule__GSSIfaceUartPort__Group__14
+            // InternalIFACE.g:2521:1: ( rule__GSSIfaceUartPort__Group__13__Impl rule__GSSIfaceUartPort__Group__14 )
+            // InternalIFACE.g:2522:2: rule__GSSIfaceUartPort__Group__13__Impl rule__GSSIfaceUartPort__Group__14
             {
             pushFollow(FollowSets000.FOLLOW_27);
             rule__GSSIfaceUartPort__Group__13__Impl();
@@ -8151,22 +8295,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__13__Impl"
-    // InternalIFACE.g:2492:1: rule__GSSIfaceUartPort__Group__13__Impl : ( ';' ) ;
+    // InternalIFACE.g:2529:1: rule__GSSIfaceUartPort__Group__13__Impl : ( ';' ) ;
     public final void rule__GSSIfaceUartPort__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2496:1: ( ( ';' ) )
-            // InternalIFACE.g:2497:1: ( ';' )
+            // InternalIFACE.g:2533:1: ( ( ';' ) )
+            // InternalIFACE.g:2534:1: ( ';' )
             {
-            // InternalIFACE.g:2497:1: ( ';' )
-            // InternalIFACE.g:2498:2: ';'
+            // InternalIFACE.g:2534:1: ( ';' )
+            // InternalIFACE.g:2535:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_13()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_13()); 
             }
@@ -8192,14 +8336,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__14"
-    // InternalIFACE.g:2507:1: rule__GSSIfaceUartPort__Group__14 : rule__GSSIfaceUartPort__Group__14__Impl rule__GSSIfaceUartPort__Group__15 ;
+    // InternalIFACE.g:2544:1: rule__GSSIfaceUartPort__Group__14 : rule__GSSIfaceUartPort__Group__14__Impl rule__GSSIfaceUartPort__Group__15 ;
     public final void rule__GSSIfaceUartPort__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2511:1: ( rule__GSSIfaceUartPort__Group__14__Impl rule__GSSIfaceUartPort__Group__15 )
-            // InternalIFACE.g:2512:2: rule__GSSIfaceUartPort__Group__14__Impl rule__GSSIfaceUartPort__Group__15
+            // InternalIFACE.g:2548:1: ( rule__GSSIfaceUartPort__Group__14__Impl rule__GSSIfaceUartPort__Group__15 )
+            // InternalIFACE.g:2549:2: rule__GSSIfaceUartPort__Group__14__Impl rule__GSSIfaceUartPort__Group__15
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceUartPort__Group__14__Impl();
@@ -8230,22 +8374,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__14__Impl"
-    // InternalIFACE.g:2519:1: rule__GSSIfaceUartPort__Group__14__Impl : ( 'dataBits' ) ;
+    // InternalIFACE.g:2556:1: rule__GSSIfaceUartPort__Group__14__Impl : ( 'dataBits' ) ;
     public final void rule__GSSIfaceUartPort__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2523:1: ( ( 'dataBits' ) )
-            // InternalIFACE.g:2524:1: ( 'dataBits' )
+            // InternalIFACE.g:2560:1: ( ( 'dataBits' ) )
+            // InternalIFACE.g:2561:1: ( 'dataBits' )
             {
-            // InternalIFACE.g:2524:1: ( 'dataBits' )
-            // InternalIFACE.g:2525:2: 'dataBits'
+            // InternalIFACE.g:2561:1: ( 'dataBits' )
+            // InternalIFACE.g:2562:2: 'dataBits'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getDataBitsKeyword_14()); 
             }
-            match(input,50,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,52,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getDataBitsKeyword_14()); 
             }
@@ -8271,14 +8415,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__15"
-    // InternalIFACE.g:2534:1: rule__GSSIfaceUartPort__Group__15 : rule__GSSIfaceUartPort__Group__15__Impl rule__GSSIfaceUartPort__Group__16 ;
+    // InternalIFACE.g:2571:1: rule__GSSIfaceUartPort__Group__15 : rule__GSSIfaceUartPort__Group__15__Impl rule__GSSIfaceUartPort__Group__16 ;
     public final void rule__GSSIfaceUartPort__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2538:1: ( rule__GSSIfaceUartPort__Group__15__Impl rule__GSSIfaceUartPort__Group__16 )
-            // InternalIFACE.g:2539:2: rule__GSSIfaceUartPort__Group__15__Impl rule__GSSIfaceUartPort__Group__16
+            // InternalIFACE.g:2575:1: ( rule__GSSIfaceUartPort__Group__15__Impl rule__GSSIfaceUartPort__Group__16 )
+            // InternalIFACE.g:2576:2: rule__GSSIfaceUartPort__Group__15__Impl rule__GSSIfaceUartPort__Group__16
             {
             pushFollow(FollowSets000.FOLLOW_28);
             rule__GSSIfaceUartPort__Group__15__Impl();
@@ -8309,22 +8453,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__15__Impl"
-    // InternalIFACE.g:2546:1: rule__GSSIfaceUartPort__Group__15__Impl : ( ':=' ) ;
+    // InternalIFACE.g:2583:1: rule__GSSIfaceUartPort__Group__15__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceUartPort__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2550:1: ( ( ':=' ) )
-            // InternalIFACE.g:2551:1: ( ':=' )
+            // InternalIFACE.g:2587:1: ( ( ':=' ) )
+            // InternalIFACE.g:2588:1: ( ':=' )
             {
-            // InternalIFACE.g:2551:1: ( ':=' )
-            // InternalIFACE.g:2552:2: ':='
+            // InternalIFACE.g:2588:1: ( ':=' )
+            // InternalIFACE.g:2589:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_15()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_15()); 
             }
@@ -8350,14 +8494,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__16"
-    // InternalIFACE.g:2561:1: rule__GSSIfaceUartPort__Group__16 : rule__GSSIfaceUartPort__Group__16__Impl rule__GSSIfaceUartPort__Group__17 ;
+    // InternalIFACE.g:2598:1: rule__GSSIfaceUartPort__Group__16 : rule__GSSIfaceUartPort__Group__16__Impl rule__GSSIfaceUartPort__Group__17 ;
     public final void rule__GSSIfaceUartPort__Group__16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2565:1: ( rule__GSSIfaceUartPort__Group__16__Impl rule__GSSIfaceUartPort__Group__17 )
-            // InternalIFACE.g:2566:2: rule__GSSIfaceUartPort__Group__16__Impl rule__GSSIfaceUartPort__Group__17
+            // InternalIFACE.g:2602:1: ( rule__GSSIfaceUartPort__Group__16__Impl rule__GSSIfaceUartPort__Group__17 )
+            // InternalIFACE.g:2603:2: rule__GSSIfaceUartPort__Group__16__Impl rule__GSSIfaceUartPort__Group__17
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceUartPort__Group__16__Impl();
@@ -8388,23 +8532,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__16__Impl"
-    // InternalIFACE.g:2573:1: rule__GSSIfaceUartPort__Group__16__Impl : ( ( rule__GSSIfaceUartPort__DataBitsAssignment_16 ) ) ;
+    // InternalIFACE.g:2610:1: rule__GSSIfaceUartPort__Group__16__Impl : ( ( rule__GSSIfaceUartPort__DataBitsAssignment_16 ) ) ;
     public final void rule__GSSIfaceUartPort__Group__16__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2577:1: ( ( ( rule__GSSIfaceUartPort__DataBitsAssignment_16 ) ) )
-            // InternalIFACE.g:2578:1: ( ( rule__GSSIfaceUartPort__DataBitsAssignment_16 ) )
+            // InternalIFACE.g:2614:1: ( ( ( rule__GSSIfaceUartPort__DataBitsAssignment_16 ) ) )
+            // InternalIFACE.g:2615:1: ( ( rule__GSSIfaceUartPort__DataBitsAssignment_16 ) )
             {
-            // InternalIFACE.g:2578:1: ( ( rule__GSSIfaceUartPort__DataBitsAssignment_16 ) )
-            // InternalIFACE.g:2579:2: ( rule__GSSIfaceUartPort__DataBitsAssignment_16 )
+            // InternalIFACE.g:2615:1: ( ( rule__GSSIfaceUartPort__DataBitsAssignment_16 ) )
+            // InternalIFACE.g:2616:2: ( rule__GSSIfaceUartPort__DataBitsAssignment_16 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getDataBitsAssignment_16()); 
             }
-            // InternalIFACE.g:2580:2: ( rule__GSSIfaceUartPort__DataBitsAssignment_16 )
-            // InternalIFACE.g:2580:3: rule__GSSIfaceUartPort__DataBitsAssignment_16
+            // InternalIFACE.g:2617:2: ( rule__GSSIfaceUartPort__DataBitsAssignment_16 )
+            // InternalIFACE.g:2617:3: rule__GSSIfaceUartPort__DataBitsAssignment_16
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceUartPort__DataBitsAssignment_16();
@@ -8439,14 +8583,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__17"
-    // InternalIFACE.g:2588:1: rule__GSSIfaceUartPort__Group__17 : rule__GSSIfaceUartPort__Group__17__Impl rule__GSSIfaceUartPort__Group__18 ;
+    // InternalIFACE.g:2625:1: rule__GSSIfaceUartPort__Group__17 : rule__GSSIfaceUartPort__Group__17__Impl rule__GSSIfaceUartPort__Group__18 ;
     public final void rule__GSSIfaceUartPort__Group__17() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2592:1: ( rule__GSSIfaceUartPort__Group__17__Impl rule__GSSIfaceUartPort__Group__18 )
-            // InternalIFACE.g:2593:2: rule__GSSIfaceUartPort__Group__17__Impl rule__GSSIfaceUartPort__Group__18
+            // InternalIFACE.g:2629:1: ( rule__GSSIfaceUartPort__Group__17__Impl rule__GSSIfaceUartPort__Group__18 )
+            // InternalIFACE.g:2630:2: rule__GSSIfaceUartPort__Group__17__Impl rule__GSSIfaceUartPort__Group__18
             {
             pushFollow(FollowSets000.FOLLOW_29);
             rule__GSSIfaceUartPort__Group__17__Impl();
@@ -8477,22 +8621,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__17__Impl"
-    // InternalIFACE.g:2600:1: rule__GSSIfaceUartPort__Group__17__Impl : ( ';' ) ;
+    // InternalIFACE.g:2637:1: rule__GSSIfaceUartPort__Group__17__Impl : ( ';' ) ;
     public final void rule__GSSIfaceUartPort__Group__17__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2604:1: ( ( ';' ) )
-            // InternalIFACE.g:2605:1: ( ';' )
+            // InternalIFACE.g:2641:1: ( ( ';' ) )
+            // InternalIFACE.g:2642:1: ( ';' )
             {
-            // InternalIFACE.g:2605:1: ( ';' )
-            // InternalIFACE.g:2606:2: ';'
+            // InternalIFACE.g:2642:1: ( ';' )
+            // InternalIFACE.g:2643:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_17()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_17()); 
             }
@@ -8518,14 +8662,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__18"
-    // InternalIFACE.g:2615:1: rule__GSSIfaceUartPort__Group__18 : rule__GSSIfaceUartPort__Group__18__Impl rule__GSSIfaceUartPort__Group__19 ;
+    // InternalIFACE.g:2652:1: rule__GSSIfaceUartPort__Group__18 : rule__GSSIfaceUartPort__Group__18__Impl rule__GSSIfaceUartPort__Group__19 ;
     public final void rule__GSSIfaceUartPort__Group__18() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2619:1: ( rule__GSSIfaceUartPort__Group__18__Impl rule__GSSIfaceUartPort__Group__19 )
-            // InternalIFACE.g:2620:2: rule__GSSIfaceUartPort__Group__18__Impl rule__GSSIfaceUartPort__Group__19
+            // InternalIFACE.g:2656:1: ( rule__GSSIfaceUartPort__Group__18__Impl rule__GSSIfaceUartPort__Group__19 )
+            // InternalIFACE.g:2657:2: rule__GSSIfaceUartPort__Group__18__Impl rule__GSSIfaceUartPort__Group__19
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceUartPort__Group__18__Impl();
@@ -8556,22 +8700,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__18__Impl"
-    // InternalIFACE.g:2627:1: rule__GSSIfaceUartPort__Group__18__Impl : ( 'stopBits' ) ;
+    // InternalIFACE.g:2664:1: rule__GSSIfaceUartPort__Group__18__Impl : ( 'stopBits' ) ;
     public final void rule__GSSIfaceUartPort__Group__18__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2631:1: ( ( 'stopBits' ) )
-            // InternalIFACE.g:2632:1: ( 'stopBits' )
+            // InternalIFACE.g:2668:1: ( ( 'stopBits' ) )
+            // InternalIFACE.g:2669:1: ( 'stopBits' )
             {
-            // InternalIFACE.g:2632:1: ( 'stopBits' )
-            // InternalIFACE.g:2633:2: 'stopBits'
+            // InternalIFACE.g:2669:1: ( 'stopBits' )
+            // InternalIFACE.g:2670:2: 'stopBits'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getStopBitsKeyword_18()); 
             }
-            match(input,51,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,53,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getStopBitsKeyword_18()); 
             }
@@ -8597,14 +8741,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__19"
-    // InternalIFACE.g:2642:1: rule__GSSIfaceUartPort__Group__19 : rule__GSSIfaceUartPort__Group__19__Impl rule__GSSIfaceUartPort__Group__20 ;
+    // InternalIFACE.g:2679:1: rule__GSSIfaceUartPort__Group__19 : rule__GSSIfaceUartPort__Group__19__Impl rule__GSSIfaceUartPort__Group__20 ;
     public final void rule__GSSIfaceUartPort__Group__19() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2646:1: ( rule__GSSIfaceUartPort__Group__19__Impl rule__GSSIfaceUartPort__Group__20 )
-            // InternalIFACE.g:2647:2: rule__GSSIfaceUartPort__Group__19__Impl rule__GSSIfaceUartPort__Group__20
+            // InternalIFACE.g:2683:1: ( rule__GSSIfaceUartPort__Group__19__Impl rule__GSSIfaceUartPort__Group__20 )
+            // InternalIFACE.g:2684:2: rule__GSSIfaceUartPort__Group__19__Impl rule__GSSIfaceUartPort__Group__20
             {
             pushFollow(FollowSets000.FOLLOW_30);
             rule__GSSIfaceUartPort__Group__19__Impl();
@@ -8635,22 +8779,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__19__Impl"
-    // InternalIFACE.g:2654:1: rule__GSSIfaceUartPort__Group__19__Impl : ( ':=' ) ;
+    // InternalIFACE.g:2691:1: rule__GSSIfaceUartPort__Group__19__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceUartPort__Group__19__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2658:1: ( ( ':=' ) )
-            // InternalIFACE.g:2659:1: ( ':=' )
+            // InternalIFACE.g:2695:1: ( ( ':=' ) )
+            // InternalIFACE.g:2696:1: ( ':=' )
             {
-            // InternalIFACE.g:2659:1: ( ':=' )
-            // InternalIFACE.g:2660:2: ':='
+            // InternalIFACE.g:2696:1: ( ':=' )
+            // InternalIFACE.g:2697:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_19()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_19()); 
             }
@@ -8676,14 +8820,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__20"
-    // InternalIFACE.g:2669:1: rule__GSSIfaceUartPort__Group__20 : rule__GSSIfaceUartPort__Group__20__Impl rule__GSSIfaceUartPort__Group__21 ;
+    // InternalIFACE.g:2706:1: rule__GSSIfaceUartPort__Group__20 : rule__GSSIfaceUartPort__Group__20__Impl rule__GSSIfaceUartPort__Group__21 ;
     public final void rule__GSSIfaceUartPort__Group__20() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2673:1: ( rule__GSSIfaceUartPort__Group__20__Impl rule__GSSIfaceUartPort__Group__21 )
-            // InternalIFACE.g:2674:2: rule__GSSIfaceUartPort__Group__20__Impl rule__GSSIfaceUartPort__Group__21
+            // InternalIFACE.g:2710:1: ( rule__GSSIfaceUartPort__Group__20__Impl rule__GSSIfaceUartPort__Group__21 )
+            // InternalIFACE.g:2711:2: rule__GSSIfaceUartPort__Group__20__Impl rule__GSSIfaceUartPort__Group__21
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceUartPort__Group__20__Impl();
@@ -8714,23 +8858,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__20__Impl"
-    // InternalIFACE.g:2681:1: rule__GSSIfaceUartPort__Group__20__Impl : ( ( rule__GSSIfaceUartPort__StopBitsAssignment_20 ) ) ;
+    // InternalIFACE.g:2718:1: rule__GSSIfaceUartPort__Group__20__Impl : ( ( rule__GSSIfaceUartPort__StopBitsAssignment_20 ) ) ;
     public final void rule__GSSIfaceUartPort__Group__20__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2685:1: ( ( ( rule__GSSIfaceUartPort__StopBitsAssignment_20 ) ) )
-            // InternalIFACE.g:2686:1: ( ( rule__GSSIfaceUartPort__StopBitsAssignment_20 ) )
+            // InternalIFACE.g:2722:1: ( ( ( rule__GSSIfaceUartPort__StopBitsAssignment_20 ) ) )
+            // InternalIFACE.g:2723:1: ( ( rule__GSSIfaceUartPort__StopBitsAssignment_20 ) )
             {
-            // InternalIFACE.g:2686:1: ( ( rule__GSSIfaceUartPort__StopBitsAssignment_20 ) )
-            // InternalIFACE.g:2687:2: ( rule__GSSIfaceUartPort__StopBitsAssignment_20 )
+            // InternalIFACE.g:2723:1: ( ( rule__GSSIfaceUartPort__StopBitsAssignment_20 ) )
+            // InternalIFACE.g:2724:2: ( rule__GSSIfaceUartPort__StopBitsAssignment_20 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getStopBitsAssignment_20()); 
             }
-            // InternalIFACE.g:2688:2: ( rule__GSSIfaceUartPort__StopBitsAssignment_20 )
-            // InternalIFACE.g:2688:3: rule__GSSIfaceUartPort__StopBitsAssignment_20
+            // InternalIFACE.g:2725:2: ( rule__GSSIfaceUartPort__StopBitsAssignment_20 )
+            // InternalIFACE.g:2725:3: rule__GSSIfaceUartPort__StopBitsAssignment_20
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceUartPort__StopBitsAssignment_20();
@@ -8765,14 +8909,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__21"
-    // InternalIFACE.g:2696:1: rule__GSSIfaceUartPort__Group__21 : rule__GSSIfaceUartPort__Group__21__Impl rule__GSSIfaceUartPort__Group__22 ;
+    // InternalIFACE.g:2733:1: rule__GSSIfaceUartPort__Group__21 : rule__GSSIfaceUartPort__Group__21__Impl rule__GSSIfaceUartPort__Group__22 ;
     public final void rule__GSSIfaceUartPort__Group__21() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2700:1: ( rule__GSSIfaceUartPort__Group__21__Impl rule__GSSIfaceUartPort__Group__22 )
-            // InternalIFACE.g:2701:2: rule__GSSIfaceUartPort__Group__21__Impl rule__GSSIfaceUartPort__Group__22
+            // InternalIFACE.g:2737:1: ( rule__GSSIfaceUartPort__Group__21__Impl rule__GSSIfaceUartPort__Group__22 )
+            // InternalIFACE.g:2738:2: rule__GSSIfaceUartPort__Group__21__Impl rule__GSSIfaceUartPort__Group__22
             {
             pushFollow(FollowSets000.FOLLOW_31);
             rule__GSSIfaceUartPort__Group__21__Impl();
@@ -8803,22 +8947,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__21__Impl"
-    // InternalIFACE.g:2708:1: rule__GSSIfaceUartPort__Group__21__Impl : ( ';' ) ;
+    // InternalIFACE.g:2745:1: rule__GSSIfaceUartPort__Group__21__Impl : ( ';' ) ;
     public final void rule__GSSIfaceUartPort__Group__21__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2712:1: ( ( ';' ) )
-            // InternalIFACE.g:2713:1: ( ';' )
+            // InternalIFACE.g:2749:1: ( ( ';' ) )
+            // InternalIFACE.g:2750:1: ( ';' )
             {
-            // InternalIFACE.g:2713:1: ( ';' )
-            // InternalIFACE.g:2714:2: ';'
+            // InternalIFACE.g:2750:1: ( ';' )
+            // InternalIFACE.g:2751:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_21()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_21()); 
             }
@@ -8844,14 +8988,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__22"
-    // InternalIFACE.g:2723:1: rule__GSSIfaceUartPort__Group__22 : rule__GSSIfaceUartPort__Group__22__Impl rule__GSSIfaceUartPort__Group__23 ;
+    // InternalIFACE.g:2760:1: rule__GSSIfaceUartPort__Group__22 : rule__GSSIfaceUartPort__Group__22__Impl rule__GSSIfaceUartPort__Group__23 ;
     public final void rule__GSSIfaceUartPort__Group__22() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2727:1: ( rule__GSSIfaceUartPort__Group__22__Impl rule__GSSIfaceUartPort__Group__23 )
-            // InternalIFACE.g:2728:2: rule__GSSIfaceUartPort__Group__22__Impl rule__GSSIfaceUartPort__Group__23
+            // InternalIFACE.g:2764:1: ( rule__GSSIfaceUartPort__Group__22__Impl rule__GSSIfaceUartPort__Group__23 )
+            // InternalIFACE.g:2765:2: rule__GSSIfaceUartPort__Group__22__Impl rule__GSSIfaceUartPort__Group__23
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceUartPort__Group__22__Impl();
@@ -8882,24 +9026,24 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__22__Impl"
-    // InternalIFACE.g:2735:1: rule__GSSIfaceUartPort__Group__22__Impl : ( 'inputQueueSize' ) ;
+    // InternalIFACE.g:2772:1: rule__GSSIfaceUartPort__Group__22__Impl : ( 'flowControl' ) ;
     public final void rule__GSSIfaceUartPort__Group__22__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2739:1: ( ( 'inputQueueSize' ) )
-            // InternalIFACE.g:2740:1: ( 'inputQueueSize' )
+            // InternalIFACE.g:2776:1: ( ( 'flowControl' ) )
+            // InternalIFACE.g:2777:1: ( 'flowControl' )
             {
-            // InternalIFACE.g:2740:1: ( 'inputQueueSize' )
-            // InternalIFACE.g:2741:2: 'inputQueueSize'
+            // InternalIFACE.g:2777:1: ( 'flowControl' )
+            // InternalIFACE.g:2778:2: 'flowControl'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeKeyword_22()); 
+               before(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlKeyword_22()); 
             }
-            match(input,52,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,54,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeKeyword_22()); 
+               after(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlKeyword_22()); 
             }
 
             }
@@ -8923,16 +9067,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__23"
-    // InternalIFACE.g:2750:1: rule__GSSIfaceUartPort__Group__23 : rule__GSSIfaceUartPort__Group__23__Impl rule__GSSIfaceUartPort__Group__24 ;
+    // InternalIFACE.g:2787:1: rule__GSSIfaceUartPort__Group__23 : rule__GSSIfaceUartPort__Group__23__Impl rule__GSSIfaceUartPort__Group__24 ;
     public final void rule__GSSIfaceUartPort__Group__23() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2754:1: ( rule__GSSIfaceUartPort__Group__23__Impl rule__GSSIfaceUartPort__Group__24 )
-            // InternalIFACE.g:2755:2: rule__GSSIfaceUartPort__Group__23__Impl rule__GSSIfaceUartPort__Group__24
+            // InternalIFACE.g:2791:1: ( rule__GSSIfaceUartPort__Group__23__Impl rule__GSSIfaceUartPort__Group__24 )
+            // InternalIFACE.g:2792:2: rule__GSSIfaceUartPort__Group__23__Impl rule__GSSIfaceUartPort__Group__24
             {
-            pushFollow(FollowSets000.FOLLOW_17);
+            pushFollow(FollowSets000.FOLLOW_32);
             rule__GSSIfaceUartPort__Group__23__Impl();
 
             state._fsp--;
@@ -8961,22 +9105,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__23__Impl"
-    // InternalIFACE.g:2762:1: rule__GSSIfaceUartPort__Group__23__Impl : ( ':=' ) ;
+    // InternalIFACE.g:2799:1: rule__GSSIfaceUartPort__Group__23__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceUartPort__Group__23__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2766:1: ( ( ':=' ) )
-            // InternalIFACE.g:2767:1: ( ':=' )
+            // InternalIFACE.g:2803:1: ( ( ':=' ) )
+            // InternalIFACE.g:2804:1: ( ':=' )
             {
-            // InternalIFACE.g:2767:1: ( ':=' )
-            // InternalIFACE.g:2768:2: ':='
+            // InternalIFACE.g:2804:1: ( ':=' )
+            // InternalIFACE.g:2805:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_23()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_23()); 
             }
@@ -9002,14 +9146,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__24"
-    // InternalIFACE.g:2777:1: rule__GSSIfaceUartPort__Group__24 : rule__GSSIfaceUartPort__Group__24__Impl rule__GSSIfaceUartPort__Group__25 ;
+    // InternalIFACE.g:2814:1: rule__GSSIfaceUartPort__Group__24 : rule__GSSIfaceUartPort__Group__24__Impl rule__GSSIfaceUartPort__Group__25 ;
     public final void rule__GSSIfaceUartPort__Group__24() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2781:1: ( rule__GSSIfaceUartPort__Group__24__Impl rule__GSSIfaceUartPort__Group__25 )
-            // InternalIFACE.g:2782:2: rule__GSSIfaceUartPort__Group__24__Impl rule__GSSIfaceUartPort__Group__25
+            // InternalIFACE.g:2818:1: ( rule__GSSIfaceUartPort__Group__24__Impl rule__GSSIfaceUartPort__Group__25 )
+            // InternalIFACE.g:2819:2: rule__GSSIfaceUartPort__Group__24__Impl rule__GSSIfaceUartPort__Group__25
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceUartPort__Group__24__Impl();
@@ -9040,26 +9184,26 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__24__Impl"
-    // InternalIFACE.g:2789:1: rule__GSSIfaceUartPort__Group__24__Impl : ( ( rule__GSSIfaceUartPort__InputQueueSizeAssignment_24 ) ) ;
+    // InternalIFACE.g:2826:1: rule__GSSIfaceUartPort__Group__24__Impl : ( ( rule__GSSIfaceUartPort__FlowControlAssignment_24 ) ) ;
     public final void rule__GSSIfaceUartPort__Group__24__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2793:1: ( ( ( rule__GSSIfaceUartPort__InputQueueSizeAssignment_24 ) ) )
-            // InternalIFACE.g:2794:1: ( ( rule__GSSIfaceUartPort__InputQueueSizeAssignment_24 ) )
+            // InternalIFACE.g:2830:1: ( ( ( rule__GSSIfaceUartPort__FlowControlAssignment_24 ) ) )
+            // InternalIFACE.g:2831:1: ( ( rule__GSSIfaceUartPort__FlowControlAssignment_24 ) )
             {
-            // InternalIFACE.g:2794:1: ( ( rule__GSSIfaceUartPort__InputQueueSizeAssignment_24 ) )
-            // InternalIFACE.g:2795:2: ( rule__GSSIfaceUartPort__InputQueueSizeAssignment_24 )
+            // InternalIFACE.g:2831:1: ( ( rule__GSSIfaceUartPort__FlowControlAssignment_24 ) )
+            // InternalIFACE.g:2832:2: ( rule__GSSIfaceUartPort__FlowControlAssignment_24 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeAssignment_24()); 
+               before(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlAssignment_24()); 
             }
-            // InternalIFACE.g:2796:2: ( rule__GSSIfaceUartPort__InputQueueSizeAssignment_24 )
-            // InternalIFACE.g:2796:3: rule__GSSIfaceUartPort__InputQueueSizeAssignment_24
+            // InternalIFACE.g:2833:2: ( rule__GSSIfaceUartPort__FlowControlAssignment_24 )
+            // InternalIFACE.g:2833:3: rule__GSSIfaceUartPort__FlowControlAssignment_24
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSIfaceUartPort__InputQueueSizeAssignment_24();
+            rule__GSSIfaceUartPort__FlowControlAssignment_24();
 
             state._fsp--;
             if (state.failed) return ;
@@ -9067,7 +9211,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeAssignment_24()); 
+               after(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlAssignment_24()); 
             }
 
             }
@@ -9091,16 +9235,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__25"
-    // InternalIFACE.g:2804:1: rule__GSSIfaceUartPort__Group__25 : rule__GSSIfaceUartPort__Group__25__Impl rule__GSSIfaceUartPort__Group__26 ;
+    // InternalIFACE.g:2841:1: rule__GSSIfaceUartPort__Group__25 : rule__GSSIfaceUartPort__Group__25__Impl rule__GSSIfaceUartPort__Group__26 ;
     public final void rule__GSSIfaceUartPort__Group__25() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2808:1: ( rule__GSSIfaceUartPort__Group__25__Impl rule__GSSIfaceUartPort__Group__26 )
-            // InternalIFACE.g:2809:2: rule__GSSIfaceUartPort__Group__25__Impl rule__GSSIfaceUartPort__Group__26
+            // InternalIFACE.g:2845:1: ( rule__GSSIfaceUartPort__Group__25__Impl rule__GSSIfaceUartPort__Group__26 )
+            // InternalIFACE.g:2846:2: rule__GSSIfaceUartPort__Group__25__Impl rule__GSSIfaceUartPort__Group__26
             {
-            pushFollow(FollowSets000.FOLLOW_32);
+            pushFollow(FollowSets000.FOLLOW_33);
             rule__GSSIfaceUartPort__Group__25__Impl();
 
             state._fsp--;
@@ -9129,22 +9273,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__25__Impl"
-    // InternalIFACE.g:2816:1: rule__GSSIfaceUartPort__Group__25__Impl : ( ';' ) ;
+    // InternalIFACE.g:2853:1: rule__GSSIfaceUartPort__Group__25__Impl : ( ';' ) ;
     public final void rule__GSSIfaceUartPort__Group__25__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2820:1: ( ( ';' ) )
-            // InternalIFACE.g:2821:1: ( ';' )
+            // InternalIFACE.g:2857:1: ( ( ';' ) )
+            // InternalIFACE.g:2858:1: ( ';' )
             {
-            // InternalIFACE.g:2821:1: ( ';' )
-            // InternalIFACE.g:2822:2: ';'
+            // InternalIFACE.g:2858:1: ( ';' )
+            // InternalIFACE.g:2859:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_25()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_25()); 
             }
@@ -9170,16 +9314,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__26"
-    // InternalIFACE.g:2831:1: rule__GSSIfaceUartPort__Group__26 : rule__GSSIfaceUartPort__Group__26__Impl rule__GSSIfaceUartPort__Group__27 ;
+    // InternalIFACE.g:2868:1: rule__GSSIfaceUartPort__Group__26 : rule__GSSIfaceUartPort__Group__26__Impl rule__GSSIfaceUartPort__Group__27 ;
     public final void rule__GSSIfaceUartPort__Group__26() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2835:1: ( rule__GSSIfaceUartPort__Group__26__Impl rule__GSSIfaceUartPort__Group__27 )
-            // InternalIFACE.g:2836:2: rule__GSSIfaceUartPort__Group__26__Impl rule__GSSIfaceUartPort__Group__27
+            // InternalIFACE.g:2872:1: ( rule__GSSIfaceUartPort__Group__26__Impl rule__GSSIfaceUartPort__Group__27 )
+            // InternalIFACE.g:2873:2: rule__GSSIfaceUartPort__Group__26__Impl rule__GSSIfaceUartPort__Group__27
             {
-            pushFollow(FollowSets000.FOLLOW_12);
+            pushFollow(FollowSets000.FOLLOW_11);
             rule__GSSIfaceUartPort__Group__26__Impl();
 
             state._fsp--;
@@ -9208,24 +9352,34 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__26__Impl"
-    // InternalIFACE.g:2843:1: rule__GSSIfaceUartPort__Group__26__Impl : ( 'outputQueueSize' ) ;
+    // InternalIFACE.g:2880:1: rule__GSSIfaceUartPort__Group__26__Impl : ( ( rule__GSSIfaceUartPort__UartProtocolAssignment_26 ) ) ;
     public final void rule__GSSIfaceUartPort__Group__26__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2847:1: ( ( 'outputQueueSize' ) )
-            // InternalIFACE.g:2848:1: ( 'outputQueueSize' )
+            // InternalIFACE.g:2884:1: ( ( ( rule__GSSIfaceUartPort__UartProtocolAssignment_26 ) ) )
+            // InternalIFACE.g:2885:1: ( ( rule__GSSIfaceUartPort__UartProtocolAssignment_26 ) )
             {
-            // InternalIFACE.g:2848:1: ( 'outputQueueSize' )
-            // InternalIFACE.g:2849:2: 'outputQueueSize'
+            // InternalIFACE.g:2885:1: ( ( rule__GSSIfaceUartPort__UartProtocolAssignment_26 ) )
+            // InternalIFACE.g:2886:2: ( rule__GSSIfaceUartPort__UartProtocolAssignment_26 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeKeyword_26()); 
+               before(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolAssignment_26()); 
             }
-            match(input,53,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalIFACE.g:2887:2: ( rule__GSSIfaceUartPort__UartProtocolAssignment_26 )
+            // InternalIFACE.g:2887:3: rule__GSSIfaceUartPort__UartProtocolAssignment_26
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__GSSIfaceUartPort__UartProtocolAssignment_26();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeKeyword_26()); 
+               after(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolAssignment_26()); 
             }
 
             }
@@ -9249,16 +9403,16 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__27"
-    // InternalIFACE.g:2858:1: rule__GSSIfaceUartPort__Group__27 : rule__GSSIfaceUartPort__Group__27__Impl rule__GSSIfaceUartPort__Group__28 ;
+    // InternalIFACE.g:2895:1: rule__GSSIfaceUartPort__Group__27 : rule__GSSIfaceUartPort__Group__27__Impl rule__GSSIfaceUartPort__Group__28 ;
     public final void rule__GSSIfaceUartPort__Group__27() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2862:1: ( rule__GSSIfaceUartPort__Group__27__Impl rule__GSSIfaceUartPort__Group__28 )
-            // InternalIFACE.g:2863:2: rule__GSSIfaceUartPort__Group__27__Impl rule__GSSIfaceUartPort__Group__28
+            // InternalIFACE.g:2899:1: ( rule__GSSIfaceUartPort__Group__27__Impl rule__GSSIfaceUartPort__Group__28 )
+            // InternalIFACE.g:2900:2: rule__GSSIfaceUartPort__Group__27__Impl rule__GSSIfaceUartPort__Group__28
             {
-            pushFollow(FollowSets000.FOLLOW_17);
+            pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceUartPort__Group__27__Impl();
 
             state._fsp--;
@@ -9287,24 +9441,24 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__27__Impl"
-    // InternalIFACE.g:2870:1: rule__GSSIfaceUartPort__Group__27__Impl : ( ':=' ) ;
+    // InternalIFACE.g:2907:1: rule__GSSIfaceUartPort__Group__27__Impl : ( '}' ) ;
     public final void rule__GSSIfaceUartPort__Group__27__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2874:1: ( ( ':=' ) )
-            // InternalIFACE.g:2875:1: ( ':=' )
+            // InternalIFACE.g:2911:1: ( ( '}' ) )
+            // InternalIFACE.g:2912:1: ( '}' )
             {
-            // InternalIFACE.g:2875:1: ( ':=' )
-            // InternalIFACE.g:2876:2: ':='
+            // InternalIFACE.g:2912:1: ( '}' )
+            // InternalIFACE.g:2913:2: '}'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_27()); 
+               before(grammarAccess.getGSSIfaceUartPortAccess().getRightCurlyBracketKeyword_27()); 
             }
             match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_27()); 
+               after(grammarAccess.getGSSIfaceUartPortAccess().getRightCurlyBracketKeyword_27()); 
             }
 
             }
@@ -9328,22 +9482,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__28"
-    // InternalIFACE.g:2885:1: rule__GSSIfaceUartPort__Group__28 : rule__GSSIfaceUartPort__Group__28__Impl rule__GSSIfaceUartPort__Group__29 ;
+    // InternalIFACE.g:2922:1: rule__GSSIfaceUartPort__Group__28 : rule__GSSIfaceUartPort__Group__28__Impl ;
     public final void rule__GSSIfaceUartPort__Group__28() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2889:1: ( rule__GSSIfaceUartPort__Group__28__Impl rule__GSSIfaceUartPort__Group__29 )
-            // InternalIFACE.g:2890:2: rule__GSSIfaceUartPort__Group__28__Impl rule__GSSIfaceUartPort__Group__29
+            // InternalIFACE.g:2926:1: ( rule__GSSIfaceUartPort__Group__28__Impl )
+            // InternalIFACE.g:2927:2: rule__GSSIfaceUartPort__Group__28__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_6);
-            rule__GSSIfaceUartPort__Group__28__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSIfaceUartPort__Group__29();
+            rule__GSSIfaceUartPort__Group__28__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -9366,34 +9515,24 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__Group__28__Impl"
-    // InternalIFACE.g:2897:1: rule__GSSIfaceUartPort__Group__28__Impl : ( ( rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28 ) ) ;
+    // InternalIFACE.g:2933:1: rule__GSSIfaceUartPort__Group__28__Impl : ( ';' ) ;
     public final void rule__GSSIfaceUartPort__Group__28__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:2901:1: ( ( ( rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28 ) ) )
-            // InternalIFACE.g:2902:1: ( ( rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28 ) )
+            // InternalIFACE.g:2937:1: ( ( ';' ) )
+            // InternalIFACE.g:2938:1: ( ';' )
             {
-            // InternalIFACE.g:2902:1: ( ( rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28 ) )
-            // InternalIFACE.g:2903:2: ( rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28 )
+            // InternalIFACE.g:2938:1: ( ';' )
+            // InternalIFACE.g:2939:2: ';'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeAssignment_28()); 
+               before(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_28()); 
             }
-            // InternalIFACE.g:2904:2: ( rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28 )
-            // InternalIFACE.g:2904:3: rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28
-            {
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeAssignment_28()); 
+               after(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_28()); 
             }
 
             }
@@ -9416,336 +9555,15 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSIfaceUartPort__Group__28__Impl"
 
 
-    // $ANTLR start "rule__GSSIfaceUartPort__Group__29"
-    // InternalIFACE.g:2912:1: rule__GSSIfaceUartPort__Group__29 : rule__GSSIfaceUartPort__Group__29__Impl rule__GSSIfaceUartPort__Group__30 ;
-    public final void rule__GSSIfaceUartPort__Group__29() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalIFACE.g:2916:1: ( rule__GSSIfaceUartPort__Group__29__Impl rule__GSSIfaceUartPort__Group__30 )
-            // InternalIFACE.g:2917:2: rule__GSSIfaceUartPort__Group__29__Impl rule__GSSIfaceUartPort__Group__30
-            {
-            pushFollow(FollowSets000.FOLLOW_33);
-            rule__GSSIfaceUartPort__Group__29__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSIfaceUartPort__Group__30();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSIfaceUartPort__Group__29"
-
-
-    // $ANTLR start "rule__GSSIfaceUartPort__Group__29__Impl"
-    // InternalIFACE.g:2924:1: rule__GSSIfaceUartPort__Group__29__Impl : ( ';' ) ;
-    public final void rule__GSSIfaceUartPort__Group__29__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalIFACE.g:2928:1: ( ( ';' ) )
-            // InternalIFACE.g:2929:1: ( ';' )
-            {
-            // InternalIFACE.g:2929:1: ( ';' )
-            // InternalIFACE.g:2930:2: ';'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_29()); 
-            }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_29()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSIfaceUartPort__Group__29__Impl"
-
-
-    // $ANTLR start "rule__GSSIfaceUartPort__Group__30"
-    // InternalIFACE.g:2939:1: rule__GSSIfaceUartPort__Group__30 : rule__GSSIfaceUartPort__Group__30__Impl rule__GSSIfaceUartPort__Group__31 ;
-    public final void rule__GSSIfaceUartPort__Group__30() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalIFACE.g:2943:1: ( rule__GSSIfaceUartPort__Group__30__Impl rule__GSSIfaceUartPort__Group__31 )
-            // InternalIFACE.g:2944:2: rule__GSSIfaceUartPort__Group__30__Impl rule__GSSIfaceUartPort__Group__31
-            {
-            pushFollow(FollowSets000.FOLLOW_11);
-            rule__GSSIfaceUartPort__Group__30__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSIfaceUartPort__Group__31();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSIfaceUartPort__Group__30"
-
-
-    // $ANTLR start "rule__GSSIfaceUartPort__Group__30__Impl"
-    // InternalIFACE.g:2951:1: rule__GSSIfaceUartPort__Group__30__Impl : ( ( rule__GSSIfaceUartPort__UartProtocolAssignment_30 ) ) ;
-    public final void rule__GSSIfaceUartPort__Group__30__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalIFACE.g:2955:1: ( ( ( rule__GSSIfaceUartPort__UartProtocolAssignment_30 ) ) )
-            // InternalIFACE.g:2956:1: ( ( rule__GSSIfaceUartPort__UartProtocolAssignment_30 ) )
-            {
-            // InternalIFACE.g:2956:1: ( ( rule__GSSIfaceUartPort__UartProtocolAssignment_30 ) )
-            // InternalIFACE.g:2957:2: ( rule__GSSIfaceUartPort__UartProtocolAssignment_30 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolAssignment_30()); 
-            }
-            // InternalIFACE.g:2958:2: ( rule__GSSIfaceUartPort__UartProtocolAssignment_30 )
-            // InternalIFACE.g:2958:3: rule__GSSIfaceUartPort__UartProtocolAssignment_30
-            {
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSIfaceUartPort__UartProtocolAssignment_30();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolAssignment_30()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSIfaceUartPort__Group__30__Impl"
-
-
-    // $ANTLR start "rule__GSSIfaceUartPort__Group__31"
-    // InternalIFACE.g:2966:1: rule__GSSIfaceUartPort__Group__31 : rule__GSSIfaceUartPort__Group__31__Impl rule__GSSIfaceUartPort__Group__32 ;
-    public final void rule__GSSIfaceUartPort__Group__31() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalIFACE.g:2970:1: ( rule__GSSIfaceUartPort__Group__31__Impl rule__GSSIfaceUartPort__Group__32 )
-            // InternalIFACE.g:2971:2: rule__GSSIfaceUartPort__Group__31__Impl rule__GSSIfaceUartPort__Group__32
-            {
-            pushFollow(FollowSets000.FOLLOW_6);
-            rule__GSSIfaceUartPort__Group__31__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSIfaceUartPort__Group__32();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSIfaceUartPort__Group__31"
-
-
-    // $ANTLR start "rule__GSSIfaceUartPort__Group__31__Impl"
-    // InternalIFACE.g:2978:1: rule__GSSIfaceUartPort__Group__31__Impl : ( '}' ) ;
-    public final void rule__GSSIfaceUartPort__Group__31__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalIFACE.g:2982:1: ( ( '}' ) )
-            // InternalIFACE.g:2983:1: ( '}' )
-            {
-            // InternalIFACE.g:2983:1: ( '}' )
-            // InternalIFACE.g:2984:2: '}'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSIfaceUartPortAccess().getRightCurlyBracketKeyword_31()); 
-            }
-            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSIfaceUartPortAccess().getRightCurlyBracketKeyword_31()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSIfaceUartPort__Group__31__Impl"
-
-
-    // $ANTLR start "rule__GSSIfaceUartPort__Group__32"
-    // InternalIFACE.g:2993:1: rule__GSSIfaceUartPort__Group__32 : rule__GSSIfaceUartPort__Group__32__Impl ;
-    public final void rule__GSSIfaceUartPort__Group__32() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalIFACE.g:2997:1: ( rule__GSSIfaceUartPort__Group__32__Impl )
-            // InternalIFACE.g:2998:2: rule__GSSIfaceUartPort__Group__32__Impl
-            {
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__GSSIfaceUartPort__Group__32__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSIfaceUartPort__Group__32"
-
-
-    // $ANTLR start "rule__GSSIfaceUartPort__Group__32__Impl"
-    // InternalIFACE.g:3004:1: rule__GSSIfaceUartPort__Group__32__Impl : ( ';' ) ;
-    public final void rule__GSSIfaceUartPort__Group__32__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalIFACE.g:3008:1: ( ( ';' ) )
-            // InternalIFACE.g:3009:1: ( ';' )
-            {
-            // InternalIFACE.g:3009:1: ( ';' )
-            // InternalIFACE.g:3010:2: ';'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_32()); 
-            }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_32()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSIfaceUartPort__Group__32__Impl"
-
-
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__0"
-    // InternalIFACE.g:3020:1: rule__GSSIfaceUartProtocol__Group__0 : rule__GSSIfaceUartProtocol__Group__0__Impl rule__GSSIfaceUartProtocol__Group__1 ;
+    // InternalIFACE.g:2949:1: rule__GSSIfaceUartProtocol__Group__0 : rule__GSSIfaceUartProtocol__Group__0__Impl rule__GSSIfaceUartProtocol__Group__1 ;
     public final void rule__GSSIfaceUartProtocol__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3024:1: ( rule__GSSIfaceUartProtocol__Group__0__Impl rule__GSSIfaceUartProtocol__Group__1 )
-            // InternalIFACE.g:3025:2: rule__GSSIfaceUartProtocol__Group__0__Impl rule__GSSIfaceUartProtocol__Group__1
+            // InternalIFACE.g:2953:1: ( rule__GSSIfaceUartProtocol__Group__0__Impl rule__GSSIfaceUartProtocol__Group__1 )
+            // InternalIFACE.g:2954:2: rule__GSSIfaceUartProtocol__Group__0__Impl rule__GSSIfaceUartProtocol__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSIfaceUartProtocol__Group__0__Impl();
@@ -9776,22 +9594,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__0__Impl"
-    // InternalIFACE.g:3032:1: rule__GSSIfaceUartProtocol__Group__0__Impl : ( 'uartProtocol' ) ;
+    // InternalIFACE.g:2961:1: rule__GSSIfaceUartProtocol__Group__0__Impl : ( 'uartProtocol' ) ;
     public final void rule__GSSIfaceUartProtocol__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3036:1: ( ( 'uartProtocol' ) )
-            // InternalIFACE.g:3037:1: ( 'uartProtocol' )
+            // InternalIFACE.g:2965:1: ( ( 'uartProtocol' ) )
+            // InternalIFACE.g:2966:1: ( 'uartProtocol' )
             {
-            // InternalIFACE.g:3037:1: ( 'uartProtocol' )
-            // InternalIFACE.g:3038:2: 'uartProtocol'
+            // InternalIFACE.g:2966:1: ( 'uartProtocol' )
+            // InternalIFACE.g:2967:2: 'uartProtocol'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getUartProtocolKeyword_0()); 
             }
-            match(input,54,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,55,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartProtocolAccess().getUartProtocolKeyword_0()); 
             }
@@ -9817,14 +9635,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__1"
-    // InternalIFACE.g:3047:1: rule__GSSIfaceUartProtocol__Group__1 : rule__GSSIfaceUartProtocol__Group__1__Impl rule__GSSIfaceUartProtocol__Group__2 ;
+    // InternalIFACE.g:2976:1: rule__GSSIfaceUartProtocol__Group__1 : rule__GSSIfaceUartProtocol__Group__1__Impl rule__GSSIfaceUartProtocol__Group__2 ;
     public final void rule__GSSIfaceUartProtocol__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3051:1: ( rule__GSSIfaceUartProtocol__Group__1__Impl rule__GSSIfaceUartProtocol__Group__2 )
-            // InternalIFACE.g:3052:2: rule__GSSIfaceUartProtocol__Group__1__Impl rule__GSSIfaceUartProtocol__Group__2
+            // InternalIFACE.g:2980:1: ( rule__GSSIfaceUartProtocol__Group__1__Impl rule__GSSIfaceUartProtocol__Group__2 )
+            // InternalIFACE.g:2981:2: rule__GSSIfaceUartProtocol__Group__1__Impl rule__GSSIfaceUartProtocol__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_34);
             rule__GSSIfaceUartProtocol__Group__1__Impl();
@@ -9855,22 +9673,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__1__Impl"
-    // InternalIFACE.g:3059:1: rule__GSSIfaceUartProtocol__Group__1__Impl : ( '{' ) ;
+    // InternalIFACE.g:2988:1: rule__GSSIfaceUartProtocol__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSIfaceUartProtocol__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3063:1: ( ( '{' ) )
-            // InternalIFACE.g:3064:1: ( '{' )
+            // InternalIFACE.g:2992:1: ( ( '{' ) )
+            // InternalIFACE.g:2993:1: ( '{' )
             {
-            // InternalIFACE.g:3064:1: ( '{' )
-            // InternalIFACE.g:3065:2: '{'
+            // InternalIFACE.g:2993:1: ( '{' )
+            // InternalIFACE.g:2994:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartProtocolAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -9896,14 +9714,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__2"
-    // InternalIFACE.g:3074:1: rule__GSSIfaceUartProtocol__Group__2 : rule__GSSIfaceUartProtocol__Group__2__Impl rule__GSSIfaceUartProtocol__Group__3 ;
+    // InternalIFACE.g:3003:1: rule__GSSIfaceUartProtocol__Group__2 : rule__GSSIfaceUartProtocol__Group__2__Impl rule__GSSIfaceUartProtocol__Group__3 ;
     public final void rule__GSSIfaceUartProtocol__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3078:1: ( rule__GSSIfaceUartProtocol__Group__2__Impl rule__GSSIfaceUartProtocol__Group__3 )
-            // InternalIFACE.g:3079:2: rule__GSSIfaceUartProtocol__Group__2__Impl rule__GSSIfaceUartProtocol__Group__3
+            // InternalIFACE.g:3007:1: ( rule__GSSIfaceUartProtocol__Group__2__Impl rule__GSSIfaceUartProtocol__Group__3 )
+            // InternalIFACE.g:3008:2: rule__GSSIfaceUartProtocol__Group__2__Impl rule__GSSIfaceUartProtocol__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceUartProtocol__Group__2__Impl();
@@ -9934,22 +9752,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__2__Impl"
-    // InternalIFACE.g:3086:1: rule__GSSIfaceUartProtocol__Group__2__Impl : ( 'unit' ) ;
+    // InternalIFACE.g:3015:1: rule__GSSIfaceUartProtocol__Group__2__Impl : ( 'unit' ) ;
     public final void rule__GSSIfaceUartProtocol__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3090:1: ( ( 'unit' ) )
-            // InternalIFACE.g:3091:1: ( 'unit' )
+            // InternalIFACE.g:3019:1: ( ( 'unit' ) )
+            // InternalIFACE.g:3020:1: ( 'unit' )
             {
-            // InternalIFACE.g:3091:1: ( 'unit' )
-            // InternalIFACE.g:3092:2: 'unit'
+            // InternalIFACE.g:3020:1: ( 'unit' )
+            // InternalIFACE.g:3021:2: 'unit'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getUnitKeyword_2()); 
             }
-            match(input,55,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,56,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartProtocolAccess().getUnitKeyword_2()); 
             }
@@ -9975,14 +9793,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__3"
-    // InternalIFACE.g:3101:1: rule__GSSIfaceUartProtocol__Group__3 : rule__GSSIfaceUartProtocol__Group__3__Impl rule__GSSIfaceUartProtocol__Group__4 ;
+    // InternalIFACE.g:3030:1: rule__GSSIfaceUartProtocol__Group__3 : rule__GSSIfaceUartProtocol__Group__3__Impl rule__GSSIfaceUartProtocol__Group__4 ;
     public final void rule__GSSIfaceUartProtocol__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3105:1: ( rule__GSSIfaceUartProtocol__Group__3__Impl rule__GSSIfaceUartProtocol__Group__4 )
-            // InternalIFACE.g:3106:2: rule__GSSIfaceUartProtocol__Group__3__Impl rule__GSSIfaceUartProtocol__Group__4
+            // InternalIFACE.g:3034:1: ( rule__GSSIfaceUartProtocol__Group__3__Impl rule__GSSIfaceUartProtocol__Group__4 )
+            // InternalIFACE.g:3035:2: rule__GSSIfaceUartProtocol__Group__3__Impl rule__GSSIfaceUartProtocol__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_35);
             rule__GSSIfaceUartProtocol__Group__3__Impl();
@@ -10013,22 +9831,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__3__Impl"
-    // InternalIFACE.g:3113:1: rule__GSSIfaceUartProtocol__Group__3__Impl : ( ':=' ) ;
+    // InternalIFACE.g:3042:1: rule__GSSIfaceUartProtocol__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceUartProtocol__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3117:1: ( ( ':=' ) )
-            // InternalIFACE.g:3118:1: ( ':=' )
+            // InternalIFACE.g:3046:1: ( ( ':=' ) )
+            // InternalIFACE.g:3047:1: ( ':=' )
             {
-            // InternalIFACE.g:3118:1: ( ':=' )
-            // InternalIFACE.g:3119:2: ':='
+            // InternalIFACE.g:3047:1: ( ':=' )
+            // InternalIFACE.g:3048:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getColonEqualsSignKeyword_3()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartProtocolAccess().getColonEqualsSignKeyword_3()); 
             }
@@ -10054,14 +9872,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__4"
-    // InternalIFACE.g:3128:1: rule__GSSIfaceUartProtocol__Group__4 : rule__GSSIfaceUartProtocol__Group__4__Impl rule__GSSIfaceUartProtocol__Group__5 ;
+    // InternalIFACE.g:3057:1: rule__GSSIfaceUartProtocol__Group__4 : rule__GSSIfaceUartProtocol__Group__4__Impl rule__GSSIfaceUartProtocol__Group__5 ;
     public final void rule__GSSIfaceUartProtocol__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3132:1: ( rule__GSSIfaceUartProtocol__Group__4__Impl rule__GSSIfaceUartProtocol__Group__5 )
-            // InternalIFACE.g:3133:2: rule__GSSIfaceUartProtocol__Group__4__Impl rule__GSSIfaceUartProtocol__Group__5
+            // InternalIFACE.g:3061:1: ( rule__GSSIfaceUartProtocol__Group__4__Impl rule__GSSIfaceUartProtocol__Group__5 )
+            // InternalIFACE.g:3062:2: rule__GSSIfaceUartProtocol__Group__4__Impl rule__GSSIfaceUartProtocol__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceUartProtocol__Group__4__Impl();
@@ -10092,23 +9910,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__4__Impl"
-    // InternalIFACE.g:3140:1: rule__GSSIfaceUartProtocol__Group__4__Impl : ( ( rule__GSSIfaceUartProtocol__UnitAssignment_4 ) ) ;
+    // InternalIFACE.g:3069:1: rule__GSSIfaceUartProtocol__Group__4__Impl : ( ( rule__GSSIfaceUartProtocol__UnitAssignment_4 ) ) ;
     public final void rule__GSSIfaceUartProtocol__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3144:1: ( ( ( rule__GSSIfaceUartProtocol__UnitAssignment_4 ) ) )
-            // InternalIFACE.g:3145:1: ( ( rule__GSSIfaceUartProtocol__UnitAssignment_4 ) )
+            // InternalIFACE.g:3073:1: ( ( ( rule__GSSIfaceUartProtocol__UnitAssignment_4 ) ) )
+            // InternalIFACE.g:3074:1: ( ( rule__GSSIfaceUartProtocol__UnitAssignment_4 ) )
             {
-            // InternalIFACE.g:3145:1: ( ( rule__GSSIfaceUartProtocol__UnitAssignment_4 ) )
-            // InternalIFACE.g:3146:2: ( rule__GSSIfaceUartProtocol__UnitAssignment_4 )
+            // InternalIFACE.g:3074:1: ( ( rule__GSSIfaceUartProtocol__UnitAssignment_4 ) )
+            // InternalIFACE.g:3075:2: ( rule__GSSIfaceUartProtocol__UnitAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getUnitAssignment_4()); 
             }
-            // InternalIFACE.g:3147:2: ( rule__GSSIfaceUartProtocol__UnitAssignment_4 )
-            // InternalIFACE.g:3147:3: rule__GSSIfaceUartProtocol__UnitAssignment_4
+            // InternalIFACE.g:3076:2: ( rule__GSSIfaceUartProtocol__UnitAssignment_4 )
+            // InternalIFACE.g:3076:3: rule__GSSIfaceUartProtocol__UnitAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceUartProtocol__UnitAssignment_4();
@@ -10143,14 +9961,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__5"
-    // InternalIFACE.g:3155:1: rule__GSSIfaceUartProtocol__Group__5 : rule__GSSIfaceUartProtocol__Group__5__Impl rule__GSSIfaceUartProtocol__Group__6 ;
+    // InternalIFACE.g:3084:1: rule__GSSIfaceUartProtocol__Group__5 : rule__GSSIfaceUartProtocol__Group__5__Impl rule__GSSIfaceUartProtocol__Group__6 ;
     public final void rule__GSSIfaceUartProtocol__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3159:1: ( rule__GSSIfaceUartProtocol__Group__5__Impl rule__GSSIfaceUartProtocol__Group__6 )
-            // InternalIFACE.g:3160:2: rule__GSSIfaceUartProtocol__Group__5__Impl rule__GSSIfaceUartProtocol__Group__6
+            // InternalIFACE.g:3088:1: ( rule__GSSIfaceUartProtocol__Group__5__Impl rule__GSSIfaceUartProtocol__Group__6 )
+            // InternalIFACE.g:3089:2: rule__GSSIfaceUartProtocol__Group__5__Impl rule__GSSIfaceUartProtocol__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_36);
             rule__GSSIfaceUartProtocol__Group__5__Impl();
@@ -10181,22 +9999,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__5__Impl"
-    // InternalIFACE.g:3167:1: rule__GSSIfaceUartProtocol__Group__5__Impl : ( ';' ) ;
+    // InternalIFACE.g:3096:1: rule__GSSIfaceUartProtocol__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSIfaceUartProtocol__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3171:1: ( ( ';' ) )
-            // InternalIFACE.g:3172:1: ( ';' )
+            // InternalIFACE.g:3100:1: ( ( ';' ) )
+            // InternalIFACE.g:3101:1: ( ';' )
             {
-            // InternalIFACE.g:3172:1: ( ';' )
-            // InternalIFACE.g:3173:2: ';'
+            // InternalIFACE.g:3101:1: ( ';' )
+            // InternalIFACE.g:3102:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_5()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_5()); 
             }
@@ -10222,14 +10040,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__6"
-    // InternalIFACE.g:3182:1: rule__GSSIfaceUartProtocol__Group__6 : rule__GSSIfaceUartProtocol__Group__6__Impl rule__GSSIfaceUartProtocol__Group__7 ;
+    // InternalIFACE.g:3111:1: rule__GSSIfaceUartProtocol__Group__6 : rule__GSSIfaceUartProtocol__Group__6__Impl rule__GSSIfaceUartProtocol__Group__7 ;
     public final void rule__GSSIfaceUartProtocol__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3186:1: ( rule__GSSIfaceUartProtocol__Group__6__Impl rule__GSSIfaceUartProtocol__Group__7 )
-            // InternalIFACE.g:3187:2: rule__GSSIfaceUartProtocol__Group__6__Impl rule__GSSIfaceUartProtocol__Group__7
+            // InternalIFACE.g:3115:1: ( rule__GSSIfaceUartProtocol__Group__6__Impl rule__GSSIfaceUartProtocol__Group__7 )
+            // InternalIFACE.g:3116:2: rule__GSSIfaceUartProtocol__Group__6__Impl rule__GSSIfaceUartProtocol__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceUartProtocol__Group__6__Impl();
@@ -10260,22 +10078,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__6__Impl"
-    // InternalIFACE.g:3194:1: rule__GSSIfaceUartProtocol__Group__6__Impl : ( 'power' ) ;
+    // InternalIFACE.g:3123:1: rule__GSSIfaceUartProtocol__Group__6__Impl : ( 'power' ) ;
     public final void rule__GSSIfaceUartProtocol__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3198:1: ( ( 'power' ) )
-            // InternalIFACE.g:3199:1: ( 'power' )
+            // InternalIFACE.g:3127:1: ( ( 'power' ) )
+            // InternalIFACE.g:3128:1: ( 'power' )
             {
-            // InternalIFACE.g:3199:1: ( 'power' )
-            // InternalIFACE.g:3200:2: 'power'
+            // InternalIFACE.g:3128:1: ( 'power' )
+            // InternalIFACE.g:3129:2: 'power'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getPowerKeyword_6()); 
             }
-            match(input,56,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,57,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartProtocolAccess().getPowerKeyword_6()); 
             }
@@ -10301,14 +10119,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__7"
-    // InternalIFACE.g:3209:1: rule__GSSIfaceUartProtocol__Group__7 : rule__GSSIfaceUartProtocol__Group__7__Impl rule__GSSIfaceUartProtocol__Group__8 ;
+    // InternalIFACE.g:3138:1: rule__GSSIfaceUartProtocol__Group__7 : rule__GSSIfaceUartProtocol__Group__7__Impl rule__GSSIfaceUartProtocol__Group__8 ;
     public final void rule__GSSIfaceUartProtocol__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3213:1: ( rule__GSSIfaceUartProtocol__Group__7__Impl rule__GSSIfaceUartProtocol__Group__8 )
-            // InternalIFACE.g:3214:2: rule__GSSIfaceUartProtocol__Group__7__Impl rule__GSSIfaceUartProtocol__Group__8
+            // InternalIFACE.g:3142:1: ( rule__GSSIfaceUartProtocol__Group__7__Impl rule__GSSIfaceUartProtocol__Group__8 )
+            // InternalIFACE.g:3143:2: rule__GSSIfaceUartProtocol__Group__7__Impl rule__GSSIfaceUartProtocol__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_37);
             rule__GSSIfaceUartProtocol__Group__7__Impl();
@@ -10339,22 +10157,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__7__Impl"
-    // InternalIFACE.g:3221:1: rule__GSSIfaceUartProtocol__Group__7__Impl : ( ':=' ) ;
+    // InternalIFACE.g:3150:1: rule__GSSIfaceUartProtocol__Group__7__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceUartProtocol__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3225:1: ( ( ':=' ) )
-            // InternalIFACE.g:3226:1: ( ':=' )
+            // InternalIFACE.g:3154:1: ( ( ':=' ) )
+            // InternalIFACE.g:3155:1: ( ':=' )
             {
-            // InternalIFACE.g:3226:1: ( ':=' )
-            // InternalIFACE.g:3227:2: ':='
+            // InternalIFACE.g:3155:1: ( ':=' )
+            // InternalIFACE.g:3156:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getColonEqualsSignKeyword_7()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartProtocolAccess().getColonEqualsSignKeyword_7()); 
             }
@@ -10380,14 +10198,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__8"
-    // InternalIFACE.g:3236:1: rule__GSSIfaceUartProtocol__Group__8 : rule__GSSIfaceUartProtocol__Group__8__Impl rule__GSSIfaceUartProtocol__Group__9 ;
+    // InternalIFACE.g:3165:1: rule__GSSIfaceUartProtocol__Group__8 : rule__GSSIfaceUartProtocol__Group__8__Impl rule__GSSIfaceUartProtocol__Group__9 ;
     public final void rule__GSSIfaceUartProtocol__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3240:1: ( rule__GSSIfaceUartProtocol__Group__8__Impl rule__GSSIfaceUartProtocol__Group__9 )
-            // InternalIFACE.g:3241:2: rule__GSSIfaceUartProtocol__Group__8__Impl rule__GSSIfaceUartProtocol__Group__9
+            // InternalIFACE.g:3169:1: ( rule__GSSIfaceUartProtocol__Group__8__Impl rule__GSSIfaceUartProtocol__Group__9 )
+            // InternalIFACE.g:3170:2: rule__GSSIfaceUartProtocol__Group__8__Impl rule__GSSIfaceUartProtocol__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceUartProtocol__Group__8__Impl();
@@ -10418,23 +10236,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__8__Impl"
-    // InternalIFACE.g:3248:1: rule__GSSIfaceUartProtocol__Group__8__Impl : ( ( rule__GSSIfaceUartProtocol__PowerAssignment_8 ) ) ;
+    // InternalIFACE.g:3177:1: rule__GSSIfaceUartProtocol__Group__8__Impl : ( ( rule__GSSIfaceUartProtocol__PowerAssignment_8 ) ) ;
     public final void rule__GSSIfaceUartProtocol__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3252:1: ( ( ( rule__GSSIfaceUartProtocol__PowerAssignment_8 ) ) )
-            // InternalIFACE.g:3253:1: ( ( rule__GSSIfaceUartProtocol__PowerAssignment_8 ) )
+            // InternalIFACE.g:3181:1: ( ( ( rule__GSSIfaceUartProtocol__PowerAssignment_8 ) ) )
+            // InternalIFACE.g:3182:1: ( ( rule__GSSIfaceUartProtocol__PowerAssignment_8 ) )
             {
-            // InternalIFACE.g:3253:1: ( ( rule__GSSIfaceUartProtocol__PowerAssignment_8 ) )
-            // InternalIFACE.g:3254:2: ( rule__GSSIfaceUartProtocol__PowerAssignment_8 )
+            // InternalIFACE.g:3182:1: ( ( rule__GSSIfaceUartProtocol__PowerAssignment_8 ) )
+            // InternalIFACE.g:3183:2: ( rule__GSSIfaceUartProtocol__PowerAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getPowerAssignment_8()); 
             }
-            // InternalIFACE.g:3255:2: ( rule__GSSIfaceUartProtocol__PowerAssignment_8 )
-            // InternalIFACE.g:3255:3: rule__GSSIfaceUartProtocol__PowerAssignment_8
+            // InternalIFACE.g:3184:2: ( rule__GSSIfaceUartProtocol__PowerAssignment_8 )
+            // InternalIFACE.g:3184:3: rule__GSSIfaceUartProtocol__PowerAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceUartProtocol__PowerAssignment_8();
@@ -10469,14 +10287,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__9"
-    // InternalIFACE.g:3263:1: rule__GSSIfaceUartProtocol__Group__9 : rule__GSSIfaceUartProtocol__Group__9__Impl rule__GSSIfaceUartProtocol__Group__10 ;
+    // InternalIFACE.g:3192:1: rule__GSSIfaceUartProtocol__Group__9 : rule__GSSIfaceUartProtocol__Group__9__Impl rule__GSSIfaceUartProtocol__Group__10 ;
     public final void rule__GSSIfaceUartProtocol__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3267:1: ( rule__GSSIfaceUartProtocol__Group__9__Impl rule__GSSIfaceUartProtocol__Group__10 )
-            // InternalIFACE.g:3268:2: rule__GSSIfaceUartProtocol__Group__9__Impl rule__GSSIfaceUartProtocol__Group__10
+            // InternalIFACE.g:3196:1: ( rule__GSSIfaceUartProtocol__Group__9__Impl rule__GSSIfaceUartProtocol__Group__10 )
+            // InternalIFACE.g:3197:2: rule__GSSIfaceUartProtocol__Group__9__Impl rule__GSSIfaceUartProtocol__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_38);
             rule__GSSIfaceUartProtocol__Group__9__Impl();
@@ -10507,22 +10325,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__9__Impl"
-    // InternalIFACE.g:3275:1: rule__GSSIfaceUartProtocol__Group__9__Impl : ( ';' ) ;
+    // InternalIFACE.g:3204:1: rule__GSSIfaceUartProtocol__Group__9__Impl : ( ';' ) ;
     public final void rule__GSSIfaceUartProtocol__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3279:1: ( ( ';' ) )
-            // InternalIFACE.g:3280:1: ( ';' )
+            // InternalIFACE.g:3208:1: ( ( ';' ) )
+            // InternalIFACE.g:3209:1: ( ';' )
             {
-            // InternalIFACE.g:3280:1: ( ';' )
-            // InternalIFACE.g:3281:2: ';'
+            // InternalIFACE.g:3209:1: ( ';' )
+            // InternalIFACE.g:3210:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_9()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_9()); 
             }
@@ -10548,14 +10366,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__10"
-    // InternalIFACE.g:3290:1: rule__GSSIfaceUartProtocol__Group__10 : rule__GSSIfaceUartProtocol__Group__10__Impl rule__GSSIfaceUartProtocol__Group__11 ;
+    // InternalIFACE.g:3219:1: rule__GSSIfaceUartProtocol__Group__10 : rule__GSSIfaceUartProtocol__Group__10__Impl rule__GSSIfaceUartProtocol__Group__11 ;
     public final void rule__GSSIfaceUartProtocol__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3294:1: ( rule__GSSIfaceUartProtocol__Group__10__Impl rule__GSSIfaceUartProtocol__Group__11 )
-            // InternalIFACE.g:3295:2: rule__GSSIfaceUartProtocol__Group__10__Impl rule__GSSIfaceUartProtocol__Group__11
+            // InternalIFACE.g:3223:1: ( rule__GSSIfaceUartProtocol__Group__10__Impl rule__GSSIfaceUartProtocol__Group__11 )
+            // InternalIFACE.g:3224:2: rule__GSSIfaceUartProtocol__Group__10__Impl rule__GSSIfaceUartProtocol__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_39);
             rule__GSSIfaceUartProtocol__Group__10__Impl();
@@ -10586,23 +10404,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__10__Impl"
-    // InternalIFACE.g:3302:1: rule__GSSIfaceUartProtocol__Group__10__Impl : ( ( rule__GSSIfaceUartProtocol__ConstSizeAssignment_10 ) ) ;
+    // InternalIFACE.g:3231:1: rule__GSSIfaceUartProtocol__Group__10__Impl : ( ( rule__GSSIfaceUartProtocol__ConstSizeAssignment_10 ) ) ;
     public final void rule__GSSIfaceUartProtocol__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3306:1: ( ( ( rule__GSSIfaceUartProtocol__ConstSizeAssignment_10 ) ) )
-            // InternalIFACE.g:3307:1: ( ( rule__GSSIfaceUartProtocol__ConstSizeAssignment_10 ) )
+            // InternalIFACE.g:3235:1: ( ( ( rule__GSSIfaceUartProtocol__ConstSizeAssignment_10 ) ) )
+            // InternalIFACE.g:3236:1: ( ( rule__GSSIfaceUartProtocol__ConstSizeAssignment_10 ) )
             {
-            // InternalIFACE.g:3307:1: ( ( rule__GSSIfaceUartProtocol__ConstSizeAssignment_10 ) )
-            // InternalIFACE.g:3308:2: ( rule__GSSIfaceUartProtocol__ConstSizeAssignment_10 )
+            // InternalIFACE.g:3236:1: ( ( rule__GSSIfaceUartProtocol__ConstSizeAssignment_10 ) )
+            // InternalIFACE.g:3237:2: ( rule__GSSIfaceUartProtocol__ConstSizeAssignment_10 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getConstSizeAssignment_10()); 
             }
-            // InternalIFACE.g:3309:2: ( rule__GSSIfaceUartProtocol__ConstSizeAssignment_10 )
-            // InternalIFACE.g:3309:3: rule__GSSIfaceUartProtocol__ConstSizeAssignment_10
+            // InternalIFACE.g:3238:2: ( rule__GSSIfaceUartProtocol__ConstSizeAssignment_10 )
+            // InternalIFACE.g:3238:3: rule__GSSIfaceUartProtocol__ConstSizeAssignment_10
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceUartProtocol__ConstSizeAssignment_10();
@@ -10637,14 +10455,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__11"
-    // InternalIFACE.g:3317:1: rule__GSSIfaceUartProtocol__Group__11 : rule__GSSIfaceUartProtocol__Group__11__Impl rule__GSSIfaceUartProtocol__Group__12 ;
+    // InternalIFACE.g:3246:1: rule__GSSIfaceUartProtocol__Group__11 : rule__GSSIfaceUartProtocol__Group__11__Impl rule__GSSIfaceUartProtocol__Group__12 ;
     public final void rule__GSSIfaceUartProtocol__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3321:1: ( rule__GSSIfaceUartProtocol__Group__11__Impl rule__GSSIfaceUartProtocol__Group__12 )
-            // InternalIFACE.g:3322:2: rule__GSSIfaceUartProtocol__Group__11__Impl rule__GSSIfaceUartProtocol__Group__12
+            // InternalIFACE.g:3250:1: ( rule__GSSIfaceUartProtocol__Group__11__Impl rule__GSSIfaceUartProtocol__Group__12 )
+            // InternalIFACE.g:3251:2: rule__GSSIfaceUartProtocol__Group__11__Impl rule__GSSIfaceUartProtocol__Group__12
             {
             pushFollow(FollowSets000.FOLLOW_40);
             rule__GSSIfaceUartProtocol__Group__11__Impl();
@@ -10675,23 +10493,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__11__Impl"
-    // InternalIFACE.g:3329:1: rule__GSSIfaceUartProtocol__Group__11__Impl : ( ( rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11 ) ) ;
+    // InternalIFACE.g:3258:1: rule__GSSIfaceUartProtocol__Group__11__Impl : ( ( rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11 ) ) ;
     public final void rule__GSSIfaceUartProtocol__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3333:1: ( ( ( rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11 ) ) )
-            // InternalIFACE.g:3334:1: ( ( rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11 ) )
+            // InternalIFACE.g:3262:1: ( ( ( rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11 ) ) )
+            // InternalIFACE.g:3263:1: ( ( rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11 ) )
             {
-            // InternalIFACE.g:3334:1: ( ( rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11 ) )
-            // InternalIFACE.g:3335:2: ( rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11 )
+            // InternalIFACE.g:3263:1: ( ( rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11 ) )
+            // InternalIFACE.g:3264:2: ( rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getSizeFieldOffsetAssignment_11()); 
             }
-            // InternalIFACE.g:3336:2: ( rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11 )
-            // InternalIFACE.g:3336:3: rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11
+            // InternalIFACE.g:3265:2: ( rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11 )
+            // InternalIFACE.g:3265:3: rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11();
@@ -10726,14 +10544,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__12"
-    // InternalIFACE.g:3344:1: rule__GSSIfaceUartProtocol__Group__12 : rule__GSSIfaceUartProtocol__Group__12__Impl rule__GSSIfaceUartProtocol__Group__13 ;
+    // InternalIFACE.g:3273:1: rule__GSSIfaceUartProtocol__Group__12 : rule__GSSIfaceUartProtocol__Group__12__Impl rule__GSSIfaceUartProtocol__Group__13 ;
     public final void rule__GSSIfaceUartProtocol__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3348:1: ( rule__GSSIfaceUartProtocol__Group__12__Impl rule__GSSIfaceUartProtocol__Group__13 )
-            // InternalIFACE.g:3349:2: rule__GSSIfaceUartProtocol__Group__12__Impl rule__GSSIfaceUartProtocol__Group__13
+            // InternalIFACE.g:3277:1: ( rule__GSSIfaceUartProtocol__Group__12__Impl rule__GSSIfaceUartProtocol__Group__13 )
+            // InternalIFACE.g:3278:2: rule__GSSIfaceUartProtocol__Group__12__Impl rule__GSSIfaceUartProtocol__Group__13
             {
             pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSIfaceUartProtocol__Group__12__Impl();
@@ -10764,23 +10582,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__12__Impl"
-    // InternalIFACE.g:3356:1: rule__GSSIfaceUartProtocol__Group__12__Impl : ( ( rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12 ) ) ;
+    // InternalIFACE.g:3285:1: rule__GSSIfaceUartProtocol__Group__12__Impl : ( ( rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12 ) ) ;
     public final void rule__GSSIfaceUartProtocol__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3360:1: ( ( ( rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12 ) ) )
-            // InternalIFACE.g:3361:1: ( ( rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12 ) )
+            // InternalIFACE.g:3289:1: ( ( ( rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12 ) ) )
+            // InternalIFACE.g:3290:1: ( ( rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12 ) )
             {
-            // InternalIFACE.g:3361:1: ( ( rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12 ) )
-            // InternalIFACE.g:3362:2: ( rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12 )
+            // InternalIFACE.g:3290:1: ( ( rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12 ) )
+            // InternalIFACE.g:3291:2: ( rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getSizeFieldTrimAssignment_12()); 
             }
-            // InternalIFACE.g:3363:2: ( rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12 )
-            // InternalIFACE.g:3363:3: rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12
+            // InternalIFACE.g:3292:2: ( rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12 )
+            // InternalIFACE.g:3292:3: rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12();
@@ -10815,14 +10633,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__13"
-    // InternalIFACE.g:3371:1: rule__GSSIfaceUartProtocol__Group__13 : rule__GSSIfaceUartProtocol__Group__13__Impl rule__GSSIfaceUartProtocol__Group__14 ;
+    // InternalIFACE.g:3300:1: rule__GSSIfaceUartProtocol__Group__13 : rule__GSSIfaceUartProtocol__Group__13__Impl rule__GSSIfaceUartProtocol__Group__14 ;
     public final void rule__GSSIfaceUartProtocol__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3375:1: ( rule__GSSIfaceUartProtocol__Group__13__Impl rule__GSSIfaceUartProtocol__Group__14 )
-            // InternalIFACE.g:3376:2: rule__GSSIfaceUartProtocol__Group__13__Impl rule__GSSIfaceUartProtocol__Group__14
+            // InternalIFACE.g:3304:1: ( rule__GSSIfaceUartProtocol__Group__13__Impl rule__GSSIfaceUartProtocol__Group__14 )
+            // InternalIFACE.g:3305:2: rule__GSSIfaceUartProtocol__Group__13__Impl rule__GSSIfaceUartProtocol__Group__14
             {
             pushFollow(FollowSets000.FOLLOW_41);
             rule__GSSIfaceUartProtocol__Group__13__Impl();
@@ -10853,31 +10671,31 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__13__Impl"
-    // InternalIFACE.g:3383:1: rule__GSSIfaceUartProtocol__Group__13__Impl : ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )? ) ;
+    // InternalIFACE.g:3312:1: rule__GSSIfaceUartProtocol__Group__13__Impl : ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )? ) ;
     public final void rule__GSSIfaceUartProtocol__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3387:1: ( ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )? ) )
-            // InternalIFACE.g:3388:1: ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )? )
+            // InternalIFACE.g:3316:1: ( ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )? ) )
+            // InternalIFACE.g:3317:1: ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )? )
             {
-            // InternalIFACE.g:3388:1: ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )? )
-            // InternalIFACE.g:3389:2: ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )?
+            // InternalIFACE.g:3317:1: ( ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )? )
+            // InternalIFACE.g:3318:2: ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getSyncPatternAssignment_13()); 
             }
-            // InternalIFACE.g:3390:2: ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // InternalIFACE.g:3319:2: ( rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA14_0==60) ) {
-                alt14=1;
+            if ( (LA15_0==61) ) {
+                alt15=1;
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // InternalIFACE.g:3390:3: rule__GSSIfaceUartProtocol__SyncPatternAssignment_13
+                    // InternalIFACE.g:3319:3: rule__GSSIfaceUartProtocol__SyncPatternAssignment_13
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSIfaceUartProtocol__SyncPatternAssignment_13();
@@ -10915,14 +10733,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__14"
-    // InternalIFACE.g:3398:1: rule__GSSIfaceUartProtocol__Group__14 : rule__GSSIfaceUartProtocol__Group__14__Impl rule__GSSIfaceUartProtocol__Group__15 ;
+    // InternalIFACE.g:3327:1: rule__GSSIfaceUartProtocol__Group__14 : rule__GSSIfaceUartProtocol__Group__14__Impl rule__GSSIfaceUartProtocol__Group__15 ;
     public final void rule__GSSIfaceUartProtocol__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3402:1: ( rule__GSSIfaceUartProtocol__Group__14__Impl rule__GSSIfaceUartProtocol__Group__15 )
-            // InternalIFACE.g:3403:2: rule__GSSIfaceUartProtocol__Group__14__Impl rule__GSSIfaceUartProtocol__Group__15
+            // InternalIFACE.g:3331:1: ( rule__GSSIfaceUartProtocol__Group__14__Impl rule__GSSIfaceUartProtocol__Group__15 )
+            // InternalIFACE.g:3332:2: rule__GSSIfaceUartProtocol__Group__14__Impl rule__GSSIfaceUartProtocol__Group__15
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceUartProtocol__Group__14__Impl();
@@ -10953,22 +10771,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__14__Impl"
-    // InternalIFACE.g:3410:1: rule__GSSIfaceUartProtocol__Group__14__Impl : ( '}' ) ;
+    // InternalIFACE.g:3339:1: rule__GSSIfaceUartProtocol__Group__14__Impl : ( '}' ) ;
     public final void rule__GSSIfaceUartProtocol__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3414:1: ( ( '}' ) )
-            // InternalIFACE.g:3415:1: ( '}' )
+            // InternalIFACE.g:3343:1: ( ( '}' ) )
+            // InternalIFACE.g:3344:1: ( '}' )
             {
-            // InternalIFACE.g:3415:1: ( '}' )
-            // InternalIFACE.g:3416:2: '}'
+            // InternalIFACE.g:3344:1: ( '}' )
+            // InternalIFACE.g:3345:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getRightCurlyBracketKeyword_14()); 
             }
-            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartProtocolAccess().getRightCurlyBracketKeyword_14()); 
             }
@@ -10994,14 +10812,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__15"
-    // InternalIFACE.g:3425:1: rule__GSSIfaceUartProtocol__Group__15 : rule__GSSIfaceUartProtocol__Group__15__Impl ;
+    // InternalIFACE.g:3354:1: rule__GSSIfaceUartProtocol__Group__15 : rule__GSSIfaceUartProtocol__Group__15__Impl ;
     public final void rule__GSSIfaceUartProtocol__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3429:1: ( rule__GSSIfaceUartProtocol__Group__15__Impl )
-            // InternalIFACE.g:3430:2: rule__GSSIfaceUartProtocol__Group__15__Impl
+            // InternalIFACE.g:3358:1: ( rule__GSSIfaceUartProtocol__Group__15__Impl )
+            // InternalIFACE.g:3359:2: rule__GSSIfaceUartProtocol__Group__15__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceUartProtocol__Group__15__Impl();
@@ -11027,22 +10845,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__Group__15__Impl"
-    // InternalIFACE.g:3436:1: rule__GSSIfaceUartProtocol__Group__15__Impl : ( ';' ) ;
+    // InternalIFACE.g:3365:1: rule__GSSIfaceUartProtocol__Group__15__Impl : ( ';' ) ;
     public final void rule__GSSIfaceUartProtocol__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3440:1: ( ( ';' ) )
-            // InternalIFACE.g:3441:1: ( ';' )
+            // InternalIFACE.g:3369:1: ( ( ';' ) )
+            // InternalIFACE.g:3370:1: ( ';' )
             {
-            // InternalIFACE.g:3441:1: ( ';' )
-            // InternalIFACE.g:3442:2: ';'
+            // InternalIFACE.g:3370:1: ( ';' )
+            // InternalIFACE.g:3371:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_15()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_15()); 
             }
@@ -11068,14 +10886,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__0"
-    // InternalIFACE.g:3452:1: rule__GSSIfaceConstSize__Group__0 : rule__GSSIfaceConstSize__Group__0__Impl rule__GSSIfaceConstSize__Group__1 ;
+    // InternalIFACE.g:3381:1: rule__GSSIfaceConstSize__Group__0 : rule__GSSIfaceConstSize__Group__0__Impl rule__GSSIfaceConstSize__Group__1 ;
     public final void rule__GSSIfaceConstSize__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3456:1: ( rule__GSSIfaceConstSize__Group__0__Impl rule__GSSIfaceConstSize__Group__1 )
-            // InternalIFACE.g:3457:2: rule__GSSIfaceConstSize__Group__0__Impl rule__GSSIfaceConstSize__Group__1
+            // InternalIFACE.g:3385:1: ( rule__GSSIfaceConstSize__Group__0__Impl rule__GSSIfaceConstSize__Group__1 )
+            // InternalIFACE.g:3386:2: rule__GSSIfaceConstSize__Group__0__Impl rule__GSSIfaceConstSize__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSIfaceConstSize__Group__0__Impl();
@@ -11106,22 +10924,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__0__Impl"
-    // InternalIFACE.g:3464:1: rule__GSSIfaceConstSize__Group__0__Impl : ( 'constSize' ) ;
+    // InternalIFACE.g:3393:1: rule__GSSIfaceConstSize__Group__0__Impl : ( 'constSize' ) ;
     public final void rule__GSSIfaceConstSize__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3468:1: ( ( 'constSize' ) )
-            // InternalIFACE.g:3469:1: ( 'constSize' )
+            // InternalIFACE.g:3397:1: ( ( 'constSize' ) )
+            // InternalIFACE.g:3398:1: ( 'constSize' )
             {
-            // InternalIFACE.g:3469:1: ( 'constSize' )
-            // InternalIFACE.g:3470:2: 'constSize'
+            // InternalIFACE.g:3398:1: ( 'constSize' )
+            // InternalIFACE.g:3399:2: 'constSize'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceConstSizeAccess().getConstSizeKeyword_0()); 
             }
-            match(input,57,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,58,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceConstSizeAccess().getConstSizeKeyword_0()); 
             }
@@ -11147,14 +10965,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__1"
-    // InternalIFACE.g:3479:1: rule__GSSIfaceConstSize__Group__1 : rule__GSSIfaceConstSize__Group__1__Impl rule__GSSIfaceConstSize__Group__2 ;
+    // InternalIFACE.g:3408:1: rule__GSSIfaceConstSize__Group__1 : rule__GSSIfaceConstSize__Group__1__Impl rule__GSSIfaceConstSize__Group__2 ;
     public final void rule__GSSIfaceConstSize__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3483:1: ( rule__GSSIfaceConstSize__Group__1__Impl rule__GSSIfaceConstSize__Group__2 )
-            // InternalIFACE.g:3484:2: rule__GSSIfaceConstSize__Group__1__Impl rule__GSSIfaceConstSize__Group__2
+            // InternalIFACE.g:3412:1: ( rule__GSSIfaceConstSize__Group__1__Impl rule__GSSIfaceConstSize__Group__2 )
+            // InternalIFACE.g:3413:2: rule__GSSIfaceConstSize__Group__1__Impl rule__GSSIfaceConstSize__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_42);
             rule__GSSIfaceConstSize__Group__1__Impl();
@@ -11185,22 +11003,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__1__Impl"
-    // InternalIFACE.g:3491:1: rule__GSSIfaceConstSize__Group__1__Impl : ( '{' ) ;
+    // InternalIFACE.g:3420:1: rule__GSSIfaceConstSize__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSIfaceConstSize__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3495:1: ( ( '{' ) )
-            // InternalIFACE.g:3496:1: ( '{' )
+            // InternalIFACE.g:3424:1: ( ( '{' ) )
+            // InternalIFACE.g:3425:1: ( '{' )
             {
-            // InternalIFACE.g:3496:1: ( '{' )
-            // InternalIFACE.g:3497:2: '{'
+            // InternalIFACE.g:3425:1: ( '{' )
+            // InternalIFACE.g:3426:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceConstSizeAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceConstSizeAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -11226,14 +11044,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__2"
-    // InternalIFACE.g:3506:1: rule__GSSIfaceConstSize__Group__2 : rule__GSSIfaceConstSize__Group__2__Impl rule__GSSIfaceConstSize__Group__3 ;
+    // InternalIFACE.g:3435:1: rule__GSSIfaceConstSize__Group__2 : rule__GSSIfaceConstSize__Group__2__Impl rule__GSSIfaceConstSize__Group__3 ;
     public final void rule__GSSIfaceConstSize__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3510:1: ( rule__GSSIfaceConstSize__Group__2__Impl rule__GSSIfaceConstSize__Group__3 )
-            // InternalIFACE.g:3511:2: rule__GSSIfaceConstSize__Group__2__Impl rule__GSSIfaceConstSize__Group__3
+            // InternalIFACE.g:3439:1: ( rule__GSSIfaceConstSize__Group__2__Impl rule__GSSIfaceConstSize__Group__3 )
+            // InternalIFACE.g:3440:2: rule__GSSIfaceConstSize__Group__2__Impl rule__GSSIfaceConstSize__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceConstSize__Group__2__Impl();
@@ -11264,22 +11082,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__2__Impl"
-    // InternalIFACE.g:3518:1: rule__GSSIfaceConstSize__Group__2__Impl : ( 'bytes' ) ;
+    // InternalIFACE.g:3447:1: rule__GSSIfaceConstSize__Group__2__Impl : ( 'bytes' ) ;
     public final void rule__GSSIfaceConstSize__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3522:1: ( ( 'bytes' ) )
-            // InternalIFACE.g:3523:1: ( 'bytes' )
+            // InternalIFACE.g:3451:1: ( ( 'bytes' ) )
+            // InternalIFACE.g:3452:1: ( 'bytes' )
             {
-            // InternalIFACE.g:3523:1: ( 'bytes' )
-            // InternalIFACE.g:3524:2: 'bytes'
+            // InternalIFACE.g:3452:1: ( 'bytes' )
+            // InternalIFACE.g:3453:2: 'bytes'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceConstSizeAccess().getBytesKeyword_2()); 
             }
-            match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceConstSizeAccess().getBytesKeyword_2()); 
             }
@@ -11305,14 +11123,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__3"
-    // InternalIFACE.g:3533:1: rule__GSSIfaceConstSize__Group__3 : rule__GSSIfaceConstSize__Group__3__Impl rule__GSSIfaceConstSize__Group__4 ;
+    // InternalIFACE.g:3462:1: rule__GSSIfaceConstSize__Group__3 : rule__GSSIfaceConstSize__Group__3__Impl rule__GSSIfaceConstSize__Group__4 ;
     public final void rule__GSSIfaceConstSize__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3537:1: ( rule__GSSIfaceConstSize__Group__3__Impl rule__GSSIfaceConstSize__Group__4 )
-            // InternalIFACE.g:3538:2: rule__GSSIfaceConstSize__Group__3__Impl rule__GSSIfaceConstSize__Group__4
+            // InternalIFACE.g:3466:1: ( rule__GSSIfaceConstSize__Group__3__Impl rule__GSSIfaceConstSize__Group__4 )
+            // InternalIFACE.g:3467:2: rule__GSSIfaceConstSize__Group__3__Impl rule__GSSIfaceConstSize__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSIfaceConstSize__Group__3__Impl();
@@ -11343,22 +11161,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__3__Impl"
-    // InternalIFACE.g:3545:1: rule__GSSIfaceConstSize__Group__3__Impl : ( ':=' ) ;
+    // InternalIFACE.g:3474:1: rule__GSSIfaceConstSize__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceConstSize__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3549:1: ( ( ':=' ) )
-            // InternalIFACE.g:3550:1: ( ':=' )
+            // InternalIFACE.g:3478:1: ( ( ':=' ) )
+            // InternalIFACE.g:3479:1: ( ':=' )
             {
-            // InternalIFACE.g:3550:1: ( ':=' )
-            // InternalIFACE.g:3551:2: ':='
+            // InternalIFACE.g:3479:1: ( ':=' )
+            // InternalIFACE.g:3480:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceConstSizeAccess().getColonEqualsSignKeyword_3()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceConstSizeAccess().getColonEqualsSignKeyword_3()); 
             }
@@ -11384,14 +11202,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__4"
-    // InternalIFACE.g:3560:1: rule__GSSIfaceConstSize__Group__4 : rule__GSSIfaceConstSize__Group__4__Impl rule__GSSIfaceConstSize__Group__5 ;
+    // InternalIFACE.g:3489:1: rule__GSSIfaceConstSize__Group__4 : rule__GSSIfaceConstSize__Group__4__Impl rule__GSSIfaceConstSize__Group__5 ;
     public final void rule__GSSIfaceConstSize__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3564:1: ( rule__GSSIfaceConstSize__Group__4__Impl rule__GSSIfaceConstSize__Group__5 )
-            // InternalIFACE.g:3565:2: rule__GSSIfaceConstSize__Group__4__Impl rule__GSSIfaceConstSize__Group__5
+            // InternalIFACE.g:3493:1: ( rule__GSSIfaceConstSize__Group__4__Impl rule__GSSIfaceConstSize__Group__5 )
+            // InternalIFACE.g:3494:2: rule__GSSIfaceConstSize__Group__4__Impl rule__GSSIfaceConstSize__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceConstSize__Group__4__Impl();
@@ -11422,23 +11240,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__4__Impl"
-    // InternalIFACE.g:3572:1: rule__GSSIfaceConstSize__Group__4__Impl : ( ( rule__GSSIfaceConstSize__BytesAssignment_4 ) ) ;
+    // InternalIFACE.g:3501:1: rule__GSSIfaceConstSize__Group__4__Impl : ( ( rule__GSSIfaceConstSize__BytesAssignment_4 ) ) ;
     public final void rule__GSSIfaceConstSize__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3576:1: ( ( ( rule__GSSIfaceConstSize__BytesAssignment_4 ) ) )
-            // InternalIFACE.g:3577:1: ( ( rule__GSSIfaceConstSize__BytesAssignment_4 ) )
+            // InternalIFACE.g:3505:1: ( ( ( rule__GSSIfaceConstSize__BytesAssignment_4 ) ) )
+            // InternalIFACE.g:3506:1: ( ( rule__GSSIfaceConstSize__BytesAssignment_4 ) )
             {
-            // InternalIFACE.g:3577:1: ( ( rule__GSSIfaceConstSize__BytesAssignment_4 ) )
-            // InternalIFACE.g:3578:2: ( rule__GSSIfaceConstSize__BytesAssignment_4 )
+            // InternalIFACE.g:3506:1: ( ( rule__GSSIfaceConstSize__BytesAssignment_4 ) )
+            // InternalIFACE.g:3507:2: ( rule__GSSIfaceConstSize__BytesAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceConstSizeAccess().getBytesAssignment_4()); 
             }
-            // InternalIFACE.g:3579:2: ( rule__GSSIfaceConstSize__BytesAssignment_4 )
-            // InternalIFACE.g:3579:3: rule__GSSIfaceConstSize__BytesAssignment_4
+            // InternalIFACE.g:3508:2: ( rule__GSSIfaceConstSize__BytesAssignment_4 )
+            // InternalIFACE.g:3508:3: rule__GSSIfaceConstSize__BytesAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceConstSize__BytesAssignment_4();
@@ -11473,14 +11291,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__5"
-    // InternalIFACE.g:3587:1: rule__GSSIfaceConstSize__Group__5 : rule__GSSIfaceConstSize__Group__5__Impl rule__GSSIfaceConstSize__Group__6 ;
+    // InternalIFACE.g:3516:1: rule__GSSIfaceConstSize__Group__5 : rule__GSSIfaceConstSize__Group__5__Impl rule__GSSIfaceConstSize__Group__6 ;
     public final void rule__GSSIfaceConstSize__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3591:1: ( rule__GSSIfaceConstSize__Group__5__Impl rule__GSSIfaceConstSize__Group__6 )
-            // InternalIFACE.g:3592:2: rule__GSSIfaceConstSize__Group__5__Impl rule__GSSIfaceConstSize__Group__6
+            // InternalIFACE.g:3520:1: ( rule__GSSIfaceConstSize__Group__5__Impl rule__GSSIfaceConstSize__Group__6 )
+            // InternalIFACE.g:3521:2: rule__GSSIfaceConstSize__Group__5__Impl rule__GSSIfaceConstSize__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_43);
             rule__GSSIfaceConstSize__Group__5__Impl();
@@ -11511,22 +11329,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__5__Impl"
-    // InternalIFACE.g:3599:1: rule__GSSIfaceConstSize__Group__5__Impl : ( ';' ) ;
+    // InternalIFACE.g:3528:1: rule__GSSIfaceConstSize__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSIfaceConstSize__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3603:1: ( ( ';' ) )
-            // InternalIFACE.g:3604:1: ( ';' )
+            // InternalIFACE.g:3532:1: ( ( ';' ) )
+            // InternalIFACE.g:3533:1: ( ';' )
             {
-            // InternalIFACE.g:3604:1: ( ';' )
-            // InternalIFACE.g:3605:2: ';'
+            // InternalIFACE.g:3533:1: ( ';' )
+            // InternalIFACE.g:3534:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceConstSizeAccess().getSemicolonKeyword_5()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceConstSizeAccess().getSemicolonKeyword_5()); 
             }
@@ -11552,14 +11370,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__6"
-    // InternalIFACE.g:3614:1: rule__GSSIfaceConstSize__Group__6 : rule__GSSIfaceConstSize__Group__6__Impl rule__GSSIfaceConstSize__Group__7 ;
+    // InternalIFACE.g:3543:1: rule__GSSIfaceConstSize__Group__6 : rule__GSSIfaceConstSize__Group__6__Impl rule__GSSIfaceConstSize__Group__7 ;
     public final void rule__GSSIfaceConstSize__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3618:1: ( rule__GSSIfaceConstSize__Group__6__Impl rule__GSSIfaceConstSize__Group__7 )
-            // InternalIFACE.g:3619:2: rule__GSSIfaceConstSize__Group__6__Impl rule__GSSIfaceConstSize__Group__7
+            // InternalIFACE.g:3547:1: ( rule__GSSIfaceConstSize__Group__6__Impl rule__GSSIfaceConstSize__Group__7 )
+            // InternalIFACE.g:3548:2: rule__GSSIfaceConstSize__Group__6__Impl rule__GSSIfaceConstSize__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceConstSize__Group__6__Impl();
@@ -11590,22 +11408,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__6__Impl"
-    // InternalIFACE.g:3626:1: rule__GSSIfaceConstSize__Group__6__Impl : ( 'bits' ) ;
+    // InternalIFACE.g:3555:1: rule__GSSIfaceConstSize__Group__6__Impl : ( 'bits' ) ;
     public final void rule__GSSIfaceConstSize__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3630:1: ( ( 'bits' ) )
-            // InternalIFACE.g:3631:1: ( 'bits' )
+            // InternalIFACE.g:3559:1: ( ( 'bits' ) )
+            // InternalIFACE.g:3560:1: ( 'bits' )
             {
-            // InternalIFACE.g:3631:1: ( 'bits' )
-            // InternalIFACE.g:3632:2: 'bits'
+            // InternalIFACE.g:3560:1: ( 'bits' )
+            // InternalIFACE.g:3561:2: 'bits'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceConstSizeAccess().getBitsKeyword_6()); 
             }
-            match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceConstSizeAccess().getBitsKeyword_6()); 
             }
@@ -11631,14 +11449,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__7"
-    // InternalIFACE.g:3641:1: rule__GSSIfaceConstSize__Group__7 : rule__GSSIfaceConstSize__Group__7__Impl rule__GSSIfaceConstSize__Group__8 ;
+    // InternalIFACE.g:3570:1: rule__GSSIfaceConstSize__Group__7 : rule__GSSIfaceConstSize__Group__7__Impl rule__GSSIfaceConstSize__Group__8 ;
     public final void rule__GSSIfaceConstSize__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3645:1: ( rule__GSSIfaceConstSize__Group__7__Impl rule__GSSIfaceConstSize__Group__8 )
-            // InternalIFACE.g:3646:2: rule__GSSIfaceConstSize__Group__7__Impl rule__GSSIfaceConstSize__Group__8
+            // InternalIFACE.g:3574:1: ( rule__GSSIfaceConstSize__Group__7__Impl rule__GSSIfaceConstSize__Group__8 )
+            // InternalIFACE.g:3575:2: rule__GSSIfaceConstSize__Group__7__Impl rule__GSSIfaceConstSize__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSIfaceConstSize__Group__7__Impl();
@@ -11669,22 +11487,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__7__Impl"
-    // InternalIFACE.g:3653:1: rule__GSSIfaceConstSize__Group__7__Impl : ( ':=' ) ;
+    // InternalIFACE.g:3582:1: rule__GSSIfaceConstSize__Group__7__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceConstSize__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3657:1: ( ( ':=' ) )
-            // InternalIFACE.g:3658:1: ( ':=' )
+            // InternalIFACE.g:3586:1: ( ( ':=' ) )
+            // InternalIFACE.g:3587:1: ( ':=' )
             {
-            // InternalIFACE.g:3658:1: ( ':=' )
-            // InternalIFACE.g:3659:2: ':='
+            // InternalIFACE.g:3587:1: ( ':=' )
+            // InternalIFACE.g:3588:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceConstSizeAccess().getColonEqualsSignKeyword_7()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceConstSizeAccess().getColonEqualsSignKeyword_7()); 
             }
@@ -11710,14 +11528,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__8"
-    // InternalIFACE.g:3668:1: rule__GSSIfaceConstSize__Group__8 : rule__GSSIfaceConstSize__Group__8__Impl rule__GSSIfaceConstSize__Group__9 ;
+    // InternalIFACE.g:3597:1: rule__GSSIfaceConstSize__Group__8 : rule__GSSIfaceConstSize__Group__8__Impl rule__GSSIfaceConstSize__Group__9 ;
     public final void rule__GSSIfaceConstSize__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3672:1: ( rule__GSSIfaceConstSize__Group__8__Impl rule__GSSIfaceConstSize__Group__9 )
-            // InternalIFACE.g:3673:2: rule__GSSIfaceConstSize__Group__8__Impl rule__GSSIfaceConstSize__Group__9
+            // InternalIFACE.g:3601:1: ( rule__GSSIfaceConstSize__Group__8__Impl rule__GSSIfaceConstSize__Group__9 )
+            // InternalIFACE.g:3602:2: rule__GSSIfaceConstSize__Group__8__Impl rule__GSSIfaceConstSize__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceConstSize__Group__8__Impl();
@@ -11748,23 +11566,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__8__Impl"
-    // InternalIFACE.g:3680:1: rule__GSSIfaceConstSize__Group__8__Impl : ( ( rule__GSSIfaceConstSize__BitsAssignment_8 ) ) ;
+    // InternalIFACE.g:3609:1: rule__GSSIfaceConstSize__Group__8__Impl : ( ( rule__GSSIfaceConstSize__BitsAssignment_8 ) ) ;
     public final void rule__GSSIfaceConstSize__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3684:1: ( ( ( rule__GSSIfaceConstSize__BitsAssignment_8 ) ) )
-            // InternalIFACE.g:3685:1: ( ( rule__GSSIfaceConstSize__BitsAssignment_8 ) )
+            // InternalIFACE.g:3613:1: ( ( ( rule__GSSIfaceConstSize__BitsAssignment_8 ) ) )
+            // InternalIFACE.g:3614:1: ( ( rule__GSSIfaceConstSize__BitsAssignment_8 ) )
             {
-            // InternalIFACE.g:3685:1: ( ( rule__GSSIfaceConstSize__BitsAssignment_8 ) )
-            // InternalIFACE.g:3686:2: ( rule__GSSIfaceConstSize__BitsAssignment_8 )
+            // InternalIFACE.g:3614:1: ( ( rule__GSSIfaceConstSize__BitsAssignment_8 ) )
+            // InternalIFACE.g:3615:2: ( rule__GSSIfaceConstSize__BitsAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceConstSizeAccess().getBitsAssignment_8()); 
             }
-            // InternalIFACE.g:3687:2: ( rule__GSSIfaceConstSize__BitsAssignment_8 )
-            // InternalIFACE.g:3687:3: rule__GSSIfaceConstSize__BitsAssignment_8
+            // InternalIFACE.g:3616:2: ( rule__GSSIfaceConstSize__BitsAssignment_8 )
+            // InternalIFACE.g:3616:3: rule__GSSIfaceConstSize__BitsAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceConstSize__BitsAssignment_8();
@@ -11799,14 +11617,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__9"
-    // InternalIFACE.g:3695:1: rule__GSSIfaceConstSize__Group__9 : rule__GSSIfaceConstSize__Group__9__Impl rule__GSSIfaceConstSize__Group__10 ;
+    // InternalIFACE.g:3624:1: rule__GSSIfaceConstSize__Group__9 : rule__GSSIfaceConstSize__Group__9__Impl rule__GSSIfaceConstSize__Group__10 ;
     public final void rule__GSSIfaceConstSize__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3699:1: ( rule__GSSIfaceConstSize__Group__9__Impl rule__GSSIfaceConstSize__Group__10 )
-            // InternalIFACE.g:3700:2: rule__GSSIfaceConstSize__Group__9__Impl rule__GSSIfaceConstSize__Group__10
+            // InternalIFACE.g:3628:1: ( rule__GSSIfaceConstSize__Group__9__Impl rule__GSSIfaceConstSize__Group__10 )
+            // InternalIFACE.g:3629:2: rule__GSSIfaceConstSize__Group__9__Impl rule__GSSIfaceConstSize__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_11);
             rule__GSSIfaceConstSize__Group__9__Impl();
@@ -11837,22 +11655,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__9__Impl"
-    // InternalIFACE.g:3707:1: rule__GSSIfaceConstSize__Group__9__Impl : ( ';' ) ;
+    // InternalIFACE.g:3636:1: rule__GSSIfaceConstSize__Group__9__Impl : ( ';' ) ;
     public final void rule__GSSIfaceConstSize__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3711:1: ( ( ';' ) )
-            // InternalIFACE.g:3712:1: ( ';' )
+            // InternalIFACE.g:3640:1: ( ( ';' ) )
+            // InternalIFACE.g:3641:1: ( ';' )
             {
-            // InternalIFACE.g:3712:1: ( ';' )
-            // InternalIFACE.g:3713:2: ';'
+            // InternalIFACE.g:3641:1: ( ';' )
+            // InternalIFACE.g:3642:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceConstSizeAccess().getSemicolonKeyword_9()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceConstSizeAccess().getSemicolonKeyword_9()); 
             }
@@ -11878,14 +11696,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__10"
-    // InternalIFACE.g:3722:1: rule__GSSIfaceConstSize__Group__10 : rule__GSSIfaceConstSize__Group__10__Impl rule__GSSIfaceConstSize__Group__11 ;
+    // InternalIFACE.g:3651:1: rule__GSSIfaceConstSize__Group__10 : rule__GSSIfaceConstSize__Group__10__Impl rule__GSSIfaceConstSize__Group__11 ;
     public final void rule__GSSIfaceConstSize__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3726:1: ( rule__GSSIfaceConstSize__Group__10__Impl rule__GSSIfaceConstSize__Group__11 )
-            // InternalIFACE.g:3727:2: rule__GSSIfaceConstSize__Group__10__Impl rule__GSSIfaceConstSize__Group__11
+            // InternalIFACE.g:3655:1: ( rule__GSSIfaceConstSize__Group__10__Impl rule__GSSIfaceConstSize__Group__11 )
+            // InternalIFACE.g:3656:2: rule__GSSIfaceConstSize__Group__10__Impl rule__GSSIfaceConstSize__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceConstSize__Group__10__Impl();
@@ -11916,22 +11734,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__10__Impl"
-    // InternalIFACE.g:3734:1: rule__GSSIfaceConstSize__Group__10__Impl : ( '}' ) ;
+    // InternalIFACE.g:3663:1: rule__GSSIfaceConstSize__Group__10__Impl : ( '}' ) ;
     public final void rule__GSSIfaceConstSize__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3738:1: ( ( '}' ) )
-            // InternalIFACE.g:3739:1: ( '}' )
+            // InternalIFACE.g:3667:1: ( ( '}' ) )
+            // InternalIFACE.g:3668:1: ( '}' )
             {
-            // InternalIFACE.g:3739:1: ( '}' )
-            // InternalIFACE.g:3740:2: '}'
+            // InternalIFACE.g:3668:1: ( '}' )
+            // InternalIFACE.g:3669:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceConstSizeAccess().getRightCurlyBracketKeyword_10()); 
             }
-            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceConstSizeAccess().getRightCurlyBracketKeyword_10()); 
             }
@@ -11957,14 +11775,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__11"
-    // InternalIFACE.g:3749:1: rule__GSSIfaceConstSize__Group__11 : rule__GSSIfaceConstSize__Group__11__Impl ;
+    // InternalIFACE.g:3678:1: rule__GSSIfaceConstSize__Group__11 : rule__GSSIfaceConstSize__Group__11__Impl ;
     public final void rule__GSSIfaceConstSize__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3753:1: ( rule__GSSIfaceConstSize__Group__11__Impl )
-            // InternalIFACE.g:3754:2: rule__GSSIfaceConstSize__Group__11__Impl
+            // InternalIFACE.g:3682:1: ( rule__GSSIfaceConstSize__Group__11__Impl )
+            // InternalIFACE.g:3683:2: rule__GSSIfaceConstSize__Group__11__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceConstSize__Group__11__Impl();
@@ -11990,22 +11808,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__Group__11__Impl"
-    // InternalIFACE.g:3760:1: rule__GSSIfaceConstSize__Group__11__Impl : ( ';' ) ;
+    // InternalIFACE.g:3689:1: rule__GSSIfaceConstSize__Group__11__Impl : ( ';' ) ;
     public final void rule__GSSIfaceConstSize__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3764:1: ( ( ';' ) )
-            // InternalIFACE.g:3765:1: ( ';' )
+            // InternalIFACE.g:3693:1: ( ( ';' ) )
+            // InternalIFACE.g:3694:1: ( ';' )
             {
-            // InternalIFACE.g:3765:1: ( ';' )
-            // InternalIFACE.g:3766:2: ';'
+            // InternalIFACE.g:3694:1: ( ';' )
+            // InternalIFACE.g:3695:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceConstSizeAccess().getSemicolonKeyword_11()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceConstSizeAccess().getSemicolonKeyword_11()); 
             }
@@ -12031,14 +11849,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__0"
-    // InternalIFACE.g:3776:1: rule__GSSIfaceSizeFieldOffset__Group__0 : rule__GSSIfaceSizeFieldOffset__Group__0__Impl rule__GSSIfaceSizeFieldOffset__Group__1 ;
+    // InternalIFACE.g:3705:1: rule__GSSIfaceSizeFieldOffset__Group__0 : rule__GSSIfaceSizeFieldOffset__Group__0__Impl rule__GSSIfaceSizeFieldOffset__Group__1 ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3780:1: ( rule__GSSIfaceSizeFieldOffset__Group__0__Impl rule__GSSIfaceSizeFieldOffset__Group__1 )
-            // InternalIFACE.g:3781:2: rule__GSSIfaceSizeFieldOffset__Group__0__Impl rule__GSSIfaceSizeFieldOffset__Group__1
+            // InternalIFACE.g:3709:1: ( rule__GSSIfaceSizeFieldOffset__Group__0__Impl rule__GSSIfaceSizeFieldOffset__Group__1 )
+            // InternalIFACE.g:3710:2: rule__GSSIfaceSizeFieldOffset__Group__0__Impl rule__GSSIfaceSizeFieldOffset__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSIfaceSizeFieldOffset__Group__0__Impl();
@@ -12069,22 +11887,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__0__Impl"
-    // InternalIFACE.g:3788:1: rule__GSSIfaceSizeFieldOffset__Group__0__Impl : ( 'sizeFieldOffset' ) ;
+    // InternalIFACE.g:3717:1: rule__GSSIfaceSizeFieldOffset__Group__0__Impl : ( 'sizeFieldOffset' ) ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3792:1: ( ( 'sizeFieldOffset' ) )
-            // InternalIFACE.g:3793:1: ( 'sizeFieldOffset' )
+            // InternalIFACE.g:3721:1: ( ( 'sizeFieldOffset' ) )
+            // InternalIFACE.g:3722:1: ( 'sizeFieldOffset' )
             {
-            // InternalIFACE.g:3793:1: ( 'sizeFieldOffset' )
-            // InternalIFACE.g:3794:2: 'sizeFieldOffset'
+            // InternalIFACE.g:3722:1: ( 'sizeFieldOffset' )
+            // InternalIFACE.g:3723:2: 'sizeFieldOffset'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSizeFieldOffsetKeyword_0()); 
             }
-            match(input,58,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,59,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSizeFieldOffsetKeyword_0()); 
             }
@@ -12110,14 +11928,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__1"
-    // InternalIFACE.g:3803:1: rule__GSSIfaceSizeFieldOffset__Group__1 : rule__GSSIfaceSizeFieldOffset__Group__1__Impl rule__GSSIfaceSizeFieldOffset__Group__2 ;
+    // InternalIFACE.g:3732:1: rule__GSSIfaceSizeFieldOffset__Group__1 : rule__GSSIfaceSizeFieldOffset__Group__1__Impl rule__GSSIfaceSizeFieldOffset__Group__2 ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3807:1: ( rule__GSSIfaceSizeFieldOffset__Group__1__Impl rule__GSSIfaceSizeFieldOffset__Group__2 )
-            // InternalIFACE.g:3808:2: rule__GSSIfaceSizeFieldOffset__Group__1__Impl rule__GSSIfaceSizeFieldOffset__Group__2
+            // InternalIFACE.g:3736:1: ( rule__GSSIfaceSizeFieldOffset__Group__1__Impl rule__GSSIfaceSizeFieldOffset__Group__2 )
+            // InternalIFACE.g:3737:2: rule__GSSIfaceSizeFieldOffset__Group__1__Impl rule__GSSIfaceSizeFieldOffset__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_42);
             rule__GSSIfaceSizeFieldOffset__Group__1__Impl();
@@ -12148,22 +11966,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__1__Impl"
-    // InternalIFACE.g:3815:1: rule__GSSIfaceSizeFieldOffset__Group__1__Impl : ( '{' ) ;
+    // InternalIFACE.g:3744:1: rule__GSSIfaceSizeFieldOffset__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3819:1: ( ( '{' ) )
-            // InternalIFACE.g:3820:1: ( '{' )
+            // InternalIFACE.g:3748:1: ( ( '{' ) )
+            // InternalIFACE.g:3749:1: ( '{' )
             {
-            // InternalIFACE.g:3820:1: ( '{' )
-            // InternalIFACE.g:3821:2: '{'
+            // InternalIFACE.g:3749:1: ( '{' )
+            // InternalIFACE.g:3750:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -12189,14 +12007,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__2"
-    // InternalIFACE.g:3830:1: rule__GSSIfaceSizeFieldOffset__Group__2 : rule__GSSIfaceSizeFieldOffset__Group__2__Impl rule__GSSIfaceSizeFieldOffset__Group__3 ;
+    // InternalIFACE.g:3759:1: rule__GSSIfaceSizeFieldOffset__Group__2 : rule__GSSIfaceSizeFieldOffset__Group__2__Impl rule__GSSIfaceSizeFieldOffset__Group__3 ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3834:1: ( rule__GSSIfaceSizeFieldOffset__Group__2__Impl rule__GSSIfaceSizeFieldOffset__Group__3 )
-            // InternalIFACE.g:3835:2: rule__GSSIfaceSizeFieldOffset__Group__2__Impl rule__GSSIfaceSizeFieldOffset__Group__3
+            // InternalIFACE.g:3763:1: ( rule__GSSIfaceSizeFieldOffset__Group__2__Impl rule__GSSIfaceSizeFieldOffset__Group__3 )
+            // InternalIFACE.g:3764:2: rule__GSSIfaceSizeFieldOffset__Group__2__Impl rule__GSSIfaceSizeFieldOffset__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceSizeFieldOffset__Group__2__Impl();
@@ -12227,22 +12045,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__2__Impl"
-    // InternalIFACE.g:3842:1: rule__GSSIfaceSizeFieldOffset__Group__2__Impl : ( 'bytes' ) ;
+    // InternalIFACE.g:3771:1: rule__GSSIfaceSizeFieldOffset__Group__2__Impl : ( 'bytes' ) ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3846:1: ( ( 'bytes' ) )
-            // InternalIFACE.g:3847:1: ( 'bytes' )
+            // InternalIFACE.g:3775:1: ( ( 'bytes' ) )
+            // InternalIFACE.g:3776:1: ( 'bytes' )
             {
-            // InternalIFACE.g:3847:1: ( 'bytes' )
-            // InternalIFACE.g:3848:2: 'bytes'
+            // InternalIFACE.g:3776:1: ( 'bytes' )
+            // InternalIFACE.g:3777:2: 'bytes'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBytesKeyword_2()); 
             }
-            match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBytesKeyword_2()); 
             }
@@ -12268,14 +12086,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__3"
-    // InternalIFACE.g:3857:1: rule__GSSIfaceSizeFieldOffset__Group__3 : rule__GSSIfaceSizeFieldOffset__Group__3__Impl rule__GSSIfaceSizeFieldOffset__Group__4 ;
+    // InternalIFACE.g:3786:1: rule__GSSIfaceSizeFieldOffset__Group__3 : rule__GSSIfaceSizeFieldOffset__Group__3__Impl rule__GSSIfaceSizeFieldOffset__Group__4 ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3861:1: ( rule__GSSIfaceSizeFieldOffset__Group__3__Impl rule__GSSIfaceSizeFieldOffset__Group__4 )
-            // InternalIFACE.g:3862:2: rule__GSSIfaceSizeFieldOffset__Group__3__Impl rule__GSSIfaceSizeFieldOffset__Group__4
+            // InternalIFACE.g:3790:1: ( rule__GSSIfaceSizeFieldOffset__Group__3__Impl rule__GSSIfaceSizeFieldOffset__Group__4 )
+            // InternalIFACE.g:3791:2: rule__GSSIfaceSizeFieldOffset__Group__3__Impl rule__GSSIfaceSizeFieldOffset__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSIfaceSizeFieldOffset__Group__3__Impl();
@@ -12306,22 +12124,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__3__Impl"
-    // InternalIFACE.g:3869:1: rule__GSSIfaceSizeFieldOffset__Group__3__Impl : ( ':=' ) ;
+    // InternalIFACE.g:3798:1: rule__GSSIfaceSizeFieldOffset__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3873:1: ( ( ':=' ) )
-            // InternalIFACE.g:3874:1: ( ':=' )
+            // InternalIFACE.g:3802:1: ( ( ':=' ) )
+            // InternalIFACE.g:3803:1: ( ':=' )
             {
-            // InternalIFACE.g:3874:1: ( ':=' )
-            // InternalIFACE.g:3875:2: ':='
+            // InternalIFACE.g:3803:1: ( ':=' )
+            // InternalIFACE.g:3804:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getColonEqualsSignKeyword_3()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getColonEqualsSignKeyword_3()); 
             }
@@ -12347,14 +12165,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__4"
-    // InternalIFACE.g:3884:1: rule__GSSIfaceSizeFieldOffset__Group__4 : rule__GSSIfaceSizeFieldOffset__Group__4__Impl rule__GSSIfaceSizeFieldOffset__Group__5 ;
+    // InternalIFACE.g:3813:1: rule__GSSIfaceSizeFieldOffset__Group__4 : rule__GSSIfaceSizeFieldOffset__Group__4__Impl rule__GSSIfaceSizeFieldOffset__Group__5 ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3888:1: ( rule__GSSIfaceSizeFieldOffset__Group__4__Impl rule__GSSIfaceSizeFieldOffset__Group__5 )
-            // InternalIFACE.g:3889:2: rule__GSSIfaceSizeFieldOffset__Group__4__Impl rule__GSSIfaceSizeFieldOffset__Group__5
+            // InternalIFACE.g:3817:1: ( rule__GSSIfaceSizeFieldOffset__Group__4__Impl rule__GSSIfaceSizeFieldOffset__Group__5 )
+            // InternalIFACE.g:3818:2: rule__GSSIfaceSizeFieldOffset__Group__4__Impl rule__GSSIfaceSizeFieldOffset__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceSizeFieldOffset__Group__4__Impl();
@@ -12385,23 +12203,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__4__Impl"
-    // InternalIFACE.g:3896:1: rule__GSSIfaceSizeFieldOffset__Group__4__Impl : ( ( rule__GSSIfaceSizeFieldOffset__BytesAssignment_4 ) ) ;
+    // InternalIFACE.g:3825:1: rule__GSSIfaceSizeFieldOffset__Group__4__Impl : ( ( rule__GSSIfaceSizeFieldOffset__BytesAssignment_4 ) ) ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3900:1: ( ( ( rule__GSSIfaceSizeFieldOffset__BytesAssignment_4 ) ) )
-            // InternalIFACE.g:3901:1: ( ( rule__GSSIfaceSizeFieldOffset__BytesAssignment_4 ) )
+            // InternalIFACE.g:3829:1: ( ( ( rule__GSSIfaceSizeFieldOffset__BytesAssignment_4 ) ) )
+            // InternalIFACE.g:3830:1: ( ( rule__GSSIfaceSizeFieldOffset__BytesAssignment_4 ) )
             {
-            // InternalIFACE.g:3901:1: ( ( rule__GSSIfaceSizeFieldOffset__BytesAssignment_4 ) )
-            // InternalIFACE.g:3902:2: ( rule__GSSIfaceSizeFieldOffset__BytesAssignment_4 )
+            // InternalIFACE.g:3830:1: ( ( rule__GSSIfaceSizeFieldOffset__BytesAssignment_4 ) )
+            // InternalIFACE.g:3831:2: ( rule__GSSIfaceSizeFieldOffset__BytesAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBytesAssignment_4()); 
             }
-            // InternalIFACE.g:3903:2: ( rule__GSSIfaceSizeFieldOffset__BytesAssignment_4 )
-            // InternalIFACE.g:3903:3: rule__GSSIfaceSizeFieldOffset__BytesAssignment_4
+            // InternalIFACE.g:3832:2: ( rule__GSSIfaceSizeFieldOffset__BytesAssignment_4 )
+            // InternalIFACE.g:3832:3: rule__GSSIfaceSizeFieldOffset__BytesAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceSizeFieldOffset__BytesAssignment_4();
@@ -12436,14 +12254,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__5"
-    // InternalIFACE.g:3911:1: rule__GSSIfaceSizeFieldOffset__Group__5 : rule__GSSIfaceSizeFieldOffset__Group__5__Impl rule__GSSIfaceSizeFieldOffset__Group__6 ;
+    // InternalIFACE.g:3840:1: rule__GSSIfaceSizeFieldOffset__Group__5 : rule__GSSIfaceSizeFieldOffset__Group__5__Impl rule__GSSIfaceSizeFieldOffset__Group__6 ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3915:1: ( rule__GSSIfaceSizeFieldOffset__Group__5__Impl rule__GSSIfaceSizeFieldOffset__Group__6 )
-            // InternalIFACE.g:3916:2: rule__GSSIfaceSizeFieldOffset__Group__5__Impl rule__GSSIfaceSizeFieldOffset__Group__6
+            // InternalIFACE.g:3844:1: ( rule__GSSIfaceSizeFieldOffset__Group__5__Impl rule__GSSIfaceSizeFieldOffset__Group__6 )
+            // InternalIFACE.g:3845:2: rule__GSSIfaceSizeFieldOffset__Group__5__Impl rule__GSSIfaceSizeFieldOffset__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_43);
             rule__GSSIfaceSizeFieldOffset__Group__5__Impl();
@@ -12474,22 +12292,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__5__Impl"
-    // InternalIFACE.g:3923:1: rule__GSSIfaceSizeFieldOffset__Group__5__Impl : ( ';' ) ;
+    // InternalIFACE.g:3852:1: rule__GSSIfaceSizeFieldOffset__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3927:1: ( ( ';' ) )
-            // InternalIFACE.g:3928:1: ( ';' )
+            // InternalIFACE.g:3856:1: ( ( ';' ) )
+            // InternalIFACE.g:3857:1: ( ';' )
             {
-            // InternalIFACE.g:3928:1: ( ';' )
-            // InternalIFACE.g:3929:2: ';'
+            // InternalIFACE.g:3857:1: ( ';' )
+            // InternalIFACE.g:3858:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSemicolonKeyword_5()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSemicolonKeyword_5()); 
             }
@@ -12515,14 +12333,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__6"
-    // InternalIFACE.g:3938:1: rule__GSSIfaceSizeFieldOffset__Group__6 : rule__GSSIfaceSizeFieldOffset__Group__6__Impl rule__GSSIfaceSizeFieldOffset__Group__7 ;
+    // InternalIFACE.g:3867:1: rule__GSSIfaceSizeFieldOffset__Group__6 : rule__GSSIfaceSizeFieldOffset__Group__6__Impl rule__GSSIfaceSizeFieldOffset__Group__7 ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3942:1: ( rule__GSSIfaceSizeFieldOffset__Group__6__Impl rule__GSSIfaceSizeFieldOffset__Group__7 )
-            // InternalIFACE.g:3943:2: rule__GSSIfaceSizeFieldOffset__Group__6__Impl rule__GSSIfaceSizeFieldOffset__Group__7
+            // InternalIFACE.g:3871:1: ( rule__GSSIfaceSizeFieldOffset__Group__6__Impl rule__GSSIfaceSizeFieldOffset__Group__7 )
+            // InternalIFACE.g:3872:2: rule__GSSIfaceSizeFieldOffset__Group__6__Impl rule__GSSIfaceSizeFieldOffset__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceSizeFieldOffset__Group__6__Impl();
@@ -12553,22 +12371,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__6__Impl"
-    // InternalIFACE.g:3950:1: rule__GSSIfaceSizeFieldOffset__Group__6__Impl : ( 'bits' ) ;
+    // InternalIFACE.g:3879:1: rule__GSSIfaceSizeFieldOffset__Group__6__Impl : ( 'bits' ) ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3954:1: ( ( 'bits' ) )
-            // InternalIFACE.g:3955:1: ( 'bits' )
+            // InternalIFACE.g:3883:1: ( ( 'bits' ) )
+            // InternalIFACE.g:3884:1: ( 'bits' )
             {
-            // InternalIFACE.g:3955:1: ( 'bits' )
-            // InternalIFACE.g:3956:2: 'bits'
+            // InternalIFACE.g:3884:1: ( 'bits' )
+            // InternalIFACE.g:3885:2: 'bits'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBitsKeyword_6()); 
             }
-            match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBitsKeyword_6()); 
             }
@@ -12594,14 +12412,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__7"
-    // InternalIFACE.g:3965:1: rule__GSSIfaceSizeFieldOffset__Group__7 : rule__GSSIfaceSizeFieldOffset__Group__7__Impl rule__GSSIfaceSizeFieldOffset__Group__8 ;
+    // InternalIFACE.g:3894:1: rule__GSSIfaceSizeFieldOffset__Group__7 : rule__GSSIfaceSizeFieldOffset__Group__7__Impl rule__GSSIfaceSizeFieldOffset__Group__8 ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3969:1: ( rule__GSSIfaceSizeFieldOffset__Group__7__Impl rule__GSSIfaceSizeFieldOffset__Group__8 )
-            // InternalIFACE.g:3970:2: rule__GSSIfaceSizeFieldOffset__Group__7__Impl rule__GSSIfaceSizeFieldOffset__Group__8
+            // InternalIFACE.g:3898:1: ( rule__GSSIfaceSizeFieldOffset__Group__7__Impl rule__GSSIfaceSizeFieldOffset__Group__8 )
+            // InternalIFACE.g:3899:2: rule__GSSIfaceSizeFieldOffset__Group__7__Impl rule__GSSIfaceSizeFieldOffset__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSIfaceSizeFieldOffset__Group__7__Impl();
@@ -12632,22 +12450,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__7__Impl"
-    // InternalIFACE.g:3977:1: rule__GSSIfaceSizeFieldOffset__Group__7__Impl : ( ':=' ) ;
+    // InternalIFACE.g:3906:1: rule__GSSIfaceSizeFieldOffset__Group__7__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3981:1: ( ( ':=' ) )
-            // InternalIFACE.g:3982:1: ( ':=' )
+            // InternalIFACE.g:3910:1: ( ( ':=' ) )
+            // InternalIFACE.g:3911:1: ( ':=' )
             {
-            // InternalIFACE.g:3982:1: ( ':=' )
-            // InternalIFACE.g:3983:2: ':='
+            // InternalIFACE.g:3911:1: ( ':=' )
+            // InternalIFACE.g:3912:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getColonEqualsSignKeyword_7()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getColonEqualsSignKeyword_7()); 
             }
@@ -12673,14 +12491,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__8"
-    // InternalIFACE.g:3992:1: rule__GSSIfaceSizeFieldOffset__Group__8 : rule__GSSIfaceSizeFieldOffset__Group__8__Impl rule__GSSIfaceSizeFieldOffset__Group__9 ;
+    // InternalIFACE.g:3921:1: rule__GSSIfaceSizeFieldOffset__Group__8 : rule__GSSIfaceSizeFieldOffset__Group__8__Impl rule__GSSIfaceSizeFieldOffset__Group__9 ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:3996:1: ( rule__GSSIfaceSizeFieldOffset__Group__8__Impl rule__GSSIfaceSizeFieldOffset__Group__9 )
-            // InternalIFACE.g:3997:2: rule__GSSIfaceSizeFieldOffset__Group__8__Impl rule__GSSIfaceSizeFieldOffset__Group__9
+            // InternalIFACE.g:3925:1: ( rule__GSSIfaceSizeFieldOffset__Group__8__Impl rule__GSSIfaceSizeFieldOffset__Group__9 )
+            // InternalIFACE.g:3926:2: rule__GSSIfaceSizeFieldOffset__Group__8__Impl rule__GSSIfaceSizeFieldOffset__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceSizeFieldOffset__Group__8__Impl();
@@ -12711,23 +12529,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__8__Impl"
-    // InternalIFACE.g:4004:1: rule__GSSIfaceSizeFieldOffset__Group__8__Impl : ( ( rule__GSSIfaceSizeFieldOffset__BitsAssignment_8 ) ) ;
+    // InternalIFACE.g:3933:1: rule__GSSIfaceSizeFieldOffset__Group__8__Impl : ( ( rule__GSSIfaceSizeFieldOffset__BitsAssignment_8 ) ) ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4008:1: ( ( ( rule__GSSIfaceSizeFieldOffset__BitsAssignment_8 ) ) )
-            // InternalIFACE.g:4009:1: ( ( rule__GSSIfaceSizeFieldOffset__BitsAssignment_8 ) )
+            // InternalIFACE.g:3937:1: ( ( ( rule__GSSIfaceSizeFieldOffset__BitsAssignment_8 ) ) )
+            // InternalIFACE.g:3938:1: ( ( rule__GSSIfaceSizeFieldOffset__BitsAssignment_8 ) )
             {
-            // InternalIFACE.g:4009:1: ( ( rule__GSSIfaceSizeFieldOffset__BitsAssignment_8 ) )
-            // InternalIFACE.g:4010:2: ( rule__GSSIfaceSizeFieldOffset__BitsAssignment_8 )
+            // InternalIFACE.g:3938:1: ( ( rule__GSSIfaceSizeFieldOffset__BitsAssignment_8 ) )
+            // InternalIFACE.g:3939:2: ( rule__GSSIfaceSizeFieldOffset__BitsAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBitsAssignment_8()); 
             }
-            // InternalIFACE.g:4011:2: ( rule__GSSIfaceSizeFieldOffset__BitsAssignment_8 )
-            // InternalIFACE.g:4011:3: rule__GSSIfaceSizeFieldOffset__BitsAssignment_8
+            // InternalIFACE.g:3940:2: ( rule__GSSIfaceSizeFieldOffset__BitsAssignment_8 )
+            // InternalIFACE.g:3940:3: rule__GSSIfaceSizeFieldOffset__BitsAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceSizeFieldOffset__BitsAssignment_8();
@@ -12762,14 +12580,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__9"
-    // InternalIFACE.g:4019:1: rule__GSSIfaceSizeFieldOffset__Group__9 : rule__GSSIfaceSizeFieldOffset__Group__9__Impl rule__GSSIfaceSizeFieldOffset__Group__10 ;
+    // InternalIFACE.g:3948:1: rule__GSSIfaceSizeFieldOffset__Group__9 : rule__GSSIfaceSizeFieldOffset__Group__9__Impl rule__GSSIfaceSizeFieldOffset__Group__10 ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4023:1: ( rule__GSSIfaceSizeFieldOffset__Group__9__Impl rule__GSSIfaceSizeFieldOffset__Group__10 )
-            // InternalIFACE.g:4024:2: rule__GSSIfaceSizeFieldOffset__Group__9__Impl rule__GSSIfaceSizeFieldOffset__Group__10
+            // InternalIFACE.g:3952:1: ( rule__GSSIfaceSizeFieldOffset__Group__9__Impl rule__GSSIfaceSizeFieldOffset__Group__10 )
+            // InternalIFACE.g:3953:2: rule__GSSIfaceSizeFieldOffset__Group__9__Impl rule__GSSIfaceSizeFieldOffset__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_11);
             rule__GSSIfaceSizeFieldOffset__Group__9__Impl();
@@ -12800,22 +12618,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__9__Impl"
-    // InternalIFACE.g:4031:1: rule__GSSIfaceSizeFieldOffset__Group__9__Impl : ( ';' ) ;
+    // InternalIFACE.g:3960:1: rule__GSSIfaceSizeFieldOffset__Group__9__Impl : ( ';' ) ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4035:1: ( ( ';' ) )
-            // InternalIFACE.g:4036:1: ( ';' )
+            // InternalIFACE.g:3964:1: ( ( ';' ) )
+            // InternalIFACE.g:3965:1: ( ';' )
             {
-            // InternalIFACE.g:4036:1: ( ';' )
-            // InternalIFACE.g:4037:2: ';'
+            // InternalIFACE.g:3965:1: ( ';' )
+            // InternalIFACE.g:3966:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSemicolonKeyword_9()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSemicolonKeyword_9()); 
             }
@@ -12841,14 +12659,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__10"
-    // InternalIFACE.g:4046:1: rule__GSSIfaceSizeFieldOffset__Group__10 : rule__GSSIfaceSizeFieldOffset__Group__10__Impl rule__GSSIfaceSizeFieldOffset__Group__11 ;
+    // InternalIFACE.g:3975:1: rule__GSSIfaceSizeFieldOffset__Group__10 : rule__GSSIfaceSizeFieldOffset__Group__10__Impl rule__GSSIfaceSizeFieldOffset__Group__11 ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4050:1: ( rule__GSSIfaceSizeFieldOffset__Group__10__Impl rule__GSSIfaceSizeFieldOffset__Group__11 )
-            // InternalIFACE.g:4051:2: rule__GSSIfaceSizeFieldOffset__Group__10__Impl rule__GSSIfaceSizeFieldOffset__Group__11
+            // InternalIFACE.g:3979:1: ( rule__GSSIfaceSizeFieldOffset__Group__10__Impl rule__GSSIfaceSizeFieldOffset__Group__11 )
+            // InternalIFACE.g:3980:2: rule__GSSIfaceSizeFieldOffset__Group__10__Impl rule__GSSIfaceSizeFieldOffset__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceSizeFieldOffset__Group__10__Impl();
@@ -12879,22 +12697,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__10__Impl"
-    // InternalIFACE.g:4058:1: rule__GSSIfaceSizeFieldOffset__Group__10__Impl : ( '}' ) ;
+    // InternalIFACE.g:3987:1: rule__GSSIfaceSizeFieldOffset__Group__10__Impl : ( '}' ) ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4062:1: ( ( '}' ) )
-            // InternalIFACE.g:4063:1: ( '}' )
+            // InternalIFACE.g:3991:1: ( ( '}' ) )
+            // InternalIFACE.g:3992:1: ( '}' )
             {
-            // InternalIFACE.g:4063:1: ( '}' )
-            // InternalIFACE.g:4064:2: '}'
+            // InternalIFACE.g:3992:1: ( '}' )
+            // InternalIFACE.g:3993:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getRightCurlyBracketKeyword_10()); 
             }
-            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getRightCurlyBracketKeyword_10()); 
             }
@@ -12920,14 +12738,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__11"
-    // InternalIFACE.g:4073:1: rule__GSSIfaceSizeFieldOffset__Group__11 : rule__GSSIfaceSizeFieldOffset__Group__11__Impl ;
+    // InternalIFACE.g:4002:1: rule__GSSIfaceSizeFieldOffset__Group__11 : rule__GSSIfaceSizeFieldOffset__Group__11__Impl ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4077:1: ( rule__GSSIfaceSizeFieldOffset__Group__11__Impl )
-            // InternalIFACE.g:4078:2: rule__GSSIfaceSizeFieldOffset__Group__11__Impl
+            // InternalIFACE.g:4006:1: ( rule__GSSIfaceSizeFieldOffset__Group__11__Impl )
+            // InternalIFACE.g:4007:2: rule__GSSIfaceSizeFieldOffset__Group__11__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceSizeFieldOffset__Group__11__Impl();
@@ -12953,22 +12771,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__Group__11__Impl"
-    // InternalIFACE.g:4084:1: rule__GSSIfaceSizeFieldOffset__Group__11__Impl : ( ';' ) ;
+    // InternalIFACE.g:4013:1: rule__GSSIfaceSizeFieldOffset__Group__11__Impl : ( ';' ) ;
     public final void rule__GSSIfaceSizeFieldOffset__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4088:1: ( ( ';' ) )
-            // InternalIFACE.g:4089:1: ( ';' )
+            // InternalIFACE.g:4017:1: ( ( ';' ) )
+            // InternalIFACE.g:4018:1: ( ';' )
             {
-            // InternalIFACE.g:4089:1: ( ';' )
-            // InternalIFACE.g:4090:2: ';'
+            // InternalIFACE.g:4018:1: ( ';' )
+            // InternalIFACE.g:4019:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSemicolonKeyword_11()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSemicolonKeyword_11()); 
             }
@@ -12994,14 +12812,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__0"
-    // InternalIFACE.g:4100:1: rule__GSSIfaceSizeFieldTrim__Group__0 : rule__GSSIfaceSizeFieldTrim__Group__0__Impl rule__GSSIfaceSizeFieldTrim__Group__1 ;
+    // InternalIFACE.g:4029:1: rule__GSSIfaceSizeFieldTrim__Group__0 : rule__GSSIfaceSizeFieldTrim__Group__0__Impl rule__GSSIfaceSizeFieldTrim__Group__1 ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4104:1: ( rule__GSSIfaceSizeFieldTrim__Group__0__Impl rule__GSSIfaceSizeFieldTrim__Group__1 )
-            // InternalIFACE.g:4105:2: rule__GSSIfaceSizeFieldTrim__Group__0__Impl rule__GSSIfaceSizeFieldTrim__Group__1
+            // InternalIFACE.g:4033:1: ( rule__GSSIfaceSizeFieldTrim__Group__0__Impl rule__GSSIfaceSizeFieldTrim__Group__1 )
+            // InternalIFACE.g:4034:2: rule__GSSIfaceSizeFieldTrim__Group__0__Impl rule__GSSIfaceSizeFieldTrim__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSIfaceSizeFieldTrim__Group__0__Impl();
@@ -13032,22 +12850,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__0__Impl"
-    // InternalIFACE.g:4112:1: rule__GSSIfaceSizeFieldTrim__Group__0__Impl : ( 'sizeFieldTrim' ) ;
+    // InternalIFACE.g:4041:1: rule__GSSIfaceSizeFieldTrim__Group__0__Impl : ( 'sizeFieldTrim' ) ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4116:1: ( ( 'sizeFieldTrim' ) )
-            // InternalIFACE.g:4117:1: ( 'sizeFieldTrim' )
+            // InternalIFACE.g:4045:1: ( ( 'sizeFieldTrim' ) )
+            // InternalIFACE.g:4046:1: ( 'sizeFieldTrim' )
             {
-            // InternalIFACE.g:4117:1: ( 'sizeFieldTrim' )
-            // InternalIFACE.g:4118:2: 'sizeFieldTrim'
+            // InternalIFACE.g:4046:1: ( 'sizeFieldTrim' )
+            // InternalIFACE.g:4047:2: 'sizeFieldTrim'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSizeFieldTrimKeyword_0()); 
             }
-            match(input,59,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,60,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSizeFieldTrimKeyword_0()); 
             }
@@ -13073,14 +12891,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__1"
-    // InternalIFACE.g:4127:1: rule__GSSIfaceSizeFieldTrim__Group__1 : rule__GSSIfaceSizeFieldTrim__Group__1__Impl rule__GSSIfaceSizeFieldTrim__Group__2 ;
+    // InternalIFACE.g:4056:1: rule__GSSIfaceSizeFieldTrim__Group__1 : rule__GSSIfaceSizeFieldTrim__Group__1__Impl rule__GSSIfaceSizeFieldTrim__Group__2 ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4131:1: ( rule__GSSIfaceSizeFieldTrim__Group__1__Impl rule__GSSIfaceSizeFieldTrim__Group__2 )
-            // InternalIFACE.g:4132:2: rule__GSSIfaceSizeFieldTrim__Group__1__Impl rule__GSSIfaceSizeFieldTrim__Group__2
+            // InternalIFACE.g:4060:1: ( rule__GSSIfaceSizeFieldTrim__Group__1__Impl rule__GSSIfaceSizeFieldTrim__Group__2 )
+            // InternalIFACE.g:4061:2: rule__GSSIfaceSizeFieldTrim__Group__1__Impl rule__GSSIfaceSizeFieldTrim__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_42);
             rule__GSSIfaceSizeFieldTrim__Group__1__Impl();
@@ -13111,22 +12929,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__1__Impl"
-    // InternalIFACE.g:4139:1: rule__GSSIfaceSizeFieldTrim__Group__1__Impl : ( '{' ) ;
+    // InternalIFACE.g:4068:1: rule__GSSIfaceSizeFieldTrim__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4143:1: ( ( '{' ) )
-            // InternalIFACE.g:4144:1: ( '{' )
+            // InternalIFACE.g:4072:1: ( ( '{' ) )
+            // InternalIFACE.g:4073:1: ( '{' )
             {
-            // InternalIFACE.g:4144:1: ( '{' )
-            // InternalIFACE.g:4145:2: '{'
+            // InternalIFACE.g:4073:1: ( '{' )
+            // InternalIFACE.g:4074:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -13152,14 +12970,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__2"
-    // InternalIFACE.g:4154:1: rule__GSSIfaceSizeFieldTrim__Group__2 : rule__GSSIfaceSizeFieldTrim__Group__2__Impl rule__GSSIfaceSizeFieldTrim__Group__3 ;
+    // InternalIFACE.g:4083:1: rule__GSSIfaceSizeFieldTrim__Group__2 : rule__GSSIfaceSizeFieldTrim__Group__2__Impl rule__GSSIfaceSizeFieldTrim__Group__3 ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4158:1: ( rule__GSSIfaceSizeFieldTrim__Group__2__Impl rule__GSSIfaceSizeFieldTrim__Group__3 )
-            // InternalIFACE.g:4159:2: rule__GSSIfaceSizeFieldTrim__Group__2__Impl rule__GSSIfaceSizeFieldTrim__Group__3
+            // InternalIFACE.g:4087:1: ( rule__GSSIfaceSizeFieldTrim__Group__2__Impl rule__GSSIfaceSizeFieldTrim__Group__3 )
+            // InternalIFACE.g:4088:2: rule__GSSIfaceSizeFieldTrim__Group__2__Impl rule__GSSIfaceSizeFieldTrim__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceSizeFieldTrim__Group__2__Impl();
@@ -13190,22 +13008,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__2__Impl"
-    // InternalIFACE.g:4166:1: rule__GSSIfaceSizeFieldTrim__Group__2__Impl : ( 'bytes' ) ;
+    // InternalIFACE.g:4095:1: rule__GSSIfaceSizeFieldTrim__Group__2__Impl : ( 'bytes' ) ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4170:1: ( ( 'bytes' ) )
-            // InternalIFACE.g:4171:1: ( 'bytes' )
+            // InternalIFACE.g:4099:1: ( ( 'bytes' ) )
+            // InternalIFACE.g:4100:1: ( 'bytes' )
             {
-            // InternalIFACE.g:4171:1: ( 'bytes' )
-            // InternalIFACE.g:4172:2: 'bytes'
+            // InternalIFACE.g:4100:1: ( 'bytes' )
+            // InternalIFACE.g:4101:2: 'bytes'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBytesKeyword_2()); 
             }
-            match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBytesKeyword_2()); 
             }
@@ -13231,14 +13049,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__3"
-    // InternalIFACE.g:4181:1: rule__GSSIfaceSizeFieldTrim__Group__3 : rule__GSSIfaceSizeFieldTrim__Group__3__Impl rule__GSSIfaceSizeFieldTrim__Group__4 ;
+    // InternalIFACE.g:4110:1: rule__GSSIfaceSizeFieldTrim__Group__3 : rule__GSSIfaceSizeFieldTrim__Group__3__Impl rule__GSSIfaceSizeFieldTrim__Group__4 ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4185:1: ( rule__GSSIfaceSizeFieldTrim__Group__3__Impl rule__GSSIfaceSizeFieldTrim__Group__4 )
-            // InternalIFACE.g:4186:2: rule__GSSIfaceSizeFieldTrim__Group__3__Impl rule__GSSIfaceSizeFieldTrim__Group__4
+            // InternalIFACE.g:4114:1: ( rule__GSSIfaceSizeFieldTrim__Group__3__Impl rule__GSSIfaceSizeFieldTrim__Group__4 )
+            // InternalIFACE.g:4115:2: rule__GSSIfaceSizeFieldTrim__Group__3__Impl rule__GSSIfaceSizeFieldTrim__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSIfaceSizeFieldTrim__Group__3__Impl();
@@ -13269,22 +13087,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__3__Impl"
-    // InternalIFACE.g:4193:1: rule__GSSIfaceSizeFieldTrim__Group__3__Impl : ( ':=' ) ;
+    // InternalIFACE.g:4122:1: rule__GSSIfaceSizeFieldTrim__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4197:1: ( ( ':=' ) )
-            // InternalIFACE.g:4198:1: ( ':=' )
+            // InternalIFACE.g:4126:1: ( ( ':=' ) )
+            // InternalIFACE.g:4127:1: ( ':=' )
             {
-            // InternalIFACE.g:4198:1: ( ':=' )
-            // InternalIFACE.g:4199:2: ':='
+            // InternalIFACE.g:4127:1: ( ':=' )
+            // InternalIFACE.g:4128:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getColonEqualsSignKeyword_3()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getColonEqualsSignKeyword_3()); 
             }
@@ -13310,14 +13128,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__4"
-    // InternalIFACE.g:4208:1: rule__GSSIfaceSizeFieldTrim__Group__4 : rule__GSSIfaceSizeFieldTrim__Group__4__Impl rule__GSSIfaceSizeFieldTrim__Group__5 ;
+    // InternalIFACE.g:4137:1: rule__GSSIfaceSizeFieldTrim__Group__4 : rule__GSSIfaceSizeFieldTrim__Group__4__Impl rule__GSSIfaceSizeFieldTrim__Group__5 ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4212:1: ( rule__GSSIfaceSizeFieldTrim__Group__4__Impl rule__GSSIfaceSizeFieldTrim__Group__5 )
-            // InternalIFACE.g:4213:2: rule__GSSIfaceSizeFieldTrim__Group__4__Impl rule__GSSIfaceSizeFieldTrim__Group__5
+            // InternalIFACE.g:4141:1: ( rule__GSSIfaceSizeFieldTrim__Group__4__Impl rule__GSSIfaceSizeFieldTrim__Group__5 )
+            // InternalIFACE.g:4142:2: rule__GSSIfaceSizeFieldTrim__Group__4__Impl rule__GSSIfaceSizeFieldTrim__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceSizeFieldTrim__Group__4__Impl();
@@ -13348,23 +13166,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__4__Impl"
-    // InternalIFACE.g:4220:1: rule__GSSIfaceSizeFieldTrim__Group__4__Impl : ( ( rule__GSSIfaceSizeFieldTrim__BytesAssignment_4 ) ) ;
+    // InternalIFACE.g:4149:1: rule__GSSIfaceSizeFieldTrim__Group__4__Impl : ( ( rule__GSSIfaceSizeFieldTrim__BytesAssignment_4 ) ) ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4224:1: ( ( ( rule__GSSIfaceSizeFieldTrim__BytesAssignment_4 ) ) )
-            // InternalIFACE.g:4225:1: ( ( rule__GSSIfaceSizeFieldTrim__BytesAssignment_4 ) )
+            // InternalIFACE.g:4153:1: ( ( ( rule__GSSIfaceSizeFieldTrim__BytesAssignment_4 ) ) )
+            // InternalIFACE.g:4154:1: ( ( rule__GSSIfaceSizeFieldTrim__BytesAssignment_4 ) )
             {
-            // InternalIFACE.g:4225:1: ( ( rule__GSSIfaceSizeFieldTrim__BytesAssignment_4 ) )
-            // InternalIFACE.g:4226:2: ( rule__GSSIfaceSizeFieldTrim__BytesAssignment_4 )
+            // InternalIFACE.g:4154:1: ( ( rule__GSSIfaceSizeFieldTrim__BytesAssignment_4 ) )
+            // InternalIFACE.g:4155:2: ( rule__GSSIfaceSizeFieldTrim__BytesAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBytesAssignment_4()); 
             }
-            // InternalIFACE.g:4227:2: ( rule__GSSIfaceSizeFieldTrim__BytesAssignment_4 )
-            // InternalIFACE.g:4227:3: rule__GSSIfaceSizeFieldTrim__BytesAssignment_4
+            // InternalIFACE.g:4156:2: ( rule__GSSIfaceSizeFieldTrim__BytesAssignment_4 )
+            // InternalIFACE.g:4156:3: rule__GSSIfaceSizeFieldTrim__BytesAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceSizeFieldTrim__BytesAssignment_4();
@@ -13399,14 +13217,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__5"
-    // InternalIFACE.g:4235:1: rule__GSSIfaceSizeFieldTrim__Group__5 : rule__GSSIfaceSizeFieldTrim__Group__5__Impl rule__GSSIfaceSizeFieldTrim__Group__6 ;
+    // InternalIFACE.g:4164:1: rule__GSSIfaceSizeFieldTrim__Group__5 : rule__GSSIfaceSizeFieldTrim__Group__5__Impl rule__GSSIfaceSizeFieldTrim__Group__6 ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4239:1: ( rule__GSSIfaceSizeFieldTrim__Group__5__Impl rule__GSSIfaceSizeFieldTrim__Group__6 )
-            // InternalIFACE.g:4240:2: rule__GSSIfaceSizeFieldTrim__Group__5__Impl rule__GSSIfaceSizeFieldTrim__Group__6
+            // InternalIFACE.g:4168:1: ( rule__GSSIfaceSizeFieldTrim__Group__5__Impl rule__GSSIfaceSizeFieldTrim__Group__6 )
+            // InternalIFACE.g:4169:2: rule__GSSIfaceSizeFieldTrim__Group__5__Impl rule__GSSIfaceSizeFieldTrim__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_43);
             rule__GSSIfaceSizeFieldTrim__Group__5__Impl();
@@ -13437,22 +13255,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__5__Impl"
-    // InternalIFACE.g:4247:1: rule__GSSIfaceSizeFieldTrim__Group__5__Impl : ( ';' ) ;
+    // InternalIFACE.g:4176:1: rule__GSSIfaceSizeFieldTrim__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4251:1: ( ( ';' ) )
-            // InternalIFACE.g:4252:1: ( ';' )
+            // InternalIFACE.g:4180:1: ( ( ';' ) )
+            // InternalIFACE.g:4181:1: ( ';' )
             {
-            // InternalIFACE.g:4252:1: ( ';' )
-            // InternalIFACE.g:4253:2: ';'
+            // InternalIFACE.g:4181:1: ( ';' )
+            // InternalIFACE.g:4182:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSemicolonKeyword_5()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSemicolonKeyword_5()); 
             }
@@ -13478,14 +13296,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__6"
-    // InternalIFACE.g:4262:1: rule__GSSIfaceSizeFieldTrim__Group__6 : rule__GSSIfaceSizeFieldTrim__Group__6__Impl rule__GSSIfaceSizeFieldTrim__Group__7 ;
+    // InternalIFACE.g:4191:1: rule__GSSIfaceSizeFieldTrim__Group__6 : rule__GSSIfaceSizeFieldTrim__Group__6__Impl rule__GSSIfaceSizeFieldTrim__Group__7 ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4266:1: ( rule__GSSIfaceSizeFieldTrim__Group__6__Impl rule__GSSIfaceSizeFieldTrim__Group__7 )
-            // InternalIFACE.g:4267:2: rule__GSSIfaceSizeFieldTrim__Group__6__Impl rule__GSSIfaceSizeFieldTrim__Group__7
+            // InternalIFACE.g:4195:1: ( rule__GSSIfaceSizeFieldTrim__Group__6__Impl rule__GSSIfaceSizeFieldTrim__Group__7 )
+            // InternalIFACE.g:4196:2: rule__GSSIfaceSizeFieldTrim__Group__6__Impl rule__GSSIfaceSizeFieldTrim__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceSizeFieldTrim__Group__6__Impl();
@@ -13516,22 +13334,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__6__Impl"
-    // InternalIFACE.g:4274:1: rule__GSSIfaceSizeFieldTrim__Group__6__Impl : ( 'bits' ) ;
+    // InternalIFACE.g:4203:1: rule__GSSIfaceSizeFieldTrim__Group__6__Impl : ( 'bits' ) ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4278:1: ( ( 'bits' ) )
-            // InternalIFACE.g:4279:1: ( 'bits' )
+            // InternalIFACE.g:4207:1: ( ( 'bits' ) )
+            // InternalIFACE.g:4208:1: ( 'bits' )
             {
-            // InternalIFACE.g:4279:1: ( 'bits' )
-            // InternalIFACE.g:4280:2: 'bits'
+            // InternalIFACE.g:4208:1: ( 'bits' )
+            // InternalIFACE.g:4209:2: 'bits'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBitsKeyword_6()); 
             }
-            match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBitsKeyword_6()); 
             }
@@ -13557,14 +13375,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__7"
-    // InternalIFACE.g:4289:1: rule__GSSIfaceSizeFieldTrim__Group__7 : rule__GSSIfaceSizeFieldTrim__Group__7__Impl rule__GSSIfaceSizeFieldTrim__Group__8 ;
+    // InternalIFACE.g:4218:1: rule__GSSIfaceSizeFieldTrim__Group__7 : rule__GSSIfaceSizeFieldTrim__Group__7__Impl rule__GSSIfaceSizeFieldTrim__Group__8 ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4293:1: ( rule__GSSIfaceSizeFieldTrim__Group__7__Impl rule__GSSIfaceSizeFieldTrim__Group__8 )
-            // InternalIFACE.g:4294:2: rule__GSSIfaceSizeFieldTrim__Group__7__Impl rule__GSSIfaceSizeFieldTrim__Group__8
+            // InternalIFACE.g:4222:1: ( rule__GSSIfaceSizeFieldTrim__Group__7__Impl rule__GSSIfaceSizeFieldTrim__Group__8 )
+            // InternalIFACE.g:4223:2: rule__GSSIfaceSizeFieldTrim__Group__7__Impl rule__GSSIfaceSizeFieldTrim__Group__8
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSIfaceSizeFieldTrim__Group__7__Impl();
@@ -13595,22 +13413,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__7__Impl"
-    // InternalIFACE.g:4301:1: rule__GSSIfaceSizeFieldTrim__Group__7__Impl : ( ':=' ) ;
+    // InternalIFACE.g:4230:1: rule__GSSIfaceSizeFieldTrim__Group__7__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4305:1: ( ( ':=' ) )
-            // InternalIFACE.g:4306:1: ( ':=' )
+            // InternalIFACE.g:4234:1: ( ( ':=' ) )
+            // InternalIFACE.g:4235:1: ( ':=' )
             {
-            // InternalIFACE.g:4306:1: ( ':=' )
-            // InternalIFACE.g:4307:2: ':='
+            // InternalIFACE.g:4235:1: ( ':=' )
+            // InternalIFACE.g:4236:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getColonEqualsSignKeyword_7()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getColonEqualsSignKeyword_7()); 
             }
@@ -13636,14 +13454,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__8"
-    // InternalIFACE.g:4316:1: rule__GSSIfaceSizeFieldTrim__Group__8 : rule__GSSIfaceSizeFieldTrim__Group__8__Impl rule__GSSIfaceSizeFieldTrim__Group__9 ;
+    // InternalIFACE.g:4245:1: rule__GSSIfaceSizeFieldTrim__Group__8 : rule__GSSIfaceSizeFieldTrim__Group__8__Impl rule__GSSIfaceSizeFieldTrim__Group__9 ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4320:1: ( rule__GSSIfaceSizeFieldTrim__Group__8__Impl rule__GSSIfaceSizeFieldTrim__Group__9 )
-            // InternalIFACE.g:4321:2: rule__GSSIfaceSizeFieldTrim__Group__8__Impl rule__GSSIfaceSizeFieldTrim__Group__9
+            // InternalIFACE.g:4249:1: ( rule__GSSIfaceSizeFieldTrim__Group__8__Impl rule__GSSIfaceSizeFieldTrim__Group__9 )
+            // InternalIFACE.g:4250:2: rule__GSSIfaceSizeFieldTrim__Group__8__Impl rule__GSSIfaceSizeFieldTrim__Group__9
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceSizeFieldTrim__Group__8__Impl();
@@ -13674,23 +13492,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__8__Impl"
-    // InternalIFACE.g:4328:1: rule__GSSIfaceSizeFieldTrim__Group__8__Impl : ( ( rule__GSSIfaceSizeFieldTrim__BitsAssignment_8 ) ) ;
+    // InternalIFACE.g:4257:1: rule__GSSIfaceSizeFieldTrim__Group__8__Impl : ( ( rule__GSSIfaceSizeFieldTrim__BitsAssignment_8 ) ) ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4332:1: ( ( ( rule__GSSIfaceSizeFieldTrim__BitsAssignment_8 ) ) )
-            // InternalIFACE.g:4333:1: ( ( rule__GSSIfaceSizeFieldTrim__BitsAssignment_8 ) )
+            // InternalIFACE.g:4261:1: ( ( ( rule__GSSIfaceSizeFieldTrim__BitsAssignment_8 ) ) )
+            // InternalIFACE.g:4262:1: ( ( rule__GSSIfaceSizeFieldTrim__BitsAssignment_8 ) )
             {
-            // InternalIFACE.g:4333:1: ( ( rule__GSSIfaceSizeFieldTrim__BitsAssignment_8 ) )
-            // InternalIFACE.g:4334:2: ( rule__GSSIfaceSizeFieldTrim__BitsAssignment_8 )
+            // InternalIFACE.g:4262:1: ( ( rule__GSSIfaceSizeFieldTrim__BitsAssignment_8 ) )
+            // InternalIFACE.g:4263:2: ( rule__GSSIfaceSizeFieldTrim__BitsAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBitsAssignment_8()); 
             }
-            // InternalIFACE.g:4335:2: ( rule__GSSIfaceSizeFieldTrim__BitsAssignment_8 )
-            // InternalIFACE.g:4335:3: rule__GSSIfaceSizeFieldTrim__BitsAssignment_8
+            // InternalIFACE.g:4264:2: ( rule__GSSIfaceSizeFieldTrim__BitsAssignment_8 )
+            // InternalIFACE.g:4264:3: rule__GSSIfaceSizeFieldTrim__BitsAssignment_8
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceSizeFieldTrim__BitsAssignment_8();
@@ -13725,14 +13543,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__9"
-    // InternalIFACE.g:4343:1: rule__GSSIfaceSizeFieldTrim__Group__9 : rule__GSSIfaceSizeFieldTrim__Group__9__Impl rule__GSSIfaceSizeFieldTrim__Group__10 ;
+    // InternalIFACE.g:4272:1: rule__GSSIfaceSizeFieldTrim__Group__9 : rule__GSSIfaceSizeFieldTrim__Group__9__Impl rule__GSSIfaceSizeFieldTrim__Group__10 ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4347:1: ( rule__GSSIfaceSizeFieldTrim__Group__9__Impl rule__GSSIfaceSizeFieldTrim__Group__10 )
-            // InternalIFACE.g:4348:2: rule__GSSIfaceSizeFieldTrim__Group__9__Impl rule__GSSIfaceSizeFieldTrim__Group__10
+            // InternalIFACE.g:4276:1: ( rule__GSSIfaceSizeFieldTrim__Group__9__Impl rule__GSSIfaceSizeFieldTrim__Group__10 )
+            // InternalIFACE.g:4277:2: rule__GSSIfaceSizeFieldTrim__Group__9__Impl rule__GSSIfaceSizeFieldTrim__Group__10
             {
             pushFollow(FollowSets000.FOLLOW_11);
             rule__GSSIfaceSizeFieldTrim__Group__9__Impl();
@@ -13763,22 +13581,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__9__Impl"
-    // InternalIFACE.g:4355:1: rule__GSSIfaceSizeFieldTrim__Group__9__Impl : ( ';' ) ;
+    // InternalIFACE.g:4284:1: rule__GSSIfaceSizeFieldTrim__Group__9__Impl : ( ';' ) ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4359:1: ( ( ';' ) )
-            // InternalIFACE.g:4360:1: ( ';' )
+            // InternalIFACE.g:4288:1: ( ( ';' ) )
+            // InternalIFACE.g:4289:1: ( ';' )
             {
-            // InternalIFACE.g:4360:1: ( ';' )
-            // InternalIFACE.g:4361:2: ';'
+            // InternalIFACE.g:4289:1: ( ';' )
+            // InternalIFACE.g:4290:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSemicolonKeyword_9()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSemicolonKeyword_9()); 
             }
@@ -13804,14 +13622,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__10"
-    // InternalIFACE.g:4370:1: rule__GSSIfaceSizeFieldTrim__Group__10 : rule__GSSIfaceSizeFieldTrim__Group__10__Impl rule__GSSIfaceSizeFieldTrim__Group__11 ;
+    // InternalIFACE.g:4299:1: rule__GSSIfaceSizeFieldTrim__Group__10 : rule__GSSIfaceSizeFieldTrim__Group__10__Impl rule__GSSIfaceSizeFieldTrim__Group__11 ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4374:1: ( rule__GSSIfaceSizeFieldTrim__Group__10__Impl rule__GSSIfaceSizeFieldTrim__Group__11 )
-            // InternalIFACE.g:4375:2: rule__GSSIfaceSizeFieldTrim__Group__10__Impl rule__GSSIfaceSizeFieldTrim__Group__11
+            // InternalIFACE.g:4303:1: ( rule__GSSIfaceSizeFieldTrim__Group__10__Impl rule__GSSIfaceSizeFieldTrim__Group__11 )
+            // InternalIFACE.g:4304:2: rule__GSSIfaceSizeFieldTrim__Group__10__Impl rule__GSSIfaceSizeFieldTrim__Group__11
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceSizeFieldTrim__Group__10__Impl();
@@ -13842,22 +13660,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__10__Impl"
-    // InternalIFACE.g:4382:1: rule__GSSIfaceSizeFieldTrim__Group__10__Impl : ( '}' ) ;
+    // InternalIFACE.g:4311:1: rule__GSSIfaceSizeFieldTrim__Group__10__Impl : ( '}' ) ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4386:1: ( ( '}' ) )
-            // InternalIFACE.g:4387:1: ( '}' )
+            // InternalIFACE.g:4315:1: ( ( '}' ) )
+            // InternalIFACE.g:4316:1: ( '}' )
             {
-            // InternalIFACE.g:4387:1: ( '}' )
-            // InternalIFACE.g:4388:2: '}'
+            // InternalIFACE.g:4316:1: ( '}' )
+            // InternalIFACE.g:4317:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getRightCurlyBracketKeyword_10()); 
             }
-            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getRightCurlyBracketKeyword_10()); 
             }
@@ -13883,14 +13701,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__11"
-    // InternalIFACE.g:4397:1: rule__GSSIfaceSizeFieldTrim__Group__11 : rule__GSSIfaceSizeFieldTrim__Group__11__Impl ;
+    // InternalIFACE.g:4326:1: rule__GSSIfaceSizeFieldTrim__Group__11 : rule__GSSIfaceSizeFieldTrim__Group__11__Impl ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4401:1: ( rule__GSSIfaceSizeFieldTrim__Group__11__Impl )
-            // InternalIFACE.g:4402:2: rule__GSSIfaceSizeFieldTrim__Group__11__Impl
+            // InternalIFACE.g:4330:1: ( rule__GSSIfaceSizeFieldTrim__Group__11__Impl )
+            // InternalIFACE.g:4331:2: rule__GSSIfaceSizeFieldTrim__Group__11__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceSizeFieldTrim__Group__11__Impl();
@@ -13916,22 +13734,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__Group__11__Impl"
-    // InternalIFACE.g:4408:1: rule__GSSIfaceSizeFieldTrim__Group__11__Impl : ( ';' ) ;
+    // InternalIFACE.g:4337:1: rule__GSSIfaceSizeFieldTrim__Group__11__Impl : ( ';' ) ;
     public final void rule__GSSIfaceSizeFieldTrim__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4412:1: ( ( ';' ) )
-            // InternalIFACE.g:4413:1: ( ';' )
+            // InternalIFACE.g:4341:1: ( ( ';' ) )
+            // InternalIFACE.g:4342:1: ( ';' )
             {
-            // InternalIFACE.g:4413:1: ( ';' )
-            // InternalIFACE.g:4414:2: ';'
+            // InternalIFACE.g:4342:1: ( ';' )
+            // InternalIFACE.g:4343:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSemicolonKeyword_11()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSemicolonKeyword_11()); 
             }
@@ -13957,14 +13775,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__0"
-    // InternalIFACE.g:4424:1: rule__GSSIfaceSyncPattern__Group__0 : rule__GSSIfaceSyncPattern__Group__0__Impl rule__GSSIfaceSyncPattern__Group__1 ;
+    // InternalIFACE.g:4353:1: rule__GSSIfaceSyncPattern__Group__0 : rule__GSSIfaceSyncPattern__Group__0__Impl rule__GSSIfaceSyncPattern__Group__1 ;
     public final void rule__GSSIfaceSyncPattern__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4428:1: ( rule__GSSIfaceSyncPattern__Group__0__Impl rule__GSSIfaceSyncPattern__Group__1 )
-            // InternalIFACE.g:4429:2: rule__GSSIfaceSyncPattern__Group__0__Impl rule__GSSIfaceSyncPattern__Group__1
+            // InternalIFACE.g:4357:1: ( rule__GSSIfaceSyncPattern__Group__0__Impl rule__GSSIfaceSyncPattern__Group__1 )
+            // InternalIFACE.g:4358:2: rule__GSSIfaceSyncPattern__Group__0__Impl rule__GSSIfaceSyncPattern__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSIfaceSyncPattern__Group__0__Impl();
@@ -13995,22 +13813,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__0__Impl"
-    // InternalIFACE.g:4436:1: rule__GSSIfaceSyncPattern__Group__0__Impl : ( 'syncPattern' ) ;
+    // InternalIFACE.g:4365:1: rule__GSSIfaceSyncPattern__Group__0__Impl : ( 'syncPattern' ) ;
     public final void rule__GSSIfaceSyncPattern__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4440:1: ( ( 'syncPattern' ) )
-            // InternalIFACE.g:4441:1: ( 'syncPattern' )
+            // InternalIFACE.g:4369:1: ( ( 'syncPattern' ) )
+            // InternalIFACE.g:4370:1: ( 'syncPattern' )
             {
-            // InternalIFACE.g:4441:1: ( 'syncPattern' )
-            // InternalIFACE.g:4442:2: 'syncPattern'
+            // InternalIFACE.g:4370:1: ( 'syncPattern' )
+            // InternalIFACE.g:4371:2: 'syncPattern'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSyncPatternAccess().getSyncPatternKeyword_0()); 
             }
-            match(input,60,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,61,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSyncPatternAccess().getSyncPatternKeyword_0()); 
             }
@@ -14036,14 +13854,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__1"
-    // InternalIFACE.g:4451:1: rule__GSSIfaceSyncPattern__Group__1 : rule__GSSIfaceSyncPattern__Group__1__Impl rule__GSSIfaceSyncPattern__Group__2 ;
+    // InternalIFACE.g:4380:1: rule__GSSIfaceSyncPattern__Group__1 : rule__GSSIfaceSyncPattern__Group__1__Impl rule__GSSIfaceSyncPattern__Group__2 ;
     public final void rule__GSSIfaceSyncPattern__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4455:1: ( rule__GSSIfaceSyncPattern__Group__1__Impl rule__GSSIfaceSyncPattern__Group__2 )
-            // InternalIFACE.g:4456:2: rule__GSSIfaceSyncPattern__Group__1__Impl rule__GSSIfaceSyncPattern__Group__2
+            // InternalIFACE.g:4384:1: ( rule__GSSIfaceSyncPattern__Group__1__Impl rule__GSSIfaceSyncPattern__Group__2 )
+            // InternalIFACE.g:4385:2: rule__GSSIfaceSyncPattern__Group__1__Impl rule__GSSIfaceSyncPattern__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_44);
             rule__GSSIfaceSyncPattern__Group__1__Impl();
@@ -14074,22 +13892,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__1__Impl"
-    // InternalIFACE.g:4463:1: rule__GSSIfaceSyncPattern__Group__1__Impl : ( '{' ) ;
+    // InternalIFACE.g:4392:1: rule__GSSIfaceSyncPattern__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSIfaceSyncPattern__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4467:1: ( ( '{' ) )
-            // InternalIFACE.g:4468:1: ( '{' )
+            // InternalIFACE.g:4396:1: ( ( '{' ) )
+            // InternalIFACE.g:4397:1: ( '{' )
             {
-            // InternalIFACE.g:4468:1: ( '{' )
-            // InternalIFACE.g:4469:2: '{'
+            // InternalIFACE.g:4397:1: ( '{' )
+            // InternalIFACE.g:4398:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSyncPatternAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSyncPatternAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -14115,14 +13933,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__2"
-    // InternalIFACE.g:4478:1: rule__GSSIfaceSyncPattern__Group__2 : rule__GSSIfaceSyncPattern__Group__2__Impl rule__GSSIfaceSyncPattern__Group__3 ;
+    // InternalIFACE.g:4407:1: rule__GSSIfaceSyncPattern__Group__2 : rule__GSSIfaceSyncPattern__Group__2__Impl rule__GSSIfaceSyncPattern__Group__3 ;
     public final void rule__GSSIfaceSyncPattern__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4482:1: ( rule__GSSIfaceSyncPattern__Group__2__Impl rule__GSSIfaceSyncPattern__Group__3 )
-            // InternalIFACE.g:4483:2: rule__GSSIfaceSyncPattern__Group__2__Impl rule__GSSIfaceSyncPattern__Group__3
+            // InternalIFACE.g:4411:1: ( rule__GSSIfaceSyncPattern__Group__2__Impl rule__GSSIfaceSyncPattern__Group__3 )
+            // InternalIFACE.g:4412:2: rule__GSSIfaceSyncPattern__Group__2__Impl rule__GSSIfaceSyncPattern__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceSyncPattern__Group__2__Impl();
@@ -14153,22 +13971,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__2__Impl"
-    // InternalIFACE.g:4490:1: rule__GSSIfaceSyncPattern__Group__2__Impl : ( 'hexValue' ) ;
+    // InternalIFACE.g:4419:1: rule__GSSIfaceSyncPattern__Group__2__Impl : ( 'hexValue' ) ;
     public final void rule__GSSIfaceSyncPattern__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4494:1: ( ( 'hexValue' ) )
-            // InternalIFACE.g:4495:1: ( 'hexValue' )
+            // InternalIFACE.g:4423:1: ( ( 'hexValue' ) )
+            // InternalIFACE.g:4424:1: ( 'hexValue' )
             {
-            // InternalIFACE.g:4495:1: ( 'hexValue' )
-            // InternalIFACE.g:4496:2: 'hexValue'
+            // InternalIFACE.g:4424:1: ( 'hexValue' )
+            // InternalIFACE.g:4425:2: 'hexValue'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSyncPatternAccess().getHexValueKeyword_2()); 
             }
-            match(input,61,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,62,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSyncPatternAccess().getHexValueKeyword_2()); 
             }
@@ -14194,14 +14012,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__3"
-    // InternalIFACE.g:4505:1: rule__GSSIfaceSyncPattern__Group__3 : rule__GSSIfaceSyncPattern__Group__3__Impl rule__GSSIfaceSyncPattern__Group__4 ;
+    // InternalIFACE.g:4434:1: rule__GSSIfaceSyncPattern__Group__3 : rule__GSSIfaceSyncPattern__Group__3__Impl rule__GSSIfaceSyncPattern__Group__4 ;
     public final void rule__GSSIfaceSyncPattern__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4509:1: ( rule__GSSIfaceSyncPattern__Group__3__Impl rule__GSSIfaceSyncPattern__Group__4 )
-            // InternalIFACE.g:4510:2: rule__GSSIfaceSyncPattern__Group__3__Impl rule__GSSIfaceSyncPattern__Group__4
+            // InternalIFACE.g:4438:1: ( rule__GSSIfaceSyncPattern__Group__3__Impl rule__GSSIfaceSyncPattern__Group__4 )
+            // InternalIFACE.g:4439:2: rule__GSSIfaceSyncPattern__Group__3__Impl rule__GSSIfaceSyncPattern__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_45);
             rule__GSSIfaceSyncPattern__Group__3__Impl();
@@ -14232,22 +14050,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__3__Impl"
-    // InternalIFACE.g:4517:1: rule__GSSIfaceSyncPattern__Group__3__Impl : ( ':=' ) ;
+    // InternalIFACE.g:4446:1: rule__GSSIfaceSyncPattern__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceSyncPattern__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4521:1: ( ( ':=' ) )
-            // InternalIFACE.g:4522:1: ( ':=' )
+            // InternalIFACE.g:4450:1: ( ( ':=' ) )
+            // InternalIFACE.g:4451:1: ( ':=' )
             {
-            // InternalIFACE.g:4522:1: ( ':=' )
-            // InternalIFACE.g:4523:2: ':='
+            // InternalIFACE.g:4451:1: ( ':=' )
+            // InternalIFACE.g:4452:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSyncPatternAccess().getColonEqualsSignKeyword_3()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSyncPatternAccess().getColonEqualsSignKeyword_3()); 
             }
@@ -14273,14 +14091,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__4"
-    // InternalIFACE.g:4532:1: rule__GSSIfaceSyncPattern__Group__4 : rule__GSSIfaceSyncPattern__Group__4__Impl rule__GSSIfaceSyncPattern__Group__5 ;
+    // InternalIFACE.g:4461:1: rule__GSSIfaceSyncPattern__Group__4 : rule__GSSIfaceSyncPattern__Group__4__Impl rule__GSSIfaceSyncPattern__Group__5 ;
     public final void rule__GSSIfaceSyncPattern__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4536:1: ( rule__GSSIfaceSyncPattern__Group__4__Impl rule__GSSIfaceSyncPattern__Group__5 )
-            // InternalIFACE.g:4537:2: rule__GSSIfaceSyncPattern__Group__4__Impl rule__GSSIfaceSyncPattern__Group__5
+            // InternalIFACE.g:4465:1: ( rule__GSSIfaceSyncPattern__Group__4__Impl rule__GSSIfaceSyncPattern__Group__5 )
+            // InternalIFACE.g:4466:2: rule__GSSIfaceSyncPattern__Group__4__Impl rule__GSSIfaceSyncPattern__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceSyncPattern__Group__4__Impl();
@@ -14311,23 +14129,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__4__Impl"
-    // InternalIFACE.g:4544:1: rule__GSSIfaceSyncPattern__Group__4__Impl : ( ( rule__GSSIfaceSyncPattern__HexValueAssignment_4 ) ) ;
+    // InternalIFACE.g:4473:1: rule__GSSIfaceSyncPattern__Group__4__Impl : ( ( rule__GSSIfaceSyncPattern__HexValueAssignment_4 ) ) ;
     public final void rule__GSSIfaceSyncPattern__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4548:1: ( ( ( rule__GSSIfaceSyncPattern__HexValueAssignment_4 ) ) )
-            // InternalIFACE.g:4549:1: ( ( rule__GSSIfaceSyncPattern__HexValueAssignment_4 ) )
+            // InternalIFACE.g:4477:1: ( ( ( rule__GSSIfaceSyncPattern__HexValueAssignment_4 ) ) )
+            // InternalIFACE.g:4478:1: ( ( rule__GSSIfaceSyncPattern__HexValueAssignment_4 ) )
             {
-            // InternalIFACE.g:4549:1: ( ( rule__GSSIfaceSyncPattern__HexValueAssignment_4 ) )
-            // InternalIFACE.g:4550:2: ( rule__GSSIfaceSyncPattern__HexValueAssignment_4 )
+            // InternalIFACE.g:4478:1: ( ( rule__GSSIfaceSyncPattern__HexValueAssignment_4 ) )
+            // InternalIFACE.g:4479:2: ( rule__GSSIfaceSyncPattern__HexValueAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSyncPatternAccess().getHexValueAssignment_4()); 
             }
-            // InternalIFACE.g:4551:2: ( rule__GSSIfaceSyncPattern__HexValueAssignment_4 )
-            // InternalIFACE.g:4551:3: rule__GSSIfaceSyncPattern__HexValueAssignment_4
+            // InternalIFACE.g:4480:2: ( rule__GSSIfaceSyncPattern__HexValueAssignment_4 )
+            // InternalIFACE.g:4480:3: rule__GSSIfaceSyncPattern__HexValueAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceSyncPattern__HexValueAssignment_4();
@@ -14362,14 +14180,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__5"
-    // InternalIFACE.g:4559:1: rule__GSSIfaceSyncPattern__Group__5 : rule__GSSIfaceSyncPattern__Group__5__Impl rule__GSSIfaceSyncPattern__Group__6 ;
+    // InternalIFACE.g:4488:1: rule__GSSIfaceSyncPattern__Group__5 : rule__GSSIfaceSyncPattern__Group__5__Impl rule__GSSIfaceSyncPattern__Group__6 ;
     public final void rule__GSSIfaceSyncPattern__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4563:1: ( rule__GSSIfaceSyncPattern__Group__5__Impl rule__GSSIfaceSyncPattern__Group__6 )
-            // InternalIFACE.g:4564:2: rule__GSSIfaceSyncPattern__Group__5__Impl rule__GSSIfaceSyncPattern__Group__6
+            // InternalIFACE.g:4492:1: ( rule__GSSIfaceSyncPattern__Group__5__Impl rule__GSSIfaceSyncPattern__Group__6 )
+            // InternalIFACE.g:4493:2: rule__GSSIfaceSyncPattern__Group__5__Impl rule__GSSIfaceSyncPattern__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_11);
             rule__GSSIfaceSyncPattern__Group__5__Impl();
@@ -14400,22 +14218,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__5__Impl"
-    // InternalIFACE.g:4571:1: rule__GSSIfaceSyncPattern__Group__5__Impl : ( ';' ) ;
+    // InternalIFACE.g:4500:1: rule__GSSIfaceSyncPattern__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSIfaceSyncPattern__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4575:1: ( ( ';' ) )
-            // InternalIFACE.g:4576:1: ( ';' )
+            // InternalIFACE.g:4504:1: ( ( ';' ) )
+            // InternalIFACE.g:4505:1: ( ';' )
             {
-            // InternalIFACE.g:4576:1: ( ';' )
-            // InternalIFACE.g:4577:2: ';'
+            // InternalIFACE.g:4505:1: ( ';' )
+            // InternalIFACE.g:4506:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSyncPatternAccess().getSemicolonKeyword_5()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSyncPatternAccess().getSemicolonKeyword_5()); 
             }
@@ -14441,14 +14259,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__6"
-    // InternalIFACE.g:4586:1: rule__GSSIfaceSyncPattern__Group__6 : rule__GSSIfaceSyncPattern__Group__6__Impl rule__GSSIfaceSyncPattern__Group__7 ;
+    // InternalIFACE.g:4515:1: rule__GSSIfaceSyncPattern__Group__6 : rule__GSSIfaceSyncPattern__Group__6__Impl rule__GSSIfaceSyncPattern__Group__7 ;
     public final void rule__GSSIfaceSyncPattern__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4590:1: ( rule__GSSIfaceSyncPattern__Group__6__Impl rule__GSSIfaceSyncPattern__Group__7 )
-            // InternalIFACE.g:4591:2: rule__GSSIfaceSyncPattern__Group__6__Impl rule__GSSIfaceSyncPattern__Group__7
+            // InternalIFACE.g:4519:1: ( rule__GSSIfaceSyncPattern__Group__6__Impl rule__GSSIfaceSyncPattern__Group__7 )
+            // InternalIFACE.g:4520:2: rule__GSSIfaceSyncPattern__Group__6__Impl rule__GSSIfaceSyncPattern__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceSyncPattern__Group__6__Impl();
@@ -14479,22 +14297,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__6__Impl"
-    // InternalIFACE.g:4598:1: rule__GSSIfaceSyncPattern__Group__6__Impl : ( '}' ) ;
+    // InternalIFACE.g:4527:1: rule__GSSIfaceSyncPattern__Group__6__Impl : ( '}' ) ;
     public final void rule__GSSIfaceSyncPattern__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4602:1: ( ( '}' ) )
-            // InternalIFACE.g:4603:1: ( '}' )
+            // InternalIFACE.g:4531:1: ( ( '}' ) )
+            // InternalIFACE.g:4532:1: ( '}' )
             {
-            // InternalIFACE.g:4603:1: ( '}' )
-            // InternalIFACE.g:4604:2: '}'
+            // InternalIFACE.g:4532:1: ( '}' )
+            // InternalIFACE.g:4533:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSyncPatternAccess().getRightCurlyBracketKeyword_6()); 
             }
-            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSyncPatternAccess().getRightCurlyBracketKeyword_6()); 
             }
@@ -14520,14 +14338,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__7"
-    // InternalIFACE.g:4613:1: rule__GSSIfaceSyncPattern__Group__7 : rule__GSSIfaceSyncPattern__Group__7__Impl ;
+    // InternalIFACE.g:4542:1: rule__GSSIfaceSyncPattern__Group__7 : rule__GSSIfaceSyncPattern__Group__7__Impl ;
     public final void rule__GSSIfaceSyncPattern__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4617:1: ( rule__GSSIfaceSyncPattern__Group__7__Impl )
-            // InternalIFACE.g:4618:2: rule__GSSIfaceSyncPattern__Group__7__Impl
+            // InternalIFACE.g:4546:1: ( rule__GSSIfaceSyncPattern__Group__7__Impl )
+            // InternalIFACE.g:4547:2: rule__GSSIfaceSyncPattern__Group__7__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceSyncPattern__Group__7__Impl();
@@ -14553,22 +14371,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__Group__7__Impl"
-    // InternalIFACE.g:4624:1: rule__GSSIfaceSyncPattern__Group__7__Impl : ( ';' ) ;
+    // InternalIFACE.g:4553:1: rule__GSSIfaceSyncPattern__Group__7__Impl : ( ';' ) ;
     public final void rule__GSSIfaceSyncPattern__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4628:1: ( ( ';' ) )
-            // InternalIFACE.g:4629:1: ( ';' )
+            // InternalIFACE.g:4557:1: ( ( ';' ) )
+            // InternalIFACE.g:4558:1: ( ';' )
             {
-            // InternalIFACE.g:4629:1: ( ';' )
-            // InternalIFACE.g:4630:2: ';'
+            // InternalIFACE.g:4558:1: ( ';' )
+            // InternalIFACE.g:4559:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSyncPatternAccess().getSemicolonKeyword_7()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSyncPatternAccess().getSemicolonKeyword_7()); 
             }
@@ -14594,14 +14412,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__0"
-    // InternalIFACE.g:4640:1: rule__GSSIfaceSpWTCPort__Group__0 : rule__GSSIfaceSpWTCPort__Group__0__Impl rule__GSSIfaceSpWTCPort__Group__1 ;
+    // InternalIFACE.g:4569:1: rule__GSSIfaceSpWTCPort__Group__0 : rule__GSSIfaceSpWTCPort__Group__0__Impl rule__GSSIfaceSpWTCPort__Group__1 ;
     public final void rule__GSSIfaceSpWTCPort__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4644:1: ( rule__GSSIfaceSpWTCPort__Group__0__Impl rule__GSSIfaceSpWTCPort__Group__1 )
-            // InternalIFACE.g:4645:2: rule__GSSIfaceSpWTCPort__Group__0__Impl rule__GSSIfaceSpWTCPort__Group__1
+            // InternalIFACE.g:4573:1: ( rule__GSSIfaceSpWTCPort__Group__0__Impl rule__GSSIfaceSpWTCPort__Group__1 )
+            // InternalIFACE.g:4574:2: rule__GSSIfaceSpWTCPort__Group__0__Impl rule__GSSIfaceSpWTCPort__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSIfaceSpWTCPort__Group__0__Impl();
@@ -14632,22 +14450,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__0__Impl"
-    // InternalIFACE.g:4652:1: rule__GSSIfaceSpWTCPort__Group__0__Impl : ( 'spwTCPort' ) ;
+    // InternalIFACE.g:4581:1: rule__GSSIfaceSpWTCPort__Group__0__Impl : ( 'spwTCPort' ) ;
     public final void rule__GSSIfaceSpWTCPort__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4656:1: ( ( 'spwTCPort' ) )
-            // InternalIFACE.g:4657:1: ( 'spwTCPort' )
+            // InternalIFACE.g:4585:1: ( ( 'spwTCPort' ) )
+            // InternalIFACE.g:4586:1: ( 'spwTCPort' )
             {
-            // InternalIFACE.g:4657:1: ( 'spwTCPort' )
-            // InternalIFACE.g:4658:2: 'spwTCPort'
+            // InternalIFACE.g:4586:1: ( 'spwTCPort' )
+            // InternalIFACE.g:4587:2: 'spwTCPort'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWTCPortAccess().getSpwTCPortKeyword_0()); 
             }
-            match(input,62,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,63,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWTCPortAccess().getSpwTCPortKeyword_0()); 
             }
@@ -14673,14 +14491,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__1"
-    // InternalIFACE.g:4667:1: rule__GSSIfaceSpWTCPort__Group__1 : rule__GSSIfaceSpWTCPort__Group__1__Impl rule__GSSIfaceSpWTCPort__Group__2 ;
+    // InternalIFACE.g:4596:1: rule__GSSIfaceSpWTCPort__Group__1 : rule__GSSIfaceSpWTCPort__Group__1__Impl rule__GSSIfaceSpWTCPort__Group__2 ;
     public final void rule__GSSIfaceSpWTCPort__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4671:1: ( rule__GSSIfaceSpWTCPort__Group__1__Impl rule__GSSIfaceSpWTCPort__Group__2 )
-            // InternalIFACE.g:4672:2: rule__GSSIfaceSpWTCPort__Group__1__Impl rule__GSSIfaceSpWTCPort__Group__2
+            // InternalIFACE.g:4600:1: ( rule__GSSIfaceSpWTCPort__Group__1__Impl rule__GSSIfaceSpWTCPort__Group__2 )
+            // InternalIFACE.g:4601:2: rule__GSSIfaceSpWTCPort__Group__1__Impl rule__GSSIfaceSpWTCPort__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_46);
             rule__GSSIfaceSpWTCPort__Group__1__Impl();
@@ -14711,22 +14529,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__1__Impl"
-    // InternalIFACE.g:4679:1: rule__GSSIfaceSpWTCPort__Group__1__Impl : ( '{' ) ;
+    // InternalIFACE.g:4608:1: rule__GSSIfaceSpWTCPort__Group__1__Impl : ( '{' ) ;
     public final void rule__GSSIfaceSpWTCPort__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4683:1: ( ( '{' ) )
-            // InternalIFACE.g:4684:1: ( '{' )
+            // InternalIFACE.g:4612:1: ( ( '{' ) )
+            // InternalIFACE.g:4613:1: ( '{' )
             {
-            // InternalIFACE.g:4684:1: ( '{' )
-            // InternalIFACE.g:4685:2: '{'
+            // InternalIFACE.g:4613:1: ( '{' )
+            // InternalIFACE.g:4614:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWTCPortAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWTCPortAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -14752,14 +14570,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__2"
-    // InternalIFACE.g:4694:1: rule__GSSIfaceSpWTCPort__Group__2 : rule__GSSIfaceSpWTCPort__Group__2__Impl rule__GSSIfaceSpWTCPort__Group__3 ;
+    // InternalIFACE.g:4623:1: rule__GSSIfaceSpWTCPort__Group__2 : rule__GSSIfaceSpWTCPort__Group__2__Impl rule__GSSIfaceSpWTCPort__Group__3 ;
     public final void rule__GSSIfaceSpWTCPort__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4698:1: ( rule__GSSIfaceSpWTCPort__Group__2__Impl rule__GSSIfaceSpWTCPort__Group__3 )
-            // InternalIFACE.g:4699:2: rule__GSSIfaceSpWTCPort__Group__2__Impl rule__GSSIfaceSpWTCPort__Group__3
+            // InternalIFACE.g:4627:1: ( rule__GSSIfaceSpWTCPort__Group__2__Impl rule__GSSIfaceSpWTCPort__Group__3 )
+            // InternalIFACE.g:4628:2: rule__GSSIfaceSpWTCPort__Group__2__Impl rule__GSSIfaceSpWTCPort__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_12);
             rule__GSSIfaceSpWTCPort__Group__2__Impl();
@@ -14790,22 +14608,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__2__Impl"
-    // InternalIFACE.g:4706:1: rule__GSSIfaceSpWTCPort__Group__2__Impl : ( 'spwPortRef' ) ;
+    // InternalIFACE.g:4635:1: rule__GSSIfaceSpWTCPort__Group__2__Impl : ( 'spwPortRef' ) ;
     public final void rule__GSSIfaceSpWTCPort__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4710:1: ( ( 'spwPortRef' ) )
-            // InternalIFACE.g:4711:1: ( 'spwPortRef' )
+            // InternalIFACE.g:4639:1: ( ( 'spwPortRef' ) )
+            // InternalIFACE.g:4640:1: ( 'spwPortRef' )
             {
-            // InternalIFACE.g:4711:1: ( 'spwPortRef' )
-            // InternalIFACE.g:4712:2: 'spwPortRef'
+            // InternalIFACE.g:4640:1: ( 'spwPortRef' )
+            // InternalIFACE.g:4641:2: 'spwPortRef'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWTCPortAccess().getSpwPortRefKeyword_2()); 
             }
-            match(input,63,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,64,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWTCPortAccess().getSpwPortRefKeyword_2()); 
             }
@@ -14831,14 +14649,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__3"
-    // InternalIFACE.g:4721:1: rule__GSSIfaceSpWTCPort__Group__3 : rule__GSSIfaceSpWTCPort__Group__3__Impl rule__GSSIfaceSpWTCPort__Group__4 ;
+    // InternalIFACE.g:4650:1: rule__GSSIfaceSpWTCPort__Group__3 : rule__GSSIfaceSpWTCPort__Group__3__Impl rule__GSSIfaceSpWTCPort__Group__4 ;
     public final void rule__GSSIfaceSpWTCPort__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4725:1: ( rule__GSSIfaceSpWTCPort__Group__3__Impl rule__GSSIfaceSpWTCPort__Group__4 )
-            // InternalIFACE.g:4726:2: rule__GSSIfaceSpWTCPort__Group__3__Impl rule__GSSIfaceSpWTCPort__Group__4
+            // InternalIFACE.g:4654:1: ( rule__GSSIfaceSpWTCPort__Group__3__Impl rule__GSSIfaceSpWTCPort__Group__4 )
+            // InternalIFACE.g:4655:2: rule__GSSIfaceSpWTCPort__Group__3__Impl rule__GSSIfaceSpWTCPort__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_17);
             rule__GSSIfaceSpWTCPort__Group__3__Impl();
@@ -14869,22 +14687,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__3__Impl"
-    // InternalIFACE.g:4733:1: rule__GSSIfaceSpWTCPort__Group__3__Impl : ( ':=' ) ;
+    // InternalIFACE.g:4662:1: rule__GSSIfaceSpWTCPort__Group__3__Impl : ( ':=' ) ;
     public final void rule__GSSIfaceSpWTCPort__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4737:1: ( ( ':=' ) )
-            // InternalIFACE.g:4738:1: ( ':=' )
+            // InternalIFACE.g:4666:1: ( ( ':=' ) )
+            // InternalIFACE.g:4667:1: ( ':=' )
             {
-            // InternalIFACE.g:4738:1: ( ':=' )
-            // InternalIFACE.g:4739:2: ':='
+            // InternalIFACE.g:4667:1: ( ':=' )
+            // InternalIFACE.g:4668:2: ':='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWTCPortAccess().getColonEqualsSignKeyword_3()); 
             }
-            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,40,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWTCPortAccess().getColonEqualsSignKeyword_3()); 
             }
@@ -14910,14 +14728,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__4"
-    // InternalIFACE.g:4748:1: rule__GSSIfaceSpWTCPort__Group__4 : rule__GSSIfaceSpWTCPort__Group__4__Impl rule__GSSIfaceSpWTCPort__Group__5 ;
+    // InternalIFACE.g:4677:1: rule__GSSIfaceSpWTCPort__Group__4 : rule__GSSIfaceSpWTCPort__Group__4__Impl rule__GSSIfaceSpWTCPort__Group__5 ;
     public final void rule__GSSIfaceSpWTCPort__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4752:1: ( rule__GSSIfaceSpWTCPort__Group__4__Impl rule__GSSIfaceSpWTCPort__Group__5 )
-            // InternalIFACE.g:4753:2: rule__GSSIfaceSpWTCPort__Group__4__Impl rule__GSSIfaceSpWTCPort__Group__5
+            // InternalIFACE.g:4681:1: ( rule__GSSIfaceSpWTCPort__Group__4__Impl rule__GSSIfaceSpWTCPort__Group__5 )
+            // InternalIFACE.g:4682:2: rule__GSSIfaceSpWTCPort__Group__4__Impl rule__GSSIfaceSpWTCPort__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceSpWTCPort__Group__4__Impl();
@@ -14948,23 +14766,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__4__Impl"
-    // InternalIFACE.g:4760:1: rule__GSSIfaceSpWTCPort__Group__4__Impl : ( ( rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4 ) ) ;
+    // InternalIFACE.g:4689:1: rule__GSSIfaceSpWTCPort__Group__4__Impl : ( ( rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4 ) ) ;
     public final void rule__GSSIfaceSpWTCPort__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4764:1: ( ( ( rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4 ) ) )
-            // InternalIFACE.g:4765:1: ( ( rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4 ) )
+            // InternalIFACE.g:4693:1: ( ( ( rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4 ) ) )
+            // InternalIFACE.g:4694:1: ( ( rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4 ) )
             {
-            // InternalIFACE.g:4765:1: ( ( rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4 ) )
-            // InternalIFACE.g:4766:2: ( rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4 )
+            // InternalIFACE.g:4694:1: ( ( rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4 ) )
+            // InternalIFACE.g:4695:2: ( rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWTCPortAccess().getSpwPortRefAssignment_4()); 
             }
-            // InternalIFACE.g:4767:2: ( rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4 )
-            // InternalIFACE.g:4767:3: rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4
+            // InternalIFACE.g:4696:2: ( rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4 )
+            // InternalIFACE.g:4696:3: rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4();
@@ -14999,14 +14817,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__5"
-    // InternalIFACE.g:4775:1: rule__GSSIfaceSpWTCPort__Group__5 : rule__GSSIfaceSpWTCPort__Group__5__Impl rule__GSSIfaceSpWTCPort__Group__6 ;
+    // InternalIFACE.g:4704:1: rule__GSSIfaceSpWTCPort__Group__5 : rule__GSSIfaceSpWTCPort__Group__5__Impl rule__GSSIfaceSpWTCPort__Group__6 ;
     public final void rule__GSSIfaceSpWTCPort__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4779:1: ( rule__GSSIfaceSpWTCPort__Group__5__Impl rule__GSSIfaceSpWTCPort__Group__6 )
-            // InternalIFACE.g:4780:2: rule__GSSIfaceSpWTCPort__Group__5__Impl rule__GSSIfaceSpWTCPort__Group__6
+            // InternalIFACE.g:4708:1: ( rule__GSSIfaceSpWTCPort__Group__5__Impl rule__GSSIfaceSpWTCPort__Group__6 )
+            // InternalIFACE.g:4709:2: rule__GSSIfaceSpWTCPort__Group__5__Impl rule__GSSIfaceSpWTCPort__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_11);
             rule__GSSIfaceSpWTCPort__Group__5__Impl();
@@ -15037,22 +14855,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__5__Impl"
-    // InternalIFACE.g:4787:1: rule__GSSIfaceSpWTCPort__Group__5__Impl : ( ';' ) ;
+    // InternalIFACE.g:4716:1: rule__GSSIfaceSpWTCPort__Group__5__Impl : ( ';' ) ;
     public final void rule__GSSIfaceSpWTCPort__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4791:1: ( ( ';' ) )
-            // InternalIFACE.g:4792:1: ( ';' )
+            // InternalIFACE.g:4720:1: ( ( ';' ) )
+            // InternalIFACE.g:4721:1: ( ';' )
             {
-            // InternalIFACE.g:4792:1: ( ';' )
-            // InternalIFACE.g:4793:2: ';'
+            // InternalIFACE.g:4721:1: ( ';' )
+            // InternalIFACE.g:4722:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWTCPortAccess().getSemicolonKeyword_5()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWTCPortAccess().getSemicolonKeyword_5()); 
             }
@@ -15078,14 +14896,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__6"
-    // InternalIFACE.g:4802:1: rule__GSSIfaceSpWTCPort__Group__6 : rule__GSSIfaceSpWTCPort__Group__6__Impl rule__GSSIfaceSpWTCPort__Group__7 ;
+    // InternalIFACE.g:4731:1: rule__GSSIfaceSpWTCPort__Group__6 : rule__GSSIfaceSpWTCPort__Group__6__Impl rule__GSSIfaceSpWTCPort__Group__7 ;
     public final void rule__GSSIfaceSpWTCPort__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4806:1: ( rule__GSSIfaceSpWTCPort__Group__6__Impl rule__GSSIfaceSpWTCPort__Group__7 )
-            // InternalIFACE.g:4807:2: rule__GSSIfaceSpWTCPort__Group__6__Impl rule__GSSIfaceSpWTCPort__Group__7
+            // InternalIFACE.g:4735:1: ( rule__GSSIfaceSpWTCPort__Group__6__Impl rule__GSSIfaceSpWTCPort__Group__7 )
+            // InternalIFACE.g:4736:2: rule__GSSIfaceSpWTCPort__Group__6__Impl rule__GSSIfaceSpWTCPort__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceSpWTCPort__Group__6__Impl();
@@ -15116,22 +14934,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__6__Impl"
-    // InternalIFACE.g:4814:1: rule__GSSIfaceSpWTCPort__Group__6__Impl : ( '}' ) ;
+    // InternalIFACE.g:4743:1: rule__GSSIfaceSpWTCPort__Group__6__Impl : ( '}' ) ;
     public final void rule__GSSIfaceSpWTCPort__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4818:1: ( ( '}' ) )
-            // InternalIFACE.g:4819:1: ( '}' )
+            // InternalIFACE.g:4747:1: ( ( '}' ) )
+            // InternalIFACE.g:4748:1: ( '}' )
             {
-            // InternalIFACE.g:4819:1: ( '}' )
-            // InternalIFACE.g:4820:2: '}'
+            // InternalIFACE.g:4748:1: ( '}' )
+            // InternalIFACE.g:4749:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWTCPortAccess().getRightCurlyBracketKeyword_6()); 
             }
-            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWTCPortAccess().getRightCurlyBracketKeyword_6()); 
             }
@@ -15157,14 +14975,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__7"
-    // InternalIFACE.g:4829:1: rule__GSSIfaceSpWTCPort__Group__7 : rule__GSSIfaceSpWTCPort__Group__7__Impl ;
+    // InternalIFACE.g:4758:1: rule__GSSIfaceSpWTCPort__Group__7 : rule__GSSIfaceSpWTCPort__Group__7__Impl ;
     public final void rule__GSSIfaceSpWTCPort__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4833:1: ( rule__GSSIfaceSpWTCPort__Group__7__Impl )
-            // InternalIFACE.g:4834:2: rule__GSSIfaceSpWTCPort__Group__7__Impl
+            // InternalIFACE.g:4762:1: ( rule__GSSIfaceSpWTCPort__Group__7__Impl )
+            // InternalIFACE.g:4763:2: rule__GSSIfaceSpWTCPort__Group__7__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceSpWTCPort__Group__7__Impl();
@@ -15190,22 +15008,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__Group__7__Impl"
-    // InternalIFACE.g:4840:1: rule__GSSIfaceSpWTCPort__Group__7__Impl : ( ';' ) ;
+    // InternalIFACE.g:4769:1: rule__GSSIfaceSpWTCPort__Group__7__Impl : ( ';' ) ;
     public final void rule__GSSIfaceSpWTCPort__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4844:1: ( ( ';' ) )
-            // InternalIFACE.g:4845:1: ( ';' )
+            // InternalIFACE.g:4773:1: ( ( ';' ) )
+            // InternalIFACE.g:4774:1: ( ';' )
             {
-            // InternalIFACE.g:4845:1: ( ';' )
-            // InternalIFACE.g:4846:2: ';'
+            // InternalIFACE.g:4774:1: ( ';' )
+            // InternalIFACE.g:4775:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWTCPortAccess().getSemicolonKeyword_7()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceSpWTCPortAccess().getSemicolonKeyword_7()); 
             }
@@ -15231,14 +15049,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceDummyPort__Group__0"
-    // InternalIFACE.g:4856:1: rule__GSSIfaceDummyPort__Group__0 : rule__GSSIfaceDummyPort__Group__0__Impl rule__GSSIfaceDummyPort__Group__1 ;
+    // InternalIFACE.g:4785:1: rule__GSSIfaceDummyPort__Group__0 : rule__GSSIfaceDummyPort__Group__0__Impl rule__GSSIfaceDummyPort__Group__1 ;
     public final void rule__GSSIfaceDummyPort__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4860:1: ( rule__GSSIfaceDummyPort__Group__0__Impl rule__GSSIfaceDummyPort__Group__1 )
-            // InternalIFACE.g:4861:2: rule__GSSIfaceDummyPort__Group__0__Impl rule__GSSIfaceDummyPort__Group__1
+            // InternalIFACE.g:4789:1: ( rule__GSSIfaceDummyPort__Group__0__Impl rule__GSSIfaceDummyPort__Group__1 )
+            // InternalIFACE.g:4790:2: rule__GSSIfaceDummyPort__Group__0__Impl rule__GSSIfaceDummyPort__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_10);
             rule__GSSIfaceDummyPort__Group__0__Impl();
@@ -15269,23 +15087,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceDummyPort__Group__0__Impl"
-    // InternalIFACE.g:4868:1: rule__GSSIfaceDummyPort__Group__0__Impl : ( () ) ;
+    // InternalIFACE.g:4797:1: rule__GSSIfaceDummyPort__Group__0__Impl : ( () ) ;
     public final void rule__GSSIfaceDummyPort__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4872:1: ( ( () ) )
-            // InternalIFACE.g:4873:1: ( () )
+            // InternalIFACE.g:4801:1: ( ( () ) )
+            // InternalIFACE.g:4802:1: ( () )
             {
-            // InternalIFACE.g:4873:1: ( () )
-            // InternalIFACE.g:4874:2: ()
+            // InternalIFACE.g:4802:1: ( () )
+            // InternalIFACE.g:4803:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceDummyPortAccess().getGSSIfaceDummyPortAction_0()); 
             }
-            // InternalIFACE.g:4875:2: ()
-            // InternalIFACE.g:4875:3: 
+            // InternalIFACE.g:4804:2: ()
+            // InternalIFACE.g:4804:3: 
             {
             }
 
@@ -15310,14 +15128,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceDummyPort__Group__1"
-    // InternalIFACE.g:4883:1: rule__GSSIfaceDummyPort__Group__1 : rule__GSSIfaceDummyPort__Group__1__Impl rule__GSSIfaceDummyPort__Group__2 ;
+    // InternalIFACE.g:4812:1: rule__GSSIfaceDummyPort__Group__1 : rule__GSSIfaceDummyPort__Group__1__Impl rule__GSSIfaceDummyPort__Group__2 ;
     public final void rule__GSSIfaceDummyPort__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4887:1: ( rule__GSSIfaceDummyPort__Group__1__Impl rule__GSSIfaceDummyPort__Group__2 )
-            // InternalIFACE.g:4888:2: rule__GSSIfaceDummyPort__Group__1__Impl rule__GSSIfaceDummyPort__Group__2
+            // InternalIFACE.g:4816:1: ( rule__GSSIfaceDummyPort__Group__1__Impl rule__GSSIfaceDummyPort__Group__2 )
+            // InternalIFACE.g:4817:2: rule__GSSIfaceDummyPort__Group__1__Impl rule__GSSIfaceDummyPort__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_8);
             rule__GSSIfaceDummyPort__Group__1__Impl();
@@ -15348,22 +15166,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceDummyPort__Group__1__Impl"
-    // InternalIFACE.g:4895:1: rule__GSSIfaceDummyPort__Group__1__Impl : ( 'dummyPort' ) ;
+    // InternalIFACE.g:4824:1: rule__GSSIfaceDummyPort__Group__1__Impl : ( 'dummyPort' ) ;
     public final void rule__GSSIfaceDummyPort__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4899:1: ( ( 'dummyPort' ) )
-            // InternalIFACE.g:4900:1: ( 'dummyPort' )
+            // InternalIFACE.g:4828:1: ( ( 'dummyPort' ) )
+            // InternalIFACE.g:4829:1: ( 'dummyPort' )
             {
-            // InternalIFACE.g:4900:1: ( 'dummyPort' )
-            // InternalIFACE.g:4901:2: 'dummyPort'
+            // InternalIFACE.g:4829:1: ( 'dummyPort' )
+            // InternalIFACE.g:4830:2: 'dummyPort'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceDummyPortAccess().getDummyPortKeyword_1()); 
             }
-            match(input,64,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,65,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceDummyPortAccess().getDummyPortKeyword_1()); 
             }
@@ -15389,14 +15207,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceDummyPort__Group__2"
-    // InternalIFACE.g:4910:1: rule__GSSIfaceDummyPort__Group__2 : rule__GSSIfaceDummyPort__Group__2__Impl rule__GSSIfaceDummyPort__Group__3 ;
+    // InternalIFACE.g:4839:1: rule__GSSIfaceDummyPort__Group__2 : rule__GSSIfaceDummyPort__Group__2__Impl rule__GSSIfaceDummyPort__Group__3 ;
     public final void rule__GSSIfaceDummyPort__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4914:1: ( rule__GSSIfaceDummyPort__Group__2__Impl rule__GSSIfaceDummyPort__Group__3 )
-            // InternalIFACE.g:4915:2: rule__GSSIfaceDummyPort__Group__2__Impl rule__GSSIfaceDummyPort__Group__3
+            // InternalIFACE.g:4843:1: ( rule__GSSIfaceDummyPort__Group__2__Impl rule__GSSIfaceDummyPort__Group__3 )
+            // InternalIFACE.g:4844:2: rule__GSSIfaceDummyPort__Group__2__Impl rule__GSSIfaceDummyPort__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_11);
             rule__GSSIfaceDummyPort__Group__2__Impl();
@@ -15427,22 +15245,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceDummyPort__Group__2__Impl"
-    // InternalIFACE.g:4922:1: rule__GSSIfaceDummyPort__Group__2__Impl : ( '{' ) ;
+    // InternalIFACE.g:4851:1: rule__GSSIfaceDummyPort__Group__2__Impl : ( '{' ) ;
     public final void rule__GSSIfaceDummyPort__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4926:1: ( ( '{' ) )
-            // InternalIFACE.g:4927:1: ( '{' )
+            // InternalIFACE.g:4855:1: ( ( '{' ) )
+            // InternalIFACE.g:4856:1: ( '{' )
             {
-            // InternalIFACE.g:4927:1: ( '{' )
-            // InternalIFACE.g:4928:2: '{'
+            // InternalIFACE.g:4856:1: ( '{' )
+            // InternalIFACE.g:4857:2: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceDummyPortAccess().getLeftCurlyBracketKeyword_2()); 
             }
-            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceDummyPortAccess().getLeftCurlyBracketKeyword_2()); 
             }
@@ -15468,14 +15286,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceDummyPort__Group__3"
-    // InternalIFACE.g:4937:1: rule__GSSIfaceDummyPort__Group__3 : rule__GSSIfaceDummyPort__Group__3__Impl rule__GSSIfaceDummyPort__Group__4 ;
+    // InternalIFACE.g:4866:1: rule__GSSIfaceDummyPort__Group__3 : rule__GSSIfaceDummyPort__Group__3__Impl rule__GSSIfaceDummyPort__Group__4 ;
     public final void rule__GSSIfaceDummyPort__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4941:1: ( rule__GSSIfaceDummyPort__Group__3__Impl rule__GSSIfaceDummyPort__Group__4 )
-            // InternalIFACE.g:4942:2: rule__GSSIfaceDummyPort__Group__3__Impl rule__GSSIfaceDummyPort__Group__4
+            // InternalIFACE.g:4870:1: ( rule__GSSIfaceDummyPort__Group__3__Impl rule__GSSIfaceDummyPort__Group__4 )
+            // InternalIFACE.g:4871:2: rule__GSSIfaceDummyPort__Group__3__Impl rule__GSSIfaceDummyPort__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_6);
             rule__GSSIfaceDummyPort__Group__3__Impl();
@@ -15506,22 +15324,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceDummyPort__Group__3__Impl"
-    // InternalIFACE.g:4949:1: rule__GSSIfaceDummyPort__Group__3__Impl : ( '}' ) ;
+    // InternalIFACE.g:4878:1: rule__GSSIfaceDummyPort__Group__3__Impl : ( '}' ) ;
     public final void rule__GSSIfaceDummyPort__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4953:1: ( ( '}' ) )
-            // InternalIFACE.g:4954:1: ( '}' )
+            // InternalIFACE.g:4882:1: ( ( '}' ) )
+            // InternalIFACE.g:4883:1: ( '}' )
             {
-            // InternalIFACE.g:4954:1: ( '}' )
-            // InternalIFACE.g:4955:2: '}'
+            // InternalIFACE.g:4883:1: ( '}' )
+            // InternalIFACE.g:4884:2: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceDummyPortAccess().getRightCurlyBracketKeyword_3()); 
             }
-            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceDummyPortAccess().getRightCurlyBracketKeyword_3()); 
             }
@@ -15547,14 +15365,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceDummyPort__Group__4"
-    // InternalIFACE.g:4964:1: rule__GSSIfaceDummyPort__Group__4 : rule__GSSIfaceDummyPort__Group__4__Impl ;
+    // InternalIFACE.g:4893:1: rule__GSSIfaceDummyPort__Group__4 : rule__GSSIfaceDummyPort__Group__4__Impl ;
     public final void rule__GSSIfaceDummyPort__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4968:1: ( rule__GSSIfaceDummyPort__Group__4__Impl )
-            // InternalIFACE.g:4969:2: rule__GSSIfaceDummyPort__Group__4__Impl
+            // InternalIFACE.g:4897:1: ( rule__GSSIfaceDummyPort__Group__4__Impl )
+            // InternalIFACE.g:4898:2: rule__GSSIfaceDummyPort__Group__4__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfaceDummyPort__Group__4__Impl();
@@ -15580,22 +15398,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceDummyPort__Group__4__Impl"
-    // InternalIFACE.g:4975:1: rule__GSSIfaceDummyPort__Group__4__Impl : ( ';' ) ;
+    // InternalIFACE.g:4904:1: rule__GSSIfaceDummyPort__Group__4__Impl : ( ';' ) ;
     public final void rule__GSSIfaceDummyPort__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4979:1: ( ( ';' ) )
-            // InternalIFACE.g:4980:1: ( ';' )
+            // InternalIFACE.g:4908:1: ( ( ';' ) )
+            // InternalIFACE.g:4909:1: ( ';' )
             {
-            // InternalIFACE.g:4980:1: ( ';' )
-            // InternalIFACE.g:4981:2: ';'
+            // InternalIFACE.g:4909:1: ( ';' )
+            // InternalIFACE.g:4910:2: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceDummyPortAccess().getSemicolonKeyword_4()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGSSIfaceDummyPortAccess().getSemicolonKeyword_4()); 
             }
@@ -15621,14 +15439,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__0"
-    // InternalIFACE.g:4991:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
+    // InternalIFACE.g:4920:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
     public final void rule__QualifiedName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:4995:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
-            // InternalIFACE.g:4996:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
+            // InternalIFACE.g:4924:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
+            // InternalIFACE.g:4925:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_47);
             rule__QualifiedName__Group__0__Impl();
@@ -15659,17 +15477,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__0__Impl"
-    // InternalIFACE.g:5003:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
+    // InternalIFACE.g:4932:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5007:1: ( ( RULE_ID ) )
-            // InternalIFACE.g:5008:1: ( RULE_ID )
+            // InternalIFACE.g:4936:1: ( ( RULE_ID ) )
+            // InternalIFACE.g:4937:1: ( RULE_ID )
             {
-            // InternalIFACE.g:5008:1: ( RULE_ID )
-            // InternalIFACE.g:5009:2: RULE_ID
+            // InternalIFACE.g:4937:1: ( RULE_ID )
+            // InternalIFACE.g:4938:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
@@ -15700,14 +15518,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__1"
-    // InternalIFACE.g:5018:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
+    // InternalIFACE.g:4947:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
     public final void rule__QualifiedName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5022:1: ( rule__QualifiedName__Group__1__Impl )
-            // InternalIFACE.g:5023:2: rule__QualifiedName__Group__1__Impl
+            // InternalIFACE.g:4951:1: ( rule__QualifiedName__Group__1__Impl )
+            // InternalIFACE.g:4952:2: rule__QualifiedName__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__QualifiedName__Group__1__Impl();
@@ -15733,35 +15551,35 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__1__Impl"
-    // InternalIFACE.g:5029:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
+    // InternalIFACE.g:4958:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
     public final void rule__QualifiedName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5033:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
-            // InternalIFACE.g:5034:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // InternalIFACE.g:4962:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
+            // InternalIFACE.g:4963:1: ( ( rule__QualifiedName__Group_1__0 )* )
             {
-            // InternalIFACE.g:5034:1: ( ( rule__QualifiedName__Group_1__0 )* )
-            // InternalIFACE.g:5035:2: ( rule__QualifiedName__Group_1__0 )*
+            // InternalIFACE.g:4963:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // InternalIFACE.g:4964:2: ( rule__QualifiedName__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getGroup_1()); 
             }
-            // InternalIFACE.g:5036:2: ( rule__QualifiedName__Group_1__0 )*
-            loop15:
+            // InternalIFACE.g:4965:2: ( rule__QualifiedName__Group_1__0 )*
+            loop16:
             do {
-                int alt15=2;
-                int LA15_0 = input.LA(1);
+                int alt16=2;
+                int LA16_0 = input.LA(1);
 
-                if ( (LA15_0==65) ) {
-                    alt15=1;
+                if ( (LA16_0==66) ) {
+                    alt16=1;
                 }
 
 
-                switch (alt15) {
+                switch (alt16) {
             	case 1 :
-            	    // InternalIFACE.g:5036:3: rule__QualifiedName__Group_1__0
+            	    // InternalIFACE.g:4965:3: rule__QualifiedName__Group_1__0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_48);
             	    rule__QualifiedName__Group_1__0();
@@ -15773,7 +15591,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop15;
+            	    break loop16;
                 }
             } while (true);
 
@@ -15802,14 +15620,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0"
-    // InternalIFACE.g:5045:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
+    // InternalIFACE.g:4974:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
     public final void rule__QualifiedName__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5049:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
-            // InternalIFACE.g:5050:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
+            // InternalIFACE.g:4978:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
+            // InternalIFACE.g:4979:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_7);
             rule__QualifiedName__Group_1__0__Impl();
@@ -15840,22 +15658,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0__Impl"
-    // InternalIFACE.g:5057:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
+    // InternalIFACE.g:4986:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
     public final void rule__QualifiedName__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5061:1: ( ( '.' ) )
-            // InternalIFACE.g:5062:1: ( '.' )
+            // InternalIFACE.g:4990:1: ( ( '.' ) )
+            // InternalIFACE.g:4991:1: ( '.' )
             {
-            // InternalIFACE.g:5062:1: ( '.' )
-            // InternalIFACE.g:5063:2: '.'
+            // InternalIFACE.g:4991:1: ( '.' )
+            // InternalIFACE.g:4992:2: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
             }
-            match(input,65,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,66,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
             }
@@ -15881,14 +15699,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1"
-    // InternalIFACE.g:5072:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
+    // InternalIFACE.g:5001:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
     public final void rule__QualifiedName__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5076:1: ( rule__QualifiedName__Group_1__1__Impl )
-            // InternalIFACE.g:5077:2: rule__QualifiedName__Group_1__1__Impl
+            // InternalIFACE.g:5005:1: ( rule__QualifiedName__Group_1__1__Impl )
+            // InternalIFACE.g:5006:2: rule__QualifiedName__Group_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__QualifiedName__Group_1__1__Impl();
@@ -15914,17 +15732,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1__Impl"
-    // InternalIFACE.g:5083:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
+    // InternalIFACE.g:5012:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5087:1: ( ( RULE_ID ) )
-            // InternalIFACE.g:5088:1: ( RULE_ID )
+            // InternalIFACE.g:5016:1: ( ( RULE_ID ) )
+            // InternalIFACE.g:5017:1: ( RULE_ID )
             {
-            // InternalIFACE.g:5088:1: ( RULE_ID )
-            // InternalIFACE.g:5089:2: RULE_ID
+            // InternalIFACE.g:5017:1: ( RULE_ID )
+            // InternalIFACE.g:5018:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
@@ -15955,14 +15773,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__0"
-    // InternalIFACE.g:5099:1: rule__Version__Group__0 : rule__Version__Group__0__Impl rule__Version__Group__1 ;
+    // InternalIFACE.g:5028:1: rule__Version__Group__0 : rule__Version__Group__0__Impl rule__Version__Group__1 ;
     public final void rule__Version__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5103:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
-            // InternalIFACE.g:5104:2: rule__Version__Group__0__Impl rule__Version__Group__1
+            // InternalIFACE.g:5032:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
+            // InternalIFACE.g:5033:2: rule__Version__Group__0__Impl rule__Version__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_47);
             rule__Version__Group__0__Impl();
@@ -15993,23 +15811,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__0__Impl"
-    // InternalIFACE.g:5111:1: rule__Version__Group__0__Impl : ( ( rule__Version__Alternatives_0 ) ) ;
+    // InternalIFACE.g:5040:1: rule__Version__Group__0__Impl : ( ( rule__Version__Alternatives_0 ) ) ;
     public final void rule__Version__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5115:1: ( ( ( rule__Version__Alternatives_0 ) ) )
-            // InternalIFACE.g:5116:1: ( ( rule__Version__Alternatives_0 ) )
+            // InternalIFACE.g:5044:1: ( ( ( rule__Version__Alternatives_0 ) ) )
+            // InternalIFACE.g:5045:1: ( ( rule__Version__Alternatives_0 ) )
             {
-            // InternalIFACE.g:5116:1: ( ( rule__Version__Alternatives_0 ) )
-            // InternalIFACE.g:5117:2: ( rule__Version__Alternatives_0 )
+            // InternalIFACE.g:5045:1: ( ( rule__Version__Alternatives_0 ) )
+            // InternalIFACE.g:5046:2: ( rule__Version__Alternatives_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getAlternatives_0()); 
             }
-            // InternalIFACE.g:5118:2: ( rule__Version__Alternatives_0 )
-            // InternalIFACE.g:5118:3: rule__Version__Alternatives_0
+            // InternalIFACE.g:5047:2: ( rule__Version__Alternatives_0 )
+            // InternalIFACE.g:5047:3: rule__Version__Alternatives_0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Alternatives_0();
@@ -16044,14 +15862,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__1"
-    // InternalIFACE.g:5126:1: rule__Version__Group__1 : rule__Version__Group__1__Impl ;
+    // InternalIFACE.g:5055:1: rule__Version__Group__1 : rule__Version__Group__1__Impl ;
     public final void rule__Version__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5130:1: ( rule__Version__Group__1__Impl )
-            // InternalIFACE.g:5131:2: rule__Version__Group__1__Impl
+            // InternalIFACE.g:5059:1: ( rule__Version__Group__1__Impl )
+            // InternalIFACE.g:5060:2: rule__Version__Group__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group__1__Impl();
@@ -16077,35 +15895,35 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__1__Impl"
-    // InternalIFACE.g:5137:1: rule__Version__Group__1__Impl : ( ( rule__Version__Group_1__0 )* ) ;
+    // InternalIFACE.g:5066:1: rule__Version__Group__1__Impl : ( ( rule__Version__Group_1__0 )* ) ;
     public final void rule__Version__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5141:1: ( ( ( rule__Version__Group_1__0 )* ) )
-            // InternalIFACE.g:5142:1: ( ( rule__Version__Group_1__0 )* )
+            // InternalIFACE.g:5070:1: ( ( ( rule__Version__Group_1__0 )* ) )
+            // InternalIFACE.g:5071:1: ( ( rule__Version__Group_1__0 )* )
             {
-            // InternalIFACE.g:5142:1: ( ( rule__Version__Group_1__0 )* )
-            // InternalIFACE.g:5143:2: ( rule__Version__Group_1__0 )*
+            // InternalIFACE.g:5071:1: ( ( rule__Version__Group_1__0 )* )
+            // InternalIFACE.g:5072:2: ( rule__Version__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getGroup_1()); 
             }
-            // InternalIFACE.g:5144:2: ( rule__Version__Group_1__0 )*
-            loop16:
+            // InternalIFACE.g:5073:2: ( rule__Version__Group_1__0 )*
+            loop17:
             do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
+                int alt17=2;
+                int LA17_0 = input.LA(1);
 
-                if ( (LA16_0==65) ) {
-                    alt16=1;
+                if ( (LA17_0==66) ) {
+                    alt17=1;
                 }
 
 
-                switch (alt16) {
+                switch (alt17) {
             	case 1 :
-            	    // InternalIFACE.g:5144:3: rule__Version__Group_1__0
+            	    // InternalIFACE.g:5073:3: rule__Version__Group_1__0
             	    {
             	    pushFollow(FollowSets000.FOLLOW_48);
             	    rule__Version__Group_1__0();
@@ -16117,7 +15935,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop16;
+            	    break loop17;
                 }
             } while (true);
 
@@ -16146,14 +15964,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_0_1__0"
-    // InternalIFACE.g:5153:1: rule__Version__Group_0_1__0 : rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 ;
+    // InternalIFACE.g:5082:1: rule__Version__Group_0_1__0 : rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 ;
     public final void rule__Version__Group_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5157:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
-            // InternalIFACE.g:5158:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
+            // InternalIFACE.g:5086:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
+            // InternalIFACE.g:5087:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
             {
             pushFollow(FollowSets000.FOLLOW_13);
             rule__Version__Group_0_1__0__Impl();
@@ -16184,31 +16002,31 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_0_1__0__Impl"
-    // InternalIFACE.g:5165:1: rule__Version__Group_0_1__0__Impl : ( ( RULE_INT )? ) ;
+    // InternalIFACE.g:5094:1: rule__Version__Group_0_1__0__Impl : ( ( RULE_INT )? ) ;
     public final void rule__Version__Group_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5169:1: ( ( ( RULE_INT )? ) )
-            // InternalIFACE.g:5170:1: ( ( RULE_INT )? )
+            // InternalIFACE.g:5098:1: ( ( ( RULE_INT )? ) )
+            // InternalIFACE.g:5099:1: ( ( RULE_INT )? )
             {
-            // InternalIFACE.g:5170:1: ( ( RULE_INT )? )
-            // InternalIFACE.g:5171:2: ( RULE_INT )?
+            // InternalIFACE.g:5099:1: ( ( RULE_INT )? )
+            // InternalIFACE.g:5100:2: ( RULE_INT )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_0_1_0()); 
             }
-            // InternalIFACE.g:5172:2: ( RULE_INT )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // InternalIFACE.g:5101:2: ( RULE_INT )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA17_0==RULE_INT) ) {
-                alt17=1;
+            if ( (LA18_0==RULE_INT) ) {
+                alt18=1;
             }
-            switch (alt17) {
+            switch (alt18) {
                 case 1 :
-                    // InternalIFACE.g:5172:3: RULE_INT
+                    // InternalIFACE.g:5101:3: RULE_INT
                     {
                     match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -16242,14 +16060,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_0_1__1"
-    // InternalIFACE.g:5180:1: rule__Version__Group_0_1__1 : rule__Version__Group_0_1__1__Impl ;
+    // InternalIFACE.g:5109:1: rule__Version__Group_0_1__1 : rule__Version__Group_0_1__1__Impl ;
     public final void rule__Version__Group_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5184:1: ( rule__Version__Group_0_1__1__Impl )
-            // InternalIFACE.g:5185:2: rule__Version__Group_0_1__1__Impl
+            // InternalIFACE.g:5113:1: ( rule__Version__Group_0_1__1__Impl )
+            // InternalIFACE.g:5114:2: rule__Version__Group_0_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_0_1__1__Impl();
@@ -16275,17 +16093,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_0_1__1__Impl"
-    // InternalIFACE.g:5191:1: rule__Version__Group_0_1__1__Impl : ( RULE_ID ) ;
+    // InternalIFACE.g:5120:1: rule__Version__Group_0_1__1__Impl : ( RULE_ID ) ;
     public final void rule__Version__Group_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5195:1: ( ( RULE_ID ) )
-            // InternalIFACE.g:5196:1: ( RULE_ID )
+            // InternalIFACE.g:5124:1: ( ( RULE_ID ) )
+            // InternalIFACE.g:5125:1: ( RULE_ID )
             {
-            // InternalIFACE.g:5196:1: ( RULE_ID )
-            // InternalIFACE.g:5197:2: RULE_ID
+            // InternalIFACE.g:5125:1: ( RULE_ID )
+            // InternalIFACE.g:5126:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getIDTerminalRuleCall_0_1_1()); 
@@ -16316,14 +16134,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1__0"
-    // InternalIFACE.g:5207:1: rule__Version__Group_1__0 : rule__Version__Group_1__0__Impl rule__Version__Group_1__1 ;
+    // InternalIFACE.g:5136:1: rule__Version__Group_1__0 : rule__Version__Group_1__0__Impl rule__Version__Group_1__1 ;
     public final void rule__Version__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5211:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
-            // InternalIFACE.g:5212:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
+            // InternalIFACE.g:5140:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
+            // InternalIFACE.g:5141:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
             {
             pushFollow(FollowSets000.FOLLOW_13);
             rule__Version__Group_1__0__Impl();
@@ -16354,22 +16172,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1__0__Impl"
-    // InternalIFACE.g:5219:1: rule__Version__Group_1__0__Impl : ( '.' ) ;
+    // InternalIFACE.g:5148:1: rule__Version__Group_1__0__Impl : ( '.' ) ;
     public final void rule__Version__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5223:1: ( ( '.' ) )
-            // InternalIFACE.g:5224:1: ( '.' )
+            // InternalIFACE.g:5152:1: ( ( '.' ) )
+            // InternalIFACE.g:5153:1: ( '.' )
             {
-            // InternalIFACE.g:5224:1: ( '.' )
-            // InternalIFACE.g:5225:2: '.'
+            // InternalIFACE.g:5153:1: ( '.' )
+            // InternalIFACE.g:5154:2: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getFullStopKeyword_1_0()); 
             }
-            match(input,65,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,66,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVersionAccess().getFullStopKeyword_1_0()); 
             }
@@ -16395,14 +16213,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1__1"
-    // InternalIFACE.g:5234:1: rule__Version__Group_1__1 : rule__Version__Group_1__1__Impl ;
+    // InternalIFACE.g:5163:1: rule__Version__Group_1__1 : rule__Version__Group_1__1__Impl ;
     public final void rule__Version__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5238:1: ( rule__Version__Group_1__1__Impl )
-            // InternalIFACE.g:5239:2: rule__Version__Group_1__1__Impl
+            // InternalIFACE.g:5167:1: ( rule__Version__Group_1__1__Impl )
+            // InternalIFACE.g:5168:2: rule__Version__Group_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_1__1__Impl();
@@ -16428,23 +16246,23 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1__1__Impl"
-    // InternalIFACE.g:5245:1: rule__Version__Group_1__1__Impl : ( ( rule__Version__Alternatives_1_1 ) ) ;
+    // InternalIFACE.g:5174:1: rule__Version__Group_1__1__Impl : ( ( rule__Version__Alternatives_1_1 ) ) ;
     public final void rule__Version__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5249:1: ( ( ( rule__Version__Alternatives_1_1 ) ) )
-            // InternalIFACE.g:5250:1: ( ( rule__Version__Alternatives_1_1 ) )
+            // InternalIFACE.g:5178:1: ( ( ( rule__Version__Alternatives_1_1 ) ) )
+            // InternalIFACE.g:5179:1: ( ( rule__Version__Alternatives_1_1 ) )
             {
-            // InternalIFACE.g:5250:1: ( ( rule__Version__Alternatives_1_1 ) )
-            // InternalIFACE.g:5251:2: ( rule__Version__Alternatives_1_1 )
+            // InternalIFACE.g:5179:1: ( ( rule__Version__Alternatives_1_1 ) )
+            // InternalIFACE.g:5180:2: ( rule__Version__Alternatives_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getAlternatives_1_1()); 
             }
-            // InternalIFACE.g:5252:2: ( rule__Version__Alternatives_1_1 )
-            // InternalIFACE.g:5252:3: rule__Version__Alternatives_1_1
+            // InternalIFACE.g:5181:2: ( rule__Version__Alternatives_1_1 )
+            // InternalIFACE.g:5181:3: rule__Version__Alternatives_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Alternatives_1_1();
@@ -16479,14 +16297,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__0"
-    // InternalIFACE.g:5261:1: rule__Version__Group_1_1_1__0 : rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 ;
+    // InternalIFACE.g:5190:1: rule__Version__Group_1_1_1__0 : rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 ;
     public final void rule__Version__Group_1_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5265:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
-            // InternalIFACE.g:5266:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
+            // InternalIFACE.g:5194:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
+            // InternalIFACE.g:5195:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
             {
             pushFollow(FollowSets000.FOLLOW_13);
             rule__Version__Group_1_1_1__0__Impl();
@@ -16517,31 +16335,31 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__0__Impl"
-    // InternalIFACE.g:5273:1: rule__Version__Group_1_1_1__0__Impl : ( ( RULE_INT )? ) ;
+    // InternalIFACE.g:5202:1: rule__Version__Group_1_1_1__0__Impl : ( ( RULE_INT )? ) ;
     public final void rule__Version__Group_1_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5277:1: ( ( ( RULE_INT )? ) )
-            // InternalIFACE.g:5278:1: ( ( RULE_INT )? )
+            // InternalIFACE.g:5206:1: ( ( ( RULE_INT )? ) )
+            // InternalIFACE.g:5207:1: ( ( RULE_INT )? )
             {
-            // InternalIFACE.g:5278:1: ( ( RULE_INT )? )
-            // InternalIFACE.g:5279:2: ( RULE_INT )?
+            // InternalIFACE.g:5207:1: ( ( RULE_INT )? )
+            // InternalIFACE.g:5208:2: ( RULE_INT )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_1_1_1_0()); 
             }
-            // InternalIFACE.g:5280:2: ( RULE_INT )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // InternalIFACE.g:5209:2: ( RULE_INT )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA18_0==RULE_INT) ) {
-                alt18=1;
+            if ( (LA19_0==RULE_INT) ) {
+                alt19=1;
             }
-            switch (alt18) {
+            switch (alt19) {
                 case 1 :
-                    // InternalIFACE.g:5280:3: RULE_INT
+                    // InternalIFACE.g:5209:3: RULE_INT
                     {
                     match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -16575,14 +16393,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__1"
-    // InternalIFACE.g:5288:1: rule__Version__Group_1_1_1__1 : rule__Version__Group_1_1_1__1__Impl ;
+    // InternalIFACE.g:5217:1: rule__Version__Group_1_1_1__1 : rule__Version__Group_1_1_1__1__Impl ;
     public final void rule__Version__Group_1_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5292:1: ( rule__Version__Group_1_1_1__1__Impl )
-            // InternalIFACE.g:5293:2: rule__Version__Group_1_1_1__1__Impl
+            // InternalIFACE.g:5221:1: ( rule__Version__Group_1_1_1__1__Impl )
+            // InternalIFACE.g:5222:2: rule__Version__Group_1_1_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__Version__Group_1_1_1__1__Impl();
@@ -16608,17 +16426,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_1_1_1__1__Impl"
-    // InternalIFACE.g:5299:1: rule__Version__Group_1_1_1__1__Impl : ( RULE_ID ) ;
+    // InternalIFACE.g:5228:1: rule__Version__Group_1_1_1__1__Impl : ( RULE_ID ) ;
     public final void rule__Version__Group_1_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5303:1: ( ( RULE_ID ) )
-            // InternalIFACE.g:5304:1: ( RULE_ID )
+            // InternalIFACE.g:5232:1: ( ( RULE_ID ) )
+            // InternalIFACE.g:5233:1: ( RULE_ID )
             {
-            // InternalIFACE.g:5304:1: ( RULE_ID )
-            // InternalIFACE.g:5305:2: RULE_ID
+            // InternalIFACE.g:5233:1: ( RULE_ID )
+            // InternalIFACE.g:5234:2: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionAccess().getIDTerminalRuleCall_1_1_1_1()); 
@@ -16649,14 +16467,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__0"
-    // InternalIFACE.g:5315:1: rule__VersionedQualifiedName__Group__0 : rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 ;
+    // InternalIFACE.g:5244:1: rule__VersionedQualifiedName__Group__0 : rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 ;
     public final void rule__VersionedQualifiedName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5319:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
-            // InternalIFACE.g:5320:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
+            // InternalIFACE.g:5248:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
+            // InternalIFACE.g:5249:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_49);
             rule__VersionedQualifiedName__Group__0__Impl();
@@ -16687,17 +16505,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__0__Impl"
-    // InternalIFACE.g:5327:1: rule__VersionedQualifiedName__Group__0__Impl : ( ruleQualifiedName ) ;
+    // InternalIFACE.g:5256:1: rule__VersionedQualifiedName__Group__0__Impl : ( ruleQualifiedName ) ;
     public final void rule__VersionedQualifiedName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5331:1: ( ( ruleQualifiedName ) )
-            // InternalIFACE.g:5332:1: ( ruleQualifiedName )
+            // InternalIFACE.g:5260:1: ( ( ruleQualifiedName ) )
+            // InternalIFACE.g:5261:1: ( ruleQualifiedName )
             {
-            // InternalIFACE.g:5332:1: ( ruleQualifiedName )
-            // InternalIFACE.g:5333:2: ruleQualifiedName
+            // InternalIFACE.g:5261:1: ( ruleQualifiedName )
+            // InternalIFACE.g:5262:2: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0()); 
@@ -16732,14 +16550,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__1"
-    // InternalIFACE.g:5342:1: rule__VersionedQualifiedName__Group__1 : rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 ;
+    // InternalIFACE.g:5271:1: rule__VersionedQualifiedName__Group__1 : rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 ;
     public final void rule__VersionedQualifiedName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5346:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
-            // InternalIFACE.g:5347:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
+            // InternalIFACE.g:5275:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
+            // InternalIFACE.g:5276:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_13);
             rule__VersionedQualifiedName__Group__1__Impl();
@@ -16770,22 +16588,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__1__Impl"
-    // InternalIFACE.g:5354:1: rule__VersionedQualifiedName__Group__1__Impl : ( '(' ) ;
+    // InternalIFACE.g:5283:1: rule__VersionedQualifiedName__Group__1__Impl : ( '(' ) ;
     public final void rule__VersionedQualifiedName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5358:1: ( ( '(' ) )
-            // InternalIFACE.g:5359:1: ( '(' )
+            // InternalIFACE.g:5287:1: ( ( '(' ) )
+            // InternalIFACE.g:5288:1: ( '(' )
             {
-            // InternalIFACE.g:5359:1: ( '(' )
-            // InternalIFACE.g:5360:2: '('
+            // InternalIFACE.g:5288:1: ( '(' )
+            // InternalIFACE.g:5289:2: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getLeftParenthesisKeyword_1()); 
             }
-            match(input,66,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,67,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVersionedQualifiedNameAccess().getLeftParenthesisKeyword_1()); 
             }
@@ -16811,14 +16629,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__2"
-    // InternalIFACE.g:5369:1: rule__VersionedQualifiedName__Group__2 : rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 ;
+    // InternalIFACE.g:5298:1: rule__VersionedQualifiedName__Group__2 : rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 ;
     public final void rule__VersionedQualifiedName__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5373:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
-            // InternalIFACE.g:5374:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
+            // InternalIFACE.g:5302:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
+            // InternalIFACE.g:5303:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_50);
             rule__VersionedQualifiedName__Group__2__Impl();
@@ -16849,17 +16667,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__2__Impl"
-    // InternalIFACE.g:5381:1: rule__VersionedQualifiedName__Group__2__Impl : ( ruleVersion ) ;
+    // InternalIFACE.g:5310:1: rule__VersionedQualifiedName__Group__2__Impl : ( ruleVersion ) ;
     public final void rule__VersionedQualifiedName__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5385:1: ( ( ruleVersion ) )
-            // InternalIFACE.g:5386:1: ( ruleVersion )
+            // InternalIFACE.g:5314:1: ( ( ruleVersion ) )
+            // InternalIFACE.g:5315:1: ( ruleVersion )
             {
-            // InternalIFACE.g:5386:1: ( ruleVersion )
-            // InternalIFACE.g:5387:2: ruleVersion
+            // InternalIFACE.g:5315:1: ( ruleVersion )
+            // InternalIFACE.g:5316:2: ruleVersion
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2()); 
@@ -16894,14 +16712,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__3"
-    // InternalIFACE.g:5396:1: rule__VersionedQualifiedName__Group__3 : rule__VersionedQualifiedName__Group__3__Impl ;
+    // InternalIFACE.g:5325:1: rule__VersionedQualifiedName__Group__3 : rule__VersionedQualifiedName__Group__3__Impl ;
     public final void rule__VersionedQualifiedName__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5400:1: ( rule__VersionedQualifiedName__Group__3__Impl )
-            // InternalIFACE.g:5401:2: rule__VersionedQualifiedName__Group__3__Impl
+            // InternalIFACE.g:5329:1: ( rule__VersionedQualifiedName__Group__3__Impl )
+            // InternalIFACE.g:5330:2: rule__VersionedQualifiedName__Group__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__VersionedQualifiedName__Group__3__Impl();
@@ -16927,22 +16745,22 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VersionedQualifiedName__Group__3__Impl"
-    // InternalIFACE.g:5407:1: rule__VersionedQualifiedName__Group__3__Impl : ( ')' ) ;
+    // InternalIFACE.g:5336:1: rule__VersionedQualifiedName__Group__3__Impl : ( ')' ) ;
     public final void rule__VersionedQualifiedName__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5411:1: ( ( ')' ) )
-            // InternalIFACE.g:5412:1: ( ')' )
+            // InternalIFACE.g:5340:1: ( ( ')' ) )
+            // InternalIFACE.g:5341:1: ( ')' )
             {
-            // InternalIFACE.g:5412:1: ( ')' )
-            // InternalIFACE.g:5413:2: ')'
+            // InternalIFACE.g:5341:1: ( ')' )
+            // InternalIFACE.g:5342:2: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3()); 
             }
-            match(input,67,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,68,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3()); 
             }
@@ -16968,14 +16786,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__0"
-    // InternalIFACE.g:5423:1: rule__INTEGER__Group_0__0 : rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 ;
+    // InternalIFACE.g:5352:1: rule__INTEGER__Group_0__0 : rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 ;
     public final void rule__INTEGER__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5427:1: ( rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 )
-            // InternalIFACE.g:5428:2: rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1
+            // InternalIFACE.g:5356:1: ( rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1 )
+            // InternalIFACE.g:5357:2: rule__INTEGER__Group_0__0__Impl rule__INTEGER__Group_0__1
             {
             pushFollow(FollowSets000.FOLLOW_51);
             rule__INTEGER__Group_0__0__Impl();
@@ -17006,33 +16824,33 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__0__Impl"
-    // InternalIFACE.g:5435:1: rule__INTEGER__Group_0__0__Impl : ( ( '-' )? ) ;
+    // InternalIFACE.g:5364:1: rule__INTEGER__Group_0__0__Impl : ( ( '-' )? ) ;
     public final void rule__INTEGER__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5439:1: ( ( ( '-' )? ) )
-            // InternalIFACE.g:5440:1: ( ( '-' )? )
+            // InternalIFACE.g:5368:1: ( ( ( '-' )? ) )
+            // InternalIFACE.g:5369:1: ( ( '-' )? )
             {
-            // InternalIFACE.g:5440:1: ( ( '-' )? )
-            // InternalIFACE.g:5441:2: ( '-' )?
+            // InternalIFACE.g:5369:1: ( ( '-' )? )
+            // InternalIFACE.g:5370:2: ( '-' )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getINTEGERAccess().getHyphenMinusKeyword_0_0()); 
             }
-            // InternalIFACE.g:5442:2: ( '-' )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // InternalIFACE.g:5371:2: ( '-' )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA19_0==68) ) {
-                alt19=1;
+            if ( (LA20_0==69) ) {
+                alt20=1;
             }
-            switch (alt19) {
+            switch (alt20) {
                 case 1 :
-                    // InternalIFACE.g:5442:3: '-'
+                    // InternalIFACE.g:5371:3: '-'
                     {
-                    match(input,68,FollowSets000.FOLLOW_2); if (state.failed) return ;
+                    match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
                     }
                     break;
@@ -17064,14 +16882,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__1"
-    // InternalIFACE.g:5450:1: rule__INTEGER__Group_0__1 : rule__INTEGER__Group_0__1__Impl ;
+    // InternalIFACE.g:5379:1: rule__INTEGER__Group_0__1 : rule__INTEGER__Group_0__1__Impl ;
     public final void rule__INTEGER__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5454:1: ( rule__INTEGER__Group_0__1__Impl )
-            // InternalIFACE.g:5455:2: rule__INTEGER__Group_0__1__Impl
+            // InternalIFACE.g:5383:1: ( rule__INTEGER__Group_0__1__Impl )
+            // InternalIFACE.g:5384:2: rule__INTEGER__Group_0__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__INTEGER__Group_0__1__Impl();
@@ -17097,17 +16915,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__INTEGER__Group_0__1__Impl"
-    // InternalIFACE.g:5461:1: rule__INTEGER__Group_0__1__Impl : ( RULE_INT ) ;
+    // InternalIFACE.g:5390:1: rule__INTEGER__Group_0__1__Impl : ( RULE_INT ) ;
     public final void rule__INTEGER__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5465:1: ( ( RULE_INT ) )
-            // InternalIFACE.g:5466:1: ( RULE_INT )
+            // InternalIFACE.g:5394:1: ( ( RULE_INT ) )
+            // InternalIFACE.g:5395:1: ( RULE_INT )
             {
-            // InternalIFACE.g:5466:1: ( RULE_INT )
-            // InternalIFACE.g:5467:2: RULE_INT
+            // InternalIFACE.g:5395:1: ( RULE_INT )
+            // InternalIFACE.g:5396:2: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getINTEGERAccess().getINTTerminalRuleCall_0_1()); 
@@ -17138,15 +16956,15 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__UnorderedGroup_3"
-    // InternalIFACE.g:5477:1: rule__GSSIfacePortConfig__UnorderedGroup_3 : rule__GSSIfacePortConfig__UnorderedGroup_3__0 {...}?;
+    // InternalIFACE.g:5406:1: rule__GSSIfacePortConfig__UnorderedGroup_3 : rule__GSSIfacePortConfig__UnorderedGroup_3__0 {...}?;
     public final void rule__GSSIfacePortConfig__UnorderedGroup_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		getUnorderedGroupHelper().enter(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3());
         	
         try {
-            // InternalIFACE.g:5482:1: ( rule__GSSIfacePortConfig__UnorderedGroup_3__0 {...}?)
-            // InternalIFACE.g:5483:2: rule__GSSIfacePortConfig__UnorderedGroup_3__0 {...}?
+            // InternalIFACE.g:5411:1: ( rule__GSSIfacePortConfig__UnorderedGroup_3__0 {...}?)
+            // InternalIFACE.g:5412:2: rule__GSSIfacePortConfig__UnorderedGroup_3__0 {...}?
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfacePortConfig__UnorderedGroup_3__0();
@@ -17177,57 +16995,57 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__UnorderedGroup_3__Impl"
-    // InternalIFACE.g:5491:1: rule__GSSIfacePortConfig__UnorderedGroup_3__Impl : ( ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) ) ) ) ;
+    // InternalIFACE.g:5420:1: rule__GSSIfacePortConfig__UnorderedGroup_3__Impl : ( ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) ) ) ) ;
     public final void rule__GSSIfacePortConfig__UnorderedGroup_3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalIFACE.g:5496:1: ( ( ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) ) ) ) )
-            // InternalIFACE.g:5497:3: ( ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) ) ) )
+            // InternalIFACE.g:5425:1: ( ( ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) ) ) ) )
+            // InternalIFACE.g:5426:3: ( ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) ) ) )
             {
-            // InternalIFACE.g:5497:3: ( ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) ) ) )
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // InternalIFACE.g:5426:3: ( ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) ) | ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) ) ) )
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( LA20_0 == 37 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0) ) {
-                alt20=1;
+            if ( LA21_0 == 39 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0) ) {
+                alt21=1;
             }
-            else if ( LA20_0 == 39 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 1) ) {
-                alt20=2;
+            else if ( LA21_0 == 41 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 1) ) {
+                alt21=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 20, 0, input);
+                    new NoViableAltException("", 21, 0, input);
 
                 throw nvae;
             }
-            switch (alt20) {
+            switch (alt21) {
                 case 1 :
-                    // InternalIFACE.g:5498:3: ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) )
+                    // InternalIFACE.g:5427:3: ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) )
                     {
-                    // InternalIFACE.g:5498:3: ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) )
-                    // InternalIFACE.g:5499:4: {...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) )
+                    // InternalIFACE.g:5427:3: ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) )
+                    // InternalIFACE.g:5428:4: {...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         throw new FailedPredicateException(input, "rule__GSSIfacePortConfig__UnorderedGroup_3__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0)");
                     }
-                    // InternalIFACE.g:5499:114: ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) )
-                    // InternalIFACE.g:5500:5: ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) )
+                    // InternalIFACE.g:5428:114: ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) )
+                    // InternalIFACE.g:5429:5: ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) )
                     {
                     getUnorderedGroupHelper().select(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0);
                     selected = true;
-                    // InternalIFACE.g:5506:5: ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) )
-                    // InternalIFACE.g:5507:6: ( rule__GSSIfacePortConfig__Group_3_0__0 )
+                    // InternalIFACE.g:5435:5: ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) )
+                    // InternalIFACE.g:5436:6: ( rule__GSSIfacePortConfig__Group_3_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfacePortConfigAccess().getGroup_3_0()); 
                     }
-                    // InternalIFACE.g:5508:6: ( rule__GSSIfacePortConfig__Group_3_0__0 )
-                    // InternalIFACE.g:5508:7: rule__GSSIfacePortConfig__Group_3_0__0
+                    // InternalIFACE.g:5437:6: ( rule__GSSIfacePortConfig__Group_3_0__0 )
+                    // InternalIFACE.g:5437:7: rule__GSSIfacePortConfig__Group_3_0__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSIfacePortConfig__Group_3_0__0();
@@ -17253,28 +17071,28 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:5513:3: ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) ) )
+                    // InternalIFACE.g:5442:3: ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) ) )
                     {
-                    // InternalIFACE.g:5513:3: ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) ) )
-                    // InternalIFACE.g:5514:4: {...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) )
+                    // InternalIFACE.g:5442:3: ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) ) )
+                    // InternalIFACE.g:5443:4: {...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 1) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         throw new FailedPredicateException(input, "rule__GSSIfacePortConfig__UnorderedGroup_3__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 1)");
                     }
-                    // InternalIFACE.g:5514:114: ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) )
-                    // InternalIFACE.g:5515:5: ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) )
+                    // InternalIFACE.g:5443:114: ( ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) ) )
+                    // InternalIFACE.g:5444:5: ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) )
                     {
                     getUnorderedGroupHelper().select(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 1);
                     selected = true;
-                    // InternalIFACE.g:5521:5: ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) )
-                    // InternalIFACE.g:5522:6: ( rule__GSSIfacePortConfig__Group_3_1__0 )
+                    // InternalIFACE.g:5450:5: ( ( rule__GSSIfacePortConfig__Group_3_1__0 ) )
+                    // InternalIFACE.g:5451:6: ( rule__GSSIfacePortConfig__Group_3_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGSSIfacePortConfigAccess().getGroup_3_1()); 
                     }
-                    // InternalIFACE.g:5523:6: ( rule__GSSIfacePortConfig__Group_3_1__0 )
-                    // InternalIFACE.g:5523:7: rule__GSSIfacePortConfig__Group_3_1__0
+                    // InternalIFACE.g:5452:6: ( rule__GSSIfacePortConfig__Group_3_1__0 )
+                    // InternalIFACE.g:5452:7: rule__GSSIfacePortConfig__Group_3_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__GSSIfacePortConfig__Group_3_1__0();
@@ -17323,31 +17141,31 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__UnorderedGroup_3__0"
-    // InternalIFACE.g:5536:1: rule__GSSIfacePortConfig__UnorderedGroup_3__0 : rule__GSSIfacePortConfig__UnorderedGroup_3__Impl ( rule__GSSIfacePortConfig__UnorderedGroup_3__1 )? ;
+    // InternalIFACE.g:5465:1: rule__GSSIfacePortConfig__UnorderedGroup_3__0 : rule__GSSIfacePortConfig__UnorderedGroup_3__Impl ( rule__GSSIfacePortConfig__UnorderedGroup_3__1 )? ;
     public final void rule__GSSIfacePortConfig__UnorderedGroup_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5540:1: ( rule__GSSIfacePortConfig__UnorderedGroup_3__Impl ( rule__GSSIfacePortConfig__UnorderedGroup_3__1 )? )
-            // InternalIFACE.g:5541:2: rule__GSSIfacePortConfig__UnorderedGroup_3__Impl ( rule__GSSIfacePortConfig__UnorderedGroup_3__1 )?
+            // InternalIFACE.g:5469:1: ( rule__GSSIfacePortConfig__UnorderedGroup_3__Impl ( rule__GSSIfacePortConfig__UnorderedGroup_3__1 )? )
+            // InternalIFACE.g:5470:2: rule__GSSIfacePortConfig__UnorderedGroup_3__Impl ( rule__GSSIfacePortConfig__UnorderedGroup_3__1 )?
             {
             pushFollow(FollowSets000.FOLLOW_52);
             rule__GSSIfacePortConfig__UnorderedGroup_3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            // InternalIFACE.g:5542:2: ( rule__GSSIfacePortConfig__UnorderedGroup_3__1 )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // InternalIFACE.g:5471:2: ( rule__GSSIfacePortConfig__UnorderedGroup_3__1 )?
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( LA21_0 == 37 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0) ) {
-                alt21=1;
+            if ( LA22_0 == 39 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0) ) {
+                alt22=1;
             }
-            else if ( LA21_0 == 39 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 1) ) {
-                alt21=1;
+            else if ( LA22_0 == 41 && getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 1) ) {
+                alt22=1;
             }
-            switch (alt21) {
+            switch (alt22) {
                 case 1 :
                     // InternalIFACE.g:0:0: rule__GSSIfacePortConfig__UnorderedGroup_3__1
                     {
@@ -17381,14 +17199,14 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__UnorderedGroup_3__1"
-    // InternalIFACE.g:5548:1: rule__GSSIfacePortConfig__UnorderedGroup_3__1 : rule__GSSIfacePortConfig__UnorderedGroup_3__Impl ;
+    // InternalIFACE.g:5477:1: rule__GSSIfacePortConfig__UnorderedGroup_3__1 : rule__GSSIfacePortConfig__UnorderedGroup_3__Impl ;
     public final void rule__GSSIfacePortConfig__UnorderedGroup_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5552:1: ( rule__GSSIfacePortConfig__UnorderedGroup_3__Impl )
-            // InternalIFACE.g:5553:2: rule__GSSIfacePortConfig__UnorderedGroup_3__Impl
+            // InternalIFACE.g:5481:1: ( rule__GSSIfacePortConfig__UnorderedGroup_3__Impl )
+            // InternalIFACE.g:5482:2: rule__GSSIfacePortConfig__UnorderedGroup_3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__GSSIfacePortConfig__UnorderedGroup_3__Impl();
@@ -17414,17 +17232,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFile__ImportsAssignment_0"
-    // InternalIFACE.g:5560:1: rule__GSSModelFile__ImportsAssignment_0 : ( ruleGSSModelFileImport ) ;
+    // InternalIFACE.g:5489:1: rule__GSSModelFile__ImportsAssignment_0 : ( ruleGSSModelFileImport ) ;
     public final void rule__GSSModelFile__ImportsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5564:1: ( ( ruleGSSModelFileImport ) )
-            // InternalIFACE.g:5565:2: ( ruleGSSModelFileImport )
+            // InternalIFACE.g:5493:1: ( ( ruleGSSModelFileImport ) )
+            // InternalIFACE.g:5494:2: ( ruleGSSModelFileImport )
             {
-            // InternalIFACE.g:5565:2: ( ruleGSSModelFileImport )
-            // InternalIFACE.g:5566:3: ruleGSSModelFileImport
+            // InternalIFACE.g:5494:2: ( ruleGSSModelFileImport )
+            // InternalIFACE.g:5495:3: ruleGSSModelFileImport
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileAccess().getImportsGSSModelFileImportParserRuleCall_0_0()); 
@@ -17459,17 +17277,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFile__ElementAssignment_1"
-    // InternalIFACE.g:5575:1: rule__GSSModelFile__ElementAssignment_1 : ( ruleGSSIfacePortConfig ) ;
+    // InternalIFACE.g:5504:1: rule__GSSModelFile__ElementAssignment_1 : ( ruleGSSIfacePortConfig ) ;
     public final void rule__GSSModelFile__ElementAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5579:1: ( ( ruleGSSIfacePortConfig ) )
-            // InternalIFACE.g:5580:2: ( ruleGSSIfacePortConfig )
+            // InternalIFACE.g:5508:1: ( ( ruleGSSIfacePortConfig ) )
+            // InternalIFACE.g:5509:2: ( ruleGSSIfacePortConfig )
             {
-            // InternalIFACE.g:5580:2: ( ruleGSSIfacePortConfig )
-            // InternalIFACE.g:5581:3: ruleGSSIfacePortConfig
+            // InternalIFACE.g:5509:2: ( ruleGSSIfacePortConfig )
+            // InternalIFACE.g:5510:3: ruleGSSIfacePortConfig
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileAccess().getElementGSSIfacePortConfigParserRuleCall_1_0()); 
@@ -17504,17 +17322,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSModelFileImport__ImportURIAssignment_1"
-    // InternalIFACE.g:5590:1: rule__GSSModelFileImport__ImportURIAssignment_1 : ( RULE_STRING ) ;
+    // InternalIFACE.g:5519:1: rule__GSSModelFileImport__ImportURIAssignment_1 : ( RULE_STRING ) ;
     public final void rule__GSSModelFileImport__ImportURIAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5594:1: ( ( RULE_STRING ) )
-            // InternalIFACE.g:5595:2: ( RULE_STRING )
+            // InternalIFACE.g:5523:1: ( ( RULE_STRING ) )
+            // InternalIFACE.g:5524:2: ( RULE_STRING )
             {
-            // InternalIFACE.g:5595:2: ( RULE_STRING )
-            // InternalIFACE.g:5596:3: RULE_STRING
+            // InternalIFACE.g:5524:2: ( RULE_STRING )
+            // InternalIFACE.g:5525:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSModelFileImportAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
@@ -17545,17 +17363,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__NameAssignment_1"
-    // InternalIFACE.g:5605:1: rule__GSSIfacePortConfig__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalIFACE.g:5534:1: rule__GSSIfacePortConfig__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__GSSIfacePortConfig__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5609:1: ( ( RULE_ID ) )
-            // InternalIFACE.g:5610:2: ( RULE_ID )
+            // InternalIFACE.g:5538:1: ( ( RULE_ID ) )
+            // InternalIFACE.g:5539:2: ( RULE_ID )
             {
-            // InternalIFACE.g:5610:2: ( RULE_ID )
-            // InternalIFACE.g:5611:3: RULE_ID
+            // InternalIFACE.g:5539:2: ( RULE_ID )
+            // InternalIFACE.g:5540:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getNameIDTerminalRuleCall_1_0()); 
@@ -17586,17 +17404,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__UriAssignment_3_0_2"
-    // InternalIFACE.g:5620:1: rule__GSSIfacePortConfig__UriAssignment_3_0_2 : ( ruleQualifiedName ) ;
+    // InternalIFACE.g:5549:1: rule__GSSIfacePortConfig__UriAssignment_3_0_2 : ( ruleQualifiedName ) ;
     public final void rule__GSSIfacePortConfig__UriAssignment_3_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5624:1: ( ( ruleQualifiedName ) )
-            // InternalIFACE.g:5625:2: ( ruleQualifiedName )
+            // InternalIFACE.g:5553:1: ( ( ruleQualifiedName ) )
+            // InternalIFACE.g:5554:2: ( ruleQualifiedName )
             {
-            // InternalIFACE.g:5625:2: ( ruleQualifiedName )
-            // InternalIFACE.g:5626:3: ruleQualifiedName
+            // InternalIFACE.g:5554:2: ( ruleQualifiedName )
+            // InternalIFACE.g:5555:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getUriQualifiedNameParserRuleCall_3_0_2_0()); 
@@ -17631,17 +17449,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__VersionAssignment_3_1_2"
-    // InternalIFACE.g:5635:1: rule__GSSIfacePortConfig__VersionAssignment_3_1_2 : ( ruleVersion ) ;
+    // InternalIFACE.g:5564:1: rule__GSSIfacePortConfig__VersionAssignment_3_1_2 : ( ruleVersion ) ;
     public final void rule__GSSIfacePortConfig__VersionAssignment_3_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5639:1: ( ( ruleVersion ) )
-            // InternalIFACE.g:5640:2: ( ruleVersion )
+            // InternalIFACE.g:5568:1: ( ( ruleVersion ) )
+            // InternalIFACE.g:5569:2: ( ruleVersion )
             {
-            // InternalIFACE.g:5640:2: ( ruleVersion )
-            // InternalIFACE.g:5641:3: ruleVersion
+            // InternalIFACE.g:5569:2: ( ruleVersion )
+            // InternalIFACE.g:5570:3: ruleVersion
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getVersionVersionParserRuleCall_3_1_2_0()); 
@@ -17676,17 +17494,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfacePortConfig__PortConfigAssignment_4"
-    // InternalIFACE.g:5650:1: rule__GSSIfacePortConfig__PortConfigAssignment_4 : ( ruleGSSIfacePort ) ;
+    // InternalIFACE.g:5579:1: rule__GSSIfacePortConfig__PortConfigAssignment_4 : ( ruleGSSIfacePort ) ;
     public final void rule__GSSIfacePortConfig__PortConfigAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5654:1: ( ( ruleGSSIfacePort ) )
-            // InternalIFACE.g:5655:2: ( ruleGSSIfacePort )
+            // InternalIFACE.g:5583:1: ( ( ruleGSSIfacePort ) )
+            // InternalIFACE.g:5584:2: ( ruleGSSIfacePort )
             {
-            // InternalIFACE.g:5655:2: ( ruleGSSIfacePort )
-            // InternalIFACE.g:5656:3: ruleGSSIfacePort
+            // InternalIFACE.g:5584:2: ( ruleGSSIfacePort )
+            // InternalIFACE.g:5585:3: ruleGSSIfacePort
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfacePortConfigAccess().getPortConfigGSSIfacePortParserRuleCall_4_0()); 
@@ -17721,17 +17539,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__TypeAssignment_4"
-    // InternalIFACE.g:5665:1: rule__GSSIfaceSpWPort__TypeAssignment_4 : ( ruleGSSIfaceSpWPortType ) ;
+    // InternalIFACE.g:5594:1: rule__GSSIfaceSpWPort__TypeAssignment_4 : ( ruleGSSIfaceSpWPortType ) ;
     public final void rule__GSSIfaceSpWPort__TypeAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5669:1: ( ( ruleGSSIfaceSpWPortType ) )
-            // InternalIFACE.g:5670:2: ( ruleGSSIfaceSpWPortType )
+            // InternalIFACE.g:5598:1: ( ( ruleGSSIfaceSpWPortType ) )
+            // InternalIFACE.g:5599:2: ( ruleGSSIfaceSpWPortType )
             {
-            // InternalIFACE.g:5670:2: ( ruleGSSIfaceSpWPortType )
-            // InternalIFACE.g:5671:3: ruleGSSIfaceSpWPortType
+            // InternalIFACE.g:5599:2: ( ruleGSSIfaceSpWPortType )
+            // InternalIFACE.g:5600:3: ruleGSSIfaceSpWPortType
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getTypeGSSIfaceSpWPortTypeEnumRuleCall_4_0()); 
@@ -17766,17 +17584,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__LinkAssignment_8"
-    // InternalIFACE.g:5680:1: rule__GSSIfaceSpWPort__LinkAssignment_8 : ( ruleINTEGER ) ;
+    // InternalIFACE.g:5609:1: rule__GSSIfaceSpWPort__LinkAssignment_8 : ( ruleINTEGER ) ;
     public final void rule__GSSIfaceSpWPort__LinkAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5684:1: ( ( ruleINTEGER ) )
-            // InternalIFACE.g:5685:2: ( ruleINTEGER )
+            // InternalIFACE.g:5613:1: ( ( ruleINTEGER ) )
+            // InternalIFACE.g:5614:2: ( ruleINTEGER )
             {
-            // InternalIFACE.g:5685:2: ( ruleINTEGER )
-            // InternalIFACE.g:5686:3: ruleINTEGER
+            // InternalIFACE.g:5614:2: ( ruleINTEGER )
+            // InternalIFACE.g:5615:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getLinkINTEGERParserRuleCall_8_0()); 
@@ -17811,17 +17629,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__WritingPortAssignment_12"
-    // InternalIFACE.g:5695:1: rule__GSSIfaceSpWPort__WritingPortAssignment_12 : ( ruleINTEGER ) ;
+    // InternalIFACE.g:5624:1: rule__GSSIfaceSpWPort__WritingPortAssignment_12 : ( ruleINTEGER ) ;
     public final void rule__GSSIfaceSpWPort__WritingPortAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5699:1: ( ( ruleINTEGER ) )
-            // InternalIFACE.g:5700:2: ( ruleINTEGER )
+            // InternalIFACE.g:5628:1: ( ( ruleINTEGER ) )
+            // InternalIFACE.g:5629:2: ( ruleINTEGER )
             {
-            // InternalIFACE.g:5700:2: ( ruleINTEGER )
-            // InternalIFACE.g:5701:3: ruleINTEGER
+            // InternalIFACE.g:5629:2: ( ruleINTEGER )
+            // InternalIFACE.g:5630:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getWritingPortINTEGERParserRuleCall_12_0()); 
@@ -17856,17 +17674,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWPort__ReadingPortAssignment_14"
-    // InternalIFACE.g:5710:1: rule__GSSIfaceSpWPort__ReadingPortAssignment_14 : ( ruleGSSIfaceReadingPort ) ;
+    // InternalIFACE.g:5639:1: rule__GSSIfaceSpWPort__ReadingPortAssignment_14 : ( ruleGSSIfaceReadingPort ) ;
     public final void rule__GSSIfaceSpWPort__ReadingPortAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5714:1: ( ( ruleGSSIfaceReadingPort ) )
-            // InternalIFACE.g:5715:2: ( ruleGSSIfaceReadingPort )
+            // InternalIFACE.g:5643:1: ( ( ruleGSSIfaceReadingPort ) )
+            // InternalIFACE.g:5644:2: ( ruleGSSIfaceReadingPort )
             {
-            // InternalIFACE.g:5715:2: ( ruleGSSIfaceReadingPort )
-            // InternalIFACE.g:5716:3: ruleGSSIfaceReadingPort
+            // InternalIFACE.g:5644:2: ( ruleGSSIfaceReadingPort )
+            // InternalIFACE.g:5645:3: ruleGSSIfaceReadingPort
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWPortAccess().getReadingPortGSSIfaceReadingPortParserRuleCall_14_0()); 
@@ -17901,17 +17719,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceReadingPort__PortAssignment_4"
-    // InternalIFACE.g:5725:1: rule__GSSIfaceReadingPort__PortAssignment_4 : ( ruleINTEGER ) ;
+    // InternalIFACE.g:5654:1: rule__GSSIfaceReadingPort__PortAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSIfaceReadingPort__PortAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5729:1: ( ( ruleINTEGER ) )
-            // InternalIFACE.g:5730:2: ( ruleINTEGER )
+            // InternalIFACE.g:5658:1: ( ( ruleINTEGER ) )
+            // InternalIFACE.g:5659:2: ( ruleINTEGER )
             {
-            // InternalIFACE.g:5730:2: ( ruleINTEGER )
-            // InternalIFACE.g:5731:3: ruleINTEGER
+            // InternalIFACE.g:5659:2: ( ruleINTEGER )
+            // InternalIFACE.g:5660:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceReadingPortAccess().getPortINTEGERParserRuleCall_4_0()); 
@@ -17946,17 +17764,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__NumberAssignment_4"
-    // InternalIFACE.g:5740:1: rule__GSSIfaceUartPort__NumberAssignment_4 : ( ruleINTEGER ) ;
+    // InternalIFACE.g:5669:1: rule__GSSIfaceUartPort__NumberAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSIfaceUartPort__NumberAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5744:1: ( ( ruleINTEGER ) )
-            // InternalIFACE.g:5745:2: ( ruleINTEGER )
+            // InternalIFACE.g:5673:1: ( ( ruleINTEGER ) )
+            // InternalIFACE.g:5674:2: ( ruleINTEGER )
             {
-            // InternalIFACE.g:5745:2: ( ruleINTEGER )
-            // InternalIFACE.g:5746:3: ruleINTEGER
+            // InternalIFACE.g:5674:2: ( ruleINTEGER )
+            // InternalIFACE.g:5675:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getNumberINTEGERParserRuleCall_4_0()); 
@@ -17991,17 +17809,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__BaudRateAssignment_8"
-    // InternalIFACE.g:5755:1: rule__GSSIfaceUartPort__BaudRateAssignment_8 : ( ruleGSSIfaceUartPortBaudRate ) ;
+    // InternalIFACE.g:5684:1: rule__GSSIfaceUartPort__BaudRateAssignment_8 : ( ruleGSSIfaceUartPortBaudRate ) ;
     public final void rule__GSSIfaceUartPort__BaudRateAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5759:1: ( ( ruleGSSIfaceUartPortBaudRate ) )
-            // InternalIFACE.g:5760:2: ( ruleGSSIfaceUartPortBaudRate )
+            // InternalIFACE.g:5688:1: ( ( ruleGSSIfaceUartPortBaudRate ) )
+            // InternalIFACE.g:5689:2: ( ruleGSSIfaceUartPortBaudRate )
             {
-            // InternalIFACE.g:5760:2: ( ruleGSSIfaceUartPortBaudRate )
-            // InternalIFACE.g:5761:3: ruleGSSIfaceUartPortBaudRate
+            // InternalIFACE.g:5689:2: ( ruleGSSIfaceUartPortBaudRate )
+            // InternalIFACE.g:5690:3: ruleGSSIfaceUartPortBaudRate
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getBaudRateGSSIfaceUartPortBaudRateEnumRuleCall_8_0()); 
@@ -18036,17 +17854,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__ParityAssignment_12"
-    // InternalIFACE.g:5770:1: rule__GSSIfaceUartPort__ParityAssignment_12 : ( ruleGSSIfaceUartPortParity ) ;
+    // InternalIFACE.g:5699:1: rule__GSSIfaceUartPort__ParityAssignment_12 : ( ruleGSSIfaceUartPortParity ) ;
     public final void rule__GSSIfaceUartPort__ParityAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5774:1: ( ( ruleGSSIfaceUartPortParity ) )
-            // InternalIFACE.g:5775:2: ( ruleGSSIfaceUartPortParity )
+            // InternalIFACE.g:5703:1: ( ( ruleGSSIfaceUartPortParity ) )
+            // InternalIFACE.g:5704:2: ( ruleGSSIfaceUartPortParity )
             {
-            // InternalIFACE.g:5775:2: ( ruleGSSIfaceUartPortParity )
-            // InternalIFACE.g:5776:3: ruleGSSIfaceUartPortParity
+            // InternalIFACE.g:5704:2: ( ruleGSSIfaceUartPortParity )
+            // InternalIFACE.g:5705:3: ruleGSSIfaceUartPortParity
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getParityGSSIfaceUartPortParityEnumRuleCall_12_0()); 
@@ -18081,17 +17899,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__DataBitsAssignment_16"
-    // InternalIFACE.g:5785:1: rule__GSSIfaceUartPort__DataBitsAssignment_16 : ( ruleGSSIfaceUartPortDataBits ) ;
+    // InternalIFACE.g:5714:1: rule__GSSIfaceUartPort__DataBitsAssignment_16 : ( ruleGSSIfaceUartPortDataBits ) ;
     public final void rule__GSSIfaceUartPort__DataBitsAssignment_16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5789:1: ( ( ruleGSSIfaceUartPortDataBits ) )
-            // InternalIFACE.g:5790:2: ( ruleGSSIfaceUartPortDataBits )
+            // InternalIFACE.g:5718:1: ( ( ruleGSSIfaceUartPortDataBits ) )
+            // InternalIFACE.g:5719:2: ( ruleGSSIfaceUartPortDataBits )
             {
-            // InternalIFACE.g:5790:2: ( ruleGSSIfaceUartPortDataBits )
-            // InternalIFACE.g:5791:3: ruleGSSIfaceUartPortDataBits
+            // InternalIFACE.g:5719:2: ( ruleGSSIfaceUartPortDataBits )
+            // InternalIFACE.g:5720:3: ruleGSSIfaceUartPortDataBits
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getDataBitsGSSIfaceUartPortDataBitsEnumRuleCall_16_0()); 
@@ -18126,17 +17944,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartPort__StopBitsAssignment_20"
-    // InternalIFACE.g:5800:1: rule__GSSIfaceUartPort__StopBitsAssignment_20 : ( ruleGSSIfaceUartPortStopBits ) ;
+    // InternalIFACE.g:5729:1: rule__GSSIfaceUartPort__StopBitsAssignment_20 : ( ruleGSSIfaceUartPortStopBits ) ;
     public final void rule__GSSIfaceUartPort__StopBitsAssignment_20() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5804:1: ( ( ruleGSSIfaceUartPortStopBits ) )
-            // InternalIFACE.g:5805:2: ( ruleGSSIfaceUartPortStopBits )
+            // InternalIFACE.g:5733:1: ( ( ruleGSSIfaceUartPortStopBits ) )
+            // InternalIFACE.g:5734:2: ( ruleGSSIfaceUartPortStopBits )
             {
-            // InternalIFACE.g:5805:2: ( ruleGSSIfaceUartPortStopBits )
-            // InternalIFACE.g:5806:3: ruleGSSIfaceUartPortStopBits
+            // InternalIFACE.g:5734:2: ( ruleGSSIfaceUartPortStopBits )
+            // InternalIFACE.g:5735:3: ruleGSSIfaceUartPortStopBits
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartPortAccess().getStopBitsGSSIfaceUartPortStopBitsEnumRuleCall_20_0()); 
@@ -18170,29 +17988,29 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GSSIfaceUartPort__StopBitsAssignment_20"
 
 
-    // $ANTLR start "rule__GSSIfaceUartPort__InputQueueSizeAssignment_24"
-    // InternalIFACE.g:5815:1: rule__GSSIfaceUartPort__InputQueueSizeAssignment_24 : ( ruleINTEGER ) ;
-    public final void rule__GSSIfaceUartPort__InputQueueSizeAssignment_24() throws RecognitionException {
+    // $ANTLR start "rule__GSSIfaceUartPort__FlowControlAssignment_24"
+    // InternalIFACE.g:5744:1: rule__GSSIfaceUartPort__FlowControlAssignment_24 : ( ruleGSSIfaceUartPortFlowControl ) ;
+    public final void rule__GSSIfaceUartPort__FlowControlAssignment_24() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5819:1: ( ( ruleINTEGER ) )
-            // InternalIFACE.g:5820:2: ( ruleINTEGER )
+            // InternalIFACE.g:5748:1: ( ( ruleGSSIfaceUartPortFlowControl ) )
+            // InternalIFACE.g:5749:2: ( ruleGSSIfaceUartPortFlowControl )
             {
-            // InternalIFACE.g:5820:2: ( ruleINTEGER )
-            // InternalIFACE.g:5821:3: ruleINTEGER
+            // InternalIFACE.g:5749:2: ( ruleGSSIfaceUartPortFlowControl )
+            // InternalIFACE.g:5750:3: ruleGSSIfaceUartPortFlowControl
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeINTEGERParserRuleCall_24_0()); 
+               before(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlGSSIfaceUartPortFlowControlEnumRuleCall_24_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleINTEGER();
+            ruleGSSIfaceUartPortFlowControl();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeINTEGERParserRuleCall_24_0()); 
+               after(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlGSSIfaceUartPortFlowControlEnumRuleCall_24_0()); 
             }
 
             }
@@ -18212,69 +18030,24 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSIfaceUartPort__InputQueueSizeAssignment_24"
+    // $ANTLR end "rule__GSSIfaceUartPort__FlowControlAssignment_24"
 
 
-    // $ANTLR start "rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28"
-    // InternalIFACE.g:5830:1: rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28 : ( ruleINTEGER ) ;
-    public final void rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalIFACE.g:5834:1: ( ( ruleINTEGER ) )
-            // InternalIFACE.g:5835:2: ( ruleINTEGER )
-            {
-            // InternalIFACE.g:5835:2: ( ruleINTEGER )
-            // InternalIFACE.g:5836:3: ruleINTEGER
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeINTEGERParserRuleCall_28_0()); 
-            }
-            pushFollow(FollowSets000.FOLLOW_2);
-            ruleINTEGER();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeINTEGERParserRuleCall_28_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28"
-
-
-    // $ANTLR start "rule__GSSIfaceUartPort__UartProtocolAssignment_30"
-    // InternalIFACE.g:5845:1: rule__GSSIfaceUartPort__UartProtocolAssignment_30 : ( ruleGSSIfaceUartProtocol ) ;
-    public final void rule__GSSIfaceUartPort__UartProtocolAssignment_30() throws RecognitionException {
+    // $ANTLR start "rule__GSSIfaceUartPort__UartProtocolAssignment_26"
+    // InternalIFACE.g:5759:1: rule__GSSIfaceUartPort__UartProtocolAssignment_26 : ( ruleGSSIfaceUartProtocol ) ;
+    public final void rule__GSSIfaceUartPort__UartProtocolAssignment_26() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5849:1: ( ( ruleGSSIfaceUartProtocol ) )
-            // InternalIFACE.g:5850:2: ( ruleGSSIfaceUartProtocol )
+            // InternalIFACE.g:5763:1: ( ( ruleGSSIfaceUartProtocol ) )
+            // InternalIFACE.g:5764:2: ( ruleGSSIfaceUartProtocol )
             {
-            // InternalIFACE.g:5850:2: ( ruleGSSIfaceUartProtocol )
-            // InternalIFACE.g:5851:3: ruleGSSIfaceUartProtocol
+            // InternalIFACE.g:5764:2: ( ruleGSSIfaceUartProtocol )
+            // InternalIFACE.g:5765:3: ruleGSSIfaceUartProtocol
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_30_0()); 
+               before(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleGSSIfaceUartProtocol();
@@ -18282,7 +18055,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_30_0()); 
+               after(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0()); 
             }
 
             }
@@ -18302,21 +18075,21 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GSSIfaceUartPort__UartProtocolAssignment_30"
+    // $ANTLR end "rule__GSSIfaceUartPort__UartProtocolAssignment_26"
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__UnitAssignment_4"
-    // InternalIFACE.g:5860:1: rule__GSSIfaceUartProtocol__UnitAssignment_4 : ( ruleGSSIfaceUartProtocolUnit ) ;
+    // InternalIFACE.g:5774:1: rule__GSSIfaceUartProtocol__UnitAssignment_4 : ( ruleGSSIfaceUartProtocolUnit ) ;
     public final void rule__GSSIfaceUartProtocol__UnitAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5864:1: ( ( ruleGSSIfaceUartProtocolUnit ) )
-            // InternalIFACE.g:5865:2: ( ruleGSSIfaceUartProtocolUnit )
+            // InternalIFACE.g:5778:1: ( ( ruleGSSIfaceUartProtocolUnit ) )
+            // InternalIFACE.g:5779:2: ( ruleGSSIfaceUartProtocolUnit )
             {
-            // InternalIFACE.g:5865:2: ( ruleGSSIfaceUartProtocolUnit )
-            // InternalIFACE.g:5866:3: ruleGSSIfaceUartProtocolUnit
+            // InternalIFACE.g:5779:2: ( ruleGSSIfaceUartProtocolUnit )
+            // InternalIFACE.g:5780:3: ruleGSSIfaceUartProtocolUnit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getUnitGSSIfaceUartProtocolUnitEnumRuleCall_4_0()); 
@@ -18351,17 +18124,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__PowerAssignment_8"
-    // InternalIFACE.g:5875:1: rule__GSSIfaceUartProtocol__PowerAssignment_8 : ( ruleGSSIfaceUartProtocolPower ) ;
+    // InternalIFACE.g:5789:1: rule__GSSIfaceUartProtocol__PowerAssignment_8 : ( ruleGSSIfaceUartProtocolPower ) ;
     public final void rule__GSSIfaceUartProtocol__PowerAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5879:1: ( ( ruleGSSIfaceUartProtocolPower ) )
-            // InternalIFACE.g:5880:2: ( ruleGSSIfaceUartProtocolPower )
+            // InternalIFACE.g:5793:1: ( ( ruleGSSIfaceUartProtocolPower ) )
+            // InternalIFACE.g:5794:2: ( ruleGSSIfaceUartProtocolPower )
             {
-            // InternalIFACE.g:5880:2: ( ruleGSSIfaceUartProtocolPower )
-            // InternalIFACE.g:5881:3: ruleGSSIfaceUartProtocolPower
+            // InternalIFACE.g:5794:2: ( ruleGSSIfaceUartProtocolPower )
+            // InternalIFACE.g:5795:3: ruleGSSIfaceUartProtocolPower
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getPowerGSSIfaceUartProtocolPowerEnumRuleCall_8_0()); 
@@ -18396,17 +18169,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__ConstSizeAssignment_10"
-    // InternalIFACE.g:5890:1: rule__GSSIfaceUartProtocol__ConstSizeAssignment_10 : ( ruleGSSIfaceConstSize ) ;
+    // InternalIFACE.g:5804:1: rule__GSSIfaceUartProtocol__ConstSizeAssignment_10 : ( ruleGSSIfaceConstSize ) ;
     public final void rule__GSSIfaceUartProtocol__ConstSizeAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5894:1: ( ( ruleGSSIfaceConstSize ) )
-            // InternalIFACE.g:5895:2: ( ruleGSSIfaceConstSize )
+            // InternalIFACE.g:5808:1: ( ( ruleGSSIfaceConstSize ) )
+            // InternalIFACE.g:5809:2: ( ruleGSSIfaceConstSize )
             {
-            // InternalIFACE.g:5895:2: ( ruleGSSIfaceConstSize )
-            // InternalIFACE.g:5896:3: ruleGSSIfaceConstSize
+            // InternalIFACE.g:5809:2: ( ruleGSSIfaceConstSize )
+            // InternalIFACE.g:5810:3: ruleGSSIfaceConstSize
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getConstSizeGSSIfaceConstSizeParserRuleCall_10_0()); 
@@ -18441,17 +18214,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11"
-    // InternalIFACE.g:5905:1: rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11 : ( ruleGSSIfaceSizeFieldOffset ) ;
+    // InternalIFACE.g:5819:1: rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11 : ( ruleGSSIfaceSizeFieldOffset ) ;
     public final void rule__GSSIfaceUartProtocol__SizeFieldOffsetAssignment_11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5909:1: ( ( ruleGSSIfaceSizeFieldOffset ) )
-            // InternalIFACE.g:5910:2: ( ruleGSSIfaceSizeFieldOffset )
+            // InternalIFACE.g:5823:1: ( ( ruleGSSIfaceSizeFieldOffset ) )
+            // InternalIFACE.g:5824:2: ( ruleGSSIfaceSizeFieldOffset )
             {
-            // InternalIFACE.g:5910:2: ( ruleGSSIfaceSizeFieldOffset )
-            // InternalIFACE.g:5911:3: ruleGSSIfaceSizeFieldOffset
+            // InternalIFACE.g:5824:2: ( ruleGSSIfaceSizeFieldOffset )
+            // InternalIFACE.g:5825:3: ruleGSSIfaceSizeFieldOffset
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getSizeFieldOffsetGSSIfaceSizeFieldOffsetParserRuleCall_11_0()); 
@@ -18486,17 +18259,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12"
-    // InternalIFACE.g:5920:1: rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12 : ( ruleGSSIfaceSizeFieldTrim ) ;
+    // InternalIFACE.g:5834:1: rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12 : ( ruleGSSIfaceSizeFieldTrim ) ;
     public final void rule__GSSIfaceUartProtocol__SizeFieldTrimAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5924:1: ( ( ruleGSSIfaceSizeFieldTrim ) )
-            // InternalIFACE.g:5925:2: ( ruleGSSIfaceSizeFieldTrim )
+            // InternalIFACE.g:5838:1: ( ( ruleGSSIfaceSizeFieldTrim ) )
+            // InternalIFACE.g:5839:2: ( ruleGSSIfaceSizeFieldTrim )
             {
-            // InternalIFACE.g:5925:2: ( ruleGSSIfaceSizeFieldTrim )
-            // InternalIFACE.g:5926:3: ruleGSSIfaceSizeFieldTrim
+            // InternalIFACE.g:5839:2: ( ruleGSSIfaceSizeFieldTrim )
+            // InternalIFACE.g:5840:3: ruleGSSIfaceSizeFieldTrim
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getSizeFieldTrimGSSIfaceSizeFieldTrimParserRuleCall_12_0()); 
@@ -18531,17 +18304,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceUartProtocol__SyncPatternAssignment_13"
-    // InternalIFACE.g:5935:1: rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 : ( ruleGSSIfaceSyncPattern ) ;
+    // InternalIFACE.g:5849:1: rule__GSSIfaceUartProtocol__SyncPatternAssignment_13 : ( ruleGSSIfaceSyncPattern ) ;
     public final void rule__GSSIfaceUartProtocol__SyncPatternAssignment_13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5939:1: ( ( ruleGSSIfaceSyncPattern ) )
-            // InternalIFACE.g:5940:2: ( ruleGSSIfaceSyncPattern )
+            // InternalIFACE.g:5853:1: ( ( ruleGSSIfaceSyncPattern ) )
+            // InternalIFACE.g:5854:2: ( ruleGSSIfaceSyncPattern )
             {
-            // InternalIFACE.g:5940:2: ( ruleGSSIfaceSyncPattern )
-            // InternalIFACE.g:5941:3: ruleGSSIfaceSyncPattern
+            // InternalIFACE.g:5854:2: ( ruleGSSIfaceSyncPattern )
+            // InternalIFACE.g:5855:3: ruleGSSIfaceSyncPattern
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceUartProtocolAccess().getSyncPatternGSSIfaceSyncPatternParserRuleCall_13_0()); 
@@ -18576,17 +18349,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__BytesAssignment_4"
-    // InternalIFACE.g:5950:1: rule__GSSIfaceConstSize__BytesAssignment_4 : ( ruleINTEGER ) ;
+    // InternalIFACE.g:5864:1: rule__GSSIfaceConstSize__BytesAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSIfaceConstSize__BytesAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5954:1: ( ( ruleINTEGER ) )
-            // InternalIFACE.g:5955:2: ( ruleINTEGER )
+            // InternalIFACE.g:5868:1: ( ( ruleINTEGER ) )
+            // InternalIFACE.g:5869:2: ( ruleINTEGER )
             {
-            // InternalIFACE.g:5955:2: ( ruleINTEGER )
-            // InternalIFACE.g:5956:3: ruleINTEGER
+            // InternalIFACE.g:5869:2: ( ruleINTEGER )
+            // InternalIFACE.g:5870:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceConstSizeAccess().getBytesINTEGERParserRuleCall_4_0()); 
@@ -18621,17 +18394,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceConstSize__BitsAssignment_8"
-    // InternalIFACE.g:5965:1: rule__GSSIfaceConstSize__BitsAssignment_8 : ( ruleINTEGER ) ;
+    // InternalIFACE.g:5879:1: rule__GSSIfaceConstSize__BitsAssignment_8 : ( ruleINTEGER ) ;
     public final void rule__GSSIfaceConstSize__BitsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5969:1: ( ( ruleINTEGER ) )
-            // InternalIFACE.g:5970:2: ( ruleINTEGER )
+            // InternalIFACE.g:5883:1: ( ( ruleINTEGER ) )
+            // InternalIFACE.g:5884:2: ( ruleINTEGER )
             {
-            // InternalIFACE.g:5970:2: ( ruleINTEGER )
-            // InternalIFACE.g:5971:3: ruleINTEGER
+            // InternalIFACE.g:5884:2: ( ruleINTEGER )
+            // InternalIFACE.g:5885:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceConstSizeAccess().getBitsINTEGERParserRuleCall_8_0()); 
@@ -18666,17 +18439,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__BytesAssignment_4"
-    // InternalIFACE.g:5980:1: rule__GSSIfaceSizeFieldOffset__BytesAssignment_4 : ( ruleINTEGER ) ;
+    // InternalIFACE.g:5894:1: rule__GSSIfaceSizeFieldOffset__BytesAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSIfaceSizeFieldOffset__BytesAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5984:1: ( ( ruleINTEGER ) )
-            // InternalIFACE.g:5985:2: ( ruleINTEGER )
+            // InternalIFACE.g:5898:1: ( ( ruleINTEGER ) )
+            // InternalIFACE.g:5899:2: ( ruleINTEGER )
             {
-            // InternalIFACE.g:5985:2: ( ruleINTEGER )
-            // InternalIFACE.g:5986:3: ruleINTEGER
+            // InternalIFACE.g:5899:2: ( ruleINTEGER )
+            // InternalIFACE.g:5900:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBytesINTEGERParserRuleCall_4_0()); 
@@ -18711,17 +18484,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldOffset__BitsAssignment_8"
-    // InternalIFACE.g:5995:1: rule__GSSIfaceSizeFieldOffset__BitsAssignment_8 : ( ruleINTEGER ) ;
+    // InternalIFACE.g:5909:1: rule__GSSIfaceSizeFieldOffset__BitsAssignment_8 : ( ruleINTEGER ) ;
     public final void rule__GSSIfaceSizeFieldOffset__BitsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:5999:1: ( ( ruleINTEGER ) )
-            // InternalIFACE.g:6000:2: ( ruleINTEGER )
+            // InternalIFACE.g:5913:1: ( ( ruleINTEGER ) )
+            // InternalIFACE.g:5914:2: ( ruleINTEGER )
             {
-            // InternalIFACE.g:6000:2: ( ruleINTEGER )
-            // InternalIFACE.g:6001:3: ruleINTEGER
+            // InternalIFACE.g:5914:2: ( ruleINTEGER )
+            // InternalIFACE.g:5915:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBitsINTEGERParserRuleCall_8_0()); 
@@ -18756,17 +18529,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__BytesAssignment_4"
-    // InternalIFACE.g:6010:1: rule__GSSIfaceSizeFieldTrim__BytesAssignment_4 : ( ruleINTEGER ) ;
+    // InternalIFACE.g:5924:1: rule__GSSIfaceSizeFieldTrim__BytesAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSIfaceSizeFieldTrim__BytesAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:6014:1: ( ( ruleINTEGER ) )
-            // InternalIFACE.g:6015:2: ( ruleINTEGER )
+            // InternalIFACE.g:5928:1: ( ( ruleINTEGER ) )
+            // InternalIFACE.g:5929:2: ( ruleINTEGER )
             {
-            // InternalIFACE.g:6015:2: ( ruleINTEGER )
-            // InternalIFACE.g:6016:3: ruleINTEGER
+            // InternalIFACE.g:5929:2: ( ruleINTEGER )
+            // InternalIFACE.g:5930:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBytesINTEGERParserRuleCall_4_0()); 
@@ -18801,17 +18574,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSizeFieldTrim__BitsAssignment_8"
-    // InternalIFACE.g:6025:1: rule__GSSIfaceSizeFieldTrim__BitsAssignment_8 : ( ruleINTEGER ) ;
+    // InternalIFACE.g:5939:1: rule__GSSIfaceSizeFieldTrim__BitsAssignment_8 : ( ruleINTEGER ) ;
     public final void rule__GSSIfaceSizeFieldTrim__BitsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:6029:1: ( ( ruleINTEGER ) )
-            // InternalIFACE.g:6030:2: ( ruleINTEGER )
+            // InternalIFACE.g:5943:1: ( ( ruleINTEGER ) )
+            // InternalIFACE.g:5944:2: ( ruleINTEGER )
             {
-            // InternalIFACE.g:6030:2: ( ruleINTEGER )
-            // InternalIFACE.g:6031:3: ruleINTEGER
+            // InternalIFACE.g:5944:2: ( ruleINTEGER )
+            // InternalIFACE.g:5945:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBitsINTEGERParserRuleCall_8_0()); 
@@ -18846,17 +18619,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSyncPattern__HexValueAssignment_4"
-    // InternalIFACE.g:6040:1: rule__GSSIfaceSyncPattern__HexValueAssignment_4 : ( RULE_HEXADECIMAL ) ;
+    // InternalIFACE.g:5954:1: rule__GSSIfaceSyncPattern__HexValueAssignment_4 : ( RULE_HEXADECIMAL ) ;
     public final void rule__GSSIfaceSyncPattern__HexValueAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:6044:1: ( ( RULE_HEXADECIMAL ) )
-            // InternalIFACE.g:6045:2: ( RULE_HEXADECIMAL )
+            // InternalIFACE.g:5958:1: ( ( RULE_HEXADECIMAL ) )
+            // InternalIFACE.g:5959:2: ( RULE_HEXADECIMAL )
             {
-            // InternalIFACE.g:6045:2: ( RULE_HEXADECIMAL )
-            // InternalIFACE.g:6046:3: RULE_HEXADECIMAL
+            // InternalIFACE.g:5959:2: ( RULE_HEXADECIMAL )
+            // InternalIFACE.g:5960:3: RULE_HEXADECIMAL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSyncPatternAccess().getHexValueHEXADECIMALTerminalRuleCall_4_0()); 
@@ -18887,17 +18660,17 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4"
-    // InternalIFACE.g:6055:1: rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4 : ( ruleINTEGER ) ;
+    // InternalIFACE.g:5969:1: rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4 : ( ruleINTEGER ) ;
     public final void rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalIFACE.g:6059:1: ( ( ruleINTEGER ) )
-            // InternalIFACE.g:6060:2: ( ruleINTEGER )
+            // InternalIFACE.g:5973:1: ( ( ruleINTEGER ) )
+            // InternalIFACE.g:5974:2: ( ruleINTEGER )
             {
-            // InternalIFACE.g:6060:2: ( ruleINTEGER )
-            // InternalIFACE.g:6061:3: ruleINTEGER
+            // InternalIFACE.g:5974:2: ( ruleINTEGER )
+            // InternalIFACE.g:5975:3: ruleINTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGSSIfaceSpWTCPortAccess().getSpwPortRefINTEGERParserRuleCall_4_0()); 
@@ -18930,30 +18703,30 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
     }
     // $ANTLR end "rule__GSSIfaceSpWTCPort__SpwPortRefAssignment_4"
 
-    // $ANTLR start synpred29_InternalIFACE
-    public final void synpred29_InternalIFACE_fragment() throws RecognitionException {   
-        // InternalIFACE.g:5498:3: ( ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) ) )
-        // InternalIFACE.g:5498:3: ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) )
+    // $ANTLR start synpred30_InternalIFACE
+    public final void synpred30_InternalIFACE_fragment() throws RecognitionException {   
+        // InternalIFACE.g:5427:3: ( ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) ) )
+        // InternalIFACE.g:5427:3: ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) )
         {
-        // InternalIFACE.g:5498:3: ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) )
-        // InternalIFACE.g:5499:4: {...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) )
+        // InternalIFACE.g:5427:3: ({...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) ) )
+        // InternalIFACE.g:5428:4: {...}? => ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) )
         {
         if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0) ) {
             if (state.backtracking>0) {state.failed=true; return ;}
-            throw new FailedPredicateException(input, "synpred29_InternalIFACE", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0)");
+            throw new FailedPredicateException(input, "synpred30_InternalIFACE", "getUnorderedGroupHelper().canSelect(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0)");
         }
-        // InternalIFACE.g:5499:114: ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) )
-        // InternalIFACE.g:5500:5: ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) )
+        // InternalIFACE.g:5428:114: ( ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) ) )
+        // InternalIFACE.g:5429:5: ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) )
         {
         getUnorderedGroupHelper().select(grammarAccess.getGSSIfacePortConfigAccess().getUnorderedGroup_3(), 0);
-        // InternalIFACE.g:5506:5: ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) )
-        // InternalIFACE.g:5507:6: ( rule__GSSIfacePortConfig__Group_3_0__0 )
+        // InternalIFACE.g:5435:5: ( ( rule__GSSIfacePortConfig__Group_3_0__0 ) )
+        // InternalIFACE.g:5436:6: ( rule__GSSIfacePortConfig__Group_3_0__0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getGSSIfacePortConfigAccess().getGroup_3_0()); 
         }
-        // InternalIFACE.g:5508:6: ( rule__GSSIfacePortConfig__Group_3_0__0 )
-        // InternalIFACE.g:5508:7: rule__GSSIfacePortConfig__Group_3_0__0
+        // InternalIFACE.g:5437:6: ( rule__GSSIfacePortConfig__Group_3_0__0 )
+        // InternalIFACE.g:5437:7: rule__GSSIfacePortConfig__Group_3_0__0
         {
         pushFollow(FollowSets000.FOLLOW_2);
         rule__GSSIfacePortConfig__Group_3_0__0();
@@ -18975,12 +18748,12 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
         }
     }
-    // $ANTLR end synpred29_InternalIFACE
+    // $ANTLR end synpred30_InternalIFACE
 
-    // $ANTLR start synpred30_InternalIFACE
-    public final void synpred30_InternalIFACE_fragment() throws RecognitionException {   
-        // InternalIFACE.g:5542:2: ( rule__GSSIfacePortConfig__UnorderedGroup_3__1 )
-        // InternalIFACE.g:5542:2: rule__GSSIfacePortConfig__UnorderedGroup_3__1
+    // $ANTLR start synpred31_InternalIFACE
+    public final void synpred31_InternalIFACE_fragment() throws RecognitionException {   
+        // InternalIFACE.g:5471:2: ( rule__GSSIfacePortConfig__UnorderedGroup_3__1 )
+        // InternalIFACE.g:5471:2: rule__GSSIfacePortConfig__UnorderedGroup_3__1
         {
         pushFollow(FollowSets000.FOLLOW_2);
         rule__GSSIfacePortConfig__UnorderedGroup_3__1();
@@ -18990,7 +18763,7 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
 
         }
     }
-    // $ANTLR end synpred30_InternalIFACE
+    // $ANTLR end synpred31_InternalIFACE
 
     // Delegated rules
 
@@ -19008,11 +18781,11 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred29_InternalIFACE() {
+    public final boolean synpred31_InternalIFACE() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred29_InternalIFACE_fragment(); // can never throw exception
+            synpred31_InternalIFACE_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -19030,56 +18803,56 @@ public class InternalIFACEParser extends AbstractInternalContentAssistParser {
     private static class FollowSets000 {
         public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000400000000L});
-        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000100000002L});
+        public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000001000000000L});
+        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000400000002L});
         public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000080L});
-        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000200000000L});
+        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000800000000L});
         public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000800000000L});
-        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x000000A000000000L});
-        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x4000410000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000001000000000L});
-        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000004000000000L});
+        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000002000000000L});
+        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000028000000000L});
+        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x8001040000000000L,0x0000000000000002L});
+        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000004000000000L});
+        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000010000000000L});
         public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000050L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000020000000000L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000080000000000L});
         public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000007000L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000040000000000L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000000030L,0x0000000000000010L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000080000000000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000100000000000L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000100000000002L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000200000000000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000800000000000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0001000000000000L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000100000000000L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000000030L,0x0000000000000020L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000200000000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000400000000000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000400000000002L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000800000000000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0002000000000000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0004000000000000L});
         public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000018000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0002000000000000L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0008000000000000L});
         public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x00000000003E0000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0004000000000000L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0010000000000000L});
         public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000003C00000L});
-        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0008000000000000L});
+        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0020000000000000L});
         public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x000000000C000000L});
-        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0010000000000000L});
-        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0020000000000000L});
-        public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0040000000000000L});
-        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0080000000000000L});
-        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000030000000L});
-        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0100000000000000L});
-        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x00000000C8000000L});
-        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0200000000000000L});
-        public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0400000000000000L});
-        public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0800000000000000L});
-        public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x1000001000000000L});
-        public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000020000000L});
-        public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x2000000000000000L});
+        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0040000000000000L});
+        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000030000000L});
+        public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0080000000000000L});
+        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0100000000000000L});
+        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x00000000C0000000L});
+        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0200000000000000L});
+        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000308000000L});
+        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0400000000000000L});
+        public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0800000000000000L});
+        public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x1000000000000000L});
+        public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x2000004000000000L});
+        public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000080000000L});
+        public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x4000000000000000L});
         public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x8000000000000000L});
-        public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
-        public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000002L});
-        public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-        public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-        public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000000000000010L,0x0000000000000010L});
-        public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x000000A000000002L});
+        public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+        public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000004L});
+        public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+        public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+        public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000000000000010L,0x0000000000000020L});
+        public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000028000000002L});
     }
 
 

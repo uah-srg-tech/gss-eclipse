@@ -13,6 +13,7 @@ package es.uah.aut.srg.gss.iface.impl;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPort;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPortBaudRate;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPortDataBits;
+import es.uah.aut.srg.gss.iface.GSSIfaceUartPortFlowControl;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPortParity;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPortStopBits;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol;
@@ -39,8 +40,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartPortImpl#getParity <em>Parity</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartPortImpl#getDataBits <em>Data Bits</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartPortImpl#getStopBits <em>Stop Bits</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartPortImpl#getInputQueueSize <em>Input Queue Size</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartPortImpl#getOutputQueueSize <em>Output Queue Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartPortImpl#getFlowControl <em>Flow Control</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartPortImpl#getUartProtocol <em>Uart Protocol</em>}</li>
  * </ul>
  *
@@ -184,44 +184,33 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	protected boolean stopBitsESet;
 
 	/**
-	 * The default value of the '{@link #getInputQueueSize() <em>Input Queue Size</em>}' attribute.
+	 * The default value of the '{@link #getFlowControl() <em>Flow Control</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputQueueSize()
+	 * @see #getFlowControl()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INPUT_QUEUE_SIZE_EDEFAULT = null;
+	protected static final GSSIfaceUartPortFlowControl FLOW_CONTROL_EDEFAULT = GSSIfaceUartPortFlowControl.RTS_CTS;
 
 	/**
-	 * The cached value of the '{@link #getInputQueueSize() <em>Input Queue Size</em>}' attribute.
+	 * The cached value of the '{@link #getFlowControl() <em>Flow Control</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputQueueSize()
+	 * @see #getFlowControl()
 	 * @generated
 	 * @ordered
 	 */
-	protected String inputQueueSize = INPUT_QUEUE_SIZE_EDEFAULT;
+	protected GSSIfaceUartPortFlowControl flowControl = FLOW_CONTROL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getOutputQueueSize() <em>Output Queue Size</em>}' attribute.
+	 * This is true if the Flow Control attribute has been set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOutputQueueSize()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String OUTPUT_QUEUE_SIZE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getOutputQueueSize() <em>Output Queue Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutputQueueSize()
-	 * @generated
-	 * @ordered
-	 */
-	protected String outputQueueSize = OUTPUT_QUEUE_SIZE_EDEFAULT;
+	protected boolean flowControlESet;
 
 	/**
 	 * The cached value of the '{@link #getUartProtocol() <em>Uart Protocol</em>}' containment reference.
@@ -462,8 +451,8 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInputQueueSize() {
-		return inputQueueSize;
+	public GSSIfaceUartPortFlowControl getFlowControl() {
+		return flowControl;
 	}
 
 	/**
@@ -471,11 +460,13 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputQueueSize(String newInputQueueSize) {
-		String oldInputQueueSize = inputQueueSize;
-		inputQueueSize = newInputQueueSize;
+	public void setFlowControl(GSSIfaceUartPortFlowControl newFlowControl) {
+		GSSIfaceUartPortFlowControl oldFlowControl = flowControl;
+		flowControl = newFlowControl == null ? FLOW_CONTROL_EDEFAULT : newFlowControl;
+		boolean oldFlowControlESet = flowControlESet;
+		flowControlESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__INPUT_QUEUE_SIZE, oldInputQueueSize, inputQueueSize));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__FLOW_CONTROL, oldFlowControl, flowControl, !oldFlowControlESet));
 	}
 
 	/**
@@ -483,20 +474,22 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOutputQueueSize() {
-		return outputQueueSize;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOutputQueueSize(String newOutputQueueSize) {
-		String oldOutputQueueSize = outputQueueSize;
-		outputQueueSize = newOutputQueueSize;
+	public void unsetFlowControl() {
+		GSSIfaceUartPortFlowControl oldFlowControl = flowControl;
+		boolean oldFlowControlESet = flowControlESet;
+		flowControl = FLOW_CONTROL_EDEFAULT;
+		flowControlESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__OUTPUT_QUEUE_SIZE, oldOutputQueueSize, outputQueueSize));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, ifacePackage.GSS_IFACE_UART_PORT__FLOW_CONTROL, oldFlowControl, FLOW_CONTROL_EDEFAULT, oldFlowControlESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetFlowControl() {
+		return flowControlESet;
 	}
 
 	/**
@@ -574,10 +567,8 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 				return getDataBits();
 			case ifacePackage.GSS_IFACE_UART_PORT__STOP_BITS:
 				return getStopBits();
-			case ifacePackage.GSS_IFACE_UART_PORT__INPUT_QUEUE_SIZE:
-				return getInputQueueSize();
-			case ifacePackage.GSS_IFACE_UART_PORT__OUTPUT_QUEUE_SIZE:
-				return getOutputQueueSize();
+			case ifacePackage.GSS_IFACE_UART_PORT__FLOW_CONTROL:
+				return getFlowControl();
 			case ifacePackage.GSS_IFACE_UART_PORT__UART_PROTOCOL:
 				return getUartProtocol();
 		}
@@ -607,11 +598,8 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 			case ifacePackage.GSS_IFACE_UART_PORT__STOP_BITS:
 				setStopBits((GSSIfaceUartPortStopBits)newValue);
 				return;
-			case ifacePackage.GSS_IFACE_UART_PORT__INPUT_QUEUE_SIZE:
-				setInputQueueSize((String)newValue);
-				return;
-			case ifacePackage.GSS_IFACE_UART_PORT__OUTPUT_QUEUE_SIZE:
-				setOutputQueueSize((String)newValue);
+			case ifacePackage.GSS_IFACE_UART_PORT__FLOW_CONTROL:
+				setFlowControl((GSSIfaceUartPortFlowControl)newValue);
 				return;
 			case ifacePackage.GSS_IFACE_UART_PORT__UART_PROTOCOL:
 				setUartProtocol((GSSIfaceUartProtocol)newValue);
@@ -643,11 +631,8 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 			case ifacePackage.GSS_IFACE_UART_PORT__STOP_BITS:
 				unsetStopBits();
 				return;
-			case ifacePackage.GSS_IFACE_UART_PORT__INPUT_QUEUE_SIZE:
-				setInputQueueSize(INPUT_QUEUE_SIZE_EDEFAULT);
-				return;
-			case ifacePackage.GSS_IFACE_UART_PORT__OUTPUT_QUEUE_SIZE:
-				setOutputQueueSize(OUTPUT_QUEUE_SIZE_EDEFAULT);
+			case ifacePackage.GSS_IFACE_UART_PORT__FLOW_CONTROL:
+				unsetFlowControl();
 				return;
 			case ifacePackage.GSS_IFACE_UART_PORT__UART_PROTOCOL:
 				setUartProtocol((GSSIfaceUartProtocol)null);
@@ -674,10 +659,8 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 				return isSetDataBits();
 			case ifacePackage.GSS_IFACE_UART_PORT__STOP_BITS:
 				return isSetStopBits();
-			case ifacePackage.GSS_IFACE_UART_PORT__INPUT_QUEUE_SIZE:
-				return INPUT_QUEUE_SIZE_EDEFAULT == null ? inputQueueSize != null : !INPUT_QUEUE_SIZE_EDEFAULT.equals(inputQueueSize);
-			case ifacePackage.GSS_IFACE_UART_PORT__OUTPUT_QUEUE_SIZE:
-				return OUTPUT_QUEUE_SIZE_EDEFAULT == null ? outputQueueSize != null : !OUTPUT_QUEUE_SIZE_EDEFAULT.equals(outputQueueSize);
+			case ifacePackage.GSS_IFACE_UART_PORT__FLOW_CONTROL:
+				return isSetFlowControl();
 			case ifacePackage.GSS_IFACE_UART_PORT__UART_PROTOCOL:
 				return uartProtocol != null;
 		}
@@ -704,10 +687,8 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 		if (dataBitsESet) result.append(dataBits); else result.append("<unset>");
 		result.append(", stopBits: ");
 		if (stopBitsESet) result.append(stopBits); else result.append("<unset>");
-		result.append(", inputQueueSize: ");
-		result.append(inputQueueSize);
-		result.append(", outputQueueSize: ");
-		result.append(outputQueueSize);
+		result.append(", flowControl: ");
+		if (flowControlESet) result.append(flowControl); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

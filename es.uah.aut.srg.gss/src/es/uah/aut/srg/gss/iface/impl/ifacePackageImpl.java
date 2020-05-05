@@ -26,6 +26,7 @@ import es.uah.aut.srg.gss.iface.GSSIfaceSyncPattern;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPort;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPortBaudRate;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPortDataBits;
+import es.uah.aut.srg.gss.iface.GSSIfaceUartPortFlowControl;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPortParity;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPortStopBits;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol;
@@ -167,6 +168,13 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 	 * @generated
 	 */
 	private EEnum gssIfaceUartPortStopBitsEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum gssIfaceUartPortFlowControlEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -377,7 +385,7 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSIfaceUartPort_InputQueueSize() {
+	public EAttribute getGSSIfaceUartPort_FlowControl() {
 		return (EAttribute)gssIfaceUartPortEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -386,17 +394,8 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSIfaceUartPort_OutputQueueSize() {
-		return (EAttribute)gssIfaceUartPortEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getGSSIfaceUartPort_UartProtocol() {
-		return (EReference)gssIfaceUartPortEClass.getEStructuralFeatures().get(7);
+		return (EReference)gssIfaceUartPortEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -656,6 +655,15 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getGSSIfaceUartPortFlowControl() {
+		return gssIfaceUartPortFlowControlEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getGSSIfaceUartProtocolUnit() {
 		return gssIfaceUartProtocolUnitEEnum;
 	}
@@ -717,8 +725,7 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 		createEAttribute(gssIfaceUartPortEClass, GSS_IFACE_UART_PORT__PARITY);
 		createEAttribute(gssIfaceUartPortEClass, GSS_IFACE_UART_PORT__DATA_BITS);
 		createEAttribute(gssIfaceUartPortEClass, GSS_IFACE_UART_PORT__STOP_BITS);
-		createEAttribute(gssIfaceUartPortEClass, GSS_IFACE_UART_PORT__INPUT_QUEUE_SIZE);
-		createEAttribute(gssIfaceUartPortEClass, GSS_IFACE_UART_PORT__OUTPUT_QUEUE_SIZE);
+		createEAttribute(gssIfaceUartPortEClass, GSS_IFACE_UART_PORT__FLOW_CONTROL);
 		createEReference(gssIfaceUartPortEClass, GSS_IFACE_UART_PORT__UART_PROTOCOL);
 
 		gssIfaceUartProtocolEClass = createEClass(GSS_IFACE_UART_PROTOCOL);
@@ -755,6 +762,7 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 		gssIfaceUartPortParityEEnum = createEEnum(GSS_IFACE_UART_PORT_PARITY);
 		gssIfaceUartPortDataBitsEEnum = createEEnum(GSS_IFACE_UART_PORT_DATA_BITS);
 		gssIfaceUartPortStopBitsEEnum = createEEnum(GSS_IFACE_UART_PORT_STOP_BITS);
+		gssIfaceUartPortFlowControlEEnum = createEEnum(GSS_IFACE_UART_PORT_FLOW_CONTROL);
 		gssIfaceUartProtocolUnitEEnum = createEEnum(GSS_IFACE_UART_PROTOCOL_UNIT);
 		gssIfaceUartProtocolPowerEEnum = createEEnum(GSS_IFACE_UART_PROTOCOL_POWER);
 	}
@@ -817,8 +825,7 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 		initEAttribute(getGSSIfaceUartPort_Parity(), this.getGSSIfaceUartPortParity(), "parity", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSIfaceUartPort_DataBits(), this.getGSSIfaceUartPortDataBits(), "dataBits", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSIfaceUartPort_StopBits(), this.getGSSIfaceUartPortStopBits(), "stopBits", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSIfaceUartPort_InputQueueSize(), ecorePackage.getEString(), "inputQueueSize", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSIfaceUartPort_OutputQueueSize(), ecorePackage.getEString(), "outputQueueSize", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSIfaceUartPort_FlowControl(), this.getGSSIfaceUartPortFlowControl(), "flowControl", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSIfaceUartPort_UartProtocol(), this.getGSSIfaceUartProtocol(), null, "uartProtocol", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssIfaceUartProtocolEClass, GSSIfaceUartProtocol.class, "GSSIfaceUartProtocol", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -875,6 +882,10 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 		initEEnum(gssIfaceUartPortStopBitsEEnum, GSSIfaceUartPortStopBits.class, "GSSIfaceUartPortStopBits");
 		addEEnumLiteral(gssIfaceUartPortStopBitsEEnum, GSSIfaceUartPortStopBits._1);
 		addEEnumLiteral(gssIfaceUartPortStopBitsEEnum, GSSIfaceUartPortStopBits._2);
+
+		initEEnum(gssIfaceUartPortFlowControlEEnum, GSSIfaceUartPortFlowControl.class, "GSSIfaceUartPortFlowControl");
+		addEEnumLiteral(gssIfaceUartPortFlowControlEEnum, GSSIfaceUartPortFlowControl.RTS_CTS);
+		addEEnumLiteral(gssIfaceUartPortFlowControlEEnum, GSSIfaceUartPortFlowControl.XON_XOFF);
 
 		initEEnum(gssIfaceUartProtocolUnitEEnum, GSSIfaceUartProtocolUnit.class, "GSSIfaceUartProtocolUnit");
 		addEEnumLiteral(gssIfaceUartProtocolUnitEEnum, GSSIfaceUartProtocolUnit.BYTES);

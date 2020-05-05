@@ -395,20 +395,15 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cStopBitsAssignment_20 = (Assignment)cGroup.eContents().get(20);
 		private final RuleCall cStopBitsGSSIfaceUartPortStopBitsEnumRuleCall_20_0 = (RuleCall)cStopBitsAssignment_20.eContents().get(0);
 		private final Keyword cSemicolonKeyword_21 = (Keyword)cGroup.eContents().get(21);
-		private final Keyword cInputQueueSizeKeyword_22 = (Keyword)cGroup.eContents().get(22);
+		private final Keyword cFlowControlKeyword_22 = (Keyword)cGroup.eContents().get(22);
 		private final Keyword cColonEqualsSignKeyword_23 = (Keyword)cGroup.eContents().get(23);
-		private final Assignment cInputQueueSizeAssignment_24 = (Assignment)cGroup.eContents().get(24);
-		private final RuleCall cInputQueueSizeINTEGERParserRuleCall_24_0 = (RuleCall)cInputQueueSizeAssignment_24.eContents().get(0);
+		private final Assignment cFlowControlAssignment_24 = (Assignment)cGroup.eContents().get(24);
+		private final RuleCall cFlowControlGSSIfaceUartPortFlowControlEnumRuleCall_24_0 = (RuleCall)cFlowControlAssignment_24.eContents().get(0);
 		private final Keyword cSemicolonKeyword_25 = (Keyword)cGroup.eContents().get(25);
-		private final Keyword cOutputQueueSizeKeyword_26 = (Keyword)cGroup.eContents().get(26);
-		private final Keyword cColonEqualsSignKeyword_27 = (Keyword)cGroup.eContents().get(27);
-		private final Assignment cOutputQueueSizeAssignment_28 = (Assignment)cGroup.eContents().get(28);
-		private final RuleCall cOutputQueueSizeINTEGERParserRuleCall_28_0 = (RuleCall)cOutputQueueSizeAssignment_28.eContents().get(0);
-		private final Keyword cSemicolonKeyword_29 = (Keyword)cGroup.eContents().get(29);
-		private final Assignment cUartProtocolAssignment_30 = (Assignment)cGroup.eContents().get(30);
-		private final RuleCall cUartProtocolGSSIfaceUartProtocolParserRuleCall_30_0 = (RuleCall)cUartProtocolAssignment_30.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_31 = (Keyword)cGroup.eContents().get(31);
-		private final Keyword cSemicolonKeyword_32 = (Keyword)cGroup.eContents().get(32);
+		private final Assignment cUartProtocolAssignment_26 = (Assignment)cGroup.eContents().get(26);
+		private final RuleCall cUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0 = (RuleCall)cUartProtocolAssignment_26.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_27 = (Keyword)cGroup.eContents().get(27);
+		private final Keyword cSemicolonKeyword_28 = (Keyword)cGroup.eContents().get(28);
 		
 		//GSSIfaceUartPort:
 		//	'uartPort' '{'
@@ -417,16 +412,15 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//	'parity' ':=' parity=GSSIfaceUartPortParity ';'
 		//	'dataBits' ':=' dataBits=GSSIfaceUartPortDataBits ';'
 		//	'stopBits' ':=' stopBits=GSSIfaceUartPortStopBits ';'
-		//	'inputQueueSize' ':=' inputQueueSize=INTEGER ';'
-		//	'outputQueueSize' ':=' outputQueueSize=INTEGER ';'
+		//	'flowControl' ':=' flowControl=GSSIfaceUartPortFlowControl ';'
 		//	uartProtocol=GSSIfaceUartProtocol
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'uartPort' '{' 'number' ':=' number=INTEGER ';' 'baudRate' ':=' baudRate=GSSIfaceUartPortBaudRate ';' 'parity' ':='
 		//parity=GSSIfaceUartPortParity ';' 'dataBits' ':=' dataBits=GSSIfaceUartPortDataBits ';' 'stopBits' ':='
-		//stopBits=GSSIfaceUartPortStopBits ';' 'inputQueueSize' ':=' inputQueueSize=INTEGER ';' 'outputQueueSize' ':='
-		//outputQueueSize=INTEGER ';' uartProtocol=GSSIfaceUartProtocol '}' ';'
+		//stopBits=GSSIfaceUartPortStopBits ';' 'flowControl' ':=' flowControl=GSSIfaceUartPortFlowControl ';'
+		//uartProtocol=GSSIfaceUartProtocol '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'uartPort'
@@ -510,47 +504,32 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_21() { return cSemicolonKeyword_21; }
 		
-		//'inputQueueSize'
-		public Keyword getInputQueueSizeKeyword_22() { return cInputQueueSizeKeyword_22; }
+		//'flowControl'
+		public Keyword getFlowControlKeyword_22() { return cFlowControlKeyword_22; }
 		
 		//':='
 		public Keyword getColonEqualsSignKeyword_23() { return cColonEqualsSignKeyword_23; }
 		
-		//inputQueueSize=INTEGER
-		public Assignment getInputQueueSizeAssignment_24() { return cInputQueueSizeAssignment_24; }
+		//flowControl=GSSIfaceUartPortFlowControl
+		public Assignment getFlowControlAssignment_24() { return cFlowControlAssignment_24; }
 		
-		//INTEGER
-		public RuleCall getInputQueueSizeINTEGERParserRuleCall_24_0() { return cInputQueueSizeINTEGERParserRuleCall_24_0; }
+		//GSSIfaceUartPortFlowControl
+		public RuleCall getFlowControlGSSIfaceUartPortFlowControlEnumRuleCall_24_0() { return cFlowControlGSSIfaceUartPortFlowControlEnumRuleCall_24_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_25() { return cSemicolonKeyword_25; }
 		
-		//'outputQueueSize'
-		public Keyword getOutputQueueSizeKeyword_26() { return cOutputQueueSizeKeyword_26; }
-		
-		//':='
-		public Keyword getColonEqualsSignKeyword_27() { return cColonEqualsSignKeyword_27; }
-		
-		//outputQueueSize=INTEGER
-		public Assignment getOutputQueueSizeAssignment_28() { return cOutputQueueSizeAssignment_28; }
-		
-		//INTEGER
-		public RuleCall getOutputQueueSizeINTEGERParserRuleCall_28_0() { return cOutputQueueSizeINTEGERParserRuleCall_28_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_29() { return cSemicolonKeyword_29; }
-		
 		//uartProtocol=GSSIfaceUartProtocol
-		public Assignment getUartProtocolAssignment_30() { return cUartProtocolAssignment_30; }
+		public Assignment getUartProtocolAssignment_26() { return cUartProtocolAssignment_26; }
 		
 		//GSSIfaceUartProtocol
-		public RuleCall getUartProtocolGSSIfaceUartProtocolParserRuleCall_30_0() { return cUartProtocolGSSIfaceUartProtocolParserRuleCall_30_0; }
+		public RuleCall getUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0() { return cUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_31() { return cRightCurlyBracketKeyword_31; }
+		public Keyword getRightCurlyBracketKeyword_27() { return cRightCurlyBracketKeyword_27; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_32() { return cSemicolonKeyword_32; }
+		public Keyword getSemicolonKeyword_28() { return cSemicolonKeyword_28; }
 	}
 	public class GSSIfaceUartProtocolElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocol");
@@ -1386,6 +1365,33 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//'2bits'
 		public Keyword get_22bitsKeyword_1_0() { return c_22bitsKeyword_1_0; }
 	}
+	public class GSSIfaceUartPortFlowControlElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartPortFlowControl");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cRts_ctsEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cRts_ctsRts_ctsKeyword_0_0 = (Keyword)cRts_ctsEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cXon_xoffEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cXon_xoffXon_xoffKeyword_1_0 = (Keyword)cXon_xoffEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum GSSIfaceUartPortFlowControl:
+		//	rts_cts | xon_xoff;
+		public EnumRule getRule() { return rule; }
+		
+		//rts_cts | xon_xoff
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//rts_cts
+		public EnumLiteralDeclaration getRts_ctsEnumLiteralDeclaration_0() { return cRts_ctsEnumLiteralDeclaration_0; }
+		
+		//'rts_cts'
+		public Keyword getRts_ctsRts_ctsKeyword_0_0() { return cRts_ctsRts_ctsKeyword_0_0; }
+		
+		//xon_xoff
+		public EnumLiteralDeclaration getXon_xoffEnumLiteralDeclaration_1() { return cXon_xoffEnumLiteralDeclaration_1; }
+		
+		//'xon_xoff'
+		public Keyword getXon_xoffXon_xoffKeyword_1_0() { return cXon_xoffXon_xoffKeyword_1_0; }
+	}
 	public class GSSIfaceUartProtocolUnitElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocolUnit");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -1461,6 +1467,7 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSIfaceUartPortParityElements eGSSIfaceUartPortParity;
 	private final GSSIfaceUartPortDataBitsElements eGSSIfaceUartPortDataBits;
 	private final GSSIfaceUartPortStopBitsElements eGSSIfaceUartPortStopBits;
+	private final GSSIfaceUartPortFlowControlElements eGSSIfaceUartPortFlowControl;
 	private final GSSIfaceUartProtocolElements pGSSIfaceUartProtocol;
 	private final GSSIfaceConstSizeElements pGSSIfaceConstSize;
 	private final GSSIfaceSizeFieldOffsetElements pGSSIfaceSizeFieldOffset;
@@ -1499,6 +1506,7 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		this.eGSSIfaceUartPortParity = new GSSIfaceUartPortParityElements();
 		this.eGSSIfaceUartPortDataBits = new GSSIfaceUartPortDataBitsElements();
 		this.eGSSIfaceUartPortStopBits = new GSSIfaceUartPortStopBitsElements();
+		this.eGSSIfaceUartPortFlowControl = new GSSIfaceUartPortFlowControlElements();
 		this.pGSSIfaceUartProtocol = new GSSIfaceUartProtocolElements();
 		this.pGSSIfaceConstSize = new GSSIfaceConstSizeElements();
 		this.pGSSIfaceSizeFieldOffset = new GSSIfaceSizeFieldOffsetElements();
@@ -1633,8 +1641,7 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 	//	'parity' ':=' parity=GSSIfaceUartPortParity ';'
 	//	'dataBits' ':=' dataBits=GSSIfaceUartPortDataBits ';'
 	//	'stopBits' ':=' stopBits=GSSIfaceUartPortStopBits ';'
-	//	'inputQueueSize' ':=' inputQueueSize=INTEGER ';'
-	//	'outputQueueSize' ':=' outputQueueSize=INTEGER ';'
+	//	'flowControl' ':=' flowControl=GSSIfaceUartPortFlowControl ';'
 	//	uartProtocol=GSSIfaceUartProtocol
 	//	'}' ';';
 	public GSSIfaceUartPortElements getGSSIfaceUartPortAccess() {
@@ -1685,6 +1692,16 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public EnumRule getGSSIfaceUartPortStopBitsRule() {
 		return getGSSIfaceUartPortStopBitsAccess().getRule();
+	}
+	
+	//enum GSSIfaceUartPortFlowControl:
+	//	rts_cts | xon_xoff;
+	public GSSIfaceUartPortFlowControlElements getGSSIfaceUartPortFlowControlAccess() {
+		return eGSSIfaceUartPortFlowControl;
+	}
+	
+	public EnumRule getGSSIfaceUartPortFlowControlRule() {
+		return getGSSIfaceUartPortFlowControlAccess().getRule();
 	}
 	
 	//GSSIfaceUartProtocol:

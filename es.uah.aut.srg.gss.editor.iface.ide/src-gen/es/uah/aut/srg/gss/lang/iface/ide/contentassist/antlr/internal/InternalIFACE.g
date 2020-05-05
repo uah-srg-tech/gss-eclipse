@@ -587,6 +587,22 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Rule GSSIfaceUartPortFlowControl
+ruleGSSIfaceUartPortFlowControl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getGSSIfaceUartPortFlowControlAccess().getAlternatives()); }
+		(rule__GSSIfaceUartPortFlowControl__Alternatives)
+		{ after(grammarAccess.getGSSIfaceUartPortFlowControlAccess().getAlternatives()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Rule GSSIfaceUartProtocolUnit
 ruleGSSIfaceUartProtocolUnit
 	@init {
@@ -850,6 +866,27 @@ rule__GSSIfaceUartPortStopBits__Alternatives
 		{ before(grammarAccess.getGSSIfaceUartPortStopBitsAccess().get_2EnumLiteralDeclaration_1()); }
 		('2bits')
 		{ after(grammarAccess.getGSSIfaceUartPortStopBitsAccess().get_2EnumLiteralDeclaration_1()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GSSIfaceUartPortFlowControl__Alternatives
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getGSSIfaceUartPortFlowControlAccess().getRts_ctsEnumLiteralDeclaration_0()); }
+		('rts_cts')
+		{ after(grammarAccess.getGSSIfaceUartPortFlowControlAccess().getRts_ctsEnumLiteralDeclaration_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSIfaceUartPortFlowControlAccess().getXon_xoffEnumLiteralDeclaration_1()); }
+		('xon_xoff')
+		{ after(grammarAccess.getGSSIfaceUartPortFlowControlAccess().getXon_xoffEnumLiteralDeclaration_1()); }
 	)
 ;
 finally {
@@ -2738,9 +2775,9 @@ rule__GSSIfaceUartPort__Group__22__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeKeyword_22()); }
-	'inputQueueSize'
-	{ after(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeKeyword_22()); }
+	{ before(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlKeyword_22()); }
+	'flowControl'
+	{ after(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlKeyword_22()); }
 )
 ;
 finally {
@@ -2792,9 +2829,9 @@ rule__GSSIfaceUartPort__Group__24__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeAssignment_24()); }
-	(rule__GSSIfaceUartPort__InputQueueSizeAssignment_24)
-	{ after(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeAssignment_24()); }
+	{ before(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlAssignment_24()); }
+	(rule__GSSIfaceUartPort__FlowControlAssignment_24)
+	{ after(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlAssignment_24()); }
 )
 ;
 finally {
@@ -2846,9 +2883,9 @@ rule__GSSIfaceUartPort__Group__26__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeKeyword_26()); }
-	'outputQueueSize'
-	{ after(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeKeyword_26()); }
+	{ before(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolAssignment_26()); }
+	(rule__GSSIfaceUartPort__UartProtocolAssignment_26)
+	{ after(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolAssignment_26()); }
 )
 ;
 finally {
@@ -2873,9 +2910,9 @@ rule__GSSIfaceUartPort__Group__27__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_27()); }
-	':='
-	{ after(grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_27()); }
+	{ before(grammarAccess.getGSSIfaceUartPortAccess().getRightCurlyBracketKeyword_27()); }
+	'}'
+	{ after(grammarAccess.getGSSIfaceUartPortAccess().getRightCurlyBracketKeyword_27()); }
 )
 ;
 finally {
@@ -2888,7 +2925,6 @@ rule__GSSIfaceUartPort__Group__28
 	}
 :
 	rule__GSSIfaceUartPort__Group__28__Impl
-	rule__GSSIfaceUartPort__Group__29
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2900,116 +2936,9 @@ rule__GSSIfaceUartPort__Group__28__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeAssignment_28()); }
-	(rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28)
-	{ after(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeAssignment_28()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSIfaceUartPort__Group__29
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSIfaceUartPort__Group__29__Impl
-	rule__GSSIfaceUartPort__Group__30
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSIfaceUartPort__Group__29__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_29()); }
+	{ before(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_28()); }
 	';'
-	{ after(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_29()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSIfaceUartPort__Group__30
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSIfaceUartPort__Group__30__Impl
-	rule__GSSIfaceUartPort__Group__31
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSIfaceUartPort__Group__30__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolAssignment_30()); }
-	(rule__GSSIfaceUartPort__UartProtocolAssignment_30)
-	{ after(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolAssignment_30()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSIfaceUartPort__Group__31
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSIfaceUartPort__Group__31__Impl
-	rule__GSSIfaceUartPort__Group__32
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSIfaceUartPort__Group__31__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSIfaceUartPortAccess().getRightCurlyBracketKeyword_31()); }
-	'}'
-	{ after(grammarAccess.getGSSIfaceUartPortAccess().getRightCurlyBracketKeyword_31()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSIfaceUartPort__Group__32
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__GSSIfaceUartPort__Group__32__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSIfaceUartPort__Group__32__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_32()); }
-	';'
-	{ after(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_32()); }
+	{ after(grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_28()); }
 )
 ;
 finally {
@@ -5812,45 +5741,30 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSIfaceUartPort__InputQueueSizeAssignment_24
+rule__GSSIfaceUartPort__FlowControlAssignment_24
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeINTEGERParserRuleCall_24_0()); }
-		ruleINTEGER
-		{ after(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeINTEGERParserRuleCall_24_0()); }
+		{ before(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlGSSIfaceUartPortFlowControlEnumRuleCall_24_0()); }
+		ruleGSSIfaceUartPortFlowControl
+		{ after(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlGSSIfaceUartPortFlowControlEnumRuleCall_24_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28
+rule__GSSIfaceUartPort__UartProtocolAssignment_26
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeINTEGERParserRuleCall_28_0()); }
-		ruleINTEGER
-		{ after(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeINTEGERParserRuleCall_28_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__GSSIfaceUartPort__UartProtocolAssignment_30
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_30_0()); }
+		{ before(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0()); }
 		ruleGSSIfaceUartProtocol
-		{ after(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_30_0()); }
+		{ after(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0()); }
 	)
 ;
 finally {

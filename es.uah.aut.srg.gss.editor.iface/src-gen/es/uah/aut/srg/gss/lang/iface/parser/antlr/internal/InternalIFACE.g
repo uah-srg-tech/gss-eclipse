@@ -819,9 +819,9 @@ ruleGSSIfaceUartPort returns [EObject current=null]
 		{
 			newLeafNode(otherlv_21, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_21());
 		}
-		otherlv_22='inputQueueSize'
+		otherlv_22='flowControl'
 		{
-			newLeafNode(otherlv_22, grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeKeyword_22());
+			newLeafNode(otherlv_22, grammarAccess.getGSSIfaceUartPortAccess().getFlowControlKeyword_22());
 		}
 		otherlv_23=':='
 		{
@@ -830,18 +830,18 @@ ruleGSSIfaceUartPort returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeINTEGERParserRuleCall_24_0());
+					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlGSSIfaceUartPortFlowControlEnumRuleCall_24_0());
 				}
-				lv_inputQueueSize_24_0=ruleINTEGER
+				lv_flowControl_24_0=ruleGSSIfaceUartPortFlowControl
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
 					}
 					set(
 						$current,
-						"inputQueueSize",
-						lv_inputQueueSize_24_0,
-						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+						"flowControl",
+						lv_flowControl_24_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartPortFlowControl");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -850,43 +850,12 @@ ruleGSSIfaceUartPort returns [EObject current=null]
 		{
 			newLeafNode(otherlv_25, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_25());
 		}
-		otherlv_26='outputQueueSize'
-		{
-			newLeafNode(otherlv_26, grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeKeyword_26());
-		}
-		otherlv_27=':='
-		{
-			newLeafNode(otherlv_27, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_27());
-		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeINTEGERParserRuleCall_28_0());
+					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0());
 				}
-				lv_outputQueueSize_28_0=ruleINTEGER
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
-					}
-					set(
-						$current,
-						"outputQueueSize",
-						lv_outputQueueSize_28_0,
-						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_29=';'
-		{
-			newLeafNode(otherlv_29, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_29());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_30_0());
-				}
-				lv_uartProtocol_30_0=ruleGSSIfaceUartProtocol
+				lv_uartProtocol_26_0=ruleGSSIfaceUartProtocol
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
@@ -894,19 +863,19 @@ ruleGSSIfaceUartPort returns [EObject current=null]
 					set(
 						$current,
 						"uartProtocol",
-						lv_uartProtocol_30_0,
+						lv_uartProtocol_26_0,
 						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocol");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_31='}'
+		otherlv_27='}'
 		{
-			newLeafNode(otherlv_31, grammarAccess.getGSSIfaceUartPortAccess().getRightCurlyBracketKeyword_31());
+			newLeafNode(otherlv_27, grammarAccess.getGSSIfaceUartPortAccess().getRightCurlyBracketKeyword_27());
 		}
-		otherlv_32=';'
+		otherlv_28=';'
 		{
-			newLeafNode(otherlv_32, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_32());
+			newLeafNode(otherlv_28, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_28());
 		}
 	)
 ;
@@ -1943,6 +1912,33 @@ ruleGSSIfaceUartPortStopBits returns [Enumerator current=null]
 			{
 				$current = grammarAccess.getGSSIfaceUartPortStopBitsAccess().get_2EnumLiteralDeclaration_1().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_1, grammarAccess.getGSSIfaceUartPortStopBitsAccess().get_2EnumLiteralDeclaration_1());
+			}
+		)
+	)
+;
+
+// Rule GSSIfaceUartPortFlowControl
+ruleGSSIfaceUartPortFlowControl returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='rts_cts'
+			{
+				$current = grammarAccess.getGSSIfaceUartPortFlowControlAccess().getRts_ctsEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getGSSIfaceUartPortFlowControlAccess().getRts_ctsEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='xon_xoff'
+			{
+				$current = grammarAccess.getGSSIfaceUartPortFlowControlAccess().getXon_xoffEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getGSSIfaceUartPortFlowControlAccess().getXon_xoffEnumLiteralDeclaration_1());
 			}
 		)
 	)

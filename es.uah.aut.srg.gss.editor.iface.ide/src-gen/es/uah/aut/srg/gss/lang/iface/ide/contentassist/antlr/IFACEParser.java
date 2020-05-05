@@ -52,6 +52,7 @@ public class IFACEParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSIfaceUartPortParityAccess().getAlternatives(), "rule__GSSIfaceUartPortParity__Alternatives");
 					put(grammarAccess.getGSSIfaceUartPortDataBitsAccess().getAlternatives(), "rule__GSSIfaceUartPortDataBits__Alternatives");
 					put(grammarAccess.getGSSIfaceUartPortStopBitsAccess().getAlternatives(), "rule__GSSIfaceUartPortStopBits__Alternatives");
+					put(grammarAccess.getGSSIfaceUartPortFlowControlAccess().getAlternatives(), "rule__GSSIfaceUartPortFlowControl__Alternatives");
 					put(grammarAccess.getGSSIfaceUartProtocolUnitAccess().getAlternatives(), "rule__GSSIfaceUartProtocolUnit__Alternatives");
 					put(grammarAccess.getGSSIfaceUartProtocolPowerAccess().getAlternatives(), "rule__GSSIfaceUartProtocolPower__Alternatives");
 					put(grammarAccess.getGSSModelFileAccess().getGroup(), "rule__GSSModelFile__Group__0");
@@ -97,9 +98,8 @@ public class IFACEParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGSSIfaceUartPortAccess().getParityAssignment_12(), "rule__GSSIfaceUartPort__ParityAssignment_12");
 					put(grammarAccess.getGSSIfaceUartPortAccess().getDataBitsAssignment_16(), "rule__GSSIfaceUartPort__DataBitsAssignment_16");
 					put(grammarAccess.getGSSIfaceUartPortAccess().getStopBitsAssignment_20(), "rule__GSSIfaceUartPort__StopBitsAssignment_20");
-					put(grammarAccess.getGSSIfaceUartPortAccess().getInputQueueSizeAssignment_24(), "rule__GSSIfaceUartPort__InputQueueSizeAssignment_24");
-					put(grammarAccess.getGSSIfaceUartPortAccess().getOutputQueueSizeAssignment_28(), "rule__GSSIfaceUartPort__OutputQueueSizeAssignment_28");
-					put(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolAssignment_30(), "rule__GSSIfaceUartPort__UartProtocolAssignment_30");
+					put(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlAssignment_24(), "rule__GSSIfaceUartPort__FlowControlAssignment_24");
+					put(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolAssignment_26(), "rule__GSSIfaceUartPort__UartProtocolAssignment_26");
 					put(grammarAccess.getGSSIfaceUartProtocolAccess().getUnitAssignment_4(), "rule__GSSIfaceUartProtocol__UnitAssignment_4");
 					put(grammarAccess.getGSSIfaceUartProtocolAccess().getPowerAssignment_8(), "rule__GSSIfaceUartProtocol__PowerAssignment_8");
 					put(grammarAccess.getGSSIfaceUartProtocolAccess().getConstSizeAssignment_10(), "rule__GSSIfaceUartProtocol__ConstSizeAssignment_10");

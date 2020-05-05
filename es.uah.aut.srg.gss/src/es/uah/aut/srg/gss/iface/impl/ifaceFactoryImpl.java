@@ -99,6 +99,8 @@ public class ifaceFactoryImpl extends EFactoryImpl implements ifaceFactory {
 				return createGSSIfaceUartPortDataBitsFromString(eDataType, initialValue);
 			case ifacePackage.GSS_IFACE_UART_PORT_STOP_BITS:
 				return createGSSIfaceUartPortStopBitsFromString(eDataType, initialValue);
+			case ifacePackage.GSS_IFACE_UART_PORT_FLOW_CONTROL:
+				return createGSSIfaceUartPortFlowControlFromString(eDataType, initialValue);
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL_UNIT:
 				return createGSSIfaceUartProtocolUnitFromString(eDataType, initialValue);
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL_POWER:
@@ -126,6 +128,8 @@ public class ifaceFactoryImpl extends EFactoryImpl implements ifaceFactory {
 				return convertGSSIfaceUartPortDataBitsToString(eDataType, instanceValue);
 			case ifacePackage.GSS_IFACE_UART_PORT_STOP_BITS:
 				return convertGSSIfaceUartPortStopBitsToString(eDataType, instanceValue);
+			case ifacePackage.GSS_IFACE_UART_PORT_FLOW_CONTROL:
+				return convertGSSIfaceUartPortFlowControlToString(eDataType, instanceValue);
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL_UNIT:
 				return convertGSSIfaceUartProtocolUnitToString(eDataType, instanceValue);
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL_POWER:
@@ -342,6 +346,26 @@ public class ifaceFactoryImpl extends EFactoryImpl implements ifaceFactory {
 	 * @generated
 	 */
 	public String convertGSSIfaceUartPortStopBitsToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSIfaceUartPortFlowControl createGSSIfaceUartPortFlowControlFromString(EDataType eDataType, String initialValue) {
+		GSSIfaceUartPortFlowControl result = GSSIfaceUartPortFlowControl.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGSSIfaceUartPortFlowControlToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

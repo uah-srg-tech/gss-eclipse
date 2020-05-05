@@ -44,6 +44,10 @@
     <eLiterals name="_1" literal="1"/>
     <eLiterals name="_2" value="1" literal="2"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSIfaceUartPortFlowControl">
+    <eLiterals name="rts_cts" literal="rts_cts"/>
+    <eLiterals name="xon_xoff" value="1" literal="xon_xoff"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceUartPort" eSuperTypes="#//GSSIfacePort">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -55,10 +59,8 @@
         eType="#//GSSIfaceUartPortDataBits" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopBits" lowerBound="1"
         eType="#//GSSIfaceUartPortStopBits" unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputQueueSize" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputQueueSize" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="flowControl" lowerBound="1"
+        eType="#//GSSIfaceUartPortFlowControl" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="uartProtocol" lowerBound="1"
         eType="#//GSSIfaceUartProtocol" containment="true"/>
   </eClassifiers>

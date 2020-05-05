@@ -55,8 +55,7 @@ GSSIfaceUartPort returns GSSIfaceUartPort:
 		'parity' ':=' parity=GSSIfaceUartPortParity ';'
 		'dataBits' ':=' dataBits=GSSIfaceUartPortDataBits ';'
 		'stopBits' ':=' stopBits=GSSIfaceUartPortStopBits ';'
-		'inputQueueSize' ':=' inputQueueSize=INTEGER ';'
-		'outputQueueSize' ':=' outputQueueSize=INTEGER ';'
+		'flowControl' ':=' flowControl=GSSIfaceUartPortFlowControl ';'
 		uartProtocol=GSSIfaceUartProtocol
 	'}' ';'
 ;
@@ -77,6 +76,10 @@ enum GSSIfaceUartPortDataBits returns GSSIfaceUartPortDataBits:
 
 enum GSSIfaceUartPortStopBits returns GSSIfaceUartPortStopBits:
 	_1 = '1bit' | _2 = '2bits'
+;
+
+enum GSSIfaceUartPortFlowControl returns GSSIfaceUartPortFlowControl:
+	rts_cts = 'rts_cts' | xon_xoff = 'xon_xoff'
 ;
 
 GSSIfaceUartProtocol returns GSSIfaceUartProtocol:

@@ -25,8 +25,7 @@ package es.uah.aut.srg.gss.iface;
  *   <li>{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getParity <em>Parity</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getDataBits <em>Data Bits</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getStopBits <em>Stop Bits</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getInputQueueSize <em>Input Queue Size</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getOutputQueueSize <em>Output Queue Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getFlowControl <em>Flow Control</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getUartProtocol <em>Uart Protocol</em>}</li>
  * </ul>
  *
@@ -286,56 +285,60 @@ public interface GSSIfaceUartPort extends GSSIfacePort {
 	boolean isSetStopBits();
 
 	/**
-	 * Returns the value of the '<em><b>Input Queue Size</b></em>' attribute.
+	 * Returns the value of the '<em><b>Flow Control</b></em>' attribute.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.gss.iface.GSSIfaceUartPortFlowControl}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Input Queue Size</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Flow Control</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Queue Size</em>' attribute.
-	 * @see #setInputQueueSize(String)
-	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartPort_InputQueueSize()
-	 * @model required="true"
+	 * @return the value of the '<em>Flow Control</em>' attribute.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPortFlowControl
+	 * @see #isSetFlowControl()
+	 * @see #unsetFlowControl()
+	 * @see #setFlowControl(GSSIfaceUartPortFlowControl)
+	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartPort_FlowControl()
+	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
-	String getInputQueueSize();
+	GSSIfaceUartPortFlowControl getFlowControl();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getInputQueueSize <em>Input Queue Size</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getFlowControl <em>Flow Control</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Queue Size</em>' attribute.
-	 * @see #getInputQueueSize()
+	 * @param value the new value of the '<em>Flow Control</em>' attribute.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPortFlowControl
+	 * @see #isSetFlowControl()
+	 * @see #unsetFlowControl()
+	 * @see #getFlowControl()
 	 * @generated
 	 */
-	void setInputQueueSize(String value);
+	void setFlowControl(GSSIfaceUartPortFlowControl value);
 
 	/**
-	 * Returns the value of the '<em><b>Output Queue Size</b></em>' attribute.
+	 * Unsets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getFlowControl <em>Flow Control</em>}' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Output Queue Size</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Output Queue Size</em>' attribute.
-	 * @see #setOutputQueueSize(String)
-	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartPort_OutputQueueSize()
-	 * @model required="true"
+	 * @see #isSetFlowControl()
+	 * @see #getFlowControl()
+	 * @see #setFlowControl(GSSIfaceUartPortFlowControl)
 	 * @generated
 	 */
-	String getOutputQueueSize();
+	void unsetFlowControl();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getOutputQueueSize <em>Output Queue Size</em>}' attribute.
+	 * Returns whether the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getFlowControl <em>Flow Control</em>}' attribute is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Output Queue Size</em>' attribute.
-	 * @see #getOutputQueueSize()
+	 * @return whether the value of the '<em>Flow Control</em>' attribute is set.
+	 * @see #unsetFlowControl()
+	 * @see #getFlowControl()
+	 * @see #setFlowControl(GSSIfaceUartPortFlowControl)
 	 * @generated
 	 */
-	void setOutputQueueSize(String value);
+	boolean isSetFlowControl();
 
 	/**
 	 * Returns the value of the '<em><b>Uart Protocol</b></em>' containment reference.
