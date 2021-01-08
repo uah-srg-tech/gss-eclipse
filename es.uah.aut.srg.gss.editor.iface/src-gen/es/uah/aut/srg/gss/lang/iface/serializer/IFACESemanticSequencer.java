@@ -14,12 +14,10 @@ import com.google.inject.Inject;
 import es.uah.aut.srg.gss.common.GSSModelFile;
 import es.uah.aut.srg.gss.common.GSSModelFileImport;
 import es.uah.aut.srg.gss.common.commonPackage;
-import es.uah.aut.srg.gss.iface.GSSIfaceConstSize;
 import es.uah.aut.srg.gss.iface.GSSIfaceDummyPort;
 import es.uah.aut.srg.gss.iface.GSSIfacePortConfig;
 import es.uah.aut.srg.gss.iface.GSSIfaceReadingPort;
-import es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldOffset;
-import es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldTrim;
+import es.uah.aut.srg.gss.iface.GSSIfaceSize;
 import es.uah.aut.srg.gss.iface.GSSIfaceSpWPort;
 import es.uah.aut.srg.gss.iface.GSSIfaceSpWTCPort;
 import es.uah.aut.srg.gss.iface.GSSIfaceSyncPattern;
@@ -61,9 +59,6 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			}
 		else if (epackage == ifacePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case ifacePackage.GSS_IFACE_CONST_SIZE:
-				sequence_GSSIfaceConstSize(context, (GSSIfaceConstSize) semanticObject); 
-				return; 
 			case ifacePackage.GSS_IFACE_DUMMY_PORT:
 				sequence_GSSIfaceDummyPort(context, (GSSIfaceDummyPort) semanticObject); 
 				return; 
@@ -73,12 +68,20 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case ifacePackage.GSS_IFACE_READING_PORT:
 				sequence_GSSIfaceReadingPort(context, (GSSIfaceReadingPort) semanticObject); 
 				return; 
-			case ifacePackage.GSS_IFACE_SIZE_FIELD_OFFSET:
-				sequence_GSSIfaceSizeFieldOffset(context, (GSSIfaceSizeFieldOffset) semanticObject); 
-				return; 
-			case ifacePackage.GSS_IFACE_SIZE_FIELD_TRIM:
-				sequence_GSSIfaceSizeFieldTrim(context, (GSSIfaceSizeFieldTrim) semanticObject); 
-				return; 
+			case ifacePackage.GSS_IFACE_SIZE:
+				if (rule == grammarAccess.getGSSIfaceConstSizeRule()) {
+					sequence_GSSIfaceConstSize(context, (GSSIfaceSize) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getGSSIfaceSizeFieldOffsetRule()) {
+					sequence_GSSIfaceSizeFieldOffset(context, (GSSIfaceSize) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getGSSIfaceSizeFieldTrimRule()) {
+					sequence_GSSIfaceSizeFieldTrim(context, (GSSIfaceSize) semanticObject); 
+					return; 
+				}
+				else break;
 			case ifacePackage.GSS_IFACE_SP_WPORT:
 				sequence_GSSIfaceSpWPort(context, (GSSIfaceSpWPort) semanticObject); 
 				return; 
@@ -101,17 +104,17 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     GSSIfaceConstSize returns GSSIfaceConstSize
+	 *     GSSIfaceConstSize returns GSSIfaceSize
 	 *
 	 * Constraint:
 	 *     (bytes=INTEGER bits=INTEGER)
 	 */
-	protected void sequence_GSSIfaceConstSize(ISerializationContext context, GSSIfaceConstSize semanticObject) {
+	protected void sequence_GSSIfaceConstSize(ISerializationContext context, GSSIfaceSize semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_CONST_SIZE__BYTES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_CONST_SIZE__BYTES));
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_CONST_SIZE__BITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_CONST_SIZE__BITS));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE__BYTES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE__BYTES));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE__BITS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE__BITS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSIfaceConstSizeAccess().getBytesINTEGERParserRuleCall_4_0(), semanticObject.getBytes());
@@ -165,17 +168,17 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     GSSIfaceSizeFieldOffset returns GSSIfaceSizeFieldOffset
+	 *     GSSIfaceSizeFieldOffset returns GSSIfaceSize
 	 *
 	 * Constraint:
 	 *     (bytes=INTEGER bits=INTEGER)
 	 */
-	protected void sequence_GSSIfaceSizeFieldOffset(ISerializationContext context, GSSIfaceSizeFieldOffset semanticObject) {
+	protected void sequence_GSSIfaceSizeFieldOffset(ISerializationContext context, GSSIfaceSize semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE_FIELD_OFFSET__BYTES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE_FIELD_OFFSET__BYTES));
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE_FIELD_OFFSET__BITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE_FIELD_OFFSET__BITS));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE__BYTES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE__BYTES));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE__BITS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE__BITS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBytesINTEGERParserRuleCall_4_0(), semanticObject.getBytes());
@@ -186,17 +189,17 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     GSSIfaceSizeFieldTrim returns GSSIfaceSizeFieldTrim
+	 *     GSSIfaceSizeFieldTrim returns GSSIfaceSize
 	 *
 	 * Constraint:
 	 *     (bytes=INTEGER bits=INTEGER)
 	 */
-	protected void sequence_GSSIfaceSizeFieldTrim(ISerializationContext context, GSSIfaceSizeFieldTrim semanticObject) {
+	protected void sequence_GSSIfaceSizeFieldTrim(ISerializationContext context, GSSIfaceSize semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE_FIELD_TRIM__BYTES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE_FIELD_TRIM__BYTES));
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE_FIELD_TRIM__BITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE_FIELD_TRIM__BITS));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE__BYTES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE__BYTES));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE__BITS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SIZE__BITS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBytesINTEGERParserRuleCall_4_0(), semanticObject.getBytes());

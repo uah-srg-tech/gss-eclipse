@@ -250,7 +250,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSpWTCPort()
 	 * @generated
 	 */
-	int GSS_IFACE_SP_WTC_PORT = 10;
+	int GSS_IFACE_SP_WTC_PORT = 8;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceDummyPortImpl <em>GSS Iface Dummy Port</em>}' class.
@@ -260,7 +260,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceDummyPort()
 	 * @generated
 	 */
-	int GSS_IFACE_DUMMY_PORT = 11;
+	int GSS_IFACE_DUMMY_PORT = 9;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceReadingPortImpl <em>GSS Iface Reading Port</em>}' class.
@@ -463,14 +463,14 @@ public interface ifacePackage extends EPackage {
 	int GSS_IFACE_UART_PROTOCOL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceConstSizeImpl <em>GSS Iface Const Size</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSizeImpl <em>GSS Iface Size</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceConstSizeImpl
-	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceConstSize()
+	 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceSizeImpl
+	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSize()
 	 * @generated
 	 */
-	int GSS_IFACE_CONST_SIZE = 6;
+	int GSS_IFACE_SIZE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Bytes</b></em>' attribute.
@@ -479,7 +479,7 @@ public interface ifacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_CONST_SIZE__BYTES = 0;
+	int GSS_IFACE_SIZE__BYTES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Bits</b></em>' attribute.
@@ -488,117 +488,25 @@ public interface ifacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_CONST_SIZE__BITS = 1;
+	int GSS_IFACE_SIZE__BITS = 1;
 
 	/**
-	 * The number of structural features of the '<em>GSS Iface Const Size</em>' class.
+	 * The number of structural features of the '<em>GSS Iface Size</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_CONST_SIZE_FEATURE_COUNT = 2;
+	int GSS_IFACE_SIZE_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>GSS Iface Const Size</em>' class.
+	 * The number of operations of the '<em>GSS Iface Size</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_CONST_SIZE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSizeFieldOffsetImpl <em>GSS Iface Size Field Offset</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceSizeFieldOffsetImpl
-	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSizeFieldOffset()
-	 * @generated
-	 */
-	int GSS_IFACE_SIZE_FIELD_OFFSET = 7;
-
-	/**
-	 * The feature id for the '<em><b>Bytes</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_SIZE_FIELD_OFFSET__BYTES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Bits</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_SIZE_FIELD_OFFSET__BITS = 1;
-
-	/**
-	 * The number of structural features of the '<em>GSS Iface Size Field Offset</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_SIZE_FIELD_OFFSET_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>GSS Iface Size Field Offset</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_SIZE_FIELD_OFFSET_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSizeFieldTrimImpl <em>GSS Iface Size Field Trim</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceSizeFieldTrimImpl
-	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSizeFieldTrim()
-	 * @generated
-	 */
-	int GSS_IFACE_SIZE_FIELD_TRIM = 8;
-
-	/**
-	 * The feature id for the '<em><b>Bytes</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_SIZE_FIELD_TRIM__BYTES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Bits</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_SIZE_FIELD_TRIM__BITS = 1;
-
-	/**
-	 * The number of structural features of the '<em>GSS Iface Size Field Trim</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_SIZE_FIELD_TRIM_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>GSS Iface Size Field Trim</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_IFACE_SIZE_FIELD_TRIM_OPERATION_COUNT = 0;
+	int GSS_IFACE_SIZE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSyncPatternImpl <em>GSS Iface Sync Pattern</em>}' class.
@@ -608,7 +516,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSyncPattern()
 	 * @generated
 	 */
-	int GSS_IFACE_SYNC_PATTERN = 9;
+	int GSS_IFACE_SYNC_PATTERN = 7;
 
 	/**
 	 * The feature id for the '<em><b>Hex Value</b></em>' attribute.
@@ -690,7 +598,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSpWPortType()
 	 * @generated
 	 */
-	int GSS_IFACE_SP_WPORT_TYPE = 12;
+	int GSS_IFACE_SP_WPORT_TYPE = 10;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPortBaudRate <em>GSS Iface Uart Port Baud Rate</em>}' enum.
@@ -700,7 +608,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartPortBaudRate()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PORT_BAUD_RATE = 13;
+	int GSS_IFACE_UART_PORT_BAUD_RATE = 11;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPortParity <em>GSS Iface Uart Port Parity</em>}' enum.
@@ -710,7 +618,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartPortParity()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PORT_PARITY = 14;
+	int GSS_IFACE_UART_PORT_PARITY = 12;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPortDataBits <em>GSS Iface Uart Port Data Bits</em>}' enum.
@@ -720,7 +628,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartPortDataBits()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PORT_DATA_BITS = 15;
+	int GSS_IFACE_UART_PORT_DATA_BITS = 13;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPortStopBits <em>GSS Iface Uart Port Stop Bits</em>}' enum.
@@ -730,7 +638,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartPortStopBits()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PORT_STOP_BITS = 16;
+	int GSS_IFACE_UART_PORT_STOP_BITS = 14;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPortFlowControl <em>GSS Iface Uart Port Flow Control</em>}' enum.
@@ -740,7 +648,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartPortFlowControl()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PORT_FLOW_CONTROL = 17;
+	int GSS_IFACE_UART_PORT_FLOW_CONTROL = 15;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolUnit <em>GSS Iface Uart Protocol Unit</em>}' enum.
@@ -750,7 +658,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartProtocolUnit()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PROTOCOL_UNIT = 18;
+	int GSS_IFACE_UART_PROTOCOL_UNIT = 16;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolPower <em>GSS Iface Uart Protocol Power</em>}' enum.
@@ -760,7 +668,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartProtocolPower()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PROTOCOL_POWER = 19;
+	int GSS_IFACE_UART_PROTOCOL_POWER = 17;
 
 
 	/**
@@ -1064,100 +972,36 @@ public interface ifacePackage extends EPackage {
 	EReference getGSSIfaceUartProtocol_SyncPattern();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.iface.GSSIfaceConstSize <em>GSS Iface Const Size</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSize <em>GSS Iface Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Iface Const Size</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceConstSize
+	 * @return the meta object for class '<em>GSS Iface Size</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSize
 	 * @generated
 	 */
-	EClass getGSSIfaceConstSize();
+	EClass getGSSIfaceSize();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceConstSize#getBytes <em>Bytes</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceSize#getBytes <em>Bytes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Bytes</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceConstSize#getBytes()
-	 * @see #getGSSIfaceConstSize()
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSize#getBytes()
+	 * @see #getGSSIfaceSize()
 	 * @generated
 	 */
-	EAttribute getGSSIfaceConstSize_Bytes();
+	EAttribute getGSSIfaceSize_Bytes();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceConstSize#getBits <em>Bits</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceSize#getBits <em>Bits</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Bits</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceConstSize#getBits()
-	 * @see #getGSSIfaceConstSize()
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSize#getBits()
+	 * @see #getGSSIfaceSize()
 	 * @generated
 	 */
-	EAttribute getGSSIfaceConstSize_Bits();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldOffset <em>GSS Iface Size Field Offset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Iface Size Field Offset</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldOffset
-	 * @generated
-	 */
-	EClass getGSSIfaceSizeFieldOffset();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldOffset#getBytes <em>Bytes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Bytes</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldOffset#getBytes()
-	 * @see #getGSSIfaceSizeFieldOffset()
-	 * @generated
-	 */
-	EAttribute getGSSIfaceSizeFieldOffset_Bytes();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldOffset#getBits <em>Bits</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Bits</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldOffset#getBits()
-	 * @see #getGSSIfaceSizeFieldOffset()
-	 * @generated
-	 */
-	EAttribute getGSSIfaceSizeFieldOffset_Bits();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldTrim <em>GSS Iface Size Field Trim</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Iface Size Field Trim</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldTrim
-	 * @generated
-	 */
-	EClass getGSSIfaceSizeFieldTrim();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldTrim#getBytes <em>Bytes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Bytes</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldTrim#getBytes()
-	 * @see #getGSSIfaceSizeFieldTrim()
-	 * @generated
-	 */
-	EAttribute getGSSIfaceSizeFieldTrim_Bytes();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldTrim#getBits <em>Bits</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Bits</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldTrim#getBits()
-	 * @see #getGSSIfaceSizeFieldTrim()
-	 * @generated
-	 */
-	EAttribute getGSSIfaceSizeFieldTrim_Bits();
+	EAttribute getGSSIfaceSize_Bits();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSyncPattern <em>GSS Iface Sync Pattern</em>}'.
@@ -1524,14 +1368,14 @@ public interface ifacePackage extends EPackage {
 		EReference GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN = eINSTANCE.getGSSIfaceUartProtocol_SyncPattern();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceConstSizeImpl <em>GSS Iface Const Size</em>}' class.
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSizeImpl <em>GSS Iface Size</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceConstSizeImpl
-		 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceConstSize()
+		 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceSizeImpl
+		 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSize()
 		 * @generated
 		 */
-		EClass GSS_IFACE_CONST_SIZE = eINSTANCE.getGSSIfaceConstSize();
+		EClass GSS_IFACE_SIZE = eINSTANCE.getGSSIfaceSize();
 
 		/**
 		 * The meta object literal for the '<em><b>Bytes</b></em>' attribute feature.
@@ -1539,7 +1383,7 @@ public interface ifacePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_IFACE_CONST_SIZE__BYTES = eINSTANCE.getGSSIfaceConstSize_Bytes();
+		EAttribute GSS_IFACE_SIZE__BYTES = eINSTANCE.getGSSIfaceSize_Bytes();
 
 		/**
 		 * The meta object literal for the '<em><b>Bits</b></em>' attribute feature.
@@ -1547,59 +1391,7 @@ public interface ifacePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GSS_IFACE_CONST_SIZE__BITS = eINSTANCE.getGSSIfaceConstSize_Bits();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSizeFieldOffsetImpl <em>GSS Iface Size Field Offset</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceSizeFieldOffsetImpl
-		 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSizeFieldOffset()
-		 * @generated
-		 */
-		EClass GSS_IFACE_SIZE_FIELD_OFFSET = eINSTANCE.getGSSIfaceSizeFieldOffset();
-
-		/**
-		 * The meta object literal for the '<em><b>Bytes</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_IFACE_SIZE_FIELD_OFFSET__BYTES = eINSTANCE.getGSSIfaceSizeFieldOffset_Bytes();
-
-		/**
-		 * The meta object literal for the '<em><b>Bits</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_IFACE_SIZE_FIELD_OFFSET__BITS = eINSTANCE.getGSSIfaceSizeFieldOffset_Bits();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSizeFieldTrimImpl <em>GSS Iface Size Field Trim</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceSizeFieldTrimImpl
-		 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSizeFieldTrim()
-		 * @generated
-		 */
-		EClass GSS_IFACE_SIZE_FIELD_TRIM = eINSTANCE.getGSSIfaceSizeFieldTrim();
-
-		/**
-		 * The meta object literal for the '<em><b>Bytes</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_IFACE_SIZE_FIELD_TRIM__BYTES = eINSTANCE.getGSSIfaceSizeFieldTrim_Bytes();
-
-		/**
-		 * The meta object literal for the '<em><b>Bits</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_IFACE_SIZE_FIELD_TRIM__BITS = eINSTANCE.getGSSIfaceSizeFieldTrim_Bits();
+		EAttribute GSS_IFACE_SIZE__BITS = eINSTANCE.getGSSIfaceSize_Bits();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSyncPatternImpl <em>GSS Iface Sync Pattern</em>}' class.

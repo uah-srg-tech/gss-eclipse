@@ -93,21 +93,21 @@ GSSIfaceUartProtocol returns GSSIfaceUartProtocol:
 	'}' ';'
 ;
 
-GSSIfaceConstSize returns GSSIfaceConstSize:
+GSSIfaceConstSize returns GSSIfaceSize:
 	'constSize' '{'
 		'bytes' ':=' bytes=INTEGER ';'
 		'bits' ':=' bits=INTEGER ';'
 	'}' ';'
 ;
 
-GSSIfaceSizeFieldOffset returns GSSIfaceSizeFieldOffset:
+GSSIfaceSizeFieldOffset returns GSSIfaceSize:
 	'sizeFieldOffset' '{'
 		'bytes' ':=' bytes=INTEGER ';'
 		'bits' ':=' bits=INTEGER ';'
 	'}' ';'
 ;
 
-GSSIfaceSizeFieldTrim returns GSSIfaceSizeFieldTrim:
+GSSIfaceSizeFieldTrim returns GSSIfaceSize:
 	'sizeFieldTrim' '{'
 		'bytes' ':=' bytes=INTEGER ';'
 		'bits' ':=' bits=INTEGER ';'

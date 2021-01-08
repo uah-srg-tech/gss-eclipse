@@ -155,12 +155,12 @@ public interface GSSIfaceUartProtocol extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Const Size</em>' containment reference.
-	 * @see #setConstSize(GSSIfaceConstSize)
+	 * @see #setConstSize(GSSIfaceSize)
 	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartProtocol_ConstSize()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSIfaceConstSize getConstSize();
+	GSSIfaceSize getConstSize();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getConstSize <em>Const Size</em>}' containment reference.
@@ -170,7 +170,7 @@ public interface GSSIfaceUartProtocol extends EObject {
 	 * @see #getConstSize()
 	 * @generated
 	 */
-	void setConstSize(GSSIfaceConstSize value);
+	void setConstSize(GSSIfaceSize value);
 
 	/**
 	 * Returns the value of the '<em><b>Size Field Offset</b></em>' containment reference.
@@ -181,12 +181,12 @@ public interface GSSIfaceUartProtocol extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Size Field Offset</em>' containment reference.
-	 * @see #setSizeFieldOffset(GSSIfaceSizeFieldOffset)
+	 * @see #setSizeFieldOffset(GSSIfaceSize)
 	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartProtocol_SizeFieldOffset()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSIfaceSizeFieldOffset getSizeFieldOffset();
+	GSSIfaceSize getSizeFieldOffset();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getSizeFieldOffset <em>Size Field Offset</em>}' containment reference.
@@ -196,7 +196,7 @@ public interface GSSIfaceUartProtocol extends EObject {
 	 * @see #getSizeFieldOffset()
 	 * @generated
 	 */
-	void setSizeFieldOffset(GSSIfaceSizeFieldOffset value);
+	void setSizeFieldOffset(GSSIfaceSize value);
 
 	/**
 	 * Returns the value of the '<em><b>Size Field Trim</b></em>' containment reference.
@@ -207,12 +207,12 @@ public interface GSSIfaceUartProtocol extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Size Field Trim</em>' containment reference.
-	 * @see #setSizeFieldTrim(GSSIfaceSizeFieldTrim)
+	 * @see #setSizeFieldTrim(GSSIfaceSize)
 	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartProtocol_SizeFieldTrim()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSIfaceSizeFieldTrim getSizeFieldTrim();
+	GSSIfaceSize getSizeFieldTrim();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getSizeFieldTrim <em>Size Field Trim</em>}' containment reference.
@@ -222,7 +222,7 @@ public interface GSSIfaceUartProtocol extends EObject {
 	 * @see #getSizeFieldTrim()
 	 * @generated
 	 */
-	void setSizeFieldTrim(GSSIfaceSizeFieldTrim value);
+	void setSizeFieldTrim(GSSIfaceSize value);
 
 	/**
 	 * Returns the value of the '<em><b>Sync Pattern</b></em>' containment reference.

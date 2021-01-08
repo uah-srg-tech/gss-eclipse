@@ -70,9 +70,7 @@ public class ifaceFactoryImpl extends EFactoryImpl implements ifaceFactory {
 			case ifacePackage.GSS_IFACE_READING_PORT: return createGSSIfaceReadingPort();
 			case ifacePackage.GSS_IFACE_UART_PORT: return createGSSIfaceUartPort();
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL: return createGSSIfaceUartProtocol();
-			case ifacePackage.GSS_IFACE_CONST_SIZE: return createGSSIfaceConstSize();
-			case ifacePackage.GSS_IFACE_SIZE_FIELD_OFFSET: return createGSSIfaceSizeFieldOffset();
-			case ifacePackage.GSS_IFACE_SIZE_FIELD_TRIM: return createGSSIfaceSizeFieldTrim();
+			case ifacePackage.GSS_IFACE_SIZE: return createGSSIfaceSize();
 			case ifacePackage.GSS_IFACE_SYNC_PATTERN: return createGSSIfaceSyncPattern();
 			case ifacePackage.GSS_IFACE_SP_WTC_PORT: return createGSSIfaceSpWTCPort();
 			case ifacePackage.GSS_IFACE_DUMMY_PORT: return createGSSIfaceDummyPort();
@@ -214,29 +212,9 @@ public class ifaceFactoryImpl extends EFactoryImpl implements ifaceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSIfaceConstSize createGSSIfaceConstSize() {
-		GSSIfaceConstSizeImpl gssIfaceConstSize = new GSSIfaceConstSizeImpl();
-		return gssIfaceConstSize;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSIfaceSizeFieldOffset createGSSIfaceSizeFieldOffset() {
-		GSSIfaceSizeFieldOffsetImpl gssIfaceSizeFieldOffset = new GSSIfaceSizeFieldOffsetImpl();
-		return gssIfaceSizeFieldOffset;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSIfaceSizeFieldTrim createGSSIfaceSizeFieldTrim() {
-		GSSIfaceSizeFieldTrimImpl gssIfaceSizeFieldTrim = new GSSIfaceSizeFieldTrimImpl();
-		return gssIfaceSizeFieldTrim;
+	public GSSIfaceSize createGSSIfaceSize() {
+		GSSIfaceSizeImpl gssIfaceSize = new GSSIfaceSizeImpl();
+		return gssIfaceSize;
 	}
 
 	/**

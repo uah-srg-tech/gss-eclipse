@@ -657,11 +657,11 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//GSSIfaceConstSize:
+		//GSSIfaceConstSize GSSIfaceSize:
 		//	'constSize' '{'
 		//	'bytes' ':=' bytes=INTEGER ';'
 		//	'bits' ':=' bits=INTEGER ';'
-		//	'}' ';';
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'constSize' '{' 'bytes' ':=' bytes=INTEGER ';' 'bits' ':=' bits=INTEGER ';' '}' ';'
@@ -727,11 +727,11 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//GSSIfaceSizeFieldOffset:
+		//GSSIfaceSizeFieldOffset GSSIfaceSize:
 		//	'sizeFieldOffset' '{'
 		//	'bytes' ':=' bytes=INTEGER ';'
 		//	'bits' ':=' bits=INTEGER ';'
-		//	'}' ';';
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'sizeFieldOffset' '{' 'bytes' ':=' bytes=INTEGER ';' 'bits' ':=' bits=INTEGER ';' '}' ';'
@@ -797,11 +797,11 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cSemicolonKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//GSSIfaceSizeFieldTrim:
+		//GSSIfaceSizeFieldTrim GSSIfaceSize:
 		//	'sizeFieldTrim' '{'
 		//	'bytes' ':=' bytes=INTEGER ';'
 		//	'bits' ':=' bits=INTEGER ';'
-		//	'}' ';';
+		//	'}' ';'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'sizeFieldTrim' '{' 'bytes' ':=' bytes=INTEGER ';' 'bits' ':=' bits=INTEGER ';' '}' ';'
@@ -1721,11 +1721,11 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSIfaceUartProtocolAccess().getRule();
 	}
 	
-	//GSSIfaceConstSize:
+	//GSSIfaceConstSize GSSIfaceSize:
 	//	'constSize' '{'
 	//	'bytes' ':=' bytes=INTEGER ';'
 	//	'bits' ':=' bits=INTEGER ';'
-	//	'}' ';';
+	//	'}' ';'
 	public GSSIfaceConstSizeElements getGSSIfaceConstSizeAccess() {
 		return pGSSIfaceConstSize;
 	}
@@ -1734,11 +1734,11 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSIfaceConstSizeAccess().getRule();
 	}
 	
-	//GSSIfaceSizeFieldOffset:
+	//GSSIfaceSizeFieldOffset GSSIfaceSize:
 	//	'sizeFieldOffset' '{'
 	//	'bytes' ':=' bytes=INTEGER ';'
 	//	'bits' ':=' bits=INTEGER ';'
-	//	'}' ';';
+	//	'}' ';'
 	public GSSIfaceSizeFieldOffsetElements getGSSIfaceSizeFieldOffsetAccess() {
 		return pGSSIfaceSizeFieldOffset;
 	}
@@ -1747,11 +1747,11 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSIfaceSizeFieldOffsetAccess().getRule();
 	}
 	
-	//GSSIfaceSizeFieldTrim:
+	//GSSIfaceSizeFieldTrim GSSIfaceSize:
 	//	'sizeFieldTrim' '{'
 	//	'bytes' ':=' bytes=INTEGER ';'
 	//	'bits' ':=' bits=INTEGER ';'
-	//	'}' ';';
+	//	'}' ';'
 	public GSSIfaceSizeFieldTrimElements getGSSIfaceSizeFieldTrimAccess() {
 		return pGSSIfaceSizeFieldTrim;
 	}

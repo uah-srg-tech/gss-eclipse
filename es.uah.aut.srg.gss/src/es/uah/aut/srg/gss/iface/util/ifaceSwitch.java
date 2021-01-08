@@ -115,21 +115,9 @@ public class ifaceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ifacePackage.GSS_IFACE_CONST_SIZE: {
-				GSSIfaceConstSize gssIfaceConstSize = (GSSIfaceConstSize)theEObject;
-				T result = caseGSSIfaceConstSize(gssIfaceConstSize);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ifacePackage.GSS_IFACE_SIZE_FIELD_OFFSET: {
-				GSSIfaceSizeFieldOffset gssIfaceSizeFieldOffset = (GSSIfaceSizeFieldOffset)theEObject;
-				T result = caseGSSIfaceSizeFieldOffset(gssIfaceSizeFieldOffset);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ifacePackage.GSS_IFACE_SIZE_FIELD_TRIM: {
-				GSSIfaceSizeFieldTrim gssIfaceSizeFieldTrim = (GSSIfaceSizeFieldTrim)theEObject;
-				T result = caseGSSIfaceSizeFieldTrim(gssIfaceSizeFieldTrim);
+			case ifacePackage.GSS_IFACE_SIZE: {
+				GSSIfaceSize gssIfaceSize = (GSSIfaceSize)theEObject;
+				T result = caseGSSIfaceSize(gssIfaceSize);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -278,47 +266,17 @@ public class ifaceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Iface Const Size</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Iface Size</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Iface Const Size</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Iface Size</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGSSIfaceConstSize(GSSIfaceConstSize object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Iface Size Field Offset</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Iface Size Field Offset</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSIfaceSizeFieldOffset(GSSIfaceSizeFieldOffset object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Iface Size Field Trim</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Iface Size Field Trim</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSIfaceSizeFieldTrim(GSSIfaceSizeFieldTrim object) {
+	public T caseGSSIfaceSize(GSSIfaceSize object) {
 		return null;
 	}
 

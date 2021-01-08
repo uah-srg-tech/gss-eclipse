@@ -102,16 +102,8 @@ public class ifaceAdapterFactory extends AdapterFactoryImpl {
 				return createGSSIfaceUartProtocolAdapter();
 			}
 			@Override
-			public Adapter caseGSSIfaceConstSize(GSSIfaceConstSize object) {
-				return createGSSIfaceConstSizeAdapter();
-			}
-			@Override
-			public Adapter caseGSSIfaceSizeFieldOffset(GSSIfaceSizeFieldOffset object) {
-				return createGSSIfaceSizeFieldOffsetAdapter();
-			}
-			@Override
-			public Adapter caseGSSIfaceSizeFieldTrim(GSSIfaceSizeFieldTrim object) {
-				return createGSSIfaceSizeFieldTrimAdapter();
+			public Adapter caseGSSIfaceSize(GSSIfaceSize object) {
+				return createGSSIfaceSizeAdapter();
 			}
 			@Override
 			public Adapter caseGSSIfaceSyncPattern(GSSIfaceSyncPattern object) {
@@ -262,44 +254,16 @@ public class ifaceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.iface.GSSIfaceConstSize <em>GSS Iface Const Size</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSize <em>GSS Iface Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceConstSize
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSize
 	 * @generated
 	 */
-	public Adapter createGSSIfaceConstSizeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldOffset <em>GSS Iface Size Field Offset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldOffset
-	 * @generated
-	 */
-	public Adapter createGSSIfaceSizeFieldOffsetAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldTrim <em>GSS Iface Size Field Trim</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldTrim
-	 * @generated
-	 */
-	public Adapter createGSSIfaceSizeFieldTrimAdapter() {
+	public Adapter createGSSIfaceSizeAdapter() {
 		return null;
 	}
 

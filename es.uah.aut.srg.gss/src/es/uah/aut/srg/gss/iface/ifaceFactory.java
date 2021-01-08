@@ -93,31 +93,13 @@ public interface ifaceFactory extends EFactory {
 	GSSIfaceUartProtocol createGSSIfaceUartProtocol();
 
 	/**
-	 * Returns a new object of class '<em>GSS Iface Const Size</em>'.
+	 * Returns a new object of class '<em>GSS Iface Size</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Iface Const Size</em>'.
+	 * @return a new object of class '<em>GSS Iface Size</em>'.
 	 * @generated
 	 */
-	GSSIfaceConstSize createGSSIfaceConstSize();
-
-	/**
-	 * Returns a new object of class '<em>GSS Iface Size Field Offset</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Iface Size Field Offset</em>'.
-	 * @generated
-	 */
-	GSSIfaceSizeFieldOffset createGSSIfaceSizeFieldOffset();
-
-	/**
-	 * Returns a new object of class '<em>GSS Iface Size Field Trim</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Iface Size Field Trim</em>'.
-	 * @generated
-	 */
-	GSSIfaceSizeFieldTrim createGSSIfaceSizeFieldTrim();
+	GSSIfaceSize createGSSIfaceSize();
 
 	/**
 	 * Returns a new object of class '<em>GSS Iface Sync Pattern</em>'.

@@ -10,9 +10,7 @@
  */
 package es.uah.aut.srg.gss.iface.impl;
 
-import es.uah.aut.srg.gss.iface.GSSIfaceConstSize;
-import es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldOffset;
-import es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldTrim;
+import es.uah.aut.srg.gss.iface.GSSIfaceSize;
 import es.uah.aut.srg.gss.iface.GSSIfaceSyncPattern;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolPower;
@@ -113,7 +111,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSIfaceConstSize constSize;
+	protected GSSIfaceSize constSize;
 
 	/**
 	 * The cached value of the '{@link #getSizeFieldOffset() <em>Size Field Offset</em>}' containment reference.
@@ -123,7 +121,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSIfaceSizeFieldOffset sizeFieldOffset;
+	protected GSSIfaceSize sizeFieldOffset;
 
 	/**
 	 * The cached value of the '{@link #getSizeFieldTrim() <em>Size Field Trim</em>}' containment reference.
@@ -133,7 +131,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSIfaceSizeFieldTrim sizeFieldTrim;
+	protected GSSIfaceSize sizeFieldTrim;
 
 	/**
 	 * The cached value of the '{@link #getSyncPattern() <em>Sync Pattern</em>}' containment reference.
@@ -261,7 +259,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSIfaceConstSize getConstSize() {
+	public GSSIfaceSize getConstSize() {
 		return constSize;
 	}
 
@@ -270,8 +268,8 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetConstSize(GSSIfaceConstSize newConstSize, NotificationChain msgs) {
-		GSSIfaceConstSize oldConstSize = constSize;
+	public NotificationChain basicSetConstSize(GSSIfaceSize newConstSize, NotificationChain msgs) {
+		GSSIfaceSize oldConstSize = constSize;
 		constSize = newConstSize;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__CONST_SIZE, oldConstSize, newConstSize);
@@ -285,7 +283,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConstSize(GSSIfaceConstSize newConstSize) {
+	public void setConstSize(GSSIfaceSize newConstSize) {
 		if (newConstSize != constSize) {
 			NotificationChain msgs = null;
 			if (constSize != null)
@@ -304,7 +302,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSIfaceSizeFieldOffset getSizeFieldOffset() {
+	public GSSIfaceSize getSizeFieldOffset() {
 		return sizeFieldOffset;
 	}
 
@@ -313,8 +311,8 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSizeFieldOffset(GSSIfaceSizeFieldOffset newSizeFieldOffset, NotificationChain msgs) {
-		GSSIfaceSizeFieldOffset oldSizeFieldOffset = sizeFieldOffset;
+	public NotificationChain basicSetSizeFieldOffset(GSSIfaceSize newSizeFieldOffset, NotificationChain msgs) {
+		GSSIfaceSize oldSizeFieldOffset = sizeFieldOffset;
 		sizeFieldOffset = newSizeFieldOffset;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET, oldSizeFieldOffset, newSizeFieldOffset);
@@ -328,7 +326,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSizeFieldOffset(GSSIfaceSizeFieldOffset newSizeFieldOffset) {
+	public void setSizeFieldOffset(GSSIfaceSize newSizeFieldOffset) {
 		if (newSizeFieldOffset != sizeFieldOffset) {
 			NotificationChain msgs = null;
 			if (sizeFieldOffset != null)
@@ -347,7 +345,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSIfaceSizeFieldTrim getSizeFieldTrim() {
+	public GSSIfaceSize getSizeFieldTrim() {
 		return sizeFieldTrim;
 	}
 
@@ -356,8 +354,8 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSizeFieldTrim(GSSIfaceSizeFieldTrim newSizeFieldTrim, NotificationChain msgs) {
-		GSSIfaceSizeFieldTrim oldSizeFieldTrim = sizeFieldTrim;
+	public NotificationChain basicSetSizeFieldTrim(GSSIfaceSize newSizeFieldTrim, NotificationChain msgs) {
+		GSSIfaceSize oldSizeFieldTrim = sizeFieldTrim;
 		sizeFieldTrim = newSizeFieldTrim;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM, oldSizeFieldTrim, newSizeFieldTrim);
@@ -371,7 +369,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSizeFieldTrim(GSSIfaceSizeFieldTrim newSizeFieldTrim) {
+	public void setSizeFieldTrim(GSSIfaceSize newSizeFieldTrim) {
 		if (newSizeFieldTrim != sizeFieldTrim) {
 			NotificationChain msgs = null;
 			if (sizeFieldTrim != null)
@@ -487,13 +485,13 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 				setPower((GSSIfaceUartProtocolPower)newValue);
 				return;
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__CONST_SIZE:
-				setConstSize((GSSIfaceConstSize)newValue);
+				setConstSize((GSSIfaceSize)newValue);
 				return;
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET:
-				setSizeFieldOffset((GSSIfaceSizeFieldOffset)newValue);
+				setSizeFieldOffset((GSSIfaceSize)newValue);
 				return;
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM:
-				setSizeFieldTrim((GSSIfaceSizeFieldTrim)newValue);
+				setSizeFieldTrim((GSSIfaceSize)newValue);
 				return;
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN:
 				setSyncPattern((GSSIfaceSyncPattern)newValue);
@@ -517,13 +515,13 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 				unsetPower();
 				return;
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__CONST_SIZE:
-				setConstSize((GSSIfaceConstSize)null);
+				setConstSize((GSSIfaceSize)null);
 				return;
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET:
-				setSizeFieldOffset((GSSIfaceSizeFieldOffset)null);
+				setSizeFieldOffset((GSSIfaceSize)null);
 				return;
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM:
-				setSizeFieldTrim((GSSIfaceSizeFieldTrim)null);
+				setSizeFieldTrim((GSSIfaceSize)null);
 				return;
 			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN:
 				setSyncPattern((GSSIfaceSyncPattern)null);

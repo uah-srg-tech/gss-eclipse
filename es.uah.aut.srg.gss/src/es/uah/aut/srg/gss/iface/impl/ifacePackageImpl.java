@@ -11,14 +11,11 @@
 package es.uah.aut.srg.gss.iface.impl;
 
 import es.uah.aut.srg.gss.common.commonPackage;
-
-import es.uah.aut.srg.gss.iface.GSSIfaceConstSize;
 import es.uah.aut.srg.gss.iface.GSSIfaceDummyPort;
 import es.uah.aut.srg.gss.iface.GSSIfacePort;
 import es.uah.aut.srg.gss.iface.GSSIfacePortConfig;
 import es.uah.aut.srg.gss.iface.GSSIfaceReadingPort;
-import es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldOffset;
-import es.uah.aut.srg.gss.iface.GSSIfaceSizeFieldTrim;
+import es.uah.aut.srg.gss.iface.GSSIfaceSize;
 import es.uah.aut.srg.gss.iface.GSSIfaceSpWPort;
 import es.uah.aut.srg.gss.iface.GSSIfaceSpWPortType;
 import es.uah.aut.srg.gss.iface.GSSIfaceSpWTCPort;
@@ -111,21 +108,7 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass gssIfaceConstSizeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssIfaceSizeFieldOffsetEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssIfaceSizeFieldTrimEClass = null;
+	private EClass gssIfaceSizeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -511,8 +494,8 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGSSIfaceConstSize() {
-		return gssIfaceConstSizeEClass;
+	public EClass getGSSIfaceSize() {
+		return gssIfaceSizeEClass;
 	}
 
 	/**
@@ -520,8 +503,8 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSIfaceConstSize_Bytes() {
-		return (EAttribute)gssIfaceConstSizeEClass.getEStructuralFeatures().get(0);
+	public EAttribute getGSSIfaceSize_Bytes() {
+		return (EAttribute)gssIfaceSizeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -529,62 +512,8 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGSSIfaceConstSize_Bits() {
-		return (EAttribute)gssIfaceConstSizeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSIfaceSizeFieldOffset() {
-		return gssIfaceSizeFieldOffsetEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSIfaceSizeFieldOffset_Bytes() {
-		return (EAttribute)gssIfaceSizeFieldOffsetEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSIfaceSizeFieldOffset_Bits() {
-		return (EAttribute)gssIfaceSizeFieldOffsetEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSIfaceSizeFieldTrim() {
-		return gssIfaceSizeFieldTrimEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSIfaceSizeFieldTrim_Bytes() {
-		return (EAttribute)gssIfaceSizeFieldTrimEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSIfaceSizeFieldTrim_Bits() {
-		return (EAttribute)gssIfaceSizeFieldTrimEClass.getEStructuralFeatures().get(1);
+	public EAttribute getGSSIfaceSize_Bits() {
+		return (EAttribute)gssIfaceSizeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -736,17 +665,9 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 		createEReference(gssIfaceUartProtocolEClass, GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM);
 		createEReference(gssIfaceUartProtocolEClass, GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN);
 
-		gssIfaceConstSizeEClass = createEClass(GSS_IFACE_CONST_SIZE);
-		createEAttribute(gssIfaceConstSizeEClass, GSS_IFACE_CONST_SIZE__BYTES);
-		createEAttribute(gssIfaceConstSizeEClass, GSS_IFACE_CONST_SIZE__BITS);
-
-		gssIfaceSizeFieldOffsetEClass = createEClass(GSS_IFACE_SIZE_FIELD_OFFSET);
-		createEAttribute(gssIfaceSizeFieldOffsetEClass, GSS_IFACE_SIZE_FIELD_OFFSET__BYTES);
-		createEAttribute(gssIfaceSizeFieldOffsetEClass, GSS_IFACE_SIZE_FIELD_OFFSET__BITS);
-
-		gssIfaceSizeFieldTrimEClass = createEClass(GSS_IFACE_SIZE_FIELD_TRIM);
-		createEAttribute(gssIfaceSizeFieldTrimEClass, GSS_IFACE_SIZE_FIELD_TRIM__BYTES);
-		createEAttribute(gssIfaceSizeFieldTrimEClass, GSS_IFACE_SIZE_FIELD_TRIM__BITS);
+		gssIfaceSizeEClass = createEClass(GSS_IFACE_SIZE);
+		createEAttribute(gssIfaceSizeEClass, GSS_IFACE_SIZE__BYTES);
+		createEAttribute(gssIfaceSizeEClass, GSS_IFACE_SIZE__BITS);
 
 		gssIfaceSyncPatternEClass = createEClass(GSS_IFACE_SYNC_PATTERN);
 		createEAttribute(gssIfaceSyncPatternEClass, GSS_IFACE_SYNC_PATTERN__HEX_VALUE);
@@ -831,22 +752,14 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 		initEClass(gssIfaceUartProtocolEClass, GSSIfaceUartProtocol.class, "GSSIfaceUartProtocol", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSIfaceUartProtocol_Unit(), this.getGSSIfaceUartProtocolUnit(), "unit", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGSSIfaceUartProtocol_Power(), this.getGSSIfaceUartProtocolPower(), "power", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSIfaceUartProtocol_ConstSize(), this.getGSSIfaceConstSize(), null, "constSize", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSIfaceUartProtocol_SizeFieldOffset(), this.getGSSIfaceSizeFieldOffset(), null, "sizeFieldOffset", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSIfaceUartProtocol_SizeFieldTrim(), this.getGSSIfaceSizeFieldTrim(), null, "sizeFieldTrim", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSIfaceUartProtocol_ConstSize(), this.getGSSIfaceSize(), null, "constSize", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSIfaceUartProtocol_SizeFieldOffset(), this.getGSSIfaceSize(), null, "sizeFieldOffset", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSIfaceUartProtocol_SizeFieldTrim(), this.getGSSIfaceSize(), null, "sizeFieldTrim", null, 1, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSIfaceUartProtocol_SyncPattern(), this.getGSSIfaceSyncPattern(), null, "syncPattern", null, 0, 1, GSSIfaceUartProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(gssIfaceConstSizeEClass, GSSIfaceConstSize.class, "GSSIfaceConstSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSIfaceConstSize_Bytes(), ecorePackage.getEString(), "bytes", null, 1, 1, GSSIfaceConstSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSIfaceConstSize_Bits(), ecorePackage.getEString(), "bits", null, 1, 1, GSSIfaceConstSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssIfaceSizeFieldOffsetEClass, GSSIfaceSizeFieldOffset.class, "GSSIfaceSizeFieldOffset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSIfaceSizeFieldOffset_Bytes(), ecorePackage.getEString(), "bytes", null, 1, 1, GSSIfaceSizeFieldOffset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSIfaceSizeFieldOffset_Bits(), ecorePackage.getEString(), "bits", null, 1, 1, GSSIfaceSizeFieldOffset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssIfaceSizeFieldTrimEClass, GSSIfaceSizeFieldTrim.class, "GSSIfaceSizeFieldTrim", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSIfaceSizeFieldTrim_Bytes(), ecorePackage.getEString(), "bytes", null, 1, 1, GSSIfaceSizeFieldTrim.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSIfaceSizeFieldTrim_Bits(), ecorePackage.getEString(), "bits", null, 1, 1, GSSIfaceSizeFieldTrim.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(gssIfaceSizeEClass, GSSIfaceSize.class, "GSSIfaceSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGSSIfaceSize_Bytes(), ecorePackage.getEString(), "bytes", null, 1, 1, GSSIfaceSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGSSIfaceSize_Bits(), ecorePackage.getEString(), "bits", null, 1, 1, GSSIfaceSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssIfaceSyncPatternEClass, GSSIfaceSyncPattern.class, "GSSIfaceSyncPattern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSIfaceSyncPattern_HexValue(), ecorePackage.getEString(), "hexValue", null, 1, 1, GSSIfaceSyncPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
